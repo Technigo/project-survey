@@ -37,7 +37,6 @@ Feel free to use other survey tools such as typeform as inspiration.
 * Contribute by helping others with this project on Stack Overflow.
 * If selected; demo your solution for your team.
 
-
 ## How to hand in the code 🎯
 
 * When you’re finished with the project, push your code to GitHub with these commands:
@@ -62,6 +61,32 @@ Make sure you've commited and pushed a version of your project before starting w
 **_Multi-step form_**
 
 Show each question in its own 'page' with a continue button to progress to the next question (like how typeform does it).
+
+If you decide to split your form into sections, then one approach you could take is to try to think of these sections as a single `useState` hook which you can use to conditionally render different groups of inputs. For example, you could have some state like `const [section, setSection] = useState('firstQuestion')` and then when the user presses a button to progress, you'd use the `setSection()` function to progress them to the second question, etc. Then, in your JSX, you could conditionally render, like this:
+
+```
+const Example = () => {
+  const [section, setSection] = useState('firstQuestion')
+
+  return (
+    <div>
+      {section === 'firstQuestion' && (
+        <div>
+          First question...
+        </div>
+      )}
+
+      {section === 'secondQuestion' && (
+        <div>
+          Second question...
+        </div>
+      )}
+    </div>
+  )
+}
+```
+
+As always, there's many ways to approach this! This is just one suggestion. :)
 
 **_Validation_**
 
