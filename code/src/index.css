@@ -5,7 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- background-color: blue;
+  display: flex;
+  justify-content: center;
+  color: #252525;
+  background-color: #fff;
 }
 
 code {
@@ -13,4 +16,56 @@ code {
     monospace;
 }
 
+h1{
+  font-size: 30px;
+  margin: 30px 0;
+}
+
+p {
+  margin: 30px 0 15px 0;
+  font-size: 16px;
+}
+
+.formStyle{
+  margin-top: 50px;
+  padding: 15px;
+  width: 400px;
+  border: 2px solid #252525;
+  box-shadow: 20px 20px;
+}
+
+.formField{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: 2px solid #252525;
+}
+
+.formDropdown{
+  width: 100%;
+  padding: 16px 20px;
+  border: none;
+  border: 2px solid #252525;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-border-radius: 0px;
+  color: #252525;
+}
+
+.formRadiobtn{
+  margin: 8px;
+}
+
+button{
+  display: block;
+  width: 100%;
+  margin: 30px 0;
+  padding: 16px 20px;
+  background-color: #252525;
+  color: #fff;
+  border: none;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
 
