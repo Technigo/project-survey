@@ -7,15 +7,17 @@ export const QuestionTwo = () => {
     <div className="question">
       <label>
         <h2>Question Two...</h2>
-        <select
-          onChange={event => setPlace(event.target.value)}
-          value={place}
-        >
-          <option value="">Choose your place</option>
-          <option value="place1">Place1</option>
-          <option value="place2">Place2</option>
-          <option value="place3">Place3</option>
-        </select>
+        <div className="select">
+          <select
+            onChange={event => setPlace(event.target.value)}
+            value={place}
+          >
+            <option value="" selected disabled>Choose your place</option>
+            <option value="place1">Place1</option>
+            <option value="place2">Place2</option>
+            <option value="place3">Place3</option>
+          </select>
+        </div>
       </label>
     </div>
   )

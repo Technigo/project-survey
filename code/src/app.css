@@ -33,19 +33,63 @@ input {
   width: 100%;
 }
 
+input:focus, select:focus, option:focus {
+  /* outline: 1px #fff; */
+}
+
+/* Remove default select styling */
 select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0;
   background: none;
-  /* border-style: none; */
-  /* border-bottom: 1px solid #FFD6D2; */
-  color: #fff;
-  padding: 5px;
-  font-size: 24px;
+}
+
+/* Styling for select div */
+.select {
+  position: relative;
+  display: flex;
   width: 100%;
+  height: 3em;
+  line-height: 3;
+  background: #545B66;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/* Styling for select */
+select {
+  font-size: 24px;
+  flex: 1;
+  color: #fff;
+  cursor: pointer;
+  padding: 0 5px;
+}
+/* Arrow */
+.select::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 15px;
+  background: #34495e;
+  color: #fff;
+  cursor: pointer;
+  pointer-events: none; /* Set whether or not an element should react to pointer events */
+  transition: .25s all ease;
+}
+/* Transition */
+.select:hover::after {
+  color: #AF7528;
 }
 
 option {
   font-size: 22px;
-  background-color: #2F3744;
+  background-color: #545B66;
   width: 70%;
 }
 
