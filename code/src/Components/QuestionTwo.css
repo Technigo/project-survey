@@ -1,0 +1,4 @@
+.selection {
+    display: flex;
+    flex-direction: column;
+}
