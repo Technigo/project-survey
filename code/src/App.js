@@ -1,4 +1,6 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Header } from './Header'
+import { Button } from './Button'
 
 
 /* below from import */
@@ -12,15 +14,11 @@ import React, { useState } from 'react'
 
 
 export const App = () => {
-  const [temperature, setTemperature] = useState(20)
 
   return (
     <div>
-      <h1>Current temperature: {temperature} degrees</h1>
-
-      <button onClick={() => setTemperature(-5)}>Freeze!</button>
-      <button onClick={() => setTemperature(30)}>Warm!</button>
-      <button onClick={() => setTemperature(120)}>Boil!</button>
+      <Header />
+      <Button />
     </div>
   )
 }
