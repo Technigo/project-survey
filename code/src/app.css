@@ -6,12 +6,8 @@
   color: #FFD6D2;
 }
 
-/* h1 {
-  color: #AF7528;
-} */
-
 form {
-  width: 50%;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -33,17 +29,23 @@ input {
   width: 100%;
 }
 
-/* input:focus, select:focus, option:focus {
-  outline: 1px #fff;
-} */
+input:focus, select:focus, option:focus {
+  outline: 3px solid #CCA776;
+  padding: 3px;
+}
+
+.checkmark:focus {
+  outline: 3px solid #CCA776;
+  padding: 3px;
+}
 
 /* DROPDOWN */
 /* Remove default select styling */
 select {
-  -webkit-appearance: none;
+  /* -webkit-appearance: none;
   -moz-appearance: none;
   -ms-appearance: none;
-  appearance: none;
+  appearance: none; */
   outline: 0;
   box-shadow: none;
   border: 0;
@@ -87,7 +89,7 @@ select {
 
 /* Transition */
 .select-main:hover::after {
-  color: #AF7528;
+  color: #CCA776;
 }
 
 option {
@@ -131,7 +133,7 @@ option {
 
 /* When checked */
 .label-radio input:checked ~ .checkmark {
-  background-color: #AF7528;
+  background: #AF7528;
 }
 
 /* SUBMIT BUTTON*/
@@ -146,5 +148,31 @@ button {
   font-size: 26px;
   font-weight: bold;
 	color: #fff;
-	cursor: pointer;
+
+}
+
+button:hover {
+  background: #CCA776;
+}
+
+button:disabled {
+  opacity: 0.5;
+}
+
+button:disabled:hover {
+  opacity: 0.5;
+  background: #AF7528;
+  cursor: default;
+}
+
+
+/* Summary */
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  background: #2F3744;
 }
