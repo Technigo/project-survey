@@ -1,5 +1,8 @@
-/*import React from 'react'*/
-import React, { useState } from 'react'
+import React from 'react'
+/*import React, { useState } from 'react'*/
+import { Header } from './Header'
+import { Button } from './Button'
+
 
 /* Down below from Technigo
 export const App = () => {
@@ -12,17 +15,10 @@ export const App = () => {
 } */
 
 export const App = () => {
-  const [temperature, setTemperature] = useState(20);
-
   return (
     <div>
-
-
-    <h1>Current temp> {temperature} degrees </h1>
-    
-    <button onClick={() => setTemperature(-5)}>Freeze!</button>
-
-    {temperature > 100 && <p>Steamy!</p>}
+        <Header />
+        <Button />
     </div>
   );
 }; 
