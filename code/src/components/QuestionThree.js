@@ -11,13 +11,14 @@ export const QuestionThree = () => {
     <div className="question">
       <h2>Question Three...</h2>
       {numbers.map((choice) => (
-        <label key={choice}>
+        <label key={choice} className="label-radio">
           <input
             type="radio"
             value={choice}
             onChange={(event) => setNumber(event.target.value)}
             checked={number === choice}
           />
+          <span className="checkmark"></span>
           {choice}
         </label>
       ))

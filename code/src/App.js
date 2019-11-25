@@ -3,25 +3,21 @@ import './app.css'
 import { QuestionOne } from './components/QuestionOne'
 import { QuestionTwo } from './components/QuestionTwo'
 import { QuestionThree } from './components/QuestionThree'
+import { HandleSubmit } from './components/HandleSubmit'
 
 export const App = () => {
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    alert("Thank you!");
-  }
 
   return (
     <div className="app">
       <h1> Quiz time!</h1>
 
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={event => event.preventDefault()}>
 
         <QuestionOne />
         <QuestionTwo />
         <QuestionThree />
 
-        <button>Done!</button>
+        <HandleSubmit />
 
       </form>
 

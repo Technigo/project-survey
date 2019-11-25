@@ -33,10 +33,11 @@ input {
   width: 100%;
 }
 
-input:focus, select:focus, option:focus {
-  /* outline: 1px #fff; */
-}
+/* input:focus, select:focus, option:focus {
+  outline: 1px #fff;
+} */
 
+/* DROPDOWN */
 /* Remove default select styling */
 select {
   -webkit-appearance: none;
@@ -50,7 +51,7 @@ select {
 }
 
 /* Styling for select div */
-.select {
+.select-main {
   position: relative;
   display: flex;
   width: 100%;
@@ -70,7 +71,7 @@ select {
   padding: 0 5px;
 }
 /* Arrow */
-.select::after {
+.select-main::after {
   content: '\25BC';
   position: absolute;
   top: 0;
@@ -83,7 +84,7 @@ select {
   transition: .25s all ease;
 }
 /* Transition */
-.select:hover::after {
+.select-main:hover::after {
   color: #AF7528;
 }
 
@@ -93,6 +94,45 @@ option {
   width: 70%;
 }
 
+/* RADIO BUTTONS */
+.label-radio {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hide default radio button */
+.label-radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Customized radio button */
+.checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background: #eee;
+  border-radius: 50%;
+}
+
+/* On hover */
+.label-radio:hover input ~ .checkmark {
+  background: #CCA776;
+}
+
+/* When checked */
+.label-radio input:checked ~ .checkmark {
+  background-color: #AF7528;
+}
+
+/* SUBMIT BUTTON*/
 button {
   align-self: center;
   width: 70%;
