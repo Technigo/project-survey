@@ -50,7 +50,7 @@ select {
   background: none;
 }
 
-/* Styling for select div */
+/* Styling for select-main div */
 .select-main {
   position: relative;
   display: flex;
@@ -70,6 +70,7 @@ select {
   cursor: pointer;
   padding: 0 5px;
 }
+
 /* Arrow */
 .select-main::after {
   content: '\25BC';
@@ -83,6 +84,7 @@ select {
   pointer-events: none; /* Set whether or not an element should react to pointer events */
   transition: .25s all ease;
 }
+
 /* Transition */
 .select-main:hover::after {
   color: #AF7528;

@@ -1,12 +1,11 @@
 import React from 'react'
-import { useState } from 'react'
 
-export const QuestionOne = () => {
-  const [name, setName] = useState("")
+export const Question = (props) => {
+
   return (
     <div className="question">
       <label>
-        <h2>Question One...</h2>
+        <h2>{props.title}</h2>
         <input
           type="text"
           placeholder="Type your name here..."
