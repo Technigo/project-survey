@@ -8,7 +8,7 @@ export const Button = () => {
 
         <div className="button">
         
-            <h3> Button {temperature} </h3> 
+            <h3> Current temperature is {temperature} </h3> 
             {/*<h1>Current temp> {temperature} degrees </h1> */}
         
             <button onClick={() => setTemperature(-5)}>Freeze!</button>
