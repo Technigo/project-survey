@@ -27,6 +27,7 @@ export const App = () => {
   }
 
   return (
+
     <div className="app">
       <h1>Quiz time!</h1>
 
@@ -89,6 +90,7 @@ export const App = () => {
               onChange={(event) => setRange(event.target.value)}
             />
           </label>
+          <div className="show-range">{range}%</div>
         </div>
 
 
@@ -97,6 +99,8 @@ export const App = () => {
         {submitted && <Summary name={name} place={place} fruit={fruit} range={range} />}
 
       </form>
+
+      <footer>Technigo Bootcamp 2019 © Sofie Nyblad</footer>
 
     </div >
   )

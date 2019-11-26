@@ -8,13 +8,13 @@
 
 /* FOCUS STYLING */
 :focus {
-  outline: 1px solid #CCA776;
+  outline: 2px solid #CCA776;
   outline-offset: 8px;
 }
 
 select:focus {
-  outline: 1px solid #CCA776;
-  outline-offset: 0; /* Not working */
+  outline: 2px solid #CCA776;
+  outline-offset: -2px;
 }
 
 
@@ -109,6 +109,7 @@ option {
   margin: 0 0 15px 0;
   cursor: pointer;
   font-size: 24px;
+  color: #fff;
 }
 .radio-buttons input[type=radio] {
   width: 30px;
@@ -116,6 +117,10 @@ option {
   cursor: pointer;
   height: 30px;
 }
+
+/* .radio-chioce {
+  color: #fff;
+} */
 
 /* RANGE SLIDER */
 .slider {
@@ -150,6 +155,13 @@ option {
   border-radius: 50%;
   background: #4CAF50;
   cursor: pointer;
+}
+
+.show-range {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 22px;
+  color: #fff;
 }
 
 
@@ -197,4 +209,16 @@ button:disabled:hover {
   align-items: center;
   width: 100%;
   background: #2F3744;
+}
+
+/* FOOTER */
+
+footer {
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  margin-top: 30px;
+  padding: 30px 0;
+  width: 100%;
+  border-top: 2px solid #FFD6D2;
 }
