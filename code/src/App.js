@@ -4,7 +4,7 @@ import { RadioButton } from "RadioButton";
 import { InputText } from "InputText";
 import { InputTextarea } from "InputTextarea";
 import { Submit } from "Submit";
-// import { Option } from "Option";
+import { Questions } from "Questions";
 import { Select } from "Select";
 
 export const App = () => {
@@ -13,7 +13,6 @@ export const App = () => {
   const [time, setTime] = useState("");
   const [experience, setExperience] = useState("");
   const [hideForm, setHideForm] = useState(false);
-  // const [style, setStyle] = useState({ display: "none" });
 
   const handleRadioChange = event => {
     setQuality(event.target.value);
@@ -22,7 +21,6 @@ export const App = () => {
   const handleSubmit = event => {
     event.preventDefault();
     setHideForm(hideForm => !hideForm);
-    // setStyle(style);
   };
 
   return (
@@ -38,12 +36,12 @@ export const App = () => {
       )}
       {!hideForm && (
         <form onSubmit={handleSubmit}>
-          Please fill in your name:
+          <Questions value={"q1"} text={"Please fill in your name:"} />
           <InputText
             value={name}
             onChange={event => setName(event.target.value)}
           />
-          Are you satisfied with the quality of our coffee place, {name}?
+          <Questions value={"q2"} text={`Are you satisfied with the quality of our coffee place, ${name}?`} />
           <RadioButton
             label="Yes"
             value="yes"
@@ -56,13 +54,12 @@ export const App = () => {
             checked={quality === "no"}
             onChange={handleRadioChange}
           />
-          How often do you visit our place?
+          <Questions value={"q3"} text={"How often do you visit our place?"} />
           <Select
             value={time}
             onChange={event => setTime(event.target.value)}
           />
-          Finally, how can we improve your experience? Do you have any ideas for
-          us?
+          <Questions value={"q4"} text={"Finally, how can we improve your experience? Do you have any ideas for us?"} />
           <InputTextarea
             value={experience}
             onChange={event => setExperience(event.target.value)}
