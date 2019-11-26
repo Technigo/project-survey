@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Summary } from "./Summary";
+import { RadioButton } from "RadioButton";
 
 const qualityAnswers = ["Yes", "No"];
 
@@ -9,12 +10,16 @@ export const App = () => {
   const [time, setTime] = useState("");
   const [experience, setExperience] = useState("");
   const [hideForm, setHideForm] = useState(false);
-  const [style, setStyle] = useState({ display: "none" });
+  // const [style, setStyle] = useState({ display: "none" });
+
+  const handleRadioChange = event => {
+    setQuality(event.target.value);
+  };
 
   const handleSubmit = event => {
     event.preventDefault();
-    setHideForm(!hideForm);
-    setStyle(style);
+    setHideForm(hideForm => !hideForm);
+    // setStyle(style);
   };
 
   return (
@@ -28,7 +33,7 @@ export const App = () => {
           experience={experience}
         />
       )}
-      {!hideForm && style && (
+      {!hideForm && (
         <form onSubmit={handleSubmit}>
           Please fill in your name:
           <label>
@@ -39,7 +44,19 @@ export const App = () => {
             ></input>
           </label>
           Are you satisfied with the quality of our coffee place, {name}?
-          {qualityAnswers.map(ans => (
+          <RadioButton
+            label="Yes"
+            value="yes"
+            checked={quality === "yes"}
+            onChange={handleRadioChange}
+          />
+          <RadioButton
+            label="No"
+            value="no"
+            checked={quality === "no"}
+            onChange={handleRadioChange}
+          />
+          {/* {qualityAnswers.map(ans => (
             <label key={ans}>
               <input
                 type="radio"
@@ -49,7 +66,7 @@ export const App = () => {
               ></input>
               {ans}
             </label>
-          ))}
+          ))} */}
           How often do you visit our place?
           <label>
             <select
