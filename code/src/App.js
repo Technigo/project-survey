@@ -2,6 +2,12 @@ import React from 'react'
 import { FormHeader } from './Components/FormHeader'
 import { QuestionOne } from './Components/QuestionOne'
 import { QuestionTwo } from './Components/QuestionTwo'
+import { QuestionThree } from './Components/QuestionThree'
+import { QuestionFour } from './Components/QuestionFour'
+import { SubmitButton } from './Components/SubmitButton'
+import { Summary } from './Components/Summary'
+
+
 
 
 
@@ -9,14 +15,22 @@ import { QuestionTwo } from './Components/QuestionTwo'
 export const App = () => {
   return (
     <div>
-      <FormHeader />
+      <section className="form-container">
 
-      <section className="form-wrapper">
-        <div className="form-container">
-          <QuestionOne />
-          <QuestionTwo />
-
+        <div className="form-wrapper">
+          <div>
+            <FormHeader />
+            <QuestionOne />
+            <QuestionTwo />
+            <QuestionThree />
+            <QuestionFour />
+            <SubmitButton />
+          </div>
+          <div>
+            <Summary />
+          </div>
         </div>
+
       </section>
 
     </div>

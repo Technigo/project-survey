@@ -1,21 +1,34 @@
 import React, { useState } from 'react'
 
 
+const socialMedias = ["Facebook", "Instagram", "Linkedin", "Others"];
 
-const professions = ["Art", "Healthcare", "Sales/Marketing", "IT/Technology", "Student", "Media", "Other"];
 export const QuestionTwo = () => {
-    const [profession, setProfession] = useState("");
+    const [socialMedia, setSocialMedia] = useState("");
     return (
-        <form className="selection">
-            Please select your profession
+        <form onSubmit={event => event.preventDefault()}>
+            <p>How did you find about Technigo Bootcamp?</p>
 
-            <select onChange={event => setProfession(event.target.value)}>
-
-                {professions.map(item => (
-                    <option key={item} value={item}> {item}</option>
-
+            <select className="drop-down" onChange={event => setSocialMedia(event.target.value)}
+                checked={socialMedia === socialMedias}>
+                <option value="">Select one</option>
+                {socialMedias.map(item => (
+                    <option key={item} value={item}>{item}</option>
                 ))}
             </select>
-        </form >
-    );
-};
+
+        </form>
+
+    )
+}
+
+
+
+
+
+
+
+
+
+
+

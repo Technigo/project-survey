@@ -1,12 +1,12 @@
 body {
   margin: 0;
+  height: 100vh;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  box-sizing: border-box;
   background: coral;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
@@ -14,14 +14,48 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
 
-.form-wrapper {
-  background: darkcyan;
-  display: inline-block;
-  height: 500px;
-  width: 500px;
-  border: 2px solid black;
+* {
+  box-sizing: border-box;
 }
 
 .form-container {
+  background: darkcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 18px;
+  height: 600px;
+  width: 500px;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.name-input, .drop-down {
+  width: 50%;
+  height: 35px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 15px;
+}
+
+.radio-form {
+  margin: 15px 0;
+}
+
+.radio-form * {
+  margin: 0px 0px 15px 0px;
   padding: 10px;
+}
+
+.radio-circle {
+  width: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 20px;
 }
