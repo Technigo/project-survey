@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Summary } from "./Summary";
 
 const qualityAnswers = ["Yes", "No"];
 
@@ -17,17 +18,15 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <main>
       <h1>Customer Satsfaction Survey "The Coffee time"</h1>
       {hideForm && (
-        <div>
-          <h3>
-            Thank you {name} for your time and participation in our survey!
-          </h3>
-          <p>Are you satified? You answer was {quality} </p>
-          <p>You visit our place {time} </p>
-          <p>And here some of your experience and ideas for us: {experience}</p>
-        </div>
+        <Summary
+          name={name}
+          time={time}
+          quality={quality}
+          experience={experience}
+        />
       )}
       {!hideForm && style && (
         <form onSubmit={handleSubmit}>
@@ -35,7 +34,7 @@ export const App = () => {
           <label>
             <input
               type="text"
-              value={name || ""}
+              value={name}
               onChange={event => setName(event.target.value)}
             ></input>
           </label>
@@ -78,6 +77,6 @@ export const App = () => {
           </button>
         </form>
       )}
-    </div>
+    </main>
   );
 };
