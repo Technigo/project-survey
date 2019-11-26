@@ -16,6 +16,9 @@ export const Button = () => {
             <button onClick={() => setTemperature(125)}>Hot!</button>
 
              {temperature > 100 && <p>Steamy!</p>}
+
+           
         </div>
     );
 };
+
