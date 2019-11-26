@@ -1,0 +1,17 @@
+.default-button {
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 0.2rem;
+  background-color: #b3b8b8;
+  border: none;
+  padding: 1rem 2rem;
+}
+
+.default-button:hover,
+.default-button:focus {
+  background-color: #1f9187;
+}
+
+.default-button:active {
+  background-color: #f1efed;
+}
