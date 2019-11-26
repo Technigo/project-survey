@@ -18,9 +18,11 @@ export const App = () => {
 
       <form
         className="question-form"
-        // onLoad={document.getElementById('review').style.visibility = 'hidden'}
-        onSubmit={
-          event => {event.preventDefault(); document.getElementById('survey').style.display = 'none'}
+         //onLoad={event => document.getElementById('review').style.visibility = 'hidden'}
+        onSubmit={(event) => {
+          event.preventDefault();
+          document.getElementById('survey').style.display = 'none';
+          document.getElementById('review').style.visibility = 'visible'}
         }
       >
       <h1>Welcome to the questionnaire !</h1>
@@ -112,7 +114,7 @@ export const App = () => {
         </div>
         </form>
         </div>
-      <div id="review">
+      <div style={{visibility: 'hidden'}} id="review">
       <h1>Thank you {personName}!</h1>
       <h2>You have just completed the survey</h2>
       <p>
