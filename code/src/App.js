@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import { Summary } from "./Summary";
 import { RadioButton } from "RadioButton";
-
-const qualityAnswers = ["Yes", "No"];
+import { InputText } from "InputText";
 
 export const App = () => {
   const [name, setName] = useState("");
@@ -36,13 +35,10 @@ export const App = () => {
       {!hideForm && (
         <form onSubmit={handleSubmit}>
           Please fill in your name:
-          <label>
-            <input
-              type="text"
-              value={name}
-              onChange={event => setName(event.target.value)}
-            ></input>
-          </label>
+          <InputText
+            value={name}
+            onChange={event => setName(event.target.value)}
+          />
           Are you satisfied with the quality of our coffee place, {name}?
           <RadioButton
             label="Yes"
@@ -56,17 +52,6 @@ export const App = () => {
             checked={quality === "no"}
             onChange={handleRadioChange}
           />
-          {/* {qualityAnswers.map(ans => (
-            <label key={ans}>
-              <input
-                type="radio"
-                value={ans}
-                onChange={event => setQuality(event.target.value)}
-                checked={quality === ans}
-              ></input>
-              {ans}
-            </label>
-          ))} */}
           How often do you visit our place?
           <label>
             <select
