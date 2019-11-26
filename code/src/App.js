@@ -4,6 +4,8 @@ import { RadioButton } from "RadioButton";
 import { InputText } from "InputText";
 import { InputTextarea } from "InputTextarea";
 import { Submit } from "Submit";
+// import { Option } from "Option";
+import { Select } from "Select";
 
 export const App = () => {
   const [name, setName] = useState("");
@@ -55,18 +57,10 @@ export const App = () => {
             onChange={handleRadioChange}
           />
           How often do you visit our place?
-          <label>
-            <select
-              value={time}
-              onChange={event => setTime(event.target.value)}
-            >
-              <option value="">Select here</option>
-              <option value="everyday">Everyday</option>
-              <option value="weekly">Weekly</option>
-              <option value="monthly">Monthly</option>
-              <option value="yearly">Yearly</option>
-            </select>
-          </label>
+          <Select
+            value={time}
+            onChange={event => setTime(event.target.value)}
+          />
           Finally, how can we improve your experience? Do you have any ideas for
           us?
           <InputTextarea
