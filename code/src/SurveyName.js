@@ -3,9 +3,9 @@ import React, { useState } from "react";
 export const SurveyName = props => {
   const [name, setName] = useState("");
   return (
-    <form>
-      <h1>A survey for companies</h1>
-      <labels>What's the name of your company?</labels>
+    <form onSubmit={event => event.preventDefault()}>
+      <h1>Company survey</h1>
+      What's the name of your company?
       <input
         type="text"
         onChange={event => setName(event.target.value)}

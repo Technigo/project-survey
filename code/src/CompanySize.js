@@ -2,10 +2,10 @@ import React, { useState } from "react";
 
 const sizeComp = ["0-10", "10-50", "50+"];
 
-export const CompanySize = props => {
+export const CompanySize = () => {
   const [size, setSize] = useState();
   return (
-    <form>
+    <form onSubmit={event => event.preventDefault()}>
       How big is your company?
       {sizeComp.map(group => (
         <label key={group}>

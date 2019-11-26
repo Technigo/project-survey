@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export const CompanyLocation = props => {
+export const CompanyLocation = () => {
   const [location, setLocation] = useState();
   return (
     <form>

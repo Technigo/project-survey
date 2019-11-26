@@ -2,6 +2,7 @@ import React from "react";
 import { SurveyName } from "SurveyName";
 import { CompanySize } from "CompanySize";
 import { CompanyLocation } from "./CompanyLocation";
+import { Submit } from "Submit";
 
 export const App = () => {
   return (
@@ -9,6 +10,7 @@ export const App = () => {
       <SurveyName />
       <CompanySize />
       <CompanyLocation />
+      <Submit />
     </div>
   );
 };
