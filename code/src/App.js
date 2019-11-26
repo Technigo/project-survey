@@ -3,17 +3,23 @@ import { Summary } from './components/Summary'
 import './app.css'
 
 export const App = () => {
+
+  //useState Hooks 
   const [name, setName] = useState("")
   const [place, setPlace] = useState("")
+  const [fruit, setFruit] = useState()
+  const [range, setRange] = useState(50)
+  const [submitted, setSubmitted] = useState(false)   //False because form is not submitted from start (initial value)
+
   //Array with values for mapping radio buttons in #2
   const fruits = ["Apple", "Banana", "Minions?"]
-  const [fruit, setFruit] = useState()
-  //Array with values for mapping radio buttons in #3
-  const numbers = ["11", "34", "47"]
-  const [number, setNumber] = useState()
-  //False because form is not submitted from start (initial value)
-  const [submitted, setSubmitted] = useState(false)
-  //If input for name is empty, isDisabled is true and the button is disabled (called inside <button>)
+
+  //Function to handle submit/oncklick
+  const handleSubmit = () => {
+    setSubmitted(true)
+  }
+
+  //Funtion to validate name input, if name is empty isDisabled is true and the button is disabled (called inside <button>)
   const isDisabled = () => {
     if (name.length === 0) {
       return true
@@ -28,7 +34,7 @@ export const App = () => {
 
         <div className="question">
           <label>
-            <h2>Please enter your name to participate</h2>
+            <h2>Please enter your name to participate *</h2>
             <input
               type="text"
               required
@@ -41,16 +47,15 @@ export const App = () => {
 
         <div className="question">
           <label>
-            <h2>#1: What place?</h2>
+            <h2>#1: What's your place?</h2>
             <div className="select-main">
               <select
                 onChange={event => setPlace(event.target.value)}
                 value={place}
               >
                 <option value="">Choose your place</option>
-                <option value="place1">Place1</option>
-                <option value="place2">Place2</option>
-                <option value="place3">Place3</option>
+                <option value="Home">Home</option>
+                <option value="Away">Away</option>
               </select>
             </div>
           </label>
@@ -59,29 +64,12 @@ export const App = () => {
         <div className="question" role="radiogroup">
           <h2>#2: What is the Minions favorite fruit?</h2>
           {fruits.map((choice) => (
-            <label key={choice} className="radio-fruits">
+            <label key={choice} className="radio-buttons">
               <input
                 type="radio"
                 value={choice}
                 onChange={(event) => setFruit(event.target.value)}
                 checked={fruit === choice}
-              />
-              <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-              {choice}
-            </label>
-          ))
-          }
-        </div>
-
-        <div className="question" role="radiogroup">
-          <h2>#3: Whats your number?</h2>
-          {numbers.map((choice) => (
-            <label key={choice} className="radio-buttons">
-              <input
-                type="radio"
-                value={choice}
-                onChange={(event) => setNumber(event.target.value)}
-                checked={number === choice}
               />
               <div>{choice}</div>
             </label>
@@ -89,8 +77,24 @@ export const App = () => {
           }
         </div>
 
-        <button onClick={() => setSubmitted(true)} type="submit" disabled={isDisabled()}>Done</button>
-        {submitted && <Summary name={name} place={place} fruit={fruit} number={number} />}
+        <div className="question">
+          <label>
+            <h2>#3: How many % has been knocked down by imposter syndrome?</h2>
+            <input
+              className="slider"
+              type="range"
+              min={1}
+              max={100}
+              value={range}
+              onChange={(event) => setRange(event.target.value)}
+            />
+          </label>
+        </div>
+
+
+        <button type="submit" onClick={handleSubmit} disabled={isDisabled()}>Done</button>
+        {isDisabled() && <div className="name-required">* Please type your name before hitting Done *</div>}
+        {submitted && <Summary name={name} place={place} fruit={fruit} range={range} />}
 
       </form>
 
