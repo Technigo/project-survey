@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import { Summary } from "./Summary";
 import { RadioButton } from "RadioButton";
 import { InputText } from "InputText";
+import { InputTextarea } from "InputTextarea";
+import { Submit } from "Submit";
 
 export const App = () => {
   const [name, setName] = useState("");
@@ -67,16 +69,11 @@ export const App = () => {
           </label>
           Finally, how can we improve your experience? Do you have any ideas for
           us?
-          <label>
-            <input
-              type="textarea"
-              value={experience}
-              onChange={event => setExperience(event.target.value)}
-            ></input>
-          </label>
-          <button type="submit" onClick={handleSubmit}>
-            Submit
-          </button>
+          <InputTextarea
+            value={experience}
+            onChange={event => setExperience(event.target.value)}
+          />
+          <Submit onClick={handleSubmit} />
         </form>
       )}
     </main>
