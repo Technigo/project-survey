@@ -29,23 +29,17 @@ input {
   width: 100%;
 }
 
-input:focus, select:focus, option:focus {
+/* Accessibility */
+input:focus, select:focus, option:focus, .checkmark:focus {
   outline: 3px solid #CCA776;
   padding: 3px;
 }
 
-.checkmark:focus {
-  outline: 3px solid #CCA776;
-  padding: 3px;
-}
 
 /* DROPDOWN */
 /* Remove default select styling */
 select {
-  /* -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  appearance: none; */
+  appearance: none;
   outline: 0;
   box-shadow: none;
   border: 0;
@@ -99,7 +93,7 @@ option {
 }
 
 /* RADIO BUTTONS */
-.label-radio {
+.radio-fruits {
   display: block;
   position: relative;
   padding-left: 35px;
@@ -109,14 +103,15 @@ option {
 }
 
 /* Hide default radio button */
-.label-radio input {
+.radio-fruits input[type=radio] {
   position: absolute;
-  opacity: 0;
   cursor: pointer;
+  appearance: none;
+  display: none;
 }
 
 /* Customized radio button */
-.checkmark {
+.radio-fruits .checkmark {
   position: absolute;
   top: 3px;
   left: 0;
@@ -127,13 +122,32 @@ option {
 }
 
 /* On hover */
-.label-radio:hover input ~ .checkmark {
+.radio-fruits:hover input ~ .checkmark {
   background: #CCA776;
 }
 
 /* When checked */
-.label-radio input:checked ~ .checkmark {
+.radio-fruits input[type=radio]:checked ~ .checkmark {
   background: #AF7528;
+}
+
+/* Radio numbers */
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  /* position: relative; */
+  padding: 0;
+  margin: 0 0 15px 0;
+  cursor: pointer;
+  font-size: 24px;
+}
+.radio-buttons input[type=radio] {
+  /* position: absolute; */
+  width: 30px;
+  margin: 0 20px 0 0;
+  cursor: pointer;
+  height: 30px;
 }
 
 /* SUBMIT BUTTON*/
@@ -164,7 +178,6 @@ button:disabled:hover {
   background: #AF7528;
   cursor: default;
 }
-
 
 /* Summary */
 

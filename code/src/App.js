@@ -5,9 +5,12 @@ import './app.css'
 export const App = () => {
   const [name, setName] = useState("")
   const [place, setPlace] = useState("")
-  //Array with values for mapping radio button
-  const fruits = ["Apple", "Banana", "Minion?"]
+  //Array with values for mapping radio buttons in #2
+  const fruits = ["Apple", "Banana", "Minions?"]
   const [fruit, setFruit] = useState()
+  //Array with values for mapping radio buttons in #3
+  const numbers = ["11", "34", "47"]
+  const [number, setNumber] = useState()
   //False because form is not submitted from start (initial value)
   const [submitted, setSubmitted] = useState(false)
   //If input for name is empty, isDisabled is true and the button is disabled (called inside <button>)
@@ -38,7 +41,7 @@ export const App = () => {
 
         <div className="question">
           <label>
-            <h2>Question1: What place?</h2>
+            <h2>#1: What place?</h2>
             <div className="select-main">
               <select
                 onChange={event => setPlace(event.target.value)}
@@ -53,30 +56,45 @@ export const App = () => {
           </label>
         </div>
 
-        <div className="question">
-          <h2>Question 2: What is the Minions favorite fruit?</h2>
+        <div className="question" role="radiogroup">
+          <h2>#2: What is the Minions favorite fruit?</h2>
           {fruits.map((choice) => (
-            <label key={choice} className="label-radio">
+            <label key={choice} className="radio-fruits">
               <input
                 type="radio"
                 value={choice}
                 onChange={(event) => setFruit(event.target.value)}
                 checked={fruit === choice}
               />
-              <span className="checkmark" role="radio" aria-checked="false" tabindex="0"></span>
+              <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
               {choice}
             </label>
-
           ))
           }
         </div>
 
-        <button onClick={() => setSubmitted(true)} type="submit" disabled={isDisabled()}>Done!</button>
-        {submitted && <Summary name={name} place={place} fruit={fruit} />}
+        <div className="question" role="radiogroup">
+          <h2>#3: Whats your number?</h2>
+          {numbers.map((choice) => (
+            <label key={choice} className="radio-buttons">
+              <input
+                type="radio"
+                value={choice}
+                onChange={(event) => setNumber(event.target.value)}
+                checked={number === choice}
+              />
+              <div>{choice}</div>
+            </label>
+          ))
+          }
+        </div>
+
+        <button onClick={() => setSubmitted(true)} type="submit" disabled={isDisabled()}>Done</button>
+        {submitted && <Summary name={name} place={place} fruit={fruit} number={number} />}
 
       </form>
 
-    </div>
+    </div >
   )
 }
 
