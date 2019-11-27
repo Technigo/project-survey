@@ -1,10 +1,10 @@
 import React from "react";
 
 export const Submit = props => {
-  const { onClick } = props;
+  const { onClick, text } = props;
   return (
     <button type="submit" onClick={onClick}>
-      Submit
+      {text}
     </button>
   );
 };

@@ -24,21 +24,6 @@ export const App = () => {
     setHideForm(hideForm => !hideForm);
   };
 
-  // const handleSecond = event => {
-  //   event.preventDefault();
-  //   setSection("secondQuestion");
-  // };
-
-  // const handleThird = event => {
-  //   event.preventDefault();
-  //   setSection("thirdQuestion");
-  // };
-
-  // const handleFourth = event => {
-  //   event.preventDefault();
-  //   setSection("fourthQuestion");
-  // };
-
   const handleNext = event => {
     event.preventDefault();
 
@@ -71,9 +56,7 @@ export const App = () => {
               value={name}
               onChange={event => setName(event.target.value)}
             />
-            <button type="submit" onClick={handleNext}>
-              Next question
-            </button>
+            <Submit onClick={handleNext} text={"Next question"} />
           </div>
         )}
         {section === "secondQuestion" && !hideForm && (
@@ -94,9 +77,7 @@ export const App = () => {
               checked={quality === "no"}
               onChange={handleRadioChange}
             />
-            <button type="submit" onClick={handleNext}>
-              Next question
-            </button>
+            <Submit onClick={handleNext} text={"Next question"} />
           </div>
         )}
         {section === "thirdQuestion" && (
@@ -109,9 +90,7 @@ export const App = () => {
               value={time}
               onChange={event => setTime(event.target.value)}
             />
-            <button type="submit" onClick={handleNext}>
-              Next question
-            </button>
+            <Submit onClick={handleNext} text={"Next question"} />
           </div>
         )}
         {section === "fourthQuestion" && !hideForm && (
@@ -126,11 +105,10 @@ export const App = () => {
               value={experience}
               onChange={event => setExperience(event.target.value)}
             />
-            <Submit onClick={handleSubmit} />
+            <Submit onClick={handleSubmit} text={"Submit"} />
           </div>
         )}
       </form>
-      )
     </main>
   );
 };
