@@ -2,8 +2,9 @@ import React from 'react'
 
 export const Summary = (props) => {
   // Funtion to reload page ans start over - called in button onClick
-  const refreshPage = () => {
-    window.location.reload(false);
+  const refreshPage = (event) => {
+    event.preventDefault()
+    window.location.reload(false)
   }
 
   return (
@@ -12,7 +13,7 @@ export const Summary = (props) => {
       <p>#1: {props.place}</p>
       <p>#2: {props.fruit}</p>
       <p>#3: {props.range}%</p>
-      <button onSubmit={event => event.preventDefault()} onClick={refreshPage}>Restart</button>
+      <button onClick={refreshPage}>Restart</button>
     </div>
   )
 }
