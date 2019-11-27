@@ -1,19 +1,25 @@
 h1 {
+  color: white;
 text-align: center;
+padding: 20px;
+font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 h2 {
+  color: white;
  text-align: center;
+ font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+ padding: 20px;
 }
 .form {
+
   text-align: center;
 }
 
 .myForm {
+  color: white;
   text-align: center;
 }
-
-
 
 body {
   background-color: lightsteelblue;
@@ -28,4 +34,9 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+font-size: 14px;
+border-radius: 10px;
 }
