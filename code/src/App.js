@@ -6,7 +6,7 @@ export const App = () => {
 
   //useState Hooks 
   const [name, setName] = useState("")
-  const [place, setPlace] = useState("")
+  const [location, setLocation] = useState("")
   const [fruit, setFruit] = useState()
   const [range, setRange] = useState(50)
   const [submitted, setSubmitted] = useState(false)   //False because form is not submitted from start (initial value)
@@ -15,7 +15,8 @@ export const App = () => {
   const fruits = ["Apple", "Banana", "Minions?"]
 
   //Function to handle submit/oncklick
-  const handleSubmit = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault()
     setSubmitted(true)
   }
 
@@ -32,7 +33,7 @@ export const App = () => {
       <h1>Quiz time!</h1>
 
 
-      <form onSubmit={event => event.preventDefault()}>
+      <form onSubmit={handleSubmit}>
 
         {!submitted &&
           <div className="questions">
@@ -51,15 +52,16 @@ export const App = () => {
 
             <div className="question">
               <label>
-                <h2>#1: What's your place?</h2>
+                <h2>#1: What's your location?</h2>
                 <div className="select-main">
                   <select
-                    onChange={event => setPlace(event.target.value)}
-                    value={place}
+                    onChange={event => setLocation(event.target.value)}
+                    value={location}
                   >
-                    <option value="">Choose your place</option>
+                    <option value="">Choose your location</option>
                     <option value="Home">Home</option>
                     <option value="Away">Away</option>
+                    <option value="Vacayay!">Vacayay!</option>
                   </select>
                 </div>
               </label>
@@ -95,7 +97,7 @@ export const App = () => {
               <div className="show-range">{range}%</div>
             </div>
 
-            <button type="submit" onClick={handleSubmit} disabled={isDisabled()}>Done</button>
+            <button type="submit" disabled={isDisabled()}>Done</button>
             {isDisabled() && <div className="name-required">* Please type your name before hitting Done *</div>}
           </div>
         }
@@ -103,7 +105,7 @@ export const App = () => {
       </form>
 
 
-      {submitted && <Summary name={name} place={place} fruit={fruit} range={range} />}
+      {submitted && <Summary name={name} location={location} fruit={fruit} range={range} />}
 
       <footer>Technigo Bootcamp 2019 © Sofie Nyblad</footer>
 
