@@ -1,9 +1,14 @@
 import React from 'react'
 
 export const Summary = (props) => {
-  // Funtion to reload page ans start over - called in button onClick
-  const refreshPage = (event) => {
-    event.preventDefault()
+
+  // const [reload, setReload] = useState(false)
+
+  // const refreshPage = () => {
+  //   setReload(true)
+  // }
+  //Funtion to reload page ans start over - called in button onClick
+  const refreshPage = () => {
     window.location.reload(false)
   }
 

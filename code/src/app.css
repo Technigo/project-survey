@@ -6,6 +6,11 @@
   color: #FFD6D2;
 }
 
+.questions {
+  display: flex;
+  flex-direction: column;
+}
+
 /* FOCUS STYLING */
 :focus {
   outline: 2px solid #CCA776;
@@ -111,7 +116,8 @@ option {
   font-size: 24px;
   color: #fff;
 }
-.radio-buttons input[type=radio] {
+
+input[type=radio] {
   width: 30px;
   margin: 0 20px 0 0;
   cursor: pointer;
@@ -119,7 +125,7 @@ option {
 }
 
 /* RANGE SLIDER */
-.slider {
+input[type=range] {
   -webkit-appearance: none; /* Override default styles */
   width: 100%;
   height: 15px;
@@ -130,12 +136,12 @@ option {
   transition: opacity .2s;
 }
 
-.slider:hover {
+input[type=range]:hover {
   opacity: 1; 
 }
 
 /* The slider button */
-.slider::-webkit-slider-thumb {
+input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default styles */
   appearance: none; 
   width: 25px;
@@ -145,7 +151,16 @@ option {
   cursor: pointer;
 }
 /* The slider button for Firefox */
-.slider::-moz-range-thumb {
+input[type=range]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+/* The slider button for IE */
+input[type=range]::-ms-thumb {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -160,7 +175,6 @@ option {
   color: #fff;
 }
 
-
 /* SUBMIT / RESTART BUTTON */
 button {
   align-self: center;
@@ -173,7 +187,6 @@ button {
   font-size: 26px;
   font-weight: bold;
 	color: #fff;
-
 }
 
 button:hover {
