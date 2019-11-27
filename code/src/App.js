@@ -30,7 +30,7 @@ export const App = () => {
   return (
 
     <div className="app">
-      <h1>Quiz time!</h1>
+      <h1>&#x2605; Quiz time &#x2605;</h1>
 
 
       <form onSubmit={handleSubmit}>
