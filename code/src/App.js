@@ -5,6 +5,7 @@ import './app.css'
 export const App = () => {
 
   //useState Hooks 
+  const [question, setQuestion] = useState("name")
   const [name, setName] = useState("")
   const [location, setLocation] = useState("")
   const [fruit, setFruit] = useState()
@@ -14,7 +15,18 @@ export const App = () => {
   //Array with values for mapping radio buttons in #2
   const fruits = ["Apple", "Banana", "Minions?"]
 
-  //Function to handle submit/oncklick
+  //Function to handle next-button/onclick
+  const handleNext = () => {
+    if (question === "name") {
+      setQuestion("location")
+    } else if (question === "location") {
+      setQuestion("fruit")
+    } else if (question === "fruit") {
+      setQuestion("range")
+    }
+  }
+
+  //Function to handle submit-button/oncklick
   const handleSubmit = (event) => {
     event.preventDefault()
     setSubmitted(true)
@@ -32,79 +44,93 @@ export const App = () => {
     <div className="app">
       <h1>&#x2605; Quiz time &#x2605;</h1>
 
-
       <form onSubmit={handleSubmit}>
 
-        {!submitted &&
-          <div className="questions">
-            <div className="question">
-              <label>
-                <h2>Please enter your name to participate *</h2>
-                <input
-                  type="text"
-                  required
-                  placeholder="Type your name here..."
-                  onChange={event => setName(event.target.value)}
-                  value={name}
-                />
-              </label>
-            </div>
+        {!submitted && (
+          <div className="form-questions">
 
-            <div className="question">
-              <label>
-                <h2>#1: What's your location?</h2>
-                <div className="select-main">
-                  <select
-                    onChange={event => setLocation(event.target.value)}
-                    value={location}
-                  >
-                    <option value="">Choose your location</option>
-                    <option value="Home">Home</option>
-                    <option value="Away">Away</option>
-                    <option value="Vacayay!">Vacayay!</option>
-                  </select>
-                </div>
-              </label>
-            </div>
-
-            <div className="question" role="radiogroup">
-              <h2>#2: What is the Minions favorite fruit?</h2>
-              {fruits.map((choice) => (
-                <label key={choice} className="radio-buttons">
-
+            {question === "name" && (
+              <div className="question">
+                <label>
+                  <h2># Please enter your name to participate *</h2>
                   <input
-                    type="radio"
-                    value={choice}
-                    onChange={(event) => setFruit(event.target.value)}
-                    checked={fruit === choice}
+                    type="text"
+                    required
+                    placeholder="Type your name here..."
+                    onChange={event => setName(event.target.value)}
+                    value={name}
                   />
-                  <span className="radio-label">{choice}</span>
                 </label>
-              ))
-              }
-            </div>
+              </div>
+            )}
 
-            <div className="question">
-              <label>
-                <h2>#3: How many % has been knocked down by imposter syndrome?</h2>
-                <input
-                  type="range"
-                  min={1}
-                  max={100}
-                  value={range}
-                  onChange={(event) => setRange(event.target.value)}
-                />
-              </label>
-              <div className="show-range">{range}%</div>
-            </div>
+            {question === "location" && (
+              <div className="question">
+                <label>
+                  <h2>#1: What's your location?</h2>
+                  <div className="select-main">
+                    <select
+                      onChange={event => setLocation(event.target.value)}
+                      value={location}
+                    >
+                      <option value="">Choose your location</option>
+                      <option value="Home">Home</option>
+                      <option value="Away">Away</option>
+                      <option value="Vacayay!">Vacayay!</option>
+                    </select>
+                  </div>
+                </label>
+              </div>
+            )}
 
-            <button type="submit" disabled={isDisabled()}>Done</button>
-            {isDisabled() && <div className="name-required">* Please type your name before hitting Done *</div>}
+            {question === "fruit" && (
+              <div className="question" role="radiogroup">
+                <h2>#2: What is the Minions favorite fruit?</h2>
+                {fruits.map((choice) => (
+                  <label key={choice} className="radio-buttons">
+
+                    <input
+                      type="radio"
+                      value={choice}
+                      onChange={(event) => setFruit(event.target.value)}
+                      checked={fruit === choice}
+                    />
+                    <span className="radio-label">{choice}</span>
+                  </label>
+                ))
+                }
+              </div>
+            )}
+
+            {question === "range" && (
+              <div className="question">
+                <label>
+                  <h2>#3: How many % has been knocked down by imposter syndrome?</h2>
+                  <input
+                    type="range"
+                    min={1}
+                    max={100}
+                    value={range}
+                    onChange={(event) => setRange(event.target.value)}
+                  />
+                </label>
+                <div className="show-range">{range}%</div>
+
+                <button type="submit">Done</button>
+
+              </div>
+
+            )}
+
+            {question !== "range" && (
+              <button type="button" onClick={handleNext} disabled={isDisabled()}>Next</button>
+            )}
+            {isDisabled() && (<div className="name-required">* Please type your name before hitting Next *</div>)}
           </div>
-        }
+
+        )}
 
       </form>
-
 
       {submitted && <Summary name={name} location={location} fruit={fruit} range={range} />}
 

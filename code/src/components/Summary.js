@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Summary = (props) => {
 
-  //Funtion to reload page and start over - called in button onClick
+  //Function to reload page and start over - called in button onClick attribute
   const refreshPage = () => {
     window.location.reload()
   }
