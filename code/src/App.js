@@ -17,14 +17,15 @@ export const App = () => {
   const [submit, setSubmit] = useState(false);
   
   return (
-  
     <section className="formContainer">
-        
-     
-          
+    <div>
+       {submit && <Summary movement={movement} icon={icon} reps={reps}/>}
+    </div>
+
+   
+             
       <form className="formInput" onSubmit={event => event.preventDefault()}>
       <Header />
-
 
         <p> When did you start with CrossFit?  </p> 
           
@@ -77,8 +78,7 @@ export const App = () => {
         </div>
       </form>
 
-      {submit && <Summary movement={movement} icon={icon} reps={reps}/>}
-
+     
     </section>
 
   );
