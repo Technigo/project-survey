@@ -3,8 +3,8 @@ import { FormHeader } from './FormHeader'
 import { Summary } from './Summary'
 
 
-const socialMedias = ["Facebook", "Instagram", "Linkedin", "Others"];
-const programingSkills = ["HTML/CSS", "JavaScript", "Paython"];
+const socialMedias = ["Facebook", "Instagram", "Linkedin", "Youtube"];
+const programingSkills = ["HTML/CSS", "JavaScript", "Both"];
 
 const Form = () => {
 
@@ -12,6 +12,7 @@ const Form = () => {
     const [socialMedia, setSocialMedia] = useState("");
     const [skills, setSkills] = useState();
     const [wantsNewsletter, setWantdNewsletter] = useState(false);
+    const [email, setEmail] = useState("");
     const [submitted, setSubmitted] = useState(false);
 
     const handelSubmit = (event) => {
@@ -27,9 +28,9 @@ const Form = () => {
 
             <div className="form-container">
                 {/* display:none, on the form */}
+
                 {!submitted && (
                     <form onSubmit={handelSubmit}>
-
 
                         <div className="q-one">
 
@@ -46,7 +47,7 @@ const Form = () => {
 
                             <p>How did you find about Technigo Bootcamp?</p>
 
-                            <select className="drop-down" onChange={event => setSocialMedia(event.target.value)}
+                            <select className="drop-down" required onChange={event => setSocialMedia(event.target.value)}
                                 checked={socialMedia === socialMedias}>
 
                                 <option value="">No Selection</option>
@@ -87,9 +88,17 @@ const Form = () => {
                                         onChange={event => setWantdNewsletter(event.target.checked)}
                                     />
                                     I want to receive newsletter
-                            </div>
+                                </div>
                             </label>
                         </div>
+                        <div>
+                            <p> Please enter your E-mail address</p>
+                            <input className="input-name"
+                                type="E-mail"
+                                onChange={event => setEmail(event.target.value)}
+                                value={email} />
+                        </div>
+
                         <div>
                             <button className="submit-btn">SUBMIT</button>
                         </div>
@@ -99,7 +108,7 @@ const Form = () => {
                     {submitted && <Summary name={name} socialMedia={socialMedia} skills={skills} wantsNewsletter={wantsNewsletter} />}
                 </div>
             </div>
-        </div>
+        </div >
 
     )
 }
