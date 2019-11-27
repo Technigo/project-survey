@@ -3,11 +3,12 @@
 }
 
 body {
-  margin: 0;
-  font-family: roboto;
+  margin: 0px;
+  padding: 0px;
+  font-family: 'roboto';
+  max-width: max-content;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
 
 code {
@@ -15,40 +16,72 @@ code {
     monospace;
 }
 
-h1, h2 {
+h1 {
   text-align: center;
+}
+
+h2 {
+  text-align: center;
+}
+
+h3 {
+  margin-left: 120px;
 }
 
 p {
   display: block;
-  margin-left: 220px;
+  /* margin-left: 220px; */
 }
 .formField {
-  margin-left: 220px;
-  align-items: center;
+  /* margin-left: 220px; */
+  margin: 5px;
   background-color: pink;
+  border-style: 1px black;
+}
+
+.nameBox {
   border: 1px solid black;
+  margin: 1rem;
+  padding: .5rem;
 }
 
 .destinations {
-  margin-left: 220px;
-  margin-top: 20px;
+  /* margin-left: 220px; */
+  border: 1px solid black;
+  margin: 1rem;
+  padding: .5rem;
+  /* border-style: outset; */
+  
 }
-
+/* 
 .formDropdown {
   margin-left: 220px;
+} */
+
+.nextDestinationBox {
+  /* margin-left: 220px; */
+  border: 1px solid black;
+  margin: 1rem;
+  padding: .5rem;
 }
 
 /*age button*/
 .radioBtn {
-  margin-left: 220px;
+  /* margin-left: 220px; */
   margin-bottom: 5px;
 }
 
-
+.ageBox {
+  border: 1px solid black;
+  margin: 1rem;
+  padding: .5rem;
+}
 .submitBtn {
   justify-content: center;
   border-bottom-width: medium;
   margin-left: 220px;
-  margin-top: 30px;
+  margin-top: 10px;
+}
+.summary {
+  margin-left: 120px;
 }

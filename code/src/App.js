@@ -1,6 +1,6 @@
 // import React from 'react'
 import React, { useState } from 'react'
-import { Header } from './Header'
+
 import { Summary } from './Summary'
 
 
@@ -24,17 +24,19 @@ export const App = () => {
     <div className="Button">
       <form onSubmit={event => event.preventDefault()}>
 
-        <h1>Welcome to the dream trip survey!</h1>
+        <h1>Welcome to dream trip survey!</h1>
         <h2>Please answer the questions below.</h2>
 
-        <p>What's your name?</p>
+        <div className="nameBox">
+          Your name:
         <input
-          className="formField"
-          type="text"
-          onChange={event => setName(event.target.value)}
-          value={name}
-        />
+            className="formField"
+            type="text"
+            onChange={event => setName(event.target.value)}
+            value={name}
 
+          />
+        </div>
         <div className="destinations">
           What destination do you like the most?
           <br />
@@ -76,54 +78,42 @@ export const App = () => {
           <br />
         </div>
 
+        <div className="nextDestinationBox">
+          <p>Your next dream destination is</p>
+          <select className="formDropdown"
+            onChange={event => setLocation(event.target.value)}
+            value={name}
+          >
+            <option value="">Select destination</option>
+            <option value="Cinque Terre">Cinque Terre</option>
+            <option value="Svalbard">Svalbard</option>
+            <option value="Harbor Island">Harbor Island</option>
+          </select>
+        </div>
 
+        <div className="ageBox">
+          <p>Please select your age</p>
+          {ageGroups.map(group => (
+            <label key={group}>
+              <input className="radioBtn"
+                type="radio"
+                value={group}
+                onChange={event => setAgeGroup(event.target.value)}
+                checked={ageGroup === group}
+              />
+              {group}
+              <br />
 
-        {/* <p>How is the weather in Capetown?</p>
-        {/* the temperature is {temperature} degrees</p> */}
-        {/* 
-        <button onClick={() => setTemperature(-5)}>Freezeing!</button>
-        <button onClick={() => setTemperature(30)}>Warm!</button>
-        <button onClick={() => setTemperature(120)}>Hot!</button> */}
-
-        {/* {temperature > 100 && <p>and really steamy</p>} */}
-
-        {/* onChange={event => setName(event.target.value)}
-        value={temperature} */}
-
-
-        <p>Your next dream destination is</p>
-        <select className="formDropdown"
-          onChange={event => setLocation(event.target.value)}
-          value={name}
-        >
-          <option value="">Select destination</option>
-          <option value="Cinque Terre">Cinque Terre</option>
-          <option value="Svalbard">Svalbard</option>
-          <option value="Harbor Island">Harbor Island</option>
-        </select>
-
-        <p>Please select your age</p>
-        {ageGroups.map(group => (
-          <label key={group}>
-            <input className="radioBtn"
-              type="radio"
-              value={group}
-              onChange={event => setAgeGroup(event.target.value)}
-              checked={ageGroup === group}
-            />
-            {group}
-            <br />
-
-          </label>
-        ))}
-
+            </label>
+          ))}
+        </div>
 
         <button className="submitBtn"
           onClick={() => setSubmitted(true)}
         >SUBMIT
             </button>
-
       </form>
+
 
       {submitted && <Summary name={name} capetown={" Capetown"} grandcanyon={" Grand Canyon"} maldives={" Maldives"} bali={" Bali"} location={location} ageGroup={ageGroup} />}
 
@@ -131,3 +121,4 @@ export const App = () => {
 
   )
 }
+
