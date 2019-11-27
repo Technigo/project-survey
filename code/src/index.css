@@ -3,12 +3,37 @@
 }
 
 body {
+  
   margin: 0px;
   padding: 0px;
   font-family: 'roboto';
   max-width: max-content;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-color: yellow; */
+   height: 508px;
+   /* width: 375; */
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/surf.jpg");
+   background-repeat: no-repeat;
+   /* To make the her picture cover the screen */
+   background-size: cover;
+
+   position: relative;
+   color: aliceblue; 
+}
+
+
+.heroHeader {
+   height: 508px;
+   width: 375;
+   background-color: yellow;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+   background-repeat: no-repeat;
+   /* To make the her picture cover the screen */
+   background-size: cover;
+
+   position: relative;
+   color: aliceblue;  
 }
 
 code {
@@ -48,7 +73,7 @@ p {
 .destinations {
   /* margin-left: 220px; */
   border: 1px solid black;
-  margin: 1rem;
+  margin: 0.5rem; 
   padding: .5rem;
   /* border-style: outset; */
   
