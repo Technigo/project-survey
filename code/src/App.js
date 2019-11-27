@@ -9,7 +9,7 @@ export const App = () => {
   const [name, setName] = useState(" ");
   const [unicorn, setUnicorn] = useState("");
   const [hair, setHair] = useState(" ")
-  const [submit, setSubmit] = useState(true);
+  const [submit, setSubmit] = useState(false);
 
   return (
     <div className="container">
@@ -48,9 +48,11 @@ export const App = () => {
             {uni}
           </label>
         ))}
-        <button
-          onClick={() => setSubmit(true)}>Adopt me!</button>
+
       </form>
+      <button
+        onClick={() => setSubmit(true)}
+      >Adopt me!</button>
       {submit && <Summary name={name} unicorn={unicorn} hair={hair} />}
     </div>
   )
