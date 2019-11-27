@@ -24,19 +24,31 @@ export const App = () => {
     setHideForm(hideForm => !hideForm);
   };
 
-  const handleSecond = event => {
-    event.preventDefault();
-    setSection("secondQuestion");
-  };
+  // const handleSecond = event => {
+  //   event.preventDefault();
+  //   setSection("secondQuestion");
+  // };
 
-  const handleThird = event => {
-    event.preventDefault();
-    setSection("thirdQuestion");
-  };
+  // const handleThird = event => {
+  //   event.preventDefault();
+  //   setSection("thirdQuestion");
+  // };
 
-  const handleFourth = event => {
+  // const handleFourth = event => {
+  //   event.preventDefault();
+  //   setSection("fourthQuestion");
+  // };
+
+  const handleNext = event => {
     event.preventDefault();
-    setSection("fourthQuestion");
+
+    if (section === "firstQuestion") {
+      setSection("secondQuestion");
+    } else if (section === "secondQuestion") {
+      setSection("thirdQuestion");
+    } else if (section === "thirdQuestion") {
+      setSection("fourthQuestion");
+    }
   };
 
   return (
@@ -59,7 +71,7 @@ export const App = () => {
               value={name}
               onChange={event => setName(event.target.value)}
             />
-            <button type="submit" onClick={handleSecond}>
+            <button type="submit" onClick={handleNext}>
               Next question
             </button>
           </div>
@@ -82,7 +94,7 @@ export const App = () => {
               checked={quality === "no"}
               onChange={handleRadioChange}
             />
-            <button type="submit" onClick={handleThird}>
+            <button type="submit" onClick={handleNext}>
               Next question
             </button>
           </div>
@@ -97,7 +109,7 @@ export const App = () => {
               value={time}
               onChange={event => setTime(event.target.value)}
             />
-            <button type="submit" onClick={handleFourth}>
+            <button type="submit" onClick={handleNext}>
               Next question
             </button>
           </div>
