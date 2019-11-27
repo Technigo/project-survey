@@ -1,0 +1,12 @@
+.Review {
+    visibility: 'hidden';
+    visibility: 'visible';
+    background-color: white;
+    opacity: 0.3;
+    margin: 50px;
+    padding: 30px;
+}
+
+h2 {
+    text-align: center;
+}

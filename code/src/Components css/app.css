@@ -1,0 +1,73 @@
+body {
+    background: bottom;  /**** Have to be placed on top in body ****/
+    background-image: url(/assets/filipe-de-rodrigues-SpMmd2jgL2w-unsplash.jpg);
+    background-color: #684d42;
+    background-size: cover;
+  
+}
+
+.survey {
+    /*display: none*/
+    background-color: white;
+    opacity: 0.5;
+    margin: 50px;
+}
+
+.survey:onClick {
+    display: none
+}
+
+form {
+    height: auto;
+    padding: 30px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.nameSection {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;  
+}
+
+.name {
+    border: 0.5px solid black;
+    width: -webkit-fill-available;
+    height: 20px;
+    margin-left: 4px;
+}
+
+.burgerSection h4{
+    margin-bottom: 2px;
+}
+
+.burgerSelect {
+    font-size: 12px;
+    border: 0.2px solid black;
+    border-radius: inherit;
+}
+
+.breadSection h4 {
+    margin-bottom: 10px;
+}
+
+.deliverySection h4 {
+    margin-bottom: 10px;
+}
+
+label {
+    padding-right: 15px;
+}
+
+.submit {
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+}
+
+button {
+    border: 1px solid black;
+    padding: 2px 9px;
+}
