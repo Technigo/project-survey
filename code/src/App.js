@@ -2,104 +2,82 @@ import React, { useState } from 'react'
 /*import ReactDOM from "react-dom";*/
 /*import React, { useState } from 'react'*/
 import { Header } from './Header'
-import { Button } from './Button'
-import { Drop } from './Drop'
-import { Radio } from './Radio'
+//import { Button } from './Button'
+//import { Drop } from './Drop'
+//import { Radio } from './Radio'
 import { Summary } from './Summary'
 
 
-const ageGroups = ["0-18", "19-30", "30+"];
-
-/* Down below from Technigo
-export const App = () => {
-  return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  
-  )
-} */
-//const [submitted, setSubmitted] = useState(false)
+const CrossFitIcons = ["Tia", "Katrin", "Sarah"];
 
 export const App = () => {
-  const [temperature, setTemperature] = useState(20);
-  const [location, setLocation] = useState("");
-  const [ageGroup, setAgeGroup] = useState();
+  const [reps, setReps] = useState();
+  const [movement, setMovement] = useState("");
+  const [icon, setIcon] = useState();
   const [submit, setSubmit] = useState(false);
   
   return (
-  <div>
-    <form onSubmit={event => event.preventDefault()}>
-       <div className="button">
+  
+    <section className="formContainer">
         
-        <h3> Current temperature is {temperature} </h3> 
-        {/*<h1>Current temp> {temperature} degrees </h1> */}
-    
-        <button onClick={() => setTemperature(-5)}>Freeze!</button>
-        <button onClick={() => setTemperature(5)}>Ok!</button>
-        <button onClick={() => setTemperature(125)}>Hot!</button>
+      <Header />
+          
+      <form className="formInput" onSubmit={event => event.preventDefault()}>
+      
+        <p> When did you start with CrossFit?  </p> 
+          
+        <div className="formButton"> 
+          
+          <button onClick={() => setReps(5)}>Just started and I love it!</button>
+          <button onClick={() => setReps(20)}>A couple of months and my box is the best!</button>
+          <button onClick={() => setReps(50)}>It's been a couple of years now and can't imagine a life without it!</button>
+          {reps == 50 && <p>Rockstar - totally agree!</p>} 
+          {reps == 5 && <p>Awesome - keep it up and keep that feeling!</p>} 
+          {reps == 20 && <p>Whoop, whoop - one of the best things with the sport..The community!</p>} 
+        </div>
 
-         {temperature > 100 && <p>Steamy!</p>}  
-      </div>
-
-      <div>
-            <h3> Where shall we move? </h3>  
-            <select
-            onChange={event => setLocation(event.target.value)}
-            value={location}
-        
+        <p> Which movement was the most fun to get the hang of? </p>
+      
+        <div>
+              
+          <select
+            onChange={event => setMovement(event.target.value)}
+            value={movement}
             >
             
-            <option value=" ">Select location</option>
-            <option value="stockholm">Stockholm</option>
-            <option value="miami">Miami</option>
-            <option value="palma">Palma</option>
-            
-            </select>    
+            <option value=" ">Select your memory-movement:</option>
+            <option value="handStandPushUps">Oh my, that must be the handstand push ups</option>
+            <option value="chestToBar">Will never forget my first chest to bars..</option>
+            <option value="toesToBar">Just have one word for ya, Toes to Bar! Boom!</option>
+          
+          </select>    
         </div>
 
         <div>
-        Age Group:
-        {ageGroups.map(group => (
+          <p>Who of the CrossFit icons would you love to meet IRL?:</p>
+          {CrossFitIcons.map(group => (
             <label key={group}>
-                <input
-                    type="radio"
-                    value={group}
-                    onChange={event => setAgeGroup(event.target.value)}
-                    checked={ageGroup === group}
-                />
-            {group}
+              <input
+                  type="radio"
+                  value={group}
+                  onChange={event => setIcon(event.target.value)}
+                  checked={icon === group}
+              />
+                {group}
             </label>
-        ))} 
+          ))} 
         </div>
-      
-     
-      <button
-      onClick={() => setSubmit(true)}
-    >SUBMIT</button>
+            
+        <button
+        onClick={() => setSubmit(true)}
+        >SUBMIT</button>
 
-  </form>
+      </form>
 
-  {submit && <Summary location={location} group={ageGroup} temperature={temperature}/>}
+      {submit && <Summary movement={movement} icon={icon} reps={reps}/>}
 
-</div>
+    </section>
 
-);
+  );
 };
-
-      //*  <Header />
-        //<Button />
-        //<Drop />
-        //<Radio />
-        //<Submit />
-    //</div>
-    
-    //);
-  //}; }
-
-//<button onClick={() => setSubmitted(true)} 
-  //type="submit">Submit 
-//</button>
-
-//{submitted && <Summary name={name} number={number} />}
 

@@ -3,8 +3,8 @@ import "./Components/header.css";
 
 export const Header = () => {
     return (
-        <div className="header">
-            <h3>Strength Survey </h3> 
+        <div className="headerInfo">
+            <h1>Your CrossFit Survey </h1> 
              
         </div>
     )

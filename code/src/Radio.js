@@ -11,7 +11,6 @@ export const Radio = () => {
     <form>
         Age Group:
         {ageGroups.map(group => (
-        
             <label key={group}>
                 <input
                     type="radio"
