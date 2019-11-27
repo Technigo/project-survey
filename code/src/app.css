@@ -217,6 +217,7 @@ button:disabled:hover {
   text-align: center;
   margin: 0 0 20px 0;
   color: #fff;
+  font-style: italic;
 }
 
 /* SUMMARY */

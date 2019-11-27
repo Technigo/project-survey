@@ -125,7 +125,7 @@ export const App = () => {
             {question !== "range" && (
               <button type="button" onClick={handleNext} disabled={isDisabled()}>Next</button>
             )}
-            {isDisabled() && (<div className="name-required">* Please type your name before hitting Next *</div>)}
+            {isDisabled() && (<div className="name-required">Please type your name before hitting Next</div>)}
           </div>
 
         )}
