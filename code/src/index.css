@@ -1,12 +1,12 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: roboto;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: bisque;
   
 }
 
@@ -15,28 +15,40 @@ code {
     monospace;
 }
 
-h1 {
-  font-family: 'montserrat';
-  font-size: 30px;
-  margin: 25px 0px;
+h1, h2 {
+  text-align: center;
 }
-/* button {
-  display: inline-block;
-  width: 100%;
-  padding: 10px;
+
+p {
+  display: block;
+  margin-left: 220px;
+}
+.formField {
+  margin-left: 220px;
+  align-items: center;
   background-color: pink;
-  color:darkslategrey */
-
-
-h4{
-    background: lightblue;
-    display: inline; 
-    /* margin-left: 20px; */
-    font-size: 20px;
-    
+  border: 1px solid black;
 }
-select {
-    font-size: 20px;
-    border: solid 1px;
-    /* margin-left: 10px; */
+
+.destinations {
+  margin-left: 220px;
+  margin-top: 20px;
+}
+
+.formDropdown {
+  margin-left: 220px;
+}
+
+/*age button*/
+.radioBtn {
+  margin-left: 220px;
+  margin-bottom: 5px;
+}
+
+
+.submitBtn {
+  justify-content: center;
+  border-bottom-width: medium;
+  margin-left: 220px;
+  margin-top: 30px;
 }

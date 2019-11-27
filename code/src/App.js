@@ -8,7 +8,13 @@ const ageGroups = ["20-30", "31-40", "41-50"];
 
 export const App = () => {
   const [name, setName] = useState("");
-  const [temperature, setTemperature] = useState(20);
+
+  const [capetown, setCapetown] = useState(false);
+  const [grandcanyon, setGrandCanyon] = useState(false);
+  const [maldives, setMaldives] = useState(false);
+  const [bali, setBali] = useState(false);
+
+  // const [temperature, setTemperature] = useState(20);
   const [location, setLocation] = useState("");
   const [ageGroup, setAgeGroup] = useState()
   const [submitted, setSubmitted] = useState(false)
@@ -17,8 +23,10 @@ export const App = () => {
   return (
     <div className="Button">
       <form onSubmit={event => event.preventDefault()}>
-        {/* <div className="Button"> */}
-        <h1>Jambo everyone!</h1>
+
+        <h1>Welcome to the dream trip survey!</h1>
+        <h2>Please answer the questions below.</h2>
+
         <p>What's your name?</p>
         <input
           className="formField"
@@ -27,31 +35,74 @@ export const App = () => {
           value={name}
         />
 
-        <p>How is the weather in Capetown?</p>
-        {/* the temperature is {temperature} degrees</p> */}
+        <div className="destinations">
+          What destination do you like the most?
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              checked={capetown}
+              onChange={(event) => setCapetown(event.target.checked)}
+            />
+            Capetown
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              checked={grandcanyon}
+              onChange={(event) => setGrandCanyon(event.target.checked)}
+            />
+            Grand Canyon
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              checked={maldives}
+              onChange={(event) => setMaldives(event.target.checked)}
+            />
+            Maldives
+          </label>
+          <br />
+          <label>
+            <input
+              type="checkbox"
+              checked={bali}
+              onChange={(event) => setBali(event.target.checked)}
+            />
+            Bali
+          </label>
+          <br />
+        </div>
 
+
+
+        {/* <p>How is the weather in Capetown?</p>
+        {/* the temperature is {temperature} degrees</p> */}
+        {/* 
         <button onClick={() => setTemperature(-5)}>Freezeing!</button>
         <button onClick={() => setTemperature(30)}>Warm!</button>
-        <button onClick={() => setTemperature(120)}>Hot!</button>
+        <button onClick={() => setTemperature(120)}>Hot!</button> */}
 
-        {temperature > 100 && <p>and really steamy</p>}
+        {/* {temperature > 100 && <p>and really steamy</p>} */}
 
         {/* onChange={event => setName(event.target.value)}
         value={temperature} */}
 
 
-        <p>Select your next destination</p>
+        <p>Your next dream destination is</p>
         <select className="formDropdown"
           onChange={event => setLocation(event.target.value)}
           value={name}
         >
           <option value="">Select destination</option>
-          <option value="stockholm">Stockholm</option>
-          <option value="capetown">Capetown</option>
-          <option value="bali">Bali</option>
+          <option value="Cinque Terre">Cinque Terre</option>
+          <option value="Svalbard">Svalbard</option>
+          <option value="Harbor Island">Harbor Island</option>
         </select>
 
-        <p>select your age</p>
+        <p>Please select your age</p>
         {ageGroups.map(group => (
           <label key={group}>
             <input className="radioBtn"
@@ -61,19 +112,20 @@ export const App = () => {
               checked={ageGroup === group}
             />
             {group}
+            <br />
+
           </label>
         ))}
 
 
-
-        <button
+        <button className="submitBtn"
           onClick={() => setSubmitted(true)}
         >SUBMIT
             </button>
 
       </form>
 
-      {submitted && <Summary name={name} temperature={temperature} location={location} ageGroup={ageGroup} />}
+      {submitted && <Summary name={name} capetown={" Capetown"} grandcanyon={" Grand Canyon"} maldives={" Maldives"} bali={" Bali"} location={location} ageGroup={ageGroup} />}
 
     </div>
 
