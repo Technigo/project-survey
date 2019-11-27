@@ -240,11 +240,10 @@ footer {
   color: #fff;
   text-align: center;
   font-size: 12px;
-  margin-top: 30px;
+  margin-top: 20px;
   padding-top: 20px;
   height: 10vh;
   width: 100%;
-  border-top: 2px solid #FFD6D2;
 }
 
 /* MEDIA QUERY FOR MOBILE */

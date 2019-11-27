@@ -9,7 +9,7 @@ export const App = () => {
   const [name, setName] = useState("")
   const [location, setLocation] = useState("")
   const [fruit, setFruit] = useState()
-  const [range, setRange] = useState(50)
+  const [range, setRange] = useState(5)
   const [submitted, setSubmitted] = useState(false)   //False because form is not submitted from start (initial value)
 
   //Array with values for mapping radio buttons in #2
@@ -67,13 +67,13 @@ export const App = () => {
             {question === "location" && (
               <div className="question">
                 <label>
-                  <h2>#1: What's your location?</h2>
+                  <h2>#1: What's the best location?</h2>
                   <div className="select-main">
                     <select
                       onChange={event => setLocation(event.target.value)}
                       value={location}
                     >
-                      <option value="">Choose your location</option>
+                      <option value="">- Choose location -</option>
                       <option value="Home">Home</option>
                       <option value="Away">Away</option>
                       <option value="Vacayay!">Vacayay!</option>
@@ -105,16 +105,16 @@ export const App = () => {
             {question === "range" && (
               <div className="question">
                 <label>
-                  <h2>#3: How many % has been knocked down by imposter syndrome?</h2>
+                  <h2>#3: How many reindeers does Santa have?</h2>
                   <input
                     type="range"
                     min={1}
-                    max={100}
+                    max={10}
                     value={range}
                     onChange={(event) => setRange(event.target.value)}
                   />
                 </label>
-                <div className="show-range">{range}%</div>
+                <div className="show-range">{range}</div>
 
                 <button type="submit">Done</button>
 
