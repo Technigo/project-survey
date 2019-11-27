@@ -1,14 +1,13 @@
 import React, { useState } from 'react'
-import "./Components/submit.css";
+import "./Components/summary.css";
 
 
-export const Submit = (props) => {
-
-    return <div className="SubmitText">
-        <p style={{ color: props.temperature }}>Welcome {props.temperature}san! <br></br>You're now a part of the Turtle Ninja crew!
+export const Summary = (props) => {
+    return <div className="summaryText">
+        <p>Welcome {props.temperature}san! <br></br>You're now a part of the Turtle Ninja crew!
         </p>
-        <p style={{ color: props.location }}>Your ninja colour: {props.location}</p>
-        <p style={{ color: props.group }}>Your ninja weapon: {props.group}</p>
+        <p>Your ninja colour: {props.location}</p>
+        <p>Your ninja weapon: {props.group}</p>
     </div>
 };
 //export const Submit = (props) => {

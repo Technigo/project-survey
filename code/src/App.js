@@ -5,7 +5,7 @@ import { Header } from './Header'
 import { Button } from './Button'
 import { Drop } from './Drop'
 import { Radio } from './Radio'
-import { Submit } from './Submit'
+import { Summary } from './Summary'
 
 
 const ageGroups = ["0-18", "19-30", "30+"];
@@ -80,7 +80,7 @@ export const App = () => {
 
   </form>
 
-  {Submit && <Submit location={location} group={ageGroup} temperature={temperature}/>}
+  {submit && <Summary location={location} group={ageGroup} temperature={temperature}/>}
 
 </div>
 
