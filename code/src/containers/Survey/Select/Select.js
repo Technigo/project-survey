@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Select = (props) => {
-  const [answer, setAnswer] = useState('')
+  const [answer, setAnswer] = useState(props.object.options[0])
 
   const submitHandler = (event) => {
     event.preventDefault()
@@ -26,7 +26,6 @@ const Select = (props) => {
       <button type="submit">NEXT</button>
     </form>
   )
-
 }
 
 export default Select

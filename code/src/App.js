@@ -3,8 +3,9 @@ import Survey from './containers/Survey/Survey'
 
 export const App = () => {
   return (
-    <div>
+    <section className="page-content">
+      <h1>RSVP</h1>
       <Survey />
-    </div>
+    </section>
   )
 }

@@ -21,7 +21,7 @@ const Survey = () => {
   }
 
   // eslint-disable-next-line array-callback-return
-  const questions = data.map((element, index) => {
+  const questions = data.questions.map((element, index) => {
     const key = `${index}option`
     if (element.inputType === 'Text') {
       return (
@@ -55,7 +55,11 @@ const Survey = () => {
   return (
     <div>
       {
-        siteIndex === -1 && <Welcome onNextSite={nextSiteHandler} />
+        siteIndex === -1 && <Welcome
+          onNextSite={nextSiteHandler}
+          title={data.title}
+          place={data.place}
+          date={data.date} />
       }
       {questions}
       {
