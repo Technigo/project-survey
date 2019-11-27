@@ -20,10 +20,12 @@ export const App = () => {
   
     <section className="formContainer">
         
-      <Header />
+     
           
       <form className="formInput" onSubmit={event => event.preventDefault()}>
-      
+      <Header />
+
+
         <p> When did you start with CrossFit?  </p> 
           
         <div className="formButton"> 
@@ -67,11 +69,12 @@ export const App = () => {
             </label>
           ))} 
         </div>
-            
-        <button
-        onClick={() => setSubmit(true)}
-        >SUBMIT</button>
 
+       <div className="submitButton">     
+          <button
+          onClick={() => setSubmit(true)}
+          >SUBMIT</button>
+        </div>
       </form>
 
       {submit && <Summary movement={movement} icon={icon} reps={reps}/>}

@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(188, 229, 241);
+  color: #fff;
+  font-size: 20px;
 }
 
 code {
@@ -17,24 +20,60 @@ p {
   font-size: 16px;
 }
 
+
+  /*Keeping the app and making it flexible with a grey frame surrounding*/
+/* All info in the center*/
 .formContainer {
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;  
-    margin-top: 50px;
-    padding: 15px;
-    width: 500px;
-    border: 2px solid #f147c7;
-    box-shadow: 20px 20px;
-  }
+  margin: 20px auto;
+  width: 90%;
+  background: rgba(195, 213, 224, 0.877);
+  height: auto;
+  display: flex;  
+  justify-content: space-around;
+  align-items: center; 
+}
+
+.formInput {
+  width: 450px;
+  height: auto;
+  margin-top: 10px;
+  border-radius: 20px;
+  border: 1px solid white;
+  padding: 20px;
+  background-color: rgb(123, 203, 240);
+  justify-content: center;
+  text-align: center;
+  /*text transform capitalize gives big first letter in every words */
+  text-transform: capitalize;
+  /* The "linear-gradient" gives a darker feeling to the her image*/
+ background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Components/Pictures/Ringdips.jpg");
+  background-repeat: no-repeat;
+  /* To make the her0 picture cover the app */
+  background-size: cover;
+  background-position: center;
+  /* The image changes size on all screens */
+  position: relative
+}
 
   .formRadiobtn{
-    margin: 20px;
+    margin: 100px;
   }
   
-  button{
+  .submitButton button {
+    color: #f147c7;
+    font-size: 20px;
+    border: #f147c7;
+    border-radius: 90px; /* Button gets rounded corners */ 
+    border: 5px solid #f147c7;
+    font-weight: 500px;
+    text-transform: uppercase;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer;
+    margin: 20px;
+  } 
+  /*button{
     display: block;
     width: 100%;
     margin: 30px 0;
@@ -43,7 +82,7 @@ p {
     color: #fff;
     border: none;
     font-size: 20px;
-  }
+  }*/
   
 
 
