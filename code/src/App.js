@@ -71,13 +71,14 @@ export const App = () => {
               <h2>#2: What is the Minions favorite fruit?</h2>
               {fruits.map((choice) => (
                 <label key={choice} className="radio-buttons">
+
                   <input
                     type="radio"
                     value={choice}
                     onChange={(event) => setFruit(event.target.value)}
                     checked={fruit === choice}
                   />
-                  <div>{choice}</div>
+                  <span className="radio-label">{choice}</span>
                 </label>
               ))
               }
