@@ -2,11 +2,13 @@
     visibility: 'hidden';
     visibility: 'visible';
     background-color: white;
-    opacity: 0.3;
+    opacity: 0.5;
     margin: 50px;
     padding: 30px;
+    border-radius: 2%;
 }
 
 h2 {
+
     text-align: center;
 }

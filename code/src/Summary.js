@@ -8,8 +8,8 @@ export const Summary = (props) => {
             <div className="summaryReview">
 
                 <h2>Thank you for your order {props.name}!</h2>
-                <p>Your order: </p>
-                <p> A {props.burger} burger and {props.bread} bread to {props.group} whill be ready in a minute!</p>
+                <p>You ordered: </p>
+                <p> A {props.burger} burger with {props.bread} bread to {props.group} will be ready in a minute!</p>
 
             </div>
         </div>
