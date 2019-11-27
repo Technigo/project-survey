@@ -234,6 +234,14 @@ button:disabled:hover {
   width: 40%;
 }
 
+.user-answer {
+  margin: 2px 0 2px 0;
+}
+.correct-answer {
+  margin: 2px 0 10px 0;
+  color: #fff;
+}
+
 /* FOOTER */
 
 footer {
