@@ -20,17 +20,13 @@ code {
 
 .form-container {
   background: darkcyan;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  line-height: 18px;
-  height: 600px;
+  height: 800px;
   width: 500px;
   border: 2px solid black;
   padding: 20px;
 }
 
-.name-input, .drop-down {
+.input-name, .drop-down {
   width: 50%;
   height: 35px;
   border: 1px solid #ccc;
@@ -58,4 +54,12 @@ code {
   font-size: 15px;
   font-weight: bold;
   margin-top: 20px;
+}
+
+.checkbox-div {
+  height: 100px;
+  line-height: 100px;
+  margin-bottom: 0%;
+  text-align: left;
+  font-size: 20px;
 }
