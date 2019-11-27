@@ -73,18 +73,18 @@ p {
     cursor: pointer;
     margin: 20px;
   } 
-  /*button{
-    display: block;
-    width: 100%;
-    margin: 30px 0;
-    padding: 16px 20px;
-    background-color: #f147c7;
-    color: #fff;
-    border: none;
-    font-size: 20px;
-  }*/
+
+  /*@media (min-width: 650px) {
+
+    .formContainer {
+      margin: 10px 0;
+      align-items: center;
+    }
   
-
-
+    .formInput {
+      width: 25%;
+      flex-grow: 1;
+      margin: 16px;
+    }*/
 
 
