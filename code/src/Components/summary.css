@@ -1,5 +1,13 @@
-.summaryText p {
- background: pink;
+.summaryText {
+    width: 350px;
+    height: 300px;
+    /*margin-top: 10px;*/
+    border-radius: 20px;
+    border: 1px solid white;
+    padding: 10px;
+    background-color: rgb(123, 203, 240);
+    justify-content: center;
+    text-align: center;background: pink;
  font-size: 24px;                                                      
  color: rgb(91, 91, 91);
  border-bottom: 1px solid rgb(91, 91, 91); 

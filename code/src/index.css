@@ -16,7 +16,7 @@ code {
 }
 
 p {
-  margin: 30px 0 15px 0;
+  margin: 50px 0 15px 0;
   font-size: 16px;
 }
 
@@ -35,7 +35,7 @@ p {
 
 .formInput {
   width: 450px;
-  height: auto;
+  height: 600px;
   margin-top: 10px;
   border-radius: 20px;
   border: 1px solid white;
@@ -57,6 +57,7 @@ p {
 
   .formRadiobtn{
     margin: 100px;
+    justify-items: stretch;
   }
   
   .submitButton button {
@@ -71,7 +72,7 @@ p {
     padding: 10px;
     display: inline-block;
     cursor: pointer;
-    margin: 20px;
+    margin: 40px;
   } 
 
   /*@media (min-width: 650px) {
