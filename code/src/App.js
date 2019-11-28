@@ -5,9 +5,12 @@ import { Summary } from "Summary";
 export const App = () => {
   const sizeComp = ["0-10 people", "10-50 people", "50+ people"];
 
+  const allBenefits = ["Car", "Training-time", "Insurance"];
+
   const [name, setName] = useState("");
   const [size, setSize] = useState();
   const [city, setCity] = useState();
+  const [benefits, setBenefits] = useState(false);
   const [answer, setAnswer] = useState(false);
   const [question, setQuestion] = useState("name");
 
@@ -20,21 +23,23 @@ export const App = () => {
     if (question === "name") {
       setQuestion("city");
     } else if (question === "city") {
+      setQuestion("benefits");
+    } else if (question === "benefits") {
       setQuestion("size");
     }
   };
 
   return (
-    <div>
+    <div className="mainContainer">
       {answer && <Summary name={name} size={size} city={city} />}
 
       {!answer && (
         <div className="formContainer">
           <form onSubmit={handleSubmit}>
             {question === "name" && (
-              <div className="nameInputContainer">
-                <div>
-                  <h3>Welcome! </h3>
+              <div className="inputContainer">
+                <h3>Welcome! </h3>
+                <div className="welcomeContainer">
                   <p className="welcomeNote">
                     I would like to know more about your company. Please answer
                     the questions in my survey!
@@ -67,10 +72,27 @@ export const App = () => {
                     <option value="Norrmalm">Norrmalm</option>
                     <option value="Södermalm">Södermalm</option>
                     <option value="Östermalm">Östermalm</option>
-                    <option value="other">Other city</option>
+                    <option value="other city">Other city</option>
                   </select>
                 </label>
                 <br />
+              </div>
+            )}
+
+            {question === "benefits" && (
+              <div className="inputContainer">
+                What company benefits do you have for your employees?
+                <br />
+                {allBenefits.map(item => (
+                  <label key={item}>
+                    <input
+                      type="checkbox"
+                      onChange={event => setBenefits(event.target.checked)}
+                      checked={benefits === item}
+                    ></input>
+                    {item}
+                  </label>
+                ))}
               </div>
             )}
 
@@ -90,14 +112,14 @@ export const App = () => {
                   </label>
                 ))}{" "}
                 <br />
-                <div className="">
+                <div className="buttonContainer">
                   <button type="submit">Submit</button>
                 </div>
               </div>
             )}
 
             {question !== "size" && (
-              <div className="continueButton">
+              <div className="buttonContainer">
                 <button type="button" onClick={handleContinueClick}>
                   Continue
                 </button>

@@ -1,8 +1,9 @@
 .SummaryStyle {
   margin-top: 30%;
 }
-p {
+p.summary {
   display: flex;
   justify-content: center;
   font-size: 30px;
+  font-weight: bold;
 }

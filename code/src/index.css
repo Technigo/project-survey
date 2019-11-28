@@ -13,13 +13,17 @@ code {
     monospace;
 }
 
-h1 {
+h3 {
   text-align: center;
+}
+
+.welcomeContainer {
+  margin-bottom: 40px;
 }
 
 .welcomeNote {
   font-size: 17px;
-  text-align: left;
+  text-align: center;
   width: 400px;
   line-height: 30px;
 }
@@ -33,10 +37,11 @@ h1 {
 }
 
 form {
-  background: rgb(240, 236, 236);
+  background: rgb(190, 150, 64);
   padding: 20px;
-  width: 50%;
+  width: 40%;
   border-radius: 15px;
+  box-shadow: 2px 2px 4px 4px grey;
 }
 
 label {
@@ -54,7 +59,7 @@ label.radioLabel {
 input[type="text"] {
   width: 90%;
   height: 30px;
-  border: none;
+  border-radius: 16px;
   border-bottom: rgb(37, 37, 37);
   margin-top: 10px;
   font-size: 15px;
@@ -73,18 +78,19 @@ select {
 }
 
 button {
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   margin-top: 20px;
   font-size: 16px;
   color: rgb(22, 19, 19);
   border-radius: 16px;
   margin-right: 40px;
   text-transform: uppercase;
-  background: rgb(64, 123, 190);
+  background: rgb(240, 236, 236);
+  box-shadow: 2px 2px 2px rgb(75, 74, 74);
 }
 
-.continueButton {
+.buttonContainer {
   display: flex;
   justify-content: flex-end;
 }

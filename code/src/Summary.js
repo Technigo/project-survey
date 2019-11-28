@@ -6,8 +6,8 @@ export const Summary = props => {
 
   return (
     <div className="SummaryStyle">
-      <p>Thank you for your reply {props.name} !</p>
-      <p>
+      <p className="summary">Thank you for your reply {props.name} !</p>
+      <p className="summary">
         {" "}
         Now I know that you are {props.size} people in {props.city}.
       </p>
