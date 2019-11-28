@@ -30,7 +30,7 @@
 
 .survey-link-button {
   align-self: start;
-  background-color: #f94c27;
+  border: 2px solid #fff;
   border-radius: 2rem;
   color: #fff;
   grid-column: 1 / span 4;
@@ -67,6 +67,7 @@
   }
 
   .survey-link-button:hover {
-    background-color: #1f9187;;
+    background-color: #1f9187;
+    border-color: #1f9187;
   }
 }

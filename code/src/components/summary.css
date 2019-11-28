@@ -1,0 +1,55 @@
+.summary-section {
+  height: 100vh;
+  padding: 1rem;
+  width: 100%;
+}
+
+.summary-title {
+  font-size: 2rem;
+  text-align: left;
+}
+
+.summary-description {
+    font-size: 2rem;
+}
+
+.summary-section ul {
+  font-size: 1rem;
+  text-align: left;
+  margin-left: 1rem;
+}
+
+.user-answer {
+  color: #1f9187;
+  font-weight: bold;
+}
+
+.summary-section img {
+  height: 200px;
+  width: auto;
+}
+
+@media screen and (min-width: 668px) {
+  .summary-title {
+    font-size: 5rem;
+  }
+  .summary-description {
+    font-size: 2rem;
+  }
+
+}
+@media screen and (min-width: 1024px) {
+  .summary-section {
+    padding: 4rem;
+    border-bottom: 2px solid #ededed;
+    text-align: left;
+  }
+  .summary-title {
+    font-size: 4rem;
+  }
+  .summary-section ul {
+    font-size: 2.5rem;
+    margin-left: 2rem;
+  }
+
+}

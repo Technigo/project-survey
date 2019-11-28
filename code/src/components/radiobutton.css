@@ -1,0 +1,29 @@
+.radiobuttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem;
+}
+
+.radiobutton-label {
+  border: 2px solid #1f9187;
+  color: #1f9187;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+input[type="radiobutton"]:checked + .radiobutton-label::after {
+  background-color: #1f9187;
+  color: #fff;
+  content: '';
+  display: block;
+  width: 100%;
+}
+
+input[type="radiobutton"] {
+border: none;
+height: 100%;
+left: 0;
+position: absolute;
+top: 0;
+width: 100%;
+}
