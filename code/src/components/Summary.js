@@ -11,7 +11,7 @@ export const Summary = (props) => {
         <li>
           You want to play on <span className="user-answer">{props.weekday}</span>
         </li>
-        <li>You would like to play <span className="user-answer">{props.howOften}</span> times a month</li>
+        <li><span class="user-answer">{props.approval}</span>, you would like to play videogames as well</li>
       </ul>
       <img src={require('./drink.png')} alt="Image" />
     </section>
