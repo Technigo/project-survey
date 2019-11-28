@@ -11,11 +11,13 @@ export const App = () => {
   return (
   <div>
 
+    
+
+    <div className='survey'>
+
     <header>
       <h1>Skiing survey</h1>
     </header>
-
-    <div className='survey'>
 
       <form onSubmit={event => event.preventDefault()}>
           <h2>Name</h2>
@@ -26,10 +28,14 @@ export const App = () => {
           />
       </form>
 
-      <div>* * * * * * * * * * * * * * * * * * * * *</div>
+      
+      <div role="img" aria-label="snowflakes">
+      <span>❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️</span>
+      </div>
+        
 
       <form>
-          <h2>Farourive type of skiiing</h2>
+          <h2>Favourite type of skiiing</h2>
           <select onChange={event => setActivity(event.target.value)} value={activity}>
             <option value=''>Select</option>
             <option value='activity1'>skiing</option>
@@ -38,7 +44,7 @@ export const App = () => {
           </select>
         </form>
 
-      <div>* * * * * * * * * * * * * * * * * * * * *</div>
+      <span>❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️</span>
 
       <form>
           <h2>Which type of skiing you prefer?</h2>
@@ -57,7 +63,7 @@ export const App = () => {
           }   
         </form>
 
-        <div>* * * * * * * * * * * * * * * * * * * * *</div>
+        <span>❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️</span>
 
         <button type='submit'>Submit</button>
 
@@ -66,6 +72,8 @@ export const App = () => {
       </footer>
 
     </div>
+
+    
   </div>
 
 )

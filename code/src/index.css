@@ -8,3 +8,35 @@ body {
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.survey {
+    background-image: url(header-image.jpg);
+    /* height: cover; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    /* background-image: url(header-image.jpg); */
+    /* background-size: cover; */
+    /* background-attachment: fixed; */
+    /* height: 40px; */
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-size: 7vh;
+}
+
+footer {
+    /* height: 20px; */
+    font-size: 3vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
