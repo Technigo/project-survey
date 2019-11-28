@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { InputText } from './components/InputText'
 import { Summary } from './components/Summary'
 import './app.css'
 
@@ -81,16 +82,16 @@ export const App = () => {
             {question === 3 && (
               <div className="question" role="radiogroup">
                 <h2>#2: What is the Minions favorite fruit?</h2>
-                {fruits.map((choice) => (
-                  <label key={choice} className="radio-buttons">
+                {fruits.map((option) => (
+                  <label key={option} className="radio-buttons">
 
                     <input
                       type="radio"
-                      value={choice}
+                      value={option}
                       onChange={(event) => setFruit(event.target.value)}
-                      checked={fruit === choice}
+                      checked={fruit === option}
                     />
-                    <span className="radio-label">{choice}</span>
+                    <span className="radio-label">{option}</span>
                   </label>
                 ))
                 }
