@@ -234,3 +234,10 @@ button {
   text-align: center;
 }
 
+.summary {
+  font-size: 20px;
+}
+
+footer {
+  margin: 20px;
+}
