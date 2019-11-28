@@ -1,14 +1,37 @@
 header{
-  height: 800px;
+  height: 780px;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background:#c1bdbc;
+  background:#b5b1b0;
+}
+
+h1{
+  margin-bottom: 50px;
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+}
+
+h2{
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  font-weight: 100;
+  margin-top: 0;
 }
 
 .imgContainer{
   background: url(./hero.png) no-repeat center;
   width:300px;
   height: auto;
+}
+
+button{
+background: black;
+color: #b5b1b0;
+padding: 12px;
+border-radius: 10px;
+border: solid 1px black;
+font-family: 'Roboto', sans-serif;
+font-size: 22px;
 }
