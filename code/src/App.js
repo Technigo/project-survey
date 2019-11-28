@@ -33,24 +33,27 @@ export const App = () => {
       )}
 
       {!showResult && (
-        <form onSubmit={handleSubmit}>
+        <form className="formContainer" onSubmit={handleSubmit}>
 
           <div className="christmasMovie">
-            <select
-              onChange={event => setMovie(event.target.value)}
-              value={movie}>
+            <h3>What is you´re favourite christmas movie?</h3>
+            <div className="dropdownMovies">
+              <select
+                onChange={event => setMovie(event.target.value)}
+                value={movie}>
 
-              <option value="" />
-              <option value="Love Actually">Love Actually</option>
-              <option value="The Grinch">The Grinch</option>
-              <option value="The Holiday">The Holiday</option>
-              <option value="Home Alone 2: Lost in New York">
-                Home Alone 2: Lost in New York</option>
-            </select>
+                <option value="" />
+                <option value="Love Actually">Love Actually</option>
+                <option value="The Grinch">The Grinch</option>
+                <option value="The Holiday">The Holiday</option>
+                <option value="Home Alone 2: Lost in New York">
+                  Home Alone 2: Lost in New York</option>
+              </select>
+            </div>
           </div>
 
           <div className="christmasSong">
-            <h3>Youre favourite song is? {songName}</h3>
+            <h3>What is you´re favourite christmas song: {songName}</h3>
             <input
               type="text"
               onChange={event => setSongName(event.target.value)}
