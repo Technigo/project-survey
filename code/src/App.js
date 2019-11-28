@@ -17,56 +17,69 @@ export const App = () => {
         }}
       >
         <div className="header">
-          <h1>WIN EXCLUSIVE TICKETS TO YOUR DREAM DESTINATION!</h1>  </div>
-        <h2>
-          We are giving one lucky winner this unique opportunity.
-          All you have to do is to
-          fill out the form beneath and cross your fingers!
-        </h2>
-        <h3>Your name: {name} ✍️</h3>
-        <input type="text" onChange={(event) => setName(event.target.value)} value={name} required />
-        <h3> Choose your dream destination: </h3>
-        <h3>🏝️</h3>
-        <select onChange={(event) => setLocation(event.target.value)} value={location}>
-          <option value="">Where to?</option>
-          <option value="New York">New York 🇺🇸</option>
-          <option value="Tokyo">Tokyo 🇯🇵</option>
-          <option value="Paris">Paris 🇫🇷</option>
-        </select>
-        <h3>Choose your age group:</h3>
-        <label>
-          <input
-            type="radio"
-            value="18-25"
-            onChange={event => setAgeGroup(event.target.value)}
-            checked={ageGroup === "18-25"}
-          />
-          18-25
-      </label>
-        <label>
-          <input
-            type="radio"
-            value="25-35"
-            onChange={event => setAgeGroup(event.target.value)}
-            checked={ageGroup === "25-35"}
-          />
-          25-35
-      </label>
-        <label>
-          <input
-            type="radio"
-            value="35+"
-            onChange={event => setAgeGroup(event.target.value)}
-            checked={ageGroup === "35+"}
-          />
-          35+
-      </label>
-        <h3>Submit your application!</h3>
-        <h3>👇</h3>
+          <h1>WHEN THERE'S NO TIME TO WASTE.</h1>
+        </div>
 
-        <button onClick={() => setSubmitted(true)} type="submit">Submit</button>
+        <div className="introduction">
+          <h2> We know it can be awkward and tricky.
+            Don't worry, we won't "have the talk" with you or stress you in the cashier.
+            Our condoms are free of charge and they're really good.
+            We'll even send them right home to your address.
+            Fill out the form and we'll take care of the boring part.
+          Thanks for wearing rubber.</h2></div>
+
+        <h3><span>Your email: {name} ✍️</span></h3>
+        <input type="text" onChange={(event) => setName(event.target.value)} value={name} required />
+
+
+        <h3> <span> Size? </span></h3>
+        <select onChange={(event) => setLocation(event.target.value)} value={location}>
+          <option value="">Size matters!</option>
+          <option value="Small">Small</option>
+          <option value="Medium">Medium</option>
+          <option value="Large">Large</option>
+        </select>
+
+
+        <h3><span>Preferred color?</span></h3>
+        <label>
+          <input
+            type="radio"
+            value="blue"
+            onChange={event => setAgeGroup(event.target.value)}
+            checked={ageGroup === "blue"}
+          />
+          Blue 💙
+      </label>
+        <label>
+          <input
+            type="radio"
+            value="green"
+            onChange={event => setAgeGroup(event.target.value)}
+            checked={ageGroup === "green"}
+          />
+          Green 💚
+      </label>
+        <label>
+          <input
+            type="radio"
+            value="purple"
+            onChange={event => setAgeGroup(event.target.value)}
+            checked={ageGroup === "purple"}
+          />
+          Purple 💜
+      </label>
+        <h3><span>Send me condoms!</span></h3>
+        <h2><span role="img" aria-label="Finger pointing down">👇</span></h2>
+
+        <button onClick={() => setSubmitted(true)} type="submit">Send</button>
       </form>
       {submitted && <Summary name={name} location={location} ageGroup={ageGroup} />}
+
+      <div className="footer">
+        <h1>RUBBER SOUL.</h1>
+      </div>
+
     </div>
   )
 }

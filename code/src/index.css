@@ -1,33 +1,47 @@
 h1 {
   color: white;
+  font-size: 45px;
 text-align: center;
 margin-top: 80px;
 padding: 20px;
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-weight: bolder;
+}
+
+h3 span {
+  background-color:  #94BBCF;
+  border-radius: 10px;
+  padding: 5px;
+  color: white;
 }
 
 .header {
-  background-image: url(/assets/travel-1209355_1920.jpg);
+  background-image: url(/assets/photo-1531170858071-90621b6d369b.jpeg);
   background-size: cover;
-  height: 150px;
+  height: 500px;
+  padding: 20px;
 }
 
-h2 {
-  color: white;
- text-align: center;
- font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
- padding: 20px;
+.introduction {
+  color: #94BBCF;
+  text-align: center;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  padding: 30px;
 }
+
 .form {
   text-align: center;
 }
 
 .myForm {
-  color: white;
+  background-color: white;
+  color: black;
   text-align: center;
+  margin-bottom: 50px;
 }
 
 body {
-  background-color: lightsteelblue;
+  background-color: #94BBCF;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -42,6 +56,14 @@ code {
 }
 
 button {
-font-size: 14px;
+font-size: 18px;
 border-radius: 10px;
+margin-bottom: 40px;
+}
+
+.footer {
+  background-image: url(/assets/gurka.jpeg);
+  background-size: cover;
+  height: 500px;
+  padding: 20px;
 }
