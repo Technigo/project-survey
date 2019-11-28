@@ -1,34 +1,26 @@
-// import React from 'react'
 import React, { useState } from 'react'
 import { Summary } from './Summary'
 
-const ageGroups = ["20-30", "31-40", "41-50"];
-const destinationGroup = ["Capetown", "Grand Canyon", "Maldives", "Bali"];
+const ageGroups = ["Alone", "With family members", "With friends"];
+const destinationGroup = ["Mount Everest", "Machu Picchu", "Grand Canyon", "Bali"];
 
 export const App = () => {
-
   const [name, setName] = useState("");
   const [destinations, setDestinations] = useState();
-
-  // const [capetown, setCapetown] = useState(false);
-  // const [grandcanyon, setGrandCanyon] = useState(false);
-  // const [maldives, setMaldives] = useState(false);
-  // const [bali, setBali] = useState(false);
-
-  // const [temperature, setTemperature] = useState(20);
   const [location, setLocation] = useState("");
   const [ageGroup, setAgeGroup] = useState()
   const [submitted, setSubmitted] = useState(false)
+
 
 
   return (
     <div className="Button">
       <form onSubmit={event => event.preventDefault()}>
 
-        <div classname="heroHeader">
-          <h1>Welcome to dream trip survey!</h1>
+        <div className="heroHeader">
+          <h1>Plan your 2020 adventure now!</h1>
         </div>
-        <h2>Please answer the questions below.</h2>
+
 
         <div className="nameBox">
           Your name:
@@ -41,9 +33,9 @@ export const App = () => {
           />
         </div>
 
-        <div className="Destinations">
-          <p>Which destination is most interesting?</p>
 
+        <p>What kind of adventure are you up for?</p>
+        <div className="Destinations">
           {destinationGroup.map(group => (
             <label key={group}>
               <input className="destinations"
@@ -60,61 +52,22 @@ export const App = () => {
 
 
 
-
-
-        {/* <label>
-            <input
-              type="checkbox"
-              checked={capetown}
-              onChange={(event) => setCapetown(event.target.checked)}
-            />
-            Capetown
-          </label>
-          <br />
-          <label>
-            <input
-              type="checkbox"
-              checked={grandcanyon}
-              onChange={(event) => setGrandCanyon(event.target.checked)}
-            />
-            Grand Canyon
-          </label>
-          <br />
-          <label>
-            <input
-              type="checkbox"
-              checked={maldives}
-              onChange={(event) => setMaldives(event.target.checked)}
-            />
-            Maldives
-          </label>
-          <br />
-          <label>
-            <input
-              type="checkbox"
-              checked={bali}
-              onChange={(event) => setBali(event.target.checked)}
-            />
-            Bali
-          </label>
-          <br />
-        </div> */}
-
         <div className="nextDestinationBox">
-          <p>Your next dream destination is</p>
+
+          <p>What’s the most important thing when you travel?</p>
           <select className="formDropdown"
             onChange={event => setLocation(event.target.value)}
             value={name}
           >
-            <option value="">Select destination</option>
-            <option value="Cinque Terre">Cinque Terre</option>
-            <option value="Svalbard">Svalbard</option>
-            <option value="Harbor Island">Harbor Island</option>
+            <option value="">Choose here!</option>
+            <option value="Cinque Terre">Travelling to areas with low-impact tourism policy </option>
+            <option value="Svalbard">To enjoy great food & beverage</option>
+            <option value="Harbor Island">Tourist attractions</option>
           </select>
         </div>
 
         <div className="ageBox">
-          <p>Please select your age</p>
+          <p>How do you prefer to travel?</p>
           {ageGroups.map(group => (
             <label key={group}>
               <input className="radioBtn"

@@ -2,39 +2,58 @@
   box-sizing: border-box;
 }
 
-body {
-  
+/* body {
+
   margin: 0px;
   padding: 0px;
   font-family: 'roboto';
   max-width: max-content;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* background-color: yellow; */
+  /* background-color: yellow; 
    height: 508px;
-   /* width: 375; */
+   /* width: 375; 
    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/assets/surf.jpg");
    background-repeat: no-repeat;
-   /* To make the her picture cover the screen */
+   /* To make the her picture cover the screen 
    background-size: cover;
 
    position: relative;
    color: aliceblue; 
-}
+} */
 
-
-.heroHeader {
-   height: 508px;
-   width: 375;
-   background-color: yellow;
-   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("");
+body {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: ce;
+  font-family: 'roboto';
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+   background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("/assets/surf.jpg");
    background-repeat: no-repeat;
-   /* To make the her picture cover the screen */
    background-size: cover;
-
-   position: relative;
-   color: aliceblue;  
+   color: aliceblue;
 }
+
+/* h1 {
+  text-align: right;
+  position: absolute;
+  transform: translate (-50%, -50%);
+  z-index: 0;
+  color: white;
+} */
+
+
+
+/* #root {
+  background: blanchedalmond;
+  opacity: 0.2;
+  background: white;
+  z-index: -1;
+} */
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -42,69 +61,88 @@ code {
 }
 
 h1 {
-  text-align: center;
-}
+  margin-top: 200px;
+} 
 
-h2 {
+/* h2 {
+  
   text-align: center;
-}
+  margin-top: 70px;
+} */
 
 h3 {
-  margin-left: 120px;
+  /* margin-left: 10px; */
+}
+
+/*your name and form*/
+.nameBox {
+  font-weight: bold;
+  font-size: 20px;
+  /* margin-left: 20px;; */
+}
+.formField {
+  /* margin-left: 30px;  */
+  background-color: rgb(241, 161, 132);
+  border-style: 1px black;
+  font-size: 15px;
+  padding-left: 20px;
+  margin-left: 10px;
+  color: blue;
+  font-weight: bold;
 }
 
 p {
-  display: block;
-  /* margin-left: 220px; */
+  /* margin-left: 20px;  */
+  display: flex;
+  font-size: 20px;
+  font-weight: bold;
 }
-.formField {
-  /* margin-left: 220px; */
-  margin: 5px;
-  background-color: pink;
-  border-style: 1px black;
-}
+ 
+ .nextDestinationBox label{
+   padding-left: 5px;
+ }
 
-.nameBox {
-  border: 1px solid black;
-  margin: 1rem;
-  padding: .5rem;
-}
+/*check-boxes */
+.Destinations {
+  /* margin-left: 20px;  */
+  font-size: 20px;
+  font-weight: bold;
 
-.destinations {
-  /* margin-left: 220px; */
-  border: 1px solid black;
-  margin: 0.5rem; 
-  padding: .5rem;
-  /* border-style: outset; */
+  justify-content: space-between;
+ 
   
 }
-/* 
-.formDropdown {
-  margin-left: 220px;
-} */
 
+.formDropdown {
+  /* margin-left: 0px; */
+  border: outset;
+  font-size: 15px;
+  font-family: 'roboto';
+  /* border-style: outset;  */
+
+} 
+
+/*Most important */
 .nextDestinationBox {
-  /* margin-left: 220px; */
-  border: 1px solid black;
-  margin: 1rem;
-  padding: .5rem;
+  /* margin-left: 20px;  */
+  margin-bottom: 5px;
 }
 
 /*age button*/
 .radioBtn {
-  /* margin-left: 220px; */
+  /* margin-left: 10px;  */
   margin-bottom: 5px;
 }
 
 .ageBox {
-  border: 1px solid black;
-  margin: 1rem;
-  padding: .5rem;
+
+  /* margin: 1rem; */
+  /* padding: .5rem; */
 }
 .submitBtn {
   justify-content: center;
   border-bottom-width: medium;
-  margin-left: 220px;
+  margin-left: 5px;
   margin-top: 10px;
 }
 .summary {
