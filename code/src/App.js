@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Summary } from './Summary'
+import { ProgressBar } from './ProgressBar'
 
 
 export const App = () => {
@@ -9,8 +10,20 @@ export const App = () => {
   const [food, setFood] = useState("")
   const [tvseries, setTvseries] = useState("")
   
+  const [question, setQuestion] = useState("name")
   const [submitted, setSubmitted] = useState(false)
   const [showText, setShowText] = useState(true)
+  
+  const nextQuestion = () => {
+    if(question==='name') {
+      setQuestion('age')
+    } else if(question==='age') {
+      setQuestion('food')
+    } else if(question==='food') {
+      setQuestion('tvseries')
+    }
+  }
+
   const showSummary = () => {
     setSubmitted(true);
     setShowText(!showText);
@@ -20,11 +33,15 @@ export const App = () => {
     <div className="menu-container">
       
     {showText && <div className="form-container">
-    <h1>Welcome to my survey!</h1>
-    <p>Please answer the following questions about yourself</p>
+    <br></br>
     
     <form 
       onSubmit={event => event.preventDefault()}>
+
+      {question === 'name' && (
+      <div>
+      <h1>Welcome to my survey!</h1>
+      <p>Please provide the following information about yourself</p>
       <p>Name</p>
       <label>
       <input 
@@ -33,11 +50,18 @@ export const App = () => {
         value={name}
       />
       </label>
-
-    <br></br>
+      <br></br><br></br>
+      </div>
+      )}
+      
+      {question === 'age' && (
+      <div>
+      <h1>My survey</h1>
+      <p>Please provide the following information about yourself</p>
+      <br></br>
 
       Age group:
-      {ageGroups.map(group => (
+      {ageGroups.map((group) => (
         <label key={group}>
           <input
             type="radio"
@@ -48,9 +72,16 @@ export const App = () => {
           {group}
         </label>
       ))}
-
-    <br></br><br></br>
+      <br></br><br></br>
+      </div>
+      )}
       
+      {question === 'food' && (
+      <div>
+      <h1>My survey</h1>
+      <p>Please answer the following question about yourself</p>
+      <br></br>
+
       <label>
       <select
         onChange={event => setFood(event.target.value)}
@@ -65,9 +96,16 @@ export const App = () => {
         <option value="other">Other</option>
       </select>
       </label>
-
-    <br></br>
+      <br></br><br></br>
+      </div>
+      )}
       
+      {question === 'tvseries' && (
+      <div>
+      <h1>My survey</h1>
+      <p>Please answer the following question about yourself</p>
+      <br></br>
+
       <label>
       <select
         onChange={event => setTvseries(event.target.value)}
@@ -85,15 +123,24 @@ export const App = () => {
       </select>
       </label>
 
+      <br></br><br></br>
+
+      <button type="submit" onClick={() => showSummary()}>
+      Submit
+      </button>
+      </div>
+      )}
+      
+      {question !=='tvseries' && (
+        <div>
+        <button type="button" onClick={nextQuestion}>
+        Continue
+        </button>
+        </div>
+      )}
+
     </form>
-
-    <button type="submit" onClick={() => showSummary()}>
-    Submit
-    </button>
-
     </div> }
-
-    <br></br>
 
     {submitted && <Summary name={name} age={age} food={food} tvseries={tvseries} />}
     </div>
