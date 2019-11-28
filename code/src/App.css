@@ -10,8 +10,21 @@
     align-items: end;
 }
 
+.resultComponent {
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.resultComponent p {
+    font-size:20px;
+    margin:0px;
+}
+
+
+
 select {
-    background: #ECECEC;
+    background-color:sienna;
     border: none;
     padding: 10px;
     width: 450px;
@@ -19,54 +32,17 @@ select {
     font-size:20px;
 }
 
+option {
+    background-color:#82caff;
+}
+
+h3 {
+    font-size:25px;
+}
+
 select:hover {
     cursor: pointer;
 }
-
-/* .dropdownMovies {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
-
-.dropdownMovies select {
-  background-color: #0563af;
-  color: white;
-  padding: 12px;
-  width: 250px;
-  border: none;
-  font-size: 20px;
-  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.2);
-  -webkit-appearance: button;
-  appearance: button;
-  outline: none;
-}
-
-.dropdownMovies::before {
-    content: "\f13a";
-    font-family: 'Mountains of Christmas', cursive;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 20%;
-    height: 100%;
-    text-align: center;
-    font-size: 28px;
-    line-height: 45px;
-    color: rgba(255, 255, 255, 0.5);
-    background-color: rgba(255, 255, 255, 0.1);
-    pointer-events: none;
-  }
-  
-  .dropdownMovies:hover::before {
-    color: rgba(255, 255, 255, 0.6);
-    background-color: rgba(255, 255, 255, 0.2);
-  }
-
-  .dropdownMovies select option {
-    padding: 30px;
-  } */
 
 .dropdownMovies {
 
@@ -76,17 +52,30 @@ select:hover {
     margin: 15px 0;
 }
 
+.textBox {
+    background:sienna;
+    border: none;
+    padding: 10px;
+    width: 300px;
+    font-family: 'Mountains of Christmas', cursive;
+    font-size:20px;
+}
+
+.textBox:hover {
+    cursor:pointer;
+}
+
 .christmasCandy {
     margin: 15px 0;
 }
 
 .christmasCandy:hover {
-
 }
 
 
 label {
     margin: 10px 10px 10px 0;
+    font-size: 20px;
 }
 
 label:hover {
@@ -97,14 +86,21 @@ span {
     font-weight: bold;
 }
 
-.submitButton {
+button {
     font-family: 'Mountains of Christmas', cursive;
     height: 80px;
     width: 80px;
     border-radius: 50px;
     background-color:sienna;
+    font-size:15px;
+    border:2px solid black;
 }
 
-.submitButton:hover {
+button:hover {
     cursor: pointer;
+}
+
+footer {
+    display:flex;
+    justify-content: center;
 }

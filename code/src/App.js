@@ -22,12 +22,12 @@ export const App = () => {
     <div className="formComponent">
       <Header />
       {showResult && (
-        <div>
-          <h1>Here's your result:</h1>
+        <div className="resultComponent">
+          <h3>Here's your result:</h3>
           <p>You like the movie <span>{movie}</span> the most</p>
           <p>You´re favourite christmas song is <span>{songName}</span></p>
           <p>You´re favourite christmas sweet is <span>{candyGroup}</span></p>
-          <p>Merry Christmas!</p>
+          <h3>Merry Christmas!</h3>
           <button onClick={event => setShowResult(false)}>Back to survey</button>
         </div>
       )}
@@ -54,7 +54,7 @@ export const App = () => {
 
           <div className="christmasSong">
             <h3>What is you´re favourite christmas song: {songName}</h3>
-            <input
+            <input className="textBox"
               type="text"
               onChange={event => setSongName(event.target.value)}
               value={songName}
@@ -62,19 +62,6 @@ export const App = () => {
           </div>
 
           <div className="christmasCandy">
-            {/* <h3>What is youre favourite chrismas candy?</h3> */}
-
-            {/* {candyGroups.map(candy => (
-              <label key={candy}>
-                <input
-                  type="radio"
-                  value={candy}
-                  onChange={event => setCandyGroup(event.target.value)}
-                  checked={candyGroup === candy}
-                />
-                {candy}
-            </label> ))} */}
-
             <h3>What is you´re favourite christmas candy?</h3>
             <label>
               <input
@@ -105,7 +92,7 @@ export const App = () => {
             </label>
           </div>
 
-          <button className="submitButton" type="submit">Submit the survey!</button>
+          <button type="submit">Submit!</button>
         </form>
       )}
       <Footer />
