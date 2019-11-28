@@ -6,7 +6,7 @@ export const Summary = (props) => {
 
     return (
         <div className="Summary">
-            <h3>Thank you for your answers {props.name}!</h3>
+            <h3>Thank you for your answers {props.name}, {props.lastName}!</h3>
             <p>Cool! you are up for {props.destinations}</p>
 
             <p>The most important thing to you is {props.location}</p>
