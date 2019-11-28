@@ -147,13 +147,36 @@ button {
     border-color: #aaa;
 }
 
+/* RADIO BUTTONS FEELINGS */
 
-/* RADIO BUTTONS */
+.feelings label {
+  display:block;
+}
+.feelings input {
+  font-size: 24px;
+  padding: 5px;
+}
+.feelings input[type="radio"] {
+  display:none;
+}
+.feelings input[type=radio] + span {
+  opacity: 0.3;
+  cursor: pointer;
+}
 
-input[type=radio]{
+.feelings input[type=radio]:checked + span {
+  opacity: 1;
+}
+
+
+
+/* RADIO BUTTONS AGE GROUP*/
+
+.radio-buttons input[type=radio]{
   position: absolute;
   opacity: 0;
   width: 0;
+  cursor: pointer;
 }
 
 .radio-buttons {
@@ -196,15 +219,15 @@ input[type=radio]{
 	-webkit-transition: 0.25s linear;
 }
 
-input[type=radio]:checked ~ .check {
+.radio-buttons input[type=radio]:checked ~ .check {
   border: 5px solid #e26d5a;;
 }
 
-input[type=radio]:checked ~ .check::before{
+.radio-buttons input[type=radio]:checked ~ .check::before{
   background:#e26d5a;;
 }
 
-input[type=radio]:checked ~ .age{
+.radio-buttons input[type=radio]:checked ~ .age{
   color: #0d0d0d;
   border-bottom: 1px solid #0d0d0d;
   width: 80px;

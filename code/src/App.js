@@ -11,10 +11,10 @@ export const App = () => {
   const [wantsNewsletter, setWantsNewsletter] = useState(false);
   const [ageGroup, setAgeGroup] = useState();
   // Array for what age group you are in
-  const ageGroups = ["0-18", "19-30", "31+"
-  ]
+  const ageGroups = ["0-18", "19-30", "31+"]
   //False because form is not submitted from start (initial value)
   const [submitted, setSubmitted] = useState(false)
+  const [happiness, setHappiness] = useState()
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -80,14 +80,40 @@ export const App = () => {
               <input
                 type="radio"
                 value={group}
-                onChange={event => setAgeGroup(event.target.value)}
+                onChange={() => setAgeGroup(group)}
                 checked={ageGroup === group}
               />
               <div className="age"> {group}</div>
-              <div class="check"><div class="inside"></div></div>
+              <div className="check"><div className="inside"></div></div>
             </label>
           ))
           }
+
+        </div>
+        <div className="question">
+          <div className="feelings">
+            <h3>How are you feeling?</h3>
+            <label>
+              <input type="radio"
+                value="happy"
+                onChange={() => setHappiness("happy")}
+                checked={happiness === "happy"}
+              />
+              <span role="img" aria-label="Happy face">
+                😃
+                </span>
+            </label>
+            <label>
+              <input type="radio"
+                value="sad"
+                onChange={() => setHappiness("sad")}
+                checked={happiness === "sad"}
+              />
+              <span role="img" aria-label="Sad face">
+                😞
+                </span>
+            </label>
+          </div>
         </div>
 
 
@@ -102,60 +128,16 @@ export const App = () => {
             />
           </label>
         </div>
-
-
-        <div className="buttons">
-          <button type="submit" onClick={() => setSubmitted(true)}>
-            Submit
-        </button>
-          {submitted && <Summary name={name} impression={impression} ageGroup={ageGroup} location={location} />}
-        </div>
       </form>
-    </div >
+
+      <div className="buttons">
+        <button type="submit" onClick={() => setSubmitted(true)}>
+          Submit
+        </button>
+        {submitted && <Summary name={name} impression={impression} ageGroup={ageGroup} location={location} />}
+      </div>
+
+      <footer>Technigo Bootcamp 2019 © Linda Isell</footer>
+    </div>
   );
 };
-
-
-
-
-// export const App = () => {
-//     const [count, setCount] = useState(0);
-
-//     return (
-//       <div>
-//         <p>You clicked {count} times</p>
-//         <button onClick={() => setCount(count + 6)}>
-//           Click me
-//       </button>
-//       </div>
-//     )
-//   }
-
-/* <h2>Age Group:</h2>
-<label>
-<input
-type="radio"
-value="0-18"
-onChange={event => setAgeGroup(event.target.value)}
-checked={ageGroup === "0-18"}
-/>
-0-18
-</label>
-<label>
-<input
-type="radio"
-value="19-30"
-onChange={event => setAgeGroup(event.target.value)}
-checked={ageGroup === "19-30"}
-/>
-19-30
-</label>
-<label>
-<input
-type="radio"
-value="31+"
-onChange={event => setAgeGroup(event.target.value)}
-checked={ageGroup === "31+"}
-/>
-31+
-</label> */
