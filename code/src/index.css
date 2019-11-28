@@ -34,7 +34,7 @@ body {
 
 @media screen and (max-width: 768px) {
   .page-content{
-    width: 100%;
+    width: 99%;
     margin: auto;
   }
 }
