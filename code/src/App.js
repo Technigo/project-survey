@@ -5,7 +5,7 @@ import './app.css'
 export const App = () => {
 
   //useState Hooks 
-  const [question, setQuestion] = useState("name")
+  const [question, setQuestion] = useState(1)
   const [name, setName] = useState("")
   const [location, setLocation] = useState("")
   const [fruit, setFruit] = useState()
@@ -17,13 +17,7 @@ export const App = () => {
 
   //Function to handle next-button/onclick
   const handleNext = () => {
-    if (question === "name") {
-      setQuestion("location")
-    } else if (question === "location") {
-      setQuestion("fruit")
-    } else if (question === "fruit") {
-      setQuestion("range")
-    }
+    setQuestion(question + 1)
   }
 
   //Function to handle submit-button/oncklick
@@ -33,7 +27,7 @@ export const App = () => {
   }
 
   //Funtion to validate name input, if name is empty isDisabled is true and the button is disabled (called inside <button>)
-  const isDisabled = () => {
+  const nextDisabled = () => {
     if (name.length === 0) {
       return true
     }
@@ -49,7 +43,7 @@ export const App = () => {
         {!submitted && (
           <div className="form-questions">
 
-            {question === "name" && (
+            {question === 1 && (
               <div className="question">
                 <label>
                   <h2># Please enter your name to participate *</h2>
@@ -59,12 +53,13 @@ export const App = () => {
                     placeholder="Type your name here..."
                     onChange={event => setName(event.target.value)}
                     value={name}
+                    onKeyPress={(event) => { event.key === "Enter" && event.preventDefault() }}
                   />
                 </label>
               </div>
             )}
 
-            {question === "location" && (
+            {question === 2 && (
               <div className="question">
                 <label>
                   <h2>#1: What's the best location?</h2>
@@ -83,7 +78,7 @@ export const App = () => {
               </div>
             )}
 
-            {question === "fruit" && (
+            {question === 3 && (
               <div className="question" role="radiogroup">
                 <h2>#2: What is the Minions favorite fruit?</h2>
                 {fruits.map((choice) => (
@@ -102,7 +97,7 @@ export const App = () => {
               </div>
             )}
 
-            {question === "range" && (
+            {question === 4 && (
               <div className="question">
                 <label>
                   <h2>#3: How many reindeers does Santa have?</h2>
@@ -122,10 +117,10 @@ export const App = () => {
 
             )}
 
-            {question !== "range" && (
-              <button type="button" onClick={handleNext} disabled={isDisabled()}>Next</button>
+            {question !== 4 && (
+              <button type="button" onClick={handleNext} disabled={nextDisabled()}>Next</button>
             )}
-            {isDisabled() && (<div className="name-required">Please type your name before hitting Next</div>)}
+            {nextDisabled() && (<div className="name-required">Please type your name before hitting Next</div>)}
           </div>
 
         )}
