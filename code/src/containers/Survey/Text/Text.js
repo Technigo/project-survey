@@ -12,6 +12,7 @@ const Text = (props) => {
     <form onSubmit={submitHandler}>
       <h3>{props.object.question}</h3>
       <input
+        required
         type="text"
         onChange={(e) => setAnswer(e.target.value)}
         value={answer} />

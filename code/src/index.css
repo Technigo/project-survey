@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -80,7 +81,7 @@ button {
 
 input {
   padding: 10px 20px;
-  border: rgb(168, 221, 235) 3px solid;
+  border: #a8ddeb 3px solid;
   border-radius: 10px;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -88,3 +89,19 @@ input {
   -o-border-radius: 10px;
 }
 
+.radio-btn,
+select {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.5rem;
+  display: block;
+  padding: 5px;
+}
+
+select {
+  border: #a8ddeb 2px solid;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}

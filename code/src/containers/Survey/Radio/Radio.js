@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 const Radio = (props) => {
-  const [answer, setAnswer] = useState('')
+  const [answer, setAnswer] = useState(props.object.options[0])
 
   const submitHandler = (event) => {
     event.preventDefault()
@@ -12,7 +12,7 @@ const Radio = (props) => {
     const key = `${index}option`
     return (
       // eslint-disable-next-line jsx-a11y/label-has-associated-control
-      <label key={key}>
+      <label className="radio-btn" key={key}>
         <input
           type="radio"
           value={option}
@@ -26,7 +26,9 @@ const Radio = (props) => {
   return (
     <form onSubmit={submitHandler}>
       <h3>{props.object.question}</h3>
-      {options}
+      <div>
+        {options}
+      </div>
       <button type="submit">NEXT</button>
     </form>
   )
