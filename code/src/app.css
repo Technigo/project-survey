@@ -241,3 +241,12 @@ button {
 footer {
   margin: 20px;
 }
+
+input.hidden {
+  width: 0px;
+  height: 0px;
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+  border: 0px;
+}

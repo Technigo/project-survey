@@ -15,49 +15,55 @@ export const App = () => {
   const [happiness, setHappiness] = useState("happy")
   const [feeling, setFeeling] = useState("")
   //False because form is not submitted from start (initial value)
-  // const [submitted, setSubmitted] = useState(false)
-  const [showResult, setShowResult] = useState(false)
+  const [question, setQuestion] = useState(1)
+  const [submitted, setSubmitted] = useState(false)
+  const [showResult, setShowResult] = useState(true)
 
-  const [question, setQuestion] = useState('firstQuestion')
-
-
-  const handleSubmit = (event) => {
-    event.preventDefault()
-    setShowResult(true)
-  }
   const handleContinueClick = () => {
-    if (question === "firstQuestion") {
-      setQuestion("secondQuestion")
-    } else if (question === "secondQuestion") {
-      setQuestion("thirdQuestion")
-    } else if (question === "thirdQuestion") {
-      setQuestion("forthQuestion")
-    } else if (question === "forthQuestion") {
-      setQuestion("fifthQuestion")
-    } else if (question === "fifthQuestion") {
-      setQuestion("sixthQuestion")
-    } else if (question === "sixthQuestion") {
-      setQuestion("seventhQuestion")
+    if (question === 1) {
+      setQuestion(2)
+    } else if (question === 2) {
+      setQuestion(3)
+    } else if (question === 3) {
+      setQuestion(4)
+    } else if (question === 4) {
+      setQuestion(5)
+    } else if (question === 5) {
+      setQuestion(6)
+    } else if (question === 6) {
+      setQuestion(7)
     }
+  }
+  // const handleSubmit = (event) => {
+  //   setShowResult(true)
+  // }
+  const handleSubmit = (event) => {
+    setSubmitted(true)
+    setShowResult(!showResult)
   }
 
   return (
     <div className="app">
 
-      <header>
-        <h1>What do you remember of 2019?</h1>
-        <h2>Check you memory by answering the questions below</h2>
-      </header>
-      {!showResult && (
-        <form className="form-container" onSubmit={handleSubmit}>
+      {showResult && (
+        <form className="form-container" onSubmit={event => event.preventDefault()}>
 
-          {question === 'firstQuestion' && (
+          {/* {!showResult && (
+         <form className="form-container" onSubmit={handleSubmit}> */}
+
+          <header>
+            <h1>What do you remember of 2019?</h1>
+            <h2>Check you memory by answering the questions below</h2>
+          </header>
+
+          {question === 1 && (
             <div className="question">
               <h3>To participate, please write your name: </h3>
               <label>
                 <input
                   type="text"
                   placeholder="Type your name here..."
+                  required
                   onChange={event => setName(event.target.value)}
                   value={name}
                 />
@@ -65,7 +71,7 @@ export const App = () => {
             </div>
           )}
 
-          {question === 'secondQuestion' && (
+          {question === 2 && (
             <div className="question">
               <h3>What is your first impression of this page?</h3>
               <label>
@@ -79,7 +85,7 @@ export const App = () => {
             </div>
           )}
 
-          {question === 'thirdQuestion' && (
+          {question === 3 && (
             <div className="question">
               <label>
                 <h3>Where do you live?</h3>
@@ -96,7 +102,7 @@ export const App = () => {
             </div>
           )}
 
-          {question === 'forthQuestion' && (
+          {question === 4 && (
             <div className="question">
               <h3>Age Group:</h3>
 
@@ -115,7 +121,7 @@ export const App = () => {
               }
             </div>
           )}
-          {question === 'fifthQuestion' && (
+          {question === 5 && (
             <div className="question">
               <label>
                 <h3>Newsletter:</h3>
@@ -128,7 +134,7 @@ export const App = () => {
               </label>
             </div>
           )}
-          {question === 'sixthQuestion' && (
+          {question === 6 && (
             <div className="question">
               <div className="feelings">
                 <h3>How are you feeling?</h3>
@@ -156,7 +162,7 @@ export const App = () => {
             </div>
           )}
 
-          {question === 'seventhQuestion' && (
+          {question === 7 && (
             <div className="question">
               <div className="thought">
                 <label>
@@ -170,24 +176,23 @@ export const App = () => {
               </div>
 
               <div className="buttons">
-                <button type="submit">
-                  Send my feelings
-           </button>
+                <button type="submit" onClick={() => handleSubmit()}>
+                  Submit
+          </button>
               </div>
             </div>
           )}
 
-          {question !== "seventhQuestion" && (
+          {question !== 7 && (
             <button type="button" onClick={handleContinueClick}>
               Continue
             </button>
           )}
         </form>
       )}
-      {showResult && (
+      {submitted && (
         <Summary name={name} happiness={happiness} impression={impression} ageGroup={ageGroup} location={location} />
       )}
-
 
       <footer>Technigo Bootcamp 2019 © Linda Isell</footer>
     </div>
