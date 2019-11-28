@@ -33,9 +33,12 @@ body {
 }
 
 @media screen and (max-width: 768px) {
-  .page-content{
+  .page-content {
     width: 99%;
     margin: auto;
+  }
+  input[type="text"] {
+    font-size: 16px;
   }
 }
 
@@ -55,7 +58,7 @@ h2 {
   text-transform: uppercase;
 }
 
-h3{
+h3 {
   font-size: 2.5rem;
   text-align: center;
 }
@@ -66,8 +69,8 @@ p {
   margin: 20px;
 }
 
-section, 
-form{
+section,
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -131,9 +134,9 @@ select {
 .progress {
   height: 100%;
   background-color: aqua;
-  border-radius:inherit;
-  -webkit-border-radius:inherit;
-  -moz-border-radius:inherit;
-  -ms-border-radius:inherit;
-  -o-border-radius:inherit;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
 }
