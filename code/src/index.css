@@ -1,6 +1,11 @@
 /* BOX SIZING ska gälla för alla boxar utom de som har UNSET */
 *, *::before, *::after {box-sizing: inherit}
 
+html {
+  font-size: 17px;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -8,6 +13,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./assets/Santa.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
   box-sizing: border-box;
 }
 

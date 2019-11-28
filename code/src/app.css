@@ -1,0 +1,129 @@
+
+/* .form-container {
+
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%); */
+  /* width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  /* align-items: center;
+  flex-wrap: wrap; } */
+
+
+
+/* fieldset {
+  width: 100%;
+  text-align: center;
+} */
+h1 {
+  font-size: 3rem;
+}
+
+form {
+  padding: 40px 20px;
+  margin: 20px;
+}
+
+/* RADIO */
+input {
+  font-size: 24px;
+  padding: 5px;
+}
+
+input[type="radio"] {
+  display: block;
+  opacity: 0.3;
+}
+
+input[type="radio"]:hover {
+  
+  cursor: pointer;
+}
+
+input[type="radio"]:checked {
+  opacity: 1;
+}
+
+
+/* NAME-INPUT */
+.input-container label {
+  position: relative;
+  display: block;
+}
+.input-container input {
+  display: block;
+  padding: 10px;
+  width: 300px;
+  margin-bottom: 10px;
+  outline: none;
+  transition: all 0.2s ease-in-out;
+  background-color: white;
+  font-weight: bold;
+  color: #FF7975;
+}
+.input-container input::placeholder {
+  transition: all 0.2s ease-in-out;
+  color: #D3D3D3;
+  font-weight: bold;
+  font-size: 16px;
+}
+.input-container input:focus {
+  padding-top: 28px;
+  padding-bottom: 12px;
+}
+.input-container::placeholder {
+  color: transparent;
+}
+.input-container::placeholder + span {
+  opacity: 1;
+  top: 10px;
+}
+         
+span {
+  font-size: 16px;
+  color: #A9A9A9;
+  position: absolute;
+  top: 0px;
+  left: 20px;
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+/* SANTA-ANSWERS */
+
+.answer {
+  display: block;
+  margin: 0px 16px 20px; 
+}
+
+.active {
+  background-color: silver;
+}
+.active + .answer {
+  display: block;
+}
+
+/* BUTTON */
+
+button {
+  font-size: 20px;
+  appearance: none;
+  border-radius: 40px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* FOOTER */
+
+footer {
+  height:100px;
+  background-color: seagreen;
+}
+  
