@@ -62,9 +62,8 @@ export const App = () => {
         <button type='submit'>Submit</button>
 
         <footer>
-        <p>Winter is coming</p>
+        <h3>Winter is coming</h3>
       </footer>
-
 
     </div>
   </div>
