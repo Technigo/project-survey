@@ -30,7 +30,7 @@ export const App = () => {
 
         <div className="mailbox">
           <h3><span>Your email: {name} ✍️</span></h3>
-          <input type="text" onChange={(event) => setName(event.target.value)} value={name} required />
+          <input type="email" onChange={(event) => setName(event.target.value)} value={name} required />
         </div>
 
         <div className="sizebox">
@@ -48,27 +48,27 @@ export const App = () => {
           <label>
             <input
               type="radio"
-              value="blue"
+              value="Blue"
               onChange={event => setAgeGroup(event.target.value)}
-              checked={ageGroup === "blue"}
+              checked={ageGroup === "Blue"}
             />
             Blue 💙
       </label>
           <label>
             <input
               type="radio"
-              value="green"
+              value="Green"
               onChange={event => setAgeGroup(event.target.value)}
-              checked={ageGroup === "green"}
+              checked={ageGroup === "Green"}
             />
             Green 💚
       </label>
           <label>
             <input
               type="radio"
-              value="purple"
+              value="Purple"
               onChange={event => setAgeGroup(event.target.value)}
-              checked={ageGroup === "purple"}
+              checked={ageGroup === "Purple"}
             />
             Purple 💜
       </label>
