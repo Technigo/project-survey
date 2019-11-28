@@ -48,8 +48,9 @@ form {
   margin-bottom: 2em;
 }
 
-span {
+.divider {
   color: #dd4658;
+  margin-top: 2em;
 }
 
 .radioButtons {
@@ -59,7 +60,8 @@ span {
 }
 
 label input[type="radio"] {
-  vertical-align: text-bottom;
+  margin-top: -5.4px;
+  vertical-align: middle;
 }
 
 select {
@@ -69,6 +71,18 @@ select {
 
 button {
   margin-top: 2em;
+  display: block;
+  font-family: "Life Savers", cursive;
+  font-weight: bold;
+  background-color: #dd4658;
+  color: white;
+  font-size: 1.3em;
+  padding: 0.5em;
+  border-radius: 12px;
+}
+
+.result {
+  max-width: 50%;
 }
 
 footer {
