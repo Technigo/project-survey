@@ -11,7 +11,8 @@ body {
 
 .survey {
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
     background-color: white;
     opacity: 0.5;
     margin: 15%;
@@ -19,6 +20,10 @@ body {
 }
 
 form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
     height: auto;
     padding: 30px;
 }
@@ -42,7 +47,8 @@ h4 {
 .nameSection {
     display: flex;
     flex-direction: row;
-    align-items: baseline;  
+    align-items: baseline; 
+    padding-bottom: 20px; 
 }
 
 .name {
@@ -60,6 +66,7 @@ p {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 30px;
 }
 
 .burgerSection h4{
@@ -81,10 +88,11 @@ label {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-bottom: 40px;
 }
 
 .breadSection h4 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .deliverySection {
@@ -98,7 +106,8 @@ label {
 }
 
 label {
-    padding-right: 15px;
+    align-self: start;
+    padding: 4px;
 }
 
 .submit {
@@ -110,8 +119,10 @@ label {
 button {
     width: 100px;
     height: 30px;
-    border: 1px solid black;
+    border: 1.3px solid black;
     padding: 2px 9px;
+    font-family: roboto;
+    font-weight: 600;
 }
 
 @media (min-width:669px) and (max-width:1024px) {
