@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+header {
+  background-image: url(/images/christmas.png);
+  background-size: cover;
+  background-position: center;
+  height: 28em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  position: center;
+  color: blanchedalmond;
+  font-size: 4em;
+}
+
+.survey {
+  margin: 0 auto;
+  max-width: 50%;
+}
