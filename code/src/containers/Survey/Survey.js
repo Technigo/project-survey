@@ -5,6 +5,7 @@ import Radio from './Radio/Radio'
 import Text from './Text/Text'
 import Welcome from './Welcome/Welcome'
 import Summary from './Summary/Summary'
+import ProgressBar from './ProgressBar/ProgressBar'
 
 const Survey = () => {
   const [siteIndex, setSiteIndex] = useState(-1)
@@ -65,6 +66,7 @@ const Survey = () => {
       {
         siteIndex === questions.length && <Summary answers={answers} />
       }
+      <ProgressBar actual={siteIndex} final={questions.length} />
     </div>
   )
 }

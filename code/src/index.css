@@ -73,7 +73,7 @@ button {
   -ms-border-radius: 20px;
   -o-border-radius: 20px;
   cursor: pointer;
-  background-color: #DCF7FE;
+  background-color: #dcf7fe;
   font-weight: bold;
   font-size: 1.2rem;
   font-family: "Josefin Sans", sans-serif;
@@ -104,4 +104,26 @@ select {
   -moz-border-radius: 10px;
   -ms-border-radius: 10px;
   -o-border-radius: 10px;
+}
+
+.progress-bar {
+  margin: 15px auto;
+  width: 200px;
+  height: 25px;
+  border: #dcf7fe solid 2px;
+  border-radius: 12.5px;
+  -webkit-border-radius: 12.5px;
+  -moz-border-radius: 12.5px;
+  -ms-border-radius: 12.5px;
+  -o-border-radius: 12.5px;
+}
+
+.progress {
+  height: 100%;
+  background-color: aqua;
+  border-radius:inherit;
+  -webkit-border-radius:inherit;
+  -moz-border-radius:inherit;
+  -ms-border-radius:inherit;
+  -o-border-radius:inherit;
 }
