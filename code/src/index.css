@@ -4,15 +4,25 @@
   padding: 0;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+body,
+html {
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #fff;
+  color: #dfe6e9;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 16px;
+  min-height: 100%;
   width: 100%;
-  height: 100%;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.root {
+  min-height: 100%;
+  width: 100%;
 }
 
 code {
@@ -21,26 +31,112 @@ code {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 100%;
+}
+
+.hero-image {
   text-align: center;
-  background-image: url(./images/computer.jpg);
+  background-image: url(./images/neon.jpg);
   background-size: cover;
-  width: 100vw;
-  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* object-fit: 100%; */
+  overflow: auto;
+  width: 100%;
+  height: 40vh;
+}
+
+.main-container {
+  background-color: #898b85;
+  width: 100%;
+  height: 60vh;
+  border-top: 4px dashed #eee;
+}
+
+h1 {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1.5em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  border-bottom: 4px dashed #eee;
+  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+h4 {
+  font-size: 1.2rem;
 }
 
 form {
-  width: 30%;
+  width: 75%;
   margin: 0 auto;
-  text-align: left;
-  margin-top: 15%;
-  margin-bottom: 15%;
+  padding-top: 1rem;
 }
 
 label {
   display: block;
+  margin: 0 auto;
 }
 
 .summary {
   margin-top: 20%;
   margin-bottom: 20%;
+  font-size: 4rem;
+}
+
+.questions {
+  font-size: 1.3rem;
+  text-align: left;
+  /* width: 80%; */
+}
+
+@media (min-width: 668px) {
+  h1 {
+    font-size: 2em;
+    padding-bottom: 4rem;
+  }
+
+  h4 {
+    font-size: 1.4rem;
+  }
+
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  main {
+    flex-direction: row;
+  }
+
+  .hero-image {
+    width: 50%;
+    height: 100vh;
+  }
+
+  .main-container {
+    width: 50%;
+    height: 100vh;
+    border-top: none;
+    border-left: dashed 4px #eee;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2.4em;
+  }
+
+  h4 {
+    font-size: 1.8rem;
+  }
+
+  form {
+    width: 60%;
+    margin: 0 auto;
+  }
 }
