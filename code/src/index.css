@@ -5,9 +5,86 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(230, 223, 223);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  text-align: center;
+}
+
+.welcomeNote {
+  font-size: 17px;
+  text-align: left;
+  width: 400px;
+  line-height: 30px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  margin-top: 20%;
+  width: 100%;
+}
+
+form {
+  background: rgb(240, 236, 236);
+  padding: 20px;
+  width: 50%;
+  border-radius: 15px;
+}
+
+label {
+  font-weight: bold;
+}
+
+label.radioLabel {
+  margin-left: 10px;
+}
+
+.inputContainer {
+  width: 100%;
+}
+
+input[type="text"] {
+  width: 90%;
+  height: 30px;
+  border: none;
+  border-bottom: rgb(37, 37, 37);
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+input[type="radio"] {
+  margin-top: 20px;
+  margin-right: 10px;
+}
+
+select {
+  width: 90%;
+  height: 40px;
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  margin-top: 20px;
+  font-size: 16px;
+  color: rgb(22, 19, 19);
+  border-radius: 16px;
+  margin-right: 40px;
+  text-transform: uppercase;
+  background: rgb(64, 123, 190);
+}
+
+.continueButton {
+  display: flex;
+  justify-content: flex-end;
 }

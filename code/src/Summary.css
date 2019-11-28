@@ -1,0 +1,8 @@
+.SummaryStyle {
+  margin-top: 30%;
+}
+p {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}

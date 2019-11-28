@@ -1,12 +1,14 @@
 import React, { useState } from "react";
-import { Summary } from "Summary";
 
 export const Submit = props => {
-  const [answer, setAnswer] = useState();
+  console.log("props", props);
+  const [answer, setAnswer] = useState(false);
 
   return (
     <div>
-      <button onClick={() => setAnswer(true)}>Submit</button>
+      <button onClick={() => setAnswer(true)} type="submit">
+        Submit
+      </button>
 
       {answer && (
         <Summary

@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 
-const sizeComp = ["0-10", "10-50", "50+"];
-
 export const CompanySize = () => {
   const [size, setSize] = useState();
   return (
