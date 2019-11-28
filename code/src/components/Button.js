@@ -3,7 +3,7 @@ import './button.css'
 
 export const Button = (props) => {
   return (
-    <button type="button" className="default-button">
+    <button type="submit" className="default-button">
       {props.text}
     </button>
   )
