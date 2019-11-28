@@ -17,6 +17,7 @@ body {
   align-items: center;
   justify-content: center;
   color: rgb(39, 39, 39);
+  overflow: auto;
 }
 
 .page-content {
@@ -29,6 +30,12 @@ body {
   -moz-border-radius: 50px;
   -ms-border-radius: 50px;
   -o-border-radius: 50px;
+}
+
+@media screen and (max-width: 768px) {
+  .page-content{
+    width: 100%;
+  }
 }
 
 h1 {
