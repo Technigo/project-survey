@@ -7,9 +7,10 @@ export const Summary = (props) => {
         <div id="review" className="Review">
             <div className="summaryReview">
 
-                <h2>Thank you for your order {props.name}!</h2>
-                <p>You ordered: </p>
-                <p> A {props.burger} burger with {props.bread} bread to {props.group} will be ready in a minute!</p>
+                <h2>Thank you {props.name}!</h2>
+                <p>You order will be ready in a minute: </p>
+                <li> A {props.burger} burger with {props.bread} bread to {props.delivery}!</li>
+                <h6>Enjoy!</h6>
 
             </div>
         </div>

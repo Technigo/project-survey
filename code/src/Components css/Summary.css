@@ -3,12 +3,44 @@
     visibility: 'visible';
     background-color: white;
     opacity: 0.5;
-    margin: 50px;
+    margin: 15%;
     padding: 30px;
     border-radius: 2%;
 }
 
-h2 {
-
+.Review h2 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 40px;
     text-align: center;
 }
+
+li, p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 150%;
+    text-align: center;
+}
+
+li {
+    text-transform: lowercase;
+}
+
+li::first-letter {
+    text-transform: uppercase;
+}    
+
+h6 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 180%;
+    text-align: center;
+}
+
+@media (min-width:1025px) {
+.Review {
+    margin: 20%;
+}
+
+h2, p {
+    text-align: center;
+}    
+    
+    }

@@ -22,8 +22,6 @@ export const App = () => {
       {!submitted && (
         <div id="survey" className="survey">
           <form onSubmit={event => event.preventDefault()
-            // document.getElementById('survey').style.display = 'none',
-            // document.getElementById('review').style.visibility = 'visible'
           }>
             <h1>Welcome {name}!</h1>
             <h2>Place your order here:</h2>
@@ -75,7 +73,7 @@ export const App = () => {
                     type="radio"
                     value={group}
                     onChange={event => setDelivery(event.target.value)}
-                    checked={delivery === { group }}
+                    checked={delivery === group}
                   />
                   {group}
                 </label>
@@ -85,11 +83,6 @@ export const App = () => {
             <div className="submit">
               {/* Submit button with onClick event to set value true to submitted */}
               < button onClick={() => setSubmitted(true)} type="submit" > Submit</button >
-
-              {/* //Reacts kind of condition: if submitted then show the following component Summary
-        //You could put JSX here instead of in a component too */}
-
-
             </div>
 
           </form>
@@ -97,7 +90,7 @@ export const App = () => {
       )
       };
 
-      {submitted && <Summary name={name} burger={burger} bread={bread} group={delivery} />}
+      {submitted && <Summary name={name} burger={burger} bread={bread} delivery={delivery} />}
 
     </div >
   );

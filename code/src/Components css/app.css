@@ -1,9 +1,12 @@
-body {
-    background: bottom;  /**** Have to be placed on top in body ****/
+body {   
+    display: flex;
+    flex-direction: column;
+    background: center;  /**** Have to be placed on top in body ****/
     background-image: url(/assets/filipe-de-rodrigues-SpMmd2jgL2w-unsplash.jpg);
     background-color: #684d42;
     background-size: cover;
-  
+    width: 100%;
+    height: fit-content;
 }
 
 .survey {
@@ -11,12 +14,8 @@ body {
     justify-content: center;
     background-color: white;
     opacity: 0.5;
-    margin: 50px;
+    margin: 15%;
     border-radius: 2%;
-}
-
-.survey:onClick {
-    display: none
 }
 
 form {
@@ -25,7 +24,19 @@ form {
 }
 
 h1 {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 50px;
     text-align: center;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 130%;
+}
+
+h4 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 110%;
 }
 
 .nameSection {
@@ -41,6 +52,10 @@ h1 {
     margin-left: 4px;
 }
 
+p {
+    font-family: 'Roboto', sans-serif;
+}
+
 .burgerSection {
     display: flex;
     flex-direction: column;
@@ -52,9 +67,14 @@ h1 {
 }
 
 .burgerSelect {
+    font-family: 'Roboto', sans-serif;
     font-size: 12px;
     border: 0.2px solid black;
     border-radius: inherit;
+}
+
+label {
+    font-family: 'Roboto', sans-serif;
 }
 
 .breadSection {
@@ -88,6 +108,24 @@ label {
 }
 
 button {
+    width: 100px;
+    height: 30px;
     border: 1px solid black;
     padding: 2px 9px;
+}
+
+@media (min-width:669px) and (max-width:1024px) {
+
+}
+
+@media (min-width:1025px) {
+.survey {
+    margin: 10% 20%;
+}    
+
+.breadSection, .deliverySection {
+    flex-direction: row;
+    align-items: baseline;
+}
+
 }
