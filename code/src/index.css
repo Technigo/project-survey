@@ -4,7 +4,7 @@ h1 {
 text-align: center;
 margin-top: 80px;
 padding: 20px;
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+font-family: 'Cantarell', sans-serif;
 font-weight: bolder;
 }
 
@@ -25,8 +25,12 @@ h3 span {
 .introduction {
   color: #94BBCF;
   text-align: center;
-  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-family: 'Cantarell', sans-serif;
   padding: 30px;
+}
+
+.mailbox, .sizebox, .colorbox {
+  padding: 10px;
 }
 
 .form {
@@ -34,8 +38,8 @@ h3 span {
 }
 
 .myForm {
+  font-family: 'Cantarell', sans-serif;
   background-color: white;
-  color: black;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -56,8 +60,12 @@ code {
 }
 
 button {
-font-size: 18px;
-border-radius: 10px;
+  font-family: 'Cantarell', sans-serif;
+  background-color: #94BBCF;
+  color: white;
+font-size: 25px;
+font-weight: bold;
+border-radius: 5px;
 margin-bottom: 40px;
 }
 
