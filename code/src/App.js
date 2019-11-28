@@ -18,15 +18,27 @@ export const App = () => {
   // const [submitted, setSubmitted] = useState(false)
   const [showResult, setShowResult] = useState(false)
 
-  const [section, setSection] = useState('firstQuestion')
+  const [question, setQuestion] = useState('firstQuestion')
 
 
   const handleSubmit = (event) => {
     event.preventDefault()
     setShowResult(true)
   }
-  const handleContinue = (event) => {
-
+  const handleContinueClick = () => {
+    if (question === "firstQuestion") {
+      setQuestion("secondQuestion")
+    } else if (question === "secondQuestion") {
+      setQuestion("thirdQuestion")
+    } else if (question === "thirdQuestion") {
+      setQuestion("forthQuestion")
+    } else if (question === "forthQuestion") {
+      setQuestion("fifthQuestion")
+    } else if (question === "fifthQuestion") {
+      setQuestion("sixthQuestion")
+    } else if (question === "sixthQuestion") {
+      setQuestion("seventhQuestion")
+    }
   }
 
   return (
@@ -39,8 +51,8 @@ export const App = () => {
       {!showResult && (
         <form className="form-container" onSubmit={handleSubmit}>
 
-          {section === 'firstQuestion' && (
-            <div className="question" onSubmit={handleContinue}>
+          {question === 'firstQuestion' && (
+            <div className="question">
               <h3>To participate, please write your name: </h3>
               <label>
                 <input
@@ -53,7 +65,7 @@ export const App = () => {
             </div>
           )}
 
-          {section === 'firstQuestion' && (
+          {question === 'secondQuestion' && (
             <div className="question">
               <h3>What is your first impression of this page?</h3>
               <label>
@@ -67,97 +79,110 @@ export const App = () => {
             </div>
           )}
 
-          <div className="question">
-            <label>
-              <h3>Where do you live?</h3>
-              <select className="select-css"
-                onChange={event => setLocation(event.target.value)}
-                value={location}
-              >
-                <option value="">Select location:</option>
-                <option value="Stockholm">Stockholm</option>
-                <option value="Barcelona">Barcelona</option>
-                <option value="Oslo">Oslo</option>
-              </select>
-            </label>
-          </div>
-
-          <div className="question">
-            <h3>Age Group:</h3>
-
-            {ageGroups.map((group) => (
-              <label key={group} className="radio-buttons">
-                <input
-                  type="radio"
-                  value={group}
-                  onChange={() => setAgeGroup(group)}
-                  checked={ageGroup === group}
-                />
-                <div className="age"> {group}</div>
-                <div className="check"><div className="inside"></div></div>
+          {question === 'thirdQuestion' && (
+            <div className="question">
+              <label>
+                <h3>Where do you live?</h3>
+                <select className="select-css"
+                  onChange={event => setLocation(event.target.value)}
+                  value={location}
+                >
+                  <option value="">Select location:</option>
+                  <option value="Stockholm">Stockholm</option>
+                  <option value="Barcelona">Barcelona</option>
+                  <option value="Oslo">Oslo</option>
+                </select>
               </label>
-            ))
-            }
-          </div>
+            </div>
+          )}
 
-          <div className="question">
-            <label>
-              <h3>Newsletter:</h3>
-              Newsletter ?
+          {question === 'forthQuestion' && (
+            <div className="question">
+              <h3>Age Group:</h3>
+
+              {ageGroups.map((group) => (
+                <label key={group} className="radio-buttons">
+                  <input
+                    type="radio"
+                    value={group}
+                    onChange={() => setAgeGroup(group)}
+                    checked={ageGroup === group}
+                  />
+                  <div className="age"> {group}</div>
+                  <div className="check"><div className="inside"></div></div>
+                </label>
+              ))
+              }
+            </div>
+          )}
+          {question === 'fifthQuestion' && (
+            <div className="question">
+              <label>
+                <h3>Newsletter:</h3>
+                Newsletter ?
               <input
-                type="checkbox"
-                checked={wantsNewsletter}
-                onChange={event => setWantsNewsletter(event.target.checked)}
-              />
-            </label>
-          </div>
-
-          <div className="question">
-            <div className="feelings">
-              <h3>How are you feeling?</h3>
-              <label>
-                <input type="radio"
-                  value="happy"
-                  onChange={() => setHappiness("happy")}
-                  checked={happiness === "happy"}
+                  type="checkbox"
+                  checked={wantsNewsletter}
+                  onChange={event => setWantsNewsletter(event.target.checked)}
                 />
-                <span role="img" aria-label="Happy face">
-                  😃
-                </span>
-              </label>
-              <label>
-                <input type="radio"
-                  value="sad"
-                  onChange={() => setHappiness("sad")}
-                  checked={happiness === "sad"}
-                />
-                <span role="img" aria-label="Sad face">
-                  😞
-                </span>
               </label>
             </div>
-          </div>
-
-          <div className="question">
-            <div className="thought">
-              <label>
+          )}
+          {question === 'sixthQuestion' && (
+            <div className="question">
+              <div className="feelings">
                 <h3>How are you feeling?</h3>
-                <input
-                  type="text"
-                  value={feeling}
-                  onChange={(event) => setFeeling(event.target.value)}
-                />
-              </label>
+                <label>
+                  <input type="radio"
+                    value="happy"
+                    onChange={() => setHappiness("happy")}
+                    checked={happiness === "happy"}
+                  />
+                  <span role="img" aria-label="Happy face">
+                    😃
+                </span>
+                </label>
+                <label>
+                  <input type="radio"
+                    value="sad"
+                    onChange={() => setHappiness("sad")}
+                    checked={happiness === "sad"}
+                  />
+                  <span role="img" aria-label="Sad face">
+                    😞
+                </span>
+                </label>
+              </div>
             </div>
-          </div>
+          )}
 
-          <div className="buttons">
-            <button type="submit">
-              Send my feelings
-          </button>
-          </div>
+          {question === 'seventhQuestion' && (
+            <div className="question">
+              <div className="thought">
+                <label>
+                  <h3>How are you feeling?</h3>
+                  <input
+                    type="text"
+                    value={feeling}
+                    onChange={(event) => setFeeling(event.target.value)}
+                  />
+                </label>
+              </div>
+
+              <div className="buttons">
+                <button type="submit">
+                  Send my feelings
+           </button>
+              </div>
+            </div>
+          )}
+
+          {question !== "seventhQuestion" && (
+            <button type="button" onClick={handleContinueClick}>
+              Continue
+            </button>
+          )}
         </form>
-
       )}
       {showResult && (
         <Summary name={name} happiness={happiness} impression={impression} ageGroup={ageGroup} location={location} />
