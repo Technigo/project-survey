@@ -18,6 +18,9 @@
 .env.test.local
 .env.production.local
 
-npm-debug.log*
+npm-debug.log*_23234_3434_
 yarn-debug.log*
 yarn-error.log*
+
+
+**/*/SerializedForm.js
