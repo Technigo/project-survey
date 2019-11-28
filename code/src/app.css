@@ -223,14 +223,14 @@ button:disabled:hover {
 /* SUMMARY */
 .summary {
   width: 95%;
-  height: 70vh;
+  /* height: 70vh; */
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #2F3744;
 }
 
-.summary button {
+.restart {
   width: 40%;
 }
 
@@ -272,7 +272,7 @@ footer {
     width: 95%;
   }
 
-  .summary button {
+  .restart {
     width: 70%;
   }
 

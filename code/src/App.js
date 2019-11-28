@@ -128,6 +128,7 @@ export const App = () => {
       </form>
 
       {submitted && <Summary name={name} location={location} fruit={fruit} range={range} />}
+      {submitted && <button className="restart" onClick={question === 1}>Restart</button>}
 
       <footer>Technigo Bootcamp 2019 © Sofie Nyblad</footer>
 
