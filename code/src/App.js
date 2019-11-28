@@ -9,6 +9,7 @@ export const App = () => {
   const [age, setAge] = useState("")
   const [food, setFood] = useState("")
   const [tvseries, setTvseries] = useState("")
+  const [artist, setArtist] = useState("")
   
   const [question, setQuestion] = useState("name")
   const [submitted, setSubmitted] = useState(false)
@@ -20,6 +21,8 @@ export const App = () => {
     } else if(question==='age') {
       setQuestion('food')
     } else if(question==='food') {
+      setQuestion('artist')
+    } else if(question==='artist') {
       setQuestion('tvseries')
     }
   }
@@ -41,8 +44,7 @@ export const App = () => {
       {question === 'name' && (
       <div>
       <h1>Welcome to my survey!</h1>
-      <p>Please provide the following information about yourself</p>
-      <p>Name</p>
+      <p>What is your name?</p>
       <label>
       <input 
         type="text"
@@ -57,10 +59,9 @@ export const App = () => {
       {question === 'age' && (
       <div>
       <h1>My survey</h1>
-      <p>Please provide the following information about yourself</p>
+      <p>What is your age group?</p>
       <br></br>
 
-      Age group:
       {ageGroups.map((group) => (
         <label key={group}>
           <input
@@ -79,7 +80,7 @@ export const App = () => {
       {question === 'food' && (
       <div>
       <h1>My survey</h1>
-      <p>Please answer the following question about yourself</p>
+      <p>Favourite food</p>
       <br></br>
 
       <label>
@@ -99,11 +100,39 @@ export const App = () => {
       <br></br><br></br>
       </div>
       )}
+
+      {question === 'artist' && (
+      <div>
+      <h1>My survey</h1>
+      <p>Favourite artist</p>
+      <br></br>
+  
+      <label>
+      <select
+        onChange={event => setArtist(event.target.value)}
+        value={artist}
+      >
+        <option value="">Select your favourite music artist</option>
+        <option value="madonna">Madonna</option>
+        <option value="michaeljackson">Michael Jackson</option>
+        <option value="whitneyhouston">Whitney Houston</option>
+        <option value="prince">Prince</option>
+        <option value="celinedion">Céline Dion</option>
+        <option value="davidbowie">David Bowie</option>
+        <option value="georgemichael">George Michael</option>
+        <option value="sting">Sting</option>
+        <option value="mariahcarey">Mariah Carey</option>
+        <option value="other">Other</option>
+      </select>
+      </label>
+      <br></br><br></br>
+      </div>
+      )}
       
       {question === 'tvseries' && (
       <div>
       <h1>My survey</h1>
-      <p>Please answer the following question about yourself</p>
+      <p>Favourite tv-series</p>
       <br></br>
 
       <label>
@@ -116,7 +145,7 @@ export const App = () => {
         <option value="homeland">Homeland</option>
         <option value="truedetective">True Detective</option>
         <option value="biglittlelies">Big Little Lies</option>
-        <option value="thehandmaidstale">The Handmaids Tale</option>
+        <option value="thehandmaidstale">The Handmaid's Tale</option>
         <option value="breakingbad">Breaking Bad</option>
         <option value="twinpeaks">Twin Peaks</option>
         <option value="other">Other</option>
@@ -142,7 +171,7 @@ export const App = () => {
     </form>
     </div> }
 
-    {submitted && <Summary name={name} age={age} food={food} tvseries={tvseries} />}
+    {submitted && <Summary name={name} age={age} food={food} artist={artist} tvseries={tvseries} />}
     </div>
   )
 }

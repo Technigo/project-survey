@@ -14,46 +14,49 @@ code {
 }
 
 p {
+  font-size: 18px;
   margin-bottom: 0;
 }
 
+img {
+  width: 200px;
+  height: 150px;
+}
+
 .menu-container {
-  margin-left: 2vw;
+  font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
 .form-container, .summary {
   background: white;
-  height: 60vh;
   display: inline-block;
   margin-top: 10vh;
-  width: 40vw;
+  height: 70vh;
+  width: 80vw;
 }
 
 input[type=text], select {
-  width: 25vw;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
   border: 1px solid #ccc;
   border-radius: 3px;
   box-sizing: border-box;
+  display: inline-block;
+  margin: 8px 0;
+  padding: 12px 20px;
+  width: 50vw;
 }
 
 button[type=submit], button[type=button] {
-  width: 25vw;
   background-color: blue;
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
   border: none;
   border-radius: 4px;
+  color: white;
   cursor: pointer;
+  font-size: 18px;
+  margin: 8px 0;
+  padding: 14px 20px;
+  width: 50vw;
 }
-
-/* .summary {
-  background: #1E90FF;
-} */
 
 .progress-bar {
   position: relative;
@@ -68,4 +71,31 @@ button[type=submit], button[type=button] {
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;
+}
+
+@media(min-width: 1024px) {
+.menu-container {
+  margin-left: 2vw;
+  text-align: center;
+}
+  
+.form-container, .summary {
+  height: 60vh;
+  display: inline-block;
+  margin-top: 10vh;
+  width: 45vw;
+}
+
+input[type=text], select {
+  width: 25vw;
+}
+
+button[type=submit], button[type=button] {
+  font-size: 18px;
+  width: 25vw;
+}
+
+button[type=submit]:hover, button[type=button]:hover {
+  background: #4169E1;
+}
 }
