@@ -1,32 +1,24 @@
     body {
         margin: 0;
         background-color: lightblue;
+        background-image: url(4618.jpg);
         font-family: 'Muli', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
     }
-    
-    code {
+    /* code {
         font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-    }
+    } */
     
     .survey {
-        /* background-image: url(background2-big.jpg); */
-        /* height: cover; */
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
-        padding: 40px;
-    }
-    
-    form {
-        border: blue 2px dotted;
         padding: 20px;
     }
     
     header {
-        padding: 15px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -34,11 +26,15 @@
     }
     
     h1 {
-        font-size: 7vh;
+        font-size: 5vh;
+    }
+    
+    form {
+        border: blue 2px dotted;
+        padding: 20px;
     }
     
     footer {
-        /* height: 20px; */
         font-size: 3vh;
         display: flex;
         justify-content: center;
@@ -46,13 +42,8 @@
     }
     
     .result {
-        height: 50vw;
+        height: 100%;
         padding: 120px;
-        background-image: url(header-image.jpg);
-        color: white;
+        color: darkblue;
         font-size: 30px;
-    }
-    
-    a {
-        text-decoration: none;
     }
