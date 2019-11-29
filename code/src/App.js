@@ -128,8 +128,9 @@ export const App = () => {
             out!
           </p>
           <p className='verdict'>
-            So do you love Christmas? Of course you do, everyone does! If you
-            think you're not, it's all about denial.
+            So do you love Christmas? <br />
+            Of course you do, everyone does! If you think you're not, it's all
+            about denial.
           </p>
         </div>
       )}

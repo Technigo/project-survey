@@ -21,12 +21,13 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 0 2em;
 }
 
 h1 {
-  position: center;
+  text-align: center;
   color: blanchedalmond;
-  font-size: 3.5em;
+  font-size: 3.3em;
   font-family: "Life Savers", cursive;
 }
 
@@ -100,6 +101,7 @@ button {
   background-color: #dd4658;
   color: white;
   padding: 0.5em;
+  margin-top: 2em;
 }
 
 footer {
@@ -109,4 +111,42 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+@media (max-width: 1000px) {
+  header {
+    background-image: url(/images/christmas.png);
+    height: 20em;
+  }
+
+  h1 {
+    font-size: 2.8em;
+    max-width: 69%;
+  }
+
+  .result {
+    font-size: 1.6em;
+    max-width: 60%;
+  }
+
+  .verdict {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 668px) {
+  header {
+    background-image: url(/images/christmas.png);
+    height: 20em;
+  }
+
+  h1 {
+    font-size: 2.2em;
+    max-width: 85%;
+  }
+
+  .survey,
+  .result {
+    max-width: 80%;
+  }
 }
