@@ -1,8 +1,7 @@
 import React from "react";
-import "./summary.css";
 
 export const Summary = props => (
-  <div>
+  <div className="summary">
     <h1>Dear {props.name}!</h1>
     <p>
       Thank you for completing the survey! We'll do our best to find your

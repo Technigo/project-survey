@@ -20,7 +20,7 @@ export const App = () => {
   };
 
   return (
-    <div>
+    <div className="form-container">
       <header>
         <div className="survey-title">
           Looking for the pawfect match? <br /> Complete the survey and adopt a

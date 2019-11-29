@@ -5,6 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  font-family: "Amatic SC", cursive;
+}
+
+html {
+  height: 100%;
+  position: relative;
 }
 
 code {
@@ -17,11 +24,6 @@ code {
   margin: 10px;
   margin-bottom: 20px;
   align-items: center;
-}
-
-body {
-  margin: 0;
-  font-family: "Amatic SC", cursive;
 }
 
 .survey-title {
@@ -68,7 +70,7 @@ footer {
 }
 
 button {
-  margin-top: 20px;
+  margin-top: 30px;
   display: block;
   font-family: "Amatic SC", cursive;
   font-weight: bold;
@@ -113,6 +115,7 @@ input[type="radio"] {
 
 input[type="text"] {
   border: 2px solid #e0cdb4;
+  border-radius: 5px;
   font-family: "Amatic SC", cursive;
   width: 200px;
   font-size: 20px;
@@ -120,4 +123,32 @@ input[type="text"] {
 
 input[type="text"]:focus {
   border-color: #efd9bc;
+}
+
+select {
+  font-size: 22px;
+  border-radius: 5px;
+  border: 2px solid #efd9bc;
+  cursor: pointer;
+  padding: 0 10px;
+  font-family: "Amatic SC", cursive;
+}
+
+select:hover {
+  background-color: #efd9bc;
+}
+
+.summary {
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+}
+
+.summary p {
+  text-align: center;
+  margin: 20px;
+  font-size: 35px;
 }
