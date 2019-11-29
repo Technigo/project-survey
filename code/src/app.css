@@ -14,7 +14,7 @@ fieldset {
   padding: 20px;
   border-radius:10px;
   margin: 50px 0px 5px;
-  border: solid 1px #FF7975; 
+  border: groove 1px #FF7975; 
   display: flex;
   justify-content: center;
 }
@@ -45,6 +45,23 @@ h2 {
   width: fit-content;
   appearance: none;
   border-radius: 10px;
+}
+
+h3{
+  padding: 10px 10px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  font-style: italic;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: #D3D3D3;
+  background-color: black;
+  text-align: left;
+  display: block;
+  width: fit-content;
+  appearance: none;
+  border-radius: 10px;  
+  font-weight: normal;
+
 }
 
 p {
@@ -131,6 +148,22 @@ button {
 
 footer {
   height:100px;
-  background-color: seagreen;
+  background-color: black;
+}
+  
+.madeby:hover {
+  text-decoration-line: underline;
+  color: #ffffff; 
+}
+
+.madeby {
+  font-size: 14px;
+  font-family: 'Helvetica Neue', sans-serif;
+  text-decoration-line: none;
+  font-weight: normal;
+  color: #ffffff; 
+  display: block;
+  text-align: center;
+  padding: 70px;
 }
   

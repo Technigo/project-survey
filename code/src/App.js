@@ -28,9 +28,9 @@ export const App = () => {
         {showResult && (
           <div className="santa-answer">
             <h1>Soon it is Christmas,{name} </h1>
-            <h2>Ooh, {food} and {candy}, is my favo too!
-            Your wishes for {food} and {candy} at {time} o'clock is now on my list.</h2>
-            <h2>Best wishes of a merry merry Christmas // <span role="img" aria-label="Santa">🎅🏻</span> :</h2>
+            <h3>Ooh, {food} and {candy}, is my favo too!
+            Your wishes for Cristmas dinner at {time} o'clock and a visit after that is now on my list.
+            Best wishes of a merry merry Christmas // <span role="img" aria-label="Santa">🎅🏻</span></h3>
           </div>
         )}
 
@@ -63,6 +63,10 @@ export const App = () => {
                 <option value="Jansson"> Jansson </option>
                 <option value="Omelett"> Omelett </option>
                 <option value="Senapssill"> Senapssill </option>
+                <option value="Grönkål"> Grönkål </option>
+                <option value="Köttbullar"> Köttbullar </option>
+                <option value="Gravad lax"> Gravad lax </option>
+                <option value="Rödbetssallad"> Rödbetssallad </option>
 
               </select>
             </fieldset>
