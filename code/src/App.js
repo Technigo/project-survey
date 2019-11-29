@@ -20,6 +20,11 @@ export const App = () => {
     setQuestion(question + 1)
   }
 
+  //Function to handle next-button/onclick
+  const handleBack = () => {
+    setQuestion(question - 1)
+  }
+
   //Function to handle submit-button/oncklick
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -111,16 +116,20 @@ export const App = () => {
                 </label>
                 <div className="show-range">{range}</div>
 
-                <button type="submit">Done</button>
-
               </div>
 
             )}
 
-            {question !== 4 && (
-              <button type="button" onClick={handleNext} disabled={nextDisabled()}>Next</button>
-            )}
-            {nextDisabled() && (<div className="name-required">Please type your name before hitting Next</div>)}
+            <div className="button-wrapper">
+              {question !== 1 && (
+                <button type="button" onClick={handleBack}>Back</button>
+              )}
+              {question !== 4 && (
+                <button type="button" onClick={handleNext} disabled={nextDisabled()}>Next</button>
+              )}
+              {question === 4 && (<button className="button-submit" type="submit">Done</button>)}
+            </div>
+            {nextDisabled() && (<div className="name-required">*Please type your name before hitting Next</div>)}
           </div>
 
         )}

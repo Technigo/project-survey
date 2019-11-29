@@ -11,7 +11,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 70vh;
+  height: 60vh;
 }
 
 /* FOCUS STYLING */
@@ -187,17 +187,27 @@ input[type=range]::-ms-thumb {
 }
 
 /* SUBMIT / RESTART BUTTON */
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 button {
-  align-self: center;
-  width: 70%;
+  /* align-self: center; */
+  width: 40%;
   padding: 10px;
-	margin: 50px 0 20px 0;
+	margin: 40px 0 20px 0;
 	border-radius: 10px;
 	border-style: none;
   background: #AF7528;
   font-size: 26px;
   font-weight: bold;
 	color: #fff;
+}
+
+.button-submit {
+  background: #4CAF50;
 }
 
 button:hover {
@@ -215,8 +225,9 @@ button:disabled:hover {
 }
 
 .name-required {
-  text-align: center;
+  /* text-align: center; */
   margin: 0 0 20px 0;
+  font-size: 12px;
   color: #fff;
   font-style: italic;
 }
@@ -245,15 +256,14 @@ button:disabled:hover {
 }
 
 /* FOOTER */
-
 footer {
   display: flex;
   align-items: flex-end;
   justify-content: center;
   color: #fff;
   font-size: 12px;
+  margin-top: 30px;
   padding: 20px 0;
-  height: 10vh;
   width: 100%;
 }
 
