@@ -152,6 +152,44 @@ option {
   background: #4CAF50;
 }
 
+/* CHECKBOXES CUSTOM*/
+.checkbox-boxes {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hide default checkbox */
+.checkbox-boxes input[type=checkbox] {
+  position: absolute;
+  cursor: pointer;
+  appearance: none;
+  display: none;
+}
+
+/* Customized checkbox */
+.checkbox-boxes .checkmark-box {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background: #eee;
+}
+
+/* On hover */
+.checkbox-boxes:hover input ~ .checkmark-box {
+  background: #a6d8a8;
+}
+
+/* When checked */
+.checkbox-boxes input[type=checkbox]:checked ~ .checkmark-box {
+  background: #4CAF50;
+}
+
 /* RANGE SLIDER */
 input[type=range] {
   -webkit-appearance: none; /* Override default styles */

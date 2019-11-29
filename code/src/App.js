@@ -9,11 +9,14 @@ export const App = () => {
   const [text, setText] = useState("")
   const [select, setSelect] = useState("")
   const [radioButton, setRadioButton] = useState()
+  const [checkbox, setCheckbox] = useState()
   const [range, setRange] = useState(5)
   const [submitted, setSubmitted] = useState(false)   //False because form is not submitted from start (initial value)
 
-  //Array with values for mapping radio buttons in #2
+  //Array with values for mapping radio buttons in #3
   const radioButtons = ["Apple", "Banana", "Minions?"]
+  //Array with values for mapping checkboxes in #4
+  const checkboxes = ["Yes", "No", "The slowest"]
 
   //Function to handle next-button/onclick
   const handleNext = () => {
@@ -104,8 +107,27 @@ export const App = () => {
 
             {question === 4 && (
               <div className="question">
+                <h2>#3: Is sloths a slooow animal?</h2>
+                {checkboxes.map((choice) => (
+                  <label key={choice} className="checkbox-boxes">
+                    <input
+                      type="checkbox"
+                      value={choice}
+                      checked={checkbox === choice}
+                      onChange={() => setCheckbox(choice)}
+                    />
+                    <span className="checkmark-box" role="checkbox" aria-checked="false" tabIndex="0"></span>
+                    {choice}
+                  </label>
+                ))
+                }
+              </div>
+            )}
+
+            {question === 5 && (
+              <div className="question">
                 <label>
-                  <h2>#3: How many reindeers does Santa have?</h2>
+                  <h2>#4: How many reindeers does Santa have?</h2>
                   <input
                     type="range"
                     min={0}
@@ -124,10 +146,10 @@ export const App = () => {
               {question !== 1 && (
                 <button type="button" onClick={handleBack}>Back</button>
               )}
-              {question !== 4 && (
+              {question !== 5 && (
                 <button type="button" onClick={handleNext} disabled={nextDisabled()}>Next</button>
               )}
-              {question === 4 && (<button className="button-submit" type="submit">Done</button>)}
+              {question === 5 && (<button className="button-submit" type="submit">Done</button>)}
             </div>
             {nextDisabled() && (<div className="name-required">*Please type your name before hitting Next</div>)}
           </div>
@@ -136,7 +158,7 @@ export const App = () => {
 
       </form>
 
-      {submitted && (<Summary text={text} select={select} radioButton={radioButton} range={range} />)}
+      {submitted && (<Summary text={text} select={select} radioButton={radioButton} checkbox={checkbox} range={range} />)}
 
       <footer>
         <div>Technigo Bootcamp 2019 © Sofie Nyblad</div>
