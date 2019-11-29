@@ -27,10 +27,10 @@ export const App = () => {
         <div>
           {showResult && (
             <div className="santa-answer">
-              <h1>Soon it is Christmas,{name} </h1>
+              <h1>Soon it is Christmas, {name} </h1>
               <h3>Ooh, {food} and {candy}, is my favo too!
             Your wishes for Cristmas dinner at {time} o'clock and a visit after that is now on my list.
-            Best wishes of a merry merry Christmas // <span role="img" aria-label="Santa">🎅🏻</span></h3>
+            Best wishes of a merry Christmas // <span role="img" aria-label="Santa">🎅🏻</span></h3>
             </div>
           )}
 
@@ -43,7 +43,7 @@ export const App = () => {
             </fieldset>
             <section className="input-container">
               <fieldset>
-                <input
+                <input autofocus="autofocus"
                   type="text"
                   placeholder="Your name"
                   onChange={event => setName(event.target.value)}
@@ -67,7 +67,6 @@ export const App = () => {
                   <option value="Köttbullar"> Köttbullar </option>
                   <option value="Gravad lax"> Gravad lax </option>
                   <option value="Rödbetssallad"> Rödbetssallad </option>
-
                 </select>
               </fieldset>
             </section>
@@ -87,20 +86,20 @@ export const App = () => {
               </fieldset>
             </section>
 
-
             <section>
               <fieldset>
                 <h2>What time do you want to eat dinner?</h2>
 
                 {dinnerTime.map(eat => (
-                  <label key={eat}>
+                  <label className="eatTime-label" key={eat}>
                     <input
                       type="radio"
                       value={eat}
                       onChange={event => setTime(event.target.value)}
                       checked={time === eat}
                     />
-                    <p>at {eat}</p>
+                    <span className="styleBox" />
+                    at {eat}
                   </label>
                 ))}
               </fieldset>
@@ -110,14 +109,15 @@ export const App = () => {
             <section className="visit-section">
               <fieldset>
                 <h2>Do you want Santa to visit on Christmas Eve?</h2>
-                <label>
+                <label className="visit-label">
                   <input
                     type="checkbox"
                     checked={wantsVisit}
                     onChange={event => setWantsVisit(event.target.checked)}
                     value={name}
                   />
-                  <p>Yes</p>
+                  <span className="styleBox" />
+                  Yes
                 </label>
               </fieldset>
             </section>

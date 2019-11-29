@@ -16,6 +16,7 @@ body {
   background-image: url(./assets/Santa.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-position: center;
   background-size: cover;
   box-sizing: border-box;
 }

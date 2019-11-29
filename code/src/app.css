@@ -2,19 +2,19 @@
 .form-container {
   margin: 1rem;
   display: flex;
-  justify-content: center;
+  justify-content: left;
   
 }
 
 fieldset {
   width: 350px;
-  /* background-color: #FF7975; */
-  -webkit-backdrop-filter: blur(2px);
-  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.5);  
   padding: 20px;
   border-radius:10px;
   margin: 50px 0px 5px;
-  border: groove 1px #FF7975; 
+  border: groove 3px #FF7975; 
   display: flex;
   justify-content: center;
 }
@@ -49,15 +49,16 @@ h2 {
 
 h3{
   padding: 10px 10px;
-  margin-bottom: 10px;
+  margin-top: 20px;
   font-size: 1rem;
   font-style: italic;
   font-family: Georgia, 'Times New Roman', Times, serif;
+  width: 300px;
   color: #D3D3D3;
   background-color: black;
   text-align: left;
   display: block;
-  width: fit-content;
+  /* width: fit-content; */
   appearance: none;
   border-radius: 10px;  
   font-weight: normal;
@@ -70,6 +71,8 @@ p {
   font-weight: bold;
 }
 
+
+
 span {
   font-size: 2rem;
 }
@@ -79,27 +82,20 @@ form {
   margin: 20px;
 }
 
-/* RADIO */
-input {
-  font-size: 24px;
-  padding: 5px;
-}
-
-input[type="radio"] {
-  display: block;
-  opacity: 1;
+input[type='checkbox'],
+input[type='radio'] {
+  display: none;
 }
 
 input:hover {
   cursor: pointer;
 }
 
-input[type="radio"]:checked {
-  opacity: 1;
-  color: black;
-  border-color: white;
+label {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
-
 
 /* NAME-INPUT */
 .input-container label {
@@ -115,12 +111,38 @@ input[type="radio"]:checked {
   background-color: white;
   font-weight: bold;
   color: #FF7975;
+  border: groove 3px #FF7975; 
   border-radius: 10px;
+  font-size: 16px;
 }
 .input-container input::placeholder {
   color: #D3D3D3;
   font-weight: bold;
-  font-size: 16px;
+  font-size: 16px; 
+}
+
+/* RADIO  CHECKBOX */
+
+.styleBox {
+  border: 2px solid grey;
+  width: 20px;
+  height: 20px;
+  display: inline-flex;
+  border-radius: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-right: 5px;
+}
+
+input:checked + .styleBox::after {
+  content:'';
+  font-size: 0.9rem; 
+  line-height: 0.9rem; 
+  width: 80%;
+  height: 80%;
+  background: black;
+  display: inline-block;
+  border-radius: 2px;
 }
 
 
@@ -136,6 +158,7 @@ button {
   padding: 10px 30px;
   font-weight: bold;
   margin-top: 30px;
+  margin-left: 10px;
 }
 
 /*SUBMIT*/
