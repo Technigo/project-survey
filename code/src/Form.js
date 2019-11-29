@@ -8,8 +8,8 @@ import tree6 from 'images/tree6.jpeg'
 
 export const Form = () => {
   const [name, setName] = useState('')
-  const [location, setLocation] = useState('')
-  const [wantsNewsletter, setWantsNewsletter] = useState(false)
+  const [decoration, setDecoration] = useState('')
+  const [enjoysChristmas, setEnjoysChristmas] = useState(false)
   const [ageGroup, setAgeGroup] = useState()
   const [showSummary, setShowSummary] = useState(false) // False because we don't want to show summary to start with
   const [preferredImage, setPreferredImage] = useState()
@@ -64,11 +64,12 @@ export const Form = () => {
       {showSummary && (<div className="summary">
         <h1>Summary:</h1>
         <br></br>
-        {wantsNewsletter ? 'You love christmas, yey!' : 'Ok, so you are obviously a grinch!'}
+        {enjoysChristmas ? 'You love christmas, yey!' : 'Ok, so you are obviously a grinch!'}
         <br></br>
-        You answered that {location} is your decoration of choice and that you've celebrated Christmas around {ageGroup} times!
+        You answered that {decoration} is your decoration of choice and that you've celebrated Christmas around {ageGroup} times!
         <br></br>
         Well, {name} to you too!
+        <br></br>
         <br></br>
         May your Christmas tree look like this:
 {imageToShow()}
@@ -86,53 +87,71 @@ export const Form = () => {
               <hr></hr>
             </div>
 
-            {/* QUESTION 4 */}
-            How many times have you celebrated Christmas?
-{ageGroups.map(group => (<label key={group}>
-              <input
-                type="radio"
-                value={group}
-                onChange={event => setAgeGroup(event.target.value)}
-                checked={ageGroup === group}
-              />
-              {group}
-            </label>
-            ))}
-
             {/* QUESTION 1 */}
-            <label>How do you say Merry Christmas in your language?
-<input
-                type="text"
-                onChange={(event) => setName(event.target.value)}
-                value={name}
-              />
-            </label>
+            <div className="radio-buttons">
+              How many times have you celebrated Christmas?
+{ageGroups.map(group => (
+                <label key={group}>
+                  <input
+                    type="radio"
+                    value={group}
+                    onChange={event => setAgeGroup(event.target.value)}
+                    checked={ageGroup === group}
+                  />
+                  {group}
+                </label>
+              ))}
+            </div>
+
+            <hr></hr>
 
             {/* QUESTION 2 */}
-            <label>Favourite christmas decoration:
-      <select
-                onChange={event => setLocation(event.target.value)}
-                value={location}
-              >
-                <option value="">Select decoration:</option>
-                <option value="christmas tree">Christmas trees</option>
-                <option value="advent candles">Advent candles</option>
-                <option value="poinsettia flower">Poinsettia flowers</option>
-                <option value="star lamp">Star lamps</option>
-                <option value="nothing">I said I don't celebrate christmas!</option>
-              </select>
-            </label>
+            <div className="textinput-div">
+              <label>How do you say Merry Christmas in your language?
+<input
+                  type="text"
+                  onChange={(event) => setName(event.target.value)}
+                  value={name}
+                />
+              </label>
+            </div>
+            <hr></hr>
 
             {/* QUESTION 3 */}
-            <label>
-              Enjoy christmas?
-<input
-                type="checkbox"
-                checked={wantsNewsletter}
-                onChange={event => setWantsNewsletter(event.target.checked)}
-              />
-            </label>
+            <div className="select-div">
+              <label>Favourite Christmas decoration:
+      <select
+                  onChange={event => setDecoration(event.target.value)}
+                  value={decoration}
+                >
+                  <option value="">Select decoration:</option>
+                  <option value="christmas tree">Christmas trees</option>
+                  <option value="advent candles">Advent candles</option>
+                  <option value="poinsettia flower">Poinsettia flowers</option>
+                  <option value="star lamp">Star lamps</option>
+                  <option value="nothing">I said I don't celebrate christmas!</option>
+                </select>
+              </label>
+            </div>
 
+            <hr></hr>
+
+            {/* QUESTION 4 */}
+            <div className="checkbox-div">
+              <label>
+                Enjoy Christmas?
+<input
+                  type="checkbox"
+                  checked={enjoysChristmas}
+                  onChange={event => setEnjoysChristmas(event.target.checked)}
+                />
+                <span className="fakeCheckbox"></span>
+              </label>
+            </div>
+
+            <hr></hr>
+
+            {/* QUESTION 5 */}
             Which Christmas tree is the most beautiful?
             <div className="images">
 
@@ -188,17 +207,15 @@ export const Form = () => {
                   aria-label="Image of palm tree">
                 </div>
               </label>
-
-
-
             </div>
+
+
+            {/*SUBMIT-BUTTON*/}
             < button type="submit" > Submit</button>
           </form >
 
         )
       }
-
-
 
     </div >
 

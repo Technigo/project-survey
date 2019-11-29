@@ -11,25 +11,24 @@ form{
   flex-direction: column;
 }
 input{
-  margin: 15px;
-  border: 1px solid palevioletred;
+  margin: 0 15px;
+  border: 2px solid darkred;
   font-size: 14px;
   border-radius: 4px;
 }
 select{
   margin: 0 15px;
-  border: 1px solid palevioletred;
+  border: 2px solid darkred;
   font-size: 14px;
 }
 button{
-width: 75px;
-font-size: 16px;
-font-weight: bold;
-background-color: crimson;
-color: white;
-padding: 5px;
-border: 1px solid black;
-border-radius: 5px;
+  width: 75px;
+  font-size: 16px;
+  font-weight: bold;
+  background-color: darkred;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
 }
 .summary{
 }
@@ -39,6 +38,8 @@ h1{
 }
 hr{
   border: 1px solid palevioletred;
+  display: inline-flex;
+  width: 100%;
 }
 
 
@@ -49,13 +50,13 @@ hr{
 }
 
 .image-box1, .image-box2, .image-box3, .image-box4{
-background-position: center;
-background-size: cover;
+  background-position: center;
+  background-size: cover;
   height:280px;
   width: 180px;
   margin: 10px;
   border: 5px solid #fffaf8;
-  border-radius: 10px;
+  border-radius: 8px;
 }
 /* .image-box:active{
   border: 5px solid crimson;
@@ -77,6 +78,59 @@ input[type="radio"] + .image-box1, input[type="radio"] + .image-box2, input[type
   opacity: 0.7;
 }
 input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-box2, input[type="radio"]:checked + .image-box3, input[type="radio"]:checked + .image-box4{
-  border: 5px solid crimson;
+  border: 4px solid darkred;
   opacity: 1;
 }
+
+.radio-buttons{
+  display:flex;
+  flex-direction: column;
+}
+.radio-buttons label{
+  margin: 5px 0;
+}
+
+
+.radio-buttons input[type="radio"]:checked{
+  background-color:darkred;
+  border: 2px solid darkred;
+  color:darkred;
+}
+
+input[type="checkbox"]{
+  display:none;
+}
+
+.fakeCheckbox{
+  border: 2px solid darkred;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+.fakeCheckbox::before{
+
+}
+
+input:checked + .fakeCheckbox::after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: darkred;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+.checkbox-div label {
+  display:flex;
+  align-items: center;
+}
+
+.textinput-div, .select-div, .checkbox-div{
+padding: 18px 0;
+}
+
+/* content: "✔" You can use this in CSS to style checkboxes for example*/
