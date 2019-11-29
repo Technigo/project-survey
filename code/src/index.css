@@ -15,6 +15,12 @@ h3 span {
   color: white;
 }
 
+select {
+  background-color: #94BBCF;
+  font-size: 15px;
+  color: white;
+}
+
 .header {
   background-image: url(/assets/photo-1531170858071-90621b6d369b.jpeg);
   background-size: cover;
@@ -74,7 +80,6 @@ margin-bottom: 40px;
   color: white;
   text-align: center;
   font-family: 'Cantarell', sans-serif;
-  padding: 40px;
 }
 
 .summary i {
