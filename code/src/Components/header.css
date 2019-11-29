@@ -14,12 +14,3 @@ h1 {
   margin: 10px;
   display: inline; 
 }
-
-@media (min-width: 668px) and (max-width: 1024px) {
-  header {
-    text-align: center;
-  }
-  h1 {
-    padding-left: 0;
-  }
-}
