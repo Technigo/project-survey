@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { Header } from './Header'
 import { Summary } from './Summary'
+import "index.css";
 
 
 const CrossFitIcons = ["Tia", "Katrin", "Sarah"];
