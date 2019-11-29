@@ -18,7 +18,7 @@ export const Summary = (props) => {
       <p className="correct-answer">Yes, sloths are slow. The slowest.</p>
       <p className="user-answer">#4: {props.range}</p>
       <p className="correct-answer">Depending on legend Santa has 8 or 9 <span role="img" aria-label="deer">🦌</span></p>
-      <button className="restart" onClick={refreshPage}>Restart</button>
+      <button className="restart" onClick={refreshPage}>Again?</button>
     </div>
   )
 }

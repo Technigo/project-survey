@@ -18,6 +18,9 @@ export const App = () => {
   //Array with values for mapping checkboxes in #4
   const checkboxes = ["Yes", "No", "The slowest"]
 
+  //Nextbutton only enabled when text input is over 0 chars
+  const enabled = text.length > 0
+
   //Function to handle next-button/onclick
   const handleNext = () => {
     setQuestion(question + 1)
@@ -34,13 +37,6 @@ export const App = () => {
     setSubmitted(true)
   }
 
-  //Funtion to validate name input, if name is empty isDisabled is true and the button is disabled (called inside <button>)
-  const nextDisabled = () => {
-    if (text.length === 0) {
-      return true
-    }
-  }
-
   return (
 
     <div className="app">
@@ -48,6 +44,7 @@ export const App = () => {
 
       <form onSubmit={handleSubmit}>
 
+        {/* Show form content if form is not submitted */}
         {!submitted && (
           <div className="form-questions">
 
@@ -61,6 +58,7 @@ export const App = () => {
                     placeholder="Type your name here..."
                     onChange={(event) => setText(event.target.value)}
                     value={text}
+                    // Prevent form to submit if hitting enter after typing name
                     onKeyPress={(event) => { event.key === "Enter" && event.preventDefault() }}
                   />
                 </label>
@@ -147,17 +145,19 @@ export const App = () => {
                 <button type="button" onClick={handleBack}>Back</button>
               )}
               {question !== 5 && (
-                <button type="button" onClick={handleNext} disabled={nextDisabled()}>Next</button>
+                // Nextbutton disabled until textinput has more than 0 chars
+                <button type="button" onClick={handleNext} disabled={!enabled}>Next</button>
               )}
               {question === 5 && (<button className="button-submit" type="submit">Done</button>)}
             </div>
-            {nextDisabled() && (<div className="name-required">*Please type your name before hitting Next</div>)}
+            {/* If Nextbutton not enabled, show this text*/}
+            {!enabled && (<div className="name-required">*Please type your name before hitting Next</div>)}
           </div>
 
         )}
 
       </form>
-
+      {/* When form is submitted, show the summary */}
       {submitted && (<Summary text={text} select={select} radioButton={radioButton} checkbox={checkbox} range={range} />)}
 
       <footer>
