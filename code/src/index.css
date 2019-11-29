@@ -64,16 +64,6 @@ h1 {
   margin-top: 200px;
 } 
 
-/* h2 {
-  
-  text-align: center;
-  margin-top: 70px;
-} */
-
-h3 {
-  /* margin-left: 10px; */
-}
-
 /*your name and form*/
 .nameBox {
   font-weight: bold;
@@ -84,48 +74,36 @@ h3 {
   /* margin-left: 30px;  */
   background-color: rgb(241, 161, 132);
   border-style: 1px black;
-  font-size: 15px;
+  font-size: 20px;
   padding-left: 20px;
   margin-left: 10px;
-  color: blue;
   font-weight: bold;
+  margin-bottom: 40px;
+  
 }
 
 p {
-  /* margin-left: 20px;  */
   display: flex;
   font-size: 20px;
   font-weight: bold;
 }
- 
- .nextDestinationBox label{
-   padding-left: 5px;
- }
 
-/*check-boxes */
+/*destination check-boxes */
 .Destinations {
-  /* margin-left: 20px;  */
   font-size: 20px;
   font-weight: bold;
-  
-  justify-content: space-between;
- 
-  
+  justify-content: space-between;  
 }
 
 .formDropdown {
-  /* margin-left: 0px; */
   border: outset;
   font-size: 15px;
   font-family: 'roboto';
-  /* border-style: outset;  */
-
 } 
 
-/*Most important */
+/*most important */
 .nextDestinationBox {
-  /* margin-left: 20px;  */
-  margin-bottom: 5px;
+  margin-top: 50px;
 }
 
 /*age button*/
@@ -134,9 +112,12 @@ p {
   margin-bottom: 5px;
 }
 
+label {
+  font-weight: bold;
+  font-size:  20px;
+}
 .ageBox {
-
-  /* margin: 1rem; */
+  margin-top: 40px;
   /* padding: .5rem; */
 }
 .submitBtn {
@@ -145,6 +126,7 @@ p {
   margin-left: 5px;
   margin-top: 10px;
 }
-.summary {
-  margin-left: 120px;
+.Summary {
+  margin-top: 380px;
+  text-align: center;  
 }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Summary } from './Summary'
 
-const ageGroups = ["Alone", "With family members", "With friends"];
+const ageGroups = ["alone", "with family members", "with friends"];
 const destinationGroup = ["Mount Everest", "Machu Picchu", "Grand Canyon"];
 
 export const App = () => {
@@ -37,17 +37,6 @@ export const App = () => {
               />
             </div>
 
-            <div className="lastName">
-              Last name:
-        <input
-                type="text"
-                onChange={event => setlastName(event.target.value)}
-                value={lastName}
-
-              />
-            </div>
-
-
             <p>What kind of adventures are you up for?</p>
             <div className="Destinations">
               {destinationGroup.map(group => (
@@ -74,9 +63,9 @@ export const App = () => {
                 value={name}
               >
                 <option value="">Choose here!</option>
-                <option value="Cinque Terre">Travelling to areas with low-impact tourism policy </option>
-                <option value="Svalbard">To enjoy great food & beverage</option>
-                <option value="Harbor Island">Tourist attractions</option>
+                <option value="low-impact tourism policy">low-impact tourism policy </option>
+                <option value="food and beverage">great food and beverage</option>
+                <option value="tourist attractions">tourist attractions</option>
               </select>
             </div>
 

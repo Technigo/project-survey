@@ -6,10 +6,10 @@ export const Summary = (props) => {
 
     return (
         <div className="Summary">
-            <h3>Thank you for your answers {props.name}, {props.lastName}!</h3>
-            <p>Cool! you are up for {props.destinations}</p>
+            <p>Thank you for your answers {props.name}!</p>
+            <p>Cool! you are up for {props.destinations}adventures!</p>
 
-            <p>The most important thing to you is {props.location}</p>
+            <p>Most important to you is {props.location}</p>
             <p>You like to travel {props.ageGroup}</p>
             <p>Have a nice trip {props.name}!</p>
         </div>
