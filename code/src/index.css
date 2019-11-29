@@ -76,20 +76,46 @@ button, button:focus {
   color: white;
   border-style: none;
   font-size: 16px;
+  cursor: pointer;
+
+  transition: background 120ms ease-in, transform 120ms ease-in;
+}
+
+button:hover {
+  background-color: brown;
+  
+  transition: background 110ms ease-out;
+}
+
+button:active {
+  position: relative;
+  transform: translateY(3px);
+  
+  transition: background 120ms ease-in, transform 50ms ease-in;
 }
 
 button[disabled] {
   background-color: #efefef;
   color: gray;
+  cursor: not-allowed;
 }
 
-button:active {
-  background-color: brown;
-}
 
 .radio-label {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.ans {
+  border-width: 1px;
+  border-color: #eeeeee;
+  background-color: #efefef;
+  margin: 5px 0 5px 0;
+  border-radius: 20px;
+  padding: 1px 20px 1px 20px;
+}
+.ans-question {
+  font-weight: 700;
 }

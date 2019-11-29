@@ -19,7 +19,7 @@
       "type": "dropdown",
       "text": "Favvoställe?",
       "alternatives": ["Här", "Där", "Där borta", "Stockholm", "NYC"],
-      "defaultAnswer": "Här"
+      "defaultAnswer": null
     },
     {
       "index": 3,
