@@ -11,3 +11,113 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.form-style {
+  width: 95%;
+  margin: 10px;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  font-family: "Amatic SC", cursive;
+}
+
+.survey-title {
+  display: flex;
+  color: white;
+  font-weight: 700;
+  margin-left: 20px;
+  font-size: 25px;
+  width: 140px;
+  position: absolute;
+  justify-content: flex-start;
+}
+
+header {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+    url(doggo1.jpeg);
+  background-position: center;
+  background-size: cover;
+  object-fit: cover;
+  display: flex;
+  width: 100%;
+  height: 350px;
+  position: relative;
+  align-items: center;
+}
+
+h2 {
+  text-align: left;
+  color: black;
+  font-size: 30px;
+  margin-right: 0;
+  padding: 0;
+}
+
+footer {
+  background-color: #111814;
+  color: white;
+  font-weight: 600;
+  font-size: 15px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  padding-top: 15px;
+}
+
+button {
+  margin-top: 20px;
+  display: block;
+  font-family: "Amatic SC", cursive;
+  font-weight: bold;
+  background-color: #c7b7a2;
+  color: white;
+  font-size: 25px;
+  padding: 10px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+
+.fakeRadio {
+  border: 2px solid #e0cdb4;
+  width: 23px;
+  height: 23px;
+  display: inline-block;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+  margin-top: 0px;
+  position: relative;
+  top: 5px;
+  left: 5px;
+}
+
+label {
+  margin-right: 5px;
+  font-size: 17px;
+}
+
+input:checked + .fakeRadio::after {
+  content: "🐾";
+  display: inline-block;
+  position: absolute;
+  padding-left: 2px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="text"] {
+  border: 2px solid #e0cdb4;
+  font-family: "Amatic SC", cursive;
+  width: 200px;
+  font-size: 20px;
+}
+
+input[type="text"]:focus {
+  border-color: #efd9bc;
+}

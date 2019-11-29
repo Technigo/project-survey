@@ -1,18 +1,13 @@
 import React, { useState } from "react";
+import { Summary } from "./components/Summary";
+import "./index.css";
 
 const selectHome = ["Downtown", "Suburb or small town", "Rural retreat"];
-const activityLevels = [
-  "I'm lazy like a fat panda",
-  "Not very active",
-  "Moderately active",
-  "Very active"
-];
-const ageGroups = ["10-19", "20-39", "40-59", "60+"];
-const sizeGroups = ["Toy: compact enough for my lap", "Medium", "I don't care"];
+const activityLevels = ["not very active", "moderately active", "very active"];
+const sizeGroups = ["tiny", "medium", "huge"];
 
 export const App = () => {
   const [name, setName] = useState("");
-  const [age, setAge] = useState("");
   const [reason, setReason] = useState("");
   const [home, setHome] = useState("");
   const [activity, setActivity] = useState("");
@@ -25,38 +20,24 @@ export const App = () => {
   };
 
   return (
-    <div className="form">
-      {showResult && (
-        <div>
-          <h1>Dear {name}!</h1>
-          <p>
-            Thank you for completing the survey! We'll do our best to find your
-            pawfect match!
-          </p>
+    <div>
+      <header>
+        <div className="survey-title">
+          Looking for the pawfect match? <br /> Complete the survey and adopt a
+          furry friend!
         </div>
-      )}
+      </header>
+      {showResult && <Summary name={name} active={activity} size={sizeGroup} />}
       {!showResult && (
-        <form onSubmit={handleSubmit}>
-          <h1 className="survey-title">Dog Adoption Survey</h1>
+        <form className="form-style" onSubmit={handleSubmit}>
           <h2 className="username">Your name:</h2>
           <input
+            id="name"
             type="text"
             onChange={event => setName(event.target.value)}
             value={name}
           />
-          <h2 className="age">How old are you?</h2>
-          {ageGroups.map(group => (
-            <label key={group}>
-              <input
-                className="formRadiobtn"
-                type="radio"
-                value={group}
-                onChange={event => setAge(event.target.value)}
-                checked={age === group}
-              />
-              {group}
-            </label>
-          ))}
+
           <h2>Why would you like to adopt a dog?</h2>
           <select
             className="dropdown"
@@ -68,10 +49,10 @@ export const App = () => {
               For companionship/friendship
             </option>
             <option value="My family wants a pet">My family wants a pet</option>
-            <option value="Recreational purposes(hunting)">
+            <option value="Recreational purposes(i.e hunting)">
               Recreational purposes (i.e hunting)
             </option>
-            <option value="Always wanted to get one">
+            <option value="Always wanted to have a dog">
               Always wanted to have a dog
             </option>
             <option value="I just simply adore animals">
@@ -82,12 +63,12 @@ export const App = () => {
           {selectHome.map(space => (
             <label key={space}>
               <input
-                className="radioBtn"
                 type="radio"
                 value={space}
-                onChange={event => setHome(event.target.value)}
                 checked={home === space}
+                onChange={() => setHome(space)}
               />
+              <span className="fakeRadio" />
               {space}
             </label>
           ))}
@@ -95,12 +76,12 @@ export const App = () => {
           {activityLevels.map(active => (
             <label key={active}>
               <input
-                className="radioBtn"
                 type="radio"
                 value={active}
-                onChange={event => setActivity(event.target.value)}
+                onChange={() => setActivity(active)}
                 checked={activity === active}
               />
+              <span className="fakeRadio" />
               {active}
             </label>
           ))}
@@ -108,18 +89,20 @@ export const App = () => {
           {sizeGroups.map(size => (
             <label key={size}>
               <input
-                className="radioBtn"
                 type="radio"
                 value={size}
-                onChange={event => setSize(event.target.value)}
+                onChange={() => setSize(size)}
                 checked={sizeGroup === size}
               />
+              <span className="fakeRadio" />
               {size}
             </label>
           ))}
           <button type="submit">Submit</button>
         </form>
       )}
+
+      <footer>Adopt don't shop!</footer>
     </div>
   );
 };
