@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import "./index.css"
 
-const activities = ["skiing", "snowboarding", "ski touring"]
+const activities = ["downhill", "snowboarding", "ski-touring", "cross-country"]
 const foods = ["wine", "beer", "whisky"]
 
 export const App = () => {
@@ -21,13 +21,14 @@ export const App = () => {
 
     <header>
       <h1>Win a trip to the finest winter wonderland in world!</h1>
-      <p>The only thing you have to do is answering a few question in our short survey and send us a photo od your best adventure from last season!</p>
     </header>
 
     {!showResult && (
         <section onSubmit={handleSubmit}>
 
       <div className='survey'>
+
+      <p>The only thing you have to do is answering a few question in our short survey and send us a photo od your best adventure from last season!</p>
 
       <form onSubmit={event => event.preventDefault()}>
           <h2>Name</h2>
@@ -37,13 +38,7 @@ export const App = () => {
             value={name}
           />
     
-      
-      {/* <div role="img" aria-label="snowflakes">
-      <span>❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️</span>
-      </div> */}
-    
-       
-        <h2>Favourite type of skiiing</h2>
+        <h2>First, pick your favourite style:</h2>
         {activities.map(group => (
               <label className='radioButtons' key={group}>
                 <input
@@ -55,25 +50,20 @@ export const App = () => {
                 {group}
               </label>
             ))}
-        
-      {/* <span>❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️</span> */}
-
     
-        <h2>Select your dreamed place to ski</h2>
+        <h2>Now, where would you like to go?</h2>
             <select
               onChange={event => setPlace(event.target.value)}
               value={place}
             >
-              <option value=''>Select</option>
-              <option value='Dolomites'>Dolomites 4ver!</option>
+              <option value=''>Choose only one!</option>
+              <option value='Cortina'>Dolomites 4ver!</option>
               <option value='Zermatt'>Anywhere in Switzerland</option>
-              <option value='Åre'>I don't like to travel any far, and Åre is my place</option>
-              <option value='Aspen'>Aspen is my snowy paradise</option>
+              <option value='Åre'>I don't like to travel any far, so Åre is my place</option>
+              <option value='Canada'>Whistler Blackcomb is my snowy paradise</option>
             </select>
 
-       {/*  <span>❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️❄️</span> */}
-
-       <h2>What do you prefer to eat after?</h2>
+        <h2>Last question! What would you like to drink after the great day in {place}?</h2>
             {foods.map(group => (
               <label className='radioButtons' key={group}>
                 <input
@@ -86,7 +76,8 @@ export const App = () => {
               </label>
             ))}
 
-        <button type='submit'>Submit</button>
+        <div><button type='submit'>Submit</button></div>
+        
         </form>          
 
         <footer>
@@ -100,7 +91,7 @@ export const App = () => {
 
   {showResult && (
         <p className='result'>
-          You're lucky, {name}! Your chances to win a trip to {place} are really big! Now send us a photo from your last {activity} adventure on season2020@skiingparadise.com and relax with a glass of {food}! We'll write you back as soon we pick the happy winer!  
+          You're lucky, {name}! Your chances to win a trip to {place} are really big! Now send us a photo from your last {activity} adventure on <a href ="url">season2020@skiingparadise.com</a> and relax with a glass of {food}! We'll write you back as soon we pick the happy winer!  
         </p>
       )}
     

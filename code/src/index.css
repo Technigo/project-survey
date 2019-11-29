@@ -1,43 +1,58 @@
-body {
-    margin: 0;
-    font-family: 'Muli', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-}
-
-.survey {
-    background-image: url(background2-big.jpg);
-    /* height: cover; */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-header {
-    /* background-image: url(header-image.jpg); */
-    /* background-size: cover; */
-    /* background-attachment: fixed; */
-    /* height: 40px; */
-    padding: 40px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-h1 {
-    font-size: 7vh;
-}
-
-footer {
-    /* height: 20px; */
-    font-size: 3vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    body {
+        margin: 0;
+        background-color: lightblue;
+        font-family: 'Muli', sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    }
+    
+    .survey {
+        /* background-image: url(background2-big.jpg); */
+        /* height: cover; */
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+    }
+    
+    form {
+        border: blue 2px dotted;
+        padding: 20px;
+    }
+    
+    header {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    h1 {
+        font-size: 7vh;
+    }
+    
+    footer {
+        /* height: 20px; */
+        font-size: 3vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .result {
+        height: 50vw;
+        padding: 120px;
+        background-image: url(header-image.jpg);
+        color: white;
+        font-size: 30px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
