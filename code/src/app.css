@@ -147,8 +147,9 @@ button {
 /* FOOTER */
 
 footer {
-  height:100px;
-  background-color: black;
+  height:70px;
+  width: 100%;
+  margin-top: 300px;
 }
   
 .madeby:hover {
@@ -164,6 +165,6 @@ footer {
   color: #ffffff; 
   display: block;
   text-align: center;
-  padding: 70px;
+  padding: 10px;
 }
   
