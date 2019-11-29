@@ -1,4 +1,10 @@
 import React, { useState } from 'react'
+import tree1 from 'images/tree1.jpeg'
+import tree2 from 'images/tree2.jpeg'
+import tree3 from 'images/tree3.jpeg'
+import tree4 from 'images/tree4.jpeg'
+import tree5 from 'images/tree5.jpeg'
+import tree6 from 'images/tree6.jpeg'
 
 export const Form = () => {
   const [name, setName] = useState('')
@@ -6,6 +12,8 @@ export const Form = () => {
   const [wantsNewsletter, setWantsNewsletter] = useState(false)
   const [ageGroup, setAgeGroup] = useState()
   const [showSummary, setShowSummary] = useState(false) // False because we don't want to show summary to start with
+  const [preferredImage, setPreferredImage] = useState()
+
 
   const ageGroups = [
     "0-18",
@@ -13,6 +21,15 @@ export const Form = () => {
     "30-39",
     "40-49",
     "50+"
+  ]
+
+  const images = [
+    <img src={tree1} alt="Christmas tree with presents" height="200px"></img>,
+    <img src={tree2} alt="Christmas tree with lights" height="200px"></img>,
+    <img src={tree3} alt="Christmas tree with candy in it" height="200px"></img>,
+    <img src={tree4} alt="Christmas tree with presents underneath" height="200px"></img>,
+    <img src={tree5} alt="Spruce tree in a field" height="200px"></img>,
+    <img src={tree6} alt="Palm tree" height="200px"></img>,
   ]
 
   const handleSubmit = (event) => {
@@ -69,10 +86,10 @@ export const Form = () => {
                 value={location}
               >
                 <option value="">Select decoration:</option>
-                <option value="Christmas tree">Christmas trees</option>
-                <option value="Advent candles">Advent candles</option>
-                <option value="Poinsettia flower">Poinsettia flowers</option>
-                <option value="Star lamp">Star lamps</option>
+                <option value="christmas tree">Christmas trees</option>
+                <option value="advent candles">Advent candles</option>
+                <option value="poinsettia flower">Poinsettia flowers</option>
+                <option value="star lamp">Star lamps</option>
                 <option value="nothing">I said I don't celebrate christmas!</option>
               </select>
             </label>
@@ -87,16 +104,96 @@ export const Form = () => {
               />
             </label>
 
+            Which Christmas tree is the most beautiful?
+            <div className="images">
+
+              <label>
+                <input type="radio"
+                  value={tree3}
+                  onChange={() => setPreferredImage({ tree3 })}
+                  checked={preferredImage === { tree3 }}
+                ></input>
+                <div className="image-box"
+                  style={{ backgroundImage: `url(${tree3})` }}
+                  aria-label="Image of Christmas tree with eyes">
+                </div>
+              </label>
+
+
+              <label>
+                <input type="radio"
+                  value={tree4}
+                  onChange={() => setPreferredImage({ tree4 })}
+                  checked={preferredImage === { tree4 }}
+                ></input>
+                <div className="image-box"
+                  style={{ backgroundImage: `url(${tree4})` }}
+                  aria-label="Image of Christmas tree with Santa Clause's">
+                </div>
+              </label>
+
+
+              <label>
+                <input type="radio"
+                  value={tree5}
+                  onChange={() => setPreferredImage({ tree5 })}
+                  checked={preferredImage === { tree5 }}
+                ></input>
+
+                <div className="image-box"
+                  style={{ backgroundImage: `url(${tree5})` }}
+                  aria-label="Image of spruce tree in a field">
+                </div>
+              </label>
+
+
+              <label>
+                <input type="radio"
+                  value={tree6}
+                  onChange={() => setPreferredImage({ tree6 })}
+                  checked={preferredImage === { tree6 }}
+                ></input>
+
+                <div className="image-box"
+                  style={{ backgroundImage: `url(${tree6})` }}
+                  aria-label="Image of palm tree">
+                </div>
+              </label>
+
+
+
+            </div>
             < button type="submit" > Submit</button>
           </form >
 
         )
       }
-    </div>
+
+
+
+    </div >
+
+
 
 
   )
 }
+
+//  {/* IMAGE QUESTION */}
+//  Which tree is the most beautiful in your opinion?
+
+//  {images.map(image => (<label key={image}>
+//                <div className="image-boxes">
+//                  <input
+//                    type="radio"
+//                    value={image}
+//                    onChange={() => setPreferredImage({ image })}
+//                    checked={preferredImage === image}
+//                  />
+//                  {image}
+//                </div>
+//              </label>
+//              ))}
 
 
 
