@@ -57,7 +57,8 @@ label {
 }
 
 #name,
-#nickname {
+#nickname,
+#song {
   display: block;
   margin-top: 0.8em;
 }
