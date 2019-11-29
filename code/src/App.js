@@ -38,9 +38,11 @@ export const App = () => {
 
   return (
     <main>
-      <div className="hero-image"></div>
-      <div className="main-container">
-        <h1>Customer Satsfaction Survey "The Coffee time"</h1>
+      <section className="hero-image"></section>
+      <section className="main-container">
+        <h1>
+          Customer Satsfaction Survey <span>"The Coffee time"</span>
+        </h1>
         {hideForm && (
           <Summary
             name={name}
@@ -56,8 +58,13 @@ export const App = () => {
               <InputText
                 value={name}
                 onChange={event => setName(event.target.value)}
+                className={"inputName"}
               />
-              <Submit onClick={handleNext} text={"Next question"} />
+              <Submit
+                onClick={handleNext}
+                text={"Next question"}
+                className={"btn btn-next"}
+              />
             </div>
           )}
           {section === "secondQuestion" && !hideForm && (
@@ -70,15 +77,21 @@ export const App = () => {
                 label="Yes"
                 value="yes"
                 checked={quality === "yes"}
+                className={"radio"}
                 onChange={handleRadioChange}
               />
               <RadioButton
                 label="No"
                 value="no"
                 checked={quality === "no"}
+                className={"radio"}
                 onChange={handleRadioChange}
               />
-              <Submit onClick={handleNext} text={"Next question"} />
+              <Submit
+                onClick={handleNext}
+                text={"Next question"}
+                className={"btn btn-next"}
+              />
             </div>
           )}
           {section === "thirdQuestion" && (
@@ -91,26 +104,33 @@ export const App = () => {
                 value={time}
                 onChange={event => setTime(event.target.value)}
               />
-              <Submit onClick={handleNext} text={"Next question"} />
+              <Submit
+                onClick={handleNext}
+                text={"Next question"}
+                className={"btn btn-next"}
+              />
             </div>
           )}
           {section === "fourthQuestion" && !hideForm && (
             <div className="questions fourthQuestion">
               <Questions
                 value={"q4"}
-                text={
-                  "Finally, how can we improve your experience? Do you have any ideas for us?"
-                }
+                text={"Finally, how can we improve your experience?"}
               />
               <InputTextarea
                 value={experience}
                 onChange={event => setExperience(event.target.value)}
+                className={"inputTextarea"}
               />
-              <Submit onClick={handleSubmit} text={"Submit"} />
+              <Submit
+                onClick={handleSubmit}
+                text={"Submit"}
+                className={"btn btn-submit"}
+              />
             </div>
           )}
         </form>
-      </div>
+      </section>
     </main>
   );
 };

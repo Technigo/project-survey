@@ -11,18 +11,18 @@ html {
     sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #dfe6e9;
+  /* color: #dfe6e9; */
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   font-size: 16px;
-  min-height: 100%;
+  height: 100%;
   width: 100%;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  /* text-shadow: -1px 0 #d35400, 0 1px #d35400, 1px 0 #d35400, 0 -1px #d35400; */
+  position: relative;
+  color: #3d0e1e;
 }
 
 .root {
-  min-height: 100%;
-  width: 100%;
 }
 
 code {
@@ -39,21 +39,23 @@ main {
 
 .hero-image {
   text-align: center;
-  background-image: url(./images/neon.jpg);
+  background-image: url(./images/cup3.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  /* object-fit: 100%; */
+  object-fit: 100%;
   overflow: auto;
   width: 100%;
-  height: 40vh;
+  min-height: 40vh;
+  height: 40%;
 }
 
 .main-container {
-  background-color: #4db2c8;
+  background-color: #e1d2c2;
   width: 100%;
-  height: 60vh;
-  border-top: 4px dashed #eee;
+  min-height: 60vh;
+  height: 60%;
+  border-top: 4px dashed #3d0e1e;
 }
 
 h1 {
@@ -63,12 +65,18 @@ h1 {
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
-  border-bottom: 4px dashed #eee;
+  border-bottom: 4px dashed #3d0e1e;
+  text-shadow: -1px 0 #d35400, 0 1px #d35400, 1px 0 #d35400, 0 -1px #d35400;
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
+}
+
+h1 span {
+  display: block;
 }
 
 h4 {
   font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 form {
@@ -87,11 +95,12 @@ label {
   margin: 0 auto;
   font-size: 0.2rem;
   padding-top: 2rem;
-  text-align: center;
+  text-align: left;
 }
 
-.summary h4 {
+.summary p {
   font-size: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .questions {
@@ -100,6 +109,95 @@ label {
   /* width: 80%; */
 }
 
+/*** INPUT FIELDS ***/
+
+.inputName {
+  padding: 0.5rem;
+}
+
+.inputTextarea {
+  height: 70px;
+  overflow: hidden;
+}
+
+.inputName,
+.inputTextarea {
+  width: 75%;
+  font-weight: bold;
+  outline: solid 2px #d35400;
+  margin: 1rem 0 1rem 0;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  font-size: 0.8rem;
+  word-wrap: break-word;
+}
+
+select {
+  display: inline-block;
+  padding: 0.5em 2em 0.5em 0.5em;
+  outline: solid 2px #d35400;
+  margin: 1rem 0 1rem 0;
+  font-size: 1rem;
+  /* border: 1px solid #eee; */
+  font-family: inherit;
+  line-height: inherit;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  background-repeat: no-repeat;
+  background-image: linear-gradient(45deg, transparent 50%, currentColor 50%),
+    linear-gradient(135deg, currentColor 50%, transparent 50%);
+  background-position: right 15px top 1em, right 10px top 1em;
+  background-size: 5px 5px, 5px 5px;
+}
+
+.radio {
+  margin: 1rem 1rem 1rem 0;
+  height: 1rem;
+  width: 1rem;
+}
+
+.radioLabel {
+  font-size: 1rem;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  border-radius: 20px;
+  border: none;
+  background: #d35400;
+  color: #fff;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+  font-family: inherit;
+  /* display: block;
+  margin: 0 auto; */
+}
+
+.btn-submit {
+  padding: 1rem 4rem;
+  color: #d35400;
+  background: transparent;
+  border: solid 2px #d35400;
+}
+
+.btn-next:hover {
+  color: #d35400;
+  background: transparent;
+  border: solid 2px #d35400;
+}
+
+.btn-submit:hover {
+  color: #fff;
+  background: #d35400;
+}
+
+/*** MEDIA QUERIES ***/
 @media (min-width: 668px) {
   h1 {
     font-size: 2em;
@@ -107,7 +205,7 @@ label {
   }
 
   h4,
-  .summary h4 {
+  .summary p {
     font-size: 1.2rem;
   }
 
@@ -117,25 +215,40 @@ label {
     padding-top: 4rem;
   }
 
+  .inputName {
+    width: 70%;
+  }
+
   main {
     flex-direction: row;
   }
 
   .hero-image {
     width: 50%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
   }
 
   .main-container {
     width: 50%;
-    height: 100vh;
+    min-height: 100vh;
+    height: 100%;
     border-top: none;
-    border-left: dashed 4px #eee;
+    border-left: dashed 4px #3d0e1e;
   }
 
   .summary {
     padding-top: 4rem;
-    text-align: center;
+    /* text-align: center; */
+  }
+
+  .inputName,
+  .inputTextarea {
+    font-size: 1rem;
+  }
+
+  .btn {
+    font-size: 1rem;
   }
 }
 
@@ -145,7 +258,15 @@ label {
   }
 
   h4,
-  .summary h4 {
+  .summary p {
     font-size: 1.6rem;
+  }
+
+  .radioLabel {
+    font-size: 1.2rem;
+  }
+
+  .btn {
+    font-size: 1.2rem;
   }
 }
