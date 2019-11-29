@@ -24,6 +24,34 @@
         justify-content: center;
         align-items: center;
     }
+    /*  .firstQuestion {
+        display: flex;
+        flex-direction: row;
+        flex-grow: 1;
+    } */
+    
+    input[type='text'] {
+        width: fit-content;
+        margin: 3px;
+        padding: 3px;
+        font-family: 'Muli', sans-serif;
+        font-size: 1em;
+    }
+    
+    select {
+        width: fit-content;
+        margin: 3px;
+        padding: 3px;
+        font-family: 'Muli', sans-serif;
+        font-size: 1em;
+    }
+    
+    label {
+        margin: 3px;
+        padding: 3px;
+        font-family: 'Muli', sans-serif;
+        font-size: 1.2em;
+    }
     
     h1 {
         font-size: 5vh;
@@ -46,4 +74,16 @@
         padding: 120px;
         color: darkblue;
         font-size: 30px;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    a:hover {
+        color: white;
+    }
+    
+    a:visited {
+        color: snow;
     }

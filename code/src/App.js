@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 import "./index.css"
 
-const activities = ["downhill", "snowboarding", "ski-touring", "cross-country", "I'm not really a fan of skiing, I'm rather into aprés-ski"]
+const activities = ["downhill", "snowboarding", "ski-touring", "cross-country", "I'm rather into aprés-ski then ski"]
 const foods = ["a mug of mulled wine", "a pint of beer", "whisky on the rocks", "a couple of shots", "I'd rather go to sleep"]
 
 export const App = () => {
@@ -39,6 +39,10 @@ export const App = () => {
           />
     
         <h2>First, pick your style:</h2>
+
+
+        
+        <div className="firstQuestion">
         {activities.map(group => (
               <label className='radioButtons' key={group}>
                 <input
@@ -50,6 +54,7 @@ export const App = () => {
                 {group}
               </label>
             ))}
+            </div>
     
         <h2>Where is your winter wonderland</h2>
             <select
@@ -92,7 +97,7 @@ export const App = () => {
 
   {showResult && (
         <p className='result'>
-          Hi {name}! You're a true adventurer! You're probably travel to {place} every year and go a little crazy on your {activity} adventure.  
+          Hi {name}! You're a true adventurer! You can't wait to go to {place} and bring a fresh {activity} adventure and a little blood to this season! But hold you horses. You still have to wait for a bit more of snow! Relax yourself with some great <a href="https://www.mountainsonstage.com/">mountain movies </a> and {food} till then.
         </p>
       )}
     
