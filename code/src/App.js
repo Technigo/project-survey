@@ -30,8 +30,9 @@ export const App = () => {
       {!showResult && (
         <form onSubmit={handleSubmit}>
           <div className='survey'>
-            <h2>Fill in your first name, please</h2>
+            <label for='name'>Fill in your first name, please</label>
             <input
+              id='name'
               type='text'
               onChange={event => setName(event.target.value)}
               required
@@ -42,8 +43,11 @@ export const App = () => {
               * * * * * * * * * * * * * * * * * * * * *
             </div>
 
-            <h2>Fill in your Christmas nickname, please</h2>
+            <label for='nickname'>
+              Fill in your Christmas nickname, please
+            </label>
             <input
+              id='nickname'
               type='text'
               onChange={event => setNickname(event.target.value)}
               required
@@ -88,8 +92,9 @@ export const App = () => {
               * * * * * * * * * * * * * * * * * * * * *
             </div>
 
-            <h2>Select your favourite Christmas Song</h2>
+            <label for='song'>Select your favourite Christmas Song</label>
             <select
+              id='song'
               onChange={event => setSong(event.target.value)}
               required
               value={song}

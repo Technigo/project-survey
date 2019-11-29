@@ -33,6 +33,7 @@ h1 {
 
 h2 {
   font-family: "Life Savers", cursive;
+  margin-bottom: 0.3em;
 }
 
 p {
@@ -49,9 +50,21 @@ form {
   margin-bottom: 2em;
 }
 
+label {
+  font-family: "Life Savers", cursive;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#name,
+#nickname {
+  display: block;
+  margin-top: 0.8em;
+}
+
 .divider {
   color: #dd4658;
-  margin-top: 2em;
+  margin: 2em 0 1em;
 }
 
 input[type="text"] {
@@ -62,7 +75,9 @@ input[type="text"] {
 .radioButtons {
   display: block;
   line-height: 2em;
-  font-size: 1.5em;
+  font-size: 1.7em;
+  font-weight: 500;
+  font-family: "Pompiere", cursive;
 }
 
 label input[type="radio"] {
@@ -74,6 +89,7 @@ label input[type="radio"] {
 select {
   font-family: "Pompiere", cursive;
   font-size: 1.2em;
+  margin-top: 1.3em;
 }
 
 button {
