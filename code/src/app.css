@@ -65,7 +65,7 @@ opacity: 0.5;
   text-align: center;
 }
 button {
-  width: 200px;
+  width: 150px;
   padding: 10px;
 	margin: 50px 0 20px 0;
 	border-radius: 5px;
@@ -149,22 +149,37 @@ button {
 
 /* RADIO BUTTONS FEELINGS */
 
-.feelings label {
-  display:block;
+.emojis{
+  display: flex;
+  justify-content: space-evenly;
 }
-.feelings input {
+
+.feelings label,
+ .ready-for label {
+  display:block;
+  font-size: 50px;
+}
+
+.feelings input,
+.ready-for
+input {
   font-size: 24px;
   padding: 5px;
+
 }
-.feelings input[type="radio"] {
-  display:none;
+.feelings input[type="radio"],
+.ready-for input[type="radio"] {
+  display:none; 
 }
-.feelings input[type=radio] + span {
+
+.feelings input[type=radio] + span, 
+.ready-for input[type=radio] + span {
   opacity: 0.3;
   cursor: pointer;
 }
 
-.feelings input[type=radio]:checked + span {
+.feelings input[type=radio]:checked + span, 
+.ready-for input[type=radio]:checked + span {
   opacity: 1;
 }
 
@@ -242,11 +257,67 @@ footer {
   margin: 20px;
 }
 
-input.hidden {
-  width: 0px;
-  height: 0px;
-  margin: 0px;
-  padding: 0px;
-  outline: none;
-  border: 0px;
+/* PROGRESS BAR
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 350px;
+  border-radius: 50px;
+  border: 1px solid #333;
+}
+
+.filler {
+  background: #1DA598;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+} */
+
+/* RANGE SLIDER */
+input[type=range] {
+  -webkit-appearance: none; /* Override default styles */
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background: #545B66;
+  opacity: 0.7;
+}
+
+input[type=range]:hover {
+  opacity: 1; 
+}
+
+
+/* The slider button */
+input[type=range]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default styles */
+  appearance: none; 
+  width: 30px;
+  height: 35px;
+  background: url('beer.png');
+  cursor: pointer;
+}
+/* The slider button for Firefox */
+input[type=range]::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+/* The slider button for IE */
+input[type=range]::-ms-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.show-range {
+  text-align: center;
+  margin: 10px 0;
+  font-size: 22px;
+  color: #fff;
 }
