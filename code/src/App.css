@@ -5,7 +5,7 @@ article{
   align-items: center;
 }
 form{
-  margin: 100px 0 100px 0;
+  margin: 100px 0 0 0;
 }
 input{
   background: #ececec;
@@ -72,7 +72,7 @@ margin: 40px 0 100px 0;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 200px 0 100px 0;
+  /* margin: 200px 0 100px 0; */
 }
 
 input[type='radio'] {
@@ -98,4 +98,10 @@ input:checked + .fakeCheckbox::after{
   background: #999;
   display: inline-block;
   border-radius: 50%;
+}
+
+.submit{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

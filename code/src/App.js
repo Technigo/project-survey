@@ -11,9 +11,11 @@ export const App = () => {
   const [nickName, setnickName] = useState("Fill in nickname here");
   const [definition, setDefinition] = useState("");
   const [love, setLove] = useState(false);
+  const [showResult, setShowResult] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    setShowResult(true)
   }
 
   const renderMessage = () => {
@@ -36,6 +38,9 @@ export const App = () => {
       </header>
       <article>
         <h1>Fill in and find the thruth of your heart</h1>
+
+
+
         <form onSubmit={handleSubmit}>
           <section className="questionWrapper">
 
@@ -113,16 +118,22 @@ export const App = () => {
             </div>
             <div className="seperator"></div>
           </section>
+          <section className="submit">
+          <button
+            type="submit"
+          >Submit
+        </button>
+        </section>
         </form>
-        <button type="submit">Submit</button>
-        <div className="result">
+          {showResult && (<div className="result">
+            <h1>The result</h1>
+            <h2>Hi {name}!</h2>
+            <p>Do you really love your partner {nickName}? Ooooohhh {love}!</p>
+            <p>For you, {nickName} is your {definition}</p>
+            // {renderMessage()}
+            </div>
+          )}
 
-          <h1>The result</h1>
-          <h2>Hi {name}!</h2>
-          <p>Do you really love your partner {nickName}? Ooooohhh {love}!</p>
-          <p>For you, {nickName} is your {definition}</p>
-          {renderMessage()}
-        </div>
       </article>
       <footer>
       </footer>
