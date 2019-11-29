@@ -68,11 +68,13 @@ export const App = () => {
             >SUBMIT</button>
           </div>
         </form>
-      )}
+        )}
       <div>
         {submit && <Summary movement={movement} icon={icon} reps={reps}/>}
       </div>
+    
     </section>
+   
   );
 };
 
