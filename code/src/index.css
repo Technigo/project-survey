@@ -1,9 +1,7 @@
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
-  font-family: "Pompiere", cursive;
+
+  font-family: "Pompiere";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -28,16 +26,16 @@ h1 {
   text-align: center;
   color: white;
   font-size: 3.3em;
-  font-family: "Life Savers", cursive;
+  font-family: "Life Savers";
 }
 
 h2 {
-  font-family: "Life Savers", cursive;
+  font-family: "Life Savers";
   margin-bottom: 0.3em;
 }
 
 p {
-  font-family: "Pompiere", cursive;
+  font-family: "Pompiere";
   font-size: 1.2em;
 }
 
@@ -51,7 +49,7 @@ form {
 }
 
 label {
-  font-family: "Life Savers", cursive;
+  font-family: "Life Savers";
   font-size: 1.5em;
   font-weight: bold;
 }
@@ -69,7 +67,7 @@ label {
 }
 
 input[type="text"] {
-  font-family: "Pompiere", cursive;
+  font-family: "Pompiere";
   font-size: 1.7em;
 }
 
@@ -78,7 +76,7 @@ input[type="text"] {
   line-height: 2em;
   font-size: 1.7em;
   font-weight: 500;
-  font-family: "Pompiere", cursive;
+  font-family: "Pompiere";
 }
 
 label input[type="radio"] {
@@ -88,7 +86,7 @@ label input[type="radio"] {
 }
 
 select {
-  font-family: "Pompiere", cursive;
+  font-family: "Pompiere";
   font-size: 1.5em;
   margin-top: 1.3em;
   max-width: 100%;
@@ -97,7 +95,7 @@ select {
 button {
   margin-top: 2em;
   display: block;
-  font-family: "Life Savers", cursive;
+  font-family: "Life Savers";
   font-weight: bold;
   background-color: #dd4658;
   color: white;
