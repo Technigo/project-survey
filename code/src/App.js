@@ -8,7 +8,6 @@ export const App = () => {
   const [submitted, setSubmitted] = useState(false)
   const [setShowResult] = useState(false);
 
-
   return (
     <div>
       {!submitted && (
