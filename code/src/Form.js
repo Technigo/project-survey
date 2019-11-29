@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
-import tree1 from 'images/tree1.jpeg'
-import tree2 from 'images/tree2.jpeg'
+// import tree1 from 'images/tree1.jpeg'
+// import tree2 from 'images/tree2.jpeg'
 import tree3 from 'images/tree3.jpeg'
 import tree4 from 'images/tree4.jpeg'
 import tree5 from 'images/tree5.jpeg'
@@ -23,18 +23,39 @@ export const Form = () => {
     "50+"
   ]
 
-  const images = [
-    <img src={tree1} alt="Christmas tree with presents" height="200px"></img>,
-    <img src={tree2} alt="Christmas tree with lights" height="200px"></img>,
-    <img src={tree3} alt="Christmas tree with candy in it" height="200px"></img>,
-    <img src={tree4} alt="Christmas tree with presents underneath" height="200px"></img>,
-    <img src={tree5} alt="Spruce tree in a field" height="200px"></img>,
-    <img src={tree6} alt="Palm tree" height="200px"></img>,
-  ]
-
   const handleSubmit = (event) => {
     event.preventDefault()
     setShowSummary(true)//On submit we want to show the summary
+  }
+  const imageToShow = () => {
+    if (preferredImage === "tree3") {
+      return (<div className="image-box1"
+        style={{ backgroundImage: `url(${tree3})` }}
+        aria-label="Image of Christmas tree with eyes">
+      </div>)
+    } else if (preferredImage === "tree4") {
+      return (
+        <div className="image-box2"
+          style={{ backgroundImage: `url(${tree4})` }}
+          aria-label="Image of Christmas tree with Santa Clause's">
+        </div>
+      )
+    } else if (preferredImage === "tree5") {
+      return (
+        <div className="image-box3"
+          style={{ backgroundImage: `url(${tree5})` }}
+          aria-label="Image of spruce tree in a field">
+        </div>
+      )
+    } else if (preferredImage === "tree6") {
+      return (
+        <div className="image-box4"
+          style={{ backgroundImage: `url(${tree6})` }}
+          aria-label="Image of palm tree">
+        </div>
+      )
+    }
+
   }
 
   return (
@@ -43,11 +64,14 @@ export const Form = () => {
       {showSummary && (<div className="summary">
         <h1>Summary:</h1>
         <br></br>
-        {wantsNewsletter ? 'You love christmas, yey!' : 'Ok, so you are obviously a grinch'}
+        {wantsNewsletter ? 'You love christmas, yey!' : 'Ok, so you are obviously a grinch!'}
         <br></br>
         You answered that {location} is your decoration of choice and that you've celebrated Christmas around {ageGroup} times!
-<br></br>
-        Well {name} to you too!
+        <br></br>
+        Well, {name} to you too!
+        <br></br>
+        May your Christmas tree look like this:
+{imageToShow()}
       </div>
       )}
 
@@ -56,6 +80,11 @@ export const Form = () => {
         (
 
           <form onSubmit={handleSubmit}>
+
+            <div className="header">
+              <h1>Survey about Christmas</h1>
+              <hr></hr>
+            </div>
 
             {/* QUESTION 4 */}
             How many times have you celebrated Christmas?
@@ -109,11 +138,11 @@ export const Form = () => {
 
               <label>
                 <input type="radio"
-                  value={tree3}
-                  onChange={() => setPreferredImage({ tree3 })}
-                  checked={preferredImage === { tree3 }}
+                  value="tree3"
+                  onChange={() => setPreferredImage("tree3")}
+                  checked={preferredImage === "tree3"}
                 ></input>
-                <div className="image-box"
+                <div className="image-box1"
                   style={{ backgroundImage: `url(${tree3})` }}
                   aria-label="Image of Christmas tree with eyes">
                 </div>
@@ -122,11 +151,11 @@ export const Form = () => {
 
               <label>
                 <input type="radio"
-                  value={tree4}
-                  onChange={() => setPreferredImage({ tree4 })}
-                  checked={preferredImage === { tree4 }}
+                  value="tree4"
+                  onChange={() => setPreferredImage("tree4")}
+                  checked={preferredImage === "tree4"}
                 ></input>
-                <div className="image-box"
+                <div className="image-box2"
                   style={{ backgroundImage: `url(${tree4})` }}
                   aria-label="Image of Christmas tree with Santa Clause's">
                 </div>
@@ -135,12 +164,12 @@ export const Form = () => {
 
               <label>
                 <input type="radio"
-                  value={tree5}
-                  onChange={() => setPreferredImage({ tree5 })}
-                  checked={preferredImage === { tree5 }}
+                  value="tree5"
+                  onChange={() => setPreferredImage("tree5")}
+                  checked={preferredImage === "tree5"}
                 ></input>
 
-                <div className="image-box"
+                <div className="image-box3"
                   style={{ backgroundImage: `url(${tree5})` }}
                   aria-label="Image of spruce tree in a field">
                 </div>
@@ -149,12 +178,12 @@ export const Form = () => {
 
               <label>
                 <input type="radio"
-                  value={tree6}
-                  onChange={() => setPreferredImage({ tree6 })}
-                  checked={preferredImage === { tree6 }}
+                  value="tree6"
+                  onChange={() => setPreferredImage("tree6")}
+                  checked={preferredImage === "tree6"}
                 ></input>
 
-                <div className="image-box"
+                <div className="image-box4"
                   style={{ backgroundImage: `url(${tree6})` }}
                   aria-label="Image of palm tree">
                 </div>
@@ -228,3 +257,11 @@ export const Form = () => {
 
 
 
+// const images = [
+//   <img src={tree1} alt="Christmas tree with presents" height="200px"></img>,
+//   <img src={tree2} alt="Christmas tree with lights" height="200px"></img>,
+//   <img src={tree3} alt="Christmas tree with candy in it" height="200px"></img>,
+//   <img src={tree4} alt="Christmas tree with presents underneath" height="200px"></img>,
+//   <img src={tree5} alt="Spruce tree in a field" height="200px"></img>,
+//   <img src={tree6} alt="Palm tree" height="200px"></img>,
+// ]
