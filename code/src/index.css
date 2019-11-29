@@ -26,6 +26,7 @@ select {
   background-size: cover;
   height: 500px;
   padding: 20px;
+  max-width: 100%
 }
 
 .introduction {
@@ -76,6 +77,11 @@ margin-bottom: 40px;
 }
 
 .summary {
+  margin: 0;
+  background-image: url(/assets/gurka.jpeg);
+  background-size: cover;
+  height: 500px;
+  padding: 30px;
   font-size: 20px;
   color: white;
   text-align: center;
@@ -85,11 +91,4 @@ margin-bottom: 40px;
 .summary i {
   font-size: 30px;
   margin-top: 30px;
-}
-
-.footer {
-  background-image: url(/assets/gurka.jpeg);
-  background-size: cover;
-  height: 500px;
-  padding: 20px;
 }
