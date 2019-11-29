@@ -13,17 +13,12 @@ export const App = () => {
   const [submit, setSubmit] = useState(false);
   
   return (
-
-
-     
-  
     <section className="formContainer">
       {!submit && (
         <form className="formInput" onSubmit={event => event.preventDefault()}>
-       
-          <Header />
-       
-          <p> When did you start with CrossFit?  </p> 
+           
+           <Header />
+            <p> When did you start with CrossFit?  </p> 
        
           <div className="formButton">   
             <button onClick={() => setReps(2)}>Just started and I love it!</button>
@@ -36,18 +31,14 @@ export const App = () => {
 
           <p> Which movement was the most fun to get the hang of? </p>
         
-          <div>
-                
+          <div>     
             <select
               onChange={event => setMovement(event.target.value)}
-              value={movement}
-              >
-              
+              value={movement}> 
               <option value=" ">Select your memory-movement:</option>
               <option value="handstand push-ups">Oh my, that must be the handstand push ups</option>
               <option value="chest-to-bars">Will never forget my first chest to bars..</option>
               <option value="toes-to-bars">Just have one word for ya, Toes to Bar! Boom!</option>
-            
             </select>    
           </div>
 
@@ -71,18 +62,11 @@ export const App = () => {
             onClick={() => setSubmit(true)}
             >SUBMIT</button>
           </div>
-      
-
-
         </form>
-   
-       
-   )};
-   {submit && <Summary movement={movement} icon={icon} reps={reps}/>};
-    </section>
-   
+
+      )};
+      {submit && <Summary movement={movement} icon={icon} reps={reps}/>};
+    </section> 
   );
-  
- 
 };
 
