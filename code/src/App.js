@@ -15,9 +15,7 @@ export const App = () => {
 
  
     <section className="formContainer">
-      {/*makes everything inside of the commando hide upon the submit button is hit*/}
       {!submit && (
-      
         <form className="formInput" onSubmit={event => event.preventDefault()}>
           <Header />
           <p> When did you start with CrossFit?  </p> 
@@ -68,11 +66,11 @@ export const App = () => {
             >SUBMIT</button>
           </div>
         </form>
-        )}
-      <div>
-        {submit && <Summary movement={movement} icon={icon} reps={reps}/>}
-      </div>
-    
+      )}
+        <div>
+          {submit && <Summary movement={movement} icon={icon} reps={reps}/>}
+        </div>
+      
     </section>
    
   );
