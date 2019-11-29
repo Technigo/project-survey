@@ -1,53 +1,34 @@
-import React, { useState } from "react";
-import Form from 'Form.js';
+import React, { useState } from "react"
+import Form from 'Form.js'
+import Answers from 'Answers.js'
+import questionnaire from 'sampleQuestionnaire.json'
 
 export const App = () => {
-  const [isAnswered, setAnswered] = useState(false); /* if Answered (submitted) then show answers */
-
-  const questionList = [
-    /* Dynamic list of questions as JSON */
-    {
-      index: 0,
-      type: "input",
-      text: "Hur många tacos äter du?",
-      alternatives: null,
-      defaultAnswer: null
-    },
-    {
-      index: 1,
-      type: 'radio',
-      text: 'Vilket är godast?',
-      alternatives: ['Lasagne', 'Tacos', 'Huel'],
-      defaultAnswer: null
-    },
-    {
-      index: 2,
-      type: 'select',
-      text: 'Favvoställe?',
-      alternatives: ['Här', 'Där', 'Där borta', 'Stockholm'],
-      defaultAnswer: 'Här'
-    },
-    {
-      index: 3,
-      type: "input",
-      text: "Hur många bultar i Ölandsbron?",
-      alternatives: null,
-      defaultAnswer: null
-    }
-  ];
-
+  
+  const [canBeSubmitted, setCanBeSubmitted] = useState(false); /* if true, show answers */
+  
+  const questions = questionnaire.questions
+  
+  /* Create answers hook - array with  default values */
+  const defaultAnswers = questions.map(question => question.defaultAnswer);
+  const [answers, setAnswers] = useState(defaultAnswers);
+  
   return (
-    <div>
-      {!isAnswered ? <Form setAnswered={setAnswered} questions={questionList} /> : <Answers />}
-    </div>
+    <>
+      {!canBeSubmitted ? 
+        <Form 
+          setCanBeSubmitted={setCanBeSubmitted}
+          answers={answers}
+          setAnswers={setAnswers}
+          questions={questions}
+        /> : 
+        <Answers 
+          questions={questions}
+          answers={answers} 
+        />
+      }
+    </>
   );
 };
 
-const Answers = () => {
-  return (
-    <div>
-      <h2>Answers</h2>
-      <p>Lorem...</p>
-    </div>
-  );
-};
+

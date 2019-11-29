@@ -5,7 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 500px;
+  width: 400px;
+  font-size: 20px;
+  color: #444;
 }
 
 code {
@@ -18,8 +20,76 @@ form {
   border-color: black;
 }
 
-button {
-  /* width: 100px; */
-  /* height: 100px; */
-  /* background-color: black; */
+.ask {
+  width: 100%;
+  height: 100px;
+}
+
+h3 {
+  margin-bottom: 5px;
+}
+
+hr {
+  border-color: #ddd;
+  border-top-width:  0px;
+  margin: 0;
+}
+
+.question {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.question input[type='input'], select {
+  height: 40px;
+  width: 100%;
+  font-size: 20px;
+}
+.question input[type='radio'] {
+  height: 20px;
+  font-size: 20px;
+  transform: scale(2);
+  margin-bottom: 10px;
+}
+
+select, option {
+  border-radius: 20px;
+  background-color: white;
+  outline: none;
+  text-align-last: center;
+  /* border-style: none; */
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+
+button, button:focus {
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: sandybrown;
+  outline: none;
+  color: white;
+  border-style: none;
+  font-size: 16px;
+}
+
+button[disabled] {
+  background-color: #efefef;
+  color: gray;
+}
+
+button:active {
+  background-color: brown;
+}
+
+.radio-label {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

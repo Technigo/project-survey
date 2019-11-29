@@ -3,60 +3,81 @@ import TextInput from 'InputTypes/TextInput.js'
 import RadioInput from 'InputTypes/RadioInput.js'
 import DropdownInput from 'InputTypes/DropdownInput.js'
 
-const Form = ({ setAnswered, questions }) => {
-    const defaultAnswers = questions.map(question => question.defaultAnswer);
-    const [answers, setAnswers] = useState(defaultAnswers);
-    const [currentQuestion, setQuestion] = useState(questions[0]) /* start at the first question */
-  
-    const handleRadioClick = (event) => {
-      let tempAnswers = answers;
-      tempAnswers[currentQuestion.index] = event.target.value;
-      setAnswers(tempAnswers);
-    }
-  
-    return (
-        <form onSubmit={() => setAnswered(true)}>
-          <h2>Form</h2>
-          <h3>Question {currentQuestion.index} + 1</h3>
-          <p>{currentQuestion.text}</p>
-  
-          {currentQuestion.type === 'input' && 
-            <TextInput 
-              currentQuestion={currentQuestion}
-              setAnswers={setAnswers}
-              answers={answers}
-            />
-          }
-  
-          {currentQuestion.type === 'radio' && 
-            currentQuestion.alternatives.map((alternative, index) => 
-              <RadioInput
-                key={index}
-                label={alternative}
-                onChange={handleRadioClick}
-                checked={answers[currentQuestion.index] === alternative}
-              />
-          )}
-          
-          <nav className="navigation">
-            <button 
-              onClick={() => setQuestion(questions[currentQuestion.index - 1])} 
-              type="button"
-              disabled={currentQuestion.index === 0 && true}
-            >Prev</button>
-            <button 
-              onClick={() => setQuestion(questions[currentQuestion.index + 1])} 
-              type="button"
-              disabled={currentQuestion.index === questions.length - 1 && true}
-            >Next</button>
-            <button 
-              onClick={() => setQuestion(questions[currentQuestion.index + 1])} 
-              type="submit"
-              disabled={answers.includes(null) && true}
-            >Submit</button>
-          </nav>
-        </form>
-    );
-  };
+const Form = ({ setCanBeSubmitted, questions, answers, setAnswers }) => {
+  const [currentQuestion, setQuestion] = useState(questions[0]) /* start at the first question */
 
-  export default Form
+  const [dummy, setDummy] = useState(0)
+
+  const handleRadioClick = (event) => {
+    console.log('handleRadioClick pre')
+    console.log(answers)
+    let tempAnswers = answers;
+    tempAnswers[currentQuestion.index] = event.target.value;
+    setAnswers(tempAnswers);
+    console.log('handleRadioClick post')
+    console.log(answers)
+    setDummy(event.target.value) /* lol test */
+  }
+
+  return (
+    <form onSubmit={() => setCanBeSubmitted(true)}>
+      <h2>Formulär</h2>
+      <div className="ask">
+        <h3>Fråga {currentQuestion.index + 1}</h3>
+        <hr />
+        <p>{currentQuestion.text}</p>
+      </div>
+    
+      <div className="question">
+      
+        {currentQuestion.type === 'input' && 
+          <TextInput 
+            currentQuestion={currentQuestion}
+            setAnswers={setAnswers}
+            answers={answers}
+          />
+        }
+
+        {currentQuestion.type === 'radio' && 
+          currentQuestion.alternatives.map((alternative, index) => 
+            <RadioInput
+              key={index}
+              label={alternative}
+              onChange={handleRadioClick}
+              checked={answers[currentQuestion.index] === alternative}
+              answers={answers} /* for debug purposes */
+            />
+        )}
+
+        {currentQuestion.type === 'dropdown' && 
+          <DropdownInput
+            answers = {answers}
+            setAnswers = {setAnswers}
+            alternatives={currentQuestion.alternatives}
+            index = {currentQuestion.index}
+          />
+        }
+      </div>
+      
+      <nav className="navigation">
+        <button 
+          onClick={() => setQuestion(questions[currentQuestion.index - 1])} 
+          type="button"
+          disabled={currentQuestion.index === 0 && true}
+        >Prev</button>
+        <button 
+          onClick={() => setQuestion(questions[currentQuestion.index + 1])} 
+          type="button"
+          disabled={currentQuestion.index === questions.length - 1 && true}
+        >Next</button>
+        <button 
+          onClick={() => setCanBeSubmitted(true)} 
+          type="submit"
+          disabled={answers.includes(null) && true}
+        >Submit</button>
+      </nav>
+    </form>
+  );
+};
+
+export default Form

@@ -1,8 +1,8 @@
 import React from "react";
 
-const RadioInput = ({label, setAnswers, answers, checked, onChange, ...props}) => {  
+const RadioInput = ({ label, checked, onChange, answers }) => {  
   return (
-    <label>
+    <label className="radio-label">
       <input
         type='radio'
         value={label}
@@ -11,10 +11,14 @@ const RadioInput = ({label, setAnswers, answers, checked, onChange, ...props}) =
           event.persist()
           onChange(event)
         }}
+        onClick={() => {
+          console.log('onClick')
+          console.log(answers)
+          
+        }}
       />
       {label}
     </label>
   )
 }
-
 export default RadioInput

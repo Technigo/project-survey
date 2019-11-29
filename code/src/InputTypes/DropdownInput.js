@@ -2,11 +2,21 @@
 
 import React from "react";
 
-{/* <select
-    onChange={event => setFav(event.target.value)}
-    defaultValue={fav}
->
-    <option value="vikendi">Vikendi</option>
-    <option value="sahnok">sahnok</option>
-    <option value="merendi">merendi</option>
-</select> */}
+const DropdownInput = ({ setAnswers, answers, alternatives, index }) => {
+  console.log(alternatives)
+  return (
+    <select
+      onChange={event => {
+        let tempAnswers = answers
+        tempAnswers[index] = event.target.value
+        setAnswers(tempAnswers)
+      }}
+    >
+      { alternatives.map(alt => (
+        <option value={alt} key={alt}>{alt}</option>
+      ))}
+    </select>
+  )
+}
+
+export default DropdownInput

@@ -1,9 +1,6 @@
 import React from "react";
 
-const TextInput = (props) => {
-    const currentQuestion = props.currentQuestion
-    const setAnswers = props.setAnswers
-    const answers = props.answers
+const TextInput = ( { currentQuestion, setAnswers, answers}) => {
     
     return ( 
       <input
@@ -14,7 +11,8 @@ const TextInput = (props) => {
           let tempAnswers = answers
           tempAnswers[currentQuestion.index] = event.target.value
           setAnswers(tempAnswers)
-  
+          
+          console.log(answers)
         }}
       />
     )

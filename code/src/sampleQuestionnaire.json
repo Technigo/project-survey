@@ -1,0 +1,32 @@
+{
+  "questions": [
+    {
+      "index": 0,
+      "type": "input",
+      "text": "Hur många tacos äter du?",
+      "alternatives": null,
+      "defaultAnswer": null
+    },
+    {
+      "index": 1,
+      "type": "radio",
+      "text": "Vilket är godast?",
+      "alternatives": ["Lasagne", "Tacos", "Huel"],
+      "defaultAnswer": null
+    },
+    {
+      "index": 2,
+      "type": "dropdown",
+      "text": "Favvoställe?",
+      "alternatives": ["Här", "Där", "Där borta", "Stockholm", "NYC"],
+      "defaultAnswer": "Här"
+    },
+    {
+      "index": 3,
+      "type": "input",
+      "text": "Hur många bultar i Ölandsbron?",
+      "alternatives": null,
+      "defaultAnswer": null
+    }
+  ]
+}
