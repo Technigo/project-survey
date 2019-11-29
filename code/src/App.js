@@ -114,10 +114,10 @@ export const App = () => {
             </select>
 
             <div className='divider'>
-              * * * * * * * * * * * * * * * * * * * * *
+              * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
             </div>
 
-            <button type='submit'>Submit my answers</button>
+            <button type='submit'>Submit and get the verdict</button>
           </div>
         </form>
       )}
