@@ -39,10 +39,7 @@ export const App = () => {
           />
     
         <h2>First, pick your style:</h2>
-
-
         
-        <div className="firstQuestion">
         {activities.map(group => (
               <label className='radioButtons' key={group}>
                 <input
@@ -54,7 +51,7 @@ export const App = () => {
                 {group}
               </label>
             ))}
-            </div>
+            
     
         <h2>Where is your winter wonderland</h2>
             <select
