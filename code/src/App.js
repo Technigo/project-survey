@@ -3,9 +3,9 @@ import "./index.css"
 
 const characters = ["The Grinch", "Rudolph", "Frosty the Snowman"]
 const foods = [
-  "Candy canes",
-  "Gingerbread cookies",
-  "Anything as long I can have glögg to it"
+  "just coffee",
+  "gingerbread cookies",
+  "anything as long you can have glögg to it"
 ]
 
 export const App = () => {
@@ -34,6 +34,7 @@ export const App = () => {
             <input
               type='text'
               onChange={event => setName(event.target.value)}
+              required
               value={name}
             />
 
@@ -45,6 +46,7 @@ export const App = () => {
             <input
               type='text'
               onChange={event => setNickname(event.target.value)}
+              required
               value={nickname}
             />
 
@@ -52,13 +54,14 @@ export const App = () => {
               * * * * * * * * * * * * * * * * * * * * *
             </div>
 
-            <h2>Which Christmas Character would you be in another life?</h2>
+            <h2>Which Christmas Character is your spirit animal?</h2>
             {characters.map(group => (
               <label className='radioButtons' key={group}>
                 <input
                   type='radio'
                   value={group}
                   onChange={event => setCharacter(event.target.value)}
+                  required
                   checked={character === group}
                 />
                 {group}
@@ -76,6 +79,7 @@ export const App = () => {
                   type='radio'
                   value={group}
                   onChange={event => setFood(event.target.value)}
+                  required
                   checked={food === group}
                 />
                 {group}
@@ -89,14 +93,21 @@ export const App = () => {
             <h2>Select your favourite Christmas Song</h2>
             <select
               onChange={event => setSong(event.target.value)}
+              required
               value={song}
             >
               <option value=''>Select</option>
-              <option value='song1'>Song1</option>
-              <option value='song2'>Song2</option>
-              <option value='song3'>Song3</option>
-              <option value='song4'>Song4</option>
-              <option value='song5'>Song5</option>
+              <option value='Jingle Bells'>Jingle Bells - Frank Sinatra</option>
+              <option value='Driving Home For Christmas'>
+                Driving Home For Christmas - Chris Rea
+              </option>
+              <option value='I Don´t Believe in Santa Claus'>
+                I Don´t Believe in Santa Claus - the Vandals
+              </option>
+              <option value='Last Christmas'>Last Christmas - Wham</option>
+              <option value='All I Want For Christmas Is You'>
+                All I Want For Christmas Is You - Mariah Carey
+              </option>
             </select>
 
             <div className='divider'>
@@ -109,11 +120,20 @@ export const App = () => {
       )}
 
       {showResult && (
-        <p className='result'>
-          Thank you {nickname}, formerly known as {name}. Looking forward to
-          spend some time with you in December, eating {food} and listen to
-          {song} day in and day out...
-        </p>
+        <div className='result'>
+          <p>
+            Thank you {nickname}, formerly known as {name}!
+          </p>
+          <p>
+            I wish you a happy December, haning out with your best friend{" "}
+            {character}, eating {food} and listen to {song} day in and day
+            out...
+          </p>
+          <p className='verdict'>
+            So do you love Christmas? Of course you do, everyone does! If you
+            think you're not, it's all about denial.
+          </p>
+        </div>
       )}
 
       <footer>

@@ -83,6 +83,17 @@ button {
 
 .result {
   max-width: 50%;
+  font-size: 2em;
+  margin: 0 auto;
+}
+
+.verdict {
+  font-family: "Life Savers", cursive;
+  font-size: 1.2em;
+  font-weight: bold;
+  background-color: #dd4658;
+  color: white;
+  padding: 0.5em;
 }
 
 footer {
