@@ -86,16 +86,16 @@ export const App = () => {
             {question === 3 && (
               <div className="question" role="radiogroup">
                 <h2>#2: What is the Minions favorite fruit?</h2>
-                {radioButtons.map((option) => (
-                  <label key={option} className="radio-buttons">
-
+                {radioButtons.map((choice) => (
+                  <label key={choice} className="radio-btns">
                     <input
                       type="radio"
-                      value={option}
+                      value={choice}
+                      checked={radioButton === choice}
                       onChange={(event) => setRadioButton(event.target.value)}
-                      checked={radioButton === option}
                     />
-                    <span className="radio-label">{option}</span>
+                    <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                    {choice}
                   </label>
                 ))
                 }

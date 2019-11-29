@@ -114,7 +114,7 @@ option {
 }
 
 /* RADIO BUTTONS DEFAULT */
-.radio-buttons {
+/* .radio-buttons {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -135,6 +135,46 @@ input[type=radio] {
 
 .radio-label {
   margin-left: 15px;
+} */
+
+/* RADIO BUTTONS CUSTOM*/
+.radio-btns {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+/* Hide default radio button */
+.radio-btns input[type=radio] {
+  position: absolute;
+  cursor: pointer;
+  appearance: none;
+  display: none;
+}
+
+/* Customized radio button */
+.radio-btns .checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 26px;
+  width: 26px;
+  background: #eee;
+  border-radius: 50%;
+}
+
+/* On hover */
+.radio-btns:hover input ~ .checkmark {
+  background: #4CAF50;
+  opacity: 0.5;
+}
+
+/* When checked */
+.radio-btns input[type=radio]:checked ~ .checkmark {
+  background: #4CAF50;
 }
 
 /* RANGE SLIDER */
