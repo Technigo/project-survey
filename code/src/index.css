@@ -21,7 +21,7 @@ p {
 }
 
 
-  /*Keeping the app and making it flexible with a grey frame surrounding*/
+/*Keeping the app and making it flexible with a grey frame surrounding*/
 /* All info in the center*/
 .formContainer {
   margin: 20px auto;
@@ -37,6 +37,7 @@ p {
   width: 450px;
   height: 600px;
   margin-top: 10px;
+  margin-left: 18%;
   border-radius: 20px;
   border: 1px solid white;
   padding: 20px;
@@ -46,7 +47,7 @@ p {
   /*text transform capitalize gives big first letter in every words */
   text-transform: capitalize;
   /* The "linear-gradient" gives a darker feeling to the her image*/
- background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Components/Pictures/Ringdips.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./Components/Pictures/ringdips.jpg");
   background-repeat: no-repeat;
   /* To make the her0 picture cover the app */
   background-size: cover;
@@ -55,37 +56,24 @@ p {
   position: relative
 }
 
-  .formRadiobtn{
-    margin: 100px;
-    justify-items: stretch;
-  }
+.formRadiobtn{
+  margin: 100px;
+}
   
-  .submitButton button {
-    color: #f147c7;
-    font-size: 20px;
-    border: #f147c7;
-    border-radius: 90px; /* Button gets rounded corners */ 
-    border: 5px solid #f147c7;
-    font-weight: 500px;
-    text-transform: uppercase;
-    text-decoration: none;
-    padding: 10px;
-    display: inline-block;
-    cursor: pointer;
-    margin: 40px;
-  } 
+.submitButton button {
+  color: #f147c7;
+  font-size: 20px;
+  border: #f147c7;
+  border-radius: 90px; /* Button gets rounded corners */ 
+  border: 5px solid #f147c7;
+  font-weight: 500px;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 10px;
+  display: inline-block;
+  cursor: pointer;
+  margin: 40px;
+} 
 
-  /*@media (min-width: 650px) {
-
-    .formContainer {
-      margin: 10px 0;
-      align-items: center;
-    }
-  
-    .formInput {
-      width: 25%;
-      flex-grow: 1;
-      margin: 16px;
-    }*/
 
 
