@@ -28,7 +28,7 @@ p {
   width: 90%;
   background: rgba(195, 213, 224, 0.877);
   height: auto;
-  display: flex;  
+  display: grid;  
   justify-content: space-around;
   align-items: center; 
 }
