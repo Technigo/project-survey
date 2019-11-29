@@ -26,12 +26,11 @@ export const App = () => {
     <div className="form-container">
       <div>
         {showResult && (
-          <div>
+          <div className="santa-answer">
             <h1>Soon it is Christmas,{name} </h1>
-            <p>
-              Your wishes for {food} and {candy} at {time} o'clock and mayby Santa visit us after that!
-            </p>
-            <h2>hope we get a merry Christmas</h2>
+            <h2>Ooh, {food} and {candy}, is my favo too!
+            Your wishes for {food} and {candy} at {time} o'clock is now on my list.</h2>
+            <h2>Best wishes of a merry merry Christmas // <span role="img" aria-label="Santa">🎅🏻</span> :</h2>
           </div>
         )}
 
@@ -39,74 +38,84 @@ export const App = () => {
 
       {!showResult && (
         <form onSubmit={handleSubmit}>
-          <h1>Ho, ho, Santa wants your input for Christmas Eve</h1>
+          <fieldset>
+            <h1>Ho, ho, Santa wants your input for Christmas Eve</h1>
+          </fieldset>
           <section className="input-container">
-            <input
-              type="text"
-              placeholder="Your name"
-              onChange={event => setName(event.target.value)}
-              value={name}
-            />
-            <span>input–1</span>
+            <fieldset>
+              <input
+                type="text"
+                placeholder="Your name"
+                onChange={event => setName(event.target.value)}
+                value={name}
+              />
+            </fieldset>
           </section>
 
           <section className="food-section">
-            <h2>What do you want to eat? </h2>
-            <select
-              onChange={event => setFood(event.target.value)}
-              onChange={event => setFood(event.target.active)}
-              value={food} >
-              <option value=""> pick your favo </option>
-              <option value="Julskinka"> Julskinka </option>
-              <option value="Jansson"> Jansson </option>
-              <option value="Omelett"> Omelett </option>
-              <option value="Senapssill"> Senapssill </option>
-            </select>
-            <p className="answer" aria-label="Speaking Santa">🎅: Ooh, {food}, is my favo too!</p>
+            <fieldset>
+              <h2>What do you want to eat? </h2>
+              <select
+                onChange={event => setFood(event.target.value)}
+                value={food} >
+                <option value=""> pick your favo </option>
+                <option value="Julskinka"> Julskinka </option>
+                <option value="Jansson"> Jansson </option>
+                <option value="Omelett"> Omelett </option>
+                <option value="Senapssill"> Senapssill </option>
+
+              </select>
+            </fieldset>
           </section>
 
           <section className="candy-section">
-            <h2>And for candies?</h2>
-            <select
-              onChange={event => setCandy(event.target.value)}
-              value={candy} >
-              <option value=""> pick your favo </option>
-              <option value="Knäck"> Knäck </option>
-              <option value="Choclate"> Choclate </option>
-              <option value="Mozartkugeln"> Mozartkugeln </option>
-              <option value="Kola"> Kola </option>
-            </select>
-            <p aria-label="Speaking Santa">🎅: Yum, {candy}!</p>
+            <fieldset>
+              <h2>And for candies?</h2>
+              <select
+                onChange={event => setCandy(event.target.value)}
+                value={candy} >
+                <option value=""> pick your favo </option>
+                <option value="Knäck"> Knäck </option>
+                <option value="Choclate"> Choclate </option>
+                <option value="Mozartkugeln"> Mozartkugeln </option>
+                <option value="Kola"> Kola </option>
+              </select>
+            </fieldset>
           </section>
 
 
           <section>
-            <h2>What time do you want to eat dinner?</h2>
-            {dinnerTime.map(eat => (
-              <label key={eat}>
-                <input
-                  type="radio"
-                  value={eat}
-                  onChange={event => setTime(event.target.value)}
-                  checked={time === eat}
-                />
-                <p>at {eat}</p>
-              </label>
-            ))}
+            <fieldset>
+              <h2>What time do you want to eat dinner?</h2>
+
+              {dinnerTime.map(eat => (
+                <label key={eat}>
+                  <input
+                    type="radio"
+                    value={eat}
+                    onChange={event => setTime(event.target.value)}
+                    checked={time === eat}
+                  />
+                  <p>at {eat}</p>
+                </label>
+              ))}
+            </fieldset>
           </section>
 
 
           <section className="visit-section">
-            <h2>Do you want Santa to visit on Christmas Eve?</h2>
-            <label>
-              <input
-                type="checkbox"
-                checked={wantsVisit}
-                onChange={event => setWantsVisit(event.target.checked)}
-                value={name}
-              />
-              <p>Yes</p>
-            </label>
+            <fieldset>
+              <h2>Do you want Santa to visit on Christmas Eve?</h2>
+              <label>
+                <input
+                  type="checkbox"
+                  checked={wantsVisit}
+                  onChange={event => setWantsVisit(event.target.checked)}
+                  value={name}
+                />
+                <p>Yes</p>
+              </label>
+            </fieldset>
           </section>
 
           <button type="submit">
