@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { InputText } from './components/InputText'
 import { Summary } from './components/Summary'
 import './app.css'
 
@@ -104,7 +103,7 @@ export const App = () => {
                   <h2>#3: How many reindeers does Santa have?</h2>
                   <input
                     type="range"
-                    min={1}
+                    min={0}
                     max={10}
                     value={range}
                     onChange={(event) => setRange(event.target.value)}
@@ -130,7 +129,9 @@ export const App = () => {
 
       {submitted && (<Summary name={name} location={location} fruit={fruit} range={range} />)}
 
-      <footer>Technigo Bootcamp 2019 © Sofie Nyblad</footer>
+      <footer>
+        <div>Technigo Bootcamp 2019 © Sofie Nyblad</div>
+      </footer>
 
     </div >
 
