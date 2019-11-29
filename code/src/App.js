@@ -6,14 +6,14 @@ export const App = () => {
 
   //useState Hooks 
   const [question, setQuestion] = useState(1)
-  const [name, setName] = useState("")
-  const [location, setLocation] = useState("")
-  const [fruit, setFruit] = useState()
+  const [text, setText] = useState("")
+  const [select, setSelect] = useState("")
+  const [radioButton, setRadioButton] = useState()
   const [range, setRange] = useState(5)
   const [submitted, setSubmitted] = useState(false)   //False because form is not submitted from start (initial value)
 
   //Array with values for mapping radio buttons in #2
-  const fruits = ["Apple", "Banana", "Minions?"]
+  const radioButtons = ["Apple", "Banana", "Minions?"]
 
   //Function to handle next-button/onclick
   const handleNext = () => {
@@ -33,7 +33,7 @@ export const App = () => {
 
   //Funtion to validate name input, if name is empty isDisabled is true and the button is disabled (called inside <button>)
   const nextDisabled = () => {
-    if (name.length === 0) {
+    if (text.length === 0) {
       return true
     }
   }
@@ -56,8 +56,8 @@ export const App = () => {
                     type="text"
                     required
                     placeholder="Type your name here..."
-                    onChange={event => setName(event.target.value)}
-                    value={name}
+                    onChange={event => setText(event.target.value)}
+                    value={text}
                     onKeyPress={(event) => { event.key === "Enter" && event.preventDefault() }}
                   />
                 </label>
@@ -70,8 +70,8 @@ export const App = () => {
                   <h2>#1: What's the best location?</h2>
                   <div className="select-main">
                     <select
-                      onChange={event => setLocation(event.target.value)}
-                      value={location}
+                      onChange={event => setSelect(event.target.value)}
+                      value={select}
                     >
                       <option value="">- Choose location -</option>
                       <option value="Home">Home</option>
@@ -86,14 +86,14 @@ export const App = () => {
             {question === 3 && (
               <div className="question" role="radiogroup">
                 <h2>#2: What is the Minions favorite fruit?</h2>
-                {fruits.map((option) => (
+                {radioButtons.map((option) => (
                   <label key={option} className="radio-buttons">
 
                     <input
                       type="radio"
                       value={option}
-                      onChange={(event) => setFruit(event.target.value)}
-                      checked={fruit === option}
+                      onChange={(event) => setRadioButton(event.target.value)}
+                      checked={radioButton === option}
                     />
                     <span className="radio-label">{option}</span>
                   </label>
@@ -136,7 +136,7 @@ export const App = () => {
 
       </form>
 
-      {submitted && (<Summary name={name} location={location} fruit={fruit} range={range} />)}
+      {submitted && (<Summary text={text} select={select} radioButton={radioButton} range={range} />)}
 
       <footer>
         <div>Technigo Bootcamp 2019 © Sofie Nyblad</div>

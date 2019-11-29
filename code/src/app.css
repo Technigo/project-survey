@@ -235,7 +235,7 @@ button:disabled:hover {
 /* SUMMARY */
 .summary {
   width: 95%;
-  height: 70vh;
+  height: 60vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
