@@ -30,13 +30,13 @@ const Form = () => {
         {/* display:none, on the form */}
 
         {!submitted && (
-          <form onSubmit={handelSubmit}>
+          <form onSubmit={handelSubmit} className="form-style">
 
             <div className="q-one">
 
               <p>What's your name?</p>
 
-              <input className="input-name"
+              <input
                 type="text"
                 onChange={event => setName(event.target.value)}
                 value={name}
@@ -97,7 +97,7 @@ const Form = () => {
                 <input className="input-name"
                   type="E-mail"
                   onChange={event => setEmail(event.target.value)}
-                  value={email} />
+                value={email} />
               </div>
             )}
             <div>
@@ -105,9 +105,9 @@ const Form = () => {
             </div>
           </form>
         )}
-        <div className="sammary-div">
-          {submitted && <Summary name={name} socialMedia={socialMedia} skills={skills} wantsNewsletter={wantsNewsletter} email={email} />}
-        </div>
+
+        {submitted && <Summary name={name} socialMedia={socialMedia} skills={skills} wantsNewsletter={wantsNewsletter} email={email} />}
+
       </div>
     </div >
 
