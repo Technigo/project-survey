@@ -10,7 +10,7 @@ code {
 }
 
 .survey {
-    background-image: url(header-image.jpg);
+    background-image: url(background2-big.jpg);
     /* height: cover; */
     display: flex;
     flex-direction: column;
@@ -25,6 +25,7 @@ header {
     /* height: 40px; */
     padding: 40px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
