@@ -26,18 +26,12 @@
     }
     
     form {
-        border: blue 2px dotted;
         padding: 20px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
-    /*  .firstQuestion {
-        display: flex;
-        flex-direction: row;
-        flex-grow: 1;
-    } */
     
     h1 {
         font-size: 5vh;
@@ -68,13 +62,14 @@
     
     button {
         font-family: 'Muli', sans-serif;
-        font-weight: 600;
-        font-size: 1.2em;
+        font-weight: 700;
+        color: black;
+        font-size: 1.4em;
         display: inline-block;
-        padding: 0.4em 1em;
-        border: 0.16em solid #FFFFFF;
+        padding: 0.4em 1.3em;
+        border: 0.15em dotted grey;
         background: transparent;
-        margin: 0.5em 0.3em 0.3em 0;
+        margin-top: 2.2em;
         box-sizing: border-box;
         text-decoration: none;
         text-transform: uppercase;
@@ -83,13 +78,13 @@
     }
     
     button:hover {
-        color: #DDDDDD;
-        border-color: #DDDDDD;
+        color: #F0774C;
+        border-color: #F0774C;
     }
     
     button:active {
-        color: #BBBBBB;
-        border-color: #BBBBBB;
+        color: darkblue;
+        border-color: darkblue;
     }
     
     footer {
