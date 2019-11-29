@@ -58,7 +58,7 @@ button[type=submit], button[type=button] {
   width: 50vw;
 }
 
-.progress-bar {
+/* .progress-bar {
   position: relative;
   height: 20px;
   width: 350px;
@@ -71,7 +71,7 @@ button[type=submit], button[type=button] {
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;
-}
+} */
 
 @media(min-width: 1024px) {
 .menu-container {
@@ -99,3 +99,7 @@ button[type=submit]:hover, button[type=button]:hover {
   background: #4169E1;
 }
 }
+
+/* .progress {
+  display: inline-block;
+} */

@@ -10,6 +10,7 @@ export const App = () => {
   const [food, setFood] = useState("")
   const [tvseries, setTvseries] = useState("")
   const [artist, setArtist] = useState("")
+  const [christmas, setChristmas] = useState("0")
   
   const [question, setQuestion] = useState("name")
   const [submitted, setSubmitted] = useState(false)
@@ -24,6 +25,8 @@ export const App = () => {
       setQuestion('artist')
     } else if(question==='artist') {
       setQuestion('tvseries')
+    } else if(question==='tvseries') {
+      setQuestion('christmasenjoy')
     }
   }
 
@@ -50,6 +53,7 @@ export const App = () => {
         type="text"
         onChange={event => setName(event.target.value)}
         value={name}
+        required
       />
       </label>
       <br></br><br></br>
@@ -58,7 +62,7 @@ export const App = () => {
       
       {question === 'age' && (
       <div>
-      <h1>My survey</h1>
+      <h1>Michel's survey</h1>
       <p>What is your age group?</p>
       <br></br>
 
@@ -79,7 +83,7 @@ export const App = () => {
       
       {question === 'food' && (
       <div>
-      <h1>My survey</h1>
+      <h1>Michel's survey</h1>
       <p>Favourite food</p>
       <br></br>
 
@@ -94,6 +98,7 @@ export const App = () => {
         <option value="pasta">Pasta</option>
         <option value="pizza">Pizza</option>
         <option value="pizza">Tacos</option>
+        <option value="pancakes">Pancakes</option>
         <option value="other">Other</option>
       </select>
       </label>
@@ -103,7 +108,7 @@ export const App = () => {
 
       {question === 'artist' && (
       <div>
-      <h1>My survey</h1>
+      <h1>Michel's survey</h1>
       <p>Favourite artist</p>
       <br></br>
   
@@ -131,7 +136,7 @@ export const App = () => {
       
       {question === 'tvseries' && (
       <div>
-      <h1>My survey</h1>
+      <h1>Michel's survey</h1>
       <p>Favourite tv-series</p>
       <br></br>
 
@@ -153,14 +158,32 @@ export const App = () => {
       </label>
 
       <br></br><br></br>
+      </div>
+      )}
 
+      {question === 'christmasenjoy' && (
+      <div>
+      <h1>Michel's survey</h1>
+      <p>How much do you like Christmas on a scale from 0 to 10?</p>
+      <label>
+      <input 
+        type="range"
+        value={christmas}
+        min="0"
+        max="10"
+        onChange={event => setChristmas(event.target.value)}
+      />
+      <p>{christmas}</p>
+      </label>
+      <br></br><br></br>
+      
       <button type="submit" onClick={() => showSummary()}>
-      Submit
+        Submit
       </button>
       </div>
       )}
       
-      {question !=='tvseries' && (
+      {question !=='christmasenjoy' && (
         <div>
         <button type="button" onClick={nextQuestion}>
         Continue
@@ -171,7 +194,14 @@ export const App = () => {
     </form>
     </div> }
 
-    {submitted && <Summary name={name} age={age} food={food} artist={artist} tvseries={tvseries} />}
+    {submitted && <Summary name={name} age={age} food={food} artist={artist} tvseries={tvseries} christmas={christmas} />}
     </div>
   )
 }
+
+// {question !=='name' && (
+//   <div className="progress">
+//     <br></br>
+//     <ProgressBar/>
+//   </div>
+// )}
