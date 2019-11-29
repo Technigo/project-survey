@@ -1,4 +1,8 @@
-body {   
+* {
+    box-sizing: border-box;
+}
+
+.background {
     display: flex;
     flex-direction: column;
     background: center;  /**** Have to be placed on top in body ****/
@@ -6,7 +10,7 @@ body {
     background-color: #684d42;
     background-size: cover;
     width: 100%;
-    height: fit-content;
+    height: -webkit-fill-available;
 }
 
 .survey {
@@ -15,8 +19,9 @@ body {
     align-items: center;
     background-color: white;
     opacity: 0.5;
+    height: 500px;
     margin: 15%;
-    border-radius: 2%;
+    border-radius: 10px;
 }
 
 form {
@@ -24,7 +29,7 @@ form {
     flex-direction: column;
     align-items: center;
     padding: 30px;
-    height: auto;
+    height: inherit;
     padding: 30px;
 }
 
@@ -53,13 +58,15 @@ h4 {
 
 .name {
     border: 0.5px solid black;
+    border-radius: 4px;
     width: -webkit-fill-available;
     height: 20px;
     margin-left: 4px;
 }
 
-p {
+.nameSection p {
     font-family: 'Roboto', sans-serif;
+    font-size: 100%;
 }
 
 .burgerSection {
@@ -120,23 +127,34 @@ button {
     width: 100px;
     height: 30px;
     border: 1.3px solid black;
+    border-radius: 4px;
     padding: 2px 9px;
-    font-family: roboto;
+    font-family: 'Roboto', sans-serif;
     font-weight: 600;
+    position: absolute;
+    bottom: 180px;
 }
 
-@media (min-width:669px) and (max-width:1024px) {
+@media (min-width:668px) and (max-width:1024px) {
+.background {
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}    
+
+button {
+top: 500px;
+}
 
 }
 
 @media (min-width:1025px) {
 .survey {
-    margin: 10% 20%;
+    margin: auto 20%
 }    
 
-.breadSection, .deliverySection {
-    flex-direction: row;
-    align-items: baseline;
+button {
+    top: 500px;
 }
 
 }

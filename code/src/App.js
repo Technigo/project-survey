@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Summary } from './Summary';
-import 'Components css/app.css'
+import 'Components css/app.css';
 
 
 
@@ -30,13 +30,12 @@ export const App = () => {
 
 
   return (
-    <div>
+    <div className="background">
       {/***  {!submitted && ( makes the code disapere when the submit button is clicked and answer is shown ***/}
       {!submitted && (
 
         <div id="survey" className="survey">
-          <form onSubmit={event => event.preventDefault()
-          }>
+          <form onSubmit={event => event.preventDefault()}>
             <h1>Welcome {name}!</h1>
             <h2>Place your order here:</h2>
 
@@ -109,10 +108,7 @@ export const App = () => {
               </div>
             )}
 
-            {/* <div className="submit">
-              {/* Submit button with onClick event to set value true to submitted */}
-            {/* < button onClick={() => setSubmitted(true)} type="submit" > Submit</button >
-            </div> */}
+
             {question !== 'deliver' && (
               <button type="button" onClick={handleContinueClick}>
                 Continue

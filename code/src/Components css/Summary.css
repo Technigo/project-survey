@@ -1,11 +1,12 @@
 .Review {
-    visibility: 'hidden';
-    visibility: 'visible';
+    display: flex;
+    flex-direction: column;
     background-color: white;
     opacity: 0.5;
+    height: 500px;
     margin: 15%;
     padding: 30px;
-    border-radius: 2%;
+    border-radius: 10px;
 }
 
 .Review h2 {
@@ -14,7 +15,7 @@
     text-align: center;
 }
 
-li, p {
+li, p, h5 {
     font-family: 'Roboto', sans-serif;
     font-size: 150%;
     text-align: center;
@@ -31,17 +32,39 @@ li::first-letter {
 
 h6 {
     font-family: 'Bebas Neue', cursive;
-    font-size: 180%;
+    font-size: 190%;
     text-align: center;
+    position: absolute;
+    top: 400px;
+    right: 44%;
 }
+
+@media (min-width: 668px) and (max-width: 1024px) {
+li {
+    padding: 0 20%;
+}
+
+h6 {
+    top: 450px; 
+    right: 45%;
+}
+
+}
+
 
 @media (min-width:1025px) {
 .Review {
-    margin: 20%;
+    margin: auto 20%;
 }
 
 h2, p {
     text-align: center;
-}    
+}   
+
+h6 {
+    top: 450px;
+    right: 46%;
+}
+
     
-    }
+}
