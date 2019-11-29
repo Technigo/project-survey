@@ -56,7 +56,7 @@ export const App = () => {
                     type="text"
                     required
                     placeholder="Type your name here..."
-                    onChange={event => setText(event.target.value)}
+                    onChange={(event) => setText(event.target.value)}
                     value={text}
                     onKeyPress={(event) => { event.key === "Enter" && event.preventDefault() }}
                   />
@@ -92,8 +92,7 @@ export const App = () => {
                       type="radio"
                       value={choice}
                       checked={radioButton === choice}
-                      onChange={(event) => setRadioButton(event.target.value)}
-                      onKeyPress={(event) => { event.key === "Enter" && setRadioButton(event.target.value) }}
+                      onChange={() => setRadioButton(choice)}
                     />
                     <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
                     {choice}
