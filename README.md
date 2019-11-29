@@ -1,6 +1,6 @@
 # Project 10 - Build a survey form using React
 
-This week's project is to use React to build a survey form. When the user presses submit, you should see a summary of the answers.<br>
+Project week 10 @ Technigo Bootcamp was to use React to build a survey form. When the user presses submit, you should see a summary of the answers.<br>
 
 https://nyblad-quiz.netlify.com/<br>
 
