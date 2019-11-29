@@ -5,10 +5,51 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
   
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1{
+      text-align: center;
+}
+p{
+  text-align: center;
+  font-weight: 500;
+}
+
+
+form{
+ background: #E58269;
+    width: 330;
+    margin: 10px;
+    height: 500px;
+    padding: 30px;
+    width: 300px;
+}
+
+.formField{
+  width: 300px;
+  height: 30px;
+  
+
+}
+
+button{
+  display: block;
+    background: space;
+    width: 300px;
+    height: 40px;
+    border-color: #7FE2BB;
+    border-width: 3px;
+    border-radius: 10px;
+    font-weight: 800 ;
+    font-size: 20px;
+    margin-top: 10vh;
+    
 }
