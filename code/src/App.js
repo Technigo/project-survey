@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Header } from './Header'
 import { Summary } from './Summary'
-import "index.css";
+
 
 
 const CrossFitIcons = ["Tia", "Katrin", "Sarah"];
@@ -14,7 +14,9 @@ export const App = () => {
   
   return (
 
- 
+
+     
+  
     <section className="formContainer">
       {!submit && (
         <form className="formInput" onSubmit={event => event.preventDefault()}>
@@ -69,15 +71,18 @@ export const App = () => {
             onClick={() => setSubmit(true)}
             >SUBMIT</button>
           </div>
-     
-        </form>
-      )};
-        <div>
-          {submit && <Summary movement={movement} icon={icon} reps={reps}/>}
-        </div>
       
+
+
+        </form>
+   
+       
+   )};
+   {submit && <Summary movement={movement} icon={icon} reps={reps}/>};
     </section>
    
   );
+  
+ 
 };
 
