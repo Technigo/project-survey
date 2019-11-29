@@ -27,6 +27,8 @@ export const Form = () => {
     event.preventDefault()
     setShowSummary(true)//On submit we want to show the summary
   }
+
+
   const imageToShow = () => {
     if (preferredImage === "tree3") {
       return (<div className="image-box1"
@@ -98,6 +100,7 @@ export const Form = () => {
                     onChange={event => setAgeGroup(event.target.value)}
                     checked={ageGroup === group}
                   />
+                  <span className="fakeRadio"></span>
                   {group}
                 </label>
               ))}
