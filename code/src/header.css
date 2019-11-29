@@ -1,5 +1,5 @@
 header{
-  height: 780px;
+  height: 900px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -11,13 +11,14 @@ h1{
   margin-bottom: 50px;
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
+  font-size: 62px;
 }
 
 h2{
   font-family: 'Roboto', sans-serif;
   font-size: 28px;
   font-weight: 100;
-  margin-top: 0;
+
 }
 
 .imgContainer{
