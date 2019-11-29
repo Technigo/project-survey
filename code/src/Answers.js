@@ -15,6 +15,10 @@ const Answers = ({ questions, answers }) => {
           </div>
         );
       })}
+    <button 
+      onClick={() => window.location.reload(false)}
+    >Reset</button>
+    
     </div>
   );
 };
