@@ -13,7 +13,7 @@ export const Summary = (props) => {
         </li>
         <li><span class="user-answer">{props.approval}</span>, you would like to play videogames as well</li>
       </ul>
-      <img src={require('./drink.png')} alt="Image" />
+      {props.children}
     </section>
   )
 }

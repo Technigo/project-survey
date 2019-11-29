@@ -1,5 +1,5 @@
 import React from 'react'
-import './summary.css'
+import './select.css'
 
 export const Select = (props) => {
   return (

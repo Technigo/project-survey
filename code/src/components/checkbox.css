@@ -5,25 +5,38 @@
 }
 
 .checkbox-label {
+  align-items: center;
+  display: grid;
+  grid-template-columns: 2;
   border: 2px solid #1f9187;
   color: #1f9187;
   padding: 1rem 2rem;
   position: relative;
 }
 
-input[type="checkbox"]:checked + .checkbox-label::after {
-  background-color: #1f9187;
-  color: #fff;
-  content: '';
-  display: block;
-  width: 100%;
+.checkbox-label-text {
+  grid-column: 1;
+  justify-self: start;
+}
+.checkbox {
+  appearance: none;
+  background-color: #E3E6E7;
+  grid-column: 2;
+  justify-self: end;
+  height: 1rem;
+  width: 1rem;
 }
 
-input[type="checkbox"] {
-border: none;
-height: 100%;
-left: 0;
-position: absolute;
-top: 0;
-width: 100%;
+.checkbox:checked {
+  background: none;
+  background-image: url('icons8-checkmark-26.png');
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  height: 24px;
+  width: 24px;
+  outline: none;
+}
+
+.survey-section .checkbuttons {
+  grid-column: 1;
 }

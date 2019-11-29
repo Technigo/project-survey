@@ -1,4 +1,5 @@
 .survey-section {
+  display: grid;
   height: 100vh;
   padding: 1rem;
   text-align: center;
@@ -24,15 +25,19 @@
 }
 @media screen and (min-width: 1024px) {
   .survey-section {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(6, 1fr);
     padding: 4rem;
     border-bottom: 2px solid #ededed;
     text-align: left;
   }
   .survey-question-title {
     font-size: 4rem;
+    grid-column: 1;
   }
   .survey-question-description {
     font-size: 2.5rem;
+    grid-column: 1;
   }
   .marked {
     background-color: seagreen;

@@ -6,24 +6,58 @@
 
 .radiobutton-label {
   border: 2px solid #1f9187;
-  color: #1f9187;
+  height: 100%;
   padding: 1rem 2rem;
   position: relative;
-}
-
-input[type="radiobutton"]:checked + .radiobutton-label::after {
-  background-color: #1f9187;
-  color: #fff;
-  content: '';
-  display: block;
   width: 100%;
 }
 
-input[type="radiobutton"] {
-border: none;
-height: 100%;
-left: 0;
-position: absolute;
-top: 0;
-width: 100%;
+.radiobutton-label-text {
+ color: #1f9187;
+}
+
+.radiobutton {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 100%;
+  left: 0;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.radiobutton:focus + .radiobutton-label-text {
+
+}
+.radiobutton:focus + .radiobutton-label-text::before,
+.radiobutton:focus:checked + .radiobutton-label-text::before  {
+  content: '';
+  background-color: #E3E6E7;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+.radiobutton:checked + .radiobutton-label-text {
+  color: #fff;
+ }
+.radiobutton:checked + .radiobutton-label-text::before{
+  background-color: #1f9187;
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.survey-section .radiobuttons {
+  grid-column: 1;
 }

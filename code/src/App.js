@@ -8,6 +8,8 @@ import { SurveySection } from './components/SurveySection'
 import { Select } from './components/Select'
 import { SelectOption } from './components/SelectOption'
 import { Summary } from 'components/Summary'
+import { Image } from 'components/Image'
+import { gaming } from './components/undraw-gaming.svg'
 
 const boardgames = [
   "Select game",
@@ -63,11 +65,8 @@ export const App = () => {
           title="Game night"
           description="Give your input about our game nights."
           buttonText="Take the survey"
-          url="#question-1"
           setQuestion="begin">
-          <button type="button" onClick={handleContinueClick}>
-            Take the survey
-        </button>
+          <Button type="button" text="Take the survey" onClick={handleContinueClick} className="start-button" />
         </Header>
       )}
       {
@@ -76,8 +75,9 @@ export const App = () => {
             title="Summary"
             boardgame={game}
             weekday={preferredGameDay}
-            approval={videogameApproval}
-          />
+            approval={videogameApproval}>
+            <Image src={require('./components/undraw-having-fun.svg')} alt="People having fun together." className="summary-image" />
+          </Summary>
         )
       }
       {
@@ -101,6 +101,7 @@ export const App = () => {
                     )
                   })}
                 </Select>
+                <Image src={require('./components/undraw-playing.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'second' && (
               <SurveySection
@@ -121,6 +122,7 @@ export const App = () => {
                     )
                   })}
                 </div>
+                <Image src={require('./components/undraw-events.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'third' && (
               <SurveySection
@@ -135,17 +137,16 @@ export const App = () => {
                     onChange={event => setvideogameApproval(event.target.value)}
                     checked={videogameApproval === "Yes"} />
                 </div>
+                <Image src={require('./components/undraw-gaming.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'end' && (
               <SurveySection
                 title="Submit your answers"
                 description="Thank you for answering this survey!">
-                <Button text="Submit survey" />
+                <Button type="submit" text="Submit survey" className="default-button submit-button" />
               </SurveySection>)}
             {question !== 'begin' && question !== 'end' && (
-              <button type="button" onClick={handleContinueClick}>
-                Continue
-          </button>
+              <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
             )}
           </Form>
         )

@@ -28,20 +28,6 @@
   text-align: center;
 }
 
-.survey-link-button {
-  align-self: start;
-  border: 2px solid #fff;
-  border-radius: 2rem;
-  color: #fff;
-  grid-column: 1 / span 4;
-  grid-row: 3 / span 1;
-  padding: 1rem 2rem;
-  margin: 0.5rem auto;
-  text-align: center;
-  text-decoration: none;
-  width: 100%;
-  max-width: 200px;
-}
 @media screen and (min-width: 668px) {
   .survey-header-title {
     font-size: 5rem;
@@ -60,14 +46,4 @@
     margin: 2rem;
   }
 
-  .survey-link-button {
-    font-size: 1.5rem;
-    grid-column: 1 / span 4;
-    max-width: 250px;
-  }
-
-  .survey-link-button:hover {
-    background-color: #1f9187;
-    border-color: #1f9187;
-  }
 }
