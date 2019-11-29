@@ -69,6 +69,19 @@ border-radius: 5px;
 margin-bottom: 40px;
 }
 
+.summary {
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  font-family: 'Cantarell', sans-serif;
+  padding: 40px;
+}
+
+.summary i {
+  font-size: 30px;
+  margin-top: 30px;
+}
+
 .footer {
   background-image: url(/assets/gurka.jpeg);
   background-size: cover;
