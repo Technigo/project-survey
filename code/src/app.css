@@ -168,8 +168,7 @@ input[type=radio] {
 
 /* On hover */
 .radio-btns:hover input ~ .checkmark {
-  background: #4CAF50;
-  opacity: 0.5;
+  background: #a6d8a8;
 }
 
 /* When checked */

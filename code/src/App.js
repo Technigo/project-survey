@@ -93,6 +93,7 @@ export const App = () => {
                       value={choice}
                       checked={radioButton === choice}
                       onChange={(event) => setRadioButton(event.target.value)}
+                      onKeyPress={(event) => { event.key === "Enter" && setRadioButton(event.target.value) }}
                     />
                     <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
                     {choice}
