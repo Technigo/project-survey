@@ -14,7 +14,7 @@ code {
 }
 
 header {
-  background-image: url(/images/christmas.png);
+  background-image: url(/images/christmas_2.png);
   background-size: cover;
   background-position: center;
   height: 28em;
@@ -53,6 +53,11 @@ form {
   margin-top: 2em;
 }
 
+input[type="text"] {
+  font-family: "Pompiere", cursive;
+  font-size: 1.7em;
+}
+
 .radioButtons {
   display: block;
   line-height: 2em;
@@ -62,6 +67,7 @@ form {
 label input[type="radio"] {
   margin-top: -5.4px;
   vertical-align: middle;
+  margin-right: 1em;
 }
 
 select {

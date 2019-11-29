@@ -1,18 +1,18 @@
 import React, { useState } from "react"
 import "./index.css"
 
-const characters = ["The Grinch", "Rudolph", "Frosty the Snowman"]
+const characters = ["Rudolph", "The Grinch", "Frosty the Snowman"]
 const foods = [
-  "just coffee",
   "gingerbread cookies",
-  "anything as long you can have glögg to it"
+  "anything as long you can have glögg to it",
+  "just coffee"
 ]
 
 export const App = () => {
   const [name, setName] = useState()
   const [nickname, setNickname] = useState()
-  const [character, setCharacter] = useState("")
-  const [food, setFood] = useState("")
+  const [character, setCharacter] = useState("Rudolph")
+  const [food, setFood] = useState("gingerbread cookies")
   const [song, setSong] = useState("")
   const [showResult, setShowResult] = useState(false)
 
@@ -61,7 +61,6 @@ export const App = () => {
                   type='radio'
                   value={group}
                   onChange={event => setCharacter(event.target.value)}
-                  required
                   checked={character === group}
                 />
                 {group}
@@ -79,7 +78,6 @@ export const App = () => {
                   type='radio'
                   value={group}
                   onChange={event => setFood(event.target.value)}
-                  required
                   checked={food === group}
                 />
                 {group}
@@ -125,9 +123,9 @@ export const App = () => {
             Thank you {nickname}, formerly known as {name}!
           </p>
           <p>
-            I wish you a happy December, haning out with your best friend{" "}
-            {character}, eating {food} and listen to {song} day in and day
-            out...
+            I wish you a happy December, hanging out with your best friend{" "}
+            {character}, having {food} and listen to "{song}" day in and day
+            out!
           </p>
           <p className='verdict'>
             So do you love Christmas? Of course you do, everyone does! If you
