@@ -2,7 +2,7 @@
 
 import React from "react";
 
-const DropdownInput = ({ setAnswers, answers, alternatives, index }) => {
+const DropdownInput = ({ setAnswers, answers, alternatives, index, setDummy }) => {
   console.log(alternatives)
   return (
     <select
@@ -10,6 +10,7 @@ const DropdownInput = ({ setAnswers, answers, alternatives, index }) => {
         let tempAnswers = answers
         tempAnswers[index] = event.target.value
         setAnswers(tempAnswers)
+        setDummy(event.target.value) /* dummy variabel force re-render as setAnswer don't */
       }}
     >
       { alternatives.map(alt => (

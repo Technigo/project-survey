@@ -9,14 +9,11 @@ const Form = ({ setCanBeSubmitted, questions, answers, setAnswers }) => {
   const [dummy, setDummy] = useState(0)
 
   const handleRadioClick = (event) => {
-    console.log('handleRadioClick pre')
-    console.log(answers)
     let tempAnswers = answers;
     tempAnswers[currentQuestion.index] = event.target.value;
     setAnswers(tempAnswers);
-    console.log('handleRadioClick post')
-    console.log(answers)
-    setDummy(event.target.value) /* lol test */
+    
+    setDummy(event.target.value) /* dummy variabel force re-render as setAnswer don't */
   }
 
   return (
@@ -35,6 +32,7 @@ const Form = ({ setCanBeSubmitted, questions, answers, setAnswers }) => {
             currentQuestion={currentQuestion}
             setAnswers={setAnswers}
             answers={answers}
+            setDummy={setDummy}
           />
         }
 
@@ -55,6 +53,7 @@ const Form = ({ setCanBeSubmitted, questions, answers, setAnswers }) => {
             setAnswers = {setAnswers}
             alternatives={currentQuestion.alternatives}
             index = {currentQuestion.index}
+            setDummy={setDummy}
           />
         }
       </div>

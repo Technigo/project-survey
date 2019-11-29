@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextInput = ( { currentQuestion, setAnswers, answers}) => {
+const TextInput = ( { currentQuestion, setAnswers, answers, setDummy}) => {
     
     return ( 
       <input
@@ -11,8 +11,8 @@ const TextInput = ( { currentQuestion, setAnswers, answers}) => {
           let tempAnswers = answers
           tempAnswers[currentQuestion.index] = event.target.value
           setAnswers(tempAnswers)
+          setDummy(event.target.value) /* dummy variabel force re-render as setAnswer don't */
           
-          console.log(answers)
         }}
       />
     )
