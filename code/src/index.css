@@ -24,7 +24,7 @@ code {
 }
 
 h2 {
-  margin-top: 100px;
+  margin-top: 70px;
 } 
 
 /* your name and form */
@@ -50,6 +50,7 @@ p {
   display: flex;
   font-size: 15px;
   font-weight: bold;
+  margin-bottom: 5px;
 }
 
 /* adventure check-boxes */
@@ -140,6 +141,6 @@ label .destinations {
 
 
   summary {
-  margin-top: 150px; 
+  margin-top: 100px; 
   }
 }
