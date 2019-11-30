@@ -1,21 +1,21 @@
 
 .formContainer {
-  margin: 1rem;
   display: flex;
-  justify-content: left;
+  justify-content: center;
   
 }
 
 fieldset {
-  width: 350px;
-  -webkit-backdrop-filter: blur(7px);
-  backdrop-filter: blur(7px);
+  width: 340px;
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   background-color: rgba(255, 255, 255, 0.5);  
   padding: 20px;
   border-radius:10px;
   margin: 50px 0px 5px;
   border: groove 3px #eab127; 
   display: flex;
+  flex-direction:column;
   justify-content: center;
 }
 
@@ -73,12 +73,7 @@ p {
 
 span {
   font-size: 2rem;
-  line-height: 2rem;
-}
-
-form {
-  padding: 40px 20px;
-  margin: 20px;
+  line-height: 3rem;
 }
 
 input[type='checkbox'],
@@ -125,8 +120,8 @@ input[type="radio"] {
 }
 
 /*INPUT EMOJI*/
-input[type="radio"] + span {
-  opacity: 0.3;
+input[type="radio"]  + span {
+  opacity: 0.5;
   cursor: pointer;
 }
 
@@ -137,7 +132,7 @@ input[type="radio"]:checked + span {
 /* RADIO  CHECKBOX */
 
 .styleBox {
-  border: 2px solid grey;
+  border: 2px solid black;
   width: 20px;
   height: 20px;
   display: inline-flex;
@@ -145,15 +140,19 @@ input[type="radio"]:checked + span {
   align-items: center;
   justify-content: center;
   margin-right: 5px;
+  margin-bottom: 5px;
+  margin-left:5p;
 }
 
 input:checked + .styleBox::after {
   content:'';
   font-size: 0.9rem; 
   line-height: 0.9rem; 
-  width: 80%;
-  height: 80%;
+  width: 86%;
+  height: 86%;
   background: black;
+  border: 2px solid grey;
+  border-radius: 3px;
   display: inline-block;
   border-radius: 2px;
 }

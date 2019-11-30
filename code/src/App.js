@@ -33,7 +33,7 @@ export const App = () => {
           {showResult && (
             <div className="santaAnswer">
               <h1>Bra jobbat, {name} !!!</h1>
-              <h3>Du brukar ta {transport} till jobbet använda bilen för att fixa {useCar}.
+              <h3>Du brukar ta {transport} till jobbet och använda bilen för att fixa {useCar}.
               Så bra att du kan ha det varmt och skönt hemma. Tack för att du gjorde alla frågorna!
               Hoppas du fortsätter att tänka på varifrån koldioxid kommer!
               Hälsningar
@@ -111,11 +111,11 @@ export const App = () => {
                   onChange={event => setUseCar(event.target.value)}
                   value={useCar} >
                   <option value="">Du kan bara välja en: </option>
-                  <option value="handla"> Handling </option>
+                  <option value="handling"> Handling </option>
                   <option value="fritidsaktiviter"> Fritidsaktiviter </option>
-                  <option value="återvinna"> Återvinning </option>
-                  <option value="jobbtransport"> Jobb-transporter </option>
-                  <option value="Lämna barn"> Lämning av barnen på förskola eller skola </option>
+                  <option value="återvinning"> Återvinning </option>
+                  <option value="jobbtransporter"> Jobb-transporter </option>
+                  <option value="lämning barn"> Lämning av barnen på förskola eller skola </option>
                 </select>
               </fieldset>
             </section>
@@ -138,8 +138,8 @@ export const App = () => {
 
             <section>
               <fieldset>
-                <h2>Har du tänkt på att kolla om din miljömärkta el görs utan fossila källor.</h2>
-                <h2>Jag använder miljömärkt el hemma</h2>
+                <h2>Har du tänkt på att kolla om din miljömärkta el görs utan fossila källor?</h2>
+                <h2>Jag använder miljömärkt el hemma:</h2>
 
                 {environElectricity.map(YelN => (
                   <label className="eatTime-label" key={YelN}>
