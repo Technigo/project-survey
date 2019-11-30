@@ -23,22 +23,22 @@ code {
     monospace;
 }
 
-h1 {
-  margin-top: 150px;
+h2 {
+  margin-top: 100px;
 } 
 
-/*your name and form*/
+/* your name and form */
 .nameBox {
   font-weight: bold;
   font-size: 15px;
-  /* margin-left: 20px;; */
 }
+
 .formField {
-  background-color: rgb(245, 198, 143);
-  /* background-color: rgb(249, 186, 120); */
+  background-color: rgb(240, 160, 128);
   border-style: 1px black;
+  border-radius: 5px;
   font-size: 15px;
-  padding-left: 20px;
+  padding-left: 5px; 
   margin-left: 10px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -52,44 +52,55 @@ p {
   font-weight: bold;
 }
 
-/*destination check-boxes */
+/* adventure check-boxes */
+.Adventures {
+  font-size: 15px;
+  font-weight: bold;
+  display: inline-grid;
+  margin-bottom: 20px;
+}
+
+/* destination check-boxes */
 .Destinations {
   font-size: 15px;
   font-weight: bold;
-  display: flex;
-  justify-content: space-between;
+  /* display: inline-grid;  */
 }
 
 label .destinations {
-  margin-right: 5px;
+  padding-right: 30px;
+  /* margin-right: 10px; 
+  justify-content: space-around;*/
+}  
 
+.mostImportant {
+  margin-top: 30px;
 }
+
 .formDropdown {
   border: inset;
   font-size: 15px;
   font-family: 'roboto';
-  background-color: rgb(245, 198, 143);
+  background-color: rgb(240, 160, 128);
 } 
 
-/*most important */
-.nextDestinationBox {
-  margin-top: 50px;
-}
 
-/*age button*/
 .radioBtn {
-  /* margin-left: 10px;  */
   margin-bottom: 5px;
   width: 15px;
   height: 15px;
-  margin-right: 10px;
+  margin-right: 5px;
   font-weight: bold;
   font-size:  15px; 
   font-family: 'roboto';  
 }
 
+/*travel companions or not*/
 .ageBox {
   margin-top: 40px;
+  font-weight: bold;
+  font-size:  15px; 
+  font-family: 'roboto'; 
 }
 
 .submitBtn {
@@ -98,8 +109,9 @@ label .destinations {
   margin-left: 5px;
   margin-top: 15px;
 }
+
 .Summary {
-  margin-top: 450px; 
+  margin-top: 200px; 
   align-content: center;
   
 }
