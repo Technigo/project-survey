@@ -4,6 +4,7 @@ import './summary.css'
 export const Summary = (props) => {
   return (
     <section id={props.id} className="summary-section">
+      {props.children}
       <h2 className="summary-title">{props.title}</h2>
       <ul>
         <li>
@@ -16,7 +17,6 @@ export const Summary = (props) => {
         )
         }
       </ul>
-      {props.children}
     </section>
   )
 }

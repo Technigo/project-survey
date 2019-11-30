@@ -55,4 +55,5 @@
 
 .survey-section .radiobuttons {
   grid-column: 1;
+  margin-top: 2rem;
 }

@@ -1,4 +1,4 @@
-.default-button {
+button {
   font-size: 1.2rem;
   color: #fff;
   border-radius: 0.2rem;
@@ -7,7 +7,7 @@
   padding: 1rem 2rem;
 }
 
-.default-button:hover,
+.default-button:hover,  
 .default-button:focus {
   background-color: #1f9187;
 }

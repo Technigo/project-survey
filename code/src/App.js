@@ -122,6 +122,7 @@ export const App = () => {
               <SurveySection
                 className="survey-section"
               >
+                <Image src={require('./components/undraw-events.svg')} alt="Gaming" className="section-image" />
                 <Heading
                   className="survey-question-title"
                   text="Which day would you prefer to play?" />
@@ -141,11 +142,11 @@ export const App = () => {
                     )
                   })}
                 </div>
-                <Image src={require('./components/undraw-events.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'third' && (
               <SurveySection
                 className="survey-section">
+                <Image src={require('./components/undraw-gaming.svg')} alt="Gaming" className="section-image" />
                 <Heading
                   className="survey-question-title"
                   text="Would you like to play videogames?" />
@@ -160,7 +161,6 @@ export const App = () => {
                     onChange={event => setvideogameApproval(event.target.value)}
                     checked={videogameApproval === "Yes"} />
                 </div>
-                <Image src={require('./components/undraw-gaming.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'end' && (
               <SurveySection className="survey-section">

@@ -13,7 +13,6 @@ select {
   height: 60px;
   padding: 1rem 0.5rem;
   margin: 1rem 0;
-  width: 100%;
 }
 option::selection  {
   background-color: #779fa1;

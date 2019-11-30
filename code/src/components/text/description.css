@@ -1,0 +1,17 @@
+.survey-question-description {
+  font-size: 1rem;
+  margin: 1rem 0 0 0;
+}
+
+@media screen and (min-width: 668px) {
+  .survey-question-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .survey-question-description {
+    font-size: 1.8rem;
+    grid-column: 1;
+  }
+}

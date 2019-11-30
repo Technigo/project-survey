@@ -1,0 +1,18 @@
+.survey-question-title {
+  color: #1f9187;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+@media screen and (min-width: 668px) {
+  .survey-question-title {
+    font-size: 3rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .survey-question-title {
+    font-size: 4rem;
+    grid-column: 1 / span 2;
+  }
+}

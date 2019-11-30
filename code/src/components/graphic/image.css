@@ -1,7 +1,17 @@
-.section-image {
-  width: 50%;
+.section-image,
+.summary-image {
+  margin: 0 auto 1rem auto;
+  width: 100%;
+  max-width: 220px;
 }
 
+@media screen and (min-width: 668px) {
+  .section-image,
+  .summary-image {
+    max-width: 350px;
+  }
+
+}
 @media screen and (min-width: 1024px) {
   .section-image,
   .summary-image {
@@ -10,6 +20,6 @@
     grid-row: 3 / span 3;
     justify-self: center;
     height: auto;
-    width: 500px;
+    max-width: 500px;
   }
 }

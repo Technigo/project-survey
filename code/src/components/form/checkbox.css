@@ -1,6 +1,7 @@
 .checkbox-label {
   border: 2px solid #1f9187;
-  height: 100%;
+  display: block;
+  height: auto;
   padding: 1rem 0.5rem;
   position: relative;
   width: 100%;
@@ -46,4 +47,21 @@ width: 20px;
 
 .survey-section .checkboxes {
   grid-column: 1;
+  margin-top: 2rem;
+}
+
+@media screen and (min-width: 668px) {
+  .checkbox-label {
+    margin: 0 auto;
+    max-width: 400px;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .checkbox-label {
+    margin: 0;
+    max-width: 400px;
+    width: 100%;
+  }
 }
