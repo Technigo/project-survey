@@ -1,110 +1,105 @@
-/* header {
-  background-image: url(/assets/friends2.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  width: 100%;
-  height: 600px;
-  position: relative;
-} */
-
-/* .q-one, .q-two, .q-three, .q-four {
-  height: 70px;
-} */
-
-/* header {
-  height: 80px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 0 16px;
-} */
-
-/* 
-.form-container {
-  background-color: #123C69;
-  height: 600px;
-  width: 100%;
-  border-radius: 1rem;
-  padding: 0px 5px;
-  text-align: left;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
-
-/* } */
-
-/* .form-style {
-  height: 550px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  padding: 0px 15px;
-}  */
-
-/* input[type="text"], input[type="email"] {
-  width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  font-size: 18px;
+.form-style {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-input[type="text"]:focus, input[type="email"]:focus {
-  background-color: #EBC7B7;
-  box-shadow: 2px 2px 2px #AC3B61;
+select {
+    background: #414141;
+    height: 30px;
+    width: 80%;
+    font-size: 15px;
+    color: #fff;
 }
 
-.drop-down {
-  width: 100%;
-  height: 40px;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  font-size: 15px;
+select:focus {
+    outline: 2px solid #1089ff;
+    outline-offset: -1px;
+}
+
+.radio-circle input[type=radio] {
+    position: absolute;
+    cursor: pointer;
+    appearance: none;
+    display: none;
 }
 
 .radio-circle {
-  width: 20px;
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.radio-circle .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 26px;
+    width: 30px;
+    background: #fff;
+    border-radius: 50%;
+}
+
+input[type=radio]:focus {
+    outline-offset: 2px;
+}
+
+.radio-circle:hover input~.checkmark {
+    background: #ffdc34;
+}
+
+.radio-circle input[type=radio]:checked~.checkmark {
+    background: #f77754;
+}
+
+.checkboxes {
+    display: block;
+    position: relative;
+    padding-left: 35px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+.checkboxes input[type=checkbox] {
+    position: absolute;
+    cursor: pointer;
+    appearance: none;
+    display: none;
+}
+
+.checkboxes .checkmark {
+    position: absolute;
+    top: 3px;
+    left: 0;
+    height: 26px;
+    width: 26px;
+    background: #eee;
+}
+
+.checkboxes:hover input~.checkmark {
+    background: #ffdc34;
+}
+
+.checkboxes input[type=checkbox]:checked~.checkmark {
+    background: #f77754;
 }
 
 .submit-btn {
-  width: 100%;
-  height: 50px;
-  border-radius: 15px;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  line-height: 50px;
-  background-color: #AC3B61;
-  border: rgb(46, 0, 8) 1px solid;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
+    width: 80%;
+    padding: 10px;
+    margin: 40px 0 20px 0;
+    border-radius: 10px;
+    border-style: none;
+    background: #ca3e47;
+    font-size: 26px;
+    font-weight: bold;
+    color: #fff;
 }
 
-.submit-btn:hover {
-  border: rgb(255, 253, 253) 1px solid;
-  cursor: pointer;
+.qa {
+    background-color: red;
 }
-
-.checkbox-div {
-  height: 70px;
-  line-height: 70px;
-  font-size: 20px;
-}
-
-.SummaryStyle {
-  height: 550px;
-  max-width: 400px;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.highlight {
-  font-size: 18px;
-  font-weight: bold;
-  color: #AC3B61;
-}
- */

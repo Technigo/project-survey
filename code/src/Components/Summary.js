@@ -1,9 +1,20 @@
 import React from 'react'
 
-
-
-
 export const Summary = (props) => {
+  console.log(props.answers)
+
+  const rating = () => {
+    let score = 0;
+    if (props.answers.spots === props.hangoutSpot) { score++}
+    if (props.answers.places === props.datingPlace) { score++ }
+    if (props.answers.pets === props.animal) { score++ }
+    if (props.answers.favSongs === props.song) { score++ }
+    if (props.answers.reasons === props.breakup) { score++ }
+    return score
+  }
+
+  const score = rating()
+
 
   return <div className="SummaryStyle">
     {/* <h3>Thank you {props.name}</h3>
@@ -13,16 +24,28 @@ export const Summary = (props) => {
     <p>You will {props.wantsNewsletter ? true : `not`} be recieving Technigo's newsletter to &nbsp; <span className="highlight">{props.wantsNewsletter ? `${props.email}` : ``}</span></p> */}
 
     <h2>Thank you Friends fan!</h2>
-    <p Your favorite character in Friends className="user-answer">{props.name}</p>
-    <p className="user-answer highlight">#1:<span>{props.hangoutSpot}</span></p>
-    <p className="correct-answer">The Correct answer - At Coffe House</p>
-    <p className="user-answer highlight">#2: {props.datingPlace}</p>
-    <p className="correct-answer">The Correct answer - They started dating when they were on Ross wedding in London</p>
-    <p className="user-answer highlight">#3: {props.animal}</p>
-    <p className="correct-answer">The Correct answer - Of course they had a duck and a chick</p>
-    <p className="user-answer highlight">#4: {props.song}</p>
-    <p className="correct-answer highlight">The Correct answer - Smelly cat, smelly cat ...</p>
-    <p className="user-answer highlight">#5: {props.breakup}</p>
-    <p className="correct-answer"> The Correct answer - Poor Ross - slpet with the copy-girl</p>
+    <h3> Your score is: {score} of 5 </h3>
+
+    <p className="user-answer">Your favorite character in Friends is: {props.name}</p>
+    <div className="qa">
+      <p className="user-answer highlight">Your answer: {props.hangoutSpot}</p>
+      <p className="correct-answer">Correct answer: {props.answers.spots}</p>
+    </div>
+    <div className="qa">
+      <p className="user-answer highlight">Your answer: {props.datingPlace}</p>
+      <p className="correct-answer">Correct answer: {props.answers.places} </p>
+    </div>
+    <div className="qa">
+      <p className="user-answer highlight">Your answer: {props.animal}</p>
+      <p className="correct-answer">Correct answer: {props.answers.pets} </p>
+    </div>
+    <div className="qa">
+      <p className="user-answer highlight">Your answer: {props.song}</p>
+      <p className="correct-answer highlight">Correct answer: {props.answers.favSongs}</p>
+    </div>
+    <div className="qa">
+      <p className="user-answer highlight">Your answer: {props.breakup}</p>
+      <p className="correct-answer">Correct answer: {props.answers.reasons} </p>
+    </div>
   </div>
-};
+}

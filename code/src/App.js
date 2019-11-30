@@ -1,18 +1,14 @@
 import React from 'react'
-import Form from './Components/Form'
+import { Form } from './Components/Form'
+import { Header } from './Components/Header'
+import { Footer } from './Components/Footer'
 
-
-
-
-const App = () => {
-
-  return (<Form />);
-};
-
-
-
-
-
-export default App;
-
-
+export const App = () => {
+  return (
+    <div className="container">
+      <Header />
+      <Form />
+      <Footer />
+    </div>
+  )
+}
