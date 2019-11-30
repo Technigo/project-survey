@@ -93,7 +93,7 @@ export const App = () => {
           <Form onSubmit={handleSubmit}>
             {question === 'first' && (
               <SurveySection
-                id="question-1">
+                className="survey-section">
                 <Image
                   src={require('./components/undraw-playing.svg')}
                   alt="Gaming"
@@ -120,7 +120,7 @@ export const App = () => {
               </SurveySection>)}
             {question === 'second' && (
               <SurveySection
-                id="question-2"
+                className="survey-section"
               >
                 <Heading
                   className="survey-question-title"
@@ -145,7 +145,7 @@ export const App = () => {
               </SurveySection>)}
             {question === 'third' && (
               <SurveySection
-                id="question-3">
+                className="survey-section">
                 <Heading
                   className="survey-question-title"
                   text="Would you like to play videogames?" />
@@ -163,7 +163,7 @@ export const App = () => {
                 <Image src={require('./components/undraw-gaming.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'end' && (
-              <SurveySection>
+              <SurveySection className="survey-section">
                 <Image
                   src={require('./components/undraw-messaging-fun.svg')}
                   alt="Gaming"

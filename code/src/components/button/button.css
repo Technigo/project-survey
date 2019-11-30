@@ -39,8 +39,9 @@
 }
 
 .start-button:hover {
-  background-color: #1f9187;
-  border-color: #1f9187;
+  background-color: #fff;
+  border-color: #fff;
+  color: #1f9187;
 }
 
 .submit-button {

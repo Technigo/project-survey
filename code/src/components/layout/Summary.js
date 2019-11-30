@@ -11,7 +11,10 @@ export const Summary = (props) => {
         <li>
           You want to play on <span className="user-answer">{props.weekday}</span>
         </li>
-        <li><span class="user-answer">{props.approval}</span>, you would like to play videogames as well</li>
+        {props.approval === 'Yes' && (
+          <li><span class="user-answer">{props.approval}</span>, you would like to play videogames as well</li>
+        )
+        }
       </ul>
       {props.children}
     </section>
