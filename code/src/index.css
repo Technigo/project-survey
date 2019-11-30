@@ -139,6 +139,9 @@ label .destinations {
   font-size: 15px;
   }
 
+  h2 {
+    margin-top: 50px;
+  }
 
   summary {
   margin-top: 100px; 
