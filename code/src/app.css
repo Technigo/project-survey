@@ -22,7 +22,7 @@ header {
 h1{
   color: #e26d5a;
   font-size: 70px;
-  letter-spacing: 0px;
+  letter-spacing: -7px;
 }
 
 h2 {
@@ -37,6 +37,7 @@ h3 {
   font-weight: none;
   color: #0d0d0d;
   margin-bottom: 40px;
+  text-align: center;
 
 }
 
@@ -64,9 +65,11 @@ textarea,
   color: #93989d;
 opacity: 0.5;
 }
+.buttons {
+  text-align: center;
+}
 
 button {
-  text-align: center;
   width: 150px;
   padding: 10px;
 	margin: 50px 0 20px 0;
@@ -75,7 +78,8 @@ button {
   background: #e26d5a;
   font-size: 24px;
   font-weight: bold;
-	color: #532018;
+  color: #532018;
+
 }
 .button-back-front {
   display: flex;
@@ -83,7 +87,7 @@ button {
 }
 
 button:hover {
-  font-size: 28px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.589);
   cursor: pointer;
 }
 
@@ -277,6 +281,7 @@ input {
 
 .range-container input[type=range]:hover {
   opacity: 1; 
+  cursor: pointer;
 }
 
 
