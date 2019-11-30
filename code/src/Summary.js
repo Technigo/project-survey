@@ -18,7 +18,8 @@ export const Summary = (props) => {
       <p>{props.range} {props.happiness === "happy" ? "is a great amount of beers." : "beers.. Did you want more?"}</p>
       <p>You look forward to: {props.lookForward} </p>
 
-      <button onClick={refreshPage}>Restart</button>
+      <button onClick={refreshPage}>Restart
+      </button>
 
     </div>
   )
