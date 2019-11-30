@@ -6,7 +6,6 @@ const destinationGroup = ["Mount Everest", "Machu Picchu", "Grand Canyon"];
 
 export const App = () => {
   const [name, setName] = useState("");
-  const [lastName, setlastName] = useState("");
   const [destinations, setDestinations] = useState();
   const [location, setLocation] = useState("");
   const [ageGroup, setAgeGroup] = useState()
@@ -68,6 +67,8 @@ export const App = () => {
                 <option value="tourist attractions">tourist attractions</option>
               </select>
             </div>
+
+
 
             <div className="ageBox">
               <p>How do you prefer to travel?</p>
