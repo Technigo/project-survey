@@ -152,7 +152,7 @@ export const App = () => {
                 <Description
                   className="survey-question-description"
                   text="Up until now we've only been playing board games during our game nights." />
-                <div className="checkbuttons">
+                <div className="checkboxes">
                   <Checkbox
                     label="I would like to play videogames on our game nights."
                     name="Yes"

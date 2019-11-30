@@ -29,19 +29,14 @@
   width: 100%;
   z-index: -1;
 }
-
-.radiobutton:focus + .radiobutton-label-text {
-
-}
-.radiobutton:focus + .radiobutton-label-text::before,
-.radiobutton:focus:checked + .radiobutton-label-text::before  {
+.radiobutton:focus + .radiobutton-label-text::before {
   content: '';
-  background-color: #E3E6E7;
   position: absolute;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
+  outline: thick double #ff6347;
   z-index: -1;
 }
 .radiobutton:checked + .radiobutton-label-text {
