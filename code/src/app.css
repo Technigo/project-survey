@@ -65,22 +65,15 @@ textarea,
 opacity: 0.5;
 }
 
-.buttons {
-  text-align: center;
-}
-
-button:hover{
-  color:green;
-}
-
 button {
+  text-align: center;
   width: 150px;
   padding: 10px;
 	margin: 50px 0 20px 0;
 	border-radius: 5px;
 	border-style: none;
   background: #e26d5a;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
 	color: #532018;
 }
@@ -89,7 +82,10 @@ button {
   justify-content: space-evenly;
 }
 
-
+button:hover {
+  font-size: 28px;
+  cursor: pointer;
+}
 
 /* STYLE SECTION DROPDOWN */
 .select-css {
@@ -128,6 +124,7 @@ button {
 /* Hover style */
 .select-css:hover {
     border-color: #888;
+    cursor: pointer;
 }
 /* Focus style */
 .select-css:focus {
@@ -159,6 +156,7 @@ button {
 
 .select-css:disabled:hover, .select-css[aria-disabled=true] {
     border-color: #aaa;
+    cursor: pointer;
 }
 
 /* RADIO BUTTONS FEELINGS */
@@ -196,9 +194,10 @@ input {
   opacity: 1;
 }
 
-.feelings input[type=radio]:hover,
-.ready-for input[type=radio]:hover {
+.feelings input[type=radio] + span:hover,
+.ready-for input[type=radio] + span:hover {
   opacity: 1; 
+  cursor: pointer;
 }
 
 
