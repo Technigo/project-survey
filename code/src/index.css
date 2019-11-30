@@ -13,7 +13,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./assets/Santa.jpg);
+  /* background-image: url(./assets/Santa.jpg); */
+  background-image: url(./assets/blad.jpg);
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center;

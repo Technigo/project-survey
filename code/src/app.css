@@ -1,5 +1,5 @@
 
-.form-container {
+.formContainer {
   margin: 1rem;
   display: flex;
   justify-content: left;
@@ -8,13 +8,13 @@
 
 fieldset {
   width: 350px;
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(7px);
+  backdrop-filter: blur(7px);
   background-color: rgba(255, 255, 255, 0.5);  
   padding: 20px;
   border-radius:10px;
   margin: 50px 0px 5px;
-  border: groove 3px #FF7975; 
+  border: groove 3px #eab127; 
   display: flex;
   justify-content: center;
 }
@@ -24,7 +24,7 @@ h1 {
   padding: 15px 15px;
   margin-bottom: 10px;
   font-size: 2rem;
-  color: #FF7975;
+  color: #eab127;
   font-weight: 700;
   background-color: black;
   text-align: left;
@@ -51,17 +51,17 @@ h3{
   padding: 10px 10px;
   margin-top: 20px;
   font-size: 1rem;
-  font-style: italic;
+  font-style: normal;
   font-family: Georgia, 'Times New Roman', Times, serif;
   width: 300px;
   color: #D3D3D3;
   background-color: black;
   text-align: left;
   display: block;
-  /* width: fit-content; */
   appearance: none;
   border-radius: 10px;  
   font-weight: normal;
+  line-height: 1.5rem;
 
 }
 
@@ -71,10 +71,9 @@ p {
   font-weight: bold;
 }
 
-
-
 span {
   font-size: 2rem;
+  line-height: 2rem;
 }
 
 form {
@@ -97,12 +96,12 @@ label {
   flex-wrap: wrap;
 }
 
-/* NAME-INPUT */
-.input-container label {
+/* NAME-LOCAL-INPUT */
+.inputContainer label {
   position: relative;
   display: block;
 }
-.input-container input {
+.inputContainer input {
   display: block;
   padding: 10px;
   width: 300px;
@@ -110,15 +109,29 @@ label {
   outline: none;
   background-color: white;
   font-weight: bold;
-  color: #FF7975;
-  border: groove 3px #FF7975; 
+  color: #eab127;
+  border: groove 3px #eab127; 
   border-radius: 10px;
   font-size: 16px;
 }
-.input-container input::placeholder {
+.inputContainer input::placeholder {
   color: #D3D3D3;
   font-weight: bold;
   font-size: 16px; 
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+/*INPUT EMOJI*/
+input[type="radio"] + span {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + span {
+  opacity: 1;
 }
 
 /* RADIO  CHECKBOX */
@@ -162,9 +175,10 @@ button {
 }
 
 /*SUBMIT*/
-.santa-answer {
+.santaAnswer {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 /* FOOTER */
@@ -172,16 +186,16 @@ button {
 footer {
   height:70px;
   width: 100%;
-  margin-top: 300px;
+  margin-top: 250px;
 }
   
-.madeby:hover {
+.madeBy:hover {
   text-decoration-line: underline;
   color: #ffffff; 
 }
 
-.madeby {
-  font-size: 14px;
+.madeBy {
+  font-size: 0.9rem;
   font-family: 'Helvetica Neue', sans-serif;
   text-decoration-line: none;
   font-weight: normal;

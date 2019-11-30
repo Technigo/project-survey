@@ -5,13 +5,18 @@ import './app.css'
 
 export const App = () => {
 
-  const dinnerTime = ["13", "16"]
+  const environElectricity = ["Ja", "Nej"]
+  const environShopping = ["Ja", "Nej"]
 
   const [name, setName] = useState('')
-  const [food, setFood] = useState('')
-  const [candy, setCandy] = useState('')
-  const [wantsVisit, setWantsVisit] = useState(false)
-  const [time, setTime] = useState()
+  const [location, setLocation] = useState('')
+  const [ovrigt, setOvrigt] = useState('')
+  const [transport, setTransport] = useState('')
+  const [useCar, setUseCar] = useState('')
+  const [heating, setHeating] = useState('')
+  const [knowsBetter, setKnowsBetter] = useState(false)
+  const [electricity, setElectricity] = useState()
+  const [shopping, setShopping] = useState()
   const [showResult, setShowResult] = useState(false)
 
 
@@ -22,117 +27,197 @@ export const App = () => {
 
 
   return (
-    <div >
-      <div className="form-container">
+    <div>
+      <div className="formContainer">
         <div>
           {showResult && (
-            <div className="santa-answer">
-              <h1>Soon it is Christmas, {name} </h1>
-              <h3>Ooh, {food} and {candy}, is my favo too!
-            Your wishes for Cristmas dinner at {time} o'clock and a visit after that is now on my list.
-            Best wishes of a merry Christmas // <span role="img" aria-label="Santa">🎅🏻</span></h3>
+            <div className="santaAnswer">
+              <h1>Bra jobbat, {name} !!!</h1>
+              <h3>Du brukar ta {transport} till jobbet använda bilen för att fixa {useCar}.
+              Så bra att du kan ha det varmt och skönt hemma. Tack för att du gjorde alla frågorna!
+              Hoppas du fortsätter att tänka på varifrån koldioxid kommer!
+              Hälsningar
+              <br />
+                <span role="img" aria-label="Sunflower">🌻</span></h3>
             </div>
           )}
-
         </div>
 
         {!showResult && (
           <form onSubmit={handleSubmit}>
             <fieldset>
-              <h1>Ho, ho, Santa wants your input for Christmas Eve</h1>
+              <h1>Koldioxid i vardagen</h1>
+              <h2>Med hjälp av de här frågorna kan du börja tänka på när koldioxid bildas.</h2>
             </fieldset>
-            <section className="input-container">
+            <section className="inputContainer">
               <fieldset>
                 <input autofocus="autofocus"
                   type="text"
-                  placeholder="Your name"
+                  placeholder="Vad heter du?"
                   onChange={event => setName(event.target.value)}
                   value={name}
+                />
+
+                <input autofocus="autofocus"
+                  type="text"
+                  placeholder="Var bor du?"
+                  onChange={event => setLocation(event.target.value)}
+                  value={location}
                 />
               </fieldset>
             </section>
 
-            <section className="food-section">
+            <div className="transport">
               <fieldset>
-                <h2>What do you want to eat? </h2>
-                <select
-                  onChange={event => setFood(event.target.value)}
-                  value={food} >
-                  <option value=""> pick your favo </option>
-                  <option value="Julskinka"> Julskinka </option>
-                  <option value="Jansson"> Jansson </option>
-                  <option value="Omelett"> Omelett </option>
-                  <option value="Senapssill"> Senapssill </option>
-                  <option value="Grönkål"> Grönkål </option>
-                  <option value="Köttbullar"> Köttbullar </option>
-                  <option value="Gravad lax"> Gravad lax </option>
-                  <option value="Rödbetssallad"> Rödbetssallad </option>
-                </select>
+                <h2>Så här tar jag mig oftast till jobbet eller skolan:</h2>
+                <label>
+                  <input
+                    type="radio"
+                    value="cykel"
+                    onChange={() => setTransport('cykel')}
+                    checked={transport === 'cykel'} />
+                  <span role="img" aria-label="take the bike">
+                    🚲
+                  </span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="bilen"
+                    onChange={() => setTransport('bilen')}
+                    checked={transport === 'bilen'} />
+                  <span role="img" aria-label="take the car">
+                    🚗
+                  </span>
+                </label>
+                <label>
+                  <input
+                    type="radio"
+                    value="bussen"
+                    onChange={() => setTransport('bussen')}
+                    checked={transport === 'bussen'} />
+                  <span role="img" aria-label="take the bus">
+                    🚌
+                  </span>
+                </label>
               </fieldset>
-            </section>
+            </div>
 
-            <section className="candy-section">
+            <section>
               <fieldset>
-                <h2>And for candies?</h2>
+                <h2>Bilen är ett fantastikt transportmedel som de flesta av oss använder i vardagen. </h2>
+                <h2>Jag behöver använda bilen för att: </h2>
                 <select
-                  onChange={event => setCandy(event.target.value)}
-                  value={candy} >
-                  <option value=""> pick your favo </option>
-                  <option value="Knäck"> Knäck </option>
-                  <option value="Choclate"> Choclate </option>
-                  <option value="Mozartkugeln"> Mozartkugeln </option>
-                  <option value="Kola"> Kola </option>
+                  onChange={event => setUseCar(event.target.value)}
+                  value={useCar} >
+                  <option value="">Du kan bara välja en: </option>
+                  <option value="handla"> Handling </option>
+                  <option value="fritidsaktiviter"> Fritidsaktiviter </option>
+                  <option value="återvinna"> Återvinning </option>
+                  <option value="jobbtransport"> Jobb-transporter </option>
+                  <option value="Lämna barn"> Lämning av barnen på förskola eller skola </option>
                 </select>
               </fieldset>
             </section>
 
             <section>
               <fieldset>
-                <h2>What time do you want to eat dinner?</h2>
+                <h2>I Sverige är det kallt på vintern och vi behöver energi för att få det varmt och skönt.</h2>
+                <h2>Huset där jag bor värms med:</h2>
+                <select
+                  onChange={event => setHeating(event.target.value)}
+                  value={heating} >
+                  <option value=""> Du kan bara välja en: </option>
+                  <option value="Fjärrvärme"> Fjärrvärme </option>
+                  <option value="Värmepump"> Värmepump </option>
+                  <option value="Vedeldning"> Vedeldning </option>
+                  <option value="Olja"> Olja </option>
+                </select>
+              </fieldset>
+            </section>
 
-                {dinnerTime.map(eat => (
-                  <label className="eatTime-label" key={eat}>
+            <section>
+              <fieldset>
+                <h2>Har du tänkt på att kolla om din miljömärkta el görs utan fossila källor.</h2>
+                <h2>Jag använder miljömärkt el hemma</h2>
+
+                {environElectricity.map(YelN => (
+                  <label className="eatTime-label" key={YelN}>
                     <input
                       type="radio"
-                      value={eat}
-                      onChange={event => setTime(event.target.value)}
-                      checked={time === eat}
+                      value={YelN}
+                      onChange={event => setElectricity(event.target.value)}
+                      checked={electricity === YelN}
                     />
                     <span className="styleBox" />
-                    at {eat}
+                    {YelN}
                   </label>
                 ))}
               </fieldset>
             </section>
 
-
-            <section className="visit-section">
+            <section>
               <fieldset>
-                <h2>Do you want Santa to visit on Christmas Eve?</h2>
-                <label className="visit-label">
+                <h2>När man handlar är det bra om man använder sakerna fullt ut. Det är också bra om saker används länge, antingen av dig eller nån annan.</h2>
+                <h2>Jag handlar saker och kläder på second hand:</h2>
+
+                {environShopping.map(yN => (
+                  <label key={yN}>
+                    <input
+                      type="radio"
+                      value={yN}
+                      onChange={event => setShopping(event.target.value)}
+                      checked={shopping === yN}
+                    />
+                    <span className="styleBox" />
+                    {yN}
+                  </label>
+                ))}
+              </fieldset>
+            </section>
+
+            <section className="inputContainer">
+              <fieldset>
+                <h2>Beroende på var och hur du bor kan det vara riktigt enkelt att återvinna nästan allt. Mer kunskap och enklare sätt att återvinna, kan göra att vi kan återvinna mer. </h2>
+                <h2>Jag återvinner inte riktigt allt ännu. Det här blir över:</h2>
+
+                <input autofocus="autofocus"
+                  type="text"
+                  placeholder="Vad slängs i övrigt?"
+                  onChange={event => setOvrigt(event.target.value)}
+                  value={ovrigt}
+                />
+              </fieldset>
+            </section>
+
+
+            <section className="better-section">
+              <fieldset>
+                <h2>Frågorna som du har svarat på har alla med bildningen av koldioxid att göra. </h2>
+                <h2>Jag kommer fortsätta att tänka på var koldioxid kommer i från:</h2>
+                <label className="better-label">
                   <input
                     type="checkbox"
-                    checked={wantsVisit}
-                    onChange={event => setWantsVisit(event.target.checked)}
+                    checked={knowsBetter}
+                    onChange={event => setKnowsBetter(event.target.checked)}
                     value={name}
                   />
                   <span className="styleBox" />
-                  Yes
+                  Ja
                 </label>
               </fieldset>
             </section>
 
             <button type="submit">
-              Send to Santa
-        </button>
-
+              Gå vidare i livet
+            </button>
           </form>
         )}
 
       </div >
       <footer>
-        <a className="madeby" href="mailto:ninamansster@gmail.com"> Second React project by Nina Månsson at Technigo Frontend Bootcamp 2019
-</a>
+        <a className="madeBy" href="mailto:ninamansster@gmail.com"> Second React project by Nina Månsson at Technigo Frontend Bootcamp 2019
+            </a>
       </footer>
     </div >
   )
