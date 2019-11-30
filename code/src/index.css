@@ -21,9 +21,8 @@ code {
 
 .form-style {
   width: 95%;
-  margin: 10px;
+  margin: 20px;
   margin-bottom: 20px;
-  align-items: center;
 }
 
 .survey-title {
@@ -151,4 +150,31 @@ select:hover {
   text-align: center;
   margin: 20px;
   font-size: 35px;
+}
+
+@media (min-width: 768px) {
+  .survey-title {
+    font-size: 60px;
+    width: 400px;
+  }
+
+  header {
+    height: 600px;
+  }
+
+  .form-style {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  footer {
+    height: 80px;
+    padding-top: 70px;
+    font-size: 20px;
+  }
 }
