@@ -12,8 +12,9 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   /* color: #dfe6e9; */
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace; */
+  font-family: "Raleway", sans-serif;
   font-size: 16px;
   height: 100%;
   width: 100%;
@@ -26,8 +27,7 @@ html {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Raleway", sans-serif;
 }
 
 main {
@@ -51,7 +51,7 @@ main {
 }
 
 .main-container {
-  background-color: #e1d2c2;
+  background-color: #e2dcd6;
   width: 100%;
   min-height: 60vh;
   height: 60%;
@@ -62,11 +62,12 @@ h1 {
   text-transform: uppercase;
   text-align: center;
   font-size: 1.5em;
+  font-weight: 700;
   width: 100%;
   margin: 0 auto;
   padding: 2rem;
   border-bottom: 4px dashed #3d0e1e;
-  text-shadow: -1px 0 #d35400, 0 1px #d35400, 1px 0 #d35400, 0 -1px #d35400;
+  /* text-shadow: -1px 0 #d35400, 0 1px #d35400, 1px 0 #d35400, 0 -1px #d35400; */
   /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
@@ -115,6 +116,10 @@ label {
   padding: 0.5rem;
 }
 
+.inputName-validate {
+  background: red;
+}
+
 .inputTextarea {
   height: 70px;
   overflow: hidden;
@@ -126,8 +131,7 @@ label {
   font-weight: bold;
   outline: solid 2px #d35400;
   margin: 1rem 0 1rem 0;
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Raleway", sans-serif;
   font-size: 0.8rem;
   word-wrap: break-word;
 }
@@ -174,9 +178,10 @@ select {
   font-weight: bold;
   letter-spacing: 2px;
   font-size: 0.8rem;
-  font-family: inherit;
-  /* display: block;
-  margin: 0 auto; */
+  font-family: "Raleway", sans-serif;
+  outline: none;
+  transition: all 0.5s ease;
+  cursor: pointer;
 }
 
 .btn-submit {

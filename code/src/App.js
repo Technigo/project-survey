@@ -14,6 +14,7 @@ export const App = () => {
   const [experience, setExperience] = useState("");
   const [hideForm, setHideForm] = useState(false);
   const [section, setSection] = useState("firstQuestion");
+  const [error, setError] = useState(false);
 
   const handleRadioChange = event => {
     setQuality(event.target.value);
@@ -33,6 +34,11 @@ export const App = () => {
       setSection("thirdQuestion");
     } else if (section === "thirdQuestion") {
       setSection("fourthQuestion");
+    }
+
+    if (name.length <= 2) {
+      setSection("firstQuestion");
+      setError(true);
     }
   };
 
@@ -54,7 +60,10 @@ export const App = () => {
         <form onSubmit={handleSubmit}>
           {section === "firstQuestion" && !hideForm && (
             <div className="questions firstQuestion">
-              <Questions value={"q1"} text={"Please fill in your name:"} />
+              {!error && (
+                <Questions value={"q1"} text={"Please fill in your name:"} />
+              )}
+              {error && <Questions value={"q1"} text={"Name required:"} />}
               <InputText
                 value={name}
                 onChange={event => setName(event.target.value)}

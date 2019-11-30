@@ -6,7 +6,7 @@ export const InputTextarea = props => {
     <label>
       <input
         type="textarea"
-        rows="10"
+        rows="20"
         cols="10"
         value={value}
         onChange={onChange}
