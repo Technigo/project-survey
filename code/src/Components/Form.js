@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { FormHeader } from './FormHeader'
 import { Summary } from './Summary'
 
-
+const characters = ["Rachel", "Monica", "Pheobe", "Joey", "Chandler", "Ross"]
 const spots = ["Cafè Park", "Cafè House", "Central Perk cafè", "Central Park"]
 const places = ["On their trip in Vegas", "When they went for sking", "At Ross wedding in london", "At Cafè House"]
 const pets = ["Dog", "Cat", "Monkey", "Dock"]
@@ -28,34 +28,37 @@ const Form = () => {
 
   return (
 
-    <div>
+    <div className="container">
+
       <FormHeader />
 
       <div className="form-container">
-        {/* display:none, on the form */}
+
         <h2>How well do you remember friends?</h2>
 
+        {/* display:none, on the form */}
         {!submitted && (
           <form onSubmit={handelSubmit} className="form-style">
 
-            <p>Please Write your name</p>
-            <input
-              type="text"
-              required
-              placeholder="Write your name here"
-              onChange={event => setUserName(event.target.value)}
-              value={userName}
-            />
+            <h3>1. Your favorite character</h3>
 
-            <p>Your favorite character</p>
-            <input
-              type="text"
-              placeholder="Rachel,Monica, Pheobe, Joey, Chandler, Ross"
-              onChange={event => setName(event.target.value)}
-              value={name}
-            />
+            {characters.map(character => (
 
-            <p>Where did friends hang out the most? </p>
+              <label key={character}>
+
+                <input className="radio-circle"
+                  type="radio"
+                  value={character}
+                  onChange={event => setName(event.target.value)}
+                  checked={name === character}
+                />
+                {character}
+              </label>
+            )
+            )
+            }
+
+            <h3> 2. Where did friends hang out the most? </h3>
 
             {spots.map(spot => (
 
@@ -73,7 +76,7 @@ const Form = () => {
             )
             }
 
-            <p>Where did Monika and CHandler start dating?</p>
+            <h3> 3. Where did Monika and CHandler start dating?</h3>
 
             <select className="drop-down" required onChange={event => setDatingplace(event.target.value)}
               checked={datingPlace === places}>
@@ -87,7 +90,7 @@ const Form = () => {
               }
             </select>
 
-            <p>What kind of pet did Chandler and Joey have?</p>
+            <h3> 4. What kind of pet did Chandler and Joey have?</h3>
 
             {pets.map(pet => (
 
@@ -105,7 +108,7 @@ const Form = () => {
             )
             }
 
-            <p>Pheobe famus song?</p>
+            <h3> 5. Pheobe famus song?</h3>
 
             {favSongs.map(favSong => (
 
@@ -122,7 +125,7 @@ const Form = () => {
             )
             )
             }
-            <p>Ross and Rachel broke up because ... </p>
+            <h3> 6. Ross and Rachel broke up because ... </h3>
 
             <select className="drop-down" required onChange={event => setBreakup(event.target.value)}
               checked={breakup === reasons}>
@@ -143,9 +146,12 @@ const Form = () => {
           </form>
         )}
 
-        {submitted && <Summary userName={userName} name={name} hangoutSpot={hangoutSpot} datingPlace={datingPlace} animal={animal} song={song} breakup={breakup} />}
-
+        {submitted && <Summary name={name} hangoutSpot={hangoutSpot} datingPlace={datingPlace} animal={animal} song={song} breakup={breakup} />}
       </div>
+
+      <footer>
+        <div>Nasim Mahzoun 2019</div>
+      </footer>
     </div >
 
   )

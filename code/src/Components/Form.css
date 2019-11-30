@@ -1,0 +1,110 @@
+/* header {
+  background-image: url(/assets/friends2.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  width: 100%;
+  height: 600px;
+  position: relative;
+} */
+
+/* .q-one, .q-two, .q-three, .q-four {
+  height: 70px;
+} */
+
+/* header {
+  height: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 16px;
+} */
+
+/* 
+.form-container {
+  background-color: #123C69;
+  height: 600px;
+  width: 100%;
+  border-radius: 1rem;
+  padding: 0px 5px;
+  text-align: left;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+
+/* } */
+
+/* .form-style {
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 0px 15px;
+}  */
+
+/* input[type="text"], input[type="email"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+
+input[type="text"]:focus, input[type="email"]:focus {
+  background-color: #EBC7B7;
+  box-shadow: 2px 2px 2px #AC3B61;
+}
+
+.drop-down {
+  width: 100%;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+.radio-circle {
+  width: 20px;
+}
+
+.submit-btn {
+  width: 100%;
+  height: 50px;
+  border-radius: 15px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  line-height: 50px;
+  background-color: #AC3B61;
+  border: rgb(46, 0, 8) 1px solid;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.submit-btn:hover {
+  border: rgb(255, 253, 253) 1px solid;
+  cursor: pointer;
+}
+
+.checkbox-div {
+  height: 70px;
+  line-height: 70px;
+  font-size: 20px;
+}
+
+.SummaryStyle {
+  height: 550px;
+  max-width: 400px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.highlight {
+  font-size: 18px;
+  font-weight: bold;
+  color: #AC3B61;
+}
+ */

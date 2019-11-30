@@ -12,7 +12,7 @@ export const Summary = (props) => {
     <p>You have already experience in &nbsp;<span className="highlight">{props.skills}</span></p>
     <p>You will {props.wantsNewsletter ? true : `not`} be recieving Technigo's newsletter to &nbsp; <span className="highlight">{props.wantsNewsletter ? `${props.email}` : ``}</span></p> */}
 
-    <h2>Thank you {props.userName}!</h2>
+    <h2>Thank you Friends fan!</h2>
     <p Your favorite character in Friends className="user-answer">{props.name}</p>
     <p className="user-answer highlight">#1:<span>{props.hangoutSpot}</span></p>
     <p className="correct-answer">The Correct answer - At Coffe House</p>
