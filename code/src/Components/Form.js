@@ -3,16 +3,21 @@ import { FormHeader } from './FormHeader'
 import { Summary } from './Summary'
 
 
-const socialMedias = ["Facebook", "Instagram", "Linkedin", "Youtube"];
-const programingSkills = ["HTML/CSS", "JavaScript", "Both"];
+const spots = ["Cafè Park", "Cafè House", "Central Perk cafè", "Central Park"]
+const places = ["On their trip in Vegas", "When they went for sking", "At Ross wedding in london", "At Cafè House"]
+const pets = ["Dog", "Cat", "Monkey", "Dock"]
+const favSongs = ["Happy Hanika", "Smelly Cat", "Christmas-song", "Smelly Dog"]
+const reasons = ["Rachel fell in love with her boss", "they didn't love each other anymore ", "Rachel had to move to Paris ", "Ross cheated on Rachel, when he thought they were on a break"]
 
 const Form = () => {
 
+  const [userName, setUserName] = useState("");
   const [name, setName] = useState("");
-  const [socialMedia, setSocialMedia] = useState("");
-  const [skills, setSkills] = useState();
-  const [wantsNewsletter, setWantdNewsletter] = useState(false);
-  const [email, setEmail] = useState("");
+  const [hangoutSpot, setHangoutSpot] = useState();
+  const [datingPlace, setDatingplace] = useState();
+  const [animal, setAnimals] = useState();
+  const [song, setSongs] = useState();
+  const [breakup, setBreakup] = useState();
   const [submitted, setSubmitted] = useState(false);
 
   const handelSubmit = (event) => {
@@ -28,85 +33,117 @@ const Form = () => {
 
       <div className="form-container">
         {/* display:none, on the form */}
+        <h2>How well do you remember friends?</h2>
 
         {!submitted && (
           <form onSubmit={handelSubmit} className="form-style">
 
-            <div className="q-one">
+            <p>Please Write your name</p>
+            <input
+              type="text"
+              required
+              placeholder="Write your name here"
+              onChange={event => setUserName(event.target.value)}
+              value={userName}
+            />
 
-              <p>What's your name?</p>
+            <p>Your favorite character</p>
+            <input
+              type="text"
+              placeholder="Rachel,Monica, Pheobe, Joey, Chandler, Ross"
+              onChange={event => setName(event.target.value)}
+              value={name}
+            />
 
-              <input
-                type="text"
-                onChange={event => setName(event.target.value)}
-                value={name}
-              />
-            </div>
+            <p>Where did friends hang out the most? </p>
 
-            <div className="q-two">
+            {spots.map(spot => (
 
-              <p>How did you find about Technigo Bootcamp?</p>
+              <label key={spot}>
 
-              <select className="drop-down" required onChange={event => setSocialMedia(event.target.value)}
-                checked={socialMedia === socialMedias}>
+                <input className="radio-circle"
+                  type="radio"
+                  value={spot}
+                  onChange={event => setHangoutSpot(event.target.value)}
+                  checked={hangoutSpot === spot}
+                />
+                {spot}
+              </label>
+            )
+            )
+            }
 
-                <option value="">No Selection</option>
+            <p>Where did Monika and CHandler start dating?</p>
 
-                {socialMedias.map(item => (
-                  <option key={item} value={item}>{item}</option>
-                )
-                )
-                }
-              </select>
-            </div>
+            <select className="drop-down" required onChange={event => setDatingplace(event.target.value)}
+              checked={datingPlace === places}>
 
-            <div className="q-three">
-              <p>Experience in programming?</p>
+              <option value=""> - Select Here - </option>
 
-              {programingSkills.map(skill => (
-
-                <label key={skill}>
-
-                  <input className="radio-circle"
-                    type="radio"
-                    value={skill}
-                    onChange={event => setSkills(event.target.value)}
-                    checked={skills === skill}
-                  />
-                  {skill}
-                </label>
+              {places.map(place => (
+                <option key={place} value={place}>{place}</option>
               )
               )
               }
-            </div>
-            <div className="q-four">
-              <label>
-                <div className="checkbox-div">
-                  <input
-                    type="checkbox"
-                    checked={wantsNewsletter}
-                    onChange={event => setWantdNewsletter(event.target.checked)}
-                  />
-                  I want to receive newsletter
-                </div>
+            </select>
+
+            <p>What kind of pet did Chandler and Joey have?</p>
+
+            {pets.map(pet => (
+
+              <label key={pet}>
+
+                <input className="radio-circle"
+                  type="radio"
+                  value={pet}
+                  onChange={event => setAnimals(event.target.value)}
+                  checked={animal === pet}
+                />
+                {pet}
               </label>
-            </div>
-            {wantsNewsletter && (
-              <div>
-                <p> Please enter your E-mail address</p>
-                <input className="input-name"
-                  type="E-mail"
-                  onChange={event => setEmail(event.target.value)}
-                value={email} />
-              </div>
-            )}
+            )
+            )
+            }
+
+            <p>Pheobe famus song?</p>
+
+            {favSongs.map(favSong => (
+
+              <label key={favSong}>
+
+                <input className="checkboxes"
+                  type="checkbox"
+                  value={favSong}
+                  onChange={event => setSongs(event.target.value)}
+                  checked={song === favSong}
+                />
+                {favSong}
+              </label>
+            )
+            )
+            }
+            <p>Ross and Rachel broke up because ... </p>
+
+            <select className="drop-down" required onChange={event => setBreakup(event.target.value)}
+              checked={breakup === reasons}>
+
+              <option value=""> - Select Here - </option>
+
+              {reasons.map(reason => (
+
+                <option key={reason} value={reason}>{reason} </option>
+              )
+              )
+              }
+
+            </select>
             <div>
-              <button className="submit-btn">SUBMIT</button>
+              <button className="submit-btn">Show me the result </button>
             </div>
           </form>
         )}
 
-        {submitted && <Summary name={name} socialMedia={socialMedia} skills={skills} wantsNewsletter={wantsNewsletter} email={email} />}
+        {submitted && <Summary userName={userName} name={name} hangoutSpot={hangoutSpot} datingPlace={datingPlace} animal={animal} song={song} breakup={breakup} />}
 
       </div>
     </div >
