@@ -105,7 +105,7 @@ export const App = () => {
 
             <section>
               <fieldset>
-                <h2>Bilen är ett fantastikt transportmedel som de flesta av oss använder i vardagen. </h2>
+                <h2>Bilen är ett fantastiskt transportmedel som de flesta av oss använder i vardagen. </h2>
                 <h2>Jag behöver använda bilen för att: </h2>
                 <select
                   onChange={event => setUseCar(event.target.value)}
