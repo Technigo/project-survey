@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Summary } from './Summary'
 
 
-const adventureGroup = ["Surfing", "Climbing", "Yoga Retreat", "Hiking"];
+const adventureGroup = ["surfing", "climbing", "yoga retreat", "hiking"];
 const destinationGroup = ["Costa Rica", "Mount Everest", "Bali", "Machu Picchu",];
 const ageGroups = ["alone", "with family members", "with friends"];
 
@@ -72,9 +72,6 @@ export const App = () => {
                 </label>
               ))}
             </div>
-
-
-
 
 
             <div className="mostImportant">
