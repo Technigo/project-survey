@@ -9,28 +9,17 @@
 
 .progress-bar {
  	width: 350px;
- 	height: 35px;
+ 	height: 30px;
  	border-radius: 50px;
- 	border: 2px solid #666;
- 	margin-bottom: 40px;
+ 	border: 2px solid #000;
+  margin-top: 40px;
+   
 }
 
 .range {
- 	background: #666;
+ 	background: #a9e771;
  	height: 100%;
  	border-radius: inherit;
  	transition: width .3s ease-in;
 }
 
-.toggle-buttons button {
- 	margin: 0 10px;
- 	padding: 7px 20px;
- 	border-radius: 5px;
- 	outline: 0;
- 	cursor: pointer;
-}
-
-.toggle-buttons button:hover {
- 	color: white;
- 	background: #666;
-}

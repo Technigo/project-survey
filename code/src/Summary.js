@@ -1,6 +1,8 @@
 
 import React from 'react'
 import "./app.css"
+import "./summary.css"
+
 
 export const Summary = (props) => {
   const refreshPage = () => {
@@ -8,15 +10,13 @@ export const Summary = (props) => {
   }
   return (
     <div className="summary">
-      <h3>Heres your result:</h3>
-      <p>Your are {props.happiness === "happy" ? "super happy!" : "Sad :("}</p>
-      <p>how are you? {props.feeling}</p>
-      <p>Your name:{props.name}</p>
-      <p>You impression: {props.impression} </p>
-      <p>You live: {props.location}  </p>
-      <p>Ready for 2019?: {props.readyness === "ready" ? "YES! Bring it on!" : "Hell no!"}  </p>
-
-      <p>You are {props.ageGroup === "0-18" ? "young" : "19-30" ? "still young" : "not so young"} </p>
+      <h3>Alright {props.name}! Heres your result:</h3>
+      <p>You are {props.ageGroup === "0-18" ? "young." : "19-30" ? "still young." : "old.."} </p>
+      <p>{props.readyness === "ready" ? "Great to see that you are postive to the new year!" : "I see that you are not ready for the new year... You will be fine! "}  </p>
+      <p>In 2019 your favourite event was {props.yearEvent}... Interesting choice! </p>
+      <p>You had {props.range} beers in 2019.. Impressive!</p>
+      <p>{props.range} {props.happiness === "happy" ? "is a great amount of beers." : "beers.. Did you want more?"}</p>
+      <p>You look forward to: {props.lookForward} </p>
 
       <button onClick={refreshPage}>Restart</button>
 

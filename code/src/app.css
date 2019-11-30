@@ -1,6 +1,8 @@
 * {
   margin: 0;
   box-sizing: border-box;
+  background: #d7dee8;
+
 }
   
 .app {
@@ -75,6 +77,11 @@ button {
   font-weight: bold;
 	color: #532018;
 }
+.button-back-front {
+  display: flex;
+  justify-content: space-evenly;
+}
+
 
 
 /* STYLE SECTION DROPDOWN */
@@ -249,15 +256,9 @@ input {
   text-align: center;
 }
 
-.summary {
-  font-size: 20px;
-}
 
-footer {
-  margin: 20px;
-}
 
-/* PROGRESS BAR
+PROGRESS BAR
 .progress-bar {
   position: relative;
   height: 20px;
@@ -271,47 +272,48 @@ footer {
   height: 100%;
   border-radius: inherit;
   transition: width .2s ease-in;
-} */
+}
 
 /* RANGE SLIDER */
-input[type=range] {
+.range-container input[type=range] {
   -webkit-appearance: none; /* Override default styles */
   width: 100%;
   height: 15px;
-  border-radius: 5px;  
-  background: #545B66;
-  opacity: 0.7;
+  border-radius: 50px;  
+  background: #fff;
+  opacity: 0.8;
 }
 
-input[type=range]:hover {
+.range-container input[type=range]:hover {
   opacity: 1; 
 }
 
 
 /* The slider button */
-input[type=range]::-webkit-slider-thumb {
+.range-container input[type=range]::-webkit-slider-thumb {
   -webkit-appearance: none; /* Override default styles */
   appearance: none; 
   width: 30px;
   height: 35px;
   background: url('beer.png');
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 /* The slider button for Firefox */
-input[type=range]::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
-  cursor: pointer;
+.range-container input[type=range]::-moz-range-thumb {
+  width: 30px;
+  height: 35px;
+  background: url('beer.png');
+  background-repeat: no-repeat;
+   cursor: pointer;
 }
 
 /* The slider button for IE */
-input[type=range]::-ms-thumb {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #4CAF50;
+.range-container input[type=range]::-ms-thumb {
+  width: 30px;
+  height: 35px;
+  background: url('beer.png');
+  background-repeat: no-repeat;
   cursor: pointer;
 }
 
@@ -319,5 +321,10 @@ input[type=range]::-ms-thumb {
   text-align: center;
   margin: 10px 0;
   font-size: 22px;
-  color: #fff;
+  color: #222;
+  font-weight: 700;
+}
+
+footer {
+  margin-top: 100px;
 }
