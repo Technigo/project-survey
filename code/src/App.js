@@ -9,7 +9,6 @@ import { Select } from './components/Select'
 import { SelectOption } from './components/SelectOption'
 import { Summary } from 'components/Summary'
 import { Image } from 'components/Image'
-import { gaming } from './components/undraw-gaming.svg'
 
 const boardgames = [
   "Select game",
@@ -27,12 +26,6 @@ const gamedays = [
   "Sunday"
 ]
 
-const weekendNumbers = [
-  "1",
-  "2",
-  "3",
-  "4"
-]
 
 export const App = () => {
   const [game, setGame] = useState("Select game")
