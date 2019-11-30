@@ -6,6 +6,7 @@ export const Summary = props => (
     <p>
       Thank you for completing the survey! We'll do our best to find your
       pawfect match! Soon you can meet your {props.size} doggo that matches your
+      <br />
       {props.active} lifestyle.
     </p>
   </div>
