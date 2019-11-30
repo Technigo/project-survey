@@ -1,0 +1,48 @@
+body {
+  background-color: #355e7b;
+}
+
+.questions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+ 
+}
+
+.result {
+  background-color: #6b5d78;
+  align-items: center;
+  position: absolute;
+  padding: 50px; 
+  left: 500px;
+  top: 75px; 
+  border-style: double;
+  border-width: 6px;
+}
+
+.ages {
+  padding: 5px; 
+}
+
+.spiritAnimal {
+  padding: 5px; 
+  padding-top: 20px;
+  
+}
+
+.friend {
+  padding: 5px; 
+  padding-top: 20px; 
+}
+
+.fun {
+  padding: 5px; 
+  padding-top: 20px; 
+}
+.submitButton {
+  padding: 5px; 
+  padding-top: 20px; 
+}
+
