@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { Summary } from './Summary'
 
 const ageGroups = ["alone", "with family members", "with friends"];
-const destinationGroup = ["Mount Everest", "Machu Picchu", "Grand Canyon"];
+const destinationGroup = ["Costa Rica", "Mount Everest", "Machu Picchu"];
 
 export const App = () => {
   const [name, setName] = useState("");
