@@ -1,14 +1,29 @@
 import React, { useState } from 'react'
-import { Header } from './components/Header'
-import { Form } from './components/Form'
-import { Button } from './components/Button'
-import { Checkbox } from './components/Checkbox'
-import { Radiobutton } from './components/Radiobutton'
-import { SurveySection } from './components/SurveySection'
-import { Select } from './components/Select'
-import { SelectOption } from './components/SelectOption'
-import { Summary } from 'components/Summary'
-import { Image } from 'components/Image'
+import { Header } from './components/layout/Header'
+import { Form } from './components/form/Form'
+import { Button } from './components/button/Button'
+import { Checkbox } from './components/form/Checkbox'
+import { Radiobutton } from './components/form/Radiobutton'
+import { SurveySection } from './components/layout/SurveySection'
+import { Select } from './components/form/Select'
+import { SelectOption } from './components/form/SelectOption'
+import { Summary } from 'components/layout/Summary'
+import { Image } from 'components/graphic/Image'
+import { Heading } from 'components/text/Heading'
+import { Description } from 'components/text/Description'
+
+/*const surveyData = {
+  //questions here
+  "questions": [{
+    "question": "Question 1",
+    "description": "Description 1",
+    "input": "Select",
+    "inputOptions": [{
+
+    }]
+  }
+  ]
+}*/
 
 const boardgames = [
   "Select game",
@@ -78,9 +93,17 @@ export const App = () => {
           <Form onSubmit={handleSubmit}>
             {question === 'first' && (
               <SurveySection
-                id="question-1"
-                title="What game would you like to play?"
-                description="Choose the game you would like to play the most">
+                id="question-1">
+                <Image
+                  src={require('./components/undraw-playing.svg')}
+                  alt="Gaming"
+                  className="section-image" />
+                <Heading
+                  className="survey-question-title"
+                  text="What game would you like to play?" />
+                <Description
+                  className="survey-question-description"
+                  text="Choose the game you would like to play the most this time." />
                 <Select
                   onChange={(event) => setGame(event.target.value)}
                   value={game}>
@@ -94,14 +117,17 @@ export const App = () => {
                     )
                   })}
                 </Select>
-                <Image src={require('./components/undraw-playing.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'second' && (
               <SurveySection
                 id="question-2"
-                title="Which day would you prefer to play?"
-                description="Weekends only."
               >
+                <Heading
+                  className="survey-question-title"
+                  text="Which day would you prefer to play?" />
+                <Description
+                  className="survey-question-description"
+                  text="Right now we only play on weekends. Choose the day that suits you best." />
                 <div className="radiobuttons">
                   {gamedays.map(gameday => {
                     return (
@@ -119,12 +145,16 @@ export const App = () => {
               </SurveySection>)}
             {question === 'third' && (
               <SurveySection
-                id="question-3"
-                title="Would you like to play videogames on our game nights as well?"
-                description="Choose one">
+                id="question-3">
+                <Heading
+                  className="survey-question-title"
+                  text="Would you like to play videogames?" />
+                <Description
+                  className="survey-question-description"
+                  text="Up until now we've only been playing board games during our game nights." />
                 <div className="checkbuttons">
                   <Checkbox
-                    label="Yes"
+                    label="I would like to play videogames on our game nights."
                     name="Yes"
                     value="Yes"
                     onChange={event => setvideogameApproval(event.target.value)}
@@ -133,9 +163,17 @@ export const App = () => {
                 <Image src={require('./components/undraw-gaming.svg')} alt="Gaming" className="section-image" />
               </SurveySection>)}
             {question === 'end' && (
-              <SurveySection
-                title="Submit your answers"
-                description="Thank you for answering this survey!">
+              <SurveySection>
+                <Image
+                  src={require('./components/undraw-messaging-fun.svg')}
+                  alt="Gaming"
+                  className="section-image" />
+                <Heading
+                  className="survey-question-title"
+                  text="Submit your answers" />
+                <Description
+                  className="survey-question-description"
+                  text="Thank you for answering this survey!" />
                 <Button type="submit" text="Submit survey" className="default-button submit-button" />
               </SurveySection>)}
             {question !== 'begin' && question !== 'end' && (

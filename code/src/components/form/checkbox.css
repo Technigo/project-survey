@@ -29,7 +29,7 @@
 
 .checkbox:checked {
   background: none;
-  background-image: url('icons8-checkmark-26.png');
+  background-image: url('../icons8-checkmark-26.png');
   background-repeat: no-repeat;
   background-size: 24px 24px;
   height: 24px;
