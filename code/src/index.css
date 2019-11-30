@@ -11,3 +11,160 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.formStyleNotSubmitted{
+  background-image: url("cat2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 580px;
+}
+
+.formStyleSubmitted{
+  background-image: url("cat2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 580px;
+  justify-content: center;
+  z-index: 1;
+  filter: brightness(50%);
+  
+}
+
+.content{
+  margin:0px;
+}
+
+
+.pageTitle{
+  margin: 40px 0px 0px 0px;
+  color: rgb(211, 150, 51);
+  font-family: 'Calistoga', cursive;
+}
+
+.pageTitle h1{
+ margin: 0px;
+}
+
+.pageTitle p{
+  margin: 0px;
+}
+
+.contacts{
+  display: flex;
+  flex-direction: row;
+}
+
+
+.contacts p{
+  margin: 40px 0px 0px 0px;
+  color: white
+}
+
+
+.formField{
+  margin-right: 4px;
+  
+}
+
+.newsletter{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+.dropdown{
+  margin-top: 0px;
+  color: white;
+}
+
+.dropdown p{
+  margin-bottom: 5px;
+    margin-top: 10px;
+}
+
+.radioButton{
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  color: white;
+}
+
+.radioButton p{
+  margin-bottom: 0px;
+  margin-left: 10px;
+}
+
+.radioButtons {
+  margin: 120px 0px 0px;
+  color: white;
+}
+
+.radioButtons p{
+  margin-bottom: 5px;
+  margin-top: 0px;
+
+}
+
+.buttonContainer{
+  display: flex;
+  justify-content: center;
+}
+
+.button{
+  width: 100%;
+  height: 40px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color:rgb(211, 150, 51);
+  border: none;
+  font-size: 1.6em;
+  font-family: 'Calistoga', cursive;
+}
+
+.summaryStyle{
+  color: white;
+  padding: 20px;
+  position: fixed; /* Sit on top of the page content */
+  width: 100%; /* Full width (cover the whole page) */
+  height: 100%; /* Full height (cover the whole page) */
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
+  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
+  cursor: pointer;
+ 
+  
+}
+
+.summaryStyle p{
+  margin: 0px;
+}
+
+.summaryContent{
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
