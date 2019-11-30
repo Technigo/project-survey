@@ -10,7 +10,7 @@ export const App = () => {
   const [animal, setAnimal] = useState("")
   const [showResult, setShowResult] = useState(false)
   const [bestFriend, setBestFriend] = useState("")
-  const [fun, setFun] = useState("")
+  const [fun, setFun] = useState("fun")
 
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -21,7 +21,7 @@ export const App = () => {
     <div className="result">
       {showResult && (
         <div>
-          <h2>So, now I think I know you:</h2>
+          <h2>So, I think I know you now:</h2>
           <p> You are a {fun === "fun" ? "fun" : "no fun"} {ageGroup} {animal} and your best friend is {bestFriend}.</p>
         </div>
 
@@ -45,7 +45,9 @@ export const App = () => {
                     value={group}
                     onChange={event => setAgeGroup(event.target.value)}
                     checked={ageGroup === group}
+                    required
                   />
+                  <span className="fakeRadio" />
                   {group}
                 </label>
               ))}
@@ -58,9 +60,9 @@ export const App = () => {
             </div>
             <label>
               <div>
-                <input type="text"
+                <input className="inputField" type="text"
                   value={animal}
-                  onChange={(event) => setAnimal(event.target.value)} />
+                  onChange={(event) => setAnimal(event.target.value)} required />
               </div>
             </label>
 
@@ -69,9 +71,9 @@ export const App = () => {
               <h3>Who is your best friend?</h3>
             </div>
             <div>
-              <select
+              <select className="dropDown"
                 onChange={event => setBestFriend(event.target.value)}
-                value={bestFriend}>
+                value={bestFriend} required>
                 <option value="">Please select</option>
                 <option value="your partner">My partner</option>
                 <option value="your mother">My mother</option>
@@ -93,7 +95,7 @@ export const App = () => {
                   onChange={event => setFun(event.target.value)}
                   checked={fun === "fun"}
                 />
-
+                <span className="fakeRadio" />
                 Yes
               </label>
 
@@ -104,14 +106,15 @@ export const App = () => {
                   onChange={event => setFun(event.target.value)}
                   checked={fun === "no fun"}
                 />
+                <span className="fakeRadio" />
                 No
               </label>
             </div>
 
 
             <div className="submitButton">
-              <button type="submit">
-                What does this say about me?
+              <button className="button" type="submit">
+                <h2>What does this say about me?</h2>
               </button>
             </div>
           </section>

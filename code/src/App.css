@@ -13,11 +13,10 @@ body {
 
 .result {
   background-color: #6b5d78;
-  align-items: center;
   position: absolute;
   padding: 50px; 
   left: 500px;
-  top: 75px; 
+  top: 50px; 
   border-style: double;
   border-width: 6px;
 }
@@ -46,3 +45,73 @@ body {
   padding-top: 20px; 
 }
 
+input[type="radio"] {
+  visibility: hidden;
+}
+
+.fakeRadio {
+  border: 2px solid black; 
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50px;
+  position: relative;
+  margin-right: 5px;
+}
+
+input:checked + .fakeRadio::after {
+  content: ""; 
+  width: 14px;
+  height: 14px;
+  background: #f77581;
+  display: inline-block;
+  border-radius: 50px;
+  position: absolute;
+  top: 3px;
+  left: 3px;
+}
+
+.dropDown {
+  background-color: #f77581;
+  border-color: black;
+}
+
+.dropDown:hover {
+  background-color: #f9b398;
+}
+
+.inputField {
+  border-color: black;
+  border-radius: 40px;
+  border-width: 1px;
+  width: 150px; 
+  height: 20px; 
+  background-color: #f9b398;
+  font-size: 14px;
+}
+
+
+
+.button {
+  background-color: #f77581;
+  border-radius: 30px;
+  width: 240px; 
+  height: 70px;
+  margin-top: 30px;
+ 
+  border-style: double;
+  border-width: 5px;
+  border-color: black;
+}
+
+.button:hover {
+  background-color: #f9b398;
+}
+
+h1 {
+  font-size: 30px;
+}
+
+h2 {
+  font-size: 16px;
+}
