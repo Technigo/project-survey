@@ -31,7 +31,9 @@ export const App = () => {
 
   return (
     <div className="mainContainer">
-      {answer && <Summary name={name} size={size} city={city} />}
+      {answer && (
+        <Summary name={name} size={size} city={city} benefits={benefits} />
+      )}
 
       {!answer && (
         <div className="formContainer">
@@ -41,8 +43,10 @@ export const App = () => {
                 <h3>Welcome! </h3>
                 <div className="welcomeContainer">
                   <p className="welcomeNote">
-                    I would like to know more about your company. Please answer
-                    the questions in my survey!
+                    I would like to know more about your company.
+                  </p>
+                  <p className="welcomeNote">
+                    Please answer the questions in my survey!
                   </p>
                 </div>
                 <label>
@@ -87,7 +91,8 @@ export const App = () => {
                   <label key={item}>
                     <input
                       type="checkbox"
-                      onChange={event => setBenefits(event.target.checked)}
+                      value={item}
+                      onChange={event => setBenefits(event.target.value)}
                       checked={benefits === item}
                     ></input>
                     {item}
@@ -129,13 +134,5 @@ export const App = () => {
         </div>
       )}
     </div>
-
-    // <div>
-    //   <SurveyName />
-    //   <CompanySize />
-    //   <CompanyLocation />
-    //   <Submit />
-    // </div>
-    // onClick={() => setAnswer(true)}
   );
 };
