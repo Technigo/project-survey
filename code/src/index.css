@@ -91,9 +91,11 @@ label .destinations {
 
 .submitBtn {
   justify-content: center;
-  border: outset;
+  border: inset;
+  border-radius: 5px;
   margin-left: 5px;
   margin-top: 15px;
+  background-color: rgb(240, 160, 128);
 }
 
 .Summary {
