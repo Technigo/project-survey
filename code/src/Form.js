@@ -76,19 +76,19 @@ export const Form = () => {
   return (
     <div>
       {/*If the first is true - everything after && will render*/}
-      {showSummary && (<div className="summary">
-        <h1>Summary:</h1>
+      {showSummary && (
+        <div className="summary">
+          <h1>Summary</h1>
+          <div>
+            {enjoysChristmas ? "I'm glad to hear that you enjoy Christmas! " : "So you don't enjoy Christmas? That's fine as long as you're not a grinch! "}
+            You answered that {decoration} is your decoration of choice and that you've celebrated Christmas around {ageGroup} times!
         <br></br>
-        {enjoysChristmas ? 'You love christmas, yey!' : 'Ok, so you are obviously a grinch!'}
-        <br></br>
-        You answered that {decoration} is your decoration of choice and that you've celebrated Christmas around {ageGroup} times!
-        <br></br>
-        Well, {merryChristmas} to you too!
-        <br></br>
-        <br></br>
-        Hope your Christmas tree look like this:
+            <br></br>
+            Well, {merryChristmas} to you too!
+            Hope your Christmas tree look like this:
         {imageToShow()}
-      </div>
+          </div>
+        </div>
       )}
 
       {/*If summary is not shown (if showSummary is false), then form is shown*/}
@@ -104,7 +104,7 @@ export const Form = () => {
             {question === 'timesOfChristmases' && (
 
               < div className="radio-buttons">
-                How many times have you celebrated Christmas?
+                How many Christmases have you experienced?
                 {ageGroups.map(group => (
                   <label key={group}>
                     <input
@@ -190,59 +190,60 @@ export const Form = () => {
 
               <div className="images">
                 Which Christmas tree is the most beautiful?
-        <label>
-                  <input type="radio"
-                    value="tree3"
-                    onChange={() => setPreferredImage("tree3")}
-                    checked={preferredImage === "tree3"}
-                  ></input>
-                  <div className="image-box1"
-                    style={{ backgroundImage: `url(${tree3})` }}
-                    aria-label="Image of Christmas tree with eyes">
-                  </div>
-                </label>
+        <div className="only-images">
+                  <label>
+                    <input type="radio"
+                      value="tree3"
+                      onChange={() => setPreferredImage("tree3")}
+                      checked={preferredImage === "tree3"}
+                    ></input>
+                    <div className="image-box1"
+                      style={{ backgroundImage: `url(${tree3})` }}
+                      aria-label="Image of Christmas tree with eyes">
+                    </div>
+                  </label>
 
 
-                <label>
-                  <input type="radio"
-                    value="tree4"
-                    onChange={() => setPreferredImage("tree4")}
-                    checked={preferredImage === "tree4"}
-                  ></input>
-                  <div className="image-box2"
-                    style={{ backgroundImage: `url(${tree4})` }}
-                    aria-label="Image of Christmas tree with Santa Clause's">
-                  </div>
-                </label>
+                  <label>
+                    <input type="radio"
+                      value="tree4"
+                      onChange={() => setPreferredImage("tree4")}
+                      checked={preferredImage === "tree4"}
+                    ></input>
+                    <div className="image-box2"
+                      style={{ backgroundImage: `url(${tree4})` }}
+                      aria-label="Image of Christmas tree with Santa Clause's">
+                    </div>
+                  </label>
 
 
-                <label>
-                  <input type="radio"
-                    value="tree5"
-                    onChange={() => setPreferredImage("tree5")}
-                    checked={preferredImage === "tree5"}
-                  ></input>
+                  <label>
+                    <input type="radio"
+                      value="tree5"
+                      onChange={() => setPreferredImage("tree5")}
+                      checked={preferredImage === "tree5"}
+                    ></input>
 
-                  <div className="image-box3"
-                    style={{ backgroundImage: `url(${tree5})` }}
-                    aria-label="Image of spruce tree in a field">
-                  </div>
-                </label>
+                    <div className="image-box3"
+                      style={{ backgroundImage: `url(${tree5})` }}
+                      aria-label="Image of spruce tree in a field">
+                    </div>
+                  </label>
 
 
-                <label>
-                  <input type="radio"
-                    value="tree6"
-                    onChange={() => setPreferredImage("tree6")}
-                    checked={preferredImage === "tree6"}
-                  ></input>
+                  <label>
+                    <input type="radio"
+                      value="tree6"
+                      onChange={() => setPreferredImage("tree6")}
+                      checked={preferredImage === "tree6"}
+                    ></input>
 
-                  <div className="image-box4"
-                    style={{ backgroundImage: `url(${tree6})` }}
-                    aria-label="Image of palm tree">
-                  </div>
-                </label>
-
+                    <div className="image-box4"
+                      style={{ backgroundImage: `url(${tree6})` }}
+                      aria-label="Image of palm tree">
+                    </div>
+                  </label>
+                </div>
                 {/*SUBMIT-BUTTON*/}
                 <div className="submit-button">
                   < button type="submit" > Submit</button>
@@ -253,7 +254,7 @@ export const Form = () => {
             }
             {question !== 'prettiestTree' && (
               <button type="button" onClick={handleContinue}>
-                Next question
+                Next
 </button>
 
             )}
