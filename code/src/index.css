@@ -58,27 +58,27 @@ p {
   font-size: 15px;
   font-weight: bold;
   display: inline-grid;
-  margin-bottom: 20px;
+  margin-bottom: 7px;
 }
 
 /* destination check-boxes */
 .Destinations {
   font-size: 15px;
   font-weight: bold;
-  /* display: inline-grid;  */
+  display: inline-grid;  
 }
 
 label .destinations {
   padding-right: 30px;
-  /* margin-right: 10px; 
-  justify-content: space-around;*/
 }  
 
+/*question about importance */
 .mostImportant {
-  margin-top: 30px;
+  margin-top: 20px;
 }
 
 .formDropdown {
+  margin-top: 5px;
   border: inset;
   font-size: 15px;
   font-family: 'roboto';
@@ -96,9 +96,9 @@ label .destinations {
   font-family: 'roboto';  
 }
 
-/*travel companions or not*/
-.ageBox {
-  margin-top: 40px;
+/* question about travel companions*/
+.companionBox {
+  margin-top: 30px;
   font-weight: bold;
   font-size:  15px; 
   font-family: 'roboto'; 
@@ -143,6 +143,6 @@ label .destinations {
   }
 
   summary {
-  margin-top: 100px; 
+  margin-top: 150px; 
   }
 }

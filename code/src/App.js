@@ -4,7 +4,8 @@ import { Summary } from './Summary'
 
 const adventureGroup = ["surfing", "climbing", "yoga retreat", "hiking"];
 const destinationGroup = ["Costa Rica", "Mount Everest", "Bali", "Machu Picchu",];
-const ageGroups = ["alone", "with family members", "with friends"];
+// const ageGroups = ["alone", "with family members", "with friends"];
+const companionGroups = ["alone", "with family members", "with friends"];
 
 export const App = () => {
   const [name, setName] = useState("");
@@ -12,8 +13,8 @@ export const App = () => {
   const [destinations, setDestinations] = useState();
   // const [location, setLocation] = useState("");
   const [mostImportant, setMostImportant] = useState("");
-  const [ageGroup, setAgeGroup] = useState()
-  // const [companionGroup, setCompanionGroup] = useState()
+  // const [ageGroup, setAgeGroup] = useState()
+  const [companionGroup, setCompanionGroup] = useState()
   const [submitted, setSubmitted] = useState(false)
 
 
@@ -90,18 +91,18 @@ export const App = () => {
 
 
 
-            {/* <div className="companion">
+            <div className="companionBox">
               <p>How do you prefer to travel?</p>
-              {companyGroup.map(group => (
+              {companionGroups.map(group => (
                 <label key={group}>
                   <input className="radioBtn"
                     type="radio"
                     value={group}
                     onChange={event => setCompanionGroup(event.target.value)}
                     checked={companionGroup === group}
-                  /> */}
+                  />
 
-            <div className="ageBox">
+                  {/* <div className="ageBox">
               <p>How do you prefer to travel?</p>
               {ageGroups.map(group => (
                 <label key={group}>
@@ -110,7 +111,7 @@ export const App = () => {
                     value={group}
                     onChange={event => setAgeGroup(event.target.value)}
                     checked={ageGroup === group}
-                  />
+                  /> */}
                   {group}
                   <br />
 
@@ -126,10 +127,11 @@ export const App = () => {
         </div>
       )}
 
-      {submitted && <Summary name={name} adventures={adventures} destinations={destinations} mostImportant={mostImportant} ageGroup={ageGroup} />}
+      {submitted && <Summary name={name} adventures={adventures} destinations={destinations} mostImportant={mostImportant} companionGroup={companionGroup} />}
 
     </div>
 
   )
 }
 
+// ageGroup={ageGroup}
