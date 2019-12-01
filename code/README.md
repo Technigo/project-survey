@@ -6,17 +6,18 @@
 
 
 
-1.What the purpose of state in React is.
-2.How to use the useState hook in React.
-3. How to connect HTML form inputs to state. 
-4. Destructuring arrays, Conditional Rendering
+- What the purpose of state in React is.
+- How to use the useState hook in React.
+- How to connect HTML form inputs to state. 
+- Destructuring arrays, Conditional Rendering.
 
 ## Tech
 
-1. HTML
-2. CSS
-3.JavaScript
-4. React 
-5.JSX
+- HTML
+- CSS
+- JavaScript
+- React 
+- JSX
 
+My live project [Here](https://friends-quiz-by-nasim.netlify.com/)
 
