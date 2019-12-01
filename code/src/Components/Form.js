@@ -49,6 +49,7 @@ export const Form = () => {
 
     } else {
       setSubmitted(true)
+      window.scrollTo(0, 0)
     }
   }
 
