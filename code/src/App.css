@@ -28,8 +28,31 @@ form{
 /*QUESTION 1 (radio-buttons)*/
 .radio-buttons label{
   margin: 10px 0;
-
 }
+/*RADIO-BUTTONS*/
+input[type="radio"]{
+  display:none;
+}
+.fakeRadio{
+  border: 2px solid hotpink;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+input:checked + .fakeRadio::after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: darkred;
+  display: inline-block;
+  border-radius: 12px;
+}
+
 
 /*QUESTION 2 & 3 (textinput, select)*/
 input, select{
@@ -38,7 +61,7 @@ input, select{
   font-size: 14px;
   border-radius: 4px;
 }
-.textinput-div label, .select-div label{
+.textinput-div label, .select-div label, .images label{
   display: flex;
   flex-direction: column;
 }
@@ -94,6 +117,13 @@ button{
   border-radius: 5px;
   cursor: pointer;
 }
+
+.submit-button{
+  display:flex;
+  justify-content: center;
+}
+
+
 .summary{
 }
 
@@ -102,13 +132,6 @@ hr{
   border: 1px solid hotpink;
   display: inline-flex;
   width: 100%;
-}
-
-
-.images{
-  display: flex;
-  flex-wrap: wrap;
-
 }
 
 .image-box1, .image-box2, .image-box3, .image-box4{
@@ -145,42 +168,13 @@ input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-
   flex-direction: column;
 } */
 
-
-
-
-
 label {
   display:flex;
   align-items: center;
 }
 
 
-/*RADIO-BUTTONS*/
-input[type="radio"]{
-  display:none;
-}
-.fakeRadio{
-  border: 2px solid hotpink;
-  width: 14px;
-  height: 14px;
-  border-radius: 14px;
-  display:inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-}
-.fakeRadio::before{
 
-}
-
-input:checked + .fakeRadio::after{
-  content: '';
-  width: 12px;
-  height: 12px;
-  background: darkred;
-  display: inline-block;
-  border-radius: 12px;
-}
 
 
 /* content: "✔" You can use this in CSS to style checkboxes for example*/

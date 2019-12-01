@@ -244,7 +244,7 @@ export const Form = () => {
                 </label>
 
                 {/*SUBMIT-BUTTON*/}
-                <div>
+                <div className="submit-button">
                   < button type="submit" > Submit</button>
                 </div>
               </div>
