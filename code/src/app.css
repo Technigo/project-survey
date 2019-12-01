@@ -19,7 +19,6 @@ header {
   margin-top: 20px;
   text-align: center;
   padding: 15px;
-  height: 250px;
   background: url(./sketchyCircle_01.png) no-repeat;
 }
 
@@ -47,7 +46,7 @@ h3 {
 }
 
 .question {
-  margin-top: 20px;
+  margin: 20px;
 } 
      
 input,
