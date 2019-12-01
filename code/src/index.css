@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: 'roboto'; 
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -103,22 +103,17 @@ label .destinations {
 @media (min-width: 375px) and (max-width: 667px) { 
   body  {
   width: 100%;
-  font-family: 'roboto'; 
+  font-family: 'Roboto', sans-serif;
   }
 } 
 
-/* @media (min-width: 668px) and (max-width: 1024px) { 
-  body  {
-  width: 100%;
-  font-family: 'roboto';
-  }
-}*/
+
 
 @media (min-width: 668px) and (max-width: 1025px) { 
   body  {
   background-position-y: center;
-  font-family: 'roboto'; 
   width: 100%;
+  font-family: 'Roboto', sans-serif;
   }
 
   h2 {
