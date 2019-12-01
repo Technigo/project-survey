@@ -1,11 +1,9 @@
 
 .summary {
   margin: 20px;
-  background: url(./summarybackground1.jpg);
+  background: url(./sketchyCircle_02.png) no-repeat;
   padding: 50px;
   font-size: 20px;
-  border: 2px solid white;
-
 }
 .summary h3{
   padding: 5px;
