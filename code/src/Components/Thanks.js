@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 export const Thanks = ({ whenNext, answer }) => {
   const handleClick = (event) => {
