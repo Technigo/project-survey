@@ -28,6 +28,7 @@ code {
   min-height: 100vh;
   padding: 50px;
   background: #5eb611;
+  font-size: 22px;
 }
 
 input[type="text"] {

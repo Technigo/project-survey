@@ -54,7 +54,7 @@ export const App = () => {
             <h1>Hello {name || "Stranger"}!</h1>
             {section === "firstQuestion" && (
               <div>
-                <label for="name">
+                <label htmlFor="name">
                   <h4>What's you superhero name?</h4>
                 </label>
                 <input
@@ -77,7 +77,7 @@ export const App = () => {
             {/* SECOND QUESTION -----> */}
             {section === "secondQuestion" && (
               <React.Fragment>
-                <label for="super-power-question">
+                <label htmlFor="super-power-question">
                   <h4>Choose your superpower!</h4>
                 </label>
                 <select
