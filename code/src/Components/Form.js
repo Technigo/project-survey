@@ -62,9 +62,9 @@ export const Form = () => {
 
       {/* Display none on the form - shows the summary and hides the form, when the submit btn trigged */}
       {!submitted && (
-        <div>
+        <div className="form-wrapper">
           <h2>How well do you remember Friends?</h2>
-
+          <img style={{ width: "70%" }} src="assets/friends-crew.png" />
           <form onSubmit={handelSubmit} className="form-style">
 
             <div className="question-card">

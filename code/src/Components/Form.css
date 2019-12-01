@@ -4,6 +4,18 @@
     justify-content: center;
 }
 
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-content: center;
+}
+
+.form-wrapper img {
+    width: 60%;
+    align-self: center;
+}
+
 select {
     background: #414141;
     height: 50px;
