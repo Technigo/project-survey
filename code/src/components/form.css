@@ -124,3 +124,43 @@ label {
     .submit-button p {
         font-size: 16px;
     }
+
+    .result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        width: 300px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+
+    .result p {
+        font-size: 20px;
+    }
+
+    .result span {
+        font-size: 20px;
+    }
+
+    .sun {
+        display: flex;
+        margin-bottom: -80px;
+    }
+
+    .sun p {
+        font-size: 50px;
+        margin-top: -60px;
+        margin-right: 100px;
+        margin-left: 100px;
+    }
+
+    .result-text {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+    }

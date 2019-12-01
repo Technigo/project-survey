@@ -17,12 +17,16 @@ export const App = () => {
     <div className="form-dream-destination">
 
   {showResult && (
-    <div>
-      <h1>Book a vacation:</h1>
-
-      <p>To {destination}</p>
-      <p>and bring <span className="emoji" role="img" arial-label="whatToBring">{whatToBring}</span></p>
-      <p>Lets do it {whenToGo}!</p>
+    <div className="result">
+      <div className="sun">
+        <p>☀️</p>
+        <p>☀️</p>
+      </div>
+      <h1>It's time to book a vacation:</h1>
+      <div className="result-text">
+      <p>WOW! You are going to {destination} and will bring your <span className="emoji" role="img" arial-label="whatToBring">{whatToBring}.</span></p>
+      <p>👉🏼{whenToGo}!👈🏼</p>
+      </div>
     </div>
   )}
     
