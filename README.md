@@ -1,8 +1,8 @@
-# Survey Form built with React -->
+# Survey Form built with React --> :newspaper:
 
 This is a survey form built with React Hooks. In this project I use React useState hook and I connect HTML form inputs to state.
 
-## Tools/ techniques, approach and planning
+## Tools/ techniques, approach and planning :hammer:
 
 This short survey in built with funcional React.
 The project is divided into multiple Components (each input, select, radio buttons and submit button are into separate Components).
@@ -11,4 +11,6 @@ I use the state to pick users answers, which I later re-use to show the summary 
 
 If I had more time, I would focus on validation, accessibility and styling.
 
-## Deployed version
+## Deployed version :rocket:
+
+https://survey-by-aleksandra.netlify.com/
