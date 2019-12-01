@@ -1,19 +1,15 @@
 import React, { useState } from 'react'
 import { Summary } from './Summary'
 
-
 const adventureGroup = ["surfing", "climbing", "yoga retreat", "hiking"];
-const destinationGroup = ["Costa Rica", "Mount Everest", "Bali", "Machu Picchu",];
-// const ageGroups = ["alone", "with family members", "with friends"];
+const destinationGroup = ["Costa Rica", "Mount Everest", "Bali", "Machu Picchu"];
 const companionGroups = ["alone", "with family members", "with friends"];
 
 export const App = () => {
   const [name, setName] = useState("");
   const [adventures, setAdventures] = useState();
   const [destinations, setDestinations] = useState();
-  // const [location, setLocation] = useState("");
   const [mostImportant, setMostImportant] = useState("");
-  // const [ageGroup, setAgeGroup] = useState()
   const [companionGroup, setCompanionGroup] = useState()
   const [submitted, setSubmitted] = useState(false)
 
@@ -29,7 +25,6 @@ export const App = () => {
             <div className="heroHeader">
               <h2>Plan your 2020 adventure now!</h2>
             </div>
-
 
             <div className="nameBox">
               Your name:
@@ -52,7 +47,6 @@ export const App = () => {
                     checked={adventures === group}
                   />
                   {group}
-
                 </label>
               ))}
             </div>
@@ -68,27 +62,22 @@ export const App = () => {
                     checked={destinations === group}
                   />
                   {group}
-
                 </label>
               ))}
             </div>
 
 
-            <div className="mostImportant">
-
-              <p>What’s the most important thing when you travel?</p>
-              <select className="formDropdown"
-                onChange={event => setMostImportant(event.target.value)}
-                value={name}
-              >
-                <option value="">Choose here!</option>
-                <option value="low-impact tourism policy">to step out of the comfort zone </option>
-                <option value="low-impact tourism policy">low-impact tourism policy </option>
-                <option value="food and beverage">great food and beverage</option>
-                <option value="tourist attractions">many tourist attractions</option>
-              </select>
-            </div>
-
+            <p>What’s the most important thing when you travel?</p>
+            <select className="formDropdown"
+              onChange={event => setMostImportant(event.target.value)}
+              value={mostImportant}
+            >
+              <option value="">Choose here please!</option>
+              <option value="to step out of the comfort zone">to step out of the comfort zone</option>
+              <option value="low-impact tourism policy">low-impact tourism policy</option>
+              <option value="great food and beverage">great food and beverage</option>
+              <option value="many tourist attractions">many tourist attractions</option>
+            </select>
 
 
             <div className="companionBox">
@@ -101,17 +90,6 @@ export const App = () => {
                     onChange={event => setCompanionGroup(event.target.value)}
                     checked={companionGroup === group}
                   />
-
-                  {/* <div className="ageBox">
-              <p>How do you prefer to travel?</p>
-              {ageGroups.map(group => (
-                <label key={group}>
-                  <input className="radioBtn"
-                    type="radio"
-                    value={group}
-                    onChange={event => setAgeGroup(event.target.value)}
-                    checked={ageGroup === group}
-                  /> */}
                   {group}
                   <br />
 
@@ -134,4 +112,3 @@ export const App = () => {
   )
 }
 
-// ageGroup={ageGroup}
