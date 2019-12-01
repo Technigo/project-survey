@@ -33,7 +33,7 @@ h2 {
   font-weight: bold;
   padding-left: 5px; 
   margin-left: 10px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   color: darkblue
 }
 
@@ -59,10 +59,6 @@ p {
   display: inline-grid;  
 }
 
-label .destinations {
-  padding-right: 30px;
-}  
-
 .formDropdown {
   margin-top: 5px;
   border: inset;
@@ -84,7 +80,7 @@ label .destinations {
 
 /* question about travel companions*/
 .companionBox {
-  margin-top: 30px;
+  margin-top: 20px;
   font-weight: bold;
   font-size:  15px; 
 }
