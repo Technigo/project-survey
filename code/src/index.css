@@ -16,7 +16,7 @@ body {
 }
 
 h2 {
-  margin-top: 70px;
+  margin-top: 50px;
 } 
 
 /* your name and form */
@@ -103,6 +103,7 @@ label .destinations {
 @media (min-width: 375px) and (max-width: 667px) { 
   body  {
   width: 100%;
+  font-family: 'roboto'; 
   }
 } 
 
