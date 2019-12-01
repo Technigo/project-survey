@@ -7,15 +7,18 @@ export const Favorit = ({ whenNext }) => {
     whenNext(favorit);
   }
   return (
-    <form onSubmit={handleSubmit} action="">
+    <form onSubmit={handleSubmit} className="question-box">
       <label>
-      What's your favorit game?
-        <input
-          type="text"
-          value={favorit}
-          onChange={(event) => setFavorit(event.target.value)}/>
+        <div className="question">
+          <h2 className="question-text"> What's your favorit game?</h2>
+          <input
+          className="fav-style"
+            type="text"
+            value={favorit}
+            onChange={(event) => setFavorit(event.target.value)} />
+      </div>
       </label>
-      <button type="submit" className="next-button"></button>
+      <button type="submit" className="next-button" />
     </form>
   )
 }

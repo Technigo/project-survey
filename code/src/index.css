@@ -5,6 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./Chessbackground.png);
   background-color: #efc4d1;
+  font-size: 22px;
   /*   font-family: 'Cabin Sketch', cursive;
  font-family: 'Gruppo', cursive;*/
 }
@@ -16,12 +17,10 @@ code {
 .container {
   background-color: #FFFBD1;
   margin: 200px;
-  height: 900px;
+  height: 500px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   border: solid black 2px;
-  justify-content: center;
 }
 
 header {
@@ -37,24 +36,52 @@ header {
   justify-content: center;
 }
 
-form {
+.question-text {
+  align-self: flex-start;
+  width: 400px;
+  margin-top: 15px;
+  font-size: 24px;
+}
+
+.question-box {
+  font-family: 'Gruppo', cursive;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+}
+
+label {
+  font-size: 35px;
+}
+
+input {
+  padding: 5px;
+}
+
+input[value] {
+  margin: 0px 15px;
+}
+
+option {
+  font-size: 14px;
+}
+
+.thanks-message {
   font-family: 'Gruppo', cursive;
   font-size: 28px;
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.thanks-page {
-  font-family: 'Gruppo', cursive;
-  font-size: 28px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.type-label {
-  display: flex;
 }
 
 .next-button {
@@ -63,9 +90,6 @@ form {
   border: none;
   width: 100px;
   height: 200px;
-  font-family: 'Cabin Sketch', cursive;
-  font-size: 20px;
-  color: white;
 }
 
 .thanks-button {
@@ -82,4 +106,20 @@ form {
   border: none;
   width: 100px;
   height: 200px;
+}
+
+.fav-style {
+  background-color: #FFc09E;
+  width: 300px;
+  height: 30px;
+  border: none;
+  font-size: 20px;
+}
+
+.time-style {
+  background-color: #FFc09E;
+  width: 75%;
+  height: 30px;
+  border: none;
+  font-size: 20px;
 }

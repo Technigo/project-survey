@@ -10,21 +10,19 @@ export const Thanks = ({ whenNext, answer }) => {
   const userTimeChoice = answer[2];
 
   return (
-    <>
-      <h2 className="thanks-page">
-     You want to depent on {userTypeChoice} .
+    <div className="question-box">
+      <h2 className="thanks-message">
+     So you want to depent on {userTypeChoice} <br/>
 
-      Your favorit game is {userFavoritChoice} 
+      Your favorit game is {userFavoritChoice} <br/>
 
-{userTimeChoice === "5 min" && "You don't seem to like games"}
-{userTimeChoice === "10 min" && "You are a normal gamer"}
-{/*       *5-20* - You don't seem to like games
-      *30-60* - You are a normal gamer
-      *1-2* - You seem to LOOOV game
-      *more* - Don't you have a Life?
- */}
+{userTimeChoice === "5-10 min" && "You don't seem to like games"}
+{userTimeChoice === "20-60 min" && "You are a normal gamer"}
+{userTimeChoice === "1-2 h" && "You seem to LOOOVE games"}
+{userTimeChoice === "more" && "Don't you have anything else to do?"}
       </h2>
+      
       <button type="button" className="thanks-button" onClick={handleClick}></button>
-    </>
+    </div>
   )
 }
