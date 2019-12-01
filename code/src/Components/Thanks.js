@@ -1,16 +1,16 @@
 import React, { useState } from 'react';
 
-export const Thanks = (props) => {
+export const Thanks = ({ whenNext }) => {
   const handleClick = (event) => {
     event.preventDefault();
-    props.whenNext(0);
+    whenNext();
   }
-  return(
+  return (
     <>
-    <h2>
-      Hej jag är sida 4 
-    </h2>
-    <button type="button" className="thanks-button"  onClick={handleClick}>THANK YOU</button>
+      <h2>
+      Hej jag är sida 4
+      </h2>
+      <button type="button" className="thanks-button" onClick={handleClick}>THANK YOU</button>
     </>
   )
 }

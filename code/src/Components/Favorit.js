@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-export const Favorit = (props) => {
+export const Favorit = ({whenNext}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.whenNext(2);
+    whenNext();
   }
   return (
     <form onSubmit={handleSubmit} action="">

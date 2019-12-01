@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 
-export const Time = (props) => {
+export const Time = ({whenNext}) => {
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.whenNext(3);
+    whenNext();
   }
   return(
   <form onSubmit={handleSubmit}>

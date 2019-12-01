@@ -2,11 +2,11 @@ import React, { useState } from 'react';
 
 export const typeGroups = ['Skill', 'Luck', 'Skill and luck'];
 
-export const Type = (props) => {
+export const Type = ({whenNext}) => {
   const [typeGroup, setTypeGroup] = useState();
   const handleSubmit = (event) => {
     event.preventDefault();
-    props.whenNext(1);
+    whenNext();
  }
   return (
     <form onSubmit={handleSubmit} className="type-style">
