@@ -4,3 +4,91 @@
     justify-content: center;
     align-items: center;
 }
+
+Form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Roboto' bold;
+}
+
+.question {
+    display: flex;
+    flex-direction: row;
+    width: 300px;
+}
+
+button {
+    display: inline-block;
+    background: #ddaf4b;
+    width: 80px;
+    height: 40px;
+    font-family: 'Roboto' bold;
+    color: #a12219;
+    border: solid 4px #d29835; 
+}
+
+.next {
+    border-top-right-radius: 12%; 
+    border-bottom-right-radius: 12%; 
+}
+
+.previous {
+    border-top-left-radius: 12%; 
+    border-bottom-left-radius: 12%; 
+}
+
+
+Input {
+    margin: 30px 5px;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + span {
+    opacity: 0.5;
+    font-size: 50px;
+}
+
+input[type="radio"]:checked + span {
+    opacity: 1;
+    font-size: 50px;
+}
+
+/* Slide range */
+
+.slidecontainer {
+    width: 100%; /* Width of the outside container */
+  }
+  
+  /* The slider itself */
+  .slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 100%; /* Full-width */
+    height: 25px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 25px; /* Set a specific slider handle width */
+    height: 25px; /* Slider handle height */
+    background: #4CAF50; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+  }

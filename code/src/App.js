@@ -5,67 +5,183 @@ export const App = () => {
   // const for text input
   const [name, setName] = useState("");
   // Const for list
-  const [bread, setBread] = useState("");
-  // Const for radio buttons
-  const when = ["Yes", "No"]
-  const [whenTime, setWhen]= useState();
+  const [list, setList] = useState("");
   // Const for checkbox
-  const [wantCat, setWantCat] = useState(false);
+  const [wantNachos, setWantNachos] = useState(false);
+  // Show result
+  const [showResult, setShowResult] = useState(false);
+
+  const [bread, setBread] = useState()
+
+  const [strength, setStrength] = useState(15)
+
+  // One question at the time
+  const [question, setQuestion] = useState('1')
+
+  const handlePrevious = () => {
+    if (question === 'last') {
+      setQuestion ('4')
+    } else if (question === '4') {
+      setQuestion ('3')
+    } else if (question === '3') {
+      setQuestion ('2')
+    } else if (question === '2') {
+      setQuestion ('1')
+    }
+  }
+
+  const handleNext = () => {
+    if (question === '1') {
+      setQuestion ('2')
+    } else if (question === '2') {
+      setQuestion ('3')
+    } else if (question === '3') {
+      setQuestion ('4')
+    } else if (question === '4') {
+      setQuestion ('last')
+    }
+  }
+  
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setShowResult(true)
+  }
+
+  const redoForm = (event) => {
+    event.preventDefault()
+    setShowResult(false)
+    setQuestion('1')
+    setName('')
+  }
+
+  const handleSalsa = () => {
+    if (strength < 10) {
+    return ("mild")}
+    else if (strength < 20) {
+    return ("medium")}
+    else {
+    return ("spicy")}
+  }
+
+  let sauce = handleSalsa(strength)
+
+  
+
+  
 
   return (
     <div className="FirstForm">
-      <form onSubmit={event => event.preventDefault()}>
-      
-    <div className="textInput">
-      <h2>{name}</h2>
-      <input 
-      type="text"
-      onChange = {event => setName(event.target.value)}
-      value = {name}
-      />
-      </div>
-
-
-    <div className="listInput"> 
-      <h2>{bread}</h2>
-      <select
-      onChange={event => setBread(event.target.value)}
-      value={bread}
-      >
-        <option value="">What type of bread?</option>
-        <option value="tortillas">Soft tortillas</option>
-        <option value="standNStuff">Stand'n'stuff</option>
-        <option value="tacoShells">Hard taco shells</option>
-        <option value="tacoTubes">Hard taco tubes</option>
-      </select>
-    </div>
-
+      <h1>TALK THAT TACO</h1>
+      <h3>How'd you like your taco?</h3>
+      <div>
+        {showResult && 
         
-    <div className="radioButtons">
-      Do you want a banana in your taco?
-      {when.map(time => (
-        <label key = {time}>
-          <input
-          type = "radio"
-          value={time}
-          onChange={event => setWhen(event.target.value)}
-          checked={whenTime === time}
-           />
-          {time}
-        </label>
-            ))
-            }
-    </div>
+        <div onReset={redoForm}>
+          {name}, you want your taco with {bread} and some nice {sauce} salsa. But please, no {list}! 
+          <button type='reset' onClick={redoForm}>Another taco!</button>
+          </div>}
+          
+        {!showResult && 
+      <form onSubmit={handleSubmit}>
 
-        <label>
-        Do you want a banana in your taco?
-            <input
-            type = "checkbox"
-            checked = {wantCat}
-            onChange= {event => setWantCat(event.target.checked)}
+        {question === '1' && (
+          <div className="question">
+            <h3>What's your name?</h3>
+            <input 
+            type="text"
+            onChange = {event => setName(event.target.value)}
+            value = {name}
+            required
             />
-        </label>
+          </div>
+        )}
+
+        {question === '2' && (
+          <div className="question">
+          <h3>What kind of taco wrapper?</h3>
+            <label>
+              <input
+                type="radio"
+                value={bread}
+                onChange={() => setBread("tortilla")}
+                checked={bread === "tortilla"}
+                 />
+              <span role="img" aria-label="tortilla">🌯</span>
+            </label>
+  
+            <label>
+              <input
+                type="radio"
+                value={bread}
+                onChange={() => setBread("hard shell")}
+                checked={bread === "hard shell"} 
+                />
+              <span role="img" aria-label="hard shell">🌮</span>
+            </label>       
+          </div>
+        )}
+
+        {question === '3' && (
+          <div className="question">
+          <h3>How do you like your salsa?</h3>
+
+          <span>🌶</span>
+          <input 
+                type="range" 
+                min="1" 
+                max="30" 
+                value={strength}
+                onChange={(event) => setStrength(event.target.value)}
+                id="salsaRange" />
+          <span>🌶🌶🌶</span>
+        </div>
+        )}  
+  
+        {question === '4' && (
+          <div className="question">
+            <h3>What do you definitly not want?</h3> 
+            <select
+              onChange={event => setList(event.target.value)}
+              value={list}
+              required>
+              <option value="">Please no</option>
+              <option value="cilantro">Cilantro</option>
+              <option value="corn">Corn</option>
+              <option value="banana">Banana</option>
+            </select>
+          </div>
+        )} 
+          
+    
+        {question === 'last' && (
+          <div className="question">
+            <label className="nachos">
+            Nachos on the side?
+            <input
+              type = "checkbox"
+              checked = {wantNachos}
+              value = {wantNachos}
+              onChange= {event => setWantNachos(event.target.checked)} />
+            </label>
+          </div> 
+        )} 
+
+{/* If not on the first / last question, render a previous / continue-button */}
+          {question !== '1' && (
+           <button type="button" className="previous" onClick={handlePrevious}>Back</button>
+         )}
+
+         {question !== 'last' && (
+           <button type="button" className="next" onClick={handleNext}>Continue</button>
+         )}
+
+          {question === 'last' && (
+           <button type="submit">Submit</button>
+         )}
+               
       </form>
+      }
+      </div>
     </div>
   )
 }
