@@ -28,9 +28,9 @@ export const App = () => {
     
     {!showResult && (
     <div>
-      
+     <div className="heading"> 
 <h2>It's time for a holiday !</h2>
-
+</div>
 
  <form onSubmit={handleSubmit}>
  <div className="destination">
