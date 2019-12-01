@@ -4,7 +4,7 @@ export const Summary = (props) => {
 
   console.log(props.answers)
 
-  //comparing user answer and the current answer to set a score
+  // Comparing user answer and the current answer to set a score
   const result = () => {
     let score = 0
     if (props.answers.married === props.marriages) { score++ }
@@ -18,7 +18,7 @@ export const Summary = (props) => {
 
   const score = result()
 
-  //JS function to reload the page, if user click on the "try-again" btn
+  // JS function to reload the page, if user click on the "try-again" button
   const handelSubmit = (event) => {
     event.preventDefault()
     window.location.reload()

@@ -10,7 +10,7 @@ const places = ["During their trip to Vegas", "When they went for sking", "Durin
 const pets = ["Dog", "Cat", "Monkey", "Duck"]
 const favSongs = ["Holiday Song", "Smelly Cat", "Sticky Shoes", "Jingle Bitch"]
 const reasons = ["Rachel fell in love with her boss", "They didn't love each other anymore ", "Rachel had to move to Paris ", "Rachel was too busy with work to pay attention to Ross"]
-//made an object for all the question, because I wanted to show them in Summary as well
+// Made an object for all the question, because I wanted to show them in Summary as well
 const Questions = {
   q1: "How many times have Ross been married?",
   q2: "Where did friends hang out the most?",
@@ -19,7 +19,7 @@ const Questions = {
   q5: "Pheobe's famous song?",
   q6: "Why did Ross and Rachel break up?",
 }
-//An object for the correct answers, which are imported to Summary, to compare the user-answer with the currect answer
+// An object for the correct answers, which are imported to Summary, to compare the user-answer with the currect answer
 const CorrectAnswers = {
   married: married[3],
   spots: spots[2],
@@ -29,7 +29,7 @@ const CorrectAnswers = {
   reasons: reasons[3]
 }
 
-//React Hooks
+// React Hooks
 export const Form = () => {
 
   const [marriages, setMarriages] = useState();
@@ -40,7 +40,7 @@ export const Form = () => {
   const [breakup, setBreakup] = useState();
   const [submitted, setSubmitted] = useState(false);
 
-  //a function which sent an alert, if user don't answer all the question. 
+  // A function which sent an alert, if user don't answer all the question. 
   const handelSubmit = (event) => {
     event.preventDefault()
 
@@ -48,7 +48,9 @@ export const Form = () => {
       alert("Answer all questions ... ")
 
     } else {
+
       setSubmitted(true)
+      // If all questions are answered scroll to top
       window.scrollTo(0, 0)
     }
   }
@@ -58,7 +60,7 @@ export const Form = () => {
   return (
     <div className="form-container">
 
-      {/* display none on the form - shows the summary and hides the form, when the submit btn trigged */}
+      {/* Display none on the form - shows the summary and hides the form, when the submit btn trigged */}
       {!submitted && (
         <div>
           <h2>How well do you remember Friends?</h2>

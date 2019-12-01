@@ -5,6 +5,7 @@ body {
   background-color: #828282;
   height: 100vh;
   margin: 0;
+  min-width: 300px;
 }
 
 * {
@@ -38,7 +39,6 @@ h4 {
 
 header img {
   margin-top: 20px;
-  height: 100px;
   width: 600px;
 }
 
@@ -63,16 +63,17 @@ footer {
   display: flex;
   justify-content: center;
   color: #fff;
-  font-size: 12px;
   margin-top: 30px;
   padding: 20px 0;
   width: 100%;
 }
 
 @media only screen and (max-width: 640px) {
+  header {
+    text-align: center;
+  }
   header img {
-    height: 70px;
-    width: 360px;
+    width: 90%;
   }
   h1, h2 {
     font-size: 28px;
@@ -80,7 +81,16 @@ footer {
   h3 {
     font-size: 20px;
   }
-  .question-card, .summary {
-    width: 400px;
+  .question-card {
+    width: 100%;
+  }
+  .summary div, .summary hr {
+    width: 100%;
+  }
+  .summary {
+    width: 100%;
+    padding: 10px;
+    margin: 0px;
+    border-radius: 0px;
   }
 }
