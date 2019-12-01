@@ -91,7 +91,7 @@ label .destinations {
 
 .submitBtn {
   justify-content: center;
-  border-image-outset: 2px;
+  border: outset;
   margin-left: 5px;
   margin-top: 15px;
 }
