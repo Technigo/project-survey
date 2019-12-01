@@ -15,14 +15,18 @@
   padding: 5px;
 }
 
+/* TABLET */
+@media (min-width: 600px) and (max-width: 999px) {
+  .summary { 
+    background: url(./summarybackground2.jpg);
+
+  }
+}
 /* DESKTOP */
-
 @media (min-width: 1000px) {
-
   .summary {
     background: url(./summarybackground2.jpg);
   }
-
   }
   
 
