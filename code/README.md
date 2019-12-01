@@ -1,19 +1,22 @@
-# Technigo React Starter App
+# Project 10 @ Technigo Bootcamp - Build a survey form using React
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+ This week we started useing React State. We build a survey form, which should show a summary to users when all the questions are filled.
+ 
+## To learn this week
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+1.What the purpose of state in React is.
+2.How to use the useState hook in React.
+3. How to connect HTML form inputs to state. 
+4. Destructuring arrays, Conditional Rendering
 
-Alternatively, if you don't want a new git repo on your account;
+## Tech
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+1. HTML
+2. CSS
+3.JavaScript
+4. React 
+5.JSX
+
+
