@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
   return (
     <footer>
-      <p>Nasim Mahzoun Ⓒ 2019</p>
+      <span>Nasim Mahzoun Ⓒ 2019</span>
     </footer>
 
   )
