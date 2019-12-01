@@ -1,3 +1,5 @@
+/*GENERAL*/
+
 body {
   margin: 10px;
   color: darkred;
@@ -5,98 +7,75 @@ body {
   background-color: #fffaf8;
 }
 
+h1{
+  margin: 40px 0;
+}
+
 form{
-  margin: 10px;
+  margin: 60px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-input{
+
+.radio-buttons, .textinput-div, .select-div, .checkbox-div, .images{
+  border: 2px solid hotpink;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom:20px;
+}
+
+/*QUESTION 1 (radio-buttons)*/
+.radio-buttons label{
+  margin: 10px 0;
+}
+/*RADIO-BUTTONS*/
+input[type="radio"]{
+  display:none;
+}
+.fakeRadio{
+  border: 2px solid hotpink;
+  width: 14px;
+  height: 14px;
+  border-radius: 14px;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+input:checked + .fakeRadio::after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: darkred;
+  display: inline-block;
+  border-radius: 12px;
+}
+
+
+/*QUESTION 2 & 3 (textinput, select)*/
+input, select{
   margin: 0 15px;
   border: 2px solid hotpink;
   font-size: 14px;
   border-radius: 4px;
 }
-select{
+.textinput-div label, .select-div label, .images label{
+  display: flex;
+  flex-direction: column;
+}
+.textinput-div input, .select-div select{
+  margin-top: 15px;
+}
+
+/* select{
   margin: 0 15px;
   border: 2px solid hotpink;
   font-size: 14px;
-}
-button{
-  width: 75px;
-  font-size: 16px;
-  font-weight: bold;
-  border: 2px solid hotpink;
-  background-color: darkred;
-  color: white;
-  padding: 5px;
-  border-radius: 5px;
-}
-.summary{
-}
-
-h1{
-  margin: 0;
-}
-hr{
-  border: 1px solid hotpink;
-  display: inline-flex;
-  width: 100%;
-}
-
-
-.images{
-  display: flex;
-  flex-wrap: wrap;
-
-}
-
-.image-box1, .image-box2, .image-box3, .image-box4{
-  background-position: center;
-  background-size: cover;
-  height:280px;
-  width: 180px;
-  margin: 10px;
-  border: 5px solid #fffaf8;
-  border-radius: 8px;
-}
-/* .image-box:active{
-  border: 5px solid crimson;
 } */
 
-/* input[type=radio]:checked{
-  border: 5px solid crimson;
-} */
-
-.images{
-  box-sizing: border-box;
-}
-
-.images input[type=radio]{
-  display:none;
-}
-input[type="radio"] + .image-box1, input[type="radio"] + .image-box2, input[type="radio"] + .image-box3, input[type="radio"] + .image-box4 {
-  cursor:pointer;
-  opacity: 0.7;
-}
-input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-box2, input[type="radio"]:checked + .image-box3, input[type="radio"]:checked + .image-box4{
-  border: 2px solid hotpink;
-  opacity: 1;
-}
-
-.radio-buttons{
-  display:flex;
-  flex-direction: column;
-}
-.radio-buttons label{
-  margin: 5px 0;
-}
-
-
-/* .radio-buttons input[type="radio"]:checked{
-  background-color:darkred;
-  border: 2px solid hotpink;
-  color:darkred;
-} */
+/*QUESTION 4 (checkbox)*/
 
 input[type="checkbox"]{
   display:none;
@@ -112,9 +91,6 @@ input[type="checkbox"]{
   justify-content: center;
   margin-left: 5px;
 }
-.fakeCheckbox::before{
-
-}
 
 input:checked + .fakeCheckbox::after{
   content: '';
@@ -125,42 +101,80 @@ input:checked + .fakeCheckbox::after{
   border-radius: 3px;
 }
 
+/*QUESTION 5 (radio-buttons/images)*/
+.images{
+justify-content: center;
+}
+
+button{
+  width: 80px;
+  font-size: 16px;
+  font-weight: bold;
+  border: 2px solid hotpink;
+  background-color: darkred;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-button{
+  display:flex;
+  justify-content: center;
+}
+
+
+.summary{
+}
+
+
+hr{
+  border: 1px solid hotpink;
+  display: inline-flex;
+  width: 100%;
+}
+
+.image-box1, .image-box2, .image-box3, .image-box4{
+  background-position: center;
+  background-size: cover;
+  height:280px;
+  width: 180px;
+  margin: 10px;
+  border: 2px solid #fffaf8;
+  border-radius: 8px;
+}
+/* .image-box:active{
+  border: 5px solid crimson;
+} */
+
+/* input[type=radio]:checked{
+  border: 5px solid crimson;
+} */
+
+.images input[type=radio]{
+  display:none;
+}
+input[type="radio"] + .image-box1, input[type="radio"] + .image-box2, input[type="radio"] + .image-box3, input[type="radio"] + .image-box4 {
+  cursor:pointer;
+  opacity: 0.7;
+}
+input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-box2, input[type="radio"]:checked + .image-box3, input[type="radio"]:checked + .image-box4{
+  border: 2px solid hotpink;
+  opacity: 1;
+}
+
+/* .radio-buttons{
+  display:flex;
+  flex-direction: column;
+} */
+
 label {
   display:flex;
   align-items: center;
 }
 
-.textinput-div, .select-div, .checkbox-div{
-padding: 18px 0;
-}
 
 
-/*RADIO-BUTTONS*/
-input[type="radio"]{
-  display:none;
-}
-.fakeRadio{
-  border: 2px solid hotpink;
-  width: 14px;
-  height: 14px;
-  border-radius: 14px;
-  display:inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-}
-.fakeRadio::before{
-
-}
-
-input:checked + .fakeRadio::after{
-  content: '';
-  width: 12px;
-  height: 12px;
-  background: darkred;
-  display: inline-block;
-  border-radius: 12px;
-}
 
 
 /* content: "✔" You can use this in CSS to style checkboxes for example*/

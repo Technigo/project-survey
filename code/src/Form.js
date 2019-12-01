@@ -7,13 +7,13 @@ import tree5 from 'images/tree5.jpeg'
 import tree6 from 'images/tree6.jpeg'
 
 export const Form = () => {
-  const [name, setName] = useState('')
+  const [ageGroup, setAgeGroup] = useState()
+  const [merryChristmas, setMerryChristmas] = useState('')
   const [decoration, setDecoration] = useState('')
   const [enjoysChristmas, setEnjoysChristmas] = useState(false)
-  const [ageGroup, setAgeGroup] = useState()
-  const [showSummary, setShowSummary] = useState(false) // False because we don't want to show summary to start with
   const [preferredImage, setPreferredImage] = useState()
-
+  const [showSummary, setShowSummary] = useState(false) // False because we don't want to show summary to start with
+  const [question, setQuestion] = useState('timesOfChristmases') //To have one question at a time
 
   const ageGroups = [
     "0-18",
@@ -26,6 +26,19 @@ export const Form = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     setShowSummary(true)//On submit we want to show the summary
+  }
+
+  const handleContinue = () => {
+    if (question === 'timesOfChristmases') {
+      setQuestion('merryChristmas')
+    } else if (question === 'merryChristmas') {
+      setQuestion('christmasDecoration')
+    } else if (question === 'christmasDecoration') {
+      setQuestion('enjoysChristmas')
+    } else if (question === 'enjoysChristmas') {
+      setQuestion('prettiestTree')
+
+    }
   }
 
 
@@ -70,11 +83,11 @@ export const Form = () => {
         <br></br>
         You answered that {decoration} is your decoration of choice and that you've celebrated Christmas around {ageGroup} times!
         <br></br>
-        Well, {name} to you too!
+        Well, {merryChristmas} to you too!
         <br></br>
         <br></br>
-        May your Christmas tree look like this:
-{imageToShow()}
+        Hope your Christmas tree look like this:
+        {imageToShow()}
       </div>
       )}
 
@@ -85,136 +98,167 @@ export const Form = () => {
           <form onSubmit={handleSubmit}>
 
             <div className="header">
-              <h1>Survey about Christmas</h1>
-              <hr></hr>
+              <h1>Christmas survey</h1>
             </div>
 
-            {/* QUESTION 1 */}
-            <div className="radio-buttons">
-              How many times have you celebrated Christmas?
-{ageGroups.map(group => (
-                <label key={group}>
-                  <input
-                    type="radio"
-                    value={group}
-                    onChange={event => setAgeGroup(event.target.value)}
-                    checked={ageGroup === group}
+            {question === 'timesOfChristmases' && (
+
+              < div className="radio-buttons">
+                How many times have you celebrated Christmas?
+                {ageGroups.map(group => (
+                  <label key={group}>
+                    <input
+                      type="radio"
+                      value={group}
+                      onChange={event => setAgeGroup(event.target.value)}
+                      checked={ageGroup === group}
+                    />
+                    <span className="fakeRadio"></span>
+                    {group}
+                  </label>
+                ))}
+              </div>
+            )}
+
+
+
+            {question === 'merryChristmas' && (
+
+
+              < div className="textinput-div">
+                <label>How do you say Merry Christmas in your language?
+<input
+                    type="text"
+                    onChange={(event) => setMerryChristmas(event.target.value)}
+                    value={merryChristmas}
                   />
-                  <span className="fakeRadio"></span>
-                  {group}
                 </label>
-              ))}
-            </div>
+              </div>
+            )
+            }
 
-            <hr></hr>
 
-            {/* QUESTION 2 */}
-            <div className="textinput-div">
-              <label>How do you say Merry Christmas in your language?
-<input
-                  type="text"
-                  onChange={(event) => setName(event.target.value)}
-                  value={name}
-                />
-              </label>
-            </div>
-            <hr></hr>
 
-            {/* QUESTION 3 */}
-            <div className="select-div">
-              <label>Favourite Christmas decoration:
+            {question === 'christmasDecoration' && (
+
+
+              < div className="select-div" >
+                <label>Favourite Christmas decoration:
       <select
-                  onChange={event => setDecoration(event.target.value)}
-                  value={decoration}
-                >
-                  <option value="">Select decoration:</option>
-                  <option value="christmas tree">Christmas trees</option>
-                  <option value="advent candles">Advent candles</option>
-                  <option value="poinsettia flower">Poinsettia flowers</option>
-                  <option value="star lamp">Star lamps</option>
-                  <option value="nothing">I said I don't celebrate christmas!</option>
-                </select>
-              </label>
-            </div>
+                    onChange={event => setDecoration(event.target.value)}
+                    value={decoration}
+                  >
+                    <option value="">Select decoration:</option>
+                    <option value="christmas tree">Christmas trees</option>
+                    <option value="advent candles">Advent candles</option>
+                    <option value="poinsettia flower">Poinsettia flowers</option>
+                    <option value="star lamp">Star lamps</option>
+                    <option value="nothing">I said I don't celebrate christmas!</option>
+                  </select>
+                </label>
+              </div >
 
-            <hr></hr>
+            )
+            }
 
-            {/* QUESTION 4 */}
-            <div className="checkbox-div">
-              <label>
-                Enjoy Christmas?
+
+
+            {question === 'enjoysChristmas' && (
+
+
+              <div className="checkbox-div">
+                <label>
+                  Enjoy Christmas?
 <input
-                  type="checkbox"
-                  checked={enjoysChristmas}
-                  onChange={event => setEnjoysChristmas(event.target.checked)}
-                />
-                <span className="fakeCheckbox"></span>
-              </label>
-            </div>
+                    type="checkbox"
+                    checked={enjoysChristmas}
+                    onChange={event => setEnjoysChristmas(event.target.checked)}
+                  />
+                  <span className="fakeCheckbox"></span>
+                </label>
+              </div>
 
-            <hr></hr>
+            )
+            }
 
-            {/* QUESTION 5 */}
-            Which Christmas tree is the most beautiful?
-            <div className="images">
 
-              <label>
-                <input type="radio"
-                  value="tree3"
-                  onChange={() => setPreferredImage("tree3")}
-                  checked={preferredImage === "tree3"}
-                ></input>
-                <div className="image-box1"
-                  style={{ backgroundImage: `url(${tree3})` }}
-                  aria-label="Image of Christmas tree with eyes">
+
+            {question === 'prettiestTree' && (
+
+
+
+
+              <div className="images">
+                Which Christmas tree is the most beautiful?
+        <label>
+                  <input type="radio"
+                    value="tree3"
+                    onChange={() => setPreferredImage("tree3")}
+                    checked={preferredImage === "tree3"}
+                  ></input>
+                  <div className="image-box1"
+                    style={{ backgroundImage: `url(${tree3})` }}
+                    aria-label="Image of Christmas tree with eyes">
+                  </div>
+                </label>
+
+
+                <label>
+                  <input type="radio"
+                    value="tree4"
+                    onChange={() => setPreferredImage("tree4")}
+                    checked={preferredImage === "tree4"}
+                  ></input>
+                  <div className="image-box2"
+                    style={{ backgroundImage: `url(${tree4})` }}
+                    aria-label="Image of Christmas tree with Santa Clause's">
+                  </div>
+                </label>
+
+
+                <label>
+                  <input type="radio"
+                    value="tree5"
+                    onChange={() => setPreferredImage("tree5")}
+                    checked={preferredImage === "tree5"}
+                  ></input>
+
+                  <div className="image-box3"
+                    style={{ backgroundImage: `url(${tree5})` }}
+                    aria-label="Image of spruce tree in a field">
+                  </div>
+                </label>
+
+
+                <label>
+                  <input type="radio"
+                    value="tree6"
+                    onChange={() => setPreferredImage("tree6")}
+                    checked={preferredImage === "tree6"}
+                  ></input>
+
+                  <div className="image-box4"
+                    style={{ backgroundImage: `url(${tree6})` }}
+                    aria-label="Image of palm tree">
+                  </div>
+                </label>
+
+                {/*SUBMIT-BUTTON*/}
+                <div className="submit-button">
+                  < button type="submit" > Submit</button>
                 </div>
-              </label>
+              </div>
+
+            )
+            }
+            {question !== 'prettiestTree' && (
+              <button type="button" onClick={handleContinue}>
+                Next question
+</button>
+
+            )}
 
 
-              <label>
-                <input type="radio"
-                  value="tree4"
-                  onChange={() => setPreferredImage("tree4")}
-                  checked={preferredImage === "tree4"}
-                ></input>
-                <div className="image-box2"
-                  style={{ backgroundImage: `url(${tree4})` }}
-                  aria-label="Image of Christmas tree with Santa Clause's">
-                </div>
-              </label>
-
-
-              <label>
-                <input type="radio"
-                  value="tree5"
-                  onChange={() => setPreferredImage("tree5")}
-                  checked={preferredImage === "tree5"}
-                ></input>
-
-                <div className="image-box3"
-                  style={{ backgroundImage: `url(${tree5})` }}
-                  aria-label="Image of spruce tree in a field">
-                </div>
-              </label>
-
-
-              <label>
-                <input type="radio"
-                  value="tree6"
-                  onChange={() => setPreferredImage("tree6")}
-                  checked={preferredImage === "tree6"}
-                ></input>
-
-                <div className="image-box4"
-                  style={{ backgroundImage: `url(${tree6})` }}
-                  aria-label="Image of palm tree">
-                </div>
-              </label>
-            </div>
-
-
-            {/*SUBMIT-BUTTON*/}
-            < button type="submit" > Submit</button>
           </form >
 
         )
