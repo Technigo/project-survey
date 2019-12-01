@@ -22,7 +22,7 @@ export const App = () => {
         <form onSubmit={event => event.preventDefault()}>
 
           <div className="heroHeader">
-            <h2>Plan your 2020 adventure now!</h2>
+            <h2>Plan your 2020 adventure!</h2>
           </div>
 
           <div className="nameBox">
@@ -66,12 +66,12 @@ export const App = () => {
           </div>
 
 
-          <p>What’s the most important thing when you travel?</p>
+          <p>What’s the most important to you?</p>
           <select className="formDropdown"
             onChange={event => setMostImportant(event.target.value)}
             value={mostImportant}
           >
-            <option value="">Choose here please!</option>
+            <option value="">Choose one alternative!</option>
             <option value="to step out of the comfort zone">to step out of the comfort zone</option>
             <option value="low-impact tourism policy">low-impact tourism policy</option>
             <option value="great food and beverage">great food and beverage</option>
