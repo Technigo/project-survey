@@ -69,43 +69,45 @@ export const Form = () => {
 
             <div className="question-card">
               <h3> {Questions.q1} </h3>
+              <div>
+                {married.map(marriedItem => (
 
-              {married.map(marriedItem => (
+                  <label key={marriedItem} className="radio-circle">
 
-                <label htmlFor={marriedItem} key={marriedItem} className="radio-circle">
+                    <input
+                      type="radio"
+                      value={marriedItem}
+                      onChange={event => setMarriages(event.target.value)}
+                      checked={marriages === marriedItem}
+                      id={marriedItem}
 
-                  <input
-                    type="radio"
-                    value={marriedItem}
-                    onChange={event => setMarriages(event.target.value)}
-                    checked={marriages === marriedItem}
-                    id={marriedItem}
-
-                  />
-                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                  {marriedItem}
-                </label>
-              ))}
+                    />
+                    <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                    {marriedItem}
+                  </label>
+                ))}
+              </div>
             </div>
 
 
             <div className="question-card">
               <h3> {Questions.q2} </h3>
+              <div>
+                {spots.map(spot => (
 
-              {spots.map(spot => (
+                  <label key={spot} className="radio-circle">
 
-                <label key={spot} className="radio-circle">
-
-                  <input
-                    type="radio"
-                    value={spot}
-                    onChange={event => setHangoutSpot(event.target.value)}
-                    checked={hangoutSpot === spot}
-                  />
-                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                  {spot}
-                </label>
-              ))}
+                    <input
+                      type="radio"
+                      value={spot}
+                      onChange={event => setHangoutSpot(event.target.value)}
+                      checked={hangoutSpot === spot}
+                    />
+                    <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                    {spot}
+                  </label>
+                ))}
+              </div>
             </div>
 
             <div className="question-card">
@@ -132,40 +134,42 @@ export const Form = () => {
             </div>
             <div className="question-card">
               <h3> {Questions.q4} </h3>
+              <div>
+                {pets.map(pet => (
 
-              {pets.map(pet => (
+                  <label key={pet} className="radio-circle">
 
-                <label key={pet} className="radio-circle">
-
-                  <input
-                    type="radio"
-                    value={pet}
-                    onChange={event => setAnimals(event.target.value)}
-                    checked={animal === pet}
-                  />
-                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                  {pet}
-                </label>
-              ))}
+                    <input
+                      type="radio"
+                      value={pet}
+                      onChange={event => setAnimals(event.target.value)}
+                      checked={animal === pet}
+                    />
+                    <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                    {pet}
+                  </label>
+                ))}
+              </div>
             </div>
 
             <div className="question-card">
               <h3> {Questions.q5}</h3>
+              <div>
+                {favSongs.map(favSong => (
 
-              {favSongs.map(favSong => (
+                  <label key={favSong} className="radio-circle">
 
-                <label key={favSong} className="radio-circle">
-
-                  <input
-                    type="radio"
-                    value={favSong}
-                    onChange={event => setSongs(event.target.value)}
-                    checked={song === favSong}
-                  />
-                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                  {favSong}
-                </label>
-              ))}
+                    <input
+                      type="radio"
+                      value={favSong}
+                      onChange={event => setSongs(event.target.value)}
+                      checked={song === favSong}
+                    />
+                    <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                    {favSong}
+                  </label>
+                ))}
+              </div>
             </div>
 
             <div className="question-card">

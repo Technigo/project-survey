@@ -86,7 +86,7 @@ input[type=radio]:focus {
 
 .question-card {
     margin: 10px 0px;
-    padding: 0px 50px 30px 50px;
+    padding: 0px 0px 30px 20px;
     background-color: #414141;
     border-radius: 20px;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -94,9 +94,13 @@ input[type=radio]:focus {
     box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
 }
 
+.question-card div {
+    margin: 0px 20px;
+}
+
 .summary {
     margin: 10px 0px;
-    padding: 20px 50px;
+    padding: 20px 20px;
     border-radius: 20px;
     background-color: #414141;
     -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
@@ -110,4 +114,19 @@ input[type=radio]:focus {
 
 .summary div, .summary hr {
     width: 80%;
+}
+
+@media only screen and (max-width: 640px) {
+    .question-card {
+        width: 100%;
+    }
+    .summary div, .summary hr {
+        width: 100%;
+    }
+    .summary {
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+        border-radius: 0px;
+    }
 }
