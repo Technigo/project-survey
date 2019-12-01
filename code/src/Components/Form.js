@@ -5,12 +5,12 @@ import './Form.css'
 
 
 const married = ["Never", "Once", "Twice", "Three times", "Four times"]
-const spots = ["Cafè Park", "Cafè House", "Central Perk Cafè", "Central Park"]
-const places = ["During their trip to Vegas", "When they went for sking", "At Ross wedding in London", "At Cafè House"]
+const spots = ["Cafè Park", "Cafè Park House", "Central Perk Cafè", "Central Park"]
+const places = ["During their trip to Vegas", "When they went for sking", "During Ross wedding in London", "At Central Perk Cafè"]
 const pets = ["Dog", "Cat", "Monkey", "Duck"]
-const favSongs = ["Happy Hanukkah", "Smelly Cat", "Christmas Song", "Smelly Dog"]
-const reasons = ["Rachel fell in love with her boss", "They didn't love each other anymore ", "Rachel had to move to Paris ", "Ross cheated on Rachel, when he thought they were on a break"]
-
+const favSongs = ["Holiday Song", "Smelly Cat", "Sticky Shoes", "Jingle Bitch"]
+const reasons = ["Rachel fell in love with her boss", "They didn't love each other anymore ", "Rachel had to move to Paris ", "Rachel was too busy with work to pay attention to Ross"]
+//made an object for all the question, because I wanted to show them in Summary as well
 const Questions = {
   q1: "How many times have Ross been married?",
   q2: "Where did friends hang out the most?",
@@ -19,7 +19,7 @@ const Questions = {
   q5: "Pheobe's famous song?",
   q6: "Why did Ross and Rachel break up?",
 }
-
+//An object for the correct answers, which are imported to Summary, to compare the user-answer with the currect answer
 const CorrectAnswers = {
   married: married[3],
   spots: spots[2],
@@ -29,6 +29,7 @@ const CorrectAnswers = {
   reasons: reasons[3]
 }
 
+//React Hooks
 export const Form = () => {
 
   const [marriages, setMarriages] = useState();
@@ -39,65 +40,84 @@ export const Form = () => {
   const [breakup, setBreakup] = useState();
   const [submitted, setSubmitted] = useState(false);
 
+  //a function which sent an alert, if user don't answer all the question. 
   const handelSubmit = (event) => {
     event.preventDefault()
-    setSubmitted(true)
 
+    if (marriages === undefined || hangoutSpot === undefined || datingPlace === undefined || animal === undefined || song === undefined || breakup === undefined) {
+      alert("Answer all questions ... ")
+
+    } else {
+      setSubmitted(true)
+    }
   }
 
+
+
   return (
-      <div className="form-container">
+    <div className="form-container">
 
-        
+      {/* display none on the form - shows the summary and hides the form, when the submit btn trigged */}
+      {!submitted && (
+        <div>
+          <h2>How well do you remember Friends?</h2>
 
-        {/* display:none, on the form */}
-
-        {!submitted && (
-          
           <form onSubmit={handelSubmit} className="form-style">
-            <h2>How well do you remember friends?</h2>
-            <h3> {Questions.q1} </h3>
 
-            {married.map(marriedItem => (
+            <div className="question-card">
+              <h3> {Questions.q1} </h3>
 
-              <label key={marriedItem} className="radio-circle">
+              {married.map(marriedItem => (
 
-                <input
-                  type="radio"
-                  value={marriedItem}
-                  onChange={event => setMarriages(event.target.value)}
-                  checked={marriages === marriedItem}
-                />
-                <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                {marriedItem}
-              </label>
-            ))}
+                <label htmlFor={marriedItem} key={marriedItem} className="radio-circle">
 
-            <h3> {Questions.q2} </h3>
+                  <input
+                    type="radio"
+                    value={marriedItem}
+                    onChange={event => setMarriages(event.target.value)}
+                    checked={marriages === marriedItem}
+                    id={marriedItem}
 
-            {spots.map(spot => (
+                  />
+                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                  {marriedItem}
+                </label>
+              ))}
+            </div>
 
-              <label key={spot} className="radio-circle">
 
-                <input
-                  type="radio"
-                  value={spot}
-                  onChange={event => setHangoutSpot(event.target.value)}
-                  checked={hangoutSpot === spot}
-                />
-                <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                {spot}
-              </label>
-            ))}
+            <div className="question-card">
+              <h3> {Questions.q2} </h3>
 
-            <label>
+              {spots.map(spot => (
+
+                <label key={spot} className="radio-circle">
+
+                  <input
+                    type="radio"
+                    value={spot}
+                    onChange={event => setHangoutSpot(event.target.value)}
+                    checked={hangoutSpot === spot}
+                  />
+                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                  {spot}
+                </label>
+              ))}
+            </div>
+
+            <div className="question-card">
+
               <h3> {Questions.q3} </h3>
 
               <div className="drop-down">
-                <select required onChange={event => setDatingplace(event.target.value)}
-                  checked={datingPlace === places}>
+                <select required
+                  onChange={event => setDatingplace(event.target.value)}
+                  checked={datingPlace === places}
+                  tabIndex="0"
+                  defaultValue="- Select Here -"
+                >
 
-                  <option disabled selected value> - Select Here - </option>
+                  <option disabled> - Select Here - </option>
 
                   {places.map(place => (
                     <option key={place} value={place}>{place}</option>
@@ -105,50 +125,58 @@ export const Form = () => {
 
                 </select>
               </div>
-            </label>
 
-            <h3> {Questions.q4} </h3>
+            </div>
+            <div className="question-card">
+              <h3> {Questions.q4} </h3>
 
-            {pets.map(pet => (
+              {pets.map(pet => (
 
-              <label key={pet} className="radio-circle">
+                <label key={pet} className="radio-circle">
 
-                <input
-                  type="radio"
-                  value={pet}
-                  onChange={event => setAnimals(event.target.value)}
-                  checked={animal === pet}
-                />
-                <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                {pet}
-              </label>
-            ))}
+                  <input
+                    type="radio"
+                    value={pet}
+                    onChange={event => setAnimals(event.target.value)}
+                    checked={animal === pet}
+                  />
+                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                  {pet}
+                </label>
+              ))}
+            </div>
 
-            <h3> {Questions.q5}</h3>
+            <div className="question-card">
+              <h3> {Questions.q5}</h3>
 
-            {favSongs.map(favSong => (
+              {favSongs.map(favSong => (
 
-              <label key={favSong} className="radio-circle">
+                <label key={favSong} className="radio-circle">
 
-                <input
-                  type="radio"
-                  value={favSong}
-                  onChange={event => setSongs(event.target.value)}
-                  checked={song === favSong}
-                />
-                <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
-                {favSong}
-              </label>
-            ))}
+                  <input
+                    type="radio"
+                    value={favSong}
+                    onChange={event => setSongs(event.target.value)}
+                    checked={song === favSong}
+                  />
+                  <span className="checkmark" role="radio" aria-checked="false" tabIndex="0"></span>
+                  {favSong}
+                </label>
+              ))}
+            </div>
 
-            <label>
+            <div className="question-card">
               <h3> {Questions.q6} </h3>
 
               <div className="drop-down">
-                <select required onChange={event => setBreakup(event.target.value)}
-                  checked={breakup === reasons}>
+                <select required
+                  onChange={event => setBreakup(event.target.value)}
+                  checked={breakup === reasons}
+                  tabIndex="0"
+                  defaultValue="- Select Here -"
+                >
 
-                  <option disabled selected value> - Select Here - </option>
+                  <option disabled> - Select Here - </option>
 
                   {reasons.map(reason => (
 
@@ -157,15 +185,16 @@ export const Form = () => {
 
                 </select>
               </div>
-            </label>
-
-            <div>
-              <button className="submit-btn"> Finish </button>
             </div>
-          </form>
-        )}
 
-        {submitted && <Summary marriages={marriages} hangoutSpot={hangoutSpot} datingPlace={datingPlace} animal={animal} song={song} breakup={breakup} answers={CorrectAnswers} questions={Questions}/>}
-      </div>
+
+            <button className="submit-btn"> Finish </button>
+
+          </form >
+        </div>
+      )}
+
+      {submitted && <Summary marriages={marriages} hangoutSpot={hangoutSpot} datingPlace={datingPlace} animal={animal} song={song} breakup={breakup} answers={CorrectAnswers} questions={Questions} />}
+    </div >
   )
 }
