@@ -17,7 +17,7 @@ select option {
 }
 
 select:focus {
-    outline: 2px solid #f77754;
+    outline: 2px solid #ab4e55;
     outline-offset: 5px;
 }
 
@@ -59,21 +59,45 @@ input[type=radio]:focus {
     background: #ca3e47;
 }
 
+.myButton {
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 6px 24px;
+    text-decoration: none;
+}
+
+.myButton:hover {}
+
+.myButton:active {
+    position: relative;
+    top: 1px;
+}
+
 .submit-btn {
+    box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+    background: linear-gradient(to bottom, #ab4e55 5%, #ab4148 100%);
+    background-color: #ab4148;
+    border-radius: 6px;
+    border: 1px solid #d83526;
+    text-shadow: 0px 1px 0px #ab4148;
     padding: 10px;
     width: 300px;
     margin: 40px auto;
     border-radius: 10px;
     border-style: none;
-    background: #ca3e47;
     font-size: 26px;
     font-weight: bold;
     color: #fff;
 }
 
 .submit-btn:hover {
-    background: #ab4148;
     cursor: pointer;
+    background: linear-gradient(to bottom, #ab4148 5%, #ab4e55 100%);
+    background-color: #ab4148;
 }
 
 .submit-btn:focus {
@@ -81,7 +105,7 @@ input[type=radio]:focus {
 }
 
 .correct-answer {
-    color: rgb(255, 141, 141);
+    color: #ab4e55;
 }
 
 .question-card {

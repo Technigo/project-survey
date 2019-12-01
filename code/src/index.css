@@ -59,6 +59,7 @@ header img {
 }
 
 footer {
+  height: 100px;
   background-color: #313131;
   display: flex;
   justify-content: center;
@@ -80,17 +81,5 @@ footer {
   }
   h3 {
     font-size: 20px;
-  }
-  .question-card {
-    width: 100%;
-  }
-  .summary div, .summary hr {
-    width: 100%;
-  }
-  .summary {
-    width: 100%;
-    padding: 10px;
-    margin: 0px;
-    border-radius: 0px;
   }
 }
