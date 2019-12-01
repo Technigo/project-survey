@@ -97,7 +97,9 @@ export const App = () => {
               ))}
             </div>
 
+
             <button className="submitBtn"
+
               onClick={() => setSubmitted(true)}
             >SUBMIT
             </button>
