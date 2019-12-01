@@ -7,13 +7,18 @@ import { Thanks } from './Components/Thanks.js'
 
 export const App = () => {
   const [page, setPage] = useState(0);
-  const handleNextPage = () => setPage(page + 1);
+  const [answer, setAnswer] = useState([]);
+  const handleNextPage = (answerValue) => {
+    setPage(page + 1);
+    answer.push(answerValue);
+    setAnswer(answer);
+  }
   const resetPages = () => setPage(0);
   const pages = [
     <Type whenNext={handleNextPage} />,
     <Favorit whenNext={handleNextPage} />,
     <Time whenNext={handleNextPage} />,
-    <Thanks whenNext={resetPages} />
+    <Thanks whenNext={resetPages} answer={answer}/>
   ]
   return (
     <div className="container">

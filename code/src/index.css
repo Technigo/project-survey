@@ -45,6 +45,14 @@ form {
   align-items: center;
 }
 
+.thanks-page {
+  font-family: 'Gruppo', cursive;
+  font-size: 28px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .type-label {
   display: flex;
 }

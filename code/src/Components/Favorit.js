@@ -1,18 +1,21 @@
 import React, { useState } from 'react';
 
-export const Favorit = ({whenNext}) => {
+export const Favorit = ({ whenNext }) => {
+  const [favorit, setFavorit] = useState('');
   const handleSubmit = (event) => {
     event.preventDefault();
-    whenNext();
+    whenNext(favorit);
   }
   return (
     <form onSubmit={handleSubmit} action="">
       <label>
-        Hej jag är sida 2.
-        <input type="text"
-        />
+      What's your favorit game?
+        <input
+          type="text"
+          value={favorit}
+          onChange={(event) => setFavorit(event.target.value)}/>
       </label>
-      <button type="submit" className="next-button">NEXT</button>
+      <button type="submit" className="next-button"></button>
     </form>
   )
 }

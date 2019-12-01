@@ -6,7 +6,7 @@ export const Type = ({whenNext}) => {
   const [typeGroup, setTypeGroup] = useState();
   const handleSubmit = (event) => {
     event.preventDefault();
-    whenNext();
+    whenNext(typeGroup);
  }
   return (
     <form onSubmit={handleSubmit} className="type-style">
@@ -21,7 +21,7 @@ export const Type = ({whenNext}) => {
           {group}
         </label>
       ))}
-      <button type="submit" className="next-button">NEXT</button>
+      <button type="submit" className="next-button"></button>
     </form>
   );
 };
