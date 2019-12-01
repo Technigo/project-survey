@@ -6,14 +6,21 @@
 
 select {
     background: #414141;
-    height: 30px;
+    height: 50px;
     width: 80%;
-    font-size: 15px;
+    font-size: 20px;
     color: #fff;
 }
 
+select option {
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-size: 20px;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.4);
+}
+
 select:focus {
-    outline: 2px solid #1089ff;
+    outline: 2px solid #f77754;
     outline-offset: -1px;
 }
 
@@ -89,9 +96,9 @@ input[type=radio]:focus {
 }
 
 .submit-btn {
-    width: 80%;
     padding: 10px;
-    margin: 40px 0 20px 0;
+    width: 250px;
+    margin: 40px auto;
     border-radius: 10px;
     border-style: none;
     background: #ca3e47;
@@ -100,6 +107,8 @@ input[type=radio]:focus {
     color: #fff;
 }
 
-.qa {
-    background-color: red;
+.qa {}
+
+.correct-answer {
+    color: rgb(255, 141, 141);
 }

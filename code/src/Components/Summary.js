@@ -3,8 +3,9 @@ import React from 'react'
 export const Summary = (props) => {
   console.log(props.answers)
 
-  const rating = () => {
-    let score = 0;
+  const result = () => {
+    let score = 0
+    if (props.answers.married === props.marriages) { score++}
     if (props.answers.spots === props.hangoutSpot) { score++}
     if (props.answers.places === props.datingPlace) { score++ }
     if (props.answers.pets === props.animal) { score++ }
@@ -13,39 +14,61 @@ export const Summary = (props) => {
     return score
   }
 
-  const score = rating()
+  const score = result()
 
+  const handelSubmit = (event) => {
+    event.preventDefault()
+    window.location.reload()
+  }
 
-  return <div className="SummaryStyle">
-    {/* <h3>Thank you {props.name}</h3>
-    <p>You're now registered at <span className="highlight">Technigo</span></p>
-    <p>We are happy that you find us on &nbsp;<span className="highlight">{props.socialMedia}</span></p>
-    <p>You have already experience in &nbsp;<span className="highlight">{props.skills}</span></p>
-    <p>You will {props.wantsNewsletter ? true : `not`} be recieving Technigo's newsletter to &nbsp; <span className="highlight">{props.wantsNewsletter ? `${props.email}` : ``}</span></p> */}
+  return (
+    <div className="SummaryStyle">
 
-    <h2>Thank you Friends fan!</h2>
-    <h3> Your score is: {score} of 5 </h3>
+      <h2>Thank you Friends fan!</h2>
+      <h3> 
+        Your score is {score} of 6
+        { score === 6 ? " Wow! Impressive!":""}
+       </h3>
+      <hr/>
+      <div className="qa">
+        <h4>{props.questions.q1}</h4>
+        <p className="user-answer highlight">Your answer: {props.marriages}</p>
+        <p className="correct-answer">{props.answers.married===props.marriages ? "":`Correct answer: ${props.answers.married}` }</p>
+      </div>
+      <hr/>
+      <div className="qa">
+        <h4>{props.questions.q2}</h4>
+        <p className="user-answer highlight">Your answer: {props.hangoutSpot}</p>
+        <p className="correct-answer">{props.answers.spots===props.hangoutSpot ? "":`Correct answer: ${props.answers.spots}` }</p>
+      </div>
+      <hr/>
+      <div className="qa">
+        <h4>{props.questions.q3}</h4>
+        <p className="user-answer highlight">Your answer: {props.datingPlace}</p>
+        <p className="correct-answer">{props.answers.places===props.datingPlace ? "":`Correct answer: ${props.answers.places}` }</p>
+      </div>
+      <hr/>
+      <div className="qa">
+        <h4>{props.questions.q4}</h4>
+        <p className="user-answer highlight">Your answer: {props.animal}</p>
+        <p className="correct-answer">{props.answers.pets===props.animal ? "":`Correct answer: ${props.answers.pets}` }</p>
 
-    <p className="user-answer">Your favorite character in Friends is: {props.name}</p>
-    <div className="qa">
-      <p className="user-answer highlight">Your answer: {props.hangoutSpot}</p>
-      <p className="correct-answer">Correct answer: {props.answers.spots}</p>
+      </div>
+      <hr/>
+      <div className="qa">
+        <h4>{props.questions.q5}</h4>
+        <p className="user-answer highlight">Your answer: {props.song}</p>
+        <p className="correct-answer">{props.answers.favSongs===props.song ? "":`Correct answer: ${props.answers.favSongs}` }</p>
+      </div>
+      <hr/>
+      <div className="qa">
+        <h4>{props.questions.q6}</h4>
+        <p className="user-answer highlight">Your answer: {props.breakup}</p>
+        <p className="correct-answer">{props.answers.reasons===props.breakup ? "":`Correct answer: ${props.answers.reasons}` }</p>
+
+      </div>
+      <hr/>
+      <button className="submit-btn" onClick={handelSubmit}> Try again! </button>
     </div>
-    <div className="qa">
-      <p className="user-answer highlight">Your answer: {props.datingPlace}</p>
-      <p className="correct-answer">Correct answer: {props.answers.places} </p>
-    </div>
-    <div className="qa">
-      <p className="user-answer highlight">Your answer: {props.animal}</p>
-      <p className="correct-answer">Correct answer: {props.answers.pets} </p>
-    </div>
-    <div className="qa">
-      <p className="user-answer highlight">Your answer: {props.song}</p>
-      <p className="correct-answer highlight">Correct answer: {props.answers.favSongs}</p>
-    </div>
-    <div className="qa">
-      <p className="user-answer highlight">Your answer: {props.breakup}</p>
-      <p className="correct-answer">Correct answer: {props.answers.reasons} </p>
-    </div>
-  </div>
+  )
 }
