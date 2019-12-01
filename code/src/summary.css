@@ -1,4 +1,5 @@
 
+
 .summary {
   margin: 20px;
   background: url(./sketchyCircle_02.png) no-repeat;
@@ -16,14 +17,14 @@
 /* TABLET */
 @media (min-width: 600px) and (max-width: 999px) {
   .summary { 
-    background: url(./summarybackground2.jpg);
+    background: url(./sketchyCircle_02.png) no-repeat;
 
   }
 }
 /* DESKTOP */
 @media (min-width: 1000px) {
   .summary {
-    background: url(./summarybackground2.jpg);
+    background: url(./sketchyCircle_02.png) no-repeat;
   }
   }
   
