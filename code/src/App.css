@@ -56,7 +56,7 @@ hr{
   height:280px;
   width: 180px;
   margin: 10px;
-  border: 5px solid #fffaf8;
+  border: 2px solid #fffaf8;
   border-radius: 8px;
 }
 /* .image-box:active{
@@ -66,10 +66,6 @@ hr{
 /* input[type=radio]:checked{
   border: 5px solid crimson;
 } */
-
-.images{
-  box-sizing: border-box;
-}
 
 .images input[type=radio]{
   display:none;
@@ -90,13 +86,6 @@ input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-
 .radio-buttons label{
   margin: 5px 0;
 }
-
-
-/* .radio-buttons input[type="radio"]:checked{
-  background-color:darkred;
-  border: 2px solid hotpink;
-  color:darkred;
-} */
 
 input[type="checkbox"]{
   display:none;

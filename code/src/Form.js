@@ -7,13 +7,12 @@ import tree5 from 'images/tree5.jpeg'
 import tree6 from 'images/tree6.jpeg'
 
 export const Form = () => {
-  const [name, setName] = useState('')
+  const [ageGroup, setAgeGroup] = useState()
+  const [merryChristmas, setMerryChristmas] = useState('')
   const [decoration, setDecoration] = useState('')
   const [enjoysChristmas, setEnjoysChristmas] = useState(false)
-  const [ageGroup, setAgeGroup] = useState()
-  const [showSummary, setShowSummary] = useState(false) // False because we don't want to show summary to start with
   const [preferredImage, setPreferredImage] = useState()
-
+  const [showSummary, setShowSummary] = useState(false) // False because we don't want to show summary to start with
 
   const ageGroups = [
     "0-18",
@@ -70,10 +69,10 @@ export const Form = () => {
         <br></br>
         You answered that {decoration} is your decoration of choice and that you've celebrated Christmas around {ageGroup} times!
         <br></br>
-        Well, {name} to you too!
+        Well, {merryChristmas} to you too!
         <br></br>
         <br></br>
-        May your Christmas tree look like this:
+        Hope your Christmas tree look like this:
 {imageToShow()}
       </div>
       )}
@@ -113,8 +112,8 @@ export const Form = () => {
               <label>How do you say Merry Christmas in your language?
 <input
                   type="text"
-                  onChange={(event) => setName(event.target.value)}
-                  value={name}
+                  onChange={(event) => setMerryChristmas(event.target.value)}
+                  value={merryChristmas}
                 />
               </label>
             </div>
