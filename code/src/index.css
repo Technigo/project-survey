@@ -6,24 +6,14 @@
 
 body,
 html {
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* color: #dfe6e9; */
-  /* font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace; */
   font-family: "Raleway", sans-serif;
   font-size: 16px;
   height: 100%;
   width: 100%;
-  /* text-shadow: -1px 0 #d35400, 0 1px #d35400, 1px 0 #d35400, 0 -1px #d35400; */
   position: relative;
   color: #3d0e1e;
-}
-
-.root {
 }
 
 code {
@@ -67,8 +57,6 @@ h1 {
   margin: 0 auto;
   padding: 2rem;
   border-bottom: 4px dashed #3d0e1e;
-  /* text-shadow: -1px 0 #d35400, 0 1px #d35400, 1px 0 #d35400, 0 -1px #d35400; */
-  /* text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; */
 }
 
 h1 span {
@@ -107,7 +95,6 @@ label {
 .questions {
   font-size: 1.3rem;
   text-align: left;
-  /* width: 80%; */
 }
 
 /*** INPUT FIELDS ***/
@@ -142,7 +129,6 @@ select {
   outline: solid 2px #d35400;
   margin: 1rem 0 1rem 0;
   font-size: 1rem;
-  /* border: 1px solid #eee; */
   font-family: inherit;
   line-height: inherit;
   -webkit-appearance: none;
@@ -203,6 +189,7 @@ select {
 }
 
 /*** MEDIA QUERIES ***/
+
 @media (min-width: 668px) {
   h1 {
     font-size: 2em;
@@ -244,7 +231,6 @@ select {
 
   .summary {
     padding-top: 4rem;
-    /* text-align: center; */
   }
 
   .inputName,

@@ -63,7 +63,7 @@ export const App = () => {
               {!error && (
                 <Questions value={"q1"} text={"Please fill in your name:"} />
               )}
-              {error && <Questions value={"q1"} text={"Name required:"} />}
+              {error && <Questions value={"q1"} text={"** Name required"} />}
               <InputText
                 value={name}
                 onChange={event => setName(event.target.value)}
