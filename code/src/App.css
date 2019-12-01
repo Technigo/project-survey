@@ -1,3 +1,5 @@
+/*GENERAL*/
+
 body {
   margin: 10px;
   color: darkred;
@@ -5,24 +7,84 @@ body {
   background-color: #fffaf8;
 }
 
+h1{
+  margin: 40px 0;
+}
+
 form{
-  margin: 10px;
+  margin: 60px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
-input{
+
+.radio-buttons, .textinput-div, .select-div, .checkbox-div, .images{
+  border: 2px solid hotpink;
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom:20px;
+}
+
+/*QUESTION 1 (radio-buttons)*/
+.radio-buttons label{
+  margin: 10px 0;
+
+}
+
+/*QUESTION 2 & 3 (textinput, select)*/
+input, select{
   margin: 0 15px;
   border: 2px solid hotpink;
   font-size: 14px;
   border-radius: 4px;
 }
-select{
+.textinput-div label, .select-div label{
+  display: flex;
+  flex-direction: column;
+}
+.textinput-div input, .select-div select{
+  margin-top: 15px;
+}
+
+/* select{
   margin: 0 15px;
   border: 2px solid hotpink;
   font-size: 14px;
+} */
+
+/*QUESTION 4 (checkbox)*/
+
+input[type="checkbox"]{
+  display:none;
 }
+
+.fakeCheckbox{
+  border: 2px solid hotpink;
+  width: 14px;
+  height: 14px;
+  border-radius: 3px;
+  display:inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 5px;
+}
+
+input:checked + .fakeCheckbox::after{
+  content: '';
+  width: 12px;
+  height: 12px;
+  background: darkred;
+  display: inline-block;
+  border-radius: 3px;
+}
+
+/*QUESTION 5 (radio-buttons/images)*/
+.images{
+justify-content: center;
+}
+
 button{
-  width: 75px;
+  width: 80px;
   font-size: 16px;
   font-weight: bold;
   border: 2px solid hotpink;
@@ -30,13 +92,12 @@ button{
   color: white;
   padding: 5px;
   border-radius: 5px;
+  cursor: pointer;
 }
 .summary{
 }
 
-h1{
-  margin: 0;
-}
+
 hr{
   border: 1px solid hotpink;
   display: inline-flex;
@@ -79,48 +140,18 @@ input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-
   opacity: 1;
 }
 
-.radio-buttons{
+/* .radio-buttons{
   display:flex;
   flex-direction: column;
-}
-.radio-buttons label{
-  margin: 5px 0;
-}
+} */
 
-input[type="checkbox"]{
-  display:none;
-}
 
-.fakeCheckbox{
-  border: 2px solid hotpink;
-  width: 14px;
-  height: 14px;
-  border-radius: 3px;
-  display:inline-flex;
-  align-items: center;
-  justify-content: center;
-  margin-left: 5px;
-}
-.fakeCheckbox::before{
 
-}
 
-input:checked + .fakeCheckbox::after{
-  content: '';
-  width: 12px;
-  height: 12px;
-  background: darkred;
-  display: inline-block;
-  border-radius: 3px;
-}
 
 label {
   display:flex;
   align-items: center;
-}
-
-.textinput-div, .select-div, .checkbox-div{
-padding: 18px 0;
 }
 
 
