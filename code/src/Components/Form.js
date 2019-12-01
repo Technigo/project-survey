@@ -64,7 +64,7 @@ export const Form = () => {
       {!submitted && (
         <div className="form-wrapper">
           <h2>How well do you remember Friends?</h2>
-          <img style={{ width: "70%" }} src="assets/friends-crew.png" />
+          <img src="assets/friends-crew.png" alt="The friends crew" />
           <form onSubmit={handelSubmit} className="form-style">
 
             <div className="question-card">
