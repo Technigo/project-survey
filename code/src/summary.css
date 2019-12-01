@@ -1,6 +1,10 @@
+
 .summary {
+  margin: 20px;
+  background: url(./summarybackground1.jpg);
   padding: 50px;
   font-size: 20px;
+  border: 2px solid white;
 
 }
 .summary h3{
@@ -10,3 +14,15 @@
 .summary p {
   padding: 5px;
 }
+
+/* DESKTOP */
+
+@media (min-width: 1000px) {
+
+  .summary {
+    background: url(./summarybackground2.jpg);
+  }
+
+  }
+  
+

@@ -170,7 +170,7 @@ export const App = () => {
                       onChange={() => setReadyness("ready")}
                       checked={readyness === "ready"}
                     />
-                    <span role="img" aria-label="yes, bring it on">
+                    <span role="img" aria-label="Person raising it's hand">
                       🙋‍♀️
                 </span>
                   </label>
@@ -180,7 +180,7 @@ export const App = () => {
                       onChange={() => setReadyness("notReady")}
                       checked={readyness === "notReady"}
                     />
-                    <span role="img" aria-label="hell no">
+                    <span role="img" aria-label="Person crossing it's arms">
                       🙅‍♀️
                 </span>
                   </label>
