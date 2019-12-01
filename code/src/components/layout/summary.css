@@ -1,10 +1,11 @@
 .summary-section {
   height: 100vh;
-  padding: 1rem;
+  padding: 3rem 2rem 2rem 2rem;
   width: 100%;
 }
 
 .summary-title {
+  color: #1f9187;
   font-size: 2rem;
   text-align: left;
 }
@@ -48,7 +49,7 @@
     grid-column: 1;
   }
   .summary-section ul {
-    font-size: 2.5rem;
+    font-size: 2rem;
     grid-column: 1;
     margin-left: 2rem;
   }

@@ -10,13 +10,14 @@
   height: 20px;
   left: 0;
   opacity: 0;
- position: absolute;
-top: 0;
-width: 20px;
+  position: absolute;
+  top: 0;
+  width: 20px;
 }
 
 .checkbox-label-text {
   color: #1f9187;
+  font-weight: bold;
   width: 100%;
 }
 
@@ -61,7 +62,7 @@ width: 20px;
 @media screen and (min-width: 1024px) {
   .checkbox-label {
     margin: 0;
-    max-width: 400px;
+    max-width: 430px;
     width: 100%;
   }
 }

@@ -2,7 +2,7 @@ select {
   -webkit-appearance: none;
   appearance: none;
   background-color: #E3E6E7;
-  background-image: url('../icons8-down-button-48.png');
+  background-image: url('./icons8-down-button-48.png');
   background-repeat: no-repeat;
   background-position: 98% center;
   background-size: 20px 20px;

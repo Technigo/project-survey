@@ -14,6 +14,8 @@
 
 .radiobutton-label-text {
  color: #1f9187;
+ font-weight: bold;
+ text-align: center;
 }
 
 .radiobutton {
@@ -56,4 +58,22 @@
 .survey-section .radiobuttons {
   grid-column: 1;
   margin-top: 2rem;
+}
+
+@media screen and (min-width: 668px) {
+  .survey-question-description {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .radiobuttons {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .radiobutton-label {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
 }

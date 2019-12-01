@@ -12,19 +12,6 @@ import { Image } from 'components/graphic/Image'
 import { Heading } from 'components/text/Heading'
 import { Description } from 'components/text/Description'
 
-/*const surveyData = {
-  //questions here
-  "questions": [{
-    "question": "Question 1",
-    "description": "Description 1",
-    "input": "Select",
-    "inputOptions": [{
-
-    }]
-  }
-  ]
-}*/
-
 const boardgames = [
   "Select game",
   "Dead of winter",
@@ -41,14 +28,14 @@ const gamedays = [
   "Sunday"
 ]
 
-
 export const App = () => {
   const [game, setGame] = useState("Select game")
   const [preferredGameDay, setPreferredGameDay] = useState()
   const [videogameApproval, setvideogameApproval] = useState()
   const [showResult, setShowResult] = useState(false)
   const [question, setQuestion] = useState('begin')
-  // Handle submit
+
+
   const handleSubmit = (event) => {
     event.preventDefault()
     setShowResult(true)
@@ -84,7 +71,7 @@ export const App = () => {
             boardgame={game}
             weekday={preferredGameDay}
             approval={videogameApproval}>
-            <Image src={require('./components/undraw-having-fun.svg')} alt="People having fun together." className="summary-image" />
+            <Image src="images/undraw-having-fun.svg" alt="People having fun together." className="summary-image" />
           </Summary>
         )
       }
@@ -95,7 +82,7 @@ export const App = () => {
               <SurveySection
                 className="survey-section">
                 <Image
-                  src={require('./components/undraw-playing.svg')}
+                  src="images/undraw-playing.svg"
                   alt="Gaming"
                   className="section-image" />
                 <Heading
@@ -117,12 +104,18 @@ export const App = () => {
                     )
                   })}
                 </Select>
+                <div className="survey-navigation">
+                  <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
+                </div>
               </SurveySection>)}
             {question === 'second' && (
               <SurveySection
                 className="survey-section"
               >
-                <Image src={require('./components/undraw-events.svg')} alt="Gaming" className="section-image" />
+                <Image
+                  src="images/undraw-events.svg"
+                  alt="Calendar"
+                  className="section-image" />
                 <Heading
                   className="survey-question-title"
                   text="Which day would you prefer to play?" />
@@ -142,11 +135,16 @@ export const App = () => {
                     )
                   })}
                 </div>
+                <div className="survey-navigation">
+                  <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
+                </div>
               </SurveySection>)}
             {question === 'third' && (
               <SurveySection
                 className="survey-section">
-                <Image src={require('./components/undraw-gaming.svg')} alt="Gaming" className="section-image" />
+                <Image src="images/undraw-gaming.svg"
+                  alt="Videogame control"
+                  className="section-image" />
                 <Heading
                   className="survey-question-title"
                   text="Would you like to play videogames?" />
@@ -161,12 +159,15 @@ export const App = () => {
                     onChange={event => setvideogameApproval(event.target.value)}
                     checked={videogameApproval === "Yes"} />
                 </div>
+                <div className="survey-navigation">
+                  <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
+                </div>
               </SurveySection>)}
             {question === 'end' && (
               <SurveySection className="survey-section">
                 <Image
-                  src={require('./components/undraw-messaging-fun.svg')}
-                  alt="Gaming"
+                  src="images/undraw-messaging-fun.svg"
+                  alt="Send"
                   className="section-image" />
                 <Heading
                   className="survey-question-title"
@@ -176,9 +177,6 @@ export const App = () => {
                   text="Thank you for answering this survey!" />
                 <Button type="submit" text="Submit survey" className="default-button submit-button" />
               </SurveySection>)}
-            {question !== 'begin' && question !== 'end' && (
-              <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
-            )}
           </Form>
         )
       }
