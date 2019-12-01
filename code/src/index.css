@@ -10,14 +10,14 @@ body {
   align-items: center;
   -webkit-font-smoothing: antialiased;
    background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.5)), url("/assets/surf.jpg");
-   background-repeat: no-repeat; 
+   /* background-repeat: no-repeat;  */
    background-size: cover; 
    color: whitesmoke;
-   padding: 10px
+   padding: 20px
 }
 
 h2 {
-  margin-top: 30px;
+  margin-top: 80px;
 } 
 
 /* your name and form */
@@ -91,7 +91,7 @@ label .destinations {
 
 .submitBtn {
   justify-content: center;
-  border-bottom-width: medium;
+  border-image-outset: 2px;
   margin-left: 5px;
   margin-top: 15px;
 }
@@ -106,7 +106,7 @@ label .destinations {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   }
-} 
+}  
 
 
 @media (min-width: 668px) and (max-width: 1025px) { 
@@ -117,10 +117,10 @@ label .destinations {
   }
 
   h2 {
-  margin-top: 180px;
+  margin-top: 200px;
 }
 
   summary {
   margin-top: 220px; 
   }
-}
+} 
