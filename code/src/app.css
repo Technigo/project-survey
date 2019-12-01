@@ -5,8 +5,8 @@
 
 body {
   background: #d7dee8;
-
 }
+
 .app {
   display: flex;
   flex-direction: column;
@@ -14,10 +14,13 @@ body {
   background: #d7dee8;
   font-family: 'Karla', sans-serif;
 }
+
 header {
-  width: 100%;
+  margin-top: 20px;
   text-align: center;
   padding: 15px;
+  height: 250px;
+  background: url(./sketchyCircle_01.png) no-repeat;
 }
 
 h1{
@@ -40,11 +43,11 @@ h3 {
 }
 
 .form-container {
-width: 80%;
+  width: 80%;
 }
 
 .question {
-  margin-bottom: 20px;
+  margin-top: 20px;
 } 
      
 input,
@@ -335,38 +338,19 @@ footer {
   }
   header {
     width: 100%;
+    height: 290px;
     text-align: center;
     padding: 15px;
-  }
-  
-  h1{
-    color: #e26d5a;
-    font-size: 70px;
-    letter-spacing: -7px;
-  }
-  
-  h2 {
-    margin: 10px;
-    font-size: 26px;
-    font-weight: none;
-    color: #0d0d0d;
-  }
-  
-  h3 {
-    font-size: 22px;
-    color: #0d0d0d;
-    margin: 10px 0px 10px 0px;
+    background: url(./sketchyCircle_03.png) no-repeat;
   }
   
   .form-container {
   width: 50%;
-
   }
   
   .question {
     margin-bottom: 20px;
-  } 
-       
+  }       
 }
 
 /* DESKTOP */
@@ -379,38 +363,22 @@ footer {
     align-items: center;
     background: #d7dee8;
     font-family: 'Karla', sans-serif;
-
-  
   }
+
   header {
     width: 100%;
+    height: 320px;
     text-align: center;
     padding: 15px;
     margin-bottom: 50px;
+    background: url(./sketchyCircle_02.png) no-repeat;
   }
-  
-  h1{
-    color: #e26d5a;
-    font-size: 70px;
-    letter-spacing: -7px;
-  }
-  
-  h2 {
-    margin: 10px;
-    font-size: 26px;
-    font-weight: none;
-    color: #0d0d0d;
-  }
-  
-  h3 {
-    font-size: 22px;
-    color: #0d0d0d;
-    margin: 30px 0px 20px 0px;
+  h1 {
+    margin-top: 70px;
   }
   
   .form-container {
-  width: 50%;
-
+  width: 60%;
   }
   
   .question {

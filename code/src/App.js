@@ -117,8 +117,8 @@ export const App = () => {
     <div className="app">
 
       {showResult && (
-        <form className="form-container" onSubmit={event => event.preventDefault()}>
-
+        <form className="form-container"
+          onSubmit={event => event.preventDefault()}>
           <header>
             <h1>HAPPY NEW YEAR</h1>
             <h2>Time to say goodbye to 2019 and hello to 2020!</h2>
@@ -285,7 +285,6 @@ export const App = () => {
             )}
           </div>
           <ProgressBarContainer />
-
         </form>
       )
       }
