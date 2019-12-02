@@ -2,15 +2,21 @@
     box-sizing: border-box;
 }
 
+html, body{
+    height: 100%;
+    margin: 0;
+}
+
 .background {
     display: flex;
     flex-direction: column;
     background: center;  /**** Have to be placed on top in body ****/
     background-image: url(/assets/filipe-de-rodrigues-SpMmd2jgL2w-unsplash.jpg);
     background-color: #684d42;
+    height: 100%; 
+    background-position: center;
+    background-repeat: no-repeat;
     background-size: cover;
-    width: 100%;
-    height: -webkit-fill-available;
 }
 
 .survey {
@@ -82,7 +88,7 @@ h4 {
 
 .burgerSelect {
     font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-size: 13px;
     border: 0.2px solid black;
     border-radius: inherit;
 }
@@ -135,20 +141,25 @@ button {
     bottom: 180px;
 }
 
+
 @media (min-width:668px) and (max-width:1024px) {
 .background {
-    background-size: cover;
-    width: 100%;
-    height: auto;
+    height: -webkit-fill-available;
+    background-position: 0px 70%;
 }    
 
 button {
-top: 500px;
+    top: 500px;
 }
 
 }
 
 @media (min-width:1025px) {
+.background {
+    height: -webkit-fill-available;
+    background-position: 0px 70%;
+}       
+
 .survey {
     margin: auto 20%
 }    
