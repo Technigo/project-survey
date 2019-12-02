@@ -8,12 +8,13 @@ body {
 }
 
 h1{
-  margin: 20px 0;
+  margin: 0 0 60px 0;
   font-family: 'Amatic SC', cursive;
 }
 
 form{
   margin: 60px;
+  height:100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -25,7 +26,7 @@ label {
   justify-content: center;
 }
 
-.radio-buttons, .textinput-div, .select-div, .checkbox-div, .images, .summary div, .welcome-div{
+.radio-buttons, .textinput-div, .select-div, .checkbox-div, .images, .summary div{
   border: 5px solid hotpink;
   border-radius: 10px;
   padding: 20px;
@@ -42,6 +43,10 @@ label {
   display:flex;
   flex-direction: column;
   align-items: center;
+  border: 20px dotted green;
+  padding: 20px;
+  margin-bottom:20px;
+  min-width: 250px;
 }
 
 .welcome-div + .next-button{
@@ -162,8 +167,32 @@ input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-
 .summary div{
 max-width: 400px;
 margin: 0 60px;
+padding: 15px;
 }
 
+.summary h1{
+margin: 15px;
+}
+
+.summary .image-box1, .summary .image-box2, .summary .image-box3, .summary .image-box4{
+  margin-top: 10px;
+}
+
+/*FOOTER*/
+footer{
+  margin: 0;
+  align-self: flex-end;
+  width:100%;
+  display:flex;
+  justify-content: center;
+  font-family: 'Amatic SC', cursive;
+  font-size: 24px;
+}
+footer p{
+  margin: 0;
+}
+
+/*BUTTONS*/
 button{
   width: 80px;
   font-size: 16px;
