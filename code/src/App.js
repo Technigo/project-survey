@@ -86,7 +86,7 @@ export const App = () => {
             </label>
           ))}
           <h2>What size of dog are you looking for?</h2>
-          {sizeGroups.map(size => (
+          {sizeGroups.map(sizeGroup => (
             <label key={size}>
               <input
                 type="radio"
