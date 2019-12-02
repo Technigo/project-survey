@@ -12,17 +12,17 @@ export const App = () => {
   const [definition, setDefinition] = useState("");
   const [love, setLove] = useState(false);
   const [showResult, setShowResult] = useState(false);
-  // const [showSurvey, setShowSurvey] = userstate(false);
+  const [showSurvey, setShowSurvey] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault()
     setShowResult(true)
   }
 
-  // const showSurvey = (event) => {
-  //   event.preventDefault()
-  //   setShowSurvey(true)
-  // }
+  const handleShowSurvey = (event) => {
+    event.preventDefault()
+    setShowSurvey(true)
+  }
 
   const renderMessage = () => {
     if (love === "Yes") {
@@ -36,27 +36,14 @@ export const App = () => {
   return (
     <div>
 
-
-      {showResult && (<div className="result">
-        <h1>The result</h1>
-        <h2>Hi {name}!</h2>
-        <p>Do you really love your partner {nickName}? Ooooohhh {love}!</p>
-        <p>For you, {nickName} is your {definition}</p>
-        {renderMessage()}
-      </div>
-      )}
-
-      {!showResult && (
+      {showSurvey && !showResult && (
         <div>
-          <header>
-            <img src={hero} height="400px" width="auto" />
-            <h1>What do you really think of your partner?</h1>
-            <button onClick="">Find out here!</button>
-          </header>
-          <article>
+
+          <article className="survey">
             <h1>Fill in and find the thruth of your heart</h1>
 
             <form onSubmit={handleSubmit}>
+
               <section className="questionWrapper">
 
                 <div class="question">
@@ -68,11 +55,11 @@ export const App = () => {
                   />
                 </div>
                 <div className="seperator"></div>
-                {/* </form> */}
+
               </section>
 
               <section className="questionWrapper">
-                {/* <form> */}
+
                 <div class="question">
                   <h2>What's your nickname of your partner?</h2>
                   <input
@@ -82,11 +69,10 @@ export const App = () => {
                   />
                 </div>
                 <div className="seperator"></div>
-                {/* </form> */}
+
               </section>
 
               <section className="questionWrapper">
-                {/* <form> */}
                 <div class="questionRadio">
                   <h2>Do you love your partner?</h2>
                   <label>
@@ -99,7 +85,7 @@ export const App = () => {
                     />
                     <div class="fakeCheckbox"></div>
                     Yes
-      </label>
+</label>
                   <label>
                     <input
                       className="radio"
@@ -110,14 +96,12 @@ export const App = () => {
                     />
                     <div class="fakeCheckbox"></div>
                     No
-      </label>
+</label>
                 </div>
                 <div className="seperator"></div>
-                {/* </form> */}
               </section>
 
               <section className="questionWrapper">
-                {/* <form> */}
                 <div class="dropdown">
                   <h2>What is your partner to you?</h2>
                   <select
@@ -137,17 +121,33 @@ export const App = () => {
                 <button
                   type="submit"
                 >Submit
-</button>
+        </button>
               </section>
             </form>
           </article>
+          <footer></footer>
         </div>
+      )}
 
+      {!showSurvey && (
+        <header>
+          <img src={hero} height="400px" width="auto" />
+          <h1>What do you really think of your partner?</h1>
+          <button type="button" onClick={handleShowSurvey}>Find out here!</button>
+        </header>
+      )}
+
+      {showResult && (
+        <div className="result">
+          <h1>The result</h1>
+          <h2>Hi {name}!</h2>
+          <p>Do you really love your partner {nickName}? Ooooohhh {love}!</p>
+          <p>For you, {nickName} is your {definition}</p>
+          {renderMessage()}
+        </div>
       )}
 
 
-      <footer>
-      </footer>
     </div>
   )
 }

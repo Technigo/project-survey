@@ -28,11 +28,21 @@ h2{
 }
 
 button{
-background: black;
-color: #b5b1b0;
-padding: 12px;
-border-radius: 10px;
-border: solid 1px black;
-font-family: 'Roboto', sans-serif;
+  padding: 15px 25px;
+  font-family: 'Roboto', sans-serif;
 font-size: 22px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background: black;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 4px #999;
 }
+
+button:active {
+  transform: translateY(4px);
+  box-shadow: 0 2px #666;
+}
+
