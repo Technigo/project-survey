@@ -8,7 +8,8 @@ export const FormPage = ({ onSubmit }) => {
   const [input, setInput] = useState({
     webFramework: 'jQuery',
     role: 'Developer, back-end',
-    temp: 'Frontend Developer'
+    hobbyCoding: 'Yes',
+    yearsSinceLearning: 'Less than 5 years'
   });
 
   // Initiating state for character counter
