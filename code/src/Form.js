@@ -13,7 +13,7 @@ export const Form = () => {
   const [enjoysChristmas, setEnjoysChristmas] = useState(false)
   const [preferredImage, setPreferredImage] = useState()
   const [showSummary, setShowSummary] = useState(false) // False because we don't want to show summary to start with
-  const [question, setQuestion] = useState('timesOfChristmases') //To have one question at a time
+  const [question, setQuestion] = useState('welcome') //To have one question at a time
 
   const ageGroups = [
     "0-18",
@@ -29,7 +29,10 @@ export const Form = () => {
   }
 
   const handleContinue = () => {
-    if (question === 'timesOfChristmases') {
+    if (question === 'welcome') {
+      setQuestion('timesOfChristmases')
+    }
+    else if (question === 'timesOfChristmases') {
       setQuestion('merryChristmas')
     } else if (question === 'merryChristmas') {
       setQuestion('christmasDecoration')
@@ -85,7 +88,7 @@ export const Form = () => {
         <br></br>
             <br></br>
             Well, {merryChristmas} to you too!
-            Hope your Christmas tree look like this:
+            Hope your Christmas tree looks like this:
             <br></br>
             {imageToShow()}
           </div>
@@ -101,6 +104,18 @@ export const Form = () => {
             <div className="header">
               <h1>Christmas survey</h1>
             </div>
+
+            {question === 'welcome' && (
+              <div className="welcome-div">
+                <p>Welcome to a survey about Christmas! This is a school project and your info will not be saved anywhere. Press the button below to get started.</p>
+                <button
+                  type="button"
+                  onClick={handleContinue}
+                >
+                  Start
+                  </button>
+              </div>
+            )}
 
             {question === 'timesOfChristmases' && (
 
@@ -277,6 +292,7 @@ export const Form = () => {
             }
             {question !== 'prettiestTree' && (
               <button
+                className="next-button"
                 type="button"
                 onClick={handleContinue}>
                 Next

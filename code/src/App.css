@@ -1,14 +1,21 @@
 /*GENERAL*/
 
+
+
+
+
 body {
   margin: 10px;
   color: darkred;
   font-size: 18px;
   background-color: #fffaf8;
+  /* font-family: 'Merriweather', serif; */
+  font-family: 'Montserrat', sans-serif;
 }
 
 h1{
-  margin: 40px 0;
+  margin: 20px 0;
+  font-family: 'Amatic SC', cursive;
 }
 
 form{
@@ -24,13 +31,27 @@ label {
   justify-content: center;
 }
 
-.radio-buttons, .textinput-div, .select-div, .checkbox-div, .images, .summary div{
-  border: 2px solid hotpink;
+.radio-buttons, .textinput-div, .select-div, .checkbox-div, .images, .summary div, .welcome-div{
+  border: 5px solid hotpink;
   border-radius: 10px;
   padding: 20px;
   margin-bottom:20px;
   min-width: 250px;
 }
+
+*:focus {
+  outline: rgb(59, 153, 252) auto 5px;
+}
+/*START-PAGE*/
+.welcome-div{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.welcome-div + .next-button{
+  display:none;
+}
+
 
 /*QUESTION 1 (radio-buttons)*/
 .radio-buttons label{
@@ -106,10 +127,6 @@ input:checked + .fakeCheckbox::after{
   display: inline-block;
   border-radius: 3px;
 }
-.checkbox-div input[type="checkbox"]:focus + label::before {
-  outline: rgb(59, 153, 252) auto 5px;
-}
-
 
 /*QUESTION 5 (radio-buttons/images)*/
 .images label{
