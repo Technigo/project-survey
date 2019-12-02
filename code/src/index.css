@@ -50,14 +50,15 @@ p {
   font-size: 15px;
   font-weight: bold;
   display: inline-grid;
-  margin-bottom: 7px;
+  margin-bottom: 12px;
 }
 
 /* destination check-boxes */
 .Destinations {
   font-size: 15px;
   font-weight: bold;
-  display: inline-grid;  
+  display: inline-grid; 
+  margin-bottom: 12px; 
 }
 
 .formDropdown {
@@ -117,7 +118,7 @@ p {
   }
 
   h2 {
-  margin-top: 200px;
+  margin-top: 220px;
   }
 
   summary {
