@@ -88,9 +88,13 @@ export const App = () => {
           <div className="question">
             <h3>What's your name?</h3>
             <input 
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') { handleNext() }
+            }}
             type="text"
             onChange = {event => setName(event.target.value)}
             value = {name}
+            autoFocus
             required
             />
           </div>
@@ -99,42 +103,50 @@ export const App = () => {
         {question === '2' && (
           <div className="question">
           <h3>What kind of taco wrapper?</h3>
+          <div className="choices">
             <label>
-              <input
+              <input 
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') { setBread("tortilla") }
+            }}
                 type="radio"
                 value={bread}
                 onChange={() => setBread("tortilla")}
                 checked={bread === "tortilla"}
                  />
-              <span role="img" aria-label="tortilla">🌯</span>
+              <span role="img" aria-label="tortilla" tabIndex="0">🌯</span>
             </label>
-  
             <label>
-              <input
+              <input 
+            onKeyPress={(e) => {
+              if (e.key === 'Enter') { setBread("hard shell") }
+            }}
                 type="radio"
                 value={bread}
                 onChange={() => setBread("hard shell")}
-                checked={bread === "hard shell"} 
+                checked={bread === "hard shell"}
                 />
-              <span role="img" aria-label="hard shell">🌮</span>
-            </label>       
+              <span role="img" aria-label="hard shell" tabIndex="0" >🌮</span>
+            </label>  
+            </div>     
           </div>
         )}
 
         {question === '3' && (
           <div className="question">
-          <h3>How do you like your salsa?</h3>
-
-          <span>🌶</span>
-          <input 
-                type="range" 
-                min="1" 
-                max="30" 
-                value={strength}
-                onChange={(event) => setStrength(event.target.value)}
-                id="salsaRange" />
-          <span>🌶🌶🌶</span>
-        </div>
+            <h3>How do you like your salsa?</h3>
+            <div className="choices">
+              <span role="img" aria-label="One hot pepper">🌶</span>
+              <input 
+                    type="range" 
+                    min="1" 
+                    max="30" 
+                    value={strength}
+                    onChange={(event) => setStrength(event.target.value)}
+                    id="salsaRange" />
+              <span role="img" aria-label="Three hot peppers">🌶🌶🌶</span>
+            </div>
+          </div>
         )}  
   
         {question === '4' && (

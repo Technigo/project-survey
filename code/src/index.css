@@ -4,6 +4,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./assets/taco-pattern.jpg);
   font-family: 'Roboto', sans-serif;
+  color:#a12219;
 }
 
 h1, h2 {

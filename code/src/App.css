@@ -15,18 +15,40 @@ Form {
 
 .question {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 300px;
+}
+
+.choices {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: baseline;
+    width: 80%;
+}
+
+.question span {
+    font-size: 22px;
 }
 
 button {
     display: inline-block;
     background: #ddaf4b;
-    width: 80px;
-    height: 40px;
+    width: 100px;
+    height: 50px;
     font-family: 'Roboto' bold;
+    font-size: 16px;
     color: #a12219;
     border: solid 4px #d29835; 
+}
+
+button:hover {
+    background: #a12219;
+    color: #ddaf4b;
+    border: solid 4px #a12219;
+    transition: 0.4s; 
 }
 
 .next {
@@ -44,18 +66,33 @@ Input {
     margin: 30px 5px;
 }
 
+input[type="text"] {
+    width: 150px;
+    height: 25px;
+    background: #dcaf4a;
+    border: solid 4px #d29835;
+    font-family: 'Roboto' bold;
+    font-size: 16px;
+    color: #a12219;
+}
+
 input[type="radio"] {
     display: none;
 }
 
 input[type="radio"] + span {
     opacity: 0.5;
-    font-size: 50px;
+    font-size: 60px;
+}
+
+input[type="radio"] + span:hover {
+    opacity: 1;
+    font-size: 60px;
 }
 
 input[type="radio"]:checked + span {
     opacity: 1;
-    font-size: 50px;
+    font-size: 60px;
 }
 
 /* Slide range */
@@ -91,4 +128,16 @@ input[type="radio"]:checked + span {
     height: 25px; /* Slider handle height */
     background: #4CAF50; /* Green background */
     cursor: pointer; /* Cursor on hover */
+  }
+
+  
+  select {
+    background: #ddaf4b;
+    width: 200px;
+    height: 40px;
+    font-family: 'Roboto' bold;
+    font-size: 16px;
+    color: #a12219;
+    border: solid 4px #d29835; 
+    margin: 0px 0px 30px 0px;
   }
