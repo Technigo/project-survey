@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Summary } from "./components/Summary";
 import "./index.css";
 
-const selectHome = ["Downtown", "Suburb or small town", "Rural retreat"];
+const homes = ["Downtown", "Suburb or small town", "Rural retreat"];
 const activityLevels = ["not very active", "moderately active", "very active"];
 const sizeGroups = ["tiny", "medium", "huge"];
 
