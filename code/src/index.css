@@ -19,6 +19,7 @@ body {
 
 h2 {
   margin-top: 70px;
+  margin-bottom: 20px;
 } 
 
 /* your name and form */
@@ -36,6 +37,7 @@ h2 {
   margin-left: 10px;
   margin-bottom: 10px;
   color: darkblue
+
 }
 
 p {
@@ -52,17 +54,23 @@ p {
   display: inline-grid;
   margin-bottom: 12px;
 }
+.adventures {
+  margin-right: 10px;
+}
 
 /* destination check-boxes */
 .Destinations {
   font-size: 15px;
   font-weight: bold;
   display: inline-grid; 
-  margin-bottom: 12px; 
+  margin-bottom: 15px; 
 }
 
+.destinations { 
+  margin-right: 10px;
+}
 .formDropdown {
-  margin-top: 5px;
+  margin-top: 3px;
   border: inset;
   font-size: 14px;
   font-family: 'roboto';
@@ -74,7 +82,7 @@ p {
   margin-bottom: 5px;
   width: 12px;
   height: 12px;
-  margin-right: 5px;
+  margin-right: 8px;
   font-weight: bold;
   font-size:  15px; 
   font-family: 'roboto';  
