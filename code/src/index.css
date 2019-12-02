@@ -40,6 +40,7 @@ body {
 
 .flex-wrapper {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -73,14 +74,12 @@ h1 {
 
 .form-page-buttons {
   width: 100%;
-  /* border: 1px solid red; */
   position: absolute;
   bottom: 0;
 }
 
 
 button {
-  /* width: 150px; */
   width: 100%;
   color: rgba(219, 20, 60, 0.8);
   border: 1px solid rgba(219, 20, 60, 0.8);
