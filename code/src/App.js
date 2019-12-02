@@ -60,7 +60,7 @@ export const App = () => {
             </option>
           </select>
           <h2>Where is your home?</h2>
-          {selectHome.map(space => (
+          {homes.map(home => (
             <label key={space}>
               <input
                 type="radio"
