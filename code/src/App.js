@@ -24,7 +24,7 @@ export const App = () => {
       </div>
       <h1>It's time to book a vacation:</h1>
       <div className="result-text">
-      <p>WOW! You are going to {destination} and will bring your <span className="emoji" role="img" arial-label="whatToBring">{whatToBring}.</span></p>
+      <p>WOW! You are going to {destination} and will bring your<span className="emoji" role="img" arial-label="whatToBring">{whatToBring}.</span></p>
       <p>👉🏼 {whenToGo}! 👈🏼</p>
       </div>
     </div>

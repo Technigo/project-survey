@@ -1,3 +1,10 @@
+Created a simpel form with questions on traveling. 
+
+Used one input field, radio button change to emojis and a dropdown.
+
+When showing results the questions will be hidden.
+
+
 # Technigo React Starter App
 
 This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
