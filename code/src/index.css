@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  margin: 0px;
   font-family: 'Roboto', sans-serif;
 }
 
@@ -13,7 +14,7 @@ body {
    /* background-repeat: no-repeat;  */
    background-size: cover; 
    color: whitesmoke;
-   padding: 20px
+   padding: 10px
 }
 
 h2 {

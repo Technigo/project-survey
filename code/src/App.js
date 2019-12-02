@@ -66,7 +66,7 @@ export const App = () => {
           </div>
 
 
-          <p>What’s the most important to you?</p>
+          <p>What’s most important to you?</p>
           <select className="formDropdown"
             onChange={event => setMostImportant(event.target.value)}
             value={mostImportant}
