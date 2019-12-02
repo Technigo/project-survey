@@ -73,7 +73,7 @@ export const App = () => {
             </label>
           ))}
           <h2>How active are you?</h2>
-          {activityLevels.map(active => (
+          {activityLevels.map(activityLevel => (
             <label key={active}>
               <input
                 type="radio"
