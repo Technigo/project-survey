@@ -69,6 +69,22 @@ p {
   margin: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2,
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.2rem;
+  }
+}
+
 section,
 form {
   display: flex;
