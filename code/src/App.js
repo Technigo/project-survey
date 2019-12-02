@@ -16,12 +16,14 @@ export const App = () => {
   };
 
   return (
-    <div className="app">
-      {summaryPageActive ? (
-        <SummaryPage data={summary} goBack={goBack} />
-      ) : (
-        <FormPage onSubmit={onSubmit} />
-      )}
+    <div className="flex-wrapper">
+      <div className="app">
+        {summaryPageActive ? (
+          <SummaryPage data={summary} goBack={goBack} />
+        ) : (
+          <FormPage onSubmit={onSubmit} />
+        )}
+      </div>
     </div>
   );
 };
