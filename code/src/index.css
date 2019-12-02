@@ -11,3 +11,62 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.thought {
+
+}
+
+label {
+  display: block;
+  font-size: 24px;
+}
+
+input {
+  font-size: 24px;
+  padding: 5px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + span {
+  opacity: 0.3;
+}
+
+input[type="radio"]:hover + span {
+  opacity: unset;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + span {
+  opacity: 1;
+  transform: scale(1.3);
+}
+
+.img span {
+  display: flex;
+  flex-direction: row;
+}
+
+form {
+  padding: 20px;
+}
+
+button {
+  font-size: 20px;
+  appearance: none;
+  border-radius: 40px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  margin-top: 30px;
+}

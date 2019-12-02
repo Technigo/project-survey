@@ -1,9 +1,16 @@
 import React, { useState } from 'react'
+import { Summary } from './Summary.js'
+import { Happiness } from './Happiness'
+import { Input } from './Input'
+import { Dropdown } from './Dropdown'
 
 export const App = () => {
-  const [happiness, setHappiness] = useState('happy');
-  const [feeling, setFeeling] = useState('');
+  const [happiness, setHappiness] = useState('')
+  const [feeling, setFeeling] = useState('')
+  const [today, setToday] = useState('') //används inte
   const [showResult, setShowResult] = useState(false)
+  const [question, setQuestion] = useState('feeling')
+  const [location, setLocation] = useState('');
   
 
   const handleSubmit = (event) => {
@@ -11,50 +18,67 @@ export const App = () => {
     setShowResult(true)
   }
 
+  const handleContinueClick = () => {
+    console.log('click continue')
+    if (question === 'feeling') {
+      setQuestion('happiness') 
+    } else if (question === 'happiness') {
+        setQuestion('location')
+      
+    }
+  }
+
   return (
   <div>
     {showResult && (
-      <div>
-        <h1>Hello!</h1>
-        <p>You are {happiness === 'happy' ? 'Super happy' : 'Sad :('}</p>
-        <p>{feeling}</p>
-        </div>
+      <Summary feeling={feeling} happiness={happiness} />
     )}
 
-    {!showResult &&(
+    {!showResult && (
+      <form onSubmit={handleSubmit}>
 
-    <form onSubmit={handleSubmit}>
-      <div className="feelings">
-        <label>
-          <input
-           type="radio"
-           value="happy" 
-           onChange={() => setHappiness('Happy')} checked={happiness ==='happy'}/>
+      {question === 'feeling' && (
+        <div className="feelingQuestion">
           
-          <span role="img" aria-label="Happy-face">
-            :happy
-          </span>
-        </label>
-        <label>
-          <input 
-          type="radio" 
-          value="sad" 
-          onChange={() => setHappiness('Sad')} checked={happiness ==='sad'} />
-          
-          <span role="img" aria-label="Sad-face">
-            :sad
-          </span>
-        </label>
-      </div>
+          <h1>Fill in your name:</h1>
+        
+          <Input 
+          label="Name"
+          value={feeling}
+          setValue={setFeeling} />
 
-      <div className="thought">
-        <label>
-          How are you feeling?
-          <input type="text" value={feeling} onChange={(event) => setFeeling(event.target.value)} />
-        </label>
-      </div>
+         </div>
+      )}
 
-      <button type="submit">Send my feelings</button>
+      {question === 'happiness' && (
+        <div className="grading">
+
+          <hi>How did you like our service?</hi>
+
+          <Happiness 
+          happiness={happiness} 
+          setHappiness={setHappiness} />
+        </div>
+      )}
+
+      {question === 'location' && (
+        <div>
+        <Dropdown
+           option value={location}
+           option value={setLocation}
+        />
+
+          <button type="submit">
+          Send my feelings
+          </button>
+        </div>
+      )}
+
+      {question !== 'location' && (
+        <button type="button" onClick={handleContinueClick}>
+          Continue
+        </button>
+      )} 
     </form>
     )}
   </div>  
