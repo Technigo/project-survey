@@ -7,8 +7,8 @@ import './header.css'
 
 
 export const App = () => {
-  const [name, setName] = useState("Fill in name here");
-  const [nickName, setnickName] = useState("Fill in nickname here");
+  const [name, setName] = useState("");
+  const [nickName, setnickName] = useState("");
   const [definition, setDefinition] = useState("");
   const [love, setLove] = useState(false);
   const [showResult, setShowResult] = useState(false);
@@ -45,7 +45,9 @@ export const App = () => {
                   <input
                     type="text"
                     onChange={event => setName(event.target.value)}
-                    value={name} />
+                    value={name}
+                    placeholder="Fill in name here"
+                    required />
                 </div>
                 <div className="seperator"></div>
               </section>
@@ -55,7 +57,9 @@ export const App = () => {
                   <input
                     type="text"
                     onChange={event => setnickName(event.target.value)}
-                    value={nickName} />
+                    value={nickName}
+                    placeholder="Fill in nickname here"
+                    required />
                 </div>
                 <div className="seperator"></div>
               </section>
@@ -69,7 +73,8 @@ export const App = () => {
                         type="radio"
                         value="Yes"
                         onChange={event => setLove(event.target.value)}
-                        checked={love === "Yes"} />
+                        checked={love === "Yes"}
+                        required />
                       <div class="fakeCheckbox"></div>
                       Yes
                     </label>
@@ -79,7 +84,8 @@ export const App = () => {
                         type="radio"
                         value="No"
                         onChange={event => setLove(event.target.value)}
-                        checked={love === "No"} />
+                        checked={love === "No"}
+                        required />
                       <div class="fakeCheckbox"></div>
                       No
                     </label>
@@ -92,7 +98,8 @@ export const App = () => {
                   <h2>What is your partner to you?</h2>
                   <select
                     onChange={event => setDefinition(event.target.value)}
-                    value={definition}>
+                    value={definition}
+                    required>
                     <option value="">Choose here!</option>
                     <option value="best friend for life!">Best friend for life</option>
                     <option value="greatest love!">Greatest love</option>
