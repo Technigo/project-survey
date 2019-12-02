@@ -34,6 +34,7 @@ export const App = () => {
           <input
             id="name"
             type="text"
+            required
             onChange={event => setName(event.target.value)}
             value={name}
           />
