@@ -52,7 +52,7 @@ export const Form = () => {
       return (
         <div className="image-box2"
           style={{ backgroundImage: `url(${tree4})` }}
-          aria-label="Image of Christmas tree with Santa Clause's">
+          aria-label="Image of Christmas tree with Santa Clauses">
         </div>
       )
     } else if (preferredImage === "tree5") {
@@ -86,7 +86,8 @@ export const Form = () => {
             <br></br>
             Well, {merryChristmas} to you too!
             Hope your Christmas tree look like this:
-        {imageToShow()}
+            <br></br>
+            {imageToShow()}
           </div>
         </div>
       )}
@@ -108,6 +109,10 @@ export const Form = () => {
                 {ageGroups.map(group => (
                   <label key={group}>
                     <input
+                      onKeyPress={(event) => {
+                        if (event.key === 'Enter') { handleContinue() }
+                      }}
+                      autoFocus
                       type="radio"
                       value={group}
                       onChange={event => setAgeGroup(event.target.value)}
@@ -127,7 +132,12 @@ export const Form = () => {
 
               < div className="textinput-div">
                 <label>How do you say Merry Christmas in your language?
-<input
+                  <input
+                    onKeyPress={(event) => {
+                      if (event.key === 'Enter') { handleContinue() }
+                    }}
+
+                    autoFocus
                     type="text"
                     onChange={(event) => setMerryChristmas(event.target.value)}
                     value={merryChristmas}
@@ -144,7 +154,11 @@ export const Form = () => {
 
               < div className="select-div" >
                 <label>Favourite Christmas decoration:
-      <select
+                  <select
+                    onKeyPress={(event) => {
+                      if (event.key === 'Enter') { handleContinue() }
+                    }}
+                    autoFocus
                     onChange={event => setDecoration(event.target.value)}
                     value={decoration}
                   >
@@ -153,7 +167,7 @@ export const Form = () => {
                     <option value="advent candles">Advent candles</option>
                     <option value="poinsettia flower">Poinsettia flowers</option>
                     <option value="star lamp">Star lamps</option>
-                    <option value="nothing">I said I don't celebrate christmas!</option>
+                    <option value="nothing">I don't celebrate Christmas</option>
                   </select>
                 </label>
               </div >
@@ -169,12 +183,16 @@ export const Form = () => {
               <div className="checkbox-div">
                 <label>
                   Enjoy Christmas?
-<input
+                <input
+                    onKeyPress={(event) => {
+                      if (event.key === 'Enter') { handleContinue() }
+                    }}
+                    autoFocus
                     type="checkbox"
                     checked={enjoysChristmas}
                     onChange={event => setEnjoysChristmas(event.target.checked)}
                   />
-                  <span className="fakeCheckbox"></span>
+                  <span className="fakeCheckbox" ariaLabel="checkbox"></span>
                 </label>
               </div>
 
@@ -192,7 +210,12 @@ export const Form = () => {
                 Which Christmas tree is the most beautiful?
         <div className="only-images">
                   <label>
-                    <input type="radio"
+                    <input
+                      onKeyPress={(event) => {
+                        if (event.key === 'Enter') { handleContinue() }
+                      }}
+                      autoFocus
+                      type="radio"
                       value="tree3"
                       onChange={() => setPreferredImage("tree3")}
                       checked={preferredImage === "tree3"}
@@ -253,7 +276,9 @@ export const Form = () => {
             )
             }
             {question !== 'prettiestTree' && (
-              <button type="button" onClick={handleContinue}>
+              <button
+                type="button"
+                onClick={handleContinue}>
                 Next
 </button>
 
