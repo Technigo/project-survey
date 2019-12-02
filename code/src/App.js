@@ -66,7 +66,8 @@ export const App = () => {
               <option value='Tignes'>There is no real skiing outside of France.</option>
             </select>
 
-        <h2>And the last question! After the great day in {place}, would you rather opt for...?</h2>
+        <h2>And the last question!</h2>
+        <h2>After the great day in {place}, would you rather opt for...?</h2>
             {foods.map(group => (
               <label className='radioButtons' key={group}>
                 <input
@@ -94,7 +95,7 @@ export const App = () => {
 
   {showResult && (
         <p className='result'>
-          Hi {name}! You're a true adventurer! You can't wait to go to {place} and bring a fresh {activity} adventure and a little blood to this season! But hold you horses. You still have to wait for a bit more of snow! Relax yourself with some great <a href="https://www.mountainsonstage.com/">mountain movies </a> and {food} till then.
+          Hi {name}! You're a true adventurer! You can't wait to go to {place} and bring a fresh {activity} adventure to this season! But hold you horses. You still have to wait for a bit more snow! Relax yourself with some great <a href="https://www.mountainsonstage.com/">mountain movies </a> and {food} till then.
         </p>
       )}
     
