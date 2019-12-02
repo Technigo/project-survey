@@ -1,0 +1,105 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    background: white;
+    color: crimson;
+}
+
+form, .summary {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    margin-top: 40px;
+}
+
+.destination, .type, .budget {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    width: 450px;
+    height: 450px;
+}
+
+.destination, .destination p {
+    background: teal;
+    color: white;
+}
+
+.type, .type p {
+    background-color: sandybrown;
+    color: white;
+}
+
+.budget, .budget p {
+    background-color: darkkhaki;
+    color: white
+}
+
+.destination p, .type p, .budget p {
+    font-weight: 700;
+    font-size: 50px;
+}
+
+input {
+    display: none;
+    margin: 10px;
+}
+
+input:hover+span {
+    cursor: pointer;
+}
+
+input[type=radio]+span, input[type=checkbox]+span {
+    display: block;
+    margin: -2px;
+    padding: 4px 12px;
+    background-color: #e7e7e7;
+    border-color: #ddd;
+}
+
+input[type=radio]:checked+span, input[type=checkbox]:checked+span {
+    background-image: none;
+    background-color: #d0d0d0;
+}
+
+select {
+    display: block;
+    font-size: 40px;
+    font-family: sans-serif;
+    font-weight: 700;
+    width: 100%;
+    border: 2px solid;
+    cursor: pointer;
+}
+
+select:hover {
+    border-color: seagreen;
+}
+
+select:focus {
+    border-color: steelblue;
+}
+
+button {
+    border: 5px solid sandybrown;
+    background: transparent;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    transition-duration: 0.4s;
+    border-radius: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 25px;
+    font-weight: 700;
+}
+
+button:hover {
+    background-color: sandybrown;
+    color: white;
+}
