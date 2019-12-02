@@ -30,10 +30,10 @@ const gamedays = [
 
 export const App = () => {
   const [game, setGame] = useState("Select game")
-  const [preferredGameDay, setPreferredGameDay] = useState()
-  const [videogameApproval, setvideogameApproval] = useState()
+  const [gameDay, setGameDay] = useState()
+  const [videogameApproval, setvideogameApproval] = useState(false)
   const [showResult, setShowResult] = useState(false)
-  const [question, setQuestion] = useState('begin')
+  const [question, setQuestion] = useState('introduction')
 
 
   const handleSubmit = (event) => {
@@ -42,7 +42,7 @@ export const App = () => {
   }
 
   const handleContinueClick = () => {
-    if (question === 'begin') {
+    if (question === 'introduction') {
       setQuestion('first')
     } else if (question === 'first') {
       setQuestion('second')
@@ -55,13 +55,17 @@ export const App = () => {
 
   return (
     < div >
-      {question === "begin" && (
+      {question === "introduction" && (
         <Header
           title="Game night"
           description="Give your input about our game nights."
           buttonText="Take the survey"
-          setQuestion="begin">
-          <Button type="button" text="Take the survey" onClick={handleContinueClick} className="start-button" />
+          setQuestion="introduction">
+          <Button
+            type="button"
+            text="Take the survey"
+            onClick={handleContinueClick}
+            className="start-button" />
         </Header>
       )}
       {
@@ -69,14 +73,14 @@ export const App = () => {
           <Summary
             title="Summary"
             boardgame={game}
-            weekday={preferredGameDay}
+            weekday={gameDay}
             approval={videogameApproval}>
             <Image src="images/undraw-having-fun.svg" alt="People having fun together." className="summary-image" />
           </Summary>
         )
       }
       {
-        !showResult && question !== 'begin' && (
+        !showResult && question !== 'introduction' && (
           <Form onSubmit={handleSubmit}>
             {question === 'first' && (
               <SurveySection
@@ -105,7 +109,21 @@ export const App = () => {
                   })}
                 </Select>
                 <div className="survey-navigation">
-                  <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
+                  {game === 'Select game' && (
+                    <Button
+                      type="button"
+                      text="Continue"
+                      onClick={handleContinueClick}
+                      className="default-button"
+                      disabled="disabled" />
+                  )}
+                  {game !== 'Select game' && (
+                    <Button
+                      type="button"
+                      text="Continue"
+                      onClick={handleContinueClick}
+                      className="default-button" />
+                  )}
                 </div>
               </SurveySection>)}
             {question === 'second' && (
@@ -130,13 +148,27 @@ export const App = () => {
                         label={gameday}
                         name={gameday}
                         value={gameday}
-                        onChange={event => setPreferredGameDay(event.target.value)}
-                        checked={preferredGameDay === gameday} />
+                        onChange={event => setGameDay(event.target.value)}
+                        checked={gameDay === gameday} />
                     )
                   })}
                 </div>
                 <div className="survey-navigation">
-                  <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
+                  {gameDay === undefined && (
+                    <Button
+                      type="button"
+                      text="Continue"
+                      onClick={handleContinueClick}
+                      className="default-button"
+                      disabled="disabled" />
+                  )}
+                  {gameDay !== undefined && (
+                    <Button
+                      type="button"
+                      text="Continue"
+                      onClick={handleContinueClick}
+                      className="default-button" />
+                  )}
                 </div>
               </SurveySection>)}
             {question === 'third' && (
@@ -160,7 +192,11 @@ export const App = () => {
                     checked={videogameApproval === "Yes"} />
                 </div>
                 <div className="survey-navigation">
-                  <Button type="button" text="Continue" onClick={handleContinueClick} className="default-button" />
+                  <Button
+                    type="button"
+                    text="Continue"
+                    onClick={handleContinueClick}
+                    className="default-button" />
                 </div>
               </SurveySection>)}
             {question === 'end' && (
@@ -175,7 +211,10 @@ export const App = () => {
                 <Description
                   className="survey-question-description"
                   text="Thank you for answering this survey!" />
-                <Button type="submit" text="Submit survey" className="default-button submit-button" />
+                <Button
+                  type="submit"
+                  text="Submit survey"
+                  className="default-button submit-button" />
               </SurveySection>)}
           </Form>
         )

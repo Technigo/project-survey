@@ -5,7 +5,7 @@
   background-color: #1f9187;
   height: 100vh;
   justify-content: center;
-  padding: 1rem;
+  padding: 0 1rem 1rem 1rem;
   width: 100%;
 }
 
@@ -32,6 +32,7 @@
   .survey-header-title {
     font-size: 5rem;
   }
+
   .survey-description {
     font-size: 2rem;
   }
@@ -41,6 +42,7 @@
   .survey-header-title {
     font-size: 7rem;
   }
+
   .survey-description {
     font-size: 2.5rem;
     margin: 2rem;

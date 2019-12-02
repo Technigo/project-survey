@@ -10,7 +10,9 @@ export const Checkbox = (props) => {
         value={props.value}
         checked={props.checked}
         onChange={props.onChange} />
-      <span className="checkbox-label-text">{props.label}</span>
+      <span className="checkbox-label-text">
+        {props.label}
+      </span>
     </label>
   )
 }

@@ -1,7 +1,7 @@
 .survey-question-title {
   color: #1f9187;
   font-size: 2rem;
-  line-height: 1;
+  line-height: 1.2;
 }
 
 @media screen and (min-width: 668px) {

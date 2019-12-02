@@ -3,9 +3,13 @@ import './summary.css'
 
 export const Summary = (props) => {
   return (
-    <section id={props.id} className="summary-section">
+    <section
+      id={props.id}
+      className="summary-section">
       {props.children}
-      <h2 className="summary-title">{props.title}</h2>
+      <h2 className="summary-title">
+        {props.title}
+      </h2>
       <ul>
         <li>
           You want to play <span className="user-answer">{props.boardgame}</span> this time</li>

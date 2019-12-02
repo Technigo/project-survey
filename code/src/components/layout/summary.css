@@ -33,8 +33,8 @@
   .summary-description {
     font-size: 2rem;
   }
-
 }
+
 @media screen and (min-width: 1024px) {
   .summary-section {
     display: grid;
@@ -44,14 +44,15 @@
     border-bottom: 2px solid #ededed;
     text-align: left;
   }
+
   .summary-title {
     font-size: 4rem;
     grid-column: 1;
   }
+
   .summary-section ul {
     font-size: 2rem;
     grid-column: 1;
     margin-left: 2rem;
   }
-
 }

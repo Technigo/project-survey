@@ -14,9 +14,6 @@ select {
   padding: 1rem 0.5rem;
   margin: 1rem 0;
 }
-option::selection  {
-  background-color: #779fa1;
-}
 
 .survey-section select {
   grid-column: 1;

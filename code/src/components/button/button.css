@@ -2,14 +2,13 @@ button {
   font-size: 1.2rem;
   color: #fff;
   border-radius: 0.2rem;
-  background-color: #b3b8b8;
+  background-color: #1f9187;
   border: none;
   padding: 1rem 2rem;
 }
 
-.default-button:hover,  
-.default-button:focus {
-  background-color: #1f9187;
+button:disabled {
+  background-color: #b3b8b8;
 }
 
 .default-button:active {
@@ -22,6 +21,7 @@ button {
   border: 2px solid #fff;
   border-radius: 2rem;
   color: #fff;
+  font-size: 1.5rem;
   grid-column: 1 / span 4;
   grid-row: 3 / span 1;
   padding: 1rem 2rem;
@@ -29,12 +29,6 @@ button {
   text-align: center;
   text-decoration: none;
   width: 100%;
-  max-width: 200px;
-}
-
-.start-button {
-  font-size: 1.5rem;
-  grid-column: 1 / span 4;
   max-width: 250px;
 }
 
