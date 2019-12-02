@@ -75,29 +75,32 @@ export const App = () => {
               <section className="questionWrapper">
                 <div class="questionRadio">
                   <h2>Do you love your partner?</h2>
-                  <label>
-                    <input
-                      className="radio"
-                      type="radio"
-                      value="Yes"
-                      onChange={event => setLove(event.target.value)}
-                      checked={love === "Yes"}
-                    />
-                    <div class="fakeCheckbox"></div>
-                    Yes
+                  <div className="radioButtons">
+                    <label>
+                      <input
+                        className="radio"
+                        type="radio"
+                        value="Yes"
+                        onChange={event => setLove(event.target.value)}
+                        checked={love === "Yes"}
+                      />
+                      <div class="fakeCheckbox"></div>
+                      Yes
 </label>
-                  <label>
-                    <input
-                      className="radio"
-                      type="radio"
-                      value="No"
-                      onChange={event => setLove(event.target.value)}
-                      checked={love === "No"}
-                    />
-                    <div class="fakeCheckbox"></div>
-                    No
+                    <label>
+                      <input
+                        className="radio"
+                        type="radio"
+                        value="No"
+                        onChange={event => setLove(event.target.value)}
+                        checked={love === "No"}
+                      />
+                      <div class="fakeCheckbox"></div>
+                      No
 </label>
+                  </div>
                 </div>
+
                 <div className="seperator"></div>
               </section>
 

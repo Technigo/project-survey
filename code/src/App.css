@@ -3,9 +3,10 @@ article{
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  background: #FFF;
 }
 form{
-  margin: 100px 0 0 0;
+  margin: 100px 0 100px 0;
 }
 
 input{
@@ -38,9 +39,8 @@ margin: 40px 0 100px 0;
 .questionWrapper{
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   flex-direction: column;
-  height: 600px;
+  height: 300px;
 }
 
 .question {
@@ -51,16 +51,24 @@ margin: 40px 0 100px 0;
 
 .dropdown{
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  justify-content: space-between;
 }
 
 .questionRadio{
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.radioButtons{
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-right: 160px;
 }
 
 .radio{
