@@ -89,13 +89,13 @@ export const Form = () => {
             Hope your Christmas tree looks like this:
             <br></br>
             {imageToShow()}
-            <footer>
-              <p>Technigo Bootcamp 2019 - Matilda Arvidsson
-                <br></br>
-                (Pictures from Unsplash)
-              </p>
-            </footer>
           </div>
+          <footer>
+            <p>Technigo Bootcamp 2019 - Matilda Arvidsson
+                <br></br>
+              (Pictures from Unsplash)
+              </p>
+          </footer>
         </div>
       )}
 

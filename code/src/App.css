@@ -180,7 +180,7 @@ margin: 15px;
 
 /*FOOTER*/
 footer{
-  margin: 0;
+  margin-top: 20px;
   align-self: flex-end;
   width:100%;
   display:flex;
