@@ -76,7 +76,7 @@ export const App = () => {
       <div>
         {showResult && 
         
-        <div onReset={redoForm}>
+        <div className="summary" onReset={redoForm}>
           {name}, you want your taco with {bread} and some nice {sauce} salsa. But please, no {list}! 
           <button type='reset' onClick={redoForm}>Another taco!</button>
           </div>}
@@ -168,12 +168,12 @@ export const App = () => {
         {question === 'last' && (
           <div className="question">
             <label className="nachos">
-            Nachos on the side?
             <input
               type = "checkbox"
               checked = {wantNachos}
               value = {wantNachos}
               onChange= {event => setWantNachos(event.target.checked)} />
+              <span className="fakeCheckbox"></span> Nachos on the side?
             </label>
           </div> 
         )} 

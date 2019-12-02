@@ -13,7 +13,8 @@ Form {
     font-family: 'Roboto' bold;
 }
 
-.question {
+
+.question, .summary {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -64,6 +65,11 @@ button:hover {
 
 Input {
     margin: 30px 5px;
+}
+
+label {
+    display: flex;
+    align-items: center;
 }
 
 input[type="text"] {
@@ -139,5 +145,29 @@ input[type="radio"]:checked + span {
     font-size: 16px;
     color: #a12219;
     border: solid 4px #d29835; 
-    margin: 0px 0px 30px 0px;
+    margin-bottom: 30px;
   }
+
+  input[type="checkbox"] {
+    display: none;
+}
+
+.fakeCheckbox {
+    display: inline-flex;
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    border: solid 2px #a12219; 
+    justify-content: center;
+    align-items: center;
+}
+
+input:checked + .fakeCheckbox::after {
+    content: " ";
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    background: #a12219;
+    display: inline-block;
+
+}
