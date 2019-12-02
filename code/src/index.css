@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 .formStyleNotSubmitted{
   background-image: url("cat2.jpg");
   background-repeat: no-repeat;
@@ -36,15 +35,12 @@ code {
   align-items: center;
   height: 580px;
   justify-content: center;
-  z-index: 1;
-  filter: brightness(50%);
-  
+  z-index: 1; 
 }
 
 .content{
   margin:0px;
 }
-
 
 .pageTitle{
   margin: 40px 0px 0px 0px;
@@ -65,16 +61,13 @@ code {
   flex-direction: row;
 }
 
-
 .contacts p{
   margin: 40px 0px 0px 0px;
   color: white
 }
 
-
 .formField{
   margin-right: 4px;
-  
 }
 
 .newsletter{
@@ -90,7 +83,7 @@ code {
 
 .dropdown p{
   margin-bottom: 5px;
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .radioButton{
@@ -113,7 +106,6 @@ code {
 .radioButtons p{
   margin-bottom: 5px;
   margin-top: 0px;
-
 }
 
 .buttonContainer{
@@ -130,23 +122,23 @@ code {
   border: none;
   font-size: 1.6em;
   font-family: 'Calistoga', cursive;
+  cursor: pointer;
 }
 
 .summaryStyle{
   color: white;
-  padding: 20px;
-  position: fixed; /* Sit on top of the page content */
-  width: 100%; /* Full width (cover the whole page) */
-  height: 100%; /* Full height (cover the whole page) */
+  position: fixed; 
+  width: 100%; 
+  height: 100%; 
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0,0,0,0.5); /* Black background with opacity */
-  z-index: 2; /* Specify a stack order in case you're using a different order for other elements */
-  cursor: pointer;
- 
-  
+  background-color: rgba(0,0,0,0.5); 
+  z-index: 2; 
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; 
 }
 
 .summaryStyle p{
@@ -154,8 +146,15 @@ code {
 }
 
 .summaryContent{
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+  padding: 30px;
 }
+
+.summaryContent p{
+  padding-bottom: 10px;
+  padding: 10px;
+}
+
 
 
 
