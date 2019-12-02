@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { Summary } from './Summary'
-// import { ProgressBarContainer } from './ProgressBar'
-import "./app.css"
+import "./app.css";
 import './progressbar.css';
 
 
@@ -12,7 +11,7 @@ export const App = () => {
   const [lookForward, setLookForward] = useState("");
   const [yearEvent, setYearEvent] = useState("");
   // const [wantsNewsletter, setWantsNewsletter] = useState(false);
-  const [ageGroup, setAgeGroup] = useState("0-18");
+  const [ageGroup, setAgeGroup] = useState("0-20");
   // Array for what age group you are in
   const ageGroups = ["0-20", "20-30", "31+"]
   const [happiness, setHappiness] = useState("happy")
@@ -28,7 +27,7 @@ export const App = () => {
 
 
 
-  // Function for button to continue to next question. Would want help to make the code shorter.
+  // Function for button to continue to next question+linked to progress bar. Would really want help how to make this code shorter?
   const handleContinueClick = () => {
     if (question === 1) {
       setQuestion(2);
@@ -56,7 +55,7 @@ export const App = () => {
 
     }
   }
-  // Function for button to go to previous question. Would want help to make the code shorter.
+  // Function for button to go to previous question+linked to progress bar!
   const handleGoBackClick = () => {
     if (question === 7) {
       setQuestion(6);
@@ -79,7 +78,8 @@ export const App = () => {
       setProgress(percentRange > 0 ?
         percentRange - 16.7 : 0)
     } else if (question === 2) {
-      setQuestion(1); setProgress(percentRange > 0 ?
+      setQuestion(1);
+      setProgress(percentRange > 0 ?
         percentRange - 16.7 : 0)
     }
   }
@@ -147,6 +147,7 @@ export const App = () => {
                 <label key={group} className="radio-buttons">
                   <input
                     type="radio"
+                    autoFocus
                     value={group}
                     onChange={() => setAgeGroup(group)}
                     checked={ageGroup === group}
@@ -167,6 +168,7 @@ export const App = () => {
                   <label>
                     <input type="radio"
                       value="ready"
+
                       onChange={() => setReadyness("ready")}
                       checked={readyness === "ready"}
                     />
