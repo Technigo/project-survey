@@ -60,10 +60,10 @@ h1 {
 
 .app {
   width: 450px;
-  height: 450px;
-  max-width: 800px;
+  height: 550px;
+  /* max-width: 800px; */
   background: #fff;
-  padding: 30px;
+  padding: 5px;
   border-radius: 10px;
   box-shadow: 0 2px 8px 2px rgba(14, 30, 37, 0.3);
 }
