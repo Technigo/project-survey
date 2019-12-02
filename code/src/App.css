@@ -21,8 +21,6 @@
     margin:0px;
 }
 
-
-
 select {
     background-color:sienna;
     border: none;
@@ -44,9 +42,6 @@ select:hover {
     cursor: pointer;
 }
 
-.dropdownMovies {
-
-}
 
 .christmasSong {
     margin: 15px 0;
@@ -68,10 +63,6 @@ select:hover {
 .christmasCandy {
     margin: 15px 0;
 }
-
-.christmasCandy:hover {
-}
-
 
 label {
     margin: 10px 10px 10px 0;

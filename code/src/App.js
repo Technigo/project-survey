@@ -53,7 +53,7 @@ export const App = () => {
           </div>
 
           <div className="christmasSong">
-            <h3>What is you´re favourite christmas song: {songName}</h3>
+            <h3>What is you´re favourite christmas song:{songName}</h3>
             <input className="textBox"
               type="text"
               onChange={event => setSongName(event.target.value)}
