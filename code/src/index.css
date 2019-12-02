@@ -19,11 +19,35 @@ form {
 }
 
 .thought {
+  display: flex;
+  justify-content: center;
+  width: 80%;
+}
 
+.thought button {
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  text-align: center;
 }
 
 label {
   display: block;
+  font-size: 24px;
+}
+
+.happiness label {
+  display: inline;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding-top: 100px;
+  padding-left: 30%;
+  padding-right: 30%;
   font-size: 24px;
 }
 
@@ -65,8 +89,20 @@ button {
   border-radius: 40px;
   background: black;
   color: white;
-  border: none;
-  padding: 10px 30px;
+  border: gray;
+  padding-top: 15px 30px;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top: 20px;
+  margin-left: 40%;
+  margin-right: 40%;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-top: 100px;
+  padding-left: 30%;
+  padding-right: 30%;
+  text-align: center;
 }

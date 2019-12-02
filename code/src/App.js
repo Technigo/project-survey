@@ -7,10 +7,9 @@ import { Dropdown } from './Dropdown'
 export const App = () => {
   const [happiness, setHappiness] = useState('')
   const [feeling, setFeeling] = useState('')
-  const [today, setToday] = useState('') //används inte
   const [showResult, setShowResult] = useState(false)
   const [question, setQuestion] = useState('feeling')
-  const [location, setLocation] = useState('');
+  const [treatment, setTreatment] = useState("");
   
 
   const handleSubmit = (event) => {
@@ -23,7 +22,7 @@ export const App = () => {
     if (question === 'feeling') {
       setQuestion('happiness') 
     } else if (question === 'happiness') {
-        setQuestion('location')
+        setQuestion('treatment')
       
     }
   }
@@ -38,7 +37,7 @@ export const App = () => {
       <form onSubmit={handleSubmit}>
 
       {question === 'feeling' && (
-        <div className="feelingQuestion">
+        <div className="question">
           
           <h1>Fill in your name:</h1>
         
@@ -47,11 +46,11 @@ export const App = () => {
           value={feeling}
           setValue={setFeeling} />
 
-         </div>
+        </div>
       )}
 
       {question === 'happiness' && (
-        <div className="grading">
+        <div className="question">
 
           <hi>How did you like our service?</hi>
 
@@ -61,20 +60,20 @@ export const App = () => {
         </div>
       )}
 
-      {question === 'location' && (
-        <div>
+      {question === 'treatment' && (
+        <div className="question">
         <Dropdown
-           option value={location}
-           option value={setLocation}
+           treatment={treatment}
+           setTreatment={setTreatment}
         />
 
           <button type="submit">
-          Send my feelings
+          Send
           </button>
         </div>
       )}
 
-      {question !== 'location' && (
+      {question !== 'treatment' && (
         <button type="button" onClick={handleContinueClick}>
           Continue
         </button>

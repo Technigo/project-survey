@@ -3,13 +3,13 @@ import React from 'react'
 export const Dropdown = (props) => (
     <div className="comeback">
         <select
-          onChange={(event) => props.setLocation(event.target.value)}
-          value={props.location}
+          onChange={(event) => props.setTreatment(event.target.value)}
+          value={props.treatment}
         >
-          <option value="">Select location:</option>
-          <option value="stockholm">Stockholm</option>
-          <option value="barcelona">Barcelona</option>
-          <option value="oslo">Oslo</option>
+          <option value="">Select treatment:</option>
+          <option value="Cut">Cut</option>
+          <option value="Colour">Colour</option>
+          <option value="Shave">Shave</option>
         </select>
         </div>
     );

@@ -6,11 +6,11 @@ export const Happiness = (props) => {
         <label>
             <input
               type="radio"
-              value="star1"
-              onChange={() => props.setHappiness('star1')}
-              checked={props.happiness === 'star1'} />
+              value="1"
+              onChange={() => props.setHappiness(1)}
+              checked={props.happiness === 1} />
 
-<span role="img" aria-label="Happy face">
+<span role="img" aria-label="One star">
          🌟 
           </span>
         </label>
@@ -18,11 +18,11 @@ export const Happiness = (props) => {
         <label>
           <input 
           type="radio" 
-          value="star2" 
-          onChange={() => props.setHappiness('star2')}
-          checked={props.happiness === 'star2'} />
+          value="2" 
+          onChange={() => props.setHappiness(2)}
+          checked={props.happiness === 2} />
           
-          <span role="img" aria-label="Sad-face">
+          <span role="img" aria-label="Two stars">
           🌟 
           </span>
         </label>
@@ -30,11 +30,11 @@ export const Happiness = (props) => {
         <label>
           <input 
           type="radio" 
-          value="star3" 
-          onChange={() => props.setHappiness('star3')}
-          checked={props.happiness === 'star3'} />
+          value="3" 
+          onChange={() => props.setHappiness(3)}
+          checked={props.happiness === 3} />
           
-          <span role="img" aria-label="dunno-face">
+          <span role="img" aria-label="Three stars">
           🌟 
           </span>
         </label>
@@ -42,11 +42,11 @@ export const Happiness = (props) => {
         <label>
           <input 
           type="radio" 
-          value="star4" 
-          onChange={() => props.setHappiness('star4')}
-          checked={props.happiness === 'star4'} />
+          value="4" 
+          onChange={() => props.setHappiness(4)}
+          checked={props.happiness === 4} />
           
-          <span role="img" aria-label="dunno-face">
+          <span role="img" aria-label="four stars">
            🌟
           </span>
         </label>
@@ -54,11 +54,11 @@ export const Happiness = (props) => {
         <label>
           <input 
           type="radio" 
-          value="star5" 
-          onChange={() => props.setHappiness('star5')}
-          checked={props.happiness === 'star5'} />
+          value="5" 
+          onChange={() => props.setHappiness(5)}
+          checked={props.happiness === 5} />
           
-          <span role="img" aria-label="dunno-face">
+          <span role="img" aria-label="Five stars">
            🌟 
           </span>
         </label>
