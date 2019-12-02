@@ -25,14 +25,15 @@ export const App = () => {
           <p>
             You go by - {name}
             <br></br>
-            Your awsome superpower is - {superPower}
+            Your awesome superpower is - {superPower}
             <br></br>
             About sidekicks - {sideKick}
             <br></br>
             <br></br>
             You are {range} % villain.
             <br></br>
-            {range > 50 && "Oh, no maybe this is a bad idea!"}
+            {range > 49 && "Oh, no maybe this is a bad idea!"}
+            {range < 49 && "That will do just fine."}
           </p>
           <button
             id="restart"

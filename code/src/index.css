@@ -23,8 +23,8 @@ code {
 }
 
 .wrapper {
-  min-width: 454px;
   box-sizing: border-box;
+  min-width: 454px;
   min-height: 100vh;
   padding: 50px;
   background: #5eb611;
@@ -33,11 +33,11 @@ code {
 
 input[type="text"] {
   height: 20px;
+  width: 60%;
   background-color: transparent;
   border: 0;
   box-shadow: none;
   border-bottom: 3px solid;
-  width: 60%;
   border-color: black;
   font-size: 16px;
   color: black;
@@ -63,12 +63,12 @@ select {
 
 .fake-radio {
   display: inline-block;
-  margin: 15px 15px 0 0;
   position: relative;
-  background-color: white;
-  border: 2px blue solid;
+  margin: 15px 15px 0 0;
   width: 10px;
   height: 10px;
+  background-color: white;
+  border: 2px blue solid;
   border-radius: 50%;
 }
 
@@ -97,9 +97,9 @@ button {
   height: 50px;
   margin: 50px 0;
   border-radius: 16px;
+  background-color: rgb(254, 161, 63);
   font-size: 22px;
   font-weight: bold;
-  background-color: rgb(254, 161, 63);
   -webkit-transition-duration: 0.4s;
   cursor: pointer;
 }
