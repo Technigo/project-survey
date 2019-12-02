@@ -47,6 +47,7 @@ hr {
   width: 100%;
   font-size: 20px;
 }
+
 .question input[type='radio'] {
   height: 20px;
   font-size: 20px;
@@ -77,20 +78,17 @@ button, button:focus {
   border-style: none;
   font-size: 16px;
   cursor: pointer;
-
   transition: background 120ms ease-in, transform 120ms ease-in;
 }
 
 button:hover {
   background-color: brown;
-  
   transition: background 110ms ease-out;
 }
 
 button:active {
   position: relative;
   transform: translateY(3px);
-  
   transition: background 120ms ease-in, transform 50ms ease-in;
 }
 
@@ -99,7 +97,6 @@ button[disabled] {
   color: gray;
   cursor: not-allowed;
 }
-
 
 .radio-label {
   display: flex;
@@ -116,6 +113,7 @@ button[disabled] {
   border-radius: 20px;
   padding: 1px 20px 1px 20px;
 }
+
 .ans-question {
   font-weight: 700;
 }

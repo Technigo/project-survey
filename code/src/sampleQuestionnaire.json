@@ -19,13 +19,20 @@
       "type": "dropdown",
       "text": "Favvoställe?",
       "alternatives": ["Här", "Där", "Där borta", "Stockholm", "NYC"],
-      "defaultAnswer": null
+      "defaultAnswer": "Här"
     },
     {
       "index": 3,
       "type": "input",
-      "text": "Hur många bultar i Ölandsbron?",
+      "text": "What friendship you’ve had has impacted you the most?",
       "alternatives": null,
+      "defaultAnswer": null
+    },
+    {
+      "index": 4,
+      "type": "radio",
+      "text": "Fråga 5",
+      "alternatives": ["asdf", "asdf2"],
       "defaultAnswer": null
     }
   ]

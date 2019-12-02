@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const DropdownInput = ({
   setAnswers,
@@ -7,17 +7,13 @@ const DropdownInput = ({
   index,
   setDummy
 }) => {
-  console.log(alternatives);
   return (
     <select
       onChange={event => {
-        let tempAnswers = answers;
-        tempAnswers[index] = event.target.value;
-        setAnswers(tempAnswers);
-        setDummy(
-          event.target.value
-        ); /* dummy variabel force re-render as setAnswer don't */
-        console.log(answers);
+        let tempAnswers = answers
+        tempAnswers[index] = event.target.value
+        setAnswers(tempAnswers)
+        setDummy(event.target.value); /* dummy variabel force re-render as setAnswer don't */
       }}
     >
       {alternatives.map(alt => (
@@ -29,4 +25,4 @@ const DropdownInput = ({
   );
 };
 
-export default DropdownInput;
+export default DropdownInput

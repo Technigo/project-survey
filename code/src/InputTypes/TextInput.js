@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const TextInput = ( { currentQuestion, setAnswers, answers, setDummy}) => {
     
@@ -12,7 +12,6 @@ const TextInput = ( { currentQuestion, setAnswers, answers, setDummy}) => {
           tempAnswers[currentQuestion.index] = event.target.value
           setAnswers(tempAnswers)
           setDummy(event.target.value) /* dummy variabel force re-render as setAnswer don't */
-          
         }}
       />
     )

@@ -1,24 +1,22 @@
 import React, { useState } from "react";
 import Form from "Form.js";
-import Answers from "Answers.js";
-import questionnaire from "./sampleQuestionnaire.json";
+import Answers from "Answers.js"
+import questionnaire from "./sampleQuestionnaire.json"
 
 export const App = () => {
-  const [canBeSubmitted, setCanBeSubmitted] = useState(
-    false
-  ); /* if true, show answers */
+  const [hasBeenSubmitted, setHasBeenSubmitted] = useState(false) /* if true, show answers */
 
-  const questions = questionnaire.questions;
+  const questions = questionnaire.questions
 
   /* Create answers hook - array with  default values */
-  const defaultAnswers = questions.map(question => question.defaultAnswer);
-  const [answers, setAnswers] = useState(defaultAnswers);
-
+  const defaultAnswers = questions.map(question => question.defaultAnswer)
+  const [answers, setAnswers] = useState(defaultAnswers)
+  
   return (
     <>
-      {!canBeSubmitted ? (
+      {!hasBeenSubmitted ? (
         <Form
-          setCanBeSubmitted={setCanBeSubmitted}
+        setHasBeenSubmitted={setHasBeenSubmitted}
           answers={answers}
           setAnswers={setAnswers}
           questions={questions}
@@ -27,5 +25,5 @@ export const App = () => {
         <Answers questions={questions} answers={answers} />
       )}
     </>
-  );
-};
+  )
+}

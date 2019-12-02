@@ -1,23 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from "react"
 import TextInput from 'InputTypes/TextInput.js'
 import RadioInput from 'InputTypes/RadioInput.js'
 import DropdownInput from 'InputTypes/DropdownInput.js'
 
-const Form = ({ setCanBeSubmitted, questions, answers, setAnswers }) => {
+const Form = ({ setHasBeenSubmitted, questions, answers, setAnswers }) => {
   const [currentQuestion, setQuestion] = useState(questions[0]) /* start at the first question */
 
   const [dummy, setDummy] = useState(0)
 
   const handleRadioClick = (event) => {
-    let tempAnswers = answers;
-    tempAnswers[currentQuestion.index] = event.target.value;
-    setAnswers(tempAnswers);
-    
+    let tempAnswers = answers
+    tempAnswers[currentQuestion.index] = event.target.value
+    setAnswers(tempAnswers)
     setDummy(event.target.value) /* dummy variabel force re-render as setAnswer don't */
   }
 
   return (
-    <form onSubmit={() => setCanBeSubmitted(true)}>
+    <form onSubmit={() => setHasBeenSubmitted(true)}>
       <h2>Formulär</h2>
       <div className="ask">
         <h3>Fråga {currentQuestion.index + 1}</h3>
@@ -43,7 +42,6 @@ const Form = ({ setCanBeSubmitted, questions, answers, setAnswers }) => {
               label={alternative}
               onChange={handleRadioClick}
               checked={answers[currentQuestion.index] === alternative}
-              answers={answers} /* for debug purposes */
             />
         )}
 
@@ -70,7 +68,7 @@ const Form = ({ setCanBeSubmitted, questions, answers, setAnswers }) => {
           disabled={currentQuestion.index === questions.length - 1 && true}
         >Next</button>
         <button 
-          onClick={() => setCanBeSubmitted(true)} 
+          onClick={() => setHasBeenSubmitted(true)} 
           type="submit"
           disabled={answers.includes(null) && true}
         >Submit</button>

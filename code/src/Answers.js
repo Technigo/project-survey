@@ -1,7 +1,6 @@
-import React from "react";
+import React from "react"
 
 const Answers = ({ questions, answers }) => {
-  console.log(answers);
   return (
     <div>
       <h2>Dina svar</h2>
