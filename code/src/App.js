@@ -34,9 +34,17 @@ export const App = () => {
             <div className="santaAnswer">
               <h1>Bra jobbat, {name} !!!</h1>
               <h3>Du brukar ta {transport} till jobbet och använda bilen för att fixa {useCar}.
-              Så bra att du kan ha det varmt och skönt hemma. Tack för att du gjorde alla frågorna!
-              Hoppas du fortsätter att tänka på varifrån koldioxid kommer!
-              Hälsningar
+              Så bra att du kan ha det varmt och skönt hemma.
+              Här är dina övriga svar sammanfattade:
+              <ul>
+                  <li>Uppvärmning - {heating}</li>
+                  <li>Miljmärkt el - {electricity}</li>
+                  <li>JSecond hand - {shopping}</li>
+                  <li>Vad slängs i övrigt? - {ovrigt}</li>
+                </ul>
+                Tack för att du gjorde alla frågorna!
+                Hoppas du fortsätter att tänka på varifrån koldioxid kommer!
+                Hälsningar
               <br />
                 <span role="img" aria-label="Sunflower">🌻</span></h3>
             </div>
