@@ -47,6 +47,7 @@ header {
   height: 350px;
   position: relative;
   align-items: center;
+  border-bottom: 2px solid #e0cdb4;
 }
 
 h2 {
@@ -79,6 +80,11 @@ button {
   padding: 10px;
   border-radius: 12px;
   cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.7;
+  background-color: #111713;
 }
 
 .fakeRadio {
