@@ -27,51 +27,38 @@ export const App = () => {
   const renderMessage = () => {
     if (love === "Yes") {
       return <p>Make sure to hold on tight to your {nickName} and never let go!</p>
-    }
-    else {
+    } else {
       return <p>Maybe it is time to let go of {nickName}?</p >
     }
   }
 
   return (
     <div>
-
       {showSurvey && !showResult && (
         <div>
-
           <article className="survey">
             <h1>Fill in and find the thruth of your heart</h1>
-
             <form onSubmit={handleSubmit}>
-
               <section className="questionWrapper">
-
                 <div class="question">
                   <h2>Hi there! What's your name?</h2>
                   <input
                     type="text"
                     onChange={event => setName(event.target.value)}
-                    value={name}
-                  />
+                    value={name} />
                 </div>
                 <div className="seperator"></div>
-
               </section>
-
               <section className="questionWrapper">
-
                 <div class="question">
                   <h2>What's your nickname of your partner?</h2>
                   <input
                     type="text"
                     onChange={event => setnickName(event.target.value)}
-                    value={nickName}
-                  />
+                    value={nickName} />
                 </div>
                 <div className="seperator"></div>
-
               </section>
-
               <section className="questionWrapper">
                 <div class="questionRadio">
                   <h2>Do you love your partner?</h2>
@@ -82,28 +69,24 @@ export const App = () => {
                         type="radio"
                         value="Yes"
                         onChange={event => setLove(event.target.value)}
-                        checked={love === "Yes"}
-                      />
+                        checked={love === "Yes"} />
                       <div class="fakeCheckbox"></div>
                       Yes
-</label>
+                    </label>
                     <label>
                       <input
                         className="radio"
                         type="radio"
                         value="No"
                         onChange={event => setLove(event.target.value)}
-                        checked={love === "No"}
-                      />
+                        checked={love === "No"} />
                       <div class="fakeCheckbox"></div>
                       No
-</label>
+                    </label>
                   </div>
                 </div>
-
                 <div className="seperator"></div>
               </section>
-
               <section className="questionWrapper">
                 <div class="dropdown">
                   <h2>What is your partner to you?</h2>
@@ -124,7 +107,7 @@ export const App = () => {
                 <button
                   type="submit"
                 >Submit
-        </button>
+                </button>
               </section>
             </form>
           </article>
@@ -134,7 +117,7 @@ export const App = () => {
 
       {!showSurvey && (
         <header>
-          <img src={hero} height="400px" width="auto" />
+          <img src={hero} />
           <h1>What do you really think of your partner?</h1>
           <button type="button" onClick={handleShowSurvey}>Find out here!</button>
         </header>
@@ -147,10 +130,9 @@ export const App = () => {
           <p>Do you really love your partner {nickName}? Ooooohhh {love}!</p>
           <p>For you, {nickName} is your {definition}</p>
           {renderMessage()}
+          <img src={hero} />
         </div>
       )}
-
-
     </div>
   )
 }

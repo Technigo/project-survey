@@ -29,6 +29,18 @@ p{
   margin: 2px;
 }
 
+img{
+  height: 400px;
+  width: auto;
+}
+
+label{
+  display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
 .seperator{
 background: #b5b1b0;
 width: 1000px;
@@ -84,6 +96,18 @@ margin: 40px 0 100px 0;
   /* margin: 200px 0 100px 0; */
 }
 
+.result img{
+  height: 300px;
+  width: auto;
+  margin-top: 50px;
+}
+
+.result h1{
+margin: 20px 0 0 0;
+}
+
+
+
 input[type='radio'] {
   display: none;
 }
@@ -97,7 +121,7 @@ input[type='radio'] {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  margin-right: 5px;
+  margin: 5px;
 }
 
 input:checked + .fakeCheckbox::after{
