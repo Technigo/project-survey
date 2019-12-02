@@ -11,22 +11,33 @@ export const App = () => {
   const [tvseries, setTvseries] = useState("")
   const [artist, setArtist] = useState("")
   const [christmas, setChristmas] = useState("0")
+  const [percentage, setPercentage] = useState("0")
   
   const [question, setQuestion] = useState("name")
   const [submitted, setSubmitted] = useState(false)
   const [showText, setShowText] = useState(true)
+  const [error, setError] = useState(false)
   
   const nextQuestion = () => {
-    if(question==='name') {
+    if(question==='name' && name.length===0) {
+      setQuestion('name')
+      setError(true)
+      setPercentage("0")
+    } else if(question==='name' && name.length>0) {
       setQuestion('age')
+      setPercentage("16.67")
     } else if(question==='age') {
       setQuestion('food')
+      setPercentage("33.34")
     } else if(question==='food') {
       setQuestion('artist')
+      setPercentage("50")
     } else if(question==='artist') {
       setQuestion('tvseries')
+      setPercentage("66.67")
     } else if(question==='tvseries') {
       setQuestion('christmasenjoy')
+      setPercentage("83.35")
     }
   }
 
@@ -39,32 +50,34 @@ export const App = () => {
     <div className="menu-container">
       
     {showText && <div className="form-container">
-    <br></br>
     
     <form 
       onSubmit={event => event.preventDefault()}>
 
-      {question === 'name' && (
-      <div>
+    {question === 'name' && (
+    <div>
       <h1>Welcome to my survey!</h1>
-      <p>What is your name?</p>
+      <p className="intro">I am curious about your favourite food,
+      music artist and tv-series</p>
+     
+      {!error &&(<p>What is your name?</p>)}
+      {error &&(<p className="required">Name required</p>)}
+
       <label>
       <input 
         type="text"
         onChange={event => setName(event.target.value)}
         value={name}
-        required
+        placeholder="Enter your name here"
       />
       </label>
-      <br></br><br></br>
-      </div>
-      )}
+    </div>
+    )}
       
-      {question === 'age' && (
-      <div>
-      <h1>Michel's survey</h1>
+    {question === 'age' && (
+    <div>
+      <h1>Michels survey</h1>
       <p>What is your age group?</p>
-      <br></br>
 
       {ageGroups.map((group) => (
         <label key={group}>
@@ -78,14 +91,13 @@ export const App = () => {
         </label>
       ))}
       <br></br><br></br>
-      </div>
-      )}
+    </div>
+    )}
       
-      {question === 'food' && (
-      <div>
-      <h1>Michel's survey</h1>
+    {question === 'food' && (
+    <div>
+      <h1>Michels survey</h1>
       <p>Favourite food</p>
-      <br></br>
 
       <label>
       <select
@@ -102,15 +114,13 @@ export const App = () => {
         <option value="other">Other</option>
       </select>
       </label>
-      <br></br><br></br>
-      </div>
-      )}
+    </div>
+    )}
 
-      {question === 'artist' && (
-      <div>
-      <h1>Michel's survey</h1>
+    {question === 'artist' && (
+    <div>
+      <h1>Michels survey</h1>
       <p>Favourite artist</p>
-      <br></br>
   
       <label>
       <select
@@ -130,15 +140,13 @@ export const App = () => {
         <option value="other">Other</option>
       </select>
       </label>
-      <br></br><br></br>
-      </div>
-      )}
+    </div>
+    )}
       
-      {question === 'tvseries' && (
-      <div>
-      <h1>Michel's survey</h1>
+    {question === 'tvseries' && (
+    <div>
+      <h1>Michels survey</h1>
       <p>Favourite tv-series</p>
-      <br></br>
 
       <label>
       <select
@@ -156,52 +164,52 @@ export const App = () => {
         <option value="other">Other</option>
       </select>
       </label>
+    </div>
+    )}
 
-      <br></br><br></br>
-      </div>
-      )}
-
-      {question === 'christmasenjoy' && (
-      <div>
-      <h1>Michel's survey</h1>
+    {question === 'christmasenjoy' && (
+    <div>
+      <h1>Michels survey</h1>
       <p>How much do you like Christmas on a scale from 0 to 10?</p>
+
       <label>
       <input 
         type="range"
         value={christmas}
         min="0"
         max="10"
+        className="slider"
         onChange={event => setChristmas(event.target.value)}
       />
-      <p>{christmas}</p>
+      <p className="christmas-points">{christmas}</p>
       </label>
-      <br></br><br></br>
       
       <button type="submit" onClick={() => showSummary()}>
         Submit
       </button>
-      </div>
-      )}
+
+    </div>
+    )}
       
-      {question !=='christmasenjoy' && (
-        <div>
-        <button type="button" onClick={nextQuestion}>
+    {question !=='christmasenjoy' && (
+    <div>
+      <button type="button" onClick={nextQuestion}>
         Continue
-        </button>
-        </div>
+      </button>
+
+      {question !=='name' && (
+        <ProgressBar percentage={percentage}/>
       )}
+
+    </div>
+    )}
 
     </form>
     </div> }
 
-    {submitted && <Summary name={name} age={age} food={food} artist={artist} tvseries={tvseries} christmas={christmas} />}
+    {submitted && 
+      <Summary name={name} age={age} food={food} artist={artist} tvseries={tvseries} christmas={christmas} />
+    }
     </div>
   )
 }
-
-// {question !=='name' && (
-//   <div className="progress">
-//     <br></br>
-//     <ProgressBar/>
-//   </div>
-// )}

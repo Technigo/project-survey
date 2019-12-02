@@ -1,14 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Summary = (props) => {
-  return (
-    <div className="summary">
-      <h2>Thank you for your answers {props.name}</h2>
-      <p>Age group: {props.age} years</p>
-      <p>Favourite food: {props.food}</p>
-      <p>Favourite artist: {props.artist}</p>
-      <p>Favourite tv-series: {props.tvseries}</p>
-      <p>How much you like Christmas: {props.christmas}</p>
-    </div>
-  )
-}
+export const Summary = ({age, artist, christmas, food, name, tvseries}) => (
+  <div className="summary">
+    <h2>Thank you for your answers {name}</h2>
+    <p>Age group: {age} years</p>
+    <p>Favourite food: {food}</p>
+    <p>Favourite artist: {artist}</p>
+    <p>Favourite tv-series: {tvseries}</p>
+    <p>How much you like Christmas: {christmas} points</p>
+    <p className="greeting">Merry Christmas!</p>
+  </div>
+)
