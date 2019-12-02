@@ -1,10 +1,8 @@
 import React, { useState } from 'react'
-// import tree1 from 'images/tree1.jpeg'
-// import tree2 from 'images/tree2.jpeg'
+import tree1 from 'images/tree1.jpeg'
+import tree2 from 'images/tree2.jpeg'
 import tree3 from 'images/tree3.jpeg'
 import tree4 from 'images/tree4.jpeg'
-import tree5 from 'images/tree5.jpeg'
-import tree6 from 'images/tree6.jpeg'
 
 export const Form = () => {
   const [ageGroup, setAgeGroup] = useState()
@@ -46,29 +44,29 @@ export const Form = () => {
 
 
   const imageToShow = () => {
-    if (preferredImage === "tree3") {
+    if (preferredImage === "tree1") {
       return (<div className="image-box1"
-        style={{ backgroundImage: `url(${tree3})` }}
+        style={{ backgroundImage: `url(${tree1})` }}
         aria-label="Image of Christmas tree with eyes">
       </div>)
-    } else if (preferredImage === "tree4") {
+    } else if (preferredImage === "tree2") {
       return (
         <div className="image-box2"
-          style={{ backgroundImage: `url(${tree4})` }}
+          style={{ backgroundImage: `url(${tree2})` }}
           aria-label="Image of Christmas tree with Santa Clauses">
         </div>
       )
-    } else if (preferredImage === "tree5") {
+    } else if (preferredImage === "tree3") {
       return (
         <div className="image-box3"
-          style={{ backgroundImage: `url(${tree5})` }}
+          style={{ backgroundImage: `url(${tree3})` }}
           aria-label="Image of spruce tree in a field">
         </div>
       )
-    } else if (preferredImage === "tree6") {
+    } else if (preferredImage === "tree4") {
       return (
         <div className="image-box4"
-          style={{ backgroundImage: `url(${tree6})` }}
+          style={{ backgroundImage: `url(${tree4})` }}
           aria-label="Image of palm tree">
         </div>
       )
@@ -105,6 +103,7 @@ export const Form = () => {
               <h1>Christmas survey</h1>
             </div>
 
+            {/**WELCOME-SECTION */}
             {question === 'welcome' && (
               <div className="welcome-div">
                 <p>Welcome to a survey about Christmas! This is a school project and your info will not be saved anywhere. Press the button below to get started.</p>
@@ -113,12 +112,12 @@ export const Form = () => {
                   onClick={handleContinue}
                 >
                   Start
-                  </button>
+                </button>
               </div>
             )}
 
+            {/**QUESTION 1 */}
             {question === 'timesOfChristmases' && (
-
               < div className="radio-buttons">
                 How many Christmases have you experienced?
                 {ageGroups.map(group => (
@@ -140,18 +139,14 @@ export const Form = () => {
               </div>
             )}
 
-
-
+            {/**QUESTION 2 */}
             {question === 'merryChristmas' && (
-
-
               < div className="textinput-div">
                 <label>How do you say Merry Christmas in your language?
                   <input
                     onKeyPress={(event) => {
                       if (event.key === 'Enter') { handleContinue() }
                     }}
-
                     autoFocus
                     type="text"
                     onChange={(event) => setMerryChristmas(event.target.value)}
@@ -162,11 +157,8 @@ export const Form = () => {
             )
             }
 
-
-
+            {/**QUESTION 3 */}
             {question === 'christmasDecoration' && (
-
-
               < div className="select-div" >
                 <label>Favourite Christmas decoration:
                   <select
@@ -186,15 +178,11 @@ export const Form = () => {
                   </select>
                 </label>
               </div >
-
             )
             }
 
-
-
+            {/**QUESTION 4 */}
             {question === 'enjoysChristmas' && (
-
-
               <div className="checkbox-div">
                 <label>
                   Enjoy Christmas?
@@ -210,20 +198,16 @@ export const Form = () => {
                   <span className="fakeCheckbox" ariaLabel="checkbox"></span>
                 </label>
               </div>
-
             )
             }
 
-
-
+            {/**QUESTION 5 */}
             {question === 'prettiestTree' && (
-
-
-
-
               <div className="images">
-                Which Christmas tree is the most beautiful?
-        <div className="only-images">
+                Which Christmas tree do you think is the most beautiful?
+                <div className="only-images">
+
+                  {/**Tree 1*/}
                   <label>
                     <input
                       onKeyPress={(event) => {
@@ -231,57 +215,60 @@ export const Form = () => {
                       }}
                       autoFocus
                       type="radio"
-                      value="tree3"
-                      onChange={() => setPreferredImage("tree3")}
-                      checked={preferredImage === "tree3"}
-                    ></input>
+                      value="tree1"
+                      onChange={() => setPreferredImage("tree1")}
+                      checked={preferredImage === "tree1"}
+                    >
+                    </input>
                     <div className="image-box1"
-                      style={{ backgroundImage: `url(${tree3})` }}
+                      style={{ backgroundImage: `url(${tree1})` }}
                       aria-label="Image of Christmas tree with eyes">
                     </div>
                   </label>
 
+                  {/**Tree 2*/}
+                  <label>
+                    <input type="radio"
+                      value="tree2"
+                      onChange={() => setPreferredImage("tree2")}
+                      checked={preferredImage === "tree2"}
+                    >
+                    </input>
+                    <div className="image-box2"
+                      style={{ backgroundImage: `url(${tree2})` }}
+                      aria-label="Image of Christmas tree with Santa Clause's">
+                    </div>
+                  </label>
 
+                  {/**Tree 3*/}
+                  <label>
+                    <input type="radio"
+                      value="tree3"
+                      onChange={() => setPreferredImage("tree3")}
+                      checked={preferredImage === "tree3"}
+                    >
+                    </input>
+                    <div className="image-box3"
+                      style={{ backgroundImage: `url(${tree3})` }}
+                      aria-label="Image of spruce tree in a field">
+                    </div>
+                  </label>
+
+                  {/**Tree 4*/}
                   <label>
                     <input type="radio"
                       value="tree4"
                       onChange={() => setPreferredImage("tree4")}
                       checked={preferredImage === "tree4"}
-                    ></input>
-                    <div className="image-box2"
-                      style={{ backgroundImage: `url(${tree4})` }}
-                      aria-label="Image of Christmas tree with Santa Clause's">
-                    </div>
-                  </label>
-
-
-                  <label>
-                    <input type="radio"
-                      value="tree5"
-                      onChange={() => setPreferredImage("tree5")}
-                      checked={preferredImage === "tree5"}
-                    ></input>
-
-                    <div className="image-box3"
-                      style={{ backgroundImage: `url(${tree5})` }}
-                      aria-label="Image of spruce tree in a field">
-                    </div>
-                  </label>
-
-
-                  <label>
-                    <input type="radio"
-                      value="tree6"
-                      onChange={() => setPreferredImage("tree6")}
-                      checked={preferredImage === "tree6"}
-                    ></input>
-
+                    >
+                    </input>
                     <div className="image-box4"
-                      style={{ backgroundImage: `url(${tree6})` }}
+                      style={{ backgroundImage: `url(${tree4})` }}
                       aria-label="Image of palm tree">
                     </div>
                   </label>
                 </div>
+
                 {/*SUBMIT-BUTTON*/}
                 <div className="submit-button">
                   < button type="submit" > Submit</button>
@@ -297,77 +284,10 @@ export const Form = () => {
                 onClick={handleContinue}>
                 Next
 </button>
-
             )}
-
-
           </form >
-
         )
       }
-
     </div >
-
-
-
-
   )
 }
-
-//  {/* IMAGE QUESTION */}
-//  Which tree is the most beautiful in your opinion?
-
-//  {images.map(image => (<label key={image}>
-//                <div className="image-boxes">
-//                  <input
-//                    type="radio"
-//                    value={image}
-//                    onChange={() => setPreferredImage({ image })}
-//                    checked={preferredImage === image}
-//                  />
-//                  {image}
-//                </div>
-//              </label>
-//              ))}
-
-
-
-
-//SEVERAL CHECKBOXES//
-// const interests = [
-//   "Coding",
-//   "Cooking",
-//   "Canoeing",
-//   "Crosswords",
-// ]
-
-// export const Interests = () => {
-//   const [interestedIn, setInterestedIn] = useState(false)
-//   return (
-//     <form>
-//       Interested in:
-//       {interests.map(interest => (
-//         <label key={interest}>
-//           <input
-//             type="checkbox"
-//             name={interest}
-//             value={interest}
-//             checked={interestedIn}
-//             onChange={event => setInterestedIn(event.target.checked)}
-//           />
-//         </label>
-//       ))}
-//     </form>
-//   )
-// }
-
-
-
-// const images = [
-//   <img src={tree1} alt="Christmas tree with presents" height="200px"></img>,
-//   <img src={tree2} alt="Christmas tree with lights" height="200px"></img>,
-//   <img src={tree3} alt="Christmas tree with candy in it" height="200px"></img>,
-//   <img src={tree4} alt="Christmas tree with presents underneath" height="200px"></img>,
-//   <img src={tree5} alt="Spruce tree in a field" height="200px"></img>,
-//   <img src={tree6} alt="Palm tree" height="200px"></img>,
-// ]

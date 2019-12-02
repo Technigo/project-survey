@@ -1,15 +1,9 @@
 /*GENERAL*/
-
-
-
-
-
 body {
   margin: 10px;
   color: darkred;
   font-size: 18px;
   background-color: #fffaf8;
-  /* font-family: 'Merriweather', serif; */
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -42,25 +36,28 @@ label {
 *:focus {
   outline: rgb(59, 153, 252) auto 5px;
 }
+
 /*START-PAGE*/
 .welcome-div{
   display:flex;
   flex-direction: column;
   align-items: center;
 }
+
 .welcome-div + .next-button{
   display:none;
 }
-
 
 /*QUESTION 1 (radio-buttons)*/
 .radio-buttons label{
   margin: 10px 0;
   justify-content: left;
 }
+
 input[type="radio"]{
   opacity: 0;
 }
+
 .fakeRadio{
   border: 2px solid hotpink;
   width: 14px;
@@ -88,22 +85,17 @@ input, select{
   font-size: 14px;
   border-radius: 4px;
 }
+
 .textinput-div label, .select-div label, .images label{
   display: flex;
   flex-direction: column;
 }
+
 .textinput-div input, .select-div select{
   margin-top: 15px;
 }
 
-/* select{
-  margin: 0 15px;
-  border: 2px solid hotpink;
-  font-size: 14px;
-} */
-
 /*QUESTION 4 (checkbox)*/
-
 input[type="checkbox"]{
   opacity:0;
 }
@@ -130,9 +122,9 @@ input:checked + .fakeCheckbox::after{
 
 /*QUESTION 5 (radio-buttons/images)*/
 .images label{
-display: flex;
-/* flex-wrap:wrap; */
+  display: flex;
 }
+
 .only-images{
   display:flex;
   flex-wrap: wrap;
@@ -153,6 +145,7 @@ input[type="radio"] + .image-box1, input[type="radio"] + .image-box2, input[type
   cursor:pointer;
   opacity: 0.85;
 }
+
 input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-box2, input[type="radio"]:checked + .image-box3, input[type="radio"]:checked + .image-box4{
   border: 2px solid hotpink;
   opacity: 1;
@@ -165,12 +158,11 @@ input[type="radio"]:checked + .image-box1, input[type="radio"]:checked + .image-
   justify-content: center;
   align-items: center;
 }
+
 .summary div{
 max-width: 400px;
 margin: 0 60px;
-
 }
-
 
 button{
   width: 80px;
@@ -188,18 +180,3 @@ button{
   display:flex;
   justify-content: center;
 }
-
-
-
-/* .radio-buttons{
-  display:flex;
-  flex-direction: column;
-} */
-
-
-
-
-
-
-
-/* content: "✔" You can use this in CSS to style checkboxes for example*/
