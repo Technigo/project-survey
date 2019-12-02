@@ -52,6 +52,9 @@ export const App = () => {
     setShowResult(false)
     setQuestion('1')
     setName('')
+    setStrength(15)
+    setList("")
+    setBread()
   }
 
   const handleSalsa = () => {
