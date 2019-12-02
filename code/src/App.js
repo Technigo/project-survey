@@ -132,6 +132,9 @@ export const App = () => {
                   type="text"
                   placeholder="Type your name here..."
                   required
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') { handleContinueClick() }
+                  }}
                   onChange={event => setName(event.target.value)}
                   value={name}
                 />
@@ -147,7 +150,9 @@ export const App = () => {
                 <label key={group} className="radio-buttons">
                   <input
                     type="radio"
-                    autoFocus
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter') { handleContinueClick() }
+                    }}
                     value={group}
                     onChange={() => setAgeGroup(group)}
                     checked={ageGroup === group}
@@ -168,7 +173,9 @@ export const App = () => {
                   <label>
                     <input type="radio"
                       value="ready"
-
+                      onKeyPress={(e) => {
+                        if (e.key === 'Enter') { handleContinueClick() }
+                      }}
                       onChange={() => setReadyness("ready")}
                       checked={readyness === "ready"}
                     />
@@ -179,6 +186,9 @@ export const App = () => {
                   <label>
                     <input type="radio"
                       value="notReady"
+                      onKeyPress={(e) => {
+                        if (e.key === 'Enter') { handleContinueClick() }
+                      }}
                       onChange={() => setReadyness("notReady")}
                       checked={readyness === "notReady"}
                     />
@@ -197,6 +207,9 @@ export const App = () => {
                 <h3>What was your one favorite happening in 2019?</h3>
                 <select className="select-css"
                   onChange={event => setYearEvent(event.target.value)}
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') { handleContinueClick() }
+                  }}
                   value={yearEvent}
                 >
                   <option value="">Select:</option>
@@ -215,6 +228,9 @@ export const App = () => {
                 <label>
                   <input
                     type="range"
+                    onKeyPress={(e) => {
+                      if (e.key === 'Enter') { handleContinueClick() }
+                    }}
                     min={1}
                     max={500}
                     value={range}
@@ -261,6 +277,9 @@ export const App = () => {
               <label>
                 <input
                   type="text"
+                  onKeyPress={(e) => {
+                    if (e.key === 'Enter') { handleContinueClick() }
+                  }}
                   placeholder="Type your answer here..."
                   onChange={event => setLookForward(event.target.value)}
                   value={lookForward}
