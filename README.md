@@ -1,4 +1,4 @@
-Project Made during Technigo Bootcamp, Survey-project.
+Project 10, build a survey with react, Made during Technigo Bootcamp fall 2019.
 
 ## 1. What is this?
 This week's project was to use React to build a survey form. It should ask a couple of questions and when the user presses submit it should show a summery of their answers. The focus is to practice using React state and controlling forms.
