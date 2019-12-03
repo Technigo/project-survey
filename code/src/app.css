@@ -1,0 +1,14 @@
+body {
+	background: #32322c;
+	color: #ecf0f1;
+	font-size: 21px;
+}
+
+.main {
+	margin: 0 auto;
+	width: 360px;
+	height: auto;
+	display: flex;
+	justify-content: center;
+	padding-top: 50px;
+}
