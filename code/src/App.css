@@ -22,6 +22,10 @@ Form {
     width: 300px;
 }
 
+.summary span {
+    margin: 30px 0px;
+}
+
 .choices {
     display: flex;
     flex-direction: row;
@@ -43,6 +47,7 @@ button {
     font-size: 16px;
     color: #a12219;
     border: solid 4px #d29835; 
+    border-radius: 12%;
 }
 
 button:hover {
@@ -52,15 +57,30 @@ button:hover {
     transition: 0.4s; 
 }
 
+.navigationButtons {
+    display: flex;
+    flex-direction: row;
+}
+
 .next {
     border-top-right-radius: 12%; 
-    border-bottom-right-radius: 12%; 
+    border-bottom-right-radius: 12%;
+    border-top-left-radius: 0%; 
+    border-bottom-left-radius: 0%; 
 }
 
 .previous {
     border-top-left-radius: 12%; 
-    border-bottom-left-radius: 12%; 
+    border-bottom-left-radius: 12%;
+    border-top-right-radius: 0%; 
+    border-bottom-right-radius: 0%; 
 }
+
+button[type="submit"] {
+    border-top-right-radius: 12%; 
+    border-bottom-right-radius: 12%; 
+}
+
 
 
 Input {
@@ -148,6 +168,10 @@ input[type="radio"]:checked + span {
     margin-bottom: 30px;
   }
 
+  .nachos {
+      margin: 30px 0px;
+  }
+
   input[type="checkbox"] {
     display: none;
 }
@@ -169,5 +193,4 @@ input:checked + .fakeCheckbox::after {
     border-radius: 50%;
     background: #a12219;
     display: inline-block;
-
 }

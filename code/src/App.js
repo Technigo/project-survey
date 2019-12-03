@@ -8,15 +8,19 @@ export const App = () => {
   const [list, setList] = useState("");
   // Const for checkbox
   const [wantNachos, setWantNachos] = useState(false);
-  // Show result
-  const [showResult, setShowResult] = useState(false);
 
   const [bread, setBread] = useState()
 
   const [strength, setStrength] = useState(15)
 
+  // Show result
+  const [showResult, setShowResult] = useState(false);
+
   // One question at the time
   const [question, setQuestion] = useState('1')
+
+  //Adjectives
+const adjectives = ["tasty", "delicious", "yummy"]
 
   const handlePrevious = () => {
     if (question === 'last') {
@@ -55,6 +59,7 @@ export const App = () => {
     setStrength(15)
     setList("")
     setBread()
+    setWantNachos(false)
   }
 
   const handleSalsa = () => {
@@ -68,9 +73,13 @@ export const App = () => {
 
   let sauce = handleSalsa(strength)
 
-  
+  const randomizer = (array) => {
+    return array[Math.floor(Math.random() * array.length)]
+  }
 
-  
+  let adjective = randomizer(adjectives)
+
+
 
   return (
     <div className="FirstForm">
@@ -80,7 +89,10 @@ export const App = () => {
         {showResult && 
         
         <div className="summary" onReset={redoForm}>
-          {name}, you want your taco with {bread} and some nice {sauce} salsa. But please, no {list}! 
+          <span>
+            {name}, you want your taco with {bread} and some nice {sauce} salsa, {adjective}! 
+            But please, no {list}!
+          </span>
           <button type='reset' onClick={redoForm}>Another taco!</button>
           </div>}
           
@@ -182,6 +194,7 @@ export const App = () => {
         )} 
 
 {/* If not on the first / last question, render a previous / continue-button */}
+<div className="navigationButtons">
           {question !== '1' && (
            <button type="button" className="previous" onClick={handlePrevious}>Back</button>
          )}
@@ -189,10 +202,10 @@ export const App = () => {
          {question !== 'last' && (
            <button type="button" className="next" onClick={handleNext}>Continue</button>
          )}
-
           {question === 'last' && (
            <button type="submit">Submit</button>
          )}
+         </div>
                
       </form>
       }
