@@ -1,13 +1,111 @@
+html,
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  max-width: 1500px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 14px;
+  background-color: #F8F6E7;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+label {
+  margin-right: 5px;
+}
+
+h1 {
+  color: black;
+  font-family: 'Anton', sans-serif;
+  font-size: 2.5rem;
+  margin: 2rem;
+  text-align: center;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  margin: 0 auto;
+  margin-bottom: 4rem;
+  margin-top: 3rem;
+  height: 350px;
+}
+
+.cat-icon {
+  width: 12rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.q-container {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 55%;
+  padding: 3rem;
+  margin: 0 auto 3rem;
+  -moz-box-shadow: 3px 3px 5px 6px #ccc;
+  -webkit-box-shadow: 3px 3px 5px 6px #ccc;
+  box-shadow: 3px 3px 5px 6px #ccc;
+}
+
+ul {
+  list-style: none;
+}
+
+.final-container {
+  text-align: center;
+}
+
+.final-container .cat-icon {
+  width: 6rem;
+}
+
+.final {
+  max-width: 200px;
+  margin: 3rem auto;
+  background-color: #EDD5E5;
+  padding: 1rem;
+  border: red solid;
+  border-radius: 10px;
+}
+
+footer {
+  margin-top: 8rem;
+  text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    font-size: 12px;
+  }
+  header {
+    width: 90%;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+  h1 {
+    font-size: 1.5rem;
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  header img {
+    width: 8rem;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1000px) {
+  h1 {
+    font-size: 2rem;
+  }
 }
