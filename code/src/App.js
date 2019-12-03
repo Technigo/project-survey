@@ -173,13 +173,14 @@ export const App = () => {
                   <label>
                     <input type="radio"
                       value="ready"
+                      autoFocus
                       onKeyPress={(e) => {
                         if (e.key === 'Enter') { handleContinueClick() }
                       }}
                       onChange={() => setReadyness("ready")}
                       checked={readyness === "ready"}
                     />
-                    <span role="img" aria-label="Person raising it's hand">
+                    <span role="img" aria-label="Person raising her hand">
                       🙋‍♀️
                 </span>
                   </label>
@@ -192,7 +193,7 @@ export const App = () => {
                       onChange={() => setReadyness("notReady")}
                       checked={readyness === "notReady"}
                     />
-                    <span role="img" aria-label="Person crossing it's arms">
+                    <span role="img" aria-label="Person crossing her arms">
                       🙅‍♀️
                 </span>
                   </label>
