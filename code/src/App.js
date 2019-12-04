@@ -21,17 +21,12 @@ export const App = () => {
   //Nextbutton only enabled when text input is over 0 chars
   const enabled = text.length > 0
 
-  //Function to handle next-button/onclick
-  const handleNext = () => {
-    setQuestion(question + 1)
+  //Function to handle next/back-button
+  const handleNavigation = (direction) => {
+    setQuestion(direction)
   }
 
-  //Function to handle next-button/onclick
-  const handleBack = () => {
-    setQuestion(question - 1)
-  }
-
-  //Function to handle submit-button/oncklick
+  //Function to handle submit-button
   const handleSubmit = (event) => {
     event.preventDefault()
     setSubmitted(true)
@@ -142,11 +137,11 @@ export const App = () => {
 
             <div className="button-wrapper">
               {question !== 1 && (
-                <button type="button" onClick={handleBack}>Back</button>
+                <button type="button" onClick={() => handleNavigation(question - 1)}>Back</button>
               )}
               {question !== 5 && (
                 // Nextbutton disabled until textinput has more than 0 chars
-                <button type="button" onClick={handleNext} disabled={!enabled}>Next</button>
+                <button type="button" onClick={() => handleNavigation(question + 1)} disabled={!enabled}>Next</button>
               )}
               {question === 5 && (<button className="button-submit" type="submit">Done</button>)}
             </div>
