@@ -14,7 +14,7 @@ export const App = () => {
   const [submitted, setSubmitted] = useState(false)   //False because form is not submitted from start (initial value)
 
   //Array with values for mapping radio buttons in #3
-  const fruits = ["Apple", "Banana", "Minions?"]
+  const radioButtons = ["Apple", "Banana", "Minions?"]
   //Array with values for mapping checkboxes in #4
   const checkboxes = ["Yes", "No", "The slowest"]
 
