@@ -7,7 +7,7 @@ export const Compilation = props => {
 			<p>
 				We are going to have such a great time {props.name}! Going to the{' '}
 				{props.activity}, eating {props.food} and drinking {props.drinks}. The
-				estimation of the amount of fun tonight is set to {props.fun}/10
+				estimation of the amount of fun today is set to {props.fun}/10
 			</p>
 		</div>
 	);

@@ -43,13 +43,16 @@ export const Survey = () => {
 									required
 									onChange={event => setName(event.target.value)}
 									value={name}
+									onKeyPress={event => {
+										event.key === 'Enter' && event.preventDefault();
+									}}
 								/>
 							</label>
 						</div>
 					)}
 
 					{question === 2 && (
-						<div className='form-radio'>
+						<div className='form'>
 							<p>
 								Oh, hi {name}! I feel like doing something fun today. What do
 								you reckon?
@@ -62,7 +65,12 @@ export const Survey = () => {
 										onChange={event => setActivity(event.target.value)}
 										checked={activity === options}
 									/>
-									<span className='radio-check'></span>
+									<span
+										className='radio-check'
+										tabIndex='0'
+										aria-checked='false'
+										role='radio'
+									></span>
 									{options}
 								</label>
 							))}
@@ -75,19 +83,22 @@ export const Survey = () => {
 								Ok {name}, {activity} it is! But i am kind of hungry, we should
 								eat something before we go.
 							</p>
-							<div className='alignment'>
-								{meal.map(options => (
-									<label key={options} className='select'>
-										<input
-											type='checkbox'
-											value={options}
-											onChange={event => setFood(event.target.value)}
-											checked={food === options}
-										/>
-										<span className='check-label'>{options}</span>
-									</label>
-								))}
-							</div>
+							{meal.map(options => (
+								<label key={options} className='checkbox'>
+									<input
+										type='checkbox'
+										value={options}
+										onChange={event => setFood(event.target.value)}
+										checked={food === options}
+									/>
+									<span
+										className='boxes'
+										tabIndex='0'
+										aria-checked='false'
+									></span>
+									{options}
+								</label>
+							))}
 						</div>
 					)}
 
@@ -95,7 +106,7 @@ export const Survey = () => {
 						<div className='form'>
 							<label>
 								<p>{food} sounds good. What should we drink to that?</p>
-								<div className='alignment'>
+								<div className='dropdown'>
 									<select
 										onChange={event => setDrinks(event.target.value)}
 										value={drinks}

@@ -10,28 +10,30 @@
 	justify-content: space-around;
 }
 
-/* STYLING FOR ALL DIFFERENT INPUTS */
+/* STYLING TEXT INPUT */
 
 input {
 	background: none;
 	border-style: none;
-	width: 90%;
+	width: 100%;
 	color: #ecf0f1;
 }
 
 input[type='text'] {
-	border-bottom: 1px solid #ecf0f1;
+	border: 1px solid #ecf0f1;
 	font-size: large;
+	padding-left: 5px;
+	background: #6d6b6b;
+}
+
+input::placeholder {
+	color: #ecf0f1;
 }
 
 /* RADIO BUTTONS CUSTOMIZATION AND POSITIONING */
 
-.form-radio {
-	display: flex;
-	flex-direction: column;
-}
-
 .radio {
+	display: block;
 	position: relative;
 	padding-left: 50px;
 	margin-bottom: 20px;
@@ -45,12 +47,12 @@ input[type='text'] {
 }
 
 .radio .radio-check {
+	background: #ecf0f1;
 	position: absolute;
 	left: 0;
 	bottom: 0;
 	height: 25px;
 	width: 25px;
-	background: #ecf0f1;
 	border-radius: 50%;
 }
 
@@ -62,27 +64,150 @@ input[type='text'] {
 }
 
 .radio:hover input ~ .radio-check {
+	background: #6d6b6b;
+	border: 4px solid #ecf0f1;
+	height: 17px;
+	width: 17px;
+}
+
+/* CHECKBOXES CUSTOMIZATION AND POSITIONING */
+
+.checkbox {
+	position: relative;
+	padding-left: 50px;
+	margin-bottom: 20px;
+	cursor: pointer;
+}
+
+.checkbox input[type='checkbox'] {
+	position: absolute;
+	cursor: pointer;
+	display: none;
+}
+
+.checkbox .boxes {
+	background: #ecf0f1;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+	height: 26px;
+	width: 26px;
+}
+
+.checkbox:hover input ~ .boxes {
+	background: #6d6b6b;
+	border: 4px solid #ecf0f1;
+	height: 17px;
+	width: 17px;
+}
+
+.checkbox input[type='checkbox']:checked ~ .boxes {
 	background: #32322c;
 	border: 4px solid #ecf0f1;
 	height: 17px;
 	width: 17px;
 }
 
+/* DROPDOWN MENU STYLED AND POSITIONED */
+.dropdown {
+	background: #6d6b6b;
+	position: relative;
+	display: flex;
+	width: 100%;
+	height: 40px;
+	line-height: 2;
+	overflow: hidden;
+}
+
+.dropdown::after {
+	content: '\25BC';
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding: 0 15px;
+	background: #6f1a07;
+	color: #ecf0f1;
+	cursor: pointer;
+	pointer-events: none;
+}
+
+.dropdown:hover::after {
+	color: #32322c;
+}
+
+option {
+	background-color: #6d6b6b;
+}
+
+select {
+	outline: 0;
+	box-shadow: none;
+	border: 0;
+	background: none;
+	width: 100%;
+	padding-left: 10px;
+	font-size: large;
+	color: #ecf0f1;
+	cursor: pointer;
+}
+
+/* SLIDER STYLING */
+input[type='range'] {
+	-webkit-appearance: none;
+	width: 100%;
+	height: 15px;
+	border-radius: 5px;
+	background: #6d6b6b;
+	opacity: 0.7;
+}
+
+input[type='range']:hover {
+	opacity: 1;
+}
+
+input[type='range']::-webkit-slider-thumb {
+	background: #6f1a07;
+	-webkit-appearance: none;
+	width: 25px;
+	height: 25px;
+	border-radius: 50%;
+	cursor: pointer;
+}
+
 /* BUTTONS */
 button {
+	background: #6f1a07;
 	width: 120px;
 	padding: 10px;
 	margin: 40px 0 20px 0;
 	border-radius: 15px;
 	border-style: none;
-	background: #6f1a07;
 	font-size: 26px;
 	font-weight: bold;
 	color: #ecf0f1;
 }
 
 button:hover {
+	border: 1px solid #ecf0f1;
 	cursor: pointer;
 	padding: 9px;
-	border: 1px solid #ecf0f1;
+}
+
+/* FOCUS STYLING AND FUNCTION */
+:focus {
+	outline: 2px solid #6f1a07;
+	outline-offset: 10px;
+}
+
+select:focus {
+	outline: 2px solid #6f1a07;
+	outline-offset: -2px;
+}
+
+input[type='radio']:focus {
+	outline-offset: 1px;
+}
+
+label {
+	user-select: none;
 }
