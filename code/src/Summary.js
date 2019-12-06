@@ -1,5 +1,5 @@
 import React from 'react';
-import 'Components css/Summary.css'
+import 'Components_css/Summary.css'
 
 
 export const Summary = (props) => {

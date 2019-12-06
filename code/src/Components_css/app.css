@@ -24,7 +24,7 @@ html, body{
     flex-direction: column;
     align-items: center;
     background-color: white;
-    opacity: 0.5;
+    opacity: 0.75;
     height: 500px;
     margin: 15%;
     border-radius: 10px;
@@ -91,10 +91,15 @@ h4 {
     font-size: 13px;
     border: 0.2px solid black;
     border-radius: inherit;
+    border-width: 0.5px;
 }
 
 label {
     font-family: 'Roboto', sans-serif;
+}
+
+input {
+    border-width: 3px;
 }
 
 .breadSection {
@@ -137,6 +142,7 @@ button {
     padding: 2px 9px;
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
+    font-size: 15px;
     position: absolute;
     bottom: 180px;
 }

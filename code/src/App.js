@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { Summary } from './Summary';
-import 'Components css/app.css';
+import 'Components_css/app.css';
 
 
 
 const breads = ['Regular', 'Gluten-free'];
-const deliveryGroup = ['Eat-in', 'Take Away'];
+const deliveryGroup = ['Eat-in', 'Take-Away']; //la till ett bindestreck på TAke-away ev kommer det bli fel ngnstans
 
 export const App = () => {
   const [submitted, setSubmitted] = useState(false)
