@@ -1,5 +1,11 @@
 body {
+  display: flex;
+  justify-content: center;
   margin: 0;
+  background-image: url(./images/beer-background.jpg);
+  background-size: cover;
+  background-color: gray;
+  color: rgb(253, 247, 239);
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;

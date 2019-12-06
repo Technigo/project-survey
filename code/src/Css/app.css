@@ -1,0 +1,152 @@
+.app {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: rgba(95, 95, 95, 0.95);
+  border-radius: 10px;
+  width: 700px;
+  height: 500px;
+}
+
+h1 {
+  font-size: 60px;
+  font-weight: 900;
+  margin: 5px;
+  text-shadow: 8px 8px 20px rgb(0, 0, 0);
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+}
+
+.radio-wrapper, .select-main{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+button {
+  width: 80px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(209, 209, 209);
+  font-size: 20px;
+  margin: 5px;
+  cursor: pointer;
+  transition: ease-in 0.15s;
+}
+
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+button:hover {
+  opacity: 0.7;
+}
+
+input[type="text"] {
+  width: 100%;
+  height: 40px;
+  border-radius: 10px;
+  border-style: none;
+  background: rgb(209, 209, 209);
+  font-size: 20px;
+  padding-left: 10px;
+  margin-bottom: 10px;
+}
+
+input[type="radio"] {
+ display: none;
+}
+
+input[type="radio"] + span {
+  display: flex;
+  flex-wrap: wrap;
+  width: 200px;
+  height: 35px;
+  border-radius: 10px;
+  border: none;
+  background: rgb(209, 209, 209);
+  font-size: 20px;
+  margin: 20px;
+  cursor: pointer;
+  transition: ease-in 0.15s;
+  opacity: 0.7;
+  color: black;
+  padding-top: 5px;
+  padding-left: 5px;
+ }
+
+ input[type="radio"] + span:hover, input[type="checkbox"] + span:hover {
+   opacity: 1;
+ }
+
+input[type="radio"]:checked + span{
+  opacity: 1;
+ }
+
+ select {
+   width: 200px;
+   height: 35px;
+   border-radius: 10px;
+   border: none;
+   background: rgb(209, 209, 209);
+   font-size: 20px;
+   margin: 20px;
+   cursor: pointer;
+   color: black;
+   padding-left: 5px;
+ }
+
+ .slidecontainer {
+  width: 100%;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  border-radius: 10px;
+  background: #e9e9e9;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: rgb(27, 27, 27);
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.submit-wrapper {
+  width: 60%;
+}
+
+.submit-name {
+    text-transform: uppercase;
+}

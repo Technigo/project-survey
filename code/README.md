@@ -17,3 +17,13 @@ Alternatively, if you don't want a new git repo on your account;
 1. Open the directory in the terminal: `cd /path/to/react-starter`
 1. Install required dependencies with npm: `npm install`
 1. Start the project: `npm start`
+
+
+      <label>
+        För Mörk
+        <input type="radio" value="förmörk" />
+      </label>
+      <label>
+        För ljus
+        <input type="radio" value="förljus" />
+      </label>
