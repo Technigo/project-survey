@@ -1,3 +1,3 @@
-A small beer tasting servey with four questions.
+A small beer tasting survey with four questions.
 
 
