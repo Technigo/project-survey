@@ -8,3 +8,10 @@ Link to the deployed site: https://agnes-dogsurvey.netlify.com/
 
 - Creating form fields with react 
 - The usage of `useState` 
+
+## Technologies used:
+
+- React
+- JavaScript ES6
+- CSS3
+- HTML5
