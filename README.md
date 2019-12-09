@@ -2,7 +2,7 @@
 # Project 10 @ Technigo Bootcamp - Build a survey form using React
 
 
-The second week with React - This week's project is to use React to build a survey form. When the survey is answered bu users, they should see a summary of their answer.
+The second week with React - This week's project is to use React to build a survey form. When the survey is answered by users, they should see a summary of their answer.
 
 ## To learn this week 🧠
 
