@@ -9,11 +9,15 @@ const hairstyle = [
 
 ]
 
+
+
 export const App = () => {
   const [name, setName] = useState(" ");
   const [unicorn, setUnicorn] = useState("");
   const [hair, setHair] = useState(" ")
   const [submit, setSubmit] = useState(false);
+
+
 
   return (
     <div className="container">
@@ -39,10 +43,10 @@ export const App = () => {
           <option value="Shothia Dynasty">Shothia Dynasty.</option>
           <option value="Vedduilyra Dynasty">Vedduilyra Dynasty.</option>
           <option value="Crouhan Kingdom">Oquqarian Empire.</option>
-
-
         </select>
         <p>Select a funky Fresh hairstyle!</p>
+
+
         {hairstyle.map(uni => (
           <label key={uni}>
             <input className="Radiobtn"
@@ -54,12 +58,19 @@ export const App = () => {
             {uni}
           </label>
         ))}
+
+
         <button
           onClick={() => setSubmit(true)}
         >Adopt me!</button>
+
+
       </form>
 
-      {submit && <Summary name={name} unicorn={unicorn} hair={hair} />}
+      <div>
+        {submit && <Summary name={name} unicorn={unicorn} hair={hair} />}
+      </div>
+
     </div>
   )
 }
