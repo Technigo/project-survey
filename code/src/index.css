@@ -1,13 +1,94 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+    * {
+        box-sizing: border-box;
+    }
+    
+    body {
+        margin: 0;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    
+    code {
+        font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+    }
+    
+    div {
+        padding: 20px;
+        border-radius: 20px;
+    }
+    
+    h1 {
+        color: white;
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    
+    h2 {
+        padding: 5px;
+        color: white;
+        background-color: lightsteelblue;
+        border-radius: 10px;
+        font-size: 2rem;
+    }
+    
+    .thought {
+        background-color: gray;
+        background-color: lightsteelblue;
+        background-color: yellowgreen;
+        padding-top: 5px;
+    }
+    
+    .feelings {
+        background-color: yellowgreen;
+        margin-bottom: 10px;
+    }
+    
+    .myResult {
+        background-color: silver;
+    }
+    
+    .theResult {
+        background-color: yellowgreen;
+    }
+    
+    .theResult p {
+        border-radius: 10px;
+        padding: 10px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: white;
+        background-color: lightsteelblue;
+    }
+    
+    .theResult h1 {
+        color: white;
+        padding: 10px;
+        font-size: 3.5rem;
+        font-weight: 900;
+    }
+    
+    select {
+        width: 200px;
+        font-size: 1.4rem;
+        border-radius: 5px;
+    }
+    
+    button {
+        font-size: 2rem;
+        font-weight: 700;
+        color: white;
+        border-radius: 5px;
+        border: 2px solid rgba(0, 0, 0, 0.2);
+        background-color: yellowgreen;
+        background-color: lightsteelblue;
+    }
+    
+    input {
+        font-size: 1.4rem;
+        border-radius: 4px;
+    }
+    
+    span {
+        font-size: 2rem;
+    }
