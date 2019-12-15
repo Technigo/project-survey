@@ -5,12 +5,12 @@ import './app.css'
 
 export const App = () => {
 
-  const environElectricity = ["Ja", "Nej"]
-  const environShopping = ["Ja", "Nej"]
+  const environElectricity = ["Yes", "No"]
+  const environShopping = ["Yes", "No"]
 
   const [name, setName] = useState('')
   const [location, setLocation] = useState('')
-  const [ovrigt, setOvrigt] = useState('')
+  const [others, setOthers] = useState('')
   const [transport, setTransport] = useState('')
   const [useCar, setUseCar] = useState('')
   const [heating, setHeating] = useState('')
@@ -32,19 +32,20 @@ export const App = () => {
         <div>
           {showResult && (
             <div className="santaAnswer">
-              <h1>Bra jobbat, {name} !!!</h1>
-              <h3>Du brukar ta {transport} till jobbet och använda bilen för att fixa {useCar}.
-              Så bra att du kan ha det varmt och skönt hemma.
-              Här är dina övriga svar sammanfattade:
+              <h1>Good thinking, {name} !!!</h1>
+
+              <h3>Summary: You go by {transport} to work or school and you use the car to {useCar}.
+              Here are your other answers in summary:
+
               <ul>
-                  <li>Uppvärmning - {heating}</li>
-                  <li>Miljmärkt el - {electricity}</li>
-                  <li>JSecond hand - {shopping}</li>
-                  <li>Vad slängs i övrigt? - {ovrigt}</li>
+                  <li>Heating - {heating}</li>
+                  <li>Electricity - {electricity}</li>
+                  <li>Second hand - {shopping}</li>
+                  <li>Recycling - {others}</li>
                 </ul>
-                Tack för att du gjorde alla frågorna!
-                Hoppas du fortsätter att tänka på varifrån koldioxid kommer!
-                Hälsningar
+                Thanks for completing the questions!
+                Continue to think of the sources to carbon dioxid!
+                Bye bye
               <br />
                 <span role="img" aria-label="Sunflower">🌻</span></h3>
             </div>
@@ -54,21 +55,21 @@ export const App = () => {
         {!showResult && (
           <form onSubmit={handleSubmit}>
             <fieldset>
-              <h1>Koldioxid i vardagen</h1>
-              <h2>Med hjälp av de här frågorna kan du börja tänka på när koldioxid bildas.</h2>
+              <h1>Your sources to CO2</h1>
+              <h2>With the questions in this survey you can be more aware of when C02 is emitted.</h2>
             </fieldset>
             <section className="inputContainer">
               <fieldset>
                 <input autofocus="autofocus"
                   type="text"
-                  placeholder="Vad heter du?"
+                  placeholder="What is your name?"
                   onChange={event => setName(event.target.value)}
                   value={name}
                 />
 
                 <input autofocus="autofocus"
                   type="text"
-                  placeholder="Var bor du?"
+                  placeholder="Where do you live?"
                   onChange={event => setLocation(event.target.value)}
                   value={location}
                 />
@@ -77,13 +78,13 @@ export const App = () => {
 
             <div className="transport">
               <fieldset>
-                <h2>Så här tar jag mig oftast till jobbet eller skolan:</h2>
+                <h2>My normal transportation to school or work is:</h2>
                 <label>
                   <input
                     type="radio"
-                    value="cykel"
-                    onChange={() => setTransport('cykel')}
-                    checked={transport === 'cykel'} />
+                    value="bike"
+                    onChange={() => setTransport('bike')}
+                    checked={transport === 'bike'} />
                   <span role="img" aria-label="take the bike">
                     🚲
                   </span>
@@ -91,9 +92,9 @@ export const App = () => {
                 <label>
                   <input
                     type="radio"
-                    value="bilen"
-                    onChange={() => setTransport('bilen')}
-                    checked={transport === 'bilen'} />
+                    value="car"
+                    onChange={() => setTransport('car')}
+                    checked={transport === 'car'} />
                   <span role="img" aria-label="take the car">
                     🚗
                   </span>
@@ -101,9 +102,9 @@ export const App = () => {
                 <label>
                   <input
                     type="radio"
-                    value="bussen"
-                    onChange={() => setTransport('bussen')}
-                    checked={transport === 'bussen'} />
+                    value="bus"
+                    onChange={() => setTransport('bus')}
+                    checked={transport === 'bus'} />
                   <span role="img" aria-label="take the bus">
                     🚌
                   </span>
@@ -113,41 +114,43 @@ export const App = () => {
 
             <section>
               <fieldset>
-                <h2>Bilen är ett fantastiskt transportmedel som de flesta av oss använder i vardagen. </h2>
-                <h2>Jag behöver använda bilen för att: </h2>
+                <h2>The car is an extremely flexibel and useful vehicle that most of us are using daily. </h2>
+
+                <h2>I use car to: </h2>
                 <select
                   onChange={event => setUseCar(event.target.value)}
                   value={useCar} >
-                  <option value="">Du kan bara välja en: </option>
-                  <option value="handling"> Handling </option>
-                  <option value="fritidsaktiviter"> Fritidsaktiviter </option>
-                  <option value="återvinning"> Återvinning </option>
-                  <option value="jobbtransporter"> Jobb-transporter </option>
-                  <option value="lämning barn"> Lämning av barnen på förskola eller skola </option>
+                  <option value="">Select one option: </option>
+                  <option value="go Shopping"> go Shopping </option>
+                  <option value="go to Activities"> go to Activities </option>
+                  <option value="go Recycling"> go Recycling </option>
+                  <option value="get to Work"> get to Work </option>
+                  <option value="go to Child care"> go to Child care </option>
                 </select>
               </fieldset>
             </section>
 
             <section>
               <fieldset>
-                <h2>I Sverige är det kallt på vintern och vi behöver energi för att få det varmt och skönt.</h2>
-                <h2>Huset där jag bor värms med:</h2>
+                <h2>In Sweden it is cold in the winter and we need energy to have a nice indoor climate.</h2>
+                <h2>My home is heated through:</h2>
                 <select
                   onChange={event => setHeating(event.target.value)}
                   value={heating} >
-                  <option value=""> Du kan bara välja en: </option>
-                  <option value="Fjärrvärme"> Fjärrvärme </option>
-                  <option value="Värmepump"> Värmepump </option>
-                  <option value="Vedeldning"> Vedeldning </option>
-                  <option value="Olja"> Olja </option>
+                  <option value=""> Select one option: </option>
+                  <option value="Central heating"> Central heating </option>
+                  <option value="Heat pump"> Heat pump </option>
+                  <option value="Wood heating"> Wood heating </option>
+                  <option value="Oil"> Oil </option>
                 </select>
               </fieldset>
             </section>
 
             <section>
               <fieldset>
-                <h2>Har du tänkt på att kolla om din miljömärkta el görs utan fossila källor?</h2>
-                <h2>Jag använder miljömärkt el hemma:</h2>
+                <h2>Have you checked if your electricity comes from non-fossil sources?</h2>
+
+                <h2>I use electricity with environment label at home:</h2>
 
                 {environElectricity.map(YelN => (
                   <label className="eatTime-label" key={YelN}>
@@ -166,8 +169,9 @@ export const App = () => {
 
             <section>
               <fieldset>
-                <h2>När man handlar är det bra om man använder sakerna fullt ut. Det är också bra om saker används länge, antingen av dig eller nån annan.</h2>
-                <h2>Jag handlar saker och kläder på second hand:</h2>
+                <h2>When shopping, it is good if you use the things to the full. It is also good if things are used for a long time, either by you or someone else.</h2>
+
+                <h2>I sometimes shop clothes and thing in second hand:</h2>
 
                 {environShopping.map(yN => (
                   <label key={yN}>
@@ -186,14 +190,14 @@ export const App = () => {
 
             <section className="inputContainer">
               <fieldset>
-                <h2>Beroende på var och hur du bor kan det vara riktigt enkelt att återvinna nästan allt. Mer kunskap och enklare sätt att återvinna, kan göra att vi kan återvinna mer. </h2>
-                <h2>Jag återvinner inte riktigt allt ännu. Det här blir över:</h2>
+                <h2>Depending on where and how you live it can be really easy to recycle almost everything. More knowledge and easier ways to recycle can help us recycle more.  </h2>
+                <h2>What do you find hard to recycle and why?</h2>
 
                 <input autofocus="autofocus"
                   type="text"
-                  placeholder="Vad slängs i övrigt?"
-                  onChange={event => setOvrigt(event.target.value)}
-                  value={ovrigt}
+                  placeholder="Not recycled?"
+                  onChange={event => setOthers(event.target.value)}
+                  value={others}
                 />
               </fieldset>
             </section>
@@ -201,8 +205,8 @@ export const App = () => {
 
             <section className="better-section">
               <fieldset>
-                <h2>Frågorna som du har svarat på har alla med bildningen av koldioxid att göra. </h2>
-                <h2>Jag kommer fortsätta att tänka på var koldioxid kommer i från:</h2>
+                <h2>The query briefly deals with the sources to CO2. Continue to question where you use CO2 daily! </h2>
+                <h2>I will continue to think about sources to C02:</h2>
                 <label className="better-label">
                   <input
                     type="checkbox"
@@ -211,13 +215,13 @@ export const App = () => {
                     value={name}
                   />
                   <span className="styleBox" />
-                  Ja
+                  Yes
                 </label>
               </fieldset>
             </section>
 
             <button type="submit">
-              Gå vidare i livet
+              Continue
             </button>
           </form>
         )}
