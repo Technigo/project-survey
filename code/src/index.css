@@ -5,9 +5,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: block;
+  background: blanchedalmond;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-container {
+  width: auto;
+  background: blanchedalmond;
+  padding: 15%;
+  height: 300px;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+}
+
+button {
+  font-size: 20px;
+  appearance: none;
+  border-radius: 40px;
+  background: black;
+  color: white;
+  border: none;
+  padding: 10px 30px;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+button:hover {
+  background: rgba(0,0,155, 0.7);
+}
+
+span {
+  font-weight: bold;
+}
+
+p {
+  font-size: 20px;
+}
+
+input.field {
+  font-size: 20px;
+  height: 40px;
+  padding: 10px;
+  margin: 30px;
 }

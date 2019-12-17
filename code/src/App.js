@@ -16,7 +16,7 @@ export const App = () => {
   const [oftenTheme, setOftenTheme] = useState(themeFrequencies[0])
   const [themeSuggestion, setThemeSuggestion] = useState('')
   const [showResult, setShowResult] = useState(false)
-  const [question, setQuestion] = useState('awFrequency')
+  const [question, setQuestion] = useState('showWelcome')
 
   // it prevents to change to the next page
   const handleSubmit = (event) => {
@@ -26,7 +26,9 @@ export const App = () => {
 
   // With every click it changes to the next question 
   const handleContinueClick = () => {
-    if (question === 'awFrequency') {
+    if (question === 'showWelcome') {
+      setQuestion('awFrequency')
+    } else if (question === 'awFrequency') {
       setQuestion('themeAw')
     } else if (question === 'themeAw' && themeAw === 'YES') {
       setQuestion('oftenTheme')
@@ -35,17 +37,17 @@ export const App = () => {
     } else if (question === 'oftenTheme') {
       setQuestion('themeSuggestion')
     } else if (question === 'themeSuggestion') {
-      setQuestion(showResult)
+      setShowResult(true)
     }
   }
   return (
     <div>
       {showResult && (
         <div>
-          <h1>Thank you for participating in this survey! We capture your suggestions:</h1>
-          <p>You would like to have the AW {awFrequency}.</p>
+          <h2>Thank you for participating in this survey! We capture your suggestions:</h2>
+          <p>You would like to have the AW <span>{awFrequency}</span>.</p>
           {themeAw === 'YES' && (
-            <p>You would like to have a theme AW {oftenTheme} and your suggestion for a theme is: {themeSuggestion}.</p>
+            <p>You would like to have a theme AW <span> {oftenTheme} </span>and your suggestion for a theme is:<span> {themeSuggestion} </span>.</p>
           )}
           {themeAw === 'NO' && (
             <p>You would not like to have theme AW.</p>
@@ -54,6 +56,12 @@ export const App = () => {
       )}
       {!showResult && (
         <form onSubmit={handleSubmit}>
+          {question === 'showWelcome' && (
+            <div>
+              <h1>Welcome to Magine´s afterwork Survey</h1>
+              <p>It will take between 1 and 2 minutes and it will help us tune our Afterworks!</p>
+            </div>
+          )}
           {question === 'awFrequency' && (
             <AwFrequency
               awFrequency={awFrequency}
@@ -78,11 +86,11 @@ export const App = () => {
             />
           )}
 
-          {question !== 'themeSuggestion' && (
-            <button type="button" onClick={handleContinueClick}>
-              Continue
-            </button>
-          )}
+
+          <button type="button" onClick={handleContinueClick}>
+            Continue
+          </button>
+
         </form>
       )}
     </div>
