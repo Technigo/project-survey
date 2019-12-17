@@ -6,7 +6,7 @@ export const WantThemes = (props) => {
             <h3>Do you want to have theme afterworks?</h3>
             {props.themeAwChoices.map((choice) => (
                 <label key={choice}>
-                    <input
+                    <input className="radioButton"
                         checked={props.themeAw === choice}
                         onChange={() => props.setThemeAw(choice)}
                         type="radio"

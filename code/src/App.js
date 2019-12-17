@@ -44,7 +44,7 @@ export const App = () => {
     <div>
       {showResult && (
         <div>
-          <h2>Thank you for participating in this survey! We capture your suggestions:</h2>
+          <h2>Thank you for participating in this survey! We captured your suggestions:</h2>
           <p>You would like to have the AW <span>{awFrequency}</span>.</p>
           {themeAw === 'YES' && (
             <p>You would like to have a theme AW <span> {oftenTheme} </span>and your suggestion for a theme is:<span> {themeSuggestion} </span>.</p>
@@ -85,8 +85,6 @@ export const App = () => {
               setValue={setThemeSuggestion}
             />
           )}
-
-
           <button type="button" onClick={handleContinueClick}>
             Continue
           </button>
