@@ -3,16 +3,14 @@ import React from 'react'
 export const ThemeFrequency = (props) => {
     return (
         <div className="themeFrequency">
-            <h3>How often do you want to have the theme afterworks?</h3>
-            {props.themeFrequencies.map((frequency) => (
-                <label key={frequency}>
-                    <input className="radioButton"
-                        checked={props.oftenTheme === frequency}
-                        onChange={() => props.setOftenTheme(frequency)}
-                        type="radio"
-                        value={frequency} />
-                    {frequency}
-                    <br />
-                </label>))}
+            <h3>How often do you want to have a theme afterwork?</h3>
+            <select
+                onChange={event => props.setOftenTheme(event.target.value)}
+                value={props.oftenTheme}
+            >
+                {props.themeFrequencies.map((frequency) => (
+                    <option value={frequency}>{frequency}</option>
+                ))}
+            </select>
         </div>)
 }
