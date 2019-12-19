@@ -9,4 +9,6 @@ I also did a multi-step form, to show each question in its own 'page' with a con
 If I would have more time I would have done a progress bar that visualis to the user how far through in the surveythey are. And I would also have done more to the styling. 
 
 
+My deployed site: https://project-survey.netlify.com/
+
 
