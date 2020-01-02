@@ -13,7 +13,9 @@ const App = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault()
+    window.scrollTo(0, 0)
     setShowResult(true)
+
   }
 
   return (
@@ -95,7 +97,7 @@ const App = () => {
       }
 
       {showResult && (
-        <div className="q-container" className="final-container">
+        <div className="q-container final-container">
           <u><h1>Summary</h1></u>
           <h3>How much time do you spend on cute-cat-videos every week?</h3>
           <p>{videoTime}</p>
