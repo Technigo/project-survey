@@ -1,8 +1,6 @@
-This was the second project of the third sprint on the Technigo Frontend Bootcamp, which was focused on React.
-
 ## 1. What is this?
 
-The purpose of this assignment was to create a survey, like Typeform, to practice form fields with React, to use useState and how to use state to show different components based on where you are in the survey.
+The purpose of this project was to create a survey, like Typeform, to practice form fields with React, to use useState and how to use state to show different components based on where you are in the survey.
 
 
 ## 2. What did I do?
