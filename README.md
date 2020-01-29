@@ -31,4 +31,4 @@ The design on my page was up to me, but I had to take accessibility nto account 
 * At least one question should use a select dropdown.
 * There should be a submit button, which when pressed should hide the form and show a summary of the user's submissions.
 
-You can see it here: https://modest-hopper-c5f89b.netlify.com/
+You can see it here: https://survey-petrabrinck.netlify.com
