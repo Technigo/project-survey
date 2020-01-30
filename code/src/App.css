@@ -2,6 +2,14 @@ body {
   background-color: #355e7b;
 }
 
+.survey-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1000px;
+  
+}
+
 .questions {
   display: flex;
   flex-direction: column;
@@ -12,8 +20,11 @@ body {
 }
 
 .result {
+  /* display: flex;
+  justify-content: center; */
+  /* align-items: baseline; */
   background-color: #6b5d78;
-  position: absolute;
+  /* position: absolute; */
   padding: 50px; 
   left: 500px;
   top: 50px; 
