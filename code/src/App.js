@@ -1,77 +1,34 @@
 import React, { useState } from 'react'
 
-
-// todo: 
-// 3 Questions
-// navigatoin between questions
-// summary
-
-// TODO bonus: extract values from: 
-// inputRadio, select options
+import { NameQuestion } from './NameQuestion'
+import { DishQuestion } from './DishQuestion'
+import { AmountQuestion } from './AmountQuestion'
+import { Summary } from './Summary'
 
 export const App = () => {
-  const [name, setName ] = useState(null)
-  const [dish, setDish] = useState(null)
-  const [amount, setAmount] = useState(null)
+  const [name, setName] = useState()
+  const [dish, setDish] = useState()
+  const [amount, setAmount] = useState()
+  const [done, setDone] = useState(false)
 
+  const handleSetName = (e) => setName(e)
+  const handleSetDish = (e) => setDish(e)
+  const handleSetAmount = (e) => setAmount(e)
 
   return (
-    <div>
-
-      <label>Tell me your name?
-        <input type="text" 
-          defaultValue={name} 
-          onChange={ event => setName(event.target.value) } 
-          placeholder="name"></input>
-      </label>
-
-
-      <label>
-        What is your favorite dish?
-      </label>
-
-      <div>
-        <label>
-          <input required type="radio" name="dish" value="taco" 
-          onClick={ event => setDish(event.target.value) } />
-          Taco
-        </label>
-
-        <label>
-          <input required type="radio" name="dish" value="abborre" 
-            onClick={ event => setDish(event.target.value)}  />
-          Aborre
-        </label>
-
-      </div>
-
-
-      <div>
-
-        <label htmlFor="sel">Hur många tacos äter du?</label>
-        <select id="sel" 
-          onChange={ event => setAmount(event.target.value) }> 
-            <option value="">Ange antal</option>
-
-            <option value="1">1</option>
-            <option value="10">10</option>
-            <option value="1000000000">Flera</option>
-          
-
-        </select>
-          
-
-      </div>
-
-
-      <div>
-        <h2>Dina svar</h2>
-        <h3>namn: {name}</h3>
-        <h3>fav dish: {dish}</h3>
-        <h3>antal: {amount}</h3>
-      </div>
-      
-
-    </div>
+    <main>
+      <NameQuestion
+        name={name}
+        handleSetName={handleSetName} />
+      <DishQuestion
+        handleSetDish={handleSetDish} />
+      <AmountQuestion
+        handleSetAmount={handleSetAmount} />
+      {!done && <button type="button" onClick={() => setDone(true)}>Submit</button>}
+      {done && <Summary
+        name={name}
+        dish={dish}
+        amount={amount} />}
+    </main>
   )
 }
