@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  width: 100vw;
+}
+
+.h3Title {
+  letter-spacing: 1vh;
+  color: blue;
+}
+
+.paragraphText {
+  letter-spacing: 2vh;
+  color: red;
+}
+

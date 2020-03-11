@@ -1,9 +1,11 @@
 import React from 'react'
+import 'app.css'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <section className="container">
+      <h3 className="h3Title">Section title</h3>
+      <p className="paragraphText">Section paragraph</p>
+    </section>
   )
 }
