@@ -10,10 +10,11 @@ export const Form = () => {
   }
   return (
     <form onSubmit={handleSubmit}>
+      <h1>I love you</h1>
       < Select />
       < Radio />
       < Text />
-      <input type="submit" value="Submit" />
+      <button className="btn" onClick={handleSubmit} >Submit answers</button>
     </form>
   )
 
@@ -61,7 +62,7 @@ export const Radio = () => {
   return (
     // <form onSubmit={handleSubmit}>
 
-    <label>
+    <label className="radio">
       <p>Ages:</p>
       {ages.map(group => (
         <>
