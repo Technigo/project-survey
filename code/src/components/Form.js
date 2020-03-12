@@ -1,21 +1,32 @@
 import React, { useState } from 'react'
+import {EndPage} from 'components/EndPage'
 
-const values = ["", "", ""]
+export const values = ["", "", ""]
+
+const handleSubmit = (evt) => {
+  evt.preventDefault()
+  alert(`Submitting Name ${values.toString()}`) 
+  
+}
+
+
 export const Form = () => {
-  const [name, setName] = useState("")
+  const [done, setDone] = useState(false)
+// var hasName = (name === 'true') ? 'Y' :'N';
 
-  const handleSubmit = (evt) => {
-    evt.preventDefault()
-    alert(`Submitting Name ${values.toString()}`)
-  }
   return (
+    <>
     <form onSubmit={handleSubmit}>
       <h1>I love you</h1>
       < Select />
       < Radio />
       < Text />
-      <button className="btn" onClick={handleSubmit} >Submit answers</button>
+      <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
     </form>
+    {done && <EndPage name={values[2]} age ={values[1]} city={values[0]} />}
+    
+    </>
+
   )
 
 }
