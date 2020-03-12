@@ -1,0 +1,10 @@
+.header{
+  margin: 0;
+  background-color: green;
+  /*position: relative;*/
+  overflow: hidden;
+  height: 508px;
+  background-image: url('pizza.jpg');
+  background-size: cover;
+  background-position: center;
+}

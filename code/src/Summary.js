@@ -6,9 +6,7 @@ export const Summary = (props) => {
     return (
 
         <section className="Summary">
-            <p> {props.pizza} its a nice pizza.</p>
-            <p>{props.soda} works nice with {props.pizza}</p>
-            <p>Oh, {props.sauce} is nice. </p>
+            <p> {props.pizza} tastes best with {props.soda} and {props.sauce}.</p>
         </section>
     )
 }

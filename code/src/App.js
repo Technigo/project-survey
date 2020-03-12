@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Summary } from './Summary'
+import { Header } from './Header'
 
 const sodaFavorite = ["fanta", "coca cola", "sprite"];
 const sauceFavorite = ["garlic", "béarnaise", "hot sauce"];
@@ -14,9 +15,15 @@ export const App = () => {
   return (
     <section> 
 
+      <Header />
+
+        <section className="Main">
+
         {!submitted && (
 
         <form onSubmit={event => event.preventDefault()}>
+
+          <section className="firstSection">
 
           <p>Which type of pizza you prefer?</p>
           <select className="formDropdown"
@@ -29,9 +36,10 @@ export const App = () => {
             <option value="vesuvio">Vesuvio</option>
           </select>
 
-
-        <p>Which drink do you prefer for your pizza?</p>
+          </section>
+        
           <div className="Soda">
+          <p>Which drink do you prefer for your pizza?</p>
             {sodaFavorite.map(favorite => (
               <label key={favorite}>
                 <input className="soda"
@@ -45,8 +53,8 @@ export const App = () => {
             ))}
           </div>
 
-          <p>Which sauce do you prefer for your pizza?</p>
           <div className="Sauce">
+          <p>Which sauce do you prefer for your pizza?</p>
             {sauceFavorite.map(favorite => (
               <label key={favorite}>
                 <input className="sauce"
@@ -68,6 +76,7 @@ export const App = () => {
 
           )}
             {submitted && <Summary  soda={soda} pizza={pizza} sauce={sauce}/>}
+            </section>
     </section>
   )
 }
