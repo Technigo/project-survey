@@ -3,12 +3,12 @@ import React, { useState } from 'react'
 
 
 
-// const bringWith = ['BFF',
-// 'My Pet',
-// 'Mother',
-// 'No one',
-// 'Random Strager',
-// 'Michael Scott']
+const company = ['BFF',
+'My Pet',
+'Mother',
+'No one',
+'Random Strager',
+'Michael Scott']
 
 // const [bringWith, setBringWith] = useState()
 // const [name, setName] = useState()
@@ -39,15 +39,15 @@ export const Survey = () => {
 
       <form className="nameInput">
         <h2>{Question.Q1} <span>{name}</span></h2>
-        <input type="text" 
+        <input type="text" className="text-input"
         onChange={event => setName(event.target.value)} 
-        value={name} required />
+        value={name} placeholder="Your Name" required />
       </form>
 
 
-      <div>
+      <div className="select-planet">
         <h2>{Question.Q2}</h2>
-        <div>
+        <div className="planets">
           {planets.map(planet => (
             <label key={planet} className="radio-btn">
               <input type="radio" 
@@ -55,6 +55,9 @@ export const Survey = () => {
               onChange={event => setWhichPlanet(event.target.value)}
               checked={whichPlanet === planet}
               id={planet}/>
+
+              <span className="check" role="radio"></span>
+              {planet}
 
             </label>
           ))}
@@ -68,14 +71,14 @@ export const Survey = () => {
         <div>
         <select
           onChange={event => setBringWith(event.target.value)}
-          value={bringWith}>
-
-          <option defaultValue>---</option>
-          <option value="BFF">BFF</option>
-          <option value="Pet">Pet</option>
-          <option value="Mother">Mother</option>
-          <option value="Random stranger">Random Stranger</option>
-          <option value="Micheal Scott">Michael Scott</option>
+          // value={bringWith} 
+          checked={bringWith === company}
+          defaultValue="---">
+          
+          <option disabled>---</option>
+          {company.map(who => (
+            <option key={who} value={who}>{who}</option>
+          ))}
         </select>
         </div>
 
