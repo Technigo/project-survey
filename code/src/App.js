@@ -1,24 +1,22 @@
 import React, { useState } from 'react'
 import { Summary } from './Summary'
 
-const colorFavorite = ["blue", "pink", "green"];
-const foodFavorite = ["pizza", "pasta", "sushi"];
-//const sodaFavorite = ["fanta", "sprite", "coca cola"];
-
-
+const sodaFavorite = ["fanta", "coca cola", "sprite"];
+const sauceFavorite = ["garlic", "béarnaise", "hot sauce"];
 
 export const App = () => {
 
-  const [color, setColor] = useState();
-  const [food, setFood] = useState();
   const [pizza, setPizza] = useState("");
-  //const [mostImportant, setMostImportant] = useState("");
-  
-  
+  const [soda, setSoda] = useState();
+  const [sauce, setSauce] = useState();
+  const [submitted, setSubmitted] = useState(false)
 
   return (
     <section> 
 
+        {!submitted && (
+
+        <form onSubmit={event => event.preventDefault()}>
 
           <p>Which type of pizza you prefer?</p>
           <select className="formDropdown"
@@ -32,38 +30,44 @@ export const App = () => {
           </select>
 
 
-        <p>What color is your favorite?</p>
-          <div className="Color">
-            {colorFavorite.map(favorite => (
+        <p>Which drink do you prefer for your pizza?</p>
+          <div className="Soda">
+            {sodaFavorite.map(favorite => (
               <label key={favorite}>
-                <input className="color"
-                  type="checkbox"
+                <input className="soda"
+                  type="radio"
                   value={favorite}
-                  onChange={event => setColor(event.target.value)}
-                  checked={color === favorite}
+                  onChange={event => setSoda(event.target.value)}
+                  checked={soda === favorite}
                 />
                 {favorite}
               </label>
             ))}
           </div>
 
-          <p>Which type of food you prefer?</p>
-          <div className="Food">
-            {foodFavorite.map(favorite => (
+          <p>Which sauce do you prefer for your pizza?</p>
+          <div className="Sauce">
+            {sauceFavorite.map(favorite => (
               <label key={favorite}>
-                <input className="food"
-                  type="checkbox"
+                <input className="sauce"
+                  type="radio"
                   value={favorite}
-                  onChange={event => setFood(event.target.value)}
-                  checked={food === favorite}
+                  onChange={event => setSauce(event.target.value)}
+                  checked={sauce === favorite}
                 />
                 {favorite}
               </label>
             ))}
           </div>
 
-          { <Summary  color={color} food={food} pizza={pizza}/>}
+         <button className="submitButton"
+          onClick={ () => setSubmitted(true)}
+         >SUBMIT
+            </button>
+          </form>
 
+          )}
+            {submitted && <Summary  soda={soda} pizza={pizza} sauce={sauce}/>}
     </section>
   )
 }
