@@ -3,18 +3,33 @@ import { Summary } from './Summary'
 
 const colorFavorite = ["blue", "pink", "green"];
 const foodFavorite = ["pizza", "pasta", "sushi"];
-//const companionGroups = ["alone", "with family members", "with friends"];
+//const sodaFavorite = ["fanta", "sprite", "coca cola"];
+
 
 
 export const App = () => {
 
   const [color, setColor] = useState();
   const [food, setFood] = useState();
-  //const [companionGroup, setCompanionGroup] = useState()
+  const [pizza, setPizza] = useState("");
+  //const [mostImportant, setMostImportant] = useState("");
+  
   
 
   return (
     <section> 
+
+
+          <p>Which type of pizza you prefer?</p>
+          <select className="formDropdown"
+            onChange={event => setPizza(event.target.value)}
+            value={pizza}
+          >
+            <option value="">Choose your favorite!</option>
+            <option value="margarita">Margarita</option>
+            <option value="calzone">Calzone</option>
+            <option value="vesuvio">Vesuvio</option>
+          </select>
 
 
         <p>What color is your favorite?</p>
@@ -47,7 +62,7 @@ export const App = () => {
             ))}
           </div>
 
-          { <Summary  color={color} food={food}/>}
+          { <Summary  color={color} food={food} pizza={pizza}/>}
 
     </section>
   )
