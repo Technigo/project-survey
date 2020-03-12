@@ -1,12 +1,14 @@
 import React from 'react'
-// import { Header } from './components/Header'
-// import { Survey } from'.components/Survey'
+import { Header } from './Components/Header'
+import { Survey } from'./Components/Survey'
 
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Header />
+      <p className="spaceIntro">Let's explore space</p>
+      <Survey />
     </div>
   )
 }
