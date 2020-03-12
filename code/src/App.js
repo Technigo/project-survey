@@ -2,13 +2,16 @@ import React, { useState } from 'react'
 import { Summary } from './Summary'
 
 const colorFavorite = ["blue", "pink", "green"];
-// const adventureGroup = ["surfing", "climbing", "hiking"];
+const foodFavorite = ["pizza", "pasta", "sushi"];
+//const companionGroups = ["alone", "with family members", "with friends"];
+
 
 export const App = () => {
 
-  //const [name, setName] = useState("");
   const [color, setColor] = useState();
-  //const [adventures, setAdventures] = useState();
+  const [food, setFood] = useState();
+  //const [companionGroup, setCompanionGroup] = useState()
+  
 
   return (
     <section> 
@@ -29,7 +32,22 @@ export const App = () => {
             ))}
           </div>
 
-          { <Summary  color={color}/>}
+          <p>Which type of food you prefer?</p>
+          <div className="Food">
+            {foodFavorite.map(favorite => (
+              <label key={favorite}>
+                <input className="food"
+                  type="checkbox"
+                  value={favorite}
+                  onChange={event => setFood(event.target.value)}
+                  checked={food === favorite}
+                />
+                {favorite}
+              </label>
+            ))}
+          </div>
+
+          { <Summary  color={color} food={food}/>}
 
     </section>
   )
