@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Gender } from './Gender';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Gender />
     </div>
-  )
-}
+  );
+};
+
+export default App;
