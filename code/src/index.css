@@ -132,11 +132,13 @@ select {
 
 button {
   width: 150px;
-  height: 30px;
+  height: 40px;
   background-color: white;
   border-radius: 30px;
   outline: none;
   margin-top: 40px;
+  font-weight: bold;
+  font-size: 18px;
 }
 
 .form-result {
