@@ -11,3 +11,8 @@ export const EndPage = (props) => {
         </section>
     )
 }
+
+
+{/* <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
+      </form>
+      {done && <EndPage name={values[2]} age ={values[1]} city={values[0]}  */}
