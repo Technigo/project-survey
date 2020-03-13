@@ -1,3 +1,44 @@
+h2 {
+  text-align: center;
+  color: #ca4242;
+  font-size: 45px;
+  margin: 10px 0px;
+}
+
+h3 {
+  color: #303838;
+  margin: 15px 0;
+  font-size: 23px;
+}
+
+p {
+  font-size: 28px;
+}
+
+li {
+  font-size: 28px;
+}
+
+* {
+  font-family: 'Shadows Into Light';
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  animation: fadein 1s;
+}
+
+@keyframes fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +46,130 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./images/photo-1512279093314-5926a353720c.jpg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90vw;
+  height: 60vh;
+  background-color: rgba(192, 210, 212, 0.75);
+}
+
+main {
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  padding: 100px;
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+button {
+  background-color: #ca4242;
+  border: none;
+  border-radius: 5px;
+  width: fit-content;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+
+.input {
+  background-color: transparent;
+  font-size: 20px;
+  padding: 5px;
+  margin-top: 10px;
+  border: transparent;
+  border-bottom: 1px solid black;
+}
+
+.small {
+  width: fit-content;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  list-style-type: none;
+  border: solid 1px aliceblue;
+  color: #303838;
+  width: 70%;
+  height: 60%;
+}
+
+option {
+  background-color: aliceblue;
+}
+
+@media (min-width: 668px) {
+
+  h2 {
+    font-size: 61px;
+    margin: 25px 0px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  #root {
+    width: 80vw;
+  }
+
+  form {
+    font-size: 23px;
+  }
+
+  button {
+    padding: 15px;
+    font-size: 23px;
+  }
+
+}
+
+@media (min-width: 1025px) {
+
+  h2 {
+    font-size: 70px;
+  }
+
+
+  body {
+    background-image: url("./images/black-ball-point-pen-with-brown-spiral-notebook-733852.jpg");
+  }
+
+  #root {
+    padding: 100px 250px;
+    width: 30vw;
+    height: 40vh;
+  }
 }
