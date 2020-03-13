@@ -12,12 +12,9 @@ code {
     monospace;
 }
 
-html {
-  height: 100%;
-}
-
-body {
-  /* background-color: rgb(44, 44, 44); */
+body,
+html
+ {
   background-image: linear-gradient(rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.356)),
   url(https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1333&q=80);
   background-size: cover;
@@ -26,6 +23,9 @@ body {
   color: white;
   height: 100%;
   max-width: 100%;
+  font-family: 'Baloo Chettan 2', cursive;
+  margin: 0;
+  padding-bottom: 50px;
 }
 
 header,
@@ -33,7 +33,23 @@ header,
   display: flex;
   flex-direction: column;
   align-items: center;
+}
 
+h1 {
+  font-size: 60px;
+  margin-bottom: 0px;
+  text-transform: uppercase;
+}
+
+.spaceIntro {
+  font-size: 24px;
+  margin: 10px
+}
+
+h2 {
+  border-bottom: 2px solid rgba(0, 0, 0, 0.24);
+  margin: 5px;
+  padding: 10px;
 }
 
 .completeSurvey {
@@ -44,7 +60,7 @@ header,
   max-width: 50%;
   margin-left: auto;
   margin-right: auto;
-  background-color: rgba(70, 63, 63, 0.74);
+  background-color: rgba(90, 86, 86, 0.74);
   border-radius: 30% 0;
   padding: 30px;
   text-align: center;
@@ -53,8 +69,19 @@ header,
 .planets {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   margin: 10px;
-  line-height: 30px;
+  line-height: 35px;
+  font-size: 18px;
+}
+
+.radio {
+  margin-right: 10px;
+  transition: all .3s ease-in-out;
+}
+
+.radio:hover {
+  transform: scale(1.2);
 }
 
 .nameInput,
@@ -63,35 +90,37 @@ header,
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
  }
 
- .text-input {
-   height: 20px;
-   width: 150px;
-   border-radius: 30px;
-   padding: 5px;
-   outline: none;
-   border: none;
-   transition: all .4s ease-in-out;
-   font-size: 14px;
- }
+.text-input {
+  height: 20px;
+  width: 150px;
+  border-radius: 30px;
+  padding: 5px;
+  outline: none;
+  border: none;
+  transition: all .4s ease-in-out;
+  font-size: 14px;
+  margin: 10px;
+}
 
- ::placeholder {
-   font-size: 12px;
- }
+::placeholder {
+  font-size: 12px;
+}
 
- select {
-   background-color: black;
-   color: white;
-   height: 30px;
-   width: 150px;
-   transition: all .4s ease-in-out;
-   font-weight: bold;
-   font-size: 14px;
-   outline: none;
-   border-radius: 30px;
- }
+select {
+  background-color: white;
+  color: black;
+  height: 30px;
+  width: 150px;
+  transition: all .4s ease-in-out;
+  font-weight: bold;
+  font-size: 14px;
+  outline: none;
+  border-radius: 30px;
+  margin: 10px;
+}
 
  .text-input:hover,
  select:hover {
@@ -99,4 +128,80 @@ header,
   box-shadow: 3px 3px 10px gray;
  }
 
+button {
+  width: 150px;
+  height: 30px;
+  background-color: white;
+  border-radius: 30px;
+  outline: none;
+  margin-top: 40px;
+}
 
+/* .earth {
+	background: url("https://blogs.nasa.gov/womenatnasa/wp-content/uploads/sites/213/2015/10/Earth_Western_Hemisphere_transparent_background.png") no-repeat;
+	background-size: 100%;
+	width: 50px;
+	height: 50px;
+	position: relative;
+	margin: 20px auto 20px auto;
+  top: 0;
+  animation-name: earth;
+  animation: earth 10s infinite;
+  animation-timing-function: linear;
+  animation-direction: normal;
+}
+
+@keyframes earth {
+  from {
+    margin-left: 100%;
+  }
+  to {
+    margin-left: 0;
+  }
+} */
+
+.form-result {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  height: 300px;
+  background-color: rgba(90, 86, 86, 0.74);
+  border-radius: 50% 0;
+  padding: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+}
+
+h3 {
+  margin-top: 20%;
+}
+
+
+@media (max-width: 668px) {
+  body,
+  html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.486)),
+    url(https://images.unsplash.com/photo-1537420327992-d6e192287183?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
+    object-fit: cover;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  .completeSurvey {
+    border-radius: 80px 0;
+  }
+
+  .planets {
+    line-height: 50px;
+  }
+
+  .form-result {
+    height: 200px;
+    margin-top: 30%
+  }
+}

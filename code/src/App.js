@@ -5,9 +5,10 @@ import { Survey } from'./Components/Survey'
 
 export const App = () => {
   return (
-    <div>
+    <div className="allContent">
+      <div className="earth"/>
       <Header />
-      <p className="spaceIntro">Let's explore space</p>
+      <p className="spaceIntro">and explore the unknown</p>
       <Survey />
     </div>
   )
