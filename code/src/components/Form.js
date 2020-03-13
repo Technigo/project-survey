@@ -1,22 +1,25 @@
-import React, { useState } from 'react'
+import React, { useState, useRef } from 'react'
 import {EndPage} from 'components/EndPage'
 
 export const values = ["", "", ""]
 
-const handleSubmit = (evt) => {
-  evt.preventDefault()
-  alert(`Submitting Name ${values.toString()}`) 
-  
-}
+
 
 
 export const Form = () => {
+  const inputRef = useRef()
   const [done, setDone] = useState(false)
 // var hasName = (name === 'true') ? 'Y' :'N';
-
+const handleSubmit = (evt) => {
+  evt.preventDefault()
+  inputRef.current.className += " noShow"
+  
+  // alert(`Submitting Name ${values.toString()}`) 
+  
+}
   return (
     <>
-    <form onSubmit={handleSubmit}>
+    <form className="myForm" onSubmit={handleSubmit} ref={inputRef}>
       <h1>I love you</h1>
       < Select />
       < Radio />
