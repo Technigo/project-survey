@@ -18,14 +18,13 @@ html
   background-image: linear-gradient(rgba(0, 0, 0, 0.253), rgba(0, 0, 0, 0.356)),
   url(https://images.unsplash.com/photo-1446941611757-91d2c3bd3d45?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1333&q=80);
   background-size: cover;
-  background-position: center center;
   background-repeat: no-repeat;
   color: white;
   height: 100%;
   max-width: 100%;
   font-family: 'Baloo Chettan 2', cursive;
   margin: 0;
-  padding-bottom: 50px;
+  padding-bottom: 250px;
 }
 
 header,
@@ -64,6 +63,7 @@ h2 {
   border-radius: 30% 0;
   padding: 30px;
   text-align: center;
+  margin-bottom: 30px;
 }
 
 .planets {
@@ -75,12 +75,14 @@ h2 {
   font-size: 18px;
 }
 
-.radio {
+.radio,
+.radio-btn {
   margin-right: 10px;
   transition: all .3s ease-in-out;
 }
 
-.radio:hover {
+.radio:hover,
+.radio-btn:hover {
   transform: scale(1.2);
 }
 
@@ -137,33 +139,11 @@ button {
   margin-top: 40px;
 }
 
-/* .earth {
-	background: url("https://blogs.nasa.gov/womenatnasa/wp-content/uploads/sites/213/2015/10/Earth_Western_Hemisphere_transparent_background.png") no-repeat;
-	background-size: 100%;
-	width: 50px;
-	height: 50px;
-	position: relative;
-	margin: 20px auto 20px auto;
-  top: 0;
-  animation-name: earth;
-  animation: earth 10s infinite;
-  animation-timing-function: linear;
-  animation-direction: normal;
-}
-
-@keyframes earth {
-  from {
-    margin-left: 100%;
-  }
-  to {
-    margin-left: 0;
-  }
-} */
-
 .form-result {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 50%;
   height: 300px;
   background-color: rgba(90, 86, 86, 0.74);
@@ -175,29 +155,69 @@ button {
 }
 
 h3 {
-  margin-top: 20%;
+  margin: 5px;
 }
 
+.alien {
+	background: url("./Components/img/alien.png") no-repeat;
+	background-size: 100%;
+	width: 60px;
+	height: 60px;
+	position: relative;
+	margin: 20px auto 20px auto;
+  bottom: 35%;
+  animation-name: alien;
+  animation-duration: 10s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes alien {
+  0% { transform: translateX(400%) rotate(0deg); }
+  50% { transform: translateX(-400%) rotate(360deg); }
+  100% { transform: translateX(400%) rotate(0deg); }
+}
+
+/* @-moz-keyframes alien {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+  0% { -moz-transform: translateX(400%) rotate(0deg); }
+  50% { -moz-transform: translateX(-400%) rotate(360deg); }
+  100% { -moz-transform: translateX(400%) rotate(0deg); }
+}
+@-webkit-keyframes alien {
+  0% { -webkit-transform: translateX(400%) rotate(0deg); }
+  50% { -webkit-transform: translateX(-400%) rotate(360deg); }
+  100% { -webkit-transform: translateX(400%) rotate(0deg); }
+} */
 
 @media (max-width: 668px) {
   body,
   html {
     background-image: linear-gradient(rgba(0, 0, 0, 0.404), rgba(0, 0, 0, 0.486)),
     url(https://images.unsplash.com/photo-1537420327992-d6e192287183?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80);
-    object-fit: cover;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
     width: 100%;
     margin: 0;
+    padding-bottom: 500px;
   }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  .spaceIntro {
+    font-size: 20px;
+  }
+
   .completeSurvey {
     border-radius: 80px 0;
   }
 
   .planets {
-    line-height: 50px;
+    line-height: 35px;
   }
 
   .form-result {

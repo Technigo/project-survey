@@ -41,7 +41,7 @@ export const Survey = () => {
     <div className="completeSurvey">
 
       <div className="nameInput">
-        <h2>{Question.Q1} <span>{name}</span></h2>
+        <h2>{Question.Q1}</h2>
         <input type="text" className="text-input"
         onChange={event => setName(event.target.value)} 
         value={name} placeholder="Your Name" tabIndex="0"required />
