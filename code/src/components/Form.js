@@ -1,31 +1,31 @@
 import React, { useState } from 'react'
-import {EndPage} from 'components/EndPage'
+import { EndPage } from 'components/EndPage'
 
 export const values = ["", "", ""]
 
 const handleSubmit = (evt) => {
   evt.preventDefault()
-  alert(`Submitting Name ${values.toString()}`) 
-  
+  alert(`Submitting Name ${values.toString()}`)
+
 }
 
 
 export const Form = () => {
   const [done, setDone] = useState(false)
-// var hasName = (name === 'true') ? 'Y' :'N';
+  // var hasName = (name === 'true') ? 'Y' :'N';
 
   return (
-    <>
-    <form onSubmit={handleSubmit}>
-      <h1>I love you</h1>
-      < Select />
-      < Radio />
-      < Text />
-      <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
-    </form>
-    {done && <EndPage name={values[2]} age ={values[1]} city={values[0]} />}
-    
-    </>
+    <section>
+      <form onSubmit={handleSubmit}>
+        <h1>I love you</h1>
+        < Select />
+        < Radio />
+        < Text />
+        <button type="submit" className="btn" onClick={setDone}>Submit answers</button>
+      </form>
+      {/* {done && <EndPage name={values[2]} age={values[1]} city={values[0]} />} */}
+
+    </section>
 
   )
 
