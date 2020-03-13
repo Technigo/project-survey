@@ -5,7 +5,7 @@ body, html {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FCD2BA;
+  background-color: #ffffff;
 }
 
 code {
@@ -13,50 +13,103 @@ code {
     monospace;
 }
 
-.Main { 
+form { 
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 p {
-  color: #ffffff;
+  color: #212322;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bolder;
   font-size: 20px;
-}
-
-div {
-  color: #ffffff;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: bolder;
-  font-size: 20px;
-  
 }
 
 .formDropdown{
-  color: #ffffff;
+  color: #212322;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bolder;
   font-size: 20px;
-  
 }
 
 button {
-  color: #ffffff;
+  color: #212322;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bolder;
   font-size: 20px;
+  border: 3px solid #212322;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  margin-top: 13px;
+  margin-left: 20px;
+}
+
+.buttonSection {
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .firstSection{
-  border: 3px solid red;
+  /*border: 3px solid #212322;
+  border-radius: 25px;*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 170px;
+  width: 100%;
+  margin-right: 15px;
 }
 
 .Soda{
-  border: 3px solid green;
+  /*border: 3px solid #212322;*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  color: #212322;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bolder;
+  font-size: 20px;
+  height: 170px;
+  width: 100%;
+  margin-right: 15px;
 }
 
-.Sauce{
-  border: 3px solid black;
+.secondSection{
+  /*border: 3px solid #FCD2BA;*/
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  height: 170px;
+  width: 100%;
+  margin-right: 15px;
+}
+
+.Summary {
+  margin-top: 60px; 
+  text-align: center;
+}
+
+/*@media (min-width: 667px) and (max-width: 1024px) {
+
+  form {
+
+  }
+
+}*/
+
+@media (min-width: 1025px) {
+
+  form {
+    flex-direction: row;
+    padding: 40px;
+    /*padding-top: 10px;*/
+  }
 }

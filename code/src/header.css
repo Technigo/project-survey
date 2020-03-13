@@ -1,10 +1,15 @@
 .header{
   margin: 0;
-  background-color: green;
-  /*position: relative;*/
-  overflow: hidden;
+  position: relative;
   height: 508px;
-  background-image: url('pizza.jpg');
+  background-image: url('charles-deluvio-pLjFwX5VR-M-unsplash.jpg');
   background-size: cover;
   background-position: center;
+}
+
+@media (min-width: 1025px) {
+
+  .header {
+    background-image: url('pizza.jpg');
+  }
 }

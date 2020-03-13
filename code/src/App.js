@@ -2,8 +2,8 @@ import React, { useState } from 'react'
 import { Summary } from './Summary'
 import { Header } from './Header'
 
-const sodaFavorite = ["fanta", "coca cola", "sprite"];
-const sauceFavorite = ["garlic", "béarnaise", "hot sauce"];
+const sodaFavorite = ["fanta", "pepsi", "sprite"];
+//const sauceFavorite = ["garlic", "béarnaise", "hot sauce"];
 
 export const App = () => {
 
@@ -16,8 +16,6 @@ export const App = () => {
     <section> 
 
       <Header />
-
-        <section className="Main">
 
         {!submitted && (
 
@@ -37,6 +35,21 @@ export const App = () => {
           </select>
 
           </section>
+
+          <section className="secondSection">
+
+          <p>Which sauce do you prefer for your pizza?</p>
+          <select className="formDropdown"
+            onChange={event => setSauce(event.target.value)}
+            value={pizza}
+          >
+            <option value="">Choose your favorite!</option>
+            <option value="garlic">Garlic</option>
+            <option value="béarnaise">Béarnaise</option>
+            <option value="hot sauce">Hot Sauce</option>
+          </select>
+
+          </section>
         
           <div className="Soda">
           <p>Which drink do you prefer for your pizza?</p>
@@ -53,30 +66,17 @@ export const App = () => {
             ))}
           </div>
 
-          <div className="Sauce">
-          <p>Which sauce do you prefer for your pizza?</p>
-            {sauceFavorite.map(favorite => (
-              <label key={favorite}>
-                <input className="sauce"
-                  type="radio"
-                  value={favorite}
-                  onChange={event => setSauce(event.target.value)}
-                  checked={sauce === favorite}
-                />
-                {favorite}
-              </label>
-            ))}
-          </div>
+          <section className="buttonSection">
 
-         <button className="submitButton"
-          onClick={ () => setSubmitted(true)}
-         >SUBMIT
-            </button>
+          <button className="submitButton"
+            onClick={ () => setSubmitted(true)}
+          >SUBMIT
+              </button>
+            </section>
           </form>
 
           )}
             {submitted && <Summary  soda={soda} pizza={pizza} sauce={sauce}/>}
-            </section>
     </section>
   )
 }
