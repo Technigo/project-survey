@@ -4,45 +4,23 @@
   margin-left: auto;
   margin-right: auto;
   background-color: #666;
+  border-radius: 15px;
  
 }
-form {
-  min-height: 50vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-evenly;
-}
-input {
-  margin: 2em;
-}
-input:focus {
-  border: 2px solid crimson;    
-}
-.radio {
-  display: flex;
-  justify-content: space-evenly;
-}
-.radio:focus {
-  border: 2px solid crimson;  
-}
-.btn {
-  box-shadow: none;
-  border: none;
-  width: 100px;
-  height: 40px;
-  background-color: green;
-}
-.btn:focus {
-  border: 2px solid crimson;  
+
+.endPage {
+  background-color: indianred;
+  border-radius: 15px;
+  text-align: center;
+  height: 400px;
 }
 .noShow {
   display: none;
 }
 @media (min-width: 576px){
-  .box {
+  /* .box {
 
-  }
+  } */
 
 }
 @media (min-width: 992px){
