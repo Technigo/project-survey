@@ -9,8 +9,8 @@ const occasions = [
 export const Frequency = () => {
   const [frequency, setFrequency] = useState();
   return (
-    <form>
-      How often do you feel sad?
+    <form onSubmit={(event) => event.preventDefault()}>
+      How often do you feel sad or depressed?
       {occasions.map((occasion) => (
         <label key={occasion}>
           <input
