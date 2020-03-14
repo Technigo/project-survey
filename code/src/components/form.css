@@ -12,8 +12,12 @@ form {
     border: 2px solid crimson;    
   }
   .radio {
-    display: flex;
-    justify-content: space-evenly;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 1em;
+    justify-items: center;
+
   }
   .radio:focus {
     border: 2px solid crimson;  
@@ -27,4 +31,16 @@ form {
   }
   .btn:focus {
     border: 2px solid crimson;  
+  }
+
+  @media (min-width: 576px){
+    .radio {
+      width: 500px;
+      
+    }
+    .radio div {
+      display: flex;
+      justify-content: space-between;
+    }
+  
   }

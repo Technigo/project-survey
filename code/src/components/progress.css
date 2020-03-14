@@ -1,11 +1,14 @@
 .bar {
     width: 60%;
-    height: 2em;
-    border: 1px solid black;
+    height: 1.5em;
+    border: 1px solid white;
+    border-radius: 10px;
 }
 .filled {
     height: 100%;
-    background-color: green;
+    background-color: skyblue;
+    border-radius: 10px;
+
 }
 
 

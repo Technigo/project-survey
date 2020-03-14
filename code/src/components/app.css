@@ -1,9 +1,10 @@
 
 .box {
   width: 95vw;
+  margin: 4em auto;
   margin-left: auto;
   margin-right: auto;
-  background-color: #666;
+  background-color: darkslategrey;
   border-radius: 15px;
  
 }
@@ -28,13 +29,7 @@ input {
 input:focus {
   border: 2px solid crimson;    
 }
-.radio {
-  display: flex;
-  justify-content: space-evenly;
-}
-.radio:focus {
-  border: 2px solid crimson;  
-}
+
 .btn {
   box-shadow: none;
   border: none;
@@ -45,9 +40,7 @@ input:focus {
 .noShow {
   display: none;
 }
-.noShow {
-  display: none;
-}
+
 @media (min-width: 576px){
   /* .box {
 

@@ -19,6 +19,7 @@ export const RadioForm = () => {
         <form className="myForm" onSubmit={handleSubmit} ref={radioRef}>
           <h1>I love you</h1>
           < Radio />
+          <CheckBox />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
           <Bar size = "50"/>
         </form>
@@ -29,11 +30,11 @@ export const RadioForm = () => {
     )
   
   }
-  const ages = ["0-18", "19-30", "30-50", "50+"]
+  const rooms = ["1 room", "2 rooms", "3+ rooms"]
 
 export const Radio = () => {
-  const [age, setAges] = useState()
-  values[1] = age
+  const [room, setRoom] = useState()
+  values[1] = room
 
   // const handleSubmit = (evt) => {
   //   evt.preventDefault()
@@ -41,25 +42,39 @@ export const Radio = () => {
   // }
   return (
     // <form onSubmit={handleSubmit}>
-
+<>
+<p>Ages:</p>
     <label className="radio">
-      <p>Ages:</p>
-      {ages.map(group => (
-        <>
-          <p key = {group}>{group}</p>
+      {rooms.map(choice => (
+        <div>
+          <p key = {choice}>{choice}</p>
           <input
             type="radio"
-            value={group}
-            onChange={e => setAges(e.target.value)}
-            checked={age === group}
+            value={choice}
+            onChange={e => setRoom(e.target.value)}
+            checked={room === choice}
           />
-        </>
+        </div>
       ))}
 
     </label>
+    </>
 
     // <input type="submit" value="Submit" />
     // </form>
   )
 
+}
+const CheckBox = () => {
+  const [wantsParking, setParking] = useState(false)
+  return (
+    <label>
+    Need parking?
+    <input
+      type="checkbox"
+      checked={wantsParking}
+      onChange={event => setParking(event.target.checked)}
+    />
+  </label>
+  )
 }

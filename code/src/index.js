@@ -4,7 +4,7 @@ import './index.css'
 
 // import './app.css'
 import 'components/progress.css'
-// import './form.css'
+import 'components/form.css'
 import 'components/app.css'
 
 import { App } from './App'
