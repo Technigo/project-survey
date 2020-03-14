@@ -1,5 +1,15 @@
 import React, { useState } from "react"
-import ReactDOM from 'react-dom'
+
+const Emoji = props => (
+  <span
+      className="emoji"
+      role="img"
+      aria-label={props.label ? props.label : ""}
+      aria-hidden={props.label ? "false" : "true"}
+  >
+      {props.symbol}
+  </span>
+);
 
 export const App = () => {
 
@@ -28,12 +38,15 @@ export const App = () => {
       <input
       className="input"
       type="text"
+      id="input"
       placeholder="First name"
       onChange={event => setName(event.target.value)}
       value={name}
-      >
+      onClick={event => { 
+        document.getElementById("error").classList.remove("show-error")
+     }}>
       </input>
-      <div id="error">Please enter your name</div>
+      <div id="error">Please enter your name <Emoji symbol="👆"/></div>
  
 
      <button onClick= {event => {
@@ -53,7 +66,7 @@ export const App = () => {
      
     </article>
      <div className="progress-bar">
-     <div className="filler" style={{width: '25%'}}></div>
+     <div className="filler" style={{width: '20%'}}>20%</div>
    </div>
    </>
  
@@ -76,12 +89,12 @@ export const App = () => {
         onChange={event => setAgeGroup(event.target.value)}
         checked={ageGroup === group}
         />
-        <span class="checkmark"></span>
+        <span class="checkmark" tabIndex="0" ></span>
         {group}
         </label>
        
         ))}
-         <div id="error">Please choose your age group</div>
+         <div id="error">Please choose your age group <Emoji symbol="👆"/></div>
    
         <button onClick={event => 
           {if (ageGroup === undefined) {
@@ -96,7 +109,7 @@ export const App = () => {
        
     </article>
      <div className="progress-bar">
-     <div className="filler" style={{width: '50%'}}></div>
+     <div className="filler" style={{width: '40%'}}>40%</div>
    </div>
    </>
     )}
@@ -117,7 +130,7 @@ export const App = () => {
       <option value="More than a month">More than a month</option>
       <option value="More than 6 months">More than 6 months</option>
       </select>
-      <div id="error">Please choose your age group</div>
+      <div id="error">Please choose your age group <Emoji symbol="👆"/></div>
       
   
       <button onClick={event => 
@@ -133,7 +146,7 @@ export const App = () => {
   
     </article>
     <div className="progress-bar">
-    <div className="filler" style={{width: '75%'}}></div>
+    <div className="filler" style={{width: '60%'}}>60%</div>
   </div>
   </>
   )}
@@ -156,12 +169,13 @@ export const App = () => {
      
     </article>
      <div className="progress-bar">
-     <div className="filler" style={{width: '100%'}}></div>
+     <div className="filler" style={{width: '80%'}}>80%</div>
    </div>
    </>
   )}
 
   {section === "summary" && (
+    <>
     <article>
       <h2>Summary</h2>
 
@@ -173,6 +187,10 @@ export const App = () => {
       </ul>
 
     </article>
+    <div className="progress-bar">
+    <div className="filler" style={{width: '100%'}}>100%</div>
+  </div>
+  </>
 
   )}
 

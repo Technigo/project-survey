@@ -92,7 +92,7 @@ form {
 
 button {
   background-color: #ca4242;
-  border: none;
+  border: 4px solid transparent;
   border-radius: 5px;
   width: fit-content;
   padding: 10px;
@@ -100,18 +100,23 @@ button {
   font-size: 20px;
 }
 
+button:focus {
+  outline: none;
+  border: 4px solid #5d656d;
+}
+
 .input {
   background-color: transparent;
   font-size: 20px;
   padding: 5px;
   margin-top: 10px;
-  border: none;
+  border: 2px solid transparent;
   border-bottom: 1px solid black;
 }
 
+
 *:focus {
   outline: solid 2px #ca4242;
-   
 }
 
 .small {
@@ -202,29 +207,43 @@ input[type="range"]::-webkit-slider-thumb {
   width: 70%;
   height: 15px;
   margin-left: 15px;
+  margin-bottom: 10px;
   align-self: self-end;
   border-radius: 50px;
   border: 2px solid gray;
 }
 
 .filler {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 16px;
+  font-family: monospace;
   background-color: rosybrown;
   height: 100%;
   border-radius: 50px;
+  box-sizing: border-box;
+  padding-right: 15px;
 }
 
 #error {
   margin-top: 4px;
   width: fit-content;
   height: 0px;
+  padding: 5px;
   overflow: hidden;
 }
 
 .show-error {
-  color: red;
   border: 1px solid red;
   height: 40px !important;
 }
+
+/* .input:focus + #error {
+  border: none;
+  height: 0px !important;
+  overflow: hidden !important;
+} */
 
 @media (min-width: 668px) {
 
