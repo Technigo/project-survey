@@ -1,0 +1,62 @@
+form {
+    margin: 10px;
+}
+
+label {
+    margin: 5px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px 10px;
+    color: white;
+    width: 100%;
+    font-size: 14px;
+}
+
+input[type="text"]{
+  border: none;
+  border-bottom: 2px solid white;
+  background: transparent;
+}
+
+input[type="text"]:focus {
+    background: #24292e;
+  }
+
+input[type="radio"] {
+  width: unset;
+}
+
+select {
+    font-size: 16px;
+    width: 185px;
+    height: 30px;
+    background: transparent;
+    color: white;
+    border: 2px solid white;
+}
+
+select:hover {
+    background-color: #24292e;
+  }
+
+button {
+    background: transparent;
+    border: 2px solid white;
+    border-radius: 5px;
+    color: white;
+    padding: 10px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 10px 2px;
+    cursor: pointer;
+    width: 50%;
+    align-self: center;
+  }
+
+  button:hover {
+    background-color: #24292e;
+  }

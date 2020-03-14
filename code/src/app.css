@@ -1,0 +1,12 @@
+.form-container {
+    width: 375px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 20px;
+    background-color: darkslategray;
+    color: white;
+}
