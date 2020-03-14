@@ -1,0 +1,27 @@
+.bar {
+    width: 60%;
+    height: 2em;
+    border: 1px solid black;
+}
+.filled {
+    height: 100%;
+    background-color: green;
+}
+
+
+
+/* .progress-bar {
+    height: 25px;
+    width: 500px;
+    background-color: green;
+    animation: fillBar 5s linear 3s both;
+  }
+  @keyframes fillBar {
+    0% {
+      width: 0px;
+    }
+    100% {
+      width: 500px;
+    }
+    
+  } */

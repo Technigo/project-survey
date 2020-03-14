@@ -6,9 +6,9 @@ export const App = () => {
   
   return (
     <div className="box">
-
+     
          <Form />
-          </div>
+    </div>
   )
 }
 

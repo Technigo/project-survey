@@ -17,6 +17,9 @@ export const RadioForm = () => {
     return (
       <>
         <form className="myForm" onSubmit={handleSubmit} ref={radioRef}>
+        <div className = "bar">
+        <div className = "filled" style={{width: "50%"}}></div>
+        </div>
           <h1>I love you</h1>
           < Radio />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
@@ -45,7 +48,7 @@ export const Radio = () => {
       <p>Ages:</p>
       {ages.map(group => (
         <>
-          <p>{group}</p>
+          <p key = {group}>{group}</p>
           <input
             type="radio"
             value={group}

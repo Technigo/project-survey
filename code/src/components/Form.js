@@ -18,6 +18,9 @@ export const Form = () => {
   return (
     <>
       <form className="myForm" onSubmit={handleSubmit} ref={inputRef}>
+      <div className = "bar">
+        <div className = "filled" style={{width: "25%"}}></div>
+      </div>
         <h1>I love you</h1>
         < Text />
         <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>

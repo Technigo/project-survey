@@ -2,9 +2,12 @@ import React from 'react'
 import {Form, values} from 'components/Form'
 
 export const EndPage = (props) => {
-
+    
     return (
-        <section>
+        <section className ="myForm">
+               <div className = "bar">
+        <div className = "filled" style={{ width: '100%' }}></div>
+        </div>
             <h1>Goodbye</h1>
     <p>{props.name}</p>
     <p>{props.age}</p>
