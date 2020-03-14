@@ -3,11 +3,18 @@ import React, { useState } from 'react'
 const funScaleOption = ["1", "2", "3", "4", "5"]
 
 export const App = () => {
+  const [name, setName] = useState("")
   const [option, setOption] = useState("")
   const [funScale, setFunScale] = useState()
 
   return (
     <form>
+
+      <label>
+        <h2>Name</h2>
+        <input type="text" onChange={event => setName(event.target.value)} value={name} />
+      </label>
+
       <label>
         <h2>Option</h2>
         <select onChange={event => setOption(event.target.value)} value={option}>
