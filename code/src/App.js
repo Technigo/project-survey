@@ -1,9 +1,10 @@
 import React from 'react'
+import { Radiobuttons } from './components/Radiobuttons'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <>
+      <Radiobuttons />
+    </>
   )
 }
