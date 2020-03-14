@@ -1,17 +1,15 @@
 import React from 'react'
-import {Form, values} from 'components/Form'
+import {Form, values, Bar} from 'components/Form'
 
 export const EndPage = (props) => {
     
     return (
         <section className ="myForm">
-               <div className = "bar">
-        <div className = "filled" style={{ width: '100%' }}></div>
-        </div>
             <h1>Goodbye</h1>
     <p> your name is: {props.name}</p>
     <p> Your age group is: {props.age}</p>
     <p> your city is: {props.city}</p>
+    <Bar size = "100"/>
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import React, { useState, useRef } from 'react'
 import { EndPage } from 'components/EndPage'
-import {Form, values} from 'components/Form'
+import {Form, values, Bar} from 'components/Form'
 
 export const Select = () => {
     const [location, setLocation] = useState("")
@@ -42,12 +42,10 @@ export const Select = () => {
     return (
       <>
         <form className="myForm" onSubmit={handleSubmit} ref={selectRef}>
-        <div className = "bar">
-        <div className = "filled" style={{width: "75%"}}></div>
-        </div>
           <h1>I love you</h1>
           < Select />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
+          <Bar size = "75"/>
         </form>
         {done && <EndPage name = {values[2]} city = {values[0]} age = {values[1]}/>}
   

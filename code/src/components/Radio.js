@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react'
 import { EndPage } from 'components/EndPage'
 import {SelectForm} from 'components/Select'
-import {Form, values} from 'components/Form'
+import {Form, values, Bar} from 'components/Form'
 
 export const RadioForm = () => {
     const [done, setDone] = useState(false)
@@ -17,12 +17,10 @@ export const RadioForm = () => {
     return (
       <>
         <form className="myForm" onSubmit={handleSubmit} ref={radioRef}>
-        <div className = "bar">
-        <div className = "filled" style={{width: "50%"}}></div>
-        </div>
           <h1>I love you</h1>
           < Radio />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
+          <Bar size = "50"/>
         </form>
         {done &&  < SelectForm /> }
   
