@@ -6,9 +6,10 @@ export const App = () => {
   const [name, setName] = useState("")
   const [option, setOption] = useState("")
   const [funScale, setFunScale] = useState()
+  const [slide, setSlide] = useState()
 
   return (
-    <form>
+    <form onSubmit={event => event.preventDefault()}>
 
       <label>
         <h2>Name</h2>
@@ -33,6 +34,11 @@ export const App = () => {
             {fun}
           </label>
         ))}
+      </label>
+
+      <label>
+        <h2>Slider</h2>
+        <input type="range" min="1" max="5" value="2" onChange={event => setSlide(event.target.value)} value={slide} />
       </label>
     </form>
   )
