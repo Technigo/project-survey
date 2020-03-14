@@ -9,18 +9,16 @@ export const Radiobuttons = () => {
   return (
     <>
       <h2>Will you be attending?</h2>
-      <form >
-        {attendingOptions.map(option => (
-          <label key={option}>{option}
-            <input
-              type="radio"
-              value={option}
-              onChange={event => setAttendingOption(event.target.value)}
-              checked={attendingOption === option}
-            />
-          </label>
-        ))}
-      </form>
+      {attendingOptions.map(option => (
+        <label key={option}>{option}
+          <input
+            type="radio"
+            value={option}
+            onChange={event => setAttendingOption(event.target.value)}
+            checked={attendingOption === option}
+          />
+        </label>
+      ))}
     </>
   )
 }
