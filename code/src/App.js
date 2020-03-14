@@ -2,6 +2,7 @@ import React, { useState } from "react"
 import ReactDOM from 'react-dom'
 
 export const App = () => {
+
   const AgeGroups = [
     '18-25',
     '26-30',
@@ -12,10 +13,13 @@ export const App = () => {
   const [name, setName] = useState("");
   const [ageGroup, setAgeGroup] = useState();
   const [option, setOption] = useState();
+  const [value, setValue] = useState(5);
 
   return (
   <>
+    
     {section === 'firstQuestion' && (
+      <>
     <article>
       <h2> First question </h2>
       <form onSubmit={event => event.preventDefault()}>
@@ -29,39 +33,76 @@ export const App = () => {
       value={name}
       >
       </input>
+      <div id="error">Please enter your name</div>
+ 
 
-     <button onClick={event => setSection("secondQuestion")}>Submit</button> 
-      </form>
+     <button onClick= {event => {
+       
+      if (name === "") {
+        document.getElementById("error").classList.add("show-error");
+      }
+      else {
+        setSection("secondQuestion")
+        }
+      }
       
+      }>
+        Save & Continue
+      </button> 
+      </form>
+     
     </article>
+     <div className="progress-bar">
+     <div className="filler" style={{width: '25%'}}></div>
+   </div>
+   </>
  
   )}
 
     {section === 'secondQuestion' && (
+      <>
     <article> 
       <h2> Second question </h2>
-      <form onSubmit={event => event.preventDefault()}>
+      <form 
+      className="radio-button"
+      onSubmit={event => event.preventDefault()}>
         <h3>Please choose your age group:</h3>
         
         {AgeGroups.map(group => (
         <label key={group}>
         <input 
-        className="input"
         type="radio"
         value={group}
         onChange={event => setAgeGroup(event.target.value)}
         checked={ageGroup === group}
         />
+        <span class="checkmark"></span>
         {group}
         </label>
+       
         ))}
-        <button onClick={event => setSection("thirdQuestion")}>Submit</button>
+         <div id="error">Please choose your age group</div>
+   
+        <button onClick={event => 
+          {if (ageGroup === undefined) {
+            document.getElementById("error").classList.add("show-error");
+          }
+          else {
+            setSection("thirdQuestion")
+          }
+          }
+          }>Save & Continue</button>
         </form>
-     
+       
     </article>
+     <div className="progress-bar">
+     <div className="filler" style={{width: '50%'}}></div>
+   </div>
+   </>
     )}
 
   {section === 'thirdQuestion' && (
+    <>
     <article>
       <h2>Third Question</h2>
       <form onSubmit={event => event.preventDefault()}>
@@ -71,14 +112,53 @@ export const App = () => {
       onChange={event => setOption(event.target.value)}         
       value={option}
       className="input small">
-      <option value="">Choose one option:</option>
-      <option value="option1">Option 1</option>
-      <option value="option2">Option 2</option>
-      <option value="option3">Option 3</option>
+      <option value="">For how long have you owned our product?</option>
+      <option value="Less than a month">Less than a month</option>
+      <option value="More than a month">More than a month</option>
+      <option value="More than 6 months">More than 6 months</option>
       </select>
-      <button onClick={event => setSection("summary")}>Save & Continue</button>
+      <div id="error">Please choose your age group</div>
+      
+  
+      <button onClick={event => 
+        {if (option === undefined) {
+          document.getElementById("error").classList.add("show-error");
+        }
+        else {
+          setSection("FourthQuestion")
+        }}
+        }
+        >Save & Continue</button>
       </form>
+  
     </article>
+    <div className="progress-bar">
+    <div className="filler" style={{width: '75%'}}></div>
+  </div>
+  </>
+  )}
+
+{section === 'FourthQuestion' && (
+  <>
+    <article>
+      <h2>Fourth Question</h2>
+      <form onSubmit={event => event.preventDefault()}>
+      <h3>How satisfied are you with our product? Choose from 1 - 10:</h3>
+
+      <input type="range" min="1" max="10" step="1" value={value}
+      onChange={event => setValue(event.target.value)}         
+      >       
+      </input>
+      <div>Value: {value}</div>
+
+      <button onClick={event => setSection("summary")}>Submit</button>
+      </form>
+     
+    </article>
+     <div className="progress-bar">
+     <div className="filler" style={{width: '100%'}}></div>
+   </div>
+   </>
   )}
 
   {section === "summary" && (
@@ -88,7 +168,8 @@ export const App = () => {
       <ul>
         <li>Name: {name} </li>
         <li> Age: {ageGroup} years old </li>
-        <li> Option: {option} </li>
+        <li> Ownership: {option} </li>
+        <li> Product satisfaction: {value} </li>
       </ul>
 
     </article>
