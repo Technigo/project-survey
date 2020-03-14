@@ -1,4 +1,6 @@
-
+import React, { useState, useRef } from 'react'
+import { EndPage } from 'components/EndPage'
+import {Form, values} from 'components/Form'
 
 export const Select = () => {
     const [location, setLocation] = useState("")
@@ -15,8 +17,6 @@ export const Select = () => {
         <select
           onChange={e => setLocation(e.target.value)}
           value={location}
-  
-  
         >
           <option value="">Select location</option>
           <option value="stockholm">Stockholm</option>
@@ -27,30 +27,28 @@ export const Select = () => {
       // <input type="submit" value="Submit" />
       // </form>
     )
-  
   }
-
-  export const Form = () => {
+  export const SelectForm = () => {
     const [done, setDone] = useState(false)
-    const inputRef = useRef()
+    const selectRef = useRef()
     // var hasName = (name === 'true') ? 'Y' :'N';
     const handleSubmit = (evt) => {
       evt.preventDefault()
-      inputRef.current.className += " noShow"
+      selectRef.current.className += " noShow"
       
       // alert(`Submitting Name ${values.toString()}`) 
       
     }
     return (
-      <section>
-        <form className="myForm" onSubmit={handleSubmit} ref={inputRef}>
+      <>
+        <form className="myForm" onSubmit={handleSubmit} ref={selectRef}>
           <h1>I love you</h1>
-          < Text />
+          < Select />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
         </form>
-        {done && <Radio />}
+        {done && <EndPage name = {values[2]} city = {values[0]} age = {values[1]}/>}
   
-      </section>
+      </>
   
     )
   

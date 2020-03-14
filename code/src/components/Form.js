@@ -1,8 +1,8 @@
 import React, { useState, useRef } from 'react'
 import { EndPage } from 'components/EndPage'
+import {RadioForm} from 'components/Radio'
 
 export const values = ["", "", ""]
-
 
 export const Form = () => {
   const [done, setDone] = useState(false)
@@ -16,15 +16,14 @@ export const Form = () => {
     
   }
   return (
-    <section>
+    <>
       <form className="myForm" onSubmit={handleSubmit} ref={inputRef}>
         <h1>I love you</h1>
         < Text />
         <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
       </form>
-      {done && <Radio />}
-
-    </section>
+      {done && <RadioForm />}
+</>
 
   )
 

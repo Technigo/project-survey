@@ -36,6 +36,9 @@ input:focus {
 .btn:focus {
   border: 2px solid crimson;  
 }
+.noShow {
+  display: none;
+}
 @media (min-width: 576px){
   .box {
 

@@ -1,4 +1,9 @@
-export const Form = () => {
+import React, { useState, useRef } from 'react'
+import { EndPage } from 'components/EndPage'
+import {SelectForm} from 'components/Select'
+import {Form, values} from 'components/Form'
+
+export const RadioForm = () => {
     const [done, setDone] = useState(false)
     const radioRef = useRef()
     // var hasName = (name === 'true') ? 'Y' :'N';
@@ -10,15 +15,15 @@ export const Form = () => {
       
     }
     return (
-      <section>
+      <>
         <form className="myForm" onSubmit={handleSubmit} ref={radioRef}>
           <h1>I love you</h1>
           < Radio />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
         </form>
-        {done &&  < Select /> }
+        {done &&  < SelectForm /> }
   
-      </section>
+      </>
   
     )
   
