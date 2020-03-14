@@ -1,19 +1,19 @@
 import React from 'react';
 import { Gender } from './Gender';
 import { Frequency } from './Frequency';
-import { Actions } from './Actions';
+import { Selfhelp } from './Actions';
 import { Suggestions } from './Suggestions';
 import { Checkbox } from './Test';
 
 export const App = () => {
   return (
-    <div>
+    <div className="form">
       <Gender />
       <Frequency />
-      <Actions />
+      <Selfhelp />
       <Suggestions />
-
     </div>
+
   );
 };
 
