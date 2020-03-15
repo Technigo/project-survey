@@ -1,22 +1,19 @@
 import React, { useGlobal } from 'reactn';
+import { useState } from 'react';
 
 // GENDER
 
 const Gender = () => {
   const [gender, setGender] = useGlobal('gender');
-
   return (
     <form onSubmit={event => event.preventDefault()}>
       What's your gender:
       <select onChange={event => setGender(event.target.value)} value={gender}>
         <option value=''>Select </option>
-        <option value='Female'>Female</option>
-        <option value='Male'>Male</option>
-        <option value='Neutral'>Neutral</option>
+        <option value='female'>Female</option>
+        <option value='male'>Male</option>
+        <option value='neutral'>Neutral</option>
       </select>
-      <div className='summary'>
-        <h1>Your gender is: {gender}</h1>
-      </div>
     </form>
   );
 };
@@ -40,9 +37,6 @@ const Frequency = () => {
           {occasion}
         </label>
       ))}
-      <div className='summary'>
-        <h1>You feel stressed {frequency}</h1>
-      </div>
     </form>
   );
 };
@@ -52,7 +46,6 @@ const Frequency = () => {
 const Actions = () => {
   const [action1, setAction1] = useGlobal('action1');
   const [action2, setAction2] = useGlobal('action2');
-
   return (
     <form onSubmit={event => event.preventDefault()}>
       Name two things you normally do in order to try to feel better?
@@ -72,11 +65,6 @@ const Actions = () => {
           value={action2}
         />
       </label>
-      <div className='summary'>
-        <h1>
-          When you're stressed you usually: {action1} or {action2}
-        </h1>
-      </div>
     </form>
   );
 };
@@ -103,18 +91,18 @@ const Suggestions = () => {
 // SUMMARY;
 
 const Summary = () => {
-  const [gender, setGender] = useGlobal('gender');
-  const [frequency, setFrequency] = useGlobal('frequency');
-  const [action1, setAction1] = useGlobal('action1');
-  const [action2, setAction2] = useGlobal('action2');
-  const [suggestion, setSuggestion] = useGlobal(false);
+  const [gender] = useGlobal('gender');
+  const [frequency] = useGlobal('frequency');
+  const [action1] = useGlobal('action1');
+  const [action2] = useGlobal('action2');
+  const [suggestion] = useGlobal(false);
   return (
     <div>
       <h1>SUMMARY</h1>
       <p>You're gender is {gender}.</p>
       <p>You feel stressed {frequency}.</p>
       <p>
-        When you feel stressed you usuall {action1} or {action2}.
+        When you feel stressed you usually {action1} or {action2}.
       </p>
       <p>You would like some suggestions on what you can do: {suggestion}</p>
     </div>
