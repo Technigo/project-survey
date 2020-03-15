@@ -1,0 +1,162 @@
+h2 {
+  margin-top: 30px;
+  font-size: 1.1rem;
+}
+
+form {
+  /* background: url(./assets/blob-shape.svg);
+  background-size: cover;
+  background-repeat: no-repeat; */
+  margin: 10%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*** TEXT INPUT ***/
+
+input[type=text] {
+  width: 95%;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid #000;
+  background: transparent;
+  color: #000;
+  font-size: 1rem;
+}
+
+input::placeholder {
+  color: rgba(12, 12, 12, 0.3);
+}
+
+input:not(:focus) {
+  color: rgba(12, 12, 12, 0.3);
+  border-bottom: 1px solid rgba(12, 12, 12, 0.3);
+}
+
+/*** RADIO BUTTONS ***/
+
+input[type=radio] {
+  position: relative;
+  width: 1em;
+  margin: 0 0 0 5px;
+}
+
+.radio-container {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.radio-container input {
+  position: absolute;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+
+.radio-bttn {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #f5f1ea;
+}
+
+.radio-bttn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-bttn {
+  background: #000;
+}
+
+.radio-container input:checked ~ .radio-bttn:after {
+  display: block;
+}
+
+.radio-container .radio-bttn:after {
+  top: 4px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f5f1ea;
+}
+
+/*** DROP DOWN ***/
+
+.drop-down {
+  display: flex;
+  position: relative;
+  width: 95%;
+  font-size: 1rem;
+  line-height: 1.3;
+  margin: 0;
+  border: 1px solid #000;
+  border-radius: .5em;
+  background: transparent;
+  overflow: hidden;
+}
+
+.drop-down::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 5px 10px;
+  background: #000;
+  color: #f5f1ea;
+  pointer-events: none;
+  transition: 0.25s all ease;
+}
+
+select {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  flex: 1;
+  padding: .6em;
+  cursor: pointer;
+}
+
+select option {
+  width: 100%;
+  background: #f5f1ea;
+}
+
+/*** SUBMIT/RESET/GO BACK BUTTON ***/
+
+button {
+  align-self: center;
+  font-size: 16px;
+  line-height: 1.3;
+  margin: 2em;
+  padding: .6em 1.4em;
+  width: 150px;
+  border-radius: .5em;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  box-shadow: none;
+  border: none;
+  background: #000;
+  color: #f5f1ea;
+}
+
+button:hover {
+  background: rgba(12, 12, 12, 0.7);
+}

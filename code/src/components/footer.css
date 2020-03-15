@@ -1,0 +1,20 @@
+footer {
+  flex-shrink: 0;
+  background: #c6dcfd;
+  height: 70px;
+  position: relative;
+}
+
+footer:before {
+  content:"";
+  position:absolute;
+  top:-60px;
+  height:60px;
+  left:0;
+  right:0;
+  background:linear-gradient(to bottom right, transparent 49%, #c6dcfd 50%);
+ }
+
+ .copyright {
+   text-align: center;
+ }
