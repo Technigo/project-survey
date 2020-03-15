@@ -1,6 +1,18 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import { App } from './App'
+// import {App} from "./App"
+// import {Input} from "./Input"
+// import {Checkbox} from "./Checkbox"
+// import {Dropdown} from "./Dropdown"
+// import {Buttons} from "./Buttons"
+import {Radiobuttons} from "./Radiobuttons"
 
-ReactDOM.render(<App />, document.getElementById('root'))
+
+
+
+
+
+
+const rootElement = document.getElementById("root");
+ReactDOM.render(<Radiobuttons />, rootElement);
