@@ -54,10 +54,11 @@ button:hover {
 }
 
 .questionContainer {
-  width: 330px;
+  width: auto;
+  max-width: 330px;
   height: 500px;
   margin: 20px 10px 0;
-  padding: 5px;
+  padding: 10px;
 
   background: #f4eeff;
   background-color: #f4eeff;
