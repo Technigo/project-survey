@@ -1,19 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Suggestions = () => {
-  const [suggestion, setSuggestion] = useState(false)
+export const Suggestions = props => {
+  const { suggestion, setSuggestion } = props;
 
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <form onSubmit={event => event.preventDefault()}>
       <label>
         Would you like some suggestions of what you can do to feel better?
         <input
-          type="checkbox"
+          type='checkbox'
           checked={suggestion}
-          onChange={(event) => setSuggestion(event.target.checked)} />
+          onChange={event => setSuggestion(event.target.checked)}
+        />
       </label>
     </form>
-  )
-}
+  );
+};
 
-export default Suggestions
+export default Suggestions;

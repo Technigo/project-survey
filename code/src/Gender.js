@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from 'react';
 
-export const Gender = () => {
-  const [gender, setGender] = useState("");
+export const Gender = props => {
+  const { gender, setGender } = props;
 
   return (
     <form onSubmit={event => event.preventDefault()}>
@@ -12,9 +12,6 @@ export const Gender = () => {
         <option value='Male'>Male</option>
         <option value='Neutral'>Neutral</option>
       </select>
-      <div className='summary'>
-        <h1>Your gender is: {gender}</h1>
-      </div>
     </form>
   );
 };

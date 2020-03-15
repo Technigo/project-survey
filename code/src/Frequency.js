@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const occasions = ["every day", "several times a week", "once a week or less"];
+const occasions = ['every day', 'several times a week', 'once a week or less'];
 
 export const Frequency = () => {
   const [frequency, setFrequency] = useState();
@@ -18,9 +18,6 @@ export const Frequency = () => {
           {occasion}
         </label>
       ))}
-      <div className='summary'>
-        <h1>You feel stressed {frequency}</h1>
-      </div>
     </form>
   );
 };
