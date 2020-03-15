@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
-const occasions = [
-  'Every day',
-  'Several times a week',
-  'Once a week or less'
-]
+const occasions = ["every day", "several times a week", "once a week or less"];
 
 export const Frequency = () => {
   const [frequency, setFrequency] = useState();
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
-      How often do you feel sad or depressed?
-      {occasions.map((occasion) => (
+    <form onSubmit={event => event.preventDefault()}>
+      How often do you feel stressed?
+      {occasions.map(occasion => (
         <label key={occasion}>
           <input
-            type="radio"
+            type='radio'
             value={occasion}
-            onChange={(event) => setFrequency(event.target.value)}
-            checked={frequency === occasion} />
+            onChange={event => setFrequency(event.target.value)}
+            checked={frequency === occasion}
+          />
           {occasion}
         </label>
       ))}
+      <div className='summary'>
+        <h1>You feel stressed {frequency}</h1>
+      </div>
     </form>
-  )
-}
+  );
+};
 
-export default Frequency
+export default Frequency;
