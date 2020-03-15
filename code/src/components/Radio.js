@@ -1,7 +1,6 @@
 import React, { useState, useRef } from 'react'
-import { EndPage } from 'components/EndPage'
 import {SelectForm} from 'components/Select'
-import {Form, values, Bar} from 'components/Form'
+import {values, Bar} from 'components/Form'
 
 export const RadioForm = () => {
     const [done, setDone] = useState(false)
@@ -17,7 +16,7 @@ export const RadioForm = () => {
     return (
       <>
         <form className="myForm" onSubmit={handleSubmit} ref={radioRef}>
-          <h1>I love you</h1>
+         <p>How many rooms do you need?</p>
           < Radio />
           <CheckBox />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
@@ -34,7 +33,7 @@ export const RadioForm = () => {
 
 export const Radio = () => {
   const [room, setRoom] = useState()
-  values[1] = room
+  values.room = room
 
   // const handleSubmit = (evt) => {
   //   evt.preventDefault()
@@ -43,7 +42,6 @@ export const Radio = () => {
   return (
     // <form onSubmit={handleSubmit}>
 <>
-<p>Ages:</p>
     <label className="radio">
       {rooms.map(choice => (
         <div>
@@ -67,6 +65,8 @@ export const Radio = () => {
 }
 const CheckBox = () => {
   const [wantsParking, setParking] = useState(false)
+values.parking = wantsParking
+
   return (
     <label>
     Need parking?

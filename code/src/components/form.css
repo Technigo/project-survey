@@ -25,12 +25,21 @@ form {
   .btn {
     box-shadow: none;
     border: none;
-    width: 100px;
-    height: 40px;
-    background-color: green;
+    width: 150px;
+    height: 60px;
+    background-color: #EDC2D8FF;
+    font-size: 1.2em;
   }
   .btn:focus {
     border: 2px solid crimson;  
+  }
+  .result {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+  }
+  .result p:nth-child(even){
+    justify-self: end;
   }
 
   @media (min-width: 576px){

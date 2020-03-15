@@ -1,9 +1,8 @@
 import React, { useState, useRef } from 'react'
-import { EndPage } from 'components/EndPage'
 import {RadioForm} from 'components/Radio'
 import {Text} from 'components/Text'
 
-export const values = ["", "", ""]
+export const values = {name: "", room: "", city: "", parking: "no"}
 
 export const Form = () => {
   const inputRef = useRef()
@@ -20,7 +19,7 @@ export const Form = () => {
   return (
     <>
       <form className="myForm" onSubmit={handleSubmit} ref={inputRef}>
-        <h1>I love you</h1>
+       <p>Please fill in your name</p>
         < Text />
         <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
       <Bar size = "25"/>

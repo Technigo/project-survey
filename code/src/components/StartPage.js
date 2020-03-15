@@ -13,8 +13,9 @@ export const StartPage = () => {
     return (
         <>
         <section className="myForm" ref={startRef}>
-            <h1>Would you like to go to College?</h1>
-            <button className = "btn" onClick={Starting}>I want to start</button>
+            <h1>Do you need somewhere to live?</h1>
+            <p>The Elephant Club offers rental appartments to people in need.</p>
+            <button className = "btn" onClick={Starting}>I need a home</button>
         </section>
         {done && <Form />}
         </>

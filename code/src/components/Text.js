@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
-import {Form, values} from 'components/Form'
+import {values} from 'components/Form'
 export const Text = () => {
     const [first, setFirst] = useState("")
     const [last, setLast] = useState("")
-    values[2] = `${first} ${last}` 
+    values.name = `${first} ${last}` 
   
     // const handleSubmit = (evt) => {
     //   evt.preventDefault()

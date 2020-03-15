@@ -1,10 +1,10 @@
 import React, { useState, useRef } from 'react'
 import { EndPage } from 'components/EndPage'
-import {Form, values, Bar} from 'components/Form'
+import {values, Bar} from 'components/Form'
 
 export const Select = () => {
     const [location, setLocation] = useState("")
-    values[0] = location
+    values.city = location
   
     // const handleSubmit = (evt) => {
     //   evt.preventDefault()
@@ -19,9 +19,12 @@ export const Select = () => {
           value={location}
         >
           <option value="">Select location</option>
-          <option value="stockholm">Stockholm</option>
-          <option value="oslo">Oslo</option>
-          <option value="london">London</option>
+          <option value="Stockholm">Stockholm</option>
+          <option value="Oslo">Oslo</option>
+          <option value="London">London</option>
+          <option value="Rome">Rome</option>
+          <option value="Paris">Paris</option>
+          <option value="Madrid">Madrid</option>
         </select>
       </label>
       // <input type="submit" value="Submit" />
@@ -42,12 +45,12 @@ export const Select = () => {
     return (
       <>
         <form className="myForm" onSubmit={handleSubmit} ref={selectRef}>
-          <h1>I love you</h1>
+         <p>Where do you want to live?</p>
           < Select />
           <button type ="submit" className="btn" onClick={setDone}>Submit answers</button>
           <Bar size = "75"/>
         </form>
-        {done && <EndPage name = {values[2]} city = {values[0]} age = {values[1]}/>}
+        {done && <EndPage name = {values.name} city = {values.city} room = {values.room} parking = {values.parking}/>}
   
       </>
   
