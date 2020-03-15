@@ -7,5 +7,5 @@ The site is a form-survey divided in different pages.
 The hardest part was hiding the previous page.
 
 ## View it live
-
+https://nervous-gates-a4c583.netlify.com/
 
