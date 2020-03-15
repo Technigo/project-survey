@@ -1,17 +1,21 @@
 /* eslint-disable linebreak-style */
+/* eslint-disable operator-linebreak */
+/* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable arrow-parens */
 import React, { useState } from 'react'
 import { Summary } from './components/Summary'
+import { Footer } from './components/Footer'
 import './app.css'
 
-const likeBlue = ["Yes", "No", "Only certain shades"]
-const blueFeelings = ["Positive", "Negative", "Neutral", "Mixed"]
+const likeBlue = ['Yes', 'No', 'Only certain shades']
+const blueFeelings = ['Positive', 'Negative', 'Neutral', 'Mixed']
 
 export const App = () => {
-  const [mind, setMind] = useState("")
+  const [mind, setMind] = useState('')
   const [likeScale, setLikeScale] = useState()
   const [feelingScale, setFeelingScale] = useState()
-  const [optionBlue, setOptionBlue] = useState("")
-  const [optionBlueMember, setOptionBlueMember] = useState("")
+  const [optionBlue, setOptionBlue] = useState('')
+  const [optionBlueMember, setOptionBlueMember] = useState('')
   const [submit, setSubmit] = useState(false)
   const isEnabled = mind.length > 0
 
@@ -32,7 +36,7 @@ export const App = () => {
               <label className="radio-container" key={like}>
                 <input type="radio" value={like} onChange={event => setLikeScale(event.target.value)} checked={likeScale === like} />
                 {like}
-                <span className="radio-bttn"></span>
+                <span className="radio-bttn" />
               </label>
             ))}
           </label>
@@ -43,7 +47,7 @@ export const App = () => {
               <label className="radio-container" key={feeling}>
                 <input type="radio" value={feeling} onChange={event => setFeelingScale(event.target.value)} checked={feelingScale === feeling} />
                 {feeling}
-                <span className="radio-bttn"></span>
+                <span className="radio-bttn" />
               </label>
             ))}
           </label>
@@ -63,7 +67,9 @@ export const App = () => {
           <label>
             <h2>Who is your favourite Blue member?</h2>
             <div className="drop-down">
-              <select onChange={event => setOptionBlueMember(event.target.value)} value={optionBlueMember}>
+              <select
+                onChange={event => setOptionBlueMember(event.target.value)}
+                value={optionBlueMember}>
                 <option value="">~ Select option ~</option>
                 <option value="Anthony Costa">Anthony Costa</option>
                 <option value="Duncan James">Duncan James</option>
@@ -81,11 +87,17 @@ export const App = () => {
       <section>
         {submit &&
           <div>
-            <Summary mind={mind} like={likeScale} feeling={feelingScale} dabadee={optionBlue} blue={optionBlueMember} />
+            <Summary
+              mind={mind}
+              like={likeScale}
+              feeling={feelingScale}
+              dabadee={optionBlue}
+              blue={optionBlueMember} />
             <button type="button" onClick={() => window.location.reload()}>Reset</button>
             <button type="button" onClick={() => setSubmit(false)}>Go back</button>
           </div>}
       </section>
+      <Footer />
     </section>
   )
 }

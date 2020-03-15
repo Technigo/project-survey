@@ -1,5 +1,22 @@
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .summary {
   margin: 10%;
   display: flex;
   flex-direction: column;
+}
+
+.summary-q {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 0;
+}
+
+.summary-a {
+  font-size: 1em;
+  margin: 0 0 15px 0;
 }
