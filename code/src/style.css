@@ -1,0 +1,35 @@
+body{
+  background-color: #fad7d7;
+}
+
+h1{
+  font-family: 'Chango', cursive;
+  font-size: 24px;
+  color:#fa7878;
+}
+h2{
+  font-family: 'Coiny', cursive;
+  color:#c84cd9;
+}
+header{
+  max-width:900px;
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+.heading{
+  font-size:56px;
+}
+
+.question3,
+.question2, 
+.question3 {
+  max-width:33.333%;
+}
+.questions {
+  display:flex;
+  margin-top:70px;
+}
+.dropdown{
+  max-width:300px;
+}
