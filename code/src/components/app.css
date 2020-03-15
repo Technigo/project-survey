@@ -1,23 +1,122 @@
 body {
-  background: #c2afe3;
+  background: #fff;
+  color: #424874;
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  background: #a6b1e1;
+  padding: 10px;
+}
+
+h3 {
+  background: #dcd6f7;
+  padding: 5px;
+  margin: 10px;
+}
+
+h4 {
+  color: #042735;
+  margin: 5px;
+  text-decoration: underline;
+}
+
+h4:hover {
+  transform: scale(1.2);
+}
+
+/* BUTTON STYLING */
+
+.buttonContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttonContainer button {
+  border-style: none;
+  outline-color: #424874;
+  border: 2px solid #424874;
+  margin: 5px;
+  padding: 5px;
+
+  background: #dcd6f7;
+  margin: 10px;
+  padding: 10px;
+  font-size: 16px;
+}
+
+.buttonContainer button:focus,
+button:hover {
+  border-style: 1px;
+  outline-offset: -2px;
+  outline-style: solid;
 }
 
 .questionContainer {
-  border-radius: 50px;
-  background: #c2afe3;
-  box-shadow: 20px 20px 60px #a595c1, -20px -20px 60px #dfc9ff;
+  width: 330px;
+  height: 500px;
+  margin: 20px 10px 0;
+  padding: 5px;
 
-  width: 300px;
-  height: 150px;
-  margin: 20px auto;
+  background: #f4eeff;
+  background-color: #f4eeff;
+  /* background-image: linear-gradient(225deg, #8bc6ec 0%, #074158 100%); */
 
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-align: center;
 }
 
+/* FIRST QUESTION STYLING */
+
+.inputText {
+  width: auto;
+  border-style: none;
+  outline-color: #424874;
+  padding: 5px;
+}
+
+.inputText:focus {
+  border-style: 1px;
+  border: 1px;
+  outline-offset: 1px;
+  outline-style: 1px solid;
+}
+
+/* SECOND QUESTION STYLING */
+
+select {
+  color: #424874;
+  border: none;
+  border-style: none;
+}
+
+select:focus,
+select:hover,
+select:active {
+  border-style: 1px;
+  outline-offset: -2px;
+  outline-style: solid;
+}
+
+/* THIRD QUESTION STYLING */
 form {
   display: flex;
   flex-direction: column;
+  color: #000;
+}
+
+@media (min-width: 668px) {
+  body {
+    background: #424874;
+  }
+
+  .questionContainer {
+    width: 450px;
+    margin: 50px 10px 0;
+    padding: 20px;
+  }
 }
