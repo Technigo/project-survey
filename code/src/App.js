@@ -12,10 +12,12 @@ export const App = () => {
   const [action2, setAction2] = useState('');
   const [suggestion, setSuggestion] = useState(false);
   const [showSummary, setShowSummary] = useState(false);
+  const [showForm, setShowForm] = useState(true);
 
   const handleSubmit = event => {
     event.preventDefault();
     setShowSummary(true);
+    setShowForm(false);
   };
 
   return (
@@ -29,20 +31,22 @@ export const App = () => {
           suggestion={suggestion}
         />
       )}
-      <form onSubmit={handleSubmit}>
-        <Gender setGender={setGender} gender={gender} />
-        <Frequency setFrequency={setFrequency} frequency={frequency} />
-        <Actions
-          setAction1={setAction1}
-          setAction2={setAction2}
-          action1={action1}
-          action2={action2}
-        />
-        <Suggestions setSuggestion={setSuggestion} suggestion={suggestion} />
-        <button type='submit' style={{ display: 'block' }}>
-          SUBMIT
-        </button>
-      </form>
+      {showForm && (
+        <form onSubmit={handleSubmit}>
+          <Gender setGender={setGender} gender={gender} />
+          <Frequency setFrequency={setFrequency} frequency={frequency} />
+          <Actions
+            setAction1={setAction1}
+            setAction2={setAction2}
+            action1={action1}
+            action2={action2}
+          />
+          <Suggestions setSuggestion={setSuggestion} suggestion={suggestion} />
+          <button type='submit' style={{ display: 'block' }}>
+            SUBMIT
+          </button>
+        </form>
+      )}
     </main>
   );
 };

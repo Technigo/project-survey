@@ -30,3 +30,8 @@ main {
   background-size: cover;
   position: relative;
 }
+
+.inputfield {
+  margin-right: 10px;
+  margin-left: 10px;
+}

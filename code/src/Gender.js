@@ -8,9 +8,9 @@ export const Gender = props => {
       What's your gender:
       <select onChange={event => setGender(event.target.value)} value={gender}>
         <option value=''>Select </option>
-        <option value='Female'>Female</option>
-        <option value='Male'>Male</option>
-        <option value='Neutral'>Neutral</option>
+        <option value='female'>Female</option>
+        <option value='male'>Male</option>
+        <option value='neutral'>Neutral</option>
       </select>
     </form>
   );

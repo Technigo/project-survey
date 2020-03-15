@@ -6,7 +6,8 @@ export const Suggestions = props => {
   return (
     <form onSubmit={event => event.preventDefault()}>
       <label>
-        Would you like some suggestions of what you can do to feel better?
+        Please tick the box if you'd like some suggestions of what you can do to
+        feel better!
         <input
           type='checkbox'
           checked={suggestion}
