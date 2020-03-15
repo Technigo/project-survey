@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 
 const occasions = ['every day', 'several times a week', 'once a week or less'];
 
-export const Frequency = () => {
-  const [frequency, setFrequency] = useState();
+export const Frequency = props => {
+  const { frequency, setFrequency } = props;
   return (
     <form onSubmit={event => event.preventDefault()}>
       How often do you feel stressed?
