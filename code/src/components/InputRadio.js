@@ -9,7 +9,7 @@ export const InputRadio = ({ label, array, state, setState }) => {
       {/* Render radio buttons from array (props) */}
       {array.map(item => (
 
-        <div key={item}>
+        <div key={item} className="radio-btn">
           <input
             type="radio"
             value={item}

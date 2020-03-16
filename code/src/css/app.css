@@ -10,6 +10,15 @@ h1 {
   font-size: 3rem;
 }
 
+label {
+  font-size: 1.6rem;
+}
+
+.radio-btn {
+  margin-top: .5rem;
+  font-size: 1rem;
+}
+
 label, button {
   display: block;
   margin-top: 2rem;

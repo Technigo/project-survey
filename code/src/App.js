@@ -21,7 +21,6 @@ export const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     setCount(count + 1)
-
     count === 3 && setRenderSummary(true)
   }
 
@@ -36,42 +35,38 @@ export const App = () => {
 
           {count === 0 && (
             <InputText
-              label="Name"
+              label="What's your name?"
               state={name}
               setState={setName}
             />
           )}
           {count === 1 && (
             <InputSelect
-              label="Favorite nut"
+              label="What is your favorite nut?"
               array={nuts}
               state={nut}
               setState={setNut}
             />
           )}
           {count === 2 && (
-            <InputCheckbox
-              label="Allergy"
-              state={allergy}
-              setState={setAllergy}
-            />
-          )}
-          {count === 3 && (
             <InputRadio
-              label="Preferred shape"
+              label="How do you prefer your nuts?"
               array={shapes}
               state={shape}
               setState={setShape}
             />
           )}
+          {count === 3 && (
+            <InputCheckbox
+              label="Check this if you are allergic to nuts"
+              state={allergy}
+              setState={setAllergy}
+            />
+          )}
 
-
-          {count < 3 ?
-            <button type="submit">Next</button>
-            :
-            <button type="submit">Submit</button>
-          }
-
+          <button type="submit">
+            {count < 3 ? <>Next</> : <>Submit</>}
+          </button>
 
         </form>
 
