@@ -12,22 +12,19 @@ export const App = () => {
   const [shape, setShape] = useState('')
   const [allergy, setAllergy] = useState(false)
   const [renderSummary, setRenderSummary] = useState(false)
-
   const [count, setCount] = useState(0)
-
 
   const nuts = ['Almond', 'Brazil nut', 'Cashew', 'Hazelnut', 'Macadamia', 'Peanut', 'Pecan', 'Pistachio', 'Walnut']
   const shapes = ['Burnt', 'Butter', 'Natural', 'Roasted', 'Salted', 'Sweet']
 
+
   const handleSubmit = (event) => {
     event.preventDefault()
-    setRenderSummary(true)
+    setCount(count + 1)
+
+    count === 3 && setRenderSummary(true)
   }
 
-  const nextBtn = (event) => {
-    event.preventDefault()
-    setCount(count + 1)
-  }
 
   return (
     <main className="main-content">
@@ -68,11 +65,13 @@ export const App = () => {
             />
           )}
 
+
           {count < 3 ?
-            <button onClick={nextBtn}>Next</button>
+            <button type="submit">Next</button>
             :
             <button type="submit">Submit</button>
           }
+
 
         </form>
 
