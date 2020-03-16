@@ -2,10 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .summary {
-  margin: 10%;
+  margin: 2% 10%;
   display: flex;
   flex-direction: column;
 }

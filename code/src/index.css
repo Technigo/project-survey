@@ -1,4 +1,4 @@
-html, body {
+html, body, #root {
   height: 100%;
 }
 
@@ -17,7 +17,7 @@ code {
     monospace;
 }
 
-#root {
+.content-wrapper {
   display: flex;
   flex-direction: column;
   height: 100%;

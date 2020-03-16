@@ -1,0 +1,21 @@
+h1 {
+  font-size: 2em;
+  text-align: center;
+  color: #fff;
+}
+
+header {
+  background: #c6dcfd;
+  height: 70px;
+  position: relative;
+}
+
+header:before {
+  content:"";
+  position:absolute;
+  top:70px;
+  height:60px;
+  left:0;
+  right:0;
+  background:linear-gradient(to top right, transparent 49%, #c6dcfd 50%);
+ }
