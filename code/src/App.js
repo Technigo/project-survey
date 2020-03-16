@@ -6,28 +6,36 @@ import { useState } from 'react'
 export const App = () => {
 
   const [animalLover, setAnimalLover] = useState('')
-  const [vacation, setVacation] = useState()
+  const [vacation, setVacation] = useState('')
   const vacations = [
-    'Weekend in Paris',
+    'a Weekend in Paris',
     'Spring in Tokyo',
     'Oktoberfest in München',
-    'Ice Cave tour in Iceland',
+    'an Ice Cave tour in Iceland',
     'Relaxing and yoga in Bali'
     ]
-  const [food, setFood] = useState()
+  const [food, setFood] = useState('')
+  const [showSummary, setShowSummary] = useState(false)
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    setShowSummary(true)
+  }
 
   return (
-    <form onSubmit={(event) => event.preventDefault}>
+    <div>
+      <form onSubmit={handleSubmit}>
       <label>
           <select
             onChange={event => setAnimalLover(event.target.value)}
             value={animalLover}
+            required
             >
                 <option value= "">Select option:</option>
-                <option value= "dogs">Dog Lover</option>
-                <option value= "cats">Cat Lover</option>
-                <option value= "hatesAnimals">No animals!</option>
-                <option value= "hamsters">Hamsters!</option>
+                <option value= "a dog">Dog Lover</option>
+                <option value= "a cat">Cat Lover</option>
+                <option value= "not a">No animals!</option>
+                <option value= "a hamster">Hamsters!</option>
             </select>
           </label>
 
@@ -39,6 +47,7 @@ export const App = () => {
             type="radio"
             value={tour}
             onChange={(event) => setVacation(event.target.value)}
+            required
             checked={vacation === tour}
             />
             {tour}
@@ -50,10 +59,23 @@ export const App = () => {
         <p>What is your favorite food?</p>
         <input
           type='text'
+          placeholder="Omnom"
           onChange={event => setFood(event.target.value)}
           value={food}
+          required
         />
       </label>
+
+      <button type="submit">Submit!</button>
     </form>
+
+    {showSummary && <section>
+      <h1>Summary:</h1>
+        <p>You are {animalLover} lover!</p>
+        <p>Your dream vacation is {vacation}</p>
+        <p>Your favorite food is {food}. Yum!</p>
+    </section>}
+    </div>
+    
   )
 }
