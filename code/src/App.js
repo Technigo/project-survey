@@ -5,50 +5,68 @@ import { InputCheckbox } from 'components/InputCheckbox.js'
 import { InputRadio } from 'components/InputRadio.js'
 import 'css/app.css'
 
-const ingredients = ['Lemon', 'Vanilla', 'Butter', 'Cream']
-const genders = ['Woman', 'Man', 'Non binary']
 
 export const App = () => {
-  const [ingredient, setIngredient] = useState('')
+  const [nut, setNut] = useState('')
   const [name, setName] = useState('')
-  const [newsletter, setNewsletter] = useState(false)
-  const [gender, setGender] = useState('')
+  const [allergy, setAllergy] = useState(false)
+  const [shape, setShape] = useState('')
   const [renderSummary, setRenderSummary] = useState(false)
+
+  const nuts = ['Almond', 'Brazil nut', 'Cashew', 'Hazelnut', 'Macadamia', 'Peanut', 'Pecan', 'Pistachio', 'Walnut']
+  const shapes = ['Burnt', 'Butter', 'Natural', 'Roasted', 'Salted', 'Sweet']
 
   const handleSubmit = (event) => {
     event.preventDefault()
     setRenderSummary(true)
   }
 
-
   return (
-    <div>
-      {!renderSummary && (
+    <main className="main-content">
+
+      {!renderSummary ?
+
         <form id="form" onSubmit={handleSubmit}>
 
-          <InputText label="Name" state={name} setState={setName} />
+          <InputText
+            label="Name"
+            state={name}
+            setState={setName}
+          />
 
-          <InputSelect label="Ingredient" array={ingredients} state={ingredient} setState={setIngredient} />
+          <InputSelect
+            label="Favorite nut"
+            array={nuts}
+            state={nut}
+            setState={setNut}
+          />
 
-          <InputCheckbox label="Newsletter" state={newsletter} setState={setNewsletter} />
+          <InputCheckbox
+            label="Allergy"
+            state={allergy}
+            setState={setAllergy}
+          />
 
-          <InputRadio label="Gender" array={genders} state={gender} setState={setGender} />
+          <InputRadio
+            label="Preferred shape"
+            array={shapes}
+            state={shape}
+            setState={setShape}
+          />
 
           <button type="submit">Submit</button>
 
         </form>
 
-      )}
+        :
 
-
-      {renderSummary &&
-        <div>
-          <p>{name}</p>
-          <p>{ingredient}</p>
-          <p>{newsletter.toString()}</p>
-          <p>{gender}</p>
-        </div>
+        <section className="summary">
+          <h2>
+            Hi {name}! Your favorite nut is the {nut.toLowerCase()} and you prefer it {shape.toLowerCase()}.
+            {allergy ? <>Sorry to hear that you're allergic though.</> : <>Happy to hear you can eat them.</>}
+          </h2>
+        </section>
       }
-    </div>
+    </main>
   )
 }

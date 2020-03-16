@@ -11,7 +11,6 @@ export const InputCheckbox = (props) => {
         type="checkbox"
         value={state}
         onChange={event => setState(event.target.checked)}
-        required
       />
 
     </label>
