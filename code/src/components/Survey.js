@@ -98,8 +98,10 @@ export const Survey = () => {
               </div>
 
               <div className="submit-btn">
-                <button className="submit"
-                  tabIndex="0">Done!</button>
+                <button className="button"
+                  tabIndex="0">
+                    <div className="slide" />
+                    <span>Done!</span></button>
               </div>
 
 
