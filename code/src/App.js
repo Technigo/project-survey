@@ -5,12 +5,7 @@ import { Header } from './Header'
 
 
 export const App = () => {
-  const [showSummary, setShowSummary] = useState(false);
-
-  const handleSubmit = event => {
-    event.preventDefault();
-    setShowSummary(true)
-  }
+  
 
   return (
      
