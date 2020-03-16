@@ -1,0 +1,12 @@
+.summary-style {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+  width: 70%;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.411);
+    padding: 20px;
+}
+
+.finalMessage {
+  color: rgb(80, 78, 78)
+}

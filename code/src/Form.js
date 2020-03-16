@@ -19,9 +19,9 @@ export const Form = () => {
   <section>
   {!showSummary ? (
     <form onSubmit={handleSubmit}>
-      <div className="TextQuestion White">
+      <div className="TextQuestion colorOne">
         <label>
-          Your city 
+          1. Your city 
          
           <input type = "text"
           onChange = {event => setCity(event.target.value)}
@@ -32,14 +32,14 @@ export const Form = () => {
       </div>
 
     
-      <div className="DropdownQuestion Grey dropdown">
+      <div className="DropdownQuestion colorTwo dropdown">
         <select onChange = {
         event => setCuisine(event.target.value)
       } 
         value = { cuisine }
         required >
-      
-          <option value = "" > Favourite cuisine: </option> 
+     
+          <option value = "" >  2. Favourite cuisine: </option> 
           <option value = "Italian" > Italian </option> 
           <option value = "Thai" > Thai </option> 
           <option value = "Swedish" > Swedish </option> 
@@ -49,8 +49,8 @@ export const Form = () => {
           <option value = "Non of the above" > Non of the above </option> 
         </select>
       </div>
-      <div className="RadioQuestion White">
-      Visits / Month :
+      <div className="RadioQuestion colorThree">
+      3. Visits / Month :
       {visitsAmount.map(amount => (
         <label key={amount}>
           <input
@@ -65,7 +65,7 @@ export const Form = () => {
         </label>
 ) )}
       </div>
-      <div className="CheckboxQuestion Grey">
+      <div className="CheckboxQuestion colorFour">
         <label>
           <input type = "checkbox"
           checked = {agreement}
@@ -73,7 +73,7 @@ export const Form = () => {
           required
           /> 
           
-        I agree to the terms & conditions
+       4. I agree to the terms & conditions
         </label> 
       </div>
     <Button />

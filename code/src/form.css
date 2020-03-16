@@ -26,10 +26,6 @@ input {
   margin: 0 20px;
 }
 
-.RadioQuestion input {
-  margin: 0px
-}
-
 label {
   display: flex;
   margin: auto;
@@ -47,14 +43,37 @@ font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
 monospace;
 }
 
-.White {
+.colorOne {
   background: rgba(224, 159, 224, 0.637);
   
   
 }
 
-.Grey {
-  background-color: rgba(108, 76, 114, 0.582);
+.colorTwo {
+  background-color: rgba(105, 62, 112, 0.582);
  
 }
 
+.colorThree {
+  background-color: rgb(201, 129, 151);
+}
+
+.colorFour {
+  background-color: rgb(143, 79, 138);
+}
+
+@media only screen and (min-width: 900px) { 
+form {
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.colorOne,
+.colorTwo,
+.colorThree,
+.colorFour {
+  width: 50%;
+}
+
+
+
+}
