@@ -1,53 +1,52 @@
 import React, { useState } from 'react'
+import { InputText } from 'components/InputText.js'
 import { InputSelect } from 'components/InputSelect.js'
+import { InputCheckbox } from 'components/InputCheckbox.js'
+import { InputRadio } from 'components/InputRadio.js'
+import 'css/app.css'
 
-const genders = ['Woman', 'Man', 'Other']
 
 export const App = () => {
-  const [location, setLocation] = useState('')
+  const [ingredient, setIngredient] = useState('')
   const [name, setName] = useState('')
   const [newsletter, setNewsletter] = useState(false)
   const [genderChoice, setGenderChoice] = useState('')
+  const [renderSummary, setRenderSummary] = useState(false)
+
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setRenderSummary(true)
+  }
 
 
   return (
     <div>
-      <form id="form" onSubmit={event => event.preventDefault()}>
-        <input
-          type="text"
-          onChange={event => setName(event.target.value)}
-          value={name}
-        />
+      {!renderSummary && (
+        <form id="form" onSubmit={handleSubmit}>
 
-        <InputSelect location={location} setLocation={setLocation} />
+          <InputText state={name} setState={setName} />
 
-        <input
-          type="checkbox"
-          value={newsletter}
-          onChange={event => setNewsletter(event.target.checked)}
-        />
+          <InputSelect state={ingredient} setState={setIngredient} />
 
-        {genders.map(gender => (
-          <label key={gender}>
-            <input
-              type="radio"
-              value={gender}
-              onChange={event => setGenderChoice(event.target.value)}
-              checked={genderChoice === gender}
-            />
-            {gender}
-          </label>
-        ))}
+          <InputCheckbox state={newsletter} setState={setNewsletter} />
 
-        <button onClick={() => {
-          // document.querySelector('#form').remove()
-          console.log(name)
-        }}>Submit</button>
+          <InputRadio state={genderChoice} setState={setGenderChoice} />
+
+          <button onClick={() => { console.log(name) }}>Submit</button>
+
+        </form>
+
+      )}
 
 
-      </form>
-
-
+      {renderSummary &&
+        <div>
+          <p>{name}</p>
+          <p>{ingredient}</p>
+          <p>{newsletter.toString()}</p>
+          <p>{genderChoice}</p>
+        </div>
+      }
     </div>
   )
 }
