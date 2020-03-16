@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "textInput.css"
 
-export const TextInput = () => {
-  const [name, setName] = useState(" ")
+export const TextInput = props => {
+  const { name, setName } = props
   return (
     <label className="textLabel">
       What's your online alias?

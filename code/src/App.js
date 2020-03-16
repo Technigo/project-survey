@@ -9,6 +9,9 @@ import { Button } from "./Button"
 
 export const App = () => {
   const [showSummary, setShowSummary] = useState(false)
+  const [name, setName] = useState("")
+  const [vacation, setVacation] = useState("")
+  const [spiritAnimal, setSpiritAnimal] = useState("");
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -20,13 +23,13 @@ export const App = () => {
       <h1>Pick your online alias!</h1>
       {!showSummary ? (
         <form onSubmit={handleSubmit}>
-          <TextInput />
-          <RadioButtons />
-          <Select />
+          <TextInput name={name} setName={setName} />
+          <RadioButtons spiritAnimal={spiritAnimal} setSpiritAnimal={setSpiritAnimal} />
+          <Select vacation={vacation} setVacation={setVacation} />
           <Checkbox />
           <Button type="submit" title="submit" />
         </form>) : (
-          <Summary />)}
+          <Summary name={name} vacation={vacation} spiritAnimal={spiritAnimal} />)}
     </section>
   )
 }

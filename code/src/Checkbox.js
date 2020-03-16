@@ -2,16 +2,16 @@ import React, { useState } from "react"
 import "./checkbox.css"
 
 export const Checkbox = () => {
-  const [wantsNewsletter, setWantsNewsletter] = useState(false);
+  const [isEighteen, setIsEighteen] = useState(false);
 
   return (
-  <label className="checkboxLabel">
-        I'm over 18
+    <label className="checkboxLabel">
+      I'm over 18
         <input
-          type="checkbox"
-          checked={wantsNewsletter}
-          onChange={event => setWantsNewsletter(event.target.checked)}
-        />
-      </label>
+        type="checkbox"
+        checked={isEighteen}
+        onChange={event => setIsEighteen(event.target.checked)}
+      />
+    </label>
   );
 };
