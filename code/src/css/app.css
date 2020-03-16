@@ -1,10 +1,22 @@
 body {
+  /* background-color: #e0d4c2; */
+}
+
+.main-content {
   margin: 100px;
+}
+
+h1 {
+  font-size: 3rem;
 }
 
 label, button {
   display: block;
   margin-top: 2rem;
+}
+
+input, button {
+  /* border: none; */
 }
 
 input[type=text],

@@ -11,6 +11,7 @@ export const InputText = (props) => {
         type="text"
         onChange={event => setState(event.target.value)}
         value={state}
+        minLength="2"
         required
       />
 

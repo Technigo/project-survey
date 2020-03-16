@@ -7,11 +7,14 @@ import 'css/app.css'
 
 
 export const App = () => {
-  const [nut, setNut] = useState('')
   const [name, setName] = useState('')
-  const [allergy, setAllergy] = useState(false)
+  const [nut, setNut] = useState('')
   const [shape, setShape] = useState('')
+  const [allergy, setAllergy] = useState(false)
   const [renderSummary, setRenderSummary] = useState(false)
+
+  const [count, setCount] = useState(0)
+
 
   const nuts = ['Almond', 'Brazil nut', 'Cashew', 'Hazelnut', 'Macadamia', 'Peanut', 'Pecan', 'Pistachio', 'Walnut']
   const shapes = ['Burnt', 'Butter', 'Natural', 'Roasted', 'Salted', 'Sweet']
@@ -21,40 +24,55 @@ export const App = () => {
     setRenderSummary(true)
   }
 
+  const nextBtn = (event) => {
+    event.preventDefault()
+    setCount(count + 1)
+  }
+
   return (
     <main className="main-content">
 
+      <h1><span role="img" aria-label="Peanuts">🥜</span></h1>
+
       {!renderSummary ?
+        <form className="nut-form" onSubmit={handleSubmit}>
 
-        <form id="form" onSubmit={handleSubmit}>
+          {count === 0 && (
+            <InputText
+              label="Name"
+              state={name}
+              setState={setName}
+            />
+          )}
+          {count === 1 && (
+            <InputSelect
+              label="Favorite nut"
+              array={nuts}
+              state={nut}
+              setState={setNut}
+            />
+          )}
+          {count === 2 && (
+            <InputCheckbox
+              label="Allergy"
+              state={allergy}
+              setState={setAllergy}
+            />
+          )}
+          {count === 3 && (
+            <InputRadio
+              label="Preferred shape"
+              array={shapes}
+              state={shape}
+              setState={setShape}
+            />
+          )}
 
-          <InputText
-            label="Name"
-            state={name}
-            setState={setName}
-          />
-
-          <InputSelect
-            label="Favorite nut"
-            array={nuts}
-            state={nut}
-            setState={setNut}
-          />
-
-          <InputCheckbox
-            label="Allergy"
-            state={allergy}
-            setState={setAllergy}
-          />
-
-          <InputRadio
-            label="Preferred shape"
-            array={shapes}
-            state={shape}
-            setState={setShape}
-          />
-
-          <button type="submit">Submit</button>
+          {count < 3 ?
+            <button onClick={nextBtn}>Next</button>
+            :
+            <button type="submit">Submit</button>
+          }
 
         </form>
 
@@ -62,10 +80,11 @@ export const App = () => {
 
         <section className="summary">
           <h2>
-            Hi {name}! Your favorite nut is the {nut.toLowerCase()} and you prefer it {shape.toLowerCase()}.
-            {allergy ? <>Sorry to hear that you're allergic though.</> : <>Happy to hear you can eat them.</>}
+            Hi {name.charAt(0).toUpperCase() + name.slice(1)}! Your favorite nut is the {nut.toLowerCase()} and you prefer it {shape.toLowerCase()}.
+            {allergy ? <> Sorry to hear you're allergic though.</> : <> Happy to hear you can eat them!</>}
           </h2>
         </section>
+
       }
     </main>
   )
