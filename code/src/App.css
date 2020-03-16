@@ -1,0 +1,12 @@
+.container {
+  margin: 1em;
+}
+
+.question {
+  margin: 5em;
+}
+
+.vacation {
+  display: flex;
+  flex-direction: column;
+}

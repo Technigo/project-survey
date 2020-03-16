@@ -1,6 +1,8 @@
 import React from 'react'
 import { useState } from 'react'
 
+import './App.css'
+
 
 
 export const App = () => {
@@ -23,9 +25,11 @@ export const App = () => {
   }
 
   return (
-    <div>
+    <div className="container">
+      <h1>I want to get to know you friend!</h1>
       <form onSubmit={handleSubmit}>
-      <label>
+      <label className="question">
+        <p>Are you a dog person or a cat person?</p>
           <select
             onChange={event => setAnimalLover(event.target.value)}
             value={animalLover}
@@ -39,7 +43,7 @@ export const App = () => {
             </select>
           </label>
 
-      <label>
+      <label className="vacation">
         Your idea of the perfect vacation: 
         {vacations.map((tour) => (
           <label key={tour}>
