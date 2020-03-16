@@ -2,18 +2,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   height: 100vh;
   width: 100vw;
+  background-color: rgba(196, 243, 212, 0.69);
 }
 
-.h3Title {
-  letter-spacing: 1vh;
-  color: blue;
-}
-
-.paragraphText {
-  letter-spacing: 2vh;
-  color: red;
-}
 

@@ -1,0 +1,10 @@
+.surveycard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 60vh;
+  width: 45vw;
+  border-radius: 8px;
+  background-color: rgba(211, 196, 243, 0.69);
+}

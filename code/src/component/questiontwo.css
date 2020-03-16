@@ -1,0 +1,14 @@
+.formOptions {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.formInput {
+
+}
+
+.formBtn {
+  margin: 2vh 0vh;
+  padding: 1vh;
+}
