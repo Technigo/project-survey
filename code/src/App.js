@@ -4,12 +4,20 @@
 /* eslint-disable arrow-parens */
 import React, { useState } from 'react'
 import { Header } from './components/Header'
+import { Radio } from './components/Radio'
 import { Summary } from './components/Summary'
 import { Footer } from './components/Footer'
 import './app.css'
 
 const likeBlue = ['Yes', 'No', 'Only certain shades']
 const blueFeelings = ['Positive', 'Negative', 'Neutral', 'Mixed']
+const option1 = 'Blue are the feelings that live inside me'
+const option2 = 'I’m blue da ba dee da ba daa'
+const option3 = 'That’s sad'
+const blue1 = 'Anthony Costa'
+const blue2 = 'Duncan James'
+const blue3 = 'Lee Ryan'
+const blue4 = 'Simon Webbe'
 
 export const App = () => {
   const [mind, setMind] = useState('')
@@ -34,39 +42,45 @@ export const App = () => {
 
             <label>
               <h2>What comes into mind when you think about the color Blue?</h2>
-              <input type="text" onChange={event => setMind(event.target.value)} value={mind} placeholder="Enter your thoughts here..." />
+              <input
+                type="text"
+                value={mind}
+                onChange={event => setMind(event.target.value)}
+                placeholder="Enter your thoughts here..."
+                required />
             </label>
 
             <div role="radiogroup" aria-labelledby="group1">
               <h2 id="group1">Do you like the color Blue?</h2>
               {likeBlue.map(like => (
-                <label className="radio-container" key={like}>
-                  <input type="radio" value={like} onChange={event => setLikeScale(event.target.value)} checked={likeScale === like} />
-                  {like}
-                  <span className="radio-bttn" />
-                </label>
+                <Radio
+                  value={like}
+                  onChange={event => setLikeScale(event.target.value)}
+                  checked={likeScale === like} />
               ))}
             </div>
 
             <div className="test" role="radiogroup" aria-labelledby="group2">
               <h2 id="group2">What are your feelings associated with the color Blue?</h2>
               {blueFeelings.map(feeling => (
-                <label className="radio-container" key={feeling}>
-                  <input type="radio" value={feeling} onChange={event => setFeelingScale(event.target.value)} checked={feelingScale === feeling} />
-                  {feeling}
-                  <span className="radio-bttn" />
-                </label>
+                <Radio
+                  value={feeling}
+                  onChange={event => setFeelingScale(event.target.value)}
+                  checked={feelingScale === feeling} />
               ))}
             </div>
 
             <label>
               <h2>Blue are the words I say and what I think</h2>
               <div className="drop-down">
-                <select onChange={event => setOptionBlue(event.target.value)} value={optionBlue}>
+                <select
+                  value={optionBlue}
+                  onChange={event => setOptionBlue(event.target.value)}
+                  required>
                   <option value="">~ Select option ~</option>
-                  <option value="Blue are the feelings that live inside me">Blue are the feelings that live inside me</option>
-                  <option value="I’m blue da ba dee da ba daa">I’m blue da ba dee da ba daa</option>
-                  <option value="That’s sad">That’s sad</option>
+                  <option value={option1}>{option1}</option>
+                  <option value={option2}>{option2}</option>
+                  <option value={option3}>{option3}</option>
                 </select>
               </div>
             </label>
@@ -75,13 +89,14 @@ export const App = () => {
               <h2>Who is your favourite Blue member?</h2>
               <div className="drop-down">
                 <select
+                  value={optionBlueMember}
                   onChange={event => setOptionBlueMember(event.target.value)}
-                  value={optionBlueMember}>
+                  required>
                   <option value="">~ Select option ~</option>
-                  <option value="Anthony Costa">Anthony Costa</option>
-                  <option value="Duncan James">Duncan James</option>
-                  <option value="Lee Ryan">Lee Ryan</option>
-                  <option value="Simon Webbe">Simon Webbe</option>
+                  <option value={blue1}>{blue1}</option>
+                  <option value={blue2}>{blue2}</option>
+                  <option value={blue3}>{blue3}</option>
+                  <option value={blue4}>{blue4}</option>
                 </select>
               </div>
             </label>
