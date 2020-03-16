@@ -28,9 +28,9 @@ const Question = {
 
 export const Survey = () => {
 
-  const [name, setName] = useState()
-  const [bringWith, setBringWith] = useState()
-  const [whichPlanet, setWhichPlanet] = useState()
+  const [name, setName] = useState("")
+  const [bringWith, setBringWith] = useState("")
+  const [whichPlanet, setWhichPlanet] = useState("")
   const [showSummary, setShowSummary] = useState(false)
 
   return (
@@ -38,8 +38,10 @@ export const Survey = () => {
       {!showSummary && (
         <form
           className="user-form"
-          onSubmit={event =>
-            event.preventDefault()}>
+          onSubmit={event => {
+            setShowSummary(true)
+            event.preventDefault()
+            window.scrollTo(0, 0)}}>
 
           {/* .window.scrollTo(0, 0) */}
 
@@ -61,6 +63,7 @@ export const Survey = () => {
                 {planets.map(planet => (
                   <label key={planet} className="radio-btn" tabIndex="0">
                     <input type="radio"
+                      name="radio"
                       value={planet}
                       onChange={event => setWhichPlanet(event.target.value)}
                       checked={whichPlanet === planet}
@@ -85,10 +88,9 @@ export const Survey = () => {
                   onChange={event => setBringWith(event.target.value)}
                   value={bringWith}
                   tabIndex="0"
-                  checked={bringWith === company}
-                  defaultValue="---">
+                  checked={bringWith === company}>
 
-                  <option disabled>---</option>
+                  <option disabled></option>
                   {company.map(who => (
                     <option key={who} value={who} tabIndex="0" required>{who}</option>
                   ))}
@@ -96,8 +98,7 @@ export const Survey = () => {
               </div>
 
               <div className="submit-btn">
-                <button onSubmit={() => setShowSummary(true)}
-                  className="submit"
+                <button className="submit"
                   tabIndex="0">Done!</button>
               </div>
 
