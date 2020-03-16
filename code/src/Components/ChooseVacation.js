@@ -15,7 +15,7 @@ export const ChooseVacation = () => {
   const [vacation, setVacation] = useState()
 
   return (
-    <form>
+    <label>
       Your idea of the perfect vacation: 
       {vacations.map((tour) => (
         <label key={tour}>
@@ -28,6 +28,6 @@ export const ChooseVacation = () => {
           {tour}
         </label>
       ))}
-    </form>
+    </label>
   )
 }

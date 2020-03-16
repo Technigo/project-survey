@@ -7,11 +7,11 @@ import { Button } from 'Components/Button'
 
 export const App = () => {
   return (
-    <div>
+    <form onSubmit={(event) => event.preventDefault}>
       <DogOrCat />
       <ChooseVacation />
       <FavoriteFood />
       <Button />
-    </div>
+    </form>
   )
 }

@@ -5,13 +5,13 @@ export const FavoriteFood = () => {
   const [food, setFood] = useState()
 
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <label>
       <p>What is your favorite food?</p>
       <input
         type='text'
         onChange={event => setFood(event.target.value)}
         value={food}
       />
-    </form>
+    </label>
   )
 }
