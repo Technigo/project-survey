@@ -19,7 +19,7 @@ main {
   color: white;
 }
 
-.hero {
+body {
   /* Sizing */
   width: 100vw;
   height: 100vh;
@@ -31,7 +31,60 @@ main {
   position: relative;
 }
 
+h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.actions {
+  margin-top: 10px;
+}
+
 .inputfield {
   margin-right: 10px;
   margin-left: 10px;
+}
+
+form {
+  margin-top: 50px;
+  margin-left: 50px;
+  font-size: 1.2rem;
+}
+
+.summary-container {
+  padding-left: 60px;
+  padding-right: 60px;
+}
+
+p {
+  margin-bottom: 30px;
+  font-size: 1.2rem;
+}
+
+.gender-options {
+  background-color: white;
+  margin-left: 10px;
+  font-family: 'Montserrat';
+  font-size: 1rem;
+}
+
+.radio-buttons {
+  margin-top: 10px;
+}
+
+.radio-buttons input:checked ~ .checkmark {
+  background-color: #3e4142;
+}
+
+button {
+  margin-left: 50px;
+  margin: 50px;
+  background-color: grey;
+
+  border: 2px solid grey;
+  border-radius: 16px;
+  padding: 8px 24px;
+  font-weight: bold;
+  color: white;
+  font-size: 1rem;
 }

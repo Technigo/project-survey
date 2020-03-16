@@ -6,7 +6,11 @@ export const Gender = props => {
   return (
     <form onSubmit={event => event.preventDefault()}>
       What's your gender:
-      <select onChange={event => setGender(event.target.value)} value={gender}>
+      <select
+        className='gender-options'
+        onChange={event => setGender(event.target.value)}
+        value={gender}
+      >
         <option value=''>Select </option>
         <option value='female'>Female</option>
         <option value='male'>Male</option>

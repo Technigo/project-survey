@@ -33,6 +33,7 @@ export const App = () => {
       )}
       {showForm && (
         <form onSubmit={handleSubmit}>
+          <h1>Feeling stressed?</h1>
           <Gender setGender={setGender} gender={gender} />
           <Frequency setFrequency={setFrequency} frequency={frequency} />
           <Actions

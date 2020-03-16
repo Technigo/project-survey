@@ -5,8 +5,8 @@ export const Summary = props => {
   return (
     <div className='summary-container'>
       <h1>SUMMARY</h1>
-      <p>You're gender is {gender}.</p>
-      <p>You feel stressed {frequency}</p>
+      <p>Your gender is {gender}.</p>
+      <p>You feel stressed {frequency}.</p>
       <p>
         When you feel stressed you usually {action1} or {action2}.
       </p>
@@ -18,7 +18,7 @@ export const Summary = props => {
       ) : (
         <p>
           I'm not gonna give you any suggestions, but please come back to us if
-          you change your mind.
+          you change your mind!
         </p>
       )}
     </div>
