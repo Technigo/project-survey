@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 import './app.css'
 
-const ageGroups = ['too young', '19-35', '35-65', '65+'];
+
+const ageGroups = ['too young', '19-35', '35-65', '+65'];
 
 export const App = () => {
   const [ageGroup, setAgeGroup] = useState();
   const [hobby, setHobby] = useState("");
-
+  const [name, setName] = useState("");
 
   return (
     <div className='intro'>
@@ -16,8 +17,11 @@ export const App = () => {
 
       <form onSubmit={event => event.preventDefault()}>
         <h2>What is your name?</h2>
-        <input type='text'></input>
-        <h2>How old are you name?</h2>
+        <input type='text'
+          onChange={event => setName(event.target.value)}
+          value={name}>
+        </input>
+        <h2>{`How old are you ${name}?`}</h2>
         {ageGroups.map(group => (
           <label key={group}>
             <input type='radio'
@@ -27,9 +31,9 @@ export const App = () => {
             />
             {group}
           </label>
-        ))}}
+        ))}
 
-<h2> What is a perfect evenig according to you?</h2>
+        <h2> What is a perfect evenig according to you?</h2>
         <select
           onChange={event => setHobby(event.target.value)}
           value={hobby}>
@@ -40,10 +44,13 @@ export const App = () => {
           <option value="concert"> Headbangers ball concert</option>
         </select>
 
-        <h2> name, please typ in your email address?</h2>
-        <input type="text"></input>
+        <h2> {`${name}`}, please type in your email address?</h2>
+        <input type="text" required></input>
+
+        <h2>How exicited are you?!</h2>
 
         <button type="submit">Join the competion!</button>
+
       </form>
 
 
