@@ -3,6 +3,7 @@ import { InputText } from 'components/InputText.js'
 import { InputSelect } from 'components/InputSelect.js'
 import { InputCheckbox } from 'components/InputCheckbox.js'
 import { InputRadio } from 'components/InputRadio.js'
+import { Summary } from 'components/Summary.js'
 import 'css/app.css'
 
 
@@ -72,12 +73,12 @@ export const App = () => {
 
         :
 
-        <section className="summary">
-          <h2>
-            Hi {name.charAt(0).toUpperCase() + name.slice(1)}! Your favorite nut is the {nut.toLowerCase()} and you prefer it {shape.toLowerCase()}.
-            {allergy ? <> Sorry to hear you're allergic though.</> : <> Happy to hear you can eat them!</>}
-          </h2>
-        </section>
+        <Summary
+          name={name}
+          nut={nut}
+          shape={shape}
+          allergy={allergy}
+        />
 
       }
     </main>
