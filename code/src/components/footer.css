@@ -1,8 +1,9 @@
 footer {
   flex-shrink: 0;
-  background: #c6dcfd;
+  background: #152238;
   height: 70px;
   position: relative;
+  color: #fff;
 }
 
 footer:before {
@@ -12,7 +13,7 @@ footer:before {
   height:60px;
   left:0;
   right:0;
-  background:linear-gradient(to bottom right, transparent 49%, #c6dcfd 50%);
+  background:linear-gradient(to bottom right, transparent 49%, #152238 50%);
  }
 
  .copyright {

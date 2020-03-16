@@ -5,7 +5,7 @@ h1 {
 }
 
 header {
-  background: #c6dcfd;
+  background: #152238;
   height: 70px;
   position: relative;
 }
@@ -13,9 +13,9 @@ header {
 header:before {
   content:"";
   position:absolute;
-  top:70px;
+  top:69px;
   height:60px;
   left:0;
   right:0;
-  background:linear-gradient(to top right, transparent 49%, #c6dcfd 50%);
+  background:linear-gradient(to top right, transparent 49%, #152238 50%);
  }

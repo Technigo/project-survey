@@ -34,7 +34,7 @@ export const App = () => {
 
             <label>
               <h2>What comes into mind when you think about the color Blue?</h2>
-              <input type="text" onChange={event => setMind(event.target.value)} value={mind} placeholder="Enter profound words here..." />
+              <input type="text" onChange={event => setMind(event.target.value)} value={mind} placeholder="Enter your thoughts here..." />
             </label>
 
             <div role="radiogroup" aria-labelledby="group1">
