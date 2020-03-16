@@ -1,7 +1,6 @@
 import React from 'react'
 
-export const InputSelect = (props) => {
-  const { label, array, state, setState } = props
+export const InputSelect = ({ label, array, state, setState }) => {
 
   return (
     <label>

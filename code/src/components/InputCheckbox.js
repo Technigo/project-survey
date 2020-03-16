@@ -1,7 +1,6 @@
 import React from 'react'
 
-export const InputCheckbox = (props) => {
-  const { label, state, setState } = props
+export const InputCheckbox = ({ label, state, setState }) => {
 
   return (
     <label>

@@ -1,7 +1,6 @@
 import React from 'react'
 
-export const InputRadio = (props) => {
-  const { label, array, state, setState } = props
+export const InputRadio = ({ label, array, state, setState }) => {
 
   return (
     <label>

@@ -1,7 +1,6 @@
 import React from 'react'
 
-export const InputText = (props) => {
-  const { label, state, setState } = props
+export const InputText = ({ label, state, setState }) => {
 
   return (
     <label>
