@@ -1,3 +1,4 @@
+
 .form-container {
  text-align: center;
  background-image: url(./basketball-1920x1080.png);
@@ -15,10 +16,6 @@
   font-size: 18px;
 }
 
-.questions {
-  display: flex;
-  justify-content: center;
-}
 
 form {
   display: flex;
@@ -28,7 +25,7 @@ form {
   color: antiquewhite;
 }
 
-form input {
+form input, .hobby {
   font-family: 'Arial';
   font-size: 14px;
   color: #5c2e51;
@@ -38,8 +35,15 @@ form input {
   background-color: antiquewhite;
 }
 
+input[type=radio]{
+  /* Hide original inputs */
+  visibility: hidden;
+  position: absolute;
+}
+
 
 button {
+  margin: 20px;
   color: antiquewhite;
   padding: 40px;
   font-size: 18px;
@@ -57,10 +61,16 @@ button {
 }
 
 button:hover {
-  color: chartreuse;
+  color:#fc92d2;
   cursor: pointer;
   border-radius: 32px;
   background: linear-gradient(145deg, #9e4f8c, #854376);
   box-shadow:  26px 26px 51px #5c2e51, 
              -26px -26px 51px #cc66b5;
+}
+
+.summary {
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
 }
