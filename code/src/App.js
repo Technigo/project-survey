@@ -5,12 +5,14 @@ import { InputCheckbox } from 'components/InputCheckbox.js'
 import { InputRadio } from 'components/InputRadio.js'
 import 'css/app.css'
 
+const ingredients = ['Lemon', 'Vanilla', 'Butter', 'Cream']
+const genders = ['Woman', 'Man', 'Non binary']
 
 export const App = () => {
   const [ingredient, setIngredient] = useState('')
   const [name, setName] = useState('')
   const [newsletter, setNewsletter] = useState(false)
-  const [genderChoice, setGenderChoice] = useState('')
+  const [gender, setGender] = useState('')
   const [renderSummary, setRenderSummary] = useState(false)
 
   const handleSubmit = (event) => {
@@ -24,15 +26,15 @@ export const App = () => {
       {!renderSummary && (
         <form id="form" onSubmit={handleSubmit}>
 
-          <InputText state={name} setState={setName} />
+          <InputText label="Name" state={name} setState={setName} />
 
-          <InputSelect state={ingredient} setState={setIngredient} />
+          <InputSelect label="Ingredient" array={ingredients} state={ingredient} setState={setIngredient} />
 
-          <InputCheckbox state={newsletter} setState={setNewsletter} />
+          <InputCheckbox label="Newsletter" state={newsletter} setState={setNewsletter} />
 
-          <InputRadio state={genderChoice} setState={setGenderChoice} />
+          <InputRadio label="Gender" array={genders} state={gender} setState={setGender} />
 
-          <button onClick={() => { console.log(name) }}>Submit</button>
+          <button type="submit">Submit</button>
 
         </form>
 
@@ -44,7 +46,7 @@ export const App = () => {
           <p>{name}</p>
           <p>{ingredient}</p>
           <p>{newsletter.toString()}</p>
-          <p>{genderChoice}</p>
+          <p>{gender}</p>
         </div>
       }
     </div>

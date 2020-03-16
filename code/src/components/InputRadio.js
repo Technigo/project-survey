@@ -1,21 +1,29 @@
 import React from 'react'
 
 export const InputRadio = (props) => {
-  const { state, setState } = props
-
-  const genders = ['Woman', 'Man', 'Non binary']
+  const { label, array, state, setState } = props
 
   return (
-    genders.map(gender => (
-      <label key={gender}>
-        <input
-          type="radio"
-          value={gender}
-          onChange={event => setState(event.target.value)}
-          checked={state === gender}
-        />
-        {gender}
-      </label>
-    ))
+    <label>
+      {label}
+
+      {/* Render radio buttons from array (props) */}
+      {array.map(item => (
+
+        <div key={item}>
+          <input
+            type="radio"
+            value={item}
+            onChange={event => setState(event.target.value)}
+            checked={state === item}
+            required
+            name="radioBtn"
+          />
+          {item}
+        </div>
+
+      ))}
+
+    </label>
   )
 }

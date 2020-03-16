@@ -6,3 +6,9 @@ label, button {
   display: block;
   margin: 2rem;
 }
+
+input[type=text],
+input[type=select],
+select {
+  display: block;
+}
