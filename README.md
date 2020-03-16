@@ -1,13 +1,23 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This project was to create a survey built with React 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
+This was the second project where I worked with react and it's many new things to learn, but it's faster to learn react than a completly new language because JSX is a mix between javascript and HTML. I think it's important to evaluate when to build componants and when to just write code. I think it will get easier to evaluate when you should create componants and when you should not. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I have created a form for this project including:
+- text input
+- radio buttons with an array
+- checkbox
+- dropdown
+
+I have also worked with the accessibility, such as good colors and tab index. 
+
+The site is built of 6 JS files and 5 CSS files. 
+
+If I had more time on this project I would make one question appear at once. 
 
 ## View it live
+https://compassionate-montalcini-16fb84.netlify.com  
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
