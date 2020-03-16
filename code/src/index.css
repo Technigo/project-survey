@@ -11,3 +11,19 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.firstSection {
+  height: 80vh;
+}
+
+.Myfooter {
+  height: 15vh;
+  margin-top: auto;
+  background-color: aquamarine;
+}
