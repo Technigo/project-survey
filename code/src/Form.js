@@ -27,6 +27,7 @@ export const Form = () => {
           onChange = {event => setCity(event.target.value)}
           value = {city}
           required
+          tabIndex = "0"
           /> 
         </label> 
       </div>
@@ -37,16 +38,17 @@ export const Form = () => {
         event => setCuisine(event.target.value)
       } 
         value = { cuisine }
-        required >
+        required 
+        tabIndex = "0">
      
-          <option value = "" >  2. Favourite cuisine: </option> 
-          <option value = "Italian" > Italian </option> 
-          <option value = "Thai" > Thai </option> 
-          <option value = "Swedish" > Swedish </option> 
-          <option value = "Spanish Tapas" > Spanish Tapas </option> 
-          <option value = "Lebanese" > Lebanese </option> 
-          <option value = "Mexican" > Mexican </option> 
-          <option value = "Non of the above" > Non of the above </option> 
+          <option value = "" tabIndex = "0" >  2. Favourite cuisine: </option> 
+          <option value = "Italian" tabIndex = "0"> Italian </option> 
+          <option value = "Thai" tabIndex = "0"> Thai </option> 
+          <option value = "Swedish" tabIndex = "0"> Swedish </option> 
+          <option value = "Spanish Tapas" tabIndex = "0"> Spanish Tapas </option> 
+          <option value = "Lebanese" tabIndex = "0"> Lebanese </option> 
+          <option value = "Mexican" tabIndex = "0"> Mexican </option> 
+          <option value = "Non of the above" tabIndex = "0"> Non of the above </option> 
         </select>
       </div>
       <div className="RadioQuestion colorThree">
@@ -60,6 +62,7 @@ export const Form = () => {
           onChange={event => setVisits(event.target.value)}
           checked={visits === amount}
           required
+          tabIndex = "0"
           />
           {amount}
         </label>
@@ -71,6 +74,7 @@ export const Form = () => {
           checked = {agreement}
           onChange = {event => setAgreement(event.target.checked)}
           required
+          tabIndex = "0"
           /> 
           
        4. I agree to the terms & conditions
