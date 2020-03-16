@@ -1,5 +1,66 @@
-.first-question {
- color: black;
- font-size: 14px;
-  
+.form-container {
+ text-align: center;
+ background-image: url(./basketball-1920x1080.png);
+ background-position: bottom;
+ background-repeat: no-repeat;
+ background-size: cover;
+ width: 100%;
+ color: antiquewhite;
+ padding: 40px;
+}
+
+.questions-container {
+  display: flex;
+  justify-content: center;
+  font-size: 18px;
+}
+
+.questions {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  font-size: 18px;
+  color: antiquewhite;
+}
+
+form input {
+  font-family: 'Arial';
+  font-size: 14px;
+  color: #5c2e51;
+  border-radius: 4px;
+  padding: 4px;
+  border-style: none;
+  background-color: antiquewhite;
+}
+
+
+button {
+  color: antiquewhite;
+  padding: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  border: none;
+  border-radius: 32px;
+  background-image: url(./basketball-1920x1080.png);
+  background: linear-gradient(145deg, #854376, #9e4f8c);
+  box-shadow:  26px 26px 51px #5c2e51, 
+             -26px -26px 51px #cc66b5;
+}
+
+button {
+  transition-duration: 0.3s;
+}
+
+button:hover {
+  color: chartreuse;
+  cursor: pointer;
+  border-radius: 32px;
+  background: linear-gradient(145deg, #9e4f8c, #854376);
+  box-shadow:  26px 26px 51px #5c2e51, 
+             -26px -26px 51px #cc66b5;
 }
