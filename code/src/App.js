@@ -4,6 +4,7 @@
 /* eslint-disable arrow-parens */
 import React, { useState } from 'react'
 import { Header } from './components/Header'
+import { Text } from './components/Text'
 import { Radio } from './components/Radio'
 import { Summary } from './components/Summary'
 import { Footer } from './components/Footer'
@@ -42,33 +43,31 @@ export const App = () => {
 
             <label>
               <h2>What comes into mind when you think about the color Blue?</h2>
-              <input
-                type="text"
+              <Text
                 value={mind}
                 onChange={event => setMind(event.target.value)}
-                placeholder="Enter your thoughts here..."
-                required />
+                placeholder="Enter your thoughts here..." />
             </label>
 
-            <div role="radiogroup" aria-labelledby="group1">
-              <h2 id="group1">Do you like the color Blue?</h2>
+            <label>
+              <h2>Do you like the color Blue?</h2>
               {likeBlue.map(like => (
                 <Radio
                   value={like}
                   onChange={event => setLikeScale(event.target.value)}
                   checked={likeScale === like} />
               ))}
-            </div>
+            </label>
 
-            <div className="test" role="radiogroup" aria-labelledby="group2">
-              <h2 id="group2">What are your feelings associated with the color Blue?</h2>
+            <label>
+              <h2>What are your feelings associated with the color Blue?</h2>
               {blueFeelings.map(feeling => (
                 <Radio
                   value={feeling}
                   onChange={event => setFeelingScale(event.target.value)}
                   checked={feelingScale === feeling} />
               ))}
-            </div>
+            </label>
 
             <label>
               <h2>Blue are the words I say and what I think</h2>
@@ -109,20 +108,26 @@ export const App = () => {
         <section className="summary-wrapper">
           {submit &&
             <div className="summary-content">
+
               <Summary
                 mind={mind}
                 like={likeScale}
                 feeling={feelingScale}
                 dabadee={optionBlue}
                 blue={optionBlueMember} />
+
               <div className="summary-buttons">
                 <button type="button" onClick={() => window.location.reload()}>Reset</button>
                 <button type="button" onClick={() => setSubmit(false)}>Go back</button>
               </div>
+
             </div>}
         </section>
+
       </section>
+
       <Footer />
+
     </section>
   )
 }

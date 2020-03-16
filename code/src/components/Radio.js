@@ -6,8 +6,8 @@ export const Radio = ({ value, onChange, checked }) => {
   return (
     <label className="radio-container" key={value}>
       <input
-        className="radio-button"
         type="radio"
+        className="radio-button"
         name={value}
         value={value}
         onChange={onChange}

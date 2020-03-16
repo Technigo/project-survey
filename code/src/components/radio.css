@@ -1,0 +1,54 @@
+input[type=radio] {
+  position: relative;
+  width: 1em;
+  margin: 0 0 0 5px;
+}
+
+.radio-container {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+  padding: 0 20px;
+  cursor: pointer;
+}
+
+.radio-container input {
+  position: absolute;
+  /* width: 0;
+  height: 0; */
+  opacity: 0;
+}
+
+.radio-bttn {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  background: #f5f1ea;
+}
+
+.radio-bttn:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radio-bttn {
+  background: #97c0ff;
+}
+
+.radio-container input:checked ~ .radio-bttn:after {
+  display: block;
+}
+
+.radio-container .radio-bttn:after {
+  top: 4px;
+  left: 4px;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #f5f1ea;
+}
