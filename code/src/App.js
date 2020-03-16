@@ -1,18 +1,19 @@
 import React, { useState } from 'react'
+import { Summary } from 'Compontents/Summary'
 // import { Input } from 'Compontents/Input'
 // import { Select } from 'Compontents/Select'
 // import { Radio } from 'Compontents/Radio'
 // import { Checkbox } from 'Compontents/Checkbox'
-import { Button } from 'Compontents/Button'
-
-const handleSubmit = event => {
-  event.preventDefault()
-};
-
 
 export const App = () => {
   const [name, setName] = useState("")
-  const [showSummary, SetShowSummary] = useState(false)
+  const [showSummary, setShowSummary] = useState(false)
+
+  const handleSubmit = event => {
+    event.preventDefault()
+    setShowSummary(true)
+  };
+
   return (
     <div class="survey-card">
       <form onSubmit={handleSubmit}>
@@ -25,11 +26,12 @@ export const App = () => {
             required
           />
         </label>
+        <button type="submit">Submit</button>
       </form>
-      <Button title="edit" className="warning" />
-      <section>
-        <h1>Hello {name}</h1>
-      </section>
+
+      {showSummary && (
+        <Summary name={name} />
+      )}
     </div>
   )
 }
