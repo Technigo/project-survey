@@ -8,17 +8,20 @@ export const RadioButton2 = () => {
     return (
         <div>
             <h2>Select a date:</h2>
-            {bookDates.map(date => (
-            <label key={date}>
-                <input 
-                    type="radio"
-                    value={date}
-                    onChange={event => setBookDate(event.target.value)}
-                    checked={bookDate === date}
-                />
-                {date}
-            </label>
-            ))}
+            <div className="radio-buttons">
+                {bookDates.map(date => (
+                    <label className="radio-container" key={date}>
+                        <input 
+                            type="radio"
+                            value={date}
+                            onChange={event => setBookDate(event.target.value)}
+                            checked={bookDate === date}
+                        />
+                        <span className="radiomark"></span>
+                        {date}
+                    </label>
+                ))}
+            </div>
         </div>
         
     );

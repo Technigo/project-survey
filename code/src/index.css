@@ -5,9 +5,219 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  background-image: url(https://images.unsplash.com/photo-1563073140-57edc433a294?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=634&q=80);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.content-container {
+  margin: 200px auto;
+  max-width: 70%;
+}
+
+.radio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-evenly; */
+}
+
+/***** Styling Inputs *****/
+
+/* Dropdown */
+.dropdown-style {
+  --radius: 4px;
+  --baseFg: dimgray;
+  --baseBg: white;
+  --accentFg: #006fc2;
+  --accentBg: #bae1ff;
+}
+
+select {
+  font: 400 16px/1.3 sans-serif;
+  -webkit-appearance: none;
+  appearance: none;
+  color: var(--baseFg);
+  border: 1px solid var(--baseFg);
+  line-height: 1;
+  outline: 0;
+  padding: 0.65em 2.5em 0.55em 0.75em;
+  border-radius: var(--radius);
+  background-color: var(--baseBg);
+  background-image: linear-gradient(var(--baseFg), var(--baseFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentBg) 50%),
+    linear-gradient(var(--accentBg) 42%, var(--accentFg) 42%);
+  background-repeat: no-repeat, no-repeat, no-repeat, no-repeat;
+  background-size: 1px 100%, 20px 22px, 20px 22px, 20px 100%;
+  background-position: right 20px center, right bottom, right bottom, right bottom;   
+}
+
+select:hover {
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+}
+
+select:active {
+  background-image: linear-gradient(var(--accentFg), var(--accentFg)),
+    linear-gradient(-135deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(-225deg, transparent 50%, var(--accentFg) 50%),
+    linear-gradient(var(--accentFg) 42%, var(--accentBg) 42%);
+  color: var(--accentBg);
+  border-color: var(--accentFg);
+  background-color: var(--accentFg);
+}
+
+
+/* Radiobuttons & Checkbox */
+.radio-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  margin-right: 50px;
+  cursor: pointer;
+  font-size: 16px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radiomark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+.radio-container:hover input ~ .radiomark {
+  background-color: rgba(247, 139, 81, 0.205);
+}
+
+.radio-container input:checked ~ .radiomark {
+  background-color: #F78C51;
+}
+
+.radiomark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .radiomark:after {
+  display: block;
+}
+
+.radio-container .radiomark:after {
+ 	top: 7px;
+	left: 7px;
+	width: 6px;
+	height: 6px;
+	border-radius: 50%;
+	background: white;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+}
+
+.radio-container:hover input ~ .checkmark {
+  background-color: rgba(247, 139, 81, 0.205);
+}
+
+.radio-container input:checked ~ .checkmark {
+  background-color: #F78C51;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radio-container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.radio-container .checkmark:after {
+  left: 7px;
+  top: 3px;
+  width: 3px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkbox {
+  margin: 20px 5px;
+}
+
+/* Text boxes */
+.contact-container {
+  display: flex;
+}
+
+.text-contact, .text-preferences {
+  border-radius: 8px;
+  background-color: #FDEFCD;
+  outline: none; 
+  border: 2px solid #FDEFCD;
+  padding: 10px;
+}
+
+.text-contact {
+  margin: 0px 25px 0px 0px;
+}
+
+.text p {
+  margin: 5px;
+}
+
+.text-preferences {
+  margin: 10px 20px 10px 0px;
+  width: 70%;
+  height: 100px;
+}
+
+.text-contact:focus, .text-preferences:focus {
+  border: 2px solid #F78C51;
+}
+
+/* Submit button */
+button {
+  margin: 10px 0px;
+  background-color: #F78C51;
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgb(82, 29, 0);
+  font-size: 16px;
+} 

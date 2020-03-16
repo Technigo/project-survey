@@ -8,18 +8,20 @@ export const RadioButton3 = () => {
     return (
         <div>
             <h2>Select a time:</h2>
-            {dinnerTimes.map(time => (
-            <label key={time}>
-                <input 
-                    type="radio"
-                    value={time}
-                    onChange={event => setDinnerTime(event.target.value)}
-                    checked={dinnerTime === time}
-                />
-                {time}
-            </label>
-            ))}
+            <div className="radio-buttons">
+                {dinnerTimes.map(time => (
+                    <label className="radio-container" key={time}>
+                        <input 
+                            type="radio"
+                            value={time}
+                            onChange={event => setDinnerTime(event.target.value)}
+                            checked={dinnerTime === time}
+                        />
+                        <span className="radiomark"></span>
+                        {time}
+                    </label>
+                ))}
+            </div>
         </div>
-        
     );
 };
