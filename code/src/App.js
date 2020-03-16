@@ -1,9 +1,25 @@
-import React from 'react'
+import React, {useState} from "react"
+import {Form} from './Form'
+import { Header } from './Header'
+
+
 
 export const App = () => {
+  const [showSummary, setShowSummary] = useState(false);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setShowSummary(true)
+  }
+
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+     
+
+    <article>
+    <Header />
+    <Form /> 
+    
+    </article>
+  
   )
 }
