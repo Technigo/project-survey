@@ -1,0 +1,8 @@
+.textLabel {
+  display: flex;
+  flex-direction: column;
+}
+
+.textInput {
+  margin-top: 10px;
+}
