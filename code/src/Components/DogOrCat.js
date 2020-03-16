@@ -17,8 +17,6 @@ export const DogOrCat = () => {
           <option value= "hamsters">Hamsters!</option>
       </select>
     </label>
-    
-    
   )
 }
 
