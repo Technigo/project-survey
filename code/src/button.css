@@ -1,0 +1,17 @@
+button {
+  background-color: rgb(163, 245, 238);
+  width: 150px;
+  height: 50px;
+  box-shadow: none;
+  border: white 2px solid;
+  font-size: 15px;
+  text-transform: uppercase;
+  
+}
+
+.SubmitButton {
+  display: flex;
+  align-items: center;
+  background-color: rgb(250, 177, 109);
+
+}

@@ -1,0 +1,23 @@
+header {
+  background-color: rgba(177, 138, 32, 0.685);
+  height: 300px;
+  margin:0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+header h1 {
+  margin: 0px;
+  font-size: 50px;
+  color: rgba(78, 24, 67, 0.932);
+}
+
+header p {
+  margin: 3px 20px;
+  color: rgba(17, 34, 26, 0.808);
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  monospace;
+}

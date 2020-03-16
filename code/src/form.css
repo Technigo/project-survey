@@ -1,0 +1,60 @@
+form {
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+  
+}
+
+div {
+  display: flex;
+  flex-direction: column;
+   width: 100%;
+   margin: 0 auto;
+   height: 150px;
+  text-align: center;
+  padding: 40px 0px;
+}
+
+input {
+  display: block;
+  background: none;
+  box-shadow: none;
+  border: 3px rgb(105, 105, 105) solid;
+  margin: 0 20px;
+}
+
+.RadioQuestion input {
+  margin: 0px
+}
+
+label {
+  display: flex;
+  margin: auto;
+  width: 70%;
+  justify-content: center;
+}
+
+select {
+margin: auto;  
+border: black solid 2px;
+border-radius: 0;
+background: none;
+font-size: 16px;
+font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+monospace;
+}
+
+.White {
+  background: rgba(224, 159, 224, 0.637);
+  
+  
+}
+
+.Grey {
+  background-color: rgba(108, 76, 114, 0.582);
+ 
+}
+

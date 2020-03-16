@@ -36,16 +36,17 @@ export const Form = () => {
         <select onChange = {
         event => setCuisine(event.target.value)
       } 
-        value = { cuisine } >
+        value = { cuisine }
+        required >
       
           <option value = "" > Favourite cuisine: </option> 
-          <option value = "italian" > Italian </option> 
-          <option value = "thai" > Thai </option> 
-          <option value = "swedish" > Swedish </option> 
-          <option value = "tapas" > Spanish Tapas </option> 
-          <option value = "meze" > Lebanese </option> 
+          <option value = "Italian" > Italian </option> 
+          <option value = "Thai" > Thai </option> 
+          <option value = "Swedish" > Swedish </option> 
+          <option value = "Spanish Tapas" > Spanish Tapas </option> 
+          <option value = "Lebanese" > Lebanese </option> 
           <option value = "Mexican" > Mexican </option> 
-          <option value = "other" > Non of the above </option> 
+          <option value = "Non of the above" > Non of the above </option> 
         </select>
       </div>
       <div className="RadioQuestion White">
@@ -54,6 +55,7 @@ export const Form = () => {
         <label key={amount}>
           <input
           type="radio"
+          name="restaurantvisits"
           value={amount}
           onChange={event => setVisits(event.target.value)}
           checked={visits === amount}
@@ -70,6 +72,7 @@ export const Form = () => {
           onChange = {event => setAgreement(event.target.checked)}
           required
           /> 
+          
         I agree to the terms & conditions
         </label> 
       </div>

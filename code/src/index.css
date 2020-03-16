@@ -17,7 +17,7 @@ code {
   padding: 0px;
 }
 
-form {
+/* form {
   
   display: flex;
   flex-direction: column;
@@ -25,9 +25,9 @@ form {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
   
-}
+} */
 
-div {
+/* div {
   display: flex;
   flex-direction: column;
    width: 100%;
@@ -43,11 +43,11 @@ input {
   box-shadow: none;
   border: 3px rgb(105, 105, 105) solid;
   margin: 0 20px;
-}
+} */
 
 
 
-.RadioQuestion input {
+/* .RadioQuestion input {
   margin: 0px
 }
 
@@ -77,9 +77,9 @@ monospace;
 .Grey {
   background-color: rgba(108, 76, 114, 0.582);
  
-}
+} */
 
-header {
+/* header {
   background-color: rgba(177, 138, 32, 0.685);
   height: 300px;
   margin:0;
@@ -101,9 +101,9 @@ header p {
   color: rgba(17, 34, 26, 0.808);
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
-}
+} */
 
-button {
+/* button {
   background-color: rgb(163, 245, 238);
   width: 150px;
   height: 50px;
@@ -119,4 +119,4 @@ button {
   align-items: center;
   background-color: rgb(250, 177, 109);
 
-}
+} */
