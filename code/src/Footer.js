@@ -3,7 +3,7 @@ import React from 'react'
 export const Footer = () => {
     return (
         <div>
-            <h3>Ebba Bergholtz-Widell</h3>
+            <h3> Happy Survey</h3>
         </div>
     )
 }

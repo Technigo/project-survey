@@ -1,90 +1,59 @@
 import React, { useState } from "react";
-import { Question1 } from './Question1'
-import { Question2} from './Question1'
+import { ColorForm } from './ColorForm'
+import { GenreForm } from './GenreForm'
 
-import { Footer } from './Footer'
 import { Button } from './Button'
 
-
+const colorGroups = ["Blue", "Yellow", "Red", "Green", "Gray"];
 
 export const App = () => {
-  const [wantsColor, setWantsColor] = useState(false);
+  const [colorGroup, setColorGroup] = useState();
+  const [Genre, setGenre] = useState("");
+  const [showNext, setShowNext] = useState(false);
 
-
+  const handleShowNext = event => {
+    event.preventDefault();
+    setShowNext(true);
+  }
   return (
 
-
-    <div>
+   <div>
       <div className="firstSection">
-      <Question1/>
-
-      <form className="chooseColorForm">
-      <label>
-      Blue
-      <input
-        type="checkbox"
-        checked={wantsColor}
-        onChange={event => setWantsColor(event.target.checked)}
-        required
-      />
-     </label>
-
-     <label>
-      Yellow
-      <input
-        type="checkbox"
-        checked={wantsColor}
-        onChange={event => setWantsColor(event.target.checked)}
-        required
-      />
-     </label>
-
-     <label>
-      Red
-      <input
-        type="checkbox"
-        checked={wantsColor}
-        onChange={event => setWantsColor(event.target.checked)}
-        required
-      />
-     </label>
-
-     <label>
-      Green
-      <input
-        type="checkbox"
-        checked={wantsColor}
-        onChange={event => setWantsColor(event.target.checked)}
-        required
-      />
-     </label>
-
-     <label>
-     Gray
-      <input
-        type="checkbox"
-        checked={wantsColor}
-        onChange={event => setWantsColor(event.target.checked)}
-        required
-      />
-     </label>
-     <section className="buttonContainer">
+       {!showNext &&<form className="chooseColorForm" onSubmit={handleShowNext}>
+        <ColorForm/>
+          {colorGroups.map(group => (
+          <label key={group}>
+          {group}
+          <input
+          type="checkbox"
+          value={group}
+          onChange={event => setColorGroup(event.target.value)}
+          checked={colorGroup === group}
+        />
+       </label>
+      ))}
+      <section className="buttonContainer">
      <Button title="Enter" />
      </section>
-    
-     </form>
-
+   </form>}
     </div>
 
-
-    <div className="secondSection">
-      <Question2 />
-    </div>
-    
-      <div className="Myfooter">
-        <Footer />
-      </div>
-     
+  <div className="secondSection">
+      {showNext && <GenreForm />}
+       <form className="chooseGenreForm">
+        <select
+        onChange={event => setGenre(event.target.value)}
+        value={Genre}>
+        <option value="">Choose your genre:</option>
+        <option value="Pop">Pop</option>
+        <option value="Rock">Rock</option>
+        <option value="Hiphop">Hiphop</option>
+        <option value="Country">Country</option>
+        <option value="RnB">RnB</option>
+        </select>
+    </form>
+  </div>
+  
     </div>
   )
 }

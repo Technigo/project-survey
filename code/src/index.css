@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(147, 204, 147);
+  background-color: rgb(244, 189, 144);
 }
 
 code {
@@ -19,12 +19,26 @@ code {
   flex-direction: column;
 }
 
-
 .firstSection {
-  height: 60vh;
+  height: 50vh;
 }
 
 .firstSection article {
+  margin-top: 20vh;
+  text-align: center;
+}
+
+.secondSection {
+  display: flex;
+  height: 60vh;
+  position: absolute;
+  align-items: center;
+  top: 0;
+  left: 0;
+}
+
+.secondSection article {
+  justify-content: center;
   margin-top: 20vh;
   text-align: center;
 }
@@ -52,14 +66,4 @@ code {
   text-align: center;
 }
 
-.Myfooter {
-  height: 20vh;
-  margin-top: auto;
-  background-color: aquamarine;
-}
 
-.Myfooter h3 {
-  padding-top: 5vh;
-  text-align: center;
-
-}
