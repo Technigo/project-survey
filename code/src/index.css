@@ -3,11 +3,55 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-family: 'Lobster Two', cursive;
+  font-family: 'Oleo Script', cursive;
+  font-family: 'Galada', cursive;
+  font-family: 'Croissant One', cursive;
+  font-family: 'Domine', serif;
+  font-family: 'Playfair Display', serif;
+  font-family: 'Norican', cursive;
+  font-family: 'Molle', cursive;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  background-color: rgb(252, 194, 184)
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.button {
+  display: block;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 50px;
+  margin: 0;
+  line-height: 0px;
+  font-weight: 900;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 25px;
+  color: white;
+  font-weight: 900;
+
+}
+
+.topSection {
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
