@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A short survey form done in React. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The project was to do a survey form in React using different input types. Then, on the click of the button, showing a summary of what the user chose in the survey. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+The link to the 'Hey Stranger!' survey is here💛:https://elated-darwin-83c8f1.netlify.com/
