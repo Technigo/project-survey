@@ -29,9 +29,7 @@ div#root,
   justify-content: space-between;
 }
 
-header, 
-main, 
-footer {
+.wrapper > * {
   padding: 1rem 3rem;
 }
 
@@ -42,6 +40,10 @@ header {
 
 .main-content {
   flex: 1 1 auto;
+  display: flex;
+  align-items: center;
+  max-width: 576px;
+  
   border-top-right-radius: var(--border-radius);
   border-bottom-right-radius: var(--border-radius);
   background-color: #fff;

@@ -1,47 +1,64 @@
+form {
+  flex: 0 1 auto;
+}
+
 form * {
   font-size: inherit;
   font-weight: inherit;
   font-family: inherit;
 }
 
-p,
+form p,
 label:not(.radio-label) {
+  display: block;
+  margin-top: 0;
+  margin-bottom: 3rem;
   font-size: 1.6rem;
 }
 
-label, button {
-  margin-top: 2rem;
-}
 
-input[type=text]{
+input[type=text],
+select{
+  height: 48px;
   border: none;
   padding: .8rem 1.2rem;
   border-radius: 5px;
   background-color: #ececec;
-
 }
 
 button {
   display: block;
+  height: 48px;
   background-color: var(--color-bright);
   border: none;
   padding: .8rem 1.2rem;
   border-radius: 5px;
-  
+  margin-top: 2rem;
+  transition: all .2s ease-in-out;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--color-accent);
 }
 
 input[type=text],
 input[type=select],
 select {
   display: block;
-  margin-top: 1rem;
 }
 
-input[type=checkbox] {
-  margin-top: 1rem;
+input[type=checkbox],
+input[type=radio] {
+  margin-right: .8rem;
+}
+
+input[type=checkbox] + label {
+  display: inline;
 }
 
 .radio-btn {
-  margin-top: .5rem;
+  margin-top: .4rem;
   font-size: 1rem;
+  font-weight: 500;
 }
