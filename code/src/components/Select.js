@@ -6,7 +6,7 @@ export const Select = () => {
 const [rating, setRating] = useState("");
 
   return (
-    <form>
+    <form onSubmit={event => event.preventDefault()}>
      
       <select 
       onChange={event => setRating(event.target.value) }

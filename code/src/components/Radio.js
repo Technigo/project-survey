@@ -1,7 +1,5 @@
 import React, { useState } from "react";
 import './radio.css'
-
-
  
 export const Radio = () => {
   let [ myChoice, setMyChoice] = useState();
@@ -11,7 +9,7 @@ export const Radio = () => {
   ] 
 
   return (
-    <form>
+    <form onSubmit={event => event.preventDefault()}>
       Preference:
       {myChoices.map((choice) => (
       <label key={choice}>
