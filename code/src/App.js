@@ -3,6 +3,12 @@ import './app.css'
 
 
 const ageGroup = ['too young', '19-35', '35-65', '+65'];
+const option0 = ''
+const option1 = 'Candlelight dinner in a cosy restaurant'
+const option2 = 'Netlfix and Chill'
+const option3 = 'Dancing on my own'
+const option4 = 'Party with my friends'
+const option5 = 'Headbangers ball concert'
 
 export const App = () => {
   const [ageGroups, setAgeGroup] = useState("");
@@ -28,7 +34,7 @@ export const App = () => {
             <h2>What is your name?</h2>
             <input type='text'
               onChange={event => setName(event.target.value)}
-              value={name}>
+              value={name} placeholder="Your name">
             </input>
             <h2>{`How old are you ${name}?`}</h2>
             {ageGroup.map(group => (
@@ -46,17 +52,16 @@ export const App = () => {
             <select className="hobby"
               onChange={event => setHobby(event.target.value)}
               value={hobby}>
-              <option value="resturant"> Candlelight dinner in a cosy resturant</option>
-              <option value="netflix"> Netlfix and Chill</option>
-              <option value="dancing"> Dancing on my own</option>
-              <option value="party"> Party with my friends</option>
-              <option value="concert"> Headbangers ball concert</option>
+              <option value={option0}>~ Select option ~</option>
+              <option value={option1}> Candlelight dinner in a cosy resturant</option>
+              <option value={option2}> Netlfix and Chill</option>
+              <option value={option3}> Dancing on my own</option>
+              <option value={option4}> Party with my friends</option>
+              <option value={option5}> Headbangers ball concert</option>
             </select>
 
             <h2> {`${name}`}, please type in your email address</h2>
-            <input type="email" value={email} required onChange={event => setEmail(event.target.value)}></input>
-
-            <h2>How exicited are you?!</h2>
+            <input type="email" placeholder="name@mail.com" value={email} required onChange={event => setEmail(event.target.value)}></input>
 
             <button type="submit">Join the competion!</button>
           </form>
@@ -69,6 +74,9 @@ export const App = () => {
             <p>Your email address: {email}</p>
             <p>If you are the lucky winner we will send you and email within 2 weeks with all the details
               If you are not the winner we will send you some inspiration about fun things to do in the city.</p>
+
+            <h2>How exicited are you?!</h2>
+
           </section>
           }
 

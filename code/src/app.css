@@ -1,21 +1,37 @@
+h1, h2, h3, p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 75%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 .form-container {
- text-align: center;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
  background-image: url(./basketball-1920x1080.png);
  background-position: bottom;
- background-repeat: no-repeat;
+ background-repeat: repeat;
  background-size: cover;
  width: 100%;
  color: antiquewhite;
- padding: 40px;
+ margin-left: auto;
+ margin-right: auto;
 }
 
 .questions-container {
   display: flex;
-  justify-content: center;
   font-size: 18px;
+  width: fit-content;
+  padding: 20px;
+  border: antiquewhite 3px solid;
+  margin-left: auto;
+  margin-right: auto;
 }
-
 
 form {
   display: flex;
@@ -23,6 +39,8 @@ form {
   flex-direction: column;
   font-size: 18px;
   color: antiquewhite;
+  align-items: center;
+  text-align: center;
 }
 
 form input, .hobby {
@@ -33,16 +51,11 @@ form input, .hobby {
   padding: 4px;
   border-style: none;
   background-color: antiquewhite;
+  width: fit-content;
 }
-
-input[type=radio]{
-  /* Hide original inputs */
-  visibility: hidden;
-  position: absolute;
-}
-
 
 button {
+  max-width: 50%;
   margin: 20px;
   color: antiquewhite;
   padding: 40px;
@@ -52,8 +65,8 @@ button {
   border-radius: 32px;
   background-image: url(./basketball-1920x1080.png);
   background: linear-gradient(145deg, #854376, #9e4f8c);
-  box-shadow:  26px 26px 51px #5c2e51, 
-             -26px -26px 51px #cc66b5;
+  box-shadow:  16px 16px 41px #5c2e51, 
+             -16px -16px 41px #cc66b5;
 }
 
 button {
@@ -73,4 +86,14 @@ button:hover {
 display: flex;
 flex-direction: column;
 flex-wrap: wrap;
+text-align: left;
+}
+
+
+
+@media (min-width: 668px) {
+  .form-container {
+    padding: 20px 108px;
+  }
+   
 }
