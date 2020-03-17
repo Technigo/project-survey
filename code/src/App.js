@@ -76,6 +76,7 @@ export const App = () => {
             <label>
               <h3>What is your favorite food?</h3>
               <input
+                className="text-imput"
                 type='text'
                 placeholder="Omnom"
                 onChange={event => setFood(event.target.value)}
