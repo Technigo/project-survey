@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './text.css'
+import { Response } from './Response'
 
 export const Text = () => {
 
@@ -34,9 +35,8 @@ export const Text = () => {
         <button type="submit">submit</button>
       </form>
 
-      {showSummary && (<section>
-        <h1>Hello {alias}</h1>
-      </section>)}
+      {showSummary && (
+    <Response name={name}/>)}
     </div>
   );
 };

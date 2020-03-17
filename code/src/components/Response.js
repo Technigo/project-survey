@@ -1,13 +1,15 @@
 import React, {useState} from 'react'
 import './response.css'
 
-export const Response = () => {
+export const Response = ({name}) => {
 
-const [response, setResponse] = useState("");
+  //const { name } = props;
 
   return (
     <form>
-       
+      <section>
+  <h1>{name}</h1>
+      </section>
     </form>
   );
 };
