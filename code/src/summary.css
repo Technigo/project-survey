@@ -1,0 +1,13 @@
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  background: #fff;
+  border-radius:  0 0 30px 30px;
+  -webkit-border-radius:  0 0 30px 30px;
+  -moz-border-radius:  0 0 30px 30px;
+  -ms-border-radius:  0 0 30px 30px;
+  -o-border-radius:  0 0 30px 30px;
+  color: #303030;
+}

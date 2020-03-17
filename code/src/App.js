@@ -33,7 +33,7 @@ export const App = () => {
         <p>I want to get to know you 👀</p>
       </section>
 
-      <section className="questions">
+      {!showSummary && <section className="questions">
          <form onSubmit={handleSubmit} className="form">
           <div className="question">
             <label>
@@ -87,11 +87,13 @@ export const App = () => {
           </section>
           
         </form>
+        
+      </section>}
 
-        {showSummary && ( 
-          <Summary animalLover={animalLover} vacation={vacation} food={food}/>
-        )}
-      </section>
+      {showSummary && ( 
+        <Summary animalLover={animalLover} vacation={vacation} food={food}/>
+      )}
+      
      
     </div>
     

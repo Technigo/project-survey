@@ -14,12 +14,6 @@ body {
   color:#303030;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-    
-}
-
 h1 {
   font-size: 3em;
   text-transform: uppercase;
@@ -38,8 +32,7 @@ h1 {
 }
 
 .container {
-  /*padding: 3em;
-  */
+  margin-top: 5em;
   -webkit-box-shadow: 13px 10px 50px -23px rgba(133,46,34,1);
   -moz-box-shadow: 13px 10px 50px -23px rgba(133,46,34,1);
   box-shadow: 13px 10px 50px -23px rgba(133,46,34,1);  
