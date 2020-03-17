@@ -1,0 +1,80 @@
+body {
+  margin: 50px;
+  background-color: #ff3333;
+}
+
+h1 {
+  font-family: Helvetica, sans-serif;
+  font-size: 26px;
+}
+
+p {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+input {
+  font-family: Helvetica, sans-serif;
+  font-size: 14px;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  background-color: pink;
+  width: 95%;
+}
+
+input[type="radio"] {
+  margin: 0;
+  width: 30%;
+}
+
+.formContainer {
+  background-color: pink;
+  border-radius: 4px;
+  padding: 24px;
+}
+
+.questionCard {
+  margin: 36px 0 36px 0;
+  width: 100%;
+}
+
+.questionCard p {
+  padding: 5px;
+  background-color: #fcdde2;
+  font-weight: bolder;
+}
+
+.radioDiv {
+  width: 40%;
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  padding: 5px;
+}
+
+.formDropdown {
+  width: 120px;
+  height: 30px;
+  border: 1px solid #414141;
+  font-size: 18px;
+  color: #000;
+  background-color: #fff;
+}
+
+button {
+  font-family: Helvetica, sans-serif;
+  font-size: 16px;
+  border-radius: 4px;
+  padding: 5px;
+  background-color: #414141;
+  color: #fff;
+}
+
+.summarySection {
+  margin: 36px 0 36px 0;
+  width: 95%;
+  padding: 5px;
+  background-color: #fcdde2;
+}
