@@ -1,5 +1,6 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
+import Rater from "react-rater"
 import './index.css'
 import {App} from "./App"
 // import {Input} from "./Input"

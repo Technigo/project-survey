@@ -4,7 +4,7 @@ import {Checkbox} from "./Checkbox"
 import {Dropdown} from "./Dropdown"
 import {Buttons} from "./Buttons"
 import {Radiobuttons} from "./Radiobuttons"
-import {Rating} from "./Ratings"
+import {Rating} from "./Rating"
 
 export const App = () => {
   return (
