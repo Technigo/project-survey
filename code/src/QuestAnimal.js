@@ -5,7 +5,7 @@ export const Selectanimal = () => {
 
   return (
 
-    <form>
+    <label>
       <h3>What is your favorite animal?</h3>
       <select
         onChange={event => setAnimal(event.target.value)}
@@ -14,11 +14,11 @@ export const Selectanimal = () => {
       >
         <option value="">Select animal:</option>
         <option value="guinea pig">Guinea pig</option>
-        <option value="dog">Dog</option>
-        <option value="cat">Cat</option>
+        <option value="guinea pig, again">Guinea pig, again</option>
+        <option value="guinea pig, of course!">Guinea pig, of course!</option>
         
 
       </select>
-    </form>
+    </label>
   )
 }

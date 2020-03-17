@@ -6,7 +6,7 @@ export const Agequest = () => {
   const [ageGroup, setAgeGroup] = useState();
 
   return (
-    <form>
+    <div>
       <h3>What is your age?</h3>
       {ageGroups.map(group => (
         <label key={group}>
@@ -19,6 +19,6 @@ export const Agequest = () => {
           {group}
         </label>
       ))}
-    </form>
+    </div>
   );
 };
