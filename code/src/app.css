@@ -1,28 +1,29 @@
 body {
   margin: 50px;
-  background-color: #ff3333;
+  background-color: #ffffff;
 }
 
-h1 {
+h2 {
   font-family: Helvetica, sans-serif;
   font-size: 26px;
+  color: #fd4160;
 }
 
 p {
   font-family: Helvetica, sans-serif;
   font-size: 16px;
+  color: #fd4160;
 }
 
-input {
+input[type="text"] {
   font-family: Helvetica, sans-serif;
   font-size: 14px;
-  border-top: none;
-  border-left: none;
-  border-right: none;
-  border-bottom: 1px solid black;
-  padding: 5px;
-  background-color: pink;
-  width: 95%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  background: #ffffff;
+  color: #fd4160;
+  box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
 }
 
 input[type="radio"] {
@@ -31,9 +32,10 @@ input[type="radio"] {
 }
 
 .formContainer {
-  background-color: pink;
-  border-radius: 4px;
   padding: 24px;
+  border-radius: 6px;
+  background: #ffffff;
+  box-shadow: 31px 31px 61px #d9d9d9, -31px -31px 61px #ffffff;
 }
 
 .questionCard {
@@ -42,8 +44,9 @@ input[type="radio"] {
 }
 
 .questionCard p {
+  width: auto;
   padding: 5px;
-  background-color: #fcdde2;
+  color: #fd4160;
   font-weight: bolder;
 }
 
@@ -51,6 +54,7 @@ input[type="radio"] {
   width: 40%;
   font-family: Helvetica, sans-serif;
   font-size: 16px;
+  color: #fd4160;
   padding: 5px;
 }
 
@@ -59,22 +63,32 @@ input[type="radio"] {
   height: 30px;
   border: 1px solid #414141;
   font-size: 18px;
-  color: #000;
+  color: #fd4160;
   background-color: #fff;
 }
 
 button {
   font-family: Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
+  border: none;
+  padding: 10px 14px;
+  color: #fd4160;
   border-radius: 4px;
-  padding: 5px;
-  background-color: #414141;
-  color: #fff;
+  background: #ffffff;
+  box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
+}
+
+button:hover {
+  border-radius: 4px;
+  background: #ffffff;
+  box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
 }
 
 .summarySection {
-  margin: 36px 0 36px 0;
+  text-align: center;
+  margin: 36px 0 16px 0;
   width: 95%;
-  padding: 5px;
   background-color: #fcdde2;
+  padding: 5px 5px 20px 5px;
+  border-radius: 6px;
 }
