@@ -12,6 +12,7 @@ export const App = () => {
   const [name, setName] = useState("")
   const [vacation, setVacation] = useState("")
   const [spiritAnimal, setSpiritAnimal] = useState("");
+  const [isEighteen, setIsEighteen] = useState(false) 
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -26,10 +27,10 @@ export const App = () => {
           <TextInput name={name} setName={setName} />
           <RadioButtons spiritAnimal={spiritAnimal} setSpiritAnimal={setSpiritAnimal} />
           <Select vacation={vacation} setVacation={setVacation} />
-          <Checkbox />
+          <Checkbox isEighteen={isEighteen} setIsEighteen={setIsEighteen}/>
           <Button type="submit" title="submit" />
         </form>) : (
-          <Summary name={name} vacation={vacation} spiritAnimal={spiritAnimal} />)}
+          <Summary name={name} vacation={vacation} spiritAnimal={spiritAnimal} isEighteen={isEighteen} />)}
     </section>
   )
 }
