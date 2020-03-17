@@ -33,11 +33,10 @@ export const App = () => {
 
   return (
     <div className="wrapper">
-      <Header heading="nuts" />
+
+      <Header heading="🥜" />
 
       <main className="main-content">
-
-        {/* <h1><span role="img" aria-label="Peanuts">🥜</span></h1> */}
 
         {!renderSummary ?
           <form className="nut-form" onSubmit={handleSubmit}>
@@ -45,6 +44,7 @@ export const App = () => {
             {count === 0 && (
               <InputText
                 label="What's your name?"
+                id="inputName"
                 state={name}
                 setState={setName}
               />
@@ -52,6 +52,7 @@ export const App = () => {
             {count === 1 && (
               <InputSelect
                 label="What is your favorite nut?"
+                id="inputNut"
                 array={nuts}
                 state={nut}
                 setState={setNut}
@@ -60,6 +61,7 @@ export const App = () => {
             {count === 2 && (
               <InputRadio
                 label="How do you prefer your nuts?"
+                id="inputNutShape"
                 array={shapes}
                 state={shape}
                 setState={setShape}
@@ -68,13 +70,14 @@ export const App = () => {
             {count === 3 && (
               <InputCheckbox
                 label="Check this if you are allergic to nuts"
+                id="inputAllergy"
                 state={allergy}
                 setState={setAllergy}
               />
             )}
 
             <button type="submit">
-              {count < 3 ? <>Next</> : <>Submit</>}
+              {count < 3 ? <>→</> : <>Submit</>}
             </button>
 
           </form>
@@ -90,7 +93,7 @@ export const App = () => {
 
         }
       </main>
-      <Footer heading="stuff about nuts" />
+      <Footer text="stuff about nuts" />
     </div>
   )
 }

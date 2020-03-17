@@ -1,26 +1,32 @@
-label {
+form * {
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+p,
+label:not(.radio-label) {
   font-size: 1.6rem;
 }
 
 label, button {
-  display: block;
   margin-top: 2rem;
 }
 
 input[type=text]{
   border: none;
   padding: .8rem 1.2rem;
-  border-bottom: 4px solid var(--color-medium);
+  border-radius: 5px;
+  background-color: #ececec;
 
 }
 
 button {
-  background-color: var(--color-accent);
-  font-size: inherit;
-  font-weight: inherit;
-  font-family: inherit;
+  display: block;
+  background-color: var(--color-bright);
   border: none;
   padding: .8rem 1.2rem;
+  border-radius: 5px;
   
 }
 
@@ -28,10 +34,10 @@ input[type=text],
 input[type=select],
 select {
   display: block;
+  margin-top: 1rem;
 }
 
 input[type=checkbox] {
-  display: block;
   margin-top: 1rem;
 }
 

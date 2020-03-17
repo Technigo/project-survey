@@ -1,17 +1,16 @@
 import React from 'react'
 
-export const InputCheckbox = ({ label, state, setState }) => {
+export const InputCheckbox = ({ label, id, state, setState }) => {
 
   return (
-    <label>
-      {label}
-
+    <>
       <input
         type="checkbox"
+        id={id}
         value={state}
         onChange={event => setState(event.target.checked)}
       />
-
-    </label>
+      <label htmlFor={id}>{label}</label>
+    </>
   )
 }

@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Footer = ({ heading }) => {
+export const Footer = ({ text }) => {
 
   return (
     <footer>
       <p>
-        {heading}
+        {text}
       </p>
     </footer>
   )

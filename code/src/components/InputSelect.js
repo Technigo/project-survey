@@ -1,13 +1,14 @@
 import React from 'react'
 
-export const InputSelect = ({ label, array, state, setState }) => {
+export const InputSelect = ({ label, id, array, state, setState }) => {
 
   return (
-    <label>
-      {label}
+    <>
+      <label htmlFor={id}>{label}</label>
 
       <select
         onChange={event => setState(event.target.value)}
+        id={id}
         value={state}
         required
       >
@@ -20,6 +21,6 @@ export const InputSelect = ({ label, array, state, setState }) => {
 
       </select>
 
-    </label >
+    </>
   )
 }
