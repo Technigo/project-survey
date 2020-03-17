@@ -25,6 +25,7 @@ const blue1 = 'Anthony Costa'
 const blue2 = 'Duncan James'
 const blue3 = 'Lee Ryan'
 const blue4 = 'Simon Webbe'
+
 const optionValues = [
   { value: optionValueEmpty, text: optionValue0 },
   { value: optionValue1, text: optionValue1 },
@@ -40,13 +41,20 @@ const blueMembers = [
 ]
 
 export const App = () => {
+  const [question, setQuestion] = useState(1)
+  const nextQuestion = () => {
+    setQuestion(question + 1)
+  }
+  const previousQuestion = () => {
+    setQuestion(question - 1)
+  }
   const [mind, setMind] = useState('')
   const [likeScale, setLikeScale] = useState()
   const [feelingScale, setFeelingScale] = useState()
   const [optionBlue, setOptionBlue] = useState('')
   const [optionBlueMember, setOptionBlueMember] = useState('')
   const [submit, setSubmit] = useState(false)
-  const enabled = [feelingScale, setFeelingScale] !== optionValues[0];
+  /* const enabled = [feelingScale, setFeelingScale] !== optionValues[0]; */
   const handleSubmit = event => {
     event.preventDefault()
     setSubmit(true)
@@ -60,65 +68,88 @@ export const App = () => {
         {!submit && (
           <form onSubmit={handleSubmit}>
 
-            <label>
-              <h2>What comes into mind when you think about the color Blue?</h2>
-              <Text
-                value={mind}
-                onChange={event => setMind(event.target.value)}
-                placeholder="Enter your thoughts here..." />
-            </label>
+            {question === 1 && (
+              <label>
+                <h2>What comes into mind when you think about the color Blue?</h2>
+                <Text
+                  value={mind}
+                  onChange={event => setMind(event.target.value)}
+                  placeholder="Enter your thoughts here..." />
+              </label>
+            )}
 
-            <label>
-              <h2>Do you like the color Blue?</h2>
-              {likeBlue.map(like => (
-                <Radio
-                  value={like}
-                  name="like"
-                  onChange={event => setLikeScale(event.target.value)}
-                  checked={likeScale === like} />
-              ))}
-            </label>
+            {question === 2 && (
+              <label>
+                <h2>Do you like the color Blue?</h2>
+                {likeBlue.map(like => (
+                  <Radio
+                    value={like}
+                    name="like"
+                    onChange={event => setLikeScale(event.target.value)}
+                    checked={likeScale === like} />
+                ))}
+              </label>
+            )}
 
-            <label>
-              <h2>What are your feelings associated with the color Blue?</h2>
-              {blueFeelings.map(feeling => (
-                <Radio
-                  value={feeling}
-                  name="feeling"
-                  onChange={event => setFeelingScale(event.target.value)}
-                  checked={feelingScale === feeling} />
-              ))}
-            </label>
+            {question === 3 && (
+              <label>
+                <h2>What are your feelings associated with the color Blue?</h2>
+                {blueFeelings.map(feeling => (
+                  <Radio
+                    value={feeling}
+                    name="feeling"
+                    onChange={event => setFeelingScale(event.target.value)}
+                    checked={feelingScale === feeling} />
+                ))}
+              </label>
+            )}
 
-            <label>
-              <h2>Blue are the words I say and what I think</h2>
-              <div className="drop-down">
-                <select
-                  value={optionBlue}
-                  onChange={event => setOptionBlue(event.target.value)}
-                  required>
-                  {optionValues.map(option => (
-                    <Option value={option.value} text={option.text} />
-                  ))}
-                </select>
-              </div>
-            </label>
+            {question === 4 && (
+              <label>
+                <h2>Blue are the words I say and what I think</h2>
+                <div className="drop-down">
+                  <select
+                    value={optionBlue}
+                    onChange={event => setOptionBlue(event.target.value)}
+                    required>
+                    {optionValues.map(option => (
+                      <Option value={option.value} text={option.text} />
+                    ))}
+                  </select>
+                </div>
+              </label>
+            )}
 
-            <label>
-              <h2>Who is your favourite Blue member?</h2>
-              <div className="drop-down">
-                <select
-                  value={optionBlueMember}
-                  onChange={event => setOptionBlueMember(event.target.value)}
-                  required>
-                  {blueMembers.map(member => (
-                    <Option value={member.value} text={member.text} />
-                  ))}
-                </select>
-              </div>
-            </label>
+            {question === 5 && (
+              <label>
+                <h2>Who is your favourite Blue member?</h2>
+                <div className="drop-down">
+                  <select
+                    value={optionBlueMember}
+                    onChange={event => setOptionBlueMember(event.target.value)}
+                    required>
+                    {blueMembers.map(member => (
+                      <Option value={member.value} text={member.text} />
+                    ))}
+                  </select>
+                </div>
+              </label>
+            )}
 
-            <button type="submit" disabled={!enabled}>Submit</button>
+            <section className="button-container">
+              {question < 5 && (
+                <button type="button" onClick={nextQuestion}>Next</button>
+              )}
+
+              {question !== 1 && (
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+              )}
+
+              {question === 5 && (
+                <button type="submit"/* disabled={!enabled} */>Submit</button>
+              )}
+
+            </section>
 
           </form>
         )}
