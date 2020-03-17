@@ -20,17 +20,24 @@ export const App = () => {
       <form onSubmit={handleSubmit} >
 
         {section === 0 &&
+          <div>
+            <p className="label-text"><span className="arrow">→</span>First off, what's your favourite genre of book?</p>
+            <RadioButtons genreGroups={genreGroups} genre={genre} setGenre={setGenre} />
+          </div>
 
-          <label  >
-            <p className="label-text"><span className="arrow">→</span>What is your favourite book?</p>
-            <input className="text-field" type="text" value={book} onChange={(event) => setBook(event.target.value)} required />
-          </label>
 
         }
         {section === 1 &&
 
+          <label  >
+            <p className="label-text"><span className="arrow">→</span>And what is your favourite book?</p>
+            <input className="text-field" type="text" value={book} onChange={(event) => setBook(event.target.value)} required />
+          </label>
+
+        }
+        {section === 2 &&
           <label className="label-wrapper">
-            <p className="label-text"><span className="arrow">→</span>How many books did you read last year?</p>
+            <p className="label-text"><span className="arrow">→</span>Lastly, how many books did you read last year?</p>
             <div className="drop-down">
               <select className="drop-down-options" required onChange={(event) => setNumber(event.target.value)} value={number}>
                 <option value="">Pick a number</option>
@@ -43,13 +50,6 @@ export const App = () => {
               </select>
             </div>
           </label>
-
-        }
-        {section === 2 &&
-          <div>
-            <p className="label-text"><span className="arrow">→</span>First off, what's your favourite genre of book?</p>
-            <RadioButtons genreGroups={genreGroups} genre={genre} setGenre={setGenre} />
-          </div>
 
         }
         {section < 3 &&
