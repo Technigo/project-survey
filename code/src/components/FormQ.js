@@ -4,12 +4,17 @@ export const FormQ = () => {
   const [name, setName] = useState("");
 
   return (
-    <form onSubmit={event => event.preventDefault()}>
-      <h1>What is your dogs name?</h1>
+    <form onSubmit={handleSubmit}>
+      <h2>What is your dogs name?</h2>
+
       <input
+        className="inputText"
         type="text"
         onChange={event => setName(event.target.value)}
+        required
         value={name}
+        // name="dogName"
+        placeholder="Enter your dogs name..."
       />
     </form>
   );

@@ -125,7 +125,9 @@ form {
 
   .questionContainer {
     width: 450px;
-    margin: 50px 10px 0;
-    padding: 20px;
+  }
+
+  form {
+    width: 450px;
   }
 }
