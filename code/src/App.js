@@ -20,9 +20,9 @@ export const App = () => {
 
   return (
     <section className="formContainer">
-      <h1>Pick your online alias!</h1>
       {!showSummary ? (
         <form onSubmit={handleSubmit}>
+          <h1>Pick your online alias!</h1>
           <TextInput name={name} setName={setName} />
           <RadioButtons spiritAnimal={spiritAnimal} setSpiritAnimal={setSpiritAnimal} />
           <Select vacation={vacation} setVacation={setVacation} />

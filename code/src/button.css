@@ -1,3 +1,8 @@
 button {
-  width: 60px;
+  width: fit-content;
+  height: 30px;
+  border-radius: 6px;
+  background-color: #543c52;
+  color: #f1e8e6;
+  font-size: 16px;
 }

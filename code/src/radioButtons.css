@@ -2,3 +2,7 @@
   display: flex;
   flex-direction: column;
 }
+
+.radioInput {
+  margin-top: 10px;
+}

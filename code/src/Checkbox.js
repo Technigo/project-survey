@@ -2,7 +2,7 @@ import React, { useState } from "react"
 import "./checkbox.css"
 
 export const Checkbox = () => {
-  const [isEighteen, setIsEighteen] = useState(false);
+  const [isEighteen, setIsEighteen] = useState(false)
 
   return (
     <label className="checkboxLabel">
@@ -11,7 +11,8 @@ export const Checkbox = () => {
         type="checkbox"
         checked={isEighteen}
         onChange={event => setIsEighteen(event.target.checked)}
+        required
       />
     </label>
-  );
-};
+  )
+}
