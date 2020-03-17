@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-
+import './select.css'
 
 export const Select = () => {
 
@@ -24,4 +24,4 @@ const [rating, setRating] = useState("");
 };
 
 
-export default Select
+

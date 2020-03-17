@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import './radio.css'
 
 
- /*
+ 
 export const Radio = () => {
   let [ myChoice, setMyChoice] = useState();
-  const myChoice = [
+  const myChoices = [
     'I like to look at the details',
     'I like to look at the big picture'
   ] 
@@ -12,7 +13,7 @@ export const Radio = () => {
   return (
     <form>
       Preference:
-      {myChoice.map((choice) => (
+      {myChoices.map((choice) => (
       <label key={choice}>
         <input
           type="radio"
@@ -27,9 +28,9 @@ export const Radio = () => {
   )
 }
 
-*/
+/*
 
-/* LONG RADIO ALTERNATIVE */
+// LONG RADIO ALTERNATIVE 
 export const Radio = () => {
 
   const [ myChoice, setMyChoice] = useState();
@@ -59,4 +60,4 @@ export const Radio = () => {
   )
 } 
 
-export default Radio
+*/
