@@ -53,6 +53,7 @@ h4 {
 	width: 50%;
 	border: 3px solid #f4eeff;
 	box-shadow: 0px 0px 0px 2px #dcd6f7;
+	transition: 0.3s;
 }
 
 h4:hover {
