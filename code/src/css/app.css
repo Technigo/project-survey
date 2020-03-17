@@ -1,35 +1,64 @@
+:root {
+  --border-radius: 40px;
+  --color-light: #fcf8e8;
+  --color-medium: #ecdfc8;
+  --color-bright: #ecb390;
+  --color-accent: #df7861;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 body {
-  /* background-color: #e0d4c2; */
+  background-color: var(--color-medium);
+  font-family: 'Avenir', sans-serif;
+  font-weight: 600;
+}
+
+html, 
+body, 
+div#root, 
+.wrapper {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header, 
+main, 
+footer {
+  padding: 1rem 2rem;
+}
+
+header {
+  flex: 0 1 auto;
+  color: #827765;
 }
 
 .main-content {
-  margin: 100px;
+  flex: 1 1 auto;
+  border-top-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius);
+  background-color: #fff;
 }
 
 h1 {
-  font-size: 3rem;
+  margin: 0;
+  font-size: 2rem;
 }
 
-label {
-  font-size: 1.6rem;
-}
 
-.radio-btn {
-  margin-top: .5rem;
-  font-size: 1rem;
-}
-
-label, button {
-  display: block;
-  margin-top: 2rem;
-}
-
-input, button {
-  /* border: none; */
-}
-
-input[type=text],
-input[type=select],
-select {
-  display: block;
+footer {
+  flex: 0 1 auto;
+  margin-top: 1.5rem;
+  color: #827765;
+  background-color: var(--color-light);
+  border-top-left-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius);
+  
 }

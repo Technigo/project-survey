@@ -1,0 +1,41 @@
+label {
+  font-size: 1.6rem;
+}
+
+label, button {
+  display: block;
+  margin-top: 2rem;
+}
+
+input[type=text]{
+  border: none;
+  padding: .8rem 1.2rem;
+  border-bottom: 4px solid var(--color-medium);
+
+}
+
+button {
+  background-color: var(--color-accent);
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+  border: none;
+  padding: .8rem 1.2rem;
+  
+}
+
+input[type=text],
+input[type=select],
+select {
+  display: block;
+}
+
+input[type=checkbox] {
+  display: block;
+  margin-top: 1rem;
+}
+
+.radio-btn {
+  margin-top: .5rem;
+  font-size: 1rem;
+}

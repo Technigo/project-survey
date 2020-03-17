@@ -1,10 +1,15 @@
 import React, { useState } from 'react'
+
+import { Header } from 'components/Header.js'
+import { Footer } from 'components/Footer.js'
 import { InputText } from 'components/InputText.js'
 import { InputSelect } from 'components/InputSelect.js'
 import { InputCheckbox } from 'components/InputCheckbox.js'
 import { InputRadio } from 'components/InputRadio.js'
 import { Summary } from 'components/Summary.js'
+
 import 'css/app.css'
+import 'css/form.css'
 
 
 export const App = () => {
@@ -27,60 +32,65 @@ export const App = () => {
 
 
   return (
-    <main className="main-content">
+    <div className="wrapper">
+      <Header heading="nuts" />
 
-      <h1><span role="img" aria-label="Peanuts">🥜</span></h1>
+      <main className="main-content">
 
-      {!renderSummary ?
-        <form className="nut-form" onSubmit={handleSubmit}>
+        {/* <h1><span role="img" aria-label="Peanuts">🥜</span></h1> */}
 
-          {count === 0 && (
-            <InputText
-              label="What's your name?"
-              state={name}
-              setState={setName}
-            />
-          )}
-          {count === 1 && (
-            <InputSelect
-              label="What is your favorite nut?"
-              array={nuts}
-              state={nut}
-              setState={setNut}
-            />
-          )}
-          {count === 2 && (
-            <InputRadio
-              label="How do you prefer your nuts?"
-              array={shapes}
-              state={shape}
-              setState={setShape}
-            />
-          )}
-          {count === 3 && (
-            <InputCheckbox
-              label="Check this if you are allergic to nuts"
-              state={allergy}
-              setState={setAllergy}
-            />
-          )}
+        {!renderSummary ?
+          <form className="nut-form" onSubmit={handleSubmit}>
 
-          <button type="submit">
-            {count < 3 ? <>Next</> : <>Submit</>}
-          </button>
+            {count === 0 && (
+              <InputText
+                label="What's your name?"
+                state={name}
+                setState={setName}
+              />
+            )}
+            {count === 1 && (
+              <InputSelect
+                label="What is your favorite nut?"
+                array={nuts}
+                state={nut}
+                setState={setNut}
+              />
+            )}
+            {count === 2 && (
+              <InputRadio
+                label="How do you prefer your nuts?"
+                array={shapes}
+                state={shape}
+                setState={setShape}
+              />
+            )}
+            {count === 3 && (
+              <InputCheckbox
+                label="Check this if you are allergic to nuts"
+                state={allergy}
+                setState={setAllergy}
+              />
+            )}
 
-        </form>
+            <button type="submit">
+              {count < 3 ? <>Next</> : <>Submit</>}
+            </button>
 
-        :
+          </form>
 
-        <Summary
-          name={name}
-          nut={nut}
-          shape={shape}
-          allergy={allergy}
-        />
+          :
 
-      }
-    </main>
+          <Summary
+            name={name}
+            nut={nut}
+            shape={shape}
+            allergy={allergy}
+          />
+
+        }
+      </main>
+      <Footer heading="stuff about nuts" />
+    </div>
   )
 }
