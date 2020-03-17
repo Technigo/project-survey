@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const FreeText = () => {
-    const  [text, setText] = useState("");
+export const FreeText = (props) => {
+    const  { question, text, setText } = props;
 
     return (
         <div>
-            <h2>Please let us know if you have any allergies, food preferences or anything else you want us to know:</h2>
+            <h2>{question}</h2>
             <label className="text" >
                 <input
                     className="text-preferences"

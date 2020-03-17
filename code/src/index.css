@@ -22,12 +22,6 @@ code {
   max-width: 70%;
 }
 
-.radio-buttons {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-evenly; */
-}
-
 /***** Styling Inputs *****/
 
 /* Dropdown */
@@ -78,6 +72,11 @@ select:active {
 
 
 /* Radiobuttons & Checkbox */
+.radio-buttons {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .radio-container {
   display: block;
   position: relative;

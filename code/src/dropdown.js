@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const Dropdown = () => {
-    const [location, setLocation] = useState("");
+export const Dropdown = (props) => {
+    const { location, setLocation } = props;
 
     return (
         <div>
@@ -13,9 +13,9 @@ export const Dropdown = () => {
                 required
                 >
                     <option value="">Select location:</option>
-                    <option value="stockholm">Stockholm</option>
-                    <option value="are">Åre</option>
-                    <option value="visby">Visby</option>
+                    <option value="Stockholm">Stockholm</option>
+                    <option value="Åre">Åre</option>
+                    <option value="Visby">Visby</option>
                 </select>
             </label>
         </div>

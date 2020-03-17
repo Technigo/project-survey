@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const Checkbox = () => {
-    const [terms, setTerms] = useState("");
+export const Checkbox = (props) => {
+    const { terms, setTerms } = props;
 
     return (
         <div className="checkbox">

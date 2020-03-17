@@ -1,16 +1,27 @@
 import React, { useState } from 'react'
-import { Dropdown } from './question1'
-import { RadioButton1 } from './question2'
-import { RadioButton2 } from './question3'
-import { RadioButton3 } from './question4'
-import { FreeText } from './question5'
-import { ContactDetails } from './contactdetails'
+import { Dropdown } from './dropdown'
+import { RadioButton } from './radiobutton'
+import { FreeText } from './freetext'
+import { TextBox } from './textbox'
 import { Checkbox } from './checkbox'
+import { Button } from './button'
 import { Summary } from './summary'
+
+const amountGuests = ["1", "2", "3", "4", "5", "6", "7", "8"];
+const bookDay = ["Thursday", "Friday", "Saturday", "Sunday"];
+const dinnerTimes = ["18.00", "18.30", "19.00", "19.30", "20.00", "20.30", "21.00", "21.30", "22.00"];
 
 export const App = () => {
   /* const [page, setPage] = useState(firstQuestion); */
   const [showSummary, setShowSummary] = useState(false);
+  const [location, setLocation] = useState("");
+  const [guests, setGuests] = useState("");
+  const [day, setDay] = useState("");
+  const [dinnerTime, setDinnerTime] = useState("");
+  const [preferences, setPreferences] = useState("");
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [terms, setTerms] = useState("");
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -31,18 +42,24 @@ export const App = () => {
         </p>
 
         <form onSubmit={handleSubmit}>
-          <Dropdown />
-          <RadioButton1 />
-          <RadioButton2 />
-          <RadioButton3 />
-          <FreeText />
-          <ContactDetails />
-          <Checkbox />
-
-          <button type="submit">Submit</button> 
+          <Dropdown location={location} setLocation={setLocation} />
+          <RadioButton arrayItem={guests} setArrayItem={setGuests} array={amountGuests} question={'How many will you be?'} />
+          <RadioButton arrayItem={day} setArrayItem={setDay} array={bookDay} question={'Select a date:'} />
+          <RadioButton arrayItem={dinnerTime} setArrayItem={setDinnerTime} array={dinnerTimes} question={'Select a time:'} />
+          <FreeText text={preferences} setText={setPreferences} question={'Please let us know if you have any allergies, food preferences or anything else you want us to know:'} />
+          <TextBox text={name} setText={setName} title={'Booking name:'} placeholder={'Name'} type={'text'} />
+          <TextBox text={email} setText={setEmail} title={'Email:'} placeholder={'user@domain.com'} type={'email'} />
+          <Checkbox terms={terms} setTerms={setTerms} />
+          <Button type={'submit'} title={'Submit'} />
         </form>
 
-        {showSummary && <Summary />
+        {showSummary && <Summary 
+            name={name}
+            day={day}
+            dinnerTime={dinnerTime}
+            guests={guests}
+            location={location}
+          />
         }
     </div>
   );
