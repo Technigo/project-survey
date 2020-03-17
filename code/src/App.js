@@ -62,9 +62,9 @@ export const App = () => {
       </form>
       {section === 3 &&
         <div class="user-response">
-          <p className="label-text"><span className="arrow">→</span>Your favourite genre is {genre}. </p>
-          <p className="label-text"><span className="arrow">→</span>Your favourite book is: {book}</p>
-          <p className="label-text"><span className="arrow">→</span>Last year you read {number} books.</p>
+          <p className="label-text summary"><span className="arrow">→</span>Your favourite genre is {genre}. </p>
+          <p className="label-text summary"><span className="arrow">→</span>Your favourite book is: {book}</p>
+          <p className="label-text summary"><span className="arrow">→</span>Last year you read {number} books.</p>
         </div>}
       <article>
         <ProgressBar width={section} />
