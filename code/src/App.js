@@ -3,7 +3,6 @@ import { Summary } from './Summary'
 import { Header } from './Header'
 
 const sodaFavorite = ["fanta", "pepsi", "sprite"];
-//const sauceFavorite = ["garlic", "béarnaise", "hot sauce"];
 
 export const App = () => {
 
@@ -29,9 +28,9 @@ export const App = () => {
             value={pizza}
           >
             <option value="">Choose your favorite!</option>
-            <option value="margarita">Margarita</option>
-            <option value="calzone">Calzone</option>
-            <option value="vesuvio">Vesuvio</option>
+            <option value="Margarita">Margarita</option>
+            <option value="Calzone">Calzone</option>
+            <option value="Vesuvio">Vesuvio</option>
           </select>
 
           </section>
