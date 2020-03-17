@@ -109,11 +109,10 @@ justify-self: center;
         color: white;
     }
 
- .user-response {
-     color: white;
-     font: bold 36px 'Amatic SC';
- }
-
+.user-response {
+    margin: 24px;
+    width: 60%;
+}
  .summary:hover {
      color: yellow;
  }

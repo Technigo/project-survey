@@ -1,11 +1,11 @@
 .empty-bar {
     
-    width: 200px;
+    width: 20vw;
     padding: 5px;
     border-radius: 5%;
     position: absolute;
-    bottom: 20px;
-    right: 20px
+    bottom: 5%;
+    right: 5%;
 }
 
 .background {
@@ -38,7 +38,7 @@
 }
 
 .completion {
-    font:    18px helvetica;
+    font:    14px helvetica;
     margin-top: 3px;
     margin-bottom: 8px;
 }
