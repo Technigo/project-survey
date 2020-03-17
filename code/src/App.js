@@ -37,27 +37,30 @@ export const App = () => {
          <form onSubmit={handleSubmit} className="form">
           <div className="question">
             <label>
-              <p>Are you a dog person or a cat person?</p>
-                <select
-                  onChange={event => setAnimalLover(event.target.value)}
-                  value={animalLover}
-                  required
-                  >
-                      <option value= "">Pick one!</option>
-                      <option value= "a dog">Dog Lover</option>
-                      <option value= "a cat">Cat Lover</option>
-                      <option value= "not a">No animals!</option>
-                      <option value= "a hamster">Hamsters!</option>
-                </select>
+              <h3>Are you a dog person or a cat person?</h3>
+                <div className="dropdown">
+                  <select
+                    onChange={event => setAnimalLover(event.target.value)}
+                    value={animalLover}
+                    required
+                    >
+                        <option value= "">Pick one!</option>
+                        <option value= "a dog">Dog Lover</option>
+                        <option value= "a cat">Cat Lover</option>
+                        <option value= "not a">No animals!</option>
+                        <option value= "a hamster">Hamsters!</option>
+                  </select>
+                </div>
             </label>
           </div>
           
 
           <label className="vacation question">
-            Your idea of the perfect vacation: 
+            <h3>Your idea of the perfect vacation: </h3>
             {vacations.map((tour) => (
               <label key={tour}>
                 <input
+                className="radio"
                 type="radio"
                 value={tour}
                 onChange={(event) => setVacation(event.target.value)}
@@ -71,7 +74,7 @@ export const App = () => {
 
           <div className="question">
             <label>
-              <p>What is your favorite food?</p>
+              <h3>What is your favorite food?</h3>
               <input
                 type='text'
                 placeholder="Omnom"
