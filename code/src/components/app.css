@@ -1,133 +1,151 @@
 body {
-  background: #fff;
-  color: #272a44;
-  display: flex;
-  justify-content: center;
+	display: flex;
+	justify-content: center;
+	border-radius: 3px;
+
+	background-color: #caccd9;
+	background-image: url("../images/Dragon-Scales.svg");
+	background-attachment: fixed;
+	background-size: contain;
 }
 
 h1 {
-  background: #a6b1e1;
-  padding: 15px 0;
-  margin: 10px 0;
-  width: 100%;
+	border-radius: 3px;
+	color: white;
+	background: #424874;
+	padding: 15px 0;
+	margin: 10px 0;
+	width: 100%;
 }
 
 h2 {
-  background: #a6b1e1;
-  padding: 10px 0;
+	border-radius: 3px;
+	color: white;
+	background: #424874;
+	padding: 10px 0;
 }
 
 h3 {
-  background: #dcd6f7;
-  margin: 10px 0;
-  padding: 10px 0;
-  width: 100%;
+	border-radius: 3px;
+	background: #dcd6f7;
+	margin: 10px 0;
+	padding: 10px 0;
+	width: 100%;
 }
 
 h4 {
-  color: #042735;
-  margin: 5px;
-  text-decoration: underline;
+	border-radius: 3px;
+	color: #042735;
+	margin: 5px;
+	text-decoration: underline;
 }
 
 h4:hover {
-  transform: scale(1.2);
+	transform: scale(1.2);
+}
+
+.surveyContainer {
+	width: 90vw;
+}
+
+/* STYLING FOR THE CONTAINER FÖR ALL QUESTIONS */
+.questionContainer {
+	border-radius: 3px;
+	width: 90%;
+	height: 500px;
+	margin: 20px auto;
+	padding: 5px;
+
+	background: #f4eeff;
+	background-color: #f4eeff;
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	text-align: center;
+}
+
+.dogGif {
+	border-radius: 3px;
+	max-width: 100%;
 }
 
 /* BUTTON STYLING */
 
 .buttonContainer {
-  display: flex;
-  flex-direction: row;
+	display: flex;
+	flex-direction: row;
 }
 
 .buttonContainer button {
-  border-style: none;
-  outline-color: #424874;
-  border: 2px solid #424874;
-  margin: 5px;
-  padding: 5px;
+	border-style: none;
+	border-radius: 3px;
+	outline-color: #424874;
+	border: 2px solid #424874;
+	margin: 5px;
+	padding: 5px;
 
-  background: #dcd6f7;
-  margin: 10px;
-  padding: 10px;
-  font-size: 16px;
+	background: #dcd6f7;
+	margin: 10px;
+	padding: 10px;
+	font-size: 16px;
 }
 
 .buttonContainer button:focus,
 button:hover {
-  border-style: 1px;
-  outline-offset: -2px;
-  outline-style: solid;
+	border-style: 1px;
+	outline-offset: -2px;
+	outline-style: solid;
 }
 
-/* STYLING FOR THE CONTAINER FÖR ALL QUESTIONS */
-.questionContainer {
-  width: 330px;
-  height: 500px;
-  margin: 20px 10px 0;
-  padding: 5px;
-
-  background: #f4eeff;
-  background-color: #f4eeff;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
+form {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
 }
 
 /* FIRST QUESTION STYLING */
 
 .inputText {
-  width: auto;
-  border-style: none;
-  outline-color: #424874;
-  padding: 5px;
+	width: auto;
+	border-style: none;
+	outline-color: #424874;
+	padding: 5px;
 }
 
 .inputText:focus {
-  border-style: 1px;
-  border: 1px;
-  outline-offset: 1px;
-  outline-style: 1px solid;
+	border-style: 1px;
+	border: 1px;
+	outline-offset: 1px;
+	outline-style: 1px solid;
 }
 
 /* SECOND QUESTION STYLING */
 
 select {
-  color: #424874;
-  border: none;
-  border-style: none;
+	color: #424874;
+	border: none;
+	border-style: none;
 }
 
 select:focus,
 select:hover,
 select:active {
-  border-style: 1px;
-  outline-offset: -2px;
-  outline-style: solid;
-}
-
-/* THIRD QUESTION STYLING */
-form {
-  display: flex;
-  flex-direction: column;
-  width: 330px;
-  /* color: #000; */
+	border-style: 1px;
+	outline-offset: -2px;
+	outline-style: solid;
 }
 
 @media (min-width: 668px) {
-  body {
-    background: #424874;
-  }
+	.surveyContainer {
+		width: 450px;
+	}
+	.questionContainer {
+		width: 450px;
+	}
 
-  .questionContainer {
-    width: 450px;
-  }
-
-  form {
-    width: 450px;
-  }
+	form {
+		width: 450px;
+	}
 }

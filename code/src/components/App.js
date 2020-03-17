@@ -18,6 +18,7 @@ export const App = () => {
 			{question === 'Question1' && (
 				<section className="questionContainer">
 					<h1>Are you ready for a dog quiz?</h1>
+					<img className="dogGif" src={require('../images/roundDog.gif')} alt="Very round dog" />
 					<div className="buttonContainer">
 						<button onClick={() => setQuestion('Question2')}>Lets get started!</button>
 					</div>
