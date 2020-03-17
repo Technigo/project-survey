@@ -7,6 +7,7 @@ import { InputSelect } from 'components/InputSelect.js'
 import { InputCheckbox } from 'components/InputCheckbox.js'
 import { InputRadio } from 'components/InputRadio.js'
 import { Summary } from 'components/Summary.js'
+import { ProgressCounter } from 'components/ProgressCounter'
 
 import 'css/app.css'
 import 'css/form.css'
@@ -18,7 +19,7 @@ export const App = () => {
   const [shape, setShape] = useState('')
   const [allergy, setAllergy] = useState(false)
   const [renderSummary, setRenderSummary] = useState(false)
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(1)
 
   const nuts = ['Almond', 'Brazil nut', 'Cashew', 'Hazelnut', 'Macadamia', 'Peanut', 'Pecan', 'Pistachio', 'Walnut']
   const shapes = ['Burnt', 'Butter', 'Natural', 'Roasted', 'Salted', 'Sweet']
@@ -27,7 +28,7 @@ export const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     setCount(count + 1)
-    count === 3 && setRenderSummary(true)
+    count === 4 && setRenderSummary(true)
   }
 
 
@@ -37,63 +38,70 @@ export const App = () => {
       <Header heading="🥜" />
 
       <main className="main-content">
+        <div className="form-container">
 
-        {!renderSummary ?
-          <form className="nut-form" onSubmit={handleSubmit}>
+          {!renderSummary ?
+            <form className="nut-form" onSubmit={handleSubmit}>
 
-            {count === 0 && (
-              <InputText
-                label="What's your name?"
-                id="inputName"
-                state={name}
-                setState={setName}
-              />
-            )}
-            {count === 1 && (
-              <InputSelect
-                label="What is your favorite nut?"
-                id="inputNut"
-                array={nuts}
-                state={nut}
-                setState={setNut}
-              />
-            )}
-            {count === 2 && (
-              <InputRadio
-                label="How do you prefer your nuts?"
-                id="inputNutShape"
-                array={shapes}
-                state={shape}
-                setState={setShape}
-              />
-            )}
-            {count === 3 && (
-              <InputCheckbox
-                label="Check this if you are allergic to nuts"
-                id="inputAllergy"
-                state={allergy}
-                setState={setAllergy}
-              />
-            )}
+              {count === 1 && (
+                <InputText
+                  label="What's your name?"
+                  id="inputName"
+                  state={name}
+                  setState={setName}
+                />
+              )}
+              {count === 2 && (
+                <InputSelect
+                  label="What is your favorite nut?"
+                  id="inputNut"
+                  array={nuts}
+                  state={nut}
+                  setState={setNut}
+                />
+              )}
+              {count === 3 && (
+                <InputRadio
+                  label="How do you prefer your nuts?"
+                  id="inputNutShape"
+                  array={shapes}
+                  state={shape}
+                  setState={setShape}
+                />
+              )}
+              {count === 4 && (
+                <InputCheckbox
+                  label="Check this if you are allergic to nuts"
+                  id="inputAllergy"
+                  state={allergy}
+                  setState={setAllergy}
+                />
+              )}
 
-            <button type="submit">
-              {count < 3 ? <>→</> : <>Submit</>}
-            </button>
+              <button type="submit">
+                {count < 4 ? <>→</> : <>Submit</>}
+              </button>
 
-          </form>
+            </form>
 
-          :
+            :
 
-          <Summary
-            name={name}
-            nut={nut}
-            shape={shape}
-            allergy={allergy}
-          />
+            <Summary
+              name={name}
+              nut={nut}
+              shape={shape}
+              allergy={allergy}
+            />
 
-        }
+          }
+        </div>
+
+        <ProgressCounter count={count} total="4" />
+
       </main>
+
       <Footer text="stuff about nuts" />
+
     </div>
   )
 }

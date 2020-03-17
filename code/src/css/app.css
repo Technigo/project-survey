@@ -1,9 +1,12 @@
 :root {
   --border-radius: 40px;
+
   --color-light: #fcf8e8;
   --color-medium: #ecdfc8;
+  --color-dark: #dcccae;
   --color-bright: #ecb390;
   --color-accent: #df7861;
+  --color-text: #827765;
 }
 
 * {
@@ -29,24 +32,35 @@ div#root,
   justify-content: space-between;
 }
 
-.wrapper > * {
-  padding: 1rem 3rem;
-}
-
 header {
   flex: 0 1 auto;
-  color: #827765;
+  padding: 1rem 2rem;
 }
 
 .main-content {
   flex: 1 1 auto;
+  max-width: 576px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.form-container {
+  flex: 1 1 auto;
+
   display: flex;
   align-items: center;
-  max-width: 576px;
-  
-  border-top-right-radius: var(--border-radius);
-  border-bottom-right-radius: var(--border-radius);
+  padding: 1rem 3rem;
   background-color: #fff;
+
+  border-top-right-radius: var(--border-radius);
+}
+
+.progress-counter {
+  padding: 1.5rem 3rem;
+  background-color: var(--color-light);
+  border-bottom-right-radius: var(--border-radius);
+  color: var(--color-text);
 }
 
 h1 {
@@ -58,8 +72,9 @@ h1 {
 footer {
   flex: 0 1 auto;
   margin-top: 1.5rem;
-  color: #827765;
-  background-color: var(--color-light);
+  padding: 1rem 2rem;
+  color: var(--color-text);
+  background-color: var(--color-dark);
   border-top-left-radius: var(--border-radius);
   border-top-right-radius: var(--border-radius);
   
