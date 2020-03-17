@@ -1,0 +1,111 @@
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+.imageFilter {
+    width: 100%;
+    height: 100vh;
+    background-image: url(./library.jpeg);
+    position: absolute;
+    filter: contrast(40%);
+  z-index: -1;
+}
+
+.button {
+padding: 10px;
+border-radius: 5%;
+border: none;
+font-size: 20px;
+background: rgb(226, 188, 116);
+color: rgb(19, 93, 143);
+margin-top: 24px;
+justify-self: center;   
+}
+.button:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+.button:active {
+    transform:translateY(5px)
+}
+.label-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+.label-text {
+   
+    color: white;
+    font: bold 36px 'Amatic SC';
+    display: block; 
+    
+
+}
+
+.arrow {
+    font-weight: bold;
+    font-size: 50px;
+}
+
+.text-field {
+    border: none;
+    border-bottom: 3px solid white;
+    padding: 5px;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    font: bold 30px 'Amatic SC';
+    width: 100%;
+  
+    
+  }
+  .text-field:valid {
+    
+    background-image: url(./inputTick.png);
+    background-position: right;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    
+  }
+
+  .drop-down {
+      display: block;
+    font-size: 13px;
+      padding: 8px 18px 8px 0px;
+      background: transparent;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      overflow-x: hidden;
+      background-image: url('./dropdown.png');
+      background-repeat: no-repeat;
+      background-size: 25px;
+      background-position: 95% center;
+      
+    }
+
+    .drop-down-options {
+        background: transparent;
+        margin: 0;
+        line-height: 1;
+        border: 0;
+        padding: 0;
+        border-radius: 0;
+        width: 140%;
+        z-index: 10;
+        font-size: 20px;
+        color: white;
+    }
+
+ .user-response {
+     color: white;
+     font: bold 30px 'Amatic SC';
+ }
+ 
+  

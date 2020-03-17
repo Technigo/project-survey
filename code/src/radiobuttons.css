@@ -1,0 +1,14 @@
+.radio-label {
+    
+    color: white;
+font: bold 36px 'Amatic SC';
+display: block; 
+}
+
+.radio-buttons{
+    position: relative;
+    bottom: 7px;    
+    margin-left: 10px;
+}
+
+
