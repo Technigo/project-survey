@@ -1,4 +1,3 @@
-/* eslint-disable linebreak-style */
 /* eslint-disable operator-linebreak */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable arrow-parens */
@@ -6,19 +5,39 @@ import React, { useState } from 'react'
 import { Header } from './components/Header'
 import { Text } from './components/Text'
 import { Radio } from './components/Radio'
+import { Option } from './components/Option'
 import { Summary } from './components/Summary'
 import { Footer } from './components/Footer'
 import './app.css'
 
+/* Variables */
+
 const likeBlue = ['Yes', 'No', 'Only certain shades']
 const blueFeelings = ['Positive', 'Negative', 'Neutral', 'Mixed']
-const option1 = 'Blue are the feelings that live inside me'
-const option2 = 'I’m blue da ba dee da ba daa'
-const option3 = 'That’s sad'
+const optionValueEmpty = ''
+const optionValue0 = '~ Select option ~'
+const optionValue1 = 'Blue are the feelings that live inside me'
+const optionValue2 = 'I’m blue da ba dee da ba daa'
+const optionValue3 = 'That’s sad'
+const blueEmpty = ''
+const blue0 = '~ Select option ~'
 const blue1 = 'Anthony Costa'
 const blue2 = 'Duncan James'
 const blue3 = 'Lee Ryan'
 const blue4 = 'Simon Webbe'
+const optionValues = [
+  { value: optionValueEmpty, text: optionValue0 },
+  { value: optionValue1, text: optionValue1 },
+  { value: optionValue2, text: optionValue2 },
+  { value: optionValue3, text: optionValue3 }
+]
+const blueMembers = [
+  { value: blueEmpty, text: blue0 },
+  { value: blue1, text: blue1 },
+  { value: blue2, text: blue2 },
+  { value: blue3, text: blue3 },
+  { value: blue4, text: blue4 }
+]
 
 export const App = () => {
   const [mind, setMind] = useState('')
@@ -27,7 +46,7 @@ export const App = () => {
   const [optionBlue, setOptionBlue] = useState('')
   const [optionBlueMember, setOptionBlueMember] = useState('')
   const [submit, setSubmit] = useState(false)
-  const enabled = mind.length > 0
+  const enabled = [feelingScale, setFeelingScale] !== optionValues[0];
   const handleSubmit = event => {
     event.preventDefault()
     setSubmit(true)
@@ -54,6 +73,7 @@ export const App = () => {
               {likeBlue.map(like => (
                 <Radio
                   value={like}
+                  name="like"
                   onChange={event => setLikeScale(event.target.value)}
                   checked={likeScale === like} />
               ))}
@@ -64,6 +84,7 @@ export const App = () => {
               {blueFeelings.map(feeling => (
                 <Radio
                   value={feeling}
+                  name="feeling"
                   onChange={event => setFeelingScale(event.target.value)}
                   checked={feelingScale === feeling} />
               ))}
@@ -76,10 +97,9 @@ export const App = () => {
                   value={optionBlue}
                   onChange={event => setOptionBlue(event.target.value)}
                   required>
-                  <option value="">~ Select option ~</option>
-                  <option value={option1}>{option1}</option>
-                  <option value={option2}>{option2}</option>
-                  <option value={option3}>{option3}</option>
+                  {optionValues.map(option => (
+                    <Option value={option.value} text={option.text} />
+                  ))}
                 </select>
               </div>
             </label>
@@ -91,11 +111,9 @@ export const App = () => {
                   value={optionBlueMember}
                   onChange={event => setOptionBlueMember(event.target.value)}
                   required>
-                  <option value="">~ Select option ~</option>
-                  <option value={blue1}>{blue1}</option>
-                  <option value={blue2}>{blue2}</option>
-                  <option value={blue3}>{blue3}</option>
-                  <option value={blue4}>{blue4}</option>
+                  {blueMembers.map(member => (
+                    <Option value={member.value} text={member.text} />
+                  ))}
                 </select>
               </div>
             </label>
