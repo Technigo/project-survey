@@ -1,39 +1,20 @@
 import React, {useState} from 'react'
-
+import {Input} from "./Input"
+import {Checkbox} from "./Checkbox"
+import {Dropdown} from "./Dropdown"
+import {Buttons} from "./Buttons"
+import {Radiobuttons} from "./Radiobuttons"
+import {Rating} from "./Ratings"
 
 export const App = () => {
-  const [ageGroup, setAgeGroup] = useState();
-
   return (
-    <form>
-      Age group:
-      <label>
-        <input
-          type="radio"
-          value="0-18"
-          onChange={event => setAgeGroup(event.target.value)}
-          checked={ageGroup === "0-18"}
-        />
-        0-18
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="19-30"
-          onChange={event => setAgeGroup(event.target.value)}
-          checked={ageGroup === "19-30"}
-        />
-        19-30
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="31+"
-          onChange={event => setAgeGroup(event.target.value)}
-          checked={ageGroup === "31+"}
-        />
-        31+
-      </label>
-    </form>
-  );
-};
+    <div>
+    <Input />
+    <Checkbox />
+    <Dropdown />
+    <Buttons />
+    <Radiobuttons />
+    <Rating />
+    </div>
+  )
+}

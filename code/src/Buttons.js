@@ -10,7 +10,7 @@ export const Buttons = () => {
   return (
     <div>
       <h1> current temperature: {temperature} degrees </h1>
-      <button onClick={() => setTemperature(-5)}> freeze!</button>
+      <button onClick={() => setTemperature(-5)}> Create my free</button>
       <button onClick={() => setTemperature(30)}> hot!</button>
       <button onClick={() => setTemperature(120)}> Boil!</button>
 

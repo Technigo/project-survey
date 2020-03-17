@@ -2,16 +2,25 @@ import React, { useState } from "react";
 
 
 export const Checkbox = () => {
-  const [wantsNewsletter, setWantsNewsletter] = useState(false);
+  const [agree, setAgree] = useState(false);
+  const [accept, setAccepts]= useState(false);
 
   return (
     <form>
       <label>
-        Newsletter?
+        I agree to terms & conditions
         <input
           type="checkbox"
-          checked={wantsNewsletter}
-          onChange={event => setWantsNewsletter(event.target.checked)}
+          checked={agree}
+          onChange={event => setAgree(event.target.checked)}
+        />
+      </label>
+      <label>
+        I accept use of my data for the service and everything else descriped in the <p>privacy policy</p>
+        <input
+          type="checkbox"
+          checked={accept}
+          onChange={event => setAccepts(event.target.checked)}
         />
       </label>
     </form>
