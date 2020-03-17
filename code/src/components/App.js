@@ -26,9 +26,9 @@ export const App = () => {
 			)}
 			{question === 'Question2' && (
 				<section className="questionContainer">
+					<h2>What is your dogs name?</h2>
+					<img className="dogGif" src={require('../images/whiteDog.gif')} alt="Very white dog" />
 					<form onSubmit={handleSubmit}>
-						<h2>What is your dogs name?</h2>
-
 						<input
 							className="inputText"
 							type="text"
@@ -48,8 +48,9 @@ export const App = () => {
 			)}
 			{question === 'Question3' && (
 				<section className="questionContainer">
+					<h2>What is your favourite type of animal?</h2>
+					<img className="dogGif" src={require('../images/hiFiveDog.gif')} alt="Dog giving a high five" />
 					<form>
-						<h2>What is your favourite type of animal?</h2>
 						<select type="text" onChange={(event) => setDog(event.target.value)} value={dog}>
 							<option value="">Choose an animal</option>
 							<option value="Tame wolf">Tame wolf</option>
@@ -65,19 +66,25 @@ export const App = () => {
 			)}
 			{question === 'Question4' && (
 				<section className="questionContainer">
+					<h2>How many dogs do you want:</h2>
+					<img className="dogGif" src={require('../images/smartDog.gif')} alt="Dog looking smart" />
 					<form>
-						<h2>How many dogs do you want:</h2>
-						{dogNumber.map((number) => (
-							<label key={number}>
-								<input
-									type="radio"
-									value={number}
-									onChange={(event) => setAmountOfDogs(event.target.value)}
-									checked={amountOfDogs === number}
-								/>
-								{number}
-							</label>
-						))}
+						<div className="radioButtonContainer">
+							{' '}
+							{dogNumber.map((number) => (
+								<label className="inputContainer" key={number}>
+									<input
+										className="personalizedInput"
+										type="radio"
+										value={number}
+										onChange={(event) => setAmountOfDogs(event.target.value)}
+										checked={amountOfDogs === number}
+									/>
+									<span className="checkmark" />
+									{number}
+								</label>
+							))}
+						</div>
 					</form>
 					<div className="buttonContainer">
 						<button onClick={() => setQuestion('Question3')}>Back</button>

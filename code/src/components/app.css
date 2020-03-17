@@ -14,8 +14,9 @@ h1 {
 	color: white;
 	background: #424874;
 	padding: 15px 0;
-	margin: 10px 0;
-	width: 100%;
+	margin: 0;
+	width: 90%;
+	font-size: 25px;
 }
 
 h2 {
@@ -23,25 +24,37 @@ h2 {
 	color: white;
 	background: #424874;
 	padding: 10px 0;
+	width: 90%;
 }
 
 h3 {
 	border-radius: 3px;
-	background: #dcd6f7;
-	margin: 10px 0;
+	color: #fff;
+	background: #797b82;
+	margin: 0;
 	padding: 10px 0;
-	width: 100%;
+	width: 80%;
 }
 
 h4 {
 	border-radius: 3px;
 	color: #042735;
-	margin: 5px;
-	text-decoration: underline;
+	background: #dcd6f7;
+	padding: 5px 0;
+	margin: 0;
+	width: 50%;
 }
 
 h4:hover {
 	transform: scale(1.2);
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+.emoji {
+	font-size: 25px;
 }
 
 .surveyContainer {
@@ -52,15 +65,11 @@ h4:hover {
 .questionContainer {
 	border-radius: 3px;
 	width: 90%;
-	height: 500px;
+	height: 650px;
 	margin: 20px auto;
-	padding: 5px;
-
-	background: #f4eeff;
 	background-color: #f4eeff;
-
 	display: flex;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	flex-direction: column;
 	text-align: center;
@@ -68,7 +77,8 @@ h4:hover {
 
 .dogGif {
 	border-radius: 3px;
-	max-width: 100%;
+	max-width: 70%;
+	margin: 15px;
 }
 
 /* BUTTON STYLING */
@@ -80,23 +90,25 @@ h4:hover {
 
 .buttonContainer button {
 	border-style: none;
-	border-radius: 3px;
-	outline-color: #424874;
-	border: 2px solid #424874;
-	margin: 5px;
-	padding: 5px;
-
-	background: #dcd6f7;
+	border-radius: 6px;
+	border: 3px solid rgb(121, 123, 130, 0.2);
 	margin: 10px;
 	padding: 10px;
-	font-size: 16px;
+
+	font-size: 18px;
+	font-weight: 600;
+
+	background: #dcd6f7;
+	color: #424874;
+
+	transition: 0.3s;
 }
 
 .buttonContainer button:focus,
 button:hover {
-	border-style: 1px;
-	outline-offset: -2px;
-	outline-style: solid;
+	/* box-shadow: 0px 0px 0px 1px #424874; */
+	border: 3px solid rgb(121, 123, 130, 0.6);
+	transform: scale(1.1);
 }
 
 form {
@@ -108,33 +120,95 @@ form {
 /* FIRST QUESTION STYLING */
 
 .inputText {
-	width: auto;
+	width: 80%;
+	margin: auto;
 	border-style: none;
-	outline-color: #424874;
+	outline-style: none;
+	border-radius: 3px;
 	padding: 5px;
+	font-size: 18px;
+	box-shadow: 0px 0px 0px 3px rgb(66, 72, 116, 0);
+	transition: 0.5s;
 }
 
 .inputText:focus {
-	border-style: 1px;
-	border: 1px;
-	outline-offset: 1px;
-	outline-style: 1px solid;
+	box-shadow: 0px 0px 0px 3px rgb(66, 72, 116, 1);
+	padding: 5px;
 }
 
 /* SECOND QUESTION STYLING */
 
 select {
-	color: #424874;
+	width: 70%;
+	margin: auto;
 	border: none;
 	border-style: none;
+	border-style: none;
+	outline-style: none;
+	border-radius: 3px;
+
+	color: #424874;
+	font-size: 18px;
+	box-shadow: 0px 0px 0px 3px rgb(66, 72, 116, 0);
+	transition: 0.5s;
 }
 
 select:focus,
 select:hover,
 select:active {
-	border-style: 1px;
-	outline-offset: -2px;
-	outline-style: solid;
+	box-shadow: 0px 0px 0px 3px rgb(66, 72, 116, 1);
+	padding: 5px;
+}
+
+label {
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid rgb(66, 72, 116, 0.7);
+	margin-bottom: 10px;
+}
+
+.radioButtonContainer {
+	display: flex;
+	flex-direction: column;
+	width: 80px;
+	align-self: center;
+}
+
+.inputContainer {
+	display: block;
+	text-align: end;
+	position: relative;
+	font-size: 22px;
+	-webkit-user-select: none;
+	user-select: none;
+}
+
+.inputContainer input {
+	position: absolute;
+	opacity: 0;
+	cursor: pointer;
+	height: 0;
+	width: 0;
+}
+
+.checkmark {
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 20px;
+	background-color: #caccd9;
+	border-radius: 3px;
+}
+
+.inputContainer:hover input ~ .checkmark {
+	border: 3px solid #424874;
+	height: 15px;
+	width: 15px;
+}
+
+.inputContainer input:checked ~ .checkmark {
+	background-color: #424874;
 }
 
 @media (min-width: 668px) {
