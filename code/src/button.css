@@ -1,0 +1,29 @@
+button {
+  background: lightgray;
+  border: none;
+  text-transform: uppercase;
+  cursor: pointer;
+  padding: 12px;
+  margin: 20px;
+  border-radius: 4px;
+  font-size: 24px;
+  display: block;
+}
+
+.primary {
+  background: rgb(48, 113, 182);
+  color: aliceblue;
+}
+
+.secondary {
+  background: transparent;
+  border: 3px solid black;
+}
+
+.warning {
+  background: orange;
+}
+
+.error {
+  background: red;
+}

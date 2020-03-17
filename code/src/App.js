@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Agequest } from "./QuestRadio";
+// import { Agequest } from "./QuestRadio";
 // import { Selectanimal } from "./QuestAnimal";
 // import { Myname } from "./QuestName";
+import { Summery } from "./Summery"
+import { Button } from "./Button"
 
 const ageGroups = ["18-25", "19-34", "35+"];
 
@@ -22,14 +24,15 @@ export const App = () => {
 
   return (
     <div>
-      <h1>My survey:</h1>
-      <form onSubmit={handleSubmit}>
-        {/* <p>{name}</p> */}
+      <h1>My pet survey:</h1>
 
+      {!showSummery ? (
+
+      <form onSubmit={handleSubmit}>
+      {/* <p>{name}</p> */}
       {/* <Agequest /> */}
       {/* <Selectanimal /> */}
       {/* <Myname /> */}
-
 
         <label>
           <h3>What is your name?</h3>
@@ -52,31 +55,39 @@ export const App = () => {
                 value={group}
                 onChange={event => setAgeGroup(event.target.value)}
                 checked={ageGroup === group}
+                required
               />
               {group}
             </label>
           ))}
         </div>
 
-        
-
         <label>
           <h3>What is your favorite animal?</h3>
           <select
             onChange={event => setAnimal(event.target.value)}
-            value={animal}
+            value={animal}            
           >
             <option value="">Select animal:</option>
-            <option value="guinea pig">Guinea pig</option>
-            <option value="guinea pig, again">Guinea pig, again</option>
-            <option value="guinea pig, of course!">Guinea pig, of course!</option>            
+            <option value="guinea pig's">Guinea pig</option>
+            <option value="guinea pig's">Guinea pig, again</option>
+            <option value="guinea pig's">Guinea pig, of course!</option>                      
           </select>
         </label>
+        {/* <button type="submit">submit</button> */}
+        <Button title="Submit form" className="primary" type="submit" />
 
-
-        <button type="submit">submit</button>
       </form>
 
+      ) : (
+      <Summery name={name} animal={animal} ageGroup={ageGroup}/> 
+      )}
+    </div>
+  );
+};
+
+
+/*
 
       {showSummery && <section>
         <h1>Hi {name} ! You are {ageGroup} years old and absolutley love {animal}'s!</h1>
@@ -85,6 +96,6 @@ export const App = () => {
 
 
 
-    </div>
-  );
-};
+
+
+*/
