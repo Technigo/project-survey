@@ -6,7 +6,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    margin: 24px;
+    
 }
 
 .imageFilter {
@@ -16,6 +16,12 @@
     position: absolute;
     filter: contrast(40%);
   z-index: -1;
+  
+}
+
+form {
+    margin: 24px;
+    width: 60%;
 }
 
 .button {
