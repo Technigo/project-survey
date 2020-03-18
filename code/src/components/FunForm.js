@@ -1,15 +1,17 @@
 import React from 'react'
 
-export const FunForm = ({name, setName}) => {
+export const FunForm = ({title, description, setDescription}) => {
 
     return (
         <article>
-             <label>
-         hey
-            <input
-              type="text"
-              value={name}
-              onChange={event => setName(event.target.value)}
+            <label>
+            <h1>{title}</h1>
+
+            <textarea className="textarea"
+              type="text" 
+              placeholder="Write something.."
+              value={description}
+              onChange={event => setDescription(event.target.value)}
             />
           </label>
           

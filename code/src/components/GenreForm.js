@@ -1,10 +1,11 @@
 import React from 'react'
 
-export const GenreForm = ({genre, setGenre}) => {
+export const GenreForm = ({title, genre, setGenre}) => {
 
     return (
         <article>
-             <select
+        <h1>{title}</h1>
+        <select
         onChange={event => setGenre(event.target.value)}
         value={genre}>
         <option value="">Choose your genre:</option>
@@ -16,7 +17,7 @@ export const GenreForm = ({genre, setGenre}) => {
         <option value="Jazz">Jazz</option>
         <option value="Blues">Blues</option>
        </select>
-       
+
        </article> 
  
     );

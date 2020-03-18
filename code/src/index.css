@@ -21,29 +21,47 @@ code {
 }
 
 .firstSection {
-  height: 40vh;
+  display: flex;
+  justify-content: center;
+  height: 150vh;
   width: 100vw;
+  background-image: url(./components/assets/colors.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 .firstSection article {
+  background-color: crimson;
   margin-top: 10vh;
   text-align: center;
+  height: 30vh;
 }
 
 
-.theForm {
+.questionForm {
   margin-top: 5vh;
   text-align: center;
 }
 
-.theForm input {
+.questionForm input {
   margin: 1vw;
 }
+
+/* FUN FORM STYLE */
+
+.textarea {
+  height: 10vh;
+  width: 10vw;
+}
+
+/* BUTTON STYLE */
 
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin-top: 10vh;
+  margin-top: 5vh;
+  background-color: crimson;
 }
 
 .buttonContainer button {
@@ -53,5 +71,6 @@ code {
   padding-right: 20px;
   text-align: center;
 }
+
 
 

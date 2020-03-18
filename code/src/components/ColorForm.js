@@ -1,12 +1,14 @@
 import React from 'react'
+
 const colorGroups = ["Blue", "Yellow", "Red", "Green", "Gray"];
 
-export const ColorForm = ({name, colorGroup, setColorGroup}) => {
+export const ColorForm = ({title, infotext, colorGroup, setColorGroup}) => {
     
     return (
 
      <article>
-         <h1>{name}</h1>
+         <h1>{title}</h1>
+         <p>{infotext}</p>
         {colorGroups.map(group => (
             <label key={group}>{group}
               <input
