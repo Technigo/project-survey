@@ -24,6 +24,8 @@ form {
     width: 60%;
 }
 
+
+
 .button {
 padding: 10px;
 border-radius: 5%;
@@ -33,6 +35,7 @@ background: rgb(226, 188, 116);
 color: rgb(19, 93, 143);
 margin-top: 24px;
 justify-self: center;   
+margin-left: 10px;
 }
 .button:hover {
     opacity: .8;

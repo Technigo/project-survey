@@ -55,18 +55,22 @@ export const App = () => {
 
         }
         {section < 3 &&
-          <article>
-            <button className="button" type="submit">Next ⏎  </button>
+          <article className="button-container">
+            <button className="button" type="submit">Next →  </button>
           </article>
-
         }
+
+
       </form>
       {section === 3 &&
         <div class="user-response">
           <p className="label-text summary"><span className="arrow">→</span>Your favourite genre is {genre}. </p>
           <p className="label-text summary"><span className="arrow">→</span>Your favourite book is: {book}</p>
           <p className="label-text summary"><span className="arrow">→</span>Last year you read {number} books.</p>
-        </div>}
+          <button className="button" onClick={() => window.location.reload(false)}>To Beginning ⏎  </button>
+        </div>
+
+      }
       <article>
         <ProgressBar width={section} />
 
