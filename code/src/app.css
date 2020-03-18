@@ -30,14 +30,17 @@ padding: 20px;
   animation-iteration-count: infinite;
 }
 
-.happy-section {
-  background: #e7e2d1;
+.section-content {
   height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 20px;
+}
+
+.happy {
+  background: #e7e2d1;
 }
 
 select {
@@ -49,14 +52,8 @@ select {
   font-size: 16px;
 }
 
-.proud-section {
+.proud {
   background: #b9c3bc;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 
 .proud-input {
@@ -69,14 +66,8 @@ select {
   border-radius: 5px;
 }
 
-.smile-section {
+.smile {
   background: #dad0b4;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
 }
 
 .radio-buttons {
@@ -96,6 +87,9 @@ select {
   border-radius: 15px;
   border: 1px solid black;
   cursor:pointer;
+  margin: 10px auto;
+  display: flex;
+  flex-direction: column;
 }
 
 .radio-button:checked::before {
