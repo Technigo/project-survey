@@ -1,33 +1,26 @@
 import React from 'react'
-import { useState } from 'react'
 
+import './chooseVacation.css'
 
-export const ChooseVacation = () => {
-
-  const vacations = [
-    'Weekend in Paris',
-    'Spring in Tokyo',
-    'Oktoberfest in München',
-    'Ice Cave tour in Iceland',
-    'Relaxing and yoga in Bali'
-  ]
-
-  const [vacation, setVacation] = useState()
+export const ChooseVacation = (props) => {
+  const {vacation, vacations, setVacation} = props
 
   return (
-    <label>
-      Your idea of the perfect vacation: 
-      {vacations.map((tour) => (
-        <label key={tour}>
-          <input
-          type="radio"
-          value={tour}
-          onChange={(event) => setVacation(event.target.value)}
-          checked={vacation === tour}
-          />
-          {tour}
-        </label>
-      ))}
-    </label>
+    <label className="vacation question">
+    <h3>Your idea of the perfect vacation: </h3>
+    {vacations.map((tour) => (
+      <label key={tour}>
+        <input
+        className="radio"
+        type="radio"
+        value={tour}
+        onChange={(event) => setVacation(event.target.value)}
+        required
+        checked={vacation === tour}
+        />
+        {tour}
+      </label>
+    ))}
+  </label>
   )
 }

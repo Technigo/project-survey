@@ -1,0 +1,23 @@
+.button-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  width: 200px;
+  text-align: center;
+  background-color: #11bf74;
+  color: #fff;
+  font-family: 'Sen', sans-serif;
+  font-size: 1.4em;
+  font-weight: 900;
+  text-transform: uppercase;
+  padding: 1em;
+  border-radius: 20px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+  cursor: pointer;
+}

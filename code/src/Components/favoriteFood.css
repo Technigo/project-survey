@@ -1,0 +1,12 @@
+.text-input {
+  width: 120px;
+  border-radius: 3px;
+  border: 2px solid #5ce6aa;
+  background-color: #fff;
+  color: #303030;
+  padding: 1em;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}

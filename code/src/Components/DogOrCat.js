@@ -1,22 +1,26 @@
 import React from 'react'
-import { useState } from 'react'
 
-export const DogOrCat = () => {
-  const [animalLover, setAnimalLover] = useState('');
-
+export const DogOrCat = (props) => {
+  const {animalLover, setAnimalLover} = props
   return (
-    <label>
-      <select
-        onChange={event => setAnimalLover(event.target.value)}
-        value={animalLover}
-        >
-          <option value= "">Select option:</option>
-          <option value= "dogs">Dog Lover</option>
-          <option value= "cats">Cat Lover</option>
-          <option value= "hatesAnimals">No animals!</option>
-          <option value= "hamsters">Hamsters!</option>
-      </select>
-    </label>
+    <div className="question">
+            <label>
+              <h3>Are you a dog person or a cat person?</h3>
+                <div className="dropdown">
+                  <select
+                    onChange={event => setAnimalLover(event.target.value)}
+                    value={animalLover}
+                    required
+                    >
+                        <option value= "">Pick one!</option>
+                        <option value= "a dog">Dog Lover</option>
+                        <option value= "a cat">Cat Lover</option>
+                        <option value= "not a">No animals!</option>
+                        <option value= "a hamster">Hamsters!</option>
+                  </select>
+                </div>
+            </label>
+          </div>
   )
 }
 

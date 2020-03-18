@@ -1,12 +1,13 @@
 import React from 'react'
 
+import './button.css'
 
-export const Button = () => {
 
-  const showAnswers = () => {
-    
-  }
+export const Button = (props) => {
+  const {animalLover, food} = props
   return (
-    <button aria-label="submit" onClick={event => showAnswers()}>Submit!</button> 
+    <section className="button-section">
+      <button className="btn" type="submit" disabled={animalLover === '' || food === ''}>Submit!</button>
+    </section>
   )
 }

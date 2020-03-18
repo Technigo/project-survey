@@ -1,16 +1,19 @@
 import React from 'react'
-import { useState } from 'react'
 
-export const FavoriteFood = () => {
-  const [food, setFood] = useState()
+import './favoriteFood.css'
+
+export const FavoriteFood = (props) => {
+  const {food, setFood} = props
 
   return (
-    <label>
+    <label className="question">
       <p>What is your favorite food?</p>
       <input
         type='text'
         onChange={event => setFood(event.target.value)}
         value={food}
+        className="text-input"
+        placeholder="Omnomnom"
       />
     </label>
   )

@@ -66,8 +66,7 @@ p {
 .question {
   padding: 1em;
   background-color: #ebf7f2;
-  /*border: 1px solid black;
-  */border-radius: 20px;
+  border-radius: 20px;
   margin: 1em;
   -webkit-border-radius: 20px;
   -moz-border-radius: 20px;
@@ -110,87 +109,3 @@ p {
 .dropdown select:focus {
   outline: none;
 }
-
-/*** VACATION QUESTION ***/
-.vacation {
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 3em;
-}
-
-.radio {
-  -webkit-appearance: none;
-     -moz-appearance: none;
-     appearance: none;
-     display: inline-block;
-     position: relative;
-     background-color: #fff;
-     color: #fff;
-     top: 10px;
-     height: 25px;
-     width: 25px;
-     border: 0;
-     border-radius: 50px;
-     cursor: pointer;     
-     margin-right: 15px;
-     outline: none;
-}
-
-.radio:checked::before
-{
-     position: absolute;
-     font: 13px/1 'Open Sans', sans-serif;
-     left: 9px;
-     top: 5px;
-     content: '\02143';
-     transform: rotate(40deg);
-}
-.radio:hover
-{
-     background-color: #5ce6aa;
-}
-.radio:checked
-{
-     background-color: #11bf74;
-}
-
-/*** TEXT IMPUT QUESTION ***/
-
-.text-imput {
-  width: 120px;
-  border-radius: 3px;
-  border: 2px solid #5ce6aa;
-  background-color: #fff;
-  color: #303030;
-  padding: 1em;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
-}
-
-/*** BUTTON ***/
-
-.button-section {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.btn {
-  width: 200px;
-  text-align: center;
-  background-color: #11bf74;
-  color: #fff;
-  font-family: 'Sen', sans-serif;
-  font-size: 1.4em;
-  font-weight: 900;
-  text-transform: uppercase;
-  padding: 1em;
-  border-radius: 20px;
-  -webkit-border-radius: 20px;
-  -moz-border-radius: 20px;
-  -ms-border-radius: 20px;
-  -o-border-radius: 20px;
-}
-
