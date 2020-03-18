@@ -1,37 +1,42 @@
 import React, { useState } from "react";
+import './Radiobuttons.css'
 
 export const Radiobuttons = () => {
-  const [ageGroup, setAgeGroup] = useState();
+  const [ageGroup, setAgeGroup] = useState("");
 
   return (
     <form>
-      Age group:
-      <label>
+      Whats your age?
+      <label class="container">18-30
         <input
           type="radio"
-          value="0-18"
+          name="light"
+          value="18-30"
           onChange={event => setAgeGroup(event.target.value)}
-          checked={ageGroup === "0-18"}
+          checked={ageGroup === "18-30"}
         />
-        0-18
+        <span class="checkmark"></span>
       </label>
-      <label>
-        <input
+      <label class="container">31-40
+      <input
           type="radio"
-          value="19-30"
+          name="light"
+          value="31-40"
           onChange={event => setAgeGroup(event.target.value)}
-          checked={ageGroup === "19-30"}
+          checked={ageGroup === "31-40"}
         />
-        19-30
+        <span class="checkmark"></span>
+        
       </label>
-      <label>
+      <label class="container">41+
         <input
           type="radio"
-          value="31+"
+          name="light"
+          value="41+"
           onChange={event => setAgeGroup(event.target.value)}
-          checked={ageGroup === "31+"}
+          checked={ageGroup === "41+"}
         />
-        31+
+        <span class="checkmark"></span>
       </label>
     </form>
   );

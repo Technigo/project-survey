@@ -4,7 +4,7 @@ export const Summary = (props) => {
   
   return (
   <section>
-        <h1>registred username: {props.name}</h1>
+        <h1>Thank you for your registration {props.name}!</h1>
       </section>
   );
 };
