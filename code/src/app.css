@@ -14,10 +14,7 @@ h1, h2, h3, p{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url(./basketball-1920x1080.png);
-  background-position: bottom;
-  background-repeat: repeat;
-  background-size: cover;
+  background-color: #5c2e51;
   width: 100%;
   color: antiquewhite;
   margin-left: auto;
