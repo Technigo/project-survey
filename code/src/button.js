@@ -1,11 +1,11 @@
 import React from 'react';
 
 export const Button = (props) => {
-    const  { type, title } = props;
+    const  { clickFunction, style, type, title } = props;
 
     return (
         <div>
-           <button type={type}>{title}</button>  
+           <button onClick={clickFunction} className={style} type={type}>{title}</button>  
         </div>
     );
 };

@@ -4,7 +4,7 @@ export const TextBox = (props) => {
     const  { title, placeholder, type, text, setText } = props;
 
     return (
-        <div className='contact-container'>
+        <div>
             <label className='text'>
                 <p>{title}</p>
                 <input

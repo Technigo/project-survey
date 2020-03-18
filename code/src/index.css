@@ -18,8 +18,19 @@ code {
 }
 
 .content-container {
-  margin: 200px auto;
+  margin: 180px auto;
   max-width: 70%;
+  background-color: rgba(255, 247, 230, 0.507);
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.header-container {
+  margin-bottom: 50px;
+}
+
+form {
+  height: 300px;
 }
 
 h2 {
@@ -195,10 +206,6 @@ select:active {
 }
 
 /* Text boxes */
-.contact-container {
-  display: flex;
-}
-
 .text-contact, .text-preferences {
   border-radius: 8px;
   background-color: rgb(255, 247, 230);
@@ -225,8 +232,25 @@ select:active {
   border: 2px solid #F78C51;
 }
 
-/* Submit button */
-button {
+/* Buttons */
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.index-button {
+  margin: 10px 0px;
+  background-color: rgb(255, 247, 230);
+  padding: 10px 30px;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 1px rgb(82, 29, 0);
+  font-size: 16px;
+  font-weight: bold;
+  color: rgb(245, 125, 61);
+} 
+
+.submit-button {
   margin: 10px 0px;
   background-color: #F78C51;
   padding: 10px 30px;

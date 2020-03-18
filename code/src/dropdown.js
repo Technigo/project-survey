@@ -7,13 +7,14 @@ export const Dropdown = (props) => {
         <div>
             <h2>{question}</h2>
             <label className='dropdown'>
-                <select className='dropdown-style'
-                onChange={event => setDropdownItem(event.target.value)}
-                required
+                <select 
+                    className='dropdown-style'
+                    onChange={event => setDropdownItem(event.target.value)}
+                    required
                 >
                     <option value=''>{title}</option>
                     {array.map(dropdownItem => (
-                    <option value={dropdownItem}>{dropdownItem}</option>
+                    <option key={dropdownItem} value={dropdownItem}>{dropdownItem}</option>
                     ))} 
                 </select>
             </label>

@@ -7,7 +7,7 @@ export const FreeText = (props) => {
         <div>
             <h2>{question}</h2>
             <label className='text' >
-                <input
+                <textarea
                     className='text-preferences'
                     type='text'
                     onChange={event => setText(event.target.value)}
