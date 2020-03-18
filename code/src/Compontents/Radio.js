@@ -1,27 +1,30 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Progress } from 'Compontents/Progress'
 
-const satisfiedGroup = [
-  'Not likely',
-  'Likely',
-  'Very likely'
+const answerGroup = [
+  'Absolutely',
+  'Maybe',
+  'Definitely'
 ]
 
-export const Radio = () => {
-  const [satisfied, setSatisfied] = useState()
+export const Radio = ({ radioInput, setRadioInput }) => {
+
   return (
     <form>
-      How likely are you to....
-      {satisfiedGroup.map((group) => (
-        <label key={group}>
+      <Progress current='2' total='3' />
+      <p>Would you recommend your friends to <span className="bold">start coding?</span></p>
+      {answerGroup.map(group => (
+        <label className="radio" key={group}>
           <input
             type="radio"
             value={group}
-            onChange={(event) => setSatisfied(event.target.value)}
-            checked={satisfied === group}
+            onChange={event => setRadioInput(event.target.value)}
+            checked={radioInput === group}
           />
           {group}
         </label>
-      ))}
+      ))
+      }
     </form>
   )
 }

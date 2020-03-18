@@ -1,37 +1,49 @@
 import React, { useState } from 'react'
 import { Summary } from 'Compontents/Summary'
-// import { Input } from 'Compontents/Input'
-// import { Select } from 'Compontents/Select'
-// import { Radio } from 'Compontents/Radio'
-// import { Checkbox } from 'Compontents/Checkbox'
+import { Input } from 'Compontents/Input'
+import { Select } from 'Compontents/Select'
+import { Radio } from 'Compontents/Radio'
+import { Checkbox } from 'Compontents/Checkbox'
+import { Button } from 'Compontents/Button'
+import './index.css'
 
 export const App = () => {
   const [name, setName] = useState("")
-  const [showSummary, setShowSummary] = useState(false)
+  const [section, setSection] = useState(0)
+  const [radioInput, setRadioInput] = useState()
+  const [agree, setAgree] = useState(false)
+  const [tech, setTech] = useState("")
 
   const handleSubmit = event => {
     event.preventDefault()
-    setShowSummary(true)
+    setSection(section + 1)
   };
 
   return (
-    <div class="survey-card">
+    <section className="survey-card">
       <form onSubmit={handleSubmit}>
-        <label>
-          What's your name?
-        <input
-            type="text"
-            onChange={event => setName(event.target.value)}
-            value={name}
-            required
-          />
-        </label>
-        <button type="submit">Submit</button>
-      </form>
+        {section === 0 &&
+          <Input name={name} setName={setName} />
+        }
 
-      {showSummary && (
-        <Summary name={name} />
-      )}
-    </div>
+        {section === 1 &&
+          <Select tech={tech} setTech={setTech} />
+        }
+
+        {section === 2 &&
+          <Radio radioInput={radioInput} setRadioInput={setRadioInput} />
+        }
+
+        {section === 3 &&
+          <Checkbox agree={agree} setAgree={setAgree} />
+        }
+
+        {section === 4 &&
+          <Summary name={name} tech={tech} radioInput={radioInput} />
+        }
+
+        <Button />
+      </form>
+    </section>
   )
 }

@@ -1,6 +1,8 @@
 import React from "react";
-import "./Button.css";
+import './Button.css'
 
-export const Button = ({ title, className }) => (
-  <button className={className}>{title}</button>
-);
+export const Button = ({ name, section }) => {
+  return (
+    <button type="submit" disabled={name === "" && section === 0}>Next</button>
+  )
+}
