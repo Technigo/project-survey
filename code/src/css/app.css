@@ -34,7 +34,12 @@ div#root,
 
 header {
   flex: 0 1 auto;
-  padding: 1rem 2rem;
+  padding: .5rem 2rem;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
 }
 
 .main-content {
@@ -61,11 +66,6 @@ header {
   background-color: var(--color-light);
   border-bottom-right-radius: var(--border-radius);
   color: var(--color-text);
-}
-
-h1 {
-  margin: 0;
-  font-size: 2rem;
 }
 
 

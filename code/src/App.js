@@ -1,12 +1,13 @@
 import React, { useState } from 'react'
 
-import { Header } from 'components/Header.js'
-import { Footer } from 'components/Footer.js'
-import { InputText } from 'components/InputText.js'
-import { InputSelect } from 'components/InputSelect.js'
-import { InputCheckbox } from 'components/InputCheckbox.js'
-import { InputRadio } from 'components/InputRadio.js'
-import { Summary } from 'components/Summary.js'
+import { Header } from 'components/Header'
+import { Footer } from 'components/Footer'
+import { InputText } from 'components/InputText'
+import { InputSelect } from 'components/InputSelect'
+import { InputCheckbox } from 'components/InputCheckbox'
+import { InputRadio } from 'components/InputRadio'
+import { SubmitButton } from 'components/SubmitButton'
+import { Summary } from 'components/Summary'
 import { ProgressCounter } from 'components/ProgressCounter'
 
 import 'css/app.css'
@@ -14,6 +15,7 @@ import 'css/form.css'
 
 
 export const App = () => {
+
   const [name, setName] = useState('')
   const [nut, setNut] = useState('')
   const [shape, setShape] = useState('')
@@ -23,12 +25,13 @@ export const App = () => {
 
   const nuts = ['Almond', 'Brazil nut', 'Cashew', 'Hazelnut', 'Macadamia', 'Peanut', 'Pecan', 'Pistachio', 'Walnut']
   const shapes = ['Burnt', 'Butter', 'Natural', 'Roasted', 'Salted', 'Sweet']
+  const questionsTotal = 4; // Total number of questions
 
 
   const handleSubmit = (event) => {
     event.preventDefault()
     setCount(count + 1)
-    count === 4 && setRenderSummary(true)
+    count === questionsTotal && setRenderSummary(true) // Render summary when all questions are answered
   }
 
 
@@ -69,18 +72,17 @@ export const App = () => {
                   setState={setShape}
                 />
               )}
-              {count === 4 && (
+              {count === questionsTotal && (
                 <InputCheckbox
-                  label="Check this if you are allergic to nuts"
+                  label="I'm allergic to nuts"
                   id="inputAllergy"
                   state={allergy}
                   setState={setAllergy}
                 />
               )}
 
-              <button type="submit">
-                {count < 4 ? <>→</> : <>Submit</>}
-              </button>
+              {/* Render different button content depending on questions answered */}
+              {count < questionsTotal ? <SubmitButton content="→" /> : <SubmitButton content="Submit" />}
 
             </form>
 
@@ -96,7 +98,7 @@ export const App = () => {
           }
         </div>
 
-        <ProgressCounter count={count} total="4" />
+        <ProgressCounter count={count} total={questionsTotal} />
 
       </main>
 
