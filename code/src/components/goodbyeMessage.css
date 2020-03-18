@@ -1,0 +1,15 @@
+.containerBye {
+text-align: center;
+}
+
+
+.byeTitle {
+  margin-top: 150px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.byeText {
+  font-size: 22px;
+  margin-bottom: 30px;
+}

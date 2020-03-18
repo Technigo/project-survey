@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-top: 30px;
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  border-radius: 10px;
+  text-transform: capitalize;
+  font-weight: 300;
+  margin-bottom: 20px;
+  font-size: 14px;
+}
+
+.formContainer {
+  width: 80%;
+}
+
+/* Go next/back buttons */
+button {
+  background: #FA709A;
+  display: inline-block;
+  border-radius: 7px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 13px;
+  transition: transform 1s;
+  margin-right: 20px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background: #FEE140;
+  color: black;
+  cursor: pointer;
+}
+
+/* placeholder */
+.userName {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 10px 10px;
+    font-size: 16px;
+    color: black;
+    font-weight: lighter;
+    border: none;
+    border-bottom: 1px solid lightslategrey;
+    background-color: inherit;
+    text-transform: uppercase;
+}
+textarea,
+::placeholder{
+color: black;
+font-weight: lighter;
+}
+
+/* Dropdown */
+.dropdown {
+  display: block;
+  font-size: 16px;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.5;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid grey;
+  background-color: #fff;
+  background-image: url('./components/assets/triangle_down_arrow.jpg'),
+    linear-gradient(to bottom, white 10%, #E2E2E2 100%);
+  background-repeat: no-repeat;
+  background-position: right .7em top 50%, 0 0;
+  background-size: .70em auto, 100%;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* Radio buttons */
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.container label {
+  width: 100%;
+  justify-content: space-evenly;
+  margin-left: 35px;
+}
+
+/* RADIO BUTTONS EMOJIS */
+.feelings{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.feelings label {
+  display: block;
+  font-size: 18px;
+}
+
+.feelings input[type="radio"] {
+opacity: 0;
+}
+
+.feelings input[type=radio] + span {
+  opacity: 0.3;
+  cursor: pointer;
+}
+
+.feelings input[type=radio]:checked + span {
+  opacity: 1;
+}
+
+.feelings input[type=radio] + span:hover:hover {
+  opacity: 1; 
+  cursor: pointer;
+}
+
+
+
+/* MEDIA QUERIES */
+@media (min-width: 992px) {
+  .mainWrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 30px;
+  }
+
+  .formContainer {
+    width: 50%;
+    justify-content: center;
+  }
+}
+

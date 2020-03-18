@@ -1,0 +1,25 @@
+.summaryContainer{
+text-align: center;
+margin-top: 50px;
+width: 50%;
+}
+
+.summaryWrapper {
+line-height: 20px;
+}
+
+.summaryTitle {
+  text-transform: uppercase;
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+.summaryWrapper p {
+  font-size: 14px;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+
+.restartSummary {
+  margin-top: 30px;
+}
+
