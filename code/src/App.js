@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import './app.css'
+import './index.css'
 
 
 const ageGroup = ['too young', '19-35', '35-65', '+65'];
@@ -24,8 +25,8 @@ export const App = () => {
   return (
     <div className='form-container'>
       <h1>Win a very special evening for you and someone equally as special!</h1>
-      <h3>Just fill in the form below to participate in the competion</h3>
-      <p>... and you could be the lucky one winning a custom made evening for you and your friend.</p>
+      <h3>Just fill in the form below to participate</h3>
+      <p>... and you could be the lucky one.</p>
 
       <div className='questions-container'>
         <div className="questions">
@@ -73,7 +74,7 @@ export const App = () => {
             <p> You love: {hobby} </p>
             <p>Your email address: {email}</p>
             <p>If you are the lucky winner we will send you and email within 2 weeks with all the details
-              If you are not the winner we will send you some inspiration about fun things to do in the city.</p>
+              If you are not the winner we will send you some articles on fun things to do for free.</p>
 
             <h2>How exicited are you?!</h2>
 

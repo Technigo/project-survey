@@ -7,28 +7,27 @@ h1, h2, h3, p{
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  font-family: "Courier New";
 }
 
 .form-container {
- display: flex;
- flex-direction: column;
- justify-content: center;
- background-image: url(./basketball-1920x1080.png);
- background-position: bottom;
- background-repeat: repeat;
- background-size: cover;
- width: 100%;
- color: antiquewhite;
- margin-left: auto;
- margin-right: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-image: url(./basketball-1920x1080.png);
+  background-position: bottom;
+  background-repeat: repeat;
+  background-size: cover;
+  width: 100%;
+  color: antiquewhite;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .questions-container {
   display: flex;
   font-size: 18px;
-  width: fit-content;
-  padding: 20px;
-  border: antiquewhite 3px solid;
+  padding: 20px 5px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -44,7 +43,7 @@ form {
 }
 
 form input, .hobby {
-  font-family: 'Arial';
+  font-family: 'Courier New';
   font-size: 14px;
   color: #5c2e51;
   border-radius: 4px;
@@ -52,6 +51,7 @@ form input, .hobby {
   border-style: none;
   background-color: antiquewhite;
   width: fit-content;
+  font-weight: 600;
 }
 
 button {
@@ -59,13 +59,14 @@ button {
   margin: 20px;
   color: antiquewhite;
   padding: 40px;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
   font-weight: 700;
   border: none;
   border-radius: 32px;
   background-image: url(./basketball-1920x1080.png);
   background: linear-gradient(145deg, #854376, #9e4f8c);
-  box-shadow:  16px 16px 41px #5c2e51, 
+  box-shadow: 16px 16px 41px #5c2e51, 
              -16px -16px 41px #cc66b5;
 }
 
@@ -78,7 +79,7 @@ button:hover {
   cursor: pointer;
   border-radius: 32px;
   background: linear-gradient(145deg, #9e4f8c, #854376);
-  box-shadow:  26px 26px 51px #5c2e51, 
+  box-shadow: 26px 26px 51px #5c2e51, 
              -26px -26px 51px #cc66b5;
 }
 
@@ -89,11 +90,26 @@ flex-wrap: wrap;
 text-align: left;
 }
 
+.summary p {
+  font-weight: 600;
+}
 
 
 @media (min-width: 668px) {
   .form-container {
     padding: 20px 108px;
+    box-sizing: border-box;
+  }
+
+  .questions-container {
+    display: flex;
+    font-size: 18px;
+    padding: 20px 5px;
+    border: antiquewhite 3px solid;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow:  8px 8px 21px #5c2e51, 
+    -8px -8px 21px #cc66b5;
   }
    
 }
