@@ -41,7 +41,7 @@ export const App = () => {
         {section === 4 &&
           <Summary name={name} tech={tech} radioInput={radioInput} />
         }
-        <Button name={name} section={section} tech={tech} radioInput={radioInput} />
+        <Button name={name} section={section} tech={tech} radioInput={radioInput} agree={agree} />
       </form>
 
     </section>
