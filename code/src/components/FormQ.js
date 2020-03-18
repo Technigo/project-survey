@@ -1,21 +1,23 @@
-import React, { useState } from "react";
+import React from 'react';
 
-export const FormQ = () => {
-  const [name, setName] = useState("");
-
-  return (
-    <form onSubmit={handleSubmit}>
-      <h2>What is your dogs name?</h2>
-
-      <input
-        className="inputText"
-        type="text"
-        onChange={event => setName(event.target.value)}
-        required
-        value={name}
-        // name="dogName"
-        placeholder="Enter your dogs name..."
-      />
-    </form>
-  );
+export const FormQ = ({ name, setName }) => {
+	return (
+		<React.Fragment>
+			<h2>What is your dogs name?</h2>
+			<img className="dogGif" src={require('../images/whiteDog.gif')} alt="Very white dog" />
+			<form onSubmit={handleSubmit}>
+				<input
+					className="inputText"
+					type="text"
+					onChange={(event) => setName(event.target.value)}
+					required
+					value={name}
+					placeholder="Enter your dogs name..."
+				/>
+			</form>
+		</React.Fragment>
+	);
+};
+const handleSubmit = (event) => {
+	event.preventDefault();
 };

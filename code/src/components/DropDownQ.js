@@ -1,19 +1,18 @@
-import React, { useState } from "react";
+import React from 'react';
 
-export const DropDownQ = () => {
-  const [dog, setDog] = useState("");
-  return (
-    <form>
-      <select
-        type="text"
-        onChange={event => setDog(event.target.value)}
-        value={dog}
-      >
-        <option value="">What is your favourite tye of animal</option>
-        <option value="dog">Tame wolf</option>
-        <option value="dog">Dog</option>
-        <option value="dog">Canis domesticus</option>
-      </select>
-    </form>
-  );
+export const DropDownQ = ({ dog, setDog }) => {
+	return (
+		<React.Fragment>
+			<h2>What is your favourite type of animal?</h2>
+			<img className="dogGif" src={require('../images/hiFiveDog.gif')} alt="Dog giving a high five" />
+			<form>
+				<select type="text" onChange={(event) => setDog(event.target.value)} value={dog}>
+					<option value="">Choose an animal</option>
+					<option value="Tame wolf">Tame wolf</option>
+					<option value="Dog">Dog</option>
+					<option value="Canis domesticus">Canis domesticus</option>
+				</select>
+			</form>
+		</React.Fragment>
+	);
 };
