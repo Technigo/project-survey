@@ -1,0 +1,71 @@
+body {
+  font: normal 18px/1.5 "Fira Sans", "Helvetica Neue", sans-serif;
+  background: #3AAFAB;
+  color: #fff;
+  padding: 30px 0;
+}
+
+
+form {
+  background: rgba(54, 162, 158, 0.899);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  border-radius: 4px;
+  box-shadow: 2px 2px rgb(39, 99, 101);
+  padding: 5px;
+
+}
+
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.container * {
+  box-sizing: border-box;
+}
+
+.container h1, h3 {
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.container input {
+  font-family: sans-serif;
+  font-size: large;
+}
+
+
+/****** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
+@media (min-width: 668px) {
+
+  form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: auto;
+    padding-bottom: 100px;
+    
+    
+  }
+
+  .container {
+    max-width: 700px;
+  }
+
+  
+
+}
+
+@media (min-width: 900px) {
+
+
+
+
+}

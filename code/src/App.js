@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./app.css"
 // import { Agequest } from "./QuestRadio";
 // import { Selectanimal } from "./QuestAnimal";
 // import { Myname } from "./QuestName";
@@ -9,8 +10,6 @@ const ageGroups = ["18-25", "19-34", "35+"];
 
 export const App = () => {
 
-  
-  // const [ageGroup, setAgeGroup] = useState();
   const [name, setName] = useState("");
   const [ageGroup, setAgeGroup] = useState();
   const [animal, setAnimal] = useState('');
@@ -23,8 +22,11 @@ export const App = () => {
 
 
   return (
-    <div>
-      <h1>My pet survey:</h1>
+    <div className="container">
+      <label>
+        <h1>My pet survey:</h1>
+      </label>
+      
 
       {!showSummery ? (
 
@@ -41,12 +43,12 @@ export const App = () => {
           value={name}
           onChange={event => setName(event.target.value)}
           required
-          placeholder="name here.."
+          placeholder="Name please.."
           // onKeyPress={(event) => event.key === "Enter" && event.preventDefault()}
           />
         </label>
 
-        <div>
+        <section>
           <h3>How old are you?</h3>
           {ageGroups.map(group => (
             <label key={group}>
@@ -60,7 +62,7 @@ export const App = () => {
               {group}
             </label>
           ))}
-        </div>
+        </section>
 
         <label>
           <h3>What is your favorite animal?</h3>
@@ -75,8 +77,7 @@ export const App = () => {
           </select>
         </label>
         {/* <button type="submit">submit</button> */}
-        <Button title="Submit form" className="primary" type="submit" />
-
+        <Button title="Submit" className="primary" type="submit" />
       </form>
 
       ) : (
@@ -86,16 +87,9 @@ export const App = () => {
   );
 };
 
-
 /*
-
       {showSummery && <section>
         <h1>Hi {name} ! You are {ageGroup} years old and absolutley love {animal}'s!</h1>
         
       </section>}
-
-
-
-
-
 */

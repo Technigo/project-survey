@@ -3,16 +3,18 @@ button {
   border: none;
   text-transform: uppercase;
   cursor: pointer;
-  padding: 12px;
+  padding: 8px;
   margin: 20px;
   border-radius: 4px;
-  font-size: 24px;
+  font-size: 22px;
   display: block;
+  
 }
 
 .primary {
-  background: rgb(48, 113, 182);
+  background: rgb(53, 53, 55);
   color: aliceblue;
+  width: 150px
 }
 
 .secondary {
@@ -20,10 +22,3 @@ button {
   border: 3px solid black;
 }
 
-.warning {
-  background: orange;
-}
-
-.error {
-  background: red;
-}
