@@ -31,7 +31,7 @@ button {
   display: block;
   height: 48px;
   margin-top: 2rem;
-  
+
   padding: .8rem 1.2rem;
   background-color: var(--color-bright);
   border-radius: var(--border-radius-form);
@@ -48,6 +48,7 @@ input[type=text],
 input[type=select],
 select {
   display: block;
+  font-weight: 500;
 }
 
 input[type=checkbox],

@@ -50,6 +50,7 @@ export const App = () => {
                 <InputText
                   label="What's your name?"
                   id="inputName"
+                  placeholder="Name"
                   state={name}
                   setState={setName}
                 />
