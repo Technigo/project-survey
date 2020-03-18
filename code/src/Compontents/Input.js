@@ -11,7 +11,6 @@ export const Input = ({ name, setName }) => {
         type='text'
         onChange={event => setName(event.target.value)}
         value={name}
-        required
       />
     </label>
   )

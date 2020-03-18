@@ -12,7 +12,7 @@ export const Select = ({ tech, setTech }) => {
         value={tech}
         required
       >
-        <option value=''></option>
+        <option value='Select'>Select</option>
         <option value='HTML'>HTML</option>
         <option value='CSS3'>CSS3</option>
         <option value='Javascript ES6'>Javascript ES6</option>
