@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import 'component/questiontwo.css'
+import 'component/fonts.css'
+
 
 export const QuestionTwo = ({ whenNext }) => {
   const [ name , setName ] = useState()

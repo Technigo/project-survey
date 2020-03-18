@@ -1,4 +1,6 @@
 import React from 'react'
+import 'component/fonts.css'
+
 
 export const Summery = ({ whenNext, answer }) => {
   const handleClick = (event) => {
@@ -15,7 +17,7 @@ export const Summery = ({ whenNext, answer }) => {
 
   return (
     <section>
-      <h2>Summery</h2>
+      <h1>Summery</h1>
       <p>You want to: {userTypeChoice}</p>
       <p>Reservation name: {userReservationName}</p>
 

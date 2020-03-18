@@ -1,14 +1,39 @@
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1vh;
+}
+
+p {
+  font-family: 'Montserrat', sans-serif;
+}
+
 .formOptions {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
+  font-family: 'Montserrat', sans-serif;
+  font-style: italic;
 }
 
 .formRadio {
   margin: 1vh 0vh;
+  cursor: pointer;
 }
 
 .formBtn {
   margin: 2vh 0vh;
   padding: 1vh;
+  font-size: 1.5vw;
+  font-family: 'Montserrat', sans-serif;
+  background-color: white;
+  color: black;
+  border: 2px solid #008CBA;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.formBtn:hover {
+  background-color: #008CBA; /* Green */
+  color: white;
 }

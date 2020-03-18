@@ -3,9 +3,12 @@
   align-items: center;
   justify-content: center;
   width: 100vw;
-  background-color: rgba(211, 196, 243, 0.69);
+  background-color: rgba(211, 255, 255, 0.69);
 }
 
 .bannerTitle {
   color: #444;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 700;
+  letter-spacing: 1vh;
 }

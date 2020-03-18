@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import 'component/surveycard.css'
-import { Button } from './Button'
+import 'component/fonts.css'
 import { QuestionOne } from './QuestionOne'
 import { QuestionTwo } from './QuestionTwo'
 import { QuestionThree } from './QuestionThree'

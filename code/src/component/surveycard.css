@@ -6,5 +6,8 @@
   height: 60vh;
   width: 45vw;
   border-radius: 8px;
-  background-color: rgba(211, 196, 243, 0.69);
+  /* background-color: rgba(211, 196, 243, 0.69); */
+  background-color: rgba(255, 255, 255, 0.90);
+  box-shadow: 7px 7px 10px powderblue;
+  border: 1px solid rgb(97, 135, 139);
 }
