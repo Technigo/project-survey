@@ -1,28 +1,26 @@
 import React from 'react'
-import { useState } from "react"
 import './form.css'
 
-export const Name = () => {
-    const [name, setName] = useState("")
-
+export const Name = (props) => {
+    const { name, setName } = props
     return (
-        //prevents the page from re-rendering on submit
-        <form onSubmit={event => event.preventDefault()}>
+        <div>
             <p>Please enter your name: {name}</p>
             <input
                 type="text"
                 onChange={event => setName(event.target.value)}
                 value={name}
             />
-        </form>
+        </div>
     );
 };
 const codingLevels = ["Beginner", "Intermediate", "Advanced"];
 
-export const Level = () => {
-    const [codingLevel, setCodingLevel] = useState();
+export const Level = (props) => {
+    const { codingLevel, setCodingLevel } = props
+
     return (
-        <form>
+        <div>
             <p>Your coding level:</p>
             {codingLevels.map(level => (
                 <label key={level}>
@@ -34,34 +32,31 @@ export const Level = () => {
                     />
                     {level}
                 </label>
-
             ))}
-        </form>
+        </div>
     );
 };
-export const Destination = () => {
-    const [destination, setDestination] = useState("");
+export const Destination = (props) => {
+    const { destination, setDestination } = props
+
     return (
-        <form>
-            <select
-                onChange={event => setDestination(event.target.value)}
-                value={destination}
-            >
-                <option value="">Select destination</option>
-                <option value="åre">Åre</option>
-                <option value="funäsdalen">Funäsdalen</option>
-                <option value="abisko">Abisko</option>
-            </select>
-        </form>
+        <select
+            onChange={event => setDestination(event.target.value)}
+            value={destination}
+        >
+            <option value="">Select destination</option>
+            <option value="Åre">Åre</option>
+            <option value="Funäsdalen">Funäsdalen</option>
+            <option value="Abisko">Abisko</option>
+        </select>
     );
 };
 
-export const Button = () => {
-    const [formValue, setFormValue] = useState("");
+export const Button = (props) => {
+    const { formValue, setFormValue } = props
     return (
-        <button onChange={event => setFormValue(event.target.value)}
+        <button type="submit" onChange={event => setFormValue(event.target.value)}
             value={formValue}>Sign me up
         </button>
-
     );
 };
