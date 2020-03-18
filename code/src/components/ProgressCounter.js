@@ -4,7 +4,7 @@ export const ProgressCounter = ({ count, total }) => {
 
   return (
     <div className="progress-counter">
-      {count <= 4 ? (<>question {count} / {total}</>) : <span>Thank you!</span>}
+      {count <= 4 ? (<>{count} / {total}</>) : <span>Thank you!</span>}
     </div>
   )
 }

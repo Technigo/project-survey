@@ -103,7 +103,7 @@ export const App = () => {
 
       </main>
 
-      <Footer text="stuff about nuts" />
+      <Footer text="🌰 this is a nut" />
 
     </div>
   )

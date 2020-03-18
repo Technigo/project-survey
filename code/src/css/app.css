@@ -6,10 +6,10 @@
 
   --color-light: #f7f3e1;
   --color-medium: #ecdfc8;
-  --color-dark: #dcccae;
+  --color-dark: #c5b088;
   --color-bright: #ecb390;
   --color-accent: #df7861;
-  --color-text: #827765;
+  --color-text: #4b4133;
 }
 
 
@@ -75,7 +75,7 @@ h1 {
 
 .progress-counter {
   padding: 1.5rem 3rem;
-  background-color: var(--color-light);
+  background-color: var(--color-bright);
   border-bottom-right-radius: var(--border-radius-layout);
   color: var(--color-text);
 }
@@ -91,4 +91,5 @@ footer {
   background-color: var(--color-dark);
   border-top-left-radius: var(--border-radius-layout);
   border-top-right-radius: var(--border-radius-layout);
+  font-size: .9rem;
 }
