@@ -1,21 +1,21 @@
 import React from 'react'
 
-const colorGroups = ["Blue", "Yellow", "Red", "Green", "Gray"];
+const platformGroups = ["Youtube", "Spotify", "Apple Music", "Soundcloud", "Itunes"];
 
-export const ColorForm = ({title, infotext, colorGroup, setColorGroup}) => {
+export const ColorForm = ({title, platformGroup, setPlatfromGroup}) => {
     
     return (
 
-     <article>
+     <article className="custom-Cb">
          <h1>{title}</h1>
-         <p>{infotext}</p>
-        {colorGroups.map(group => (
-            <label key={group}>{group}
-              <input
+        {platformGroups.map(platform => (
+            <label key={platform}>
+              {platform}
+              <input 
               type="checkbox"
-              value={group}
-              onChange={event => setColorGroup(event.target.value)}
-              checked={colorGroup === group} 
+              value={platform}
+              onChange={event => setPlatfromGroup(event.target.value)}
+              checked={platformGroup === platform} 
               />
             </label>
         ))}

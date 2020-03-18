@@ -5,7 +5,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgba(206, 228, 146, 0.454);
 }
 
 code {
@@ -13,17 +12,37 @@ code {
     monospace;
 }
 
-.App {
+ .App {
   height: 100vh;
   width: 100vw;
   display: flex;
   flex-direction: column;
 }
 
-.firstSection {
+.surveyHeader {
   display: flex;
   justify-content: center;
-  height: 150vh;
+  height: 15vh;
+  background-color: rgba(184, 109, 184, 0.612);
+}
+
+.titleContainer {
+  display: flex;
+  justify-content: center;
+  height: 15vh;
+}
+
+.titleContainer h3{
+  text-align: center;
+  font-size: 30px;
+  margin-top: 5vh;
+  color: aliceblue;
+}
+
+.formSection {
+  display: flex;
+  justify-content: center;
+  height: 130vh;
   width: 100vw;
   background-image: url(./components/assets/colors.jpg);
   background-repeat: no-repeat;
@@ -31,45 +50,90 @@ code {
   background-size: cover;
 }
 
-.firstSection article {
-  background-color: crimson;
-  margin-top: 10vh;
-  text-align: center;
-  height: 30vh;
-}
-
-
-.questionForm {
+.formSection article {
+  background-color: rgba(255, 255, 255, 0.235);
   margin-top: 5vh;
   text-align: center;
+  height: 30vh;
+  width: 40vw;
 }
 
-.questionForm input {
+.formSection article h1 {
+color: aliceblue;
+font-size: 25px;
+padding-top: 2vh;
+}
+
+.questionForm {
+  text-align: center;
+  height: 130vh;
+}
+
+/* CHECKBOXES STYLE */
+
+.custom-Cb input {
+  display: none;
+}
+
+/* Draw our custom check box */
+
+.custom-Cb label {
+  cursor: pointer;
+}
+.custom-Cb label:after {
+  display: inline-block;
+  width: 20px;
+  margin-right: 5px;
+  content: "\00a0";
+  text-align: center;
+  background: rgba(235, 40, 180, 0.502);
   margin: 1vw;
+}
+.custom-Cb label:hover::after{
+  background: #aaa;
+}
+
+/* On check */
+.custom-Cb input:checked ~ label::before {
+  content: "💡";
+  background: #3f6cb5;
+  color: #fff;
 }
 
 /* FUN FORM STYLE */
 
 .textarea {
-  height: 10vh;
-  width: 10vw;
+  height: 15vh;
+  width: 20vw;
 }
 
 /* BUTTON STYLE */
 
-.buttonContainer {
-  display: flex;
-  justify-content: center;
-  margin-top: 5vh;
-  background-color: crimson;
-}
 
-.buttonContainer button {
-  padding-top: 10px;
-  padding-bottom: 10px;
+.submitButton {
+  margin-top: 2vh;
+  padding-top: 2px;
+  padding-bottom: 2px;
   padding-left: 20px;
   padding-right: 20px;
-  text-align: center;
+  text-align: center; 
+  background-color: rgba(206, 40, 231, 0.502);
+  border-radius: 25px;
+  border: 0;
+  
+}
+
+.submitButton p {
+  color: rgb(255, 255, 255);
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.submitButton:hover {
+  box-shadow: 0 5px 15px;
+  cursor: pointer;
+
 }
 
 
