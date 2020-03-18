@@ -22,7 +22,9 @@ export const App = () => {
         {section === 0 &&
           <div>
             <p className="label-text"><span className="arrow">→</span>First off, what's your favourite genre of book?</p>
-            <RadioButtons genreGroups={genreGroups} genre={genre} setGenre={setGenre} />
+            <ul>
+              <RadioButtons genreGroups={genreGroups} genre={genre} setGenre={setGenre} />
+            </ul>
           </div>
 
 
@@ -55,7 +57,6 @@ export const App = () => {
         {section < 3 &&
           <article>
             <button className="button" type="submit">Next ⏎  </button>
-
           </article>
 
         }

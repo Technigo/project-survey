@@ -6,16 +6,22 @@ export const RadioButtons = (props) => {
 
     return (
         props.genreGroups.map((group) => {
-            return <label className="radio-label">
-                {group}
-                <input className="radio-buttons" required
-                    name="ageGroups"
+            return <li>
+                <input
+                    className="radio-buttons"
+                    required
                     type="radio"
+                    id={group}
+                    name="genres"
                     value={group}
                     onChange={(event) => setGenre(event.target.value)}
-                    checked={genre === group} />
+                    checked={genre === group}
+                />
 
-            </label>
+                <label className="button-label" for={group}>{group}</label>
+
+                <div class="check"></div>
+            </li>
         })
 
     )
