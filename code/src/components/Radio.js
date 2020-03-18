@@ -3,9 +3,10 @@ import './radio.css'
 
 export const Radio = ({ value, name, setSomething, checked }) => {
   return (
-    <label className="radio-container" key={value}>
+    <label htmlFor={value} className="radio-container">
       <input
         type="radio"
+        id={value}
         className="radio-button"
         name={name}
         value={value}

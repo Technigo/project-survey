@@ -1,5 +1,4 @@
 /* eslint-disable operator-linebreak */
-/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable arrow-parens */
 import React, { useState } from 'react'
 import { Header } from './components/Header'
@@ -10,8 +9,7 @@ import { Summary } from './components/Summary'
 import { Footer } from './components/Footer'
 import './app.css'
 
-/* Variables */
-
+/* Arrays used for radio buttons and select options */
 const workExcperiences = ['0-1 years', '2-3 years', '3-5 years', '5-10 years', '> 10 years']
 const codeTimes = ['early mornings', 'late nights', 'all day long', 'during REM sleep']
 const workModes = ['teamwork', 'individual work', 'a combination of teamwork and individual work']
@@ -19,19 +17,14 @@ const frontendFrameworks = ['React.js', 'Angular', 'AngularJS', 'Vue.js', 'jQuer
 
 export const App = () => {
   const [question, setQuestion] = useState(1)
-  const nextQuestion = () => {
-    setQuestion(question + 1)
-  }
-  const previousQuestion = () => {
-    setQuestion(question - 1)
-  }
+  const nextQuestion = () => setQuestion(question + 1)
+  const previousQuestion = () => setQuestion(question - 1)
   const [name, setName] = useState('')
   const [workExperience, setWorkExperience] = useState('')
   const [codeTime, setCodeTime] = useState('')
   const [workMode, setWorkMode] = useState('')
   const [framework, setframework] = useState('')
   const [submit, setSubmit] = useState(false)
-
   const handleSubmit = (event) => {
     event.preventDefault()
     setSubmit(true)
@@ -39,7 +32,9 @@ export const App = () => {
 
   return (
     <section className="content-wrapper">
+
       <Header />
+
       <section className="main-container">
 
         {!submit && (
@@ -54,63 +49,71 @@ export const App = () => {
                   placeholder="Enter your name here..." />
                 <button type="button" onClick={nextQuestion} disabled={!name}>Next</button>
               </section>
-
             )}
 
             {question === 2 && (
-              <label>
-                <h2>How long have you been working with frontend development?</h2>
-                {workExcperiences.map(experience => (
-                  <Radio
-                    value={experience}
-                    name="experience"
-                    setSomething={setWorkExperience}
-                    checked={workExperience === experience} />
-                ))}
-                <button type="button" onClick={previousQuestion}>Go Back</button>
+              <section className="question-c">
+                <fieldset>
+                  <h2>How long have you been working with frontend development?</h2>
+                  {workExcperiences.map(experience => (
+                    <Radio
+                      value={experience}
+                      name="experience"
+                      setSomething={setWorkExperience}
+                      checked={workExperience === experience} />
+                  ))}
+                </fieldset>
                 <button type="button" onClick={nextQuestion} disabled={!workExperience}>Next</button>
-              </label>
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+
+              </section>
             )}
 
             {question === 3 && (
-              <label>
-                <h2>When do you prefer to code?</h2>
-                {codeTimes.map(time => (
-                  <Radio
-                    value={time}
-                    name="time"
-                    setSomething={setCodeTime}
-                    checked={codeTime === time} />
-                ))}
-                <button type="button" onClick={previousQuestion}>Go Back</button>
+              <section className="question-c">
+                <fieldset>
+                  <h2>When do you prefer to code?</h2>
+                  {codeTimes.map(time => (
+                    <Radio
+                      value={time}
+                      name="time"
+                      setSomething={setCodeTime}
+                      checked={codeTime === time} />
+                  ))}
+                </fieldset>
                 <button type="button" onClick={nextQuestion} disabled={!codeTime}>Next</button>
-              </label>
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+              </section>
             )}
 
             {question === 4 && (
-              <label>
-                <h2>Does teamwork make the dream work?</h2>
-                <div className="drop-down">
-                  <select
-                    value={workMode}
-                    onChange={event => setWorkMode(event.target.value)}
-                    required>
-                    <option value="">select</option>
-                    {workModes.map(mode => (
-                      <Option value={mode} text={mode} />
-                    ))}
-                  </select>
-                </div>
-                <button type="button" onClick={previousQuestion}>Go Back</button>
+              <section className="question-c">
+                <label htmlFor="teamwork">
+                  <h2>Does teamwork make the dream work?</h2>
+                  <div className="drop-down">
+                    <select
+                      id="teamwork"
+                      value={workMode}
+                      onChange={event => setWorkMode(event.target.value)}
+                      required>
+                      <option value="">select</option>
+                      {workModes.map(mode => (
+                        <Option value={mode} text={mode} />
+                      ))}
+                    </select>
+                  </div>
+                </label>
                 <button type="button" onClick={nextQuestion} disabled={!setCodeTime}>Next</button>
-              </label>
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+              </section>
             )}
 
             {question === 5 && (
-              <label>
+              <label htmlFor="framework">
                 <h2>Which framework do you prefer the most?</h2>
                 <div className="drop-down">
                   <select
+                    id="framework"
                     value={framework}
                     onChange={event => setframework(event.target.value)}
                     required>
@@ -120,8 +123,8 @@ export const App = () => {
                     ))}
                   </select>
                 </div>
-                <button type="button" onClick={previousQuestion}>Go Back</button>
                 <button type="submit" onClick={nextQuestion} disabled={!framework}>Submit</button>
+                <button type="button" onClick={previousQuestion}>Go Back</button>
               </label>
             )}
 
