@@ -1,5 +1,6 @@
 :root {
-  --border-radius: 40px;
+  --border-radius-layout: 40px;
+  --border-radius-form: 5px;
 
   --color-light: #f7f3e1;
   --color-medium: #ecdfc8;
@@ -58,13 +59,13 @@ h1 {
   padding: 1rem 3rem;
   background-color: #fff;
 
-  border-top-right-radius: var(--border-radius);
+  border-top-right-radius: var(--border-radius-layout);
 }
 
 .progress-counter {
   padding: 1.5rem 3rem;
   background-color: var(--color-light);
-  border-bottom-right-radius: var(--border-radius);
+  border-bottom-right-radius: var(--border-radius-layout);
   color: var(--color-text);
 }
 
@@ -75,7 +76,7 @@ footer {
   padding: 1rem 2rem;
   color: var(--color-text);
   background-color: var(--color-dark);
-  border-top-left-radius: var(--border-radius);
-  border-top-right-radius: var(--border-radius);
+  border-top-left-radius: var(--border-radius-layout);
+  border-top-right-radius: var(--border-radius-layout);
   
 }
