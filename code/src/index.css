@@ -1,13 +1,154 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+margin: 0;
+font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+sans-serif;
+-webkit-font-smoothing: antialiased;
+-moz-osx-font-smoothing: grayscale;
+background-image: url("./lollipops.jpg");
+background-repeat: repeat;
+background-size: contain;
+padding: 50px 0;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+monospace;
 }
+
+.app {
+display: flex;
+}
+
+header {
+background-color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px 40px;
+padding: 20px;
+border-radius: 5px;
+}
+
+h1 {
+margin: 0;
+font-size: 50px;
+}
+
+h2 {
+margin: 0;
+padding: 5px;
+text-align: center
+}
+
+.questionWrapper {
+background-color: white;
+margin: 20px 40px;
+padding-bottom: 20px;
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+border-radius: 5px;
+}
+
+h3 {
+margin: 10px;
+padding: 20px 5px 5px 5px;
+border-bottom: 1px dotted hotpink;
+text-align: center
+}
+
+p {
+  text-align: center;
+  margin: 16px;
+}
+
+.inputWrapper {
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+input {
+  width: 50%;
+  font-size: 20px;
+  padding: 10px;
+  border: 1px dotted hotpink;
+  border-radius: 5px;
+}
+
+.gramsWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  white-space: nowrap
+}
+
+button {
+  width: 50%;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 20px;
+  border: 1px dotted hotpink;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+}
+
+select {
+  width: 90%;
+  font-size: 19px;
+  padding: 7px;
+  margin: 10px;
+  border: 1px dotted hotpink;
+  border-radius: 5px;
+  background-color: white;
+  cursor: pointer;
+  text-align: center
+}
+
+footer {
+background-color: white;
+display: flex;
+flex-direction: column;
+align-items: center;
+margin: 20px 40px;
+border-radius: 5px;
+}
+
+
+
+
+
+  @media (min-width: 700px) {
+    body {
+      background-repeat: repeat; 
+      background-size: cover;
+    }
+
+    header {
+      margin: 120px 200px;
+    }
+
+    p {
+      font-size: 20px;
+    }
+
+    .questionWrapper {
+      margin: 120px 200px;
+    }
+
+    .gramsWrapper {
+      flex-direction: row;
+    }
+
+    footer {
+      margin: 120px 200px;
+    }
+  }
