@@ -1,7 +1,7 @@
 .radio-label {
     
     color: white;
-font: bold 36px 'Amatic SC';
+font: bold 24px 'Amatic SC';
 display: block; 
 }
 
@@ -71,4 +71,17 @@ li:hover .check {
   
  .radio-buttons:checked ~ label{
     color: #0DFF92;
+  }
+
+  @media (min-width: 700px) {
+    .radio-label {
+    font: bold 36px 'Amatic SC';
+    }
+
+    .button-label{
+        
+        font-size: 24px;
+       
+      }
+    
   }
