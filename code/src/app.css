@@ -5,7 +5,6 @@ body {
   padding: 30px 0;
 }
 
-
 form {
   background: rgba(54, 162, 158, 0.899);
   display: flex;
@@ -17,7 +16,6 @@ form {
   border-radius: 4px;
   box-shadow: 2px 2px rgb(39, 99, 101);
   padding: 5px;
-
 }
 
 .summery {
@@ -31,8 +29,6 @@ form {
   border-radius: 4px;
   box-shadow: 2px 2px rgb(39, 99, 101);
   padding: 5px;
-
-
 }
 
 .container {
@@ -83,8 +79,6 @@ form {
 }
 
 
-
-
 /****** MEDIA QUERIES FOR RESPONSIVE DESIGN ******/
 @media (min-width: 668px) {
 
@@ -103,17 +97,10 @@ form {
   .primary {
     margin-top: 100px;
   }
-
-  
-
 }
 
 @media (min-width: 900px) {
   .summery {
     padding: 20px;
   }
-
-
-
-
 }

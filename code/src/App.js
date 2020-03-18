@@ -20,18 +20,15 @@ export const App = () => {
     setShowSummery(true);
   };
 
-
   return (
     <div className="container">
       <label>
         <h1>My pet survey:</h1>
       </label>
       
-
       {!showSummery ? (
 
       <form onSubmit={handleSubmit}>
-      {/* <p>{name}</p> */}
       {/* <Agequest /> */}
       {/* <Selectanimal /> */}
       {/* <Myname /> */}
@@ -44,7 +41,6 @@ export const App = () => {
           onChange={event => setName(event.target.value)}
           required
           placeholder="Name please.."
-          // onKeyPress={(event) => event.key === "Enter" && event.preventDefault()}
           />
         </label>
 
@@ -79,7 +75,6 @@ export const App = () => {
         {/* <button type="submit">submit</button> */}
         <Button title="Submit" className="primary" type="submit" />
       </form>
-
       ) : (
       <Summery name={name} animal={animal} ageGroup={ageGroup}/> 
       )}
