@@ -7,7 +7,7 @@ export const FavoriteFood = (props) => {
 
   return (
     <label className="question">
-      <p>What is your favorite food?</p>
+      <h3>What is your favorite food?</h3>
       <input
         type='text'
         onChange={event => setFood(event.target.value)}

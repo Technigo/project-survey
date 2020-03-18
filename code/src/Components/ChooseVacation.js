@@ -13,6 +13,7 @@ export const ChooseVacation = (props) => {
         <input
         className="radio"
         type="radio"
+        name="radio"
         value={tour}
         onChange={(event) => setVacation(event.target.value)}
         required

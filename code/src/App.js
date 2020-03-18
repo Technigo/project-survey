@@ -43,7 +43,7 @@ export const App = () => {
           <DogOrCat animalLover={animalLover} setAnimalLover={setAnimalLover} />
           <ChooseVacation vacations={vacations} vacation={vacation} setVacation={setVacation} />
           <FavoriteFood food={food} setFood={setFood} />
-          <Button animalLover={animalLover} food={food}/>
+          <Button animalLover={animalLover} food={food} vacation={vacation}/>
 
         </form>
       </section>}

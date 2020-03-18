@@ -21,3 +21,9 @@
   -o-border-radius: 20px;
   cursor: pointer;
 }
+
+.btn:disabled {
+  background-color: #94d4b8;
+  border-style: none;
+  cursor: auto;
+}

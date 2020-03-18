@@ -63,6 +63,12 @@ p {
   -o-border-radius: 0 0 30px 30px;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+/* THIS IS THE ONLY CLASS THAT IS NOT IN APP.JS BUT IT IS IN ALL OF THE OTHER COMPONENTS */
 .question {
   padding: 1em;
   background-color: #ebf7f2;
@@ -74,7 +80,39 @@ p {
   -o-border-radius: 20px;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
+@media (max-width:460px) {
+  body {
+    background-color: #fff;
+    background-image: none;
+  }
+
+  .header {
+    margin-top: 0;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+  
+  .container {
+    margin: 0;
+    box-shadow: none;
+    border-radius: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    -ms-border-radius: 0;
+    -o-border-radius: 0;
+}
+}
+
+@media (max-width:387px) {
+  h3 {
+    font-size: 1em;
+  }
+
+  /*** Doesn't work.... ***/
+  .radio {
+    font-size: 2em;
+  }
 }
