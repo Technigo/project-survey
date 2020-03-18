@@ -7,17 +7,9 @@
 
 .summary {
   margin: 2% 10%;
-  display: flex;
-  flex-direction: column;
+  font-size: 0.8em;
 }
 
-.summary-q {
-  font-size: 1em;
+.summary-bold {
   font-weight: bold;
-  margin: 0;
-}
-
-.summary-a {
-  font-size: 1em;
-  margin: 0 0 15px 0;
 }

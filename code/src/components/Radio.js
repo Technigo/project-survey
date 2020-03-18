@@ -11,8 +11,7 @@ export const Radio = ({ value, name, setSomething, checked }) => {
         name={name}
         value={value}
         onChange={(event) => setSomething(event.target.value)}
-        checked={checked}
-        required />
+        checked={checked} />
       {value}
       <span className="radio-bttn" />
     </label>

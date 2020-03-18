@@ -24,8 +24,8 @@ input[type=radio] {
   width: 15px;
   height: 15px;
   border-radius: 50%;
-  border: 1px solid #000;
-  background: #f5f1ea;
+  border: 1px solid #152238;
+  background: #ececec;
 }
 
 .radio-bttn:after {
@@ -35,7 +35,7 @@ input[type=radio] {
 }
 
 .radio-container input:checked ~ .radio-bttn {
-  background: #97c0ff;
+  background: #152238;
 }
 
 .radio-container input:checked ~ .radio-bttn:after {
@@ -48,5 +48,5 @@ input[type=radio] {
   width: 7px;
   height: 7px;
   border-radius: 50%;
-  background: #f5f1ea;
+  background: #ececec;
 }

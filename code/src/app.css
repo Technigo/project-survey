@@ -1,12 +1,55 @@
+body {
+  color: #152238;
+}
+
 h2 {
-  margin-top: 30px;
-  font-size: 1.1rem;
+  margin-top: 0;
+  font-size: 1rem;
 }
 
 form {
   margin: 10%;
   display: flex;
   flex-direction: column;
+}
+
+.image-1 {
+  justify-self: center;
+  margin-top: 5%;
+  width: 80%;
+}
+
+.image-2 {
+  justify-self: center;
+  margin-top: 15%;
+  width: 60%;
+}
+
+.content-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.main-container {
+  flex: 1 0 auto;
+}
+
+form {
+  display: grid;
+  margin: 10%;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
 }
 
 /*** DROP DOWN ***/
@@ -17,27 +60,26 @@ form {
   font-size: 1rem;
   line-height: 1.3;
   margin: 0;
-  border: 1px solid #000;
   border-radius: 3px;
-  background: transparent;
+  background: #ececec;
   overflow: hidden;
 }
 
 .drop-down::after {
-  content: '\290b';
+  content: '\2b0d';
   position: absolute;
   top: 0;
   right: 0;
   height: 100%;
   padding: 5px 10px;
-  background: #000;
-  color: #f5f1ea;
+  background: #152238;
+  color: #ececec;
   pointer-events: none;
   transition: 0.25s all ease;
 }
 
 .drop-down:hover::after {
-  color: #97c0ff;
+  color: #62aeff;
 }
 
 select {
@@ -54,8 +96,7 @@ select {
 }
 
 select:focus {
-  outline: 2px solid #97c0ff;
-  outline-offset: -2px;
+  outline: 2px solid #152238;
 }
 
 /*** SUMMARY PAGE ***/
@@ -71,44 +112,35 @@ select:focus {
   width: 100%;
 }
 
-.summary-buttons {
-  display: flex;
-  margin-bottom: 5%;
-}
+/*** MEDIA QUERIES ***/
 
-/*** SUBMIT/RESET/GO BACK BUTTON ***/
+@media (min-width: 750px) {
+  form {
+    display: grid;
+    margin: 10%;
+    grid-template-columns: 50% 50%;
+  }
 
-button {
-  align-self: center;
-  font-size: 16px;
-  line-height: 1.3;
-  margin: 2em 1em;
-  padding: .6em 1.4em;
-  width: 130px;
-  border-radius: 3px;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  appearance: none;
-  box-shadow: none;
-  border: none;
-  background: #000;
-  color: #f5f1ea;
-}
+  .introduction {
+    justify-self: center;
+    align-self: center;
+  }
 
-button:hover {
-  background: rgba(0, 0, 0, 0.8);
-  /* box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
-  transition:.3s; */
-}
+  .intro-heading {
+    font-size: 1.4rem;
+  }
 
-button:active {
-  background: rgba(0, 0, 0, 0.8);
-  -moz-box-shadow: inset 0 0 10px #000;
-  -webkit-box-shadow: inset 0 0 10px #000;
-  box-shadow: inset 0 0 10px #000;
-  transition: .05s
-}
+  .summary-wrapper {
+    display: flex;
+  }
 
-button:disabled {
-  background: rgba(12, 12, 12, 0.2);
+  .image-1, .image-2 {
+    margin: 0;
+  }
+
+  .summary-content {
+    display: grid;
+    margin: 10% 0;
+    grid-template-columns: 50% 50%;
+  }
 }
