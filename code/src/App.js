@@ -77,13 +77,17 @@ export const App = (props) => {
                 <legend>first things first, are you coming?</legend>
                 <div className="container">
                   <label>
-                    <input type="radio"
+                    <input
+                      required
+                      type="radio"
                       value="yes"
                       onChange={() => setUserAttendance("Yes!")}
                       checked={userAttendance === "Yes!"} />
                   Yes!</label>
                   <label>
-                    <input type="radio"
+                    <input
+                      required
+                      type="radio"
                       value="no"
                       onChange={() => setUserAttendance("No...")}
                       checked={userAttendance === "No..."} />
@@ -119,9 +123,9 @@ export const App = (props) => {
             <fieldset className="question">
               <legend> {name}, what day will you attend the event</legend>
               <div className="container">
-                <label><input name="attendance" value="Friday" type="radio" onChange={event => setDayPreference(event.target.value)} />Friday</label>
-                <label><input name="attendance" value="Saturday" type="radio" onChange={event => setDayPreference(event.target.value)} />Saturday</label>
-                <label><input name="attendance" value="Sunday" type="radio" onChange={event => setDayPreference(event.target.value)} />Sunday</label >
+                <label><input name="attendance" value="Friday" type="radio" onChange={event => setDayPreference(event.target.value)} required />Friday</label>
+                <label><input name="attendance" value="Saturday" type="radio" onChange={event => setDayPreference(event.target.value)} required />Saturday</label>
+                <label><input name="attendance" value="Sunday" type="radio" onChange={event => setDayPreference(event.target.value)} required />Sunday</label >
               </div >
             </fieldset >
           )}
@@ -170,7 +174,9 @@ export const App = (props) => {
                 <legend>Are you ready for this?</legend>
                 <div className="feelings">
                   <label>
-                    <input type="radio"
+                    <input
+                      required
+                      type="radio"
                       value="excited"
                       onChange={() => setFeeling("excited")}
                       checked={feeling === "excited"}
@@ -180,7 +186,9 @@ export const App = (props) => {
                 </span>
                   </label>
                   <label>
-                    <input type="radio"
+                    <input
+                      required
+                      type="radio"
                       value="cool"
                       onChange={() => setFeeling("cool")}
                       checked={feeling === "cool"}
