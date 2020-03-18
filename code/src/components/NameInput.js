@@ -1,16 +1,17 @@
 import React, { useState } from 'react'
 
-export const NameInput = () => {
-  const [name, setName] = useState('')
+export const NameInput = props => {
+  const { name, setName } = props;
 
   return (
-    <form>
+    <label>
+      Whats your name?
       <input
         type="text"
-        onChange={(event) => setName(event.target.value)}
         value={name}
+        onChange={event => setName(event.target.value)}
       />
       <h3>My name is: {name}</h3>
-    </form>
+    </label>
   )
 }

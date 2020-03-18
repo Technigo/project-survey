@@ -1,10 +1,10 @@
 import React, { useState } from 'react'
 
-export const TypeForm = () => {
-  const [person, setPerson] = useState("");
+export const TypeForm = props => {
+  const { person, setPerson } = props;
 
   return (
-    <form>
+    <label>
       <select
         onChange={event => setPerson(event.target.value)}
         value={person}
@@ -16,7 +16,7 @@ export const TypeForm = () => {
 
       </select>
       <h3>I´m {person}</h3>
-    </form>
+    </label>
 
   )
 }
