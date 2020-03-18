@@ -7,21 +7,35 @@ h2 {
   font-size: 1rem;
 }
 
+.main-container {
+  display: flex;
+}
+
 form {
   margin: 10%;
   display: flex;
   flex-direction: column;
 }
 
+.introduction {
+  justify-self: center;
+  align-self: center;
+}
+
+.intro-heading {
+  font-size: 1.4rem;
+}
+
 .image-1 {
   justify-self: center;
-  margin-top: 5%;
+  align-self: center;
+  margin-top: 15%;
   width: 80%;
 }
 
 .image-2 {
   justify-self: center;
-  margin-top: 15%;
+  margin-top: 25%;
   width: 60%;
 }
 
@@ -101,9 +115,9 @@ select:focus {
 
 /*** SUMMARY PAGE ***/
 
-.summary-wrapper {
+/* .summary-wrapper {
   width: 100%;
-}
+} */
 
 .summary-content {
   display: flex;
@@ -119,11 +133,6 @@ select:focus {
     display: grid;
     margin: 10%;
     grid-template-columns: 50% 50%;
-  }
-
-  .introduction {
-    justify-self: center;
-    align-self: center;
   }
 
   .intro-heading {
