@@ -78,34 +78,3 @@ p {
   display: flex;
   flex-direction: column;
 }
-
-/*** DROPDOWN MENU ***/
-
-.dropdown {
-  width: 120px;
-  border-radius: 3px;
-  overflow: hidden;
-  border: 2px solid #5ce6aa;
-  background-color: #fff;
-  color: #11bf74;
-  padding: 0.3em;
-}
-
-.dropdown select {
-  border-radius: 40px;
-  padding: 5px 8px;
-  width: 130%;
-  border: none;
-  box-shadow: none;
-  background: transparent;
-  background-image: none;
-  -webkit-appearance: none;
-  -webkit-border-radius: 40px;
-  -moz-border-radius: 40px;
-  -ms-border-radius: 40px;
-  -o-border-radius: 40px;
-}
-
-.dropdown select:focus {
-  outline: none;
-}
