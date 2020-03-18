@@ -1,6 +1,6 @@
 import React from 'react'
-import { Header } from './Components/Header'
-import { Survey } from'./Components/Survey'
+import { Header } from './components/Header'
+import { Survey } from'./components/Survey'
 
 
 export const App = () => {

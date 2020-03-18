@@ -43,8 +43,6 @@ export const Survey = () => {
             event.preventDefault()
             window.scrollTo(0, 0)}}>
 
-          {/* .window.scrollTo(0, 0) */}
-
           <div className="completeSurvey">
 
             <div className="nameInput">
