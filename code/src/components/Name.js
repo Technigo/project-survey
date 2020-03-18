@@ -1,20 +1,19 @@
 import React, { useState } from 'react'
 
-export const Name = () => {
-  const [name, setName]=useState("")
-  const handleSubmit = (event) =>{
-    event.preventDefault()
-  }
+export const Name = ({ name, setName }) => {
+
+
   return (
-    <form>
+    <label>
       <h1>What nickname would you like to go by? {name}</h1>
       <input
-        type = "text"
-        onChange = {event => setName(event.target.value)}
-        value = {name}
+        type="text"
+        onChange={event => setName(event.target.value)}
+        value={name}
       >
       </input>
-    </form>
+    </label>
+
 
   )
 }
