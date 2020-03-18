@@ -3,7 +3,7 @@ import { QuestionSection } from "./QuestionSection"
 
 export const App = () => {
   
-  const groups = ["0-100", "100-200", "500+"]
+  const groups = ["0-100 g.", "100-200 g.", "500+ g."]
   const [grams, setGrams] = useState()
   const [sugaraddict, setSugaraddict] = useState(false)
   const [favoriteCandy, setFavoriteCandy] = useState("")
@@ -23,7 +23,7 @@ export const App = () => {
 
       <header>
         <h2>
-          WICH
+          WICH TYPE OF
         </h2>
         <h1>
           CANDY
@@ -41,7 +41,6 @@ export const App = () => {
               HOW MANY GRAMS OF LÖSGODIS DO YOU CONSUME PER WEEK?
             </h3>
             <div className="gramsWrapper">
-              Grams:
               {groups.map(group => (
               <label key={group}>
                 <input
@@ -135,11 +134,9 @@ export const App = () => {
       )}
 
       <footer>
-       <span>
        <p>
           🍭🍬🍪🍩🍿💕
         </p>
-       </span>
       </footer>
 
     </div>

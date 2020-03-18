@@ -146,6 +146,8 @@ border-radius: 5px;
 
     .gramsWrapper {
       flex-direction: row;
+      justify-content: space-around;
+      width: 80%;
     }
 
     footer {
