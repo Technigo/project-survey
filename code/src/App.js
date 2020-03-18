@@ -28,7 +28,7 @@ export const App = () => {
           <RadioButtons spiritAnimal={spiritAnimal} setSpiritAnimal={setSpiritAnimal} />
           <Select vacation={vacation} setVacation={setVacation} />
           <Checkbox isEighteen={isEighteen} setIsEighteen={setIsEighteen}/>
-          <Button type="submit" title="submit" />
+          <Button type="submit" title="submit" name={name} vacation={vacation} spiritAnimal={spiritAnimal} isEighteen={isEighteen}/>
         </form>) : (
           <Summary name={name} vacation={vacation} spiritAnimal={spiritAnimal} isEighteen={isEighteen} />)}
     </section>

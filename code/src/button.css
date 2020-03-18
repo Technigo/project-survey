@@ -6,3 +6,7 @@ button {
   color: #f1e8e6;
   font-size: 16px;
 }
+
+button:disabled {
+  opacity: 0.6;
+}
