@@ -1,13 +1,23 @@
-# Survey form with React
+# Nut survey
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Survey form built with React, using the `useState` hook.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I focused on making the components completely reusable, which was neccessary since I didn't decide on a concept for the survey until very late in the process. I created the following input components:
+
+- Text input
+- Radio buttons
+- Select drop-down
+- Checkbox
+
+The form shows one input at a time, using state to keep count of the questions. This is also visually rendered to the user.
+
+### If I had more time I would:
+- Make the `questionsTotal` variable dynamically set
+- Add a progress bar 
+- Make the button disabled before a question is answered
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://nut-survey.netlify.com/
