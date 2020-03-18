@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was our second React-project at the Technigo bootcamp. The assignment: to make a survey in React! I ended up doing a survey to join a fake online platform.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The focus of this project was to make a form using different React components and to use the state hook and props. It was a fun project and it was excitng to learn how to use state in React.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Click here to join my online community: annas-survey.netlify.com 
