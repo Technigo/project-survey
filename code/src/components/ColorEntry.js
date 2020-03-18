@@ -1,13 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Dropdown = () => {
-  const [color, setColor] = useState('')
-
+export const ColorEntry = ({color, setColor}) => {
   return (
-    <form>
+    <label>
       <select
-      onChange={event => setColor(event.target.value)}
-      value={color}
+        onChange={event => setColor(event.target.value)}
+        value={color}
       >
         <option value=''>Select Color</option>
         <option value="blue">Blue</option>
@@ -15,6 +13,7 @@ export const Dropdown = () => {
         <option value='yellow'>Yellow</option>
         <option value='green'>Green</option>
       </select>
-    </form>
+    </label>
   )
 }
+
