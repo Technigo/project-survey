@@ -1,3 +1,5 @@
+/* –– Variables –– */
+
 :root {
   --border-radius-layout: 40px;
   --border-radius-form: 5px;
@@ -9,6 +11,9 @@
   --color-accent: #df7861;
   --color-text: #827765;
 }
+
+
+/* –– Genereal styles –– */
 
 * {
   box-sizing: border-box;
@@ -33,6 +38,9 @@ div#root,
   justify-content: space-between;
 }
 
+
+/* –– Header –– */
+
 header {
   flex: 0 1 auto;
   padding: .5rem 2rem;
@@ -42,6 +50,9 @@ h1 {
   margin: 0;
   font-size: 3rem;
 }
+
+
+/* –– Main –– */
 
 .main-content {
   flex: 1 1 auto;
@@ -70,6 +81,8 @@ h1 {
 }
 
 
+/* –– Footer –– */
+
 footer {
   flex: 0 1 auto;
   margin-top: 1.5rem;
@@ -78,5 +91,4 @@ footer {
   background-color: var(--color-dark);
   border-top-left-radius: var(--border-radius-layout);
   border-top-right-radius: var(--border-radius-layout);
-  
 }

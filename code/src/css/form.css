@@ -1,3 +1,5 @@
+/* –– Form  styles–– */
+
 form {
   flex: 0 1 auto;
 }
@@ -16,7 +18,6 @@ label:not(.radio-label) {
   font-size: 1.6rem;
 }
 
-
 input[type=text],
 select{
   height: 48px;
@@ -29,11 +30,12 @@ select{
 button {
   display: block;
   height: 48px;
-  background-color: var(--color-bright);
-  border: none;
-  padding: .8rem 1.2rem;
-  border-radius: var(--border-radius-form);
   margin-top: 2rem;
+  
+  padding: .8rem 1.2rem;
+  background-color: var(--color-bright);
+  border-radius: var(--border-radius-form);
+  border: none;
   transition: all .2s ease-in-out;
   cursor: pointer;
 }
