@@ -48,7 +48,7 @@ export const App = () => {
 
               {count === 1 && (
                 <InputText
-                  label="What's your name?"
+                  label="Hi! Tell us your name"
                   id="inputName"
                   placeholder="Name"
                   state={name}
