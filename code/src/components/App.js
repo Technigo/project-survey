@@ -1,10 +1,11 @@
 import React, { useState } from 'react';
 import './app.css';
-import { DisplayAnswer } from './DisplayAnswers';
+import { Buttons } from './Buttons';
+import { QuizStart } from './QuizStart';
 import { FormQ } from './FormQ';
 import { DropDownQ } from './DropDownQ';
 import { RadioButtonQ } from './RadioButtonQ';
-import { Buttons } from './Buttons';
+import { DisplayAnswer } from './DisplayAnswers';
 
 export const App = () => {
 	const [ question, setQuestion ] = useState('Question1');
@@ -21,11 +22,7 @@ export const App = () => {
 		<section className="surveyContainer">
 			{question === 'Question1' && (
 				<section className="questionContainer">
-					<h1>Are you ready for a dog quiz?</h1>
-					<img className="dogGif" src={require('../images/roundDog.gif')} alt="Very round dog" />
-					<div className="buttonContainer">
-						<button onClick={() => setQuestion('Question2')}>Lets get started!</button>
-					</div>
+					<QuizStart setQuestion={setQuestion} btnText="Lets get started!" />
 				</section>
 			)}
 			{question === 'Question2' && (

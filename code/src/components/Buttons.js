@@ -4,9 +4,10 @@ export const Buttons = ({ setQuestion, back, forward, name, leftBtnText, rightBt
 	return (
 		<div className="buttonContainer">
 			<button onClick={() => setQuestion(back)}>{leftBtnText}</button>
-			<button type="submit" disabled={name === ''} onClick={() => setQuestion(forward)}>
+			<button type="submit" onClick={() => setQuestion(forward)}>
 				{rightBtnText}
 			</button>
 		</div>
 	);
 };
+// disabled={name === ''}
