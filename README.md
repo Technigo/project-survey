@@ -8,4 +8,4 @@ The focus of this project was to make a form using different React components an
 
 ## View it live
 
-Click here to join my online community: annas-survey.netlify.com 
+Click here to join my online community: https://annas-survey.netlify.com/
