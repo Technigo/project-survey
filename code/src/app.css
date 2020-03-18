@@ -5,7 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: center;
     position: relative;
     
 }
@@ -26,29 +26,10 @@ form {
     height: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: flex-start;
 }
 
-
-
-.button {
-padding: 10px;
-border-radius: 5%;
-border: none;
-font-size: 20px;
-background: rgb(226, 188, 116);
-color: rgb(19, 93, 143);
-margin-top: 24px;
-justify-self: center;   
-margin-left: 10px;
-}
-.button:hover {
-    opacity: .8;
-    cursor: pointer;
-}
-.button:active {
-    transform:translateY(5px)
-}
 .label-wrapper {
     display: flex;
     flex-direction: column;
@@ -67,64 +48,6 @@ margin-left: 10px;
     top: 5px;
 }
 
-.text-field {
-    border: none;
-    border-bottom: 3px solid white;
-    padding: 5px;
-    margin-top: 10px;
-    background: transparent;
-    color: white;
-    font: bold 30px 'Amatic SC';
-    width: 100%;
-  
-    
-  }
-  .text-field:valid {
-    
-    background-image: url(./inputTick.png);
-    background-position: right;
-    background-size: 30px;
-    background-repeat: no-repeat;
-    
-  }
-
-  .drop-down {
-      display: block;
-    font-size: 13px;
-      padding: 8px 33px 8px 5px;
-      background: transparent;
-      border: 1px solid #ccc;
-      border-radius: 6px;
-      overflow-x: hidden;
-      background-image: url('./dropdown.png');
-      background-repeat: no-repeat;
-      background-size: 25px;
-      background-position: 95% center;
-      
-    }
-
-    .drop-down-options {
-        background: transparent;
-        margin: 0;
-        line-height: 1;
-        border: 0;
-        padding: 0;
-        border-radius: 0;
-        width: 140%;
-        z-index: 10;
-        font-size: 20px;
-        color: white;
-    }
-
-.user-response {
-    margin: 24px;
-    width: 60%;
-}
- .summary:hover {
-     color: yellow;
- }
- 
-  
 @media (min-width: 700px) {
     .label-text {
         font: bold 36px 'Amatic SC';

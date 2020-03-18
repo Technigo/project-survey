@@ -1,22 +1,14 @@
-import React, { useState } from "react"
+import React from "react"
+import "./textfield.css"
 
 
 export const TextField = (props) => {
-
-    const [book, setBook] = useState('')
-
+    const { book, setBook } = props
     return (
-        <section>
-            {props.count < 3 &&
-                <label>
-                    What is your favourite book?
-     <input required type="text" value={book} onChange={(event) => setBook(event.target.value)} />
-                </label>
+        <label  >
+            <p className="label-text"><span className="arrow">→</span>And what is your favourite book?</p>
+            <input className="text-field" type="text" value={book} onChange={(event) => setBook(event.target.value)} required />
+        </label>
 
-            }
-            {props.count === 3 &&
-                <p>Your favourite book is: {book}</p>}
-        </section>
     )
-
 }

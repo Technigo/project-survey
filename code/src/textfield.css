@@ -1,0 +1,20 @@
+.text-field {
+    border: none;
+    border-bottom: 3px solid white;
+    padding: 5px;
+    margin-top: 10px;
+    background: transparent;
+    color: white;
+    font: bold 30px 'Amatic SC';
+    width: 100%;
+  
+    
+  }
+  .text-field:valid {
+    
+    background-image: url(./inputTick.png);
+    background-position: right;
+    background-size: 30px;
+    background-repeat: no-repeat;
+    
+  }

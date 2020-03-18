@@ -1,0 +1,18 @@
+.button {
+    padding: 10px;
+    border-radius: 5%;
+    border: none;
+    font-size: 20px;
+    background: rgb(226, 188, 116);
+    color: rgb(19, 93, 143);
+    margin-top: 24px;
+    justify-self: center;   
+    margin-left: 10px;
+    cursor: pointer;
+    }
+    .button:disabled {
+        opacity: .5;
+    }
+    .button:active {
+        transform:translateY(5px)
+    }
