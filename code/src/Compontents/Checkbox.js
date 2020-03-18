@@ -9,7 +9,7 @@ export const Checkbox = ({ agree, setAgree }) => {
       <p>Do you agree that you are an awesome developer?</p>
       <label>
         <input
-          type="checkbox"
+          type='checkbox'
           checked={agree}
           onChange={event => setAgree(event.target.value)}
         />

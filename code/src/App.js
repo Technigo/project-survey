@@ -8,11 +8,11 @@ import { Button } from 'Compontents/Button'
 import './index.css'
 
 export const App = () => {
-  const [name, setName] = useState("")
+  const [name, setName] = useState('')
   const [section, setSection] = useState(0)
   const [radioInput, setRadioInput] = useState()
   const [agree, setAgree] = useState(false)
-  const [tech, setTech] = useState("")
+  const [tech, setTech] = useState('')
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -20,7 +20,7 @@ export const App = () => {
   };
 
   return (
-    <section className="survey-card">
+    <section className='survey-card'>
       <form onSubmit={handleSubmit}>
         {section === 0 &&
           <Input name={name} setName={setName} />
