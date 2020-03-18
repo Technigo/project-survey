@@ -40,7 +40,7 @@ export const App = () => {
           <p>Which sauce do you prefer for your pizza?</p>
           <select className="formDropdown"
             onChange={event => setSauce(event.target.value)}
-            value={pizza}
+            value={sauce}
           >
             <option value="">Choose your favorite!</option>
             <option value="garlic">Garlic</option>
