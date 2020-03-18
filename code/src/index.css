@@ -28,17 +28,18 @@ h1 {
   color: white;
   font-size: 85px;
   margin-top: -35px;
-  line-height: 80px;
+  line-height: 90px;
   font-weight: 900;
   height: 700px;
+  text-align: center;
 }
 
 h2 {
   font-family: 'Playfair Display', serif;
-  font-size: 50px;
+  font-size: 70px;
   color: white;
   font-weight: 900;
-  margin-top: 180px;
+  margin-top: 130px;
 }
 
 h3 {
@@ -50,19 +51,19 @@ h3 {
 
 h4 {
   font-family: Helvetica Neue;
-  font-size: 27px;
-  font-weight: 200;
-  line-height: 0px;
+  font-size: 35px;
+  font-weight: 300;
   margin-bottom: 34px;
   margin-top: 30px;
+  text-align: center;
 }
 
 h5 {
   font-family: Helvetica Neue;
-  font-size: 20px;
+  font-size: 30px;
   font-weight: 200;
-
-  margin-bottom: 2px;
+  margin-bottom: 0px;
+  margin-top: 15px;
 }
 
 p {
@@ -88,7 +89,7 @@ p {
   font-weight: 100;
   font-size: 18px;
   font-weight: 300;
-  width: 550px;
+  width: 640px;
   margin: auto;
 }
 
@@ -101,15 +102,14 @@ p {
 }
 
 .colorSelector {
-  font-size: 12px;
+  font-size: 14px;
   width: 140px;
   height: 30px;
-  padding: 7px;
   border-radius: 5px;
-  font-weight: 600;
+  font-weight: 800;
   outline: none;
   border: none;
-  color: grey;
+  color: rgb(75, 73, 73);
   background-color: rgb(247, 236, 234);
   font-weight: 400;
 }
@@ -136,9 +136,10 @@ p {
 }
 
 label {
-  font-size: 14px;
+  font-size: 20px;
   letter-spacing: 1px;
   cursor: pointer;
+  font-weight: 300;
 }
 
 .nameSection {
@@ -148,28 +149,18 @@ label {
 }
 
 .textinput {
-  font-size: 12px;
+  font-size: 14px;
   width: 140px;
-  padding: 7px;
+  padding: 8px;
   border-radius: 5px;
   font-weight: 600;
   outline: none;
   border: none;
   color: black;
   background-color: rgb(247, 236, 234);
-  font-weight: 400;
+  font-weight: 600;
   margin-right: 10px;
   margin-left: 10px;
-}
-
-.buttonSection {
-  font-size: 10px;
-  width: 300px;
-  padding: 8px;
-  border-radius: 5px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 .button {
@@ -184,12 +175,13 @@ label {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 20px;
   margin: 4px 2px;
   cursor: pointer;
   border-radius: 6px;
   font-weight: 700;
-  box-shadow: 3px 4px 4px rgb(165, 102, 102);
+  box-shadow: 3px 4px 4px rgb(163, 98, 98);
+  margin-bottom: 50px;
 }
 
 .summarySection {
@@ -205,10 +197,10 @@ label {
 
 .link {
   font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  color: white;
+  font-size: 25px;
+  color: rgb(228, 127, 127);
   font-weight: 900;
-  margin-bottom: 2px;
+  margin-bottom: 70px;
   margin-top: 50px;
   text-decoration: none;
   text-align: center;
@@ -217,6 +209,11 @@ label {
 /* MEDIA QUERY mobile*/
 @media (max-width:800px) {
 
+  .formSection {
+    width: 80%;
+    margin: auto;
+  }
+
   h1 {
     font-size: 55px;
     line-height: 55px;
@@ -224,7 +221,6 @@ label {
 
   .topSection {
     height: 240px;
-
   }
 
   .colorSection {
@@ -236,7 +232,7 @@ label {
   }
 
   h4 {
-    font-size: 22px;
+    font-size: 32px;
     font-weight: 300;
     margin-bottom: 24px;
     margin-top: 6px;
@@ -256,6 +252,8 @@ label {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    margin-top: 100px;
+    margin-bottom: 30px;
   }
 
   .textinput {
@@ -269,12 +267,21 @@ label {
   }
 
   h2 {
-    margin-top: 30px;
+    margin-top: 50px;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
   }
 
   h5 {
-    margin-top: 10px;
+    font-weight: 300;
+    font-size: 25px;
+    margin-top: 6px;
     text-align: center;
   }
 
+  .link {
+    font-size: 25px;
+    margin-bottom: 70px;
+  }
 }

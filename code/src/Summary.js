@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import lyckorosa from "lyckorosa.png";
 
 export const Summary = (props) => {
@@ -11,7 +11,7 @@ export const Summary = (props) => {
       {props.present && <h5>Den kommer i en fin presentförpackning</h5>}
       <h5>Du är {props.age}.</h5>
       <img src={lyckorosa} className="imageAngel" alt="lyckoängel"></img>
-      <a className="link" href="">Tillbaka till Lovisas lyckoänglar</a>
+      <a className="link" href="https://priceless-joliot-3fbea9.netlify.com/">Tillbaka till Lovisas lyckoänglar</a>
     </section >
   );
 }

@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is to use React to build a survey form. The survey should consist of at least 3 questions. One question should use radio buttons and one should use a select dropdown. When the user presses submit, they should see a summary of their answers. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by making components of the different questions but finally I put the questions in one component and the summary in another. I used props in the summary section and states in the app component.
+
+If I had more time I would have made different pages for each question. I would have styled the radio buttons and the checkboxes much more, for example with bounce animations and other colors. I would also add more images.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://priceless-joliot-3fbea9.netlify.com/

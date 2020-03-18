@@ -12,7 +12,7 @@ export const App = () => {
   const [delivery2, setDelivery2] = useState(false);
   const [delivery3, setDelivery3] = useState(false);
 
-  const ages = ["0–9 år", "10–13 år", "14–15 år", "16–18 år", "19 år och uppåt"];
+  const ages = ["0–10 år", "11–14 år", "15–18 år", "19 år och uppåt"];
 
   const handleSubmit = event => {
     event.preventDefault();
