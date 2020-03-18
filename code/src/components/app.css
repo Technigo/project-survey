@@ -75,7 +75,6 @@ h4:hover {
 /* STYLING FOR THE CONTAINER FOR ALL QUESTIONS */
 .questionContainer {
 	border-radius: 3px;
-	width: 98%;
 	height: 95vh;
 	margin: 0 auto;
 	background-color: #f4eeff;
@@ -229,17 +228,16 @@ label {
 }
 
 @media (min-width: 668px) {
-	body {
-		align-items: flex-start;
-		margin-top: 40px;
-	}
-
 	.surveyContainer {
-		width: 450px;
+		width: 750px;
 	}
 	.questionContainer {
-		width: 450px;
-		height: 650px;
+		width: 750px;
+		height: 750px;
+	}
+
+	.dogGif {
+		max-width: 50%;
 	}
 
 	form {

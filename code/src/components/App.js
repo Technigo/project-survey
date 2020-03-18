@@ -14,10 +14,6 @@ export const App = () => {
 	const dogNumber = [ '1-3', '4-6', '7-10' ];
 	const [ amountOfDogs, setAmountOfDogs ] = useState('');
 
-	// const handleSubmit = (event) => {
-	// 	event.preventDefault();
-	// };
-
 	return (
 		<section className="surveyContainer">
 			{question === 'Question1' && (
