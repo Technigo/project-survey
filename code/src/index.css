@@ -3,22 +3,19 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
-  font-family: 'Lobster Two', cursive;
-  font-family: 'Oleo Script', cursive;
-  font-family: 'Galada', cursive;
-  font-family: 'Croissant One', cursive;
-  font-family: 'Domine', serif;
   font-family: 'Playfair Display', serif;
-  font-family: 'Norican', cursive;
-  font-family: 'Molle', cursive;
 
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
-  background-color: rgb(252, 194, 184)
+  background-color: rgb(252, 194, 184);
+  margin: 0;
 }
 
 code {
@@ -26,32 +23,258 @@ code {
     monospace;
 }
 
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: white;
+  font-size: 85px;
+  margin-top: -35px;
+  line-height: 80px;
+  font-weight: 900;
+  height: 700px;
+}
+
+h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 50px;
+  color: white;
+  font-weight: 900;
+  margin-top: 180px;
+}
+
+h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 35px;
+  color: rgb(228, 127, 127);
+  font-weight: 900;
+}
+
+h4 {
+  font-family: Helvetica Neue;
+  font-size: 27px;
+  font-weight: 200;
+  line-height: 0px;
+  margin-bottom: 34px;
+  margin-top: 30px;
+}
+
+h5 {
+  font-family: Helvetica Neue;
+  font-size: 20px;
+  font-weight: 200;
+
+  margin-bottom: 2px;
+}
+
+p {
+  font-family: Helvetica Neue;
+  text-align: center;
+  font-weight: 600;
+}
+
+.topSection {
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 400px;
+}
+
+.formSection {
+  font-family: "Helvetica Neue";
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 100;
+  font-size: 18px;
+  font-weight: 300;
+  width: 550px;
+  margin: auto;
+}
+
+.colorSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 40px;
+}
+
+.colorSelector {
+  font-size: 12px;
+  width: 140px;
+  height: 30px;
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: grey;
+  background-color: rgb(247, 236, 234);
+  font-weight: 400;
+}
+
+.ageSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 14px;
+  padding-bottom: 40px;
+}
+
+.ageButton {
+  margin-left: 10px;
+}
+
+.extraSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 40px;
+  height: 100px;
+  width: 600px;
+}
+
+label {
+  font-size: 14px;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.nameSection {
+  height: 30px;
+  padding-bottom: 60px;
+  margin-top: 20px;
+}
+
+.textinput {
+  font-size: 12px;
+  width: 140px;
+  padding: 7px;
+  border-radius: 5px;
+  font-weight: 600;
+  outline: none;
+  border: none;
+  color: black;
+  background-color: rgb(247, 236, 234);
+  font-weight: 400;
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.buttonSection {
+  font-size: 10px;
+  width: 300px;
+  padding: 8px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
 .button {
   display: block;
 }
 
-h1 {
-  font-family: 'Playfair Display', serif;
+.submitButton {
+  background-color: rgb(228, 127, 127);
+  border: none;
   color: white;
-  font-size: 50px;
-  margin: 0;
-  line-height: 0px;
-  font-weight: 900;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 6px;
+  font-weight: 700;
+  box-shadow: 3px 4px 4px rgb(165, 102, 102);
 }
 
-h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 25px;
-  color: white;
-  font-weight: 900;
-
-}
-
-.topSection {
-  height: 150px;
+.summarySection {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.imageAngel {
+  height: 200px;
+  margin-top: 40px;
+}
+
+.link {
+  font-family: 'Playfair Display', serif;
+  font-size: 20px;
+  color: white;
+  font-weight: 900;
+  margin-bottom: 2px;
+  margin-top: 50px;
+  text-decoration: none;
+  text-align: center;
+}
+
+/* MEDIA QUERY mobile*/
+@media (max-width:800px) {
+
+  h1 {
+    font-size: 55px;
+    line-height: 55px;
+  }
+
+  .topSection {
+    height: 240px;
+
+  }
+
+  .colorSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+
+  h4 {
+    font-size: 22px;
+    font-weight: 300;
+    margin-bottom: 24px;
+    margin-top: 6px;
+  }
+
+  .extraSection {
+    height: 50px;
+  }
+
+  .ageButton {
+    margin-left: 0px;
+    display: flex;
+    align-items: center;
+  }
+
+  .nameSection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .textinput {
+    margin: 5px;
+  }
+
+  .summarySection {
+    width: 250px;
+    display: flex;
+    margin: auto;
+  }
+
+  h2 {
+    margin-top: 30px;
+  }
+
+  h5 {
+    margin-top: 10px;
+    text-align: center;
+  }
 
 }

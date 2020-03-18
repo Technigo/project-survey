@@ -12,11 +12,7 @@ export const App = () => {
   const [delivery2, setDelivery2] = useState(false);
   const [delivery3, setDelivery3] = useState(false);
 
-
-
-
-  const ages = ["0–9 år", "10–13 år", "14–15 år", "16–18 år", "19 år och uppåt"]
-
+  const ages = ["0–9 år", "10–13 år", "14–15 år", "16–18 år", "19 år och uppåt"];
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -24,110 +20,105 @@ export const App = () => {
   };
 
   return (
-
     <div className="App">
-      <section className="topSection">
-        <h3>Välkommen till</h3>
-        <h1>Lovisas lyckoänglar</h1>
-      </section>
-      <form onSubmit={handleSubmit}>
+      {!showSummary ? (
+        <form className="formSection" id="formSection" onSubmit={handleSubmit}>
+          <section className="topSection">
+            <h3>Välkommen till</h3>
+            <h1>Lovisas lyckoänglar</h1>
 
-        <label>
-          Namn:
-        <input
-            type="text"
-            onChange={event => setName(event.target.value)}
-            value={name}
-            required
-          />
-        </label>
-        <label>
-          Efternamn:
-        <input
-            type="text"
-            onChange={event => setName2(event.target.value)}
-            value={name2}
-            required
-          />
-        </label>
-
-        <section>
-          Din ålder
-      {ages.map(age => (
-          <label key={age}>
-            <input
-              type="radio"
-              name="age"
-              value={age}
-              onChange={event => setageGroup(event.target.value)}
-              checked={ageGroup === age}
-              required
-            />
-            {age}
-          </label>
-        ))}
-        </section>
-
-        <section>
-          <select
-            onChange={event => setColor(event.target.value)}
-            value={color}
-            required
-          >
-            <option value="">Vilken färgkombination vill du ha?"</option>
-            <option value="Rosa-rosa">Rosa-rosa</option>
-            <option value="Rosa-röd">Rosa-röd</option>
-            <option value="Rosa-orange">Rosa-orange</option>
-            <option value="Rosa-lila">Rosa-lila</option>
-            <option value="Rosa-vit">Rosa-vit</option>
-            <option value="Orange-rö">Orange-röd</option>
-            <option value="Orange-lila">Orange-lila</option>
-            <option value="Orange-gul">Orange-gul</option>
-            <option value="Gul-röd">Gul-röd</option>
-            <option value="Gul-vit">Gul-vit</option>
-            <option value="Vit-vit">Vit-vit</option>
-            <option value="Svart-vit">Svart-vit</option>
-            <option value="Vit-grå">Vit-grå</option>
-            <option value="Grå-grå">Grå-grå</option>
-            <option value="Svart-grå">Svart-grå</option>
-
-          </select>
-        </section>
-
-        <section>
-
-          <label>
-            Flourescerande pärlor?
-        <input
-              type="checkbox"
-              checked={delivery1}
-              onChange={event => setDelivery1(event.target.checked)}
-            />
-          </label>
-          <label>
-            Strasshatt?
-        <input
-              type="checkbox"
-              checked={delivery2}
-              onChange={event => setDelivery2(event.target.checked)}
-            />
-          </label>
-          <label>
-            Presentförpackning?
-        <input
-              type="checkbox"
-              checked={delivery3}
-              onChange={event => setDelivery3(event.target.checked)}
-            />
-          </label>
-        </section>
-
-        <button type="submit">submit</button>
-      </form >
-
-      {showSummary && <Summary name={name} age={ageGroup} color={color} fluor={delivery1} strasshatt={delivery2} present={delivery3} />}
-
+          </section>
+          <section className="colorSection" id="colorSection">
+            <h4> Vilken färgkombination vill du ha?</h4>
+            <select className="colorSelector"
+              onChange={event => setColor(event.target.value)}
+              value={color}
+              required>
+              <option value="">Välj</option>
+              <option value="rosa">rosa</option>
+              <option value="rosa-röda">rosa-röda</option>
+              <option value="rosa-orange">rosa-orange</option>
+              <option value="rosa-lila">rosa-lila</option>
+              <option value="rosa-vita">rosa-vit</option>
+              <option value="orange-röda">orange-röd</option>
+              <option value="orange-lila">orange-lila</option>
+              <option value="orange-gula">orange-gul</option>
+              <option value="gul-röda">gul-röd</option>
+              <option value="gul-vita">gul-vit</option>
+              <option value="vita">vit-vit</option>
+              <option value="svart-vita">svart-vit</option>
+              <option value="vit-gråa">vit-grå</option>
+              <option value="gråa">grå-grå</option>
+              <option value="svart-gråa">svart-grå</option>
+            </select>
+          </section>
+          <section className="ageSection" id="age">
+            <h4> Hur gammal är du?</h4>
+            <div>{ages.map(age => (
+              <label className="ageButton" key={age}>
+                <input
+                  type="radio"
+                  name="age"
+                  value={age}
+                  onChange={event => setageGroup(event.target.value)}
+                  checked={ageGroup === age}
+                  required />
+                {age}
+              </label>
+            ))}
+            </div>
+          </section>
+          <section className="extraSection" id="extraSection">
+            <h4>Beställ extra</h4>
+            <article className="checkbox">
+              <label className="ageButton">
+                <input
+                  type="checkbox"
+                  checked={delivery1}
+                  onChange={event => setDelivery1(event.target.checked)}
+                />Flourescerande pärlor
+              </label>
+              <label className="ageButton">
+                <input
+                  type="checkbox"
+                  checked={delivery2}
+                  onChange={event => setDelivery2(event.target.checked)}
+                />Strasshatt
+              </label>
+              <label className="ageButton">
+                <input
+                  type="checkbox"
+                  checked={delivery3}
+                  onChange={event => setDelivery3(event.target.checked)}
+                />Presentförpackning
+              </label>
+            </article>
+          </section>
+          <section className="nameSection" id="nameSection">
+            <label>
+              <input className="textinput"
+                type="text"
+                onChange={event => setName(event.target.value)}
+                value={name}
+                placeholder="Förnamn"
+                required />
+            </label>
+            <label>
+              <input className="textinput"
+                type="text"
+                onChange={event => setName2(event.target.value)}
+                value={name2}
+                placeholder="Efternamn"
+                required />
+            </label>
+          </section>
+          <section className="buttonSection">
+            <button className="submitButton" type="submit">SUBMIT</button>
+          </section>
+        </form>
+      ) : (
+          <Summary name={name} age={ageGroup} color={color} fluor={delivery1} strasshatt={delivery2} present={delivery3} />
+        )}
     </div>
   );
 };
-
