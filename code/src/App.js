@@ -12,33 +12,10 @@ import './app.css'
 
 /* Variables */
 
-const likeBlue = ['Yes', 'No', 'Only certain shades']
-const blueFeelings = ['Positive', 'Negative', 'Neutral', 'Mixed']
-const optionValueEmpty = ''
-const optionValue0 = '~ Select option ~'
-const optionValue1 = 'Blue are the feelings that live inside me'
-const optionValue2 = 'I’m blue da ba dee da ba daa'
-const optionValue3 = 'That’s sad'
-const blueEmpty = ''
-const blue0 = '~ Select option ~'
-const blue1 = 'Anthony Costa'
-const blue2 = 'Duncan James'
-const blue3 = 'Lee Ryan'
-const blue4 = 'Simon Webbe'
-
-const optionValues = [
-  { value: optionValueEmpty, text: optionValue0 },
-  { value: optionValue1, text: optionValue1 },
-  { value: optionValue2, text: optionValue2 },
-  { value: optionValue3, text: optionValue3 }
-]
-const blueMembers = [
-  { value: blueEmpty, text: blue0 },
-  { value: blue1, text: blue1 },
-  { value: blue2, text: blue2 },
-  { value: blue3, text: blue3 },
-  { value: blue4, text: blue4 }
-]
+const workExcperiences = ['0-1 years', '2-3 years', '3-5 years', '5-10 years', '> 10 years']
+const codeTimes = ['early mornings', 'late nights', 'all day long', 'during REM sleep']
+const workModes = ['teamwork', 'individual work', 'a combination of teamwork and individual work']
+const frontendFrameworks = ['React.js', 'Angular', 'AngularJS', 'Vue.js', 'jQuery', 'Ember.js', 'Backbone.js']
 
 export const App = () => {
   const [question, setQuestion] = useState(1)
@@ -48,14 +25,14 @@ export const App = () => {
   const previousQuestion = () => {
     setQuestion(question - 1)
   }
-  const [mind, setMind] = useState('')
-  const [likeScale, setLikeScale] = useState()
-  const [feelingScale, setFeelingScale] = useState()
-  const [optionBlue, setOptionBlue] = useState('')
-  const [optionBlueMember, setOptionBlueMember] = useState('')
+  const [name, setName] = useState('')
+  const [workExperience, setWorkExperience] = useState('')
+  const [codeTime, setCodeTime] = useState('')
+  const [workMode, setWorkMode] = useState('')
+  const [framework, setframework] = useState('')
   const [submit, setSubmit] = useState(false)
-  /* const enabled = [feelingScale, setFeelingScale] !== optionValues[0]; */
-  const handleSubmit = event => {
+
+  const handleSubmit = (event) => {
     event.preventDefault()
     setSubmit(true)
   }
@@ -69,87 +46,84 @@ export const App = () => {
           <form onSubmit={handleSubmit}>
 
             {question === 1 && (
-              <label>
-                <h2>What comes into mind when you think about the color Blue?</h2>
+              <section className="question-c">
                 <Text
-                  value={mind}
-                  onChange={event => setMind(event.target.value)}
-                  placeholder="Enter your thoughts here..." />
-              </label>
+                  title="Start by entering your name"
+                  value={name}
+                  setText={setName}
+                  placeholder="Enter your name here..." />
+                <button type="button" onClick={nextQuestion} disabled={!name}>Next</button>
+              </section>
+
             )}
 
             {question === 2 && (
               <label>
-                <h2>Do you like the color Blue?</h2>
-                {likeBlue.map(like => (
+                <h2>How long have you been working with frontend development?</h2>
+                {workExcperiences.map(experience => (
                   <Radio
-                    value={like}
-                    name="like"
-                    onChange={event => setLikeScale(event.target.value)}
-                    checked={likeScale === like} />
+                    value={experience}
+                    name="experience"
+                    setSomething={setWorkExperience}
+                    checked={workExperience === experience} />
                 ))}
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+                <button type="button" onClick={nextQuestion} disabled={!workExperience}>Next</button>
               </label>
             )}
 
             {question === 3 && (
               <label>
-                <h2>What are your feelings associated with the color Blue?</h2>
-                {blueFeelings.map(feeling => (
+                <h2>When do you prefer to code?</h2>
+                {codeTimes.map(time => (
                   <Radio
-                    value={feeling}
-                    name="feeling"
-                    onChange={event => setFeelingScale(event.target.value)}
-                    checked={feelingScale === feeling} />
+                    value={time}
+                    name="time"
+                    setSomething={setCodeTime}
+                    checked={codeTime === time} />
                 ))}
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+                <button type="button" onClick={nextQuestion} disabled={!codeTime}>Next</button>
               </label>
             )}
 
             {question === 4 && (
               <label>
-                <h2>Blue are the words I say and what I think</h2>
+                <h2>Does teamwork make the dream work?</h2>
                 <div className="drop-down">
                   <select
-                    value={optionBlue}
-                    onChange={event => setOptionBlue(event.target.value)}
+                    value={workMode}
+                    onChange={event => setWorkMode(event.target.value)}
                     required>
-                    {optionValues.map(option => (
-                      <Option value={option.value} text={option.text} />
+                    <option value="">select</option>
+                    {workModes.map(mode => (
+                      <Option value={mode} text={mode} />
                     ))}
                   </select>
                 </div>
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+                <button type="button" onClick={nextQuestion} disabled={!setCodeTime}>Next</button>
               </label>
             )}
 
             {question === 5 && (
               <label>
-                <h2>Who is your favourite Blue member?</h2>
+                <h2>Which framework do you prefer the most?</h2>
                 <div className="drop-down">
                   <select
-                    value={optionBlueMember}
-                    onChange={event => setOptionBlueMember(event.target.value)}
+                    value={framework}
+                    onChange={event => setframework(event.target.value)}
                     required>
-                    {blueMembers.map(member => (
-                      <Option value={member.value} text={member.text} />
+                    <option value="">select</option>
+                    {frontendFrameworks.map(frontendFramework => (
+                      <Option value={frontendFramework} text={frontendFramework} />
                     ))}
                   </select>
                 </div>
+                <button type="button" onClick={previousQuestion}>Go Back</button>
+                <button type="submit" onClick={nextQuestion} disabled={!framework}>Submit</button>
               </label>
             )}
-
-            <section className="button-container">
-              {question < 5 && (
-                <button type="button" onClick={nextQuestion}>Next</button>
-              )}
-
-              {question !== 1 && (
-                <button type="button" onClick={previousQuestion}>Go Back</button>
-              )}
-
-              {question === 5 && (
-                <button type="submit"/* disabled={!enabled} */>Submit</button>
-              )}
-
-            </section>
 
           </form>
         )}
@@ -159,11 +133,11 @@ export const App = () => {
             <div className="summary-content">
 
               <Summary
-                mind={mind}
-                like={likeScale}
-                feeling={feelingScale}
-                dabadee={optionBlue}
-                blue={optionBlueMember} />
+                name={name}
+                experience={workExperience}
+                time={codeTime}
+                work={workMode}
+                framework={framework} />
 
               <div className="summary-buttons">
                 <button type="button" onClick={() => window.location.reload()}>Reset</button>

@@ -1,14 +1,18 @@
 import React from 'react'
 import './text.css'
 
-export const Text = ({ value, onChange, placeholder }) => {
+export const Text = ({ title, value, setText, placeholder }) => {
   return (
-    <input
-      type="text"
-      className="text-input"
-      value={value}
-      onChange={onChange}
-      placeholder={placeholder}
-      required />
+    <label htmlFor={title}>
+      <h2>{title}</h2>
+      <input
+        type="text"
+        id={title}
+        className="text-input"
+        value={value}
+        onChange={(event) => setText(event.target.value)}
+        placeholder={placeholder}
+        required />
+    </label>
   )
 }

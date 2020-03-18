@@ -1,7 +1,7 @@
 import React from 'react'
 import './radio.css'
 
-export const Radio = ({ value, name, onChange, checked }) => {
+export const Radio = ({ value, name, setSomething, checked }) => {
   return (
     <label className="radio-container" key={value}>
       <input
@@ -9,7 +9,7 @@ export const Radio = ({ value, name, onChange, checked }) => {
         className="radio-button"
         name={name}
         value={value}
-        onChange={onChange}
+        onChange={(event) => setSomething(event.target.value)}
         checked={checked}
         required />
       {value}
