@@ -28,7 +28,7 @@ li:hover .check {
     position: relative;
     font-weight: bold;
     font-size: 18px;
-    padding: 20px 20px 20px 50px;
+    padding: 10px 20px 10px 50px;
     cursor: pointer;
     -webkit-transition: all 0.25s linear;
   }
@@ -79,9 +79,7 @@ li:hover .check {
     }
 
     .button-label{
-        
         font-size: 24px;
-       
       }
     
   }
