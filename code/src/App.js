@@ -78,7 +78,7 @@ export const App = () => {
                 </fieldset>
                 <div className="navigation-buttons">
                   <Button button="button" click={nextQuestion} disabled={!workExperience} text="Next" />
-                  <Button button="button" click={previousQuestion} text="Go Back" />
+                  <Button button="button" click={previousQuestion} text="Go back" />
                 </div>
               </section>
             )}
@@ -97,7 +97,7 @@ export const App = () => {
                 </fieldset>
                 <div className="navigation-buttons">
                   <Button button="button" click={nextQuestion} disabled={!codeTime} text="Next" />
-                  <Button button="button" click={previousQuestion} text="Go Back" />
+                  <Button button="button" click={previousQuestion} text="Go back" />
                 </div>
               </section>
             )}
@@ -120,7 +120,7 @@ export const App = () => {
                 </label>
                 <div className="navigation-buttons">
                   <Button button="button" click={nextQuestion} disabled={!setCodeTime} text="Next" />
-                  <Button button="button" click={previousQuestion} text="Go Back" />
+                  <Button button="button" click={previousQuestion} text="Go back" />
                 </div>
               </section>
             )}
@@ -142,7 +142,7 @@ export const App = () => {
                   </div>
                   <div className="navigation-buttons">
                     <Button button="submit" click={handleSubmit} disabled={!framework} text="Submit" />
-                    <Button button="button" click={previousQuestion} text="Go Back" />
+                    <Button button="button" click={previousQuestion} text="Go back" />
                   </div>
                 </label>
               </section>
@@ -164,8 +164,8 @@ export const App = () => {
                   framework={framework} />
 
                 <div className="navigation-buttons">
-                  <button type="button" onClick={() => window.location.reload()}>Reset</button>
-                  <button type="button" onClick={() => setSubmit(false)}>Go back</button>
+                  <Button button="button" click={() => window.location.reload()} text="Reset" />
+                  <Button button="button" click={() => setSubmit(false)} text="Go back" />
                 </div>
               </div>
 
