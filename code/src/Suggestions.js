@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Suggestions = props => {
+const Suggestions = props => {
   const { suggestion, setSuggestion } = props;
 
   return (
@@ -9,7 +9,7 @@ export const Suggestions = props => {
         Please tick the box if you'd like some suggestions of what you can do to
         feel better!
         <input
-          type='checkbox'
+          type="checkbox"
           checked={suggestion}
           onChange={event => setSuggestion(event.target.checked)}
         />
@@ -17,5 +17,4 @@ export const Suggestions = props => {
     </form>
   );
 };
-
 export default Suggestions;

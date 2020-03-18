@@ -31,6 +31,7 @@ export const App = () => {
           suggestion={suggestion}
         />
       )}
+
       {showForm && (
         <form onSubmit={handleSubmit}>
           <h1>Feeling stressed?</h1>
@@ -43,9 +44,7 @@ export const App = () => {
             action2={action2}
           />
           <Suggestions setSuggestion={setSuggestion} suggestion={suggestion} />
-          <button type='submit' style={{ display: 'block' }}>
-            SUBMIT
-          </button>
+          <button type="submit">SUBMIT</button>
         </form>
       )}
     </main>
@@ -55,7 +54,7 @@ export const App = () => {
 export default App;
 
 // GENDER
-
+//style={{ display: 'block' }}
 // const Gender = () => {
 //   const [gender, setGender] = useState('gender');
 //   return (

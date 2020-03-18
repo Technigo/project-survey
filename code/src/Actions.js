@@ -7,28 +7,26 @@ export const Actions = props => {
     <form onSubmit={event => event.preventDefault()}>
       Name two things you normally do in order to try to feel better?
       <br />
-      <div className='actions'>
+      <div className="actions">
         <label>
           1.
           <input
-            className='inputfield'
-            type='text'
-            onChange={event => setAction1(event.target.value)}
-            value={action1}
-          />
-        </label>
+            className="inputfield"
+            type="text"
+            onChange={(event) => setAction1(event.target.value)}
+            value={action1} />
+
         2.
-        <label>
+
           <input
-            class='inputfield'
-            type='text'
-            onChange={event => setAction2(event.target.value)}
-            value={action2}
-          />
+            className="inputfield"
+            type="text"
+            name=""
+            required
+            onChange={(event) => setAction2(event.target.value)}
+            value={action2} />
         </label>
       </div>
     </form>
   );
 };
-
-export default Actions;

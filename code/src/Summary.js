@@ -3,7 +3,7 @@ import React from 'react';
 export const Summary = props => {
   const { gender, frequency, action1, action2, suggestion } = props;
   return (
-    <div className='summary-container'>
+    <div className="summary-container">
       <h1>SUMMARY</h1>
       <p>Your gender is {gender}.</p>
       <p>You feel stressed {frequency}.</p>
@@ -16,13 +16,11 @@ export const Summary = props => {
           better.
         </p>
       ) : (
-        <p>
-          I'm not gonna give you any suggestions, but please come back to us if
-          you change your mind!
-        </p>
-      )}
+          <p>
+            I'm not gonna give you any suggestions, but please come back to us if
+            you change your mind!
+          </p>
+        )}
     </div>
   );
 };
-
-export default Summary;
