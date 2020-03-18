@@ -55,9 +55,9 @@ export const App = () => {
               <input 
                 type="radio"
                 value={group}
+                required
                 onChange={event => setAgeGroup(event.target.value)}
                 checked={ageGroup === group}
-                required
               />
               {group}
             </label>
@@ -66,7 +66,7 @@ export const App = () => {
 
         <label>
           <h3>What is your favorite animal?</h3>
-          <select
+          <select className="dropdown-select"
             onChange={event => setAnimal(event.target.value)}
             value={animal}            
           >
@@ -90,6 +90,5 @@ export const App = () => {
 /*
       {showSummery && <section>
         <h1>Hi {name} ! You are {ageGroup} years old and absolutley love {animal}'s!</h1>
-        
       </section>}
 */
