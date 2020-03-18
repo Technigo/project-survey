@@ -197,7 +197,7 @@ h3 {
 }
 
 .alien {
-	background: url("./Components/img/alien.png") no-repeat;
+	background: url("./components/img/alien.png") no-repeat;
 	background-size: 100%;
 	width: 60px;
 	height: 60px;
