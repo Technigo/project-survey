@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(244, 189, 144);
+  background-color: rgba(206, 228, 146, 0.454);
 }
 
 code {
@@ -15,40 +15,28 @@ code {
 
 .App {
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }
 
 .firstSection {
-  height: 50vh;
+  height: 40vh;
+  width: 100vw;
 }
 
 .firstSection article {
-  margin-top: 20vh;
+  margin-top: 10vh;
   text-align: center;
 }
 
-.secondSection {
-  display: flex;
-  height: 60vh;
-  position: absolute;
-  align-items: center;
-  top: 0;
-  left: 0;
-}
 
-.secondSection article {
-  justify-content: center;
-  margin-top: 20vh;
-  text-align: center;
-}
-
-.chooseColorForm {
+.theForm {
   margin-top: 5vh;
   text-align: center;
 }
 
-.chooseColorForm input {
+.theForm input {
   margin: 1vw;
 }
 
