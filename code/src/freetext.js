@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 export const FreeText = (props) => {
     const  { question, text, setText } = props;
@@ -6,10 +6,10 @@ export const FreeText = (props) => {
     return (
         <div>
             <h2>{question}</h2>
-            <label className="text" >
+            <label className='text' >
                 <input
-                    className="text-preferences"
-                    type="text"
+                    className='text-preferences'
+                    type='text'
                     onChange={event => setText(event.target.value)}
                     value={text}
                 />

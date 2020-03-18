@@ -1,23 +1,23 @@
-import React from "react";
+import React from 'react';
 
 export const Dropdown = (props) => {
-    const { location, setLocation } = props;
+    const { question, title, array, setDropdownItem } = props;
 
     return (
         <div>
-            <h2>Select the restaurant you'd like to visit below, to start your booking!</h2>
-            <label className="dropdown">
-                <select className="dropdown-style"
-                onChange={event => setLocation(event.target.value)}
-                value={location}
+            <h2>{question}</h2>
+            <label className='dropdown'>
+                <select className='dropdown-style'
+                onChange={event => setDropdownItem(event.target.value)}
                 required
                 >
-                    <option value="">Select location:</option>
-                    <option value="Stockholm">Stockholm</option>
-                    <option value="Åre">Åre</option>
-                    <option value="Visby">Visby</option>
+                    <option value=''>{title}</option>
+                    {array.map(dropdownItem => (
+                    <option value={dropdownItem}>{dropdownItem}</option>
+                    ))} 
                 </select>
             </label>
         </div>
     );
 };
+

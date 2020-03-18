@@ -22,6 +22,23 @@ code {
   max-width: 70%;
 }
 
+h2 {
+  font-size: 20px;
+}
+
+a:link {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: black;
+}
+
 /***** Styling Inputs *****/
 
 /* Dropdown */
@@ -29,8 +46,8 @@ code {
   --radius: 4px;
   --baseFg: dimgray;
   --baseBg: white;
-  --accentFg: #006fc2;
-  --accentBg: #bae1ff;
+  --accentFg: rgb(255, 247, 230);
+  --accentBg: #F78C51;
 }
 
 select {
@@ -95,8 +112,6 @@ select:active {
   position: absolute;
   opacity: 0;
   cursor: pointer;
-  height: 0;
-  width: 0;
 }
 
 .radiomark {
@@ -107,7 +122,7 @@ select:active {
   width: 20px;
   background-color: #eee;
   border-radius: 50%;
-}
+} 
 
 .radio-container:hover input ~ .radiomark {
   background-color: rgba(247, 139, 81, 0.205);
@@ -186,9 +201,9 @@ select:active {
 
 .text-contact, .text-preferences {
   border-radius: 8px;
-  background-color: #FDEFCD;
+  background-color: rgb(255, 247, 230);
   outline: none; 
-  border: 2px solid #FDEFCD;
+  border: 2px solid white;
   padding: 10px;
 }
 

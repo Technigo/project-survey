@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const Summary = (props) => {
     const { name, day, dinnerTime, guests, location } = props;
