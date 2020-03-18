@@ -38,10 +38,14 @@ export const App = () => {
           <Checkbox agree={agree} setAgree={setAgree} />
         }
 
-        {section === 4 &&
-          <Summary name={name} tech={tech} radioInput={radioInput} />
+        {section < 4 &&
+          <Button name={name} section={section} tech={tech} radioInput={radioInput} agree={agree} />
         }
-        <Button name={name} section={section} tech={tech} radioInput={radioInput} agree={agree} />
+
+        {section === 4 &&
+          <Summary className='summary' name={name} tech={tech} radioInput={radioInput} />
+        }
+
       </form>
 
     </section>

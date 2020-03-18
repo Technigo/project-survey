@@ -43,6 +43,10 @@ button:hover {
   transform: scale(1.1);
 }
 
+button.summary {
+  display: none;
+}
+
 h1, h2 {
   font-size: 50px;
 }
@@ -64,6 +68,7 @@ p.progress {
 select, label.radio, label {
   font-size: 25px;
 }
+
 
 @media (max-width: 650px) {
 
