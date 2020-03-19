@@ -1,40 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Radio } from './components/Radio'
+import { FavoriteSoap } from './components/FavoriteSoap'
+import { DropDown } from './components/DropDown'
+import { Button } from './components/Button'
 
 
 export const App = () => {
-    const [name, setName] = useState("")
 
-    const handleSubmit = event => {
-        event.preventDefault()
-    }
 
     return (
-        <div className="firstSurvey">
+        <div>
             <header>
                 <h1>Washing them hands</h1>
             </header>
 
-            <form>
-                <label>
-                    How many times do you wash?
-                <input
-                        type="radio"
-                        onChange={}
-                        value={}
-                    />
-                </label>
-            </form>
+            <Radio />
+            <FavoriteSoap />
+            <DropDown />
+            <Button />
 
-            <form onSubmit={handleSubmit}>
-                <label>
-                    Your favorite soap?
-            <input
-                        type="text"
-                        onChange={event => setName(event.target.value)}
-                        value={name}
-                    />
-                </label>
-            </form>
+
         </div>
 
     )
