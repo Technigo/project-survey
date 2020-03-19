@@ -1,17 +1,17 @@
-# Survey
+# Technigo React Starter App
+This app has been generated using create-react-app, then cleaned up a little so we have a project with just the elements we need to get started.
 
-Small survey made using `React`. The survey includes text input, radio buttons and drop-downs. The answers are not stored other than being displayed on a summary page.
+Add components in the src folder and use them in src/app.js to get started.
 
-## Learning objectives
-* How to use form fields with React
-* How to use useState
-* How to use state to show different components based on where you are in the survey
+## Usage
+1. On GitHub, click the 'use this template' button to create a new repo on your account
+2. Clone the new repo to your computer
+3. Install required dependencies with npm: npm install
+4. Start the project: npm start
 
-## Tech
-* HTML5
-* CSS3
-* React
-* JSX
+Alternatively, if you don't want a new git repo on your account;
 
-## View it live
-View the site here: https://fridamaria-survey.netlify.com/
+1. Download & extract the latest release from GitHub
+2. Open the directory in the terminal: cd /path/to/react-starter
+3. Install required dependencies with npm: npm install
+4. Start the project: npm start
