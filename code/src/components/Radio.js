@@ -4,8 +4,8 @@ import './radio.css'
 export const Radio = props => {
   let { myChoice, setMyChoice } = props;
   const myChoices = [
-    'I like to look at the details',
-    'I like to look at the big picture'
+    'Look at the details',
+    'Look at the big picture'
   ] 
 
   return (

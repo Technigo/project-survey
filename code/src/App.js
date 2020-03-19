@@ -30,13 +30,12 @@ export const App = () => {
         <form onSubmit={handleSubmit}>
           <NameQuestion name={name} setName={setName} />
           <Select rating={rating} setRating={setRating} />
-          <Checkbox newsLetter={newsLetter} setNewsLetter={setNewsLetter} />
           <Radio myChoice={myChoice} setMyChoice={setMyChoice} />
+          <Checkbox newsLetter={newsLetter} setNewsLetter={setNewsLetter} />
 
           <button type="submit" disabled={name === "" ||
             rating === "" ||
-            myChoice === false
-          }>
+            myChoice === false }>
             submit
           </button>
         </form>
