@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+First project using hooks in React. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I began by making the different components I wanted to make sure everything was working properly. Then I put them all under the App component and used useState to show the different states on the page. If I had more time I would like to try and take apart the App component and put the different sections into components instead and practice using props to send information to the "parent" component.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://malins-survey.netlify.com
+
+Works on Chrome and Firefox.
