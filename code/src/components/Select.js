@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './select.css'
 
-export const Select = () => {
+export const Select = props => {
 
-const [rating, setRating] = useState("");
+ const {rating, setRating} = props;
 
   return (
     <form onSubmit={event => event.preventDefault()}>

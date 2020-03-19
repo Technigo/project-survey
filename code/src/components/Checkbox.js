@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 //import './checkbox.css'
 
-export const Checkbox = () => {
+export const Checkbox = props => {
 
-const [newsLetter, setNewsLetter] = useState(false);
+const {newsLetter, setNewsLetter} = props;
 
   return (
     <form onSubmit={event => event.preventDefault()}>

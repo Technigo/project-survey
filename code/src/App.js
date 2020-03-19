@@ -1,26 +1,49 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
+
 import { Radio } from './components/Radio';
-import { Text } from './components/Text';
 import { Select } from './components/Select';
-import { Submit } from './components/Submit';
-import { Response } from './components/Response';
 import { Checkbox } from './components/Checkbox';
+
+import { Summary } from './Summary';
+import { NameQuestion } from './components/NameQuestion';
+import "./styles.css";
+import "./app.css";
 
 
 export const App = () => {
+  const [name, setName] = useState("");
+  const [showSummary, setShowSummary] = useState(false);
+  const [rating, setRating] = useState("");
+  const [newsLetter, setNewsLetter] = useState(false);
+  let [myChoice, setMyChoice] = useState(false);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setShowSummary(true);
+  };
 
   return (
-  <article>Survey!
-    <Text></Text>
-    <Checkbox></Checkbox>
-    <Select></Select>
-    <Radio></Radio>
-    <Submit></Submit>
-    <Response></Response>
-  </article>
+    <div className="App">
+      <h1 className={showSummary ? "welcome" : "goodbye"}>Welcome!</h1>
 
+      {!showSummary ? (
+        <form onSubmit={handleSubmit}>
+          <NameQuestion name={name} setName={setName} />
+          <Select rating={rating} setRating={setRating} />
+          <Checkbox newsLetter={newsLetter} setNewsLetter={setNewsLetter} />
+          <Radio myChoice={myChoice} setMyChoice={setMyChoice} />
+
+          <button type="submit" disabled={name === "" ||
+            rating === "" ||
+            newsLetter === false ||
+            myChoice === false
+          }>
+            submit
+          </button>
+        </form>
+      ) : (
+          <Summary name={name} myChoice={myChoice} newsLetter={newsLetter} rating={rating} />
+        )}
+    </div>
   );
 };
-
-
-
