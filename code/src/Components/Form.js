@@ -4,8 +4,8 @@ import './form.css'
 export const Name = (props) => {
     const { name, setName } = props
     return (
-        <div>
-            <p>Please enter your name: {name}</p>
+        <div className="name-field">
+            <h4>Please enter your name:</h4>
             <input
                 type="text"
                 onChange={event => setName(event.target.value)}

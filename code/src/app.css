@@ -1,5 +1,19 @@
 .form-container {
-    width: 375px;
+    width: 400px;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    background-color: darkslategray;
+    color: white;
+    border: 2px solid red
+}
+
+form {
+    width: 90%;
     height: auto;
     display: flex;
     flex-direction: column;
@@ -9,4 +23,6 @@
     margin: 20px;
     background-color: darkslategray;
     color: white;
+    margin: 10px;
+    border: 2px solid red;
 }

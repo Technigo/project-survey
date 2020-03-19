@@ -6,9 +6,10 @@ export const Summary = (props) => {
     return (
         <section>
             <p>Your name is: {name}</p>
-            <p> Your coding level is: {codingLevel}</p>
+            <p>Your coding level is: {codingLevel}</p>
             <p>And your choice of destination is: {destination}</p>
             <p>Thank you for signing up!</p>
+            <img src="abisko.jpg" alt="abisko" />
         </section>
     )
 }
