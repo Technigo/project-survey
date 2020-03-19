@@ -5,9 +5,66 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color:black;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.aplication-form {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  text-align: start;
+
+}
+
+.big-card {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+
+p {
+  margin: 10px 0px 2px 0px;
+  font-size: 14px;
+}
+
+.header-container {
+  text-align: center;
+}
+
+.picture {
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  background-image: url(hands-699486_1920.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.submit-button {
+  display: flex;
+  width: 200px;
+  height: 30px;
+  margin: 2px 0px;
+  padding: 1px;
+  background-color: white;
+  color: black;
+  border: 2px solid gray;
+  transition-duration: 0.5s;
+  cursor: pointer;
+
+  }
+  
+  .submit-button:hover {
+    background-color:black;
+    color: white;
+    border: 2px solid white;
+  }
