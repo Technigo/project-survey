@@ -1,0 +1,10 @@
+.hoarding-place {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+select {
+font-size: 20px;
+}

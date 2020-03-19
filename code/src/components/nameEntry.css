@@ -1,0 +1,25 @@
+.name-entry {
+  height: 100px;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Roboto', sans-serif;
+}
+
+.label {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.input {
+  display: flex;
+  width: 90%;
+  height: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-top: 20px;
+}
+
+
+

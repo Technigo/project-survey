@@ -1,0 +1,21 @@
+button {
+  background-image: url(./buttonImage.png);
+  background-size: 70px;
+  background-repeat: no-repeat;
+  background-color: lightgrey;
+  background-position: center;
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+  margin-top: 80px;
+  font-size: 20px;
+  color: black;
+  border: none;
+
+}
+
+
+button:disabled {
+  color:lightgrey;
+  transition: 0.3s;
+}
