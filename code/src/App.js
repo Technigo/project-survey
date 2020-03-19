@@ -13,7 +13,7 @@ export const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     setshowSummary(true)
-    }
+  }
   const [name, setName] = useState("")
   const [animal, setAnimal] = useState("Cockroach")
   const [wouldYouRather, setwouldYouRather] = useState()
@@ -22,49 +22,49 @@ export const App = () => {
 
   return (
     <div className="container">
-    <header>
-      <h1 className="heading">Silly Questions 🤪</h1>
-      <h2>made only for my amusement</h2>
-    </header>
-    
-    
+      <header>
+        <h1 className="heading">Silly Questions 🤪</h1>
+        <h2>made only for my amusement</h2>
+      </header>
+
+
       {!showSummary ? (
         <form onSubmit={handleSubmit}>
           <div className="form-container">
 
-          <section className="name">
-            < Name name={name} setName={setName} />
-          </section>
+            <section className="name">
+              < Name name={name} setName={setName} />
+            </section>
 
-          <section className="question1">
-            <Question1 animal={animal} setAnimal={setAnimal} />
-          </section>
+            <section className="question1">
+              <Question1 animal={animal} setAnimal={setAnimal} />
+            </section>
 
 
-          <section className="question2">
-            <Question2 wouldYouRather={wouldYouRather} setwouldYouRather={setwouldYouRather} />
+            <section className="question2">
+              <Question2 wouldYouRather={wouldYouRather} setwouldYouRather={setwouldYouRather} />
 
-          </section>
+            </section>
 
-          <section className="Question3">
+            <section className="Question3">
 
-            <Question3 riding={riding} setRiding={setRiding} />
-          </section>
+              <Question3 riding={riding} setRiding={setRiding} />
+            </section>
 
-          <section className="submit">
-            <button type="submit">Submit your answers!</button>
-          </section>
+            <section className="submit">
+              <button type="submit">Submit your answers!</button>
+            </section>
           </div>
         </form>
-  
-        
+
+
 
       ) : (
-        <section className="submit">
-          < Summary name={name} riding={riding} animal={animal} />
+          <section className="submit">
+            < Summary name={name} riding={riding} animal={animal} />
           </section>
         )}
-        
+
     </div>
   )
 }
