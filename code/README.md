@@ -14,4 +14,4 @@ Small survey made using `React`. The survey includes text input, radio buttons a
 * JSX
 
 ## View it live
-View the site here: 
+View the site here: https://fridamaria-survey.netlify.com/
