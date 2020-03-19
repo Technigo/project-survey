@@ -16,7 +16,7 @@ export const Actions = props => {
             id="actions"
             onChange={(event) => setAction1(event.target.value)}
             value={action1} />
-2.
+            2.
           <input
             className="inputfield"
             type="text"
