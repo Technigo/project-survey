@@ -1,15 +1,23 @@
+
+
 .container {
   display: block;
   position: relative;
   padding-left: 35px;
   margin-bottom: 12px;
   cursor: pointer;
- 
+
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
   user-select: none;
 }
+
+label {
+  margin:5px;
+}
+
+
 
 /* Hide the browser's default radio button */
 .container input {
@@ -25,18 +33,18 @@
   left: 0;
   height: 15px;
   width: 15px;
-  background-color: #eee;
+  background-color: #ccc;
   border-radius: 50%;
-  border:1px solid;
+  border: 1px solid;
 }
 
 /* On mouse-over, add a grey background color */
-.container:hover input ~ .checkmark {
-  background-color: #ccc;
+.container:hover input~.checkmark {
+  background-color: white;
 }
 
 /* When the radio button is checked, add a blue background */
-.container input:checked ~ .checkmark {
+.container input:checked~.checkmark {
   background-color: black;
 }
 
@@ -48,16 +56,16 @@
 }
 
 /* Show the indicator (dot/circle) when checked */
-.container input:checked ~ .checkmark:after {
- display: block;
+.container input:checked~.checkmark:after {
+  display: block;
 }
 
 /* Style the indicator (dot/circle) */
 .container .checkmark:after {
- 	top: 5px;
-	left: 5px;
-	width: 4px;
-	height: 4px;
-	border-radius: 50%;
-	background: white;
+  top: 5px;
+  left: 5px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
 }

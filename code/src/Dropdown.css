@@ -1,0 +1,13 @@
+select {
+  transition: all 150ms ease-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  padding: 5px;
+  color:  black;
+  background: white;
+  border: 2px solid black;
+  border-radius: 3px;
+  
+}

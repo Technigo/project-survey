@@ -5,8 +5,9 @@ export const Radiobuttons = () => {
   const [ageGroup, setAgeGroup] = useState("");
 
   return (
+    
     <form>
-      Whats your age?
+      <label>Whats your age?</label>
       <label class="container">18-30
         <input
           type="radio"

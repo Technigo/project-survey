@@ -20,7 +20,8 @@ export const App = () => {
     <div className="Input">
     
       {!showSummary ?(
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}
+      class="user">
       <h1>CREATE YOUR ACCOUNT </h1>
       <label>
         Username:
@@ -53,8 +54,9 @@ export const App = () => {
       <Dropdown />
       <Checkbox />
     
-   
+   <div class="buttons">
       <button type="submit">submit</button>
+      </div>
       </form> ):(
       <Summary name={name}/>
     )}

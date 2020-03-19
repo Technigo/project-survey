@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './Checkboxes.css'
 
 export const Checkbox = () => {
   const [agree, setAgree] = useState(false);
