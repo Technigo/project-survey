@@ -6,10 +6,9 @@ import { FunForm } from './components/FunForm'
 import { Summary } from './components/Summary'
 
 export const App = () => {
-  const [platformGroup, setPlatfromGroup] = useState();
+  const [place, setPlace] = useState();
   const [genre, setGenre] = useState("");
   const [description,setDescription] = useState("");
-
   const [showSummary, setShowSummary] = useState(false);
 
   const handleSubmit = event => {
@@ -23,7 +22,7 @@ export const App = () => {
 
      <section className="surveyHeader">
       <Header 
-      title="The Music Survey"
+      title="Welcom to this music survey, enjoy!"
       />
       </section>
       
@@ -31,40 +30,46 @@ export const App = () => {
 
       {!showSummary ? (
        <form className="questionForm" onSubmit={handleSubmit}>
-   
-        <section>
+
+       <section>
          <ColorForm 
-         title="What platfrom do you use to listen to music?" 
-         platformGroup={platformGroup} 
-         setPlatfromGroup={setPlatfromGroup}
+         title="Where do you like to sing?" 
+         infotext="Choose your mood color:"
+         place={place} 
+         setPlace={setPlace}
          />
         </section>
-  
+
+
          <section className="questionBox">
          <GenreForm 
-         title="What type of music do you like?" 
+         title="Which music genre will put you in a great mood?" 
+         genre={genre} 
          setGenre={setGenre} 
          />
          </section>
 
          <section className="questionBox">
          <FunForm 
-         title="Which is you go to song?"
+         title="Which song will put you in a great mood?"
+         description={description} 
          setDescription={setDescription}
          />
         </section>
+
         
-        <button className="submitButton" type="submit">Submit</button>
+        <button className="submitButton" type="submit"><p>Submit</p></button>
       
       </form>
        ) : (
        <Summary 
-       
-       platformGroup={platformGroup} 
+
+       place={place} 
        genre={genre} 
        description={description} />
+
        )}
-       
+
 </section>
 
 </div>

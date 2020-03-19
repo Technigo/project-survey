@@ -12,18 +12,11 @@ code {
     monospace;
 }
 
- .App {
-  height: 100vh;
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-}
-
 .surveyHeader {
   display: flex;
   justify-content: center;
   height: 15vh;
-  background-color: rgba(184, 109, 184, 0.612);
+  background-color: rgb(228, 65, 47);
 }
 
 .titleContainer {
@@ -42,20 +35,23 @@ code {
 .formSection {
   display: flex;
   justify-content: center;
-  height: 130vh;
-  width: 100vw;
-  background-image: url(./components/assets/colors.jpg);
+  background-image: url(./components/assets/black-vinyl.jpg);
   background-repeat: no-repeat;
-  background-position: center;
   background-size: cover;
 }
 
 .formSection article {
-  background-color: rgba(255, 255, 255, 0.235);
-  margin-top: 5vh;
   text-align: center;
   height: 30vh;
-  width: 40vw;
+  width: 50vw;
+  border-radius: 20px;
+  border: solid 2px rgb(255, 255, 255);
+  margin: 2vh;
+}
+
+.formSection article:hover {
+  box-shadow: 0 5px 15px rgb(228, 65, 47);
+  cursor: pointer;
 }
 
 .formSection article h1 {
@@ -69,42 +65,37 @@ padding-top: 2vh;
   height: 130vh;
 }
 
-/* CHECKBOXES STYLE */
+/* SELECT STYLE */
 
-.custom-Cb input {
-  display: none;
+.selectBox {
+  border: 0;
+  border-radius: 3px;
+  overflow: hidden;
+  background-color: rgba(228, 65, 47, 0.262);
+  height: 5vh;
 }
 
-/* Draw our custom check box */
-
-.custom-Cb label {
+.selectBox:hover {
+  box-shadow: 0 5px 15px rgb(228, 65, 47);
   cursor: pointer;
 }
-.custom-Cb label:after {
-  display: inline-block;
-  width: 20px;
-  margin-right: 5px;
-  content: "\00a0";
-  text-align: center;
-  background: rgba(235, 40, 180, 0.502);
-  margin: 1vw;
-}
-.custom-Cb label:hover::after{
-  background: #aaa;
-}
 
-/* On check */
-.custom-Cb input:checked ~ label::before {
-  content: "💡";
-  background: #3f6cb5;
-  color: #fff;
-}
-
-/* FUN FORM STYLE */
+/* TEXTAREA FORM STYLE */
 
 .textarea {
-  height: 15vh;
+  height: 5vh;
   width: 20vw;
+  border: 0;
+  background-color: rgba(228, 65, 47, 0.262);
+}
+
+.textarea::placeholder {
+  color: rgb(0, 0, 0);
+  font-style: italic;
+}
+
+.textarea:hover {
+  box-shadow: 0 5px 15px rgb(228, 65, 47);
 }
 
 /* BUTTON STYLE */
@@ -117,7 +108,7 @@ padding-top: 2vh;
   padding-left: 20px;
   padding-right: 20px;
   text-align: center; 
-  background-color: rgba(206, 40, 231, 0.502);
+  background-color: rgba(228, 65, 47, 0.201);
   border-radius: 25px;
   border: 0;
   
@@ -132,9 +123,26 @@ padding-top: 2vh;
 
 .submitButton:hover {
   box-shadow: 0 5px 15px;
+  background-color: rgb(228, 65, 47);
   cursor: pointer;
 
 }
 
+/* SUMMARY STYLE */
+
+.summaryDisplay {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+}
+
+.summaryDisplay .summaryBox {
+  text-align: center;
+  height: 60vh;
+  width: 50vw;
+  border-radius: 20px;
+  border: solid 2px rgb(255, 255, 255);
+  margin: 2vh;
+}
 
 

@@ -9,7 +9,7 @@ export const FunForm = ({title, description, setDescription}) => {
 
             <textarea className="textarea"
               type="text" 
-              placeholder="Write something.."
+              placeholder="Dimonds by Rihanna"
               value={description}
               onChange={event => setDescription(event.target.value)}
             />
