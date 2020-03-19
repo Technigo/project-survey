@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This survey consists of 4 questions/inputs. The inputs come from radio, checkbox, single line and a dropdown. The values is presented in a summary. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The state is handled by useState ( a hook ) in the app.component. I used React developer tools for inspecting the applications  props, the state and hooks. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://friendly-shannon-a01dac.netlify.com/
