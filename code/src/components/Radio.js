@@ -1,12 +1,12 @@
 import React from 'react'
 import './radio.css'
 
-export const Radio = ({ title, array, setState, state }) => {
+export const Radio = ({ question, array, setState, state }) => {
   return (
     <fieldset>
-      <h2>{title}</h2>
-      {array.map(item => (
-        <label htmlFor={item} className="radio-container">
+      <h2>{question}</h2>
+      {array.map((item) => (
+        <label key={item} htmlFor={item} className="radio-container">
           <input
             type="radio"
             id={item}

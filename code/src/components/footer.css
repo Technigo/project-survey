@@ -1,8 +1,8 @@
 footer {
   flex-shrink: 0;
-  background: #152238;
-  height: 70px;
   position: relative;
+  height: 70px;
+  background: #152238;
   color: #fff;
 }
 
@@ -10,12 +10,24 @@ footer:before {
   content:"";
   position:absolute;
   top:-59px;
-  height:60px;
-  left:0;
   right:0;
+  left:0;
+  height:60px;
   background:linear-gradient(to bottom right, transparent 49%, #152238 50%);
- }
+}
 
- .copyright {
-   text-align: center;
- }
+.project-credits {
+  text-align: center;
+  font-size: 0.8rem;
+}
+
+.project-credits a {
+   color: #fff;
+   font-weight: bold;
+}
+
+@media (min-width: 750px) {
+  .project-credits {
+    font-size: 1rem;
+  }
+}

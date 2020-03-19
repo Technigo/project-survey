@@ -1,21 +1,21 @@
 h1 {
+  color: #fff;
   font-size: 2em;
   text-align: center;
-  color: #fff;
 }
 
 header {
-  background: #152238;
-  height: 70px;
   position: relative;
+  height: 70px;
+  background: #152238;
 }
 
 header:before {
   content:"";
   position:absolute;
   top:69px;
-  height:60px;
-  left:0;
   right:0;
+  left:0;
+  height:60px;
   background:linear-gradient(to top right, transparent 49%, #152238 50%);
- }
+}

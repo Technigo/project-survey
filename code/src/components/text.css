@@ -6,7 +6,6 @@ input[type=text] {
   outline: none;
   border: none;
   border-radius: 3px;
-  /* border-bottom: 1px solid #152238; */
   background: #ececec;
   font-size: 1rem;
 }

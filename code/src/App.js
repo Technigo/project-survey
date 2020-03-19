@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Header } from './components/Header'
 import { Text } from './components/Text'
 import { Radio } from './components/Radio'
-import { Option } from './components/Option'
+import { Select } from './components/Select'
 import { Button } from './components/Button'
 import { Summary } from './components/Summary'
 import { Footer } from './components/Footer'
@@ -26,7 +26,7 @@ export const App = () => {
   const [workExperience, setWorkExperience] = useState('')
   const [codeTime, setCodeTime] = useState('')
   const [workMode, setWorkMode] = useState('')
-  const [framework, setframework] = useState('')
+  const [framework, setFramework] = useState('')
   const [submit, setSubmit] = useState(false)
   const handleSubmit = (event) => {
     event.preventDefault()
@@ -40,7 +40,7 @@ export const App = () => {
 
         {!submit && (
           <form onSubmit={handleSubmit}>
-            <img className="image-1" src={Image1} alt="two people standing" />
+            <img className="image-1" src={Image1} alt="woman and man looking puzzled" />
 
             {question === 0 && (
               <section className="introduction">
@@ -54,7 +54,7 @@ export const App = () => {
             {question === 1 && (
               <section className="question-container">
                 <Text
-                  title="Start by entering your name"
+                  question="Start by entering your name"
                   value={name}
                   setText={setName}
                   placeholder="Enter your name here..." />
@@ -67,7 +67,7 @@ export const App = () => {
             {question === 2 && (
               <section className="question-container">
                 <Radio
-                  title="How long have you been working with frontend development?"
+                  question="How long have you been working with frontend development?"
                   array={workExperiences}
                   setState={setWorkExperience}
                   state={workExperience} />
@@ -81,7 +81,7 @@ export const App = () => {
             {question === 3 && (
               <section className="question-container">
                 <Radio
-                  title="When do you prefer to code?"
+                  question="When do you prefer to code?"
                   array={codeTimes}
                   setState={setCodeTime}
                   state={codeTime} />
@@ -94,22 +94,14 @@ export const App = () => {
 
             {question === 4 && (
               <section className="question-container">
-                <label htmlFor="teamwork">
-                  <h2>Does teamwork make the dream work?</h2>
-                  <div className="drop-down">
-                    <select
-                      id="teamwork"
-                      value={workMode}
-                      onChange={event => setWorkMode(event.target.value)}>
-                      <option value="">select</option>
-                      {workModes.map(mode => (
-                        <Option value={mode} text={mode} />
-                      ))}
-                    </select>
-                  </div>
-                </label>
+                <Select
+                  id="teamwork"
+                  question="Does teamwork make the dream work?"
+                  state={workMode}
+                  setState={setWorkMode}
+                  array={workModes} />
                 <div className="navigation-buttons">
-                  <Button button="button" click={nextQuestion} disabled={!setCodeTime} text="Next" />
+                  <Button button="button" click={nextQuestion} disabled={!workMode} text="Next" />
                   <Button button="button" click={previousQuestion} text="Go back" />
                 </div>
               </section>
@@ -117,33 +109,26 @@ export const App = () => {
 
             {question === 5 && (
               <section className="question-container">
-                <label htmlFor="framework">
-                  <h2>Which framework do you prefer the most?</h2>
-                  <div className="drop-down">
-                    <select
-                      id="framework"
-                      value={framework}
-                      onChange={event => setframework(event.target.value)}>
-                      <option value="">select</option>
-                      {frontendFrameworks.map(frontendFramework => (
-                        <Option value={frontendFramework} text={frontendFramework} />
-                      ))}
-                    </select>
-                  </div>
-                  <div className="navigation-buttons">
-                    <Button button="submit" click={handleSubmit} disabled={!framework} text="Submit" />
-                    <Button button="button" click={previousQuestion} text="Go back" />
-                  </div>
-                </label>
+                <Select
+                  id="framework"
+                  question="Which framework do you prefer the most?"
+                  state={framework}
+                  setState={setFramework}
+                  array={frontendFrameworks} />
+                <div className="navigation-buttons">
+                  <Button button="submit" click={handleSubmit} disabled={!framework} text="Next" />
+                  <Button button="button" click={previousQuestion} text="Go back" />
+                </div>
               </section>
             )}
           </form>
         )}
 
-        <section className="summary-wrapper">
-          {submit && (
+        {submit && (
+          <section className="summary-wrapper">
+
             <div className="summary-content">
-              <img className="image-2" src={Image2} alt="superhero coder" />
+              <img className="image-2" src={Image2} alt="superhero woman" />
 
               <div className="summary-result">
                 <Summary
@@ -160,8 +145,8 @@ export const App = () => {
               </div>
 
             </div>
-          )}
-        </section>
+          </section>
+        )}
 
       </section>
       <Footer />

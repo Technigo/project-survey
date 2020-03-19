@@ -2,10 +2,10 @@
 import React from 'react'
 import './text.css'
 
-export const Text = ({ title, value, setText, placeholder }) => {
+export const Text = ({ question, value, setText, placeholder }) => {
   return (
     <label htmlFor={value}>
-      <h2>{title}</h2>
+      <h2>{question}</h2>
       <input
         type="text"
         id={value}
