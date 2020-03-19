@@ -1,11 +1,19 @@
 import React, { useState } from 'react'
 //import "./form.css"
 import { Summary } from "./Summary"
+import { TextInput } from "./TextInput"
+import { SelectInput } from "./SelectInput"
+import { CheckboxInput } from "./CheckboxInput"
+import { RadioInput } from 'RadioInput'
+import { Button } from 'Button'
+import './form.css'
 
 export const Form = () => {
-  const [name, setName] = useState('')
+  const [firstName, setFirstName] = useState('')
+  const [lastName, setLastName] = useState('')
+  const [occupation, setOccupation] = useState('')
   const [location, setLocation] = useState('')
-  const [wantsNewsletter, setWantsNewsletter] = useState('true')
+  const [wantsNewsletter, setWantsNewsletter] = useState(true)
   const [ageGroup, setAgeGroup] = useState()
   const [showSummary, setShowSummary] = useState(false)
 
@@ -14,75 +22,32 @@ export const Form = () => {
     setShowSummary(true);
   }
 
-  const generalInfo = [
-    'firstName',
-    'lastName',
-    'gender'
-  ]
-
   const ageGroups = [
-    '0-18',
-    '19-30',
-    '30+'
+    '18-29',
+    '30-44',
+    '45-65',
+    '65+'
   ]
 
-  const news = wantsNewsletter ? 'News' : 'No News'
+
 
   return (
     <div className="Form">
 
       {showSummary ? (
-        <Summary name={name} />
-
+        <Summary name={firstName} lastName={lastName} location={location} wantsNewsletter={wantsNewsletter} ageGroup={ageGroup} />
       ) : (
-
-          <form onSubmit={handleSubmit}>
-
-            <h1>The state is: {name}{location}{news}{ageGroup}</h1>
-
-            <input
-              type="text"
-              onChange={event => setName(event.target.value)}
-              value={name}
-              required
-            ></input>
-
-            <select
-              onChange={event => setLocation(event.target.value)}
-              value={location}
-            >
-              <option value="">Select location:</option>
-              <option value="stockholm">Stockholm</option>
-              <option value="oslo">Oslo</option>
-              <option value="london">London</option>
-            </select>
-
-            <label>
-              Newsletter?
-        <input type="checkbox"
-                checked={wantsNewsletter}
-                onChange={event => setWantsNewsletter(event.target.checked)}
-              />
-            </label>
-
-      Age Group:
-            {ageGroups.map(group => (
-              <label key={group}>
-                <input
-                  type="radio"
-                  name="age"
-                  value={group}
-                  onChange={event => setAgeGroup(event.target.value)}
-                  checked={ageGroup === group}
-                  required
-                />
-                {group}
-              </label>
-            ))}
-
-            <button type="submit">Submit</button>
+          < form onSubmit={handleSubmit}>
+            <TextInput text="First name: " input={firstName} setFunction={setFirstName} />
+            <TextInput text="Last name: " input={lastName} setFunction={setLastName} />
+            <TextInput text="Occupation: " input={occupation} setFunction={setOccupation} />
+            <SelectInput location={location} setLocation={setLocation} />
+            <CheckboxInput wantsNewsletter={wantsNewsletter} setWantsNewsletter={setWantsNewsletter} />
+            <RadioInput text="Age Group: " radioAlt={ageGroups} input={ageGroup} setFunction={setAgeGroup} />
+            <Button />
           </form >
-        )}
+        )
+      }
     </div >
   )
 }
