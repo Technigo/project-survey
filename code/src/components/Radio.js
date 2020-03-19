@@ -1,19 +1,24 @@
 import React from 'react'
 import './radio.css'
 
-export const Radio = ({ value, name, setSomething, checked }) => {
+export const Radio = ({ title, array, setState, state }) => {
   return (
-    <label htmlFor={value} className="radio-container">
-      <input
-        type="radio"
-        id={value}
-        className="radio-button"
-        name={name}
-        value={value}
-        onChange={(event) => setSomething(event.target.value)}
-        checked={checked} />
-      {value}
-      <span className="radio-bttn" />
-    </label>
+    <fieldset>
+      <h2>{title}</h2>
+      {array.map(item => (
+        <label htmlFor={item} className="radio-container">
+          <input
+            type="radio"
+            id={item}
+            className="radio-button"
+            name="radio"
+            value={item}
+            onChange={(event) => setState(event.target.value)}
+            checked={state === item} />
+          {item}
+          <span className="radio-bttn" />
+        </label>
+      ))}
+    </fieldset>
   )
 }

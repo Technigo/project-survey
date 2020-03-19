@@ -13,7 +13,7 @@ import Image1 from './assets/image-question.jpg'
 import Image2 from './assets/image-summary.jpg'
 
 /* Arrays used for radio buttons and select options */
-const workExcperiences = ['0-1 years', '2-3 years', '3-5 years', '5-10 years', '> 10 years']
+const workExperiences = ['0-1 years', '2-3 years', '3-5 years', '5-10 years', '> 10 years']
 const codeTimes = ['early mornings', 'late nights', 'all day long', 'during REM sleep']
 const workModes = ['teamwork', 'individual work', 'a combination of teamwork and individual work']
 const frontendFrameworks = ['React.js', 'Angular', 'AngularJS', 'Vue.js', 'jQuery', 'Ember.js', 'Backbone.js']
@@ -66,16 +66,11 @@ export const App = () => {
 
             {question === 2 && (
               <section className="question-container">
-                <fieldset>
-                  <h2>How long have you been working with frontend development?</h2>
-                  {workExcperiences.map(experience => (
-                    <Radio
-                      value={experience}
-                      name="experience"
-                      setSomething={setWorkExperience}
-                      checked={workExperience === experience} />
-                  ))}
-                </fieldset>
+                <Radio
+                  title="How long have you been working with frontend development?"
+                  array={workExperiences}
+                  setState={setWorkExperience}
+                  state={workExperience} />
                 <div className="navigation-buttons">
                   <Button button="button" click={nextQuestion} disabled={!workExperience} text="Next" />
                   <Button button="button" click={previousQuestion} text="Go back" />
@@ -85,16 +80,11 @@ export const App = () => {
 
             {question === 3 && (
               <section className="question-container">
-                <fieldset>
-                  <h2>When do you prefer to code?</h2>
-                  {codeTimes.map(time => (
-                    <Radio
-                      value={time}
-                      name="time"
-                      setSomething={setCodeTime}
-                      checked={codeTime === time} />
-                  ))}
-                </fieldset>
+                <Radio
+                  title="When do you prefer to code?"
+                  array={codeTimes}
+                  setState={setCodeTime}
+                  state={codeTime} />
                 <div className="navigation-buttons">
                   <Button button="button" click={nextQuestion} disabled={!codeTime} text="Next" />
                   <Button button="button" click={previousQuestion} text="Go back" />
