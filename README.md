@@ -10,4 +10,4 @@ If I had more time I would have liked to make more components and a return butto
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+plant-survey.netlify.com
