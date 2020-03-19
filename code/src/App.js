@@ -5,13 +5,15 @@ import { Question3 } from './components/Question3'
 import { Name } from './components/Name'
 import style from 'style.css'
 import index from 'index.js'
+import radio from 'radio.css'
+import dropdown from 'dropdown.css'
 import { Summary } from './components/Summary'
 
 export const App = () => {
   const handleSubmit = (event) => {
     event.preventDefault()
     setshowSummary(true)
-  }
+    }
   const [name, setName] = useState("")
   const [animal, setAnimal] = useState("Cockroach")
   const [wouldYouRather, setwouldYouRather] = useState()
@@ -21,8 +23,8 @@ export const App = () => {
   return (
     <div className="container">
     <header>
-      <h1>Silly Questions 🤪</h1>
-      <h2>made for your amusement</h2>
+      <h1 className="heading">Silly Questions 🤪</h1>
+      <h2>made only for my amusement</h2>
     </header>
     
     
@@ -55,12 +57,14 @@ export const App = () => {
           </div>
         </form>
   
-
+        
 
       ) : (
+        <section className="submit">
           < Summary name={name} riding={riding} animal={animal} />
+          </section>
         )}
-
+        
     </div>
   )
 }

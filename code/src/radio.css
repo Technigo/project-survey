@@ -1,0 +1,43 @@
+.form-radio
+{
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  display: inline-block;
+  position: relative;
+  background-color: #f8baba;
+  color: #2f2cf7;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  border-radius: 50px;
+  cursor: pointer;     
+  margin-right: 7px;
+  outline: none;
+}
+.form-radio:checked::before
+{
+  position: absolute;
+  font: 21px/10 'Open Sans', sans-serif;
+  left: 10px;
+  top: -95px;
+  content: '\02143';
+  transform: rotate(40deg);
+}
+.form-radio:hover
+{
+  background-color: #f8baba;
+}
+.form-radio:checked
+{
+  background-color: #f8baba;
+}
+label
+{
+  font: 15px/1.7 'Open Sans', sans-serif;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  cursor: pointer;
+} 

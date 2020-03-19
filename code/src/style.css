@@ -1,25 +1,30 @@
-body{
+body {
   background-color: #f8baba;
+  margin:0;
 }
 header {
   text-align:center;
+  margin-top:100px;
 }
-header h1{
+.heading {
   font-family: 'Chango', cursive;
-  font-size: 72px;
+  font-size: 82px;
   color:#fa7878;
+  text-shadow: 4px 4px 2px #CE5937;
+  margin-bottom:0;
 }
-h2{
+h2 {
   font-family: 'Coiny', cursive;
-  color:#c84cd9;
+  color:#2f2cf7;
   font-size: 48px;
+  margin-top:0;
 }
 .container {
   max-width: 900px;
   margin-left:auto;
   margin-right:auto;
 }
-.form-container{
+.form-container {
   display:flex;
   flex-direction:column;
 }
@@ -30,24 +35,111 @@ section {
   padding:40px;
   text-align:center;
   border-radius:20px;
+  line-height: 35px;
 }
 h1 {
   font-family: 'Chango', cursive;
   font-size: 24px;
   color:#f75a5a;
 }
-.name input{
+.name input {
   width:50%;
   height:30px;
   border-radius: 10px;
   -webkit-appearance: none;
-  
-  
-  
+  outline: none;
+  border:none;
+  color:#2f2cf7;
+  font-family: 'Coiny', cursive;
+  background-color:#fbf3f3;
+  font-size:18px;
+  font-weight: 700;
+  text-align: center;
 }
-select .dropdown {
-  -webkit-appearance: none;
+button {
+  height:100px;
+  width:200px;
+  background-color:#2f2cf7;
+  color:#fad7d7;
+  font-size:21px;
+  border:none;
+  border-radius: 10px;
+  box-shadow:7px 8px 8px -1px rgb(207, 127, 103);
 }
-.radio{
-  
+.radio-container {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  color:#2f2cf7;
+  font-size:18px;
+  font-family: 'Coiny', cursive;
+}
+.radio-container div {
+  padding:20px;
+}
+.submit h1 {
+  font-size: 21px;
+}
+.crazy  {
+  font-size:32px;
+  color:#2f2cf7;
+  text-shadow: 4px 4px 4px rgb(207, 127, 103);
+}
+
+
+/*_____________________MEDIA QUERIES____________________________________*/
+
+
+
+@media (max-width: 375px) {
+  h1{
+    font-size: 18px;
+  }
+  h2{
+    font-size: 28px;
+  }
+  header {
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  header h2 {
+    line-height: 30px;
+  }
+  div.container {
+    padding:0 30px;
+  }
+  .heading {
+    font-size:42px;
+  }
+  section {
+    margin-top:20px;
+    margin-bottom:20px;
+    padding:20px;
+    text-align:center;
+    border-radius:20px;
+    line-height: 35px;
+  }
+  section .question1 {
+    margin:10px;
+    padding:0;
+  }
+  .selectdiv select {
+    margin: 0;
+    margin-left:20px;
+  }
+  div.selectdiv {
+    margin:0;
+  }
+  select {
+    float: left;
+  }
+  .radio-container {
+    color:#2f2cf7;
+    font-size:15px;
+    font-family: 'Coiny', cursive;
+  }
+  .radio-container div {
+    padding:5px;
+  }
 }
