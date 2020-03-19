@@ -178,17 +178,19 @@ input[type="radio"]:focus {
 
 input[type="range"] {
   -webkit-appearance: none;
- }
+  background-color: tomato;
+  height: 5px;
+  width: 90%;
+}
  
 input[type="range"]:focus {
-outline: none;
+  outline: none;
 } 
 
 input[type="range"]::-webkit-slider-runnable-track {
-background: tomato;
-height: 5px;
-width: 90%;
-align-self: center;
+  background: tomato;
+  height: 5px;
+  width: 90%;
 }
 
 input[type="range"]::-webkit-slider-thumb {
@@ -208,7 +210,7 @@ input[type="range"]::-webkit-slider-thumb {
   height: 15px;
   margin-left: 15px;
   margin-bottom: 10px;
-  align-self: self-end;
+  align-self: flex-start;
   border-radius: 50px;
   border: 2px solid #ca4242;
 }
