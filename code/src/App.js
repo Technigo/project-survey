@@ -35,7 +35,6 @@ export const App = () => {
 
           <button type="submit" disabled={name === "" ||
             rating === "" ||
-            newsLetter === false ||
             myChoice === false
           }>
             submit
