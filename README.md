@@ -1,13 +1,17 @@
-# Survey form with React
+# Survey
 
-Replace this readme with your own information about your project.
+Small survey made using `React`. The survey includes text input, radio buttons and drop-downs. The answers are not stored other than being displayed on a summary page.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Learning objectives
+* How to use form fields with React
+* How to use useState
+* How to use state to show different components based on where you are in the survey
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Tech
+* HTML5
+* CSS3
+* React
+* JSX
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+View the site here: https://fridamaria-survey.netlify.com/
