@@ -110,9 +110,4 @@ p {
   h3 {
     font-size: 1em;
   }
-
-  /*** Doesn't work.... ***/
-  .radio {
-    font-size: 2em;
-  }
 }
