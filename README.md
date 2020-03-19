@@ -1,12 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a survey project to learn how to make a form with React using state. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by setting up the form with React and JSX for the different questions. I also made states for each question. 
+When submitting the form a summary shows with your answers.
+If I had more time I would have liked to make more components and a return button to be able to start the survey again.
 
 ## View it live
 

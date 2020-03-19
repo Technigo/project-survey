@@ -1,0 +1,10 @@
+.summary {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: white;
+  color: green;
+  border: 3px solid green;
+  padding: 20px;
+  text-align: center;
+} 
