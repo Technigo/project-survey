@@ -70,14 +70,14 @@ export const App = () => {
                   <TextBox text={name} setText={setName} title={'Booking name:'} placeholder={'Name'} type={'text'} />
                   <TextBox text={email} setText={setEmail} title={'Email:'} placeholder={'user@domain.com'} type={'email'} />
                   <Checkbox checkbox={terms} setCheckbox={setTerms} text={'I agree to the Terms and Conditions of Elsita & Alfredo'} />
-                  <Button type={'submit'} title={'Submit'} style={'submit-button'} />
+                  <Button type={'submit'} title={'Submit'} style={'submit-button'} item={location, guests, day, dinnerTime, preferences, name, email, terms} />
                 </div>
               }
             </form>
 
             <div className='button-container'>
-              <Button clickFunction={() => activeQuestion > 1 ? setActiveQuestion(activeQuestion - 1) : null} type={''} title={'Previous question'} style={'index-button'} />
-              <Button clickFunction={() => activeQuestion < 6 ? setActiveQuestion(activeQuestion + 1) : null} type={''} title={'Next question'} style={'index-button'} />
+              <Button clickFunction={() => activeQuestion > 1 ? setActiveQuestion(activeQuestion - 1) : null} title={'Previous question'} style={'index-button'} />
+              <Button clickFunction={() => activeQuestion < 6 ? setActiveQuestion(activeQuestion + 1) : null} title={'Next question'} style={'index-button'} item={location} />
             </div>
             
           </div>

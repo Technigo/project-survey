@@ -59,6 +59,7 @@ a:visited {
   --baseBg: white;
   --accentFg: rgb(255, 247, 230);
   --accentBg: #F78C51;
+  cursor: pointer;
 }
 
 select {
@@ -235,7 +236,8 @@ select:active {
 /* Buttons */
 .button-container {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .index-button {
@@ -248,7 +250,13 @@ select:active {
   font-size: 16px;
   font-weight: bold;
   color: rgb(245, 125, 61);
-} 
+  cursor: pointer;
+}
+
+.index-button:disabled, .index-button[disabled] {
+  background-color: #cccccc;
+  cursor:not-allowed !important;
+}
 
 .submit-button {
   margin: 10px 0px;
@@ -258,4 +266,25 @@ select:active {
   border-radius: 8px;
   box-shadow: 0 0 5px rgb(82, 29, 0);
   font-size: 16px;
+  cursor: pointer;
 } 
+
+.submit-button:disabled, .submit-button[disabled] {
+  cursor:not-allowed !important;
+}
+
+/***** Media quaries *****/
+
+@media (min-width: 1024px) {
+  .content-container {
+    margin: 180px auto;
+    max-width: 60%;
+  }
+}
+
+@media (min-width: 1440px) {
+  .content-container {
+    margin: 180px auto;
+    max-width: 40%;
+  }
+}
