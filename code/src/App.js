@@ -68,16 +68,17 @@ export const App = () => {
                                 required
                             >
                                 <option value="">Select type</option>
-                                <option value="Solid">Solid</option>
-                                <option value="Liquid">Liquid</option>
-                                <option value="Foam">Foam</option>
+                                <option value="solid">solid</option>
+                                <option value="liquid">liquid</option>
+                                <option value="foam">foam</option>
 
                             </select>
                         </label>
                     </div>
 
-                    <button type="submit">Push!</button>
-
+                    <div className="button-container">
+                        <button type="submit">Push!</button>
+                    </div>
                 </form >}
 
             {showSummary &&

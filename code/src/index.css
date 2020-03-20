@@ -1,8 +1,12 @@
 body {
+
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    background-color: wheat;
+    width: 100%;
+    height: 100%;
 }
 
 code {
@@ -14,11 +18,121 @@ h1 {
     text-shadow: 2px 2px darkslateblue;
 }
 
+h2 {
+    font-size: medium;
+}
+
+h3 {
+    font-size: x-large;
+}
+
+
 header {
     width: 100%;
     height: 80%;
+    padding: 20px 0;
     background-color: cornflowerblue;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 40px 40px;
+    padding: 30px;
+    background-color: lavender;
+    border-radius: 40px;
+    box-shadow: 2px 2px dimgrey;
+    
+}
+
+.question-1-container {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    font-size: 12px;
+    cursor: crosshair;
+}
+
+input {
+    border-width: thin;
+}
+
+select {
+    background-color: white;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button {
+    background-color: pink;
+    width: 30%;
+    margin: 20px 20px;
+    padding: 20px;
+    border-radius: 40px;
+    font-weight: bold;
+    font-size: 12px;
+    box-shadow: 2px 2px darkslateblue;
+}
+
+.survey-summary {
+    display: flex;
+    flex-direction: column;
+    margin: 80px 40px;
+    padding: 30px;
+    background-color: lavender;
+    border-radius: 40px;
+    box-shadow: 2px 2px dimgrey;
+}
+
+@media (min-width: 668px) {
+    
+    h1 {
+        font-size: 50px;
+        letter-spacing: 5px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+    
+    form {
+        width: 50%;
+        margin: 5% 20%;
+        padding: 30px 60px;
+    }
+
+    label {
+        font-size: 16px;
+        margin: 5px;
+    }
+
+    input {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    select {
+        font-size: 16px;
+        margin-left: 5px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+
+    .survey-summary {
+        width: 30%;
+        margin: 10% 30%;
+        padding: 80px 50px;
+    }
+
 }
