@@ -1,13 +1,18 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This is a project within the Technigo Frontend Bootcamp. 
+The objective was to build a simple survey form, practicing controlled forms, using React useState and dividing the site in different components.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I made a simple sign-up form for a code & hike weekend, with several destinations to choose from.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I focused on the basic requirements, including 3 different input types and preventing the form page from resetting on submit. Also to show a summary of the input values that replace the form when submitting. 
+
+I used App.js as the main container, holding the form with each form component mounted inside. I used Form.js for all the input fields in separate components, and Description.js and Summary.js as separate component files. Some of the techniques I've practiced are React useState and props destructuring. 
+
+If I had more time I would research how to add a reset-button after submitting the form, and also showing a different image on the Summary page, depending on the choice of destination. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-survey-lisah.netlify.com/
