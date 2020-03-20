@@ -1,17 +1,14 @@
 import React, { useState } from 'react'
-import { QuestionSection } from "./QuestionSection"
+import { QuestionSection } from './QuestionSection'
 
 export const App = () => {
-  
-  const groups = ["0-100 g.", "100-200 g.", "500+ g."]
-  const [grams, setGrams] = useState()
-  const [sugaraddict, setSugaraddict] = useState(false)
-  const [favoriteCandy, setFavoriteCandy] = useState("")
-  const [name, setName] = useState("")
-  const [showSummary, setShowSummary] = useState(false)
-  // TEST
-  const test = { favoriteCandy }
 
+  const groups = ['0-100', '100-200', '500+']
+  const [grams, setGrams] = useState('')
+  const [sugaraddict, setSugaraddict] = useState(false)
+  const [favoriteCandy, setFavoriteCandy] = useState('')
+  const [name, setName] = useState('')
+  const [showSummary, setShowSummary] = useState(false)
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -36,33 +33,34 @@ export const App = () => {
       {!showSummary && (
         <form onSubmit={handleSubmit}>
 
+          {/* HERE YOU CAN CHOOSE A GROUP WITH RADIOBUTTONS */}
           <QuestionSection>
             <h3>
               HOW MANY GRAMS OF LÖSGODIS DO YOU CONSUME PER WEEK?
             </h3>
             <div className="gramsWrapper">
               {groups.map(group => (
-              <label key={group}>
-                <input
-                  type="radio"
-                  value={group}
-                  onChange={event => setGrams(event.target.value)}
-                  checked={grams === group}
-                />
-                {group}
-              </label>
-            ))}
+                <label key={group}>
+                  <input
+                    type="radio"
+                    value={group}
+                    onChange={event => setGrams(event.target.value)}
+                    checked={grams === group}
+                  />
+                  {group} g.
+                </label>
+              ))}
             </div>
           </QuestionSection>
 
+          {/* HERE YOU FILL IN IF YOURE A SUGARADDICT WITH A CHECKBOX */}
           <QuestionSection>
             <h3>
               ARE YOU ADDICTED TO SUGAR?
             </h3>
             <label className="inputWrapper">
               <div>
-              YES
-                
+                YES
                 <input
                   type="checkbox"
                   checked={sugaraddict}
@@ -72,11 +70,12 @@ export const App = () => {
             </label>
           </QuestionSection>
 
+          {/* SELECT YOUR FAVORITE CANDY IN A DROPDOWN MENU */}
           <QuestionSection>
             <label className="inputWrapper">
               <h3>
                 WHAT DO YOU PREFER?
-            </h3>
+              </h3>
               <select
                 onChange={event => setFavoriteCandy(event.target.value)}
                 value={favoriteCandy}
@@ -91,13 +90,13 @@ export const App = () => {
             </label>
           </QuestionSection>
 
+          {/* FILL IN YOUR NAME */}
           <QuestionSection>
-            
-              <h3>
-                WHATS YOUR NAME?
+            <h3>
+              WHATS YOUR NAME?
             </h3>
-              <p>
-                answer here ↓ (yes, it's important for this super scientific survey)
+            <p>
+              answer here ↓ (yes, it's important for this super scientific survey)
             </p>
             <label className="inputWrapper">
               <input
@@ -118,23 +117,25 @@ export const App = () => {
         </form>
       )}
 
-
       {/* SUMMARY-SECTION */}
-
       {showSummary && (
-        <QuestionSection test={name}>
-
-          {/* Hej! {test === 'LICORICE' ? 'YOURE A TRUE LICORICE LOVER' : ''} */}
+        <QuestionSection>
           <h2>
-            Hi {name}! It seems like you're {sugaraddict === false ? 'not that in to candy after all.. however, this test shows that ' : "a true candy lover! You've probably trided"} {}
+            Hi {name}!
           </h2>
-
-
+          <h2>
+            It seems like you're {sugaraddict === false ? "not addicted to sugar (wich I guess is good).." : "addicted to sugar, wich means you're a TRUE candy lover!"} Your favorite type of candy is
+            {favoriteCandy === "CHOCOLATE" && ' chocolate! Yumm!'}
+            {favoriteCandy === "LICORICE" && ' licorice! Interesting choice..'}
+            {favoriteCandy === "SOUR" && " the sour stuff! That's my favorite aswell!"}
+            {favoriteCandy === "WINEGUMS" && ' winegums! why?!'}
+            {favoriteCandy === "A MIX OF EVERYTHING" && " all kinds of candy! Why choose when you don't have too?"}
+          </h2>
         </QuestionSection>
       )}
 
       <footer>
-       <p>
+        <p>
           🍭🍬🍪🍩🍿💕
         </p>
       </footer>
