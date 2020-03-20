@@ -10,13 +10,13 @@ In this project I have focused on
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. 
 
-###How did you plan? 
+### How did you plan? 
 My planning was bad... I underestemated the time for the react coding and I had higher ambision regarding the design, right now it's just ulgly... 
 
-###What technologies did you use? 
+### What technologies did you use? 
 I used the useState hook in React and connected HTML form inputs to state. 
 
-###If you had more time, what would be next?
+### If you had more time, what would be next?
 The design...  and the checkboxes... They don't work right now so I need to spend more time to solve the problem. (I chose to not take them away since I think I'm close to solve it...)
 
 ## View it live
