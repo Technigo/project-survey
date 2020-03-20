@@ -90,10 +90,7 @@ export const App = () => {
         {section === 'summary' && (
           <>
             <Summary firstName={firstName} lastName={lastName} email={email} attendingOption={attendingOption} option={option} setProgress={setProgress} />
-            <button type="button"
-              onClick={event => setSection(event.target.value)}
-              value='welcome'
-            >Return</button>
+            <a href="../public/index.html">Return</a>
           </>
         )}
       </form>
