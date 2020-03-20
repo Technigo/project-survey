@@ -1,25 +1,37 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:300,400,500,700&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Mukta:200,400,700&display=swap');
 
+
+/* RESETTING DEFAULT */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   text-decoration: none;
   font-family: 'Dosis', sans-serif;
+  text-decoration: none;
+  color:white;
 }
 
-a{
-  text-decoration: none;
-  color: white;
-  cursor: pointer;
-  font-family: 'Dosis', sans-serif;
-  font-weight: bold;
-}
+/* FONT SETTINGS */
 
 h2 {
   text-transform: uppercase;
 }
+
+p{
+  text-align: center;
+  font-family: 'Mukta', sans-serif;
+  width: 400px;
+}
+
+label{
+  font-family: 'Mukta', sans-serif;
+  font-weight: lighter;
+  font-size: 18px;
+}
+
+/* MAIN SETTINGS */
 
 body{
   background-color: #3f5e7c;
@@ -28,7 +40,6 @@ body{
   align-items: center;
   height: 100vh;
   width: 100vw;
-  color:white;
 }
 
 main {
@@ -48,21 +59,8 @@ main {
   justify-content: center;
 }
 
-p{
-  text-align: center;
-  font-family: 'Mukta', sans-serif;
-  max-width: 400px;
-}
-
-label{
-  font-family: 'Mukta', sans-serif;
-  font-weight: lighter;
-  font-size: 18px;
-}
-
 input{
   border-radius: 10px;
-  color: white;
   width: 120px;
   height: 20px;
   border-radius: 10px;
@@ -81,6 +79,31 @@ form {
   align-items: center;
 }
 
+/* BUTTON STYLING */
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+button, a {
+  text-align: center;
+  margin: 0 0.5rem;
+  width: 100px;
+  padding: 7px 12px;
+  font-size: 18px;
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: 'Dosis', sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  background: #3f5e7c;
+  box-shadow:  4px 4px 8px #365069, 
+             -4px -4px 8px #486c8f; 
+}
+
 /* INPUT FIELDS */
 
 .input{
@@ -90,8 +113,8 @@ form {
   justify-content: space-evenly;
 }
 
-
 /* RADIO BUTTONS */
+
 .radio-button-container{
   display: flex;
   flex-direction: column;
@@ -128,7 +151,6 @@ form {
   -moz-appearance:none;
   appearance:none;
   border: none;
-  color: white;
   background: #3f5e7c;
   border-radius: 20px;
   box-shadow: inset 3px 3px 6px #344e66, 
@@ -141,7 +163,6 @@ form {
   font-weight: 500;
   text-align-last:center;
 }
-
 
 /* PROGRESS BAR */
 
@@ -161,31 +182,7 @@ form {
   transition: width .2s ease-in;
 }
 
-/* BUTTON STYLING */
 
-.button-container{
-  display: flex;
-  justify-content: center;
-}
-
-button, a {
-  text-align: center;
-  margin: 0 0.5rem;
-  width: 100px;
-  color: white;
-  padding: 7px 12px;
-  font-size: 18px;
-  text-transform: uppercase;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  font-family: 'Dosis', sans-serif;
-  font-weight: bold;
-  border-radius: 10px;
-  background: #3f5e7c;
-  box-shadow:  4px 4px 8px #365069, 
-             -4px -4px 8px #486c8f; 
-}
 
 
 
