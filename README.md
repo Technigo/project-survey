@@ -1,10 +1,8 @@
-# A survey form using React 
+# A RSVP app using React 
 
-Try the survey here: https://mrsucodesproject10thecrossfitsurvey.netlify.com/
+Try the RSVP app here: https://rautellin-survey.netlify.com/
 
-For this site I used React to build a survey form, similar to typeform. The completed project consists of at least 3 questions which need to be answered by users. When the user presses submit, they see a summary of their answers.
-
-I chose to have a CrossFit theme of this survey.
+For this site I used React to build a survey form, similar to typeform. The completed project consists of 3 questions. When pressing submit, a summary of the user input will be shown.  
 
 ## What I got to learn 🧠
 
@@ -14,7 +12,7 @@ I chose to have a CrossFit theme of this survey.
 
 ## Design 🎨
 
-I used a strong picture and then the inputs had labels and are easily readable and usable.
+Used the clean neumorphism UI. 
 
 ## Requirements reached 🧪
 
@@ -22,6 +20,11 @@ I used a strong picture and then the inputs had labels and are easily readable a
 * At least one question should use radio buttons.
 * At least one question should use a select dropdown.
 * A submit button, which when pressed hides the form and show a summary of the user's submissions.
+
+## Strech goals reached 
+
+* Multi-step form where each question is shown in its own section
+* Show a progress bar
 
 ## Issues 
 
