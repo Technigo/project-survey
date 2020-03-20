@@ -1,10 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 import './summary.css'
 import summaryImage from './summaryImage.png'
 
 export const Summary = ({name, paper, place}) => {
-
-
   return (
     <section className="summary">
       <div className="text-response">

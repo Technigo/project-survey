@@ -10,8 +10,6 @@ const papers = [
 ]
 
 export const PaperEntry = ({paper, setPaper}) => {
-
-
   return (
     <form className="paper-entry">
       <h2>Preferred cupboard filler:</h2>
