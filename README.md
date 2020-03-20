@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to create a survey using radio buttons, input field and a dropdown menu. Once submitted it would show a summary of the answers given. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I watched all of the videos provided and read the assignment brief thoroughly. I watched both code alongs and then proceeded to build my survey. As I went along I revisited the code along videos which helped a lot and I also googled a bit. I loved this assignment and I love React, I finally feel that I understand what I am doing.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://vigilant-ride-5487ba.netlify.com/
