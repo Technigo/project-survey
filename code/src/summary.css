@@ -1,0 +1,11 @@
+section {
+  display: flex;
+  flex-direction: column;
+  height: 650px;
+  background-color: skyblue;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+}
+p {
+  padding-left: 50px;
+}

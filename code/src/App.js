@@ -1,13 +1,19 @@
 import React, { useState } from 'react'
 import { Radio } from './Radio'
 import { Summary } from './Summary'
-
+import { NameQuestion } from './NameQuestion'
+import { OriginQuestion } from './OriginQuestion'
+import { SubscriptionQuestion } from './SubscriptionQuestion'
+import { ColorQuestion } from './ColorQuestion'
+import 'app.css'
 
 export const App = () => {
-  const [name, setName] = useState("")
+  const [name, setName] = useState("you")
   const [location, setLocation] = useState("default")
   const [wanstNewsletter, setWantsNewsletter] = useState(false)
   const [showSummary, setShowSummary] = useState(false)
+  const [ageGroup, setAgeGroup] = useState()
+  const [color, setColor] = useState("default")
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -16,45 +22,17 @@ export const App = () => {
 
   return (
     <div className="App">
-      {!showSummary && (
+      {!showSummary ? (
         <form onSubmit={handleSubmit}>
-          <h1>Hello, {name}!</h1>
-          <label>
-            What's your name?
-          <input
-              type="text"
-              onChange={event => setName(event.target.value)}
-              value={name}
-              required
-            />
-          </label>
-
-          <label>
-            Where are you from?
-          <select
-              onChange={(event) => setLocation(event.target.value)}
-              value={location}
-            >
-              <option value="default">select option</option>
-              <option value="stockholm">Stockholm</option>
-              <option value="seoul">Seoul</option>
-              <option value="cornwall">Cornwall</option>
-            </select>
-          </label>
-          <Radio />
-          <label>
-            Yes, I want to subscribe to newsletter.
-          <input
-              type='checkbox'
-              checked={wanstNewsletter}
-              onChange={event => setWantsNewsletter(event.target.checked)}
-            />
-          </label>
-          <button type="submit">submit</button>
-        </form>)}
-      {showSummary && <Summary name={name} location={location} />}
-
-
+          <NameQuestion name={name} setName={setName} />
+          <OriginQuestion location={location} setLocation={setLocation} />
+          <Radio ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
+          <ColorQuestion color={color} setColor={setColor} />
+          <SubscriptionQuestion wanstNewsletter={wanstNewsletter} setWantsNewsletter={setWantsNewsletter} />
+          <button type="submit" disabled={name === "you" || location === "default" || color === "default"}>submit</button>
+        </form>) : (
+          <Summary className="Summary" name={name} location={location} ageGroup={ageGroup} wanstNewsletter={wanstNewsletter} color={color} />
+        )}
     </div>
   )
 }
