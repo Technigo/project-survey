@@ -3,7 +3,7 @@ form {
   flex-direction: column;
   align-items: flex-start;
   justify-content: flex-start;
-  height: 650px;
+  min-height: fit-content;
   font-family: 'Courier New', Courier, monospace;
   font-size: 18px;
   background-color: gold;
