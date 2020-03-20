@@ -1,13 +1,29 @@
-# Survey form with React
+# A survey form using React 
 
-Replace this readme with your own information about your project.
+Try the survey here: https://mrsucodesproject10thecrossfitsurvey.netlify.com/
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+For this site I used React to build a survey form, similar to typeform. The completed project consists of at least 3 questions which need to be answered by users. When the user presses submit, they see a summary of their answers.
 
-## The problem
+I chose to have a CrossFit theme of this survey.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## What I got to learn 🧠
 
-## View it live
+* How to use form fields with React
+* How to use `useState`
+* How to use state to show different components based on where you are in the survey
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## Design 🎨
+
+I used a strong picture and then the inputs had labels and are easily readable and usable.
+
+## Requirements reached 🧪
+
+* At least 3 questions.
+* At least one question should use radio buttons.
+* At least one question should use a select dropdown.
+* A submit button, which when pressed hides the form and show a summary of the user's submissions.
+
+## Issues 
+
+Had some issues working with FontAwesome in React. Especially using them inside a button. I got them to be visible but as soon as the user pressed the button, the app whole re-rendered only the progressbar and left the app empty. I will try to figure this out in the next project, so as using SVG. 
+
