@@ -4,19 +4,19 @@ const placesGroups = [
     "In the shower",
     "In the club",
     "In the car",
-    "I'm a singer, so on stage"
+    "On stage"
 ];
 
-export const ColorForm = ({ title, place, setPlace }) => {
+export const CheckedboxForm = ({title, place, setPlace }) => {
 
     return (
 
-        <article className="custom-Cb">
+        <article>
             <h1>{title}</h1>
             {placesGroups.map(group => (
-                <label key={group}>
+                <label className="labelName" key={group}>
                     {group}
-                    <input
+                    <input className="checkButtons"
                         type="checkbox"
                         value={group}
                         onChange={event => setPlace(event.target.value)}

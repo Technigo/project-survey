@@ -65,6 +65,16 @@ padding-top: 2vh;
   height: 130vh;
 }
 
+/* CHECKEDBOXFORM STYLE */
+
+.labelName {
+  color: aliceblue;
+}
+
+.checkButtons {
+  margin: 1vh;
+}
+
 /* SELECT STYLE */
 
 .selectBox {
@@ -98,7 +108,7 @@ padding-top: 2vh;
   box-shadow: 0 5px 15px rgb(228, 65, 47);
 }
 
-/* BUTTON STYLE */
+/* SUBMIT/RESTART BUTTON STYLE */
 
 
 .submitButton {
@@ -136,6 +146,23 @@ padding-top: 2vh;
   height: 100vh;
 }
 
+.micIcon {
+  background: url(./components/assets/micIcon.png)
+  no-repeat;
+  background-size: 100%;
+  width: 80px;
+  height: 80px;
+  position: relative;
+  animation-name: mic;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes mic {
+  from {left: 0px;}
+  to {left: 800px;}
+}
+
 .summaryDisplay .summaryBox {
   text-align: center;
   height: 60vh;
@@ -145,4 +172,20 @@ padding-top: 2vh;
   margin: 2vh;
 }
 
+/* MOBILE VERSION STYLE */
 
+@media screen and (max-width: 600px) {
+
+  .titleContainer h3 {
+    font-size: 20px;
+  }
+
+  .formSection article {
+    width: 90vw;
+  }
+
+  .textarea {
+    width: 60vw;
+  }
+
+}

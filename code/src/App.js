@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Header } from './components/Header'
-import { ColorForm } from './components/ColorForm'
+import { CheckedboxForm } from './components/CheckedboxForm'
 import { GenreForm } from './components/GenreForm'
 import { FunForm } from './components/FunForm'
 import { Summary } from './components/Summary'
@@ -22,7 +22,7 @@ export const App = () => {
 
      <section className="surveyHeader">
       <Header 
-      title="Welcom to this music survey, enjoy!"
+      title="Welcome to this music survey, enjoy!"
       />
       </section>
       
@@ -31,15 +31,13 @@ export const App = () => {
       {!showSummary ? (
        <form className="questionForm" onSubmit={handleSubmit}>
 
-       <section>
-         <ColorForm 
+        <section>
+         <CheckedboxForm
          title="Where do you like to sing?" 
-         infotext="Choose your mood color:"
          place={place} 
          setPlace={setPlace}
          />
         </section>
-
 
          <section className="questionBox">
          <GenreForm 
@@ -57,17 +55,14 @@ export const App = () => {
          />
         </section>
 
-        
         <button className="submitButton" type="submit"><p>Submit</p></button>
       
       </form>
        ) : (
        <Summary 
-
        place={place} 
        genre={genre} 
        description={description} />
-
        )}
 
 </section>

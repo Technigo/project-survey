@@ -6,6 +6,7 @@ export const GenreForm = ({title, genre, setGenre}) => {
         <article>
         <h1>{title}</h1>
         <select className="selectBox"
+        required
         onChange={event => setGenre(event.target.value)}
         value={genre}>
         <option value="">Choose your genre:</option>

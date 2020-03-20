@@ -12,6 +12,7 @@ export const FunForm = ({title, description, setDescription}) => {
               placeholder="Dimonds by Rihanna"
               value={description}
               onChange={event => setDescription(event.target.value)}
+              required
             />
           </label>
           
