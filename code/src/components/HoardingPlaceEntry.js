@@ -5,8 +5,7 @@ export const HoardingPlaceEntry = ({place, setPlace}) => {
   return (
     <form className="hoarding-place">
       <h2>Where do you prefere to stock up?</h2>
-  
-      <select
+      <select className="hoarding-select"
         onChange={event => setPlace(event.target.value)}
         value={place} 
       >

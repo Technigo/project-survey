@@ -21,7 +21,7 @@ export const App = () => {
     return (
     <div className="app">
       <h1>Stock Up?</h1>
-     <section className="survey-container">
+      <section className="survey-container">
         <form className="form-display" onSubmit={handleSubmit}>
           {section === 0 && <NameEntry name={name} setName={setName} />}
           {section === 1 && <HoardingPlaceEntry place={place} setPlace={setPlace} />}

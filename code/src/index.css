@@ -30,10 +30,23 @@ h2 {
   text-align: center;
 }
 
+h3 {
+  font-family: 'Roboto', sans-serif;
+  font-weight: lighter;
+  font-size: 40px;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+p {
+  padding-bottom: 10px;
+}
 
 .survey-container {
   width: 90%;
-  height: 350px;
+  height: auto;
+  min-height: 320px;
   background-color: lightgray;
   border-radius: 10px;
  
@@ -49,4 +62,18 @@ h2 {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+@media (min-width: 668px) {
+  .form-display {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  
+  h2 {
+    width: 80%; 
+  }
+
 }

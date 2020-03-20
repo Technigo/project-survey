@@ -17,7 +17,7 @@ export const PaperEntry = ({paper, setPaper}) => {
       <h2>Preferred cupboard filler:</h2>
       {papers.map((chosePaper) => (
         <label key={chosePaper}>
-          <input className="input-style"
+          <input
             type="radio"
             value={chosePaper} 
             onChange={(event) => setPaper(event.target.value)}
@@ -26,7 +26,6 @@ export const PaperEntry = ({paper, setPaper}) => {
           {chosePaper}
         </label>
       ))}
-
     </form>
   );
 };
