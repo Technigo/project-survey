@@ -1,0 +1,74 @@
+.newsContainer {
+  display: block;
+  font-size: 1.5em;
+	font-family: Arial;
+  font-weight: bold;
+  color:rgba(0, 0, 0, 0.7);
+  position: relative;
+  padding-left: 45px;
+  margin-bottom: 12px;
+  cursor: pointer;
+}
+
+/* Hide the browser's default checkbox */
+.newsContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.newsCheckmark {
+  position: absolute;
+  top: -3px;
+  left: 0;
+  height: 32px;
+  width: 32px;
+  border-radius: 3px;
+  background: #924aff;
+  box-shadow:  6px 6px 12px #7c3fd9, 
+               -6px -6px 12px #a855ff;
+}
+
+.newsContainer:hover input ~ .newsCheckmark {
+  background: linear-gradient(145deg, #8343e6, #9c4fff);
+}
+
+.newsContainer input:focus ~ .newsCheckmark {
+  background: #924aff;
+  box-shadow: inset 3px 3px 7px #7c3fd9, 
+              inset -3px -3px 7px #a855ff;
+}
+
+.newsContainer input:active ~ .newsCheckmark {
+  background: linear-gradient(145deg, #8343e6, #9c4fff);
+  box-shadow: 6px 6px 12px #7c3fd9, 
+              -6px -6px 12px #a855ff;
+}
+
+
+
+/* Create the newsCheckmark/indicator (hidden when not checked) */
+.newsCheckmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the newsCheckmark when checked */
+.newsContainer input:checked ~ .newsCheckmark:after {
+  display: block;
+}
+
+/* Style the newsCheckmark/indicator */
+.newsContainer .newsCheckmark:after {
+  left: 12px;
+  top: 6px;
+  width: 6px;
+  height: 14px;
+  border: solid rgba(0, 0, 0, 0.7);
+  border-width: 0 4px 4px 0;
+  transform: rotate(35deg);
+}

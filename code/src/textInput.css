@@ -1,0 +1,33 @@
+input {
+  display: block;
+	font-size: 1.5em;
+	font-family: Arial;
+	font-weight: bold;
+	color:rgba(0, 0, 0, 0.7);
+  padding: 0 1em;
+  height: 2.5em;
+	width: 100%;
+	box-sizing: border-box;
+	margin: 0;
+	border: none;
+  border-radius: 15px;
+  background: #924aff;
+  box-shadow:  7px 7px 14px #7c3fd9, 
+             -7px -7px 14px #a855ff;  
+}
+
+input:hover {
+  outline: none;
+  background: linear-gradient(145deg, #8343e6, #9c4fff);
+}
+
+input:focus {
+  outline: none;
+  background: #924aff;
+  box-shadow: inset 7px 7px 14px #7c3fd9, 
+              inset -7px -7px 14px #a855ff;
+}
+
+::placeholder {
+  color:rgba(0, 0, 0, 0.5);
+}

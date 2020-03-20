@@ -1,0 +1,35 @@
+button {
+  height: 100px;
+  width: 168px;
+  margin: 50px;
+  border: none;
+  font: bold 2em Arial;
+  text-transform: uppercase;
+  color:rgba(0, 0, 0, 0.7);
+  border-radius: 15px;
+  background: #924aff;
+  box-shadow:  10px 10px 20px #7c3fd9, 
+               -10px -10px 20px #a855ff;
+}
+
+button:hover, button:focus {
+  font-size: 1.98em;
+  background: linear-gradient(145deg, #8343e6, #9c4fff);
+  box-shadow:  10px 10px 20px #7c3fd9, 
+               -10px -10px 20px #a855ff;
+}
+
+button:focus {
+  outline: 4px dotted #6233a9;
+  outline-offset: 8px;
+  outline: none;
+}
+
+button:active {
+  outline: none;
+  font-size: 1.94em;
+  background: #924aff;
+  box-shadow: inset 10px 10px 20px #7c3fd9, 
+              inset -10px -10px 20px #a855ff;
+
+}

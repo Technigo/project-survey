@@ -1,4 +1,5 @@
 import React from 'react'
+import './selectInput.css'
 
 export const SelectInput = ({ selections, input, setFunction }) => {
 
@@ -8,6 +9,7 @@ export const SelectInput = ({ selections, input, setFunction }) => {
         onChange={event => setFunction(event.target.value)}
         value={input}
         required
+        className="select-css"
       >
 
         {selections.map(alt => (
