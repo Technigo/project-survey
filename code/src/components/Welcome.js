@@ -6,8 +6,8 @@ export const Welcome = (props) => {
 
   return (
     <>
-      <h1>Register for this event</h1>
-      <p>Please fill in the form and click the submitt button below to complete your registration for this event. You will recieve an confirmation upon successful registration. Not that starred files are requiered.</p>
+      <h1>Welcome to our event!</h1>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ratione, aliquam nihil. Eaque quisquam fugit unde sed? Quas placeat quos corrupti.</p>
       {setProgress(0)}
     </>
   )

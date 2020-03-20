@@ -6,10 +6,10 @@ export const Dropdown = (props) => {
 
   return (
     <>
-      <label htmlFor="options">Select an option</label>
+      <label htmlFor="options"><h2>What ticket do you want?</h2></label>
       <select
         name="options"
-        id="opions"
+        id="options"
         onChange={event => setOption(event.target.value)}
         value={option}
       >
@@ -17,7 +17,6 @@ export const Dropdown = (props) => {
         <option value="Silver pass">Silver pass</option>
         <option value="Gold pass">Gold Pass</option>
         <option value="Platinum pass">Platinum Pass</option>
-        <option value="Not attending">I said, I'm not going!</option>
       </select>
       {setProgress(75)}
     </>

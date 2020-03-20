@@ -6,10 +6,10 @@ export const Summary = (props) => {
 
   return (
     <>
-      <section>
-        <h1>Thank you {firstName}{lastName} we've sent an confirmation to {email}</h1>
-        <p>So according to your answers you will {attendingOption} and have {option}</p>
-      </section>
+
+      <h1>Thank you for your registration!</h1>
+      <p>We're so happy to spend some time with you, {firstName} {lastName}. We've sent an confirmation to your {email}. Be prepared for {attendingOption} and we wish you will have fun with the {option}.</p>
+
       {setProgress(100)}
     </>
   )
