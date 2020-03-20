@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week I made a survey form using React state as a weekly project for the Technigo frontend bootcamp.    
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I followed the code-along to build the basic structure. I had scope issues with components, ex. where <Summary /> component doesn't know about the props of another component since the other component is defined in a different file. 
+
+If I had more time, I would have worked more on styling of the summary page. I couldn't figure out how to change the background-color based on the value that comes through the survey form.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://keen-edison-7b3c61.netlify.com
