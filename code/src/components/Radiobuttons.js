@@ -2,8 +2,9 @@ import React, { useState } from "react"
 
 const attendingOptions = ["Yes, I'm attending", "No, I'm not attending", "Maybe, I'm unsure"]
 
-export const Radiobuttons = () => {
+export const Radiobuttons = (props) => {
 
+  const { setProgress } = props
   const [attendingOption, setAttendingOption] = useState();
 
   return (
@@ -19,6 +20,7 @@ export const Radiobuttons = () => {
           />
         </label>
       ))}
+      {setProgress(50)}
     </>
   )
 }

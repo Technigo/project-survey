@@ -1,7 +1,8 @@
 import React, { useState } from "react"
 
-export const Dropdown = () => {
+export const Dropdown = (props) => {
 
+  const { setProgress } = props
   const [option, setOption] = useState("")
 
   return (
@@ -18,6 +19,7 @@ export const Dropdown = () => {
         <option value="Gold pass">Gold Pass</option>
         <option value="Platinum pass">Platinum Pass</option>
       </select>
+      {setProgress(75)}
     </>
   )
 }

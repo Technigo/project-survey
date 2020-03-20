@@ -1,35 +1,34 @@
-import React, { useState } from "react"
+import React from "react"
 
-export const Textinput = () => {
+export const Textinput = props => {
 
-  const [firstName, setFirstName] = useState("")
-  const [lastName, setLastName] = useState("")
-  const [email, setEmail] = useState("")
+  const { firstName, setFirstName, lastName, setLastName, email, setEmail, setProgress } = props
 
   return (
     <>
       <h2>Your contact details</h2>
-      <label htmlFor="firstName">First name:</label>
+      <label>First name:</label>
       <input
         type="text"
-        id="firstName"
         onChange={event => setFirstName(event.target.value)}
         value={firstName}
+        required
       ></input>
-      <label htmlFor="lastName">Last name:</label>
+      <label>Last name:</label>
       <input
         type="text"
-        id="lastName"
         onChange={event => setLastName(event.target.value)}
         value={lastName}
+        required
       ></input>
-      <label htmlFor="email">Email:</label>
+      <label>Email:</label>
       <input
         type="email"
-        id="email"
         onChange={event => setEmail(event.target.value)}
         value={email}
+        required
       ></input>
+      {setProgress(25)}
     </>
   )
 }

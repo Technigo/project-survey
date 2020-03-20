@@ -1,3 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: aquamarine;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,3 +22,33 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* PROGRESS BAR */
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 350px;
+  border-radius: 50px;
+  border: 1px solid #333;
+}
+
+.filler {
+  background: #1DA598;
+  height: 100%;
+  border-radius: inherit;
+  transition: width .2s ease-in;
+}
+
+/* BUTTON STYLING */
+
+button {
+  padding: 7px 12px;
+  font-size: 14px;
+  background: #d14836;
+  border-radius: 20px;
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  cursor: pointer;
+}
+
