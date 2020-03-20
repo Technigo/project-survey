@@ -4,7 +4,7 @@ import 'Components/FormStyle.css'
 export const FavorQuestion = props => {
     const {provideGroceries, setProvideGroceries} = props;
     const {provideMedication, setProvideMedication} = props;
-    const {provideMealDeliveryServices,setProvideMealDeliveryServices} = props; 
+    const {provideMealDeliveryServices, setProvideMealDeliveryServices} = props; 
 
     return (
       <section className='question-container'>

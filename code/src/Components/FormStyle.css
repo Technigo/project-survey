@@ -1,4 +1,4 @@
-
+/*FORM STYLE */
 
 .question-container {
     display: flex;
@@ -7,6 +7,7 @@
     align-items: flex-start;
     text-align: start;
     margin-bottom: 10px;
+   
   }
   
   label {

@@ -14,31 +14,28 @@ code {
     monospace;
 }
 
-.aplication-form {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  padding: 20px;
-  text-align: start;
-
+/*HEADER CONTAINER*/
+.header-container {
+  text-align: center;
 }
 
+/*THE BIG CARD CONTAINS THE APLICATION FORM AND THE PICTURE*/
 .big-card {
   display: flex;
   flex-direction: row;
   justify-content: center;
 }
 
-
-p {
-  margin: 10px 0px 2px 0px;
-  font-size: 14px;
+/*THE CARD SHOWING THE FORM*/
+.aplication-form {
+  display: flex;
+  height: 400px;
+  width: 400px;
+  padding: 20px;
+  text-align: start;
 }
 
-.header-container {
-  text-align: center;
-}
-
+/*THE CARD SHOWING THE PICTURE*/
 .picture {
   height: 400px;
   width: 400px;
@@ -49,6 +46,14 @@ p {
   background-size: cover;
 }
 
+
+/*TEXT STYLING*/
+p {
+  margin: 10px 0px 2px 0px;
+  font-size: 14px;
+}
+
+/*BUTTON STYLING*/
 .submit-button {
   display: flex;
   width: 200px;

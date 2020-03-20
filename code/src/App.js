@@ -16,8 +16,8 @@ export const App = () => {
   const [ageGroup, setAgeGroup] =useState ()
   const [provideGroceries, setProvideGroceries] =useState (false)
   const [provideMedication, setProvideMedication] =useState (false)
-  const [provideMealDeliveryServices,setProvideMealDeliveryServices] =useState (false)
-  const [showSummary, setShowSummary] =useState(false) 
+  const [provideMealDeliveryServices, setProvideMealDeliveryServices] =useState (false)
+  const [showSummary, setShowSummary] =useState (false) 
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -48,7 +48,10 @@ export const App = () => {
         name={name}
         phoneNumber={phoneNumber}
         location={location}
-        ageGroup={ageGroup} 
+        ageGroup={ageGroup}
+        provideGroceries={provideGroceries}
+        provideMedication={provideMedication}
+        provideMealDeliveryServices={provideMealDeliveryServices}
         />
         )}
     </div> 
