@@ -5,6 +5,7 @@ import { Textinput } from './components/Textinput'
 import { Dropdown } from './components/Dropdown'
 import { Summary } from './components/Summary'
 import { Progress } from './components/Progress'
+import { Welcome } from './components/Welcome'
 
 export const App = () => {
 
@@ -26,14 +27,11 @@ export const App = () => {
 
   return (
     <>
-      <h1>Register for this event</h1>
-      <p>Please fill in the form and click the submitt button below to complete your registration for this event. You will recieve an confirmation upon successful registration. Not that starred files are requiered.</p>
       <form action="" onSubmit={handleSubmit}>
 
         {section === 'welcome' && (
           <>
-            <h1>Hi and welcome!</h1>
-            <p>To move forward press the button</p>
+            < Welcome setProgress={setProgress} />
             <button type="button"
               onClick={event => {
                 setSection(event.target.value)
