@@ -97,7 +97,7 @@ export const App = () => {
           <>
             <Summary firstName={firstName} lastName={lastName} email={email} attendingOption={attendingOption} option={option} setProgress={setProgress} />
             <section className="button-container">
-              <a href="../public/index.html">Return</a>
+              <a href="rautellin-survey.netlify.com">Return</a>
             </section>
           </>
         )}
