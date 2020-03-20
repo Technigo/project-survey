@@ -1,11 +1,10 @@
-import React, { useState } from "react"
+import React from "react"
 
 const attendingOptions = ["Yes, I'm attending", "No, I'm not attending", "Maybe, I'm unsure"]
 
 export const Radiobuttons = (props) => {
 
-  const { setProgress } = props
-  const [attendingOption, setAttendingOption] = useState();
+  const { setProgress, attendingOption, setAttendingOption } = props
 
   return (
     <>

@@ -1,9 +1,8 @@
-import React, { useState } from "react"
+import React from "react"
 
 export const Dropdown = (props) => {
 
-  const { setProgress } = props
-  const [option, setOption] = useState("")
+  const { option, setOption, setProgress } = props
 
   return (
     <>
@@ -18,6 +17,7 @@ export const Dropdown = (props) => {
         <option value="Silver pass">Silver pass</option>
         <option value="Gold pass">Gold Pass</option>
         <option value="Platinum pass">Platinum Pass</option>
+        <option value="Not attending">I said, I'm not going!</option>
       </select>
       {setProgress(75)}
     </>

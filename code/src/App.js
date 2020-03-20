@@ -12,6 +12,10 @@ export const App = () => {
   const [lastName, setLastName] = useState('')
   const [email, setEmail] = useState('')
 
+  const [attendingOption, setAttendingOption] = useState('')
+
+  const [option, setOption] = useState('')
+
   const [section, setSection] = useState('welcome')
 
   const [progress, setProgress] = useState(0)
@@ -57,7 +61,7 @@ export const App = () => {
 
         {section === 'secondQuestion' && (
           <>
-            <Radiobuttons setProgress={setProgress} />
+            <Radiobuttons setProgress={setProgress} attendingOption={attendingOption} setAttendingOption={setAttendingOption} />
             <button type="button"
               onClick={event => setSection(event.target.value)}
               value='firstQuestion'
@@ -71,7 +75,7 @@ export const App = () => {
 
         {section === 'thirdQuestion' && (
           <>
-            <Dropdown setProgress={setProgress} />
+            <Dropdown setProgress={setProgress} option={option} setOption={setOption} />
             <button type="button"
               onClick={event => setSection(event.target.value)}
               value='secondQuestion'
@@ -85,7 +89,11 @@ export const App = () => {
 
         {section === 'summary' && (
           <>
-            <Summary firstName={firstName} lastName={lastName} email={email} setProgress={setProgress} />
+            <Summary firstName={firstName} lastName={lastName} email={email} attendingOption={attendingOption} option={option} setProgress={setProgress} />
+            <button type="button"
+              onClick={event => setSection(event.target.value)}
+              value='welcome'
+            >Return</button>
           </>
         )}
       </form>
