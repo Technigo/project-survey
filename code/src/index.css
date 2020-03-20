@@ -1,5 +1,10 @@
 body {
   margin: 0;
+  background-image: url("C:\Users\siri_\project-survey\code\rose-gold-apple-watch-with-pink-sport-band-near-eyeglasses-876467.jpg") ;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-left: 3vw;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
