@@ -5,7 +5,7 @@ export const NameQuestion = props => {
 
   return (
     <label>
-      What's you name?
+      <p>What is your name?</p>
       <input
         type="text"
         value={name}

@@ -1,4 +1,5 @@
 import React from "react";
+import './summary.css'
 
 
 export const Summary = ({ name, myChoice, rating, newsLetter }) => (<section>
@@ -6,9 +7,11 @@ export const Summary = ({ name, myChoice, rating, newsLetter }) => (<section>
   
   <h2>It seems like you {rating} that today is going well for you..</h2>
 
-  <h2>If you decide you prefere to {myChoice}</h2>
+  <h2>I will find {myChoice} for you!</h2>
 
-  <h2>{newsLetter && <p>You want news</p>}</h2>
+  <h2>{newsLetter && <a href="https://reactjs.org/" ><p>You can learn more about React here </p></a>}</h2>
+
+  <img src="heart.svg" class="heart"/>
 
 </section>)
 

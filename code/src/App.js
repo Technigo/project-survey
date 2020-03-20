@@ -4,7 +4,7 @@ import { Radio } from './components/Radio';
 import { Select } from './components/Select';
 import { Checkbox } from './components/Checkbox';
 
-import { Summary } from './Summary';
+import { Summary } from './components/Summary';
 import { NameQuestion } from './components/NameQuestion';
 import "./styles.css";
 import "./app.css";

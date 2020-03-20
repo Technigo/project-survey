@@ -4,14 +4,15 @@ import './radio.css'
 export const Radio = props => {
   let { myChoice, setMyChoice } = props;
   const myChoices = [
-    'Look at the details',
-    'Look at the big picture'
+    'coffe',
+    'time',
+    'a puppy'
   ] 
 
   return (
     
     <form onSubmit={event => event.preventDefault()}>
-      Preference:
+      <p>What do you need right now?</p>
       {myChoices.map((choice) => (
       <label key={choice}>
         <input

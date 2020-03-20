@@ -16,10 +16,11 @@ button {
   font-size: 30px;
   cursor: pointer;
   text-transform: uppercase;
+  border-radius: 3px;
 }
 
 .welcome {
-  color: purple;
+  color: rgb(206, 231, 114);
 }
 
 .goodbye {

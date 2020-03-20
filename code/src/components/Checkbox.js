@@ -1,5 +1,4 @@
 import React from 'react'
-//import './checkbox.css'
 
 export const Checkbox = props => {
 
@@ -9,7 +8,7 @@ const {newsLetter, setNewsLetter} = props;
     <form onSubmit={event => event.preventDefault()}>
      
    <label>
-     Want News?
+     Want to learn more about React?
      <input
      type="checkbox"
      checked={newsLetter}
