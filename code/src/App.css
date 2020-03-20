@@ -1,0 +1,80 @@
+.App {
+    display: flex;
+    flex-direction: column;
+    background-color: antiquewhite;
+    width: 500px;
+    border: 2px solid salmon;
+    margin: 2em auto;
+    padding: 3em;
+}
+
+.App-form {
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 1.3em;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    text-transform: uppercase;
+    margin: 1em auto 1.5em auto;
+}
+
+hr {
+    color: grey;
+    width: 100%;
+    margin-bottom: 4.5em;
+}
+
+input {
+    max-width: 20em;
+}
+
+#gender {
+    max-width: 20em;
+    padding: .2em;
+}
+
+
+button:hover {
+    cursor: pointer;
+}
+
+button {
+    width: 20%;
+    align-self: center;
+    max-width: 8em;
+    border: none;
+    padding: .5em 1em;
+    margin: 2em;
+    text-decoration: none;
+    background: #e45643;
+    color: #ffffff;
+    font-family: sans-serif;
+    font-size: 1em;
+    line-height: 1;
+    cursor: pointer;
+    text-align: center;
+    transition: background 250ms ease-in-out, transform 150ms ease;
+}
+
+button:hover,
+button:focus {
+    background: #f5645a;
+}
+
+button:focus {
+    outline: 1px solid #fff;
+    outline-offset: -2px;
+}
+
+
+section {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.5em;
+}
+
+label {
+    margin-bottom: .2em;
+}

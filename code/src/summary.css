@@ -1,0 +1,33 @@
+table {
+    display: flex;
+    padding: 2em;
+    justify-content: space-between;
+}
+
+thead {
+    display: flex;
+    flex-direction: column;
+    color: darkgrey;
+    padding-right: 1.7em;
+}
+
+thead > * {
+    padding-bottom: 1em;
+}
+
+tbody {
+    display: flex;
+    flex-direction: column;
+}
+
+tbody > * {
+    align-self: flex-start;
+    padding-bottom: 1em;
+    
+}
+
+h2 {
+    color: grey;
+    font-size: 1.2em;
+}
+
