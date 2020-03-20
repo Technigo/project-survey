@@ -5,7 +5,6 @@ export const Progress = (props) => {
 
   return (
     <>
-      <h2>You've done {progress}</h2>
       <div className="progress-bar">
         <div className="filler" style={{ width: `${progress}%` }} ></div>
       </div>
