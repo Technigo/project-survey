@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const CheckboxInput = ({ wantsNewsletter, setWantsNewsletter }) => {
+export const NewsletterInput = ({ wantsNewsletter, setWantsNewsletter }) => {
   return (
     <label>
       Newsletter?

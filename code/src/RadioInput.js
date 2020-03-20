@@ -9,7 +9,7 @@ export const RadioInput = ({ text, radioAlt, input, setFunction }) => {
         <label key={group}>
           <input
             type="radio"
-            name="age"
+            name={text}
             value={group}
             onChange={event => setFunction(event.target.value)}
             checked={input === group}

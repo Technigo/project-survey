@@ -1,7 +1,11 @@
 import React from 'react'
 
-export const Button = () => {
+
+
+export const Button = ({ handleClick, text }) => {
+
   return (
-    <button type="submit">Submit</button>
+    <button type="button" onClick={handleClick} value="{text}">{text}</button >
   )
 }
+
