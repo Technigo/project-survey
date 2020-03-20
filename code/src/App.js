@@ -1,18 +1,18 @@
 import React from 'react'
 import { useState } from "react"
-import { Description } from './Components/Description'
-import { Name } from './Components/Form'
+import { Summary } from 'Components/Summary'
+import { Name } from 'Components/Form'
 import { Level } from 'Components/Form'
 import { Destination } from 'Components/Form'
 import { Button } from 'Components/Form'
-import { Summary } from 'Components/Summary'
+import { Description } from './Components/Description'
 import './app.css'
 
 export const App = () => {
-  const [name, setName] = useState("")
+  const [name, setName] = useState('')
   const [codingLevel, setCodingLevel] = useState();
-  const [destination, setDestination] = useState("");
-  const [formValue, setFormValue] = useState("");
+  const [destination, setDestination] = useState('');
+  const [formValue, setFormValue] = useState('');
   const [showSummary, setShowSummary] = useState(false)
 
   const handleSubmit = (event) => {
@@ -33,6 +33,6 @@ export const App = () => {
         </form>) : (
           <Summary name={name} codingLevel={codingLevel} destination={destination} />
         )}
-    </main >
+    </main>
   )
 }

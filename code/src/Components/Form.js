@@ -10,6 +10,7 @@ export const Name = (props) => {
                 type="text"
                 onChange={event => setName(event.target.value)}
                 value={name}
+                required
             />
         </div>
     );
@@ -43,6 +44,7 @@ export const Destination = (props) => {
         <select
             onChange={event => setDestination(event.target.value)}
             value={destination}
+            required
         >
             <option value="">Select destination</option>
             <option value="Åre">Åre</option>

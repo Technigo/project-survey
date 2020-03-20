@@ -1,28 +1,31 @@
 .form-container {
-    width: 400px;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 0;
-    margin: 0;
-    background-color: darkslategray;
-    color: white;
-    border: 2px solid red
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 0;
+  background-color: #24292e;
+  color: white;
 }
 
 form {
-    width: 90%;
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 20px;
-    margin: 20px;
-    background-color: darkslategray;
-    color: white;
-    margin: 10px;
-    border: 2px solid red;
+  width: 375px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 16px;
+  background-color: darkslategray;
+}
+
+@media (min-width: 650px) {
+  form {
+    width: 500px;
+  }
 }

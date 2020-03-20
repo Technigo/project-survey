@@ -8,8 +8,8 @@ export const Summary = (props) => {
             <p>Your name is: {name}</p>
             <p>Your coding level is: {codingLevel}</p>
             <p>And your choice of destination is: {destination}</p>
-            <p>Thank you for signing up!</p>
-            <img src="abisko.jpg" alt="abisko" />
+            <h4>Thank you for signing up!</h4>
+            <img src="are.jpg" alt="hiking_in_åre" />
         </section>
     )
 }

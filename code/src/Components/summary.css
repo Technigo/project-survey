@@ -1,7 +1,26 @@
 section {
-    text-align: center;
+  width: 375px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  margin: 20px;
+  margin: 10px;
+  border: 2px solid white;
+  border-radius: 16px;
+  background-color: darkslategray;
 }
 
 img {
-    width: 100%;
+  width: 100%;
+  border-radius: 16px;
+  margin-top: 20px;
+}
+
+@media (min-width: 650px) {
+  section {
+    width: 500px;
+  }
 }
