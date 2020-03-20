@@ -1,6 +1,6 @@
 # Survey form with React
 
-This project was about building a servey with components that uses the useState hook. 
+This project was about building a survey with components that uses the useState hook. 
 
 ## The problem
 
