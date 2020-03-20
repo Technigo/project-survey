@@ -1,13 +1,119 @@
+*{
+  padding: 0px;
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",'Leckerli One', cursive,
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
+}
+.Welcometxt {
+  font-family: 'Leckerli One';
+  font-size: 3em;
+  text-align: center;
+  
+}
+.SectionDiv {
+  height: 100vh;
+  background-image: url(./bakerybackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:right bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.submit-button{
+  width: auto;
+  padding: 15px;
+  margin: 15px;
+  align-self: center;
+  text-transform: uppercase;
+  border-radius: 10%;
+  transition: transform .2s;
+}
+
+.submit-button:hover {
+  background-color: bisque;
+  box-shadow: 2 2 100px 2px  rgba(252, 249, 249, 0.7);
+  transform: scale(0.8);
+}
+legend{
+  background-color: white;
+  margin: 20px;
+  font: bold;
+  font-size: larger;
+}
+
+fieldset {
+  height: 100vh;
+  background-image: url(./bakerybackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:right bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+label {
+  display: flex;
+  flex-direction: column;
+ /*  margin: 5px; */
+}
+input {
+  height: 40px;
+  width: 80%;
+  margin: 4px;
+}
+
+.radio-input {
+  -webkit-appearance: none;
+   -moz-appearance: none;
+  appearance: none;
+  position: relative;
+  top: 10px;
+  height: 30px;
+  width: 50px;
+  background-color: #f1f1f1;
+  color: rgb(250, 246, 33, 0.5);
+  border-radius: 15px;
+  cursor:pointer;
+}
+.radio-input:checked::before {
+position: absolute;
+font-size: 26px;
+left: 11px;
+top:  3px;
+content: '\00AC'; 
+transform: rotate(130deg);
+display:block;
+ }
+.radio-input:hover {
+background-color: rgb(185, 148, 84);
+ }
+.radio-input:checked {
+background-color: rgba(164, 167, 127, 0.8);
+color: #0a0a0a;
+}
+.radioSizeLabel{
+  font-size: 30px;
+}
+.Summarytxt {
+ /*  width: 100vh; */
+  align-content: center;
+  background-color: rgb(255, 255, 255, 0.6);
+  padding: 20px;
 }
