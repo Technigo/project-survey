@@ -7,16 +7,16 @@ export const OrderSize = ({order, setOrder, orderSizes}) => {
        
  {orderSizes.map(size => (
    <label key={size} className="radioSizeLabel">
-   <input className="radio-input"
+    <input className="radio-input"
      type="radio"
      value={size}
      id={size}
      onChange= {event => setOrder(event.target.value)}
      checked={size === order}
    />
-   {size}
+  {size}
 
-   </label>
+  </label>
  ))}
  </div>
     )}

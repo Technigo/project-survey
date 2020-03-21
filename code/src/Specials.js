@@ -5,7 +5,7 @@ export const Specials = ({GlutenFree, setGlutenFree, SugarFree, setSugarFree}) =
     <div className="fourthSpecials">
         <legend> Any special requests to keep in mind for your future orders or offers?</legend>
         <label className="Label">
-        <h5>Gluten Free </h5>
+            <h5>Gluten Free </h5>
             <input className ="CheckboxInput"
                 type="checkbox"
                 checked={GlutenFree}
