@@ -3,7 +3,7 @@ import React from "react"
 
 export const OrderSize = ({order, setOrder, orderSizes}) => {
     return (
-  <div className="OrderDiv">
+  <div>
        
  {orderSizes.map(size => (
    <label key={size} className="radioSizeLabel">

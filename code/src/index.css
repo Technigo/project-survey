@@ -19,11 +19,12 @@ code {
 }
 .Welcometxt {
   font-family: 'Leckerli One';
-  font-size: 3em;
+  font-size: 2em;
   text-align: center;
   
 }
-.SectionDiv {
+
+.SectionDiv  {
   height: 100vh;
   background-image: url(./bakerybackground.jpg);
   background-repeat: no-repeat;
@@ -37,11 +38,11 @@ code {
 .submit-button{
   width: auto;
   padding: 15px;
-  margin: 15px;
-  align-self: center;
+  margin: 0 auto;
   text-transform: uppercase;
   border-radius: 10%;
   transition: transform .2s;
+  margin-top: 15px;
 }
 
 .submit-button:hover {
@@ -49,6 +50,7 @@ code {
   box-shadow: 2 2 100px 2px  rgba(252, 249, 249, 0.7);
   transform: scale(0.8);
 }
+
 legend{
   background-color: white;
   margin: 20px;
@@ -56,37 +58,30 @@ legend{
   font-size: larger;
 }
 
-fieldset {
-  height: 100vh;
-  background-image: url(./bakerybackground.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position:right bottom;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-
 label {
   display: flex;
   flex-direction: column;
- /*  margin: 5px; */
+  align-items: center;
 }
 input {
   height: 40px;
   width: 80%;
   margin: 4px;
 }
+fieldset{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
 
+}
 .radio-input {
   -webkit-appearance: none;
    -moz-appearance: none;
   appearance: none;
   position: relative;
-  top: 10px;
-  height: 30px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   background-color: #f1f1f1;
   color: rgb(250, 246, 33, 0.5);
   border-radius: 15px;
@@ -109,11 +104,30 @@ background-color: rgba(164, 167, 127, 0.8);
 color: #0a0a0a;
 }
 .radioSizeLabel{
-  font-size: 30px;
+  font-size: 20px;
 }
+.CheckboxInput{
+  width:  40px;
+  height: 40px;
+  color: rgb(250, 246, 33, 0.5);
+  border-radius: 15px;
+  cursor:pointer;
+}
+
 .Summarytxt {
- /*  width: 100vh; */
   align-content: center;
   background-color: rgb(255, 255, 255, 0.6);
   padding: 20px;
+  width: 90%;
+  align-self: center;
 }
+/* .OrderDiv {
+  height: 100vh;
+  background-image: url(./bakerybackground.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position:right bottom;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+} */

@@ -36,7 +36,7 @@ const handleSubmit = event => {
     <form onSubmit= {handleSubmit}>
       {section === "firstQuestion" && ( 
         
-        <section className ="TopSection">
+        <section className ="SectionDiv">
           <h1 className="Welcometxt">Register here to order home made bread straight to your door</h1>
           <button className="submit-button" type="submit"   
           onClick={event => setSection ("firstname")}
@@ -59,6 +59,7 @@ const handleSubmit = event => {
 
       {/* Second section: Email */}
     {section === "email" && (
+      <div className="SectionDiv">
       <fieldset>
         <legend>Can we have your email, its only for friendly confirmations - no spam!</legend>
         <Email email={email} setEmail={setEmail}/>
@@ -66,9 +67,11 @@ const handleSubmit = event => {
           onClick={event => setSection ("adress")}
           >Submit</button>
       </fieldset>
+      </div>
      )}
       {/* Third section: Adress for delivery */}
     { section === "adress" && (
+      <div className="SectionDiv">
       <fieldset>
         <legend>Where do you live? We will connect you with your local bakery.</legend>
         <Location adress={adress} setAdress ={setAdress} city={city} setCity={setCity}/>
@@ -76,38 +79,42 @@ const handleSubmit = event => {
           onClick={event => setSection ("order")}
           >Submit</button>
       </fieldset>  
+      </div>
     )}
 
      {/* Fourth section: Order size */}
     { section === "order"&& (
-    <div fieldset>
+     <div fieldset  className="SectionDiv">
       <fieldset>
-        <h4 className="OrderQ">How many are we baking for?</h4>
-        <legend>How many are we baking for?</legend>
-     <OrderSize order={order} setOrder={setOrder} orderSizes={orderSizes}/>
-     <button className="submit-button" type="submit"  disabled={order=== ""}  
+      <h4 className="OrderQ">How many are we baking for?</h4><button className="submit-button" type="submit"  disabled={order=== ""}  
       onClick={event => setSection ("specials")}
       >Submit</button>
+      <legend>How many are we baking for?</legend>
+     <OrderSize order={order} setOrder={setOrder} orderSizes={orderSizes}/>
       </fieldset> 
     </div>
   )}
  {/* Fifth section: Special requests */}
  {section === "specials" &&(
+   <div className="SectionDiv">
     <fieldset>
       <Specials GlutenFree={GlutenFree} setGlutenFree={setGlutenFree} SugarFree={SugarFree} setSugarFree={setSugarFree}/>
       <button className="submit-button" type="submit"   
       onClick={event => setSection ("submit")}
       >Submit</button>
     </fieldset>  
+    </div>
   )}
   {section === "submit"&&(
+    <div className="SectionDiv">
     <fieldset className="Submit-button" id="Submit">
      <Submit />
     </fieldset>
+    </div>
     )}
       </form>
  ) : (
-    <article className="ShowSummary">
+    <article className="ShowSummary SectionDiv">
       <Summary firstName={firstName} email={email} city={city} adress={adress} SugarFree={SugarFree} GlutenFree={GlutenFree}/>
     </article>
       )}
