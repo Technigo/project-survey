@@ -8,4 +8,4 @@ I struggled a bit with understanding the concept of props, but after a few rewat
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://youthful-lovelace-40fe51.netlify.com/
