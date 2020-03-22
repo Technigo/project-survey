@@ -1,12 +1,10 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was a project I did while attending Technigos 24 week frontend program. The task was to use React to build a survey form. The requirements was that the project should consist of at least 3 questions which need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I struggled a bit with understanding the concept of props, but after a few rewatches of the teatchers codealongs I got it to work.
 
 ## View it live
 
