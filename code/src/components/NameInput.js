@@ -5,12 +5,11 @@ export const NameInput = props => {
 
   return (
     <label>
-      Whats your name?
       <input
         type="text"
         value={name}
         onChange={event => setName(event.target.value)}
       />
-    </label>
+    </label >
   )
 }

@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const pets = ["Dog", "Cat", "Fish"]
+const pets = ["dog", "cat", "fish"]
 
 export const PetForm = props => {
   const { pet, setPet } = props

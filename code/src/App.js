@@ -19,7 +19,7 @@ export const App = () => {
 
   return (
     <div>
-      <h1>Quick Social survey</h1>
+      <h1>Quick Social Survey</h1>
       {!showSummary ? (
         <form onSubmit={handleSubmit}>
           <h3>What´s your name?</h3>
