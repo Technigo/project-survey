@@ -53,7 +53,7 @@ export const App = () => {
             <select className="hobby"
               onChange={event => setHobby(event.target.value)}
               value={hobby}>
-              <option value={option0}>~ Select option ~</option>
+              <option value={option0} disabled>~ Select option ~</option>
               <option value={option1}> Candlelight dinner in a cosy resturant</option>
               <option value={option2}> Netlfix and Chill</option>
               <option value={option3}> Dancing on my own</option>
