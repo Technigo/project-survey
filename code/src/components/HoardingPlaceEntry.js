@@ -9,7 +9,7 @@ export const HoardingPlaceEntry = ({place, setPlace}) => {
         onChange={event => setPlace(event.target.value)}
         value={place} 
       >
-        <option value=''>Hoarding Place:</option>
+        <option value='' disabled>Hoarding Place:</option>
         <option value="supermarket">Supermarket</option>
         <option value='local store'>Local Store</option>
         <option value='oneline shop'>Oneline Shoppping</option>
@@ -17,4 +17,3 @@ export const HoardingPlaceEntry = ({place, setPlace}) => {
     </form>
   )
 }
-
