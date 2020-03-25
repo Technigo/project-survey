@@ -29,16 +29,16 @@ export const App = () => {
   }
 
   return (
-    <div className="container">
+    <div className='container'>
        
-      <section className="header">
+      <section className='header'>
         <h1>Hey stranger!</h1>
         <p>Will you please answer some questions?</p>
         <p>I want to get to know you 👀</p>
       </section>
 
-      {!showSummary && <section className="questions">
-         <form onSubmit={handleSubmit} className="form">
+      {!showSummary && <section className='questions'>
+         <form onSubmit={handleSubmit} className='form'>
 
           <DogOrCat animalLover={animalLover} setAnimalLover={setAnimalLover} />
           <ChooseVacation vacations={vacations} vacation={vacation} setVacation={setVacation} />
