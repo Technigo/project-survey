@@ -75,7 +75,10 @@ export const App = () => {
               onChange={event => setPlace(event.target.value)}
               value={place}
             >
-              <option value="" disabled>Choose one!</option> {/* Label, no value */}
+              <option value="" disabled>
+                Choose one!
+              </option>{" "}
+              {/* Label, no value */}
               <option value="at a café">at a café</option>
               <option value="at home">at home</option>
               <option value="outside in the sun">outside in the sun</option>
@@ -88,8 +91,7 @@ export const App = () => {
 
       {summary && (
         <section className="summarySection">
-          {" "}
-          <h2>Hey {name}! </h2>{" "}
+          <h2>Hey {name}! </h2>
           <p>
             So you like to eat {fika} and drink {drinkGroup} {place}. Sounds
             sweet! Let's go...

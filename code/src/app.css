@@ -1,41 +1,42 @@
 body {
   margin: 50px;
-  background-color: #ffffff;
+  background-image: url("pattern.svg");
+  background-repeat: repeat;
 }
 
 h2 {
-  font-family: Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 26px;
-  color: #fd4160;
+  color: #000;
 }
 
 p {
-  font-family: Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 16px;
-  color: #fd4160;
+  color: #000;
 }
 
 input[type="text"] {
-  font-family: Helvetica, sans-serif;
+  margin: 0;
+  font-family: "Courier New", Courier, monospace;
   font-size: 14px;
   padding: 10px;
-  border: none;
+  border: 1px solid black;
   border-radius: 4px;
   background: #ffffff;
-  color: #fd4160;
-  box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
+  color: #000;
 }
 
 input[type="radio"] {
-  margin: 0;
-  width: 30%;
+  margin: 0 10px 0 0px;
 }
 
 .formContainer {
   padding: 24px;
+  border: 3px solid #000;
   border-radius: 6px;
   background: #ffffff;
-  box-shadow: 31px 31px 61px #d9d9d9, -31px -31px 61px #ffffff;
+  box-shadow: 10px 10px #000;
 }
 
 .questionCard {
@@ -46,49 +47,59 @@ input[type="radio"] {
 .questionCard p {
   width: auto;
   padding: 5px;
-  color: #fd4160;
+  color: #000;
   font-weight: bolder;
 }
 
 .radioDiv {
   width: 40%;
-  font-family: Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 16px;
-  color: #fd4160;
+  color: #000;
   padding: 5px;
 }
 
 .formDropdown {
-  width: 120px;
-  height: 30px;
+  padding: 5px 10px;
+  width: auto;
+  height: 40px;
   border: 1px solid #414141;
   font-size: 18px;
-  color: #fd4160;
+  color: #000;
   background-color: #fff;
+  box-sizing: border-box;
 }
 
 button {
-  font-family: Helvetica, sans-serif;
+  font-family: "Courier New", Courier, monospace;
   font-size: 14px;
+  font-weight: bolder;
   border: none;
   padding: 10px 14px;
-  color: #fd4160;
+  color: #000;
   border-radius: 4px;
+  border: 1px solid black;
   background: #ffffff;
-  box-shadow: 4px 4px 8px #d9d9d9, -4px -4px 8px #ffffff;
 }
 
 button:hover {
+  color: #fff;
   border-radius: 4px;
-  background: #ffffff;
-  box-shadow: inset 4px 4px 8px #d9d9d9, inset -4px -4px 8px #ffffff;
+  background-color: gold;
 }
 
 .summarySection {
   text-align: center;
   margin: 36px 0 16px 0;
   width: 95%;
-  background-color: #fcdde2;
+  background-color: gold;
   padding: 5px 5px 20px 5px;
   border-radius: 6px;
+}
+
+@media (min-width: 900px) {
+  .formContainer {
+    margin: auto;
+    width: 500px;
+  }
 }
