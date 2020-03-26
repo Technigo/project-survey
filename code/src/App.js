@@ -22,7 +22,7 @@ export const App = () => {
         <span className="popcorn-emoji" role="img" aria-label="popcorn">
           {"🍿 "}
         </span>
-        FIKA QUIZ
+        FIKA?
         <span className="cake-emoji" role="img" aria-label="cake">
           {" 🍰"}
         </span>
@@ -105,7 +105,6 @@ export const App = () => {
             So you like to eat {fika} and drink {drinkGroup} {place}. Sounds
             sweet! Let's go...
           </p>
-
           <span className="heart-emoji" role="img" aria-label="heart">
             {"❤️"}
           </span>

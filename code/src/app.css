@@ -1,16 +1,14 @@
 body {
-  margin: 50px;
-  background-image: url("pattern.svg");
-  background-repeat: repeat;
+  margin: 30px;
+  background-color: #ffc0cb;
 }
 
 h1 {
   font-family: "Courier New", Courier, monospace;
   font-size: 26px;
-  padding: 10px;
+  padding: 10px 0;
   text-align: center;
-  color: #fff;
-  background-color: #000;
+  color: #000;
 }
 
 h2 {
@@ -112,7 +110,13 @@ button:hover {
   font-size: 30px;
 }
 
-@media (min-width: 900px) {
+/* Tablet & desktop */
+@media (min-width: 760px) {
+  body {
+    background-image: url("pattern.svg");
+    background-repeat: repeat;
+  }
+
   .formContainer {
     margin: auto;
     width: 500px;
