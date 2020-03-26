@@ -18,6 +18,15 @@ export const App = () => {
 
   return (
     <div className="formContainer">
+      <h1>
+        <span className="popcorn-emoji" role="img" aria-label="popcorn">
+          {"🍿 "}
+        </span>
+        FIKA QUIZ
+        <span className="cake-emoji" role="img" aria-label="cake">
+          {" 🍰"}
+        </span>
+      </h1>
       <form onSubmit={handleSubmit}>
         <section className="questionCard">
           <label>
@@ -96,6 +105,10 @@ export const App = () => {
             So you like to eat {fika} and drink {drinkGroup} {place}. Sounds
             sweet! Let's go...
           </p>
+
+          <span className="heart-emoji" role="img" aria-label="heart">
+            {"❤️"}
+          </span>
         </section>
       )}
     </div>

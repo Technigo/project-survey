@@ -4,6 +4,15 @@ body {
   background-repeat: repeat;
 }
 
+h1 {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 26px;
+  padding: 10px;
+  text-align: center;
+  color: #fff;
+  background-color: #000;
+}
+
 h2 {
   font-family: "Courier New", Courier, monospace;
   font-size: 26px;
@@ -93,9 +102,14 @@ button:hover {
   text-align: center;
   margin: 36px 0 16px 0;
   width: 95%;
-  background-color: gold;
+  background-color: #ececec;
   padding: 5px 5px 20px 5px;
   border-radius: 6px;
+  border: 1px solid black;
+}
+
+.heart-emoji {
+  font-size: 30px;
 }
 
 @media (min-width: 900px) {
