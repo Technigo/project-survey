@@ -9,4 +9,4 @@ React and how to useState
 
 
 ## View it live
-https://app.netlify.com/sites/trusting-feynman-83a93f/overview
+https://fika-survey.netlify.com/
