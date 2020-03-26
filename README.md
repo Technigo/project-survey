@@ -10,4 +10,4 @@ It was a very fun project to make. Not too difficult to make.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://suspicious-goldwasser-a59ac1.netlify.com/
