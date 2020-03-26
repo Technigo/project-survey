@@ -64,7 +64,8 @@ input[type="radio"] {
   width: auto;
   height: 40px;
   border: 1px solid #414141;
-  font-size: 18px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 14px;
   color: #000;
   background-color: #fff;
   box-sizing: border-box;
