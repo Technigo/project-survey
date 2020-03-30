@@ -1,13 +1,14 @@
-# Survey form with React
+# React Survey
 
-Replace this readme with your own information about your project.
+Welcome to one of my first React projects. This site let you participate in my not so high quality content survey, but it has some fancy form elements such as select, input, check box and radio buttons.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+It changes the state for each question and using the button as validation to make sure no questions are skipped, the last pages gives you a summary of everything you answered. 
 
-## The problem
+# Tech used 🧠
+- React
+- Props, useState, onClick
+- Button with validation 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
+# View it live
 
 https://amazing-clarke-aaf5ce.netlify.com/
