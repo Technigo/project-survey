@@ -7,6 +7,7 @@ It changes the state for each question and using the button as validation to mak
 # Tech used 🧠
 - React
 - Props, useState, onClick
+- Controlled Forms
 - Button with validation 
 
 # View it live
