@@ -1,8 +1,6 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This was one of my first projects in React. The learning objective was to use different states, form inputs and onclick events as well as validation on the button and a summary from the form. 
 
 ## The problem
 
