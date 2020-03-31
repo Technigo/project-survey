@@ -23,7 +23,8 @@ export const App = () => {
           <section className="firstSection">
 
           <p>Which type of pizza you prefer?</p>
-          <select className="formDropdown"
+          <select 
+            className="formDropdown"
             onChange={event => setPizza(event.target.value)}
             value={pizza}
           >
