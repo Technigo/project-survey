@@ -68,7 +68,8 @@ export const App = () => {
 
           <section className="buttonSection">
 
-          <button className="submitButton"
+          <button 
+            className="submitButton"
             onClick={ () => setSubmitted(true)}
           >SUBMIT
               </button>
