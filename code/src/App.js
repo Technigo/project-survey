@@ -28,7 +28,7 @@ export const App = () => {
             onChange={event => setPizza(event.target.value)}
             value={pizza}
           >
-            <option value="">Choose your favorite!</option>
+            <option value="" disabled >Choose your favorite!</option>
             <option value="Margarita">Margarita</option>
             <option value="Calzone">Calzone</option>
             <option value="Vesuvio">Vesuvio</option>
