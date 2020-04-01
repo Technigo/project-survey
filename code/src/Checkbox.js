@@ -4,7 +4,7 @@ import "./checkbox.css"
 export const Checkbox = ({ isEighteen, setIsEighteen }) => (
   <label className="checkboxLabel">
     I'm over 18
-        <input
+    <input
       type="checkbox"
       checked={isEighteen}
       onChange={event => setIsEighteen(event.target.checked)}

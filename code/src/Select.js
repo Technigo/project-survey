@@ -7,7 +7,7 @@ export const Select = ({ vacation, setVacation }) => (
     value={vacation}
     required
   >
-    <option value="">Select your dream vacation:</option>
+    <option value="" disabled>Select your dream vacation:</option>
     <option value="visiting New York City">visiting New York City</option>
     <option value="sun bathing on a tropical island">sun bathing on a tropical island</option>
     <option value="relaxing in a cottage">relaxing in a cottage</option>
