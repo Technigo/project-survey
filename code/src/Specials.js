@@ -6,7 +6,7 @@ export const Specials = ({GlutenFree, setGlutenFree, SugarFree, setSugarFree}) =
         <legend> Any special requests to keep in mind for your future orders or offers?</legend>
         <label className="Label">
             <h5>Gluten Free </h5>
-            <input className ="CheckboxInput"
+            <input className ="checkbox-input"
                 type="checkbox"
                 checked={GlutenFree}
                 value={GlutenFree}
@@ -14,7 +14,7 @@ export const Specials = ({GlutenFree, setGlutenFree, SugarFree, setSugarFree}) =
                 onChange={event => setGlutenFree (event.target.checked)}
             /> 
             <h5>Sugar Free </h5>
-            <input className ="CheckboxInput"
+            <input className ="checkbox-input"
                 type="checkbox"
                 checked={SugarFree}
                 value={SugarFree}
