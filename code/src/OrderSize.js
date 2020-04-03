@@ -20,12 +20,3 @@ export const OrderSize = ({order, setOrder, orderSizes}) => {
  ))}
  </div>
     )}
-
-
-
-
-
-
-
-
-
