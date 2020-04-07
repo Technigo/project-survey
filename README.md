@@ -1,6 +1,14 @@
 # Survey form with React
 
-A survey made with React.JS that requests three different inputs and will summarize the users answers.
+A survey made with React.JS that requests three different inputs and will summarize the users answers 👩‍💻🪐🚀👀
+
+## Code
+I've used:
+  * **React.js**
+  * **JavaScript**
+  * **CSS**
+  * **Animation**
+  * **Accessibility**
 
 ## The problem
 
