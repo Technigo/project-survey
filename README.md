@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+The aim of this project was to use React to build a survey form. For the survey I drew inspiration from an earlier project (https://github.com/elsareutersward/elsas-pizza-bot) and created a survey for booking tables at a restaurant. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To build the project I used global components to which I passed different props for the different questions in the form field. I used 'useState' to show different components based on where the user are in the survey. I also added som validation to the form and that when the user presses submit, they should see a summary of their answers. Lastly I added som styling to the page to make it more interactive and also made the page responsive. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://trusting-roentgen-a97b1c.netlify.com/
