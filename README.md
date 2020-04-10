@@ -12,5 +12,4 @@ My biggest challenge was then on how to make them visible in localhost, but once
 I at this point of the education still not confident on how to use props. 
 
 ## View it live
-
-https://serene-kalam-a623ca.netlify.com/
+https://survey-project-bytuliany.netlify.com
