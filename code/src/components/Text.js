@@ -2,13 +2,13 @@
 import React from 'react'
 import './text.css'
 
-export const Text = ({ question, value, setText, placeholder }) => {
+export const Text = ({ id, question, value, setText, placeholder }) => {
   return (
-    <label htmlFor={value}>
+    <label htmlFor={id}>
       <h2>{question}</h2>
       <input
         type="text"
-        id={value}
+        id={id}
         className="text-input"
         value={value}
         onChange={(event) => setText(event.target.value)}

@@ -54,6 +54,7 @@ export const App = () => {
             {question === 1 && (
               <section className="question-container">
                 <Text
+                  id="name"
                   question="Start by entering your name"
                   value={name}
                   setText={setName}
