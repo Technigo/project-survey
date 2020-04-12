@@ -16,7 +16,7 @@ export const App = () => {
   };
 
   return (
-    <div id="surveyPage">
+    <div className="surveyPage">
       {!showSummary &&
       <form onSubmit = {handleSubmit}>
         <h1>We want to know how active you are!</h1>
