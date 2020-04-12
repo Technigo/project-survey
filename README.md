@@ -10,4 +10,4 @@ If I had more time I would have added more/different inputs, made it multipage a
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://stupefied-mahavira-58bc8d.netlify.com/
