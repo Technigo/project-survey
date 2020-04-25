@@ -11,14 +11,12 @@ export const StartPage = () => {
     }
 
     return (
-        <>
-        <section className="myForm" ref={startRef}>
+        <section className="myForm">
             <h1>Do you need somewhere to live?</h1>
             <p>The Elephant Club offers rental appartments to people in need.</p>
             <button className = "btn" onClick={Starting}>I need a home</button>
+            <Form />
         </section>
-        {done && <Form />}
-        </>
 
     )
 
