@@ -1,9 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import 'components/progress.css'
-import 'components/form.css'
-import 'components/app.css'
+
 
 import { App } from './App'
 
