@@ -1,17 +1,15 @@
 import React, {useState} from 'react'
 import {values} from 'components/Form'
 
-export const Text = () => {
-    const [first, setFirst] = useState("")
-    const [last, setLast] = useState("")
-    values.name = `${first} ${last}` 
+export const Text = ({object, setObject}) => {
+  
   
     return (
       // <form onSubmit={handleSubmit}>
 <label>
 <input type="text" 
-      value={first}
-      onChange={e => setFirst(e.target.value)}
+      value={object.name}
+      onChange={e =>{object.name = e.target.value}}
 />
 </label>
     )

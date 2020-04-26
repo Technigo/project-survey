@@ -1,33 +1,46 @@
 import React, { useState, useRef } from 'react'
+import {useDispatch, useSelector} from 'react-redux'
+import {Link} from 'react-router-dom'
 import {RadioForm, Radio} from 'components/Radio'
 import {Text} from 'components/Text'
 import { Select } from './Select'
 import {Checkbox} from './Checkbox'
+import { Container } from 'shared/shared'
+import {addInfo} from '../reducers/survey'
 
 export const values = {name: "", room: "", city: "", parking: "no"}
 
 export const Form = () => {
-  const inputRef = useRef()
+  const myObject = useSelector(state=>state.survey.answers)
+  const [object, setObject] = useState({})
   const [done, setDone] = useState(false)
+  const [name, setName] = useState("")
+  const dispatch = useDispatch()
   
   // var hasName = (name === 'true') ? 'Y' :'N';
   const handleSubmit = (evt) => {
     evt.preventDefault()
-    inputRef.current.className += " noShow"
-    
+    dispatch(addInfo(object))
+    setObject({})
     // alert(`Submitting Name ${values.toString()}`) 
+   
     
   }
-  return (
-<form>
-my form
-<Text />
-<Radio />
-<Checkbox />
-<Select />
-</form>
+    return (
+      <Container>
+      <p>{myObject.name}</p>
+      <form onSubmit={handleSubmit}>
+        my form
+        <Text object={object} setObject={setObject} />
+        <Radio />
+        <Checkbox />
+        <Select />
+        <button type="submit">Click me</button>
+      </form>
+<Link to='/endpage'>End page</Link>
+</Container>
 
-  )
+    )
 
 }
 
