@@ -5,7 +5,7 @@ import {RadioForm, Radio} from 'components/Radio'
 import {Text} from 'components/Text'
 import { Select } from './Select'
 import {Checkbox} from './Checkbox'
-import { Container, StyledLink } from 'shared/shared'
+import { Container, StyledLink, Title } from 'shared/shared'
 import {addInfo} from '../reducers/survey'
 
 export const values = {name: "", room: "", city: "", parking: "no"}
@@ -28,6 +28,7 @@ export const Form = () => {
   }
     return (
       <Container>
+      <Title>Fill in your information</Title>
       <p>{myObject.name}</p>
       <form onSubmit={handleSubmit}>
         my form
@@ -37,7 +38,7 @@ export const Form = () => {
         <Select />
         <button type="submit">Click me</button>
       </form>
-      <Link to="/endpage">End Page</Link>
+      <StyledLink to="/endpage">End Page</StyledLink>
 </Container>
 
     )
