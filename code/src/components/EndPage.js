@@ -1,22 +1,15 @@
 import React from 'react'
 import { Bar} from 'components/Form'
+import { useSelector } from 'react-redux'
+import { Container } from 'shared/shared'
 
 export const EndPage = (props) => {
-
+  const myAnswers = useSelector(state=>state.survey.answers)
  
     return (
-        <section className ="myForm">
-            <h1>Thank You</h1>
-            <div className = "result">
-    <p> Your name is: </p><p>{props.name}</p>
-    <p> The appartment size is: </p><p>{props.room}</p>
-    <p>Parking: </p>
-    {props.parking &&  <p>With Parking</p>}
-    {(props.parking === false) && <p>No parking</p> }
-    <p> Your city is: </p><p>{props.city}</p>
-    </div>
-    <Bar size = "100"/>
-        </section>
+<Container>
+  <p>{myAnswers.name}</p>
+</Container>
     )
 }
 

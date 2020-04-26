@@ -1,13 +1,23 @@
 import React, {useState} from 'react'
 import {values} from 'components/Form'
+import styled from "styled-components";
+
+const StyledInput = styled.input`
+  margin: 8px;
+  box-sizing: border-box;
+  font-size: 1.2em;
+  border: none;
+  background-color: #3CBC8D;
+  color: white;
+`;
 
 export const Text = ({object, setObject}) => {
-  
   
     return (
       // <form onSubmit={handleSubmit}>
 <label>
-<input type="text" 
+<StyledInput 
+      type="text"
       value={object.name}
       onChange={e =>{object.name = e.target.value}}
 />
