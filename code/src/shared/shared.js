@@ -6,17 +6,24 @@ export const Container = styled.section`
   min-height: 300px;
   margin: 4em auto;
   padding: 32px;
-  background-color: #00203FFF;
+  background-color: #00203FFF; 
   border-radius: 15px;
   box-sizing: border-box;
   @media (min-width: 1000px) {
     width: 900px;
   }
 `
+export const Wrapper = styled.div`
+width: 100%;
+display: flex;
+justify-content: space-between;
+align-items: center;
+`
+// background-color: #00203FFF;  light: #12406a; #32435f; 
 export const Title = styled.h1`
   display: black;
   text-align: center;
-  color: palevioletred;
+  color: #dab2d3;
 `
 
 export const PinkButton = styled.button`
@@ -24,7 +31,7 @@ export const PinkButton = styled.button`
     border: none;
     width: 150px;
     height: 60px;
-    background-color: #EDC2D8FF;
+    background-color: #eac9c0;;
     font-size: 1.2em;
 `
 
@@ -34,7 +41,7 @@ export const StyledLink = styled(Link)`
   width: 150px;
   padding: 10px;
   margin: 16px;
-  background-color: #ADEFD1;
+  background-color: #9edae3;
   color: #222;
   text-decoration: none;
   text-align: center;
@@ -42,3 +49,4 @@ export const StyledLink = styled(Link)`
     background-color: #2D9CDB;
   }
 `
+// wheat: #eac9c0;

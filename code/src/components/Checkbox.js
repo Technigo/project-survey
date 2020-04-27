@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Icon = styled.svg`
   fill: none;
-  stroke: white;
+  stroke: #333;
   stroke-width: 2px;
   visibility: ${props => (props.checked ? "visible" : "hidden")};
 `;
@@ -32,7 +32,7 @@ const StyledCheckbox = styled.div`
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: ${props => (props.checked ? "green" : "gray")};
+  background: ${props => (props.checked ? "#65c4d8" : "#eac9c0")};
   border-radius: 3px;
   transition: all 150ms;
 `;

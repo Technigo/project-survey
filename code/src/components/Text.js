@@ -4,11 +4,15 @@ import styled from "styled-components";
 
 const StyledInput = styled.input`
   margin: 8px;
+  padding: 0 4px;
+  height: 32px;
   box-sizing: border-box;
   font-size: 1.2em;
   border: none;
-  background-color: #3CBC8D;
+  background-color: transparent;
   color: white;
+  border: 3px solid white;
+  border-radius: 10px;
 `;
 
 export const Text = ({object, setObject}) => {
@@ -16,6 +20,7 @@ export const Text = ({object, setObject}) => {
     return (
       // <form onSubmit={handleSubmit}>
 <label>
+Your name
 <StyledInput 
       type="text"
       value={object.name}

@@ -37,24 +37,23 @@ const StyledRadio = styled.div`
   display: inline-block;
   width: 20px;
   height: 20px;
-  background: ${props => (props.checked ? "purple" : "#EDC2D8FF")};
+  background: ${props => (props.checked ? "#dab2d3" : "#9edae3")};
   border-radius: 50%;
   transition: all 150ms;
 `;
 
   
 
-export const Radio = () => {
+export const Radio = ({object}) => {
   const [room, setRoom] = useState()
- const rooms = ["studio", "1 room", "2 rooms", "3+ rooms"]
-
+  const rooms = ["studio", "1 room", "2 rooms", "3+ rooms"]
+  object.room = room
   // const handleSubmit = (evt) => {
   //   evt.preventDefault()
   //   alert(`Submitting Name ${name}`)
   // }
   return (
     <div>
-    <p>{room}</p>
         <label>
         1 room
          <RadioContainer>

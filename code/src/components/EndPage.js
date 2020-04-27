@@ -9,6 +9,9 @@ export const EndPage = (props) => {
     return (
 <Container>
   <p>{myAnswers.name}</p>
+  <p>{myAnswers.room}</p>
+  <p>{myAnswers.parking? "with parking" : "without parking" }</p>
+  <p>{myAnswers.city}</p>
 </Container>
     )
 }
