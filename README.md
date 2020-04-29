@@ -9,4 +9,4 @@ To build the project I used global components to which I passed different props 
 
 ## View it live
 
-https://trusting-roentgen-a97b1c.netlify.com/
+https://er-project-survey.netlify.app/
