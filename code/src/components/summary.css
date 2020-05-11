@@ -1,0 +1,25 @@
+.summary {
+  font-family: Arial;
+  margin: 0 auto;
+}
+
+.summarytext {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.text {
+  margin: 0 50px;
+}
+
+h1 {
+  margin-left: 50px;
+  font-size: 2em;
+  font-weight: bold;
+}
+
+p {
+  font-size: 1.25em;
+  font-weight: normal;
+}

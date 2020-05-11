@@ -58,7 +58,7 @@ export const Form = () => {
   const genderAlt = [
     'Male',
     'Female',
-    'Unspecified',
+    'Other',
   ]
 
 

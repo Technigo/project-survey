@@ -1,5 +1,6 @@
 .form {
-  width: 50%;
+  width: 650px;
+  margin-bottom: 30px;
 }
 
 form {
@@ -14,6 +15,9 @@ label {
 .button-container {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: center;
+
 }
 
 .radio-container {
@@ -28,3 +32,8 @@ label {
   margin-bottom: 50px;
 }
 
+@media (max-width: 800px) {
+  .form {
+    width: 75%;
+  }
+}
