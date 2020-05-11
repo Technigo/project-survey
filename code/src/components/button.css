@@ -10,6 +10,7 @@ button {
   background: #924aff;
   box-shadow:  10px 10px 20px #7c3fd9, 
                -10px -10px 20px #a855ff;
+  cursor: pointer;
 }
 
 button:hover, button:focus {

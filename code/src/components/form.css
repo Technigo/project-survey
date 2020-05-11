@@ -17,7 +17,12 @@ label {
   justify-content: space-between;
   flex-wrap: wrap;
   justify-content: center;
+}
 
+.button-placeholder {
+  height: 100px;
+  width: 168px;
+  margin: 50px 50px 20px 50px;
 }
 
 .radio-container {

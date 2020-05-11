@@ -72,7 +72,7 @@ export const Form = () => {
             <TextInput text="Last name: " input={lastName} setFunction={setLastName} />
             <TextInput text="Occupation: " input={occupation} setFunction={setOccupation} />
             <div className="button-container">
-              <div></div>
+              <div className="button-placeholder"></div>
               <SubmitButton text="Next" />
             </div>
           </>
