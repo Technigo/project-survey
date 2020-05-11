@@ -20,7 +20,6 @@ export const RadioInput = ({ text, radioAlt, input, setFunction }) => {
           {group}
         </label>
       ))}
-
     </div>
   )
 }

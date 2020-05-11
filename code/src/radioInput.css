@@ -49,7 +49,6 @@
               -6px -6px 12px #a855ff;
 }
 
-
 /* Create the indicator (the dot/circle - hidden when not checked) */
 .checkmark:after {
   content: "";

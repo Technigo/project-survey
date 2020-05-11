@@ -1,7 +1,6 @@
 import React from 'react'
 import './newsletterInput.css'
 
-
 export const NewsletterInput = ({ wantsNewsletter, setWantsNewsletter }) => {
   return (
     <label className="newsContainer">
@@ -12,6 +11,5 @@ export const NewsletterInput = ({ wantsNewsletter, setWantsNewsletter }) => {
       />
       <span className="newsCheckmark"></span>
     </label>
-
   )
 }

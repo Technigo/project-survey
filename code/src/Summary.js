@@ -1,5 +1,4 @@
 import React from 'react'
-//import "./summary.css"
 
 export const Summary = ({ firstName, lastName, occupation, location, education, wantsNewsletter, ageGroup, gender }) => {
 

@@ -1,8 +1,9 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Fixa Mobile styling
+Gå igenom kod snabbt
+useState och Formulär är fokus
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 

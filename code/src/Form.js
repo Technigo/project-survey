@@ -21,7 +21,6 @@ export const Form = () => {
 
   const [section, setSection] = useState(1)
 
-
   const handleSubmit = event => {
     event.preventDefault();
     setSection(section + 1);
@@ -61,13 +60,10 @@ export const Form = () => {
   ]
 
 
-
-
   return (
     <div className="form">
 
-
-      < form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
         {section === 1 && (
           <>
             <TextInput text="First name: " input={firstName} setFunction={setFirstName} />
@@ -116,7 +112,6 @@ export const Form = () => {
             </div>
           </>
         )}
-
 
       </form >
 

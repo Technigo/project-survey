@@ -48,8 +48,6 @@
               -6px -6px 12px #a855ff;
 }
 
-
-
 /* Create the newsCheckmark/indicator (hidden when not checked) */
 .newsCheckmark:after {
   content: "";

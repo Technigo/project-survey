@@ -12,6 +12,5 @@ export const TextInput = ({ text, input, setFunction }) => {
         required
       ></input>
     </label>
-
   )
 }
