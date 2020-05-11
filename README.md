@@ -1,14 +1,20 @@
-# Survey form with React
+# React Form&ensp;|&ensp;[View Live &#10555;](https://olle-react-form.netlify.com/)
 
-Fixa Mobile styling
-Gå igenom kod snabbt
-useState och Formulär är fokus
+A survey form built with React, using the `useState` hook to keep track on progress – and showing a summary of the survey when completed.
 
+I focused on creating general and reusable components, and used arrays to store the different data inputs.
 
-## The problem
+Styled with the [Neumorphistic](https://uxdesign.cc/neumorphism-in-user-interfaces-b47cef3bf3a6) design trend, using separate css files for each component.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Core Tech
+* React
+* React Hooks
+* Form fields
+* JSX
+* CSS3
+
+## Screenshot
+![Screenshot](screenshot.jpg)
 
 ## View it live
-
 https://olle-react-form.netlify.com/
