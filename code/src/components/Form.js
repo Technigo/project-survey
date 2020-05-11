@@ -21,6 +21,8 @@ export const Form = () => {
 
   const [section, setSection] = useState(1)
 
+  const totalQuestions = 4
+
   const handleSubmit = event => {
     event.preventDefault();
     setSection(section + 1);
@@ -115,13 +117,13 @@ export const Form = () => {
 
       </form >
 
-      {section === 5 && (
+      {section > totalQuestions && (
         <div>
           <Summary firstName={firstName} lastName={lastName} occupation={occupation} location={location} education={education} wantsNewsletter={wantsNewsletter} ageGroup={ageGroup} gender={gender} />
           <Button text="Back" handleClick={handleClick} />
         </div>
       )}
-      <Progress progress={section} />
+      <Progress progress={section} total={totalQuestions} />
     </div >
   )
 }
