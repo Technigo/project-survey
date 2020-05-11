@@ -3,9 +3,9 @@ import { Summary } from "./Summary"
 import { TextInput } from "./TextInput"
 import { SelectInput } from "./SelectInput"
 import { NewsletterInput } from "./NewsletterInput"
-import { RadioInput } from 'RadioInput'
-import { SubmitButton } from 'SubmitButton'
-import { Button } from 'Button'
+import { RadioInput } from 'components/RadioInput'
+import { SubmitButton } from 'components/SubmitButton'
+import { Button } from 'components/Button'
 import { Progress } from './Progress'
 import './form.css'
 
