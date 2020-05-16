@@ -12,10 +12,11 @@ The survey was first structured with all questions on one page, using different 
 * How to use state to show different components based on where you are in the survey
 
 ## Tech
+* React.js
+* JSX
+* JavaScript ES6
 * HTML5
 * CSS3
-* React
-* JSX
 
 ## View it live
-View the site here: https://fridamaria-survey.netlify.com/
+https://fridamaria-survey.netlify.app/
