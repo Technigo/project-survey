@@ -8,4 +8,4 @@ Started with creating the various components, then compiling them into one file 
 
 ## View it live
 
-https://quizzical-bassi-3df6ac.netlify.com/
+https://survey-spring-2020.netlify.app/
