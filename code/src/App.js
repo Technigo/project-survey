@@ -8,21 +8,21 @@ import { NextButton } from './components/NextButton'
 
 
 export const App = () => {
-  const[name, setName] = useState("");
+  const[name, setName] = useState('')
   const [place, setPlace] = useState()
-  const [paper, setPaper] = useState();
-  const [section, setSection] = useState(0);
+  const [paper, setPaper] = useState()
+  const [section, setSection] = useState(0)
   
   const  handleSubmit = event => {
     event.preventDefault()
     setSection(section +1)
-  };
+  }
   
     return (
-    <div className="app">
+    <div className='app'>
       <h1>Stock Up?</h1>
-      <section className="survey-container">
-        <form className="form-display" onSubmit={handleSubmit}>
+      <section className='survey-container'>
+        <form className='form-display' onSubmit={handleSubmit}>
           {section === 0 && <NameEntry name={name} setName={setName} />}
           {section === 1 && <HoardingPlaceEntry place={place} setPlace={setPlace} />}
           {section === 2 && <PaperEntry paper={paper} setPaper={setPaper} />}
@@ -33,7 +33,7 @@ export const App = () => {
         </form>
       </section>
     </div>
-  );
-};
+  )
+}
 
 

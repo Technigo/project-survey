@@ -11,19 +11,19 @@ const papers = [
 
 export const PaperEntry = ({paper, setPaper}) => {
   return (
-    <form className="paper-entry">
+    <div className='paper-entry'>
       <h2>Preferred cupboard filler:</h2>
-      {papers.map((chosePaper) => (
+      {papers.map(chosePaper => (
         <label key={chosePaper}>
           <input
-            type="radio"
+            type='radio'
             value={chosePaper} 
-            onChange={(event) => setPaper(event.target.value)}
+            onChange={event => setPaper(event.target.value)}
             checked={paper === chosePaper}
           />
           {chosePaper}
         </label>
       ))}
-    </form>
-  );
-};
+    </div>
+  )
+}
