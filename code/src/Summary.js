@@ -2,8 +2,10 @@ import React from 'react';
 
 const Summary = (props) => {
     return (
-        <section>
-            <h1>Hey {props.name}! {props.place}, Great choice! Wish you a nice trip with your {props.partner}</h1>
+        <section className="summary">
+            <h1>Hey {props.name}</h1> 
+            <h2>{props.place}, what a great choice for your next destination!</h2>
+            <p>We wish you a nice trip with your {props.partner}!</p>
         </section>
     )
 }

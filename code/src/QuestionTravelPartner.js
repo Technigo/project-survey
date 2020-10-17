@@ -7,7 +7,7 @@ const partnerArray = ['partner', 'BFF', 'cat', 'dog', 'mum', 'dad', 'grandma'];
 const QuestionTravelPartner = ({funcSetPartner}) => {
     return (
         <section className="pick-partner-section">
-            <label>Who do you want to travel with?</label>
+            <label className="label">Who do you want to travel with?</label>
             <select
                 id="select"
                 onChange={event => funcSetPartner(event.target.value)}

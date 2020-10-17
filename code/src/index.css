@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: lightblue;
 }
 
 code {
@@ -12,9 +13,94 @@ code {
     monospace;
 }
 
+.form-section {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-image: url('./pexels-eberhard-grossgasteiger-844297.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header {
+  font-size: 52px;
+  text-shadow: 3px 3px #fff;
+}
 
 form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+}
+
+.label {
+  padding: 5px;
+  font-size: 20px;
+  margin: 10px 10px 20px 10px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  
+}
+
+.choice {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.name-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pick-place-section {
+  padding: 20px;
+}
+
+.radio-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.radio-choice-wrapper {
+  display: flex;
+  justify-content: space-between;
+  width: 100px;
+}
+.pick-partner-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+button:disabled {
+  color: blue;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+  margin: 50px;
+}
+
+button {
+  color: blue;
+  padding: 20px;
+  font-size: 20px;
+  border-radius: 10px;
+}
+.summary {
+  width: 100%;
+  height: 100vh;
+  background-image: url('./pexels-porapak-apichodilok-346696.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }

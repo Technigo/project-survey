@@ -7,12 +7,12 @@ const countriesArray = ['France', 'Ireland', 'Sweden', 'Norway', 'Albania', 'Gre
 const QuestionCountry = ({funcSetPlace}) => {
     return (
         <section className="pick-place-section">
-            <p>Where do you want to go?</p>
-
-            {countriesArray.map((partner) => {
+            <label className="label">Where do you want to go?</label>
+            <div className="radio-wrapper">
+                {countriesArray.map((partner) => {
                 return (
-                    <div>
-                        <label>{partner}</label>
+                    <div className="radio-choice-wrapper">
+                        <label className="choice">{partner}</label>
                         <input
                             type="radio"
                             id={partner}
@@ -21,8 +21,9 @@ const QuestionCountry = ({funcSetPlace}) => {
                             onChange={event => funcSetPlace(event.target.value)}
                         ></input>
                     </div>
-                )
-            })}
+                    )
+                })}
+            </div>
         </section>
     )
 }

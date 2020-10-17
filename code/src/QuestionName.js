@@ -4,7 +4,7 @@ const QuestionName = ({name, funcSetName}) => {
     
     return (
         <section className="name-section">
-            <label>What's your name?</label>
+            <label className="label">What's your name?</label>
             <input
                 type="text"
                 value={name}
