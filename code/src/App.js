@@ -38,3 +38,6 @@ export const App = () => {
     </>
   );
 };
+
+/* Check indentation and also that HTML elements are semantic, maybe sections instead of div for questions */
+/* Check semi colons everywhere even in index.js and also that everything is "" double quotations */

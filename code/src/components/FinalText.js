@@ -1,5 +1,6 @@
 import React from "react";
+import 'finaltext.css';
 
 export const FinalText = (props) => {
-return <h1>Your chosen day is: {props.resultDay}, chosen color is: {props.resultColor}, chosen number is: {props.resultNumber}</h1>
+return <p className="final-text" id="final-text">Your chosen day is: {props.resultDay}, chosen color is: {props.resultColor}, chosen number is: {props.resultNumber}</p>
 };

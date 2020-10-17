@@ -25,7 +25,7 @@ export const DayPicker = (props) => {
                     <option value="Tuesday">Tuesday</option>
                     <option value="Wednesday">Wednesday</option>
                 </select>
-            <button onClick={checkInput()}>Show me the result!</button>
+            <button onClick={checkInput()}><a href="#final-text">Show me the result!</a></button>
         </div>
 
         {(visible === true && dayOption) && <FinalText resultColor={props.finalColor} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
