@@ -21,7 +21,7 @@ export const NumberPicker = (props) => {
         </label>
         <button onClick={() => setVisible(true)}>2 of 3</button>
       </div>
-      {visible === true && <DayPicker finalColor={props.chosenColor} chosenNumber={numberOption}/>}
+      {(visible === true && numberOption) && <DayPicker finalColor={props.chosenColor} chosenNumber={numberOption}/>}
     </>
   );
 };

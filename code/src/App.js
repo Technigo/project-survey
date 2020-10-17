@@ -15,7 +15,7 @@ export const App = () => {
           {colorOptions.map((color) => (
             <label key={color}>
               <input
-                id="color-form"
+                name="color-options"
                 type="radio"
                 value={color}
                 onChange={(event) => setColorOption(event.target.value)}
@@ -27,7 +27,7 @@ export const App = () => {
           <button onClick={() => setVisible(true)}>1 of 3</button>
         </div>
 
-        {visible === true && <NumberPicker chosenColor={colorOption}/>}
+        {(visible === true && colorOption) && <NumberPicker chosenColor={colorOption}/>}
       </form>
     </>
   );

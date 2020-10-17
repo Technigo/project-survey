@@ -19,7 +19,7 @@ export const DayPicker = (props) => {
         </select>
         <button onClick={() => setVisible(true)}>Show me the result!</button>
 
-        {visible === true && <FinalText resultColor={props.finalColor} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
+        {(visible === true && dayOption ) && <FinalText resultColor={props.finalColor} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
         
     </div>
   );
