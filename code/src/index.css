@@ -18,7 +18,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-image: url('./pexels-eberhard-grossgasteiger-844297.jpg');
+  background-image: url('./assets/pexels-eberhard-grossgasteiger-844297.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -90,11 +90,13 @@ button {
   padding: 20px;
   font-size: 20px;
   border-radius: 10px;
+  margin: 50px;
 }
+
 .summary {
   width: 100%;
   height: 100vh;
-  background-image: url('./pexels-porapak-apichodilok-346696.jpg');
+  background-image: url('./assets/pexels-porapak-apichodilok-346696.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
