@@ -1,9 +1,34 @@
-import React from 'react'
+import React, { useState } from "react";
+import { NumberPicker } from "./components/NumberPicker";
+
+const colorOptions = ["Red", "Green", "Blue"];
 
 export const App = () => {
+  const [colorOption, setColorOption] = useState();
+  const [visible, setVisible] = useState(false);
+
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <>
+      <form onSubmit={(event) => event.preventDefault()}>
+        <div className="color-picker">
+          Pick a color:
+          {colorOptions.map((color) => (
+            <label key={color}>
+              <input
+                id="color-form"
+                type="radio"
+                value={color}
+                onChange={(event) => setColorOption(event.target.value)}
+                checked={colorOption === color} 
+                required />
+              {color}
+            </label>
+          ))}
+          <button onClick={() => setVisible(true)}>1 of 3</button>
+        </div>
+
+        {visible === true && <NumberPicker chosenColor={colorOption}/>}
+      </form>
+    </>
+  );
+};
