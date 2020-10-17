@@ -7,6 +7,12 @@ export const App = () => {
   const [colorOption, setColorOption] = useState();
   const [visible, setVisible] = useState(false);
 
+  const checkInput = () => {
+    if(colorOption) {
+      return () => setVisible(true)
+    }
+  };
+
   return (
     <>
       <form onSubmit={(event) => event.preventDefault()}>
@@ -24,10 +30,10 @@ export const App = () => {
               {color}
             </label>
           ))}
-          <button onClick={() => setVisible(true)}>1 of 3</button>
+          <button onClick={checkInput()}>1 of 3</button>
         </div>
 
-        {(visible === true && colorOption) && <NumberPicker chosenColor={colorOption}/>}
+        {(visible === true) && <NumberPicker chosenColor={colorOption}/>}
       </form>
     </>
   );
