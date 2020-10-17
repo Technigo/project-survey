@@ -13,8 +13,18 @@ code {
     monospace;
 }
 
+.plane {
+  height: 70px;
+  animation: move 5s ease-in-out infinite;
+/* linear, ease, ease-in*/
+}
+
+@keyframes move {
+  0% { transform: translateX(-800%); }
+  100% { transform: translateX(800%); }
+}
+
 .form-section {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;

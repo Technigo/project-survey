@@ -3,6 +3,7 @@ import QuestionName from './QuestionName';
 import QuestionCountry from './QuestionCountry';
 import QuestionTravelPartner from './QuestionTravelPartner';
 import Summary from './Summary';
+import plane from './assets/plane.png';
 
 
 export const App = () => {
@@ -21,6 +22,7 @@ export const App = () => {
       {!showSummary ? (
         <section className="form-section">
           <h1 className="header">Travel the world!</h1>
+          <img className="plane" src={plane}></img>
           <form>
             <QuestionName name={name} funcSetName={setName} />
             <QuestionCountry funcSetPlace={setPlace} />
