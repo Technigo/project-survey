@@ -1,5 +1,7 @@
 body {
-  margin: 0px;
+  margin: 10px;
+  background-color: black;
+  color: white;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -13,7 +15,17 @@ code {
 }
 
 .header {
+  border: solid red 3px;
+  height: 200px;
+  text-align: center;
   
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  position: relative;
+  top: 50px;
+
 }
 
 .mad-container {
@@ -44,12 +56,26 @@ code {
 }
 
 .line-phrase {
+  background-color: transparent;
   height:40px;
   width:300px;
+  color: white;
   border:none;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px white;
   font-family: 'Courier New', Courier, monospace;
   font-size: 30px;
+}
+
+.line-last {
+  width:300px;  
+  height: 50px;
+  color: white;
+  text-align: center;
+  border:none;
+  border-bottom: solid 1px white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 30px;
+  background-color: transparent;
 }
 
 h2 {
@@ -61,17 +87,50 @@ h2 {
 
 .line {
   width:10rem;  
+  color: white;
   text-align: center;
   border:none;
-  border-bottom: solid 1px black;
+  border-bottom: solid 1px white;
   font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
+  background-color: transparent;
+
 }
 
  .mad-lib {
-  padding: 20px;
+  color: white;
+  padding: 20px 20px 50px 20px;
+
    font-size: 20px;
    font-family: 'Courier New', Courier, monospace;
    border: solid 2px green;
  
+ }
+
+
+ @media (min-width: 667px) and (max-width: 1024px) {
+
+
+  .mad-container {
+    
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .word-container-line {
+    grid-column: span 3;
+  }
+
+ }
+
+ @media  (min-width: 1024px) {
+
+
+  .mad-container {
+    
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .word-container-line {
+    grid-column: span 4;
+  }
  }

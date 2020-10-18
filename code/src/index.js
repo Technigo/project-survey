@@ -20,11 +20,11 @@ const thingsTwos = [
     const [hustle, setHustle] = useState("");
     const [things, setThings] = useState("");
     const [thingsTwo, setThingsTwo] = useState()
-    const [phrase, setPhrase] = useState("...")
+    const [phrase, setPhrase] = useState("")
   return (
    <section>
 
-       <div className="header">Time For Halloween Mad Lib</div>
+       <div className="header"><h1>Time For Halloween Mad Lib</h1></div>
        <div className="mad-container">
 <div className="word-container">
 <form>
@@ -312,7 +312,7 @@ const thingsTwos = [
 
 
         <div className="word-container">
-          <form>
+<form>
              <h2>Things</h2>
                 {thingsTwos.map((group) => (
             <label key={group}>
@@ -335,7 +335,7 @@ const thingsTwos = [
         <label>What do you say when scarying kids<br></br>
           <input
             type="text"
-            value="..."
+            value="phrase"
             className="line-phrase"
             maxlength="17" 
             onChange={event => setPhrase(event.target.value)}
@@ -411,13 +411,19 @@ const thingsTwos = [
         value={thingsTwo}
         className="line"
         />  
-    all over the place. No one wants to come between him and his <input
+    all over the place. No one wants to come between him and his 
+        <input
         type="text"
         inChange={event => setFood(event.target.value)}
         value={food}
         className="line"
+        /> , or els he will say <br></br>
+        <input
+        type="text"
+        inChange={event => setPhrase(event.target.value)}
+        value={phrase}
+        className="line-last"
         /> 
-
     </div>
    
     </section>
