@@ -14,3 +14,12 @@
   margin: 10px;
   padding: 10px;
 }
+
+.bold-summary-text {
+  font-weight: bold;
+}
+
+.underlined-summary-text {
+  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+}

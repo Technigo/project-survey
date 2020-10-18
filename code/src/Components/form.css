@@ -20,8 +20,14 @@ button { /* The Submit-button */
   cursor: pointer;
   text-transform: uppercase;
   border-radius: 8px;
-  color: #577399;
+  color:#F7F7FF;
 } 
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
 
 /* Name Input */ /* Email Input */ 
 /* Radiobutton Input */ /* Dropdown Input */

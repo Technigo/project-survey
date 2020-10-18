@@ -5,7 +5,6 @@ import { EmailInput } from './EmailInput';
 import { Radiobuttons } from './Radiobuttons';
 import { Dropdown } from './Dropdown';
 import { Checkbox } from './Checkbox';
-import { Submit } from './Submit';
 import { Summary } from './Summary';
 
 import './form.css';
@@ -16,51 +15,136 @@ export const Form = () => {
   const [canContributeWith, setCanContributeWith] = useState();
   const [yearsOfExperience, setYearsOfExperience] = useState("");
   const [wantsToBeMentor, setWantsToBeMentor] = useState(false);
-  const [showSummary, setShowSummary] = useState(false);
+  const [section, setSection] = useState('firstQuestion')
   
   const handleSubmit = event => {
     event.preventDefault();
-    setShowSummary(true);
   };
 
   return (
     <>
-    {!showSummary && <h2 tabIndex="0">Please fill in the form:</h2>}
-    {!showSummary && (
-    <form onSubmit={handleSubmit}>
-      <NameInput 
-        id="inputName"
-        name={name}
-        setName={setName}
-      />
-      <EmailInput 
-        email={email}
-        setEmail={setEmail}
-      />
-      <Radiobuttons 
-        id="radioButtons"
-        canContributeWith={canContributeWith}
-        setCanContributeWith={setCanContributeWith}
-      />
-      <Dropdown 
-       yearsOfExperience={yearsOfExperience} 
-       setYearsOfExperience={setYearsOfExperience}/>
-      <Checkbox 
-        wantsToBeMentor={wantsToBeMentor} 
-        setWantsToBeMentor={setWantsToBeMentor}
-      />
-      <Submit />
-    </form>
-    )}
-    {showSummary && (
-      <Summary 
-        name={name}
-        email={email}
-        canContributeWith={canContributeWith}
-        yearsOfExperience={yearsOfExperience}
-        wantsToBeMentor={wantsToBeMentor} 
-      />
-    )}
+      <form onSubmit={handleSubmit}>
+    
+        {section === 'firstQuestion' && (
+          <>
+            <h2 tabIndex="0">If YES, please fill in the form 
+              <span role="img" aria-label="A blue heart emoji">&#128153;</span>
+            </h2>
+            <NameInput 
+              id="inputName"
+              name={name}
+              setName={setName}
+            />
+            <section className="button-container">
+              <button 
+                type="button" 
+                onClick={event => {setSection(event.target.value)}} 
+                value='secondQuestion'>
+                Next
+              </button>
+            </section>
+          </>
+        )}
+        {section === 'secondQuestion' && (
+          <>
+            <EmailInput 
+              email={email}
+              setEmail={setEmail}
+            />
+            <section className="button-container">
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value='firstQuestion'>
+                Back
+              </button>
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value="thirdQuestion">
+                Next
+              </button>
+            </section>
+          </>
+        )}
+        {section === 'thirdQuestion' && (
+          <>
+            <Radiobuttons 
+              id="radioButtons"
+              canContributeWith={canContributeWith}
+              setCanContributeWith={setCanContributeWith}
+            />
+            <section className="button-container">
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value='secondQuestion'>
+                Back
+              </button>
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value="fourthQuestion">
+                Next
+              </button>
+            </section>
+          </>
+        )}
+        {section === 'fourthQuestion' && (
+          <>
+            <Dropdown 
+              yearsOfExperience={yearsOfExperience} 
+              setYearsOfExperience={setYearsOfExperience}
+            />
+            <section className="button-container">
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value='thirdQuestion'>
+                Back
+              </button>
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value="lastQuestion">
+                Next
+                </button>
+            </section>
+          </>
+        )}
+        {section === 'lastQuestion' && (
+          <>
+            <Checkbox 
+              wantsToBeMentor={wantsToBeMentor} 
+              setWantsToBeMentor={setWantsToBeMentor}
+            />
+            <section className="button-container">
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value='fourthQuestion'>
+                Back
+              </button>
+              <button 
+                type="button"
+                onClick={event => setSection(event.target.value)}
+                value="summary">
+                Submit
+              </button>
+            </section>
+          </>
+        )}
+      </form>
+    
+      {section === 'summary' && (
+        <Summary 
+          name={name}
+          email={email}
+          canContributeWith={canContributeWith}
+          yearsOfExperience={yearsOfExperience}
+          wantsToBeMentor={wantsToBeMentor}
+        />
+      )}
     </>
   );
 };

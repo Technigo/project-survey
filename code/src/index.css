@@ -11,13 +11,20 @@
 
 body {
   margin: 0;
+}
+
+.main {
+  margin: 0;
   font-family: 'Catamaran', Sans-Serif;
   font-family: 'Merriweather Sans', Sans-Serif;
   background-color: #F7F7FF;
   color: #577399;
   padding: 40px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  align-items: center;
+  min-height: 100vh; 
 }
 
 h1 {
