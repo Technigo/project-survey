@@ -1,5 +1,5 @@
 body {
-  margin: 10px;
+  margin: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -14,10 +14,13 @@ code {
 
 .mad-container {
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  border: solid black 2px;
+  width: 100%;
 }
 
 .word-container {
+  min-width: 27%;
   padding: 20px 20px 20px 5px; 
   border: solid red 2px;
   width: auto;
@@ -41,6 +44,10 @@ h2 {
   font-size: 20px;
 }
 
-
-
+ .mad-lib {
+  padding: 20px;
+   font-size: 20px;
+   font-family: 'Courier New', Courier, monospace;
+   border: solid 2px green;
  
+ }
