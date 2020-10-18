@@ -4,6 +4,11 @@ import './index.css'
 import { Form } from './App'
 
 
+const thingsTwos = [
+    "toilet paper",
+    "eggs",
+    "yarn"
+  ]
 
  const App = () => {
     const [holiday, setHoliday] = useState("");
@@ -14,9 +19,12 @@ import { Form } from './App'
     const [food, setFood] = useState("");
     const [hustle, setHustle] = useState("");
     const [things, setThings] = useState("");
-
+    const [thingsTwo, setThingsTwo] = useState()
+    const [phrase, setPhrase] = useState("...")
   return (
    <section>
+
+       <div className="header">Time For Halloween Mad Lib</div>
        <div className="mad-container">
 <div className="word-container">
 <form>
@@ -293,14 +301,51 @@ import { Form } from './App'
           <label>
           <input
             type="checkbox"
-            value="raisin"
+            value="broken code"
             onChange={event => setThings(event.target.value)}
             />
-            Raisin
+            Broken code
           </label>
           <br></br>
           </form>
           </div>
+
+
+        <div className="word-container">
+          <form>
+             <h2>Things</h2>
+                {thingsTwos.map((group) => (
+            <label key={group}>
+                  <br></br> 
+            <input
+              type="checkbox"
+              value={group}
+              onChange={(event) => setThingsTwo(event.target.value)}
+              checked={thingsTwo === group}
+              />
+              {group}
+          </label>
+      ))}
+      </form>
+</div>
+
+<div className="word-container-line">
+<form>
+<h2>Phrase</h2>  <br></br>
+        <label>What do you say when scarying kids<br></br>
+          <input
+            type="text"
+            value="..."
+            className="line-phrase"
+            maxlength="17" 
+            onChange={event => setPhrase(event.target.value)}
+            value={phrase}
+            />
+            
+          </label>
+          </form>
+          </div>
+
           </div>
           
 <br></br>
@@ -359,8 +404,20 @@ import { Form } from './App'
         value={things}
         className="line"
         />  like last year. 
-        But if not he will throw (sak) 
-    all over the place. No one wants to come between (person) and his (something to eat)
+        But if not, he will throw 
+        <input
+        type="text"
+        inChange={event => setThingsTwo(event.target.value)}
+        value={thingsTwo}
+        className="line"
+        />  
+    all over the place. No one wants to come between him and his <input
+        type="text"
+        inChange={event => setFood(event.target.value)}
+        value={food}
+        className="line"
+        /> 
+
     </div>
    
     </section>
