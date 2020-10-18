@@ -13,7 +13,6 @@ const thingsTwos = [
  const App = () => {
     const [holiday, setHoliday] = useState("");
     const [nameOne, setNameOne] = useState("");
-    const [nameTwo, setNameTwo] = useState("");
     const [costumeOne, setCostumeOne] = useState("");
     const [costumeTwo, setCostumeTwo] = useState("");
     const [food, setFood] = useState("");
@@ -26,43 +25,6 @@ const thingsTwos = [
 
        <div className="header"><h1>Time For Halloween Mad Lib</h1></div>
        <div className="mad-container">
-<div className="word-container">
-<form>
-<h2>Name</h2>  <br></br>
-        <label>
-          <input
-            type="checkbox"
-            value="Poya"
-            onChange={event => setNameOne(event.target.value)}
-           checked={nameOne === "Poya"}
-            />
-            Poya
-          </label>
-          <br></br>
-        <label>
-          <input
-            type="checkbox"
-            value="Maksymilian"
-            onChange={event => setNameOne(event.target.value)}
-           checked={nameOne === "Maksymilian"}
-            />
-            Maksymilian
-          </label>
-          <br></br>
-          <label>
-          <input
-            type="checkbox"
-            value="Van"
-            onChange={event => setNameOne(event.target.value)}
-           checked={nameOne === "Van"}
-            />
-            Van
-          </label>
-          <br></br>
-         
-          </form>
-      
-          </div>
 
           <div className="word-container">
 <form>
@@ -103,14 +65,15 @@ const thingsTwos = [
           </div>
 
           <div className="word-container">
+              
 <form>
 <h2>Name</h2>  <br></br>
         <label>
           <input
             type="checkbox"
             value="Poya"
-            onChange={event => setNameTwo(event.target.value)}
-           checked={nameTwo === "Poya"}
+            onChange={event => setNameOne(event.target.value)}
+           checked={nameOne === "Poya"}
             />
             Poya
           </label>
@@ -119,8 +82,8 @@ const thingsTwos = [
           <input
             type="checkbox"
             value="Maksymilian"
-            onChange={event => setNameTwo(event.target.value)}
-           checked={nameTwo === "Maksymilian"}
+            onChange={event => setNameOne(event.target.value)}
+           checked={nameOne === "Maksymilian"}
             />
             Maksymilian
           </label>
@@ -129,8 +92,8 @@ const thingsTwos = [
           <input
             type="checkbox"
             value="Van"
-            onChange={event => setNameTwo(event.target.value)}
-           checked={nameTwo === "Van"}
+            onChange={event => setNameOne(event.target.value)}
+           checked={nameOne === "Van"}
             />
             Van
           </label>
@@ -352,13 +315,8 @@ const thingsTwos = [
 
 
 <div className="mad-lib">
-
-        <input
-        type="text"
-        inChange={event => setNameOne(event.target.value)}
-        value={nameOne}
-        className="line"
-        />! It´s time for 
+    <h3>The madest lib</h3>
+         It´s time for 
         <input
         type="text"
         inChange={event => setHoliday(event.target.value)}
@@ -368,8 +326,8 @@ const thingsTwos = [
         /> and it´s 
         <input
         type="text"
-        inChange={event => setNameTwo(event.target.value)}
-        value={nameTwo}
+        inChange={event => setNameOne(event.target.value)}
+        value={nameOne}
         className="line"
         />´s favorit holiday! Last year he was
          <input
@@ -391,8 +349,8 @@ const thingsTwos = [
         inChange={event => setFood(event.target.value)}
         value={food}
         className="line"
-        /> when 
-       " <input
+        /> when <br></br>
+        " <input
         type="text"
         inChange={event => setHustle(event.target.value)}
         value={hustle}
@@ -403,21 +361,21 @@ const thingsTwos = [
         inChange={event => setThings(event.target.value)}
         value={things}
         className="line"
-        />  like last year. 
-        But if not, he will throw 
+        /> , like last year. 
+        But if so, he will throw 
         <input
         type="text"
         inChange={event => setThingsTwo(event.target.value)}
         value={thingsTwo}
         className="line"
         />  
-    all over the place. No one wants to come between him and his 
+         all over the place. No one wants to come between him and his 
         <input
         type="text"
         inChange={event => setFood(event.target.value)}
         value={food}
         className="line"
-        /> , or els he will say <br></br>
+        /> , or els he will say: <br></br>
         <input
         type="text"
         inChange={event => setPhrase(event.target.value)}

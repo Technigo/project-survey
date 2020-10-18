@@ -18,14 +18,13 @@ code {
   border: solid red 3px;
   height: 200px;
   text-align: center;
-  
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   margin-bottom: 20px;
 }
 
 .header h1 {
   position: relative;
   top: 50px;
-
 }
 
 .mad-container {
@@ -73,8 +72,8 @@ code {
   text-align: center;
   border:none;
   border-bottom: solid 1px white;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 30px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 40px;
   background-color: transparent;
 }
 
@@ -91,21 +90,29 @@ h2 {
   text-align: center;
   border:none;
   border-bottom: solid 1px white;
-  font-family: 'Courier New', Courier, monospace;
-  font-size: 20px;
+  font-family: 'Reenie Beanie', cursive;
+  font-size: 30px;
   background-color: transparent;
-
 }
 
  .mad-lib {
+   text-align: center;
   color: white;
   padding: 20px 20px 50px 20px;
-
-   font-size: 20px;
-   font-family: 'Courier New', Courier, monospace;
-   border: solid 2px green;
- 
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  border: solid 2px green;
  }
+
+ h3 {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+ }
+
+
+
+ 
+
+
 
 
  @media (min-width: 667px) and (max-width: 1024px) {
