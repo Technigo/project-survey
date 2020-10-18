@@ -1,9 +1,13 @@
-import React from 'react'
+import React from 'react';
+
+import { Header } from 'Components/Header';
+import { Form } from 'Components/Form';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Header />
+      <Form />
     </div>
-  )
-}
+  );
+};
