@@ -2,21 +2,26 @@ import React from 'react';
 
 const contributes = ["Code Knowledge", "Tech Recruitment Knowledge", "Agile Project Management", "Experience as Product Owner"];
 
-export const Radiobuttons = ({ canContributeWith, setCanContributeWith }) => {
+export const Radiobuttons = ({ id, canContributeWith, setCanContributeWith }) => {
   
   return (
     <>
     I can contribute with: 
-    {contributes.map(group => (
-      <label key = {group}>
-        <input
-          type="radio"
-          value={group}
-          onChange={(event) => setCanContributeWith(event.target.value)}
-          checked={canContributeWith === group} 
-          required
-        />
-        {group}
+    {contributes.map(contributes => (
+      <label 
+        className="radiobutton-label" 
+        key = {contributes} 
+        htmlFor={id}>
+          <input
+            className="radiobutton-input"
+            id={id}
+            type="radio"
+            value={contributes}
+            onChange={(event) => setCanContributeWith(event.target.value)}
+            checked={canContributeWith === contributes} 
+            required
+          />
+        {contributes}
       </label>
     ))}
     </>

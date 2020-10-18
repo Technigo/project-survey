@@ -4,6 +4,7 @@ export const Dropdown = ({ yearsOfExperience, setYearsOfExperience }) => {
 
   return (
     <select
+      className="dropdown-select"
       onChange={event => setYearsOfExperience(event.target.value)}
       value={yearsOfExperience}
       required

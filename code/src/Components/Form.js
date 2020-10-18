@@ -8,6 +8,8 @@ import { Checkbox } from './Checkbox';
 import { Submit } from './Submit';
 import { Summary } from './Summary';
 
+import './form.css';
+
 export const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -23,9 +25,11 @@ export const Form = () => {
 
   return (
     <>
+    {!showSummary && <h2 tabIndex="0">Please fill in the form:</h2>}
     {!showSummary && (
     <form onSubmit={handleSubmit}>
       <NameInput 
+        id="inputName"
         name={name}
         setName={setName}
       />
@@ -34,6 +38,7 @@ export const Form = () => {
         setEmail={setEmail}
       />
       <Radiobuttons 
+        id="radioButtons"
         canContributeWith={canContributeWith}
         setCanContributeWith={setCanContributeWith}
       />
@@ -57,5 +62,5 @@ export const Form = () => {
       />
     )}
     </>
-  )
-}
+  );
+};

@@ -1,0 +1,58 @@
+
+/* The Form-element */
+form {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border: 5px solid #495867;
+  border-radius: 8px;
+  width: 310px;
+}
+
+button { /* The Submit-button */
+  padding: 10px;
+  margin: 10px;
+  font-family: 'Merriweather Sans', Sans-Serif;
+  font-size: 16px;
+  font-weight: bold;
+  background: #495867;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color: #577399;
+} 
+
+/* Name Input */ /* Email Input */ 
+/* Radiobutton Input */ /* Dropdown Input */
+/* Checkbox Input */
+.name-label, .email-label, .radiobutton-label, 
+.dropdown-select, .checkbox-label {
+  margin: 10px;
+  font-family: 'Merriweather Sans', Sans-Serif;
+  font-size: 16px;
+}
+
+.name-input, .email-input, .radiobutton-input, 
+.checkbox-input {
+  margin: 6px;
+}
+
+.name-input, .email-input, .dropdown-select {
+  color: #577399;
+  border: 1px solid #577399;
+  border-radius: 8px;
+  padding: 4px;
+}
+
+/* Media queries*/
+@media (min-width: 668px) { /* Tablet device */
+  form {
+    width: 500px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) { /* Desktop device */
+ 
+}

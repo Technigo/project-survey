@@ -1,0 +1,16 @@
+/*** Summary box ***/
+.summary-box {
+  border: 5px solid #495867;
+  border-radius: 8px;
+}
+
+.answers-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.summary-heading, .summary-text {
+  margin: 10px;
+  padding: 10px;
+}
