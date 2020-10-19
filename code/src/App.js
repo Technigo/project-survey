@@ -1,10 +1,10 @@
 import React from 'react';
-import { Form } from './Form';
+import { Survey } from './Survey';
 
 export const App = () => {
   return (
     <>
-      <Form />
+      <Survey />
     </>
   );
 };

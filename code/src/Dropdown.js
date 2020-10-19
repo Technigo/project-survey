@@ -1,17 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Dropdown = ({ labelText, attributeID }) => {
-  const [location, setLocation] = useState('');
-
+export const Dropdown = ({ labelText, attributeID, value, setText }) => {
   return (
     <div className="form-group form-group-dropdown">
-      <h2>Select state is: {location}</h2>
       <label htmlFor={attributeID}>{labelText}</label>
       <select
         id={attributeID}
         name={attributeID}
-        onChange={(event) => setLocation(event.target.value)}
-        value={location}>
+        onChange={(event) => setText(event.target.value)}
+        value={value}
+        required>
         <option value="">Select location:</option>
         <option value="Stockholm">Stockholm</option>
         <option value="Oslo">Oslo</option>
