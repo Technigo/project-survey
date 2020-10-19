@@ -1,40 +1,23 @@
 import React, { useState } from "react";
-import { NumberPicker } from "./components/NumberPicker";
-
-const colorOptions = ["Red", "Green", "Blue"];
+import { ColorPicker } from "./components/ColorPicker";
+import 'components-css/landing-page.css';
 
 export const App = () => {
-  const [colorOption, setColorOption] = useState();
   const [visible, setVisible] = useState(false);
 
   const checkInput = () => {
-    if(colorOption) {
       return () => setVisible(true)
-    }
   };
 
   return (
     <>
-      <form onSubmit={(event) => event.preventDefault()}>
-        <div className="color-picker">
-          Pick a color:
-          {colorOptions.map((color) => (
-            <label key={color}>
-              <input
-                name="color-options"
-                type="radio"
-                value={color}
-                onChange={(event) => setColorOption(event.target.value)}
-                checked={colorOption === color} 
-                required />
-              {color}
-            </label>
-          ))}
-          <button onClick={checkInput()}>1 of 3</button>
-        </div>
-
-        {(visible === true) && <NumberPicker chosenColor={colorOption}/>}
-      </form>
+      <section className="landing-page">
+        <h1>Vacation Plans Generator</h1>
+        <h2>Your Corona-friendly digital getaway!</h2>
+        
+        <button onClick={checkInput()}><a href="#start-form">Get Started!</a></button>
+        {(visible === true) && <ColorPicker />}
+      </section>
     </>
   );
 };

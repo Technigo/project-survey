@@ -12,8 +12,8 @@ export const NumberPicker = (props) => {
   };
 
   return (
-    <>
-      <form onSubmit={(event) => event.preventDefault()}>
+    <section className="first-question">
+      <form onSubmit={(event) => event.preventDefault()} className="first-question">
         <div className="number-picker">
             <label key={numberOption}>
             Pick your favorite number (between 1 and 5):
@@ -31,6 +31,6 @@ export const NumberPicker = (props) => {
 
         {(visible === true) && <DayPicker finalColor={props.chosenColor} chosenNumber={numberOption}/>}
       </form>
-    </>
+      </section>
   );
 };
