@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import { Form } from './App'
-
+import { Button } from './App'
 
 const thingsTwos = [
     "toilet paper",
@@ -25,9 +25,15 @@ const thingsTwos = [
 
        <div className="header"><h1>Time For Halloween Mad Lib</h1></div>
        <div className="mad-container">
-
-          <div className="word-container">
-<form>
+         
+       <div className="word-container">
+       <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
+      <form>
         <h2>Holiday</h2> <br></br>
         <label>
           <input
@@ -36,7 +42,7 @@ const thingsTwos = [
             onChange={event => setHoliday(event.target.value)}
            checked={holiday === "Christmas"}
             />
-            Christmas
+            Christmas <br></br>
           </label>
           <br></br>
         <label>
@@ -46,7 +52,7 @@ const thingsTwos = [
             onChange={event => setHoliday(event.target.value)}
            checked={holiday === "Thanksgiving"}
             />
-            Thanksgiving
+            Thanksgiving <br></br>
           </label>
           <br></br>
           <label>
@@ -61,10 +67,20 @@ const thingsTwos = [
           <br></br>
          
           </form>
+    </div>
+  </div>
+</div>
+          
       
           </div>
 
           <div className="word-container">
+          <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
               
 <form>
 <h2>Name</h2>  <br></br>
@@ -75,7 +91,7 @@ const thingsTwos = [
             onChange={event => setNameOne(event.target.value)}
            checked={nameOne === "Poya"}
             />
-            Poya
+            Poya<br></br>
           </label>
           <br></br>
         <label>
@@ -85,7 +101,7 @@ const thingsTwos = [
             onChange={event => setNameOne(event.target.value)}
            checked={nameOne === "Maksymilian"}
             />
-            Maksymilian
+            Maksymilian<br></br>
           </label>
           <br></br>
           <label>
@@ -102,8 +118,16 @@ const thingsTwos = [
           </form>
       
           </div>
-
+</div>
+</div>
+</div>
           <div className="word-container">
+          <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
 <form>
 <h2>Costume</h2>  <br></br>
         <label>
@@ -111,8 +135,9 @@ const thingsTwos = [
             type="checkbox"
             value="Sponge Bob"
             onChange={event => setCostumeOne(event.target.value)}
+            checked={costumeOne === "Sponge Bob"}
             />
-            Sponge Bob
+            Sponge Bob<br></br>
           </label>
           <br></br>
         <label>
@@ -120,8 +145,9 @@ const thingsTwos = [
             type="checkbox"
             value="Scooby Doo"
             onChange={event => setCostumeOne(event.target.value)}
+            checked={costumeOne === "Scooby Doo"}
             />
-            Scooby Doo
+            Scooby Doo<br></br>
             </label>
           <br></br>
           <label>
@@ -129,6 +155,7 @@ const thingsTwos = [
             type="checkbox"
             value="E.T"
             onChange={event => setCostumeOne(event.target.value)}
+            checked={costumeOne === "E.T"}
             />
             E.T 
           </label>
@@ -137,8 +164,16 @@ const thingsTwos = [
           </form>
       
           </div>
-
+</div>
+</div>
+</div>
           <div className="word-container">
+          <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
 <form>
 <h2>Costume</h2>  <br></br>
         <label>
@@ -147,7 +182,7 @@ const thingsTwos = [
             value="fairy"
             onChange={event => setCostumeTwo(event.target.value)}
             />
-            Fairy
+            Fairy<br></br>
           </label>
           <br></br>
         <label>
@@ -156,7 +191,7 @@ const thingsTwos = [
             value="unicorn"
             onChange={event => setCostumeTwo(event.target.value)}
             />
-            Unicorn
+            Unicorn<br></br>
           </label>
           <br></br>
           <label>
@@ -170,8 +205,16 @@ const thingsTwos = [
           <br></br>
           </form>
           </div>
-
+          </div>
+</div>
+</div>
           <div className="word-container">
+          <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
 <form>
 <h2>Refreshment</h2>  <br></br>
         <label>
@@ -180,7 +223,7 @@ const thingsTwos = [
             value="beer"
             onChange={event => setFood(event.target.value)}
             />
-            Beer
+            Beer<br></br>
           </label>
           <br></br>
         <label>
@@ -189,7 +232,7 @@ const thingsTwos = [
             value="lollipops"
             onChange={event => setFood(event.target.value)}
             />
-            Lollipops
+            Lollipops<br></br>
           </label>
           <br></br>
           <label>
@@ -203,8 +246,16 @@ const thingsTwos = [
           <br></br>
           </form>
           </div>
-
+          </div>
+</div>
+</div>
           <div className="word-container">
+          <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
 <form>
 <h2>Hustle</h2>  <br></br>
         <label>
@@ -214,7 +265,7 @@ const thingsTwos = [
             onChange={event => setHustle(event.target.value)}
            
             />
-            Screaming
+            Screaming<br></br>
           </label>
           <br></br>
         <label>
@@ -224,7 +275,7 @@ const thingsTwos = [
             onChange={event => setHustle(event.target.value)}
           
             />
-            Tickle
+            Tickle<br></br>
           </label>
           <br></br>
           <label>
@@ -239,8 +290,16 @@ const thingsTwos = [
           <br></br>
           </form>
           </div>
-
+          </div>
+</div>
+</div>
           <div className="word-container">
+          <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
 <form>
 <h2>Things</h2>  <br></br>
         <label>
@@ -249,7 +308,7 @@ const thingsTwos = [
             value="phone numbers"
             onChange={event => setThings(event.target.value)}
             />
-            Phone numbers
+            Phone numbers<br></br>
           </label>
           <br></br>
         <label>
@@ -258,7 +317,7 @@ const thingsTwos = [
             value="coupons"
             onChange={event => setThings(event.target.value)}
             />
-            Coupons
+            Coupons<br></br>
           </label>
           <br></br>
           <label>
@@ -272,16 +331,24 @@ const thingsTwos = [
           <br></br>
           </form>
           </div>
-
+          </div>
+</div>
+</div>
 
         <div className="word-container">
+        <div class="flip-box">
+  <div class="flip-box-inner">
+    <div class="flip-box-front">
+      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    </div>
+    <div class="flip-box-back">
 <form>
              <h2>Things</h2>
                 {thingsTwos.map((group) => (
             <label key={group}>
                   <br></br> 
             <input
-              type="checkbox"
+              type="radio"
               value={group}
               onChange={(event) => setThingsTwo(event.target.value)}
               checked={thingsTwo === group}
@@ -291,7 +358,9 @@ const thingsTwos = [
       ))}
       </form>
 </div>
-
+</div>
+</div>
+</div>
 <div className="word-container-line">
 <form>
 <h2>Phrase</h2>  <br></br>
@@ -312,7 +381,9 @@ const thingsTwos = [
           </div>
           
 <br></br>
-
+<div className="revealButton">
+      <button><Button  name="Reveal The Story"/></button>
+    </div>
 
 <div className="mad-lib">
     <h3>The madest lib</h3>
@@ -389,8 +460,6 @@ const thingsTwos = [
  
   );
 }
-
-
 
 
 const rootElement = document.getElementById("root");

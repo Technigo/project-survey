@@ -13,3 +13,11 @@ export const Form = () => {
 }
 
 
+ export const Button = (props) => {
+  return (
+    <div>
+      {props.name}
+
+      </div>
+  )
+};
