@@ -1,4 +1,10 @@
-# Technigo React Starter App
+# project-survey
+
+The aim is to create a survey.
+
+## Learning objectives
+- practice using React state and controlling forms
+- the user should see a summary
 
 This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
 
