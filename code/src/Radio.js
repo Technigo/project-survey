@@ -1,11 +1,12 @@
 import React, {useState} from 'react'
+import "./Radio.css"
 
 
 export const Radio = () => {
     const [duration, setDuration] = useState ("")
 
     return (
-        <div>
+        <div className="duration">
         <h3> For how long will you travel? </h3>
         <label>
             <input 
