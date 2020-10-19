@@ -4,7 +4,6 @@ import './index.css'
 import { Button } from './App'
 
 
-
 const thingse = [
   "Phone numbers",
   "Broken code",
@@ -30,8 +29,9 @@ const thingsTwos = [
     const [thingsTwo, setThingsTwo] = useState()
     const [phrase, setPhrase] = useState("")
   return (
+   
    <section>
-
+ <div  className="container">
        <div className="header"><h1>Time For Halloween Mad Lib</h1></div>
        <div className="mad-container">
          
@@ -457,7 +457,7 @@ const thingsTwos = [
         className="line-last"
         /> 
     </div>
-   
+    </div>
     </section>
 
  
