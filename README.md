@@ -1,10 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to make a survey to practice using React and state hooks. The user will answer a couple of questions and them view a summary of those answers &#129409
 
 ## The problem
+
+### Tech I've used/practiced
+- React / State Hooks
+- JavaScript
+- CSS
+- Animation
+- Accessibility
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
