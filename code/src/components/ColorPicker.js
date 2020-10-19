@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { NumberPicker } from "./NumberPicker";
-import 'components-css/first-question.css'
+import React, { useState } from 'react';
+import { NumberPicker } from './NumberPicker';
+import 'components-css/questions-container.css';
 
 const colorOptions = ["Red", "Green", "Blue"];
 
@@ -10,14 +10,14 @@ export const ColorPicker = () => {
 
   const checkInput = () => {
     if(colorOption) {
-      return () => setVisible(true)
+      return () => setVisible(true);
     }
   };
 
   return (
-    <section className="first-question">
-      <form onSubmit={(event) => event.preventDefault()} id="start-form">
-        <div className="color-picker" role="radiogroup" tabindex="0" aria-label="Pick a Color: Red, Green or Blue">
+    <section className="questions-container">
+      <form onSubmit={(event) => event.preventDefault()} id="first-question">
+        <div role="radiogroup" tabIndex="0" aria-label="Pick a Color: Red, Green or Blue">
           Pick a color:
           {colorOptions.map((color) => (
             <label key={color} aria-label={color}>
@@ -33,9 +33,11 @@ export const ColorPicker = () => {
           ))}
           <button onClick={checkInput()}>1 of 3</button>
         </div>
-
-        {(visible === true) && <NumberPicker chosenColor={colorOption}/>}
       </form>
+      {(visible === true) && <NumberPicker chosenColor={colorOption}/>}
     </section>
   );
 };
+
+/* All three questions are being generated inside <section> with class "questions-container".
+They are 3 separate form elements */
