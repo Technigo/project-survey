@@ -1,0 +1,10 @@
+.checkbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.check {
+    background-color: tomato;
+    flex-direction: column;
+    align-content:center;
+}
