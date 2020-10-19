@@ -4,7 +4,6 @@ import { NameInput } from './NameInput';
 import { EmailInput } from './EmailInput';
 import { Radiobuttons } from './Radiobuttons';
 import { Dropdown } from './Dropdown';
-import { Checkbox } from './Checkbox';
 import { Summary } from './Summary';
 
 import './form.css';
@@ -14,13 +13,11 @@ export const Form = () => {
   const [email, setEmail] = useState("");
   const [canContributeWith, setCanContributeWith] = useState();
   const [yearsOfExperience, setYearsOfExperience] = useState("");
-  const [wantsToBeMentor, setWantsToBeMentor] = useState(false);
-  const [section, setSection] = useState('startText')
+  const [section, setSection] = useState('startText');
   
   const handleSubmit = event => {
     event.preventDefault();
   };
-
 
   return (
     <>
@@ -91,7 +88,6 @@ export const Form = () => {
         {section === 'thirdQuestion' && (
           <>
             <Radiobuttons 
-              id="radioButtons"
               canContributeWith={canContributeWith}
               setCanContributeWith={setCanContributeWith}
             />
@@ -128,35 +124,13 @@ export const Form = () => {
               <button 
                 type="button"
                 onClick={event => setSection(event.target.value)}
-                value="lastQuestion">
-                Next
+                value="summary">
+                Submit
                 </button>
             </section>
           </>
         )}
         
-        {section === 'lastQuestion' && (
-          <>
-            <Checkbox 
-              wantsToBeMentor={wantsToBeMentor} 
-              setWantsToBeMentor={setWantsToBeMentor}
-            />
-            <section className="button-container">
-              <button 
-                type="button"
-                onClick={event => setSection(event.target.value)}
-                value='fourthQuestion'>
-                Back
-              </button>
-              <button 
-                type="button"
-                onClick={event => setSection(event.target.value)}
-                value="summary">
-                Submit
-              </button>
-            </section>
-          </>
-        )}
       </form>
     
       {section === 'summary' && (
@@ -165,7 +139,6 @@ export const Form = () => {
           email={email}
           canContributeWith={canContributeWith}
           yearsOfExperience={yearsOfExperience}
-          wantsToBeMentor={wantsToBeMentor}
         />
       )}
     </>

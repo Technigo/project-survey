@@ -12,7 +12,8 @@ export const Summary = ( {name, email, canContributeWith, yearsOfExperience, wan
         <p className="summary-text" tabIndex="0"><span className="bold-summary-text">E-mail:</span> {email} </p>
         <p className="summary-text" tabIndex="0"><span className="bold-summary-text">I can contribute with:</span> {canContributeWith} </p>
         <p className="summary-text" tabIndex="0">I have <span className="underlined-summary-text">{yearsOfExperience}</span> of experience within tech.</p>
-        <p className="summary-text" tabIndex="0">{wantsToBeMentor}{label}</p>
+        <p className="end-words">I will contact you soon for a call!</p>
+        <p className="end-words">Thank you so much for wanting to help me! <span role="img" aria-label="Heart emoji">&#128420;</span></p>
      </div>
     </section>
   );

@@ -16,5 +16,5 @@ export const EmailInput = ({ email, setEmail }) => {
         formatErrorTxt
       />
     </label>
-  )
-}
+  );
+};

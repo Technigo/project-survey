@@ -2,7 +2,7 @@ import React from 'react';
 
 const contributes = ["Code Knowledge", "Tech Recruitment Knowledge", "Agile Project Management", "Experience as Product Owner"];
 
-export const Radiobuttons = ({ id, canContributeWith, setCanContributeWith }) => {
+export const Radiobuttons = ({ canContributeWith, setCanContributeWith }) => {
   
   return (
     <fieldset>
@@ -11,10 +11,10 @@ export const Radiobuttons = ({ id, canContributeWith, setCanContributeWith }) =>
       <label 
         className="radiobutton-label" 
         key = {contributes} 
-        htmlFor={id}>
+        htmlFor={contributes}>
           <input
             className="radiobutton-input"
-            id={id}
+            id={contributes}
             type="radio"
             value={contributes}
             onChange={(event) => setCanContributeWith(event.target.value)}
@@ -25,7 +25,5 @@ export const Radiobuttons = ({ id, canContributeWith, setCanContributeWith }) =>
       </label>
     ))}
     </fieldset>
-  )
-
-
-}
+  );
+};

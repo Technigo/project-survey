@@ -16,6 +16,5 @@ export const Dropdown = ({ yearsOfExperience, setYearsOfExperience }) => {
       <option value="0-1 year">5 - 10 years</option>
       <option value="0-1 year">10+ years</option>
     </select>
-  )
-
-}
+  );
+};

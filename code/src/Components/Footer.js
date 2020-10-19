@@ -1,8 +1,9 @@
 import React from 'react';
 
-import './footer.css'
+import './footer.css';
 
 export const Footer = () => {
+  
   return (
     <footer>
       <p tabIndex="0">This is a project created by Gabriella Bolin during Technigo's Bootcamp 20/21.</p>
@@ -15,5 +16,5 @@ export const Footer = () => {
         </a>
       </p>
     </footer>
-  )
-}
+  );
+};

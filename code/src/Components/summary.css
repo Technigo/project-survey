@@ -19,6 +19,12 @@
   font-weight: bold;
 }
 
+.end-words {
+  font-weight: bold;
+  margin: 10px;
+  padding: 10px;
+}
+
 .underlined-summary-text {
   text-decoration-line: underline;
   -webkit-text-decoration-line: underline;
