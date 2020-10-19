@@ -1,14 +1,23 @@
 import React, {useState} from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import { Form } from './App'
 import { Button } from './App'
 
+
+
+const thingse = [
+  "Phone numbers",
+  "Broken code",
+  "Coupons"
+]
+  
 const thingsTwos = [
     "toilet paper",
     "eggs",
     "yarn"
   ]
+
+   
 
  const App = () => {
     const [holiday, setHoliday] = useState("");
@@ -181,7 +190,7 @@ const thingsTwos = [
             type="checkbox"
             value="fairy"
             onChange={event => setCostumeTwo(event.target.value)}
-            checked={holiday === "fariy"}
+            checked={costumeTwo === "fairy"}
             />
             Fairy<br></br>
           </label>
@@ -191,7 +200,7 @@ const thingsTwos = [
             type="checkbox"
             value="unicorn"
             onChange={event => setCostumeTwo(event.target.value)}
-            checked={holiday === "unicorn"}
+            checked={costumeTwo === "unicorn"}
             />
             Unicorn<br></br>
           </label>
@@ -201,7 +210,7 @@ const thingsTwos = [
             type="checkbox"
             value="mermaid"
             onChange={event => setCostumeTwo(event.target.value)}
-            checked={holiday === "mermaid"}
+            checked={costumeTwo === "mermaid"}
             />
             Mermaid
           </label>
@@ -269,7 +278,7 @@ const thingsTwos = [
             type="checkbox"
             value="screaming"
             onChange={event => setHustle(event.target.value)}
-            checked={hustle === hustle}
+            checked={hustle === "screaming"}
             />
             Screaming<br></br>
           </label>
@@ -279,7 +288,7 @@ const thingsTwos = [
             type="checkbox"
             value="tickle"
             onChange={event => setHustle(event.target.value)}
-            checked={hustle === hustle}
+            checked={hustle === "tickle"}
             />
             Tickle<br></br>
           </label>
@@ -289,7 +298,7 @@ const thingsTwos = [
             type="checkbox"
             value="dancing"
             onChange={event => setHustle(event.target.value)}
-            checked={hustle === hustle}
+            checked={hustle === "dancing"}
             />
             Dancing
           </label>
@@ -306,37 +315,23 @@ const thingsTwos = [
       <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
     </div>
     <div class="flip-box-back">
-<form>
-<h2>Things</h2>  <br></br>
-        <label>
-          <input
-            type="checkbox"
-            value="phone numbers"
-            onChange={event => setThings(event.target.value)}
-            />
-            Phone numbers<br></br>
+          <form>
+             <h2>Things</h2>
+                {thingse.map((group) => (
+            <label key={group}>
+                  <br></br> <p></p>
+            <input
+              type="checkbox"
+              value={group}
+              onChange={(event) => setThings(event.target.value)}
+              checked={things === group}
+              />
+              {group}
           </label>
-          <br></br>
-        <label>
-          <input
-            type="checkbox"
-            value="coupons"
-            onChange={event => setThings(event.target.value)}
-            />
-            Coupons<br></br>
-          </label>
-          <br></br>
-          <label>
-          <input
-            type="checkbox"
-            value="broken code"
-            onChange={event => setThings(event.target.value)}
-            
-            />
-            Broken code
-          </label>
-          <br></br>
-          </form>
+      ))}
+      </form>
+
+
           </div>
           </div>
 </div>
@@ -353,7 +348,7 @@ const thingsTwos = [
              <h2>Things</h2>
                 {thingsTwos.map((group) => (
             <label key={group}>
-                  <br></br> 
+                  <br></br> <p></p>
             <input
               type="radio"
               value={group}
@@ -388,10 +383,11 @@ const thingsTwos = [
           </div>
           
 <br></br>
-<div className="revealButton">
-      <button><Button  name="Reveal The Story"/></button>
-    </div>
 
+<div className="revealButton">
+      <button onClick="show_hide()"><Button  name="Reveal The Story"/></button>
+    </div>
+ 
 <div className="mad-lib">
     <h3>The madest lib</h3>
          It´s time for 

@@ -48,6 +48,8 @@ code {
   font-family: 'Courier New', Courier, monospace;
   font-size: 15px;
   grid-column: span 2;
+  display: flex;
+  justify-content: center;
 }
 
 .line-phrase {
@@ -173,8 +175,18 @@ button {
   }
   
   
-
-
+  .container {
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .headerText {
+    font-size: 20;
+    text-align: center;
+    margin: 10;
+    font-weight: bold;
+  }
 
 
  @media (min-width: 667px) and (max-width: 1024px) {
