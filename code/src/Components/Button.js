@@ -4,11 +4,12 @@ import React from 'react';
 const Button = (props) => {
     return (
         <button
+            className="button"
             disabled={props.disabled}
             type="submit"
             onClick={() => {props.function(props.value)}}
         >
-            {props.title}
+            <span>{props.title}</span>
         </button>
     )
 }

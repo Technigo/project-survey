@@ -28,7 +28,7 @@ export const App = () => {
           <h2 tabIndex="0">Are you ready for your next adventure? Please fill in the form!</h2>
 
           <Button
-            title="Start survey"
+            title="START SURVEY"
             function={setQuestion}
             value='firstQuestion'
             disabled=''
@@ -47,7 +47,7 @@ export const App = () => {
             />
           </form>
           <Button
-            title="Next Question"
+            title="NEXT QUESTION"
             function={setQuestion}
             value='secondQuestion'
             disabled={name === ''}
@@ -65,7 +65,7 @@ export const App = () => {
             />
           </form>
           <Button
-            title="Next Question"
+            title="NEXT QUESTION"
             function={setQuestion}
             value='thirdQuestion'
             disabled={place === ''}
@@ -83,7 +83,7 @@ export const App = () => {
             />
           </form>
           <Button
-            title="Submit"
+            title="SUBMIT"
             function={setQuestion}
             value='summary'
             disabled={partner === ''}

@@ -12,6 +12,7 @@ const QuestionName = ({name, funcSetName}) => {
                 What's your name?
             </label>
             <input
+                className="text-field"
                 id="input-text"
                 type="text"
                 value={name}
