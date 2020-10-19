@@ -8,3 +8,49 @@
   padding: 20px;
   margin: 0;
 }
+button {
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  border-radius: 5px;
+  margin: 50px;
+  display: inline;
+  text-transform: uppercase;
+  align-items: center;
+  background-color: #f0c8c8;
+  border: 1px solid black;
+  padding: 15px;
+}
+
+h1,
+h2 {
+  text-align: center;
+  padding: 20px;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heart {
+  margin: 5em;
+  animation: 1.5s infinite beatHeart;
+  width: 20%;
+}
+
+@keyframes beatHeart {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+  }
+  40% {
+    transform: scale(1);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}

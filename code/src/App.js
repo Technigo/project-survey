@@ -8,7 +8,11 @@ export const App = () => {
 
       <div className='intro'>
         <h1>Self-care survey</h1>
-        <h2>Let's start with a quick self-assessment</h2>
+        <h2>Let's start with a quick self-assessment check</h2>
+        <div class="container">
+          <img src="img/heart.png" class="heart" alt="human heart" />
+        </div>
+        <button>begin</button>
       </div>
 
       <FirstQuestion />
