@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 /*
 //array for radio btn
@@ -13,7 +13,6 @@ const ageGroups = [
 */
 
 export const InputRadio = ({ question, array, setAge, selected }) => {
-  //const [ageGroup, setAge] = useState();
 
   return (
     <>

@@ -1,7 +1,8 @@
 import React from 'react'
+import './Header.css'
 
 export const Header = () => {
   return (
-    <h1>How are you?</h1>
+    <h1>Survey</h1>
   )
 }

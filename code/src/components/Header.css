@@ -1,0 +1,24 @@
+h1 {
+  
+}
+
+header {
+  margin: 0;
+  height: 10vh;
+  background-color: #29425D;
+  color: #E38975;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+header:before {
+  content:"";
+  position:absolute;
+  top:67px;
+  right:0;
+  left:0;
+  height:30px;
+  background:linear-gradient(to top right, transparent 49%, #29425D 50%);
+}
