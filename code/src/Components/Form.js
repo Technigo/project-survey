@@ -48,5 +48,5 @@ const Form = () => {
     );
 };
 
-export default Form /* Why do i need this when i use export in the function already?.. */
+export default Form
 
