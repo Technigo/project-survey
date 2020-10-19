@@ -1,9 +1,12 @@
-import React from 'react'
+import React from 'react';
+import { Header } from './Header';
+import { Survey } from './Survey';
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Header />
+      <Survey />
     </div>
-  )
-}
+  );
+};

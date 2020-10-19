@@ -11,3 +11,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.header {
+  background-image: url(assets/backgroundImage.jpg);
+  background-position: center center;
+  background-size: cover;
+  height: 40vh;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.header-title {
+  color: #fff;
+}
