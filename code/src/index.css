@@ -88,10 +88,6 @@ form {
   align-items: center;
 }
 
-button:disabled {
-  
-}
-
 button {
   color: white;
   background: #c93c3c;

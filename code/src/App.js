@@ -4,8 +4,6 @@ import QuestionName from './Components/QuestionName';
 import QuestionCountry from './Components/QuestionCountry';
 import QuestionTravelPartner from './Components/QuestionTravelPartner';
 import Summary from './Components/Summary';
-
-//import SubmitButton from 'Components/SumbitButton';
 import Button from 'Components/Button';
 
 
@@ -13,13 +11,12 @@ export const App = () => {
   const [name, setName] = useState('');
   const [place, setPlace] = useState('');
   const [partner, setPartner] = useState('');
-  //const [showSummary, setShowSummary] = useState(false);
   const [question, setQuestion] = useState('start');
 
-  const handleSubmit = event => {
-    event.preventDefault();
+  //const handleSubmit = event => {
+    //event.preventDefault();
     //setShowSummary(true);
-  };
+  //};
 
 
   return (
