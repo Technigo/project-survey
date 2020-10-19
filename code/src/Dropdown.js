@@ -1,13 +1,14 @@
 import React from 'react'
 
-export const Dropdown = (props) => {
+export const Dropdown = ( {handleFormInput} ) => {
     return <div>
-    <label for={props.label}>Choose a {props.label}:</label>
+    <label htmlFor="Movie">Choose a Movie:</label>
   
-  <select name={props.label} id={props.label}>
-    <option value={props.value1}>{props.value1}</option>
-    <option value={props.value2}>{props.value2}</option>
-    <option value={props.value3}>{props.value3}</option>
+  <select name="Movie" id="Movie" onChange={e => handleFormInput(e.target.value)}>
+    <option value="Select">Select a Movie</option>
+    <option value="Top Gun">Top Gun</option>
+    <option value="Heat">Heat</option>
+    <option value="Gladiator">Gladiator</option>
   </select>
     </div>
   }
