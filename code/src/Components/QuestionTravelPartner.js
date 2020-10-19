@@ -16,7 +16,12 @@ const QuestionTravelPartner = ({partner, funcSetPartner}) => {
                 <option key="disabled" value="disabled" disabled>Choose Partner:</option>
                 {partnerArray.map((partner) => {
                     return (
-                        <option key={partner} value={partner}>{partner}</option>
+                        <option
+                            key={partner}
+                            value={partner}
+                        >
+                            {partner}
+                        </option>
                     )
                 })
                 }

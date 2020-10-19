@@ -1,26 +1,112 @@
 import React, { useState } from 'react';
+import Header from './Components/Header'
 import QuestionName from './Components/QuestionName';
 import QuestionCountry from './Components/QuestionCountry';
 import QuestionTravelPartner from './Components/QuestionTravelPartner';
 import Summary from './Components/Summary';
-import plane from './assets/plane.png';
-import SubmitButton from 'Components/SumbitButton';
+
+//import SubmitButton from 'Components/SumbitButton';
+import Button from 'Components/Button';
 
 
 export const App = () => {
   const [name, setName] = useState('');
   const [place, setPlace] = useState('');
   const [partner, setPartner] = useState('');
-  const [showSummary, setShowSummary] = useState(false);
+  //const [showSummary, setShowSummary] = useState(false);
+  const [question, setQuestion] = useState('start');
 
   const handleSubmit = event => {
     event.preventDefault();
-    setShowSummary(true);
+    //setShowSummary(true);
   };
+
 
   return (
     <>
-      {!showSummary ? ( //If !showsummary is true show form-section, if false show summary
+      {question === 'start' && (
+        <section className="form-section">
+          <Header />
+            
+          <h2 tabIndex="0">Are you ready for your next adventure? Please fill in the form!</h2>
+
+          <Button
+            title="Start"
+            function={setQuestion}
+            value='firstQuestion'
+            disabled=''
+          />
+          
+        </section>
+      )}
+
+      {question === 'firstQuestion' && (
+        <section className="form-section">
+          <Header />
+          <form>
+            <QuestionName
+              name={name}
+              funcSetName={setName}
+            />
+          </form>
+          <Button
+            title="Next"
+            function={setQuestion}
+            value='secondQuestion'
+            disabled={name === ''}
+          />
+        </section>
+      )}
+
+      {question === 'secondQuestion' && (
+        <section className="form-section">
+          <Header />
+          <form>
+            <QuestionCountry
+              place={place}
+              funcSetPlace={setPlace}
+            />
+          </form>
+          <Button
+            title="Next"
+            function={setQuestion}
+            value='thirdQuestion'
+            disabled={place === ''}
+          />
+        </section>
+      )}
+
+      {question === 'thirdQuestion' && (
+        <section className="form-section">
+          <Header />
+          <form>
+            <QuestionTravelPartner
+              partner={partner}
+              funcSetPartner={setPartner}
+            />
+          </form>
+          <Button
+            title="Submit"
+            function={setQuestion}
+            value='summary'
+            disabled={partner === ''}
+          />
+        </section>
+      )}
+
+      {question === 'summary' && (
+        <section className="form-section">
+          <Summary
+            name={name}
+            place={place}
+            partner={partner}
+          />
+        </section>
+      )}
+
+
+
+      {/* {!showSummary ? ( //If !showsummary is true show form-section, if false show summary
         <section className="form-section">
           <h1 className="header" tabIndex="0">Travel the world!</h1>
           <img className="plane" src={plane} alt=""></img>
@@ -38,7 +124,12 @@ export const App = () => {
               partner={partner}
               funcSetPartner={setPartner}
             />
-            <SubmitButton name={name} place={place} partner={partner} handleSubmit={handleSubmit} />
+            <SubmitButton
+              name={name}
+              place={place}
+              partner={partner}
+              handleSubmit={handleSubmit}
+            />
           </form>
         </section>
           ) : (
@@ -47,7 +138,7 @@ export const App = () => {
             place={place}
             partner={partner}
           />   
-        )}
+        )} */}
     </>
   )
 }
