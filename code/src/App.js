@@ -8,7 +8,7 @@ export const App = () => {
   const [weather, setWeather] = useState("")
   const [culture, setCulture] = useState ("")
 
-  const reflectionOptions = ["Good", "Ok", "Bad"]
+  const reflectionOptions = ["Splendid",  "Good", "Ok", "Bad"]
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -19,23 +19,26 @@ export const App = () => {
     <main>
         <form onSubmit= {handleSubmit}>
           <header>
-            <h1>My daily reflections</h1>
+            <h1>Daily notes</h1>
+            <a href="#reflection">hej</a>
           </header>
 
-          <section className="reflection-section">
+          <section className="reflection-section" id="reflection">
             <h2 className="question">How is your day?</h2>
             <select
               value={reflection}
               onChange ={event => setReflection(event.target.value)}
               required
             >
+              <option value="good">Splendid</option>
               <option value="good">Good</option>
-              <option value="ok">Ok</option>
+              <option value="ok">OK</option>
               <option value="bad">Bad</option>
             </select>
+            <button><a href="#reason">Next</a></button>
           </section>
 
-          <section className="reason-section">
+          <section className="reason-section" id="reason">
             <label className="question">
             How come?
               <input 
@@ -44,20 +47,47 @@ export const App = () => {
                 onChange={event => setReason (event.target.value)}
               />
             </label>
+            <button><a href="#weather">Next</a></button>
           </section>
 
-          <section className="weather-section">
+          <section className="weather-section" id="weather">
+            <h2>Today's weather</h2>
             <label className="question">
-            Todays weather
+              Sunny
               <input 
                 type="radio"
                 value={weather}
                 onChange={event => setWeather (event.target.value)}
               />
             </label>
+            <label className="question">
+              Cloudy
+              <input
+                type="radio"
+                value={weather}
+                onChange={event => setWeather (event.target.value)}
+              />
+            </label>
+            <label className="question">
+              Rainy
+              <input
+                type="radio"
+                value={weather}
+                onChange={event => setWeather (event.target.value)}
+              />
+            </label>
+            <label className="question">
+              Windy
+              <input
+                type="radio"
+                value={weather}
+                onChange={event => setWeather (event.target.value)}
+              />
+            </label>
+            <button><a href="#culture">Next</a></button>
           </section>
 
-          <section className="culture-section">
+          <section className="culture-section" id="culture">
             <label className="question">
             Did you read or watch anything you want to share?
               <input 
@@ -66,6 +96,7 @@ export const App = () => {
                 onChange={event => setCulture (event.target.value)}
               />
             </label>
+            <button type="submit">Done for today!</button>
           </section>
 
       </form>
