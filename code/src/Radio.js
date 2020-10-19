@@ -1,7 +1,10 @@
 import React, { useState } from 'react'
 import './radio.css'
 
-/* Use .map() for the radiobuttons to set if something is checked or not */
+/* This component is completely reusable since it uses props. 
+It contains an array which contains objects consisting of value and answer. 
+These are later specified in Survey where you mount the survey-components.
+TO FIX: None of the radiobuttons get visually checked when pressed, but functionality works*/
 
 export const Radio = (props) => {
     const [ageGroup, setAgegroup] = useState(false);
