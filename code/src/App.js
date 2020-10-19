@@ -7,11 +7,13 @@ export const App = () => {
   const [reason, setReason] = useState("");
   const [weather, setWeather] = useState("")
   const [culture, setCulture] = useState ("")
+  const [showSummary, setShowSummary] = useState (false)
 
   const reflectionOptions = ["Splendid",  "Good", "Ok", "Bad"]
 
   const handleSubmit = event => {
     event.preventDefault()
+    setShowSummary(true)
   }
 
 
@@ -98,8 +100,11 @@ export const App = () => {
             </label>
             <button type="submit">Done for today!</button>
           </section>
-
       </form>
+
+      {showSummary && <section>
+        <h1>Hey {reflection}!</h1>
+      </section>} 
     </main>
   )
 }
