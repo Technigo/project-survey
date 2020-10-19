@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import QuestionName from './QuestionName';
-import QuestionCountry from './QuestionCountry';
-import QuestionTravelPartner from './QuestionTravelPartner';
-import Summary from './Summary';
+import QuestionName from './Components/QuestionName';
+import QuestionCountry from './Components/QuestionCountry';
+import QuestionTravelPartner from './Components/QuestionTravelPartner';
+import Summary from './Components/Summary';
 import plane from './assets/plane.png';
 
 
