@@ -181,6 +181,7 @@ const thingsTwos = [
             type="checkbox"
             value="fairy"
             onChange={event => setCostumeTwo(event.target.value)}
+            checked={holiday === "fariy"}
             />
             Fairy<br></br>
           </label>
@@ -190,6 +191,7 @@ const thingsTwos = [
             type="checkbox"
             value="unicorn"
             onChange={event => setCostumeTwo(event.target.value)}
+            checked={holiday === "unicorn"}
             />
             Unicorn<br></br>
           </label>
@@ -199,6 +201,7 @@ const thingsTwos = [
             type="checkbox"
             value="mermaid"
             onChange={event => setCostumeTwo(event.target.value)}
+            checked={holiday === "mermaid"}
             />
             Mermaid
           </label>
@@ -222,6 +225,7 @@ const thingsTwos = [
             type="checkbox"
             value="beer"
             onChange={event => setFood(event.target.value)}
+            checked={food === "beer"}
             />
             Beer<br></br>
           </label>
@@ -231,6 +235,7 @@ const thingsTwos = [
             type="checkbox"
             value="lollipops"
             onChange={event => setFood(event.target.value)}
+            checked={food === "lollipops"}
             />
             Lollipops<br></br>
           </label>
@@ -240,6 +245,7 @@ const thingsTwos = [
             type="checkbox"
             value="turkey wings"
             onChange={event => setFood(event.target.value)}
+            checked={food === "turkey wings"}
             />
             Turkey wings
           </label>
@@ -263,7 +269,7 @@ const thingsTwos = [
             type="checkbox"
             value="screaming"
             onChange={event => setHustle(event.target.value)}
-           
+            checked={hustle === hustle}
             />
             Screaming<br></br>
           </label>
@@ -273,7 +279,7 @@ const thingsTwos = [
             type="checkbox"
             value="tickle"
             onChange={event => setHustle(event.target.value)}
-          
+            checked={hustle === hustle}
             />
             Tickle<br></br>
           </label>
@@ -283,7 +289,7 @@ const thingsTwos = [
             type="checkbox"
             value="dancing"
             onChange={event => setHustle(event.target.value)}
-           
+            checked={hustle === hustle}
             />
             Dancing
           </label>
@@ -325,6 +331,7 @@ const thingsTwos = [
             type="checkbox"
             value="broken code"
             onChange={event => setThings(event.target.value)}
+            
             />
             Broken code
           </label>
