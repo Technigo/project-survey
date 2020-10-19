@@ -1,0 +1,14 @@
+body {
+    background-color: blueviolet;
+}
+
+.App {
+    display: flex;
+    justify-content: center;
+    background-color: chartreuse;
+}
+
+
+h1 {
+    font-size: 30px;
+}
