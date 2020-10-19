@@ -21,7 +21,7 @@ export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
             value = {animal}
             onChange = {(event) => setSpiritAnimal(event.target.value)}
             checked = {spiritAnimal === animal}
-        
+            required
         />
         {animal}
         </label>

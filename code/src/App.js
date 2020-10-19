@@ -10,9 +10,8 @@ export const App = () => {
   return (
     <>
       <div>
-        <Header />
-        when onclick to forms
-        <Form />
+        <Header/>
+        <Form/>
       </div>
     </>
   )

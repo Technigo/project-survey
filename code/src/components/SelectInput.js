@@ -7,7 +7,7 @@ export const SelectInput = ({personality, setPersonality}) => {
         <select
         onChange = {(event) => setPersonality(event.target.value)}
         value = {personality}
-        
+        required
         >
          <option value = " ">personality feature</option>
          <option value = "lazy">Lazy</option>
