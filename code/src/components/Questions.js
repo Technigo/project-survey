@@ -3,6 +3,7 @@ import { InputCheckbox } from './InputCheckbox'
 import { InputSelect } from './InputSelect'
 import { InputText } from './InputText'
 import { Button } from './Button'
+import { StartButton } from './StartButton'
 import { Summary } from './Summary'
 import './Questions.css'
 import { InputRadio } from './InputRadio'
@@ -11,11 +12,13 @@ import { InputRadio } from './InputRadio'
 
 export const Questions = () => {
   const [question, setQuestion] = useState(0) //one question at a time
-  //const nextQuestion = () => setQuestion(question + 1) //to get next question in line (add +1 later)
+  const nextQuestion = () => setQuestion(question + 1) //to get next question in line (add +1 later)
   const [name, setName] = useState('')
   const [ageGroup, setAge] = useState();
-  const [season, setSeason] = useState('')
+
   const [agreeOnTerms, setAgreeOnTerms] = useState(false)
+  const [season, setSeason] = useState('')
+
 
   const [submit, setSubmit] = useState(false) //since we don't want to show result before submitted. 
   const handleSubmit = (event) => {
@@ -40,16 +43,16 @@ export const Questions = () => {
         {!submit && (
           <form onSubmit={handleSubmit}>
 
-            {/* {question === 0 && (
+            {question === 0 && (
               <article className="introduction">
                 <h2>Welcome, please take a few minutes to answer this servey!</h2>
                 <div className="navigation">
-                  <Button button="button" click={nextQuestion} text="Start survey" />
+                  <StartButton button="button" click={nextQuestion} text="Start survey" />
                 </div>
               </article>
-            )} */}
+            )}
 
-            {question === 0 && ( //ändra till 1 när välkomstext blir 0
+            {question === 1 && ( //ändra till 1 när välkomstext blir 0
               <article className="question-container">
                 <InputText
                   id="name"
@@ -57,13 +60,13 @@ export const Questions = () => {
                   value={name}
                   setText={setName}
                 />
-                {/* <div className="navigation">
-                  <Button button="button" click={nextQuestion} disable={!name} text="Next" />
-                </div> */}
+                <div className="navigation">
+                  <StartButton button="button" click={nextQuestion} disable={!name} text="Next" />
+                </div>
               </article>
             )}
 
-            {question === 0 && ( //ändra 0 till turordning
+            {question === 2 && ( //ändra 0 till turordning
               <article className="question-container">
                 <InputRadio
                   question="How old are you?"
@@ -71,13 +74,13 @@ export const Questions = () => {
                   setAge={setAge}
                   selected={ageGroup}
                 />
-                {/* <div className="navigation">
-                  <Button button="button" click={handleSubmit} disable={!name} text="Submit" />
-                </div> */}
+                <div className="navigation">
+                  <StartButton button="button" click={nextQuestion} disable={!name} text="Next" />
+                </div>
               </article>
             )}
 
-            {question === 0 && ( //ändra 0 till turordning
+            {question === 3 && ( //ändra 0 till turordning
               <article className="question-container">
                 <InputCheckbox
                   question="Are you happy?"
@@ -87,13 +90,13 @@ export const Questions = () => {
                 // setSeason={setSeason}
                 // value={season}
                 />
-                {/* <div className="navigation">
-                  <Button button="button" click={handleSubmit} disable={!season} text="Submit" />
-                </div> */}
+                <div className="navigation">
+                  <StartButton button="button" click={nextQuestion} disable={!season} text="Next" />
+                </div>
               </article>
             )}
 
-            {question === 0 && ( //ändra 0 till turordning
+            {question === 4 && ( //ändra 0 till turordning
               <article className="question-container">
                 <InputSelect
                   question="What's your favorit season?"
@@ -103,7 +106,7 @@ export const Questions = () => {
                   value={season}
                 />
                 <div className="navigation">
-                  <Button button="button" click={handleSubmit} disable={!season} text="Submit" />
+                  <Button type="submit" click={handleSubmit} disable={!season} text="Submit" />
                 </div>
               </article>
             )}
