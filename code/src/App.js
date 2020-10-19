@@ -1,9 +1,14 @@
-import React from 'react'
+import React from "react"
+import { Header } from "./Header"
+import { AllQuestions } from "./AllQuestions"
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <>
+      <Header />
+      <section>
+        <AllQuestions />
+      </section>
+    </>
   )
 }
