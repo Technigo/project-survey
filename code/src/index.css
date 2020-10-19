@@ -29,6 +29,7 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
   background-image: url('./assets/pexels-eberhard-grossgasteiger-844297.jpg');
   background-position: center;
   background-repeat: no-repeat;
@@ -47,8 +48,12 @@ form {
   align-items: center;
   background: rgba(255, 255, 255, 0.5);
   border-radius: 5px;
+  padding: 30px 50px;
 }
 
+h2 {
+  margin-top: 10px;
+}
 .label {
   padding: 5px;
   font-size: 20px;

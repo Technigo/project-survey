@@ -4,6 +4,7 @@ const QuestionName = ({name, funcSetName}) => {
     
     return (
         <section className="name-section">
+            <h2 tabIndex="0">Question 1</h2>
             <label
                 htmlFor="input-text"
                 className="label"  
