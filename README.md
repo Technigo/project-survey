@@ -1,6 +1,6 @@
 # Survey form with React
 
-The assignment was to make a survey to practice using React and state hooks. The user will answer a couple of questions and them view a summary of those answers &#129409
+The assignment was to make a survey to practice using React and state hooks. The user will answer a couple of questions and them view a summary of those answers :star:
 
 ## The problem
 
