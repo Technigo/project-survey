@@ -1,5 +1,7 @@
-import React, { useState } from 'react'
-import './style.css'
+import React, { useState } from "react"
+import "./style.css"
+import { Summary } from "./components/Summary.js"
+import { Header } from "./components/Header.js"
 
 
 export const App = () => {
@@ -19,12 +21,9 @@ export const App = () => {
 
   return (
     <main>
+      
         <form onSubmit= {handleSubmit}>
-          <header>
-            <h1>Daily notes</h1>
-            <a href="#reflection">hej</a>
-          </header>
-
+          <Header reflection= {reflection}/>
           <section className="reflection-section" id="reflection">
             <h2 className="question">How is your day?</h2>
             <select
@@ -32,7 +31,8 @@ export const App = () => {
               onChange ={event => setReflection(event.target.value)}
               required
             >
-              <option value="good">Splendid</option>
+              <option value=""></option>
+              <option value="splendid">Splendid</option>
               <option value="good">Good</option>
               <option value="ok">OK</option>
               <option value="bad">Bad</option>
@@ -54,7 +54,8 @@ export const App = () => {
 
           <section className="weather-section" id="weather">
             <h2>Today's weather</h2>
-            <label className="question">
+            <div class="option-container">
+            <label className="option">
               Sunny
               <input 
                 type="radio"
@@ -62,7 +63,7 @@ export const App = () => {
                 onChange={event => setWeather (event.target.value)}
               />
             </label>
-            <label className="question">
+            <label className="option">
               Cloudy
               <input
                 type="radio"
@@ -70,7 +71,7 @@ export const App = () => {
                 onChange={event => setWeather (event.target.value)}
               />
             </label>
-            <label className="question">
+            <label className="option">
               Rainy
               <input
                 type="radio"
@@ -78,7 +79,7 @@ export const App = () => {
                 onChange={event => setWeather (event.target.value)}
               />
             </label>
-            <label className="question">
+            <label className="option">
               Windy
               <input
                 type="radio"
@@ -86,6 +87,7 @@ export const App = () => {
                 onChange={event => setWeather (event.target.value)}
               />
             </label>
+            </div>
             <button><a href="#culture">Next</a></button>
           </section>
 
@@ -102,9 +104,7 @@ export const App = () => {
           </section>
       </form>
 
-      {showSummary && <section>
-        <h1>Hey {reflection}!</h1>
-      </section>} 
+      {showSummary && <Summary reflection= {reflection} />}
     </main>
   )
 }
