@@ -4,15 +4,17 @@ The assignment was to make a survey to practice using React and state hooks. The
 
 ## The problem
 
-### Tech I've used/practiced
+### Tech I've used/practiced :collision:
 - React / State Hooks
 - JavaScript
 - CSS
 - Animation
 - Accessibility
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Started building the form structure in the App.js. When the form worked as I wanted it to I continued by breaking out certain elements to their own components, for example the button. 
+If I had more time I would've added some more questions to practice different form elements and styling forms.
 
-## View it live
+## View it live :tada:
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://survey-project.netlify.app/
+
