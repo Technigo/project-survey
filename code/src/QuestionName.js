@@ -4,8 +4,9 @@ const QuestionName = ({name, funcSetName}) => {
     
     return (
         <section className="name-section">
-            <label className="label">What's your name?</label>
+            <label htmlFor="input-text" className="label">What's your name?</label>
             <input
+                id="input-text"
                 type="text"
                 value={name}
                 onChange={event => funcSetName(event.target.value)}

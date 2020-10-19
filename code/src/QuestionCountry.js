@@ -7,17 +7,17 @@ const countriesArray = ['France', 'Ireland', 'Sweden', 'Norway', 'Albania', 'Gre
 const QuestionCountry = ({funcSetPlace}) => {
     return (
         <section className="pick-place-section">
-            <label className="label">Where do you want to go?</label>
+            <label tabIndex="0" className="label">Where do you want to go?</label>
             <div className="radio-wrapper">
-                {countriesArray.map((partner) => {
+                {countriesArray.map((place) => {
                 return (
-                    <div className="radio-choice-wrapper">
-                        <label className="choice">{partner}</label>
+                    <div key={place} className="radio-choice-wrapper">
+                        <label htmlFor={place} className="choice">{place}</label>
                         <input
                             type="radio"
-                            id={partner}
-                            value={partner}
-                            name="travel-partner"
+                            id={place}
+                            value={place}
+                            name="place"
                             onChange={event => funcSetPlace(event.target.value)}
                         ></input>
                     </div>

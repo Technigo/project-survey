@@ -19,15 +19,29 @@ export const App = () => {
 
   return (
     <>
-      {!showSummary ? (
+      {!showSummary ? ( //If !showsummary is true show form-section, if false show summary
         <section className="form-section">
-          <h1 className="header">Travel the world!</h1>
-          <img className="plane" src={plane}></img>
+          <h1 className="header" tabIndex="0">Travel the world!</h1>
+          <img className="plane" src={plane} alt=""></img>
           <form>
-            <QuestionName name={name} funcSetName={setName} />
-            <QuestionCountry funcSetPlace={setPlace} />
-            <QuestionTravelPartner partner={partner} funcSetPartner={setPartner} />
-            <button type="submit" onClick={handleSubmit} disabled={name === '' || setPlace === '' || partner === '' } >Submit</button>
+            <QuestionName
+              name={name}
+              funcSetName={setName}
+            />
+            <QuestionCountry
+              place={place}
+              funcSetPlace={setPlace}
+            />
+            <QuestionTravelPartner
+              partner={partner}
+              funcSetPartner={setPartner}
+            />
+            <button
+              type="submit"
+              onClick={handleSubmit}
+              disabled={name === '' || setPlace === '' || partner === ''} >
+              Submit
+            </button>
           </form>
         </section>
           ) : (
