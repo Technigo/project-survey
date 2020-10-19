@@ -4,6 +4,7 @@ import QuestionCountry from './Components/QuestionCountry';
 import QuestionTravelPartner from './Components/QuestionTravelPartner';
 import Summary from './Components/Summary';
 import plane from './assets/plane.png';
+import SubmitButton from 'Components/SumbitButton';
 
 
 export const App = () => {
@@ -23,6 +24,7 @@ export const App = () => {
         <section className="form-section">
           <h1 className="header" tabIndex="0">Travel the world!</h1>
           <img className="plane" src={plane} alt=""></img>
+          <h2 tabIndex="0">Are you ready for your next adventure? Please fill in the form!</h2>
           <form>
             <QuestionName
               name={name}
@@ -36,12 +38,7 @@ export const App = () => {
               partner={partner}
               funcSetPartner={setPartner}
             />
-            <button
-              type="submit"
-              onClick={handleSubmit}
-              disabled={name === '' || setPlace === '' || partner === ''} >
-              Submit
-            </button>
+            <SubmitButton name={name} place={place} partner={partner} handleSubmit={handleSubmit} />
           </form>
         </section>
           ) : (
