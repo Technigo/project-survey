@@ -1,15 +1,16 @@
 import React, { useState } from 'react'
 
-export const InputCheckbox = () => {
-  const [agreeOnTerms, setAgreeOnTerms] = useState(false)
-
+export const InputCheckbox = (props) => {
+  //const [agreeOnTerms, setAgreeOnTerms] = useState(false)
+  const { question, checked, setAgreeOnTerms } = props
   return (
     <label>
-      Agree to terms and conditions:
+      <h2>{question}</h2>
       <input
-        key={agreeOnTerms.id}
+        //key={agreeOnTerms.id}
         type='checkbox'
-        checked={agreeOnTerms}
+        //checked={agreeOnTerms}
+        checked={checked}
         onChange={event => setAgreeOnTerms(event.target.checked)}
       />
     </label>

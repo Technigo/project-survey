@@ -1,18 +1,24 @@
 import React, { useState } from 'react'
 
-export const InputSelect = () => {
-  const [season, setSeason] = useState('')
+export const InputSelect = (props) => {
+  //const [season, setSeason] = useState('')
+  //Move this to question component later.
+  const { id, question, setSeason, value } = props
 
   return (
     <>
-      <label>
-        Favorite season?
+      <label htmlFor={id}>
+        <h2>{question}</h2>
         <select
-          onChange={event => setSeason(event.target.value)}
-          value={season}
-          key={season.id}
+          onChange={(event) => setSeason(event.target.value)}
+          //id={id}
+          id={id}
+          //value={season}
+          value={value}
+          //key={season.id}
+          key={value.id}
         >
-          <option value="">Favorite season?</option>
+          <option value="Season">Favorite season?</option>
           <option value="Autum">Autum</option>
           <option value="Spring">Spring</option>
           <option value="Summer">Summer</option>

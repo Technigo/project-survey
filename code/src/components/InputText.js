@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const InputText = ({ id, question, value, setText, placeholder }) => {
+export const InputText = ({ id, question, value, setText }) => {
   return (
     <label htmlFor={id}>
       <h2>{question}</h2>
@@ -11,7 +11,9 @@ export const InputText = ({ id, question, value, setText, placeholder }) => {
         value={value}
         onChange={(event) => setText(event.target.value)}
         //placeholder={placeholder}
-        onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }} />
+        onKeyPress={(event) => { event.key === 'Enter' && event.preventDefault(); }}
+
+      />
     </label>
   )
 }
