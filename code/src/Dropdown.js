@@ -3,7 +3,7 @@ import React from 'react'
 export const Dropdown = (props) => {
     return (
         <form>
-            <h2>What do you like?</h2>
+            <h2>{props.question}</h2>
             <select>
                 <option value={props.one}>{props.one}</option>
                 <option value={props.two}>{props.two}</option>

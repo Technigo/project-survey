@@ -8,14 +8,13 @@ export const Survey = () => {
     return (
         <>
             <Dropdown 
+            question={'What would you prefer?'}
             one={'Ketchup'}
             two={'Beer'}
             three={'Both'}
             />
             <Radio 
-            forOne={"baby"}
-            forTwo={"prime"}
-            forThree={"oldiebutgoldie"}
+            question={'Whats your age dude?'}
             name={"age"}
             valueOne={"20"}
             valueTwo={"60"}

@@ -1,19 +1,43 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './radio.css'
 
 /* Use .map() for the radiobuttons to set if something is checked or not */
 
 export const Radio = (props) => {
+    const [ageGroup, setAgegroup] = useState(false);
+
+    const ageArray = [
+        {
+            answer: props.messageOne,
+            value: props.valueOne
+        },
+        {
+            answer: props.messageTwo,
+            value: props.valueTwo
+        },
+        {
+            answer: props.messageThree,
+            value: props.valueThree
+        }
+    ]
+
     return (
         <>
-            <h2>How old are you dude?</h2>
-            <div>
-                <form className="radio-container">
-                    <label for={props.forOne}><input type="radio" id={props.forOne} name={props} value={props.valueOne} />{props.messageOne}</label>
-                    <label for={props.forTwo}><input type="radio" id={props.forTwo} name={props} value={props.valueTwo} />{props.messageTwo}</label>
-                    <label for={props.forThree}><input type="radio" id={props.forThree} name={props} value={props.valueThree} />{props.messageThree}</label>
-                </form>
-            </div>
+            <h2>{props.question}</h2>
+            <form className="radio-container">
+                {ageArray.map((group) => (
+                    <label key={group}>
+                        <input
+                            type='radio'
+                            name={props}
+                            value={group.value}
+                            onChange={event => setAgegroup(event.target.value)}
+                            checked={ageGroup === group}
+                        /> {group.answer}
+                    </label> 
+                ))}
+            </form>
         </>
     )
+
 }
