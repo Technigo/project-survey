@@ -1,17 +1,19 @@
 import React, {useState} from 'react';
-import Summary from './Summary'
+import Summary from './Summary';
+
+const drinkAlternatives = ['Coffe', 'Tea', 'Juice', 'Soft drink', 'Lemonade'];
 
 const Form = () => {
 
     const [name, setName] = useState('');
     const [favoriteSnack, setFavoriteSnack] = useState(''); 
     const [showSummary, setShowSummary] = useState(false);
-    /* const [favoriteDrink, setFavoriteDrink] = useState(''); */
+    const [favoriteDrink, setFavoriteDrink] = useState('');
 
     const handleSubmit = event => {
         event.preventDefault();
         setShowSummary(true);
-    };
+    }
 
     return (
         <div className="Form">
@@ -38,11 +40,23 @@ const Form = () => {
                 <option value='Cake'>Cake</option>
                 <option value='Fruit'>Fruit</option>
             </select>
+
+            {drinkAlternatives.map(drink => (
+              <label key={drink}>
+                  <input 
+                  type='radio'
+                  value={drink}
+                  onChange={event => setFavoriteDrink(event.target.value)}
+                  checked={favoriteDrink === drink}
+                  required />
+                  {drink}
+              </label>
+              ))}
             
             <button type='submit'>Submit</button>
         </form>
         
-        {showSummary && <Summary name={name} snack={favoriteSnack} />}
+        {showSummary && <Summary name={name} favoriteSnack={favoriteSnack} favoriteDrink={favoriteDrink} />}
     </div>
     
     );
