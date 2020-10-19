@@ -5,8 +5,8 @@ const contributes = ["Code Knowledge", "Tech Recruitment Knowledge", "Agile Proj
 export const Radiobuttons = ({ id, canContributeWith, setCanContributeWith }) => {
   
   return (
-    <>
-    I can contribute with: 
+    <fieldset>
+    <legend>3. I can contribute with:</legend>
     {contributes.map(contributes => (
       <label 
         className="radiobutton-label" 
@@ -24,7 +24,7 @@ export const Radiobuttons = ({ id, canContributeWith, setCanContributeWith }) =>
         {contributes}
       </label>
     ))}
-    </>
+    </fieldset>
   )
 
 

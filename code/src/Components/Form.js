@@ -15,21 +15,34 @@ export const Form = () => {
   const [canContributeWith, setCanContributeWith] = useState();
   const [yearsOfExperience, setYearsOfExperience] = useState("");
   const [wantsToBeMentor, setWantsToBeMentor] = useState(false);
-  const [section, setSection] = useState('firstQuestion')
+  const [section, setSection] = useState('startText')
   
   const handleSubmit = event => {
     event.preventDefault();
   };
 
+
   return (
     <>
-      <form onSubmit={handleSubmit}>
-    
-        {section === 'firstQuestion' && (
+      <form onSubmit={handleSubmit}>    
+        {section === 'startText' && (
           <>
             <h2 tabIndex="0">If YES, please fill in the form 
-              <span role="img" aria-label="A blue heart emoji">&#128153;</span>
+              <span role="img" aria-label="A blue heart emoji">&#128420;</span>
             </h2>
+            <section className="button-container">
+              <button 
+                type="button" 
+                onClick={event => {setSection(event.target.value)}} 
+                value='firstQuestion'>
+                Start!
+              </button>
+            </section>
+          </>
+        )}
+        
+        {section === 'firstQuestion' && (
+          <>
             <NameInput 
               id="inputName"
               name={name}
@@ -39,12 +52,19 @@ export const Form = () => {
               <button 
                 type="button" 
                 onClick={event => {setSection(event.target.value)}} 
+                value='startText'>
+                Back
+              </button>
+              <button 
+                type="button" 
+                onClick={event => {setSection(event.target.value)}} 
                 value='secondQuestion'>
                 Next
               </button>
             </section>
           </>
         )}
+        
         {section === 'secondQuestion' && (
           <>
             <EmailInput 
@@ -67,6 +87,7 @@ export const Form = () => {
             </section>
           </>
         )}
+        
         {section === 'thirdQuestion' && (
           <>
             <Radiobuttons 
@@ -90,6 +111,7 @@ export const Form = () => {
             </section>
           </>
         )}
+        
         {section === 'fourthQuestion' && (
           <>
             <Dropdown 
@@ -112,6 +134,7 @@ export const Form = () => {
             </section>
           </>
         )}
+        
         {section === 'lastQuestion' && (
           <>
             <Checkbox 

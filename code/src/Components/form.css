@@ -4,30 +4,33 @@ form {
   padding: 10px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  border: 5px solid #495867;
+  align-items: center;
   border-radius: 8px;
-  width: 310px;
 }
 
-button { /* The Submit-button */
-  padding: 10px;
-  margin: 10px;
-  font-family: 'Merriweather Sans', Sans-Serif;
-  font-size: 16px;
-  font-weight: bold;
-  background: #495867;
-  cursor: pointer;
-  text-transform: uppercase;
-  border-radius: 8px;
-  color:#F7F7FF;
-} 
-
+/* The Buttons */
 .button-container{
   display: flex;
   justify-content: center;
 }
 
+button { 
+  padding: 6px 10px;
+  margin: 10px;
+  font-family: 'Merriweather Sans', Sans-Serif;
+  font-size: 16px;
+  font-weight: bold;
+  background: #354F52;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color:#CAD2C5;
+  align-self: center;
+} 
+
+button:hover {
+  border: 2px solid #CAD2C5;
+}
 
 /* Name Input */ /* Email Input */ 
 /* Radiobutton Input */ /* Dropdown Input */
@@ -45,10 +48,24 @@ button { /* The Submit-button */
 }
 
 .name-input, .email-input, .dropdown-select {
-  color: #577399;
-  border: 1px solid #577399;
-  border-radius: 8px;
-  padding: 4px;
+  color: #52796F;
+  border: none;
+  border-bottom: 1px solid #52796F;
+  background-color: #CAD2C5;
+  padding: 12px 6px 8px 6px;
+  width: 300px;
+}
+
+input::placeholder {
+  font-family: 'Merriweather Sans', Sans-Serif;
+  font-size: 16px;
+  color: #84A98C;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #52796F;
 }
 
 /* Media queries*/

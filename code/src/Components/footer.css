@@ -1,17 +1,17 @@
 footer {
   margin: 0;
-  background:  #495867;
+  background:  #354F52;
   font-family: 'Merriweather Sans', Sans-Serif;
   font-size: 16px;
   padding: 20px;
   left: 0;
   bottom: 0;
   text-align: center;
-  color: #F7F7FF;
+  color: #CAD2C5;
 }
 
 a {
-  color: #F7F7FF;
+  color: #CAD2C5;
   text-decoration-line: none;
   -webkit-text-decoration-line: none;
   cursor: pointer;

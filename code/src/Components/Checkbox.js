@@ -4,7 +4,7 @@ export const Checkbox = ({ label, id, wantsToBeMentor, setWantsToBeMentor }) => 
   
   return (
     <label className="checkbox-label" htmlFor={id}>
-      I want to be Gabriella's mentor!
+      5. I want to be Gabriella's mentor as well?
       <input
         className="checkbox-input"
         type="checkbox"

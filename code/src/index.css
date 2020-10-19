@@ -17,12 +17,11 @@ body {
   margin: 0;
   font-family: 'Catamaran', Sans-Serif;
   font-family: 'Merriweather Sans', Sans-Serif;
-  background-color: #F7F7FF;
-  color: #577399;
+  background-color: #CAD2C5;
+  color: #52796F;
   padding: 40px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   min-height: 100vh; 
 }
@@ -30,4 +29,21 @@ body {
 h1 {
   font-family: 'Catamaran', Sans-Serif;
   font-size: 48px;
+  line-height: 48px;
+}
+
+/* Media queries*/
+@media (min-width: 668px) { /* Tablet device */
+  .main {
+    justify-content: center;
+  }
+  
+  form {
+    width: 500px;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1024px) { /* Desktop device */
+
 }
