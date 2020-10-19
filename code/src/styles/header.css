@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo {
+  width: 40px;
+  height: auto;
+}
+
+.top-menu {
+  height: 40px;
+}
+
+.top-menu__item {
+  margin-left: 20px;
+  color: #000;
+  text-decoration: none;
+}
+
+.top-menu__item:hover {
+  border-bottom: 2px #000 solid;
+  cursor: pointer;
+}

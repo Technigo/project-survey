@@ -1,0 +1,42 @@
+.form__wrapper {
+  text-align: center;
+  margin: auto;
+  transform: translateY(calc((100vh - 522px) / 2 / 2));
+}
+
+.question__wrapper {
+  padding: 30px 0;
+}
+
+.form__question {
+  max-width: 60vw;
+  margin: auto;
+}
+
+.form__input {
+  display: block;
+  margin: 30px auto;
+  background: none;
+  width: 300px;
+  padding: 10px 0;
+  border-style: solid;
+  border: none;
+  border-bottom: 1px solid #000;
+  outline: none;
+}
+
+.form__input:focus {
+  border-bottom: 1px solid #fff;
+}
+.form__radiobutton__wrapper {
+}
+
+.form__radiobutton,
+.form__checkboxes {
+  /* display: block; */
+  margin: 30px auto;
+}
+
+.form__radiobutton__input {
+  margin: 10px;
+}
