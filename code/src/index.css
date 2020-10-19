@@ -11,3 +11,54 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background-color: rgb(224, 154, 197);   
+}
+
+.app-wrapper {
+  margin: auto;
+  width: 90vw;
+  background-color: rgb(244, 185, 222);
+  border: 1px solid #000;
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.header-section h1 {
+  font-size: 72px;
+  text-align: center;
+}
+
+.header-section h2 {
+  font-size: 36px;
+  text-align: center;
+}
+
+.survey-section {
+  background-color: rgb(245, 210, 231);
+  border: 1px solid #000;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-form {
+  margin: 20px;
+}
+
+.input-age {
+  margin: 20px;
+}
+
+.input-select-color {
+  margin: 20px;
+}

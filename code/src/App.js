@@ -1,9 +1,12 @@
 import React from 'react'
+import SurveyQuestions from './SurveyQuestions'
+import Header from './Header'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <section className="app-wrapper">
+      <Header />
+      <SurveyQuestions /> 
+    </section>
   )
 }
