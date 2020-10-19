@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { FinalText } from './FinalText';
 
-export const DayPicker = (props) => {
+export const ThirdQuestion = (props) => {
   const [dayOption, setDayOption] = useState();
   const [visible, setVisible] = useState(false);
 
@@ -14,22 +14,23 @@ export const DayPicker = (props) => {
   return (
     <>
       <form onSubmit={(event) => event.preventDefault()}>
-        <div className="day-picker">
-          <label htmlFor="weekdays">Pick a day of the week:</label>
+        <div>
+          <label htmlFor="daytime">Favorite time of the Day:</label>
             <select
-            id="weekdays"
+            id="daytime"
             onChange={(event) => setDayOption(event.target.value)}
             value={dayOption} 
             required>
-                <option value="">Select a day:</option>
-                <option value="Monday">Monday</option>
-                <option value="Tuesday">Tuesday</option>
-                <option value="Wednesday">Wednesday</option>
+                <option value="">Pick a time</option>
+                <option value="Sunrise">Sunrise</option>
+                <option value="Afternoon">Afternoon</option>
+                <option value="Sunset">Sunset</option>
+                <option value="Evening">Evening</option>
             </select>
           <button onClick={checkInput()}><a href="#final-text">Show me the result!</a></button>
         </div>          
       </form>
-      {(visible === true) && <FinalText resultColor={props.finalColor} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
+      {(visible === true) && <FinalText resultDestination={props.finalDestination} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
     </>
   );
 };

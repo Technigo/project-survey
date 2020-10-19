@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { DayPicker } from './DayPicker';
+import { ThirdQuestion } from './ThirdQuestion';
 
-export const NumberPicker = (props) => {
+export const SecondQuestion = (props) => {
   const [numberOption, setNumberOption] = useState();
   const [visible, setVisible] = useState(false);
 
@@ -14,14 +14,14 @@ export const NumberPicker = (props) => {
   return (
     <>
       <form onSubmit={(event) => event.preventDefault()}>
-        <div className="number-picker">
+        <div>
             <label key={numberOption}>
-            Pick your favorite number (between 1 and 5):
+            Pick your favorite number (between 5 and 10):
               <input
                   type="number"
                   name="quantity"
-                  min="1"
-                  max="5"
+                  min="5"
+                  max="10"
                   value={numberOption}
                   onChange={(event) => setNumberOption(event.target.value)} 
                   required />
@@ -29,7 +29,7 @@ export const NumberPicker = (props) => {
             <button onClick={checkInput()}>2 of 3</button>
         </div>
       </form>
-      {(visible === true) && <DayPicker finalColor={props.chosenColor} chosenNumber={numberOption}/>}
+      {(visible === true) && <ThirdQuestion finalDestination={props.chosenDestination} chosenNumber={numberOption}/>}
     </>
   );
 };

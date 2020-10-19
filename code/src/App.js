@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ColorPicker } from './components/ColorPicker';
+import { FirstQuestion } from './components/FirstQuestion';
 import 'components-css/landing-page.css';
 
 export const App = () => {
@@ -16,7 +16,7 @@ export const App = () => {
         <h2>Your Corona-friendly digital getaway!</h2>
         
         <button onClick={checkInput()}><a href="#first-question">Get Started!</a></button>
-        {(visible === true) && <ColorPicker />}
+        {(visible === true) && <FirstQuestion />}
       </main>
     </>
   );
