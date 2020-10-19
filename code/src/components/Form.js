@@ -30,7 +30,9 @@ const Form = () => {
             setRadiobutton={setRadiobutton}
           />
           {/* <Button /> */}
-          <button type="submit">Submit</button>
+          <button type="submit" disabled={text === ''}>
+            Submit
+          </button>
         </form>
       ) : (
         <Summary
