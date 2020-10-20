@@ -10,9 +10,9 @@ export const Question2 = (props) => {
     return true;
   }
   return (
-    <div className="question-container">
+    <section className="section-container">
       {/* add: onClick handler event drop down menu is shown - MAKE THIS WORK! */}
-      <button onClick={() => handleDropDownMenu()}>{props.question}</button>
+      <button type="button" onClick={() => handleDropDownMenu()}>{props.question}</button>
       {handleDropDownMenu
         ? <ul>
           {/* loop over an array with options and display them as a list */}
@@ -20,7 +20,7 @@ export const Question2 = (props) => {
         </ul>
         : "Oops, sth went wrong!"
       }
-    </div >
+    </section>
   )
 }
 

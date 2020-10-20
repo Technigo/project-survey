@@ -4,3 +4,9 @@
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
+
+.app-container {
+  max-width: 900px;
+  margin: 50px auto;
+  border: 1px solid red;
+}
