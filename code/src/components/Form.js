@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Header from './Header';
 import FormSection from './FormSection';
 import InputText from './InputText';
 import InputSelect from './InputSelect';
@@ -8,9 +9,10 @@ import InputRadiobutton from './InputRadiobutton';
 import Summary from './Summary';
 import Button from './Button';
 import ProgressBar from './ProgressBar';
+import './Form.scss';
 
 const Form = () => {
-  const [question, setQuestion] = useState(0);
+  const [question, setQuestion] = useState(-1);
   const [text, setText] = useState('');
   const [select, setSelect] = useState('');
   const [radiobutton, setRadiobutton] = useState();
@@ -24,35 +26,27 @@ const Form = () => {
 
   const nextQuestion = () => setQuestion(question + 1);
   const previousQuestion = () => setQuestion(question - 1);
-  //const progressBar = () =>
+  const selectArray = ['', '1-10', '11-20'];
+  console.log(selectArray);
+  // const item = selectArray.map(([key, value]) => console.log(key, value));
+  // console.log(item);
 
   const radiobuttonArray = ['0-10', '11-20', '21-30'];
-  // const input = [
-  //   <>
-  //     <InputText />
-  //     <InputSelect />
-  //     <InputCheckbox />
-  //     <InputRadiobutton />
-  //   </>,
-  // ];
 
   return (
-    <main>
+    <section>
+      <Header header="Survey" />
+      {question === -1 && (
+        <FormSection
+          className="section"
+          buttonFirst={
+            <Button type="button" click={nextQuestion} text="Start survey!" />
+          }
+        />
+      )}
       {!showSummary ? (
-        <form onSubmit={handleSubmit}>
+        <form className="Form" onSubmit={handleSubmit}>
           {question === 0 && (
-            <FormSection
-              className="section"
-              buttonFirst={
-                <Button
-                  type="button"
-                  click={nextQuestion}
-                  text="Start survey!"
-                />
-              }
-            />
-          )}
-          {question === 1 && (
             <FormSection
               className="section"
               inputType={
@@ -77,13 +71,13 @@ const Form = () => {
             />
           )}
 
-          {question === 2 && (
+          {question === 1 && (
             <FormSection
               className="section"
               inputType={
                 <InputSelect
-                  id="name"
                   question="What is the select?"
+                  array={selectArray}
                   value={select}
                   setSelect={setSelect}
                 />
@@ -102,12 +96,11 @@ const Form = () => {
             />
           )}
 
-          {question === 3 && (
+          {question === 2 && (
             <FormSection
               className="section"
               inputType={
                 <InputCheckbox
-                  id="name"
                   question="What is the checkbox?"
                   value={checkbox}
                   setCheckbox={setCheckbox}
@@ -122,12 +115,11 @@ const Form = () => {
             />
           )}
 
-          {question === 4 && (
+          {question === 3 && (
             <FormSection
               className="section"
               inputType={
                 <InputRadiobutton
-                  id="name"
                   question="What is the radiobutton?"
                   array={radiobuttonArray}
                   value={radiobutton}
@@ -135,21 +127,30 @@ const Form = () => {
                 />
               }
               buttonFirst={
+                <Button type="button" click={previousQuestion} text="Back" />
+              }
+              buttonSecond={
                 <Button
-                  type="submit"
+                  type="button"
+                  click={nextQuestion}
                   disabled={!radiobutton}
-                  text="Send survey"
+                  text="Next"
                 />
               }
             />
           )}
-          {question > 0 && (
-            <ProgressBar
-              className="progressBar"
-              progress={question - 1}
-              maxProgress="5"
-              progressText={`${question - 1} out of 5 answered`}
-            />
+
+          {question === 4 && (
+            <>
+              <Summary
+                name={text}
+                select={select}
+                checkbox={checkbox}
+                radiobutton={radiobutton}
+              />
+              <Button type="button" click={previousQuestion} text="Back" />
+              <Button type="submit" text="Send survey" />
+            </>
           )}
 
           {/* <InputText
@@ -185,14 +186,26 @@ const Form = () => {
           </button> */}
         </form>
       ) : (
-        <Summary
-          name={text}
-          select={select}
-          checkbox={checkbox}
-          radiobutton={radiobutton}
+        <></>
+        // <>
+        //   <Summary
+        //     name={text}
+        //     select={select}
+        //     checkbox={checkbox}
+        //     radiobutton={radiobutton}
+        //   />
+        //   <Button type="submit" disabled={!radiobutton} text="Send survey" />
+        // </>
+      )}
+      {question >= 0 && (
+        <ProgressBar
+          className="ProgressBar"
+          progress={question}
+          maxProgress="4"
+          progressText={`${question} out of 4 answered`}
         />
       )}
-    </main>
+    </section>
   );
 };
 
