@@ -4,8 +4,8 @@ export const Header = () => {
 
 
   return (
-      <header >
-        <h1>SPIRIT ANIMAL</h1>
+      <header>
+        <h1 tabIndex="0">SPIRIT ANIMAL</h1>
       </header>
   )
 

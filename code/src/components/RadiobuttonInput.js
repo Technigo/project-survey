@@ -11,22 +11,24 @@ const animals = [
 
 export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
 
-    return (
-      <>
-      <h2>Pick an animal!</h2>
-        Animals
+  return (
+    <section className="survey-question-container">
+      <h2 tabIndex="0">Pick an animal!</h2>
         {animals.map((animal)=> (
-        <label key = {animal}>
+        <label 
+          key = {animal} 
+          htmlFor = {animal}>
         <input
-            type = "radio"
-            value = {animal}
-            onChange = {(event) => setSpiritAnimal(event.target.value)}
-            checked = {spiritAnimal === animal}
-            required
+          type = "radio"
+          id = {animal}
+          value = {animal}
+          onChange = {(event) => setSpiritAnimal(event.target.value)}
+          checked = {spiritAnimal === animal}
+          required
         />
         {animal}
         </label>
         ))}
-      </>
-    )
+    </section>
+  )
 }
