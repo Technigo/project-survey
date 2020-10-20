@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
-const ageGroups = ["0-18", "19-30", "30+"];
+const group = ["0-18", "19-30", "30+"];
 
 export const Radiobutton = (props) => {
-    const [ageGroup, setAgeGroup] = useState('');
+    const { ageGroup, setAgeGroup } = props;
 
     return (
     
-           ageGroups.map(group => (
+           group.map(group => (
                <label key={group}>
                    <input 
                    type="radio"

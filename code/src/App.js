@@ -5,6 +5,8 @@ import { Submit } from "./Submit.js"
 import { Summary } from "./Summary.js" 
 
 export const App = () => {
+  const [location, setLocation ] = useState('Stockholm');
+  const [ageGroup, setAgeGroup] = useState('');
   const [showSummary, setShowSummary] = useState(false);
 
   const handleSubmit = event => {
@@ -20,13 +22,12 @@ export const App = () => {
 
     <section>
 
-      <div className="App">
-        <Dropdown label="City" value1="Stockholm" value2="Göteborg" value3="Malmö" />
-        <Dropdown label="Country" value1="Sweden" value2="Norway" value3="Other" />
+      <div className="dropdown">
+        <Dropdown location={location} setLocation={setLocation} />
       </div>
 
       <div className="radiobutton">
-        <Radiobutton label="age" group1="0-20"  group2="21-30" group3="31-100" />
+        <Radiobutton ageGroup={ageGroup} setAgeGroup={setAgeGroup} label="age" group="0-20"  group="21-30" group="31-100" />
       </div>
 
       <div className="submit">
@@ -36,7 +37,7 @@ export const App = () => {
         </form>
   
 
-  {showSummary && <Summary />} 
+  {showSummary && <Summary location={location} ageGroup={ageGroup}/>} 
       </div>
     
   );
