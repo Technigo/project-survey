@@ -6,7 +6,7 @@ const Select = ( {fur, setFur} ) => {
     
     return ( 
       <section className="fur-wrapper">      
-        <label for="fur"> Choose fur type: </label>
+        <label for="fur">
         <select id="fur" name="fur"
             onChange = {event => setFur(event.target.value)}
             value = {fur} 
@@ -16,7 +16,7 @@ const Select = ( {fur, setFur} ) => {
               <option value = "long" > Long</option>
               <option value = "naked" > Naked </option>
         </select>
-        
+        </label>
       </section>
       
     )
