@@ -7,9 +7,8 @@ import { Checkbox } from './Checkbox'
 import { Summary } from './Summary'
 
 export const Survey = () => {
-    const [agegroup, setAgegroup] = useState();
-    const [checkboxOne, setCheckboxOne] = useState(false);
-    const [checkboxTwo, setCheckboxTwo] = useState(false); /* Needs to be specified to either true or false to be controlled from the start */
+    const [ageGroup, setAgegroup] = useState();
+    const [checkboxOne, setCheckboxOne] = useState(false); /* Needs to be specified to either true or false to be controlled from the start */
     const [celebrationDrink, setCelebrationDrink] = useState()
     const [rainyFood, setRainyFood] = useState()
     const [restaurantHunt, setRestaurantHunt] = useState()
@@ -69,7 +68,7 @@ export const Survey = () => {
                         five={'Some fruits are always nice.'}
                     />
                     <Radio
-                        agegroup={agegroup}
+                        agegroup={ageGroup}
                         setAgegroup={setAgegroup}
                         question={'Thanks for doing this survey! Please check your agegroup:'}
                         name={'age'}
@@ -82,12 +81,9 @@ export const Survey = () => {
                     />
                     <Checkbox
                         checkboxOne={checkboxOne}
-                        checkboxTwo={checkboxTwo}
                         setCheckboxOne={setCheckboxOne}
-                        setCheckboxTwo={setCheckboxTwo}
                         question={'Would you take this survey again?'}
                         one={'Yes, most definately'}
-                        two={'No way José.'}
                     />
                     <Text />
                     <Submit />
@@ -96,6 +92,10 @@ export const Survey = () => {
                     <Summary 
                     drink={celebrationDrink}
                     rainyFood={rainyFood}
+                    restMethod={restaurantHunt}
+                    veggie={saladMaker}
+                    age={ageGroup}
+                    surveyAgain={checkboxOne}
                     />
                 )}
         </>
