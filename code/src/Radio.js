@@ -2,14 +2,15 @@ import React from 'react';
 
 
   const ageGroups = [
-      "0-18",
-      "19-30",
-      "31+"
+      "kitten",
+      "grown up",
+      "senior"
   ]
 
 const Radio = ({ ageGroup , setAgeGroup }) => {
     return (  
         <form>
+          <p>What age do you want your cat to be?</p>
           {ageGroups.map(group => (
               <label key ={group}>
                   <input 

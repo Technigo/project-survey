@@ -10,11 +10,11 @@ const Select = ( {location, setLocation } ) => {
             onChange = {event => setLocation(event.target.value)}
             value = {location} 
         >
-            <option value = "" > Select Location:</option>
-            <option value = "stockholm" > Stockholm</option>
-            <option value = "barcelona" > Barcelona</option>
-            <option value = "oslo" > Oslo</option>
-            
+            <option value = "" > Select Fur type:</option>
+            <option value = "short" > Short</option>
+            <option value = "long" > Long</option>
+            <option value = "naked" > Naked </option>
+
        </select>
      </label> 
     )

@@ -3,10 +3,9 @@ import React from "react";
 export const Summary = ({ name , setName ,  password , setPassword, ageGroup, setAgeGroup, location, setLocation }) => {
     return ( 
      <section className ="summary-wrapper"> 
-    <p>hello {name} </p>   
-    <p>your password is {password}</p> 
-    <p> Your age is: {ageGroup} </p>
-    <p>Your city is : {location}</p>
+    <p> You want to name your cat: {name} </p>   
+    <p> You preffer a cat that is a {ageGroup}  </p>
+    <p> You want a cat with {location} fur! </p>
 
     </section> 
     )

@@ -4,7 +4,7 @@ export const NameQuestion = ({ name , setName }) => {
     return (
         
         <label>
-           Question 1
+           What name would you give your cat? 
            <input
            type="text"
            value={name}
