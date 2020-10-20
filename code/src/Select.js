@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const Select = () => {
     const [question, setQuestion] = useState('')
     return (
-        <section>
+        <div>
             <label htmlFor="slectquestion">Which is your favorite city?</label>
             <form>
                 <select
@@ -17,7 +17,7 @@ const Select = () => {
                     <option value="Alt 4">Alt 4</option>
                 </select>
             </form>
-        </section>
+        </div>
     )
 
 }
