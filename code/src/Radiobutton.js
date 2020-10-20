@@ -3,12 +3,11 @@ import React, { useState } from 'react'
 const ageGroups = ["0-18", "19-30", "30+"];
 
 export const Radiobutton = (props) => {
-    const [ageGroup, setAgeGroup] = useState();
+    const [ageGroup, setAgeGroup] = useState('');
 
     return (
-       <form>
-           Age groups:
-           {ageGroups.map(group => (
+    
+           ageGroups.map(group => (
                <label key={group}>
                    <input 
                    type="radio"
@@ -18,8 +17,7 @@ export const Radiobutton = (props) => {
                    />
                    {group}
                </label>
-           ))}
-           </form>
+           ))
     )
 }
                
