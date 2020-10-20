@@ -13,7 +13,7 @@ export const Form = () => {
   const nextQuestion = () => setQuestion(question + 1) //to get next question in line (add +1 later)
   const previousQuestion = () => setQuestion(question - 1)
   const [name, setName] = useState('') //text
-  const [ageGroup, setAge] = useState([]) //radio
+  const [age, setAge] = useState(false) //radio
   const [season, setSeason] = useState('') //drop-down
   const [value, setValue] = useState(5) //range
   const [email, setEmail] = useState('') //email
@@ -81,7 +81,7 @@ export const Form = () => {
             <article className="question-container">
               <InputRange
                 id="range"
-                question="From a 1-10 scale how much do you like {season} ?"
+                question={`From a 1-10 scale how much do you like ${season} ?`}
                 value={value}
                 setValue={setValue}
               />
@@ -95,16 +95,15 @@ export const Form = () => {
           {question === 4 && (
             <article className="question-container">
               <InputRadio
-                question={`How many {season} have you experienced?`}
+                question={`How many ${season} have you experienced?`}
                 array={ageGroups}
                 setAge={setAge}
-                selected={ageGroup}
+                age={age}
               />
               <div className="navigation">
                 <Button button="button" click={previousQuestion} text="Back" />
-                <Button button="button" disabled={!ageGroup} click={nextQuestion} text="Next" />
+                <Button button="button" disabled={!age} click={nextQuestion} text="Next" />
               </div>
-
             </article>
           )}
 
@@ -118,7 +117,7 @@ export const Form = () => {
               />
               <div className="navigation">
                 <Button button="button" click={previousQuestion} text="Back" />
-                <Button type="submit" disabled={!email} click={handleSubmit} text="Submit" />
+                <Button type="submit" disabled={email === '' || email === '@'} click={handleSubmit} text="Submit" />
               </div>
 
             </article>
@@ -129,7 +128,7 @@ export const Form = () => {
           <Summary
             name={name}
             season={season}
-            selected={ageGroup}
+            selected={age}
             value={value}
             email={email}
           />

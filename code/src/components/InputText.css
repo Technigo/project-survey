@@ -1,5 +1,6 @@
 .input-text-container {
   border: none;
+  border-radius: 5px;
   opacity: 0.5;
   height: 30px;
   width: 300px;

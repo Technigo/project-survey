@@ -12,22 +12,29 @@ const ageGroups = [
 ]
 */
 
-export const InputRadio = ({ question, array, setAge, selected }) => {
+export const InputRadio = ({ question, array, setAge, age }) => {
 
   return (
     <>
       <h2>{question}</h2>
+
       {array.map(group => (
-        <label key={group} htmlFor={group} className="radio-container">
-          <input
-            type='radio'
-            value={group}
-            onChange={event => setAge(event.target.value)}
-            checked={selected === group}
-          />
-          {group}
-        </label>
+        <div className="radio-wrapper">
+          <label htmlFor="InputRadio" key={group}>
+            <input
+              name="InputRadio"
+              className="radio-container"
+              type='radio'
+              value={group}
+              onChange={event => setAge(event.target.value)}
+              checked={age === group}
+            />
+            {group}
+            <span className="custom-radio-btn"></span>
+          </label>
+        </div>
       ))}
+
     </>
   )
 }

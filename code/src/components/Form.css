@@ -1,27 +1,33 @@
+form {
+  display: flex;
+    /* justify-content: center; */
+    align-items: center;
+}
+
 .form-wrapper {
   background-image: linear-gradient(
 			to bottom,
-			rgba(0, 0, 0, 0.1),
-			rgba(0, 0, 0, 0.5)
+			rgba(0, 0, 0, 0.4),
+			rgba(0, 0, 0, 0.3)
 		),
 		url('../Images/season-unsplash.jpg');
 	background-size: cover;
 	background-position-x: center;
 	background-position-y: 45%;
-	height: 508px;
+	height: 100vh;
 	width: auto;
 	display: flex;
 }
 
 article {
-  position: absolute;
-  top: 25%;
+  /* position: absolute;
+  top: 25%; */
   padding: 0 10%;
   /* height: 200px; */
   color: #FDF7EF;
   display: flex;
-    flex-direction: column;
-    justify-content: space-around;
+  flex-direction: column;
+    /* justify-content: space-around; */
 }
 
 .summary-container {

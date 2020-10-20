@@ -11,6 +11,10 @@ button {
     font-size: 18px; 
 }
 
+button:disabled {
+  opacity: .5;
+}
+
 .navigation {
   display: flex;
   justify-content: space-between;
