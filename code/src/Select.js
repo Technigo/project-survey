@@ -1,8 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 
-const Select = ( {location, setLocation } ) => {
+const Select = ( {location, setLocation } ) => { 
     
     return ( 
         <label>
@@ -14,7 +14,7 @@ const Select = ( {location, setLocation } ) => {
             <option value = "stockholm" > Stockholm</option>
             <option value = "barcelona" > Barcelona</option>
             <option value = "oslo" > Oslo</option>
-
+            
        </select>
      </label> 
     )

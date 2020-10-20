@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
   const ageGroups = [
@@ -7,9 +7,7 @@ import React, { useState } from 'react';
       "31+"
   ]
 
-const Radio = ({ radio , setRadio }) => {
-    const [ageGroup, setAgeGroup] = useState();
-
+const Radio = ({ ageGroup , setAgeGroup }) => {
     return (  
         <form>
           {ageGroups.map(group => (
@@ -19,7 +17,6 @@ const Radio = ({ radio , setRadio }) => {
                   value = {group}
                   onChange = {(event) => setAgeGroup(event.target.value) }
                   checked = {ageGroup === group}
-                  required
                  />
                 {group} 
               </label>

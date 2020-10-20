@@ -9,7 +9,7 @@ import { Summary } from "./Summary";
 export const App = () => {
   const [name, setName] = useState('')
   const [password, setPassword] = useState('')
-  const [radio, setRadio] = useState('')
+  const [ageGroup, setAgeGroup] = useState();
   const [location, setLocation] = useState('');
   const [showSummary, setShowSummary] = useState(false);
 
@@ -26,12 +26,12 @@ export const App = () => {
        <form onSubmit={handleSubmit}>
         <NameQuestion name={name} setName={setName}/>
         <PasswordQuestion password={password} setPassword={setPassword}/>
-        <Radio radio={radio} setRadio={setRadio} />
+        <Radio ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
         <Select location={location} setLocation={setLocation} />
         <button type="submit" disabled={name === '' || password === ''}>Submit </button>
        </form>
         ):(
-         <Summary name={name} password={password} radio={radio} location={location} />
+         <Summary name={name} password={password} ageGroup={ageGroup} location={location} />
         )}
 
     </div>  
