@@ -1,3 +1,16 @@
 .third-question {
   background-color: #f0c8c8;
 }
+.radio-buttons {
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+}
+p {
+  font-family: "PT Serif", serif;
+  font-size: 22px;
+}
+label {
+  margin: 20px;
+  cursor: pointer;
+}

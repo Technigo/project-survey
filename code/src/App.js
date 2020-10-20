@@ -2,6 +2,7 @@ import React from 'react'
 import { FirstQuestion } from './components/FirstQuestion'
 import { SecondQuestion } from './components/SecondQuestion'
 import { ThirdQuestion } from './components/ThirdQuestion'
+import { FourthQuestion } from './components/FourthQuestion'
 import './app.css'
 
 export const App = () => {
@@ -9,7 +10,7 @@ export const App = () => {
     <div className='main'>
 
       <div className='intro'>
-        <h1>Self-care survey</h1>
+        <h1>Daily self-care survey</h1>
         <h2>Let's start with a quick self-assessment check</h2>
         <div class="container">
           <img src="img/heart.png" class="heart" alt="human heart" />
@@ -24,6 +25,9 @@ export const App = () => {
       </div >
       <div>
         <ThirdQuestion />
+      </div>
+      <div>
+        <FourthQuestion />
       </div>
     </div>
   )

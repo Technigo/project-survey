@@ -37,7 +37,7 @@ export const ThirdQuestion = () => {
                         //   onChange={}
                         //   checked={}
                         />
-                        <p> > 8 hours</p>
+                        <p> more than 8 hours</p>
                     </label>
                 </div>
                 <button>continue</button>
