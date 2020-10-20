@@ -15,8 +15,9 @@ export const displayAnimalImage = (animal) => {
 export const Summary = ({name, personality, spiritAnimal}) => {
 
   return (
-    <section>
-        <h2 tabIndex="0">Hi {name}! Thought you should know that your spirit animal is a {personality} {spiritAnimal}</h2>
+    <section className="summary-container">
+        <h2>RESULT</h2>
+        <p tabIndex="0">Hi {name}! Thought you should know that your spirit animal is a {personality} {spiritAnimal}</p>
         <p>Not happy with the result?</p>
         <button onClick={() => window.location.reload(false)}>Try again!</button>
 

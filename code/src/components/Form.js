@@ -21,20 +21,29 @@ export const Form = () => {
   return (
     <>
     {! displaySummary ?(
-    <form id="form-container" onSubmit={handleSubmit}>
-      <TextInput 
-        name={name} 
-        setName={setName}
-      />
+    <form onSubmit={handleSubmit}>
+      <section className="input-container">
+        <TextInput 
+          name={name} 
+          setName={setName}
+        />
+      </section>
+      <section className="input-container">
       <SelectInput 
+        id="test"
         personality={personality} 
         setPersonality={setPersonality}
       />
+      </section>
+      <section className="input-container">
       <RadiobuttonInput 
         spiritAnimal={spiritAnimal}
         setSpiritAnimal={setSpiritAnimal}
-        />
-      <button type="submit">Submit</button>
+      />
+      </section>
+      <div className="submit-button-container">
+        <button className="submit-button" type="submit">Submit</button>
+      </div>
     </form> ) : (
     <Summary 
       name={name}

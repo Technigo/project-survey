@@ -3,7 +3,7 @@ import React from 'react';
 export const TextInput = ({name, setName}) => {
 
   return (
-    <section className="survey-question-container">
+    <div className="form-question-container">
       <h2 tabIndex="0">What is your name?</h2>
       <label htmlFor={name}>Name:</label>
         <input
@@ -13,7 +13,7 @@ export const TextInput = ({name, setName}) => {
         id = {name}
         required
         />
-    </section>
+    </div>
   )
 }
 

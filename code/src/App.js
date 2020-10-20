@@ -6,21 +6,25 @@ import { Form } from './components/Form'
 export const App = () => {
 const [displayForm, setDisplayForm] = useState(false)
 
+/* function that is invoked when button is clicked. Changes displayform value to true and displays the form*/ 
 const handleStartClick = event => {
   setDisplayForm(true)
 }
+
   return (
     <>
-      <div>
+      <main className="main-content-container">
         {! displayForm ? (
-        <div>
-        <Header/>
-        <button onClick={handleStartClick}>Click here to find out!</button>
-        </div> )
+        <section className="intro-text-container">
+          <Header/>
+          <button onClick={handleStartClick}>Click here to find out!</button>
+        </section> )
         : (
-        <Form/>
+        <section className="form-container">
+          <Form/>
+        </section>
         )}
-      </div>
+      </main>
     </>
   )
 }
