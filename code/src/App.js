@@ -34,6 +34,7 @@ const submitForm = (event) => {
   setWindow();
 }
 
+// eslint-disable-next-line
 const renderQuestions = questions.map((question,index) => {
     console.log("in renderForm, index is",index,"currentWin is:",currentWindow);
 
