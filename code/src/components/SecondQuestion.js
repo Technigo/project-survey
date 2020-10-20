@@ -13,11 +13,13 @@ export const SecondQuestion = (props) => {
 
   return (
     <>
-      <form onSubmit={(event) => event.preventDefault()}>
-        <div>
+      <form className="second-question" onSubmit={(event) => event.preventDefault()}>
+        <img className="first-question-img" src="assets/question2-img.png" alt=""/>
+        <div className="number-select-text">
             <label key={numberOption}>
-            Pick your favorite number (between 5 and 10):
+            <p>Pick your favorite number (between 5 and 10):</p>
               <input
+                  className="number-input"
                   type="number"
                   name="quantity"
                   min="5"
@@ -26,7 +28,7 @@ export const SecondQuestion = (props) => {
                   onChange={(event) => setNumberOption(event.target.value)} 
                   required />
             </label>
-            <button onClick={checkInput()}>2 of 3</button>
+            <button className="first-button" onClick={checkInput()}>NEXT</button>
         </div>
       </form>
       {(visible === true) && <ThirdQuestion finalDestination={props.chosenDestination} chosenNumber={numberOption}/>}

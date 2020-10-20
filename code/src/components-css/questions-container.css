@@ -4,7 +4,7 @@
     padding-top: 50px;
 }
 
-.first-question {
+.first-question, .second-question {
     border: 6px solid #b07653;
     display: flex;
     width: 40%;
@@ -20,7 +20,7 @@
     align-content: center;
 }
 
-.radio-buttons-text p {
+.radio-buttons-text p, .number-select-text p {
     font-size: 27px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -46,4 +46,20 @@
 
 label {
     font-size: 20px;
+}
+
+.second-question {
+    margin-top: 50px;
+}
+
+.number-input {
+    font-size: 20px;
+}
+
+.number-select-text {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    align-content: center;
+    padding-left: 15px;
 }
