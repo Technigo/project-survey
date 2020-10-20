@@ -1,29 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-
-/* TO FIX: When checking one box, both are checked. */
 export const Checkbox = (props) => {
-    const [selectCheckbox, setSelectCheckbox] = useState();
-
     return (
         <>
             <h2>{props.question}</h2>
-            <form>
                 <label>
                     <input
                         type="checkbox"
                         value={props.one}
-                        checked={selectCheckbox}
-                        onChange={(event) => setSelectCheckbox(event.target.checked)}
+                        checked={props.checkboxOne}
+                        onChange={(event) => props.setCheckboxOne(event.target.checked)}
                     />{props.one}</label>
                 <label>
                     <input
                         type="checkbox"
                         value={props.two}
-                        checked={selectCheckbox}
-                        onChange={(event) => setSelectCheckbox(event.target.checked)}
+                        checked={props.checkboxTwo}
+                        onChange={(event) => props.setCheckboxTwo(event.target.checked)}
                     />{props.two}</label>
-            </form>
         </>
     )
 }
