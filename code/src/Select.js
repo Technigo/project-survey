@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const Select = ( {fur, setFur} ) => { 
     
     return ( 
