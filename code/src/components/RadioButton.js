@@ -7,7 +7,7 @@ export const RadioButton = () => {
     return (
         <>
             <p className="radio-button-question">How fimiliar are you with your head phones brand?</p>
-            <form>
+            <form className="radio-buttons">
                 {knowHeadPhones.map((headphone) => (
                     <label key={headphone}>
                         <input
@@ -18,7 +18,7 @@ export const RadioButton = () => {
                         />
                         {headphone}
                     </label>
-                ))};
+                ))}
             </form>
         </>
 

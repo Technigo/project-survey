@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
-export const NameQuestions = () => {
+export const NameQuestion = () => {
     const [name, setName] = useState()
     return (
-        <form>
+        <form className="name-question">
             <p>What is your full name?</p>
             <input
                 type="text"
-                onchange={event => setName(event.target.value)}
+                onChange={event => setName(event.target.value)}
                 value={name}
                 required
             />
