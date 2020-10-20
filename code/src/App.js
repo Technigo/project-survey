@@ -1,11 +1,15 @@
-import React, { useState } from 'react'
-import { Survey } from './Survey'
+import React, { useState } from "react";
+import { Survey } from "./Survey";
+import { Header } from "./Header";
+import "./app.css";
 
 export const App = () => {
   return (
-    <div>
-      <h1>SURVEY TIME BABY!</h1>
-      <Survey/>
+    <div className="app__wrapper">
+      <Header />
+      <main>
+        <Survey />
+      </main>
     </div>
-  )
-}
+  );
+};

@@ -1,0 +1,5 @@
+.summary__section {
+    grid-column: 2/3;
+}
+
+/*TO FIX: Make it span over all columns, maybe need to change from section to div instead?*/
