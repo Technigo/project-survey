@@ -1,6 +1,7 @@
 import React from 'react'
 import { FirstQuestion } from './components/FirstQuestion'
 import { SecondQuestion } from './components/SecondQuestion'
+import { ThirdQuestion } from './components/ThirdQuestion'
 import './app.css'
 
 export const App = () => {
@@ -18,7 +19,12 @@ export const App = () => {
       <div>
         <FirstQuestion />
       </div>
-      <SecondQuestion />
-    </div >
+      <div>
+        <SecondQuestion />
+      </div >
+      <div>
+        <ThirdQuestion />
+      </div>
+    </div>
   )
 }
