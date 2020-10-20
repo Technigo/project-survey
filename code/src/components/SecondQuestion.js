@@ -14,7 +14,7 @@ export const SecondQuestion = (props) => {
   return (
     <>
       <form className="second-question" onSubmit={(event) => event.preventDefault()}>
-        <img className="first-question-img" src="assets/question2-img.png" alt=""/>
+        <img className="first-question-img" src="assets/question2-img.png" alt="Tourist couple"/>
         <div className="number-select-text">
             <label key={numberOption}>
             <p>Favorite number (between 5 and 10):</p>
