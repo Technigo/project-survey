@@ -1,4 +1,60 @@
 .final-text {
     height: 100vh;
-    background-color: bisque;
+    background-color: #FFF5E9;
+    padding-top: 100px;
 }
+
+.final-result-container {
+    margin-top: 120px;
+    position: relative;
+}
+
+.restart-button {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #f3bc0f;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 6px 6px 4px #DFE0DF;
+    position: absolute;
+    top: 600px;
+    left: 1000px;
+}
+
+.restart-button:active {
+    transform: translate(8px, 8px);
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+  .final-img {
+      position: absolute;
+      left: 40%;
+      top: 10%;
+  }
+
+  .dream-text {
+    position: absolute;
+    top: 320px;
+    left: 200px;
+    z-index: 2;
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+    color: #b07653;
+    background-color: #FFF5E9;
+    padding: 5px 23px;
+  }
+
+  .result-text {
+    position: absolute;
+    font-size: 30px;
+    font-weight: bold;
+    color: #54433A;
+    width: 600px;
+    top: 470px;
+    left: 240px;
+  }
