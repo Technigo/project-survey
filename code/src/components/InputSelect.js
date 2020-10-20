@@ -1,11 +1,11 @@
 import React from 'react';
 
-const InputSelect = ({ id, question, select, setSelect }) => {
+const InputSelect = ({ question, select, setSelect }) => {
   return (
-    <label>
+    <label htmlFor="InputSelect">
       <h2>{question}</h2>
       <select
-        id={id}
+        name="InputSelect"
         onChange={event => setSelect(event.target.value)}
         value={select}
       >

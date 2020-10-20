@@ -7,7 +7,6 @@ const Summary = ({ name, select, radiobutton, checkbox }) => {
       <p>Select: {select}</p>
       <p>Radiobutton: {radiobutton}</p>
       {checkbox ? <p>Checkbox is true</p> : <p>Checkbox is false</p>}
-      <p>Checkbox: {checkbox}</p>
 
       {console.log(name, select, radiobutton, checkbox)}
     </div>

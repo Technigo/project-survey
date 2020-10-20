@@ -5,8 +5,9 @@ const InputRadiobutton = ({ question, array, radiobutton, setRadiobutton }) => {
     <>
       <h2>{question}</h2>
       {array.map(radio => (
-        <label key={radio}>
+        <label htmlFor="InputRadiobuttons" key={radio}>
           <input
+            name="InputRadiobuttons"
             type="radio"
             value={radio}
             onChange={event => setRadiobutton(event.target.value)}

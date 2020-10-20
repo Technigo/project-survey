@@ -7,6 +7,7 @@ import InputRadiobutton from './InputRadiobutton';
 //import Button from './Button';
 import Summary from './Summary';
 import Button from './Button';
+import ProgressBar from './ProgressBar';
 
 const Form = () => {
   const [question, setQuestion] = useState(0);
@@ -23,8 +24,17 @@ const Form = () => {
 
   const nextQuestion = () => setQuestion(question + 1);
   const previousQuestion = () => setQuestion(question - 1);
+  //const progressBar = () =>
 
   const radiobuttonArray = ['0-10', '11-20', '21-30'];
+  // const input = [
+  //   <>
+  //     <InputText />
+  //     <InputSelect />
+  //     <InputCheckbox />
+  //     <InputRadiobutton />
+  //   </>,
+  // ];
 
   return (
     <main>
@@ -85,7 +95,7 @@ const Form = () => {
                 <Button
                   type="button"
                   click={nextQuestion}
-                  disabled={!text}
+                  disabled={!select}
                   text="Next"
                 />
               }
@@ -107,12 +117,7 @@ const Form = () => {
                 <Button type="button" click={previousQuestion} text="Back" />
               }
               buttonSecond={
-                <Button
-                  type="button"
-                  click={nextQuestion}
-                  disabled={!text}
-                  text="Next"
-                />
+                <Button type="button" click={nextQuestion} text="Next" />
               }
             />
           )}
@@ -138,6 +143,15 @@ const Form = () => {
               }
             />
           )}
+          {question > 0 && (
+            <ProgressBar
+              className="progressBar"
+              progress={question - 1}
+              maxProgress="5"
+              progressText={`${question - 1} out of 5 answered`}
+            />
+          )}
+
           {/* <InputText
             id="name"
             question="What is the question?"
