@@ -1,3 +1,4 @@
+import { Nameinput } from 'Nameinput.js'
 import React, { useState } from 'react'
 import { Dropdown } from "./Dropdown.js"
 import { Radiobutton } from "./Radiobutton.js"
@@ -5,6 +6,7 @@ import { Submit } from "./Submit.js"
 import { Summary } from "./Summary.js" 
 
 export const App = () => {
+  const [name, setName] = useState('');
   const [location, setLocation ] = useState('Stockholm');
   const [ageGroup, setAgeGroup] = useState('');
   const [showSummary, setShowSummary] = useState(false);
@@ -21,6 +23,9 @@ export const App = () => {
       onSubmit={handleSubmit}>
 
     <section>
+      <div className="nameinput">
+        <Nameinput name={name} setName={setName} id={Nameinput} />
+      </div>
 
       <div className="dropdown">
         <Dropdown location={location} setLocation={setLocation} />
@@ -37,7 +42,7 @@ export const App = () => {
         </form>
   
 
-  {showSummary && <Summary location={location} ageGroup={ageGroup}/>} 
+  {showSummary && <Summary name={name} location={location} ageGroup={ageGroup}/>} 
       </div>
     
   );
