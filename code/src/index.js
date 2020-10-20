@@ -273,33 +273,36 @@ const thingsTwos = [
     <div class="flip-box-back">
 <form>
 <h2>Hustle</h2>  <br></br>
-        <label>
+       
           <input
             type="checkbox"
+            name="hustle"
             value="screaming"
             onChange={event => setHustle(event.target.value)}
             checked={hustle === "screaming"}
-            />
+            /> <label>
             Screaming<br></br>
           </label>
           <br></br>
-        <label>
+     
           <input
             type="checkbox"
             value="tickle"
+            name="hustle"
             onChange={event => setHustle(event.target.value)}
             checked={hustle === "tickle"}
-            />
+            />   <label>
             Tickle<br></br>
           </label>
           <br></br>
-          <label>
+         
           <input
             type="checkbox"
             value="dancing"
+            name="hustle"
             onChange={event => setHustle(event.target.value)}
             checked={hustle === "dancing"}
-            />
+            /> <label>
             Dancing
           </label>
           <br></br>
@@ -321,7 +324,7 @@ const thingsTwos = [
             <label key={group}>
                   <br></br> <p></p>
             <input
-              type="checkbox"
+              type="radio"
               value={group}
               onChange={(event) => setThings(event.target.value)}
               checked={things === group}
