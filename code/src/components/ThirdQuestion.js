@@ -28,7 +28,7 @@ export const ThirdQuestion = (props) => {
                 <option value="Sunset">Sunset</option>
                 <option value="Evening">Evening</option>
             </select>
-          <button className="last-button" onClick={checkInput()}><a href="#final-text">Dream away!</a></button>
+          <button className="last-button" onClick={checkInput()}><a href="#final-text" aria-hidden="true" tabIndex="-1">Dream away!</a></button>
         </div>       
       </form>
       {(visible === true) && <FinalText resultDestination={props.finalDestination} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
