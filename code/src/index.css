@@ -99,7 +99,7 @@ form {
   
 }
 
-.input-container:nth-child(3) {
+.input-container:last-of-type {
   background: #ff9a76;
 
 }
@@ -116,9 +116,25 @@ input, select {
   justify-content: center;
 }
 
+output {
+  width: 50px;
+  height: 50px;
+  color: white;
+}
 /** Summary **/
 
 img {
-  width: 100px;
-  height: 100px;
+  width: 150px;
+  height: 150px;
+}
+
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary-container p:last-child{
+  opacity: 0.4;
 }
