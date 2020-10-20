@@ -8,12 +8,12 @@ export const Checkbox = () => {
         <div className="checkbox">
                 <h4> Would you like our newsletter?</h4>
                 <label className="check">
+                <p>Yes please</p>
                 <input
                     type="checkbox"
                     checked={wantNews}
                     onChange={event => setWantNews(event.target.checked)}
                 />
-                <p>Yes please</p>
 
             </label>
 

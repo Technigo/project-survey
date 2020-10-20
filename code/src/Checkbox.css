@@ -4,7 +4,10 @@
 }
 
 .check {
-    background-color: tomato;
     flex-direction: column;
     align-content:center;
+}
+
+h4 {
+    color: rgb(37, 58, 37);
 }

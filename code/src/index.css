@@ -3,6 +3,12 @@ body {
   font-family: 'Open Sans', sans-serif;
   display: flex;
   flex-direction: column;
+  background-image: url(./images/chris-abney-qLW70Aoo8BE-unsplash\ \(1\).jpg);
+
+}
+.formContainer {
+  display: flex;
+  justify-content: center;
 }
 
 form {
@@ -10,32 +16,50 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
+  max-width: 70%;
 }
 
  button {
-   height: 30px;
-   width: 70px;
+   height: 50px;
+   width: 90px;
    background-color:rgb(225, 236, 216) ;
    border-radius: 25%;
 
 } 
+ button:hover {
+   background-color: rgb(160, 190, 167);
+   transition: 0.3s ease;
+} 
 
-/* button:hover {
-
-} */
-/* .Dropdown {
-
+.country{
+  margin: 30px 0 50px 0;
+  text-align: center;
 }
 
-.Radio {
-
+.duration {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-.Checkbox {
-
+.checkbox {
+  margin-bottom: 50px;
+  text-align: center;
 }
 
-.Submit {
+.input {
+  margin-bottom: 30px;
+  text-align: center;
+}
 
-} */
+.checkbox p {
+  margin: 0
+}
+
+.btn {
+  margin-bottom: 50px;
+  text-align: center;
+
+} 
+
+
+

@@ -1,3 +1,7 @@
-.duration h3 {
+h3 {
     color:rgb(37, 58, 37);;
+}
+
+.duration {
+    margin: 0 15px 0 15px;
 }
