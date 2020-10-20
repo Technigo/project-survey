@@ -1,0 +1,21 @@
+import React from 'react'
+import './secondQuestion.css'
+
+export const SecondQuestion = () => {
+
+    return (
+        <div className="second-question">
+            <form>
+                <h1>What did, or could have made your day better?</h1>
+                <input
+                    className="better-day"
+                    type="text"
+                    // value={this.state.value}
+                    // onChange={this.handleChange}
+                    required
+                />
+                <button>continue</button>
+            </form>
+        </div>
+    )
+}

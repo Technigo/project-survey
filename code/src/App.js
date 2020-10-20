@@ -1,5 +1,6 @@
 import React from 'react'
 import { FirstQuestion } from './components/FirstQuestion'
+import { SecondQuestion } from './components/SecondQuestion'
 import './app.css'
 
 export const App = () => {
@@ -14,8 +15,10 @@ export const App = () => {
         </div>
         <button>begin</button>
       </div>
-
-      <FirstQuestion />
+      <div>
+        <FirstQuestion />
+      </div>
+      <SecondQuestion />
     </div >
   )
 }

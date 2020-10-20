@@ -22,7 +22,8 @@ export class Range extends React.Component {
                         min="1" max="10"
                         value={this.state.value}
                         onChange={this.handleChange}
-                        step="1" />
+                        step="1"
+                    />
                     {this.state.value}
                 </label>
             </div>

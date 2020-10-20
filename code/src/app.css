@@ -16,12 +16,28 @@ button {
   display: inline;
   text-transform: uppercase;
   align-items: center;
-  background-color: #f0c8c8;
+  background-color: inherit;
   border: 1px solid black;
-  padding: 15px;
+  padding: 14px 40px;
+  cursor: pointer;
+}
+button:hover {
+  -moz-transition: all 0.4s ease-in-out;
+  -o-transition: all 0.4s ease-in-out;
+  -webkit-transition: all 0.4s ease-in-out;
+  transition: all 0.4s ease-in-out;
+  background-color: white;
+  cursor: pointer;
+  box-shadow: 0 4px 15px 0 white;
+  border: none;
 }
 
-h1,
+h1 {
+  font-size: 45px;
+  font-weight: lighter;
+  text-align: center;
+  padding: 20px;
+}
 h2 {
   text-align: center;
   padding: 20px;
@@ -33,7 +49,8 @@ h2 {
 }
 .heart {
   margin: 5em;
-  animation: 1.5s infinite beatHeart;
+  /* animation: 1.5s infinite beatHeart; */
+  /* remember to uncomment this for production */
   width: 20%;
 }
 

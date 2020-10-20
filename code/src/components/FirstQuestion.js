@@ -5,11 +5,12 @@ import './firstQuestion.css'
 export const FirstQuestion = () => {
 
     return (
-        <div>
+        <div className="first-question">
             <form>
                 <h1>On a scale from 1 to 10, how are you feeling today?</h1>
                 <h2>1 being the lowest, 10 being the highest</h2>
                 <Range />
+                <button>continue</button>
             </form>
         </div>
     )
