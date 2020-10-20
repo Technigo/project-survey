@@ -12,7 +12,8 @@ const animals = [
 export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
 
     return (
-      <div>
+      <>
+      <h2>Pick an animal!</h2>
         Animals
         {animals.map((animal)=> (
         <label key = {animal}>
@@ -26,6 +27,6 @@ export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
         {animal}
         </label>
         ))}
-      </div>
+      </>
     )
 }

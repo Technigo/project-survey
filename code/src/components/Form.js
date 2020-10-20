@@ -12,28 +12,38 @@ export const Form = () => {
   const [spiritAnimal, setSpiritAnimal] = useState();
   const [personality, setPersonality] = useState('');
 
- /*function that prevents default loading of the page when the form is submitting, changes the setDisplaySummary to true and finally hides the form by getting the id of the form element and setting it to display: none*/ 
+ /*function that prevents default loading of the page when the form is submitting, changes the setDisplaySummary to true.*/
   const handleSubmit = event => {
     event.preventDefault();
     setDisplaySummary(true);
-    document.getElementById("form-container").style.display= "none"; /*finns det ett sätt utan css?*/
   }
-
+  /* if the displaySummary is false then the form will display. If the value is false then the summary will display.*/
   return (
     <>
-    <form id="form-container">
-    <h2>Name here please!</h2>
-    <TextInput name={name} setName={setName}/>
-    <h2>Pick one word that describes you the best</h2>
-    <SelectInput personality={personality} setPersonality={setPersonality}/>
-    <h2>Pick an animal!</h2>
-    <RadiobuttonInput spiritAnimal={spiritAnimal} setSpiritAnimal={setSpiritAnimal}/>
-    <button type="submit" onClick={handleSubmit}>Submit</button>
-    </form>
-    {displaySummary && <Summary name={name} personality={personality} spiritAnimal={spiritAnimal}/>}
+    {! displaySummary ?(
+    <form id="form-container" onSubmit={handleSubmit}>
+      <TextInput 
+        name={name} 
+        setName={setName}
+      />
+      <SelectInput 
+        personality={personality} 
+        setPersonality={setPersonality}
+      />
+      <RadiobuttonInput 
+        spiritAnimal={spiritAnimal}
+        setSpiritAnimal={setSpiritAnimal}
+        />
+      <button type="submit">Submit</button>
+    </form> ) : (
+    <Summary 
+      name={name}
+      personality={personality} 
+      spiritAnimal={spiritAnimal}
+    />
+    )}
     </>
   )
-
 }
 
 
