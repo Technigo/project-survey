@@ -19,22 +19,27 @@ body {
 
 .title {
   font-size: 10vw;
-  color: greenyellow
+  color: greenyellow;
+
 }
 
 .header-section {
   display: flex;
   flex-direction: column;
+  text-align: center;
 }
 
 .title-line-one {
   font-size: 5vw;
+  
 }
 
 .title-line-two {
-  font-size: 3vw
+  font-size: 3vw;
+  
 }
 
-.headphone-image {
+.App img {
   width : 40vw;
+  justify-content: center;
 }
