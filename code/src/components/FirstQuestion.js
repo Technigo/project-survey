@@ -5,15 +5,15 @@ const ageGroups = [
     '20-30', 
     '31-40', 
     '41-50', 
-    '51 +']
+    '51 +',
+]
 
 export const FirstQuestion = () => {
     const [ageGroup, setAgeGroup] = useState('');
-    console.log()
 
     return (
         <form>
-            <p>How old are you?</p>
+            <h2>How old are you?</h2>
             Age:
             {ageGroups.map(group => (
             <label key={group}>

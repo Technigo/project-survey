@@ -1,6 +1,7 @@
 import React from 'react'
 import { Header } from 'components/Header'
 import { FirstQuestion } from './components/FirstQuestion'
+import { SecondQuestion } from './components/SecondQuestion'
 
 
 export const App = () => {
@@ -8,6 +9,7 @@ export const App = () => {
     <div>
       <Header />
       <FirstQuestion />
+      <SecondQuestion />
     </div>
   );
 };
