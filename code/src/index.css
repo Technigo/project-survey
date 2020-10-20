@@ -168,9 +168,8 @@ button {
   .flip-box-back {
     width: 90%;
     border-radius: 20px;
-
     height: 90%;
-    background: black;
+    background: rgb(39, 39, 39);
     opacity: 80%;
     padding-top: 20px;
     font-family: 'Courier New', Courier, monospace;
