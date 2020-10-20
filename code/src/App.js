@@ -1,13 +1,16 @@
 import React from 'react'
 import Text from './Text'
 import Select from './Select'
+import Radio from './Radio'
 
 export const App = () => {
   return (
-    <div>
+    <section>
       Find me in src/app.js!
       <Text />
       <Select />
-    </div>
+      <Radio />
+
+    </section>
   )
 }
