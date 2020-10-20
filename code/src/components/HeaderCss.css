@@ -1,0 +1,16 @@
+h1 {
+    background-color:#F26363;
+    padding: 50px;
+  /*  color: #E997A7;*/
+    color: black;
+    font-family: 'Ubuntu', sans-serif; 
+    text-align: center; 
+  }
+
+  h2 {
+    background-color: #E997A7;
+    padding: 20px;
+    color: white;
+    font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+  }
