@@ -32,7 +32,8 @@ const thingsTwos = [
    
    <section>
  <div  className="container">
-       <div className="header"><h1>Time For Halloween Mad Lib</h1></div>
+       <div className="header"><h1>Time For Halloween<br>
+       </br> Mad Lib</h1></div>
        <div className="mad-container">
          
        <div className="word-container">
