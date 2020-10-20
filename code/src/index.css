@@ -11,3 +11,30 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+body {
+  background : black;
+  color: white;
+}
+
+.title {
+  font-size: 10vw;
+  color: greenyellow
+}
+
+.header-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.title-line-one {
+  font-size: 5vw;
+}
+
+.title-line-two {
+  font-size: 3vw
+}
+
+.headphone-image {
+  width : 40vw;
+}
