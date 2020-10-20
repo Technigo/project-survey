@@ -2,11 +2,9 @@
 
 
 export const Summary = () => {
-    return (
-        <div class='summary'>
+    return <div class='summary'>
         {group} 
         {location}
         {text}
         </div>
-    );
 }; */

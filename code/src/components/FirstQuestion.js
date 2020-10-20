@@ -5,11 +5,12 @@ const ageGroups = [
     '20-30', 
     '31-40', 
     '41-50', 
-    '51 +',
+    '51+',
 ]
 
 export const FirstQuestion = () => {
     const [ageGroup, setAgeGroup] = useState('');
+    
 
     return (
         <div className='first-question'>
@@ -17,7 +18,8 @@ export const FirstQuestion = () => {
             <h2>How old are you?</h2>
             Age:
             {ageGroups.map(group => (
-            <label key={group}>
+            <label 
+            key={group}>
                 <input
                     type='radio'
                     value={group}
@@ -26,9 +28,10 @@ export const FirstQuestion = () => {
                 />
                 {group}
             </label>
-            ))};
+            ))}
         </form>
         </div>
+        
         );
         };
-        
+    
