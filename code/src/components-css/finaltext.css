@@ -5,8 +5,9 @@
 }
 
 .final-result-container {
-    margin-top: 120px;
+    margin: 120px auto;
     position: relative;
+    max-width: 1900px;
 }
 
 .restart-button {

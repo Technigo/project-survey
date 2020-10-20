@@ -3,6 +3,7 @@
 .landing-page-container {
     height: 100vh;
     position: relative;
+    max-height: 977px;
 }
 
 .img-landing {
@@ -43,7 +44,7 @@
     font-weight: bold;
     background-color: #f3bc0f;
     border: none;
-    padding: 15px 25px;
+    padding: 10px;
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 6px 6px 4px #DFE0DF;
@@ -59,4 +60,5 @@
 .landing-page-container a {
     text-decoration: none;
     color: white;
+    padding: 15px;
 }
