@@ -1,12 +1,15 @@
 import React, { useState } from 'react';
+import FormSection from './FormSection';
 import InputText from './InputText';
 import InputSelect from './InputSelect';
 import InputCheckbox from './InputCheckbox';
 import InputRadiobutton from './InputRadiobutton';
 //import Button from './Button';
 import Summary from './Summary';
+import Button from './Button';
 
 const Form = () => {
+  const [question, setQuestion] = useState(0);
   const [text, setText] = useState('');
   const [select, setSelect] = useState('');
   const [radiobutton, setRadiobutton] = useState();
@@ -17,22 +20,155 @@ const Form = () => {
     event.preventDefault();
     setShowSummary(true);
   };
+
+  const nextQuestion = () => setQuestion(question + 1);
+  const previousQuestion = () => setQuestion(question - 1);
+
+  const radiobuttonArray = ['0-10', '11-20', '21-30'];
+
   return (
-    <>
+    <main>
       {!showSummary ? (
         <form onSubmit={handleSubmit}>
-          <InputText id="name" name={text} setText={setText} />
+          {question === 0 && (
+            <FormSection
+              className="section"
+              buttonFirst={
+                <Button
+                  type="button"
+                  click={nextQuestion}
+                  text="Start survey!"
+                />
+              }
+            />
+          )}
+          {question === 1 && (
+            <FormSection
+              className="section"
+              inputType={
+                <InputText
+                  id="name"
+                  question="What is the question?"
+                  value={text}
+                  setText={setText}
+                />
+              }
+              buttonFirst={
+                <Button type="button" click={previousQuestion} text="Back" />
+              }
+              buttonSecond={
+                <Button
+                  type="button"
+                  click={nextQuestion}
+                  disabled={!text}
+                  text="Next"
+                />
+              }
+            />
+          )}
+
+          {question === 2 && (
+            <FormSection
+              className="section"
+              inputType={
+                <InputSelect
+                  id="name"
+                  question="What is the select?"
+                  value={select}
+                  setSelect={setSelect}
+                />
+              }
+              buttonFirst={
+                <Button type="button" click={previousQuestion} text="Back" />
+              }
+              buttonSecond={
+                <Button
+                  type="button"
+                  click={nextQuestion}
+                  disabled={!text}
+                  text="Next"
+                />
+              }
+            />
+          )}
+
+          {question === 3 && (
+            <FormSection
+              className="section"
+              inputType={
+                <InputCheckbox
+                  id="name"
+                  question="What is the checkbox?"
+                  value={checkbox}
+                  setCheckbox={setCheckbox}
+                />
+              }
+              buttonFirst={
+                <Button type="button" click={previousQuestion} text="Back" />
+              }
+              buttonSecond={
+                <Button
+                  type="button"
+                  click={nextQuestion}
+                  disabled={!text}
+                  text="Next"
+                />
+              }
+            />
+          )}
+
+          {question === 4 && (
+            <FormSection
+              className="section"
+              inputType={
+                <InputRadiobutton
+                  id="name"
+                  question="What is the radiobutton?"
+                  array={radiobuttonArray}
+                  value={radiobutton}
+                  setRadiobutton={setRadiobutton}
+                />
+              }
+              buttonFirst={
+                <Button
+                  type="submit"
+                  disabled={!radiobutton}
+                  text="Send survey"
+                />
+              }
+            />
+          )}
+          {/* <InputText
+            id="name"
+            question="What is the question?"
+            value={text}
+            setText={setText}
+          />
           {console.log()}
-          <InputSelect value={select} setSelect={setSelect} />
-          <InputCheckbox value={checkbox} setCheckbox={setCheckbox} />
+          <InputSelect
+            id="name"
+            question="What is the select?"
+            value={select}
+            setSelect={setSelect}
+          />
+          <InputCheckbox
+            id="name"
+            question="What is the checkbox?"
+            value={checkbox}
+            setCheckbox={setCheckbox}
+          />
           <InputRadiobutton
+            id="name"
+            question="What is the radiobutton?"
+            array={radiobuttonArray}
             value={radiobutton}
             setRadiobutton={setRadiobutton}
-          />
+          /> */}
           {/* <Button /> */}
-          <button type="submit" disabled={text === ''}>
+
+          {/* <button type="submit" disabled={!text}>
             Submit
-          </button>
+          </button> */}
         </form>
       ) : (
         <Summary
@@ -42,7 +178,7 @@ const Form = () => {
           radiobutton={radiobutton}
         />
       )}
-    </>
+    </main>
   );
 };
 
