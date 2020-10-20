@@ -373,25 +373,25 @@ const thingsTwos = [
         <div class="flip-box">
   <div class="flip-box-inner">
     <div class="flip-box-front">
-      <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
+    <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg"/>
     </div>
     <div class="flip-box-back">
-
+<div className="box">
              <h2>Things</h2>
                 {thingsTwos.map((group) => (
             <label key={group}>
                   <br></br> <p></p>
-            <input
+                  <span><img src="https://cdn.icon-icons.com/icons2/1321/PNG/512/if-01-halloweenscarypumpkinlantern01-2660271_86907.png"/></span>
+             <input
               type="radio"
               value={group}
               onChange={(event) => setThingsTwo(event.target.value)}
               checked={thingsTwo === group}
-            
               />
               {group}
           </label>
       ))}
-      
+      </div>
 </div>
 </div>
 </div>
