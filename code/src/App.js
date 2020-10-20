@@ -17,8 +17,8 @@ export const App = () => {
   };  
 
   return ( 
-    <div className ="wrapper-form">
-     <h1 tabindex="0"> Dream cat!</h1>
+    <section className ="wrapper-form">
+     <h1 tabIndex="0"> Dream cat!</h1>
 
      {!showSummary ? (
        <form onSubmit={handleSubmit}>
@@ -31,7 +31,7 @@ export const App = () => {
          <Summary name={name} ageGroup={ageGroup} location={location} />
         )}
 
-    </div>  
+    </section>  
   
   );
 };

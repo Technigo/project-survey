@@ -9,7 +9,7 @@ import React from 'react';
 
 const Radio = ({ ageGroup , setAgeGroup }) => {
     return (  
-        <form>
+        
           <fieldset>
           <legend>Choose an age for your Dream cat</legend>
           {ageGroups.map(group => (
@@ -25,7 +25,7 @@ const Radio = ({ ageGroup , setAgeGroup }) => {
               </label>
           ))}
           </fieldset>   
-          </form> 
+          
     );
 };
 

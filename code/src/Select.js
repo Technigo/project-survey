@@ -14,8 +14,8 @@ const Select = ( {location, setLocation } ) => {
               <option value = "short" > Short</option>
               <option value = "long" > Long</option>
               <option value = "naked" > Naked </option>
-       </select>
-     </label> 
+        </select>
+      </label> 
     )
   }
 
