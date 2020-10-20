@@ -12,8 +12,6 @@ export const InputText = ({ id, question, value, setText }) => {
         value={value}
         onChange={(event) => setText(event.target.value)}
         placeholder='Type your name'
-      //onKeyPress={(event) => { event.key === 'Enter' && event.preventDefault(); }}
-
       />
     </label>
   )

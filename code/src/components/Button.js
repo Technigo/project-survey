@@ -1,10 +1,10 @@
 import React from 'react'
 import './Button.css'
 
-export const Button = ({ button, click, disable, text }) => {
+export const Button = ({ button, click, disabled, text }) => {
   return (
 
-    <button type={button} onClick={click} disable={disable}>{text}</button>
+    <button type={button} onClick={click} disabled={disabled}>{text}</button>
   )
 }
 // import React from 'react'

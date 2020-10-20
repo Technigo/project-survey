@@ -3,24 +3,21 @@ import { InputSelect } from './InputSelect'
 import { InputText } from './InputText'
 import { InputRadio } from './InputRadio'
 import { InputRange } from './InputRange'
+import { InputEmail } from './InputEmail'
 import { Button } from './Button'
 import { Summary } from './Summary'
 import './Form.css'
-// import Image from '/Users/MAC/Technigo/project-survey/code/src/Images/season-unsplash.jpg'
-
-
-
 
 export const Form = () => {
   const [question, setQuestion] = useState(0) //show first "question"
   const nextQuestion = () => setQuestion(question + 1) //to get next question in line (add +1 later)
+  const previousQuestion = () => setQuestion(question - 1)
   const [name, setName] = useState('') //text
   const [ageGroup, setAge] = useState([]) //radio
   const [season, setSeason] = useState('') //drop-down
-  const [value, setValue] = useState('10') //range
-
+  const [value, setValue] = useState(5) //range
+  const [email, setEmail] = useState('') //email
   const [submit, setSubmit] = useState(false) //since we don't want to show result before submitted. 
-
   const handleSubmit = (event) => {
     event.preventDefault()
     setSubmit(true) //show summary on submit
@@ -39,13 +36,12 @@ export const Form = () => {
 
   return (
     <section className="form-wrapper">
-      {!submit && (
+      {!submit ? (
         <form onSubmit={handleSubmit}>
-          {/* <img src={Image} alt="different leafs" /> */}
           {question === 0 && (
             <article className="introduction">
               <h2>Welcome, please take a few minutes to answer this survey!</h2>
-              <div className="navigation">
+              <div className="navigation-start">
                 <Button button="button" click={nextQuestion} text="Start survey" />
               </div>
             </article>
@@ -60,7 +56,8 @@ export const Form = () => {
                 setText={setName}
               />
               <div className="navigation">
-                <Button button="button" click={nextQuestion} disabled={!name} text="Next" />
+                <Button button="button" click={previousQuestion} text="Back" />
+                <Button button="button" disabled={!name} click={nextQuestion} text="Next" />
               </div>
             </article>
           )}
@@ -74,7 +71,8 @@ export const Form = () => {
                 value={season}
               />
               <div className="navigation">
-                <Button button="button" click={nextQuestion} text="Next" />
+                <Button button="button" click={previousQuestion} text="Back" />
+                <Button button="button" disabled={!season} click={nextQuestion} text="Next" />
               </div>
             </article>
           )}
@@ -88,7 +86,8 @@ export const Form = () => {
                 setValue={setValue}
               />
               <div className="navigation">
-                <Button button="button" click={nextQuestion} disabled={!name} text="Next" />
+                <Button button="button" click={previousQuestion} text="Back" />
+                <Button button="button" disabled={!value} click={nextQuestion} text="Next" />
               </div>
             </article>
           )}
@@ -101,27 +100,44 @@ export const Form = () => {
                 setAge={setAge}
                 selected={ageGroup}
               />
-
               <div className="navigation">
-                <Button type="submit" click={handleSubmit} text="Submit" disable={!season} />
+                <Button button="button" click={previousQuestion} text="Back" />
+                <Button button="button" disabled={!ageGroup} click={nextQuestion} text="Next" />
               </div>
+
+            </article>
+          )}
+
+          {question === 5 && (
+            <article className="question-container">
+              <InputEmail
+                id="email"
+                question="Type your e-mail to recieve a summary of your answers"
+                value={email}
+                setEmail={setEmail}
+              />
+              <div className="navigation">
+                <Button button="button" click={previousQuestion} text="Back" />
+                <Button type="submit" disabled={!email} click={handleSubmit} text="Submit" />
+              </div>
+
             </article>
           )}
         </form>
-      )
-      }
 
-      {
-        submit && (
-          <section className="summary-container">
-            <Summary
-              name={name}
-              selected={ageGroup}
-              season={season}
-            />
-          </section>
-        )
+      ) : <section className="summary-container">
+          <Summary
+            name={name}
+            season={season}
+            selected={ageGroup}
+            value={value}
+            email={email}
+          />
+          <div className="navigation-reset">
+            <Button button="button" click={() => window.location.reload()} text="Reset survey" />
+          </div>
+        </section>
       }
-    </section >
+    </section>
   )
 }
