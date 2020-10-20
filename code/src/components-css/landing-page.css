@@ -1,23 +1,27 @@
 /* Styling for landing page */
 
 .landing-page-container {
+    margin: auto;
     height: 100vh;
     position: relative;
     max-height: 977px;
+    max-width: 1800px;
 }
 
 .img-landing {
     width: 50%;
     position: absolute;
-    left: 700px;
+    left: 40%;
     top: 50%;
     transform: translateY(-50%);
+    min-height: 630px;
+    object-fit: cover;
 }
 
 .vacation-title {
     position: absolute;
     top: 250px;
-    left: 350px;
+    left: 5%;
     z-index: 2;
     font-family: 'Fredoka One', cursive;
     font-size: 60px;
@@ -29,16 +33,19 @@
 .vacation-slogan {
     position: absolute;
     top: 375px;
-    left: 330px;
+    left: 19%;
     text-align: right;
     font-size: 35px;
     color: #54433A;
+    background-color: white;
+    padding: 0 10px;
+    z-index: 4;
 }
 
 .start-button {
     position: absolute;
     top: 540px;
-    left: 450px;
+    left: 25%;
     font-family: 'Open Sans', sans-serif;
     font-size: 30px;
     font-weight: bold;
@@ -48,6 +55,7 @@
     border-radius: 20px;
     cursor: pointer;
     box-shadow: 6px 6px 4px #DFE0DF;
+    z-index: 3;
 }
 
 .start-button:active {
@@ -61,4 +69,69 @@
     text-decoration: none;
     color: white;
     padding: 15px;
+}
+
+/*Media Queries*/
+/*TABLET*/
+@media (min-width: 667px) and (max-width: 1024px) {
+    .img-landing {
+        width: 90%;
+        position: absolute;
+        top: 35%;
+        left: 5%;
+        transform: translateY(-50%);
+        min-height: 630px;
+        object-fit: cover;
+    }
+
+    .vacation-title {
+        position: absolute;
+        top: 65%;
+        left: 5%;
+        font-size: 40px;
+        background-color: transparent;
+    }
+
+    .vacation-slogan {
+        position: absolute;
+        top: 72%;
+        left: 7%;
+        text-align: left;
+        font-size: 25px;
+    }
+
+    .start-button {
+        position: absolute;
+        top: 84%;
+        left: 8%;
+    }
+}
+
+/*MOBILE*/
+@media (max-width: 666px) {
+    .img-landing {
+        width: 90%;
+        position: absolute;
+        top: 250px;
+        left: 5%;
+        min-height: 300px;
+    }
+
+    .vacation-title {
+        position: absolute;
+        top: 350px;
+        font-size: 25px;
+        background-color: white;
+    }
+
+    .vacation-slogan {
+        display: none;
+    }
+
+    .start-button {
+        position: absolute;
+        top: 480px;
+        left: 7%;
+        transform: translateY(-50%);
+    }
 }
