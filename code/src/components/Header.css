@@ -21,4 +21,5 @@ header:before {
   left:0;
   height:30px;
   background:linear-gradient(to top right, transparent 49%, #29425D 50%);
+  z-index: 1;
 }

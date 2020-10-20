@@ -1,4 +1,25 @@
-img {
-object-fit: cover;
-width: 200px;
+.form-wrapper {
+  background-image: linear-gradient(
+			to bottom,
+			rgba(0, 0, 0, 0.1),
+			rgba(0, 0, 0, 0.5)
+		),
+		url('../Images/season-unsplash.jpg');
+	background-size: cover;
+	background-position-x: center;
+	background-position-y: 45%;
+	height: 508px;
+	width: auto;
+	display: flex;
+}
+
+article {
+  position: absolute;
+  top: 25%;
+  padding: 0 10%;
+  height: 200px;
+  color: #FDF7EF;
+  display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }

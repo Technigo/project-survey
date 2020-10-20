@@ -1,5 +1,5 @@
 import React from 'react'
-
+import './InputRadio.css'
 /*
 //array for radio btn
 const ageGroups = [

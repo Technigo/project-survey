@@ -1,4 +1,5 @@
 import React from 'react'
+import './InputSelect.css'
 
 export const InputSelect = ({ id, question, setSeason, value }) => {
 
@@ -11,6 +12,7 @@ export const InputSelect = ({ id, question, setSeason, value }) => {
           id={id}
           value={value}
           key={value.id}
+          className="select-container"
         >
           <option value="Season">Favorite season?</option>
           <option value="Autum">Autum</option>

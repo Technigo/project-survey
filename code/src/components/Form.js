@@ -2,10 +2,11 @@ import React, { useState } from 'react'
 import { InputSelect } from './InputSelect'
 import { InputText } from './InputText'
 import { InputRadio } from './InputRadio'
+import { InputRange } from './InputRange'
 import { Button } from './Button'
 import { Summary } from './Summary'
 import './Form.css'
-import Image from '/Users/MAC/Technigo/project-survey/code/src/Images/season-unsplash.jpg'
+// import Image from '/Users/MAC/Technigo/project-survey/code/src/Images/season-unsplash.jpg'
 
 
 
@@ -13,9 +14,11 @@ import Image from '/Users/MAC/Technigo/project-survey/code/src/Images/season-uns
 export const Form = () => {
   const [question, setQuestion] = useState(0) //show first "question"
   const nextQuestion = () => setQuestion(question + 1) //to get next question in line (add +1 later)
-  const [name, setName] = useState('')
-  const [ageGroup, setAge] = useState([]);
-  const [season, setSeason] = useState('')
+  const [name, setName] = useState('') //text
+  const [ageGroup, setAge] = useState([]) //radio
+  const [season, setSeason] = useState('') //drop-down
+  const [value, setValue] = useState('10') //range
+
   const [submit, setSubmit] = useState(false) //since we don't want to show result before submitted. 
 
   const handleSubmit = (event) => {
@@ -26,12 +29,12 @@ export const Form = () => {
 
   //array for radio btn
   const ageGroups = [
-    '0-18',
-    '19-30',
-    '31-40',
-    '41-50',
-    '51-60',
-    '60 +'
+    '0-18 years',
+    '19-30 years',
+    '31-40 years',
+    '41-50 years',
+    '51-60 years',
+    '60 + years'
   ]
 
   return (
@@ -41,7 +44,7 @@ export const Form = () => {
           {/* <img src={Image} alt="different leafs" /> */}
           {question === 0 && (
             <article className="introduction">
-              <h2>Welcome, please take a few minutes to answer this servey!</h2>
+              <h2>Welcome, please take a few minutes to answer this survey!</h2>
               <div className="navigation">
                 <Button button="button" click={nextQuestion} text="Start survey" />
               </div>
@@ -64,11 +67,11 @@ export const Form = () => {
 
           {question === 2 && (
             <article className="question-container">
-              <InputRadio
-                question="How old are you?"
-                array={ageGroups}
-                setAge={setAge}
-                selected={ageGroup}
+              <InputSelect
+                question="What's your favorit season?"
+                id="season"
+                setSeason={setSeason}
+                value={season}
               />
               <div className="navigation">
                 <Button button="button" click={nextQuestion} text="Next" />
@@ -76,31 +79,29 @@ export const Form = () => {
             </article>
           )}
 
-          {/* {question === 3 && (
-              <article className="question-container">
-                <InputCheckbox
-                  question="Are you happy?"
-                  checked={agreeOnTerms}
-                  setAgreeOnTerms={setAgreeOnTerms}
-                // id="season"
-                // setSeason={setSeason}
-                // value={season}
-                />
-                <div className="navigation">
-                  {/* <StartButton button="button" click={nextQuestion} disable={!season} text="Next" /> */}
-          {/* <StartButton button="button" click={nextQuestion} text="Next" />
-                </div>
-              </article>
-            )} */}
-
           {question === 3 && (
             <article className="question-container">
-              <InputSelect
-                question="What's your favorit season?"
-                id="season"
-                setSeason={setSeason}
-                value={season}
+              <InputRange
+                id="range"
+                question="From a 1-10 scale how much do you like {season} ?"
+                value={value}
+                setValue={setValue}
               />
+              <div className="navigation">
+                <Button button="button" click={nextQuestion} disabled={!name} text="Next" />
+              </div>
+            </article>
+          )}
+
+          {question === 4 && (
+            <article className="question-container">
+              <InputRadio
+                question={`How many {season} have you experienced?`}
+                array={ageGroups}
+                setAge={setAge}
+                selected={ageGroup}
+              />
+
               <div className="navigation">
                 <Button type="submit" click={handleSubmit} text="Submit" disable={!season} />
               </div>

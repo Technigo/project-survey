@@ -1,4 +1,5 @@
 import React from 'react'
+import './InputText.css'
 
 export const InputText = ({ id, question, value, setText }) => {
   return (
@@ -7,6 +8,7 @@ export const InputText = ({ id, question, value, setText }) => {
       <input
         type="text"
         id={id}
+        className="input-text-container"
         value={value}
         onChange={(event) => setText(event.target.value)}
         placeholder='Type your name'
