@@ -6,7 +6,6 @@ export const Summary = ({ name , setName , ageGroup, setAgeGroup, location, setL
     <p> You want to name your cat: {name} </p>   
     <p> You preffer a cat that is a {ageGroup}  </p>
     <p> You want a cat with {location} fur! </p>
-
     </section> 
     )
 }

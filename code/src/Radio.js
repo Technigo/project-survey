@@ -10,18 +10,21 @@ import React from 'react';
 const Radio = ({ ageGroup , setAgeGroup }) => {
     return (  
         <form>
-          <p>What age do you want your cat to be?</p>
+          <fieldset>
+          <legend>Choose an age for your Dream cat</legend>
           {ageGroups.map(group => (
-              <label key ={group}>
+              <label key ={group}> 
                   <input 
-                  type ="radio" required
+                  type ="radio" 
                   value = {group}
                   onChange = {(event) => setAgeGroup(event.target.value) }
                   checked = {ageGroup === group}
+                  required
                  />
                 {group} 
               </label>
-          ))}   
+          ))}
+          </fieldset>   
           </form> 
     );
 };

@@ -18,7 +18,7 @@ export const App = () => {
 
   return ( 
     <div className ="wrapper-form">
-     <h1>Dream cat!</h1>
+     <h1 tabindex="0"> Dream cat!</h1>
 
      {!showSummary ? (
        <form onSubmit={handleSubmit}>
