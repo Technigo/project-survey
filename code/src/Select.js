@@ -2,13 +2,13 @@ import React from 'react';
 
 
 
-const Select = ( {location, setLocation } ) => { 
+const Select = ( {fur, setFur} ) => { 
     
     return ( 
-        <label>
+        <label id="fur" name="fur type">
         <select name="Location" 
-            onChange = {event => setLocation(event.target.value)}
-            value = {location} 
+            onChange = {event => setFur(event.target.value)}
+            value = {fur} 
             required >
               <option value = "" > Select Fur type:</option>
               <option value = "short" > Short</option>
