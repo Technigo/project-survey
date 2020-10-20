@@ -2,6 +2,7 @@ import React from 'react'
 import { Header } from 'components/Header'
 import { FirstQuestion } from './components/FirstQuestion'
 import { SecondQuestion } from './components/SecondQuestion'
+import { ThirdQuestion } from './components/ThirdQuestion'
 
 
 export const App = () => {
@@ -10,6 +11,7 @@ export const App = () => {
       <Header />
       <FirstQuestion />
       <SecondQuestion />
+      <ThirdQuestion />
     </div>
   );
 };
