@@ -15,10 +15,10 @@ export const FirstQuestion = () => {
   };
 
   return (
-    <section className="questions-container">
-      <form onSubmit={(event) => event.preventDefault()} id="first-question">
-        <div role="radiogroup" tabIndex="0" aria-label="Pick a Destination: City, Beach or Forest">
-          Pick a destination:
+    <section className="questions-container" id="first-question">
+      <form className="first-question" onSubmit={(event) => event.preventDefault()}>
+        <div className="radio-buttons-text" role="radiogroup" tabIndex="0" aria-label="Pick a Destination: City, Beach or Forest">
+          <p>Pick a destination:</p>
           {destinationOptions.map((destination) => (
             <label key={destination} aria-label={destination}>
               <input
@@ -31,8 +31,9 @@ export const FirstQuestion = () => {
               {destination}
             </label>
           ))}
-          <button onClick={checkInput()}>1 of 3</button>
+          <button className="first-button" onClick={checkInput()}>NEXT</button>
         </div>
+        <img className="first-question-img" src="assets/question1-img.png" alt=""/>
       </form>
       {(visible === true) && <SecondQuestion chosenDestination={destinationOption}/>}
     </section>
