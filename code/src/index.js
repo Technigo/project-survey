@@ -406,7 +406,6 @@ const thingsTwos = [
             className="line-phrase"
             maxlength="17" 
             onChange={event => setPhrase(event.target.value)}
-           
             value={phrase}
             />
             
