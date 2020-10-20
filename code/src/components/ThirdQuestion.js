@@ -14,6 +14,7 @@ export const ThirdQuestion = (props) => {
   return (
     <>
       <form className="third-question" onSubmit={(event) => event.preventDefault()}>
+        <img className="first-question-img" src="assets/question3-img.png" alt=""/> 
         <div className="day-select-text">
           <label htmlFor="daytime">Favorite time of the Day:</label>
             <select
@@ -28,8 +29,7 @@ export const ThirdQuestion = (props) => {
                 <option value="Evening">Evening</option>
             </select>
           <button className="last-button" onClick={checkInput()}><a href="#final-text">Dream away!</a></button>
-        </div>
-        <img className="first-question-img" src="assets/question3-img.png" alt=""/>        
+        </div>       
       </form>
       {(visible === true) && <FinalText resultDestination={props.finalDestination} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
     </>

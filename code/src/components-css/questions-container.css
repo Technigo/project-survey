@@ -7,7 +7,9 @@
 .first-question, .second-question, .third-question {
     border: 6px solid #b07653;
     display: flex;
-    width: 40%;
+    width: 55%;
+    max-width: 750px;
+    flex-direction: row;
     justify-content: space-between;
     margin: auto;
     background-color: white;
@@ -18,6 +20,7 @@
     flex-direction: column;
     margin: 0 auto;
     align-content: center;
+    padding: 5px;
 }
 
 .radio-buttons-text p, .number-select-text p, .day-select-text label{
@@ -42,6 +45,7 @@
 .first-question-img {
     width: 50%;
     object-fit: cover;
+    min-height: 270px;
 }
 
 label, select {
@@ -63,6 +67,7 @@ label, select {
     margin: 0 auto;
     align-content: center;
     padding-left: 15px;
+    padding-bottom: 5px;
 }
 
 /* Third question styling */
@@ -86,4 +91,23 @@ a {
 
 .day-select-text {
     padding-top: 45px;
+}
+
+/*Media Queries*/
+/*MOBILE*/
+@media (max-width: 666px) {
+    .first-question, .second-question, .third-question {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        height: 550px;
+    }
+
+    .first-question-img {
+        width: 100%;
+    }
+
+    .questions-container {
+        height: 100%;
+    }
 }
