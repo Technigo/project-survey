@@ -2,19 +2,19 @@ import React, { useState } from 'react'
 import './Checkbox.css'
 
 export const Checkbox = () => {
-    const [wantNews, setWantNews] = useState("")
+    const [wantTerms, setWantTerms] = useState("")
 
     return (
         <div className="checkbox">
-                <h4> Would you like our newsletter?</h4>
+                <h4> Did you read the T&C?</h4>
                 <label className="check">
-                <p>Yes please</p>
+                <p>Yes of course :) </p>
                 <input
                     type="checkbox"
-                    checked={wantNews}
-                    onChange={event => setWantNews(event.target.checked)}
+                    checked={wantTerms}
+                    onChange={event => setWantTerms(event.target.checked)}
+                    required
                 />
-
             </label>
 
         </div>

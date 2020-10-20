@@ -4,6 +4,7 @@ import {Radio} from './Radio'
 import {Checkbox} from './Checkbox'
 import {Submit} from './Submit'
 import {Input} from './Input'
+import {Summary} from './Summary'
 
 
 export const App = () => {
@@ -17,5 +18,6 @@ export const App = () => {
         <Submit />
       </form>
     </div>
+    
   )
 }

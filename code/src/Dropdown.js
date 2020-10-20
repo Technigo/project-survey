@@ -14,7 +14,9 @@ export const Dropdown = () => {
                 <option value=""> - Select country - </option>
                 <option value="bali">Bali</option>
                 <option value="srilanka">Sri Lanka</option>
-                <option value="mexico">Mexico</option>
+                <option value="madagascar">Madagascar</option>
+                <option value="fiji">Fiji</option>
+                <option value="seychelles">Seychelles</option>
                 
             </select>
         </label>

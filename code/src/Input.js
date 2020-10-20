@@ -6,13 +6,15 @@ export const Input = () => {
     const[mail, setMail] = useState("")
 
     return (
-        <form className="input">
-            <h3>Your email: {mail}</h3>
+        <label className="input">
+            <h3>Your email:</h3>
             <input
                 type="text"
-                onChange={(event => setMail(event.target.value))}
                 value={mail}
+                placeholder="Write your email"
+                onChange={(event => setMail(event.target.value))}
+                required
             />
-        </form>
+        </label>
     )
 } 
