@@ -11,11 +11,13 @@ export const App = () => {
 
   return (
     <>
-      <main className="landing-page">
-        <h1>Vacation Plans Generator</h1>
-        <h2>Your Corona-friendly digital getaway!</h2>
-        
-        <button onClick={checkInput()}><a href="#first-question">Get Started!</a></button>
+      <main>
+        <section className="landing-page-container">
+          <h1 className="vacation-title" tabIndex="0">Vacation Plans Generator</h1>
+          <h2 className="vacation-slogan" tabIndex="0">Your Corona-friendly<br></br>digital getaway!</h2>          
+          <button className="start-button" onClick={checkInput()} tabindex="-1"><a href="#first-question">START</a></button>
+          <img src="assets/landing-page-img.png" className="img-landing" alt="Vacation planner"/>
+        </section>
         {(visible === true) && <FirstQuestion />}
       </main>
     </>

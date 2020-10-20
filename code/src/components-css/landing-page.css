@@ -1,4 +1,60 @@
-.landing-page {
+.landing-page-container {
     height: 100vh;
-    background-color: bisque;
+    position: relative;
+}
+
+.img-landing {
+    width: 50%;
+    position: absolute;
+    left: 700px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.vacation-title {
+    position: absolute;
+    top: 250px;
+    left: 350px;
+    z-index: 2;
+    font-family: 'Fredoka One', cursive;
+    font-size: 60px;
+    color: #b07653;
+    background-color: white;
+    padding: 5px 23px;
+}
+
+.vacation-slogan {
+    position: absolute;
+    top: 375px;
+    left: 330px;
+    text-align: right;
+    font-size: 35px;
+    color: #54433A;
+}
+
+.start-button {
+    position: absolute;
+    top: 540px;
+    left: 450px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    background-color: #f3bc0f;
+    border: none;
+    padding: 15px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 6px 6px 4px #DFE0DF;
+}
+
+.start-button:active {
+    transform: translate(8px, 8px);
+    border: none;
+    box-shadow: none;
+    outline: none;
+  }
+
+.landing-page-container a {
+    text-decoration: none;
+    color: white;
 }
