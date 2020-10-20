@@ -6,7 +6,7 @@ export const App = () => {
   return (
     <div>
       
-      <Form />
+      <Form/>
       
     </div>
   )

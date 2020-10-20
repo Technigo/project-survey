@@ -5,33 +5,43 @@ import { Text } from 'Text'
 import { Submit } from 'Submit'
 
 
-export const Form = (  ) => {
+export const Form = () => {
 
-    const [formInput, fetchFormInput] = useState("");
+    const [dropInput, fetchDropInput] = useState("");
+    const [radioInput, fetchRadioInput] = useState("");
+    const [textInput, fetchTextInput] = useState("");
     const [submit, setSubmit] = useState(false);
 
-    const handleFormInput = (data) => {
+    const handleDropInput = (data) => {
+        fetchDropInput(data)
+    }
 
-        fetchFormInput(formInput + data)
+    const handleTextInput = (data) => {
+        fetchTextInput(data)
+    }
 
+    const handleRadioInput = (data) => {
+        fetchRadioInput(data)
     }
 
     return <div>
-    
-    {submit === false ? (
-        <form onSubmit={(e) => {e.preventDefault();setSubmit(true)}} >
-            <Dropdown handleFormInput={handleFormInput}/>
-            <Radio handleFormInput={handleFormInput}/>
-            <Text handleFormInput={handleFormInput}/>
-            <Submit/>
-      
-     
-    </form>
-    ) : (<div>
-        <p>{formInput}</p>
-        
+
+        {submit === false ? (
+            <form onSubmit={(e) => { e.preventDefault(); setSubmit(true) }} >
+                <Dropdown handleDropInput={handleDropInput} />
+                <Radio handleRadioInput={handleRadioInput} />
+                <Text handleTextInput={handleTextInput} textInput={textInput} />
+                <Submit />
+
+
+            </form>
+        ) : (<div>
+            <p>{dropInput}</p>
+            <p>{textInput}</p>
+            <p>{radioInput}</p>
+
         </div>)
-    }
+        }
 
     </div>
 }
