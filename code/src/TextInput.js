@@ -20,8 +20,10 @@ export const TextInput = (props) => {
   }
 
   const validateInput = (value) => {
+    
+   
     const regex = /\d/g;
-    if(value.length > 1 && value.length !== "" && !regex.test(value))
+    if(value.length > 1 && value !== "" && !regex.test(value))
     {
        setIsValidated(true);
        return true;
@@ -43,13 +45,12 @@ export const TextInput = (props) => {
         value={name}
         autoFocus
         required
-        onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault(); }}
+        onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault()}}
       ></input>
       {!isValid && isValidated && <InvalidInput />}
       {isValid &&
       <button className="next-button"
         type="button"
-        //onClick={(event) => clickNextButton(event.target.value)}
         onClick={(event) => clickNextButton(name)}
       >
        &#x3e;&#x3e;

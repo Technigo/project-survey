@@ -30,7 +30,7 @@ export const Select = (props) => {
         <option value="">Food Preference</option>
 
         {props.options.map((food) =>
-        <option value={food}>{food}</option>
+        <option key={food} value={food}>{food}</option>
         ) }
       </select> 
 

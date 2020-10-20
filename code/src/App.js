@@ -33,7 +33,7 @@ const submitForm = (event) => {
   setSubmitted(true);
   setWindow();
 }
-
+  
 // eslint-disable-next-line
 const renderQuestions = questions.map((question,index) => {
     console.log("in renderForm, index is",index,"currentWin is:",currentWindow);
@@ -41,6 +41,7 @@ const renderQuestions = questions.map((question,index) => {
     if(index === currentWindow && question.inputType === "TextInput"){
       return(
         <TextInput 
+        key="text"
         onChange={handleAnswer}
         text={question.questionText}
       />
@@ -50,6 +51,7 @@ const renderQuestions = questions.map((question,index) => {
     if(index === currentWindow && question.inputType === "Radio"){
       return(
         <RadioGroup
+        key="radio"
         onChange={handleAnswer}
         text={question.questionText}
         options={question.options}
@@ -60,6 +62,7 @@ const renderQuestions = questions.map((question,index) => {
     if(index === currentWindow && question.inputType === "Select"){
       return(
         <Select 
+        key="select"
         onChange ={handleAnswer}
         text={question.questionText}
         options={question.options}
@@ -70,6 +73,7 @@ const renderQuestions = questions.map((question,index) => {
     if(index === currentWindow && question.inputType === "Color"){
       return(
         <Colorpicker
+        key="color"
         onChange={handleAnswer}
         text={question.questionText}
       /> 

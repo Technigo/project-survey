@@ -8,7 +8,7 @@ export const ProgressBar = (props) =>{
           id="progress" 
           value={props.progress} 
           max="4"></progress>
-          <output name="progress-output" for="progress">{props.progress}/4</output>
+          <output name="progress-output" >{props.progress}/4</output>
     </div>
     
     
