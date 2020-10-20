@@ -1,19 +1,47 @@
 import React, {useState} from 'react';
 
-export const Select = () => {
-  const [location, setLocation] = useState("");
+export const Select = (props) => {
+  const [foodType, setFoodType] = useState("");
+  const [isValid, setIsValid] = useState(false);
+
+  const handleChange = (event) =>{
+    setIsValid(validateInput(event.target.value));
+    setFoodType(event.target.value);
+  }
+
+  const clickNextButton = (value) =>{
+    if(validateInput(value)){
+      props.onChange(foodType);
+    }
+  }
+
+  const validateInput = (value) => {
+    if(value !== "") return true;
+    else return false;
+  }
 
   return (
-    <div className="select-container">
+    <div className="question-container">
+      <label className="question-label">{props.text}</label>
       <select
-        onChange={(event) => setLocation(event.target.value)}
-        value={location}
+        onChange={handleChange}
+        value={foodType}
       >
-        <option value="">Select Location</option>
-        <option value="stockholm">Stockholm</option>
-        <option value="madrid">Madrid</option>
-        <option value="oslo">Oslo</option>
+        <option value="">Food Preference</option>
+
+        {props.options.map((food) =>
+        <option value={food}>{food}</option>
+        ) }
       </select> 
+
+      {isValid &&
+        <button className="next-button"
+          type="button"
+          onClick={(event) => clickNextButton(foodType)}
+        >
+          &#x3e;&#x3e;
+        </button>
+}
       </div>
   );
 };

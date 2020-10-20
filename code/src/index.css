@@ -1,13 +1,215 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	box-sizing: border-box;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+body {
+	margin: 0;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-image: url("/images/lights.jpg");
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	backdrop-filter: brightness(0.4);
+	font-family: "Karla", sans-serif;
+}
+
+.root {
+	display: flex;
+	align-items: center;
+}
+
+.app-container {
+	display: flex;
+	width: 80vw;
+	max-width: 310px;
+	height: 100vh;
+	align-items: center;
+	justify-content: center;
+}
+
+.welcome-header,
+.summary-header {
+	font-size: 25px;
+	font-family: "Rubik", sans-serif;
+	margin-bottom: 50px;
+}
+.question-container {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	width: 100%;
+	min-height: 250px;
+	align-self: flex-start;
+}
+
+.progress-bar {
+	align-self: flex-end;
+	display: flex;
+	align-items: center;
+}
+
+.progress {
+	height: 25px;
+	width: 282px;
+	border-radius: 0;
+	border-bottom: 1px solid #a9a9a9;
+}
+progress::-webkit-progress-bar {
+	background-color: transparent;
+}
+progress::-webkit-progress-value {
+	background-color: #fff;
+	opacity: 0.5;
+}
+output {
+	font-size: 12px;
+	margin-left: 5px;
+}
+.question-label {
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+input[type="text"] {
+	height: 50px;
+	width: 300px;
+	margin-top: 20px;
+	background-color: transparent;
+	box-shadow: none;
+	border: none;
+	border-bottom: 1px solid white;
+	color: #fff;
+	font-size: 20px;
+	padding-bottom: 0;
+	align-self: center;
+	font-family: "Karla", sans-serif;
+}
+
+.invalid-input {
+	font-size: 14px;
+	color: orange;
+}
+.next-button,
+.submit-button {
+	height: 40px;
+	font-family: "Karla", sans-serif;
+	width: 300px;
+	background: transparent;
+	border: 1px solid white;
+	color: #fff;
+	/* border-radius: 20px; */
+	font-size: 16px;
+	margin-top: 20px;
+	align-self: center;
+}
+
+.submit-button {
+	height: 80px;
+	margin-bottom: 20px;
+	animation: bounce 2s infinite;
+}
+
+.next-button:hover,
+.submit-button:hover {
+	background-color: #006362;
+}
+form {
+	background-color: transparent;
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+	justify-content: center;
+	min-height: 240px;
+	width: 100vw;
+}
+
+.form-welcome-message {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+}
+
+.option-label {
+	font-size: 20px;
+	margin: 5px 0;
+}
+
+select {
+	height: 45px;
+	font-size: 18px;
+	width: 300px;
+	background: transparent;
+	color: white;
+	font-family: "Karla", sans-serif;
+	align-self: center;
+}
+
+select > option {
+	font-family: "Karla", sans-serif;
+	color: #333;
+	font-size: 14px;
+}
+
+input[type="color"] {
+	-webkit-appearance: none;
+	width: 300px;
+	border: none;
+	height: 40px;
+	margin-bottom: 20px;
+	align-self: center;
+	cursor: pointer;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+
+.summary-text,
+p {
+	font-size: 20px;
+}
+
+@keyframes bounce {
+	20%,
+	53%,
+	80%,
+	0%,
+	100% {
+		-webkit-animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+		-webkit-transform: translate3d(0, 0, 0);
+		transform: translate3d(0, 0, 0);
+	}
+	40%,
+	43% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		-webkit-transform: translate3d(0, -30px, 0);
+		transform: translate3d(0, -30px, 0);
+	}
+	70% {
+		-webkit-animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		animation-timing-function: cubic-bezier(0.755, 0.05, 0.855, 0.06);
+		-webkit-transform: translate3d(0, -15px, 0);
+		transform: translate3d(0, -15px, 0);
+	}
+	90% {
+		-webkit-transform: translate3d(0, -4px, 0);
+		transform: translate3d(0, -4px, 0);
+	}
+}
+
+.chosen-color {
+	position: relative;
+	width: 100px;
+	height: 90px;
+	margin-top: 10px;
 }

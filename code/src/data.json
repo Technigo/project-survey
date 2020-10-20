@@ -1,0 +1,27 @@
+{
+  "eventTitle": "Birthday Party!",
+  "location": "Stockholm",
+  "date": "27/11 2020",
+  "questions": [
+    {
+      "questionText": "For starters, what is your name?",
+      "inputType": "TextInput",
+      "options": []
+    },
+    {
+      "questionText": "This is an open house party! Pick what time you expect to arrive.",
+      "inputType": "Radio",
+      "options": ["15-16", "17-18", "After 18"]
+    },
+    {
+      "questionText": "What food do you prefer?",
+      "inputType": "Select",
+      "options": ["Hamburgers", "Pizza", "Tacos", "Salad"]
+    },
+    {
+      "questionText": "You will receive a small party gift - pick your favourite color!",
+      "inputType": "Color",
+      "options": []
+    }
+  ]
+}
