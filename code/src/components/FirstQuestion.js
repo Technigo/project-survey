@@ -12,6 +12,7 @@ export const FirstQuestion = () => {
     const [ageGroup, setAgeGroup] = useState('');
 
     return (
+        <div className='first-question'>
         <form>
             <h2>How old are you?</h2>
             Age:
@@ -27,5 +28,7 @@ export const FirstQuestion = () => {
             </label>
             ))};
         </form>
+        </div>
         );
         };
+        

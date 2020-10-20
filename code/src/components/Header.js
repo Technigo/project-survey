@@ -5,6 +5,7 @@ export const Header = () => {
         <header className='survey-header'>
             <h1>Survey Technigo students</h1>
             <p>We wanna know more about your background and why you want to become a frontend developer! Can you spare 3 minutes?</p>
+            <button className='yes-button'>Yes!</button>
         </header>
     );
 };

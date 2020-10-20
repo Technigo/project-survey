@@ -7,9 +7,40 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./pawel-czerwinski-3-bDL0iRcbI-unsplash.jpg);
   background-size: cover;
+  text-align: center;
+  margin: 30px;
+  height: 800px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.survey-header {
+ display: flex;
+ flex-direction: column;
+}
+.yes-button {
+  width: 50px;
+  height: 30px;
+  align-items: center;
+}
+
+.first-question {
+display: none;
+}
+
+.second-question {
+  display: none;
+}
+
+.third-question {
+  display: none;
+}
+
+.submit-button {
+  display: none;
+  height: 30px;
+  width: 80px
 }

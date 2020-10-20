@@ -6,6 +6,7 @@ export const ThirdQuestion = () => {
 
 
 return (
+    <div className='third-question'>
     <form>
         <h2>What was the main reason you wanted to to start at the Technigo bootcamp and become a frontend developer?</h2>
         <input
@@ -15,6 +16,7 @@ return (
         />
 
     </form>
+    </div>
     );
 
 }; 

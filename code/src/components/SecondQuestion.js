@@ -5,9 +5,11 @@ export const SecondQuestion = () => {
     const [location, setLocation] = useState('');
 
     return (
+        <div className='second-question'>
         <form>
             <h2>Where are you from? (as in where did you grow up)</h2>
-            <select
+            <label>
+                <select
             onChange={event => setLocation(event.target.value)}
             value={location}
             >
@@ -20,6 +22,8 @@ export const SecondQuestion = () => {
             <option value='asia'>Asia</option>
             <option value='australia'>Australia</option>
             </select>
+                </label>
         </form>
+        </div>
     );
 };
