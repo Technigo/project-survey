@@ -2,13 +2,32 @@ body {
     background-color: blueviolet;
 }
 
+h1 {
+    font-size: 30px;
+    
+   
+}
+
 .App {
     display: flex;
     justify-content: center;
+    align-items: center;
     background-color: chartreuse;
 }
 
-
-h1 {
-    font-size: 30px;
+.name-box, .password-box, .age-box {
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
+
+button {
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+ 
