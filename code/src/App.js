@@ -1,10 +1,12 @@
 import React from 'react'
-import "./app.css"
+
+import Header from "./components/Header"
 import Question1 from "./components/Question1"
 import Question2 from "./components/Question2"
 import Question3 from "./components/Question3"
 import Submit from "./components/Submit"
-import Header from "./components/Header"
+
+import "./app.css"
 
 const dropDownOptionsArr = ["0-10 km", "20-50 km", "50+ km"];
 

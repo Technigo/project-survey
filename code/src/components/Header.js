@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Header = (props) => {
+const Header = (props) => {
   return (
     <section className="section-container">
       <h1>{props.title}</h1>

@@ -1,24 +1,30 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
-const dropDownOptionsArr = ["0-10 km", "20-50 km", "50+ km"];
+const dropDownOptionsArray = ["0-10 km", "20-50 km", "50+ km"];
 
 // a drop-down menu
-export const Question2 = (props) => {
-  //function that displays the menu options
+const Question2 = (props) => {
+  //state hook [variableThatHoldsTheValue, functionThatSetsTheValueOfTheVariable/theAccessor] = useState(defaultValue);
+  const [isDropDownOpen, setIsDropDownOpen] = useState(false);
+  //assign a value "true" to variable isDropDownOpen
   const handleDropDownMenu = () => {
-    return true;
-  }
+    // when the new value is set, React rerenders - aftrerwards the value is updated
+    return setIsDropDownOpen(true);
+  };
+
+  console.log(isDropDownOpen);
+
   return (
     <section className="section-container">
-      {/* add: onClick handler event drop down menu is shown - MAKE THIS WORK! */}
+      {/* add: onClick handler event drop down menu is shown - MAKE THIS WORK! conditional rendering */}
       <button type="button" onClick={() => handleDropDownMenu()}>{props.question}</button>
-      {handleDropDownMenu
+      {isDropDownOpen
         ? <ul>
           {/* loop over an array with options and display them as a list */}
-          {dropDownOptionsArr.map(option => <li>{option}</li>)}
+          {dropDownOptionsArray.map(option => <li>{option}</li>)}
         </ul>
-        : "Oops, sth went wrong!"
+        : null
       }
     </section>
   )

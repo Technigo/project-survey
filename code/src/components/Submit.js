@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 
 // onClick hide the previous content and display summary of answers
 export const Submit = (props) => {
@@ -8,7 +8,6 @@ export const Submit = (props) => {
       <button type="submit" autofocus>{props.text}</button>
     </section>
   )
-
 }
 
 export default Submit;
