@@ -1,9 +1,13 @@
 import React from 'react'
+import { Header } from 'components/Header'
+import { FirstQuestion } from './components/FirstQuestion'
+
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Header />
+      <FirstQuestion />
     </div>
-  )
-}
+  );
+};

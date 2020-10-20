@@ -5,6 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./pawel-czerwinski-3-bDL0iRcbI-unsplash.jpg);
+  background-size: cover;
 }
 
 code {
