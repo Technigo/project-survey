@@ -17,7 +17,7 @@ export const SecondQuestion = (props) => {
         <img className="first-question-img" src="assets/question2-img.png" alt=""/>
         <div className="number-select-text">
             <label key={numberOption}>
-            <p>Pick your favorite number (between 5 and 10):</p>
+            <p>Favorite number (between 5 and 10):</p>
               <input
                   className="number-input"
                   type="number"

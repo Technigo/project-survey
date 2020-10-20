@@ -4,7 +4,7 @@
     padding-top: 50px;
 }
 
-.first-question, .second-question {
+.first-question, .second-question, .third-question {
     border: 6px solid #b07653;
     display: flex;
     width: 40%;
@@ -13,14 +13,14 @@
     background-color: white;
 }
 
-.radio-buttons-text {
+.radio-buttons-text, .day-select-text {
     display: flex;
     flex-direction: column;
     margin: 0 auto;
     align-content: center;
 }
 
-.radio-buttons-text p, .number-select-text p {
+.radio-buttons-text p, .number-select-text p, .day-select-text label{
     font-size: 27px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -44,11 +44,12 @@
     object-fit: cover;
 }
 
-label {
+label, select {
     font-size: 20px;
 }
 
-.second-question {
+/*Second question additinal styling*/
+.second-question, .third-question {
     margin-top: 50px;
 }
 
@@ -62,4 +63,27 @@ label {
     margin: 0 auto;
     align-content: center;
     padding-left: 15px;
+}
+
+/* Third question styling */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.last-button {
+    width: 130px;
+    margin-top: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 17px;
+    font-weight: bold;
+    background-color: #f3bc0f;
+    border: none;
+    padding: 7px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.day-select-text {
+    padding-top: 45px;
 }
