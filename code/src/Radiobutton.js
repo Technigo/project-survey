@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const group = ["0-18", "19-30", "30+"];
 
@@ -14,6 +14,7 @@ export const Radiobutton = (props) => {
                    value={group}
                    onChange={event => setAgeGroup(event.target.value)}
                    checked={ageGroup === group}
+                   required
                    />
                    {group}
                </label>

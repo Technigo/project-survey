@@ -2,14 +2,30 @@ import { Nameinput } from 'Nameinput.js'
 import React, { useState } from 'react'
 import { Dropdown } from "./Dropdown.js"
 import { Radiobutton } from "./Radiobutton.js"
+import { Checkbox } from "./Checkbox.js"
 import { Submit } from "./Submit.js"
+
 import { Summary } from "./Summary.js" 
+
+import './index.css'
 
 export const App = () => {
   const [name, setName] = useState('');
   const [location, setLocation ] = useState('Stockholm');
   const [ageGroup, setAgeGroup] = useState('');
   const [showSummary, setShowSummary] = useState(false);
+  const [section, setSection] = useState('nameInput');
+  const [contactme, setContactme] = useState([]);
+
+ const handleContactmeChange = contactmeValue => {
+        contactme.includes(contactmeValue)
+            ? setContactme( contactme.filter(item => item !== contactmeValue) )
+            : setContactme( [...contactme, contactmeValue] );
+    };
+
+  // const handleNameChange = newName => {
+  //   setName(newName);
+  // }
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -17,33 +33,114 @@ export const App = () => {
   } 
 
   return (
-<div>
+
+<>
       <form
       action=""
       onSubmit={handleSubmit}>
 
-    <section>
-      <div className="nameinput">
-        <Nameinput name={name} setName={setName} id={Nameinput} />
-      </div>
+    {section === 'nameInput' && (
+      <>
+        
+        <Nameinput 
+        name={name} 
+        setName={setName} 
+        id="inputName" 
+        setNameChange={setName}
+        required
+        />
+        <section className="button-container">
+          <button
+          type="button"
+          onClick={event => {setSection(event.target.value)}}
+          value="">
+            Back
+          </button>
+          
+          <button 
+          type="button" 
+          onClick={event => {setSection(event.target.value)}} 
+          value='dropdown'>
+            Next
+          </button>
+          {console.log(name)}
+      </section>
+      </>
+      )}
 
-      <div className="dropdown">
+
+      {section === 'dropdown' && (
+      <>
         <Dropdown location={location} setLocation={setLocation} />
-      </div>
+      
+        <section className="button-container">
+        <button
+          type="button"
+          onClick={event => {setSection(event.target.value)}}
+          value="nameInput">
+            Back
+          </button>
 
-      <div className="radiobutton">
-        <Radiobutton ageGroup={ageGroup} setAgeGroup={setAgeGroup} label="age" group="0-20"  group="21-30" group="31-100" />
-      </div>
+        <button 
+        type="button" 
+        onClick={event => {setSection(event.target.value)}} 
+        value='checkbox'>
+          Next
+        </button>
+      </section>
+      </>
+      )}
 
-      <div className="submit">
-        <Submit text="Submit!" onClick={event => (event.target.value)}/>
-        </div>
+
+       {section === 'checkbox' && (
+        <>
+        <Checkbox
+          contactme={contactme}
+          onContactmeChange={handleContactmeChange}
+          />
+
+        <section className="button-container">
+        <button
+          type="button"
+          onClick={event => {setSection(event.target.value)}}
+          value="dropdown">
+            Back
+          </button>
+
+          <button 
+          type="button" 
+          onClick={event => {setSection(event.target.value)}} 
+          value='radiobutton'>
+            Next
+          </button>
+          
         </section>
-        </form>
+        </>
+      )}  
+
+      {section === 'radiobutton' && (
+        <>
+      <section className="button-container">
+      <button
+          type="button"
+          onClick={event => {setSection(event.target.value)}}
+          value="checkbox">
+            Back
+          </button>
+
+        <Radiobutton ageGroup={ageGroup} setAgeGroup={setAgeGroup} label="age"/>
+        <div className="submit">
+        <Submit text="Submit!" onClick={event => (event.target.value) }/>
+        {console.log(ageGroup)}
+        </div>
+      </section>
+      </>
+      )}
+  
+  </form>
   
 
   {showSummary && <Summary name={name} location={location} ageGroup={ageGroup}/>} 
-      </div>
-    
-  );
-}
+
+  </>
+  )}
