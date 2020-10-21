@@ -4,18 +4,13 @@ import 'components-css/questions-container.css';
 
 const destinationOptions = ['City', 'Beach', 'Forest'];
 
-export const FirstQuestion = () => {
-  const [destinationOption, setDestinationOption] = useState();
+export const FirstQuestion = ({ handleDestination, destinationChoice }) => {
   const [visible, setVisible] = useState(false);
 
   const checkInput = () => {
-    if (destinationOption) {
+    if (destinationChoice) {
       setVisible(true);
     }
-  };
-
-  const onDestinationChange = (newDestination) => {
-    setDestinationOption(newDestination);
   };
 
   return (
@@ -31,8 +26,8 @@ export const FirstQuestion = () => {
                 name="color-options"
                 type="radio"
                 value={destination}
-                onChange={(event) => onDestinationChange(event.target.value)}
-                checked={destinationOption === destination}
+                onChange={(event) => handleDestination(event.target.value)}
+                checked={destinationChoice === destination}
                 required />
               {destination}
             </label>
@@ -40,7 +35,7 @@ export const FirstQuestion = () => {
           <button className="first-button" onClick={checkInput}>NEXT</button>
         </div>
       </form>
-      {(visible === true) && <SecondQuestion chosenDestination={destinationOption} />}
+      {(visible === true) && <SecondQuestion chosenDestination={destinationChoice} />}
     </section>
   );
 };
