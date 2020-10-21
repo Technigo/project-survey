@@ -1,7 +1,7 @@
 .form__wrapper {
   text-align: center;
   margin: auto;
-  transform: translateY(calc((100vh - 522px) / 2 / 2));
+  /* transform: translateY(calc((100vh - 522px) / 2 / 2)); */
 }
 
 .question__wrapper {
@@ -11,6 +11,7 @@
 .form__question {
   max-width: 60vw;
   margin: auto;
+  display: block;
 }
 
 .form__input {
@@ -28,15 +29,43 @@
 .form__input:focus {
   border-bottom: 1px solid #fff;
 }
-.form__radiobutton__wrapper {
-}
 
-.form__radiobutton,
-.form__checkboxes {
+.form__radiobuttons,
+.form__submit-button,
+.all-labels__wrapper {
   /* display: block; */
   margin: 30px auto;
 }
 
 .form__radiobutton__input {
   margin: 10px;
+}
+
+.form__checkbox {
+  margin: 10px 25px 10px 5px;
+}
+
+.form__dropdown {
+  display: block;
+  margin: 30px auto;
+  width: 200px;
+}
+
+.form__submit-button,
+.form__next-button {
+  padding: 5px 20px;
+  background: none;
+  border: 1px #000 solid;
+}
+
+.form__submit-button:hover,
+.form__next-button:hover {
+  cursor: pointer;
+  border: 1px #fff solid;
+  color: #fff;
+}
+
+.form__submit-button:active,
+.form__next-button:active {
+  border: 1px #fff solid;
 }

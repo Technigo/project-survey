@@ -1,73 +1,96 @@
 import React, { useState } from 'react';
 import 'styles/form.css';
+import Question1 from 'components/Question1.js';
+import Question2 from 'components/Question2.js';
+import Question3 from 'components/Question3.js';
+import Question4 from 'components/Question4.js';
+import Question5 from 'components/Question5.js';
 
 const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Secret!'];
+const developingParts = [
+  'Vanilla JS',
+  'React',
+  'Node JS',
+  'CSS',
+  'HTML5',
+  'Sass',
+];
 
 const Form = () => {
+  const [section, setSection] = useState('firstQuestion');
   const [name, setName] = useState('');
   const [ageGroup, setAgeGroup] = useState();
-  const [skills, setSkills] = useState();
+  const [skills, setSkills] = useState([]);
+  const [suggestions, setSuggestions] = useState('');
+  const [title, setTitle] = useState('');
 
   return (
     <section className="form__wrapper">
       <form
         onSubmit={(event) => {
           event.preventDefault();
+          console.log(
+            `Name: ${name}, Age: ${ageGroup}, Skills: ${skills} Suggestions: ${suggestions} Title: ${title}`
+          );
         }}
       >
-        {/* Question 1 */}
-        <article className="form__question__1 question__wrapper">
-          <label>
-            <p className="form__question">Hello there, what's your name?</p>
-            <input
-              id="name"
-              type="text"
-              value={name}
-              onChange={(event) => setName(event.target.value)}
-              className="form__input"
-              placeholder="Type your name here please.."
-              required
+        {section === 'firstQuestion' && (
+          <div>
+            <Question1
+              name={name}
+              setName={setName}
+              section={section}
+              setSection={setSection}
             />
-          </label>
-        </article>
+          </div>
+        )}
 
-        {/* Question 2 */}
-        <article className="form__question__2 question__wrapper">
-          <p className="form__question">And may I ask how old are you?</p>
-          {ageGroups.map((group) => (
-            <label key={group}>
-              <input
-                type="radio"
-                value={group}
-                onChange={(event) => setAgeGroup(event.target.value)}
-                checked={ageGroup === group}
-                className="form__radiobutton"
-              />
-              <span className="form__radiobutton__input">{group}</span>
-            </label>
-          ))}
-        </article>
-
-        {/* Question 3 */}
-        <article className="form__question__3 question__wrapper">
-          <p className="form__question">
-            Which parts of developing would you say is the most important to a
-            front-end developer? (Pick 3)
-          </p>
-          <label>
-            Vanilla JS
-            <input
-              type="checkbox"
-              value="Vanilla-JS"
-              checked={skills}
-              onChange={(event) => setSkills(event.target.value)}
-              className="form__checkboxes"
+        {section === 'secondQuestion' && (
+          <div>
+            <Question2
+              ageGroups={ageGroups}
+              ageGroup={ageGroup}
+              setAgeGroup={setAgeGroup}
+              section={section}
+              setSection={setSection}
             />
-          </label>
-        </article>
+          </div>
+        )}
+
+        {section === 'thirdQuestion' && (
+          <div>
+            <Question3
+              developingParts={developingParts}
+              skills={skills}
+              setSkills={setSkills}
+              section={section}
+              setSection={setSection}
+            />
+          </div>
+        )}
+
+        {section === 'fourthQuestion' && (
+          <div>
+            <Question4
+              suggestions={suggestions}
+              setSuggestions={setSuggestions}
+              section={section}
+              setSection={setSection}
+            />
+          </div>
+        )}
+
+        {section === 'fifthQuestion' && (
+          <div>
+            <Question5
+              title={title}
+              setTitle={setTitle}
+              section={section}
+              setSection={setSection}
+            />
+          </div>
+        )}
       </form>
-
-      {name !== '' ? <p>HELLO</p> : ''}
     </section>
   );
 };
