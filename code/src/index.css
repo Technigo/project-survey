@@ -112,27 +112,67 @@ body {
   position: relative;
   top:9px;
   margin-right: 10px;
-  border:1px solid #bbb;
-}
-
-.box input:checked ~ img{
-border: 2px solid red;
 }
 
 
-.box label input:checked ~ span:before {
-content:'';
-width: 25px;
-height: 25px;
-position: absolute;
-background: orange;
-z-index: -1;
-filter: blur(10px;)
+.box label img:hover {
+  outline:none;
+  background:greenyellow;
+  box-shadow: 1px 1px 5px 5px greenyellow  
+}
+
+
+/*Styling of dropdown*/
+.drop-down {
+  height: 100px;
+  position: relative;
+  right:10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
 }
 
 
+.select {
+  margin-top:10px;
+  padding: 10px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size:15px;
+  cursor: pointer;
+  border-radius: 5px;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 150px;
+  width: 70px;
+height: 70px;
+border-radius: 50%;
+background-image: url(./favicon-96x96.png);
+background-size: contain;
+background-color: transparent;
+  
+  border:none;
+}
 
+
+
+.select:focus,
+.select:hover {
+outline:none;
+box-shadow: 1px 1px 20px 20px greenyellow;
+width: 80px;
+height: 80px;
+border-radius: 50%;
+background-image: url(./favicon-96x96.png);
+background-size: contain;
+background-color: greenyellow;
+}
+
+.select option {
+ background: red
+}
 
 /*Style for the word Phrase*/
 h2 {
@@ -292,8 +332,12 @@ box-shadow: 0 10px 30px rgb(117, 64, 10);
 
   input:checked[type="checkbox"]:before {
     left:20px;
+    box-shadow: 1px 1px 10px 5px greenyellow  
   }
   
+  input:hover[type="checkbox"] {
+    box-shadow: 1px 1px 10px 5px greenyellow  
+  }
 
  @media (min-width: 667px) and (max-width: 1024px) {
 

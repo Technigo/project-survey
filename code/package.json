@@ -12,8 +12,9 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3",
-    "react-uikit-button": "^2.0.2"
+    "react-scripts": "^3.4.4",
+    "react-uikit-button": "^2.0.2",
+    "styled-components": "^5.2.0"
   },
   "scripts": {
     "start": "react-scripts start",
