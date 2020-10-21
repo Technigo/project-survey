@@ -1,7 +1,7 @@
 {
   "parser": "babel-eslint",
   "extends": [
-    "airbnb"
+    "react-app"
   ],
   "globals": {
     "document": true,
