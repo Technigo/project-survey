@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './fourthQuestion.css'
 
 export const FourthQuestion = () => {
+    const [activity, setActivity] = useState("")
 
     return (
-        <div className="fourth-question">
+        <section className="fourth-question" id="fourth">
             <form>
-                <h1>Choose one thing from the drop-down menu you'll do for yourself today</h1>
+                <h1>Choose one thing from you'll do for yourself today</h1>
                 <h2>Keep hydrated and acknowledge your thoughts and feelings</h2>
                 <select
-                    //   onChange={}
-                    //   value={}
+                    onChange={event => setActivity(event.target.value)}
+                    value={activity}
                     required
                 >
                     <option value="heart">♡</option>
@@ -22,8 +23,7 @@ export const FourthQuestion = () => {
                     <option value="bath">Take a warm bath</option>
                 </select>
                 <button>Do this for you</button>
-
             </form>
-        </div>
+        </section>
     )
 }

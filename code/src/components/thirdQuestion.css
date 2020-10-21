@@ -28,10 +28,9 @@
 p {
   font-family: "PT Serif", serif;
   font-size: 22px;
-  margin-top: 37px;
-  margin-left: 10px;
+  margin-top: 30px;
+  margin-right: 30px;
 }
 label {
-  margin: 20px;
   cursor: pointer;
 }

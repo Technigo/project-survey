@@ -12,7 +12,7 @@ button {
   font-family: "PT Serif", serif;
   font-size: 20px;
   border-radius: 5px;
-  margin: 50px;
+  margin: 100px;
   display: inline;
   text-transform: uppercase;
   align-items: center;
@@ -20,6 +20,10 @@ button {
   border: 1px solid black;
   padding: 14px 40px;
   cursor: pointer;
+}
+label,
+select {
+  margin-bottom: 100px;
 }
 button:hover {
   -moz-transition: all 0.4s ease-in-out;
@@ -33,14 +37,14 @@ button:hover {
 }
 
 h1 {
-  font-size: 45px;
+  font-size: 40px;
   font-weight: lighter;
   text-align: center;
-  padding: 20px;
 }
 h2 {
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  margin: 10px 10px;
 }
 .container {
   display: flex;
@@ -48,7 +52,7 @@ h2 {
   align-items: center;
 }
 .heart {
-  margin: 5em;
+  margin: 0.7em;
   /* animation: 1.5s infinite beatHeart; */
   /* remember to uncomment this for production */
   width: 20%;
