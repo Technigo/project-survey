@@ -1,3 +1,14 @@
 .fourth-question {
   background-color: #fff6df;
 }
+select {
+  margin-bottom: 80px;
+  margin-top: 50px;
+  padding: 14px 20px;
+  font-family: "PT Serif", serif;
+  font-size: 20px;
+  cursor: pointer;
+}
+form h1 {
+  font-size: 35px;
+}

@@ -71,3 +71,6 @@ h2 {
     transform: scale(1);
   }
 }
+.main {
+  text-align: center;
+}

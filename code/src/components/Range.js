@@ -17,6 +17,7 @@ export class Range extends React.Component {
             <div>
                 <label>
                     <input
+                        className="range"
                         id="typeinp"
                         type="range"
                         min="1" max="10"

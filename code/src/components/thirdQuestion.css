@@ -6,9 +6,25 @@
   justify-content: center;
   cursor: pointer;
 }
+.radio-button {
+  appearance: none;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  top: 10px;
+  height: 30px;
+  width: 30px;
+  background-color: rgba(255, 255, 255, 0.644);
+  border-radius: 15px;
+  border: 1px solid black;
+  cursor: pointer;
+  margin: 10px auto;
+}
 p {
   font-family: "PT Serif", serif;
   font-size: 22px;
+  margin-top: 37px;
+  margin-left: 10px;
 }
 label {
   margin: 20px;
