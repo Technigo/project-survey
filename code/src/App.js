@@ -19,7 +19,7 @@ export const App = () => {
   }
 
   return (
-    <>
+    <> 
       <form action="" onSubmit={handleSubmit}>
 
         {section === 'Intro' && (
@@ -71,8 +71,31 @@ export const App = () => {
           </>
         )}
 
-      </form>
+        {section === 'thirdQuestion' && (
+          <>
+            <Dropdown option={option} setOption={setOption} />
+            <section className="button-container">
+              <button type="button"
+                onClick={event => setSection(event.target.value)}
+                value='secondQuestion'
+              >Back</button>
+              <button type="button"
+                onClick={event => setSection(event.target.value)}
+                value='summary'
+              >Submit</button>
+            </section>
+          </>
+        )}
 
+        {section === 'summary' && (
+          <>
+            <Summary name={name} phoneNumber={phoneNumber} email={email} interest={interest} option={option} />
+            <section className="button-container">
+              <a href="xxxx">Return to first page</a>
+            </section>
+          </>
+        )}
+      </form>
     </>
   )
 }
