@@ -11,6 +11,7 @@ export const SecondQuestion = () => {
                 <input
                     className="better-day"
                     type="text"
+                    placeholder="Be kind to yourself"
                     // value={this.state.value}
                     // onChange={this.handleChange}
                     required
