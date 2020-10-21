@@ -1,13 +1,50 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	margin: 0;
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+		'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	background-color: #1a1c20;
+	color: #f4f4f4;
+}
+
+main {
+	display: flex;
+	flex-flow: column wrap;
+	align-items: center;
+}
+
+h2 {
+	background-color: #f0a500;
+	padding: 10px;
+}
+
+.quiz-box {
+	margin: 25px 50px;
+	padding: 10px 20px;
+	background-color: #cf7500;
+}
+
+.checkbox-container form {
+	display: flex;
+	flex-flow: column;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+		monospace;
+}
+
+@media (min-width: 600px) {
+	.quiz-box {
+		margin: 25px 120px;
+	}
+}
+
+@media (min-width: 768px) {
+	.quiz-box {
+		margin: 25px 250px;
+		max-width: 500px;
+	}
 }
