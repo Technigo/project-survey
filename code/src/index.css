@@ -11,3 +11,52 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+header {
+  text-align: center;
+  background-color: mediumturquoise;
+  padding: 20px;
+}
+
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.QTitle {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.QCard {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+input {
+  color: magenta;
+}
+
+@media only screen and (max-width: 968px) {
+  form {
+    width: 30%;
+  }
+  .QTitle {
+    size: 20%;
+    flex-direction: row;
+  }
+}
+
+@media only screen and (max-width: 420px) {
+  form {
+    width: 80%;
+  }
+}
