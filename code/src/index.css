@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: linear-gradient( rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3) ), url('./assets/sparc-bg.jpg');
+  background-size: cover;
   
 }
 
@@ -90,7 +91,7 @@ h2 {
 }
 
 .form-container {
-  background-color: rgba(228, 239, 255, 0.473);
+  background-color: rgba(190, 219, 252, 0.342);
   margin: auto;
   width: 50%;
   border-radius: 20px;
@@ -98,7 +99,6 @@ h2 {
 
 .summary-container {
   font-size: 40px;
-  background-color: rgba(228, 239, 255, 0.473);
   margin:auto;
   padding: 10px;
   text-align: center;
@@ -145,14 +145,21 @@ input[type=radio], select {
   margin-top:30px;
 }
 
+input:valid {
+  border-color:#81b214;
+}
+
+input:invalid {
+  border-color: red;
+}
 
 button {
-  width: 100%;
+  width: 40%;
   font-size:25px;
   background-color: #A2B7D8;
   color: #2d4059;
   padding: 14px 20px;
-  margin: 8px 0;
+  margin: 8px 190px;
   border: none;
   border-radius: 4px;
   cursor: pointer;

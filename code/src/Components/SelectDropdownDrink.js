@@ -9,13 +9,12 @@ export const SelectDropdownDrink = ({drink, setDrink}) => {
                 onChange={event => setDrink(event.target.value)}
                 value={drink}
                 >
-                <option value="" disabled>Select your favourite magic potion!</option>
-                <option value="Gin & Tonic">Gin & Tonic</option>
-                <option value="Beer">Beer</option>
-                <option value="Wine">Wine</option>
-                <option value="Water">Water! To keep me hydrated!</option>
+                <option value='' disabled>Select your favourite magic potion!</option>
+                <option value='Gin & Tonic'>Gin & Tonic</option>
+                <option value='Beer'>Beer</option>
+                <option value='Wine'>Wine</option>
+                <option value='Water'>Water! To keep me hydrated!</option>
                 </select>
-
             </form>
 
         )}

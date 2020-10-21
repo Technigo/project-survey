@@ -11,30 +11,51 @@ export const Form = () => {
     const [snack, setSnack] = useState ('');
     const [drink, setDrink] = useState ('');
     const [game, setGamesList] = useState('');
-    const [showSummary, setShowSummary] = useState(false);
-    
+    const [section, setSection] = useState('nameQuestion');
 
+    const sectionOrder = [
+        'nameQuestion',
+        'gameQuestion',
+        'drinkQuestion',
+        'snackQuestion',
+        'summary'
+    ];
     
     const handleSubmit = event => {
         event.preventDefault();
-        setShowSummary(true)
+        const nextSectionIndex = sectionOrder.indexOf(section);
+        setSection(sectionOrder[nextSectionIndex+1]);   
       };
 
-return (
+    return (
     <>
-    <h1>VR Games Night!</h1>
-    <section className="form-container">
-        {!showSummary ? (
+    <h1 tabIndex='0'>VR Games Night!</h1>
+    <section className='form-container'>
+        {section !== 'summary' ? (
             <form onSubmit={handleSubmit}>
-                <TextInput name= {name} setName= {setName}/>
-                <RadioButtons game= {game} setGamesList= {setGamesList}/>
-                <SelectDropdownDrink drink= {drink} setDrink= {setDrink}/>
-                <DropdownSnacks snack= {snack} setSnack= {setSnack}/>    
-                <button tabIndex ="0" type="submit" disabled={name === '' }> Count me in! </button>
+                {section === 'nameQuestion' && (
+                    <TextInput name= {name} setName= {setName}/>   
+                )}
+                {section === 'gameQuestion' && (
+                        <RadioButtons game= {game} setGamesList= {setGamesList}/>
+                )}
+                {section === 'drinkQuestion' && (
+                        <SelectDropdownDrink drink= {drink} setDrink= {setDrink}/>
+                )}
+                {section === 'snackQuestion' && (
+                    <DropdownSnacks snack= {snack} setSnack= {setSnack}/>   
+                )} 
+                <button 
+                    tabIndex ='0'
+                    type='submit'
+                    aria-label='Next question'
+                    disabled={name === '' }> Next!
+                </button>
             </form>
             
             ):(
-            <div className="summary-container">
+                
+            <div className='summary-container'>
                 <Summary name={name} game={game} drink={drink} snack={snack} />
             </div>
         )}

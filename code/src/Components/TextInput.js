@@ -5,14 +5,15 @@ export const TextInput = ({name, setName}) => {
 
     return (
         <form>
-            <h2>What's your name?</h2>
+            <h2 tabIndex='0'>What's your name?</h2>
             <form onSubmit ={event => event.preventDefault()}/> 
-            <label tabIndex ="0">
+            <label tabIndex ='0'>
                 <input 
-                    type="text"
+                    type='text' 
+                    id='name'
                     onChange={event => setName(event.target.value)}
                     value={name}
-                    required
+                    required minLength='2'
                 />
 
             </label>
