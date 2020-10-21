@@ -57,7 +57,7 @@ h2 {
 }
 .heart {
   margin: 0.7em;
-  /* animation: 1.5s infinite beatHeart; */
+  animation: 1.5s infinite beatHeart;
   /* remember to uncomment this for production */
   width: 20%;
 }

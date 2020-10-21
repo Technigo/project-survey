@@ -15,6 +15,7 @@ label,
 select {
   font-family: "PT Serif", serif;
   margin-left: 20px;
+  cursor: pointer;
 }
 .radio-button {
   appearance: none;
@@ -31,10 +32,29 @@ select {
   cursor: pointer;
   margin: 10px auto;
 }
+.radio-buttons {
+  display: flex;
+  margin: 0 0 0 25px;
+}
+.radio-button:checked::before {
+  position: absolute;
+  font-size: 24px;
+  left: 2px;
+  top: -3px;
+  content: "\2661";
+  transform: rotate(-1deg);
+  display: block;
+}
+
+.radio-button:hover {
+  background-color: #f0c8c8;
+}
+
+.radio-button:checked {
+  background-color: #baa3a9;
+  color: #fff;
+}
 p {
   margin-right: 30px;
   margin-left: 10px;
-}
-label {
-  cursor: pointer;
 }
