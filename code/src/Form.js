@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { WelcomePage } from './Components/WelcomePage'
 import { TextInput } from './Components/TextInput'
 import { RadioButtons } from './Components/RadioButtons'
 import { SelectDropdownDrink } from './Components/SelectDropdownDrink'
@@ -11,9 +12,10 @@ export const Form = () => {
     const [snack, setSnack] = useState ('');
     const [drink, setDrink] = useState ('');
     const [game, setGamesList] = useState('');
-    const [section, setSection] = useState('nameQuestion');
+    const [section, setSection] = useState('welcomePage');
 
     const sectionOrder = [
+        'welcomePage',
         'nameQuestion',
         'gameQuestion',
         'drinkQuestion',
@@ -33,6 +35,9 @@ export const Form = () => {
     <section className='form-container'>
         {section !== 'summary' ? (
             <form onSubmit={handleSubmit}>
+                {section === 'welcomePage' && (
+                    <WelcomePage/>   
+                )}
                 {section === 'nameQuestion' && (
                     <TextInput name= {name} setName= {setName}/>   
                 )}
@@ -49,7 +54,7 @@ export const Form = () => {
                     tabIndex ='0'
                     type='submit'
                     aria-label='Next question'
-                    disabled={name === '' }> Next!
+                > Next!
                 </button>
             </form>
             
