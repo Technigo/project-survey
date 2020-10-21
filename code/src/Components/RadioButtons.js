@@ -11,9 +11,9 @@ export const RadioButtons = ({game, setGamesList}) => {
 
     return (
         <form>
-        What game do you want to play?
+        <h2>Which game do you want to play?</h2>
         {gamesList.map((games)=> (
-            <label key= {games}>
+            <label tabIndex ="0" key= {games}>
                 <input
                     type="radio"
                     value={games}

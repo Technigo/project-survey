@@ -5,10 +5,9 @@ export const TextInput = ({name, setName}) => {
 
     return (
         <form>
-            <h1>Whoop Whoop It's Game's Night!  </h1>
+            <h2>What's your name?</h2>
             <form onSubmit ={event => event.preventDefault()}/> 
-            <label>
-                What's your name?
+            <label tabIndex ="0">
                 <input 
                     type="text"
                     onChange={event => setName(event.target.value)}

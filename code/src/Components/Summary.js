@@ -4,15 +4,15 @@ const startOver = () => {
     document.location.href = "";
   };
 
-  export const Summary = ({name, setName, snack, setSnack, drink, setDrink, game, setGamesList}) => {
+
+
+  export const Summary = ({name, snack, drink, game,}) => {
       return (
-        <section className="summary-container">
-            <p> Okay {name}, I'll make sure {game} will be loading but while you wait... 
-            there's some {snack} and {drink} waiting for you!</p>
-            <button onClick ={startOver}>Start Over!</button>
-        </section>
-      )
+        <>
+            <h2> Cool {name}! I'll make sure {game} will be loading but while you wait... 
+            there's some {snack} food and {drink} waiting for you!</h2>
 
-
-
-  }
+            <button onClick ={startOver}>Game over! Start Again!</button>
+  
+      </>
+      )};
