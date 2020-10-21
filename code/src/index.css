@@ -5,11 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./pawel-czerwinski-3-bDL0iRcbI-unsplash.jpg);
+  background-image: url(./delila-ziebart-3P6E2y2lyus-unsplash.jpg);
   background-size: cover;
   text-align: center;
   margin: 30px;
   height: 800px;
+  
 }
 
 code {
