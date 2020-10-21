@@ -44,6 +44,7 @@ export const TextInput = (props) => {
         onChange={handleChange}
         value={name}
         autoFocus
+        placeholder = "Type your name here"
         required
         onKeyPress={(e) => { e.key === 'Enter' && e.preventDefault()}}
       ></input>

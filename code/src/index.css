@@ -52,6 +52,7 @@ body {
 	align-self: flex-end;
 	display: flex;
 	align-items: center;
+	margin-top: 40px;
 }
 
 .progress {
@@ -65,14 +66,14 @@ progress::-webkit-progress-bar {
 }
 progress::-webkit-progress-value {
 	background-color: #fff;
-	opacity: 0.5;
+	opacity: 0.3;
 }
 output {
 	font-size: 12px;
 	margin-left: 5px;
 }
 .question-label {
-	font-size: 20px;
+	font-size: 28px;
 	margin-bottom: 20px;
 }
 
@@ -173,6 +174,9 @@ input[type="color"]::-webkit-color-swatch {
 	border: none;
 }
 
+input[type="radio"] {
+	margin-right: 10px;
+}
 .summary-text,
 p {
 	font-size: 20px;
