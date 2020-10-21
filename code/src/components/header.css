@@ -17,11 +17,28 @@ h1 {
   font-size: 120px;
 }
 
+.arrow {
+  margin: 100px auto 0px auto;
+  width: 8%;
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes bounce { 
+  0% { transform: translateY(0); }
+  100% { transform: translateY(-20px); }
+}
+
 /* Mobile */
 @media (max-width: 767px) {
 
   h1 {
-    font-size: 60px;
+    font-size: 80px;
     margin: 0;
+  }
+
+  .arrow {
+    width: 15%;
   }
 }

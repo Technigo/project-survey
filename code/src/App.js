@@ -24,7 +24,6 @@ export const App = () => {
           <Header reflection= {reflection}/>
           <section className="reflection-section" id="reflection">
             <h2>How is your day?</h2>
-            <img className="arrow" src="./assets/arrow.png"></img>
             <select
               value={reflection}
               onChange ={event => setReflection (event.target.value)}
@@ -53,6 +52,7 @@ export const App = () => {
 
           <section className="weather-section" id="weather">
             <h2>Today's weather</h2>
+            <img className="cloud" src="./assets/cloud.jpg" alt="cloud icon"></img>
             <div className="option-container">
             <label className="option">
               Sunny
