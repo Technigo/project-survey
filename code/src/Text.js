@@ -2,11 +2,12 @@ import React from 'react'
 import './Text.css'
 import img from './images/power.jpg'
 
+
 const Text = ({value, setText }) => {
     return (
         <section className="text-wrapper">
             <label htmlFor="power-ranger-text"></label>
-            <h3>Coolest Power Ranger character?</h3>
+            <h2>Coolest Power Ranger character?</h2>
             <img
                 className="power-rangers-image"
                 alt="power rangers"

@@ -21,7 +21,9 @@ export const Input = () => {
 
         return (
             <main className="form-wrapper">
-                <h1> Which is your favourite color based on comic characters? </h1>
+                <div className="h1-wrapper">
+                    <h1> Which is your favourite color based on comic characters? </h1>
+                </div>
                 {!showSummary ? (
                     <form onSubmit={handleSubmit}>
                         <Text

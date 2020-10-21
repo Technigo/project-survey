@@ -6,7 +6,7 @@ const Teletub = props => {
     const {setTeletubbies, teletubbies} = props
     return (
         <div className="teletubbies-wrapper">
-            <h3>Best teletubbies character?</h3>
+            <h2>Best teletubbies character?</h2>
             <img
                 className="tt-image"
                 alt="south park siter of teletubbies"

@@ -13,7 +13,7 @@ const SailorMoon = props => {
     const { setSailorMoon, sailorMoon } = props
     return (
         <div className="sailor-moon-wrapper">
-            <h3>and, Sailor Moon character?</h3>
+            <h2>Sailor Moon character?</h2>
             <img
                 className="sailor-moon-image"
                 alt="visualization of sailor moon group"
