@@ -345,10 +345,22 @@ const App = () => {
                  <div className="drop-down">
                  
                   <select className="select">
-                    <option disabled selected className="things"></option>
-                    <option value="Phone numbers">Phone numbers</option>
-                    <option value="Broken code">Broken code</option>
-                    <option value="Coupons">Coupons</option>
+                                   
+                    <option disabled selected className="things">
+                  </option>       
+                    <option 
+                    value="Phone numbers"
+                    onChange={(event) => setThings(event.target.value)}
+                    checked={things === "phone number"}>
+                    Phone numbers</option>
+                    <option value="Broken code"
+                    onChange={(event) => setThings(event.target.value)}
+                    checked={things === "Broken code"}
+                    >Broken code</option>
+                    <option value="Coupons"
+                     onChange={(event) => setThings(event.target.value)}
+                     checked={things === "Coupons"}
+                     >Coupons</option>
 
                   </select>
                   </div>
@@ -365,23 +377,23 @@ const App = () => {
                 </div>
                 <div class="flip-box-back">
 
-                  <div className="box">
+                 
                     <h2>Things</h2>
                     {thingsTwos.map((group) => (
-                      <label key={group}>
+                      <label key={group} className="control">
                         <br></br> 
-                        <span><img src="https://cdn.icon-icons.com/icons2/1321/PNG/512/if-01-halloweenscarypumpkinlantern01-2660271_86907.png" /></span>
+                      
                         <input
-                          className="pumpkin"
+                          className="control__input visually-hidden"
                           type="radio"
                           value={group}
                           onChange={(event) => setThingsTwo(event.target.value)}
                           checked={thingsTwo === group}
-                        />
+                        /><span class="control__indicator"></span>
                         {group}
                       </label>
                     ))}
-                  </div>
+                
                 </div>
               </div>
             </div>
@@ -405,7 +417,7 @@ const App = () => {
         </div>
 
         <div className="button-container">
-          <button type="submit">submit</button>
+          <button type="submit">Mad Lib</button>
         </div>
       </form>
       <br></br>
@@ -456,12 +468,12 @@ const App = () => {
               value={hustle}
               className="line"
             />  or treating", and he really doesn´t want
-         <input
+         <option
               type="text"
               inChange={event => setThings(event.target.value)}
               value={things}
-              className="line"
-            /> , like last year.
+              className="line"></option>
+              , like last year.
         But if so, he will throw
         <input
               type="text"
