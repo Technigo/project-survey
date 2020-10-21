@@ -3,7 +3,7 @@ import React from "react"
 export const Header = () => {
   return (
     <header>
-      <h1>Répondez s'il vous plaît</h1>
+      <h1>Happy New Old Man</h1>
     </header>
   )
 }

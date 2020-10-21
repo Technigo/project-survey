@@ -8,11 +8,7 @@ export const App = () => {
   return (
     <>
       < Header />
-      < Invitation 
-      date = "31 December"
-      time = "15.00"
-      place = "Gysa"
-      />
+      < Invitation />
       < Osa />
     </>
   )

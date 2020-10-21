@@ -1,3 +1,5 @@
+*, *::before, *::after { box-sizing: border-box; }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +7,74 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: #FFF7EE;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Amatic SC', cursive;
+  background-color: #74583E;
+}
+
+h1 {
+  margin: 0;
+}
+
+.practical-info {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: 'Amatic SC', cursive;
+  line-height: 1.5;
+  background-color: #5E6572;
+}
+
+ul {
+  list-style: none;
+  text-align: center;
+  font-size: 24px;
+  padding: 0;
+}
+
+.osa {
+  display: flex;
+  flex-direction: column;
+}
+
+.respond, .food, .song {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  font-family: 'Amatic SC', cursive;
+  background-color: #74583E;
+}
+
+.name, .drink, .submit{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  padding-right: 20px;
+  padding-left: 20px;
+  font-family: 'Amatic SC', cursive;
+  line-height: 1.5;
+  background-color: #5E6572;
 }
