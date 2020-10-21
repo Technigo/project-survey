@@ -1,14 +1,21 @@
 .second-question {
   background-color: #ddf5f9;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 input[type="text" i] {
-  padding: 40px 60px;
-  font-size: 20px;
+  padding: 5px;
+  width: 300px;
+  height: 30px;
+  font-size: 18px;
   font-style: italic;
   border-radius: 30px;
   text-decoration: none;
   border: 1px solid;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
   background: rgba(255, 255, 255, 0.514);
-  justify-content: center;
+  text-align: left;
 }

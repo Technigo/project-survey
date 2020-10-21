@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './thirdQuestion.css'
 
 export const ThirdQuestion = () => {
+    const [sleep, setSleep] = useState("")
 
     return (
         <div className="third-question">
@@ -12,33 +13,34 @@ export const ThirdQuestion = () => {
                     <label>
                         <input
                             type="radio"
-                            value="0-5hrs"
+                            value="0-5 hours"
                             className="radio-button"
-                        //   onChange={}
-                        //   checked={}
+                            onChange={event => setSleep(event.target.value)}
+                            checked={sleep === "0-5 hours"}
                         />
                         <p>0-5 hours</p>
                     </label>
                     <label>
                         <input
                             type="radio"
-                            value="5-8hrs"
+                            value="5-8 hours"
                             className="radio-button"
-                        //   onChange={}
-                        //   checked={}
+                            onChange={event => setSleep(event.target.value)}
+                            checked={sleep === "5-8 hours"}
                         />
                         <p>5-8 hours</p>
                     </label>
                     <label>
                         <input
                             type="radio"
-                            value=">8hrs"
+                            value="more than 8 hours"
                             className="radio-button"
-                        //   onChange={}
-                        //   checked={}
+                            onChange={event => setSleep(event.target.value)}
+                            checked={sleep === "more than 8 hours"}
                         />
                         <p> more than 8 hours</p>
                     </label>
+                    {/* {sleep === "0-5 hours" && <p>Remember that proper sleep rejuvenates the soul.</p>} */}
                 </div>
                 <button>continue</button>
             </form>
