@@ -15,14 +15,7 @@ code {
     monospace;
 }
 
-:root {
-  /* Base font size */
-  font-size: 10px;   
-  
-  /* Set neon color */
-  --neon-text-color: rgb(255, 0, 0);
-  --neon-border-color: rgb(20, 169, 255);
-}
+/* header and header animation  */
 
 h1 { 
   font-size: 75px;
@@ -51,6 +44,15 @@ h1::selection {
 
 h1:focus {
   outline: none;
+}
+
+:root {
+  /* Base font size */
+  font-size: 10px;   
+  
+  /* Set neon color */
+  --neon-text-color: rgb(255, 0, 0);
+  --neon-border-color: rgb(20, 169, 255);
 }
 
 /* Animate neon flicker */
@@ -116,6 +118,12 @@ h2 {
   border: none;
   border-radius: 4px;
   cursor: pointer;
+}
+
+.summary-image {
+  width: 500px;
+  height: 300px;
+  margin: 30px;
 }
 
 form {

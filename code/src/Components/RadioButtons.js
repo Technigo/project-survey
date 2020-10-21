@@ -4,8 +4,9 @@ const gamesList = [
     'Beat Saber',
     'SPARC',
     'Until you Fall',
-    'Pavlov',
-    'No Man\'s Sky'
+    'Pistol Whip',
+    'No Man\'s Sky',
+    'Half-Life: Alyx'
 ]
 export const RadioButtons = ({game, setGamesList}) => {
 
