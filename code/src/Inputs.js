@@ -7,7 +7,7 @@ import Summary from './Summary'
 
 export const Input = () => {
     const [name, setName] = useState('') // text 
-    const [question, setQuestion] = useState('') // select
+    const [teletubbies, setTeletubbies] = useState('') // select
     const [questionGroup, setQuestionGroup] = useState("") // radiobuttons
     const [showSummary, setShowSummary] = useState(false)
 
@@ -18,7 +18,7 @@ export const Input = () => {
 
         return (
             <main>
-                <h1> Title for my form</h1>
+                <h1> Which is your favourite color based on comic characters? </h1>
                 {!showSummary ? (
                     <form onSubmit={handleSubmit}>
                         <Text
@@ -27,15 +27,15 @@ export const Input = () => {
                             setText={setName}
                             value={name}
                         />
-                        < Select setQuestion={setQuestion} question={question} />
+                        < Select setTeletubbies={setTeletubbies} teletubbies={teletubbies} />
                         < Radio setQuestionGroup={setQuestionGroup} questionGroup={questionGroup} />
-                        <button disabled={!name || !question || !questionGroup} type="submit"> I'M DONE </button>
+                        <button disabled={!name || !teletubbies || !questionGroup} type="submit"> I'M DONE </button>
                     </form>
                 ):
                 showSummary && (
                     <Summary
                         text={name}
-                        select={question}
+                        select={teletubbies}
                         radio={questionGroup}
                     />
                 )}

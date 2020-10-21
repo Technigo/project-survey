@@ -1,21 +1,27 @@
 import React from 'react'
+import img from './images/teletubbies.jpg'
 
 const Select = props => {
-    const {setQuestion, question} = props
+    const {setTeletubbies, teletubbies} = props
 
     return (
         <div>
-            <h3>Question for select menu</h3>
+            <h3>Best teletubbies character?</h3>
+            <img
+                className="tt"
+                alt="south park siter of teletubbies"
+                src={img}
+            />
             <label htmlFor="slectquestion"></label>
                 <select
-                    onChange={(event) => setQuestion(event.target.value)}
-                    value={question}
+                    onChange={(event) => setTeletubbies(event.target.value)}
+                    value={teletubbies}
                 >
-                    <option value="">Select Alternative</option>
-                    <option value="Alt 1">Alt 1</option>
-                    <option value="Alt 2">Alt 2</option>
-                    <option value="Alt 3">Alt 3</option>
-                    <option value="Alt 4">Alt 4</option>
+                    <option value="">Select teletubbies!</option>
+                    <option value="Tinky Winky">Tinky Winky - purple</option>
+                    <option value="Dipsy">Dipsy - green</option>
+                    <option value="Laa-Laa">Laa-Laa - yellow</option>
+                    <option value="Po">Po - red</option>
                 </select>
         </div>
     )
