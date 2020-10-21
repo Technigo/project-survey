@@ -6,18 +6,23 @@ const Forms = ({ onSubmit }) => {
   const [gender, setGender] = useState();
   const [occupation, setOccupation] = useState("");
   const [age, setAge] = useState(18);
-  const [informations, setInformations] = useState([]);
+  const [information, setInformation] = useState([]);
 
-  const onInformationsChange = (informationValue) => {
-    informations.includes(informationValue)
-      ? setInformations(
-          informations.filter((item) => item !== informationValue)
-        )
-      : setInformations([...informations, " ", informationValue]);
+  const handleInformationChange = (informationValue) => {
+    information.includes(informationValue)
+      ? setInformation(information.filter((item) => item !== informationValue))
+      : setInformation([...information, " ", informationValue]);
   };
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit({ name, lastName, gender, occupation, age, informations });
+    onSubmit({
+      name,
+      lastName,
+      gender,
+      occupation,
+      age,
+      informations: information,
+    });
   };
 
   return (
@@ -120,8 +125,8 @@ const Forms = ({ onSubmit }) => {
                 type="checkbox"
                 id="facebook"
                 value="facebook"
-                checked={informations.includes("facebook")}
-                onChange={() => onInformationsChange("facebook")}
+                checked={information.includes("facebook")}
+                onChange={() => handleInformationChange("facebook")}
               />
             </label>
             <label htmlFor="linkedin">
@@ -130,8 +135,8 @@ const Forms = ({ onSubmit }) => {
                 type="checkbox"
                 id="linkedin"
                 value="linkedin"
-                checked={informations.includes("linkedin")}
-                onChange={() => onInformationsChange("linkedin")}
+                checked={information.includes("linkedin")}
+                onChange={() => handleInformationChange("linkedin")}
               />
             </label>
             <label htmlFor="friends">
@@ -140,8 +145,8 @@ const Forms = ({ onSubmit }) => {
                 type="checkbox"
                 id="friends"
                 value="friends"
-                checked={informations.includes("friends")}
-                onChange={() => onInformationsChange("friends")}
+                checked={information.includes("friends")}
+                onChange={() => handleInformationChange("friends")}
               />
             </label>
           </div>
