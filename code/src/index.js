@@ -344,7 +344,9 @@ const App = () => {
                 <label><h2>Things</h2></label>
                  <div className="drop-down">
                  
-                  <select className="select">
+                  <select className="select" 
+                  value={things} 
+                  onChange={(event) => setThings(event.target.value)}>
                                    
                     <option disabled selected className="things">
                   </option>       
@@ -468,11 +470,11 @@ const App = () => {
               value={hustle}
               className="line"
             />  or treating", and he really doesn´t want
-         <option
+         <select
               type="text"
               inChange={event => setThings(event.target.value)}
               value={things}
-              className="line"></option>
+              className="line" />
               , like last year.
         But if so, he will throw
         <input
