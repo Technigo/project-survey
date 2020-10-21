@@ -30,4 +30,16 @@ h1 {
 
 .main-content {
   background-color: #fdf5e8 ;
+  padding: 30px;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 10px;
+}
+
+fieldset {
+  border: none;
 }

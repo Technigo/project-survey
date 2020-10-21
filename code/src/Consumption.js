@@ -11,7 +11,7 @@ export const Consumption = ({ favConsumption, onConsumptionChange }) => {
         <>
             <section className="question">
                 <label>
-                    "How do you prefer to consume a book?"
+                    How do you prefer to consume a book?
                         <select
                             onChange={event => onConsumptionChange(event.target.value)}
                             value={favConsumption}
