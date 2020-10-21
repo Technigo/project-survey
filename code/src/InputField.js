@@ -2,22 +2,22 @@ import React from 'react';
 
 export const InputField = ({
   labelText,
-  attributeID,
+  id,
   type,
   placeholder,
   value,
-  setText,
+  onChange,
 }) => {
   return (
     <div className="form-group form-group-name">
-      <label htmlFor={attributeID}>
+      <label htmlFor={id}>
         {labelText}
         <input
           type={type}
-          id={attributeID}
-          name={attributeID}
+          id={id}
+          name={id}
           placeholder={placeholder}
-          onChange={(event) => setText(event.target.value)}
+          onChange={(event) => onChange(event.target.value)}
           value={value}
           required
         />

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
+import { Button } from 'Button';
 import { InputField } from './InputField';
 import { Dropdown } from './Dropdown';
 import { Radiobutton } from './Radiobutton';
 import { Summary } from './Summary';
-import { SubmitButton } from 'SubmitButton';
 
-const ageGroups = ['0-18', '19-30', '30+'];
+const ageGroups = ['18-35', '36-50', '51-65', '65+'];
 
 export const Survey = () => {
   const [name, setName] = useState('');
@@ -18,42 +18,52 @@ export const Survey = () => {
     setSubmitted(true);
   };
 
+  const startSurvey = () => {
+    setSubmitted(false);
+    setName('');
+    setLocation('');
+    setAgeGroup('');
+  };
+
   return (
     <>
       {!submitted && (
         <section className="form-wrapper">
-          <h1 className="form-title">Survey about sailing course</h1>
-          <form
-            className="form-content"
-            onSubmit={(event) => submitForm(event)}>
+          <h1 className="form-title">Skier and snowboard survey</h1>
+          <form className="form-content" onSubmit={submitForm}>
             <InputField
-              labelText="Name"
-              attributeID="name"
+              labelText="What is you name?"
+              id="name"
               type="text"
               placeholder="First and Last name"
               value={name}
-              setText={setName}
+              onChange={setName}
             />
             <Dropdown
-              labelText="Which country:"
-              attributeID="country"
+              labelText="Which mountain did you last visit?"
+              id="location"
               value={location}
-              setText={setLocation}
+              onChange={setLocation}
             />
             <Radiobutton
-              attributeID="age-group"
+              id="age-group"
               type="radio"
-              value={ageGroup}
-              setText={setAgeGroup}
               ageGroupArray={ageGroups}
+              value={ageGroup}
+              onChange={setAgeGroup}
             />
-            <SubmitButton type="submit" text="Send it in!" />
+            <Button type="submit" text="Let's send it in!" />
           </form>
         </section>
       )}
       {submitted && (
         <section className="summary-wrapper">
           <Summary name={name} location={location} ageGroup={ageGroup} />
+          <Button
+            type="button"
+            text="Start survey again"
+            onClick={startSurvey}
+          />
         </section>
       )}
     </>

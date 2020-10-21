@@ -1,22 +1,16 @@
 import React from 'react';
 
-export const Radiobutton = ({
-  attributeID,
-  type,
-  value,
-  setText,
-  ageGroupArray,
-}) => {
+export const Radiobutton = ({ id, type, value, onChange, ageGroupArray }) => {
   return (
     <div className="form-group form-group-radio">
-      <p>Age Group:</p>
+      <p>What is your age?</p>
       {ageGroupArray.map((group) => (
-        <label htmlFor={attributeID} key={group}>
+        <label htmlFor={id} key={group}>
           <input
             type={type}
-            id={attributeID}
-            name={attributeID}
-            onChange={(event) => setText(event.target.value)}
+            id={id}
+            name={id}
+            onChange={(event) => onChange(event.target.value)}
             value={group}
             checked={value === group}
             required

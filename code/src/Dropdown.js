@@ -1,20 +1,20 @@
 import React from 'react';
 
-export const Dropdown = ({ labelText, attributeID, value, setText }) => {
+export const Dropdown = ({ labelText, id, value, onChange }) => {
   return (
     <div className="form-group form-group-dropdown">
-      <label htmlFor={attributeID}>{labelText}</label>
+      <label htmlFor={id}>{labelText}</label>
       <select
-        id={attributeID}
-        name={attributeID}
-        onChange={(event) => setText(event.target.value)}
+        id={id}
+        name={id}
+        onChange={(event) => onChange(event.target.value)}
         value={value}
         required>
-        <option value="">Select location:</option>
-        <option value="Stockholm">Stockholm</option>
-        <option value="Oslo">Oslo</option>
-        <option value="Helsinki">Helsinki</option>
-        <option value="Copenhagen">Copenhagen</option>
+        <option value="">Select mountain:</option>
+        <option value="Chamonix">Chamonix</option>
+        <option value="Serre Chevalier">Serre Chevalier</option>
+        <option value="Tignes">Tignes</option>
+        <option value="Val Thorens">Val Thorens</option>
       </select>
     </div>
   );
