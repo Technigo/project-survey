@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import Select from 'Select'
 import Text from './Text'
-import Radio from './Radio'
+import Teletub from 'Teletub'
+import SailorMoon from './SailorMoon'
+import Turtles from './Turtles'
 import Summary from './Summary'
 import './Inputs.css'
 
@@ -9,7 +10,8 @@ import './Inputs.css'
 export const Input = () => {
     const [name, setName] = useState('') // text 
     const [teletubbies, setTeletubbies] = useState('') // select
-    const [questionGroup, setQuestionGroup] = useState("") // radiobuttons
+    const [sailorMoon, setSailorMoon] = useState('') // radiobuttons
+    const [turtle, setTurtles] = useState('') // select
     const [showSummary, setShowSummary] = useState(false)
 
     const handleSubmit = event => {
@@ -24,20 +26,21 @@ export const Input = () => {
                     <form onSubmit={handleSubmit}>
                         <Text
                             id="test"
-                            question="here is my question"
                             setText={setName}
                             value={name}
                         />
-                        < Select setTeletubbies={setTeletubbies} teletubbies={teletubbies} />
-                        < Radio setQuestionGroup={setQuestionGroup} questionGroup={questionGroup} />
-                        <button disabled={!name || !teletubbies || !questionGroup} type="submit"> I'M DONE </button>
+                        < Teletub setTeletubbies={setTeletubbies} teletubbies={teletubbies} />
+                        < SailorMoon setSailorMoon={setSailorMoon} sailorMoon={sailorMoon} />
+                        < Turtles setTurtles={setTurtles} turtle={turtle} />
+                        <button disabled={!name || !teletubbies || !sailorMoon} type="submit"> I'M DONE </button>
                     </form>
                 ):
                 showSummary && (
                     <Summary
                         text={name}
-                        select={teletubbies}
-                        radio={questionGroup}
+                        teletubbies={teletubbies}
+                        sailorMoon={sailorMoon}
+                        turtles={turtle}
                     />
                 )}
             </main>

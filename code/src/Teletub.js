@@ -1,14 +1,14 @@
 import React from 'react'
+import './Teletubbies.css'
 import img from './images/teletubbies.jpg'
 
-const Select = props => {
+const Teletub = props => {
     const {setTeletubbies, teletubbies} = props
-
     return (
-        <div>
+        <div className="teletubbies-wrapper">
             <h3>Best teletubbies character?</h3>
             <img
-                className="tt"
+                className="tt-image"
                 alt="south park siter of teletubbies"
                 src={img}
             />
@@ -16,8 +16,9 @@ const Select = props => {
                 <select
                     onChange={(event) => setTeletubbies(event.target.value)}
                     value={teletubbies}
+                    required
                 >
-                    <option value="">Select teletubbies!</option>
+                    <option value="">Choose teletubbies!</option>
                     <option value="Tinky Winky - purple">Tinky Winky - purple</option>
                     <option value="Dipsy - green">Dipsy - green</option>
                     <option value="Laa-Laa - yellow">Laa-Laa - yellow</option>
@@ -28,4 +29,4 @@ const Select = props => {
 
 }
 
-export default Select
+export default Teletub

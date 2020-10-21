@@ -1,7 +1,7 @@
 import React from 'react'
 import Text from './Text'
-import Select from './Select'
-import Radio from './Radio'
+import Select from './Teletub'
+import Radio from './SailorMoon'
 //import Range from './Range'
 
 
