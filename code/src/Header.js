@@ -1,7 +1,10 @@
 import React from "react"
+import "./index.css"
 
 export const Header =() => {
     return (
-    <h1>THE BOOK LOVER SURVEY</h1>
+        <header>
+            <h1>THE BOOK LOVER SURVEY</h1>
+        </header>
     )
 }
