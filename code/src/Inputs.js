@@ -3,6 +3,7 @@ import Select from 'Select'
 import Text from './Text'
 import Radio from './Radio'
 import Summary from './Summary'
+import './Inputs.css'
 
 
 export const Input = () => {
@@ -17,7 +18,7 @@ export const Input = () => {
     }
 
         return (
-            <main>
+            <main className="form-wrapper">
                 <h1> Which is your favourite color based on comic characters? </h1>
                 {!showSummary ? (
                     <form onSubmit={handleSubmit}>

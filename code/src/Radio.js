@@ -1,4 +1,5 @@
 import React from 'react'
+import img from './images/sm.png'
 
 const questionGroups = [
     "0-5",
@@ -11,6 +12,11 @@ const Radio = props => {
     return (
         <div>
             <h3>Question for radio buttons</h3>
+            <img
+                className="tt"
+                alt="south park siter of teletubbies"
+                src={img}
+            />
             {questionGroups.map(group => (
                 <label htmlFor="InputRadio" key={group}>
                     <input

@@ -18,10 +18,10 @@ const Select = props => {
                     value={teletubbies}
                 >
                     <option value="">Select teletubbies!</option>
-                    <option value="Tinky Winky">Tinky Winky - purple</option>
-                    <option value="Dipsy">Dipsy - green</option>
-                    <option value="Laa-Laa">Laa-Laa - yellow</option>
-                    <option value="Po">Po - red</option>
+                    <option value="Tinky Winky - purple">Tinky Winky - purple</option>
+                    <option value="Dipsy - green">Dipsy - green</option>
+                    <option value="Laa-Laa - yellow">Laa-Laa - yellow</option>
+                    <option value="Po - red">Po - red</option>
                 </select>
         </div>
     )
