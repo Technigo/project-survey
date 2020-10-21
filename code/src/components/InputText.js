@@ -1,13 +1,14 @@
 import React from 'react';
 
-const InputText = ({ question, text, setText }) => {
+const InputText = ({ classLabel, classInput, question, value, setText }) => {
   return (
-    <label htmlFor="InputText">
-      <h2>{question}</h2>
+    <label className={classLabel} htmlFor="InputText">
+      {question}
       <input
+        className={classInput}
         type="text"
-        name="InputText"
-        value={text}
+        id="InputText"
+        value={value}
         onChange={event => setText(event.target.value)}
         placeholder="Enter something"
       />

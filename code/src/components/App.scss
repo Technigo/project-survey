@@ -1,11 +1,52 @@
+@import '../variables.scss';
+
 .App {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
-  background: #232e42;
+  justify-content: center;
+  background: #f7d4b8;
   height: 100vh;
-  color: #f7d4b8;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(247, 212, 184);
+
+  &__main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 100vh;
+    padding: 50px 25px;
+    background: #232e42;
+    -webkit-box-shadow: 0 34px 22px -20px rgba(0, 0, 0, 0.4);
+    -moz-box-shadow: 0 34px 22px -20px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 34px 22px -20px rgba(0, 0, 0, 0.4);
+
+    @include respond(medium) {
+      width: 40vw;
+      height: 80vh;
+    }
+  }
+
+  &__header {
+    width: 100%;
+    font-size: 30px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+
+  &__section {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+
+  &__subheader {
+    font-weight: 400;
+  }
 }
 
 //@media only screen and (min-width: 768px);

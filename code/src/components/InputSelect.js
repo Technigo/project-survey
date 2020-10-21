@@ -1,28 +1,17 @@
 import React from 'react';
 
-const InputSelect = ({ question, array, select, setSelect }) => {
+const InputSelect = ({ className, question, value, setSelect }) => {
   return (
-    <label htmlFor="InputSelect">
-      <h2>{question}</h2>
+    <label className={className} htmlFor="InputSelect">
+      {question}
       <select
-        name="InputSelect"
+        id="InputSelect"
         onChange={event => setSelect(event.target.value)}
-        value={select}
+        value={value}
       >
         <option value="">Select</option>
         <option value="1-10">1-10</option>
         <option value="11-20">11-20</option>
-        {/* {array.map(select => {
-          select === '' ? (
-            <option key={select} value={select}>
-              Select
-            </option>
-          ) : (
-            <option key={select} value={select}>
-              {select}
-            </option>
-          );
-        })} */}
       </select>
     </label>
   );

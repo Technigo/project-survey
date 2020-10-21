@@ -1,4 +1,72 @@
+// @import '../variables.scss';
+
 .Form {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 100%;
+
+  &__label {
+    width: 100%;
+    padding: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #f3cbaa;
+  }
+
+  &__input {
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid rgba(247, 212, 184, 0.8);
+    background: none;
+    height: 40px;
+    font-size: 16px;
+  }
+}
+
+// .form-input {
+// }
+
+// .form-input::placeholder {
+//   font-size: 14px;
+// }
+
+// .form-input:valid {
+//   border-bottom: 1.5px solid green;
+// }
+
+.form-input[type='text'],
+.form-input[type='email'],
+.form-input[type='password'] {
+  border: none;
+  border-bottom: 1px solid rgb(77, 72, 43);
+  background: rgba(89, 89, 75, 0.2);
+  outline: none;
+  height: 40px;
+  font-size: 16px;
+}
+
+.form-input[type='text']::placeholder,
+.form-input[type='email']::placeholder,
+.form-input[type='password']::placeholder {
+  padding-left: 5px;
+}
+
+.form-input[type='text']:hover,
+.form-input[type='email']:hover,
+.form-input[type='password']:hover {
+  border-bottom: 1.5px solid rgb(77, 72, 43);
+}
+
+.form-input[type='text']:focus,
+.form-input[type='email']:focus,
+.form-input[type='password']:focus {
+  border-bottom: 1.5px solid rgb(77, 72, 43);
+}
+
+.form-input[type='text']:valid,
+.form-input[type='email']:valid,
+.form-input[type='password']:valid {
+  border-bottom: 1.5px solid green;
 }
