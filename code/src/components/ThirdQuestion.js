@@ -6,32 +6,42 @@ export const ThirdQuestion = (props) => {
   const [visible, setVisible] = useState(false);
 
   const checkInput = () => {
-    if(dayOption) {
+    if (dayOption) {
       return () => setVisible(true);
     }
+  };
+
+  const onDayChange = (newDay) => {
+    setDayOption(newDay);
   };
 
   return (
     <>
       <form className="third-question" onSubmit={(event) => event.preventDefault()}>
-        <img className="first-question-img" src="assets/question3-img.png" alt="Traveler with a map"/> 
+        <img className="first-question-img" src="assets/question3-img.png" alt="Traveler with a map" />
         <div className="day-select-text">
-          <label htmlFor="daytime">Favorite time of the Day:</label>
+          <label htmlFor="daytime">Favorite time of the Day:
             <select
-            id="daytime"
-            onChange={(event) => setDayOption(event.target.value)}
-            value={dayOption} 
-            required>
-                <option value="">Pick a time</option>
-                <option value="Sunrise">Sunrise</option>
-                <option value="Afternoon">Afternoon</option>
-                <option value="Sunset">Sunset</option>
-                <option value="Evening">Evening</option>
+              id="daytime"
+              onChange={(event) => onDayChange(event.target.value)}
+              value={dayOption}
+              required>
+              <option value="">Pick a time</option>
+              <option value="sunrise">Sunrise</option>
+              <option value="afternoon">Afternoon</option>
+              <option value="sunset">Sunset</option>
+              <option value="evening">Evening</option>
             </select>
-          <button className="last-button" onClick={checkInput()} aria-label="Enter and Tab to reveal your dream vacation"><a href="#final-text" aria-hidden="true" tabIndex="-1">Dream away!</a></button>
-        </div>       
+          </label>
+          <button
+            className="last-button"
+            onClick={checkInput()}
+            aria-label="Enter and Tab to reveal your dream vacation">
+            <a href="#final-text" aria-hidden="true" tabIndex="-1">Dream away!</a>
+          </button>
+        </div>
       </form>
-      {(visible === true) && <FinalText resultDestination={props.finalDestination} resultNumber={props.chosenNumber} resultDay={dayOption}/>}
+      {(visible === true) && <FinalText resultDestination={props.finalDestination} resultNumber={props.chosenNumber} resultDay={dayOption} />}
     </>
   );
 };

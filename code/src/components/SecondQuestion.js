@@ -6,32 +6,37 @@ export const SecondQuestion = (props) => {
   const [visible, setVisible] = useState(false);
 
   const checkInput = () => {
-    if(numberOption) {
+    if (numberOption) {
       return () => setVisible(true);
     }
+  };
+
+  const onNumberChange = (newNumber) => {
+    setNumberOption(newNumber);
   };
 
   return (
     <>
       <form className="second-question" onSubmit={(event) => event.preventDefault()}>
-        <img className="first-question-img" src="assets/question2-img.png" alt="Tourist couple"/>
+        <img className="first-question-img" src="assets/question2-img.png" alt="Tourist couple" />
         <div className="number-select-text">
-            <label key={numberOption}>
+          <label key={numberOption} htmlFor="numberInput">
             <p>Favorite number (between 5 and 10):</p>
-              <input
-                  className="number-input"
-                  type="number"
-                  name="quantity"
-                  min="5"
-                  max="10"
-                  value={numberOption}
-                  onChange={(event) => setNumberOption(event.target.value)} 
-                  required />
-            </label>
-            <button className="first-button" onClick={checkInput()}>NEXT</button>
+            <input
+              id="numberInput"
+              className="number-input"
+              type="number"
+              name="quantity"
+              min="5"
+              max="10"
+              value={numberOption}
+              onChange={(event) => onNumberChange(event.target.value)}
+              required />
+          </label>
+          <button className="first-button" onClick={checkInput()}>NEXT</button>
         </div>
       </form>
-      {(visible === true) && <ThirdQuestion finalDestination={props.chosenDestination} chosenNumber={numberOption}/>}
+      {(visible === true) && <ThirdQuestion finalDestination={props.chosenDestination} chosenNumber={numberOption} />}
     </>
   );
 };
