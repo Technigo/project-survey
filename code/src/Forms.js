@@ -5,10 +5,19 @@ const Forms = ({ onSubmit }) => {
   const [lastName, setLastName] = useState("");
   const [gender, setGender] = useState();
   const [occupation, setOccupation] = useState("");
+  const [age, setAge] = useState(18);
+  const [informations, setInformations] = useState([]);
 
+  const onInformationsChange = (informationValue) => {
+    informations.includes(informationValue)
+      ? setInformations(
+          informations.filter((item) => item !== informationValue)
+        )
+      : setInformations([...informations, " ", informationValue]);
+  };
   const handleSubmit = (event) => {
     event.preventDefault();
-    onSubmit({ name, lastName, gender, occupation });
+    onSubmit({ name, lastName, gender, occupation, age, informations });
   };
 
   return (
@@ -16,60 +25,68 @@ const Forms = ({ onSubmit }) => {
       <div className="container">
         <h1> SURVEY FORM</h1>
         <form className="forms-container" onSubmit={handleSubmit}>
-          <label>
+          <label htmlFor="firstName">
             First Name:
             <input
               type="text"
+              id="firstName"
+              placeholder="Your Name"
               onChange={(event) => setName(event.target.value)}
               value={name}
-              placeholder="Your Name"
             />
           </label>
 
-          <label>
+          <label htmlFor="lastName">
             Last Name:
             <input
               type="text"
+              id="lastName"
+              placeholder="Your Last Name"
               onChange={(event) => setLastName(event.target.value)}
               value={lastName}
-              placeholder="Your Last Name"
             />
           </label>
 
           <div className="forms-container__gender">
             Gender:
-            <label>
+            <label htmlFor="male">
               Male
               <input
                 type="radio"
-                value="Male"
+                id="male"
+                value="male"
                 onChange={(event) => setGender(event.target.value)}
-                checked={gender === "Male"}
+                checked={gender === "male"}
               />
             </label>
-            <label>
+            <label htmlFor="female">
               Female
               <input
                 type="radio"
-                value="Female"
+                id="femaile"
+                value="female"
                 onChange={(event) => setGender(event.target.value)}
-                checked={gender === "Female"}
+                checked={gender === "female"}
               />
             </label>
-            <label>
+            <label htmlFor="other">
               Other
               <input
                 type="radio"
-                value="Other"
+                id="other"
+                value="other"
                 onChange={(event) => setGender(event.target.value)}
-                checked={gender === "Other"}
+                checked={gender === "other"}
               />
             </label>
           </div>
 
           <div>
-            <label>Which option best describes your current occupation?</label>
+            <label htmlFor="occupation">
+              Which option best describes your current occupation?
+            </label>
             <select
+              id="occupation"
               onChange={(event) => setOccupation(event.target.value)}
               value={occupation}
             >
@@ -81,15 +98,52 @@ const Forms = ({ onSubmit }) => {
             </select>
           </div>
 
-          <div className="forms-container__slidecontainer">
-            Age (from 18-100):
+          <label htmlFor="myRange" className="forms-container__slidecontainer">
+            Age (from 18-100): {age}
             <input
               type="range"
               min="18"
               max="100"
               className="slider"
               id="myRange"
+              value={age}
+              step={1}
+              onChange={(event) => setAge(event.target.value)}
             />
+          </label>
+
+          <div>
+            Where did you hear about us?
+            <label htmlFor="facebook">
+              Facebook
+              <input
+                type="checkbox"
+                id="facebook"
+                value="facebook"
+                checked={informations.includes("facebook")}
+                onChange={() => onInformationsChange("facebook")}
+              />
+            </label>
+            <label htmlFor="linkedin">
+              Linkedin
+              <input
+                type="checkbox"
+                id="linkedin"
+                value="linkedin"
+                checked={informations.includes("linkedin")}
+                onChange={() => onInformationsChange("linkedin")}
+              />
+            </label>
+            <label htmlFor="friends">
+              Friends
+              <input
+                type="checkbox"
+                id="friends"
+                value="friends"
+                checked={informations.includes("friends")}
+                onChange={() => onInformationsChange("friends")}
+              />
+            </label>
           </div>
 
           <input
