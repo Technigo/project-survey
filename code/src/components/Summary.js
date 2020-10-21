@@ -16,23 +16,20 @@ export const displayAnimalImage = (animal) => {
   }
 }
 
-export const Summary = ({name, personality, spiritAnimal, temperature}) => {
+
+export const Summary = ({name, personality, spiritAnimal, age}) => {
 
   return (
     <section className="summary-container">
-
         <h2>RESULT</h2>
-
-  <p tabIndex="0">Hi {name}! Thought you should know that your spirit animal is a {personality} {spiritAnimal}, that lives in a {temperature} ocean{/*add two form questions*/}</p>
+        <p tabIndex="0">Hi {name}! Thought you should know that your spirit animal is a {age} year old, {personality} {spiritAnimal}.</p>
 
         <img src={displayAnimalImage(spiritAnimal)} alt={spiritAnimal}/>
-
+        
         <p>Not happy with the result?</p>
-
         <button onClick={() => window.location.reload(false)}>Try again!</button>
 
         <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
-
     </section>
   )
 }

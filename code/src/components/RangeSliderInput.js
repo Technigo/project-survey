@@ -1,25 +1,29 @@
 import React from 'react';
 
-export const RangeSliderInput = ({temperature, setTemperature}) => {
+export const RangeSliderInput = ({age, setage}) => {
 
   return (
     <div className="form-question-container">
-     <h2>Pick your perfect temperature!</h2>
-      <input 
-      type="range" 
-      min="1" 
-      max="100" 
-      value={temperature} 
-      id={temperature} 
-      onChange = {(event) => setTemperature(event.target.value)}
-
-      />
-      <output
-      type="text"
-      value={temperature}
-      onChange = {(event) => setTemperature(event.target.value)}
-      for={temperature}
-      >{temperature}</output>
+     <h2 tabIndex="0">Pick a number!</h2>
+     
+      <label id={age}>numbertext</label>
+      <div className="slider-container">
+        <input 
+        className = "slider"
+        type ="range" 
+        min = "0" 
+        max = "100"
+        value = {age} 
+        id = {age} 
+        onChange = {(event) => setage(event.target.value)}
+        />
+        <output
+        type="text"
+        value={age}
+        onChange = {(event) => setage(event.target.value)}
+        htmlFor={age}
+        >{age}</output>
+      </div>
     </div>
      
     )

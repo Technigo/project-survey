@@ -13,9 +13,14 @@ export const SelectInput = ({personality, setPersonality}) => {
         required
         >
         <option value = " ">Select answer</option>
-        <option value = "lazy">Lazy</option>
-        <option value = "curious">Curious</option>
-        <option value = "sarcastic">Sarcastic</option>
+        <option value = "lazy">lazy</option>
+        <option value = "curious">curious</option>
+        <option value = "kind">kind</option>
+        <option value = "nervous">nervous</option>
+        <option value = "enthusiastic">enthusiastic</option>
+        <option value = "funny">funny</option>
+        <option value = "spontaneus">spontaneus</option>
+        <option value = "shy">shy</option>
         </select>
     </div>
      

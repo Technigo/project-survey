@@ -21,12 +21,17 @@ code {
   font-family: 'Roboto Condensed', sans-serif;
 }
 
+*:focus {
+  outline: black dotted 2px;
+}
+
 h1{
   font-size: 50px;
 }
 
 h2 {
   font-size: 40px;
+  margin-top: 0;
 }
 
 .main-content-container {
@@ -39,7 +44,14 @@ h2 {
 button {
   height: fit-content ;
   font-size: 20px;
+  background: #111;
+  color: #eee;
+  border-radius: 5px;
+  font-weight: bold;
+  padding: 5px;
+  font-size: 25px;
 }
+
 
 /** header **/
 
@@ -55,6 +67,10 @@ button {
   text-align: center;
   width: 80%;
   height: 80%;
+}
+
+header p {
+  font-size: 25px;
 }
 
 /** form **/
@@ -95,32 +111,116 @@ form {
 }
 
 .input-container:nth-child(2) {
-  background: #ffeadb;
-  
+  background: #ffeadb; 
+}
+
+.input-container:nth-child(3) {
+  background: #ff9a76; 
 }
 
 .input-container:last-of-type {
-  background: #ff9a76;
-
+  background:  #679b9b;
 }
 
-input, select {
-  width: 50%;
+label {
+  font-size: 25px;
 }
+
+input, select{
+  width: 60%;
+  height: 30px;
+  font-size: 25px;
+}
+
+input {
+  border: #000 0.5px solid;
+}
+
+.form-question-container label:first-child, 
+.form-question-container label:nth-child(2){
+  padding-bottom: 20px;
+}
+
+
+/** radiobuttons */
+.radiobutton-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.radiobutton-container label {
+  width: 30%;
+}
+
+.radio-input-container {
+  margin: 10px;
+}
+
+.radio-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: relative;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #fff;
+  border: #000 0.5px solid;
+  transition: 0.4s ease;
+}
+
+.radio-input:checked {
+  background-color: #ff9a76;
+ }
+
+ .radio-input:hover {
+  background-color: #ff9a76;
+  opacity: 0.8;
+ }
+/** range slider **/
+
+.slider-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  border-radius: 2px;
+  height: 5px;
+  -webkit-transition: .2s;
+  transition: .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 20px;
+  width: 20px;
+  background: #000;
+  border-radius: 50%;
+}
+
+output {
+  font-size: 25px;
+}
+
+/** submit-button **/
 .submit-button {
-  margin-top: 40px;
+  width: 50%;
 }
 
 .submit-button-container {
   display: flex;
   justify-content: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  width: 100%;
 }
 
-output {
-  width: 50px;
-  height: 50px;
-  color: white;
-}
 /** Summary **/
 
 img {

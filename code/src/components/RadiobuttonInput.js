@@ -14,6 +14,7 @@ export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
   return (
     <div className="form-question-container">
       <h2 tabIndex="0">Pick an animal!</h2>
+      <div className="radiobutton-container">
         {animals.map((animal)=> (
         <label 
           key = {animal} 
@@ -24,11 +25,15 @@ export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
           value = {animal}
           onChange = {(event) => setSpiritAnimal(event.target.value)}
           checked = {spiritAnimal === animal}
+          className="radio-input"
           required
         />
+        <div className="radio-input-container">
         {animal}
+        </div>
         </label>
         ))}
+        </div>
     </div>
   )
 }

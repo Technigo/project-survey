@@ -17,7 +17,7 @@ const handleStartClick = event => {
         {! displayForm ? (
         <section className="intro-text-container">
           <Header/>
-          <button onClick={handleStartClick}>Click here to find out!</button>
+          <button onClick={handleStartClick}>Start the test</button>
         </section> )
         : (
         <section className="form-container">
