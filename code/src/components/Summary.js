@@ -1,10 +1,8 @@
-/* import React from 'react'
+import React from 'react'
 
 
-export const Summary = () => {
-    return <div class='summary'>
-        {group} 
-        {location}
-        {text}
+export const Summary = ({ageGroup}) => {
+    return <div className='summary'>
+        {ageGroup} 
         </div>
-}; */
+};

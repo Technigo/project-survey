@@ -1,5 +1,4 @@
 import React from 'react'
-import { useState } from 'react'
 
 const ageGroups = [
     '20-30', 
@@ -8,9 +7,8 @@ const ageGroups = [
     '51+',
 ]
 
-export const FirstQuestion = () => {
-    const [ageGroup, setAgeGroup] = useState('');
-    
+export const FirstQuestion = ({ageGroup, setAgeGroup}) => {
+    console.log();
 
     return (
         <div className='first-question'>
