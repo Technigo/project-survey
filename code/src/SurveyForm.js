@@ -8,7 +8,8 @@ import ReasonsToBuy from './ReasonsToBuy';
 import UserRating from './UserRating';
 import TextMessage from 'TextMessage';
 import SubmitButton from './SubmitButton';
-import Summary from './Summary'
+import Summary from './Summary';
+import SnapSection from './SnapSection';
 
 const SurveyForm = () => {
   const [name, setName] = useState ('');
@@ -34,7 +35,6 @@ const SurveyForm = () => {
   };
 
   const handleCarsChange = newCars => {
-    console.log('newCars', newCars);
     setCarModels(newCars)
   }
 
@@ -45,7 +45,8 @@ const SurveyForm = () => {
   };
 
   const handleRatingChange = newRating => {
-    setUserRating(newRating)
+    setUserRating(newRating);
+    window.location.hash = "#sectionMessage";
   };
 
   const handleMessageChange = newMessage => {
@@ -53,56 +54,85 @@ const SurveyForm = () => {
   }
 
   const handleSubmit = () => {
-    setShowSummary(true)
+    setShowSummary(true);
+    window.location.hash = "#sectionSummary";
+  }
+/*When users want to edit the answer, the summary will be hidden, and the form will be shown, starting with userName section */
+  const handleAnswerChange = () => {
+      setShowSummary(false)
+      window.location.hash = "#sectionUserName";
+  };
+/* If users are happy with the summary, they can exit the survey and will be directed to the page header*/
+  const handleExitButton = () => {
+      setShowSummary(false)
+      window.location.hash = "#header";
   }
 
   return (
     <div>
       {!showSummary &&
         <form id="surveyForm" className="survey-container" onSubmit={event => event.preventDefault()}>
-          <UserName 
-            userName={name}
-            onNameChange={handleNameChange}
-          />
-          <UserAge
-            userAge={age}
-            onAgeChange={handleAgeChange} 
-          />
-          <Occupation
-            occupation={occupation}
-            onOccupationChange={handleOccupationChange}
-          />
-          <UserCarModels
-            carModels={carModels}
-            onCarsChange={handleCarsChange}
-          />
-          <ReasonsToBuy
-            userReasons={reasons}
-            onReasonsChange={handleReasonsChange}
-          />
-          <UserRating
-            userRating={userRating}
-            onRatingChange={handleRatingChange}
-          />
-          <TextMessage
-            textMessage={textMessage}
-            onMessageChange={handleMessageChange}
-          />
-          <SubmitButton
-            doSubmit={handleSubmit}
-          />
+          <SnapSection>
+            <UserName
+              userName={name}
+              onNameChange={handleNameChange}
+            />
+          </SnapSection>
+          <SnapSection>
+            <UserAge
+              userAge={age}
+              onAgeChange={handleAgeChange} 
+            />
+          </SnapSection>
+          <SnapSection>
+            <Occupation
+              occupation={occupation}
+              onOccupationChange={handleOccupationChange}
+            />
+          </SnapSection>
+          <SnapSection>
+            <UserCarModels
+              carModels={carModels}
+              onCarsChange={handleCarsChange}
+            />
+          </SnapSection>
+          <SnapSection>
+            <ReasonsToBuy
+              userReasons={reasons}
+              onReasonsChange={handleReasonsChange}
+            />
+          </SnapSection>
+          <SnapSection>
+            <UserRating
+              userRating={userRating}
+              onRatingChange={handleRatingChange}
+            />
+          </SnapSection>
+          <SnapSection>
+            <TextMessage
+              textMessage={textMessage}
+              onMessageChange={handleMessageChange}
+            />
+            <SubmitButton
+              doSubmit={handleSubmit}
+            />
+          </SnapSection>
         </form>
       }
       {showSummary &&
-        <Summary 
-          userName={name}
-          userAge={age}
-          occupation={occupation}
-          userCarModels={carModels}
-          reasonsToBuy={reasons}
-          userRating={userRating}
-          textMessage={textMessage}
-        />
+        <SnapSection>
+          <Summary 
+            userName={name}
+            userAge={age}
+            occupation={occupation}
+            userCarModels={carModels}
+            reasonsToBuy={reasons}
+            userRating={userRating}
+            textMessage={textMessage}
+            handleAnswerChange={handleAnswerChange}
+            handleExitButton={handleExitButton}
+          />
+        </SnapSection>
       }
     </div>
   );

@@ -12,23 +12,45 @@ code {
     monospace;
 }
 
+html {
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.section {
+  height: 100vh;
+  width: 100vw;
+  scroll-snap-align: start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .header {
-  background-image: url(assets/backgroundImage.jpg);
+  align-items: center;
+  background-image: url(/static/media/backgroundImage.ccf3e346.jpg);
   background-position: center center;
   background-size: cover;
-  height: 40vh;
   display: flex;
-  align-items: flex-end;
-  justify-content: center;
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
 }
+
 .header-title {
   color: #fff;
 }
 
-.survey-container {
+.message {
   margin-top: 20px;
 }
 
-.hide {
-  display: none;
+.text-box {
+  margin-top: 10px;
+}
+.button {
+  margin-top: 20px;
+  text-align: center;
 }

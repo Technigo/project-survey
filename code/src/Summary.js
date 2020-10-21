@@ -1,4 +1,6 @@
 import React from 'react';
+import EditAnswerButton from './EditAnswerButton';
+import ExitButton from './ExitButton';
 
 const Summary = ({ 
   userName,
@@ -7,12 +9,14 @@ const Summary = ({
   userCarModels,
   reasonsToBuy,
   userRating,
-  textMessage
+  textMessage,
+  handleAnswerChange,
+  handleExitButton
  }) => {
     const carModels = userCarModels.map(({ label }) => label);
-    
+
     return (
-        <div>
+        <div className="summary" id="sectionSummary">
             <p>Thank you for your feedback! Below is your answer to the survey:</p>
             <div>Name: {userName}</div>
             <div>Age: {userAge}</div>
@@ -21,6 +25,10 @@ const Summary = ({
             <div>Reasons you bought Suzuki car(s): {reasonsToBuy.join(', ')}</div>
             <div>Your opinion about the Aftersales Services of Suzuki is {userRating}</div>
             <div>Your message: {textMessage}</div>
+            <EditAnswerButton
+            onAnswerChange={handleAnswerChange} />
+            <ExitButton
+            onExit={handleExitButton} />
         </div>
     );
 }

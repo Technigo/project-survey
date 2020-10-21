@@ -2,7 +2,7 @@ import React from 'react';
 
 const UserName = ({ userName, onNameChange }) => {
   return (
-    <div className="name-input">
+    <section className="name-input" id="sectionUserName">
       <label className="name-label" htmlFor="userName">Your full name</label>
       <input 
         id="userName" 
@@ -10,7 +10,7 @@ const UserName = ({ userName, onNameChange }) => {
         onChange={event => onNameChange(event.target.value)}
         value={userName}
       />
-    </div>
+    </section>
   );
 };
 

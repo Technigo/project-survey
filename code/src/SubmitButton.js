@@ -2,7 +2,7 @@ import React from 'react';
 
 const SubmitButton = ({ doSubmit }) => {
   return ( 
-    <div className="button">
+    <section className="button">
       <button 
         type="submit"
         form="SurveyForm"
@@ -10,7 +10,7 @@ const SubmitButton = ({ doSubmit }) => {
       >
         Complete
       </button>
-    </div>
+    </section>
    );
 }
  

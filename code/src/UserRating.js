@@ -10,9 +10,10 @@ const rating = [
 
 const UserRating = ({ userRating, onRatingChange }) => {
   return (
-    <div className="after-sales-questions">
+    <section className="user-rating-section">
       <p>How do you evaluate our AfterSales Services</p>
-      {rating.map(rate => {
+      <div>
+        {rating.map(rate => {
         return (
           <label key={rate}>
             <input
@@ -25,7 +26,8 @@ const UserRating = ({ userRating, onRatingChange }) => {
           </label>
         )
       })}
-    </div>
+      </div>
+    </section>
   );
 };
  
