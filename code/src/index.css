@@ -4,8 +4,13 @@ body {
   display: flex;
   flex-direction: column;
   background-image: url(./images/chris-abney-qLW70Aoo8BE-unsplash\ \(1\).jpg);
-
+  width: 100%;
+  height: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
 }
+
 .formContainer {
   display: flex;
   justify-content: center;
@@ -17,19 +22,9 @@ form {
   flex-direction: column;
   align-items: center;
   max-width: 70%;
+  margin: 10px 0 50px 0;
+  padding: 10px 50px 10px 50px;
 }
-
- button {
-   height: 50px;
-   width: 90px;
-   background-color:rgb(225, 236, 216) ;
-   border-radius: 25%;
-
-} 
- button:hover {
-   background-color: rgb(160, 190, 167);
-   transition: 0.3s ease;
-} 
 
 .country{
   margin: 30px 0 50px 0;
@@ -47,18 +42,25 @@ form {
 }
 
 .input {
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   text-align: center;
 }
 
-.checkbox p {
-  margin: 0
+button {
+  height: 50px;
+  width: 90px;
+  background-color:rgb(225, 236, 216) ;
+  border-radius: 25%;
 }
+
+button:hover {
+  background-color: rgb(160, 190, 167);
+  transition: 0.3s ease;
+} 
 
 .btn {
-  margin-bottom: 50px;
+  margin-bottom: 40px;
   text-align: center;
-
 } 
 
 

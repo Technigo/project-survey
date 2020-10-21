@@ -1,7 +1,12 @@
 h3 {
-    color:rgb(37, 58, 37);;
+    color:rgb(37, 58, 37);
 }
+
 
 .duration {
     margin: 0 15px 0 15px;
+    display: flex;
+    flex-direction: column;
+    font-size: large;
+    line-height: 30px;
 }

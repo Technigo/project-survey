@@ -1,4 +1,13 @@
 h3 {
     color: rgb(37, 58, 37);
-    
+}
+
+.input {
+    font-size: medium;
+}
+
+.input input {
+    height: 30px;
+    width: 180px;
+    font-size: large;
 }

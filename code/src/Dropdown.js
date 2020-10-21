@@ -6,7 +6,7 @@ export const Dropdown = (props) => {
     return (
         <label className="country">
             <h3> Choose your destination: </h3> 
-            <select 
+            <select className="dropdown"
                 onChange={event => props.onChanged(event.target.value)}
                 value={props.value}
             >

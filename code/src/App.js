@@ -23,7 +23,7 @@ export const App = () => {
   return (
     <div className="formContainer">
       
-      {showSummary ?  (
+      {!showSummary ?  (
         <form onSubmit={handleSubmit}> 
           <Dropdown value={location} onChanged={setLocation} />
           <Radio value={duration} onChanged={setDuration}/>
