@@ -20,6 +20,7 @@
 }
 
 .top-menu__item:hover {
-  border-bottom: 2px #000 solid;
+  border-bottom: 1px #fff solid;
   cursor: pointer;
+  color: #fff;
 }

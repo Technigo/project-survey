@@ -5,6 +5,7 @@ import Question2 from 'components/Question2.js';
 import Question3 from 'components/Question3.js';
 import Question4 from 'components/Question4.js';
 import Question5 from 'components/Question5.js';
+import Summary from 'components/Summary.js';
 
 const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Secret!'];
 const developingParts = [
@@ -19,7 +20,7 @@ const developingParts = [
 const Form = () => {
   const [section, setSection] = useState('firstQuestion');
   const [name, setName] = useState('');
-  const [ageGroup, setAgeGroup] = useState();
+  const [ageGroup, setAgeGroup] = useState(undefined);
   const [skills, setSkills] = useState([]);
   const [suggestions, setSuggestions] = useState('');
   const [title, setTitle] = useState('');
@@ -89,6 +90,16 @@ const Form = () => {
               setSection={setSection}
             />
           </div>
+        )}
+
+        {section === 'summary' && (
+          <Summary
+            name={name}
+            ageGroup={ageGroup}
+            skills={skills}
+            suggestions={suggestions}
+            title={title}
+          />
         )}
       </form>
     </section>

@@ -1,5 +1,6 @@
 import React from 'react';
 import NextButton from 'components/NextButton.js';
+import PreviousButton from 'components/PreviousButton.js';
 
 const Question3 = (props) => {
   const handleSkillsChange = (skillValue) => {
@@ -56,6 +57,11 @@ const Question3 = (props) => {
           onChange={() => handleSkillsChange('Typescript')}
         />
       </div>
+      <PreviousButton
+        whatQuestionPrevious="secondQuestion"
+        section={props.section}
+        setSection={props.setSection}
+      />
       <NextButton
         whatQuestionNext="fourthQuestion"
         section={props.section}

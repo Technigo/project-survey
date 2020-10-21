@@ -20,12 +20,15 @@ const Question1 = (props) => {
         placeholder="Type your name here please.."
         required
       />
-
-      <NextButton
-        whatQuestionNext="secondQuestion"
-        section={props.section}
-        setSection={props.setSection}
-      />
+      {props.name !== '' && (
+        <NextButton
+          whatQuestionNext="secondQuestion"
+          section={props.section}
+          setSection={props.setSection}
+          name={props.name}
+          setName={props.setName}
+        />
+      )}
     </article>
   );
 };

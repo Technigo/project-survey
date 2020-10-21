@@ -1,5 +1,6 @@
 import React from 'react';
 import NextButton from 'components/NextButton.js';
+import PreviousButton from 'components/PreviousButton.js';
 
 const Question2 = (props) => {
   const handleAgeChange = (event) => {
@@ -25,6 +26,11 @@ const Question2 = (props) => {
           </label>
         ))}
       </div>
+      <PreviousButton
+        whatQuestionPrevious="firstQuestion"
+        section={props.section}
+        setSection={props.setSection}
+      />
       <NextButton
         whatQuestionNext="thirdQuestion"
         section={props.section}

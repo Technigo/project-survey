@@ -26,7 +26,8 @@
   outline: none;
 }
 
-.form__input:focus {
+.form__input:focus,
+.form__input:hover {
   border-bottom: 1px solid #fff;
 }
 
@@ -56,6 +57,7 @@
   padding: 5px 20px;
   background: none;
   border: 1px #000 solid;
+  margin: 0 20px;
 }
 
 .form__submit-button:hover,

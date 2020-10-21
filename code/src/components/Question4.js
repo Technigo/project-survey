@@ -1,5 +1,6 @@
 import React from 'react';
 import NextButton from 'components/NextButton.js';
+import PreviousButton from 'components/PreviousButton.js';
 
 const Question4 = (props) => {
   //One way data-binding
@@ -19,7 +20,11 @@ const Question4 = (props) => {
         className="form__input"
         placeholder="Write your suggestions here, please"
       />
-
+      <PreviousButton
+        whatQuestionPrevious="thirdQuestion"
+        section={props.section}
+        setSection={props.setSection}
+      />
       <NextButton
         whatQuestionNext="fifthQuestion"
         section={props.section}
