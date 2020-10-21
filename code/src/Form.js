@@ -12,26 +12,41 @@ import { useState } from 'react'
 export const Form = () => {
     const [ageGroup, setAgeGroup] = useState('');
     const [location, setLocation] = useState('');
-    const [text, setText] = useState()
+    const [text, setText] = useState('');
+    const [submit, setSubmit] = useState(false);
 
 
     return (
         <>
+        {submit === false ? (
+            <form onSubmit={(e) => { e.preventDefault(); setSubmit(true) }} >
         <Header />
         <FirstQuestion 
         ageGroup={ageGroup}
         setAgeGroup={setAgeGroup}
         />
+
         <SecondQuestion
         location={location}
         setLocation={setLocation} 
         />
+
         <ThirdQuestion
         text={text}
         setText={setText}
          />
+
         <SubmitButton />
-        <Summary />
+
+        </form>
+        ) : (
+        <Summary 
+        ageGroup={ageGroup}
+        location={location}
+        text={text} 
+        />
+        ) } 
         </>
     )
-}
+} 
+

@@ -12,7 +12,6 @@ export const FirstQuestion = ({ageGroup, setAgeGroup}) => {
 
     return (
         <div className='first-question'>
-        <form>
             <h2>How old are you?</h2>
             Age:
             {ageGroups.map(group => (
@@ -27,7 +26,6 @@ export const FirstQuestion = ({ageGroup, setAgeGroup}) => {
                 {group}
             </label>
             ))}
-        </form>
         </div>
         
         );
