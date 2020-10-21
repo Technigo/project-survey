@@ -2,15 +2,9 @@
     box-sizing: border-box;
 }
 
-body {
-    display: grid;
-    grid-template-rows: min-content;
-    grid-template-columns: min-content;
-    justify-content: center;
-    background-image: url('./pineapple-supply-co-prP9CYcRpzA-unsplash.jpg');
-    object-fit: contain;
-    background-position: center;
-}
+/* body {
+    
+} */
 
 .app__wrapper {
     margin: 20px;

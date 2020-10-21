@@ -5,9 +5,20 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: grid;
+    grid-template-rows: min-content;
+    grid-template-columns: min-content;
+    justify-content: center;
+    background-image: url('./pineapple-supply-co-prP9CYcRpzA-unsplash.jpg');
+    object-fit: contain;
+    background-position: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main {
+  width: 100vw;
 }
