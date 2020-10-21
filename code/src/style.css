@@ -10,12 +10,11 @@ body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif, 'Damion', cursive;
+    sans-serif, "Playfair Display", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #EBC583;
+  background:white;
   color: white;
-  width: 100%;
 }
 
 code {
@@ -36,22 +35,35 @@ section {
   width: 100%;
 }
 
+h2, label {
+  font-size: 60px;
+  font-family: "Playfair display";
+  align-items: center;
+}
+
 .reflection-section {
-  background: #EBC583;
+  background: #663D42; 
 }
 
 .reason-section {
-  background: #F04862;
+  background: #41272A;
 }
 
 .weather-section {
-  display: flex;
-  background: #614CD9;
+  background: #4D2E31;
 }
 
 .option-container {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   margin: 40px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
 }
 
 .option {
@@ -59,7 +71,7 @@ section {
 }
 
 .culture-section {
-  background: #48F0DA;
+  background:#331F21;
 }
 
 form {
@@ -68,29 +80,36 @@ form {
   align-items: center;
 }
 
-.question {
-  display: flex;
-  flex-direction: column;
-}
-
 label {
-  font-size: 20px;
-  color: black;
+  color: white;
+  font-family: "Playfair display";
+  font-size: 40px;
   }
 
 select {
+  font-family: "Playfair display";
+  cursor: pointer;
+  border: none;
   margin: 10px 0px 40px 0px;
   padding: 50px 100px;
+  font-size: 24px;
   border-radius: 15px;
-  border: none;
 }
 
-  
 input {
   border: none;
+  font-family: "Playfair display";
+  font-weight: bold;
+  font-size: 16px;
   margin: 20px 10px;
   padding: 20px;
   border-radius: 15px;
+  width: 100%;
+  height: 40%;
+}
+
+input:hover, select:hover {
+  background: lightgrey;
 }
 
 button {
@@ -98,38 +117,113 @@ button {
   background: white;
   padding: 20px 40px;
   border-radius: 15px;
-  margin-top: 40px;
+  margin-top: 100px;
 }
 
-a {
+a, .submit{
   text-decoration: none;
   color: black;
   font-weight: bold;
   font-size: 16px;
+}
 
+button:hover {
+  background: lightgrey;
 }
 
   /* Mobile */
 
-  @media (max-width: 768px) {
+  @media (max-width: 600px) {
 
 
-    h1 {
-      font-size: 80px;
-      padding: 0px 40px;
-      margin: 40px;
+    .option-container {
+      flex-direction: row;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+
+    .option {
+      font-size: 16px;
+      width: 10%;
+    }
+
+    input {
+      font-size: 16px;
+      margin: 15px 0px;
+      font-weight: normal;
+      width: 100%;
+      height: 10%;
+    }
+
+    label, .question {
+      width: 80%;
+    }
+
+    label, .option {
+      width: 50%;
+      margin: 0;
+    }
+
+    .question {
+      font-size: 24px;
+    }
+
+    button {
+      padding: 10px 25px;
+      margin: 50px 0px;
     }
 
   }
 
+  /* Tablet */
 
-  /* Desktop */
+  @media (min-width: 601px) and (max-width: 1024px) {
 
-  @media (min-width: 1025px) {
-
-    h1 {
-      font-size: 100px;
-      padding: 0px 40px;
-      margin: 40px;
+    .option-container {
+      flex-direction: row;
     }
+
+    .option {
+      font-size: 28px;
+    }
+
+    h2 {
+      font-size: 36px;
+    }
+
+    input {
+      font-size: 16px;
+      margin: 20px 0px;
+      width: 100%;
+      font-weight: normal;
+    }
+
+    label, .question {
+      width: 60%;
+    }
+
+    label, .option {
+      width: 50%;
+      margin: 10px 0px;
+    }
+
+    .question {
+      font-size: 32px;
+    }
+
+    button {
+      padding: 15px 40px;
+      margin: 30px 0px;
+    }
+
+    a, .submit{
+      font-size: 18px;
+    }
+
+
+
+
   }

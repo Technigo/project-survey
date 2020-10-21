@@ -1,4 +1,5 @@
 import React, { useState } from "react"
+
 import "./style.css"
 import { Summary } from "./components/Summary.js"
 import { Header } from "./components/Header.js"
@@ -21,11 +22,12 @@ export const App = () => {
 
   return (
     <main>
-      
-        <form onSubmit= {handleSubmit}>
+      {!showSummary ? (
+        <form onSubmit={handleSubmit}>
           <Header reflection= {reflection}/>
           <section className="reflection-section" id="reflection">
             <h2 className="question">How is your day?</h2>
+            <img className="arrow" src="../public/assets/arrow.png"></img>
             <select
               value={reflection}
               onChange ={event => setReflection(event.target.value)}
@@ -100,11 +102,14 @@ export const App = () => {
                 onChange={event => setCulture (event.target.value)}
               />
             </label>
-            <button type="submit">Done for today!</button>
+            <button type="submit" className="submit">Done for today!</button>
           </section>
       </form>
-
-      {showSummary && <Summary reflection= {reflection} />}
+      ) : (
+      <Summary reflection={reflection}/>
+        )
+      }
     </main>
   )
 }
+

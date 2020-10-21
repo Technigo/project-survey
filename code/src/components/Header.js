@@ -4,7 +4,7 @@ import "./header.css"
 export const Header = ({reflection}) => {
   return (
     <header>
-      <h1>Daily notes</h1>
+      <h1>Daily Notes</h1>
     </header>
   )
 } 

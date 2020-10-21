@@ -3,15 +3,25 @@ header {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background: #f8fafb;
+  background: #9E5F66;
   padding: 20px;
   width: 100%;
   height: 100vh;
 }
 
 h1 {
-  color: black;
+  font-family: 'Playfair display';
+  color: white;
   margin: 0;
   width: 100%;
-  font-style: Damion;
+  font-size: 120px;
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+
+  h1 {
+    font-size: 60px;
+    margin: 0;
+  }
 }
