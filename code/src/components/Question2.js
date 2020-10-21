@@ -16,15 +16,15 @@ const Question2 = (props) => {
 
   return (
     <form>
+      <label for="drop-down">{props.question}</label>
       <select
         onChange={(event) => setDistance(event.target.value)}
         value={distance}
-      >
-        <option value="">{props.question}</option>
-        <option value="0-10 km">0-10 km</option>
-        <option value="20-50 km">20-50 km</option>
-        <option value="50+ km">50+ km</option>
-
+        id="drop-down"
+        name="distance"
+      >{dropDownOptionsArray.map((option) => {
+        return <option value={option}>{option}</option>
+      })}
       </select>
     </form>
 
