@@ -2,17 +2,16 @@ import React, { useState } from 'react'
 import './Input.css'
 
 
-export const Input = () => {
-    const[mail, setMail] = useState("")
+export const Input = (props) => {
 
     return (
         <label className="input">
             <h3>Your email:</h3>
             <input
                 type="text"
-                value={mail}
                 placeholder="Write your email"
-                onChange={(event => setMail(event.target.value))}
+                onChange={event => props.onChanged(event.target.value)}
+                value={props.value}
                 required
             />
         </label>

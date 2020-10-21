@@ -1,8 +1,8 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import './Checkbox.css'
 
 export const Checkbox = () => {
-    const [wantTerms, setWantTerms] = useState("")
+  const [wantTerms, setWantTerms] = useState("")
 
     return (
         <div className="checkbox">

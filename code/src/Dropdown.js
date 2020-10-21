@@ -1,22 +1,21 @@
 import React, { useState } from 'react'
 import "./Dropdown.css"
 
-export const Dropdown = () => {
-    const [location, setLocation] = useState("")
+export const Dropdown = (props) => {
 
     return (
         <label className="country">
             <h3> Choose your destination: </h3> 
             <select 
-                onChange={event => setLocation(event.target.value)}
-                value={location}
+                onChange={event => props.onChanged(event.target.value)}
+                value={props.value}
             >
                 <option value=""> - Select country - </option>
-                <option value="bali">Bali</option>
-                <option value="srilanka">Sri Lanka</option>
-                <option value="madagascar">Madagascar</option>
-                <option value="fiji">Fiji</option>
-                <option value="seychelles">Seychelles</option>
+                <option value="Bali">Bali</option>
+                <option value="Sri Lanka">Sri Lanka</option>
+                <option value="Madagascar">Madagascar</option>
+                <option value="Fiji">Fiji</option>
+                <option value="Seychelles">Seychelles</option>
                 
             </select>
         </label>
