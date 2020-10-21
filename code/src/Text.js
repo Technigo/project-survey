@@ -1,19 +1,23 @@
 import React from 'react'
+import './Text.css'
+import img from './images/power.jpg'
 
 const Text = ({value, setText }) => {
     return (
-        <section>
-            <label htmlFor="related-text"></label>
-            <h3>Coolest Power Ranger character from 1993?</h3>
+        <section className="text-wrapper">
+            <label htmlFor="power-ranger-text"></label>
+            <h3>Coolest Power Ranger character?</h3>
             <img
                 className="power-rangers-image"
                 alt="power rangers"
+                src={img}
             />
             <input
-                name="related-text"
+                name="power-ranger-text"
                 type="text"
                 onChange={(event) => setText(event.target.value)}
                 value={value}
+                placeholder="Coolest color is..."
                 required
             />
         </section>)

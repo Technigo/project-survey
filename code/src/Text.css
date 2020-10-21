@@ -1,10 +1,10 @@
-.turtles-wrapper{
+.text-wrapper{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.turtles-image{
-    width: 60%;
+.power-rangers-image{
+    width: 70%;
     margin-bottom: 3vh;
 }

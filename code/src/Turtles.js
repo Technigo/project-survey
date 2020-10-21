@@ -1,6 +1,6 @@
 import React from 'react'
 import './Turtles.css'
-import img from './images/ninja.jpg'
+import img from './images/ninja.png'
 
 const Turtle = props => {
     const {setTurtles, turtle} = props
