@@ -9,6 +9,8 @@ import {Summary} from './Summary'
 
 export const App = () => {
   const [location, setLocation] = useState("")
+  const countries = ['Bali', 'Sri Lanka', 'Seychelles', 'Fiji', 'Madagascar']
+
   const [duration, setDuration] = useState ("")
   const[mail, setMail] = useState("")
 
@@ -25,7 +27,14 @@ export const App = () => {
       
       {!showSummary ?  (
         <form onSubmit={handleSubmit}> 
-          <Dropdown value={location} onChanged={setLocation} />
+
+          <Dropdown
+            label='Choose your destination:' 
+            title='Select country' 
+            values={countries} 
+            selectedValue={location} 
+            onChanged={setLocation} />
+
           <Radio value={duration} onChanged={setDuration}/>
           <Input value={mail} onChanged={setMail} />
           <Checkbox />

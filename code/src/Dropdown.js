@@ -1,22 +1,23 @@
-import React, { useState } from 'react'
+import React from 'react'
 import "./Dropdown.css"
 
 export const Dropdown = (props) => {
 
     return (
-        <label className="country">
-            <h3> Choose your destination: </h3> 
+        <label className="label">
+            <h3> {props.label} </h3> 
             <select className="dropdown"
                 onChange={event => props.onChanged(event.target.value)}
-                value={props.value}
+                value={props.selectedValue}
             >
-                <option value=""> - Select country - </option>
-                <option value="Bali">Bali</option>
-                <option value="Sri Lanka">Sri Lanka</option>
-                <option value="Madagascar">Madagascar</option>
-                <option value="Fiji">Fiji</option>
-                <option value="Seychelles">Seychelles</option>
-                
+            <option value="">{props.title}</option>
+            {props.values.map((item, index) => {
+                return (
+                    <option key={index} value={item}>
+                        {item}
+                    </option>
+                )
+            })}
             </select>
         </label>
     )

@@ -22,11 +22,11 @@ form {
   flex-direction: column;
   align-items: center;
   max-width: 70%;
-  margin: 10px 0 50px 0;
+  margin: 10px 0 70px 0;
   padding: 10px 50px 10px 50px;
 }
 
-.country{
+.label {
   margin: 30px 0 50px 0;
   text-align: center;
 }
@@ -51,12 +51,8 @@ button {
   width: 90px;
   background-color:rgb(225, 236, 216) ;
   border-radius: 25%;
-}
 
-button:hover {
-  background-color: rgb(160, 190, 167);
-  transition: 0.3s ease;
-} 
+}
 
 .btn {
   margin-bottom: 40px;
