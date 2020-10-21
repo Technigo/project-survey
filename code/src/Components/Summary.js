@@ -11,7 +11,6 @@ export const Summary = (props) => {
       <p> {name}, we will send you and offer with for your dream {interest} vacation to your email {email}. 
       We are happy to recomend {option} for your {interest} vacation, it will truly be a holiday that you will never forget!</p>
 
-      
     </>
   )
 }

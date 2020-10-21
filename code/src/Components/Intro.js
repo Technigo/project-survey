@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Welcome = (props) => {
+export const Intro = (props) => {
 
  
 
