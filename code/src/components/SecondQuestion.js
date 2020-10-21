@@ -7,7 +7,7 @@ export const SecondQuestion = (props) => {
 
   const checkInput = () => {
     if (numberOption) {
-      return () => setVisible(true);
+      setVisible(true);
     }
   };
 
@@ -33,7 +33,7 @@ export const SecondQuestion = (props) => {
               onChange={(event) => onNumberChange(event.target.value)}
               required />
           </label>
-          <button className="first-button" onClick={checkInput()}>NEXT</button>
+          <button className="first-button" onClick={checkInput}>NEXT</button>
         </div>
       </form>
       {(visible === true) && <ThirdQuestion finalDestination={props.chosenDestination} chosenNumber={numberOption} />}

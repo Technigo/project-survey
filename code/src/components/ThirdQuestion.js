@@ -7,7 +7,7 @@ export const ThirdQuestion = (props) => {
 
   const checkInput = () => {
     if (dayOption) {
-      return () => setVisible(true);
+      setVisible(true);
     }
   };
 
@@ -35,7 +35,7 @@ export const ThirdQuestion = (props) => {
           </label>
           <button
             className="last-button"
-            onClick={checkInput()}
+            onClick={checkInput}
             aria-label="Enter and Tab to reveal your dream vacation">
             <a href="#final-text" aria-hidden="true" tabIndex="-1">Dream away!</a>
           </button>

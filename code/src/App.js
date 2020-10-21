@@ -6,7 +6,7 @@ export const App = () => {
   const [visible, setVisible] = useState(false);
 
   const checkInput = () => {
-    return () => setVisible(true);
+    setVisible(true);
   };
 
   return (
@@ -15,7 +15,7 @@ export const App = () => {
         <section className="landing-page-container">
           <h1 className="vacation-title" tabIndex="0">Vacation Plans Generator</h1>
           <h2 className="vacation-slogan" tabIndex="0">Your Corona-friendly<br></br>digital getaway!</h2>
-          <button className="start-button" onClick={checkInput()} aria-label="Press Enter and Tab to Start" type="button"><a href="#first-question" aria-hidden="true" tabIndex="-1">START</a></button>
+          <button className="start-button" onClick={checkInput} aria-label="Press Enter and Tab to Start" type="button"><a href="#first-question" aria-hidden="true" tabIndex="-1">START</a></button>
           <img src="assets/landing-page-img.png" className="img-landing" alt="Vacation planner" />
         </section>
         {(visible === true) && <FirstQuestion />}

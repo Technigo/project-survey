@@ -10,7 +10,7 @@ export const FirstQuestion = () => {
 
   const checkInput = () => {
     if (destinationOption) {
-      return () => setVisible(true);
+      setVisible(true);
     }
   };
 
@@ -37,7 +37,7 @@ export const FirstQuestion = () => {
               {destination}
             </label>
           ))}
-          <button className="first-button" onClick={checkInput()}>NEXT</button>
+          <button className="first-button" onClick={checkInput}>NEXT</button>
         </div>
       </form>
       {(visible === true) && <SecondQuestion chosenDestination={destinationOption} />}
