@@ -21,9 +21,9 @@ export const TextInput = (props) => {
 
   const validateInput = (value) => {
     
-   
-    const regex = /\d/g;
-    if(value.length > 1 && value !== "" && !regex.test(value))
+   const pattern = (/^[A-Za-z]+$/)
+
+    if(value.length > 1 && value !== "" && pattern.test(value))
     {
        setIsValidated(true);
        return true;
