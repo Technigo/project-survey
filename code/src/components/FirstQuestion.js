@@ -23,7 +23,7 @@ export const FirstQuestion = ({ handleDestination, destinationChoice }) => {
             <label key={destination} aria-label={destination} htmlFor="destinationInput">
               <input
                 id="destinationInput"
-                name="color-options"
+                name="destination-options"
                 type="radio"
                 value={destination}
                 onChange={(event) => handleDestination(event.target.value)}
