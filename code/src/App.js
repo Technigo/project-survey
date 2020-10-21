@@ -17,7 +17,7 @@ export const App = () => {
       <Question1 question="Where do you live?" />
       <Question2 question="How far are you moving?" options={dropDownOptionsArr} />
       <Question3 question="Do you want to order our cleaning service as well?" />
-      {/* <Submit text="Submit" /> */}
+      <Submit text="Submit" />
       {/* <Footer /> */}
     </div>
   )

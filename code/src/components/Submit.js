@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 
 // onClick hide the previous content and display summary of answers
 export const Submit = (props) => {
