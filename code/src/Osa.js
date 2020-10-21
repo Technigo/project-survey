@@ -36,6 +36,7 @@ export const Osa = () => {
         Vem är det som kommer?
         <input
           type="text"
+          placeholder="Namn Efternamn"
           value={name}
           onChange={event => setName(event.target.value)}
         /> 
@@ -76,18 +77,26 @@ export const Osa = () => {
         Önska en låt
         <input
           type="text"
+          placeholder="Artist och låt"
           value={song}
           onChange={event => setSong(event.target.value)}
         />
       </label>
       </div>
       <div className="submit">
-      <button type="submit">Submit</button>
+      <button type="submit">RSPV</button>
       </div>
     </form>
     )}
-    {summary && <Summary name={name} respond={respond} food={food} song={song} drink={drink} />}
-    </>
+    {summary && 
+      <Summary 
+        name={name} 
+        respond={respond} 
+        food={food} 
+        song={song} 
+        drink={drink} 
+      />}
+  </>
   )
 }
 

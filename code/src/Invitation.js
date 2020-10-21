@@ -2,7 +2,6 @@ import React from "react"
 
 export const Invitation = ({date, time, place}) => {
   return (
-  <>
     <section className="practical-info">
       <h2>Det vankas födelsedag och nyårsfest i Gysa</h2>
         <p>Det är inte så ofta vi har riktiga fester längre, därför känns det dumt att inte fira när tillfälle ges.
@@ -14,6 +13,5 @@ export const Invitation = ({date, time, place}) => {
             <li>Lillholmsjö</li>
           </ul>
     </section>
-  </>
   )
 }
