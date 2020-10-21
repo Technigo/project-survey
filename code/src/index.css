@@ -24,3 +24,11 @@ code {
 .header-title {
   color: #fff;
 }
+
+.survey-container {
+  margin-top: 20px;
+}
+
+.hide {
+  display: none;
+}

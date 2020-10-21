@@ -1,12 +1,12 @@
 import React from 'react';
-import { Header } from './Header';
-import { Survey } from './Survey';
+import Header from './Header';
+import SurveyForm from './SurveyForm';
 
 export const App = () => {
   return (
     <div>
       <Header />
-      <Survey />
+      <SurveyForm />
     </div>
   );
 };

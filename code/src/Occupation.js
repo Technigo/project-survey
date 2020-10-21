@@ -1,10 +1,17 @@
 import React from 'react';
 
-export const Occupation = () => {
+const Occupation = ({occupation, onOccupationChange}) => {
   return (
     <div className="occupation-input">
-      <label id="occupation" className="occupation-input-label">Your job</label>
-      <input type="text" id="occupation" />
+      <label htmlFor="occupation">Your job</label>
+      <input 
+        type="text" 
+        id="occupation"
+        onChange={(event) => onOccupationChange(event.target.value)}
+        value={occupation}
+      />
     </div>
   )
 }
+
+export default Occupation;
