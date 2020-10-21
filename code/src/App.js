@@ -1,27 +1,9 @@
-import React, { Component } from 'react'
+import React from 'react';
+import Form from './Form';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      selectedOptions: "o"
-    }
-  }
-  render() {
-    return(
-      {
-
-      }
-    )
-  }
-}
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+      <Form />
+  );
 }
-
-export default App;
