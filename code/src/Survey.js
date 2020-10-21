@@ -160,12 +160,26 @@ export const Survey = () => {
             question={
               "Thanks for doing this survey! Please check your agegroup:"
             }
-            valueOne={"0-20"}
+            threeRadioButtonsArray={[
+              {
+              value:"0-20",
+              message:"Teeny tiny baby"
+              },
+              {
+                value:"21-60",
+                message:"Prime years baby"
+              },
+              {
+                value: "61-100",
+                message: "Oldie but goldie"
+              }
+            ]}
+            /* valueOne={"0-20"}
             valueTwo={"21-60"}
             valueThree={"61-100"}
             messageOne={"Teeny tiny baby"}
             messageTwo={"Prime years baby"}
-            messageThree={"Oldie but goldie"}
+            messageThree={"Oldie but goldie"} */
           />
           <Checkbox
             checkboxOne={checkboxOne}
