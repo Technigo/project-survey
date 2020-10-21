@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const questionGroups = [
     "0-5",
@@ -6,24 +6,22 @@ const questionGroups = [
     "12-17"
 ]
 
-const Radio = () => {
-    const [questionGroup, setQuestionGroup] = useState()
+const Radio = props => {
+    const { setQuestionGroup, questionGroup } = props
     return (
         <div>
-            <form>
-                Using map instead
-                {questionGroups.map(group => (
-                    <label key={group}>
-                        <input
+            <h3>Question for radio buttons</h3>
+            {questionGroups.map(group => (
+                <label htmlFor="InputRadio" key={group}>
+                    <input
                         type="radio"
                         value={group}
                         onChange={event => setQuestionGroup(event.target.value)}
                         checked={questionGroup === group}
-                        />
-                        {group}
-                    </label>
-                ))}
-            </form>
+                    />
+                    {group}
+                </label>
+            ))}
         </div>
     )
 }

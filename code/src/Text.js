@@ -1,19 +1,17 @@
 
-import React, { useState } from 'react'
+import React from 'react'
 
-const Text = () => {
-    const [name, setName] = useState('')
+const Text = ({ question, value, setText }) => {
     return (
         <section>
-        <form>
-            <label htmlFor="related-text"> Text visible before textbox </label>
+            <label htmlFor="related-text"></label>
+            <h3>{question}</h3>
             <input
-                type="text"
                 name="related-text"
-                onChange={(event) => setName(event.target.value)}
-                value={name}
+                type="text"
+                onChange={(event) => setText(event.target.value)}
+                value={value}
             />
-        </form>
         </section>)
 }
 

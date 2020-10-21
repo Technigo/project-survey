@@ -6,14 +6,17 @@ import Radio from './Radio'
 
 
 export const App = () => {
+  const handleSubmit = event => {
+  }
   return (
     <section>
       <h1> Which lalala are you based on la</h1>
+      <form onSubmit={handleSubmit}>
       <Text />
       <Select />
       <Radio />
       <button type="submit"> I'M DONE </button>
-
+      </form>
     </section>
   )
 }
