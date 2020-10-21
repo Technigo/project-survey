@@ -36,7 +36,7 @@ section {
 }
 
 h2, label {
-  font-size: 60px;
+  font-size: 40px;
   font-family: "Playfair display";
   align-items: center;
 }
@@ -80,18 +80,12 @@ form {
   align-items: center;
 }
 
-label {
-  color: white;
-  font-family: "Playfair display";
-  font-size: 40px;
-  }
-
 select {
   font-family: "Playfair display";
   cursor: pointer;
   border: none;
   margin: 10px 0px 40px 0px;
-  padding: 50px 100px;
+  padding: 40px 100px;
   font-size: 24px;
   border-radius: 15px;
 }
@@ -117,7 +111,7 @@ button {
   background: white;
   padding: 20px 40px;
   border-radius: 15px;
-  margin-top: 100px;
+  margin-top: 70px;
 }
 
 a, .submit{
@@ -190,7 +184,7 @@ button:hover {
       font-size: 28px;
     }
 
-    h2 {
+    label, h2 {
       font-size: 36px;
     }
 
@@ -208,10 +202,6 @@ button:hover {
     label, .option {
       width: 50%;
       margin: 10px 0px;
-    }
-
-    .question {
-      font-size: 32px;
     }
 
     button {

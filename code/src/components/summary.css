@@ -1,0 +1,25 @@
+
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #663D42; 
+  padding: 20px;
+  height: 100vh;
+}
+
+.summary-heading {
+  font-size: 48px;
+}
+
+p {
+  font-family: "Playfair";
+  width: 50%;
+  font-size: 28px;
+}
+
+button {
+  font-weight: bold;
+  text-transform: uppercase;
+}
