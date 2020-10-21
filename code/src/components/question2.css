@@ -1,0 +1,8 @@
+.form-container {
+  display: flex;
+  border: 1px solid blueviolet;
+}
+
+label:first-child {
+  margin-right: 10px;
+}

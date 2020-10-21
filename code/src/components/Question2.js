@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import "components/question2.css"
 
 const dropDownOptionsArray = ["0-10 km", "20-50 km", "50+ km"];
 
@@ -15,18 +16,20 @@ const Question2 = (props) => {
   // };
 
   return (
-    <form>
-      <label for="drop-down">{props.question}</label>
-      <select
-        onChange={(event) => setDistance(event.target.value)}
-        value={distance}
-        id="drop-down"
-        name="distance"
-      >{dropDownOptionsArray.map((option) => {
-        return <option value={option}>{option}</option>
-      })}
-      </select>
-    </form>
+    <section className="section-container">
+      <form className="form-container">
+        <label for="drop-down">{props.question}</label>
+        <select
+          onChange={(event) => setDistance(event.target.value)}
+          value={distance}
+          id="drop-down"
+          name="distance"
+        >{dropDownOptionsArray.map((option) => {
+          return <option value={option}>{option}</option>
+        })}
+        </select>
+      </form>
+    </section>
 
 
 
