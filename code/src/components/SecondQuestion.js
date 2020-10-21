@@ -36,7 +36,11 @@ export const SecondQuestion = (props) => {
           <button className="first-button" onClick={checkInput}>NEXT</button>
         </div>
       </form>
-      {(visible === true) && <ThirdQuestion finalDestination={props.chosenDestination} chosenNumber={numberOption} />}
+      {(visible === true) && (
+        <ThirdQuestion
+          finalDestination={props.chosenDestination}
+          chosenNumber={numberOption} />
+      )}
     </>
   );
 };

@@ -42,3 +42,6 @@ export const FirstQuestion = ({ handleDestination, destinationChoice }) => {
 
 /* All three questions are being generated inside <section> with class "questions-container".
 They are 3 separate form elements */
+/* The checkInput function will check that the user has chosen an option from the input (checking
+destinationChoice in this case, and if that's true, it will change visible state to true, which
+ends up generating the next question component */

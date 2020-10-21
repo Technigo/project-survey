@@ -41,7 +41,17 @@ export const ThirdQuestion = (props) => {
           </button>
         </div>
       </form>
-      {(visible === true) && <FinalText resultDestination={props.finalDestination} resultNumber={props.chosenNumber} resultDay={dayOption} />}
+      {(visible === true) && (
+        <FinalText
+          resultDestination={props.finalDestination}
+          resultNumber={props.chosenNumber}
+          resultDay={dayOption} />
+      )}
     </>
   );
 };
+
+/* The replies entered by the user are being passed from one question to the other by using props.
+So when one question is answered, the reply is being sent to the next question as a prop and so
+on, until all values are passed on to the FinalText component, where I can use them for the
+summary text */
