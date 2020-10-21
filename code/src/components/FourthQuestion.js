@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import './fourthQuestion.css'
 
 export const FourthQuestion = () => {
-    const [activity, setActivity] = useState("")
+    const [activity, setActivity] = useState(false)
 
     return (
         <section className="fourth-question" id="fourth">

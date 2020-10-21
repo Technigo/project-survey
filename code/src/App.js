@@ -7,15 +7,15 @@ import './app.css'
 
 export const App = () => {
   return (
-    <div className='main'>
+    <section className='main'>
 
-      <div className='intro'>
+      <div className="intro" id="intro">
         <h1>Daily self-care survey</h1>
         <h2>Let's start with a quick self-assessment check</h2>
         <div class="container">
           <img src="img/heart.png" class="heart" alt="human heart" />
         </div>
-        <button>begin</button>
+        <button><a href="#first">begin</a></button>
       </div>
       <div>
         <FirstQuestion />
@@ -29,6 +29,6 @@ export const App = () => {
       <div>
         <FourthQuestion />
       </div>
-    </div>
+    </section>
   )
 }

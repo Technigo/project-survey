@@ -24,6 +24,7 @@ export class Range extends React.Component {
                         value={this.state.value}
                         onChange={this.handleChange}
                         step="1"
+                        required
                     />
                     {this.state.value}
                 </label>

@@ -4,7 +4,7 @@ import './secondQuestion.css'
 export const SecondQuestion = () => {
 
     return (
-        <div className="second-question">
+        <section className="second-question" id="second">
             <form>
                 <h1>What did, or could have made your day better?</h1>
                 <h2>Every little thing counts!</h2>
@@ -18,6 +18,6 @@ export const SecondQuestion = () => {
                 />
                 <button>continue</button>
             </form>
-        </div>
+        </section>
     )
 }

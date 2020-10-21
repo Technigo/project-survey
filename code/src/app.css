@@ -21,6 +21,10 @@ button {
   padding: 14px 40px;
   cursor: pointer;
 }
+a {
+  text-decoration: none;
+  color: black;
+}
 label,
 select {
   margin-bottom: 100px;
