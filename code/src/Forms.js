@@ -38,6 +38,8 @@ const Forms = ({ onSubmit }) => {
               placeholder="Your Name"
               onChange={(event) => setName(event.target.value)}
               value={name}
+              required
+              pattern="/^[a-z ,.'-]+$/i"
             />
           </label>
 
@@ -49,6 +51,8 @@ const Forms = ({ onSubmit }) => {
               placeholder="Your Last Name"
               onChange={(event) => setLastName(event.target.value)}
               value={lastName}
+              required
+              pattern="/^[a-z ,.'-]+$/i"
             />
           </label>
 

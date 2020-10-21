@@ -14,7 +14,7 @@ export const App = () => {
 
   return (
     <>
-      {showSummary ? <Summary {...data} /> : <Forms onSubmit={handleSubmit} />}
+      {showSummary ? <Summary {...data} /> : <Forms onSubmit={handleSubmit} />};
     </>
   );
 };
