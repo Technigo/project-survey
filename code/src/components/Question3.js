@@ -11,7 +11,7 @@ const Question3 = (props) => {
     <section className="section-container">
       <p>{props.question}</p>
       <div className="radio-btn-container">
-        <div className="answer-container">
+        <fieldset className="answer-container">
           <input
             type="radio"
             id="yes"
@@ -21,8 +21,8 @@ const Question3 = (props) => {
             checked={answer === "YES"}
           ></input>
           <label htmlFor="yes">YES</label>
-        </div>
-        <div className="answer-container">
+        </fieldset>
+        <fieldset className="answer-container">
           <input
             type="radio"
             id="no"
@@ -32,7 +32,7 @@ const Question3 = (props) => {
             checked={answer === "NO"}
           ></input>
           <label for="no">NO</label>
-        </div>
+        </fieldset>
       </div>
     </section>
   )
