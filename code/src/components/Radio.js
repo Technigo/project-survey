@@ -2,7 +2,6 @@ import React from 'react'
 
 export const Radio = (props) => {
   const { frequency, setFrequency } = props
-
   const recur = [
     'Never',
     'A few times a year',
@@ -14,13 +13,13 @@ export const Radio = (props) => {
   return (
     <div className="question">
         How often do you buy Thing?
-          {recur.map((occur) => (
-            <p>
-              <label key={occur} className="answerOption">
+          {recur.map(occur => (
+            <p key={occur}>
+              <label className="answerOption">
                 <input 
                   type="radio"
-                  value={recur}
-                  onChange={(event) => setFrequency(event.target.value)} 
+                  value={occur}
+                  onChange={event => setFrequency(event.target.value)} 
                   checked={frequency === occur}
                 />
                 &nbsp;

@@ -27,7 +27,8 @@ code {
 .surveyContainer {
   margin-top: 50px;
   padding: 5%;
-  background: #f2edee;
+  background: #fff;
+  /* background: #f2edee; */
   border-radius: 8px;
   box-shadow:  29px 29px 58px #ddd2d4, 
                -29px -29px 58px #fffcfe;
@@ -53,4 +54,8 @@ h1 {
 
 select {
   margin-left: 10px;
+}
+
+.bold {
+  font-weight: 700;
 }

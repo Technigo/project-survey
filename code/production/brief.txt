@@ -1,48 +1,6 @@
-who are they shpping for? self? household? gift?
-
-
-how much would they pay? slider
-
-important features: cost, scent, packaging, clean burning, locally sourced ingredients, decorative packaging - checkboxes 
-dropdown: dependent on previous choices to rank importance of features
-
-submit button */}
-
-
-radio
-dropdown
-text
-checkbox (single, for multiple options, review maks demo)
-
-
-
-
-
-Once a user has submitted the survey you create, it doesn't actually need to be submitted anywhere - the focus here is to practice using React state and controlling forms, they should see a summary.
-
-You don't have to use a lot of components to start with when doing this project, see that as more of a stretch goal.
-
-
-6. Run the react development server by running `npm start`
-
-## Design 🎨
-How you design your page is up to you, but take accessibility into account when you are styling your form elements - so inputs should have labels and should be easily readable and usable.
-
-Feel free to use other survey tools such as [Typeform](https://www.typeform.com/templates/) as inspiration.
-
-
-
-
-
-## Requirements 🧪
-
-
 **🔵  Blue Level (Minimum Requirements)**
 
 - Your survey should consist of at least 3 questions.
-
-- At least one question should use a select dropdown.
-- There should be a submit button. When pressed your app should hide the input form and show a summary of the user's submissions.
 - Your site should follow accessibility guidelines
 
 Make sure you've committed and pushed a version of your project before starting with the intermediary and advanced goals.
