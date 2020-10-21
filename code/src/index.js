@@ -351,18 +351,12 @@ const App = () => {
                     <option disabled selected className="things">
                   </option>       
                     <option 
-                    value="Phone numbers"
-                    onChange={(event) => setThings(event.target.value)}
-                    checked={things === "phone number"}>
+                    value="Phone numbers">
                     Phone numbers</option>
-                    <option value="Broken code"
-                    onChange={(event) => setThings(event.target.value)}
-                    checked={things === "Broken code"}
-                    >Broken code</option>
-                    <option value="Coupons"
-                     onChange={(event) => setThings(event.target.value)}
-                     checked={things === "Coupons"}
-                     >Coupons</option>
+                    <option value="Broken code">
+                    Broken code</option>
+                    <option value="Coupons">
+                    Coupons</option>
 
                   </select>
                   </div>
