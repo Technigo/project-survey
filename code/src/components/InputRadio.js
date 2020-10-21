@@ -17,24 +17,22 @@ export const InputRadio = ({ question, array, setAge, age }) => {
   return (
     <>
       <h2>{question}</h2>
-
       {array.map(group => (
-        <div className="radio-wrapper">
-          <label htmlFor="InputRadio" key={group}>
+        <div className="radio-wrapper" tabIndex='0'>
+          <label key={group} htmlFor={group} className="radio-container">
             <input
-              name="InputRadio"
-              className="radio-container"
+              id={group}
               type='radio'
               value={group}
               onChange={event => setAge(event.target.value)}
               checked={age === group}
+            //onKeyPress={(event) => event.key === 'Enter'}
             />
             {group}
             <span className="custom-radio-btn"></span>
           </label>
         </div>
       ))}
-
     </>
   )
 }

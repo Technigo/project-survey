@@ -1,11 +1,22 @@
+h2 {
+	margin-bottom: 20px;
+}
+
+h4 {
+	text-align: center;
+	font-size: 28px;
+	font-weight: bold;
+}
+
 form {
-  display: flex;
-    /* justify-content: center; */
-    align-items: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
 }
 
 .form-wrapper {
-  background-image: linear-gradient(
+	background-image: linear-gradient(
 			to bottom,
 			rgba(0, 0, 0, 0.4),
 			rgba(0, 0, 0, 0.3)
@@ -15,28 +26,43 @@ form {
 	background-position-x: center;
 	background-position-y: 45%;
 	height: 100vh;
-	width: auto;
+	width: 100vw;
 	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 article {
-  /* position: absolute;
-  top: 25%; */
-  padding: 0 10%;
-  /* height: 200px; */
-  color: #FDF7EF;
-  display: flex;
-  flex-direction: column;
-    /* justify-content: space-around; */
+	padding: 0 10%;
+	width: 100%;
+	color: #fdf7ef;
+	display: flex;
+	flex-direction: column;
 }
 
-.summary-container {
-  position: absolute;
-  top: 25%;
-  padding: 0 10%;
-  /* height: 200px; */
-  color: #FDF7EF;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+.reset-wrapper {
+	width: 100%;
+}
+
+@media (min-width: 768px) {
+	.form-wrapper {
+		height: 70vh;
+		width: 50vw;
+	}
+
+	form {
+		width: 80%;
+	}
+}
+
+@media (min-width: 1024px) {
+	form {
+		width: 50%;
+	}
+
+	.intro-wrapper,
+	.reset-wrapper {
+		width: 70%;
+	}
 }
