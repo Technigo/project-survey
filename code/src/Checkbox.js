@@ -10,15 +10,16 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
             type="checkbox"
             checked={contactme.includes('newsletter')}
             onChange={() => onContactmeChange('newsletter')}
+            required
             />
 
             <label htmlFor="gdpr">GDPR</label>
             <input
             id="gdpr"
             type="checkbox"
-            required
             checked={contactme.includes('gdpr')}
             onChange={() => onContactmeChange('gdpr')}
+            required
             />
           </div>
     )

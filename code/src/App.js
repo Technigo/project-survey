@@ -1,3 +1,4 @@
+import { Header } from './Header.js'
 import { Nameinput } from 'Nameinput.js'
 import React, { useState } from 'react'
 import { Dropdown } from "./Dropdown.js"
@@ -14,7 +15,7 @@ export const App = () => {
   const [location, setLocation ] = useState('Stockholm');
   const [ageGroup, setAgeGroup] = useState('');
   const [showSummary, setShowSummary] = useState(false);
-  const [section, setSection] = useState('nameInput');
+  const [section, setSection] = useState('welcome');
   const [contactme, setContactme] = useState([]);
 
  const handleContactmeChange = contactmeValue => {
@@ -38,6 +39,21 @@ export const App = () => {
       <form
       action=""
       onSubmit={handleSubmit}>
+
+    {section === 'welcome' && (
+      <>
+
+      <Header />
+      <section className="button-container">
+        <button
+        type="button"
+        onClick={event => {setSection(event.target.value)}}
+        value="nameInput">
+        Click here to start!
+        </button>
+      </section>
+      </>
+    )}
 
     {section === 'nameInput' && (
       <>
