@@ -20,7 +20,7 @@ const Question3 = (props) => {
             onChange={event => setAnswer(event.target.value)}
             checked={answer === "YES"}
           ></input>
-          <label for="yes">YES</label>
+          <label htmlFor="yes">YES</label>
         </div>
         <div className="answer-container">
           <input

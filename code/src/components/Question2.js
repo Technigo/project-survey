@@ -18,15 +18,20 @@ const Question2 = (props) => {
   return (
     <section className="section-container">
       <form className="form-container">
-        <label for="drop-down">{props.question}</label>
+        <label htmlFor="drop-down">{props.question}</label>
         <select
           onChange={(event) => setDistance(event.target.value)}
           value={distance}
           id="drop-down"
           name="distance"
-        >{dropDownOptionsArray.map((option) => {
-          return <option value={option}>{option}</option>
-        })}
+        >
+          {/* If you want to mark an <option> as selected, reference the value of that option
+           in the value of its <select> instead. 
+           Check out “The select Tag” for detailed instructions. */}
+          {dropDownOptionsArray.map((option) => {
+            // return <option value={distance}>{option}</option>
+            return <option value={option}>{option}</option>
+          })}
         </select>
       </form>
     </section>

@@ -7,7 +7,7 @@ const Question1 = (props) => {
 
   return (
     <form className="section-container">
-      <label for="q1">{props.question}</label>
+      <label htmlFor="q1">{props.question}</label>
       <input
         type="text"
         id="q1"
