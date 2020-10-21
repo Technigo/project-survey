@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Survey } from "./Survey";
 import { Header } from "./Header";
 import "./app.css";

@@ -1,7 +1,8 @@
 * {
     box-sizing: border-box;
 }
-.app__wrapper {
+
+body {
     display: grid;
     grid-template-rows: min-content;
     grid-template-columns: min-content;
@@ -9,4 +10,9 @@
     background-image: url('./pineapple-supply-co-prP9CYcRpzA-unsplash.jpg');
     object-fit: contain;
     background-position: center;
+}
+
+.app__wrapper {
+    margin: 20px;
+    padding: 20px;
 }

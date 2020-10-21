@@ -8,10 +8,8 @@ import { Summary } from "./Summary";
 import "./survey.css";
 
 export const Survey = () => {
-  const [ageGroup, setAgegroup] = useState();
-  const [checkboxOne, setCheckboxOne] = useState(
-    false
-  ); /* Needs to be specified to either true or false to be controlled from the start */
+  const [ageGroup, setAgeGroup] = useState();
+  const [checkboxOne, setCheckboxOne] = useState(false); /* Needs to be specified to either true or false to be controlled from the start */
   const [celebrationDrink, setCelebrationDrink] = useState();
   const [rainyFood, setRainyFood] = useState();
   const [restaurantHunt, setRestaurantHunt] = useState();
@@ -77,12 +75,9 @@ export const Survey = () => {
               five={"Some fruits are always nice."}
             />
             <Radio
-              agegroup={ageGroup}
-              setAgegroup={setAgegroup}
-              question={
-                "Thanks for doing this survey! Please check your agegroup:"
-              }
-              name={"age"}
+              ageGroup={ageGroup}
+              setAgeGroup={setAgeGroup}
+              question={"Thanks for doing this survey! Please check your agegroup:"}
               valueOne={"20"}
               valueTwo={"60"}
               valueThree={"100"}
