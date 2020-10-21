@@ -6,7 +6,8 @@ export const Osa = () => {
   const [respond, setRespond] = useState (false);
   const [name, setName] = useState ("");
   const [song, setSong] = useState ("");
-  const [food, setFood] = useState ("Vegetarian");
+  const [food, setFood] = useState ("Vegetariskt");
+  const [drink, setDrink] = useState ("Alkohol");
   const [summary, setSummary] = useState (false);
 
   const handleSubmit = event => {
@@ -39,10 +40,28 @@ export const Osa = () => {
       <label>
         Mat
         <select value={food} onChange={(e)=>{setFood(e.target.value)}}>
-          <option value="vegetarian">Vegetarian</option>
-          <option value="flexitarian">Flexitarian</option>
-          <option value="allätare">Allätare</option>
+          <option value="vegetariskt">Vegetariskt</option>
+          <option value="flexitariskt">Flexitariskt</option>
+          <option value="allt">Allt</option>
         </select>
+      </label>
+      <label>
+        Alkohol
+        <input 
+          type="radio"
+          checked={drink === "alkohol"}
+          value="alkohol"
+          onChange={(e)=>{setDrink(e.target.value)}}
+          />
+      </label>
+      <label>
+        Alkoholfritt
+        <input 
+          type="radio"
+          checked={drink === "alkoholfritt"}
+          value="alkoholfritt"
+          onChange={(e)=>{setDrink(e.target.value)}}
+          />
       </label>
       <label>
         Önska en låt
@@ -55,9 +74,8 @@ export const Osa = () => {
       <button type="submit">Submit</button>
     </form>
     )}
-    {summary && <Summary name={name} respond={respond} />}
+    {summary && <Summary name={name} respond={respond} food={food} song={song} drink={drink} />}
     </>
   )
-
 }
 
