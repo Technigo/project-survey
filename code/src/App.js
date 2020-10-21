@@ -12,7 +12,7 @@ export const App = () => {
   const [email, setEmail] = useState('')
   const [interest, setInterest] = useState('')
   const [option, setOption] = useState('')
-  const [section, setSection] = useState('intro')
+  const [section, setSection] = useState('Intro')
 
   const handleSubmit = event => {
     event.preventDefault()
@@ -22,9 +22,9 @@ export const App = () => {
     <>
       <form action="" onSubmit={handleSubmit}>
 
-        {section === 'intro' && (
+        {section === 'Intro' && (
           <>
-            < intro />
+            < Intro />
             <section className="button-container">
               <button type="button"
                 onClick={event => {
@@ -36,6 +36,41 @@ export const App = () => {
             </section>
           </>
         )}
+
+        {section === 'firstQuestion' && (
+          <>
+            <Textinput name={name} setName={setName} phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} email={email} setEmail={setEmail} />
+            <section className="button-container">
+              <button type="button"
+                onClick={event => setSection(event.target.value)}
+                value='Intro'
+              >Back</button>
+              <button type="button"
+                onClick={event => {
+                  setSection(event.target.value)
+                }}
+                value='secondQuestion'
+              >Next</button>
+            </section>
+          </>
+        )}
+
+        {section === 'secondQuestion' && (
+          <>
+            <Radiobuttons interest={interest} setInterest={setInterest} />
+            <section className="button-container">
+              <button type="button"
+                onClick={event => setSection(event.target.value)}
+                value='firstQuestion'
+              >Back</button>
+              <button type="button"
+                onClick={event => setSection(event.target.value)}
+                value='thirdQuestion'
+              >Next</button>
+            </section>
+          </>
+        )}
+
       </form>
 
     </>
