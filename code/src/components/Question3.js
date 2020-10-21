@@ -1,19 +1,36 @@
-import React from 'react'
+import React, { useState } from 'react'
+
 import "./question3.css"
 
 
-export const Question3 = (props) => {
+const Question3 = (props) => {
+
+  const [answer, setAnswer] = useState("");
 
   return (
     <section className="section-container">
       <p>{props.question}</p>
       <div className="radio-btn-container">
         <div className="answer-container">
-          <input type="radio" id="yes" name="answer"></input>
+          <input
+            type="radio"
+            id="yes"
+            name="answer"
+            value="YES"
+            onChange={event => setAnswer(event.target.value)}
+            checked={answer === "YES"}
+          ></input>
           <label for="yes">YES</label>
         </div>
         <div className="answer-container">
-          <input type="radio" id="no" name="answer"></input>
+          <input
+            type="radio"
+            id="no"
+            name="answer"
+            value="NO"
+            onChange={event => setAnswer(event.target.value)}
+            checked={answer === "NO"}
+          ></input>
           <label for="no">NO</label>
         </div>
       </div>
