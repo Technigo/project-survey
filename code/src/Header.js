@@ -8,7 +8,7 @@ const Header = () => {
         Welcome to this Survey!
       </h1>
       <h2>
-        Please answer all the questions below and then press 'submit'.
+        Please take a few minutes to answer all the questions and then press 'submit'.
       </h2>
     </section>
   )
