@@ -2,14 +2,14 @@ body {
   margin: 0;
   color: #172439;
   font-family:'Merriweather', serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*HEADER*/
 
 header {
   background-image: url("./books_susan_yin.jpg");
@@ -28,8 +28,11 @@ h1 {
   padding: 10px 100px 10px 20px;
 }
 
+/*QUESTIONS PART*/
+
 .main-content {
   background-color: #F5F1EA ;
+  line-height: 26px;
 }
 
 form {
@@ -48,10 +51,11 @@ form {
   background-color: white;
 }
 
+/*QUESTION 1*/
+
 .dropdown {
   display: flex;
   flex-direction: column;
-  line-height: 26px;
   width: 90%
 }
 
@@ -64,13 +68,11 @@ select {
   font-size: 15px;
 }
 
+/*QUESTION 2*/
+
 fieldset {
   border: none;
   width: 90%;
-}
-
-legend {
-  line-height: 26px;
 }
 
 .numbers {
@@ -82,10 +84,12 @@ legend {
   margin: 10px;
   margin-right: 20px;
   margin-left: 0px;
+  line-height: 10px;
 }
 
+/*QUESTION 3*/
+
 .text-question {
-  line-height: 26px;
   width: 90%
 }
 
@@ -98,6 +102,8 @@ legend {
   font-size: 15px;
   text-indent: 7px;
 }
+
+/*SUBMIT AND SUMMARY PART*/
 
 button {
   padding: 10px;
@@ -113,5 +119,58 @@ button {
   align-items: flex-start;
   flex-direction: column;
   padding: 100px 60px;
-  line-height: 26px;
+}
+
+/*MEDIA QUERIES*/
+
+@media (min-width: 668px) {
+  header {
+    height: 400px;
+  }
+
+  h1 {
+    font-size: 48px;
+    width: 250px;
+    padding-right: 180px;
+    margin-left: 35px;
+  }
+
+  .main-content {
+    font-size: 26px;
+    line-height: 42px;
+  }
+
+  .question {
+    padding: 200px 130px;
+  }
+
+  .numbers {
+    margin-top: 10px;
+  }
+
+  .number-label {
+    line-height: 20px;
+  }
+
+  select, .text-input {
+    font-size: 20px;
+  }
+
+  button {
+    padding: 20px;
+    font-size: 30px;
+  }
+
+  .summary {
+    padding: 100px 130px;
+  }
+}
+
+@media (min-width: 1025px) {
+  h1 {
+    width: auto;
+    font-size: 63px;
+    margin-right: 35px;
+    padding-right: 20px;
+  }
 }

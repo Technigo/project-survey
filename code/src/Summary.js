@@ -8,7 +8,7 @@ export const Summary = ({ consumption, numberOfBooks, favouriteAuthor, onRestart
                 <p>It's awesome to {consumption}.</p>
                 <p>{favouriteAuthor} is a good choice.</p>
             </section>
-            <section className="question white">
+            <section className="summary white">
                 <button
                     onClick={onRestart}>
                         Start again
