@@ -3,14 +3,14 @@ import React from 'react';
 const footprints = ["1", "2", "3", "4", "5"];
 
 
-export const RadioInput = ({radioValue, setRadioValue}) => {
+export const RadioInput = ({question, radioValue, setRadioValue}) => {
 
 
     return (
 
-        <div>
-            <p>In general, how much do you think about your carbon footprint? {radioValue}</p>
-            
+        <div className="radio">
+            <h3>{question}</h3>
+            <div className="radio-options">
             {footprints.map(group => (
                 <label key={group} className="radio-label">
                 {group}
@@ -22,7 +22,8 @@ export const RadioInput = ({radioValue, setRadioValue}) => {
                 />
                 
                 </label>
-            ))}
+            ))}</div>
+            <div className="radio-description"><p>Not really</p> <p>Definitly</p></div>
         </div>
 
 

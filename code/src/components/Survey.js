@@ -8,9 +8,10 @@ import SelectInput from './SelectInput';
 
 export const Survey = () => {
     const [name, setName] = useState('');
-    const [something, setSomething] = useState('');
-    const [footprint, setFootprint] = useState('');
     const [city, setCity] = useState('');
+    const [housing, setHousing] = useState('');
+    const [footprint, setFootprint] = useState('');
+    const [lights, setLights] = useState('');
 
     const [isSubmit, setIsSubmit] = useState(false);
 
@@ -24,25 +25,38 @@ export const Survey = () => {
     if (isSubmit === false){
 
     return (
+        <>
         <form className="main-form" onSubmit={handleSubmit}>
 
             <TextInput question="What is your name?" inputAnswer={name} inputSet={setName} />
 
-            <TextInput question="Type something" inputAnswer={something} inputSet={setSomething} />
+            <RadioInput question="Are you concerned about the climate change?" radioValue={footprint} setRadioValue={setFootprint}/>
 
-            <RadioInput radioValue={footprint} setRadioValue={setFootprint}/>
+            <h2>Housing</h2>
 
-            <SelectInput selectValue={city} setSelectValue={setCity} />
+            <TextInput question="Where do you live?" inputAnswer={city} inputSet={setCity} />
+
+            <SelectInput question="Do you live in a house or apartment?" selectValue={housing} setSelectValue={setHousing} />
+
+            <RadioInput question="I always turn off the light when leaving a room." radioValue={lights} setRadioValue={setLights}/>
+
         
-            <input type="submit" value="Submit"/>
+            <input type="submit" value="Submit" className="submit-button"/>
         </form>
 
+        <div><p>Name: {name}, I live: {housing}, in a:{footprint}, My footprint:{city}</p></div>
+        </>
     ); }
 
     else 
             return ( 
             <div>
-             <p>{name}, {something}, {footprint}, {city}</p>
+             <h2>Hi {name}</h2>
+             <h3>Thank you for answering our survey. Below you can find a summary of your anwsers.</h3>
+            <p>Your concern about climate change: {footprint}/5</p>
+            <p>Your living situation: {housing}</p>
+            <p>Your habits concering lights: {lights}/5</p>
+            <p>Your concern about climate change: {footprint}/5</p>
             
             </div>
             

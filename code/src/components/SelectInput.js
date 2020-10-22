@@ -1,14 +1,14 @@
 import React from 'react';
 
-const SelectInput = ({selectValue, setSelectValue}) => {
+const SelectInput = ({question, selectValue, setSelectValue}) => {
 
     return( 
-    <label htmlFor="select-city">Select a city {selectValue}
-        <select name="Select" onChange={event => setSelectValue(event.target.value)} id="select-city">
+    <label htmlFor="select-city"><h3>{question}</h3>
+        <select name="Select" onChange={event => setSelectValue(event.target.value)} id="select-city" required>
             <option value="">Choose one...</option>
-            <option value="Stockholm">Stockholm</option>
-            <option value="Umeå">Umeå</option>
-            <option value="Milan">Milan</option>
+            <option value="House">House</option>
+            <option value="Apartment">Apartment</option>
+            <option value="Other">Other</option>
         </select>
     </label>
 
