@@ -17,7 +17,7 @@ export const App = () => {
  }
  
   return (
-    <section className='surveyContainer'>
+    <section className='surveyContainer' name="survey-container">
       
       <header>
         <h1>Product Survey</h1>
