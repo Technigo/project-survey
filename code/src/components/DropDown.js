@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const DropDown = () => {
-    const [brand, setBrand] = useState();
-
+export const DropDown = ({ brand, setBrand }) => {
     return (
         <form className="drop-down">
             <h2 tabIndex='0'>What brand do you use at the moment...</h2>

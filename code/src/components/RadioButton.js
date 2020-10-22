@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const knowHeadPhones = [
     "At par with an Audiophile",
@@ -6,8 +6,7 @@ const knowHeadPhones = [
     "I dont know much"
 ]
 
-export const RadioButton = () => {
-    const [knowHeadPhone, setKnowHeadPhone] = useState();
+export const RadioButton = ({ knowHeadPhone, setKnowHeadPhone }) => {
     return (
         <>
             <h2 className="radio-button-question">Your understanding of you headphone is...</h2>
