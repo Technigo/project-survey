@@ -4,7 +4,7 @@ import { Header } from 'components/Header';
 import { Dropdown } from './components/Dropdown';
 import { Radiobutton } from './components/Radiobutton';
 import { Textinput } from './components/Textinput';
-import { Checkbox } from './components/Checkbox';
+// import { Checkbox } from './components/Checkbox';
 import { Summary } from './components/Summary';
 import { Button } from 'components/Button';
 import 'components/AppCss.css';
@@ -18,7 +18,7 @@ export const App = () => {
   const [sweet, setSweet] = useState();
   const [showSummary, setShowSummary] = useState(false);
   const [question, setQuestion] = useState('question1');
-  {/*const [colors, setColors] = useStates([]);*/}
+  // const [colors, setColors] = useStates([]);
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -27,10 +27,10 @@ export const App = () => {
 
 
 
-  {/*const handleColorsChange = colorValue => {
-    colors.includes(colorValue)
-      ? setColors( colors.filter(item => item !== colorValue) )
-  : setColors ( [...colors, colorValue] );*/}
+  // const handleColorsChange = colorValue => {
+    // colors.includes(colorValue)
+      // ? setColors( colors.filter(item => item !== colorValue) )
+  // : setColors ( [...colors, colorValue] );
   
   
   return ( 
@@ -58,10 +58,10 @@ export const App = () => {
           setSweet={setSweet}
         />
 
-        {/*<Checkbox 
-          userColors={colors}
-          onColorsChange={handleColorsChange}
-        />*/}
+        {/* <Checkbox  */}
+          {/* userColors={colors} */}
+          {/* onColorsChange={handleColorsChange} */}
+        {/* /> */}
 
         <Button />
 
