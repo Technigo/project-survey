@@ -19,25 +19,25 @@ export const Input = () => {
         setShowSummary(true)
     }
 
-        return (
-            <main className="form-wrapper">
-                <div className="h1-wrapper">
-                    <h1 tabIndex="0"> Which is your favourite color based on comic characters? </h1>
-                </div>
-                {!showSummary ? (
-                    <form onSubmit={handleSubmit}>
-                        <label htmlFor="power-ranger-text"></label>
-                        <Text
-                            id="power-ranger-text"
-                            setText={setName}
-                            value={name}
-                        />
-                        < Teletub setTeletubbies={setTeletubbies} teletubbies={teletubbies} />
-                        < SailorMoon setSailorMoon={setSailorMoon} sailorMoon={sailorMoon} />
-                        < Turtles setTurtles={setTurtles} turtle={turtle} />
-                        <button disabled={!name || !teletubbies || !sailorMoon} type="submit"> I'M DONE </button>
-                    </form>
-                ):
+    return (
+        <main className="form-wrapper">
+            <div className="h1-wrapper">
+                <h1 tabIndex="0"> Which is your favourite color based on comic characters? </h1>
+            </div>
+            {!showSummary ? (
+                <form onSubmit={handleSubmit}>
+                    <label htmlFor="power-ranger-text"></label>
+                    <Text
+                        id="power-ranger-text"
+                        setText={setName}
+                        value={name}
+                    />
+                    < Teletub setTeletubbies={setTeletubbies} teletubbies={teletubbies} />
+                    < SailorMoon setSailorMoon={setSailorMoon} sailorMoon={sailorMoon} />
+                    < Turtles setTurtles={setTurtles} turtle={turtle} />
+                    <button aria-label="Submitt-button" disabled={!name || !teletubbies || !sailorMoon} type="submit"> I'M DONE </button>
+                </form>
+            ) :
                 showSummary && (
                     <Summary
                         text={name}
@@ -46,6 +46,6 @@ export const Input = () => {
                         turtles={turtle}
                     />
                 )}
-            </main>
-        )
-    }
+        </main>
+    )
+}

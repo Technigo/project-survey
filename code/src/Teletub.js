@@ -10,11 +10,12 @@ const Teletub = props => {
             <img
                 tabIndex="0"
                 className="tt-image"
-                alt="south park siter of teletubbies"
+                alt="visualization of a south park siter of teletubbies"
                 src={img}
             />
-            <label htmlFor="slectquestion"></label>
+            <label htmlFor="teletub"></label>
                 <select
+                    id="teletub"
                     onChange={(event) => setTeletubbies(event.target.value)}
                     value={teletubbies}
                     required
