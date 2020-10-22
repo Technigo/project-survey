@@ -15,7 +15,7 @@ export const Radio = (props) => {
         How often do you buy Thing?
           {recur.map(occur => (
             <p key={occur}>
-              <label className="answerOption">
+              <label className="answerOption" for={occur}>
                 <input 
                   type="radio"
                   value={occur}
