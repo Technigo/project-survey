@@ -3,21 +3,24 @@ import React from 'react'
 export const Factors = (props) => {
   const { factor, setFactor } = props
   const factors = [
-      'Natural Ingredients',
+      'Made from natural ingredients',
       'Eco-friendly',
-      'Exclusiveness',
-      'Locally sourced materials',
+      'Exclusive',
+      'A conversation starter',
+      'Made from locally sourced materials',
       'Locally produced',
       'Handmade',
-      'Supporting small businesses',
-      'Attractive packaging',
-      'Brand name',
-      'Price'
+      'Supports a small business',
+      'Has attractive packaging',
+      'Has minimal packaging',
+      'Has packaging that is reusable',
+      'Made by a recognised brand name',
+      'Within budget'
     ]
 
   return (
     <div className="question">
-      Which factor most influences your buying decision when purchasing Thing?
+      When considering whether to buy Thing, which factor is most important to you?
       {factors.map(decisionMaker => (
         <p key={decisionMaker}>
         <label className="answerOption">
