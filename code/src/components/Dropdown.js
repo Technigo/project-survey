@@ -5,7 +5,10 @@ import DropdownCss from 'components/DropdownCss.css';
 export const Dropdown = ({questionSweets, sweet, setSweet}) => {
     
     return (
-        <label className="form-dropdown">
+        <label 
+          htmlFor="choose" 
+          id="choose"
+          className="form-dropdown">
           <h2 tabindex="0">3. What's your fav sweet?</h2>
           <div className="select-container">
             <select

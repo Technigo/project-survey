@@ -16,7 +16,10 @@ export const Radiobutton = ({questionTimes, timesPerWeek, setTimesPerWeek}) => {
             <div className="label-container">
               {perWeek.map((times) => (
             
-              <label htmlFor="" key={times}>
+              <label 
+                htmlFor="" 
+                id=""
+                key={times}>
                   <input className="input"
                   type="radio"
                   value={times}
