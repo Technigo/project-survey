@@ -17,7 +17,7 @@ export const Form = () => {
 
 
     return (
-        <>
+        <section className='survey-info'>
         {submit === false ? (
             <form onSubmit={(e) => { e.preventDefault(); setSubmit(true) }} >
         <Header />
@@ -46,7 +46,7 @@ export const Form = () => {
         text={text} 
         />
         ) } 
-        </>
+        </section>
     )
 } 
 

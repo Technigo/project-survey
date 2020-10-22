@@ -8,6 +8,7 @@ export const Summary = ({ageGroup, location, text}) => {
         <p>Your age: {ageGroup}</p>
         <p>You are from: {location}</p>
         <p>You wanted to become a Frontend because: {text}</p>
+        <p className='thank-you'>Thank you for answering and have a nice day!</p>
         </div>
     )
 };
