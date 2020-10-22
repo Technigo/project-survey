@@ -1,6 +1,7 @@
 import React from 'react';
 import NextButton from 'components/NextButton.js';
 import PreviousButton from 'components/PreviousButton.js';
+import ProgressBar from 'components/ProgressBar.js';
 
 const Question3 = (props) => {
   const handleSkillsChange = (skillValue) => {
@@ -9,64 +10,61 @@ const Question3 = (props) => {
       : props.setSkills([...props.skills, skillValue]);
   };
 
+  const skillsGroup = [
+    'HTML5',
+    'CSS3',
+    'Vanilla JS',
+    'React + JSX',
+    'Other framework',
+    'Typescript',
+    'PHP',
+    'CMS-management',
+    'Algorithms',
+  ];
+
   return (
-    <article className="form__question__3 question__wrapper">
+    <article className="form__question__3">
+      {/* Question */}
       <p className="form__question">
-        Which parts of developing would you say is the most important to a
-        front-end developer? (Pick only 3)
+        What would you say is the most important to a Front-end Developer?
       </p>
-      <div className="all-labels__wrapper">
-        <label htmlFor="html">HTML</label>
-        <input
-          id="html"
-          type="checkbox"
-          className="form__checkbox"
-          checked={props.skills.includes('HTML')}
-          onChange={() => handleSkillsChange('HTML')}
+
+      {/* Input */}
+      <div className="question__content-wrapper">
+        {skillsGroup.map((skill) => (
+          <span className="form__checkbox__question-wrapper">
+            <label htmlFor={skill}>{skill}</label>
+            <input
+              id={skill}
+              type="checkbox"
+              className="form__checkbox"
+              checked={props.skills.includes(skill)}
+              onChange={() => handleSkillsChange(skill)}
+            />
+          </span>
+        ))}
+      </div>
+
+      {/* Navigation buttons */}
+      <div className="buttons__wrapper">
+        <PreviousButton
+          whatQuestionPrevious="secondQuestion"
+          section={props.section}
+          setSection={props.setSection}
         />
-        <label htmlFor="css">CSS</label>
-        <input
-          id="css"
-          type="checkbox"
-          className="form__checkbox"
-          checked={props.skills.includes('CSS')}
-          onChange={() => handleSkillsChange('CSS')}
+        <ProgressBar
+          firstDot="progress dot_000"
+          secondDot="progress dot_000"
+          thirdDot="progress dot_000"
+          fourthDot="progress dot_fff"
+          fifthDot="progress dot_fff"
         />
-        <label htmlFor="vanilla">Vanilla JS</label>
-        <input
-          id="vanilla"
-          type="checkbox"
-          className="form__checkbox"
-          checked={props.skills.includes('Vanilla JS')}
-          onChange={() => handleSkillsChange('Vanilla JS')}
-        />
-        <label htmlFor="react">React</label>
-        <input
-          id="react"
-          type="checkbox"
-          className="form__checkbox"
-          checked={props.skills.includes('React')}
-          onChange={() => handleSkillsChange('React')}
-        />
-        <label htmlFor="typescript">Typescript</label>
-        <input
-          id="typescript"
-          type="checkbox"
-          className="form__checkbox"
-          checked={props.skills.includes('Typescript')}
-          onChange={() => handleSkillsChange('Typescript')}
+        <NextButton
+          whatQuestionNext="fourthQuestion"
+          section={props.section}
+          setSection={props.setSection}
         />
       </div>
-      <PreviousButton
-        whatQuestionPrevious="secondQuestion"
-        section={props.section}
-        setSection={props.setSection}
-      />
-      <NextButton
-        whatQuestionNext="fourthQuestion"
-        section={props.section}
-        setSection={props.setSection}
-      />
     </article>
   );
 };

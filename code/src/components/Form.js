@@ -7,22 +7,14 @@ import Question4 from 'components/Question4.js';
 import Question5 from 'components/Question5.js';
 import Summary from 'components/Summary.js';
 
-const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Secret!'];
-const developingParts = [
-  'Vanilla JS',
-  'React',
-  'Node JS',
-  'CSS',
-  'HTML5',
-  'Sass',
-];
-
 const Form = () => {
   const [section, setSection] = useState('firstQuestion');
-  const [name, setName] = useState('');
+  const [name, setName] = useState('Type your name here please..');
   const [ageGroup, setAgeGroup] = useState(undefined);
   const [skills, setSkills] = useState([]);
-  const [suggestions, setSuggestions] = useState('');
+  const [suggestions, setSuggestions] = useState(
+    'Write your suggestions here, please'
+  );
   const [title, setTitle] = useState('');
 
   return (
@@ -30,9 +22,6 @@ const Form = () => {
       <form
         onSubmit={(event) => {
           event.preventDefault();
-          console.log(
-            `Name: ${name}, Age: ${ageGroup}, Skills: ${skills} Suggestions: ${suggestions} Title: ${title}`
-          );
         }}
       >
         {section === 'firstQuestion' && (
@@ -49,7 +38,6 @@ const Form = () => {
         {section === 'secondQuestion' && (
           <div>
             <Question2
-              ageGroups={ageGroups}
               ageGroup={ageGroup}
               setAgeGroup={setAgeGroup}
               section={section}
@@ -61,7 +49,6 @@ const Form = () => {
         {section === 'thirdQuestion' && (
           <div>
             <Question3
-              developingParts={developingParts}
               skills={skills}
               setSkills={setSkills}
               section={section}

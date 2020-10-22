@@ -1,22 +1,27 @@
 .form__wrapper {
   text-align: center;
   margin: auto;
-  /* transform: translateY(calc((100vh - 522px) / 2 / 2)); */
 }
 
-.question__wrapper {
-  padding: 30px 0;
-}
-
+/* --- Question styling --- */
 .form__question {
   max-width: 60vw;
   margin: auto;
   display: block;
 }
 
+.question__content-wrapper {
+  min-height: 30vh;
+  max-width: 60vw;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* --- Input styling --- */
 .form__input {
   display: block;
-  margin: 30px auto;
   background: none;
   width: 300px;
   padding: 10px 0;
@@ -31,11 +36,10 @@
   border-bottom: 1px solid #fff;
 }
 
-.form__radiobuttons,
-.form__submit-button,
-.all-labels__wrapper {
-  /* display: block; */
-  margin: 30px auto;
+::placeholder,
+:-ms-input-placeholder,
+::-ms-input-placeholder {
+  color: #000;
 }
 
 .form__radiobutton__input {
@@ -46,15 +50,35 @@
   margin: 10px 25px 10px 5px;
 }
 
-.form__dropdown {
-  display: block;
-  margin: 30px auto;
-  width: 200px;
+.form__checkbox__question-wrapper {
+  display: flex;
+  align-items: center;
+  max-width: 20vw;
 }
 
-.form__submit-button,
+.form__dropdown {
+  display: block;
+  width: 300px;
+  background: none;
+  padding: 5px 5px;
+  border: 1px solid #000;
+}
+
+.form__dropdown:hover {
+  border: 1px solid #fff !important;
+  color: #fff;
+}
+
+/* --- Buttons --- */
 .form__next-button {
   padding: 5px 20px;
+  background: none;
+  border: 1px #000 solid;
+  margin: 0 20px;
+}
+
+.form__submit-button {
+  padding: 5px 40px;
   background: none;
   border: 1px #000 solid;
   margin: 0 20px;
@@ -70,4 +94,60 @@
 .form__submit-button:active,
 .form__next-button:active {
   border: 1px #fff solid;
+}
+
+/* --- Progress bar --- */
+.progress-bar__wrapper {
+  width: 60px;
+  margin: 0px 20px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.progress {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+}
+
+.dot_fff {
+  background: #fff;
+}
+
+.dot_000 {
+  background: #000;
+}
+
+/* --- Summary --- */
+.summary {
+  width: 70vw;
+  height: 50vh;
+  margin: auto;
+}
+
+.summary__thanks {
+  margin-bottom: 30px;
+  padding-bottom: 20px;
+}
+
+.summary__answers {
+  list-style: none;
+  border: 1px solid #000;
+  padding: 50px;
+}
+
+.summary__bye {
+  padding-top: 20px;
+  max-width: 50vw;
+  margin: 30px auto 0 auto;
+}
+
+.summary__social-media__image {
+  width: 30px;
+  margin: 20px 10px;
+}
+.summary__social-media__image:hover {
+  filter: invert(1);
+  cursor: pointer;
 }

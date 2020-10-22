@@ -8,27 +8,36 @@ const Question1 = (props) => {
   };
 
   return (
-    <article className="form__question__1 question__wrapper">
+    <article className="form__question__1">
+      {/* Question */}
       <label htmlFor="name" className="form__question">
         Hello there, what's your name?
       </label>
-      <input
-        id="name"
-        type="text"
-        onChange={handleNameChange}
-        className="form__input"
-        placeholder="Type your name here please.."
-        required
-      />
-      {props.name !== '' && (
-        <NextButton
-          whatQuestionNext="secondQuestion"
-          section={props.section}
-          setSection={props.setSection}
-          name={props.name}
-          setName={props.setName}
+
+      {/* Input */}
+      <div className="question__content-wrapper">
+        <input
+          id="name"
+          type="text"
+          onChange={handleNameChange}
+          className="form__input"
+          placeholder={props.name}
+          required
         />
-      )}
+      </div>
+
+      {/* Navigation buttons */}
+      <div className="buttons__wrapper">
+        {props.name !== '' && (
+          <NextButton
+            whatQuestionNext="secondQuestion"
+            section={props.section}
+            setSection={props.setSection}
+            name={props.name}
+            setName={props.setName}
+          />
+        )}
+      </div>
     </article>
   );
 };
