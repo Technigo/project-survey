@@ -23,7 +23,6 @@ export const Number = ({ userNumber, onNumberOfBooksChange }) => {
                                     tabIndex="0" 
                                     >
                                         <input
-                                            role="radio"
                                             id={range}
                                             type="radio"
                                             value={range}
