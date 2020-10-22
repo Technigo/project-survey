@@ -3,6 +3,8 @@ import React from 'react'
 
 export const Zodiac = ({name, setZodiac, zodiac, zodiacArray}) => {
 
+  console.log(zodiac)
+
   return(
     <div className="zodiac-wrapper">
       {/* <p>Hello {name}! It's a pleasure to meet you.</p> */}
@@ -12,10 +14,10 @@ export const Zodiac = ({name, setZodiac, zodiac, zodiacArray}) => {
           onChange={event => setZodiac(event.target.value)}
           value={zodiac}>
           <option value="">Select zodiac sign...</option>
-          {zodiacArray.map((sign, index) => {
-            return(
-              <option key={index} value={sign}>
-                {sign}
+          {zodiacArray.map(sign => {
+            return (
+              <option key={sign.name} value={sign.name}>
+                {sign.name}
               </option>
             )
           })}

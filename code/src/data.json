@@ -1,0 +1,64 @@
+{
+	"signs": [
+		{
+			"name": "Aries",
+			"match": "Aquarius",
+			"description": "There's never a dull moment between an Aries and Aquarius, which makes their relationship extremely exciting. Both signs are insanely adventurous, so they're always up for anything—in and out of the bedroom. They enjoy trying new things and make sure to have a good time in the process. They especially love doing things together as a team."
+		},
+		{
+			"name": "Taurus",
+			"match": "Cancer",
+			"description": "Taurus and Cancer seriously get each other. These two zodiac signs work well with one another because they hold a tight connection both physically and emotionally. They understand each other inside and out, which helps allow their bond to ignite even more as the relationship grows."
+		},
+		{
+			"name": "Gemeni",
+			"match": "Aquarius",
+			"description": "A Gemini and Aquarius have a crazy mental and emotional connection. They get each other to the fullest, like they have known one another for years even if it's only been months (or weeks). These two signs are also big on creativity and ideas, which they like to bounce off each other constantly: Should we go to the Rocky Mountains tomorrow? Let's have frog legs for dinner!"
+		},
+		{
+			"name": "Cancer",
+			"match": "Pisces",
+			"description": "Cancer and Pisces are two cool water signs and instinctively have one massive cosmic connection. They work well together because each one knows just who the other is and they are proud of that. These signs also have a very strong sense of themselves, which makes them easily able to form a solid bond that can last."
+		},
+		{
+			"name": "Leo",
+			"match": "Sagittarius",
+			"description": "The passion is high between Leo and Sagittarius, as both signs both enjoy life and love others who feel the same. They are both passionate about what they want out of this world and extremely encouraging in helping the other achieve any goal or dream. Both are fire signs and have a profound understanding of the other, which helps them to get along so easily."
+		},
+		{
+			"name": "Virgo",
+			"match": "Taurus",
+			"description": "As both are earth signs, Virgo and Taurus really hit it off. Easygoing and practical in their everyday lives, their relationship is cool, calm and collected. These two zodiac signs are also honest and sincere, which makes them incredible people to get close to, especially in a serious, long-term relationship."
+		},
+		{
+			"name": "Libra",
+			"match": "Gemini",
+			"description": "A relationship between a Libra and Gemini is all about a strong intellectual connection. Both are air signs and deep into mental stimulation. The mind is a very interesting and sexy thing to them, and they enjoy learning more about it as time goes on."
+		},
+		{
+			"name": "Scoripio",
+			"match": "Cancer",
+			"description": "Sometimes having two passionate people in a relationship doesn't work. However, if one person is a Scorpio and the other is a Cancer, it can be perfect. These two water signs are intense when it comes to emotions, but that only seems to make them even more compatible."
+		},
+		{
+			"name": "Sagittarius",
+			"match": "Aries",
+			"description": "Sagittarius and Aries are both fire signs, so you can expect some serious hot passion between the two, making for a dynamite pair. They have insane amounts of energy to bring into the relationship, which only grows stronger as it continues to blossom. And they both appreciate each other's wild enthusiasm for the other person and life around them."
+		},
+		{
+			"name": "Capricorn",
+			"match": "Taurus",
+			"description": "There's a reason these two signs have been reported to have more chemistry than any of the other astrological signs. Capricorn and Taurus have something most only daydream about: endless adoration. These two lovebirds will be together forever and actually enjoy one another's company to the end."
+		},
+		{
+			"name": "Aquarius",
+			"match": "Gemini",
+			"description": "Aquarius and Gemini are both air signs that have a killer psychological connection. And it goes deep—really deep, like finishing each other's sentences. Their relationship is almost mystical because it's one no one else can comprehend. After all, only they know what's going on in their heads, and each other's."
+		},
+		{
+			"name": "Pieces",
+			"match": "Scorpio",
+			"description": "Another pair that's very intuitive to one another is Pisces and Scorpio. These two zodiac signs can get into each other's minds and know what they are thinking almost as well as if they were thinking it themselves. But they aren't just into intellect; they both have a hunger to understand the other's body and soul and learn what makes the other person tick."
+		}
+	]
+} 

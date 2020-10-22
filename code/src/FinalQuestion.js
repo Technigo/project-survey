@@ -14,11 +14,12 @@ export const FinalQuestion = ({zodiac, question, setQuestion}) => {
           name="question"
           onChange={event => setQuestion(event.target.value)}
           checked={question === "yes"}
+          required
         />
         <label 
           for="yes" 
           role="radio" 
-          tabindex="0"
+          tabIndex="0"
           aria-checked="false">
           Yes, I'm ready to find the one!
         </label>
@@ -29,11 +30,12 @@ export const FinalQuestion = ({zodiac, question, setQuestion}) => {
           name="question"
           onChange={event => setQuestion(event.target.value)}
           checked={question === "no"}
+          required
         />
         <label 
           for="no" 
           role="radio" 
-          tabindex="-1"
+          tabIndex="-1"
           aria-checked="false"> 
           Sure, let's give it a go.
         </label>

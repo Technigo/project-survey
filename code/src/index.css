@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
 
 body {
   margin: 0;
@@ -100,18 +100,75 @@ input[type="radio"]:checked + label {
 /* styling for button */
 
 button {
-  width: 350px;
-  height: 60px;
+  width: 400px;
+  height: 70px;
   border: 1px solid #000000;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.1);
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
-  font-size: 32px;
+  font-size: 42px;
   cursor: pointer;
   transition: 0.5s;
 }
 
 button:hover {
   background-color: rgba(0, 0, 0, 0.3);
+}
+
+/* styling for summary section */
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  padding: 50px 0;
+}
+
+.summary h2 {
+  margin: 20px 0;
+}
+
+.summary p {
+  margin: 20px;
+  width: 50%;
+  font-weight: 300;
+  line-height: 1.4;
+  text-align: center;
+}
+
+.summary span {
+  font-weight: 600;
+}
+
+blockquote {
+  width: 50%;
+  font-size: 18px;
+  font-family: 'Open Sans', sans-serif;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  background-color: rgba(0, 0, 0, 0.1);
+  padding: 15px 25px 25px 25px;
+}
+
+blockquote span {
+  display: block;
+  font-size: 32px;
+  line-height: 0.2;
+  padding: 8px;
+  text-align: center;
+  font-family: inherit;
+  margin:0;
+}
+
+blockquote a {
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  font-size: 16px;
+  font-weight: bold;
+  color: inherit;
+  padding: 10px 10px;
 }
