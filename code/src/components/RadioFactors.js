@@ -23,7 +23,7 @@ export const Factors = (props) => {
       When considering whether to buy Thing, which factor is most important to you?
       {factors.map(decisionMaker => (
         <p key={decisionMaker}>
-        <label className="answerOption">
+        <label className="answerOption" for={occur}>
           <input 
             type="radio"
             value={decisionMaker}
