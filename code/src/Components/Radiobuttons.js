@@ -9,16 +9,16 @@ export const Radiobuttons = (props) => {
 
   return (
     <>
-      <h2>What kind of holiday are you interested in?</h2>
+      <h2 tabIndex="0">What kind of holiday are you interested in?</h2>
       <section className="radio-button-wrapper">
         {interests.map(option => (
-          <label key={option} >{option}
+          <label tabIndex="0" key={option} >{option}
             <input
               type="radio"
               value={option}
               onChange={event => setInterest(event.target.value)}
               checked={
-                interest === option}
+              interest === option}
             />
           </label>
         ))}

@@ -7,22 +7,22 @@ export const Textinput = props => {
   return (
     <>
       <div className="input">
-        <h2>Your contact details</h2>
-        <label>Name:</label>
+        <h2 tabIndex="0">Your contact details</h2>
+        <label tabIndex="0">Name:</label>
         <input
           type="text"
           onChange={event => setName(event.target.value)}
           value={name}
           required
         ></input>
-        <label>Phone Number:</label>
+        <label tabIndex="0">Phone Number:</label>
         <input
           type="number"
           onChange={event => setPhoneNumber(event.target.value)}
           value={phoneNumber}
           required
         ></input>
-        <label>Email:</label>
+        <label tabIndex="0">Email:</label>
         <input
           type="email"
           onChange={event => setEmail(event.target.value)}

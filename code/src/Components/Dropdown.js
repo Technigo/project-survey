@@ -6,21 +6,21 @@ export const Dropdown = (props) => {
 
   return (
     <>
-      <h2>Where would you like to go?</h2>
+      <h2 tabIndex="0">Where would you like to go?</h2>
       <select
         className="options"
         id="options"
         onChange={event => setOption(event.target.value)}
         value={option}
       >
-        <option value="">Select an option</option>
-        <option value="Africa">Africa</option>
-        <option value="Antartica">Antartica</option>
-        <option value="Asia">Asia</option>
-        <option value="Europe">Europe</option>
-        <option value="North America">North America</option>
-        <option value="Oceania">Oceania</option>
-        <option value="South America">South America</option>
+        <option tabIndex="0" value="">Select an option</option>
+        <option tabIndex="0" value="Africa">Africa</option>
+        <option tabIndex="0" value="Antartica">Antartica</option>
+        <option tabIndex="0" value="Asia">Asia</option>
+        <option tabIndex="0" value="Europe">Europe</option>
+        <option tabIndex="0" value="North America">North America</option>
+        <option tabIndex="0" value="Oceania">Oceania</option>
+        <option tabIndex="0" value="South America">South America</option>
       </select>
     
     </>
