@@ -17,7 +17,7 @@ export const App = () => {
   const [timesPerWeek, setTimesPerWeek] = useState();
   const [sweet, setSweet] = useState();
   const [showSummary, setShowSummary] = useState(false);
-  const [question, setQuestion] = useState('question1');
+  // const [question, setQuestion] = useState('question1');
   // const [colors, setColors] = useStates([]);
 
   const handleSubmit = event => {
