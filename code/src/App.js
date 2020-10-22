@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import Form from './Survey'; // imports the details for the dropdown list
+import Form from './Survey'; // imports the form and submit button
 
 
 export const App = () => {

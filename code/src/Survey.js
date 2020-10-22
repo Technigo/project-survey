@@ -17,21 +17,21 @@ export const Survey = () => {
             <div className="radio">
                 <p>What baking experience did you participate in?</p>
                 <label htmlFor="candyCanes">
-                    <input type="radio" value="candyCanes" />
+                    <input type="radio" name="radioButton" value="candyCanes" /> {/*by giving all radio buttons the same name, only one button can be/stayed clicked */}
                     Candy Canes
                 </label>
             </div>
 
             <div className="radio">
                 <label htmlFor="gingerBreadHouses">
-                    <input type="radio" value="gingerBreadHouses" />
+                    <input type="radio" name="radioButton" value="gingerBreadHouses" />
                     Ginger Bread Houses
                 </label>
             </div>
 
             <div className="radio">
             <label htmlFor="christmasChocolates">
-                <input type="radio" value="christmasChocolates"/>
+                <input type="radio" name="radioButton" value="christmasChocolates"/>
                     Christmas Chocolates
                     </label>
             </div>
@@ -47,10 +47,13 @@ export const Survey = () => {
                 <input id="improveFeedback" type="text" />
             </div>
 
-            
-
+            <div className="submitButton">
+            <button type="submit"> Send your answer </button>
+            </div>
         </form>
     )
 }
+
+
 
 export default Survey
