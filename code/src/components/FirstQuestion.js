@@ -32,7 +32,7 @@ export const FirstQuestion = ({ handleDestination, destinationChoice }) => {
               {destination}
             </label>
           ))}
-          <button className="first-button" onClick={checkInput}>NEXT</button>
+          <button className="first-button" onClick={checkInput} type="submit">NEXT</button>
         </div>
       </form>
       {(visible === true) && <SecondQuestion chosenDestination={destinationChoice} />}

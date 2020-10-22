@@ -16,7 +16,7 @@ export const FinalText = (props) => {
           the {props.resultDestination} with {props.resultNumber} of
           your best friends, drinking cocktails during the {props.resultDay}.
         </p>
-        <button className="restart-button" onClick={restart}>Start again!</button>
+        <button className="restart-button" onClick={restart} type="button">Start again!</button>
       </div>
     </section>
   )

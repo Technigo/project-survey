@@ -34,6 +34,7 @@ export const ThirdQuestion = (props) => {
             </select>
           </label>
           <button
+            type="submit"
             className="last-button"
             onClick={checkInput}
             aria-label="Enter and Tab to reveal your dream vacation">
