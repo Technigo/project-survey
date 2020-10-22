@@ -8,9 +8,10 @@ export const DropDown = ({ brand, setBrand }) => {
                 onChange={event => setBrand(event.target.value)}
                 value={brand}
                 required
+                aria-label="Select a brand of headphones you use"
             >
-                <option value="">Choose brand</option>
-                <option value="Beats">Beats by Dre</option>
+                <option value="" aria-label="Choose a brand of the headphone from the dropdown">Choose brand</option>
+                <option value="Beats" >Beats by Dre</option>
                 <option value="Bose">Bose</option>
                 <option value="AKG">AKG</option>
                 <option value="UrbanEar">UrbanEar</option>

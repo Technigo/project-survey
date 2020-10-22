@@ -12,7 +12,7 @@ export const App = () => {
 				<p className="title-line-two" tabIndex="0">Tell us more about your headphones...</p>
 			</div>
 			<div className="headphone-image" tabIndex="0">
-				<img src="./img/headphone.svg" alt="Headphone Image"></img>
+				<img src="./img/headphone.svg" alt="Headphone"></img>
 			</div>
 			<div>
 				<Form />

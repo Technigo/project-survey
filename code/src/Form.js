@@ -19,7 +19,7 @@ export const Form = () => {
     return (
         <>
             {!summary ? (
-                <form onSubmit={handleSubmit} className="form-container">
+                <form onSubmit={handleSubmit} className="form-container" >
                     <NameQuestion name={name} setName={setName} />
                     <DropDown brand={brand} setBrand={setBrand} />
                     <RadioButton knowHeadPhone={knowHeadPhone} setKnowHeadPhone={setKnowHeadPhone} />

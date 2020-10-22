@@ -35,8 +35,20 @@ body {
 .title {
   font-size: 70px;
   color: greenyellow;
-
+  border-bottom: 2px solid indianred;
 }
+
+.title-line-one {
+  font-size: 30px;
+  font-weight: 500;
+  color:red;
+}
+
+.title-line-two {
+  font-size: 20px;
+  font-weight: 900;
+}
+
 .form-container,
 .my-form {
   display: flex;
@@ -45,7 +57,8 @@ body {
 }
 
 .name {
-  width:250px
+  width:250px;
+  font-size: 20px;
 }
 
 .name:hover,
@@ -62,9 +75,9 @@ body {
 }
 
 .drop-down select {
-  width :200px
+  width :200px;
+  font-size: 20px;
 }
-
 
 .radio-buttons-container {
   display: flex;
@@ -73,6 +86,18 @@ body {
 
 .each-radio-button {
   margin-top: 10px;
+  font-size: 20px;
+}
+
+.summary {
+  margin: 0px 20%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary p {
+  font-size: 30px;
 }
 
 .submit-button,
@@ -81,7 +106,14 @@ body {
   font-size: 20px;
   background-color:  rgba(173,255,47, 0.7);
 }
+
+.summary button {
+  width: 200px;
+  margin: 30px 0px;
+}
+
 .submit-button {
+  width: 120px;
   margin-top:40px
 }
 
@@ -92,13 +124,3 @@ body {
   cursor: pointer;
 }
 
-.summary {
-  margin: 0px 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.summary h4 {
-  font-size: 30px;
-}

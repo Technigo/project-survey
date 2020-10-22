@@ -12,6 +12,7 @@ export const NameQuestion = ({ name, setName }) => {
                     onChange={event => setName(event.target.value)}
                     value={name}
                     required minLength='2'
+                    aria-label="Enter your name here"
                 />
             </label>
         </div>
