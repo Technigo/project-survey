@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
   return (
     <header>
-      <h1>SURVEYDOG</h1>
+      <h1 tabIndex="0">WHATS YOUR REAL JOB TITLE? </h1>
     </header>
   )
 }
