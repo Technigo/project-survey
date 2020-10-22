@@ -1,7 +1,7 @@
 import React from "react"
 
 const 
-interests = ["Adventure", "Beach", "History", "Nature", "City-pulse", "Winter Sport"]
+interests = ["Adventure", "Beach", "Nature", "History", "City-pulse", "Winter Sport"]
 
 export const Radiobuttons = (props) => {
 
