@@ -4,22 +4,25 @@ import './secondQuestion.css'
 export const SecondQuestion = () => {
     const [answer, setAnswer] = useState("")
     return (
-        <section className="second-question" id="second">
-            <h1>What did, or could have made your day better?</h1>
-            <h2>Every little thing counts!</h2>
-            <label tabIndex="0">
+
+        <section className="second-question" id="answer">
+            <h1 tabIndex="0">What did, or could have made your day better?</h1>
+            <h2 tabIndex="0">Every little moment counts!</h2>
+            {/* <form onSubmit ={event => event.preventDefault()}/>  */}
+            <label htmlFor="answer" tabIndex="0">
                 <input
                     className="better-day"
                     id="answer"
                     type="text"
-                    placeholder="Be kind to yourself"
-                    minLength="10"
-                    onChange={event => setAnswer(event.target.value)}
                     value={answer}
-                    required
+                    onChange={event => setAnswer(event.target.value)}
+                    required minLength="10"
+                    placeholder="Be kind to yourself"
+
                 />
             </label>
-            <button><a href="#third">continue</a></button>
+            <button><a href="#hours">continue</a></button>
         </section>
+
     )
 }

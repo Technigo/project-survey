@@ -1,37 +1,37 @@
 import React, { useState } from 'react'
 import './thirdQuestion.css'
 
-const sleepOptions = ["0-5 hours", "5-8 hours", "more than 8 hours"]
+const optionList = ["0-5 hours", "5-8 hours", "more than 8 hours"]
 
 export const ThirdQuestion = () => {
-    const [sleep, setSleep] = useState("")
+    const [hour, setOptionsList] = useState("false")
 
     return (
-        <section className="third-question" id="third">
+        <section className="third-question" id="hours">
             <form>
-                <h1>How many hours of sleep have you had today?</h1>
-                <h2>It is okay to feel you need a few hours more.</h2>
+                <h1 tabIndex="0">How many hours of sleep have you had today?</h1>
+                <h2 tabIndex="0">It is okay to feel you need more rest.</h2>
                 <div className="radio-buttons">
-                    {sleepOptions.map((sleepOption) => (
-                        <label key={sleepOption} tabIndex="0">
+                    {optionList.map((hours) => (
+                        <label tabIndex="0" key={hours}>
                             <input
                                 type="radio"
-                                value={sleepOption}
+                                value={hours}
                                 className="radio-button"
                                 required
-                                onChange={(event) => setSleep(event.target.value)}
-                                checked={sleep === sleepOption}
+                                onChange={event => setOptionsList(event.target.value)}
+                                checked={hour === hours}
                                 id="sleepOption"
 
                             />
-                            {sleepOption}
+                            {hours}
                             <p></p>
                         </label>
                     ))}
 
                     {/* {sleep === "0-5 hours" && <p>Remember that proper sleep rejuvenates the soul.</p>} */}
                 </div>
-                <button><a href="#fourth">continue</a></button>
+                <button><a href="#activity">continue</a></button>
             </form>
 
         </section>

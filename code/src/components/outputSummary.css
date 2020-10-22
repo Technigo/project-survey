@@ -1,0 +1,12 @@
+button.submit {
+  padding: 0 0;
+  margin: 0;
+}
+h3 {
+  font-family: "PT Serif", serif;
+  font-size: 18px;
+  font-weight: 300;
+}
+p {
+  font-style: italic;
+}
