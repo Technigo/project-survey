@@ -5,11 +5,11 @@ export const Radiobutton = ({ id, type, value, onChange, ageGroupArray }) => {
     <div className="form-group form-group-radio">
       <p>Your age?</p>
       {ageGroupArray.map((group) => (
-        <label htmlFor={group} key={group}>
+        <label htmlFor={id} key={group}>
           <input
             type={type}
-            id={group}
-            name={group}
+            id={id}
+            name={id}
             onChange={(event) => onChange(event.target.value)}
             value={group}
             checked={value === group}
