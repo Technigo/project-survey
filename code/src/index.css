@@ -81,73 +81,72 @@ input[type=submit] {
 
 @media (min-width: 667px) and (max-width: 1024px) {
 
-.main-header {
-  font-size: 50px;
-}
+  .main-header {
+    font-size: 50px;
+  }
 
-.info-text {
-  padding-right: 80px;
-  padding-left: 80px;
-  font-size: 24px;
-} 
+  .info-text {
+    padding-right: 80px;
+    padding-left: 80px;
+    font-size: 24px;
+  } 
 
-.age-header, .location-header, .text-header {
-  font-size: 25px
-}
+  .age-header, .location-header, .text-header {
+    font-size: 25px
+  }
 
-input[type=submit] {
-  background-color: #ffffb3;
-  height: 45px;
-  font-size: 25px;
-}
+  input[type=submit] {
+    background-color: #ffffb3;
+    height: 45px;
+    font-size: 25px;
+  }
 
-.summary {
-  font-size: 30px;
-}
+  .summary {
+    font-size: 30px;
+  }
 
-.thank-you {
+  .thank-you {
     font-size: 60px;
     color:#ffffb3;
     padding-top: 30px;
   }
-
-}
+  }
 
 @media (min-width: 1025px) {
   
-.main-header {
-  font-size: 70px;
-}
+  .main-header {
+    font-size: 70px;
+  }
 
-.info-text {
-  font-size: 28px;
-}
+  .info-text {
+    font-size: 28px;
+  }
 
-.age-header, .location-header, .text-header {
-  font-size: 30px;
-}
+  .age-header, .location-header, .text-header {
+    font-size: 30px;
+  }
 
-.survey-info {
-  padding-left: 500px;
-  padding-right: 500px;
-}
+  .survey-info {
+    padding-left: 500px;
+    padding-right: 500px;
+  }
 
-.radio-buttons {
-  font-size: 20px;
-}
+  .radio-buttons {
+    font-size: 20px;
+  }
 
-input[type=submit] {
-  height: 50px;
-  font-size: 30px;
-}
+  input[type=submit] {
+    height: 50px;
+    font-size: 30px;
+  }
 
-.summary {
-  font-size: 40px;
-}
+  .summary {
+    font-size: 40px;
+  }
 
-.thank-you {
-  font-size: 60px;
-  color:#ffffb3;
-  padding-top: 30px;
-}
-}
+  .thank-you {
+    font-size: 60px;
+    color:#ffffb3;
+    padding-top: 30px;
+  }
+  }

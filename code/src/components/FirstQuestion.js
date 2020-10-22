@@ -8,17 +8,15 @@ const ageGroups = [
 ]
 
 export const FirstQuestion = ({ageGroup, setAgeGroup}) => {
-    console.log();
-
     return (
         <div className='first-question'>
             <h2 className='age-header' tabIndex="0">How old are you?</h2>
-            <label aria-label='radio buttons' tabIndex="0">Age:</label>
-            {ageGroups.map(group => (
-            <label 
-            tabIndex="0"
-            className='radio-buttons'
-            key={group}>
+                <label aria-label='radio buttons' tabIndex="0">Age:</label>
+                {ageGroups.map(group => (
+                <label 
+                    tabIndex="0"
+                    className='radio-buttons'
+                    key={group}>
                 <input 
                     type='radio'
                     value={group}
@@ -26,10 +24,9 @@ export const FirstQuestion = ({ageGroup, setAgeGroup}) => {
                     checked={ageGroup === group}
                 />
                 {group}
-            </label>
-            ))}
+                </label>
+            )   )};
         </div>
-        
-        );
-        };
+    );
+};
     
