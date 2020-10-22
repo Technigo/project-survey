@@ -4,8 +4,8 @@ const ratings = ["1", "2", "3", "4", "5", "6"]
 
 const RadioButtons = ({ rating, onRatingChange }) => {
   return (
-    <div className="radio-buttons">
-      <h2 className="label">2 - I'm feeling great after this week</h2>
+    <section className="radio-buttons">
+      <h2 className="label">2 - How are you feeling after this week?</h2>
       <div className="radio">
         {ratings.map(a => (
           <label className="radio-label" key={a}>
@@ -20,7 +20,7 @@ const RadioButtons = ({ rating, onRatingChange }) => {
           </label>
         ))}
       </div>
-    </div>
+    </section>
   )
 }
 

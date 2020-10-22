@@ -8,12 +8,13 @@ import Submit from './Submit';
 import Summary from './Summary';
 
 const Form = () => {
-  const [week, setWeek] = useState('');
+  const [location, setLocation] = useState('');
   const [rating, setRating] = useState('');
   const [feedback, setFeedback] = useState('');
+  const [showSummary, setShowSummary] = useState(false);
 
-  const handleWeekChange = event => {
-    setWeek(event.target.value);
+  const handleLocationChange = event => {
+    setLocation(event.target.value);
   };
 
   const handleRatingChange = event => {
@@ -24,15 +25,28 @@ const Form = () => {
     setFeedback(event.target.value);
   };
 
-  console.log(week, rating, feedback);
+  const handleSubmit = event => {
+    event.preventDefault();
+    setShowSummary(true);
+  }
+
+  console.log(location, rating, feedback, showSummary);
 
   return (
-    <form>
-      <Intro />
-      <DropDown week={week} onWeekChange={handleWeekChange} />
-      <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
-      <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
-    </form>
+    <section>
+      {!showSummary ? (
+        <form>
+          <Intro />
+          <DropDown location={location} onLocationChange={handleLocationChange} />
+          <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
+          <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
+          <Submit onClick={handleSubmit} />
+
+        </form>
+      ) : (
+          <Summary location={location} rating={rating} feedback={feedback} />
+        )}
+    </section>
   )
 }
 
