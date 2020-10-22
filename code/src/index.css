@@ -142,3 +142,16 @@ a {
   background: transparent;
   text-decoration: none;
 }
+
+@media (max-width: 768px) {
+	h2 {
+    width: 280px;	
+  }
+  p {
+    width: 280px;
+  }
+
+  form {
+    width: 290px;
+  }
+}
