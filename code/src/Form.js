@@ -65,7 +65,9 @@ export const Form = () => {
                         favAuthor={favouriteAuthor}
                         onFavouriteAuthorChange={handleFavouriteAuthorChange}
                     />
-                    <button type="submit">Submit</button>
+                    <section className="question white">
+                        <button type="submit">Submit</button>
+                    </section>
                 </form>
                 )}
             </div>

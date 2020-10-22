@@ -1,16 +1,16 @@
 import React from "react"
  
 const consumptionOptions = [
-    "reading the printed book",
-    "reading the e-book",
-    "listening to the audio book"
+    "read the printed book",
+    "read the e-book",
+    "listen to the audio book"
 ]
 
 export const Consumption = ({ favConsumption, onConsumptionChange }) => {
     return (
         <>
             <section className="question">
-                <label>
+                <label className="dropdown">
                     How do you prefer to consume a book?
                         <select
                             onChange={event => onConsumptionChange(event.target.value)}
