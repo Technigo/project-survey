@@ -1,13 +1,14 @@
 import React from 'react'
+import Header from './Components/Header'
 import Form from './Components/Form'
+import Footer from './Components/Footer'
 
 export const App = () => {
   return (
     <div>
-      <header className='Header'>
-        <h1>Hej</h1>
-      </header>
+      <Header />
       <Form />
+      <Footer />
     </div>
   )
 }

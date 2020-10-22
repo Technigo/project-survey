@@ -1,0 +1,31 @@
+.form {
+    background: #a9c2a7;
+    padding: 50px;
+    margin: 20px;
+  }
+
+  .form-header {
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .question2-wrapper, .question3-wrapper {
+    margin-top: 50px;
+
+  }
+
+  .question-header {
+    padding-bottom: 10px;
+  }
+
+  .submit-button {
+    font-size: 22px;
+    padding: 15px;
+    margin-top: 40px;
+    border: 1px solid #272a27;
+    border-radius: 10px;
+    background: #000000;
+    color: #ffffff;
+    cursor: pointer;
+    width: 100%;
+  }

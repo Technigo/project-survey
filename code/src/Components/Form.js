@@ -1,67 +1,55 @@
 import React, {useState} from 'react';
+import 'styles/form.css';
+import Input from './Input';
+import Select from './Select';
+import Radiobuttons from './Radiobuttons';
 import Summary from './Summary';
 
-const drinkAlternatives = ['Coffe', 'Tea', 'Juice', 'Soft drink', 'Lemonade'];
 
 const Form = () => {
-
+    
+    /* State hooks */
     const [name, setName] = useState('');
-    const [favoriteSnack, setFavoriteSnack] = useState(''); 
+    const [numberOfPlants, setNumberOfPlants] = useState(''); 
+    const [favoritePlant, setfavoritePlant] = useState('');
     const [showSummary, setShowSummary] = useState(false);
-    const [favoriteDrink, setFavoriteDrink] = useState('');
+    
+    /*const [hideForm, setHideForm] = useState(); */
 
+    /* Functions for handling input from form */ 
+    const handleNameInput = inputName => {
+        setName(inputName);
+    };
+
+    const handleSelect = selectNumber => {
+        setNumberOfPlants(selectNumber);
+    };
+
+    const handleRadio = selectPlant => {
+        setfavoritePlant(selectPlant);
+    }
+ 
     const handleSubmit = event => {
         event.preventDefault();
         setShowSummary(true);
-
     }
 
     return (
-        <div className="Form">
-        <h1>Survey</h1>
-        <form onSubmit={handleSubmit}>
-            <label> Enter your name:
-            <input 
-            type='text'
-            onChange={event => setName(event.target.value)}
-            value={name}
-            required
-            />
-            </label>
-            
-            <label> Choose your favorite snack: </label>
-            <select 
-            onChange={event => setFavoriteSnack(event.target.value)}
-            value={favoriteSnack}
-            required>
-                <option value=''>Select favorite snack:</option>
-                <option value='Cookies'>Cookies</option>
-                <option value='Donuts'>Donuts</option>
-                <option value='Ice cream'>Ice cream</option>
-                <option value='Cake'>Cake</option>
-                <option value='Fruit'>Fruit</option>
-            </select>
+    <section className='form-wrapper'>
+        <h2 className='form-header'>Please fill in the form:</h2>
 
-            {drinkAlternatives.map(drink => (
-              <label key={drink}>
-                  {drink}
-                  <input 
-                  required 
-                  type='radio'
-                  value={drink}
-                  name={drink}
-                  onChange={event => setFavoriteDrink(event.target.value)}
-                  checked={favoriteDrink === drink}
-                  />
-              </label>
-              ))}
-            
-            <button type='submit'>Submit</button>
+        {!showSummary ? (
+        <form className='form' id='form' onSubmit={handleSubmit}>
+            <Input name={name} onInputChange={handleNameInput}/>
+            <Select number={numberOfPlants} onSelectChange={handleSelect}/>
+            <Radiobuttons plant={favoritePlant} onSelectRadio={handleRadio}/>
+            <button className='submit-button' tabIndex='0' type='submit'>Submit</button>
         </form>
+        ) : (
+        <Summary name={name} numberOfPlants={numberOfPlants} favoritePlant={favoritePlant} />
+        )}
+    </section>
         
-        {showSummary && <Summary name={name} favoriteSnack={favoriteSnack} favoriteDrink={favoriteDrink} />}
-    </div>
-    
     );
 };
 

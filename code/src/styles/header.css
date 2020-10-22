@@ -1,0 +1,43 @@
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: right;
+  color: #000000;
+}
+
+.hero-img {
+    /* Image by Sarah Dorweiler from unsplash */
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    object-fit: cover;
+  }
+
+  .hero-text {
+    font-size: 54px;
+    position: absolute;
+    top: 40%;
+    right: 5%;
+  }
+
+  .start-button {
+    position: absolute;
+    font-size: 24px;
+    top: 65%;
+    right: 20%;
+    padding: 20px;
+    border: 1px solid #a0b39f;
+    background: #a0b39f;
+    cursor: pointer;
+  }
+
+  .start-button a {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+  }

@@ -1,12 +1,23 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #ffe091;
+  background: #d9e7db;
 }
 
 code {
@@ -14,21 +25,6 @@ code {
     monospace;
 }
 
-.Header {
-  /* Image by Sarah Dorweiler from unsplash */
-  background: url(./img/hero.jpg);
-  height: 100vh;
-  width: 100%;
-  padding: 100px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-  object-fit: cover;
-}
 
-.Form {
-  background: #fff0cc;
-  padding: 50px;
-  margin: 50px;
-}
+
+
