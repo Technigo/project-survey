@@ -1,18 +1,17 @@
 import React from 'react';
 
-const ProgressBar = ({ className, progressText, progress, maxProgress }) => {
+const ProgressBar = ({ className, progress, maxProgress }) => {
   return (
     <>
-      {/* <label className={className} htmlFor="ProgressBar">
-        {progressText}
-      </label> */}
+      <label className={className} htmlFor="ProgressBar">
+        {progress} / {maxProgress}
+      </label>
       <progress
         className="className"
         name="ProgressBar"
         value={progress}
         max={maxProgress}
       ></progress>
-      <output name="output">{progress}</output>
     </>
   );
 };

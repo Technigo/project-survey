@@ -1,4 +1,5 @@
 import React from 'react';
+import './InputText.scss';
 
 const InputText = ({ classLabel, classInput, question, value, setText }) => {
   return (

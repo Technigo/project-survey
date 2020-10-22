@@ -4,20 +4,20 @@ const InputRadiobutton = ({
   className,
   question,
   array,
-  radiobutton,
+  value,
   setRadiobutton,
 }) => {
   return (
     <>
       <h2>{question}</h2>
       {array.map(radio => (
-        <label className={className} htmlFor="InputRadiobuttons" key={radio}>
+        <label className={className} htmlFor={radio} key={radio} tabIndex="0">
           <input
-            id="InputRadiobuttons"
+            id={radio}
             type="radio"
             value={radio}
             onChange={event => setRadiobutton(event.target.value)}
-            checked={radiobutton === radio}
+            checked={value === radio}
           />
           {radio}
         </label>

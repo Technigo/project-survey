@@ -37,39 +37,43 @@ const Form = () => {
   console.log(text);
   return (
     <main className="App__main">
-      <h1 className="App__header">Excellent survey</h1>
-      {pageIndex === -1 && (
-        <section className="App__section">
-          <h2 className="App__subheader">
-            Thank you for participating in the survey. It is very important.
-          </h2>
-          <Button
-            className="Button"
-            type="button"
-            click={nextQuestion}
-            text="Start"
-            icon={<i className="Button__i fa fa-arrow-right"></i>}
-          />
-        </section>
-      )}
       {!submit ? (
         <form className="Form" onSubmit={handleSubmit}>
+          <h1 className="App__header">Excellent survey</h1>
+          {pageIndex === -1 && (
+            <section className="Form__section">
+              <h2 className="App__subheader">
+                Thank you for participating in the survey. It is very important.
+              </h2>
+              <Button
+                className="Button"
+                type="button"
+                click={nextQuestion}
+                text="Start"
+                icon={
+                  <i className="Button__i Button__i--right fa fa-arrow-right"></i>
+                }
+              />
+            </section>
+          )}
           {pageIndex === 0 && (
-            <section className="App__section">
+            <section className="Form__section">
               <InputText
                 classLabel="Form__label"
-                classInput="Form__input"
+                classInput="InputText"
                 question={questions.text}
                 value={text}
                 setText={setText}
               />
               <div className="Button-container">
                 <Button
-                  className="Button"
+                  className="Button Button--reverse"
                   type="button"
                   click={previousQuestion}
-                  icon={<i className="Button__i fa fa-arrow-left"></i>}
                   text="Go Back"
+                  icon={
+                    <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                  }
                 />
                 <Button
                   className="Button"
@@ -77,27 +81,34 @@ const Form = () => {
                   click={nextQuestion}
                   disabled={!text}
                   text="Proceed"
-                  icon={<i className="Button__i fa fa-arrow-right"></i>}
+                  icon={
+                    <i className="Button__i Button__i--right fa fa-arrow-right"></i>
+                  }
                 />
               </div>
             </section>
           )}
 
           {pageIndex === 1 && (
-            <section className="App__section">
-              <InputSelect
-                className="Form__label"
-                question={questions.select}
-                array={selectArray}
-                value={select}
-                setSelect={setSelect}
-              />
+            <section className="Form__section">
+              <div className="Select-container">
+                <InputSelect
+                  className="Form__label"
+                  question={questions.select}
+                  array={selectArray}
+                  value={select}
+                  setSelect={setSelect}
+                />
+              </div>
               <div className="Button-container">
                 <Button
-                  className="Button"
+                  className="Button Button--reverse"
                   type="button"
                   click={previousQuestion}
                   text="Go Back"
+                  icon={
+                    <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                  }
                 />
                 <Button
                   className="Button"
@@ -105,14 +116,16 @@ const Form = () => {
                   click={nextQuestion}
                   disabled={!select}
                   text="Proceed"
-                  icon={<i className="Button__i fa fa-arrow-right"></i>}
+                  icon={
+                    <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                  }
                 />
               </div>
             </section>
           )}
           {pageIndex === 2 &&
             (select === '1-10' ? (
-              <section className="App__section">
+              <section className="Form__section">
                 <InputCheckbox
                   className="Form__label"
                   question={questions.checkbox}
@@ -121,22 +134,27 @@ const Form = () => {
                 />
                 <div className="Button-container">
                   <Button
-                    className="Button"
+                    className="Button Button--reverse"
                     type="button"
                     click={previousQuestion}
                     text="Go Back"
+                    icon={
+                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                    }
                   />
                   <Button
                     className="Button"
                     type="button"
                     click={nextQuestion}
                     text="Proceed"
-                    icon={<i className="Button__i fa fa-arrow-right"></i>}
+                    icon={
+                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                    }
                   />
                 </div>
               </section>
             ) : (
-              <section className="App__section">
+              <section className="Form__section">
                 <InputRadiobutton
                   className="Form__label"
                   question={questions.radio}
@@ -146,10 +164,13 @@ const Form = () => {
                 />
                 <div className="Button-container">
                   <Button
-                    className="Button"
+                    className="Button Button--reverse"
                     type="button"
                     click={previousQuestion}
                     text="Go Back"
+                    icon={
+                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                    }
                   />
                   <Button
                     className="Button"
@@ -157,14 +178,16 @@ const Form = () => {
                     click={nextQuestion}
                     disabled={!radiobutton}
                     text="Proceed"
-                    icon={<i className="Button__i fa fa-arrow-right"></i>}
+                    icon={
+                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                    }
                   />
                 </div>
               </section>
             ))}
 
           {pageIndex === 3 && (
-            <section className="App__section">
+            <section className="Form__section">
               <Summary
                 className="Form__label"
                 header={questions.summary}
@@ -175,17 +198,20 @@ const Form = () => {
               />
               <div className="Button-container">
                 <Button
-                  className="Button"
+                  className="Button Button--reverse"
                   type="button"
                   click={previousQuestion}
-                  text="Back"
+                  text="Go Back"
+                  icon={
+                    <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                  }
                 />
                 <Button className="Button" type="submit" text="Send survey" />
               </div>
             </section>
           )}
           {pageIndex >= 0 && (
-            <section className="App__section">
+            <section className="Form__section">
               <ProgressBar
                 className="ProgressBar"
                 progress={pageIndex}
@@ -196,7 +222,7 @@ const Form = () => {
           )}
         </form>
       ) : (
-        <section className="App__section">
+        <section className="Form__section">
           <h2>Good bye</h2>
           <Button
             className="Button"

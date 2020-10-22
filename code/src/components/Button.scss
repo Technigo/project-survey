@@ -1,20 +1,37 @@
 .Button {
+  box-sizing: unset;
   display: flex;
   align-items: center;
   align-self: flex-end;
   background: none;
   color: #56cbda;
   border: none;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: 600;
   letter-spacing: 0;
   text-transform: uppercase;
   padding: 10px;
   font-family: 'Kanit', sans-serif;
+  cursor: pointer;
 
   &:hover {
     border: 1px solid #56cbda;
     border-radius: 4px;
+  }
+
+  &:disabled {
+    color: rgba(86, 203, 218, 0.5);
+    cursor: auto;
+  }
+
+  &:disabled:hover {
+    border: 1px solid rgba(86, 203, 218, 0.5);
+  }
+
+  &-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
   }
 
   &--border {
@@ -22,12 +39,19 @@
     border-radius: 4px;
   }
 
-  &__i {
-    margin-left: 10px;
-    font-size: 10px;
+  &--reverse {
+    flex-direction: row-reverse;
   }
 
-  &-container {
-    display: flex;
+  &__i {
+    font-size: 20px;
+  }
+
+  &__i--left {
+    margin-right: 10px;
+  }
+
+  &__i--right {
+    margin-left: 10px;
   }
 }
