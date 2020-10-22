@@ -13,22 +13,20 @@ const Teletub = props => {
                 alt="visualization of a south park siter of teletubbies"
                 src={img}
             />
-            <label htmlFor="teletub"></label>
+            <label htmlFor="teletub">I am adding content here</label>
                 <select
                     aria-label="select-menu"
                     id="teletub"
                     onChange={(event) => setTeletubbies(event.target.value)}
                     value={teletubbies}
-                    aria-expanded="false"
-                    aria-controls="collapse"
                     required
 
                 >
                     <option id="teletub" value="">Choose teletubbies!</option>
-                    <option id="teletub" aria-label="Tinky Winky - purple" value="Tinky Winky - purple">Tinky Winky - purple</option>
-                    <option id="teletub" value="Dipsy - green">Dipsy - green</option>
-                    <option id="teletub" value="Laa-Laa - yellow">Laa-Laa - yellow</option>
-                    <option id="teletub" value="Po - red">Po - red</option>
+                    <option id="teletub" tabindex="0" value="Tinky Winky - purple">Tinky Winky - purple</option>
+                    <option id="teletub" tabindex="0" value="Dipsy - green">Dipsy - green</option>
+                    <option id="teletub" tabindex="0" value="Laa-Laa - yellow">Laa-Laa - yellow</option>
+                    <option id="teletub" tabindex="0" value="Po - red">Po - red</option>
                 </select>
         </div>
     )
