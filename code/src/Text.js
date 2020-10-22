@@ -6,7 +6,7 @@ import img from './images/power.jpg'
 const Text = ({value, setText }) => {
     return (
         <section className="text-wrapper">
-            <label htmlFor="power-ranger-text"></label>
+            <label htmlFor="power-ranger-text"> Write the coolest power ranger color in the textbox </label>
             <h2 tabIndex="0">Coolest Power Ranger character?</h2>
             <img 
                 tabIndex="0"
@@ -20,7 +20,7 @@ const Text = ({value, setText }) => {
                 type="text"
                 onChange={(event) => setText(event.target.value)}
                 value={value}
-                placeholder="Coolest power ranger color is..."
+                aria-placeholder="Coolest color is..."
                 required
             />
         </section>)

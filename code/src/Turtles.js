@@ -13,10 +13,13 @@ const Turtle = props => {
                 alt="visualization of teenage mutant ninja turtles"
                 src={img}
             />
-            <label htmlFor="slectninja"></label>
+            <label htmlFor="slectninja"> </label>
             <select
                 onChange={(event) => setTurtles(event.target.value)}
                 value={turtle}
+                aria-label="select-menu"
+                aria-controls="collapse"
+                aria-orientation="vertical"
                 required
             >
                 <option value="">Choose ninja!</option>
