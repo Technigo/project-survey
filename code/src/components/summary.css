@@ -24,31 +24,30 @@ button {
   text-transform: uppercase;
 }
 
-@media (max-width: 600px) {
+  @media (max-width: 600px) {
 
-  p {
-    width: 100%;
-    text-align: left;
-    padding: 20px;
-    font-size: 24px;
+    p {
+      width: 100%;
+      text-align: left;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    .summary-heading {
+      font-size: 40px;
+    }
   }
 
-  .summary-heading {
-    font-size: 40px;
+  @media (min-width: 601px) and (max-width: 1024px) {
+
+    p {
+      width: 100%;
+      text-align: left;
+      padding: 40px;
+      font-size: 42px;
+    }
+
+    .summary-heading {
+      font-size: 64px;
+    }
   }
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-
-  p {
-    width: 100%;
-    text-align: left;
-    padding: 40px;
-    font-size: 42px;
-  }
-
-  .summary-heading {
-    font-size: 64px;
-  }
-
-}

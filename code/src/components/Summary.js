@@ -5,8 +5,10 @@ export const Summary = ({reflection, weather}) => { // {reflection} could also b
   return (
     <section className="summary-section">
       <h1 className="summary-heading">Notes of the day</h1>
-      <p>Today was {reflection} for you. Maybe the {weather} weather had an impact on your mood. Hope tomorrow is even better!</p>
-      <button><a href="">Create new notes</a></button>
+        <p>Today was {reflection} for you. 
+        Maybe the {weather} weather had an impact on your mood. Hope tomorrow is even better!
+        </p>
+          <button><a href="">Create new notes</a></button>
     </section>
   )
 }

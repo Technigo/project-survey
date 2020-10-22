@@ -12,6 +12,7 @@ header {
 h1 {
   font-family: 'Playfair display';
   color: white;
+  font-weight: normal;
   margin: 0;
   width: 100%;
   font-size: 120px;

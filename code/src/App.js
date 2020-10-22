@@ -17,6 +17,13 @@ export const App = () => {
     setShowSummary(true)
   }
 
+  const date = () => {
+    const day = new Date();
+    const local = day.toLocaleDateString();
+    document.getElementById("demo").innerHTML = local;
+  }
+  console.log(date)
+
   return (
     <main> 
       {!showSummary && (
@@ -58,32 +65,36 @@ export const App = () => {
               Sunny
               <input 
                 type="radio"
+                checked={weather === "sunny"}
                 value="sunny"
-                onChange={event => setWeather (event.target.value)}
+                onChange={(e) => {setWeather (e.target.value)}}
               />
             </label>
             <label className="option">
               Cloudy
               <input
                 type="radio"
+                checked={weather === "cloudy"}
                 value="cloudy"
-                onChange={event => setWeather (event.target.value)}
+                onChange={(e) => {setWeather (e.target.value)}}
               />
             </label>
             <label className="option">
               Rainy
               <input
                 type="radio"
+                checked={weather === "rainy"}
                 value="rainy"
-                onChange={event => setWeather (event.target.value)}
+                onChange={(e) => {setWeather (e.target.value)}}
               />
             </label>
             <label className="option">
               Windy
               <input
                 type="radio"
+                checked={weather === "windy"}
                 value="windy"
-                onChange={event => setWeather (event.target.value)}
+                onChange={(e) => {setWeather (e.target.value)}}
               />
             </label>
             </div>
