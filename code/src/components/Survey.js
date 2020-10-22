@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 
+import './survey.css';
 import { Text } from './Text';
 import { Select } from './Select';
 import { Radio } from './Radio';
@@ -28,7 +29,7 @@ const handleSubmit = (event) => {
 };*/
 
   return (
-    <section>
+    <section className="survey-container">
       {!showSummary ? (
       <form onSubmit={handleSubmit}>
         <Text 
@@ -51,7 +52,12 @@ const handleSubmit = (event) => {
         <Submit />
       </form>
       ):
-      (<Summary />
+      (<Summary 
+        name={name}
+        location={location}
+        ageGroup={ageGroup}
+        wantsNewsetter={wantsNewsletter}
+      />
 
       )} 
     </section>

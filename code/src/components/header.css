@@ -1,0 +1,23 @@
+.header {
+  height: 50px;
+  background-color: #000000;
+  color: aliceblue;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  position: relative;
+}
+
+h1 {
+  margin: 0;
+}
+
+header:before {
+  content: "";
+  position: absolute;
+  top: 49px;
+  right: 0;
+  left: 0;
+  height: 50px;
+  background: linear-gradient(to top left, transparent 49%, #000000 50%);
+}
