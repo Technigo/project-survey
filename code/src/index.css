@@ -61,6 +61,7 @@ form {
 
 select {
   width: 100%;
+  max-width: 1000px;
   margin-top: 20px;
   font-family: 'Merriweather';
   border: none;
@@ -90,11 +91,14 @@ fieldset {
 /*QUESTION 3*/
 
 .text-question {
-  width: 90%
+  width: 90%;
+  display: flex;
+  flex-direction: column;
 }
 
 .text-input {
   width: 100%;
+  max-width: 1000px;
   margin-top: 20px;
   font-family: 'Merriweather';
   border: none;
@@ -119,6 +123,26 @@ button {
   align-items: flex-start;
   flex-direction: column;
   padding: 100px 60px;
+}
+
+footer {
+  background-color: #172439;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 12px;
+  padding: 45px;
+  line-height: 13px;
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer img {
+  width: 50px;
+  margin: 7px;
 }
 
 /*MEDIA QUERIES*/
