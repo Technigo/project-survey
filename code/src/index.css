@@ -17,7 +17,7 @@ code {
 }
 
 #root {
-  width: 70%;
+  width: 100%;
   margin: 0;
   display: flex;
   flex-flow: column nowrap;
@@ -25,10 +25,9 @@ code {
 }
 
 .surveyContainer {
-  margin-top: 50px;
-  padding: 5%;
+  margin-top: 10px;
+  padding: 2%;
   background: #fff;
-  /* background: #f2edee; */
   border-radius: 8px;
   box-shadow:  29px 29px 58px #ddd2d4, 
                -29px -29px 58px #fffcfe;
@@ -43,6 +42,11 @@ h1 {
   margin: 0;
 }
 
+button {
+  margin-bottom: 15px;
+}
+
+/* Question & Answer styles */
 .question {
   font-weight: 700;
 }
@@ -52,10 +56,28 @@ h1 {
   padding-left: 2%;;
 }
 
+.bold {
+  font-weight: 700;
+}
+
 select {
   margin-left: 10px;
 }
 
-.bold {
-  font-weight: 700;
+
+/* Media queries */
+@media (min-width: 768px) {  
+  #root {
+    width: 70%;
+  }
+
+  .surveyContainer {
+    margin-top: 50px;
+    padding: 5%;
+  }
 }
+
+/* Desktop */
+/* @media (min-width: 1200px) {
+
+} */
