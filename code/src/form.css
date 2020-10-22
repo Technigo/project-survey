@@ -25,14 +25,16 @@
     margin-top: 10px;
     font-size: 18px;
     border-radius: 5px;
+    color: #fff;
+    background: #4a646c
     /* text-transform: uppercase; */
     /* align-self: center; */
 }
 
-.black{
+/* .black{
     color: #000;
 }
 
 .white{
     color: #fff;
-}
+} */

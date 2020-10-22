@@ -1,10 +1,14 @@
-import React from 'react'
+import React from 'react';
 
-export const Summary = ({name }) => {
-    // const { name } = props;
+const Summary = ({ userName, userMaincourse, userDrinks }) => {
+
     return (
-        <section>
-            <h1>Hello {name}!</h1>
-        </section>
+        <div>
+            <div>Name: {userName}</div>
+            <div>Main course: {userMaincourse}</div>
+            <div>Drinks: {userDrinks.join(', ')}</div>
+        </div>
     );
 }
+
+export default Summary;

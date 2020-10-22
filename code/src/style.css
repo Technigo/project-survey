@@ -1,24 +1,8 @@
 body {
     margin: 0;
     background: #b0bec5;
-    /* background: lightsteelblue; */
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-
-    }
-
-.text-input {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-top: 300px;
 }
-
-
-
-/* .iput-name{
-    /* margin-right: 20px; */
-    /* display: flex;
-    flex-direction: row;
-    justify-content: space-between; */ 
