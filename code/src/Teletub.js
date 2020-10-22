@@ -22,13 +22,12 @@ const Teletub = props => {
                     aria-orientation="vertical"
                     aria-expanded="false"
                     required
-
                 >
                     <option value="">Choose teletubbies!</option>
-                    <option tabindex="-1" value="Tinky Winky - purple">Tinky Winky - purple</option>
-                    <option tabindex="-1" value="Dipsy - green">Dipsy - green</option>
-                    <option tabindex="0" value="Laa-Laa - yellow">Laa-Laa - yellow</option>
-                    <option tabindex="0" value="Po - red">Po - red</option>
+                    <option tabIndex="-1" value="Tinky Winky - purple">Tinky Winky - purple</option>
+                    <option tabIndex="-1" value="Dipsy - green">Dipsy - green</option>
+                    <option tabIndex="0" value="Laa-Laa - yellow">Laa-Laa - yellow</option>
+                    <option tabIndex="0" value="Po - red">Po - red</option>
                 </select>
         </div>
     )

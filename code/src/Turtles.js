@@ -20,6 +20,7 @@ const Turtle = props => {
                 aria-label="select-menu"
                 aria-controls="collapse"
                 aria-orientation="vertical"
+                aria-expanded="false"
                 required
             >
                 <option value="">Choose ninja!</option>

@@ -22,9 +22,11 @@ const SailorMoon = props => {
             />
             <label htmlFor="sailor">Choose one Sailor Moon character!</label>
             {sailorMoons.map(group => (
-                <label className="sailor-label" htmlFor="InputRadio" key={group}>
+                <label className="radiobuttons-label" htmlFor={group} key={group}>
                     <input
                         type="radio"
+                        id={group}
+                        name={group}
                         value={group}
                         onChange={event => setSailorMoon(event.target.value)}
                         checked={sailorMoon === group}
