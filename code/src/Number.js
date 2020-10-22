@@ -14,15 +14,23 @@ export const Number = ({ userNumber, onNumberOfBooksChange }) => {
             <section className="question white">
                 <fieldset>
                     <legend tabIndex="0">How many books do you get through per year?</legend>
-                        <section className="numbers">
+                        <section className="numbers" role="radiogroup">
                             {numberRanges.map((range) => (
-                                <label key={range} className="number-label" tabIndex="0">
-                                    <input
-                                        type="radio"
-                                        value={range}
-                                        onChange={event => onNumberOfBooksChange(event.target.value)}
-                                        checked={userNumber === range}
-                                    />
+                                <label 
+                                    htmlFor={range}
+                                    key={range} 
+                                    className="number-label" 
+                                    tabIndex="0" 
+                                    role="radio"
+                                    >
+                                        <input
+                                            id={range}
+                                            type="radio"
+                                            value={range}
+                                            onChange={event => onNumberOfBooksChange(event.target.value)}
+                                            checked={userNumber === range}
+                                            aria-checked={userNumber === range}
+                                        />
                                     {range}
                                 </label>
                             ))}

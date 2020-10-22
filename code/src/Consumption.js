@@ -10,9 +10,10 @@ export const Consumption = ({ favConsumption, onConsumptionChange }) => {
     return (
         <>
             <section className="question">
-                <label className="dropdown">
+                <label htmlFor="consumption" className="dropdown">
                     How do you prefer to enjoy a book?
                         <select
+                            id="consumption"
                             onChange={event => onConsumptionChange(event.target.value)}
                             value={favConsumption}
                             >

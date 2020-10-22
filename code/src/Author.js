@@ -4,9 +4,10 @@ export const Author = ( { favAuthor, onFavouriteAuthorChange }) => {
     return (
         <>
             <section className="question">
-                <label className="text-question">
+                <label htmlFor="author" className="text-question">
                     Who is your favourite author?
                     <input
+                        id="author"
                         className="text-input"
                         type="text"
                         placeholder="Type..."
