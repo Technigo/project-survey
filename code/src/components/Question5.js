@@ -48,7 +48,11 @@ const Question5 = (props) => {
           fourthDot="progress dot_000"
           fifthDot="progress dot_000"
         />
-        <SubmitButton setSection={props.setSection} />
+        <SubmitButton
+          setSection={props.setSection}
+          currentState={props.title}
+          defaultState={''}
+        />
       </div>
     </article>
   );

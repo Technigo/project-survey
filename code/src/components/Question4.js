@@ -45,6 +45,8 @@ const Question4 = (props) => {
           whatQuestionNext="fifthQuestion"
           section={props.section}
           setSection={props.setSection}
+          currentState={props.suggestions}
+          defaultState={'Write your suggestions here, please'}
         />
       </div>
     </article>

@@ -3,11 +3,11 @@ import NextButton from 'components/NextButton.js';
 import PreviousButton from 'components/PreviousButton.js';
 import ProgressBar from 'components/ProgressBar.js';
 
-const Question3 = (props) => {
+const Question3 = ({ skills, setSkills, section, setSection }) => {
   const handleSkillsChange = (skillValue) => {
-    props.skills.includes(skillValue)
-      ? props.setSkills(props.skills.filter((item) => item !== skillValue))
-      : props.setSkills([...props.skills, skillValue]);
+    skills.includes(skillValue)
+      ? setSkills(skills.filter((item) => item !== skillValue))
+      : setSkills([...skills, skillValue]);
   };
 
   const skillsGroup = [
@@ -32,25 +32,24 @@ const Question3 = (props) => {
       {/* Input */}
       <div className="question__content-wrapper">
         {skillsGroup.map((skill) => (
-          <span className="form__checkbox__question-wrapper">
+          <span className="form__checkbox__question-wrapper" key={skill}>
             <label htmlFor={skill}>{skill}</label>
             <input
               id={skill}
               type="checkbox"
               className="form__checkbox"
-              checked={props.skills.includes(skill)}
+              checked={skills.includes(skill)}
               onChange={() => handleSkillsChange(skill)}
             />
           </span>
         ))}
       </div>
-
       {/* Navigation buttons */}
       <div className="buttons__wrapper">
         <PreviousButton
           whatQuestionPrevious="secondQuestion"
-          section={props.section}
-          setSection={props.setSection}
+          section={section}
+          setSection={setSection}
         />
         <ProgressBar
           firstDot="progress dot_000"
@@ -61,8 +60,10 @@ const Question3 = (props) => {
         />
         <NextButton
           whatQuestionNext="fourthQuestion"
-          section={props.section}
-          setSection={props.setSection}
+          section={section}
+          setSection={setSection}
+          currentState={skills.length}
+          defaultState={0}
         />
       </div>
     </article>

@@ -52,6 +52,8 @@ const Question2 = (props) => {
           whatQuestionNext="thirdQuestion"
           section={props.section}
           setSection={props.setSection}
+          currentState={props.ageGroup}
+          defaultState={undefined}
         />
       </div>
     </article>

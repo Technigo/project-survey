@@ -1,8 +1,17 @@
 import React from 'react';
 
-const NextButton = (props) => {
+const NextButton = ({
+  currentState,
+  defaultState,
+  setSection,
+  whatQuestionNext,
+}) => {
   const handleNextButton = () => {
-    props.setSection(props.whatQuestionNext);
+    if (currentState !== defaultState) {
+      setSection(whatQuestionNext);
+    } else {
+      alert('Please answer the question before pressing next question');
+    }
   };
 
   return (

@@ -1,6 +1,9 @@
 .form__wrapper {
   text-align: center;
   margin: auto;
+  display: flex;
+  align-content: center;
+  justify-content: center;
 }
 
 /* --- Question styling --- */
@@ -137,6 +140,19 @@
   padding: 50px;
 }
 
+.form__button__retakeSurvey {
+  margin: 30px 0 0 0;
+  padding: 5px 20px;
+  background: none;
+  border: 1px #000 solid;
+}
+
+.form__button__retakeSurvey:hover {
+  border: 1px #fff solid;
+  color: #fff;
+  cursor: pointer;
+}
+
 .summary__bye {
   padding-top: 20px;
   max-width: 50vw;
@@ -144,10 +160,14 @@
 }
 
 .summary__social-media__image {
-  width: 30px;
+  width: 25px;
   margin: 20px 10px;
 }
 .summary__social-media__image:hover {
   filter: invert(1);
   cursor: pointer;
+}
+
+.summary__social-media__wrapper {
+  margin-bottom: 50px;
 }

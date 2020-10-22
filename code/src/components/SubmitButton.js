@@ -2,7 +2,11 @@ import React from 'react';
 
 const SubmitButton = (props) => {
   const handleSubmitButton = () => {
-    props.setSection('summary');
+    if (props.currentState !== props.defaultState) {
+      props.setSection('summary');
+    } else {
+      alert('Please answer the question before pressing next question');
+    }
   };
 
   return (

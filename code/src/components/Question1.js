@@ -28,15 +28,15 @@ const Question1 = (props) => {
 
       {/* Navigation buttons */}
       <div className="buttons__wrapper">
-        {props.name !== '' && (
-          <NextButton
-            whatQuestionNext="secondQuestion"
-            section={props.section}
-            setSection={props.setSection}
-            name={props.name}
-            setName={props.setName}
-          />
-        )}
+        <NextButton
+          whatQuestionNext="secondQuestion"
+          section={props.section}
+          setSection={props.setSection}
+          name={props.name}
+          setName={props.setName}
+          currentState={props.name}
+          defaultState="Type your name here please.."
+        />
       </div>
     </article>
   );

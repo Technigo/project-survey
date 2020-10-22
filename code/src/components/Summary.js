@@ -3,10 +3,6 @@ import React from 'react';
 const Summary = (props) => {
   return (
     <article className="summary question__wrapper">
-      <p className="summary__thanks">
-        Thank you {props.name} for taking some time to answer this survey 😍
-      </p>
-
       <ul className="summary__answers">
         <li>Name: {props.name}</li>
         <li>Age: {props.ageGroup}</li>
@@ -14,11 +10,23 @@ const Summary = (props) => {
         <li>Other suggestions: {props.suggestions}</li>
         <li>Title: {props.title}</li>
       </ul>
-
+      <button
+        type="button"
+        className="form__button__retakeSurvey"
+        onClick={() => window.location.reload()}
+      >
+        Retake survey
+      </button>
       <p className="summary__bye">
+        Thank you {props.name} for taking some time to answer this survey{' '}
+        <span role="img" aria-label="heart-eyes emoji">
+          😍
+        </span>
         Your thoughts are of great value to me, I'll make sure to remember them.
         Meanwhile, feel free to follow my journey on social media below.{' '}
-        <span role="img">🥰</span>
+        <span role="img" aria-label="thankful emoji">
+          🥰
+        </span>
       </p>
 
       <div className="summary__social-media__wrapper">
