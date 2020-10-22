@@ -141,7 +141,10 @@ a {
   color: #ffffff;
   background: transparent;
   text-decoration: none;
+  border: white solid 2px;
 }
+
+/* MEDIA QUERIES */
 
 @media (max-width: 768px) {
 	h2 {
