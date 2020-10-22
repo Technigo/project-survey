@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./pineapple-supply-co-prP9CYcRpzA-unsplash.jpg');
+  object-fit: contain;
+  background-position: center;
 }
 
 code {
