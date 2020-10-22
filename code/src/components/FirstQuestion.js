@@ -13,12 +13,13 @@ export const FirstQuestion = ({ageGroup, setAgeGroup}) => {
     return (
         <div className='first-question'>
             <h2 className='age-header' tabIndex="0">How old are you?</h2>
-            Age:
+            <label for ='age' tabIndex="0">Age:</label>
             {ageGroups.map(group => (
             <label 
             className='radio-buttons'
             key={group}>
                 <input
+                    htmlFor=''
                     type='radio'
                     value={group}
                     onChange={event => setAgeGroup(event.target.value)}
