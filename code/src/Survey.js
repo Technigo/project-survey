@@ -70,7 +70,7 @@ export const Survey = () => {
           </form>
         </section>
       )}
-      {submitted && (
+      {!submitted && (
         <section className="summary-wrapper">
           <Summary
             name={name}
