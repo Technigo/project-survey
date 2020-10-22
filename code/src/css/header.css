@@ -1,0 +1,15 @@
+header {
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  color: purple;
+}
+
+span {
+  font-family: 'Gochi Hand', cursive;
+  font-size: 40px;
+}

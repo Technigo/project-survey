@@ -1,0 +1,25 @@
+form {
+  padding: 20px;  
+  background-color: orangered;
+  color: white;
+  border-radius: 50px;
+  width: 50%;
+  margin: auto;
+}
+
+p {
+  margin: 0;
+}
+
+.question {
+  margin: 20px;
+}
+
+.question input {
+  margin-right: 5px;
+  margin-top: 10px;
+}
+
+.question label {
+  margin-right: 10px;
+}
