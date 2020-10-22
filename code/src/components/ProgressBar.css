@@ -27,12 +27,13 @@
 }
 
 .progress-bar[value]::-webkit-progress-value {
-	background-color: red;
+	background-color: #bda99e;
 	/* height: 5px; */
 	border-top-left-radius: 2px;
 	border-bottom-left-radius: 2px;
 }
 
 .progress-bar-label {
-	font-size: 10px;
+	font-size: 16px;
+	margin-right: 10px;
 }
