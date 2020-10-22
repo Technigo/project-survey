@@ -43,8 +43,8 @@ export const App = () => {
         
           <button
             type="submit"
-            disabled={frequency === '' || age === '' || factor === '' 
-            name="submit button"}
+            disabled={frequency === '' || age === '' || factor === ''}
+            name="submit button"
           >Submit
           </button>
         </form> ) : (
