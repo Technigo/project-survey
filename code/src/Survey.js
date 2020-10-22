@@ -30,14 +30,12 @@ const Survey = () => {
         setSection(sectionOrder[nextSectionIndex+1]);   
       };
 
-  
-
     return (
     <>
     <section className ="wrapper-form"> 
         {section !== 'summary' ? (
             
-            <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
     
         {section === 'welcome' && ( 
              <Welcome
@@ -69,7 +67,6 @@ const Survey = () => {
                 aria-label='Next question'
                 > Next!
             </button> 
-
             </form>
             
             ):(

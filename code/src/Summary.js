@@ -8,7 +8,7 @@ const restart = () => {
   };
 
 
-const Summary = ({ name , ageGroup,  fur, cat }) => {
+const Summary = ({ name , ageGroup,  fur,  }) => {
     return ( 
       <>
       <div>
@@ -16,7 +16,7 @@ const Summary = ({ name , ageGroup,  fur, cat }) => {
       </div>
 
      <section className ="summary-wrapper"> 
-    <p tabIndex ="0"> Your dream cats name is {name} and it should be a {ageGroup} with {fur} ! </p>   
+    <p tabIndex ="0"> Your dream cat's name is {name} and it should be a {ageGroup} with {fur} ! </p>   
     <p tabIndex ="0"> PS. we will not give you a cat </p>
   
     <button
