@@ -45,8 +45,8 @@ export const Form = () => {
         location={location}
         text={text} 
         />
-        ) } 
+        )}; 
         </section>
-    )
-} 
+    );
+}; 
 
