@@ -13,7 +13,8 @@ export const Summary = (props) => {
     <p tabIndex={'0'}>Your agegroup: {props.age}.</p>
     {props.surveyAgain ?
     <p tabIndex={'0'}>You'd gladly take this survey again, fantastic!</p>
-    :<p tabIndex={'0'}>You decided not to take this survey again.</p>}
+    :<p tabIndex={'0'}>You decided not to take this survey again.</p>
+    }
     <p tabIndex={'0'}>Your message about this survey: "{props.userMessage}"</p>
     </section>
     )

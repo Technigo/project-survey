@@ -1,0 +1,25 @@
+.wrapper {
+    display: grid;
+    grid-template-rows: repeat(4, 25vw);
+    grid-template-columns: 1fr;
+    justify-content: center;
+    background-image: url('../pineapple-supply-co-prP9CYcRpzA-unsplash.jpg');
+    object-fit: contain;
+    background-position: center;
+}
+
+.survey__form {
+    grid-row: 2;
+    grid-column: 2/3;
+    background-color: rgba(247, 249, 251, 0.4);
+    padding: 20px;
+}
+
+.button-container {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.wrapper {
+    justify-content: center;
+}
