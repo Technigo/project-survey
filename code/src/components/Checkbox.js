@@ -1,24 +1,31 @@
 import React from'react';
 
+import 'components/CheckboxCss.css'
 
-export const Checkbox = ({userColors, onColorsChange}) => {
+
+export const Checkbox = ({userLikes, onLikesChange}) => {
 
     return (
         <div>
-            <label htmlFor="colorRed">Red</label>
+            <h2 tabindex="0">4. What more do you like?</h2>
+            <div className="checkbox-container">
+            <label htmlFor="likeKittens">Kittens</label>
             <input
-                id="colorRed"
+                id="likeKittens"
                 type="checkbox"
-                checked={userColors.includes('red')}
-                onChange={() => onColorsChange('red')}
+                checked={userLikes.includes('kittens')}
+                onChange={() => onLikesChange('kittens')}
             />
-            <label htmlFor="colorBlue">Blue</label>
+            <span className="checkbox-label"></span>
+            <label htmlFor="likeStrawberries">Strawberries</label>
             <input
-                id="colorBlue"
+                id="likeStrawberries"
                 type="checkbox"
-                checked={userColors.includes('blue')}
-                onChange={() => onColorsChange('blue')}
-            />
+                checked={userLikes.includes('strawberries')}
+                onChange={() => onLikesChange('strawberries')}            />
+            <span className="checkbox-label"></span>
+
+            </div>
         </div>
     );
 };

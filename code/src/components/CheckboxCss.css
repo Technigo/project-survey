@@ -1,0 +1,21 @@
+.checkbox-label {
+    display: flex;
+    width: 30px;
+}
+
+.checkbox-container {
+    display: flex;
+    margin-left: 15px;
+    margin-top: 35px;
+}
+
+.checkbox-container input {
+    margin-top: -6px;
+}
+
+
+
+
+
+
+

@@ -18,3 +18,4 @@ export const Textinput = ({questionName, name, setName}) => {
     );
 };
 
+
