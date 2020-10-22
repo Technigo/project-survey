@@ -16,7 +16,6 @@ const Teletub = props => {
             <label htmlFor="teletub">Which is your favorite teletubbies?</label>
                 <select
                     aria-label="select-menu"
-                    id="teletub"
                     onChange={(event) => setTeletubbies(event.target.value)}
                     value={teletubbies}
                     aria-controls="collapse"
