@@ -20,6 +20,7 @@
   align-content: center;
   justify-content: center;
   flex-wrap: wrap;
+  position: relative;
 }
 
 /* --- Input styling --- */
@@ -57,6 +58,13 @@
   display: flex;
   align-items: center;
   max-width: 20vw;
+}
+
+.form__checkboxes__popup {
+  position: absolute;
+  margin: 40px;
+  background: #fff;
+  padding: 2px 30px;
 }
 
 .form__dropdown {

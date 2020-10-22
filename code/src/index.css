@@ -2,8 +2,8 @@
 
 html,
 body,
-#app,
-#app > div {
+#root,
+#root > div {
   height: 100%;
 }
 

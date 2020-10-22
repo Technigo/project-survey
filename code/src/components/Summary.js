@@ -18,11 +18,8 @@ const Summary = (props) => {
         Retake survey
       </button>
       <p className="summary__bye">
-        Thank you {props.name} for taking some time to answer this survey{' '}
-        <span role="img" aria-label="heart-eyes emoji">
-          😍
-        </span>
-        Your thoughts are of great value to me, I'll make sure to remember them.
+        Thank you {props.name} for taking some time to answer this survey! Your
+        thoughts are of great value to me, I'll make sure to remember them.
         Meanwhile, feel free to follow my journey on social media below.{' '}
         <span role="img" aria-label="thankful emoji">
           🥰
