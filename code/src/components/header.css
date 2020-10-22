@@ -1,5 +1,13 @@
+/*Add fun font*/
+
 .header {
-    grid-row: 1;
-    grid-column: span 4;
-    
+    position: absolute;
+    font-size: 20px;
+    top: 10px;
+}
+
+@media screen and (min-width: 768px) {
+    .header {
+        font-size: 35px;
+    }
 }
