@@ -13,10 +13,10 @@ export const Number = ({ userNumber, onNumberOfBooksChange }) => {
         <>
             <section className="question white">
                 <fieldset>
-                    <legend>How many books do you get through per year?</legend>
+                    <legend tabIndex="0">How many books do you get through per year?</legend>
                         <section className="numbers">
                             {numberRanges.map((range) => (
-                                <label key={range} className="number-label">
+                                <label key={range} className="number-label" tabIndex="0">
                                     <input
                                         type="radio"
                                         value={range}
