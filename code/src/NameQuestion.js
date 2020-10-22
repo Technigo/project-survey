@@ -1,6 +1,7 @@
 import React from "react";
 
-export const NameQuestion = ({ name, setName }) => {
+export const NameQuestion = ({ name, onNameChange }) => {
+  
   return (
     
     <label>
@@ -9,7 +10,7 @@ export const NameQuestion = ({ name, setName }) => {
       <input
         type="text"
         value={name}
-        onChange={event => setName(event.target.value)}
+        onChange={event => onNameChange(event.target.value)}
         placeholder="Write your name here"
         required
       />

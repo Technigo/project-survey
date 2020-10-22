@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 import "./styles.css";
-import { Summary } from "./Summary";
 import { NameQuestion } from "./NameQuestion";
-import { StoreQuestion} from "./StoreQuestion";
 import { CheckboxQuestions } from "./CheckboxQuestions";
+import { StoreQuestion} from "./StoreQuestion";
+import { Summary } from "./Summary";
 
 // THIS IS THE PARENT ALL STATES ARE SET HERE
 
@@ -12,20 +12,41 @@ import { CheckboxQuestions } from "./CheckboxQuestions";
 export const App = () => {
   const [name, setName] = useState("");
   const [likeOption, setLikeOption] = useState();
-  const [optionBlue, setOptionBlue] = useState("");
+  const [whereBuy, setwhereBuy] = useState("");
   const [showSummary, setShowSummary] = useState(false);
 
+
+   // CONVENTION TO STICK TO WHAT SHOULD BE UPPDATED, AND THE ACTION, EXECUTE SETNAME WITH NEW NAME.
+
+const handleNameChange = newName => {
+    setName(newName);
+};
+
+const handlelikeOptionChange = likeCheese => {
+  likeOption(likeCheese)
+  ? setLikeOption(likeOption.map(item => item !== likeCheese))
+  : setLikeOption( [...likeOption, likeCheese] );
+};
+
+// const handleColorsChange = colorValue => {
+//     colors.includes(colorValue)
+//         ? setColors( colors.filter(item => item !== colorValue) )
+//         : setColors( [...colors, colorValue] );
+// };
+
+const handleWhereBuyChange = newWhereBuy => {
+  setwhereBuy(newWhereBuy);
+};
 
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowSummary(true);
-  };
-
+  }
 
   return (
     <div className="App">
-      <h1>Say cheese!</h1>
+     
 
       {/* Exempel 2, showSummary ? something : something else, kallad =turnery operator */}
 
@@ -33,20 +54,34 @@ export const App = () => {
       {!showSummary && ( betyder, inte true visa detta eller detta.....*/}
 
       {!showSummary && (
+       
         <form onSubmit={handleSubmit}>
-          <NameQuestion username={name}   handleSetName={setName}/>
+          <div>
+         <h1>Say cheese!</h1>
+         </div>
+
+          <NameQuestion 
+          username={name}  
+          onNameChange={handleNameChange}/>
+          
           <CheckboxQuestions
             checked={likeOption}
-            handleSetPassword={setLikeOption}  />
-          <StoreQuestion value={optionBlue} handleSetBlue={setOptionBlue} />
-          
+            onlikeOptionChange={handlelikeOptionChange}/>
+
+          <StoreQuestion 
+          value={whereBuy} 
+          onWhereBuyChange={handleWhereBuyChange} />
+
 
           <button type="Submit">Submit</button>
         </form>
       )}
+      {/* <button type="Reset" id="resetBtn">RESET</button> 
+     
+
       {/* showSummary samma som === true */}
 
-      {showSummary && <Summary name={name} />}
+      {showSummary && <Summary name={name}  checked={likeOption}  value={whereBuy}/>}
     </div>
   );
 };
