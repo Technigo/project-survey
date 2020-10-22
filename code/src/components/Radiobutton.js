@@ -1,29 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import RadiobuttonCss from 'components/RadiobuttonCss.css'
 
 
-const ageGroups = ["0-18", "19-30", "30+"];
+const perWeek = ["0-2", "3-4", "5-7"];
 
-const Radiobutton = ({questionAge}) => {
-    const [ageGroup, setAgeGroup] = useState();
+export const Radiobutton = ({questionTimes, timesPerWeek, setTimesPerWeek}) => {
 
     return (
-        <form>
-            <h2>{questionAge}</h2>
-            <p className="agegroup">Age group:</p>
-            {ageGroups.map((group) => (
-            <label htmlFor="" key={group}>
-                <input
-                type="radio"
-                value={group}
-                onChange={(event) => setAgeGroup(event.target.value)}
-                checked={ageGroup === group}
-                />
-                {group}
-            </label>
-            ))}
-        </form>
+      <>
+            <div className="sub-heading form-radio">
+              <h2 tabindex="0">2. How often do you eat candy?</h2>
+            </div>
+            <p tabindex="0" className="times-per-week">Times per week:</p>
+            <div className="label-container">
+              {perWeek.map((times) => (
+            
+              <label htmlFor="" key={times}>
+                  <input className="input"
+                  type="radio"
+                  value={times}
+                  onChange={(event) => setTimesPerWeek(event.target.value)}
+                  checked={timesPerWeek === times}
+                  required
+                  />
+                  {times}
+              </label>
+              ))}
+            </div> 
+    </>
   );
 };
 
-export default Radiobutton

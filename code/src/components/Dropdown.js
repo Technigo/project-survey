@@ -1,26 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import DropdownCss from 'components/DropdownCss.css';
 
-const Dropdown = ({questionSweets}) => {
-  const [location, setLocation] = useState();
+export const Dropdown = ({questionSweets, sweet, setSweet}) => {
     
     return (
-      <>
-        <form>
-          <h2>{questionSweets}</h2>
-
+        <label className="form-dropdown">
+          <h2 tabindex="0">3. What's your fav sweet?</h2>
+          <div className="select-container">
             <select
-              onChange={(event) => setLocation(event.target.value)}
-              value={location}
-          >
-            <option value="">Choose your poison:</option>
-            <option value="chocolat">Chocolat of course!</option>
-            <option value="licorice">Licorice! What else?!</option>
-            <option value="sour sweets">C'mon - sour sweets!</option>
+              onChange={(event) => setSweet(event.target.value)}
+              value={sweet}
+              required
+            >
+            <option value="">Choose wisely...</option>
+            <option tabindex="0" value="chocolat">Chocolat!</option>
+            <option tabindex="0" value="licorice">Licorice!</option>
+            <option tabindex="0" value="sour sweets">Sour sweets!</option>
           </select>
-        </form>
-      </>
+        </div>
+        </label>
     );
 };
 
-export default Dropdown

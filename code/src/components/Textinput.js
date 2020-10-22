@@ -1,22 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import  TextinputCss  from 'components/TextinputCss.css';
 
 
-const Textinput = (props) => {
-    const [name, setName] = useState('');
+export const Textinput = ({questionName, name, setName}) => {
   
     return (
-    <>
-    <form onSubmit={(event) => event.preventDefault()}>
-      <h2>{props.questionName}</h2>
+     <label>
+      <h2 tabindex="0">1. What's your name?</h2>
       <input
         type="text"
         onChange={(event) => setName(event.target.value)}
-        value={props.name}
+        value={name}
+        required
       />
-    </form>
-    </>
+      </label>
     );
 };
 
-export default Textinput

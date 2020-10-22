@@ -1,10 +1,43 @@
 label {
     color: white;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    margin-top: 5px;
 }
 
-.agegroup {
+.label-container {
+    display: flex;
+    margin: 15px;
+    justify-content: space-around;}
+
+.times-per-week {
     color: white;
     font-family: 'Ubuntu', sans-serif;
+    text-align: center;
+    font-size: 20px;
+    margin-bottom: 0px;
 }
+
+.form-radio .sub-heading {
+    display: block;
+    margin-top: 80px;
+}
+
+.form-radio label {
+    margin: 14px;
+}
+
+.input {
+    width: 40px;
+    height: 40px;
+    display: block;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+input.input {
+    color: white;
+    padding: 15px;   
+}
+

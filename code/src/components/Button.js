@@ -1,13 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+import ButtonCss from 'components/ButtonCss.css';
 
 
-const Button = () => {
-
+export const Button = ({buttonText}) => {
+  
     return (
-    <>
-    </>
-
+    <div className="button-container" tabindex="0">
+        <button><p>Hit me!</p></button>
+    </div>
+    
     );
 };
 
-export default Button

@@ -1,36 +1,66 @@
-import Header from 'components/Header';
-import React from 'react'
-import Dropdown from './components/Dropdown';
-import Radiobutton from './components/Radiobutton';
-import Textinput from './components/Textinput';
+import React, { useState } from 'react'
+
+import { Header } from 'components/Header';
+import { Dropdown } from './components/Dropdown';
+import { Radiobutton } from './components/Radiobutton';
+import { Textinput } from './components/Textinput';
+import { Checkbox } from './components/Checkbox';
+import { Summary } from './components/Summary';
+import { Button } from 'components/Button';
+import AppCss from 'components/AppCss.css';
+
 
 
 export const App = () => {
-  let title = 'Sweet-o-meter';
-  let questionName = "What's your name?"
-  let questionAge = "How old are you?"
-  let questionSweets = "What's your fav sweet?"
 
-  return (
+  const [name, setName] = useState('');
+  const [timesPerWeek, setTimesPerWeek] = useState();
+  const [sweet, setSweet] = useState();
+  const [showSummary, setShowSummary] = useState (false);
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setShowSummary(true);
+  };
+  
+  return ( 
     <>
-
       <Header
-      title={title}
       />
 
-      <Textinput
-      questionName={questionName}
-      />
+      {!showSummary && (
+      <form onSubmit={handleSubmit}>
 
-      <Radiobutton
-      questionAge={questionAge}
-      />
+        <Textinput
+        name={name}
+        setName={setName}
+        />
 
-      <Dropdown
-      questionSweets={questionSweets}
-      />
-</>
+        <Radiobutton
+        timesPerWeek={timesPerWeek}
+        setTimesPerWeek={setTimesPerWeek}
+        />
+
+        <Dropdown
+        sweet={sweet}
+        setSweet={setSweet}
+        />
+
+        <Checkbox />
+
+        <Button />
+
+      </form>
+      )}
+
+      {showSummary && (
+        <Summary
+        name={name}
+        timesPerWeek={timesPerWeek}
+        sweet={sweet} 
+        />
+      )}
+    </>
   );
 };
 
-export default App

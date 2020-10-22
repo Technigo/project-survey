@@ -1,11 +1,11 @@
-import React, { useState } from 'react';
+import React from 'react';
+
 import HeaderCss from 'components/HeaderCss.css'
 
-const Header = ({title}) => {
+export const Header = ({title}) => {
 
     return (
-        <h1>{title}</h1>
+        <h1 tabindex="0">Sweet-o-meter</h1>
     );
 };
 
-export default Header

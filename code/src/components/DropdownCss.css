@@ -1,7 +1,17 @@
- select {  
+.select-container {
+    display: flex;
+    justify-content: center;
+}
+
+select { 
     width: 100%;
     padding: 0px;
     font-size: 20px;
     height: 40px;
-    color: #F26363;
+    color: black;
+    border-radius: 10px;
+}
+
+.form-dropdown .sub-heading {
+    display: block;
 }

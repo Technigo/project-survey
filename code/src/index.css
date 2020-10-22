@@ -3,12 +3,15 @@ body {
   background-color: #4E2236;
   display: flex;
   justify-content: center;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 
 
 
