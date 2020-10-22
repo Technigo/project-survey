@@ -1,14 +1,14 @@
 import React from 'react';
 
-export const TextInput = ({name, setName}) => {
+export const TextInput = ({name, onNameChange}) => {
 
   return (
     <div className="form-question-container">
       <h2 tabIndex="0">What is your name?</h2>
-      <label htmlFor={name}>Name:</label>
+      <label tabIndex="0" htmlFor={name}>Name:</label>
         <input
         type = "text"
-        onChange = {(event) => setName(event.target.value)}
+        onChange = {onNameChange}
         value= {name}
         id = {name}
         required

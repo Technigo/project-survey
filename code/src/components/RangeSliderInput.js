@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const RangeSliderInput = ({age, setage}) => {
+export const RangeSliderInput = ({age, onAgeChange}) => {
 
   return (
     <div className="form-question-container">
-     <h2 tabIndex="0">Pick a number!</h2>
+     <h2 tabIndex="0">What is your favourite number?</h2>
      
-      <label id={age}>numbertext</label>
+      <label tabIndex="0" id={age}>Pick a number here:</label>
       <div className="slider-container">
         <input 
         className = "slider"
@@ -15,14 +15,16 @@ export const RangeSliderInput = ({age, setage}) => {
         max = "100"
         value = {age} 
         id = {age} 
-        onChange = {(event) => setage(event.target.value)}
+        onChange = {onAgeChange}
         />
         <output
         type="text"
         value={age}
-        onChange = {(event) => setage(event.target.value)}
+        onChange = {onAgeChange}
         htmlFor={age}
-        >{age}</output>
+        >
+        {age}
+        </output>
       </div>
     </div>
      

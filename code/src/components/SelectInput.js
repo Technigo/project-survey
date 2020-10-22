@@ -1,13 +1,13 @@
 import React from 'react';
 
-export const SelectInput = ({personality, setPersonality}) => {
+export const SelectInput = ({personality, onPersonalityChange}) => {
 
   return (
     <div className="form-question-container">
       <h2 tabIndex="0">Pick one word that describes you the best</h2> 
-      <label htmlFor={personality}>Select a personality feature</label>
+      <label tabIndex="0" htmlFor={personality}>Select a personality feature</label>
         <select
-        onChange = {(event) => setPersonality(event.target.value)}
+        onChange = {onPersonalityChange}
         value = {personality}
         id = {personality}
         required

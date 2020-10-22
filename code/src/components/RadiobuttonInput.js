@@ -9,7 +9,7 @@ const animals = [
   'Zebra'
 ]
 
-export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
+export const RadiobuttonInput = ({spiritAnimal, onSpiritAnimalChange}) => {
 
   return (
     <div className="form-question-container">
@@ -23,7 +23,7 @@ export const RadiobuttonInput = ({spiritAnimal, setSpiritAnimal}) => {
           type = "radio"
           id = {animal}
           value = {animal}
-          onChange = {(event) => setSpiritAnimal(event.target.value)}
+          onChange = {onSpiritAnimalChange}
           checked = {spiritAnimal === animal}
           className="radio-input"
           required
