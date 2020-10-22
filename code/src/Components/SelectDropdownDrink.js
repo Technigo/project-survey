@@ -3,11 +3,12 @@ import React from 'react'
 export const SelectDropdownDrink = ({drink, setDrink}) => { 
     
     return ( 
-            <form>
+            <div>
                 <h2>Magic Potion!</h2>
                 <select 
                 onChange={event => setDrink(event.target.value)}
                 value={drink}
+                required
                 >
                 <option value='' disabled>Select your favourite magic potion!</option>
                 <option value='Gin & Tonic'>Gin & Tonic</option>
@@ -15,6 +16,6 @@ export const SelectDropdownDrink = ({drink, setDrink}) => {
                 <option value='Wine'>Wine</option>
                 <option value='Water'>Water! To keep me hydrated!</option>
                 </select>
-            </form>
+            </div>
 
         )}

@@ -3,8 +3,7 @@ import React from 'react'
 export const DropdownSnacks = ({snack, setSnack}) => {
 
     return ( 
-
-            <form>
+             <div>
                 <h2 tabIndex='0'>Snacks!</h2>
                 <select 
                 onChange={event => setSnack(event.target.value)}
@@ -17,6 +16,6 @@ export const DropdownSnacks = ({snack, setSnack}) => {
                 <option value='Asian'>Asian</option>
                 <option value='Vegetarian'>Vegetarian</option>
                 </select>
-            </form>
+            </div>
 
         )}

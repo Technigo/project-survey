@@ -4,9 +4,8 @@ import React from 'react'
 export const TextInput = ({name, setName}) => {
 
     return (
-        <form>
+        <div>
             <h2 tabIndex='0'>What's your name?</h2>
-            <form onSubmit ={event => event.preventDefault()}/> 
             <label tabIndex ='0'>
                 <input 
                     type='text' 
@@ -17,7 +16,7 @@ export const TextInput = ({name, setName}) => {
                 />
 
             </label>
-        </form>
+        </div>
     )
 
 }
