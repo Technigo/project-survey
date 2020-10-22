@@ -10,6 +10,7 @@ export const SecondQuestion = ({location, setLocation}) => {
                 <select
             onChange={event => setLocation(event.target.value)}
             value={location}
+            aria-label="select-menu"
             >
             <option value=''>Select where you are from:</option>
             <option value='sweden'>Sweden</option>
