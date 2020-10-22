@@ -1,26 +1,29 @@
 import React from "react"
 
-const interest = ["Adventure", "Beach", "History", "City-pulse", "Winter Sport",]
+const 
+interests = ["Adventure", "Beach", "History", "Nature", "City-pulse", "Winter Sport"]
 
-export const Radio = (props) => {
+export const Radiobuttons = (props) => {
 
-  const { interests, setInterests } = props
+  const { interest, setInterest } = props
 
   return (
     <>
       <h2>What kind of holiday are you interested in?</h2>
-      <section className="radio-button-container">
-        {interest.map(option => (
+      <section className="radio-button-wrapper">
+        {interests.map(option => (
           <label key={option} >{option}
             <input
               type="radio"
               value={option}
-              onChange={event => setInterests(event.target.value)}
-              checked={interests === option}
+              onChange={event => setInterest(event.target.value)}
+              checked={
+                interest === option}
             />
           </label>
         ))}
       </section>
+     
     </>
   )
 }

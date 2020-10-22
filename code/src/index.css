@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Quicksand&display=swap');
+
+
+body {
+  color: #ffffff;
+  font-family:'Quicksand', sans-serif; ;
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  background-image: url(./Images/travel.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  max-height: 100vh;
+}
+
+form {
+  height: 300px;
+  width: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  background: rgb(44 43 43 / 55%);;
+box-shadow: 20px 20px 30px gray;
+}
