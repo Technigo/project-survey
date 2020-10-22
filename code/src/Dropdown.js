@@ -1,13 +1,13 @@
 import React from "react"
 
-export const Dropdown = (props) => {
-  const { location, setLocation } = props;
+export const Dropdown = ({ location, setLocation, label }) => {
+ 
 
   return (
       <div>
         <label htmlFor="location">Choose your location: </label>
       <select
-        name={props.label}
+        name={label}
         onChange={event => setLocation(event.target.value)}
         value={location}
         required

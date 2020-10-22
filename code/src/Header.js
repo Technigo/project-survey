@@ -4,7 +4,7 @@ export const Header = () => {
 
     return (
         <div className="header-wrapper">
-        <h1 className="typewriter">Sign up for more information!</h1>
+        <h1 className="typewriter">Nice to meet you.</h1>
         </div>
     )
 }

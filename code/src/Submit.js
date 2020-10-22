@@ -1,11 +1,10 @@
-import React from "react";
+// import React from "react";
 
-export const Submit = ({text}) => {
-    return (
-          
-            <h1>{text}</h1>
-           
+// export const Submit = ({text, setSection}) => {
+//     return (
+//             <h1>{text}</h1>
+            
  
-    );
-};
+//     );
+// };
 

@@ -3,7 +3,9 @@ import React from 'react'
 export const Checkbox = ({ contactme, onContactmeChange}) => {
     
     return (
-        <div>
+        <div className="checkbox-group">
+            
+            <div className="checkbox-container">
             <label htmlFor="newsletter">Newsletter</label>
             <input
             id="newsletter"
@@ -12,7 +14,10 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
             onChange={() => onContactmeChange('newsletter')}
             required
             />
-
+            <span class="custom-checkbox"></span>
+            </div>
+           
+            <div className="checkbox-container">
             <label htmlFor="gdpr">GDPR</label>
             <input
             id="gdpr"
@@ -21,6 +26,10 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
             onChange={() => onContactmeChange('gdpr')}
             required
             />
-          </div>
+            <span class="custom-checkbox"></span>
+            </div>
+        </div>
+
+            
     )
 }
