@@ -5,8 +5,8 @@ import 'components/TextinputCss.css';
 
 export const Textinput = ({questionName, name, setName}) => {
   
-    return (
-     <label htmlFor="name" id="name">
+  return (
+    <label htmlFor="name" id="name">
       <h2 tabindex="0">1. What's your name?</h2>
       <input
         type="text"
@@ -14,8 +14,8 @@ export const Textinput = ({questionName, name, setName}) => {
         value={name}
         required
       />
-      </label>
-    );
+    </label>
+  );
 };
 
 

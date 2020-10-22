@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-
 import { Header } from 'components/Header';
 import { Dropdown } from './components/Dropdown';
 import { Radiobutton } from './components/Radiobutton';
@@ -9,7 +8,6 @@ import { Checkbox } from './components/Checkbox';
 import { Summary } from './components/Summary';
 import { Button } from 'components/Button';
 import 'components/AppCss.css';
-
 
 
 export const App = () => {
@@ -25,14 +23,11 @@ export const App = () => {
     setShowSummary(true);
   };
 
-
-
   const handleLikesChange = likeValue => {
     likes.includes(likeValue)
-       ? setLikes( likes.filter(item => item !== likeValue) )
-       : setLikes ( [...likes, likeValue] );
+      ? setLikes( likes.filter(item => item !== likeValue) )
+      : setLikes ( [...likes, likeValue] );
   };
-  
   
   return ( 
     <>
@@ -72,7 +67,7 @@ export const App = () => {
           name={name}
           timesPerWeek={timesPerWeek}
           sweet={sweet} 
-          userLikes={likes}
+          userLikes={likes.join(' and ')}
         />
       )}
     </>

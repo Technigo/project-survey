@@ -1,24 +1,23 @@
 h1 {
-    background-color:#F26363;
-    padding: 50px;
-  /*  color: #E997A7;*/
-    color: black;
-    font-size: 36px;
-    font-family: 'Ubuntu', sans-serif; 
-    text-align: center; 
-    border-radius: 10px;
-    margin-top: 40px;
-    margin-bottom: 0px;
-  }
+  background-color:#F26363;
+  padding: 50px;
+  color: black;
+  font-size: 36px;
+  font-family: 'Ubuntu', sans-serif; 
+  text-align: center; 
+  border-radius: 10px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
 
-  h2 {
-    background-color: #E997A7;
-    border-radius: 10px;
-    margin-top: 60px;
-    padding: 20px;
-    color: white;
-    font-family: 'Ubuntu', sans-serif;
-    text-align: center;
-    display: block;
-  }
+h2 {
+  background-color: #E997A7;
+  border-radius: 10px;
+  margin-top: 60px;
+  padding: 20px;
+  color: white;
+  font-family: 'Ubuntu', sans-serif;
+  text-align: center;
+  display: block;
+}
 
