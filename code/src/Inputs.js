@@ -26,7 +26,6 @@ export const Input = () => {
             </div>
             {!showSummary ? (
                 <form onSubmit={handleSubmit}>
-                    <label htmlFor="power-ranger-text"></label>
                     <Text
                         id="power-ranger-text"
                         setText={setName}

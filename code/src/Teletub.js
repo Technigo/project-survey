@@ -13,7 +13,7 @@ const Teletub = props => {
                 alt="visualization of a south park siter of teletubbies"
                 src={img}
             />
-            <label htmlFor="teletub"> Choose your teletubbie from the select menu!</label>
+            <label htmlFor="teletub">Choose your teletubbie from the select menu!</label>
                 <select
                     aria-label="select-menu"
                     id="teletub"
