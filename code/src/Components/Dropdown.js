@@ -12,6 +12,7 @@ export const Dropdown = (props) => {
         id="options"
         onChange={event => setOption(event.target.value)}
         value={option}
+        required
       >
         <option tabIndex="0" value="">Select an option</option>
         <option tabIndex="0" value="Africa">Africa</option>
@@ -22,7 +23,6 @@ export const Dropdown = (props) => {
         <option tabIndex="0" value="Oceania">Oceania</option>
         <option tabIndex="0" value="South America">South America</option>
       </select>
-    
     </>
   )
 }

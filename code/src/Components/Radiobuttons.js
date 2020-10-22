@@ -1,11 +1,10 @@
 import React from "react"
 
-const 
-interests = ["Adventure", "Beach", "Nature", "History", "City-pulse", "Winter Sport"]
+const interests = ["Adventure", "Beach", "Nature", "History", "City-pulse", "Winter Sport"]
 
 export const Radiobuttons = (props) => {
 
-  const { interest, setInterest } = props
+const { interest, setInterest } = props
 
   return (
     <>
@@ -19,11 +18,10 @@ export const Radiobuttons = (props) => {
               onChange={event => setInterest(event.target.value)}
               checked={
               interest === option}
-            />
+            required />
           </label>
         ))}
       </section>
-     
     </>
   )
 }

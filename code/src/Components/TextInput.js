@@ -30,7 +30,6 @@ export const Textinput = props => {
           required
         ></input>
       </div>
-    
     </>
   )
 }
