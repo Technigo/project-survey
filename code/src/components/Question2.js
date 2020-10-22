@@ -3,9 +3,9 @@ import NextButton from 'components/NextButton.js';
 import PreviousButton from 'components/PreviousButton.js';
 import ProgressBar from 'components/ProgressBar.js';
 
-const Question2 = (props) => {
+const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
   const handleAgeChange = (event) => {
-    props.setAgeGroup(event.target.value);
+    setAgeGroup(event.target.value);
   };
 
   const ageGroups = ['15-25', '26-35', '36-45', '46-55', '56-65', 'Secret!'];
@@ -26,7 +26,7 @@ const Question2 = (props) => {
               type="radio"
               value={group}
               onChange={handleAgeChange}
-              checked={props.ageGroup === group}
+              checked={ageGroup === group}
               className="form__radiobuttons"
             />
             <span className="form__radiobutton__input">{group}</span>
@@ -38,8 +38,8 @@ const Question2 = (props) => {
       <div className="buttons__wrapper">
         <PreviousButton
           whatQuestionPrevious="firstQuestion"
-          section={props.section}
-          setSection={props.setSection}
+          section={section}
+          setSection={setSection}
         />
         <ProgressBar
           firstDot="progress dot_000"
@@ -50,9 +50,9 @@ const Question2 = (props) => {
         />
         <NextButton
           whatQuestionNext="thirdQuestion"
-          section={props.section}
-          setSection={props.setSection}
-          currentState={props.ageGroup}
+          section={section}
+          setSection={setSection}
+          currentState={ageGroup}
           defaultState={undefined}
         />
       </div>

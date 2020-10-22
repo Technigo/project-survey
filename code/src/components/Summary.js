@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Summary = (props) => {
+const Summary = ({ name, ageGroup, skills, suggestions, title }) => {
   return (
     <article className="summary question__wrapper">
       <ul className="summary__answers">
-        <li>Name: {props.name}</li>
-        <li>Age: {props.ageGroup}</li>
-        <li>The most valuable skills: {props.skills.join(', ')}</li>
-        <li>Other suggestions: {props.suggestions}</li>
-        <li>Title: {props.title}</li>
+        <li>Name: {name}</li>
+        <li>Age: {ageGroup}</li>
+        <li>The most valuable skills: {skills.join(', ')}</li>
+        <li>Other suggestions: {suggestions}</li>
+        <li>Title: {title}</li>
       </ul>
       <button
         type="button"
@@ -18,7 +18,7 @@ const Summary = (props) => {
         Retake survey
       </button>
       <p className="summary__bye">
-        Thank you {props.name} for taking some time to answer this survey! Your
+        Thank you {name} for taking some time to answer this survey! Your
         thoughts are of great value to me, I'll make sure to remember them.
         Meanwhile, feel free to follow my journey on social media below.{' '}
         <span role="img" aria-label="thankful emoji">

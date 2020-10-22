@@ -3,9 +3,9 @@ import PreviousButton from 'components/PreviousButton.js';
 import SubmitButton from 'components/SubmitButton.js';
 import ProgressBar from 'components/ProgressBar.js';
 
-const Question5 = (props) => {
+const Question5 = ({ title, setTitle, section, setSection }) => {
   const handleTitleChange = (event) => {
-    props.setTitle(event.target.value);
+    setTitle(event.target.value);
   };
 
   return (
@@ -19,7 +19,7 @@ const Question5 = (props) => {
       <div className="question__content-wrapper">
         <select
           className="form__dropdown"
-          value={props.title}
+          value={title}
           onChange={handleTitleChange}
         >
           <option value="">Choose title...</option>
@@ -38,8 +38,8 @@ const Question5 = (props) => {
       <div className="buttons__wrapper">
         <PreviousButton
           whatQuestionPrevious="fourthQuestion"
-          section={props.section}
-          setSection={props.setSection}
+          section={section}
+          setSection={setSection}
         />
         <ProgressBar
           firstDot="progress dot_000"
@@ -49,8 +49,8 @@ const Question5 = (props) => {
           fifthDot="progress dot_000"
         />
         <SubmitButton
-          setSection={props.setSection}
-          currentState={props.title}
+          setSection={setSection}
+          currentState={title}
           defaultState={''}
         />
       </div>

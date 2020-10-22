@@ -1,10 +1,10 @@
 import React from 'react';
 import NextButton from 'components/NextButton.js';
 
-const Question1 = (props) => {
+const Question1 = ({ name, setName, section, setSection }) => {
   //One way data-binding
   const handleNameChange = (event) => {
-    props.setName(event.target.value);
+    setName(event.target.value);
   };
 
   return (
@@ -21,7 +21,7 @@ const Question1 = (props) => {
           type="text"
           onChange={handleNameChange}
           className="form__input"
-          placeholder={props.name}
+          placeholder={name}
           required
         />
       </div>
@@ -30,11 +30,11 @@ const Question1 = (props) => {
       <div className="buttons__wrapper">
         <NextButton
           whatQuestionNext="secondQuestion"
-          section={props.section}
-          setSection={props.setSection}
-          name={props.name}
-          setName={props.setName}
-          currentState={props.name}
+          section={section}
+          setSection={setSection}
+          name={name}
+          setName={setName}
+          currentState={name}
           defaultState="Type your name here please.."
         />
       </div>

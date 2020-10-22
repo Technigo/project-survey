@@ -3,10 +3,10 @@ import NextButton from 'components/NextButton.js';
 import PreviousButton from 'components/PreviousButton.js';
 import ProgressBar from 'components/ProgressBar.js';
 
-const Question4 = (props) => {
+const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
   //One way data-binding
   const handleSuggestionChange = (event) => {
-    props.setSuggestions(event.target.value);
+    setSuggestions(event.target.value);
   };
 
   return (
@@ -23,7 +23,7 @@ const Question4 = (props) => {
           type="text"
           onChange={handleSuggestionChange}
           className="form__input"
-          placeholder={props.suggestions}
+          placeholder={suggestions}
         />
       </div>
 
@@ -31,8 +31,8 @@ const Question4 = (props) => {
       <div className="buttons__wrapper">
         <PreviousButton
           whatQuestionPrevious="thirdQuestion"
-          section={props.section}
-          setSection={props.setSection}
+          section={section}
+          setSection={setSection}
         />
         <ProgressBar
           firstDot="progress dot_000"
@@ -43,9 +43,9 @@ const Question4 = (props) => {
         />
         <NextButton
           whatQuestionNext="fifthQuestion"
-          section={props.section}
-          setSection={props.setSection}
-          currentState={props.suggestions}
+          section={section}
+          setSection={setSection}
+          currentState={suggestions}
           defaultState={'Write your suggestions here, please'}
         />
       </div>
