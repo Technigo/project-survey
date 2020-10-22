@@ -1,12 +1,11 @@
 import React from "react";
 
-export const Submit = (props) => {
+export const Submit = ({text}) => {
     return (
-        <button
-        type="submit"
-        value='summary'>
-            <h1>{props.text}</h1>
-        </button>
+          
+            <h1>{text}</h1>
+           
+ 
     );
 };
 

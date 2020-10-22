@@ -36,27 +36,34 @@ export const App = () => {
   return (
 
 <>
+   
       <form
       action=""
       onSubmit={handleSubmit}>
 
-    {section === 'welcome' && (
+      {/* Welcome section  */}
+    <section className="section welcome" id="welcome"> 
       <>
       <Header />
       <section className="button-container">
          
         <button
-        type="button"
-        onClick={event => {setSection(event.target.value)}}
-        value="nameInput"
-        className="start-button">
-        Click here to start!
-        </button>
+         type="button"
+         onClick={event => {setSection(event.target.value)}}
+         value="#dropdown"
+         className="start-button">
+        <a href="#input">
+          Click here to start! 
+        </a>
+        </button> 
+        
       </section>
       </>
-    )}
+      </section>
+ 
+      {/* Nameinput section  */}
 
-    {section === 'nameInput' && (
+      <section className="section input" id="input"> 
       <>
         
         <Nameinput 
@@ -67,49 +74,63 @@ export const App = () => {
         required
         />
         <section className="button-container">
-          <button
-          type="button"
-          onClick={event => {setSection(event.target.value)}}
-          value="">
-            Back
-          </button>
+        <button
+         type="button"
+         onClick={event => {setSection(event.target.value)}}
+         value="#welcome"
+         className="back-button">
+        <a href="#welcome">
+          Back
+        </a>
+        </button> 
           
-          <button 
-          type="button" 
-          onClick={event => {setSection(event.target.value)}} 
-          value='dropdown'>
-            Next
-          </button>
+        <button
+         type="button"
+         onClick={event => {setSection(event.target.value)}}
+         value="#dropdown"
+         className="next-button">
+        <a href="#dropdown">
+          Next 
+        </a>
+        </button> 
           {console.log(name)}
       </section>
       </>
-      )}
+      </section>
+  
+      
+      {/* Dropdown section  */}
 
-
-      {section === 'dropdown' && (
+      <section className="section dropdown" id="dropdown"> 
       <>
         <Dropdown location={location} setLocation={setLocation} />
       
         <section className="button-container">
         <button
-          type="button"
-          onClick={event => {setSection(event.target.value)}}
-          value="nameInput">
-            Back
-          </button>
+         type="button"
+         onClick={event => {setSection(event.target.value)}}
+         value="#input"
+         className="back-button">
+        <a href="#input">
+          Back
+        </a>
+        </button> 
 
-        <button 
-        type="button" 
-        onClick={event => {setSection(event.target.value)}} 
-        value='checkbox'>
+        <button
+         type="button"
+         onClick={event => {setSection(event.target.value)}}
+         value="#checkbox"
+         className="next-button">
+        <a href="#checkbox">
           Next
-        </button>
+        </a>
+        </button> 
       </section>
       </>
-      )}
+      </section>
 
 
-       {section === 'checkbox' && (
+      <section className="section checkbox" id="checkbox"> 
         <>
         <Checkbox
           contactme={contactme}
@@ -118,24 +139,30 @@ export const App = () => {
 
         <section className="button-container">
         <button
-          type="button"
-          onClick={event => {setSection(event.target.value)}}
-          value="dropdown">
-            Back
-          </button>
+         type="button"
+         onClick={event => {setSection(event.target.value)}}
+         value="#dropdown"
+         className="back-button">
+        <a href="#dropdown">
+          Back
+        </a>
+        </button> 
 
-          <button 
-          type="button" 
-          onClick={event => {setSection(event.target.value)}} 
-          value='radiobutton'>
-            Next
-          </button>
-          
+        <button
+         type="button"
+         onClick={event => {setSection(event.target.value)}}
+         value="#radiobutton"
+         className="next-button">
+        <a href="#radiobutton">
+          Next
+        </a>
+        </button> 
+
         </section>
         </>
-      )}  
+      </section>
 
-      {section === 'radiobutton' && (
+      <section className="section radiobutton" id="radiobutton"> 
         <>
       <section className="button-container">
       <button
@@ -146,18 +173,26 @@ export const App = () => {
           </button>
 
         <Radiobutton ageGroup={ageGroup} setAgeGroup={setAgeGroup} label="age"/>
-        <div className="submit">
-        <Submit text="Submit!" onClick={event => (event.target.value) }/>
-        {console.log(ageGroup)}
-        </div>
+        
+        <button
+         type="button"
+         onClick={event => {setShowSummary(event.target.value)}}
+         value="#summary"
+         className="summary-button">
+        <a href="#summary">
+        <Submit text="Submit!" />
+        </a>
+        </button> 
+        
       </section>
       </>
-      )}
-  
+      </section>
+    
   </form>
-  
 
-  {showSummary && <Summary name={name} location={location} ageGroup={ageGroup}/>} 
 
-  </>
-  )}
+  <section class="summary" id="summary">
+  <Summary name={name} location={location} ageGroup={ageGroup} /> 
+  </section>
+
+  </>)}

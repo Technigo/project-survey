@@ -6,6 +6,10 @@
   text-rendering: optimizeLegibility;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,13 +19,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+a{
+  text-decoration: none;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-form{
-  margin: 100px;
 }
 
 .header-wrapper{
@@ -30,6 +34,28 @@ form{
 
 button{
   margin: 5px;
+}
+
+.section{
+  height: 100vh;
+  padding: 20px;
+}
+
+.welcome{
+  background: lightpink;
+}
+
+.input{
+  background-color: lightgreen;
+}
+
+.dropdown{
+  background: lightblue;
+}
+
+.summary-section{
+  height: 100vh;
+  background: lightcoral;
 }
 
 .button-container{
