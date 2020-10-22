@@ -16,6 +16,7 @@ const [surveyStarted, setSurveyStarted] = useState(false);
 const [currentWindow, setCurrentWindow] = useState(-1);
 const questions = data.questions;
 const [answer, setAnswer] = useState([]);
+
 const handleAnswer = (answer) =>{
   setAnswer((existingAnswer) => [...existingAnswer, answer]);
   setWindow();
@@ -36,7 +37,7 @@ const submitForm = (event) => {
   
 // eslint-disable-next-line
 const renderQuestions = questions.map((question,index) => {
-    console.log("in renderForm, index is",index,"currentWin is:",currentWindow);
+    
 
     if(index === currentWindow && question.inputType === "TextInput"){
       return(
