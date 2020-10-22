@@ -9,6 +9,8 @@ body {
     BlinkMacSystemFont, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #a3d2ca;
+  color: #056676;
 }
 
 code {

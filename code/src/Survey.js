@@ -3,6 +3,7 @@ import { Button } from 'Button';
 import { InputField } from './InputField';
 import { Dropdown } from './Dropdown';
 import { Radiobutton } from './Radiobutton';
+import { RangeSlider } from './RangeSlider';
 import { Summary } from './Summary';
 
 const ageGroups = ['18-35', '36-50', '51-65', '65+'];
@@ -11,6 +12,7 @@ export const Survey = () => {
   const [name, setName] = useState('');
   const [location, setLocation] = useState('');
   const [ageGroup, setAgeGroup] = useState('');
+  const [happiness, setHappiness] = useState('5');
   const [submitted, setSubmitted] = useState(false);
 
   const submitForm = (event) => {
@@ -23,6 +25,7 @@ export const Survey = () => {
     setName('');
     setLocation('');
     setAgeGroup('');
+    setHappiness('5');
   };
 
   return (
@@ -52,13 +55,25 @@ export const Survey = () => {
               value={ageGroup}
               onChange={setAgeGroup}
             />
+            <RangeSlider
+              labelText="Happiness level on your last skiing trip?"
+              id="happiness"
+              type="range"
+              value={happiness}
+              onChange={setHappiness}
+            />
             <Button type="submit" text="Let's send it in!" />
           </form>
         </section>
       )}
       {submitted && (
         <section className="summary-wrapper">
-          <Summary name={name} location={location} ageGroup={ageGroup} />
+          <Summary
+            name={name}
+            location={location}
+            ageGroup={ageGroup}
+            happiness={happiness}
+          />
           <Button
             type="button"
             text="Start survey again"
