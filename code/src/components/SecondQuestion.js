@@ -5,7 +5,7 @@ export const SecondQuestion = ({location, setLocation}) => {
 
     return (
         <div className='second-question'>
-            <h2>Where are you from? (as in where did you grow up)</h2>
+            <h2 className='location-header' tabIndex="0">Where are you from?</h2>
             <label>
                 <select
             onChange={event => setLocation(event.target.value)}

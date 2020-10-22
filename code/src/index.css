@@ -10,7 +10,7 @@ body {
   text-align: center;
   margin: 30px;
   height: 800px;
-  
+  font-family: 'Fjalla One', sans-serif;
 }
 
 code {
@@ -19,24 +19,48 @@ code {
 }
 
 .survey-header {
- display: flex;
- flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  padding-top: 60px;
+}
+
+.info-text {
+  font-family: 'Average', serif;
+  font-size: 18px;
 }
 
 .first-question {
-/* display: none; */
+  font-size: 15px;
+}
+
+.age-header, .location-header, .text-header {
+  font-size: 20px
+}
+
+.radio-buttons {
+  font-family:'Average', serif;
 }
 
 .second-question {
-/*   display: none; */
+  padding-top: 30px;
 }
 
 .third-question {
-  /* display: none; */
+  padding-top: 30px;
 }
 
-.submit {
-  /* display: none; */
-  height: 30px;
-  width: 80px
+.submit-button {
+  padding-top: 20px;
+}
+
+input[type=submit] {
+  background-color: plum;
+  height: 40px;
+  font-size: 20px;
+  font-family: 'Average', serif;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+}
+
+.summary {
+  padding-top: 80px;
 }
