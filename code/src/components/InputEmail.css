@@ -8,3 +8,11 @@
 	font-size: 16px;
 	padding-left: 10px;
 }
+
+.input-email-container:invalid {
+	opacity: 0.6;
+}
+
+.input-email-container[type='email']:invalid {
+	opacity: 0.6;
+}

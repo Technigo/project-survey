@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { InputSelect } from './InputSelect';
 import { InputText } from './InputText';
 import { InputRadio } from './InputRadio';
+import { InputCheckbox } from './InputCheckbox';
 import { InputRange } from './InputRange';
 import { InputEmail } from './InputEmail';
 import { Button } from './Button';
@@ -11,14 +12,17 @@ import './Form.css';
 
 export const Form = () => {
 	const [question, setQuestion] = useState(-1); //show first "question"
-	const nextQuestion = () => setQuestion(question + 1); //to get next question in line (add +1 later)
-	const previousQuestion = () => setQuestion(question - 1);
 	const [name, setName] = useState(''); //text
 	const [age, setAge] = useState(false); //radio
 	const [season, setSeason] = useState(''); //drop-down
 	const [value, setValue] = useState(5); //range
 	const [email, setEmail] = useState(''); //email
 	const [submit, setSubmit] = useState(false); //since we don't want to show result before submitted.
+	//const [summary, setSummary] = useState(0); //show first "question"
+
+	const nextQuestion = () => setQuestion(question + 1); //to get next question in line (add +1 later)
+	const previousQuestion = () => setQuestion(question - 1);
+	//const nextSummary = () => setSummary(summary + 1);
 	const handleSubmit = event => {
 		event.preventDefault();
 		setSubmit(true); //show summary on submit
@@ -37,20 +41,16 @@ export const Form = () => {
 
 	return (
 		<section className="form-wrapper">
-			<div className="intro-wrapper">
-				{question === -1 && (
-					<article className="introduction">
-						<h2>Welcome, please take a few minutes to answer this survey!</h2>
-						<div className="navigation-start">
-							<Button
-								button="button"
-								click={nextQuestion}
-								text="Start survey"
-							/>
-						</div>
-					</article>
-				)}
-			</div>
+			{/* <div className="intro-wrapper"> */}
+			{question === -1 && (
+				<article className="introduction">
+					<h2>Welcome, please take a few minutes to answer this survey!</h2>
+					<div className="navigation-start">
+						<Button button="button" click={nextQuestion} text="Start survey" />
+					</div>
+				</article>
+			)}
+			{/* </div> */}
 
 			{!submit ? (
 				<form onSubmit={handleSubmit}>
@@ -133,7 +133,7 @@ export const Form = () => {
 						</article>
 					)}
 
-					{question === 4 && (
+					{/* {question === 4 && (
 						<article className="question-container">
 							<InputEmail
 								// id="email"
@@ -145,14 +145,15 @@ export const Form = () => {
 								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									type="button"
-									disabled={email === ''}
+									//type="submit"
+									// disabled={email === ''}
 									click={nextQuestion}
 									text="next"
 								/>
 							</div>
 						</article>
-					)}
-					{question === 5 && (
+					)} */}
+					{question === 4 && (
 						<article className="question-container">
 							<Summary
 								name={name}
@@ -161,41 +162,81 @@ export const Form = () => {
 								value={value}
 								email={email}
 							/>
+							<InputEmail
+								// id="email"
+								question="Type your e-mail to recieve a summary of your answers"
+								value={email}
+								setEmail={setEmail}
+							/>
 							<div className="navigation">
 								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									type="submit"
-									disabled={email === '' || email === '@'}
-									click={handleSubmit}
+									disabled={!email}
+									//click={handleSubmit}
 									text="Submit"
 								/>
 							</div>
 						</article>
 					)}
+
 					{question >= 0 && (
-						<section className="progress-bar">
+						<section className="progress-bar-wrapper">
 							<ProgressBar
 								// progress={question}
-								progress={`${question}/5`}
-								maxProgress="5"
+								progress={`${question}`}
+								maxProgress="4"
+								minProgress="0"
 								// progressText={`${question}/5`}
 							/>
 						</section>
 					)}
 				</form>
 			) : (
-				<section className="reset-wrapper">
-					<article className="reset">
-						<h4>Thank you!</h4>
-						<div className="navigation-reset">
-							<Button
-								button="button"
-								click={() => window.location.reload()}
-								text="Reset survey"
+				<>
+					{/* {summary === 0 && (
+						<article className="question-container">
+							<InputEmail
+								// id="email"
+								question="Type your e-mail to recieve a summary of your answers"
+								value={email}
+								setEmail={setEmail}
 							/>
-						</div>
-					</article>
-				</section>
+							<div className="navigation">
+								{/* <Button button="button" click={previousQuestion} text="Back" /> */}
+					{/* <Button
+									//type="button"
+									//type="submit"
+									// disabled={email === ''}
+									click={nextSummary}
+									text="Yes"
+								/> */}
+					{/* <Button
+									//type="button"
+									type="submit"
+									// disabled={email === ''}
+									click={nextSummary}
+									text="No"
+								/>
+							</div>
+						</article>
+					)} */}
+
+					{/* {summary === 1 && ( */}
+					<section className="reset-wrapper">
+						<article className="reset">
+							<h4>Thank you!</h4>
+							<div className="navigation-reset">
+								<Button
+									button="button"
+									click={() => window.location.reload()}
+									text="Reset survey"
+								/>
+							</div>
+						</article>
+					</section>
+					{/* )} */}
+				</>
 			)}
 		</section>
 	);

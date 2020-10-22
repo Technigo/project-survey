@@ -1,18 +1,30 @@
-// import React from 'react'
+import React from 'react';
 
-// export const InputCheckbox = (props) => {
-//   //const [agreeOnTerms, setAgreeOnTerms] = useState(false)
-//   const { question, checked, setAgreeOnTerms } = props
-//   return (
-//     <label>
-//       <h2>{question}</h2>
-//       <input
-//         //key={agreeOnTerms.id}
-//         type='checkbox'
-//         //checked={agreeOnTerms}
-//         checked={checked}
-//         onChange={event => setAgreeOnTerms(event.target.checked)}
-//       />
-//     </label>
-//   )
-// }
+export const InputCheckbox = ({ question, selectedMonths, onMonthsChange }) => {
+	return (
+		<div>
+			<h2>{question}</h2>
+			<label htmlFor="summerMonths">Summer</label>
+			<input
+				id="summerMonths"
+				type="checkbox"
+				checked={selectedMonths.includes('June')}
+				onChange={() => onMonthsChange('June')}
+			/>
+			<label htmlFor="summerMonths">Summer</label>
+			<input
+				id="summerMonths"
+				type="checkbox"
+				checked={selectedMonths.includes('July')}
+				onChange={() => onMonthsChange('July')}
+			/>
+			<label htmlFor="summerMonths">Summer</label>
+			<input
+				id="summerMonths"
+				type="checkbox"
+				checked={selectedMonths.includes('August')}
+				onChange={() => onMonthsChange('August')}
+			/>
+		</div>
+	);
+};

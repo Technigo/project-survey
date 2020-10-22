@@ -1,28 +1,27 @@
 button {
-    width: 45%;
-    height: 44px;
-    margin-top: 40px;
-    text-transform: uppercase;
-    font-weight: bold;
-    border: none;
-    border-radius: 5px;
-    background: #bda99e;
-    
-    color: #ffffff;
-    font-size: 18px; 
+	width: 45%;
+	height: 44px;
+	margin-top: 40px;
+	text-transform: uppercase;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	background: #bda99e;
+
+	color: #ffffff;
+	font-size: 18px;
 }
 
 button:disabled {
-  opacity: .5;
+	opacity: 0.5;
 }
 
 .navigation {
-  display: flex;
-  justify-content: space-between;
+	display: flex;
+	justify-content: space-between;
 }
 
 .navigation-start button,
 .navigation-reset button {
-    width: 100%
+	width: 100%;
 }
-

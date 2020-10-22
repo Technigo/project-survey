@@ -24,7 +24,7 @@ input[type='range']::-webkit-slider-thumb {
 	height: 20px;
 }
 
-.input-output-wrapper {
+input[output] .input-output-wrapper {
 	display: flex;
 	flex-direction: row-reverse;
 	align-items: center;

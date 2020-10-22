@@ -1,12 +1,21 @@
 import React from 'react';
 import './ProgressBar.css';
 
-export const ProgressBar = ({ progressText, progress, maxProgress }) => {
+export const ProgressBar = ({ progress, maxProgress, minProgress }) => {
 	return (
-		<section className="progress-bar">
-			{/* <label htmlFor="ProgressBar">{progressText}</label> */}
-			<progress id="ProgressBar" value={progress} max={maxProgress}></progress>
-			<output name="progress-output">{progress}</output> {/*added */}
-		</section>
+		<>
+			<label className="progress-bar-label" htmlFor="ProgressBar">
+				{progress} / {maxProgress}
+			</label>
+			<progress
+				id="ProgressBar"
+				className="progress-bar"
+				name="progress-bar"
+				value={progress}
+				max={maxProgress}
+				min={minProgress}
+			></progress>
+			{/* <output name="progress-output">{progress}</output> */}
+		</>
 	);
 };
