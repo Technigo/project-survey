@@ -5,7 +5,7 @@ export const Submit = (props) => {
 
   return (
     <section className="section-container">
-      <button type="submit" autofocus>{props.text}</button>
+      <button type="submit" autoFocus>{props.text}</button>
     </section>
   )
 }

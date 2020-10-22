@@ -30,7 +30,8 @@ const Question2 = (props) => {
            Check out “The select Tag” for detailed instructions. */}
           {dropDownOptionsArray.map((option) => {
             // return <option value={distance}>{option}</option>
-            return <option value={option}>{option}</option>
+            //not sure the key is correct, though
+            return <option key={option} value={option}>{option}</option>
           })}
         </select>
       </form>

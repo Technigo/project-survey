@@ -31,7 +31,7 @@ const Question3 = (props) => {
             onChange={event => setAnswer(event.target.value)}
             checked={answer === "NO"}
           ></input>
-          <label for="no">NO</label>
+          <label htmlFor="no">NO</label>
         </fieldset>
       </div>
     </section>
