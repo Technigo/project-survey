@@ -30,7 +30,6 @@ const SailorMoon = props => {
                         value={group}
                         onChange={event => setSailorMoon(event.target.value)}
                         checked={sailorMoon === group}
-                        required
                     />
                     {group}
                 </label>

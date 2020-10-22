@@ -1,17 +1,18 @@
 import React from "react";
+import './Summary.css'
 
 export const Summary = props => {
     const {text, teletubbies, sailorMoon, turtles} = props
     return (
         <section className="summary-wrapper">
-            <h1 tabIndex="0">Error - sadly we cannot reveal your favourite color <span role="img" aria-label="disappointed face">&#128542;</span></h1>
-            <h2 tabIndex="0">Here are is a summary of the answers you gave!</h2>
-            <h3 tabIndex="0">You chose the {text} power ranger!</h3>
-            <h3 tabIndex="0">And {teletubbies}</h3>
-            <h3 tabIndex="0">And, {sailorMoon}, as the coolest Sailor Moon character</h3>
-            <h3 tabIndex="0">And, lastly {turtles}</h3>
-            <h3 tabIndex="0">Pretty cool though!</h3>
-            <h4 tabIndex="0">Ps. the most common favourite color is blue - so yours is probablu too <span role="img" aria-label="Face with stuck-out tongue and winking eye"></span>&#128540;</h4>
+            <h1 tabIndex="0">Your favourite color is <span className="blue">blue!</span> <span role="img" aria-label="smiling face">&#128513;</span></h1>
+            <h2 className="h2-summary" tabIndex="0">Here is a summary of the answers you gave:</h2>
+            <p tabIndex="0">You chose the {text} Power Ranger!</p>
+            <p tabIndex="0">And {teletubbies}</p>
+            <p tabIndex="0">You chose {sailorMoon} character</p>
+            <p tabIndex="0">And, lastly {turtles}</p>
+            <p tabIndex="0">Pretty cool!</p>
+            <p tabIndex="0">P.S. the most common favourite color is blue - so this quizz is totally accurate <span role="img" aria-label="Face with stuck-out tongue and winking eye"></span>&#128540;</p>
         </section>
     )
 }

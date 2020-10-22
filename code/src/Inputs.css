@@ -4,14 +4,9 @@ body{
     font-family: "Montserrat", sans-serif;
 }
 
-h2{
-    text-align: center;
-}
-
 .form-wrapper{
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 
 .h1-wrapper{
@@ -21,6 +16,13 @@ h2{
 h1{
     text-align: center;
     padding: 10px;
+}
+
+form {
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	width: 100%;
 }
 
 select{
