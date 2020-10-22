@@ -292,8 +292,9 @@ blockquote a:hover {
 
   button {
     width: 350px;
-    height: 70px;
+    height: 80px;
     font-size: 42px;
+    padding: 5px 0;
   }
 
   .summary h2, .summary p {
