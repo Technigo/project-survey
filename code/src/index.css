@@ -46,7 +46,7 @@ code {
 }
 
 input {
-  margin: 10px 0;
+  margin: 10px 3px;
 }
 
 label {
@@ -61,6 +61,11 @@ label {
 
 .summary {
   grid-column-start: 2;
+}
+
+.footer {
+  background-color: black;
+  border: 1px solid black;
 }
 
 @media (min-width: 768px) {
@@ -78,7 +83,7 @@ label {
   }
 
   .form {
-    grid-column-start: 2;
+    grid-column-start: 3;
   }
   
   .summary-container {

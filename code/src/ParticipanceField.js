@@ -5,7 +5,7 @@ const yesOrNoAnswers = ['Yes', 'No'];
 export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
     
 
-        return (
+    return (
             <>
                 <label>Will you participate?</label>
                 {yesOrNoAnswers.map(answer => ( 
@@ -20,6 +20,6 @@ export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
                     </label>
                 ))}
             </>
-        )
-    }
+            )
+        }
 

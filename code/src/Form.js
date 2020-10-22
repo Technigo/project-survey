@@ -37,7 +37,7 @@ const Form = () => {
         </form>
             ):(
             <section className="summary-container">
-                <Summary name={name} email={email} theme={theme} />
+                <Summary name={name} email={email} theme={theme} answer={yesOrNo} />
             </section>
             )
         }
