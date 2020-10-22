@@ -1,7 +1,10 @@
 
+import React, { useState } from 'react';
+import { Form } from './Form'
+/*
 import { Colorpicker } from 'Colorpicker';
 import { RadioGroup } from 'RadioGroup';
-import React, { useState } from 'react';
+
 import { Select } from 'Select';
 import { Welcome } from 'Welcome';
 import { TextInput } from './TextInput';
@@ -96,7 +99,7 @@ return (
 
 </form>
 )
-}
+}*/
 
 /*Main Compontent in charge of rendering*/ 
 export const App = () => {

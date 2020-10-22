@@ -21,7 +21,7 @@ export const TextInput = (props) => {
 
   const validateInput = (value) => {
     
-   const pattern = (/^[A-Za-z]+$/)
+   const pattern = (/^[A-Öa-ö ]+$/)
 
     if(value.length > 1 && value !== "" && pattern.test(value))
     {

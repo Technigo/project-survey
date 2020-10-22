@@ -1,14 +1,99 @@
-import React, {useState} from 'react';
 
-const handleSubmit = () =>{
-  console.log("The form is submitted");
+import React, { useState } from 'react';
+import { Colorpicker } from 'Colorpicker';
+import { RadioGroup } from 'RadioGroup';
+import { Select } from 'Select';
+import { Welcome } from 'Welcome';
+import { TextInput } from './TextInput';
+import { Summary } from './Summary';
+import data from './data.json';
+import { SubmitButton } from './SubmitButton';
+import { ProgressBar } from 'ProgressBar';
+
+export const Form = () =>                                 {
+const [submitted, setSubmitted] = useState(false);
+const [surveyStarted, setSurveyStarted] = useState(false);
+const [currentWindow, setCurrentWindow] = useState(-1);
+const questions = data.questions;
+const [answer, setAnswer] = useState([]);
+const handleAnswer = (answer) =>{
+  setAnswer((existingAnswer) => [...existingAnswer, answer]);
+  setWindow();
+}
+const startSurvey = () => {
+  setSurveyStarted(true);
+  setWindow();
+}
+const setWindow =() =>{
+  setCurrentWindow((previousWindow) => (previousWindow +1));
 }
 
-export const Form = () =>{
-const [submitted, setSubmitted] = useState(false);
+const submitForm = (event) => {
+  event.preventDefault();
+  setSubmitted(true);
+  setWindow();
+}
+  
+// eslint-disable-next-line
+const renderQuestions = questions.map((question,index) => {
+    console.log("in renderForm, index is",index,"currentWin is:",currentWindow);
+
+    if(index === currentWindow && question.inputType === "TextInput"){
+      return(
+        <TextInput 
+        key="text"
+        onChange={handleAnswer}
+        text={question.questionText}
+      />
+      )
+    }
+
+    if(index === currentWindow && question.inputType === "Radio"){
+      return(
+        <RadioGroup
+        key="radio"
+        onChange={handleAnswer}
+        text={question.questionText}
+        options={question.options}
+      />
+      )
+    }
+
+    if(index === currentWindow && question.inputType === "Select"){
+      return(
+        <Select 
+        key="select"
+        onChange ={handleAnswer}
+        text={question.questionText}
+        options={question.options}
+      />
+      )
+    }
+
+    if(index === currentWindow && question.inputType === "Color"){
+      return(
+        <Colorpicker
+        key="color"
+        onChange={handleAnswer}
+        text={question.questionText}
+      /> 
+      )
+    }
+  });
+  
 return (
-    <form onSubmit={(event) => event.preventDefault()}>
-       <button onSubmit={handleSubmit()}>Submit my answers</button>
-    </form>
-    )
+<form onSubmit={(event) => submitForm(event)}>
+{!surveyStarted && !submitted &&
+    <Welcome 
+      onChange={startSurvey}
+      data={data}
+    />
+}
+{surveyStarted && !submitted && renderQuestions}
+{currentWindow === questions.length && <SubmitButton />}
+{submitted && <Summary answers={answer}/>}
+{surveyStarted && !submitted && <ProgressBar progress={currentWindow}/>}
+
+</form>
+)
 }
