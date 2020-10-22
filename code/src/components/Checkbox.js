@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Checkbox = () => {
-  const [wantsNewsletter, setWantsNewsletter] = useState(false);
-
+export const Checkbox = ({ wantsNewsletter, setWantsNewsletter }) => {
+  //const [wantsNewsletter, setWantsNewsletter] = useState(false);
+  //const [wantsNewsletter, setWantsNewsletter] = props;
   return (
-    <form>
+    <div className="">
       <label>
         Sign up to newsletter?
         <input 
@@ -13,6 +13,6 @@ export const Checkbox = () => {
           onChange={event => setWantsNewsletter(event.target.checked)}
         />
       </label>
-    </form>
+    </div>
   )
 };

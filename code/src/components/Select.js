@@ -1,15 +1,16 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Select = () => {
-  const [location, setLocation] = useState("");
+export const Select = ({ value, setLocation }) => {
+  //const [location, setLocation] = useState("");
+  //const [value, setLocation] = props;
 
   return (
     <>
-      <h2>Your favourite city is: {location}</h2>
-      <form>
+      <h2>Your favourite city is: {value}</h2>
+      <div>
         <select 
           onChange={event => setLocation(event.target.value)}
-          value={location}
+          value={value}
           >
           <option value="">Select location</option>
           <option value="london">London</option>
@@ -17,7 +18,7 @@ export const Select = () => {
           <option value="new york">New York</option>
           <option value="berlin">Berlin</option>
         </select>
-    </form>
+      </div>
     </>
   );
 };
