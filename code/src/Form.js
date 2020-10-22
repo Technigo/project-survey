@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Introduction from 'Introduction';
 import FormHeader from 'FormHeader';
 import NameField from 'NameField';
 import { ParticipanceField } from 'ParticipanceField';
@@ -7,6 +8,7 @@ import ThemeField from 'ThemeField';
 import EmailField from 'EmailField';
 import Submit from 'Submit';
 import Summary from 'Summary';
+
 
 const Form = () => {
     const [name, setName] = useState("");
@@ -28,6 +30,7 @@ const Form = () => {
             className="form" 
             onSubmit={handleSubmit}
         >
+            <Introduction />
             <FormHeader />
             <NameField name={name} setName={setName}/>
             <ParticipanceField yesOrNo={yesOrNo} setYesOrNo={setYesOrNo} />

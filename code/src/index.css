@@ -25,7 +25,9 @@ code {
 .introduction-container {
   display: grid;
   grid-template-columns: 1fr 300px 1fr;
-  background-color: purple;
+  border: 1px solid magenta;
+  padding: 5px;
+  border-radius: 5%;
 }
 
 .introduction {
@@ -70,7 +72,7 @@ label {
 
 @media (min-width: 768px) {
   .header {
-    grid-template-columns: 1fr 300px 300px 1fr;
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
   }
 
   .title {
@@ -78,7 +80,7 @@ label {
   }
   
   .form-container {
-    grid-template-columns: 1fr 300px 300px 1fr;
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
     /*padding: 15px 0;*/
   }
 
@@ -87,11 +89,35 @@ label {
   }
   
   .summary-container {
-    grid-template-columns: 1fr 300px 300px 1fr;
+    grid-template-columns: 1fr 300px 300px 300px 1fr;
     padding: 15px 0;
   }
 }
   
 
+/*Desktop*/
 
- 
+@media (min-width: 900px) {
+ .header {
+    grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
+  }
+
+.title {
+    grid-column-start: 3;
+  }
+
+.form-container {
+    grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
+    /*padding: 15px 0;*/
+  }
+
+.form {
+    grid-column-start: 3;
+  }
+
+.summary-container {
+    grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
+    padding: 15px 0;
+  }
+
+}

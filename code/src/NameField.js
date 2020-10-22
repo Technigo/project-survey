@@ -5,8 +5,9 @@ const NameField = ({name, setName}) => {
     
     return (
         <>
-            <label>Name</label>
+            <label htmlFor="name">Name</label>
             <input
+                id="name"
                 type="text"
                 onChange={event => setName(event.target.value)}
                 value={name}

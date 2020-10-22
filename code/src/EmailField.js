@@ -5,8 +5,9 @@ const EmailField = ({email, setEmail}) => {
 
         return (
             <>
-            <label>E-mail</label>
+            <label htmlFor="email">E-mail</label>
             <input
+                id="email"
                 type="email"
                 onChange={event => setEmail(event.target.value)}
                 value={email}
