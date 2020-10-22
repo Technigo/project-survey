@@ -20,7 +20,7 @@ const Text = ({value, setText }) => {
                 type="text"
                 onChange={(event) => setText(event.target.value)}
                 value={value}
-                aria-placeholder="Coolest color is..."
+                placeholder="Coolest color is..."
                 required
             />
         </section>)

@@ -25,6 +25,14 @@ select{
     padding: 5px;
 }
 
+label{
+    margin-bottom:10px;
+}
+
+.sailor-label{
+    margin-bottom:5px;
+}
+
 button{
     margin: 10px;
     font-family: "Montserrat", sans-serif;
