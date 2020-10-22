@@ -1,21 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const SelectToppings = () => {
-  const [selectTopping, setSelectTopping] = useState(" ");
+// const [selectTopping, setSelectTopping] = useState(" ");
+const SelectToppings = ({ topping, onToppingChange }) => {
 
   return (
-    <form className="QCard">
-      <h3>Which is your favorite topping?</h3>
+    <div className="card">
+      <h3 className="question"> Which is your favorite topping?</h3>
       <select
-        onChange={event => setSelectTopping(event.target.value)}
-        value={selectTopping}
-      >
+        value={topping}
+        onChange={e => onToppingChange(e.target.value)} >
         <option value="chocolate">Chocolate</option>
         <option value="jam">Jam</option>
         <option value="candy">Candy sprinkle</option>
         <option value="nuts">Nuts</option>
       </select>
-    </form>
+    </div>
 
   );
 };

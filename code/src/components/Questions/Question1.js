@@ -1,24 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 
-const FavIceNames = () => {
-  const [favIceName, setFavIceName] = useState(' ');
-
+const FavIceNames = ({ favIceName, onFavIceNameChange }) => {
 
   return (
-
-    <form className="QCard" onSubmit={(event) => event.prevent}>
-      <h3>What is you favourite Ice cream?</h3>
+    <div className="card">
+      <div className="question">
+        <h3 >What is your name?</h3>
+      </div>
+      <label htmlFor="favIceName"></label>
       <input
         type="text"
-        placeholder="Tivoli strut"
-        onChange={(event) => setFavIceName(event.target.value)}
+        placeholder="Super woman"
+        id="favIceName"
         value={favIceName}
+        onChange={e => onFavIceNameChange(e.target.value)}
       />
-      <input type="submit" value="Submit" />
+      {/* <input type="submit" value="Submit" /> */}
       {/* <input type="reset" value="Reset" /> */}
-    </form >
+    </div>
   );
 };
 

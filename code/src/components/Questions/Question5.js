@@ -1,30 +1,42 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const numIceCreams = ["0-2", "3-5", "5+"]
 
-const PickIceNum = () => {
 
-  const [numIceCream, setNumIceCream] = useState();
+
+
+const Kind = ({ kindness, setKindness }) => {
 
   return (
-    <form className="QCard">
-      <h3 className="QTitle">How many ice creams do you eat/month?</h3>
-      {numIceCreams.map(number => (
+    <div>
+      <h3 className="question">I am kind to myself</h3>
+      <label htmlFor="always">Always</label>
+      <input
+        id="always"
+        type="radio"
+        checked={kindness.includes('always')}
+        onChange={() => onKindnessChange('always')}
+      />
+      <label htmlFor="mostly">Mostly</label>
+      <input
+        id="mostly"
+        type="radio"
+        checked={kindness.includes('mostly')}
+        onChange={() => onKindnessChange('mostly')}
+      />
+      <label htmlFor="whatever">Yeah, whatever dude</label>
+      <input
+        id="whatever"
+        type="radio"
+        checked={kindness.includes('whatever')}
+        onChange={() => onKindnessChange('whatever')}
+      />
 
-        <label key={number}>
-          <input
-            type="radio"
-            value={number}
-            onChange={(event) => setNumIceCream(event.target.value)}
-            checked={numIceCream === number}
-          />
-          {number}
-        </label>
-      ))}
-    </form>
+    </div>
+
   );
 
 };
 
 
-export default PickIceNum
+
+export default Kind;
