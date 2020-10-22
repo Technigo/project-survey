@@ -15,16 +15,20 @@ const Teletub = props => {
             />
             <label htmlFor="teletub"></label>
                 <select
+                    aria-label="select-menu"
                     id="teletub"
                     onChange={(event) => setTeletubbies(event.target.value)}
                     value={teletubbies}
+                    aria-expanded="false"
+                    aria-controls="collapse"
                     required
+
                 >
-                    <option value="">Choose teletubbies!</option>
-                    <option value="Tinky Winky - purple">Tinky Winky - purple</option>
-                    <option value="Dipsy - green">Dipsy - green</option>
-                    <option value="Laa-Laa - yellow">Laa-Laa - yellow</option>
-                    <option value="Po - red">Po - red</option>
+                    <option id="teletub" value="">Choose teletubbies!</option>
+                    <option id="teletub" aria-label="Tinky Winky - purple" value="Tinky Winky - purple">Tinky Winky - purple</option>
+                    <option id="teletub" value="Dipsy - green">Dipsy - green</option>
+                    <option id="teletub" value="Laa-Laa - yellow">Laa-Laa - yellow</option>
+                    <option id="teletub" value="Po - red">Po - red</option>
                 </select>
         </div>
     )

@@ -20,7 +20,7 @@ const Text = ({value, setText }) => {
                 type="text"
                 onChange={(event) => setText(event.target.value)}
                 value={value}
-                placeholder="Coolest color is..."
+                placeholder="Coolest power ranger color is..."
                 required
             />
         </section>)
