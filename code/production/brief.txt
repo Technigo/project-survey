@@ -1,6 +1,4 @@
 **🔵  Blue Level (Minimum Requirements)**
-
-- Your survey should consist of at least 3 questions.
 - Your site should follow accessibility guidelines
 
 Make sure you've committed and pushed a version of your project before starting with the intermediary and advanced goals.
@@ -49,3 +47,6 @@ Make sure you've committed and pushed a version of your project before starting 
 - Visualize to the user how far through the survey they are, and how much is left, by creating a progress bar
 - Use Regex validation for some input on your survey
 - Show different questions depending on the answer to a specific question
+
+
+https://stackoverflow.com/c/technigo/questions/1704/1708#1708

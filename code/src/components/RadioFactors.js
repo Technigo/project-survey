@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const Checkbox = ({ userValues, onFactorChange }) => {
+export const Factors = (props) => {
+  const { factor, setFactor } = props
   const factors = [
       'Natural Ingredients',
       'Eco-friendly',
@@ -16,23 +17,21 @@ export const Checkbox = ({ userValues, onFactorChange }) => {
 
   return (
     <div className="question">
-      Which 3 factors most influence your buying decision?
-      {factors.map(factor=> (
-        <p key={factor}>
+      Which factor most influences your buying decision when purchasing Thing?
+      {factors.map(decisionMaker => (
+        <p key={decisionMaker}>
         <label className="answerOption">
           <input 
-            type="checkbox"
-            id={factor}
-            onChange={() => onFactorChange({factor})}
-            checked={userValues.includes({factor})}
+            type="radio"
+            value={decisionMaker}
+            onChange={event => setFactor(event.target.value)}
+            checked={factor === decisionMaker}
           />
             &nbsp;
-          {factor}
+          {decisionMaker}
         </label>
       </p>
       ))}
     </div>
   )
 }
-
-// needs to allow multiple (up to 3) selection

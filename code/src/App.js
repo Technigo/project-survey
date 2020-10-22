@@ -1,22 +1,16 @@
 import React, {useState} from 'react'
 
 import { Radio } from './components/Radio'
-import { Checkbox } from './components/Checkbox'
+import { Factors } from './components/RadioFactors'
 import { DropDown } from './components/DropDown'
 import Summary from './components/Summary'
 
 export const App = () => {
  const [frequency, setFrequency] = useState('')
  const [age, setAge] = useState('')
- const [checkbox, setCheckbox] = useState([])
+ const [factor, setFactor] = useState('')
  const [summary, setSummary] = useState(false)
  
- const handleFactors = productValue => {
-   checkbox.includes(productValue)
-    ? setCheckbox(checkbox.filter(item => item !== productValue))
-    : setCheckbox([...checkbox,productValue])
- }
-
  const handleSubmit = event => {
    event.preventDefault()
    setSummary(true)
@@ -37,9 +31,9 @@ export const App = () => {
             setFrequency={setFrequency}
           />
         
-          <Checkbox 
-            userValues={checkbox}
-            onFactorChange={handleFactors}
+          <Factors 
+            factor={factor}
+            setFactor={setFactor}
           />
         
           <DropDown 
@@ -49,7 +43,7 @@ export const App = () => {
         
           <button
             type="submit"
-            disabled={frequency === '' || age === '' || checkbox === [] }
+            disabled={frequency === '' || age === '' || factor === '' }
           >Submit
           </button>
         </form> ) : (
@@ -57,7 +51,7 @@ export const App = () => {
           <Summary 
             frequency={frequency}
             age={age}
-            userValues={checkbox}
+            factor={factor}
           />
       )}
     </section>
