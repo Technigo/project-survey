@@ -14,8 +14,7 @@ Learning Objectives:
 
 
 ## Core Tech
-- JavaScript
-- React
+- React Hooks
 - JSX
 - CSS
 
@@ -70,3 +69,4 @@ Learning Objectives:
 <!-- - Show different questions depending on the answer to a specific question -->
 
 ## View it live
+https://pwangy-survey.netlify.app/

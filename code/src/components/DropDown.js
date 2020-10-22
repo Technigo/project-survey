@@ -7,7 +7,10 @@ export const DropDown = (props) => {
     <div className="question">
       What is your age?
       <select
-        onChange={event => setAge(event.target.value)} value={age}>
+        onChange={event => setAge(event.target.value)} 
+        value={age}
+        name="age dropdown"
+      >
         <option value="" className="answerOption">Select age:</option>
         <option value="under 18" className="answerOption">18 and under</option>
         <option value="19-25" className="answerOption">19-25</option>
