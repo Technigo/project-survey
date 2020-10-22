@@ -42,24 +42,27 @@ Now when I had the skeleton it was time to do some styling and as usally this is
 
 ### List of observations
 
+**Screen reader - Chromevox**
+
+* I think this is really tricky, a huge area to understnad how to do it in a good practice.
+* I added some `tabIndex="0"` to get a better flow when using the tab-key. esLint is then complaning about `tabIndex` should only be declared on interactive elements.
+* Issue with dropdown and when I go through the list, not read. 
+
 **Lighthouse**
 
-* Xxx
+* Seems that I have quite high values, nice :-)
  
 **validator.w3.org**
 
-* Xxx
-* Xxx
+* No issues!
 
 **https://wave.webaim.org/**
 
-* Xxx
-* Xxx
+* I'm aware of that I have a bunch of contrast errors, at this point I haven't decided how I wanna fix them.
 
 **General**
 
-* 
-* Xxx
+* Since I haven't added that much love for styling my dropdown or the range slider I realized when testing different browsers and devices that the default styling differs a lot
 
 ## View it live
 

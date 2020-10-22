@@ -49,7 +49,6 @@ export const Survey = () => {
               onChange={setLocation}
             />
             <Radiobutton
-              id="age-group"
               type="radio"
               ageGroupArray={ageGroups}
               value={ageGroup}
@@ -70,7 +69,7 @@ export const Survey = () => {
           </form>
         </section>
       )}
-      {!submitted && (
+      {submitted && (
         <section className="summary-wrapper">
           <Summary
             name={name}
