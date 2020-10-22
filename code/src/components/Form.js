@@ -8,7 +8,7 @@ import Question5 from 'components/Question5.js';
 import Summary from 'components/Summary.js';
 
 const Form = () => {
-  const [section, setSection] = useState('thirdQuestion');
+  const [section, setSection] = useState('firstQuestion');
   const [name, setName] = useState('Type your name here please..');
   const [ageGroup, setAgeGroup] = useState(undefined);
   const [skills, setSkills] = useState([]);

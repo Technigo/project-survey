@@ -4,6 +4,7 @@
   display: flex;
   align-content: center;
   justify-content: center;
+  transform: translateY(-78px);
 }
 
 /* --- Question styling --- */
@@ -14,7 +15,7 @@
 }
 
 .question__content-wrapper {
-  min-height: 30vh;
+  height: 25vh;
   max-width: 60vw;
   display: flex;
   align-content: center;
@@ -35,7 +36,10 @@
   outline: none;
 }
 
-.form__input:focus,
+.form__input:focus {
+  border-bottom: 2px solid #fff;
+}
+
 .form__input:hover {
   border-bottom: 1px solid #fff;
 }
@@ -57,7 +61,6 @@
 .form__checkbox__question-wrapper {
   display: flex;
   align-items: center;
-  max-width: 20vw;
 }
 
 .form__checkboxes__popup {
@@ -145,7 +148,7 @@
 .summary__answers {
   list-style: none;
   border: 1px solid #000;
-  padding: 50px;
+  padding: 30px 50px;
 }
 
 .form__button__retakeSurvey {
@@ -178,4 +181,56 @@
 
 .summary__social-media__wrapper {
   margin-bottom: 50px;
+}
+
+/* --- Mediaqueries --- */
+
+@media (max-width: 800px) {
+  body {
+    font-size: 14px;
+  }
+
+  .wrapper {
+    padding: 20px;
+  }
+
+  .question__content-wrapper {
+    max-width: 80vw;
+  }
+  .summary {
+    width: 90vw;
+  }
+
+  .summary__answers {
+    padding: 20px;
+  }
+
+  .summary__bye {
+    max-width: 90vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .form__input {
+    width: 80vw;
+  }
+
+  .question__content-wrapper {
+    min-height: 20vh;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: none;
+    padding: 30px 0;
+  }
+
+  .buttons__wrapper {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+  }
+
+  .form__next-button,
+  .form__prev-button {
+    margin: 20px 20px;
+  }
 }
