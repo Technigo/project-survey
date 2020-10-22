@@ -3,7 +3,7 @@ import './header.css'
 
 export const Header = () => {
     return(
-        <header className="header">
+        <header tabIndex={'0'} className="header">
             <h1>SURVEY TIME BABY!</h1>
         </header>
     )

@@ -1,4 +1,5 @@
 import React from 'react'
+import './dropdown.css'
 
 export const Dropdown = (props) => {
 
@@ -10,10 +11,10 @@ export const Dropdown = (props) => {
 
     return (
         <div>
-            <h2>{props.question}</h2>
-            <select onChange={(event) => props.setSelectValue(event.target.value)}/* {props.setSelectValue} */ value={props.selectValue} required>
+            <h2 tabIndex={'0'}>{props.question}</h2>
+            <select tabIndex={'0'} onChange={(event) => props.setSelectValue(event.target.value)} value={props.selectValue} required>
                 {props.optionsArray.map((object) => (
-                    <option key={object.value} value={object.value}>{object.text}</option>
+                    <option tabIndex={'0'} className="dropdown" key={object.value} value={object.value}>{object.text}</option>
                 ))}
             </select>
         </div>

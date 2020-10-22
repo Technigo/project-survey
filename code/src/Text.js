@@ -1,11 +1,11 @@
 import React from 'react'
 
-export const Text = () => {
+export const Text = (props) => {
     return(
         <>
-        <h2>Type in your message about this awesome survey:</h2>
+        <h2 tabIndex={'0'}>What did you think about this awesome survey:</h2>
         <div>
-            <input type="text"></input>
+            <input tabIndex={'0'} type="text" onChange={(event) => props.setUserText(event.target.value)}/>
         </div>
         </>
     )

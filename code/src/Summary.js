@@ -5,12 +5,14 @@ export const Summary = (props) => {
 
     return (
     <section className="summary__section">
-    <h2>Summary</h2>
-    <p>Grab a glass of {props.drink} and celebrate!</p>
-    <p>If it was up to you we'd be eating {props.rainyFood} right now.</p>
-    <p>When looking for restaurants you claim that you {props.restMethod}.
-    And if you were to make a salad you said you'd go for {props.veggie}.
-    You claim to be somewhere between {props.age} years old. Did I understand it correctly that you answered {props.surveyAgain} when we asked if you would take this survey again?</p>
+    <h2 tabIndex={'0'}>Summary</h2>
+    <p tabIndex={'0'}>Grab a glass of {props.drink} and celebrate! You just finished this fantastic survey!</p>
+    <p tabIndex={'0'}>Your choice of rainy food: {props.rainyFood}.</p>
+    <p tabIndex={'0'}>Your answer to how to choose restaurant: {props.restMethod}.</p>
+    <p tabIndex={'0'}>Your choice of salad ingrediens: {props.veggie}.</p>
+    <p tabIndex={'0'}>Your agegroup: {props.age}.</p>
+    <p tabIndex={'0'}>Would you take this survey again? "{props.surveyAgain}"</p>
+    <p tabIndex={'0'}>Your message about this survey: "{props.userMessage}"</p>
     </section>
     )
 }

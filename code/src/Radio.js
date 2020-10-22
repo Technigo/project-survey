@@ -28,11 +28,11 @@ export const Radio = (props) => {
 
     return (
         <>
-            <h2>{props.question}</h2>
+            <h2 tabIndex={'0'}>{props.question}</h2>
             <div className="radio-container">
                 {props.threeRadioButtonsArray.map((group) => (
-                    <label htmlFor={group} key={group.value}>
-                        <input
+                    <label tabIndex={'0'} htmlFor={group} key={group.value}>
+                        <input tabIndex={'0'}
                             type='radio'
                             id={group}
                             value={group.value}
