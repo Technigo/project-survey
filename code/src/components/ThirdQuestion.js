@@ -18,10 +18,11 @@ export const ThirdQuestion = () => {
                                 type="radio"
                                 value={sleepOption}
                                 className="radio-button"
+                                required
                                 onChange={(event) => setSleep(event.target.value)}
                                 checked={sleep === sleepOption}
                                 id="sleepOption"
-                                required
+
                             />
                             {sleepOption}
                             <p></p>
