@@ -91,7 +91,7 @@ export const App = () => {
           <>
             <Summary name={name} phoneNumber={phoneNumber} email={email} interest={interest} option={option} />
             <section className="button-container">
-              <a href="xxxx">RETURN</a>
+              <a>RETURN</a>
             </section>
           </>
         )}
