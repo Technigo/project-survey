@@ -2,5 +2,6 @@
 # how it should build the JavaScript assets to deploy from.
 [build]
   base = "code/"
-  publish = "build/"
+  publish = "build/code/public"
   command = "CI= npm run build"
+  process.env.CI = true
