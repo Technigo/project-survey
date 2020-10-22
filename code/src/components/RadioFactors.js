@@ -23,12 +23,14 @@ export const Factors = (props) => {
       When considering whether to buy Thing, which factor is most important to you?
       {factors.map(decisionMaker => (
         <p key={decisionMaker}>
-        <label className="answerOption" for={occur}>
+        <label className="answerOption" htmlFor={decisionMaker}>
           <input 
             type="radio"
             value={decisionMaker}
             onChange={event => setFactor(event.target.value)}
             checked={factor === decisionMaker}
+            tabIndex="0"
+            className="focusable"
           />
             &nbsp;
           {decisionMaker}

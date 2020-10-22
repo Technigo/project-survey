@@ -9,16 +9,16 @@ export const DropDown = (props) => {
       <select
         onChange={event => setAge(event.target.value)} 
         value={age}
-        name="age-dropdown-menu"
+        htmlFor="age dropdown menu"
       >
-        <option value="" className="answerOption" for="menu header with prompt to select age group">Select age:</option>
-        <option value="under 18" className="answerOption" for="18 and under">18 and under</option>
-        <option value="19-25" className="answerOption" for="19-25">19-25</option>
-        <option value="26-35" className="answerOption" for="26-35">26-35</option>
-        <option value="36-45" className="answerOption" for="36-45">36-45</option>
-        <option value="46-55" className="answerOption" for="46-55">46-55</option>
-        <option value="56-65" className="answerOption" for="56-65">56-65</option>
-        <option value="66+" className="answerOption" for="66+">66+</option>
+        <option value="" className="answerOption" htmlFor="menu header with prompt to select age group">Select age:</option>
+        <option value="under 18" className="answerOption" htmlFor="18 and under">18 and under</option>
+        <option value="19-25" className="answerOption" htmlFor="19-25">19-25</option>
+        <option value="26-35" className="answerOption" htmlFor="26-35">26-35</option>
+        <option value="36-45" className="answerOption" htmlFor="36-45">36-45</option>
+        <option value="46-55" className="answerOption" htmlFor="46-55">46-55</option>
+        <option value="56-65" className="answerOption" htmlFor="56-65">56-65</option>
+        <option value="66+" className="answerOption" htmlFor="66+">66+</option>
       </select>
     </div>
   )
