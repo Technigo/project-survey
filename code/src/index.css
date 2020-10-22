@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans&family=Quicksand&display=swap');
 
-
 body {
   color: #ffffff;
   font-family:'Quicksand', sans-serif; ;
@@ -10,8 +9,11 @@ body {
   background-image: url(./Images/travel.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  max-height: 100vh;
+  height: 100vh;
+  width: 100vw;
 }
+
+/* FORM */
 
 form {
   height: 300px;
@@ -21,6 +23,45 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: rgb(44 43 43 / 55%);;
-box-shadow: 20px 20px 30px gray;
+  background: rgb(44 43 43 / 65%);;
+  box-shadow: 20px 20px 30px gray;
+  border-radius: 3%;
 }
+
+/* BUTTON */
+
+.button-container  {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  font-family: 'Nunito Sans', sans-serif;
+  font-size: 16px;
+  text-align: center;
+  padding: 5px;
+  width: 100px;
+  border: none;
+  border-radius: 5px;
+  color: #ffffff;
+  background-color: rgb(44 43 43 / 65%);
+}
+
+/* INPUT */
+
+.input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+input {
+  border-radius: 3px;
+  background-color: white;
+  width: 150px;
+  height: 20px;
+  border: none;
+  padding: 2px;
+  margin: 10px;
+}
+

@@ -31,7 +31,7 @@ export const App = () => {
                   setSection(event.target.value)
                 }}
                 value='firstQuestion'
-              >Register
+              >LETS GO!
               </button>
             </section>
           </>
