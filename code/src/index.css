@@ -13,6 +13,18 @@ body {
   width: 100vw;
 }
 
+ h1 {
+  font-size: 35px;
+  font-weight: bold;
+ }
+
+ p {
+  font-size: 20px;
+  width: 450px;
+ }
+
+
+
 /* FORM */
 
 form {
@@ -23,7 +35,7 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  background: rgb(44 43 43 / 65%);;
+  background: rgb(44 43 43 / 65%);
   box-shadow: 20px 20px 30px gray;
   border-radius: 3%;
 }
@@ -35,7 +47,7 @@ form {
   justify-content: center;
 }
 
-button {
+button, a {
   font-family: 'Nunito Sans', sans-serif;
   font-size: 16px;
   text-align: center;
@@ -45,6 +57,7 @@ button {
   border-radius: 5px;
   color: #ffffff;
   background: transparent;
+  text-decoration: none;
 }
 
 button:hover {
@@ -64,9 +77,9 @@ input {
   background-color: white;
   width: 150px;
   height: 20px;
-  border: none;
   padding: 2px;
   margin: 10px;
+  border: none;
 }
 
 /* RADIBUTTONS */
@@ -94,4 +107,20 @@ input {
 .radio-button-wrapper label{
   display: flex;
   align-items: center;
+}
+
+/* DROPDOWN */
+
+.options {
+  appearance: none;
+  width: 180px;
+  height: 30px;
+  border-radius: 10%;
+  background: transparent;
+  background: rgb(44 43 43 / 65%);
+  font-size: 15px;
+  font-weight: 500;
+  color: #ffffff;
+  text-align-last: center;
+  font-family: 'Nunito Sans', sans-serif;
 }

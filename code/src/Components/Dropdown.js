@@ -8,7 +8,7 @@ export const Dropdown = (props) => {
     <>
       <h2>Where would you like to go?</h2>
       <select
-        name="options"
+        className="options"
         id="options"
         onChange={event => setOption(event.target.value)}
         value={option}
