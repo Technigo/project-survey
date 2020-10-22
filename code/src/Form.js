@@ -25,6 +25,7 @@ export const Form = () => {
                     <RadioButton knowHeadPhone={knowHeadPhone} setKnowHeadPhone={setKnowHeadPhone} />
                     <button className="submit-button" type="submit"> Submit !</button>
                 </form>
+
             ) : (
                     <Summary name={name} brand={brand} knowHeadPhone={knowHeadPhone} />
                 )}

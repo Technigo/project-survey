@@ -21,6 +21,7 @@ body {
   display:flex;
   flex-direction: column;
   align-items: center;
+
 }
 
 .header-section p {
@@ -36,20 +37,68 @@ body {
   color: greenyellow;
 
 }
-
-.form-container {
+.form-container,
+.my-form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
 }
 
+.name {
+  width:250px
+}
+
+.name:hover,
+.drop-down select:hover {
+  border: 2px solid greenyellow;
+  cursor: pointer;
+}
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+}
+
+.drop-down select {
+  width :200px
+}
+
+
+.radio-buttons-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.each-radio-button {
+  margin-top: 10px;
+}
+
+.submit-button,
+.summary button {
+  border-radius: 20px;
+  font-size: 20px;
+  background-color:  rgba(173,255,47, 0.7);
+}
 .submit-button {
-  margin: 50px 0px;
-  width:100px
+  margin-top:40px
 }
 
-.radio-buttons {
+.submit-button,
+.summary button:hover {
+  background-color:  rgba(173,255,47, 1);
+  border: 2px solid white;
+  cursor: pointer;
+}
+
+.summary {
+  margin: 0px 20%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  align-items: center;
+}
+
+.summary h4 {
+  font-size: 30px;
 }

@@ -3,18 +3,17 @@ import React from 'react'
 export const NameQuestion = ({ name, setName }) => {
 
     return (
-        <form className="name-question" >
+        <div className="name-question" >
             <h2 tabIndex='0'>What is your full name?</h2>
-            <form onSubmit={event => event.preventDefault()} />
-            <label tabIndex='0'>
+            <label tabIndex='0' onSubmit={event => event.preventDefault()}>
                 <input
                     type="text"
-                    id='name'
+                    className='name'
                     onChange={event => setName(event.target.value)}
                     value={name}
                     required minLength='2'
                 />
             </label>
-        </form>
+        </div>
     )
 }
