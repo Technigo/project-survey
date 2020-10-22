@@ -25,7 +25,6 @@ const SailorMoon = props => {
                 <label className="sailor-label" htmlFor="InputRadio" key={group}>
                     <input
                         type="radio"
-                        id="sailor"
                         value={group}
                         onChange={event => setSailorMoon(event.target.value)}
                         checked={sailorMoon === group}
