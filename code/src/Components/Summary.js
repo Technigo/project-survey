@@ -5,7 +5,7 @@ const Summary = (props) => {
 
     return (
         <section>
-            <h1>Hey {name}!</h1>
+            <h1>Hi there {name}!</h1>
             <p>Your favorite snack is {favoriteSnack}</p>
             <p>Your favorite drink is {favoriteDrink}</p>
         </section>

@@ -14,6 +14,19 @@ code {
     monospace;
 }
 
+.Header {
+  /* Image by Sarah Dorweiler from unsplash */
+  background: url(./img/hero.jpg);
+  height: 100vh;
+  width: 100%;
+  padding: 100px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  object-fit: cover;
+}
+
 .Form {
   background: #fff0cc;
   padding: 50px;

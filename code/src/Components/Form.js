@@ -13,6 +13,7 @@ const Form = () => {
     const handleSubmit = event => {
         event.preventDefault();
         setShowSummary(true);
+
     }
 
     return (
@@ -43,13 +44,15 @@ const Form = () => {
 
             {drinkAlternatives.map(drink => (
               <label key={drink}>
+                  {drink}
                   <input 
+                  required 
                   type='radio'
                   value={drink}
+                  name={drink}
                   onChange={event => setFavoriteDrink(event.target.value)}
                   checked={favoriteDrink === drink}
-                  required />
-                  {drink}
+                  />
               </label>
               ))}
             
