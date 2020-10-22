@@ -15,6 +15,8 @@ export const Question1 = ({ userAnswer1, onAnswerChange }) => {
 				onChange={(e) => onAnswerChange(e.target.value)}
 				value={userAnswer1}
 				id="question1"
+				required
+				autocomplete="off"
 			/>
 		</div>
 	);

@@ -18,17 +18,29 @@ main {
 h2 {
 	background-color: #f0a500;
 	padding: 10px;
+	margin: 10px;
+	border-radius: 8px;
 }
 
 .quiz-box {
 	margin: 25px 50px;
-	padding: 10px 20px;
+	padding: 30px 20px;
 	background-color: #cf7500;
+	border-radius: 8px;
 }
 
-.checkbox-container form {
+.checkbox-container {
 	display: flex;
-	flex-flow: column;
+	flex-direction: column;
+}
+
+.checkbox-input-container {
+	width: 100%;
+	margin: 5px;
+}
+
+fieldset {
+	border-style: none;
 }
 
 code {

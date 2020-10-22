@@ -5,6 +5,7 @@ export const QuizSummary = ({
 	userAnswer2,
 	userAnswer3,
 	userAnswer4,
+	userAnswer5,
 }) => {
 	return (
 		<div className="quiz-summary">
@@ -15,6 +16,7 @@ export const QuizSummary = ({
 					<li>Q2: {userAnswer2}</li>
 					<li>Q3: {userAnswer3.join(', ')}</li>
 					<li>Q4: {userAnswer4}</li>
+					<li>Q5: {userAnswer5}</li>
 				</ul>
 			</h3>
 		</div>
