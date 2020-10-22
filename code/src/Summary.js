@@ -1,7 +1,4 @@
-import { Dropdown } from 'Dropdown'
-import { Radio } from 'Radio'
-import { Input } from './Input'
-import React, { useState } from 'react'
+import React from 'react'
 import './Summary.css'
 
 
