@@ -1,12 +1,11 @@
 import React, { useState } from "react";
 
-import { NameQuestion } from "NameQuestion";
 import { Welcome } from "./Welcome";
-
-import  Radio from "./Radio";
-import Select from "./Select";
 import Summary from "./Summary";
 
+import { NameQuestion } from "Questions/NameQuestion";
+import  Radio from "./Questions/Radio";
+import Select from "./Questions/Select";
 
 
 
@@ -31,26 +30,21 @@ const Survey = () => {
         setSection(sectionOrder[nextSectionIndex+1]);   
       };
 
-   //  </form>
+  
 
     return (
     <>
     <section className ="wrapper-form"> 
-
-   
-
         {section !== 'summary' ? (
             
             <form onSubmit={handleSubmit}>
-
-            
-        {section === 'welcome' && (   
+    
+        {section === 'welcome' && ( 
              <Welcome
               /> 
              )}
 
-
-             {section === 'firstQuestion' && (   
+        {section === 'firstQuestion' && (   
              <NameQuestion
               name={name} 
               setName={setName}/> 
@@ -88,6 +82,5 @@ const Survey = () => {
    </>
 )}
 
-
-  export default Survey;
+export default Survey;
 

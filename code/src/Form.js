@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import { NameQuestion } from "NameQuestion";
-import  Radio from "./Radio";
-import Select from "./Select";
+
+import { NameQuestion } from "Questions/NameQuestion";
+import  Radio from "./Questions/Radio";
+import Select from "./Questions/Select";
 import { Summary } from "./Summary";
 
 

@@ -50,8 +50,21 @@ label {
 }
 
 
-.fur-wrapper{
-  padding: 20px;
+input:valid {
+  border-color:#9bd61c;
+}
+
+input:invalid {
+  border-color: red;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 18px; 
 }
 
 button {
@@ -85,11 +98,10 @@ button {
   max-height: 380px;
 }
 
+.paws {
+  width: 95%;
+  margin-left: 40px;  
+}
 
-/*background-image: linear-gradient(160deg, #4d3ccd 0%, #3a26c5 100%);
-  border-radius: 20px;
-  color: #fff;
-  -webkit-box-shadow: 2px 4px 17px -1px rgba(0,0,0,0.3);
-  -moz-box-shadow: 2px 4px 17px -1px rgba(0,0,0,0.3);
-  box-shadow: 2px 4px 17px -1px rgba(0,0,0,0.3);
-}*/
+
+

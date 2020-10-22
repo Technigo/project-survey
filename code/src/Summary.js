@@ -8,7 +8,6 @@ const restart = () => {
   };
 
 
-
 const Summary = ({ name , ageGroup,  fur, cat }) => {
     return ( 
       <>
