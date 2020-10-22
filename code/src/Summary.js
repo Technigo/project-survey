@@ -1,12 +1,14 @@
 import React, {useState} from 'react'
 
-export const Summary = () => {
-    const [summary, setSummary] = useState(false);
-
+export const Summary = ({age, type, price}) => {
     return (
-        <>
+        <section>       
             <h2>Your response:</h2>
-            <p></p>
-        </>
+                <div>
+                    <p>{age}</p>
+                    <p>{type}</p>
+                    <p>{price}</p>
+                </div>             
+        </section>
     );
 };
