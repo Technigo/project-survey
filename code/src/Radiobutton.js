@@ -3,7 +3,7 @@ import React from 'react';
 export const Radiobutton = ({ id, type, value, onChange, ageGroupArray }) => {
   return (
     <div className="form-group form-group-radio">
-      <p>What is your age?</p>
+      <p>Your age?</p>
       {ageGroupArray.map((group) => (
         <label htmlFor={id} key={group}>
           <input

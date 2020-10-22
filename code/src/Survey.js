@@ -6,7 +6,7 @@ import { Radiobutton } from './Radiobutton';
 import { RangeSlider } from './RangeSlider';
 import { Summary } from './Summary';
 
-const ageGroups = ['18-35', '36-50', '51-65', '65+'];
+const ageGroups = ['18-40', '41-55', '55+'];
 
 export const Survey = () => {
   const [name, setName] = useState('');
@@ -32,10 +32,10 @@ export const Survey = () => {
     <>
       {!submitted && (
         <section className="form-wrapper">
-          <h1 className="form-title">Skier and snowboard survey</h1>
+          <h1 className="form-title">Skiing survey</h1>
           <form className="form-content" onSubmit={submitForm}>
             <InputField
-              labelText="What is you name?"
+              labelText="Your name?"
               id="name"
               type="text"
               placeholder="First and Last name"
@@ -43,7 +43,7 @@ export const Survey = () => {
               onChange={setName}
             />
             <Dropdown
-              labelText="Which mountain did you last visit?"
+              labelText="Mountain you last visit?"
               id="location"
               value={location}
               onChange={setLocation}
@@ -56,7 +56,7 @@ export const Survey = () => {
               onChange={setAgeGroup}
             />
             <RangeSlider
-              labelText="Happiness level on your last skiing trip?"
+              labelText="Happiness when you ski?"
               id="happiness"
               type="range"
               value={happiness}

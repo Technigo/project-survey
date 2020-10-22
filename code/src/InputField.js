@@ -10,18 +10,16 @@ export const InputField = ({
 }) => {
   return (
     <div className="form-group form-group-name">
-      <label htmlFor={id}>
-        {labelText}
-        <input
-          type={type}
-          id={id}
-          name={id}
-          placeholder={placeholder}
-          onChange={(event) => onChange(event.target.value)}
-          value={value}
-          required
-        />
-      </label>
+      <label htmlFor={id}>{labelText}</label>
+      <input
+        type={type}
+        id={id}
+        name={id}
+        placeholder={placeholder}
+        onChange={(event) => onChange(event.target.value)}
+        value={value}
+        required
+      />
     </div>
   );
 };
