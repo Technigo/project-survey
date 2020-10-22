@@ -13,7 +13,7 @@ export const Zodiac = ({name, setZodiac, zodiac, zodiacArray}) => {
         <select
           onChange={event => setZodiac(event.target.value)}
           value={zodiac}>
-          <option value="">Select zodiac sign...</option>
+          <option value=""selected disabled>Select zodiac sign...</option>
           {zodiacArray.map(sign => {
             return (
               <option key={sign.name} value={sign.name}>

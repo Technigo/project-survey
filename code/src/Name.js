@@ -6,7 +6,7 @@ export const Name = ({name, setName}) => {
   return (
     <div className="welcome-wrapper">
       <label>
-      Welcome! What's your name?*
+      Welcome! What's your name?
         <input
           type="text"
           value={name}

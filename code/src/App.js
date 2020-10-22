@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import data from './data.json'
-import { Footer } from './Footer.js'
 import { Summary } from './Summary.js'
 import { Name } from './Name.js'
 import { Zodiac } from './Zodiac.js'
@@ -41,7 +40,7 @@ export const App = () => {
         <button 
           type="submit"
           disabled={name === '' || zodiac === '' || question === ''}>
-          Reveal love match
+          Reveal results
         </button>
       </form>}
       {summary && 
@@ -51,7 +50,6 @@ export const App = () => {
         question={question}
         zodiacArray={data.signs}
       /> }
-      <Footer />
     </>
   )
 }

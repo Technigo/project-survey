@@ -37,7 +37,7 @@ export const FinalQuestion = ({zodiac, question, setQuestion}) => {
           role="radio" 
           tabIndex="-1"
           aria-checked="false"> 
-          Sure, let's give it a go.
+          No... Not today.
         </label>
       </div>
     </div>

@@ -4,16 +4,22 @@
   box-sizing: border-box;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;1,100;1,200;1,300;1,400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,600;1,300&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,600;1,100;1,200;1,300;1,400&display=swap");
+
+html {
+  width: 100%;
+  height: 100%;
+}
 
 body {
   margin: 0;
+  height: 100%;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
-  font-size: 42px;
+  font-size: 22px;
   background: linear-gradient(270deg, #fbc2b3, #f7aa8e, #f5d4cc, #f7ece2);
   background-size: 800% 800%;
-  animation: AnimationName 33s ease infinite;
+  animation: AnimationName 20s ease infinite;
 }
 
 @keyframes AnimationName {
@@ -22,19 +28,26 @@ body {
   100%{background-position:0% 50%}
 }
 
+#root {
+  height: 100%;
+}
+
 form {
+  width: 100%;
+  height: inherit;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 100px 0;
+  justify-content: center;
+  margin: 10% 0;
 }
 
 .welcome-wrapper, .question-wrapper, .zodiac-wrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  width: 50%;
-  margin-bottom: 70px;
+  width: 80%;
+  margin-bottom: 40px;
 }
 
 /* styling for welcome input and zodiac select */
@@ -45,13 +58,17 @@ form {
   width: 100%;
 }
 
+::placeholder {
+  color: rgba(0, 0, 0, 0.3);
+}
+
 .welcome-wrapper input, .zodiac-wrapper select {
   width: 100%;
-  height: 70px;
+  height: 50px;
   margin: 8px 0;
   border: none;
-  border-bottom: solid 2px #000000;
-  font-size: 32px;
+  border-bottom: solid 1px #000000;
+  font-size: 18px;
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
   background-color: transparent;
@@ -61,7 +78,7 @@ form {
 
 .question-wrapper p {
   margin: 0;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 input[type="radio"] {
@@ -77,14 +94,14 @@ input[type="radio"] {
   color: #000000;
   background-color: rgba(0, 0, 0, 0.1);
   border: 1px solid #000000;
-  padding: 10px 20px;
+  padding: 8px 15px;
   border-radius: 5px;
   display: flex;
   align-items: center;
   cursor: pointer;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   width: 100%;
-  font-size: 32px;
+  font-size: 18px;
   transition: 0.5s;
 }
 
@@ -98,16 +115,15 @@ input[type="radio"]:checked + label {
 }
 
 /* styling for button */
-
 button {
-  width: 400px;
-  height: 70px;
+  width: 200px;
+  height: 50px;
   border: 1px solid #000000;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.1);
   font-family: 'Raleway', sans-serif;
   font-weight: 200;
-  font-size: 42px;
+  font-size: 22px;
   cursor: pointer;
   transition: 0.5s;
 }
@@ -117,22 +133,24 @@ button:hover {
 }
 
 /* styling for summary section */
-
 .summary {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-items: center;
-  padding: 50px 0;
+  justify-content: center;
+  height: 100%;
 }
 
 .summary h2 {
-  margin: 20px 0;
+  margin: 21px 0;
+  width: 80%;
+  text-align: center;
+  font-size: 22px;
 }
 
 .summary p {
   margin: 20px;
-  width: 50%;
+  width: 80%;
   font-weight: 300;
   line-height: 1.4;
   text-align: center;
@@ -143,19 +161,21 @@ button:hover {
 }
 
 blockquote {
-  width: 50%;
-  font-size: 18px;
+  width: 80%;
+  font-size: 14px;
   font-family: 'Open Sans', sans-serif;
+  font-style: italic;
   text-align: center;
   letter-spacing: 1px;
   line-height: 1.4;
   background-color: rgba(0, 0, 0, 0.1);
-  padding: 15px 25px 25px 25px;
+  padding: 15px 25px 0 25px;
+  margin: 0;
 }
 
-blockquote span {
+.quotation {
   display: block;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 0.2;
   padding: 8px;
   text-align: center;
@@ -164,11 +184,139 @@ blockquote span {
 }
 
 blockquote a {
+  display: block;
   text-decoration: none;
   font-family: 'Raleway', sans-serif;
   font-style: normal;
-  font-size: 16px;
-  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 12px;
+  font-weight: normal;
   color: inherit;
-  padding: 10px 10px;
+  padding: 20px 0;
+  transition: 0.5s;
+}
+
+blockquote a span {
+  font-weight: 400;
+}
+
+blockquote a:hover {
+  color: rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive designs */
+
+/* tablet only */
+@media screen and (min-width: 667px) and (max-width: 1024px) {
+
+  body {
+    font-size: 32px;
+  }
+
+  .welcome-wrapper, .question-wrapper, .zodiac-wrapper {
+    width: 70%;
+    margin-bottom: 50px;
+  }
+
+  .welcome-wrapper input, .zodiac-wrapper select {
+    height: 70px;
+    margin: 8px 0;
+    font-size: 30px;
+    border-bottom: solid 2px #000000;
+  }
+
+  .question-wrapper p {
+    margin-bottom: 30px;
+  }
+
+  .radio-wrapper label {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 30px;
+  }
+
+  button {
+    width: 300px;
+    height: 70px;
+    font-size: 32px;
+  }
+
+  .summary h2, .summary p {
+    margin: 20px 0;
+    width: 70%;
+    font-size: 32px;
+  }
+
+  blockquote {
+    width: 70%;
+    font-size: 16px;
+  }
+
+  .quotation {
+    font-size: 30px;
+  }
+  
+  blockquote a {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+}
+
+/* computer only */
+@media (min-width: 1025px) {
+
+  body {
+    font-size: 42px;
+  }
+
+  .welcome-wrapper, .question-wrapper, .zodiac-wrapper {
+    width: 50%;
+    margin-bottom: 70px;
+  }
+
+  .welcome-wrapper input, .zodiac-wrapper select {
+    height: 70px;
+    font-size: 32px;
+    border-bottom: solid 2px #000000;
+  }
+
+  .question-wrapper p {
+    margin-bottom: 30px;
+  }
+
+  .radio-wrapper label {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  button {
+    width: 350px;
+    height: 70px;
+    font-size: 42px;
+  }
+
+  .summary h2, .summary p {
+    margin: 20px 0;
+    width: 50%;
+    font-size: 42px;
+  }
+
+  blockquote {
+    width: 50%;
+    font-size: 18px;
+  }
+
+  .quotation {
+    font-size: 32px;
+  }
+  
+  blockquote a {
+    font-size: 14px;
+    padding: 20px 0;
+  }
+
+  .summary {
+    margin: 70px 0;
+  }
 }
