@@ -30,11 +30,13 @@ h1 {
 
 label {
   font-size: 22px;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
 .form-group-radio p {
   font-size: 22px;
+  font-weight: bold;
   margin-bottom: 5px;
   margin-top: 0;
 }
