@@ -20,7 +20,7 @@ const SailorMoon = props => {
                 alt="visualization of sailor moon group"
                 src={img}
             />
-            <label htmlFor="sailor">Choose a Sailor Moon character!</label>
+            <label htmlFor="sailor">Choose one Sailor Moon character!</label>
             {sailorMoons.map(group => (
                 <label className="sailor-label" htmlFor="InputRadio" key={group}>
                     <input

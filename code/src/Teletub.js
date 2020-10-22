@@ -13,10 +13,10 @@ const Teletub = props => {
                 alt="visualization of a south park siter of teletubbies"
                 src={img}
             />
-            <label htmlFor="teletub">Choose your teletubbie from the select menu!</label>
+            <label htmlFor="teletub">Which is your favorite teletubbies?</label>
                 <select
                     aria-label="select-menu"
-                    id="teletub"
+                    name="select"
                     onChange={(event) => setTeletubbies(event.target.value)}
                     value={teletubbies}
                     aria-controls="collapse"
