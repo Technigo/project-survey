@@ -8,7 +8,7 @@ export const Header = () => {
         className="hero-img"
         alt="Green leaf in a glass vase with water"
         />
-        <h1 className="hero-text"> Whats your favorite plant? </h1>
+        <h1 className="hero-text"> What's your favorite plant? </h1>
         <button className="start-button">
           <a href="#form">Start survey</a>
         </button>

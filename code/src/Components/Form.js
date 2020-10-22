@@ -14,8 +14,6 @@ const Form = () => {
     const [favoritePlant, setfavoritePlant] = useState('');
     const [showSummary, setShowSummary] = useState(false);
     
-    /*const [hideForm, setHideForm] = useState(); */
-
     /* Functions for handling input from form */ 
     const handleNameInput = inputName => {
         setName(inputName);
