@@ -7,7 +7,7 @@ import { Textinput } from './components/Textinput';
 import { Checkbox } from './components/Checkbox';
 import { Summary } from './components/Summary';
 import { Button } from 'components/Button';
-import AppCss from 'components/AppCss.css';
+import 'components/AppCss.css';
 
 
 

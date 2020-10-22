@@ -1,6 +1,6 @@
 import React from 'react';
 
-import DropdownCss from 'components/DropdownCss.css';
+import 'components/DropdownCss.css';
 
 export const Dropdown = ({questionSweets, sweet, setSweet}) => {
     

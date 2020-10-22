@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { SummaryCss } from 'components/SummaryCss.css';
+import 'components/SummaryCss.css';
 
 
 export const Summary = ({name, timesPerWeek, sweet }) => {

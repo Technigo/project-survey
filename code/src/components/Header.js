@@ -1,6 +1,6 @@
 import React from 'react';
 
-import HeaderCss from 'components/HeaderCss.css'
+import 'components/HeaderCss.css'
 
 export const Header = ({title}) => {
 

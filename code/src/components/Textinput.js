@@ -1,6 +1,6 @@
 import React from 'react';
 
-import  TextinputCss  from 'components/TextinputCss.css';
+import 'components/TextinputCss.css';
 
 
 export const Textinput = ({questionName, name, setName}) => {
