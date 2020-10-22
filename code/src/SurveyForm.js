@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import UserName from './UserName';
 import UserAge from './UserAge';
-import Occupation from './Occupation';
+import UserEmail from './UserEmail';
 import UserCarModels from './UserCarModels';
 import ReasonsToBuy from './ReasonsToBuy';
 import UserRating from './UserRating';
@@ -10,11 +10,12 @@ import TextMessage from 'TextMessage';
 import SubmitButton from './SubmitButton';
 import Summary from './Summary';
 import SnapSection from './SnapSection';
+import NextButton from 'NextButton';
 
 const SurveyForm = () => {
   const [name, setName] = useState ('');
-  const [age, setAge] = useState('');
-  const [occupation, setOccupation] = useState('');
+  const [age, setAge] = useState('35');
+  const [email, setEmail] = useState('');
   const [carModels, setCarModels] = useState([]);
   const [reasons, setReasons] = useState([]);
   const [userRating, setUserRating] = useState();
@@ -30,8 +31,8 @@ const SurveyForm = () => {
     setAge(newAge)
   };
 
-  const handleOccupationChange =  newOccupation => {
-    setOccupation(newOccupation)
+  const handleEmailChange =  newEmail => {
+    setEmail(newEmail)
   };
 
   const handleCarsChange = newCars => {
@@ -46,7 +47,7 @@ const SurveyForm = () => {
 
   const handleRatingChange = newRating => {
     setUserRating(newRating);
-    window.location.hash = "#sectionMessage";
+    window.location.hash = "#sectionUserName";
   };
 
   const handleMessageChange = newMessage => {
@@ -58,7 +59,7 @@ const SurveyForm = () => {
     window.location.hash = "#sectionSummary";
   }
 /*When users want to edit the answer, the summary will be hidden, and the form will be shown, starting with userName section */
-  const handleAnswerChange = () => {
+  const handleAnswerChange = (newSection) => {
       setShowSummary(false)
       window.location.hash = "#sectionUserName";
   };
@@ -73,33 +74,21 @@ const SurveyForm = () => {
       {!showSummary &&
         <form id="surveyForm" className="survey-container" onSubmit={event => event.preventDefault()}>
           <SnapSection>
-            <UserName
-              userName={name}
-              onNameChange={handleNameChange}
-            />
-          </SnapSection>
-          <SnapSection>
-            <UserAge
-              userAge={age}
-              onAgeChange={handleAgeChange} 
-            />
-          </SnapSection>
-          <SnapSection>
-            <Occupation
-              occupation={occupation}
-              onOccupationChange={handleOccupationChange}
-            />
-          </SnapSection>
-          <SnapSection>
             <UserCarModels
               carModels={carModels}
               onCarsChange={handleCarsChange}
+            />
+            <NextButton
+              sectionId="sectionReasonsToBuy"
             />
           </SnapSection>
           <SnapSection>
             <ReasonsToBuy
               userReasons={reasons}
               onReasonsChange={handleReasonsChange}
+            />
+            <NextButton
+              sectionId="sectionUserRating"
             />
           </SnapSection>
           <SnapSection>
@@ -108,6 +97,34 @@ const SurveyForm = () => {
               onRatingChange={handleRatingChange}
             />
           </SnapSection>
+          <SnapSection>
+            <UserName
+              userName={name}
+              onNameChange={handleNameChange}
+            />
+            <NextButton
+              sectionId="sectionUserAge"
+            />
+          </SnapSection>
+          <SnapSection>
+            <UserAge
+              userAge={age}
+              onAgeChange={handleAgeChange} 
+            />
+            <NextButton
+              sectionId="sectionUserEmail"
+            />
+          </SnapSection>
+          <SnapSection>
+            <UserEmail
+              email={email}
+              onEmailChange={handleEmailChange}
+            />
+            <NextButton
+              sectionId="sectionMessage"
+            />
+          </SnapSection>
+          
           <SnapSection>
             <TextMessage
               textMessage={textMessage}
@@ -124,7 +141,7 @@ const SurveyForm = () => {
           <Summary 
             userName={name}
             userAge={age}
-            occupation={occupation}
+            email={email}
             userCarModels={carModels}
             reasonsToBuy={reasons}
             userRating={userRating}

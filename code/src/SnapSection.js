@@ -3,7 +3,9 @@ import React from 'react';
 const SnapSection = (props) => {
   return (
     <section className="section">
-      {props.children}
+      <div className="wrapper">
+        {props.children}
+      </div>
     </section>
   );
 };

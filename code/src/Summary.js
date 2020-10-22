@@ -5,7 +5,7 @@ import ExitButton from './ExitButton';
 const Summary = ({ 
   userName,
   userAge,
-  occupation,
+  email,
   userCarModels,
   reasonsToBuy,
   userRating,
@@ -17,18 +17,37 @@ const Summary = ({
 
     return (
         <div className="summary" id="sectionSummary">
-            <p>Thank you for your feedback! Below is your answer to the survey:</p>
-            <div>Name: {userName}</div>
-            <div>Age: {userAge}</div>
-            <div>Occupation: {occupation}</div>
-            <div>The Suzuki car models you have: {carModels.join(', ')}</div>
-            <div>Reasons you bought Suzuki car(s): {reasonsToBuy.join(', ')}</div>
-            <div>Your opinion about the Aftersales Services of Suzuki is {userRating}</div>
-            <div>Your message: {textMessage}</div>
-            <EditAnswerButton
-            onAnswerChange={handleAnswerChange} />
-            <ExitButton
-            onExit={handleExitButton} />
+            <div className="wrapper">
+                <h2 className="summary-title">Thank you for your feedback!</h2>
+                <p className="summary-sub-title">Below is your answer to the survey:</p>
+                <div>
+                    <p className="summary-message">Your Name: {userName}</p>
+                </div>
+                <div>
+                    <p className="summary-message">Your Age: {userAge}</p>
+                </div>
+                <div>
+                    <p className="summary-message">Your Email: {email}</p>
+                </div>
+                <div>
+                    <p className="summary-message">The Suzuki car models you have: {carModels.join(', ')}</p>
+                </div>
+                <div>
+                    <p className="summary-message">Reasons you bought Suzuki car(s): {reasonsToBuy.join(', ')}</p>
+                </div>
+                <div>
+                    <p className="summary-message">Your opinion about the Aftersales Services of Suzuki is: {userRating}</p>
+                </div>
+                <div>
+                    <p className="summary-message">Your message: {textMessage}</p>
+                </div>
+                <div className="summary-buttons">
+                    <EditAnswerButton
+                    onAnswerChange={handleAnswerChange} />
+                    <ExitButton
+                    onExit={handleExitButton} />
+                </div>
+            </div>
         </div>
     );
 }

@@ -2,15 +2,15 @@ import React from 'react';
 
 const SubmitButton = ({ doSubmit }) => {
   return ( 
-    <section className="button">
-      <button 
+    <div>
+      <button className="button"
         type="submit"
         form="SurveyForm"
         onClick={() => doSubmit()}
       >
         Complete
       </button>
-    </section>
+    </div>
    );
 }
  

@@ -2,15 +2,15 @@ import React from 'react';
 
 const UserName = ({ userName, onNameChange }) => {
   return (
-    <section className="name-input" id="sectionUserName">
+    <div className="section-user-name" id="sectionUserName">
       <label className="name-label" htmlFor="userName">Your full name</label>
-      <input 
+      <input className="name-input"
         id="userName" 
         type="text"
         onChange={event => onNameChange(event.target.value)}
         value={userName}
       />
-    </section>
+    </div>
   );
 };
 

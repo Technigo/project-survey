@@ -1,18 +1,19 @@
 import React from 'react';
 
-const UserAge = ({ age, onAgeChange }) => {
+const UserAge = ({ userAge, onAgeChange }) => {
   return (
-    <div className="age-slider">
-      <label htmlFor="userAge">Your age</label>
+    <div className="section-user-age" id="sectionUserAge">
+      <label htmlFor="userAge">Your age: <span className="user-age">{userAge}</span></label>
       <input 
         id="userAge" 
         className="age-input" 
         type="range"
-        min="18" 
-        max="100" 
+        step="1"
+        min="18"
+        max="100"
         onChange={event => onAgeChange(event.target.value)}
-        value={age}
-        />
+        value={userAge}
+      />
     </div>
   )
 }

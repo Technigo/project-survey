@@ -2,15 +2,15 @@ import React from 'react';
 
 const EditAnswerButton = ({ onAnswerChange }) => {
   return (
-      <section className="edit-answer-button">
-        <button 
+      <div>
+        <button className="button"
           type="submit"
           form="surveyForm"
           onClick={() => onAnswerChange()}
         >
-          Edit answers
+          Edit
         </button>
-      </section>
+      </div>
      );
 }
  

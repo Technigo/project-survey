@@ -10,24 +10,27 @@ const rating = [
 
 const UserRating = ({ userRating, onRatingChange }) => {
   return (
-    <section className="user-rating-section">
-      <p>How do you evaluate our AfterSales Services</p>
-      <div>
+    <div className="section-user-rating" id="sectionUserRating">
+      <p>How do you evaluate our AfterSales Services?</p>
+      <div className="user-rating-container">
         {rating.map(rate => {
         return (
-          <label key={rate}>
-            <input
-              type="radio"
-              value={rate}
-              onChange={event => onRatingChange(event.target.value)}
-              checked={userRating === rate}
-            />
-            {rate}
-          </label>
+          <div className="user-rating-element" key={rate}>
+            <label>
+              <input
+                type="radio"
+                className="radio-button"
+                value={rate}
+                onChange={event => onRatingChange(event.target.value)}
+                checked={userRating === rate}
+              />
+              {rate}
+            </label>
+          </div>
         )
       })}
       </div>
-    </section>
+    </div>
   );
 };
  

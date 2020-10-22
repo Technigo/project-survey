@@ -2,15 +2,15 @@ import React from 'react';
 
 const ExitButton = ({ onExit }) => {
   return ( 
-    <section className="exit-button">
-      <button 
+    <div>
+      <button className="button exit-button"
         type="submit"
         form="exitToHeader"
         onClick={() => onExit()}
       >
         Exit
       </button>
-    </section>
+    </div>
   );
 }
  

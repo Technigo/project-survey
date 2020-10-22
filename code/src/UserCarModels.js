@@ -2,20 +2,22 @@ import React from 'react';
 import Select from 'react-select';
 
 const selectCarModels = [
- { value: "Suzuki Etiga", lable: "Suzuki Etiga"},
- { value: "Suzuki Swift", label: "Suzuki Swift" },
- { value: "Suzuki Wagon", label: "Suzuki Wagon" },
- { value: "Suzuki Vitara", label: "Suzuki Vitara" },
- { value: "Suzuki XL7", label: "Suzuki XL7"},
- { value: "Suzuki Ciaz", label: "Suzuki Ciaz"}
+//  { value: "", lable:"Choose your car(s)"},
+ { value: "suzuki etiga", lable: "Suzuki Etiga"},
+ { value: "suzuki swift", label: "Suzuki Swift" },
+ { value: "suzuki XL7", label: "Suzuki XL7"},
+ { value: "suzuki ciaz", label: "Suzuki Ciaz"},
+ { value: "super carry pro", label: "Super Carry Pro"},
+ { value: "carry truck", label: "Carry Truck"},
+ { value: "carry van", label: "Carry Van"}
 ];
 
 const UserCarModels = ({ onCarsChange }) => {
   return (
-    <div className="car-model">
+    <div className="car-models" id="sectionCarModels">
       <p>Which Suzuki car(s) that you are possessing?</p>
      <Select 
-      defaultValue={[]}
+      // defaultValue={[]}
       onChange={onCarsChange}
       options={selectCarModels}
       isMulti
