@@ -1,10 +1,6 @@
 import React from "react";
-import { NameQuestion } from './components/NameQuestion';
-import { EmailQuestion } from './components/EmailQuestion';
-import { BrandQuestion } from './components/BrandQuestion';
-import { DropDown } from './components/DropDown';
-import { RadioButton } from './components/RadioButton';
-import { SubmitButton } from './components/SubmitButton';
+
+import { Form } from './Form'
 
 
 export const App = () => {
@@ -15,27 +11,12 @@ export const App = () => {
 				<p className="title-line-one"> What is music to your ears !!</p>
 				<p className="title-line-two">Tell us more about your headphones...</p>
 			</div>
-			<div className="image-banner">
-				<img src="/img/headphone.svg" alt="Headphone" />
+			<div className="headphone-image">
+				<img src="./img/headphone.svg"></img>
 			</div>
-			<hr />
-			<div className="questions-entry">
-				<NameQuestion />
-				<EmailQuestion />
-				<BrandQuestion />
+			<div>
+				<Form />
 			</div>
-			<div className="clickers">
-				<DropDown />
-				<RadioButton />
-			</div>
-			<div className="button">
-				<SubmitButton name="Click Me!" />
-			</div>
-
-
-
-
-
 		</div>
 	);
 };

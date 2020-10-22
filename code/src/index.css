@@ -22,60 +22,34 @@ body {
   flex-direction: column;
   align-items: center;
 }
+
+.header-section p {
+  text-align: center;
+}
+
+.headphone-image{
+  width: 200px;
+}
+
 .title {
-  font-size: 10vw;
+  font-size: 70px;
   color: greenyellow;
 
 }
 
-.header-section {
+.form-container {
   display: flex;
   flex-direction: column;
-  text-align: center;
-}
-
-.title-line-one {
-  font-size: 5vw;
-  
-}
-
-.title-line-two {
-  font-size: 3vw;
-  
-}
-
-.App img {
-  width : 300px;
   justify-content: center;
 }
 
-.header-section,
-.image-banner,
-.question-entry,
-.clickers {
-  padding-top: 20px;
-}
-
-.name-question input,
-.brand-question input,
-.email-question input {
-  width:300px
-}
-
 .submit-button {
-  background :lightgreen;
-  border : white;
-  width: 120px;
-  font-size: 20px;
-}
-
-.button {
-  padding:30px
+  margin: 50px 0px;
+  width:100px
 }
 
 .radio-buttons {
   display: flex;
-  flex-direction:row;
+  flex-direction: column;
   justify-content: space-evenly;
-
 }

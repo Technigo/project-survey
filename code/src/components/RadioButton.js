@@ -1,12 +1,16 @@
 import React, { useState } from 'react'
 
-const knowHeadPhones = ["Audiophile", "Just Enough", "Not at all"]
+const knowHeadPhones = [
+    "At par with an Audiophile",
+    "Just Enough to get by",
+    "I dont know much"
+]
 
 export const RadioButton = () => {
     const [knowHeadPhone, setKnowHeadPhone] = useState();
     return (
         <>
-            <p className="radio-button-question">How fimiliar are you with your head phones brand?</p>
+            <h2 className="radio-button-question">Your understanding of you headphone is...</h2>
             <form className="radio-buttons">
                 {knowHeadPhones.map((headphone) => (
                     <label key={headphone}>
@@ -15,12 +19,12 @@ export const RadioButton = () => {
                             value={headphone}
                             onChange={(event) => setKnowHeadPhone(event.target.value)}
                             checked={knowHeadPhone === headphone}
+                            required
                         />
                         {headphone}
                     </label>
                 ))}
             </form>
         </>
-
     )
 }

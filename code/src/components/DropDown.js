@@ -1,21 +1,24 @@
 import React, { useState } from 'react';
 
 export const DropDown = () => {
-    const [location, setLocation] = useState();
+    const [brand, setBrand] = useState();
 
     return (
         <form className="drop-down">
-            <p>Which of our business city are you in ...</p>
+            <h2 tabIndex='0'>What brand do you use at the moment...</h2>
             <select
-                onChange={event => setLocation(event.target.value)}
-                value={location}
+                onChange={event => setBrand(event.target.value)}
+                value={brand}
             >
-                <option value="">Select Location</option>
-                <option value="Stockholm">Stockholm</option>
-                <option value="Oslo">Oslo</option>
-                <option value="Copenhagen">Copenhagen</option>
-                <option value="Delhi NCR">Delhi NCR</option>
-                <option value="Mumbai">Mumbai</option>
+                <option value="">Choose brand</option>
+                <option value="beats">Beats by Dre</option>
+                <option value="bose">Bose</option>
+                <option value="akg">AKG</option>
+                <option value="urbanear">UrbanEar</option>
+                <option value="jbl">JBL</option>
+                <option value="Sony">Sony</option>
+                <option value="airpods">Apple Airpods</option>
+                <option value="other">Other</option>
             </select>
         </form>
 
