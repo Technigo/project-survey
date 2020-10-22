@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const SelectInput = ({personality, onPersonalityChange}) => {
-
+  
   return (
     <div className="form-question-container">
       <h2 tabIndex="0">Pick one word that describes you the best</h2> 
@@ -22,6 +22,7 @@ export const SelectInput = ({personality, onPersonalityChange}) => {
         <option value = "spontaneus">spontaneus</option>
         <option value = "shy">shy</option>
         </select>
+
     </div>
      
     )

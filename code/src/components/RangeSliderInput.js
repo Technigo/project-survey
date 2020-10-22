@@ -11,7 +11,7 @@ export const RangeSliderInput = ({age, onAgeChange}) => {
         <input 
         className = "slider"
         type ="range" 
-        min = "0" 
+        min = "1" 
         max = "100"
         value = {age} 
         id = {age} 

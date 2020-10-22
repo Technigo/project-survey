@@ -138,7 +138,7 @@ input {
 
 .form-question-container label:first-child, 
 .form-question-container label:nth-child(2){
-  padding-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 
@@ -171,12 +171,12 @@ input {
 }
 
 .radio-input:checked {
-  background-color: #ff9a76;
+  background-color: #000;
  }
 
  .radio-input:hover {
-  background-color: #ff9a76;
-  opacity: 0.8;
+  background-color: #000;
+  opacity: 0.6;
  }
 /** range slider **/
 
@@ -193,19 +193,22 @@ input {
   height: 5px;
   -webkit-transition: .2s;
   transition: .2s;
+  border-radius: 10%;
+  background: #111;
 }
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
-  height: 20px;
-  width: 20px;
+  height: 25px;
+  width: 25px;
   background: #000;
   border-radius: 50%;
 }
 
 output {
   font-size: 25px;
+  padding-top: 12px;
 }
 
 /** submit-button **/
@@ -235,6 +238,34 @@ img {
   align-items: center;
 }
 
+.summary-container p {
+  font-size: 25px;
+}
+
 .summary-container p:last-child{
   opacity: 0.4;
+  font-size: 17px;
+}
+
+/** desktop **/
+@media (min-width: 1025px) {
+  input, select{
+    width: 30%;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  header p {
+    font-size: 35px;
+  }
+
+  .submit-button {
+    width: 10%;
+  }
 }
