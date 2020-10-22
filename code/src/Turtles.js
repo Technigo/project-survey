@@ -6,8 +6,9 @@ const Turtle = props => {
     const {setTurtles, turtle} = props
     return (
         <div className="turtles-wrapper">
-            <h2>and, finally best ninja?</h2>
+            <h2 tabIndex="0">and, finally best ninja?</h2>
             <img
+                tabIndex="0"
                 className="turtles-image"
                 alt="visualization of teenage mutant ninja turtles"
                 src={img}

@@ -22,12 +22,13 @@ export const Input = () => {
         return (
             <main className="form-wrapper">
                 <div className="h1-wrapper">
-                    <h1> Which is your favourite color based on comic characters? </h1>
+                    <h1 tabIndex="0"> Which is your favourite color based on comic characters? </h1>
                 </div>
                 {!showSummary ? (
                     <form onSubmit={handleSubmit}>
+                        <label htmlFor="power-ranger-text"></label>
                         <Text
-                            id="test"
+                            id="power-ranger-text"
                             setText={setName}
                             value={name}
                         />
