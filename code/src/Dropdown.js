@@ -8,8 +8,7 @@ export const Dropdown = ({ labelText, id, value, onChange }) => {
         id={id}
         name={id}
         onChange={(event) => onChange(event.target.value)}
-        value={value}
-        required>
+        value={value}>
         <option value="">Select mountain</option>
         <option value="Chamonix">Chamonix</option>
         <option value="Serre Chevalier">Serre Chevalier</option>

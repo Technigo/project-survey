@@ -18,7 +18,6 @@ export const InputField = ({
         placeholder={placeholder}
         onChange={(event) => onChange(event.target.value)}
         value={value}
-        required
       />
     </div>
   );

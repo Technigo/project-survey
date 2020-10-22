@@ -62,7 +62,11 @@ export const Survey = () => {
               value={happiness}
               onChange={setHappiness}
             />
-            <Button type="submit" text="Let's send it in!" />
+            <Button
+              type="submit"
+              text="Let's send it in!"
+              disabled={!name || !location || !ageGroup}
+            />
           </form>
         </section>
       )}

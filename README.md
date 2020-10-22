@@ -40,7 +40,7 @@ Now when I had the skeleton it was time to do some styling and as usally this is
 * iOS - iPone X (Safari)
 * Android - Samsung S8 (Chrome)
 
-### TO-DO list
+### List of observations
 
 **Lighthouse**
 
@@ -58,7 +58,7 @@ Now when I had the skeleton it was time to do some styling and as usally this is
 
 **General**
 
-* Xxx
+* 
 * Xxx
 
 ## View it live
