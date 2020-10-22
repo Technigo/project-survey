@@ -21,6 +21,7 @@ const Teletub = props => {
                     value={teletubbies}
                     aria-controls="collapse"
                     aria-orientation="vertical"
+                    aria-expanded="false"
                     required
 
                 >

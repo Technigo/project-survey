@@ -17,7 +17,6 @@ const Turtle = props => {
             <select
                 onChange={(event) => setTurtles(event.target.value)}
                 value={turtle}
-                id="ninja"
                 aria-label="select-menu"
                 aria-controls="collapse"
                 aria-orientation="vertical"
