@@ -3,6 +3,8 @@ import React from 'react'
 export const Header = () => {
 
     return (
-    <p>Sign up for more information!</p>
+        <div className="header-wrapper">
+        <h1 className="typewriter">Sign up for more information!</h1>
+        </div>
     )
 }

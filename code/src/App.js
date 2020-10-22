@@ -42,13 +42,14 @@ export const App = () => {
 
     {section === 'welcome' && (
       <>
-
       <Header />
       <section className="button-container">
+         
         <button
         type="button"
         onClick={event => {setSection(event.target.value)}}
-        value="nameInput">
+        value="nameInput"
+        className="start-button">
         Click here to start!
         </button>
       </section>

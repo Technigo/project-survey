@@ -24,6 +24,51 @@ form{
   margin: 100px;
 }
 
+.header-wrapper{
+  width: fit-content;
+}
+
+button{
+  margin: 5px;
+}
+
+.button-container{
+  margin-top: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* Typewriter animation */
+.typewriter{
+  font-family: monospace;
+  white-space: nowrap; /* keeps the content on a line */
+  border-right: .15em solid pink; /* Gives the cursor */
+  overflow: hidden; /*Ensures the content is not revealed until the animation*/
+  animation: typing 3.5s steps(40, end), blink-caret .5s step-end infinite; 
+  letter-spacing: .15em;
+}
+
+@keyframes typing {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes blink-caret {
+  from, to {border-color: transparent} 50% {border-color: orange;}
+}
+
+/* Bounce button animation */
+@keyframes bounce {
+  0% { transform: translateY(0);}
+  100% { transform: translateY(-20px)}
+}
+.start-button{
+  animation: bounce 0.8s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
 /* Media queries */
 
 @media (min-width: 668px) {
@@ -31,5 +76,5 @@ form{
 }
 
 @media (min-width: 1024px) {
-  
+
 }
