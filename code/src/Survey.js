@@ -148,9 +148,7 @@ export const Survey = () => {
           <Dropdown
             selectValue={celebrationDrink}
             setSelectValue={setCelebrationDrink}
-            question={
-              'It is friday night, you just finished a great project and want to celebrate. What are you ordering?'
-            }
+            question={'It is friday night, you just finished a great project and want to celebrate. What are you ordering?'}
             optionsArray={drinkArray}
           />
           <Dropdown
@@ -208,7 +206,7 @@ export const Survey = () => {
             restMethod={getUserInput(restaurantHunt, restaurantMethodArray)}
             veggie={getUserInput(saladMaker, saladArray)}
             age={ageGroup}
-            surveyAgain={checkbox.answer}
+            surveyAgain={checkbox}
             userMessage={userText}
           />
         )}

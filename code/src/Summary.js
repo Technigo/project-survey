@@ -11,7 +11,9 @@ export const Summary = (props) => {
     <p tabIndex={'0'}>Your answer to how to choose restaurant: {props.restMethod}.</p>
     <p tabIndex={'0'}>Your choice of salad ingrediens: {props.veggie}.</p>
     <p tabIndex={'0'}>Your agegroup: {props.age}.</p>
-    <p tabIndex={'0'}>Would you take this survey again? "{props.surveyAgain}"</p>
+    {props.surveyAgain ?
+    <p tabIndex={'0'}>You'd gladly take this survey again, fantastic!</p>
+    :<p tabIndex={'0'}>You decided not to take this survey again.</p>}
     <p tabIndex={'0'}>Your message about this survey: "{props.userMessage}"</p>
     </section>
     )
