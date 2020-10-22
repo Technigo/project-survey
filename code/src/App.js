@@ -31,7 +31,7 @@ export const App = () => {
                   setSection(event.target.value)
                 }}
                 value='firstQuestion'
-              >LETS GO!
+              >LETS GO!!
               </button>
             </section>
           </>
@@ -91,7 +91,7 @@ export const App = () => {
           <>
             <Summary name={name} phoneNumber={phoneNumber} email={email} interest={interest} option={option} />
             <section className="button-container">
-              <a href="xxxx">Return to first page</a>
+              <a href="xxxx">RETURN</a>
             </section>
           </>
         )}
