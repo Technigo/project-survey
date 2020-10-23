@@ -9,5 +9,3 @@ export const App = () => {
 }
 
 export default App;
-
-//Add autocomplete="off" onto <form> element; - on form
