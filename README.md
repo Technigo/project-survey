@@ -37,8 +37,6 @@ Tools I have used for testing accessability:
 - Iphone speak screen
 - Chrome dev mode to check structure without CSS
 - Chrome dev tool Lighthouse - the app scored 96% on accessability (not great on performance though..)
-- HTML validation
-- CSS validation
 
 The app was tested on Iphone X, desktop, and in Chrome, Firefox and Safari.
 
