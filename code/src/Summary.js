@@ -7,7 +7,7 @@ export const Summary = ({name, location, ageGroup, setSection}) => {
         <h2>Summary of survey</h2>
         <p>Thank you {name}. Your current location is {location} and your age is {ageGroup}.</p>
     
-        <button tabIndex="0"><a href=""></a>Restart</button>
+        <button tabIndex="0">Restart</button>
     </section>
 );
 };
