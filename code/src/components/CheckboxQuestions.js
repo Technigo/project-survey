@@ -3,7 +3,7 @@ import React from 'react';
 
 
 export const CheckboxQuestions = ({ likeOption, onlikeOptionChange}) => {
-    const likeCheese = ["Yes", "No", "Only some sorts"];
+    const likeCheese = ["yes", "no thanks", "sometimes"];
 
     return (
       <div className="checkbox-box">
@@ -17,7 +17,8 @@ export const CheckboxQuestions = ({ likeOption, onlikeOptionChange}) => {
               value={like}
               onChange={event =>  onlikeOptionChange(event.target.value)}
               checked={likeOption === like}
-              required
+              // checked="true"
+              // required
             />
             {like}
           </label>

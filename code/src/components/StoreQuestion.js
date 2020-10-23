@@ -10,10 +10,10 @@ export const StoreQuestion = ({ whereBuy, onWhereBuyChange}) => {
           value={whereBuy}
           required
         >
-          <option value="">* Select where you buy your cheese *</option>
-          <option value="1">At a local cheese store.</option>
-          <option value="2">At a coventional food store.</option>
-          <option value="3">I never buy cheese.</option>
+          <option value="">* Select where you buy cheese *</option>
+          <option value="at a local cheese store.">At a local cheese store.</option>
+          <option value="at a coventional food store.">At a coventional food store.</option>
+          <option value="somewhere else!">somewhere else!</option>
         </select>
       </div>
     </label>

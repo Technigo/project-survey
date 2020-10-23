@@ -22,6 +22,11 @@ form {
   align-items: center;
   justify-content: space-between;
   background-color: rgba(241, 221, 37, 0.61);
+  color: #000407;
+  border: 1px solid rgb(236, 186, 91);
+  box-shadow: 10px 10px 5px grey;
+  text-shadow: none;
+  
 }
 
 .name-box,
@@ -43,7 +48,7 @@ form {
 
 
 button {
-  width: 130px;
+  width: 120px;
   height: 40px;
   padding: 5px;
   display: flex;
@@ -53,7 +58,7 @@ button {
   color: #000407;
   border: 1px solid #eee;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
+  box-shadow: 5px 5px 5px lightslategray;
   text-shadow: none;
   font-size: 20px;
 }
@@ -61,9 +66,9 @@ button {
 button:hover {
   background: #cc890ca2;
   color: #fff;
-  border: 1px solid #eee;
+  border: 1px solid grey;
   border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
+  box-shadow: 5px 5px 5px grey;
   text-shadow: none;
 }
 

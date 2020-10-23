@@ -68,12 +68,11 @@ const handleWhereBuyChange = newWhereBuy => {
           <button type="Submit">Submit</button>
         </form>
       )}
-      {/* <button type="Reset" id="resetBtn">RESET</button> 
-     
-
-      {/* showSummary samma som === true */}
-
-      {showSummary && <Summary name={name}  checked={likeOption}  value={whereBuy}/>}
+      
+      {showSummary && <Summary 
+      name={name}  
+      checked={likeOption}  
+      value={whereBuy}/>}
     </div>
   );
 };
