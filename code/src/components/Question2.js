@@ -1,27 +1,19 @@
-import React, { useState } from 'react'
+import React from 'react';
 
-import "components/question2.css"
+import "components/question2.css";
 
 const dropDownOptionsArray = ["0-10 km", "20-50 km", "50+ km"];
 
 // a drop-down menu
-const Question2 = (props) => {
-  const [distance, setDistance] = useState("");
-  //state hook [variableThatHoldsTheValue, functionThatSetsTheValueOfTheVariable/theAccessor] = useState(defaultValue);
-  // const [isDropDownOpen, setIsDropDownOpen] = useState(false);
-  // //assign a value "true" to variable isDropDownOpen
-  // const handleDropDownMenu = () => {
-  //   // when the new value is set, React rerenders - aftrerwards the value is updated
-  //   return setIsDropDownOpen(true);
-  // };
+const Question2 = ({ questionText, questionAnswer, onDistanceChange }) => {
 
   return (
     <section className="section-container">
-      <form className="form-container">
-        <label htmlFor="drop-down">{props.question}</label>
+      <div className="form-container">
+        <label htmlFor="drop-down">{questionText}</label>
         <select
-          onChange={(event) => setDistance(event.target.value)}
-          value={distance}
+          onChange={(event) => onDistanceChange(event.target.value)}
+          value={questionAnswer}
           id="drop-down"
           name="distance"
         >
@@ -29,28 +21,12 @@ const Question2 = (props) => {
            in the value of its <select> instead. 
            Check out “The select Tag” for detailed instructions. */}
           {dropDownOptionsArray.map((option) => {
-            // return <option value={distance}>{option}</option>
-            //not sure the key is correct, though
-            return <option key={option} value={option}>{option}</option>
+            return <option key={option} value={option}>{option}</option>;
           })}
         </select>
-      </form>
+      </div>
     </section>
-
-
-
-    // <section className="section-container">
-    //   {/* add: onClick handler event drop down menu is shown - MAKE THIS WORK! conditional rendering */}
-    //   <button type="button" onClick={() => handleDropDownMenu()}>{props.question}</button>
-    //   {isDropDownOpen
-    //     ? <ul>
-    //       {/* loop over an array with options and display them as a list */}
-    //       {dropDownOptionsArray.map(option => <li>{option}</li>)}
-    //     </ul>
-    //     : null
-    //   }
-    // </section>
-  )
-}
+  );
+};
 
 export default Question2;
