@@ -1,8 +1,8 @@
 import React from 'react';
 
-import Header from './Header';
-import FormContainer from './FormContainer';
-import Footer from './Footer';
+import Header from './components/Header';
+import FormContainer from './components/FormContainer';
+import Footer from './components/Footer';
 
 
 export const App = () => {

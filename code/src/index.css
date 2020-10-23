@@ -66,10 +66,10 @@ label {
 }
 
 .footer {
-  background-color: black;
-  border: 1px solid black;
+  background-color: purple;
 }
 
+/*Tablet*/
 @media (min-width: 768px) {
   .header {
     grid-template-columns: 1fr 300px 300px 300px 1fr;
@@ -81,7 +81,6 @@ label {
   
   .form-container {
     grid-template-columns: 1fr 300px 300px 300px 1fr;
-    /*padding: 15px 0;*/
   }
 
   .form {
@@ -96,7 +95,6 @@ label {
   
 
 /*Desktop*/
-
 @media (min-width: 900px) {
  .header {
     grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
@@ -108,7 +106,6 @@ label {
 
 .form-container {
     grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
-    /*padding: 15px 0;*/
   }
 
 .form {

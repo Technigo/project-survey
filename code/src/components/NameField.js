@@ -5,12 +5,13 @@ const NameField = ({name, setName}) => {
     
     return (
         <>
-            <label htmlFor="name">Name</label>
+            <label htmlFor="name" tabIndex="0">Name</label>
             <input
                 id="name"
                 type="text"
                 onChange={event => setName(event.target.value)}
                 value={name}
+                required
             />
         </>
     )
