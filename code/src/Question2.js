@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const discriptions = [
+const descriptionsArray = [
     'Nice',
     'Charming',
     'Brave',
@@ -20,21 +20,23 @@ const discriptions = [
 
 ]
 
-export const Question2 = ({name, discription, setDiscription, onDiscriptionChange }) => {
+export const Question2 = ({name, descriptions, setdescription, onDescriptionChange }) => {
+console.log(descriptions)
     return (
-        <section>
+        <section className="question2 section">
             <h2>Select some word that discribe {name}</h2>
-            <div>
-                {discriptions.map(discription => {
+            <div className="description">
+                {descriptionsArray.map(description => {
                     return (
-                        <div>
-                            <label htmlFor={discription}>{discription}</label>
+                        <div className="description-container">
+                            {/* <label htmlFor={description}>{description}</label> */}
                             <input
-                                id={discription}
-                                type="checkbox"
-                                checked={discriptions.includes({discription})}
-                                onChange={() => onDiscriptionChange({discription})}
-                        />
+                                value={description}
+                                id={description}
+                                type="button"
+                                onClick={() => onDescriptionChange(description)}
+                                
+                            />
                         </div>
                     )
                 })}

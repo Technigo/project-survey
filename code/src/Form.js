@@ -79,7 +79,7 @@ const questions = [
 export const Form = () => {
     const [name, setName] = useState('');
     const [gift, setGift] = useState('');
-    const [discription, setDiscription] = useState([]);
+    const [descriptions, setDescription] = useState([]);
     const [userName, setUserName] = useState('');
 
     const handlerNameChange = newName => {
@@ -90,15 +90,18 @@ export const Form = () => {
         setGift(newGift);
     }
 
-    const handlerDiscriptionChange = newDiscription => {
-        discription.includes(newDiscription)
-            ? setDiscription( discription.filter(item => item !== newDiscription))
-            : setDiscription( [...discription, newDiscription] );
+    const handlerDescriptionChange = newDescription => {
+        descriptions.includes(newDescription)
+             ? setDescription( descriptions.filter(item => item !== newDescription))
+             : setDescription( [...descriptions, newDescription] );
+       
     }
 
     const handlerUserNameChange = newUserName => {
         setUserName(newUserName);
     }
+
+    console.log(descriptions)
 
     return (
         <form>
@@ -110,9 +113,9 @@ export const Form = () => {
 
             <Question2
                 name={name}
-                discription={discription}
-                setDiscription={setDiscription}
-                onDiscriptionChange={handlerDiscriptionChange}
+                descriptions={descriptions}
+                setDescription={setDescription}
+                onDescriptionChange={handlerDescriptionChange}
             />
 
             <Question3 
@@ -128,7 +131,7 @@ export const Form = () => {
             
             <Summary
                 name={name}
-                discription={discription}
+                descriptions={descriptions}
                 gift={gift}
                 userName={userName}
             />

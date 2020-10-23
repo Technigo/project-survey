@@ -4,44 +4,117 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #EFEFEF;
+  background-color: #EEE9E6;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-h1 {
-  text-align: center;
-  font-size: 60px;
-}
-.question-answer-container {
+
+.header {
   display: flex;
   flex-direction: column;
-  width: 100%;
-}
-.question{
-  text-align: center;
-  font-weight: 600;
-  font-size: 24px;
-  padding: 20px;
+  margin: auto;
+  height: 100vh;
 }
 
-.answer-container {
-  display: flex;
-  flex-direction: column;
+h1 {
+  font-family: 'DM Serif Text', serif;
+  text-align: center;
+  font-size: 60px;
+  padding: 30px;
+  color: #DF522D;
  
 }
 
-.quiz-answer-button {
-  display: inline-flex;
-  font-size: 16px;
-  flex-direction: column;
-  background-color: #F4CAB7;
-  border: none;
-  padding: 20px;
+section img {
   width: 100%;
-  margin: 10px 0 10px 0;
+  padding: 40px;
+  max-width: 600px;
   box-sizing: border-box;
-  border-radius: 20px;
+  margin: auto;
+
+}
+
+.section {
+  padding: 50px;
+  text-align: center;
+}
+
+.question1 {
+}
+
+.description {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 900px;
+  justify-content: center;
+  margin: auto;
+}
+
+input[type=button] {
+  background-color: #EEE9E6;
+  border-radius: 50px;
+  border: 2px solid #DF522D;
+  padding: 15px 20px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  color: #DF522D;
+  font-weight: 900;
+}
+
+input[type=button]:hover {
+  background-color: burlywood;
+  border-radius: 50px;
+  border: 2px solid #DF522D;
+
+}
+
+
+ .description-container:hover label {
+  color: #fff;
+} 
+
+/* .description-container label {
+  color: #DF522D;
+  font-weight: 600;
+} */
+
+input[type=text], textarea {
+  border: none;
+  border-bottom: 2px dashed  #478391;
+  height: 30px;
+  background-color: #EEE9E6;
+}
+
+::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+  font-size: 14px;
+  letter-spacing: 0.5px;
+  opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+  font-size: 14px;
+  letter-spacing: 0.5px;
+}
+
+select {
+  border: none;
+  width: 60%;
+  height: 30px;
+}
+
+label {
+  padding-right: 10px;
+}
+
+h2 {
+  color: #478391;
 }

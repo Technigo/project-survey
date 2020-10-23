@@ -1,9 +1,13 @@
 import React from 'react';
 
+
+
 export const Header = () => {
     return (
-        <section>
-            <h1>Make somebodys day</h1>
+        <section className="header"> 
+            <h1>Make somebody's day</h1>
+            <img src="./hands.png" alt="likes" />
+            <button>Lets go!</button>
         </section>
     )
 }
