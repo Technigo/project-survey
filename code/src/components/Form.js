@@ -87,7 +87,7 @@ export const Form = () => {
 									button="button"
 									click={previousQuestion}
 									text="Back"
-									aria-label="previous-question-button"
+									aria-label="previous question button"
 								/>
 								<Button
 									button="button"

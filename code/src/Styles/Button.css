@@ -24,3 +24,10 @@ button:disabled {
 .navigation-reset button {
 	width: 100%;
 }
+
+@media (min-width: 768px) {
+	.navigation-start button,
+	.navigation-reset button {
+		width: 80%;
+	}
+}
