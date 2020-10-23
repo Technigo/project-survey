@@ -6,6 +6,7 @@ import SparcImage from '../assets/sparc.jpg'
 import PistolWhipImage from '../assets/pistolwhip.png'
 import NoMansSkyImage from '../assets/nomanssky.jpg'
 import HalfLifeAlyxImage from '../assets/halflifealyx.jpg'
+import YodaImage from '../assets/yoda.jpg'
 
 
 const startOver = () => {
@@ -35,6 +36,7 @@ const showGameImage = (game) => {
       imageSrc = HalfLifeAlyxImage;
       break;
   default:
+    imageSrc = YodaImage;
     break;
   }
 

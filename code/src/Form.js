@@ -7,12 +7,15 @@ import { SelectDropdownDrink } from './Components/SelectDropdownDrink'
 import { DropdownSnacks } from './Components/DropdownSnacks'
 import { Summary } from './Components/Summary'
 
+// All the useStates
 export const Form = () => { 
     const [name, setName] = useState('');
     const [snack, setSnack] = useState ('');
     const [drink, setDrink] = useState ('');
     const [game, setGamesList] = useState('');
     const [section, setSection] = useState('welcomePage');
+
+// Components made into an array to build the multistep 
 
     const sectionOrder = [
         'welcomePage',
@@ -22,7 +25,10 @@ export const Form = () => {
         'snackQuestion',
         'summary'
     ];
-    
+
+// Function that prevents refreshing the page, as well as, use of indexOf method to go through the different steps 
+// by the use of useState that starts in the welcome page and then adds +1 moving this way through the array 
+
     const handleSubmit = event => {
         event.preventDefault();
         const nextSectionIndex = sectionOrder.indexOf(section);

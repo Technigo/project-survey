@@ -121,8 +121,8 @@ h2 {
 }
 
 .summary-image {
-  width: 500px;
-  height: 300px;
+  max-width: 500px;
+  max-height: 300px;
   margin: 30px;
 }
 
@@ -175,4 +175,36 @@ button {
 
 button:hover{
   background-color: #CDDEFA;
+}
+
+/* FOOTER */
+
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0px;
+  margin-top: 65px;
+  background-color: #3d475567;
+  width: 100%;
+}
+
+footer p {
+  width: 100%;
+  text-align: center;
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+  margin: 6px;
+}
+
+a:link {
+  color: rgb(218, 251, 255);
+}
+a:visited {
+  color: rgb(248, 226, 153);
+}
+
+footer img {
+  width: 50px;
 }
