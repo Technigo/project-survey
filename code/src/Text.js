@@ -3,10 +3,10 @@ import './Text.css'
 import img from './images/power.jpg'
 
 
-const Text = ({value, setText }) => {
+const Text = ({question, value, setText }) => {
     return (
         <section className="text-wrapper">
-            <h2 tabIndex="0">Coolest Power Ranger character?</h2>
+            <h2 tabIndex="0">{question}</h2>
             <img 
                 tabIndex="0"
                 className="power-rangers-image"

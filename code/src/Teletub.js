@@ -3,7 +3,7 @@ import './Teletubbies.css'
 import img from './images/teletubbies.jpg'
 
 const Teletub = props => {
-    const {setTeletubbies, teletubbies} = props
+    const {question, setTeletubbies, teletubbies} = props
     return (
         <div className="teletubbies-wrapper">
             <h2 tabIndex="0">Best teletubbies character?</h2>
@@ -13,8 +13,9 @@ const Teletub = props => {
                 alt="visualization of a south park siter of teletubbies"
                 src={img}
             />
-            <label htmlFor="teletub">Which is your favorite teletubbies?</label>
-                <select
+            <label htmlFor="teletub">{question}</label>
+                <select 
+                    onSubmit={event => event.preventDefault()}
                     aria-label="select-menu"
                     onChange={(event) => setTeletubbies(event.target.value)}
                     value={teletubbies}

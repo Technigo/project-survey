@@ -29,6 +29,10 @@ form {
 	width: 100%;
 }
 
+.question-wrapper{
+    width: 100%;
+}
+
 select{
     font-family: "Montserrat", sans-serif;
     border-radius: 5px;
@@ -43,6 +47,10 @@ label{
 
 .sailor-label{
     margin-bottom:5px;
+}
+
+.next-question{
+    margin: 10px;
 }
 
 button{

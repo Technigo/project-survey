@@ -10,10 +10,10 @@ const sailorMoons = [
 ]
 
 const SailorMoon = props => {
-    const { setSailorMoon, sailorMoon } = props
+    const {question, setSailorMoon, sailorMoon } = props
     return (
         <div className="sailor-moon-wrapper">
-            <h2 tabIndex="0">Sailor Moon character?</h2>
+            <h2 tabIndex="0">{question}</h2>
             <img
                 tabIndex="0"
                 className="sailor-moon-image"
