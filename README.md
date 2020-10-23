@@ -1,13 +1,24 @@
-# Survey form with React
+# Project Survey - Dream Cat 
 
-Replace this readme with your own information about your project.
+This project was made during the Technigo Bootcamp.  
+The main goal was to practice React and State while creating a survey form. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## The problem
+## The problem 
+I've created a survey with three questions displayed in text input, radio buttons and a drop down meny. Depending on your answers you will see a summary in the end with your answers. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The project is built with React and i started with a one page survey with all the questions displayed on the front page  and did accesibilty testing on each item. I made sure i had the correct semantics to make sure that the form was accesible with keyboard and screen reader. 
 
-## View it live
+This week i wanted to challenge myself more and decided to make the survey a multi step form. So i decided to create a file called survey, added an array for each item page and last connected them with the summary page similar to the first forms structure. 
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+## TECH
+- REACT
+- JAVASCRIPT
+- CSS 
+- HTML
+
+
+## View it Live
+Check out the final result: 
+https://serene-leakey-a37e7f.netlify.app/
