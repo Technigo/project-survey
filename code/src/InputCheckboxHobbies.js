@@ -1,8 +1,9 @@
 import React from 'react'
 
 //Checkboxes for hobbies
+//
+const InputCheckboxHobbies = ({question, userHobbies, onHobbiesChange}) => {
 
-const InputCheckboxHobbies = ({question}) => {
   return (
     <>
       <h3>{question}</h3> 
@@ -10,31 +11,44 @@ const InputCheckboxHobbies = ({question}) => {
       <input 
         id="hobbieCoding" 
         type="checkbox"
-        // checked={hobbies.includes('coding')}
-        // onChange={}
+        // checked={userHobbies.includes('coding')} //If I comment-out this it doesn't work
+        onChange={() => onHobbiesChange('coding')}
       /> 
       <label htmlFor="hobbieSports">Sports</label>
       <input 
         id="hobbieSports" 
         type="checkbox" 
+        // checked={userHobbies.includes('sports')}
+        onChange={() => onHobbiesChange('sports')}
       />
       <label htmlFor="hobbieMusic">Music</label>
       <input 
         id="hobbieMusic" 
-        type="checkbox" 
+        type="checkbox"
+        checked={userHobbies.includes('music')}
+        onChange={() => onHobbiesChange('music')}
       />
       <label htmlFor="hobbieReading">Reading</label>
       <input 
         id="hobbieReading" 
-        type="checkbox" 
+        type="checkbox"
+        checked={userHobbies.includes('reading')}
+        onChange={() => onHobbiesChange('reading')}
       />
       <label htmlFor="hobbieGardening">Gardening</label>
       <input 
         id="hobbieGardening" 
-        type="checkbox" 
+        type="checkbox"
+        checked={userHobbies.includes('gardening')}
+        onChange={() => onHobbiesChange('gardening')}
       />
       <label htmlFor="hobbieGaming">Gaming</label>
-      <input id="hobbieGaming" type="checkbox" />
+      <input 
+        id="hobbieGaming" 
+        type="checkbox"
+        checked={userHobbies.includes('gaming')}
+        onChange={() => onHobbiesChange('gaming')}
+      />
     </>
   );
 };

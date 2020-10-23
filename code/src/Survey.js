@@ -17,7 +17,7 @@ const Survey = () => {
   const [name, setName] = useState(''); //Name input
   const [ageGroup, setAgeGroup] = useState(); //Agegroup-radiobutton
   const [color, setColor] = useState(''); //Color select-dropdown 
-  //const [hobbies, setHobbies] =useState([]);    //HobbiesCheckbox
+  const [hobbies, setHobbies] =useState([]);    //HobbiesCheckbox
   
   const handleSubmit = event => { //To prevent that page reloads on submit
     event.preventDefault();
@@ -28,9 +28,13 @@ const Survey = () => {
 
   const ageGroups = ["20-24", "25-29", "30-34", "35-39", "40-44", "45+"];
 
-  //Should I have a function onHobbiesChange here? @1:03 wed lecture.
- //Like: const onHobbiesChange = (hobbieValue) => {}
- 
+ const handleHobbiesChange = hobbieValue => {
+   hobbies.includes(hobbieValue) 
+     ? setHobbies( hobbies.filter(item => item !== hobbieValue) )//delete element
+     : setHobbies( [...hobbies, hobbieValue] ) //using spread to add elements when checkoxes are clicked
+};
+
+
   return (
     <>
     <section className="header-section"> 
@@ -72,6 +76,8 @@ const Survey = () => {
 
         <article className="question-wrapper">
           <InputCheckboxHobbies
+            userHobbies={hobbies}
+            onHobbiesChange={handleHobbiesChange}
             question="What hobbies do you have?"
            />
           <Button button="button" text="previous question"/>

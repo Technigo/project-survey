@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 // Name
 const InputName = ({ question, name, setName }) => {
   
