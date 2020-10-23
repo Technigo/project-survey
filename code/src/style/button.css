@@ -1,4 +1,4 @@
-.submit-button {
+.button {
   display: inline-block;
   font-family: "Helvetica Neue", Helvetica, sans-serif;
   font-size: 28px;
@@ -18,14 +18,14 @@
   width: 200px;
 }
 
-.submit-button span {
+.button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-.submit-button span:after {
+.button span:after {
   content: "\00bb";
   position: absolute;
   opacity: 0;
@@ -34,11 +34,11 @@
   transition: 0.5s;
 }
 
-.submit-button:hover span {
+.button:hover span {
   padding-right: 25px;
 }
 
-.submit-button:hover span:after {
+.button:hover span:after {
   opacity: 1;
   right: 0;
 }

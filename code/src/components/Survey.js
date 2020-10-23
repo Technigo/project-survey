@@ -1,56 +1,112 @@
 import React, {useState} from 'react';
 
-import './survey.css';
+import '../style/survey.css';
+import { Welcome } from './Welcome';
 import { Text } from './Text';
 import { Select } from './Select';
 import { Radio } from './Radio';
 import { Checkbox } from './Checkbox';
-import { Submit } from './Submit';
+import { Button } from './Button';
 import { Summary } from './Summary';
 
 export const Survey = () => {
-//const [showSurvey, setShowSurvey] = useState(false);
+const [question, setQuestion] = useState(0);
 const [showSummary, setShowSummary] = useState(false);
 const [name, setName] = useState("");
 const [location, setLocation] = useState("");
 const [ageGroup, setAgeGroup] = useState("");
 const [wantsNewsletter, setWantsNewsletter] = useState(false);
 
-const ageGroupsArray = ["0-18", "19-30", "31-50", "Over 50"];
+const nextQuestion = () => setQuestion(question +1);
+
+const ageGroupsArray = ["0-18 years", "19-30 years", "31-50 years", "51-60 years", "60+ years"];
 
 const handleSubmit = (event) => {
   event.preventDefault()
   setShowSummary(true)
 };
-
-/*const handleShowSurvey = (event) => {
-  event.preventDefault()
-  setShowSurvey(true)
-};*/
-
+  console.log(question);
   return (
-    <section className="survey-container">
+    <main className="survey-container">
       {!showSummary ? (
-      <form onSubmit={handleSubmit}>
-        <Text 
-          name={name}
-          setName={setName}
-        />
-        <Select 
-          value={location}
-          setLocation= {setLocation}
-        />
-        <Radio 
-          ageGroup={ageGroup}
-          setAgeGroup={setAgeGroup}
-          ageGroupsArray={ageGroupsArray}
-        />
-        <Checkbox 
-          wantsNewsletter={wantsNewsletter} 
-          setWantsNewsletter={setWantsNewsletter}
-        />
-        <Submit />
-      </form>
+        <form onSubmit={handleSubmit}>
+          
+          {question === 0 && ( 
+            <section className="question">
+              <Welcome />
+              <Button 
+                button="button"
+                click={nextQuestion}
+                text="Start"
+              />
+            </section>
+          )}
+
+          {question === 1 && ( 
+            <section className="question">
+              <Text 
+                name={name}
+                setName={setName}
+                askQuestion="What is your name?"
+              />
+              <Button 
+                button="button"
+                disabled={!name}
+                click={nextQuestion}
+                text="Next"
+              />
+            </section>
+          )}
+          
+          {question === 2 && (
+            <section className="question">
+              <Select 
+                value={location}
+                setLocation= {setLocation}
+                askQuestion="What is your favourite city to watch live music?"
+              /> 
+              <Button 
+                button="button"
+                disabled={!location}
+                click={nextQuestion}
+                text="Next"
+              />
+            </section>
+          )}
+
+          {question === 3 && (
+            <section className="question">
+              <Radio 
+                ageGroup={ageGroup}
+                setAgeGroup={setAgeGroup}
+                ageGroupsArray={ageGroupsArray}
+                askQuestion="What is your age group?"
+              />
+              <Button 
+                button="button"
+                disabled={!ageGroup}
+                click={nextQuestion}
+                text="Next"
+              />
+            </section>
+          )}
+
+          {question === 4 && (
+            <section className="question">
+                <Checkbox 
+                  wantsNewsletter={wantsNewsletter} 
+                  setWantsNewsletter={setWantsNewsletter}
+                  askQuestion="Would you like to sign up for our newsletter?"
+                />
+                <Button 
+                button="submit"
+                disabled={!wantsNewsletter}
+                text="Submit"
+              />
+            </section>
+          )}
+
+        </form>
       ):
       (<Summary 
         name={name}
@@ -60,6 +116,6 @@ const handleSubmit = (event) => {
       />
 
       )} 
-    </section>
+    </main>
   );
 };

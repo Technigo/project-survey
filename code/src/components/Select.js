@@ -1,12 +1,10 @@
 import React from 'react';
 
-export const Select = ({ value, setLocation }) => {
-  //const [location, setLocation] = useState("");
-  //const [value, setLocation] = props;
+export const Select = ({ value, setLocation, askQuestion }) => {
 
   return (
     <>
-      <h2>Your favourite city is: {value}</h2>
+      <h2>{askQuestion}</h2>
       <div>
         <select 
           onChange={event => setLocation(event.target.value)}

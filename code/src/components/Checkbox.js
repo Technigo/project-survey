@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const Checkbox = ({ wantsNewsletter, setWantsNewsletter }) => {
+export const Checkbox = ({ wantsNewsletter, setWantsNewsletter, askQuestion }) => {
   //const [wantsNewsletter, setWantsNewsletter] = useState(false);
   //const [wantsNewsletter, setWantsNewsletter] = props;
   return (
     <div className="">
       <label>
-        Sign up to newsletter?
+        {askQuestion}
         <input 
           type="checkbox"
           checked={wantsNewsletter}
@@ -14,5 +14,5 @@ export const Checkbox = ({ wantsNewsletter, setWantsNewsletter }) => {
         />
       </label>
     </div>
-  )
+  );
 };

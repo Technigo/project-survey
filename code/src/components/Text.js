@@ -1,10 +1,10 @@
 import React from 'react';
 
-export const Text = ({ name, setName }) => {
+export const Text = ({ name, setName, askQuestion }) => {
   //const [name, setName] = useState("");
   return(
     <div>
-      <h2>Please enter your name: </h2>
+      <h2>{askQuestion}</h2>
       <input
         onKeyPress={event => {event.key === 'Enter' && event.preventDefault();}}
         type="text"
