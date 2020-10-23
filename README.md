@@ -18,5 +18,5 @@ Check it out and learn some cool facts about period poverty and a solution!
 
 ### Author and contact
 
-My name: Johanna Blom
+My name: Johanna Blom  
 My <a href="https://www.linkedin.com/in/johanna-blom-2419a181/">Linkedin</a>
