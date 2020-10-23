@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 import { TextInput } from './TextInput.js'
 import { SelectInput } from './SelectInput'
-import { RadiobuttonInput } from './RadiobuttonInput'
+import { RadioButtonInput } from './RadioButtonInput'
 import { RangeSliderInput } from './RangeSliderInput'
 import { SubmitButton } from './SubmitButton'
 import { Summary } from './Summary'
@@ -65,7 +65,7 @@ export const Form = () => {
         </section>
 
         <section className="input-container">
-          <RadiobuttonInput 
+          <RadioButtonInput 
             spiritAnimal={spiritAnimal}
             onSpiritAnimalChange={handleSpiritAnimalChange}
           />
