@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,6 +9,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url('./assets/stock\ photos/stock-1.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  font-size: 16px;
+  line-height: 1.35;
 }
 
 code {
@@ -12,16 +23,137 @@ code {
     monospace;
 }
 
-form {
+header {
+  width: 100%;
+  background-color: #fff;
+  height: 64px;
+  padding: 16px;
   display: flex;
-  max-width: 440px;
+  align-items: center;
+  margin-bottom: 40px;
+  justify-content: space-between;
+  box-shadow: 8px 8px 16px 0 rgba(0,0,0,0.75);
+  position: fixed;
+  top: 0;
+}
+
+header p {
+  color: rgba(0,0,0,0.65);
+}
+
+.img-logo {
+  height: 100%;
+  margin-right: 24px;
+}
+
+.container-left {
+  height: 32px;
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+}
+
+.container-right {
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+
+.container-right a {
+  margin-left: 24px;
+  font-weight: bold;
+  font-size: 14px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #3FA9F5;
+}
+
+.container-right a:hover {
+  text-decoration: underline;
+  color: #1B89CC;
+}
+
+
+
+main {
+  max-width: 800px;
   width: 100%;
   margin: 0 auto;
+  margin-top: 100px;
+  /* background-color: #fff; */
+  background-color: rgba(255,255,255,0.97);
+
+  padding: 48px;
+  margin-bottom: 240px;
+  box-shadow: 8px 8px 16px 0 rgba(0,0,0,75);
+}
+
+.ceo-container {
+  /* border: 1px dashed lime; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 24px;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,0.25);
+  margin-bottom: 24px;
+}
+
+.tip-of-the-day {
+  margin-top: 16px;
+  padding: 12px;
+  border: 1px solid rgba(34,150,255);
+  border-radius: 6px;
+  background-color: rgba(34,150,255,0.10);
+  font-size: 14px;
+  line-height: 1.5;
+  box-shadow: 4px 4px 8px 0 rgba(0,0,0,0.5);
+}
+
+.ceo-img {
+  width: 100px;
+  height: 100px;
+  margin-left: 24px;
+}
+
+.align-right {
+  text-align: end;
+}
+
+.icon-16 {
+  width: 14px;
+  height: 14px;
+  position: relative;
+  top:2px;
+  margin-right: 4px;
+}
+
+p {
+  margin: 0;
+}
+
+form {
+  display: flex;
+  align-items: flex-start;
+}
+
+.form-item {
+  margin-bottom: 24px;
+}
+
+input[type=text], input[type=number], input[type=email], input[type=password] {
+  width: 420px;
+  height: 32px;
+  font-size: 16px;
 }
 
 .row {
   display: flex;
   flex-direction: row;
+  margin-bottom: 8px;
+}
+
+input + label {
+  margin-left: 6px;
 }
 
 .column {
@@ -35,6 +167,62 @@ form {
   margin-top: 32px;
 }
 
+.q-title {
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
 .bold {
   font-weight: bold;
+}
+
+.italic {
+  font-style: italic;
+}
+
+.smaller {
+  font-size: 14px;
+}
+
+.opacity-65 {
+  opacity: 0.65;
+}
+
+.margin-top {
+  margin-top: 4px;
+}
+
+.button {
+  padding: 12px 16px;
+  /* outline: 0; */
+  border: 0;
+  width: auto;
+}
+
+.blue {
+  background-color: #3FA9F5;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+h1 {
+  margin-top: 0;
+  font-size: 28px;
+}
+
+.required {
+  color: red ;
+}
+
+@media screen and (max-width:1080px) {
+  header {
+    flex-direction: column;
+    height: 100px;
+  }
+  .container-right {
+    margin-top: 16px;
+  }
+
 }
