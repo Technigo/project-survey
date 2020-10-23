@@ -12,7 +12,7 @@ export const Summary = props => {
             <p tabIndex="0">You chose {sailorMoon} character</p>
             <p tabIndex="0">And, lastly {turtles}</p>
             <p tabIndex="0">Pretty cool!</p>
-            <p tabIndex="0">P.S. the most common favourite color is blue - so this quizz is totally accurate <span role="img" aria-label="Face with stuck-out tongue and winking eye"></span>&#128540;</p>
+            <p tabIndex="0">P.S. the most common favourite color is blue - so this quizz is totally accurate <span role="img" aria-label="winking face"></span>&#128540;</p>
         </section>
     )
 }

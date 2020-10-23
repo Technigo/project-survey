@@ -8,6 +8,11 @@
 
 .tt-image{
     width: 70%;
-    margin-bottom: 5vh;
+    margin-bottom: 4vh;
 }
 
+@media screen and (min-width:768px) {
+    .tt-image {
+        width: 100%;
+    }
+}

@@ -18,6 +18,10 @@ h1{
     padding: 10px;
 }
 
+h2{
+    text-align: center;
+}
+
 form {
 	display: flex;
 	align-items: center;
@@ -29,10 +33,12 @@ select{
     font-family: "Montserrat", sans-serif;
     border-radius: 5px;
     padding: 5px;
+    margin-bottom: 20px;
 }
 
 label{
     margin-bottom:10px;
+    text-align: center;
 }
 
 .sailor-label{
@@ -46,3 +52,8 @@ button{
     border-radius: 5px;
 }
 
+@media screen and (min-width:768px) {
+    button{
+        font-size: 1.2em;
+    }
+}

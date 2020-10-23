@@ -21,7 +21,7 @@ const Text = ({value, setText }) => {
                 onChange={(event) => setText(event.target.value)}
                 value={value}
                 placeholder="Coolest color is..."
-                required
+                autocomplete="on"
             />
         </section>)
 }

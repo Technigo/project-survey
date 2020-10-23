@@ -8,11 +8,18 @@
 
 .power-rangers-image{
     width: 70%;
-    margin-bottom: 3vh;
+    margin-bottom: 4vh;
 }
 
 input[type = "text"]{
     font-family: "Montserrat", sans-serif;
     border-radius: 5px;
     padding: 5px;
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:768px) {
+    .power-rangers-image{
+        width: 50%;
+    }
 }

@@ -6,5 +6,11 @@
 
 .turtles-image{
     width: 60%;
-    margin-bottom: 3vh;
+    margin-bottom: 4vh;
+}
+
+@media screen and (min-width:768px) {
+    .turtles-image{
+        width: 50%;
+    }
 }
