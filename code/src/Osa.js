@@ -48,7 +48,7 @@ export const Osa = () => {
           <h4>Och maten. Vad äter du?</h4>
           <select className="mat" value={food} onChange={(e)=>{setFood(e.target.value)}}>
             <option value="välj">Välj</option>
-            <option value="allt möljligt">allt möjligt</option>
+            <option value="allt möjligt">allt möjligt</option>
             <option value="vegetariskt">vegetariskt</option>
             <option value="flexitariskt">flexitariskt</option>
           </select>
