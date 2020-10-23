@@ -1,13 +1,13 @@
 import React from 'react';
 
-const ProgressBar = ({ className, progress, maxProgress }) => {
+const ProgressBar = ({ classLabel, progress, maxProgress, classProgress }) => {
   return (
     <>
-      <label className={className} htmlFor="ProgressBar">
+      <label className={classLabel} htmlFor="ProgressBar">
         {progress} / {maxProgress}
       </label>
       <progress
-        className="className"
+        className={classProgress}
         name="ProgressBar"
         value={progress}
         max={maxProgress}

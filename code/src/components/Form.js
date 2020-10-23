@@ -14,15 +14,13 @@ const Form = () => {
   const [text, setText] = useState('');
   const [select, setSelect] = useState('');
   const [radiobutton, setRadio] = useState();
-  const [checkbox, setCheckbox] = useState(false);
+  const [checkbox, setCheckbox] = useState([]);
   const [submit, setSubmit] = useState(false);
 
   const handleSubmit = event => {
     event.preventDefault();
     setSubmit(true);
   };
-  //const nextQuestion = () => setPageIndex(pageIndex + 1);
-  const previousQuestion = () => setPageIndex(pageIndex - 1);
   const handleTextChange = event => {
     setText(event.target.value);
   };
@@ -32,15 +30,14 @@ const Form = () => {
   const handleRadioChange = event => {
     setRadio(event.target.value);
   };
-  const handleCheckboxChange = event => {
-    setCheckbox(event.target.value);
+  const handleCheckboxChange = checkboxValue => {
+    checkbox.includes(checkboxValue)
+      ? setCheckbox(checkbox.filter(item => item !== checkboxValue))
+      : setCheckbox([...checkbox, checkboxValue]);
   };
+
   const onNextPageChange = () => {
     setPageIndex(pageIndex + 1);
-    // if (text === 'Start') {
-
-    // }
-    // console.log('Hello!');
   };
   const onPreviousPageChange = () => {
     setPageIndex(pageIndex - 1);
@@ -49,17 +46,45 @@ const Form = () => {
     window.location.reload();
   };
 
-  const selectArray = ['', '1-10', '11-20'];
-  const radiobuttonArray = ['0-10', '11-20', '21-30'];
+  const selectArray = [
+    {
+      text: 'Select...',
+      value: '',
+    },
+    {
+      text: '1-10',
+      value: '1-10',
+    },
+    {
+      text: '11-20',
+      value: '11-20',
+    },
+    {
+      text: '21-30',
+      value: '21-30',
+    },
+  ];
+  const checkboxArray = [
+    {
+      text: '1-10',
+      value: ['1-3', '4-7', '8-10'],
+    },
+    {
+      text: '11-20',
+      value: ['11-13', '14-17', '18-20'],
+    },
+    {
+      text: '21-30',
+      value: ['21-23', '24-27', '28-30'],
+    },
+  ];
   const questions = {
     text: 'What is the text input?',
     select: 'What is the select?',
     checkbox: 'What is the checkbox?',
     radio: 'What is the radiobutton?',
-    summary: 'Summary',
   };
-  console.log(text);
-  console.log(select);
+
   return (
     <main className="App__main">
       {!submit ? (
@@ -68,7 +93,8 @@ const Form = () => {
           {pageIndex === -1 && (
             <section className="Form__section">
               <h2 className="App__subheader">
-                Thank you for participating in the survey. It is very important.
+                Thank you for participating in the excellent and very important
+                survey.
               </h2>
               <Button
                 className="Button"
@@ -81,6 +107,7 @@ const Form = () => {
               />
             </section>
           )}
+
           {pageIndex === 0 && (
             <section className="Form__section">
               <InputText
@@ -120,7 +147,7 @@ const Form = () => {
                 className="Form__label-select"
                 question={questions.select}
                 array={selectArray}
-                value={select}
+                select={select}
                 onSelectChange={handleSelectChange}
               />
               <div className="Button-container">
@@ -146,78 +173,91 @@ const Form = () => {
               </div>
             </section>
           )}
-          {pageIndex === 2 &&
-            (select === '1-10' ? (
-              <section className="Form__section">
-                <InputCheckbox
-                  classLabel="Form__label"
-                  classInput="Form__input-checkbox"
-                  question={questions.checkbox}
-                  checkbox={checkbox}
-                  onCheckboxChange={handleCheckboxChange}
-                  classSpan="Form__input Form__input-checkbox"
+
+          {pageIndex === 2 && (
+            <section className="Form__section">
+              <InputCheckbox
+                classLabel="Form__label"
+                classInput="Form__input-checkbox"
+                question={questions.checkbox}
+                value={checkbox}
+                selected={checkbox}
+                onCheckboxChange={handleCheckboxChange}
+                classSpan="Form__input Form__input-checkbox"
+                array={
+                  checkboxArray[
+                    checkboxArray.findIndex(item => item.text === select)
+                  ].value
+                }
+              />
+              <div className="Button-container">
+                <Button
+                  className="Button Button--reverse"
+                  type="button"
+                  click={onPreviousPageChange}
+                  text="Go Back"
+                  icon={
+                    <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                  }
                 />
-                <div className="Button-container">
-                  <Button
-                    className="Button Button--reverse"
-                    type="button"
-                    click={onPreviousPageChange}
-                    text="Go Back"
-                    icon={
-                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
-                    }
-                  />
-                  <Button
-                    className="Button"
-                    type="button"
-                    click={onNextPageChange}
-                    text="Proceed"
-                    icon={
-                      <i className="Button__i Button__i--right fa fa-arrow-right"></i>
-                    }
-                  />
-                </div>
-              </section>
-            ) : (
-              <section className="Form__section">
-                <InputRadiobutton
-                  classLabel="Form__label"
-                  question={questions.radio}
-                  array={radiobuttonArray}
-                  value={radiobutton}
-                  onRadioChange={handleRadioChange}
-                  classSpan="Form__input Form__input-radio"
+                <Button
+                  className="Button"
+                  type="button"
+                  click={onNextPageChange}
+                  disabled={checkbox === []}
+                  text="Proceed"
+                  icon={
+                    <i className="Button__i Button__i--right fa fa-arrow-right"></i>
+                  }
                 />
-                <div className="Button-container">
-                  <Button
-                    className="Button Button--reverse"
-                    type="button"
-                    click={onPreviousPageChange}
-                    text="Go Back"
-                    icon={
-                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
-                    }
-                  />
-                  <Button
-                    className="Button"
-                    type="button"
-                    click={onNextPageChange}
-                    disabled={!radiobutton}
-                    text="Proceed"
-                    icon={
-                      <i className="Button__i Button__i--right fa fa-arrow-right"></i>
-                    }
-                  />
-                </div>
-              </section>
-            ))}
+              </div>
+            </section>
+          )}
 
           {pageIndex === 3 && (
             <section className="Form__section">
+              <InputRadiobutton
+                classLabel="Form__label"
+                question={questions.radio}
+                array={
+                  checkboxArray[
+                    checkboxArray.findIndex(item => item.text === select)
+                  ].value
+                }
+                value={radiobutton}
+                onRadioChange={handleRadioChange}
+                classSpan="Form__input Form__input-radio"
+              />
+              <div className="Button-container">
+                <Button
+                  className="Button Button--reverse"
+                  type="button"
+                  click={onPreviousPageChange}
+                  text="Go Back"
+                  icon={
+                    <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                  }
+                />
+                <Button
+                  className="Button"
+                  type="button"
+                  click={onNextPageChange}
+                  disabled={!radiobutton}
+                  text="Proceed"
+                  icon={
+                    <i className="Button__i Button__i--right fa fa-arrow-right"></i>
+                  }
+                />
+              </div>
+            </section>
+          )}
+
+          {pageIndex === 4 && (
+            <section className="Form__section">
               <Summary
                 className="Form__label"
-                header={questions.summary}
-                name={text}
+                header="Summary"
+                text={text}
                 select={select}
                 checkbox={checkbox}
                 radiobutton={radiobutton}
@@ -232,17 +272,17 @@ const Form = () => {
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
                   }
                 />
-                <Button className="Button" type="submit" text="Send survey" />
+                <Button className="Button" type="submit" text="Submit" />
               </div>
             </section>
           )}
           {pageIndex >= 0 && (
-            <section className="Form__section">
+            <section className="Form__section Form__section-progressbar">
               <ProgressBar
-                className="ProgressBar"
+                classLabel="Form__label-progressbar"
                 progress={pageIndex}
-                maxProgress="3"
-                progressText={`${pageIndex} out of 3 answered`}
+                maxProgress="4"
+                classProgress="Form__progressbar"
               />
             </section>
           )}

@@ -1,5 +1,3 @@
-// @import '../variables.scss';
-
 .Form {
   display: flex;
   flex-direction: column;
@@ -13,8 +11,27 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
+
+    &-progressbar {
+      justify-content: center;
+      width: 100%;
+    }
   }
 
+  /*** INPUT TYPES ***/
+
+  /*--- labels ---*/
+
+  &__label-select {
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__label-progressbar {
+    text-align: center;
+  }
+
+  /*--- text input ---*/
   &__text {
     width: 100%;
     border: none;
@@ -28,10 +45,8 @@
       font-size: 20px;
     }
   }
-  &__label-select {
-    display: flex;
-    flex-direction: column;
-  }
+
+  /*--- custom radio and checkbox input ---*/
 
   &__label {
     display: block;
@@ -109,6 +124,38 @@
         position: absolute;
         display: none;
       }
+    }
+  }
+
+  /*--- custom progress bar ---*/
+
+  &__progressbar {
+    width: 100%;
+
+    &[value] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      height: 15px;
+      margin-top: 10px;
+    }
+
+    &[value]::-webkit-progress-bar {
+      border-radius: 2px;
+      background: #fff;
+      height: 10px;
+    }
+
+    &[value]::-moz-progress-bar {
+      border-radius: 2px;
+      background: #fff;
+      height: 10px;
+    }
+
+    &[value]::-webkit-progress-value {
+      background: #f3cbaa;
+      border-top-left-radius: 2px;
+      border-bottom-left-radius: 2px;
     }
   }
 }

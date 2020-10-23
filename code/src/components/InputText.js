@@ -1,7 +1,5 @@
 import React from 'react';
 
-import '../styles/InputText.scss';
-
 const InputText = ({
   classLabel,
   classInput,

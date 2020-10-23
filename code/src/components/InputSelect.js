@@ -1,15 +1,29 @@
 import React from 'react';
 
-import '../styles/InputSelect.scss';
-
-const InputSelect = ({ className, question, value, onSelectChange }) => {
+const InputSelect = ({
+  className,
+  question,
+  select,
+  onSelectChange,
+  array,
+}) => {
   return (
     <label className={className} htmlFor="InputSelect">
       {question}
-      <select id="InputSelect" onChange={onSelectChange} value={value}>
-        <option value="">Select</option>
+      <select
+        id="InputSelect"
+        onChange={onSelectChange}
+        value={select}
+        required
+      >
+        {array.map(item => (
+          <option tabIndex="0" key={item.value} value={item.value}>
+            {item.text}
+          </option>
+        ))}
+        {/* <option value="">Select</option>
         <option value="1-10">1-10</option>
-        <option value="11-20">11-20</option>
+        <option value="11-20">11-20</option> */}
       </select>
     </label>
   );

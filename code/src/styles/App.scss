@@ -28,5 +28,10 @@
       height: 80vh;
       padding: 80px 50px;
     }
+
+    @include respond(large) {
+      width: 60vw;
+      height: 70vh;
+    }
   }
 }
