@@ -31,7 +31,7 @@ export const Survey = () => {
   const [name, setName] = useState("");
   const [showSummary, setShowSummary] = useState(false);
   const [selectedActivity, setSelectedActivity] = useState("");
-  const [agreeCheckbox, setAgreeCheckbox] = useState(false);
+  // const [agreeCheckbox, setAgreeCheckbox] = useState(false);
   const [selectedColor, setSelectedColor] = useState();
 
   const handleSubmit = (event) => {
