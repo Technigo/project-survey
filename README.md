@@ -1,4 +1,4 @@
-# Survey form with React
+# Survey form with React - the Sweet-o-meter 🍭 🍬 🍭 🍬 🍭
 
 Replace this readme with your own information about your project.
 
