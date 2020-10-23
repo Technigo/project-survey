@@ -8,7 +8,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
 
       <div className="radiobutton-section1">
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="january">JAN</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="january">JAN</label>
           <input
             tabIndex="0"
             id="Professional"
@@ -19,7 +19,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="february">FEB</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="february">FEB</label>
           <input
             tabIndex="0"
             id="Crazy"
@@ -30,7 +30,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="mars">MARS</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="mars">MARS</label>
           <input
             tabIndex="0"
             id="Evil"
@@ -41,7 +41,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="april">APRIL</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="april">APRIL</label>
           <input
             tabIndex="0"
             id="Drunk"
@@ -54,7 +54,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
 
         <div className="radiobutton-section2">
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="maj">MAY</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="maj">MAY</label>
           <input
             tabIndex="0"
             id="Ugly"
@@ -65,7 +65,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="juni">JUNE</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="juni">JUNE</label>
           <input
             tabIndex="0"
             id="Celebrity"
@@ -77,7 +77,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
       
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="juli">JULI</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="juli">JULI</label>
           <input
             tabIndex="0"
             id="Scary"
@@ -88,7 +88,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="august">AUG</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="august">AUG</label>
           <input
             tabIndex="0"
             id="Grumpy"
@@ -101,7 +101,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
 
         <div className="radiobutton-section3">
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="september">SEP</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="september">SEP</label>
           <input
             tabIndex="0"
             id="Wild"
@@ -112,7 +112,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="october">OCT</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="october">OCT</label>
           <input
             tabIndex="0"
             id="Weird"
@@ -123,7 +123,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="november">NOV</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="november">NOV</label>
           <input
             tabIndex="0"
             id="Sexy"
@@ -134,7 +134,7 @@ const BirthMonth = ({ yourMonth, onMonthChange }) => {
         </div>
 
         <div className="radiobutton">
-          <label tabIndex="0" htmlFor="december">DEC</label>
+          <label className="radiobutton-css" tabIndex="0" htmlFor="december">DEC</label>
           <input
             tabIndex="0"
             id="Macho"
