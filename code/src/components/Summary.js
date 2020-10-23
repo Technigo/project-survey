@@ -4,7 +4,7 @@ const Summary = ({name, email, theme, answer,}) => {
     return (
         <>
             {answer === 'Yes' ? (
-                <p className="summary">Welcome {name} to my party! 
+                <p className="summary" tabindex="0">Welcome {name} to my party! 
                     <p>This is what you answered:</p>
                     <ul>
                         <li>  Email:{email}</li>
@@ -12,7 +12,7 @@ const Summary = ({name, email, theme, answer,}) => {
                     </ul>
                 </p>
                 ):(
-                <p className="summary">Sorry you cannot make it! See you next time!</p>  
+                <p className="summary" tabIndex="0">Sorry you cannot make it! See you next time!</p>  
             )}
         </>
     )}
