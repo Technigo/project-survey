@@ -3,7 +3,7 @@ import React from 'react'
 export const ThirdQuestion = ({text, setText}) => {
     return (
         <div className='third-question'>
-            <label><h2 className='text-header' tabIndex='0'>What was the main reason you wanted to to start at the Technigo bootcamp and become a frontend developer?</h2></label>
+            <label><h2 className='text-header' tabIndex='0'>What was the main reason you wanted to start at the Technigo bootcamp and become a frontend developer?</h2></label>
                 <textarea
                     aria-label='text area'
                     type='text'
