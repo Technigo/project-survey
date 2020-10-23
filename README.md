@@ -1,13 +1,9 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Survey form with React
+I built an OSA survey. It felt meaningful because my husband turns 40 this winter and then we can use the site on real visitors.
+I think it went pretty smoothly this week. I like React, it feels (more or less) logical and structured. I kept it simple, but if I had more time I would expand the choices and ask follow-up questions. I would like to create my own json.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# View it live
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Netlify: https://joakim40y.netlify.app/
