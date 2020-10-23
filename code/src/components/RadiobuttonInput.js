@@ -9,7 +9,7 @@ const animals = [
   'zebra'
 ]
 
-export const RadioButtonInput = ({spiritAnimal, onSpiritAnimalChange}) => {
+export const RadiobuttonInput = ({spiritAnimal, onSpiritAnimalChange}) => {
 
   return (
     <div className="form-question-container">
