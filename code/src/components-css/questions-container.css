@@ -94,6 +94,10 @@ a {
     padding-top: 45px;
 }
 
+.third-question a {
+    padding: 6px;
+}
+
 /*Media Queries*/
 /*MOBILE*/
 @media (max-width: 666px) {
