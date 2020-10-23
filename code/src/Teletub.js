@@ -21,7 +21,6 @@ const Teletub = props => {
                     aria-controls="collapse"
                     aria-orientation="vertical"
                     aria-expanded="false"
-                    required
                 >
                     <option value="">Choose teletubbies!</option>
                     <option tabIndex="-1" value="Tinky Winky - purple">Tinky Winky - purple</option>

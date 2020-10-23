@@ -1,4 +1,6 @@
-# Technigo React Starter App
+# Build a Survey with React
+
+### This project was made as part of Technigo’s front-end developer boot camp Fall 2020.
 
 This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
 

@@ -34,7 +34,7 @@ export const Input = () => {
                     < Teletub setTeletubbies={setTeletubbies} teletubbies={teletubbies} />
                     < SailorMoon setSailorMoon={setSailorMoon} sailorMoon={sailorMoon} />
                     < Turtles setTurtles={setTurtles} turtle={turtle} />
-                    <button aria-label="Submitt-button" disabled={!name || !teletubbies || !sailorMoon} type="submit"> I'M DONE </button>
+                    <button aria-label="Submitt-button" disabled={!name || !teletubbies || !sailorMoon || !turtle} type="submit"> I'M DONE </button>
                 </form>
             ) :
                 showSummary && (
