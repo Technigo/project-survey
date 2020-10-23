@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
-import "./styles.css";
-import { NameQuestion } from "./NameQuestion";
-import { CheckboxQuestions } from "./CheckboxQuestions";
-import { StoreQuestion} from "./StoreQuestion";
-import { Summary } from "./Summary";
+import "./app.css";
+import { NameQuestion } from "./components/NameQuestion";
+import { CheckboxQuestions } from "./components/CheckboxQuestions";
+import { StoreQuestion} from "./components/StoreQuestion";
+import { Summary } from "./components/Summary";
 
 // THIS IS THE PARENT ALL STATES ARE SET HERE
 
@@ -22,17 +22,9 @@ const handleNameChange = newName => {
     setName(newName);
 };
 
-const handlelikeOptionChange = likeCheese => {
-  likeOption(likeCheese)
-  ? setLikeOption(likeOption.map(item => item !== likeCheese))
-  : setLikeOption( [...likeOption, likeCheese] );
+const handlelikeOptionChange  = likeCheese => {
+  setLikeOption(likeCheese);
 };
-
-// const handleColorsChange = colorValue => {
-//     colors.includes(colorValue)
-//         ? setColors( colors.filter(item => item !== colorValue) )
-//         : setColors( [...colors, colorValue] );
-// };
 
 const handleWhereBuyChange = newWhereBuy => {
   setwhereBuy(newWhereBuy);

@@ -3,12 +3,12 @@ import React from "react";
 // The componet dont know about App, js without props, like adding a argrument to a function.This is a function that is executed when all field are filld =true
 
 // 2b destructuring way, extract the name from props variabel.
-export const Summary = ({ name, like, whereBuy}) => {
+export const Summary = ({ name, likeOption, whereBuy}) => {
   return (
     <div>            
         <div>
             <h1> Chezzes,{name}! 
-            So you {like}cheese and often 
+            So you {likeOption}cheese and often 
             {whereBuy}! Thank you for answering this cheesy survey, 
             have a geat day! </h1>
             </div>

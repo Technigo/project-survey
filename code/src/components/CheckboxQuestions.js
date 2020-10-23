@@ -12,11 +12,12 @@ export const CheckboxQuestions = ({ likeOption, onlikeOptionChange}) => {
           <label key={like}>
             <input
               type="radio"
+              id=""
               name="like"
               value={like}
               onChange={event =>  onlikeOptionChange(event.target.value)}
               checked={likeOption === like}
-              // required
+              required
             />
             {like}
           </label>
