@@ -40,11 +40,13 @@ export const Survey = () => {
                     {section === 'question1' && (
                     <>
                     <h2>Generel info</h2>
+                    <div className="question-section">
                     <TextInput 
                     question="What is your name?" 
                     inputAnswer={name} 
                     inputSet={setName} 
                     showNext={() => showNextQuestion('question2')}/>
+                    </div>
                     </>
                     
                     )}
@@ -52,46 +54,58 @@ export const Survey = () => {
                     {section === 'question2' && (
                     <>
                     <h2>Generel info</h2>
+                    <div className="question-section">
                     <RadioInput 
                     question="Are you concerned about the climate change?" 
                     radioValue={footprint} 
                     setRadioValue={setFootprint} 
                     showNext={() => showNextQuestion('question3')}/>
+                    </div>
                     </>
                     )}
                     
                     {section === 'question3' && (
                     <>
                     <h2>Housing</h2>
+                    <div className="question-section">
                     <TextInput 
                     question="Where do you live?" 
                     inputAnswer={city} 
                     inputSet={setCity} 
                     showNext={() => showNextQuestion('question4')} />
+                    </div>
                     </>
                     )} 
                     
                     {section === 'question4' && (
                     <>
                     <h2>Housing</h2>
+                    <div className="question-section">
                     <SelectInput 
                     question="Do you live in a house or apartment?" 
                     selectValue={housing} 
                     setSelectValue={setHousing} 
                     showNext={() => showNextQuestion('question5')} />
+                    </div>
                     </>
                     )}
                     {section === 'question5' && (
                     <>
-                    <h2>Housing</h2>    
+                    <h2>Housing</h2> 
+                    <div className="question-section">   
                     <RadioInput 
                     question="I always turn off the light when leaving a room." 
                     radioValue={lights} 
                     setRadioValue={setLights}showNext={() => showNextQuestion('question6')} />
+                    </div>
                     </>
                     )}
                 {section === 'question6' && (
-                    <input type="submit" value="Submit" className="button"/> )}
+                     <div className="question-section">
+
+                    <input type="submit" value="Submit" className="button"/> 
+                    </div>
+                    )}
                 </form>
             </>
         ); }
