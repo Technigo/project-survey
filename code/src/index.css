@@ -5,9 +5,69 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100%;
+  height: auto;
+  background-color: lightskyblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+header {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Amatic SC';
+  font-size: 50px;
+}
+
+.radio-group {
+  
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Amatic SC', cursive;
+  margin: 25px;
+}
+
+.question-1 {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.question-2 {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  width: 120px;
+
+}
+
+.question-3 {
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  width: 100%;
+  height: auto;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  font-family: 'Amatic SC';
+  font-size: 50px;
 }
