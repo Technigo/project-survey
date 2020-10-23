@@ -31,6 +31,7 @@ form {
 
 .question-wrapper{
     width: 100%;
+    margin-top: 30px;
 }
 
 select{
@@ -56,7 +57,7 @@ label{
 button{
     margin: 10px;
     font-family: "Montserrat", sans-serif;
-    font-size: 0.6em;
+    font-size: 1em;
     border-radius: 5px;
 }
 
