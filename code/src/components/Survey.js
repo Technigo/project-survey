@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {TextInput} from './TextInput';
 import {RadioInput} from './RadioInput';
 import SelectInput from './SelectInput';
+import Intro from './Intro'
 
 
 
@@ -18,6 +19,7 @@ export const Survey = () => {
     const handleSubmit = (event) => {
         event.preventDefault()
         setIsSubmit(true);
+        window.location.href="#results"
     }
 
 
@@ -26,7 +28,9 @@ export const Survey = () => {
 
     return (
         <>
-        <form className="main-form" onSubmit={handleSubmit}>
+
+        
+        <form className="main-form" onSubmit={handleSubmit} id="main-form">
 
             <TextInput question="What is your name?" inputAnswer={name} inputSet={setName} />
 
@@ -44,21 +48,23 @@ export const Survey = () => {
             <input type="submit" value="Submit" className="submit-button"/>
         </form>
 
-        <div><p>Name: {name}, I live: {housing}, in a:{footprint}, My footprint:{city}</p></div>
+       
+        
         </>
     ); }
 
     else 
             return ( 
-            <div>
-             <h2>Hi {name}</h2>
-             <h3>Thank you for answering our survey. Below you can find a summary of your anwsers.</h3>
-            <p>Your concern about climate change: {footprint}/5</p>
-            <p>Your living situation: {housing}</p>
-            <p>Your habits concering lights: {lights}/5</p>
-            <p>Your concern about climate change: {footprint}/5</p>
-            
-            </div>
+                <section className="results" id="results">
+                <h2>Hi {name}</h2>
+                <h3>Thank you for answering our survey. Below you can find a summary of your anwsers.</h3>
+                <div className="answers">
+                    <p>Your concern about climate change: <span className="result-span"> {footprint}/5</span></p>
+                    <p>Your living situation: <span className="result-span"> {housing}</span></p>
+                    <p>Your habits concering lights: <span className="result-span"> {lights}/5</span></p>
+                    <p>Your concern about climate change: <span className="result-span"> {footprint}/5</span></p>
+                </div>
+            </section>
             
             );
 }
