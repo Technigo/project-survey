@@ -20,7 +20,7 @@ const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
       {/* Input */}
       <div className="question__content-wrapper">
         {ageGroups.map((group) => (
-          <span key={group}>
+          <span key={group} className="form__radiobuttons">
             <input
               id={group}
               type="radio"

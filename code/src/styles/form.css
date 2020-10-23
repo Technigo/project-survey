@@ -24,6 +24,7 @@
   position: relative;
 }
 
+/* Specific values for the checkbox-wrapper */
 .align-content {
   align-content: center;
 }
@@ -56,6 +57,10 @@
 
 .form__radiobutton__input {
   margin: 10px;
+}
+
+.form__radiobuttons {
+  padding: 5px;
 }
 
 .form__checkbox {
@@ -93,6 +98,7 @@
   z-index: -1;
 }
 
+/* For the 3+ checkboxes popup */
 .bigger-margin {
   margin-top: -160px;
 }
@@ -213,10 +219,6 @@
 /* --- Mediaqueries --- */
 
 @media (max-width: 800px) {
-  body {
-    font-size: 14px;
-  }
-
   .wrapper {
     padding: 20px;
   }
@@ -251,14 +253,23 @@
   }
 
   .buttons__wrapper {
-    flex-direction: column;
+    flex-direction: column-reverse;
     display: flex;
     align-items: center;
     position: relative;
   }
 
   .form__next-button,
-  .form__prev-button {
-    margin: 20px 20px;
+  .form__prev-button,
+  .form__submit-button {
+    margin: 35px;
+  }
+
+  .form__popup__wrapper {
+    top: -40px;
+  }
+
+  .align-content {
+    flex-direction: row;
   }
 }
