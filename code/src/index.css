@@ -66,7 +66,8 @@ code {
 }
 
 input[type=text],
-select {
+select,
+select option {
   background-color: #ffffff;
   padding: 4px 5px;
   border: none;
