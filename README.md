@@ -1,8 +1,16 @@
 # Survey form with React - the Sweet-o-meter 🍭 🍬 🍭 🍬 🍭
 
-Replace this readme with your own information about your project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+
+use React to build a survey form. Your completed project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
+
+- How to use form fields with React
+- How to use `useState`
+- How to use state to show different components based on where you are in the survey
+but take accessibility into account when you are styling your form elements - so inputs should have labels and should be easily readable and usable.
+
+but take accessibility into account when you are styling your form elements - so inputs should have labels and should be easily readable and usable.
+Add validation to your survey! Use either HTML input validation attributes (such as required) o
 
 ## The problem
 
