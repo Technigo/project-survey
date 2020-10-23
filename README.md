@@ -8,4 +8,4 @@ First time using state in React! Started with creating a form and style it, ther
 
 ## View it live
 
-/wizardly-noyce-4f8da0.netlify.app
+https://wizardly-noyce-4f8da0.netlify.app/
