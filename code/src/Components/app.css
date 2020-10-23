@@ -1,0 +1,47 @@
+main {
+    background-image: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/88cd4e06-e4dc-45bb-90b6-a7146f058af1/ddjczul-71416ea2-360a-4db2-aa33-fa34e497730a.jpg/v1/fill/w_1600,h_724,q_75,strp/halloween_2019_by_unidcolor_ddjczul-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3siaGVpZ2h0IjoiPD03MjQiLCJwYXRoIjoiXC9mXC84OGNkNGUwNi1lNGRjLTQ1YmItOTBiNi1hNzE0NmYwNThhZjFcL2RkamN6dWwtNzE0MTZlYTItMzYwYS00ZGIyLWFhMzMtZmEzNGU0OTc3MzBhLmpwZyIsIndpZHRoIjoiPD0xNjAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.J_HP1qFL96H1vpBeZXaUqNjflkuN2wYGp7aYbbKAop0');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 30px;
+    
+}
+
+.survey,
+.summary {
+    margin: auto;
+    background: linen;
+    background: rgba(250, 240, 230, 0.6);
+    border: 10px solid coral;
+    border-radius: 10%;
+    text-align: center;
+    padding: 20px;
+    max-width: 700px;
+    
+}
+
+.name,
+.selected-activity {
+    padding: 5px;
+}
+
+.favourite-color-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.favourite-color {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.submit-button {
+    margin: 20px 0 15px 0;
+}
+
+@media (min-width: 700px) {
+    main {
+        padding: 100px;
+    }
+}

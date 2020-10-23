@@ -1,0 +1,18 @@
+footer {
+    /* background: black; */
+    color: rgba(255,255,255,0.7);
+    padding: 10px 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+footer a {
+    color: rgba(255,255,255,0.7);
+    text-decoration: none;
+}
+
+.cred {
+    font-size: 12px;
+}
