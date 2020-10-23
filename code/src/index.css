@@ -27,6 +27,9 @@ h2 {
 	padding: 30px 20px;
 	background-color: #cf7500;
 	border-radius: 8px;
+	-webkit-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
 }
 
 .checkbox-container {

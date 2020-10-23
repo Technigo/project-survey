@@ -3,7 +3,7 @@ import React from 'react';
 export const Question2 = ({ userAnswer2, onAnswerChange }) => {
 	return (
 		<div className="quiz-box">
-			<label htmFor="select">
+			<label htmlFor="select">
 				<h2>Question number 2</h2>
 				<p>
 					In the Friends episode "The one with the Halloween Party", what
