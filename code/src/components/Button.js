@@ -3,7 +3,7 @@ import React from 'react';
 import 'components/ButtonCss.css';
 
 
-export const Button = ({buttonText}) => {
+export const Button = () => {
   
   return (
     <div className="button-container" tabindex="0">

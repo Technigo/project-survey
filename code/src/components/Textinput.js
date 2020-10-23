@@ -12,6 +12,7 @@ export const Textinput = ({questionName, name, setName}) => {
         type="text"
         onChange={(event) => setName(event.target.value)}
         value={name}
+        placeholder="  Your name here"
         required
       />
     </label>
