@@ -5,8 +5,14 @@ button {
     background: #0f3f22;
     color:#fff;
     margin: 5px;
+    font-weight: 600;
 }
 
 button:hover {
     background: #6a7552;
+}
+
+button:disabled {
+    background: #EBEDE6;
+    color: #0f3f22;
 }

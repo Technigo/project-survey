@@ -180,8 +180,9 @@ export const Survey = () => {
                   />
                   <Button
                     type='button'
-                    text='Next Baby!'
+                    text={celebrationDrink ? 'Next Baby!': 'Choose something!'}
                     click={nextQuestion}
+                    disable={!celebrationDrink}
                   />
 
                 </div>
@@ -205,6 +206,7 @@ export const Survey = () => {
                     type='button'
                     text='Next Baby!'
                     click={nextQuestion}
+                    disable={!rainyFood}
                   />
 
                 </div>
@@ -227,6 +229,7 @@ export const Survey = () => {
                     type='button'
                     text='Next Baby!'
                     click={nextQuestion}
+                    disable={!restaurantHunt}
                   />
                 </div>
               </>
@@ -248,6 +251,7 @@ export const Survey = () => {
                     type='button'
                     text='Next Baby!'
                     click={nextQuestion}
+                    disable={!saladMaker}
                   />
                 </div>
               </>
@@ -283,6 +287,7 @@ export const Survey = () => {
                     type='button'
                     text='Next Baby!'
                     click={nextQuestion}
+                    /* disable={!rainyFood} */
                   />
                 </div>
               </>
@@ -323,6 +328,7 @@ export const Survey = () => {
                   <Button
                     type='submit'
                     text='Submit fantastic survey!'
+                    disable={!userText}
                   />
                 </div>
               </>
