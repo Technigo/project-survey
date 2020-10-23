@@ -16,21 +16,22 @@ export const Osa = () => {
   } 
 
   return (
-  <>
+    <section>
     {!summary && ( 
     <form 
-    onSubmit={handleSubmit} 
-    className="osa">
-      <div className="respond">
-      <label>
-      <h4>Ja!</h4>
-        <input
+      onSubmit={handleSubmit} 
+      className="osa">
+        <div className="respond">
+          <img src="../Ballons.jpeg" alt="Ballons" className="ballons"></img>
+          <label>
+          <h4 className="answer-yes">Ja!</h4>
+          <input
           type="checkbox"
           checked={respond}
           onChange={event => setRespond(event.target.checked)}
-        />
-      </label>
-      </div>
+          /> 
+          </label>
+        </div>
       <div className="name">
       <label>
         <h4>Vem är det som kommer?</h4>
@@ -46,13 +47,14 @@ export const Osa = () => {
       <label>
       <h4>Och maten. Vad äter du?</h4>
         <select className="mat" value={food} onChange={(e)=>{setFood(e.target.value)}}>
-          <option value="vegetariskt">Vegetariskt</option>
-          <option value="flexitariskt">Flexitariskt</option>
-          <option value="allt">Allt möjligt</option>
+          <option value="vegetariskt">vegetariskt</option>
+          <option value="flexitariskt">flexitariskt</option>
+          <option value="allt">allt möjligt</option>
         </select>
       </label>
       </div>
       <div className="drink">
+      <img src="../bottle.png" alt="bottle" className="bottle"></img>
       <label>
       <h4>Alkohol</h4>
         <input 
@@ -85,7 +87,7 @@ export const Osa = () => {
       </label>
       </div>
       <div className="submit">
-      <button type="submit"><h4>RSPV</h4></button>
+      <button className="rspv" type="submit">Räkna med mig!</button>
       </div>
     </form>
     )}
@@ -97,7 +99,7 @@ export const Osa = () => {
         song={song} 
         drink={drink} 
       />}
-  </>
+      </section>
   )
 }
 
