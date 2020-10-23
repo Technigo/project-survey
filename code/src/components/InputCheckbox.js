@@ -10,7 +10,7 @@ export const InputCheckbox = ({
 		<>
 			<h2>{question}</h2>
 			{array.map(item => (
-				<label htmlFor={item}>
+				<label htmlFor={item} key={item}>
 					{item}
 					<input
 						id={item}
@@ -24,29 +24,3 @@ export const InputCheckbox = ({
 		</>
 	);
 };
-
-{
-	/* <div>
-	<label htmlFor="colorRed">Red</label>
-	<input
-		id="colorRed"
-		type="checkbox"
-		checked={userColors.includes('red')}
-		onChange={() => onColorsChange('red')}
-	/>
-	<label htmlFor="colorGreen">Green</label>
-	<input
-		id="colorGreen"
-		type="checkbox"
-		checked={userColors.includes('green')}
-		onChange={() => onColorsChange('green')}
-	/>
-	<label htmlFor="colorBlue">Blue</label>
-	<input
-		id="colorBlue"
-		type="checkbox"
-		checked={userColors.includes('blue')}
-		onChange={() => onColorsChange('blue')}
-	/>
-</div>; */
-}
