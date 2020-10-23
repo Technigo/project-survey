@@ -3,13 +3,13 @@ import React from 'react'
 /*function that changes src for image depending on the animal chosen*/ 
 export const returnImageUrl = (animal) => {
   switch (animal) {
-    case 'Hippo':
+    case 'hippo':
       return './images/hippo.svg'
-    case 'Rabbit':
+    case 'rabbit':
       return './images/rabbit.svg'
-    case 'Fox':
+    case 'fox':
       return './images/fox.svg'
-    case 'Snake':
+    case 'snake':
       return './images/snake.svg'
     case 'zebra':
       return './images/zebra.svg'

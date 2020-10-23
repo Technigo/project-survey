@@ -48,7 +48,6 @@ button {
   cursor: pointer;
 }
 
-
 /** Start Section **/
 
 .intro-text-container {
@@ -136,7 +135,6 @@ input {
 .form-question-container label:nth-child(2){
   margin-bottom: 20px;
 }
-
 
 /** radiobuttons */
 .radiobutton-container {
@@ -331,6 +329,5 @@ img {
   .radiobutton-container {
     width: 50%;
   }
-
 
 }
