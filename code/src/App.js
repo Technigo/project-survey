@@ -60,7 +60,7 @@ export const App = () => {
             />
             )}
 
-        {section < numberOfQuestions ? <Submit information="▶" /> : <Submit information="Submit" tabIndex="0"/>}
+        {section < numberOfQuestions ? <Submit information="→" /> : <Submit information="Submit" />}
 
       </form>
 

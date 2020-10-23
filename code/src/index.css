@@ -71,6 +71,7 @@ select option {
   background-color: #ffffff;
   padding: 4px 5px;
   border: none;
+  color: #000000;
 }
 
 form p,
@@ -81,15 +82,13 @@ label:not(.radio-label) {
 }
 
 button {
-  height: 30px;
-  width: auto;
   margin-top: 10px;
   border: 1px solid black;
-  padding: 2px;
   background: #000;
   color: #f1f1f1;
   transition: 0.3s all;
   border-radius: 2px;
+  padding: 3px;
 }
 
 button:hover {
