@@ -15,6 +15,8 @@ export const Question1 = ({ userAnswer1, onAnswerChange }) => {
 				onChange={(e) => onAnswerChange(e.target.value)}
 				value={userAnswer1}
 				id="question1"
+				className="text-input"
+				placeholder="Write your answer here"
 				required
 				autoComplete="off"
 			/>

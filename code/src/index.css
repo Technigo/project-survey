@@ -53,8 +53,22 @@ fieldset {
 	-webkit-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
 	-moz-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
 	box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
-	background-color: #fff;
+	background-color: #f4f4f4;
 	color: #000;
+}
+
+.text-input {
+	border-style: none;
+	border-bottom: 2px solid #f4f4f4;
+	background: #cf7500;
+	color: #f4f4f4;
+}
+
+.input-select {
+	border-style: none;
+	border-bottom: 2px solid #f4f4f4;
+	background: #cf7500;
+	color: #f4f4f4;
 }
 
 li {

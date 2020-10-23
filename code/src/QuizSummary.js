@@ -75,69 +75,79 @@ export const QuizSummary = ({
 				Answers:
 				<ul>
 					<li>
-						Question 1: {userAnswer1}{' '}
-						{userAnswer1 === correctAnswers.q1 ? (
-							<span className="correct">Correct, you get 1 point!</span>
-						) : (
-							<span className="incorrect">
-								The correct answer is {correctAnswers.q1}
-							</span>
-						)}
-					</li>
-					<li>
-						Question 2: {userAnswer2}{' '}
-						{userAnswer2 === correctAnswers.q2 ? (
-							<span className="correct">Correct, you get 1 point!</span>
-						) : (
-							<span className="incorrect">
-								The correct answer is {correctAnswers.q2}
-							</span>
-						)}
-					</li>
-					<li>
-						Question 3: {userAnswer3.join(', ')}{' '}
-						{userAnswer3 === correctAnswers.q3 ? (
-							<span className="correct">Correct, you get 1 point!</span>
-						) : userAnswer3.includes(correctAnswers.q3) ? (
-							<>
-								<span className="correct">
-									{correctAnswers.q3} is correct,{' '}
-									<span className="incorrect"> the rest is wrong</span> you get
-									0.5 points.
+						<p>
+							Question 1: {userAnswer1}{' '}
+							{userAnswer1 === correctAnswers.q1 ? (
+								<span className="correct">Correct, you get 1 point!</span>
+							) : (
+								<span className="incorrect">
+									The correct answer is {correctAnswers.q1}
 								</span>
-							</>
-						) : (
-							<span className="incorrect">
-								The correct answer is {correctAnswers.q3}
-							</span>
-						)}
+							)}
+						</p>
 					</li>
 					<li>
-						Question 4: {userAnswer4}{' '}
-						{userAnswer4 === correctAnswers.q4 ? (
-							<span className="correct">Correct, you get 1 point!</span>
-						) : (
-							<span className="incorrect">
-								The correct answer is {correctAnswers.q4}
-							</span>
-						)}
-					</li>
-					<li>
-						Question 5: {userAnswer5}{' '}
-						{userAnswer5 === correctAnswers.q5 ? (
-							<span className="correct">Correct, you get 1 point!</span>
-						) : userAnswer5 >= 216 && userAnswer5 <= 218 ? (
-							<span className="incorrect">
-								Not quite.
-								<span className="correct">
-									217 is correct. You get 0.5 points for being close.
+						<p>
+							Question 2: {userAnswer2}{' '}
+							{userAnswer2 === correctAnswers.q2 ? (
+								<span className="correct">Correct, you get 1 point!</span>
+							) : (
+								<span className="incorrect">
+									The correct answer is {correctAnswers.q2}
 								</span>
-							</span>
-						) : (
-							<span className="incorrect">
-								The correct answer is {correctAnswers.q5}
-							</span>
-						)}
+							)}
+						</p>
+					</li>
+					<li>
+						<p>
+							Question 3: {userAnswer3.join(', ')}{' '}
+							{userAnswer3 === correctAnswers.q3 ? (
+								<span className="correct">Correct, you get 1 point!</span>
+							) : userAnswer3.includes(correctAnswers.q3) ? (
+								<>
+									<span className="correct">
+										{correctAnswers.q3} is correct,{' '}
+										<span className="incorrect"> the rest is wrong</span> you
+										get 0.5 points.
+									</span>
+								</>
+							) : (
+								<span className="incorrect">
+									The correct answer is {correctAnswers.q3}
+								</span>
+							)}
+						</p>
+					</li>
+					<li>
+						<p>
+							Question 4: {userAnswer4}{' '}
+							{userAnswer4 === correctAnswers.q4 ? (
+								<span className="correct">Correct, you get 1 point!</span>
+							) : (
+								<span className="incorrect">
+									The correct answer is {correctAnswers.q4}
+								</span>
+							)}
+						</p>
+					</li>
+					<li>
+						<p>
+							Question 5: {userAnswer5}
+							{userAnswer5 === correctAnswers.q5 ? (
+								<span className="correct">Correct, you get 1 point!</span>
+							) : userAnswer5 >= 216 && userAnswer5 <= 218 ? (
+								<span className="incorrect">
+									Not quite.
+									<span className="correct">
+										217 is correct. You get 0.5 points for being close.
+									</span>
+								</span>
+							) : (
+								<span className="incorrect">
+									The correct answer is {correctAnswers.q5}
+								</span>
+							)}
+						</p>
 					</li>
 					<li>Total score: {totalScore()} points!</li>
 				</ul>

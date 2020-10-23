@@ -14,6 +14,7 @@ export const Question2 = ({ userAnswer2, onAnswerChange }) => {
 				name="select"
 				onChange={(e) => onAnswerChange(e.target.value)}
 				value={userAnswer2}
+				className="input-select"
 				required>
 				<option value="">Select your answer:</option>
 				<option value="A blue cat">A blue cat</option>
