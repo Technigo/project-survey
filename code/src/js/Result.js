@@ -6,7 +6,7 @@ import '../css/result.css'
 
 export const Result = ({ legal, drink, alcohol }) => {
 
-  const drinkObject = drinks.find(obj => obj.id === drink)
+  const drinkOrder = drinks.find(item => item.id === drink)
 
   return (
     <div className="result">
@@ -14,8 +14,8 @@ export const Result = ({ legal, drink, alcohol }) => {
       {legal ? (
         <>
           <figure className="card">
-            <img src={drinkObject.img} alt="drinkObject.name"></img>
-            <figcaption><span className="fun">{alcohol}</span><br></br> {drinkObject.name}</figcaption>
+            <img src={drinkOrder.img} alt="drinkObject.name"></img>
+            <figcaption><span className="fun">{alcohol}</span><br></br> {drinkOrder.name}</figcaption>
           </figure>
 
         </>
