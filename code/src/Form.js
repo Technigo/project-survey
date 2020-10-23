@@ -37,7 +37,7 @@ export const Form = () => {
 
     return (
     <>
-    <h1 tabIndex='-1'>VR Games Night!</h1>
+    <h1 tabIndex='0'>VR Games Night!</h1>
     <section className='form-container'>
         {section !== 'summary' ? (
             <form onSubmit={handleSubmit}>
