@@ -5,7 +5,7 @@ const EmailField = ({email, setEmail}) => {
 
         return (
             <>
-                <label htmlFor="email">E-mail</label>
+                <label htmlFor="email" tabIndex="0">E-mail</label>
                 <input
                     id="email"
                     type="email"

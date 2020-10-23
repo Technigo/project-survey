@@ -4,6 +4,7 @@ const ThemeField = ({theme, setTheme}) => {
     
     return (
         <select
+            tabIndex="0"
             onChange={event => setTheme(event.target.value)}
             value={theme}
         >

@@ -16,7 +16,7 @@ export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
                         onChange={event => setYesOrNo(event.target.value)}
                         checked={yesOrNo === answer}
                         name={answer}
-                        required
+                        //required
                     />
                     {answer}
                 </label>
