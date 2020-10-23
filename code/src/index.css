@@ -11,11 +11,20 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #a3d2ca;
   color: #056676;
+  /* A way for the body to take up the whole screen size (100%) when the content isn't enough to do that */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.root {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
+  /* Needed so I later on can get content within this element to be in the center */
+  height: 100%;
 }
 
 code {
@@ -84,6 +93,8 @@ button {
 .form-wrapper,
 .summary-wrapper {
   width: 310px;
+  /* To get content to be in center if height of your screen is larger than the wrapper so add margin to top and bottom */
+  margin: auto 0;
 }
 
 .form-group {

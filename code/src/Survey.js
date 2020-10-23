@@ -16,7 +16,7 @@ export const Survey = () => {
   const [submitted, setSubmitted] = useState(false);
 
   const submitForm = (event) => {
-    event.preventDefault();
+    event.preventDefault(); // To prevent refresh of window at click of button of type submit
     setSubmitted(true);
   };
 
