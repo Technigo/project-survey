@@ -5,28 +5,28 @@ import 'components/RadiobuttonCss.css'
 
 const perWeek = ["0-2", "3-4", "5-7"];
 
-export const Radiobutton = ({questionTimes, timesPerWeek, setTimesPerWeek}) => {
+export const Radiobutton = ({questionTimes, daysPerWeek, setDaysPerWeek}) => {
 
   return (
     <>
       <div className="sub-heading form-radio">
         <h2 tabindex="0">2. How often do you eat candy?</h2>
       </div>
-      <p tabindex="0" className="times-per-week">Days per week:</p>
+      <p tabindex="0" className="days-per-week">Days per week:</p>
       <div className="label-container">
-        {perWeek.map((times) => (
+        {perWeek.map((days) => (
           <label 
-            htmlFor="times" 
-            id="times"
-            key={times}
-            aria-label={times}>
+            htmlFor="days" 
+            id="days"
+            key={days}
+            aria-label={days}>
             <input className="input"
               type="radio"
-              value={times}
-              onChange={(event) => setTimesPerWeek(event.target.value)}
-              checked={timesPerWeek === times}
+              value={days}
+              onChange={(event) => setDaysPerWeek(event.target.value)}
+              checked={daysPerWeek === days}
               />
-              {times}
+              {days}
           </label>
         ))}
       </div> 

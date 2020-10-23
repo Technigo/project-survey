@@ -13,7 +13,7 @@ import 'components/AppCss.css';
 export const App = () => {
 
   const [name, setName] = useState('');
-  const [timesPerWeek, setTimesPerWeek] = useState();
+  const [daysPerWeek, setDaysPerWeek] = useState();
   const [sweet, setSweet] = useState();
   const [showSummary, setShowSummary] = useState(false);
   const [likes, setLikes] = useState([]);
@@ -43,8 +43,8 @@ export const App = () => {
         />
 
         <Radiobutton
-          timesPerWeek={timesPerWeek}
-          setTimesPerWeek={setTimesPerWeek}
+          daysPerWeek={daysPerWeek}
+          setDaysPerWeek={setDaysPerWeek}
         />
 
         <Dropdown
@@ -65,7 +65,7 @@ export const App = () => {
       {showSummary && (
         <Summary
           name={name}
-          timesPerWeek={timesPerWeek}
+          daysPerWeek={daysPerWeek}
           sweet={sweet} 
           userLikes={likes.join(' and ')}
         />
