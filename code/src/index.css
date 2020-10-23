@@ -22,6 +22,7 @@ body {
 
 a{
   text-decoration: none;
+  color: black;
 }
 
 code {
@@ -59,6 +60,41 @@ code {
   flex-direction: column;
 }
 
+/* Input styling */
+.input-field {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.input-field input,
+.input-field textarea,
+.input-field select {
+    width: 250px;
+    padding: 10px;
+    border: none;
+    background:#fbf0f0;
+    display: flex;
+    Font-Size: 15px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+/* Dropdown styling */
+.dropdown-field{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.dropdown-field select{
+  width: 200px;
+  padding: 5px;
+  margin-top: 10px;
+  background:#fbf0f0;
+  border: none;
+  border-radius: 5px;
+}
 /* Checkbox styling */
 
 .checkbox {

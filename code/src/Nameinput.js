@@ -4,7 +4,7 @@ export const Nameinput = (props) => {
     const { name, setName, id } = props;
 
     return (
-        <div>
+        <div className="input-field">
         <label htmlFor="userName">Your name </label>
             <input
                 type="text"

@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import { Dropdown } from "./Dropdown.js"
 import { Radiobutton } from "./Radiobutton.js"
 import { Checkbox } from "./Checkbox.js"
-import { Submit } from "./Submit.js"
+// import { Submit } from "./Submit.js"
 
 import { Summary } from "./Summary.js"
 
@@ -14,7 +14,8 @@ export const App = () => {
   const [name, setName] = useState('');
   const [location, setLocation] = useState('Stockholm');
   const [ageGroup, setAgeGroup] = useState('');
-  const [showSummary, setShowSummary] = useState(false);
+  // const [showSummary, setShowSummary] = useState(false);
+  const [setShowSummary] = useState(false);
   const [section, setSection] = useState('welcome');
   const [contactme, setContactme] = useState([]);
 
@@ -26,7 +27,7 @@ export const App = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-    // setShowSummary(true);
+    setShowSummary(true);
   }
 
   return (
@@ -75,7 +76,7 @@ export const App = () => {
               </button>
 
               <button
-                type="button"
+                type="submit"
                 onClick={event => { setSection(event.target.value) }}
                 value="dropdown"
                 className="next-button">
@@ -105,7 +106,7 @@ export const App = () => {
               </button>
 
               <button
-                type="button"
+                type="submit"
                 onClick={event => { setSection(event.target.value) }}
                 value="checkbox"
                 className="next-button">
@@ -135,7 +136,7 @@ export const App = () => {
               </button>
 
               <button
-                type="button"
+                type="submit"
                 onClick={event => { setSection(event.target.value) }}
                 value="radiobutton"
                 className="next-button">
@@ -162,7 +163,7 @@ export const App = () => {
               </button>
 
               <button
-                type="button"
+                type="submit"
                 onClick={event => { setSection(event.target.value) }}
                 value="summary">
                 Submit
@@ -174,21 +175,24 @@ export const App = () => {
       </form>
 
         {section === 'summary' && (
+          
           <Summary
           name={name} 
           location={location} 
           ageGroup={ageGroup} 
           />
+          
+
         )}
         
 
-      {/* {showSummary && <Summary
+      {/* {setShowSummary && <Summary
         name={name} 
         location={location} 
         ageGroup={ageGroup} 
         />}
+        
       <Summary /> */}
-
     </>
   );
 };
