@@ -1,9 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 export const SubmitButton = ({personality}) => {
-   return (
+  return (
     <div className="submit-button-container">
-      <button className="submit-button" type="submit" disabled={personality === ""}>Submit</button>
+      <button 
+        className="submit-button"
+        type="submit" 
+        disabled={personality === ""}
+        >
+        Submit
+      </button>
     </div>
-   )
+  )
 }

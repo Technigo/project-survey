@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react'
 
 const animals = [
-  'Rabbit',
-  'Elephant',
-  'Fox',
-  'Snake',
-  'Hippo',
-  'Zebra'
+  'rabbit',
+  'elephant',
+  'fox',
+  'snake',
+  'hippo',
+  'zebra'
 ]
 
-export const RadiobuttonInput = ({spiritAnimal, onSpiritAnimalChange}) => {
+export const RadioButtonInput = ({spiritAnimal, onSpiritAnimalChange}) => {
 
   return (
     <div className="form-question-container">
@@ -17,23 +17,23 @@ export const RadiobuttonInput = ({spiritAnimal, onSpiritAnimalChange}) => {
       <div className="radiobutton-container">
         {animals.map((animal)=> (
         <label 
-          key = {animal} 
-          htmlFor = {animal}>
-        <input
-          type = "radio"
-          id = {animal}
-          value = {animal}
-          onChange = {onSpiritAnimalChange}
-          checked = {spiritAnimal === animal}
-          className="radio-input"
-          required
-        />
-        <div className="radio-input-container">
-        {animal}
-        </div>
+            key = {animal} 
+            htmlFor = {animal}>
+          <input
+              type = "radio"
+              id = {animal}
+              value = {animal}
+              onChange = {onSpiritAnimalChange}
+              checked = {spiritAnimal === animal}
+              className="radio-input"
+              required
+          />
+          <div className="radio-text-container">
+          {animal}
+          </div>
         </label>
         ))}
-        </div>
+      </div>
     </div>
   )
 }

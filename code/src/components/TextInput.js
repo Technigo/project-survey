@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 export const TextInput = ({name, onNameChange}) => {
 
@@ -6,13 +6,13 @@ export const TextInput = ({name, onNameChange}) => {
     <div className="form-question-container">
       <h2 tabIndex="0">What is your name?</h2>
       <label tabIndex="0" htmlFor={name}>Name:</label>
-        <input
+      <input
         type = "text"
         onChange = {onNameChange}
         value= {name}
         id = {name}
         required
-        />
+      />
     </div>
   )
 }

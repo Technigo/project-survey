@@ -10,15 +10,15 @@ import { Summary } from './Summary'
 export const Form = () => {
   /* declaring the useState variables and functions that will later be passed on as props in to the different form components. */
   const [displaySummary, setDisplaySummary] = useState(false)
-  const [name, setName] = useState('');
-  const [spiritAnimal, setSpiritAnimal] = useState();
-  const [personality, setPersonality] = useState('');
-  const [age, setAge] = useState(50);
+  const [name, setName] = useState('')
+  const [spiritAnimal, setSpiritAnimal] = useState()
+  const [personality, setPersonality] = useState('')
+  const [age, setAge] = useState(50)
 
  /*function that prevents default loading of the page when the form is submitting & changes the setDisplaySummary to true.*/
   const onSubmit = event => {
-    event.preventDefault();
-    setDisplaySummary(true);
+    event.preventDefault()
+    setDisplaySummary(true)
   }
 
   const handleNameChange = event => {
@@ -45,29 +45,29 @@ export const Form = () => {
 
         <section className="input-container">
           <TextInput 
-          name={name} 
-          onNameChange={handleNameChange}
+            name={name} 
+            onNameChange={handleNameChange}
           />
         </section>
 
         <section className="input-container">
           <SelectInput 
-          personality={personality} 
-          onPersonalityChange={handlePersonalityChange}
+            personality={personality} 
+            onPersonalityChange={handlePersonalityChange}
           />
         </section>
 
         <section className="input-container">
           <RangeSliderInput
-          age={age}
-          onAgeChange={handleAgeChange}
+            age={age}
+            onAgeChange={handleAgeChange}
           />
         </section>
 
         <section className="input-container">
           <RadiobuttonInput 
-          spiritAnimal={spiritAnimal}
-          onSpiritAnimalChange={handleSpiritAnimalChange}
+            spiritAnimal={spiritAnimal}
+            onSpiritAnimalChange={handleSpiritAnimalChange}
           />
         </section>
 
@@ -75,10 +75,10 @@ export const Form = () => {
 
       </form> ) : (
       <Summary 
-      name={name}
-      personality={personality} 
-      spiritAnimal={spiritAnimal}
-      age={age}
+        name={name}
+        personality={personality} 
+        spiritAnimal={spiritAnimal}
+        age={age}
       />
       )}
     </>
