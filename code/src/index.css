@@ -1,13 +1,15 @@
 /* font-family: 'Sacramento', cursive; */
-body {
+body,
+html {
   margin: 0;
   box-sizing: border-box;
   font-family: "PT Serif", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100%;
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
-
 code {
   font-family: "PT Serif", serif;
 }

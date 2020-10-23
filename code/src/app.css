@@ -1,5 +1,5 @@
 .intro {
-  background-color: #fffaed;
+  background-color: #ffcd9e;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -38,17 +38,20 @@ button:hover {
   cursor: pointer;
   box-shadow: 0 4px 15px 0 white;
   border: none;
+  font-size: 20px;
 }
 
 h1 {
-  font-size: 40px;
-  font-weight: lighter;
+  font-size: 30px;
+  font-family: "PT Serif", serif;
+  font-weight: 300;
   text-align: center;
 }
 h2 {
+  font-family: "Sacramento", cursive;
+  font-size: 42px;
+  font-weight: lighter;
   text-align: center;
-  padding: 25px;
-  margin: 10px 10px;
 }
 .container {
   display: flex;

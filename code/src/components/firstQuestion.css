@@ -1,23 +1,5 @@
 .first-question {
-  background-color: #c6cee3;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-h1 {
-  font-family: "PT Serif", serif;
-  font-weight: 300;
-  text-align: center;
-}
-h2 {
-  font-family: "Sacramento", cursive;
-  font-size: 42px;
-  font-weight: lighter;
-  text-align: center;
-}
-form {
+  background-color: #e8ae90;
   height: 100vh;
   display: flex;
   flex-direction: column;

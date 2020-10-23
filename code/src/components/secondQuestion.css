@@ -1,5 +1,5 @@
 .second-question {
-  background-color: #ddf5f9;
+  background-color: #ffbbab;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -7,15 +7,16 @@
   justify-content: center;
 }
 input[type="text" i] {
-  padding: 5px;
-  width: 300px;
+  padding: 5px 0;
+  width: 500px;
   height: 30px;
   font-size: 18px;
   font-style: italic;
-  border-radius: 30px;
+  border-radius: 0;
   text-decoration: none;
-  border: 1px solid;
-  margin-bottom: 20px;
-  background: rgba(255, 255, 255, 0.514);
+  margin: 0;
+  border: none;
+  background-color: #ffbbab;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.055);
   text-align: left;
 }

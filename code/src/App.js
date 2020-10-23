@@ -6,16 +6,7 @@ import { FourthQuestion } from './components/FourthQuestion'
 // import { OutputSummary } from './components/OutputSummary'
 import './app.css'
 
-export const App = (props) => {
-  // const [showSummary, setShowSummary] = useState(false)
-  // const { answer } = props
-  // const { hour } = props
-  // const { activity } = props
-
-  // const handleSubmit = event => {
-  //   event.preventDefault()
-  //   setShowSummary(true)
-  // }
+export const App = () => {
   return (
     <section className='main'>
       {/* {!showSummary ? (
@@ -23,8 +14,8 @@ export const App = (props) => {
       <div className="intro" id="intro">
         <h1>Daily self-care survey</h1>
         <h2>Let's start with a quick self-assessment check</h2>
-        <div class="container">
-          <img src="img/heart.png" class="heart" alt="human heart" />
+        <div className="container">
+          <img src="img/heart.png" className="heart" alt="human heart" />
         </div>
         <button><a href="#first">begin</a></button>
       </div>
@@ -40,11 +31,7 @@ export const App = (props) => {
       <div>
         <FourthQuestion />
       </div>
-      {/* </form>
-      ) : (
-          <OutputSummary answer={answer} hour={hour} fourth={activity} />
-        )
-      } */}
+
     </section >
 
   )
