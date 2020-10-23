@@ -5,9 +5,11 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 20px;
 }
 .radio-buttons {
   display: flex;
+  margin: 0 0 0 25px;
   justify-content: center;
   cursor: pointer;
 }
@@ -32,10 +34,6 @@ select {
   cursor: pointer;
   margin: 10px auto;
 }
-.radio-buttons {
-  display: flex;
-  margin: 0 0 0 25px;
-}
 .radio-button:checked::before {
   position: absolute;
   font-size: 24px;
@@ -57,4 +55,16 @@ select {
 p {
   margin-right: 30px;
   margin-left: 10px;
+}
+@media screen and (min-width: 360px) and (max-width: 667px) {
+  .radio-buttons {
+    display: flex;
+    flex-wrap: nowrap;
+    margin: 10px;
+    justify-content: center;
+    cursor: pointer;
+  }
+  label {
+    font-size: 18px;
+  }
 }

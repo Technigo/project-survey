@@ -1,16 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FirstQuestion } from './components/FirstQuestion'
 import { SecondQuestion } from './components/SecondQuestion'
 import { ThirdQuestion } from './components/ThirdQuestion'
 import { FourthQuestion } from './components/FourthQuestion'
-// import { OutputSummary } from './components/OutputSummary'
 import './app.css'
 
-export const App = () => {
+export const App = ({ answer, setAnswer }) => {
+
+
+
+  // const [showSummary, setShowSummary] = useState(false)
+  // const { answer } = props
+  // const { hour } = props
+  // const { activity } = props
+
+  // const handleSubmit = event => {
+  //   event.preventDefault()
+  //   setShowSummary(true)
+  // }
   return (
     <section className='main'>
-      {/* {!showSummary ? (
-        <form onSubmit={handleSubmit}> */}
       <div className="intro" id="intro">
         <h1>Daily self-care survey</h1>
         <h2>Let's start with a quick self-assessment check</h2>
@@ -23,13 +32,13 @@ export const App = () => {
         <FirstQuestion />
       </div>
       <div>
-        <SecondQuestion />
+        <SecondQuestion answer={answer} />
       </div >
       <div>
         <ThirdQuestion />
       </div>
       <div>
-        <FourthQuestion />
+        <FourthQuestion setAnswer={setAnswer} />
       </div>
 
     </section >

@@ -28,6 +28,11 @@ a {
 label,
 select {
   margin-bottom: 100px;
+  justify-content: center;
+}
+select {
+  background-color: #ff9ec0;
+  border: 2px solid black;
 }
 button:hover {
   -moz-transition: all 0.4s ease-in-out;
@@ -84,4 +89,35 @@ h2 {
 }
 .main {
   text-align: center;
+}
+@media screen and (min-width: 360px) and (max-width: 667px) {
+  h1 {
+    font-size: 20px;
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+  }
+  h2 {
+    font-size: 35px;
+    text-align: center;
+    justify-content: center;
+    width: 60%;
+  }
+  button {
+    padding: 14px 100px;
+    font-size: 15px;
+  }
+  label,
+  select {
+    margin-bottom: 50px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+  select,
+  label {
+    width: 50%;
+    margin-top: 30px;
+  }
 }

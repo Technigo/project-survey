@@ -19,4 +19,24 @@ h3 {
 }
 p {
   font-style: italic;
+  text-align: center;
+}
+@media screen and (min-width: 360px) and (max-width: 667px) {
+  .self-summary {
+    padding: 40px;
+  }
+  h2 {
+    font-size: 25px;
+  }
+  p {
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+  }
+  h3 {
+    font-size: 15px;
+  }
+  button {
+    padding-left: 0;
+  }
 }

@@ -9,7 +9,7 @@ export const FirstQuestion = () => {
             <h1>On a scale from 1 to 10, how are you feeling today?</h1>
             <h2>1 being the lowest, 10 being the highest</h2>
             <Range />
-            <button onClick><a href="#answer">continue</a></button>
+            <button><a href="#answer">continue</a></button>
         </section>
     )
 }

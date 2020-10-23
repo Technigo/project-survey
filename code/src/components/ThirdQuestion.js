@@ -4,7 +4,7 @@ import './thirdQuestion.css'
 
 export const ThirdQuestion = () => {
     const [hour, setHour] = useState("")
-    const optionsList = ["0-5 hours", "5-8 hours", "more than 8 hours"]
+    const optionsList = ["0-5 hours", "5-8 hours", "> 8 hours"]
     return (
         <section className="third-question" id="hours">
             <h1 tabIndex="0">How many hours of sleep have you had today?</h1>

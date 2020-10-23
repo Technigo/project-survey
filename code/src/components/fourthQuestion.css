@@ -5,6 +5,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding-top: 20px;
 }
 select {
   padding: 10px;
@@ -20,4 +21,14 @@ form {
   justify-content: center;
   padding: 20px;
   margin: 0;
+}
+@media screen and (min-width: 360px) and (max-width: 667px) {
+  button {
+    padding: 14px 10px;
+    width: 80%;
+  }
+  label,
+  select {
+    margin-bottom: 50px;
+  }
 }
