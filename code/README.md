@@ -1,19 +1,24 @@
-# Technigo React Starter App
+# Project Survey - Dream Cat 
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+This project was made during the Technigo Bootcamp.  
+The main goal was to practice React and State while creating a survey form. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
+## The problem 
+I've created a survey with three questions displayed in text input, radio buttons and a drop down meny. Depending on your answers you will see a summary in the end with your answers. 
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+The project is built with React and i started with a one page survey with all the questions displayed on the front page  and did accesibilty testing on each item. I made sure i had the correct semantics to make sure that the form was accesible with keyboard and screen reader. 
 
-Alternatively, if you don't want a new git repo on your account;
+This week i wanted to challenge myself more and decided to make the survey a multi step form. So i decided to create a file called survey, added an array for each item page and last connected them with the summary page similar to the first forms structure. 
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+
+## TECH
+- REACT
+- JAVASCRIPT
+- CSS 
+- HTML
+
+
+## View it Live
+Check out the final result: 
+https://serene-leakey-a37e7f.netlify.app/
