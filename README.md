@@ -12,6 +12,8 @@ What I have learnt:
 
 ## The process and structure
 
+I reached --> **BLUE level** and did one on the RED one (added a range slider).
+
 I started off by creating a main component which I now call Survey and that includes the form. Next step for me was to create three component to handle input text, radio button and a dropdown. In each of these componets I decided to keep the useState and printout what was stored in the variable.
 
 I was calling these componets from the main component.
@@ -22,8 +24,8 @@ The main component was rendering information that had been changed via onChange 
 
 At the end I created a button and summary component and added logic in main component what to render depending on submitted state.
 
-Now when I had the skeleton it was time to do some styling and as usally this is something I struggle with. Decided to keep it clean!     
-
+Now when I had the skeleton it was time to do some styling and as usally this is something I struggle with. Decided to keep it clean!
+     
 
 **Accessibility**
 
@@ -62,8 +64,9 @@ Now when I had the skeleton it was time to do some styling and as usally this is
 
 **General**
 
-* Since I haven't added that much love for styling my dropdown or the range slider I realized when testing different browsers and devices that the default styling differs a lot
-
+* Since I haven't added that much love for styling my dropdown or the range slider I realized when testing different browsers and devices that the default styling differs a lot.
+* Button, I decided to use the attribute `disabled` if some values are empty but during testing I realized that sin't wokrking for all browsers, like Safari. I also see on an Android device using Chrome that the button isn't disabled. I will leave my code with this issue right now! 
+ 
 ## View it live
 
 Try it out [here](https://kind-joliot-6577b6.netlify.app/)
