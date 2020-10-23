@@ -1,0 +1,29 @@
+.progress-container {
+    margin: 5px;
+}
+
+.progressbar[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 10px;
+    margin-top: 10px;
+}
+
+.progressbar[value]::-webkit-progress-bar {
+    background-color: #adb99a;
+    border-radius: 5px;
+    height: 10px;
+}
+
+.progressbar[value]::-moz-progress-bar {
+    background-color: #adb99a;
+    border-radius: 5px;
+    height: 10px;
+}
+
+.progressbar[value]::-webkit-progress-value {
+    background: #1d482d;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}

@@ -5,6 +5,7 @@ import { Dropdown } from './Dropdown';
 import { Radio } from './Radio';
 import { Text } from './Text';
 import { Checkbox } from './Checkbox';
+import {Progressbar } from './Progressbar';
 import { Summary } from './Summary';
 import './survey.css';
 
@@ -184,8 +185,9 @@ export const Survey = () => {
                     click={nextQuestion}
                     disable={!celebrationDrink}
                   />
-
                 </div>
+                <Progressbar
+                  value='15'/>
               </>
             )}
             {question === 1 && (
@@ -208,8 +210,9 @@ export const Survey = () => {
                     click={nextQuestion}
                     disable={!rainyFood}
                   />
-
                 </div>
+                <Progressbar
+                  value='30'/>
               </>
             )}
             {question === 2 && (
@@ -232,6 +235,8 @@ export const Survey = () => {
                     disable={!restaurantHunt}
                   />
                 </div>
+                <Progressbar
+                  value='45'/>
               </>
             )}
             {question === 3 && (
@@ -254,6 +259,8 @@ export const Survey = () => {
                     disable={!saladMaker}
                   />
                 </div>
+                <Progressbar
+                  value='60'/>
               </>
             )}
             {question === 4 && (
@@ -294,6 +301,8 @@ export const Survey = () => {
                     disable={!ageGroup}
                   />
                 </div>
+                <Progressbar
+                  value='75'/>
               </>
             )}
             {question === 5 && (
@@ -316,6 +325,8 @@ export const Survey = () => {
                     click={nextQuestion}
                   />
                 </div>
+                <Progressbar
+                  value='100'/>
               </>
             )}
             {question === 6 && (

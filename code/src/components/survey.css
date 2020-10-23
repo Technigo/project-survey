@@ -14,6 +14,7 @@
     background-color: rgba(247, 249, 251, 0.4);
     margin: 20px;
     padding: 10px;
+    max-width: 300px;
 }
 
 .button-container {

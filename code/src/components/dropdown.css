@@ -1,3 +1,6 @@
+select {
+    max-width: 250px;
+}
 .dropdown {
     max-width: 250px;
 }
