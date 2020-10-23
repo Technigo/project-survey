@@ -30,6 +30,7 @@ export const Survey = () => {
         return (
             <>
                 <form className="main-form" onSubmit={handleSubmit} id="main-form">
+                    <h2>Generel info</h2>
 
                     <TextInput question="What is your name?" inputAnswer={name} inputSet={setName} />
 
@@ -43,7 +44,7 @@ export const Survey = () => {
 
                     <RadioInput question="I always turn off the light when leaving a room." radioValue={lights} setRadioValue={setLights}/>
                 
-                    <input type="submit" value="Submit" className="submit-button"/>
+                    <input type="submit" value="Submit" className="button"/>
                 </form>
             </>
         ); }
@@ -59,7 +60,7 @@ export const Survey = () => {
                         <p>Your habits concering lights: <span className="result-span"> {lights}/5</span></p>
                         <p>Your concern about climate change: <span className="result-span"> {footprint}/5</span></p>
                 </div>
-                <button className="submit-button" onClick={showForm}>Back</button>
+                <button className="button" onClick={showForm}>Back</button>
             </section>
             
         );
