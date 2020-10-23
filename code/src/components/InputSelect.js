@@ -3,8 +3,8 @@ import React from 'react';
 export const InputSelect = ({ id, question, setSeason, value }) => {
 	return (
 		<>
+			<h2>{question}</h2>
 			<label htmlFor={id}>
-				<h2>{question}</h2>
 				<select
 					value={value}
 					className="select-container"

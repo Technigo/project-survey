@@ -31,7 +31,7 @@ label.radio-container {
 	left: 0;
 	height: 19px;
 	width: 19px;
-	background-color: #e1d5d5;
+	background-color: #bda99e;
 }
 
 .radio-container input:checked ~ .custom-radio-btn:after {

@@ -1,14 +1,13 @@
 button {
 	width: 45%;
 	height: 44px;
-	margin-top: 40px;
+	/* margin-top: 40px; */
 	text-transform: uppercase;
 	font-weight: bold;
 	border: none;
 	border-radius: 5px;
 	background: #bda99e;
-
-	color: #ffffff;
+	color: #373b3e;
 	font-size: 18px;
 }
 

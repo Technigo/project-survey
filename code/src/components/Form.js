@@ -74,7 +74,7 @@ export const Form = () => {
 		<section className="form-wrapper">
 			{question === -1 && (
 				<section className="introduction">
-					<h2>Welcome, please take a few minutes to answer this survey!</h2>
+					<h1>Welcome, please take a few minutes to answer this survey!</h1>
 					<div className="navigation-start">
 						<Button button="button" click={nextQuestion} text="Start survey" />
 					</div>
@@ -169,7 +169,7 @@ export const Form = () => {
 					{question === 4 && (
 						<section className="question-container">
 							<InputRadio
-								question={`ah ${season}, how many have you experienced?`}
+								question={`${season} what a great season, how many have you experienced?`}
 								array={ageGroups}
 								setAge={setAge}
 								age={age}
@@ -186,13 +186,12 @@ export const Form = () => {
 						</section>
 					)}
 					{question === 5 && (
-						<section className="question-container">
+						<section className="question-container-summary">
 							<Summary
 								name={name}
 								season={season}
 								selected={age}
 								value={value}
-								email={email}
 							/>
 							<div className="email-container">
 								<InputEmail
@@ -224,7 +223,7 @@ export const Form = () => {
 				</form>
 			) : (
 				<section className="reset-wrapper">
-					<article className="reset">
+					<section className="reset">
 						<h4>Thank you!</h4>
 						<div className="navigation-reset">
 							<Button
@@ -233,7 +232,7 @@ export const Form = () => {
 								text="Reset survey"
 							/>
 						</div>
-					</article>
+					</section>
 				</section>
 			)}
 		</section>

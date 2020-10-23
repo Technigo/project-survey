@@ -1,14 +1,14 @@
 import React from 'react';
 
-export const Summary = ({ name, season, selected, value, email }) => {
+export const Summary = ({ name, season, selected, value }) => {
 	return (
-		<section className="summary-container">
+		<div className="summary-container">
 			<h3>Summary</h3>
 			<p>
-				<strong>Your name is:</strong> {name}
+				<strong>Your name:</strong> {name}
 			</p>
 			<p>
-				<strong>Your favourit season is:</strong> {season}
+				<strong>Your favourit season:</strong> {season}
 			</p>
 			<p>
 				<strong>{season} experienced:</strong> Between {selected}
@@ -16,10 +16,6 @@ export const Summary = ({ name, season, selected, value, email }) => {
 			<p>
 				<strong>{season} likability:</strong> {value} out of 10
 			</p>
-			<p>
-				<strong>Summary of your answers will be send to: </strong>
-				{email}
-			</p>
-		</section>
+		</div>
 	);
 };
