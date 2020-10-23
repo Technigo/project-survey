@@ -13,13 +13,13 @@ export const App = () => {
 
   return (
     <>
-      <main className="main-content-container">
+      <main className='main-content-container'>
         {! displayForm ? (
-        <section className="intro-text-container">
+        <section className='intro-text-container'>
           <StartSection onStartClick={handleStartClick}/>  
         </section> )
         : (
-        <section className="form-container">
+        <section className='form-container'>
           <Form/>
         </section>
         )}

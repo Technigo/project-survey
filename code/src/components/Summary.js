@@ -23,20 +23,20 @@ export const returnImageUrl = (animal) => {
 export const Summary = ({name, personality, spiritAnimal, age}) => {
 
   return (
-    <section className="summary-container">
-      <h2 tabIndex="0">RESULT</h2>
-      <p tabIndex="0">Hi {name}! Your spirit animal is a {age} year old, {personality} {spiritAnimal}.</p>
+    <section className='summary-container'>
+      <h2 tabIndex='0'>RESULT</h2>
+      <p tabIndex='0'>Hi {name}! Your spirit animal is a {age} year old, {personality} {spiritAnimal}.</p>
 
       <img 
-        tabIndex="0"
+        tabIndex='0'
         src={returnImageUrl(spiritAnimal)} 
         alt={spiritAnimal}
       />
         
-      <p tabIndex="0">Not happy with the result?</p>
+      <p tabIndex='0'>Not happy with the result?</p>
       <button onClick={() => window.location.reload(false)}>Try again!</button>
 
-      <p>Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon"> www.flaticon.com</a></p>
+      <p>Icons made by <a href='https://www.flaticon.com/authors/freepik' title='Freepik'>Freepik</a> from <a href='https://www.flaticon.com/' title='Flaticon'> www.flaticon.com</a></p>
     </section>
   )
 }

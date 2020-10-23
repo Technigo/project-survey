@@ -43,28 +43,28 @@ export const Form = () => {
       {! displaySummary ? (
       <form onSubmit={onSubmit}>
 
-        <section className="input-container">
+        <section className='input-container'>
           <TextInput 
             name={name} 
             onNameChange={handleNameChange}
           />
         </section>
 
-        <section className="input-container">
+        <section className='input-container'>
           <SelectInput 
             personality={personality} 
             onPersonalityChange={handlePersonalityChange}
           />
         </section>
 
-        <section className="input-container">
+        <section className='input-container'>
           <RangeSliderInput
             age={age}
             onAgeChange={handleAgeChange}
           />
         </section>
 
-        <section className="input-container">
+        <section className='input-container'>
           <RadiobuttonInput 
             spiritAnimal={spiritAnimal}
             onSpiritAnimalChange={handleSpiritAnimalChange}
