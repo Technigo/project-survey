@@ -1,32 +1,31 @@
 import React, { useState } from 'react';
-import { InputSelect } from './InputSelect';
-import { InputText } from './InputText';
-import { InputRadio } from './InputRadio';
-import { InputCheckbox } from './InputCheckbox';
-import { InputRange } from './InputRange';
-import { InputEmail } from './InputEmail';
-import { Button } from './Button';
-import { Summary } from './Summary';
-import { ProgressBar } from './ProgressBar';
+import InputSelect from './InputSelect';
+import InputText from './InputText';
+import InputRadio from './InputRadio';
+import InputCheckbox from './InputCheckbox';
+import InputRange from './InputRange';
+import InputEmail from './InputEmail';
+import Button from './Button';
+import Summary from './Summary';
+import ProgressBar from './ProgressBar';
 import '../Styles/Form.css';
 
 export const Form = () => {
 	const [question, setQuestion] = useState(-1); //show first "question"
 	const [name, setName] = useState(''); //text
 	const [age, setAge] = useState(false); //radio
-	const [months, setMonths] = useState([]); //checkbox
+	const [months, setMonths] = useState(['']); //checkbox
 	const [season, setSeason] = useState(''); //drop-down
-	const [value, setValue] = useState(5); //range
+	const [value, setValue] = useState(0); //range
 	const [email, setEmail] = useState(''); //email
 	const [submit, setSubmit] = useState(false); //since we don't want to show result before submitted.
 
-	const nextQuestion = () => setQuestion(question + 1); //to get next question in line (add +1 later)
+	const nextQuestion = () => setQuestion(question + 1); //to get next question in line
 	const previousQuestion = () => setQuestion(question - 1);
 
 	const handleSubmit = event => {
 		event.preventDefault();
 		setSubmit(true); //show summary on submit
-		//console.log('form submitted');
 	};
 
 	const handleMonthsChange = monthValue => {
@@ -36,14 +35,7 @@ export const Form = () => {
 	};
 
 	//array for radio btn
-	const ageGroups = [
-		'0-18 years',
-		'19-30 years',
-		'31-40 years',
-		'41-50 years',
-		'51-60 years',
-		'60 + years',
-	];
+	const ageGroups = ['0-18 years', '19-40 years', '41-60 years', '61 + years'];
 
 	//array for checkbox
 	const seasonArray = [
@@ -64,25 +56,25 @@ export const Form = () => {
 			months: ['September', 'October', 'November'],
 		},
 	];
-	// console.log(seasonArray);
-	// console.log(seasonArray.findIndex(item => item.season === season));
-	// console.log(
-	// 	seasonArray[seasonArray.findIndex(item => item.season === 'Summer')].months
-	// );
 
 	return (
 		<section className="form-wrapper">
-			{question === -1 && (
-				<section className="introduction">
-					<h1>Welcome, please take a few minutes to answer this survey!</h1>
-					<div className="navigation-start">
-						<Button button="button" click={nextQuestion} text="Start survey" />
-					</div>
-				</section>
-			)}
-
 			{!submit ? (
 				<form onSubmit={handleSubmit}>
+					{question === -1 && (
+						<section className="introduction">
+							<h1 tabIndex={'0'}>
+								Welcome, please take a few minutes to answer this survey!
+							</h1>
+							<div className="navigation-start">
+								<Button
+									button="button"
+									click={nextQuestion}
+									text="Start survey"
+								/>
+							</div>
+						</section>
+					)}
 					{question === 0 && (
 						<section className="question-container">
 							<InputText
@@ -91,12 +83,18 @@ export const Form = () => {
 								setName={setName}
 							/>
 							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
+								<Button
+									button="button"
+									click={previousQuestion}
+									text="Back"
+									aria-label="previous-question-button"
+								/>
 								<Button
 									button="button"
 									disabled={!name}
 									click={nextQuestion}
-									text="Next"
+									text={name ? 'Next' : 'Type your name'}
+									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -104,31 +102,34 @@ export const Form = () => {
 
 					{question === 1 && (
 						<section className="question-container">
-							{/* {console.log(season)} */}
 							<InputSelect
 								question="What's your favourit season?"
 								setSeason={setSeason}
 								value={season}
 							/>
 							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
+								<Button
+									button="button"
+									click={previousQuestion}
+									text="Back"
+									aria-label="previous-question-button"
+								/>
 								<Button
 									button="button"
 									disabled={!season}
 									click={nextQuestion}
-									text="Next"
+									text={season ? 'Next' : 'Select season'}
+									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
 					)}
-					{/* //rendering question depending on favourite season selected */}
 					{question === 2 && (
 						<section className="question-container">
 							<InputCheckbox
 								question="Select which months you prefer"
 								selectedMonths={months}
 								onMonthsChange={handleMonthsChange}
-								value={season}
 								array={
 									seasonArray[
 										seasonArray.findIndex(item => item.season === season)
@@ -136,12 +137,18 @@ export const Form = () => {
 								}
 							/>
 							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
-									disabled={!season}
+									click={previousQuestion}
+									text="Back"
+									aria-label="previous-question-button"
+								/>
+								<Button
+									button="button"
+									disabled={!months}
 									click={nextQuestion}
 									text="Next"
+									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -149,18 +156,23 @@ export const Form = () => {
 					{question === 3 && (
 						<section className="question-container">
 							<InputRange
-								// id="range"
-								question={`How much do you like ${season}? (scale1-10)`}
+								question={`How much do you like ${season}? (scale 1-10)`}
 								value={value}
 								setValue={setValue}
 							/>
 							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
-									disabled={!value}
+									click={previousQuestion}
+									text="Back"
+									aria-label="previous-question-button"
+								/>
+								<Button
+									button="button"
+									disabled={value <= 0}
 									click={nextQuestion}
-									text="Next"
+									text={value ? 'Next' : 'Slide range'}
+									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -175,12 +187,18 @@ export const Form = () => {
 								age={age}
 							/>
 							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
+								<Button
+									button="button"
+									click={previousQuestion}
+									text="Back"
+									aria-label="previous-question-button"
+								/>
 								<Button
 									button="button"
 									disabled={!age}
 									click={nextQuestion}
-									text="Next"
+									text={age ? 'Next' : 'Select age'}
+									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -204,8 +222,14 @@ export const Form = () => {
 										button="button"
 										click={previousQuestion}
 										text="Back"
+										aria-label="previous-question-button"
 									/>
-									<Button type="submit" disabled={!email} text="Submit" />
+									<Button
+										type="submit"
+										disabled={!email}
+										text={email ? 'Submit' : 'Enter email'}
+										aria-label="submit-survet"
+									/>
 								</div>
 							</div>
 						</section>

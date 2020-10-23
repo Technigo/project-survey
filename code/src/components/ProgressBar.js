@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/ProgressBar.css';
 
-export const ProgressBar = ({ progress, maxProgress, minProgress }) => {
+const ProgressBar = ({ progress, maxProgress, minProgress }) => {
 	return (
 		<>
 			<label className="progress-bar-label" htmlFor="ProgressBar">
@@ -18,3 +18,5 @@ export const ProgressBar = ({ progress, maxProgress, minProgress }) => {
 		</>
 	);
 };
+
+export default ProgressBar;

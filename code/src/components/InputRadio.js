@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Styles/InputRadio.css';
 
-export const InputRadio = ({ question, array, setAge, age }) => {
+const InputRadio = ({ question, array, setAge, age }) => {
 	return (
 		<>
-			<h2>{question}</h2>
+			<h2 tabIndex={'0'}>{question}</h2>
 			{array.map(group => (
 				<label
 					className="radio-container"
@@ -26,3 +26,5 @@ export const InputRadio = ({ question, array, setAge, age }) => {
 		</>
 	);
 };
+
+export default InputRadio;

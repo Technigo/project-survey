@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Styles/InputEmail.css';
 
-export const InputEmail = ({ question, email, setEmail }) => {
+const InputEmail = ({ question, email, setEmail }) => {
 	return (
 		<>
-			<h4>{question}</h4>
+			<h4 tabIndex={'0'}>{question}</h4>
 			<label htmlFor="InputEmail">
 				<input
 					id="InputEmail"
@@ -21,3 +21,5 @@ export const InputEmail = ({ question, email, setEmail }) => {
 		</>
 	);
 };
+
+export default InputEmail;

@@ -1,11 +1,11 @@
 import React from 'react';
 import '../Styles/InputText.css';
 
-export const InputText = ({ question, value, setName }) => {
+const InputText = ({ question, value, setName }) => {
 	return (
 		<>
-			<h2>{question}</h2>
 			<label htmlFor="InputText">
+				<h2 tabIndex={'0'}>{question}</h2>
 				<input
 					id="InputText"
 					type="text"
@@ -23,3 +23,5 @@ export const InputText = ({ question, value, setName }) => {
 		</>
 	);
 };
+
+export default InputText;

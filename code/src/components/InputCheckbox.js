@@ -1,15 +1,10 @@
 import React from 'react';
 import '../Styles/InputCheckbox.css';
 
-export const InputCheckbox = ({
-	question,
-	array,
-	selectedMonths,
-	onMonthsChange,
-}) => {
+const InputCheckbox = ({ question, array, selectedMonths, onMonthsChange }) => {
 	return (
 		<>
-			<h2>{question}</h2>
+			<h2 tabIndex={'0'}>{question}</h2>
 			<div className="checkbox-container">
 				{array.map(item => (
 					<label htmlFor={item} key={item} className="checkbox-wrapper">
@@ -28,3 +23,5 @@ export const InputCheckbox = ({
 		</>
 	);
 };
+
+export default InputCheckbox;

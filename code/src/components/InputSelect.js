@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const InputSelect = ({ id, question, setSeason, value }) => {
+const InputSelect = ({ id, question, setSeason, value }) => {
 	return (
 		<>
-			<h2>{question}</h2>
+			<h2 tabIndex={'0'}>{question}</h2>
 			<label htmlFor={id}>
 				<select
 					value={value}
@@ -20,3 +20,5 @@ export const InputSelect = ({ id, question, setSeason, value }) => {
 		</>
 	);
 };
+
+export default InputSelect;

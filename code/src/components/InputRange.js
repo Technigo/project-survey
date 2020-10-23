@@ -1,10 +1,10 @@
 import React from 'react';
 import '../Styles/InputRange.css';
 
-export const InputRange = ({ question, value, setValue }) => {
+const InputRange = ({ question, value, setValue }) => {
 	return (
 		<>
-			<h2>{question}</h2>
+			<h2 tabIndex={'0'}>{question}</h2>
 			<label htmlFor="InputRange" className="input-range-container">
 				<p>{value}</p>
 				<input
@@ -20,3 +20,5 @@ export const InputRange = ({ question, value, setValue }) => {
 		</>
 	);
 };
+
+export default InputRange;

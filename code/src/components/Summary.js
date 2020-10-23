@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Summary = ({ name, season, selected, value }) => {
+const Summary = ({ name, season, selected, value }) => {
 	return (
 		<div className="summary-container">
-			<h3>Summary</h3>
+			<h3 tabIndex={'0'}>Summary</h3>
 			<p>
 				<strong>Your name:</strong> {name}
 			</p>
@@ -19,3 +19,5 @@ export const Summary = ({ name, season, selected, value }) => {
 		</div>
 	);
 };
+
+export default Summary;
