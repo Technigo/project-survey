@@ -3,7 +3,6 @@ import React, {useState} from 'react';
 import {TextInput} from './TextInput';
 import {RadioInput} from './RadioInput';
 import SelectInput from './SelectInput';
-import Intro from './Intro'
 
 
 
