@@ -9,13 +9,11 @@ import Submit from "./Submit"
 
 import "./form.css"
 
-const dropDownOptionsArr = ["0-10 km", "20-50 km", "50+ km"];
-
-
 const Form = () => {
   //all the state hooks
   const [text, setText] = useState("");
   const [distance, setDistance] = useState("");
+  const [answer, setAnswer] = useState("");
 
   //lecture stuff: whatever we pass in as argument will update the text via setText function
   //if the function starts with on, then it should be only used within the component
@@ -27,6 +25,11 @@ const Form = () => {
   const handleDistanceChange = (newDistance) => {
     setDistance(newDistance);
   };
+
+  const handleAnswerChange = (newAnswer) => {
+    setAnswer(newAnswer);
+  };
+
 
   return (
     <form className="app-container">
@@ -45,7 +48,11 @@ const Form = () => {
         onDistanceChange={handleDistanceChange}
       // options={dropDownOptionsArr}
       />
-      <Question3 question="Do you want to order our cleaning service as well?" />
+      <Question3
+        questionText="Do you want to order our cleaning service as well?"
+        questionAnswer={answer}
+        onAnswerChange={handleAnswerChange}
+      />
       <Submit text="Submit" />
       {/* <Footer /> */}
     </form>

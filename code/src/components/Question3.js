@@ -1,17 +1,29 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 import "./question3.css"
 
+const answersArray = ["YES", "NO"];
 
-const Question3 = (props) => {
-
-  const [answer, setAnswer] = useState("");
+const Question3 = ({ questionText, questionAnswer, onAnswerChange }) => {
 
   return (
     <section className="section-container">
-      <p>{props.question}</p>
+      <p>{questionText}</p>
       <div className="radio-btn-container">
-        <fieldset className="answer-container">
+        {answersArray.map(item => {
+          return (
+            <label key={item}>
+              <input
+                type="radio"
+                value={item}
+                onChange={event => onAnswerChange(event.target.value)}
+                checked={questionAnswer === item}
+              ></input>
+              {item}
+            </label>
+          )
+        })}
+        {/* <fieldset className="answer-container">
           <input
             type="radio"
             id="yes"
@@ -32,7 +44,7 @@ const Question3 = (props) => {
             checked={answer === "NO"}
           ></input>
           <label htmlFor="no">NO</label>
-        </fieldset>
+        </fieldset> */}
       </div>
     </section>
   )
