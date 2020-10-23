@@ -16,12 +16,16 @@
 
 .question__content-wrapper {
   height: 25vh;
-  max-width: 60vw;
+  max-width: 80vw;
   display: flex;
-  align-content: center;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+}
+
+.align-content {
+  align-content: center;
 }
 
 /* --- Input styling --- */
@@ -87,6 +91,10 @@
   position: absolute;
   margin-top: -10px;
   z-index: -1;
+}
+
+.bigger-margin {
+  margin-top: -160px;
 }
 
 .form__dropdown {

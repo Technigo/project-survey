@@ -11,7 +11,7 @@ const Question5 = ({ title, setTitle, section, setSection }) => {
   return (
     <article className="form__question__5">
       {/* Question */}
-      <label htmlFor="name" className="form__question">
+      <label htmlFor="name" className="form__question" tabIndex="0">
         And just out of curiosity, what kind of developer are you?
       </label>
 
@@ -52,7 +52,7 @@ const Question5 = ({ title, setTitle, section, setSection }) => {
           setSection={setSection}
           currentState={title}
           defaultState=""
-          message="Oops! You forgot to select one"
+          message="Oops! You forgot to select a job 😬"
         />
       </div>
     </article>

@@ -1,9 +1,7 @@
 import React from 'react';
 import NextButton from 'components/NextButton';
-import Popup from 'components/Popup';
 
 const Question1 = ({ name, setName, section, setSection }) => {
-  //One way data-binding
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
@@ -11,7 +9,7 @@ const Question1 = ({ name, setName, section, setSection }) => {
   return (
     <article className="form__question__1">
       {/* Question */}
-      <label htmlFor="name" className="form__question">
+      <label htmlFor="name" className="form__question" tabIndex="0">
         Hello there, what's your name?
       </label>
 
@@ -19,10 +17,12 @@ const Question1 = ({ name, setName, section, setSection }) => {
       <div className="question__content-wrapper">
         <input
           id="name"
+          value={name}
+          name="name"
           type="text"
           onChange={handleNameChange}
           className="form__input"
-          placeholder={name}
+          placeholder="Type your name here please.."
           required
         />
       </div>
@@ -34,7 +34,7 @@ const Question1 = ({ name, setName, section, setSection }) => {
           section={section}
           setSection={setSection}
           currentState={name}
-          defaultState="Type your name here please.."
+          defaultState=""
           message="Please type your name 😊"
         />
       </div>

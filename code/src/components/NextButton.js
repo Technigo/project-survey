@@ -20,7 +20,9 @@ const NextButton = ({
 
   return (
     <>
-      {popup === 'showing' && <Popup message={message} />}
+      {popup === 'showing' && (
+        <Popup message={message} classNames="form__popup" />
+      )}
 
       <button
         type="button"

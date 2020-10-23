@@ -9,12 +9,10 @@ import Summary from 'components/Summary';
 
 const Form = () => {
   const [section, setSection] = useState('firstQuestion');
-  const [name, setName] = useState('Type your name here please..');
+  const [name, setName] = useState('');
   const [ageGroup, setAgeGroup] = useState(undefined);
   const [skills, setSkills] = useState([]);
-  const [suggestions, setSuggestions] = useState(
-    'Write your suggestions here, please'
-  );
+  const [suggestions, setSuggestions] = useState('');
   const [title, setTitle] = useState('');
 
   return (

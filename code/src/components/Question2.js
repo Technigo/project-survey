@@ -13,16 +13,16 @@ const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
   return (
     <article className="form__question__2">
       {/* Question */}
-      <p htmlFor="age" className="form__question">
+      <p htmlFor="age" className="form__question" tabIndex="0">
         And may I ask how old are you?
       </p>
 
       {/* Input */}
       <div className="question__content-wrapper">
         {ageGroups.map((group) => (
-          <label key={group}>
+          <span key={group}>
             <input
-              id="age"
+              id={group}
               type="radio"
               value={group}
               name={group}
@@ -30,8 +30,10 @@ const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
               checked={ageGroup === group}
               className="form__radiobuttons"
             />
-            <span className="form__radiobutton__input">{group}</span>
-          </label>
+            <label htmlFor={group} key={group}>
+              <span className="form__radiobutton__input">{group}</span>
+            </label>
+          </span>
         ))}
       </div>
 

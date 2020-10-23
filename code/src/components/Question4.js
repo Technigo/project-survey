@@ -12,7 +12,7 @@ const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
   return (
     <article className="form__question__4">
       {/* Question */}
-      <label htmlFor="name" className="form__question">
+      <label htmlFor="name" className="form__question" tabIndex="0">
         Do you have any other suggestions on what librarys or tech to learn?
       </label>
 
@@ -21,9 +21,10 @@ const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
         <input
           id="suggestions"
           type="text"
+          value={suggestions}
           onChange={handleSuggestionChange}
           className="form__input"
-          placeholder={suggestions}
+          placeholder="Write your suggestions here, please"
         />
       </div>
 
@@ -46,7 +47,7 @@ const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
           section={section}
           setSection={setSection}
           currentState={suggestions}
-          defaultState={'Write your suggestions here, please'}
+          defaultState=""
           message="Just ..something? 👼"
         />
       </div>

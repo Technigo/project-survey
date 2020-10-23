@@ -13,8 +13,6 @@ const Question3 = ({ skills, setSkills, section, setSection }) => {
     }
   };
 
-  console.log(skills);
-
   const skillsGroup = [
     'HTML5',
     'CSS3',
@@ -30,12 +28,12 @@ const Question3 = ({ skills, setSkills, section, setSection }) => {
   return (
     <article className="form__question__3">
       {/* Question */}
-      <p className="form__question">
+      <p className="form__question" tabIndex="0">
         What is the most important to a Front-end Developer? (Pick 3!)
       </p>
 
       {/* Input */}
-      <div className="question__content-wrapper">
+      <div className="question__content-wrapper align-content">
         {skillsGroup.map((skill) => (
           <span className="form__checkbox__question-wrapper" key={skill}>
             <label htmlFor={skill}>{skill}</label>
@@ -48,7 +46,12 @@ const Question3 = ({ skills, setSkills, section, setSection }) => {
             />
           </span>
         ))}
-        {skills.length > 3 && <Popup message="Oops, you can only select 3!" />}
+        {skills.length > 3 && (
+          <Popup
+            message="Oops, you can only select 3!"
+            classNames="form__popup bigger-margin"
+          />
+        )}
       </div>
       {/* Navigation buttons */}
       <div className="buttons__wrapper">

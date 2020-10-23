@@ -3,7 +3,7 @@ import React from 'react';
 const Summary = ({ name, ageGroup, skills, suggestions, title }) => {
   return (
     <article className="summary question__wrapper">
-      <ul className="summary__answers">
+      <ul className="summary__answers" tabIndex="0">
         <li>Name: {name}</li>
         <li>Age: {ageGroup}</li>
         <li>The most valuable skills: {skills.join(', ')}</li>
@@ -17,7 +17,7 @@ const Summary = ({ name, ageGroup, skills, suggestions, title }) => {
       >
         Retake survey
       </button>
-      <p className="summary__bye">
+      <p className="summary__bye" tabIndex="0">
         Thank you {name} for taking some time to answer this survey! Your
         thoughts are of great value to me, I'll make sure to remember them.
         Meanwhile, feel free to follow my journey on social media below.{' '}
