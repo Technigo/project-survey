@@ -18,7 +18,7 @@ const QuestionCountry = ({funcSetPlace}) => {
                             type="radio"
                             id={place}
                             value={place}
-                            name="place"
+                            name={place}
                             onChange={event => funcSetPlace(event.target.value)}
                         ></input>
                     </div>

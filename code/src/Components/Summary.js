@@ -8,7 +8,11 @@ const Summary = (props) => {
                 tabIndex="0">Hey {props.name}
             </h1> 
             <h2 tabIndex="0">{props.place}, what a great choice for your next destination!</h2>
-            <p tabIndex="0">We wish you a nice trip with your {props.partner}!</p>
+            <div className="summary-info">
+                <p tabIndex="0"><span className="bold">Name:</span>{props.name}</p>
+                <p tabIndex="0"><span className="bold">Destination:</span>{props.place}</p>
+                <p tabIndex="0"><span className="bold">Travel partner:</span>{props.partner}</p>
+            </div> 
         </section>
     )
 }

@@ -18,6 +18,7 @@ const QuestionTravelPartner = ({partner, funcSetPartner}) => {
                 onChange={event => funcSetPartner(event.target.value)}
                 required
             >
+                <option>Choose travelpartner:</option>
                 {partnerArray.map((partner) => {
                     return (
                         <option

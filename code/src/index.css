@@ -168,3 +168,13 @@ select {
   justify-content: center;
   align-items: center;
 }
+
+.summary-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.bold {
+  font-weight: bold;
+}
