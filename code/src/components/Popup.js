@@ -1,10 +1,12 @@
 import React from 'react';
 
-const Popup = () => {
+const Popup = ({ message }) => {
+  console.log('Popup!');
   return (
-    <>
-      <p className="form__checkboxes__popup">You can only select 3 skills!</p>
-    </>
+    <span className="form__popup__wrapper">
+      <p className="form__popup">{message}</p>
+      <span className="form__popup-tag" />
+    </span>
   );
 };
 export default Popup;

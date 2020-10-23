@@ -1,27 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Popup from 'components/Popup';
 
 const NextButton = ({
   currentState,
   defaultState,
   setSection,
   whatQuestionNext,
+  message,
 }) => {
+  const [popup, setPopup] = useState('hidden');
+
   const handleNextButton = () => {
     if (currentState !== defaultState) {
       setSection(whatQuestionNext);
     } else {
-      alert('Please answer the question before pressing next question');
+      setPopup('showing');
     }
   };
 
   return (
-    <button
-      type="button"
-      className="form__next-button"
-      onClick={handleNextButton}
-    >
-      Next question
-    </button>
+    <>
+      {popup === 'showing' && <Popup message={message} />}
+
+      <button
+        type="button"
+        className="form__next-button"
+        onClick={handleNextButton}
+      >
+        Next question
+      </button>
+    </>
   );
 };
 export default NextButton;

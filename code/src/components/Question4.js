@@ -1,7 +1,7 @@
 import React from 'react';
-import NextButton from 'components/NextButton.js';
-import PreviousButton from 'components/PreviousButton.js';
-import ProgressBar from 'components/ProgressBar.js';
+import NextButton from 'components/NextButton';
+import PreviousButton from 'components/PreviousButton';
+import ProgressBar from 'components/ProgressBar';
 
 const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
   //One way data-binding
@@ -47,6 +47,7 @@ const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
           setSection={setSection}
           currentState={suggestions}
           defaultState={'Write your suggestions here, please'}
+          message="Just ..something? 👼"
         />
       </div>
     </article>

@@ -1,20 +1,18 @@
-import React, { useState } from 'react';
+import React from 'react';
 import NextButton from 'components/NextButton';
 import PreviousButton from 'components/PreviousButton';
 import ProgressBar from 'components/ProgressBar';
 import Popup from 'components/Popup';
 
 const Question3 = ({ skills, setSkills, section, setSection }) => {
-  const [popup, setPopup] = useState('hidden');
-
   const handleSkillsChange = (skillValue) => {
-    skills.includes(skillValue)
-      ? setSkills(skills.filter((item) => item !== skillValue))
-      : setSkills([...skills, skillValue]);
-    skills.length >= 3 ? setPopup('showing') : setPopup('hidden');
+    if (skills.includes(skillValue)) {
+      setSkills(skills.filter((item) => item !== skillValue));
+    } else {
+      setSkills([...skills, skillValue]);
+    }
   };
 
-  // controlAmount();
   console.log(skills);
 
   const skillsGroup = [
@@ -33,8 +31,7 @@ const Question3 = ({ skills, setSkills, section, setSection }) => {
     <article className="form__question__3">
       {/* Question */}
       <p className="form__question">
-        What would you say is the most important to a Front-end Developer? (Pick
-        3!)
+        What is the most important to a Front-end Developer? (Pick 3!)
       </p>
 
       {/* Input */}
@@ -51,7 +48,7 @@ const Question3 = ({ skills, setSkills, section, setSection }) => {
             />
           </span>
         ))}
-        {popup === 'showing' && <Popup />}
+        {skills.length > 3 && <Popup message="Oops, you can only select 3!" />}
       </div>
       {/* Navigation buttons */}
       <div className="buttons__wrapper">
@@ -73,6 +70,7 @@ const Question3 = ({ skills, setSkills, section, setSection }) => {
           setSection={setSection}
           currentState={skills.length}
           defaultState={0}
+          message="Please select some skills first"
         />
       </div>
     </article>

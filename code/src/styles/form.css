@@ -44,10 +44,10 @@
   border-bottom: 1px solid #fff;
 }
 
-::placeholder,
-:-ms-input-placeholder,
-::-ms-input-placeholder {
-  color: #000;
+.form__input::placeholder,
+.form__input:-ms-input-placeholder,
+.form__input::-ms-input-placeholder {
+  color: #000 !important;
 }
 
 .form__radiobutton__input {
@@ -61,13 +61,32 @@
 .form__checkbox__question-wrapper {
   display: flex;
   align-items: center;
+  left: 0;
+  right: 0;
 }
 
-.form__checkboxes__popup {
+.form__popup__wrapper {
   position: absolute;
-  margin: 40px;
+  width: 100%;
+  left: 0;
+  top: 170px;
+}
+
+.form__popup {
+  font-size: 14px;
+  padding: 5px 30px;
+  margin: auto;
   background: #fff;
-  padding: 2px 30px;
+}
+
+.form__popup-tag {
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  transform: rotate(45deg);
+  position: absolute;
+  margin-top: -10px;
+  z-index: -1;
 }
 
 .form__dropdown {
@@ -227,6 +246,7 @@
     flex-direction: column;
     display: flex;
     align-items: center;
+    position: relative;
   }
 
   .form__next-button,

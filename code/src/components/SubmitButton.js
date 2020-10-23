@@ -1,23 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Popup from 'components/Popup';
 
-const SubmitButton = ({ currentState, defaultState, setSection }) => {
+const SubmitButton = ({ currentState, defaultState, setSection, message }) => {
+  const [popup, setPopup] = useState('hidden');
+
   const handleSubmitButton = () => {
     if (currentState !== defaultState) {
       setSection('summary');
     } else {
-      alert('Please answer the question before pressing next question');
+      setPopup('showing');
     }
   };
 
   return (
-    <button
-      type="submit"
-      value="Submit"
-      className="form__submit-button"
-      onClick={handleSubmitButton}
-    >
-      Submit
-    </button>
+    <>
+      {popup === 'showing' && <Popup message={message} />}
+
+      <button
+        type="submit"
+        value="Submit"
+        className="form__submit-button"
+        onClick={handleSubmitButton}
+      >
+        Submit
+      </button>
+    </>
   );
 };
 export default SubmitButton;

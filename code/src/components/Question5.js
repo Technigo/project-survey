@@ -1,7 +1,7 @@
 import React from 'react';
-import PreviousButton from 'components/PreviousButton.js';
-import SubmitButton from 'components/SubmitButton.js';
-import ProgressBar from 'components/ProgressBar.js';
+import PreviousButton from 'components/PreviousButton';
+import SubmitButton from 'components/SubmitButton';
+import ProgressBar from 'components/ProgressBar';
 
 const Question5 = ({ title, setTitle, section, setSection }) => {
   const handleTitleChange = (event) => {
@@ -51,7 +51,8 @@ const Question5 = ({ title, setTitle, section, setSection }) => {
         <SubmitButton
           setSection={setSection}
           currentState={title}
-          defaultState={''}
+          defaultState=""
+          message="Oops! You forgot to select one"
         />
       </div>
     </article>

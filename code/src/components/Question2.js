@@ -1,7 +1,7 @@
 import React from 'react';
-import NextButton from 'components/NextButton.js';
-import PreviousButton from 'components/PreviousButton.js';
-import ProgressBar from 'components/ProgressBar.js';
+import NextButton from 'components/NextButton';
+import PreviousButton from 'components/PreviousButton';
+import ProgressBar from 'components/ProgressBar';
 
 const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
   const handleAgeChange = (event) => {
@@ -25,6 +25,7 @@ const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
               id="age"
               type="radio"
               value={group}
+              name={group}
               onChange={handleAgeChange}
               checked={ageGroup === group}
               className="form__radiobuttons"
@@ -54,6 +55,7 @@ const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
           setSection={setSection}
           currentState={ageGroup}
           defaultState={undefined}
+          message="Please fill out your age"
         />
       </div>
     </article>

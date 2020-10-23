@@ -1,5 +1,6 @@
 import React from 'react';
-import NextButton from 'components/NextButton.js';
+import NextButton from 'components/NextButton';
+import Popup from 'components/Popup';
 
 const Question1 = ({ name, setName, section, setSection }) => {
   //One way data-binding
@@ -32,10 +33,9 @@ const Question1 = ({ name, setName, section, setSection }) => {
           whatQuestionNext="secondQuestion"
           section={section}
           setSection={setSection}
-          name={name}
-          setName={setName}
           currentState={name}
           defaultState="Type your name here please.."
+          message="Please type your name 😊"
         />
       </div>
     </article>

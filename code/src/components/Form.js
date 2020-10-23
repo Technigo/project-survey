@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import 'styles/form.css';
-import Question1 from 'components/Question1.js';
-import Question2 from 'components/Question2.js';
-import Question3 from 'components/Question3.js';
-import Question4 from 'components/Question4.js';
-import Question5 from 'components/Question5.js';
-import Summary from 'components/Summary.js';
+import Question1 from 'components/Question1';
+import Question2 from 'components/Question2';
+import Question3 from 'components/Question3';
+import Question4 from 'components/Question4';
+import Question5 from 'components/Question5';
+import Summary from 'components/Summary';
 
 const Form = () => {
   const [section, setSection] = useState('firstQuestion');
