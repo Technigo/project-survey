@@ -156,10 +156,6 @@ input {
   font-size: inherit;
 }
 
-input[type='checkbox'] {
-  width: 50px ;
-  height: 40px ;
-}
 
 input[type='radio'] {
   width: 30px ;
