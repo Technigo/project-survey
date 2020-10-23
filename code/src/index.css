@@ -43,6 +43,16 @@ fieldset {
 	border-style: none;
 }
 
+.correct {
+	color: green;
+	font-style: italic;
+}
+
+.incorrect {
+	color: red;
+	font-style: italic;
+}
+
 code {
 	font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
 		monospace;
