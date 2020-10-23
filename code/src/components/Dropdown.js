@@ -17,7 +17,7 @@ export const Dropdown = ({questionSweets, sweet, setSweet}) => {
             required
           >
             <option value="">Choose wisely...</option>
-            <option tabindex="0" value="chocolat">Chocolat!</option>
+            <option tabindex="0" value="chocolate">Chocolate!</option>
             <option tabindex="0" value="licorice">Licorice!</option>
             <option tabindex="0" value="sour sweets">Sour sweets!</option>
           </select>
