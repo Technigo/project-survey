@@ -4,7 +4,6 @@ import "./style.css"
 import { Summary } from "./components/Summary.js"
 import { Header } from "./components/Header.js"
 
-
 export const App = () => {
   const [reflection, setReflection] = useState(""); // the thing we have in the paranthesis is the initial state. If we console log status it's gonna show the thing in the paranthesis. If it's gonna show strings you use "" if it's gonna show bolean you write true or false etc, if i's gonna show an array you write []. 
   const [reason, setReason] = useState("");
@@ -19,10 +18,16 @@ export const App = () => {
 
   const date = () => {
     const day = new Date();
-    const local = day.toLocaleDateString();
+    const local = day.toLocaleDateString('en-GB');
     document.getElementById("demo").innerHTML = local;
   }
   console.log(date)
+
+  const event = new Date(Date.UTC('en-GB'));
+  const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+
+  console.log(event);
+  console.log(options);
 
   return (
     <main> 
@@ -30,7 +35,7 @@ export const App = () => {
         <form onSubmit={handleSubmit}>
           <Header reflection= {reflection}/>
           <section className="reflection-section" id="reflection">
-            <h2>How is your day?</h2>
+            <label className="question">How is your day?</label>
             <select
               value={reflection}
               onChange ={event => setReflection (event.target.value)}
@@ -52,6 +57,7 @@ export const App = () => {
                 type="text"
                 value={reason}
                 onChange={event => setReason (event.target.value)}
+                required
               />
             </label>
             <button><a href="#weather">Next</a></button>
@@ -67,7 +73,9 @@ export const App = () => {
                 type="radio"
                 checked={weather === "sunny"}
                 value="sunny"
+                name="weather"
                 onChange={(e) => {setWeather (e.target.value)}}
+                required
               />
             </label>
             <label className="option">
@@ -76,7 +84,9 @@ export const App = () => {
                 type="radio"
                 checked={weather === "cloudy"}
                 value="cloudy"
+                name="weather"
                 onChange={(e) => {setWeather (e.target.value)}}
+                required
               />
             </label>
             <label className="option">
@@ -85,7 +95,9 @@ export const App = () => {
                 type="radio"
                 checked={weather === "rainy"}
                 value="rainy"
+                name="weather"
                 onChange={(e) => {setWeather (e.target.value)}}
+                required
               />
             </label>
             <label className="option">
@@ -94,7 +106,9 @@ export const App = () => {
                 type="radio"
                 checked={weather === "windy"}
                 value="windy"
+                name="weather"
                 onChange={(e) => {setWeather (e.target.value)}}
+                required
               />
             </label>
             </div>
@@ -103,7 +117,7 @@ export const App = () => {
 
           <section className="culture-section" id="culture">
             <label className="question">
-            Have you read or watched anything?
+            Have you read or watched anything today?
               <input 
                 type="message"
                 value={culture}

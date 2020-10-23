@@ -1,19 +1,12 @@
-# Technigo React Starter App
+# The brief
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The brief for this weeks project was to create a survey using React, with a summary of the user's choice. I created a survey of "Daily Notes", like a short diary for daily reflections.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+# The solution
 
-## Usage
+If I had more time I would have created a function that shows today's date + changing weather icon depending on the user's choice. 
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+I had some troubles with the radiobuttons - if you checked one you could'nt uncheck it. But I solved it by adding "checked={weather === ""}. I didn't know from start how to make the radiobuttons required, but learned that I had to ad a name and give each option the same name.
 
-Alternatively, if you don't want a new git repo on your account;
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+# Link to the deployed site
