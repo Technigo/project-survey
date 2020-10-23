@@ -6,7 +6,6 @@ import SparcImage from '../assets/sparc.jpg'
 import PistolWhipImage from '../assets/pistolwhip.png'
 import NoMansSkyImage from '../assets/nomanssky.jpg'
 import HalfLifeAlyxImage from '../assets/halflifealyx.jpg'
-import YodaImage from '../assets/yoda.jpg'
 
 
 const startOver = () => {
@@ -36,7 +35,6 @@ const showGameImage = (game) => {
       imageSrc = HalfLifeAlyxImage;
       break;
   default:
-    imageSrc = YodaImage;
     break;
   }
 
@@ -48,7 +46,7 @@ export const Summary = ({name, snack, drink, game,}) => {
     return (
       <>
         <div>{showGameImage(game)}</div>
-        <h2> Cool {name}! I'll make sure {game} will be loading but while you wait... 
+        <h2 tabIndex='0'> Cool {name}! I'll make sure {game} will be loading but while you wait... 
         there's some {snack} food and {drink} waiting for you!</h2>
         <button 
           type='startOver'

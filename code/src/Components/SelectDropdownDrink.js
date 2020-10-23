@@ -1,11 +1,10 @@
 import React from 'react'
 
-export const SelectDropdownDrink = ({drink, setDrink}) => { 
-    
+export const SelectDropdownDrink = ({drink, setDrink}) => {    
     return ( 
             <div>
                 <h2>Magic Potion!</h2>
-                <select 
+                <select autoFocus
                 onChange={event => setDrink(event.target.value)}
                 value={drink}
                 required

@@ -7,9 +7,10 @@ export const TextInput = ({name, setName}) => {
         <div>
             <h2 tabIndex='0'>What's your name?</h2>
             <label tabIndex ='0'>
-                <input 
+                <input autoFocus
                     type='text' 
                     id='name'
+                    aria-label='Whats your name?'
                     onChange={event => setName(event.target.value)}
                     value={name}
                     required minLength='2'

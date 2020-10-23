@@ -5,7 +5,7 @@ export const DropdownSnacks = ({snack, setSnack}) => {
     return ( 
              <div>
                 <h2 tabIndex='0'>Snacks!</h2>
-                <select 
+                <select autoFocus
                 onChange={event => setSnack(event.target.value)}
                 value={snack}
                 required

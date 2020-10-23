@@ -9,13 +9,13 @@ const gamesList = [
     'Half-Life: Alyx'
 ]
 export const RadioButtons = ({game, setGamesList}) => {
-
     return (
-        <form>
+        <div>
         <h2 tabIndex='0'>Which game do you want to play?</h2>
         {gamesList.map((games)=> (
             <label htmlFor="games" tabIndex ='0' key= {games}>
-                <input
+                <input autoFocus
+                    name='games'
                     type='radio'
                     value={games}
                     onChange={event => setGamesList(event.target.value)}
@@ -28,7 +28,7 @@ export const RadioButtons = ({game, setGamesList}) => {
         )
         )}
             
-        </form>
+        </div>
     )
 
 }
