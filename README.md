@@ -25,7 +25,6 @@ The website was tested in Chrome, Safari, Firefox on desktop and Safar on mobile
 - I would have made a dynamic form! I would like to display one question at a time and scroll down/show next if the user clicks on a button. I will go back to this project and update this later! 
 - Add validation text to the select dropdown. The functionality is there, but I couldn't figure out how to add a message to the user that the answer from the dropdown is missing.
 - Look in to how you can validate a range slider since it already has a value from the start?
-- Change the topic of the survey :see_no_evil: My main focus was to get the functionality in to place, so if I had more time I would give the concept som more thought.
 
 ## View it live
 
