@@ -1,12 +1,11 @@
 import React from 'react';
 
 //destructured props
-const Question1 = ({ questionText, questionAnswer, onTextChange }) => {
-  //state hook
+const Question1 = ({ questionText1, questionAnswer1, onTextChange }) => {
 
   return (
     <div className="section-container">
-      <label htmlFor="textField">{questionText}</label>
+      <label htmlFor="textField">{questionText1}</label>
       <input
         type="text"
         id="textField"
@@ -15,7 +14,7 @@ const Question1 = ({ questionText, questionAnswer, onTextChange }) => {
         //the bottom 2 parts & the type are controlled components
         //arrow functions are less efficient, better to use function name only
         onChange={(event) => onTextChange(event.target.value)}
-        value={questionAnswer}>
+        value={questionAnswer1}>
       </input>
     </div>);
 }

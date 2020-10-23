@@ -5,15 +5,15 @@ import "components/question2.css";
 const dropDownOptionsArray = ["0-10 km", "20-50 km", "50+ km"];
 
 // a drop-down menu
-const Question2 = ({ questionText, questionAnswer, onDistanceChange }) => {
+const Question2 = ({ questionText2, questionAnswer2, onDistanceChange }) => {
 
   return (
     <section className="section-container">
       <div className="form-container">
-        <label htmlFor="drop-down">{questionText}</label>
+        <label htmlFor="drop-down">{questionText2}</label>
         <select
           onChange={(event) => onDistanceChange(event.target.value)}
-          value={questionAnswer}
+          value={questionAnswer2}
           id="drop-down"
           name="distance"
         >

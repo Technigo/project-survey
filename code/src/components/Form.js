@@ -1,13 +1,14 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 
-import Header from "./Header"
-import Question1 from "./Question1"
-import Question2 from "./Question2"
-import Question3 from "./Question3"
-import Submit from "./Submit"
+import Header from "./Header";
+import Question1 from "./Question1";
+import Question2 from "./Question2";
+import Question3 from "./Question3";
+import Submit from "./Submit";
+import Summary from "./Summary";
 
-import "./form.css"
+import "./form.css";
 
 const Form = () => {
   //all the state hooks
@@ -15,8 +16,7 @@ const Form = () => {
   const [distance, setDistance] = useState("");
   const [answer, setAnswer] = useState("");
 
-  //lecture stuff: whatever we pass in as argument will update the text via setText function
-  //if the function starts with on, then it should be only used within the component
+  //if the function starts with "on", then it should be only used within the component
   //if the function is passed to other components, use "handle"NameChange 
   const handleTextChange = (newText) => {
     setText(newText);
@@ -38,23 +38,23 @@ const Form = () => {
         subtitle="your favourite moving company"
       />
       <Question1
-        questionText="Where do you live?"
-        questionAnswer={text}
+        questionText1="Where do you live?"
+        questionAnswer1={text}
         onTextChange={handleTextChange}
       />
       <Question2
-        questionText="How far are you moving?"
-        questionAnswer={distance}
+        questionText2="How far are you moving?"
+        questionAnswer2={distance}
         onDistanceChange={handleDistanceChange}
       // options={dropDownOptionsArr}
       />
       <Question3
-        questionText="Do you want to order our cleaning service as well?"
-        questionAnswer={answer}
+        questionText3="Do you want to order our cleaning service as well?"
+        questionAnswer3={answer}
         onAnswerChange={handleAnswerChange}
       />
-      <Submit text="Submit" />
-      {/* <Footer /> */}
+      <Submit />
+      <Summary />
     </form>
   )
 }

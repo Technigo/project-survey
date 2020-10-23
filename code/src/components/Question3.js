@@ -4,11 +4,11 @@ import "./question3.css"
 
 const answersArray = ["YES", "NO"];
 
-const Question3 = ({ questionText, questionAnswer, onAnswerChange }) => {
+const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
 
   return (
     <section className="section-container">
-      <p>{questionText}</p>
+      <p>{questionText3}</p>
       <div className="radio-btn-container">
         {answersArray.map(item => {
           return (
@@ -17,7 +17,7 @@ const Question3 = ({ questionText, questionAnswer, onAnswerChange }) => {
                 type="radio"
                 value={item}
                 onChange={event => onAnswerChange(event.target.value)}
-                checked={questionAnswer === item}
+                checked={questionAnswer3 === item}
               ></input>
               {item}
             </label>
