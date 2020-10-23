@@ -14,7 +14,7 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
             onChange={() => onContactmeChange('newsletter')}
             required
             />
-            <span class="custom-checkbox"></span>
+            <span className="custom-checkbox"></span>
             </div>
            
             <div className="checkbox-container">
@@ -26,7 +26,7 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
             onChange={() => onContactmeChange('gdpr')}
             required
             />
-            <span class="custom-checkbox"></span>
+            <span className="custom-checkbox"></span>
             </div>
         </div>
 

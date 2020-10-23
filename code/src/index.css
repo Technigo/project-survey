@@ -145,6 +145,68 @@ code {
   display: flex;
   flex-direction: column;
 }
+
+.age-group{
+  display: flex;
+  flex-direction: column;
+}
+
+.radiobuttoncontainer{
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin: 10px 5px;
+    font-size: 16px;  
+    -webkit-user-select: auto;
+}
+
+.radiobuttoncontainer input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio{
+  position: absolute; 
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+  Font-Family: 'Cabin', Sans-Serif;
+  Font-Size: 15px;
+}
+
+.radiobuttoncontainer:hover input ~ .custom-radio{
+  background-color: #ccc;
+} 
+
+.radiobuttoncontainer input:checked ~ .custom-radio{
+  background-color: #444444; 
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%; 
+  display: none;
+}
+
+.radiobuttoncontainer input:checked ~ .custom-radio:after{
+  display: block; 
+}
+
+/* Something else */ 
+
 .summary{
   height: 100vh;
   background: lightcoral;

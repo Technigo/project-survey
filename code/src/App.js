@@ -24,13 +24,9 @@ export const App = () => {
       : setContactme([...contactme, contactmeValue]);
   };
 
-  // const handleNameChange = newName => {
-  //   setName(newName);
-  // }
-
   const handleSubmit = event => {
     event.preventDefault();
-    setShowSummary(true);
+    // setShowSummary(true);
   }
 
   return (
@@ -38,7 +34,6 @@ export const App = () => {
     <>
 
       <form
-        action=""
         onSubmit={handleSubmit}>
 
         {section === 'welcome' && (
@@ -178,13 +173,21 @@ export const App = () => {
 
       </form>
 
+        {section === 'summary' && (
+          <Summary
+          name={name} 
+          location={location} 
+          ageGroup={ageGroup} 
+          />
+        )}
+        
 
-      {showSummary && <Summary
+      {/* {showSummary && <Summary
         name={name} 
         location={location} 
         ageGroup={ageGroup} 
         />}
-      <Summary />
+      <Summary /> */}
 
     </>
   );
