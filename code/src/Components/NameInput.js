@@ -13,7 +13,6 @@ export const NameInput = ({ id, name, setName }) => {
           value={name}
           placeholder="Type your first and last name here..."
           required
-          requiredTxt
         />
       </label>
   );

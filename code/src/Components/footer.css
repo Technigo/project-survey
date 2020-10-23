@@ -12,7 +12,10 @@ footer {
 
 a {
   color: #CAD2C5;
-  text-decoration-line: none;
-  -webkit-text-decoration-line: none;
   cursor: pointer;
+}
+
+.email-underlined {
+  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
 }

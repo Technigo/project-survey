@@ -11,18 +11,28 @@
 }
 
 .summary-heading, .summary-text {
-  margin: 10px;
-  padding: 10px;
+  margin: 6px;
+  padding: 6px;
 }
 
 .bold-summary-text {
   font-weight: bold;
 }
 
+.end-words-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
 .end-words {
   font-weight: bold;
-  margin: 10px;
-  padding: 10px;
+  font-size: 24px;
+  margin: 4px 4px 4px 6px;
+  padding: 4px 4px 4px 6px;
+  text-align: center;
 }
 
 .underlined-summary-text {

@@ -1,14 +1,14 @@
 import React from 'react';
 
-const contributes = ["Code Knowledge", "Tech Recruitment Knowledge", "Agile Project Management", "Experience as Product Owner"];
+const contributes = ["Code Knowledge", "Tech Recruitment Knowledge", "Agile Project Management", "Experience as Product Owner", "Experience from sales within the tech business"];
 
 export const Radiobuttons = ({ canContributeWith, setCanContributeWith }) => {
   
   return (
     <fieldset>
-    <legend>3. I can contribute with:</legend>
-    {contributes.map(contributes => (
-      <label 
+      <legend tabIndex="0">3. I can contribute with:</legend>
+      {contributes.map(contributes => (
+      <label
         className="radiobutton-label" 
         key = {contributes} 
         htmlFor={contributes}>
@@ -16,6 +16,7 @@ export const Radiobuttons = ({ canContributeWith, setCanContributeWith }) => {
             className="radiobutton-input"
             id={contributes}
             type="radio"
+            name="radio"
             value={contributes}
             onChange={(event) => setCanContributeWith(event.target.value)}
             checked={canContributeWith === contributes} 
@@ -23,7 +24,7 @@ export const Radiobuttons = ({ canContributeWith, setCanContributeWith }) => {
           />
         {contributes}
       </label>
-    ))}
+      ))}
     </fieldset>
   );
 };

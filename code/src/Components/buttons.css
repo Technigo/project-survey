@@ -1,0 +1,26 @@
+/* The Buttons */
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+button { 
+  padding: 6px 10px;
+  margin: 10px;
+  font-family: 'Merriweather Sans', Sans-Serif;
+  font-size: 16px;
+  background: #354F52;
+  cursor: pointer;
+  text-transform: uppercase;
+  border-radius: 8px;
+  color:#CAD2C5;
+  align-self: center;
+} 
+
+button:disabled {
+  background: #84A98C;
+}
+
+button:hover {
+  border: 2px solid #CAD2C5;
+}

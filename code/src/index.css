@@ -17,7 +17,7 @@ body {
   margin: 0;
   font-family: 'Catamaran', Sans-Serif;
   font-family: 'Merriweather Sans', Sans-Serif;
-  background-color: #CAD2C5;
+  background: #CAD2C5;
   color: #52796F;
   padding: 40px;
   display: flex;
@@ -40,5 +40,7 @@ h1 {
 }
 
 @media (min-width: 1024px) { /* Desktop device */
-
+  h1 {
+    max-width: 900px;
+  }
 }
