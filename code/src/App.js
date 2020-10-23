@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
-import {Dropdown} from './Dropdown'
-import {Radio} from './Radio'
-import {Checkbox} from './Checkbox'
-import {Submit} from './Submit'
-import {Input} from './Input'
-import {Summary} from './Summary'
+import { Dropdown } from './Dropdown'
+import { Radio } from './Radio'
+import { Checkbox } from './Checkbox'
+import { Submit } from './Submit'
+import { Input } from './Input'
+import { Summary } from './Summary'
 
 
 export const App = () => {
   const [location, setLocation] = useState("")
   const countries = ['Bali', 'Sri Lanka', 'Seychelles', 'Fiji', 'Madagascar']
 
-  const [duration, setDuration] = useState ("")
-  const[mail, setMail] = useState("")
+  const [duration, setDuration] = useState("")
+  const [mail, setMail] = useState("")
 
   const [showSummary, setShowSummary] = useState(false)
 
@@ -24,25 +24,23 @@ export const App = () => {
 
   return (
     <div className="formContainer">
-      
-      {!showSummary ?  (
-        <form onSubmit={handleSubmit}> 
 
+      {!showSummary ? (
+        <form onSubmit={handleSubmit}>
           <Dropdown
-            label='Choose your destination:' 
-            title='Select country' 
-            values={countries} 
-            selectedValue={location} 
+            label='Choose your destination:'
+            title='Select country'
+            values={countries}
+            selectedValue={location}
             onChanged={setLocation} />
-
-          <Radio value={duration} onChanged={setDuration}/>
+          <Radio value={duration} onChanged={setDuration} />
           <Input value={mail} onChanged={setMail} />
           <Checkbox />
           <Submit />
-        </form> 
+        </form>
       ) : (
-        <Summary location={location} duration={duration} mail={mail}/>
-      )}
+          <Summary location={location} duration={duration} mail={mail} />
+        )}
 
     </div>
   )

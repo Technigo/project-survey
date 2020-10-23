@@ -17,7 +17,7 @@ body {
 }
 
 form {
-  background-color:rgb(225, 236, 216) ;
+  background-color: rgb(225, 236, 216);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -49,15 +49,11 @@ form {
 button {
   height: 50px;
   width: 90px;
-  background-color:rgb(225, 236, 216) ;
+  background-color: rgb(225, 236, 216);
   border-radius: 25%;
-
 }
 
 .btn {
   margin-bottom: 40px;
   text-align: center;
-} 
-
-
-
+}

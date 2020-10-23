@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A simple form with an dropdown, radiobuttons, a input and a checkbox. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+A started with a small sketch so I could easily see it in front of me before I started. Then I made all the questions as components. After that I styled it and last but not least I made the summary, and then I styled that one to. 
+I don't know if it was the right approach to split up the components first and then put them together. Maybe it would been 'easier' to make the page work and then split them up? I don't know... I'll try that approach next time. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://app.netlify.com/sites/fervent-newton-09a2a6/overview
