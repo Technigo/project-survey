@@ -14,10 +14,16 @@ export const App = () => {
   const [name, setName] = useState('');
   const [location, setLocation] = useState('Stockholm');
   const [ageGroup, setAgeGroup] = useState('');
-  // const [showSummary, setShowSummary] = useState(false);
-  const [setShowSummary] = useState(false);
+  const [showSummary, setShowSummary] = useState(false);
   const [section, setSection] = useState('welcome');
-  const [contactme, setContactme] = useState([]);
+  const [contactme, setContactme] = useState([]); //Checkbox 
+
+
+  /* Functions for handling input from form */ 
+
+const handleNameInput = inputName => {
+  setName(inputName);
+}
 
   const handleContactmeChange = contactmeValue => {
     contactme.includes(contactmeValue)
@@ -25,7 +31,7 @@ export const App = () => {
       : setContactme([...contactme, contactmeValue]);
   };
 
-  const handleSubmit = event => {
+  const handleSubmit = (event) => {
     event.preventDefault();
     setShowSummary(true);
   }
@@ -33,22 +39,31 @@ export const App = () => {
   return (
 
     <>
-
+   {!showSummary ? (
       <form
-        onSubmit={handleSubmit}>
+        onSubmit={handleSubmit}
+        id="form">
 
         {section === 'welcome' && (
           <div className="welcome">
             <Header />
             <div className="button-container">
 
-              <button
-                type="button"
+            <img 
+            className="start-button" 
+            src="https://www.flaticon.com/svg/static/icons/svg/482/482663.svg" 
+            alt="pointer"
+            onClick={event => { setSection('input') }}
+            value="input"
+            >
+            </img>
+              {/* <button
+                type="submit"
                 onClick={event => { setSection(event.target.value) }}
                 value="input"
                 className="start-button">
                   Click here to start!
-              </button>
+              </button> */}
 
             </div>
           </div>
@@ -62,8 +77,9 @@ export const App = () => {
              <Nameinput
               name={name}
               setName={setName}
-              id="inputName"
-              setNameChange={setName}
+              id="name"
+              // setNameChange={setName}
+              onNameChange={handleNameInput}
               required
             />
             <div className="button-container">
@@ -76,11 +92,12 @@ export const App = () => {
               </button>
 
               <button
+                // onClick={event => { setSection(event.target.value) }}
+                onClick={() => {setSection('dropdown')}}
                 type="submit"
-                onClick={event => { setSection(event.target.value) }}
-                value="dropdown"
+                value='dropdown'
                 className="next-button">
-                Next
+                Next 
               </button>
               {console.log(name)}
             </div>
@@ -91,6 +108,7 @@ export const App = () => {
         {/* Dropdown section  */}
 
         {section === 'dropdown' && (
+          <section id="dropdown">
           <div className="dropdown">
             <Dropdown location={location} setLocation={setLocation} label={name} />
 
@@ -114,6 +132,7 @@ export const App = () => {
               </button>
             </div>
           </div>
+          </section>
         )}
 
 
@@ -164,7 +183,8 @@ export const App = () => {
 
               <button
                 type="submit"
-                onClick={event => { setSection(event.target.value) }}
+                // onClick={event => { setSection(event.target.value) }}
+                onClick={() => {setShowSummary()}}
                 value="summary">
                 Submit
               </button>
@@ -173,8 +193,16 @@ export const App = () => {
         )}
 
       </form>
+ 
+        ) : ( 
+          <Summary 
+          name={name} 
+          location={location} 
+          ageGroup={ageGroup} />
+        
+        )}
 
-        {section === 'summary' && (
+        {/* {section === 'summary' && (
           
           <Summary
           name={name} 
@@ -183,7 +211,7 @@ export const App = () => {
           />
           
 
-        )}
+        )} */}
         
 
       {/* {setShowSummary && <Summary

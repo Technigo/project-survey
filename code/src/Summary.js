@@ -1,13 +1,20 @@
 import React from 'react'
 
-export const Summary = ({name, location, ageGroup, setSection}) => {
+export const Summary = ({name, location, ageGroup}) => {
 
     return (
+        <>
     <section className="summary">
-        <h2>Summary of survey</h2>
-        <p>Thank you {name}. Your current location is {location} and your age is {ageGroup}.</p>
+    <h1 className="typewriter">My pleasure!</h1>
+        <p>Dear {name}, I'm truly looking forward to connect with you. Let's meet somewhere in {location} soon. Psst, you have never looked so good, even though your only between {ageGroup} years old!.</p>
     
-        <button tabIndex="0">Restart</button>
+        <button 
+        type="button"
+        onClick={() => window.location.reload()}
+        tabIndex="0">
+            Restart
+        </button>
     </section>
+    </>
 );
 };

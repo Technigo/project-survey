@@ -31,7 +31,7 @@ code {
 }
 
 .welcome {
-  background-color: pink;
+  background-color: #BBAAAA;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -41,7 +41,7 @@ code {
 }
 
 .input{
-  background-color: lightgreen;
+  background-color: #CEBBBB;
   height: 100vh;
   padding: 150px 15px;
   display: flex;
@@ -53,7 +53,7 @@ code {
 }
 
 .dropdown{
-  background: lightblue;
+  background:#E3CECE;
   height: 100vh;
   padding: 150px 15px;
   display: flex;
@@ -75,7 +75,7 @@ code {
     border: none;
     background:#fbf0f0;
     display: flex;
-    Font-Size: 15px;
+    font-Size: 15px;
     margin-top: 10px;
     border-radius: 5px;
 }
@@ -88,17 +88,18 @@ code {
 }
 
 .dropdown-field select{
-  width: 200px;
-  padding: 5px;
+  width: 250px;
+  padding: 10px;
   margin-top: 10px;
   background:#fbf0f0;
+  font-size: 15px;
   border: none;
   border-radius: 5px;
 }
 /* Checkbox styling */
 
 .checkbox {
-  background-color: plum;
+  background-color: #E3CECE;
   height: 100vh;
   padding: 150px 15px;
   display: flex;
@@ -175,11 +176,12 @@ code {
 /* Radiobutton styling */
 
 .radiobutton {
-  background-color: lightsalmon;
+  background-color: #E6D2D2;
   height: 100vh;
   padding: 150px 15px;
   display: flex;
   flex-direction: column;
+  font-size: 15px;
 }
 
 .age-group{
@@ -191,6 +193,7 @@ code {
     display: block;
     position: relative;
     padding-left: 25px;
+    margin-top: 10px;
     margin: 10px 5px;
     font-size: 16px;  
     -webkit-user-select: auto;
@@ -245,7 +248,7 @@ code {
 
 .summary{
   height: 100vh;
-  background: lightcoral;
+  background: #FAE3E3;
   padding: 150px 15px;
 }
 
@@ -254,6 +257,13 @@ code {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+}
+
+button{
+  margin: 5px;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 /* Typewriter animation */
@@ -272,7 +282,7 @@ code {
 }
 
 @keyframes blink-caret {
-  from, to {border-color: transparent} 50% {border-color: orange;}
+  from, to {border-color: transparent} 50% {border-color: #CFA5B4;}
 }
 
 /* Bounce button animation */
@@ -285,8 +295,9 @@ code {
   animation-direction: alternate;
   animation-iteration-count: infinite;
   border: none; 
-  padding: 10px;
+  padding: 25px;
   border-radius: 10px;
+  width: 100px;
 }
 
 /* Media queries */
@@ -296,5 +307,15 @@ code {
 }
 
 @media (min-width: 1024px) {
+  .header-wrapper {
+    margin-left: 50vh;
 
+  }
+  .typewriter{
+    font-size: 80px;
+  }
+  .start-button {
+    width: 250px;
+    margin-left: 50vh;
+  }
 }

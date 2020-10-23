@@ -5,7 +5,9 @@ export const Dropdown = ({ location, setLocation, label }) => {
 
   return (
       <div className="dropdown-field">
-        <label htmlFor="location">Choose your location: </label>
+        <label htmlFor="location">
+        <h1 className="typewriter">Where do you live?</h1>
+        </label>
       <select
         name={label}
         onChange={event => setLocation(event.target.value)}

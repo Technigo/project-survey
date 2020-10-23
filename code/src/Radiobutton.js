@@ -7,7 +7,7 @@ export const Radiobutton = ({ ageGroup, setAgeGroup }) => {
     return (
     <>
         <div className="age-group">
-            <p>Select your age: </p>
+        <h1 className="typewriter">What's your age?</h1>
           {group.map(group => (
                <label 
                className="radiobuttoncontainer"

@@ -4,9 +4,9 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
     
     return (
         <div className="checkbox-group">
-            
+            <h1 className="typewriter">Do you mind if I..?</h1>
             <div className="checkbox-container">
-            <label htmlFor="newsletter">Newsletter</label>
+            <label htmlFor="newsletter">Send you some juicy newsletters?</label>
             <input
             id="newsletter"
             type="checkbox"
@@ -18,7 +18,7 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
             </div>
            
             <div className="checkbox-container">
-            <label htmlFor="gdpr">GDPR</label>
+            <label htmlFor="gdpr">Collect your personal information?</label>
             <input
             id="gdpr"
             type="checkbox"
