@@ -87,6 +87,10 @@ const Survey = () => {
     </section>
     <Summary 
       heading="Summary"
+      name={name}
+      color={color}
+      ageGroup={ageGroup}
+      userHobbies={hobbies}
     />
     </>
   );

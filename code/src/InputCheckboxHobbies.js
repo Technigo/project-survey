@@ -11,14 +11,14 @@ const InputCheckboxHobbies = ({question, userHobbies, onHobbiesChange}) => {
       <input 
         id="hobbieCoding" 
         type="checkbox"
-        // checked={userHobbies.includes('coding')} //If I comment-out this it doesn't work
+        checked={userHobbies.includes('coding')} 
         onChange={() => onHobbiesChange('coding')}
       /> 
       <label htmlFor="hobbieSports">Sports</label>
       <input 
         id="hobbieSports" 
         type="checkbox" 
-        // checked={userHobbies.includes('sports')}
+        checked={userHobbies.includes('sports')}
         onChange={() => onHobbiesChange('sports')}
       />
       <label htmlFor="hobbieMusic">Music</label>
