@@ -10,10 +10,11 @@ export const App = () => {
   return (
     <main>
       <header>
-        <h1>CRAFT BEER SURVEY</h1>
+        <h1>CRAFT BEER PROFILE</h1>
       </header>
-      
-      <Form />      
+      <section>
+        <Form />      
+      </section>      
     </main>
   );
 };
