@@ -70,12 +70,12 @@ export const QuizSummary = ({
 	};
 
 	return (
-		<div className="quiz-box">
+		<div className="quiz-summary-box">
 			<h3>
 				Answers:
 				<ul>
 					<li>
-						Q1: {userAnswer1}{' '}
+						Question 1: {userAnswer1}{' '}
 						{userAnswer1 === correctAnswers.q1 ? (
 							<span className="correct">Correct, you get 1 point!</span>
 						) : (
@@ -85,7 +85,7 @@ export const QuizSummary = ({
 						)}
 					</li>
 					<li>
-						Q2: {userAnswer2}{' '}
+						Question 2: {userAnswer2}{' '}
 						{userAnswer2 === correctAnswers.q2 ? (
 							<span className="correct">Correct, you get 1 point!</span>
 						) : (
@@ -95,14 +95,15 @@ export const QuizSummary = ({
 						)}
 					</li>
 					<li>
-						Q3: {userAnswer3.join(', ')}{' '}
+						Question 3: {userAnswer3.join(', ')}{' '}
 						{userAnswer3 === correctAnswers.q3 ? (
 							<span className="correct">Correct, you get 1 point!</span>
 						) : userAnswer3.includes(correctAnswers.q3) ? (
 							<>
 								<span className="correct">
-									{correctAnswers.q3} is correct, you get 0.5 points,
-									<span className="incorrect"> the rest is wrong</span>
+									{correctAnswers.q3} is correct,{' '}
+									<span className="incorrect"> the rest is wrong</span> you get
+									0.5 points.
 								</span>
 							</>
 						) : (
@@ -112,7 +113,7 @@ export const QuizSummary = ({
 						)}
 					</li>
 					<li>
-						Q4: {userAnswer4}{' '}
+						Question 4: {userAnswer4}{' '}
 						{userAnswer4 === correctAnswers.q4 ? (
 							<span className="correct">Correct, you get 1 point!</span>
 						) : (
@@ -122,7 +123,7 @@ export const QuizSummary = ({
 						)}
 					</li>
 					<li>
-						Q5: {userAnswer5}{' '}
+						Question 5: {userAnswer5}{' '}
 						{userAnswer5 === correctAnswers.q5 ? (
 							<span className="correct">Correct, you get 1 point!</span>
 						) : userAnswer5 >= 216 && userAnswer5 <= 218 ? (

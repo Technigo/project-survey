@@ -46,6 +46,22 @@ fieldset {
 	border-style: none;
 }
 
+.quiz-summary-box {
+	margin: 25px 50px;
+	padding: 30px 20px;
+	border-radius: 8px;
+	-webkit-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+	background-color: #fff;
+	color: #000;
+}
+
+li {
+	list-style: none;
+	margin: 5px;
+}
+
 .correct {
 	color: green;
 	font-style: italic;
