@@ -22,6 +22,12 @@ I put the form element in App.js and created components for each question, the h
 
 For validation I used 'required' on all input areas.
 
+The app is responsive.
+
+It has keyboard navigation through tab and enter. This I achieved using tabindex, label htmlFor and aria-label. The radiobuttons turned out to be the hardest to target with a screenreader.
+
+Tools I have used for testing accessability:
+
 
 
 but take accessibility into account when you are styling your form elements - so inputs should have labels and should be easily readable and usable.
