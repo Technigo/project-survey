@@ -12,7 +12,7 @@ export const Radiobutton = ({questionTimes, timesPerWeek, setTimesPerWeek}) => {
       <div className="sub-heading form-radio">
         <h2 tabindex="0">2. How often do you eat candy?</h2>
       </div>
-      <p tabindex="0" className="times-per-week">Times per week:</p>
+      <p tabindex="0" className="times-per-week">Days per week:</p>
       <div className="label-container">
         {perWeek.map((times) => (
           <label 
