@@ -24,7 +24,7 @@ For validation I used 'required' on all input areas.
 
 The app is responsive.
 
-# Accessability
+## Accessability
 
 The requirements also stated that the app should take accessability into account (as it always should I guess)
 
