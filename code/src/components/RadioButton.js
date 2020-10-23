@@ -14,6 +14,7 @@ export const RadioButton = ({ knowHeadPhone, setKnowHeadPhone }) => {
                 {knowHeadPhones.map((headphone) => (
                     <div className="each-radio-button" key={headphone}>
                         <input
+                            name="headphone"
                             type="radio"
                             value={headphone}
                             onChange={(event) => setKnowHeadPhone(event.target.value)}
