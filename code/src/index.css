@@ -13,7 +13,7 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 500px;
   background-color: #5E6572;
   font-family: 'Sacramento', cursive;
 }
@@ -62,7 +62,7 @@ p {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  height: 100vh;
+  height: 700px;
   padding-top: 20px;
   padding-left: 20px;
   padding-right: 20px;
@@ -250,16 +250,30 @@ input[type='radio'] {
 @media (min-width:1025px)  {
 
   .invitation {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
     padding-left: 400px;
     padding-right: 400px;
+
+  }
+  .celebrate {
+    width: 200px;
+  
   }
 
   .bottle {
-    width: 10%;
+    width: 100px;
   }
 
   .confetti {
-    width: 20%;
+    width: 200px;
+  }
+
+  input[type='checkbox'] {
+    width: auto; 
   }
 
 }
