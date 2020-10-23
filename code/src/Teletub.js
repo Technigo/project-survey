@@ -6,14 +6,14 @@ const Teletub = props => {
     const {question, setTeletubbies, teletubbies} = props
     return (
         <div className="teletubbies-wrapper">
-            <h2 tabIndex="0">Best teletubbies character?</h2>
+            <h2 tabIndex="0">{question}</h2>
             <img
                 tabIndex="0"
                 className="tt-image"
                 alt="visualization of a south park siter of teletubbies"
                 src={img}
             />
-            <label htmlFor="teletub">{question}</label>
+            <label htmlFor="teletub">Choose one of the four teletubbies</label>
                 <select 
                     onSubmit={event => event.preventDefault()}
                     aria-label="select-menu"

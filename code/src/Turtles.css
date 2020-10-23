@@ -14,3 +14,9 @@
         width: 50%;
     }
 }
+
+@media screen and (min-width:1024px) {
+    .turtles-image {
+        width: 40%;
+    }
+}

@@ -16,3 +16,9 @@
         width: 80%;
     }
 }
+
+@media screen and (min-width:1024px) {
+    .tt-image {
+        width: 60%;
+    }
+}

@@ -15,10 +15,17 @@ input[type = "text"]{
     font-family: "Montserrat", sans-serif;
     border-radius: 5px;
     padding: 5px;
-    margin-bottom: 20px;
+    margin: 20px 0;
+    font-size: 1em;
 }
 
 @media screen and (min-width:768px) {
+    .power-rangers-image{
+        width: 80%;
+    }
+}
+
+@media screen and (min-width:1024px) {
     .power-rangers-image{
         width: 50%;
     }
