@@ -8,7 +8,7 @@ import { InputEmail } from './InputEmail';
 import { Button } from './Button';
 import { Summary } from './Summary';
 import { ProgressBar } from './ProgressBar';
-import './Form.css';
+import '../Styles/Form.css';
 
 export const Form = () => {
 	const [question, setQuestion] = useState(-1); //show first "question"
@@ -26,7 +26,7 @@ export const Form = () => {
 	const handleSubmit = event => {
 		event.preventDefault();
 		setSubmit(true); //show summary on submit
-		console.log('form submitted');
+		//console.log('form submitted');
 	};
 
 	const handleMonthsChange = monthValue => {
@@ -46,8 +46,6 @@ export const Form = () => {
 	];
 
 	//array for checkbox
-	//const monthsArray = ['January', 'February', 'March', 'April'];
-	// Karro exempel
 	const seasonArray = [
 		{
 			season: 'Winter',
@@ -66,48 +64,27 @@ export const Form = () => {
 			months: ['September', 'October', 'November'],
 		},
 	];
-	console.log(seasonArray);
-	console.log(seasonArray.findIndex(item => item.season === 'Spring'));
-	console.log(
-		seasonArray[seasonArray.findIndex(item => item.season === 'Summer')].months
-	);
-	// {
-	// 	id: 'spring',
-	// 	month1: 'March',
-	// 	month2: 'April',
-	// 	month3: 'May',
-	// },
-	// {
-	// 	id: 'summer',
-	// 	month1: 'June',
-	// 	month2: 'July',
-	// 	month3: 'August',
-	// },
-	// {
-	// 	id: 'fall',
-	// 	month1: 'September',
-	// 	month2: 'October',
-	// 	month3: 'November',
-	// },
-	// ];
+	// console.log(seasonArray);
+	// console.log(seasonArray.findIndex(item => item.season === season));
+	// console.log(
+	// 	seasonArray[seasonArray.findIndex(item => item.season === 'Summer')].months
+	// );
 
 	return (
 		<section className="form-wrapper">
-			{/* <div className="intro-wrapper"> */}
 			{question === -1 && (
-				<article className="introduction">
+				<section className="introduction">
 					<h2>Welcome, please take a few minutes to answer this survey!</h2>
 					<div className="navigation-start">
 						<Button button="button" click={nextQuestion} text="Start survey" />
 					</div>
-				</article>
+				</section>
 			)}
-			{/* </div> */}
 
 			{!submit ? (
 				<form onSubmit={handleSubmit}>
 					{question === 0 && (
-						<article className="question-container">
+						<section className="question-container">
 							<InputText
 								question="What is your name?"
 								value={name}
@@ -122,11 +99,12 @@ export const Form = () => {
 									text="Next"
 								/>
 							</div>
-						</article>
+						</section>
 					)}
 
 					{question === 1 && (
-						<article className="question-container">
+						<section className="question-container">
+							{/* {console.log(season)} */}
 							<InputSelect
 								question="What's your favourit season?"
 								setSeason={setSeason}
@@ -141,17 +119,19 @@ export const Form = () => {
 									text="Next"
 								/>
 							</div>
-						</article>
+						</section>
 					)}
-					{question === 2 && season === 'Winter' && (
-						<>
+					{/* //rendering question depending on favourite season selected */}
+					{question === 2 && (
+						<section className="question-container">
 							<InputCheckbox
-								question="Select which ones you like"
+								question="Select which months you prefer"
 								selectedMonths={months}
 								onMonthsChange={handleMonthsChange}
+								value={season}
 								array={
 									seasonArray[
-										seasonArray.findIndex(item => item.season === 'Winter')
+										seasonArray.findIndex(item => item.season === season)
 									].months
 								}
 							/>
@@ -164,103 +144,13 @@ export const Form = () => {
 									text="Next"
 								/>
 							</div>
-						</>
+						</section>
 					)}
-					{question === 2 && season === 'Spring' && (
-						<>
-							<InputCheckbox
-								question="Select which ones you like"
-								selectedMonths={months}
-								onMonthsChange={handleMonthsChange}
-								array={
-									seasonArray[
-										seasonArray.findIndex(item => item.season === 'Spring')
-									].months
-								}
-							/>
-							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
-								<Button
-									button="button"
-									disabled={!season}
-									click={nextQuestion}
-									text="Next"
-								/>
-							</div>
-						</>
-					)}
-					{question === 2 && season === 'Summer' && (
-						<>
-							<InputCheckbox
-								question="Select which ones you like"
-								selectedMonths={months}
-								onMonthsChange={handleMonthsChange}
-								array={
-									seasonArray[
-										seasonArray.findIndex(item => item.season === 'Summer')
-									].months
-								}
-							/>
-							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
-								<Button
-									button="button"
-									disabled={!season}
-									click={nextQuestion}
-									text="Next"
-								/>
-							</div>
-						</>
-					)}
-					{question === 2 && season === 'Fall' && (
-						<>
-							<InputCheckbox
-								question="Select which ones you like"
-								selectedMonths={months}
-								onMonthsChange={handleMonthsChange}
-								array={
-									seasonArray[
-										seasonArray.findIndex(item => item.season === 'Fall')
-									].months
-								}
-							/>
-							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
-								<Button
-									button="button"
-									disabled={!season}
-									click={nextQuestion}
-									text="Next"
-								/>
-							</div>
-						</>
-					)}
-
-					{/* {question === 2 && (
-						<article className="question-container">
-							<InputCheckbox
-								question="Select months"
-								selectedMonths={months}
-								onMonthsChange={handleMonthsChange}
-								array={monthsArray}
-							/>
-							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
-								<Button
-									button="button"
-									disabled={!season}
-									click={nextQuestion}
-									text="Next"
-								/>
-							</div>
-						</article>
-					)} */}
-
 					{question === 3 && (
-						<article className="question-container">
+						<section className="question-container">
 							<InputRange
 								// id="range"
-								question={`From a 1-10 scale how much do you like ${season} ?`}
+								question={`How much do you like ${season}? (scale1-10)`}
 								value={value}
 								setValue={setValue}
 							/>
@@ -273,13 +163,13 @@ export const Form = () => {
 									text="Next"
 								/>
 							</div>
-						</article>
+						</section>
 					)}
 
 					{question === 4 && (
-						<article className="question-container">
+						<section className="question-container">
 							<InputRadio
-								question={`How many ${season} have you experienced?`}
+								question={`ah ${season}, how many have you experienced?`}
 								array={ageGroups}
 								setAge={setAge}
 								age={age}
@@ -293,31 +183,10 @@ export const Form = () => {
 									text="Next"
 								/>
 							</div>
-						</article>
+						</section>
 					)}
-
-					{/* {question === 4 && (
-						<article className="question-container">
-							<InputEmail
-								// id="email"
-								question="Type your e-mail to recieve a summary of your answers"
-								value={email}
-								setEmail={setEmail}
-							/>
-							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
-								<Button
-									type="button"
-									//type="submit"
-									// disabled={email === ''}
-									click={nextQuestion}
-									text="next"
-								/>
-							</div>
-						</article>
-					)} */}
 					{question === 5 && (
-						<article className="question-container">
+						<section className="question-container">
 							<Summary
 								name={name}
 								season={season}
@@ -325,81 +194,47 @@ export const Form = () => {
 								value={value}
 								email={email}
 							/>
-							<InputEmail
-								// id="email"
-								question="Type your e-mail to recieve a summary of your answers"
-								value={email}
-								setEmail={setEmail}
-							/>
-							<div className="navigation">
-								<Button button="button" click={previousQuestion} text="Back" />
-								<Button
-									type="submit"
-									disabled={!email}
-									//click={handleSubmit}
-									text="Submit"
+							<div className="email-container">
+								<InputEmail
+									question="Type your email and the summary will be send to you shortly!"
+									value={email}
+									setEmail={setEmail}
 								/>
+								<div className="navigation">
+									<Button
+										button="button"
+										click={previousQuestion}
+										text="Back"
+									/>
+									<Button type="submit" disabled={!email} text="Submit" />
+								</div>
 							</div>
-						</article>
+						</section>
 					)}
 
 					{question >= 0 && (
 						<section className="progress-bar-wrapper">
 							<ProgressBar
-								// progress={question}
 								progress={`${question}`}
 								maxProgress="5"
 								minProgress="0"
-								// progressText={`${question}/5`}
 							/>
 						</section>
 					)}
 				</form>
 			) : (
-				<>
-					{/* {summary === 0 && (
-						<article className="question-container">
-							<InputEmail
-								// id="email"
-								question="Type your e-mail to recieve a summary of your answers"
-								value={email}
-								setEmail={setEmail}
+				<section className="reset-wrapper">
+					<article className="reset">
+						<h4>Thank you!</h4>
+						<div className="navigation-reset">
+							<Button
+								button="button"
+								click={() => window.location.reload()}
+								text="Reset survey"
 							/>
-							<div className="navigation">
-								{/* <Button button="button" click={previousQuestion} text="Back" /> */}
-					{/* <Button
-									//type="button"
-									//type="submit"
-									// disabled={email === ''}
-									click={nextSummary}
-									text="Yes"
-								/> */}
-					{/* <Button
-									//type="button"
-									type="submit"
-									// disabled={email === ''}
-									click={nextSummary}
-									text="No"
-								/>
-							</div>
-						</article>
-					)} */}
-
-					{/* {summary === 1 && ( */}
-					<section className="reset-wrapper">
-						<article className="reset">
-							<h4>Thank you!</h4>
-							<div className="navigation-reset">
-								<Button
-									button="button"
-									click={() => window.location.reload()}
-									text="Reset survey"
-								/>
-							</div>
-						</article>
-					</section>
-					{/* )} */}
-				</>
+						</div>
+					</article>
+				</section>
 			)}
 		</section>
 	);

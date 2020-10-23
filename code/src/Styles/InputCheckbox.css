@@ -1,0 +1,10 @@
+.input-checkbox-container {
+	width: 100%;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.input-checkbox-container input {
+	margin-right: 10px;
+	width: 100px;
+}

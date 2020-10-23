@@ -1,5 +1,5 @@
 import React from 'react';
-import './ProgressBar.css';
+import '../Styles/ProgressBar.css';
 
 export const ProgressBar = ({ progress, maxProgress, minProgress }) => {
 	return (
@@ -15,7 +15,6 @@ export const ProgressBar = ({ progress, maxProgress, minProgress }) => {
 				max={maxProgress}
 				min={minProgress}
 			></progress>
-			{/* <output name="progress-output">{progress}</output> */}
 		</>
 	);
 };

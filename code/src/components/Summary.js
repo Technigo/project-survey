@@ -1,21 +1,25 @@
 import React from 'react';
-import './Summary.css';
 
 export const Summary = ({ name, season, selected, value, email }) => {
 	return (
 		<section className="summary-container">
 			<h3>Summary</h3>
 			<p>
-				<b>Your name is:</b> {name}
-			</p>
-			<p>Your favourit season is: {season}</p>
-			<p>
-				Years experienced {season}: Somewhere between {selected}
+				<strong>Your name is:</strong> {name}
 			</p>
 			<p>
-				{season} likability: {value} out of 10
+				<strong>Your favourit season is:</strong> {season}
 			</p>
-			<p>Summary of your answers will be send to: {email}</p>
+			<p>
+				<strong>{season} experienced:</strong> Between {selected}
+			</p>
+			<p>
+				<strong>{season} likability:</strong> {value} out of 10
+			</p>
+			<p>
+				<strong>Summary of your answers will be send to: </strong>
+				{email}
+			</p>
 		</section>
 	);
 };

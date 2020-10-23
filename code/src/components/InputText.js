@@ -1,5 +1,5 @@
 import React from 'react';
-import './InputText.css';
+import '../Styles/InputText.css';
 
 export const InputText = ({ question, value, setName }) => {
 	return (

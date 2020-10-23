@@ -1,5 +1,4 @@
 import React from 'react';
-import './InputSelect.css';
 
 export const InputSelect = ({ id, question, setSeason, value }) => {
 	return (
@@ -7,9 +6,7 @@ export const InputSelect = ({ id, question, setSeason, value }) => {
 			<label htmlFor={id}>
 				<h2>{question}</h2>
 				<select
-					// id={id}
 					value={value}
-					// key={value.id}
 					className="select-container"
 					onChange={event => setSeason(event.target.value)}
 				>

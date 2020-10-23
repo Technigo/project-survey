@@ -1,10 +1,10 @@
 import React from 'react';
-import './InputEmail.css';
+import '../Styles/InputEmail.css';
 
 export const InputEmail = ({ question, email, setEmail }) => {
 	return (
 		<label htmlFor="InputEmail">
-			<h2>{question}</h2>
+			<h4>{question}</h4>
 			<input
 				id="InputEmail"
 				type="email"
@@ -13,7 +13,7 @@ export const InputEmail = ({ question, email, setEmail }) => {
 				value={email}
 				onKeyPress={event => {
 					event.key === 'Enter' && event.preventDefault();
-				}} //to prevent form so update when pressed enter on text input
+				}}
 				required
 			/>
 		</label>
