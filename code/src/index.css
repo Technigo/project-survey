@@ -13,10 +13,19 @@ header {
   align-items: center;
   justify-content: center;
   width: 100%;
-  height: 500px;
+  height: 300px;
+  padding-top: 300px;
   background-color: #5E6572;
   font-family: 'Sacramento', cursive;
 }
+
+.celebrate {
+  align-self: center;
+  padding-top: 40px;
+  padding-bottom: 150px;
+  width: 100px;
+}
+
 .arrow {
   height: 100px;
   padding-top: 50px;
@@ -63,17 +72,11 @@ p {
   justify-content: center;
   width: 100%;
   height: 700px;
-  padding-top: 20px;
+  padding-top: 80px;
   padding-left: 20px;
   padding-right: 20px;
   line-height: 1.5;
   background-color: #5E6572;
-}
-
-.celebrate {
-  align-self: center;
-  width: 30%;
-  padding: 10px;
 }
 
 ul {
@@ -224,8 +227,8 @@ input[type='radio'] {
 
   .invitation {
     padding-top: 50px;
-    padding-left: 50px;
-    padding-right: 50px;
+    padding-left: 100px;
+    padding-right: 100px;
   }
 
   .bottle {
