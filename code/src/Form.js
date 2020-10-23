@@ -1,4 +1,12 @@
 import React, { useState } from 'react'
+// import { QuizQuestions } from './QuizQuestions'
+
+
+import { FirstQuestion } from './FirstQuestion'
+import { Question2 } from './Question2'
+import { Question3 } from './Question3'
+import { Question4 } from './Question4'
+import { Summary } from './Summary'
 
 const questions = [
     {
@@ -70,90 +78,60 @@ const questions = [
 
 export const Form = () => {
     const [name, setName] = useState('');
-    const [language, setLanguage] = useState('');
-    const [likeProgramming, setLikePogramming] = useState('');
+    const [gift, setGift] = useState('');
+    const [discription, setDiscription] = useState([]);
+    const [userName, setUserName] = useState('');
 
-    const onNameChange = newName => {
+    const handlerNameChange = newName => {
         setName(newName);
     }
 
-    const onLanguageChange = newLanguage => {
-        setLanguage(newLanguage);
+    const handlerGiftChange = newGift => {
+        setGift(newGift);
     }
 
-    const onLikeChange = newLikeProgramming => {
-        setLikePogramming(newLikeProgramming);
+    const handlerDiscriptionChange = newDiscription => {
+        discription.includes(newDiscription)
+            ? setDiscription( discription.filter(item => item !== newDiscription))
+            : setDiscription( [...discription, newDiscription] );
+    }
+
+    const handlerUserNameChange = newUserName => {
+        setUserName(newUserName);
     }
 
     return (
         <form>
-            <div>
-                <label htmlFor="name">Your name</label>
-                <input 
-                    value={name} 
-                    onChange={e => onNameChange(e.target.value)} 
-                    id="name" 
-                    type="text" />
-            </div>
-            <label>
-                <h2>What is your favorite language so far?</h2>
-                <select 
-                    value={language} 
-                    onChange={e => onLanguageChange(e.target.value)}>
+            <FirstQuestion 
+                name={name} 
+                setName={setName} 
+                onNameChange={handlerNameChange}
+            />
 
-                        <option value="">Choose your favorite</option>
-                        <option value="html">HTML</option>
-                        <option value="css">CSS</option>
-                        <option value="javascript">JavaScript</option>
-                </select>
-            </label>
+            <Question2
+                name={name}
+                discription={discription}
+                setDiscription={setDiscription}
+                onDiscriptionChange={handlerDiscriptionChange}
+            />
+
+            <Question3 
+                gift={gift} 
+                setGift={setGift} 
+                onGiftChange={handlerGiftChange}/>
             
-            <div>
-                <h2>{questions[0].question}</h2>
-                <input 
-                    type="button"
-                    value={questions[0].answers[0].answer}
-                />
-                 <input 
-                    type="button"
-                    value={questions[0].answers[1].answer}
-                />
-                 <input 
-                    type="button"
-                    value={questions[0].answers[2].answer}
-                />
-                 <input 
-                    type="button"
-                    value={questions[0].answers[3].answer}
-                />
-            </div>
-            <div>
-                <h2>Do you like programming?</h2>
-                <label>
-                    <input 
-                        type="radio" 
-                        value="love it"
-                        onChange={e => onLikeChange(e.target.value)} 
-                        checked={likeProgramming === "love it"}
-                        />
-                    Love it!
-                </label>
-                <label>
-                    <input type="radio" value="nope" 
-                        onChange={e => onLikeChange(e.target.value)} 
-                        checked={likeProgramming === "nope"}
-                    />
-                    Nope
-                </label>
-                <label>
-                    <input type="radio" value="love-hate" 
-                    onChange={e => onLikeChange(e.target.value)} 
-                    checked={likeProgramming === "love-hate"}
-                    />
-                    It's a love-hate relationship!
-                </label>
-                
-            </div>
+            <Question4 
+                userName={userName} 
+                setUserName={setUserName} 
+                onUserNameChange={handlerUserNameChange}
+            />
+            
+            <Summary
+                name={name}
+                discription={discription}
+                gift={gift}
+                userName={userName}
+            />
         </form>
     )
 }
@@ -172,3 +150,75 @@ export const Form = () => {
         </label>
     ))}
 </div> */
+
+
+
+// const [name, setName] = useState('');
+// const [language, setLanguage] = useState('');
+// const [likeProgramming, setLikePogramming] = useState('');
+// const [answer, setanswer] = useState('');
+
+// const onNameChange = newName => {
+//     setName(newName);
+// }
+
+// const onLanguageChange = newLanguage => {
+//     setLanguage(newLanguage);
+// }
+
+// const onLikeChange = newLikeProgramming => {
+//     setLikePogramming(newLikeProgramming);
+
+
+
+//  <div>
+//                 <label htmlFor="name">Your name</label>
+//                 <input 
+//                     value={name} 
+//                     onChange={e => onNameChange(e.target.value)} 
+//                     id="name" 
+//                     type="text" 
+//                 />
+//             </div>
+            
+            
+            
+//             <div>
+//                 {questions.map(question => {
+//                     return (
+//                         <QuizQuestions 
+//                             question={question.question}
+//                             answers={question.answers}  
+//                         />
+//                     )
+//                 })}
+//             </div>
+            
+//             <Question2 />
+//             <div>
+//                 <h2>Do you like programming?</h2>
+//                 <label>
+//                     <input 
+//                         type="radio" 
+//                         value="love it"
+//                         onChange={e => onLikeChange(e.target.value)} 
+//                         checked={likeProgramming === "love it"}
+//                         />
+//                     Love it!
+//                 </label>
+//                 <label>
+//                     <input type="radio" value="nope" 
+//                         onChange={e => onLikeChange(e.target.value)} 
+//                         checked={likeProgramming === "nope"}
+//                     />
+//                     Nope
+//                 </label>
+//                 <label>
+//                     <input type="radio" value="love-hate" 
+//                     onChange={e => onLikeChange(e.target.value)} 
+//                     checked={likeProgramming === "love-hate"}
+//                     />
+//                     It's a love-hate relationship!
+//                 </label>
+                
+//             </div>

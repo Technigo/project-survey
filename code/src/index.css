@@ -4,9 +4,44 @@ body {
   font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #EFEFEF;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+h1 {
+  text-align: center;
+  font-size: 60px;
+}
+.question-answer-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.question{
+  text-align: center;
+  font-weight: 600;
+  font-size: 24px;
+  padding: 20px;
+}
+
+.answer-container {
+  display: flex;
+  flex-direction: column;
+ 
+}
+
+.quiz-answer-button {
+  display: inline-flex;
+  font-size: 16px;
+  flex-direction: column;
+  background-color: #F4CAB7;
+  border: none;
+  padding: 20px;
+  width: 100%;
+  margin: 10px 0 10px 0;
+  box-sizing: border-box;
+  border-radius: 20px;
 }
