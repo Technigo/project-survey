@@ -1,24 +1,26 @@
 import React from 'react';
 
 const InputRadiobutton = ({
-  className,
+  classLabel,
   question,
   array,
   value,
-  setRadiobutton,
+  onRadioChange,
+  classSpan,
 }) => {
   return (
     <>
       <h2>{question}</h2>
       {array.map(radio => (
-        <label className={className} htmlFor={radio} key={radio} tabIndex="0">
+        <label className={classLabel} htmlFor={radio} key={radio} tabIndex="0">
           <input
             id={radio}
             type="radio"
             value={radio}
-            onChange={event => setRadiobutton(event.target.value)}
+            onChange={onRadioChange}
             checked={value === radio}
           />
+          <span className={classSpan}> </span>
           {radio}
         </label>
       ))}

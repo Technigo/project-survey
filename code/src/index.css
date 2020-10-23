@@ -15,3 +15,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+h1 {
+  width: 100%;
+  font-size: 30px;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+label {
+  width: 100%;
+  padding: 10px 0;
+  font-weight: 600;
+  font-size: 14px;
+  color: #f3cbaa;
+  text-transform: uppercase;
+}

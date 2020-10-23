@@ -1,15 +1,22 @@
 import React from 'react';
 
-const InputCheckbox = ({ className, question, checkbox, setCheckbox }) => {
+const InputCheckbox = ({
+  classLabel,
+  question,
+  checkbox,
+  onCheckboxChange,
+  classSpan,
+}) => {
   return (
-    <label className={className} htmlFor="InputCheckbox">
+    <label className={classLabel} htmlFor="InputCheckbox">
       {question}
       <input
         id="InputCheckbox"
         type="checkbox"
         checked={checkbox}
-        onChange={event => setCheckbox(event.target.checked)}
+        onChange={onCheckboxChange}
       />
+      <span className={classSpan}> </span>
     </label>
   );
 };

@@ -1,7 +1,14 @@
 import React from 'react';
-import './InputText.scss';
 
-const InputText = ({ classLabel, classInput, question, value, setText }) => {
+import '../styles/InputText.scss';
+
+const InputText = ({
+  classLabel,
+  classInput,
+  question,
+  value,
+  onTextChange,
+}) => {
   return (
     <label className={classLabel} htmlFor="InputText">
       {question}
@@ -10,8 +17,11 @@ const InputText = ({ classLabel, classInput, question, value, setText }) => {
         type="text"
         id="InputText"
         value={value}
-        onChange={event => setText(event.target.value)}
+        onChange={onTextChange}
         placeholder="Enter something"
+        onKeyPress={event => {
+          event.key === 'Enter' && event.preventDefault();
+        }}
       />
     </label>
   );

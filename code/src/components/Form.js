@@ -7,13 +7,13 @@ import InputRadiobutton from './InputRadiobutton';
 import Summary from './Summary';
 import Button from './Button';
 import ProgressBar from './ProgressBar';
-import './Form.scss';
+import '../styles/Form.scss';
 
 const Form = () => {
   const [pageIndex, setPageIndex] = useState(-1);
   const [text, setText] = useState('');
   const [select, setSelect] = useState('');
-  const [radiobutton, setRadiobutton] = useState();
+  const [radiobutton, setRadio] = useState();
   const [checkbox, setCheckbox] = useState(false);
   const [submit, setSubmit] = useState(false);
 
@@ -21,9 +21,33 @@ const Form = () => {
     event.preventDefault();
     setSubmit(true);
   };
-
-  const nextQuestion = () => setPageIndex(pageIndex + 1);
+  //const nextQuestion = () => setPageIndex(pageIndex + 1);
   const previousQuestion = () => setPageIndex(pageIndex - 1);
+  const handleTextChange = event => {
+    setText(event.target.value);
+  };
+  const handleSelectChange = event => {
+    setSelect(event.target.value);
+  };
+  const handleRadioChange = event => {
+    setRadio(event.target.value);
+  };
+  const handleCheckboxChange = event => {
+    setCheckbox(event.target.value);
+  };
+  const onNextPageChange = () => {
+    setPageIndex(pageIndex + 1);
+    // if (text === 'Start') {
+
+    // }
+    // console.log('Hello!');
+  };
+  const onPreviousPageChange = () => {
+    setPageIndex(pageIndex - 1);
+  };
+  const onSubmit = () => {
+    window.location.reload();
+  };
 
   const selectArray = ['', '1-10', '11-20'];
   const radiobuttonArray = ['0-10', '11-20', '21-30'];
@@ -35,6 +59,7 @@ const Form = () => {
     summary: 'Summary',
   };
   console.log(text);
+  console.log(select);
   return (
     <main className="App__main">
       {!submit ? (
@@ -48,7 +73,7 @@ const Form = () => {
               <Button
                 className="Button"
                 type="button"
-                click={nextQuestion}
+                click={onNextPageChange}
                 text="Start"
                 icon={
                   <i className="Button__i Button__i--right fa fa-arrow-right"></i>
@@ -59,17 +84,17 @@ const Form = () => {
           {pageIndex === 0 && (
             <section className="Form__section">
               <InputText
-                classLabel="Form__label"
-                classInput="InputText"
+                classLabel=""
+                classInput="Form__text"
                 question={questions.text}
                 value={text}
-                setText={setText}
+                onTextChange={handleTextChange}
               />
               <div className="Button-container">
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={previousQuestion}
+                  click={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -78,7 +103,7 @@ const Form = () => {
                 <Button
                   className="Button"
                   type="button"
-                  click={nextQuestion}
+                  click={onNextPageChange}
                   disabled={!text}
                   text="Proceed"
                   icon={
@@ -91,20 +116,18 @@ const Form = () => {
 
           {pageIndex === 1 && (
             <section className="Form__section">
-              <div className="Select-container">
-                <InputSelect
-                  className="Form__label"
-                  question={questions.select}
-                  array={selectArray}
-                  value={select}
-                  setSelect={setSelect}
-                />
-              </div>
+              <InputSelect
+                className="Form__label-select"
+                question={questions.select}
+                array={selectArray}
+                value={select}
+                onSelectChange={handleSelectChange}
+              />
               <div className="Button-container">
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={previousQuestion}
+                  click={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -113,11 +136,11 @@ const Form = () => {
                 <Button
                   className="Button"
                   type="button"
-                  click={nextQuestion}
+                  click={onNextPageChange}
                   disabled={!select}
                   text="Proceed"
                   icon={
-                    <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                    <i className="Button__i Button__i--right fa fa-arrow-right"></i>
                   }
                 />
               </div>
@@ -127,16 +150,18 @@ const Form = () => {
             (select === '1-10' ? (
               <section className="Form__section">
                 <InputCheckbox
-                  className="Form__label"
+                  classLabel="Form__label"
+                  classInput="Form__input-checkbox"
                   question={questions.checkbox}
-                  value={checkbox}
-                  setCheckbox={setCheckbox}
+                  checkbox={checkbox}
+                  onCheckboxChange={handleCheckboxChange}
+                  classSpan="Form__input Form__input-checkbox"
                 />
                 <div className="Button-container">
                   <Button
                     className="Button Button--reverse"
                     type="button"
-                    click={previousQuestion}
+                    click={onPreviousPageChange}
                     text="Go Back"
                     icon={
                       <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -145,10 +170,10 @@ const Form = () => {
                   <Button
                     className="Button"
                     type="button"
-                    click={nextQuestion}
+                    click={onNextPageChange}
                     text="Proceed"
                     icon={
-                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                      <i className="Button__i Button__i--right fa fa-arrow-right"></i>
                     }
                   />
                 </div>
@@ -156,17 +181,18 @@ const Form = () => {
             ) : (
               <section className="Form__section">
                 <InputRadiobutton
-                  className="Form__label"
+                  classLabel="Form__label"
                   question={questions.radio}
                   array={radiobuttonArray}
                   value={radiobutton}
-                  setRadiobutton={setRadiobutton}
+                  onRadioChange={handleRadioChange}
+                  classSpan="Form__input Form__input-radio"
                 />
                 <div className="Button-container">
                   <Button
                     className="Button Button--reverse"
                     type="button"
-                    click={previousQuestion}
+                    click={onPreviousPageChange}
                     text="Go Back"
                     icon={
                       <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -175,11 +201,11 @@ const Form = () => {
                   <Button
                     className="Button"
                     type="button"
-                    click={nextQuestion}
+                    click={onNextPageChange}
                     disabled={!radiobutton}
                     text="Proceed"
                     icon={
-                      <i className="Button__i Button__i--left fa fa-arrow-left"></i>
+                      <i className="Button__i Button__i--right fa fa-arrow-right"></i>
                     }
                   />
                 </div>
@@ -200,7 +226,7 @@ const Form = () => {
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={previousQuestion}
+                  click={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -227,8 +253,8 @@ const Form = () => {
           <Button
             className="Button"
             type="button"
-            click={() => window.location.reload()}
-            text="Return"
+            click={onSubmit}
+            text="Home"
           />
         </section>
       )}
