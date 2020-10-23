@@ -24,17 +24,31 @@ For validation I used 'required' on all input areas.
 
 The app is responsive.
 
+# Accessability
+
+The requirements also stated that the app should take accessability into account (as it always should I guess)
+
 It has keyboard navigation through tab and enter. This I achieved using tabindex, label htmlFor and aria-label. The radiobuttons turned out to be the hardest to target with a screenreader.
 
 Tools I have used for testing accessability:
 
+- Screenreader: Chrome Vox and the in-built Apple tool
+- Wave audit
+- Iphone speak screen
+- Chrome dev mode to check structure without CSS
+- Chrome dev tool Lighthouse - the app scored 96% on accessability (not great on performance though..)
+- HTML validation
+- CSS validation
+
+The app was tested on Iphone X, desktop, and in Chrome, Firefox and Safari.
 
 
-but take accessibility into account when you are styling your form elements - so inputs should have labels and should be easily readable and usable.
 
 
 
 
-# Accessability
 
-but take accessibility into account when you are styling your form elements - so inputs should have labels and should be easily readable and usable.
+
+
+
+
