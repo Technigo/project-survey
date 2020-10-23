@@ -36,15 +36,18 @@ export const Form = () => {
   return (
     <>
       {!result ? (
-        <form onSubmit={handleSubmit}>
-          <AgeQuestion legal={legal} onLegalChange={handleLegalChange} />
-          <DrinkQuestion drink={drink} onDrinkChange={handleDrinkChange} />
-          <AlcoholQuestion alcohol={alcohol} onAlcoholChange={handleAlcoholChange} />
-          <button type="submit">Submit</button>
-        </form>
+        <div className="form-wrapper">
+          <form onSubmit={handleSubmit}>
+            <AgeQuestion legal={legal} onLegalChange={handleLegalChange} />
+            <DrinkQuestion drink={drink} onDrinkChange={handleDrinkChange} />
+            <AlcoholQuestion alcohol={alcohol} onAlcoholChange={handleAlcoholChange} />
+            <button type="submit">Submit</button>
+          </form>
+        </div>
       ) : (
           <Result legal={legal} drink={drink} alcohol={alcohol} />
-        )}
+        )
+      }
     </>
   )
 }

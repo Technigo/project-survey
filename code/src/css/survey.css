@@ -1,10 +1,14 @@
+.form-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
 form {
   padding: 20px;  
   background-color: orangered;
   color: white;
   border-radius: 50px;
-  width: 50%;
-  margin: auto;
+  margin: 20px;
 }
 
 p {
@@ -12,7 +16,7 @@ p {
 }
 
 .question {
-  margin: 20px;
+  margin: 40px;
 }
 
 .question input {

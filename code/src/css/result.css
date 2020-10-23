@@ -1,7 +1,32 @@
 .result {
- 
+ display: flex;
+ justify-content: center;
 }
 
 h2 {
   color: purple;
+}
+
+img {
+  width: 300px;
+  border-radius: 20px;
+}
+
+figcaption {
+  margin: 20px 0 0 0;
+  text-align: center;
+  color:purple;
+  font-family: sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.card {
+  background-color:lightgreen;
+  width: 300px;
+  margin: 60px;
+  padding: 20px;
+  border-radius: 20px;  
+  border: 4px dotted purple;
+  box-shadow:  0 0 32px 8px orangered;
 }
