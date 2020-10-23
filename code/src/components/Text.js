@@ -10,6 +10,9 @@ export const Text = ({ name, setName }) => {
         type="text"
         onChange={event => setName(event.target.value)}
         value={name}
+        placeholder="Enter name here"
+        required
+        minLength="2"
       />
     </div> /*onSubmit={(event) => event.preventDefault()}*/
   

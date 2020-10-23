@@ -1,0 +1,44 @@
+.submit-button {
+  display: inline-block;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
+  font-size: 28px;
+  text-align: center;
+  color: #ffffff;
+  font-weight: 700;
+  background-color: #000000;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+  margin-top: 10px;
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  transition: all 0.5s;
+  width: 200px;
+}
+
+.submit-button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.submit-button span:after {
+  content: "\00bb";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.submit-button:hover span {
+  padding-right: 25px;
+}
+
+.submit-button:hover span:after {
+  opacity: 1;
+  right: 0;
+}

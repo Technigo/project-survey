@@ -1,8 +1,9 @@
 import React from 'react';
+import './submit.css';
 
 export const Submit = () => {
 
   return (
-    <button type="submit">Submit</button>
+    <button className="submit-button" type="submit"><span>Submit</span></button>
   )
 };

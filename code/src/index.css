@@ -9,10 +9,26 @@ body {
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position-x: center;
-  background-position-y: center;
+  background-position-y: 60%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-position-y: 50%;
+  }
+}
+
+@media (min-width: 1025px) {
+  /*body {
+    background-position-y: 50%;
+  }*/
 }
