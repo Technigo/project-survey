@@ -1,13 +1,22 @@
-# Survey form with React
+# Which is your favourite color based on comic characters
 
-Replace this readme with your own information about your project.
+## Build a Survey with React
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+### This project was made as part of Technigo’s front-end developer boot camp Fall 2020
 
-## The problem
+In this project, I use react to build a survey form.
+It consist of 4 questions that needs to be answered and when the user press submit, a summary of the answers is presented.  
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+### Focus
 
-## View it live
+The focus in this project was to practice using React state and controlling forms.
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+### View it live
+
+The site is deployed <a href="https://musing-wilson-8814a6.netlify.app">here.</a>  
+Check it out and learn some cool facts about period poverty and a solution!
+
+### Author and contact
+
+My name: Johanna Blom
+My <a href="https://www.linkedin.com/in/johanna-blom-2419a181/">Linkedin</a>
