@@ -18,11 +18,19 @@ const Survey = () => {
   const [ageGroup, setAgeGroup] = useState(); //Agegroup-radiobutton
   const [color, setColor] = useState(''); //Color select-dropdown 
   //const [hobbies, setHobbies] =useState([]);    //HobbiesCheckbox
+  
   const handleSubmit = event => { //To prevent that page reloads on submit
     event.preventDefault();
   };
+
+  //Why would I need a function onNameChange as Max did on wed lecture @38:00??
+  //Like: const onNameChange = event => { setName(event.target.value); };
+
   const ageGroups = ["20-24", "25-29", "30-34", "35-39", "40-44", "45+"];
 
+  //Should I have a function onHobbiesChange here? @1:03 wed lecture.
+ //Like: const onHobbiesChange = (hobbieValue) => {}
+ 
   return (
     <>
     <section className="header-section"> 

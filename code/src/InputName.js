@@ -14,7 +14,7 @@ const InputName = ({ question, name, setName }) => {
         <input
           id="InputText"
           type="text"
-          onChange={event => setName(event.target.value)}
+          onChange={event => setName(event.target.value)} //Here I would add {onNameChange} that Max talked about @lecture wed 38:00??
           value={name}
           required
           minLength="2"
