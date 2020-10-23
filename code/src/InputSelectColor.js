@@ -1,12 +1,15 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // Favourite color
-const InputSelectColor = () => {
-  const [color, setColor] = useState('');
+const InputSelectColor = ({id, question, setColor, color}) => {
+  
 
   return (
-    <form className="input-select-color"> Select your favorite color:
-      <select
+    <> 
+     <label htmlFor={id}>
+       <h3>{question}</h3> 
+      <select 
+        className="input-select-color"
         onChange={event => setColor(event.target.value)}
         value={color}
       >
@@ -23,7 +26,8 @@ const InputSelectColor = () => {
         <option value="brown">brown</option>
         <option value="black">black</option>
       </select>
-    </form>
+      </label>
+     </> 
   );
 };
 export default InputSelectColor

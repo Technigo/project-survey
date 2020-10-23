@@ -4,5 +4,5 @@ import React from 'react'
 export const Button = ({button, click, disabled, text}) => {
   return (
     <button type={button} onClick={click} disabled={disabled}>{text}</button>
-  )
-}
+  );
+};
