@@ -38,17 +38,16 @@ const Form = () => {
         {!showSummary ? (
         <form className='form' id='form' onSubmit={handleSubmit}>
             <Input name={name} onInputChange={handleNameInput}/>
-            <Select number={numberOfPlants} onSelectChange={handleSelect}/>
+            <Select numberOfPlants={numberOfPlants} onSelectChange={handleSelect}/>
             <Radiobuttons favoritePlant={favoritePlant} onSelectRadio={handleRadio}/>
             <button className='submit-button' tabIndex='0' type='submit'>Submit</button>
         </form>
-        ) : (
-        <Summary name={name} numberOfPlants={numberOfPlants} favoritePlant={favoritePlant} />
+        ) : (         
+        <Summary name={name} numberOfPlants={numberOfPlants} favoritePlant={favoritePlant}/>
         )}
     </section>
-        
     );
-};
+};    
 
 export default Form
 

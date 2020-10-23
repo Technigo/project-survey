@@ -1,12 +1,9 @@
 import React from 'react'; 
 
-const Input = (props) => {
-    
     /* Sending in name and onInputChange as props */
-    const { name, onInputChange } = props
-    
-    return (
+const Input = ({ name, onInputChange }) => {
 
+    return (
         <section className='question1-wrapper'>
             <h2 className='form-header'>Please fill in the form:</h2>
             
@@ -26,7 +23,7 @@ const Input = (props) => {
             />
             
         </section>
-            )
+     )
 }
 
 export default Input;

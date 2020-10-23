@@ -41,3 +41,50 @@
     color: #ffffff;
     cursor: pointer;
   }
+
+    /* MEDIA QUERIES */
+    @media screen and (min-width: 280px) {
+
+      .form-header {
+        text-align: center;
+        font-size: 32px;
+      }
+    
+      .question2-wrapper, .question3-wrapper {
+        margin-top: 50px;
+    
+      }
+    
+      .question-header {
+        font-size: 18px;
+        padding-bottom: 10px;
+      }
+    
+      .submit-button {
+        font-size: 18px;
+      }
+      
+  }
+  
+  @media screen and (min-width:420px) {
+      body {
+          font-size: 18px;
+      }
+  }
+  
+  @media screen and (min-width:768px) {
+  
+  }
+  
+  @media screen and (min-width:1024px) {
+  
+  }
+  
+  @media screen and (min-width:1300px) {
+  
+  }
+  
+  
+  @media screen and (min-width:1600px) {
+   
+  }

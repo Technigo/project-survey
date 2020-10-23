@@ -2,7 +2,7 @@ import React from 'react';
 
 /* Sending in numberOfPlants and onSelectChange as props */
 const Select = ({numberOfPlants, onSelectChange }) => {
-
+    
     return (
         <section className='question2-wrapper'>
             <h3 className="question-header"> 
@@ -13,7 +13,7 @@ const Select = ({numberOfPlants, onSelectChange }) => {
             <label> Choose an approximate number: </label>
             <select 
             onChange={event => onSelectChange(event.target.value)}
-            value={numberOfPlants}
+            value={numberOfPlants} 
             required>
             <option value=''> Select a number: </option>
             <option value='1-5'>1-5</option>
@@ -24,8 +24,7 @@ const Select = ({numberOfPlants, onSelectChange }) => {
             <option value='15-20'>25-30</option>
             <option value='15-20'>25-30</option>
             </select>
-        </section>
+   </section>
     )
 }
-
 export default Select;

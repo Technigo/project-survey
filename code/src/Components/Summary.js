@@ -2,7 +2,6 @@ import React from 'react';
 
 /* Sending in name, numberOfPlants and favoritePlant as props in summary */
 const Summary = ({ name, numberOfPlants, favoritePlant }) => {
-
     return (
         <>
         <section>
@@ -14,7 +13,6 @@ const Summary = ({ name, numberOfPlants, favoritePlant }) => {
         <button tabIndex="0" type="button" onClick={() => window.location.reload()}>Reset</button>
         </section>
         </>
-
     );
 };
 

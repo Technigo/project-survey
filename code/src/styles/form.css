@@ -1,7 +1,9 @@
+/* STYLE FOR FORM */
+
+
 .form {
     background: #a9c2a7;
     padding: 50px;
-    margin: 20px;
   }
 
   .form-header {
@@ -29,3 +31,56 @@
     cursor: pointer;
     width: 100%;
   }
+  
+  /* MEDIA QUERIES */
+  @media screen and (min-width: 280px) {
+    .form-wrapper {
+      padding: 10px;
+  }
+    .form {
+      padding: 10px;
+    }
+
+    .form-header {
+      font-size: 18px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+  
+    .question2-wrapper, .question3-wrapper {
+      margin-top: 50px;
+    }
+  
+    .question-header {
+      font-size: 18px;
+      padding-bottom: 10px;
+    }
+  
+    .submit-button {
+      font-size: 18px;
+    }
+    
+}
+
+@media screen and (min-width:420px) {
+    body {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width:768px) {
+
+}
+
+@media screen and (min-width:1024px) {
+
+}
+
+@media screen and (min-width:1300px) {
+
+}
+
+
+@media screen and (min-width:1600px) {
+ 
+}
