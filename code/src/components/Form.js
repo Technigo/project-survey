@@ -90,6 +90,7 @@ const Form = () => {
       {!submit ? (
         <form className="Form" onSubmit={handleSubmit}>
           <h1 className="App__header">Excellent survey</h1>
+
           {pageIndex === -1 && (
             <section className="Form__section">
               <h2 className="App__subheader">
@@ -111,7 +112,6 @@ const Form = () => {
           {pageIndex === 0 && (
             <section className="Form__section">
               <InputText
-                classLabel=""
                 classInput="Form__text"
                 question={questions.text}
                 value={text}
@@ -281,7 +281,7 @@ const Form = () => {
               <ProgressBar
                 classLabel="Form__label-progressbar"
                 progress={pageIndex}
-                maxProgress="4"
+                maxProgress={Object.keys(questions).length}
                 classProgress="Form__progressbar"
               />
             </section>

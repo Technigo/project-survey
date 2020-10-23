@@ -21,9 +21,6 @@ const InputSelect = ({
             {item.text}
           </option>
         ))}
-        {/* <option value="">Select</option>
-        <option value="1-10">1-10</option>
-        <option value="11-20">11-20</option> */}
       </select>
     </label>
   );

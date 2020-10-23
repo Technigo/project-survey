@@ -1,14 +1,8 @@
 import React from 'react';
 
-const InputText = ({
-  classLabel,
-  classInput,
-  question,
-  value,
-  onTextChange,
-}) => {
+const InputText = ({ classInput, question, value, onTextChange }) => {
   return (
-    <label className={classLabel} htmlFor="InputText">
+    <label htmlFor="InputText">
       {question}
       <input
         className={classInput}

@@ -17,5 +17,3 @@ const Button = ({ className, type, click, disabled, text, icon }) => {
 };
 
 export default Button;
-
-// {text === ''}
