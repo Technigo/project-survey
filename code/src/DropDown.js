@@ -6,12 +6,12 @@ const DropDown = ({ location, onLocationChange }) => {
       <label htmlFor="location">
         <h2 className="label">1 - Where are you located?</h2>
       </label>
-      <select className="dropdown-options" id="location" value={location} onChange={onLocationChange}>
+      <select tabIndex="0" className="dropdown-options" id="location" value={location} onChange={onLocationChange}>
         <option value="">Select a location</option>
-        <option value="stockholm">Stockholm</option>
-        <option value="uppsala">Uppsala</option>
-        <option value="gothenburg">Gothenburg</option>
-        <option value="abroad">Abroad</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Uppsala">Uppsala</option>
+        <option value="Gothenburg">Gothenburg</option>
+        <option value="Abroad">Abroad</option>
       </select>
     </section>
   )
