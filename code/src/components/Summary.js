@@ -5,10 +5,9 @@ const Summary = ({ questionAnswer1, questionAnswer2, questionAnswer3 }) => {
   return (
     <div className="summary">
       <p>Summary: Okay, so you live in {questionAnswer1} and you're moving {questionAnswer2} away.
-  Your answer with needing help with cleaning was: {questionAnswer3}</p>
+      Your answer with needing help with cleaning was: {questionAnswer3}</p>
     </div>
   );
-
 
 };
 

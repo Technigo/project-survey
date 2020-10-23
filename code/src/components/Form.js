@@ -12,8 +12,9 @@ import "./form.css";
 
 const Form = () => {
   //all the state hooks
+  const [displaySummary, setDisplaySummary] = useState(false);
   const [text, setText] = useState("");
-  const [distance, setDistance] = useState("");
+  const [distance, setDistance] = useState({});
   const [answer, setAnswer] = useState("");
 
   //if the function starts with "on", then it should be only used within the component
@@ -30,9 +31,14 @@ const Form = () => {
     setAnswer(newAnswer);
   };
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setDisplaySummary(true);
+  };
+
 
   return (
-    <form className="app-container">
+    <form className="app-container" onSubmit={handleSubmit}>
       <Header
         title="We like to move it!"
         subtitle="your favourite moving company"
@@ -54,9 +60,11 @@ const Form = () => {
         onAnswerChange={handleAnswerChange}
       />
       <Submit />
-      <Summary />
+      {displaySummary && (
+        <Summary />
+      )}
     </form>
-  )
-}
+  );
+};
 
 export default Form; 

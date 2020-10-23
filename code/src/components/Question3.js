@@ -18,6 +18,7 @@ const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
                 value={item}
                 onChange={event => onAnswerChange(event.target.value)}
                 checked={questionAnswer3 === item}
+                required
               ></input>
               {item}
             </label>
