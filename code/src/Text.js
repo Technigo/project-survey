@@ -22,6 +22,7 @@ const Text = ({question, value, setText }) => {
                 value={value}
                 placeholder="Coolest color is..."
                 autocomplete="on"
+                onKeyPress={event => { event.key === 'Enter' && event.preventDefault(); }}
             />
         </section>)
 }
