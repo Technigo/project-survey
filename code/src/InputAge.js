@@ -16,8 +16,8 @@ const InputAge = ( {question, array, ageGroup, setAgeGroup }) => {
           />
           {" " + group + " "}
         </label>
-      ))};
+      ))}
     </>
   );
 };
-export default InputAge
+export default InputAge;

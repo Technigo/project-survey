@@ -1,20 +1,23 @@
 import React, { useState } from 'react'
 
+//Local dependencies:
 import Header from './Header'
 import InputName from './InputName'
 import InputSelectColor from './InputSelectColor'
 import InputAge from './InputAge'
+import InputCheckboxHobbies from './InputCheckboxHobbies'
 import { Button } from './Button'
 import Summary from './Summary'
 // Below it should be the survey, question by question
 //And when clicking 'next Q' after each Q, next Q should
 //come up, then after last Q, press 'submit' and show 
 //summary
+
 const Survey = () => {
   const [name, setName] = useState(''); //Name input
   const [ageGroup, setAgeGroup] = useState(); //Agegroup-radiobutton
   const [color, setColor] = useState(''); //Color select-dropdown 
-  
+  //const [hobbies, setHobbies] =useState([]);    //HobbiesCheckbox
   const handleSubmit = event => { //To prevent that page reloads on submit
     event.preventDefault();
   };
@@ -22,8 +25,11 @@ const Survey = () => {
 
   return (
     <>
-    <Header/>
-    <Button button="button" text="Start survey"/>
+    <section className="header-section"> 
+      <Header/>
+      <Button button="button" text="Start survey"/>
+    </section>
+
     <section className="survey-wrapper">
       <form onSubmit={handleSubmit}>
         
@@ -53,7 +59,15 @@ const Survey = () => {
             setColor={setColor}
           />
           <Button button="button" text="previous question"/>
-          <Button button="button" text="Submit"/>
+          <Button button="button" text="next question"/>
+        </article>
+
+        <article className="question-wrapper">
+          <InputCheckboxHobbies
+            question="What hobbies do you have?"
+           />
+          <Button button="button" text="previous question"/>
+          <Button button="button" text="submit"/>
         </article>
       </form> 
     </section>
@@ -63,4 +77,4 @@ const Survey = () => {
     </>
   );
 };
-export default Survey
+export default Survey;

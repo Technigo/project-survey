@@ -27,4 +27,4 @@ const InputName = ({ question, name, setName }) => {
 // How do I make it so that when the user writes their name and 
 // press a button that says continue, a text is shown that says Welcome 'name'? 
 // And then all the questions appear...??
-export default InputName
+export default InputName;

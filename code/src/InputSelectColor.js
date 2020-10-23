@@ -14,20 +14,20 @@ const InputSelectColor = ({id, question, setColor, color}) => {
         value={color}
       >
         <option value="">Select color</option>
-        <option value="white">white</option>
-        <option value="yellow">yellow</option>
-        <option value="orange">orange</option>
-        <option value="red">red</option>
-        <option value="pink">pink</option>
-        <option value="lilac">lilac</option>
-        <option value="blue">blue</option>
-        <option value="turqouise">turqouise</option>
-        <option value="green">green</option>
-        <option value="brown">brown</option>
-        <option value="black">black</option>
+        <option value="white">White</option>
+        <option value="yellow">Yellow</option>
+        <option value="orange">Orange</option>
+        <option value="red">Red</option>
+        <option value="pink">Pink</option>
+        <option value="lilac">Lilac</option>
+        <option value="blue">Blue</option>
+        <option value="turqouise">Turqouise</option>
+        <option value="green">Green</option>
+        <option value="brown">Brown</option>
+        <option value="black">Black</option>
       </select>
       </label>
      </> 
   );
 };
-export default InputSelectColor
+export default InputSelectColor;
