@@ -3,12 +3,6 @@ import './dropdown.css'
 
 export const Dropdown = (props) => {
 
-   /*  const changeSelectState = (event) => {
-        props.selectValue!==""
-        ?props.setSelectValue(event.target.value)/* &&setShowErrorMessage(false) */
-        //:alert('Please select a option!')/* setShowErrorMessage(true) */;
-     // } */
-
     return (
         <div>
             <h2 tabIndex={'0'}>{props.question}</h2>
