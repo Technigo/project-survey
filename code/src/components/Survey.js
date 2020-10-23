@@ -175,7 +175,7 @@ export const Survey = () => {
                 <div className="button-container">
                   <Button
                     type='button'
-                    text='Previous pretty please!'
+                    text='Previous Pretty Please!'
                     click={previousQuestion}
                   />
                   <Button
@@ -199,12 +199,12 @@ export const Survey = () => {
                 <div className="button-container">
                   <Button
                     type='button'
-                    text='Previous pretty please!'
+                    text='Previous Pretty Please!'
                     click={previousQuestion}
                   />
                   <Button
                     type='button'
-                    text='Next Baby!'
+                    text={rainyFood ? 'Next Baby!' : 'Choose something!'}
                     click={nextQuestion}
                     disable={!rainyFood}
                   />
@@ -222,12 +222,12 @@ export const Survey = () => {
                 /><div className="button-container">
                   <Button
                     type='button'
-                    text='Previous pretty please!'
+                    text='Previous Pretty Please!'
                     click={previousQuestion}
                   />
                   <Button
                     type='button'
-                    text='Next Baby!'
+                    text={restaurantHunt ? 'Next Baby!' : 'Choose something!'}
                     click={nextQuestion}
                     disable={!restaurantHunt}
                   />
@@ -244,12 +244,12 @@ export const Survey = () => {
                 /><div className="button-container">
                   <Button
                     type='button'
-                    text='Previous pretty please!'
+                    text='Previous Pretty Please!'
                     click={previousQuestion}
                   />
                   <Button
                     type='button'
-                    text='Next Baby!'
+                    text={saladMaker ? 'Next Baby!' : 'Choose something!'}
                     click={nextQuestion}
                     disable={!saladMaker}
                   />
@@ -280,14 +280,14 @@ export const Survey = () => {
                 <div className="button-container">
                   <Button
                     type='button'
-                    text='Previous pretty please!'
+                    text='Previous Pretty Please!'
                     click={previousQuestion}
                   />
                   <Button
                     type='button'
-                    text='Next Baby!'
+                    text={ageGroup ? 'Next Baby!' : 'Choose something!'}
                     click={nextQuestion}
-                    /* disable={!rainyFood} */
+                    disable={!ageGroup}
                   />
                 </div>
               </>
@@ -303,7 +303,7 @@ export const Survey = () => {
                 <div className="button-container">
                   <Button
                     type='button'
-                    text='Previous pretty please!'
+                    text='Previous Pretty Please!'
                     click={previousQuestion}
                   />
                   <Button
@@ -323,11 +323,11 @@ export const Survey = () => {
                   <Button
                     type='button'
                     click={previousQuestion}
-                    text='Previous pretty please!'
+                    text='Previous Pretty Please!'
                   />
                   <Button
                     type='submit'
-                    text='Submit fantastic survey!'
+                    text={userText ? 'Submit fantastic survey!' : 'Please leave a message!'}
                     disable={!userText}
                   />
                 </div>
