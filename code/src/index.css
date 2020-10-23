@@ -33,7 +33,6 @@ h2 {
 .main-content-container {
   display: flex;
   justify-content: center;
-  height: 700px;
   width: 100%;
 }
 
@@ -50,7 +49,7 @@ button {
 }
 
 
-/** header **/
+/** Start Section **/
 
 .intro-text-container {
   display: flex;
@@ -66,7 +65,7 @@ button {
   height: 80%;
 }
 
-header p {
+.intro-text-container p {
   font-size: 25px;
 }
 
@@ -99,8 +98,8 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 70px;
-  padding-bottom: 70px;
+  height: 300px;
+  justify-content: center;
 }
 
 .input-container:first-child {
@@ -235,6 +234,7 @@ img {
   justify-content: center;
   align-items: center;
   width: 60%;
+  height: 700px;
 }
 
 .summary-container p {
@@ -250,7 +250,6 @@ img {
   
 .image-animation-container {
   padding-top: 100px;
-
 }
   
 .image-animation-container img {
@@ -313,7 +312,7 @@ img {
     font-size: 50px;
   }
 
-  header p {
+  .intro-text-container p {
     font-size: 35px;
   }
 
@@ -322,8 +321,7 @@ img {
   }
 
   .input-container {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    height: 400px;
   }
 
   .slider {
