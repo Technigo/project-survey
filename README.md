@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The brief for this weeks project was to create a survey using React, with a summary of the user's choice. I created a survey of "Daily Notes", like a short diary for daily reflections.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time I would have created a function that shows today's date + changing weather icon depending on the user's choice. 
+
+I had some troubles with the radiobuttons - if you checked one you could'nt uncheck it. But I solved it by adding "checked={weather === ""}. I didn't know from start how to make the radiobuttons required, but learned that I had to ad a name and give each option the same name.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+-
