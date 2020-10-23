@@ -3,11 +3,9 @@ import React from 'react'
 /* Array for plants */
 const favoritePlants = ['Monstera', 'Cactus', 'Begonia', 'Oxalis', 'Aloe Vera', 'Fiddle Leaf Fig', 'Chinese Money Plant', 'Philodendron', 'Umbrella tree'];
 
-const Radiobuttons = (props) => {
+/* Sending in favoritePlant and onSelectRadio as props in Radiobuttons*/
+const Radiobuttons = ({favoritePlant, onSelectRadio }) => {
     
-    /* Sending in favouritePlant and onSelectRadio as props */
-    const {favoritePlant, onSelectRadio } = props 
-
     return (
         <section className='question3-wrapper'>
             <h3 className="question-header">
@@ -17,15 +15,16 @@ const Radiobuttons = (props) => {
 
             {/* Mapping over the plants array, generating a lable and input for each of the array items */}
             {favoritePlants.map(plant => (
-              <label htmlFor={favoritePlant} key={plant}> {/* When using an array, each item needs to be given a unique key */}
+              <label htmlFor={favoritePlant} aria-label={plant} tabIndex='0' key={plant}> {/* When using an array, each item needs to be given a unique key */}
                   <input 
                   className="radio-btn"
                   type='radio'
-                  name='radio'
+                  name='favorite-plant'
+                  id='favorite-plant'
                   value={plant}
-                  id={plant}
-                  onChange={event => onSelectRadio(event.target.value)}
+                  onChange={(event) => onSelectRadio(event.target.value)}
                   checked={favoritePlant === plant}
+                  required
                   />
                    {plant} 
               </label>

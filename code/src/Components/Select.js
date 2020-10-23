@@ -1,9 +1,7 @@
 import React from 'react';
 
-const Select = (props) => {
-
-    /* Sending in numberOfPlants and onSelectChange as props */
-    const {numberOfPlants, onSelectChange } = props
+/* Sending in numberOfPlants and onSelectChange as props */
+const Select = ({numberOfPlants, onSelectChange }) => {
 
     return (
         <section className='question2-wrapper'>
@@ -23,6 +21,8 @@ const Select = (props) => {
             <option value='10-15'>10-15</option>
             <option value='15-20'>15-20</option>
             <option value='15-20'>20-25</option>
+            <option value='15-20'>25-30</option>
+            <option value='15-20'>25-30</option>
             </select>
         </section>
     )

@@ -1,7 +1,7 @@
 import React from 'react'; 
 
-const Summary = (props) => {
-    const { name, numberOfPlants, favoritePlant } = props;
+/* Sending in name, numberOfPlants and favoritePlant as props in summary */
+const Summary = ({ name, numberOfPlants, favoritePlant }) => {
 
     return (
         <>

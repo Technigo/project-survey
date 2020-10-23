@@ -6,7 +6,10 @@ const Input = (props) => {
     const { name, onInputChange } = props
     
     return (
+
         <section className='question1-wrapper'>
+            <h2 className='form-header'>Please fill in the form:</h2>
+            
             <h3 className="question-header">
                 1. What's your name? 
                 <span role="img" aria-label='cactus'> 🌵 </span> 
