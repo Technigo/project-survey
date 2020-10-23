@@ -10,7 +10,7 @@ export const Submit = () => {
         autoFocus
         //onClick I want to hide all questions (display=none?) and display answers -> if NO ->
         //"You chose not to have the cleaning service inlcuded."
-        onClick={}
+        onClick={() => window.location.reload()}
       >
         Submit
       </button>

@@ -2,7 +2,7 @@ import React from 'react';
 
 import "components/question2.css";
 
-const dropDownOptionsArray = ["0-10 km", "20-50 km", "50+ km"];
+const dropDownOptionsArray = ["-", "0-10 km", "20-50 km", "50+ km"];
 
 // a drop-down menu
 const Question2 = ({ questionText2, questionAnswer2, onDistanceChange }) => {
