@@ -21,10 +21,10 @@ export const DrinkQuestion = ({ drink, onDrinkChange }) => {
       <select id="drink"
         onChange={event => onDrinkChange(event.target.value)}
         value={drink}>
-        <option value="Aperol Spritz">Aperol Spritz</option>
-        <option value="Bloody Mary">Bloody Mary</option>
-        <option value="Irish Coffee">Irish Coffee</option>
-        <option value="Surprise">Surprise</option>
+        <option value="aperol">Aperol Spritz</option>
+        <option value="bloody">Bloody Mary</option>
+        <option value="irish">Irish Coffee</option>
+        <option value="surprise">Surprise</option>
       </select>
     </div >
   )
@@ -40,7 +40,7 @@ export const AlcoholQuestion = ({ alcohol, onAlcoholChange }) => {
         onChange={event => onAlcoholChange(event.target.value)}
         checked={alcohol === "Virgin"}>
       </input>
-      <label htmlFor="virgin">Virgin</label>
+      <label htmlFor="virgin">0 cl</label>
 
       <input type="radio" id="four" value="Conventional"
         onChange={event => onAlcoholChange(event.target.value)}

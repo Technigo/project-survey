@@ -9,7 +9,14 @@ h1 {
   color: purple;
 }
 
-span {
+.fun {
   font-family: 'Gochi Hand', cursive;
   font-size: 40px;
+}
+
+.emoji {
+  height: 40px;
+  width: 40px;
+  padding: 0;
+  margin: 10px;
 }

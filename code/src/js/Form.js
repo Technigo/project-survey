@@ -8,29 +8,25 @@ import { Result } from './Result.js'
 
 export const Form = () => {
 
-  const [result, setResult] = useState(false)
-
-  const handleSubmit = event => {
-    event.preventDefault()
-    setResult(true)
-  }
-
   const [legal, setLegal] = useState(false)
-
   const handleLegalChange = newLegal => {
     setLegal(newLegal)
   }
 
-  const [drink, setDrink] = useState("Surprise")
-
+  const [drink, setDrink] = useState("aperol")
   const handleDrinkChange = newDrink => {
     setDrink(newDrink)
   }
 
   const [alcohol, setAlcohol] = useState("Conventional")
-
   const handleAlcoholChange = newAlcohol => {
     setAlcohol(newAlcohol)
+  }
+
+  const [result, setResult] = useState(false)
+  const handleSubmit = event => {
+    event.preventDefault()
+    setResult(true)
   }
 
   return (
