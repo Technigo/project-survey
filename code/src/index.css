@@ -66,12 +66,16 @@ code {
 }
 
 input[type=text],
-select,
-select option {
+::placeholder {
   background-color: #ffffff;
   padding: 4px 5px;
   border: none;
-  color: #000000;
+  color: #807a7a;
+}
+
+select {
+  background-color: #ffffff;
+  color: #807a7a;
 }
 
 form p,
@@ -79,6 +83,10 @@ label:not(.radio-label) {
   display: block;
   font-size: 15px;
   margin: 0 0 16px 0;
+}
+
+.radio-label {
+  color: #000000;
 }
 
 button {
