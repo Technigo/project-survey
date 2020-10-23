@@ -72,27 +72,3 @@ button:hover {
   text-shadow: none;
 }
 
-/* .resetBtn {  
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 190px;
-  width: 130px;
-  height: 40px;
-  padding: 5px;
-  background: #dd691b70;
-  color: #000407;
-  border: 1px solid #eee;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
-  text-shadow: none;
-}
-
-.resetBtn:hover {
-  background: #1a4a72a2;
-  color: #fff;
-  border: 1px solid #eee;
-  border-radius: 20px;
-  box-shadow: 5px 5px 5px #eee;
-  text-shadow: none;
-} */
