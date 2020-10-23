@@ -4,19 +4,19 @@ import React from 'react'
 export const returnImageUrl = (animal) => {
   switch (animal) {
     case 'Hippo':
-      return 'images/hippo.svg'
+      return './images/hippo.svg'
     case 'Rabbit':
-      return 'images/rabbit.svg'
+      return './images/rabbit.svg'
     case 'Fox':
-      return 'images/fox.svg'
+      return './images/fox.svg'
     case 'Snake':
-      return 'images/snake.svg'
+      return './images/snake.svg'
     case 'zebra':
-      return 'images/zebra.svg'
+      return './images/zebra.svg'
     case 'elephant':
-      return 'images/elephant.svg'
+      return './images/elephant.svg'
     default:
-      return 'images/information.svg'
+      return './images/information.svg'
   }
 }
 
