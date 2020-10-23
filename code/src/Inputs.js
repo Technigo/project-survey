@@ -38,7 +38,7 @@ export const Input = () => {
                                 question="Coolest Power Ranger character?"
                             />
                             <button className="next-question"
-                                aria-label="Submitt-button"
+                                aria-label="next-question-button"
                                 disabled={!name}
                                 type="button"
                                 onClick={nextQuestion}> Next Question </button>
@@ -49,7 +49,7 @@ export const Input = () => {
                             < Teletub setTeletubbies={setTeletubbies} teletubbies={teletubbies}
                                 question="Which is your favorite teletubbies?" />
                             <button className="next-question"
-                                aria-label="Submitt-button"
+                                aria-label="next-question-button"
                                 disabled={!teletubbies}
                                 onClick={nextQuestion}
                                 type="button"> Next Question </button>
@@ -60,7 +60,7 @@ export const Input = () => {
                             < SailorMoon setSailorMoon={setSailorMoon} sailorMoon={sailorMoon}
                                 question="Sailor Moon character?" />
                             <button className="next-question"
-                                aria-label="Submitt-button"
+                                aria-label="next-question-button"
                                 disabled={!sailorMoon}
                                 onClick={nextQuestion}
                                 type="button"> Next Question </button>
