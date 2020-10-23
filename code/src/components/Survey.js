@@ -15,6 +15,8 @@ export const Survey = () => {
 
     const [isSubmit, setIsSubmit] = useState(false);
 
+    const [section, setSection] = useState('question1');
+
     const handleSubmit = (event) => {
         event.preventDefault()
         setIsSubmit(true);
@@ -25,26 +27,71 @@ export const Survey = () => {
         setIsSubmit(false);
     }
 
+    const showNextQuestion = (next) => {
+        setSection(next)
+    } 
+
 
     if (isSubmit === false){
         return (
             <>
                 <form className="main-form" onSubmit={handleSubmit} id="main-form">
+                    
+                    {section === 'question1' && (
+                    <>
                     <h2>Generel info</h2>
+                    <TextInput 
+                    question="What is your name?" 
+                    inputAnswer={name} 
+                    inputSet={setName} 
+                    showNext={() => showNextQuestion('question2')}/>
+                    </>
+                    
+                    )}
 
-                    <TextInput question="What is your name?" inputAnswer={name} inputSet={setName} />
-
-                    <RadioInput question="Are you concerned about the climate change?" radioValue={footprint} setRadioValue={setFootprint}/>
-
+                    {section === 'question2' && (
+                    <>
+                    <h2>Generel info</h2>
+                    <RadioInput 
+                    question="Are you concerned about the climate change?" 
+                    radioValue={footprint} 
+                    setRadioValue={setFootprint} 
+                    showNext={() => showNextQuestion('question3')}/>
+                    </>
+                    )}
+                    
+                    {section === 'question3' && (
+                    <>
                     <h2>Housing</h2>
-
-                    <TextInput question="Where do you live?" inputAnswer={city} inputSet={setCity} />
-
-                    <SelectInput question="Do you live in a house or apartment?" selectValue={housing} setSelectValue={setHousing} />
-
-                    <RadioInput question="I always turn off the light when leaving a room." radioValue={lights} setRadioValue={setLights}/>
-                
-                    <input type="submit" value="Submit" className="button"/>
+                    <TextInput 
+                    question="Where do you live?" 
+                    inputAnswer={city} 
+                    inputSet={setCity} 
+                    showNext={() => showNextQuestion('question4')} />
+                    </>
+                    )} 
+                    
+                    {section === 'question4' && (
+                    <>
+                    <h2>Housing</h2>
+                    <SelectInput 
+                    question="Do you live in a house or apartment?" 
+                    selectValue={housing} 
+                    setSelectValue={setHousing} 
+                    showNext={() => showNextQuestion('question5')} />
+                    </>
+                    )}
+                    {section === 'question5' && (
+                    <>
+                    <h2>Housing</h2>    
+                    <RadioInput 
+                    question="I always turn off the light when leaving a room." 
+                    radioValue={lights} 
+                    setRadioValue={setLights}showNext={() => showNextQuestion('question6')} />
+                    </>
+                    )}
+                {section === 'question6' && (
+                    <input type="submit" value="Submit" className="button"/> )}
                 </form>
             </>
         ); }

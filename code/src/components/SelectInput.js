@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectInput = ({question, selectValue, setSelectValue}) => {
+const SelectInput = ({question, selectValue, setSelectValue, showNext}) => {
 
     return( 
     <label htmlFor="select-city"><h3>{question}</h3>
@@ -10,6 +10,8 @@ const SelectInput = ({question, selectValue, setSelectValue}) => {
             <option value="Apartment">Apartment</option>
             <option value="Other">Other</option>
         </select>
+        <button className="next-button" onClick={showNext}>Next</button>
+
     </label>
 
     )

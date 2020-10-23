@@ -3,7 +3,7 @@ import React from 'react';
 const footprints = ["1", "2", "3", "4", "5"];
 
 
-export const RadioInput = ({question, radioValue, setRadioValue}) => {
+export const RadioInput = ({question, radioValue, setRadioValue, showNext}) => {
 
 
     return (
@@ -24,6 +24,7 @@ export const RadioInput = ({question, radioValue, setRadioValue}) => {
                 </label>
             ))}</div>
             <div className="radio-description"><p>Not really</p> <p>Definitly</p></div>
+            <button className="next-button" onClick={showNext}>Next</button>
         </div>
 
 
