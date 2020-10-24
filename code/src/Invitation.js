@@ -8,7 +8,7 @@ export const Invitation = ({date, time, place}) => {
           Nu händer det, Joakim fyller 40 år och vi är lediga på nyår. Dessutom har vi barnvakt till ungarna och 
           en stuga med sängplatser, bastu och nybyggt orangeri att fylla.</p> 
           <ul>
-            <li>31 oktober</li>
+            <li>31 december</li>
             <li>Kl. 15.00</li>
             <li>Lillholmsjö</li>
           </ul>
