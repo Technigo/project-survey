@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 
-//Local dependencies:
 import Header from './Header'
 import InputName from './InputName'
 import InputSelectColor from './InputSelectColor'
@@ -8,91 +7,142 @@ import InputAge from './InputAge'
 import InputCheckboxHobbies from './InputCheckboxHobbies'
 import { Button } from './Button'
 import Summary from './Summary'
-// Below it should be the survey, question by question
-//And when clicking 'next Q' after each Q, next Q should
-//come up, then after last Q, press 'submit' and show 
-//summary
 
 const Survey = () => {
-  const [name, setName] = useState(''); //Name input
-  const [ageGroup, setAgeGroup] = useState(); //Agegroup-radiobutton
-  const [color, setColor] = useState(''); //Color select-dropdown 
-  const [hobbies, setHobbies] =useState([]);    //HobbiesCheckbox
-  
+  const [name, setName] = useState(''); 
+  const [ageGroup, setAgeGroup] = useState(); 
+  const [color, setColor] = useState('');  
+  const [hobbies, setHobbies] =useState([]);    
+  const [question, setQuestion] = useState(-1); //to show first Q after intro
+  const [submit, setSubmit] = useState(false);
+
   const handleSubmit = event => { //To prevent that page reloads on submit
     event.preventDefault();
+    setSubmit(true); //to show summary on submit
   };
 
-  //Why would I need a function onNameChange as Max did on wed lecture @38:00??
-  //Like: const onNameChange = event => { setName(event.target.value); };
+  const nextQuestion = () => setQuestion(question + 1); //To get next Q 
+  const previousQuestion = () => setQuestion(question - 1); //To go back
 
   const ageGroups = ["20-24", "25-29", "30-34", "35-39", "40-44", "45+"];
 
- const handleHobbiesChange = hobbieValue => {
-   hobbies.includes(hobbieValue) 
-     ? setHobbies( hobbies.filter(item => item !== hobbieValue) )//delete element
-     : setHobbies( [...hobbies, hobbieValue] ) //using spread to add elements when checkoxes are clicked
-};
-
+  const handleHobbiesChange = hobbieValue => {
+    hobbies.includes(hobbieValue) 
+      ? setHobbies( hobbies.filter(item => item !== hobbieValue) )//delete element when checked again
+      : setHobbies( [...hobbies, hobbieValue] ) //using spread to add elements when checkoxes are clicked
+  };
 
   return (
-    <>
-    <section className="header-section"> 
-      <Header/>
-      <Button button="button" text="Start survey"/>
-    </section>
-
     <section className="survey-wrapper">
-      <form onSubmit={handleSubmit}>
-        
-        <article className="question-wrapper">
-          <InputName
-            question="What is your name?"
-            value={name}
-            setName={setName} />
-          <Button button="button" text="next question"/>
-        </article>
-
-        <article className="question-wrapper"> 
-          <InputAge
-            question="What is your age?"
-            array={ageGroups}
-            ageGroup={ageGroup}
-            setAgeGroup={setAgeGroup}
-          />
-          <Button button="button" text="previous question"/>
-          <Button button="button" text="next question"/>
-        </article>
-
-        <article className="question-wrapper">  
-          <InputSelectColor
-            question="What is your favorite color?"
-            value={color}
-            setColor={setColor}
-          />
-          <Button button="button" text="previous question"/>
-          <Button button="button" text="next question"/>
-        </article>
-
-        <article className="question-wrapper">
-          <InputCheckboxHobbies
-            userHobbies={hobbies}
-            onHobbiesChange={handleHobbiesChange}
-            question="What hobbies do you have?"
-           />
-          <Button button="button" text="previous question"/>
-          <Button button="button" text="submit"/>
-        </article>
-      </form> 
+      {!submit ? (
+        <form onSubmit={handleSubmit}>
+        {question === -1 && ( 
+          <section className="header-section"> 
+            <Header/>
+            <Button 
+              type="button" 
+              text="Start survey"
+              click={nextQuestion}
+            />
+          </section>
+        )} 
+        {question === 0 && ( 
+          <section className="question-wrapper">
+            <InputName
+              question="What is your name?"
+              value={name}
+              setName={setName} 
+            />
+            <Button 
+              type="button" 
+              text="Back"
+              click={previousQuestion}
+            />
+            <Button 
+              type="button" 
+              disabled={!name}
+              text={name ? 'Next question' : 'Type your name'}
+              click={nextQuestion}
+            />
+          </section>
+        )}
+        {question === 1 && ( 
+          <section className="question-wrapper"> 
+            <InputAge
+              question="What is your age?"
+              array={ageGroups}
+              ageGroup={ageGroup}
+              setAgeGroup={setAgeGroup}
+            />
+            <Button 
+              type="button" 
+              text="Previous question"
+              click={previousQuestion}
+            />
+            <Button 
+              type="button" 
+              disabled={!ageGroup}
+              text={ageGroup ? 'Next question' : 'Select age'}
+              click={nextQuestion}
+            />
+          </section>
+        )}
+        {question === 2 && ( 
+          <section className="question-wrapper">  
+            <InputSelectColor
+              question="What is your favorite color?"
+              value={color}
+              setColor={setColor}
+            />
+            <Button 
+              type="button" 
+              text="Previous question"
+              click={previousQuestion}
+            />
+            <Button 
+              type="button" 
+              disabled={!color}
+              text={color ? 'Next question' : 'Select a color'}
+              click={nextQuestion}
+            />
+          </section>
+        )}
+        {question === 3 && ( 
+          <section className="question-wrapper">
+            <InputCheckboxHobbies
+              userHobbies={hobbies}
+              onHobbiesChange={handleHobbiesChange}
+              question="What hobbies do you have?"
+            />
+            <Button 
+              type="button" 
+              text="previous question"
+              click={previousQuestion}
+            />
+            <Button 
+              text="Submit"
+              type="submit"
+            />
+          </section>
+        )}
+        </form> 
+      ) : (
+      <section className="summmary-wrapper"> 
+        <Summary 
+          heading="Summary"
+          name={name}
+          color={color}
+          ageGroup={ageGroup}
+          userHobbies={hobbies}
+        />
+        <Button 
+          type="button" 
+          text="Take the survey again?"
+          click={() =>window.location.reload()}
+        />
+      </section>
+      )}   
     </section>
-    <Summary 
-      heading="Summary"
-      name={name}
-      color={color}
-      ageGroup={ageGroup}
-      userHobbies={hobbies}
-    />
-    </>
   );
 };
 export default Survey;

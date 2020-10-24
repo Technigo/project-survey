@@ -1,8 +1,8 @@
 import React from 'react'
 
 // This is a generic button used in different places in the survey
-export const Button = ({button, click, disabled, text}) => {
+export const Button = ({type, click, disabled, text}) => {
   return (
-    <button type={button} onClick={click} disabled={disabled}>{text}</button>
+    <button type={type} onClick={click} disabled={disabled}>{text}</button>
   );
 };

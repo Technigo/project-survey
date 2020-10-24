@@ -12,15 +12,21 @@ code {
     monospace;
 }
 
-body {
+/* body {
   background-color: rgb(224, 154, 197);   
-}
+} */
 
 .app-wrapper {
-  margin: auto;
+  margin: 5vh auto;
   width: 90vw;
-  background-color: rgb(244, 185, 222);
-  border: 1px solid #000;
+  height: 90vh;
+  /* background-color: rgb(244, 185, 222); */
+  /* border: 1px solid #000; */
+}
+
+form {
+  width: 90vw;
+  height: 90vh;
 }
 
 .header-section {
@@ -32,19 +38,25 @@ body {
 }
 
 .header-section h1 {
-  font-size: 72px;
+  font-size: 42px;
   text-align: center;
 }
 
 .header-section h2 {
-  font-size: 36px;
+  font-size: 30px;
   text-align: center;
 }
 
 .survey-wrapper {
-  background-color: rgb(245, 210, 231);
-  border: 1px solid #000;
+  /* background-color: rgb(245, 210, 231); */
+  background-image: radial-gradient(circle, rgba(47,106,73,0) 0% , rgba(47,106,73,.4) 30%, rgba(47,106,73,.9) 100%), url(./assets/grass-bg.jpg);
+  background-size: cover;
+  background-position-x: 50%;
+  background-position-y: 30%;
+  /* border: 1px solid #000; */
+  border-radius: 20px;
   display: flex;
+  height: 90vh;
   width: 100%;
   flex-direction: column;
   justify-content: center;
