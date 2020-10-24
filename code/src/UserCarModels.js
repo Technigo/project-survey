@@ -2,7 +2,7 @@ import React from 'react';
 import Select from 'react-select';
 
 const selectCarModels = [
- { value: "suzuki Ertiga", lable: "Suzuki Ertiga"},
+ { value: "suzuki Ertiga", label: "Suzuki Ertiga"},
  { value: "suzuki swift", label: "Suzuki Swift" },
  { value: "suzuki XL7", label: "Suzuki XL7"},
  { value: "suzuki ciaz", label: "Suzuki Ciaz"},
@@ -14,8 +14,8 @@ const selectCarModels = [
 const UserCarModels = ({ onCarsChange }) => {
   return (
     <div className="car-models" id="sectionCarModels">
-      <label htmlFor="carModelSelect">Which Suzuki car(s) that you are possessing?</label>
-      <Select id="carModelSelect"
+      <p>Which Suzuki car(s) that you are possessing?</p>
+      <Select
         onChange={onCarsChange}
         options={selectCarModels}
         isMulti
