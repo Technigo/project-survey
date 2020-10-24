@@ -14,7 +14,7 @@ const selectCarModels = [
 const UserCarModels = ({ onCarsChange }) => {
   return (
     <div className="car-models" id="sectionCarModels">
-      <p>Which Suzuki car(s) that you are possessing?</p>
+      <p tabIndex="0">Which Suzuki car(s) that you are possessing?</p>
       <Select
         onChange={onCarsChange}
         options={selectCarModels}

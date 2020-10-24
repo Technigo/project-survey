@@ -138,7 +138,7 @@ const SurveyForm = () => {
       }
       {showSummary &&
         <SnapSection>
-          <Summary 
+          <Summary
             userName={name}
             userAge={age}
             email={email}

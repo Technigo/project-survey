@@ -8,7 +8,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
         <p tabIndex="0">What are the reasons that made you decide to own (a) Suzuki car(s)?</p>
         <div className="reasons-to-buy-container">
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="goodQuality"
                     className="check-box-button"
                     type="checkbox"
@@ -18,7 +18,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
                 <label htmlFor="goodQuality">Good Quality</label>
             </article>
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="goodPrice"
                     className="check-box-button"
                     type="checkbox"
@@ -28,7 +28,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
                 <label htmlFor="goodPrice">Good Price</label>
             </article>
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="goodDesign"
                     className="check-box-button"
                     type="checkbox"
@@ -38,7 +38,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
                 <label htmlFor="goodDesign">Good Design</label>
             </article>
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="goodAfterSalesServices"
                     className="check-box-button"
                     type="checkbox"
@@ -48,7 +48,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
                 <label htmlFor="goodAfterSalesServices">Good Aftersales Services</label>
             </article>
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="goodInitiatives"
                     className="check-box-button"
                     type="checkbox"
@@ -58,7 +58,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
                 <label htmlFor="goodInitiatives">Good Initiatives</label>
             </article>
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="goodGuaranteePolicy"
                     className="check-box-button"
                     type="checkbox"
@@ -68,7 +68,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
                 <label htmlFor="goodGuaranteePolicy">Good Guarantee Policy</label>
             </article>
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="lowMaintenanceCost"
                     className="check-box-button"
                     type="checkbox"
@@ -78,7 +78,7 @@ const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
                 <label htmlFor="lowMaintenanceCost">Low Maintenance Cost</label>
             </article>
             <article className="reasons-input-element">
-                <input
+                <input tabIndex="0"
                     id="practicability"
                     className="check-box-button"
                     type="checkbox"
