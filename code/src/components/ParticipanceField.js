@@ -8,7 +8,7 @@ export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
         <>
             <label tabIndex="0">Will you participate?</label>
             {yesOrNoAnswers.map(answer => ( 
-                <label htmlFor="answer" key={answer} tabIndex="0">
+                <label htmlFor="answer" key={answer} tabIndex="0" role="radiogroup">
                     <input
                         id="answer"
                         type="radio" 
