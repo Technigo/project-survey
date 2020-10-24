@@ -1,0 +1,17 @@
+.resetbutton {
+  background: rgb(248, 196, 204);
+  color: grey;
+  border-style: outset;
+  border-color: white;
+  height: 50px;
+  width: 100px;
+  font: bold 15px arial, sans-serif;
+  text-shadow: none;
+  margin-left: 40px;
+}
+.resetbutton:hover {
+  background: rgb(248, 196, 204);
+}
+.resetbutton:focus {
+  outline: thin dotted;
+}

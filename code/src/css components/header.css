@@ -1,0 +1,23 @@
+.header {
+  height: 150px;
+  width: auto;
+  background: transparent;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-size: 16px;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header {
+    height: 100px;
+    font-size: 20px;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .header {
+    height: 100px;
+    font-size: 25px;
+  }
+}

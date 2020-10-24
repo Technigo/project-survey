@@ -1,0 +1,17 @@
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+input:focus {
+  outline: grey thin dotted;
+}
+label {
+  padding: 3px 3px 3px 0;
+  display: inline-block;
+}

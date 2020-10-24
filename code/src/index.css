@@ -5,11 +5,39 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: blue;
-  color: orange;
+  background-image: url("https://res.cloudinary.com/dgujdyxlv/image/upload/v1603403593/pexels-lukas-942803_qklgk6.jpg");
+  background-repeat: no-repeat;
+  color: white;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 250px;
+  position: absolute;
+  margin-top: 100px;
+  padding: 40px;
+  top: 50%;
+  left: 50%;
+  background: #3bd6c6;
+  border-radius: 5px;
+  transform: translate(-50%, -50%);
+  font-family: Roboto, sans-serif;
+}
+
+@media only screen and (min-width: 768px) {
+  .form {
+    flex-direction: row;
+    width: 450px;
+    height: auto;
+    margin-top: 0px;
+  }
 }

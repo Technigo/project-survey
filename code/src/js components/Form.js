@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import {Questionname} from "./Questionname"
-import {Questionaddress} from "./Questionaddress"
-import { Questiondrink } from './Questiondrink';
-import { Questionamountofcoffee } from './Questionamountofcoffee';
-import { Questionrange } from './Questionrange';
-import { Summary } from './Summary';
+import {Questionname} from "js components/Questionname"
+import {Questionaddress} from "js components/Questionaddress"
+import { Questiondrink } from 'js components/Questiondrink';
+import { Questionamountofcoffee } from 'js components/Questionamountofcoffee';
+import { Questionrange } from 'js components/Questionrange';
+import { Button1 } from 'js components/Button1';
+import { Header } from 'js components/Header';
+import { Summary } from 'js components/Summary';
 
 export const Form = () => {
   const [answername, setAnswername] = useState ("");
@@ -36,9 +38,11 @@ const handleSubmit = event => {
 };
 
 return (
-<>
-  {! showSummary ? ( 
-  <form onSubmit={handleSubmit}>
+  <>
+    <Header />
+  <section className="form">
+      {! showSummary ? ( 
+          <form onSubmit={handleSubmit}>
     <Questionname
         name={answername}
         onNameChange = {handleNameChange}
@@ -52,20 +56,23 @@ return (
         onDrinkChange = {handleDrinkChange}
         />
     <Questionamountofcoffee
-        amount={answeramount}
-        onAmountChange = {handleAmountChange}
-        />
+        answeramount={answeramount}
+        onAmountChange={handleAmountChange}
+    />
     <Questionrange
         price={coffeeprice}
         onRangeChange = {handleCoffeepriceChange}
         />
-
-        <button type="submit">submit</button>
+    <Button1 />
   </form>
   ) : ( <Summary name = {answername}
-                    address = {answeraddress}
-                    drink = {answerdrink}/>
+                address = {answeraddress}
+                drink = {answerdrink}
+                answeramount={answeramount}
+                coffeeprice={coffeeprice}
+        />    
       )
 }
+</section>
 </>
 )}
