@@ -35,10 +35,10 @@ export const Form = () => {
 
 
             </form>
-        ) : (<section class="summary">
-                <p>{dropInput}</p>
-                <p>{textInput}</p>
-                <p>{radioInput}</p>
+        ) : (<section class="summary" tabIndex="0">
+                <p tabIndex="0">{dropInput}</p>
+                <p tabIndex="0">{textInput}</p>
+                <p tabIndex="0">{radioInput}</p>
 
         </section>)
         }

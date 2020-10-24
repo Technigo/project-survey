@@ -1,10 +1,10 @@
 import React from 'react'
 
 export const Dropdown = ( {handleDropInput} ) => {
-    return <div className="question">
-      <label for="Movie">Rate Top Gun</label>
-        <select name="Movie" id="Movie" onChange={e => handleDropInput(e.target.value)} >
-          <option value="Select">Select a rating</option>
+    return <div className="question"> tabIndex="0"
+      <label for="Movie" tabIndex="0">Rate Top Gun</label>
+        <select name="Movie" id="Movie" onChange={e => handleDropInput(e.target.value)} tabIndex="0">
+          <option value="Select" tabIndex="0">Select a rating</option>
           <option value="1">1</option>
           <option value="2">2</option>
           <option value="3">3</option>
