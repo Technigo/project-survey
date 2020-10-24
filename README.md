@@ -1,13 +1,16 @@
+
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The focus here was to use React state and building controlling forms, with a summary.
 
 ## The problem
-
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
-## View it live
+- Your survey should consist of at least 3 questions.
+- At least one question should use radio buttons.
+- At least one question should use a select dropdown.
+- There should be a submit button. When pressed your app should hide the input form and show a summary of the user's submissions.
+- Your site should follow accessibility guidelines
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## View it live
+https://agitated-jepsen-810dc6.netlify.app/

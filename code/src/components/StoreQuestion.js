@@ -8,6 +8,7 @@ export const StoreQuestion = ({ whereBuy, onWhereBuyChange}) => {
         <select
           onChange={(event) => onWhereBuyChange(event.target.value)}
           value={whereBuy}
+          tabIndex="0"
           required
         >
           <option value="">* Select where you buy cheese *</option>
