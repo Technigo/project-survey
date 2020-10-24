@@ -1,16 +1,15 @@
 import React from 'react';
 
-const ratings = ["1", "2", "3", "4", "5", "6"]
+const ratings = ["Very worried", "Worried", "A little worried", "Pretty calm", "Calm", "Very calm"]
 
 const RadioButtons = ({ rating, onRatingChange }) => {
   return (
     <section className="radio-buttons">
-      <h2 tabIndex="0" className="label">2 - How are you feeling after this week?</h2>
-      <div className="radio">
+      <h2 id="radio-label" className="label">How are you feeling after this week?</h2>
+      <div tabIndex="0" aria-labelledby="radio-label" className="radio">
         {ratings.map(a => (
           <label className="radio-label" key={a}>
             <input
-              className="radio-button"
               type="radio"
               name="ratings"
               value={a}

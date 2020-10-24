@@ -2,7 +2,7 @@ import React from 'react';
 
 const Header = () => {
   return (
-    <h1>Weekly evaluation</h1>
+    <h1 tabIndex="0"> Weekly covid-19 evaluation</h1>
   )
 }
 

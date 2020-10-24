@@ -5,9 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
-  padding: 0 50px;
-  height: 100vh;
+  background: linear-gradient(to bottom, rgba(215, 215, 215, 0.8) 50%, rgba(53, 53, 53, 0.8)), url("https://source.unsplash.com/k0KRNtqcjfw/384x216") no-repeat center;
+  padding: 0 30px;
+  min-height: 100vh;
 }
 
 code {
@@ -24,17 +24,51 @@ p {
   margin: 5px 0;
 }
 
+button {
+  align-self: center;
+  width: fit-content;
+  padding: 5px;
+  margin: 15px 0;
+  border-radius: 5px;
+  font: inherit;
+  background: content-box;
+  box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.5);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
 .dropdown {
   display: flex;
   flex-direction: column;
 }
 
+.dropdown-options {
+  height: 30px;
+  width: 80%;
+  background: content-box;
+  font: inherit;
+  border: none;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.5);
+}
+
 .radio {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  width: 300px;
+}
+
+.radio-label {
+  margin: 5px;
 }
 
 .text-input {
   width: 100%;
+}
+
+.summary-answer {
+  font-style: italic;
+  font-weight: normal;
 }

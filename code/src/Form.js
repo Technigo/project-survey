@@ -42,13 +42,20 @@ const Form = () => {
 
   return (
     <section>
-      { (!showSummary && rating !== '') ? (
+      { (!showSummary && feedback !== '') ? (
         <form>
           <Intro />
           <DropDown location={location} onLocationChange={handleLocationChange} />
           <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
           <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
           <Submit onClick={handleSubmit} />
+        </form>
+      ) : (!showSummary && rating !== '') ? (
+        <form>
+          <Intro />
+          <DropDown location={location} onLocationChange={handleLocationChange} />
+          <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
+          <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
         </form>
       ) : (!showSummary && location !== '') ? (
         <form>
@@ -67,8 +74,8 @@ const Form = () => {
           <Start onClick={handleStart} />
         </form>
       ) : (
-                <Summary location={location} rating={rating} feedback={feedback} />
-              )}
+                  <Summary location={location} rating={rating} feedback={feedback} />
+                )}
     </section>
   )
 }
