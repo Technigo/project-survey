@@ -21,8 +21,8 @@ export const App = () => {
       <p className="introtext">Please answer these questions regarding food.</p>
     
     <form onSubmit={handleSubmit}>
-      <label className="surveyfood">
-        What is your favourite food? <br></br>
+      <label className="survey-food">
+        1. What is your favourite food? <br></br>
         <input
         type="text"
         value={food}
@@ -31,34 +31,68 @@ export const App = () => {
         />
       </label> 
       <br></br>
-      <label className="surveyicecream">
-        What is your favourite ice cream? <br></br>   
-        <select name="" id="" form="">
+      <section className="icecream-section">
+      <label className="survey-icecream">
+        2. What is your favourite ice cream? <br></br>   
+        <select
+        value={icecream}
+        onChange ={event => setIcecream (event.target.value)}
+        required
+        name="icecream" 
+        id="" 
+        form="">
+        <option value="">Choose here</option>
         <option value="chocolate">Chocolate</option>
         <option value="vanilla">Vanilla</option>
         <option value="strawberry">Strawberry</option>
         </select>
       </label>
+      </section>
       <br></br>
-      {/* <label>
-        Choose your favourite drink?       
+      <section className="drink-section" id="drink">
+        3. Choose your favourite drink? 
+      <div className="option-container">
+      <label ClassName="option">
+        Water      
         <input
           type="radio"
-          checked={water}
-          id="water"
+          checked={drink === "water"}
+          value="water"
           name="drink"
-          value="water">
           onChange={(e) => {setDrink (e.target.value)}}
           required
-        </input>
-      </label> */}
-      
+          />
+      </label>
+      <label ClassName="option">
+        Coffee      
+        <input
+          type="radio"
+          checked={drink === "coffee"}
+          value="coffee"
+          name="drink"
+          onChange={(e) => {setDrink (e.target.value)}}
+          required
+          />
+      </label>
+      <label ClassName="option">
+        Lemonad      
+        <input
+          type="radio"
+          checked={drink === "lemonad"}
+          value="lemonad"
+          name="drink"
+          onChange={(e) => {setDrink (e.target.value)}}
+          required
+          />
+      </label>
+      </div>
+      </section>
       <button type="submit">Submit</button>
     </form>
     </div>
     
     {showSummary && (
-      <Summary />
+      <Summary food={food} drink={drink} icecream={icecream}/>
     )}
     </>
   )

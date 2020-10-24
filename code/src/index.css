@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #bad1c6;
+  background-color: #a1b5ab;
   padding: 10px;
   padding-left: 20px;
   display: flex;
@@ -17,8 +17,9 @@ code {
 }
 
 .container {
-  background-color: lightgray;
+  background-color: #bad1c6;
   padding: 20px;
+  border-radius: 5%;
 }
 
 header {
@@ -37,11 +38,19 @@ button {
   margin-top: 10px;
 }
 
-.surveyfood {
+.survey-food {
   margin-top: 10px;
 }
 
-.surveyicecream {
+.survey-icecream {
+  margin-top: 10px;
+}
+
+.icecream-section {
+  margin-top: 10px;
+}
+
+.drink-section {
   margin-top: 10px;
 }
 
