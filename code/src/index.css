@@ -29,9 +29,29 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+header {
+  max-height: 20%;
+  font-family: "Roboto";
+  color: rgb(17, 157, 164);
+  text-align: center;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.super-pic {
+  width: 300px;
+  height: 300px;
+  border: 1px solid whitesmoke;
+  border-radius: 50%;
+  position: absolute;
+  top: 10%;
+  left: 2%;
 }
 
 .container {
@@ -41,16 +61,10 @@ code {
   flex-wrap: wrap;
 }
 
-header {
-  max-height: 20%;
-  color: hotpink;
-  text-align: center;
-  padding: 20px;
-}
-
 form {
   min-height: 100vh;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
 }
@@ -59,16 +73,9 @@ form {
   width: 450px;
   min-height: 200px;
   height: min-content;
-  background-color: rgb(38, 162, 184);
   border: 2px solid black;
   border-radius: 15px;
   padding: 20px;
-  background: #ff7e5f;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(45deg, #ff7e5f, #feb47b);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(45deg, #ff7e5f, #feb47b);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
   justify-content: space-evenly;
@@ -76,12 +83,9 @@ form {
   margin: 5px;
 }
 
-input {
-  color: magenta;
-}
-
 label {
-  color: blueviolet;
+  color: darkorchid;
+  font-size: 17px;
 }
 
 .question-header {
@@ -96,18 +100,102 @@ label {
   color: aqua;
 }
 
-@media only screen and (max-width: 968px) {
-  form {
-    width: 30%;
+.summary-card {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+}
+
+button {
+  width: 75px;
+  height: 75px;
+  display: inline-block;
+  font-size: 16px;
+  background-color: rgb(103, 226, 253);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: rgb(255, 136, 106);
+}
+
+.summary-text {
+  color: rgb(17, 157, 164);
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer p {
+  color: rgb(255, 212, 172);
+  font-weight: bold;
+}
+
+/* MEDIA QUERIES */
+
+@media only screen and (max-width: 500px) {
+  .container {
+    max-width: 10%;
   }
-  .QTitle {
-    size: 20%;
-    flex-direction: row;
+
+  .form {
+    max-width: 10%;
+  }
+
+  header {
+    display: none;
   }
 }
 
-@media only screen and (max-width: 420px) {
-  form {
+/* Small devices (landscape phones, less than 768px) */
+@media only screen and (max-width: 767.98px) {
+  .container {
+    width: 30%;
+    margin-top: 50%;
+  }
+
+  .form {
+    width: 30%;
+  }
+
+  .super-pic {
+    left: 20%;
+  }
+
+  header {
+    display: none;
+  }
+}
+
+/* Medium devices (tablets, less than 992px) */
+@media only screen and (max-width: 991.98px) {
+  .container {
     width: 80%;
+  }
+
+  .form {
+    width: 80%;
+  }
+
+  header {
+    text-align: center;
+  }
+}
+
+/* Large devices (desktops, less than 1200px) */
+@media only screen and (max-width: 1199.98px) {
+  .container {
+    width: 100%;
+  }
+
+  .form {
+    width: 100%;
   }
 }

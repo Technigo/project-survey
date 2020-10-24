@@ -9,11 +9,12 @@ import Submit from './Submit';
 import Summary from './Summary';
 
 
+
 const Form = () => {
 
-  const [name, setName] = useState('');
+  const [name, setName] = useState(' ');
   const [energy, setEnergy] = useState([]);
-  const [kindness, setKindness] = useState('');
+  const [habits, setHabits] = useState(' ');
   const [motto, setMotto] = useState([]);
 
 
@@ -30,10 +31,10 @@ const Form = () => {
       : setEnergy([...energy, energyValue]);
   };
 
-  const handleKindnessChange = kindnessValue => {
-    kindness.includes(kindnessValue)
-      ? setKindness(kindness.filter(item => item !== kindnessValue))
-      : setKindness([...kindness, kindnessValue]);
+  const handleHabitsChange = habitsValue => {
+    habits.includes(habitsValue)
+      ? setHabits(habits.filter(item => item !== habitsValue))
+      : setHabits([...habits, habitsValue]);
   };
 
   const handleMottoChange = newMotto => {
@@ -55,19 +56,22 @@ const Form = () => {
 
         <form onSubmit={handleSubmit}>
 
-          <Input
-            userName={name}
-            onNameChange={handleNameChange}
-          />
-
-          <CheckboxGroup
-            energy={energy}
-            onEnergyChange={handleEnergyChange}
-          />
+          <div>
+            <Input
+              userName={name}
+              onNameChange={handleNameChange}
+            />
+          </div>
+          <div>
+            <CheckboxGroup
+              energy={energy}
+              onEnergyChange={handleEnergyChange}
+            />
+          </div>
 
           <RadioGroup
-            userKindness={kindness}
-            onKindnessChange={handleKindnessChange}
+            userHabits={habits}
+            onHabitsChange={handleHabitsChange}
           />
 
           <SelectMotto
@@ -83,7 +87,7 @@ const Form = () => {
           <Summary
             userName={name}
             userEnergy={energy}
-            userKindness={kindness} />
+            userHabits={habits} />
         )};
     </section >
 

@@ -5,7 +5,7 @@ const Submit = () => {
 
   return (
 
-    <div className="submit-button">
+    <div className="submit-button" tabIndex="0">
       <button type="submit" value="Submit"> Submit</button>
     </div>
 
@@ -16,4 +16,4 @@ const Submit = () => {
 
 };
 
-export default Submit
+export default Submit;

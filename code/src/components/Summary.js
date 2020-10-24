@@ -2,13 +2,13 @@ import React from 'react';
 
 
 
-const Summary = ({ userName, userEnergy, userKindness }) => {
+const Summary = ({ userName, userEnergy, userHabits }) => {
 
   return (
-    <div className="question-card">
-      <p>Good job {userName}!
-      You push yourself {userEnergy} and work on shredding what is no longer useful to you {userKindness}</p>
-      <h4>Thank you for particpating </h4>
+    <div className="summary-card">
+      <p className="summary-text">Good job {userName}!
+      You push yourself {userEnergy} and work on shredding what is no longer useful to you {userHabits}.</p>
+      <p>Eat, sleep, react. Repeat.</p>
     </div>
 
   );
@@ -16,4 +16,4 @@ const Summary = ({ userName, userEnergy, userKindness }) => {
 };
 
 
-export default Summary 
+export default Summary;

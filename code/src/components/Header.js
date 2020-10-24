@@ -5,13 +5,16 @@ const Header = () => {
 
   return (
 
-    <header>
+    <header tabIndex="0">
       <h1>
-        Change all the questions pretty please
+        Tiny react survey.
     </h1>
+      <div className="box">
+        <img className="super-pic" src="./img/super_woman.png" alt="illustrated super woman" />
+      </div>
     </header>
   );
 
 };
 
-export default Header
+export default Header;

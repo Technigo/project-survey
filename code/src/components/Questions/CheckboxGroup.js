@@ -5,7 +5,7 @@ const CheckboxGroup = ({ energy, onEnergyChange }) => {
 
   return (
     <div className="question-card">
-      <h3 className="question-header">How often du you push yourself outside of your comfort zone?</h3>
+      <h3 className="question-header" tabIndex="0">How often du you push yourself outside of your comfort zone?</h3>
       <label htmlFor="never">Never</label>
       <input
         id="never"
