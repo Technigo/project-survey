@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Header } from 'components/Header';
+import { Header } from './Header';
 import { NameInput } from './NameInput';
 import { EmailInput } from './EmailInput';
 import { Radiobuttons } from './Radiobuttons';
