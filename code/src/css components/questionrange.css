@@ -30,9 +30,3 @@
   background: rgb(248, 196, 204);
   cursor: pointer;
 }
-
-@media only screen and (min-width: 768px) {
-  .slider {
-    width: 50%;
-  }
-}

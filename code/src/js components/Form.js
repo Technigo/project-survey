@@ -39,8 +39,8 @@ const handleSubmit = event => {
 
 return (
   <>
-    <Header />
   <section className="form">
+    <Header />
       {! showSummary ? ( 
           <form onSubmit={handleSubmit}>
     <Questionname
