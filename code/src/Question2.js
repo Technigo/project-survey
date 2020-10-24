@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-
+import React from 'react'
 
 const descriptionsArray = [
     'Nice',
@@ -16,16 +15,11 @@ const descriptionsArray = [
     'Loving',
     'Loyal',
     'Helpful',
-
-
 ]
-
-
 
 export const Question2 = ({name, descriptions, setdescription, onDescriptionChange }) => {
 console.log(descriptions)
 
-const [active, setActive] = useState()
     return (
         <section className="question2 section">
             <h2>Select some word that discribe {name}</h2>
@@ -41,15 +35,12 @@ const [active, setActive] = useState()
                                 className={descriptions.includes(description) 
                                     ? "button-active"
                                     : "button-not-active"
-                                }
-                                
+                                } 
                             />
                         </div>
                     )
                 })}
-            </div>
-            
-            
+            </div> 
         </section>
     )
 }
