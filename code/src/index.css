@@ -1,13 +1,157 @@
-body {
+body,
+html {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  height: 100%;
+  Font-Family: 'Open Sans', Sans-Serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-page {
+  margin: auto;
+  height: 100vh;
+  position: relative;
+  max-height: 977px;
+  max-width: 1800px;
+}
+
+.main-page-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/hannah-lim-dogs.jpg");
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.main-form {
+  display: flex;
+}
+
+.welcome-text,
+.first-question-section,
+.second-question-section,
+.third-question-section,
+.summary {
+  text-align: center;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.summary {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.first-question-radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+button,
+.submit-button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  margin-top: 30px;
+  padding: 10px 25px;
+  color: black;
+  text-align: center;
+  font-size: 14px;
+  width: auto;
+}
+
+h1 {
+  Font-Family: 'Raleway', Sans-Serif;
+  font-size: 50px;
+  margin: 0;
+}
+
+h2 {
+  Font-Family: 'Open Sans', Sans-Serif;
+  font-size: 18px;
+
+}
+
+.first-question-section {
+  font-size: 15px;
+}
+
+p {
+  font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.bold {
+
+  font-weight: 800;
+}
+
+img {
+  width: 50%;
+  height: auto;
+}
+
+.radio-buttons {
+  padding-top: 10px;
+}
+
+/** Mobile view **/
+@media screen and (max-width: 559px) {
+
+  h1 {
+    font-size: 28px;
+    margin: 0;
+  }
+
+  h2 {
+
+    font-size: 17px;
+  }
+
+  img {
+    width: 80%;
+    height: auto;
+  }
+}
+
+/** Tablet view **/
+@media screen and (min-width: 560px) and (max-width:1023px) {
+  h1 {
+    font-size: 40px;
+    margin: 0;
+  }
+
+  h2 {
+
+    font-size: 18px;
+  }
+
+  img {
+    width: 60%;
+    height: auto;
+  }
 }
