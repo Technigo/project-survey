@@ -17,6 +17,7 @@ const RadioButtons = ({ rating, onRatingChange }) => {
               onChange={onRatingChange}
               required
             ></input>
+            <span className="radio-checkmark"></span>
             {a}
           </label>
         ))}

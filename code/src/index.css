@@ -48,20 +48,68 @@ form {
 .dropdown-options {
   height: 30px;
   width: 80%;
+  margin-left: 20px;
   background: content-box;
   font: inherit;
   border: none;
   border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
+.radio-buttons {
+  margin-top: 20px;
+}
+
 .radio {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  margin-left: 20px;
 }
 
 .radio-label {
-  margin: 5px;
+  position: relative;
+  margin: 10px 0;
+  padding-left: 35px;
+}
+
+.radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radio-checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: content-box;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+}
+
+.radio-checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+  top: 5px;
+  left: 5px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+}
+
+.radio-label:hover input ~ .radio-checkmark {
+  background-color: white;
+}
+
+.radio-label input:checked ~ .radio-checkmark {
+  background-color:#CD5C5C;
+}
+
+.radio-label input:checked ~ .radio-checkmark:after {
+  display: block;
 }
 
 .text-input {
