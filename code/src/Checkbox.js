@@ -3,8 +3,11 @@ import React from 'react'
 export const Checkbox = ({ contactme, onContactmeChange}) => {
     
     return (
+       <>
+          <div>
+            <h1 className="typewriter">Do you mind if I..?</h1></div>
         <div className="checkbox-group">
-            <h1 className="typewriter">Do you mind if I..?</h1>
+            
             <div className="checkbox-container">
             <label htmlFor="newsletter">Send you some juicy newsletters?</label>
             <input
@@ -29,7 +32,7 @@ export const Checkbox = ({ contactme, onContactmeChange}) => {
             <span className="custom-checkbox"></span>
             </div>
         </div>
-
+</>
             
     )
 }

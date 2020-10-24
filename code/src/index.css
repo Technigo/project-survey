@@ -317,15 +317,23 @@ button{
 }
 
 @media (min-width: 1024px) {
-  .header-wrapper {
-    margin-left: 50vh;
-
-  }
   .typewriter{
-    font-size: 80px;
+    font-size: 50px;
   }
   .start-button {
-    width: 250px;
-    margin-left: 50vh;
+    width: 200px;
+  }
+
+  .welcome, .input, .dropdown, .checkbox, .radiobutton, .summary,
+  .input-field, .dropdown-field, .checkbox-container, .age-group {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .summary-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
 }
