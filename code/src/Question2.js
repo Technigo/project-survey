@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const descriptionsArray = [
@@ -20,8 +20,12 @@ const descriptionsArray = [
 
 ]
 
+
+
 export const Question2 = ({name, descriptions, setdescription, onDescriptionChange }) => {
 console.log(descriptions)
+
+const [active, setActive] = useState()
     return (
         <section className="question2 section">
             <h2>Select some word that discribe {name}</h2>
@@ -29,12 +33,15 @@ console.log(descriptions)
                 {descriptionsArray.map(description => {
                     return (
                         <div className="description-container">
-                            {/* <label htmlFor={description}>{description}</label> */}
                             <input
                                 value={description}
                                 id={description}
                                 type="button"
                                 onClick={() => onDescriptionChange(description)}
+                                className={descriptions.includes(description) 
+                                    ? "button-active"
+                                    : "button-not-active"
+                                }
                                 
                             />
                         </div>

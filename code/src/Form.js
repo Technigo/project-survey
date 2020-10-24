@@ -93,8 +93,7 @@ export const Form = () => {
     const handlerDescriptionChange = newDescription => {
         descriptions.includes(newDescription)
              ? setDescription( descriptions.filter(item => item !== newDescription))
-             : setDescription( [...descriptions, newDescription] );
-       
+             : setDescription( [...descriptions, newDescription] );   
     }
 
     const handlerUserNameChange = newUserName => {
@@ -129,99 +128,11 @@ export const Form = () => {
                 onUserNameChange={handlerUserNameChange}
             />
             
-            <Summary
-                name={name}
-                descriptions={descriptions}
-                gift={gift}
-                userName={userName}
+            <input
+                type="submit"
+                value="submit"
             />
+
         </form>
     )
 }
-
-
-
-/* <h2>{questions[0].question}</h2>
-<div className="answer-container">
-    {answers.map(answer = => ( 
-        <label key="{answer">
-            <input
-                type="button"
-                value={answer}
-            />
-            {answer}
-        </label>
-    ))}
-</div> */
-
-
-
-// const [name, setName] = useState('');
-// const [language, setLanguage] = useState('');
-// const [likeProgramming, setLikePogramming] = useState('');
-// const [answer, setanswer] = useState('');
-
-// const onNameChange = newName => {
-//     setName(newName);
-// }
-
-// const onLanguageChange = newLanguage => {
-//     setLanguage(newLanguage);
-// }
-
-// const onLikeChange = newLikeProgramming => {
-//     setLikePogramming(newLikeProgramming);
-
-
-
-//  <div>
-//                 <label htmlFor="name">Your name</label>
-//                 <input 
-//                     value={name} 
-//                     onChange={e => onNameChange(e.target.value)} 
-//                     id="name" 
-//                     type="text" 
-//                 />
-//             </div>
-            
-            
-            
-//             <div>
-//                 {questions.map(question => {
-//                     return (
-//                         <QuizQuestions 
-//                             question={question.question}
-//                             answers={question.answers}  
-//                         />
-//                     )
-//                 })}
-//             </div>
-            
-//             <Question2 />
-//             <div>
-//                 <h2>Do you like programming?</h2>
-//                 <label>
-//                     <input 
-//                         type="radio" 
-//                         value="love it"
-//                         onChange={e => onLikeChange(e.target.value)} 
-//                         checked={likeProgramming === "love it"}
-//                         />
-//                     Love it!
-//                 </label>
-//                 <label>
-//                     <input type="radio" value="nope" 
-//                         onChange={e => onLikeChange(e.target.value)} 
-//                         checked={likeProgramming === "nope"}
-//                     />
-//                     Nope
-//                 </label>
-//                 <label>
-//                     <input type="radio" value="love-hate" 
-//                     onChange={e => onLikeChange(e.target.value)} 
-//                     checked={likeProgramming === "love-hate"}
-//                     />
-//                     It's a love-hate relationship!
-//                 </label>
-                
-//             </div>
