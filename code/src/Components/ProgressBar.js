@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './progressbar.css';
+import 'styles/progressbar.css';
 
 export const ProgressBar = (props) => {
  

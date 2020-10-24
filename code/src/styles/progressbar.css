@@ -11,7 +11,8 @@
   height: 15px;
 }
 
-.progress-bar[value]::-moz-progress-bar {
+/*.progress-bar[value]*/
+::-moz-progress-bar {
   background-color: #84A98C;
   border-radius: 8px;
   height: 15px;

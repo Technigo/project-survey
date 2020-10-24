@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import { Header } from 'components/Header';
 import { NameInput } from './NameInput';
 import { EmailInput } from './EmailInput';
 import { Radiobuttons } from './Radiobuttons';
@@ -9,7 +10,7 @@ import { Buttons } from './Buttons';
 import { ProgressBar } from './ProgressBar';
 import { Summary } from './Summary';
 
-import './form.css';
+import 'styles/form.css';
 
 export const Form = () => {
   const [name, setName] = useState("");
@@ -28,6 +29,7 @@ export const Form = () => {
       <form onSubmit={handleSubmit}>    
         {section === 'startText' && (
           <>
+            <Header />
             <h2 tabIndex="0">If YES, please fill in the form 
               <span role="img" aria-label="A blue heart emoji">&#128420;</span>
             </h2>
@@ -157,6 +159,7 @@ export const Form = () => {
               title="Submit"
               function={setSection}
               value='summary'
+              disabled={likeMyJob === ''}
             />
           </section>
           <ProgressBar 

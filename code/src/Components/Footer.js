@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './footer.css';
+import 'styles/footer.css';
 
 export const Footer = () => {
   
@@ -10,7 +10,7 @@ export const Footer = () => {
       <p tabIndex="0">The answers will not be sent to me. </p>
       <p tabIndex="0">If you want to contact me please reach me on <span className="email-underlined">gabriellabolin@gmail.com </span> 
       or <a href="https://www.linkedin.com/in/gabriella-bolin-b718544a/" 
-            aria-labelledby="Clickable link to LinkedIn"
+            aria-label="Link to LinkedIn"
             target="_blank" 
             rel="noopener noreferrer">
             @LinkedIn.

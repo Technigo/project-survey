@@ -4,7 +4,6 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-radius: 8px;
 }
 
 /* Name Input */ /* Email Input */ 
@@ -31,7 +30,7 @@ form {
   border: none;
   border-bottom: 1px solid #52796F;
   background: #CAD2C5;
-  padding: 12px 6px 8px 6px;
+  padding: 12px 6px 12px 6px;
   width: 300px;
 }
 
@@ -82,8 +81,8 @@ fieldset {
     width: 500px;
     justify-content: center;
   }
-}
 
-@media (min-width: 1024px) { /* Desktop device */
- 
+  .name-input, .email-input, .dropdown-select {
+    width: 500px;
+  }
 }

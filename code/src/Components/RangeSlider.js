@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './rangeslider.css';
+import 'styles/rangeslider.css';
 
 export const RangeSlider = ( {likeMyJob, setLikeMyJob, onChange, value} ) => {
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './buttons.css';
+import 'styles/buttons.css';
 
 export const Buttons = (props) => {
 
