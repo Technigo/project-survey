@@ -60,7 +60,7 @@ return (
         onAmountChange={handleAmountChange}
     />
     <Questionrange
-        price={coffeeprice}
+        coffeeprice={coffeeprice}
         onRangeChange = {handleCoffeepriceChange}
         />
     <Button1 />
@@ -69,7 +69,6 @@ return (
                 address = {answeraddress}
                 drink = {answerdrink}
                 answeramount={answeramount}
-                coffeeprice={coffeeprice}
         />    
       )
 }

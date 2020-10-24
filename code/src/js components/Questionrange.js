@@ -19,7 +19,7 @@ export const Questionrange = ({coffeeprice, onRangeChange}) => {
               className="slider"id="myRange"
               aria-label="Choose a price that you consider fair for a cup of coffee from the range of 2 to 6"
           />
-              <p>{output} $</p>
+              {/* <p>{output} $</p> */}
       </div>
     </>
   )
