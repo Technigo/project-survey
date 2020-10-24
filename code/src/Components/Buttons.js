@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'styles/buttons.css';
 
-export const Buttons = (props) => {
+export const Buttons = props => {
 
   return ( 
     <button
