@@ -63,7 +63,7 @@ section:nth-child(odd) {
 
 .start-survey-link {
   text-decoration: none;
-  color: #5C4E4E;
+  color: #222222;
   background-color: #E8E3CC;
   border: 2px #5C4E4E solid;
   box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
@@ -167,8 +167,8 @@ section:nth-child(odd) {
 }
 
 .user-age {
-  background-color: #C68879;
-  color: #F4EEC6;
+  background-color: #E8E3CC;
+  color: #222222;
   border: 1px solid #5C4E4E;
   padding: 5px;
   margin-left: 10px;
