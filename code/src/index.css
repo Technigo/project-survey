@@ -96,7 +96,7 @@ button {
   color: #f1f1f1;
   transition: 0.3s all;
   border-radius: 2px;
-  padding: 3px;
+  padding: 1px 3px 3px 3px;
 }
 
 button:hover {
