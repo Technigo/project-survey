@@ -14,8 +14,9 @@ const selectCarModels = [
 const UserCarModels = ({ onCarsChange }) => {
   return (
     <div className="car-models" id="sectionCarModels">
-      <p>Which Suzuki car(s) that you are possessing?</p>
+      <label htmlFor="userCarModels">Which Suzuki car(s) that you are possessing?</label>
       <Select
+        id="userCarModels"
         onChange={onCarsChange}
         options={selectCarModels}
         isMulti
