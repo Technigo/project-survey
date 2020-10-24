@@ -2,7 +2,7 @@ import React from 'react';
 
 import 'styles/rangeslider.css';
 
-export const RangeSlider = ( {likeMyJob, setLikeMyJob, onChange, value} ) => {
+export const RangeSlider = ( {likeMyJob, setLikeMyJob} ) => {
 
   return (
     <div className="slide-container">
@@ -17,6 +17,5 @@ export const RangeSlider = ( {likeMyJob, setLikeMyJob, onChange, value} ) => {
           onChange={event => setLikeMyJob(event.target.value)}>
         </input>    
     </div>
-  )
-
-}
+  );
+};

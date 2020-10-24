@@ -26,8 +26,7 @@ export const Summary = ( {name, email, canContributeWith,
           {likeMyJob}</p>
         <p className="summary-text" tabIndex="0">
           I have 
-          <span className="underlined-summary-text">
-          {yearsOfExperience}</span> 
+          <span className="underlined-summary-text"> {yearsOfExperience} </span> 
           of experience within tech.
         </p>
         <div className="end-words-wrapper">

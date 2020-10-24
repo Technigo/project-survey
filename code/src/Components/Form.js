@@ -12,6 +12,7 @@ import { Summary } from './Summary';
 
 import 'styles/form.css';
 
+// Importing all states from the imported components
 export const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -163,8 +164,8 @@ export const Form = () => {
             />
           </section>
           <ProgressBar 
-              value='100'
-            />
+            value='100'
+          />
         </>
       )}
         
