@@ -1,21 +1,13 @@
 import React, {useState} from 'react'
 import { Welcome } from './Welcome.js'
-import { DontTakeSurvey } from './DontTakeSurvey.js'
 import { Form } from './Form.js'
 import  Logo  from './Images/blue-bottle.png'
 
 export const App = () => {
 
-  const [pageState, setPageState] = useState(0);
-
-  let page = <Welcome setPageState={setPageState} />; 
-  if (pageState === 1) {
-    page = <Form />;
-  } else if (pageState === 2) {    
-    page = <DontTakeSurvey />;
-  } else {
-
-  }
+  // Using the pageState state to set the Welcome.js component as the first componenet you see when you enter the site. This is done in the comparison statement defined under the end header tag below. If pageState is true the Welcome.js is shown, else(:) the form is shown.  
+  // The pageState state is changed to false when the button, that's defined in the Welcome.js, is clicked. This is because the onClick function is set to false by way of the setPageState function. 
+  const [pageState, setPageState] = useState(true);
 
   return (
     <main>
@@ -34,13 +26,13 @@ export const App = () => {
           </nav>
         </div>
       </header>
-      { page }   
+      { pageState === true ? (
+        <Welcome setPageState={setPageState} />
+      ) : (
+        <Form />
+      )}        
     </main>
   );
 };
 
-// To do:
-// 1. Link each form section so they are shown in order based on the user clicking on a button
-// 2. Create an bottle image for the background so it looks like the form sections are inside or placed just over and outside of it.
-// 3. Make background of the form slighly transparent.
-// 4. Accessibility validation. 
+ 
