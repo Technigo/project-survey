@@ -1,13 +1,104 @@
 import React from "react";
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
+import Slider from "@material-ui/core/Slider";
 
-const Question2 = ({ city, onCityChange }) => {
+const useStyles = makeStyles((theme) => ({
+  root: {
+    width: 300,
+  },
+  margin: {
+    height: theme.spacing(3),
+  },
+}));
+
+const marks = [
+  {
+    value: 20,
+    label: "Rookie",
+  },
+  {
+    value: 40,
+    label: "Good",
+  },
+  {
+    value: 60,
+    label: "Advanced",
+  },
+  {
+    value: 80,
+    label: "Elite",
+  },
+];
+
+const valuetext = (value) => {
+  return `${value}`;
+};
+
+const Question2 = ({ experience, onExperienceChange }) => {
+  const classes = useStyles();
+
   return (
-    <select className="question-2" value={city} onChange={onCityChange}>
-      <option value="">Choose city...</option>
-      <option value="stockholm">Stockholm</option>
-      <option value="barcelona">Barcelona</option>
-      <option value="berlin">Berlin</option>
-    </select>
+    <div className={classes.root}>
+      <Typography id="discrete-slider-always" gutterBottom>
+        Training experience {valuetext}
+      </Typography>
+      <Slider
+        defaultValue={20}
+        getAriaValueText={valuetext}
+        aria-labelledby="discrete-slider-always"
+        step={10}
+        marks={marks}
+        valueLabelDisplay="on"
+        onChange={onExperienceChange}
+        exp={experience}
+        // type={Number}
+      />
+    </div>
   );
 };
 export default Question2;
+// import React from "react";
+
+// const TrainingExp = () => {
+
+//     return (
+//       <div>
+//         <label htmlFor="colorRed">Red</label>
+//         <input
+//           id="colorRed"
+//           type="checkbox"
+//           checked={colors.includes("red")}
+//           onChange={() => onColorsChange("red")}
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="colorRed">Red</label>
+//         <input
+//           id="colorRed"
+//           type="checkbox"
+//           checked={colors.includes("red")}
+//           onChange={() => onColorsChange("red")}
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="colorRed">Red</label>
+//         <input
+//           id="colorRed"
+//           type="checkbox"
+//           checked={colors.includes("red")}
+//           onChange={() => onColorsChange("red")}
+//         />
+//       </div>
+//       <div>
+//         <label htmlFor="colorRed">Red</label>
+//         <input
+//           id="colorRed"
+//           type="checkbox"
+//           checked={colors.includes("red")}
+//           onChange={() => onColorsChange("red")}
+//         />
+//       </div>
+//     );
+// }
+// export default TrainingExp;

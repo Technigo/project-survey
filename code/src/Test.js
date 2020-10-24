@@ -12,8 +12,6 @@
 //     height: 48,
 //     padding: "0 30px",
 //     width: 250,
-//     display: "flex",
-//     justifyContent: "center",
 //   },
 // });
 

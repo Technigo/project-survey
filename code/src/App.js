@@ -5,15 +5,15 @@ import Footer from "Footer";
 // import Test from "./Test";
 import Form from "./Form";
 import css from "./index.css";
+import Start from "./Start";
 
 export const App = () => {
   return (
     <>
       <Header />
-      {/* <section>
-        <Test />
-      </section> */}
+      <Start />
       <Form />
+      {/* <Test /> */}
       <Footer />
     </>
   );

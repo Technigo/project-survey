@@ -15,20 +15,26 @@ code {
     monospace;
 }
 
+
+
 header {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: lightskyblue;
   width: 100%;
   height: auto;
   display: flex;
   text-align: center;
   justify-content: center;
   font-family: 'Amatic SC';
-  font-size: 50px;
+  font-size: 30px;
 }
 
-.radio-group {
-  
+.start-text {
+  display: flex;
+  justify-content: center;
+  font-family: 'Amatic SC', cursive;
+  color: white;
+  font-size: 25px;
 }
 
 .form-container {
@@ -43,13 +49,15 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
 .question-2 {
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
-  width: 120px;
+  
+  
 
 }
 
@@ -58,16 +66,28 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+ 
 }
 
+.submit-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+}
+
+
+
 footer {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: lightskyblue;
   width: 100%;
   height: auto;
   display: flex;
   text-align: center;
   justify-content: center;
   font-family: 'Amatic SC';
-  font-size: 50px;
+  font-size: 25px;
+  position: absolute;
+  bottom: 0;
 }
