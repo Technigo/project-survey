@@ -17,7 +17,6 @@ export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
                         checked={yesOrNo === answer}
                         name="answer"
                         required
-                        aria-required
                         aria-checked={yesOrNo === answer}
                     />
                     {answer}
