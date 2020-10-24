@@ -10,7 +10,7 @@ export const App = () => {
   const [pageState, setPageState] = useState(true);
 
   return (
-    <main>
+    <>
       <header>
         <div className="logo-container">
           <h1>CRAFT BEER Co.</h1>
@@ -26,12 +26,14 @@ export const App = () => {
           </nav>
         </div>
       </header>
-      { pageState === true ? (
-        <Welcome setPageState={setPageState} />
-      ) : (
-        <Form />
-      )}        
-    </main>
+      <main>
+        { pageState === true ? (
+          <Welcome setPageState={setPageState} />
+        ) : (
+          <Form />
+        )}
+      </main>
+    </>
   );
 };
 
