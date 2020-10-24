@@ -71,7 +71,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .drop-down select {
