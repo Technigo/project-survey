@@ -5,7 +5,7 @@ const GOOD_GUARANTEE_VALUE = "good guarantee policy";
 const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
   return (
     <div className="section-reasons-to-buy" id="sectionReasonsToBuy">
-        <p tabIndex="0">What are the reasons that make you decided to own (a) Suzuki car(s)?</p>
+        <p tabIndex="0">What are the reasons that made you decide to own (a) Suzuki car(s)?</p>
         <div className="reasons-to-buy-container">
             <article className="reasons-input-element">
                 <input
