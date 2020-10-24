@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DropDown = ({ location, onLocationChange }) => {
+const DropDown = ({ place, onPlaceChange }) => {
   return (
     <section className="dropdown">
-      <h2 className="label" id="dropdown-label">Where are you located?</h2>
-      <select tabIndex="0" aria-labelledby="dropdown-label" className="dropdown-options" id="location" value={location} onChange={onLocationChange}>
-        <option value="">Select a location</option>
+      <h2 tabIndex="0" className="label">Where are you located?</h2>
+      <select tabIndex="0" className="dropdown-options" id="place" value={place} onChange={onPlaceChange}>
+        <option value="">Select a place</option>
         <option value="Stockholm county">Stockholm county</option>
         <option value="Uppsala county">Uppsala county</option>
         <option value="Somewhere else in Sweden">Somewhere else in Sweden</option>

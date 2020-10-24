@@ -33,6 +33,11 @@ button {
   font: inherit;
   background: content-box;
   box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.5);
+  border-color: rgba(0, 0, 0, 0.5);
+}
+
+button:hover {
+  background: #CD5C5C;
 }
 
 form {
@@ -55,7 +60,7 @@ form {
   border-bottom: 2px solid rgba(0, 0, 0, 0.5);
 }
 
-.radio-buttons {
+.radio-buttons, .textarea {
   margin-top: 20px;
 }
 
@@ -114,6 +119,14 @@ form {
 
 .text-input {
   width: 100%;
+  border-radius: 15px;
+  background: content-box;
+  border: 2px solid rgba(0, 0, 0, 0.5);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
 }
 
 .summary-answer {

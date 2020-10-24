@@ -10,7 +10,7 @@ import Summary from './Summary';
 
 const Form = () => {
   const [showQuestion, setShowQuestion] = useState(false);
-  const [location, setLocation] = useState('');
+  const [place, setPlace] = useState('');
   const [rating, setRating] = useState('');
   const [feedback, setFeedback] = useState('');
   const [showSummary, setShowSummary] = useState(false);
@@ -20,8 +20,8 @@ const Form = () => {
     setShowQuestion(true);
   }
 
-  const handleLocationChange = event => {
-    setLocation(event.target.value);
+  const handlePlaceChange = event => {
+    setPlace(event.target.value);
   };
 
   const handleRatingChange = event => {
@@ -37,15 +37,15 @@ const Form = () => {
     setShowSummary(true);
   }
 
-  console.log(showQuestion, location, rating, feedback, showSummary);
-  // console.log(location, rating, feedback, showSummary);
+  console.log(showQuestion, place, rating, feedback, showSummary);
+  // console.log(place, rating, feedback, showSummary);
 
   return (
     <section>
       { (!showSummary && feedback !== '') ? (
         <form>
           <Intro />
-          <DropDown location={location} onLocationChange={handleLocationChange} />
+          <DropDown place={place} onPlaceChange={handlePlaceChange} />
           <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
           <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
           <Submit onClick={handleSubmit} />
@@ -53,20 +53,20 @@ const Form = () => {
       ) : (!showSummary && rating !== '') ? (
         <form>
           <Intro />
-          <DropDown location={location} onLocationChange={handleLocationChange} />
+          <DropDown place={place} onPlaceChange={handlePlaceChange} />
           <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
           <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
         </form>
-      ) : (!showSummary && location !== '') ? (
+      ) : (!showSummary && place !== '') ? (
         <form>
           <Intro />
-          <DropDown location={location} onLocationChange={handleLocationChange} />
+          <DropDown place={place} onPlaceChange={handlePlaceChange} />
           <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
         </form>
       ) : (!showSummary && showQuestion) ? (
         <form>
           <Intro />
-          <DropDown location={location} onLocationChange={handleLocationChange} />
+          <DropDown place={place} onPlaceChange={handlePlaceChange} />
         </form>
       ) : (!showSummary && !showQuestion) ? (
         <form>
@@ -74,7 +74,7 @@ const Form = () => {
           <Start onClick={handleStart} />
         </form>
       ) : (
-                  <Summary location={location} rating={rating} feedback={feedback} />
+                  <Summary place={place} rating={rating} feedback={feedback} />
                 )}
     </section>
   )
