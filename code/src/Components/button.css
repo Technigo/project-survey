@@ -1,0 +1,34 @@
+.submit-button {
+    background: none;
+
+    padding: 10px;
+    width: 230px;
+    background: rgba(255, 255, 255, 0.2);
+    font: 700 14px Lato, Helvetica, sans-serif;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.6);
+    border: rgba(255, 255, 255, 0.6) 3px solid;
+    border-radius: 4px;
+    transition: all 700ms ease;
+}
+
+.submit-button:disabled {
+    cursor: auto;
+    color: rgba(255, 255, 255, 0.2);
+    border: rgba(255, 255, 255, 0.2) 3px solid;
+}
+
+.submit-button:enabled:hover {
+    cursor: pointer;
+    border-color: #fff;
+    text-shadow: rgba(255, 255, 255, 0.5) 0 0 10px;
+    color: #fff;
+    box-shadow: rgba(255, 255, 255, 0.5) 0 0 20px;
+}
+
+@media (min-width: 700px) {
+    .submit-button {
+        font-size: 20px;
+        font-weight: 900;
+    }
+}

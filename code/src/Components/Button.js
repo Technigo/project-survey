@@ -1,7 +1,15 @@
 import React from 'react'
 
-export const Button = (props) => {
+import './button.css'
+
+export const Button = ({disable, btnText, section, setSection}) => {
     return (
-        <button type="submit" className="submit-button" disabled={props.name === ''}> Submit </button>
+        <button
+            type="submit"
+            onClick={event => {setSection(event.target.value)}}
+            value={section}
+            className="submit-button"
+            disabled={disable === ''}>{btnText}
+        </button>
     );
 };

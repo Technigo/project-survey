@@ -1,29 +1,70 @@
-header {
-    position: relative;
-}
 h1,
 h2 {
-    color: coral;
     text-align: center;
 }
 
 h1 {
-    font-family: 'Eater', cursive;
-    /* font-family: 'Creepster', cursive; */
-    font-size: 37px;
-    text-shadow: 4px 4px #555;
-    margin: 30px 0 0 0;
+    font-family: 'Creepster', cursive;
+    font-size: 50px;
+    /* text-shadow: 1px 1px #eee; */
+    text-shadow: rgba(255, 255, 255, 0.7) 0 0 10px;
+    margin: 20px 0 0 0;
+    animation: flicker 4s 0s infinite;
+    letter-spacing: 5px;
 }
 
 h2 {
-    margin: 0 0 40px 0;
+    margin: 10px 0 20px 0;
+    color: #e16f01;
+    text-shadow: 1px 1px #eee;
+    letter-spacing: 1.6px;
+    font-size: 18px;
+}
+
+@keyframes flicker {
+    0%,
+    6%,
+    12% {
+		text-shadow: none;
+		color: #111111;
+	}
+    3%,
+    9% {
+		text-shadow: 0 0 8px rgba(#fa6701,0.6);
+		color: #fa6701;
+	}
+	60% {
+		text-shadow: 0 0 8px rgba(#fa6701,0.6),
+		 0 0 16px rgba(#fa6701,0.4), 
+		 0 0 20px rgba(255,0,84,0.2), 
+		 0 0 22px rgba(255,0,84,0.1);
+		color: #fa6701;
+	}
+	100% {
+		text-shadow: 0 0 8px rgba(#fa6701,0.6),
+		 0 0 16px rgba(#fa6701,0.4), 
+		 0 0 20px rgba(255,0,84,0.2), 
+		 0 0 22px rgba(255,0,84,0.1);
+		color: #fa6701;
+	}
 }
 
 /* MEDIA QUARIES */
 
+@media (min-width: 300px) {
+    h1 {
+        font-size: 66px;
+    }
+}
+
 @media (min-width: 700px) {
     h1 {
-        font-size: 70px;
+        font-size: 110px;
+        letter-spacing: 10px;
+    }
+
+    h2 {
+        font-size: 24px;
     }
 
 }

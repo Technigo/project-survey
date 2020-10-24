@@ -10,7 +10,7 @@ export const App = () => {
 
   return (
     <>
-    <Header mainHeading="Trick or treat?" subHeading="Take the Halloween survey" />
+    <Header mainHeading="Halloween" subHeading="Do you dare to take the survey?" />
     <main>
       <Survey />
     </main>

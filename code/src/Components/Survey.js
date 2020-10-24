@@ -3,8 +3,8 @@ import { InputTypeText } from './InputTypeText'
 import { InputTypeRadio } from './InputTypeRadio'
 import { Button } from './Button'
 import { Summary } from './Summary'
+import { TheEnd } from './TheEnd'
 import { SelectOption } from './SelectOption'
-// import './survey.css'
 
 const colorArray = [
   "Pumpkin Orange",
@@ -22,31 +22,47 @@ const activityArray = [
   "Trick or treat",
   "Light lots of candles",
   "Eat too much candy",
-  "Some scary react coding",
+  "Do some scary react coding",
   "Nothing, I hate Halloween!",
 ]
 
 export const Survey = () => {
 
   const [name, setName] = useState("");
-  const [showSummary, setShowSummary] = useState(false);
+  // const [showSummary, setShowSummary] = useState(false);
+  const [selectedColor, setSelectedColor] = useState();
   const [selectedActivity, setSelectedActivity] = useState("");
   // const [agreeCheckbox, setAgreeCheckbox] = useState(false);
-  const [selectedColor, setSelectedColor] = useState();
+  
+  const [section, setSection] = useState('firstQuestion');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setShowSummary(true);
+    // setShowSummary(true);
   };
 
   return (
     <>
-      {!showSummary ? (
         <form className="survey" onSubmit={handleSubmit}>
-
-          <InputTypeText className="name" header="Let's start with your name:" name={name} setName={setName} placeholder="Name"/>
-          <SelectOption className="selected-activity" header={`So ${name}, how will you spend your Halloween?`} array={activityArray} selected={selectedActivity} setSelected={setSelectedActivity} />
-          <InputTypeRadio className="favourite-color" header="And last question, your favourite halloween color?" array={colorArray} selected={selectedColor} setSelected={setSelectedColor} />
+          {section === 'firstQuestion' && (
+          <>
+            <InputTypeText className="name" header="Let's start with your name:" name={name} setName={setName} placeholder="Name" />
+            <Button disable={name} btnText="Next" section="secondQuestion" setSection={setSection}/>
+          </>
+          )}
+          {section === 'secondQuestion' && (
+          <>
+            <InputTypeRadio className="favourite-color" header="Pick your favourite halloween color?" array={colorArray} selected={selectedColor} setSelected={setSelectedColor} />
+            <Button disable="disabled" btnText="Next" section="thirdQuestion" setSection={setSection}/>
+          </>
+          )}
+          {section === 'thirdQuestion' && (
+          <>
+            <SelectOption className="selected-activity" header={`How will you do on Halloween?`} array={activityArray} selected={selectedActivity} setSelected={setSelectedActivity} />
+            <Button disable={selectedActivity} btnText="Next" section="summary" setSection={setSection}/>
+          </>
+          )}
+          
 
           {/* <label className="checkbox">
             Do you agree?
@@ -57,12 +73,30 @@ export const Survey = () => {
             />
           </label> */}
 
-          <Button name={name}/>
+          {section === 'summary' && (
+            <>
+            <Summary name={name} activity={selectedActivity} color={selectedColor}/>
+            <Button disable={name} btnText="hell yeah!" section="theEnd" setSection={setSection} />
+            {/* <Button name={name} btnText="no, start over" section="firstQuestion" setSection={setSection} /> */}
+            <button
+              type="submit"
+              onClick={() => window.location.reload()}
+              // value={section}
+              className="submit-button"
+              // disabled={name === ''}
+            > no, i lied!
+            </button>
+            </>
+          )}
+
+          {section === 'theEnd' && (
+            <TheEnd />
+          )}
 
         </form>
-      ) : (
-      <Summary name={name} activity={selectedActivity} color={selectedColor}/>
-      )}
+
+      
+
     </>
   );
 
