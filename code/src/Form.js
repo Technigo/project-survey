@@ -5,12 +5,13 @@ import { Text } from 'Text'
 import { Submit } from 'Submit'
 
 
+
 export const Form = () => {
  
-    const [dropInput, fetchDropInput] = useState("");
-    const [radioInput, fetchRadioInput] = useState("");
-    const [textInput, fetchTextInput] = useState("");
-    const [submit, setSubmit] = useState(false);
+    const [dropInput, fetchDropInput] = useState("")
+    const [radioInput, fetchRadioInput] = useState("")
+    const [textInput, fetchTextInput] = useState("")
+    const [section, setSection] = useState('start')
 
     const handleDropInput = (data) => {
         fetchDropInput(data)
@@ -26,22 +27,46 @@ export const Form = () => {
 
     return <section class="survey">
 
-        {submit === false ? (
-            <form onSubmit={(e) => { e.preventDefault(); setSubmit(true) }} >
-                <Radio handleRadioInput={handleRadioInput} />
-                <Text handleTextInput={handleTextInput} textInput={textInput} />
-                <Dropdown handleDropInput={handleDropInput} />
-                <Submit />
+        
+        <form onSubmit={(e) => { e.preventDefault() }} >
 
+            {section === 'start' && (
+                <section>
+                    <p className="question">Stay on my wing and ill take you home?</p>
+                    <Submit title="Yes!" setSection={setSection} value='callsign'/>
+                </section>
+            )}
 
-            </form>
-        ) : (<section class="summary" tabIndex="0">
-                <p tabIndex="0">{dropInput}</p>
-                <p tabIndex="0">{textInput}</p>
-                <p tabIndex="0">{radioInput}</p>
+            {section === 'callsign' && (
+                <section>
+                    <Radio handleRadioInput={handleRadioInput} />
+                    <Submit title="Go!" setSection={setSection} value='quote'/>
+                </section>
+            )}
 
-        </section>)
-        }
+            {section === 'quote' && (
+                <section>
+                    <Text handleTextInput={handleTextInput} />
+                    <Submit title="Go!" setSection={setSection} value='rate'/>
+                </section>
+            )}
+
+            {section === 'rate' && (
+                <section>  
+                    <Dropdown handleDropInput={handleDropInput} />
+                    <Submit title="Go!" setSection={setSection} value='summary'/>
+                </section>
+            )}
+
+            {section === 'summary' && (
+                <section class="summary" tabIndex="0">
+                    <p tabIndex="0">Favo{radioInput}, take this boogie off my tail!</p>
+                    <p tabIndex="0">"I feel the need for {textInput}!"</p>
+                    <p tabIndex="0">You rated Top Gun:{dropInput}</p>
+                </section>
+            )}
+
+        </form>
 
     </section>
 }
