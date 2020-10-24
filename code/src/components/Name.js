@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const Name = ({name, setName, question}) => {
 
   return (

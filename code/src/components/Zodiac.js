@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const Zodiac = ({setZodiac, zodiac, zodiacArray}) => {
 
   console.log(zodiac)
