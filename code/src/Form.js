@@ -6,7 +6,7 @@ import { Submit } from 'Submit'
 
 
 export const Form = () => {
-
+ 
     const [dropInput, fetchDropInput] = useState("");
     const [radioInput, fetchRadioInput] = useState("");
     const [textInput, fetchTextInput] = useState("");
@@ -24,24 +24,24 @@ export const Form = () => {
         fetchRadioInput(data)
     }
 
-    return <div>
+    return <section class="survey">
 
         {submit === false ? (
             <form onSubmit={(e) => { e.preventDefault(); setSubmit(true) }} >
-                <Dropdown handleDropInput={handleDropInput} />
                 <Radio handleRadioInput={handleRadioInput} />
                 <Text handleTextInput={handleTextInput} textInput={textInput} />
+                <Dropdown handleDropInput={handleDropInput} />
                 <Submit />
 
 
             </form>
-        ) : (<div>
-            <p>{dropInput}</p>
-            <p>{textInput}</p>
-            <p>{radioInput}</p>
+        ) : (<section class="summary">
+                <p>{dropInput}</p>
+                <p>{textInput}</p>
+                <p>{radioInput}</p>
 
-        </div>)
+        </section>)
         }
 
-    </div>
+    </section>
 }
