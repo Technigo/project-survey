@@ -22,30 +22,8 @@ const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
               ></input>
               {item}
             </label>
-          )
+          );
         })}
-        {/* <fieldset className="answer-container">
-          <input
-            type="radio"
-            id="yes"
-            name="answer"
-            value="YES"
-            onChange={event => setAnswer(event.target.value)}
-            checked={answer === "YES"}
-          ></input>
-          <label htmlFor="yes">YES</label>
-        </fieldset>
-        <fieldset className="answer-container">
-          <input
-            type="radio"
-            id="no"
-            name="answer"
-            value="NO"
-            onChange={event => setAnswer(event.target.value)}
-            checked={answer === "NO"}
-          ></input>
-          <label htmlFor="no">NO</label>
-        </fieldset> */}
       </div>
     </section>
   )

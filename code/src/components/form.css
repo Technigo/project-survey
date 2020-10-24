@@ -10,3 +10,8 @@
   margin: 50px auto;
   border: 1px solid red;
 }
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
