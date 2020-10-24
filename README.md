@@ -2,7 +2,7 @@
 
 This project was to creat a form using React. Im happy that I were able to create a multi-step form.
 
-# Learning Objectives
+## Learning Objectives
 
 - Making small reusable components
 - Passing props
