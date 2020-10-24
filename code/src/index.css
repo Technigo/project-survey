@@ -7,6 +7,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #ffe5bb;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    45.34deg,
+    #119da4 5.66%,
+    #9bc7b2 31.53%,
+    #ffe5bb 50.01%,
+    #ffbe99 72.18%,
+    #ff886a 94.35%
+  );
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    45.34deg,
+    #119da4 5.66%,
+    #9bc7b2 31.53%,
+    #ffe5bb 50.01%,
+    #ffbe99 72.18%,
+    #ff886a 94.35%
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 code {
@@ -14,26 +34,44 @@ code {
     monospace;
 }
 
+.container {
+  min-height: 150vh;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
 header {
+  max-height: 20%;
+  color: hotpink;
   text-align: center;
-  background-color: mediumturquoise;
   padding: 20px;
 }
 
 form {
   min-height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
 }
 
-.card {
-  width: 400px;
-  height: 300px;
-  background-color: lightseagreen;
+.question-card {
+  width: 450px;
+  min-height: 200px;
+  height: min-content;
+  background-color: rgb(38, 162, 184);
   border: 2px solid black;
-  border-radius: 20%;
+  border-radius: 15px;
+  padding: 20px;
+  background: #ff7e5f;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(45deg, #ff7e5f, #feb47b);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(45deg, #ff7e5f, #feb47b);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
-  flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   margin: 5px;
 }
@@ -46,8 +84,16 @@ label {
   color: blueviolet;
 }
 
-.question {
-  color: chartreuse;
+.question-header {
+  color: rgb(17, 157, 164);
+  width: 100%;
+  position: relative;
+}
+
+.checkbox-input {
+  width: fit-content;
+  height: 20%;
+  color: aqua;
 }
 
 @media only screen and (max-width: 968px) {

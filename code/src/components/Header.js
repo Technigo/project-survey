@@ -3,13 +3,14 @@ import React from 'react';
 
 const Header = () => {
 
- return (
-   <header>
-     <h1>
-   Change all the questions pretty please
-     </h1>
-   </header>
- );
+  return (
+
+    <header>
+      <h1>
+        Change all the questions pretty please
+    </h1>
+    </header>
+  );
 
 };
 

@@ -1,33 +1,31 @@
 import React from 'react';
 
 
-
-
-
-const Kind = ({ kindness, setKindness }) => {
+const RadioGroup = ({ userKindness, onKindnessChange }) => {
 
   return (
-    <div>
-      <h3 className="question">I am kind to myself</h3>
+
+    <div className="question-card">
+      <h3 className="question-header">Are you able to release old habits, rules or beliefs that no longer serve you?</h3>
       <label htmlFor="always">Always</label>
       <input
         id="always"
         type="radio"
-        checked={kindness.includes('always')}
+        checked={userKindness.includes('always')}
         onChange={() => onKindnessChange('always')}
       />
       <label htmlFor="mostly">Mostly</label>
       <input
         id="mostly"
         type="radio"
-        checked={kindness.includes('mostly')}
+        checked={userKindness.includes('mostly')}
         onChange={() => onKindnessChange('mostly')}
       />
-      <label htmlFor="whatever">Yeah, whatever dude</label>
+      <label htmlFor="whatever">Whatever</label>
       <input
         id="whatever"
         type="radio"
-        checked={kindness.includes('whatever')}
+        checked={userKindness.includes('whatever')}
         onChange={() => onKindnessChange('whatever')}
       />
 
@@ -39,4 +37,4 @@ const Kind = ({ kindness, setKindness }) => {
 
 
 
-export default Kind;
+export default RadioGroup;

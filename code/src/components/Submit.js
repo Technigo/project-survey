@@ -1,15 +1,12 @@
 import React from 'react';
 
 
-
-
-const Submit = ({ submit, setSubmit }) => {
+const Submit = () => {
 
   return (
 
-    <div className="submit">
-      <button onClick={() => setSubmit(true)}
-        type="submit" value="Submit"> Submit</button>
+    <div className="submit-button">
+      <button type="submit" value="Submit"> Submit</button>
     </div>
 
 

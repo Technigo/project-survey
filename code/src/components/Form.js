@@ -1,80 +1,91 @@
 import React, { useState } from 'react';
 
-import FavIceNames from './Questions/Question1';
-import Allergygroup from './Questions/Question2';
-import SelectCopings from './Questions/Question3';
-import SelectToppings from './Questions/Question6';
+import Input from './Questions/Input';
+import CheckboxGroup from './Questions/CheckboxGroup';
+import RadioGroup from './Questions/Radio'
+import SelectMotto from './Questions/Select';
+
 import Submit from './Submit';
-// import Summary from './Summary';
+import Summary from './Summary';
 
 
 const Form = () => {
 
-  const [favIceName, setFavIceName] = useState('');
-  const [allergy, setAllergy] = useState([]);
-  const [coping, setSelectCoping] = useState('');
-  const [topping, setSelectTopping] = useState([]);
-
-  const [submit, setSubmit] = useState(false);
-  // const [summary, setSummary] = useState(false);
+  const [name, setName] = useState('');
+  const [energy, setEnergy] = useState([]);
+  const [kindness, setKindness] = useState('');
+  const [motto, setMotto] = useState([]);
 
 
-  const handleFavIceNameChange = newFavIceName => {
-    setFavIceName(newFavIceName);
+  const [showSummary, setShowSummary] = useState(false);
+
+
+  const handleNameChange = newName => {
+    setName(newName);
   }
 
-  const handleAllergyChange = allergyValue => {
-    allergy.includes(allergyValue)
-      ? setAllergy(allergy.filter(item => item !== allergyValue))
-      : setAllergy([...allergy, allergyValue]);
+  const handleEnergyChange = energyValue => {
+    energy.includes(energyValue)
+      ? setEnergy(energy.filter(item => item !== energyValue))
+      : setEnergy([...energy, energyValue]);
   };
 
-  const handleCopingChange = newCoping => {
-    setSelectCoping(newCoping);
-  }
+  const handleKindnessChange = kindnessValue => {
+    kindness.includes(kindnessValue)
+      ? setKindness(kindness.filter(item => item !== kindnessValue))
+      : setKindness([...kindness, kindnessValue]);
+  };
 
-  const handleToppingChange = toppingValue => {
-    topping.includes(toppingValue)
-      ? setSelectTopping(topping.filter(item => item !== toppingValue))
-      : setSelectTopping([...topping, toppingValue]);
-  }
+  const handleMottoChange = newMotto => {
+    setMotto(newMotto);
+  };
 
-  // const handleSubmit = event => {
-  //   setSummary(true);
-  // };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setShowSummary(true);
+  };
+
 
   return (
 
-    <form >
-      <FavIceNames
-        favIceName={favIceName}
-        onFavIceNameChange={handleFavIceNameChange}
-      />
+    <section className="container">
 
-      <Allergygroup
-        userAllergy={allergy}
-        onAllergyChange={handleAllergyChange}
-      />
-      <SelectCopings
-        coping={coping}
-        onCopingChange={handleCopingChange}
-      />
+      { !showSummary ? (
 
-      <SelectToppings
-        topping={topping}
-        onToppingChange={handleToppingChange}
-      />
+        <form onSubmit={handleSubmit}>
 
-      {/* <Summary
-        favIceName={favIceName}
-        userAllergy={allergy}
-        coping={coping}
-        topping={topping}
-      /> */}
+          <Input
+            userName={name}
+            onNameChange={handleNameChange}
+          />
 
-      <Submit />
+          <CheckboxGroup
+            energy={energy}
+            onEnergyChange={handleEnergyChange}
+          />
 
-    </form >
+          <RadioGroup
+            userKindness={kindness}
+            onKindnessChange={handleKindnessChange}
+          />
+
+          <SelectMotto
+            userMotto={motto}
+            onMottoChange={handleMottoChange}
+          />
+
+          <Submit />
+
+        </form >
+      ) : (
+
+          <Summary
+            userName={name}
+            userEnergy={energy}
+            userKindness={kindness} />
+        )};
+    </section >
 
   );
 
