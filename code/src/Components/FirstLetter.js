@@ -7,8 +7,8 @@ const FirstLetter = ({ yourLetter, onLetterChange }) => {
   
         <div className="firstLetter">
           <h3 tabIndex="0">FIRST LETTER OF YOUR NAME</h3>
-          <select tabIndex="0" value={yourLetter} onChange={e => onLetterChange(e.target.value)}>
-            <option tabIndex="0" value="">SELECT ANSWER</option>
+          <select className="firstLetter-text" tabIndex="0" value={yourLetter} onChange={e => onLetterChange(e.target.value)}>
+            <option tabIndex="0" value="">SELECT HERE</option>
             <option tabIndex="0" value="Toilet cleaner">A</option>
             <option tabIndex="0" value="Producer">B</option>
             <option tabIndex="0" value="Teacher">C</option>
