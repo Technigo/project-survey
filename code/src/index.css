@@ -239,6 +239,7 @@ blockquote a:hover {
   height: auto;
   font-size: 20px;
   margin: 10px 0 20px 0;
+  padding: 5px;
 }
 
 /* Responsive designs */
