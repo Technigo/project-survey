@@ -12,6 +12,7 @@ const NameField = ({name, setName}) => {
                 onChange={event => setName(event.target.value)}
                 value={name}
                 required
+                aria-required
             />
         </>
     )

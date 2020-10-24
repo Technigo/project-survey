@@ -59,6 +59,7 @@ label {
   display: grid;
   grid-template-columns: 100px 300px 100px;
   padding: 15px 0;
+  height: 600px;
 }
 
 .summary {

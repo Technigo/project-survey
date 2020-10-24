@@ -8,15 +8,15 @@ export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
         <>
             <label tabIndex="0">Will you participate?</label>
             {yesOrNoAnswers.map(answer => ( 
-                <label htmlFor={answer} key={answer} tabIndex="0">
+                <label htmlFor="answer" key={answer} tabIndex="0">
                     <input
-                        id={answer}
+                        id="answer"
                         type="radio" 
                         value={answer}
                         onChange={event => setYesOrNo(event.target.value)}
                         checked={yesOrNo === answer}
-                        name={answer}
-                        //required
+                        name="answer"
+                        required
                     />
                     {answer}
                 </label>

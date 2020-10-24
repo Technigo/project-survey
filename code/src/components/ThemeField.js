@@ -8,6 +8,8 @@ const ThemeField = ({theme, setTheme}) => {
             tabIndex="0"
             onChange={event => setTheme(event.target.value)}
             value={theme}
+            aria-label
+            
         >
             <option value="">Which theme would you prefer?</option>
             <option value="femme-fatale">Femme Fatale</option>
