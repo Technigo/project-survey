@@ -1,12 +1,12 @@
 import React from 'react'
 
 
-export const Name = ({name, setName}) => {
+export const Name = ({name, setName, question}) => {
 
   return (
-    <div className="welcome-wrapper">
+    <div className="name-wrapper">
       <label>
-      Welcome! What's your name?
+      {question}
         <input
           type="text"
           value={name}
@@ -15,6 +15,14 @@ export const Name = ({name, setName}) => {
           required>
         </input>
       </label>
+      <a href="#zodiac">
+        <button 
+          type="button" 
+          className="next-button"
+          disabled={name === ''}>
+          NEXT
+        </button>
+      </a>
     </div>
   )
 }

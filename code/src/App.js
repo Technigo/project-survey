@@ -1,11 +1,10 @@
 import React, { useState } from 'react'
 import data from './data.json'
-import { Summary } from './Summary.js'
-import { Name } from './Name.js'
-import { Zodiac } from './Zodiac.js'
-import { FinalQuestion } from './FinalQuestion.js'
-
-console.log(data.signs)
+import { Summary } from './components/Summary.js'
+import { Name } from './components/Name.js'
+import { Zodiac } from './components/Zodiac.js'
+import { Match } from './components/Match.js'
+import { Reveal } from './components/Reveal.js'
 
 export const App = () => {
 
@@ -25,6 +24,7 @@ export const App = () => {
         <Name 
           name={name}
           setName={setName}
+          question="Welcome! What's your name?"
         />
         <Zodiac
           name={name}
@@ -32,16 +32,17 @@ export const App = () => {
           setZodiac={setZodiac}
           zodiacArray={data.signs}
         />
-        <FinalQuestion 
+        <Match 
           zodiac={zodiac}
           question={question}
           setQuestion={setQuestion}
         />
-        <button 
-          type="submit"
-          disabled={name === '' || zodiac === '' || question === ''}>
-          Reveal results
-        </button>
+        <Reveal 
+          name={name}
+          zodiac={zodiac}
+          question={question}
+          title="Reveal results"
+        />
       </form>}
       {summary && 
       <Summary 

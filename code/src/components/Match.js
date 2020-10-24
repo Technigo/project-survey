@@ -1,10 +1,9 @@
 import React from 'react'
 
-export const FinalQuestion = ({zodiac, question, setQuestion}) => {
+export const Match = ({question, setQuestion}) => {
 
   return(
-    <div className="question-wrapper">
-      {/* <p>{zodiac}, that's interesting!</p> */}
+    <div className="match-wrapper" id="match">
       <p>Would you like to reveal your love match?</p>
       <div className="radio-wrapper" role="radiogroup">
         <input
@@ -16,11 +15,9 @@ export const FinalQuestion = ({zodiac, question, setQuestion}) => {
           checked={question === "yes"}
           required
         />
-        <label 
-          for="yes" 
-          role="radio" 
-          tabIndex="0"
-          aria-checked="false">
+        <label
+          className="match-label"
+          for="yes">
           Yes, I'm ready to find the one!
         </label>
         <input
@@ -33,13 +30,19 @@ export const FinalQuestion = ({zodiac, question, setQuestion}) => {
           required
         />
         <label 
-          for="no" 
-          role="radio" 
-          tabIndex="-1"
-          aria-checked="false"> 
+          className="match-label"
+          for="no"> 
           No... Not today.
         </label>
       </div>
+      <a href="#reveal">
+        <button 
+          type="button" 
+          className="next-button"
+          disabled={question === ''}>
+          NEXT
+        </button>
+      </a>
     </div>
   )
 }

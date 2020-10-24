@@ -7,10 +7,14 @@ export const Summary = ({name, zodiac, question, zodiacArray}) => {
   const zodiacName = zodiacArray.map(zodiac => zodiac.name)
   const findIndex = zodiacName.indexOf(zodiac)
 
+  const refreshPage = () => {
+    window.location.reload(false);
+  }
+
   return(
-    <>
+    <section className="summary">
       {question === 'yes' ? (
-        <section className="summary">
+        <div>
           <h2>Are you ready {name}?</h2>
           <p>Your zodiac sign is <span>{zodiac}</span> and your ultimate love match would be with <span>{zodiacMatch[findIndex]}</span>.</p>
           <blockquote
@@ -21,16 +25,22 @@ export const Summary = ({name, zodiac, question, zodiacArray}) => {
               – The Talko, <span>YourTango</span></a>
             </cite>
           </blockquote>
-          <p>Go get 'em, tiger! <span role="img" aria-label="tiger">🐯</span><span role="img" aria-label="heart">💛</span></p>
-        </section>
+          <p>Go get 'em, tiger! <span role="img" aria-label="tiger">🐯</span></p>
+        </div>
         ) : (
-          <section className="summary">
+          <div>
             <h2>Not ready to find love yet?</h2>
             <p>It's okay {name}. We can find your ultimate <span>{zodiac}</span> love match another time.</p>
-            <p>See you later, tiger! <span role="img" aria-label="tiger">🐯</span><span role="img" aria-label="heart">💛</span></p>
-          </section>
+            <p>See you later, tiger! <span role="img" aria-label="tiger">🐯</span></p>
+          </div>
         )         
       }
-      </>
+      <button
+        className="summary-button"
+        type="button"
+        onClick={refreshPage}>
+        Start over
+      </button>
+    </section>
   )
 }
