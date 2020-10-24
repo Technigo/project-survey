@@ -1,19 +1,8 @@
-# Technigo React Starter App
+# Music Releases
+The assignment this week was to build a survey form with React. It needed to have at least three questions and one being radio button and one a drop down. When clicking submit it should show a summary of the selected answers.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+## The problem
+I watched the videos with Jennie that I find very helpful. I started with doing all code in App.js and then split it up to Header.js and Summary.js.. I've used React and the useState function. Since I'm in the middle of moving to a house (next week) I haven't had that much time these week so my site is very basic. But it feels like I've understood the code pretty well and that feels nice. If I had more time I would have styled it better and also split it up to even more components. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## View it live
 
-## Usage
-
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`

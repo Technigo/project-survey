@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./index.css"
 import { Summary } from './Summary'
+import { Header } from './Header'
 
 
 export const App = () => {
@@ -16,10 +17,9 @@ export const App = () => {
 
   return (
     <>
-      <div className="container">
-      <h1 className="header">Johanna's food survey</h1>
-      <p className="introtext">Please answer these questions regarding food.</p>
-    
+      <Header />
+
+    <div className="container">
     <form onSubmit={handleSubmit}>
       <label className="survey-food">
         1. What is your favourite food? <br></br>
@@ -31,6 +31,7 @@ export const App = () => {
         />
       </label> 
       <br></br>
+
       <section className="icecream-section">
       <label className="survey-icecream">
         2. What is your favourite ice cream? <br></br>   
@@ -49,6 +50,7 @@ export const App = () => {
       </label>
       </section>
       <br></br>
+
       <section className="drink-section" id="drink">
         3. Choose your favourite drink? 
       <div className="option-container">
@@ -63,6 +65,7 @@ export const App = () => {
           required
           />
       </label>
+
       <label ClassName="option">
         Coffee      
         <input
@@ -74,6 +77,7 @@ export const App = () => {
           required
           />
       </label>
+      
       <label ClassName="option">
         Lemonad      
         <input
