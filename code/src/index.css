@@ -280,7 +280,7 @@ button{
 .typewriter{
   font-family: monospace;
   white-space: nowrap; /* keeps the content on a line */
-  border-right: .15em solid pink; /* Gives the cursor */
+  border-right: .15em solid black; /* Gives the cursor */
   overflow: hidden; /*Ensures the content is not revealed until the animation*/
   animation: typing 3.5s steps(40, end), blink-caret .5s step-end infinite; 
   letter-spacing: .15em;
