@@ -16,7 +16,7 @@ const UserRating = ({ userRating, onRatingChange }) => {
         {rating.map(rate => {
         return (
           <div className="user-rating-element" key={rate}>
-            <label htmlFor="userRating">
+            {/* <label htmlFor="userRating"> */}
               <input
                 id="userRating"
                 type="radio"
