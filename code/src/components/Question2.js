@@ -14,6 +14,7 @@ const Question2 = ({ questionText2, questionAnswer2, onDistanceChange }) => {
           <select
             onChange={(event) => onDistanceChange(event.target.value)}
             value={questionAnswer2}
+            // required
             id="drop-down"
           // name="distance"
           >
@@ -21,7 +22,7 @@ const Question2 = ({ questionText2, questionAnswer2, onDistanceChange }) => {
            in the value of its <select> instead. 
            Check out “The select Tag” for detailed instructions. */}
             {dropDownOptionsArray.map((option) => {
-              return <option key={option} value={option}>{option}</option>;
+              return <option key={option} value={option} required>{option}</option>;
             })}
           </select>
         </label>

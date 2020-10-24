@@ -15,10 +15,11 @@ const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
             <label key={item}>
               <input
                 type="radio"
+                name="button"
+                required
                 value={item}
                 onChange={event => onAnswerChange(event.target.value)}
                 checked={questionAnswer3 === item}
-                required
               ></input>
               {item}
             </label>
