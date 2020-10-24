@@ -69,7 +69,7 @@ form {
 
 .survey-wrapper {
   /* background-color: rgb(245, 210, 231); */
-  background-image: radial-gradient(circle, rgba(47,106,73,.2) 0% , rgba(47,106,73,.4) 30%, rgba(47,106,73,.9) 100%);
+  background-image: radial-gradient(circle, rgba(47,106,73,.2) 0% , rgba(47,106,73,.4) 30%, rgba(47,106,73,.9) 100%), url(./assets/grass-bg.jpg);
   background-size: cover;
   background-position-x: 0%;
   background-position-y: 10%; 
