@@ -118,9 +118,7 @@ const handleNameInput = inputName => {
                 onClick={event => { setSection(event.target.value) }}
                 value="input"
                 className="back-button">
-                <a href="input">
                   Back
-        </a>
               </button>
 
               <button
@@ -149,9 +147,7 @@ const handleNameInput = inputName => {
                 onClick={event => { setSection(event.target.value) }}
                 value="dropdown"
                 className="back-button">
-                <a href="dropdown">
                   Back
-        </a>
               </button>
 
               <button

@@ -6,6 +6,8 @@
   text-rendering: optimizeLegibility;
 }
 
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
+
 html {
   scroll-behavior: smooth;
 }
@@ -20,14 +22,14 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a{
+a, p{
   text-decoration: none;
   color: black;
+  font-family: 'Roboto Mono', monospace;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .welcome {
@@ -38,6 +40,7 @@ code {
   align-items: flex-start;
   justify-content: flex-start;
   padding: 150px 15px;
+  scroll-behavior: smooth;
 }
 
 .input{
@@ -66,6 +69,7 @@ code {
   flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  font-family: 'Roboto Mono', monospace;
 }
 .input-field input,
 .input-field textarea,
@@ -78,6 +82,7 @@ code {
     font-Size: 15px;
     margin-top: 10px;
     border-radius: 5px;
+    font-family: 'Roboto Mono', monospace;
 }
 
 /* Dropdown styling */
@@ -95,6 +100,7 @@ code {
   font-size: 15px;
   border: none;
   border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
 }
 /* Checkbox styling */
 
@@ -118,6 +124,7 @@ code {
   margin: 10px 5px;
   font-size: 15px;
   user-select: none; 
+  font-family: 'Roboto Mono', monospace;
 }
 
 .checkbox-container input{
@@ -182,6 +189,7 @@ code {
   display: flex;
   flex-direction: column;
   font-size: 15px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .age-group{
@@ -250,6 +258,7 @@ code {
   height: 100vh;
   background: #FAE3E3;
   padding: 150px 15px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .button-container{
@@ -264,6 +273,7 @@ button{
   border: none;
   border-radius: 5px;
   padding: 5px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Typewriter animation */
