@@ -1,6 +1,6 @@
 import React from 'react';
 
-const NextButton  = ({ sectionId }) => {
+const NextButton  = ({ sectionId, disabled }) => {
   const handleSectionChange = () => {
     window.location.hash = `#${sectionId}`;
   }
@@ -10,6 +10,7 @@ const NextButton  = ({ sectionId }) => {
       <button className="button"
         type="button"
         onClick={() => handleSectionChange()}
+        disabled={disabled}
       >
         Next
      </button>

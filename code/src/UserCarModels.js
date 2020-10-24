@@ -2,7 +2,6 @@ import React from 'react';
 import Select from 'react-select';
 
 const selectCarModels = [
-//  { value: "", lable:"Choose your car(s)"},
  { value: "suzuki etiga", lable: "Suzuki Etiga"},
  { value: "suzuki swift", label: "Suzuki Swift" },
  { value: "suzuki XL7", label: "Suzuki XL7"},
@@ -15,8 +14,8 @@ const selectCarModels = [
 const UserCarModels = ({ onCarsChange }) => {
   return (
     <div className="car-models" id="sectionCarModels">
-      <p>Which Suzuki car(s) that you are possessing?</p>
-     <Select 
+      <label htmlFor="carModelSelect">Which Suzuki car(s) that you are possessing?</label>
+     <Select id="carModelSelect" 
       // defaultValue={[]}
       onChange={onCarsChange}
       options={selectCarModels}

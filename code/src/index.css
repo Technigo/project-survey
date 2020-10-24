@@ -22,10 +22,6 @@ html {
   height: 100vh;
   width: 100vw;
   scroll-snap-align: start;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
 }
 
 section:nth-child(odd) {
@@ -36,8 +32,13 @@ section:nth-child(odd) {
 .wrapper {
   max-width: 1300px;
   width: 80vw;
+  height: 100%;
   margin-left: auto;
   margin-right: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .header {
@@ -117,17 +118,19 @@ section:nth-child(odd) {
 
 .user-rating-container {
   display: flex;
+  flex-direction: column;
 }
 
 .user-rating-element {
-  margin-right: 20px;
+  display: flex;
 
 }
 
 .section-user-name,
 .section-user-age,
 .section-user-email,
-.message {
+.message,
+.section-user-rating {
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -181,6 +184,14 @@ section:nth-child(odd) {
   margin: 0;
   padding-top: 2px;
   padding-bottom: 2px;
+  font-size: 17px;
+}
+
+.summary-message-container,
+.summary-title,
+.summary-sub-title,
+.summary-buttons {
+  width: 100%;
 }
 
 .summary-buttons {
@@ -195,12 +206,21 @@ section:nth-child(odd) {
   font-weight: 700;
 }
 
-@media screen and (max-width: 400px) {
-  .user-rating-container {
-    display: flex;
-    flex-direction: column;
-  }
+@media screen and (min-width: 400px) {
   .summary-messages {
-    font-size: 17px;
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  .user-rating-container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (min-width:900px) {
+  .wrapper {
+    width: 70vw;
   }
 }

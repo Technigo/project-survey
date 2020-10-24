@@ -10,6 +10,7 @@ const UserEmail = ({email, onEmailChange}) => {
         className="email-input"
         onChange={(event) => onEmailChange(event.target.value)}
         value={email}
+        required
       />
     </div>
   )

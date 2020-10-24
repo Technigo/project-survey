@@ -9,6 +9,7 @@ const UserName = ({ userName, onNameChange }) => {
         type="text"
         onChange={event => onNameChange(event.target.value)}
         value={userName}
+        required
       />
     </div>
   );

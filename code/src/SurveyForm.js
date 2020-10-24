@@ -104,6 +104,7 @@ const SurveyForm = () => {
             />
             <NextButton
               sectionId="sectionUserAge"
+              disabled={name.lenght === 0}
             />
           </SnapSection>
           <SnapSection>
@@ -122,9 +123,9 @@ const SurveyForm = () => {
             />
             <NextButton
               sectionId="sectionMessage"
+              disabled={!email.includes('@')}
             />
           </SnapSection>
-          
           <SnapSection>
             <TextMessage
               textMessage={textMessage}
