@@ -17,6 +17,7 @@ const UserCarModels = ({ onCarsChange }) => {
       <label htmlFor="userCarModels">Which Suzuki car(s) that you are possessing?</label>
       <Select
         id="userCarModels"
+        defaultValue={"Suzki Ertiga"}
         onChange={onCarsChange}
         options={selectCarModels}
         isMulti
