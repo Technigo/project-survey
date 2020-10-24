@@ -2,7 +2,7 @@ import React from'react';
 
 import 'components/CheckboxCss.css'
 
-// I cannot explain this function compenent.
+// I cannot explain this function component.
 export const Checkbox = ({userLikes, onLikesChange}) => {
 
   return (
@@ -22,7 +22,8 @@ export const Checkbox = ({userLikes, onLikesChange}) => {
           id="likeStrawberries"
           type="checkbox"
           checked={userLikes.includes('strawberries')}
-          onChange={() => onLikesChange('strawberries')}            />
+          onChange={() => onLikesChange('strawberries')}
+        />
         <span className="checkbox-label"></span>
       </div>
     </div>
