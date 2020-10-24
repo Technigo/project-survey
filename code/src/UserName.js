@@ -10,6 +10,7 @@ const UserName = ({ userName, onNameChange }) => {
         onChange={event => onNameChange(event.target.value)}
         value={userName}
         required
+        aria-required="true"
       />
     </div>
   );

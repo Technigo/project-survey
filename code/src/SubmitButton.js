@@ -3,7 +3,8 @@ import React from 'react';
 const SubmitButton = ({ doSubmit }) => {
   return ( 
     <div>
-      <button className="button"
+      <button 
+        className="button"
         type="submit"
         form="SurveyForm"
         onClick={() => doSubmit()}

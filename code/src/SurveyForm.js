@@ -61,7 +61,7 @@ const SurveyForm = () => {
 /*When users want to edit the answer, the summary will be hidden, and the form will be shown, starting with userName section */
   const handleAnswerChange = (newSection) => {
       setShowSummary(false)
-      window.location.hash = "#sectionUserName";
+      window.location.hash = "#sectionCarModels";
   };
 /* If users are happy with the summary, they can exit the survey and will be directed to the page header*/
   const handleExitButton = () => {
@@ -104,7 +104,6 @@ const SurveyForm = () => {
             />
             <NextButton
               sectionId="sectionUserAge"
-              disabled={name.lenght === 0}
             />
           </SnapSection>
           <SnapSection>

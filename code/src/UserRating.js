@@ -1,17 +1,17 @@
 import React from 'react';
 
 const rating = [
-  'Very Poor',
-  'Poor',
   'Average',
   'Good',
-  'Excellent'
+  'Excellent',
+  'Poor',
+  'Very Poor'
 ]
 
 const UserRating = ({ userRating, onRatingChange }) => {
   return (
     <div className="section-user-rating" id="sectionUserRating">
-      <p tabIndex="0">How do you evaluate our Aftersales services?</p>
+      <p>How do you evaluate our Aftersales services?</p>
       <div className="user-rating-container">
         {rating.map(rate => {
         return (

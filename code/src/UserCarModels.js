@@ -15,7 +15,7 @@ const UserCarModels = ({ onCarsChange }) => {
   return (
     <div className="car-models" id="sectionCarModels">
       <label htmlFor="carModelSelect">Which Suzuki car(s) that you are possessing?</label>
-      <Select id="carModelSelect" aria-label="list"
+      <Select id="carModelSelect"
         onChange={onCarsChange}
         options={selectCarModels}
         isMulti
