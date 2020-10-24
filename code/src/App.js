@@ -1,20 +1,20 @@
 import React, { useState } from "react";
 
-import Forms from "./Forms";
-import { Summary } from "./Summary";
+import Survey from "./components/survey/Survey";
+import Summary from "./components/Summary";
 
 export const App = () => {
-  const [showSummary, setShowSummary] = useState(false);
+  const [showSummary, setSummary] = useState(false);
   const [data, setData] = useState({});
 
   const handleSubmit = (data) => {
-    setShowSummary(true);
     setData(data);
+    setSummary(true);
   };
 
   return (
     <>
-      {showSummary ? <Summary {...data} /> : <Forms onSubmit={handleSubmit} />};
+      {showSummary ? <Summary {...data} /> : <Survey onSubmit={handleSubmit} />}
     </>
   );
 };

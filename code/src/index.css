@@ -13,10 +13,6 @@ body {
     rgba(0, 212, 255, 1) 100%
   );
 }
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 
 .container {
   margin: 100px 200px;
@@ -32,6 +28,10 @@ h1 {
   font-size: xx-large;
   text-align: center;
   text-shadow: 2px 2px 4px #ffffff;
+}
+
+h3 {
+  margin: 30px;
 }
 
 input {
@@ -66,6 +66,18 @@ select {
   margin: 10px 0;
 }
 
+.forms-container__submit {
+  background-color: #3cd420;
+  width: 100px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: none;
+  font-size: large;
+}
+.forms-container__submit:hover {
+  box-shadow: 0 16px 32px 0;
+}
+
 .slider {
   -webkit-appearance: none;
   appearance: none;
@@ -91,20 +103,4 @@ select {
   border-radius: 10px;
   background: #3cd420;
   cursor: pointer;
-}
-
-.forms-container .forms-container__submit {
-  background-color: #3cd420;
-  width: 10%;
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: none;
-  font-size: large;
-}
-.forms-container .forms-container__submit:hover {
-  box-shadow: 0 16px 32px 0;
-}
-
-h3 {
-  margin: 30px;
 }
