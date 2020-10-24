@@ -1,14 +1,17 @@
 import React from 'react';
 
-const Summary = ({ name, season, selected, value }) => {
+const Summary = ({ name, season, months, selected, value }) => {
 	return (
 		<div className="summary-container">
-			<h3 tabIndex={'0'}>Summary</h3>
+			<h2 tabIndex={'0'}>Summary</h2>
 			<p>
 				<strong>Your name:</strong> {name}
 			</p>
 			<p>
 				<strong>Your favourit season:</strong> {season}
+			</p>
+			<p>
+				<strong>Preferred month(s):</strong> {months.sort().join(', \u00A0')}
 			</p>
 			<p>
 				<strong>{season} experienced:</strong> Between {selected}

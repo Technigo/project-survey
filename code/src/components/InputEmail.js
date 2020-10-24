@@ -4,7 +4,7 @@ import '../Styles/InputEmail.css';
 const InputEmail = ({ question, email, setEmail }) => {
 	return (
 		<>
-			<h4 tabIndex={'0'}>{question}</h4>
+			<h3 tabIndex={'0'}>{question}</h3>
 			<label htmlFor="InputEmail">
 				<input
 					id="InputEmail"

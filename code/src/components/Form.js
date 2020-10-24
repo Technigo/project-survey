@@ -13,10 +13,10 @@ import '../Styles/Form.css';
 export const Form = () => {
 	const [question, setQuestion] = useState(-1); //show first "question"
 	const [name, setName] = useState(''); //text
-	const [age, setAge] = useState(false); //radio
-	const [months, setMonths] = useState(['']); //checkbox
-	const [season, setSeason] = useState(''); //drop-down
+	const [season, setSeason] = useState(''); //select
+	const [months, setMonths] = useState([]); //checkbox
 	const [value, setValue] = useState(0); //range
+	const [age, setAge] = useState(false); //radio
 	const [email, setEmail] = useState(''); //email
 	const [submit, setSubmit] = useState(false); //since we don't want to show result before submitted.
 
@@ -208,12 +208,13 @@ export const Form = () => {
 							<Summary
 								name={name}
 								season={season}
+								months={months}
 								selected={age}
 								value={value}
 							/>
 							<div className="email-container">
 								<InputEmail
-									question="Type your email and the summary will be send to you shortly!"
+									question="Type your email for a summary!"
 									value={email}
 									setEmail={setEmail}
 								/>

@@ -1,5 +1,6 @@
 h1 {
 	font-size: 26px;
+	text-align: center;
 	margin-bottom: 20px;
 }
 h2 {
@@ -8,14 +9,15 @@ h2 {
 }
 
 h3 {
-	font-size: 28px;
-	margin-bottom: 20px;
+	font-size: 20px;
+	margin: 20px 0;
 }
 
 h4 {
-	font-size: 18px;
+	font-size: 24px;
 	font-weight: bold;
 	margin-bottom: 20px;
+	text-align: center;
 }
 
 .content-container {
@@ -51,11 +53,16 @@ form {
 }
 
 .introduction {
-	/* margin-top: 50%; */
 	padding: 0 10px;
 	height: 100vh;
 	display: flex;
 	flex-direction: column;
+	justify-content: center;
+}
+
+.navigation-start,
+.navigation-reset {
+	display: flex;
 	justify-content: center;
 }
 
@@ -82,8 +89,6 @@ select {
 /*Styling for summary*/
 .question-container-summary {
 	padding: 0 10px;
-	/* width: 100%; */
-	/* color: #fdf7ef; */
 	display: flex;
 	flex-direction: column;
 	height: 100%;
@@ -93,9 +98,7 @@ select {
 .summary-container {
 	color: #fdf7ef;
 	line-height: 30px;
-	/* display: flex; */
-	/* flex-direction: column; */
-	height: 45%;
+	/* height: 45%; */
 	background: black;
 	opacity: 0.4;
 	padding: 5px;
