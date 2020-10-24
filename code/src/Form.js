@@ -25,7 +25,8 @@ export const Form = () => {
   const [showFormQuestion, setShowFormQuestion] = useState(0);
 
   return (
-      /* Using ternary operators below to show and hide the form and summary - if (?) else (:) */
+      /* Using ternary operators below to show and hide the form and summary and the different buttons - if (?) else (:) */
+      /* Created the showFormQuestion state hook above so it can be used for the form components to be shown in a specific order when the button is clicked. Each of the comparison statements below compares if showFormQuestion is equals to that number then the specific form component should be shown. The showFormQuestion is incremented by 1 in the button below by way of the setShowFormQuestion function which allows for each of the form components to be shown depending on the number that showFormQuestion is storing. */
       <>
         {!showSummary ? (
           <>
@@ -46,6 +47,7 @@ export const Form = () => {
                 <Special special={special} setSpecial={setSpecial} />
               )}
 
+              {/* If else statement which compares if the showFormQuestion is equals to 4 then the submit button will be show. Otherwise the next button will be shown */}
               {showFormQuestion === 4 ? (
                 <> 
                   <p>Submit your answers!</p>               
