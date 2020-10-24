@@ -12,7 +12,7 @@ export const RadioButton = ({ knowHeadPhone, setKnowHeadPhone }) => {
             <h2 className="radio-button-question" tabIndex='0'>Your understanding of you headphone is...</h2>
             <div className="radio-buttons-container">
                 {knowHeadPhones.map((headphone) => (
-                    <div className="each-radio-button" key={headphone}>
+                    <label htmlFor="headphone" tabIndex='0' className="each-radio-button" key={headphone}>
                         <input
                             name="headphone"
                             type="radio"
@@ -24,7 +24,7 @@ export const RadioButton = ({ knowHeadPhone, setKnowHeadPhone }) => {
                             required
                         />
                         {headphone}
-                    </div>
+                    </label>
                 ))}
             </div>
         </>

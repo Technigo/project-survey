@@ -4,7 +4,6 @@ const startAgain = () => {
     document.location.href = "";
 };
 
-
 export const Summary = ({ name, knowHeadPhone, brand }) => {
     return (
         <section className="summary" tabIndex='0'>
