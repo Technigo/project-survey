@@ -11,13 +11,14 @@ const rating = [
 const UserRating = ({ userRating, onRatingChange }) => {
   return (
     <div className="section-user-rating" id="sectionUserRating">
-      <p>How do you evaluate our AfterSales Services?</p>
+      <p>How do you evaluate our Aftersales services?</p>
       <div className="user-rating-container">
         {rating.map(rate => {
         return (
           <div className="user-rating-element" key={rate}>
-            <label>
+            <label htmlFor="userRating">
               <input
+                id="userRating"
                 type="radio"
                 className="radio-button"
                 value={rate}
