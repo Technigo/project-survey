@@ -46,9 +46,10 @@ Now when I had the skeleton it was time to do some styling and as usally this is
 
 **Screen reader - Chromevox**
 
-* I think this is really tricky, a huge area to understnad how to do it in a good practice.
-* I added some `tabIndex="0"` to get a better flow when using the tab-key. esLint is then complaning about `tabIndex` should only be declared on interactive elements.
-* Issue with dropdown and when I go through the list, not read. 
+* I think this is really tricky, a huge area to understand how to do it in a good practice.
+* I added some `tabIndex="0"` to get a better flow when using the tab-key. esLint is then complaining about `tabIndex`. It should only be declared on interactive elements.
+* Issues with dropdown (select), so when I go through the list, the options aren't read.
+* Not 100% perfect in other words. 
 
 **Lighthouse**
 
@@ -65,8 +66,7 @@ Now when I had the skeleton it was time to do some styling and as usally this is
 **General**
 
 * Since I haven't added that much love for styling my dropdown or the range slider I realized when testing different browsers and devices that the default styling differs a lot.
-* Button, I decided to use the attribute `disabled` if some values are empty but during testing I realized that sin't wokrking for all browsers, like Safari. I also see on an Android device using Chrome that the button isn't disabled. I will leave my code with this issue right now! 
- 
+
 ## View it live
 
 Try it out [here](https://kind-joliot-6577b6.netlify.app/)
