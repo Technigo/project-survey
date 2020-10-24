@@ -63,10 +63,14 @@ export const Form = () => {
 				<form onSubmit={handleSubmit}>
 					{question === -1 && (
 						<section className="introduction">
-							<h1 tabIndex={'0'}>
+							<h1 tabIndex="0">
 								Welcome, please take a few minutes to answer this survey!
 							</h1>
-							<div className="navigation-start">
+							<div
+								className="navigation-start"
+								aria-label="Click Tab and Enter to Start survey"
+								tabIndex="0"
+							>
 								<Button
 									button="button"
 									click={nextQuestion}
@@ -172,7 +176,7 @@ export const Form = () => {
 									disabled={value <= 0}
 									click={nextQuestion}
 									text={value ? 'Next' : 'Slide range'}
-									aria-label="next-question-button"
+									aria-label="next question button"
 								/>
 							</div>
 						</section>

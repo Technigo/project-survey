@@ -1,13 +1,20 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This project was to creat a form using React. Im happy that I were able to create a multi-step form.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# Learning Objectives
 
-## The problem
+- Making small reusable components
+- Passing props
+- useStates
+- Displaying components using ternary operators.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Tech
+
+- JSX
+- React
+- CSS
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://therese-linden-project-survey.netlify.app/
