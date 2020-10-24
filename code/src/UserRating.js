@@ -26,7 +26,7 @@ const UserRating = ({ userRating, onRatingChange }) => {
                 checked={userRating === rate}
               />
               {rate}
-            </label>
+            {/* </label> */}
           </div>
         )
       })}
