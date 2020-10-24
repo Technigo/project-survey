@@ -2,7 +2,7 @@ import React from'react';
 
 import 'components/CheckboxCss.css'
 
-
+// I cannot explain this function compenent.
 export const Checkbox = ({userLikes, onLikesChange}) => {
 
   return (
@@ -14,7 +14,7 @@ export const Checkbox = ({userLikes, onLikesChange}) => {
           id="likeKittens"
           type="checkbox"
           checked={userLikes.includes('kittens')}
-          onChange={() => onLikesChange('kittens')}
+          onChange={() => onLikesChange('kittens')} 
         />
         <span className="checkbox-label"></span>
         <label htmlFor="likeStrawberries">Strawberries</label>
