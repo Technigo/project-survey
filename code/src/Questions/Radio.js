@@ -15,6 +15,7 @@ const Radio = ({ ageGroup , setAgeGroup }) => {
                 <label htmlFor="age groups" key ={group}> 
                     <input 
                     type ="radio" 
+                    name = "age"
                     value = {group}
                     onChange = {(event) => setAgeGroup(event.target.value) }
                     checked = {ageGroup === group}
