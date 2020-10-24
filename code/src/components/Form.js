@@ -61,7 +61,13 @@ const Form = () => {
       />
       <Submit />
       {displaySummary && (
-        <Summary />
+        //Q - how does this work? Why can I use props "defined" in other 
+        //components in Summary component as well?
+        <Summary
+          questionAnswer1={text}
+          questionAnswer2={distance}
+          questionAnswer3={answer}
+        />
       )}
     </form>
   );
