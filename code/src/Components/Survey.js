@@ -58,7 +58,7 @@ export const Survey = () => {
           )}
           {section === 'thirdQuestion' && (
           <>
-            <SelectOption className="selected-activity" header={`How will you do on Halloween?`} array={activityArray} selected={selectedActivity} setSelected={setSelectedActivity} />
+            <SelectOption className="selected-activity" header={`What will you do on Halloween?`} array={activityArray} selected={selectedActivity} setSelected={setSelectedActivity} />
             <Button disable={selectedActivity} btnText="Next" section="summary" setSection={setSection}/>
           </>
           )}

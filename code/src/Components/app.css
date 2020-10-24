@@ -99,9 +99,12 @@ h3 {
 
     .name,
     .favourite-color,
-    .selected-activity,
     .summary p,
     .the-end p {
         font-size: 20px;
+    }
+
+    .selected-activity {
+        font-size: 18px;
     }
 }
