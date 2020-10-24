@@ -7,8 +7,12 @@ const InputAge = ( {question, array, ageGroup, setAgeGroup }) => {
     <>
       <h3>{question}</h3>
       {array.map((group) => (
-        <label className="input-age" htmlFor={group} key={group}>
+        <label 
+          className="input-age" 
+          htmlFor={group} 
+          key={group}>
           <input
+            className="radio-button"
             type="radio"
             value={group}
             onChange={event => setAgeGroup(event.target.value)}

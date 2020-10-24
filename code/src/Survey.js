@@ -53,17 +53,19 @@ const Survey = () => {
               value={name}
               setName={setName} 
             />
-            <Button 
-              type="button" 
-              text="Back"
-              click={previousQuestion}
-            />
-            <Button 
-              type="button" 
-              disabled={!name}
-              text={name ? 'Next question' : 'Type your name'}
-              click={nextQuestion}
-            />
+            <div className="buttons"> 
+              <Button 
+                type="button" 
+                text="Back"
+                click={previousQuestion}
+              />
+              <Button 
+                type="button" 
+                disabled={!name}
+                text={name ? 'Next question' : 'Type your name'}
+                click={nextQuestion}
+              />
+            </div>
           </section>
         )}
         {question === 1 && ( 
@@ -74,17 +76,19 @@ const Survey = () => {
               ageGroup={ageGroup}
               setAgeGroup={setAgeGroup}
             />
-            <Button 
-              type="button" 
-              text="Previous question"
-              click={previousQuestion}
-            />
-            <Button 
-              type="button" 
-              disabled={!ageGroup}
-              text={ageGroup ? 'Next question' : 'Select age'}
-              click={nextQuestion}
-            />
+            <div className="buttons"> 
+              <Button 
+                type="button" 
+                text="Previous question"
+                click={previousQuestion}
+              />
+              <Button 
+                type="button" 
+                disabled={!ageGroup}
+                text={ageGroup ? 'Next question' : 'Select age'}
+                click={nextQuestion}
+              />
+            </div>
           </section>
         )}
         {question === 2 && ( 
@@ -94,17 +98,19 @@ const Survey = () => {
               value={color}
               setColor={setColor}
             />
-            <Button 
-              type="button" 
-              text="Previous question"
-              click={previousQuestion}
-            />
-            <Button 
-              type="button" 
-              disabled={!color}
-              text={color ? 'Next question' : 'Select a color'}
-              click={nextQuestion}
-            />
+            <div className="buttons"> 
+              <Button 
+                type="button" 
+                text="Previous question"
+                click={previousQuestion}
+              />
+              <Button 
+                type="button" 
+                disabled={!color}
+                text={color ? 'Next question' : 'Select a color'}
+                click={nextQuestion}
+              />
+            </div>
           </section>
         )}
         {question === 3 && ( 
@@ -114,15 +120,17 @@ const Survey = () => {
               onHobbiesChange={handleHobbiesChange}
               question="What hobbies do you have?"
             />
-            <Button 
-              type="button" 
-              text="previous question"
-              click={previousQuestion}
-            />
-            <Button 
-              text="Submit"
-              type="submit"
-            />
+            <div className="buttons"> 
+              <Button 
+                type="button" 
+                text="previous question"
+                click={previousQuestion}
+              />
+              <Button 
+                text="Submit"
+                type="submit"
+              />
+            </div>
           </section>
         )}
         </form> 
@@ -135,11 +143,13 @@ const Survey = () => {
           ageGroup={ageGroup}
           userHobbies={hobbies}
         />
-        <Button 
-          type="button" 
-          text="Take the survey again?"
-          click={() =>window.location.reload()}
-        />
+        <div className="buttons"> 
+          <Button 
+            type="button" 
+            text="Take the survey again?"
+            click={() =>window.location.reload()}
+          />
+        </div>
       </section>
       )}   
     </section>

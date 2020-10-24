@@ -4,14 +4,15 @@ import React from 'react'
 const InputName = ({ question, name, setName }) => {
   
   return (
-    // <form
-    //   className="name-form"
-    //   onSubmit={event => event.preventDefault()}
-    // >
-      <label htmlFor="InputText"> 
+    <div className="input-name"> 
+      <label 
+        className="input-text-label" 
+        htmlFor="InputText"> 
         <h3>{question}</h3> 
         <input
+          className="input-text"
           id="InputText"
+          placeholder="Type your name"
           type="text"
           onChange={event => setName(event.target.value)} //Here I would add {onNameChange} that Max talked about @lecture wed 38:00??
           value={name}
@@ -19,11 +20,7 @@ const InputName = ({ question, name, setName }) => {
           minLength="2"
         />
       </label>
-
-    // </form>
+    </div>
   );
 };
-// How do I make it so that when the user writes their name and 
-// press a button that says continue, a text is shown that says Welcome 'name'? 
-// And then all the questions appear...??
 export default InputName;
