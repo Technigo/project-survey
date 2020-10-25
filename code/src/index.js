@@ -3,12 +3,20 @@ import ReactDOM from 'react-dom'
 import './index.css'
 
 
+const thing = [
+  "broken code",
+  "phone number",
+  "coupons"
+]
+
 
 const thingsTwos = [
   "toilet paper",
   "eggs",
   "yarn"
 ]
+
+
 
 
 
@@ -341,25 +349,24 @@ const App = () => {
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
-                <label><h2>Things</h2></label>
-                 <div className="drop-down">
-                 
-                  <select className="select" 
-                  value={things} 
-                  onChange={(event) => setThings(event.target.value)}>
-                                   
-                    <option disabled className="things">
-                  </option>       
-                    <option 
-                    value="Phone numbers">
-                    Phone numbers</option>
-                    <option value="Broken code">
-                    Broken code</option>
-                    <option value="Coupons">
-                    Coupons</option>
-
-                  </select>
-                  </div>
+               
+          
+                 <h2>Things</h2>
+                    {thing.map((group) => (
+                      <label key={group} className="control">
+                        <br></br> 
+                      
+                        <input
+                          className="control__input visually-hidden"
+                          type="radio"
+                          value={group}
+                          onChange={(event) => setThings(event.target.value)}
+                          checked={things === group}
+                        /><span className="control__indicator"></span>
+                        {group}
+                      </label>
+                    ))}
+                  
                 </div>
               </div>
             </div>
