@@ -9,7 +9,6 @@ import EmailField from 'components/EmailField';
 import Submit from 'components/Submit';
 import Summary from 'components/Summary';
 
-
 const Form = () => {
     const [name, setName] = useState("");
     const [yesOrNo, setYesOrNo] = useState();
@@ -21,7 +20,6 @@ const Form = () => {
         event.preventDefault();
         setShowSummary(true);
     }
-
 
     return (
         <>

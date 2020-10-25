@@ -12,8 +12,9 @@ export const App = () => {
             <Header />
             <FormContainer />
             <Footer />
-          </div>) 
-        }
+          </div>
+        ) 
+      }
         
         
 

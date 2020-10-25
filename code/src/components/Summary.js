@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Summary = ({name, email, theme, answer,}) => {
+    
     return (
         <>
             {answer === 'Yes' ? (

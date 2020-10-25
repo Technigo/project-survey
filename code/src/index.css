@@ -61,9 +61,10 @@ label {
 
 .summary-container {
   display: grid;
-  grid-template-columns: 100px 300px 100px;
+  grid-template-columns: 1fr 300px 1fr;
   padding: 15px 0;
   height: 550px;
+  grid-column-start: 2;
 }
 
 .summary {
@@ -71,61 +72,38 @@ label {
 }
 
 .footer {
-  bottom: 0;
   left: 0;
   position: absolute;
   right: 0;
-  background-image: url(./party.jpg);
+  background-image: url(./confetti.jpg);
   background-size: cover;
   height: 27%;
 }
 
-/*Tablet*/
-@media (min-width: 768px) {
-  .header {
-    grid-template-columns: 1fr 300px 300px 300px 1fr;
-  }
-
-  .title {
-    grid-column-start: 3;
-  }
-  
-  .form-container {
-    grid-template-columns: 1fr 300px 300px 300px 1fr;
-  }
-
-  .form {
-    grid-column-start: 3;
-  }
-  
-  .summary-container {
-    grid-template-columns: 1fr 300px 300px 300px 1fr;
-    padding: 15px 0;
-  }
-}
-  
-
-/*Desktop*/
-@media (min-width: 900px) {
- .header {
-    grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
-  }
-
-.title {
-    grid-column-start: 3;
-  }
-
-.form-container {
-    grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
-  }
-
-.form {
-    grid-column-start: 3;
-  }
-
 .summary-container {
-    grid-template-columns: 1fr 300px 300px 300px 300px 300px 1fr;
-    padding: 15px 0;
+  grid-template-columns: 1fr 300px 300px 300px 1fr;
+  padding: 15px 0;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 40px;
+  }
+
+  .introduction-container {
+    font-size: 20px;
+  }
+
+  .form-header {
+    font-size: 30px;
+  }
+
+  label {
+    font-size: 20px;
+  }
+
+  select {
+    font-size: 15px;
   }
 
 }
