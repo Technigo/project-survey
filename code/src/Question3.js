@@ -8,7 +8,7 @@ const Question3 = ({furType, setFurType}) => {
     
     <div className='third-question-section'> 
         <label htmlFor='third-question'>
-            <h2 className='third-question-heading' tabIndex='0'> What type of fur do your like the do to have ?</h2>
+            <h2 className='third-question-heading' tabIndex='0'> What type of fur do your like the dog to have ?</h2>
         </label>
         <select
             id="third-question"

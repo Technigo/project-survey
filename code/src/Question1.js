@@ -22,6 +22,7 @@ const Question1 = ({section, setSection, activityLevel, setActivityLevel}) => {
                     value={activity}
                     onChange={event => setActivityLevel(event.target.value)}
                     checked={activityLevel === activity}
+                    required
                   />
                   {activity}
                 </label>
