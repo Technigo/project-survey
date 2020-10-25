@@ -11,7 +11,7 @@ import Summary from "./Summary";
 const Form = () => {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
-  const [colors, setColors] = useState([]);
+  const [training, setTraining] = useState([]);
 
   const [experience, setExperience] = useState("");
 
@@ -34,10 +34,14 @@ const Form = () => {
     setCity(event.target.value);
   };
 
-  const handleColorsChange = (colorValue) => {
-    colors.includes(colorValue)
-      ? setColors(colors.filter((item) => item !== colorValue))
-      : setColors([...colors, colorValue]);
+  //   const handleTrainingChange = (trainingValue) => {
+  //     training.includes(trainingValue)
+  //       ? setTraining(training.filter((item) => item !== trainingValue))
+  //       : setTraining([...training, trainingValue]);
+  //   };
+
+  const handleTrainingChange = (event) => {
+    setTraining(event.target.value);
   };
 
   const handleNextQuestion = (event) => {
@@ -51,7 +55,9 @@ const Form = () => {
       {question !== "Summary" ? (
         <form className="form-container" onSubmit={handleNextQuestion}>
           {question === "Question1" && (
-            <div>
+            <div tabIndex="0">
+              <h2>Ready to start your journey?</h2>
+              <h3>Where would you like to train?</h3>
               <Question1 city={city} onCityChange={handleCityChange} />
             </div>
           )}
@@ -59,19 +65,24 @@ const Form = () => {
           {question === "Question2" && (
             <div>
               <Question2
-                value={experience}
+                experience={experience}
                 onExperienceChange={handleExperienceChange}
               />
             </div>
           )}
 
           {question === "Question3" && (
-            <div>
-              <Question3 colors={colors} onColorsChange={handleColorsChange} />
+            <div tabIndex="0">
+              <h3>What would you like to train?</h3>
+              <Question3
+                training={training}
+                onTrainingChange={handleTrainingChange}
+              />
             </div>
           )}
           {question === "Question4" && (
-            <div>
+            <div tabIndex="0">
+              <h3>For more information</h3>
               <Question4 userName={name} onNameChange={handleNameChange} />
             </div>
           )}
@@ -80,8 +91,8 @@ const Form = () => {
           </button>
         </form>
       ) : (
-        <div>
-          <Summary name={name} colors={colors} city={city} />
+        <div tabIndex="0">
+          <Summary name={name} training={training} city={city} />
         </div>
       )}
     </>

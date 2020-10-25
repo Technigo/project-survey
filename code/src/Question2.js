@@ -51,54 +51,10 @@ const Question2 = ({ experience, onExperienceChange }) => {
         marks={marks}
         valueLabelDisplay="on"
         onChange={onExperienceChange}
-        exp={experience}
+        experience={experience}
         // type={Number}
       />
     </div>
   );
 };
 export default Question2;
-// import React from "react";
-
-// const TrainingExp = () => {
-
-//     return (
-//       <div>
-//         <label htmlFor="colorRed">Red</label>
-//         <input
-//           id="colorRed"
-//           type="checkbox"
-//           checked={colors.includes("red")}
-//           onChange={() => onColorsChange("red")}
-//         />
-//       </div>
-//       <div>
-//         <label htmlFor="colorRed">Red</label>
-//         <input
-//           id="colorRed"
-//           type="checkbox"
-//           checked={colors.includes("red")}
-//           onChange={() => onColorsChange("red")}
-//         />
-//       </div>
-//       <div>
-//         <label htmlFor="colorRed">Red</label>
-//         <input
-//           id="colorRed"
-//           type="checkbox"
-//           checked={colors.includes("red")}
-//           onChange={() => onColorsChange("red")}
-//         />
-//       </div>
-//       <div>
-//         <label htmlFor="colorRed">Red</label>
-//         <input
-//           id="colorRed"
-//           type="checkbox"
-//           checked={colors.includes("red")}
-//           onChange={() => onColorsChange("red")}
-//         />
-//       </div>
-//     );
-// }
-// export default TrainingExp;

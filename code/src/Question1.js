@@ -2,13 +2,12 @@ import React from "react";
 
 const Question1 = ({ city, onCityChange }) => {
   return (
-    <div className="question-2">
-      <h3>Where would you like to train?</h3>
+    <div className="question-1">
       <select value={city} onChange={onCityChange} required>
         <option value="">Choose city...</option>
-        <option value="stockholm">Stockholm</option>
-        <option value="göteborg">Göteborg</option>
-        <option value="malmö">Malmö</option>
+        <option value="Stockholm">Stockholm</option>
+        <option value="Göteborg">Göteborg</option>
+        <option value="Malmö">Malmö</option>
       </select>
     </div>
   );

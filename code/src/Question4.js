@@ -2,7 +2,7 @@ import React from "react";
 
 const Question4 = ({ userName, onNameChange }) => {
   return (
-    <div className="question-1">
+    <div className="question-4">
       <label htmlFor="email"></label>
       <input
         value={userName}
