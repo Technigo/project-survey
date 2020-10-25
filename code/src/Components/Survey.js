@@ -28,78 +28,96 @@ const activityArray = [
 
 export const Survey = () => {
 
+  const [section, setSection] = useState('firstQuestion');
   const [name, setName] = useState("");
-  // const [showSummary, setShowSummary] = useState(false);
   const [selectedColor, setSelectedColor] = useState();
   const [selectedActivity, setSelectedActivity] = useState("");
-  // const [agreeCheckbox, setAgreeCheckbox] = useState(false);
-  
-  const [section, setSection] = useState('firstQuestion');
 
   const handleSubmit = (event) => {
     event.preventDefault();
   };
 
   return (
-    <>
-        <form className="survey" onSubmit={handleSubmit}>
-          {section === 'firstQuestion' && (
-          <>
-            <InputTypeText className="name" header="Let's start with your name:" name={name} setName={setName} placeholder="Name" />
-            <Button disable={name} btnText="Next" section="secondQuestion" setSection={setSection}/>
-          </>
-          )}
-          {section === 'secondQuestion' && (
-          <>
-            <InputTypeRadio className="favourite-color" header="Pick your favourite halloween color?" array={colorArray} selected={selectedColor} setSelected={setSelectedColor} />
-            <Button
-              disable={selectedColor === undefined ? ("") : ({selectedColor})}
-              btnText="Next"
-              section="thirdQuestion"
-              setSection={setSection}
-            />
-            
-            </>
-          )}
-          {section === 'thirdQuestion' && (
-          <>
-            <SelectOption className="selected-activity" header={`What will you do on Halloween?`} array={activityArray} selected={selectedActivity} setSelected={setSelectedActivity} />
-            <Button disable={selectedActivity} btnText="Next" section="summary" setSection={setSection}/>
-          </>
-          )}
-          
+    <form className="survey" onSubmit={handleSubmit}>
+      {section === 'firstQuestion' && (
+        <>
+          <InputTypeText
+            className="name"
+            header="Let's start with your name:"
+            name={name}
+            setName={setName}
+            placeholder="Name"
+          />
+          <Button
+            disable={name}
+            btnText="Next"
+            section="secondQuestion"
+            setSection={setSection}
+          />
+        </>
+      )}
 
-          {/* <label className="checkbox">
-            Do you agree?
-            <input
-              type="checkbox"
-              checked={agreeCheckbox}
-              onChange={event => setAgreeCheckbox(event.target.checked)}
-            />
-          </label> */}
+      {section === 'secondQuestion' && (
+        <>
+          <InputTypeRadio
+            className="favourite-color"
+            header="Pick your favourite halloween color?"
+            array={colorArray}
+            selected={selectedColor}
+            setSelected={setSelectedColor}
+          />
+          <Button
+            disable={selectedColor === undefined ? ("") : ({selectedColor})}
+            btnText="Next"
+            section="thirdQuestion"
+            setSection={setSection}
+          />
+        </>
+      )}
 
-          {section === 'summary' && (
-            <>
-            <Summary name={name} activity={selectedActivity} color={selectedColor}/>
-            <Button disable={name} btnText="Hell yeah!" section="theEnd" setSection={setSection} />
-            <button
-              type="submit"
-              onClick={() => window.location.reload()}
-              className="submit-button"
-            > No, i lied!
-            </button>
-            </>
-          )}
+      {section === 'thirdQuestion' && (
+        <>
+          <SelectOption
+            className="selected-activity"
+            header={`What will you do on Halloween?`}
+            array={activityArray} selected={selectedActivity}
+            setSelected={setSelectedActivity}
+          />
+          <Button
+            disable={selectedActivity}
+            btnText="Next"
+            section="summary"
+            setSection={setSection}
+          />
+        </>
+      )}
 
-          {section === 'theEnd' && (
-            <TheEnd />
-          )}
+      {section === 'summary' && (
+        <>
+          <Summary
+            name={name}
+            activity={selectedActivity}
+            color={selectedColor}
+          />
+          <Button
+            disable={name}
+            btnText="Hell yeah!"
+            section="theEnd"
+            setSection={setSection}
+          />
+          <button
+            type="submit"
+            onClick={() => window.location.reload()}
+            className="submit-button"
+          > No, i lied!
+          </button>
+        </>
+      )}
 
-        </form>
+      {section === 'theEnd' && (
+        <TheEnd />
+      )}
 
-      
-
-    </>
+    </form>
   );
-
 };

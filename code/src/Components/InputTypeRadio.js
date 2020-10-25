@@ -3,9 +3,8 @@ import React from 'react';
 export const InputTypeRadio = ({className, header, array, selected, setSelected}) => {
     return(
         <div className="favourite-color-container">
-        <h3>{header}</h3>        
-        <div className={className}>
-            
+        <h3 tabIndex="0">{header}</h3>        
+        <div className={className} aria-label="radiobutton group" tabIndex="0">            
             {array.map((option) => (
             <label key={option}>
                 <input 

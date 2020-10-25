@@ -1,12 +1,9 @@
 import React from 'react'
 
-import './summary.css'
-
-export const Summary = (props) => {
-  const {name, activity, color} = props;
+export const Summary = ({name, activity, color}) => {
 
   return (
-    <div className="summary">
+    <div className="summary" tabIndex="0">
       <p>Hello {name}!</p>
       {activity === "Nothing, I hate Halloween!" ? (
         <><p>You hate Halloween, I'm sorry you feel that way. But cheer up, Christmas is coming! Or are you also the grinch?!</p>
