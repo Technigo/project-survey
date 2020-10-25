@@ -16,6 +16,7 @@ export const Consumption = ({ favConsumption, onConsumptionChange }) => {
                             id="consumption"
                             onChange={event => onConsumptionChange(event.target.value)}
                             value={favConsumption}
+                            required
                             >
                             <option value="">Select...</option>
                             {consumptionOptions.map((option) => (

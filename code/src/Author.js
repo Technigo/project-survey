@@ -13,6 +13,7 @@ export const Author = ( { favAuthor, onFavouriteAuthorChange }) => {
                         placeholder="Type..."
                         onChange={event => onFavouriteAuthorChange(event.target.value)}
                         value={favAuthor}
+                        required
                     />
                 </label>
             </section>

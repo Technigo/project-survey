@@ -25,10 +25,12 @@ export const Number = ({ userNumber, onNumberOfBooksChange }) => {
                                         <input
                                             id={range}
                                             type="radio"
+                                            name="booknumber"
                                             value={range}
                                             onChange={event => onNumberOfBooksChange(event.target.value)}
                                             checked={userNumber === range}
                                             aria-checked={userNumber === range}
+                                            required
                                         />
                                     {range}
                                 </label>
