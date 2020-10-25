@@ -1,5 +1,6 @@
 import React from "react";
 import Input from "./Input";
+import "./input.css";
 
 const InputPage = ({
   firstName,
@@ -10,7 +11,7 @@ const InputPage = ({
   setEmail,
 }) => {
   return (
-    <div>
+    <div className="contact-container">
       <h2>Your contact details</h2>
 
       <Input

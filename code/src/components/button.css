@@ -1,4 +1,4 @@
-button {
+.btn {
   display: inline-block;
   text-align: center;
   width: 200px;
@@ -10,4 +10,15 @@ button {
   color: #000;
   font-weight: 700;
   letter-spacing: 1px;
+}
+
+.single-btn {
+  margin-bottom: 100px;
+}
+
+.btn:focus,
+.btn:active {
+  outline: 2px solid red !important;
+  box-shadow: none !important;
+  outline-offset: 3px;
 }

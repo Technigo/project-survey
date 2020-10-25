@@ -1,0 +1,39 @@
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  justify-content: center;
+}
+
+input.input-contact {
+  margin: 10px auto;
+  width: 60%;
+  border: none;
+  border-bottom: 2px solid red;
+}
+
+/* change autocomplete styles in WebKit */
+/* code from https://css-tricks.com/ */
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  border: none;
+  border-bottom: 2px solid red;
+  -webkit-text-fill-color: fff;
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  /* -webkit-box-shadow: 0px 0px 10px lawngreen inset, 0px 0px 10px lawngreen; */
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* changing auto-outline for text */
+input[type="text"]:focus {
+  outline: 2px solid red;
+  outline-offset: 4px;
+}

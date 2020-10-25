@@ -7,6 +7,7 @@ const Input = ({ placeholder, setState, value }) => {
 
   return (
     <input
+      className="input-contact"
       id="firstName"
       onChange={handleChange}
       type="text"

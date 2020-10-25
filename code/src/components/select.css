@@ -1,0 +1,61 @@
+.select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/*** appearance rules are used to remove default arrows on HTML tag select  - Chrome, Safari, Mozilla, Opera ***/
+
+/* https://medium.com/@ferie/cross-browser-custom-select-tag-arrow-3b41d1f731f3 */
+
+select {
+  /* you should keep these firsts rules in place to maintain cross-browser behaviour */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -o-appearance: none;
+  appearance: none;
+  outline: none;
+  /* the following rules can be modified as you wish */
+
+  margin: auto;
+  border: 1px solid #ddd;
+  border-radius: 0;
+
+  font-size: 20px;
+  padding: 8px 12px;
+  height: 50px;
+  width: 60%;
+}
+
+/*** the following rule remove default arrow on HTML tag select - IE10+ ***/
+select::-ms-expand {
+  display: none;
+}
+
+/*** IE8 and IE9 rules ***/
+.ie8 .prefix-icon-arrow-down-fill:before,
+.ie9 .prefix-icon-arrow-down-fill:before {
+  position: absolute;
+  top: 43%;
+  left: 93%;
+  content: ")";
+  font-size: 6px;
+  width: 100%;
+}
+
+.ie8 .selectTagWrapper,
+.ie9 .selectTagWrapper {
+  position: relative;
+  border: 1px solid #ddd;
+  overflow: hidden;
+  width: 100%;
+}
+
+.ie8 .selectTagWrapper > select,
+.ie9 .selectTagWrapper > select {
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=-1, OffY=-1,color=#FF0000) progid:DXImageTransform.Microsoft.dropshadow(OffX=1, OffY=1,color=#FF0000);
+  border: none;
+  font-size: 16px;
+  padding: 8px 12px 15px;
+  width: 125%;
+}

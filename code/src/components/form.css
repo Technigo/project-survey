@@ -18,7 +18,7 @@ form,
   border: 1px solid #ccc;
 }
 
-.button-container {
+.btn-container {
   display: flex;
   justify-content: space-evenly;
   align-items: flex-end;
