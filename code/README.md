@@ -1,19 +1,25 @@
-# Technigo React Starter App
+# Survey in React
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The purpose of this week was to create a survey form using what we learned about form fields with React, how to use {useState} and how to show different components based on survey inputs.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## The problem
 
-## Usage
+I created a survey with 3 questions using different form fields: select dropdown, radio buttons and text area.
+The first question is displayed when the Start button is clicked.
+The following questions are displayed when the previous one is answered.
+When the last question is answered, the button Submit is revealed.
+By clicking on Submit, a summary is displayed instead of the survey form.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+The survey form is responsive and works in different browsers (Chrome, Firefox, Edge and Safari) and with ChromeVox Classic Extension.
 
-Alternatively, if you don't want a new git repo on your account;
+I created a background made of an image and a gradient.
+I customized the form fields.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+If I had more time, I would add a footer, a fourth question with check boxes and proper validation.
+I would even fix the scrollIntoView issue and create a multi-step form.
+
+## View it live
+
+You can take a look at the result on https://weekly-evaluation.netlify.app/
+You are welcome to visit my pull request https://github.com/Technigo/project-survey/pull/114 and leave some comments about my code.
+Enjoy!
