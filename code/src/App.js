@@ -24,23 +24,19 @@ export const App = () => {
         <h2>Your anonymous feedback is important to us and helps us develop better products.</h2>
       </header>
       {!summary ? (
-        <form onSubmit={handleSubmit}   className='form'>
-        
+        <form onSubmit={handleSubmit} className='form'>
           <Radio 
             frequency={frequency}
             setFrequency={setFrequency}
           />
-        
           <Factors 
             factor={factor}
             setFactor={setFactor}
           />
-        
           <DropDown 
             age={age}
             setAge={setAge}
           />
-        
           <button
             type="submit"
             disabled={frequency === '' || age === '' || factor === ''}

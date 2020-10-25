@@ -10,7 +10,7 @@ export const Factors = (props) => {
       'Made from locally sourced materials',
       'Locally produced',
       'Handmade',
-      'Supports a small business',
+      'Supporting a small business',
       'Has attractive packaging',
       'Has minimal packaging',
       'Has packaging that is reusable',
@@ -19,18 +19,26 @@ export const Factors = (props) => {
     ]
 
   return (
-    <div className="question">
+    <div 
+      className="question" 
+      tabIndex="0" 
+      role="radiogroup"
+    >
       When considering whether to buy Thing, which factor is most important to you?
       {factors.map(decisionMaker => (
         <p key={decisionMaker}>
-        <label className="answerOption" htmlFor={decisionMaker}>
+        <label 
+          className="answerOption" 
+          htmlFor={decisionMaker} 
+          tabIndex="0"
+        >
           <input 
             type="radio"
+            id={decisionMaker}
             value={decisionMaker}
             onChange={event => setFactor(event.target.value)}
             checked={factor === decisionMaker}
             tabIndex="0"
-            className="focusable"
           />
             &nbsp;
           {decisionMaker}

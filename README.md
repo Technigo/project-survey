@@ -25,7 +25,7 @@ Learning Objectives:
 - At least one question should use radio buttons.
 - At least one question should use a select dropdown.
 - There should be a submit button. When pressed your app should hide the input form and show a summary of the user's submissions.
-<!-- - Your site should follow accessibility guidelines -->
+- Your site should follow accessibility guidelines
 
 <!-- 🔴  Red Level (Intermediary Goals) -->
 <!-- - Use a form element you haven't tried before (such as a [range slider](https://www.w3schools.com/howto/howto_js_rangeslider.asp)) and connect it to React state. You can find a list of input types [here](https://www.w3schools.com/html/html_form_input_types.asp). -->
