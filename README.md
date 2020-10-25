@@ -4,7 +4,7 @@ Week 10's project involved us being introduced to React state. The goal was to b
 
 ## My process
 
-I wanted to build a survey using components that could be easily modified. I started by building a basic form, focusing on useState and making sure the different states were being updated. Then I decided to make the question components as reusable as possible by passing the question and answers in as props. I also wanted to make my questions appear one at a time by creating a question state and a function which updated this state after each question.
+I wanted to build a survey using components that could be easily modified. I started by building a basic form, focusing on useState and making sure the different states were being updated. Then I decided to make the question components as reusable as possible by sending the question and answers in as props. I also wanted to make my questions appear one at a time as a multi-step form. I did this by creating a question state and a function which updated the state after each question had been answered.
 If I had more time to spend on this project I would of added a back button to each question, as well as reset functionality.
 
 ## Tech
