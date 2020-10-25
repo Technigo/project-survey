@@ -47,7 +47,7 @@ body {
 	justify-content: center;
 	flex-direction: column;
 	background: black;
-	opacity: 80%;
+	opacity: 0.8;
 	text-align: center;
 	box-shadow: inset 0 0 15px rgb(255, 255, 255);
 }
@@ -72,44 +72,6 @@ body {
 	font-size: 30px;
 	background-color: transparent;
 }
-/*Style for radio button*/
-
-/*
-.box label input {
-  display: none;
-}
-
-.box {
-  border: red solid 1px;
-  padding-bottom: 20px;; 
-  position: relative;
-  bottom: 10px;
-  right: 10px;
-
-}
-
-.box  label{
-  position: relative;
-  bottom:20px;
-  cursor:pointer;
-}
-
-.box label img {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  margin-left: 30px;
-  position: relative;
-  top:9px;
-  margin-right: 10px;
-}
-<span><img src="https://cdn.icon-icons.com/icons2/1321/PNG/512/if-01-halloweenscarypumpkinlantern01-2660271_86907.png" /></span>
-
-.box label img:hover {
-  outline:none;
-  background:greenyellow;
-  box-shadow: 1px 1px 5px 5px greenyellow  
-}*/
 
 .control {
 	display: flex;
