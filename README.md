@@ -12,3 +12,4 @@ If I had more time I would've definetly added some more questions and built func
 
 ## View it live
 
+https://project-survey-favorite-plants.netlify.app/ 
