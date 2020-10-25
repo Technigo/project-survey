@@ -2,43 +2,41 @@ import React from "react";
 
 import "./checkbox.css";
 
-// const checkBoxArray = ["Moving", "Packing", "Cleaning"];
-
 const Checkbox = ({ isBoxChecked, onCheckBoxChange }) => {
-  // var checkBoxItem = null;
 
   return (
     <section className="section-container">
       <p>I would like a price estimation for:</p>
       <label htmlFor="moving">
         <input
+          tabIndex="0"
           type="checkbox"
           id="moving"
-          // onChange={(event) => onCheckBoxChange(event.target.checked)}
-          onChange={() => onCheckBoxChange("Moving")}
-          checked={isBoxChecked.includes("Moving")}
+          onChange={() => onCheckBoxChange("moving")}
+          checked={isBoxChecked.includes("moving")}
         >
         </input>
         Moving
       </label>
       <label htmlFor="packing">
         <input
+          tabIndex="0"
           type="checkbox"
           id="packing"
-          // onChange={(event) => onCheckBoxChange(event.target.checked)}
-          onChange={() => onCheckBoxChange("Packing")}
-          checked={isBoxChecked.includes("Packing")}
+          onChange={() => onCheckBoxChange("packing")}
+          checked={isBoxChecked.includes("packing")}
         >
         </input>
         Packing
       </label>
       <label htmlFor="cleaning">
         <input
+          tabIndex="0"
           type="checkbox"
           id="cleaning"
-          // onChange={(event) => onCheckBoxChange(event.target.checked)}
-          onChange={() => onCheckBoxChange("Cleaning")}
-          checked={isBoxChecked.includes("Cleaning")}
+          // onChange={(event) => onCheckBoxChange(event.target.checked)} - what is the difference?
+          onChange={() => onCheckBoxChange("cleaning")}
+          checked={isBoxChecked.includes("cleaning")}
         >
         </input>
         Cleaning

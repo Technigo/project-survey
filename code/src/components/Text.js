@@ -1,12 +1,13 @@
 import React from 'react';
 
 //destructured props
-const Question1 = ({ questionText1, questionAnswer1, onTextChange }) => {
+const Text = ({ questionText1, questionAnswer1, onTextChange }) => {
 
   return (
     <div className="section-container">
       <label htmlFor="textField">{questionText1}
         <input
+          tabIndex="0"
           type="text"
           id="textField"
           name="answerOne"
@@ -21,4 +22,4 @@ const Question1 = ({ questionText1, questionAnswer1, onTextChange }) => {
     </div>);
 };
 
-export default Question1;
+export default Text;

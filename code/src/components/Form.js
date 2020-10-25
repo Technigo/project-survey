@@ -2,11 +2,12 @@ import React, { useState } from 'react';
 
 import Header from "./Header";
 import Checkbox from "./Checkbox";
-import Question1 from "./Question1";
+import Text from "./Text";
 import Question2 from "./Question2";
 import Question3 from "./Question3";
 import Submit from "./Submit";
 import Summary from "./Summary";
+import Reload from "./Reload";
 
 import "./form.css";
 
@@ -57,8 +58,8 @@ const Form = () => {
             isBoxChecked={checkBox}
             onCheckBoxChange={handleCheckBoxChange}
           />
-          <Question1
-            questionText1="Name"
+          <Text
+            questionText1="Name and surname"
             questionAnswer1={text}
             onTextChange={handleTextChange}
           />
@@ -78,13 +79,15 @@ const Form = () => {
       )}
 
       {displaySummary && (
-        //Q - how does this work? Why can I use props "defined" in other 
-        //components here as well?
-        <Summary
-          questionAnswer1={text}
-          questionAnswer2={distance}
-          questionAnswer3={answer}
-        />
+        <>
+          <Summary
+            questionAnswer1={text}
+            questionAnswer2={distance}
+            questionAnswer3={answer}
+            isBoxChecked={checkBox.join(` , `)}
+          />
+          <Reload />
+        </>
       )}
     </form>
   );

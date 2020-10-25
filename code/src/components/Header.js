@@ -3,7 +3,7 @@ import React from "react"
 const Header = (props) => {
   return (
     <section className="section-container">
-      <h1>{props.title}</h1>
+      <h1 tabIndex="0">{props.title}</h1>
       <p>{props.subtitle}</p>
     </section>
   )

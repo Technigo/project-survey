@@ -1,21 +1,17 @@
-import React from "react"
+import React from "react";
 
-// onClick hide the previous content and display summary of answers
 export const Submit = () => {
 
   return (
     <section className="section-container">
       <button
+        tabIndex="0"
         type="submit"
-        autoFocus
-      //onClick I want to hide all questions (display=none?) and display answers -> if NO ->
-      //"You chose not to have the cleaning service inlcuded."
-      // onClick={() => window.location.reload()}
       >
         Submit
       </button>
     </section>
-  )
-}
+  );
+};
 
 export default Submit;
