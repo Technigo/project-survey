@@ -56,7 +56,7 @@ export const Survey = () => {
                     {/* Renders questions with conditional rendering depending on the section value */}
                     {section === 'question1' && (
                     <>
-                        <h2>Generel info</h2>
+                        <h2>General info</h2>
                         <div className="question-section">
                             <TextInput 
                                 question="What is your name?" 
