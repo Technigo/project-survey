@@ -22,7 +22,9 @@ const Form = () => {
   //if the function starts with "on", then it should only be used within the component
   //if the function is passed to other components, use "handle" prefix 
   const handleCheckBoxChange = (newCheck) => {
-    setCheckBox(newCheck);
+    checkBox.includes(newCheck)
+      ? setCheckBox(checkBox.filter(item => item !== newCheck))
+      : setCheckBox([...checkBox, newCheck]);
   };
 
   const handleTextChange = (newText) => {

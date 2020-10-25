@@ -2,35 +2,66 @@ import React from "react";
 
 import "./checkbox.css";
 
-const checkboxArray = ["Moving", "Packing", "Cleaning"];
+// const checkBoxArray = ["Moving", "Packing", "Cleaning"];
 
-const Checkbox = () => {
+const Checkbox = ({ isBoxChecked, onCheckBoxChange }) => {
+  // var checkBoxItem = null;
 
   return (
     <section className="section-container">
       <p>I would like a price estimation for:</p>
-      {checkboxArray.map(item => {
+      <label htmlFor="moving">
+        <input
+          type="checkbox"
+          id="moving"
+          // onChange={(event) => onCheckBoxChange(event.target.checked)}
+          onChange={() => onCheckBoxChange("Moving")}
+          checked={isBoxChecked.includes("Moving")}
+        >
+        </input>
+        Moving
+      </label>
+      <label htmlFor="packing">
+        <input
+          type="checkbox"
+          id="packing"
+          // onChange={(event) => onCheckBoxChange(event.target.checked)}
+          onChange={() => onCheckBoxChange("Packing")}
+          checked={isBoxChecked.includes("Packing")}
+        >
+        </input>
+        Packing
+      </label>
+      <label htmlFor="cleaning">
+        <input
+          type="checkbox"
+          id="cleaning"
+          // onChange={(event) => onCheckBoxChange(event.target.checked)}
+          onChange={() => onCheckBoxChange("Cleaning")}
+          checked={isBoxChecked.includes("Cleaning")}
+        >
+        </input>
+        Cleaning
+      </label>
+
+      {/* {checkBoxArray.map(item => {
         return (
-          <label htmlFor="checkbox">
+          <label htmlFor={item} key={item}>
             <input
               type="checkbox"
-              id="checkbox"
+              id={item}
               required
-              value={item}
-              onChange={event => onCheckBoxChange(event.target.value)}
-            //here you add a new item to an array!
-            // checked={}
+              onChange={(event) => onCheckBoxChange(event.target.checked)}
+              //checking whether the item is present in the isBoxChecked array
+              checked={isBoxChecked.includes(item)}
             >
             </input>
             {item}
           </label>
         );
-      })
-
-      }
-    </section>
+      })} */}
+    </section >
   );
-
 };
 
 export default Checkbox;
