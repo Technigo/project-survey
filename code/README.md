@@ -31,4 +31,5 @@ We had free reign to choose what our survey should be about, but we were asked t
 7. Googaling, Technigo videos and lectures
 
 ## View it live 💻: 
+https://flamboyant-poitras-c5efb2.netlify.app/
 
