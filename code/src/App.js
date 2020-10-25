@@ -15,13 +15,16 @@ export const App = () => {
   }
 
   return (
-    <div className="App">
+    <div>
       <header className="header">
+        <h1>Daily Check-In</h1>
       </header>
-
-      {showSummary
-        ? <Summary feeling={feeling} sleep={sleep} activity={activity} />
-        : <Form {...{ feeling, setFeeling, activity, setActivity, sleep, setSleep, handleSubmit }} />}
+      <div className="form-container">
+        {showSummary
+          ? <Summary feeling={feeling} sleep={sleep} activity={activity} />
+          : <Form {...{ feeling, setFeeling, activity, setActivity, sleep, setSleep, handleSubmit }} />
+        }
+      </div>
     </div>
-  )
+  ); 
 }

@@ -1,0 +1,56 @@
+.form {
+  background-color: #8b95c9ff;
+  margin-top: 50px;
+  width: 50%;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  font-size: 22px;
+  align-items: center;
+}
+
+.dropdown {
+  margin-top: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.select {
+  margin-left: 15px;
+  background-color: #8b95c9ff;
+  border: none;
+  border-bottom: 2px solid white;
+  font-family: 'Muli', Sans-Serif;
+}
+
+.submit {
+  background-color: #478978ff;
+  border: none;
+  color: white;
+  margin-top: 22px;
+  text-decoration: none;
+  padding: 20px;
+  border-radius: 50px;
+  display: inline-block;
+  border: none;
+  font-size: 1.25rem;
+}
+
+.select {
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  outline: none;
+  text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+.radio {
+  padding-right: 10px;
+}

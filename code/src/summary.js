@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './summary.css';
 
 const feelingResponse = feeling => {
   if (feeling === 'amazing') {
@@ -38,9 +39,11 @@ const sleepResponse = sleep => {
 
 export const Summary = ({ feeling, sleep, activity }) => {
   return (
-    <p>
-      {feelingResponse(feeling)} {activityResponse(activity)} {sleepResponse(sleep)}
-    </p>
+    <div className="summary">
+      <h2>
+        {feelingResponse(feeling)} {activityResponse(activity)} {sleepResponse(sleep)}
+      </h2>
+    </div>
   );
 };
 

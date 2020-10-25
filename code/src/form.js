@@ -1,10 +1,11 @@
 import React from 'react'
+import './form.css'
 
 export const Form = ({ feeling, setFeeling, activity, setActivity, sleep, setSleep, handleSubmit }) => (
   <form onSubmit={handleSubmit} className="form">
-    <label>
+    <label className="dropdown">
       How are you feeling today?
-      <select value={feeling} onChange={event => setFeeling(event.target.value)} required>
+      <select value={feeling} onChange={event => setFeeling(event.target.value)} required className="select">
         <option value="" disabled selected> </option>
         <option value="bad">Not so good</option>
         <option value="okay">Okay</option>
@@ -13,9 +14,9 @@ export const Form = ({ feeling, setFeeling, activity, setActivity, sleep, setSle
       </select>
     </label>
 
-    <label>
+    <label className="dropdown">
       What is your favourite activity to make you feel good?
-      <select value={activity} onChange={event => setActivity(event.target.value)} required>
+      <select value={activity} onChange={event => setActivity(event.target.value)} required className="select">
         <option value="" disabled selected> </option>
         <option value="walk">Go for a nice long walk</option>
         <option value="meditate">Meditate</option>
@@ -27,7 +28,7 @@ export const Form = ({ feeling, setFeeling, activity, setActivity, sleep, setSle
     <div className="sleepDuration">
       <p>How much sleep have you gotten today?</p>
 
-      <label>
+      <label className="radio">
         <input
           type="radio"
           value="less than 5 hours"
@@ -37,7 +38,7 @@ export const Form = ({ feeling, setFeeling, activity, setActivity, sleep, setSle
         Less than 5 hours
       </label>
 
-      <label>
+      <label className="radio">
         <input
           type="radio"
           value="5-7 hours"
@@ -47,7 +48,7 @@ export const Form = ({ feeling, setFeeling, activity, setActivity, sleep, setSle
         5-7 hours
       </label>
 
-      <label>
+      <label className="radio">
         <input
           type="radio"
           value="7-9 hours"
@@ -57,7 +58,7 @@ export const Form = ({ feeling, setFeeling, activity, setActivity, sleep, setSle
         7-9 hours
       </label>
 
-      <label>
+      <label className="radio">
         <input
           type="radio"
           value="more than 9 hours"
@@ -68,6 +69,6 @@ export const Form = ({ feeling, setFeeling, activity, setActivity, sleep, setSle
       </label>
     </div>
 
-    <button type="submit">submit</button>
+    <button type="submit" className="submit">Complete daily check-in!</button>
   </form>
 )
