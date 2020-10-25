@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
-import SelectGender from './SelectGender';
-import CheckboxGroupActivity from './CheckboxGroupActivity';
-import RadioButtonGroupRecommendation from './RadioButtonGroupRecommendation';
-import RadioButtonGroupExpectations from './RadioButtonGroupExpectations';
+import FirstQuestion from './FirstQuestion';
+import SecondQuestion from './SecondQuestion';
+import ThirdQuestion from './ThirdQuestion';
+import FourthQuestion from './FourthQuestion';
+import FifthQuestion from './FifthQuestion';
+import SixthQuestion from './SixthQuestion';
+import Summary from './Summary';
 
 const Form = () => {
   const [yearOfBirth, setYearOfBirth] = useState('');
@@ -10,8 +13,9 @@ const Form = () => {
   const [activities, setActivities] = useState([]);
   const [recommendation, setRecommendation] = useState('');
   const [expectations, setExpectations] = useState('');
-  
-  const onYearOfBirthChange = event => {
+  const [textInput, setTextInput] = useState('');
+  const [section, setSection] = useState('firstQuestion');
+  const handleYearOfBirthChange = event => {
       setYearOfBirth(event.target.value);
   };
 
@@ -33,43 +37,102 @@ const Form = () => {
     setExpectations(event.target.value);
   };
 
+  const handleTextInputChange = event => {
+    setTextInput(event);
+  };
+
+  const handleSubmit = event => {
+    event.preventDefault();
+    setSection("summary")
+  }
 
 
+  console.log(textInput);
 
-  console.log(gender);
-  console.log(activities);
 
 return (
-  <form>
-    <div>
-      <label htmlFor="yearOfBirth">Ditt födelseår</label>
-      <input
-        value={yearOfBirth} 
-        onChange={onYearOfBirthChange}
-        id='yearOfBirth'
-        type="number"
-        min="1900"
-        max="2020"
-      >
-      </input>
-    </div>
-    <SelectGender 
-      userGender={gender}
-      onGenderChange={handleGenderChange}
-    />
-    <CheckboxGroupActivity
-      userActivities={activities}
-      onActivitiesChange={handleActivitiesChange}
-    />
-    <RadioButtonGroupRecommendation
-      userRecommendation={recommendation}
-      onRecommendationChange={handleRecommendationChange}
-    />
-    <RadioButtonGroupExpectations
-      userExpectation={expectations}
-      onExpectationChange={handleExpectationChange}
-    />
+  <>
+    <form onSubmit={handleSubmit}>
+    {section === 'firstQuestion' && (
+      <>  
+        <FirstQuestion
+        userYearofBirth={yearOfBirth}
+        onYearOfBirthChange={handleYearOfBirthChange}
+        section={section}
+        setSection={setSection}
+        />
+      </>
+    )}
+    {section === 'secondQuestion' && (
+      <>
+        <SecondQuestion 
+          userGender={gender}
+          onGenderChange={handleGenderChange}
+          section={section}
+          setSection={setSection}
+        />
+      </>
+    )}
+    {section === 'thirdQuestion' && (
+      <>
+        <ThirdQuestion
+          userActivities={activities}
+          onActivitiesChange={handleActivitiesChange}
+          section={section}
+          setSection={setSection}
+        />
+      </>
+      )}
+      {section === 'fourthQuestion' && (
+        <>
+          <FourthQuestion
+            userExpectation={expectations}
+            onExpectationsChange={handleExpectationChange}
+            section={section}
+            setSection={setSection}
+          />
+        </>
+      )}
+      {section === 'fifthQuestion' && (
+        <>
+          <FifthQuestion
+            userRecommendation={recommendation}
+            onRecommendationChange={handleRecommendationChange}
+            section={section}
+            setSection={setSection}
+          />
+        </>
+      )}
+      {section === 'sixthQuestion' && (
+        <div>
+          <SixthQuestion
+            userTextInput={textInput}
+            onTextInputChange={handleTextInputChange}
+            section={section}
+            setSection={setSection}
+          />
+        </div>
+      )}
+
+       {section === 'summary' && (
+
+        <section className="summary">
+          <h2>Sammanfattning</h2>
+          
+              <Summary   
+                userYearofBirth={yearOfBirth}
+                userGender={gender}
+                userActivities={activities}
+                userRecommendation={recommendation}
+                userExpectation={expectations}
+                userTextInput={textInput}
+                section={section}
+                setSection={setSection}
+              />
+          </section>
+       )}
   </form>
+  </>
 )
 };
 export default Form;

@@ -1,10 +1,13 @@
 import React from 'react';
+import Button from './Button';
 
-const CheckboxGroupActivity = ({ userActivities, onActivitiesChange }) => {
+const ThirdQuestion = ({ userActivities, onActivitiesChange, section, setSection }) => {
 
     return (
-        <div>
+        <section className="question-section">
             <h2 className="question-heading">Vilken aktivitet har du deltagit i?</h2>
+            <div className="checkboxes activity">
+
                 <label htmlFor="mealCoaching">Måltidscoachning</label>
                 <input
                     id="mealCoaching"
@@ -33,8 +36,18 @@ const CheckboxGroupActivity = ({ userActivities, onActivitiesChange }) => {
                     checked={userActivities.includes('coaching')}
                     onChange={() => onActivitiesChange('coaching')}
                 />
-        </div>
+            </div>
+            <Button 
+                disable={onActivitiesChange} 
+                btnText="Nästa" 
+                nextQuestion="fourthQuestion"
+                section={section} 
+                setSection={setSection}
+            >
+                Nästa
+            </Button>
+        </section>
     );
 }
 
-export default CheckboxGroupActivity;
+export default ThirdQuestion;

@@ -1,29 +1,30 @@
 import React from 'react';
+import Button from './Button';
 
-const RadioButtonGroupExpectations = ({ userExpectations, onExpectationsChange }) => {
+const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, setSection }) => {
 
     return (
-      <div> 
+      <section className="question-section">
         <h2 className="question-header">Skulle du rekommendera aktiviteten till en vän?</h2>
-        <div className="radio-buttons expectation">
-          <label htmlFor="allTheWay">
+        <div className="radio-buttons recommendation">
+          <label htmlFor="alreadyDid">
           <input 
             type="radio"
-            name="expectation"
-            value="allTheWay"         
-            checked={userRecommendation === "allTheWay"}  
+            name="recommendation"
+            value="alreadyDid"         
+            checked={userRecommendation === "alreadyDid"}  
             onChange={onRecommendationChange}    
             className="radio-button"
           />
-          
+          Redan gjort
           </label>
         </div>
   
-        <div className="radio-buttons expectation">
+        <div className="recommendation-radio-buttons">
           <label htmlFor="onMyWay">
             <input 
               type="radio"
-              name="expectation"
+              name="recommendation"
               value="onMyWay"           
               checked={userRecommendation === "onMyWay"}
               onChange={onRecommendationChange}
@@ -32,11 +33,11 @@ const RadioButtonGroupExpectations = ({ userExpectations, onExpectationsChange }
             När jag kan</label>
         </div>
   
-        <div className="radio-buttons expectation">
+        <div className="recommendation-radio-buttons">
           <label htmlFor="dontKnow">
             <input 
               type="radio"
-              name="expectation"
+              name="recommendation"
               value="dontKnow"           
               onChange={onRecommendationChange}
               checked={userRecommendation === "dontKnow"}
@@ -46,35 +47,44 @@ const RadioButtonGroupExpectations = ({ userExpectations, onExpectationsChange }
           </label>
         </div>
 
-        <div className="radio-buttons expectation">
+        <div className="recommendation-radio-buttons">
           <label htmlFor="probablyNot">
             <input 
               type="radio"
-              name="expectation"
+              name="recommendation"
               value="probablyNot"           
-              onChange={onRecommendationChange}
               checked={userRecommendation === "probablyNot"}
+              onChange={onRecommendationChange}
               className="radio-button"
             />
             Tror inte det
           </label>
         </div>
 
-        <div className="radio-buttons expectation">
+        <div className="recommendation-radio-buttons">
           <label htmlFor="noWay">
             <input 
               type="radio"
-              name="expectation"
+              name="recommendation"
               value="noWay"           
-              onChange={onRecommendationChange}
               checked={userRecommendation === "noWay"}
+              onChange={onRecommendationChange}
               className="radio-button"
             />
             Nej, det kommer jag inte göra
           </label>
           </div>
-        </div>
+          <Button 
+            disable={onRecommendationChange} 
+            btnText="Nästa" 
+            nextQuestion="sixthQuestion"
+            section={section} 
+            setSection={setSection}
+            currentState={userRecommendation}
+            defaultState=""
+          />
+        </section>
     );
   }
   
-  export default RadioButtonGroupExpectations;
+  export default FifthQuestion;
