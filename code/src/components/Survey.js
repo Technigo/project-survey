@@ -5,7 +5,7 @@ import { Welcome } from './Welcome';
 import { Text } from './Text';
 import { Select } from './Select';
 import { Radio } from './Radio';
-import { Checkbox } from './Checkbox';
+//import { Checkbox } from './Checkbox';
 import { Rating } from './Rating';
 import { Button } from './Button';
 import { Summary } from './Summary';
@@ -17,7 +17,7 @@ const [name, setName] = useState("");
 const [location, setLocation] = useState("");
 const [ageGroup, setAgeGroup] = useState("");
 const [rating, setRating] = useState(0);
-const [musicGenre, setMusicGenre] = useState(false);
+//const [musicGenre, setMusicGenre] = useState(false);
 
 const nextQuestion = () => setQuestion(question +1);
 
