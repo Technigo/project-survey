@@ -13,9 +13,16 @@ export const App = () => {
     <>
       <header>
         <div className="logo-container">
-          <h1>CRAFT BEER Co.</h1>
+          <h1 tabIndex="0">CRAFT BEER Co.</h1>
           <img src={Logo} alt="bottle logo" className="logo-image" />
         </div>
+
+        <div class="hamburger-menu">
+          <div></div>
+          <div></div>
+          <div></div>
+        </div>
+
         <div className="nav-container">
           <nav>
             <a href="#">HOME</a>
@@ -24,15 +31,18 @@ export const App = () => {
             <a href="#">CONTACT</a>
             <a href="#">CART</a>
           </nav>
-        </div>
+        </div>        
       </header>
       <main>
         { pageState === true ? (
-          <Welcome setPageState={setPageState} />
+          <Welcome setPageState={setPageState}  />
         ) : (
           <Form />
         )}
       </main>
+      {/* <footer className="footer-container">
+        <p>Webpage created by Claire Caudwell using React and React state hooks. Part of the Technigo Bootcamp 2020</p>
+      </footer> */}
     </>
   );
 };
