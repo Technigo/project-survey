@@ -11,18 +11,26 @@ export const Radio = (props) => {
   ]
 
   return (
-    <div className="question">
+    <div 
+      className="question" 
+      tabIndex="0" 
+      role="radiogroup"
+    >
         How often do you buy Thing?
           {recur.map(occur => (
             <p key={occur}>
-              <label className="answerOption" htmlFor={occur}>
+              <label 
+                className="answerOption" 
+                htmlFor={occur} 
+                tabIndex="0"
+              >
                 <input 
                   type="radio"
+                  id={occur}
                   value={occur}
                   onChange={event => setFrequency(event.target.value)} 
                   checked={frequency === occur}
                   tabIndex="0"
-                  className="focusable"
                 />
                 &nbsp;
               {occur}
