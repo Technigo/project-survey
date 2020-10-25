@@ -7,7 +7,7 @@ export const Select = ({ location, setLocation, askQuestion, cityArray }) => {
   return (
     
     <div className="question-container">
-      <label htmlFor="city"><h2 tabIndex="0">{askQuestion}</h2></label>
+      <label tabIndex="0" htmlFor="city"><h2>{askQuestion}</h2></label>
       <select 
         id="city"
         className="input-select"

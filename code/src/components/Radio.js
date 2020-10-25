@@ -6,12 +6,15 @@ export const Radio = ({ ageGroup, setAgeGroup, ageGroupsArray, askQuestion }) =>
   
   return (
       <>
-        <h2>{askQuestion}</h2>
+        <h2 tabIndex="0">{askQuestion}</h2>
         <div className="radio-container" >
           {ageGroupsArray.map(group => (
           
               <label
-              key={group}>
+                key={group}
+                htmlFor={group}
+                tabIndex="0"
+              >
                 <input
                   type="radio"
                   value={group}

@@ -5,7 +5,7 @@ import '../style/input-box.css'
 export const Rating = ({ rating, setRating, askQuestion }) => {
   return (
     <div className="question-container">
-      <h2>{askQuestion}</h2>
+      <h2 tabIndex="0">{askQuestion}</h2>
       <label htmlFor="rating">Rating (between 1 and 10): </label>
       <input 
         id="rating" 
