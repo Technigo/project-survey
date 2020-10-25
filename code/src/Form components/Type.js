@@ -21,12 +21,14 @@ export const Type = ({type, setType}) => {
 
     /* Mapping through the typesOfCraftBeer array to create a checkbox for each of the array elements. Saying if a checkbox is checked and includes the different elements of the array then the onChange will implement the onTypeChange function defined at the top of the page */
     return ( 
-        <div className="input-container">
-            <div className= "checkbox-row">
-                <h3>Which of the Craft Beer Co. products are your favourite?</h3>
+        <fieldset className="container">
+            <legend tabIndex="0">Which of the Craft Beer Co. products are your favourite?</legend>
+            <div className="checkbox-row">
                 {typesOfCraftBeer.map((kinds) => (
-                <label className="checkbox-container" key={kinds}> 
+                <label className="checkbox-container" key={kinds} tabIndex="0"> 
                     <input
+                        id="beerTypes"
+                        name="beerTypes"
                         type="checkbox" 
                         checked={type.includes(kinds)} 
                         onChange={() => onTypeChange(kinds)}
@@ -35,7 +37,7 @@ export const Type = ({type, setType}) => {
                     <span className="custom-checkbox"></span>                         
                 </label>
                 ))}
-            </div> 
-        </div>   
+            </div>
+        </fieldset> 
     );
 };
