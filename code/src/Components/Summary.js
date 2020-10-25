@@ -9,9 +9,9 @@ const Summary = (props) => {
             </h1> 
             <h2 tabIndex="0">{props.place}, what a great choice for your next destination!</h2>
             <div className="summary-info">
-                <p tabIndex="0"><span className="bold">Name:</span>{props.name}</p>
-                <p tabIndex="0"><span className="bold">Destination:</span>{props.place}</p>
-                <p tabIndex="0"><span className="bold">Travel partner:</span>{props.partner}</p>
+                <p tabIndex="0"><span className="bold">Name:</span><span>{props.name}</span></p>
+                <p tabIndex="0"><span className="bold">Destination:</span><span>{props.place}</span></p>
+                <p tabIndex="0"><span className="bold">Travel partner:</span><span>{props.partner}</span></p>
             </div> 
         </section>
     )
