@@ -8,7 +8,7 @@ const InputName = ({ question, name, setName }) => {
       <label 
         className="input-text-label" 
         htmlFor="InputText"> 
-        <h3>{question}</h3> 
+        <h3 tabIndex="0">{question}</h3> 
         <input
           className="input-text"
           id="InputText"
