@@ -97,7 +97,7 @@ export const Form = () => {
 									button="button"
 									disabled={!name}
 									click={nextQuestion}
-									text={name ? 'Next' : 'Type your name'}
+									text={name ? 'Next' : 'Type name'}
 									aria-label="next-question-button"
 								/>
 							</div>
@@ -149,7 +149,7 @@ export const Form = () => {
 								/>
 								<Button
 									button="button"
-									disabled={months}
+									disabled={!months}
 									click={nextQuestion}
 									text="Next"
 									aria-label="next-question-button"
