@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
-import 'styles/form.css';
-import Input from './Input';
-import Select from './Select';
-import Radiobuttons from './Radiobuttons';
-import Summary from './Summary';
+import React, {useState} from "react";
+import "styles/form.css";
+import Input from "./Input";
+import Select from "./Select";
+import Radiobuttons from "./Radiobuttons";
+import Summary from "./Summary";
 
 
 const Form = () => {
@@ -33,21 +33,19 @@ const Form = () => {
     };
 
     return (
-    <section className='form-wrapper'>
-        
+    <>
         {!showSummary ? (
-        <form className='form' id='form' onSubmit={handleSubmit}>
+        <form className="form" id="form" onSubmit={handleSubmit}>
             <Input name={name} onInputChange={handleNameInput}/>
             <Select numberOfPlants={numberOfPlants} onSelectChange={handleSelect}/>
             <Radiobuttons favoritePlant={favoritePlant} onSelectRadio={handleRadio}/>
-            <button className='submit-button' tabIndex='0' type='submit'>Submit</button>
+            <button className="submit-button" tabIndex="0" type="submit">Submit</button>
         </form>
         ) : (         
         <Summary name={name} numberOfPlants={numberOfPlants} favoritePlant={favoritePlant}/>
         )}
-    </section>
+    </>
     );
 };    
 
-export default Form
-
+export default Form;

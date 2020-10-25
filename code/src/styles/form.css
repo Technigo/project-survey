@@ -1,26 +1,72 @@
 /* STYLE FOR FORM */
 
-
-.form {
-    background: #a9c2a7;
-    padding: 50px;
+.wrapper {
+  padding: 50px;
   }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  background: #a9c2a7;
+  padding: 50px;
+}
+
   .form-header {
-    text-align: center;
-    font-size: 32px;
+    font-size: 42px;
   }
 
   .question2-wrapper, .question3-wrapper {
     margin-top: 50px;
-
   }
 
   .question-header {
     padding-bottom: 10px;
   }
 
-  .submit-button {
+  /* Style for input */
+
+  input[type=text] {
+    font-family: 'Open Sans', sans-serif;
+    width: 100%;
+    padding: 16px 20px;
+    margin: 8px 0;
+    border: none;
+    background-color: #e0f0df;
+    color: #223521;
+  }
+
+  select {
+    width: 100%;
+    padding: 16px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #e0f0df;
+    font-family: 'Open Sans', sans-serif;
+  }
+
+  input[type=radio] {
+    float: left;
+    clear: none;
+    margin: 2px;
+    height: 20px;
+    width: 20px;
+    background-color: #e0f0df;
+  }
+
+  .label-radio {
+    display: block;
+    position: relative;
+    padding: 5px;
+    cursor: pointer;
+    float: left;
+    clear: none;
+  }
+
+  /* Style for buttons */
+  .submit-button, .reset-button  {
     font-size: 22px;
     padding: 15px;
     margin-top: 40px;
@@ -29,7 +75,16 @@
     background: #000000;
     color: #ffffff;
     cursor: pointer;
-    width: 100%;
+  }
+
+  .summary {
+    height: 100vh;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .summary-text {
+    margin-top: 30px;
   }
   
   /* MEDIA QUERIES */
@@ -56,31 +111,34 @@
       padding-bottom: 10px;
     }
   
-    .submit-button {
+    .submit-button, .reset-button {
       font-size: 18px;
-    }
+      width: 80%;
+    } 
     
-}
-
-@media screen and (min-width:420px) {
-    body {
-        font-size: 18px;
-    }
+    .wrapper {
+      padding: 20px;
+      }
 }
 
 @media screen and (min-width:768px) {
+  .submit-button, .reset-button {
+    font-size: 22px;
+    width: 60%;
+  }
 
-}
+  .form-header {
+    font-size: 32px;
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
-@media screen and (min-width:1024px) {
+  .question-header {
+    font-size: 22px;
+    padding-bottom: 10px;
+  }
 
-}
-
-@media screen and (min-width:1300px) {
-
-}
-
-
-@media screen and (min-width:1600px) {
- 
+  .wrapper {
+    padding: 30px;
+    }
 }
