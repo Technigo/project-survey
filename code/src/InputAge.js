@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Age
 const InputAge = ( {question, array, ageGroup, setAgeGroup }) => {
   
   return (
