@@ -15,7 +15,7 @@ const InputCheckbox = ({ question, array, selectedMonths, onMonthsChange }) => {
 						htmlFor={item}
 						key={item}
 						tabIndex="0"
-						onKeyPress="changeCheckbox()"
+						// onKeyPress="changeCheckbox()
 					>
 						<input
 							id={item}
@@ -23,13 +23,13 @@ const InputCheckbox = ({ question, array, selectedMonths, onMonthsChange }) => {
 							value={item}
 							checked={selectedMonths.includes(item)}
 							onChange={event => onMonthsChange(event.target.value)}
-							aria-labelledby={item}
+							// aria-labelledby={item}
 						/>
 						<span
 							role="checkbox"
 							aria-checked="false"
 							className="custom-checkbox"
-							onKeyPress="changeCheckbox()"
+							// onKeyPress="changeCheckbox()"
 						></span>
 						{item}
 					</label>

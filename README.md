@@ -1,6 +1,6 @@
 # Survey form with React
 
-This project was to creat a form using React. Im happy that I were able to create a multi-step form.
+This project was to create a form using React. Im happy that I were able to create a multi-step form.
 
 ## Learning Objectives
 

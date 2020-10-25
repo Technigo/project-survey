@@ -10,7 +10,7 @@ const InputText = ({ question, value, setName }) => {
 			>
 				<h2 tabIndex="0">{question} </h2>
 				<input
-					tabIndex="1"
+					tabIndex="0"
 					id="InputText"
 					type="text"
 					placeholder="Type your name"

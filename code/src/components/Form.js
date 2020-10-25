@@ -11,21 +11,21 @@ import ProgressBar from './ProgressBar';
 import '../Styles/Form.css';
 
 export const Form = () => {
-	const [question, setQuestion] = useState(-1); //show first "question"
-	const [name, setName] = useState(''); //text
-	const [season, setSeason] = useState(''); //select
-	const [months, setMonths] = useState([]); //checkbox
-	const [value, setValue] = useState(0); //range
-	const [age, setAge] = useState(false); //radio
-	const [email, setEmail] = useState(''); //email
-	const [submit, setSubmit] = useState(false); //since we don't want to show result before submitted.
+	const [question, setQuestion] = useState(-1);
+	const [name, setName] = useState('');
+	const [season, setSeason] = useState('');
+	const [months, setMonths] = useState([]);
+	const [value, setValue] = useState(0);
+	const [age, setAge] = useState(false);
+	const [email, setEmail] = useState('');
+	const [submit, setSubmit] = useState(false);
 
-	const nextQuestion = () => setQuestion(question + 1); //to get next question in line
+	const nextQuestion = () => setQuestion(question + 1);
 	const previousQuestion = () => setQuestion(question - 1);
 
 	const handleSubmit = event => {
 		event.preventDefault();
-		setSubmit(true); //show summary on submit
+		setSubmit(true);
 	};
 
 	const handleMonthsChange = monthValue => {
@@ -149,7 +149,7 @@ export const Form = () => {
 								/>
 								<Button
 									button="button"
-									disabled={!months}
+									disabled={months}
 									click={nextQuestion}
 									text="Next"
 									aria-label="next-question-button"
@@ -163,6 +163,7 @@ export const Form = () => {
 								question={`How much do you like ${season}? (scale 1-10)`}
 								value={value}
 								setValue={setValue}
+								step={1}
 							/>
 							<div className="navigation">
 								<Button
