@@ -11,6 +11,7 @@ const RadioGroup = ({ userHabits, onHabitsChange }) => {
       <input
         id="always"
         type="radio"
+        name="radio-option"
         checked={userHabits.includes('always')}
         onChange={() => onHabitsChange('always')}
       />
@@ -18,6 +19,7 @@ const RadioGroup = ({ userHabits, onHabitsChange }) => {
       <input
         id="mostly"
         type="radio"
+        name="radio-option"
         checked={userHabits.includes('mostly')}
         onChange={() => onHabitsChange('mostly')}
       />
@@ -25,6 +27,7 @@ const RadioGroup = ({ userHabits, onHabitsChange }) => {
       <input
         id="whatever"
         type="radio"
+        name="radio-option"
         checked={userHabits.includes('whatever')}
         onChange={() => onHabitsChange('whatever')}
       />

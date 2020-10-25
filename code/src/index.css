@@ -29,11 +29,6 @@ body {
   /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
-
 header {
   max-height: 20%;
   font-family: "Roboto";
@@ -50,19 +45,13 @@ header {
   border: 1px solid whitesmoke;
   border-radius: 50%;
   position: absolute;
-  top: 10%;
+  top: 8%;
   left: 2%;
-}
-
-.container {
-  min-height: 150vh;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
 }
 
 form {
   min-height: 100vh;
+  max-width: 100%;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
@@ -71,15 +60,16 @@ form {
 
 .question-card {
   width: 450px;
-  min-height: 200px;
+  height: 450px;
   height: min-content;
   border: 2px solid black;
   border-radius: 15px;
   padding: 20px;
   box-shadow: 10px 10px 42px 0px rgba(0, 0, 0, 0.75);
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
   margin: 5px;
 }
 
@@ -141,16 +131,17 @@ button:hover {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 500px) {
-  .container {
-    max-width: 10%;
+  .question-card {
+    width: 300px;
+    height: 100px;
   }
 
-  .form {
-    max-width: 10%;
-  }
-
-  header {
+  h1 {
     display: none;
+  }
+
+  .super-pic {
+    left: 2%;
   }
 }
 
@@ -158,18 +149,15 @@ button:hover {
 @media only screen and (max-width: 767.98px) {
   .container {
     width: 30%;
-    margin-top: 50%;
-  }
-
-  .form {
-    width: 30%;
+    margin-top: 40%;
   }
 
   .super-pic {
-    left: 20%;
+    width: 150px;
+    height: 150px;
   }
 
-  header {
+  h1 {
     display: none;
   }
 }

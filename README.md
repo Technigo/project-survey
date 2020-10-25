@@ -3,11 +3,12 @@
 Replace this readme with your own information about your project.
 
 Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Create a survey containing minumum 3 questions, radio buttons, select dropdown and a submit button that displays the summary of the users input.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+UseState and how to use useState in different components.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://agitated-nobel-3d29ad.netlify.app/
