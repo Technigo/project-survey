@@ -7,7 +7,7 @@ Create a survey containing minumum 3 questions, radio buttons, select dropdown a
 
 ## The problem
 
-UseState and how to use useState in different components.
+UseState and how to use useState in the different components, Took some time connecting summary to submit f.ex. The required input stopped working.
 
 ## View it live
 
