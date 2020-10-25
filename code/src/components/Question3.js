@@ -12,10 +12,11 @@ const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
       <div className="radio-btn-container">
         {answersArray.map(item => {
           return (
-            <label key={item}>
+            <label key={item} htmlFor="button">
               <input
                 type="radio"
                 name="button"
+                id="button"
                 required
                 value={item}
                 onChange={event => onAnswerChange(event.target.value)}

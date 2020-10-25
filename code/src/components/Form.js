@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Header from "./Header";
+import Checkbox from "./Checkbox";
 import Question1 from "./Question1";
 import Question2 from "./Question2";
 import Question3 from "./Question3";
@@ -13,12 +14,17 @@ const Form = () => {
   //all state hooks
   const [displayForm, setDisplayForm] = useState(true);
   const [displaySummary, setDisplaySummary] = useState(false);
+  const [checkBox, setCheckBox] = useState([]);
   const [text, setText] = useState("");
   const [distance, setDistance] = useState({});
   const [answer, setAnswer] = useState("");
 
   //if the function starts with "on", then it should only be used within the component
   //if the function is passed to other components, use "handle" prefix 
+  const handleCheckBoxChange = (newCheck) => {
+    setCheckBox(newCheck);
+  };
+
   const handleTextChange = (newText) => {
     setText(newText);
   };
@@ -37,24 +43,20 @@ const Form = () => {
     setDisplaySummary(true);
   };
 
-  //function, which hides form and displays summary ->
-  //incorporate into onClick function in submit button
-
-  // if (displaySummary === false) {
-  //   return ();
-  // };
-
-
   return (
     <form className="app-container" onSubmit={handleSubmit}>
       {displayForm && (
         <div className="form-container">
           <Header
-            title="We like to move you!* (within Skåne only)"
+            title="We like to move you!"
             subtitle="your favourite moving company in Skåne"
           />
+          <Checkbox
+            isBoxChecked={checkBox}
+            onCheckBoxChange={handleCheckBoxChange}
+          />
           <Question1
-            questionText1="Where do you live?"
+            questionText1="Name"
             questionAnswer1={text}
             onTextChange={handleTextChange}
           />
@@ -64,7 +66,8 @@ const Form = () => {
             onDistanceChange={handleDistanceChange}
           />
           <Question3
-            questionText3="Do you want to order our cleaning service as well?"
+            questionText3="We are fond of reusing cardboard boxes. 
+            Would you like to order them for your move?"
             questionAnswer3={answer}
             onAnswerChange={handleAnswerChange}
           />
