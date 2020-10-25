@@ -5,7 +5,7 @@ import  Logo  from './Images/blue-bottle.png'
 
 export const App = () => {
 
-  // Using the pageState state to set the Welcome.js component as the first componenet you see when you enter the site. This is done in the comparison statement defined under the end header tag below. If pageState is true the Welcome.js is shown, else(:) the form is shown.  
+  // Using the pageState state to set the Welcome.js component as the first component you see when you enter the site. This is done in the comparison statement defined under the end header tag below. If pageState is true the Welcome.js is shown, else(:) the form is shown.  
   // The pageState state is changed to false when the button, that's defined in the Welcome.js, is clicked. This is because the onClick function is set to false by way of the setPageState function. 
   const [pageState, setPageState] = useState(true);
 
