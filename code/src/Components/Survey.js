@@ -38,7 +38,6 @@ export const Survey = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // setShowSummary(true);
   };
 
   return (
@@ -53,8 +52,14 @@ export const Survey = () => {
           {section === 'secondQuestion' && (
           <>
             <InputTypeRadio className="favourite-color" header="Pick your favourite halloween color?" array={colorArray} selected={selectedColor} setSelected={setSelectedColor} />
-            <Button disable="disabled" btnText="Next" section="thirdQuestion" setSection={setSection}/>
-          </>
+            <Button
+              disable={selectedColor === undefined ? ("") : ({selectedColor})}
+              btnText="Next"
+              section="thirdQuestion"
+              setSection={setSection}
+            />
+            
+            </>
           )}
           {section === 'thirdQuestion' && (
           <>
@@ -76,15 +81,12 @@ export const Survey = () => {
           {section === 'summary' && (
             <>
             <Summary name={name} activity={selectedActivity} color={selectedColor}/>
-            <Button disable={name} btnText="hell yeah!" section="theEnd" setSection={setSection} />
-            {/* <Button name={name} btnText="no, start over" section="firstQuestion" setSection={setSection} /> */}
+            <Button disable={name} btnText="Hell yeah!" section="theEnd" setSection={setSection} />
             <button
               type="submit"
               onClick={() => window.location.reload()}
-              // value={section}
               className="submit-button"
-              // disabled={name === ''}
-            > no, i lied!
+            > No, i lied!
             </button>
             </>
           )}

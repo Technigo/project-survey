@@ -1,7 +1,5 @@
 import React from 'react'
 
-// import './inputTypeText.css'
-
 export const InputTypeText = ({className, header, name, setName, placeholder}) => {
   return ( 
         <>    
@@ -13,7 +11,6 @@ export const InputTypeText = ({className, header, name, setName, placeholder}) =
                     value={name}
                     onChange={event => setName(event.target.value)}
                     placeholder={placeholder}
-                    required
                 />
             </label>
         </>
