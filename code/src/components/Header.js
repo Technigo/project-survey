@@ -5,7 +5,7 @@ const Header = () => {
 
     return (
         <header>
-            <h1>Climate Calculator</h1>
+            <h1>Climate Survey</h1>
             <Intro />
         </header>
 
