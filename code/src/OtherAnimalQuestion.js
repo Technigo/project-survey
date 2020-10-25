@@ -13,10 +13,10 @@ export const OtherAnimalQuestion = (props) => {
             value={otherAnimal} 
             required>
             <option value="">Choose animal..</option>
-            <option value="dragon">Dragon puppy..</option>
-            <option value="bunny">Bunny kitten</option>
-            <option value="giraffe">Giraffe seal</option>
-            <option value="snake">Snake panda</option>
+            <option value="dragon puppy">Dragon puppy..</option>
+            <option value="bunny kitten">Bunny kitten</option>
+            <option value="giraffe seal">Giraffe seal</option>
+            <option value="snake panda">Snake panda</option>
             <option value="no">No.</option>
         </select>
       </section>
