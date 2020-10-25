@@ -92,13 +92,13 @@ select {
 	display: flex;
 	flex-direction: column;
 	height: 100%;
+	width: 100%;
 	justify-content: space-evenly;
 }
 
 .summary-container {
 	color: #fdf7ef;
 	line-height: 30px;
-	/* height: 45%; */
 	background: black;
 	opacity: 0.4;
 	padding: 5px;
@@ -119,8 +119,8 @@ select {
 		font-size: 32px;
 	}
 	.form-wrapper {
-		height: 70vh;
-		width: 50vw;
+		height: 80%;
+		width: 80%;
 	}
 
 	form {
@@ -129,8 +129,12 @@ select {
 }
 
 @media (min-width: 1024px) {
+	.form-wrapper {
+		height: 70%;
+		width: 60%;
+	}
 	.intro-wrapper,
 	.reset-wrapper {
-		width: 70%;
+		width: 60%;
 	}
 }
