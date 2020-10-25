@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SelectInput = ({question, selectValue, setSelectValue, showNext}) => {
+const SelectInput = ({question, setSelectValue, showNext}) => {
 
     return( 
     <label htmlFor="select-city"><h3>{question}</h3>

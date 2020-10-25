@@ -6,11 +6,8 @@
   color: #D2FDFF;
 
 }
-.old-color {
-  color: #c8dedf;
-  color: #3a4d4e;
-  color: #5e7475;
-}
+
+/* GENERAL */
 
 body {
   margin: 0;
@@ -27,7 +24,6 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 
 
 h1 {
@@ -56,6 +52,8 @@ p {
   font-weight: bold;
   margin: 0;
 }
+
+/* FIRST PAGE/SECTION */
 
 header {
   text-align: center;
@@ -94,6 +92,48 @@ header {
   margin: 50px;
 }
 
+/* FORM */
+
+.main-form {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  color: #fbe8a6;
+  margin: auto;
+  align-items: center;
+}
+
+.progress-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 30px 0;
+
+}
+.progress-section {
+  width: 30px;
+  height: 30px;
+  background-color: none;
+  border: 1px solid #F4976C;
+  margin: 10px;
+  border-radius: 50%;
+}
+
+.progress-active {
+  background-color: #F4976C;
+}
+
+.question-section {
+  width: 100%;
+  height: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .next-button {
   width: 200px;
   height: 40px;
@@ -107,27 +147,6 @@ header {
   margin: 50px auto;
 }
 
-.main-form {
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  color: #fbe8a6;
-  margin: auto;
-  align-items: center;
-  /* justify-content: ; */
-}
-
-.question-section {
-  width: 100%;
-  height: 60%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-  /* margin-top: 50%; */
-}
-
 
 label {
   margin: 10px 20px;
@@ -135,6 +154,8 @@ label {
   display: flex;
   flex-direction: column;
 }
+
+/* TEXT INPUT */
 
 .text-label {
   display: flex;
@@ -165,6 +186,8 @@ input:focus {
   border: 2px solid #F4976C;
 }
 
+/* RADIO INPUT*/
+
 .radio-label {
   display: inline-flex;
   flex-direction: column;
@@ -188,6 +211,9 @@ input:focus {
   flex-direction: column;
 }
 
+
+/*SELECT INPUT*/
+
 select {
   height: 40px;
   width: 100%;
@@ -199,6 +225,8 @@ select {
   font-size: 18px;
 }
 
+/* RESULTS PAGE */
+
 .results {
   width: 100%;
   height: 100vh;
@@ -207,6 +235,7 @@ select {
   color: #fbe8a6;
   margin: auto;
   align-items: center;
+  justify-content: center;
   margin-bottom: 40px;
 }
 
@@ -227,28 +256,9 @@ select {
 .answers {
   width: 100%;
 }
-.progress-container {
-  width: 100%;
-  height: auto;
-  display: flex;
-  justify-content: space-around;
-  margin: 30px 0;
-
-}
-.progress-section {
-  width: 30px;
-  height: 30px;
-  background-color: none;
-  border: 1px solid #F4976C;
-  margin: 10px;
-  border-radius: 50%;
-}
-
-.progress-active {
-  background-color: #F4976C;
-}
 
 
+/* TABLET AND DESKTOP*/ 
 
 @media screen and (min-width: 767px) {
   .radio-label {
