@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-export const Question4 = ({ userName, setUserName, onUserNameChange, name, description, gift}) => {
+export const Question4 = ( {userName, onUserNameChange} ) => {
     return (
         <section className="question4 section">
             <h2>Send Love from</h2>
@@ -13,9 +13,9 @@ export const Question4 = ({ userName, setUserName, onUserNameChange, name, descr
                 id="userName" 
                 type="text"
                 placeholder="Enter your name"
+                required
+                aria-required="true"
             />
-
-            
          </section>
     )
 }

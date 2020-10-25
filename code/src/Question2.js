@@ -17,8 +17,7 @@ const descriptionsArray = [
     'Helpful',
 ]
 
-export const Question2 = ({name, descriptions, setdescription, onDescriptionChange }) => {
-console.log(descriptions)
+export const Question2 = ( {name, descriptions, onDescriptionChange} ) => {
 
     return (
         <section className="question2 section">
@@ -26,18 +25,18 @@ console.log(descriptions)
             <div className="description">
                 {descriptionsArray.map(description => {
                     return (
-                        <div className="description-container">
-                            <input
-                                value={description}
-                                id={description}
-                                type="button"
-                                onClick={() => onDescriptionChange(description)}
-                                className={descriptions.includes(description) 
-                                    ? "button-active"
-                                    : "button-not-active"
-                                } 
-                            />
-                        </div>
+                        <input
+                            key={description}
+                            value={description}
+                            id={description}
+                            type="button"
+                            onClick={() => onDescriptionChange(description)}
+                            aria-pressed={descriptions.includes(description)}
+                            className={descriptions.includes(description) 
+                                ? "button-pressed"
+                                : "button-not-pressed"
+                            } 
+                        />
                     )
                 })}
             </div> 

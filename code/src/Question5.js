@@ -16,37 +16,31 @@ export const Question5 = ({cheesyCaption, onCaptionChange}) => {
             <h2>Choose a caption</h2>
             <div className="captions-container">
                 {captions.map(caption => {
-                    return (
-                        <p>{caption.number}: {caption.caption}</p>
-                    )
+                    return <p key={caption.caption}>{caption.number}: {caption.caption}</p>
                 })}
             </div>
 
-            <div className="captions-input-container">
+            <div className="captions-input-container" aria-label="captions" role="radiogroup">
                 {captions.map(caption => {
                     return (                
-                        <label htmlFor={caption.number} key={caption} >
-                            <input 
-                                name={caption.caption}
-                                type="radio"
-                                value={caption.caption}
-                                onChange={e => onCaptionChange(e.target.value)}
-                                checked={cheesyCaption === caption.caption}
-                            />
+                        <label 
+                            htmlFor={caption.number} 
+                            key={`Caption: ${caption.caption}`}
+                        >
+                                <input
+                                    key={caption.number}
+                                    name={caption.caption}
+                                    type="radio"
+                                    value={caption.caption}
+                                    onChange={e => onCaptionChange(e.target.value)}
+                                    checked={cheesyCaption === caption.caption}
+                                    aria-checked={cheesyCaption === caption.caption}
+                                />
                             {caption.number}
                         </label>
                     )
                 })}
             </div>
-            
-
-            {/* <label key={} >
-                <input 
-                    type="radio"
-                    value=""
-                    onChange={e => onPoemChange(e.target.value)}
-                />
-            </label> */}
         </section>
     )
 }

@@ -63,39 +63,41 @@ export const Form = () => {
                     <Header />
 
                     <FirstQuestion 
-                    name={name} 
-                    setName={setName} 
-                    onNameChange={handlerNameChange}
+                        name={name} 
+                        setName={setName} 
+                        onNameChange={handlerNameChange}
                     />
 
                     <Question2
-                    name={name}
-                    descriptions={descriptions}
-                    setDescription={setDescription}
-                    onDescriptionChange={handlerDescriptionChange}
+                        name={name}
+                        descriptions={descriptions}
+                        setDescription={setDescription}
+                        onDescriptionChange={handlerDescriptionChange}
                     />
 
                     <Question3 
-                    gift={gift} 
-                    setGift={setGift} 
-                    onGiftChange={handlerGiftChange}
-                    />
-                
-                    <Question4 
-                    userName={userName} 
-                    setUserName={setUserName} 
-                    onUserNameChange={handlerUserNameChange}
+                        gift={gift} 
+                        setGift={setGift} 
+                        onGiftChange={handlerGiftChange}
                     />
 
                     <Question5 
-                    cheesyCaption={caption}
-                    onCaptionChange={handlerCaptionChange}
+                        cheesyCaption={caption}
+                        onCaptionChange={handlerCaptionChange}
+                    />
+                
+                    <Question4 
+                        userName={userName} 
+                        setUserName={setUserName} 
+                        onUserNameChange={handlerUserNameChange}
                     />
                 
                     <input
-                    type="submit"
-                    value="Send"
+                        type="submit"
+                        value="Send"
                     />
+
+                    <p className="credit">Illustration by Freepik</p>
                 </>
             )}
         </form>  
