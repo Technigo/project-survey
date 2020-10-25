@@ -9,6 +9,7 @@ const InputSelect = ({ id, question, setSeason, value }) => {
 				aria-label="Select your favourite season in the drop-down menu to be able to proceed the survey"
 			>
 				<select
+					tabIndex="0"
 					value={value}
 					className="select-container"
 					onChange={event => setSeason(event.target.value)}

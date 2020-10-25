@@ -35,7 +35,7 @@ export const Form = () => {
 	};
 
 	//array for radio btn
-	const ageGroups = ['0-18 years', '19-40 years', '41-60 years', '61 + years'];
+	const ageGroups = ['0-18 times', '19-40 times', '41-60 times', '61 + times'];
 
 	//array for checkbox
 	const seasonArray = [
@@ -87,18 +87,12 @@ export const Form = () => {
 								setName={setName}
 							/>
 							<div className="navigation">
-								<Button
-									button="button"
-									click={previousQuestion}
-									text="Back"
-									aria-label="previous question button"
-								/>
+								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
 									disabled={!name}
 									click={nextQuestion}
 									text={name ? 'Next' : 'Type name'}
-									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -112,18 +106,12 @@ export const Form = () => {
 								value={season}
 							/>
 							<div className="navigation">
-								<Button
-									button="button"
-									click={previousQuestion}
-									text="Back"
-									aria-label="previous-question-button"
-								/>
+								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
 									disabled={!season}
 									click={nextQuestion}
 									text={season ? 'Next' : 'Select season'}
-									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -141,18 +129,12 @@ export const Form = () => {
 								}
 							/>
 							<div className="navigation">
-								<Button
-									button="button"
-									click={previousQuestion}
-									text="Back"
-									aria-label="previous-question-button"
-								/>
+								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
 									disabled={!months}
 									click={nextQuestion}
 									text="Next"
-									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -166,18 +148,12 @@ export const Form = () => {
 								step={1}
 							/>
 							<div className="navigation">
-								<Button
-									button="button"
-									click={previousQuestion}
-									text="Back"
-									aria-label="previous-question-button"
-								/>
+								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
 									disabled={value <= 0}
 									click={nextQuestion}
 									text={value ? 'Next' : 'Slide range'}
-									aria-label="next question button"
 								/>
 							</div>
 						</section>
@@ -192,18 +168,12 @@ export const Form = () => {
 								age={age}
 							/>
 							<div className="navigation">
-								<Button
-									button="button"
-									click={previousQuestion}
-									text="Back"
-									aria-label="previous-question-button"
-								/>
+								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
 									disabled={!age}
 									click={nextQuestion}
 									text={age ? 'Next' : 'Select age'}
-									aria-label="next-question-button"
 								/>
 							</div>
 						</section>
@@ -228,13 +198,11 @@ export const Form = () => {
 										button="button"
 										click={previousQuestion}
 										text="Back"
-										aria-label="previous-question-button"
 									/>
 									<Button
 										type="submit"
 										disabled={!email}
 										text={email ? 'Submit' : 'Enter email'}
-										aria-label="submit-survet"
 									/>
 								</div>
 							</div>
@@ -254,7 +222,7 @@ export const Form = () => {
 			) : (
 				<section className="reset-wrapper">
 					<section className="reset">
-						<h4>Thank you!</h4>
+						<h4 tabIndex="0">Thank you!</h4>
 						<div className="navigation-reset">
 							<Button
 								button="button"
