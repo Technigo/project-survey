@@ -11,6 +11,7 @@ const InputAge = ( {question, array, ageGroup, setAgeGroup }) => {
           className="input-age" 
           htmlFor={group} 
           key={group}>
+          <span className="checkmark"></span>
           <input
             className="radio-button"
             type="radio"
@@ -19,6 +20,7 @@ const InputAge = ( {question, array, ageGroup, setAgeGroup }) => {
             checked={ageGroup === group} 
           />
           {" " + group + " "}
+          
         </label>
       ))}
     </>

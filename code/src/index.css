@@ -12,10 +12,6 @@ code {
     monospace;
 }
 
-/* body {
-  background-color: rgb(224, 154, 197);   
-} */
-
 h1 {
   font-size: 42px;
   text-align: center;
@@ -25,14 +21,14 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 26px;
   color: #fff;
   text-align: center;
-  margin: 15px;
+  margin: 20px 0 15px 0;
 }
 
 h3 {
-  font-size: 28px;
+  font-size: 24px;
   margin: 40px 0 20px 0;
   text-align: center;
   color: #fff;
@@ -40,14 +36,15 @@ h3 {
 
 p {
   color: #fff;
+  font-weight: bold;
+  font-size: 16px;
+  margin: 15px 0;
 }
 
 .app-wrapper {
   margin: 5vh auto;
   width: 90vw;
   height: 90vh;
-  /* background-color: rgb(244, 185, 222); */
-  /* border: 1px solid #000; */
 }
 
 form {
@@ -60,22 +57,22 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  margin: 20px;
+  margin: 0 20px;
+  height: 90vh;
 }
 
 .header-section h2 {
   text-shadow: 2px 2px #929292;
 }
 
+/* I had trouble getting pic to display as I wanted below: */
 .survey-wrapper {
-  /* background-color: rgb(245, 210, 231); */
   background-image: radial-gradient(circle, rgba(47,106,73,.2) 0% , rgba(47,106,73,.4) 30%, rgba(47,106,73,.9) 100%), url(./assets/grass-bg.jpg);
   background-size: cover;
   background-position-x: 0%;
   background-position-y: 10%; 
   overflow-y: hidden;
   overflow-x: hidden;
-  /* border: 1px solid #000; */
   border-radius: 20px;
   display: flex;
   height: 90vh;
@@ -86,38 +83,34 @@ form {
 }
 
 .buttons {
-  margin: 70px 0 0 0;
+  margin: 50px 0 0 0;
   display: flex;
   justify-content: center;
 }
 
 .button {
-  font-size: 14px;
+  font-size: 16px;
   color: #5d5d5d;
   text-transform: uppercase;
   font-weight: 600;
   padding: 8px 10px;
-  margin: 15px;
+  margin: 0 5px 15px 5px;
   background: #f2d8c9;
-  /* outline: 0; */
   border-style: none;
 }
 
-.question-wrapper {
+.question-wrapper,
+.summary-wrapper {
   width: 80%;
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
-  justify-content: space-around;
+  justify-content: space-between;
   height: 100%;
   align-items: center;
   margin: auto;
 }
 
 .input-name {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center; */
   margin: 0 15px;
 }
 
@@ -130,22 +123,139 @@ form {
 
 .input-text {
   align-self: center;
-  /* margin: auto; */
   margin: 40px 0 0 0;
   border: none;
   border-bottom: 1px solid #000;
+  width: 200px;
+  height:25px;
+  font-size: 20px;
 }
-
-/* .name-form {
-  margin: 20px;
-} */
 
 .input-age {
   color: #fff;
   margin: 5px 5px 5px 20px;
   align-self: flex-start;
+  font-size: 20px;
+  position: relative;
+  font-weight: bold;
+}
+
+.input-age input {
+  opacity: 0.9;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 1;
+  left: 0;
+  height: 23px;
+  width: 23px;
+  background-color: #eee;
+  border-radius: 50%;
+}
+
+/* grey background on hover over custom radio-button */
+.input-age:hover input ~ .checkmark {
+  background-color: #606060;
+}
+
+/* I tried to create a custom radio-button, 
+but didn't have time to get it to work. 
+I left the checkmark in the code as I thought it 
+looked a bit better than the default radio-button */
+
+.input-color-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .input-select-color {
+  font-size: 20px;
+  border: none;
+  padding: 10px 15px;
   margin: 20px;
+}
+
+.checkbox-container {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  background: rgba(47,106,73,.5);
+  padding: 20px 40px 20px 20px;
+}
+
+.checkbox-container span {
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  color: #fff;
+  font-weight: bold;
+  position: relative;
+  margin-bottom: 5px;
+}
+
+.checkbox-container span input {
+  position: absolute;
+  right: -30px;
+  top: 1px;
+  width: 20px;
+  height: 20px;
+}
+
+.summary-wrapper {
+  margin: 0 20px;
+  max-height: 90vh;
+}
+
+.summary-text {
+  margin-top: 10px;
+  background: rgba(47,106,73,.5);
+  padding: 0 20px;
+}
+
+@media(min-width:768px) {
+  h1 {
+    font-size: 48px;
+    margin: 80px 0 40px 0;
+  }
+  
+  h2 {
+    font-size: 40px;
+    margin: 40px 0 80px 0;
+  }
+
+  h3 {
+    font-size: 36px;
+    margin: 60px 0 40px 0;
+  }
+
+  p {
+    font-size: 22px;
+    margin: 20px 0;
+}
+
+.header-section {
+  margin: 0px 40px;
+}
+
+  .question-wrapper,
+  .summary-wrapper {
+    justify-content: space-around;
+  }
+}
+
+@media(min-width:1440px) {
+  .header-section {
+    width: 50%;
+    margin: auto;
+  }
+
+  .question-wrapper, 
+  .summary-wrapper {
+    width: 50%;
+  }
 }

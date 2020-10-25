@@ -118,7 +118,7 @@ const Survey = () => {
             <InputCheckboxHobbies
               userHobbies={hobbies}
               onHobbiesChange={handleHobbiesChange}
-              question="What hobbies do you have?"
+              question="What are your hobbies?"
             />
             <div className="buttons"> 
               <Button 
@@ -135,7 +135,7 @@ const Survey = () => {
         )}
         </form> 
       ) : (
-      <section className="summmary-wrapper"> 
+      <section className="summary-wrapper"> 
         <Summary 
           heading="Summary"
           name={name}

@@ -5,8 +5,8 @@ const InputSelectColor = ({id, question, setColor, color}) => {
   
 
   return (
-    <> 
-     <label htmlFor={id}>
+    <div className="input-color"> 
+     <label className="input-color-text" htmlFor={id}>
        <h3>{question}</h3> 
       <select 
         className="input-select-color"
@@ -27,7 +27,7 @@ const InputSelectColor = ({id, question, setColor, color}) => {
         <option value="black">Black</option>
       </select>
       </label>
-     </> 
+     </div> 
   );
 };
 export default InputSelectColor;
