@@ -70,7 +70,7 @@ export const Survey = () => {
 
                     {section === 'question2' && (
                     <>
-                        <h2>Generel info</h2>
+                        <h2>General info</h2>
                         <div className="question-section">
                             <RadioInput 
                                 question="Are you concerned about the climate change?" 
