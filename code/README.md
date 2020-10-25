@@ -1,19 +1,12 @@
-# Technigo React Starter App
+# The book lover survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The site is a simple survey about books and reading. It's the first project I built using React state. It was built as an exercise during the Technigo bootcamp for frontend developers in fall 2020.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## What you'll find in the code
 
-## Usage
+I built the site using HTML, CSS and JavaScript React. It consists of severals components for the different questions, header, footer and a summary that is shown to the user after submitting answers to all the questions. 
+The site is accessible and tested for screen readers with the Chrome extension Chrome Vox. Cross browser testing was done on Chrome, Edge and Firefox. 
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## View it live
 
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+The page can be seen live here: https://book-lover-survey.netlify.app/
