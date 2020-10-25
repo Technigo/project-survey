@@ -127,8 +127,8 @@ const Survey = () => {
                 click={previousQuestion}
               />
               <Button 
-                text="Submit"
-                type="submit"
+                text={hobbies >= "1" ? 'Submit' : 'Select hobby'}
+                type={hobbies >= "1" ? "submit" : "button"}
               />
             </div>
           </section>
