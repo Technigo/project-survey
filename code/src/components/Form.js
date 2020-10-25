@@ -162,9 +162,8 @@ const Form = () => {
         </form>
       </div>
     );
-    {
-      /********** SUMMERY **********/
-    }
+
+    /********** SUMMERY **********/
   } else {
     return (
       <div className="form-container">
