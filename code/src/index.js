@@ -407,7 +407,6 @@ const App = () => {
             <label>What do you say when scarying kids<br></br>
               <input
                 type="text"
-              
                 className="line-phrase"
                 maxLength="17"
                 onChange={event => setPhrase(event.target.value)}
@@ -509,5 +508,5 @@ const App = () => {
 }
 
 
-const rootElement = document.getElementById("root");
+
 ReactDOM.render(<App />, document.getElementById('root'))
