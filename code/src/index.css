@@ -131,9 +131,14 @@ form {
   font-size: 20px;
 }
 
+.radio-text-input {
+  display: flex;
+  flex-direction: column;
+}
+
 .input-age {
   color: #fff;
-  margin: 5px 5px 5px 20px;
+  margin: 10px 5px 15px 20px;
   align-self: flex-start;
   font-size: 20px;
   position: relative;
@@ -145,6 +150,13 @@ form {
   cursor: pointer;
 }
 
+.input-age:after {
+  content: "years";
+}
+/* I tried to create a custom radio-button (checkmark), 
+but didn't have time to get it to work. 
+I left the checkmark in the code as I thought it 
+looked a bit better than the default radio-button */
 .checkmark {
   position: absolute;
   top: 1;
@@ -160,10 +172,9 @@ form {
   background-color: #606060;
 }
 
-/* I tried to create a custom radio-button, 
-but didn't have time to get it to work. 
-I left the checkmark in the code as I thought it 
-looked a bit better than the default radio-button */
+.radio-button {
+  margin-right: 10px;
+}
 
 .input-color-text {
   display: flex;

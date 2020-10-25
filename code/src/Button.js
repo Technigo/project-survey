@@ -1,8 +1,14 @@
 import React from 'react'
 
-// This is a generic button used in different places in the survey
-export const Button = ({type, click, disabled, text}) => {
+// A generic button used in different places.
+const Button = ({type, click, disabled, text}) => {
   return (
-    <button className="button" type={type} onClick={click} disabled={disabled}>{text}</button>
+    <button 
+      className="button" 
+      type={type} 
+      onClick={click} 
+      disabled={disabled}>{text}
+    </button>
   );
 };
+export default Button;

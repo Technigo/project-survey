@@ -1,18 +1,19 @@
 import React from 'react'
 
-const InputAge = ( {question, array, ageGroup, setAgeGroup }) => {
+const InputAge = ({question, array, ageGroup, setAgeGroup }) => {
   
   return (
-    <>
+    <div className="radio-text-input">
       <h3 tabIndex="0">{question}</h3>
       {array.map((group) => (
         <label 
+          tabIndex="0"
           className="input-age" 
           htmlFor={group} 
-          key={group}
-          tabIndex="0">
+          key={group}>
           <span className="checkmark"></span>
           <input
+            tabIndex="0"
             className="radio-button"
             type="radio"
             role="Radiogroup"
@@ -21,10 +22,9 @@ const InputAge = ( {question, array, ageGroup, setAgeGroup }) => {
             checked={ageGroup === group} 
           />
           {" " + group + " "}
-          
         </label>
       ))}
-    </>
+    </div>
   );
 };
 export default InputAge;

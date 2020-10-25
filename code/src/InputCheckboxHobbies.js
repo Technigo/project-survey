@@ -1,7 +1,5 @@
 import React from 'react'
 
-//Checkboxes for hobbies
-//
 const InputCheckboxHobbies = ({ question, userHobbies, onHobbiesChange }) => {
 
   return (

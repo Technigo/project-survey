@@ -1,6 +1,5 @@
 import React from 'react'
 
-// Name
 const InputName = ({ question, name, setName }) => {
   
   return (
@@ -14,10 +13,13 @@ const InputName = ({ question, name, setName }) => {
           id="InputText"
           placeholder="Type your name"
           type="text"
-          onChange={event => setName(event.target.value)} //Here I would add {onNameChange} that Max talked about @lecture wed 38:00??
           value={name}
-          required
-          minLength="2"
+          required //This don't work. I don't know why.
+          minLength="2" //This don't work. I don't know why.
+          onChange={event => setName(event.target.value)}
+          onKeyPress={event => {
+						event.key === 'Enter' && event.preventDefault();
+					}}
         />
       </label>
     </div>

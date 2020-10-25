@@ -5,7 +5,7 @@ import InputName from './InputName'
 import InputSelectColor from './InputSelectColor'
 import InputAge from './InputAge'
 import InputCheckboxHobbies from './InputCheckboxHobbies'
-import { Button } from './Button'
+import Button from './Button'
 import Summary from './Summary'
 
 const Survey = () => {
@@ -21,10 +21,10 @@ const Survey = () => {
     setSubmit(true); //to show summary on submit
   };
 
-  const nextQuestion = () => setQuestion(question + 1); //To get next Q 
-  const previousQuestion = () => setQuestion(question - 1); //To go back
+  const nextQuestion = () => setQuestion(question + 1); 
+  const previousQuestion = () => setQuestion(question - 1);
 
-  const ageGroups = ["20-24", "25-29", "30-34", "35-39", "40-44", "45+"];
+  const ageGroups = ["0-20", "21-30", "31-40", "41-50", "51-60", "61+"];
 
   const handleHobbiesChange = hobbieValue => {
     hobbies.includes(hobbieValue) 
