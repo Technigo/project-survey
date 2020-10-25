@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import './secondQuestion.css'
 
-export const SecondQuestion = () => {
-    const [answer, setAnswer] = useState("")
+export const SecondQuestion = ({ answer, setAnswer }) => {
+    // const [answer, setAnswer] = useState("")
     return (
         <section className="second-question" id="answer">
             <h1 tabIndex="0">What did, or could have made your day better?</h1>
@@ -18,6 +18,7 @@ export const SecondQuestion = () => {
                     onChange={event => setAnswer(event.target.value)}
                     minLength="10"
                     placeholder="Be kind to yourself"
+                    required
 
                 />
             </label>

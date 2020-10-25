@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import { OutputSummary } from './OutputSummary'
 import './fourthQuestion.css'
 
-export const FourthQuestion = () => {
+export const FourthQuestion = ({ answer }) => {
     const [activity, setActivity] = useState("")
-    const [answer] = useState("")
     const [hour] = useState("")
     const [showSummary, setShowSummary] = useState("")
 

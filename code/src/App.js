@@ -1,12 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FirstQuestion } from './components/FirstQuestion'
 import { SecondQuestion } from './components/SecondQuestion'
 import { ThirdQuestion } from './components/ThirdQuestion'
 import { FourthQuestion } from './components/FourthQuestion'
 import './app.css'
 
-export const App = ({ answer, setAnswer }) => {
-
+export const App = () => {
+  const [answer, setAnswer] = useState("")
 
 
   // const [showSummary, setShowSummary] = useState(false)
@@ -32,13 +32,13 @@ export const App = ({ answer, setAnswer }) => {
         <FirstQuestion />
       </div>
       <div>
-        <SecondQuestion answer={answer} />
+        <SecondQuestion answer={answer} setAnswer={setAnswer} />
       </div >
       <div>
         <ThirdQuestion />
       </div>
       <div>
-        <FourthQuestion setAnswer={setAnswer} />
+        <FourthQuestion answer={answer} />
       </div>
 
     </section >
