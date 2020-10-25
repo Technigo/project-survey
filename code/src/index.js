@@ -470,11 +470,12 @@ const App = () => {
               value={hustle}
               className="line"
             />  or treating", and he really doesn´t want
-         <select
-              
-              inChange={event => setThings(event.target.value)}
-              value={things}
-              className="line" />
+         <input
+         type="text"
+         inChange={event => setThings(event.target.value)}
+         value={things}
+         className="line"
+         />
               , like last year.
         But if so, he will throw
         <input
