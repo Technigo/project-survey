@@ -58,11 +58,11 @@ h1 {
 }
 
 /* Name section */
+
 .name {
   margin-top: 5%;
   display: flex;
   flex-direction: column;
-  
 }
 
 .name input {
@@ -88,12 +88,12 @@ input {
 /* Radiobutton layout */
 
 .radiobutton {
+  color: #22A800;
   padding: 5%;
   text-align: center;
   font-family: sans-serif;
   font-weight: bold;
 }
-
 
 .radiobutton-section1 {
   display: flex;
@@ -117,16 +117,15 @@ input {
 }
 
 /* First letter of your name - section */
+
 .firstLetter {
   display: flex;
   flex-direction: column;
 }
 
-
 .firstLetter select {
   margin-left: 25%;
   margin-right: 25%;
-  
 }
 
 .firstLetter-text {
@@ -138,10 +137,10 @@ input {
   font-size: 15px;
   border: none;
   border-radius: 7px;
-  
 }
 
 /* Title text of "your name", Birth name" and "first letter of your name" */
+
 h3 {
   background-color: #E60000;
   font-size: 29px;
@@ -162,7 +161,7 @@ h3 {
   letter-spacing: 2.5px;
   font-weight: 500;
   color: #000;
-  background-color: #fff;
+  background-color: #FEFF00;
   border: none;
   border-radius: 45px;
   box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
@@ -197,9 +196,53 @@ h3 {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.5);
 }
 
-@media only screen and (min-width: 992px) {
+/* ipad-pro media query */
 
- 
+@media only screen and (min-width: 1024px) and (max-height: 1366px) and (-webkit-min-device-pixel-ratio: 1.5) {
+  h1 {
+    font-weight: bolder;
+    background-color: #013465;
+    font-size: 350%;
+  }
+  .survey-section {
+    width: 90%;
+    margin-top: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .submit-section {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 10%;
+    height: 25%;
+  }
+  .radiobutton {
+    font-size: 20px;
+  }
+  .radiobutton-section1 {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .radiobutton-section2 {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .radiobutton-section3 {
+    margin-left: 15%;
+    margin-right: 15%;
+  }
+  .form-submit {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+}
+
+/* Website media query */
+
+@media only screen and (min-width: 992px) {
+  body {
+    margin-top: 0;
+  }
   h1 {
     font-weight: bolder;
     background-color: #013465;
@@ -207,7 +250,7 @@ h3 {
   }
   .survey-section {
     width: 30%;
-    margin-top: 3%;
+    margin-top: 0;
     margin-left: 35%;
     margin-right: 35%;
   }
@@ -219,21 +262,22 @@ h3 {
   .submit-section {
     margin-left: 20%;
     margin-right: 20%;
-    margin-top: 10%;
-   height: 30%;
-
+    margin-top: 3%;
+    height: 25%;
   }
   .radiobutton-section1 {
     margin-left: 20%;
     margin-right: 20%;
   }
-  
   .radiobutton-section2 {
     margin-left: 20%;
     margin-right: 20%;
   }
-  
   .radiobutton-section3 {
+    margin-left: 20%;
+    margin-right: 20%;
+  }
+  .form-submit {
     margin-left: 20%;
     margin-right: 20%;
   }
