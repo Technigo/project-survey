@@ -40,9 +40,9 @@ const handleSubmit = event => {
 return (
   <>
   <section className="form">
-    <Header />
       {! showSummary ? ( 
           <form onSubmit={handleSubmit}>
+    <Header />
     <Questionname
         name={answername}
         onNameChange = {handleNameChange}
