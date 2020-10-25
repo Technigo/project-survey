@@ -7,7 +7,6 @@ const Restart = () => {
   }
   return (
     <button onClick={resetSurvey}>Start over</button>
-    // <button>Start over</button>
   )
 }
 

@@ -37,9 +37,6 @@ const Form = () => {
     setShowSummary(true);
   }
 
-  console.log(showQuestion, place, rating, feedback, showSummary);
-  // console.log(place, rating, feedback, showSummary);
-
   return (
     <section>
       { (!showSummary && feedback !== '') ? (

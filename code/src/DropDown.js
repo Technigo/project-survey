@@ -3,8 +3,8 @@ import React from 'react';
 const DropDown = ({ place, onPlaceChange }) => {
   return (
     <section className="dropdown">
-      <h2 tabIndex="0" className="label">Where are you located?</h2>
-      <select tabIndex="0" className="dropdown-options" id="place" value={place} onChange={onPlaceChange}>
+      <h2 tabIndex="0">Where are you located?</h2>
+      <select tabIndex="0" className="dropdown-options" value={place} onChange={onPlaceChange}>
         <option value="">Select a place</option>
         <option value="Stockholm county">Stockholm county</option>
         <option value="Uppsala county">Uppsala county</option>
