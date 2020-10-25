@@ -5,7 +5,7 @@
 body {
   margin: 0;
   background-color: rgb(255, 255, 255);
-  background-image: url(./Images/pattern-1.png);
+  background-image: url(./images/pattern-1.png);
   background-size: 300px;
   background-repeat: repeat;
 }
