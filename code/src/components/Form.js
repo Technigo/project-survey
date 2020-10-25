@@ -23,6 +23,7 @@ const Form = () => {
 
   const handleNextPage = () => {
     // regex e-mail
+    // eslint-disable-next-line
     const mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     mail.test(email);
 
