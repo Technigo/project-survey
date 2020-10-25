@@ -8,4 +8,4 @@
 
 ## View it live
 
-🍂 Live version of my project may be found here:
+🍂 Live version of my project may be found here: https://self-care-journal.netlify.app/
