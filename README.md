@@ -11,5 +11,4 @@ I wanted to try diffrent ways of doing th state. So for the "things" and "things
 I got a problem with the dropdown select and could not figure out 
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://halloween-mad-lib.netlify.app
