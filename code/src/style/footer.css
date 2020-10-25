@@ -13,7 +13,7 @@
 
 h3 {
   margin: 0;
-  font-size: 16px;
+  font-size: 12px;
 }
 
 footer:before {
@@ -24,4 +24,10 @@ footer:before {
   left: 0;
   height: 50px;
   background: linear-gradient(to bottom right, transparent 49%, #000000 50%);
+}
+
+@media (min-width: 768px) {
+  h3 {
+    font-size: 16px;
+  }
 }
