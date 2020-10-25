@@ -41,12 +41,12 @@ const App = () => {
 
 
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
 
                   <h2>Holiday</h2> <br></br>
                   <label>
@@ -92,12 +92,12 @@ const App = () => {
           </div>
 
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
 
 
                   <h2>Name</h2>  <br></br>
@@ -142,12 +142,12 @@ const App = () => {
             </div>
           </div>
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
 
                   <h2>Costume</h2>  <br></br>
                   <label>
@@ -191,12 +191,12 @@ const App = () => {
             </div>
           </div>
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
 
                   <h2>Costume</h2>  <br></br>
                   <label>
@@ -238,12 +238,12 @@ const App = () => {
             </div>
           </div>
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
 
                   <h2>Refreshment</h2>  <br></br>
                   <label>
@@ -285,12 +285,12 @@ const App = () => {
             </div>
           </div>
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
 
                   <h2>Hustle</h2>  <br></br>
 
@@ -335,12 +335,12 @@ const App = () => {
             </div>
           </div>
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
                 <label><h2>Things</h2></label>
                  <div className="drop-down">
                  
@@ -348,7 +348,7 @@ const App = () => {
                   value={things} 
                   onChange={(event) => setThings(event.target.value)}>
                                    
-                    <option disabled selected className="things">
+                    <option disabled className="things">
                   </option>       
                     <option 
                     value="Phone numbers">
@@ -366,12 +366,12 @@ const App = () => {
           </div>
 
           <div className="word-container">
-            <div class="flip-box">
-              <div class="flip-box-inner">
-                <div class="flip-box-front">
+            <div className="flip-box">
+              <div className="flip-box-inner">
+                <div className="flip-box-front">
                   <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
-                <div class="flip-box-back">
+                <div className="flip-box-back">
 
                  
                     <h2>Things</h2>
@@ -385,7 +385,7 @@ const App = () => {
                           value={group}
                           onChange={(event) => setThingsTwo(event.target.value)}
                           checked={thingsTwo === group}
-                        /><span class="control__indicator"></span>
+                        /><span className="control__indicator"></span>
                         {group}
                       </label>
                     ))}
@@ -402,7 +402,7 @@ const App = () => {
                 type="text"
                 value="phrase"
                 className="line-phrase"
-                maxlength="17"
+                maxLength="17"
                 onChange={event => setPhrase(event.target.value)}
                 value={phrase}
               />
@@ -465,7 +465,7 @@ const App = () => {
               className="line"
             />  or treating", and he really doesn´t want
          <select
-              type="text"
+              
               inChange={event => setThings(event.target.value)}
               value={things}
               className="line" />
