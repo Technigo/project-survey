@@ -6,7 +6,7 @@ We had free reign to choose what our survey should be about, but we were asked t
 3. There should be a submit button, which when pressed should hide the form and reveal a summary of the data inputted by the user.
 4. The site should follow accessibility guidelines. 
 
-## What I achieved:
+## What I achieved 🏵️
 1. Used React to create different components and the useState hook to submit data inputted by the user which changes the variable state. 
 2. Connect together using props data from the parent component, form.js, to the children components, all the form components and vice versa.
 3. Used the pageSet useState and a comparison statement to set a welcome component, which when the button is pressed (state is made false) allows the user to enter the form and first component of the form.
