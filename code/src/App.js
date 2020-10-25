@@ -74,7 +74,7 @@ export const App = () => {
       <div className={classes.paper}>
         <Avatar className={classes.avatar}></Avatar>
 
-        {section != 4 && (
+        {section !== 4 && (
           <form className={classes.form} noValidate>
             {section === 1 && <Step1 onNameChange={handleName} />}
             {section === 2 && <Step2 onFavouriteChange={handleFavourite} />}
