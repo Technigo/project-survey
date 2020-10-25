@@ -5,3 +5,6 @@ I have built this app with React using different components. It's an app in whic
 I did face some problems in this project. I tried to implement a range slider from materials UI, which was harder than I expected. I will try to make it work as soon as possible. The slider is there but doesn't collect any data at the moment.
 
 Here is the live link to my project:
+
+https://happy-bardeen-a9c717.netlify.app/
+
