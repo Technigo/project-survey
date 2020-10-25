@@ -1,13 +1,22 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Week 10's project involved us being introduced to React state. The goal was to build a survey form using React which should consist of at least 3 questions - When pressing submit, the user should see a summary of their answers.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## My process
 
-## The problem
+I wanted to build a survey using components that could be easily modified. I started by building a basic form, focusing on useState and making sure the different states were being updated. Then I decided to make the question components as reusable as possible by passing the question and answers in as props. I also wanted to make my questions appear one at a time by creating a question state and a function which updated this state after each question.
+If I had more time to spend on this project I would of added a back button to each question, as well as reset functionality.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Tech
+
++- JSX
++- React
++- useState-hook
++- CSS
++- Form fields
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+I made my site responsive and spent time testing it on different platforms, as well as testing the accessibility using a screen reader. I am please that it scores 100% on Lighthouse for Accessibility, Best Practices and SEO.
+It can be viewed here:
+https://jamiecook-survey.netlify.app/
