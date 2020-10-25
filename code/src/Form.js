@@ -5,26 +5,24 @@ import Question3 from "./Question3";
 import Question4 from "./Question4";
 import Summary from "./Summary";
 
-// import SubmitButton from "./SubmitButton";
-// import TrainingExp from "./TrainingExp";
-
 const Form = () => {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
   const [training, setTraining] = useState([]);
-
-  const [experience, setExperience] = useState("");
-
+  const [experience, setExperience] = useState();
   const [question, setQuestion] = useState("Question1");
 
-  const questionList = ["Question1", "Question3", "Question4", "Summary"];
+  const questionList = [
+    "Question1",
+    "Question2",
+    "Question3",
+    "Question4",
+    "Summary",
+  ];
 
-  const handleExperienceChange = (event) => {
-    setExperience(event.target.value);
+  const handleSliderChange = (newValue) => {
+    setExperience(newValue);
   };
-  //   const handleSliderChange = event => {
-  //       setExperience(event.target.value === "" ? "" : )
-  //   }
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -34,14 +32,10 @@ const Form = () => {
     setCity(event.target.value);
   };
 
-  //   const handleTrainingChange = (trainingValue) => {
-  //     training.includes(trainingValue)
-  //       ? setTraining(training.filter((item) => item !== trainingValue))
-  //       : setTraining([...training, trainingValue]);
-  //   };
-
-  const handleTrainingChange = (event) => {
-    setTraining(event.target.value);
+  const handleTrainingChange = (trainingValue) => {
+    training.includes(trainingValue)
+      ? setTraining(training.filter((item) => item !== trainingValue))
+      : setTraining([...training, trainingValue]);
   };
 
   const handleNextQuestion = (event) => {
@@ -63,10 +57,11 @@ const Form = () => {
           )}
 
           {question === "Question2" && (
-            <div>
+            <div tabIndex="0">
+              <h3>At what level are you?</h3>
               <Question2
                 experience={experience}
-                onExperienceChange={handleExperienceChange}
+                onChangeCommitted={handleSliderChange}
               />
             </div>
           )}
@@ -92,7 +87,12 @@ const Form = () => {
         </form>
       ) : (
         <div tabIndex="0">
-          <Summary name={name} training={training} city={city} />
+          <Summary
+            name={name}
+            training={training}
+            city={city}
+            value={experience}
+          />
         </div>
       )}
     </>
