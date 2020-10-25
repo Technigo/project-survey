@@ -12,4 +12,4 @@ I got problems with making the "result page". I googled and asked for help from 
 
 ## View it live
 
-
+https://yourrealjobtitle.netlify.app/
