@@ -8,8 +8,7 @@ export const Age = ({age, setAge}) => {
             <div className="radio-button-row" role="radiogroup" aria-label="18-30, 30-40, 40-50 or 50+" tabindex="0"> 
                 <label aria-label="Option 18-30" for="AgeRange18-30" className="radio-button-container">
                     <input 
-                        type="radio" 
-                        role="radio" 
+                        type="radio"  
                         name="AgeRange18-30" 
                         id="AgeRange18-30" 
                         value="18-30" 
@@ -21,8 +20,7 @@ export const Age = ({age, setAge}) => {
                 </label>               
 
                 <label for="AgeRange30-40" className="radio-button-container" aria-label="Option 30-40">
-                        <input
-                            role="radio" 
+                        <input 
                             id="AgeRange30-40"
                             name="AgeRange30-40"
                             type="radio"
@@ -35,7 +33,6 @@ export const Age = ({age, setAge}) => {
                 </label>
                 <label for="AgeRange40-50" className="radio-button-container" aria-label="Option 40-50">
                     <input
-                            role="radio"
                             id="AgeRange40-50"
                             name="AgeRange40-50" 
                             type="radio"
@@ -49,7 +46,6 @@ export const Age = ({age, setAge}) => {
 
                 <label for="AgeRange50+" className="radio-button-container"  aria-label="Option 50+">                    
                         <input
-                            role="radio"
                             id="AgeRange50+"
                             name="AgeRange50+"
                             type="radio"

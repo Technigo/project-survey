@@ -17,7 +17,7 @@ export const App = () => {
           <img src={Logo} alt="bottle logo" className="logo-image" />
         </div>
 
-        <div class="hamburger-menu">
+        <div className="hamburger-menu">
           <div></div>
           <div></div>
           <div></div>
@@ -25,11 +25,11 @@ export const App = () => {
 
         <div className="nav-container">
           <nav>
-            <a href="#">HOME</a>
-            <a href="#">PRODUCTS</a>
-            <a href="#">OUR STORY</a>
-            <a href="#">CONTACT</a>
-            <a href="#">CART</a>
+            <a href="{welcome}">HOME</a>
+            <a href="{welcome}">PRODUCTS</a>
+            <a href="{welcome}">OUR STORY</a>
+            <a href="{welcome}">CONTACT</a>
+            <a href="{welcome}">CART</a>
           </nav>
         </div>        
       </header>
