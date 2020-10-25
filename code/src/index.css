@@ -94,7 +94,7 @@ input[type=text], textarea {
   font-weight: 900;
 }
 
-.button-active {
+.button-pressed{
   background-color: #DF522D;
   color: #fff;
   border: 2px solid #DF522D;
