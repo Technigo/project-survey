@@ -5,9 +5,14 @@ const Button = ({
   buttonText = "Click",
   handleClick,
   buttonType = "button",
+  singleButton,
 }) => {
   return (
-    <button type={buttonType} onClick={handleClick}>
+    <button
+      className={singleButton ? "single-btn btn" : "btn"}
+      type={buttonType}
+      onClick={handleClick}
+    >
       {buttonText}
     </button>
   );

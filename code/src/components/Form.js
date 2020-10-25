@@ -106,6 +106,7 @@ const Form = () => {
               <Button
                 buttonText={currentPage === 0 ? "Register" : "Next"}
                 handleClick={handleNextPage}
+                singleButton={currentPage === 0 ? true : false}
               />
             )}
 
@@ -125,7 +126,11 @@ const Form = () => {
         <div className="summery-container">
           <SummeryPage firstName={firstName} />
           <div className="button-container">
-            <Button buttonText={"Return"} handleClick={handleReturn} />
+            <Button
+              buttonText={"Return"}
+              handleClick={handleReturn}
+              singleButton
+            />
           </div>
         </div>
       </div>
