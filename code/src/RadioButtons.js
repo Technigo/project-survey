@@ -6,7 +6,7 @@ const RadioButtons = ({ rating, onRatingChange }) => {
   return (
     <section className="radio-buttons">
       <h2 tabIndex="0" className="label">How are you feeling after this week?</h2>
-      <div tabIndex="0" className="radio">
+      <div className="radio">
         {ratings.map(a => (
           <label className="radio-label" key={a}>
             <input
@@ -15,7 +15,6 @@ const RadioButtons = ({ rating, onRatingChange }) => {
               value={a}
               checked={rating === a}
               onChange={onRatingChange}
-              required
             ></input>
             <span className="radio-checkmark"></span>
             {a}
