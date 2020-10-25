@@ -8,16 +8,6 @@ import './app.css'
 export const App = () => {
   const [answer, setAnswer] = useState("")
 
-
-  // const [showSummary, setShowSummary] = useState(false)
-  // const { answer } = props
-  // const { hour } = props
-  // const { activity } = props
-
-  // const handleSubmit = event => {
-  //   event.preventDefault()
-  //   setShowSummary(true)
-  // }
   return (
     <section className='main'>
       <div className="intro" id="intro">

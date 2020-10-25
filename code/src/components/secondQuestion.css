@@ -21,3 +21,9 @@ input[type="text" i] {
   border-bottom: 2px solid rgba(0, 0, 0, 0.055);
   text-align: left;
 }
+
+@media screen and (min-width: 360px) and (max-width: 667px) {
+  input[type="text" i] {
+    width: 300px;
+  }
+}

@@ -17,16 +17,13 @@ export const ThirdQuestion = () => {
                             type="radio"
                             value={group}
                             className="radio-button"
-                            required
                             onChange={event => setHour(event.target.value)}
                             checked={hour === group}
-
+                            required
                         />
                         {group}
                     </label>
                 ))}
-
-                {/* {sleep === "0-5 hours" && <p>Remember that proper sleep rejuvenates the soul.</p>} */}
             </div>
             <button><a href="#activity">continue</a></button>
         </section>

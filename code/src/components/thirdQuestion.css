@@ -52,10 +52,6 @@ select {
   background-color: #baa3a9;
   color: #fff;
 }
-p {
-  margin-right: 30px;
-  margin-left: 10px;
-}
 @media screen and (min-width: 360px) and (max-width: 667px) {
   .radio-buttons {
     display: flex;

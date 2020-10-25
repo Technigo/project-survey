@@ -7,15 +7,11 @@ export const FourthQuestion = ({ answer }) => {
     const [hour] = useState("")
     const [showSummary, setShowSummary] = useState("")
 
-
     const handleSubmit = event => {
         event.preventDefault()
         setShowSummary(true)
     }
-
-
     return (
-
         <section className="fourth-question" id="activity">
             {!showSummary ? (
                 <form onSubmit={handleSubmit}>
@@ -24,8 +20,7 @@ export const FourthQuestion = ({ answer }) => {
                     <select
                         onChange={event => setActivity(event.target.value)}
                         value={activity}
-                        required
-                    >
+                        required>
                         <option value="" disabled>♡</option>
                         <option value="try out a nice and relaxing meditatation">Meditate</option>
                         <option value="drink more water, have a glass right now">Drink more water</option>
@@ -41,6 +36,6 @@ export const FourthQuestion = ({ answer }) => {
                     <OutputSummary answer={answer} hour={hour} activity={activity} />
                 )
             }
-        </section>
+        </section >
     )
 }
