@@ -11,7 +11,7 @@ const Question1 = ({section, setSection, activityLevel, setActivityLevel}) => {
         <div className='first-question-section'>
           <h2 className='first-question-heading' tabIndex='0'> What type of activity level would match your lifestyle ?</h2>
             <div className='first-question-radio-container'>
-              <label htmlFor='first-question' tabIndex='0'></label>
+              <label htmlFor='first-question' tabIndex='0'>Pick activity level: </label>
               {dogActivityLevel.map(activity => (
                 <label 
                   tabIndex='0'
