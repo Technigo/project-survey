@@ -1,19 +1,7 @@
 # Technigo React Starter App
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+I have built this app with React using different components. It's an app in which you can register to start training martial arts. I combined my love for programming with my love for martial arts. I have used Javascript functions to make the functionality work. It's a multistep form so after answering the first question the user will be directed to the next one and so on.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+I did face some problems in this project. I tried to implement a range slider from materials UI, which was harder than I expected. I will try to make it work as soon as possible. The slider is there but doesn't collect any data at the moment.
 
-## Usage
-
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+Here is the live link to my project:
