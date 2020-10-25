@@ -6,7 +6,7 @@ const InputText = ({ feedback, onFeedbackChange, rating }) => {
       <label htmlFor="feedback">
         <h2>Would you mind telling us why you answered '{rating}'   ?</h2>
       </label>
-      <textarea className="text-input" value={feedback} onChange={onFeedbackChange} id="feedback" rows="6" />
+      <textarea className="text-input" value={feedback} onChange={onFeedbackChange} id="feedback" rows="3" />
     </section>
   )
 }
