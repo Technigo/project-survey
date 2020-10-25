@@ -1,4 +1,17 @@
 .radio-container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
+  width: 50%;
+  font-size: 18px;
+}
+
+.radio-container label {
+  margin-top: 5px;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

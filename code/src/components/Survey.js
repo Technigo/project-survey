@@ -157,10 +157,9 @@ const handleSubmit = (event) => {
                   askQuestion="How would you rate your last live music experience?"
                 />
                 <Button 
-                button="button"
-                disabled={!Rating}
-                click={nextQuestion}
-                text="Next"
+                button="submit"
+                disabled={!rating}
+                text="Submit"
               />
             </section>
           )}
@@ -172,7 +171,6 @@ const handleSubmit = (event) => {
         location={location}
         ageGroup={ageGroup}
         rating={rating}
-        musicGenre={musicGenre}
       />
 
       )} 

@@ -1,0 +1,32 @@
+.input-text {
+  background-color: rgba(202, 201, 201, 0.8);
+  font-family: Helvetica, sans-serif;
+  border: none;
+  font-size: 18px;
+  width: 250px;
+  height: 30px;
+}
+
+::placeholder {
+  font-size: 16px;
+}
+
+.input-rating {
+  background-color: rgba(202, 201, 201, 0.8);
+  font-family: Helvetica, sans-serif;
+  border: none;
+  font-size: 18px;
+  width: 50px;
+  height: 30px;
+  text-align: center;
+}
+
+.input-select {
+  background-color: rgba(202, 201, 201, 0.8);
+  font-family: Helvetica, sans-serif;
+  border: none;
+  font-size: 18px;
+  width: 250px;
+  height: 30px;
+  text-align: center;
+}
