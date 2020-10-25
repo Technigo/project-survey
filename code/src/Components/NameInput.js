@@ -1,14 +1,16 @@
 import React from 'react';
 
-const NameInput = ({ userName, userSetName }) => {
+const NameInput = ({ name, setName }) => {
 
     const handleNameChange = event => {
-        userSetName(event.target.value);
+        setName(event.target.value);
     }
+
     return (
         <div>
-            <label htmlFor="userName">Name:</label>
-            <input value={userName} onChange={handleNameChange} id="userName" type="text" />
+            <label htmlFor="name">Name:  </label>
+            <input value={name} className="text-input" onChange={handleNameChange} id="name" type="text" />
+            
         </div>
     )
 }

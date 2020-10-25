@@ -1,30 +1,29 @@
 import React from 'react'
 
-const DessertInput = ({ userDessert, setUserDessert }) => {
+const DessertInput = ({ dessert, setDessert }) => {
 
      const handleDessertChange = event => {
-        setUserDessert(event.target.value);
+        setDessert(event.target.value);
     }
-    console.log(userDessert);
+    console.log(dessert);
 
     const dessertArray = ['Ice Cream', 'Chocolate Cake', 'Tiramisu', 'Strawberry Cake']
 
     return (
         <div className="question-wrapper">
-            {dessertArray.map((dessert) => (
-                <label htmlFor="dessert" key={dessert}>
+            {dessertArray.map((desserts) => (
+                <label htmlFor="dessert" key={desserts} className="radio-label">
                     <input
-                        type="radio"
-                        id="dessertChoice"
-                        value={dessert}
-                        name="dessert-input"
                         className="radio-buttons"
+                        type="radio"
+                        id={desserts}
+                        value={desserts}
+                        name="dessert-input"
                         onChange={handleDessertChange}
-                        className="radio-button"
-                        checked={userDessert === dessert}
+                        checked={dessert === desserts}
                         required
                     />
-                    {dessert}
+                    {desserts}
                    </label>       
             ))}
 

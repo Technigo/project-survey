@@ -1,11 +1,11 @@
 import React from 'react';
 
-const DrinksInput = ({ userDrinks, userSetDrinks }) => {
+const DrinksInput = ({ drinks, setDrinks }) => {
 
     const handleDrinksChange = drinksValue => {
-        userDrinks.includes(drinksValue)
-            ? userSetDrinks(userDrinks.filter(item => item !== drinksValue))
-            : userSetDrinks([...userDrinks, drinksValue])
+        drinks.includes(drinksValue)
+            ? setDrinks(drinks.filter(item => item !== drinksValue))
+            : setDrinks([...drinks, drinksValue])
     }
 
     // const drinksArray = ['White wine', 'Red wine', 'Water', 'Coke', 'Fanta']
@@ -18,35 +18,35 @@ const DrinksInput = ({ userDrinks, userSetDrinks }) => {
             <input
                 id="water"
                 type="checkbox"
-                checked={userDrinks.includes('water')}
+                checked={drinks.includes('water')}
                 onChange={() => handleDrinksChange('water')}
             />
             <label htmlFor="red wine">Red wine</label>
             <input
                 id="red wine"
                 type="checkbox"
-                checked={userDrinks.includes('red wine')}
+                checked={drinks.includes('red wine')}
                 onChange={() => handleDrinksChange('red wine')}
             />
             <label htmlFor="white wine">White wine</label>
             <input
                 id="white wine"
                 type="checkbox"
-                checked={userDrinks.includes('white wine')}
+                checked={drinks.includes('white wine')}
                 onChange={() => handleDrinksChange('white wine')}
             />
             <label htmlFor="coke">Coke</label>
             <input
                 id="coke"
                 type="checkbox"
-                checked={userDrinks.includes('coke')}
+                checked={drinks.includes('coke')}
                 onChange={() => handleDrinksChange('coke')}
             />
             <label htmlFor="fanta">Fanta</label>
             <input
                 id="fanta"
                 type="checkbox"
-                checked={userDrinks.includes('fanta')}
+                checked={drinks.includes('fanta')}
                 onChange={() => handleDrinksChange('fanta')}
             />
         </div>

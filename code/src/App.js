@@ -1,7 +1,7 @@
 import React from 'react'
 
-import "./style.css"
-import "./form.css"
+import 'Styles/style.css'
+import 'Styles/style.css'
 import Form from './Form'
 
 export const App = () => {

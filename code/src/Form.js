@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 
-import "./style.css"
-import "./form.css"
+import 'Styles/style.css'
+import 'Styles/form.css'
+import RestaurantPic from 'assets/restaurant.jpg'
+import MealPic from 'assets/meal.jpg'
+
 
 import NameInput from 'Components/NameInput';
 import MaincourseInput from 'Components/MaincourseInput';
 import DrinksInput from 'Components/DrinksInput';
 import DessertInput from 'Components/DessertInput';
+import Buttons from 'Components/Buttons';
 import Summary from './Summary';
 
 const Form = () => {
@@ -19,95 +23,137 @@ const Form = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
-
   };
 
   return (
 
-    <form onSubmit={handleSubmit}>
+    <section className="container-wrapper">
+      <form className="servey-form" onSubmit={handleSubmit}>
 
-     
-      {section === 'startMessage' && (
-        <>
-         <h1>Welcome to Restaurant Starmountain</h1>
-          <h2>Please start your order</h2>
-          <button
+        {section === 'startMessage' && (
+          <div className="message-container">
+            <img className="message-img" src={RestaurantPic} alt="restaurant" />
+            <h1 className="welcome">Welcome to Restaurant Starmountain</h1>
+            <h2>Please start your order</h2>
+            <div className="button-container">
+              <Buttons
+                name="Order"
+                setSection={setSection}
+                value='firstQuestion' />
+            </div>
+            {/* <button
             type="button"
+            className="btn"
             onClick={event => { setSection(event.target.value) }}
             value='firstQuestion'>
-            Order </button>
-        </>
-      )}
-      {section === 'firstQuestion' && (
-        <>
-          <NameInput userName={name} userSetName={setName} />
-          <button
+            Order </button> */}
+          </div>
+        )}
+        {section === 'firstQuestion' && (
+          <div className="message-container">
+            <h2>What's your name?</h2>
+            <NameInput name={name} setName={setName} section={section} setSection={setSection} />
+            <div className="button-container">
+              <Buttons
+                name="Back"
+                setSection={setSection}
+                value='startMessage' />
+              <Buttons
+                name="Next"
+                setSection={setSection}
+                value='secondQuestion' />
+            </div>
+            {/* <button
             type="button"
+            className="btn"
             onClick={event => { setSection(event.target.value) }}
             value='secondQuestion'>
-            Next </button>
-        </>
-      )}
-      {section === 'secondQuestion' && (
-        <>
-          <MaincourseInput userMaincourse={maincourse} userSetMaincourse={setMaincourse} />
-          <button
-            type="button"
-            onClick={event => { setSection(event.target.value) }}
-            value='thirdQuestion'>
-            Next </button>
-        </>
-      )}
-      {section === 'thirdQuestion' && (
-        <>
-          <DrinksInput userDrinks={drinks} userSetDrinks={setDrinks} />
-          <button
-            type="button"
-            onClick={event => { setSection(event.target.value) }}
-            value='fourthQuestion'>
-            Next </button>
-        </>
-      )}
-      {section === 'fourthQuestion' && (
-        <>
-          <DessertInput userDessert={dessert} setUserDessert={setDessert} />
-          <button
-            type="button"
-            onClick={event => { setSection(event.target.value) }}
-            value='summary'>
-            Next </button>
-        </>
-      )}
-      {section === 'summary' && (
-        <>
-          <Summary
-            userName={name}
-            userMaincourse={maincourse}
-            userDrinks={drinks}
-            userDessert={dessert}
-          />
-          
-        </>
-      )}
-    </form>
+            Next </button> */}
+          </div>
+        )}
+        {section === 'secondQuestion' && (
+          <div className="message-container">
+            <h2>Choose your meal</h2>
+            <MaincourseInput maincourse={maincourse} setMaincourse={setMaincourse} />
+            <div className="button-container">
+              <Buttons
+                name="Back"
+                setSection={setSection}
+                value='firstQuestion' />
+              <Buttons
+                name="Next"
+                setSection={setSection}
+                value='thirdQuestion' />
+            </div>
+            {/* <button
+              type="button"
+              className="btn"
+              onClick={event => { setSection(event.target.value) }}
+              value='thirdQuestion'>
+              Next </button> */}
+          </div>
+        )}
+        {section === 'thirdQuestion' && (
+          <div className="message-container">
+            <h2>Choose your drinks:</h2>
+            <DrinksInput drinks={drinks} setDrinks={setDrinks} />
+            <div className="button-container">
+              <Buttons
+                name="Back"
+                setSection={setSection}
+                value='secondQuestion' />
+              <Buttons
+                name="Next"
+                setSection={setSection}
+                value='fourthQuestion' />
+            </div>
+            {/* <button
+              type="button"
+              className="btn"
+              onClick={event => { setSection(event.target.value) }}
+              value='fourthQuestion'>
+              Next </button> */}
+          </div>
+        )}
+
+        {section === 'fourthQuestion' && (
+          <div className="message-container">
+            <h2>Choose your dessert:</h2>
+            <DessertInput dessert={dessert} setDessert={setDessert} />
+            <div className="button-container">
+              <Buttons
+                name="Back"
+                setSection={setSection}
+                value='thirdQuestion' />
+              <Buttons
+                name="Next"
+                setSection={setSection}
+                value='summary' />
+            </div>
+            {/* <button
+              type="button"
+              className="btn"
+              onClick={event => { setSection(event.target.value) }}
+              value='summary'>
+              Next </button> */}
+          </div>
+        )}
+        {section === 'summary' && (
+          <div className="summary-container">
+            <img className="meal-img" src={MealPic} alt="meal" />
+            <Summary
+              userName={name}
+              userMaincourse={maincourse}
+              userDrinks={drinks}
+              userDessert={dessert}
+            />
+
+          </div>
+        )}
+      </form>
+    </section>
   )
 }
 
 export default Form;
 
-{/* //     <form onSubmit={handleSubmit}>
-    //         <NameInput userName={name} userSetName={setName} />
-    //         <MaincourseInput userMaincourse={maincourse} userSetMaincourse = {setMaincourse} />
-    //         <DrinksInput userDrinks={drinks} userSetDrinks={setDrinks} /> 
-    //         <DessertInput userDessert={dessert} setUserDessert={setDessert} />
-    //        <button className="btn" type="submit"  */}
-    //         disabled={name === '' || maincourse === ''|| drinks === '' || dessert === ''}>
-    //             Submit</button>     
-    //     </form>
-
-    //     <Summary
-    //     userName={name}
-    //     userMaincourse={maincourse}
-    //     userDrinks={drinks}
-    //     userDessert={dessert}
-    // />

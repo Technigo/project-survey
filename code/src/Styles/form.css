@@ -1,0 +1,94 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather+Sans&family=Roboto:ital,wght@0,700;1,400;1,500&display=swap');
+
+
+.servey-form {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    height: 300px;
+    width: 300px;
+    justify-content: space-around;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;  
+}
+
+.btn {
+    width: 65px;
+    border: none;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 15px;
+    border-radius: 5px;
+    color: #fff;
+    background: #4a646c;
+}
+
+.button-container{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    width: 180px;
+}
+
+.summary p {
+   font-style: italic;
+}
+
+.message-container, .summary-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.radio-buttons{
+    width: 80px;
+    border: 3px solid grey;
+    height: 15px;
+   width: 25px;
+   top: 5px;
+   right: 10px;
+}
+
+.radio-label {
+    clear: none; 
+    display: block;
+    margin: 5px;
+    
+}
+
+.welcome{
+    font-family: 'Lobster', cursive;
+}
+
+.text-input {
+    margin-left: 10px;
+    height: 20px;
+}
+
+.drop-down{
+    margin: 30px;
+    width: 250px;
+    padding: 5px 35px 5px 5px;
+    font-size: 15px;
+    border: 1px solid #778899;
+    height: 32px;
+    background: #d3d3d3;
+    font-family: 'Merriweather Sans', sans-serif;
+    
+}
+
+.summary  {
+    text-align: center;
+}
+
+.summary h1{
+    font-style: italic;
+}
+.menu-img{
+    width: 300px;
+}
+

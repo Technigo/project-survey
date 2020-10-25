@@ -1,13 +1,13 @@
 import React from 'react';
 
-const MaincourseInput = ({ userMaincourse, userSetMaincourse }) => {
+const MaincourseInput = ({ maincourse, setMaincourse }) => {
     
      const handleMaincourseChange = event => {
-        userSetMaincourse(event.target.value);
+        setMaincourse(event.target.value);
     }
     
     return (
-        <select value={userMaincourse} onChange={handleMaincourseChange}>
+        <select value={maincourse} onChange={handleMaincourseChange} className="drop-down">
         <option value="">Choose your Main course...</option>
         <option value="Salmon">Salmon</option>
         <option value="Vegetarian">Vegetarian</option>
