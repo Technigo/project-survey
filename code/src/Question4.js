@@ -7,7 +7,9 @@ export const Question4 = ({ userAnswer4, onAnswerChange }) => {
 				<legend>
 					<h2>Question number 4</h2>
 					<p>
-						How many seasons are available for the series American Horror story?
+						The next season of the antology series American Horror Story is
+						delayed into 2021 due to the Covid-situation. How many seasons are
+						available right now?
 					</p>
 				</legend>
 

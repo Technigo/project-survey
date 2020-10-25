@@ -56,21 +56,20 @@ export const QuizCard = () => {
 		<>
 			<form onSubmit={onSubmit}>
 				{!hideQuiz && (
-					<div className="show">
+					<div>
 						<Question1 userAnswer1={answer1} onAnswerChange={handleAnswer1} />
-
 						<Question2 userAnswer2={answer2} onAnswerChange={handleAnswer2} />
-
 						<Question3 userAnswer3={answer3} onAnswerChange={handleAnswer3} />
-
 						<Question4 userAnswer4={answer4} onAnswerChange={handleAnswer4} />
-
 						<Question5 userAnswer5={answer5} onAnswerChange={handleAnswer5} />
 					</div>
 				)}
-				<button type="submit" onClick={(event) => onSubmit()}>
-					Submit answers
-				</button>
+
+				<div class="quiz-button-box">
+					<button type="submit" onClick={(event) => onSubmit()}>
+						Submit answers
+					</button>
+				</div>
 			</form>
 		</>
 	);

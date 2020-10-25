@@ -32,6 +32,27 @@ h2 {
 	box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
 }
 
+.quiz-button-box {
+	display: flex;
+	justify-content: center;
+	margin: 25px 50px;
+	padding: 30px 20px;
+	background-color: #cf7500;
+	border-radius: 8px;
+	-webkit-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+	-moz-box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+	box-shadow: 10px 10px 21px 13px rgba(0, 0, 0, 0.75);
+}
+
+.quiz-button-box button {
+	background-color: #f0a500;
+	width: 150px;
+	height: 50px;
+	color: #f4f4f4;
+	font-size: 15px;
+	border-radius: 12px;
+}
+
 .checkbox-container {
 	display: flex;
 	flex-direction: column;
@@ -92,13 +113,13 @@ code {
 }
 
 @media (min-width: 600px) {
-	.quiz-box {
+	.quiz-box .quiz-button-box {
 		margin: 25px 120px;
 	}
 }
 
 @media (min-width: 768px) {
-	.quiz-box {
+	.quiz-box .quiz-button-box {
 		margin: 25px 250px;
 		max-width: 500px;
 	}

@@ -1,13 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a quiz, to practice forms and state in React.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had this idea that I wanted this survey-thing to be more like a quiz, so I started planning the questions and the answers and put each question in a component.
+Then I made a summary to show the users answers, the correct answers, and the score-count. In the end I learned a lot about React, and I solidified much of the javascript that we have learnt over the passed weeks.
+I spent a lot of time figuring out how to use regex validation for the textinput.
+If I had more time I would push myself harder to reach black level, and I would have each question in a page of their own and when answered it would go to next question.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://gracious-nobel-2f0cdd.netlify.app/

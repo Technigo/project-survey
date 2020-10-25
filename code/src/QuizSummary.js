@@ -16,7 +16,10 @@ export const QuizSummary = ({
 	};
 
 	const answerScore1 = () => {
-		if (userAnswer1 === correctAnswers.q1) {
+		if (
+			userAnswer1 === correctAnswers.q1 ||
+			userAnswer1.match(/stranger things/i)
+		) {
 			return 1;
 		} else {
 			return null;
@@ -77,7 +80,8 @@ export const QuizSummary = ({
 					<li>
 						<p>
 							Question 1: {userAnswer1}{' '}
-							{userAnswer1 === correctAnswers.q1 ? (
+							{userAnswer1 === correctAnswers.q1 ||
+							userAnswer1.match(/stranger things/i) ? (
 								<span className="correct">Correct, you get 1 point!</span>
 							) : (
 								<span className="incorrect">
@@ -149,7 +153,7 @@ export const QuizSummary = ({
 							)}
 						</p>
 					</li>
-					<li>Total score: {totalScore()} points!</li>
+					<li>Total score: {totalScore()} of 5 possible points!</li>
 				</ul>
 			</h3>
 		</div>
