@@ -30,5 +30,5 @@ We had free reign to choose what our survey should be about, but we were asked t
 6. Very little HTML
 7. Googaling, Technigo videos and lectures
 
-## View it live 💻:
+## View it live 💻: 
 
