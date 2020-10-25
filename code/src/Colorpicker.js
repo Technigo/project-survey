@@ -1,37 +1,32 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 export const Colorpicker = (props) => {
- const [color,setColor] = useState ("#e66465");
+  const [color, setColor] = useState('#e66465');
 
-  const handleChange = (event) =>{
+  const handleChange = (event) => {
     setColor(event.target.value);
   }
 
-  const clickNextButton = () =>{
+  const clickNextButton = () => {
     props.onChange(color);
   }
 
-  return(
+  return (
     <div className="question-container">
-      <label className="question-label">{props.text}  </label>
-      <input 
-        type="color" 
+      <label htmlFor="color" className="question-label">{props.text}  </label>
+      <input
+        type="color"
+        id="color"
         name="favcolor"
         value={color}
-        onChange={handleChange}
-        >
-        </input>
-    
-        <button  className="next-button"
-            type="button"
-            onClick={(event) => clickNextButton()}
-          >
+        onChange={handleChange} />
+
+      <button
+        className="next-button"
+        type="button"
+        onClick={() => clickNextButton()}>
             &#x3e;&#x3e;
-          </button>
+      </button>
     </div>
-
-    )
-
-
-
+  )
 }

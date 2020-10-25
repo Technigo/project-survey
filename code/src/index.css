@@ -39,6 +39,7 @@ body {
 	font-family: "Rubik", sans-serif;
 	margin-bottom: 50px;
 }
+
 .question-container {
 	display: flex;
 	flex-direction: column;
@@ -61,17 +62,21 @@ body {
 	border-radius: 0;
 	border-bottom: 1px solid #a9a9a9;
 }
+
 progress::-webkit-progress-bar {
 	background-color: transparent;
 }
+
 progress::-webkit-progress-value {
 	background-color: #fff;
 	opacity: 0.3;
 }
+
 output {
 	font-size: 12px;
 	margin-left: 5px;
 }
+
 .question-label {
 	font-size: 28px;
 	margin-bottom: 20px;
@@ -92,10 +97,12 @@ input[type="text"] {
 	font-family: "Karla", sans-serif;
 }
 
-.invalid-input {
+.input-invalid {
 	font-size: 14px;
-	color: orange;
+	color: #ffa500;
+	margin-top: 5px;
 }
+
 .next-button,
 .submit-button {
 	height: 40px;
@@ -104,7 +111,6 @@ input[type="text"] {
 	background: transparent;
 	border: 1px solid white;
 	color: #fff;
-	/* border-radius: 20px; */
 	font-size: 16px;
 	margin-top: 20px;
 	align-self: center;
@@ -121,6 +127,7 @@ input[type="text"] {
 .submit-button:hover {
 	background-color: #006362;
 }
+
 form {
 	background-color: transparent;
 	display: flex;
@@ -167,9 +174,11 @@ input[type="color"] {
 	align-self: center;
 	cursor: pointer;
 }
+
 input[type="color"]::-webkit-color-swatch-wrapper {
 	padding: 0;
 }
+
 input[type="color"]::-webkit-color-swatch {
 	border: none;
 }
@@ -177,9 +186,18 @@ input[type="color"]::-webkit-color-swatch {
 input[type="radio"] {
 	margin-right: 10px;
 }
+
 .summary-text,
 p {
 	font-size: 20px;
+}
+
+.chosen-color {
+	position: relative;
+	width: 100px;
+	height: 90px;
+	margin-top: 10px;
+	color: white;
 }
 
 @keyframes bounce {
@@ -210,12 +228,4 @@ p {
 		-webkit-transform: translate3d(0, -4px, 0);
 		transform: translate3d(0, -4px, 0);
 	}
-}
-
-.chosen-color {
-	position: relative;
-	width: 100px;
-	height: 90px;
-	margin-top: 10px;
-	color: white;
 }
