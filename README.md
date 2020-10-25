@@ -1,13 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks assignment was to build a survey using React.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+First I had to decide what the survey was going to be about and later sketch up how the component structure looks like. I tried to make the survey easy to adjust depending on, for example, want different describing words or captions by using the map method. 
+
+If I had more time I would probably make it so each question is showed one at a time and progress by clicking the "Next" button.
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
