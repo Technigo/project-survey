@@ -1,0 +1,19 @@
+form {
+    height: 300px;
+    background-color: lightblue;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+button {
+    display: block;
+    border: none;
+    background: black;
+    color: white;
+    padding: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
