@@ -52,7 +52,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
 
@@ -103,7 +103,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
 
@@ -153,7 +153,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
 
@@ -202,7 +202,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
 
@@ -249,7 +249,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
 
@@ -296,7 +296,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
 
@@ -346,7 +346,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
                
@@ -376,7 +376,7 @@ const App = () => {
             <div className="flip-box">
               <div className="flip-box-inner">
                 <div className="flip-box-front">
-                  <img src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
+                  <img alt="flipBoxImage" src="https://cdn.pixabay.com/photo/2020/09/28/12/45/pumpkin-5609713_1280.jpg" />
                 </div>
                 <div className="flip-box-back">
 
@@ -407,7 +407,7 @@ const App = () => {
             <label>What do you say when scarying kids<br></br>
               <input
                 type="text"
-                value="phrase"
+              
                 className="line-phrase"
                 maxLength="17"
                 onChange={event => setPhrase(event.target.value)}
