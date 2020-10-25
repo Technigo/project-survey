@@ -3,6 +3,7 @@ import React, {useState} from 'react';
 import {TextInput} from './TextInput';
 import {RadioInput} from './RadioInput';
 import SelectInput from './SelectInput';
+import ProgressBar from './ProgressBar';
 
 
 
@@ -25,18 +26,22 @@ export const Survey = () => {
 
     const showForm = () => {
         setIsSubmit(false);
+        setSection('question1')
     }
 
-    const showNextQuestion = (next) => {
+    const showNextQuestion = (next,value) => {
+        if (value !== '') {
         setSection(next)
+        }
     } 
 
 
     if (isSubmit === false){
         return (
             <>
+            
                 <form className="main-form" onSubmit={handleSubmit} id="main-form">
-                    
+                    <ProgressBar currentSection={section}/>
                     {section === 'question1' && (
                     <>
                     <h2>Generel info</h2>
@@ -45,7 +50,8 @@ export const Survey = () => {
                     question="What is your name?" 
                     inputAnswer={name} 
                     inputSet={setName} 
-                    showNext={() => showNextQuestion('question2')}/>
+                    showNext={() => showNextQuestion('question2', name)}
+                    textName="userName"/>
                     </div>
                     </>
                     
@@ -59,7 +65,7 @@ export const Survey = () => {
                     question="Are you concerned about the climate change?" 
                     radioValue={footprint} 
                     setRadioValue={setFootprint} 
-                    showNext={() => showNextQuestion('question3')}/>
+                    showNext={() => showNextQuestion('question3', footprint)}/>
                     </div>
                     </>
                     )}
@@ -72,7 +78,7 @@ export const Survey = () => {
                     question="Where do you live?" 
                     inputAnswer={city} 
                     inputSet={setCity} 
-                    showNext={() => showNextQuestion('question4')} />
+                    showNext={() => showNextQuestion('question4', city)} />
                     </div>
                     </>
                     )} 
@@ -85,7 +91,7 @@ export const Survey = () => {
                     question="Do you live in a house or apartment?" 
                     selectValue={housing} 
                     setSelectValue={setHousing} 
-                    showNext={() => showNextQuestion('question5')} />
+                    showNext={() => showNextQuestion('question5', housing)} />
                     </div>
                     </>
                     )}
@@ -96,13 +102,13 @@ export const Survey = () => {
                     <RadioInput 
                     question="I always turn off the light when leaving a room." 
                     radioValue={lights} 
-                    setRadioValue={setLights}showNext={() => showNextQuestion('question6')} />
+                    setRadioValue={setLights}showNext={() => showNextQuestion('question6', lights)} />
                     </div>
                     </>
                     )}
                 {section === 'question6' && (
-                     <div className="question-section">
-
+                    <div className="question-section">
+                    <h3>Ready to submit?</h3>
                     <input type="submit" value="Submit" className="button"/> 
                     </div>
                     )}

@@ -4,7 +4,7 @@ const SelectInput = ({question, selectValue, setSelectValue, showNext}) => {
 
     return( 
     <label htmlFor="select-city"><h3>{question}</h3>
-        <select name="Select" onChange={event => setSelectValue(event.target.value)} id="select-city" required>
+        <select onChange={event => setSelectValue(event.target.value)} id="select-city" name="select-city" required>
             <option value="">Choose one...</option>
             <option value="House">House</option>
             <option value="Apartment">Apartment</option>

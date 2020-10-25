@@ -19,6 +19,9 @@ export const RadioInput = ({question, radioValue, setRadioValue, showNext}) => {
                     value={group}
                     onChange={event => setRadioValue(event.target.value)}
                     checked={radioValue === group}
+                    required
+                    name={group}
+                    id={group}
                 />
                 
                 </label>
