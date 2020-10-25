@@ -42,7 +42,7 @@ const Form = () => {
   const onPreviousPageChange = () => {
     setPageIndex(pageIndex - 1);
   };
-  const onSubmit = () => {
+  const onRefresh = () => {
     window.location.reload();
   };
 
@@ -100,7 +100,7 @@ const Form = () => {
               <Button
                 className="Button"
                 type="button"
-                click={onNextPageChange}
+                onClick={onNextPageChange}
                 text="Start"
                 icon={
                   <i className="Button__i Button__i--right fa fa-arrow-right"></i>
@@ -121,7 +121,7 @@ const Form = () => {
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={onPreviousPageChange}
+                  onClick={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -130,7 +130,7 @@ const Form = () => {
                 <Button
                   className="Button"
                   type="button"
-                  click={onNextPageChange}
+                  onClick={onNextPageChange}
                   disabled={!text}
                   text="Proceed"
                   icon={
@@ -154,7 +154,7 @@ const Form = () => {
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={onPreviousPageChange}
+                  onClick={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -163,7 +163,7 @@ const Form = () => {
                 <Button
                   className="Button"
                   type="button"
-                  click={onNextPageChange}
+                  onClick={onNextPageChange}
                   disabled={!select}
                   text="Proceed"
                   icon={
@@ -194,7 +194,7 @@ const Form = () => {
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={onPreviousPageChange}
+                  onClick={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -203,7 +203,7 @@ const Form = () => {
                 <Button
                   className="Button"
                   type="button"
-                  click={onNextPageChange}
+                  onClick={onNextPageChange}
                   disabled={checkbox === []}
                   text="Proceed"
                   icon={
@@ -232,7 +232,7 @@ const Form = () => {
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={onPreviousPageChange}
+                  onClick={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -241,7 +241,7 @@ const Form = () => {
                 <Button
                   className="Button"
                   type="button"
-                  click={onNextPageChange}
+                  onClick={onNextPageChange}
                   disabled={!radiobutton}
                   text="Proceed"
                   icon={
@@ -266,7 +266,7 @@ const Form = () => {
                 <Button
                   className="Button Button--reverse"
                   type="button"
-                  click={onPreviousPageChange}
+                  onClick={onPreviousPageChange}
                   text="Go Back"
                   icon={
                     <i className="Button__i Button__i--left fa fa-arrow-left"></i>
@@ -293,7 +293,7 @@ const Form = () => {
           <Button
             className="Button"
             type="button"
-            click={onSubmit}
+            onClick={onRefresh}
             text="Home"
           />
         </section>

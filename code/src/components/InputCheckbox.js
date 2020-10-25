@@ -12,7 +12,12 @@ const InputCheckbox = ({
     <>
       {question}
       {array.map(checkbox => (
-        <label className={classLabel} htmlFor={checkbox} key={checkbox}>
+        <label
+          className={classLabel}
+          htmlFor={checkbox}
+          key={checkbox}
+          tabIndex="0"
+        >
           <input
             id={checkbox}
             type="checkbox"
@@ -20,7 +25,11 @@ const InputCheckbox = ({
             checked={selected.includes(checkbox)}
             onChange={event => onCheckboxChange(event.target.value)}
           />
-          <span className={classSpan}></span>
+          <span
+            className={classSpan}
+            role="checkbox"
+            aria-checked="false"
+          ></span>
           {checkbox}
         </label>
       ))}
