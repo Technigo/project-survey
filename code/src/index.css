@@ -30,7 +30,7 @@ body {
 
 /* Submit button */ 
 
-input[type=button], input[type=submit], input[type=reset] {
+button[type=submit], input[type=submit], input[type=reset] {
   background-color: #020051;
   border: none;
   color: white;

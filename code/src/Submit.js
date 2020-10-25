@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Submit = ({setSection, value}) => {
+export const Submit = ({setSection, value, title}) => {
   return <div className="question">
-           <input type="submit" tabIndex="0" onClick={() => {setSection(value)}}/>
+           <button type="submit" tabIndex="0" onClick={() => {setSection(value)}}>{title}</button>
          </div>
 }
