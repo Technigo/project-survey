@@ -6,13 +6,14 @@
   display: flex;
   align-items: flex-end;
   justify-content: center;
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
 }
 
 h1 {
   margin: 0;
+  font-size: 25px;
 }
 
 header:before {
@@ -23,4 +24,10 @@ header:before {
   left: 0;
   height: 50px;
   background: linear-gradient(to top left, transparent 49%, #000000 50%);
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 35px;
+  }
 }

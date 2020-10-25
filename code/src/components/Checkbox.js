@@ -1,18 +1,24 @@
 import React from 'react';
 
-export const Checkbox = ({ wantsNewsletter, setWantsNewsletter, askQuestion }) => {
-  //const [wantsNewsletter, setWantsNewsletter] = useState(false);
-  //const [wantsNewsletter, setWantsNewsletter] = props;
+import '../style/checkbox.css'
+
+export const Checkbox = ({ musicGenre, setMusicGenre, askQuestion, musicGenreArray }) => {
+
   return (
-    <div className="">
-      <label>
-        {askQuestion}
-        <input 
-          type="checkbox"
-          checked={wantsNewsletter}
-          onChange={event => setWantsNewsletter(event.target.checked)}
-        />
-      </label>
+    <div className="question-container">
+      <h2>{askQuestion}</h2>
+      {musicGenreArray.map(item => (
+
+        <label key={item} className="checkboxes" htmlFor={item}>{item}
+          <input 
+            id={item}
+            type="checkbox"
+            value={item}
+            checked={musicGenre}
+            onChange={event => setMusicGenre(event.target.checked)}
+          />
+        </label>
+      ))}
     </div>
   );
 };

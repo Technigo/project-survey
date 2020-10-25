@@ -1,10 +1,6 @@
 body {
   margin: 0;
   font-family: "Montserrat", sans-serif;
-  /*background-color: rgb(41, 40, 40);
-  color: #ffffff;*/
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-image: url("./assets/festival-image.jpg");
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -16,19 +12,14 @@ body {
   justify-content: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
 @media (min-width: 768px) {
   body {
-    background-position-y: 50%;
+    background-position-y: 55%;
   }
 }
 
 @media (min-width: 1025px) {
-  /*body {
+  body {
     background-position-y: 50%;
-  }*/
+  }
 }

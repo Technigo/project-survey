@@ -1,22 +1,21 @@
 import React from 'react';
 
-export const Select = ({ value, setLocation, askQuestion }) => {
+export const Select = ({ location, setLocation, askQuestion, cityArray }) => {
 
   return (
-    <>
-      <h2>{askQuestion}</h2>
-      <div>
-        <select 
-          onChange={event => setLocation(event.target.value)}
-          value={value}
-          >
-          <option value="">Select location</option>
-          <option value="london">London</option>
-          <option value="stockholm">Stockholm</option>
-          <option value="new york">New York</option>
-          <option value="berlin">Berlin</option>
-        </select>
-      </div>
-    </>
+    
+    <div className="question-container">
+      <label htmlFor="city"><h2 tabIndex="0">{askQuestion}</h2></label>
+      <select 
+        id="city"
+        tabIndex="0"
+        onChange={event => setLocation(event.target.value)}
+        value={location}
+      >
+      {cityArray.map(city =>(
+      <option key={city.value} value={city.value}>{city.text}</option> 
+      ))}
+      </select>
+    </div>
   );
 };
