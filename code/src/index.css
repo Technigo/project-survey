@@ -1,23 +1,22 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  background: #faddd7ff;
+  background-color: rgb(255, 255, 255);
+  background-image: url(./Images/pattern-1.png);
+  background-size: 300px;
+  background-repeat: repeat;
 }
-
-/* font-family: 'Quicksand', sans-serif; Font-weight:Regular 400, 500, 600, 700
-font-family: 'Julius Sans One', sans-serif; Font-weight:Regular 400  */ 
 
 /* App.js */
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 header {
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  background-color: rgb(249, 220, 214);
 }
 
 .logo-container {
@@ -28,7 +27,7 @@ header {
 
 h1 {
   font-family: 'Julius Sans One';
-  color: #fe7a54ff;
+  color: rgb(248, 118, 75);
   text-align: left;
   width: 150px;
 }
@@ -37,137 +36,134 @@ h1 {
   width: 18px;
 }
 
+.hamburger-menu {
+  width: 40px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-right: 20px;
+  order: 1;
+}
+
+.hamburger-menu div {
+  height: 4px;
+  width: 40px;
+  border-radius: 5px;
+  background-color: rgb(29, 113, 225);
+  ;
+}
+
 .nav-container {
+  display: none;
+}
+
+/* General containers */
+main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-  height: 70px;
   padding: 20px;
-}
+} 
 
-nav a {
-  text-decoration: none;
-  margin-right: 10px;
-  font-size: 16px;
-  color: #0b4d95ff;
-  font-family: 'Quicksand', sans-serif;
-}
-
-a:hover {
-  /* text-decoration: underline; */
-  border-bottom: 2px solid  #1d71e1ff;
-}
-
-/* CreateProfile.js */
-.create-profile-container {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #fff;
-  padding: 20px 0;
-  border-radius: 3px;
-}
-
-.bottle-image {
-  height: 250px;
-}
-
-.create-profile-text {
-  width: 40%;
-}
-
-.create-profile-text h2 {
-  font-family: 'Julius Sans One', sans-serif;
-  color: #fe7a54ff;
-  font-size: 30px;
-  width: 200px;
-  text-align: left;
-  margin-bottom: 0;
-}
-
-.create-profile-text p {
-  font-size: 22px;
-  font-family: 'Quicksand', sans-serif;
-  color:  #0b4d95ff;
-  margin: 10px 0px;
-}
-
-.button-container {
-  display: flex;
-}
-
-.profile-button {
-  border: none;
-  padding: 15px 10px;
-  margin: 0 10px 0 0;
-  font-size: 15px;
-  color: #fff;
-}
-
-.yes-button {
-  background-color: #fe7a54ff;
-}
-
-.yes-button:hover {
-  background-color:rgb(255, 157, 130);
-}
-
-.no-button {
-  background-color:  #0b4d95ff;
-}
-
-.no-button:hover {
-  background-color:rgb(49, 97, 149);
-}
-
-/* Form.js */
 section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  /* background-image: url("./Images/mix-bottles.png");
-  background-repeat: no-repeat;
-  background-size: 150px;
-  background-position: 10% 30%; */
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  margin: 10px;
-  padding: 20px 30px;
-  width: 80%;
-  background: #fff;
-}
-
-.input-container {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
+  background: rgba(255, 255, 255, 0.7);
   padding: 10px;
-  margin: 10px;
-  border: 2px solid #faddd7ff;
+  border-radius: 2px;
+}
+
+/* H & p tags */
+h2 {
+  font-family: 'Julius Sans One';
+  color: rgb(248, 118, 75);
 }
 
 h3 {
   font-family: 'Quicksand', sans-serif;
   font-size: 20px;
-  color:#0b4d95ff;
-  width: 90%;
+  color:rgb(11, 77, 149);
+  font-weight: 600;
+}
+
+p {
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  color: rgb(29, 113, 225);
+}
+
+/* Welcome.js */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.7);
+  height: 520px;
+  padding: 30px 20px;
+  border: 2px solid rgb(248, 118, 75);
+}
+
+.welcome-container h2 {
+  margin: 5px 0;
+  padding: 8px;
+  background: rgb(249, 220, 214);
+  border-radius: 3px;
+}
+
+.welcome-container p {
+  font-weight: 500;
+}
+
+/* Form.js */
+.form-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 20px;
+  height: 520px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.7);
+  border: 2px solid rgb(248, 165, 149);
+}
+
+.container {
+  padding: 30px 20px;
+  border: 2px solid rgb(11, 77, 149);
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+}
+
+legend {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 20px;
+  color: rgb(29, 113, 225);
+  font-weight: 500;
+  text-align: center; 
+  padding: 10px;
+  background: rgb(249, 220, 214);
+  border-radius: 3px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 label {
-  color: #1d71e1ff;
+  color: rgb(29, 113, 225);
   font-size: 16px;
   font-family: 'Quicksand', sans-serif;
+  font-weight: 600;
 }
 
 /* Radio button styling */
 .radio-button-row {
   display: flex;
+  flex-direction: column;
   justify-content: space-evenly;
   align-items: flex-start;
 }
@@ -175,7 +171,7 @@ label {
 .radio-button-container {
   display: block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 35px;
   margin: 10px 5px;
   user-select: none;
 }
@@ -186,7 +182,7 @@ label {
   cursor: pointer;
   height: 0;
   width: 0;
-}
+} 
 
 .custom-radio {
   position: absolute;
@@ -194,8 +190,8 @@ label {
   left: 0;
   height: 19px;
   width: 19px;
-  background-color:#ffffff;
-  border: 1px solid #fe7a54ff;
+  background-color:rgb(255, 255, 255);
+  border: 1px solid rgb(248, 118, 75);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -206,24 +202,24 @@ label {
 }
 
 .radio-button-container input:checked ~ .custom-radio {
-  background-color:#fe7a54ff;
+  background-color:rgb(248, 118, 75);
 }
 
 .custom-radio:after {
   content:"";
   position: absolute;
-  top: 6px;
-  left: 6px; 
+  top: 5px;
+  left: 5px; 
   width: 7px;
   height: 7px;
-  background-color: #ffffff;
+  background-color: rgb(255, 255, 255);
   border-radius: 50%;
   display: none;
 }
 
 .radio-button-container input:checked ~ .custom-radio:after {
   display: block;
-}
+} 
 
 /* Checkbox styling */
 .checkbox-container {
@@ -250,8 +246,8 @@ label {
   left: 0;
   height: 19px;
   width: 19px;
-  background-color:#ffffff;
-  border: 1px solid #fe7a54ff;
+  background-color:rgb(255, 255, 255);
+  border: 1px solid rgb(248, 118, 75);
   border-radius: 4px;
   cursor: pointer;
 }
@@ -262,7 +258,7 @@ label {
 }
 
 .checkbox-container input:checked ~ .custom-checkbox {
-  background-color:#fe7a54ff;
+  background-color:rgb(248, 118, 75);
 }
 
 .custom-checkbox:after {
@@ -270,10 +266,10 @@ label {
   position: absolute;
   width: 3px;
   height: 6px;
-  border: solid #ffffff;
+  border: solid rgb(255, 255, 255);
   border-width: 0 3px 3px 0;
-  top: 5px;
-  left: 7px;
+  top: 3px;
+  left: 6px;
   transform: rotate(45deg);
   display: none;
 }
@@ -285,9 +281,9 @@ label {
 /* Select styling */
 select {
   padding: 8px 12px;
-  color: #1d71e1ff;
-  background-color: #ffffff;
-  border: 1px solid #fe7a54ff;
+  color: rgb(29, 113, 225);
+  background-color: rgb(255, 255, 255)fff;
+  border: 1px solid rgb(248, 118, 75);
   cursor: pointer;
   border-radius: 5px;
   font-size: 16px;
@@ -312,18 +308,16 @@ select:hover {
 /* Text input styling */
 .text-input {
   width: 90%;
-  height: 50%;
   padding: 10px;
   font-family: 'Quicksand', sans-serif;
   font-size: 16px;
-  color: #1d71e1ff;
+  font-weight: 600;
+  color: rgb(29, 113, 225);
   border-top-style: hidden;
   border-right-style: hidden;
   border-left-style: hidden;
   border-bottom-style: groove;
-  border-bottom: 1px solid #fe7a54ff;
-  word-wrap: break-word;
-  word-break: break-all;
+  border-bottom: 1px solid rgb(248, 118, 75);
 }
 
 .no-outline:focus {
@@ -331,35 +325,138 @@ select:hover {
 }
 
 .text-input:focus {
-  border-bottom: 1px solid rgb(226, 88, 50);;
+  border-bottom: 1px solid rgb(226, 88, 50);
 }
 
 .text-input::placeholder {
-  font-size: 18px;
-  color:  rgb(245, 197, 187);
+  font-size: 11px;
+  color: rgb(248, 118, 75);
   font-family: 'Quicksand', sans-serif;
 }
 
-/* BUTTON */
-button {
-  background: #0b4d95ff;
+/* Button */
+.button {
   border: none;
-  padding: 10px 20px;
-  margin: 10px 0px;
-  font-size: 18px;
-  color: #fff;
+  padding: 15px 10px;
+  font-size: 17px;
+  color: rgb(255, 255, 255);
+  margin:  5px 0;
 }
 
-button:hover {
+.yes-button {
+  background-color:  rgb(11, 77, 149);
+}
+
+.yes-button:hover {
+  background-color: rgb(29, 113, 225);
   cursor: pointer;
-  background-color: #2a609b;
 }
 
-/* Summary */
-p {
-  font-family: 'Quicksand', sans-serif;
+/* Summary.js */
+.summary-container {
+  padding: 10px 20px; 
+  text-align: left; 
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(248, 165, 149);
+}
+
+.header-container {
+  padding: 10px;
+  margin: 10px 0px;
+  background-color: rgba(249, 220, 214);
+  text-align: center;
+}
+
+.text-container p {
   font-size: 18px;
-  color:  #0b4d95ff;
+  color: rgb(29, 113, 225);
+  font-weight: 500;
 }
 
+.button-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
 
+.link {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+/* Footer */
+/* .footer-container {  
+  text-align: center;
+  height: 100px;
+  padding: 10px;
+  background-color: rgba(249, 220, 214); 
+}
+
+.footer-container p {
+  font-size: 16px;
+} */
+
+
+@media (min-width: 360px) {
+  .container {
+    width: 300px;
+  }
+
+  .text-input::placeholder {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 400px) {
+  section {
+    padding: 14px;
+  }
+}
+
+@media (min-width: 768px) {
+
+  .container {
+    width: 400px;
+  }
+
+  .text-input::placeholder {
+    font-size: 18px;
+  }
+
+  .hamburger-menu {
+    display: none;
+  }
+
+  .nav-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    height: 70px;
+    padding: 20px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 16px;
+    font-weight: 500;
+    color: rgb(11, 77, 149);
+    font-family: 'Quicksand', sans-serif;
+  }
+  
+  a:hover {
+    border-bottom: 2px solid rgb(29, 113, 225);
+  }
+
+  .summary-container {
+    width: 675px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  .container {
+    width: 600px;
+  }
+}
