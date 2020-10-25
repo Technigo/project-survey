@@ -1,6 +1,6 @@
 import React from "react";
 
-const SumPage = ({ firstName }) => {
+const SummeryPage = ({ firstName }) => {
   return (
     <div>
       <h2>Thank you for your registation {firstName} </h2>
@@ -8,4 +8,4 @@ const SumPage = ({ firstName }) => {
   );
 };
 
-export default SumPage;
+export default SummeryPage;

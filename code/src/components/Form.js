@@ -1,21 +1,22 @@
 import React, { useState } from "react";
-import Input from "./Input";
+import "./form.css";
 import Button from "./Button";
-import Radio from "./Radio";
-import Select from "./Select";
-import Check from "./Check";
-import SumPage from "./SumPage";
+import RadioPage from "./RadioPage";
+import SelectPage from "./SelectPage";
+import CheckPage from "./CheckPage";
+import SummeryPage from "./SummeryPage";
+import InputPage from "./InputPage";
 
 const Form = () => {
   const [firstName, setFirstName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [location, setLocation] = useState("");
-  const [showSubmit, setShowSubmit] = useState(false);
   const [eventDate, setEventDate] = useState();
   const [wantsNewsletter, setWantsNewsletter] = useState(false);
 
   const [currentPage, setCurrentPage] = useState(0);
+  const [showSubmit, setShowSubmit] = useState(false);
 
   const handleNextPage = () => {
     setCurrentPage(currentPage + 1);
@@ -38,69 +39,97 @@ const Form = () => {
     console.log("wantsNewsletter", wantsNewsletter);
   };
 
+  const handleReturn = () => {
+    setCurrentPage(0);
+    setShowSubmit(false);
+    setFirstName("");
+    setLastName("");
+    setEmail("");
+    setLocation("");
+    setEventDate("");
+    setWantsNewsletter(false);
+  };
+
   console.log("showSubmit", showSubmit);
   if (!showSubmit) {
     return (
-      <div>
-        {currentPage === 0 && (
-          <div>
-            <h1>Welcome to our event!</h1>
-            <Button buttonText={"Register"} handleClick={handleNextPage} />
-          </div>
-        )}
+      <div className="form-container">
+        <form onSubmit={handleFormSubmit}>
+          {/********** START PAGE **********/}
 
-        <form className="form-container" onSubmit={handleFormSubmit}>
+          {currentPage === 0 && <h1>Welcome to our event!</h1>}
+
+          {/********** FORM PAGE 1 **********/}
+
           {currentPage === 1 && (
-            <div>
-              <h2>Your contact details</h2>
-              <Input
-                placeholder={"First name:"}
-                setState={setFirstName}
-                value={firstName}
-              />
-              <Input
-                placeholder={"Last name:"}
-                setState={setLastName}
-                value={lastName}
-              />
-              <Input placeholder={"Email:"} setState={setEmail} value={email} />
-              <Button buttonText={"back"} handleClick={handlePrevPage} />
-              <Button buttonText={"Next"} handleClick={handleNextPage} />
-            </div>
+            <InputPage
+              firstName={firstName}
+              setFirstName={setFirstName}
+              lastName={lastName}
+              setLastName={setLastName}
+              email={email}
+              setEmail={setEmail}
+            />
           )}
+
+          {/********** FORM PAGE 2 **********/}
 
           {currentPage === 2 && (
-            <div className="form-page">
-              <Radio setEventDate={setEventDate} eventDate={eventDate} />
-              <Button buttonText={"back"} handleClick={handlePrevPage} />
-              <Button buttonText={"Next"} handleClick={handleNextPage} />
-            </div>
+            <RadioPage setEventDate={setEventDate} eventDate={eventDate} />
           )}
+
+          {/********** FORM PAGE 3 **********/}
 
           {currentPage === 3 && (
-            <div className="form-page">
-              <Select setLocation={setLocation} location={location} />
-              <Button buttonText={"back"} handleClick={handlePrevPage} />
-              <Button buttonText={"Next"} handleClick={handleNextPage} />
-            </div>
+            <SelectPage setLocation={setLocation} location={location} />
           )}
 
+          {/********** FORM PAGE 4 **********/}
+
           {currentPage === 4 && (
-            <div className="form-page">
-              <Check
+            <>
+              <CheckPage
                 setWantsNewsletter={setWantsNewsletter}
                 wantsNewsletter={wantsNewsletter}
               />
-              <Button buttonText={"back"} handleClick={handlePrevPage} />
-              <Button buttonText={"Submit"} buttonType={"submit"} />
-            </div>
+            </>
           )}
+
+          {/********** BUTTONS **********/}
+
+          <div className="button-container">
+            {currentPage !== 0 && (
+              <Button buttonText={"Back"} handleClick={handlePrevPage} />
+            )}
+
+            {currentPage !== 4 && (
+              <Button
+                buttonText={currentPage === 0 ? "Register" : "Next"}
+                handleClick={handleNextPage}
+              />
+            )}
+
+            {currentPage === 4 && (
+              <Button buttonText={"Submit"} buttonType={"submit"} />
+            )}
+          </div>
         </form>
-        {/* {showSubmit && <SumPage />} */}
       </div>
     );
+    {
+      /********** SUMMERY **********/
+    }
   } else {
-    return <SumPage firstName={firstName} />;
+    return (
+      <div className="form-container">
+        <div className="summery-container">
+          <SummeryPage firstName={firstName} />
+          <div className="button-container">
+            <Button buttonText={"Return"} handleClick={handleReturn} />
+          </div>
+        </div>
+      </div>
+    );
   }
 };
 

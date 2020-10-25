@@ -1,0 +1,13 @@
+button {
+  display: inline-block;
+  text-align: center;
+  width: 200px;
+  height: 40px;
+  /* padding: 14px 0; */
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.4);
+  font-size: 20px;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
+}

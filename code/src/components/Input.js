@@ -6,15 +6,13 @@ const Input = ({ placeholder, setState, value }) => {
   };
 
   return (
-    <div>
-      <input
-        id="firstName"
-        onChange={handleChange}
-        type="text"
-        placeholder={placeholder}
-        value={value}
-      />
-    </div>
+    <input
+      id="firstName"
+      onChange={handleChange}
+      type="text"
+      placeholder={placeholder}
+      value={value}
+    />
   );
 };
 

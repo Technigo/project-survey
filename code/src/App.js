@@ -4,8 +4,10 @@ import "./app.css";
 
 export const App = () => {
   return (
-    <div>
-      <Form />
+    <div className="container">
+      <div className="main-container">
+        <Form />
+      </div>
     </div>
   );
 };

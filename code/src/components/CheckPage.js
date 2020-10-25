@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Check = ({ setWantsNewsletter, wantsNewsletter }) => {
+const CheckPage = ({ setWantsNewsletter, wantsNewsletter }) => {
   return (
     <div>
       <h2>Sign up for out newsletter?</h2>
@@ -16,4 +16,4 @@ const Check = ({ setWantsNewsletter, wantsNewsletter }) => {
   );
 };
 
-export default Check;
+export default CheckPage;

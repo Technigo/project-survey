@@ -2,7 +2,7 @@ import React from "react";
 
 const dates = ["Friday 27th", "Saturday 28th", "Friday 27th & Saturday 28th"];
 
-const Radio = ({ setEventDate, eventDate }) => {
+const RadioPage = ({ setEventDate, eventDate }) => {
   return (
     <div>
       <h2>What day will you attend?</h2>
@@ -23,4 +23,4 @@ const Radio = ({ setEventDate, eventDate }) => {
   );
 };
 
-export default Radio;
+export default RadioPage;
