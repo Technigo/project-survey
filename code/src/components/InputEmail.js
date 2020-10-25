@@ -1,10 +1,9 @@
 import React from 'react';
-import '../Styles/InputEmail.css';
 
 const InputEmail = ({ question, email, setEmail }) => {
 	return (
 		<>
-			<h3 tabIndex={'0'}>{question}</h3>
+			<h3 tabIndex="0">{question}</h3>
 			<label
 				htmlFor="InputEmail"
 				aria-label="Type your email address to be able to submit the survey"
@@ -18,7 +17,6 @@ const InputEmail = ({ question, email, setEmail }) => {
 					onKeyPress={event => {
 						event.key === 'Enter' && event.preventDefault();
 					}}
-					required
 				/>
 			</label>
 		</>

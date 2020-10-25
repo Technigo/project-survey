@@ -28,7 +28,6 @@
 
 .progress-bar[value]::-webkit-progress-value {
 	background-color: #bda99e;
-	/* height: 5px; */
 	border-top-left-radius: 2px;
 	border-bottom-left-radius: 2px;
 }

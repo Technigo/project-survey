@@ -77,6 +77,17 @@ form {
 	justify-content: center;
 }
 
+/*Styling for text input*/
+.input-text-container {
+	border: none;
+	border-radius: 5px;
+	opacity: 0.5;
+	height: 30px;
+	width: 100%;
+	font-size: 16px;
+	padding-left: 10px;
+}
+
 /*Styling for select drop down*/
 select {
 	height: 30px;
@@ -84,6 +95,17 @@ select {
 	font-size: 16px;
 	border: none;
 	border-radius: 5px;
+}
+
+/*Styling for input email*/
+.input-email-container {
+	border: none;
+	border-radius: 5px;
+	opacity: 0.5;
+	height: 30px;
+	width: 100%;
+	font-size: 16px;
+	padding-left: 10px;
 }
 
 /*Styling for summary*/

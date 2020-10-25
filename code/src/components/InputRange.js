@@ -4,7 +4,7 @@ import '../Styles/InputRange.css';
 const InputRange = ({ question, value, setValue }) => {
 	return (
 		<>
-			<h2 tabIndex={'0'}>{question}</h2>
+			<h2 tabIndex="0">{question}</h2>
 			<label
 				htmlFor="InputRange"
 				className="input-range-container"

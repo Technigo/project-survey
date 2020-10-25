@@ -4,7 +4,7 @@ import '../Styles/InputCheckbox.css';
 const InputCheckbox = ({ question, array, selectedMonths, onMonthsChange }) => {
 	return (
 		<>
-			<h2 tabIndex={'0'}>{question}</h2>
+			<h2 tabIndex="0">{question}</h2>
 			<div
 				className="checkbox-container"
 				aria-label="Check preferred months to be able to proceed the survey"

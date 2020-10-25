@@ -48,7 +48,3 @@
 	transform: rotate(45deg);
 	display: none;
 }
-
-.custom-checkbox:focus {
-	box-shadow: 0 0 0 3px #ffbf47;
-}
