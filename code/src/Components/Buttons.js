@@ -1,6 +1,7 @@
 import React from 'react';
 
 import 'Styles/form.css'
+import 'Styles/buttons.css'
 
 const Buttons = props => {
 

@@ -8,41 +8,38 @@ const DrinksInput = ({ drinks, setDrinks }) => {
             : setDrinks([...drinks, drinksValue])
     }
 
-    // const drinksArray = ['White wine', 'Red wine', 'Water', 'Coke', 'Fanta']
-
+   
     return (
-        <div>
-            <p> Choose your drinks:</p>
-           
-            <label htmlFor="water">water</label>
+        <div className="checkbox-container">
+          <label className="checkbox-label" htmlFor="water">water</label>
             <input
                 id="water"
                 type="checkbox"
                 checked={drinks.includes('water')}
                 onChange={() => handleDrinksChange('water')}
             />
-            <label htmlFor="red wine">Red wine</label>
+            <label className="checkbox-label" htmlFor="red wine">Red wine</label>
             <input
                 id="red wine"
                 type="checkbox"
                 checked={drinks.includes('red wine')}
                 onChange={() => handleDrinksChange('red wine')}
             />
-            <label htmlFor="white wine">White wine</label>
+            <label className="checkbox-label" htmlFor="white wine">White wine</label>
             <input
                 id="white wine"
                 type="checkbox"
                 checked={drinks.includes('white wine')}
                 onChange={() => handleDrinksChange('white wine')}
             />
-            <label htmlFor="coke">Coke</label>
+            <label className="checkbox-label" htmlFor="coke">Coke</label>
             <input
                 id="coke"
                 type="checkbox"
                 checked={drinks.includes('coke')}
                 onChange={() => handleDrinksChange('coke')}
             />
-            <label htmlFor="fanta">Fanta</label>
+            <label className="checkbox-label" htmlFor="fanta">Fanta</label>
             <input
                 id="fanta"
                 type="checkbox"

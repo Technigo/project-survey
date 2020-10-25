@@ -33,25 +33,19 @@ const Form = () => {
         {section === 'startMessage' && (
           <div className="message-container">
             <img className="message-img" src={RestaurantPic} alt="restaurant" />
-            <h1 className="welcome">Welcome to Restaurant Starmountain</h1>
-            <h2>Please start your order</h2>
+            <h1 className="welcome" tabIndex="0">Welcome to Restaurant Starmountain</h1>
+            <h2 tabIndex="0">Please start your order</h2>
             <div className="button-container">
               <Buttons
                 name="Order"
                 setSection={setSection}
                 value='firstQuestion' />
             </div>
-            {/* <button
-            type="button"
-            className="btn"
-            onClick={event => { setSection(event.target.value) }}
-            value='firstQuestion'>
-            Order </button> */}
           </div>
         )}
         {section === 'firstQuestion' && (
           <div className="message-container">
-            <h2>What's your name?</h2>
+            <h2 tabIndex="0">What's your name?</h2>
             <NameInput name={name} setName={setName} section={section} setSection={setSection} />
             <div className="button-container">
               <Buttons
@@ -63,17 +57,11 @@ const Form = () => {
                 setSection={setSection}
                 value='secondQuestion' />
             </div>
-            {/* <button
-            type="button"
-            className="btn"
-            onClick={event => { setSection(event.target.value) }}
-            value='secondQuestion'>
-            Next </button> */}
           </div>
         )}
         {section === 'secondQuestion' && (
           <div className="message-container">
-            <h2>Choose your meal</h2>
+            <h2 tabIndex="0">Choose your meal</h2>
             <MaincourseInput maincourse={maincourse} setMaincourse={setMaincourse} />
             <div className="button-container">
               <Buttons
@@ -85,17 +73,11 @@ const Form = () => {
                 setSection={setSection}
                 value='thirdQuestion' />
             </div>
-            {/* <button
-              type="button"
-              className="btn"
-              onClick={event => { setSection(event.target.value) }}
-              value='thirdQuestion'>
-              Next </button> */}
           </div>
         )}
         {section === 'thirdQuestion' && (
           <div className="message-container">
-            <h2>Choose your drinks:</h2>
+            <h2 tabIndex="0">Choose your drinks:</h2>
             <DrinksInput drinks={drinks} setDrinks={setDrinks} />
             <div className="button-container">
               <Buttons
@@ -107,18 +89,12 @@ const Form = () => {
                 setSection={setSection}
                 value='fourthQuestion' />
             </div>
-            {/* <button
-              type="button"
-              className="btn"
-              onClick={event => { setSection(event.target.value) }}
-              value='fourthQuestion'>
-              Next </button> */}
           </div>
         )}
 
         {section === 'fourthQuestion' && (
           <div className="message-container">
-            <h2>Choose your dessert:</h2>
+            <h2 tabIndex="0">Choose your dessert:</h2>
             <DessertInput dessert={dessert} setDessert={setDessert} />
             <div className="button-container">
               <Buttons
@@ -130,12 +106,6 @@ const Form = () => {
                 setSection={setSection}
                 value='summary' />
             </div>
-            {/* <button
-              type="button"
-              className="btn"
-              onClick={event => { setSection(event.target.value) }}
-              value='summary'>
-              Next </button> */}
           </div>
         )}
         {section === 'summary' && (

@@ -13,23 +13,6 @@
     font-family: 'Roboto', sans-serif;  
 }
 
-.btn {
-    width: 65px;
-    border: none;
-    padding: 5px;
-    margin-top: 10px;
-    font-size: 15px;
-    border-radius: 5px;
-    color: #fff;
-    background: #4a646c;
-}
-
-.button-container{
-    display: flex;
-    justify-content: space-between;
-    margin-right: 10px;
-    width: 180px;
-}
 
 .summary p {
    font-style: italic;
@@ -54,10 +37,19 @@
 }
 
 .radio-label {
-    clear: none; 
+    clear: none;  
     display: block;
-    margin: 5px;
-    
+    margin: 10px;   
+}
+
+.checkbox-label{
+    /* clear: none;  */
+    /* display: inline-block; */
+    margin: 5px;  
+}
+
+.checkbox-container{
+    display: block;
 }
 
 .welcome{
@@ -77,8 +69,7 @@
     border: 1px solid #778899;
     height: 32px;
     background: #d3d3d3;
-    font-family: 'Merriweather Sans', sans-serif;
-    
+    font-family: 'Merriweather Sans', sans-serif;   
 }
 
 .summary  {
@@ -91,4 +82,6 @@
 .menu-img{
     width: 300px;
 }
+
+
 
