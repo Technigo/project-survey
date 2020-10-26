@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import Header from "components/Header";
 import Checkbox from "components/Checkbox";
 import Text from "components/Text";
-import Dropdown from "components/Dropdown";
+import Dropdown from "./Dropdown";
 import Radiobutton from "components/Radiobutton";
 import Submit from "components/Submit";
 import Summary from "components/Summary";
