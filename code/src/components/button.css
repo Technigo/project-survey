@@ -1,7 +1,7 @@
 .btn {
   display: inline-block;
   text-align: center;
-  width: 200px;
+  width: 160px;
   height: 40px;
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.6);
@@ -23,11 +23,12 @@
 
 .single-btn {
   margin-bottom: 100px;
+  margin: auto;
 }
 
 .btn:focus,
 .btn:active {
-  outline: 1px solid #fff !important;
+  outline: 2px solid rgba(255, 255, 255, 0.5) !important;
   box-shadow: none !important;
   outline-offset: 3px;
   transition: 0.15s ease-in-out;

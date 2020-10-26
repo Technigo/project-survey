@@ -1,7 +1,7 @@
 import React from "react";
 import "./radio.css";
 
-const dates = ["Friday 27th", "Saturday 28th", "Friday 27th & Saturday 28th"];
+const dates = ["Friday 27th", "Saturday 28th", "27th & 28th"];
 
 const RadioPage = ({ setEventDate, eventDate }) => {
   return (
