@@ -1,6 +1,6 @@
 import React from 'react';
 
-import "components/dropdown.css";
+import "./dropdown.css";
 
 // const dropDownOptionsArray = ["-", "0-10 km", "20-50 km", "50+ km"];
 
