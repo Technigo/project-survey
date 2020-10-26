@@ -15,10 +15,21 @@ input.input-contact {
   font-size: 18px;
 }
 
-::placeholder {
+input.input-contact::placeholder {
   color: rgba(255, 255, 255, 0.4);
   font-size: 18px;
   font-style: italic;
+}
+
+input.input-contact:hover {
+  font-style: normal;
+
+  cursor: pointer;
+}
+
+input.input-contact:hover::placeholder {
+  font-style: normal;
+  color: rgba(255, 255, 255, 0.7);
 }
 
 /* change autocomplete styles in WebKit */
@@ -39,7 +50,6 @@ select:-webkit-autofill:focus {
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   -webkit-box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
   box-shadow: 0 0 0px 1000px rgba(255, 255, 255, 0) inset;
-
   transition: background-color 5000s ease-in-out 0s;
 }
 
@@ -49,4 +59,8 @@ input[type="text"]:focus {
   outline-offset: 4px;
   color: #fff;
   border-bottom: 2px solid rgba(255, 255, 255, 1);
+}
+
+input[type="text"]:hover {
+  color: rgba(255, 255, 255, 0.7);
 }
