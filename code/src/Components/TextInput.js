@@ -1,6 +1,6 @@
 import React from "react"
 
-export const Textinput = props => {
+export const TextInput = props => {
 
   const { name, setName, phoneNumber, setPhoneNumber, email, setEmail, } = props
 

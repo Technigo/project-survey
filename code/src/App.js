@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Radiobuttons } from './Components/Radiobuttons'
-import { Textinput } from './Components/Textinput'
+import { TextInput } from './Components/TextInput'
 import { Dropdown } from './Components/Dropdown'
 import { Summary } from './Components/Summary'
 import { Intro } from './Components/Intro'
@@ -39,7 +39,7 @@ export const App = () => {
 
         {section === 'firstQuestion' && (
           <>
-            <Textinput name={name} setName={setName} phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} email={email} setEmail={setEmail} />
+            <TextInput name={name} setName={setName} phoneNumber={phoneNumber} setPhoneNumber={setPhoneNumber} email={email} setEmail={setEmail} />
             <section className="button-container">
               <button type="button"
                 onClick={event => setSection(event.target.value)}
