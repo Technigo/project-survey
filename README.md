@@ -1,13 +1,11 @@
 # Survey form with React
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project was to use React to build a survey form. The completed project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
 ## The problem
+I had a lot of problem getting the radio buttons to work, and in the end I still couldn't make them work correctly. 
+Also I choose not to style the page in anyway because I was running out of time. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://pensive-hoover-cb5b14.netlify.app/
