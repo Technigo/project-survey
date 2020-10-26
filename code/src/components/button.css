@@ -22,8 +22,8 @@
 }
 
 .single-btn {
-  margin-bottom: 100px;
-  margin: auto;
+  margin: 0 auto;
+  margin-bottom: 50px;
 }
 
 .btn:focus,

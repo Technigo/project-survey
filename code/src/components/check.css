@@ -26,7 +26,7 @@
 }
 
 .checkbox-container-text {
-  margin: 2px 0px 1px 40px;
+  margin: 2px 0px 1px 46px;
   font-size: 18px;
   color: rgba(255, 255, 255, 1);
 }
@@ -51,11 +51,6 @@
 .checkbox-container input:checked ~ .custom-checkbox {
   background: url(../assets/check.svg);
 }
-
-/* .custom-checkbox:after {
-  content: "";
-  position: absolute;
-} */
 
 .checkbox-container input:checked ~ .custom-checkbox::after {
   display: block;

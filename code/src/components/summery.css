@@ -1,0 +1,11 @@
+.summery-text-container {
+  width: 80%;
+  margin: auto;
+}
+
+.summery-text {
+  font-size: 16px;
+  font-weight: 300;
+  color: #fff;
+  line-height: 24px;
+}

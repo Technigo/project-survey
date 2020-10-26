@@ -30,7 +30,7 @@ const Form = () => {
     // validations
     if (currentPage === 1) {
       if (firstName === "" || lastName === "" || email === "") {
-        setErrorMessage("Contact details is required");
+        setErrorMessage("Contact details are required");
         // exit function
         return null;
       } else if (mail.test(email) === false) {

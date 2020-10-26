@@ -18,7 +18,7 @@ const SummeryPage = ({
         Thank you for your registation, {firstName}!
       </h2>
       <div className="summery-text-container">
-        <p>
+        <p className="summery-text">
           You have a {location} for {eventDate} at our event. We have sent you a
           confirmation to {email} and we hope you will have an amazing time.
           {news}
