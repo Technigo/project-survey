@@ -6,11 +6,11 @@ import RestaurantPic from 'assets/restaurant.jpg'
 import MealPic from 'assets/meal.jpg'
 
 
-import NameInput from 'Components/NameInput';
-import MaincourseInput from 'Components/MaincourseInput';
-import DrinksInput from 'Components/DrinksInput';
-import DessertInput from 'Components/DessertInput';
-import Buttons from 'Components/Buttons';
+import NameInput from './NameInput';
+import MaincourseInput from './MaincourseInput';
+import DrinksInput from './DrinksInput';
+import DessertInput from './DessertInput';
+import Buttons from './Buttons';
 import Summary from './Summary';
 
 const Form = () => {

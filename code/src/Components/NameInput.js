@@ -8,7 +8,7 @@ const NameInput = ({ name, setName }) => {
 
     return (
         <div>
-            <label htmlFor="name">Name:  </label>
+            <label htmlFor="name" className="name">Name:  </label>
             <input value={name} className="text-input" onChange={handleNameChange} id="name" type="text" />
             
         </div>
