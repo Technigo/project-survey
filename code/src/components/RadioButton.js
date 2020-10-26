@@ -29,7 +29,7 @@ const Radiobutton = ({ radioText, radioAnswer, onAnswerChange }) => {
         })}
       </div>
     </section>
-  )
-}
+  );
+};
 
 export default Radiobutton;
