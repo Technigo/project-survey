@@ -1,5 +1,7 @@
 import React from "react";
 
+import "./form.css";
+
 const Summary = ({ isBoxChecked, textAnswer, dropdownAnswer, radioAnswer }) => {
   return (
     <div className="summary">

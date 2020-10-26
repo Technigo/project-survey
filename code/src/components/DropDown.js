@@ -9,7 +9,7 @@ const Dropdown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
   return (
     <section className="section-container">
       <div className="form-container">
-        <label tabIndex="0" htmlFor="drop-down">{dropdownText}
+        <label tabIndex="0" htmlFor="drop-down"><h2>{dropdownText}</h2>
           <select
             name="distances" //not sure if necessary
             onChange={(event) => onDistanceChange(event.target.value)}

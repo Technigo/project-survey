@@ -11,7 +11,6 @@ import Reload from "./Reload";
 
 import "./form.css";
 
-
 const Form = () => {
   //all state hooks
   const [displayForm, setDisplayForm] = useState(true);
@@ -69,7 +68,7 @@ const Form = () => {
             onDistanceChange={handleDistanceChange}
           />
           <Radiobutton
-            radioText="Would you like to rent cardboard boxes as well?"
+            radioText="Would you like to rent cardboard boxes?"
             radioAnswer={answer}
             onAnswerChange={handleAnswerChange}
           />

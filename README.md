@@ -1,13 +1,35 @@
-# Survey form with React
+# project-survey
 
-Replace this readme with your own information about your project.
+I have created a survey by a fictional moving company. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Learning objectives
+- practice using React state and controlling forms
+- the user should see a summary of the answers
 
-## The problem
+## Features
+- section with checkboxes 
+- section with required text
+- section with required drop-down menu
+- section with required radio buttons
+- submit button which submits the data and displays summary of answers
+- reload button which reloads the page and returns to starting page
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Future improvements
+- separate sections by having one question per page
+- include back and forward buttons for moving between the questions
+- make a progress bar
+- having different questions displayed based on the previous answer 
+- make the website responsive
+
+## Stats
+- Using Lighthouse in Chrome dev tools: Accessibility: 100%, 98% Performance, 100% Best practices, 80% SEO
+- desktop view only, tested on Chrome, Firefox, Edge
+
+## Tech used
+- HTML5
+- CSS3
+- React
+- JSX
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://rebeka-project-survey.netlify.app/

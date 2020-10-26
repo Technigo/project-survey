@@ -2,16 +2,13 @@
   display: flex;
   flex-direction: column;
   padding: 40px 270px;
-  border: 1px solid green;
 }
 
 .radio-btn-container {
   display: flex;
-  border: 1px solid orange;
 }
 
 .answer-container {
   display: flex;
   margin-right: 10px;
-  border: 1px solid blue;
 }

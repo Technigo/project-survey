@@ -1,5 +1,4 @@
-Link to my deployed project:
+Link to my deployed project: https://rebeka-project-survey.netlify.app/
 
 My reflections on how this week's project turned out:
-
-Things I'd like to have clarified or explained in more detail:
+I am in the middle of the moving process, therefore moving company theme. I enjoyed building form logic using states and spent more time on that rather than styling.

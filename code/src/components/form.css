@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
 * {
-  background-color: #FCFEDC;
+  background-color: #F0F4F6;
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
 }
@@ -8,10 +8,43 @@
 .app-container {
   max-width: 900px;
   margin: 50px auto;
-  border: 1px solid red;
 }
 
 .form-container {
   display: flex;
   flex-direction: column;
+}
+
+.section-container {
+  display: flex;
+  flex-direction: column;
+  padding: 40px 270px;
+  border-bottom-style: dashed;
+}
+
+.section-container:last-child {
+  border-bottom-style: none;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: 500;
+  color: #FB8B35;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+  color: #212432;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 18px;
+  text-align: center;
+}
+
+label, option {
+  font-size: 18px;
 }

@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./reload.css";
+import "./form.css";
 
 const Reload = () => {
 

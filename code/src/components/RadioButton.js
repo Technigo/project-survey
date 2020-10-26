@@ -1,5 +1,6 @@
 import React from "react";
 
+import "./form.css";
 import "./radiobutton.css";
 
 const answersArray = ["YES", "NO"];
@@ -8,7 +9,7 @@ const Radiobutton = ({ radioText, radioAnswer, onAnswerChange }) => {
 
   return (
     <section className="section-container">
-      <p>{radioText}</p>
+      <h2>{radioText}</h2>
       <div className="radio-btn-container">
         {answersArray.map(item => {
           return (

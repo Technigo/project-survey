@@ -1,12 +1,13 @@
 import React from "react";
 
+import "./form.css";
 import "./checkbox.css";
 
 const Checkbox = ({ isBoxChecked, onCheckBoxChange }) => {
 
   return (
     <section className="section-container">
-      <p tabIndex="0">I would like a price estimation for:</p>
+      <h2 tabIndex="0">I would like a price estimation for:</h2>
       <label htmlFor="moving">
         <input
           tabIndex="0"

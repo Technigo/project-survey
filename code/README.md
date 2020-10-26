@@ -1,25 +1,32 @@
 # project-survey
 
-The aim is to create a survey.
+I have created a survey by a fictional moving company. 
 
 ## Learning objectives
 - practice using React state and controlling forms
-- the user should see a summary
+- the user should see a summary of the answers
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+## Features
+- section with checkboxes 
+- section with required text
+- section with required drop-down menu
+- section with required radio buttons
+- submit button which submits the data and displays summary of answers
+- reload button which reloads the page and returns to starting page
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## Future improvements
+- separate sections by having one question per page
+- include back and forward buttons for moving between the questions
+- make a progress bar
+- having different questions displayed based on the previous answer 
+- make the website responsive
 
-## Usage
+## Stats
+- Using Lighthouse in Chrome dev tools: Accessibility: 100%, 98% Performance, 100% Best practices, 80% SEO
+- desktop view only, tested on Chrome, Firefox, Edge
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Tech used
+- HTML5
+- CSS3
+- React
+- JSX

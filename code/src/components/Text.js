@@ -1,11 +1,13 @@
 import React from 'react';
 
+import "./form.css";
+
 //destructured props
 const Text = ({ questionText, textAnswer, onTextChange }) => {
 
   return (
     <div className="section-container">
-      <label tabIndex="0" htmlFor="textField">{questionText}</label>
+      <label tabIndex="0" htmlFor="textField"><h2>{questionText}</h2></label>
       <input
         tabIndex="0"
         type="text"
