@@ -57,3 +57,16 @@ h1 {
 h2 {
   font-size: 26px;
 }
+
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+
+a:visited {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: underline;
+}

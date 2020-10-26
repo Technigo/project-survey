@@ -20,7 +20,7 @@ const CheckPage = ({
           <span className="custom-checkbox"></span>
         </label>
         <label className="checkbox-container-text">
-          Yes! I want to subscribe
+          Yes, I want to subscribe!
         </label>
 
         <label className="checkbox-container">
@@ -31,7 +31,9 @@ const CheckPage = ({
           />
           <span className="custom-checkbox"></span>
         </label>
-        <label className="checkbox-container-text">Yes! I agree</label>
+        <label className="checkbox-container-text">
+          Yes, I agree to the <a href="">terms & conditions</a>
+        </label>
       </div>
     </div>
   );

@@ -9,10 +9,10 @@ const SelectPage = ({ setLocation, location }) => {
         onChange={(event) => setLocation(event.target.value)}
         value={location}
       >
-        <option value="">&#9660; Select a pass</option>
-        <option value="gold">Gold pass</option>
-        <option value="silver">Silver pass</option>
-        <option value="platinum">Platinum pass</option>
+        <option value="">Select a pass</option>
+        <option value="gold pass">Gold pass</option>
+        <option value="silver pass">Silver pass</option>
+        <option value="platinum pass">Platinum pass</option>
       </select>
     </div>
   );

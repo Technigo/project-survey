@@ -8,23 +8,12 @@
   display: flex;
   flex-direction: column;
   margin: auto;
-  width: 200px;
+  width: 338px;
 }
 
-/* .wrapper-col {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 0 10%;
-} */
-
 .checkbox-container {
-  display: flex;
-  /* justify-content: center;
-  align-items: center; */
   position: relative;
   margin: 10px 15px 0 0;
-  font-size: 16px;
   user-select: none;
 }
 
@@ -37,45 +26,36 @@
 }
 
 .checkbox-container-text {
-  margin: 1px 0px 1px 40px;
+  margin: 2px 0px 1px 40px;
+  font-size: 18px;
+  color: rgba(255, 255, 255, 1);
 }
 
 .custom-checkbox {
   position: absolute;
   top: 0;
   left: 0;
-
-  height: 22px;
-  width: 22px;
-  background: rgba(0, 0, 0, 0.4);
+  height: 20px;
+  width: 20px;
+  border-radius: 4px;
   cursor: pointer;
-  /*  I don't really know why below margin position worked or why the checkbox was in a weird place without it.
-  I just tested different ways and this one worked! */
-  /* margin: -2px 5px; */
+  border: 3px solid #fff;
   transition: 0.1s ease;
 }
 
 .checkbox-container:hover input ~ .custom-checkbox {
-  background-color: #000;
+  background: rgba(255, 255, 255, 0.2);
   transition: 0.2s ease;
 }
 
 .checkbox-container input:checked ~ .custom-checkbox {
-  background-color: #000;
+  background: url(../assets/check.svg);
 }
 
-.custom-checkbox:after {
+/* .custom-checkbox:after {
   content: "";
   position: absolute;
-  width: 3px;
-  height: 8px;
-  border: solid white;
-  border-width: 0 3px 3px 0;
-  top: 4px;
-  left: 8px;
-  transform: rotate(45deg);
-  display: none;
-}
+} */
 
 .checkbox-container input:checked ~ .custom-checkbox::after {
   display: block;

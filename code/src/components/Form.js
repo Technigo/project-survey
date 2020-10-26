@@ -164,15 +164,21 @@ const Form = () => {
       </div>
     );
 
-    /********** SUMMERY **********/
+    /* SUMMERY */
   } else {
     return (
       <div className="form-container">
         <div className="summery-container">
-          <SummeryPage firstName={firstName} />
+          <SummeryPage
+            firstName={firstName}
+            email={email}
+            eventDate={eventDate}
+            location={location}
+            wantsNewsletter={wantsNewsletter}
+          />
           <div className="btn-container">
             <Button
-              buttonText={"Return"}
+              buttonText="Return"
               handleClick={handleReturn}
               singleButton
             />
