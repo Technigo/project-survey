@@ -32,7 +32,7 @@ const CheckPage = ({
           <span className="custom-checkbox"></span>
         </label>
         <label className="checkbox-container-text">
-          Yes, I agree to the <a href="">terms & conditions</a>
+          Yes, I agree to the <a href="#">terms &amp; conditions</a>
         </label>
       </div>
     </div>
