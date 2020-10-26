@@ -1,13 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This survey is for coffee fans in the neighbourhood.
+It asks a visitor several questions about their coffee preferences and in the end provides a summary.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The project is developed with React + JSX and CSS.
+It helped me understand how useState works and how to organize components in a more efficient way.
+
+My plan is to make it more in Typeform style so that each question appears when a visitor answers a previous one.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://coffeesurvey-liza-minican.netlify.app/

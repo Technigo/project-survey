@@ -4,7 +4,7 @@ import {Questionaddress} from "js components/Questionaddress"
 import { Questiondrink } from 'js components/Questiondrink';
 import { Questionamountofcoffee } from 'js components/Questionamountofcoffee';
 import { Questionrange } from 'js components/Questionrange';
-import { Button1 } from 'js components/Button1';
+import { ButtonSubmit } from 'js components/ButtonSubmit';
 import { Header } from 'js components/Header';
 import { Summary } from 'js components/Summary';
 
@@ -63,7 +63,7 @@ return (
         coffeeprice={coffeeprice}
         onRangeChange = {handleCoffeepriceChange}
         />
-    <Button1 />
+    <ButtonSubmit />
   </form>
   ) : ( <Summary name = {answername}
                 address = {answeraddress}

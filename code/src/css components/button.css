@@ -1,4 +1,4 @@
-.subscribebutton {
+.button {
   background: rgb(248, 196, 204);
   color: grey;
   border-style: outset;
@@ -8,9 +8,13 @@
   font: bold 15px arial, sans-serif;
   text-shadow: none;
 }
-.subscribebutton:hover {
+.button:hover {
   background: rgb(248, 196, 204);
 }
-.subscribebutton:focus {
+.button:focus {
   outline: thin dotted;
+}
+
+.btn-reset {
+  margin-left: 40px;
 }
