@@ -9,3 +9,9 @@
   color: #fff;
   line-height: 24px;
 }
+
+@media (max-width: 667px) {
+  .summery-text {
+    text-align: center;
+  }
+}
