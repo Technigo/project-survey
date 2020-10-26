@@ -15,6 +15,7 @@ I have created a survey by a fictional moving company.
 - reload button which reloads the page and returns to starting page
 
 ## Future improvements
+- add a section with required phone number and email with validation
 - separate sections by having one question per page
 - include back and forward buttons for moving between the questions
 - make a progress bar

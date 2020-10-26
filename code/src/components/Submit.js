@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./submit.css"
+import "./form.css"
 
 export const Submit = () => {
 

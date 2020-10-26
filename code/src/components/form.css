@@ -48,3 +48,21 @@ p {
 label, option {
   font-size: 18px;
 }
+
+button {
+  font-size: 20px;
+  font-weight: 500;
+  border-radius: 10px;
+  width: fit-content;
+  padding: 10px 30px;
+  align-self: center;
+  background-color: #FB8B35;
+  color: #212432;
+  border: 1px solid #212432;
+  cursor: pointer;
+}
+
+.summary {
+  margin-top: 200px;
+  border: 1px solid brown;
+}
