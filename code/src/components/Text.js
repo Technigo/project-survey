@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../style/input-box.css';
 
-export const Text = ({ name, setName, askQuestion }) => {
+export const Text = ({ name, setName, askQuestion, handleNameChange }) => {
 
   return(
     <div>
@@ -12,7 +12,7 @@ export const Text = ({ name, setName, askQuestion }) => {
           className="input-text"
           onKeyPress={event => {event.key === 'Enter' && event.preventDefault();}}
           type="text"
-          onChange={event => setName(event.target.value)}
+          onChange={handleNameChange}
           value={name}
           placeholder="Enter name here..."
           required

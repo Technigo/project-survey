@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../style/input-box.css'
 
-export const Select = ({ location, setLocation, askQuestion, cityArray }) => {
+export const Select = ({ location, setLocation, askQuestion, cityArray, handleLocationChange }) => {
 
   return (
     
@@ -12,7 +12,7 @@ export const Select = ({ location, setLocation, askQuestion, cityArray }) => {
         id="city"
         className="input-select"
         tabIndex="0"
-        onChange={event => setLocation(event.target.value)}
+        onChange={handleLocationChange}
         value={location}
       >
       {cityArray.map(city =>(

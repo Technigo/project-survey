@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../style/input-box.css'
 
-export const Rating = ({ rating, setRating, askQuestion }) => {
+export const Rating = ({ rating, setRating, askQuestion, handleRatingChange }) => {
   return (
     <div className="question-container">
       <h2 tabIndex="0">{askQuestion}</h2>
@@ -11,7 +11,7 @@ export const Rating = ({ rating, setRating, askQuestion }) => {
         id="rating" 
         className="input-rating"
         type="number" 
-        onChange={event => setRating(event.target.value)}
+        onChange={handleRatingChange}
         value={rating}
         min="1" 
         max="10" 

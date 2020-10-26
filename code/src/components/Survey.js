@@ -21,6 +21,22 @@ const [rating, setRating] = useState(0);
 
 const nextQuestion = () => setQuestion(question +1);
 
+const handleNameChange = event => {
+  setName(event.target.value);
+};
+
+const handleLocationChange = event => {
+  setLocation(event.target.value);
+};
+
+const handleAgeChange = event => {
+  setAgeGroup(event.target.value);
+}
+
+const handleRatingChange = event => {
+  setRating(event.target.value);  
+}
+
 const cityArray = [
   {
     text:"Select city...",
@@ -105,6 +121,7 @@ const handleSubmit = (event) => {
                 name={name}
                 setName={setName}
                 askQuestion="What is your name?"
+                handleNameChange={handleNameChange}
               />
               <Button 
                 button="button"
@@ -122,6 +139,7 @@ const handleSubmit = (event) => {
                 setLocation={setLocation}
                 askQuestion="What is your favourite city to watch live music?"
                 cityArray={cityArray}
+                handleLocationChange={handleLocationChange}
               /> 
               <Button 
                 button="button"
@@ -139,6 +157,7 @@ const handleSubmit = (event) => {
                 setAgeGroup={setAgeGroup}
                 ageGroupsArray={ageGroupsArray}
                 askQuestion="What is your age group?"
+                handleAgeChange={handleAgeChange}
               />
               <Button 
                 button="button"
@@ -155,6 +174,7 @@ const handleSubmit = (event) => {
                   rating={rating} 
                   setRating={setRating}
                   askQuestion="How would you rate your last live music experience?"
+                  handleRatingChange={handleRatingChange}
                 />
                 <Button 
                 button="submit"

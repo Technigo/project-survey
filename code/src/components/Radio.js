@@ -2,7 +2,7 @@ import React from 'react';
 
 import '../style/radio.css';
 
-export const Radio = ({ ageGroup, setAgeGroup, ageGroupsArray, askQuestion }) => {
+export const Radio = ({ ageGroup, setAgeGroup, ageGroupsArray, askQuestion, handleAgeChange }) => {
   
   return (
       <>
@@ -17,8 +17,9 @@ export const Radio = ({ ageGroup, setAgeGroup, ageGroupsArray, askQuestion }) =>
               >
                 <input
                   type="radio"
+                  id={group}
                   value={group}
-                  onChange={event => setAgeGroup(event.target.value)}
+                  onChange={handleAgeChange}
                   checked={ageGroup === group}
                 />
                 {group}
