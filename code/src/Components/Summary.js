@@ -4,12 +4,13 @@ const Summary = ({ userYearofBirth, userGender, userActivities, userRecommendati
 
     return (
         <div>
-            <div>{userYearofBirth}</div>
-            <div>{userGender}</div>
-            <div>{userActivities}</div>
-            <div>{userRecommendation}</div>
-            <div>{userExpectation}</div>
-            <div>{userTextInput}</div>
+            <p>
+                Jag är en {userGender} född år {userYearofBirth}. 
+                Jag har deltagit i aktiviteten {userActivities}. 
+                {userActivities} kan jag {userRecommendation} rekommendera
+                till en vän. Aktiviteten {userExpectation} mina förväntningar. 
+                Jag vill också skicka med er {userTextInput}.
+            </p>
         </div>
     );
 }
