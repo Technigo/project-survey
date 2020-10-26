@@ -8,33 +8,33 @@ const ThirdQuestion = ({ userActivities, onActivitiesChange, section, setSection
             <h2 className="question-heading">Vilken aktivitet har du deltagit i?</h2>
             <div className="checkboxes activity">
 
-                <label htmlFor="mealCoaching">Måltidscoachning</label>
+                <label htmlFor="måltidsCoachning">Måltidscoachning</label>
                 <input
-                    id="mealCoaching"
+                    id="måltidsCoachning"
                     type="checkbox"
-                    checked={userActivities.includes('mealCoaching')}
-                    onChange={() => onActivitiesChange('mealCoaching')}
+                    checked={userActivities.includes('måltidsCoachning')}
+                    onChange={() => onActivitiesChange('måltidsCoachning')}
                 />
-                <label htmlFor="phoneChat">Telefonfika</label>
+                <label htmlFor="telefonFika">Telefonfika</label>
                 <input
-                    id="phoneChat"
+                    id="telefonFika"
                     type="checkbox"
-                    checked={userActivities.includes('phoneChat')}
-                    onChange={() => onActivitiesChange('phoneChat')}
+                    checked={userActivities.includes('telefonFika')}
+                    onChange={() => onActivitiesChange('telefonFika')}
                 />
-                <label htmlFor="digitalCourse">Digital kurs</label>
+                <label htmlFor="digitalKurs">Digital kurs</label>
                 <input
-                    id="digitalCourse"
+                    id="digitalKurs"
                     type="checkbox"
-                    checked={userActivities.includes('digitalCourse')}
-                    onChange={() => onActivitiesChange('digitalCourse')}
+                    checked={userActivities.includes('digitalKurs')}
+                    onChange={() => onActivitiesChange('ditigalKurs')}
                 />
-                <label htmlFor="coaching">Råd av en coach</label>
+                <label htmlFor="rådAvCoach">Råd av en coach</label>
                 <input
-                    id="coaching"
+                    id="rådAvCoach"
                     type="checkbox"
-                    checked={userActivities.includes('coaching')}
-                    onChange={() => onActivitiesChange('coaching')}
+                    checked={userActivities.includes('rådAvCoach')}
+                    onChange={() => onActivitiesChange('rådAvCoach')}
                 />
             </div>
             <Button 

@@ -11,8 +11,8 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
           <input 
             type="radio"
             name="expectation"
-            value="allTheWay"         
-            checked={userExpectations === "allTheWay"}  
+            value="jajjemän"         
+            checked={userExpectations === value}  
             onChange={onExpectationsChange}    
             className="radio-button"
           />
@@ -25,8 +25,8 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
             <input 
               type="radio"
               name="expectation"
-              value="somewhat"           
-              checked={userExpectations === "somewhat"}
+              value="någotSåNär"           
+              checked={userExpectations === value}
               onChange={onExpectationsChange}
               className="radio-button"
             />
@@ -38,8 +38,8 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
             <input 
               type="radio"
               name="expectation"
-              value="dontKnow"           
-              checked={userExpectations === "dontKnow"}
+              value="vetInte"           
+              checked={userExpectations === value}
               onChange={onExpectationsChange}
               className="radio-button"
             />
@@ -52,8 +52,8 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
             <input 
               type="radio"
               name="expectation"
-              value="notReally"           
-              checked={userExpectations === "notReally"}
+              value="inteRiktigt"           
+              checked={userExpectations === value}
               onChange={onExpectationsChange}
               className="radio-button"
             />
@@ -66,8 +66,8 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
             <input 
               type="radio"
               name="expectation"
-              value="notAtAll"           
-              checked={userExpectations === "notAtAll"}
+              value="inteAlls"           
+              checked={userExpectations === value}
               onChange={onExpectationsChange}
               className="radio-button"
             />

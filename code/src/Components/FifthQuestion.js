@@ -11,8 +11,8 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
           <input 
             type="radio"
             name="recommendation"
-            value="alreadyDid"         
-            checked={userRecommendation === "alreadyDid"}  
+            value="redanGjort"         
+            checked={userRecommendation === value}  
             onChange={onRecommendationChange}    
             className="radio-button"
           />
@@ -25,8 +25,8 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
             <input 
               type="radio"
               name="recommendation"
-              value="onMyWay"           
-              checked={userRecommendation === "onMyWay"}
+              value="närJagKan"           
+              checked={userRecommendation === value}
               onChange={onRecommendationChange}
               className="radio-button"
             />
@@ -38,9 +38,9 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
             <input 
               type="radio"
               name="recommendation"
-              value="dontKnow"           
+              value="vetInte"           
               onChange={onRecommendationChange}
-              checked={userRecommendation === "dontKnow"}
+              checked={userRecommendation === value}
               className="radio-button"
             />
             Har inte tänkt på det
@@ -52,8 +52,8 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
             <input 
               type="radio"
               name="recommendation"
-              value="probablyNot"           
-              checked={userRecommendation === "probablyNot"}
+              value="troligenInte"           
+              checked={userRecommendation === value}
               onChange={onRecommendationChange}
               className="radio-button"
             />
@@ -66,8 +66,8 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
             <input 
               type="radio"
               name="recommendation"
-              value="noWay"           
-              checked={userRecommendation === "noWay"}
+              value="nej"           
+              checked={userRecommendation === value}
               onChange={onRecommendationChange}
               className="radio-button"
             />

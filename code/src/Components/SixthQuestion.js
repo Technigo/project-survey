@@ -13,6 +13,7 @@ const SixthQuestion = ({ userTextInput, onTextInputChange, section, setSection }
           onChange={e => onTextInputChange(e.target.value)}
           id="userTextInput"
           type="textarea"
+          placeholder="Det var roligt att..."
           required
         />
         <SubmitButton 
