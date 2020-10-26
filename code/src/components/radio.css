@@ -88,3 +88,14 @@
   outline-offset: 3px;
   transition: 0.2s ease;
 }
+
+/*** MOBILE ***/
+@media (max-width: 667px) {
+  .custom-radio {
+    margin: 0 0 0 58px;
+  }
+
+  .radio-text {
+    margin: 0 5px 0 20px;
+  }
+}

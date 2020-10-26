@@ -13,3 +13,11 @@
   border: 4px solid #fff;
   border-radius: 25px;
 }
+
+/*** MOBILE ***/
+@media (max-width: 667px) {
+  .main-container {
+    border: none;
+    width: 100%;
+  }
+}

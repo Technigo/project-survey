@@ -71,3 +71,11 @@ a:visited {
 a:hover {
   text-decoration: none;
 }
+
+/*** MOBILE ***/
+@media (max-width: 667px) {
+  h1 {
+    font-size: 56px;
+    letter-spacing: 1px;
+  }
+}

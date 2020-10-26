@@ -60,3 +60,18 @@
   outline: 2px solid #fff;
   outline-offset: 2px;
 }
+
+/*** MOBILE ***/
+@media (max-width: 667px) {
+  .checkbox-container-text {
+    margin: 2px 0px 1px 72px;
+  }
+
+  .wrapper-row {
+    width: 100%;
+  }
+
+  .custom-checkbox {
+    margin-left: 14px;
+  }
+}

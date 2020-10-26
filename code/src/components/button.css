@@ -22,8 +22,8 @@
 }
 
 .single-btn {
-  margin: 0 auto;
-  margin-bottom: 50px;
+  margin-bottom: 100px;
+  margin: auto;
 }
 
 .btn:focus,
@@ -32,4 +32,13 @@
   box-shadow: none !important;
   outline-offset: 3px;
   transition: 0.15s ease-in-out;
+}
+
+/*** MOBILE ***/
+@media (max-width: 667px) {
+  .btn {
+    width: 110px;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 1);
+  }
 }

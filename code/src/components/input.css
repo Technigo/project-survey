@@ -60,3 +60,10 @@ input[type="text"]:focus {
   color: #fff;
   border-bottom: 3px solid rgba(255, 255, 255, 1);
 }
+
+/*** MOBILE ***/
+@media (max-width: 667px) {
+  input.input-contact {
+    width: 78%;
+  }
+}

@@ -23,7 +23,6 @@ const Form = () => {
 
   const handleNextPage = () => {
     // regex e-mail
-    // eslint-disable-next-line
     const mail = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     mail.test(email);
 
@@ -70,13 +69,7 @@ const Form = () => {
     // reset error message
     setErrorMessage("");
 
-    console.log("summery");
-    console.log("firstName", firstName);
     console.log("lastName", lastName);
-    console.log("email", email);
-    console.log("location", location);
-    console.log("eventDate", eventDate);
-    console.log("wantsNewsletter", wantsNewsletter);
   };
 
   const handleReturn = () => {
@@ -91,16 +84,15 @@ const Form = () => {
     setAcceptTerms(false);
   };
 
-  console.log("showSubmit", showSubmit);
   if (!showSubmit) {
     return (
       <div className="form-container">
         <form name="survey" onSubmit={handleFormSubmit}>
-          {/********** START PAGE **********/}
+          {/* START PAGE */}
 
           {currentPage === 0 && <h1>Welcome to our event!</h1>}
 
-          {/********** FORM PAGE 1 **********/}
+          {/* FORM PAGE 1 */}
 
           {currentPage === 1 && (
             <InputPage
@@ -113,19 +105,19 @@ const Form = () => {
             />
           )}
 
-          {/********** FORM PAGE 2 **********/}
+          {/*FORM PAGE 2 */}
 
           {currentPage === 2 && (
             <RadioPage setEventDate={setEventDate} eventDate={eventDate} />
           )}
 
-          {/********** FORM PAGE 3 **********/}
+          {/* FORM PAGE 3 */}
 
           {currentPage === 3 && (
             <SelectPage setLocation={setLocation} location={location} />
           )}
 
-          {/********** FORM PAGE 4 **********/}
+          {/* FORM PAGE 4 */}
 
           {currentPage === 4 && (
             <>
@@ -138,10 +130,10 @@ const Form = () => {
             </>
           )}
 
-          {/********** ERROR **********/}
+          {/* ERROR */}
           {errorMessage !== "" && <ErrorMessage errorMessage={errorMessage} />}
 
-          {/********** BUTTONS **********/}
+          {/* BUTTONS */}
 
           <div className="btn-container">
             {currentPage !== 0 && (
