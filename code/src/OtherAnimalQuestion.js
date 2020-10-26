@@ -17,7 +17,6 @@ export const OtherAnimalQuestion = (props) => {
             <option value="bunny kitten">Bunny kitten</option>
             <option value="giraffe seal">Giraffe seal</option>
             <option value="snake panda">Snake panda</option>
-            <option value="no">No.</option>
         </select>
       </section>
     );
