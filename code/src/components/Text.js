@@ -5,7 +5,7 @@ const Text = ({ questionText, textAnswer, onTextChange }) => {
 
   return (
     <div className="section-container">
-      <label htmlFor="textField">{questionText}</label>
+      <label tabIndex="0" htmlFor="textField">{questionText}</label>
       <input
         tabIndex="0"
         type="text"

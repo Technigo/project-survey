@@ -4,12 +4,12 @@ import "components/dropdown.css";
 
 // const dropDownOptionsArray = ["-", "0-10 km", "20-50 km", "50+ km"];
 
-const DropDown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
+const Dropdown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
 
   return (
     <section className="section-container">
       <div className="form-container">
-        <label htmlFor="drop-down">{dropdownText}
+        <label tabIndex="0" htmlFor="drop-down">{dropdownText}
           <select
             name="distances" //not sure if necessary
             onChange={(event) => onDistanceChange(event.target.value)}
@@ -33,4 +33,4 @@ const DropDown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
   );
 };
 
-export default DropDown;
+export default Dropdown;

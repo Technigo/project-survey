@@ -4,7 +4,7 @@ import "./radiobutton.css";
 
 const answersArray = ["YES", "NO"];
 
-const RadioButton = ({ radioText, radioAnswer, onAnswerChange }) => {
+const Radiobutton = ({ radioText, radioAnswer, onAnswerChange }) => {
 
   return (
     <section className="section-container">
@@ -12,11 +12,11 @@ const RadioButton = ({ radioText, radioAnswer, onAnswerChange }) => {
       <div className="radio-btn-container">
         {answersArray.map(item => {
           return (
-            <label key={item} htmlFor="button">
+            <label tabIndex="0" key={item} htmlFor={item}>
               <input
+                tabIndex="0"
                 type="radio"
-                name="button"
-                id="button"
+                id={item}
                 required
                 value={item}
                 onChange={event => onAnswerChange(event.target.value)}
@@ -31,4 +31,4 @@ const RadioButton = ({ radioText, radioAnswer, onAnswerChange }) => {
   )
 }
 
-export default RadioButton;
+export default Radiobutton;

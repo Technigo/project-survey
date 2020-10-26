@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Header from "./Header";
 import Checkbox from "./Checkbox";
 import Text from "./Text";
-import DropDown from './DropDown';
-import RadioButton from "./RadioButton";
+import Dropdown from './Dropdown';
+import Radiobutton from "./Radiobutton";
 import Submit from "./Submit";
 import Summary from "./Summary";
 import Reload from "./Reload";
@@ -52,25 +52,24 @@ const Form = () => {
         <div className="form-container">
           <Header
             title="We like to move you!"
-            subtitle="your favourite moving company in Skåne"
+            subtitle="&#9734; your favourite moving company in Lund &#9734;"
           />
           <Checkbox
             isBoxChecked={checkBox}
             onCheckBoxChange={handleCheckBoxChange}
           />
           <Text
-            questionText="Name and surname"
+            questionText="Name and surname:"
             textAnswer={text}
             onTextChange={handleTextChange}
           />
-          <DropDown
+          <Dropdown
             dropdownText="How far are you moving?"
             dropdownAnswer={distance}
             onDistanceChange={handleDistanceChange}
           />
-          <RadioButton
-            radioText="We are fond of reusing cardboard boxes. 
-            Would you like to order them for your move?"
+          <Radiobutton
+            radioText="Would you like to rent cardboard boxes as well?"
             radioAnswer={answer}
             onAnswerChange={handleAnswerChange}
           />

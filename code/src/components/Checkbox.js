@@ -6,7 +6,7 @@ const Checkbox = ({ isBoxChecked, onCheckBoxChange }) => {
 
   return (
     <section className="section-container">
-      <p>I would like a price estimation for:</p>
+      <p tabIndex="0">I would like a price estimation for:</p>
       <label htmlFor="moving">
         <input
           tabIndex="0"
