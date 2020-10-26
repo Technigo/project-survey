@@ -4,7 +4,7 @@ import "./dropdown.css";
 
 // const dropDownOptionsArray = ["-", "0-10 km", "20-50 km", "50+ km"];
 
-const Dropdown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
+const DropDown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
 
   return (
     <section className="section-container">
@@ -33,4 +33,4 @@ const Dropdown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
   );
 };
 
-export default Dropdown;
+export default DropDown;

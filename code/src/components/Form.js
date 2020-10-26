@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import Header from "components/Header";
 import Checkbox from "components/Checkbox";
 import Text from "components/Text";
-import Dropdown from "./Dropdown";
-import Radiobutton from "components/Radiobutton";
+import DropDown from "components/DropDown";
+import RadioButton from "components/RadioButton";
 import Submit from "components/Submit";
 import Summary from "components/Summary";
 import Reload from "components/Reload";
@@ -62,12 +62,12 @@ const Form = () => {
             textAnswer={text}
             onTextChange={handleTextChange}
           />
-          <Dropdown
+          <DropDown
             dropdownText="How far are you moving?"
             dropdownAnswer={distance}
             onDistanceChange={handleDistanceChange}
           />
-          <Radiobutton
+          <RadioButton
             radioText="Would you like to rent cardboard boxes?"
             radioAnswer={answer}
             onAnswerChange={handleAnswerChange}

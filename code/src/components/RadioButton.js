@@ -5,7 +5,7 @@ import "./radiobutton.css";
 
 const answersArray = ["YES", "NO"];
 
-const Radiobutton = ({ radioText, radioAnswer, onAnswerChange }) => {
+const RadioButton = ({ radioText, radioAnswer, onAnswerChange }) => {
 
   return (
     <section className="section-container">
@@ -32,4 +32,4 @@ const Radiobutton = ({ radioText, radioAnswer, onAnswerChange }) => {
   );
 };
 
-export default Radiobutton;
+export default RadioButton;
