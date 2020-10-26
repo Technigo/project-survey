@@ -1,13 +1,13 @@
 import React from "react";
 
-//collects all the inputs - ANSWERS - and presents them
-const Summary = ({ questionAnswer1, questionAnswer2, questionAnswer3, isBoxChecked }) => {
+const Summary = ({ isBoxChecked, textAnswer, dropdownAnswer, radioAnswer }) => {
   return (
     <div className="summary">
       <h1 tabIndex="0">Summary of your moving requirements:</h1>
-      <p>Thank you for your price inquiry, {questionAnswer1}! You want price for {isBoxChecked}.
-      You're moving to a new place which is {questionAnswer2} away.
-      You said {questionAnswer3} to our cleaning service.
+      <p>Thank you for your price inquiry, {textAnswer}! You want price for {isBoxChecked}.
+      You're moving to a new place which is {dropdownAnswer} away.
+      You said {radioAnswer} to our cleaning service.
+      We will send you a price estimation shortly.
       </p>
     </div>
   );

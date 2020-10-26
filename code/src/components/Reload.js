@@ -3,19 +3,23 @@ import React from "react";
 import "./reload.css";
 
 const Reload = () => {
-  window.location.reload();
+
+  const reloadPage = () => {
+    window.location.reload();
+  };
 
   return (
     <section className="section-container">
       <button
         tabIndex="0"
         type="reset"
-      // onClick={window.location.reload()}
+        onClick={reloadPage}
       >
         Reload
       </button>
-    </section>
+    </section >
   );
+
 };
 
 export default Reload;

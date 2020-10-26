@@ -4,7 +4,7 @@ import Header from "./Header";
 import Checkbox from "./Checkbox";
 import Text from "./Text";
 import DropDown from './DropDown';
-import Question3 from "./Question3";
+import RadioButton from "./RadioButton";
 import Submit from "./Submit";
 import Summary from "./Summary";
 import Reload from "./Reload";
@@ -21,8 +21,7 @@ const Form = () => {
   const [distance, setDistance] = useState({});
   const [answer, setAnswer] = useState("");
 
-  //if the function starts with "on", then it should only be used within the component
-  //if the function is passed to other components, use "handle" prefix 
+  //all state functions
   const handleCheckBoxChange = (newCheck) => {
     checkBox.includes(newCheck)
       ? setCheckBox(checkBox.filter(item => item !== newCheck))
@@ -60,8 +59,8 @@ const Form = () => {
             onCheckBoxChange={handleCheckBoxChange}
           />
           <Text
-            questionText1="Name and surname"
-            questionAnswer1={text}
+            questionText="Name and surname"
+            textAnswer={text}
             onTextChange={handleTextChange}
           />
           <DropDown
@@ -69,10 +68,10 @@ const Form = () => {
             dropdownAnswer={distance}
             onDistanceChange={handleDistanceChange}
           />
-          <Question3
-            questionText3="We are fond of reusing cardboard boxes. 
+          <RadioButton
+            radioText="We are fond of reusing cardboard boxes. 
             Would you like to order them for your move?"
-            questionAnswer3={answer}
+            radioAnswer={answer}
             onAnswerChange={handleAnswerChange}
           />
           <Submit />
@@ -82,10 +81,10 @@ const Form = () => {
       {displaySummary && (
         <>
           <Summary
-            questionAnswer1={text}
-            questionAnswer2={distance}
-            questionAnswer3={answer}
-            isBoxChecked={checkBox.join(` , `)}
+            textAnswer={text}
+            dropdownAnswer={distance}
+            radioAnswer={answer}
+            isBoxChecked={checkBox.join(`, `)}
           />
           <Reload />
         </>

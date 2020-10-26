@@ -11,7 +11,7 @@ const DropDown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
       <div className="form-container">
         <label htmlFor="drop-down">{dropdownText}
           <select
-            name="drop-down" //not sure if necessary
+            name="distances" //not sure if necessary
             onChange={(event) => onDistanceChange(event.target.value)}
             value={dropdownAnswer}
             required
@@ -22,7 +22,7 @@ const DropDown = ({ dropdownText, dropdownAnswer, onDistanceChange }) => {
             <option tabIndex="0" value="20-50 km">20-50 km</option>
             <option tabIndex="0" value="50+ km">50+ km</option>
 
-            {/* why required attribute doesn't work with <select> when I use map()? */}
+            {/* why "required" attribute doesn't work with <select> when I use map()? */}
             {/* {dropDownOptionsArray.map((option) => {
               return <option tabindex="0" key={option} value={option}>{option}</option>;
             })} */}

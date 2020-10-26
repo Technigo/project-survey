@@ -1,14 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import "./question3.css"
+import "./radiobutton.css";
 
 const answersArray = ["YES", "NO"];
 
-const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
+const RadioButton = ({ radioText, radioAnswer, onAnswerChange }) => {
 
   return (
     <section className="section-container">
-      <p>{questionText3}</p>
+      <p>{radioText}</p>
       <div className="radio-btn-container">
         {answersArray.map(item => {
           return (
@@ -20,7 +20,7 @@ const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
                 required
                 value={item}
                 onChange={event => onAnswerChange(event.target.value)}
-                checked={questionAnswer3 === item}
+                checked={radioAnswer === item}
               ></input>
               {item}
             </label>
@@ -31,4 +31,4 @@ const Question3 = ({ questionText3, questionAnswer3, onAnswerChange }) => {
   )
 }
 
-export default Question3;
+export default RadioButton;
