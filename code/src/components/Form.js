@@ -3,13 +3,14 @@ import React, { useState } from 'react';
 import Header from "./Header";
 import Checkbox from "./Checkbox";
 import Text from "./Text";
-import Question2 from "./Question2";
+import DropDown from './DropDown';
 import Question3 from "./Question3";
 import Submit from "./Submit";
 import Summary from "./Summary";
 import Reload from "./Reload";
 
 import "./form.css";
+
 
 const Form = () => {
   //all state hooks
@@ -63,9 +64,9 @@ const Form = () => {
             questionAnswer1={text}
             onTextChange={handleTextChange}
           />
-          <Question2
-            questionText2="How far are you moving?"
-            questionAnswer2={distance}
+          <DropDown
+            dropdownText="How far are you moving?"
+            dropdownAnswer={distance}
             onDistanceChange={handleDistanceChange}
           />
           <Question3

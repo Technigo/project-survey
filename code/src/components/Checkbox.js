@@ -41,23 +41,6 @@ const Checkbox = ({ isBoxChecked, onCheckBoxChange }) => {
         </input>
         Cleaning
       </label>
-
-      {/* {checkBoxArray.map(item => {
-        return (
-          <label htmlFor={item} key={item}>
-            <input
-              type="checkbox"
-              id={item}
-              required
-              onChange={(event) => onCheckBoxChange(event.target.checked)}
-              //checking whether the item is present in the isBoxChecked array
-              checked={isBoxChecked.includes(item)}
-            >
-            </input>
-            {item}
-          </label>
-        );
-      })} */}
     </section >
   );
 };
