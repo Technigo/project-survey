@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  font-family: "Roboto", sans-serif;
   background: linear-gradient(307deg, #0005ff, #281187, #190faa, #0260fd);
   background-size: 800% 800%;
 
@@ -44,6 +45,7 @@ body {
 
 h1,
 h2 {
+  color: #fff;
   margin: 0 auto 30px;
   text-align: center;
 }
@@ -53,5 +55,5 @@ h1 {
 }
 
 h2 {
-  font-size: 30px;
+  font-size: 26px;
 }

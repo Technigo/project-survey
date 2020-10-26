@@ -5,11 +5,20 @@
   height: 40px;
   /* padding: 14px 0; */
   border-radius: 10px;
-  background: rgba(255, 255, 255, 0.4);
-  font-size: 20px;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 24px;
   color: #000;
   font-weight: 700;
   letter-spacing: 1px;
+  border: none;
+  mix-blend-mode: screen;
+  text-transform: uppercase;
+  transition: 0.15s ease-in-out;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transition: 0.15s ease-in-out;
 }
 
 .single-btn {
@@ -18,7 +27,9 @@
 
 .btn:focus,
 .btn:active {
-  outline: 2px solid red !important;
+  outline: 1px solid #fff !important;
   box-shadow: none !important;
   outline-offset: 3px;
+  /* background: rgba(255, 255, 255, 1); */
+  transition: 0.15s ease-in-out;
 }

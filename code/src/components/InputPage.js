@@ -15,16 +15,16 @@ const InputPage = ({
       <h2>Your contact details</h2>
 
       <Input
-        placeholder={"First name:"}
+        placeholder={"First name"}
         setState={setFirstName}
         value={firstName}
       />
       <Input
-        placeholder={"Last name:"}
+        placeholder={"Last name"}
         setState={setLastName}
         value={lastName}
       />
-      <Input placeholder={"Email:"} setState={setEmail} value={email} />
+      <Input placeholder={"Email"} setState={setEmail} value={email} />
     </div>
   );
 };
