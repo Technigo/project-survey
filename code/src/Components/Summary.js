@@ -8,7 +8,7 @@ const Summary = ({ userYearofBirth, userGender, userActivities, userExpectation,
                 Jag är en {userGender} född år {userYearofBirth}. 
                 Jag har deltagit i aktiviteten {userActivities}. 
                 {userActivities} kan jag {userRecommendation} rekommendera
-                till en vän. Aktiviteten {userExpectation} mina förväntningar. 
+                till en vän. Aktiviteten uppfyllde {userExpectation} mina förväntningar. 
                 Jag vill också skicka med er {userTextInput}.
             </p>
         </div>
