@@ -32,7 +32,8 @@ const CheckPage = ({
           <span className="custom-checkbox"></span>
         </label>
         <label className="checkbox-container-text">
-          Yes, I agree to the <a href="#">terms &amp; conditions</a>
+          Yes, I agree to the{" "}
+          <a href="https://event-rsvp.netlify.app/">terms &amp; conditions</a>
         </label>
       </div>
     </div>
