@@ -16,7 +16,6 @@ export const Questionrange = ({coffeeprice, onRangeChange}) => {
               }}
               min="2" max="6" 
               value={coffeeprice}
-              className="slider"
               aria-label="Choose a price that you consider fair for a cup of coffee from the range of 2 to 6"
           />
             <p>{output} $</p>
