@@ -8,10 +8,17 @@
 .main-container {
   box-sizing: border-box;
   padding: 5% 10%;
-  height: 500px;
-  width: 700px;
+  height: 560px;
+  width: 800px;
   border: 4px solid #fff;
   border-radius: 25px;
+}
+
+/*** TABLET ***/
+@media (max-width: 1024px) {
+  .main-container {
+    width: 700px;
+  }
 }
 
 /*** MOBILE ***/

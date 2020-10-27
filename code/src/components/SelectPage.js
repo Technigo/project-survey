@@ -10,8 +10,8 @@ const SelectPage = ({ setLocation, location }) => {
         value={location}
       >
         <option value="">Select a pass</option>
-        <option value="gold pass">Gold pass</option>
         <option value="silver pass">Silver pass</option>
+        <option value="gold pass">Gold pass</option>
         <option value="platinum pass">Platinum pass</option>
       </select>
     </div>

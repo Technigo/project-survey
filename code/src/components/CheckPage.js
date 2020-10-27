@@ -9,7 +9,7 @@ const CheckPage = ({
 }) => {
   return (
     <div className="check-container">
-      <h2>Sign up for out newsletter?</h2>
+      <h2>Sign up for our newsletter?</h2>
       <div className="wrapper-row">
         <label className="checkbox-container">
           <input
