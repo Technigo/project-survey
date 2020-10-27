@@ -11,9 +11,9 @@ const SecondQuestion = ({ userGender, onGenderChange, section, setSection }) => 
         onChange={e => onGenderChange(e)}
       >
         <option value="">Välj</option>
-        <option value="female">Kvinna</option>
-        <option value="male">Man</option>
-        <option value="other">Annat</option>
+        <option value="kvinna">Kvinna</option>
+        <option value="man">Man</option>
+        <option value="annat">Annat</option>
       </select>
       <Button 
         disable={onGenderChange} 

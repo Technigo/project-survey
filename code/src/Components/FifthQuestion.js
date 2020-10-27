@@ -7,12 +7,12 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
       <section className="question-section">
         <h2 className="question-header">Skulle du rekommendera aktiviteten till en vän?</h2>
         <div className="radio-buttons recommendation">
-          <label htmlFor="alreadyDid">
+          <label htmlFor="redanGjort">
           <input 
             type="radio"
             name="recommendation"
             value="redanGjort"         
-            checked={userRecommendation === value}  
+            checked={userRecommendation === "redanGjort"}  
             onChange={onRecommendationChange}    
             className="radio-button"
           />
@@ -21,12 +21,12 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
         </div>
   
         <div className="recommendation-radio-buttons">
-          <label htmlFor="onMyWay">
+          <label htmlFor="närJagKan">
             <input 
               type="radio"
               name="recommendation"
               value="närJagKan"           
-              checked={userRecommendation === value}
+              checked={userRecommendation === "närJagKan"}
               onChange={onRecommendationChange}
               className="radio-button"
             />
@@ -34,13 +34,13 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
         </div>
   
         <div className="recommendation-radio-buttons">
-          <label htmlFor="dontKnow">
+          <label htmlFor="vetInte">
             <input 
               type="radio"
               name="recommendation"
               value="vetInte"           
               onChange={onRecommendationChange}
-              checked={userRecommendation === value}
+              checked={userRecommendation === "vetInte"}
               className="radio-button"
             />
             Har inte tänkt på det
@@ -48,12 +48,12 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
         </div>
 
         <div className="recommendation-radio-buttons">
-          <label htmlFor="probablyNot">
+          <label htmlFor="troligenInte">
             <input 
               type="radio"
               name="recommendation"
               value="troligenInte"           
-              checked={userRecommendation === value}
+              checked={userRecommendation === "troligenInte"}
               onChange={onRecommendationChange}
               className="radio-button"
             />
@@ -67,7 +67,7 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange, section, se
               type="radio"
               name="recommendation"
               value="nej"           
-              checked={userRecommendation === value}
+              checked={userRecommendation === "nej"}
               onChange={onRecommendationChange}
               className="radio-button"
             />

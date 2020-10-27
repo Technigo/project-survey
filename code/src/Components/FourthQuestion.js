@@ -1,19 +1,20 @@
 import React from 'react';
 import Button from './Button.js'
 
-const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSection }) => {
+const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSection, printString, setPrintString }) => {
 
     return (
       <section className="question-section">
         <h2 className="question-header">Uppfyllde aktiviteten dina förväntningar?</h2>
         <div className="radio-buttons expectation">
-          <label htmlFor="allTheWay">
+          <label htmlFor="jajjemän">
           <input 
             type="radio"
-            name="expectation"
+            name="expect"
             value="jajjemän"         
-            checked={userExpectations === value}  
-            onChange={onExpectationsChange}    
+            checked={userExpectations === "jajjemän"}  
+            onChange={onExpectationsChange} 
+            printString="jajjemän"   
             className="radio-button"
           />
           Jajjemän
@@ -21,26 +22,28 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
         </div>
   
         <div className="radio-buttons expectation">
-          <label htmlFor="somewhat">
+          <label htmlFor="någotSåNär">
             <input 
               type="radio"
-              name="expectation"
+              name="expect"
               value="någotSåNär"           
-              checked={userExpectations === value}
+              checked={userExpectations === "någotSåNär"}
               onChange={onExpectationsChange}
+              printString="något så när"
               className="radio-button"
             />
             Något så när</label>
         </div>
   
         <div className="radio-buttons expectation">
-          <label htmlFor="dontKnow">
+          <label htmlFor="vetInte">
             <input 
               type="radio"
-              name="expectation"
+              name="expect"
               value="vetInte"           
-              checked={userExpectations === value}
+              checked={userExpectations === "vetInte"}
               onChange={onExpectationsChange}
+              printString="vet inte"
               className="radio-button"
             />
             Har inte tänkt på det
@@ -48,13 +51,14 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
         </div>
 
         <div className="radio-buttons expectation">
-          <label htmlFor="notReally">
+          <label htmlFor="inteRiktigt">
             <input 
               type="radio"
-              name="expectation"
+              name="expect"
               value="inteRiktigt"           
-              checked={userExpectations === value}
+              checked={userExpectations === "inteRiktigt"}
               onChange={onExpectationsChange}
+              printString="inte riktigt"
               className="radio-button"
             />
             Inte riktigt
@@ -62,13 +66,14 @@ const FourthQuestion = ({ userExpectations, onExpectationsChange, section, setSe
         </div>
 
         <div className="radio-buttons expectation">
-          <label htmlFor="notAtAll">
+          <label htmlFor="inteAlls">
             <input 
               type="radio"
-              name="expectation"
+              name="expect"
               value="inteAlls"           
-              checked={userExpectations === value}
+              checked={userExpectations === "inteAlls"}
               onChange={onExpectationsChange}
+              printString="inte alls"
               className="radio-button"
             />
             Nej, inte alls.

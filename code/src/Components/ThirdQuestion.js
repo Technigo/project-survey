@@ -8,26 +8,26 @@ const ThirdQuestion = ({ userActivities, onActivitiesChange, section, setSection
             <h2 className="question-heading">Vilken aktivitet har du deltagit i?</h2>
             <div className="checkboxes activity">
 
-                <label htmlFor="måltidsCoachning">Måltidscoachning</label>
+                <label htmlFor="måltidscoachning">Måltidscoachning</label>
                 <input
-                    id="måltidsCoachning"
+                    id="måltidscoachning"
                     type="checkbox"
-                    checked={userActivities.includes('måltidsCoachning')}
-                    onChange={() => onActivitiesChange('måltidsCoachning')}
+                    checked={userActivities.includes('måltidscoachning')}
+                    onChange={() => onActivitiesChange('måltidscoachning')}
                 />
-                <label htmlFor="telefonFika">Telefonfika</label>
+                <label htmlFor="telefonfika">Telefonfika</label>
                 <input
-                    id="telefonFika"
+                    id="telefonfika"
                     type="checkbox"
-                    checked={userActivities.includes('telefonFika')}
-                    onChange={() => onActivitiesChange('telefonFika')}
+                    checked={userActivities.includes('telefonfika')}
+                    onChange={() => onActivitiesChange('telefonfika')}
                 />
                 <label htmlFor="digitalKurs">Digital kurs</label>
                 <input
                     id="digitalKurs"
                     type="checkbox"
                     checked={userActivities.includes('digitalKurs')}
-                    onChange={() => onActivitiesChange('ditigalKurs')}
+                    onChange={() => onActivitiesChange('digitalKurs')}
                 />
                 <label htmlFor="rådAvCoach">Råd av en coach</label>
                 <input

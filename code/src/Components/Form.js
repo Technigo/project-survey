@@ -15,6 +15,7 @@ const Form = () => {
   const [expectations, setExpectations] = useState('');
   const [textInput, setTextInput] = useState('');
   const [section, setSection] = useState('firstQuestion');
+  const [printString, setPrintString] = useState('');
   const handleYearOfBirthChange = event => {
       setYearOfBirth(event.target.value);
   };
@@ -32,6 +33,10 @@ const Form = () => {
   const handleRecommendationChange = event => {
     setRecommendation(event.target.value);
   };
+
+  const handlePrintStringChange = event => {
+    setPrintString(event.target.value)
+  }
 
   const handleExpectationChange = event => {
     setExpectations(event.target.value);
@@ -90,6 +95,8 @@ return (
             onExpectationsChange={handleExpectationChange}
             section={section}
             setSection={setSection}
+            printString={printString}
+            setPrintString={handlePrintStringChange}
           />
         </>
       )}
@@ -100,6 +107,8 @@ return (
             onRecommendationChange={handleRecommendationChange}
             section={section}
             setSection={setSection}
+            printString={printString}
+            setPrintString={setPrintString}
           />
         </>
       )}
@@ -123,7 +132,7 @@ return (
                 userYearofBirth={yearOfBirth}
                 userGender={gender}
                 userActivities={activities}
-                userRecommendation={recommendation}
+                userRecommendation={printString}
                 userExpectation={expectations}
                 userTextInput={textInput}
                 section={section}
