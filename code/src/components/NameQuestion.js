@@ -9,7 +9,6 @@ export const NameQuestion = ({ name, setName }) => {
 				for='name'
 				tabIndex='0' 
 				onSubmit={event => event.preventDefault()}
-				aria-label='Enter your name here'
 			>
 				<input
 					label="Enter Name here"
