@@ -85,6 +85,11 @@ fieldset {
 	color: #f4f4f4;
 }
 
+::placeholder {
+	color: #fff;
+	opacity: 1;
+}
+
 .input-select {
 	border-style: none;
 	border-bottom: 2px solid #f4f4f4;
