@@ -12,14 +12,14 @@ code {
 }
 
 .survey-section {
-  margin-left: 10%;
-  margin-right: 10%;
-  margin-bottom: 10%;
+  max-width: 500px;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
   display: flex;
   flex-direction: column;
-  align-content: center;
   background: rgba(250, 250, 250, 0.9);
-  margin: 6%;
   border-radius: 10px;
 }
 
@@ -91,6 +91,7 @@ input {
   color: #22A800;
   padding: 5%;
   text-align: center;
+  
   font-family: sans-serif;
   font-weight: bold;
 }
@@ -98,22 +99,25 @@ input {
 .radiobutton-section1 {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
-  margin-right: 10%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .radiobutton-section2 {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
-  margin-right: 10%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .radiobutton-section3 {
   display: flex;
   flex-direction: row;
-  margin-left: 10%;
-  margin-right: 10%;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* First letter of your name - section */
@@ -156,6 +160,8 @@ h3 {
 /* Submit button */
 
 .form-submit {
+  display: flex;
+  flex-direction: column;
   font-size: 20px;
   text-transform: uppercase;
   letter-spacing: 2.5px;
@@ -170,7 +176,10 @@ h3 {
   outline: none;
   padding: 20px;
   width: auto;
-  margin: 35px;
+  margin: 7%;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
 }
 
 .form-submit:hover {
@@ -183,11 +192,15 @@ h3 {
 /* Page result */
 
 .submit-section {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  justify-content: center;
   background-color: #013465;
-  position: fixed;
   height: 60%;
   top: 13%;
-  margin: 5%;
+  margin: 10%;
   padding: 5%;
   text-align: center;
   color: #ffffff;
@@ -203,38 +216,8 @@ h3 {
     font-weight: bolder;
     background-color: #013465;
     font-size: 350%;
-  }
-  .survey-section {
-    width: 90%;
-    margin-top: 10%;
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .submit-section {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 10%;
-    height: 25%;
-  }
-  .radiobutton {
-    font-size: 20px;
-  }
-  .radiobutton-section1 {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-  .radiobutton-section2 {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-  .radiobutton-section3 {
-    margin-left: 15%;
-    margin-right: 15%;
-  }
-  .form-submit {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
+} 
+
 }
 
 /* Website media query */
@@ -248,37 +231,5 @@ h3 {
     background-color: #013465;
     font-size: 400%;
   }
-  .survey-section {
-    width: 30%;
-    margin-top: 0;
-    margin-left: 35%;
-    margin-right: 35%;
-  }
-  .form-submit {
-    margin-left: 15%;
-    margin-right: 15%;
-    align-items: center;
-  }
-  .submit-section {
-    margin-left: 20%;
-    margin-right: 20%;
-    margin-top: 3%;
-    height: 25%;
-  }
-  .radiobutton-section1 {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .radiobutton-section2 {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .radiobutton-section3 {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
-  .form-submit {
-    margin-left: 20%;
-    margin-right: 20%;
-  }
+
 }
