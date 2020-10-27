@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I have here made a little survey about headphones which takes in and validated the data from the user and then displays it as a summary.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I was having a bit of problem structuring the site and knowing how to follow through. I did get a lot of help from other students who helped me get a better picture and I was able to deliver the required results. I do say I am more comfortable with React.js than I am with JS at the moment but I feel its small steps to climb a big hill and it will take time to both learn and practice as well as learn to apply the coding properly.
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+You can view it live on : https://hearmeout.netlify.app
