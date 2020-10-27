@@ -6,13 +6,13 @@ import { RadioButton } from './components/RadioButton'
 import { Summary } from './components/Summary'
 
 export const Form = () => {
-	const [name, setName] = useState('');
-	const [brand, setBrand] = useState('');
-	const [knowHeadPhone, setKnowHeadPhone] = useState('');
-	const [summary, setSummary] = useState(false);
+	const [name, setName] = useState('')
+	const [brand, setBrand] = useState('')
+	const [knowHeadPhone, setKnowHeadPhone] = useState('')
+	const [summary, setSummary] = useState(false)
 
 	const handleSubmit = event => {
-		event.preventDefault();
+		event.preventDefault()
 		setSummary(true)
 	};
 
