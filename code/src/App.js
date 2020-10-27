@@ -1,17 +1,13 @@
-import React from "react";
+import React from 'react'
 
 import { Form } from './Form'
+import { Header } from './components/Header'
 
 export const App = () => {
 	return (
-		<div className="App">
-			<div className="header-section" >
-				<h1 className="title" tabIndex="0">HÖRLÜRAR</h1>
-				<p className="title-line-one" tabIndex="0"> What is music to your ears !!</p>
-				<p className="title-line-two" tabIndex="0">Tell us more about your headphones...</p>
-			</div>
-			<div className="headphone-image" tabIndex="0">
-				<img src="./img/headphone.svg" alt="Headphone"></img>
+		<div className='App'>
+			<div>
+				<Header />
 			</div>
 			<div>
 				<Form />

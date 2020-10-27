@@ -1,24 +1,11 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-body {
-  background : black;
+  background: black;
   color: white;
+  margin: 0;
 }
 
 .App {
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
@@ -27,8 +14,9 @@ body {
   text-align: center;
 }
 
-.headphone-image{
+.headphone-image {
   width: 200px;
+  margin-left: 100px;
 }
 
 .title {
@@ -40,7 +28,7 @@ body {
 .title-line-one {
   font-size: 30px;
   font-weight: 500;
-  color:red;
+  color: red;
 }
 
 .title-line-two {
@@ -56,7 +44,7 @@ body {
 }
 
 .name {
-  width:250px;
+  width: 250px;
   font-size: 20px;
 }
 
@@ -73,7 +61,7 @@ body {
 }
 
 .drop-down select {
-  width :200px;
+  width: 200px;
   font-size: 20px;
 }
 
@@ -102,7 +90,7 @@ body {
 .summary button {
   border-radius: 20px;
   font-size: 20px;
-  background-color:  rgba(173,255,47, 0.7);
+  background-color: rgba(173, 255, 47, 0.7);
 }
 
 .summary button {
@@ -112,14 +100,13 @@ body {
 
 .submit-button {
   width: 120px;
-  margin-top:40px;
+  margin-top: 40px;
   margin-bottom: 100px;
 }
 
 .submit-button:hover,
 .summary button:hover {
-  background-color:  rgba(173,255,47, 1);
+  background-color: rgba(173, 255, 47, 1);
   border: 2px solid white;
   cursor: pointer;
 }
-
