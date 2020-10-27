@@ -132,7 +132,7 @@ return (
                 userYearofBirth={yearOfBirth}
                 userGender={gender}
                 userActivities={activities}
-                userRecommendation={printString}
+                userRecommendation={recommendation}
                 userExpectation={expectations}
                 userTextInput={textInput}
                 section={section}
