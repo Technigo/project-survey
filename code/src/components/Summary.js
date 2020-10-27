@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const Summary = ({ageGroup, location, text}) => {
     return (
     <div className='summary'>

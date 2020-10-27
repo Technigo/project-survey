@@ -1,4 +1,4 @@
-Link to my deployed project:
+Link to my deployed project: 
 
 My reflections on how this week's project turned out:
 

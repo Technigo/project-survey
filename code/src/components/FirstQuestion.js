@@ -25,7 +25,7 @@ export const FirstQuestion = ({ageGroup, setAgeGroup}) => {
                 />
                 {group}
                 </label>
-            )   )};
+            )   )}
         </div>
     );
 };
