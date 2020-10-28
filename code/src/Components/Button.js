@@ -1,18 +1,21 @@
 import React from "react";
 
-const Button = ({ disable, setSection, nextQuestion }) => {
-  const handleButton = () => {
-    setSection(nextQuestion);
-  };
+const Button = ({ defaultState, currentState, disabled, setSection, nextQuestion }) => {
+  const handleButton = event => {
+    if(currentState !== defaultState) { 
+      console.log(currentState);
+      console.log(defaultState);
+      setSection(nextQuestion);
+    }
+}
 
   return (
     <div>
       <button
         type="button"
-        className="next-button"
         btnText="Nästa"
         onClick={handleButton}
-        disable={disable === false}
+        className="next-button"
       >
         Nästa
       </button>

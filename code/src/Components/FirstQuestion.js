@@ -1,11 +1,12 @@
 import React from "react";
-import Button from "./Button";
+import Button  from "./Button";
 
 const FirstQuestion = ({
   userYearOfBirth,
   onYearOfBirthChange,
   section,
   setSection,
+  
 }) => {
   return (
     <section className="question-section">
@@ -22,14 +23,12 @@ const FirstQuestion = ({
         required
       />
       <Button
-        disable={onYearOfBirthChange === ""}
         nextQuestion="secondQuestion"
         currentState={userYearOfBirth}
         defaultState=""
         section={section}
         setSection={setSection}
       >
-        Nästa
       </Button>
     </section>
   );

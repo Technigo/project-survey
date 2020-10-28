@@ -16,42 +16,37 @@ const Form = () => {
   const [textInput, setTextInput] = useState("");
   const [section, setSection] = useState("firstQuestion");
   const [printString, setPrintString] = useState("");
-  const handleYearOfBirthChange = (event) => {
+  
+  const handleYearOfBirthChange = event => {
     setYearOfBirth(event.target.value);
   };
 
-  const handleGenderChange = (event) => {
+  const handleGenderChange = event => {
     setGender(event.target.value);
   };
 
-  const handleActivitiesChange = (activityValue) => {
+  const handleActivitiesChange = activityValue => {
     activities.includes(activityValue)
       ? setActivities(activities.filter((item) => item !== activityValue))
       : setActivities([...activities, activityValue]);
   };
 
-  const handleRecommendationChange = (event) => {
+  const handleRecommendationChange = event => {
     setRecommendation(event.target.value);
   };
 
-  const handlePrintStringChange = (event) => {
-    setPrintString(event.target.value);
-  };
-
-  const handleExpectationChange = (event) => {
+  const handleExpectationChange = event => {
     setExpectations(event.target.value);
   };
 
-  const handleTextInputChange = (event) => {
+  const handleTextInputChange = event => {
     setTextInput(event);
   };
 
-  const handleSubmit = (event) => {
+  const handleSubmit = event => {
     event.preventDefault();
     setSection("summary");
   };
-
-  console.log(textInput);
 
   return (
     <>
@@ -59,7 +54,7 @@ const Form = () => {
         {section === "firstQuestion" && (
           <>
             <FirstQuestion
-              userYearofBirth={yearOfBirth}
+              userYearOfBirth={yearOfBirth}
               onYearOfBirthChange={handleYearOfBirthChange}
               section={section}
               setSection={setSection}
@@ -94,7 +89,6 @@ const Form = () => {
               section={section}
               setSection={setSection}
               printString={printString}
-              setPrintString={handlePrintStringChange}
             />
           </>
         )}

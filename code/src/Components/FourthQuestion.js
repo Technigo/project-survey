@@ -2,11 +2,12 @@ import React from "react";
 import Button from "./Button.js";
 
 const FourthQuestion = ({
-  userExpectations,
+  userExpectation,
   onExpectationsChange,
   section,
   setSection,
 }) => {
+
   return (
     <section className="question-section">
       <h2 className="question-header">
@@ -18,7 +19,7 @@ const FourthQuestion = ({
             type="radio"
             name="expect"
             value="jajjemän"
-            checked={userExpectations === "jajjemän"}
+            checked={userExpectation === "jajjemän"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
@@ -32,7 +33,7 @@ const FourthQuestion = ({
             type="radio"
             name="expect"
             value="någotSåNär"
-            checked={userExpectations === "någotSåNär"}
+            checked={userExpectation === "någotSåNär"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
@@ -46,7 +47,7 @@ const FourthQuestion = ({
             type="radio"
             name="expect"
             value="vetInte"
-            checked={userExpectations === "vetInte"}
+            checked={userExpectation === "vetInte"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
@@ -60,7 +61,7 @@ const FourthQuestion = ({
             type="radio"
             name="expect"
             value="inteRiktigt"
-            checked={userExpectations === "inteRiktigt"}
+            checked={userExpectation === "inteRiktigt"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
@@ -74,7 +75,7 @@ const FourthQuestion = ({
             type="radio"
             name="expect"
             value="inteAlls"
-            checked={userExpectations === "inteAlls"}
+            checked={userExpectation === "inteAlls"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
@@ -82,12 +83,11 @@ const FourthQuestion = ({
         </label>
       </div>
       <Button
-        disable={onExpectationsChange === ""}
         btnText="Nästa"
         nextQuestion="fifthQuestion"
         section={section}
         setSection={setSection}
-        currentState={userExpectations}
+        currentState={userExpectation}
         defaultState=""
       />
     </section>

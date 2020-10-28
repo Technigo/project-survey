@@ -7,6 +7,7 @@ const ThirdQuestion = ({
   section,
   setSection,
 }) => {
+
   return (
     <section className="question-section">
       <h2 className="question-heading">Vilken aktivitet har du deltagit i?</h2>
@@ -41,11 +42,12 @@ const ThirdQuestion = ({
         />
       </div>
       <Button
-        disable={onActivitiesChange}
         btnText="Nästa"
         nextQuestion="fourthQuestion"
         section={section}
         setSection={setSection}
+        currentState={userActivities.length}
+        defaultState={userActivities.length = 0}
       >
         Nästa
       </Button>
