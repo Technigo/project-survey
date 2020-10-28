@@ -88,10 +88,13 @@ input {
 /* Radiobutton layout */
 
 .radiobutton {
+  display: flex;
+  flex-direction: column;
   color: #22A800;
   padding: 5%;
   text-align: center;
-  
+  justify-content: center;
+  align-items: center;
   font-family: sans-serif;
   font-weight: bold;
 }
