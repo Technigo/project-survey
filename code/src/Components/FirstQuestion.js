@@ -1,14 +1,18 @@
-import React from 'react';
-import Button from './Button';
+import React from "react";
+import Button from "./Button";
 
-const FirstQuestion = ({ userYearOfBirth, onYearOfBirthChange, section, setSection }) => {
-
+const FirstQuestion = ({
+  userYearOfBirth,
+  onYearOfBirthChange,
+  section,
+  setSection,
+}) => {
   return (
     <section className="question-section">
-      <h2 className="question-header">Vilket år föddes du?</h2> 
+      <h2 className="question-header">Vilket år föddes du?</h2>
       <label htmlFor="yearOfBirth">Ditt födelseår</label>
       <input
-        value={userYearOfBirth} 
+        value={userYearOfBirth}
         onChange={onYearOfBirthChange}
         id="yearOfBirth"
         type="number"
@@ -17,8 +21,8 @@ const FirstQuestion = ({ userYearOfBirth, onYearOfBirthChange, section, setSecti
         placeholder="År"
         required
       />
-      <Button 
-        disable={onYearOfBirthChange === false} 
+      <Button
+        disable={onYearOfBirthChange === false}
         nextQuestion="secondQuestion"
         currentState={userYearOfBirth}
         defaultState=""
@@ -29,6 +33,6 @@ const FirstQuestion = ({ userYearOfBirth, onYearOfBirthChange, section, setSecti
       </Button>
     </section>
   );
-}
+};
 
 export default FirstQuestion;
