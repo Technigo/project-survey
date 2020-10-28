@@ -6,7 +6,7 @@ export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
     
     return (
         <>
-            <label tabIndex="0" role="radiogroup" aria-required aria-label="Will you participate? Select Yes or No">Will you participate?</label>
+            <label tabIndex="0" role="radiogroup" aria-required>Will you participate?</label>
             {yesOrNoAnswers.map(answer => ( 
                 <label htmlFor="answers" key={answer} tabIndex="0" role="radio" aria-checked={yesOrNo === answer}>
                     <input
