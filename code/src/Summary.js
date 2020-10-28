@@ -1,6 +1,10 @@
 import React from 'react';
 
-import Restart from './Restart';
+import Button from './Button';
+
+const resetSurvey = () => {
+  window.location.reload();
+};
 
 const Summary = ({ place, rating, feedback }) => {
   return (
@@ -10,7 +14,7 @@ const Summary = ({ place, rating, feedback }) => {
       <h3 tabIndex="0">Your place: <span className="summary-answer">{place}</span></h3>
       <h3 tabIndex="0">Your feeling after this week: <span className="summary-answer">{rating}</span></h3>
       <h3 tabIndex="0">Your feedback: <span className="summary-answer">{feedback}</span></h3>
-      <Restart />
+      <Button onClick={resetSurvey} title="Start over" />
     </div>
   )
 }

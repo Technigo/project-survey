@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 
 import Intro from './Intro';
-import Start from './Start';
+import Button from './Button';
 import DropDown from './DropDown';
 import RadioButtons from './RadioButtons';
 import InputText from './InputText';
-import Submit from './Submit';
 import Summary from './Summary';
 
 const Form = () => {
@@ -35,44 +34,21 @@ const Form = () => {
   const handleSubmit = event => {
     event.preventDefault();
     setShowSummary(true);
-  }
+  };
 
   return (
     <section>
-      { (!showSummary && feedback !== '') ? (
-        <form>
+      {showSummary
+        ? <Summary place={place} rating={rating} feedback={feedback} />
+        : <form>
           <Intro />
-          <DropDown place={place} onPlaceChange={handlePlaceChange} />
-          <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
-          <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
-          <Submit onClick={handleSubmit} />
+          {!showQuestion && <Button onClick={handleStart} title="Start" />}
+          {showQuestion && <DropDown place={place} onPlaceChange={handlePlaceChange} />}
+          {place && <RadioButtons rating={rating} onRatingChange={handleRatingChange} />}
+          {rating && <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />}
+          {feedback && <Button onClick={handleSubmit} title="Submit" />}
         </form>
-      ) : (!showSummary && rating !== '') ? (
-        <form>
-          <Intro />
-          <DropDown place={place} onPlaceChange={handlePlaceChange} />
-          <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
-          <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />
-        </form>
-      ) : (!showSummary && place !== '') ? (
-        <form>
-          <Intro />
-          <DropDown place={place} onPlaceChange={handlePlaceChange} />
-          <RadioButtons rating={rating} onRatingChange={handleRatingChange} />
-        </form>
-      ) : (!showSummary && showQuestion) ? (
-        <form>
-          <Intro />
-          <DropDown place={place} onPlaceChange={handlePlaceChange} />
-        </form>
-      ) : (!showSummary && !showQuestion) ? (
-        <form>
-          <Intro />
-          <Start onClick={handleStart} />
-        </form>
-      ) : (
-                  <Summary place={place} rating={rating} feedback={feedback} />
-                )}
+      }
     </section>
   )
 }
