@@ -10,7 +10,6 @@ export const ParticipanceField = ({yesOrNo, setYesOrNo}) => {
             {yesOrNoAnswers.map(answer => ( 
                 <label htmlFor="answers" key={answer} tabIndex="0" aria-required>
                     <input
-                        id="answers"
                         type="radio" 
                         value={answer}
                         onChange={event => setYesOrNo(event.target.value)}
