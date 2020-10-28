@@ -6,8 +6,6 @@ const FourthQuestion = ({
   onExpectationsChange,
   section,
   setSection,
-  printString,
-  setPrintString,
 }) => {
   return (
     <section className="question-section">
@@ -22,7 +20,6 @@ const FourthQuestion = ({
             value="jajjemän"
             checked={userExpectations === "jajjemän"}
             onChange={onExpectationsChange}
-            printString="jajjemän"
             className="radio-button"
           />
           Jajjemän
@@ -37,7 +34,6 @@ const FourthQuestion = ({
             value="någotSåNär"
             checked={userExpectations === "någotSåNär"}
             onChange={onExpectationsChange}
-            printString="något så när"
             className="radio-button"
           />
           Något så när
@@ -52,7 +48,6 @@ const FourthQuestion = ({
             value="vetInte"
             checked={userExpectations === "vetInte"}
             onChange={onExpectationsChange}
-            printString="vet inte"
             className="radio-button"
           />
           Har inte tänkt på det
@@ -67,7 +62,6 @@ const FourthQuestion = ({
             value="inteRiktigt"
             checked={userExpectations === "inteRiktigt"}
             onChange={onExpectationsChange}
-            printString="inte riktigt"
             className="radio-button"
           />
           Inte riktigt
@@ -82,14 +76,13 @@ const FourthQuestion = ({
             value="inteAlls"
             checked={userExpectations === "inteAlls"}
             onChange={onExpectationsChange}
-            printString="inte alls"
             className="radio-button"
           />
           Nej, inte alls.
         </label>
       </div>
       <Button
-        disable={onExpectationsChange}
+        disable={onExpectationsChange === ""}
         btnText="Nästa"
         nextQuestion="fifthQuestion"
         section={section}

@@ -22,7 +22,7 @@ const FirstQuestion = ({
         required
       />
       <Button
-        disable={onYearOfBirthChange === false}
+        disable={onYearOfBirthChange === ""}
         nextQuestion="secondQuestion"
         currentState={userYearOfBirth}
         defaultState=""

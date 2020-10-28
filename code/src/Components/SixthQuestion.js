@@ -1,12 +1,7 @@
 import React from "react";
 import SubmitButton from "./SubmitButton";
 
-const SixthQuestion = ({
-  userTextInput,
-  onTextInputChange,
-  section,
-  setSection,
-}) => {
+const SixthQuestion = ({ userTextInput, onTextInputChange }) => {
   return (
     <section className="question-section">
       <h2 className="question-header">
@@ -22,7 +17,7 @@ const SixthQuestion = ({
         placeholder="Det var roligt att..."
         required
       />
-      <SubmitButton disable={onTextInputChange} btnText="Skicka" />
+      <SubmitButton disable={onTextInputChange === ""} btnText="Skicka" />
     </section>
   );
 };

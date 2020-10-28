@@ -17,7 +17,7 @@ const SecondQuestion = ({
         <option value="annat">Annat</option>
       </select>
       <Button
-        disable={onGenderChange}
+        disable={onGenderChange === ""}
         btnText="Nästa"
         nextQuestion="thirdQuestion"
         section={section}
