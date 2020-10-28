@@ -1,4 +1,5 @@
 import React from 'react'
+
 import { Progress } from 'Components/Progress'
 
 export const Select = ({ food, setFood }) => {

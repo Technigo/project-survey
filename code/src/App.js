@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+
 import { Input } from 'Components/Input'
 import { Radio } from 'Components/Radio'
 import { Select } from 'Components/Select'
 import { Button } from 'Components/Button'
 import { Summary } from 'Components/Summary'
+
 import './index.css'
 
 export const App = () => {
@@ -37,7 +39,7 @@ return (
           <Button name={name} section={section} food={food} radioInput={radioInput}/>
         } 
 
-        {section === 4 &&
+        {section === 3 &&
           <Summary className='summary' name={name} food={food} radioInput={radioInput} />
         }      
 
