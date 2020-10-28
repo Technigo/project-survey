@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const gamesList = [
     'Beat Saber',
@@ -24,11 +24,6 @@ export const RadioButtons = ({game, setGamesList}) => {
                 />
                 {games}
             </label>
-
-        )
-        )}
-            
+        ))} 
         </div>
-    )
-
-}
+    )};

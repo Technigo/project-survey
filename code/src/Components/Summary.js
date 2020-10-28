@@ -1,11 +1,11 @@
 import React from 'react'
 
-import BeatSaberImage from '../assets/beatsaber.jpg'
-import UntilYouFallImage from '../assets/untilyoufall.png'
-import SparcImage from '../assets/sparc.jpg'
-import PistolWhipImage from '../assets/pistolwhip.png'
-import NoMansSkyImage from '../assets/nomanssky.jpg'
-import HalfLifeAlyxImage from '../assets/halflifealyx.jpg'
+import BeatSaberImage from '../assets/beatsaber.jpg';
+import UntilYouFallImage from '../assets/untilyoufall.png';
+import SparcImage from '../assets/sparc.jpg';
+import PistolWhipImage from '../assets/pistolwhip.png';
+import NoMansSkyImage from '../assets/nomanssky.jpg';
+import HalfLifeAlyxImage from '../assets/halflifealyx.jpg';
 
 
 const startOver = () => {
@@ -38,7 +38,7 @@ const showGameImage = (game) => {
     break;
   }
 
-  return <img src={imageSrc} className= 'summary-image' alt='game beat saber'/>
+  return <img src={imageSrc} className= 'summary-image' alt='game chosen'/>
 }
 
 export const Summary = ({name, snack, drink, game,}) => {

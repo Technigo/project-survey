@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const DropdownSnacks = ({snack, setSnack}) => {
 
@@ -17,5 +17,4 @@ export const DropdownSnacks = ({snack, setSnack}) => {
                 <option value='Vegetarian'>Vegetarian</option>
                 </select>
             </div>
-
-        )}
+        )};

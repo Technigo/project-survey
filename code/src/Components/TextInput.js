@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 
 export const TextInput = ({name, setName}) => {
@@ -18,8 +18,6 @@ export const TextInput = ({name, setName}) => {
 
             </label>
         </div>
-    )
-
-}
+    )};
 
 

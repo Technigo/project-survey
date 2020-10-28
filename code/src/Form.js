@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import { WelcomePage } from './Components/WelcomePage'
-import { TextInput } from './Components/TextInput'
-import { RadioButtons } from './Components/RadioButtons'
-import { SelectDropdownDrink } from './Components/SelectDropdownDrink'
-import { DropdownSnacks } from './Components/DropdownSnacks'
-import { Summary } from './Components/Summary'
+import { WelcomePage } from './Components/WelcomePage';
+import { TextInput } from './Components/TextInput';
+import { RadioButtons } from './Components/RadioButtons';
+import { SelectDropdownDrink } from './Components/SelectDropdownDrink';
+import { DropdownSnacks } from './Components/DropdownSnacks';
+import { Summary } from './Components/Summary';
 
 // All the useStates
 export const Form = () => { 
@@ -45,16 +45,16 @@ export const Form = () => {
                     <WelcomePage/>   
                 )}
                 {section === 'nameQuestion' && (
-                    <TextInput name= {name} setName= {setName}/>   
+                    <TextInput name={name} setName={setName}/>   
                 )}
                 {section === 'gameQuestion' && (
-                    <RadioButtons game= {game} setGamesList= {setGamesList}/>
+                    <RadioButtons game={game} setGamesList={setGamesList}/>
                 )}
                 {section === 'drinkQuestion' && (
-                    <SelectDropdownDrink drink= {drink} setDrink= {setDrink}/>
+                    <SelectDropdownDrink drink={drink} setDrink={setDrink}/>
                 )}
                 {section === 'snackQuestion' && (
-                    <DropdownSnacks snack= {snack} setSnack= {setSnack}/>   
+                    <DropdownSnacks snack={snack} setSnack={setSnack}/>   
                 )} 
                 <button 
                     tabIndex ='0'
@@ -66,9 +66,14 @@ export const Form = () => {
             </form>            
             ):(           
             <div className='summary-container'>
-                <Summary name={name} game={game} drink={drink} snack={snack} />
+                <Summary 
+                    name={name} 
+                    game={game} 
+                    drink={drink} 
+                    snack={snack} 
+                />
             </div>
         )}
     </section>
    </>
-)}
+)};
