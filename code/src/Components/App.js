@@ -1,9 +1,10 @@
 import React from 'react'
-import './app.css'
+
 import { Header } from './Header'
 import { Survey } from './Survey.js'
 import { Footer } from './Footer'
 
+import './app.css'
 
 export const App = () => {
   
