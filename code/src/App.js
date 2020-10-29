@@ -7,7 +7,7 @@ import Paws from "./Paws";
 export const App = () => {
  
   return (
-    <div className="app-container">
+    <div>
       <Survey />
       <Paws />
     </div>

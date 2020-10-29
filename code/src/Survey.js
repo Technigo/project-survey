@@ -26,8 +26,8 @@ const Survey = () => {
     
     const handleSubmit = event => {
         event.preventDefault();
-        const nextSectionIndex = sectionOrder.indexOf(section);
-        setSection(sectionOrder[nextSectionIndex+1]);   
+        const currentSectionIndex = sectionOrder.indexOf(section);
+        setSection(sectionOrder[currentSectionIndex+1]);   
       };
 
     return (
