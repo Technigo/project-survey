@@ -7,7 +7,6 @@ const restart = () => {
     document.location.href = "";
   };
 
-
 const Summary = ({ name , ageGroup,  fur,  }) => {
     return ( 
       <>

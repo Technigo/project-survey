@@ -31,52 +31,36 @@ const Survey = () => {
       };
 
     return (
-    <>
+  <>
     <section className ="wrapper-form"> 
         {section !== 'summary' ? (
-            
-        <form onSubmit={handleSubmit}>
-    
-        {section === 'welcome' && ( 
-             <Welcome
-              /> 
-             )}
-
-        {section === 'firstQuestion' && (   
-             <NameQuestion
-              name={name} 
-              setName={setName}/> 
-             )}
-  
-        {section === 'secondQuestion' && (
-            <Radio
-             ageGroup={ageGroup}
-             setAgeGroup={setAgeGroup}
-            />
+          <form onSubmit={handleSubmit}>
+            {section === 'welcome' && ( 
+              <Welcome/> 
             )}
-  
-          {section === 'thirdQuestion' && (
-            <Select 
-            fur={fur}
-            setFur={setFur} 
-            />
-          )}
+            {section === 'firstQuestion' && (   
+              <NameQuestion name={name} setName={setName}/> 
+            )}
+            {section === 'secondQuestion' && (
+              <Radio ageGroup={ageGroup} setAgeGroup={setAgeGroup}/>
+            )}
+            {section === 'thirdQuestion' && (
+              <Select fur={fur} setFur={setFur}/>
+            )}
             <button 
-                tabIndex ='0'
-                type='submit'
-                aria-label='Next question'
-                > Next!
+              tabIndex ='0'
+              type='submit'
+              aria-label='Next question'
+              > Next!
             </button> 
-            </form>
-            
-            ):(
-                
-            <div className='summary-container'>
-                <Summary name={name} ageGroup={ageGroup} fur={fur}/>
-            </div>
-        )}
-    </section>
-   </>
+        </form> 
+        ):(     
+        <div className='summary-container'>
+          <Summary name={name} ageGroup={ageGroup} fur={fur}/>
+        </div>
+      )}
+      </section>
+  </>
 )}
 
 export default Survey;

@@ -8,7 +8,6 @@ import Summary  from "./Summary";
 
 //Here is my improved code for the BLUE LEVEL.
 
-
 export const Form = () => {
   const [name, setName] = useState('')
   const [ageGroup, setAgeGroup] = useState();
@@ -22,34 +21,24 @@ export const Form = () => {
 
   return ( 
     <section className ="wrapper-form">
+      {!showSummary ? (
+      <form onSubmit={handleSubmit}>
 
-     {!showSummary ? (
-       <form onSubmit={handleSubmit}>
+      <NameQuestion name={name} setName={setName}/>
+      <Radio ageGroup={ageGroup} setAgeGroup={setAgeGroup}/>
+      <Select fur={fur} setFur={setFur} />
 
-       <NameQuestion 
-        name={name} 
-        setName={setName}/>
+      <button 
+      type="submit"
+      disabled={name === '' }>
+      Submit 
+      </button>
 
-        <Radio 
-        ageGroup={ageGroup}
-         setAgeGroup={setAgeGroup} />
-
-        <Select 
-        fur={fur}
-        setFur={setFur} />
-
-      <button type="submit" disabled={name === '' }>Submit </button>
-
-       </form>
-
-        ):(
-         <Summary
-          name={name} 
-          ageGroup={ageGroup} 
-          fur={fur} />
-        )}
+      </form>
+      ):(
+      <Summary name={name} ageGroup={ageGroup} fur={fur} />
+      )}
     </section>  
-  
   );
 };
 
