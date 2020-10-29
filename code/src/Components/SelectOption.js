@@ -10,8 +10,8 @@ export const SelectOption = ({className, header, array, selected, setSelected}) 
                 value={selected}
             >
             
-            {array.map(activity => (
-                <option key={activity} value={activity}>{activity}</option>
+            {array.map(option => (
+                <option key={option} value={option}>{option}</option>
             ))};            
             </select>
         </>

@@ -85,11 +85,12 @@ export const Survey = () => {
             setSelected={setSelectedActivity}
           />
           <Button
-            disable={selectedActivity === activityArray[0] ? ("") : ({selectedActivity})}          
+            disable={selectedActivity === activityArray[0] ? ("") : (selectedActivity)}
             btnText="Next"
             section="summary"
             setSection={setSection}
           />
+          {console.log("disable i survey: " + selectedActivity)}
         </>
       )}
 
