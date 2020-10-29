@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-import { NameQuestion } from "Questions/NameQuestion";
+import NameQuestion  from "Questions/NameQuestion";
 import  Radio from "./Questions/Radio";
 import Select from "./Questions/Select";
-import { Summary } from "./Summary";
+import Summary  from "./Summary";
 
 
 //Here is my improved code for the BLUE LEVEL.

@@ -1,6 +1,6 @@
 import React from "react";
 
-export const NameQuestion = ({ name , setName }) => {
+const NameQuestion = ({ name , setName }) => {
     return (
         <div className ="name-question">
             <label htmlFor="name for cat" tabIndex ="0">
@@ -15,3 +15,4 @@ export const NameQuestion = ({ name , setName }) => {
         </div>
     )
 }
+export default NameQuestion; 
