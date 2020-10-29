@@ -16,7 +16,7 @@ const Summary = ({
     const carModels = userCarModels.map(({ label }) => label);
 
     return (
-        <div className="summary" id="sectionSummary">
+        <div className="summary" id="sectionSummary" tabIndex="0">
             <div className="wrapper">
                 <h2 className="summary-title">Thank you for your feedback!</h2>
                 <p className="summary-sub-title">Below is your answer to the survey:</p>
