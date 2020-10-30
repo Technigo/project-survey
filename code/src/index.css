@@ -2,56 +2,45 @@ body {
   margin: 0;
   font-family: "Roboto", sans-serif;
 
-  background: linear-gradient(307deg, #0005ff, #281187, #190faa, #0260fd);
-  background: linear-gradient(
-    231deg,
-    #49c1a2,
-    #46dfb8,
-    #f5d28a,
-    #f9bf2e,
-    #ff8ebf,
-    #f9b8f4,
-    #7cbcfb,
-    #1f83e3
-  );
-  background-size: 1600% 1600%;
+  background: linear-gradient(270deg, #1f2121, #636766, #8eb9af, #69d7be);
+  background-size: 800% 800%;
 
-  -webkit-animation: AnimationName 60s ease infinite;
-  -moz-animation: AnimationName 60s ease infinite;
-  animation: AnimationName 60s ease infinite;
+  -webkit-animation: AnimationName 50s ease infinite;
+  -moz-animation: AnimationName 50s ease infinite;
+  animation: AnimationName 50s ease infinite;
 }
 
 @-webkit-keyframes AnimationName {
   0% {
-    background-position: 0% 96%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 5%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 96%;
+    background-position: 0% 50%;
   }
 }
 @-moz-keyframes AnimationName {
   0% {
-    background-position: 0% 96%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 5%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 96%;
+    background-position: 0% 50%;
   }
 }
 @keyframes AnimationName {
   0% {
-    background-position: 0% 96%;
+    background-position: 0% 50%;
   }
   50% {
-    background-position: 100% 5%;
+    background-position: 100% 50%;
   }
   100% {
-    background-position: 0% 96%;
+    background-position: 0% 50%;
   }
 }
 
