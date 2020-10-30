@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import {Form} from './Form'
-import {Footer} from './Footer'
+import {Form} from './Form';
+import {Footer} from './Footer';
 
 
 
@@ -11,6 +11,4 @@ export const App = () => {
       <Form />
       <Footer/>
     </>
-  )
-  
-}
+)};

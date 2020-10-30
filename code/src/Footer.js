@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import TechnigoLogo from './assets/logo.svg'
+import TechnigoLogo from './assets/logo.svg';
 
 export const Footer = () => { 
   return (
@@ -19,6 +19,4 @@ export const Footer = () => {
         </p>
       </footer>
     </>
-  )
-    
-}
+  )};
