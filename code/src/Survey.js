@@ -18,12 +18,12 @@ const [feedback2, setImproveFeedback] = useState("")
 
     return (
         <>
-        {!showSummary && ( /* decides what will happen if showSummary is false */
+        {!showSummary && ( /* if showSummary is false (no questions has been answered and submitted), the form will be displayed */
         <form onSubmit= {handleSubmit}>
             <div className="questions" tabIndex="0">
                 <div className="dropdown">
                 <p>Where did you participate?</p>
-                    <select onChange={event => setLocation(event.target.value)} aria-label="Dropdown menu to choose the city where you participated">
+                    <select value={location} onChange={event => setLocation(event.target.value)} aria-label="Dropdown menu to choose the city where you participated">
                     <option value="">Choose city...</option>
                     <option value="gothenburg">Gothenburg</option>
                     <option value="stockholm">Stockholm</option>
@@ -36,21 +36,21 @@ const [feedback2, setImproveFeedback] = useState("")
                 <div className="radio" tabIndex="0">
                 <p>What baking experience did you participate in?</p>
                     <label htmlFor="candyCanes">
-                    <input type="radio" name="radioButton" value="candyCanes" onChange={event => setCandyCanes(event.target.value)}/> { /*by giving all radio buttons the same name, only one button can be/stay clicked */}
+                    <input value="candyCanes" type="radio" name="radioButton" onChange={event => setCandyCanes(event.target.value)}/> { /*by giving all radio buttons the same name, only one button can be/stay clicked */}
                     Candy Canes
                     </label>
                 </div>
 
                 <div className="radio" tabIndex="0">
                     <label htmlFor="gingerBreadHouses">
-                    <input type="radio" name="radioButton" value="gingerBreadHouses" onChange={event => setGingerBreadHouses(event.target.value)}/>
+                    <input value="gingerBreadHouses" type="radio" name="radioButton" onChange={event => setGingerBreadHouses(event.target.value)}/>
                     Ginger Bread Houses
                     </label>
                 </div>
 
                 <div className="radio" tabIndex="0">
                     <label htmlFor="christmasChocolates">
-                    <input type="radio" name="radioButton" value="christmasChocolates" onChange={event => setChristmasChocolates(event.target.value)}/>
+                    <input value="christmasChocolates" type="radio" name="radioButton" onChange={event => setChristmasChocolates(event.target.value)}/>
                     Christmas Chocolates
                     </label>
                 </div>
@@ -71,12 +71,13 @@ const [feedback2, setImproveFeedback] = useState("")
             <div className="line"></div>
             </div> 
 
-            <Submit />         
+            <Submit />       
         </form>
+        
         )}
         
         </>
     )
 }
 
-export default Survey
+export default Survey;
