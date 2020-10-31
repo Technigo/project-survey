@@ -1,4 +1,5 @@
 import React from 'react'
+
 import './summary.css'
 /* This is not completely reusable, if I would like to do so 
 I'd change the text inside each <p></p> to be props and specify the props in Survey.js. */

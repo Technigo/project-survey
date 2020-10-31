@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
+
 import { Header } from './Header'
 import { Button } from './Button';
 import { Dropdown } from './Dropdown';
 import { Radio } from './Radio';
 import { Text } from './Text';
 import { Checkbox } from './Checkbox';
-import {Progressbar } from './Progressbar';
+import { Progressbar } from './Progressbar';
 import { Summary } from './Summary';
+
 import './survey.css';
 
 export const Survey = () => {
