@@ -8,11 +8,11 @@ export const Checkbox = (props) => {
                     <input
                         tabIndex={'0'}
                         id={'checkbox'}
-                        type="checkbox"
+                        type={'checkbox'}
                         value={props.answer}
                         checked={props.checkbox}
                         onChange={(event) => props.setCheckbox(event.target.checked)}
                     />{props.answer}</label>
         </>
     )
-}
+};

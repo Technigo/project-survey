@@ -1,9 +1,11 @@
 import React from 'react'
 import './radio.css'
 
+/* This component is completely reusable since it uses props. 
+It contains an array which contains objects consisting of value and answer. 
+These are later specified in Survey where you mount the survey-components.*/
 
 export const Radio = (props) => {
-    console.log(props.ageGroup)
     return (
         <>
             <h2 tabIndex={'0'}>{props.question}</h2>
@@ -22,14 +24,4 @@ export const Radio = (props) => {
             </div>
         </>
     )
-
-}
-
-
-
-
-
-
-/* This component is completely reusable since it uses props. 
-It contains an array which contains objects consisting of value and answer. 
-These are later specified in Survey where you mount the survey-components.*/
+};

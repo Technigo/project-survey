@@ -10,8 +10,6 @@ import './survey.css';
 
 export const Survey = () => {
   const [question, setQuestion] = useState(-1);
-  const nextQuestion = () => setQuestion(question + 1);
-  const previousQuestion = () => setQuestion(question - 1);
   const [ageGroup, setAgeGroup] = useState();
   const [checkbox, setCheckbox] = useState(false); /* Needs to be specified to either true or false to be controlled from the start */
   const [celebrationDrink, setCelebrationDrink] = useState('');
@@ -29,7 +27,7 @@ export const Survey = () => {
       if (optionsArray[i].value === userValue)
         return optionsArray[i].text
     } return 'no text found'
-  }
+  };
   /* Arrays with objects for each components, needs to be definied outside of the component-scope so that getUserInput() can access it. */
   const drinkArray = [
     {
@@ -56,7 +54,7 @@ export const Survey = () => {
       text: "TEQUILA BABY",
       value: "tequila",
     },
-  ]
+  ];
 
   const comfortFoodArray = [
     {
@@ -83,7 +81,7 @@ export const Survey = () => {
       text: "Just a salad please",
       value: "salad",
     },
-  ]
+  ];
 
   const restaurantMethodArray = [
     {
@@ -112,7 +110,7 @@ export const Survey = () => {
         "Anything where you can order macrobiotic, nonprocessed and prefereably raw food please",
       value: "dietician",
     },
-  ]
+  ];
 
   const saladArray = [
     {
@@ -139,17 +137,39 @@ export const Survey = () => {
       text: "Some fruits are always nice.",
       value: "fruit",
     },
-  ]
+  ];
+
+  const ageGroupArray = [
+    {
+      value: '0-20',
+      message: 'Teeny tiny baby'
+    },
+    {
+      value: '21-40',
+      message: 'Young and fresh baby'
+    },
+    {
+      value: '41-60',
+      message: 'Prime years baby'
+    },
+    {
+      value: '61-100',
+      message: 'Oldie but goldie baby'
+    }
+  ];
 
   const handleSubmit = (event) => {
     event.preventDefault();
     setShowSummary(true);
   };
+  const nextQuestion = () => setQuestion(question + 1);
+  const previousQuestion = () => setQuestion(question - 1);
+
 
   return (
     <>
       <section className="wrapper">
-        <Header/>
+        <Header />
         {question === -1 && (
           <div className="introduction">
             <h2>Welcome to our fantastic food survey!</h2>
@@ -161,7 +181,7 @@ export const Survey = () => {
                 text='Begin Baby!' />
             </div>
           </div>
-        )}
+        )};
         {!showSummary ? (
           <form className='survey__form' onSubmit={handleSubmit}>
             {question === 0 && (
@@ -180,14 +200,14 @@ export const Survey = () => {
                   />
                   <Button
                     type='button'
-                    text={celebrationDrink ? 'Next Baby!': 'Choose something!'}
+                    text={celebrationDrink ? 'Next Baby!' : 'Choose something!'}
                     click={nextQuestion}
                     disable={!celebrationDrink}
                   />
 
                 </div>
               </>
-            )}
+            )};
             {question === 1 && (
               <>
                 <Dropdown
@@ -211,7 +231,7 @@ export const Survey = () => {
 
                 </div>
               </>
-            )}
+            )};
             {question === 2 && (
               <>
                 <Dropdown
@@ -233,7 +253,7 @@ export const Survey = () => {
                   />
                 </div>
               </>
-            )}
+            )};
             {question === 3 && (
               <>
                 <Dropdown
@@ -255,31 +275,14 @@ export const Survey = () => {
                   />
                 </div>
               </>
-            )}
+            )};
             {question === 4 && (
               <>
                 <Radio
                   ageGroup={ageGroup}
                   setAgeGroup={setAgeGroup}
                   question={'Thanks for doing this survey! Please check your agegroup:'}
-                  radioButtonsArray={[
-                    {
-                      value: '0-20',
-                      message: 'Teeny tiny baby'
-                    },
-                    {
-                      value: '21-40',
-                      message: 'Young and fresh baby'
-                    },
-                    {
-                      value: '41-60',
-                      message: 'Prime years baby'
-                    },
-                    {
-                      value: '61-100',
-                      message: 'Oldie but goldie baby'
-                    }
-                  ]}
+                  radioButtonsArray={ageGroupArray}
                 />
                 <div className="button-container">
                   <Button
@@ -295,7 +298,7 @@ export const Survey = () => {
                   />
                 </div>
               </>
-            )}
+            )};
             {question === 5 && (
               <>
                 <Checkbox
@@ -317,7 +320,7 @@ export const Survey = () => {
                   />
                 </div>
               </>
-            )}
+            )};
             {question === 6 && (
               <>
                 <Text
@@ -336,9 +339,7 @@ export const Survey = () => {
                   />
                 </div>
               </>
-
-            )}
-
+            )};
           </form>
         ) : (
             <Summary
@@ -350,7 +351,7 @@ export const Survey = () => {
               surveyAgain={checkbox}
               userMessage={userText}
             />
-          )}
+          )};
       </section>
     </>
   );

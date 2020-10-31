@@ -11,5 +11,3 @@ export const Text = (props) => {
         </>
     )
 }
-/* Function for next question button:
-const nextQuestion = () => setQuestion(question + 1) //to get next question in line (add +1 later) const previousQuestion = () => setQuestion(question - 1) */
