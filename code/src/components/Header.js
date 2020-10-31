@@ -10,9 +10,7 @@ const Header = () => {
         className="header-logo"
       />
       <nav className="top-menu">
-        <a className="top-menu__item" href="#">
-          FAQ
-        </a>
+        <a className="top-menu__item">FAQ</a>
       </nav>
     </header>
   );

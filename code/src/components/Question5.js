@@ -3,7 +3,16 @@ import PreviousButton from 'components/PreviousButton';
 import SubmitButton from 'components/SubmitButton';
 import ProgressBar from 'components/ProgressBar';
 
-const Question5 = ({ title, setTitle, section, setSection }) => {
+const Question5 = ({
+  title,
+  setTitle,
+  section,
+  setSection,
+  name,
+  ageGroup,
+  skills,
+  suggestions,
+}) => {
   const handleTitleChange = (event) => {
     setTitle(event.target.value);
   };
@@ -11,13 +20,14 @@ const Question5 = ({ title, setTitle, section, setSection }) => {
   return (
     <article className="form__question__5">
       {/* Question */}
-      <label htmlFor="name" className="form__question" tabIndex="0">
+      <label htmlFor="title" className="form__question" tabIndex="0">
         And just out of curiosity, what kind of developer are you?
       </label>
 
       {/* Input */}
       <div className="question__content-wrapper">
         <select
+          id="title"
           className="form__dropdown"
           value={title}
           onChange={handleTitleChange}
@@ -53,6 +63,11 @@ const Question5 = ({ title, setTitle, section, setSection }) => {
           currentState={title}
           defaultState=""
           message="Oops! You forgot to select a job 😬"
+          name={name}
+          ageGroup={ageGroup}
+          skills={skills}
+          suggestions={suggestions}
+          title={title}
         />
       </div>
     </article>

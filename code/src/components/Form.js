@@ -73,6 +73,10 @@ const Form = () => {
               setTitle={setTitle}
               section={section}
               setSection={setSection}
+              name={name}
+              ageGroup={ageGroup}
+              skills={skills}
+              suggestions={suggestions}
             />
           </div>
         )}
