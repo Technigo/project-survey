@@ -9,7 +9,7 @@ export const Radio = (props) => {
     return (
         <>
             <h2 tabIndex={'0'}>{props.question}</h2>
-            <div className="radio-container">
+            <div className={'radio-container'}>
                 {props.radioButtonsArray.map((group) => (
                     <label tabIndex={'0'} htmlFor={group.value} key={group.value}>
                         <input tabIndex={'0'}

@@ -14,7 +14,7 @@ export const Dropdown = (props) => {
                 {props.optionsArray.map((object) => (
                     <option 
                     tabIndex={'0'} 
-                    className="dropdown" 
+                    className={'dropdown'} 
                     key={object.value} 
                     value={object.value}>
                     {object.text}

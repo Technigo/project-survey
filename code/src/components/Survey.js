@@ -168,13 +168,13 @@ export const Survey = () => {
 
   return (
     <>
-      <section className="wrapper">
+      <section className='wrapper'>
         <Header />
         {question === -1 && (
-          <div className="introduction">
+          <div className='introduction'>
             <h2>Welcome to our fantastic food survey!</h2>
             <h3>Move on to the next question by pressing "Next" and move back by pressing "Previous"</h3>
-            <div className="button-container">
+            <div className='button-container'>
               <Button
                 type='button'
                 click={nextQuestion}
@@ -192,7 +192,7 @@ export const Survey = () => {
                   question={'It is friday night, you just finished a great project and want to celebrate. What are you ordering?'}
                   optionsArray={drinkArray}
                 />
-                <div className="button-container">
+                <div className='button-container'>
                   <Button
                     type='button'
                     text='Previous Pretty Please!'
@@ -216,7 +216,7 @@ export const Survey = () => {
                   question={'On a rainy day, what would you rather have?'}
                   optionsArray={comfortFoodArray}
                 />
-                <div className="button-container">
+                <div className='button-container'>
                   <Button
                     type='button'
                     text='Previous Pretty Please!'
@@ -261,7 +261,7 @@ export const Survey = () => {
                   setSelectValue={setSaladMaker}
                   question={'You are making a salad. What is the main ingrediens?'}
                   optionsArray={saladArray}
-                /><div className="button-container">
+                /><div className='button-container'>
                   <Button
                     type='button'
                     text='Previous Pretty Please!'
@@ -284,7 +284,7 @@ export const Survey = () => {
                   question={'Thanks for doing this survey! Please check your agegroup:'}
                   radioButtonsArray={ageGroupArray}
                 />
-                <div className="button-container">
+                <div className='button-container'>
                   <Button
                     type='button'
                     text='Previous Pretty Please!'
@@ -307,7 +307,7 @@ export const Survey = () => {
                   question={'Would you take this survey again?'}
                   answer={'Yes, most definately'}
                 />
-                <div className="button-container">
+                <div className='button-container'>
                   <Button
                     type='button'
                     text='Previous Pretty Please!'
@@ -326,7 +326,7 @@ export const Survey = () => {
                 <Text
                   userText={userText}
                   setUserText={setUserText} />
-                <div className="button-container">
+                <div className='button-container'>
                   <Button
                     type='button'
                     click={previousQuestion}
