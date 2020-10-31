@@ -1,6 +1,8 @@
 .summary__section {
     background:  rgba(247, 249, 251, 0.8);
-    width: 100%;
+    width: 80%;
+    position: absolute;
+    top: 150px;
 }
 
 .summary__section p {
