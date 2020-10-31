@@ -9,11 +9,11 @@ If I had more time to spend on this project I would of added a back button to ea
 
 ## Tech
 
-+- JSX
-+- React
-+- useState-hook
-+- CSS
-+- Form fields
+- JSX
+- React
+- useState-hook
+- CSS
+- Form fields
 
 ## View it live
 
