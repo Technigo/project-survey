@@ -10,4 +10,4 @@ I had some troubles with the radiobuttons - if you checked one you could'nt unch
 
 ## View it live
 
--
+- https://dailynotes-app.netlify.app/
