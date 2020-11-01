@@ -3,19 +3,25 @@ header {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background: #9E5F66;
+  background: #9e5f66;
   padding: 20px;
   width: 100%;
   height: 100vh;
 }
 
 h1 {
-  font-family: 'Playfair display';
-  color: white;
+  font-family: "Playfair display";
   font-weight: normal;
   margin: 0;
   width: 100%;
   font-size: 120px;
+}
+
+.date {
+  font-family: "Playfair display";
+  text-align: center;
+  width: 100%;
+  font-size: 36px;
 }
 
 .arrow {
@@ -26,17 +32,24 @@ h1 {
   animation-iteration-count: infinite;
 }
 
-@keyframes bounce { 
-  0% { transform: translateY(0); }
-  100% { transform: translateY(-20px); }
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px);
+  }
 }
 
 /* Mobile */
 @media (max-width: 767px) {
-
   h1 {
     font-size: 80px;
     margin: 0;
+  }
+
+  .date {
+    font-size: 24px;
   }
 
   .arrow {
