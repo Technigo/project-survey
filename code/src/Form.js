@@ -14,7 +14,7 @@ export const Form = () => {
 	const handleSubmit = event => {
 		event.preventDefault()
 		setSummary(true)
-	};
+	}
 
   return (
 		<>

@@ -13,5 +13,5 @@ export const App = () => {
 				<Form />
 			</div>
 		</div>
-	);
-};
+	)
+}

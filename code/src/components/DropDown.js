@@ -21,6 +21,5 @@ export const DropDown = ({ brand, setBrand }) => {
 				<option value='some other'>Other</option>
       </select>
     </div>
-
 )
 }
