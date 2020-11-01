@@ -19,7 +19,7 @@ export const Form = () => {
   const [canContributeWith, setCanContributeWith] = useState();
   const [yearsOfExperience, setYearsOfExperience] = useState("");
   const [likeMyJob, setLikeMyJob] = useState("");
-  const [section, setSection] = useState('startText');
+  const [section, setSection] = useState("startText");
 
   const handleSubmit = event => {
     event.preventDefault();
@@ -28,7 +28,7 @@ export const Form = () => {
   return (
     <>
       <form onSubmit={handleSubmit}>    
-        {section === 'startText' && (
+        {section === "startText" && (
           <>
             <Header />
             <h2 tabIndex="0">If YES, please fill in the form 
@@ -38,13 +38,13 @@ export const Form = () => {
               <Buttons
               title="Start!"
               function={setSection}
-              value='firstQuestion' 
+              value="firstQuestion"
               />
             </section>
           </>
         )}
         
-        {section === 'firstQuestion' && (
+        {section === "firstQuestion" && (
           <>
             <NameInput 
               id="inputName"
@@ -60,17 +60,17 @@ export const Form = () => {
               <Buttons 
                 title="Next"
                 function={setSection}
-                value='secondQuestion'
-                disabled={name === ''}
+                value="secondQuestion"
+                disabled={name === ""}
               />
             </section>
             <ProgressBar 
-              value='20'
+              value="20"
             />
           </>
         )}
         
-        {section === 'secondQuestion' && (
+        {section === "secondQuestion" && (
           <>
             <EmailInput 
               email={email}
@@ -80,22 +80,22 @@ export const Form = () => {
               <Buttons 
                 title="Back"
                 function={setSection}
-                value='firstQuestion'
+                value="firstQuestion"
               />
               <Buttons 
                 title="Next"
                 function={setSection}
-                value='thirdQuestion'
+                value="thirdQuestion"
                 disabled={email === ""}
               />
             </section>
             <ProgressBar 
-              value='40'
+              value="40"
             />
           </>
         )}
         
-        {section === 'thirdQuestion' && (
+        {section === "thirdQuestion" && (
           <>
             <Radiobuttons 
               canContributeWith={canContributeWith}
@@ -105,21 +105,21 @@ export const Form = () => {
               <Buttons 
                 title="Back"
                 function={setSection}
-                value='secondQuestion'
+                value="secondQuestion"
               />
                <Buttons 
                 title="Next"
                 function={setSection}
-                value='fourthQuestion'
+                value="fourthQuestion"
               />
             </section>
             <ProgressBar 
-              value='60'
+              value="60"
             />
           </>
         )}
         
-        {section === 'fourthQuestion' && (
+        {section === "fourthQuestion" && (
           <>
             <Dropdown 
               yearsOfExperience={yearsOfExperience} 
@@ -129,7 +129,7 @@ export const Form = () => {
               <Buttons 
                 title="Back"
                 function={setSection}
-                value='thirdQuestion'
+                value="thirdQuestion"
               />
               <Buttons
                 title="Next"
@@ -139,12 +139,12 @@ export const Form = () => {
               />
             </section>
             <ProgressBar 
-              value='80'
+              value="80"
             />
           </>
         )}
 
-      {section === 'fifthQuestion' && (
+      {section === "fifthQuestion" && (
         <>
           <RangeSlider 
             likeMyJob={likeMyJob}
@@ -154,24 +154,24 @@ export const Form = () => {
             <Buttons 
               title="Back"
               function={setSection}
-              value='fourthQuestion'
+              value="fourthQuestion"
             />
             <Buttons
               title="Submit"
               function={setSection}
-              value='summary'
-              disabled={likeMyJob === ''}
+              value="summary"
+              disabled={likeMyJob === ""}
             />
           </section>
           <ProgressBar 
-            value='100'
+            value="100"
           />
         </>
       )}
         
       </form>
     
-      {section === 'summary' && (
+      {section === "summary" && (
         <Summary 
           name={name}
           email={email}
