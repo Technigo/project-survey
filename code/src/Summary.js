@@ -2,32 +2,32 @@ import React, { useState } from 'react';
 
 const locationResponse = location => {
     if (location === 'gothenburg') {
-        return 'Thank you for visiting our baking experience in Gothenburg.'
+        return 'Gothenburg. Hope you had fun!'
     } else if (location === 'stockholm') {
-        return 'Thank you for visiting our baking experience in Stockholm.'
+        return 'Stockholm. Hope you had fun!'
     } else if (location === 'umea') {
-        return 'Thank you for visiting our baking experience in Umea.'
+        return 'Umea. Hope you had fun!'
     }
 }
-    
+
 const radioButtonResponse = (radioButton1, radioButton2, radioButton3) => {
     if (radioButton1 === 'candyCanes') {
-        return 'You participated in the Candy Canes baking experience. Hope you had fun!'
+        return 'Thank you for participating in our Candy Canes baking experience in'
     } else if (radioButton2 === 'gingerBreadHouses') {
-        return 'You participated in the Ginger Bread Houses baking experience. Hope you had fun!'
+        return 'Thank you for participating in our Ginger Bread Houses baking experience in'
     } else if (radioButton3 === 'christmasChocolates') {
-        return 'You participated in the Christmas Chocolates baking experience. Hope you had fun!'
+        return 'Thank you for participating in our Christmas Chocolates baking experience in'
     }
 }
 
-
-const Summary =({location, radioButton1, radioButton2, radioButton3}) => {
+const Summary =({location, radioButton1, radioButton2, radioButton3, feedback1, feedback2}) => {
     return (
         <div className="summary">
-            <p>{locationResponse(location)} {radioButtonResponse(radioButton1, radioButton2, radioButton3)}</p>
+            <h2> {radioButtonResponse(radioButton1, radioButton2, radioButton3)} {locationResponse(location)}</h2>
+            <h3>The positive feedback you have to give us:</h3><p>{feedback1}</p>
+            <h3>You think we can improve on the following:</h3><p>{feedback2}</p>
         </div>
     )
 }
 
 export default Summary;
-/* {positiveFeedbackResponse(feedback1)} {improveFeedbackResponse(feedback2)} */ 
