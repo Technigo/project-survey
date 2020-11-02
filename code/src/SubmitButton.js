@@ -13,6 +13,6 @@ const SubmitButton = ({ doSubmit }) => {
       </button>
     </div>
    );
-}
+};
  
 export default SubmitButton;
