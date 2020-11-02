@@ -12,6 +12,6 @@ const ExitButton = ({ onExit }) => {
       </button>
     </div>
   );
-}
+};
  
 export default ExitButton;
