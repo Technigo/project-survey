@@ -37,7 +37,7 @@ const SurveyForm = () => {
 
   const handleCarsChange = newCars => {
     setCarModels(newCars)
-  }
+  };
 
   const handleReasonsChange = reasonValue => {
     reasons.includes(reasonValue)
@@ -52,12 +52,12 @@ const SurveyForm = () => {
 
   const handleMessageChange = newMessage => {
     setTextMessage(newMessage)
-  }
+  };
 
   const handleSubmit = () => {
     setShowSummary(true);
     window.location.hash = "#sectionSummary";
-  }
+  };
 /*When users want to edit the answer, the summary will be hidden, and the form will be shown, starting with userName section */
   const handleAnswerChange = (newSection) => {
       setShowSummary(false)
@@ -67,7 +67,7 @@ const SurveyForm = () => {
   const handleExitButton = () => {
       setShowSummary(false)
       window.location.hash = "#header";
-  }
+  };
 
   return (
     <div>
@@ -153,7 +153,7 @@ const SurveyForm = () => {
       }
     </div>
   );
-}
+};
 
 
 export default SurveyForm;
