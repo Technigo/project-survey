@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
-
-import Form from './Survey'; // imports the form and submit button
+import React from 'react';
+import Form from './Survey'; 
 
 export const App = () => {
 
