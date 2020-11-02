@@ -26,12 +26,7 @@ const rating = [
     label:"Excellent",
     id:"excellent"
   }
-  // 'Average',
-  // 'Good',
-  // 'Excellent',
-  // 'Poor',
-  // 'Very Poor'
-]
+];
 
 const UserRating = ({ userRating, onRatingChange }) => {
   return (
