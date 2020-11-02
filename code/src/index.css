@@ -28,7 +28,6 @@ section:nth-child(odd) {
   background-color: #E1E2E7;
 }
 
-
 .wrapper {
   max-width: 1300px;
   width: 80vw;
@@ -76,6 +75,7 @@ section:nth-child(odd) {
   font-size: 20px;
   color: #5C4E4E;
 }
+
 .message {
   display: flex;
   flex-direction: column;
@@ -100,7 +100,6 @@ section:nth-child(odd) {
 
 .check-box-button {
   margin-right: 10px;
-  
 }
 
 .button {
@@ -125,7 +124,6 @@ section:nth-child(odd) {
 
 .user-rating-element {
   display: flex;
-
 }
 
 .section-user-name,
@@ -163,6 +161,7 @@ section:nth-child(odd) {
   transition: box-shadow 0.1s ease-out 0s;
   box-shadow:  rgba(92, 78, 78, 0.3) 0px 2px;
 }
+
 .name-input:focus,
 .email-input:focus {
   box-shadow:  rgba(92, 78, 78, 0.3) 0px 3px;
