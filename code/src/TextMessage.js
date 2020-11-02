@@ -3,7 +3,7 @@ import React from 'react';
 const TextMessage = ({ textMessage, onMessageChange }) => {
   return (
     <div className="message" id="sectionMessage">
-      <label htmlFor="message">Please leave your message</label><br></br>
+      <label htmlFor="message">Please leave your message</label>
       <textarea className="text-box"
           id="message"
           type="text"
