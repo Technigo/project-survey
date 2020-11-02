@@ -8,4 +8,4 @@ In this project I used React, CSS, HTML, JS, npm, BEM. The project is divided in
 
 ## View it live
 
-https://app.netlify.com/sites/survey-sandra-shumanteva/overview
+https://survey-sandra-shumanteva.netlify.app/
