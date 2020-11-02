@@ -10,12 +10,11 @@ const NextButton  = ({ sectionId, disabled }) => {
       <button className="button"
         type="button"
         onClick={() => handleSectionChange()}
-        disabled={disabled}
       >
         Next
      </button>
     </div>
     );
-}
+};
  
 export default NextButton ;
