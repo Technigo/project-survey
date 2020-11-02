@@ -41,7 +41,7 @@ const reasons = [
         checked:"practicability",
         label:"Practicability",
     },
-]
+];
 
 const ReasonsToBuy = ({ userReasons, onReasonsChange }) => {
   return (
