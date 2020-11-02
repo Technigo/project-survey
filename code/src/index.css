@@ -77,6 +77,8 @@ section:nth-child(odd) {
   color: #5C4E4E;
 }
 .message {
+  display: flex;
+  flex-direction: column;
   margin-top: 20px;
 }
 
