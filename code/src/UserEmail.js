@@ -14,6 +14,6 @@ const UserEmail = ({email, onEmailChange}) => {
       />
     </div>
   )
-}
+};
 
 export default UserEmail;
