@@ -16,5 +16,5 @@ const UserAge = ({ userAge, onAgeChange }) => {
       />
     </div>
   )
-}
+};
 export default UserAge;
