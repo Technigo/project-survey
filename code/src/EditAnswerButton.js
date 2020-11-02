@@ -12,6 +12,6 @@ const EditAnswerButton = ({ onAnswerChange }) => {
         </button>
       </div>
      );
-}
+};
  
 export default EditAnswerButton;
