@@ -148,8 +148,8 @@ section:nth-child(odd) {
   width: 100%;
   font-family: inherit;
   color: rgb(92, 78, 78);
-  padding: 0px 0px 8px;
-  border-radius: 0px;
+  padding: 0 0 8px;
+  border-radius: 0;
   border: none;
   outline: none;
   background-color: transparent;
@@ -159,12 +159,12 @@ section:nth-child(odd) {
   resize: none;
   overflow: hidden;
   transition: box-shadow 0.1s ease-out 0s;
-  box-shadow:  rgba(92, 78, 78, 0.3) 0px 2px;
+  box-shadow:  rgba(92, 78, 78, 0.3) 0 2px;
 }
 
 .name-input:focus,
 .email-input:focus {
-  box-shadow:  rgba(92, 78, 78, 0.3) 0px 3px;
+  box-shadow:  rgba(92, 78, 78, 0.3) 0 3px;
 }
 
 .user-age {
