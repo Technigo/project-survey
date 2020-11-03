@@ -20,9 +20,10 @@ code {
 h1 { 
   font-size: 75px;
   width: fit-content;
-  margin-left: 30%;
-  margin-right: 30%;
-  padding: 10px;
+  position: relative; 
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px;
   color: rgba(255, 255, 255, 0.829);
   font-family: 'Quantico', sans-serif;
   text-align: center;
@@ -89,10 +90,14 @@ h2 {
   font-family: 'Titillium Web', sans-serif;
   font-size: 20px;
   color:#fff;
-  margin-left: 10px;
+}
+
+h3 { 
+  padding: 20px;
 }
 
 .form-container {
+  display: flex;
   background-color: rgba(190, 219, 252, 0.342);
   margin: auto;
   width: 50%;
@@ -110,6 +115,7 @@ h2 {
 
 .summary-container button {
   width: 50%;
+  transform: translate(0%);
   font-size:20px;
   background-color: #860525;
   color: #fff;
@@ -127,8 +133,9 @@ h2 {
 }
 
 form {
-  display:flex;
+  width: 100%;
   flex-direction: column;
+  justify-content: center;
   padding-top: 15px;
   padding-bottom: 15px;
   padding-right:30px;
@@ -168,12 +175,12 @@ input:invalid {
 }
 
 button {
-  width: 40%;
+  width: 50%;
+  transform: translate(50%);
   font-size:25px;
   background-color: #A2B7D8;
   color: #2d4059;
   padding: 14px 20px;
-  margin: 8px 190px;
   border: none;
   border-radius: 4px;
   cursor: pointer;
