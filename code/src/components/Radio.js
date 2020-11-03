@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './radio.css'
+import './radio.css';
 
 /* This component is completely reusable since it uses props. 
 It contains an array which contains objects consisting of value and answer. 
@@ -24,5 +24,5 @@ export const Radio = (props) => {
                 ))}
             </div>
         </>
-    )
+    );
 };

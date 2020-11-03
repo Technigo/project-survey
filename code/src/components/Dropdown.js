@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './dropdown.css'
+import './dropdown.css';
 
 export const Dropdown = (props) => {
 
@@ -23,5 +23,5 @@ export const Dropdown = (props) => {
                 ))}
             </select>
         </div>
-    )
+    );
 };

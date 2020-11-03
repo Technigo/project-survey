@@ -9,6 +9,15 @@ import { Checkbox } from './Checkbox';
 import { Progressbar } from './Progressbar';
 import { Summary } from './Summary';
 
+/* Arrays with objects for each components, needs to be definied outside of 
+the component-scope so that getUserInput() can access it. 
+Here I moved them into separate files to clean up code*/
+import { drinkArray } from './drinkarray';
+import { comfortFoodArray } from './comfortFoodArray';
+import { restaurantMethodArray } from './restaurantMethodArray';
+import { saladArray } from './saladArray';
+import { ageGroupArray } from './ageGroupArray'
+
 import './survey.css';
 
 export const Survey = () => {
@@ -31,135 +40,6 @@ export const Survey = () => {
         return optionsArray[i].text
     } return 'no text found'
   };
-  /* Arrays with objects for each components, needs to be definied outside of the component-scope so that getUserInput() can access it. */
-  const drinkArray = [
-    {
-      text: "Choose your poison",
-      value: "",
-    },
-    {
-      text: "Something sparkly",
-      value: "sparkly",
-    },
-    {
-      text: "Beer",
-      value: "beer",
-    },
-    {
-      text: "Wine",
-      value: "wine",
-    },
-    {
-      text: "Non-alcoholic fancy cocktail",
-      value: "non-alcoholic",
-    },
-    {
-      text: "TEQUILA BABY",
-      value: "tequila",
-    },
-  ];
-
-  const comfortFoodArray = [
-    {
-      text: "Choose your comfortfood",
-      value: "",
-    },
-    {
-      text: "Hot, steamy ramen",
-      value: "ramen",
-    },
-    {
-      text: "Freshly baked bread with loads of butter",
-      value: "bread",
-    },
-    {
-      text: "Rain or shine is Icecream-time",
-      value: "icecream",
-    },
-    {
-      text: "Big freaking bowl of pasta",
-      value: "pasta",
-    },
-    {
-      text: "Just a salad please",
-      value: "salad",
-    },
-  ];
-
-  const restaurantMethodArray = [
-    {
-      text: "Choose your method",
-      value: "",
-    },
-    {
-      text:
-        "Tons of research, google ratings and interviews with previous visitors",
-      value: "meticulous",
-    },
-    {
-      text: "I just go to the nearest joint around the corner",
-      value: "lazy",
-    },
-    {
-      text: "Does it have roaches? No? Then I am good to go",
-      value: "eats everything",
-    },
-    {
-      text: "Guide Michelin all day baby",
-      value: "fancypants",
-    },
-    {
-      text:
-        "Anything where you can order macrobiotic, nonprocessed and prefereably raw food please",
-      value: "dietician",
-    },
-  ];
-
-  const saladArray = [
-    {
-      text: "Choose your veggie:",
-      value: "",
-    },
-    {
-      text: "Avocado",
-      value: "avocado",
-    },
-    {
-      text: "Loads of tomato",
-      value: "tomato",
-    },
-    {
-      text: "Cheese and meat. Cows eat green, that counts right?",
-      value: "carnivore",
-    },
-    {
-      text: "Broccoli",
-      value: "broccoli",
-    },
-    {
-      text: "Some fruits are always nice.",
-      value: "fruit",
-    },
-  ];
-
-  const ageGroupArray = [
-    {
-      value: '0-20',
-      message: 'Teeny tiny baby'
-    },
-    {
-      value: '21-40',
-      message: 'Young and fresh baby'
-    },
-    {
-      value: '41-60',
-      message: 'Prime years baby'
-    },
-    {
-      value: '61-100',
-      message: 'Oldie but goldie baby'
-    }
-  ];
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -184,7 +64,7 @@ export const Survey = () => {
                 text='Begin Baby!' />
             </div>
           </div>
-        )};
+        )}
         {!showSummary ? (
           <form className='survey__form' onSubmit={handleSubmit}>
             {question === 0 && (
@@ -211,7 +91,7 @@ export const Survey = () => {
                 <Progressbar
                   value='15'/>
               </>
-            )};
+            )}
             {question === 1 && (
               <>
                 <Dropdown
@@ -236,7 +116,7 @@ export const Survey = () => {
                 <Progressbar
                   value='30'/>
               </>
-            )};
+            )}
             {question === 2 && (
               <>
                 <Dropdown
@@ -260,7 +140,7 @@ export const Survey = () => {
                 <Progressbar
                   value='45'/>
               </>
-            )};
+            )}
             {question === 3 && (
               <>
                 <Dropdown
@@ -284,7 +164,7 @@ export const Survey = () => {
                 <Progressbar
                   value='60'/>
               </>
-            )};
+            )}
             {question === 4 && (
               <>
                 <Radio
@@ -309,7 +189,7 @@ export const Survey = () => {
                 <Progressbar
                   value='75'/>
               </>
-            )};
+            )}
             {question === 5 && (
               <>
                 <Checkbox
@@ -333,7 +213,7 @@ export const Survey = () => {
                 <Progressbar
                   value='100'/>
               </>
-            )};
+            )}
             {question === 6 && (
               <>
                 <Text
@@ -352,7 +232,7 @@ export const Survey = () => {
                   />
                 </div>
               </>
-            )};
+            )}
           </form>
         ) : (
             <Summary
@@ -364,7 +244,7 @@ export const Survey = () => {
               surveyAgain={checkbox}
               userMessage={userText}
             />
-          )};
+          )}
       </section>
     </>
   );

@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import './text.css'
+import './text.css';
 
 export const Text = (props) => {
     return(
@@ -11,4 +11,4 @@ export const Text = (props) => {
         </div>
         </>
     )
-}
+};

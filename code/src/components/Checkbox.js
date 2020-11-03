@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const Checkbox = (props) => {
     return (
@@ -14,5 +14,5 @@ export const Checkbox = (props) => {
                         onChange={(event) => props.setCheckbox(event.target.checked)}
                     />{props.answer}</label>
         </>
-    )
+    );
 };
