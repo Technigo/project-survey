@@ -183,6 +183,7 @@ button:focus, button:hover {
 	background-color: greenyellow;
 }
 .line {
+	border:solid red 2px;
 	width: 10rem;
 	color: white;
 	text-align: center;
@@ -191,13 +192,12 @@ button:focus, button:hover {
 	font-family: 'Reenie Beanie', cursive;
 	font-size: 30px;
 	background-color: transparent;
+	height: 40px;
 }
 .mad-lib {
-	text-align: center;
-	color: white;
+	display: flex;
+	flex-direction: column;
 	padding: 20px 20px 50px 20px;
-	font-size: 30px;
-	font-family: 'Bigelow Rules', cursive;
 	background: black;
 	opacity: 0.7;
 	margin-left: 30px;
@@ -205,11 +205,26 @@ button:focus, button:hover {
 	box-shadow: inset 0 0 15px rgb(255, 255, 255);
 	padding: 10px;
 }
-h3 {
-	font-size: 50px;
-	margin-top: 20px;
-	margin-bottom: 20px;
+
+.mad-text {
+	padding: 10px;
+	display: flex;
+	flex-wrap: wrap;
+	color: white;
+	font-size: 30px;
+	font-family: 'Bigelow Rules', cursive;
 }
+
+.mad-lib .header {
+height: 80px;
+font-size: 70px;
+font-family: 'Bigelow Rules', cursive;
+}
+
+.mad-lib p {
+	margin:10px;
+}
+
 .flip-box img {
 	width: 100%;
 	height: 200px;
@@ -256,6 +271,9 @@ h3 {
 /* Style the back side */
 
 .flip-box-back {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
 	width: 90%;
 	border-radius: 20px;
 	height: 90%;
