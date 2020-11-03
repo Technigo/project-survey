@@ -17,7 +17,7 @@ const Form = () => {
   const handleStart = event => {
     event.preventDefault();
     setShowQuestion(true);
-  }
+  };
 
   const handlePlaceChange = event => {
     setPlace(event.target.value);
@@ -42,15 +42,15 @@ const Form = () => {
         ? <Summary place={place} rating={rating} feedback={feedback} />
         : <form>
           <Intro />
-          {!showQuestion && <Button onClick={handleStart} title="Start" />}
+          {!showQuestion && <Button onClick={handleStart} title='Start' />}
           {showQuestion && <DropDown place={place} onPlaceChange={handlePlaceChange} />}
           {place && <RadioButtons rating={rating} onRatingChange={handleRatingChange} />}
           {rating && <InputText feedback={feedback} onFeedbackChange={handleFeedbackChange} rating={rating} />}
-          {feedback && <Button onClick={handleSubmit} title="Submit" />}
+          {feedback && <Button onClick={handleSubmit} title='Submit' />}
         </form>
       }
     </section>
-  )
-}
+  );
+};
 
 export default Form;

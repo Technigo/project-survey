@@ -9,5 +9,5 @@ export const App = () => {
       <Header />
       <Form />
     </div>
-  )
-}
+  );
+};
