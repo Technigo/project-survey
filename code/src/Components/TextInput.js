@@ -18,6 +18,7 @@ export const TextInput = ({name, setName}) => {
 
             </label>
         </div>
-    )};
+    );
+};
 
 

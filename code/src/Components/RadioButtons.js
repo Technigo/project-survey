@@ -24,6 +24,7 @@ export const RadioButtons = ({game, setGamesList}) => {
                 />
                 {games}
             </label>
-        ))} 
+        ))}
         </div>
-    )};
+    );
+};

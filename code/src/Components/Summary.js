@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import BeatSaberImage from '../assets/beatsaber.jpg';
 import UntilYouFallImage from '../assets/untilyoufall.png';
@@ -36,10 +36,10 @@ const showGameImage = (game) => {
       break;
   default:
     break;
-  }
+  };
 
   return <img src={imageSrc} className= 'summary-image' alt='game chosen'/>
-}
+};
 
 export const Summary = ({name, snack, drink, game,}) => {
 
@@ -56,5 +56,5 @@ export const Summary = ({name, snack, drink, game,}) => {
         </button>
 
       </>
-  )
+  );
 };

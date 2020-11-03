@@ -11,4 +11,5 @@ export const App = () => {
       <Form />
       <Footer/>
     </>
-)};
+  );
+};

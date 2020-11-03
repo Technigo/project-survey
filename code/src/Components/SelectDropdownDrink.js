@@ -16,4 +16,5 @@ export const SelectDropdownDrink = ({drink, setDrink}) => {
                 <option value='Water'>Water! To keep me hydrated!</option>
                 </select>
             </div>
-        )};
+    );
+};

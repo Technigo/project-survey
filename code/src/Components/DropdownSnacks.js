@@ -17,4 +17,5 @@ export const DropdownSnacks = ({snack, setSnack}) => {
                 <option value='Vegetarian'>Vegetarian</option>
                 </select>
             </div>
-        )};
+    );
+};

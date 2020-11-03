@@ -36,44 +36,46 @@ export const Form = () => {
       };
 
     return (
-    <>
-    <h1 tabIndex='0'>VR Games Night!</h1>
-    <section className='form-container'>
-        {section !== 'summary' ? (
-            <form onSubmit={handleSubmit}>
-                {section === 'welcomePage' && (
-                    <WelcomePage/>   
-                )}
-                {section === 'nameQuestion' && (
-                    <TextInput name={name} setName={setName}/>   
-                )}
-                {section === 'gameQuestion' && (
-                    <RadioButtons game={game} setGamesList={setGamesList}/>
-                )}
-                {section === 'drinkQuestion' && (
-                    <SelectDropdownDrink drink={drink} setDrink={setDrink}/>
-                )}
-                {section === 'snackQuestion' && (
-                    <DropdownSnacks snack={snack} setSnack={setSnack}/>   
-                )} 
-                <button 
-                    tabIndex ='0'
-                    type='submit'
-                    aria-pressed='false'
-                    aria-label='Next question'
-                > Next!
-                </button>
-            </form>            
-            ):(           
-            <div className='summary-container'>
-                <Summary 
-                    name={name} 
-                    game={game} 
-                    drink={drink} 
-                    snack={snack} 
-                />
-            </div>
-        )}
-    </section>
-   </>
-)};
+        <>
+        <h1 tabIndex='0'>VR Games Night!</h1>
+        <section className='form-container'>
+            {section !== 'summary' ? (
+                <form onSubmit={handleSubmit}>
+                    {section === 'welcomePage' && (
+                        <WelcomePage/>   
+                    )}
+                    {section === 'nameQuestion' && (
+                        <TextInput name={name} setName={setName}/>   
+                    )}
+                    {section === 'gameQuestion' && (
+                        <RadioButtons game={game} setGamesList={setGamesList}/>
+                    )}
+                    {section === 'drinkQuestion' && (
+                        <SelectDropdownDrink drink={drink} setDrink={setDrink}/>
+                    )}
+                    {section === 'snackQuestion' && (
+                        <DropdownSnacks snack={snack} setSnack={setSnack}/>   
+                    )} 
+                    <button 
+                        tabIndex ='0'
+                        type='submit'
+                        aria-pressed='false'
+                        aria-label='Next question'
+                    > Next!
+                    </button>
+                </form>            
+                ):(           
+                <div className='summary-container'>
+                    <Summary 
+                        name={name} 
+                        game={game} 
+                        drink={drink} 
+                        snack={snack} 
+                    />
+                </div>
+                )
+            }
+        </section>
+        </>
+    );
+};
