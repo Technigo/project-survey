@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 
 import { Header } from './Header'
-import { FirstQuestion } from './FirstQuestion'
+import { Question1 } from './Question1'
 import { Question2 } from './Question2'
 import { Question3 } from './Question3'
 import { Question4 } from './Question4'
@@ -42,8 +42,6 @@ export const Form = () => {
         setHideForm(true);
     }
 
-    console.log(descriptions)
-
     if (hideForm === true){
         return (
             <Summary 
@@ -62,7 +60,7 @@ export const Form = () => {
                 <>
                     <Header />
 
-                    <FirstQuestion 
+                    <Question1 
                         name={name} 
                         setName={setName} 
                         onNameChange={handlerNameChange}

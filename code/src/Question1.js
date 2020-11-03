@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-export const FirstQuestion = ({ name, onNameChange: handleNameChange}) => {
+export const Question1 = ({ name, onNameChange: handleNameChange}) => {
     return (
         <section className="question1 section">
             <h2>Sends some love to</h2>
