@@ -23,8 +23,7 @@ export const Radio = ({ radioInput, setRadioInput}) => {
           />
           {group}
         </label>
-      ))
-      }
+            ))}
         </form>
     )
 }

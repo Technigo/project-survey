@@ -1,8 +1,7 @@
 import React from 'react'
 
 
-export const Summary = (props) => {
-  const { name, radioInput, food } = props
+export const Summary = ( name, radioInput, food ) => {
   return (
     <section>
         <h1>Thank you sweet {name}! </h1>
