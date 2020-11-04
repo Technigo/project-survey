@@ -5,5 +5,5 @@ export const Submit = ({ information }) => {
     <button type="submit" tabIndex="0" aria-label="Next question">
       {information}
     </button>
-  )
-}
+  );
+};

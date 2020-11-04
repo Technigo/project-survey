@@ -20,5 +20,5 @@ export const InputSelect = ({ label, id, array, state, setState }) => {
 
       </select>
     </div>
-  )
-}
+  );
+};

@@ -8,5 +8,5 @@ export const Summary = ({ name, surfboard, wave }) => {
         Hi {name}! You prefer to surf a {surfboard.toLowerCase()} in {wave.toLowerCase()} waves!
       </p>
     </div>
-  )
-}
+  );
+};

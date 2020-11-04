@@ -13,5 +13,5 @@ export const InputText = ({ label, id, placeholder, state, setState }) => {
         required
       />
     </div>
-  )
-}
+  );
+};
