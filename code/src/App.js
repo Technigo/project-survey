@@ -40,7 +40,7 @@ export const App = () => {
                 state={name}
                 setState={setName}
               />
-            )};
+            )}
             {section === 2 && (
               <InputSelect
                 label="What is your go to surfboard?"
@@ -49,7 +49,7 @@ export const App = () => {
                 state={surfboard}
                 setState={setSurfboard}
               />
-            )};
+            )}
             {section === 3 && (
             <InputRadio
               label="What kind of waves do you like?"
@@ -58,7 +58,7 @@ export const App = () => {
               state={wave}
               setState={setWave}
             />
-            )};
+            )}
 
         {section < numberOfQuestions ? <Submit information="→" /> : <Submit information="Submit" />}
 
