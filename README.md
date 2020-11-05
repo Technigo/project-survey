@@ -20,6 +20,14 @@ Accessibility testing:
 
 The website was tested in Chrome, Safari, Firefox on desktop and Safar on mobile. The main content looks the same, but there are som minor differences in the design for the different form elements.
 
+## TECH 
+- React
+- JSX
+- Javascript
+- API 
+- CSS
+- HTML 
+
 ## If I had more time:
 
 - I would have made a dynamic form! I would like to display one question at a time and scroll down/show next if the user clicks on a button. I will go back to this project and update this later! 
