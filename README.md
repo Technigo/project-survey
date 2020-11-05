@@ -24,7 +24,6 @@ The website was tested in Chrome, Safari, Firefox on desktop and Safar on mobile
 - React
 - JSX
 - Javascript
-- API 
 - CSS
 - HTML 
 
