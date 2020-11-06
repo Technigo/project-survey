@@ -1,25 +1,25 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap");
 
 body{
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 .form-wrapper{
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .h1-wrapper{
-    background-color: rgb(115, 220, 220);
+  background-color: rgb(115, 220, 220);
 }
 
 h1{
-    text-align: center;
-    padding: 10px;
+  text-align: center;
+  padding: 10px;
 }
 
 h2{
-    text-align: center;
+  text-align: center;
 }
 
 form {
@@ -30,52 +30,52 @@ form {
 }
 
 .question-wrapper{
-    width: 100%;
-    margin-top: 30px;
+  width: 100%;
+  margin-top: 30px;
 }
 
 select{
-    font-family: "Montserrat", sans-serif;
-    border-radius: 5px;
-    padding: 5px;
-    margin-bottom: 20px;
-    font-size: 1.2em;
+  font-family: "Montserrat", sans-serif;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 20px;
+  font-size: 1.2em;
 }
 
 label{
-    margin-bottom:10px;
-    text-align: center;
+  margin-bottom:10px;
+  text-align: center;
 }
 
 .sailor-label{
-    margin-bottom:5px;
+  margin-bottom:5px;
 }
 
 .next-question{
-    margin: 10px;
+  margin: 10px;
 }
 
 button{
-    margin: 10px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 1em;
-    border-radius: 5px;
+  margin: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1em;
+  border-radius: 5px;
 }
 
 @media screen and (min-width:768px) {
-    button{
-        font-size: 1.2em;
-    }
+  button{
+    font-size: 1.2em;
+  }
 
-    h1{
-        font-size: 2.3em;
-    }
+  h1{
+    font-size: 2.3em;
+  }
 
-    h2{
-        font-size: 2.3em;
-    }
+  h2{
+    font-size: 2.3em;
+  }
 
-    label{
-        font-size: 1.3em;
-    }
+  label{
+    font-size: 1.3em;
+  }
 }

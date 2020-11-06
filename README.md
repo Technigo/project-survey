@@ -14,7 +14,6 @@ The focus in this project was to practice using React state and controlling form
 ### View it live
 
 The site is deployed <a href="https://musing-wilson-8814a6.netlify.app">here.</a>  
-Check it out and learn some cool facts about period poverty and a solution!
 
 ### Author and contact
 
