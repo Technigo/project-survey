@@ -71,7 +71,7 @@ export const Input = () => {
           {question === 4 && (
             <section className="question-wrapper">
               < Turtles setTurtles={setTurtles} turtle={turtle} />
-              <button aria-label="Submitt-button" disabled={!name || !teletubbies || !sailorMoon || !turtle} type="submit"> I'M DONE </button>
+              <button aria-label="Submitt-button" disabled={!turtle} type="submit"> I'M DONE </button>
             </section>
           )}
         </form>
