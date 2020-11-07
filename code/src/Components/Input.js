@@ -12,14 +12,19 @@ const Input = ({ name, onInputChange }) => {
                 <span role="img" aria-label="cactus"> 🌵 </span> 
             </h3>
             
-            <label htmlFor="nameInput" className="label-input">Enter your name please: </label>
+            <label 
+                htmlFor="nameInput" 
+                className="label-input"
+            >
+                Enter your name please: 
+            </label>
             <input 
-            id="nameInput"
-            type="text"
-            placeholder="My name is..."
-            value={name}
-            onChange={event => onInputChange(event.target.value)}
-            required
+                id="nameInput"
+                type="text"
+                placeholder="My name is..."
+                value={name}
+                onChange={event => onInputChange(event.target.value)}
+                required
             />
         </section>
      );

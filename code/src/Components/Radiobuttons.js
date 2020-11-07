@@ -15,22 +15,22 @@ const Radiobuttons = ({favoritePlant, onSelectRadio }) => {
 
             {/* Mapping over the plants array, generating a lable and input for each of the array items */}
             {favoritePlants.map(plant => (
-              <label 
-              htmlFor={favoritePlant} 
-              className="label-radio"
-              aria-label={plant} 
-              tabIndex="0" key={plant}> {/* When using an array, each item needs to be given a unique key */}
-                  <input 
-                  className="radio-btn"
-                  type="radio"
-                  name="favorite-plant"
-                  id="favorite-plant"
-                  value={plant}
-                  onChange={(event) => onSelectRadio(event.target.value)}
-                  checked={favoritePlant === plant}
-                  required
-                  />
-                   {plant} 
+                <label 
+                    htmlFor={favoritePlant} 
+                    className="label-radio"
+                    aria-label={plant} 
+                    tabIndex="0" key={plant}> {/* When using an array, each item needs to be given a unique key */}
+                <input
+                    className="radio-btn"
+                    type="radio"
+                    name="favorite-plant"
+                    id="favorite-plant"
+                    value={plant}
+                    onChange={(event) => onSelectRadio(event.target.value)}
+                    checked={favoritePlant === plant}
+                    required
+                />
+                {plant} 
               </label>
               ))}
         </section>

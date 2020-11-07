@@ -7,86 +7,75 @@
 }
 
 .hero-img {
-    /* Image by Sarah Dorweiler from unsplash */
-    height: 100vh;
-    width: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    object-fit: cover;
-  }
+  /* Image by Sarah Dorweiler from unsplash */
+  height: 100vh;
+  width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  object-fit: cover;
+}
 
+.hero-text {
+  font-size: 54px;
+  position: absolute;
+  top: 40%;
+  right: 20%;
+  color: #000000;
+}
+
+.start-button {
+  position: absolute;
+  font-size: 24px;
+  top: 65%;
+  right: 20%;
+  padding: 20px;
+  border: 1px solid #a0b39f;
+  background: #a0b39f;
+  cursor: pointer;
+}
+
+.start-button a {
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+/* MEDIA QUERIES */
+@media screen and (min-width: 280px) {
   .hero-text {
-    font-size: 54px;
+    font-size: 24px;
     position: absolute;
-    top: 40%;
-    right: 20%;
-    color: #000000;
+    top: 50%;
+    right: 5%;
+  }
+  
+  .start-button {
+    font-size: 18px;
+    top: 65%;
+    right: 5%;
+  }  
+}
+  
+@media screen and (min-width:768px) {
+  .hero-text {
+    font-size: 28px;
   }
 
   .start-button {
-    position: absolute;
-    font-size: 24px;
-    top: 65%;
-    right: 20%;
-    padding: 20px;
-    border: 1px solid #a0b39f;
-    background: #a0b39f;
-    cursor: pointer;
-  }
+    font-size: 22px;
+    top: 60%;
+  }  
+}
 
-  .start-button a {
-    text-decoration: none;
-    color: #ffffff;
-    cursor: pointer;
-  }
-
-    /* MEDIA QUERIES */
-    @media screen and (min-width: 280px) {
-
-      .hero-text {
-        font-size: 24px;
-        position: absolute;
-        top: 50%;
-        right: 5%;
-      }
-
-      .start-button {
-        font-size: 18px;
-        top: 65%;
-        right: 5%;
-      }  
+@media screen and (min-width:1024px) {
+  .hero-text {
+    font-size: 42px;
   }
   
-  @media screen and (min-width:768px) {
-    .hero-text {
-      font-size: 28px;
-    }
-
-    .start-button {
-      font-size: 22px;
-      top: 60%;
-    }  
+  .start-button {
+    font-size: 28px;
+    top: 60%;
   }
-  
-  @media screen and (min-width:1024px) {
-    .hero-text {
-      font-size: 42px;
-    }
-
-    .start-button {
-      font-size: 28px;
-      top: 60%;
-    } 
-  
-  }
-  
-  @media screen and (min-width:1300px) {
-  
-  }
-  
-  
-  @media screen and (min-width:1600px) {
-   
-  }
+}

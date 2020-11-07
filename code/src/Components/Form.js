@@ -1,13 +1,13 @@
-import React, {useState} from "react";
-import "styles/form.css";
-import Input from "./Input";
-import Select from "./Select";
-import Radiobuttons from "./Radiobuttons";
-import Summary from "./Summary";
+import React, { useState } from 'react';
 
+import Input from './Input';
+import Select from './Select';
+import Radiobuttons from './Radiobuttons';
+import Summary from './Summary';
+
+import 'styles/form.css';
 
 const Form = () => {
-    
     /* State hooks */
     const [name, setName] = useState('');
     const [numberOfPlants, setNumberOfPlants] = useState(''); 
