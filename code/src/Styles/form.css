@@ -1,114 +1,110 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather+Sans&family=Roboto:ital,wght@0,700;1,400;1,500&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Lobster&family=Merriweather+Sans&family=Roboto:ital,wght@0,700;1,400;1,500&display=swap");
 
 .servey-form {
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    height: 300px;
-    width: 300px;
-    justify-content: space-around;
-    align-items: center;
-    font-family: 'Roboto', sans-serif;  
+  display: flex;
+  flex-direction: column;
+  padding: 15px;
+  height: 300px;
+  width: 300px;
+  justify-content: space-around;
+  align-items: center;
+  font-family: "Roboto", sans-serif;
 }
-
 
 .summary p {
-   font-style: italic;
+  font-style: italic;
 }
 
-.message-container, .summary-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.message-container,
+.summary-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.radio-buttons{
-    width: 80px;
-    border: 3px solid grey;
-    height: 15px;
-    width: 25px;
-    top: 5px;
-   right: 10px;
+.radio-buttons {
+  width: 80px;
+  border: 3px solid grey;
+  height: 15px;
+  width: 25px;
+  top: 5px;
+  right: 10px;
 }
 
 .radio-label {
-    clear: none;  
-    display: block;
-    margin: 10px;   
+  clear: none;
+  display: block;
+  margin: 10px;
 }
 
-.checkbox-label{
-    display: inline-block;
-    margin: 5px;  
+.checkbox-label {
+  display: inline-block;
+  margin: 5px;
 }
 
-.checkbox-container{
-    display: block;
+.checkbox-container {
+  display: block;
 }
 
-.welcome{
-    font-family: 'Lobster', cursive;
+.welcome {
+  font-family: "Lobster", cursive;
 }
 
 .text-input {
-    margin-left: 10px;
-    height: 20px;
+  margin-left: 10px;
+  height: 20px;
 }
 
-.drop-down{
-    margin: 30px;
-    width: 250px;
-    padding: 5px 35px 5px 5px;
-    font-size: 15px;
-    border: 1px solid #778899;
-    height: 32px;
-    background: #d3d3d3;
-    font-family: 'Merriweather Sans', sans-serif;   
+.drop-down {
+  margin: 30px;
+  width: 250px;
+  padding: 5px 35px 5px 5px;
+  font-size: 15px;
+  border: 1px solid #778899;
+  height: 32px;
+  background: #d3d3d3;
+  font-family: "Merriweather Sans", sans-serif;
 }
 
-.summary  {
+.summary {
+  text-align: center;
+}
+
+.summary h1 {
+  font-style: italic;
+}
+.menu-img {
+  width: 300px;
+}
+
+@media (max-width: 437px) {
+  .welcome {
+    font-size: 20px;
     text-align: center;
-}
+  }
 
-.summary h1{
-    font-style: italic;
-}
-.menu-img{
-    width: 300px;
-}
+  .start {
+    font-size: 15px;
+    text-align: center;
+  }
 
-@media (max-width: 437px){
-    .welcome {
-        font-size: 20px;
-        text-align: center;
-    }
+  .text-input {
+    display: block;
+  }
 
-    .start {
-        font-size: 15px;
-        text-align: center;
-    }
+  .name {
+    margin-left: 20px;
+  }
 
-    .text-input{
-        display: block;
-    }
+  .text-input {
+    margin-left: 10vw;
+  }
 
-    .name {
-        margin-left: 20px;
-    }
-
-    .text-input{
-        margin-left: 10vw
-      
-    }
-
-    .drop-down {
-        width: 200px;
-        font-size: 15px;
-    }
-    
+  .drop-down {
+    width: 200px;
+    font-size: 15px;
+  }
 }

@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react'
 
 import 'Styles/form.css'
 import 'Styles/buttons.css'
 
 const Buttons = props => {
 
-  return ( 
+  return (
     <button
       type="submit"
-      onClick={()=> {props.setSection(props.value)}}
+      onClick={() => { props.setSection(props.value) }}
       disabled={props.disabled}
-     className="btn" >
+      className="btn" >
       {props.name}
     </button>
   )
 }
 
-export default Buttons;
+export default Buttons

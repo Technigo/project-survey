@@ -8,10 +8,9 @@ const DrinksInput = ({ drinks, setDrinks }) => {
             : setDrinks([...drinks, drinksValue])
     }
 
-   
     return (
         <div className="checkbox-container">
-          <label className="checkbox-label" htmlFor="water">water</label>
+            <label className="checkbox-label" htmlFor="water">water</label>
             <input
                 id="water"
                 type="checkbox"

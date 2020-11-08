@@ -2,10 +2,9 @@ import React from 'react'
 
 const DessertInput = ({ dessert, setDessert }) => {
 
-     const handleDessertChange = event => {
+    const handleDessertChange = event => {
         setDessert(event.target.value);
     }
-    console.log(dessert);
 
     const dessertArray = ['Ice Cream', 'Chocolate Cake', 'Tiramisu', 'Strawberry Cake']
 
@@ -21,10 +20,9 @@ const DessertInput = ({ dessert, setDessert }) => {
                         name="dessert-input"
                         onChange={handleDessertChange}
                         checked={dessert === desserts}
-                        required
                     />
                     {desserts}
-                   </label>       
+                </label>
             ))}
 
         </div>

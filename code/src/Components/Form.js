@@ -1,40 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 import 'Styles/style.css'
 import 'Styles/form.css'
 import RestaurantPic from 'assets/restaurant.jpg'
 import MealPic from 'assets/meal.jpg'
-
-
-import NameInput from './NameInput';
-import MaincourseInput from './MaincourseInput';
-import DrinksInput from './DrinksInput';
-import DessertInput from './DessertInput';
-import Buttons from './Buttons';
-import Summary from './Summary';
+import NameInput from './NameInput'
+import MaincourseInput from './MaincourseInput'
+import DrinksInput from './DrinksInput'
+import DessertInput from './DessertInput'
+import Buttons from './Buttons'
+import Summary from './Summary'
 
 const Form = () => {
-  const [name, setName] = useState('');
-  const [maincourse, setMaincourse] = useState('');
-  const [drinks, setDrinks] = useState([]);
-  const [dessert, setDessert] = useState('');
+  const [name, setName] = useState('')
+  const [maincourse, setMaincourse] = useState('')
+  const [drinks, setDrinks] = useState([])
+  const [dessert, setDessert] = useState('')
   const [section, setSection] = useState('startMessage')
-
 
   const handleSubmit = event => {
     event.preventDefault()
   };
 
   return (
-
     <section className="container-wrapper">
       <form className="servey-form" onSubmit={handleSubmit}>
-
         {section === 'startMessage' && (
           <div className="message-container">
             <img className="message-img" src={RestaurantPic} alt="restaurant" />
             <h1 className="welcome" tabIndex="0">Welcome to Restaurant Starmountain</h1>
-            <h2 tabIndex="0">Please start your order</h2>
+            <h2 className="start" tabIndex="0">Please start your order</h2>
             <div className="button-container">
               <Buttons
                 name="Order"
