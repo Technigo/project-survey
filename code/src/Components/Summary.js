@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Summary = ({ userName, userMaincourse, userDrinks, userDessert }) => {
 
@@ -11,7 +11,7 @@ const Summary = ({ userName, userMaincourse, userDrinks, userDessert }) => {
             <p> {userDessert}</p>
             <h3>Enjoy your meal!</h3>
         </div>
-    );
+    )
 }
 
-export default Summary;
+export default Summary

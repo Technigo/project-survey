@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const DrinksInput = ({ drinks, setDrinks }) => {
 
@@ -49,4 +49,4 @@ const DrinksInput = ({ drinks, setDrinks }) => {
     )
 }
 
-export default DrinksInput;
+export default DrinksInput

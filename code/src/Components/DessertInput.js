@@ -3,7 +3,7 @@ import React from 'react'
 const DessertInput = ({ dessert, setDessert }) => {
 
     const handleDessertChange = event => {
-        setDessert(event.target.value);
+        setDessert(event.target.value)
     }
 
     const dessertArray = ['Ice Cream', 'Chocolate Cake', 'Tiramisu', 'Strawberry Cake']
@@ -29,4 +29,4 @@ const DessertInput = ({ dessert, setDessert }) => {
     )
 }
 
-export default DessertInput;
+export default DessertInput

@@ -20,7 +20,7 @@ const Form = () => {
 
   const handleSubmit = event => {
     event.preventDefault()
-  };
+  }
 
   return (
     <section className="container-wrapper">
@@ -120,5 +120,5 @@ const Form = () => {
   )
 }
 
-export default Form;
+export default Form
 

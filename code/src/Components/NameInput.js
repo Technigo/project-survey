@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react'
 
 const NameInput = ({ name, setName }) => {
 
     const handleNameChange = event => {
-        setName(event.target.value);
+        setName(event.target.value)
     }
 
     return (
@@ -20,4 +20,4 @@ const NameInput = ({ name, setName }) => {
     )
 }
 
-export default NameInput;
+export default NameInput
