@@ -10,5 +10,5 @@ export const Text = (props) => {
             <input tabIndex={'0'} type='text' onChange={(event) => props.setUserText(event.target.value)}/>
         </div>
         </>
-    )
+    );
 };
