@@ -1,13 +1,13 @@
-import React from "react"
+import React from 'react';
 
 export const Dropdown = ({ location, setLocation, label }) => {
- 
+
 
   return (
-      <div className="dropdown-field">
-        <label htmlFor="location">
+    <div className="dropdown-field">
+      <label htmlFor="location">
         <h1 className="typewriter">Where do you live?</h1>
-        </label>
+      </label>
       <select
         name={label}
         onChange={event => setLocation(event.target.value)}
@@ -18,6 +18,6 @@ export const Dropdown = ({ location, setLocation, label }) => {
         <option value="göteborg">Gothenburg</option>
         <option value="malmö">Malmo</option>
       </select>
-      </div>
+    </div>
   );
 };

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 const group = ["0-18", "19-30", "30+"];
 
@@ -22,10 +22,10 @@ export const Radiobutton = ({ ageGroup, setAgeGroup }) => {
                    {group}
                    <span className="custom-radio"></span>
                </label>
-           ))}
-    </div>
+           ))};
+        </div>
     </>
-    )
-}
+    );
+};
                
         

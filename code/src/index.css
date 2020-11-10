@@ -7,7 +7,6 @@
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@500&display=swap');
-
 html {
   scroll-behavior: smooth;
 }
@@ -15,14 +14,12 @@ html {
 body {
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-a, p{
+a, p {
   text-decoration: none;
   color: black;
   font-family: 'Roboto Mono', monospace;
@@ -43,7 +40,7 @@ code {
   scroll-behavior: smooth;
 }
 
-.input{
+.input {
   background-color: #CEBBBB;
   height: 100vh;
   padding: 150px 15px;
@@ -51,12 +48,12 @@ code {
   flex-direction: column;
 }
 
-.header-wrapper{
+.header-wrapper {
   width: fit-content;
 }
 
-.dropdown{
-  background:#E3CECE;
+.dropdown {
+  background: #E3CECE;
   height: 100vh;
   padding: 150px 15px;
   display: flex;
@@ -64,6 +61,7 @@ code {
 }
 
 /* Input styling */
+
 .input-field {
   display: flex;
   flex-direction: column;
@@ -71,37 +69,38 @@ code {
   align-items: flex-start;
   font-family: 'Roboto Mono', monospace;
 }
-.input-field input,
-.input-field textarea,
-.input-field select {
-    width: 250px;
-    padding: 10px;
-    border: none;
-    background:#fbf0f0;
-    display: flex;
-    font-Size: 15px;
-    margin-top: 10px;
-    border-radius: 5px;
-    font-family: 'Roboto Mono', monospace;
+
+.input-field input, .input-field textarea, .input-field select {
+  width: 250px;
+  padding: 10px;
+  border: none;
+  background: #fbf0f0;
+  display: flex;
+  font-Size: 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  font-family: 'Roboto Mono', monospace;
 }
 
 /* Dropdown styling */
-.dropdown-field{
+
+.dropdown-field {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
 
-.dropdown-field select{
+.dropdown-field select {
   width: 250px;
   padding: 10px;
   margin-top: 10px;
-  background:#fbf0f0;
+  background: #fbf0f0;
   font-size: 15px;
   border: none;
   border-radius: 5px;
   font-family: 'Roboto Mono', monospace;
 }
+
 /* Checkbox styling */
 
 .checkbox {
@@ -112,22 +111,22 @@ code {
   flex-direction: column;
 }
 
-.checkbox-group{
+.checkbox-group {
   display: flex;
   flex-direction: column;
 }
 
-.checkbox-container{
-  display:block;
+.checkbox-container {
+  display: block;
   position: relative;
   padding-left: 25px;
   margin: 10px 5px;
   font-size: 15px;
-  user-select: none; 
+  user-select: none;
   font-family: 'Roboto Mono', monospace;
 }
 
-.checkbox-container input{
+.checkbox-container input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -135,16 +134,16 @@ code {
   width: 0;
 }
 
-.custom-checkbox{
+.custom-checkbox {
   position: absolute;
   height: 19px;
   width: 19px;
   background-color: #eee;
   border-radius: 4px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.custom-checkbox{
+.custom-checkbox {
   position: absolute;
   top: 0;
   left: 0;
@@ -152,18 +151,18 @@ code {
   width: 19px;
   background-color: #eee;
   border-radius: 4px;
-  cursor: pointer; 
+  cursor: pointer;
 }
 
-.checkbox-container:hover input ~ .custom-checkbox{
+.checkbox-container:hover input~.custom-checkbox {
   background-color: #ccc;
 }
 
-.checkbox-container input:checked ~ .custom-checkbox{
+.checkbox-container input:checked~.custom-checkbox {
   background-color: #444444;
 }
 
-.custom-checkbox:after{
+.custom-checkbox:after {
   content: "";
   position: absolute;
   width: 3px;
@@ -171,12 +170,12 @@ code {
   border: solid white;
   border-width: 0 3px 3px 0;
   top: 5px;
-  left: 7px; 
+  left: 7px;
   transform: rotate(45deg);
   display: none;
 }
 
-.checkbox-container input:checked ~ .custom-checkbox:after{
+.checkbox-container input:checked~.custom-checkbox:after {
   display: block;
 }
 
@@ -192,22 +191,22 @@ code {
   font-family: 'Roboto Mono', monospace;
 }
 
-.age-group{
+.age-group {
   display: flex;
   flex-direction: column;
 }
 
-.radiobuttoncontainer{
-    display: block;
-    position: relative;
-    padding-left: 25px;
-    margin-top: 10px;
-    margin: 10px 5px;
-    font-size: 16px;  
-    -webkit-user-select: auto;
+.radiobuttoncontainer {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin-top: 10px;
+  margin: 10px 5px;
+  font-size: 16px;
+  -webkit-user-select: auto;
 }
 
-.radiobuttoncontainer input{
+.radiobuttoncontainer input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -215,8 +214,8 @@ code {
   width: 0;
 }
 
-.custom-radio{
-  position: absolute; 
+.custom-radio {
+  position: absolute;
   top: 0;
   left: 0;
   height: 19px;
@@ -228,12 +227,12 @@ code {
   Font-Size: 15px;
 }
 
-.radiobuttoncontainer:hover input ~ .custom-radio{
+.radiobuttoncontainer:hover input~.custom-radio {
   background-color: #ccc;
-} 
+}
 
-.radiobuttoncontainer input:checked ~ .custom-radio{
-  background-color: #444444; 
+.radiobuttoncontainer input:checked~.custom-radio {
+  background-color: #444444;
 }
 
 .custom-radio:after {
@@ -244,31 +243,31 @@ code {
   width: 7px;
   height: 7px;
   background-color: #fff;
-  border-radius: 50%; 
+  border-radius: 50%;
   display: none;
 }
 
-.radiobuttoncontainer input:checked ~ .custom-radio:after{
-  display: block; 
+.radiobuttoncontainer input:checked~.custom-radio:after {
+  display: block;
 }
 
-/* Something else */ 
+/* Something else */
 
-.summary{
+.summary {
   height: 100vh;
   background: #FAE3E3;
   padding: 150px 15px;
   font-family: 'Roboto Mono', monospace;
 }
 
-.button-container{
+.button-container {
   margin-top: 35px;
   display: flex;
   align-items: center;
   justify-content: flex-start;
 }
 
-button{
+button {
   margin: 5px;
   border: none;
   border-radius: 5px;
@@ -277,59 +276,74 @@ button{
 }
 
 /* Typewriter animation */
-.typewriter{
+
+.typewriter {
   font-family: monospace;
-  white-space: nowrap; /* keeps the content on a line */
-  border-right: .15em solid black; /* Gives the cursor */
-  overflow: hidden; /*Ensures the content is not revealed until the animation*/
-  animation: typing 3.5s steps(40, end), blink-caret .5s step-end infinite; 
+  white-space: nowrap;
+  /* keeps the content on a line */
+  border-right: .15em solid black;
+  /* Gives the cursor */
+  overflow: hidden;
+  /*Ensures the content is not revealed until the animation*/
+  animation: typing 3.5s steps(40, end), blink-caret .5s step-end infinite;
   letter-spacing: .15em;
 }
 
 @keyframes typing {
-  from { width: 0; }
-  to { width: 100%; }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to {border-color: transparent} 50% {border-color: #CFA5B4;}
+  from, to {
+    border-color: transparent
+  }
+  50% {
+    border-color: #CFA5B4;
+  }
 }
 
 /* Bounce button animation */
+
 @keyframes bounce {
-  0% { transform: translateY(0);}
-  100% { transform: translateY(-20px)}
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-20px)
+  }
 }
-.start-button{
+
+.start-button {
   animation: bounce 0.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
-  border: none; 
+  border: none;
   padding: 25px;
   border-radius: 10px;
   width: 100px;
+  cursor: pointer;
 }
 
 /* Media queries */
 
-@media (min-width: 668px) {
-  
-}
+@media (min-width: 668px) {}
 
 @media (min-width: 1024px) {
-  .typewriter{
+  .typewriter {
     font-size: 50px;
   }
   .start-button {
     width: 200px;
   }
-
-  .welcome, .input, .dropdown, .checkbox, .radiobutton, .summary,
-  .input-field, .dropdown-field, .checkbox-container, .age-group {
+  .welcome, .input, .dropdown, .checkbox, .radiobutton, .summary, .input-field, .dropdown-field, .checkbox-container, .age-group {
     align-items: center;
     justify-content: center;
   }
-
   .summary-text {
     display: flex;
     flex-direction: column;
