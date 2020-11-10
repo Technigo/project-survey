@@ -22,7 +22,7 @@ export const Radiobutton = ({ ageGroup, setAgeGroup }) => {
                    {group}
                    <span className="custom-radio"></span>
                </label>
-           ))};
+           ))}
         </div>
     </>
     );
