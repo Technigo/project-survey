@@ -15,7 +15,7 @@ const SummeryPage = ({
   return (
     <div>
       <h2 className="summery-heading">
-        Thank you for your registation, {firstName}!
+        Thank you for your registration, {firstName}!
       </h2>
       <div className="summery-text-container">
         <p className="summery-text">
