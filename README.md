@@ -3,7 +3,7 @@
 I have created a survey by a fictional moving company. 
 
 ## :brain: Learning objectives
-- practice using React state and controlling forms
+- practice using React state and controlled forms
 - the user should see a summary of the answers
 
 ## :heavy_check_mark: Features
