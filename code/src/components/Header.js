@@ -1,5 +1,9 @@
 import React from 'react';
+
+// Styling
 import 'styles/header.css';
+
+// ----------------------------------------------------------------
 
 const Header = () => {
   return (

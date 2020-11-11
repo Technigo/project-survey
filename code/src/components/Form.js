@@ -1,11 +1,17 @@
 import React, { useState } from 'react';
-import 'styles/form.css';
-import Question1 from 'components/Question1';
-import Question2 from 'components/Question2';
-import Question3 from 'components/Question3';
-import Question4 from 'components/Question4';
-import Question5 from 'components/Question5';
+
+// Components
+import QuestionTextInputName from 'components/QuestionTextInputName';
+import QuestionRadioButtonsAge from 'components/QuestionRadioButtonsAge';
+import QuestionCheckboxesSkills from 'components/QuestionCheckboxesSkills';
+import QuestionTextInputSuggestions from 'components/QuestionTextInputSuggestions';
+import QuestionDropdownTitle from 'components/QuestionDropdownTitle';
 import Summary from 'components/Summary';
+
+// Styling
+import 'styles/form.css';
+
+// ----------------------------------------------------------------
 
 const Form = () => {
   const [section, setSection] = useState('firstQuestion');
@@ -24,7 +30,7 @@ const Form = () => {
       >
         {section === 'firstQuestion' && (
           <div>
-            <Question1
+            <QuestionTextInputName
               name={name}
               setName={setName}
               section={section}
@@ -35,7 +41,7 @@ const Form = () => {
 
         {section === 'secondQuestion' && (
           <div>
-            <Question2
+            <QuestionRadioButtonsAge
               ageGroup={ageGroup}
               setAgeGroup={setAgeGroup}
               section={section}
@@ -46,7 +52,7 @@ const Form = () => {
 
         {section === 'thirdQuestion' && (
           <div>
-            <Question3
+            <QuestionCheckboxesSkills
               skills={skills}
               setSkills={setSkills}
               section={section}
@@ -57,7 +63,7 @@ const Form = () => {
 
         {section === 'fourthQuestion' && (
           <div>
-            <Question4
+            <QuestionTextInputSuggestions
               suggestions={suggestions}
               setSuggestions={setSuggestions}
               section={section}
@@ -68,7 +74,7 @@ const Form = () => {
 
         {section === 'fifthQuestion' && (
           <div>
-            <Question5
+            <QuestionDropdownTitle
               title={title}
               setTitle={setTitle}
               section={section}

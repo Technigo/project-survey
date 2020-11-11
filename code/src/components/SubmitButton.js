@@ -1,7 +1,13 @@
 import React, { useState } from 'react';
-import Popup from 'components/Popup';
-import firebase from 'firebase/app';
+
+// External
 import 'firebase/database';
+import firebase from 'firebase/app';
+
+// Components
+import Popup from 'components/Popup';
+
+// ----------------------------------------------------------------
 
 const SubmitButton = ({
   currentState,
@@ -14,14 +20,14 @@ const SubmitButton = ({
   suggestions,
   title,
 }) => {
-  const [popup, setPopup] = useState('hidden');
+  const [popup, setPopup] = useState(false);
 
   const handleSubmitButton = () => {
     if (currentState !== defaultState) {
       setSection('summary');
       saveMessage(name, ageGroup, skills, suggestions, title); // Save message
     } else {
-      setPopup('showing');
+      setPopup(true);
     }
   };
 
@@ -42,9 +48,7 @@ const SubmitButton = ({
 
   return (
     <>
-      {popup === 'showing' && (
-        <Popup message={message} classNames="form__popup" />
-      )}
+      {popup && <Popup message={message} classNames="form__popup" />}
 
       <button
         type="submit"

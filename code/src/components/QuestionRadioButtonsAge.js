@@ -1,9 +1,18 @@
 import React from 'react';
+
+// Components
 import NextButton from 'components/NextButton';
 import PreviousButton from 'components/PreviousButton';
 import ProgressBar from 'components/ProgressBar';
 
-const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
+// ----------------------------------------------------------------
+
+const QuestionRadioButtonsAge = ({
+  ageGroup,
+  setAgeGroup,
+  section,
+  setSection,
+}) => {
   const handleAgeChange = (event) => {
     setAgeGroup(event.target.value);
   };
@@ -63,4 +72,4 @@ const Question2 = ({ ageGroup, setAgeGroup, section, setSection }) => {
     </article>
   );
 };
-export default Question2;
+export default QuestionRadioButtonsAge;

@@ -1,9 +1,13 @@
 import React from 'react';
+
+// Components
 import PreviousButton from 'components/PreviousButton';
 import SubmitButton from 'components/SubmitButton';
 import ProgressBar from 'components/ProgressBar';
 
-const Question5 = ({
+// ----------------------------------------------------------------
+
+const QuestionDropdownTitle = ({
   title,
   setTitle,
   section,
@@ -32,7 +36,9 @@ const Question5 = ({
           value={title}
           onChange={handleTitleChange}
         >
-          <option value="">Choose title...</option>
+          <option disabled value="">
+            Choose title...
+          </option>
           <option value="Frontend Developer">Front-end Developer</option>
           <option value="Backend Developer">Backend Developer</option>
           <option value="Devops Developer">DevOps Developer</option>
@@ -73,4 +79,4 @@ const Question5 = ({
     </article>
   );
 };
-export default Question5;
+export default QuestionDropdownTitle;

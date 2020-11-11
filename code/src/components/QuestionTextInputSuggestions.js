@@ -1,9 +1,18 @@
 import React from 'react';
+
+// Components
 import NextButton from 'components/NextButton';
 import PreviousButton from 'components/PreviousButton';
 import ProgressBar from 'components/ProgressBar';
 
-const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
+// ----------------------------------------------------------------
+
+const QuestionTextInputSuggestions = ({
+  suggestions,
+  setSuggestions,
+  section,
+  setSection,
+}) => {
   //One way data-binding
   const handleSuggestionChange = (event) => {
     setSuggestions(event.target.value);
@@ -54,4 +63,4 @@ const Question4 = ({ suggestions, setSuggestions, section, setSection }) => {
     </article>
   );
 };
-export default Question4;
+export default QuestionTextInputSuggestions;

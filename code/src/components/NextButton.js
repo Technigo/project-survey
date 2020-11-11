@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
+
 import Popup from 'components/Popup';
+
+// ----------------------------------------------------------------
 
 const NextButton = ({
   currentState,
@@ -8,21 +11,19 @@ const NextButton = ({
   whatQuestionNext,
   message,
 }) => {
-  const [popup, setPopup] = useState('hidden');
+  const [popup, setPopup] = useState(false);
 
   const handleNextButton = () => {
     if (currentState !== defaultState) {
       setSection(whatQuestionNext);
     } else {
-      setPopup('showing');
+      setPopup(true);
     }
   };
 
   return (
     <>
-      {popup === 'showing' && (
-        <Popup message={message} classNames="form__popup" />
-      )}
+      {popup && <Popup message={message} classNames="form__popup" />}
 
       <button
         type="button"

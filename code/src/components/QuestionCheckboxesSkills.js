@@ -1,10 +1,19 @@
 import React from 'react';
+
+// Components
 import NextButton from 'components/NextButton';
 import PreviousButton from 'components/PreviousButton';
 import ProgressBar from 'components/ProgressBar';
 import Popup from 'components/Popup';
 
-const Question3 = ({ skills, setSkills, section, setSection }) => {
+// ----------------------------------------------------------------
+
+const QuestionCheckboxesSkills = ({
+  skills,
+  setSkills,
+  section,
+  setSection,
+}) => {
   const handleSkillsChange = (skillValue) => {
     if (skills.includes(skillValue)) {
       setSkills(skills.filter((item) => item !== skillValue));
@@ -79,4 +88,4 @@ const Question3 = ({ skills, setSkills, section, setSection }) => {
     </article>
   );
 };
-export default Question3;
+export default QuestionCheckboxesSkills;

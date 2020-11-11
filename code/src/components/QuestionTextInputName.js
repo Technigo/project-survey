@@ -1,7 +1,11 @@
 import React from 'react';
+
+// Components
 import NextButton from 'components/NextButton';
 
-const Question1 = ({ name, setName, section, setSection }) => {
+// ----------------------------------------------------------------
+
+const QuestionTextInputName = ({ name, setName, section, setSection }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
@@ -41,4 +45,4 @@ const Question1 = ({ name, setName, section, setSection }) => {
     </article>
   );
 };
-export default Question1;
+export default QuestionTextInputName;
