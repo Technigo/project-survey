@@ -1,6 +1,6 @@
 import React from 'react' 
 
-const Summary = (item, userValues) => {
+const Summary = (item) => {
 
   return (
     <div>Thank you for taking time to complete this survey.

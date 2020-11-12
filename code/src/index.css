@@ -65,7 +65,6 @@ select {
   margin-left: 10px;
 }
 
-
 /* Media queries */
 @media (min-width: 768px) {  
   #root {
