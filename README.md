@@ -4,9 +4,7 @@ In this project I have created a form in JS React by mounting the form elements 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-In this project I started of with creating the input elements in the form in different components. Working with mounting the code in components makes it more logical for me. I created text inputs, radio buttons, a dropdown and finally a range slider - all connected to a form element. The input from the form was connected into a summary that is visible for the user when the last input is submitted. 
+In this project I started of with creating the input elements in the form in different components. Working with mounting the code in components from start makes it more logical for me. I created text inputs, radio buttons, a dropdown and finally a range slider - all connected to a form element. The input from the form are connected into a summary that is visible for the user when the last input is submitted. 
 
 Early in the project I added the different components into different sections, showing the questions one by one, and I added buttons making the user able to go forward and back in the form. 
 
@@ -24,7 +22,7 @@ The page is styled 'mobile first' and it is made accessible.
 
 ## Tech
 
-- JavaScript React
+- REACT JavaScript
 
 - CSS
 
