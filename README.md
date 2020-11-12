@@ -1,4 +1,4 @@
-## Project 7: A survey form built with React
+## Project 8: A survey form built with React
 
 This survey is for coffee fans in the neighbourhood developed with React + JSX and CSS.
 It asks a visitor several questions about their coffee preferences and in the end provides a summary.
