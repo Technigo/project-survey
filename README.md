@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a survey in which the user can aswer a few questions and get a summary of the chosen options. It's built with react using state and hooks. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I feel like the hardest part in this project was to implement a range slider from materials UI. That is still to do. Otherwise I had a hard time getting the radio buttons to work properly. As always I solved my problems by using google and stackoverflow and just inspect the code. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://app.netlify.com/sites/happy-bardeen-a9c717/overview
