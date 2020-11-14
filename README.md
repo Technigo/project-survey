@@ -9,4 +9,4 @@ I don't know if it was the right approach to split up the components first and t
 
 ## View it live
 
-https://app.netlify.com/sites/fervent-newton-09a2a6/overview
+https://wonderlust2020.netlify.app/
