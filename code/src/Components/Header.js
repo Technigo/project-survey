@@ -5,11 +5,10 @@ import plane from './../assets/plane.png';
 const Header = () => {
     return (
         <>
-            <h1 className="header" tabIndex="0">Travel the world!</h1>
-            <img className="plane" src={plane} alt=""></img>
+            <h1 className='header' tabIndex='0'>Travel the world!</h1>
+            <img className='plane' src={plane} alt='plane'></img>
         </>
     )
 }
-
 
 export default Header

@@ -3,22 +3,22 @@ import React from 'react';
 const QuestionName = ({name, funcSetName}) => {
     
     return (
-        <section className="name-section">
-            <h2 tabIndex="0">Question 1</h2>
+        <section className='name-section'>
+            <h2 tabIndex='0'>Question 1</h2>
             <label
-                htmlFor="input-text"
-                className="label"  
+                htmlFor='input-text'
+                className='label' 
             >
                 What's your name?
             </label>
             <input
-                className="text-field"
-                id="input-text"
-                type="text"
+                className='text-field'
+                id='input-text'
+                type='text'
                 value={name}
                 onChange={event => funcSetName(event.target.value)}
                 required
-                placeholder="Firstname Lastname"
+                placeholder='Firstname Lastname'
             ></input>
         </section>
     )
