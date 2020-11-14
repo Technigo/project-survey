@@ -1,28 +1,17 @@
 import React, { useState } from "react";
+
 import Question1 from "./Question1";
 import Question2 from "./Question2";
 import Question3 from "./Question3";
-import Question4 from "./Question4";
 import Summary from "./Summary";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [city, setCity] = useState("");
-  const [training, setTraining] = useState([]);
-  const [experience, setExperience] = useState();
+  const [training, setTraining] = useState("");
   const [question, setQuestion] = useState("Question1");
 
-  const questionList = [
-    "Question1",
-    "Question2",
-    "Question3",
-    "Question4",
-    "Summary",
-  ];
-
-  const handleSliderChange = (newValue) => {
-    setExperience(newValue);
-  };
+  const questionList = ["Question1", "Question2", "Question3", "Summary"];
 
   const handleNameChange = (event) => {
     setName(event.target.value);
@@ -32,11 +21,16 @@ const Form = () => {
     setCity(event.target.value);
   };
 
-  const handleTrainingChange = (trainingValue) => {
-    training.includes(trainingValue)
-      ? setTraining(training.filter((item) => item !== trainingValue))
-      : setTraining([...training, trainingValue]);
+  const handleTrainingChange = (event) => {
+    setTraining(event.target.value);
   };
+
+  // const handleTrainingChange = (event) => {
+  //   setTraining(event.target.value);
+  //   // training.includes(trainingValue)
+  //   //   ? setTraining(training.filter((item) => item !== trainingValue))
+  //   //   : setTraining([...training, trainingValue]);
+  // };
 
   const handleNextQuestion = (event) => {
     event.preventDefault();
@@ -58,27 +52,18 @@ const Form = () => {
 
           {question === "Question2" && (
             <div tabIndex="0">
-              <h3>At what level are you?</h3>
+              <h3>What would you like to train?</h3>
               <Question2
-                experience={experience}
-                onChangeCommitted={handleSliderChange}
+                training={training}
+                onTrainingChange={handleTrainingChange}
               />
             </div>
           )}
 
           {question === "Question3" && (
             <div tabIndex="0">
-              <h3>What would you like to train?</h3>
-              <Question3
-                training={training}
-                onTrainingChange={handleTrainingChange}
-              />
-            </div>
-          )}
-          {question === "Question4" && (
-            <div tabIndex="0">
               <h3>For more information</h3>
-              <Question4 userName={name} onNameChange={handleNameChange} />
+              <Question3 userName={name} onNameChange={handleNameChange} />
             </div>
           )}
           <button className="submit-button" type="submit">
@@ -87,12 +72,7 @@ const Form = () => {
         </form>
       ) : (
         <div tabIndex="0">
-          <Summary
-            name={name}
-            training={training}
-            city={city}
-            value={experience}
-          />
+          <Summary name={name} training={training} city={city} />
         </div>
       )}
     </>

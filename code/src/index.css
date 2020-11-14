@@ -15,8 +15,6 @@ code {
     monospace;
 }
 
-
-
 header {
   background-color: white;
   color: black;
@@ -28,14 +26,6 @@ header {
   font-family: 'Amatic SC';
   font-size: 30px;
 }
-
-/* .start-text {
-  display: flex;
-  justify-content: center;
-  font-family: 'Amatic SC', cursive;
-  color: white;
-  font-size: 25px;
-} */
 
 h2 {
   display: flex;
@@ -62,23 +52,18 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .question-2 {
   margin-bottom: 15px;
   display: flex;
   justify-content: center;
-  
-  
-
 }
 
 .question-3 {
   display: flex;
-    justify-content: center;
-    margin-bottom: 15px;
- 
+  justify-content: center;
+  margin-bottom: 15px;
 }
 
 .question-4 {
@@ -86,15 +71,12 @@ h3 {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .submit-button {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  margin-top:30px;
   width: 50px;
-    margin: 0 auto;
+  margin: 0 auto;
   border: none;
 }
 
@@ -104,10 +86,7 @@ h3 {
   color: white;
   margin-bottom: 50px;
   margin-top: 100px;
-  
 }
-
-
 
 footer {
   background-color: white;
