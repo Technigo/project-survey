@@ -8,7 +8,6 @@ body {
   background-color: #a1b5ab;
   padding: 10px;
   padding-left: 20px;
-  display: flex;
 }
 
 code {
@@ -16,13 +15,20 @@ code {
     monospace;
 }
 
+.container-parent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .container {
   background-color: #bad1c6;
   padding: 20px;
   border-radius: 5%;
+  width: 100%;
 }
 
-input {
+.input {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -33,6 +39,8 @@ button {
 
 .survey-food {
   margin-top: 10px;
+  display: flex;
+  flex-direction: column;
 }
 
 .survey-icecream {
@@ -45,8 +53,19 @@ button {
 
 .drink-section {
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
-select {
+.select {
   margin-top: 10px;
+  display: flex;
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+
+
+}
+
+@media (min-width: 1025px) {
+
 }

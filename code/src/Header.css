@@ -1,6 +1,55 @@
-header {
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #a1b5ab;
+  padding: 10px;
+  padding-left: 20px;
+  display: flex;
+}
+
+.heading {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 15px;
+  font-size: 40px;
+}
+
+.introtext {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 15px;
+}
+
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  
+.heading {
+  font-size: 70px;
+  margin-bottom: 20px;
+}
+  
+.introtext {
+  font-size: 18px;
+  margin-top: 20px;
+}
+
+}
+
+@media (min-width: 1025px) {
+
+.heading {
+  font-size: 100px;
+}
+
+.introtext {
+  font-size: 20px;
+}
+
 }

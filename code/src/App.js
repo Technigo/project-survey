@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
-import "./index.css"
+
 import { Summary } from './Summary'
 import { Header } from './Header'
 
+import "./index.css"
 
 export const App = () => {
   const [food, setFood] = useState("")
@@ -18,43 +19,42 @@ export const App = () => {
   return (
     <>
       <Header />
-
+    <div className="container-parent">
     <div className="container">
     <form onSubmit={handleSubmit}>
       <label className="survey-food">
-        1. What is your favourite food? <br></br>
-        <input
-        type="text"
-        value={food}
-        onChange={event => setFood(event.target.value)}
-        required
+        1. What is your favourite food?
+        <input className="input"
+          type="text"
+          value={food}
+          onChange={event => setFood(event.target.value)}
+          required
         />
       </label> 
-      <br></br>
 
       <section className="icecream-section">
       <label className="survey-icecream">
-        2. What is your favourite ice cream? <br></br>   
-        <select
-        value={icecream}
-        onChange ={event => setIcecream (event.target.value)}
-        required
-        name="icecream" 
-        id="" 
-        form="">
+        2. What is your favourite ice cream?   
+        <select className="select"
+          value={icecream}
+          onChange ={event => setIcecream (event.target.value)}
+          required
+          name="icecream" 
+          id="" 
+          form=""
+        >
         <option value="">Choose here</option>
+        <option value="mango sorbet">Mango sorbet</option>
         <option value="chocolate">Chocolate</option>
-        <option value="vanilla">Vanilla</option>
-        <option value="strawberry">Strawberry</option>
+        <option value="salty liquorice">Salty liquorice</option>
         </select>
       </label>
       </section>
-      <br></br>
 
       <section className="drink-section" id="drink">
         3. Choose your favourite drink? 
       <div className="option-container">
-      <label ClassName="option">
+      <label className="option">
         Water      
         <input
           type="radio"
@@ -66,19 +66,19 @@ export const App = () => {
           />
       </label>
 
-      <label ClassName="option">
+      <label className="option">
         Coffee      
         <input
           type="radio"
           checked={drink === "coffee"}
           value="coffee"
           name="drink"
-          onChange={(e) => {setDrink (e.target.value)}}
+          onChange={(e) => setDrink (e.target.value)}
           required
           />
       </label>
       
-      <label ClassName="option">
+      <label className="option">
         Lemonad      
         <input
           type="radio"
@@ -93,6 +93,7 @@ export const App = () => {
       </section>
       <button type="submit">Submit</button>
     </form>
+    </div>
     </div>
     
     {showSummary && (
