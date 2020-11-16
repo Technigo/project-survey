@@ -10,22 +10,20 @@ body {
   padding-left: 20px;
 }
 
+#root {
+  margin: 0 auto;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.container-parent {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .container {
   background-color: #bad1c6;
   padding: 20px;
   border-radius: 5%;
-  width: 100%;
+  width: 300px;
 }
 
 .input {
@@ -63,9 +61,14 @@ button {
 
 @media (min-width: 668px) and (max-width: 1024px) {
 
-
+.container {
+  width: 100%;
+}
 }
 
 @media (min-width: 1025px) {
 
-}
+  .container {
+    width: 100%;
+  }
+  }
