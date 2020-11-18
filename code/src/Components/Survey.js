@@ -1,18 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import { InputTypeText } from './InputTypeText'
-import { InputTypeRadio } from './InputTypeRadio'
-import { Button } from './Button'
-import { Summary } from './Summary'
-import { TheEnd } from './TheEnd'
-import { SelectOption } from './SelectOption'
+import { InputTypeText } from "./InputTypeText";
+import { InputTypeRadio } from "./InputTypeRadio";
+import { Button } from "./Button";
+import { Summary } from "./Summary";
+import { TheEnd } from "./TheEnd";
+import { SelectOption } from "./SelectOption";
 
 const colorArray = [
   "Pumpkin Orange",
   "Evil Black",
   "Spooky White",
   "Blood Red",
-]
+];
 
 const activityArray = [
   "<Select an option>",
@@ -25,11 +25,10 @@ const activityArray = [
   "Eat too much candy",
   "Do some scary react coding",
   "Nothing, I hate Halloween!",
-]
+];
 
 export const Survey = () => {
-
-  const [section, setSection] = useState('firstQuestion');
+  const [section, setSection] = useState("firstQuestion");
   const [name, setName] = useState("");
   const [selectedColor, setSelectedColor] = useState();
   const [selectedActivity, setSelectedActivity] = useState("");
@@ -40,7 +39,7 @@ export const Survey = () => {
 
   return (
     <form className="survey" onSubmit={handleSubmit}>
-      {section === 'firstQuestion' && (
+      {section === "firstQuestion" && (
         <>
           <InputTypeText
             className="name"
@@ -58,7 +57,7 @@ export const Survey = () => {
         </>
       )}
 
-      {section === 'secondQuestion' && (
+      {section === "secondQuestion" && (
         <>
           <InputTypeRadio
             className="favourite-color"
@@ -68,7 +67,7 @@ export const Survey = () => {
             setSelected={setSelectedColor}
           />
           <Button
-            disable={selectedColor === undefined ? ("") : ({selectedColor})}
+            disable={selectedColor === undefined ? "" : { selectedColor }}
             btnText="Next"
             section="thirdQuestion"
             setSection={setSection}
@@ -76,25 +75,27 @@ export const Survey = () => {
         </>
       )}
 
-      {section === 'thirdQuestion' && (
+      {section === "thirdQuestion" && (
         <>
           <SelectOption
             className="selected-activity"
             header={`What will you do on Halloween?`}
-            array={activityArray} selected={selectedActivity}
+            array={activityArray}
+            selected={selectedActivity}
             setSelected={setSelectedActivity}
           />
           <Button
-            disable={selectedActivity === activityArray[0] ? ("") : (selectedActivity)}
+            disable={
+              selectedActivity === activityArray[0] ? "" : selectedActivity
+            }
             btnText="Next"
             section="summary"
             setSection={setSection}
           />
-          {console.log("disable i survey: " + selectedActivity)}
         </>
       )}
 
-      {section === 'summary' && (
+      {section === "summary" && (
         <>
           <Summary
             name={name}
@@ -111,15 +112,14 @@ export const Survey = () => {
             type="submit"
             onClick={() => window.location.reload()}
             className="submit-button"
-          > No, i lied!
+          >
+            {" "}
+            No, i lied!
           </button>
         </>
       )}
 
-      {section === 'theEnd' && (
-        <TheEnd />
-      )}
-
+      {section === "theEnd" && <TheEnd />}
     </form>
   );
 };
