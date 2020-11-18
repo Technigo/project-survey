@@ -40,27 +40,27 @@ export const useStyles = makeStyles((theme) => ({
   submit: {
     margin: theme.spacing(3, 0, 2),
   },
-}));
+}))
 
 export const App = () => {
-  const [name, setName] = useState('');
-  const [favourite, setFavourite] = useState('');
-  const [knowledge, setKnowledge] = useState('');
-  const [section, setSection] = useState(1);
+  const [name, setName] = useState('')
+  const [favourite, setFavourite] = useState('')
+  const [knowledge, setKnowledge] = useState('')
+  const [section, setSection] = useState(1)
 
   const handleName = (name) => {
-    setName(name);
+    setName(name)
   };
 
   const handleFavourite = (favourite) => {
-    setFavourite(favourite);
+    setFavourite(favourite)
   };
 
   const handleKnowledge = (knowledge) => {
-    setKnowledge(knowledge);
+    setKnowledge(knowledge)
   };
 
-  const classes = useStyles();
+  const classes = useStyles()
 
   return (
     <Container component='main' maxWidth='xs'>
