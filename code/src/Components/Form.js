@@ -25,10 +25,10 @@ const Form = () => {
     setGender(event.target.value);
   };
 
-  const handleActivitiesChange = activityValue => {
-    activities.includes(activityValue)
-      ? setActivities(activities.filter((item) => item !== activityValue))
-      : setActivities([...activities, activityValue]);
+  const handleActivitiesChange = activitiesValue => {
+    activities.includes(activitiesValue)
+      ? setActivities( activities.filter((item) => item !== activitiesValue) )
+      : setActivities( [...activities, activitiesValue] );
   };
 
   const handleRecommendationChange = event => {
@@ -47,6 +47,9 @@ const Form = () => {
     event.preventDefault();
     setSection("summary");
   };
+
+  console.log(activities)
+
 
   return (
     <>

@@ -15,9 +15,9 @@ const SixthQuestion = ({ userTextInput, onTextInputChange }) => {
         id="userTextInput"
         type="textarea"
         placeholder="Det var roligt att..."
-        required
+        
       />
-      <SubmitButton disable={onTextInputChange === ""} btnText="Skicka" />
+      <SubmitButton btntext="Skicka" />
     </section>
   );
 };

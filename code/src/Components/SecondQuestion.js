@@ -18,7 +18,7 @@ const SecondQuestion = ({
       </select>
       <Button
         disabled={!onGenderChange}
-        btnText="Nästa"
+        btntext="Nästa"
         nextQuestion="thirdQuestion"
         section={section}
         setSection={setSection}

@@ -83,7 +83,7 @@ const FifthQuestion = ({
       </div>
       <Button
         disable={onRecommendationChange}
-        btnText="Nästa"
+        btntext="Nästa"
         nextQuestion="sixthQuestion"
         section={section}
         setSection={setSection}

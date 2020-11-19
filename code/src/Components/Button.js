@@ -1,10 +1,8 @@
 import React from "react";
 
-const Button = ({ defaultState, currentState, disabled, setSection, nextQuestion }) => {
-  const handleButton = event => {
+const Button = ({ defaultState, currentState, setSection, nextQuestion }) => {
+  const handleButton = () => {
     if(currentState !== defaultState) { 
-      console.log(currentState);
-      console.log(defaultState);
       setSection(nextQuestion);
     }
 }
@@ -13,7 +11,7 @@ const Button = ({ defaultState, currentState, disabled, setSection, nextQuestion
     <div>
       <button
         type="button"
-        btnText="Nästa"
+        btntext="Nästa"
         onClick={handleButton}
         className="next-button"
       >

@@ -83,7 +83,7 @@ const FourthQuestion = ({
         </label>
       </div>
       <Button
-        btnText="Nästa"
+        btntext="Nästa"
         nextQuestion="fifthQuestion"
         section={section}
         setSection={setSection}

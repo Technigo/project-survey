@@ -2,12 +2,12 @@ import React from "react";
 import Button from "./Button";
 
 const ThirdQuestion = ({
+  activities,
   userActivities,
   onActivitiesChange,
   section,
   setSection,
 }) => {
-
   return (
     <section className="question-section">
       <h2 className="question-heading">Vilken aktivitet har du deltagit i?</h2>
@@ -16,17 +16,17 @@ const ThirdQuestion = ({
         <input
           id="måltidscoachning"
           type="checkbox"
-          checked={userActivities.includes("måltidscoachning")}
-          onChange={() => onActivitiesChange("måltidscoachning")}
+          checked={userActivities.includes("coaching")}
+          onChange={() => onActivitiesChange("coaching")}
         />
         <label htmlFor="telefonfika">Telefonfika</label>
         <input
           id="telefonfika"
           type="checkbox"
-          checked={userActivities.includes("telefonfika")}
-          onChange={() => onActivitiesChange("telefonfika")}
+          checked={userActivities.includes("fika")}
+          onChange={() => onActivitiesChange("fika")}
         />
-        <label htmlFor="digitalKurs">Digital kurs</label>
+        {/* <label htmlFor="digitalKurs">Digital kurs</label>
         <input
           id="digitalKurs"
           type="checkbox"
@@ -39,10 +39,10 @@ const ThirdQuestion = ({
           type="checkbox"
           checked={userActivities.includes("rådAvCoach")}
           onChange={() => onActivitiesChange("rådAvCoach")}
-        />
+        /> */}
       </div>
       <Button
-        btnText="Nästa"
+        btntext="Nästa"
         nextQuestion="fourthQuestion"
         section={section}
         setSection={setSection}
