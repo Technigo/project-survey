@@ -3,7 +3,7 @@ import React from "react";
 const Summary = ({
   userYearofBirth,
   userGender,
-  userActivities,
+  userActivity,
   userExpectation,
   userRecommendation,
   userTextInput,
@@ -13,7 +13,7 @@ const Summary = ({
       <p>
         Jag är en {userGender} född år {userYearofBirth}.
       </p>
-      <p>Jag har deltagit i aktiviteten {userActivities}.</p>
+      <p>Jag har deltagit i aktiviteten {userActivity}.</p>
       <p>Det kan jag {userRecommendation} rekommendera till en vän.</p>
       <p>Aktiviteten uppfyllde {userExpectation} mina förväntningar.</p>
       <p>Jag vill också skicka med er {userTextInput}.</p>

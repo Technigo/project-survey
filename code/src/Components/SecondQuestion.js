@@ -1,12 +1,6 @@
 import React from "react";
-import Button from "./Button";
 
-const SecondQuestion = ({
-  userGender,
-  onGenderChange,
-  section,
-  setSection,
-}) => {
+const SecondQuestion = ({ userGender, onGenderChange }) => {
   return (
     <section className="question-section">
       <h2 className="question-heading">Vilket kön tillhör du?</h2>
@@ -16,15 +10,6 @@ const SecondQuestion = ({
         <option value="man">Man</option>
         <option value="annat">Annat</option>
       </select>
-      <Button
-        disabled={!onGenderChange}
-        btntext="Nästa"
-        nextQuestion="thirdQuestion"
-        section={section}
-        setSection={setSection}
-        defaultState=""
-        currentState={userGender}
-      />
     </section>
   );
 };

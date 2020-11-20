@@ -1,12 +1,9 @@
 import React from "react";
 
-const Button = ({ defaultState, currentState, setSection, nextQuestion }) => {
+const NextButton = ({ setSection, nextQuestion, disabled }) => {
   const handleButton = () => {
-    if(currentState !== defaultState) { 
-      setSection(nextQuestion);
-    }
-}
-
+    setSection(nextQuestion);
+  };
   return (
     <div>
       <button
@@ -14,6 +11,7 @@ const Button = ({ defaultState, currentState, setSection, nextQuestion }) => {
         btntext="Nästa"
         onClick={handleButton}
         className="next-button"
+        disabled={disabled}
       >
         Nästa
       </button>
@@ -21,4 +19,4 @@ const Button = ({ defaultState, currentState, setSection, nextQuestion }) => {
   );
 };
 
-export default Button;
+export default NextButton;

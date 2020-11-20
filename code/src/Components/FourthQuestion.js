@@ -1,15 +1,8 @@
 import React from "react";
-import Button from "./Button.js";
 
-const FourthQuestion = ({
-  userExpectation,
-  onExpectationsChange,
-  section,
-  setSection,
-}) => {
-
+const FourthQuestion = ({ userExpectation, onExpectationsChange }) => {
   return (
-    <section className="question-section">
+    <article className="question-section">
       <h2 className="question-header">
         Uppfyllde aktiviteten dina förväntningar?
       </h2>
@@ -82,15 +75,7 @@ const FourthQuestion = ({
           Nej, inte alls.
         </label>
       </div>
-      <Button
-        btntext="Nästa"
-        nextQuestion="fifthQuestion"
-        section={section}
-        setSection={setSection}
-        currentState={userExpectation}
-        defaultState=""
-      />
-    </section>
+    </article>
   );
 };
 

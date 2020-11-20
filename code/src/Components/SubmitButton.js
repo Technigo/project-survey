@@ -1,9 +1,14 @@
 import React from "react";
 
-const SubmitButton = () => {
+const SubmitButton = ({ disabled }) => {
   return (
     <>
-      <button type="submit" value="Submit" className="submit-button">
+      <button
+        type="submit"
+        value="Submit"
+        disabled={disabled}
+        className="submit-button"
+      >
         Submit
       </button>
     </>

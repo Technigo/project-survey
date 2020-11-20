@@ -1,57 +1,40 @@
 import React from "react";
-import Button from "./Button";
 
-const ThirdQuestion = ({
-  activities,
-  userActivities,
-  onActivitiesChange,
-  section,
-  setSection,
-}) => {
+const ThirdQuestion = ({ userActivity, onActivityChange }) => {
   return (
-    <section className="question-section">
+    <article className="question-section">
       <h2 className="question-heading">Vilken aktivitet har du deltagit i?</h2>
       <div className="checkboxes activity">
-        <label htmlFor="måltidscoachning">Måltidscoachning</label>
+        <label htmlFor="coaching">Måltidscoachning</label>
         <input
-          id="måltidscoachning"
+          id="coaching"
           type="checkbox"
-          checked={userActivities.includes("coaching")}
-          onChange={() => onActivitiesChange("coaching")}
+          checked={userActivity.includes("måltidscoaching")}
+          onChange={() => onActivityChange("måltidscoaching")}
         />
         <label htmlFor="telefonfika">Telefonfika</label>
         <input
           id="telefonfika"
           type="checkbox"
-          checked={userActivities.includes("fika")}
-          onChange={() => onActivitiesChange("fika")}
+          checked={userActivity.includes("fika")}
+          onChange={() => onActivityChange("fika")}
         />
-        {/* <label htmlFor="digitalKurs">Digital kurs</label>
+        <label htmlFor="course">Digital kurs</label>
         <input
-          id="digitalKurs"
+          id="course"
           type="checkbox"
-          checked={userActivities.includes("digitalKurs")}
-          onChange={() => onActivitiesChange("digitalKurs")}
+          checked={userActivity.includes("digital kurs")}
+          onChange={() => onActivityChange("digital kurs")}
         />
-        <label htmlFor="rådAvCoach">Råd av en coach</label>
+        <label htmlFor="coachTalk">Råd av en coach</label>
         <input
-          id="rådAvCoach"
+          id="coachTalk"
           type="checkbox"
-          checked={userActivities.includes("rådAvCoach")}
-          onChange={() => onActivitiesChange("rådAvCoach")}
-        /> */}
+          checked={userActivity.includes("råd av coach")}
+          onChange={() => onActivityChange("råd av coach")}
+        />
       </div>
-      <Button
-        btntext="Nästa"
-        nextQuestion="fourthQuestion"
-        section={section}
-        setSection={setSection}
-        currentState={userActivities.length}
-        defaultState={userActivities.length = 0}
-      >
-        Nästa
-      </Button>
-    </section>
+    </article>
   );
 };
 

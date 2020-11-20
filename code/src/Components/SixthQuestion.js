@@ -1,9 +1,8 @@
 import React from "react";
-import SubmitButton from "./SubmitButton";
 
 const SixthQuestion = ({ userTextInput, onTextInputChange }) => {
   return (
-    <section className="question-section">
+    <article className="question-section">
       <h2 className="question-header">
         Har du några ytterligare synpunkter om aktiviteten?
       </h2>
@@ -15,10 +14,8 @@ const SixthQuestion = ({ userTextInput, onTextInputChange }) => {
         id="userTextInput"
         type="textarea"
         placeholder="Det var roligt att..."
-        
       />
-      <SubmitButton btntext="Skicka" />
-    </section>
+    </article>
   );
 };
 

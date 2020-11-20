@@ -1,14 +1,8 @@
 import React from "react";
-import Button from "./Button";
 
-const FifthQuestion = ({
-  userRecommendation,
-  onRecommendationChange,
-  section,
-  setSection,
-}) => {
+const FifthQuestion = ({ userRecommendation, onRecommendationChange }) => {
   return (
-    <section className="question-section">
+    <article className="question-section">
       <h2 className="question-header">
         Skulle du rekommendera aktiviteten till en vän?
       </h2>
@@ -81,16 +75,7 @@ const FifthQuestion = ({
           Nej, det kommer jag inte göra
         </label>
       </div>
-      <Button
-        disable={onRecommendationChange}
-        btntext="Nästa"
-        nextQuestion="sixthQuestion"
-        section={section}
-        setSection={setSection}
-        currentState={userRecommendation}
-        defaultState=""
-      />
-    </section>
+    </article>
   );
 };
 

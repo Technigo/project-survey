@@ -1,15 +1,11 @@
 import React from "react";
-import Button  from "./Button";
 
 const FirstQuestion = ({
   userYearOfBirth,
   onYearOfBirthChange,
-  section,
-  setSection,
-  
 }) => {
   return (
-    <section className="question-section">
+    <article className="question-section">
       <h2 className="question-header">Vilket år föddes du?</h2>
       <label htmlFor="yearOfBirth">Ditt födelseår</label>
       <input
@@ -22,15 +18,7 @@ const FirstQuestion = ({
         placeholder="År"
         required
       />
-      <Button
-        nextQuestion="secondQuestion"
-        currentState={userYearOfBirth}
-        defaultState=""
-        section={section}
-        setSection={setSection}
-      >
-      </Button>
-    </section>
+    </article>
   );
 };
 
