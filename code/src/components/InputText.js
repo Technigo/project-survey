@@ -2,7 +2,6 @@ import React from 'react';
 
 const InputText = ({ question, value, setName }) => {
 	return (
-		<>
 			<label
 				htmlFor="InputText"
 				aria-label="Type your name to be able to proceed the survey"
@@ -21,7 +20,6 @@ const InputText = ({ question, value, setName }) => {
 					}}
 				/>
 			</label>
-		</>
 	);
 };
 

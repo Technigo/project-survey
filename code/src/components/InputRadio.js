@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/InputRadio.css';
 
-const InputRadio = ({ question, array, setAge, age }) => {
+const InputRadio = ({ question, ageArray, setAge, age }) => {
 	return (
 		<>
 			<h2 tabIndex="0">{question}</h2>
@@ -9,7 +9,7 @@ const InputRadio = ({ question, array, setAge, age }) => {
 				className="radio-btn-container"
 				aria-label="Select how many seasons you have experienced to be able to proceed the survey"
 			>
-				{array.map(group => (
+				{ageArray.map(group => (
 					<label
 						className="radio-container"
 						htmlFor={group}

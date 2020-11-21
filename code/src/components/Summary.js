@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Summary = ({ name, season, months, selected, value }) => {
+const Summary = ({ name, season, months, selected, likeScale }) => {
 	return (
 		<div className="summary-container">
 			<h2 tabIndex="0">Summary</h2>
@@ -17,7 +17,7 @@ const Summary = ({ name, season, months, selected, value }) => {
 				<strong>{season} experienced:</strong> Between {selected}
 			</p>
 			<p tabIndex="0">
-				<strong>{season} likability:</strong> {value} out of 10
+				<strong>{season} likability:</strong> {likeScale} out of 10
 			</p>
 		</div>
 	);

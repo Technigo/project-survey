@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/InputRange.css';
 
-const InputRange = ({ question, value, setValue }) => {
+const InputRange = ({ question, likeScale, setLikeScale }) => {
 	return (
 		<>
 			<h2 tabIndex="0">{question}</h2>
@@ -10,16 +10,16 @@ const InputRange = ({ question, value, setValue }) => {
 				className="input-range-container"
 				aria-label="Select on a scale 1-10 how much you like this season"
 			>
-				<p>{value}</p>
+				<p>{likeScale}</p>
 				<input
 					name="InputRange"
 					type="range"
 					min="1"
 					max="10"
-					value={value}
-					onChange={event => setValue(event.target.value)}
+					value={likeScale}
+					onChange={event => setLikeScale(event.target.value)}
 				/>
-				<output id="outputRange" name="outputRange" htmlFor={value}></output>
+				<output id="outputRange" name="outputRange" htmlFor={likeScale}></output>
 			</label>
 		</>
 	);

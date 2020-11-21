@@ -15,7 +15,7 @@ export const Form = () => {
 	const [name, setName] = useState('');
 	const [season, setSeason] = useState('');
 	const [months, setMonths] = useState([]);
-	const [value, setValue] = useState(0);
+	const [likeScale, setLikeScale] = useState(0); //changed from value, setValue
 	const [age, setAge] = useState(false);
 	const [email, setEmail] = useState('');
 	const [submit, setSubmit] = useState(false);
@@ -122,7 +122,7 @@ export const Form = () => {
 								question="Select which months you prefer"
 								selectedMonths={months}
 								onMonthsChange={handleMonthsChange}
-								array={
+								seasonArray={
 									seasonArray[
 										seasonArray.findIndex(item => item.season === season)
 									].months
@@ -143,17 +143,17 @@ export const Form = () => {
 						<section className="question-container">
 							<InputRange
 								question={`How much do you like ${season}? (scale 1-10)`}
-								value={value}
-								setValue={setValue}
+								likeScale={likeScale}
+								setLikeScale={setLikeScale}
 								step={1}
 							/>
 							<div className="navigation">
 								<Button button="button" click={previousQuestion} text="Back" />
 								<Button
 									button="button"
-									disabled={value <= 0}
+									disabled={likeScale <= 0}
 									click={nextQuestion}
-									text={value ? 'Next' : 'Slide range'}
+									text={likeScale ? 'Next' : 'Slide range'}
 								/>
 							</div>
 						</section>
@@ -163,7 +163,7 @@ export const Form = () => {
 						<section className="question-container">
 							<InputRadio
 								question={`${season} what a great season, how many have you experienced?`}
-								array={ageGroups}
+								ageArray={ageGroups}
 								setAge={setAge}
 								age={age}
 							/>
@@ -185,7 +185,7 @@ export const Form = () => {
 								season={season}
 								months={months}
 								selected={age}
-								value={value}
+								likeScale={likeScale}
 							/>
 							<div className="email-container">
 								<InputEmail
@@ -212,7 +212,7 @@ export const Form = () => {
 					{question >= 0 && (
 						<section className="progress-bar-wrapper">
 							<ProgressBar
-								progress={`${question}`}
+								progress={question}
 								maxProgress="5"
 								minProgress="0"
 							/>

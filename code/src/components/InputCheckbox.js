@@ -1,7 +1,7 @@
 import React from 'react';
 import '../Styles/InputCheckbox.css';
 
-const InputCheckbox = ({ question, array, selectedMonths, onMonthsChange }) => {
+const InputCheckbox = ({ question, seasonArray, selectedMonths, onMonthsChange }) => {
 	return (
 		<>
 			<h2 tabIndex="0">{question}</h2>
@@ -9,7 +9,7 @@ const InputCheckbox = ({ question, array, selectedMonths, onMonthsChange }) => {
 				className="checkbox-container"
 				aria-label="Check preferred months to be able to proceed the survey"
 			>
-				{array.map(item => (
+				{seasonArray.map(item => (
 					<label
 						className="checkbox-wrapper"
 						htmlFor={item}
