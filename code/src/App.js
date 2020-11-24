@@ -11,10 +11,12 @@ import Stepper from '@material-ui/core/Stepper'
 import Step from '@material-ui/core/Step'
 import StepLabel from '@material-ui/core/StepLabel'
 import { ButtonGroup, Card, CardContent } from '@material-ui/core'
+import { createMuiTheme, ThemeProvider, useTheme } from '@material-ui/core/styles'
 
 import { Step1 } from './Step1'
 import { Step2 } from './Step2'
 import { Step3 } from './Step3'
+import { withThemeCreator } from '@material-ui/styles'
 
 export const useStyles = makeStyles((theme) => ({
   palette: {
@@ -42,7 +44,17 @@ export const useStyles = makeStyles((theme) => ({
   },
 }))
 
+
+
 export const App = () => {
+
+  const theme = createMuiTheme({
+    palette: {
+        type: 'dark',
+      }
+  })
+
+
   const [name, setName] = useState('')
   const [favourite, setFavourite] = useState('')
   const [knowledge, setKnowledge] = useState('')
@@ -50,19 +62,20 @@ export const App = () => {
 
   const handleName = (name) => {
     setName(name)
-  };
+  }
 
   const handleFavourite = (favourite) => {
     setFavourite(favourite)
-  };
+  }
 
   const handleKnowledge = (knowledge) => {
     setKnowledge(knowledge)
-  };
+  }
 
   const classes = useStyles()
 
   return (
+    <ThemeProvider theme={theme}>
     <Container component='main' maxWidth='xs'>
       <AppBar>
         <Toolbar style={{ justifyContent: 'center' }}>
@@ -155,5 +168,6 @@ export const App = () => {
         </Stepper>
       </div>
     </Container>
-  );
-};
+    </ThemeProvider>
+  )
+}

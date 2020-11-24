@@ -30,5 +30,5 @@ export const Step2 = ({ favourite, onFavouriteChange }) => {
         <FormControlLabel value="react" control={<Radio />} label="React" />
       </RadioGroup>
     </FormControl>
-  );
-};
+  )
+}

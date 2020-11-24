@@ -1,5 +1,5 @@
-import React from "react";
-import TextField from "@material-ui/core/TextField";
+import React from "react"
+import TextField from "@material-ui/core/TextField"
 
 export const Step1 = ({ name, onNameChange }) => {
   return (
@@ -15,5 +15,5 @@ export const Step1 = ({ name, onNameChange }) => {
       onChange={(e) => onNameChange(e.target.value)}
       value={name}
     />
-  );
-};
+  )
+}
