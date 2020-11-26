@@ -49,7 +49,6 @@ label {
   flex-direction: column;
 }
 
-
 input:valid {
   border-color:#9bd61c;
 }
@@ -82,7 +81,6 @@ button {
   font-size: 20px;
   cursor: pointer; 
 }
-
 
 .summary-container {
   display: flex; display: flex;
