@@ -7,21 +7,19 @@ import  NameQuestion  from "Questions/NameQuestion";
 import  Radio from "./Questions/Radio";
 import Select from "./Questions/Select";
 
-
-
 const Survey = () => {
-    const [section, setSection] = useState('welcome')
-    const [name, setName] = useState('')
+    const [section, setSection] = useState("welcome")
+    const [name, setName] = useState("")
     const [ageGroup, setAgeGroup] = useState();
-    const [fur, setFur] = useState('');
+    const [fur, setFur] = useState("");
 
 
     const sectionOrder = [
-        'welcome',
-        'firstQuestion',
-        'secondQuestion',
-        'thirdQuestion',
-        'summary',    
+        "welcome",
+        "firstQuestion",
+        "secondQuestion",
+        "thirdQuestion",
+        "summary",    
     ];
     
     const handleSubmit = event => {
@@ -31,7 +29,7 @@ const Survey = () => {
       };
 
     return (
-  <>
+    <>
     <section className ="wrapper-form"> 
         {section !== 'summary' ? (
           <form onSubmit={handleSubmit}>
@@ -59,9 +57,10 @@ const Survey = () => {
           <Summary name={name} ageGroup={ageGroup} fur={fur}/>
         </div>
       )}
-      </section>
+    </section>
   </>
-)}
+ );
+};
 
 export default Survey;
 

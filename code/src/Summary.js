@@ -14,20 +14,20 @@ const Summary = ({ name , ageGroup,  fur,  }) => {
         <div>
           <img className="kitten-gif" src= {Kitten} alt="cat with bouncing tail"/>
         </div>
-
-        <div className ="summary-wrapper"> 
-          <p tabIndex ="0"> Your dream cat's name is {name} and it should be a {ageGroup} with {fur} ! </p>   
-          <p tabIndex ="0"> PS. we will not give you a cat </p>
-  
-        <button
-        type ="restart"
-        tabIndex="0"
-        aria-label="reset the form"
-        onClick={restart}>Restart</button>
-        </div> 
+          <div className ="summary-wrapper"> 
+            <p tabIndex ="0"> Your dream cat's name is {name} and it should be a {ageGroup} with {fur} ! </p>   
+            <p tabIndex ="0"> PS. we will not give you a cat </p>
+              <button
+                type ="restart"
+                tabIndex="0"
+                aria-label="reset the form"
+                onClick={restart}>
+                Restart
+              </button>
+          </div> 
     </section>
   </>
-    )
-}
+  );
+};
 
 export default Summary; 
