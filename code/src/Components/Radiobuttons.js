@@ -1,6 +1,12 @@
 import React from 'react';
 
-const contributes = ["Code Knowledge", "Tech Recruitment Knowledge", "Agile Project Management", "Experience as Product Owner", "Experience from sales within the tech business"];
+const contributes = [
+  "Code Knowledge", 
+  "Tech Recruitment Knowledge", 
+  "Agile Project Management", 
+  "Experience as Product Owner", 
+  "Experience from sales within the tech business"
+];
 
 export const Radiobuttons = ({ canContributeWith, setCanContributeWith }) => {
   

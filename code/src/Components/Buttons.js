@@ -12,5 +12,5 @@ export const Buttons = props => {
     >
       {props.title}
     </button>
-  )
-}
+  );
+};
