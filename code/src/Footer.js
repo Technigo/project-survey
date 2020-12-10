@@ -9,5 +9,5 @@ export const Footer = () => {
             <p>November 2020</p>
             <img src={require("./logo.svg")} alt="The Technigo logo"/>
         </footer>
-    )
-}
+    );
+};

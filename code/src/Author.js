@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const Author = ( { favAuthor, onFavouriteAuthorChange }) => {
     return (
@@ -18,5 +18,5 @@ export const Author = ( { favAuthor, onFavouriteAuthorChange }) => {
                 </label>
             </section>
         </>
-    )
-}
+    );
+};

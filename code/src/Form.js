@@ -1,12 +1,9 @@
-import React, { useState } from "react"
+import React, { useState } from "react";
 
-import { Consumption } from "./Consumption"
-import { Number } from "./Number"
-import { Author } from "./Author"
-import { Summary } from "./Summary"
-
-
-
+import { Consumption } from "./Consumption";
+import { Number } from "./Number";
+import { Author } from "./Author";
+import { Summary } from "./Summary";
 
 export const Form = () => {
     const [ consumption, setConsumption ] = useState("");
@@ -16,30 +13,27 @@ export const Form = () => {
 
     const handleConsumptionChange = newConsumption => {
         setConsumption(newConsumption)
-    }
+    };
 
     const handleNumberOfBooksChange = newNumber => {
         setNumberOfBooks(newNumber)
-    }
+    };
 
     const handleFavouriteAuthorChange = newAuthor => {
         setFavouriteAuthor(newAuthor)
-    }
+    };
 
     const handleSubmit = event => {
         event.preventDefault();
         setShowSummary(true)
-    }
+    };
 
     const handleRestart = () => {
         setShowSummary(false);
         setConsumption("");
         setNumberOfBooks("");
         setFavouriteAuthor("")
-
-    }
-
-    console.log(favouriteAuthor)
+    };
 
     return (
         <>
@@ -72,5 +66,5 @@ export const Form = () => {
                 )}
             </div>
         </>
-    )
-}
+    );
+};

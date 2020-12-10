@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 const numberRanges = [
     "0-5",
@@ -6,7 +6,7 @@ const numberRanges = [
     "10-15",
     "16-20",
     ">20"
-]
+];
 
 export const Number = ({ userNumber, onNumberOfBooksChange }) => {
     return (
@@ -39,6 +39,5 @@ export const Number = ({ userNumber, onNumberOfBooksChange }) => {
                 </fieldset>
             </section>    
         </>
-    )
-}
-
+    );
+};

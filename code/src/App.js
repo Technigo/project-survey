@@ -1,9 +1,9 @@
-import React from "react"
+import React from "react";
 
-import { Header } from "./Header"
-import { Form } from "./Form"
-import { Footer } from "./Footer"
-import "index.css"
+import { Header } from "./Header";
+import { Form } from "./Form";
+import { Footer } from "./Footer";
+import "index.css";
 
 export const App = () => {
   return (
@@ -12,5 +12,5 @@ export const App = () => {
       <Form />
       <Footer />
     </>
-  )
-}
+  );
+};

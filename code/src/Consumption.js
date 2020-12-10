@@ -1,16 +1,16 @@
-import React from "react"
+import React from "react";
  
 const consumptionOptions = [
     "read the printed book",
     "read the e-book",
     "listen to the audio book"
-]
+];
 
 export const Consumption = ({ favConsumption, onConsumptionChange }) => {
     return (
         <>
             <section className="question">
-                <label htmlFor="consumption" className="dropdown">
+                <label tabIndex="0" htmlFor="consumption" className="dropdown">
                     How do you prefer to enjoy a book?
                         <select
                             id="consumption"
@@ -26,5 +26,5 @@ export const Consumption = ({ favConsumption, onConsumptionChange }) => {
                 </label>
             </section>
         </>
-    )
-}
+    );
+};
