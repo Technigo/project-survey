@@ -8,7 +8,7 @@ import Summary  from "./Summary";
 //Here is my improved code for the BLUE LEVEL.
 
 export const Form = () => {
-  const [name, setName] = useState('')
+  const [name, setName] = useState('');
   const [ageGroup, setAgeGroup] = useState();
   const [fur, setFur] = useState('');
   const [showSummary, setShowSummary] = useState(false);

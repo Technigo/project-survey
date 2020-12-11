@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Select = ( {fur, setFur} ) => { 
+const Select = ({ fur, setFur }) => { 
     
   return ( 
     <section>      

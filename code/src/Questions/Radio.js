@@ -4,7 +4,7 @@ const ageGroups = [
     "kitten",
     "grown up",
     "senior"
-]
+];
 
 const Radio = ({ ageGroup , setAgeGroup }) => {
   return (  

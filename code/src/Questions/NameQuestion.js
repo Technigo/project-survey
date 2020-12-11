@@ -13,6 +13,6 @@ const NameQuestion = ({ name , setName }) => {
           />
       </label> 
     </div>
-    )
-}
+    );
+};
 export default NameQuestion; 

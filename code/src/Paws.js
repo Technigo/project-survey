@@ -7,8 +7,8 @@ const Paws = () => {
     <div>
         <img className="paws" src= {CatPaws} alt="four different cat paws"/>
     </div>
-    )
-}
+    );
+};
 
 export default Paws;
 

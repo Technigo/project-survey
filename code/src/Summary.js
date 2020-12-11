@@ -4,12 +4,12 @@ import Kitten from "./img/kitten.gif";
 
 
 const restart = () => {
-    document.location.href = "";
-  };
+  document.location.href = "";
+};
 
 const Summary = ({ name , ageGroup,  fur,  }) => {
-    return ( 
-      <>
+  return ( 
+    <>
       <section className="summary-container">
         <div>
           <img className="kitten-gif" src= {Kitten} alt="cat with bouncing tail"/>
@@ -25,8 +25,8 @@ const Summary = ({ name , ageGroup,  fur,  }) => {
                 Restart
               </button>
           </div> 
-    </section>
-  </>
+      </section>
+    </>
   );
 };
 
