@@ -1,28 +1,28 @@
-import React, { useState } from 'react';
-import { Summary } from './Summary';
+import React, { useState } from 'react'
+import { Summary } from './Summary'
 
 // Two arrays which are mapped over in the 
-const yesno = ["Yes", "No"];
-const securitySystemOptions = ["Proximity detection system", "Camera monitoring", "Security door", "Landmines", "Safe room", "A camera but you made it look like it’s just a normal rock", "Key under rock", "A moat", "Sharks with frickin' laser beams attached to their heads", "Guard dog", "A sign that says “Guard dog” and there's a picture of a German Shepherd but in reality the dog is just a Shih tzu (classic)", "Doorbell camera"];
+const yesno = ["Yes", "No"]
+const securitySystemOptions = ["Proximity detection system", "Camera monitoring", "Security door", "Landmines", "Safe room", "A camera but you made it look like it’s just a normal rock", "Key under rock", "A moat", "Sharks with frickin' laser beams attached to their heads", "Guard dog", "A sign that says “Guard dog” and there's a picture of a German Shepherd but in reality the dog is just a Shih tzu (classic)", "Doorbell camera"]
 
 export const Form = () => {
-  const [showSummary, setShowSummary] = useState(false);
+  const [showSummary, setShowSummary] = useState(false)
 
   // Function called on submit: // Don't reload page on submit.
   const handleSubmit = e => {
-    e.preventDefault();
+    e.preventDefault()
     setShowSummary(true)
   }
 
   // Define state hooks with default values.
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [socSecNum, setSocSecNum] = useState('');
-  const [pinValue, setPinValue] = useState('');
-  const [securitySystems, setSecuritySystem] = useState([]);
-  const [maidenName, setMaidenName] = useState([]);
-  const [petName, setPetName] = useState('');
-  const [gender, setGender] = useState('');
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [socSecNum, setSocSecNum] = useState('')
+  const [pinValue, setPinValue] = useState('')
+  const [securitySystems, setSecuritySystem] = useState([])
+  const [maidenName, setMaidenName] = useState([])
+  const [petName, setPetName] = useState('')
+  const [gender, setGender] = useState('')
 
 
   // FUNCTIONS. (Do all of these need to be defined in this way? Very repetitive)
@@ -246,13 +246,3 @@ export const Form = () => {
     </>
   )
 }
-
-
-// TO DO: 
-// - Split up the questions into their own components.
-// - Better validation (no required right now).
-// - Disable "Submit" button when it shouldn't be enabled.
-// - Create another type of input (calendar, range, etc.)
-// - Location.
-// - Restart button.
-// - Clean up code (semicolon and stuff)
