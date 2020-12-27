@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import NextButton from "./NextButton";
 import FirstQuestion from "./FirstQuestion";
 import SecondQuestion from "./SecondQuestion";
@@ -8,6 +9,8 @@ import FifthQuestion from "./FifthQuestion";
 import SixthQuestion from "./SixthQuestion";
 import SubmitButton from "./SubmitButton";
 import Summary from "./Summary";
+
+import {FormWrapper} from "../lib/FormStyle";
 
 const Form = () => {
   const [yearOfBirth, setYearOfBirth] = useState("");
@@ -53,6 +56,7 @@ const Form = () => {
   console.log(activity);
 
   return (
+    <FormWrapper>
     <form onSubmit={handleSubmit}>
       {section === "firstQuestion" && (
         <section>
@@ -155,6 +159,7 @@ const Form = () => {
         </section>
       )}
     </form>
+    </FormWrapper>
   );
 };
 export default Form;
