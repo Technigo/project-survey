@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+
 import YourName from './YourName'
 import BirthMonth from './BirthMonth'
 import Button from './Button'
@@ -8,8 +9,8 @@ import Submit from './Submit'
 const Form = () => {
 
   const [name, setName] = useState("")
-  const [birthMonth, setMonth] = useState("")
-  const [firstLetter, setLetter] = useState("")
+  const [birthMonth, setBirthMonth] = useState("")
+  const [firstLetter, setFirstLetter] = useState("")
   const [showSubmit, setShowSubmit] = useState(false);
 
   const handleNameChange = newName => {
@@ -17,11 +18,11 @@ const Form = () => {
   }
 
   const handleMonthChange = newMonth => {
-    setMonth(newMonth);
+    setBirthMonth(newMonth);
   }
 
   const handleLetterChange = newLetter => {
-    setLetter(newLetter);
+    setFirstLetter(newLetter);
   }
 
   const handleSubmit = event => {
