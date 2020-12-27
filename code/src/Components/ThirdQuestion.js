@@ -1,40 +1,43 @@
 import React from "react";
 
+import { QuestionHeader } from "../lib/FormStyle"
+import { CheckboxWrapper, CheckboxLabel, CheckboxStyle } from "../lib/CheckboxStyle";
+
 const ThirdQuestion = ({ userActivity, onActivityChange }) => {
   return (
-    <article className="question-section">
-      <h2 className="question-heading">Vilken aktivitet har du deltagit i?</h2>
-      <div className="checkboxes activity">
-        <label htmlFor="coaching">Måltidscoachning</label>
-        <input
-          id="coaching"
-          type="checkbox"
-          checked={userActivity.includes("måltidscoaching")}
-          onChange={() => onActivityChange("måltidscoaching")}
-        />
-        <label htmlFor="telefonfika">Telefonfika</label>
-        <input
-          id="telefonfika"
-          type="checkbox"
-          checked={userActivity.includes("fika")}
-          onChange={() => onActivityChange("fika")}
-        />
-        <label htmlFor="course">Digital kurs</label>
-        <input
-          id="course"
-          type="checkbox"
-          checked={userActivity.includes("digital kurs")}
-          onChange={() => onActivityChange("digital kurs")}
-        />
-        <label htmlFor="coachTalk">Råd av en coach</label>
-        <input
-          id="coachTalk"
-          type="checkbox"
-          checked={userActivity.includes("råd av coach")}
-          onChange={() => onActivityChange("råd av coach")}
-        />
-      </div>
-    </article>
+    <div>
+      <QuestionHeader>Vilken aktivitet har du deltagit i?</QuestionHeader>
+        <CheckboxWrapper>
+          <CheckboxLabel htmlFor="coaching">Måltidscoachning</CheckboxLabel>
+          <CheckboxStyle
+            id="coaching"
+            type="checkbox"
+            checked={userActivity.includes("måltidscoaching")}
+            onChange={() => onActivityChange("måltidscoaching")}
+          />
+          <CheckboxLabel htmlFor="telefonfika">Telefonfika</CheckboxLabel>
+          <CheckboxStyle
+            id="telefonfika"
+            type="checkbox"
+            checked={userActivity.includes("fika")}
+            onChange={() => onActivityChange("fika")}
+          />
+          <CheckboxLabel htmlFor="course">Digital kurs</CheckboxLabel>
+          <CheckboxStyle
+            id="course"
+            type="checkbox"
+            checked={userActivity.includes("digital kurs")}
+            onChange={() => onActivityChange("digital kurs")}
+          />
+          <CheckboxLabel htmlFor="coachTalk">Råd av en coach</CheckboxLabel>
+          <CheckboxStyle
+            id="coachTalk"
+            type="checkbox"
+            checked={userActivity.includes("råd av coach")}
+            onChange={() => onActivityChange("råd av coach")}
+          />
+        </CheckboxWrapper>
+    </div>
   );
 };
 

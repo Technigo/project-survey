@@ -10,7 +10,7 @@ import SixthQuestion from "./SixthQuestion";
 import SubmitButton from "./SubmitButton";
 import Summary from "./Summary";
 
-import {FormWrapper} from "../lib/FormStyle";
+import { FormWrapper, QuestionWrapper } from "../lib/FormStyle";
 
 const Form = () => {
   const [yearOfBirth, setYearOfBirth] = useState("");
@@ -30,7 +30,6 @@ const Form = () => {
   };
 
   const handleActivityChange = (activityValue) => {
-    console.log(activity, activityValue);
     activity.includes(activityValue)
       ? setActivity(activity.filter((item) => item !== activityValue))
       : setActivity([...activity, activityValue]);
@@ -53,13 +52,11 @@ const Form = () => {
     setSection("summary");
   };
 
-  console.log(activity);
-
   return (
     <FormWrapper>
     <form onSubmit={handleSubmit}>
       {section === "firstQuestion" && (
-        <section>
+        <QuestionWrapper>
           <FirstQuestion
             userYearOfBirth={yearOfBirth}
             onYearOfBirthChange={handleYearOfBirthChange}
@@ -72,10 +69,10 @@ const Form = () => {
             section={section}
             setSection={setSection}
           />
-        </section>
+        </QuestionWrapper>
       )}
       {section === "secondQuestion" && (
-        <section>
+        <QuestionWrapper>
           <SecondQuestion
             userGender={gender}
             onGenderChange={handleGenderChange}
@@ -87,10 +84,10 @@ const Form = () => {
             section={section}
             setSection={setSection}
           />
-        </section>
+        </QuestionWrapper>
       )}
       {section === "thirdQuestion" && (
-        <section>
+        <QuestionWrapper>
           <ThirdQuestion
             userActivity={activity}
             onActivityChange={handleActivityChange}
@@ -102,10 +99,10 @@ const Form = () => {
             section={section}
             setSection={setSection}
           />
-        </section>
+        </QuestionWrapper>
       )}
       {section === "fourthQuestion" && (
-        <section>
+        <QuestionWrapper>
           <FourthQuestion
             userExpectation={expectations}
             onExpectationsChange={handleExpectationChange}
@@ -117,10 +114,10 @@ const Form = () => {
             section={section}
             setSection={setSection}
           />
-        </section>
+        </QuestionWrapper>
       )}
       {section === "fifthQuestion" && (
-        <section>
+        <QuestionWrapper>
           <FifthQuestion
             userRecommendation={recommendation}
             onRecommendationChange={handleRecommendationChange}
@@ -132,16 +129,16 @@ const Form = () => {
             section={section}
             setSection={setSection}
           />
-        </section>
+        </QuestionWrapper>
       )}
       {section === "sixthQuestion" && (
-        <section>
+        <QuestionWrapper>
           <SixthQuestion
             userTextInput={textInput}
             onTextInputChange={handleTextInputChange}
           />
           <SubmitButton btntext="Skicka" disabled={textInput.length < 3} />
-        </section>
+        </QuestionWrapper>
       )}
       {section === "summary" && (
         <section className="summary">

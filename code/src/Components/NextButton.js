@@ -1,12 +1,14 @@
 import React from "react";
 
+import { ButtonStyle } from "../lib/ButtonStyle";
+
 const NextButton = ({ setSection, nextQuestion, disabled }) => {
   const handleButton = () => {
     setSection(nextQuestion);
   };
   return (
     <div>
-      <button
+      <ButtonStyle
         type="button"
         btntext="Nästa"
         onClick={handleButton}
@@ -14,7 +16,7 @@ const NextButton = ({ setSection, nextQuestion, disabled }) => {
         disabled={disabled}
       >
         Nästa
-      </button>
+      </ButtonStyle>
     </div>
   );
 };

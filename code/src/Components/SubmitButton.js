@@ -1,16 +1,17 @@
 import React from "react";
+import { ButtonStyle } from "../lib/ButtonStyle";
 
 const SubmitButton = ({ disabled }) => {
   return (
     <>
-      <button
+      <ButtonStyle
         type="submit"
         value="Submit"
         disabled={disabled}
         className="submit-button"
       >
         Submit
-      </button>
+      </ButtonStyle>
     </>
   );
 };

@@ -1,14 +1,16 @@
 import React from "react";
+import { QuestionHeader } from "../lib/FormStyle";
+import { RadiobuttonWrapper, RadiobuttonLabel, RadiobuttonInput } from "../lib/RadiobuttonStyle";
 
 const FourthQuestion = ({ userExpectation, onExpectationsChange }) => {
   return (
-    <article className="question-section">
-      <h2 className="question-header">
+    <div>
+      <QuestionHeader>
         Uppfyllde aktiviteten dina förväntningar?
-      </h2>
-      <div className="radio-buttons expectation">
-        <label htmlFor="jajjemän">
-          <input
+      </QuestionHeader>
+      <RadiobuttonWrapper>
+        <RadiobuttonLabel htmlFor="jajjemän">
+          <RadiobuttonInput
             type="radio"
             name="expect"
             value="jajjemän"
@@ -17,65 +19,57 @@ const FourthQuestion = ({ userExpectation, onExpectationsChange }) => {
             className="radio-button"
           />
           Jajjemän
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="radio-buttons expectation">
-        <label htmlFor="någotSåNär">
-          <input
+        <RadiobuttonLabel htmlFor="något så när">
+          <RadiobuttonInput
             type="radio"
             name="expect"
-            value="någotSåNär"
+            value="något så när"
             checked={userExpectation === "någotSåNär"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
           Något så när
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="radio-buttons expectation">
-        <label htmlFor="vetInte">
-          <input
+        <RadiobuttonLabel htmlFor="kanske">
+          <RadiobuttonInput
             type="radio"
             name="expect"
-            value="vetInte"
-            checked={userExpectation === "vetInte"}
+            value="kanske"
+            checked={userExpectation === "kanske"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
           Har inte tänkt på det
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="radio-buttons expectation">
-        <label htmlFor="inteRiktigt">
-          <input
+        <RadiobuttonLabel htmlFor="inte rktigt">
+          <RadiobuttonInput
             type="radio"
             name="expect"
-            value="inteRiktigt"
-            checked={userExpectation === "inteRiktigt"}
+            value="inte riktigt"
+            checked={userExpectation === "inte riktigt"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
           Inte riktigt
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="radio-buttons expectation">
-        <label htmlFor="inteAlls">
-          <input
+        <RadiobuttonLabel htmlFor="inte alls">
+          <RadiobuttonInput
             type="radio"
             name="expect"
-            value="inteAlls"
-            checked={userExpectation === "inteAlls"}
+            value="inte alls"
+            checked={userExpectation === "inte alls"}
             onChange={onExpectationsChange}
             className="radio-button"
           />
           Nej, inte alls.
-        </label>
-      </div>
-    </article>
+        </RadiobuttonLabel>
+        </RadiobuttonWrapper>
+    </div>
   );
 };
 

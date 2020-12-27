@@ -1,21 +1,22 @@
 import React from "react";
+import { QuestionHeader } from "../lib/FormStyle";
+import { TextareaStyle } from "../lib/InputStyle";
 
 const SixthQuestion = ({ userTextInput, onTextInputChange }) => {
   return (
-    <article className="question-section">
-      <h2 className="question-header">
+    <div>
+      <QuestionHeader>
         Har du några ytterligare synpunkter om aktiviteten?
-      </h2>
+      </QuestionHeader >
 
-      <label htmlFor="userTextInput">Skriv här:</label>
-      <input
+      <TextareaStyle
         value={userTextInput}
         onChange={(e) => onTextInputChange(e.target.value)}
         id="userTextInput"
         type="textarea"
         placeholder="Det var roligt att..."
       />
-    </article>
+    </div>
   );
 };
 

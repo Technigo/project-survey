@@ -1,14 +1,15 @@
 import React from "react";
 
+import { InputStyle } from "../lib/InputStyle";
+
 const FirstQuestion = ({
   userYearOfBirth,
   onYearOfBirthChange,
 }) => {
   return (
-    <article className="question-section">
-      <h2 className="question-header">Vilket år föddes du?</h2>
-      <label htmlFor="yearOfBirth">Ditt födelseår</label>
-      <input
+    <div>
+      <h2>Vilket år föddes du?</h2>
+      <InputStyle
         value={userYearOfBirth}
         onChange={onYearOfBirthChange}
         id="yearOfBirth"
@@ -18,7 +19,7 @@ const FirstQuestion = ({
         placeholder="År"
         required
       />
-    </article>
+    </div>
   );
 };
 

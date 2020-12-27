@@ -1,14 +1,16 @@
 import React from "react";
+import { QuestionHeader } from "../lib/FormStyle";
+import { RadiobuttonWrapper, RadiobuttonLabel, RadiobuttonInput} from "../lib/RadiobuttonStyle";
 
 const FifthQuestion = ({ userRecommendation, onRecommendationChange }) => {
   return (
-    <article className="question-section">
-      <h2 className="question-header">
+    <div>
+      <QuestionHeader>
         Skulle du rekommendera aktiviteten till en vän?
-      </h2>
-      <div className="radio-buttons recommendation">
-        <label htmlFor="redanGjort">
-          <input
+      </QuestionHeader>
+      <RadiobuttonWrapper>
+        <RadiobuttonLabel htmlFor="redanGjort">
+          <RadiobuttonInput
             type="radio"
             name="recommendation"
             value="redanGjort"
@@ -17,12 +19,10 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange }) => {
             className="radio-button"
           />
           Redan gjort
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="recommendation-radio-buttons">
-        <label htmlFor="närJagKan">
-          <input
+        <RadiobuttonLabel htmlFor="närJagKan">
+          <RadiobuttonInput
             type="radio"
             name="recommendation"
             value="närJagKan"
@@ -31,12 +31,10 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange }) => {
             className="radio-button"
           />
           När jag kan
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="recommendation-radio-buttons">
-        <label htmlFor="vetInte">
-          <input
+        <RadiobuttonLabel htmlFor="vetInte">
+          <RadiobuttonInput
             type="radio"
             name="recommendation"
             value="vetInte"
@@ -45,12 +43,10 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange }) => {
             className="radio-button"
           />
           Har inte tänkt på det
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="recommendation-radio-buttons">
-        <label htmlFor="troligenInte">
-          <input
+        <RadiobuttonLabel htmlFor="troligenInte">
+          <RadiobuttonInput
             type="radio"
             name="recommendation"
             value="troligenInte"
@@ -59,12 +55,10 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange }) => {
             className="radio-button"
           />
           Tror inte det
-        </label>
-      </div>
+        </RadiobuttonLabel>
 
-      <div className="recommendation-radio-buttons">
-        <label htmlFor="noWay">
-          <input
+        <RadiobuttonLabel htmlFor="noWay">
+          <RadiobuttonInput
             type="radio"
             name="recommendation"
             value="nej"
@@ -73,9 +67,9 @@ const FifthQuestion = ({ userRecommendation, onRecommendationChange }) => {
             className="radio-button"
           />
           Nej, det kommer jag inte göra
-        </label>
-      </div>
-    </article>
+        </RadiobuttonLabel>
+      </RadiobuttonWrapper>
+    </div>
   );
 };
 
