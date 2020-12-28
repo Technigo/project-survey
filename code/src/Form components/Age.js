@@ -16,7 +16,7 @@ export const Age = ({age, setAge}) => {
                         checked={age === "18-30"} 
                     />
                 18-30
-                    <span role="radio" className="custom-radio"></span>
+                    <span className="custom-radio"></span>
                 </label>               
 
                 <label for="AgeRange30-40" className="radio-button-container" aria-label="Option 30-40">
