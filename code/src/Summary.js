@@ -53,7 +53,7 @@ export const Summary = ({name, age, type, price, special, Welcome}) => {
             </div>
             <div className="button-container">
                 <button type="button" className="button yes-button">
-                    <a href="{Welcome}" className="link">BACK TO HOME</a>
+                    <a href={Welcome} className="link">BACK TO HOME</a>
                 </button>
             </div>
         </div>
