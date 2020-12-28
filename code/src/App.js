@@ -21,17 +21,7 @@ export const App = () => {
           <div></div>
           <div></div>
           <div></div>
-        </div>
-
-        <div className="nav-container">
-          <nav>
-            {/* <a href="#">HOME</a>
-            <a href="#">PRODUCTS</a>
-            <a href="#">OUR STORY</a>
-            <a href="#">CONTACT</a>
-            <a href="#">CART</a> */}
-          </nav>
-        </div>        
+        </div>       
       </header>
       <main>
         { pageState === true ? (

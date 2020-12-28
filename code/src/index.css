@@ -55,10 +55,6 @@ h1 {
   ;
 }
 
-.nav-container {
-  display: none;
-}
-
 /* General containers */
 main {
   display: flex;
@@ -384,19 +380,6 @@ select:hover {
   color: rgb(255, 255, 255);
 }
 
-/* Footer */
-/* .footer-container {  
-  text-align: center;
-  height: 100px;
-  padding: 10px;
-  background-color: rgba(249, 220, 214); 
-}
-
-.footer-container p {
-  font-size: 16px;
-} */
-
-
 @media (min-width: 360px) {
   .container {
     width: 300px;
@@ -421,32 +404,6 @@ select:hover {
 
   .text-input::placeholder {
     font-size: 18px;
-  }
-
-  .hamburger-menu {
-    display: none;
-  }
-
-  .nav-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-end;
-    height: 70px;
-    padding: 20px;
-  }
-  
-  nav a {
-    text-decoration: none;
-    margin-right: 10px;
-    font-size: 16px;
-    font-weight: 500;
-    color: rgb(11, 77, 149);
-    font-family: 'Quicksand', sans-serif;
-  }
-  
-  a:hover {
-    border-bottom: 2px solid rgb(29, 113, 225);
   }
 
   .summary-container {
