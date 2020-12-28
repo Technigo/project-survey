@@ -6,6 +6,7 @@ import { Type } from './Form components/Type.js';
 import { Price } from './Form components/Price.js';
 import { Special } from './Form components/Special.js';
 import { Summary } from './Summary';
+import { Welcome } from './Welcome';
 
 
 export const Form = () => {
@@ -62,7 +63,7 @@ export const Form = () => {
           </section>
         ) : ( 
           <section>
-            <Summary name={name} age={age} type={type} price={price} special={special} />
+            <Summary name={name} age={age} type={type} price={price} special={special} welcome={welcome}/>
           </section>       
         )}        
      </>    
