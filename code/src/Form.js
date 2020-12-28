@@ -63,7 +63,7 @@ export const Form = () => {
           </section>
         ) : ( 
           <section>
-            <Summary name={name} age={age} type={type} price={price} special={special} welcome={welcome}/>
+            <Summary name={name} age={age} type={type} price={price} special={special} welcome={Welcome}/>
           </section>       
         )}        
      </>    
