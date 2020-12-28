@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Welcome } from './Welcome.js';
 import { Form } from './Form.js';
-import { Logo } from './Images/blue-bottle.png';
+import logo from './Images/blue-bottle.png';
 
 export const App = () => {
 
@@ -14,7 +14,7 @@ export const App = () => {
       <header>
         <div className="logo-container">
           <h1 tabIndex="0">CRAFT BEER Co.</h1>
-          <img src={Logo} alt="bottle logo" className="logo-image" />
+          <img src={logo} alt="bottle logo" className="logo-image" />
         </div>
 
         <div className="hamburger-menu">
