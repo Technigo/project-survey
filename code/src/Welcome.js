@@ -1,5 +1,4 @@
 import React from 'react'
-// import  BottleImage  from './Images/mix-bottles-2.png'
 
 export const Welcome= ({setPageState, BottleImage}) => {
     return (

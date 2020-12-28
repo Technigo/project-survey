@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import { Welcome } from './Welcome.js'
 import { Form } from './Form.js'
-import Logo from './images/blue-bottle.png'
+import Logo from './Images/blue-bottle.png'
 
 export const App = () => {
 
@@ -25,11 +25,11 @@ export const App = () => {
 
         <div className="nav-container">
           <nav>
-            <a href="{welcome}">HOME</a>
-            <a href="{welcome}">PRODUCTS</a>
-            <a href="{welcome}">OUR STORY</a>
-            <a href="{welcome}">CONTACT</a>
-            <a href="{welcome}">CART</a>
+            <a href="{Welcome}">HOME</a>
+            <a href="{Welcome}">PRODUCTS</a>
+            <a href="{Welcome}">OUR STORY</a>
+            <a href="{Welcome}">CONTACT</a>
+            <a href="{Welcome}">CART</a>
           </nav>
         </div>        
       </header>
@@ -40,9 +40,6 @@ export const App = () => {
           <Form />
         )}
       </main>
-      {/* <footer className="footer-container">
-        <p>Webpage created by Claire Caudwell using React and React state hooks. Part of the Technigo Bootcamp 2020</p>
-      </footer> */}
     </>
   );
 };

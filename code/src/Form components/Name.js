@@ -3,9 +3,9 @@ import React from 'react'
 export const Name = ({name, setName}) => {
 
     return (
-        <fieldset className="container">
-            <legend tabIndex="0">Please enter your name</legend>
-            <label for="name">
+        <fieldset className="container" tabindex="0">
+            <legend>Please enter your name</legend>
+            <label htmlFor="name">
                 <input
                     id="name"
                     name="name" 

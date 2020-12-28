@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Summary = ({name, age, type, price, special, welcome}) => {
+export const Summary = ({name, age, type, price, special, Welcome}) => {
 
     /* Created a re-useable function which takes an argument. This argument is iterated through by way of the for loop. The iteration is then used in the if else statement to be able append either an "&"" or "," when the length of the array is compared to the index number of the array. This function is then called when we pass the type array in the return statement further down in the jsx area*/
     const arrayToString = (array) => {
@@ -8,7 +8,7 @@ export const Summary = ({name, age, type, price, special, welcome}) => {
         for (let i = 0; i < array.length; i++) {
             string += array[i];
             if (array.length-1 === i) {
-                
+                                
             } else if (array.length-2 === i) {
                 string += " & ";
             } else {
@@ -27,8 +27,8 @@ export const Summary = ({name, age, type, price, special, welcome}) => {
 
     return (
         <div className="summary-container">
-            <div className="header-container">
-                <h2 tabIndex="0">Thanks for taking part in our survey!</h2>
+            <div className="header-container" tabIndex="0">
+                <h2>Thanks for taking part in our survey!</h2>
                 <h2>You submitted:</h2>
             </div>
             <div className="text-container">
@@ -53,7 +53,7 @@ export const Summary = ({name, age, type, price, special, welcome}) => {
             </div>
             <div className="button-container">
                 <button type="button" className="button yes-button">
-                    <a href="{welcome}" className="link">BACK TO HOME</a>
+                    <a href="{Welcome}" className="link">BACK TO HOME</a>
                 </button>
             </div>
         </div>

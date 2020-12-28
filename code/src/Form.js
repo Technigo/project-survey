@@ -1,10 +1,11 @@
-import React, {useState} from 'react'
-import { Name } from './Form components/Name.js'
-import { Age } from './Form components/Age.js'
-import { Type } from './Form components/Type.js'
-import { Price } from './Form components/Price.js'
-import { Special } from './Form components/Special.js'
-import { Summary } from './Summary'
+import React, {useState} from 'react';
+
+import { Name } from './Form components/Name.js';
+import { Age } from './Form components/Age.js';
+import { Type } from './Form components/Type.js';
+import { Price } from './Form components/Price.js';
+import { Special } from './Form components/Special.js';
+import { Summary } from './Summary';
 
 
 export const Form = () => {

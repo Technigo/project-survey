@@ -3,8 +3,8 @@ import React from 'react'
 export const Price = ({price, setPrice}) => {
 
     return ( 
-        <fieldset className="container price-container">
-            <legend tabIndex="0">How much do you like to spend on a pint of craft beer?</legend>
+        <fieldset className="container price-container" tabIndex="0">
+            <legend>How much do you like to spend on a pint of craft beer?</legend>
             <label className="select-container" for="price">
                 <select
                 value={price}
