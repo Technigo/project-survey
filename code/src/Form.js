@@ -6,8 +6,6 @@ import { Type } from './Form components/Type.js';
 import { Price } from './Form components/Price.js';
 import { Special } from './Form components/Special.js';
 import { Summary } from './Summary';
-import { Welcome } from './Welcome';
-
 
 export const Form = () => {
   /* handleSubmit is using the preventDefault method to stop the 
@@ -63,7 +61,7 @@ export const Form = () => {
           </section>
         ) : ( 
           <section>
-            <Summary name={name} age={age} type={type} price={price} special={special} welcome={Welcome}/>
+            <Summary name={name} age={age} type={type} price={price} special={special} />
           </section>       
         )}        
      </>    
