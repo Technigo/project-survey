@@ -25,11 +25,16 @@ export const App = () => {
 
         <div className="nav-container">
           <nav>
-            <a href="#">HOME</a>
+            {/* <a href="#">HOME</a>
             <a href="#">PRODUCTS</a>
             <a href="#">OUR STORY</a>
             <a href="#">CONTACT</a>
-            <a href="#">CART</a>
+            <a href="#">CART</a> */}
+            <button onClick={Welcome}>HOME</button>
+            <button onClick={Welcome}>PRODUCTS</button>
+            <button onClick={Welcome}>OUR STORY</button>
+            <button onClick={Welcome}>CONTACT</button>
+            <button onClick={Welcome}>CART</button>
           </nav>
         </div>        
       </header>
