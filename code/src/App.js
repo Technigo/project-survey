@@ -1,7 +1,7 @@
-import React, {useState} from 'react'
-import { Welcome } from './Welcome.js'
-import { Form } from './Form.js'
-import Logo from './Images/blue-bottle.png'
+import React, {useState} from 'react';
+import { Welcome } from './Welcome.js';
+import { Form } from './Form.js';
+import { Logo } from './Images/blue-bottle.png';
 
 export const App = () => {
 
@@ -25,11 +25,11 @@ export const App = () => {
 
         <div className="nav-container">
           <nav>
-            <a href="{Welcome}">HOME</a>
-            <a href="{Welcome}">PRODUCTS</a>
-            <a href="{Welcome}">OUR STORY</a>
-            <a href="{Welcome}">CONTACT</a>
-            <a href="{Welcome}">CART</a>
+            <a href={Welcome}>HOME</a>
+            <a href={Welcome}>PRODUCTS</a>
+            <a href={Welcome}>OUR STORY</a>
+            <a href={Welcome}>CONTACT</a>
+            <a href={Welcome}>CART</a>
           </nav>
         </div>        
       </header>
