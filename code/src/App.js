@@ -30,11 +30,6 @@ export const App = () => {
             <a href="#">OUR STORY</a>
             <a href="#">CONTACT</a>
             <a href="#">CART</a> */}
-            <button onClick={Welcome}>HOME</button>
-            <button onClick={Welcome}>PRODUCTS</button>
-            <button onClick={Welcome}>OUR STORY</button>
-            <button onClick={Welcome}>CONTACT</button>
-            <button onClick={Welcome}>CART</button>
           </nav>
         </div>        
       </header>
