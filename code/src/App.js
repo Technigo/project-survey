@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import { Welcome } from './Welcome.js';
 import { Form } from './Form.js';
-import logo from './Images/bluebottle.png';
+import logo from './images/bluebottle.png';
 
 export const App = () => {
 
