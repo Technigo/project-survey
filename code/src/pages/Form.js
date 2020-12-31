@@ -1,10 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState, useRef } from 'react';
+import ReactTooltip from 'react-tooltip';
 
-import { Name } from './Form components/Name.js';
-import { Age } from './Form components/Age.js';
-import { Type } from './Form components/Type.js';
-import { Price } from './Form components/Price.js';
-import { Special } from './Form components/Special.js';
+import { NameQuestion } from '../components/NameQuestion.js';
+import { AgeQuestion } from '../components/AgeQuestion.js';
+import { TypeQuestion } from '../components/TypeQuestion.js';
+import { PriceQuestion } from '../components/PriceQuestion.js';
+import { SpecialQuestion } from '../components/SpecialQuestion.js';
 import { Summary } from './Summary';
 
 export const Form = () => {
@@ -12,12 +13,29 @@ export const Form = () => {
   page from reloading when the form is submitted when we click the button.
   It's also setting the setShowSummary to true which means that the form will
   be hidden and the summary will be show*/
+
+  const errorMessage = useRef(null);
+
   const handleSubmit = event => {
-    event.preventDefault();
-    setShowSummary(true);
+    if(showFormQuestion === 4){
+      event.preventDefault();
+      setShowSummary(true); 
+    } else if (showFormQuestion === 2) {
+      if (type.length < 1) {
+        ReactTooltip.show(errorMessage.current);
+        console.log(errorMessage);
+        event.preventDefault(); 
+      } else {
+        event.preventDefault();
+        setShowFormQuestion(showFormQuestion +1);
+      }
+    } else {
+      event.preventDefault();
+      setShowFormQuestion(showFormQuestion +1);
+    }
   };  
 
-  const [name, setName] = useState();
+  const [name, setName] = useState("");
   const [age, setAge] = useState();
   const [type, setType] = useState([]);
   const [price, setPrice] = useState("");
@@ -33,29 +51,41 @@ export const Form = () => {
           <section>
             <form onSubmit={handleSubmit} className="form-container"  >
               {showFormQuestion === 0 && (
-                <Name name={name} setName={setName} />
+                <NameQuestion name={name} setName={setName} />
               )}                
               {showFormQuestion === 1 && (
-                <Age age={age} setAge={setAge} />
+                <AgeQuestion age={age} setAge={setAge} showFormQuestion={showFormQuestion}/>
               )}
               {showFormQuestion === 2 && (
-                <Type type={type} setType={setType} tabIndex="0"/>
+                <TypeQuestion type={type} setType={setType} errorMessage={errorMessage} />
               )}
               {showFormQuestion === 3 && (
-                <Price price={price} setPrice={setPrice} tabIndex="0"/>
+                <PriceQuestion price={price} setPrice={setPrice} />
               )}
               {showFormQuestion === 4 && (
-                <Special special={special} setSpecial={setSpecial} tabIndex="0"/>
+                <SpecialQuestion special={special} setSpecial={setSpecial} />
               )}
 
               {/* If else statement which compares if the showFormQuestion is equals to 4 then the submit button will be show. Otherwise the next button will be shown */}
               {showFormQuestion === 4 ? (
                 <> 
-                <button type="submit" className="button yes-button" aria-label="Press submit to end the survey">SUBMIT</button>
+                <button 
+                  type="submit" 
+                  className="button yes-button" 
+                  aria-label="Press enter to submit the survey and see your answers.">
+                    SUBMIT SURVEY
+                </button>
                 </>
-              ) : (
-                
-                <button type="button" className="button yes-button" aria-label="Press the button to go to the next question" onClick={event => setShowFormQuestion(showFormQuestion +1)}>NEXT</button>
+              ) : (                
+                <button 
+                  type="submit" 
+                  className="button yes-button" 
+                  aria-label="Press enter to go to the next question" 
+                  required
+                  // onClick={event => setShowFormQuestion(showFormQuestion +1)}
+                  >
+                    NEXT QUESTION
+                </button>
               )}               
             </form>
           </section>

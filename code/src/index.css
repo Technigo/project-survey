@@ -380,6 +380,12 @@ select:hover {
   color: rgb(255, 255, 255);
 }
 
+/* Tooltip */
+.tooltip {
+  font-family: 'Quicksand', sans-serif;
+  background-color:  rgb(11, 77, 149);
+}
+
 @media (min-width: 360px) {
   .container {
     width: 300px;
