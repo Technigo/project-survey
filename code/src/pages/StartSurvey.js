@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Form } from './Form.js';
+import { NameForm } from '../components/NameForm';
 
 export const StartSurvey = () => {
 
@@ -29,7 +29,7 @@ export const StartSurvey = () => {
             </div>
           </div>
           ) : (
-          <Form />
+          <NameForm />
           )}  
       </section>
     );
