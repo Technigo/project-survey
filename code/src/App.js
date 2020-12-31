@@ -1,34 +1,15 @@
-import React, {useState} from 'react';
-import { Welcome } from './Welcome.js';
-import { Form } from './Form.js';
-import logo from './images/bluebottle.png';
+import React from 'react';
+
+import { StartSurvey } from './pages/StartSurvey';
+import { Header } from './components/Header';
 
 export const App = () => {
 
-  // Using the pageState state to set the Welcome.js component as the first component you see when you enter the site. This is done in the comparison statement defined under the end header tag below. If pageState is true the Welcome.js is shown, else(:) the form is shown.  
-  // The pageState state is changed to false when the button, that's defined in the Welcome.js, is clicked. This is because the onClick function is set to false by way of the setPageState function. 
-  const [pageState, setPageState] = useState(true);
-
   return (
     <>
-      <header>
-        <div className="logo-container">
-          <h1 tabIndex="0">CRAFT BEER Co.</h1>
-          <img src={logo} alt="bottle logo" className="logo-image" />
-        </div>
-
-        <div className="hamburger-menu">
-          <div></div>
-          <div></div>
-          <div></div>
-        </div>       
-      </header>
+      <Header />
       <main>
-        { pageState === true ? (
-          <Welcome setPageState={setPageState}  />
-        ) : (
-          <Form />
-        )}
+        <StartSurvey /> 
       </main>
     </>
   );
