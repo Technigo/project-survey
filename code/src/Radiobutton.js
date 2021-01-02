@@ -20,7 +20,7 @@ export const Radiobutton = ({ ageGroup, setAgeGroup }) => {
                    required
                    />
                    {group}
-                   <span className="custom-radio"></span>
+                   <span className="custom-radio" tabIndex="0"></span>
                </label>
            ))}
         </div>

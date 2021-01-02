@@ -5,7 +5,7 @@ export const Nameinput = ({ name, onNameChange, id }) => {
     return (
         <div className="input-field">
             <label htmlFor="name">
-                <h1 className="typewriter">What's your name?</h1>
+                <h1 className="typewriter" tabIndex="0">What's your name?</h1>
             </label>
             <input
                 id={id}

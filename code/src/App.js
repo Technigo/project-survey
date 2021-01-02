@@ -43,7 +43,7 @@ export const App = () => {
           {section === 'welcome' && (
             <div className="welcome">
               <Header />
-              <div className="button-container">
+              <div className="button-container" tabIndex="0">
 
                 <img
                   className="start-button"

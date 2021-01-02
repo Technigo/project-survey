@@ -6,7 +6,7 @@ export const Dropdown = ({ location, setLocation, label }) => {
   return (
     <div className="dropdown-field">
       <label htmlFor="location">
-        <h1 className="typewriter">Where do you live?</h1>
+        <h1 className="typewriter" tabIndex="0">Where do you live?</h1>
       </label>
       <select
         name={label}
