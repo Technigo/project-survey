@@ -5,7 +5,7 @@ import { PriceForm } from './PriceForm';
 
 export const TypeForm = ({ name, age }) => {
 
-    const typesOfCraftBeer = ["Classic IPA", "Jolly Bitter", "The Belgian crafty", "Top pint Lager", "Devout Stout", "Hoppy vego (Gluten free)"];
+    const typesOfCraftBeer = ["Classic IPA", "Jolly Bitter", "The Belgian crafty(Gluten free)", "Top pint Lager", "Devout Stout", "Hoppy vego"];
 
     const [ type, setType ] = useState([]);
     const [ nextQuestion, setNextQuestion ] = useState(false);
