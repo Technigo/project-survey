@@ -5,7 +5,7 @@ import { PriceForm } from './PriceForm';
 
 export const TypeForm = ({ name, age }) => {
 
-    const typesOfCraftBeer = ["Classic IPA", "Jolly Bitter", "The Belgian crafty", "Top pint Lager", "Devout Stout", "Hoppy vego (Gluten free/Vegan)"];
+    const typesOfCraftBeer = ["Classic IPA", "Jolly Bitter", "The Belgian crafty", "Top pint Lager", "Devout Stout", "Hoppy vego (Gluten free)"];
 
     const [ type, setType ] = useState([]);
     const [ nextQuestion, setNextQuestion ] = useState(false);
@@ -60,26 +60,25 @@ export const TypeForm = ({ name, age }) => {
                             Which of the Craft Beer Co. products are your favourite?
                     </legend>
                     <div 
-                        className="checkbox-row" 
+                        className="checkbox-container" 
                         ref={errorMessage} 
                         data-tip="Please select at least one type of beer">
                     <ReactTooltip backgroundColor="rgb(11, 77, 149)" class="tooltip" />
                         {typesOfCraftBeer.map((kinds) => (
-                        <label 
-                            className="checkbox-container"
-                            htmlFor={kinds} 
-                            key={kinds}> 
-                            <input
+                        <div                            className="checkbox-wrapper"                       aria-label={kinds}>
+                            <input 
+                                type="checkbox" 
                                 id={kinds}
                                 name="beerTypes"
-                                type="checkbox" 
-                                aria-label={kinds}
                                 checked={type.includes(kinds)} 
                                 onChange={() => onTypeChange(kinds)}
-                            />              
-                            {kinds}
-                            <span className="custom-checkbox"></span>                         
-                        </label>
+                            />
+                            <label 
+                                htmlFor={kinds} 
+                                key={kinds}
+                                > {kinds}
+                            </label>
+                        </div>
                         ))}
                     </div>
                 </fieldset>

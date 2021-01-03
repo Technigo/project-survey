@@ -158,120 +158,103 @@ label {
 
 /* Radio button styling */
 .radio-button-row {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: flex-start;
+  margin-left: 10px;
 }
 
-.radio-button-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin: 10px 5px;
-  user-select: none;
+.radio-wrapper {
+  margin: 8px 0;
 }
 
-.radio-button-container input {
-  position: absolute;
+input[type="radio"] {
   opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
-} 
+}
 
-.custom-radio {
+input[type="radio"] + label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+  
+input[type="radio"] + label::before {
+  content: '';
+  display: inline-block;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 19px;
-  width: 19px;
-  background-color:rgb(255, 255, 255);
+  left: -24px;
+  border-radius: 50%;
   border: 1px solid rgb(248, 118, 75);
-  border-radius: 50%;
-  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  top: 0;
 }
 
-.radio-button-container:focus input ~ .custom-radio,
-.radio-button-container:hover input ~ .custom-radio {
-  border: 1px solid rgb(226, 88, 50);
-}
-
-.radio-button-container input:checked ~ .custom-radio {
-  background-color:rgb(248, 118, 75);
-}
-
-.custom-radio:after {
-  content:"";
+input[type="radio"] + label::after {
+  content:'';
   position: absolute;
-  top: 5px;
-  left: 5px; 
-  width: 7px;
-  height: 7px;
-  background-color: rgb(255, 255, 255);
+  display: inline-block;
+  left: -20px;
+  top: 4px;
   border-radius: 50%;
-  display: none;
+  width: 12px;
+  height: 12px;
 }
 
-.radio-button-container input:checked ~ .custom-radio:after {
-  display: block;
-} 
+input[type="radio"]:checked + label:after {
+  background: rgb(248, 118, 75);
+}
+
+[type="radio"]:checked:focus + label:before,
+[type="radio"]:not(:checked):focus + label:before {
+  border: 1px dotted blue;
+}
 
 /* Checkbox styling */
 .checkbox-container {
-  display: block;
-  position: relative;
-  padding-left: 35px;
-  margin: 10px 5px;
-  font-size: 16px;
-  user-select: none;
-  font-family: 'Quicksand', sans-serif;  
+  margin-left: 10px;
+} 
+
+.checkbox-wrapper {
+  margin: 8px 0;
 }
 
-.checkbox-container input {
-  position: absolute;
+input[type="checkbox"] {
   opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0;
 }
 
-.custom-checkbox {
+input[type="checkbox"] + label {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+  
+input[type="checkbox"] + label::before {
+  content: '';
+  display: inline-block;
   position: absolute;
-  top: 0;
-  left: 0;
-  height: 19px;
-  width: 19px;
-  background-color:rgb(255, 255, 255);
+  left: -24px;
+  border-radius: 25%;
   border: 1px solid rgb(248, 118, 75);
-  border-radius: 4px;
-  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  top: 0;
 }
 
-.checkbox-container:focus input ~ .custom-checkbox,
-.checkbox-container:hover input ~ .custom-checkbox {
-  border: 1px solid rgb(226, 88, 50);
-}
-
-.checkbox-container input:checked ~ .custom-checkbox {
-  background-color:rgb(248, 118, 75);
-}
-
-.custom-checkbox:after {
-  content:"";
+input[type="checkbox"] + label::after {
+  content:'';
   position: absolute;
-  width: 3px;
-  height: 6px;
-  border: solid rgb(255, 255, 255);
-  border-width: 0 3px 3px 0;
-  top: 3px;
-  left: 6px;
-  transform: rotate(45deg);
-  display: none;
+  display: inline-block;
 }
 
-.checkbox-container input:checked ~ .custom-checkbox:after {
-  display: block;
+input[type="checkbox"]:checked + label:after {
+  content: "\2713";
+  color: rgb(248, 118, 75);
+  position: absolute;
+  left: -20px;
+  top: -1px;
+}
+
+[type="checkbox"]:checked:focus + label:before,
+[type="checkbox"]:not(:checked):focus + label:before {
+  border: 1px dotted blue;
 }
 
 /* Select styling */
@@ -298,7 +281,7 @@ select {
 select:focus,
 select:hover {
   outline: none;
-  border: 1px solid rgb(226, 88, 50); 
+  border: 2px dotted blue;
 }
 
 /* Text input styling */

@@ -11,7 +11,7 @@ export const NameForm = () => {
 
     /* Using the useRef() to help with the implementation of the error message that's shown if the user presses the next question button before typing their name in the input box.    
     ReactToolTip is a pre-defined tooltip that I've used that'll allow for the required/error message to be shown.
-    Have done this for all of the form components.*/
+    Have done this for all of the form components */
     const errorMessage = useRef(null);
 
     /* Function that handles what happens when the form is submitted. Either the error message is shown as the user didn't enter anything or the setNextQuestion state is changed to true and thus showing the next component. */
@@ -48,7 +48,7 @@ export const NameForm = () => {
                     <legend 
                         tabIndex="0" 
                         ref={legendToBeFocused} 
-                        aria-label="Please tab and enter your name in the box. Then press enter to go to the next question">
+                        aria-label="Please tab and enter your name in the box. Then press enter to go to the next question.">
                             Please enter your name
                     </legend>
                     <label htmlFor="name" ref={errorMessage} data-tip="Please enter your name">
