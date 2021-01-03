@@ -5,7 +5,7 @@ import { PriceForm } from './PriceForm';
 
 export const TypeForm = ({ name, age }) => {
 
-    const typesOfCraftBeer = ["Classic IPA", "Jolly Bitter", "The Belgian crafty(Gluten free)", "Top pint Lager", "Devout Stout", "Hoppy vego"];
+    const typesOfCraftBeer = ["Classic IPA", "Jolly Bitter", "The Belgian crafty", "Top pint Lager", "Devout Stout", "Hoppy vego"];
 
     const [ type, setType ] = useState([]);
     const [ nextQuestion, setNextQuestion ] = useState(false);
@@ -65,7 +65,7 @@ export const TypeForm = ({ name, age }) => {
                         data-tip="Please select at least one type of beer">
                     <ReactTooltip backgroundColor="rgb(11, 77, 149)" class="tooltip" />
                         {typesOfCraftBeer.map((kinds) => (
-                        <div                            className="checkbox-wrapper"                       aria-label={kinds}>
+                        <div                            className="checkbox-wrapper"                       aria-label={kinds} key={kinds}>
                             <input 
                                 type="checkbox" 
                                 id={kinds}
@@ -75,7 +75,6 @@ export const TypeForm = ({ name, age }) => {
                             />
                             <label 
                                 htmlFor={kinds} 
-                                key={kinds}
                                 > {kinds}
                             </label>
                         </div>
