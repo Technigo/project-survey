@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 export const Question1 = ({ name, onNameChange: handleNameChange}) => {
     return (
         <section className="question1 section">
