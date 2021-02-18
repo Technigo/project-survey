@@ -3,7 +3,7 @@ import React from'react';
 import 'components/CheckboxCss.css'
 
 // I cannot explain this function component.
-export const Checkbox = ({userLikes, onLikesChange}) => {
+export const Checkbox = ({ userLikes, onLikesChange }) => {
 
   return (
     <div>

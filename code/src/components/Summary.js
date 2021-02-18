@@ -3,7 +3,7 @@ import React from 'react';
 import 'components/SummaryCss.css';
 
 
-export const Summary = ({name, daysPerWeek, sweet, userLikes }) => {
+export const Summary = ({ name, daysPerWeek, sweet, userLikes }) => {
     
   return (
   <>

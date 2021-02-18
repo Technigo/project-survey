@@ -13,7 +13,7 @@ import 'components/TextinputCss.css';
 // In order for React to render the input collected from the input field, the value has to be stored 
 // and passed on to App.js (for further passing on to index.js and index.htlm). App.js can access 
 // the value through the use of props. Props stores the values.
-export const Textinput = ({name, setName}) => {
+export const Textinput = ({ name, setName }) => {
   
   return (
     <label htmlFor="name" id="name">

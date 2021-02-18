@@ -23,7 +23,7 @@ import 'components/AppCss.css';
 // the summary to begin with. We call the showSummary when the questions have been
 // answered.
 // The useState variables are declared below in the function component App. And App accesses the values
-//of these variables (that are temporarily stored in the child-components) by using props. 
+// of these variables (that are temporarily stored in the child-components) by using props. 
 export const App = () => {
 
   const [name, setName] = useState('');
@@ -41,12 +41,15 @@ export const App = () => {
     setShowSummary(true);
   };
 
-// const handleLikesChange is a function similar to the one above but I cannot explain it. It handles the 
-// input in the checkboxes. 
+  // const handleLikesChange (kittens/strawberries) is a function similar to the one above but I cannot 
+  // explain it. It handles the input in the checkboxes. 
+  // includes() method looks for specific value and return true or false
+  
   const handleLikesChange = likeValue => {
     likes.includes(likeValue)
       ? setLikes( likes.filter(item => item !== likeValue) )
-      : setLikes ( [...likes, likeValue] );
+      : setLikes([...likes, likeValue]); //spread operator expands
+      //console.log([...likes], likeValue)
   };
   
   return ( 
