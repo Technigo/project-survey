@@ -10,5 +10,5 @@ export const Summary = (props) => {
     <p>And you are right, a {otherAnimal} would definately be cooler than a {animal}</p>
     <h3>Thanks for taking the time to answer!</h3>
     </section>
-    );
-};
+    )
+}

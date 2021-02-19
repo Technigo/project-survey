@@ -1,6 +1,4 @@
-import React from 'react';
-
-
+import React from 'react'
 
 export const OtherAnimalQuestion = (props) => {
     const {otherAnimal, setOtherAnimal} = props
@@ -19,5 +17,5 @@ export const OtherAnimalQuestion = (props) => {
             <option value="snake panda">Snake panda</option>
         </select>
       </section>
-    );
-};
+    )
+}

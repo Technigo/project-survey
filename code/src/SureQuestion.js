@@ -1,24 +1,33 @@
-import React from 'react';
+import React from 'react'
 
 
-export const SureQuestion = ({ sure, setSure}) => {
-    const areYouSure = ["Yep! Pretty sure.", "Dunno", "Maybe not"];
+    const answers = [
+      "Yep! Pretty sure.", 
+      "Dunno", 
+      "Hell yes "
+    ]
 
-    return (
-      <div>
-        <h2>Is it really your favourite?</h2>
-        {areYouSure.map(sure => (
-          <label tabIndex="0">
-            <input
-              type="radio"
-              value={sure}
-              onChange={(event) =>  setSure(event.target.value)}
-            />
-            {sure}
-          </label>
-        ))}
-        </div> 
-    );
-}
+    export const SureQuestion = ({sure, setSure}) => {
 
-// Something is wrong in this function but I can't figure it out 
+      return (
+          <div>
+            <h2>Are you sure? </h2>
+          <div>
+            {answers.map((answer) => (
+              <label>
+                <input
+                  type="radio"
+                  value={answer}
+                  onChange={(event) => setSure(event.target.value)}
+                  checked={sure === answer}
+                  />
+                  {answer}
+              </label>
+            ))}
+          </div> 
+      </div>
+      )
+    }
+
+
+    

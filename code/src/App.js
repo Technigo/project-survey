@@ -1,28 +1,28 @@
-import React, {useState} from 'react';
-import "./index.css";
-import "./app.css";
-import {Summary} from "./Summary";
-import {NameQuestion} from "./NameQuestion";
-import {AnimalQuestion} from "./AnimalQuestion";
-import {SureQuestion} from "./SureQuestion";
+import React, {useState} from 'react'
+
+import {Summary} from "./Summary"
+import {NameQuestion} from "./NameQuestion"
+import {AnimalQuestion} from "./AnimalQuestion"
+import {SureQuestion} from "./SureQuestion"
 import {OtherAnimalQuestion} from "./OtherAnimalQuestion"
 
-export const App = () => {
-   const [name, setName] = useState("");
-   const [animal, setAnimal] = useState("");
-   const [sure, setSure] = useState("");
-   const [otherAnimal, setOtherAnimal] = useState("");
-   const [showSummary, setShowSummary] = useState(false);
+import "./index.css"
+import "./app.css"
 
+export const App = () => {
+   const [name, setName] = useState("")
+   const [animal, setAnimal] = useState("")
+   const [sure, setSure] = useState("")
+   const [otherAnimal, setOtherAnimal] = useState("")
+   const [showSummary, setShowSummary] = useState(false)
 
    const handleSubmit = event => {
-     event.preventDefault();
-     setShowSummary(true);
-   };
-
+     event.preventDefault()
+     setShowSummary(true)
+   }
 
   return (
-    <div className="App">
+    <div className="app">
       <h1>Survey project!</h1>
 
       {!showSummary &&
@@ -34,9 +34,6 @@ export const App = () => {
         <button type="submit">Submit answer!</button>
       </form> 
       }
-
-
-
       {/* Answer section  */}
       {showSummary && <Summary 
       name={name}
@@ -44,5 +41,5 @@ export const App = () => {
       otherAnimal={otherAnimal}
       />}
     </div>
-  );
-};
+  )
+}

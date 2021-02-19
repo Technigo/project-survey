@@ -12,5 +12,5 @@ export const AnimalQuestion = (props) => {
                 required 
               />
         </label>
-    );
-};
+    )
+}
