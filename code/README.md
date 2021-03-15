@@ -1,5 +1,10 @@
 # Technigo React Starter App
 
+https://admin.typeform.com/form/PDAZwYiN/create Här är min länk
+
+Nedan har du användbar link kod för att scrolla ner när du trycker på next
+https://codesandbox.io/s/scroll-to-an-element-on-click-in-reactjs-nku0l?from-embed=&file=/src/components/middleSection.js
+
 This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
 
 Add components in the `src` folder and use them in `src/app.js` to get started.
