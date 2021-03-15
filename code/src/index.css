@@ -1,4 +1,4 @@
-body {
+/*body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +10,46 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+*/
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Architects Daughter', cursive;
+font-family: 'Josefin Slab', serif;
+}
+
+.header {
+  height: 100%;
+  width: 100%;
+}
+
+.header-image {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.header-welcome {
+  position:absolute;
+  top: 20px;
+  width: 100vw;
+  color:white;
+  text-align: center;
+  font-size: 18px;
+  line-height: 40px;
+}
+
+.header-text {
+  position:absolute;
+  top: 100px;
+  width: 100vw;
+  color:white;
+  text-align: center;
+  font-size: 13px;
+ margin: 5px;
 }
