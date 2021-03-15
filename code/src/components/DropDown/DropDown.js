@@ -6,7 +6,7 @@ const DropDown = () =>{
     return(
         <>
             <h2>Where do you live?</h2>
-            <form>
+            <form onSubmit={event => event.preventDefault()}>
                 <select
                 onChange={event => setLocation(event.target.value) }
                 value={location}

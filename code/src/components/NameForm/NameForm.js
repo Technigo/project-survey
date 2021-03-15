@@ -6,7 +6,7 @@ const NameForm = () =>{
     return(
         <>
           <h2>1. What is your name? </h2> 
-            <form>
+            <form onSubmit={event => event.preventDefault()}>
                 <input
                 type="text"
                 onChange={(event) => setName(event.target.value)}
