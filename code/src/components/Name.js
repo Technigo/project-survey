@@ -4,10 +4,9 @@ export const Name = () => {
   const [inputName, setInputName] = useState ('')
 
   const onNameChange = (event) => {
-    console.log(event)
     setInputName(event.target.value)
+  
   }
-
 
   return (
     <div>
@@ -19,6 +18,5 @@ export const Name = () => {
         onChange={onNameChange}
       />
     </div>
-
   )
 }
