@@ -22,7 +22,7 @@ const Question3 = () => {
         <p>Favourite ingredient in sushi?</p>
 
         {ingredients.map((ingred) => (
-          <label key={ingred}>
+          <label key={ingred} htmlFor={ingred}>
             <input 
               id={ingred}
               type="radio"
@@ -33,15 +33,6 @@ const Question3 = () => {
             {ingred}
           </label>
         ))}
-
-        {/* <label htmlFor="salmon">Salmon</label>
-        <input 
-          id="salmon" 
-          type="radio"
-          value="salmon"
-          onChange={handleChange}
-          checked={ingredient === "salmon"} 
-        /> */}
       </div>
     </>
   )
