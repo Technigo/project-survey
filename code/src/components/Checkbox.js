@@ -1,8 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Checkbox = () => {
+    const [wantsNewsletter, setwantsNewsletter] = useState("");
     return (
-        <h1>Checkbox section</h1>
+        <label>
+        Newsletter?
+        <input
+          type="checkbox"
+          name="Receive newsletter"
+          checked={wantsNewsletter}
+          onChange={event => setwantsNewsletter(event.target.checked)}
+        />
+      </label>
     )
 }
 

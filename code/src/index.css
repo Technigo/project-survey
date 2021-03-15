@@ -43,6 +43,7 @@ code {
 
 /* Radio Section */
 
+/* GAMMAL NEDAN
 .radio-section {
   background-color: blueviolet;
   display: flex;
@@ -71,4 +72,19 @@ code {
 
 .yellow {
   background-color: yellow;
+}
+
+GAMMAL OVAN */ 
+
+.form {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-section {
+  display: grid;
+  grid-template-columns: 1fr;
+  width: 50%;
 }
