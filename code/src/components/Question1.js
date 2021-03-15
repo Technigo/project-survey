@@ -9,15 +9,16 @@ const Question1 = () => {
 
   return (
     <>
-      <div>
+      <section>
         <label htmlFor="name">Your name: </label>
         <input
           id="name"
           type="text"
           onChange={handleChange}
           value={name} 
+          required
         />
-      </div>
+      </section>
     </>
   );
 };

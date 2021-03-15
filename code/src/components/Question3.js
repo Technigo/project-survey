@@ -18,7 +18,7 @@ const Question3 = () => {
 
   return (
     <>
-      <div>
+      <section>
         <p>Favourite ingredient in sushi?</p>
 
         {ingredients.map((ingred) => (
@@ -28,12 +28,13 @@ const Question3 = () => {
               type="radio"
               value={ingred}
               onChange={handleChange}
-              checked={ingredient === ingred} 
+              checked={ingredient === ingred}
+              required 
             />
             {ingred}
           </label>
         ))}
-      </div>
+      </section>
     </>
   )
 }

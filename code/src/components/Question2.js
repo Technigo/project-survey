@@ -9,12 +9,13 @@ const Question2 = () => {
 
   return (
     <>
-      <div>
+      <section>
         <label htmlFor="sushi">Favourite sushi? </label>
         <select 
           id="sushi"
           onChange={handleChange}
           value={sushi}
+          required
         >
           <option value="">Select sushi</option>
           <option value="maki">Maki</option>
@@ -24,7 +25,7 @@ const Question2 = () => {
           <option value="nigiri">Nigiri</option>
           <option value="gunkan">Gunkan</option>
         </select>
-      </div>
+      </section>
     </>
   )
 }
