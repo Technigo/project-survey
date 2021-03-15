@@ -1,0 +1,57 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*clearing styles */
+select {
+    appearance: none;
+    background-color: transparent;
+    border: none;
+    padding: 0 1em 0 0;
+    margin: 0;
+    width: 100%;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    outline: none;
+}
+
+/*adding custom*/
+.drop-down__form-select {
+    width: 100%;
+    border: 1px solid black;
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: rgb(255, 255, 255);
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+    display: grid;
+    grid-template-areas: "select";
+    align-items: center;
+  }
+
+  .drop-down__form-select::after {
+    content: "";
+    width: 0.8em;
+    height: 0.5em;
+    background-color: rgb(93, 107, 116);
+    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+    justify-self: end;
+  }
+
+  select,
+  .drop-down__form-select::after {
+      grid-area: select;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 0;
+    padding-left: 10px;
+    line-height: 1.7;
+  }

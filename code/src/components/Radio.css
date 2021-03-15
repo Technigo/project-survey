@@ -1,0 +1,13 @@
+
+h2 {
+    grid-column: 1/span 2;
+}
+
+input {
+width: 20px;
+}
+
+label{
+margin: 10px;
+}
+
