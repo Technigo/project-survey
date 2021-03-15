@@ -7,10 +7,9 @@ const WorkArea = ({ workArea, setWorkArea}) => {
     }
 
     return (
-
-        <div>
+        <div className='questionContainer two'>
             <label>
-                <h2 className='question-title'>Which areas are you interested to work in?</h2>
+                <h2 className='questionTitle'>Which work area are you interested in?</h2>
                 <select
                     name='dropdown-question'
                     onChange={onWorkAreaChange}
@@ -23,7 +22,7 @@ const WorkArea = ({ workArea, setWorkArea}) => {
                 </select>
             </label>
 
-            <button className='ok-button'></button>
+            <button className='okButton'><a href='#place'>OK</a></button>
 
         </div>
 

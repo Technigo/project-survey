@@ -17,10 +17,10 @@ export const App = () => {
     <div className='main'>
       <Welcome />
 
-      <form>
-        <div className='form-container'>
-
-          <section className='email'>
+      
+        <div className='formContainer'>
+        <form>
+          <section className='email' id='email'>
             <Email
             email={email}
             setEmail={setEmail}
@@ -28,7 +28,7 @@ export const App = () => {
           </section>
 
 
-          <section className='work-area'>
+          <section className='workArea' id='workArea'>
             <WorkArea
             workArea={workArea}
             setWorkArea={setWorkArea}
@@ -36,15 +36,15 @@ export const App = () => {
           </section>
 
 
-          <section className='place'>
+          <section className='place' id='place'>
             <Place
             place={place}
             setPlace={setPlace}
             />
           </section>
-
+          </form>
         </div>
-      </form>
+      
 
     </div>
   )

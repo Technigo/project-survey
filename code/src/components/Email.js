@@ -8,10 +8,10 @@ const Email = ({ email, setEmail}) => {
 
     return (
 
-        <div>
+        <div className='questionContainer one'>
             <label>
 
-                <h2 className='question-title'>Please type your email adress so we'll know how to contact you!</h2>
+                <h2 className='questionTitle'>Please type your email adress so we'll know how to contact you!</h2>
 
                 <input
                 type='text'
@@ -21,7 +21,7 @@ const Email = ({ email, setEmail}) => {
 
             </label>
 
-            <button className='ok-button'></button>
+            <button className='okButton'><a href='#workArea'>OK</a></button>
         </div>
     )
 } 

@@ -7,10 +7,11 @@ const Place = ({ place, setPlace }) => {
     }
 
     return (
-        <div>
+        <div className='questionContainer three'>
             <label>
-                <h2 className='place'>Where would you like to work?</h2>
+                <h2 className='questionTitle'>Where would you like to work?</h2>
 
+                <div className='radio-container'>
                 <div>
                     <input
                     type='radio'
@@ -50,10 +51,11 @@ const Place = ({ place, setPlace }) => {
                     />
                 Remote
                 </div>
+                </div>
 
             </label>
 
-            <button className='ok-button'></button>
+            <button className='okButton'><a href='#'>OK</a></button>
 
         </div>
     )

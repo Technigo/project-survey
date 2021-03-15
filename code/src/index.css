@@ -19,9 +19,16 @@ code {
   box-sizing: border-box;
 }
 
-/* .main {
+html {
+  scroll-behavior: smooth;
+}
 
-} */
+.main {
+  margin: 0;
+  width: 100%;
+}
+
+/*WELCOME PAGE*/
 
 .welcomeContainer {
   background-image: url('./images/smoke.jpg');
@@ -85,6 +92,39 @@ code {
   bottom: 0;
 }
 
+/*FORM*/
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 100%;
+  margin: 0;
+}
+
+form {
+  width: 100%;
+}
+
+
+.questionContainer {
+  height: 100vh;
+  width: 100%;
+}
+
+.questionContainer.one {
+  background-color:  #ff89d8;
+}
+
+.questionContainer.two {
+  background-color: #b3e6e9;
+}
+
+.questionContainer.three {
+  background-color:  #ff89d8;
+}
+
 @media (min-width: 667px) {
 
   .welcomeContent p {
@@ -97,7 +137,6 @@ code {
 
   .startButton {
     width: 250px;
-    margin-bottom: 300px;
   }
 
 }
