@@ -1,6 +1,11 @@
 import React from "react";
+import { useState } from "react";
 
 const Form = () => {
+  const [resultQuestionOne, setResultQuestionOne] = useState("");
+  const [resultQuestionTwo, setResultQuestionTwo] = useState("");
+  const [resultQuestionThree, setResultQuestionThree] = useState("");
+
   return (
     <div className="form-wrapper">
       <form className="form-display-column">
