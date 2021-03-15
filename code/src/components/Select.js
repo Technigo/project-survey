@@ -4,8 +4,8 @@ export const Select = (props) => {
   return (
     <div>
       
-     <lable>What is your favourite planet in the solar system?</lable>
-     <select>
+     <label htmlFor='planets'>What is your favourite planet in the solar system?</label>
+     <select id='planets'>
        <option>Mercury</option>
        <option>Venus</option>
        <option>Tellus</option>

@@ -12,10 +12,10 @@ export const Form = () => {
         <Name />
       </div>
       <div>
-        <RadioButton radiobutton= 'här ska det vara en radiobutton fråga.' />
+        <Select />
       </div>
       <div>
-        <Select />
+        <RadioButton />
       </div>
     </form>
   )

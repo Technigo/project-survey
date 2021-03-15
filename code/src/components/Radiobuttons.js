@@ -1,15 +1,14 @@
 import React from 'react'
 
-export const RadioButton = (props) => {
+export const RadioButton = () => {
 
   return (
     <div>
       <p>Would you like to move there?</p>
-     <lable>Yes!</lable>
-     <input type="radio"></input>
-     <lable>No!</lable>
-     <input type="radio"></input>
-    
+      <label htmlFor='yes'>Yes!</label>
+      <input id='yes' type='radio'/>
+      <label htmlFor='no'>No!</label>
+      <input id='no' type='radio'/>
     </div>
   )
 } 
