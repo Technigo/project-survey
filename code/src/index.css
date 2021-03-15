@@ -5,9 +5,37 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: black;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.name {
+  display: flex;
+  flex-direction: column;
+  margin-top: 400px;
+  font-size: 30px;
+  font-family: "Blinker", sans-serif;
+}
+
+.input-name {
+  border-bottom: 2px solid white;
+  border-left: none;
+  border-top: none;
+  border-right: none;
+  background-color: transparent;
+  margin-top: 20px;
+  font-family: "Blinker", sans-serif;
+  font-size: 24px;
+  line-height: 40px;
+  outline: none;
+  color: white;
+}
+

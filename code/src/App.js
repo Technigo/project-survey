@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+import { Name } from './components/Name';
 
 export const App = () => {
+
   return (
     <div>
-      Find me in src/app.js!
+    < Name />
     </div>
   )
 }
