@@ -1,34 +1,18 @@
 import React, { useState } from 'react'
 
 const Question2 = () => {
-    const [ReasonForTravel, setReasonForTravel] = useState()
+    const [reasonForVisit, setReasonForVisit] = useState('')
 
     return (
         <label>
-            2. Do you typically fly for business, personal reasons, or some other reason?   
+            2.  Why did you visit the airline website or app that day? What were you trying to do? 
             <input
-                type='radio'
-                value='Business'
-                onChange={event => setReasonForTravel(event.target.value)}
-                checked={ReasonForTravel === 'Business'}
+                type='text'
+                value={reasonForVisit}
+                onChange={event => setReasonForVisit(event.target.value)}
             />
-            Business
-            <input
-                type='radio'
-                value='Personal'
-                onChange={event => setReasonForTravel(event.target.value)}
-                checked={ReasonForTravel === 'Personal'}
-            />
-            Personal
-            <input
-                type='radio'
-                value='Other'
-                onChange={event => setReasonForTravel(event.target.value)}
-                checked={ReasonForTravel === 'Other'}
-            />
-            Other
         </label>
-    )  
+    ) 
 }
 
 export default Question2
