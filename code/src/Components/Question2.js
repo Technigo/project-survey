@@ -28,8 +28,7 @@ const Question2 = () => {
             />
             Other
         </label>
-    )
-    
+    )  
 }
 
 export default Question2
