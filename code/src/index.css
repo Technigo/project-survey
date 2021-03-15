@@ -1,13 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+
 body {
-  margin: 0;
+  margin: 0 auto;
+  margin-top: 300px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgb(62,34,195);
+  background: linear-gradient(0deg, rgba(62,34,195,1) 0%, rgba(45,117,253,1) 100%);
+  background-repeat: no-repeat;
+  height: 100vh;
+  color: white;
+  font-family: 'Oswald', sans-serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1, 
+h2 {
+  text-align: center;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 60px;
+}
+
+.form, 
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 960px;
+  margin: auto;
+}
+
+.survey-item {
+  margin: 20px;
+}
+
+.pets, 
+.coffee {
+  display: flex;
+  flex-direction: column;
+}
+
+.hours label,
+.tech label {
+  margin-right: 20px;
+  font-size: 18px;
+}
+
+.coffee input, 
+.pets select {
+  width: 200px;
+  align-self: center;
+  margin-top: 18px;
+}
+
+.section-heading {
+  font-size: 26px;
+  font-weight: 500;
+}
+
+.submit-button {
+  width: 100px;
+  align-self: center;
+  margin-top: 20px;
 }
