@@ -10,9 +10,9 @@ const Wrapper = () => {
     return (
         <>
             <Hero />
-            <Input />
-            <Select />
             <Radio />
+            <Select />
+            <Input />
             <Checkbox />
         </>
     )

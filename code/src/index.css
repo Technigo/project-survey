@@ -11,3 +11,44 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/* HERO SECTION STARTS*/
+
+.hero{
+  position: relative;
+
+}
+
+.hero-image {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
+.hero-title {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+/* HERO SECTION ENDS */
+
+/* Radio Section */
+
+.radio-section {
+  height: 500px;
+  background-color: blue;
+  margin-top: 0px;
+}
+
+.radio-section h1 {
+  margin-top: 0px;
+}

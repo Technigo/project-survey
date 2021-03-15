@@ -2,7 +2,9 @@ import React from 'react'
 
 const Radio = () => {
     return (
-        <h1>Radio section</h1>
+        <div className="radio-section">
+            <h1>Radio section</h1>
+        </div>
     )
 }
 
