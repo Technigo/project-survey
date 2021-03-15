@@ -6,6 +6,17 @@ import { DropDown } from './components/DropDown'
 import { Result } from './components/Result'
 
 const Form = () => {
+  return (
+    <div>
+
+    <NameInput />
+    <RadioButtons />
+    <DropDown />
+    <Result 
+   />
+   </div>
+
+  )
 
 }
 
