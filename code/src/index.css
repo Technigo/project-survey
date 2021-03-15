@@ -19,9 +19,9 @@ code {
   box-sizing: border-box;
 }
 
-.main {
+/* .main {
 
-}
+} */
 
 .welcomeContainer {
   background-image: url('./images/smoke.jpg');
@@ -60,13 +60,19 @@ code {
   margin: 0;
   font-family: 'Montserrat', sans-serif;
   font-weight: 200;
-  font-size: 20px;
+  font-size: 18px;
   color: #fff;
+}
+
+.welcomeContent p:first-child {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 .startButton {
   font-family: 'Montserrat', sans-serif;
-  background-color: #a1779f;
+  background-color: #ff89d8;
   width: 95%;
   height: 60px;
   border-radius: 10px;
@@ -81,8 +87,16 @@ code {
 
 @media (min-width: 667px) {
 
+  .welcomeContent p {
+    font-size: 20px;
+  }
+
+  .welcomeContent p:first-child {
+    font-size: 23px;
+  }
+
   .startButton {
-    width: 300px;
+    width: 250px;
     margin-bottom: 300px;
   }
 
@@ -92,6 +106,10 @@ code {
 
 
   .welcomeContent p {
+    font-size: 22px;
+  }
+
+  .welcomeContent p:first-child {
     font-size: 25px;
   }
 
