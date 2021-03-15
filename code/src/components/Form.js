@@ -12,18 +12,18 @@ const Form = () => {
         <label htmlFor="dropDown">Which would you like to see more of?</label>
         <select id="dropDown">
           <option value="" selected="selected"></option>
-          <option value="1">Action</option>
-          <option value="2">Adventure</option>
-          <option value="3">Comedy</option>
-          <option value="4">Crime & Mystery</option>
-          <option value="5">Fantasy</option>
-          <option value="6">Historical</option>
-          <option value="7">Horror</option>
-          <option value="8">Romance</option>
-          <option value="9">Science fiction</option>
-          <option value="10">Thriller</option>
-          <option value="11">Western</option>
-          <option value="12">Other</option>
+          <option value="Action">Action</option>
+          <option value="Adventure">Adventure</option>
+          <option value="Comedy">Comedy</option>
+          <option value="Comedy">Crime & Mystery</option>
+          <option value="Fantasy">Fantasy</option>
+          <option value="Historical">Historical</option>
+          <option value="Horror">Horror</option>
+          <option value="Romance">Romance</option>
+          <option value="Science fiction">Science fiction</option>
+          <option value="Thriller"></option>
+          <option value="Western">Western</option>
+          <option value="Other">Other</option>
         </select>
 
         <label>How would you rate this survey? </label>
