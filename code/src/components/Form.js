@@ -2,9 +2,24 @@ import React from "react";
 import { useState } from "react";
 
 const Form = () => {
-  const [resultQuestionOne, setResultQuestionOne] = useState("");
-  const [resultQuestionTwo, setResultQuestionTwo] = useState("");
-  const [resultQuestionThree, setResultQuestionThree] = useState("");
+  const [movieName, setMovieName] = useState("");
+  const [movieGenre, setMovieGenre] = useState("");
+  const [rating, setRating] = useState("");
+
+  const onMovieNameChange = (event) => {
+    setMovieName(event.target.value);
+    console.log(movieName);
+  };
+
+  const onMovieGenreChange = (event) => {
+    setMovieGenre(event.target.value);
+    console.log(movieGenre);
+  };
+
+  const onRatingChange = (event) => {
+    setRating(event.target.value);
+    console.log(rating);
+  };
 
   return (
     <div className="form-wrapper">
@@ -12,11 +27,16 @@ const Form = () => {
         <label htmlFor="text-field">
           Which movie is your all time favorite?
         </label>
-        <input type="text" maxlength="255" id="text-field" />
+        <input
+          type="text"
+          id="text-field"
+          value={movieName}
+          onChange={onMovieNameChange}
+        />
 
         <label htmlFor="dropDown">Which would you like to see more of?</label>
-        <select id="dropDown">
-          <option value="" selected="selected"></option>
+        <select id="dropDown" onChange={onMovieGenreChange}>
+          <option value=""></option>
           <option value="Action">Action</option>
           <option value="Adventure">Adventure</option>
           <option value="Comedy">Comedy</option>
@@ -33,26 +53,31 @@ const Form = () => {
 
         <label>How would you rate this survey? </label>
         <div className="form-radioButton">
-          <div>
+          <p>
             <input
               type="radio"
               value="very-good"
               id="very-good"
               name="radioButton"
+              onChange={onRatingChange}
             />
             <label htmlFor="very-good"> Very good</label>
-          </div>
-          <div>
-            <input type="radio" value="good" id="good" name="radioButton" />
+          </p>
+          <p>
+            <input
+              type="radio"
+              value="good"
+              id="good"
+              name="radioButton"
+              onChange={onRatingChange}
+            />
             <label htmlFor="good"> Good</label>
-          </div>
-
-          <div>
+          </p>
+          <p>
             <input type="radio" value="boring" id="boring" name="radioButton" />
             <label htmlFor="boring"> Boring</label>
-          </div>
-
-          <div>
+          </p>
+          <p>
             <input
               type="radio"
               value="super-boring"
@@ -60,7 +85,7 @@ const Form = () => {
               name="radioButton"
             />
             <label htmlFor="super-boring"> Super boring</label>
-          </div>
+          </p>
           <button type="submit" className="submit-button">
             Submit
           </button>
