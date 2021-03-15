@@ -5,9 +5,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f0e4d7;
+  color: #ff7171;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.site-container{
+  display: flex;
+  flex-direction: column;
+ align-items: center;
+}
+.each-question{
+  margin: 20px;
+}
+
+.header {
+  font-size: 16px;
+  font-weight: bold;
+  text-decoration: underline;
 }
