@@ -3,12 +3,7 @@ import React from 'react'
 
 const Coffee = (props) => {
 
-  const {coffee, setCoffee} = props
-
-  const onCoffeeChange = (e) => {
-    setCoffee(e.target.value)
-    console.log(e.target.value)
-  }
+  const [handleUserInput, input] = [props.handleUserInput, props.input]
 
   return (
     <div className="survey-item coffee">
@@ -16,8 +11,8 @@ const Coffee = (props) => {
       <input 
       id="coffee" 
       type="text"
-      value={coffee} 
-      onChange={onCoffeeChange}
+      value={input} 
+      onChange={handleUserInput}
       />
     </div>
   )

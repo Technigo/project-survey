@@ -8,30 +8,67 @@ import Summary from './components/Summary'
 
 export const App = () => {
 
-  const [showSummary, setShowSummary] = useState(false)
-  const [tech, setTech] = useState('')
-  const [hours, setHours] = useState('')
-  const [coffee, setCoffee] = useState('')
-  const [pets, setPets] = useState('')
+  // const [tech, setTech] = useState('')
+  // const [hours, setHours] = useState('')
+  // const [coffee, setCoffee] = useState('')
+  // const [pets, setPets] = useState('')
+
+  const [section, setSection] = useState(0)
+  const [input, setInput] = useState('')
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    setShowSummary(true)
-    alert(`Submitted!`)
+    setSection(5)
+  }
+
+  const handleUserInput = (e) => {
+      if (e.type === 'checkbox') {
+        setInput(e.target.checked)
+    } else {
+        setInput(e.target.value)
+      }
   }
 
   return (
     <>
-      <h1>SURVEY</h1>
-      <h2>━ Programming habits</h2>
-      <form onSubmit={handleSubmit} className="form">
-        <Tech/>
-        <Hours hours={hours} setHours={setHours}/>
-        <Pets pets={pets} setPets={setPets}/>
-        <Coffee coffee={coffee} setCoffee={setCoffee} />
-        <button className="submit-button" type="submit">Send</button>
-      </form>
-      {showSummary && <Summary pets={pets} />}
+    <main className="main">
+
+      {section === 0 && (
+        <>
+        <h1>SURVEY</h1>
+        <h2>━ Programming habits</h2>
+        </>
+      )}
+
+      {section === 1 && (
+        <Tech handleUserInput={handleUserInput} input={input} />
+      )}  
+
+      {section === 2 && (
+        <Hours handleUserInput={handleUserInput} input={input} />
+      )}  
+
+      {section === 3 && (
+         <Pets handleUserInput={handleUserInput} input={input} />
+      )}  
+
+      {section < 4 && (
+        <button className="button" onClick={() => setSection(section + 1)}>{section === 0 ? 'START' : 'Next question'}</button>
+        
+      )}
+
+      {section === 4 && (
+         <>
+         <Coffee handleUserInput={handleUserInput} input={input} />
+         <button onClick={handleSubmit} className="button" type="submit">SEND</button>
+         </>
+      )} 
+
+      {section === 5 && ( 
+         <Summary input={input}/>
+      )}
+
+    </main>  
     </>
   )
 }

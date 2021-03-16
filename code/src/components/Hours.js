@@ -1,52 +1,32 @@
 import React from 'react'
 
-const Hours = props => {
-
-  const {hours, setHours} = props
-
-  const onHoursChange = (e) => {
-    setHours(e.target.value)
-    console.log(e.target.value)
-  }
+const Hours = (props) => {
+  
+  const hourArray = ['0-1', '1-3', '3-5', '5+']
+  
+  const [handleUserInput, input] = [props.handleUserInput, props.input]
 
   return (
-    <div className="survey-item hours">
-      <p className="section-heading">How many hours do you code a day?</p>
-
-      <input 
-      id="0-1" 
-      type="radio"
-      value={hours}
-      onChange={onHoursChange} 
+  <>
+    <div className="survey-item">
+    <p className="section-heading">How many hours do you code a day?</p>
+      {hourArray.map(choice => (
+      <label className="hours" key={choice}>
+      <input
+        type="radio"
+        value={choice}
+        onChange={handleUserInput}
+        checked={input === choice}
       />
-      <label htmlFor="0-1">0-1 hour</label>
-
-      <input 
-      id="1-3" 
-      type="radio" 
-      value={hours}
-      onChange={onHoursChange} 
-      />
-      <label htmlFor="1-3">1-3 hours</label>
-
-      <input 
-      id="3-5" 
-      type="radio"
-      value={hours}
-      onChange={onHoursChange}  
-      />
-      <label htmlFor="3-5">3-5 hours</label>
-
-      <input 
-      id="5+" 
-      type="radio"
-      value={hours}
-      onChange={onHoursChange}  
-      />
-      <label htmlFor="5+">5+ hours</label>
-
+      {choice}
+      </label>  
+    ))}
     </div>
+    </>
   )
-}
+      }
 
-export default Hours
+      export default Hours
+
+
+
