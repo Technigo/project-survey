@@ -12,45 +12,58 @@ import CharacterSheet from './components/CharacterSheet'
 
 const App = () => {
   const [isFilledIn, setIsFilledIn] = useState(false)
+  const [section, setSection] = useState(0)
 
-  const handleClick = () => {
+  const handleSubmit = () => {
     console.log(Character)
     setIsFilledIn(!isFilledIn)
+    setSection(0)
+  }
+
+  const handleNext = () => {
+    setSection(section + 1)
+  }
+
+  const handlePrevious = () => {
+    setSection(section - 1)
   }
 
   if (isFilledIn) {
     return (
       <>
         <CharacterSheet />
-        <button onClick={handleClick}>Go back</button>
+        <button onClick={handleSubmit}>Go back</button>
       </>
     )
   } else {
     return (
 
       <form onSubmit={(event) => event.preventDefault()}>
-        <TextInput data={data.name} />
 
-        <SelectInput data={data.class} />
+        {section === 0 && <TextInput data={data.name} />}
 
-        <RadioInput data={data.race} />
+        {section === 1 && <SelectInput data={data.class} />}
 
-        <TextInput data={data.goal} />
+        {section === 2 && <RadioInput data={data.race} />}
 
-        <NumberInput data={data.age} />
+        {section === 3 && <TextInput data={data.goal} />}
 
-        <SelectInput data={data.family} />
+        {section === 4 && <NumberInput data={data.age} />}
 
-        <div className="stats-container">
+        {section === 5 && <SelectInput data={data.family} />}
+
+        {section === 6 && <div className="stats-container">
           {data.stats.allStats.map(item =>
             <RangeInput
               className="stats"
               key={item}
               rangeName={item}
             />)}
-        </div>
+        </div>}
 
-        <button onClick={handleClick}>Submit</button>
+        <button onClick={handlePrevious}>Previos Question</button>
+        <button onClick={handleNext}>Next Question</button>
+        <button onClick={handleSubmit}>Submit</button>
 
       </form>
     )

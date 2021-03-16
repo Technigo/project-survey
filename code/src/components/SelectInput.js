@@ -21,8 +21,10 @@ const SelectInput = (props) => {
             {props.data.choices.map(item =>
                 <option
                     key={item}
-                    value={item}
-                >{item}</option>
+                // value={item}
+                >
+                    {item}
+                </option>
             )}
         </select>
     )
