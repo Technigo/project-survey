@@ -88,3 +88,8 @@ GAMMAL OVAN */
   grid-template-columns: 1fr;
   width: 50%;
 }
+
+.teste2{
+  width: 100px;
+  height: 100px;
+}

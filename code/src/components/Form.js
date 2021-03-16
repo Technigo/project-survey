@@ -7,6 +7,7 @@ import Hero from './HeroImage'
 import Phone from './Phone'
 import Amount from './Amount'
 import Checkbox from './Checkbox'
+import Radio from './Radio'
 
 const Test = () => {
     return (
@@ -14,6 +15,7 @@ const Test = () => {
                 <Hero />
                 <div className="form">
                     <div className="form-section">
+                        <Radio />
                         <SelectSize />
                         <Amount />
                         <Name />
