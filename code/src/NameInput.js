@@ -13,7 +13,7 @@ const NameInput = (props) => {
                 required={true} 
                 placeholder='Type your name'
                 onChange={event => props.onNameChange(event.target.value)}
-                required
+                required={true}
             />
         </div>
     )

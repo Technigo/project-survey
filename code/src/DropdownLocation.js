@@ -6,7 +6,12 @@ const DropdownLocation = (props) => {
             <label htmlFor="location">
                 <h1>Where do you live?</h1>
             </label>
-            <select name={props.label} value={props.location} id="" required>
+            <select 
+                name={props.label} 
+                value={props.location} 
+                required
+                onChange={event => props.setLocation(event.target.value)}
+            >
                 <option value="Stockholm">Stockholm</option>
                 <option value="Gothenburg">Gothenburg</option>
                 <option value="Uppsala">Uppsala</option>
