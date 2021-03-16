@@ -1,24 +1,21 @@
-import React, { useState } from 'react'
+import React from 'react'
 
+const NameInput = (props) => {
 
-
-const NameInput = () => {
-
-  const [name, setName] = useState('') 
+  const onNameChange = (event) => {
+    props.setName(event.target.value) 
+  }
 
   return (
     <>
-    <form>
-      <label>Name: 
-      <input type="text" 
-      onChange={(event) => setName(event.target.value)}
-      value={name}
-      /> </label>
-    </form>
-    <h1>Name: {name}</h1>
+      <label className="form-label" htmlFor="name">Name</label>
+      <input className="form-text-input" name="name" type="text" required
+      onChange={onNameChange}
+      value={props.name}
+      
+      /> 
     </>
   )
-  
 }
 
 export default NameInput

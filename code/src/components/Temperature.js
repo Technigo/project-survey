@@ -1,33 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 
-const Temperature = () => {
+const Temperature = (props) => {
   const temperatureValues = ['37°', '37.5°', '38°', '39°']
 
-  const [temperature, setTemperature] = useState ('')
-
-  const onTemperatureChange = (e) => {
-    setTemperature(e.target.value)
+  const onTemperatureChange = (event) => {
+    props.setTemperature(event.target.value)
   }
 
   return (
     <>
-    <form>
-      <label>Please enter your current temperature
+      <h2>Please enter your current temperature</h2>
       {temperatureValues.map(resmes => (
-        <label key={resmes}>
-        <input type="radio"
-        onChange={onTemperatureChange}
-        value={resmes}
-        checked={temperature === resmes} />
-
-        {resmes}
-
-        </label>
+        <div className="radio-btn">
+          <label htmlFor="temp">{resmes}</label>
+          <input name="temp" type="radio"
+          onChange={onTemperatureChange}
+          value={resmes}
+          checked={props.temperature === resmes} />
+        </div>
       ))}
-      </label>
-    </form>
-    <h1>Your temperature is {temperature}</h1>
   </>
   )
 }

@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const Dropdown = () => {
-  
-  const [color, setColor] = useState('')
+const Dropdown = (props) => {
+
+  const onColorChange = (event) => {
+    props.setColor(event.target.value)
+  }
 
   return (
     <>
-    <form>
       <label>Please select your favourite color
         <select
-          onChange={event => setColor(event.target.value)}
-          value={color}
+          onChange={onColorChange}
+          value={props.color}
         >
           <option value="pink">Pink</option>
           <option value="purple">Purple</option>
@@ -18,7 +19,6 @@ const Dropdown = () => {
           <option value="yellow">Yellow</option>
         </select>
       </label>
-    </form>
     </>
   )
 }

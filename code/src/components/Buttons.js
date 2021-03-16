@@ -1,12 +1,35 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const Buttons = (props) => {
-  console.log(props.prevQ)
+
+  const previousStep = (event) => {
+    event.preventDefault()
+    props.setStep(props.step - 1)
+  }
+
+  const nextStep = (event) => {
+    event.preventDefault()
+    props.setStep(props.step + 1)
+  }
+
+  let btnText
   
+  if (props.step === 3) {
+    btnText = 'View results >>'
+  } else {
+    btnText = 'Next question >>'
+  }
+
   return (
     <>
-      <button onClick={props.prevQ}>Previous question</button>
-      <button onClick={props.nextQ}>Next question</button>
+      {props.step < 4 && (
+        <button className="btn next-btn" onClick={nextStep}>{btnText}</button>
+      )}
+
+      {(props.step > 1, props.step < 4) && (
+        <button className="btn prev-btn" onClick={previousStep}>{'<< Previous question'}</button>
+      )}
+
     </>
   )
 }
