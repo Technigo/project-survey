@@ -1,5 +1,9 @@
 .footer-bg {
     width: 100%;
     height: 50px;
-    background-color: aqua;
+    background-color:  rgb(213, 238, 248);
+}
+
+h4 {
+    color:rgb(45, 75, 131);
 }

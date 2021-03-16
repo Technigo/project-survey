@@ -4,21 +4,27 @@ import { DropDown } from "./components/DropDown";
 import { Header } from "./components/Header";
 import { Footer } from "./components/Footer";
 import { TextInput } from "./components/TextInput";
+import { Button } from "./components/Button";
 
 export const App = () => {
   const [display, setDisplay] = useState("inactive");
+
+  const setValue = () => {
+    return display === "active" ? "inactive" : "active";
+  };
 
   return (
     <div className="wrapper">
       <header className="header">
         <Header title="Some title here" />
       </header>
-      <div className={display}>
-        <h2>Your answers</h2>
-      </div>
       <form onSubmit={(event) => event.preventDefault()}>
+        <h2 className={`answers-heading ${display}`}>Your answers:</h2>
         <div className="text-input">
-          <TextInput class={display} />
+          {/*using the Apps state display to pass on to class props in components, which will
+        add the active class to display the users answers to the questions*/}
+          <TextInput 
+            activeClass={display} />
         </div>
         <div className="drop-down">
           <DropDown
@@ -27,7 +33,7 @@ export const App = () => {
             option3="3"
             option4="4"
             option5="5"
-            class={display}
+            activeClass={display}
           />
         </div>
         <div className="radio-buttons">
@@ -36,21 +42,18 @@ export const App = () => {
             value2="8-9"
             value3="0-1"
             value4="38-90"
-            class={display}
+            activeClass={display}
           />
         </div>
         {/* when this submit button is clicked the state display will be set to "active"
-        which also sets different props to "active" and in their turn setting classes to "active".
         This will show users answers and hide the form questions/options. 
         The Submit-button will also change and if it's clicked again it will take the user back to the form*/}
-          <button
-            onClick={(event) => {
-              setDisplay(event.target.value);
-            }}
-            data-content={(display === "active"?"Redo":"Submit")}
-            value={display === "active" ? "inactive" :"active"}
-          >
-          </button>
+        <Button
+          onClick={(event) => {
+            setDisplay(event.target.value);
+          }}
+          value={setValue()}
+        />
       </form>
       <footer className="footer">
         <Footer copyRight="&copy; Pauline Andersson 2021" />

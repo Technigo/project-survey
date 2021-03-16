@@ -1,13 +1,14 @@
-
 h2 {
     grid-column: 1/span 2;
 }
 
-input {
-width: 20px;
+.radio-buttons__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 
+
 label{
-margin: 10px;
+    margin: 10px 10px 10px 0;
 }
 
