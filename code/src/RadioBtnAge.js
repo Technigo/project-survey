@@ -8,12 +8,16 @@ const RadioBtnAge = (props) => {
         <div className='age-group'>
             <h1>What is your age?</h1>
             {group.map(group => (
-                <label>
+                <label
+                key={group}
+                label='age'
+                >
                     <input 
                         type="radio" 
                         value={group} 
                         checked={props.ageGroup === group}
                         required
+                        onChange={event => props.setAgeGroup(event.target.value)}
                     />
                     {group}
                 </label>

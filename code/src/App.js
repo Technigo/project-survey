@@ -15,6 +15,10 @@ const [section, setSection] = useState('welcome');
 const [name, setName] = useState('');
 // Location state
 const [location, setLocation] = useState('Stockholm');
+// Age group state
+const [ageGroup, setAgeGroup] = useState('');
+// Summary state
+const [summary, setSummary] = useState(false);
 
 
 
@@ -55,7 +59,7 @@ const getNameInput = inputName => {
               className='back-button'
               type='button'
               value='welcome'
-              onClick={event => { setSection('welcome') }}
+              onClick={event => { setSection(event.target.value) }}
             >
               Back
             </button>
@@ -63,7 +67,7 @@ const getNameInput = inputName => {
               className='next-button'
               type="submit"
               value='location'
-              onClick={event => { setSection('location') }}
+              onClick={event => { setSection(event.target.value) }}
             >
               Next
             </button>
@@ -83,12 +87,18 @@ const getNameInput = inputName => {
 
         <div className='button-wrapper'>
           <button
-            onClick={event => { setSection('name-input') }}
+            type="button"
+            value="name-input"
+            onClick={event => { setSection(event.target.value) }}
+            className="back-button"
           >
             Back
           </button> 
           <button
-            onClick={event => { setSection('age') }}
+            type="submit"
+            value="age"
+            onClick={event => { setSection(event.target.value) }}
+            className="next-button"
           >
             Next
           </button>
@@ -100,9 +110,13 @@ const getNameInput = inputName => {
       {/* AGE SECTION */}
       {section === 'age' && (
         <section className='radio-age'>
-          <RadioBtnAge />
+          <RadioBtnAge 
+          ageGroup={ageGroup}
+          setAgeGroup={setAgeGroup}
+          />
           <button
-            onClick={event => { setSection('summary') }}
+            value='summary'
+            onClick={event => { setSection(event.target.value) }}
           >
             Submit
           </button>
@@ -113,7 +127,11 @@ const getNameInput = inputName => {
       {/* SUMMARY */}
       {section === 'summary' && (
         <section>
-          <Summary/>
+          <Summary
+          age={ageGroup}
+          location={location}
+          name={name}
+        />
         </section>
       )}
       
