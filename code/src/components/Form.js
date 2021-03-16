@@ -5,6 +5,7 @@ import SelectInput from './SelectInput'
 import TextInput from "./TextInput"
 import Character from "./Character"
 import RangeInput from './RangeInput'
+import NumberInput from './NumberInput'
 
 
 const stats = ["strength", "intelligence", "dexterity"]
@@ -19,6 +20,7 @@ const Form = () => {
             <TextInput />
             <SelectInput />
             <RadioInput />
+            <NumberInput />
             {stats.map(item =>
                 <RangeInput
                     key={item}
