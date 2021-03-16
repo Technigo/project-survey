@@ -6,16 +6,19 @@ import React, { useState } from "react";
     const [name, setName] =useState("");
 
     return(
-        <form>
-            <label>
-                Whats your name?
-                    <input
-                        type="test"
-                        onChange={event => setName(event.target.value)}
-                        value={name}
-                    />
-            </label>
-        </form>
+        <div className="questions-container">
+            <form className="form">
+                <label className="label">
+                    Whats your name?
+                        <input
+                            className="text-input"
+                            type="text"
+                            onChange={(e) => setName(e.target.value)}
+                            value={name}
+                        />
+                </label>
+            </form>
+        </div>    
     );
 };
 

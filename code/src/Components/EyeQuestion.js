@@ -4,10 +4,11 @@ export const EyeQuestion = () => {
     const [eyeColor, setEyeColor] = useState("");
 
     return(
-        <form>
-            <label>
-                Whats the color of your eyes?
-                    <select
+        <form className="questions-container">
+            <label className="label">
+                What's the color of your eyes?
+                    <select 
+                    className="select-eyecolor"
                     onChange={event => setEyeColor(event.target.value)}
                     value={eyeColor}
                     >

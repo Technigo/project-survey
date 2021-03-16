@@ -1,3 +1,11 @@
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +13,103 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.main-titel {
+  color: gray;
+  font-weight: 400;
+  font-size: 50px;
+}
+
+.questions-container {
+  display: flex;
+  text-align: center;
+  width: 90%;
+  height: 300px;
+  background-color: rgb(244, 244, 244);
+  box-shadow: darkgrey 3px 3px 2px 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  
+}
+.radio-botton {
+  left: 9px;
+  top: 5px;
+  width: 50px;
+  height: 30px;
+  border: none;
+  background-color: black;
+
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.label{
+  font-size: 35px;
+  color: gray;
+  text-align: center;
+  
+}
+
+.p {
+  margin-top: 3px;
+  margin-bottom: 10px;
+}
+.text-input,
+.select-eyecolor {
+  border: none;
+  border-bottom:gray 5px dotted;
+  height: 70px;
+  margin: 10px;
+  width: 300px;
+  border-radius: 10px;
+  background-color: honeydew;
+  font-size: 35px;
+  color: gray;
+  text-align: center;
+ 
+}
+.submit-btn {
+    display: inline-block;
+    background: honeydew;
+    color: grey;
+    border: none;
+    padding: 10px 20px;
+    margin: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 35px;
+    font-family: inherit;
+
+}
+
+.submit-btn:hover {
+  background: grey;
+  color: honeydew;
 }
