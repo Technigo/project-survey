@@ -1,19 +1,21 @@
 import React, { useState } from 'react'
 
+import Summary from './Summary'
+
 const Survey = () => {
   
   //STATES
 
   const [question, setQuestion] = useState(0)
   const [enjoyReading, setEnjoyReading] = useState('')
-  const [genres, setGenres] = useState('')
   const [readingFormat, setReadingFormat] = useState('')
   const [book, setBook] = useState ('')
+  const [isChecked, setIsChecked] = useState(false)
+  const [showSummary, setShowSummary] = useState(false)
 
   //VARIABLES
 
   const enjoyReadingArray = ['I enjoy reading a lot', 'I like reading sometimes', 'I do not like reading']
-  const genresArray = ['Science', 'Action and Adventure', 'Classics', 'Comic Book or Graphic Novel', 'Detective and Mystery', 'Biographies and Autobiographies', 'Historical Fiction', 'Fantasy', 'Self-Help', 'Other']
 
   //FUNCTIONS
 
@@ -23,26 +25,31 @@ const Survey = () => {
   // This function goes back to the previous question
   const onPreviousQuestionChange = () => setQuestion(question - 1)
 
-  //This function will prevet the page from refreshing on submit form
-  const onSubmit = event => {
+  //This function will show the summary of answers and prevet the page from refreshing on submit form
+  const handleSubmit = event => {
     event.preventDefault()
+    setShowSummary(true)
   }
   
   // This function stores the answer from the first question (radio input)
-  const onRadioChange = event => setEnjoyReading(event.target.value)
+  const onEnjoyReadingChange = event => setEnjoyReading(event.target.value)
 
-  // This function stores the answer from the second question (checkbox input)
-  const onGenresChange = (event) => setGenres(event.target.checked)
-
-  // This function stores the answer from the third question (select input)
+  // This function stores the answer from the second question (select input)
   const onReadingFormatChange = event => setReadingFormat(event.target.value)
 
-  // This function stores the answer from the fourth question (text input)
+  // This function stores the answer from the third question (text input)
   const onBookChange = event => setBook(event.target.value)
+
+  // This function stores the answer from the fourth question (checkbox input)
+  const onIsCheckedChange = (event) => setIsChecked(event.target.checked)
+
+  //RENDERING
 
   return (
     <main className='main-container'>
-      <form className='form' onSubmit={onSubmit}>
+      {/*This will show the the questions if the form is not submitted*/}
+      {!showSummary ? (
+      <form className='form' onSubmit={handleSubmit}>
 
         {/* Survey starts here  */}
         {question === 0 && (
@@ -70,7 +77,7 @@ const Survey = () => {
                 <input
                   type='radio'
                   value={radio}
-                  onChange={onRadioChange}
+                  onChange={onEnjoyReadingChange}
                   checked={enjoyReading === radio}
                 />
                 {radio} 
@@ -92,39 +99,9 @@ const Survey = () => {
           </div>
           </section>
         )}
-         {/* Second question */}
-         {question === 2 &&(
-          <section className='question'>
-            <h2>What do you enjoy reading?</h2>
-            {genresArray.map(genre =>
-              <label key={genre}>
-                <input
-                  type='checkbox'
-                  value={genre}
-                  onChange={onGenresChange}
-                  checked={genres}
-                />
-                {genre} 
-              </label>
-              )}
-            <div className="button-container">
-            <button 
-              onClick={onPreviousQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Go Back
-            </button>
-            <button 
-              onClick={onNextQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Continue
-            </button>
-          </div>
-          </section>
-        )}
-        {/* Third question */}
-        {question === 3 &&(
+
+        {/* Second question */}
+        {question === 2 &&(
           <section className='question'>
               <label>
                 <h2>Which format do you prefer reading the most?</h2>
@@ -152,8 +129,9 @@ const Survey = () => {
           </div>
           </section>
         )}
-        {/* Fourth question */}
-        {question === 4 &&(
+
+        {/* Third question */}
+        {question === 3 &&(
           <section className='question'>
               <label>
                 <h2>What is your favorite book?</h2>
@@ -179,7 +157,57 @@ const Survey = () => {
           </div>
           </section>
         )}
+
+        {/* Fourth question */}
+        {question === 4 &&(
+          <section className='question'>
+              <label>
+              <h2>Check this box if you agree to add your favorite book to our list of recommended books.</h2>
+                <input
+                  type='checkbox'
+                  onChange={onIsCheckedChange}
+                  checked={isChecked}
+                />
+              </label>
+            <div className="button-container">
+            <button 
+              onClick={onPreviousQuestionChange} 
+              className='continue-button' 
+              type='button'>
+                Go Back
+            </button>
+            <button 
+              onClick={onNextQuestionChange} 
+              className='continue-button' 
+              type='button'>
+                Continue
+            </button>
+          </div>
+          </section>
+        )}
+
+        {/* Submit page */}
+        {question === 5 && (
+          <section className='sumbit-page'>
+          <h2 className='header'>Ready to submit?</h2>
+            <button 
+              onSubmit={handleSubmit} 
+              className='submit-button' 
+              type='submit'>
+                Submit
+            </button>
+        </section>
+        )}
       </form>
+      ): (
+        //This will show the summary of answers if the form is submitted
+        <Summary 
+        enjoyReading={enjoyReading}
+        readingFormat={readingFormat}
+        book={book}
+        isChecked={isChecked}
+        />
+      )}
     </main>
   )
 }
