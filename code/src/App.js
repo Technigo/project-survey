@@ -8,31 +8,36 @@ import { Submit } from 'components/Submit.js'
 import { SummaryWrapper } from 'components/Summary'
 
 export const App = () => {
-  const optionsQuestionTwo = ['One1', 'Two2', 'Three3']
-  const optionsQuestionThree = ['One', 'Two', 'Three']
-  const optionsRadioLabels = ['Answer1', 'Answer2', 'Answer3']
+
+  const optionsQuestionTwo = ['June', 'July', 'August']
+  const optionsQuestionThree = ['< 20', '20-25', '25 <']
+ 
   return (
     <div>
       < Heading
-        subheading="Whats the survey about?"
+        subheading="Whats your Vacay Mode?!"
       />
-      <form className="form" onSubmit={ < SummaryWrapper />}>
+      <form className="form" 
+        onSubmit={ < SummaryWrapper />}        
+      >
         <div className="input-one">
           < Input1
-            question="Question 1"
+            question="Favourite vacation activity"
+            type="text"
           />
         </div>
         <div className="input-two">
           < Input2
-            question="Question 2"
+            question="Best summer weeks"
+            type="select"
             options={optionsQuestionTwo}
           />
         </div>
         <div className="input-three">
           < Input3
-            question="Question 3"
+            question="My preferred temperature"
+            type="radio"
             options={optionsQuestionThree}
-            labels={optionsRadioLabels}
           />
         </div>
         <input type="submit">

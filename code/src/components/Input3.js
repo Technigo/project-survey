@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 // Do I need a separate mapping for radio options & radio labels?
 
 export const Input3 = (props) => {
+
+  const [radioValue, setRadioValue] = useState()
+  console.log({radioValue})
   return (
     <div>
       <h3>
@@ -13,16 +16,16 @@ export const Input3 = (props) => {
         {props.options.map((option) => {
           return (
             <div key={option}>
-              <label 
-                htmlFor="{option}"
-              >
+              <label>
                 {option}
-              </label>
-              <input 
-                id="{option}" 
-                type="radio"
-              >
-              </input>
+                  <input 
+                    id="{option}" 
+                    type={props.type}
+                    value={option}
+                    onChange={event => setRadioValue(event.target.value)}
+                    checked={radioValue === option}
+                  />
+              </label>              
             </div>
           )
         })}

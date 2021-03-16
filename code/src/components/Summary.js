@@ -6,7 +6,7 @@ import React from 'react'
 
 export const SummaryWrapper = (props) => {
   return (
-    <section>
+    <section className="summary-section">
       <h2>Your answers:</h2>
       <ul>
         <li></li>
