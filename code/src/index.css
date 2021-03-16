@@ -11,3 +11,10 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+input.checking:required {
+  background: red;
+}
+select.checking:required {
+  background-color: red;
+}
