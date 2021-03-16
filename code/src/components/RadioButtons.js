@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const timeIntervals = [
+const timeInterval = [
   'Every day',
   'Every week',
   'Every month',
@@ -12,10 +12,10 @@ const RadioButtons = () => {
 
 return (
   <>
-    {/* <p>How often do you crave the cream?</p> */}
+    <p>How often do you crave the cream?</p> 
 
     <div>
-      {timeIntervals.map(intervals => (
+      {timeInterval.map(intervals => (
         <label key={intervals}>
         <input type='radio'
         value={ intervals }
@@ -24,13 +24,7 @@ return (
         />
         {intervals}
         </label>
-        // <label>Every week</label>
-        // <input type='radio'/>
-        // <label>Every month</label>
-        // <input type='radio'/>
-        // <label>When angry &#38; sad</label>
-        // <input type='radio'/>
-
+        
       ))}
       
     </div>

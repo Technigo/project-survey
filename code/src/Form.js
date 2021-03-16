@@ -8,17 +8,23 @@ import  Result  from './components/Result'
 const Form = () => {
   const [name,setName] = useState('')
   const [timeIntervals, setTimeIntervals] = useState('')
+  const [favorite, setFavorite]= useState('')
+
+  const handleSubmit = (e) => {
+    e.preventDefault()
+  }
 
   return (
     
   
-      <div>
+      <form onSubmit={handleSubmit}>
         < NameInput />
         < RadioButtons />
-        {/* /*< DropDown />
-        < Result 
-        /> */}
-      </div>
+        < DropDown />
+        <button className='submit-button' type='submit'> Submit! </button>
+        {/* < Result 
+        />  */}
+      </form>
     
 
   )

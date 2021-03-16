@@ -9,15 +9,16 @@ const NameInput = () => {
 
 
 return (
-  <div className='name-input'>
+  <div className='name-input' >
     <h2>Whats your name Ice Cream lover?</h2>
-    <label>Whats your name?</label>
-  <input 
-  id='name' 
-  type='text'
-  value={name}
-  onChange={ onNameInput }
-  />
+    <label >Fill this in:
+      <input 
+      id='name' 
+      type='text'
+      value={name}
+      onChange={ onNameInput }
+      />
+    </label>
   </div>
 )
 }
