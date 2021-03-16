@@ -1,9 +1,12 @@
 import React from 'react'
 
 import { Name } from './Name'
-import { Select } from './Select'
-import { RadioButton } from './Radiobuttons'
 import { Age } from './Age'
+import { Select } from './SelectPlanet'
+import { BringItem } from './BringItem'
+import { SubmitButton } from './SubmitButton'
+
+
 
 
 export const Form = () => {
@@ -19,7 +22,10 @@ export const Form = () => {
         <Select />
       </div>
       <div>
-        <RadioButton />
+        <BringItem />
+      </div>
+      <div>
+        <SubmitButton />
       </div>
     </form>
   )

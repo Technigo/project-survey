@@ -5,6 +5,7 @@ export const Name = () => {
 
   const onNameChange = (event) => {
     setInputName(event.target.value)
+    console.log(event.target.value)
   
   }
 
