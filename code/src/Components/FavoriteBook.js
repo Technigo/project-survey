@@ -21,7 +21,7 @@ const FavoriteBook = ({text}) => {
         </label>
       </div>
       <div>
-        <button className="start-button"><a href='#favorite'>Next</a></button>
+        <button className="start-button"><a href='#favorite'>Submit!</a></button>
       </div>
     </div>
 

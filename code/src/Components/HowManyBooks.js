@@ -12,8 +12,8 @@ const HowManyBooks = ({text}) => {
 
   return(
     <div className = "number-of-books-container">
-
-      <label><h2>{text}</h2>
+      <div className="inner-container">
+      <label className="label-radio"><h2>{text}</h2>
       <select
         onChange={onNumberChange}
         value={number}
@@ -25,7 +25,11 @@ const HowManyBooks = ({text}) => {
         <option value="21+">21+</option>
       </select>
       </label>
-      <button className="start-button"><a href='#genre'>Next</a></button>
+      <div className="button-div">
+        <button className="start-button"><a href='#genre'>Next</a></button>
+        </div>
+      </div>
+
     </div>
 
   )

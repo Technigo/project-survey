@@ -5,13 +5,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-}
-
-
-*{
   margin:0;
+
 }
+
+
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -19,10 +19,23 @@ code {
 }
 
 .header-container{
-  background-image: url(./images/background.jpg);
+  background-image: url(./images/bookleaf.jpg);
+  /* background-image: url(./images/background.jpg); */
   height: 100vh;
   width: 100%;
   text-align: center;
+  background-size: cover;
+  background-position: center;
+  /* display: flex; */
+
+}
+
+.header{
+ margin-top:50px;
+}
+
+.header h1, p{
+  padding:10px;
 }
 
 .main-container{
@@ -32,43 +45,118 @@ code {
   /* justify-content: center; */
 }
 
+.inner-container {
+  /* padding-top: 50px;
+  padding-left:5px;
+  padding-right:5px; */
+  /* padding-bottom: 10px; */
+}
+
+.inner-container h2{
+  padding-bottom:10px;
+}
 
 
+.button-div{
+  padding-top:10px;
+}
  /* .form-container{
 display: flex;
 flex-direction: column;
 } */
 
-.number-of-books-container {
-  background-image: url(./images/background.jpg);
-  border: 2px solid black;
-  height: 100vh;
-  width: 100%;
-  text-align: center;
+a {
+text-decoration: none;
+color: black;
 }
 
-.favorite-book-container {
-  border: 2px solid black;
+/* .number-of-books-container {
+  background-image: url(./images/bookleaf.jpg);
+  /* border: 2px solid black; */
+  /*height: 100vh;
+  width: 100%;
+ /* text-align: center;
+  /* object-fit: contain; */
+  /* background-size: cover; */
+  /*background-position: center;
+  /* object-fit: cover; */
+  /*background-position: center;
+  display: flex;
+ /* flex-direction: column;/*
+} */
+
+.number-of-books-container {
+  background-image: url(./images/bookleaf.jpg);
+  /* background-image: url(./images/typewriter.jpg); */
+  /* border: 2px solid black; */
   height: 100vh;
   /*width: 100%; */
   /* text-align: center; */
   display: flex;
   flex-direction: column;
   text-align: center;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center center;
+  background-repeat:   no-repeat;
+}
+
+.favorite-book-container {
+  background-image: url(./images/bookleaf.jpg);
+  /* background-image: url(./images/typewriter.jpg); */
+  /* border: 2px solid black; */
+  height: 100vh;
+  /*width: 100%; */
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center center;
+  background-repeat:   no-repeat;
 }
 
 .favorite-genre-container{
-  border: 2px solid black;
+  background-image: url(./images/bookleaf.jpg);
+  /* background-image: url(./images/pages.jpg); */
+  /* border: 2px solid black; */
   height: 100vh;
   /*width: 100%; */
   display: flex;
   flex-direction: column;
   text-align: center;
+  /* background-size: contain; */
+  background-size: cover;
+  background-position: center;
 }
 
+.label{
+  margin:5px;
+}
 
 
 
 html {
   scroll-behavior: smooth;
+}
+
+
+
+/**** MEDIA QUERIES ***/
+/*Tablet*/
+/* @media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .header h1, p{
+    color: red;
+  }
+} */
+
+
+
+
+/*Desktop*/
+@media screen and (min-width: 1025px) {
+.favorite-genre-container, .favorite-book-container, .number-of-books-container, .header-container {
+  background-image: url(./images/pens.jpg);
+}
 }
