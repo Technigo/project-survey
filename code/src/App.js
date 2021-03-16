@@ -6,64 +6,76 @@ import WorkArea from './components/WorkArea'
 import Place from './components/Place'
 import Summary from './components/Summary'
 
-/* (event) => event.preventDefault() */
 
 export const App = () => {
 
+  //function for submit button
   const handleSubmit = (event) => {
     event.preventDefault()
     setdisplaySummary(true)
   }
 
+  //all props
   const [displaySummary, setdisplaySummary] = useState(false)
   const [email, setEmail] = useState('')
   const [workArea, setWorkArea] = useState()
   const [place, setPlace] = useState(false)
-  
+
 
   return (
+    <div className = 'container'>
+{/* If displaySummary is false (default) show what is inside ( ) */}
+    {!displaySummary ? (
+      <div className='main'>
+        <Welcome
+        />
 
-    
-    <div className='main'>
-      <Welcome />
-
-      {!displaySummary ? (
         <div className='formContainer'>
         <form onSubmit={handleSubmit}>
-          <section className='email' id='email'>
+        {/* 1st question - email */}
+          <section
+          className='email'
+          id='email'>
             <Email
             email={email}
             setEmail={setEmail}
             />
           </section>
-
-
-          <section className='workArea' id='workArea'>
+        {/* 2nd question - type of work */}
+          <section
+          className='workArea'
+          id='workArea'>
             <WorkArea
             workArea={workArea}
             setWorkArea={setWorkArea}
             />
           </section>
-
-
-          <section className='place' id='place'>
+        {/* 3rd question - which office */}
+          <section
+          className='place'
+          id='place'>
             <Place
             place={place}
             setPlace={setPlace}
             />
           </section>
-          
-          </form>
+
+        </form>
         </div>
+      </div>
+
       ) : (
-      <section className='summary'>
-        <Summary
-        email={email}
-        workArea={workArea}
-        place={place}
-        />
-      </section>
-      )}
+        // If displaySummary is true (set when pushing submit button) display this:
+        <section
+        className='summary'>
+          <Summary
+          email={email}
+          workArea={workArea}
+          place={place}
+          />
+        </section>
+      )
+    } 
     </div>
   )
 }

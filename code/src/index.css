@@ -148,7 +148,7 @@ form {
 
 /*INPUT STYLING*/
 
-.textInput {
+.emailInput {
   font-family: 'Montserrat', sans-serif;
   background: transparent;
   border: none;
@@ -158,7 +158,7 @@ form {
   color: #000;
 }
 
-.textInput:focus {
+.emailInput:focus {
   outline: none;
   background-color: #fff;
 }
@@ -173,8 +173,28 @@ form {
 /*SUMMARY*/
 
 .summaryContainer {
+  background-image: url('./images/smoke.jpg');
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
   height: 100vh;
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.summaryContent {
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+  width: 85%;
+}
+
+.summaryContainer p:first-child {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-weight: bold;
 }
 
 /*BUTTON STYLING*/

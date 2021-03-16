@@ -17,9 +17,11 @@ const Place = ({ place, setPlace }) => {
                     <input
                     id='place'
                     type='radio'
+                    name='place'
                     value='Los Angeles'
                     onChange={onPlaceChange}
                     checked={place === 'Los Angeles'}
+                    /* required */
                     />
                  Los Angeles
                 </div>
@@ -28,6 +30,7 @@ const Place = ({ place, setPlace }) => {
                     <input
                     id='place'
                     type='radio'
+                    name='place'
                     value='Tokyo'
                     onChange={onPlaceChange}
                     checked={place === 'Tokyo'}
@@ -39,6 +42,7 @@ const Place = ({ place, setPlace }) => {
                     <input
                     id='place'
                     type='radio'
+                    name='place'
                     value='Stockholm'
                     onChange={onPlaceChange}
                     checked={place === 'Stockholm'}
@@ -66,8 +70,6 @@ const Place = ({ place, setPlace }) => {
             value='Submit your answers'>
                 
             </input>
-
-           {/*  <button className='okButton'><a href='#'>OK</a></button> */}
             </div>
         </div>
     )
