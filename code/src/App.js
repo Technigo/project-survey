@@ -4,6 +4,7 @@ import DropDown from './components/DropDown/DropDown'
 import RadioButtons from './components/RadioButtons/RadioButtons'
 import SubmitButton from './components/SubmitButton/SubmitButton'
 import NameForm from './components/NameForm/NameForm'
+import Result from './components/Result/Result'
 
 export const App = () => {
   return (
@@ -14,6 +15,7 @@ export const App = () => {
       <DropDown />
       <RadioButtons />
       <SubmitButton />
+      <Result />
     </div>
   )
 }

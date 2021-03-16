@@ -3,12 +3,17 @@ import './DropDown.css'
 
 const DropDown = () =>{
     const [snack, setSnack] = useState("");
+
+    const onOptionChange = (e) =>{
+        setSnack(e.target.value)
+    }
     return(
         <>
             <h2>What is your favorite snack?</h2>
             <form onSubmit={event => event.preventDefault()}>
                 <select
-                onChange={event => setSnack(event.target.value) }
+                // onChange={event => setSnack(event.target.value) }
+                onChange={onOptionChange}
                 value={snack}
                 >
                     <option value="">Select snack</option>
