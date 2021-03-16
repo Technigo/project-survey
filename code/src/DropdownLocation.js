@@ -4,9 +4,10 @@ const DropdownLocation = (props) => {
     return (
         <div className='dropdown-location'>
             <label htmlFor="location">
-                <h1>Where do you live?</h1>
+                <h1 className='location-text'>Where do you live?</h1>
             </label>
-            <select 
+            <select
+                className='dropdown-menu'
                 name={props.label} 
                 value={props.location} 
                 onChange={event => props.setLocation(event.target.value)}

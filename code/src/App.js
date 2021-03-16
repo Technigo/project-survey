@@ -48,8 +48,8 @@ const getNameInput = inputName => {
       {/* NAME SECTION */}
       {section === 'name-input' && (
         <section className='name-input'>
-          <NameInput
-          required={true}
+
+            <NameInput
           name={name}
           setName={setName}
           id='name'
@@ -73,6 +73,7 @@ const getNameInput = inputName => {
               Next
             </button>
           </div>
+          
         </section>
       )}
       
@@ -115,12 +116,26 @@ const getNameInput = inputName => {
           ageGroup={ageGroup}
           setAgeGroup={setAgeGroup}
           />
+          
+
+          <div className='button-wrapper'>
           <button
+            type="button"
+            value="location"
+            onClick={event => { setSection(event.target.value) }}
+            className="back-button"
+          >
+            Back
+          </button> 
+          <button
+            className="submit-button"
             value='summary'
             onClick={event => { setSection(event.target.value) }}
           >
             Submit
           </button>
+      </div>
+
         </section>
       )}
       
@@ -133,9 +148,11 @@ const getNameInput = inputName => {
           location={location}
           name={name}
         />
-        </section>
+      </section>
       )}
       
     </>
   )
 }
+
+
