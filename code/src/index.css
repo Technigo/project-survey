@@ -16,3 +16,21 @@ code {
   display: flex;
   background-color: brown;
 }
+.range-lable {
+  display: flex;
+  justify-content: space-between;
+  /* border: brown 2px solid; */
+}
+.slider {
+ width: 100%;
+}
+.range-item {
+  width: 15%;
+  font-size: 10px;
+  text-align: center;
+  /* border: 1px solid pink; */
+}
+
+.wrapper {
+  margin: 10px;
+}

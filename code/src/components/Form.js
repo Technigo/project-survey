@@ -1,7 +1,8 @@
 import React from 'react';
-import Selector from './Selector';
 
 import TextInputName from './TextInputName'
+import Selector from './Selector';
+import Range from './Range'
 
 const Form = (props) => {
     return (
@@ -9,6 +10,7 @@ const Form = (props) => {
             <h2 className="form-title">{props.title}</h2>
             <TextInputName label="Name"/>
             <Selector array={props.catBreeds} label ="Choose a breed"/>
+            <Range question="How do you feel about the survey?"/>
         </div>
     )
 }
