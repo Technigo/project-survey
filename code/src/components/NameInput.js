@@ -9,7 +9,7 @@ const NameInput = () => {
 
 
 return (
-  <div className='name-input' >
+  <div className='name-box' onSubmit={event => event.preventDefault()} >
     <h2>Whats your name Ice Cream lover?</h2>
     <label >Fill this in:
       <input 

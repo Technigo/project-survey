@@ -17,13 +17,13 @@ const Form = () => {
   return (
     
   
-      <form onSubmit={handleSubmit}>
+      <form className='form-container' onSubmit={handleSubmit}>
         < NameInput />
         < RadioButtons />
         < DropDown />
         <button className='submit-button' type='submit'> Submit! </button>
-        {/* < Result 
-        />  */}
+        < Result 
+        />  
       </form>
     
 

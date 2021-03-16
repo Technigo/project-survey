@@ -4,14 +4,14 @@ const timeInterval = [
   'Every day',
   'Every week',
   'Every month',
-  'When angry & sad'
+  'When beeing angry & sad'
 ]
 
 const RadioButtons = () => {
   const [timeIntervals, setTimeIntervals] = useState()
 
 return (
-  <>
+  <div className='button-box'>
     <p>How often do you crave the cream?</p> 
 
     <div>
@@ -28,7 +28,8 @@ return (
       ))}
       
     </div>
-  </>
+  </div>
+  
 )
 }
 

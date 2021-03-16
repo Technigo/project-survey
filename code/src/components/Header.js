@@ -3,9 +3,12 @@ import React from 'react'
 const Header = () => {
 return (
 
-  <div>
+  <div className='header-box'>
     <h1>Ice Ice Baby!</h1>
-    <p>What flavor rocks your boat &#38; gets your brain freeze on?!</p>
+    <div className='icecream-image'>
+      <img src='./assets/icecream.jpg' alt='ice-creams'></img>
+    </div>
+    <p>What flavor rock your boat &#38; get your brain freeze on?!</p>
   </div>
 )
 }

@@ -6,11 +6,13 @@ import Header from './components/Header'
 
 const App = () => {
   return (
-    <div>
-      
-      < Header />
-      < Form />
-
+    <div className='app-container'>
+        <div>
+          < Header />
+        </div>
+        <div>
+          < Form />
+        </div>
     </div>
   )
 }
