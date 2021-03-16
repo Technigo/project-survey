@@ -28,6 +28,12 @@ html {
   width: 100%;
 }
 
+i {
+  color: #fff;
+  font-size: 35px;
+  margin-right: 5px;
+}
+
 /*WELCOME PAGE*/
 
 .welcomeContainer {
@@ -77,20 +83,7 @@ html {
   font-weight: bold;
 }
 
-.startButton {
-  font-family: 'Montserrat', sans-serif;
-  background-color: #ff89d8;
-  width: 95%;
-  height: 60px;
-  border-radius: 10px;
-  margin: 30px 0 10px 0;
 
-  color: #fff;
-  font-size: 22px;
-
-  position: absolute;
-  bottom: 0;
-}
 
 /*FORM*/
 
@@ -98,6 +91,7 @@ html {
   display: flex;
   flex-direction: column;
   align-items: center;
+
 
   width: 100%;
   margin: 0;
@@ -107,14 +101,24 @@ form {
   width: 100%;
 }
 
+.email {
+
+}
+
 
 .questionContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
   height: 100vh;
   width: 100%;
 }
 
 .questionContainer.one {
   background-color:  #ff89d8;
+
 }
 
 .questionContainer.two {
@@ -123,6 +127,107 @@ form {
 
 .questionContainer.three {
   background-color:  #ff89d8;
+}
+
+.innerContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+}
+
+.questionTitle {
+  margin-bottom: 20px;
+}
+
+.radioContainer {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/*INPUT STYLING*/
+
+.textInput {
+  font-family: 'Montserrat', sans-serif;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #000;
+  width: 100%;
+  padding: 5px 10px;
+  color: #000;
+}
+
+.textInput:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+
+.dropdownInput {
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 0;
+}
+
+/*SUMMARY*/
+
+.summaryContainer {
+  height: 100vh;
+  width: 100%;
+}
+
+/*BUTTON STYLING*/
+
+.startButton {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #ff89d8;
+  font-size: 22px;
+  color: #fff;
+  width: 100%;
+  height: 60px;
+  border-radius: 10px;
+  margin: 0;
+  margin-bottom: 10px;
+}
+
+.startButtonLink {
+  margin: 0;
+  width: 95%;
+  text-decoration: none;
+  position: absolute;
+  bottom: 0;
+}
+
+.okButton {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+  align-self: flex-end;
+ 
+  width: 50px;
+  height: 50px;
+  border-radius: 20%;
+  margin-top: 25px;
+  box-shadow: 1px 1px 4px rgb(90, 89, 89);
+
+  background: linear-gradient(210deg, #b3e6e9, #ff89d8, #fff);
+  background-clip: text;
+	-webkit-background-clip: button;
+  color: transparent;
+  
+}
+
+.okButtonLink {
+  text-decoration: none;
+  color: #fff;
+  text-shadow: 1px 2px 4px #000;
+  font-size: 18px;
+  width: 100%;
+  height: 100%;
+}
+
+.submitButton {
+
 }
 
 @media (min-width: 667px) {
@@ -138,6 +243,7 @@ form {
   .startButton {
     width: 250px;
   }
+
 
 }
 
@@ -156,8 +262,19 @@ form {
     font-size: 110px;
   }
 
+  /*BUTTONS*/
+  
+  .startButton:hover {
+    cursor: pointer;
+  }
+
   .startButton {
     width: 350px;
     margin-bottom: 35px;
   }
+
+  .okButton:hover {
+    cursor: pointer;
+  }
+
 }

@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 const Place = ({ place, setPlace }) => {
 
@@ -8,55 +8,67 @@ const Place = ({ place, setPlace }) => {
 
     return (
         <div className='questionContainer three'>
-            <label>
-                <h2 className='questionTitle'>Where would you like to work?</h2>
+            <div className='innerContainer'>
+            <label htmlFor='place'>
+                <h2 className='questionTitle'><i className="fas fa-arrow-circle-right"></i> In which one of our offices would you like to work?</h2>
 
-                <div className='radio-container'>
+                <div className='radioContainer'>
                 <div>
                     <input
+                    id='place'
                     type='radio'
                     value='Los Angeles'
                     onChange={onPlaceChange}
                     checked={place === 'Los Angeles'}
                     />
-                Los Angeles
+                 Los Angeles
                 </div>
 
                 <div>
                     <input
+                    id='place'
                     type='radio'
                     value='Tokyo'
                     onChange={onPlaceChange}
                     checked={place === 'Tokyo'}
                     />
-                Tokyo
+                 Tokyo
                 </div>
 
                 <div>
                     <input
+                    id='place'
                     type='radio'
                     value='Stockholm'
                     onChange={onPlaceChange}
                     checked={place === 'Stockholm'}
                     />
-                Stockholm
+                 Stockholm
                 </div>
 
                 <div>
                     <input
+                    id='place'
                     type='radio'
-                    value='Remote'
+                    value='Berlin'
                     onChange={onPlaceChange}
-                    checked={place === 'Remote'}
+                    checked={place === 'Berlin'}
                     />
-                Remote
+                Berlin
                 </div>
                 </div>
 
             </label>
 
-            <button className='okButton'><a href='#'>OK</a></button>
+            <input
+            type='submit'
+            className='submitButton'
+            value='Submit your answers'>
+                
+            </input>
 
+           {/*  <button className='okButton'><a href='#'>OK</a></button> */}
+            </div>
         </div>
     )
 } 

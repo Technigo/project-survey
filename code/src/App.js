@@ -4,22 +4,32 @@ import Welcome from './components/Welcome'
 import Email from './components/Email'
 import WorkArea from './components/WorkArea'
 import Place from './components/Place'
+import Summary from './components/Summary'
 
-
+/* (event) => event.preventDefault() */
 
 export const App = () => {
 
+  const handleSubmit = (event) => {
+    event.preventDefault()
+    setdisplaySummary(true)
+  }
+
+  const [displaySummary, setdisplaySummary] = useState(false)
   const [email, setEmail] = useState('')
   const [workArea, setWorkArea] = useState()
   const [place, setPlace] = useState(false)
+  
 
   return (
+
+    
     <div className='main'>
       <Welcome />
 
-      
+      {!displaySummary ? (
         <div className='formContainer'>
-        <form>
+        <form onSubmit={handleSubmit}>
           <section className='email' id='email'>
             <Email
             email={email}
@@ -42,10 +52,18 @@ export const App = () => {
             setPlace={setPlace}
             />
           </section>
+          
           </form>
         </div>
-      
-
+      ) : (
+      <section className='summary'>
+        <Summary
+        email={email}
+        workArea={workArea}
+        place={place}
+        />
+      </section>
+      )}
     </div>
   )
 }

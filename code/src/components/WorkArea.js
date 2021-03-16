@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 const WorkArea = ({ workArea, setWorkArea}) => {
 
@@ -8,10 +8,13 @@ const WorkArea = ({ workArea, setWorkArea}) => {
 
     return (
         <div className='questionContainer two'>
-            <label>
-                <h2 className='questionTitle'>Which work area are you interested in?</h2>
+            <div className='innerContainer'>
+            <label htmlFor='workArea'>
+                <h2 className='questionTitle'><i className="fas fa-arrow-circle-right"></i> Which work area are you interested in?</h2>
                 <select
-                    name='dropdown-question'
+                    className='dropdownInput'
+                    id='workArea'
+                    name='workAreas'
                     onChange={onWorkAreaChange}
                     value={workArea}
                 >
@@ -22,8 +25,8 @@ const WorkArea = ({ workArea, setWorkArea}) => {
                 </select>
             </label>
 
-            <button className='okButton'><a href='#place'>OK</a></button>
-
+            <button className='okButton'><a href='#place' className='okButtonLink'>OK</a></button>
+            </div>
         </div>
 
     )
