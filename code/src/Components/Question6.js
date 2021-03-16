@@ -4,7 +4,7 @@ const Question6 = () => {
     const [ReasonForTravel, setReasonForTravel] = useState()
 
     return (
-        <label>
+        <label className="question">
             6. Do you typically fly for business, personal reasons, or some other reason?   
             <input
                 type='radio'

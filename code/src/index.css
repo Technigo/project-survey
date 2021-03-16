@@ -1,14 +1,61 @@
+main {
+  display: flex;
+  justify-content: center;
+}
+
+.survey-page {
+  width: 80%;
+}
+
+.survey-page-header {
+  margin: 30px 0 60px 0;
+}
+
 .survey-title {
   color: #00bf6f;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: Oxygen, sans-serif;
   font-size: 26px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: bold;
   line-height: 1.25;
+  width: 90%;
 }
 
 .survey-form {
-  display: grid;
+  display: grid; 
+}
+
+.question {
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+
+.select-field {
+  border: solid #00bf6f;
+  padding: 5px;
+  margin-top: 20px;
+}
+
+.input-field {
+  border: none;
+  background: lightgray;
+  padding: 10px;
+  margin-top: 20px;
+  width: 90%
+}
+
+.radio-buttons {
+  margin: 20px 0 30px 0;
+}
+
+.buttons {
+  padding: 5px;
+}
+
+.radio-dot {
+  margin-right: 10px;
 }
 
 body {

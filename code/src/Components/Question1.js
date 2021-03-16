@@ -4,9 +4,9 @@ const Question1 = () => {
     const [timeSinceVisit, setTimeSinceVisit] = useState('')
 
     return (
-        <label>
+        <label className="question">
             1.  When was the last time you visited an airline website or app?   
-            <select
+            <select className="select-field"
                 value={timeSinceVisit}
                 onChange={event => setTimeSinceVisit(event.target.value)}
             >
