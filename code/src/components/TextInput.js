@@ -3,16 +3,13 @@ import React, { useState } from 'react'
 import Character from "./Character"
 
 const TextInput = (props) => {
-    const [text, setText] = useState("")
+    const { text, setText } = props
 
     const handleInput = (event) => {
         setText(event.target.value)
     }
+
     Character[props.data.field] = text
-    // const newObject = {
-    //     [props.field]: text
-    // }
-    // Character.push(newObject)
 
     return (
         <label>

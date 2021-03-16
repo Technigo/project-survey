@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Character from "./Character"
 
 const NumberInput = (props) => {
-    const [number, setNumber] = useState("")
+    const { number, setNumber } = props
 
     const handleChange = (event) => {
         setNumber(event.target.value)

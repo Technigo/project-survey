@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Character from "./Character"
 
 const RangeInput = (props) => {
-    const [value, setValue] = useState("")
+    const { value, setValue } = props
 
     const handleChange = (event) => {
         setValue(event.target.value)

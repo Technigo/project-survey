@@ -17,7 +17,8 @@
         "choices": [
             "orc",
             "human",
-            "dwarf"
+            "dwarf",
+            "goblin"
         ],
         "field": "race",
         "className": "race-input"

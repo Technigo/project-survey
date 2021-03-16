@@ -4,7 +4,7 @@ import Character from "./Character"
 
 
 const SelectInput = (props) => {
-    const [choice, setChoice] = useState("")
+    const { choice, setChoice } = props
 
     const handleChange = (event) => {
         setChoice(event.target.value)

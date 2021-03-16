@@ -3,7 +3,7 @@ import React, { useState } from "react"
 import Character from "./Character"
 
 const RadioInput = (props) => {
-    const [choice, setChoice] = useState("")
+    const { choice, setChoice } = props
 
     const handleChange = (event) => {
         setChoice(event.target.value)

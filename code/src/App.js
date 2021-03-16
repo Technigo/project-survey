@@ -8,11 +8,16 @@ import Character from "./components/Character"
 import RangeInput from './components/RangeInput'
 import NumberInput from './components/NumberInput'
 import CharacterSheet from './components/CharacterSheet'
+import ProgressBar from 'components/ProgressBar'
 
 
 const App = () => {
   const [isFilledIn, setIsFilledIn] = useState(false)
   const [section, setSection] = useState(0)
+  const [text, setText] = useState("")
+  const [choice, setChoice] = useState("")
+  const [number, setNumber] = useState("")
+  const [value, setValue] = useState("")
 
   const handleSubmit = () => {
     console.log(Character)
@@ -21,11 +26,15 @@ const App = () => {
   }
 
   const handleNext = () => {
-    setSection(section + 1)
+    if (section < 6) {
+      setSection(section + 1)
+    }
   }
 
   const handlePrevious = () => {
-    setSection(section - 1)
+    if (section > 0) {
+      setSection(section - 1)
+    }
   }
 
   if (isFilledIn) {
@@ -37,35 +46,70 @@ const App = () => {
     )
   } else {
     return (
+      <>
+        <form onSubmit={(event) => event.preventDefault()}>
 
-      <form onSubmit={(event) => event.preventDefault()}>
+          {section === 0 &&
+            <TextInput
+              text={text}
+              setText={setText}
+              data={data.name}
+            />}
 
-        {section === 0 && <TextInput data={data.name} />}
+          {section === 1 &&
+            <SelectInput
+              choice={choice}
+              setChoice={setChoice}
+              data={data.class}
+            />}
 
-        {section === 1 && <SelectInput data={data.class} />}
+          {section === 2 &&
+            <RadioInput
+              choice={choice}
+              setChoice={setChoice}
+              data={data.race}
+            />}
 
-        {section === 2 && <RadioInput data={data.race} />}
+          {section === 3 &&
+            <TextInput
+              text={text}
+              setText={setText}
+              data={data.goal}
+            />}
 
-        {section === 3 && <TextInput data={data.goal} />}
+          {section === 4 &&
+            <NumberInput
+              number={number}
+              setNumber={setNumber}
+              data={data.age}
+            />}
 
-        {section === 4 && <NumberInput data={data.age} />}
+          {section === 5 &&
+            <SelectInput
+              choice={choice}
+              setChoice={setChoice}
+              data={data.family}
+            />}
 
-        {section === 5 && <SelectInput data={data.family} />}
-
-        {section === 6 && <div className="stats-container">
-          {data.stats.allStats.map(item =>
-            <RangeInput
-              className="stats"
-              key={item}
-              rangeName={item}
-            />)}
-        </div>}
-
-        <button onClick={handlePrevious}>Previos Question</button>
-        <button onClick={handleNext}>Next Question</button>
-        <button onClick={handleSubmit}>Submit</button>
-
-      </form>
+          {section === 6 &&
+            <div className="stats-container">
+              {data.stats.allStats.map(item =>
+                <RangeInput
+                  className="stats-input"
+                  key={item}
+                  rangeName={item}
+                  value={value}
+                  setValue={setValue}
+                />)}
+            </div>}
+          <div>
+            <button onClick={handlePrevious}>Previous Question</button>
+            <button onClick={handleNext}>Next Question</button>
+            <button onClick={handleSubmit}>Submit</button>
+          </div>
+        </form>
+        <ProgressBar progress={section} />
+      </>
     )
   }
 }
