@@ -1,51 +1,40 @@
-import React, { useState } from 'react' 
-import Summary from './Summary'
+import React from 'react' 
 
-const favoritePlace = [
-  'In a library',
-  'While commuting',
-  'In a park',
-  'At home',
-  'In a group', 
-  'Other'
+const places = [
+  'in the library',
+  'while commuting',
+  'in the park',
+  'at home',
+  'in a group', 
+  'other'
 ]
 
+const ThirdQuestion = (props) => {
 
-const ThirdQuestion = () => {
-  const [place, setPlace] = useState ([0])
-  const [submit, setSubmit] = useState(false)
+  const onPlaceChange = (e) => {
+    props.setFavoritePlace(e.target.value)
+    console.log(e.target.value)
+  }
 
-  
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-    <p>What is your favorite place to read</p>
-    {favoritePlace.map(places => (
-      <label key={places}>
-        <input
-        type='radio'
-        value={places}
-        onChange={event => setPlace(event.target.value)}
-        checked={place === places}
-        />
-        {places}
-        </label>
-    ))}
-
-      <div>
-        <button type="submit" 
-        onClick={() => setSubmit(true)}
-        >SEND 
-        </button>
+      <div role="radiogroup" aria-label="Favorite place to read: 5 options">
+        <h1>Were is your favorite place to read?</h1>
+        {places.map(places => (
+        <div className="radio-container" key={places}>
+          <input
+          type='radio'
+          value={places}
+          onChange={onPlaceChange}
+          checked={props.place === places}
+          required 
+          />
+          {places}
+        </div>
+      ))}
       </div>
-
-      {submit && (
-        <div>
-        <Summary />   
-      </div>
-      )}
-  </form>
+    </form>
 )
-
 }
 
 export default ThirdQuestion
