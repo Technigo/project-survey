@@ -2,7 +2,7 @@ import React from "react";
 import "./DropDown.css";
 
 export const DropDown = (props) => {
-  const [type, setType] = [props.type, props.setType];
+  const {type, setType} = props;
 
   return (
     <>

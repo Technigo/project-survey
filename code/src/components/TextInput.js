@@ -2,7 +2,8 @@ import React from "react";
 import "./TextInput.css";
 
 export const TextInput = (props) => {
-  const [userInput, setUserInput] = [props.userInput, props.setUserInput]
+  const {userInput, setUserInput} = props;
+  
   return (
     <>
       <div className="text-input__inner">

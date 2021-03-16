@@ -2,7 +2,7 @@ import React from "react";
 import "./Radio.css";
 
 export const Radio = (props) => {
-  const [range, setRange] = [props.range, props.setRange]
+  const {range, setRange} = props
   const values = [props.value1, props.value2, props.value3, props.value4];
 
   return (
