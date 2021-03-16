@@ -8,7 +8,7 @@ export const Radio = (props) => {
   return (
     <>
       <div className="radio-buttons__inner">
-        <h2>Question 2</h2>
+        <h2>Which of the following would you especially want to experience?</h2>
         {values.map((val) => (
           <label htmlFor={val} key={val}>
             <input

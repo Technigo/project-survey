@@ -8,7 +8,7 @@ export const TextInput = (props) => {
     <>
       <div className="text-input__inner">
         <label htmlFor="userInput">
-          <h2>Question 0</h2>
+          <h2>Please describe shortly what visions you have of the far future. Will we live on Mars? Or maybe there is hover cars!</h2>
         </label>
         <input
           id="userInput"

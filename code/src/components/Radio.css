@@ -2,7 +2,7 @@ h2 {
     grid-column: 1/span 2;
 }
 
-.radio-buttons__form {
+.radio-buttons__inner {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }

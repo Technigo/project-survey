@@ -1,0 +1,10 @@
+.summary {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+}
+
+.summary div, .summary h2 {
+    width: 80%;
+}
