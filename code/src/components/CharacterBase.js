@@ -5,10 +5,10 @@ import Character from "./Character"
 const CharacterBase = (props) => {
     return (
         <div className="character-base">
-            <p>Name: {Character.name}</p>
+            <p>Name: {props.text}</p>
             <p>Race: {Character.race}</p>
             <p>Class: {Character.class}</p>
-            <p>Age: {Character.age}</p>
+            <p>Age: {props.number}</p>
             <p>Family: {Character.family}</p>
             <p>Goal: {Character.goal}</p>
         </div>

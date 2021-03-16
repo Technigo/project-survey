@@ -14,9 +14,12 @@ import ProgressBar from 'components/ProgressBar'
 const App = () => {
   const [isFilledIn, setIsFilledIn] = useState(false)
   const [section, setSection] = useState(0)
-  const [text, setText] = useState("")
-  const [choice, setChoice] = useState("")
+  const [name, setName] = useState("")
+  const [characterClass, setCharacterClass] = useState("")
+  const [race, setRace] = useState("")
+  const [goal, setGoal] = useState("")
   const [number, setNumber] = useState("")
+  const [family, setFamily] = useState("")
   const [value, setValue] = useState("")
 
   const handleSubmit = () => {
@@ -40,7 +43,7 @@ const App = () => {
   if (isFilledIn) {
     return (
       <>
-        <CharacterSheet />
+        <CharacterSheet text={name} number={number} />
         <button onClick={handleSubmit}>Go back</button>
       </>
     )
@@ -51,29 +54,29 @@ const App = () => {
 
           {section === 0 &&
             <TextInput
-              text={text}
-              setText={setText}
+              text={name}
+              setText={setName}
               data={data.name}
             />}
 
           {section === 1 &&
             <SelectInput
-              choice={choice}
-              setChoice={setChoice}
+              choice={characterClass}
+              setChoice={setCharacterClass}
               data={data.class}
             />}
 
           {section === 2 &&
             <RadioInput
-              choice={choice}
-              setChoice={setChoice}
+              choice={race}
+              setChoice={setRace}
               data={data.race}
             />}
 
           {section === 3 &&
             <TextInput
-              text={text}
-              setText={setText}
+              text={goal}
+              setText={setGoal}
               data={data.goal}
             />}
 
@@ -86,8 +89,8 @@ const App = () => {
 
           {section === 5 &&
             <SelectInput
-              choice={choice}
-              setChoice={setChoice}
+              choice={family}
+              setChoice={setFamily}
               data={data.family}
             />}
 
