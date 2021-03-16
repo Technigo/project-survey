@@ -7,6 +7,8 @@ import React from 'react'
 import Summary from 'Summary'
 import Header from './Header'
 
+import './index.css';
+
 export const App = () => {
 
 // Selecting the next section state
@@ -17,8 +19,6 @@ const [name, setName] = useState('');
 const [location, setLocation] = useState('Stockholm');
 // Age group state
 const [ageGroup, setAgeGroup] = useState('');
-// Summary state
-const [summary, setSummary] = useState(false);
 
 
 
@@ -36,6 +36,7 @@ const getNameInput = inputName => {
           <div className='welcome'>
             <Header />
             <button
+              className='start-btn'
               onClick={event => { setSection('name-input') }}
             >
               Start
@@ -48,7 +49,7 @@ const getNameInput = inputName => {
       {section === 'name-input' && (
         <section className='name-input'>
           <NameInput
-          required
+          required={true}
           name={name}
           setName={setName}
           id='name'

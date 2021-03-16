@@ -9,7 +9,6 @@ const DropdownLocation = (props) => {
             <select 
                 name={props.label} 
                 value={props.location} 
-                required
                 onChange={event => props.setLocation(event.target.value)}
             >
                 <option value="Stockholm">Stockholm</option>

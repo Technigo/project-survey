@@ -16,7 +16,6 @@ const RadioBtnAge = (props) => {
                         type="radio" 
                         value={group} 
                         checked={props.ageGroup === group}
-                        required
                         onChange={event => props.setAgeGroup(event.target.value)}
                     />
                     {group}
