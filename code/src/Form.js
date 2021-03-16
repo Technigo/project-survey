@@ -6,15 +6,18 @@ import  DropDown  from './components/DropDown'
 import  Result  from './components/Result'
 
 const Form = () => {
+  const [name,setName] = useState('')
+  const [timeIntervals, setTimeIntervals] = useState('')
+
   return (
     
   
       <div>
         < NameInput />
         < RadioButtons />
-        < DropDown />
+        {/* /*< DropDown />
         < Result 
-        />
+        /> */}
       </div>
     
 
