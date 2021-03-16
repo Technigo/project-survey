@@ -1,28 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Name = () => {
-    const [name, setName] = useState('');
+import { Button } from './Button';
 
-    const onNameChange = (event) => {
-        setName(event.target.value)
 
-    }
+export const Name = props => {
 
     return (
-        <div className="name-input">
-            <form className="name">
-                <label htmlFor="name">Hello, what's your name?</label>
-                <input 
+        <>
+            <label htmlFor="name" className="question-title"><i className="fas fa-long-arrow-alt-right"></i> So, let's start with your name</label>
+            <input 
                 id="name" 
                 type="text" 
                 className="input-name"
                 placeholder="Type your answer here"
-                value={name}
-                onChange={onNameChange}
+                value={props.value}
+                onChange={props.onChange}
                 required
             />
-            </form>
-        </div>
+            <Button 
+            button="CONTINUE" />
+        </>
 
     )
 

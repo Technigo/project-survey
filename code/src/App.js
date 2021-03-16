@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import { Name } from './components/Name';
+import { Form } from './components/Form';
 
 export const App = () => {
 
   return (
     <div>
-    < Name />
+      <Form />
     </div>
   )
 }

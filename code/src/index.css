@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
+  background-color: #98acf8;
   color: white;
   display: flex;
   align-items: center;
@@ -17,12 +17,20 @@ code {
     monospace;
 }
 
-.name {
+* {
+  box-sizing: border-box;
+}
+
+.form-container {
   display: flex;
   flex-direction: column;
-  margin-top: 400px;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
   font-size: 30px;
+  width: 100%;
   font-family: "Blinker", sans-serif;
+  padding: 0 20px;
 }
 
 .input-name {
@@ -30,6 +38,7 @@ code {
   border-left: none;
   border-top: none;
   border-right: none;
+  width: 100%;
   background-color: transparent;
   margin-top: 20px;
   font-family: "Blinker", sans-serif;
@@ -37,5 +46,136 @@ code {
   line-height: 40px;
   outline: none;
   color: white;
+}
+
+.select {
+  color: #da9ff9;
+  background-color: transparent;
+  font-family: "Blinker", sans-serif;
+  font-size: 30px;
+  margin-top: 20px;
+  width: 100%;
+  outline: none;
+  padding-bottom: 5px;
+}
+
+.select:focus {
+  border: 2px solid #da9ff9;
+}
+
+/* Radio Buttons */
+
+h2 {
+  text-align: center;
+}
+
+.question-title {
+  font-size: 34px;
+}
+
+.radio-buttons {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.radio-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 230px;
+  height: 80px;
+  position: relative;
+  margin-bottom: 20px;
+  
+}
+
+.radio-button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  
+}
+
+.radio-button-label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border: 2px solid white;
+}
+
+.radio-text {
+  text-align: center;
+}
+
+.radio-button-label:hover {
+  opacity: 0.6;
+}
+
+.radio-button:checked + .radio-text {
+  color: black;
+}
+
+.radio-button:checked + .radio-text::before {
+  background-color: #da9ff9;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  
+}
+
+.radio-button:focus + .radio-text::before {
+  background-color: #da9ff9;
+  content: '';
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  outline: 8px solid #b088f9;
+}
+
+.fa-laptop, .fa-cocktail {
+  color: #da9ff9;
+  margin-left: 10px;
+}
+
+
+/* Submit Button */
+.button {
+  background-color: #b088f9;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 60px;
+  padding: 20px 0px 30px 0px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Blinker", sans-serif;
+  font-variant: small-caps;
+}
+
+.button:hover {
+  opacity: 0.6;
 }
 
