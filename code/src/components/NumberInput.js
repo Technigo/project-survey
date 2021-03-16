@@ -2,23 +2,23 @@ import React, { useState } from "react"
 
 import Character from "./Character"
 
-const NumberInput = () => {
-    const [characterAge, setCharacterAge] = useState("")
+const NumberInput = (props) => {
+    const [number, setNumber] = useState("")
 
     const handleChange = (event) => {
-        setCharacterAge(event.target.value)
+        setNumber(event.target.value)
     }
 
-    Character.age = characterAge
+    Character[props.field] = number
 
     return (
-        <label>Age
+        <label>{props.label}
             <input
                 type="number"
                 min="10"
                 max="100"
                 onChange={handleChange}
-                value={characterAge}
+                value={number}
             />
         </label>
     )

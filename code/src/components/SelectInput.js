@@ -2,27 +2,29 @@ import React, { useState } from "react"
 
 import Character from "./Character"
 
-const SelectInput = () => {
-    const [characterClass, setCharacterClass] = useState("")
+
+const SelectInput = (props) => {
+    const [choice, setChoice] = useState("")
 
     const handleChange = (event) => {
-        setCharacterClass(event.target.value)
+        setChoice(event.target.value)
     }
 
-    Character.class = characterClass
+    Character[props.field] = choice
 
     return (
-        <>
-            <select
-                onChange={handleChange}
-                value={characterClass}
-            >
-                <option value="mage">Mage</option>
-                <option value="thief">Thief</option>
-                <option value="knight">Knight</option>
-            </select>
-
-        </>
+        <select
+            onChange={handleChange}
+            value={choice}
+            className={props.className}
+        >
+            {props.choices.map(item =>
+                <option
+                    key={item}
+                    value={item}
+                >{item}</option>
+            )}
+        </select>
     )
 }
 

@@ -2,28 +2,25 @@ import React, { useState } from 'react'
 
 import Character from "./Character"
 
-const TextInput = () => {
-    const [characterName, setCharacterName] = useState("")
+const TextInput = (props) => {
+    const [text, setText] = useState("")
 
     const handleInput = (event) => {
-        setCharacterName(event.target.value)
+        setText(event.target.value)
     }
 
-    Character.name = characterName
+    Character[props.field] = text
 
     return (
-        <>
-            <label>
-                Name:
+        <label>
+            {props.label}
             <input
-                    type="text"
-                    value={characterName}
-                    onChange={handleInput}
-                />
-            </label>
-            <p>{characterName}</p>
-
-        </>
+                type="text"
+                className={props.className}
+                value={text}
+                onChange={handleInput}
+            />
+        </label>
     )
 }
 

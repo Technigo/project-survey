@@ -15,6 +15,7 @@ const RangeInput = (props) => {
         <label>
             <input
                 type="range"
+                className={props.className}
                 name={props.rangeName}
                 min="0"
                 max="10"
