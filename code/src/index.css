@@ -5,6 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* background-image: linear-gradient(rgba(53, 52, 52, 0.5),rgba(255, 255, 255, 0.5)),
+  url("/assets/movie-back.jpg"); */
+  background-position: cover;
+  background-repeat: no-repeat;
+  background-size:cover;
 }
 
 code {

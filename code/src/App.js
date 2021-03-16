@@ -8,12 +8,12 @@ import NameForm from './components/NameForm/NameForm'
 export const App = () => {
   return (
     <div>
-    <Header />
-      Survey
-    <NameForm />
-    <DropDown />
-    <RadioButtons />
-    <SubmitButton />
+      <Header />
+        Survey 
+      <NameForm />
+      <DropDown />
+      <RadioButtons />
+      <SubmitButton />
     </div>
   )
 }

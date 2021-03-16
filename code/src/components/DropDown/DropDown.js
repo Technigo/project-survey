@@ -2,22 +2,24 @@ import React, {useState} from 'react'
 import './DropDown.css'
 
 const DropDown = () =>{
-    const [location, setLocation] = useState("");
+    const [snack, setSnack] = useState("");
     return(
         <>
-            <h2>Where do you live?</h2>
+            <h2>What is your favorite snack?</h2>
             <form onSubmit={event => event.preventDefault()}>
                 <select
-                onChange={event => setLocation(event.target.value) }
-                value={location}
+                onChange={event => setSnack(event.target.value) }
+                value={snack}
                 >
-                    <option value="">Select location</option>
-                    <option value="stockholm">Stockholm</option>
-                    <option value="barcelona">Barcelona</option>
-                    <option value="oslo">Oslo</option>
+                    <option value="">Select snack</option>
+                    <option value="popcorn">Popcorn</option>
+                    <option value="chips">Chips</option>
+                    <option value="choclate">Choclate</option>
+                    <option value="candy">Mixed candy</option>
+                    <option value="ice-cream">Ice cream</option>
                 </select>
             </form>
-            <p>you live in {location}</p>
+            <p>you live in {snack}</p>
         </>
     )
 }

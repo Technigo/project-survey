@@ -3,17 +3,23 @@ import './NameForm.css'
 
 const NameForm = () =>{
     const [name, setName] = useState('')
+
+    const onNameChange = (e) =>{
+        setName(e.target.value)
+    }
+
     return(
         <>
-          <h2>1. What is your name? </h2> 
+          <h2>1. A person I miss right now 💌 </h2> 
             <form onSubmit={event => event.preventDefault()}>
-                <input
+                <label htmlFor="name">Name</label>
+                <input id="name"
                 type="text"
-                onChange={(event) => setName(event.target.value)}
+                onChange={onNameChange}
                 value={name}
                 />
             </form> 
-            <p>your name is {name}</p>
+            <p>I miss{name}</p>
         </>
     )
 }
