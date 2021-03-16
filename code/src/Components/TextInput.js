@@ -9,15 +9,14 @@ export const TextInput = () => {
   }
 
   return (
-  <div>
-    <label htmlFor="name-input">Your name: </label>
-
+  <div className="text-input">
+    <label htmlFor="name-input">What´s your name: </label>
     <input 
       id="name-input"
       type="text"
       value={name}
       onChange={onNameChange}
       />
-  </div>
+      </div>    
   )
 }

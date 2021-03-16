@@ -4,13 +4,15 @@ import { TextInput } from './TextInput'
 import { RadioButton } from './RadioButton'
 import { DropDown } from './DropDown'
 
+
 export const Form = () => {
   return (
-  <div>
+  <form className="form" onSubmit={event => event.preventDefault()}>
   <TextInput />
   <RadioButton />
   <DropDown />
-</div>
+  </form>
+
   )
 
 }

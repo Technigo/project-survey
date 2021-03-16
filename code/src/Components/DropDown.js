@@ -8,17 +8,18 @@ export const DropDown = () => {
       setDropDown(event.target.value)
     }
   return (
-  <div>
-    <label htmlFor="dropdown">Choose</label>
+  <div className="dropdown">
+    <label htmlFor="dropdown">What´s your favorite transportation: </label>
     <select 
       id="dropdown"
       value={dropDown}
       onChange={onDropDown}  
     >
-    <option>Obt1</option>
-    <option>Obt2</option>
-    <option>Obt3</option> 
-    </select>   
+    <option>Plane</option>
+    <option>Train</option>
+    <option>Boat</option> 
+    <option>Car</option> 
+    </select>      
   </div>
   )
 }
