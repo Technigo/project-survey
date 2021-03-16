@@ -5,9 +5,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+}
+
+
+*{
+  margin:0;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header-container{
+  background-image: url(./images/background.jpg);
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.main-container{
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  /* justify-content: center; */
+}
+
+
+
+ /* .form-container{
+display: flex;
+flex-direction: column;
+} */
+
+.number-of-books-container {
+  background-image: url(./images/background.jpg);
+  border: 2px solid black;
+  height: 100vh;
+  width: 100%;
+  text-align: center;
+}
+
+.favorite-book-container {
+  border: 2px solid black;
+  height: 100vh;
+  /*width: 100%; */
+  /* text-align: center; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.favorite-genre-container{
+  border: 2px solid black;
+  height: 100vh;
+  /*width: 100%; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+
+
+
+html {
+  scroll-behavior: smooth;
 }
