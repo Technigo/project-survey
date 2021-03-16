@@ -10,6 +10,10 @@ const TextInput = (props) => {
     }
 
     Character[props.field] = text
+    // const newObject = {
+    //     [props.field]: text
+    // }
+    // Character.push(newObject)
 
     return (
         <label>
