@@ -1,4 +1,4 @@
-h2 {
+h3 {
     grid-column: 1/span 2;
 }
 
@@ -10,5 +10,6 @@ h2 {
 
 label{
     margin: 10px 10px 10px 0;
+    font-size: 16px;
 }
 

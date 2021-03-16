@@ -1,8 +1,7 @@
 import React from "react";
-import './Button.css'
+import "./Button.css";
 
 export const Button = (props) => {
-
   const buttonText = () => {
     return props.value === false ? "Submit" : "Redo";
   };

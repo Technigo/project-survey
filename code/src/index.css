@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -23,7 +25,17 @@ code {
   "header"
   "form"
   "footer";
+  color: rgb(255, 255, 255);
+  background-color: rgba(43, 88, 105, 0.973);
+  font-family: 'Titillium Web', sans-serif;
 }
+
+
+h3 {
+  font-weight: 400;
+  font-size: 17px;
+}
+
 
 .header {
   grid-area: header;

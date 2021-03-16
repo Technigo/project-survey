@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+
 import { Radio } from "./components/Radio";
 import { DropDown } from "./components/DropDown";
 import { Header } from "./components/Header";
@@ -9,13 +10,22 @@ import { Summary } from "./components/Summary";
 
 export const App = () => {
   const [summary, setSummary] = useState(false);
-
   const [userInput, setUserInput] = useState("");
-  const [range, setRange] = useState();
-  const [type, setType] = useState();
+  const [futureExpectations, setFutureExpectations] = useState("");
+  const [years, setYears] = useState("");
 
   const setValue = () => {
-    return summary === false ? true : false;
+    if (userInput === "" || futureExpectations === "" || years === "") {
+      alert("Please answer all questions!");
+      return false;
+    } else if (summary === false) {
+      return true;
+    } else {
+      setUserInput("");
+      setFutureExpectations("");
+      setYears("");
+      return false;
+    }
   };
 
   return (
@@ -26,11 +36,17 @@ export const App = () => {
 
       <form onSubmit={(event) => event.preventDefault()}>
         {/*When summary === true a summary will be shown*/}
-        {summary && <Summary userInput={userInput} range={range} type={type} />}
+        {summary && (
+          <Summary
+            userInput={userInput}
+            futureExpectations={futureExpectations}
+            years={years}
+          />
+        )}
 
         {/*When summary !== true the form with questions will be shown*/}
         {!summary && (
-          <>
+          <><h2>Let's talk about the future!</h2>
             <div className="text-input">
               <TextInput userInput={userInput} setUserInput={setUserInput} />
             </div>
@@ -41,18 +57,18 @@ export const App = () => {
                 option3="over 20 years"
                 option4="over 100 years"
                 option5="Never"
-                type={type}
-                setType={setType}
+                years={years}
+                setYears={setYears}
               />
             </div>
             <div className="radio-buttons">
               <Radio
                 value1="Mars living"
-                value2="Flying cars"
-                value3="Cyborg society"
-                value4="Cool gadgets"
-                range={range}
-                setRange={setRange}
+                value2="flying cars"
+                value3="cyborg society"
+                value4="cool gadgets"
+                futureExpectations={futureExpectations}
+                setFutureExpectations={setFutureExpectations}
               />
             </div>
           </>
