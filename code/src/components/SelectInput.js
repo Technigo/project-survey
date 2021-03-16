@@ -10,15 +10,15 @@ const SelectInput = (props) => {
         setChoice(event.target.value)
     }
 
-    Character[props.field] = choice
+    Character[props.data.field] = choice
 
     return (
         <select
             onChange={handleChange}
             value={choice}
-            className={props.className}
+            className={props.data.className}
         >
-            {props.choices.map(item =>
+            {props.data.choices.map(item =>
                 <option
                     key={item}
                     value={item}

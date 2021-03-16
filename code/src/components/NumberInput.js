@@ -9,10 +9,10 @@ const NumberInput = (props) => {
         setNumber(event.target.value)
     }
 
-    Character[props.field] = number
+    Character[props.data.field] = number
 
     return (
-        <label>{props.label}
+        <label>{props.data.label}
             <input
                 type="number"
                 min="10"

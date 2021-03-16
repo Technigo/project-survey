@@ -8,8 +8,7 @@ const TextInput = (props) => {
     const handleInput = (event) => {
         setText(event.target.value)
     }
-
-    Character[props.field] = text
+    Character[props.data.field] = text
     // const newObject = {
     //     [props.field]: text
     // }
@@ -17,10 +16,10 @@ const TextInput = (props) => {
 
     return (
         <label>
-            {props.label}
+            {props.data.label}
             <input
                 type="text"
-                className={props.className}
+                className={props.data.className}
                 value={text}
                 onChange={handleInput}
             />

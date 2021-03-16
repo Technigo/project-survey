@@ -9,12 +9,12 @@ const RadioInput = (props) => {
         setChoice(event.target.value)
     }
 
-    Character[props.field] = choice
+    Character[props.data.field] = choice
 
     return (
         <div>
             Race:
-            {props.choices.map(item =>
+            {props.data.choices.map(item =>
                 <label key={item}>
                     <input
                         type="radio"

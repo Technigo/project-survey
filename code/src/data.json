@@ -1,0 +1,51 @@
+{
+    "name": {
+        "label": "Name",
+        "field": "name",
+        "className": "name-input"
+    },
+    "class": {
+        "choices": [
+            "mage",
+            "thief",
+            "knight"
+        ],
+        "field": "class",
+        "className": "class-input"
+    },
+    "race": {
+        "choices": [
+            "orc",
+            "human",
+            "dwarf"
+        ],
+        "field": "race",
+        "className": "race-input"
+    },
+    "goal": {
+        "label": "Goal",
+        "field": "goal",
+        "className": "goal-input"
+    },
+    "family": {
+        "choices": [
+            "nobility",
+            "farmer",
+            "worker"
+        ],
+        "field": "family",
+        "className": "family-input"
+    },
+    "age": {
+        "label": "Age",
+        "field": "age",
+        "className": "age-input"
+    },
+    "stats": {
+        "allStats": [
+            "strength",
+            "intelligence",
+            "dexterity"
+        ]
+    }
+}
