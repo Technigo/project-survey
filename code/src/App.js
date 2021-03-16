@@ -1,12 +1,12 @@
 import React from 'react'
 import Header from './Components/Header'
-import Survey from './Components/Survey'
+import Form from './Components/Form'
 
 export const App = () => {
   return (
     <>
       <Header />
-      <Survey />
+      <Form />
     </>
   )
 }

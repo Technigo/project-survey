@@ -10,13 +10,12 @@ const TextInput = () => {
 
     return (
         <div>
-            <label htmlFor="name">
-                Name
-            </label>
+            <label htmlFor="name">Name</label>
             <input 
                 id="name"
                 type="text"
                 value={name}
+                placeholder="Jane Doe"
                 onChange={onNameChange}
             />
         </div>
