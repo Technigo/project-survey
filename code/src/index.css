@@ -58,26 +58,3 @@ button::before {
 .footer {
   grid-area: footer;
 }
-
-/*when the inactive class is added to an element that element will nnot be 
-visible (display:none) */
-.inactive {
-  display: none;
-}
-
-/*when the active class is added to a element that element will get 
-display: flex*/
-.active {
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  height: fit-content;
-}
-
-/*Hides the questions/options in the form when the active class
-is applied*/
-.active+.text-input__inner,
-.active+.radio-buttons__inner,
-.active+.drop-down__inner {
-  display: none;
-}

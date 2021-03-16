@@ -4,7 +4,7 @@ import './Button.css'
 export const Button = (props) => {
 
   const buttonText = () => {
-    return props.value === "active" ? "Submit" : "Redo";
+    return props.value === false ? "Submit" : "Redo";
   };
 
   return (

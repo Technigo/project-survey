@@ -1,19 +1,13 @@
-import React, { useState } from "react";
+import React from "react";
 import "./DropDown.css";
 
 export const DropDown = (props) => {
-  const [type, setType] = useState("");
+  const [type, setType] = [props.type, props.setType];
 
   return (
     <>
-     {/*The class "drop-down__input" gets an prop class which either is "active" (shows it) or 
-    "inactive". These are specified in index.css*/}
-      <div class={`drop-down__answer ${props.activeClass}`}>
-        <h3>Select:</h3> 
-        <p>{type}</p>
-      </div>
       <div className="drop-down__inner">
-      <label for="insertId"><h2>Question 1</h2>
+      <label htmlFor="insertId"><h2>Question 1</h2>
         <div className="drop-down__inner-select">
           <select
             id="insertId"

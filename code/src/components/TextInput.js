@@ -1,18 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import "./TextInput.css";
 
 export const TextInput = (props) => {
-  const [userInput, setUserInput] = useState("");
+  const [userInput, setUserInput] = [props.userInput, props.setUserInput]
   return (
     <>
-      {/*The class "user-input" gets an prop class which either is "active" (shows it) or 
-    "inactive". These are specified in index.css*/}
-      <div class={`text-input__answer ${props.activeClass}`}>
-        <h3>Text:</h3>
-        <p>{userInput}</p>
-      </div>
-      <div class="text-input__inner">
-        <label for="userInput">
+      <div className="text-input__inner">
+        <label htmlFor="userInput">
           <h2>Question 0</h2>
         </label>
         <input
