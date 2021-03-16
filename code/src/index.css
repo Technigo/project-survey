@@ -14,8 +14,31 @@ code {
 
 .header {
   display: flex;
-  background-color: brown;
+  background-color: rgb(80, 54, 54);
+  justify-content: space-between;
 }
+.logo {
+  width: 80px;
+  height: 50px;
+  margin: 10px 0px 20px 10px;
+}
+.top-heading{
+  font-size: 30px;
+  margin: 30px;
+}
+.media-buttons {
+  margin: 10px 10px;
+}
+.fab {
+  font-size: 30px;
+  margin-left: 5px;
+  color: white;
+}
+
+.form-wrapper{
+  margin: 10px;
+}
+
 .range-lable {
   display: flex;
   justify-content: space-between;
@@ -25,12 +48,40 @@ code {
  width: 100%;
 }
 .range-item {
-  width: 15%;
   font-size: 10px;
-  text-align: center;
   /* border: 1px solid pink; */
 }
 
 .wrapper {
   margin: 10px;
+}
+
+.radio-lable {
+  display: flex;
+  flex-direction: column;
+  border: blue 2px solid;
+  align-items: center;
+  font-size: 10px;
+  width: 15%;
+  text-align: center;
+}
+
+.radio-buttons-wrapper{
+  display: flex;
+  justify-content: space-between;
+  border: solid red 2px;
+}
+.radio-question-button{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.label-container{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.result {
+  width: 100%;
 }

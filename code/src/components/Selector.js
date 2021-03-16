@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 const Selector = (props) => {
   const [breed, setBreed] = useState("")
   const onBreedChange = (event) => {
+    console.log(breed)
     setBreed(event.target.value)
   }
   return (
@@ -17,12 +18,12 @@ const Selector = (props) => {
         onChange={onBreedChange}
 
       >
-        {props.array.map((breed, index) => {
+        {props.array.map((breedName, index) => {
           if (index === 0) {
-            return <option key={breed} value="" disabled={true}>{breed}</option>
+            return <option key={breedName} value="" disabled={true}>{breedName}</option>
           }
           else {
-            return <option key={breed} value={breed}>{breed}</option>
+            return <option key={breedName} value={breedName}>{breedName}</option>
           }
         })}
       </select>

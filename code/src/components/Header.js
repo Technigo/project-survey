@@ -5,11 +5,10 @@ const Header = (props) => {
         <header className="header">
             <img className="logo" src="./assets/logo_white.png" alt="Logo"/>
             <div className="media-buttons">
+                <i className="fab fa-twitter"></i>
                 <i className="fab fa-facebook"></i>
-                <i className="fab fa-facebook"></i>
-                <i className="fab fa-facebook"></i>
+                <i className="fab fa-instagram"></i>
             </div>
-            <h1>{props.title}</h1>
         </header>
     )
 }
