@@ -4,7 +4,7 @@ export const RadioButton = () => {
 
   return (
     <div>
-      <p>Would you like to move there?</p>
+      <p>confirm that you like to move there.</p>
       <label htmlFor='yes'>Yes!</label>
       <input id='yes' type='radio'/>
       <label htmlFor='no'>No!</label>

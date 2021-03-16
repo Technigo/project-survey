@@ -11,15 +11,15 @@ export const Select = () => {
   
   return (
     <div>
-      <label htmlFor='planets'>What is your favourite planet in the solar system?</label>
+      <label htmlFor='planets'>Pick a planet</label>
         <select 
         id='planets'
         value={selectPlanet}
         onChange={onPlanetSelect}
         >
+          <option value=''>Select planet</option>
           <option>Mercury</option>
           <option>Venus</option>
-          <option>Tellus</option>
           <option>Mars</option>
           <option>Jupiter</option>
           <option>Saturn</option>
