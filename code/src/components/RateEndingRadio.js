@@ -1,25 +1,36 @@
 import React from 'react';
 
-const ratings = ['Epic ending', 'I voted that they should redo it', 'Did not watch all 8 seasons']
+const ratings = ['Epic ending', 'I voted that they should redo it...', 'I did not make it to the last episode']
 
 export const RateEndingRadio = (props) => {
-   const {rateEnding, setRateEnding} = props;
+    const {rateEnding, setRateEnding} = props;
+
+    const onRateEndingChange = (e) => {
+        console.log(`Rate of ending: ${e.target.value}`);
+        setRateEnding(e.target.value);
+    };
 
     return (
         <>
-        <form>
-            What did you think about the final episode?
-            {ratings.map(rate => (
-                <label key={rate}>
+        <form className='radiobuttons-form'>
+            <div>
+                <h2 className="question-heading">What did you think about the final episode?</h2>
+            </div>
+            <div className='radiobuttons-options'>
+            {ratings.map(rating => (
+                <label htmlFor='rate' key={rating}>
                     <input
                         type='radio'
-                        value={rate}
-                        onChange={(event) => setRateEnding(event.target.value)}
-                        checked={rateEnding === rate}
+                        id='rate'
+                        value={rating}
+                        onChange={onRateEndingChange}
+                        checked={rateEnding === rating}
+                        required
                     /> 
-                    {rate}
+                    {rating}
                 </label> 
             ))}
+            </div>
         </form>
     </>
      );

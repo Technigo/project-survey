@@ -3,17 +3,30 @@ import React from 'react';
 const HousesSelect = (props) => {
     const {gameOfThronesHouse, setGameOfThronesHouse} = props;
 
+    const onHouseChange = (e) => {
+        console.log(`Favorite GOT family: ${e.target.value}`);
+        setGameOfThronesHouse(e.target.value);
+    };
+
     return (
         <>
-        <form>
-            <label for='game-of-thrones-houses'>Choose your favourite house:</label>
-            <select name='houses' id='game-of-thrones-houses'
-                onChange={(event) => setGameOfThronesHouse(event.target.value)}
+        <form className="select-dropdown">
+            <div>
+                <h2 className="question-heading">There are nine Great Houses in Westeros. Which one is your favorite?</h2>
+            </div>
+            <div className="select-options">
+            <label htmlFor='game-of-thrones-houses'>Choose your favorite house:</label>
+            <select 
+                name='houses' 
+                id='game-of-thrones-houses'
+                onChange={onHouseChange}
                 value={gameOfThronesHouse}
+                required
             >
                 <option value='' disabled></option>
                 <option value='targaryen'>House Targaryen</option>
                 <option value='stark'>House Stark</option>
+                <option value='greyjoy'>House Greyjoy</option>
                 <option value='lannister'>House Lannister</option>
                 <option value='tyrell'>House Tyrell</option>
                 <option value='arryn'>House Arryn</option>
@@ -21,6 +34,7 @@ const HousesSelect = (props) => {
                 <option value='martell'>House Martell</option>
                 <option value='baratheon'>House Baratheon</option>
             </select>
+            </div>
         </form>
     </>
     );

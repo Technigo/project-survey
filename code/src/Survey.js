@@ -32,7 +32,7 @@ const Survey = () => {
 
     return (
         <>
-        <section>
+        <section className="form-container">
             {section !== 'summary' ? (
                 <form onSubmit={handleSubmit}>
                     {section === 'welcome' && (
@@ -50,7 +50,7 @@ const Survey = () => {
                     {section === 'question4' && (
                         <RateEndingRadio rateEnding={rateEnding} setRateEnding={setRateEnding} />
                     )}
-                    <button 
+                    <button className="button"
                         type='submit'
                         > Next!
                     </button> 
