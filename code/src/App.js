@@ -9,39 +9,24 @@ import RangeInput from './components/RangeInput'
 import NumberInput from './components/NumberInput'
 import CharacterSheet from './components/CharacterSheet'
 import ProgressBar from 'components/ProgressBar'
+import SubmitButton from 'components/SubmitButton'
+import NavigateButton from 'components/NavigateButton'
 
 
 const App = () => {
   const [renderSummary, setRenderSummary] = useState(false)
   const [section, setSection] = useState(0)
   const [name, setName] = useState("")
-  const [characterClass, setCharacterClass] = useState("")
+  const [characterClass, setCharacterClass] = useState()
   const [race, setRace] = useState("")
-  const [number, setNumber] = useState("")
+  const [number, setNumber] = useState()
   const [family, setFamily] = useState("")
   const [goal, setGoal] = useState("")
   const [icon, setIcon] = useState()
-  // const [value, setValue] = useState(0)
   const [str, setStr] = useState()
   const [int, setInt] = useState()
   const [dex, setDex] = useState()
 
-  const handleSubmit = () => {
-    setRenderSummary(!renderSummary)
-    setSection(0)
-  }
-
-  const handleNext = () => {
-    if (section < 7) {
-      setSection(section + 1)
-    }
-  }
-
-  const handlePrevious = () => {
-    if (section > 0) {
-      setSection(section - 1)
-    }
-  }
 
   if (renderSummary) {
     return (
@@ -58,7 +43,12 @@ const App = () => {
           int={int}
           dex={dex}
         />
-        <button onClick={handleSubmit}>Go back</button>
+        <SubmitButton
+          text="Go back"
+          renderSummary={renderSummary}
+          setRenderSummary={setRenderSummary}
+          setSection={setSection}
+        />
       </>
     )
   } else {
@@ -115,17 +105,6 @@ const App = () => {
               data={data.icon}
             />}
 
-          {/* {data.section[section] === "eighthSection" &&
-            <div className="stats-container">
-              {data.stats.map(item =>
-                <RangeInput
-                  className="stats-input"
-                  key={item}
-                  rangeName={item}
-                  value={value}
-                  setValue={setValue}
-                />)}
-            </div>} */}
           {data.section[section] === "eighthSection" &&
             <div className="stats-container">
               <RangeInput
@@ -144,11 +123,26 @@ const App = () => {
                 data={data.stats.dexterity}
               />
             </div>}
-          <div>
 
-            <button onClick={handlePrevious}>Previous Question</button>
-            <button onClick={handleNext}>Next Question</button>
-            <button onClick={handleSubmit}>Submit</button>
+          <div>
+            <NavigateButton
+              text="Previous Question"
+              goNext={false}
+              section={section}
+              setSection={setSection}
+            />
+            <NavigateButton
+              text="Next Question"
+              goNext={true}
+              section={section}
+              setSection={setSection}
+            />
+            <SubmitButton
+              text="Submit"
+              renderSummary={renderSummary}
+              setRenderSummary={setRenderSummary}
+              setSection={setSection}
+            />
           </div>
         </form>
         <ProgressBar progress={data.section[section]} />

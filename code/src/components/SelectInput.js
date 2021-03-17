@@ -17,10 +17,7 @@ const SelectInput = (props) => {
                 Pick a {props.data.field}!
             </option>
             {props.data.choices.map(item =>
-                <option
-                    key={item}
-                // value={item}
-                >
+                <option key={item}>
                     {item}
                 </option>
             )}

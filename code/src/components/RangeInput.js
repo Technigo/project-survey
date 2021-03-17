@@ -6,17 +6,16 @@ const RangeInput = (props) => {
     const handleChange = (event) => {
         setValue(event.target.value)
     }
-
     return (
         <label>
             <input
                 type="range"
-                className={props.className}
+                className={props.data.className}
                 min="0"
                 max="10"
                 onChange={handleChange}
             />
-            {props.rangeName}
+            {props.data.label}
         </label>
     )
 }
