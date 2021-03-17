@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
-import { Form } from './components/Form.js'
-import { Header } from './components/Header.js'
-import { HeroImage } from './components/HeroImage.js'
-import { Summary } from './components/Summary.js'
+import { Form } from './components/Form'
+import { Header } from './components/Header'
+import { HeroImage } from './components/HeroImage'
+import { Summary } from './components/Summary'
+import { OnlyIf } from './components/OnlyIf'
+
 
 export const App = () => {
   const [summary, setSummary] = useState();
@@ -10,8 +12,6 @@ export const App = () => {
   const onFormSubmit = (formInfo) => {
     setSummary(formInfo)
   }
-
-  const content = summary ? <Summary summary={summary}/> : <Form onSubmit={onFormSubmit}/>
 
   return (
     <>
@@ -22,7 +22,12 @@ export const App = () => {
         <div>
           <Header />
           <div className="container">
-            {content}
+            <OnlyIf test={!summary}>
+              <Form onSubmit={onFormSubmit}/>
+            </OnlyIf>
+            <OnlyIf test={summary}>
+              <Summary summary={summary}/>
+            </OnlyIf>
           </div>
         </div>
       </div>

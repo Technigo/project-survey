@@ -4,7 +4,7 @@ import { Age } from './Age'
 import { Location } from './Location'
 import { RadioOption } from './RadioOption'
 import { CheckBoxes } from './CheckBoxes'
-import { SubmitButton } from './SubmitButton.js'
+import { SubmitButton } from './SubmitButton'
 
 
 const careerPaths= ['Frontend', 'Backend', 'Fullstack']
