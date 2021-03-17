@@ -190,7 +190,7 @@ body {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1024px) {
   .main {
     background-image: url(./assets/background.jpg);
     background-size: auto 100vh;
