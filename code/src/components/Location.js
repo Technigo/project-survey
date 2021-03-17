@@ -1,15 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Location = () => {
-    const [location, setLocation] = useState('')
+export const Location = (location, setLocation) => {
+    
     return (
         <div className="form-components">
-            <label htmlFor="location">What's your favourite place in the world?</label>
+            <label htmlFor={location}>In which city do you want to work?</label>
             <input 
                 type="text"
-                onChange={(event) => setLocation(event.target.value)} 
+                onChange={setLocation} 
                 value={location}
-                ref="location"
+                // ref="location"
                 required 
             />
         </div>

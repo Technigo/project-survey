@@ -37,6 +37,15 @@ code {
   flex-direction: column;
 }
 
+.radio {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.stack {
+  
+}
+
 /* BUTTON */
 
 .submit-btn {

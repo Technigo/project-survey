@@ -1,16 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Age = () => {
-    const [age, setAge] = useState('');
+export const Age = ({age, setAge}) => {
+    const onAgeChange = (e) => {
+        console.log(`Age {e.target.value}`);
+        setAge(e.target.value);
+    }
+
     return (
         <div className="form-components">
             <label htmlFor="age">How old are you:</label>
             <select
-                onChange= {event => setAge(event.target.value)}
+                onChange= {onAgeChange}
                 value={age}
-                ref="age"
+                // ref="age"
             >
-                <option value="">select age group</option>
+                <option disabled value="">select age group</option>
                 <option value="0-18">0-18</option>
                 <option value="19-29">19-29</option>
                 <option value="30-39">30-39</option>

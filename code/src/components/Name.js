@@ -1,16 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Name = () => {
-    const [name, setName] = useState('name')
+export const Name = ({name, setName}) => {
+    const onNameChange = (e) => {
+        console.log(`Age {e.target.value}`);
+        setName(e.target.value);
+    }
     
     return (
         <div className="form-components">
             <label htmlFor="name">Enter your name:</label>
             <input 
                 type="text"
-                onChange={(event) => setName(event.target.value)} 
+                onChange={onNameChange} 
                 value={name}
-                ref="name"
+                // ref="name"
                 required 
             />
         </div>
