@@ -40,7 +40,7 @@ const Form = () => {
       setProfessions([...professions, professionValue])
     }
   } */
-  
+
 //THIS MAKS CHANGED WITH ME ::: it is not listening to any user input it is simply a function internal to the code
   const onPageChange = (pagenumber) => {
     setPage(pagenumber)
