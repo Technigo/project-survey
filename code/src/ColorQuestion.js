@@ -9,7 +9,7 @@ const colors = [
   'violet',
   'pink',
   'black',
-  'white'
+  'white',
 ]
 
 const ColorQuestion = () => {
@@ -25,6 +25,7 @@ const ColorQuestion = () => {
           <input
             id="color"
             type="radio"
+            name="colorButton"
             value={shade}
             onChange={event => setColor(event.target.value)}
             checked={color === shade}

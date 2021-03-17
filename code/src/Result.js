@@ -2,13 +2,18 @@ import React from 'react'
 
 const Result = () => {
   return (
-    <form className="business-card">
-      <h2>name</h2>
-      <h2>occupation</h2>
-      <h2>e-mail</h2>
-      <h2>telephone</h2>
+    <>
+    <h1 className="h1">Tadaaa!</h1>
+    <div className="business-card">
+      <h2 className="category-cute">name</h2>
+      <h2 className="category-cute">occupation</h2>
+      <h2 className="category-cute">e-mail</h2>
+      <h2 className="category-cute">telephone</h2>
       
-    </form>
+    </div>
+
+    <p>Here is Your business card! Take a screenshot and send it to your friends!</p>
+    </>
   )
 }
 

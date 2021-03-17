@@ -4,8 +4,8 @@ const EmailQuestion = () => {
 
   const [email, setEmail] = useState('');
   return (
-    <>
-      <label for="email">E-mail:</label>
+    <div className="text-input">
+      <label for="email">My E-mail address:</label>
       <input 
         type="text" 
         id="email" 
@@ -13,7 +13,7 @@ const EmailQuestion = () => {
         value={email}
       />
       
-    </>
+    </div>
 
   )
 }

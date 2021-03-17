@@ -4,7 +4,7 @@ const OccupationQuestion = () => {
 
   const [occupation, setOccupation] = useState('');
   return (
-    <>
+    <div className="text-input">
       <label for="occupation">My occupation is:</label>
       <input 
         type="text" 
@@ -12,7 +12,7 @@ const OccupationQuestion = () => {
         onChange={event => setOccupation(event.target.value)}
         value={occupation}
       />
-    </>
+    </div>
 
   )
 }

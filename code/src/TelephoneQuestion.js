@@ -4,8 +4,8 @@ const TelephoneQuestion = () => {
 
   const [telephone, setTelephone] = useState('');
   return (
-    <>
-      <label for="telephone">Telephone:</label>
+    <div className="text-input">
+      <label for="telephone">My Telephone Number:</label>
       <input 
         type="text" 
         id="telephone" 
@@ -13,7 +13,7 @@ const TelephoneQuestion = () => {
         value={telephone}
       />
       
-    </>
+    </div>
 
   )
 }

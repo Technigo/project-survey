@@ -14,7 +14,7 @@ const PersonalityQuestion = () => {
       <option value="brave">Brave</option>
       <option value="romantic">Romantic</option>
       <option value="quirky">Quirky</option>
-      <option value="relaxed">Relaxed</option>
+      <option value="robot">Robot</option>
       <option value="scary">Scary</option>
       
     </select>
@@ -30,8 +30,8 @@ export default PersonalityQuestion;
 cute = Hachi Maru Pop
 brave = Meddon
 romantic = Alex Brush
-quirky = Imbue
-relaxed = Oi
+quirky = Ranchers
+robot = Syne Mono
 scary = Ravi Prakash
 
 */

@@ -1,13 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Hachi+Maru+Pop&family=Meddon&family=Ranchers&family=Ravi+Prakash&family=Shrikhand&family=Source+Sans+Pro&family=Syne+Mono&display=swap');
+
 body {
   margin: 0;
+  background-color: pink;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 26px;
+  color: darkmagenta
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.h1 {
+  font-family: 'Shrikhand', cursive;
+  font-size: 52px;
+  color: magenta;
+  letter-spacing: 0.1em;
+}
+
+.business-card {
+  box-sizing: border-box;
+  width: 320px;
+  height: 183px;
+  padding: 20px;
+  background-color: yellow;
+}
+
+.category-cute {
+  font-family: 'Hachi Maru Pop', cursive;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: center;
+}
+
+/*Font references
+font-family: 'Shrikhand', cursive;        Header
+font-family: 'Source Sans Pro', sans-serif;    Form text
+
+font-family: 'Alex Brush', cursive;       Romantic
+font-family: 'Hachi Maru Pop', cursive;   Cute
+font-family: 'Meddon', cursive;           Brave
+font-family: 'Ranchers', cursive;         Quirky
+font-family: 'Ravi Prakash', cursive;     Scary
+font-family: 'Syne Mono', monospace;      Robot
+*/
