@@ -5,14 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url("/assets/movie-back.jpg");
+  background-image: url("/assets/cinema-image.png");
   background-position: cover;
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
   height: 100vh;
-  background-color: pink;
-  background-blend-mode: blend-mode;
   display: flex;
   justify-content: center;
   align-items: center;

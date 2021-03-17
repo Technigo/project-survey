@@ -11,7 +11,7 @@ const Form = () => {
     const [name, setName] = useState('')
     const [GenreGroup, setGenreGroup] = useState('')
     const [snack, setSnack] = useState("");
-    const [component, setComponent] = useState("welcomePage");
+    const [component, setComponent] = useState("startPage");
 
     //Building the array of components, so new component can render in order, when clicking next 
 
@@ -35,13 +35,12 @@ const Form = () => {
         console.log('clicked')
     }
 
-    //
     return (
         <>
             <section className="section">
                 {component !== 'summaryPage' ? (
-                    <form>
-                        {component === 'welcomePage' && (
+                    <form onSubmit={executeSubmit}>
+                        {component === 'startPage' && (
                         <WelcomePage />
                         )}
                         {component === 'snackQuestion' && (
@@ -53,14 +52,14 @@ const Form = () => {
                         {component === 'nameQuestion' && (
                         <NameForm name={name} setName={setName}/>
                         )} 
-                        <button onClick={executeSubmit}>next</button>
+                        <button>next</button>
                     </form>
                     ):(
                     <div>
                         <Result
+                        name={name}
                         snack={snack}
                         GenreGroup={GenreGroup}
-                        name={name}
                          />
                     </div>
                     )  

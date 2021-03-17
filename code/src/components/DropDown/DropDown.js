@@ -10,9 +10,7 @@ const DropDown = ({snack, setSnack}) =>{
     return(
         <>
             <h2>What is your favorite snack?</h2>
-            <form onSubmit={event => event.preventDefault()}>
                 <select id="selectSnack"
-                // onChange={event => setSnack(event.target.value) }
                 onChange={onOptionChange}
                 value={snack}
                 >
@@ -23,7 +21,6 @@ const DropDown = ({snack, setSnack}) =>{
                     <option value="candy">Mixed candy</option>
                     <option value="ice-cream">Ice cream</option>
                 </select>
-            </form>
             <p>you live in {snack}</p>
         </>
     )
