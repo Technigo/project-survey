@@ -3,11 +3,12 @@ import React, { useState } from "react";
 
 
 
-export const NoseQuestion = () => {
-    const [noseSize, setNoseSize] = useState()
-
+export const NoseQuestion = ({ sizeOfNose, setSizeOfNose }) => {
+   const onNoseSizeChange  = (e) => {
+    console.log(`Nosesize: ${e.target.value}`);
+    setSizeOfNose(e.target.value); }
     return(
-        <form className="questions-container">
+        <div className="questions-container">
             <div className="wrapper">
                 <div>
                     <p className="p label">Do You have a:</p>
@@ -17,8 +18,8 @@ export const NoseQuestion = () => {
                             className="radio-botton"
                             type="radio"
                             value="Small nose"
-                            onChange={event => setNoseSize(event.target.value)} 
-                            checked={noseSize === "Small nose"}
+                            onChange={(e) => onNoseSizeChange(e)} 
+                            checked={sizeOfNose === "Small nose"}
                         />  
                     </label> 
                 </div>
@@ -29,8 +30,8 @@ export const NoseQuestion = () => {
                             className="radio-botton"
                             type="radio"
                             value="Big nose"
-                            onChange={event => setNoseSize(event.target.value)}
-                            checked={noseSize === "Big nose"}
+                            onChange={(e) => onNoseSizeChange(e)} 
+                            checked={sizeOfNose === "Big nose"}
                         />
                     </label> 
                 </div>   
@@ -41,13 +42,13 @@ export const NoseQuestion = () => {
                         className="radio-botton"
                             type="radio"
                             value="Pointy nose"
-                            onChange={event => setNoseSize(event.target.value)}
-                            checked={noseSize === "Pointy nose"}
+                            onChange={(e) => onNoseSizeChange(e)} 
+                            checked={sizeOfNose === "Pointy nose"}
                         />
                     </label> 
                 </div>
             </div>
-        </form>
+        </div>
     );
 };
 

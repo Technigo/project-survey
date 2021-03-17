@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 export const EyeQuestion = () => {
     const [eyeColor, setEyeColor] = useState("");
+console.log(eyeColor)
 
     return(
-        <form className="questions-container">
+        <div className="questions-container">
             <label className="label">
                 What's the color of your eyes?
                     <select 
@@ -17,7 +18,7 @@ export const EyeQuestion = () => {
                         <option value="Green">Green</option>
                     </select>
             </label>
-        </form>
+        </div>
     );
 };
 

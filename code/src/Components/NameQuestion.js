@@ -2,22 +2,24 @@ import React, { useState } from "react";
 
 
 
- export const NameQuestion = () => {
-    const [name, setName] =useState("");
+ export const NameQuestion = ({ name, setName }) => {
+    const onSetName  = (e) => {
+    console.log(`Name: ${e.target.value}`);
+    setName(e.target.value); }
 
     return(
         <div className="questions-container">
-            <form className="form">
+            <div className="form">
                 <label className="label">
                     Whats your name?
                         <input
                             className="text-input"
                             type="text"
-                            onChange={(e) => setName(e.target.value)}
+                            onChange={(e) => onSetName(e)}
                             value={name}
                         />
                 </label>
-            </form>
+            </div>
         </div>    
     );
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 
 
-export const SubmitQuestions = ({ onSubmit }) => {
+export const SubmitQuestions = () => {
     
 
     return(

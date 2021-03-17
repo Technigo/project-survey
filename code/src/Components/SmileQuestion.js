@@ -5,9 +5,9 @@ import React, { useState } from "react";
 
 export const SmileQuestion = () => {
     const [smile, setSmile] = useState()
-
+console.log(smile)
     return(
-        <form className="questions-container">
+        <div className="questions-container">
             <div className="wrapper">
                 <div>
                     <label className="label">
@@ -34,7 +34,7 @@ export const SmileQuestion = () => {
                     </label> 
                 </div>
             </div>
-        </form>
+        </div>
     );
 };
 
