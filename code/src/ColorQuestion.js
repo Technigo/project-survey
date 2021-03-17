@@ -7,7 +7,6 @@ const colors = [
   'green',
   'blue',
   'violet',
-  'pink',
   'black',
   'white',
 ]
@@ -19,6 +18,7 @@ const ColorQuestion = (props) => {
     console.log(`Color: ${event.target.value}`)
     setColor(event.target.value);
   }
+  console.log(props.color);
   return (
     <>
       <p>My favourite colour is: </p>
@@ -40,8 +40,10 @@ const ColorQuestion = (props) => {
       ))}
       
     </>
+    
 
   )
+  
 }
 
 export default ColorQuestion;

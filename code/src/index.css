@@ -29,15 +29,152 @@ code {
   box-sizing: border-box;
   width: 320px;
   height: 183px;
-  padding: 20px;
+  padding: 30px 10px;
+  color: black;
+  text-align: center;
+  overflow-wrap: break-word;
+}
+
+.business-card.red {
+  background-color: red;
+}
+
+.business-card.orange {
+  background-color: orange;
+}
+
+.business-card.yellow {
   background-color: yellow;
 }
+
+.business-card.green {
+  background-color: green;
+}
+
+.business-card.blue {
+  background-color: blue;
+}
+
+.business-card.violet {
+  background-color: violet;
+}
+
+.business-card.black {
+  background-color: black;
+  color: white;
+}
+
+.business-card.white {
+  background-color: white;
+}
+
+
+
+
+
+
+
+
 
 .category-cute {
   font-family: 'Hachi Maru Pop', cursive;
   font-size: 18px;
+  line-height: 18px;
+  text-align: center;
+}
+
+.category-brave {
+  font-family: 'Meddon', cursive; 
+  font-size: 16px;
+  line-height: 20px;
+  margin:0;
+}
+
+h1.category-brave {
+  font-size: 25px;
+  line-height: 30px;
+}
+
+h2.category-brave {
+  font-size: 22px;
+  line-height: 30px;
+  margin-bottom: 15px;
+}
+
+.category-romantic {
+  font-family: 'Alex Brush', cursive; 
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  margin:0;
+}
+
+h1.category-romantic {
+  font-size: 40px;
+  line-height: 30px;
+}
+
+h2.category-romantic {
+  font-size: 35px;
+  line-height: 30px;
+  margin-bottom: 10px;
+}
+
+.category-quirky {
+  font-family: 'Ranchers', cursive;
+  font-size: 18px;
+  line-height: 25px;
+  text-align: center;
+  margin: 0;
+}
+
+h1.category-quirky {
+  font-size: 35px;
+  line-height: 20px;
+}
+
+h2.category-quirky {
+  font-size: 35px;
+  line-height: 50px;
+  margin-bottom: 0;
+}
+
+.category-scary {
+  font-family: 'Ravi Prakash', cursive;
+  font-size: 18px;
   line-height: 16px;
   text-align: center;
+  margin: 0;
+}
+
+h1.category-scary {
+  font-size: 35px;
+  line-height: 30px;
+}
+
+h2.category-scary {
+  font-size: 35px;
+  line-height: 40px;
+  margin-bottom: 0;
+}
+
+.category-robot {
+  font-family: 'Syne Mono', monospace;
+  font-size: 18px;
+  line-height: 16px;
+  text-align: center;
+  margin:0;
+}
+
+h1.category-robot {
+  font-size: 35px;
+  line-height: 30px;
+}
+
+h2.category-robot {
+  font-size: 30px;
+  line-height: 40px;
+  margin-bottom: 0;
 }
 
 /*Font references

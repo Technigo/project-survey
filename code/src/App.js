@@ -17,6 +17,7 @@ const App = (props) => {
   return (
     <div className="surveyContainer">
       <h1 className="h1">My Business Card Generator</h1>
+      {submitted === false &&
       <Survey 
         name={name} 
         setName= {setName} 
@@ -32,15 +33,16 @@ const App = (props) => {
         setPersonality={setPersonality}
         submitted={submitted}
         setSubmitted={setSubmitted}
-      />
+      />} {submitted === true &&
       <Result 
       name={name}
       occupation={occupation} 
       email={email} 
       telephone={telephone}
+      color={color} 
       personality={personality}
       submitted={submitted}
-      />
+      />}
     </div>
   )
   }
