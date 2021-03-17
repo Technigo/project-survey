@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import data from '../data.json'
 
+import WelcomeSection from './WelcomeSection'
 import TextInputName from './TextInputName'
 import Selector from './Selector';
 import Range from './Range'
@@ -10,6 +11,8 @@ import RadioButton from './RadioButtons';
 
 
 const Form = (props) => {
+  const questions = data.QuestionsNumberArray
+
   const [needVacation, setNeedVacation] = useState("");
   const [country, setCountry] = useState("");
   const [vacationType, setVacationType] = useState("");
@@ -19,9 +22,9 @@ const Form = (props) => {
   const [mood, setMood] = useState("");
   const [food, setFood] = useState("")
   const [summaryHidden, setSummaryHidden] = useState(true)
-  const [section, setSection] = useState('firstQuestion')
+  const [section, setSection] = useState(questions[0])
   
-  const questions = data.QuestionsNumberArray
+  
 
 //Function checking whether the form is filled
   const isFormFilled = () => {
@@ -42,8 +45,11 @@ const Form = (props) => {
   if (summaryHidden === true) {
   return (
       <form  className="form-wrapper" onSubmit={handleSubmit}>  
+      { section === questions[0] && (
+        <WelcomeSection section={section} setSection={setSection} question={questions[1]}/>
+      ) }
       
-      { section ==="firstQuestion" && (
+      { section === questions[1] && (
         <div>
           <h3>Question 1</h3>
           <div className="radio-buttons-wrapper">
