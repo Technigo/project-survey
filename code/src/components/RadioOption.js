@@ -2,7 +2,7 @@ import React from 'react';
 
 export const RadioOption = ({careerName, setRadio}) => {
     const onRadioChange = (e) => {
-        console.log(`Radio {e.target.value}`);
+        console.log(`Radio ${e.target.value}`);
         setRadio(e.target.value);
     }
     

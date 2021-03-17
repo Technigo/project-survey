@@ -4,16 +4,18 @@ import { Age } from './Age'
 import { Location } from './Location'
 import { RadioOption } from './RadioOption'
 import { CheckBoxes } from './CheckBoxes'
+import { SubmitButton } from './SubmitButton.js'
+import { Summary } from './Summary.js'
 
-const careerPaths= ['front-end', 'back-end', 'fullstack']
+const careerPaths= ['Frontend', 'Backend', 'Fullstack']
 const stacks = ['JS', 'CSS', 'HTML', 'React', 'Ruby on Rails', 'Angular', 'Vue', 'C#']
 
 export const Form = () => {
-    const [name, setName] = useState('name');
-    const [location, setLocation] = useState('location');
+    const [name, setName] = useState('');
+    const [location, setLocation] = useState('');
     const [age, setAge] = useState('');
     const [radio, setRadio] = useState('');
-    const [stack, setCheckBox] = useState (false);
+    const [stack, setCheckBox] = useState ('false');
 
     
     const isSurveyComplete = () => {
@@ -66,24 +68,27 @@ export const Form = () => {
                 {careerPaths.map((career) => {
                     return (
                         <RadioOption
+                        key={career}
                         careerName={career}
                         setRadio={setRadio}/>
                     )
                 })}
             </div>
 
-            <p>Which programming languages do you want to learn?</p>
+            <p>Which programming languages do you want to work with?</p>
             <div className="form-components stack">
                 {stacks.map((stack) => {
                     return (
-                        <CheckBoxes 
+                        <CheckBoxes
+                        key={stack}
                         stack={stack}
                         setCheckBox={setCheckBox}
                         />
                     )
                 })}
             </div>
-            
+            <SubmitButton />
+            <Summary />
         </form>
     )
 }

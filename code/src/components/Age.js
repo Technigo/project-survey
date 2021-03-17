@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Age = ({age, setAge}) => {
     const onAgeChange = (e) => {
-        console.log(`Age {e.target.value}`);
+        console.log(`Age ${e.target.value}`);
         setAge(e.target.value);
     }
 
@@ -12,7 +12,7 @@ export const Age = ({age, setAge}) => {
             <select
                 onChange= {onAgeChange}
                 value={age}
-                // ref="age"
+                required
             >
                 <option disabled value="">select age group</option>
                 <option value="0-18">0-18</option>
