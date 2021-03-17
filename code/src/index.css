@@ -82,11 +82,22 @@ code {
   transform: scale(1.2); 
 }
 
-/*.box-header {
+/*test */
+
+
+
+/*test */
+
+.box-header {
   display: flex;
   justify-content: center;
   align-items: center;
-}*/
+}
+
+.box {
+  background-color: purple;
+  border: 3px solid white;
+}
 
 
 
@@ -161,3 +172,10 @@ button {
 }
 
 
+@media (min-width:1024px) {
+
+  .test {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+  }
+}

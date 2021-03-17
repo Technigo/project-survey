@@ -8,10 +8,11 @@ const Radio = () => {
   const images = ["./assets/jacket1.jpg", "./assets/jacket2.jpg", "./assets/jacket3.jpg", "./assets/jacket4.jpg", "./assets/jacket5.jpg"]
 
   return (
-    <label>
+    <label >
       <p>Select one suit:</p>
 
 
+      <div className="test">
       {suitColors.map((group, imageIndex) => (
         <label key={group} >
           <div className="box-header">
@@ -32,6 +33,7 @@ const Radio = () => {
           
         </label>
       ))}
+      </div>
     </label>
   )
 }
