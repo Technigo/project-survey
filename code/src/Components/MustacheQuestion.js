@@ -2,9 +2,10 @@ import React, { useState } from "react";
 
 
 
-export const MustacheQuestion = () => {
-    const [hasMustache, setHasMustache] =useState(true);
-    console.log(hasMustache)
+export const MustacheQuestion = ({ hasMustache, setHasMustache}) => {
+    const onSetHasMustache  = (e) => {
+    console.log(`Mustache: ${e.target.value}`);
+    setHasMustache(e.target.value); }
 
     return(
         <div onSubmit={event =>event.preventDefault()} className="questions-container">
@@ -14,7 +15,7 @@ export const MustacheQuestion = () => {
                         className="radio-botton"
                         type="checkbox"
                         checked={hasMustache}
-                        onChange={(e) => setHasMustache(e.currentTarget.checked)}
+                        onChange={(e) => onSetHasMustache(e)}
                     />
             </label>
         </div>

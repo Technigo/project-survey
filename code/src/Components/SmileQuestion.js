@@ -3,9 +3,10 @@ import React, { useState } from "react";
 
 
 
-export const SmileQuestion = () => {
-    const [smile, setSmile] = useState()
-console.log(smile)
+export const SmileQuestion = ({ smile, setSmile }) => {
+    const onSetSmile  = (e) => {
+    console.log(`Smile: ${e.target.value}`);
+    setSmile(e.target.value); }
     return(
         <div className="questions-container">
             <div className="wrapper">
@@ -16,7 +17,7 @@ console.log(smile)
                             className="radio-botton"
                             type="radio"
                             value="Smiling"
-                            onChange={event => setSmile(event.target.value)} 
+                            onChange={(e) => onSetSmile(e)}
                             checked={smile === "Smiling"}
                         />  
                     </label> 
@@ -28,7 +29,7 @@ console.log(smile)
                             className="radio-botton"
                             type="radio"
                             value="Sad"
-                            onChange={event => setSmile(event.target.value)}
+                            onChange={(e) => onSetSmile(e)}
                             checked={smile === "Sad"}
                         />
                     </label> 

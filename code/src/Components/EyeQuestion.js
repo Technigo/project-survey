@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 
-export const EyeQuestion = () => {
-    const [eyeColor, setEyeColor] = useState("");
-console.log(eyeColor)
+export const EyeQuestion = ({ eyeColor, setEyeColor}) => {
+     const onSetEyeColor = (e) => {
+    console.log(`Eyecolor: ${e.target.value}`);
+    setEyeColor(e.target.value); }
 
     return(
         <div className="questions-container">
@@ -10,7 +11,7 @@ console.log(eyeColor)
                 What's the color of your eyes?
                     <select 
                     className="select-eyecolor"
-                    onChange={event => setEyeColor(event.target.value)}
+                    onChange={(e) => onSetEyeColor(e)}
                     value={eyeColor}
                     >
                         <option value="Brown">Brown</option>

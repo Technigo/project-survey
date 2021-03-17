@@ -15,7 +15,16 @@ const [noseSize, setNoseSize] = useState()
 console.log(noseSize)
 
 const [name, setName] =useState("");
-    console.log(name)
+console.log(name)
+
+const [eyeColor, setEyeColor] = useState("");
+console.log(eyeColor)
+
+const [smile, setSmile] = useState()
+console.log(smile)
+
+const [hasMustache, setHasMustache] =useState(true);
+console.log(hasMustache)
 
   return (
     <div className="main-container">
@@ -23,9 +32,9 @@ const [name, setName] =useState("");
         <Heading />
         <NameQuestion name={name} setName={setName}/>
         <NoseQuestion sizeOfNose={noseSize} setSizeOfNose={setNoseSize} />
-        <EyeQuestion />
-        <SmileQuestion />
-        <MustacheQuestion />
+        <EyeQuestion eyeColor={eyeColor} setEyeColor={setEyeColor} />
+        <SmileQuestion smile={smile} setSmile={setSmile} />
+        <MustacheQuestion hasMustache={hasMustache} setHasMustache={setHasMustache}/>
         <SubmitQuestions />
       </form>
     </div>
