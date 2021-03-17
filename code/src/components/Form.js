@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { Name } from './Name'
+import { UserName } from './Name'
 import { AgeRadioOption } from './Age'
 import { SelectPlanet } from './SelectPlanet'
 import { BringItem } from './BringItem'
@@ -11,13 +11,18 @@ const ageGroups = ['0-19','20-29','30-39','40-49','50+',]
 
 export const Form = () => {
   const [age, setAgeGroup] = useState('')
+  const [name, setName] = useState('')
+  const [item, setInputItem] = useState('')
 
 
 
   return (
     <form>
       <div>
-        <Name />
+        <UserName 
+        setName={setName}
+        name={name}
+        />
       </div>
       <div>
       <p>How old are you?</p>
@@ -29,13 +34,15 @@ export const Form = () => {
           />
         )
       })}
-        
       </div>
       <div>
         <SelectPlanet />
       </div>
       <div>
-        <BringItem />
+        <BringItem
+         setInputItem={setInputItem}
+         item={item}
+         />
       </div>
       <div>
         <SubmitButton />

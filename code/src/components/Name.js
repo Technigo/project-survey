@@ -1,10 +1,7 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const Name = () => {
-  const [inputName, setName] = useState('')
+export const UserName = ({name, setName}) => {
   
-  
-
   const onNameChange = (event) => {
     setName(event.target.value)
   
@@ -12,13 +9,13 @@ export const Name = () => {
 
   return (
     <div>
-      <label htmlFor="name">What is your name?</label>
+      <label>What is your name?
       <input 
-        id="name"
         type='text'
-        value={inputName}
-        onChange={onNameChange}
+        value={name}
+        onChange={(event) => {onNameChange(event)}}
       />
+      </label>
     </div>
   )
 }
