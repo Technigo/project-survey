@@ -15,9 +15,9 @@ const QuestionCitySelect = ({
   }
 
   return (
-    <article className="form-question-1">
+    <article className="form-question">
       {/* Q */}
-      <label htmlFor="title" className="form__question" tabIndex="0">
+      <label htmlFor="title" className="form-question" tabindex="0">
         I live in a city with this many inhabitants
       </label>
 
@@ -27,7 +27,7 @@ const QuestionCitySelect = ({
           id="inhabitants" 
           className="dropdown" 
           value={inhabitants} 
-          onChange={(e) => {onInhabitantsChange(e)}}>
+          onChange={onInhabitantsChange}>
           <option disabled></option>
           <option value="5000">Less than 5000</option>
           <option value="5000-25000">5000 - 25 000</option>

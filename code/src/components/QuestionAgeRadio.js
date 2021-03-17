@@ -17,9 +17,9 @@ const QuestionAgeRadio = ({
   const age = ['15-25', '26-35', '36-45', '46-65', '65+']
   
   return (
-    <article className="form-question-2">
+    <article className="form-question">
       {/* Q */}
-      <p htmlFor="age" className="form-question" tabIndex="0">
+      <p htmlFor="age" className="form-question" tabindex="0">
         How old are you?
       </p>
 

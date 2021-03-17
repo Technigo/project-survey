@@ -17,9 +17,9 @@ const QuestionStageArtRadio = () => ({
   const stageart = ["I'm for experimental shit, I need to see something I can not immediately understand", "I want to dance with my kid", "Opera", "Theatre", "Musical", "I just miss the feeling of collectivity, and long to be able to see something with another person's eye - just once, please!", "Concert"]
 
   return (
-    <article className="form-question-3">
+    <article className="form-question">
       {/* Q */}
-      <p htmlFor="stage" className="form-question" tabIndex="0">
+      <p htmlFor="stage" className="form-question" tabindex="0">
         What kind of stage art would you like too experience post Covid-19?
       </p>
 
@@ -30,7 +30,6 @@ const QuestionStageArtRadio = () => ({
             <input
               name={stagetype}
               id={stagetype}
-          //  value={category} ---> not needed for radiobuttons as they are static
               type="radio"
               onChange={(e) => {
                 onStageArtChange(e.target.value)

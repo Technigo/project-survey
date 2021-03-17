@@ -13,7 +13,7 @@ const TextInputProposal = ({
 }) => {
   
   return (
-    <article className="form-question-4">
+    <article className="form-question">
       {/* Question */}
       <label htmlFor="proposal" className="form-question" tabIndex="0">
         Do you have any other thoughts or proposals of what stage art you would like to experience post Covid-19?
