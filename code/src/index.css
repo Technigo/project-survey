@@ -11,13 +11,17 @@
 
 body {
   margin: 0;
-  background-color: var(--darkAlt);
-  font-family: 'Courier Prime', monospace;
+  background-color: var(--darkAlt);  
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 /* ------------------------------- TYPOGRAPHY ------------------------------- */
+
+* {
+  font-family: 'Courier Prime', monospace;
+  color: var(--primary);
+}
 
 h1,
 h3,
@@ -41,4 +45,9 @@ h4 {
 }
 p {
   font-size: 14px;
+}
+button {
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 4px;
 }

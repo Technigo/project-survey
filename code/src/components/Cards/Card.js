@@ -2,6 +2,7 @@ import React from 'react';
 
 import './Card.css';
 
+import Content from 'components/Content/Content'
 import Inputs from 'components/Inputs/Inputs';
 
 const Card = (props) => {
@@ -12,6 +13,7 @@ const Card = (props) => {
           <>
             <h3>Question {props.number}</h3>
             <p>{props.question}</p>
+            <Content {...props.content} />
             <h3>My Answer</h3>
             <Inputs {...props} />
           </>
@@ -20,7 +22,7 @@ const Card = (props) => {
         return (
           <>
             <h3>Submission</h3>
-            <button type="submit">SUBMIT</button>
+            <Content type="submit" />
           </>
         );
       case 'summary':
