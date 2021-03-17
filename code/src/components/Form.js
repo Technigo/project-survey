@@ -1,40 +1,37 @@
-import React, {useState} from 'react';
+import React from 'react';
+import { ColorQuestion } from './ColorQuestion';
+import { CountryQuestion } from './CountryQuestion';
+import { NameQuestion } from './NameQuestion';
 
-export const  Form = () => {
+export const Form = () => {
+    /*
     const [name, setName] = useState('');
+    const [color, setColor] = useState('');
+    const [country, setCountry] = useState('');
 
-    const onNameChange = (event) => {
+    const onNameChanged = (event) => {
+        console.log(event.target.value);
         setName (event.target.value);
-    }
+    };
+        const onColorChanged = (event) => {
+            console.log(event.target.value);
+            setColor (event.target.value);
+        };
+            const onCountryChanged = (event) => {
+                console.log(event.target.value);
+                setCountry (event.target.value);
+    };*/
 
 return(
-    <form>
-        <div>
-            <label htmlFor="name">Whats your name?</label>
-            <input id="name" type="text" value={name} onChange={onNameChange}/>
+    <form className="form-container">
+        <div className="form-container-questions">
+        <NameQuestion/>
+        <ColorQuestion/>
+        <CountryQuestion/>
+        <div className="submit">
+            <button>Submit</button>
         </div>
-        <div>
-            <p>Pick your favourite?</p>
-            <label htmlFor="red">Red Wine
-            <input id="red" type="radio"/>
-            </label>
-            <label htmlFor="white">White Wine
-            <input id="white" type="radio"/>
-            </label>
-            <label htmlFor="rose">Rosé Wine
-            <input id="rose" type="radio"/>
-            </label>
         </div>
-        <div>
-            <label htmlFor="country">Pick a country?</label>
-            <select id="country">
-                <option value="italy">Italy</option>
-                <option value="spain">Spain</option>
-                <option value="france">France</option>
-                <option></option>
-            </select>
-        </div>
-
     </form>
-)
-}
+);
+};
