@@ -10,6 +10,7 @@ const ThirdQuestion = (props) => {
       <Select
       label="Age"
       inputId="age" 
+      value={values.age}
       values={values}
       onInputResponse={onInputResponse}
       options={['0-30', '31-50', '51-100']}/>

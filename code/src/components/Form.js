@@ -4,16 +4,32 @@ import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import Summary from './Summary'
+import Confirmation from './Confirmation'
 
-const Form = () => {
-  const [values, setValues] = useState({
+const defaultValues = () => {
+  return {
     step: 1,
     firstName: '',
     lastName: '',
     company: '',
     title: '',
     age: ''
-  })
+
+  }
+}
+
+const Form = () => {
+  const [values, setValues] = useState(defaultValues())
+  // const [values, setValues] = useState({
+  //   step: 3,
+  //   firstName: '',
+  //   lastName: '',
+  //   company: '',
+  //   title: '',
+  //   age: ''
+  // })
+
+
   
   const onInputResponse = (e) => {
     setValues({ ...values, [e.target.id]: e.target.value})
@@ -31,6 +47,10 @@ const Form = () => {
         break
       case 'submit' :
         setValues({ ...values, "step": 0})
+        break
+      case 'reset' :
+        console.log('yo')
+        setValues(defaultValues())
         break
       default :
       return null
@@ -77,7 +97,7 @@ const Form = () => {
     case 0 :
       return (
         <>
-          All done!
+          <Confirmation onButtonResponse={onButtonResponse} />
         </>
       )
     default :

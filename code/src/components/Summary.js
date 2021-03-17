@@ -10,6 +10,10 @@ const Summary = ({ values, onButtonResponse }) => {
       <p>Company: {values.company}</p>
       <p>Title: {values.title}</p>
       <p>Age: {values.age}</p>
+      <Button 
+      buttonType="previous" 
+      label="Previous" 
+      onButtonResponse={onButtonResponse} />
 
       <Button 
       buttonType="submit" 
