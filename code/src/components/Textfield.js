@@ -8,6 +8,7 @@ const Textfield = () => {
       Please state your name: {inputName}
       <input
         type="text"
+        id="inputName"
         onChange={(event) => setInputName(event.target.value)}
         value={inputName}
       />
