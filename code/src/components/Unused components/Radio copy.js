@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Image from './Image'
 
-const suitColors = ["Jacket: Marine Blue", "Jacket: Blue", "Jacket: Green", "Jacket: Gray", "Jacket: Red"]
+const suitColors = ["jacket1", "jacket2", "jacket3", "jacket4", "jacket5"]
 
 const Radio = () => {
   const [Color, setColor] = useState();
@@ -24,7 +24,7 @@ const Radio = () => {
             onChange={event => setColor(event.target.value)}
             checked={Color === group}
             name="Selected jacket"
-            className="my-input"
+            className="input-hidden"
           />
           {group} </div>
           </div>

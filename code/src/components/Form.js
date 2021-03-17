@@ -14,15 +14,17 @@ const Test = () => {
         <form action="http://httpbin.org/anything" method="POST">
                 <Hero />
                 <div className="form">
+                    <div className="form-container">
                     <div className="form-section">
-                        <Radio />
-                        <SelectSize />
-                        <Amount />
-                        <Name />
-                        <Email />
-                        <Phone />
-                        <Checkbox />
-                        <OrderBtn />
+                            <Radio />
+                            <SelectSize />
+                            <Amount />
+                            <Name />
+                            <Email />
+                            <Phone />
+                            <Checkbox />
+                            <OrderBtn />
+                    </div>
                     </div>
                 </div>
             </form>

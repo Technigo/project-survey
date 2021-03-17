@@ -43,39 +43,6 @@ code {
 
 /* Radio Section */
 
-/* GAMMAL NEDAN
-.radio-section {
-  background-color: blueviolet;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.radio-section-boxes {
-  width: 70%;
-  display: column;
-  justify-content: space-between;
-  text-align: center;
-}
-
-.red {
-  background-color: red;
-}
-
-.blue {
-  background-color: blue;
-}
-
-.green {
-  background-color: green;
-}
-
-.yellow {
-  background-color: yellow;
-}
-
-GAMMAL OVAN */ 
-
 .form {
   background-color: green;
   display: flex;
@@ -86,10 +53,54 @@ GAMMAL OVAN */
 .form-section {
   display: grid;
   grid-template-columns: 1fr;
-  width: 50%;
+  width: 70%;
+  background-color: yellow;
 }
 
-.teste2{
-  width: 100px;
-  height: 100px;
+.form-section-box {
+  text-align: center;
 }
+
+.image{
+  width: 100%;
+  transition: transform 1s;
+  border-radius: 25px;
+}
+
+.image:hover {
+  transform: scale(1.5); 
+}
+
+.box-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  margin-bottom: 50px;
+  border: 10px solid red;
+  border-radius: 25px;
+}
+
+/* Select Section starts */
+
+.select-section {
+  background-color: brown;
+  text-align: center;
+  width: 100%;
+}
+
+.select-section select{
+  width: 100%;
+  height: 50px;
+}
+
+.form-section p {
+  font-size: 24px;
+}
+
+
+/* Select Section ends */
+
+

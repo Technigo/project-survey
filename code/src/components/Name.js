@@ -4,7 +4,7 @@ const OrderBtn = () => {
     return (
         <label>
         <p>Name & Surname</p> 
-        <input type="type" name="message" required />
+        <input type="type" name="Name & Surname" required />
         </label>
     )
 }

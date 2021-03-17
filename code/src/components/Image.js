@@ -2,10 +2,9 @@ import React, {useState} from 'react'
 
 
 const ImageSelect = (image) => {
-    console.log(image)
 
     return (
-         <img className="teste2" src={image.image} />
+         <img className="image" src={image.image} />
         )
 }
 

@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 const Checkbox = () => {
     const [wantsNewsletter, setwantsNewsletter] = useState("");
     return (
-        <label>
+        <label className="test">
         Newsletter?
         <input
           type="checkbox"
