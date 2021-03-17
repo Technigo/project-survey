@@ -8,7 +8,7 @@ return (
     <div className='icecream-image'>
       <img src='./assets/icecream.jpg' alt='ice-creams'></img>
     </div>
-    <p>What flavor rock your boat &#38; get your brain freeze on?!</p>
+    
   </div>
 )
 }

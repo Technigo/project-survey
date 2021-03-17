@@ -1,12 +1,7 @@
 import React, { useState } from 'react'
 
-const NameInput = () => {
-  const [name, setName] = useState ('')
-
-  const onNameInput = (event) => {
-    setName (event.target.value)
-  }
-
+const NameInput = ({name, setName}) => {
+  
 
 return (
   <div className='name-box' onSubmit={event => event.preventDefault()} >
@@ -16,7 +11,7 @@ return (
       id='name' 
       type='text'
       value={name}
-      onChange={ onNameInput }
+      onChange={event => setName(event.target.value)} 
       />
     </label>
   </div>

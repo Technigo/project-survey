@@ -1,12 +1,11 @@
 import React, { useState } from 'react'
 
-const DropDown = () => {
+const DropDown = ({favorite, setFavorite}) => {
  
-  const [favorite, setFavorite]= useState()
- 
-
+  
 return (
   <div className='drop-down-box'>
+    <p>What flavor rock your boat &#38; get your brain freeze on?!</p>
     <label>Pick your favorite</label>
     <select 
     onChange={event => setFavorite(event.target.value)}
