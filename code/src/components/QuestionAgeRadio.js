@@ -30,9 +30,8 @@ const QuestionAgeRadio = ({
             <input
               name="age"
               id={age}
-        //    value={category} ---> not needed for radiobuttons as they are static
               type="radio"
-              onChange={(e) => {onAgeChange(e)}} //(e) => {onAgeChange(e)}
+              onChange={(e) => {onAgeChange(e)}}
               className="form-radiobuttons"
             />
             <label htmlFor={age} aria-label={age} tabIndex="0">
