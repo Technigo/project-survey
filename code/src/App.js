@@ -1,9 +1,23 @@
-import React from 'react'
+import React, { useState } from 'react';
+
+import Welcome from './components/Welcome';
+import MainDish from './components/MainDish';
 
 export const App = () => {
+
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+    <>
+      <Welcome />
+      <MainDish />
+    </> 
+  ) 
+
 }
+
+  
+
+  
+
+
+
+
