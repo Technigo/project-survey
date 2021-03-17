@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
-export const Form = () => {
+export const Form = (props) => {
   const [name, setName] = useState('') 
   const [genre, setGenre] = useState('')
   const [language, setLanguage] = useState()
-  const languageRadioBtn = [' english', ' swedish', ' both'] // array for radio-buttons under language
+  const [email, setEmail] = useState('')
+  const languages = [' english', ' swedish', ' both'] // array for radio-buttons under language
 
   return (
     <div className="form-container">
@@ -17,7 +18,9 @@ export const Form = () => {
             value={name}
             onChange={(event) => setName(event.target.value)}
           />
-          <p>Hello {name}</p>
+          
+          {/* if  
+          <p>Hello {name}!</p> */}
         </div>
 
         <div className="form-container-sections">
@@ -27,7 +30,8 @@ export const Form = () => {
             value={genre}
             onChange={event => setGenre(event.target.value)}
           >
-            <option value="">Select genre:</option>
+            {/* <option value=""></option> */}
+            <option disabled></option>
             <option value="biography">Biography</option>
             <option value="classics">Classics</option>
             <option value="fiction">Fiction</option>
@@ -36,9 +40,9 @@ export const Form = () => {
           </select>
         </div>
 
-        <div className="form-container-sections-radio">
+        <div className="form-container-sections">
           <label htmlFor="language">Select preferred language:</label>
-          {languageRadioBtn.map(lang => (
+          {languages.map(lang => (
             <label key={lang}>
               <input 
                 id="language"
@@ -50,17 +54,26 @@ export const Form = () => {
               {lang}
             </label>
           ))}
-          
-          
-          {/* <label htmlFor="english">English</label>
-          <input 
-              id="english"
-              type="radio"
-              value="english"
-              onChange={event => setLanguage(event.target.value)}
-              checked={language === "english"}
-            /> */}
         </div>
+
+        <div className="form-container-sections">
+        <label htmlFor="email">Your e-mail address:</label>
+          <input 
+            id="email"
+            type="email" 
+            value={email}
+            onChange={event => setEmail(event.target.value)}
+            />
+        </div>
+
+        
+
+        {/* <div className="summary">
+          <p>Name: {name}</p>
+          <p>Genre: {genre}</p>
+          <p>Language: {language}</p>
+          <p>E-mail: {email}</p>
+        </div> */}
 
       </form>
     </div>

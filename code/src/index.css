@@ -18,36 +18,55 @@ code {
   box-sizing: border-box;
 }
 
-h1 {
+/*** header ***/
+
+header {
+  position: relative;
+}
+
+.header-img {
+  width: 100vw;
+  height: 50vh;
+  object-fit: cover;
+}
+
+.header-text {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 55%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 30px auto 35px;
 }
 
-header, 
-.about,
-.form-container {
-  padding: 15px;
+.about {
+  text-align: center;
+  padding: 23px 15px;
 }
 
-header {
-  background-color: aquamarine;
+h3 {
+  margin: 15px 0 10px;
 }
+
+/*** form ***/
 
 .form-container {
   background-color: burlywood;
-  margin: 20px 0 20px;
+  margin: 0 0 20px;
+  padding: 15px;
 }
 
 .form-container-sections {
   display: flex;
   flex-direction: column;
-  border: solid purple 1px;
+  border: solid purple 3px;
+  margin-bottom: 15px;
 }
 
-.form-container-sections-radio {
-  display: flex;
-  flex-direction: column;
-  border: solid grey 2px;
-}
+.form-container-sections-radio
 
 .form-container-sections-radio label {
   font-weight: lighter;
@@ -55,8 +74,9 @@ header {
 
 label {
   display: inline-block;
-  margin: 0 0 20px;
-  border: solid black 1px;
-  padding: 10px;
+  /* margin: 20 5 20px; */
+  border: solid black 3px;
+  padding: 5px;
   font-weight: bold;
 }
+
