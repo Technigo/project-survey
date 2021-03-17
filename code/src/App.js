@@ -3,32 +3,37 @@ import './index.css'
 
 export const App = () => {
 
-const animalsArray = ["long hair", "short hair", "naked"];
-const [petAnimal, setAnimal] = useState("");
+const furArray = ["long hair", "short hair", "naked"];
+const [animalFur, setAnimalFur] = useState("");
 const [gender, setGender] = useState("");
 const [color, setColor] = useState("");
 const [name, setName] = useState("");
+const [showSummary, setShowSummary] = useState(false);
+const handleSubmit = event => {
+  event.preventDefault();
+  setShowSummary(true);
+};
 
 return (
-<div>
+<div className="survey-section">
   <header>
-    <h1>What kind of cat do you want?</h1>
+    <h1>Answer a few questions and you can win 100 cat food burkar</h1>
   </header>
 
-  <form className="form" >
+  <form className="form" onSubmit={handleSubmit}>
     
     <div>
-      What animal would you like to have?
-      {animalsArray.map(animal => (
-        <label key={animal}>
+      What kinds of cat do you like?
+      {furArray.map(fur => (
+        <label key={fur}>
           <input
             type='radio'
-            value={animal}
-            onChange={event => setAnimal(event.target.value)}
-            checked={petAnimal === animal}
+            value={fur}
+            onChange={event => setAnimalFur(event.target.value)}
+            checked={animalFur === fur}
             required
           />
-          {animal}
+          {fur}
         </label>
       ))}
     </div>
@@ -42,7 +47,7 @@ return (
         <option value="">Select</option>
         <option value="Female">Female</option>
         <option value="Male">Male</option>
-        <option value="Does not matter">Does not matter</option>
+        <option value="either female or male">Does not matter</option>
       </select>
     </div>
 
@@ -67,6 +72,15 @@ return (
     </div>
    <button type="submit">Send</button>
   </form>
+
+  {showSummary && <section className='summary'>
+    <h2>Thank you for your time</h2>
+    <p>You like cats with {animalFur} that is {color}. You want a {gender} cat with the name {name}.</p>
+  
+    
+  </section>
+  }
+
 </div>
 )
 }
