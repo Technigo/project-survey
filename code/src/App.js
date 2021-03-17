@@ -5,7 +5,6 @@ import RadioInput from './components/RadioInput'
 import RadioInputIcon from './components/RadioInputIcon'
 import SelectInput from './components/SelectInput'
 import TextInput from "./components/TextInput"
-import Character from "./components/Character"
 import RangeInput from './components/RangeInput'
 import NumberInput from './components/NumberInput'
 import CharacterSheet from './components/CharacterSheet'
@@ -13,7 +12,7 @@ import ProgressBar from 'components/ProgressBar'
 
 
 const App = () => {
-  const [isFilledIn, setIsFilledIn] = useState(false)
+  const [renderSummary, setRenderSummary] = useState(false)
   const [section, setSection] = useState(0)
   const [name, setName] = useState("")
   const [characterClass, setCharacterClass] = useState("")
@@ -22,11 +21,13 @@ const App = () => {
   const [family, setFamily] = useState("")
   const [goal, setGoal] = useState("")
   const [icon, setIcon] = useState()
-  const [value, setValue] = useState(0)
+  // const [value, setValue] = useState(0)
+  const [str, setStr] = useState()
+  const [int, setInt] = useState()
+  const [dex, setDex] = useState()
 
   const handleSubmit = () => {
-    console.log(Character)
-    setIsFilledIn(!isFilledIn)
+    setRenderSummary(!renderSummary)
     setSection(0)
   }
 
@@ -42,7 +43,7 @@ const App = () => {
     }
   }
 
-  if (isFilledIn) {
+  if (renderSummary) {
     return (
       <>
         <CharacterSheet
@@ -53,6 +54,9 @@ const App = () => {
           family={family}
           goal={goal}
           icon={icon}
+          str={str}
+          int={int}
+          dex={dex}
         />
         <button onClick={handleSubmit}>Go back</button>
       </>
@@ -111,9 +115,9 @@ const App = () => {
               data={data.icon}
             />}
 
-          {data.section[section] === "eighthSection" &&
+          {/* {data.section[section] === "eighthSection" &&
             <div className="stats-container">
-              {data.stats.allStats.map(item =>
+              {data.stats.map(item =>
                 <RangeInput
                   className="stats-input"
                   key={item}
@@ -121,8 +125,27 @@ const App = () => {
                   value={value}
                   setValue={setValue}
                 />)}
+            </div>} */}
+          {data.section[section] === "eighthSection" &&
+            <div className="stats-container">
+              <RangeInput
+                value={str}
+                setValue={setStr}
+                data={data.stats.strength}
+              />
+              <RangeInput
+                value={int}
+                setValue={setInt}
+                data={data.stats.intelligence}
+              />
+              <RangeInput
+                value={dex}
+                setValue={setDex}
+                data={data.stats.dexterity}
+              />
             </div>}
           <div>
+
             <button onClick={handlePrevious}>Previous Question</button>
             <button onClick={handleNext}>Next Question</button>
             <button onClick={handleSubmit}>Submit</button>

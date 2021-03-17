@@ -52,13 +52,6 @@
         "field": "age",
         "className": "age-input"
     },
-    "stats": {
-        "allStats": [
-            "strength",
-            "intelligence",
-            "dexterity"
-        ]
-    },
     "icon": {
         "field": "icon",
         "className": "icon-input",
@@ -74,5 +67,24 @@
             "./assets/witch.svg",
             "./assets/wizard.svg"
         ]
+    },
+    "stats": {
+        "allStats": [
+            "strength",
+            "dexterity",
+            "intelligence"
+        ],
+        "strength": {
+            "className": "stat-input",
+            "label": "strength"
+        },
+        "intelligence": {
+            "className": "stat-input",
+            "label": "intelligence"
+        },
+        "dexterity": {
+            "className": "stat-input",
+            "label": "dexterity"
+        }
     }
 }
