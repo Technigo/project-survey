@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Statements = ({ setForm, number, checkForError }) => {
+const Statements = ({ setForm, number }) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prevState) => ({ ...prevState, [name]: value }));
@@ -23,7 +23,6 @@ const Statements = ({ setForm, number, checkForError }) => {
         {options.map((option) => (
           <label htmlFor={option} key={option}>
             <input
-              className={checkForError}
               required
               id={option}
               type="radio"

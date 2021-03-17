@@ -1,6 +1,6 @@
 import React from 'react';
 
-const WordAssoc = ({ formData, setForm, number, checkForError }) => {
+const WordAssoc = ({ formData, setForm, number }) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prevState) => ({ ...prevState, [name]: value }));
@@ -13,7 +13,6 @@ const WordAssoc = ({ formData, setForm, number, checkForError }) => {
         <p>this is my question?????</p>
         <h3>My Answer</h3>
         <input
-          className={checkForError}
           required
           name="answer1"
           type="text"

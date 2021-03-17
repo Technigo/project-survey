@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Rorschach = ({ setForm, number, checkForError }) => {
+const Rorschach = ({ setForm, number }) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
     setForm((prevState) => ({ ...prevState, [name]: value }));
@@ -20,7 +20,7 @@ const Rorschach = ({ setForm, number, checkForError }) => {
         <h3>Question {number}</h3>
         <p>this is my question?????</p>
         <h3>My Answer</h3>
-        <select className={checkForError} name="answer3" onChange={handleChange} required>
+        <select name="answer3" onChange={handleChange} required>
           <option value="">--Please choose an option--</option>
           {options.map((option) => (
             <option key={option} value={option}>

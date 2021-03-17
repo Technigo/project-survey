@@ -15,10 +15,8 @@ const defaultData = {
 const Form = () => {
   const [formData, setForm] = useState(defaultData);
   const [endState, setEndState] = useState(false);
-  const [checkForError, setCheckForError] = useState('');
 
   const inputProps = { formData, setForm };
-  const validationProps = { checkForError, setCheckForError };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -28,12 +26,12 @@ const Form = () => {
   return (
     <form onSubmit={handleSubmit}>
       {/* <p>{formData.answer1}</p> */}
-      <WordAssoc {...inputProps} {...validationProps} number="1" />
+      <WordAssoc {...inputProps} number="1" />
       {/* <p>{formData.answer2}</p> */}
-      <Statements {...inputProps} {...validationProps} number="2" />
+      <Statements {...inputProps} number="2" />
       {/* <p>{formData.answer3}</p> */}
-      <Rorschach {...inputProps} {...validationProps} number="3" />
-      <Submission {...validationProps} />
+      <Rorschach {...inputProps} number="3" />
+      <Submission />
       {endState && (
         <Summary data={formData} />
       )}
