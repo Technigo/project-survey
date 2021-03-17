@@ -56,8 +56,7 @@ const Form = () => {
   console.log(page)
   return (
     <section className="form-container">
-      {!showSummary ? (
-        <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit}>
 
         {page === 0 && ( 
           <div>
@@ -113,9 +112,8 @@ const Form = () => {
           />
         </div> 
         )}
-        </form>
-      ):
-      (
+        {page === 5 && (
+        <div>
       <Summary 
         inhabitants={inhabitants}
         ageCategory={ageCategory}
@@ -123,7 +121,9 @@ const Form = () => {
         proposal={proposal}
         professions={professions}
       />
+      </div>
       )}
+      </form>
   </section>
   )
 }
