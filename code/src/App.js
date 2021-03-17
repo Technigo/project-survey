@@ -23,7 +23,7 @@ console.log(eyeColor)
 const [smile, setSmile] = useState()
 console.log(smile)
 
-const [hasMustache, setHasMustache] =useState(true);
+const [hasMustache, setHasMustache] =useState(false);
 console.log(hasMustache)
 
   return (

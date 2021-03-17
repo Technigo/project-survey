@@ -4,8 +4,8 @@ import React, { useState } from "react";
 
 export const MustacheQuestion = ({ hasMustache, setHasMustache}) => {
     const onSetHasMustache  = (e) => {
-    console.log(`Mustache: ${e.target.value}`);
-    setHasMustache(e.target.value); }
+    console.log(`Mustache: ${!hasMustache}`);
+    setHasMustache(!hasMustache); }
 
     return(
         <div onSubmit={event =>event.preventDefault()} className="questions-container">
