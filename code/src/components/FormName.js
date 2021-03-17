@@ -1,18 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
 const FormName = () => {
 
+  const [name, setName] = useState('')
+
+  const onNameChange = (event) => {
+    setName(event.target.value)
+  }
+
   return (
 
     <form>
-      <label for='fName'>Please enter your first name:</label>
-      <input type='text' id='fName' name='fName'></input>
-      <label for='lastName'>Please enter your last name:</label>
-      <input type='text' id='lastName' name='lastName'></input>
+      <label htmlFor='name'>Please enter your first name:</label>
+      <input
+       type='text' 
+       id='name'      
+       onChange={ onNameChange }
+       value={name}
+      />
+
+      {/* <label for='lastName'>Please enter your last name:</label>
+      <input type='text' id='lastName' name='lastName'></input> */}
 
     </form>
   )
 }
  
 export default FormName
+
+

@@ -7,12 +7,12 @@ import FormName from './components/FormName'
 
 export const App = () => {
   return (
-    <>
-    <FormSelect />
+    <div className='container'>
+      <FormSelect />
 
-    <FormRadio />
+      <FormRadio />
 
-    <FormName />
-    </>
+      <FormName />
+    </div>
   )
 }

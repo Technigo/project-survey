@@ -1,19 +1,25 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 
 const FormSelect = () => {
 
+  const [fruit, setFruit] = useState('')
+
+  const onFruitChange = (event)=> {
+    setFruit(event.target.value)
+  }
+
   return (
     <div>
       <form>
-        <label for='something'>Pick your favorite fruit:</label>
-        <select id='something' name='something'>
-          <option value='' ></option>
-          <option value='Kiwi'>Kiwi</option>
-          <option value='Coconut'>Coconut</option>
-          <option value='Mango'>Mango</option>
-          <option value='Grapefruit'>Grapefruit</option>
-          <option value='Pineapple'>Pineapple</option>
+        <label htmlFor='fruit'>Pick your favorite fruit:</label>
+        <select id='fruit' onChange={onFruitChange} value={fruit}>
+          <option disabled ></option>
+          <option >Kiwi</option>
+          <option >Coconut</option>
+          <option >Mango</option>
+          <option >Grapefruit</option>
+          <option >Pineapple</option>
         </select>
       </form>
 
