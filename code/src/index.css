@@ -3,13 +3,13 @@ body {
   font-family: 'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./assets/background.jpg);
   background-size: auto 100vh;
   background-repeat: no-repeat;
   background-position-x: right;
   background-color: #161616;
+  height: 100vh;
+  background-image: url(./assets/background.jpg)
 }
-
 
 /* WELCOME SECTION */
 
@@ -63,6 +63,10 @@ body {
   outline: none;
   cursor: pointer;
   border-radius: 45px;
+}
+
+.back-button {
+  background-color: #ffff;
 }
 
 .next-button, .submit-button {
@@ -131,7 +135,16 @@ body {
 }
 
 
-@media (max-width: 414px) {
+@media (min-width: 300px) {
+
+  .body {
+    background-image: none;
+  }
+
+  .main {
+    background-image: url(./assets/mobile.jpg);
+    width: 100%;
+  }
 
   .welcome, .name-input, .location, .radio-age, .summary {
     border: 1px solid black;
@@ -140,19 +153,19 @@ body {
     justify-content: center;
     width: auto;
     align-items: center;
-    padding: 0 30px;
+    padding: 30% 30px;
     color: white;
 }
 
 .header-text, .name-header, .location-text, .radio-heading, .summary-heading {
-  font-size: 3rem;  
+  font-size: 2.5rem;  
   text-align: center;
 }
 
 .header-paragraph, .summary-paragraph {
-  font-size: 20px;
+  font-size: 1.5rem;
   text-align: center;
-  color: #161616;
+  color: #ffffff;
 
 }
 
@@ -163,10 +176,10 @@ body {
 .name-text {
   font-size: 20px;
   padding: 5px 0;
-  border: 1px solid #161616;
+  border: 1px solid #ffffff;
   box-shadow: none;
   text-align: center;
-  color: #161616;
+  color: #ffffff;
 }
 
 .dropdown-location {
@@ -178,18 +191,18 @@ body {
 .dropdown-menu {
   padding: 5px 10px;
   margin-bottom: 20px;
-  border: 1px solid #161616;
+  border: 1px solid #ffffff;
   box-shadow: none;
-  color: #161616;
+  color: #ffffff;
   align-self: center;
 }
 
 .age-btn {
-  color: #161616;
+  color: #ffffff;
 }
 
 .radio-container {
-  color: #161616;
+  color: #ffffff;
 }
 
 }
