@@ -1,16 +1,35 @@
 import React, { useState } from 'react';
 
-import WordAssoc from 'components/Cards/WordAssoc';
-import Statements from 'components/Cards/Statements';
-import Rorschach from 'components/Cards/Rorschach';
-import Summary from 'components/Cards/Summary';
-import Submission from 'components/Cards/Submission';
+import Card from 'components/Cards/Card';
 
 const defaultData = {
   answer1: '',
   answer2: '',
   answer3: ''
 };
+
+const questions = [
+  {
+    number: 1,
+    inputName: 'answer1',
+    type: 'text',
+    question: 'What???'
+  },
+  {
+    number: 2,
+    inputName: 'answer2',
+    type: 'radio',
+    question: 'What???',
+    options: ['Strongly Agree', 'Agree', 'No opinion', 'Disagree', 'Strongly Disagree']
+  },
+  {
+    number: 3,
+    inputName: 'answer3',
+    type: 'select',
+    question: 'What???',
+    options: ['Strongly Agree', 'Agree', 'No opinion', 'Disagree', 'Strongly Disagree']
+  }
+];
 
 const Form = () => {
   const [formData, setForm] = useState(defaultData);
@@ -20,21 +39,20 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setEndState(true)
-  }
+    setEndState(true);
+  };
 
   return (
     <form onSubmit={handleSubmit}>
-      {/* <p>{formData.answer1}</p> */}
-      <WordAssoc {...inputProps} number="1" />
-      {/* <p>{formData.answer2}</p> */}
-      <Statements {...inputProps} number="2" />
-      {/* <p>{formData.answer3}</p> */}
-      <Rorschach {...inputProps} number="3" />
-      <Submission />
-      {endState && (
-        <Summary data={formData} />
-      )}
+      {questions.map((question) => (
+        <Card
+          contentType="question"
+          key={`question${question.number}`}
+          {...question}
+          {...inputProps} />
+      ))}
+      <Card contentType="submission" />
+      {endState && <Card contentType="summary" data={formData} />}
     </form>
   );
 };

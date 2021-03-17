@@ -1,0 +1,14 @@
+/* --------------------------- WRAPPER & ALIGNMENT -------------------------- */
+
+.card {
+  display: flex;
+  flex-flow: column wrap;
+  margin: 24px;
+  padding: 20px;
+  border-radius: 10px;
+  color: var(--primary);
+  box-shadow: 2px 4px 10px black;
+  align-items: stretch;
+  background-color: var(--darkShade);
+}
+

@@ -1,14 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Share+Tech+Mono&display=swap');
+
+:root {
+  --primary: #00ff41;
+  --secondary: #008f11;
+  --darkShade: #333035;
+  --darkAlt: #282828;
+  --darkAccent: #003b00;
+  --error: #ffb000;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  background-color: var(--darkAlt);
+  font-family: 'Courier Prime', monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
+/* ------------------------------- TYPOGRAPHY ------------------------------- */
 
+h1,
+h3,
+h4 {
+  font-family: 'Share Tech Mono', monospace;
+  font-weight: normal;
+  text-align: center;
+}
+h1 {
+  font-size: 36px;
+  margin-bottom: 0;
+}
+h3 {
+  font-size: 20px;
+  margin-bottom: 0;
+  padding-bottom: 1em;
+  border-bottom: 1px solid var(--primary);
+}
+h4 {
+  font-size: 18px;
+}
+p {
+  font-size: 14px;
+}
