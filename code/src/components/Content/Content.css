@@ -13,9 +13,15 @@
   padding: 10px 20px;
 }
 
+.button:hover {
+  background-color: var(--primary);
+  color: var(--darkAlt);
+}
+
 .image {
-  width: 100%;
-  height: 100%;
+  align-self: center;
+  width: 50vw;
+  height: auto;
 }
 
 /* Class to handle any content that needs to be hidden */
