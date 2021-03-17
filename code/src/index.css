@@ -11,3 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+/* DECLARED CLASSES IN COMPONENTS
+
+FORM
+.form // form container
+.question-container // div
+.question // h2 with quetsion from questionnaire JSON
+
+QUESTION
+.question // h2 containing question
+
+RADIO INPUT
+.radio-input // section container
+.radio-button // input tag
+
+SELECT INPUT
+.select-input // section container
+.select-dropdown // input tag
+
+*/

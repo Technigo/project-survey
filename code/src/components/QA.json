@@ -1,0 +1,38 @@
+{
+    "form_content": {
+        "url": "https://www.notion.so/Stand-up-5a7b232110d64f03986c0e71a1a0c410",
+        "questions": [
+                    {   "id": "01",
+                        "question": "What have you achieved since yesterday?",   
+                        "alternative":[ 
+                            "I did everything I set out to do!", 
+                            "I carried out most of my plan!",
+                            "I seized the day and did other stuff!" 
+                        ]
+                    }, 
+                    {   "id": "02",
+                        "question": "What will you focus on today?", 
+                        "alternative": [ 
+                            "Yes",
+                            "No",
+                            "Maybe" 
+                        ]
+                    }, 
+                    {   "id": "03",
+                        "question": "Do you have any blockers?", 
+                        "alternative":[ 
+                            "Yes", 
+                            "No" 
+                        ]
+                    }, 
+                    {   "id": "04",
+                        "question": "Do you need help with something?", 
+                        "alternative":[ 
+                            "I'm stuck and really need my team in teamroom asap!", 
+                            "I just have a quick question!", 
+                            "Actually, I'm all done!" 
+                        ]
+                    }
+        ]
+    }
+}
