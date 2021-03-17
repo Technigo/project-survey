@@ -1,9 +1,26 @@
+
 import React from 'react'
 
+import Intro from './components/Intro'
+import Form from './components/Form'
+
 export const App = () => {
+
+  // let food;
+  // let name;
+
+  // const [state, setState] = useState('start')
+
   return (
-    <div>
-      Find me in src/app.js!
+    <>
+    <div className="intro">
+      <Intro/>
     </div>
+    {/* <div className="button">
+    </div> */}
+    {/* <div className="Form">
+    <Form/>
+  </div>   */}
+    </>
   )
 }
