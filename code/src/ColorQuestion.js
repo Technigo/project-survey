@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 const colors = [
   'red',
@@ -12,22 +12,26 @@ const colors = [
   'white',
 ]
 
-const ColorQuestion = () => {
+const ColorQuestion = (props) => {
 
-  const [color, setColor] = useState('');
+  const {color, setColor} = props;
+  const onColorChange = (event) => {
+    console.log(`Color: ${event.target.value}`)
+    setColor(event.target.value);
+  }
   return (
     <>
       <p>My favourite colour is: </p>
       {colors.map((shade) => (
         <div>
-          <label key={shade} for="color">
+          <label key={shade} htmlFor="color">
           </label>
           <input
             id="color"
             type="radio"
             name="colorButton"
             value={shade}
-            onChange={event => setColor(event.target.value)}
+            onChange={onColorChange}
             checked={color === shade}
             />
         {shade}

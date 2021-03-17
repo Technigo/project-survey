@@ -1,18 +1,21 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const TelephoneQuestion = () => {
+const TelephoneQuestion = (props) => {
 
-  const [telephone, setTelephone] = useState('');
+  const {telephone, setTelephone} = props;
+  const onTelephoneChange = (event) => {
+    console.log(`Telephone: ${event.target.value}`);
+    setTelephone(event.target.value)
+  };
   return (
     <div className="text-input">
-      <label for="telephone">My Telephone Number:</label>
+      <label htmlFor="telephone">My Telephone Number:</label>
       <input 
         type="text" 
         id="telephone" 
-        onChange={event => setTelephone(event.target.value)}
+        onChange={onTelephoneChange}
         value={telephone}
       />
-      
     </div>
 
   )

@@ -1,12 +1,16 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-const PersonalityQuestion = () => {
-
-  const [personality, setPersonality] = useState('');
+const PersonalityQuestion = (props) => {
+  const {personality, setPersonality} = props;
+  const onPersonalityChange = (event) => {
+    console.log(`Personality: ${event.target.value}`);
+    setPersonality(event.target.value);
+  };
+  
   return (
     <>
     <select
-    onChange={event => setPersonality(event.target.value)}
+    onChange={onPersonalityChange}
     value={personality}
     >
       <option value="">I am:</option>

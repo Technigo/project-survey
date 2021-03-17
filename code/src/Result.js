@@ -1,14 +1,14 @@
 import React from 'react'
 
-const Result = () => {
+const Result = (props) => {
   return (
     <>
     <h1 className="h1">Tadaaa!</h1>
     <div className="business-card">
-      <h2 className="category-cute">name</h2>
-      <h2 className="category-cute">occupation</h2>
-      <h2 className="category-cute">e-mail</h2>
-      <h2 className="category-cute">telephone</h2>
+      <h2 className="category-cute">{props.name}</h2>
+      <h2 className="category-cute">{props.occupation}</h2>
+      <h2 className="category-cute">{props.email}</h2>
+      <h2 className="category-cute">{props.telephone}</h2>
       
     </div>
 

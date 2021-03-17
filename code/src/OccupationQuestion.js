@@ -1,15 +1,18 @@
-import React, {useState} from 'react'
+import React from 'react';
 
-const OccupationQuestion = () => {
-
-  const [occupation, setOccupation] = useState('');
+const OccupationQuestion = (props) => {
+  const {occupation, setOccupation} = props
+  const onOccupationChange = (event) => {
+    console.log(`Occupation: ${event.target.value}`);
+    setOccupation(event.target.value)
+  }; 
   return (
     <div className="text-input">
-      <label for="occupation">My occupation is:</label>
+      <label htmlFor="occupation">My occupation is:</label>
       <input 
         type="text" 
         id="occupation" 
-        onChange={event => setOccupation(event.target.value)}
+        onChange={onOccupationChange}
         value={occupation}
       />
     </div>
