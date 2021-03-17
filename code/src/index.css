@@ -3,36 +3,40 @@ body {
   font-family: 'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-size: auto 100vh;
-  background-repeat: no-repeat;
-  background-position-x: right;
-  background-color: #161616;
-  height: 100vh;
-  background-image: url(./assets/background.jpg)
+  overflow: hidden;
 }
 
-/* WELCOME SECTION */
+.main {
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  background-image: url(./assets/mobile.jpg);
+  height: 100vh;
+  padding: 30% 7%;
+  background-repeat: no-repeat;
+}
+
+/* HEADERS, PARAGRAPHS */
 
 .welcome, .name-input, .location, .radio-age, .summary {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    width: 55%;
-    align-items: flex-start;
-    padding: 150px 0 0 70px;
-    color: white;
+  border: 1px solid black;
+  color: white;
 }
 
 .header-text, .name-header, .location-text, .radio-heading, .summary-heading {
-  font-size: 50px;  
+  font-size: 48px;  
+  line-height: 48px;
 }
 
 .friend-match {
-  color: #C46E46;}
+  color: #C46E46;
+}
 
 .header-paragraph, .summary-paragraph {
   font-size: 20px;
 }
+
+/* BUTTONS */
 
 .start-btn {
   font-family: 'Karla', sans-serif;
@@ -44,14 +48,13 @@ body {
   outline: none;
   cursor: pointer;
   border-radius: 45px;
+  background-color: #EFEFEF;
 }
 
 .start-btn:hover {
   background-color: #C46E46;
   color: #ffff;
 }
-
-/* NAME SECTIONS */
 
 .back-button, .next-button, .submit-button {
   font-family: 'Karla', sans-serif;
@@ -84,6 +87,7 @@ body {
   color: #ffff;
 }
 
+
 .name-text, .dropdown-menu {
   background-color: transparent;
   font-size: 30px;
@@ -94,7 +98,20 @@ body {
   border: none;
   outline: none;
   box-shadow: rgb(255 255 255 / 50%) 0px 1px;
+  text-align: center;
 }
+
+.radio-container {
+  display: block;
+  position: relative;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+  text-align: center;
+}
+
+/* RADIO BUTTONS */
 
 .radio-container {
   display: block;
@@ -122,6 +139,7 @@ body {
   width: 25px;
   background-color: #eee;
   border-radius: 50%;
+  margin-left: 35%;
 }
 
 /* On mouse-over, add a grey background color */
@@ -134,78 +152,75 @@ body {
   background-color: #C46E46;
 }
 
-
-@media (min-width: 300px) {
-
-  .body {
-    background-image: none;
+@media (min-width: 720px) {
+  .main {
+    background-size: 100%;
+    padding-top: 15%;
   }
 
+  .header-text, .name-header, .location-text, .radio-heading, .summary-heading {
+    font-size: 80px;  
+    line-height: 80px;
+  }
+
+  .header-paragraph, .summary-paragraph {
+    font-size: 30px;
+  }
+
+  .start-btn, .back-button, .next-button, .submit-button {
+    font-size: 40px;
+    padding: 25px 40px;
+    margin-top: 30px;
+  }
+
+  .back-button, .next-button, .submit-button {
+    margin-top: 80px;
+  }
+
+  .radio-container {
+    padding-left: 0;
+    font-size: 35px;
+  }
+  
+  /* Custom radio button */
+  .checkmark {
+    height: 30px;
+    width: 30px;
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1200px) {
   .main {
-    background-image: url(./assets/mobile.jpg);
-    width: 100%;
+    background-image: url(./assets/background.jpg);
+    background-size: auto 100vh;
+    background-position-x: right;
+    padding: 5% 3%;
+    justify-content: flex-start;
+    background-color: #161616;
   }
 
   .welcome, .name-input, .location, .radio-age, .summary {
-    border: 1px solid black;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    width: auto;
-    align-items: center;
-    padding: 30% 30px;
-    color: white;
+    width: 700px;
+  }
 }
 
-.header-text, .name-header, .location-text, .radio-heading, .summary-heading {
-  font-size: 2.5rem;  
-  text-align: center;
+@media (min-width: 1660px) {
+  .main {
+    background-image: url(./assets/background.jpg);
+    background-size: auto 100vh;
+    background-position-x: right;
+    padding: 7% 15%;
+    justify-content: flex-start;
+    background-color: #161616;
+  }
+
+  .welcome, .name-input, .location, .radio-age, .summary {
+    width: 700px;
+  }
 }
 
-.header-paragraph, .summary-paragraph {
-  font-size: 1.5rem;
-  text-align: center;
-  color: #ffffff;
 
-}
-
-.name-input-field {
-  text-align: center;
-}
-
-.name-text {
-  font-size: 20px;
-  padding: 5px 0;
-  border: 1px solid #ffffff;
-  box-shadow: none;
-  text-align: center;
-  color: #ffffff;
-}
-
-.dropdown-location {
-  justify-content: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.dropdown-menu {
-  padding: 5px 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ffffff;
-  box-shadow: none;
-  color: #ffffff;
-  align-self: center;
-}
-
-.age-btn {
-  color: #ffffff;
-}
-
-.radio-container {
-  color: #ffffff;
-}
-
-}
 
 
 
