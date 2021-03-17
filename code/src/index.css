@@ -200,6 +200,10 @@ body {
   font-weight: 900;
 }
 
+/* MEDIA QUERRIES*/
+
+/*Tablet*/
+
 @media (min-width: 668px) {
   .main-container {
     padding: 100px 30px;
@@ -270,6 +274,52 @@ body {
 
   .summary-list-item {
     margin-bottom: 20px;
+  }  
+}
+
+/*Desktop*/
+
+@media (min-width: 1024px) {
+  .main-container {
+    padding: 130px 50px;
   }
-  
+
+  .header {
+    font-size: 48px;
+    padding-bottom: 40px;
+  }
+
+  .small-text {
+    font-size: 24px;
+    padding-bottom: 30px;
+  }
+
+  .question {
+    font-size: 34px;
+  }
+
+  .radio-buttons {
+    line-height: 40px;
+  }
+
+  .button-container {
+    width: 460px;
+  }
+
+  .select-format {
+    margin: 40px 0 40px 0;
+  }
+
+  .text-input-format {
+    margin: 40px 0 40px 0;
+  }
+
+  .submit-button {
+    font-size: 20px;
+    padding: 12px 20px
+  }
+
+  .summary {
+    max-width: 500px;
+  }
 }
