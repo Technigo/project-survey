@@ -33,7 +33,7 @@ const QuestionProfessionCheckbox = ({
   return (
     <article className="form-question-5">
       {/* Q */}
-      <p className="form-question" tabIndex="0">
+      <p className="form-question" tabindex="0">
         What kind of profession do you associate yourself with? (Please pick 2 as they are made to overlap a little! <span role="img" aria-label="smiling emoji with one eye blinking">😉</span>)
       </p>
 
