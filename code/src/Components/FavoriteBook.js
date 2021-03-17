@@ -11,7 +11,7 @@ const FavoriteBook = ({text}) => {
   return (
 
     <div className="favorite-book-container">
-      <div className="inner-container">
+      <div className="inner-container" id="">
         <label htmlFor='favoritebook'><h2>{text}</h2>
         <input
           type="text"

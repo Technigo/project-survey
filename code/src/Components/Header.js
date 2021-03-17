@@ -7,7 +7,7 @@ const Header = () => {
       <div className="header">
         <h1>Welcome to this survey!</h1>
         <div>
-          <p>Please answer some questions about books:</p>
+          <p>Want to answer a few questions about books?</p>
         </div>
         <button className="start-button"><a href='#many'>Sure!</a></button>
      </div>

@@ -1,10 +1,9 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 
 import FavoriteBook from 'Components/FavoriteBook';
 import HowManyBooks from 'Components/HowManyBooks';
 import FavoriteGenre from 'Components/FavoriteGenre';
-import SubmitButton from 'Components/SubmitButton';
 import Header from 'Components/Header'
 
 
@@ -33,8 +32,6 @@ export const App = () => {
         <section className="favorite" id="favorite">
           <FavoriteBook text="Your favorite book:" />
         </section>
-
-          {/* <SubmitButton /> */}
       </form>
     </div>
   )

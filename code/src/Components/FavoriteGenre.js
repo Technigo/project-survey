@@ -4,10 +4,10 @@ import React, {useState} from 'react';
 
 /*RADIO BUTTONS*/
 
-const bookGenre = ["Biography", "Romance", "Fantacy", "Detective novel"]
+const bookGenre = ["Biography", "Romance", "Fantacy", "Detective"]
 
 const FavoriteGenre = ({text}) => {
-  const [genre, setGenre] = useState("")
+  const [favoriteGenre, setFavoriteGenre] = useState("")
 
   return (
     <div className="favorite-genre-container">
@@ -16,11 +16,12 @@ const FavoriteGenre = ({text}) => {
           {bookGenre.map((genre) => (
           <label key={genre}>
             <input
+            className="label-radio"
             type="radio"
             name="test"
             value={genre}
-            onChange={(event) => setGenre(event.target.value)}
-            // checked={bookGenre === genre}
+            onChange={(event) => setFavoriteGenre(event.target.value)}
+            checked={favoriteGenre === genre}
             />
             {genre}
           </label>

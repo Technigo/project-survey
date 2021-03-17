@@ -131,11 +131,11 @@ color: black;
   background-position: center;
 }
 
-.label{
-  margin:5px;
+
+
+.label-radio{
+  padding:10px;
 }
-
-
 
 html {
   scroll-behavior: smooth;
