@@ -1,40 +1,33 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const ingredients = [
-  "salmon",
-  "tuna",
-  "shrimp",
-  "crabstick",
-  "avocado",
-  "egg"
-];
+const ingredients = ["salmon", "tuna", "shrimp", "crabstick", "avocado", "egg"]; 
 
-const Question3 = () => {
-  const [ingredient, setIngredient] = useState('');
+const Question3 = ({ ingredient, callbackOnChange }) => {
   
-  const handleChange = (e) => {
-    setIngredient(e.target.value);
+  const handleChange = (e) => {     
+    callbackOnChange(e.target.name, e.target.value);
   };
 
   return (
     <>
-      <section>
-        <p>Favourite ingredient in sushi?</p>
+      <fieldset>
+        <legend>Favourite ingredient in sushi?</legend>
 
         {ingredients.map((ingred) => (
           <label key={ingred} htmlFor={ingred}>
             <input 
-              id={ingred}
+              id={ingred}   
               type="radio"
               value={ingred}
               onChange={handleChange}
-              checked={ingredient === ingred}
+              name="ingredient"
+              checked={ingred === ingredient}
               required 
             />
             {ingred}
           </label>
         ))}
-      </section>
+      </fieldset>
     </>
   )
 }

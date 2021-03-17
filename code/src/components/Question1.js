@@ -1,24 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Question1 = () => {
-  const [name, setName] = useState('');
+const Question1 = ({ name, callbackOnChange }) => {
 
   const handleChange = (e) => {
-    setName(e.target.value);
+    callbackOnChange(e.target.name, e.target.value);
   };
 
   return (
     <>
-      <section>
+      <div>
         <label htmlFor="name">Your name: </label>
         <input
           id="name"
           type="text"
           onChange={handleChange}
-          value={name} 
+          value={name}
+          name="name" 
           required
         />
-      </section>
+      </div>
     </>
   );
 };

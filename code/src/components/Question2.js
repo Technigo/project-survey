@@ -1,21 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Question2 = () => {
-  const [sushi, setSushi] = useState('');
+const Question2 = ({ sushi, callbackOnChange }) => {
 
   const handleChange = (e) => {
-    setSushi(e.target.value);
+    callbackOnChange(e.target.name, e.target.value);
   };
 
   return (
     <>
-      <section>
+      <div>
         <label htmlFor="sushi">Favourite sushi? </label>
         <select 
           id="sushi"
           onChange={handleChange}
           value={sushi}
           required
+          name="sushi"
         >
           <option value="">Select sushi</option>
           <option value="maki">Maki</option>
@@ -25,7 +25,7 @@ const Question2 = () => {
           <option value="nigiri">Nigiri</option>
           <option value="gunkan">Gunkan</option>
         </select>
-      </section>
+      </div>
     </>
   )
 }

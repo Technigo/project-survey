@@ -3,12 +3,12 @@ import React from 'react';
 const Submit = () => {
   return (
     <>
-    <section>
+    <div>
       <input 
         type="submit"
         value="Submit"
       />
-    </section>
+    </div>
     </>
   );
 };
