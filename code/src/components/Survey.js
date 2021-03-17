@@ -3,6 +3,9 @@ import React, { useState } from 'react'
 import Summary from './Summary'
 import InputRadioButton from 'components/InputRadioButton'
 import Button from 'components/Button'
+import InputDropDown from 'components/InputDropDown'
+import InputText from 'components/InputText'
+import InputCheckBox from 'components/InputCheckBox'
 
 const Survey = () => {
   
@@ -59,117 +62,71 @@ const Survey = () => {
           <h1 className='header'>READING HABITS SURVEY</h1>
           <p>Time to complete: 10 minutes</p>
           <div className="start-button-container">
-            <button 
-              onClick={onNextQuestionChange} 
-              className='start-button' 
-              type='button'>
-                Tell us about your reading habits
-            </button>
-            <p className='small-text'>click the <span className='highlight'>Button</span></p>
+            <Button onChangeDirection={onNextQuestionChange} textDisplay={'Start the survey'} className={'start-button'} />
           </div>
         </section>
         )}
 
         {/* First question */}
-        {question === 1 &&(
+        {question === 1 && (
           <section className='question'>
             <h2>How much do you enjoy reading?</h2>
             {
               enjoyReadingArray.map(item =>
-                <InputRadioButton item={item} onEnjoyReadingChange={onEnjoyReadingChange} />
+                <InputRadioButton 
+                  item={item} 
+                  onEnjoyReadingChange={onEnjoyReadingChange} 
+                />
               )
             }
             <div className="button-container">
-              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} />
-              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} />
+              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
+              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
             </div>
           </section>
         )}
 
         {/* Second question */}
-        {question === 2 &&(
+        {question === 2 && (
           <section className='question'>
-              <label>
-                <h2>Which format do you prefer reading the most?</h2>
-                <select value={readingFormat} onChange={onReadingFormatChange}>
-                    <option disabled></option>
-                    <option value="Electronic">Electronic</option>
-                    <option value="Print">Print</option>
-                    <option value="Audio Books">Audio books</option>
-                    <option value="No preference">No preference</option>
-                </select>
-              </label>
+            <InputDropDown 
+              question={'Which format do you prefer reading the most?'}
+              dropDownvalue={readingFormat}
+              onChangeFunction={onReadingFormatChange}
+            />
             <div className="button-container">
-            <button 
-              onClick={onPreviousQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Go Back
-            </button>
-            <button 
-              onClick={onNextQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Continue
-            </button>
+              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
+              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
           </div>
           </section>
         )}
 
         {/* Third question */}
-        {question === 3 &&(
+        {question === 3 && (
           <section className='question'>
-              <label htmlFor={book}>
-                <h2>What is your favorite book?</h2>
-                <input
-                  type='text'
-                  id={book}
-                  value={book}
-                  onChange={onBookChange}
-                />
-              </label>
+            <InputText 
+              question={'What is your favorite book?'}
+              inputTextValue={book}
+              onChangeFunction={onBookChange}
+            />
             <div className="button-container">
-            <button 
-              onClick={onPreviousQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Go Back
-            </button>
-            <button 
-              onClick={onNextQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Continue
-            </button>
+              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
+              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
           </div>
           </section>
         )}
 
         {/* Fourth question */}
-        {question === 4 &&(
+        {question === 4 && (
           <section className='question'>
-              <label htmlFor='check'>
-              <h2>Check this box if you agree to add your favorite book to our list of recommended books.</h2>
-                <input
-                  type='checkbox'
-                  id='check'
-                  onChange={onIsCheckedChange}
-                  checked={isChecked}
-                />
-              </label>
+            <InputCheckBox 
+              question={'Check this box if you agree to add your favorite book to our list of recommended books.'}
+              onChangeFunction={onIsCheckedChange}
+              isChecked={isChecked}
+            />
             <div className="button-container">
-            <button 
-              onClick={onPreviousQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Go Back
-            </button>
-            <button 
-              onClick={onNextQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Continue
-            </button>
+              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
+              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
           </div>
           </section>
         )}
@@ -178,12 +135,15 @@ const Survey = () => {
         {question === 5 && (
           <section className='sumbit-page'>
           <h2 className='header'>Ready to submit?</h2>
-            <button 
+          <div className="button-container">
+              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
+              <button 
               onSubmit={handleSubmit} 
               className='submit-button' 
               type='submit'>
                 Submit
             </button>
+          </div>
         </section>
         )}
       </form>

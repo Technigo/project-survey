@@ -32,14 +32,8 @@ body {
   align-items: center;
 }
 
-
 .start-button-container {
-  padding-top: 50px;
-  font-family: 'Lato', sans-serif;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
+  padding-top: 50px;  
 }
 
 .start-button {
@@ -48,15 +42,11 @@ body {
   font-family: 'Lato', sans-serif;
   font-size: 16px;
   font-weight: bold;
-  padding: 15px;
+  padding: 15px 25px;
   border-radius: 40px;
   border: none;
   box-shadow: -4px 4px 2px rgba(0, 0, 0, 0.5);
   cursor: pointer;
-}
-
-.highlight {
-  font-weight: 700;
 }
 
 .small-text {

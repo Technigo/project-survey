@@ -1,11 +1,11 @@
 import React from 'react'
 
 
-const Button = ({onChangeDirection, textDisplay}) => {
+const Button = ({onChangeDirection, textDisplay, className}) => {
   return (
     <button 
       onClick={onChangeDirection} 
-      className='button'
+      className={className}
       type='button'>
         {textDisplay}
     </button>
