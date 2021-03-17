@@ -7,6 +7,12 @@ export const App = () => {
     <>
       <Header />
       <Form />
+      {/* <div className="summary">
+        <p>Name: </p>name={props.name}
+        <p>Genre: {genre}</p>
+        <p>Language: {language}</p>
+        <p>E-mail: {email}</p>
+      </div> */}
     </>
   )
 }

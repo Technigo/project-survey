@@ -7,6 +7,28 @@ export const Form = (props) => {
   const [email, setEmail] = useState('')
   const languages = [' english', ' swedish', ' both'] // array for radio-buttons under language
 
+  const isFormComplete = () => {
+    if (name === '') {
+      return false
+    }
+
+    if (genre === '') {
+      return false
+    }
+
+    if (language === '') {
+      return false
+    }
+
+    if (email === '') {
+      return false
+    }
+
+    if (isFormComplete()) {
+      console.log(`Survey complete!`)
+    }
+  }
+
   return (
     <div className="form-container">
       <form>
@@ -15,12 +37,9 @@ export const Form = (props) => {
           <input
             id="name"
             type="text"
-            value={name}
+            value={props.name}
             onChange={(event) => setName(event.target.value)}
           />
-          
-          {/* if  
-          <p>Hello {name}!</p> */}
         </div>
 
         <div className="form-container-sections">
@@ -66,14 +85,9 @@ export const Form = (props) => {
             />
         </div>
 
-        
-
-        {/* <div className="summary">
-          <p>Name: {name}</p>
-          <p>Genre: {genre}</p>
-          <p>Language: {language}</p>
-          <p>E-mail: {email}</p>
-        </div> */}
+        <div className='submit-container'>
+          <button className='submit-button' type='submit' form=''></button>
+        </div>
 
       </form>
     </div>
