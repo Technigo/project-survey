@@ -1,84 +1,129 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
 import QuestionCitySelect from './QuestionCitySelect'
 import QuestionAgeRadio from './QuestionAgeRadio'
 import QuestionStageArtRadio from './QuestionStageArtRadio'
 import TextInputProposal from './TextInputProposal'
 import QuestionProfessionCheckbox from './QuestionProfessionCheckbox'
+//import NextQuestionButton from './NextQuestionButton'
+import Summary from './Summary'
 
 const Form = () => {
-  const [page, setPage] = useState('firstQuestion');
+  const [page, setPage] = useState(0)
+  const [showSummary, setShowSummary] = useState(false)
   const [inhabitants, setInhabitants] = useState('') //should it's initial value be set to 5000 (First option) Think it is fine!
-  const [ageCategory, setAgeCategory] = useState('15-25') //same here
-  const [stageArtCategory, setStageArtCategory] = useState("I'm for experimental shit, I need to see something I can not immediately understand")
+  const [ageCategory, setAgeCategory] = useState('') //same here
+  const [stageArtCategory, setStageArtCategory] = useState('') //what is the value of a radiobutton?
   const [proposal, setProposal] = useState('');
   const [professions, setProfessions] = useState('')
 
+  const onInhabitantsChange = (event) => {
+    setInhabitants(event.target.value);
+  }
+
+  const onAgeChange = (event) => {
+    setAgeCategory(event.target.value)
+  }
+
+  const onStageArtChange = (event) => {
+    setStageArtCategory(event.target.value)
+  }
+
+  const onProposalChange = (event) => {
+    setProposal(event.target.value)
+  }
+  
+  const onProfessionChange = (professionValue) => {
+    if (professions.includes(professionValue)) {
+      setProfessions(professions.filter((item) => item !== professionValue))
+    } else {
+      setProfessions([...professions, professionValue])
+    }
+  }
+//THIS MAKS CHANGED WITH ME ::: it is not listening to any user input it is simply a function internal to the code
+  const onPageChange = (pagenumber) => {
+    setPage(pagenumber)
+  }
+
+//  const onNextQuestion = () => setPage(page +1);
+
   const handleSubmit = (event) => {
     event.preventDefault();
-//    setShowSummary(true) ----> add this later when I did the summary. 
+    setShowSummary(true)
   }
+
   console.log(page)
   return (
     <section className="form-container">
+      {!showSummary ? (
         <form onSubmit={handleSubmit}>
 
-        {page === 'firstQuestion' && ( 
+        {page === 0 && ( 
             <div>
             <QuestionCitySelect
               inhabitants={inhabitants}
-              setInhabitants={setInhabitants}
+              setInhabitants={onInhabitantsChange}
               page={page}
-              setPage={setPage}
+              setPage={onPageChange}
             />
             </div>
         )}
 
-        {page === 'secondQuestion' && (
+        {page === 1 && (
             <div>
             <QuestionAgeRadio
               ageCategory={ageCategory}
-              setAgeCategory={setAgeCategory}
+              setAgeCategory={onAgeChange}
               page={page}
-              setPage={setPage}
+              setPage={onPageChange}
             />
             </div>
         )}
 
-        {page === 'thirdQuestion' && (
+        {page === 2 && (
             <div>
             <QuestionStageArtRadio
               stageArtCategory={stageArtCategory}
-              setStageArtCategory={setStageArtCategory}
+              setStageArtCategory={onStageArtChange}
               page={page}
-              setPage={setPage}
+              setPage={onPageChange}
             />
             </div>
         )}
 
-        {page === 'fourthQuestion' && (
+        {page === 3 && (
             <div>
             <TextInputProposal
               proposal={proposal}
-              setProposal={setProposal}
+              setProposal={onProposalChange}
               page={page}
-              setPage={setPage}
+              setPage={onPageChange}
             />
             </div>
         )}
 
-        {page === 'fifthQuestion' && (
+        {page === 4 && (
             <div>
             <QuestionProfessionCheckbox
               professions={professions}
-              setProfessions={setProfessions}
+              setProfessions={onProfessionChange}
               page={page}
-              setPage={setPage}
+              setPage={onPageChange}
             />
             </div>
         )}
-      </form>
-    </section>
+        </form>
+      ):
+      (
+      <Summary 
+        inhabitants={inhabitants}
+        ageCategory={ageCategory}
+        stageArtCategory={stageArtCategory}
+        proposal={proposal}
+        professions={professions}
+      />
+      )}
+  </section>
   )
 }
 

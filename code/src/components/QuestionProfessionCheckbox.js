@@ -1,23 +1,17 @@
 import React from 'react';
 
-//import SubmitButton from './SubmitButton'
-//import PreviousButton from './PreviousButton'
+import NextQuestionButton from './NextQuestionButton'
 import Popup from './Popup'
-
 
 const QuestionProfessionCheckbox = ({
   professions,
   setProfessions,
   page,
   setPage,
+  onProfessionChange,
+  onNextQuestion,
+  message
 }) => {
-  const onProfessionChange = (professionValue) => {
-    if (professions.includes(professionValue)) {
-      setProfessions(professions.filter((item) => item !== professionValue));
-    } else {
-      setProfessions([...professions, professionValue]);
-    }
-  };
 
   const professionGroup = [
     'Public sector',
@@ -40,7 +34,7 @@ const QuestionProfessionCheckbox = ({
     <article className="form-question-5">
       {/* Q */}
       <p className="form-question" tabIndex="0">
-        What kind of profession do you associate yourself with? (Please pick 2 as they are made to overlap a little! 😉)
+        What kind of profession do you associate yourself with? (Please pick 2 as they are made to overlap a little! <span role="img" aria-label="smiling emoji with one eye blinking">😉</span>)
       </p>
 
       {/* A */}
@@ -64,9 +58,15 @@ const QuestionProfessionCheckbox = ({
           />
         )}
       </div>
-      {/* Navigation buttons ---> ToDO: add Submit and Previous button*/}
       <div className="buttons__wrapper">
-
+      <NextQuestionButton
+        page={page}
+        setPage={setPage}
+        currentState={professions}
+        defaultState=""
+        message="Please choose your overlapping professions first!"
+        onClick={onNextQuestion}
+        />
       </div>
     </article>
   );

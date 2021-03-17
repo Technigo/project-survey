@@ -1,20 +1,19 @@
 import React from 'react'
 
-//Q: Line 34 aria-label={category} - is this how I would write it? 
 import NextQuestionButton from './NextQuestionButton'
 
-const QuestionAgeRadio = () => ({
-  ageCategory,
-  setAgeCategory,
+const QuestionAgeRadio = ({
+  ageCategory, 
+  setAgeCategory, 
   page,
   setPage,
-}) => {
-  const onAgeChange = (event) => {
-    setAgeCategory(event.target.value)
-  }
+  onAgeChange,
+  onNextQuestion,
+  message
+}) => {  
 
   const age = ['15-25', '26-35', '36-45', '46-65', '65+']
-
+  
   return (
     <article className="form-question-2">
       {/* Q */}
@@ -24,30 +23,30 @@ const QuestionAgeRadio = () => ({
 
       {/* A */}
       <div className="question-content-container">
-        {age.map((category) => (
-          <span key={category} className="form-radiobuttons">
+        {age.map((age) => (
+          <span key={age} className="form-radiobuttons">
             <input
-              id={category}
+              name={age}
+              id={age}
+        //    value={category} ---> not needed for radiobuttons as they are static
               type="radio"
-              value={category}
-              onChange={onAgeChange}
-              checked={ageCategory === category}
+              onChange={setAgeCategory}
               className="form-radiobuttons"
             />
-            <label htmlFor={category} key={category} aria-label={category}>
-              <span className="form-radiobutton-input">{category}</span>
+            <label htmlFor={age} aria-label={age} tabIndex="0">
+              <span className="form-radiobutton-input">{age}</span> 
             </label>
           </span>
         ))}
       </div>
       <div className="buttons-container">
         <NextQuestionButton
-          whatQuestionNext="thirdQuestion"
           page={page}
           setPage={setPage}
           currentState={ageCategory}
-          defaultState=""
+          defaultState=''
           message="Please select your age first!"
+          onClick={onNextQuestion} //Change this?
         />
       </div>
     </article>

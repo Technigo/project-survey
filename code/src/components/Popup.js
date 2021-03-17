@@ -1,11 +1,10 @@
 import React from 'react';
 
-//change classNames later****
-const Popup = ({ message, classNames }) => {
+const Popup = ({ message, className }) => {
   return (
     <span className="form-popup-container">
-      <p className={classNames}>{message}</p>
-      <span className="form-popup-tag" />
+      <p className={className}>{message}</p>
+      <span className="form-popup-panel" />
     </span>
   );
 };

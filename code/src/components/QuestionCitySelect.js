@@ -1,16 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 import NextQuestionButton from './NextQuestionButton'
-import Popup from './Popup'
 
-
-const QuestionCitySelect = () => {
-  const [inhabitants, setInhabitants] = useState("5000")
-  const [page, setPage] = useState('firstQuestion')
-
-  const onInhabitantsChange = (event) => {
-    setInhabitants(event.target.value);
-}
+const QuestionCitySelect = ({
+  inhabitants, 
+  setInhabitants, 
+  page,
+  setPage,
+  onInhabitantsChange,
+  onNextQuestion,
+  message
+}) => {  
 
   return (
     <article className="form-question-1">
@@ -21,7 +21,8 @@ const QuestionCitySelect = () => {
 
       {/* A */}
       <div className="question-container">
-        <select id="inhabitants" className="dropdown" value={inhabitants} onChange={onInhabitantsChange}>
+        <select id="inhabitants" className="dropdown" value={inhabitants} onChange={setInhabitants}>
+          <option disabled></option>
           <option value="5000">Less than 5000</option>
           <option value="5000-25000">5000 - 25 000</option>
           <option value="25000-100000">25 000 - 100 000</option>
@@ -29,15 +30,14 @@ const QuestionCitySelect = () => {
           <option value="500000">More than 500 000</option>
         </select>
       </div>
-      {/* Here is navigation -question to self: IS THE DEFAULT STATE {0} OR AS NOW "" ??*/}
       <div className="buttons-container">
         <NextQuestionButton
-          whatQuestionNext="secondQuestion"
           page={page}
           setPage={setPage}
           currentState={inhabitants}
-          defaultState=""
-          message="Please select the amount of inhabitants where you live first"
+          defaultState=''
+          message="Please select the number of inhabitants where you live first."
+          onClick={onNextQuestion} //Change this?
         />
       </div>
     </article>

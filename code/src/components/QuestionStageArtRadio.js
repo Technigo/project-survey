@@ -7,10 +7,10 @@ const QuestionStageArtRadio = () => ({
   setStageArtCategory,
   page,
   setPage,
+  onStageArtChange,
+  onNextQuestion,
+  message
 }) => {
-  const onStageArtChange = (event) => {
-    setStageArtCategory(event.target.value)
-  }
 
   const stageart = ["I'm for experimental shit, I need to see something I can not immediately understand", "I want to dance with my kid", "Opera", "Theatre", "Musical", "I just miss the feeling of collectivity, and long to be able to see something with another person's eye - just once, please!", "Concert"]
 
@@ -23,30 +23,31 @@ const QuestionStageArtRadio = () => ({
 
       {/* A */}
       <div className="question-content-container">
-        {stageart.map((category) => (
-          <span key={category} className="form-radiobuttons-stageart">
+        {stageart.map((stagetype) => (
+          <span key={stagetype} className="form-radiobuttons">
             <input
-              id={category}
+              name={stagetype}
+              id={stagetype}
+          //  value={category} ---> not needed for radiobuttons as they are static
               type="radio"
-              value={category}
-              onChange={onStageArtChange}
-              checked={stageArtCategory === category}
-              className="form-radiobuttons-stageart"
+              onChange={setStageArtCategory}
+          //  checked={stageArtCategory === category}
+              className="form-radiobuttons"
             />
-            <label htmlFor={category} key={category} aria-label={category}>
-              <span className="form-radiobutton-input-stageart">{category}</span>
+            <label htmlFor={stagetype} aria-label={stagetype} tabindex="0">
+              <span className="form-radiobutton-input">{stagetype}</span>
             </label>
           </span>
         ))}
       </div>
       <div className="buttons-container">
         <NextQuestionButton
-          whatQuestionNext="fourthQuestion"
           page={page}
           setPage={setPage}
           currentState={stageArtCategory}
           defaultState=""
           message="Please choose what kind of stage art you would like to experience"
+          onClick={onNextQuestion}
         />
       </div>
     </article>

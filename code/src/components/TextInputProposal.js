@@ -1,17 +1,17 @@
 import React from "react";
 
+import NextQuestionButton from './NextQuestionButton'
 
 const TextInputProposal = ({
   proposal,
   setProposal,
   page,
   setPage,
+  onProposalChange,
+  onNextQuestion,
+  message
 }) => {
-  //One way data-binding
-  const onProposalChange = (event) => {
-    setProposal(event.target.value);
-  };
-
+  
   return (
     <article className="form-question-4">
       {/* Question */}
@@ -29,6 +29,16 @@ const TextInputProposal = ({
           className="form-input"
           placeholder="Write your ideas here, thank you!"
         />
+      </div>
+      <div className="buttons-container">
+      <NextQuestionButton
+        page={page}
+        setPage={setPage}
+        currentState={proposal}
+        defaultState=""
+        message="Please write your ideas here, thank you!"
+        onClick={onNextQuestion}
+      />
       </div>
     </article>
   );
