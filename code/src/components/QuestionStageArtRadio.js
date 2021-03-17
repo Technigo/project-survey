@@ -2,7 +2,7 @@ import React from 'react'
 
 import NextQuestionButton from './NextQuestionButton'
 
-const QuestionStageArtRadio = () => ({
+const QuestionStageArtRadio = ({
   stageArtCategory,
   setStageArtCategory,
   page,
