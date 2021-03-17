@@ -124,25 +124,31 @@ const App = () => {
               />
             </div>}
 
-          <div>
-            <NavigateButton
-              text="Previous Question"
-              goNext={false}
-              section={section}
-              setSection={setSection}
-            />
-            <NavigateButton
-              text="Next Question"
-              goNext={true}
-              section={section}
-              setSection={setSection}
-            />
+          <div className="button-container">
+
+            {data.section[section] !== "firstSection" &&
+              <NavigateButton
+                text="Previous Question"
+                goNext={false}
+                section={section}
+                setSection={setSection}
+              />}
+
+            {data.section[section] !== "eighthSection" &&
+              <NavigateButton
+                text="Next Question"
+                goNext={true}
+                section={section}
+                setSection={setSection}
+              />}
+
             <SubmitButton
               text="Submit"
               renderSummary={renderSummary}
               setRenderSummary={setRenderSummary}
               setSection={setSection}
             />
+
           </div>
         </form>
         <ProgressBar progress={data.section[section]} />
