@@ -1,11 +1,11 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 
 import data from '../data.json'
 
 import WelcomeSection from './WelcomeSection'
 import TextInputName from './TextInputName'
-import Selector from './Selector';
-import Range from './Range'
+import Selector from './CounrtySelector';
+import NeedVacationRange from './NeedVactionRange'
 import RadioButton from './RadioButtons';
 
 
@@ -18,81 +18,73 @@ const Form = (props) => {
   const [vacationType, setVacationType] = useState("");
   const [date, setDate] = useState("");
   const [name, setName] = useState("");
-  const [email, setEmail] = useState(""); 
+  const [email, setEmail] = useState("");
   const [mood, setMood] = useState("");
-  const [food, setFood] = useState("")
   const [summaryHidden, setSummaryHidden] = useState(true)
   const [section, setSection] = useState(questions[0])
-  
-  
 
-//Function checking whether the form is filled
+
+
+  //Function checking whether the form is filled
   const isFormFilled = () => {
-    if(mood === "") {
+    if (needVacation === "") {
       return true
     }
-    if (food === "") {
+    if (mood === "") {
       return true
     }
     return false
   }
-//Funcion that handles submit form 
-  const handleSubmit = (event) =>{
+  //Funcion that handles submit form 
+  const handleSubmit = (event) => {
     event.preventDefault();
     setSummaryHidden(false)
   }
-//conditional rendering depending on whether summary is hidden or not
+  //conditional rendering depending on whether summary is hidden or not
   if (summaryHidden === true) {
-  return (
-      <form  className="form-wrapper" onSubmit={handleSubmit}>  
-      { section === questions[0] && (
-        <WelcomeSection section={section} setSection={setSection} question={questions[1]}/>
-      ) }
-      
-      { section === questions[1] && (
-        <div>
-          <h3>Question 1</h3>
-          <div className="radio-buttons-wrapper">
-            <RadioButton
-              buttonsValues={props.radioButtonsValues}
-              answer={food}
-              name="question1"
-              setAnswer={setFood}
-            />
+    return (
+      <form className="form-wrapper" onSubmit={handleSubmit}>
+        { section === questions[0] && (
+          <WelcomeSection section={section} setSection={setSection} question={questions[1]} />
+        )}
+
+        { section === questions[1] && (
+          <NeedVacationRange
+            setSection={setSection}
+            question={questions[2]}
+            needVacation={needVacation}
+            setNeedVacation={setNeedVacation}
+          />
+        )}
+
+        {section === questions[2] && (
+          <div>
+            <h3>Question 2</h3>
+            <div className="radio-buttons-wrapper">
+              <RadioButton
+                buttonsValues={props.radioButtonsValues}
+                answer={mood}
+                name="question2"
+                setAnswer={setMood}
+              />
+            </div>
+
+            <button
+              disabled={isFormFilled()}
+              type="submit"
+            >Submit</button>
           </div>
-          <button type="button" value="secondQuestion" onClick={(event)=>setSection(event.target.value)}> Nex question </button>
-        </div>)
-      }
-      {section ==="secondQuestion" && (
-        <div>
-          <h3>Question 2</h3>
-          <div className="radio-buttons-wrapper">
-            <RadioButton
-              buttonsValues={props.radioButtonsValues}
-              answer={mood}
-              name="question2"
-              setAnswer={setMood}
-            />
-          </div>
-        
-      {/* <Range question="How do you feel about the survey?" /> */}
-      
-      <button 
-        disabled={isFormFilled()}
-        type="submit"
-       >Submit</button>
-      </div>
-       )}
-    </form>
-  )
-} else {
-  return (
-    <section>
-      <p>{mood}</p>
-      <p> {food}</p>
-    </section>
-  )
-}
+        )}
+      </form>
+    )
+  } else {
+    return (
+      <section>
+        <p>{mood}</p>
+        <p>Need vacation:{needVacation} out of 10</p>
+      </section>
+    )
+  }
 
 }
 export default Form

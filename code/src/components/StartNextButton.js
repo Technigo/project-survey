@@ -1,16 +1,16 @@
 import React from 'react';
 
-const StartButton = ({section, question, setSection}) =>{
+const StartNextButton = ({question, setSection, button}) =>{
   return (
     <button 
     type="button"
     value={question}
     onClick={(event)=>setSection(event.target.value)}>
-      Start
+      {button}
     </button>
   )
 }
 
-export default StartButton
+export default StartNextButton
 
 //type="button" value="secondQuestion" onClick={(event)=>setSection(event.target.value)
