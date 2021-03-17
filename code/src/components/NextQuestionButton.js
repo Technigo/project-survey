@@ -9,7 +9,7 @@ const NextQuestionButton = ({
 }) => {
   const onNextQuestion = () => setPage(page +1)
 
-  //check if message is rendered anywhere, like in react dev tools***
+  //check if message is rendered anywhere, like in react dev tools - it should probably not be here***
   return (
     <>
       <button

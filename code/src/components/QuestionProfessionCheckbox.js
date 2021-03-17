@@ -8,10 +8,16 @@ const QuestionProfessionCheckbox = ({
   setProfessions,
   page,
   setPage,
-  onProfessionChange,
   onNextQuestion,
   message
 }) => {
+  const onProfessionChange = (professionValue) => {
+    if (professions.includes(professionValue)) {
+      setProfessions(professions.filter((item) => item !== professionValue))
+    } else {
+      setProfessions([...professions, professionValue])
+    }
+  }
 
   const professionGroup = [
     'Public sector',
@@ -33,7 +39,7 @@ const QuestionProfessionCheckbox = ({
   return (
     <article className="form-question-5">
       {/* Q */}
-      <p className="form-question" tabindex="0">
+      <p className="form-question" tabIndex="0">
         What kind of profession do you associate yourself with? (Please pick 2 as they are made to overlap a little! <span role="img" aria-label="smiling emoji with one eye blinking">😉</span>)
       </p>
 
@@ -58,7 +64,7 @@ const QuestionProfessionCheckbox = ({
           />
         )}
       </div>
-      <div className="buttons__wrapper">
+      <div className="buttons-container">
       <NextQuestionButton
         page={page}
         setPage={setPage}

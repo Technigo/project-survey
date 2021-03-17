@@ -17,7 +17,7 @@ const QuestionCitySelect = ({
   return (
     <article className="form-question">
       {/* Q */}
-      <label htmlFor="title" className="form-question" tabindex="0">
+      <label htmlFor="title" className="form-question" tabIndex="0">
         I live in a city with this many inhabitants
       </label>
 

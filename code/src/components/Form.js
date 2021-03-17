@@ -29,17 +29,18 @@ const Form = () => {
     setStageArtCategory(event.target.value)
   } */
 
-  const onProposalChange = (event) => {
+  /* const onProposalChange = (event) => {
     setProposal(event.target.value)
-  }
+  } */
   
-  const onProfessionChange = (professionValue) => {
+/*   const onProfessionChange = (professionValue) => {
     if (professions.includes(professionValue)) {
       setProfessions(professions.filter((item) => item !== professionValue))
     } else {
       setProfessions([...professions, professionValue])
     }
-  }
+  } */
+  
 //THIS MAKS CHANGED WITH ME ::: it is not listening to any user input it is simply a function internal to the code
   const onPageChange = (pagenumber) => {
     setPage(pagenumber)
@@ -95,7 +96,7 @@ const Form = () => {
             <div>
             <TextInputProposal
               proposal={proposal}
-              setProposal={onProposalChange}
+              setProposal={setProposal}
               page={page}
               setPage={onPageChange}
             />
@@ -106,7 +107,7 @@ const Form = () => {
             <div>
             <QuestionProfessionCheckbox
               professions={professions}
-              setProfessions={onProfessionChange}
+              setProfessions={setProfessions}
               page={page}
               setPage={onPageChange}
             />

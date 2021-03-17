@@ -19,7 +19,7 @@ const QuestionStageArtRadio = () => ({
   return (
     <article className="form-question">
       {/* Q */}
-      <p htmlFor="stage" className="form-question" tabindex="0">
+      <p htmlFor="stage" className="form-question" tabIndex="0">
         What kind of stage art would you like too experience post Covid-19?
       </p>
 
@@ -28,16 +28,14 @@ const QuestionStageArtRadio = () => ({
         {stageart.map((stagetype) => (
           <span key={stagetype} className="form-radiobuttons">
             <input
-              name={stagetype}
+              name="stagetype"
               id={stagetype}
               type="radio"
-              onChange={(e) => {
-                onStageArtChange(e.target.value)
-              }}
-          //  checked={stageArtCategory === category}
+              onChange={onStageArtChange}
+              //checked={stageArtCategory === category}
               className="form-radiobuttons"
             />
-            <label htmlFor={stagetype} aria-label={stagetype} tabindex="0">
+            <label htmlFor={stagetype} aria-label={stagetype} tabIndex="0">
               <span className="form-radiobutton-input">{stagetype}</span>
             </label>
           </span>

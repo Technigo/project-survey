@@ -19,7 +19,7 @@ const QuestionAgeRadio = ({
   return (
     <article className="form-question">
       {/* Q */}
-      <p htmlFor="age" className="form-question" tabindex="0">
+      <p htmlFor="age" className="form-question" tabIndex="0">
         How old are you?
       </p>
 

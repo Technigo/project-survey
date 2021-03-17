@@ -7,10 +7,12 @@ const TextInputProposal = ({
   setProposal,
   page,
   setPage,
-  onProposalChange,
   onNextQuestion,
   message
 }) => {
+  const onProposalChange = (event) => {
+    setProposal(event.target.value)
+  }
   
   return (
     <article className="form-question">
