@@ -1,9 +1,7 @@
 import React from 'react'
 
 
-const Coffee = (props) => {
-
-  const [setCoffee, coffee] = [props.setCoffee, props.coffee]
+const Coffee = ( {coffee, setCoffee} ) => {
 
   return (
     <div className="survey-item coffee">

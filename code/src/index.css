@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@400;500&display=swap");
 
 body {
   margin: 0 auto;
@@ -10,12 +10,16 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(62,34,195);
-  background: linear-gradient(0deg, rgba(62,34,195,1) 0%, rgba(45,117,253,1) 100%);
+  background: rgb(62, 34, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(62, 34, 195, 1) 0%,
+    rgba(45, 117, 253, 1) 100%
+  );
   background-repeat: no-repeat;
   height: 100vh;
   color: white;
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
 code {
@@ -23,7 +27,7 @@ code {
     monospace;
 }
 
-h1, 
+h1,
 h2 {
   text-align: center;
   font-weight: 500;
@@ -34,7 +38,7 @@ h1 {
   font-size: 60px;
 }
 
-.summary-section, 
+.summary-section,
 .main {
   display: flex;
   flex-direction: column;
@@ -48,11 +52,17 @@ h1 {
   font-size: 20px;
 }
 
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .survey-item {
   margin: 20px;
 }
 
-.pets, 
+.pets,
 .coffee {
   display: flex;
   flex-direction: column;
@@ -68,7 +78,7 @@ h1 {
   font-size: 18px;
 }
 
-.coffee input, 
+.coffee input,
 .pets select {
   width: 200px;
   height: 40px;
@@ -84,18 +94,41 @@ h1 {
   font-weight: 500;
 }
 
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
 .button {
-  width: 130px;
+  width: 160px;
   height: 50px;
   font-size: 20px;
   font-weight: 500;
   border-radius: 10px;
-  border-color:  rgba(45,117,253,1);
-  color: rgba(45,117,253,1);
+  border-color: rgba(45, 117, 253, 1);
+  color: rgba(45, 117, 253, 1);
   font-family: inherit;
-  align-self: center;
-  margin-top: 20px;
-  box-shadow: 0px 3px 15px rgba(0,0,0,0.2);
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
   cursor: pointer;
-  margin-top: 40px;
+  margin: 40px 10px;
+}
+
+.progress-container {
+  align-self: center;
+}
+
+.progress-bar {
+  height: 24px;
+  width: 200px;
+  background-color: #e0e0de;
+  border-radius: 6px;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: rgba(62, 34, 195, 1);
+  border-radius: inherit;
+  text-align: center;
+  font-size: 14px;
 }

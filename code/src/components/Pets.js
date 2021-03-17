@@ -1,9 +1,7 @@
 import React from 'react'
 
 
-const Pets = (props) => {
-
-  const [setPets, pets] = [props.setPets, props.pets]
+const Pets = ({setPets, pets}) => {
 
   return (
     <div className="survey-item pets">

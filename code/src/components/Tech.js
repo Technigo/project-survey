@@ -1,11 +1,9 @@
 import React from 'react'
 
 
-const Tech = (props) => {
+const Tech = ({ setTech }) => {
 
   const techArray = ['HTML', 'CSS', 'JavaScript', 'React', 'NPM']
-
-  const [setTech] = [props.setTech]
 
   return (
     <div className="survey-item tech">
@@ -16,6 +14,7 @@ const Tech = (props) => {
         <input
           type="radio"
           value={item}
+          name="tech"
           onChange={(e) => {setTech(e.target.value)}}
         />
         {item}

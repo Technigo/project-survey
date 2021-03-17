@@ -1,10 +1,8 @@
 import React from 'react'
 
-const Hours = (props) => {
+const Hours = ( {setHours} ) => {
   
   const hourArray = ['0-1', '1-3', '3-5', '5+']
-  
-  const [setHours] = [props.setHours]
 
   return (
   <>
