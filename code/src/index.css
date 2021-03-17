@@ -78,7 +78,7 @@ code {
   margin: 5px; 
 }
 
-/*Check - which Components does this belong to?*/
+/*Check - which Components does this belong to now again?*/
 .form-input {
   display: block;
   background: none;
@@ -88,6 +88,10 @@ code {
   border: none;
   border-bottom: 1px solid #000;
   outline: none;
+}
+
+.button-retake-survey {
+  
 }
 
 /* MEDIA QUERIES */
