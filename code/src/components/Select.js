@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
 const Select = () => {
-    const [selectWorldsNeeds, setSelectWorldsNeeds] = useState ('option');
+    const [worldNeeds, setWorldNeeds] = useState ('');
 
-    const onSelectWorldsNeedsChange = (e) => {
-        setSelectWorldsNeeds(e.target.option);
-        console.log(e.target.option);
+    const onWorldNeedsChanged = (e) => {
+        setWorldNeeds(e.target.value);
+        console.log(e.target.value);
     }
 
 
@@ -15,9 +15,10 @@ const Select = () => {
                 <label>What does the world need more of?</label>
                 <select 
                     id="whatWorldNeeds"
-                    value={selectWorldsNeeds}
-                    onChange={onSelectWorldsNeedsChange}
+                    onChange={onWorldNeedsChanged}
+                    value={worldNeeds}
                 >
+                    <option disabled></option>
                     <option>Puppys</option>
                     <option>Kindness</option>
                     <option>Calmness</option>

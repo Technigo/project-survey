@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
 
 const Radio = () => {
-    const [inputCharacteristic, setInputCharacteristic] = useState ('')
+    const [inputCharacteristics, setInputCharacteristics] = useState ('')
 
-    const onInputCharacteristicChange = (e) => {
-        setInputCharacteristic(e.target.value)
+    const onInputCharacteristicsChanged = (e) => {
+        setInputCharacteristics(e.target.value)
+        console.log(e.target.value)
     }
 
     return(
@@ -12,13 +13,37 @@ const Radio = () => {
             <div>
                 <p>How would you describe yourself</p>
                 <label htmlFor="great">Great</label>
-                <input id="great" type="radio"/>   
+                <input 
+                    name="characteristics"
+                    id="great" 
+                    value="great" 
+                    type="radio"
+                    onChange={onInputCharacteristicsChanged}
+                />   
                 <label htmlFor="amazing">Amazing</label>
-                <input id="amazing" type="radio"/>
+                <input 
+                    name="characteristics" 
+                    id="amazing" 
+                    value="amazing" 
+                    type="radio"
+                    onChange={onInputCharacteristicsChanged}
+                />
                 <label htmlFor="cool">Cool</label>
-                <input id="cool" type="radio"/>
+                <input 
+                    name="characteristics" 
+                    id="cool" 
+                    value="cool" 
+                    type="radio"
+                    onChange={onInputCharacteristicsChanged}
+                />
                 <label htmlFor="fantastic">Fantastic</label>
-                <input id="fantastic" type="radio"/>
+                <input 
+                    name="characteristics" 
+                    id="fantastic" 
+                    value="fantastic" 
+                    type="radio"
+                    onChange={onInputCharacteristicsChanged}
+                />
             </div>
         </form>
     )

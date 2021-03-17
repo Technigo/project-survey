@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 const Input = () => {
     const [inputName, setInputName] = useState ('');
 
-    const onInputNameChange = (e) => {
+    const onInputNameChanged = (e) => {
         setInputName(e.target.value);
+        console.log(e.target.value);
     }
 
     return(
@@ -15,7 +16,7 @@ const Input = () => {
                     id="name" 
                     type="text"
                     value={inputName}
-                    onChange={onInputNameChange}
+                    onChange={onInputNameChanged}
                 />
             </div>
         </form>
