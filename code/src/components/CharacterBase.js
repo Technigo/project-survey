@@ -11,6 +11,7 @@ const CharacterBase = (props) => {
             <p>Age: {props.number}</p>
             <p>Family: {Character.family}</p>
             <p>Goal: {Character.goal}</p>
+            <img src={Character.icon} />
         </div>
     )
 }

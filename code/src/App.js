@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import data from "./data.json"
 
 import RadioInput from './components/RadioInput'
+import RadioInputIcon from './components/RadioInputIcon'
 import SelectInput from './components/SelectInput'
 import TextInput from "./components/TextInput"
 import Character from "./components/Character"
@@ -17,9 +18,10 @@ const App = () => {
   const [name, setName] = useState("")
   const [characterClass, setCharacterClass] = useState("")
   const [race, setRace] = useState("")
-  const [goal, setGoal] = useState("")
   const [number, setNumber] = useState("")
   const [family, setFamily] = useState("")
+  const [goal, setGoal] = useState("")
+  const [icon, setIcon] = useState()
   const [value, setValue] = useState("")
 
   const handleSubmit = () => {
@@ -29,7 +31,7 @@ const App = () => {
   }
 
   const handleNext = () => {
-    if (section < 6) {
+    if (section < 7) {
       setSection(section + 1)
     }
   }
@@ -95,6 +97,13 @@ const App = () => {
             />}
 
           {section === 6 &&
+            <RadioInputIcon
+              choice={icon}
+              setChoice={setIcon}
+              data={data.icon}
+            />}
+
+          {section === 7 &&
             <div className="stats-container">
               {data.stats.allStats.map(item =>
                 <RangeInput

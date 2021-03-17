@@ -48,5 +48,21 @@
             "intelligence",
             "dexterity"
         ]
+    },
+    "icon": {
+        "field": "icon",
+        "className": "icon-input",
+        "source": [
+            "./assets/archer.svg",
+            "./assets/dwarf.svg",
+            "./assets/elf.svg",
+            "./assets/elf2.svg",
+            "./assets/gnome.svg",
+            "./assets/goblin.svg",
+            "./assets/knight.svg",
+            "./assets/ogre.svg",
+            "./assets/witch.svg",
+            "./assets/wizard.svg"
+        ]
     }
 }
