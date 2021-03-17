@@ -1,21 +1,10 @@
 import React from 'react'
-import Header from './components/Header/Header'
-import DropDown from './components/DropDown/DropDown'
-import RadioButtons from './components/RadioButtons/RadioButtons'
-import SubmitButton from './components/SubmitButton/SubmitButton'
-import NameForm from './components/NameForm/NameForm'
-import Result from './components/Result/Result'
+import Form from './Form';
 
 export const App = () => {
   return (
-    <div>
-      <Header />
-        Survey 
-      <NameForm />
-      <DropDown />
-      <RadioButtons />
-      <SubmitButton />
-      <Result />
-    </div>
+      <div className="form-wrapper">
+        <Form />
+      </div>
   )
 }

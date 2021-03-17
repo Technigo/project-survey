@@ -1,8 +1,8 @@
-import React, {useState} from 'react'
+import React from 'react'
 import './DropDown.css'
 
-const DropDown = () =>{
-    const [snack, setSnack] = useState("");
+const DropDown = ({snack, setSnack}) =>{
+    // const [snack, setSnack] = useState("");
 
     const onOptionChange = (e) =>{
         setSnack(e.target.value)
@@ -11,12 +11,12 @@ const DropDown = () =>{
         <>
             <h2>What is your favorite snack?</h2>
             <form onSubmit={event => event.preventDefault()}>
-                <select
+                <select id="selectSnack"
                 // onChange={event => setSnack(event.target.value) }
                 onChange={onOptionChange}
                 value={snack}
                 >
-                    <option value="">Select snack</option>
+                    <option disabled value="">Select snack</option>
                     <option value="popcorn">Popcorn</option>
                     <option value="chips">Chips</option>
                     <option value="choclate">Choclate</option>
