@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 
 import Summary from './Summary'
+import InputRadioButton from 'components/InputRadioButton'
+import Button from 'components/Button'
 
 const Survey = () => {
   
@@ -72,31 +74,15 @@ const Survey = () => {
         {question === 1 &&(
           <section className='question'>
             <h2>How much do you enjoy reading?</h2>
-            {enjoyReadingArray.map(radio =>
-              <label key={radio}>
-                <input
-                  type='radio'
-                  value={radio}
-                  onChange={onEnjoyReadingChange}
-                  checked={enjoyReading === radio}
-                />
-                {radio} 
-              </label>
-              )}
+            {
+              enjoyReadingArray.map(item =>
+                <InputRadioButton item={item} onEnjoyReadingChange={onEnjoyReadingChange} />
+              )
+            }
             <div className="button-container">
-            <button 
-              onClick={onPreviousQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Go Back
-            </button>
-            <button 
-              onClick={onNextQuestionChange} 
-              className='continue-button' 
-              type='button'>
-                Continue
-            </button>
-          </div>
+              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} />
+              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} />
+            </div>
           </section>
         )}
 
@@ -106,7 +92,7 @@ const Survey = () => {
               <label>
                 <h2>Which format do you prefer reading the most?</h2>
                 <select value={readingFormat} onChange={onReadingFormatChange}>
-                    <option value="">Choose one...</option>
+                    <option disabled></option>
                     <option value="Electronic">Electronic</option>
                     <option value="Print">Print</option>
                     <option value="Audio Books">Audio books</option>
@@ -133,10 +119,11 @@ const Survey = () => {
         {/* Third question */}
         {question === 3 &&(
           <section className='question'>
-              <label>
+              <label htmlFor={book}>
                 <h2>What is your favorite book?</h2>
                 <input
                   type='text'
+                  id={book}
                   value={book}
                   onChange={onBookChange}
                 />
@@ -161,10 +148,11 @@ const Survey = () => {
         {/* Fourth question */}
         {question === 4 &&(
           <section className='question'>
-              <label>
+              <label htmlFor='check'>
               <h2>Check this box if you agree to add your favorite book to our list of recommended books.</h2>
                 <input
                   type='checkbox'
+                  id='check'
                   onChange={onIsCheckedChange}
                   checked={isChecked}
                 />
@@ -202,10 +190,10 @@ const Survey = () => {
       ): (
         //This will show the summary of answers if the form is submitted
         <Summary 
-        enjoyReading={enjoyReading}
-        readingFormat={readingFormat}
-        book={book}
-        isChecked={isChecked}
+          enjoyReading={enjoyReading}
+          readingFormat={readingFormat}
+          book={book}
+          isChecked={isChecked}
         />
       )}
     </main>
