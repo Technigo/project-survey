@@ -1,11 +1,17 @@
 import React from 'react';
 
-const StartNextButton = ({question, setSection, button}) =>{
+const StartNextButton = ({question, setSection, button, progress, setProgress}) =>{
+  const onSectionChange = (event)=> {
+    // console.log(progress)
+    setSection(event.target.value)
+    // setProgress(progress++)
+    // console.log(progress)
+  }
   return (
     <button 
     type="button"
     value={question}
-    onClick={(event)=>setSection(event.target.value)}>
+    onClick={onSectionChange}>
       {button}
     </button>
   )

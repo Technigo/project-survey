@@ -19,9 +19,9 @@ const Form = (props) => {
   const [date, setDate] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [mood, setMood] = useState("");
   const [summaryHidden, setSummaryHidden] = useState(true)
   const [section, setSection] = useState(questions[0])
+  //const [progress, setProgress] = useState("0")
 
 
 
@@ -30,7 +30,10 @@ const Form = (props) => {
     if (needVacation === "") {
       return true
     }
-    if (mood === "") {
+    if (country === "") {
+      return true
+    }
+    if (vacationType === "") {
       return true
     }
     return false
@@ -48,7 +51,10 @@ const Form = (props) => {
           <WelcomeSection 
             section={section} 
             setSection={setSection} 
-            question={questions[1]} />
+            question={questions[1]}
+            // progress={progress}
+            // setProgress={setProgress} 
+            />
         )}
 
         { section === questions[1] && (
@@ -57,6 +63,8 @@ const Form = (props) => {
             question={questions[2]}
             needVacation={needVacation}
             setNeedVacation={setNeedVacation}
+            // progress={progress}
+            // setProgress={setProgress}
           />
         )}
 
@@ -68,25 +76,29 @@ const Form = (props) => {
               country ={country}
               setCountry={setCountry}
               countries={countries}
+              // progress={progress}
+              // setProgress={setProgress}
             />
           )}
 
           {section === questions[3] &&(
-            <div>
-            <h3>Question 2</h3>
-            <div className="radio-buttons-wrapper">
               <VacationTypeRadioButton
-                buttonsValues={props.radioButtonsValues}
-                answer={mood}
-                name="question2"
-                setAnswer={setMood}
+                setSection={setSection}  
+                vacationTypes={data.vacationTypes}
+                vacationType={vacationType}
+                name="question3"
+                setVacationType={setVacationType}
+                question={questions[4]}
               />
-            </div>
-
+        )}
+        {section === questions[4] &&(
+            <div>
             <button
               disabled={isFormFilled()}
               type="submit"
-            >Submit</button>
+            >
+              Submit
+            </button>
           </div>
         )}
       </form>
@@ -94,9 +106,9 @@ const Form = (props) => {
   } else {
     return (
       <section>
-        <p>{mood}</p>
         <p>Need vacation:{needVacation} out of 10</p>
         <p>You want to go to: {country}</p>
+        <p>Type of activities: {vacationType}</p>
       </section>
     )
   }

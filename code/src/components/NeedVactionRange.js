@@ -1,7 +1,7 @@
 import React from 'react';
 import StartNextButton from './StartNextButton'
 
-const NeedVacationRange = ({question, setSection, needVacation, setNeedVacation}) => {
+const NeedVacationRange = ({question, setSection, needVacation, setNeedVacation, progress, setProgress}) => {
 
   const onNeedVacationChange = (event => {
     setNeedVacation(event.target.value)
@@ -27,7 +27,12 @@ const NeedVacationRange = ({question, setSection, needVacation, setNeedVacation}
       />
       </div>
       <p>Here is our satisfaction: {needVacation}</p>
-      <StartNextButton question={question} setSection={setSection} button="Next"/>
+      <StartNextButton 
+      question={question} 
+      setSection={setSection}
+      progress={progress}
+      setProgress= {setProgress} 
+      button="Next"/>
     </div>
   )
 }
