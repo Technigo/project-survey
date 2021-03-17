@@ -14,6 +14,7 @@ const FavoriteBook = ({text}) => {
       <div className="inner-container" id="">
         <label htmlFor='favoritebook'><h2>{text}</h2>
         <input
+          id="favoritebook"
           type="text"
           onChange={onBookChange}
           value={book}
