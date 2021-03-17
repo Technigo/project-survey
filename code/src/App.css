@@ -1,3 +1,16 @@
+body::after {
+  content: "";
+  background: url("/assets/icecream.jpg") center center;
+  opacity: 0.5;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+
 /* APP */
 
 .app-container {
@@ -29,8 +42,7 @@ p .header-box {
 }
 
 .icecream-image {
-  width: 300px;
-  height: 100px;
+  opacity: 0.5;
 
 }
 
