@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@100;300;400;600;700;800&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -40,6 +46,9 @@ header {
   align-items: center;
   justify-content: center;
   margin: 30px auto 35px;
+  font-family: Libre Baskerville;
+  font-weight: 700;
+  font-size: 40px;
 }
 
 .about {
@@ -47,8 +56,20 @@ header {
   padding: 23px 15px;
 }
 
+h2 {
+  font-family: Raleway;
+  font-weight: 800;
+}
+
 h3 {
+  font-family: Raleway;
+  font-weight: 600;
   margin: 15px 0 10px;
+}
+
+p {
+  font-family: Raleway;
+  font-weight: 400;
 }
 
 /*** form ***/
@@ -62,7 +83,7 @@ h3 {
 .form-container-sections {
   display: flex;
   flex-direction: column;
-  border: solid purple 3px;
+  /* border: solid purple 3px; */
   margin-bottom: 15px;
 }
 
@@ -73,10 +94,26 @@ h3 {
 }
 
 label {
+  font-family: Raleway;
+  font-weight: 400;
   display: inline-block;
   /* margin: 20 5 20px; */
-  border: solid black 3px;
+  /* border: solid black 3px; */
   padding: 5px;
   font-weight: bold;
 }
 
+.submit-container {
+  display: flex;
+  justify-content: center;
+}
+
+.submit-button {
+  border: 2px solid;
+  border-radius: 10px;
+  font-size: 16px;
+  /* font-family: 'Montserrat'; */
+  font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+}

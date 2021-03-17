@@ -9,7 +9,7 @@ export const Header = () => {
           <source srcset="/assets/books_medium.jpg" media="(max-width: 900px)" alt="Hand holding up a stack of books"/> */}
           <img className="header-img" src="/assets/books_large.jpg" alt="Hand holding up a stack of books"/>
         </picture>
-          <h1 className="header-text">Book tips</h1>
+          <h1 className="header-text">Book Tips</h1>
       </header>
       <section className="about">
         <h2>Hi, and welcome to Book Tips!</h2>

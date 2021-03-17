@@ -1,33 +1,16 @@
-import React, { useState } from 'react'
+import React from 'react'
+
+const languages = [' english', ' swedish', ' both'] // array for radio-buttons under language
 
 export const Form = (props) => {
-  const [name, setName] = useState('') 
-  const [genre, setGenre] = useState('')
-  const [language, setLanguage] = useState()
-  const [email, setEmail] = useState('')
-  const languages = [' english', ' swedish', ' both'] // array for radio-buttons under language
-
-  const isFormComplete = () => {
-    if (name === '') {
-      return false
-    }
-
-    if (genre === '') {
-      return false
-    }
-
-    if (language === '') {
-      return false
-    }
-
-    if (email === '') {
-      return false
-    }
-
-    if (isFormComplete()) {
-      console.log(`Survey complete!`)
-    }
-  }
+  const { name, setName } = props
+  const { genre, setGenre } = props
+  const { language, setLanguage } = props
+  const { email, setEmail } = props
+  // const [name, setName] = [props.name, props.setName]
+  // const [genre, setGenre] = [props.genre, props.setGenre]
+  // const [language, setLanguage] = [props.language, props.setLanguage]
+  // const [email, setEmail] = [props.email, props.setEmail]
 
   return (
     <div className="form-container">
@@ -37,8 +20,8 @@ export const Form = (props) => {
           <input
             id="name"
             type="text"
-            value={props.name}
-            onChange={(event) => setName(event.target.value)}
+            value={name}
+            onChange={(e) => {setName(e.target.value)}}
           />
         </div>
 
@@ -47,9 +30,8 @@ export const Form = (props) => {
           <select 
             id="genre"
             value={genre}
-            onChange={event => setGenre(event.target.value)}
+            onChange={(e) => {setGenre(e.target.value)}}
           >
-            {/* <option value=""></option> */}
             <option disabled></option>
             <option value="biography">Biography</option>
             <option value="classics">Classics</option>
@@ -67,7 +49,7 @@ export const Form = (props) => {
                 id="language"
                 type="radio"
                 value={lang}
-                onChange={event => setLanguage(event.target.value)}
+                onChange={(e) => {setLanguage(e.target.value)}}
                 checked={language === lang}
               />
               {lang}
@@ -81,14 +63,9 @@ export const Form = (props) => {
             id="email"
             type="email" 
             value={email}
-            onChange={event => setEmail(event.target.value)}
+            onChange={(e) => {setEmail(e.target.value)}}
             />
         </div>
-
-        <div className='submit-container'>
-          <button className='submit-button' type='submit' form=''></button>
-        </div>
-
       </form>
     </div>
   )
