@@ -13,9 +13,9 @@ const SelectSize = () => {
         name="Suit Size"
       >
         <option disabled value="">Select Size:</option>
-        <option value="s">Small</option>
-        <option value="m">Medium</option>
-        <option value="l">Large</option>
+        <option value="Small">Small</option>
+        <option value="Medium">Medium</option>
+        <option value="Large">Large</option>
       </select>
         </label>
     )

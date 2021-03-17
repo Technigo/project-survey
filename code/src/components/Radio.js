@@ -1,18 +1,18 @@
 import React, { useState } from 'react'
 import Image from './Image'
 
-const suitColors = ["Jacket: Marine Blue", "Jacket: Blue", "Jacket: Green", "Jacket: Gray", "Jacket: Red"]
+const suitColors = ["Jacket: Marine Blue", "Jacket: Blue", "Jacket: Green", "Jacket: Gray", "Jacket: Red", "Jacket: Lightblue"]
 
 const Radio = () => {
   const [Color, setColor] = useState();
-  const images = ["./assets/jacket1.jpg", "./assets/jacket2.jpg", "./assets/jacket3.jpg", "./assets/jacket4.jpg", "./assets/jacket5.jpg"]
+  const images = ["./assets/jacket1.jpg", "./assets/jacket2.jpg", "./assets/jacket3.jpg", "./assets/jacket4.jpg", "./assets/jacket5.jpg", "./assets/jacket6.jpg"]
 
   return (
     <label >
       <p>Select one suit:</p>
 
 
-      <div className="test">
+      <div className="group-container">
       {suitColors.map((group, imageIndex) => (
         <label key={group} >
           <div className="box-header">
@@ -26,6 +26,8 @@ const Radio = () => {
             checked={Color === group}
             name="Selected jacket"
             className="my-input"
+            required
+
           />
           <span className="radio-paragraf">{group}</span> </div>
           </div>
