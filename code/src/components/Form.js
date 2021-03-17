@@ -5,18 +5,17 @@ import { Location } from './Location'
 import { RadioOption } from './RadioOption'
 import { CheckBoxes } from './CheckBoxes'
 import { SubmitButton } from './SubmitButton.js'
-import { Summary } from './Summary.js'
+
 
 const careerPaths= ['Frontend', 'Backend', 'Fullstack']
 const stacks = ['JS', 'CSS', 'HTML', 'React', 'Ruby on Rails', 'Angular', 'Vue', 'C#']
 
-export const Form = () => {
+export const Form = ({ onSubmit }) => {
     const [name, setName] = useState('');
     const [location, setLocation] = useState('');
     const [age, setAge] = useState('');
     const [radio, setRadio] = useState('');
-    const [stack, setCheckBox] = useState ('false');
-
+    const [stack, setCheckBox] = useState (false);
     
     const isSurveyComplete = () => {
         if (name === '') {
@@ -40,11 +39,22 @@ export const Form = () => {
         }
     
         return true;
-      };
+    };
     
-      if (isSurveyComplete()) {
+    if (isSurveyComplete()) {
         console.log(`Survey Complete!`);
-      }
+    }
+
+    const onSubmitButtonClick = (e) => {
+        e.preventDefault();
+        onSubmit({
+            name,
+            age,
+            location,
+            radio,
+            stack
+        })
+    }
     
     return (
         <form 
@@ -87,8 +97,9 @@ export const Form = () => {
                     )
                 })}
             </div>
-            <SubmitButton />
-            <Summary />
+            <SubmitButton 
+                onClick={onSubmitButtonClick}
+            />
         </form>
     )
 }

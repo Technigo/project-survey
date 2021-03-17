@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const Name = ({name, setName}) => {
+export const Name = ({ name, setName }) => {
     const onNameChange = (e) => {
         console.log(`Name: ${e.target.value}`);
-        setName(e.target.checked);
+        setName(e.target.value);
     }
     
     return (
