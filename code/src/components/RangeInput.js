@@ -8,6 +8,7 @@ const RangeInput = (props) => {
     }
     return (
         <label>
+            {props.data.label}
             <input
                 type="range"
                 className={props.data.className}
@@ -15,7 +16,6 @@ const RangeInput = (props) => {
                 max="10"
                 onChange={handleChange}
             />
-            {props.data.label}
         </label>
     )
 }

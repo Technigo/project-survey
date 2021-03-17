@@ -54,7 +54,10 @@ const App = () => {
   } else {
     return (
       <>
-        <form onSubmit={(event) => event.preventDefault()}>
+        <form
+          className="form"
+          onSubmit={(event) => event.preventDefault()}
+        >
 
           {data.section[section] === "firstSection" &&
             <TextInput
@@ -150,8 +153,10 @@ const App = () => {
             />
 
           </div>
+
+          <ProgressBar progress={data.section[section]} section={data.section} />
+
         </form>
-        <ProgressBar progress={data.section[section]} />
       </>
     )
   }

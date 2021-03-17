@@ -4,12 +4,14 @@ const CharacterSheet = (props) => {
     return (
         <div className="character-sheet">
             <div className="character-base">
-                <p>Name: {props.name}</p>
-                <p>Race: {props.race}</p>
-                <p>Class: {props.class}</p>
-                <p>Age: {props.number}</p>
-                <p>Family: {props.family}</p>
-                <p>Goal: {props.goal}</p>
+                <div>
+                    <p>Name: {props.name}</p>
+                    <p>Race: {props.race}</p>
+                    <p>Class: {props.class}</p>
+                    <p>Age: {props.number}</p>
+                    <p>Family: {props.family}</p>
+                    <p>Goal: {props.goal}</p>
+                </div>
                 <img src={props.icon} className="character-icon" alt="character icon" />
             </div>
             <div className="character-stats">

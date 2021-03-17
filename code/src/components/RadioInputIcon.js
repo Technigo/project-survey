@@ -8,7 +8,7 @@ const RadioInputIcon = (props) => {
     }
 
     return (
-        <div>
+        <div className="icon-container">
             {props.data.source.map(item =>
                 <label key={item}>
                     <img src={item} className="character-icon" alt="character icon" />

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap');
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,59 +8,101 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: 'Berkshire Swash', cursive;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+body > div > * {
+  background-image: url("./bg.jpg");
+}
+
+button,
+input, 
+select {
+  font-family: 'Berkshire Swash', cursive;
+  background-color: transparent;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid black;
+}
+
+.form > * {
+  margin: 20px 0;
+}
+
+input {
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+select {
+  border: none;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.icon-container {
+  display: flex;
+}
+
+.icon-container label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .character-icon {
   width: 50px;
 }
 
+.stats-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .progress-bar {
-  width: 300px;
-  height: 10px;
-  background-color: lightgrey;
-  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.progress-bar div {
-  height: 100%;
-  border-radius: 20px;
-  background-color: green;
+.character-base {
+  display: flex;
 }
 
-.firstSection {
-  width: 12.5%;
+.line {
+  width: 10px;
+  height: 1px;
+  background: black;
 }
 
-.secondSection {
-  width: 25%;
+.no-fill {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background: transparent;
 }
 
-.thirdSection {
-  width: 37.5%;
+.fill {
+  background-color: rgb(71, 156, 71);
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  border-radius: 50%;
+  box-shadow: 0 0 5px inset burlywood;
 }
 
-.fourthSection {
-  width: 50%;
+.line:first-of-type {
+  display: none;
 }
-
-.fifthSection {
-  width: 62.5%;
-}
-
-.sixthSection {
-  width: 75%;
-}
-
-.seventhSection {
-  width: 87.5%;
-}
-
-.eighthSection {
-  width: 100%;
-}
-
