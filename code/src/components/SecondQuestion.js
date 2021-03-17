@@ -4,23 +4,29 @@ import TextInput from './TextInput'
 import Button from './Button'
 
 const SecondQuestion = (props) => {
-  let {values, handleResponse} = props
+  let {values, onInputResponse, onButtonResponse} = props
   return (
     <form>
       <TextInput
       label="Company"
       inputId="company" 
       values={values}
-      handleResponse={handleResponse}/>
+      onInputResponse={onInputResponse}/>
       
       <TextInput
       label="Title"
       inputId="title" 
       values={values}
-      handleResponse={handleResponse}/>
+      onInputResponse={onInputResponse}/>
 
-      <Button type="previous" next={props.next} previous={props.previous}/>
-      <Button type="next" next={props.next} previous={props.previous}/>
+      <Button 
+      buttonType="previous" 
+      label="Previous" 
+      onButtonResponse={onButtonResponse} />
+      <Button 
+      buttonType="next" 
+      label="Next" 
+      onButtonResponse={onButtonResponse} />
 
     </form>
   )

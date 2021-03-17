@@ -1,31 +1,15 @@
 import React from 'react'
 
-const Button = (props) => {
-  switch (props.type) {
-    case 'next' :
-      return (
-        <input 
-          type="button"
-          onClick={props.next}
-          value="Next">
-        </input>
+const Button = ({ buttonType, label, onButtonResponse }) => {
 
-      )
-    case 'previous' :
-      return (
-        <input 
-          type="button"
-          onClick={props.previous}
-          value="Previous">
-        </input>
-
-      )
-    default :
-    return (
-      <p>Error!</p>
-    )
-
-  }
+  return (
+    <input 
+      type="button"
+      id={buttonType}
+      value={label}
+      onClick={(e) => onButtonResponse(e)}>
+    </input>
+  )
 }
 
 export default Button

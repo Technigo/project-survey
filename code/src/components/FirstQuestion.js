@@ -5,7 +5,7 @@ import TextInput from './TextInput'
 
 
 const FirstQuestion = (props) => {
-  let {values, handleResponse} = props
+  let {values, onInputResponse, onButtonResponse} = props
   return (
     <form>
 
@@ -13,15 +13,18 @@ const FirstQuestion = (props) => {
       label="First Name"
       inputId="firstName" 
       values={values}
-      handleResponse={handleResponse}/>
+      onInputResponse={onInputResponse}/>
       
       <TextInput
       label="Last Name"
       inputId="lastName" 
       values={values}
-      handleResponse={handleResponse}/>
+      onInputResponse={onInputResponse}/>
 
-      <Button type="next" next={props.next} previous={props.previous}/>
+      <Button 
+      buttonType="next" 
+      label="Next" 
+      onButtonResponse={onButtonResponse} />
     </form>
   )
 }

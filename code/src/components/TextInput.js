@@ -1,7 +1,6 @@
 import React from 'react'
 
-const TextInput = (props) => {
-  let { label, inputId, values, handleResponse } = props
+const TextInput = ({ label, inputId, values, onInputResponse }) => {
   return (
     <>
       <label htmlFor={inputId}>{label}</label>
@@ -9,7 +8,7 @@ const TextInput = (props) => {
         id={inputId} 
         type="text" 
         value={values.[inputId]}
-        onChange={handleResponse(inputId)}/>
+        onChange={(e) => onInputResponse(e)}/>
     </>
   )
 }

@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
+import Summary from './Summary'
 
 const Form = () => {
   const [values, setValues] = useState({
@@ -13,42 +14,70 @@ const Form = () => {
     title: '',
     age: ''
   })
-
-  const handleResponse = input => e => {
-    setValues({ ...values, [input]: e.target.value})
+  
+  const onInputResponse = (e) => {
+    setValues({ ...values, [e.target.id]: e.target.value})
     console.log(e.target.value)
   }
 
-  const next = () => {
-    setValues({ ...values, "step": (values.step + 1)})
-    console.log(values)
-  }
-
-  const previous = () => {
-    setValues({ ...values, "step": (values.step - 1)})
-    console.log(values)
+  const onButtonResponse = e => {
+    console.log(e.target.id)
+    switch (e.target.id) {
+      case 'previous' :
+        setValues({ ...values, "step": (values.step - 1)})
+        break
+      case 'next' :
+        setValues({ ...values, "step": (values.step + 1)})
+        break
+      case 'submit' :
+        setValues({ ...values, "step": 0})
+        break
+      default :
+      return null
+    }
   }
 
   switch (values.step) {
     case 1 :
       return (
         <>
-          <FirstQuestion values={ values } handleResponse={ handleResponse } next={next} previous={previous}/>
-          <h6>{ JSON.stringify(values) }</h6>
+          <FirstQuestion values={values} 
+          onInputResponse={onInputResponse} 
+          onButtonResponse={onButtonResponse}/>
+          {/* <h6>{ JSON.stringify(values) }</h6> */}
         </>
       )
     case 2 :
       return (
         <>
-          <SecondQuestion values={ values } handleResponse={ handleResponse } next={next} previous={previous} />
-          <h6>{ JSON.stringify(values) }</h6>
+          <SecondQuestion values={values} 
+          onInputResponse={onInputResponse} 
+          onButtonResponse={onButtonResponse}/>
+          {/* <h6>{ JSON.stringify(values) }</h6> */}
         </>
       )
     case 3 :
       return (
         <>
-          <ThirdQuestion values={ values } handleResponse={ handleResponse } next={next} previous={previous} />
-          <h6>{ JSON.stringify(values) }</h6>
+          <ThirdQuestion values={values} 
+          onInputResponse={onInputResponse} 
+          onButtonResponse={onButtonResponse} />
+          {/* <h6>{ JSON.stringify(values) }</h6> */}
+        </>
+      )
+    case 4 :
+      return (
+        <>
+          <Summary values={values} 
+          onInputResponse={onInputResponse} 
+          onButtonResponse={onButtonResponse} />
+          {/* <h6>{ JSON.stringify(values) }</h6> */}
+        </>
+      )
+    case 0 :
+      return (
+        <>
+          All done!
         </>
       )
     default :
