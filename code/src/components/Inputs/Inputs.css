@@ -37,9 +37,6 @@
 
 /* --------------------------------- SELECT --------------------------------- */
 
-.input-wrapper--select {
-  position: relative;
-}
 .input-wrapper--select::before {
   content: '';
   width: 20px;
