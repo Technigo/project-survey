@@ -1,6 +1,6 @@
 import React from 'react';
 
-const RadioButton = (props) => {
+const VacationTypeRadioButton = (props) => {
   const {answer, setAnswer} = props
   //const [answer, setAnswer] = useState()
   const onAnswerChange = (event) => {
@@ -29,4 +29,4 @@ const RadioButton = (props) => {
   )
 }
 
-export default RadioButton
+export default VacationTypeRadioButton

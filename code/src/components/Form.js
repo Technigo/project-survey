@@ -4,15 +4,15 @@ import data from '../data.json'
 
 import WelcomeSection from './WelcomeSection'
 import TextInputName from './TextInputName'
-import Selector from './CounrtySelector';
+import CountrySelector from './CounrtySelector';
 import NeedVacationRange from './NeedVactionRange'
-import RadioButton from './RadioButtons';
+import VacationTypeRadioButton from './VacationTypeRadioButtons';
 
 
 
 const Form = (props) => {
   const questions = data.QuestionsNumberArray
-
+  const countries = data.countries
   const [needVacation, setNeedVacation] = useState("");
   const [country, setCountry] = useState("");
   const [vacationType, setVacationType] = useState("");
@@ -45,7 +45,10 @@ const Form = (props) => {
     return (
       <form className="form-wrapper" onSubmit={handleSubmit}>
         { section === questions[0] && (
-          <WelcomeSection section={section} setSection={setSection} question={questions[1]} />
+          <WelcomeSection 
+            section={section} 
+            setSection={setSection} 
+            question={questions[1]} />
         )}
 
         { section === questions[1] && (
@@ -58,10 +61,21 @@ const Form = (props) => {
         )}
 
         {section === questions[2] && (
-          <div>
+          
+            <CountrySelector
+              setSection={setSection}
+              question={questions[3]}
+              country ={country}
+              setCountry={setCountry}
+              countries={countries}
+            />
+          )}
+
+          {section === questions[3] &&(
+            <div>
             <h3>Question 2</h3>
             <div className="radio-buttons-wrapper">
-              <RadioButton
+              <VacationTypeRadioButton
                 buttonsValues={props.radioButtonsValues}
                 answer={mood}
                 name="question2"
@@ -82,6 +96,7 @@ const Form = (props) => {
       <section>
         <p>{mood}</p>
         <p>Need vacation:{needVacation} out of 10</p>
+        <p>You want to go to: {country}</p>
       </section>
     )
   }

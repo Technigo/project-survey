@@ -1,35 +1,40 @@
-import React, { useState } from 'react';
+import React from 'react';
+import StartNextButton from './StartNextButton';
 
-const Selector = (props) => {
-  const [breed, setBreed] = useState("")
-  const onBreedChange = (event) => {
-    console.log(breed)
-    setBreed(event.target.value)
+const CountrySelector = ({setSection, question, country, setCountry, countries}) => {
+
+  const onCountryChange = (event) => {
+    setCountry(event.target.value)
   }
   return (
     <div className="selector-wrapper">
-      <label htmlFor="breed">
-        {props.label}
+      <h3>Where would you like to go?</h3>
+      <label htmlFor="country">
+      Choose a country  
       </label>
       <select
         className="selector"
-        id="breed"
-        value={breed}
-        onChange={onBreedChange}
-
+        id="coutry"
+        value={country}
+        onChange={onCountryChange}
       >
-        {props.array.map((breedName, index) => {
+        {countries.map((countryName, index) => {
           if (index === 0) {
-            return <option key={breedName} value="" disabled={true}>{breedName}</option>
+            return <option key={countryName} value="" disabled={true}>{countryName}</option>
           }
           else {
-            return <option key={breedName} value={breedName}>{breedName}</option>
+            return <option key={countryName} value={countryName}>{countryName}</option>
           }
         })}
       </select>
-      <p>Here is the breed we picked: {breed}</p>
+      <p>Here is the country you picked: {country}</p>
+      <StartNextButton
+      question={question}
+      setSection={setSection}
+      button="Next"
+      />
     </div>
   )
 }
 
-export default Selector
+export default CountrySelector
