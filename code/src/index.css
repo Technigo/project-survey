@@ -194,6 +194,12 @@ code {
 
   .form-components select  {
     font-size: 20px;
+    padding: 10px;
+  }
+
+  .form-components input  {
+    font-size: 20px;
+    padding: 10px;
   }
 
   .form-components input  {

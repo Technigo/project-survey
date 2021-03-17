@@ -5,7 +5,7 @@ export const Summary = ({ summary }) => {
     return (
         <>
             <div className="summary">
-                <p>Hello</p>
+                <p>Your name is {summary.name}</p>
             </div>
         </>
     )

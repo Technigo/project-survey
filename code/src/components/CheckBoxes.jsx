@@ -1,9 +1,9 @@
 import React from 'react';
 
-export const CheckBoxes = ({ stack, setCheckBox }) => {
+export const CheckBoxes = ({ stack, onChange }) => {
     const onCheckChange = (e) => {
         console.log(`Stack: ${e.target.checked}`);
-        setCheckBox(e.target.checked);
+        onChange(e.target.checked, stack);
     }
     return (
         <div className="checkbox">
@@ -11,7 +11,6 @@ export const CheckBoxes = ({ stack, setCheckBox }) => {
                 type="checkbox"
                 id={stack}
                 name={stack}
-                checked={stack}
                 onChange={onCheckChange}
                 required
             />

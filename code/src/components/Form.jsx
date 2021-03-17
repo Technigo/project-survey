@@ -15,7 +15,7 @@ export const Form = ({ onSubmit }) => {
     const [location, setLocation] = useState('');
     const [age, setAge] = useState('');
     const [radio, setRadio] = useState('');
-    const [stack, setCheckBox] = useState (false);
+    const [selectedStacks, setSelectedStacks] = useState ([]);
     
     const isSurveyComplete = () => {
         if (name === '') {
@@ -33,10 +33,6 @@ export const Form = ({ onSubmit }) => {
         if (radio === '') {
           return false;
         }
-        
-        if (stack === '') {
-          return false;
-        }
     
         return true;
     };
@@ -52,8 +48,17 @@ export const Form = ({ onSubmit }) => {
             age,
             location,
             radio,
-            stack
+            selectedStacks
         })
+    }
+
+    const onCheckBoxChange = (checked, stack) => {
+
+        if (checked) {
+            selectedStacks.push(stack)
+        } else {
+            selectedStacks.pop(stack)
+        }
     }
     
     return (
@@ -90,9 +95,9 @@ export const Form = ({ onSubmit }) => {
                 {stacks.map((stack) => {
                     return (
                         <CheckBoxes
-                        key={stack}
-                        stack={stack}
-                        setCheckBox={setCheckBox}
+                            key={stack}
+                            stack={stack}
+                            onChange={onCheckBoxChange}
                         />
                     )
                 })}
