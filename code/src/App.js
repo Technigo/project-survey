@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 
+import Start from './components/Start'
 import Tech from './components/Tech'
 import Hours from './components/Hours'
 import Pets from './components/Pets'
@@ -8,25 +9,16 @@ import Summary from './components/Summary'
 
 export const App = () => {
 
-  // const [tech, setTech] = useState('')
-  // const [hours, setHours] = useState('')
-  // const [coffee, setCoffee] = useState('')
-  // const [pets, setPets] = useState('')
-
   const [section, setSection] = useState(0)
-  const [input, setInput] = useState('')
+  const [tech, setTech] = useState('')
+  const [hours, setHours] = useState('')
+  const [pets, setPets] = useState('Choose below')
+  const [coffee, setCoffee] = useState('')
+
 
   const handleSubmit = (e) => {
     e.preventDefault()
     setSection(5)
-  }
-
-  const handleUserInput = (e) => {
-      if (e.type === 'checkbox') {
-        setInput(e.target.checked)
-    } else {
-        setInput(e.target.value)
-      }
   }
 
   return (
@@ -34,38 +26,37 @@ export const App = () => {
     <main className="main">
 
       {section === 0 && (
-        <>
-        <h1>SURVEY</h1>
-        <h2>━ Programming habits</h2>
-        </>
+        <Start />
       )}
 
       {section === 1 && (
-        <Tech handleUserInput={handleUserInput} input={input} />
+        <Tech setTech={setTech} tech={tech} />
       )}  
 
       {section === 2 && (
-        <Hours handleUserInput={handleUserInput} input={input} />
+        <Hours setHours={setHours} hours={hours} />
       )}  
 
       {section === 3 && (
-         <Pets handleUserInput={handleUserInput} input={input} />
+         <Pets setPets={setPets} pets={pets} />
       )}  
 
       {section < 4 && (
         <button className="button" onClick={() => setSection(section + 1)}>{section === 0 ? 'START' : 'Next question'}</button>
-        
       )}
 
       {section === 4 && (
          <>
-         <Coffee handleUserInput={handleUserInput} input={input} />
+         <Coffee setCoffee={setCoffee} coffee={coffee} />
          <button onClick={handleSubmit} className="button" type="submit">SEND</button>
          </>
       )} 
 
       {section === 5 && ( 
-         <Summary input={input}/>
+        <>
+         <Summary tech={tech} hours={hours} pets={pets} coffee={coffee}/>
+         <button onClick={() => setSection(0)} className="button">RESTART</button>
+         </>
       )}
 
     </main>  

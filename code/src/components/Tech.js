@@ -5,21 +5,20 @@ const Tech = (props) => {
 
   const techArray = ['HTML', 'CSS', 'JavaScript', 'React', 'NPM']
 
-  const [handleUserInput, input] = [props.handleUserInput, props.input]
+  const [setTech] = [props.setTech]
 
   return (
     <div className="survey-item tech">
       <p className="section-heading">What tech do you know?</p>
 
-      {techArray.map((tech, index, array) => (
-        <label className="hours" key={tech}>
+      {techArray.map((item) => (
+        <label className="hours" key={item}>
         <input
-          type="checkbox"
-          value={tech}
-          onChange={handleUserInput}
-          checked={input === tech}
+          type="radio"
+          value={item}
+          onChange={(e) => {setTech(e.target.value)}}
         />
-        {tech}
+        {item}
         </label> 
         
         ))}

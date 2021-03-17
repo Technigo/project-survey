@@ -4,7 +4,7 @@ const Hours = (props) => {
   
   const hourArray = ['0-1', '1-3', '3-5', '5+']
   
-  const [handleUserInput, input] = [props.handleUserInput, props.input]
+  const [setHours] = [props.setHours]
 
   return (
   <>
@@ -15,8 +15,8 @@ const Hours = (props) => {
       <input
         type="radio"
         value={choice}
-        onChange={handleUserInput}
-        checked={input === choice}
+        name="hours"
+        onChange={(e) => {setHours(e.target.value)}}
       />
       {choice}
       </label>  

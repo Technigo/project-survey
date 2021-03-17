@@ -3,18 +3,18 @@ import React from 'react'
 
 const Pets = (props) => {
 
-  const [handleUserInput, input] = [props.handleUserInput, props.input]
+  const [setPets, pets] = [props.setPets, props.pets]
 
   return (
     <div className="survey-item pets">
       <label className="section-heading" htmlFor="pet">Do you have a pet?</label>
-      <select onChange={handleUserInput} id="pet">
-        <option value="">Choose below</option>
-        <option value={input} name="dog">Dog</option>
-        <option value="cat" name="cat">Cat</option>
-        <option value="bird" name="bird">Bird</option>
-        <option value="reptile" name="reptile">Reptile</option>
-        <option value="no pets" name="no-pets">I don't have a pet</option>
+      <select onChange={(e) => {setPets(e.target.value)}} id="pet" value={pets}>
+        <option disabled>Choose below</option>
+        <option>a dog</option>
+        <option>a cat</option>
+        <option>a bird</option>
+        <option>a reptile</option>
+        <option>no pets</option>
       </select>
     </div>
   )

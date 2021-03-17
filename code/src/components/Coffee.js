@@ -3,7 +3,7 @@ import React from 'react'
 
 const Coffee = (props) => {
 
-  const [handleUserInput, input] = [props.handleUserInput, props.input]
+  const [setCoffee, coffee] = [props.setCoffee, props.coffee]
 
   return (
     <div className="survey-item coffee">
@@ -11,8 +11,8 @@ const Coffee = (props) => {
       <input 
       id="coffee" 
       type="text"
-      value={input} 
-      onChange={handleUserInput}
+      value={coffee} 
+      onChange={(e) => {setCoffee(e.target.value)}}
       />
     </div>
   )
