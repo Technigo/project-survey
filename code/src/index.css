@@ -16,7 +16,6 @@ code {
 
 .hero{
   position: relative;
-
 }
 
 .hero-image {
@@ -48,39 +47,57 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
+
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: burlywood;
+  width: 90%;
+  margin-bottom: 50px;
 }
 
 .form-section {
   display: grid;
   grid-template-columns: 1fr;
-  width: 70%;
+  width: 90%;
   background-color: yellow;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 .form-section-box {
   text-align: center;
 }
 
-.image{
+.image {
   width: 100%;
   transition: transform 1s;
   border-radius: 25px;
 }
 
 .image:hover {
-  transform: scale(1.5); 
+  transform: scale(1.2); 
 }
 
-.box-header {
+/*.box-header {
   display: flex;
   justify-content: center;
   align-items: center;
-}
+}*/
+
+
 
 .container {
   margin-bottom: 50px;
   border: 10px solid red;
   border-radius: 25px;
+  background-color: red;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
 }
 
 /* Select Section starts */
@@ -98,9 +115,49 @@ code {
 
 .form-section p {
   font-size: 24px;
+  font-weight: bold;
+}
+
+label {
+  margin-bottom: 50px;
+}
+
+.checkbox-text, .checkbox-input {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.checkbox {
+  height: 50px;
+  width: 50px;
 }
 
 
+
 /* Select Section ends */
+
+
+/* Input section */
+
+.amount-items input, .name input, .email input, .phone input{
+  width: 99%;
+  padding: 0;
+  height: 50px;
+}
+
+button {
+  height: 50px;
+}
+
+.radio-paragraf {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.my-input {
+  width: 50px;
+  height: 50px;
+}
 
 

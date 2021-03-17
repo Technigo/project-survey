@@ -21,12 +21,12 @@ const Radio = () => {
             <input
             type="radio"
             value={group}
-            onChange={event => setColor(event.target.value)}
+            onChange={event => setColor(event.target.value)} // Du kan gära onChange ={SetColor}
             checked={Color === group}
             name="Selected jacket"
             className="my-input"
           />
-          {group} </div>
+          <span className="radio-paragraf">{group}</span> </div>
           </div>
           </div>
           

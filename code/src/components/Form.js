@@ -13,9 +13,10 @@ const Test = () => {
     return (
         <form action="http://httpbin.org/anything" method="POST">
                 <Hero />
+                <div>
                 <div className="form">
                     <div className="form-container">
-                    <div className="form-section">
+                        <div className="form-section">
                             <Radio />
                             <SelectSize />
                             <Amount />
@@ -24,8 +25,10 @@ const Test = () => {
                             <Phone />
                             <Checkbox />
                             <OrderBtn />
+                        </div>
                     </div>
-                    </div>
+                </div>
+                <div><h1>TEST</h1></div>
                 </div>
             </form>
     )

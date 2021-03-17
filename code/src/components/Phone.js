@@ -2,10 +2,10 @@ import React from 'react'
 
 const Phone = () => {
     return (
-        <label>
-                    <p>Phone number</p>
-                    <input type="number" name="Phone Number" required />
-                </label>
+        <label className="phone">
+            <p>Phone number</p>
+            <input type="number" name="Phone Number" required />
+        </label>
     )
 }
 

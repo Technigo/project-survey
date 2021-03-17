@@ -2,7 +2,7 @@ import React from 'react'
 
 const OrderBtn = () => {
     return (
-        <label>
+        <label className="name">
         <p>Name & Surname</p> 
         <input type="type" name="Name & Surname" required />
         </label>
