@@ -1,4 +1,14 @@
 {
+    "section": [
+        "firstSection",
+        "secondSection",
+        "thirdSection",
+        "fourthSection",
+        "fifthSection",
+        "sixthSection",
+        "seventhSection",
+        "eighthSection"
+    ],
     "name": {
         "label": "Name",
         "field": "name",

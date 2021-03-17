@@ -15,3 +15,49 @@ code {
 .character-icon {
   width: 50px;
 }
+
+.progress-bar {
+  width: 300px;
+  height: 10px;
+  background-color: lightgrey;
+  border-radius: 20px;
+}
+
+.progress-bar div {
+  height: 100%;
+  border-radius: 20px;
+  background-color: green;
+}
+
+.firstSection {
+  width: 12.5%;
+}
+
+.secondSection {
+  width: 25%;
+}
+
+.thirdSection {
+  width: 37.5%;
+}
+
+.fourthSection {
+  width: 50%;
+}
+
+.fifthSection {
+  width: 62.5%;
+}
+
+.sixthSection {
+  width: 75%;
+}
+
+.seventhSection {
+  width: 87.5%;
+}
+
+.eighthSection {
+  width: 100%;
+}
+

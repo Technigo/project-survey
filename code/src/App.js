@@ -22,7 +22,7 @@ const App = () => {
   const [family, setFamily] = useState("")
   const [goal, setGoal] = useState("")
   const [icon, setIcon] = useState()
-  const [value, setValue] = useState([3, 3, 3])
+  const [value, setValue] = useState(0)
 
   const handleSubmit = () => {
     console.log(Character)
@@ -62,56 +62,56 @@ const App = () => {
       <>
         <form onSubmit={(event) => event.preventDefault()}>
 
-          {section === 0 &&
+          {data.section[section] === "firstSection" &&
             <TextInput
               text={name}
               setText={setName}
               data={data.name}
             />}
 
-          {section === 1 &&
+          {data.section[section] === "secondSection" &&
             <SelectInput
               choice={characterClass}
               setChoice={setCharacterClass}
               data={data.class}
             />}
 
-          {section === 2 &&
+          {data.section[section] === "thirdSection" &&
             <RadioInput
               choice={race}
               setChoice={setRace}
               data={data.race}
             />}
 
-          {section === 3 &&
+          {data.section[section] === "fourthSection" &&
             <TextInput
               text={goal}
               setText={setGoal}
               data={data.goal}
             />}
 
-          {section === 4 &&
+          {data.section[section] === "fifthSection" &&
             <NumberInput
               number={number}
               setNumber={setNumber}
               data={data.age}
             />}
 
-          {section === 5 &&
+          {data.section[section] === "sixthSection" &&
             <SelectInput
               choice={family}
               setChoice={setFamily}
               data={data.family}
             />}
 
-          {section === 6 &&
+          {data.section[section] === "seventhSection" &&
             <RadioInputIcon
               choice={icon}
               setChoice={setIcon}
               data={data.icon}
             />}
 
-          {section === 7 &&
+          {data.section[section] === "eighthSection" &&
             <div className="stats-container">
               {data.stats.allStats.map(item =>
                 <RangeInput
@@ -128,7 +128,7 @@ const App = () => {
             <button onClick={handleSubmit}>Submit</button>
           </div>
         </form>
-        <ProgressBar progress={section} />
+        <ProgressBar progress={data.section[section]} />
       </>
     )
   }
