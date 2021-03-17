@@ -1,0 +1,25 @@
+{
+    "intro": {
+        "text": "intro text"
+    },
+    "questions": {
+        "question_1": {
+            "questionText": "Do you want them to use magic?",
+            "options": {   
+                "option_0": "Yes, lots!",
+                "option_1": "Maybe some, or if it is subtle?",
+                "option_2": "Nope, no magic"
+            }
+        },
+        "question_2": "Are their abilities tied to religion or mysticism?",
+        "question_3": "Do you want them to use special tools, technology or magitech?",
+        "question_4": "How grim is your character’s abilities?",
+        "question_5": "Do you want abilities suitable for hijinx?",
+        "question_6": "What are they best at?",
+        "question_7": "What is their next best attribute?",
+        "question_8": "What are they worst at?"
+    },
+    "results": {
+        "text": "results text"
+    }        
+}

@@ -1,0 +1,47 @@
+[
+    {   
+        "radioButtons": [
+            {   
+                "option_0": "Yes, lots!",
+                "option_1": "Maybe some, or if it is subtle?",
+                "option_2": "Nope, no magic"
+            },
+            {   
+                "option_0": "Yes, lots!",
+                "option_1": "Maybe some, or if it is subtle?",
+                "option_2": "Nope, no magic"
+            },
+            {   
+                "option_0": "Yes, their powers have spiritual ties",
+                "option_1": "Maybe?",
+                "option_2": "Nope, no spiritual powers"
+            },
+            {   
+                "option_0": "Yes, let’s go high-tech/magitech!",
+                "option_1": "Maybe some special tool use, but not high-tech or magitech",
+                "option_2": "Nope, not their style"
+            },
+            {   
+                "option_0": "Very grim!",
+                "option_1": "Not necessarily grim, but could be?",
+                "option_2": "Nope, I want them the opposite of grim!"
+            },
+            {   
+                "option_0": "Yes, can’t wait to get up to all sorts of creative hijinx!",
+                "option_1": "Some flashy powers would be nice, but nothing crazy",
+                "option_2": "No, I’d like more modest abilities, forcing me to be creative on my own"
+            }
+        ],
+        "dropDown": [
+            {   
+                "option_0": "Strength and/or athleticism",
+                "option_1": "Knowledge and/or quick thinking",
+                "option_2": "Perception, instincts and/or magic",
+                "option_3": "Nimbleness and/or aim",
+                "option_4": "Resilience and/or protecting others",
+                "option_5": "Social skills, leadership and/or manipulation"
+            }
+        ]
+    }
+        
+]
