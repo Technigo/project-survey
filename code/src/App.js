@@ -10,7 +10,7 @@ export const App = () => {
     <div>
 
       <Form />
-      <FormQuestions />
+      
     </div>
   )
 }

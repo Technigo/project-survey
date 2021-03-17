@@ -2,6 +2,9 @@
 /* eslint-disable */
 
 import React, { useState } from 'react'
+
+import FormQuestions from 'components/FormQuestions'
+
 const genderGroups = ["male", "female", "other"]
 
 
@@ -28,8 +31,29 @@ const Form = () => {
         setGender(e.target.value)
     }
 
+    const isSurveyComplete = () => {
+        if (fname === '') {
+            return false
+        }
 
+        if (lname === '') {
+            return false
+        }
+
+        if (gender === '') {
+            return false
+        }
+
+        
+
+        return true
+    }
     
+    if (isSurveyComplete()) {
+        console.log("completed survey")
+        
+            
+    }
 
     return (
         <form onSubmit = {(event) => event.preventDefault()}>
@@ -68,12 +92,19 @@ const Form = () => {
                     {group}    
                 </label>
 
-                
-
             ))}
             
-            
-            
+            <FormQuestions />
+
+            <div>
+                <input
+                    type="submit"
+                    value="Submit"
+                    disabled={!isSurveyComplete()}
+                
+                />
+               
+            </div>
 
 
         </form>
