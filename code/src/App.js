@@ -1,49 +1,74 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import { Heading } from 'components/Header.js'
 import { Input1 } from 'components/Input1.js'
 import { Input2 } from 'components/Input2.js'
 import { Input3 } from 'components/Input3.js'
-import { Submit } from 'components/Submit.js'
-import { SummaryWrapper } from 'components/Summary'
+
+
+// const isSurveyComplete = () => {
+ 
+//   if (activity === '') {
+//     return false
+//   }
+
+//   if (month === '') {
+//     return false
+//   }
+
+//   if (temperature === '') {
+//     return false
+//   }
+//   return true
+// }
+
+// if (isSurveyComplete()) {
+//   console.log('Survey complete!')
+// }
+
 
 export const App = () => {
 
-  const optionsQuestionTwo = ['June', 'July', 'August']
-  const optionsQuestionThree = ['< 20', '20-25', '25 <']
- 
-  return (
+  const [activity, setActivity] = useState('')
+  const [month, setMonth] = useState('')
+  const [temperature, setTemperature] = useState()
+
+   return (
     <div>
       < Heading
         subheading="Whats your Vacay Mode?!"
       />
-      <form className="form" 
-        onSubmit={ < SummaryWrapper />}        
-      >
-        <div className="input-one">
+      <form className="form">
+        <div className="input-one text-input">
           < Input1
-            question="Favourite vacation activity"
-            type="text"
+            //question="Favourite vacation activity"
+            //type="text" // maybe use name of component instead to specify type
+            setActivity={setActivity}
+            activity={activity}
           />
         </div>
-        <div className="input-two">
+        <div className="input-two select-input">
           < Input2
-            question="Best summer weeks"
-            type="select"
-            options={optionsQuestionTwo}
+            //question="Best summer month"
+            //type="select"
+            //options={optionsQuestionTwo}
+            setMonth={setMonth}
+            month={month}
           />
         </div>
-        <div className="input-three">
+        <div className="input-three radio-input">
           < Input3
-            question="My preferred temperature"
-            type="radio"
-            options={optionsQuestionThree}
+            //question="Preferred temperature"
+            //type="radio"
+            //options={optionsQuestionThree}
+            setTemperature={setTemperature}
+            temperature={temperature}
           />
         </div>
         <input type="submit">
         </input>
-      < Submit />
       </form> 
-    </div>
+    </div> 
+
   )
 }

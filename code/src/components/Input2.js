@@ -1,27 +1,33 @@
 import React, { useState } from 'react'
 
-export const Input2 = (props) => {
-  const [optionselected, setOption] = useState("")
-  console.log({optionselected})
+const optionsQuestionTwo = ['','June', 'July', 'August']
+
+export const Input2 = ({setMonth, month}) => {
+  
+  const onMonthChange =(event) => {
+    setMonth(event.target.value)
+  }
+
   return (
     <div>
       <div>
-      <h3>
-        {props.question}
-      </h3>
+        <h3>
+          Best summer month
+        </h3>
       </div>       
       <select 
-        type={props.type}
-        onChange={event => setOption(event.target.value)}
-        value={optionselected}
+        type="select"
+        onChange={(event) => {onMonthChange(event)}}
+        value={month}
       >
-        {props.options.map((option) => {
+      
+        {optionsQuestionTwo.map((month) => {
           return (
             <option 
-              key={option}
-              value={option}
+              key={month}
+              value={month}
             >
-               {option}
+               {month}
             </option>
           )
         })
@@ -30,3 +36,5 @@ export const Input2 = (props) => {
     </div>
   )
 }
+
+//return first option with disabled
