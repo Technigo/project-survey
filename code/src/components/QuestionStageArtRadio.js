@@ -7,10 +7,12 @@ const QuestionStageArtRadio = () => ({
   setStageArtCategory,
   page,
   setPage,
-  onStageArtChange,
   onNextQuestion,
   message
 }) => {
+  const onStageArtChange = (e) => {
+    setStageArtCategory(e.target.value)
+  }
 
   const stageart = ["I'm for experimental shit, I need to see something I can not immediately understand", "I want to dance with my kid", "Opera", "Theatre", "Musical", "I just miss the feeling of collectivity, and long to be able to see something with another person's eye - just once, please!", "Concert"]
 
@@ -30,7 +32,9 @@ const QuestionStageArtRadio = () => ({
               id={stagetype}
           //  value={category} ---> not needed for radiobuttons as they are static
               type="radio"
-              onChange={setStageArtCategory}
+              onChange={(e) => {
+                onStageArtChange(e.target.value)
+              }}
           //  checked={stageArtCategory === category}
               className="form-radiobuttons"
             />

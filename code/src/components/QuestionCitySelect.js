@@ -7,10 +7,12 @@ const QuestionCitySelect = ({
   setInhabitants, 
   page,
   setPage,
-  onInhabitantsChange,
   onNextQuestion,
   message
-}) => {  
+}) => {
+  const onInhabitantsChange = (e) => {
+    setInhabitants(e.target.value);
+  }
 
   return (
     <article className="form-question-1">
@@ -21,7 +23,11 @@ const QuestionCitySelect = ({
 
       {/* A */}
       <div className="question-container">
-        <select id="inhabitants" className="dropdown" value={inhabitants} onChange={setInhabitants}>
+        <select 
+          id="inhabitants" 
+          className="dropdown" 
+          value={inhabitants} 
+          onChange={(e) => {onInhabitantsChange(e)}}>
           <option disabled></option>
           <option value="5000">Less than 5000</option>
           <option value="5000-25000">5000 - 25 000</option>

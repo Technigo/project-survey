@@ -7,10 +7,12 @@ const QuestionAgeRadio = ({
   setAgeCategory, 
   page,
   setPage,
-  onAgeChange,
   onNextQuestion,
   message
-}) => {  
+}) => {
+  const onAgeChange = (e) => {
+    setAgeCategory(e.target.value)
+  }
 
   const age = ['15-25', '26-35', '36-45', '46-65', '65+']
   
@@ -26,11 +28,11 @@ const QuestionAgeRadio = ({
         {age.map((age) => (
           <span key={age} className="form-radiobuttons">
             <input
-              name={age}
+              name="age"
               id={age}
         //    value={category} ---> not needed for radiobuttons as they are static
               type="radio"
-              onChange={setAgeCategory}
+              onChange={(e) => {onAgeChange(e)}} //(e) => {onAgeChange(e)}
               className="form-radiobuttons"
             />
             <label htmlFor={age} aria-label={age} tabIndex="0">

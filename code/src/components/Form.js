@@ -17,17 +17,17 @@ const Form = () => {
   const [proposal, setProposal] = useState('');
   const [professions, setProfessions] = useState('')
 
-  const onInhabitantsChange = (event) => {
+  /* const onInhabitantsChange = (event) => {
     setInhabitants(event.target.value);
-  }
+  } */
 
-  const onAgeChange = (event) => {
+  /* const onAgeChange = (event) => {
     setAgeCategory(event.target.value)
-  }
+  } */
 
-  const onStageArtChange = (event) => {
+  /* const onStageArtChange = (event) => {
     setStageArtCategory(event.target.value)
-  }
+  } */
 
   const onProposalChange = (event) => {
     setProposal(event.target.value)
@@ -62,7 +62,7 @@ const Form = () => {
             <div>
             <QuestionCitySelect
               inhabitants={inhabitants}
-              setInhabitants={onInhabitantsChange}
+              setInhabitants={setInhabitants}
               page={page}
               setPage={onPageChange}
             />
@@ -73,7 +73,7 @@ const Form = () => {
             <div>
             <QuestionAgeRadio
               ageCategory={ageCategory}
-              setAgeCategory={onAgeChange}
+              setAgeCategory={setAgeCategory}
               page={page}
               setPage={onPageChange}
             />
@@ -84,7 +84,7 @@ const Form = () => {
             <div>
             <QuestionStageArtRadio
               stageArtCategory={stageArtCategory}
-              setStageArtCategory={onStageArtChange}
+              setStageArtCategory={setStageArtCategory}
               page={page}
               setPage={onPageChange}
             />
