@@ -15,7 +15,8 @@ export const RadioButton = () => {
       <p>What type of trip you prefer:</p> 
       {typeOfTrip.map(trip => ( 
         <label key={trip}>
-          <input 
+          <input
+          name="radio"
           type="radio"
           value={trip}
           onChange={onRadioClicked}

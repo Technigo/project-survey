@@ -15,6 +15,7 @@ export const DropDown = () => {
       value={dropDown}
       onChange={onDropDown}  
     >
+    <option disabled></option>  
     <option>Plane</option>
     <option>Train</option>
     <option>Boat</option> 
