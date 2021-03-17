@@ -1,24 +1,24 @@
 import React from 'react'
 
-const group = ["18-25", "26-35", "35+"];
+const ageGroup = ["18-25", "26-35", "35+"];
 
-const RadioBtnAge = (props) => {
+const RadioBtnAge = ( {onAgeChange} ) => {
     return (
         <>
         <div className='age-group'>
             <h1 className='radio-heading'>What is your age?</h1>
-            {group.map(group => (
+            {ageGroup.map(group => (
                 <label
                 key={group}
                 label='age'
                 className='radio-container'
                 >
                     <input 
+                        name='age'
                         className='radio-btn'
                         type="radio" 
                         value={group} 
-                        checked={props.ageGroup === group}
-                        onChange={event => props.setAgeGroup(event.target.value)}
+                        onChange={onAgeChange}
                     />
                     <span class="checkmark"></span>
                     {group}

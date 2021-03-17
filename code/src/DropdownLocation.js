@@ -1,6 +1,6 @@
 import React from 'react'
 
-const DropdownLocation = (props) => {
+const DropdownLocation = ( {label, location, onLocationChange}  ) => {
     return (
         <div className='dropdown-location'>
             <label htmlFor="location">
@@ -8,10 +8,11 @@ const DropdownLocation = (props) => {
             </label>
             <select
                 className='dropdown-menu'
-                name={props.label} 
-                value={props.location} 
-                onChange={event => props.setLocation(event.target.value)}
+                name={label} 
+                value={location} 
+                onChange={onLocationChange}
             >
+                <option value="" disabled>Select location</option>
                 <option value="Stockholm">Stockholm</option>
                 <option value="Gothenburg">Gothenburg</option>
                 <option value="Uppsala">Uppsala</option>

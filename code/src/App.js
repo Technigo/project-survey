@@ -16,7 +16,7 @@ const [section, setSection] = useState('welcome');
 // Name state
 const [name, setName] = useState('');
 // Location state
-const [location, setLocation] = useState('Stockholm');
+const [location, setLocation] = useState('');
 // Age group state
 const [ageGroup, setAgeGroup] = useState('');
 
@@ -24,10 +24,17 @@ const [ageGroup, setAgeGroup] = useState('');
 
 // Functions of getting the input
 
-const getNameInput = inputName => {
-  console.log(inputName)
-  setName(inputName);
+const onNameChange = (e) => {
+  setName(e.target.value);
 };
+
+const onLocationChange = (e) => {
+  setLocation(e.target.value)
+}
+
+const onAgeChange = (e) => {
+  setAgeGroup(e.target.value)
+}
 
   return (
     <>
@@ -53,7 +60,7 @@ const getNameInput = inputName => {
           name={name}
           setName={setName}
           id='name'
-          onNameChange={getNameInput}
+          onNameChange={onNameChange}
           />
           <div className='button-wrapper'>
             <button
@@ -84,7 +91,7 @@ const getNameInput = inputName => {
         <DropdownLocation 
           location={location}
           label={name}
-          setLocation={setLocation}
+          onLocationChange={onLocationChange}
         />
 
         <div className='button-wrapper'>
@@ -114,7 +121,7 @@ const getNameInput = inputName => {
         <section className='radio-age'>
           <RadioBtnAge 
           ageGroup={ageGroup}
-          setAgeGroup={setAgeGroup}
+          onAgeChange={onAgeChange}
           />
           
 

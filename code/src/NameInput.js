@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NameInput = (props) => {
+const NameInput = ( {id, name, onNameChange} ) => {
     return (
         <div className='name-input-field'>
             <label htmlFor="name">
@@ -9,11 +9,11 @@ const NameInput = (props) => {
             <input 
                 className='name-text'
                 type="text" 
-                id={props.id} 
-                value={props.name} 
+                id={id} 
+                value={name} 
                 placeholder='Type your name'
                 required
-                onChange={event => props.onNameChange(event.target.value)} 
+                onChange={onNameChange} 
             />
         </div>
     )

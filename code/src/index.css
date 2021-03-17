@@ -66,10 +66,16 @@ body {
 }
 
 .next-button, .submit-button {
-  margin-left: 30px;
+  margin-left: 30px;  
+  background-color: #C46E46;
+  color: #ffff;
 }
 
-.back-button:hover, .next-button:hover, .submit-button {
+.submit-button:hover, .next-button:hover {
+  background-color: #7c462c
+}
+
+.back-button:hover {
   background-color: #C46E46;
   color: #ffff;
 }
@@ -176,6 +182,14 @@ body {
   box-shadow: none;
   color: #161616;
   align-self: center;
+}
+
+.age-btn {
+  color: #161616;
+}
+
+.radio-container {
+  color: #161616;
 }
 
 }
