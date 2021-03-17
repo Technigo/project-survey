@@ -1,14 +1,14 @@
 import React from 'react';
 
 
-import FavoriteBook from 'Components/FavoriteBook';
-import HowManyBooks from 'Components/HowManyBooks';
-import FavoriteGenre from 'Components/FavoriteGenre';
-import SubmitButton from 'Components/SubmitButton';
-import Header from 'Components/Header'
+import FavoriteBook from 'components/FavoriteBook';
+import HowManyBooks from 'components/HowManyBooks';
+import FavoriteGenre from 'components/FavoriteGenre';
+import SubmitButton from 'components/SubmitButton';
+import Header from 'components/Header'
 
 
-// const [book, setBook] = useState("");
+
 
 
 const Form = () => {

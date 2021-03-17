@@ -1,27 +1,28 @@
-import React, {useState} from 'react';
+import React from 'react';
 
+import {bookGenre} from '../utils/bookGenre'
 
 
 /*RADIO BUTTONS*/
 
-const bookGenre = ["Biography", "Romance", "Fantacy", "Detective"]
 
-const FavoriteGenre = ({text}) => {
-  const [favoriteGenre, setFavoriteGenre] = useState("")
+const FavoriteGenre = ({text, favoriteGenre, onGenreChange}) => {
 
   return (
     <div className="favorite-genre-container">
       <div className="inner-container">
+
         <div><h2>{text}</h2></div>
+
           {bookGenre.map((genre) => (
           <label key={genre}>
             <input
-            className="label-radio"
-            type="radio"
-            name="test"
-            value={genre}
-            onChange={(event) => setFavoriteGenre(event.target.value)}
-            checked={favoriteGenre === genre}
+              className="label-radio"
+              type="radio"
+              name="genre"
+              value={genre}
+              onChange={onGenreChange}
+              checked={favoriteGenre === genre}
             />
             {genre}
           </label>

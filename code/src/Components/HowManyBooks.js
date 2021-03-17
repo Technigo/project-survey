@@ -1,14 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
 /*DROPDOWN MENU*/
 
-const HowManyBooks = ({text}) => {
-  const [number, setNumber] = useState("");
+const HowManyBooks = ({text, number, onNumberChange}) => {
 
-  const onNumberChange = (event) => {
-    setNumber(event.target.value)
-  }
 
   return(
     <div className = "number-of-books-container">

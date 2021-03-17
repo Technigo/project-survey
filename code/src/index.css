@@ -132,6 +132,16 @@ color: black;
 }
 
 
+.summary-container{
+  background-image: url(./images/bookleaf.jpg);
+  height: 100vh;
+  /*width: 100%; */
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+}
 
 .label-radio{
   padding:10px;
@@ -141,7 +151,12 @@ html {
   scroll-behavior: smooth;
 }
 
-
+.start-button{
+  font-size: 20px;
+  margin: 15px;
+  padding:5px;
+  border-radius:10px;
+}
 
 /**** MEDIA QUERIES ***/
 /*Tablet*/
@@ -156,7 +171,7 @@ html {
 
 /*Desktop*/
 @media screen and (min-width: 1025px) {
-.favorite-genre-container, .favorite-book-container, .number-of-books-container, .header-container {
+.favorite-genre-container, .favorite-book-container, .number-of-books-container, .header-container, .summary-container {
   background-image: url(./images/pens.jpg);
 }
 }

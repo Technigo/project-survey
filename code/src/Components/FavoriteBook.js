@@ -1,17 +1,12 @@
-import React, {useState} from 'react';
+import React from 'react';
 
 
-const FavoriteBook = ({text}) => {
-  const [book, setBook] = useState("");
-
-  const onBookChange = (event) => {
-    setBook(event.target.value)
-  }
+const FavoriteBook = ({text, book, onBookChange}) => {
 
   return (
 
     <div className="favorite-book-container">
-      <div className="inner-container" id="">
+      <div className="inner-container">
         <label htmlFor='favoritebook'><h2>{text}</h2>
         <input
           id="favoritebook"
@@ -22,7 +17,7 @@ const FavoriteBook = ({text}) => {
         </label>
       </div>
       <div>
-        <button className="start-button"><a href='#favorite'>Submit!</a></button>
+        <button className="start-button"><a href='#favorite'>Finish!</a></button>
       </div>
     </div>
 

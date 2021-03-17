@@ -1,16 +1,18 @@
 import React from 'react';
 
 
-const Summary = () => {
+
+const Summary = ({textHeader, numberOfBooks, favGenre, favBook}) => {
 
   return(
-    <section className="summary-section">
-      <h2 className="summary-header">Thank you for your time!</h2>
-      <p className="summary-text">You read {} books in a year.</p>
-      <p className="summary-text">Your favorite genre is {}.</p>
-      <p className="summary-text">Your favoritebook is {}.</p>
-
-    </section>
+    <div className="summary-container">
+        <div className="inner-container">
+        <h2 className="summary-header">{textHeader}</h2>
+        <p className="summary-text">You read {numberOfBooks} books in a   year.</p>
+        <p className="summary-text">Your favorite genre is: {favGenre}.</p>
+        <p className="summary-text">Your favoritebook is: {favBook}.</p>
+        </div>
+      </div>
   )
 };
 
