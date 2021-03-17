@@ -13,6 +13,7 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
       case 'text':
         return (
           <input
+            className="input"
             required
             name={inputName}
             type={type}
@@ -24,7 +25,7 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
         return (
           <>
             {other.options.map((option) => (
-              <label htmlFor={option} key={option}>
+              <label className="radio-label" htmlFor={option} key={option}>
                 <input
                   required
                   id={option}
@@ -33,6 +34,7 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
                   value={option}
                   onChange={handleChange} />
                 {option}
+                <div className="radio-input" />
               </label>
             ))}
           </>
@@ -54,7 +56,7 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
   }
 
   return (
-    <div className="input-wrapper">
+    <div className={`input-wrapper input-wrapper--${type}`}>
       {getInputs()}
     </div>
   )

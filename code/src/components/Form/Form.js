@@ -45,7 +45,7 @@ const questions = [
     ],
     content: {
       type: 'image',
-      data: '../assets/ror1.png',
+      data: '/assets/images/ror1.png',
       dataAlt: 'rorschach'
     }
   }
