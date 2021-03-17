@@ -6,6 +6,7 @@ import { SmileQuestion }  from './Components/SmileQuestion.js';
 import { MustacheQuestion }  from './Components/MustacheQuestion.js';
 import { Heading }  from './Components/Heading.js';
 import { SubmitQuestions }  from './Components/SubmitQuestions.js';
+import { Respons }  from './Components/Respons.js';
 
 
 
@@ -23,20 +24,36 @@ console.log(eyeColor)
 const [smile, setSmile] = useState()
 console.log(smile)
 
-const [hasMustache, setHasMustache] =useState(false);
+const [hasMustache, setHasMustache] = useState(false);
 console.log(hasMustache)
+
+const [submit, setSubmit] =useState();
+console.log(submit)
+
+const [showSummary, setShowSummary] = useState(false)
+
+const onSubmit =() => {
+  console.log('Submit button pressed');
+
+  setShowSummary(true);
+};
 
   return (
     <div className="main-container">
-      <form>
+      {submit ? (
+        <Respons />
+      ) : (
+      <form onSubmit={onSubmit}>
         <Heading />
         <NameQuestion name={name} setName={setName}/>
         <NoseQuestion sizeOfNose={noseSize} setSizeOfNose={setNoseSize} />
         <EyeQuestion eyeColor={eyeColor} setEyeColor={setEyeColor} />
         <SmileQuestion smile={smile} setSmile={setSmile} />
         <MustacheQuestion hasMustache={hasMustache} setHasMustache={setHasMustache}/>
-        <SubmitQuestions />
+        <SubmitQuestions submit={submit} setSubmit={setSubmit} />
+      
       </form>
+      )}
     </div>
   )
 }

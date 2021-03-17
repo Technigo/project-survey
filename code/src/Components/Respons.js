@@ -1,18 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
-export const Respons = ({ }) => {
-   
-    return(
-        <div className="card-border">
-            <div className="card">
-                <img src
 
-            </div>
 
+
+export const Respons = ( {name, eyeColor, noseSize, smile, hasMustache} ) => {
+    return (
+        <>
+        <div id="summary"> 
+        <p>Name: {name}</p>
+        <p>Nose: {noseSize}</p>
+        <p>Eyecolor: {eyeColor}</p>
+        <p>Smile: {smile}</p>
+        <p>Has a mustache: {hasMustache}</p>
         </div>
-        
-    );
-};
+        </>
+    )
+}
 

@@ -2,13 +2,19 @@ import React from "react";
 
 
 
-export const SubmitQuestions = () => {
-    
+export const SubmitQuestions = ({submit, setSubmit}) => {
+    const onSetSubmit  = (e) => {
+    console.log(`submit: ${!submit}`);
+    setSubmit(!submit) }
 
     return(
         <div className="questions-container">
-            <input className="submit-btn" type="submit" value="Submit" />
-            {/* < h1 className="main-titel">Submit</h1> */}
+            <input 
+            className="submit-btn" 
+            type="submit" 
+            value="submit" 
+            onClick={(e) => onSetSubmit(e)}
+            />
         </div>  
     );
 };
