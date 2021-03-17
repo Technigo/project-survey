@@ -12,7 +12,6 @@ const NameQuestion = () => {
         onChange={event => setName(event.target.value)}
         value={name}
       />
-      <h1>Hi {name}!</h1>
     </>
 
   )

@@ -12,7 +12,6 @@ const OccupationQuestion = () => {
         onChange={event => setOccupation(event.target.value)}
         value={occupation}
       />
-      <h1> {occupation}!</h1>
     </>
 
   )
