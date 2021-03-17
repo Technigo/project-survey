@@ -60,58 +60,58 @@ const Form = () => {
         <form onSubmit={handleSubmit}>
 
         {page === 0 && ( 
-            <div>
+          <div>
             <QuestionCitySelect
               inhabitants={inhabitants}
               setInhabitants={setInhabitants}
               page={page}
               setPage={onPageChange}
             />
-            </div>
+          </div> 
         )}
 
         {page === 1 && (
             <div>
-            <QuestionAgeRadio
-              ageCategory={ageCategory}
-              setAgeCategory={setAgeCategory}
-              page={page}
-              setPage={onPageChange}
-            />
+              <QuestionAgeRadio
+                ageCategory={ageCategory}
+                setAgeCategory={setAgeCategory}
+                page={page}
+                setPage={onPageChange}
+              />
             </div>
         )}
 
         {page === 2 && (
-            <div>
+          <div>
             <QuestionStageArtRadio
               stageArtCategory={stageArtCategory}
               setStageArtCategory={setStageArtCategory}
               page={page}
               setPage={onPageChange}
             />
-            </div>
+          </div>
         )}
 
         {page === 3 && (
-            <div>
+          <div>
             <TextInputProposal
               proposal={proposal}
               setProposal={setProposal}
               page={page}
               setPage={onPageChange}
             />
-            </div>
+          </div>
         )}
 
         {page === 4 && (
-            <div>
-            <QuestionProfessionCheckbox
-              professions={professions}
-              setProfessions={setProfessions}
-              page={page}
-              setPage={onPageChange}
-            />
-            </div>
+        <div>
+          <QuestionProfessionCheckbox
+            professions={professions}
+            setProfessions={setProfessions}
+            page={page}
+            setPage={onPageChange}
+          />
+        </div> 
         )}
         </form>
       ):
