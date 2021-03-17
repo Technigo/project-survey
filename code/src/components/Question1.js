@@ -7,17 +7,19 @@ const Question1 = () => {
         console.log(e.target.value);
         setName(e.target.value);
     }
-    
+
+
     return (
-        <form>
+        <form onSubmit={event => event.preventDefault()}>
             <div>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">Name: </label>
                 <input
                     id="name"
                     type="text"
                     value={name}
                     onChange={onNameChange}
                 />
+                 <button type="submit">NEXT</button>
             </div>
         </form>
     )

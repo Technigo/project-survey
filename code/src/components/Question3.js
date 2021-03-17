@@ -13,7 +13,7 @@ const Question3 = () => {
     }
 
     return (
-        <form>
+        <form onSubmit={event => event.preventDefault()}>
             <div>
                 <p>Preferred Investment:</p>
                  { investmentTypes.map(item => (

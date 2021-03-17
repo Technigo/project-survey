@@ -9,7 +9,7 @@ const Question2 = () => {
     }
     
     return (
-        <form>
+        <form onSubmit={event => event.preventDefault()}>
             <div>
                 <select 
                     id="term"
