@@ -1,6 +1,7 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+import React from 'react'
 
-import Form from './Form'
+// import Form from './Form'
 
 const Summary = () => {
     return (

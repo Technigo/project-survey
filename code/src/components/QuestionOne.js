@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+// import React, { useState } from 'react'
+import React from 'react'
 
-const QuestionOne = () => {
-    
-    const [name, setName] = useState('');
+const QuestionOne = ({ name, setName }) => {
 
     const onNameChange = (event) => {
+        console.log(name)
         setName(event.target.value)
     }
 
@@ -17,14 +17,15 @@ const QuestionOne = () => {
             <div>
                 <label htmlFor="name"></label>
                 <input 
-                    id="name"
+                    name="name"
+                    id={name}
                     type="text"
                     value={name}
                     onChange={onNameChange}
                     placeholder="Type your name"
                 />
-                <h3>Current name: {name}</h3>
             </div>
+            {/* <button type="button" onClick={onQuestionChange}>Next!</button> */}
         </>
     )
 }
