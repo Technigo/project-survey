@@ -33,7 +33,7 @@ const Form = () => {
           <Submit />
         </form>
       ) : (
-          <Summary />
+          <Summary formData={formData}/>
         )}
     </>
   );
