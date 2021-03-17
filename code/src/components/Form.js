@@ -112,17 +112,18 @@ const Form = () => {
           />
         </div> 
         )}
+
         {page === 5 && (
-        <div>
-      <Summary 
-        inhabitants={inhabitants}
-        ageCategory={ageCategory}
-        stageArtCategory={stageArtCategory}
-        proposal={proposal}
-        professions={professions}
-      />
-      </div>
-      )}
+          <div>
+            <Summary 
+              inhabitants={inhabitants}
+              ageCategory={ageCategory}
+              stageArtCategory={stageArtCategory}
+              proposal={proposal}
+              professions={professions}
+            />
+          </div>
+        )}
       </form>
   </section>
   )
