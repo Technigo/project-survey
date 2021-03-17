@@ -200,3 +200,76 @@ body {
   font-weight: 900;
 }
 
+@media (min-width: 668px) {
+  .main-container {
+    padding: 100px 30px;
+  }
+
+  .header {
+    font-size: 40px;
+  }
+
+  .small-text {
+    font-size: 22px;
+  }
+
+  .start-button {
+    font-size: 22px;
+    padding:20px 30px;
+  }
+
+  .question {
+    font-size: 32px;
+  }
+
+  .radio-buttons {
+    font-size: 24px;
+    line-height: 38px;
+  }
+
+  .button-container {
+    width: 420px;
+    padding-top: 70px
+  }
+
+  .button {
+    font-size: 20px;
+    padding: 12px 20px
+  }
+
+  .select-format {
+    font-size: 20px;
+    width: 250px;
+  }
+
+  .text-input-format {
+    width: 280px;
+    font-size: 18px;
+    padding: 8px;
+  }
+
+  .question-checkbox {
+    padding: 15px;
+    max-width: 500px;
+    font-size: 22px;
+  }
+
+  .checkbox {
+    width: 30px;
+  }
+
+  .submit-button {
+    font-size: 20px;
+    padding: 12px 20px
+  }
+
+  .summary {
+    max-width: 450px;
+    font-size: 20px;
+  }
+
+  .summary-list-item {
+    margin-bottom: 20px;
+  }
+  
+}
