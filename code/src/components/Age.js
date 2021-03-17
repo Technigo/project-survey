@@ -1,35 +1,32 @@
 import React, { useState } from 'react'
 
-const ageGroups = ['0-19','20-29','30-39','40-49','50+',] 
 
-export const Age = () => {
-  const [ageGroup, setAgeGroup] = useState()
 
+export const AgeRadioOption = ({ageGroupSpan, setAgeGroup}) => {
   const onAgeSelect = (event) => {
     setAgeGroup(event.target.value)
-    console.log(event.target.value)
-   
+  
   }
 
   return (
-  <div>
-      <p>How old are you?</p>
-      {ageGroups.map(group => (
-        <label key={group}>
-        <input 
-        type='radio'
-        onChange={onAgeSelect}
-        value={group}
-        checked={ageGroup === group}
-        />
-        {group}
-        </label>
-      ))}
-  </div>
-
-
+  <>
+      <label htmlFor={ageGroupSpan}>{ageGroupSpan}</label>
+      <input
+      name="age"
+      id={ageGroupSpan}
+      value={ageGroupSpan}
+      type="radio"
+      onChange={(event) => {onAgeSelect(event)
+      }}
+    />
+   
+    
+  </>
   )
 }
+
+
+
 
 
 
