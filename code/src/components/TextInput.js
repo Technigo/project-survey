@@ -1,6 +1,4 @@
-import React, { useState } from 'react'
-
-import Character from "./Character"
+import React from 'react'
 
 const TextInput = (props) => {
     const { text, setText } = props
@@ -8,8 +6,6 @@ const TextInput = (props) => {
     const handleInput = (event) => {
         setText(event.target.value)
     }
-
-    Character[props.data.field] = text
 
     return (
         <label>

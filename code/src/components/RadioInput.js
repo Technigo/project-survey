@@ -1,6 +1,4 @@
-import React, { useState } from "react"
-
-import Character from "./Character"
+import React from "react"
 
 const RadioInput = (props) => {
     const { choice, setChoice } = props
@@ -8,8 +6,6 @@ const RadioInput = (props) => {
     const handleChange = (event) => {
         setChoice(event.target.value)
     }
-
-    Character[props.data.field] = choice
 
     return (
         <div>

@@ -22,7 +22,7 @@ const App = () => {
   const [family, setFamily] = useState("")
   const [goal, setGoal] = useState("")
   const [icon, setIcon] = useState()
-  const [value, setValue] = useState("")
+  const [value, setValue] = useState([3, 3, 3])
 
   const handleSubmit = () => {
     console.log(Character)
@@ -45,7 +45,15 @@ const App = () => {
   if (isFilledIn) {
     return (
       <>
-        <CharacterSheet text={name} number={number} />
+        <CharacterSheet
+          name={name}
+          number={number}
+          class={characterClass}
+          race={race}
+          family={family}
+          goal={goal}
+          icon={icon}
+        />
         <button onClick={handleSubmit}>Go back</button>
       </>
     )

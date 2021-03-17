@@ -15,7 +15,7 @@ const ProgressBar = (props) => {
                 list="tickmarks"
                 type="range"
                 min="0"
-                max="6"
+                max="7"
                 value={props.progress}
             />
             <datalist id="tickmarks">
@@ -26,6 +26,7 @@ const ProgressBar = (props) => {
                 <option value="4" label="4"></option>
                 <option value="5" label="5"></option>
                 <option value="6" label="6"></option>
+                <option value="7" label="7"></option>
             </datalist>
         </div>
     )

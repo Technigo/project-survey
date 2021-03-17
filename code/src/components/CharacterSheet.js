@@ -6,7 +6,15 @@ import CharacterStats from "./CharacterStats"
 const CharacterSheet = (props) => {
     return (
         <div className="character-sheet">
-            <CharacterBase text={props.text} number={props.number} />
+            <CharacterBase
+                name={props.name}
+                number={props.number}
+                class={props.class}
+                race={props.race}
+                family={props.family}
+                goal={props.goal}
+                icon={props.icon}
+            />
             <CharacterStats />
         </div>
     )

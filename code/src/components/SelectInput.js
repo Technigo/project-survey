@@ -1,7 +1,4 @@
-import React, { useState } from "react"
-
-import Character from "./Character"
-
+import React from "react"
 
 const SelectInput = (props) => {
     const { choice, setChoice } = props
@@ -10,14 +7,15 @@ const SelectInput = (props) => {
         setChoice(event.target.value)
     }
 
-    Character[props.data.field] = choice
-
     return (
         <select
             onChange={handleChange}
             value={choice}
             className={props.data.className}
         >
+            <option disabled selected>
+                Pick a {props.data.field}!
+            </option>
             {props.data.choices.map(item =>
                 <option
                     key={item}

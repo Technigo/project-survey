@@ -1,17 +1,15 @@
 import React from "react"
 
-import Character from "./Character"
-
 const CharacterBase = (props) => {
     return (
         <div className="character-base">
-            <p>Name: {props.text}</p>
-            <p>Race: {Character.race}</p>
-            <p>Class: {Character.class}</p>
+            <p>Name: {props.name}</p>
+            <p>Race: {props.race}</p>
+            <p>Class: {props.class}</p>
             <p>Age: {props.number}</p>
-            <p>Family: {Character.family}</p>
-            <p>Goal: {Character.goal}</p>
-            <img src={Character.icon} />
+            <p>Family: {props.family}</p>
+            <p>Goal: {props.goal}</p>
+            <img src={props.icon} className="character-icon" alt="character icon" />
         </div>
     )
 }

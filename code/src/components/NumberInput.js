@@ -1,6 +1,4 @@
-import React, { useState } from "react"
-
-import Character from "./Character"
+import React from "react"
 
 const NumberInput = (props) => {
     const { number, setNumber } = props
@@ -8,8 +6,6 @@ const NumberInput = (props) => {
     const handleChange = (event) => {
         setNumber(event.target.value)
     }
-
-    Character[props.data.field] = number
 
     return (
         <label>{props.data.label}

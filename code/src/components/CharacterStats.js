@@ -3,6 +3,7 @@ import React from "react"
 import Character from "./Character"
 
 const CharacterStats = (props) => {
+    console.log(Character)
     return (
         <div className="character-stats">
             <p>Strength: {Character.strength}</p>
