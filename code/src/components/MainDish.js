@@ -2,7 +2,7 @@ import React from 'react'
 
 const MainDish = (props) => {
 
-    const [setMainDish, MainDish] = [props.setMaindish, props.mainDish]
+    const [setMainDish, MainDish] = [props.setMainDish, props.mainDish]
 
     return (
         <form>
