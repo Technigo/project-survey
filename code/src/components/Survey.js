@@ -60,7 +60,7 @@ const Survey = () => {
         {question === 0 && (
           <section className='start-page'>
           <h1 className='header'>READING HABITS SURVEY</h1>
-          <p>Time to complete: 10 minutes</p>
+          <p className='small-text'>Time to complete: 10 minutes</p>
           <div className="start-button-container">
             <Button onChangeDirection={onNextQuestionChange} textDisplay={'Start the survey'} className={'start-button'} />
           </div>
@@ -69,16 +69,18 @@ const Survey = () => {
 
         {/* First question */}
         {question === 1 && (
-          <section className='question'>
-            <h2>How much do you enjoy reading?</h2>
-            {
-              enjoyReadingArray.map(item =>
-                <InputRadioButton 
-                  item={item} 
-                  onEnjoyReadingChange={onEnjoyReadingChange} 
-                />
-              )
-            }
+          <section className='question-container'>
+            <h2 className='question'>How much do you enjoy reading?</h2>
+            <div className="radio-buttons">
+              {
+                enjoyReadingArray.map(item =>
+                  <InputRadioButton 
+                    item={item} 
+                    onEnjoyReadingChange={onEnjoyReadingChange} 
+                  />
+                )
+              }
+            </div>
             <div className="button-container">
               <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
               <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
@@ -88,7 +90,7 @@ const Survey = () => {
 
         {/* Second question */}
         {question === 2 && (
-          <section className='question'>
+          <section className='question-container'>
             <InputDropDown 
               question={'Which format do you prefer reading the most?'}
               dropDownvalue={readingFormat}
@@ -103,7 +105,7 @@ const Survey = () => {
 
         {/* Third question */}
         {question === 3 && (
-          <section className='question'>
+          <section className='question-container'>
             <InputText 
               question={'What is your favorite book?'}
               inputTextValue={book}
@@ -118,7 +120,7 @@ const Survey = () => {
 
         {/* Fourth question */}
         {question === 4 && (
-          <section className='question'>
+          <section className='question-container'>
             <InputCheckBox 
               question={'Check this box if you agree to add your favorite book to our list of recommended books.'}
               onChangeFunction={onIsCheckedChange}
@@ -133,7 +135,7 @@ const Survey = () => {
 
         {/* Submit page */}
         {question === 5 && (
-          <section className='sumbit-page'>
+          <section className='question-container'>
           <h2 className='header'>Ready to submit?</h2>
           <div className="button-container">
               <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
@@ -149,12 +151,14 @@ const Survey = () => {
       </form>
       ): (
         //This will show the summary of answers if the form is submitted
-        <Summary 
-          enjoyReading={enjoyReading}
-          readingFormat={readingFormat}
-          book={book}
-          isChecked={isChecked}
-        />
+        <div className="summary-container">
+          <Summary 
+            enjoyReading={enjoyReading}
+            readingFormat={readingFormat}
+            book={book}
+            isChecked={isChecked}
+          />
+        </div>
       )}
     </main>
   )
