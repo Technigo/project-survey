@@ -1,11 +1,10 @@
-import React, {useState} from 'react'
+import React from 'react'
 
-export const SelectPlanet = () => {
-  const [Planet, setSelectPlanet] = useState('')
 
+export const SelectPlanet = ({planet, setPlanet}) => {
+  
   const onPlanetSelect = (event) => {
-    setSelectPlanet(event.target.value)
-   
+    setPlanet(event.target.value)
    
   }
   
@@ -14,9 +13,8 @@ export const SelectPlanet = () => {
       <label htmlFor='planets'>Pick a planet</label>
         <select 
         id='planets'
-        onChange={onPlanetSelect}
-        value={Planet}
-        
+        onChange={(event) => {onPlanetSelect(event)}}
+        value={planet}
         >
           <option disabled></option>
           <option>Mercury</option>

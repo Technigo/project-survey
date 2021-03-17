@@ -13,6 +13,7 @@ export const Form = () => {
   const [age, setAgeGroup] = useState('')
   const [name, setName] = useState('')
   const [item, setInputItem] = useState('')
+  const [planet, setPlanet] = useState('')
 
 
 
@@ -36,7 +37,10 @@ export const Form = () => {
       })}
       </div>
       <div>
-        <SelectPlanet />
+        <SelectPlanet
+        setPlanet={setPlanet}
+        planet={planet}
+        />
       </div>
       <div>
         <BringItem
