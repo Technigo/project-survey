@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
@@ -39,7 +39,7 @@ export const NoseQuestion = ({ sizeOfNose, setSizeOfNose }) => {
                         <label className="label">
                     Pointy nose?
                         <input
-                        className="radio-botton"
+                            className="radio-botton"
                             type="radio"
                             value="Pointy nose"
                             onChange={(e) => onNoseSizeChange(e)} 

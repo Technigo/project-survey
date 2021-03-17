@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
@@ -12,7 +12,7 @@ export const SmileQuestion = ({ smile, setSmile }) => {
             <div className="wrapper">
                 <div>
                     <label className="label">
-                    Are you :) ?:
+                    Are you happy?
                         <input
                             className="radio-botton"
                             type="radio"
@@ -24,7 +24,7 @@ export const SmileQuestion = ({ smile, setSmile }) => {
                 </div> 
                 <div>   
                     <label className="label">
-                    Are you :( ?
+                    Are you sad?
                         <input
                             className="radio-botton"
                             type="radio"

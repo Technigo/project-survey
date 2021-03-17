@@ -9,49 +9,38 @@ import { SubmitQuestions }  from './Components/SubmitQuestions.js';
 import { Respons }  from './Components/Respons.js';
 
 
-
-
 export const App = () => {
-const [noseSize, setNoseSize] = useState()
-console.log(noseSize)
-
 const [name, setName] =useState("");
 console.log(name)
+
+const [sizeOfNose, setSizeOfNose] = useState("")
+console.log(sizeOfNose)
 
 const [eyeColor, setEyeColor] = useState("");
 console.log(eyeColor)
 
-const [smile, setSmile] = useState()
+const [smile, setSmile] = useState("")
 console.log(smile)
 
-const [hasMustache, setHasMustache] = useState(false);
+const [hasMustache, setHasMustache] = useState("");
 console.log(hasMustache)
 
-const [submit, setSubmit] =useState();
+const [submit, setSubmit] =useState("");
 console.log(submit)
-
-const [showSummary, setShowSummary] = useState(false)
-
-const onSubmit =() => {
-  console.log('Submit button pressed');
-
-  setShowSummary(true);
-};
 
   return (
     <div className="main-container">
       {submit ? (
-        <Respons />
+        <Respons name={name} sizeOfNose={sizeOfNose} eyeColor={eyeColor} smile={smile} hasMustache={hasMustache}/>
       ) : (
-      <form onSubmit={onSubmit}>
+      <form submit={submit}>
         <Heading />
         <NameQuestion name={name} setName={setName}/>
-        <NoseQuestion sizeOfNose={noseSize} setSizeOfNose={setNoseSize} />
+        <NoseQuestion sizeOfNose={sizeOfNose} setSizeOfNose={setSizeOfNose} />
         <EyeQuestion eyeColor={eyeColor} setEyeColor={setEyeColor} />
         <SmileQuestion smile={smile} setSmile={setSmile} />
         <MustacheQuestion hasMustache={hasMustache} setHasMustache={setHasMustache}/>
         <SubmitQuestions submit={submit} setSubmit={setSubmit} />
-      
       </form>
       )}
     </div>

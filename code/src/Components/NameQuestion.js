@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 
 
 
- export const NameQuestion = ({ name, setName }) => {
+ export const NameQuestion = ({ id, name, setName }) => {
     const onSetName  = (e) => {
     console.log(`Name: ${e.target.value}`);
     setName(e.target.value); }
@@ -15,6 +15,7 @@ import React, { useState } from "react";
                         <input
                             className="text-input"
                             type="text"
+                            id={id}
                             onChange={(e) => onSetName(e)}
                             value={name}
                         />
