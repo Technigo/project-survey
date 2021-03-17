@@ -4,6 +4,10 @@ import "./TextInput.css";
 export const TextInput = (props) => {
   const { userInput, setUserInput } = props;
 
+  const handleChange = (e) => {
+    setUserInput(e.target.value)
+   }
+
   return (
     <>
       <div className="text-input__inner">
@@ -17,7 +21,7 @@ export const TextInput = (props) => {
           id="userInput"
           type="text"
           value={userInput}
-          onChange={(event) => setUserInput(event.target.value)}
+          onChange={handleChange}
           required
           placeholder="This field can not be left blank"
         ></input>

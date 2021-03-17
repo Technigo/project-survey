@@ -3,6 +3,7 @@
     width: 100%;
     background-color: rgb(20, 45, 54);
     overflow:hidden;
+    position:relative;
 }
 
 .header-bg__circle {
@@ -17,7 +18,6 @@
     background-color: rgb(130, 210, 221);
     width: 200px;
     height: 200px;
-
 }
 
 .circle--big {

@@ -2,7 +2,7 @@ import React from "react";
 import "./DropDown.css";
 
 export const DropDown = (props) => {
-  const { years, setYears } = props;
+  const { yearsToMars, setYearsToMars } = props;
   const options = [
     props.option1,
     props.option2,
@@ -10,6 +10,10 @@ export const DropDown = (props) => {
     props.option4,
     props.option5,
   ];
+
+  const handleChange = (e) => {
+   setYearsToMars(e.target.value)
+  }
 
   return (
     <>
@@ -22,8 +26,8 @@ export const DropDown = (props) => {
           <div className="drop-down__inner-select">
             <select
               id="yearsToMars"
-              onChange={(event) => setYears(event.target.value)}
-              value={years}
+              onChange={handleChange}
+              value={yearsToMars}
               required
             >
               <option label="select option" value="" disabled defaultValue></option>

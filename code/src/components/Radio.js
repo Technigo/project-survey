@@ -10,6 +10,10 @@ export const Radio = (props) => {
     props.value4
   ];
 
+  const handleChange = (e) => {
+   setFutureExpectations(e.target.value)
+   }
+
   return (
     <>
       <div className="radio-buttons__inner">
@@ -20,7 +24,7 @@ export const Radio = (props) => {
               id={val}
               type="radio"
               value={val}
-              onChange={(event) => setFutureExpectations(event.target.value)}
+              onChange={handleChange}
               checked={futureExpectations === val}
               required
             ></input>

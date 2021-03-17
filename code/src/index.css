@@ -19,12 +19,12 @@ code {
   width: 100%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 10px 1fr;
   grid-template-rows: 300px 1fr 50px;
   grid-template-areas: 
-  "header"
-  "form"
-  "footer";
+  "header header"
+  "side form"
+  "footer footer";
   color: rgb(255, 255, 255);
   background-color: rgba(43, 88, 105, 0.973);
   font-family: 'Titillium Web', sans-serif;
@@ -36,6 +36,9 @@ h3 {
   font-size: 17px;
 }
 
+.scroll-button {
+  grid-area: side;
+}
 
 .header {
   grid-area: header;
@@ -59,7 +62,8 @@ form {
 
 .text-input,
 .drop-down,
-.radio-buttons {
+.radio-buttons,
+.range-slider {
   width: 80%;
 }
 
