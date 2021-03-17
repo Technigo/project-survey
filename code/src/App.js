@@ -21,7 +21,6 @@ export const App = () => {
         radioButtonsQuestions={data.radioButtonsQuestions}
         answer={answer}
         setAnswer={setAnswer}/>
-        <p>I want to show this answer:{answer}</p>
     </div>
   )
 }

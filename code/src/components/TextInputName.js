@@ -20,7 +20,6 @@ const TextInputName = (props) => {
                     onChange={onNameChange}
                     
                 />
-            <button>Submit</button>
             <p>Here is my name: {name}</p>
             </div>
 

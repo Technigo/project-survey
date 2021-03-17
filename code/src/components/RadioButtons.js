@@ -14,7 +14,7 @@ const RadioButton = (props) => {
             <input
               id={buttonValue}
               type="radio"
-              name="question"
+              name={props.name}
               value={buttonValue}
               onChange={onAnswerChange}
               // checked={answer === {buttonValue}}
