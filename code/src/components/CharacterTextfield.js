@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Question1 = (props) => {
-    const {name, setName, next} = props;
+const CharacterTextfield = (props) => {
+    const {name, setName} = props;
     return (
        <>
            <form>
@@ -12,9 +12,8 @@ const Question1 = (props) => {
                 value={name}
                 />
             </form>
-            <button onClick={next}>Next</button>
        </>
        );
     }
 
-export default Question1;
+export default CharacterTextfield;

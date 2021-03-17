@@ -2,8 +2,8 @@ import React from 'react';
 
 const ratings = ['Epic ending', 'I voted that they should redo it', 'Did not watch all 8 seasons']
 
-export const Question4 = (props) => {
-   const {rateEnding, setRateEnding, submit} = props;
+export const RateEndingRadio = (props) => {
+   const {rateEnding, setRateEnding} = props;
 
     return (
         <>
@@ -21,7 +21,6 @@ export const Question4 = (props) => {
                 </label> 
             ))}
         </form>
-    <button onClick={submit}>Submit</button>
     </>
      );
 }

@@ -1,7 +1,7 @@
 import React from 'react';
 
-const Question3 = (props) => {
-    const {gameOfThronesHouse, setGameOfThronesHouse, next3} = props;
+const HousesSelect = (props) => {
+    const {gameOfThronesHouse, setGameOfThronesHouse} = props;
 
     return (
         <>
@@ -11,7 +11,7 @@ const Question3 = (props) => {
                 onChange={(event) => setGameOfThronesHouse(event.target.value)}
                 value={gameOfThronesHouse}
             >
-                <option value=''></option>
+                <option value='' disabled></option>
                 <option value='targaryen'>House Targaryen</option>
                 <option value='stark'>House Stark</option>
                 <option value='lannister'>House Lannister</option>
@@ -22,9 +22,8 @@ const Question3 = (props) => {
                 <option value='baratheon'>House Baratheon</option>
             </select>
         </form>
-        <button onClick={next3}>Next</button>
     </>
     );
 };
 
-export default Question3;
+export default HousesSelect;
