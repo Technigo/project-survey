@@ -1,9 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import './index.css'
 
+export const App = () => {
 
 const animalsArray = ["long hair", "short hair", "naked"];
+const [petAnimal, setAnimal] = useState("");
+const [gender, setGender] = useState("");
+const [color, setColor] = useState("");
+const [name, setName] = useState("");
 
+return (
 <div>
   <header>
     <h1>What kind of cat do you want?</h1>
@@ -32,8 +38,7 @@ const animalsArray = ["long hair", "short hair", "naked"];
       <select
         id="gender"
         required
-        onChange={event => setGender(event.target.value)}
-      >
+        onChange={event => setGender(event.target.value)}>
         <option value="">Select</option>
         <option value="Female">Female</option>
         <option value="Male">Male</option>
@@ -63,3 +68,5 @@ const animalsArray = ["long hair", "short hair", "naked"];
    <button type="submit">Send</button>
   </form>
 </div>
+)
+}
