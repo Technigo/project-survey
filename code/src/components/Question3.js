@@ -2,14 +2,7 @@ import React from "react";
 
 import "./Question3.css";
 
-export const Question3 = ({ yearsToMars, setYearsToMars }) => {
-  const years = [
-    "0-10 years",
-    "10 to 20 years",
-    "over 20 years",
-    "over 100 years",
-    "Never",
-  ];
+export const Question3 = ({ yearsToMars, setYearsToMars, valueArray}) => {
 
   const handleChange = (e) => {
     setYearsToMars(e.target.value);
@@ -35,7 +28,7 @@ export const Question3 = ({ yearsToMars, setYearsToMars }) => {
               disabled
               defaultValue
             ></option>
-            {years.map((year) => (
+            {valueArray.map((year) => (
               <option label={year} value={year} key={year}></option>
             ))}
           </select>

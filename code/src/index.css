@@ -47,7 +47,7 @@ h3 {
   justify-self: center;
 }
 
-.question, .summary {
+.question, .sub-question .summary {
   grid-area: main;
   overflow-y: scroll;
 }
