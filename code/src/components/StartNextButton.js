@@ -7,7 +7,7 @@ const StartNextButton = ({question, setSection, button, progress, setProgress}) 
     onProgressChange()
   }
   const onProgressChange = () => {
-    setProgress(progress +1)
+    setProgress(progress +20)
   }
   return (
     <button 

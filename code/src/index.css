@@ -85,3 +85,13 @@ code {
 .result {
   width: 100%;
 }
+
+.progress-range-wrapper{
+  border: springgreen solid 2px;
+  width: 100%;
+}
+
+.progress-bar{
+  height: 30px;
+  background-color: red;
+}

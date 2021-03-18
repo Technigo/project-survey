@@ -8,6 +8,8 @@ import CountrySelector from './CounrtySelector';
 import NeedVacationRange from './NeedVactionRange'
 import VacationTypeRadioButton from './VacationTypeRadioButtons';
 import ChooseDate from './ChooseDate';
+import Summary from './Summary'
+import ProgressBar from './ProgressBar'
 
 
 
@@ -20,12 +22,21 @@ const Form = (props) => {
   const [date, setDate] = useState("");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [summaryHidden, setSummaryHidden] = useState(true)
-  const [section, setSection] = useState(questions[0])
-  const [progress, setProgress] = useState(0)
+  const [summaryHidden, setSummaryHidden] = useState(true);
+  const [section, setSection] = useState(questions[0]);
+  const [progress, setProgress] = useState(0);
 
-
-
+  const stateArray = [needVacation, country, vacationType, date, name, email]
+  const isFormFilledExperiment = (array) => {
+    array.forEach( state => {
+      if(state===""){
+        console.log(state==="")
+        return true
+      }
+      else {return false}
+    })
+  }
+  isFormFilledExperiment(stateArray)
   //Function checking whether the form is filled
   const isFormFilled = () => {
     if (needVacation === "") {
@@ -108,7 +119,7 @@ const Form = (props) => {
               setDate={setDate}
               question={questions[5]}
               progress={progress}
-              setProgress= {setProgress}
+              setProgress={setProgress}
               setSection={setSection}
             />
           )}
@@ -125,19 +136,20 @@ const Form = (props) => {
             </button>
           </div>
         )}
-        <p>Here is progress: {progress}</p>
+        <div>
+          <ProgressBar progress={progress}/>
+        </div>
       </form>
     )
   } else {
     return (
-      <section>
-        <p>Need vacation:{needVacation} out of 10</p>
-        <p>You want to go to: {country}</p>
-        <p>Type of activities: {vacationType}</p>
-        <p>Here is the date you picked {date}</p>
-        <p>Here is your email:{email}</p>
-        <p> Here is your name:{name}</p>
-      </section>
+        <Summary 
+          needVacation={needVacation}
+          country={country}
+          vacationType={vacationType}
+          date={date}
+          email={email}
+        />
     )
   }
 
