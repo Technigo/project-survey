@@ -2,7 +2,6 @@ import React from "react";
 
 export const EyeQuestion = ({ eyeColor, setEyeColor}) => {
     const onSetEyeColor = (e) => {
-    console.log(`Eyecolor: ${e.target.value}`);
     setEyeColor(e.target.value); }
 
     return(

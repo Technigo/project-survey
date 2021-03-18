@@ -55,7 +55,6 @@ code {
   height: 30px;
   border: none;
   background-color: black;
-
 }
 
 .wrapper {
@@ -73,8 +72,7 @@ code {
 .label{
   font-size: 35px;
   color: gray;
-  text-align: center;
-  
+  text-align: center; 
 }
 
 .p {
@@ -96,18 +94,17 @@ code {
 }
 .submit-btn,
 .reload-btn {
-    display: inline-block;
-    background: honeydew;
-    color: grey;
-    border: none;
-    padding: 10px 20px;
-    margin: 5px;
-    border-radius: 5px;
-    cursor: pointer;
-    text-decoration: none;
-    font-size: 35px;
-    font-family: inherit;
-
+  display: inline-block;
+  background: honeydew;
+  color: grey;
+  border: none;
+  padding: 10px 20px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 35px;
+  font-family: inherit;
 }
 
 .submit-btn:hover,
@@ -122,17 +119,17 @@ code {
 }
 
 .respons-container {
-    display: flex;
-    text-align: center;
-    width: 90%;
-    background-color: rgb(244, 244, 244);
-    box-shadow: darkgrey 3px 3px 2px 0;
-    margin: 0 auto;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
+  display: flex;
+  text-align: center;
+  width: 90%;
+  background-color: rgb(244, 244, 244);
+  box-shadow: darkgrey 3px 3px 2px 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
 }
 
 
@@ -154,12 +151,9 @@ code {
   display: flex;
   flex-direction: column;
   width: 250px;
-
-  
   background-color: honeydew;
   margin: 0 auto;
-  margin-top: 20px;
-  
+  margin-top: 20px; 
 }
 
 .name-container {

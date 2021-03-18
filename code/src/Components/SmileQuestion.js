@@ -5,7 +5,6 @@ import React from "react";
 
 export const SmileQuestion = ({ smile, setSmile }) => {
     const onSetSmile  = (e) => {
-    console.log(`Smile: ${e.target.value}`);
     setSmile(e.target.value); }
     return(
         <div className="questions-container">

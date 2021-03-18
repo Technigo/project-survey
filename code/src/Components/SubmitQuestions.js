@@ -1,10 +1,7 @@
 import React from "react";
 
-
-
 export const SubmitQuestions = ({submit, setSubmit}) => {
     const onSetSubmit  = (e) => {
-    console.log(`submit: ${!submit}`);
     setSubmit(!submit) }
 
     return(

@@ -1,11 +1,8 @@
 import React from "react";
 
 
-
-
 export const NoseQuestion = ({ sizeOfNose, setSizeOfNose }) => {
    const onNoseSizeChange  = (e) => {
-    console.log(`Nosesize: ${e.target.value}`);
     setSizeOfNose(e.target.value); }
     return(
         <div className="questions-container">
@@ -36,7 +33,7 @@ export const NoseQuestion = ({ sizeOfNose, setSizeOfNose }) => {
                     </label> 
                 </div>   
                 <div>   
-                        <label className="label">
+                    <label className="label">
                     Pointy nose?
                         <input
                             className="radio-botton"

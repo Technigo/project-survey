@@ -1,10 +1,7 @@
 import React from "react";
 
-
-
  export const NameQuestion = ({ id, name, setName }) => {
     const onSetName  = (e) => {
-    console.log(`Name: ${e.target.value}`);
     setName(e.target.value); }
 
     return(

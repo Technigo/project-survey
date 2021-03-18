@@ -11,22 +11,16 @@ import { Respons }  from './Components/Respons.js';
 
 export const App = () => {
 const [name, setName] =useState();
-console.log(name)
 
 const [sizeOfNose, setSizeOfNose] = useState("")
-console.log(sizeOfNose)
 
 const [eyeColor, setEyeColor] = useState("");
-console.log(eyeColor)
 
 const [smile, setSmile] = useState()
-console.log(smile)
 
-const [hasMustache, setHasMustache] = useState();
-console.log(hasMustache)
+const [hasMustache, setHasMustache] = useState("");
 
 const [submit, setSubmit] = useState();
-console.log(submit)
 
   return (
     <div className="main-container">

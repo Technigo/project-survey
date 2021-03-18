@@ -1,10 +1,7 @@
 import React from "react";
 
-
-
 export const MustacheQuestion = ({ hasMustache, setHasMustache }) => {
     const onSetHasMustache  = (e) => {
-    console.log(`Mustache: ${e.target.value}`);
     setHasMustache(e.target.value); }
 
     return(
