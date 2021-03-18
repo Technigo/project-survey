@@ -5,6 +5,7 @@ import { Summary } from "./components/Summary";
 import { Footer } from "./components/Footer";
 import { Questions } from "./components/Questions";
 import { NextButton } from "./components/NextButton";
+import { ProgressBar } from './components/ProgressBar'
 
 let i = 0;
 
@@ -111,6 +112,10 @@ export const App = () => {
           populationAge={populationAge}
         />
       )}
+
+      <ProgressBar 
+       nextQuestion={nextQuestion}
+      />
 
       {/*Shows the next question or summary or a chance to redo the form if
       you're done */}

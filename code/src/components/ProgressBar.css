@@ -1,0 +1,87 @@
+.progress-bar {
+    width: 100%;
+    Height: 30px;
+    background-color: gainsboro;
+    position:relative;
+}
+
+.progress-bar__inner:before {
+    position: absolute;
+    bottom: 40px;
+    content: 'Progress: Question 0/5'
+}
+
+.progress-bar__inner {
+    height: 100%;
+    width: 0%;
+    background-color: blue;
+}
+
+.progress-bar__inner:after {
+    color: black;
+    content: '0%'
+}
+
+.Question1:before {
+    content: 'Progress: Question 1/5'
+}
+.Question1 {
+    width: 20%;
+}
+
+.Question1:after {
+    color: white;
+    content: '20%'
+}
+
+.Question2:before {
+    content: 'Progress: Question 2/5'
+}
+
+.Question2 {
+    width:40%;
+}
+
+.Question2:after {
+    color: white;
+    content: '40%'
+}
+
+.Question3:before {
+    content: 'Progress: Question 3/5'
+}
+
+.Question3 {
+    width: 60%;
+}
+
+.Question3:after {
+    color: white;
+    content: '60%'
+}
+
+.Question4:before {
+    content: 'Progress: Question 4/5'
+}
+
+.Question4 {
+    width: 80%;
+}
+
+.Question4:after {
+    color: white;
+    content: '80%'
+}
+
+.Summary:before {
+    content: 'Progress: Done!'
+}
+
+.Summary {
+    width: 100%;
+}
+
+.Summary:after {
+    color: white;
+    content: '100%'
+}

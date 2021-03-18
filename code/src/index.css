@@ -19,11 +19,13 @@ code {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 10% 1fr 10%;
-  grid-template-rows: 300px 100px 1fr 70px 50px;
+  grid-template-rows: 300px 100px 1fr 70px 50px 70px 50px;
   grid-template-areas: 
   "header header header"
   ". heading ."
   ". main ."
+  ". . ."
+  ". progressbar ."
   ". button ."
   "footer footer footer";
   color: rgb(255, 255, 255);
@@ -47,6 +49,11 @@ h3 {
 
 .question, .summary {
   grid-area: main;
+  overflow-y: scroll;
+}
+
+.progress-bar {
+  grid-area: progressbar;
 }
 
 .next-button {
