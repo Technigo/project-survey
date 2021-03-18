@@ -7,17 +7,29 @@ const defaultData = {
   answer1: {
     id: 'answer1',
     answer: '',
-    result: 'Dog made you think of '
+    result: 'Dog made you think of'
   },
   answer2: {
     id: 'answer2',
     answer: '',
-    result: ['1', '2', '3', '4', '5']
+    result: [
+      'You really like new ideas',
+      'You are ok with new ideas',
+      "You don't really care if someone has a new idea",
+      "You don't like new ideas",
+      'You really hate new ideas'
+    ]
   },
   answer3: {
     id: 'answer3',
     answer: '',
-    result: ['1', '2', '3', '4', '5']
+    result: [
+      'You like to repair things',
+      'You would probably be good as a chemist',
+      'You like to hide in the shadows',
+      'You have the right mindset to become a doctor',
+      'You can survive anything!'
+    ]
   }
 };
 
@@ -76,7 +88,9 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setEndState(true);
+    if (step === maxSteps) {
+      setEndState(true);
+    }
   };
 
   return (
@@ -94,7 +108,7 @@ const Form = () => {
         {step === maxSteps && !endState && <Card contentType="submission" />}
         {endState && <Card contentType="summary" data={formData} />}
       </form>
-      <Steps {...stepProps} maxSteps={maxSteps} />
+      {!endState && <Steps {...stepProps} maxSteps={maxSteps} />}
     </>
   );
 };

@@ -34,7 +34,7 @@ const Card = (props) => {
               <p key={key}>
                 {value.optnum
                   ? value.result[value.optnum]
-                  : `${value.result}${value.answer}`}
+                  : `${value.result} ${value.answer}`}
               </p>
             ))}
           </>

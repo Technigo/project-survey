@@ -7,6 +7,7 @@ import { checkValid } from 'actions/buttonOnClick';
 
 const Steps = ({ step, setStep, maxSteps }) => {
   const nextStep = () => {
+    document.querySelector('.steps-right').blur();
     if (checkValid('form')) {
       setStep(step + 1);
     } else {
@@ -14,6 +15,7 @@ const Steps = ({ step, setStep, maxSteps }) => {
     }
   };
   const prevStep = () => {
+    document.querySelector('.steps-left').blur();
     if (checkValid('form')) {
       setStep(step - 1);
     } else {
