@@ -60,6 +60,8 @@ const Form = () => {
   const inputProps = { formData, setForm };
   const stepProps = { step, setStep };
 
+  const maxSteps = questions.length + 1;
+
   const handleSubmit = (event) => {
     event.preventDefault();
     setEndState(true);
@@ -67,18 +69,20 @@ const Form = () => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
-        {questions.map((question) => (
-          <Card
-            contentType="question"
-            key={`question${question.number}`}
-            {...question}
-            {...inputProps} />
-        ))}
-        <Card contentType="submission" />
+      <form id="form" onSubmit={handleSubmit}>
+        {questions.map(
+          (question) => question.number === step && (
+            <Card
+              contentType="question"
+              key={`question${question.number}`}
+              {...question}
+              {...inputProps} />
+          )
+        )}
+        {step === maxSteps && !endState && <Card contentType="submission" />}
         {endState && <Card contentType="summary" data={formData} />}
       </form>
-      <Steps {...stepProps} maxSteps={questions.length} />
+      <Steps {...stepProps} maxSteps={maxSteps} />
     </>
   );
 };

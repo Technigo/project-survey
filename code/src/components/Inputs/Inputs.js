@@ -27,12 +27,14 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
             {other.options.map((option) => (
               <label className="radio-label" htmlFor={option} key={option}>
                 <input
+                  className="input"
                   required
                   id={option}
                   name={inputName}
                   type={type}
                   value={option}
-                  onChange={handleChange} />
+                  onChange={handleChange}
+                  checked={formData[inputName] === option && true} />
                 {option}
                 <div className="radio-input" />
               </label>
@@ -41,10 +43,13 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
         );
       case 'select':
         return (
-          <select name={inputName} onChange={handleChange} required>
+          <select className="input" name={inputName} onChange={handleChange} required>
             <option value="">--Please choose an option--</option>
             {other.options.map((option) => (
-              <option key={option} value={option}>
+              <option
+                key={option}
+                value={option}
+                selected={formData[inputName] === option && true}>
                 {option}
               </option>
             ))}
@@ -53,13 +58,9 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
       default:
         return null;
     }
-  }
+  };
 
-  return (
-    <div className={`input-wrapper input-wrapper--${type}`}>
-      {getInputs()}
-    </div>
-  )
+  return <div className={`input-wrapper input-wrapper--${type}`}>{getInputs()}</div>;
 };
 
 export default Inputs;
