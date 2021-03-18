@@ -18,7 +18,7 @@ export const SatisfactionRange = ({satisfaction, setSatisfaction}) => {
           type="range" 
           name="satisfaction-range"
           min="0" 
-          max="5" 
+          max="10" 
           value={satisfaction} 
           onChange={onSatisfactionChange}/>
         <span id="rangeValue" className="range-value">{satisfaction} ☆</span>

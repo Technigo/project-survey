@@ -16,7 +16,7 @@ export const Form = () => {
   const [country, setCountry] = useState("");
   const [travelType, setTravelType] = useState("");
   const [amenities, setAmenities] = useState("");
-  const [satisfaction, setSatisfaction] = useState(0);
+  const [satisfaction, setSatisfaction] = useState(5);
   const [summary, setSummary] = useState(false);
   const questionsTotal = 5;
 
