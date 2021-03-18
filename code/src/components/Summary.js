@@ -6,10 +6,10 @@ const Summary = (props) => {
  
  return (
     <div className="summary-section">
-    <h1>Voila! Here's what you can have for dinner:</h1>
+    <h1>Voilà! Here's what you can have for dinner:</h1>
    
 
-    <p className="summary-text">You can have {mainDish} as a main course. You can have it sided with {sideDish} and a bit of {condiments} would go great with that!</p>
+    <p className="summary-text">You can have {mainDish} as a main course. You can have it sided with {sideDish} and a bit of {condiments} would go great to add some extra punch to it!</p>
     <h2>Enjoy your dinner today!</h2>
     </div>
   )
