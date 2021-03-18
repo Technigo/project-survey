@@ -12,6 +12,7 @@ const Form = () => {
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [gender, setGender] = useState('')
+    const [symptom, setSymptom] = useState('')
 
 
 
@@ -31,6 +32,13 @@ const Form = () => {
         setGender(e.target.value)
     }
 
+    const onSymptomChange = (e) => {
+        console.log("form question", e.target.value)
+
+        setSymptom(e.target.value)
+    } 
+
+
     const isSurveyComplete = () => {
         if (fname === '') {
             return false
@@ -44,6 +52,9 @@ const Form = () => {
             return false
         }
 
+        if (symptom === '') {
+            return false
+        }    
         
 
         return true
@@ -94,7 +105,8 @@ const Form = () => {
 
             ))}
             
-            <FormQuestions />
+            <FormQuestions onSymptomChange={onSymptomChange} /> 
+            
 
             <div>
                 <input

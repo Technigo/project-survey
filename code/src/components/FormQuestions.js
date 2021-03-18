@@ -4,9 +4,9 @@
 import React, { useState } from 'react'
 
 
-const FormQuestions = (props) => {
+const FormQuestions = ({symptom, onSymptomChange}) => {
 
-    const [symptom, setSymptom] = useState('')
+    /*const [symptom, setSymptom ] = useState('') */
       
 
     return (
@@ -14,8 +14,11 @@ const FormQuestions = (props) => {
          <div>
              <label htmlFor="symptoms">Symptoms</label>
              <select
-                 onChange ={e => setSymptom(e.target.value)}
+
+                 /*onChange ={(e) => setSymptom(e.target.value)} */
+                 onChange={onSymptomChange}
                  value = {symptom}
+                 
                  >
                  <option value = "">Do you have the following symptoms:</option>
                  <option value = "headache">Headache</option>
