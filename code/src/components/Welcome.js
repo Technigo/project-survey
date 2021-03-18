@@ -4,7 +4,7 @@ const Welcome = () => {
     const[name, setName] = useState('');
 
     const onNameChange = (e) => {
-        console.dir(e);
+        console.log(`Name: ${e.target.value}`);
         setName(e.target.value);
 
     }

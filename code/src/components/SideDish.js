@@ -4,7 +4,7 @@ const SideDish = () => {
     const [dish2, setDish2] = useState('');
 
     const onDish2Change= (e) => {
-        console.dir(e);
+        console.log(`Dish2: ${e.target.value}`);
         setDish2(e.target.value);
     }
 
@@ -12,7 +12,7 @@ const SideDish = () => {
         <form>
           <div>
             <label htmlFor="dish2">And now let's choose you a side dish</label>
-            <select onChange={onDish2Change} id="dish2" value={dish2} >
+            <select id="dish2" onChange={onDish2Change}  value={dish2} >
               <option>French fries</option>
               <option>Beans and onion salad</option>
               <option>Leafy greens</option>

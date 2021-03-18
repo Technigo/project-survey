@@ -4,7 +4,7 @@ const MainDish = () => {
     const [dish, setDish] = useState('');
 
     const onDishChange= (e) => {
-        console.dir(e);
+        console.log(`Dish: ${e.target.value}`);
         setDish(e.target.value);
     }
 

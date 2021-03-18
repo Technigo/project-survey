@@ -1,22 +1,57 @@
-import React from 'react';
+import React, { useState } from 'react';
+
 
 const Condiments = () => {
+  const [condiment, setCondiment] = useState('');
+
+  const onCondimentChange= (e) => {
+    console.log(`Condiment: ${e.target.value}`);
+    setCondiment(e.target.value);
+  };
 
   return (
+    <form>
     <div>
       <p>What is your go-to condiment?</p>
       <label htmlFor="mustard">Mustard</label>
-      <input id="mustard" type="radio" />
+      <input 
+      name="condiment" 
+      id="mustard"
+      value={condiment} 
+      type="radio" 
+      onChange={onCondimentChange}  />
       <label htmlFor="mayo">Mayo</label>
-      <input id="mayo" type="radio" />
-      <label htmlFor="tomato-sauce">Tomato sauce</label>
-      <input id="tomato-sauce" type="radio" />
+      <input
+      name="condiment"
+      id="mayo" 
+      value={condiment}
+      type="radio" 
+      onChange={onCondimentChange} />
+      <label htmlFor="tomato">Tomato sauce</label>
+      <input
+       name="condiment"
+       id="tomato"
+       value={condiment}
+       type="radio"
+       onChange={onCondimentChange} />
       <label htmlFor="garlic-sauce">Garlic sauce</label>
-      <input id="garlic-sauce" type="radio" />
+      <input
+       name="condiment"
+       id="garlic"
+       value={condiment}
+      type="radio" 
+      onChange={onCondimentChange} />
       <label htmlFor="remoulade">Remoulade</label>
-      <input id="remoulade" type="radio" />
-    </div>
-  )
-}
+      <input
+       name="condiment"
+       id="remoulade" 
+       value={condiment}
+       type="radio" 
+       onChange={onCondimentChange} />
+      </div>
+    </form>
+    );
+  };
 
-export default Condiments
+
+ export default Condiments;
