@@ -12,7 +12,7 @@ export const RadioButton = (props) => {
           type="radio"
           value={trip}
           onChange={props.onRadioClicked}
-          checked={props.radioValue===trip}
+          checked={props.radioValue===trip}          
           />
           {trip}
           </label>

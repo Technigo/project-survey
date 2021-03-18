@@ -4,14 +4,15 @@ import { Summary } from './Summary'
 import { TextInput } from './TextInput'
 import { RadioButton } from './RadioButton'
 import { DropDown } from './DropDown'
+import { TextWrapper } from './TextWrapper'
 
 const typeOfTrip = ['Winter', 'Sun']
 
 export const Form = () => {
   const [name, SetName] = useState('')
-  const [radioValue, SetRadioValue] = useState()
+  const [radioValue, SetRadioValue] = useState('')
   const [dropDown, setDropDown] = useState('')
-  const [formquestions,setFormquestions] = useState(true)
+  const [summary,setSummary] = useState(false)
 
   
   const onNameChange = (event) => {
@@ -31,44 +32,46 @@ export const Form = () => {
     if (name === '' ||
         radioValue === '' ||
         dropDown === '') {
-          return true
+          return false          
         }       
-    return false
+    return true
   }   
 
   return (
   <div className="wrapper">
-    <form className="form" onSubmit={event => event.preventDefault()}>  
-      
-      {!formquestions && (
+    <form className="form" onSubmit={event => event.preventDefault()}>       
+      {summary && (        
         <Summary 
           name={name}
           radioValue={radioValue}
           dropDown={dropDown}
         /> )}
           
-        {formquestions && (
-        <>               
-          <TextInput onNameChange={onNameChange} />
-          <RadioButton
-            onRadioClicked={onRadioClicked}
-            typeOfTrip={typeOfTrip}
-            radioValue={radioValue}
-          />
-          <DropDown
-            onDropDown={onDropDown}
-            dropDown={dropDown}
-          />        
-        </>
+        {!summary && (
+        <div className="form-wrapper">  
+          <TextWrapper />
+          <div className="questions-wrapper">            
+            <TextInput onNameChange={onNameChange} />
+            <RadioButton
+              onRadioClicked={onRadioClicked}
+              typeOfTrip={typeOfTrip}
+              radioValue={radioValue}
+            />
+            <DropDown
+              onDropDown={onDropDown}
+              dropDown={dropDown}
+            />  
+          </div>      
+        </div>
         )}
 
       <button className="submit-button" onClick={()=> {
-        setFormquestions(isSurveyComplete())
+        setSummary(isSurveyComplete())
         console.log(isSurveyComplete())
-        console.log({formquestions})
-      }}      
-      >Submit!</button>
-    </form>
+        console.log({summary})        
+      }}>Submit!        
+      </button>
+      </form>
   </div>)
 }          
   
