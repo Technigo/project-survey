@@ -2,17 +2,26 @@
 
 .steps-wrapper {
   height: 50px;
-  flex-flow: row wrap;
   margin: 24px;
   padding: 20px;
   border-radius: 10px;
   color: var(--primary);
   box-shadow: 2px 4px 10px black;
   background-color: var(--darkAccent);
+  position: relative;
 }
 
 .steps-right {
   float: right;
+}
+
+.steps-text {
+  position: absolute;
+  margin:0;
+  top: 0;
+  left: calc(50% - 40px);
+  padding: 5% 0;
+  display: inline-block;
 }
 
 .steps-left {

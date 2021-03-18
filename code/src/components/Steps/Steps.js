@@ -10,6 +10,7 @@ const Steps = ({ step, setStep, maxSteps }) => {
       {step !== 1 && (
         <Button otherClassName="steps-left" isSubmit={false} text="<<" action={() => setStep(step - 1)} />
       )}
+      <h4 className="steps-text">{`${step} of ${maxSteps}`}</h4>
       {step !== maxSteps && (
         <Button otherClassName="steps-right" isSubmit={false} text=">>" action={() => setStep(step + 1)} />
       )}
