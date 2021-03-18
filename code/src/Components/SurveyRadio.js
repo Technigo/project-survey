@@ -9,8 +9,9 @@ const SurveyRadio = (props) => {
         //settypeOfLiving(event.target.value);
 
     return (
-        <form className="radio-form">
-            Choice of living:
+        <form className="radio-form" >
+            <p className="radio-form-headline">How would you prefer to live?</p>
+            
             <label>
                 <input className="radio-input"
                 id="radio"
@@ -19,19 +20,43 @@ const SurveyRadio = (props) => {
                 value="house"
                 onChange={event => setType(event.target.value)}
                 checked = {type === "house"}
+                
+                
                 />
-                house
+                House
             </label>
             <label>
                 <input className="radio-input"
                 id="radio"
                 type="radio"
                 name="type of living"
-                value="appartment"
+                value="apartment"
                 onChange={event => setType(event.target.value)}
-                checked = {type === "appartment"}
+                checked = {type === "apartment"}
                 />
-                appartment
+                Apartment
+            </label>
+            <label>
+                <input className="radio-input"
+                id="radio"
+                type="radio"
+                name="type of living"
+                value="collective"
+                onChange={event => setType(event.target.value)}
+                checked = {type === "collective"}
+                />
+                Collective
+            </label>
+            <label>
+                <input className="radio-input"
+                id="radio"
+                type="radio"
+                name="type of living"
+                value="camper"
+                onChange={event => setType(event.target.value)}
+                checked = {type === "camper"}
+                />
+                Camper
             </label>
         </form>
     )

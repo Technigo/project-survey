@@ -6,7 +6,7 @@ const SurveyText = (props) => {
 
     return (
         <form className="text-form">
-            What's your name?
+            <p className="text-label">What's your name?</p>
             <label>
                 <input className="text-input"
                 type="text"
@@ -15,7 +15,7 @@ const SurveyText = (props) => {
                 onChange={event => setName(event.target.value)}
                 />
             </label>
-            E-mail
+            <p className="text-label">E-mail</p>
             <label>
                 <input className="text-input"
                 type="text"

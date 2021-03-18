@@ -54,8 +54,18 @@ code {
   align-items: center;
   background-color: #e0e7da;
   height: 200px;
-  padding-top: 100px;
-  padding-bottom: 150px;
+  padding-top: 250px;
+  padding-bottom: 250px;
+}
+
+.survey-intro-text {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  width: 70%;
+  margin-left: 60px;
+  
+
 }
 .form-entire{
   width: 100%;
@@ -66,7 +76,7 @@ code {
   
 }
 
-.survey-summary {
+.survey-complete {
   margin-left: 60px;
 }
 
@@ -91,12 +101,17 @@ code {
 margin-bottom: 30px;
 }
 
+.text-label{
+  margin-bottom:5px;
+}
+
 .text-input {
   width: 80%;
   border: none;
-  padding: 1px;
-  
+  padding: 2px;
 }
+
+
 .checkbox-input {
   -webkit-appearance: none;
 	background-color: #fafafa;
@@ -117,6 +132,7 @@ margin-bottom: 30px;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
 	color: #99a1a7;
 }
+
 .checkbox-input:checked:after {
   content: '\2714';
 	font-size: 14px;
@@ -154,7 +170,18 @@ margin-bottom: 30px;
   background-color: #444444;
 }
 */
-
+label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+/*
+.radio-form {
+  display: inline-flex;
+  flex-direction: row;
+  
+  align-items: center;
+}*/
 .radio-input {
 	-webkit-appearance: none;
 	background-color: #fafafa;
@@ -162,9 +189,13 @@ margin-bottom: 30px;
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
 	padding: 9px;
 	border-radius: 50px;
-	display: inline-block;
+	display:inline-block;
 	position: relative;
+  align-content: center;
+  
 }
+
+
 
 .radio-input:checked:after {
 	content: ' ';
@@ -195,13 +226,16 @@ margin-bottom: 30px;
 
 
 
-
+.select-form-headline {
+  margin-bottom: 5px;
+}
 
 select {
   width: 80%;
   border: none;
   padding: 1px;
   font-family: 'Thasadith', sans-serif;
+  background-color: #ffffff;
 }
 
 
@@ -216,24 +250,24 @@ select {
   align-content: center;
 }
 
-.submit-button {
+.submit-button, .refresh-button {
   /*display: flex;
   justify-content: center;
   align-content: center;*/
-  width: 125px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  margin-top: 30px;
+  width: 110px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-top: 20px;
   background-color: #6a6969;
   color: #ffffff;
   font-size: 16px;
   
-  border-radius: 5px;
+  border-radius: 3px;
 }
 
-.submit-button:hover {
+.submit-button:hover, .refresh-button:hover {
   background-color: #932b24;
-  color: #ffffff;
+
   cursor:pointer ;
 }
 
@@ -241,3 +275,18 @@ select {
   background-color:#932b24;
   height: 60px;
 }
+
+.summary-select, .summary-radio, .summary-headline {
+
+  margin-bottom: 25px;
+}
+
+.form-summary {
+  height:100vh;
+  margin-top: 50px;
+}
+
+
+
+
+
