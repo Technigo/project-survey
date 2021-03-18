@@ -1,6 +1,5 @@
 body {
   margin: 0;
-  padding: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -27,7 +26,6 @@ code {
   height: 100vh;
   background-color: #1c1124;
   margin: 0;
-  position: relative;
 }
 
 .circle {
@@ -47,7 +45,8 @@ code {
   flex-direction: column;
   font-family: "Playfair Display";
   z-index: 1;
-  margin-top: -250px;
+  margin: 0;
+  
 }
 
 .start-title {
@@ -64,20 +63,14 @@ code {
   line-height: 38px;
   z-index: 1;
   color: #281833;
-}
-
-.fa-umbrella-beach {
-  font-size: 280px;
-  position: absolute;
-  color: white;
-  z-index: -1;
+  margin-bottom: 250px;
 }
 
 /* Submit Button */
 
 .button {
   background-color: #693e52;
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;
@@ -106,7 +99,6 @@ code {
   height: 100vh;
   width: 100vw;
   padding: 0 30px;
-  position: absolute;
   margin: 0;
   font-family: "PLayfair Display", sans-serif;
 }
@@ -114,7 +106,8 @@ code {
 .question-title {
   font-size: 24px;
   text-align: left;
-  margin-top: -150px;
+  margin-top: -130px;
+  letter-spacing: 1.4px;
 }
 
 .arrow {
@@ -153,7 +146,7 @@ code {
   color: #f5eeee;
   background-color: transparent;
   font-family: "Playfair Display", sans-serif;
-  font-size: 30px;
+  font-size: 20px;
   margin-top: 20px;
   width: 100%;
   outline: none;
