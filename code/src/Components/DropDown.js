@@ -1,19 +1,14 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const DropDown = () => {
-    const [dropDown, setDropDown] = useState('')
-
-    const onDropDown = (event) => {
-      console.log(event.target.value)
-      setDropDown(event.target.value)
-    }
+export const DropDown = (props) => {
+   
   return (
   <div className="dropdown">
     <label htmlFor="dropdown">What´s your favorite transportation: </label>
     <select 
       id="dropdown"
-      value={dropDown}
-      onChange={onDropDown}  
+      value={props.dropDown}
+      onChange={props.onDropDown}  
     >
     <option disabled></option>  
     <option>Plane</option>

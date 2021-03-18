@@ -1,6 +1,9 @@
 import React, { useState } from 'react'
 
 import { Summary } from './Summary'
+import { TextInput } from './TextInput'
+import { RadioButton } from './RadioButton'
+import { DropDown } from './DropDown'
 
 const typeOfTrip = ['Winter', 'Sun']
 
@@ -31,8 +34,7 @@ export const Form = () => {
           return true
         }       
     return false
-  } 
-  
+  }   
 
   return (
   <div className="wrapper">
@@ -47,47 +49,16 @@ export const Form = () => {
           
         {formquestions && (
         <>               
-          <div className="text-input">
-            <label htmlFor="name-input">What´s your name: </label>
-            <input 
-              id="name-input"
-              type="text"
-              value={name}
-              onChange={onNameChange}
-              />
-              </div> 
-
-              <div className="radiobtn">
-              <p>What type of trip you prefer:</p> 
-              {typeOfTrip.map(trip => ( 
-                <label key={trip}>
-                  <input
-                  name="radio"
-                  type="radio"
-                  value={trip}
-                  onChange={onRadioClicked}
-                  checked={radioValue===trip}
-                  />
-                  {trip}
-                  </label>
-              ))}    
-          </div>
-
-          <div className="dropdown">
-            <label htmlFor="dropdown">What´s your favorite transportation: </label>
-            <select 
-              id="dropdown"
-              value={dropDown}
-              onChange={onDropDown}  
-            >
-            <option disabled></option>  
-            <option>Plane</option>
-            <option>Train</option>
-            <option>Boat</option> 
-            <option>Car</option> 
-            </select>  
-
-          </div>  
+          <TextInput onNameChange={onNameChange} />
+          <RadioButton
+            onRadioClicked={onRadioClicked}
+            typeOfTrip={typeOfTrip}
+            radioValue={radioValue}
+          />
+          <DropDown
+            onDropDown={onDropDown}
+            dropDown={dropDown}
+          />        
         </>
         )}
 

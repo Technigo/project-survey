@@ -1,12 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-export const TextInput = () => {
-  const [name, SetName] = useState('')
 
-  const onNameChange = (event) => {
-    console.log(event.target.value)
-    SetName(event.target.value)
-  }
+export const TextInput = (props) => {
+  
 
   return (
   <div className="text-input">
@@ -14,8 +10,8 @@ export const TextInput = () => {
     <input 
       id="name-input"
       type="text"
-      value={name}
-      onChange={onNameChange}
+      value={props.name}
+      onChange={props.onNameChange}
       />
       </div>    
   )
