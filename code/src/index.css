@@ -1,3 +1,7 @@
+html {
+  margin: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,7 +11,233 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+
+
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  position: relative;
+  background-image: url("https://images.unsplash.com/photo-1568821137003-dfb91aa1d6ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1353&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+ 
+  height: 175px;
+  
+  
+  
+}
+
+.header-headline {
+  position: absolute;
+  top:0;
+  left: 40px;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #932b24;
+  font-family: 'Redressed', cursive;
+}
+
+ 
+
+
+.content{
+  font-family: 'Thasadith', sans-serif;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: #e0e7da;
+  height: 200px;
+  padding-top: 100px;
+  padding-bottom: 150px;
+}
+.form-entire{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  
+}
+
+.survey-summary {
+  margin-left: 60px;
+}
+
+
+
+.text-form {
+  margin-bottom: 30px;
+  width: 100%;
+  display: flex; 
+  flex-direction: column;
+}
+
+.radio-form {
+  margin-bottom: 30px;
+}
+
+.checkbox-form {
+  margin-bottom: 30px;
+}
+
+.select-form {
+margin-bottom: 30px;
+}
+
+.text-input {
+  width: 80%;
+  border: none;
+  padding: 1px;
+  
+}
+.checkbox-input {
+  -webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 3px;
+	display: inline-block;
+	position: relative;
+ 
+}
+.checkbox-input:active, .checkbox-input:checked:active {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+.checkbox-input:checked {
+  background-color: #e9ecee;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
+	color: #99a1a7;
+}
+.checkbox-input:checked:after {
+  content: '\2714';
+	font-size: 14px;
+	position: absolute;
+	top: 0px;
+	left: 3px;
+	color: #99a1a7;
+}
+
+
+/*
+.radio-input{
+  margin-left: 10px;
+  margin-right: 5px;
+   remove standard background appearance 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  create custom radiobutton appearance 
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  padding: 3px;
+  
+  background-color only for content 
+  background-clip: content-box;
+  border: 1px solid #444444;
+  
+  border-radius:50%
+  
+ 
+}*/
+/*
+.radio-input:checked {
+  background-color: #444444;
+}
+*/
+
+.radio-input {
+	-webkit-appearance: none;
+	background-color: #fafafa;
+	border: 1px solid #cacece;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
+	padding: 9px;
+	border-radius: 50px;
+	display: inline-block;
+	position: relative;
+}
+
+.radio-input:checked:after {
+	content: ' ';
+	width: 12px;
+	height: 12px;
+	border-radius: 50px;
+	position: absolute;
+	top: 3px;
+	background: #99a1a7;
+	box-shadow: inset 0px 0px 10px rgba(0,0,0,0.3);
+	text-shadow: 0px;
+	left: 3px;
+	font-size: 32px;
+}
+
+.radio-input:checked {
+	background-color: #e9ecee;
+	color: #99a1a7;
+	border: 1px solid #adb8c0;
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1), inset 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+.radio-input:active, .regular-radio:checked:active {
+	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+
+select {
+  width: 80%;
+  border: none;
+  padding: 1px;
+  font-family: 'Thasadith', sans-serif;
+}
+
+
+
+
+
+.button-container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+}
+
+.submit-button {
+  /*display: flex;
+  justify-content: center;
+  align-content: center;*/
+  width: 125px;
+  padding-top: 7px;
+  padding-bottom: 7px;
+  margin-top: 30px;
+  background-color: #6a6969;
+  color: #ffffff;
+  font-size: 16px;
+  
+  border-radius: 5px;
+}
+
+.submit-button:hover {
+  background-color: #932b24;
+  color: #ffffff;
+  cursor:pointer ;
+}
+
+.footer {
+  background-color:#932b24;
+  height: 60px;
 }
