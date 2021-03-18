@@ -108,7 +108,7 @@ const Form = (props) => {
               email={email}
               setEmail={setEmail}
             />
-            <button disabled={isFormFilled()} type="submit">
+            <button disabled={isFormFilled()} type="submit" className="start-next-button">
               Submit
             </button>
           </div>
