@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 export const NameQuestion = () => {
-const [name, setName] = useState('');
+    const [name, setName] = useState('');
 
 const onNameChanged = (event) => {
     console.log(event.target.value);

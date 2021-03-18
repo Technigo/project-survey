@@ -117,3 +117,13 @@ button {
   border-radius: 5px;
   border: none;
 }
+
+/*MEDIA QUERIES LAPTOP*/
+@media (min-with: 767px){
+
+}
+
+/*MEDIA QUERIES DESKTOP*/
+@media (min-with: 1024px){
+  
+}
