@@ -13,8 +13,8 @@ const WelcomeSection = ({section, question, setSection, progress, setProgress}) 
       question={question} 
       setSection={setSection} 
       button="Start"
-      // progress={progress}
-      // setProgress= {setProgress}
+      progress={progress}
+      setProgress= {setProgress}
       />
     </div>
   )

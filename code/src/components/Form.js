@@ -7,6 +7,7 @@ import TextInputName from './TextInputName'
 import CountrySelector from './CounrtySelector';
 import NeedVacationRange from './NeedVactionRange'
 import VacationTypeRadioButton from './VacationTypeRadioButtons';
+import ChooseDate from './ChooseDate';
 
 
 
@@ -21,7 +22,7 @@ const Form = (props) => {
   const [email, setEmail] = useState("");
   const [summaryHidden, setSummaryHidden] = useState(true)
   const [section, setSection] = useState(questions[0])
-  //const [progress, setProgress] = useState("0")
+  const [progress, setProgress] = useState(0)
 
 
 
@@ -34,6 +35,15 @@ const Form = (props) => {
       return true
     }
     if (vacationType === "") {
+      return true
+    }
+    if (date === "") {
+      return true
+    }
+    if (name ===""){
+      return true
+    }
+    if (email === ""){
       return true
     }
     return false
@@ -52,8 +62,8 @@ const Form = (props) => {
             section={section} 
             setSection={setSection} 
             question={questions[1]}
-            // progress={progress}
-            // setProgress={setProgress} 
+            progress={progress}
+            setProgress={setProgress} 
             />
         )}
 
@@ -63,44 +73,59 @@ const Form = (props) => {
             question={questions[2]}
             needVacation={needVacation}
             setNeedVacation={setNeedVacation}
-            // progress={progress}
-            // setProgress={setProgress}
+            progress={progress}
+            setProgress={setProgress}
           />
         )}
 
         {section === questions[2] && (
-          
-            <CountrySelector
-              setSection={setSection}
-              question={questions[3]}
-              country ={country}
-              setCountry={setCountry}
-              countries={countries}
-              // progress={progress}
-              // setProgress={setProgress}
-            />
+          <CountrySelector
+            setSection={setSection}
+            question={questions[3]}
+            country ={country}
+            setCountry={setCountry}
+            countries={countries}
+            progress={progress}
+            setProgress={setProgress}
+          />
           )}
 
           {section === questions[3] &&(
-              <VacationTypeRadioButton
-                setSection={setSection}  
-                vacationTypes={data.vacationTypes}
-                vacationType={vacationType}
-                name="question3"
-                setVacationType={setVacationType}
-                question={questions[4]}
-              />
-        )}
-        {section === questions[4] &&(
-            <div>
-            <button
-              disabled={isFormFilled()}
-              type="submit"
-            >
+            <VacationTypeRadioButton
+              setSection={setSection}  
+              vacationTypes={data.vacationTypes}
+              vacationType={vacationType}
+              name="question3"
+              setVacationType={setVacationType}
+              question={questions[4]}
+              progress={progress}
+              setProgress= {setProgress}
+            />
+          )}
+          {section === questions[4] &&(
+            <ChooseDate 
+              date={date}
+              setDate={setDate}
+              question={questions[5]}
+              progress={progress}
+              setProgress= {setProgress}
+              setSection={setSection}
+            />
+          )}
+          {section === questions[5] &&(
+          <div>
+            <TextInputName 
+              name={name}
+              setName={setName}
+              email ={email}
+              setEmail={setEmail}
+            />
+            <button disabled={isFormFilled()} type="submit">
               Submit
             </button>
           </div>
         )}
+        <p>Here is progress: {progress}</p>
       </form>
     )
   } else {
@@ -109,30 +134,12 @@ const Form = (props) => {
         <p>Need vacation:{needVacation} out of 10</p>
         <p>You want to go to: {country}</p>
         <p>Type of activities: {vacationType}</p>
+        <p>Here is the date you picked {date}</p>
+        <p>Here is your email:{email}</p>
+        <p> Here is your name:{name}</p>
       </section>
     )
   }
 
 }
 export default Form
-
-
-// {props.radioButtonsQuestions.map(question => {
-//   return (
-//     <div className="radio-question-button" key={question}>
-//       <h3>{question}</h3>
-//       <div className="radio-buttons-wrapper">
-//         <RadioButton
-//           buttonsValues={props.radioButtonsValues}
-//           questionName={question}
-//           answer={props.answer}
-//           setAnswer={props.setAnswer}
-//         />
-//       </div>
-//     </div>
-//     )
-//   })
-// }
-
-/* <TextInputName label="Name" />
-      <Selector array={props.catBreeds} label="Choose a breed" /> */

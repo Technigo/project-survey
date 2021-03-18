@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Summary = (props) => {
+const Summary = ({name, needVacation }) => {
   return (
     <div className="summary-container">
-      <p>Thank you very much Ekaterina!</p>
+      <p>Thank you very much {name}</p>
       <div>
         <p>Here are your answers</p>
         <ul>
-          <li>You need vacation: 9 out of 10;</li>
+          <li>You need vacation: {needVacation} out of 10;</li>
           <li>You would want to go to: country;</li>
           <li>You would prefer to spend your vacation: vacation type;</li>
           <li>You would want to start your vacation: date</li>
