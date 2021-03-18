@@ -94,7 +94,8 @@ code {
   color: gray;
   text-align: center;
 }
-.submit-btn {
+.submit-btn,
+.reload-btn {
     display: inline-block;
     background: honeydew;
     color: grey;
@@ -109,9 +110,15 @@ code {
 
 }
 
-.submit-btn:hover {
+.submit-btn:hover,
+.reload-btn:hover {
   background: grey;
   color: honeydew;
+}
+
+.reload-btn{
+  margin-top: 30px;
+  margin-bottom: 30px;
 }
 
 .respons-container {
@@ -167,4 +174,12 @@ code {
 
 .pics {
   width: 250px;
+}
+
+@media (max-width: 400px) {
+    .text-input,
+    .select-eyecolor{
+      max-width: 250px;
+      font-size: 25px;
+    }
 }

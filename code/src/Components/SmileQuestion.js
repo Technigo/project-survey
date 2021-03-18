@@ -12,7 +12,7 @@ export const SmileQuestion = ({ smile, setSmile }) => {
             <div className="wrapper">
                 <div>
                     <label className="label">
-                    Are you happy?
+                    Are you :) ?
                         <input
                             className="radio-botton"
                             type="radio"
@@ -24,7 +24,7 @@ export const SmileQuestion = ({ smile, setSmile }) => {
                 </div> 
                 <div>   
                     <label className="label">
-                    Are you sad?
+                    Are you :( ?
                         <input
                             className="radio-botton"
                             type="radio"
