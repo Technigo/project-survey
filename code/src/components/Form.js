@@ -8,19 +8,19 @@ import Radiobuttons1 from './Radiobuttons1';
 import Radiobuttons2 from './Radiobuttons2';
 import Radiobuttons3 from './Radiobuttons3';
 import RangeSlider from './RangeSlider';
-import SubmitButton from './SubmitButton';
+// import SubmitButton from './SubmitButton';
+import Summary from './Summary';
 
 const Form = () => {
 
-  // const [inputName, setInputName] = useState('');
-  // const [genre, setGenre] = useState('');
-  // const [cost, setCost] = useState('');
-  // const [selectBigVenue, setSelectBigVenue] = useState();
-  // const [selectMidVenue, setSelectMidVenue] = useState();
-  // const [selectSmallVenue, setSelectSmallVenue] = useState();
-  // const [val, setVal] = useState([1]); //WHAT GOES HERE?
-
-  // const on
+  const [inputName, setInputName] = useState('');
+  const [genre, setGenre] = useState('');
+  const [cost, setCost] = useState('');
+  const [selectBigVenue, setSelectBigVenue] = useState();
+  const [selectMidVenue, setSelectMidVenue] = useState();
+  const [selectSmallVenue, setSelectSmallVenue] = useState();
+  const [range, setRange] = useState(1); //WHAT GOES HERE?
+  const [showSummary, setShowSummary] = useState(false);
 
   // const isSurveyComplete = () => {
  
@@ -48,7 +48,7 @@ const Form = () => {
   //     return false;
   //   }
 
-  //   if (val === '') {
+  //   if (range === '') {
   //     return false;
   //   }
 
@@ -59,16 +59,33 @@ const Form = () => {
   //   console.log(`Survey Complete!`);
   // }
 
+  const handleSubmit = (event) => {
+    console.log(handleSubmit)
+    event.preventDefault()
+    setShowSummary(true);
+  };
+
   return (
     <>
-    <TextField />
-    <Dropdown1 />
-    <Dropdown2 />
-    <Radiobuttons1 />
-    <Radiobuttons2 />
-    <Radiobuttons3 />
-    <RangeSlider />
-    <SubmitButton />
+    {! showSummary ? (
+       <section onSubmit = {handleSubmit}>
+       <TextField inputName = {inputName} setInputName = {setInputName} />
+       <Dropdown1 genre = {genre} setGenre = {setGenre} />
+       <Dropdown2 cost = {cost} setCost = {setCost} />
+       <Radiobuttons1 selectBigVenue = {selectBigVenue} setSelectBigVenue = {setSelectBigVenue} />
+       <Radiobuttons2 selectMidVenue = {selectMidVenue} setSelectMidVenue = {setSelectMidVenue} />
+       <Radiobuttons3 selectSmallVenue = {selectSmallVenue} setSelectSmallVenue = {setSelectSmallVenue} />
+       <RangeSlider range = {range} setRange = {setRange} />
+       <div>
+        <button className="submit-button" type="submit" onClick={ handleSubmit }>SEND US YOUR ANSWERS!</button>
+       </div>
+   
+       </section>
+
+    ): (<Summary inputName = {inputName} genre = {genre} cost = {cost} selectBigVenue = {selectBigVenue} 
+      selectMidVenue = {selectMidVenue} selectSmallVenue = {selectSmallVenue} range = {range} />
+     
+    )}
     </>
   )
 }

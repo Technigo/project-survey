@@ -4,7 +4,7 @@ const Radiobuttons3 = () => {
   const [selectSmallVenue, setSelectSmallVenue] = useState();
 
   return (
-    <form>
+    <form tabIndex="0">
       What is your favourite smaller live music venue?
 
       <label htmlFor="berns">

@@ -4,7 +4,7 @@ const Radiobuttons2 = () => {
   const [selectMidVenue, setSelectMidVenue] = useState();
 
   return (
-    <form>
+    <form tabIndex="0">
       What is your favourite medium live music venue?
 
       <label htmlFor="fryshuset">

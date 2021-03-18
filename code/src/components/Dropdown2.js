@@ -5,7 +5,7 @@ const [cost, setCost] = useState('');
 
   return (
     <form>
-      <label htmlFor="cost"> Before the pandemic, how much did you usually spend on local live gigs each month?</label>
+      <label htmlFor="cost" tabIndex="0"> Before the pandemic, how much did you usually spend on local live gigs each month?</label>
     <select
     onChange={event => setCost(event.target.value)} 
     value={cost}

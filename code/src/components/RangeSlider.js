@@ -6,7 +6,7 @@ const RangeSlider = () => {
 
   return (
     <form>
-      <label htmlFor="range">On a scale from 1 to 10: How much do you miss live music?
+      <label htmlFor="range" tabIndex="0">On a scale from 1 to 10: How much do you miss live music?
         <input 
           type="range" 
           min="1" 

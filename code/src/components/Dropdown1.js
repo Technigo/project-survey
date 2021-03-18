@@ -5,7 +5,7 @@ const [genre, setGenre] = useState('');
 
   return (
     <form>
-      <label htmlFor="genre">What is your favourite live music genre?</label>
+      <label htmlFor="genre" tabIndex="0">What is your favourite live music genre?</label>
     <select
     onChange={event => setGenre(event.target.value)} 
     value={genre}

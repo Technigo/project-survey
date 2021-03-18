@@ -4,7 +4,7 @@ const Textfield = () => {
   const [inputName, setInputName] = useState('');
 
   return (
-    <form onSubmit={event => event.preventDefault()}>
+    <form onSubmit={event => event.preventDefault()} tabIndex="0">
       Please state your name: 
       <input
         type="text"

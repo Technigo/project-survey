@@ -4,7 +4,7 @@ const Radiobuttons1 = () => {
   const [selectBigVenue, setSelectBigVenue] = useState();
 
   return (
-    <form>
+    <form tabIndex="0">
       What is your favourite big live music venue?
 
       <label htmlFor="globe">
