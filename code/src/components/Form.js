@@ -4,7 +4,7 @@
 import React, { useState } from 'react'
 
 import FormQuestions from 'components/FormQuestions'
-
+import Summary from 'components/Summary'
 const genderGroups = ["male", "female", "other"]
 
 
@@ -113,6 +113,8 @@ const Form = () => {
                     type="submit"
                     value="Submit"
                     disabled={!isSurveyComplete()}
+                    onClick= {Summary}
+                    
                 
                 />
                
