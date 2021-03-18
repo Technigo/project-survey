@@ -47,11 +47,14 @@ const Form = () => {
           < NameInput name={name} setName={setName} />
           < RadioButtons timeInterval={timeInterval} setTimeInterval={setTimeInterval} />
           < DropDown favorite={favorite} setFavorite={setFavorite} />
-          <button className='submit-button' type='submit'> Submit! </button>
-        
+          <div className='sub-button-box'>
+            <button className='submit-button' type='submit'> Submit! </button>
+          </div>        
         </form>
-      ):(< Result name={name} interval={timeInterval} favorite={favorite}/>)}
-
+       
+        ):(< Result name={name} interval={timeInterval} favorite={favorite}
+        />)}
+      
    </>
   )
 

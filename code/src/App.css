@@ -1,13 +1,16 @@
 body::after {
   content: "";
-  background: url("/assets/icecream.jpg") center center;
+  background: url("/assets/icecream.jpg");
+  height: 100%;
   opacity: 0.5;
   top: 0;
   bottom: 0;
   left: 0;
   right: 0;
-  position: absolute;
+  position: absolute; 
   z-index: -1;
+  background-size: cover;
+ 
 }
 
 
@@ -30,53 +33,65 @@ border: 2px solid blueviolet;
 /* HEADER */
 
 .header-box {
-
+display: flex;
+justify-content: center;
 }
+
 h1 {
 font-family: 'Monaco';
 color:#37372C;
+font-size: 38px;
+width: 80%;
+
 }
 
 h1 .header-box {
 
 }
 
-p .header-box {
-
-}
 
 .icecream-image {
   opacity: 0.5;
-
 }
 
 /* NAME */
 
 .name-box {
-
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 80%;
+margin:auto;
+padding-top: 20px;
+padding-bottom: 20px;
 }
 
 h2 {
   font-family: 'Monaco';
   color:#37372C;
+  text-align: center;
 }
 
 h2 .name-box {
 
+
 }
 
-.fill-in {
+ .fill-in {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   color: #824947;
+  flex-direction: column;
+  
 
-}
+} 
 
 .fill-in-field {
 background-color:#D1CCC1;
 color: #824947;
 font-family: 'Monaco';
 height: 30px;
+width: 150px;
 font-size: 20px;
 border: solid 1px #824947;
 border-radius: 4%;
@@ -85,6 +100,10 @@ border-radius: 4%;
 /* BUTTONS */
 
 .button-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
 
 }
 
@@ -96,8 +115,8 @@ border-radius: 4%;
 }
 
 .button-box {
-  display: block;
-  position: relative;
+  display:block;
+  position: relative; 
   padding-left: 35px;
   margin-bottom: 12px;
   -webkit-user-select: none;
@@ -108,6 +127,10 @@ border-radius: 4%;
   font-family: 'Monaco';
   color: #824947;
   font-weight:bold;
+}
+
+.button-small-box {
+  width: 80%;
 }
 
 .button-box input {
@@ -153,13 +176,20 @@ border-radius: 4%;
 /* DROP-DOWN */
 
 .drop-down-box {
-
+display: flex;
+flex-direction: column;
+align-items: center;
+width: 80%;
+margin: auto;
+padding-top: 20px;
+padding-bottom: 20px;
 }
 
 .p-drop-down-box {
   font-family: 'Poppins', sans-serif;
   color: #37372C;
   font-weight:bold;
+  text-align: center;
 }
 
 .pick-favorite {
@@ -184,6 +214,13 @@ border-radius: 4%;
 
 /* SUBMIT */
 
+.sub-button-box {
+  display: flex;
+  justify-content: center;
+  padding: 20px 0 20px 0;
+
+}
+
 .submit-button {
 background-color: #D1CCC1;
 border: solid 1px #824947;
@@ -197,8 +234,36 @@ font-size: 20px;
 /* RESULT */
 
 .result-box {
+display:flex;
+flex-direction: column;
+align-items: center;
+width: 80%;
+margin: auto;
+}
 
+.p-result-box {
+  font-family: 'Poppins', sans-serif;
+  color: #824947;
+  font-weight: bold;
+  font-size: 25px;
 }
 
 
+.p-result-box-sum {
+  font-family: 'Monaco';
+  color: #824947;
+  text-align: center;
+  font-size:20px ;
+}
 
+.ice-pic {
+  width: 300px;
+  height: 300px;
+  border: solid 1px #824947;
+  border-radius: 50%;
+  margin: 5px;
+}
+
+@media (min 667px){
+
+}

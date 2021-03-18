@@ -14,7 +14,7 @@ return (
   <div className='button-container'>
     <p className='p-button-box'>How often do you crave the cream?</p> 
 
-    <div>
+    <div className='button-small-box'>
       {timeIntervals.map(interval => (
         <label key={interval} className='button-box'>
         <input type='radio'
