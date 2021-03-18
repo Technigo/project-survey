@@ -33,16 +33,18 @@ body {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  color: #ffff;
 }
 
 h2{
   font-size: 25px;
   padding: 5px;
+  margin-top:40px;
 }
 
 p{
-  font-size: 14px;
-  margin-bottom: 0px;
+  font-size: 17px;
+  margin-bottom: 20px;
 }
 
 .head-container{
@@ -115,9 +117,9 @@ h1:focus {
 .form-section{
   width: 300px;
   margin-top:40px;
-  height: 250px;
+  height: 300px;
   padding: 30px 20px;
-  background-color: rgba(104, 101, 101, 0.8);
+  background-color: rgba(23, 22, 22, 0.8);
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
   display: flex;
@@ -140,7 +142,7 @@ button {
     position: relative;
     z-index: 0;
     border-radius: 10px;
-    margin-top: 60px;
+    margin-top: 90px;
     font-family: 'Balsamiq Sans', cursive;
     text-transform: uppercase;
 }
@@ -195,7 +197,8 @@ button:after {
 
 @media (min-width: 768px) and (max-width:1024px){
   h1 {
-    width: 400px; 
+    width: 400px;
+  
     font-size: 50px;
   }
   .form-section{
@@ -207,6 +210,7 @@ button:after {
 @media (min-width: 1025px){ 
   h1 {
     width:400px; 
+    
     font-size: 60px;
   }
 

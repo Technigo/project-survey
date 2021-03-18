@@ -22,3 +22,22 @@
     margin-left:90px;
     margin-bottom: 40px;
 }
+
+@media (min-width: 768px){
+    .result-text{
+      width: 400px;
+    }
+  }
+  
+  @media (min-width: 1025px){ 
+    h1 {
+      width:400px; 
+      
+      font-size: 60px;
+    }
+  
+    .form-section{
+      width: 400px;
+      margin-left:10px;
+    }
+  }
