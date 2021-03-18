@@ -1,21 +1,19 @@
 import React from 'react'
 
-const SideDish = (props) =>  {
-
-    const [setSideDish, SideDish] = [props.setSideDish, props.sideDish]
+const SideDish = () => {
 
     return (
         <form>
-            <select
-              onChange={event => setSideDish(event.target.value)}
-              value = {SideDish}
-        >
-            <option value="">What is your go-to side dish?</option>
-            <option value="pasta">Leafy greens</option>
-            <option value="meat">French fries</option>
-            <option value="seitan">Beans and onion salad</option>
+          <div>
+            <label>And now let's choose you a side dish</label>
+            <select>
+              <option>French fries</option>
+              <option>Beans and onion salad</option>
+              <option>Leafy greens</option>
+              <option>Peas and carrots</option>
             </select>
+          </div>
         </form>
     );
-}
+};
 export default SideDish;
