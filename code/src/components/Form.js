@@ -1,6 +1,16 @@
 import React from "react";
 import { useState } from "react";
 
+import Radio from "@material-ui/core/Radio";
+import RadioGroup from "@material-ui/core/RadioGroup";
+import FormControlLabel from "@material-ui/core/FormControlLabel";
+import Button from "@material-ui/core/Button";
+import TextField from "@material-ui/core/TextField";
+import FormControl from "@material-ui/core/FormControl";
+import Select from "@material-ui/core/Select";
+import InputLabel from "@material-ui/core/InputLabel";
+import MenuItem from "@material-ui/core/MenuItem";
+
 import Result from "./Result";
 
 const Form = () => {
@@ -30,83 +40,87 @@ const Form = () => {
     return (
       <div className="form-wrapper">
         <form className="form-display-column">
-          <label htmlFor="text-field">
+          <p style={{ marginTop: 10 }}>
             Which movie is your all time favorite?
-          </label>
-          <input
+          </p>
+          <TextField
+            variant="filled"
             type="text"
-            id="text-field"
+            color="primary"
             value={movieName}
             onChange={onMovieNameChange}
+            style={{
+              marginBottom: 10,
+              marginTop: 5,
+            }}
           />
-
-          <label htmlFor="dropDown">
-            Which genre would you like to see more of?
-          </label>
-          <select id="dropDown" onChange={onMovieGenreChange}>
-            <option value="Other">Other</option>
-            <option value="Action">Action</option>
-            <option value="Adventure">Adventure</option>
-            <option value="Comedy">Comedy</option>
-            <option value="Crime & Mystery">Crime & Mystery</option>
-            <option value="Fantasy">Fantasy</option>
-            <option value="Historical">Historical</option>
-            <option value="Horror">Horror</option>
-            <option value="Romance">Romance</option>
-            <option value="Science fiction">Science fiction</option>
-            <option value="Thriller">Thriller</option>
-            <option value="Western">Western</option>
-          </select>
-
-          <label tabIndex="0">How would you rate this survey? </label>
+          <p>Which genre would you like to see more of?</p>
+          <FormControl
+            style={{
+              marginBottom: 10,
+              marginTop: 5,
+            }}
+          >
+            <Select
+              value={movieGenre}
+              variant="filled"
+              onChange={onMovieGenreChange}
+            >
+              <MenuItem value="Other">Other</MenuItem>
+              <MenuItem value="Action">Action</MenuItem>
+              <MenuItem value="Adventure">Adventure</MenuItem>
+              <MenuItem value="Comedy">Comedy</MenuItem>
+              <MenuItem value="Crime & Mystery">Crime & Mystery</MenuItem>
+              <MenuItem value="Fantasy">Fantasy</MenuItem>
+              <MenuItem value="Historical">Historical</MenuItem>
+              <MenuItem value="Horror">Horror</MenuItem>
+              <MenuItem value="Romance">Romance</MenuItem>
+              <MenuItem value="Science fiction">Science fiction</MenuItem>
+              <MenuItem value="Thriller">Thriller</MenuItem>
+              <MenuItem value="Western">Western</MenuItem>
+            </Select>
+          </FormControl>
+          s
           <div className="form-radioButton">
-            <p>
-              <input
-                type="radio"
-                value="very-good"
-                id="very-good"
-                name="radioButton"
-                onChange={onRatingChange}
+            <label tabIndex="0">How would you rate this survey? </label>
+            <RadioGroup name="group1" onChange={onRatingChange}>
+              <FormControlLabel
+                value="very good"
+                id="very good"
+                control={<Radio color="primary" />}
+                label="Very Good"
               />
-              <label htmlFor="very-good"> Very good</label>
-            </p>
-            <p>
-              <input
-                type="radio"
+              <FormControlLabel
                 value="good"
                 id="good"
-                name="radioButton"
-                onChange={onRatingChange}
+                control={<Radio color="primary" />}
+                label="Good"
               />
-              <label htmlFor="good"> Good</label>
-            </p>
-            <p>
-              <input
-                type="radio"
+              <FormControlLabel
                 value="boring"
                 id="boring"
-                name="radioButton"
-                onChange={onRatingChange}
+                control={<Radio color="primary" />}
+                label="Boring"
               />
-              <label htmlFor="boring"> Boring</label>
-            </p>
-            <p>
-              <input
-                type="radio"
-                value="super-boring"
-                id="super-boring"
-                name="radioButton"
-                onChange={onRatingChange}
+              <FormControlLabel
+                value="super boring"
+                id="super boring"
+                control={<Radio color="primary" />}
+                label="Super Boring"
               />
-              <label htmlFor="super-boring"> Super boring</label>
-            </p>
-            <button
+            </RadioGroup>
+
+            <Button
+              style={{
+                marginTop: 10,
+              }}
+              variant="contained"
+              color="primary"
               type="submit"
-              className="submit-button"
               onClick={onCounterChange}
             >
               Submit
-            </button>
+            </Button>
           </div>
         </form>
       </div>
