@@ -1,8 +1,6 @@
 import React from 'react'
 
-
 const Header = () => {
-
   return (
     <header className="header">
       <img className="image" src="assets/woman.png" alt="header"/>
@@ -13,14 +11,6 @@ const Header = () => {
       </div>
     </header>
   )
-
 }
 
 export default Header
-
- {/*  <button  
-  className="btn"
-  type="submit" 
-  onClick={() => setSubmit(true)}
-  >START 
-  </button> */}

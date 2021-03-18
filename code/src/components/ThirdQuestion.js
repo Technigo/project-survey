@@ -1,5 +1,7 @@
 import React from 'react' 
 
+import NextButton from 'components/NextButton'
+
 const places = [
   'in the library',
   'while commuting',
@@ -13,28 +15,29 @@ const ThirdQuestion = (props) => {
 
   const onPlaceChange = (e) => {
     props.setFavoritePlace(e.target.value)
-    console.log(e.target.value)
   }
 
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
-      <div role="radiogroup" aria-label="Favorite place to read: 5 options">
+      <div className="question-container" role="radiogroup" aria-label="Favorite place to read: 5 options">
         <h1>Were is your favorite place to read?</h1>
         {places.map(places => (
         <div className="radio-container" key={places}>
-          <input
-          type='radio'
-          value={places}
-          onChange={onPlaceChange}
-          checked={props.place === places}
-          required 
-          />
-          {places}
+          <label htmlFor="place">
+            <input
+            name="place"
+            type='radio'
+            value={places}
+            onChange={onPlaceChange}
+            checked = {props.place ===places}
+            required 
+            />
+            {places}
+          </label>
         </div>
       ))}
+        <NextButton />
       </div>
-    </form>
-)
+  )
 }
 
 export default ThirdQuestion

@@ -96,6 +96,6 @@ h1 {
 .summary-image {
   width: 210px;
   position: absolute;
-  bottom: 70px;
+  bottom: 0px;
   right: 0px;
 }

@@ -1,5 +1,6 @@
 import React from 'react'
 
+import NextButton from 'components/NextButton'
 
 const amountOfTime= [
   'not at all',
@@ -13,27 +14,29 @@ const FirstQuestion = (props) => {
 
   const onTimeChange = (e) => {
     props.setTime(e.target.value)
-    console.log(e.target.value)
   }
 
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
-      <div role="radiogroup" aria-label="How often do you read? 5 options">
-        <h1>How often do you read?</h1>
-        {amountOfTime.map(time => (
-          <div className="radio-container" key={time}>
+    <div className="question-container" role="radiogroup" aria-label="How often do you read? 5 options">
+      <h1 tabIndex='0'>How often do you read?</h1>
+      {amountOfTime.map(time => (
+        <div className="radio-container" key={time}>
+          <label htmlFor="time">
             <input
+            name="time"
             type='radio'
             value={time}
             onChange={onTimeChange}
-            checked={props.readingTime === time}
+            checked = {props.readingTime ===time}
             required 
             />
             {time}
-          </div>
-        ))}
-      </div>
-    </form>
+          </label>
+        </div>
+      ))} 
+      <NextButton />
+    </div>
+  
   )
 }
 

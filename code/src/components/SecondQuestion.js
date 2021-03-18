@@ -1,14 +1,15 @@
 import React from 'react'
+
+import NextButton from 'components/NextButton'
  
 const SecondQuestion = (props) => {
 
   const onFavoriteTime = (e) => {
     props.setFavoriteTime (e.target.value)
-    console.log(e.target.value)
   }
  
   return (
-    <form className="form-two" onSubmit={(event) => event.preventDefault()}>
+    <div  className="question-container">
       <h1>Your favorite time to read?</h1>
       <div className="custom-select">
         <select
@@ -22,8 +23,9 @@ const SecondQuestion = (props) => {
           <option value="evening">Evening</option>
           <option value="vacation">Vacation</option>
         </select>
+        <NextButton />
       </div>
-    </form>  
+    </div>  
   )
 }
 
