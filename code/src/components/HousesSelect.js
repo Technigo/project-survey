@@ -22,15 +22,15 @@ const HousesSelect = ({gameOfThronesHouse, setGameOfThronesHouse, handleSubmit})
                 required
             >
                 <option value='' disabled></option>
-                <option value='targaryen'>House Targaryen</option>
-                <option value='stark'>House Stark</option>
-                <option value='greyjoy'>House Greyjoy</option>
-                <option value='lannister'>House Lannister</option>
-                <option value='tyrell'>House Tyrell</option>
-                <option value='arryn'>House Arryn</option>
-                <option value='tully'>House Tully</option>
-                <option value='martell'>House Martell</option>
-                <option value='baratheon'>House Baratheon</option>
+                <option value='House Targaryen'>House Targaryen</option>
+                <option value='House Stark'>House Stark</option>
+                <option value='House Greyjoy'>House Greyjoy</option>
+                <option value='House Lannister'>House Lannister</option>
+                <option value='House Tyrell'>House Tyrell</option>
+                <option value='House Arryn'>House Arryn</option>
+                <option value='House Tully'>House Tully</option>
+                <option value='House Martell'>House Martell</option>
+                <option value='House Baratheon'>House Baratheon</option>
             </select>
             </div>
             <button onSubmit={handleSubmit}

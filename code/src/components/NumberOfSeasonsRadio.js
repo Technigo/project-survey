@@ -16,10 +16,10 @@ export const NumberOfSeasonsRadio = ({numberOfSeasons, setNumberOfSeasons, handl
             </h2>
             <div className='radiobuttons-options'>
             {seasons.map(number => (
-                <label htmlFor='number' key={number}>
+                <label htmlFor={number} key={number}>
                     <input
                         type='radio'
-                        id='number'
+                        id={number}
                         name='number'
                         value={number}
                         onChange={onNumberOfSeasonsChange}

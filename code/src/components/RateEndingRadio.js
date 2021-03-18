@@ -16,10 +16,10 @@ export const RateEndingRadio = ({rateEnding, setRateEnding, handleSubmit}) => {
             </h2>
             <div className='radiobuttons-options'>
             {ratings.map(rating => (
-                <label htmlFor='rate' key={rating}>
+                <label htmlFor={rating} key={rating}>
                     <input
                         type='radio'
-                        id='rate'
+                        id={rating}
                         name='rate'
                         value={rating}
                         onChange={onRateEndingChange}
