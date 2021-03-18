@@ -4,7 +4,10 @@ import Intro from './Intro'
 import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
+// import RadioOption from './RadioOption'
 import Summary from './Summary'
+
+const flowers = ['rose', 'tulip', 'orchid']
 
 const Form = () => {
  
@@ -40,14 +43,27 @@ const Form = () => {
                     setFood={setFood}    
                     />
 
-                 <QuestionThree
+                 {/* <QuestionThree
                     flower={flower}
                     setFlower={setFlower}
-                    />
+                    /> */}
+                <div>
+                    {flowers.map((item) => {
+                        return (
+                            <QuestionThree
+                                flower={flower}
+                                setFlower={setFlower}
+                                item={item}
+                            />
+                        )
+                    })}
+
+                </div>
 
                  <Summary 
                     name={name} 
                     food={food}
+                    flower={flower}
                     />
                
                  <button

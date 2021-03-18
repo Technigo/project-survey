@@ -1,7 +1,9 @@
 import React from 'react';
-// import RadioOptionOne from './RadioOptionOne'
+// import RadioOption from './RadioOption'
 
-const QuestionThree = ({ flower, setFlower }) => {
+// const flowers = ['rose', 'tulip', 'orchid']
+
+const QuestionThree = ({ flower, setFlower, item }) => {
 
     const onFlowerChange = (event) => {
         setFlower(event.target.value)
@@ -9,23 +11,22 @@ const QuestionThree = ({ flower, setFlower }) => {
 
     return (
         <>
-            <div>
+            {/* <div>
                 <h2>Third Question</h2>
                 <p>What's your favorite flower?</p>
-             </div>
+             </div> */}
 
-             {/* <label htmlFor={flower}></label>
-                <input
-                    name="flower"
-                    id={flower}
-                    value={flower}
-                    type="radio"
-                    onChange={(event) => {
-                        onFlowerChange(event);
-                    }}
-                /> */}
+            <label key={item} htmlFor={item}>{item}</label>
+                <input 
+                    name="flower" 
+                    id={flower} 
+                    type="radio" 
+                    value={item}
+                    onChange={onFlowerChange}
+                    checked={flower === item }  
+                />     
   
-            <div>
+            {/* <div>
                 <label htmlFor="Rose">Rose</label>
                 <input 
                     name="flower" 
@@ -55,9 +56,7 @@ const QuestionThree = ({ flower, setFlower }) => {
                     onChange={onFlowerChange} 
                     checked={flower === "orchid"} 
                 />
-            </div> 
-
-            <h3>Favorite flower: {flower}</h3>
+            </div>  */}
         </>
     )
 
