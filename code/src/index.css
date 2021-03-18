@@ -113,3 +113,54 @@ code {
   background: grey;
   color: honeydew;
 }
+
+.respons-container {
+    display: flex;
+    text-align: center;
+    width: 90%;
+    background-color: rgb(244, 244, 244);
+    box-shadow: darkgrey 3px 3px 2px 0;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+
+.respons-border {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 300px;
+  /* REMOVE HEIGHT */
+  height: 600px;
+  background-color:white;
+  box-shadow: darkgrey 3px 3px 2px 0;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  align-items: center;
+  border: grey solid 1px;
+}
+.face-pics-container {
+  display: flex;
+  flex-direction: column;
+  width: 250px;
+/* REMOVE HEIGHT */
+  height: 500px;
+  background-color: honeydew;
+  margin: 0 auto;
+  margin-top: 20px;
+  
+}
+
+.name-container {
+  width: 250px;
+  background-color: white;
+  padding-top: 15px;
+  padding-bottom: 25px;
+  font-size: 35px;
+  margin: 0 auto;
+}
