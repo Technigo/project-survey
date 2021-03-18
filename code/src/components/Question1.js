@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Question2 from './Question2';
 
 const Question1 = () => {
     const [name, setName] = useState('');
@@ -6,6 +7,11 @@ const Question1 = () => {
     const onNameChange = (e) => {
         console.log(e.target.value);
         setName(e.target.value);
+    }
+
+    const renderQuestion = () => {
+        console.log ("next clicked")
+        return ( <Question2/> )
     }
 
 
@@ -19,7 +25,6 @@ const Question1 = () => {
                     value={name}
                     onChange={onNameChange}
                 />
-                 <button type="submit">NEXT</button>
             </div>
         </form>
     )
