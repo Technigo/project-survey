@@ -6,7 +6,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  height: 100vh;
   color: #f5eeee;
 
 }
@@ -23,11 +22,12 @@ code {
 /* Big containers */
 .main-container {
   display: flex;
-  
-  /* justify-content: center; */
-  height: 100%;
+  align-items: center; 
+  justify-content: center;
+  height: 100vh;
   background-color: #1c1124;
   margin: 0;
+  position: relative;
 }
 
 .circle {
@@ -47,7 +47,7 @@ code {
   flex-direction: column;
   font-family: "Playfair Display";
   z-index: 1;
-  
+  margin-top: -250px;
 }
 
 .start-title {
@@ -81,20 +81,19 @@ code {
   bottom: 0;
   left: 0;
   width: 100%;
-  font-size: 46px;
+  font-size: 44px;
   padding: 15px 0px 20px 0px;
   color: white;
   border: none;
   cursor: pointer;
   font-family: "Playfair Display", sans-serif;
   text-align: center;
+  margin: 0;
 }
 
 .button:hover {
   background-color: #74b49b;
   color: #281833;
-  /* transition: background-color .2s linear; */
-  /* opacity: 0.7; */
 }
 
 /* Form pages */
@@ -103,17 +102,19 @@ code {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: relative;
   font-size: 30px;
   height: 100vh;
+  width: 100vw;
   padding: 0 30px;
+  position: absolute;
   margin: 0;
   font-family: "PLayfair Display", sans-serif;
 }
 
 .question-title {
-  font-size: 26px;
+  font-size: 24px;
   text-align: left;
+  margin-top: -150px;
 }
 
 .arrow {
@@ -133,7 +134,7 @@ code {
   background-color: transparent;
   margin-top: 20px;
   font-family: "Playfair Display", sans-serif;
-  font-size: 24px;
+  font-size: 20px;
   line-height: 40px;
   outline: none;
   color: white;
@@ -333,7 +334,8 @@ code {
   /* align-items: center; */
   justify-content: center;
   flex-direction: column;
-  padding: 0 30px 200px 30px;
+  padding: 0 30px;
+  margin-top: -250px;
   height: 100vh;
   font-family: "Playfair Display", sans-serif;
 }
@@ -373,7 +375,6 @@ code {
   .circle {
     border-radius: 0 0 0 100% / 500px;
     height: 82vh;
-    /* opacity: 0.7; */
   }
 
   .start-title {
@@ -386,12 +387,12 @@ code {
     letter-spacing: 1.7px;
   }
 
-  .form-container {
-    margin-bottom: 162px;
-  }
-
   .button {
     font-size: 84px;
+  }
+
+  .form-container {
+    padding: 0 50px;
   }
 
   .question-title {
@@ -464,9 +465,15 @@ code {
     margin-bottom: 30px;
   }
 
+  .form-container {
+    width: 60%;
+    position: static;
+  }
+
   .question-counter {
     justify-content: center;
   }
+
   .progress-bar {
     margin-right: 30px;
   }

@@ -21,7 +21,7 @@ export const SatisfactionRange = ({satisfaction, setSatisfaction}) => {
           max="5" 
           value={satisfaction} 
           onChange={onSatisfactionChange}/>
-        <span id="rangeValue" className="range-value">{satisfaction} <i className="fas fa-star"></i>☆</span>
+        <span id="rangeValue" className="range-value">{satisfaction} ☆</span>
       </div>
       <Button 
         button="SUBMIT" />
