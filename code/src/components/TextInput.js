@@ -1,14 +1,18 @@
 import React from 'react'
 
-const TextInput = ({ label, inputId, value, onInputResponse }) => {
-  // const value = values.value
+const TextInput = (props) => {
+  const { label, inputId, values, placeholder, onInputResponse } = props
+  // const value = values.[inputId]
+  console.log(placeholder)
   return (
     <>
-      <label htmlFor={inputId}>{label}</label>
-      <input 
+      <label className="question-text" htmlFor={inputId}>{label}</label>
+      <input className="text input"
         id={inputId} 
+        autoComplete="off"
         type="text" 
-        value={value}
+        placeholder={placeholder}
+        value={values.[inputId]}
         onChange={(e) => onInputResponse(e)}/>
     </>
   )

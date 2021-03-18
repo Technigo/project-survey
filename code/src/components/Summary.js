@@ -7,15 +7,14 @@ const Summary = ({ values, onButtonResponse }) => {
       <h1>Does this look ok?</h1>
       <p>First name: {values.name}</p>
       <p>Company: {values.company}</p>
-      <p>Title: {values.title}</p>
       <p>Age: {values.age}</p>
       <Button 
-      buttonType="previous" 
+      buttonValue="previous" 
       label="Previous" 
       onButtonResponse={onButtonResponse} />
 
       <Button 
-      buttonType="submit" 
+      buttonValue="submit" 
       label="Submit" 
       onButtonResponse={onButtonResponse} />
     </div>

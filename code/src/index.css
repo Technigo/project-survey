@@ -1,3 +1,7 @@
+*{
+  /* border: 1px solid pink; */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,85 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  width: 100vw;
+  height: 100vh;
+  background-color: var(--white-color);
+  color: var(--dark-grey-color);
+  font-family: var(--font-primary);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+
+:root {
+  --dark-grey-color: #717171;
+  --white-color: #F8F8F8;
+  --light-grey-color: #C5C5C5;
+  --green-color: #00C8A4;
+  --font-primary: 'Roboto', sans-serif;
+  --font-secondary: 'Playfair Display', serif;
+}
+
+main {
+  max-width: 800px;
+  height: 300px;
+
+  margin: 30vh auto;
+}
+
+.question-number {
+  font-weight: 700;
+  width: fit-content;
+  border-bottom: 2px solid var(--green-color);
+  font-size: 20px;
+  /* color: var(--dark-grey-color) */
+}
+
+.question-text {
+  margin: 30px 0;
+  font-weight: 500;
+  font-size: 20px;
+}
+.input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  border: none;
+  border-bottom: 1px solid var(--green-color);
+  margin: 30px 0;
+  background: none;
+  font-family: var(--font-secondary);
+  font-weight: 600;
+  font-size: 36px;
+  color: var(--dark-grey-color);
+  padding: 4px 0;
+}
+
+.input:focus {
+  outline: none;
+}
+
+.input::placeholder {
+  color: var(--light-grey-color)
+}
+
+.button {
+  margin-right: 24px;
+  height: 44px;
+  width: 112px;
+  background: none;
+  border: 1px solid var(--green-color);
+  color: var(--green-color);
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 2px;
+}
+
+.button:hover {
+  background: var(--green-color);
+  color: var(--white-color);
 }

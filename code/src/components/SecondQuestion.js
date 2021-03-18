@@ -23,6 +23,7 @@ const SecondQuestion = (props) => {
       buttonType="previous" 
       label="Previous" 
       onButtonResponse={onButtonResponse} />
+      
       {values.company && values.title && 
         <Button 
         buttonType="next" 
