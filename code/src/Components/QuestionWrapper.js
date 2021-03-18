@@ -6,18 +6,12 @@ const QuestionWrapper = (props) => {
 
     return (
         <div className="question">
-            <Text text={props.question.text}/>
+            <Text question={props.question}/>
             <OptionsWrapper 
                 question={props.question}
                 toChange={props.toChange}
-
-                //these are redundant unless the question is a dropdown, unfortunately
-                bestAt = {bestAt}
-                onBestAtChange = {onBestAtChange}
-                nextToBestAt = {nextToBestAt}
-                onNextToBestAtChange = {onNextToBestAtChange}
-                worstAt = {worstAt}
-                onWorstAtChange = {onWorstAtChange}
+                skillLevel={props.skillLevel}
+                options={props.options}
             />
         </div>
     )

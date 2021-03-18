@@ -17,12 +17,9 @@ const OptionsWrapper = (props) => {
             <div className="options-wrapper">
                 <DropDown 
                     question={props.question}
-                    bestAt = {props.bestAt}
-                    onBestAtChange = {props.onBestAtChange}
-                    nextToBestAt = {props.nextToBestAt}
-                    onNextToBestAtChange = {props.onNextToBestAtChange}
-                    worstAt = {props.worstAt}
-                    onWorstAtChange = {props.onWorstAtChange}
+                    toChange={props.toChange}
+                    options={props.options}
+                    skillLevel={props.skillLevel}
                 />
             </div>
         )

@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import QuestionWrapper from './QuestionWrapper'
 import questionData from '../questionData.json'
+import SubmitButton from './SubmitButton'
 
 //TO-DO:
 //[X] Set up hooks for each question storing the user's current input
@@ -8,7 +9,7 @@ import questionData from '../questionData.json'
 // but there is still a submit button for the recommendation!!
 //[_] Remove optionsData!
 //[X] Make radio buttons functional!
-//2h [_] Make select dropdown functional!
+//2h [X] [X] Make select dropdown functional! What is missing is how to pass
 //4h [_] Start styling
 //1h [_] Grasp what controlled inputs are again and double check mine are
 //All weekend [_] Accessability test
@@ -19,23 +20,23 @@ import questionData from '../questionData.json'
 // }
 
 export const App = () => {
-  const [magic, setMagic] = useState(-10)
-  const [tech, setTech] = useState(-10)
-  const [hijinx, setHijinx] = useState(-10)
-  const [grim, setGrim] = useState(-10)
-  const [spiritual, setSpiritual] = useState(-10)
+  const [magic, setMagic] = useState(null)
+  const [tech, setTech] = useState(null)
+  const [hijinx, setHijinx] = useState(null)
+  const [grim, setGrim] = useState(null)
+  const [spiritual, setSpiritual] = useState(null)
 
   const [bestAt, setBestAt] = useState("")
   const [nextToBestAt, setNextToBestAt] = useState("")
   const [worstAt, setWorstAt] = useState("")
   
   //I might not need these as States after all, just one state per dropdown? Why is this? I think I'll be able to articulate it later
-  const [str, setStr] = useState(-10)
-  const [dex, setDex] = useState(-10)
-  const [con, setCon] = useState(-10)
-  const [int, setInt] = useState(-10)
-  const [wis, setWis] = useState(-10)
-  const [cha, setCha] = useState(-10)
+  const [str, setStr] = useState(null)
+  const [dex, setDex] = useState(null)
+  const [con, setCon] = useState(null)
+  const [int, setInt] = useState(null)
+  const [wis, setWis] = useState(null)
+  const [cha, setCha] = useState(null)
   //to my understanding, as long I send these arrays along as props, they will be forced to update on change
   
   //radio button states
@@ -61,15 +62,109 @@ export const App = () => {
 
   //dropdown states
   const onBestAtChange = (value) => {
-    setBestAt (value)    
+    console.log(`best at: ${value}`)
+    switch (value) {
+      case "STR":
+        setStr(2)
+        console.log(`STR: ${str}`)
+        break
+      case "DEX":
+        setDex(2)
+        break
+      case "CON":
+        setCon(2)
+        break
+      case "INT":
+        setInt(2)
+        break
+      case "WIS":
+        setWis(2)
+        break
+      case "CHA":
+        setCha(2)
+        break
+    }
+    
+    setBestAt(value)
+  
   }
 
   const onNextToBestAtChange = (value) => {
-    setNextToBestAt (value)
+    console.log(`next to best at: ${value}`)
+    switch (value) {
+      case "STR":
+        setStr(1)
+        break
+      case "DEX":
+        setDex(1)
+        break
+      case "CON":
+        setCon(1)
+        break
+      case "INT":
+        setInt(1)
+        break
+      case "WIS":
+        setWis(1)
+        break
+      case "CHA":
+        setCha(1)
+        break
+    } 
+
+    setNextToBestAt(value)
+
   }
 
   const onWorstAtChange = (value) => {
-    setWorstAt (value)    
+    console.log(`worst at: ${value}`)
+    switch (value) {
+      case "STR":
+        setStr(-2)
+        break
+      case "DEX":
+        setDex(-2)
+        break
+      case "CON":
+        setCon(-2)
+        break
+      case "INT":
+        setInt(-2)
+        break
+      case "WIS":
+        setWis(-2)
+        break
+      case "CHA":
+        setCha(-2)
+        break
+    }
+    
+    setWorstAt(value)
+
+  }
+
+  const onSubmit = () => {
+    console.log("HELLO!")
+    
+    let results = {
+      spiritual: spiritual,
+      magical: magic,
+      toolsNTech: tech,
+      grim: grim,
+      bestAt: bestAt,
+      nextToBestAt: nextToBestAt,
+      worstAt: worstAt,
+      hijinx: hijinx,
+      usesSTR: str,
+      usesDEX: dex,
+      usesCON: con,
+      usesINT: int,
+      usesWIS: wis,
+      usesCHA: cha
+    }
+
+
+
   }
 
 
@@ -108,41 +203,50 @@ export const App = () => {
       <QuestionWrapper 
         question={questionData.questions.question_spiritual} 
         toChange={onSpiritualChange}
+        
       />
       <QuestionWrapper 
         question={questionData.questions.question_tech} 
         toChange={onTechChange}
+        
       />
       <QuestionWrapper 
         question={questionData.questions.question_grim} 
         toChange={onGrimChange}
+        
       />
       <QuestionWrapper 
         question={questionData.questions.question_hijinx} 
         toChange={onHijinxChange}
+        
       />
       <QuestionWrapper 
-        question={questionData.questions.statQuestions}
-        toChange={null} //is this a bad idea??
-        bestAt = {bestAt}
-        onBestAtChange = {onBestAtChange}
-        nextToBestAt = {nextToBestAt}
-        onNextToBestAtChange = {onNextToBestAtChange}
-        worstAt = {worstAt}
-        onWorstAtChange = {onWorstAtChange}
+        question={questionData.questions.statQuestions.bestAt}
+        options={questionData.questions.statQuestions.options}
+        toChange={onBestAtChange}
+        skillLevel = {bestAt}
       />
+      <QuestionWrapper 
+        question={questionData.questions.statQuestions.nextToBestAt}
+        options={questionData.questions.statQuestions.options}
+        toChange={onNextToBestAtChange}
+        skillLevel = {nextToBestAt}
+      />
+      <QuestionWrapper 
+        question={questionData.questions.statQuestions.worstAt}
+        options={questionData.questions.statQuestions.options}
+        toChange={onWorstAtChange}
+        skillLevel = {worstAt}
+      />
+
+      <SubmitButton 
+        onSubmit={onSubmit}
+      />
+
       <div>
-        <p>Hijinx: {hijinx}</p>
-        <p>Magic: {magic}</p>
-        <p>Tech: {tech}</p>
-        <p>Spiritual: {spiritual}</p>
-        <p>Grim: {grim}</p>
-        <p>STR: {str}</p>
-        <p>DEX: {dex}</p>
-        <p>CON: {con}</p>
-        <p>INT: {int}</p>
-        <p>WIS: {wis}</p>
-        <p>CHA: {cha}</p>
+        <p>// Hijinx: {hijinx} // Magic: {magic} // Tech: {tech} // Spiritual: {spiritual} // Grim: {grim} //</p> 
+        <p>// STR: {str} // DEX: {dex} // CON: {con} //</p>
+        <p>// INT: {int} // WIS: {wis} // CHA: {cha}//</p>
       </div>
     </div>
   )
