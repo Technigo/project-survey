@@ -4,6 +4,13 @@
 
 .text-input input {
     height: 30px;
-    width: 100%;
+    width: 0%;
     font-size: 16px;
+    animation: expandRight 1s forwards ease-in-out ;
+}
+
+@keyframes expandRight {
+    from { width: 0%;}
+    to { width: 100%;}
+
 }
