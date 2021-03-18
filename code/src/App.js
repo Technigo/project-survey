@@ -7,21 +7,23 @@ import Condiments from './components/Condiments';
 import Summary from './components/Summary';
 
 export const App = () => {
-
+  
 
   return (
     <>
+    <div className="survey-container">
+      
       <Welcome />
       <MainDish />
       <SideDish />
       <Condiments />
       <Summary />
+    </div>
     </> 
   ) 
 
 }
 
-  
 
   
 

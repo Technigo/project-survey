@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&family=Passion+One:wght@700&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +12,30 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.survey-container {
+  background-color:#ac5d00;
+  color: whitesmoke;
+  text-align: center;
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 0px;  
+}
+
+.welcome-container h1 {
+  font-family: 'Passion One', cursive;
+  font-size:60px;
+}
+
+.welcome-image {
+  width: 70%;
+}
+
+/**MEDIA QUERIES**/
+
+@media (min-width: 640px) {
+
+
 }

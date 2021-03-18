@@ -1,19 +1,29 @@
 import React from 'react';
 
-const Summary = (props) => {
- const [mainDish, sideDish, condiments] = [props.mainDish, props.sideDish, props.condiments]
+const Summary = ({dish, dish2, condiment} ) => {
 
- 
- return (
-    <div className="summary-section">
-    <h1>Voilà! Here's what you can have for dinner:</h1>
-   
 
-    <p className="summary-text">You can have {mainDish} as a main course. You can have it sided with {sideDish} and a bit of {condiments} would go great to add some extra punch to it!</p>
-    <h2>Enjoy your dinner today!</h2>
-    </div>
-  )
 
+  const onButtonClick= (e) => {
+    console.log(`Summary: ${e.target.value}`);
+    onButtonClick(e.target.value);
 }
+
+  return (
+    <>
+    <div className="summary-section">
+    <h1>Dinner will be ready soon!</h1>
+    <button onClick={onButtonClick} className="button" type="submit" value="submit">SEND</button>
+    <h2>Think no more. Here's what you can have today:</h2>
+
+    <p className="summary-text">You can have {dish} with a side of {dish2}. Don't forget to spice it up a little bit with {condiment} .</p>
+    <p>Enjoy your dinner!</p>
+
+    </div>
+    </>
+  )
+}
+
+
 
 export default Summary;
