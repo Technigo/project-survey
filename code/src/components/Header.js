@@ -4,12 +4,8 @@ export const Header = () => {
   return (
     <>
       <header className="header">
-        <picture>
-          {/* <source srcset="/assets/books_small.jpg" media="(max-width: 600px)" alt="Hand holding up a stack of books"/>
-          <source srcset="/assets/books_medium.jpg" media="(max-width: 900px)" alt="Hand holding up a stack of books"/> */}
-          <img className="header-img" src="/assets/books_large.jpg" alt="Hand holding up a stack of books"/>
-        </picture>
-          <h1 className="header-text">Book Tips</h1>
+        <img className="header-img" src="/assets/books.jpg" alt="Hand holding up a stack of books"/>
+        <h1 className="header-text">Book Tips</h1>
       </header>
       <section className="about">
         <h2>Hi, and welcome to Book Tips!</h2>

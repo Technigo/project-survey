@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@100;300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;200;300;400;500&display=swap');
 
 html {
   scroll-behavior: smooth;
@@ -24,7 +25,24 @@ code {
   box-sizing: border-box;
 }
 
-/*** header ***/
+h2 {
+  font-family: Libre Baskerville;
+  font-weight: 800;
+  font-size: 26px;
+}
+
+h3 {
+  font-family: Noto Sans HK;
+  font-weight: 300;
+  margin: 15px 0 10px;
+}
+
+p {
+  font-family: Noto Sans HK;
+  font-weight: 300;
+}
+
+/*** header + about ***/
 
 header {
   position: relative;
@@ -36,7 +54,7 @@ header {
   object-fit: cover;
 }
 
-.header-text {
+.header-text {        /* the header/h1 */
   position: absolute;
   top: 0;
   right: 0;
@@ -48,72 +66,152 @@ header {
   margin: 30px auto 35px;
   font-family: Libre Baskerville;
   font-weight: 700;
-  font-size: 40px;
+  font-size: 38px;
 }
 
 .about {
   text-align: center;
-  padding: 23px 15px;
-}
-
-h2 {
-  font-family: Raleway;
-  font-weight: 800;
-}
-
-h3 {
-  font-family: Raleway;
-  font-weight: 600;
-  margin: 15px 0 10px;
-}
-
-p {
-  font-family: Raleway;
-  font-weight: 400;
+  padding: 23px 20px;
 }
 
 /*** form ***/
 
 .form-container {
-  background-color: burlywood;
+  background-color: #F0DEB4;
   margin: 0 0 20px;
-  padding: 15px;
+  padding: 22px 27px;
 }
 
 .form-container-sections {
   display: flex;
   flex-direction: column;
-  /* border: solid purple 3px; */
   margin-bottom: 15px;
 }
-
-.form-container-sections-radio
 
 .form-container-sections-radio label {
   font-weight: lighter;
 }
 
 label {
-  font-family: Raleway;
-  font-weight: 400;
+  font-family: Noto Sans HK;
+  font-size: 18px;
   display: inline-block;
-  /* margin: 20 5 20px; */
-  /* border: solid black 3px; */
-  padding: 5px;
+  padding: 5px 0;
+}
+
+.submit-button {
+  border: 1px solid;
+  border-radius: 10px;
+  font-size: 16px;
   font-weight: bold;
+  padding: 10px 20px;
+  cursor: pointer;
+  background-color: #F0DEB4;
 }
 
 .submit-container {
   display: flex;
   justify-content: center;
+  margin: 30px 0 35px;
 }
 
-.submit-button {
-  border: 2px solid;
-  border-radius: 10px;
-  font-size: 16px;
-  /* font-family: 'Montserrat'; */
-  font-weight: bold;
-  padding: 10px 20px;
-  cursor: pointer;
+.bold-span {
+  font-weight: 500;
+}
+
+/*** summary section ***/
+
+.summary-wrapper {
+  text-align: center;
+  line-height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.summary-text-container {
+  padding: 45px 25px 0;
+  width: auto;
+}
+
+.answers-container {
+  margin: 37px 45px 0;
+  line-height: 35px;
+  text-align: left;
+  display: inline;
+}
+
+/* .summary-img-container */
+
+.summary-img {
+  width: 100%;
+  margin-top: 50px;
+}
+
+@media (min-width: 767px) {
+  .header-text {
+    font-size: 47px;
+    bottom: 57%;
+  }
+
+  .about {
+    padding: 32px 80px;
+  }
+
+  .form-container {
+    margin: 0 115px 20px;
+    padding: 33px 115px 35px;
+  }
+
+  .summary-text-container {
+    padding: 60px 105px 20px;
+  }
+
+  .answers-container {
+    margin: 10px 130px 15px;
+    text-align: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  h2 {
+    font-size: 35px;
+    margin: 12px 0 30px;
+  }
+  
+  h3 {
+    font-size: 20px;
+  }
+  
+  .header-text {
+    font-size: 60px;
+    bottom: 65%;
+    }
+
+  .header-img {
+    height: 75vh;
+  }
+  
+  .about {
+    width: 920px;
+    margin: 15px auto;
+  }
+
+  .form-container {
+    /* margin: 0 115px 20px; */
+    padding: 33px 115px 35px;
+    width: 500px;
+    margin: auto;
+  }
+
+  .summary-text-container {
+    /* padding: 60px 105px 20px; */
+    width: 920px;
+    margin: 15px auto;
+  }
+
+  .answers-container {
+    margin: 10px 130px 15px;
+    text-align: center;
+  }
 }
