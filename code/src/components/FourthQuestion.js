@@ -3,11 +3,11 @@ import React from 'react'
 import Button from './Button'
 import Select from './Select'
 
-const ThirdQuestion = (props) => {
+const FourthQuestion = (props) => {
   let {values, onInputResponse, onButtonResponse} = props
   return (
     <form>
-      <Select
+      {/* <Select
       label="Age"
       inputId="age" 
       value={values.age}
@@ -25,9 +25,9 @@ const ThirdQuestion = (props) => {
         buttonType="next" 
         label="Next" 
         onButtonResponse={onButtonResponse} />
-      }
+      } */}
     </form>
   )
 }
 
-export default ThirdQuestion
+export default FourthQuestion

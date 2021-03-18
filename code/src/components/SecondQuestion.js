@@ -10,24 +10,25 @@ const SecondQuestion = (props) => {
       <TextInput
       label="Company"
       inputId="company" 
-      values={values}
+      value={values.company}
       onInputResponse={onInputResponse}/>
       
       <TextInput
       label="Title"
       inputId="title" 
-      values={values}
+      value={values.title}
       onInputResponse={onInputResponse}/>
 
       <Button 
       buttonType="previous" 
       label="Previous" 
       onButtonResponse={onButtonResponse} />
-      <Button 
-      buttonType="next" 
-      label="Next" 
-      onButtonResponse={onButtonResponse} />
-
+      {values.company && values.title && 
+        <Button 
+        buttonType="next" 
+        label="Next" 
+        onButtonResponse={onButtonResponse} />
+      }
     </form>
   )
 }

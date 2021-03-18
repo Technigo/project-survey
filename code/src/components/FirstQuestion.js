@@ -5,27 +5,32 @@ import TextInput from './TextInput'
 
 
 const FirstQuestion = (props) => {
-  let {values, onInputResponse, onButtonResponse} = props
+  let {values, questionData, onInputResponse, onButtonResponse} = props
+  // let value = values.[questionData.inputId]
   return (
     <form>
 
       <TextInput
-      label="First Name"
-      inputId="firstName" 
-      values={values}
+      label={questionData.questionText}
+      inputId={questionData.inputId} 
+      value={questionData.reference}
       onInputResponse={onInputResponse}/>
       
-      <TextInput
-      label="Last Name"
-      inputId="lastName" 
-      values={values}
-      onInputResponse={onInputResponse}/>
+      {/* <TextInput
+      label="Name"
+      inputId="name" 
+      value={values.name}
+      onInputResponse={onInputResponse}/> */}
+      
 
-      <Button 
-      buttonType="next" 
-      label="Next" 
-      onButtonResponse={onButtonResponse} />
-    </form>
+
+      { questionData.reference  && 
+        <Button 
+        buttonType="next" 
+        label="Next" 
+        onButtonResponse={onButtonResponse} />
+      }
+      </form>
   )
 }
 

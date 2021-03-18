@@ -5,8 +5,7 @@ const Summary = ({ values, onButtonResponse }) => {
   return (
     <div>
       <h1>Does this look ok?</h1>
-      <p>First name: {values.firstName}</p>
-      <p>Last name: {values.lastName}</p>
+      <p>First name: {values.name}</p>
       <p>Company: {values.company}</p>
       <p>Title: {values.title}</p>
       <p>Age: {values.age}</p>

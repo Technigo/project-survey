@@ -9,7 +9,6 @@ const Confirmation = ({ onButtonResponse }) => {
       label="Reset" 
       buttonType="reset" 
       onButtonResponse={onButtonResponse} />
-
     </>
   )
 }

@@ -9,34 +9,39 @@ import Confirmation from './Confirmation'
 const defaultValues = () => {
   return {
     step: 1,
-    firstName: '',
-    lastName: '',
+    name: '',
     company: '',
     title: '',
     age: ''
-
   }
 }
 
+
 const Form = () => {
   const [values, setValues] = useState(defaultValues())
-  // const [values, setValues] = useState({
-  //   step: 3,
-  //   firstName: '',
-  //   lastName: '',
-  //   company: '',
-  //   title: '',
-  //   age: ''
-  // })
-
-
   
+  const defaultQuestions = [
+    { 
+      type: 'textInput',
+      options: '',
+      questionText: 'Name',
+      placeholder: 'Type your full name',
+      required: true,
+      inputId: 'name', 
+      reference: values.name
+    },
+    
+    
+    ]
+    
+
   const onInputResponse = (e) => {
-    setValues({ ...values, [e.target.id]: e.target.value})
     console.log(e.target.value)
+    setValues({ ...values, [e.target.id]: e.target.value})
   }
 
   const onButtonResponse = e => {
+    console.log(e.target.value)
     console.log(e.target.id)
     switch (e.target.id) {
       case 'previous' :
@@ -49,7 +54,6 @@ const Form = () => {
         setValues({ ...values, "step": 0})
         break
       case 'reset' :
-        console.log('yo')
         setValues(defaultValues())
         break
       default :
@@ -62,6 +66,7 @@ const Form = () => {
       return (
         <>
           <FirstQuestion values={values} 
+          questionData={defaultQuestions[0]}
           onInputResponse={onInputResponse} 
           onButtonResponse={onButtonResponse}/>
           {/* <h6>{ JSON.stringify(values) }</h6> */}
