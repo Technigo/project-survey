@@ -10,15 +10,16 @@ export const CountrySelect = ({setCountry, countryName}) => {
 
   return (
     <>
-      <label htmlFor="selectCountry" className="question-title"><span className="arrow">➛</span> Where did you travel from?</label>
+      <label htmlFor="selectCountry" className="question-title" tabindex="0"><span className="arrow">➛</span> Where did you travel from?</label>
       <select
         id="selectCountry"
         name="country-select"
         value={countryName}
         className="select-country"
         onChange={onCountryChange}
+        aria-label="Use up and down arrows to"
         required >
-        <option value="">Choose:</option>
+        <option value="">Choose country:</option>
         {countries.map(country => 
           <option 
             key={country} 

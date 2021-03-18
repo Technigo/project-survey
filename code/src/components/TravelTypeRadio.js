@@ -9,18 +9,19 @@ export const TravelTypeRadio = ({setTravelType}) => {
   }
   return (
     <>  
-      <h2 className="question-title"><span className="arrow">➛</span> What was the purpose of your visit?</h2>
+      <h2 className="question-title" tabindex="0"><span className="arrow">➛</span> What was the purpose of your visit?</h2>
       
         {travelTypes.map(travelType => 
-          <div key={travelType} className="radio-box">
-            <label htmlFor={travelType} className="radio-button-label">
+          <div className="radio-box">
+            <label htmlFor={travelType} className="radio-button-label" aria-label="Use up and down arrows to choose and then press enter to move to next question">
               <input 
                 type="radio"
+                name="traveltype"
+                className="radio-button"
+                key={travelType}
                 id={travelType}
                 value={travelType}
-                name="traveltype"
-                onChange={onTravelTypeChange}    
-                className="radio-button"
+                onChange={(e) => {onTravelTypeChange(e)}}    
                 required
               />
               <span className="radio-text">{travelType === "Business" ? <i className="fas fa-laptop"></i> : <i className="fas fa-cocktail"></i>} {travelType}</span>

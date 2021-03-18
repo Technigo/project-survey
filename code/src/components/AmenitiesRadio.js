@@ -9,18 +9,18 @@ export const AmenitiesRadio = ({setAmenities}) => {
 
   return (
     <>
-      <h2 className="question-title"><span className="arrow">➛</span> Which of our amenities did you like the most?</h2>
+      <h2 className="question-title" tabindex="0"><span className="arrow">➛</span> Which of our amenities did you like the most?</h2>
       <section className="radio-buttons">
         {amenities.map(amenity =>
           <div key={amenity} className="radio-box">
-            <label htmlFor={amenity} className="radio-button-label">
+            <label htmlFor={amenity} className="radio-button-label" aria-label="Use up and down arrows to choose and then press enter to move to next question">
               <input 
                 type="radio"
+                name="amenities"
+                className="radio-button"
                 id={amenity}
                 value={amenity}
-                name="amenities"
                 onChange={onAmenitiesChange}
-                className="radio-button"
                 required/>
               <span className="radio-text">{amenity}</span>
             </label>
