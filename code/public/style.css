@@ -1,0 +1,21 @@
+
+body {
+    margin: 50px;
+}
+
+.question {
+    margin: 50px;
+}
+
+.options-wrapper {
+    margin: 30px;
+}
+
+.radio-buttons-wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-left: 5px;
+}

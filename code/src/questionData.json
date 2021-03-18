@@ -1,0 +1,117 @@
+{
+    "intro": {
+        "text": "intro text"
+    },
+    "questions": {
+        "question_magic": {
+            "type":"radio",
+            "text": "Do you want them to use magic?",
+            "options": [   
+                {
+                    "optionLabel":"Yes, lots!", "optionValue": 4
+                },
+                {
+                    "optionLabel":"Maybe some, or if it is subtle?", "optionValue": 2
+                },
+                {
+                    "optionLabel": "Nope, no magic", "optionValue": 0
+                }
+            ],
+            "onChangeName": "onMagicChange"
+        },
+        "question_spiritual": {
+            "type":"radio",
+            "text": "Are their abilities tied to religion or mysticism?",
+            "options": [   
+                {
+                    "optionLabel":"Yes, their powers have spiritual ties", "optionValue": 4
+                },
+                {
+                    "optionLabel":"Maybe?", "optionValue": 2
+                },
+                {
+                    "optionLabel": "Nope, powers ain't spiritual", "optionValue": 0
+                }
+            ],
+            "onChangeName": "onSpiritualChange"
+        },
+        "question_tech": {
+            "type":"radio",
+            "text": "Do you want them to use special tools, technology or magitech?",
+            "options": [   
+                {
+                    "optionLabel":"Yes, let’s go high-tech/magitech!", "optionValue": 4
+                },
+                {
+                    "optionLabel":"Maybe some special tool use, but not high-tech or magitech", "optionValue": 2
+                },
+                {
+                    "optionLabel": "Nope, no tech or special tools", "optionValue": 0
+                }
+            ],
+            "onChangeName": "onTechChange"
+        },
+        "question_grim": {
+            "type":"radio",
+            "text": "How grim or dark are your character’s abilities?",
+            "options": [   
+                {
+                    "optionLabel":"Very grim!", "optionValue": 4
+                },
+                {
+                    "optionLabel":"Not necessarily grim, but could be?", "optionValue": 2
+                },
+                {
+                    "optionLabel": "I want them the opposite of grim!", "optionValue": 0
+                }
+            ],
+            "onChangeName": "onGrimChange"
+        },
+        "question_hijinx": {
+            "type":"radio",
+            "text": "Do you want abilities extra suitable for hijinx?",
+            "options": [   
+                {
+                    "optionLabel":"Yes, can’t wait to get up to all sorts of wild shenanigans!", "optionValue": 4
+                },
+                {
+                    "optionLabel":"Some versatility would be nice, but I don't need anything crazy", "optionValue": 2
+                },
+                {
+                    "optionLabel": "I’d like more down-to-earth abilities, forcing me to be creative in their use", "optionValue": 0
+                }
+            ],
+            "onChangeName": "onHijinxChange"
+        },
+        "statQuestions": {
+            "type":"dropDown",
+            "text_bestAt": "What are they best at?",
+            "text_nextToBestAt": "What are they next to best at?",
+            "text_worstAt": "What are they worst at?",
+            "options": [   
+                {
+                    "optionLabel":"Strength and/or athleticism", "optionValue": "STR"
+                },
+                {
+                    "optionLabel":"Nimbleness and/or precision", "optionValue": "DEX"
+                },
+                {
+                    "optionLabel":"Resilience and/or protecting others", "optionValue": "CON"
+                },
+                {
+                    "optionLabel":"Knowledge and/or quick thinking", "optionValue": "INT"
+                },
+                {
+                    "optionLabel":"Perception, instincts and/or magic", "optionValue": "WIS"
+                },
+                {
+                    "optionLabel":"Social skills, leadership and/or manipulation", "optionValue": "CHA"
+                }
+            ]
+        }
+        
+    },
+    "results": {
+        "text": "results text"
+    }        
+}
