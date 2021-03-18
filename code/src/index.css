@@ -57,7 +57,7 @@ body {
   color: #ffff;
 }
 
-.back-button, .next-button, .submit-button {
+.back-button, .next-button, .submit-button, .restart-btn {
   font-family: 'Karla', sans-serif;
   line-height: 24px;
   font-size: 20px;
@@ -73,7 +73,7 @@ body {
   background-color: #ffff;
 }
 
-.next-button, .submit-button {
+.next-button, .submit-button, .restart-btn {
   margin-left: 30px;  
   background-color: #E76319;
   color: #ffff;
@@ -172,13 +172,13 @@ body {
     color: #E76319;
   }
 
-  .start-btn, .back-button, .next-button, .submit-button {
+  .start-btn, .back-button, .next-button, .submit-button, .restart-btn {
     font-size: 40px;
     padding: 25px 40px;
     margin-top: 30px;
   }
 
-  .back-button, .next-button, .submit-button {
+  .back-button, .next-button, .submit-button, .restart-btn {
     margin-top: 80px;
   }
 
