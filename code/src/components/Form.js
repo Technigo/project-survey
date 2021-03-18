@@ -1,105 +1,75 @@
 import React, { useState } from 'react';
 
-const instruments = ['singing', 'piano', 'drums', 'guitarr', 'bass'];
-const newInstruments = ['singing', 'piano', 'drums', 'guitarr', 'bass'];
+const musicians = ['yes', 'no'];
+
 
 const Form =() => {
     const [name, setName] = useState('');
     const [musician, setMusician] = useState('');
     const [instrument, setInstrument] = useState('');
-    const [learnInstrument, setLearnInstrument] = useState('');
-}
 
 
+const onNameChange = (change) => {
+    setName(change.target.value);
+};
 
+const onMusicianChange = (change) => {
+    setMusician(change.target.value);
+};
 
-
-
-/*
-
-const Form = () => {
-    const [name, setName] = useState('');
-    const [season, setSeason] = useState('');
-    const [technology, setTechnology] = useState('');
-
-    const onNameChange = (e) => {
-        console.log(`Name: ${e.target.value}`);
-        setName(e.target.value);
-    };
-
-    const onSeasonChange = (e) => {
-        console.log(e);
-        setSeason(e.target.value);
-    };
-
-    const onTechnologyChange = (e) => {
-        console.log(`Technology: ${e.taget.value}`)
-        setTechnology(e.target.value);
-        
-    };
+const onInstrumentChange = (change) => {
+    setInstrument(change.target.value);
+};
 
     return (
         <form>
-            <div>
-                <label htmlFor="name">Name</label>
+            <div className="name-question">
+            <label htmlFor="name">Name:</label>
                 <input 
                     id="name" 
                     type="text" 
                     value={name}
                     onChange={() => onNameChange()}
-
-                
                 />
             </div>
-            <div>
-                <label htmlFor="season">Favourite season</label>
-                <select id="season" onChange={onSeasonChange}>
-                    <option>Winter</option>
-                    <option>Spring</option>
-                    <option>Summer</option>
-                    <option>Fall</option>
+            <div className="musician-question">
+                <p>Are you a musician?</p>
+            <label htmlFor="musician">Yes</label>
+                <input 
+                    id="musician" 
+                    type="radio" 
+                    value={musician}
+                    onChange={() => onMusicianChange()}
+                />
+                    <label htmlFor="musician">No</label>
+                    <input 
+                        id="musician" 
+                        type="radio" 
+                        value={musician}
+                        onChange={() => onMusicianChange()}
+                />
+            </div>
+            <div className="instrument-question">
+                <label htmlFor="instrument">Which is your instrument?</label>
+                <select id="instrument" onChange={onInstrumentChange}>
+                    <option>Singing</option>
+                    <option>Piano</option>
+                    <option>Drums</option>
+                    <option>Guitarr</option>
+                    <option>Drums</option>
                 </select>
             </div>
-            <div>
-                <p>Favourite technology</p>
-                <label htmlFor="html">HTML</label>
-                <input 
-                    name="technology" 
-                    id="html" 
-                    value="html"
-                    type="radio" 
-                    onChange={onTechnologyChange}
-                />
-
-                <label>CSS</label>
-                <input 
-                    name="technology" 
-                    id="css"
-                    value="css"
-                    type="radio" 
-                    onChange={onTechnologyChange}
-                />
-                <label>JavaScript</label>
-                <input 
-                    name="technology" 
-                    id="js"
-                    value="js"
-                    type="radio" 
-                    onChange={onTechnologyChange}
-                />
-                <label>React</label>
-                <input 
-                    type="radio" 
-                    id="react"
-                    value="react"
-                    type="radio"
-                    onChange={onTechnologyChange}
-                />
-            </div>
         </form>
-    )
-}
+    
+    )}
 
-export default Form;
+    export default Form
 
-*/
+
+
+
+
+
+
+
+ 
