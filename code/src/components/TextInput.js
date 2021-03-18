@@ -1,16 +1,15 @@
 import React from "react";
+
 import "./TextInput.css";
 
-export const TextInput = (props) => {
-  const { userInput, setUserInput } = props;
+export const TextInput = ({ userInput, setUserInput }) => {
 
   const handleChange = (e) => {
     setUserInput(e.target.value)
    }
 
   return (
-    <>
-      <div className="text-input__inner">
+      <form className="text-input" onSubmit={(event) => event.preventDefault()}>
         <label htmlFor="userInput">
           <h3>
             Please describe shortly what visions you have of the far future.
@@ -25,7 +24,6 @@ export const TextInput = (props) => {
           required
           placeholder="This field can not be left blank"
         ></input>
-      </div>
-    </>
+      </form>
   );
 };

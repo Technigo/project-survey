@@ -1,6 +1,7 @@
-.text-input__inner {
+.text-input {
     margin-bottom: 20px;
 }
+
 .text-input input {
     height: 30px;
     width: 100%;

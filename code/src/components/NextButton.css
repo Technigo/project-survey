@@ -1,0 +1,7 @@
+button {
+    width: 70px;
+    border-radius: 10px;
+    outline: none;
+    justify-self: center;
+    margin-bottom: 20px;
+}

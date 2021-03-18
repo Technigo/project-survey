@@ -20,7 +20,7 @@ select {
 }
 
 /*adding custom*/
-.drop-down__inner-select {
+.drop-down__inner{
     width: 100%;
     border: 1px solid black;
     border-radius: 0.25em;
@@ -35,7 +35,7 @@ select {
     align-items: center;
   }
 
-  .drop-down__inner-select::after {
+  .drop-down__inner::after {
     content: "";
     width: 0.8em;
     height: 0.5em;
@@ -45,7 +45,7 @@ select {
   }
 
   select,
-  .drop-down__inner-select::after {
+  .drop-down__inner::after {
       grid-area: select;
   }
 

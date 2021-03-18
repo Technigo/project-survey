@@ -1,10 +1,11 @@
 import React from "react";
+
 import './Footer.css'
 
-export const Footer = (props) => {
+export const Footer = ({copyRight}) => {
     return (
         <div className="footer-bg">
-            <h4>{props.copyRight}</h4>
+            <h4>{copyRight}</h4>
         </div>
     )
 }

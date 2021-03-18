@@ -1,44 +1,51 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 
 import { Header } from "./components/Header";
-import { TextInput } from "./components/TextInput";
-import { Rangeslider } from "./components/Rangeslider";
-import { DropDown } from "./components/DropDown";
-import { Radio } from "./components/Radio";
-import { Button } from "./components/Button";
 import { Summary } from "./components/Summary";
 import { Footer } from "./components/Footer";
-import { ScrollButton} from "./components/ScrollButton"
+import { Questions } from "./components/Questions";
+import { NextButton } from "./components/NextButton";
+
+let i = 0;
 
 export const App = () => {
-  const [summary, setSummary] = useState(false);
   const [populationAge, setPopulationAge] = useState("");
   const [userInput, setUserInput] = useState("");
   const [futureExpectations, setFutureExpectations] = useState("");
   const [yearsToMars, setYearsToMars] = useState("");
-  const q1 = useRef(null),
-    q2 = useRef(null),
-    q3 = useRef(null),
-    q4 = useRef(null);
-  
+  const [nextQuestion, setNextQuestion] = useState("");
 
-  const changeState = () => {
+  /*Returns a popup to tell the user to add a answer if s/he didn't and if the user
+  did answer it sets the nextQuestion to the right state for showing the next question
+  (or summary) */
+  const validation = () => {
     if (
-      userInput === "" ||
-      futureExpectations === "" ||
-      yearsToMars === "" ||
-      populationAge === ""
+      (nextQuestion === "Question1" && userInput === "") ||
+      (nextQuestion === "Question2" && populationAge === "") ||
+      (nextQuestion === "Question3" && yearsToMars === "") ||
+      (nextQuestion === "Question4" && futureExpectations === "")
     ) {
-      alert("Please answer all questions!");
-      return false;
-    } else if (summary === false) {
-      return true;
+      alert("Please answer the question!");
     } else {
-      setUserInput("");
-      setFutureExpectations("");
-      setYearsToMars("");
-      return false;
+      i++;
+      if (i < 5) {
+        setNextQuestion(`Question${i}`);
+      } else if (i === 5) {
+        setNextQuestion("Summary");
+      } else {
+        i = 0;
+        resetForm();
+      }
     }
+  };
+
+  //resets all inputs
+  const resetForm = () => {
+    setUserInput("");
+    setPopulationAge("");
+    setYearsToMars("");
+    setFutureExpectations("");
+    setNextQuestion("");
   };
 
   return (
@@ -46,75 +53,75 @@ export const App = () => {
       <header className="header">
         <Header title="The FUTURE" />
       </header>
-      <ScrollButton  
-        ref1={q1}
-        ref2={q2}
-        ref3={q3}
-        ref4={q4}
-      />
-      <form onSubmit={(event) => event.preventDefault()}>
-  
-        {/*When summary === true a summary will be shown*/}
-        {summary && (
-          <Summary
-            userInput={userInput}
-            futureExpectations={futureExpectations}
-            yearsToMars={yearsToMars}
-            populationAge={populationAge}
-          />
-        )}
 
-        {/*When summary !== true the form with questions will be shown*/}
-        {!summary && (
-          <>
-            <h2>Let's talk about the future!</h2>
-            <div className="text-input" ref={q1}>
-              <TextInput userInput={userInput} setUserInput={setUserInput} />
-            </div>
-            <div className="range-slider" ref={q2}>
-              <Rangeslider
+      {/*While nextQuestion isn't "Summary" new questions will be shown 
+      the form with questions will be shown*/}
+      {nextQuestion !== "Summary" && (
+        <>
+          <h2 className="question-heading">Let's talk about the future!</h2>
+
+          {nextQuestion === "Question1" && (
+            <section className="question" id="Question1">
+              <Questions
+                input="text"
+                userInput={userInput}
+                setUserInput={setUserInput}
+              />
+            </section>
+          )}
+
+          {nextQuestion === "Question2" && (
+            <section className="question" id="Question2">
+              <Questions
+                input="range"
                 popluationAge={populationAge}
                 setPopulationAge={setPopulationAge}
-                min="0"
-                max="100"
               />
-            </div>
-            <div className="drop-down" ref={q3}>
-              <DropDown
-                option1="0-10 years"
-                option2="10 to 20 years"
-                option3="over 20 years"
-                option4="over 100 years"
-                option5="Never"
+            </section>
+          )}
+
+          {nextQuestion === "Question3" && (
+            <section className="question" id="Question3">
+              <Questions
+                input="select"
                 yearsToMars={yearsToMars}
                 setYearsToMars={setYearsToMars}
               />
-            </div>
-            <div className="radio-buttons" ref={q4}>
-              <Radio
-                value1="synthetic food"
-                value2="flying cars"
-                value3="cyborg society"
-                value4="cool gadgets"
+            </section>
+          )}
+
+          {nextQuestion === "Question4" && (
+            <section className="question" id="Question4">
+              <Questions
+                input="radio"
                 futureExpectations={futureExpectations}
                 setFutureExpectations={setFutureExpectations}
               />
-            </div>
-          </>
-        )}
+            </section>
+          )}
+        </>
+      )}
 
-        {/*OnClick calls a function that toggles between true and false
-            state */}
-        <Button
-          onClick={() => {
-            setSummary(changeState());
-          }}
-          value={summary}
+      {/*When nextQuestion === "Summary" a summary will be shown*/}
+      {nextQuestion === "Summary" && (
+        <Summary
+          userInput={userInput}
+          futureExpectations={futureExpectations}
+          yearsToMars={yearsToMars}
+          populationAge={populationAge}
         />
-      </form>
+      )}
+
+      {/*Shows the next question or summary or a chance to redo the form if
+      you're done */}
+      <NextButton 
+        validation={validation} 
+        i={i} 
+      />
 
       <footer className="footer">
-        <Footer copyRight="&copy; Pauline Andersson 2021" />
+        <Footer 
+          copyRight="&copy; Pauline Andersson 2021" />
       </footer>
     </div>
   );

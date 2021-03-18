@@ -14,57 +14,43 @@ code {
     monospace;
 }
 
-
 .wrapper {
   width: 100%;
   min-height: 100vh;
   display: grid;
-  grid-template-columns: 10px 1fr;
-  grid-template-rows: 300px 1fr 50px;
+  grid-template-columns: 10% 1fr 10%;
+  grid-template-rows: 300px 100px 1fr 70px 50px;
   grid-template-areas: 
-  "header header"
-  "side form"
-  "footer footer";
+  "header header header"
+  ". heading ."
+  ". main ."
+  ". button ."
+  "footer footer footer";
   color: rgb(255, 255, 255);
   background-color: rgba(43, 88, 105, 0.973);
   font-family: 'Titillium Web', sans-serif;
 }
-
 
 h3 {
   font-weight: 400;
   font-size: 17px;
 }
 
-.scroll-button {
-  grid-area: side;
-}
-
 .header {
   grid-area: header;
 }
 
-.answers-heading {
-  width: 80%;
-  height: fit-content;
-  margin-left: 20%;
+.question-heading, .summary-heading {
+  grid-area: heading;
+  justify-self: center;
 }
 
-form {
-  width: 100%;
-  min-height: 60vh; 
-  grid-area: form;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-evenly;
-  align-items: center;
+.question, .summary {
+  grid-area: main;
 }
 
-.text-input,
-.drop-down,
-.radio-buttons,
-.range-slider {
-  width: 80%;
+.next-button {
+  grid-area:button;
 }
 
 button::before {
