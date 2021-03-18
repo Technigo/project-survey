@@ -14,6 +14,7 @@ export const EyeQuestion = ({ eyeColor, setEyeColor}) => {
                         className="select-eyecolor"
                         onChange={(e) => onSetEyeColor(e)}
                         value={eyeColor}
+                        required
                         >
                             <option value="" disabled>Select eyecolor</option>
                             <option value="Brown">Brown</option>
