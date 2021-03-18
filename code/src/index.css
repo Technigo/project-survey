@@ -20,13 +20,16 @@ code {
 
 body {
   font-family: 'Architects Daughter', cursive;
-font-family: 'Josefin Slab', serif;
-background-color: rgb(235, 227, 215);
+  font-family: 'Josefin Slab', serif;
+  background-color: rgb(224, 214, 202);
 }
 
 .header {
   overflow: hidden;
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .header-image {
@@ -34,56 +37,40 @@ background-color: rgb(235, 227, 215);
   height: 200px;
   width: 100%;
   object-fit: cover;
-  text-align: center;
 }
 .header-welcome {
   position:absolute;
   top: 20px;
   color:white;
-  text-align: center;
   font-size: 18px;
-  line-height: 40px;
-  padding: 0px 40px;
+  width: 80%;
 }
 
 .header-text {
   position:absolute;
-  top: 100px;
+  top: 110px;
   color:white;
-  text-align: center;
   font-size: 15px;
-  padding: 10px 40px;
+  width: 80%;
 }
 
 .form-container {
-  border: 2px solid green;
-  margin: 40px 60px;
-  font-size: 18px;
+  margin: 40px 40px;
+  font-size: 20px;
   font-weight: bold;
-  color: white;
-  background-image: url(./components/wine.jpg);
-  background-size: 150vh;
-  background-repeat: no-repeat;
+  color: black;
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
   justify-content: center;
-  
-}
-
-.form-container-questions {
-  background: rgba(255, 255, 255, 0.233);
 }
 
 .name-question {
-border: 2px solid green;
 margin: 40px;
-
 }
  
 .color-question {
-  border: 2px solid green;
   margin: 0px 50px 40px 50px;
 }
 
@@ -91,20 +78,12 @@ margin: 40px;
   display: flex;
   flex-direction: column;
   margin-top: 10px;
- 
 }
 
 .country-question {
-  border: 2px solid green;
- 
-  margin: 40px;
+  margin: 40px 60px;
   display: flex;
   flex-direction: column;
-
-}
-
-.submit {
-  margin: 40px;
 }
 
 button {
@@ -116,14 +95,106 @@ button {
   padding: 10px;
   border-radius: 5px;
   border: none;
+  margin: 40px;
+}
+
+.summary-container {
+  margin: 40px 60px;
+  font-size: 22px;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.summary-icon {
+  width: 100px;
+  height: auto;
+  margin: 40px;
 }
 
 /*MEDIA QUERIES LAPTOP*/
-@media (min-with: 767px){
+@media (min-width: 767px){
 
+  .header-image {
+    height: 350px;
+    width: 100%;
+  }
+
+  .header-welcome {
+    top: 100px;
+    font-size: 26px;
+  }
+  
+  .header-text {
+    top: 180px;
+    font-size: 20px;
+  }
+  
+  .form-container {
+    margin: 50px 100px;
+    font-size: 22px;
+   }
+
+  .form-container-questions {
+    margin: 0px 70px;
+  }
+  
+  .country-question {
+    margin: 40px 120px;
+  }
+  
+  button {
+    font-size: 22px;
+    padding: 15px;
+  }
+
+  .summary-container {
+    margin: 80px 100px;
+    font-size: 26px;
+  }
+  
+  .summary-icon {
+    width: 180px;
+    margin: 60px;
+  }
 }
 
 /*MEDIA QUERIES DESKTOP*/
-@media (min-with: 1024px){
+@media (min-width: 1024px){
   
+  .header-image {
+    height: 400px;
+    width: 100%;
+  }
+
+  .header-welcome {
+    font-size: 50px;
+  }
+  
+  .header-text {
+    top: 220px;
+    font-size: 30px; 
+  }
+  
+  .form-container {
+    margin: 70px 100px;
+    font-size: 26px;
+   }
+
+  .form-container-questions {
+    margin: 30px 70px;
+  }
+  
+  .country-question {
+    margin: 40px 120px;
+  }
+  
+  button {
+    font-size: 22px;
+    padding: 15px;
+  }
 }
