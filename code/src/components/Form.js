@@ -3,7 +3,7 @@ import { useState } from "react";
 
 const Form = () => {
   const [movieName, setMovieName] = useState("");
-  const [movieGenre, setMovieGenre] = useState("");
+  const [movieGenre, setMovieGenre] = useState("Other");
   const [rating, setRating] = useState("");
 
   const onMovieNameChange = (event) => {
@@ -36,11 +36,11 @@ const Form = () => {
 
         <label htmlFor="dropDown">Which would you like to see more of?</label>
         <select id="dropDown" onChange={onMovieGenreChange}>
-          <option value=""></option>
+          <option value="Other">Other</option>
           <option value="Action">Action</option>
           <option value="Adventure">Adventure</option>
           <option value="Comedy">Comedy</option>
-          <option value="Comedy">Crime & Mystery</option>
+          <option value="Crime & Mystery">Crime & Mystery</option>
           <option value="Fantasy">Fantasy</option>
           <option value="Historical">Historical</option>
           <option value="Horror">Horror</option>
@@ -48,7 +48,6 @@ const Form = () => {
           <option value="Science fiction">Science fiction</option>
           <option value="Thriller">Thriller</option>
           <option value="Western">Western</option>
-          <option value="Other">Other</option>
         </select>
 
         <label>How would you rate this survey? </label>
@@ -74,7 +73,13 @@ const Form = () => {
             <label htmlFor="good"> Good</label>
           </p>
           <p>
-            <input type="radio" value="boring" id="boring" name="radioButton" />
+            <input
+              type="radio"
+              value="boring"
+              id="boring"
+              name="radioButton"
+              onChange={onRatingChange}
+            />
             <label htmlFor="boring"> Boring</label>
           </p>
           <p>
@@ -83,6 +88,7 @@ const Form = () => {
               value="super-boring"
               id="super-boring"
               name="radioButton"
+              onChange={onRatingChange}
             />
             <label htmlFor="super-boring"> Super boring</label>
           </p>
