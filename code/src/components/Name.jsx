@@ -13,7 +13,9 @@ export const Name = ({ name, setName }) => {
                 type="text"
                 onChange={onNameChange} 
                 value={name}
-                required 
+                min="2"
+                max="50"
+                required
             />
         </div>
     )
