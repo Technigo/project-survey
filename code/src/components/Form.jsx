@@ -79,7 +79,7 @@ export const Form = ({ onSubmit }) => {
                 setAge={setAge}
                 age={age}
             />
-            <p tabindex="0">Which career path are you interested in?</p>
+            <p className="question" tabindex="0">Which career path are you interested in?</p>
             <div className="form-components radio">
                 {careerPaths.map((career) => {
                     return (
@@ -92,7 +92,7 @@ export const Form = ({ onSubmit }) => {
                 })}
             </div>
 
-            <p tabindex="0">Which programming languages do you want to work with?</p>
+            <p className="question" tabindex="0">Which programming languages do you want to work with?</p>
             <div className="form-components stack">
                 {stacks.map((stack) => {
                     return (
