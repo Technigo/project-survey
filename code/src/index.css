@@ -30,6 +30,12 @@ code {
   align-items: center;
   flex-direction: column;
 }
+
+.form input[type=text] {
+background-color: cadetblue;
+
+}
+
 .form-wrapper,
 .text-wrapper,
 .questions-wrapper {
