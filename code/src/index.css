@@ -54,6 +54,11 @@ button {
   letter-spacing: 4px;
 }
 
+/* Class to handle any content that needs to be hidden */
+.hidden {
+  display: none;
+}
+
 @media (min-width:500px) {
   body {
     margin: 0 auto;

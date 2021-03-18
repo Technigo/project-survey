@@ -54,6 +54,7 @@ const questions = [
 const Form = () => {
   const [formData, setForm] = useState(defaultData);
   const [endState, setEndState] = useState(false);
+  // const [step, setStep] = useState(1);
 
   const inputProps = { formData, setForm };
 

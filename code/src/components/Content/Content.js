@@ -1,16 +1,15 @@
 import React from 'react';
 import './Content.css';
 
+import Button from 'components/Button/Button';
+import { getWord } from 'actions/buttonOnClick';
+
 const Content = (props) => {
-  const handleGetWord = (event) => {
-    event.target.classList.add('hidden')
-    event.target.nextElementSibling.classList.remove('hidden')
-  };
   switch (props.type) {
     case 'button':
       return (
         <>
-          <button className="content button" type="button" onClick={handleGetWord}>GET WORD</button>
+          <Button isSubmit={false} action={getWord} wrapperClassName="content" text="Get word" />
           <p className="hidden">{props.data}</p>
         </>
       );
@@ -19,15 +18,13 @@ const Content = (props) => {
         <>
           <p className="content">{props.data}</p>
         </>
-      )
+      );
     case 'image':
-      return (
-        <img className="content image" src={props.data} alt={props.dataAlt} />
-      )
+      return <img className="content image" src={props.data} alt={props.dataAlt} />;
     case 'submit':
       return (
-        <button className="content button" type="submit">SUBMIT</button>
-      )
+        <Button isSubmit wrapperClassName="content" text="Submit" />
+      );
     default:
       return null;
   }

@@ -1,0 +1,15 @@
+.button {
+  width: fit-content;
+  height: 50px;
+  align-self: center;
+  background-color:transparent;
+	border:2px solid var(--primary);
+	cursor:pointer;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+
+.button:hover {
+  background-color: var(--primary);
+  color: var(--darkAlt);
+}

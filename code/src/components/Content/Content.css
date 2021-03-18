@@ -3,28 +3,9 @@
   margin: 25px 0;
 }
 
-.button {
-  width: fit-content;
-  height: 50px;
-  align-self: center;
-  background-color:transparent;
-	border:2px solid var(--primary);
-	cursor:pointer;
-  padding: 10px 20px;
-}
-
-.button:hover {
-  background-color: var(--primary);
-  color: var(--darkAlt);
-}
-
 .image {
   align-self: center;
   width: 100%;
   height: auto;
 }
 
-/* Class to handle any content that needs to be hidden */
-.hidden {
-  display: none;
-}
