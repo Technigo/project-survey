@@ -1,8 +1,6 @@
 import React from 'react';
 
-const HousesSelect = (props) => {
-    const {gameOfThronesHouse, setGameOfThronesHouse} = props;
-
+const HousesSelect = ({gameOfThronesHouse, setGameOfThronesHouse, handleSubmit}) => {
     const onHouseChange = (e) => {
         console.log(`Favorite GOT family: ${e.target.value}`);
         setGameOfThronesHouse(e.target.value);
@@ -11,13 +9,13 @@ const HousesSelect = (props) => {
     return (
         <>
         <form className="select-dropdown">
-            <div>
-                <h2 className="question-heading">There are nine Great Houses in Westeros. Which one is your favorite?</h2>
-            </div>
+            <h2 className="question-heading">
+                There are nine Great Houses in Westeros. Which one is your favorite?
+            </h2>
             <div className="select-options">
             <label htmlFor='game-of-thrones-houses'>Choose your favorite house:</label>
             <select 
-                name='houses' 
+                name='game-of-thrones-houses' 
                 id='game-of-thrones-houses'
                 onChange={onHouseChange}
                 value={gameOfThronesHouse}
@@ -35,6 +33,11 @@ const HousesSelect = (props) => {
                 <option value='baratheon'>House Baratheon</option>
             </select>
             </div>
+            <button onSubmit={handleSubmit}
+                className="button"
+                type='submit'
+                > Next!
+            </button> 
         </form>
     </>
     );

@@ -1,10 +1,9 @@
 import React from 'react';
 
-const Summary = (props) => {
-    const {name, numberOfSeasons, gameOfThronesHouse, rateEnding} = props;
+const Summary = ({name, numberOfSeasons, gameOfThronesHouse, rateEnding}) => {
 
     const backToStart = () => {
-        document.location.href = "";
+        document.location.reload()
       };
 
     return (

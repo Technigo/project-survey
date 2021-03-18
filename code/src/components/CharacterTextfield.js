@@ -1,8 +1,6 @@
 import React from 'react';
 
-const CharacterTextfield = (props) => {
-    const {name, setName} = props;
-
+const CharacterTextfield = ({name, setName, handleSubmit}) => {
     const onNameChange = (e) => {
         console.log(`Name: ${e.target.value}`);
         setName(e.target.value);
@@ -17,11 +15,17 @@ const CharacterTextfield = (props) => {
                     type='text'
                     onChange={onNameChange}
                     value={name}
+                    name='name'
                     id='name'
                     placeholder = 'Type answer here...'
                     required
                     />
                 </label>
+                <button onSubmit={handleSubmit}
+                    className="button"
+                    type='submit'
+                    > Next!
+                </button> 
             </form>
        </>
        );
