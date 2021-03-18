@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Fauna+One&display=swap');
 * {
   font-family: 'Fauna One', serif;
+  font-size: 20px;
 }
 body {
   margin: 0;
@@ -16,37 +17,64 @@ code {
     monospace;
 }
 
-.container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
 .form {  
-  display:flex;
+  display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  height: 100vh; 
 }
 
 .form input[type=text] {
-background-color: cadetblue;
-
+background-color: rgb(118, 182, 65);
 }
 
-.form-wrapper,
 .text-wrapper,
+.form-wrapper,
 .questions-wrapper {
   margin: 20px;
 }
+
 button {
-  margin: 20px;
-  width:100px;
-  height:60px;
+  margin: 20px 20px 0 20px;
+  padding: 5px;
+  width: fit-content;
+  height: 50px;
   background-color: aquamarine;
   border-radius: 5px;
   font-weight: bold;
+}
+
+.form-wrapper {
+  margin:60px 0;  
+  max-width: 500px;
+}
+
+@-webkit-keyframes shine {
+  0% {box-shadow: 0 0 70px 0 rgba(209, 155, 5, 0.863);}     
+  100% {box-shadow: 0 0 60px 0 rgba(213, 235, 10, 0.637);}   
+}
+@keyframes shine {
+  0% {box-shadow: 0 0 70px 0 rgba(209, 155, 5, 0.863);}  
+  100% {box-shadow: 0 0 50px 0 rgba(227, 252, 2, 0.637);}
+} 
+
+.ice {
+  background: rgba( 35, 242, 242, 0.20 );
+  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+  backdrop-filter: blur( 20px );
+  -webkit-backdrop-filter: blur( 20px );  
+  border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
+
+.sun {
+  background-color: yellow;
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  animation: shine 1.5s infinite alternate;
+  position: relative;
+  top: 10px;
+  left: 190px;   
 }
 

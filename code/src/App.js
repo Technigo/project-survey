@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Container } from './Components/Container'
+import { Form } from './Components/Form'
 
 export const App = () => {
   return (
     <div>
-      <Container />
+      <Form />
     </div>
   )
 }
