@@ -82,6 +82,10 @@ button {
   .card {
     padding: 40px !important;
   }
+  .button:hover, {
+    background-color: var(--primary);
+    color: var(--darkAlt);
+  }
 }
 /* @media (max-width: 1439px) and (min-width: 700px) {
   body {

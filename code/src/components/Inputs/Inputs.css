@@ -35,6 +35,10 @@
   opacity: 1;
 }
 
+:invalid:focus {
+  border-color: var(--error);
+}
+
 /* --------------------------------- SELECT --------------------------------- */
 
 .input-wrapper--select::before {
@@ -59,6 +63,10 @@ select {
 }
 select:focus {
   outline: none;
+  border-width: 4px;
+}
+.input-wrapper--select:focus-within::before{
+  top: 20px;
 }
 option {
   background-color: var(--darkAlt);
@@ -68,7 +76,7 @@ option {
 
 [type='radio'] {
   position: absolute;
-  left: -9999px;
+  opacity: 0;
 }
 .radio-label {
   position: relative;
@@ -105,6 +113,15 @@ option {
   border-radius: 100%;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+}
+
+[type="radio"]:invalid:focus ~ .radio-input::before {
+  border-color: var(--error);
+}
+.radio-label:focus-within > .radio-input::before {
+  border-width: 4px;
+  top: -2px;
+  left: -2px;
 }
 
 /* Handles whether to show the checked or not */

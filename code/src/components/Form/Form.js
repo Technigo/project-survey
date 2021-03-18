@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 
 import Card from 'components/Cards/Card';
+import Steps from 'components/Steps/Steps';
 
 const defaultData = {
   answer1: '',
@@ -54,9 +55,10 @@ const questions = [
 const Form = () => {
   const [formData, setForm] = useState(defaultData);
   const [endState, setEndState] = useState(false);
-  // const [step, setStep] = useState(1);
+  const [step, setStep] = useState(1);
 
   const inputProps = { formData, setForm };
+  const stepProps = { step, setStep };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -64,17 +66,20 @@ const Form = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      {questions.map((question) => (
-        <Card
-          contentType="question"
-          key={`question${question.number}`}
-          {...question}
-          {...inputProps} />
-      ))}
-      <Card contentType="submission" />
-      {endState && <Card contentType="summary" data={formData} />}
-    </form>
+    <>
+      <form onSubmit={handleSubmit}>
+        {questions.map((question) => (
+          <Card
+            contentType="question"
+            key={`question${question.number}`}
+            {...question}
+            {...inputProps} />
+        ))}
+        <Card contentType="submission" />
+        {endState && <Card contentType="summary" data={formData} />}
+      </form>
+      <Steps {...stepProps} maxSteps={questions.length} />
+    </>
   );
 };
 

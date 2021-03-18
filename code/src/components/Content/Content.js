@@ -9,7 +9,7 @@ const Content = (props) => {
     case 'button':
       return (
         <>
-          <Button isSubmit={false} action={getWord} wrapperClassName="content" text="Get word" />
+          <Button isSubmit={false} action={getWord} otherClassName="content" text="Get word" />
           <p className="hidden">{props.data}</p>
         </>
       );
@@ -23,7 +23,7 @@ const Content = (props) => {
       return <img className="content image" src={props.data} alt={props.dataAlt} />;
     case 'submit':
       return (
-        <Button isSubmit wrapperClassName="content" text="Submit" />
+        <Button isSubmit otherClassName="content" text="Submit" />
       );
     default:
       return null;

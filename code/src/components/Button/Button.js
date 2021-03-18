@@ -2,13 +2,12 @@ import React from 'react';
 
 import './Button.css';
 
-const Button = (props) => {
+const Button = ({ otherClassName, isSubmit, action, text }) => {
   return (
     <button
-      className={`button ${props.wrapperClassName}`}
-      type={props.isSubmit ? 'submit' : 'button'}
-      onClick={props.action}>
-      {props.text}
+      className={`button ${otherClassName}`}
+      type={isSubmit ? 'submit' : 'button'}
+      onClick={action}>{text}
     </button>
   );
 };

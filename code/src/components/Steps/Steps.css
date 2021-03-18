@@ -1,13 +1,20 @@
 /* --------------------------- WRAPPER & ALIGNMENT -------------------------- */
 
-.step-wrapper {
-  display: flex;
+.steps-wrapper {
+  height: 50px;
   flex-flow: row wrap;
   margin: 24px;
   padding: 20px;
   border-radius: 10px;
   color: var(--primary);
   box-shadow: 2px 4px 10px black;
-  align-items: space-between;
   background-color: var(--darkAccent);
+}
+
+.steps-right {
+  float: right;
+}
+
+.steps-left {
+  float: left;
 }
