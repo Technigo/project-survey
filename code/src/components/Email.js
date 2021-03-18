@@ -12,7 +12,7 @@ const Email = ({ email, setEmail}) => {
             <div className='innerContainer'>
             <label htmlFor='email'>
 
-                <h2 className='questionTitle'><i className="fas fa-arrow-circle-right"></i> Please add your email adress so we'll know how to contact you!</h2>
+                <h2 className='questionTitle' tabIndex='0'><i className="fas fa-arrow-circle-right"></i> Please add your email adress so we have a way to contact you!</h2>
 
                 <input
                 className='emailInput'
@@ -28,7 +28,8 @@ const Email = ({ email, setEmail}) => {
             <button className='okButton'>
                 <a href='#workArea' className='okButtonLink'>OK</a>
             </button>
-            
+
+
             </div>
         </div>
     )

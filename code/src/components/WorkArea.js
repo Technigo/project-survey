@@ -10,11 +10,10 @@ const WorkArea = ({ workArea, setWorkArea}) => {
         <div className='questionContainer two'>
             <div className='innerContainer'>
             <label htmlFor='workArea'>
-                <h2 className='questionTitle'><i className="fas fa-arrow-circle-right"></i> What kind of role are you interested in?</h2>
+                <h2 className='questionTitle' tabindex='0'><i className="fas fa-arrow-circle-right"></i> What kind of role are you interested in?</h2>
                 <select
                     className='dropdownInput'
                     id='workArea'
-                    name='workAreas'
                     onChange={onWorkAreaChange}
                     value={workArea}
                     /* required */

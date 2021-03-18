@@ -37,19 +37,17 @@ i {
 /*WELCOME PAGE*/
 
 .welcomeContainer {
-  background-image: url('./images/smoke.jpg');
-  height: 100vh;
-  background-size: cover;
-  overflow: hidden;
-  background-repeat: no-repeat;
-
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
   position: relative;
 
+  background-image: url('./images/smoke.jpg');
+  height: 100vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
   text-align: center;
 }
 
@@ -57,41 +55,38 @@ i {
   font-family: 'Staatliches', cursive;
   font-size: 80px;
   font-weight:100;
-  margin-bottom: 30px;
   background: linear-gradient(210deg, #b3e6e9 40%, #ff89d8 60%);
   background-clip: text;
 	-webkit-background-clip: text;
   color: transparent;
+  margin-bottom: 30px;
 }
 
 .welcomeContent {
-  text-align: center;
   width: 85%;
+  text-align: center;
 }
 
 .welcomeContent p {
-  margin: 0;
   font-family: 'Montserrat', sans-serif;
-  font-weight: 200;
   font-size: 18px;
   color: #fff;
+  font-weight: 200;
+  margin: 0;
 }
 
 .welcomeContent p:first-child {
   font-size: 20px;
-  margin-bottom: 10px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
-
-
-/*FORM*/
+/*FORM CONTAINERS AND TITLE*/
 
 .formContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-
 
   width: 100%;
   margin: 0;
@@ -100,11 +95,6 @@ i {
 form {
   width: 100%;
 }
-
-.email {
-
-}
-
 
 .questionContainer {
   display: flex;
@@ -118,7 +108,6 @@ form {
 
 .questionContainer.one {
   background-color:  #ff89d8;
-
 }
 
 .questionContainer.two {
@@ -126,6 +115,7 @@ form {
 }
 
 .questionContainer.three {
+  position: relative;
   background-color:  #ff89d8;
 }
 
@@ -133,6 +123,7 @@ form {
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   width: 85%;
 }
 
@@ -141,116 +132,151 @@ form {
 }
 
 .radioContainer {
-  margin: auto;
   display: flex;
   flex-direction: column;
+
+  margin: auto;
 }
 
-/*INPUT STYLING*/
+/*FORM INPUT STYLING*/
 
 .emailInput {
   font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #000;
+  width: 100%;
   background: transparent;
   border: none;
   border-bottom: 2px solid #000;
-  width: 100%;
   padding: 5px 10px;
-  color: #000;
 }
 
 .emailInput:focus {
-  outline: none;
   background-color: #fff;
+  outline: none;
 }
 
-
 .dropdownInput {
-  width: 100%;
   font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  width: 100%;
   padding: 5px 0;
+}
+
+.place {
+  font-size: 20px;
 }
 
 /*SUMMARY*/
 
 .summaryContainer {
-  background-image: url('./images/smoke.jpg');
-  background-size: cover;
-  overflow: hidden;
-  background-repeat: no-repeat;
-  height: 100vh;
-  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
+
+  background-image: url('./images/smoke.jpg');
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  overflow: hidden;
+  background-repeat: no-repeat;
 }
 
 .summaryContent {
-  color: #fff;
   font-size: 18px;
+  color: #fff;
   text-align: center;
   width: 85%;
 }
 
 .summaryContainer p:first-child {
   font-size: 20px;
-  margin-bottom: 10px;
   font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /*BUTTON STYLING*/
 
 .startButton {
   font-family: 'Montserrat', sans-serif;
-  background-color: #ff89d8;
   font-size: 22px;
   color: #fff;
   width: 100%;
   height: 60px;
+  background-color: #ff89d8;
   border-radius: 10px;
   margin: 0;
   margin-bottom: 10px;
 }
 
 .startButtonLink {
-  margin: 0;
-  width: 95%;
-  text-decoration: none;
   position: absolute;
   bottom: 0;
+  width: 95%;
+  text-decoration: none;
+  margin: 0;
 }
 
 .okButton {
+  align-self: flex-end;
+
   font-family: 'Montserrat', sans-serif;
   font-weight: bold;
-  align-self: flex-end;
- 
   width: 50px;
   height: 50px;
   border-radius: 20%;
   margin-top: 25px;
   box-shadow: 1px 1px 4px rgb(90, 89, 89);
-
   background: linear-gradient(210deg, #b3e6e9, #ff89d8, #fff);
   background-clip: text;
 	-webkit-background-clip: button;
   color: transparent;
-  
+  padding: 0;
+
+  font-size: 18px;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  text-shadow: 1px 2px 4px #000;
 }
 
 .okButtonLink {
-  text-decoration: none;
-  color: #fff;
-  text-shadow: 1px 2px 4px #000;
   font-size: 18px;
-  width: 100%;
-  height: 100%;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  text-decoration: none;
+  text-shadow: 1px 2px 4px #000;
+}
+
+.okButton:hover {
+  cursor: pointer;
 }
 
 .submitButton {
-
+  position: absolute;
+  bottom: 0;
+  left: 2.5%;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 22px;
+  color: #000;
+  text-decoration: none;
+  width: 95%;
+  height: 60px;
+  background-color: #b3e6e9;
+  border-radius: 10px;
+  margin: 0;
+  margin-bottom: 10px; 
 }
 
 @media (min-width: 667px) {
+
+  i {
+    font-size: 44px;
+  }
+
+  /*WELCOME PAGE*/
 
   .welcomeContent p {
     font-size: 20px;
@@ -260,15 +286,71 @@ form {
     font-size: 23px;
   }
 
+  /*FORM CONTAINERS AND TITLE*/
+
+  .innerContainer {
+    width: 70%;
+  }
+
+  .questionTitle {
+    margin-bottom: 20px;
+    font-size: 32px;
+  }
+
+  /*FORM INPUT STYLING*/
+
+  .place {
+    font-size: 28px;
+  }
+
+  /*SUMMARY*/
+
+  .summaryContent {
+    font-size: 30px;
+    width: 85%;
+  }
+  
+  .summaryContainer p:first-child {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  /*BUTTONS*/
+
+  
   .startButton {
     width: 250px;
   }
 
+  .startButtonLink {
+    width: 250px;
+  }
+
+  .okButton {
+    width: 70px;
+    height: 70px;
+    margin-top: 50px;
+  }
+  
+  .okButtonLink {
+    width: 70px;
+    height: 70px;
+    font-size: 24px;
+  }
+ 
+  .submitButton {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+  }
 
 }
 
 @media (min-width: 1024px) {
 
+  /*WELCOME PAGE*/
 
   .welcomeContent p {
     font-size: 22px;
@@ -282,6 +364,12 @@ form {
     font-size: 110px;
   }
 
+  /*FORM CONTAINERS AND TITLE*/
+
+  .innerContainer {
+    width: 45%;
+  }
+
   /*BUTTONS*/
   
   .startButton:hover {
@@ -293,8 +381,8 @@ form {
     margin-bottom: 35px;
   }
 
-  .okButton:hover {
-    cursor: pointer;
-  }
+ .startButtonLink {
+   width: 350px;
+ }
 
 }

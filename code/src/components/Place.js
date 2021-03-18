@@ -10,55 +10,56 @@ const Place = ({ place, setPlace }) => {
         <div className='questionContainer three'>
             <div className='innerContainer'>
             <label htmlFor='place'>
-                <h2 className='questionTitle'><i className="fas fa-arrow-circle-right"></i> In which one of our offices would you like to work?</h2>
+                <h2 className='questionTitle' tabIndex='0'><i className="fas fa-arrow-circle-right"></i> In which one of our offices would you like to work?</h2>
 
                 <div className='radioContainer'>
                 <div>
                     <input
                     id='place'
                     type='radio'
-                    name='place'
+                    className='place'
                     value='Los Angeles'
                     onChange={onPlaceChange}
                     checked={place === 'Los Angeles'}
                     /* required */
                     />
-                 Los Angeles
+                 &nbsp;Los Angeles
                 </div>
 
                 <div>
                     <input
                     id='place'
                     type='radio'
-                    name='place'
+                    className='place'
                     value='Tokyo'
                     onChange={onPlaceChange}
                     checked={place === 'Tokyo'}
                     />
-                 Tokyo
+                 &nbsp;Tokyo
                 </div>
 
                 <div>
                     <input
                     id='place'
                     type='radio'
-                    name='place'
+                    className='place'
                     value='Stockholm'
                     onChange={onPlaceChange}
                     checked={place === 'Stockholm'}
                     />
-                 Stockholm
+                 &nbsp;Stockholm
                 </div>
 
                 <div>
                     <input
                     id='place'
                     type='radio'
+                    className='place'
                     value='Berlin'
                     onChange={onPlaceChange}
                     checked={place === 'Berlin'}
                     />
-                Berlin
+                &nbsp;Berlin
                 </div>
                 </div>
 
@@ -67,8 +68,7 @@ const Place = ({ place, setPlace }) => {
             <input
             type='submit'
             className='submitButton'
-            value='Submit your answers'>
-                
+            value='Submit your answers'>  
             </input>
             </div>
         </div>
