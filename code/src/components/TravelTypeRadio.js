@@ -10,7 +10,7 @@ export const TravelTypeRadio = ({setTravelType}) => {
   return (
     <>  
       <h2 className="question-title" tabindex="0"><span className="arrow">➛</span> What was the purpose of your visit?</h2>
-      
+      <section class="radio-buttons-container">
         {travelTypes.map(travelType => 
           <div className="radio-box">
             <label htmlFor={travelType} className="radio-button-label" aria-label="Use up and down arrows to choose and then press enter to move to next question">
@@ -28,6 +28,7 @@ export const TravelTypeRadio = ({setTravelType}) => {
             </label>
           </div>
         )}
+      </section>
       
       <Button 
         button="CONTINUE" />
