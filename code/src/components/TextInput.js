@@ -8,15 +8,18 @@ const TextInput = (props) => {
     }
 
     return (
-        <label>
-            {props.data.label}
+        <div className="input-container">
+            <label htmlFor="text">
+                <h2>{props.data.label}</h2>
+            </label>
             <input
+                id="text"
                 type="text"
                 className={props.data.className}
                 value={text}
                 onChange={handleInput}
             />
-        </label>
+        </div>
     )
 }
 

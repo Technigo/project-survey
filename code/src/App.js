@@ -58,7 +58,7 @@ const App = () => {
           className="form"
           onSubmit={(event) => event.preventDefault()}
         >
-
+          <h1>Character Creator</h1>
           {data.section[section] === "firstSection" &&
             <TextInput
               text={name}
@@ -110,6 +110,7 @@ const App = () => {
 
           {data.section[section] === "eighthSection" &&
             <div className="stats-container">
+              <h2>Stats</h2>
               <RangeInput
                 value={str}
                 setValue={setStr}
@@ -132,6 +133,7 @@ const App = () => {
             {data.section[section] !== "firstSection" &&
               <NavigateButton
                 text="Previous Question"
+                source="./assets/arrow-left.svg"
                 goNext={false}
                 section={section}
                 setSection={setSection}
@@ -140,6 +142,7 @@ const App = () => {
             {data.section[section] !== "eighthSection" &&
               <NavigateButton
                 text="Next Question"
+                source="./assets/arrow-right.svg"
                 goNext={true}
                 section={section}
                 setSection={setSection}

@@ -9,10 +9,10 @@ const ProgressBar = (props) => {
     return (
         <div className="progress-bar">
             {props.section.slice(0, progressId + 1).map(item =>
-                <Progress fill="fill" />
+                <Progress key={item} fill="fill" />
             )}
             {props.section.slice(progressId + 1).map(item =>
-                <Progress fill="no-fill" />
+                <Progress key={item} fill="no-fill" />
             )}
         </div>
     )

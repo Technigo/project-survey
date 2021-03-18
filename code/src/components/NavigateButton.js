@@ -1,21 +1,3 @@
-// import React from "react"
-
-// const GoForwardButton = (props) => {
-//     const { section, setSection, text } = props
-
-//     const handleNext = () => {
-//         if (section < 7) {
-//             setSection(section + 1)
-//         }
-//     }
-
-//     return (
-//         <button onClick={handleNext}>{text}</button>
-//     )
-// }
-
-// export default GoForwardButton
-
 import React from "react"
 
 const NavigateButton = (props) => {
@@ -30,7 +12,12 @@ const NavigateButton = (props) => {
     }
 
     return (
-        <button onClick={handleClick}>{text}</button>
+        <button onClick={handleClick}>
+            <img
+                src={props.source}
+                className="arrow-icon"
+            />
+        </button>
     )
 }
 

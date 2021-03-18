@@ -9,7 +9,9 @@ const SubmitButton = (props) => {
     }
 
     return (
-        <button onClick={handleSubmit}>{props.text}</button>
+        <button onClick={handleSubmit}>
+            {props.text}
+        </button>
     )
 }
 

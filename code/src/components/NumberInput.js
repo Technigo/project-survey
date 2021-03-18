@@ -8,15 +8,19 @@ const NumberInput = (props) => {
     }
 
     return (
-        <label>{props.data.label}
+        <div className="input-container">
+            <label htmlFor="number">
+                <h2>{props.data.label}</h2>
+            </label>
             <input
+                id="number"
                 type="number"
                 min="10"
                 max="100"
                 onChange={handleChange}
                 value={number}
             />
-        </label>
+        </div>
     )
 }
 

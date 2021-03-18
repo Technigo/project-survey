@@ -8,20 +8,23 @@ const SelectInput = (props) => {
     }
 
     return (
-        <select
-            onChange={handleChange}
-            value={choice}
-            className={props.data.className}
-        >
-            <option >
-                Pick a {props.data.field}!
+        <div className="input-container">
+            <h2>{props.data.label}</h2>
+            <select
+                onChange={handleChange}
+                value={choice}
+                className={props.data.className}
+            >
+                <option >
+                    Pick a {props.data.field}!
             </option>
-            {props.data.choices.map(item =>
-                <option key={item}>
-                    {item}
-                </option>
-            )}
-        </select>
+                {props.data.choices.map(item =>
+                    <option key={item}>
+                        {item}
+                    </option>
+                )}
+            </select>
+        </div>
     )
 }
 

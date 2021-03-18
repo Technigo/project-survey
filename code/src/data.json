@@ -20,6 +20,7 @@
             "thief",
             "knight"
         ],
+        "label": "Class",
         "field": "class",
         "className": "class-input"
     },
@@ -30,6 +31,7 @@
             "dwarf",
             "goblin"
         ],
+        "label": "Race",
         "field": "race",
         "className": "race-input"
     },
@@ -44,6 +46,7 @@
             "farmer",
             "worker"
         ],
+        "label": "Family",
         "field": "family",
         "className": "family-input"
     },
