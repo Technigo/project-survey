@@ -31,11 +31,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(`name: ${name}`)
-    console.log(`timeInterval: ${timeInterval}`)
-    console.log(`favorite: ${favorite}`)
     setDone(isResultComplete()) 
-    console.log(done)
   }
 
 

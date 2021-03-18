@@ -1,19 +1,20 @@
 body::after {
-  content: "";
-  background: url("/assets/icecream.jpg");
-  height: 100%;
+  content: ""; 
+  background: url("/assets/icecream.jpg")center center;
   opacity: 0.5;
   top: 0;
   bottom: 0;
   left: 0;
-  right: 0;
-  position: absolute; 
+  right: 0; 
+  position: fixed; 
   z-index: -1;
-  background-size: cover;
- 
+  background-size:cover;
+  height: 100vh;
+} 
+
+body {
+  background-color: #D1CCC1;
 }
-
-
 /* APP */
 
 .app-container {
@@ -42,6 +43,7 @@ font-family: 'Monaco';
 color:#37372C;
 font-size: 38px;
 width: 80%;
+text-align: center;
 
 }
 
@@ -169,7 +171,7 @@ justify-content: center;
  width: 8px;
  height: 8px;
  border-radius: 50%;
- background: white;
+ background: #D1CCC1;
 }
 
 
@@ -251,9 +253,10 @@ margin: auto;
 
 .p-result-box-sum {
   font-family: 'Monaco';
-  color: #824947;
+  color: #37372C;
   text-align: center;
-  font-size:20px ;
+  font-size:20px;
+  font-weight: bold;
 }
 
 .ice-pic {
