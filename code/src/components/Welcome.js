@@ -21,7 +21,7 @@ const Welcome = () => {
              value={name}
              onChange={onNameChange}
             />
-          </div>
+        </div>
         </>
     );
 };
