@@ -3,7 +3,6 @@ import React from 'react'
 import NextButton from 'components/NextButton'
 
 const amountOfTime= [
-  'not at all',
   '1-2 times a week',
   '2-3 times a week',
   '4-5 times a week',

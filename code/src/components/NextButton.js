@@ -10,7 +10,6 @@ const NextButton = () => {
       Next
     </button> 
   )
- 
 }
 
 export default NextButton 

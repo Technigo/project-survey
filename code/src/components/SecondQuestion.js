@@ -5,11 +5,11 @@ import NextButton from 'components/NextButton'
 const SecondQuestion = (props) => {
 
   const onFavoriteTime = (e) => {
-    props.setFavoriteTime (e.target.value)
+    props.setFavoriteTime(e.target.value)
   }
  
   return (
-    <div  className="question-container">
+    <div className="question-container">
       <h1>Your favorite time to read?</h1>
       <div className="custom-select">
         <select

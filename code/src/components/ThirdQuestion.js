@@ -7,8 +7,7 @@ const places = [
   'while commuting',
   'in the park',
   'at home',
-  'in a group', 
-  'other'
+  'in a group'
 ]
 
 const ThirdQuestion = (props) => {

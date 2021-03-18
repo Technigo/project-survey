@@ -1,5 +1,7 @@
 import React from 'react'
 
+
+
 const Header = () => {
   return (
     <header className="header">
@@ -9,6 +11,7 @@ const Header = () => {
         <h2>By answering this questions you will see your reading pattern.</h2>
         <button className="start-btn">Start</button>
       </div>
+
     </header>
   )
 }

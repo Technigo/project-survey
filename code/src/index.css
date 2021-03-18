@@ -27,6 +27,7 @@ body {
 h1 {
   font-size: 18px;
   margin: 0;
+  width: 80%;
 }
 
 .header-content h2 {
@@ -78,6 +79,8 @@ h1 {
   width: 80%;
   border-radius: 0;
   padding: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .summary {
@@ -87,6 +90,11 @@ h1 {
   justify-content: center;
   align-items: center;
   position: relative;
+
+}
+
+.summary-heading {
+  text-align: center;
 }
 
 .summary p {
@@ -98,4 +106,27 @@ h1 {
   position: absolute;
   bottom: 0px;
   right: 0px;
+}
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 150px;
+  border-radius: 50px;
+  border: 1px solid #ED8BB2;
+}
+
+.filler {
+  background-color: #ED8BB2;
+  height: 100%;
+  border-radius: inherit;
+  
+}
+
+.test {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
