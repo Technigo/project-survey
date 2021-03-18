@@ -13,7 +13,7 @@ const Form = () => {
     const [lname, setLname] = useState('')
     const [gender, setGender] = useState('')
     const [symptom, setSymptom] = useState('')
-
+    const [IsSubmited, setIsSubmited] = useState(false)
 
 
 
@@ -65,65 +65,77 @@ const Form = () => {
         
             
     }
-
-    return (
-        <form onSubmit = {(event) => event.preventDefault()}>
-            <div>
-                <label htmlFor="fname">First Name</label>
-                <input
-                    id="fname"
-                    type="text"
-                    value={fname}
-                    onChange={onFnameChange}
-                    
-                />   
-
-            </div>
-
-            <div>
-                <label htmlFor="lname">Last Name</label>
-                <input
-                    id="lname"
-                    type="text"
-                    value={lname}
-                    onChange={onLnameChange}
-                />    
-            </div>
-
-            Gender:
-            {genderGroups.map((group) => (
-                <label key={group}>
+    if (IsSubmited === false) {
+        return (
+            <form onSubmit = {(event) => event.preventDefault()}>
+                <div>
+                    <label htmlFor="fname">First Name</label>
                     <input
-                        type="radio"
-                        value={group}
-                        onChange={onGenderChange}
-                        checked={gender === group}
+                        id="fname"
+                        type="text"
+                        value={fname}
+                        onChange={onFnameChange}
                         
-                    />
-                    {group}    
-                </label>
-
-            ))}
-            
-            <FormQuestions onSymptomChange={onSymptomChange} /> 
-            
-
-            <div>
-                <input
-                    type="submit"
-                    value="Submit"
-                    disabled={!isSurveyComplete()}
-                    onClick= {Summary}
-                    
+                    />   
+    
+                </div>
+    
+                <div>
+                    <label htmlFor="lname">Last Name</label>
+                    <input
+                        id="lname"
+                        type="text"
+                        value={lname}
+                        onChange={onLnameChange}
+                    />    
+                </div>
+    
+                Gender:
+                {genderGroups.map((group) => (
+                    <label key={group}>
+                        <input
+                            type="radio"
+                            value={group}
+                            onChange={onGenderChange}
+                            checked={gender === group}
+                            
+                        />
+                        {group}    
+                    </label>
+    
+                ))}
                 
-                />
-               
-            </div>
-
-
-        </form>
-    )
-
+                <FormQuestions 
+                    onSymptomChange={onSymptomChange}
+                    symptom={symptom} /> 
+                
+    
+                <div>
+                    <input
+                        type="submit"
+                        value="Submit"
+                        disabled={!isSurveyComplete()}
+                        onClick= {
+                            () => setIsSubmited(true)
+                                
+                            
+                        }
+                        
+                    
+                    />
+                   
+                </div>
+    
+    
+            </form>
+        )
+    
+    } else {
+        return (
+            <Summary/>
+        ) 
+    }
+    
     
 }
 
