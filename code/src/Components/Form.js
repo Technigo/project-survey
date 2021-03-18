@@ -5,15 +5,20 @@ import { TextInput } from './TextInput'
 import { RadioButton } from './RadioButton'
 import { DropDown } from './DropDown'
 import { TextWrapper } from './TextWrapper'
+import { NextButton } from './NextButton'
+import { SubmitButton } from './SubmitButton'
 
 const typeOfTrip = ['Winter', 'Sun']
 
 export const Form = () => {
   const [name, SetName] = useState('')
   const [radioValue, SetRadioValue] = useState('')
-  const [dropDown, setDropDown] = useState('')
-  const [summary,setSummary] = useState(false)
+  const [dropDown, setDropDown] = useState('')  
+  const [newCounter, setNewCounter] = useState(0);
 
+  const onCounterIncrease = () => {
+  setNewCounter(newCounter + 1);
+  }
   
   const onNameChange = (event) => {
     console.log(event.target.value)
@@ -28,49 +33,76 @@ export const Form = () => {
     setDropDown(event.target.value)
   }
   
-  const isSurveyComplete = () => {
-    if (name === '' ||
-        radioValue === '' ||
-        dropDown === '') {
-          return false          
-        }       
-    return true
-  }   
+  // const isSurveyComplete = () => {
+  //   if (name === '' ||
+  //       radioValue === '' ||
+  //       dropDown === '') {
+  //         return false          
+  //       }       
+  //   return true    
+  // }   
 
   return (
   <div className="wrapper">
-    <form className="form" onSubmit={event => event.preventDefault()}>       
-      {summary && (        
-        <Summary 
-          name={name}
-          radioValue={radioValue}
-          dropDown={dropDown}
-        /> )}
+    <form className="form" onSubmit={event => event.preventDefault()}> 
+
+    <div className="form-wrapper">        
           
-        {!summary && (
-        <div className="form-wrapper">  
+        {newCounter === 0 && (
+          <div>
           <TextWrapper />
-          <div className="questions-wrapper">            
+          <NextButton
+          onCounterIncrease={onCounterIncrease} />
+          </div>
+          )}
+
+          <div className="questions-wrapper">   
+          {newCounter === 1 && (
+            <div>
             <TextInput onNameChange={onNameChange} />
-            <RadioButton
-              onRadioClicked={onRadioClicked}
-              typeOfTrip={typeOfTrip}
+            {name !== '' && ( <NextButton onCounterIncrease={onCounterIncrease} />)}
+            </div>
+            )}
+            {newCounter === 2 && (
+              <div>
+              <RadioButton
+                onRadioClicked={onRadioClicked}
+                typeOfTrip={typeOfTrip}
+                radioValue={radioValue}
+              />
+              {radioValue !== '' && (<NextButton onCounterIncrease={onCounterIncrease} />)}
+              </div>
+            )}
+
+            {newCounter === 3 && (
+              <div>
+              <DropDown
+                onDropDown={onDropDown}
+                dropDown={dropDown}
+              />  
+              {dropDown !== '' && (<SubmitButton onCounterIncrease={onCounterIncrease} />)}              
+              </div>
+            )}
+
+            {newCounter === 4 && (
+              <div>
+              <Summary 
+              name={name}
               radioValue={radioValue}
-            />
-            <DropDown
-              onDropDown={onDropDown}
               dropDown={dropDown}
-            />  
+            />
+            <button onClick={() => {
+              setNewCounter(newCounter -4)  
+            }}>
+              RESTART
+            </button> 
+            </div>
+            )}
+      
           </div>      
         </div>
-        )}
+        
 
-      <button className="submit-button" onClick={()=> {
-        setSummary(isSurveyComplete())
-        console.log(isSurveyComplete())
-        console.log({summary})        
-      }}>Submit!        
-      </button>
       </form>
   </div>)
 }          
