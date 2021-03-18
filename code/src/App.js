@@ -1,86 +1,63 @@
 import React, {useState} from 'react'
 import './index.css'
 
-export const App = () => {
+import { ColorQuestion } from './ColorQuestion'
+import { NameQuestion } from './NameQuestion'
+import { FurQuestion } from './FurQuestion'
+import { Summary } from './Summary'
 
-const furArray = ["long hair", "short hair", "naked"];
-const [animalFur, setAnimalFur] = useState("");
-const [gender, setGender] = useState("");
-const [color, setColor] = useState("");
-const [name, setName] = useState("");
-const [showSummary, setShowSummary] = useState(false);
+
+export const App = () => {
+  const [furOption, setFurOption] = useState("");
+  const [color, setColor] = useState("");
+  const [name, setName] = useState("");
+  const [showSummary, setShowSummary] = useState(false);
+
+const handlefurOptionChange = (furArray) => {
+  setFurOption(furArray);
+};
+
+const handleColorChange = (newColor) => {
+  setColor(newColor);
+};
+
+const handleNameChange = (newName) => {
+  setName(newName);
+};
+
 const handleSubmit = event => {
   event.preventDefault();
   setShowSummary(true);
 };
 
 return (
-<div className="survey-section">
-  <header>
-    <h1>Answer a few questions and you can win 100 cat food burkar</h1>
-  </header>
+  <div className="App">
+ 
+    {!showSummary && (
+      <form onSubmit={handleSubmit}>
+        <div>
+          <h1>Answer a few questions and you can win cat food for a whole year!</h1>
+        </div>
 
-  <form className="form" onSubmit={handleSubmit}>
-    
-    <div>
-      What kinds of cat do you like?
-      {furArray.map(fur => (
-        <label key={fur}>
-          <input
-            type='radio'
-            value={fur}
-            onChange={event => setAnimalFur(event.target.value)}
-            checked={animalFur === fur}
-            required
+        <NameQuestion username={name} onNameChange={handleNameChange} />
+
+        <FurQuestion
+          checked={furOption}
+          onfurOptionChange={handlefurOptionChange}
           />
-          {fur}
-        </label>
-      ))}
-    </div>
-    
-    <div>
-      <label>Cats gender</label>
-      <select
-        id="gender"
-        required
-        onChange={event => setGender(event.target.value)}>
-        <option value="">Select</option>
-        <option value="Female">Female</option>
-        <option value="Male">Male</option>
-        <option value="either female or male">Does not matter</option>
-      </select>
-    </div>
 
-    <div>
-      <label>What color do you like best on a cat</label>
-      <input
-      type='text'
-      onChange={event => setColor(event.target.value)}
-      required
-      value={color}
-      />
+        <ColorQuestion
+          value={color}
+          onColorChange={handleColorChange}
+        />
+
+        <button type="Submit">Submit</button>
+      </form>
+    )}
+
+      {showSummary && (
+        <Summary name={name} checked={furOption} value={color} />
+      )}
     </div>
-
-    <div>
-      <label>Your cats name</label>
-      <input
-      type='text'
-      onChange={event => setName(event.target.value)}
-      required
-      value={name}
-      />
-    </div>
-   <button type="submit">Send</button>
-  </form>
-
-  {showSummary && <section className='summary'>
-    <h2>Thank you for your time</h2>
-    <p>You like cats with {animalFur} that is {color}. You want a {gender} cat with the name {name}.</p>
-  
-    
-  </section>
-  }
-
-</div>
-)
-}
+  );
+};
