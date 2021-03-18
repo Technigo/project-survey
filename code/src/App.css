@@ -32,6 +32,10 @@ border: 2px solid blueviolet;
 .header-box {
 
 }
+h1 {
+font-family: 'Monaco';
+color:#37372C;
+}
 
 h1 .header-box {
 
@@ -52,19 +56,99 @@ p .header-box {
 
 }
 
+h2 {
+  font-family: 'Monaco';
+  color:#37372C;
+}
+
 h2 .name-box {
 
 }
 
+.fill-in {
+  font-family: 'Poppins', sans-serif;
+  font-weight: bold;
+  color: #824947;
+
+}
+
+.fill-in-field {
+background-color:#D1CCC1;
+color: #824947;
+font-family: 'Monaco';
+height: 30px;
+font-size: 20px;
+border: solid 1px #824947;
+border-radius: 4%;
+}
+
 /* BUTTONS */
 
+.button-container {
+
+}
+
+.p-button-box {
+  font-family: 'Poppins', sans-serif;
+  color: #37372C;
+  font-weight:bold;
+
+}
+
 .button-box {
-
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  font-family: 'Monaco';
+  color: #824947;
+  font-weight:bold;
 }
 
-p .button-box {
-
+.button-box input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  
 }
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #AD8841;
+  border-radius: 50%;
+}
+
+.button-box input:checked ~ .checkmark {
+  background-color: #824947;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+}
+
+.button-box input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.button-box .checkmark:after {
+  top: 6px;
+ left: 6px;
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+ background: white;
+}
+
 
 /* DROP-DOWN */
 
@@ -72,13 +156,49 @@ p .button-box {
 
 }
 
+.p-drop-down-box {
+  font-family: 'Poppins', sans-serif;
+  color: #37372C;
+  font-weight:bold;
+}
+
+.pick-favorite {
+  font-family: 'Poppins', sans-serif;
+  color: #824947;
+  font-weight: bold;
+}
+
+.pick-field {
+  background-color:#D1CCC1;
+  color: #824947;
+  font-family: 'Monaco';
+  height: 30px;
+}
+.opt-po {
+  background-color:#D1CCC1;
+  color: #824947;
+  font-family: 'Monaco';
+  font-weight: bold;
+}
+
+
+/* SUBMIT */
+
+.submit-button {
+background-color: #D1CCC1;
+border: solid 1px #824947;
+height: 30px;
+font-family: 'Monaco';
+color: #37372C;
+font-size: 20px;
+}
+
+
 /* RESULT */
 
 .result-box {
 
 }
 
-p .result-box {
 
-}
 

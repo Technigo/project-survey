@@ -5,13 +5,13 @@ const DropDown = ({favorite, setFavorite}) => {
   
 return (
   <div className='drop-down-box'>
-    <p>What flavor rock your boat &#38; get your brain freeze on?!</p>
-    <label>Pick your favorite</label>
-    <select 
+    <p className='p-drop-down-box'>What flavor rock your boat &#38; get your brain freeze on?!</p>
+    <label className='pick-favorite'>Pick your favorite</label>
+    <select className='pick-field'
     onChange={event => setFavorite(event.target.value)}
     value={favorite}
     >
-      <option value='Polka'>Polka</option>
+      <option className='opt-po'value='Polka'>Polka</option>
       <option value='Pineapple'>Pineapple</option>
       <option value='Salty Licorice'>Salty Licorice</option>
       <option value='Creamy Fudge'>Creamy Fudge</option>
