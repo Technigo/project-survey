@@ -1,13 +1,91 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Montserrat;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("/assets/food-pattern.png");
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.container{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.main-section{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+}
+.main-section img{
+  width: auto;
+  height: 9rem;
+}
+.text-section{
+  text-align: center;
+  padding: 0rem 0.68rem;
+}
+.title{
+  font-family: Oregano;
+  font-size: 1.6rem;
+}
+button{
+  font-size: 1.5rem;
+  margin-top: 3rem;
+  font-weight: bolder;
+  width: 8rem;
+  height: 4rem;
+  border-radius:7% ;
+  border: solid 2px #ffc107;
+  background-color: #fe8e04;
+  color: white;
+}
+.question-container{
+  width: 100%;
+  height: 25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;  
+}
+.question-container p{
+  text-align: center;
+}
+.options{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.progress-section{
+  width: 100%;
+  height: 10%;
+  display: flex;
+  justify-content: center;
+}
+.progress{
+  width: 8rem;
+  height: 2rem;
+}
+.final-container{
+  width: 100%;
+  text-align: center;
+}
+.final-container div{
+  text-align: left;
+  padding: 0rem 2.5rem;
+}
+.mark{
+  display: contents;
+  font-weight: bolder;
+}
+.filter-container{
+  text-align: center;
+}
+.filter-container a{
+  text-decoration: none;
+  color: black;
 }

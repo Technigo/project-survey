@@ -1,0 +1,71 @@
+{
+  "questions": [
+    {
+      "id": 0,
+      "question": "Do you want Vegan options?",
+      "filter": null,
+      "optionType": "radio",
+      "options": [
+        "yes",
+        "no"
+      ]
+    },
+    {
+      "id": 1,
+      "question": "Choose the main protein ",
+      "filter": "q",
+      "optionType": "radio",
+      "options": [
+        "egg",
+        "Chicken",
+        "meat",
+        "Fish",
+        "Pork",
+        "lamb"
+      ]
+    },
+    {
+      "id": 2,
+      "question": "Exclude one of the following... ",
+      "filter": "health",
+      "optionType": "radio",
+      "options": [
+        "dairy-free",
+        "gluten-free",
+        "wheat-free",
+        "peanut-free",
+        "tree-nut-free",
+        "soy-free",
+        "alcohol-free"
+      ]
+    },
+    {
+      "id": 3,
+      "question": "Choose what time of day you are interested in cooking ",
+      "filter": "mealType",
+      "optionType": "radio",
+      "options": [
+        "lunch",
+        "dinner",
+        "breakfast",
+        "snack",
+        "teatime"
+      ]
+    },
+    {
+      "id": 4,
+      "question": "Select what kind of dish you want to cook. ",
+      "filter": "dishType",
+      "optionType": "dropdown",
+      "options": [
+        "main course",
+        "sandwiches",
+        "salad",
+        "soup",
+        "cereals",
+        "desserts",
+        "drinks"
+      ]
+    }
+  ]
+}

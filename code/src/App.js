@@ -1,9 +1,21 @@
-import React from 'react'
+import React, { useState } from 'react'
+import Start from 'components/Start'
+import Questions from 'components/Questions'
 
 export const App = () => {
+
+  const [startQuestion, setStartQuestion] = useState(false)
+
   return (
     <div>
-      Find me in src/app.js!
+      {
+        startQuestion === false ? (
+          <Start onClickStart={setStartQuestion} />) :
+          (
+            <Questions />
+          )
+      }
+
     </div>
   )
 }
