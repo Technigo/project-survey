@@ -6,12 +6,12 @@ const CharacterSheet = (props) => {
         <div className="character-sheet">
             <div className="character-base">
                 <div>
-                    <p>Name: {props.name}</p>
-                    <p>Race: {props.race}</p>
-                    <p>Class: {props.class}</p>
-                    <p>Age: {props.number}</p>
-                    <p>Family: {props.family}</p>
-                    <p>Goal: {props.goal}</p>
+                    <p>Name: <span className="character-sheet-input">{props.name}</span></p>
+                    <p>Race: <span className="character-sheet-input">{props.race}</span></p>
+                    <p>Class: <span className="character-sheet-input">{props.class}</span></p>
+                    <p>Age: <span className="character-sheet-input">{props.number}</span></p>
+                    <p>Family: <span className="character-sheet-input">{props.family}</span></p>
+                    <p>Goal: <span className="character-sheet-input">{props.goal}</span></p>
                 </div>
                 <img src={props.icon} className="character-icon" alt="character icon" />
             </div>

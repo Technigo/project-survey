@@ -191,6 +191,7 @@ const App = () => {
               renderSummary={renderSummary}
               setRenderSummary={setRenderSummary}
               isComplete={isComplete}
+              section={section}
               setSection={setSection}
             />
 
