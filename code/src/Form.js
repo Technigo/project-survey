@@ -37,7 +37,7 @@ const Form = () => {
 
     return (
         <>
-            <section className="section">
+            <section className="form-section">
                 {component !== 'summaryPage' ? (
                     <form onSubmit={executeSubmit}>
                         {component === 'startPage' && (
