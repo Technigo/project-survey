@@ -41,7 +41,7 @@ const Form = () => {
     return (
       <div className="form-wrapper">
         <form className="form-display-column">
-          <InputLabel style={{ marginTop: 10 }}>
+          <InputLabel tabIndex={0} style={{ marginTop: 10 }}>
             Which movie is your all time favorite?
           </InputLabel>
           <TextField
@@ -56,7 +56,7 @@ const Form = () => {
               marginTop: 5,
             }}
           />
-          <InputLabel id="label">
+          <InputLabel tabIndex={0} id="label">
             Which genre would you like to see more of?
           </InputLabel>
           <FormControl
@@ -87,7 +87,9 @@ const Form = () => {
           </FormControl>
 
           <div className="form-radioButton">
-            <InputLabel>How would you rate this survey?</InputLabel>
+            <InputLabel tabIndex={0}>
+              How would you rate this survey?
+            </InputLabel>
             <RadioGroup name="group1" onChange={onRatingChange}>
               <FormControlLabel
                 value="very good"
