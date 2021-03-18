@@ -184,7 +184,14 @@ label {
   height: 75px;
   border-radius: 25px;
   width: 100%;
+  color: #000;
 }
+
+.sub-button p{
+  color: #000;
+}
+
+
 
 .radio-paragraf {
   font-size: 24px;
@@ -209,6 +216,47 @@ label {
 .phone-container {
   margin-bottom: 50px;
 }
+
+/* Range Slider Section starts here */
+
+.range-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*.range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}*/
+
+.range input {
+  width: 100%;
+}
+
+.satisfaction {
+  border: 5px solid #897853;
+  background-color:#897853;
+  border-radius: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  background: #d3d3d3;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #897853;
+  cursor: pointer;
+}
+
+
+/* Range slider section ends here */
 
 
 @media (min-width:1024px) {
@@ -376,17 +424,26 @@ label {
     margin-bottom: 0px;
     border-left: 30px solid #f8f4e1;
     border-right: 30px solid #f8f4e1;
-    border-bottom: 30px solid #f8f4e1;
   }
 
-  .range-container {
+  .range {
+    width: 50%;
+    background-color: #f8f4e1;
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
+    border-bottom: 30px solid #f8f4e1;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
+  }
+
+  /*.range-container {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-bottom: 50px; /* test */
-  }
+  /*}*/
 
-  .range {
+  /*.range {
     width: 50%;
     background-color: #f8f4e1;
     margin-bottom: 0px;
@@ -395,7 +452,7 @@ label {
     border-right: 30px solid #f8f4e1;
     border-bottom: 30px solid #f8f4e1;
     margin-bottom: 50px;
-  }
+  }*/
 
 
 
