@@ -38,7 +38,7 @@ export const Form = () => {
     <form className="form" onSubmit={event => event.preventDefault()}> 
       <div className="form-wrapper">        
             {newCounter === 0 && (
-              <div>
+              <div>                
                 <TextWrapper />
                 <NextButton
                 onCounterIncrease={onCounterIncrease} />
@@ -46,13 +46,13 @@ export const Form = () => {
             )}
         <div className="questions-wrapper">   
             {newCounter === 1 && (
-              <div>
+              <div>                
                 <TextInput onNameChange={onNameChange} />
                 {name !== '' && ( <NextButton onCounterIncrease={onCounterIncrease} />)}
               </div>
             )}
             {newCounter === 2 && (
-              <div>
+              <div>                
                 <RadioButton
                   onRadioClicked={onRadioClicked}
                   typeOfTrip={typeOfTrip}
@@ -62,7 +62,7 @@ export const Form = () => {
               </div>
             )}
             {newCounter === 3 && (
-              <div>
+              <div>                
                 <DropDown
                   onDropDown={onDropDown}
                   dropDown={dropDown}
@@ -71,7 +71,7 @@ export const Form = () => {
               </div>
             )}
             {newCounter === 4 && (
-              <div>
+              <div>                
                 <Summary 
                   name={name}
                   radioValue={radioValue}
