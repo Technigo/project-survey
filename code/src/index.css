@@ -120,6 +120,12 @@ button {
   margin: 10px;
 }
 
+.character-icon-container {
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+}
+
 .character-icon {
   width: 60px;
 }
@@ -166,8 +172,7 @@ button {
 }
 
 .character-base .character-icon {
-  width: 30%;
-  align-self: flex-start;
+  width: 70%;
 }
 
 .character-base div {
@@ -218,6 +223,12 @@ button {
     background-color: var(--almond);
     margin-top: 20px;
   }
+  .character-icon-container {
+    border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+    border: 5px solid var(--darkgreen);
+    justify-content: center;
+    align-items: center;
+  }
   .character-icon {
     width: 80px;
   }
@@ -242,16 +253,13 @@ button {
 }
 
 @media (min-width: 1024px) {
-  .form {
+  .form,
+  .character-sheet {
     width: 60%;
-    margin-top: 60px ;
+    margin-top: 60px;
   }
   button:hover {
     box-shadow: none;
     transform: scale(1.3);
-  }
-  .character-sheet {
-      width: 60%;
-  }
-  
+  }  
 }

@@ -13,7 +13,9 @@ const CharacterSheet = (props) => {
                     <p>Family: <span className="character-sheet-input">{props.family}</span></p>
                     <p>Goal: <span className="character-sheet-input">{props.goal}</span></p>
                 </div>
-                <img src={props.icon} className="character-icon" alt="character icon" />
+                <div className="character-icon-container">
+                    <img src={props.icon} className="character-icon" alt="character icon" />
+                </div>
             </div>
             <div className="character-stats">
                 <p>Strength: {props.str}</p>
