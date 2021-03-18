@@ -2,7 +2,7 @@ import React from "react";
 
 const Header = () => {
   return (
-    <div className="header-wrapper">
+    <div className="h2wrapper">
       <h2>Amazing Movie Survey</h2>
     </div>
   );

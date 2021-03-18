@@ -5,6 +5,7 @@ import Radio from "@material-ui/core/Radio";
 import RadioGroup from "@material-ui/core/RadioGroup";
 import FormControlLabel from "@material-ui/core/FormControlLabel";
 import Button from "@material-ui/core/Button";
+import ButtonGroup from "@material-ui/core/ButtonGroup";
 import TextField from "@material-ui/core/TextField";
 import FormControl from "@material-ui/core/FormControl";
 import Select from "@material-ui/core/Select";
@@ -44,6 +45,7 @@ const Form = () => {
             Which movie is your all time favorite?
           </InputLabel>
           <TextField
+            placeholder="Movie Title"
             variant="filled"
             type="text"
             color="primary"
@@ -54,7 +56,9 @@ const Form = () => {
               marginTop: 5,
             }}
           />
-          <InputLabel>Which genre would you like to see more of?</InputLabel>
+          <InputLabel id="label">
+            Which genre would you like to see more of?
+          </InputLabel>
           <FormControl
             style={{
               marginBottom: 10,
@@ -62,8 +66,9 @@ const Form = () => {
             }}
           >
             <Select
-              value={movieGenre}
+              id="label"
               variant="filled"
+              value={movieGenre}
               onChange={onMovieGenreChange}
             >
               <MenuItem value="Other">Other</MenuItem>
@@ -109,18 +114,12 @@ const Form = () => {
                 label="Super Boring"
               />
             </RadioGroup>
-
-            <Button
-              style={{
-                marginTop: 10,
-              }}
-              variant="contained"
-              color="primary"
-              type="submit"
-              onClick={onCounterChange}
-            >
-              Submit
-            </Button>
+            <ButtonGroup variant="contained" color="primary">
+              <Button type="submit">Reset Form</Button>
+              <Button type="submit" onClick={onCounterChange}>
+                Submit
+              </Button>
+            </ButtonGroup>
           </div>
         </form>
       </div>

@@ -17,15 +17,9 @@ code {
     monospace;
 }
 
-.header-wrapper {
+.h2wrapper {
   display: flex;
   justify-content: center;
-  align-items: center;
-  background-color: #cbcfd6;
-  margin-left: 30%;
-  margin-right: 30%;
-  margin-top: 5%;
-  height: 50px;
 }
 
 .form-wrapper {
