@@ -1,6 +1,7 @@
 import React from "react"
 
 const CharacterSheet = (props) => {
+    console.log(props.icon)
     return (
         <div className="character-sheet">
             <div className="character-base">

@@ -8,25 +8,62 @@ import NumberInput from './components/NumberInput'
 import RadioInputIcon from './components/RadioInputIcon'
 import RangeInput from './components/RangeInput'
 import NavigateButton from 'components/NavigateButton'
+import ReturnButton from 'components/ReturnButton'
 import SubmitButton from 'components/SubmitButton'
 import CharacterSheet from './components/CharacterSheet'
 import ProgressBar from 'components/ProgressBar'
+import { render } from 'react-dom'
 
 
 const App = () => {
   const [renderSummary, setRenderSummary] = useState(false)
   const [section, setSection] = useState(0)
   const [name, setName] = useState("")
-  const [characterClass, setCharacterClass] = useState()
+  const [characterClass, setCharacterClass] = useState("")
   const [race, setRace] = useState("")
-  const [number, setNumber] = useState()
+  const [number, setNumber] = useState("")
   const [family, setFamily] = useState("")
   const [goal, setGoal] = useState("")
-  const [icon, setIcon] = useState()
-  const [str, setStr] = useState()
-  const [int, setInt] = useState()
-  const [dex, setDex] = useState()
+  const [icon, setIcon] = useState("")
+  const [str, setStr] = useState("")
+  const [int, setInt] = useState("")
+  const [dex, setDex] = useState("")
 
+  const isComplete = () => {
+    if (name === "") {
+      return false
+    }
+    if (characterClass === "") {
+      return false
+    }
+    if (race === "") {
+      return false
+    }
+    if (number === "") {
+      return false
+    }
+    if (family === "") {
+      return false
+    }
+    if (goal === "") {
+      return false
+    }
+    if (icon === "") {
+      return false
+    }
+    if (str === "") {
+      return false
+    }
+    if (int === "") {
+      return false
+    }
+    if (dex === "") {
+      return false
+    }
+    else {
+      return true
+    }
+  }
 
   if (renderSummary) {
     return (
@@ -43,10 +80,11 @@ const App = () => {
           int={int}
           dex={dex}
         />
-        <SubmitButton
+        <ReturnButton
           text="Go back"
           renderSummary={renderSummary}
           setRenderSummary={setRenderSummary}
+          isComplete={isComplete}
           setSection={setSection}
         />
       </>
@@ -152,6 +190,7 @@ const App = () => {
               text="Submit"
               renderSummary={renderSummary}
               setRenderSummary={setRenderSummary}
+              isComplete={isComplete}
               setSection={setSection}
             />
 

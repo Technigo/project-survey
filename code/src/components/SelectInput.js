@@ -15,9 +15,8 @@ const SelectInput = (props) => {
                 value={choice}
                 className={props.data.className}
             >
-                <option >
-                    Pick a {props.data.field}!
-            </option>
+                <option disabled>
+                </option>
                 {props.data.choices.map(item =>
                     <option key={item}>
                         {item}

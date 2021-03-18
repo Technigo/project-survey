@@ -1,18 +1,27 @@
 import React from "react"
 
 const SubmitButton = (props) => {
-    const { renderSummary, setRenderSummary, setSection } = props
+    const { setRenderSummary, isComplete } = props
 
     const handleSubmit = () => {
-        setRenderSummary(!renderSummary)
-        setSection(0)
+        setRenderSummary(isComplete())
     }
 
-    return (
-        <button onClick={handleSubmit}>
-            {props.text}
-        </button>
-    )
+    if (isComplete()) {
+        return (
+            <button onClick={handleSubmit}>
+                {props.text}
+            </button>
+        )
+    } else {
+        return null
+    }
+
+    // return (        
+    //     <button onClick={handleSubmit} disabled={!isComplete()}>
+    //         {props.text}
+    //     </button>
+    // )
 }
 
 export default SubmitButton
