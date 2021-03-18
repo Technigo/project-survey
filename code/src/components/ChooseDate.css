@@ -1,0 +1,25 @@
+.date-card {
+  max-width: 1100;
+  margin: auto;
+}
+.date-label{
+  display: flex;
+  flex-direction: column;
+  color: var(--text);
+  font-family: Roboto;
+  font-weight: 700;
+}
+.date {
+  background-color: #c2e2fe;
+  margin: 10px 0 50px 0;
+  padding: 5px;
+  font-size: 16px;
+  border-radius: 15px;
+  font-family: Roboto;
+  font-weight: 500;
+}
+
+.date:focus {
+  outline-style: none;
+  border: 2px solid #012048d9
+}

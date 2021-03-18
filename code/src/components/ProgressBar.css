@@ -1,14 +1,22 @@
+:root{
+  --background: #9cacbf;
+  --question: #012e67;
+  --text: #032e42;
+  --background2: #90bff9;
+  --buttonBackground: #085ea5;
+}
+
 
 .progress-range-wrapper{
   width: 100%;
   margin-top: 30px;
-  border: solid 1px #ac0d0d;
+  border: solid 1px #032e4238;
   border-radius: 15px;
   padding: 0%;
 }
 
 .progress-bar{
-  background-color: #f48b29;
+  background-color: #c2e2fe;
   border-radius: 15px;
   transition: 1s ease-in;
   text-align: right;
@@ -21,4 +29,6 @@
   padding: 10px;
   font-size: 16px;
   font-family: Roboto;
+  color: var(--text);
+  font-weight: bold;
 }

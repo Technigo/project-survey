@@ -1,5 +1,7 @@
 import React from 'react';
 
+import './TextInputName.css'
+
 const TextInputName = ({name, setName, email, setEmail}) => {
     const onNameChange = event => {
         setName(event.target.value)
@@ -10,25 +12,26 @@ const TextInputName = ({name, setName, email, setEmail}) => {
     }
    
         return (
-            <div className="text-input-wrapper">
-                <h3>Please let us know how to contact you</h3>
-                <label htmlFor="name">name</label>
+            <div className="text-input-card">
+                <h3 className="question-heading">Please let us know how to contact you</h3>
+                <label htmlFor="name" className="text-input-label">Name</label>
                 <input
                     id="name"
                     type="text"
                     value={name}
+                    className="text-input"
                     onChange={onNameChange}
                 />
 
-                <label htmlFor="email">Email</label>
+                <label htmlFor="email" className="text-input-label">Email</label>
                 <input
                     id="email"
                     type="email"
                     value={email}
                     onChange={onEmailChange}
                     required
+                    className="text-input"
                 />
-            <p>Here is my name: {name}</p>
             </div>
 
         )

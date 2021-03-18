@@ -1,0 +1,25 @@
+.text-input-card {
+  max-width: 500px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.text-input-label {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.text-input {
+  border-radius: 15px;
+  padding: 5px;
+  margin-bottom: 20px;
+  background: #c2e2fe;
+  font-family: Roboto;
+  font-size: 16px;
+}
+.text-input:focus {
+  outline-style: none;
+  border: 2px solid #012048d9
+}

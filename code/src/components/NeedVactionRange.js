@@ -9,7 +9,7 @@ const NeedVacationRange = ({ question, setSection, needVacation, setNeedVacation
   })
   return (
     <div className="slider-container">
-      <h3 className="question">From 1-10: how badly do you need vacation?</h3>
+      <h3 className="question-heading">From one to ten: how badly do you need vacation?</h3>
       <div className="label-slider-wrapper">
         <label htmlFor="range" className="range-lable">
           <div className="range-item">Can wait and see (1)</div>

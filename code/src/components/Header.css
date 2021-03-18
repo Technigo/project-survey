@@ -1,5 +1,14 @@
+:root{
+  --background: #9cacbf;
+  --question: #012e67;
+  --text: #032e42;
+  --background2: #90bff9;
+  --border: #0a1417;
+  --buttonBackground: #254852;
+}
+
 .header {
-  background: linear-gradient(117deg, rgba(240,201,41,1) 0%, rgba(244,139,41,0.9668242296918768) 100%);
+  background: linear-gradient(0deg, rgba(1,46,103,1) 50%, rgba(206,229,255,1) 100%);
 }
 .logo-buttons-wrapper{
   display:flex;
@@ -13,7 +22,7 @@
   font-size: 30px;
   margin-bottom: 30px;
   font-family: Della Respira;
-  color: #6c0808;
+  color: white;
   font-weight: 600;
   text-align: center;
 }
@@ -23,7 +32,7 @@
 .fab {
   font-size: 30px;
   margin-left: 5px;
-  color: #ac0d0d;
+  color: var(--border);
   cursor: pointer;
 }
 

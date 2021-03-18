@@ -1,9 +1,19 @@
+:root{
+  --background: #9cacbf;
+  --question: #012e67;
+  --text: #032e42;
+  --background2: #90bff9;
+  --border: #0a1417;
+}
+
+
 .welcome-heading{
   font-family: Averia Sans Libre;
-  color: #8e5006;
+  color: var(--question);
 }
 
 .welcome-text{
   font-size: 16px;
   font-family: Roboto;
+  color: var(--text);
 }

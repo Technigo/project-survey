@@ -1,0 +1,31 @@
+.selector-card{
+  max-width: 1100px;
+  margin: auto;
+}
+.question-heading{
+  font-size: 28px; 
+}
+.selector-label{
+  font-family: Roboto;
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: none;
+}
+
+.selector{
+  margin: 0 0 50px 0;
+  font-size: 16px;
+  padding: 8px;
+  width: 100%;
+  border: 1px solid #012d677c;
+  border-radius: 15px;
+  background: #c2e2fe;
+  font-family: Roboto;
+  color: var(--text);
+  font-weight: bold;
+}
+
+.selector:focus {
+  outline-style: none;
+  border: 2px solid #012048d9
+}

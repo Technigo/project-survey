@@ -1,18 +1,28 @@
+:root{
+  --background: #9cacbf;
+  --question: #012e67;
+  --text: #032e42;
+  --background2: #90bff9;
+  --buttonBackground: #085ea5;
+}
+
+
 .start-next-button{
-  background: #f48b29;
+  background: var(--buttonBackground);
   padding: 10px;
   border-radius: 15px;
-  color: #570b0b;
+  color: white;
   font-weight: 700;
   font-size: 16px;
-  border: #570b0b 2px solid;
+  border: white 2px solid;
   width: 150px;
 }
 .start-next-button:disabled{
-  color: #ae7777;
-  border: #ae7777 2px solid;
+  color: rgb(218, 214, 214);
+  border: rgb(218, 214, 214);
+  opacity: 0.7;
 }
 
 .start-next-button:hover{
-  background: #cb7c33;
+  background: #144288;
 }

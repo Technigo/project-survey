@@ -4,7 +4,7 @@ const Header = () => {
     return (
         <header className="header">
           <div className="logo-buttons-wrapper">
-            <img className="logo" src="./assets/logo.png" alt="World Travel Agency logo" />
+            {/* <img className="logo" src="./assets/logo.png" alt="World Travel Agency logo" /> */}
             <div className="media-buttons">
                 <i className="fab fa-twitter"></i>
                 <i className="fab fa-facebook"></i>
