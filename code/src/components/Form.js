@@ -3,24 +3,25 @@ import React, { useState } from 'react'
 import Intro from './Intro'
 import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
-// import QuestionThree from './QuestionThree'
+import QuestionThree from './QuestionThree'
 import Summary from './Summary'
 
 const Form = () => {
  
     const [name, setName] = useState('');
     const [food, setFood] = useState('')
-    // const [flower, setFlower] = useState('')
+    const [flower, setFlower] = useState('')
 
-    const [newQuestion, setNewQuestion] = useState(0)
+    // const [newQuestion, setNewQuestion] = useState(0)
 
-    const onQuestionChange = () => {
-        console.log(newQuestion)
-        setNewQuestion(newQuestion +1)
-    }
+    // const onQuestionChange = () => {
+    //     console.log(newQuestion)
+    //     setNewQuestion(newQuestion +1)
+    // }
 
     console.log(food, food, food)
     console.log(name, name, name)
+    console.log(flower, flower, flower)
 
     return (
         <>
@@ -39,11 +40,15 @@ const Form = () => {
                     setFood={setFood}    
                     />
 
-                 {/* <QuestionThree/> */}
+                 <QuestionThree
+                    flower={flower}
+                    setFlower={setFlower}
+                    />
 
                  <Summary 
                     name={name} 
-                    food={food}/>
+                    food={food}
+                    />
                
                  <button
                     type="button" 

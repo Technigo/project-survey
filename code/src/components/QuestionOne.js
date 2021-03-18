@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 // import React from 'react'
-import  Button from './Button'
-import QuestionTwo from './QuestionTwo'
 
 const QuestionOne = ({ name, setName }) => {
 
