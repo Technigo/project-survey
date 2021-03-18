@@ -8,7 +8,7 @@ export const Age = ({age, setAge}) => {
 
     return (
         <div className="form-components">
-            <label htmlFor="age">How old are you:</label>
+            <label tabindex="0" htmlFor="age">How old are you:</label>
             <select
                 onChange= {onAgeChange}
                 value={age}

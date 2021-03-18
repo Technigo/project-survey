@@ -66,7 +66,7 @@ export const Form = ({ onSubmit }) => {
             className="form" 
             onSubmit={isSurveyComplete}
         >
-            <h4>Are you interested in a career as a developer? Tell us more about it in this amazing form:</h4>
+            <h4 tabindex="0">Are you interested in a career as a developer? Tell us more about it in this amazing form:</h4>
             <Name 
                 name={name}
                 setName={setName}
@@ -79,19 +79,20 @@ export const Form = ({ onSubmit }) => {
                 setAge={setAge}
                 age={age}
             />
-            <p>Which career path are you interested in?</p>
+            <p tabindex="0">Which career path are you interested in?</p>
             <div className="form-components radio">
                 {careerPaths.map((career) => {
                     return (
                         <RadioOption
                         key={career}
                         careerName={career}
-                        setRadio={setRadio}/>
+                        setRadio={setRadio}
+                        />
                     )
                 })}
             </div>
 
-            <p>Which programming languages do you want to work with?</p>
+            <p tabindex="0">Which programming languages do you want to work with?</p>
             <div className="form-components stack">
                 {stacks.map((stack) => {
                     return (

@@ -8,13 +8,14 @@ export const RadioOption = ({careerName, setRadio}) => {
     
     return (
         <div className="form-components">
-            <label htmlFor="{careerName}">{careerName}</label>
+            <label tabindex="0" htmlFor="{careerName}">{careerName}</label>
                 <input
                 name="stack"
                 id={careerName}
                 value={careerName}
                 type="radio"
                 onChange={onRadioChange}
+                tabindex="0"
                 />
         </div>
     );

@@ -8,7 +8,7 @@ export const Name = ({ name, setName }) => {
     
     return (
         <div className="form-components">
-            <label htmlFor={name}>Enter your name:</label>
+            <label tabindex="0" htmlFor={name}>Enter your name:</label>
             <input 
                 type="text"
                 onChange={onNameChange} 

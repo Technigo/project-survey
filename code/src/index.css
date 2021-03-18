@@ -52,6 +52,7 @@ code {
   flex-direction: column;
   align-items: left;
   width: 100%;
+  height: auto;
   color: #433520;
 }
 
@@ -129,7 +130,7 @@ code {
 
   .heroimage {
     max-width: 100%;
-    height: auto;
+    height: 100vh;
     background-size: cover;
   }
 
@@ -142,6 +143,19 @@ code {
 
   .form {
     font-size: 25px;
+    box-shadow: 3px 5px 26px -7px #000000;
+    width: 60%;
+    height: auto;
+    padding: 30px;
+    position: absolute;
+    left: 0;
+    top: 20%;
+    right: 0;
+    /* bottom: 0; */
+    background-color: white;
+    opacity: 0.9;
+    margin: 0 auto;
+    border-radius: 5px;
   }
 
   .form-components select  {
@@ -170,7 +184,7 @@ code {
 
   .heroimage {
     width: 100%;
-    height: auto;
+    height: 150vh;
     background-size: cover;
   }
 
@@ -191,7 +205,7 @@ code {
     left: 0;
     top: 20%;
     right: 0;
-    bottom: 0;
+    /* bottom: 0; */
     background-color: white;
     opacity: 0.9;
     margin: 0 auto;

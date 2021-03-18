@@ -12,9 +12,10 @@ export const CheckBoxes = ({ stack, onChange }) => {
                 id={stack}
                 name={stack}
                 onChange={onCheckChange}
+                tabindex="0"
                 required
             />
-            <label htmlFor={stack}>{stack}</label>
+            <label tabindex="0" htmlFor={stack}>{stack}</label>
         </div>
     )
 }

@@ -8,7 +8,7 @@ export const Location = ({location, setLocation}) => {
 
     return (
         <div className="form-components">
-            <label htmlFor={location}>In which city do you want to work?</label>
+            <label tabindex="0" htmlFor={location}>In which city do you want to work?</label>
             <input 
                 type="text"
                 onChange={onLocationChange} 
