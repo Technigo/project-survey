@@ -5,11 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #98acf8;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height: 100vh;
+  color: #f5eeee;
+
 }
 
 code {
@@ -21,17 +19,107 @@ code {
   box-sizing: border-box;
 }
 
-.form-container {
+/* Big containers */
+.main-container {
   display: flex;
-  flex-direction: column;
   align-items: center;
   justify-content: center;
   height: 100vh;
-  font-size: 30px;
-  width: 100%;
-  font-family: "Blinker", sans-serif;
-  padding: 0 20px;
+  background-color: #1c1124;
 }
+
+.circle {
+  width: 100vw;
+  border-radius: 0 0 0 100% / 200px;
+  background-color: #74b49b;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 80vh;
+}
+
+/* Start page */
+
+.start-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: "Playfair Display";
+  z-index: 1;
+}
+
+.start-title {
+  font-size: 50px;
+  margin: 0;
+  color: #693e52;
+  z-index: 1;
+}
+
+.start-text {
+  font-size: 32px;
+  margin: 0;
+  text-align: left;
+  line-height: 38px;
+  z-index: 1;
+  color: #281833;
+}
+
+.fa-umbrella-beach {
+  font-size: 280px;
+  position: absolute;
+  color: white;
+  z-index: -1;
+}
+
+/* Submit Button */
+
+.button {
+  background-color: #693e52;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-size: 52px;
+  padding: 20px 0px 30px 0px;
+  color: white;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-family: "Playfair Display", sans-serif;
+  text-align: center;
+}
+
+.button:hover {
+  background-color: #74b49b;
+  color: #281833;
+  /* transition: background-color .2s linear; */
+  /* opacity: 0.7; */
+}
+
+/* Form pages */
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 30px;
+  padding: 0 30px;
+  margin-bottom: 120px;
+  font-family: "PLayfair Display", sans-serif;
+}
+
+.question-title {
+  font-size: 30px;
+  text-align: left;
+}
+
+.arrow {
+  font-size: 26px;
+  margin: 0;
+  color: #693e52;
+}
+
+/* Name input */
 
 .input-name {
   border-bottom: 2px solid white;
@@ -41,53 +129,48 @@ code {
   width: 100%;
   background-color: transparent;
   margin-top: 20px;
-  font-family: "Blinker", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 24px;
   line-height: 40px;
   outline: none;
   color: white;
+  padding-left: 10px;
 }
 
-.select {
-  color: #da9ff9;
+.input-name:focus {
+  background-color: #281833;
+  border-radius: 5px;
+}
+
+
+/* Select dropdown */
+
+.select-country {
+  color: #f5eeee;
   background-color: transparent;
-  font-family: "Blinker", sans-serif;
+  font-family: "Playfair Display", sans-serif;
   font-size: 30px;
   margin-top: 20px;
   width: 100%;
   outline: none;
-  padding-bottom: 5px;
+  padding: 0 5px 5px;
+  border-radius: 5px;
+  border: 2px solid #f5eeee;
 }
 
-.select:focus {
-  border: 2px solid #da9ff9;
+.select-country:focus {
+  border: 2px solid #693e52;
+  color: #693e52;
 }
 
 /* Radio Buttons */
 
-h2 {
-  text-align: center;
-}
-
-.question-title {
-  font-size: 34px;
-}
-
-.radio-buttons {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
-}
-
 .radio-box {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 230px;
-  height: 80px;
+  width: 100%;
+  height: 70px;
   position: relative;
-  margin-bottom: 20px;
-  
+  margin-bottom: 15px
 }
 
 .radio-button {
@@ -103,79 +186,294 @@ h2 {
   padding: 0;
   margin: 0;
   outline: none;
-  
 }
 
 .radio-button-label {
   display: flex;
   align-items: center;
-  justify-content: center;
+  border: 2px solid #74b49b;
   width: 100%;
   height: 100%;
   position: relative;
-  border: 2px solid white;
+  z-index: 1; 
 }
 
 .radio-text {
-  text-align: center;
+  font-size: 26px;
+  padding-left: 20px;
 }
 
 .radio-button-label:hover {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .radio-button:checked + .radio-text {
-  color: black;
+  color: #1c1124;
 }
 
 .radio-button:checked + .radio-text::before {
-  background-color: #da9ff9;
+  background-color: #74b49b;
+  border: 2px solid #74b49b;
   content: '';
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
-  left: 0;
-  z-index: -1;
-  
+  left: -2px;
+  z-index: -1; 
 }
 
 .radio-button:focus + .radio-text::before {
-  background-color: #da9ff9;
+  background-color: #74b49b;
   content: '';
   height: 100%;
   width: 100%;
   position: absolute;
   top: 0;
-  left: 0;
+  left: -3px;
   z-index: -1;
-  outline: 8px solid #b088f9;
+  outline: 4px solid #693e52;
 }
 
 .fa-laptop, .fa-cocktail {
-  color: #da9ff9;
-  margin-left: 10px;
+  margin-right: 10px;
 }
 
+/* Container with the question counter */
 
-/* Submit Button */
-.button {
-  background-color: #b088f9;
+.question-counter {
   position: absolute;
-  bottom: 0;
+  top: 20px;
   left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
   width: 100%;
-  font-size: 60px;
-  padding: 20px 0px 30px 0px;
-  color: white;
+  font-size: 22px;
+  font-family: "Blinker";
+}
+
+.progress-bar {
+  position: relative;
+  height: 20px;
+  width: 70%;
+  /* border-radius: 10px; */
+  border: 1px solid #f5eeee;
+  /* margin-top: 5px; */
+}
+
+.filler {
+  background: #74b49b;
+  /* border-right: 3px solid #f5eeee; */
+  height: 100%;
+  display: block;
+  /* border-radius: inherit; */
+  transition: width .5s linear;
+}
+
+
+
+/* Range slider page */
+
+.range-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.range {
+  appearance: none;
+  margin: 15px 0;
+  height: 30px;
+  width: 100%;
+  background-color: transparent;
+  border: 2px solid #f5eeee;
   outline: none;
-  border: none;
+  border-radius: 10px;
+}
+
+.range:focus {
+  background-color: #281833;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 50px;
+  background: #74b49b;
   cursor: pointer;
-  font-family: "Blinker", sans-serif;
-  font-variant: small-caps;
+  border-radius: 2px;
 }
 
-.button:hover {
-  opacity: 0.6;
+/* For Firefox */
+.range::-moz-range-thumb {
+  width: 20px;
+  height: 50px;
+  background: #74b49b;
+  cursor: pointer;
+  border-radius: 2px;
 }
 
+.range-value {
+  font-size: 40px;
+}
+
+.fa-star {
+  margin-left: 10px;
+  color: #74b49b;
+}
+
+/* Summary page */
+
+.summary-container {
+  display: flex;
+  /* align-items: center; */
+  justify-content: center;
+  flex-direction: column;
+  padding: 30px;
+  height: 100vh;
+  font-family: "Playfair Display", sans-serif;
+}
+
+.summary-title {
+  font-size: 32px;
+  margin: 0;
+  color: #693e52;
+  z-index: 1;
+}
+
+.summary-text {
+  font-size: 26px;
+  line-height: 35px;
+  letter-spacing: 1.7px;
+  margin-bottom: 80px;
+  z-index: 1;
+  color: #281833;
+}
+
+.fa-plane {
+  margin: 0 7px;
+  font-size: 28px;
+}
+
+.summary-button:hover {
+  background-color: #693e52;
+  color: #f5eeee;
+}
+
+
+@media (min-width: 768px) {
+  .main-container {
+    padding: 40px;
+  }
+
+  .circle {
+    border-radius: 0 0 0 100% / 500px;
+    height: 82vh;
+    /* opacity: 0.7; */
+  }
+
+  .start-title {
+    font-size: 100px;
+  }
+
+  .start-text {
+    font-size: 44px;
+    line-height: 50px;
+    letter-spacing: 1.7px;
+  }
+
+  .form-container {
+    margin-bottom: 162px;
+  }
+
+  .button {
+    font-size: 84px;
+  }
+
+  .question-title {
+    font-size: 52px;
+  }
+
+  .arrow {
+    font-size: 46px;
+  }
+
+  .question-counter {
+    font-size: 38px;
+    top: 30px;
+  }
+
+  .progress-bar {
+    height: 30px;
+    width: 75%;
+  }
+
+  .input-name {
+    font-size: 36px;
+    line-height: 50px;
+  }
+
+  .select-country {
+    font-size: 36px;
+    margin-top: 25px;
+    padding: 0 7px 7px;
+  }
+
+  .radio-box {
+    height: 100px;
+  }
+
+  .radio-text {
+    font-size: 36px;
+  }
+
+  .range-value {
+    font-size: 60px;
+    margin-top: 20px;
+  }
+
+  .summary-title {
+    font-size: 60px;
+    line-height: 60px;
+    /* padding: 60px 40px; */
+  }
+
+  .summary-text {
+    font-size: 36px;
+    line-height: 50px;
+    margin-bottom: 100px;
+  }
+
+  .fa-plane {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .start-container {
+    width: 80%;
+    padding: 60px;
+  }
+
+  .start-title {
+    margin-bottom: 30px;
+  }
+
+  .question-counter {
+    justify-content: center;
+  }
+  .progress-bar {
+    margin-right: 30px;
+  }
+
+  .summary-container {
+    width: 80%;
+  }
+  .summary-title {
+    padding: 0;
+  }
+
+}

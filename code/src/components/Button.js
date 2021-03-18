@@ -1,10 +1,10 @@
 import React from 'react';
 
 
-export const Button = props => {
-    return (
-        <button type="submit" className="button">
-                {props.button}
-        </button>
-    )
+export const Button = ({button}) => {
+  return (
+    <button type="submit" className="button">
+      {button}
+    </button>
+  )
 }
