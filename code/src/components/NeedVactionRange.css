@@ -1,0 +1,49 @@
+.slider-container{
+  max-width: 1100px;
+  margin: auto;
+}
+.question {
+  font-family: Averia Sans Libre;
+  color: #8e5006;
+}
+.label-slider-wrapper{
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.range-lable {
+  display: flex;
+  justify-content: space-between;
+}
+.slider {
+ width: 100%;
+ -webkit-appearance: none;
+ background: #f48b29;
+ border-radius: 5px;
+ opacity: 0.7;
+}
+.slider::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  width: 16px;
+  height: 16px;
+  background: #ac0d0d;
+  border-radius: 50%;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+.range-item {
+  font-size: 12px;
+  max-width: 30%;
+  font-family: Roboto;
+  text-transform: uppercase;
+  /* border: 1px solid pink; */
+}
+.range-item:first-child {
+  text-align: left;
+}
+
+.range-item:last-child {
+  text-align: right;
+}

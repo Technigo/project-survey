@@ -6,6 +6,11 @@
   font-weight: 700;
   font-size: 16px;
   border: #570b0b 2px solid;
+  width: 150px;
+}
+.start-next-button:disabled{
+  color: #ae7777;
+  border: #ae7777 2px solid;
 }
 
 .start-next-button:hover{

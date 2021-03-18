@@ -1,5 +1,6 @@
 import React from 'react';
 import StartNextButton from './StartNextButton';
+import './CountrySelector.css'
 
 const CountrySelector = ({setSection, question, country, setCountry, countries, progress, setProgress}) => {
 
