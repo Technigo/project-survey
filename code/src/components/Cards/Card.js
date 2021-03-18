@@ -13,7 +13,7 @@ const Card = ({ contentType, number, question, content, data, ...props }) => {
           <>
             <h3>Question {number}</h3>
             <p>{question}</p>
-            <Content {...props.content} />
+            <Content {...content} />
             <h3>My Answer</h3>
             <Inputs {...props} />
           </>
