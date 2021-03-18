@@ -9,7 +9,7 @@ const RadioInputIcon = (props) => {
 
     return (
         <div className="input-container">
-            <h2>Icon:</h2>
+            <h2>Icon</h2>
             <div className="icon-container">
                 {props.data.source.map(item =>
                     <label key={item}>

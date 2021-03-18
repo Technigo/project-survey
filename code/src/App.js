@@ -1,16 +1,16 @@
 import React, { useState } from 'react'
 import data from "./data.json"
 
-import RadioInput from './components/RadioInput'
-import RadioInputIcon from './components/RadioInputIcon'
-import SelectInput from './components/SelectInput'
 import TextInput from "./components/TextInput"
-import RangeInput from './components/RangeInput'
+import SelectInput from './components/SelectInput'
+import RadioInput from './components/RadioInput'
 import NumberInput from './components/NumberInput'
+import RadioInputIcon from './components/RadioInputIcon'
+import RangeInput from './components/RangeInput'
+import NavigateButton from 'components/NavigateButton'
+import SubmitButton from 'components/SubmitButton'
 import CharacterSheet from './components/CharacterSheet'
 import ProgressBar from 'components/ProgressBar'
-import SubmitButton from 'components/SubmitButton'
-import NavigateButton from 'components/NavigateButton'
 
 
 const App = () => {
@@ -33,9 +33,9 @@ const App = () => {
       <>
         <CharacterSheet
           name={name}
-          number={number}
-          class={characterClass}
           race={race}
+          class={characterClass}
+          number={number}
           family={family}
           goal={goal}
           icon={icon}

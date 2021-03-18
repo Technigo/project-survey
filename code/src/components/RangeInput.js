@@ -7,16 +7,20 @@ const RangeInput = (props) => {
         setValue(event.target.value)
     }
     return (
-        <label>
-            {props.data.label}
+        <div className="stat">
+            <label htmlFor="range">
+                {props.data.label}
+            </label>
             <input
+                id="range"
                 type="range"
                 className={props.data.className}
                 min="0"
                 max="10"
+                value={value}
                 onChange={handleChange}
             />
-        </label>
+        </div>
     )
 }
 
