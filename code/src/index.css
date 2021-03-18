@@ -131,4 +131,5 @@ h1 {
   border-radius: inherit;
   text-align: center;
   font-size: 14px;
+  transition: width 0.4s ease-in-out;
 }
