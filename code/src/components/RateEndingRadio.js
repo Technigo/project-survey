@@ -11,7 +11,7 @@ export const RateEndingRadio = ({rateEnding, setRateEnding, handleSubmit}) => {
     return (
         <>
         <form className='radiobuttons-form'>
-            <h2 className="question-heading">
+            <h2 className='question-heading'>
                 What did you think about the final episode?
             </h2>
             <div className='radiobuttons-options'>
@@ -31,7 +31,7 @@ export const RateEndingRadio = ({rateEnding, setRateEnding, handleSubmit}) => {
             ))}
             </div>
             <button onSubmit={handleSubmit}
-                className="button"
+                className='button'
                 type='submit'
                 > Submit!
             </button> 

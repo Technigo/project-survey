@@ -16,7 +16,7 @@ const Survey = () => {
     const [numberOfSeasons, setNumberOfSeasons] = useState();
     const [gameOfThronesHouse, setGameOfThronesHouse] = useState('');
     const [rateEnding, setRateEnding] = useState();
-    const [section, setSection] = useState("welcome")
+    const [section, setSection] = useState('welcome')
 
     const sectionOrder = [
         'welcome',
@@ -36,7 +36,7 @@ const Survey = () => {
 
     return (
         <>
-        <section className="form-container">
+        <section className='form-container'>
             {section !== 'summary' && (
                 <form onSubmit={handleSubmit}>
                     {section === 'welcome' && (

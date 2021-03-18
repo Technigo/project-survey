@@ -10,12 +10,13 @@ export const NumberOfSeasonsRadio = ({numberOfSeasons, setNumberOfSeasons, handl
 
     return (
         <>
-        <form className="radiobuttons-form">
-            <h2 className="question-heading">
+        <form className='radiobuttons-form'>
+            <h2 className='question-heading'>
                 How many seasons did you watch?
             </h2>
-            <div className='radiobuttons-options'>
-            {seasons.map(number => (
+            <div>
+                <div className='radiobuttons-options'>
+                {seasons.map(number => (
                 <label htmlFor={number} key={number}>
                     <input
                         type='radio'
@@ -28,13 +29,16 @@ export const NumberOfSeasonsRadio = ({numberOfSeasons, setNumberOfSeasons, handl
                     /> 
                     {number}
                 </label> 
-            ))}
+                ))}
+                </div>
+                <div>
+                    <button onSubmit={handleSubmit}
+                        className='button'
+                        type='submit'
+                        > Next!
+                    </button>
+                </div>
             </div>
-            <button onSubmit={handleSubmit}
-                className="button"
-                type='submit'
-                > Next!
-            </button> 
         </form>
     </>
     );
