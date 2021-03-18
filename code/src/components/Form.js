@@ -4,7 +4,7 @@ import { UserName } from './Name'
 import { AgeRadioOption } from './Age'
 import { SelectPlanet } from './SelectPlanet'
 import { BringItem } from './BringItem'
-import { SubmitButton } from './SubmitButton'
+import { Summary } from './Summery'
 
 const ageGroups = ['0-19','20-29','30-39','40-49','50+',] 
 
@@ -14,38 +14,17 @@ export const Form = () => {
   const [name, setName] = useState('')
   const [item, setInputItem] = useState('')
   const [planet, setPlanet] = useState('')
+  const [summary, setSummary] = useState(false)
 
-  const isSurveyComplete = () => {
-   
-    if (name === '') {
-      return false;
-    }
-
-    if (age === '') {
-      return false;
-    }
-
-    if (planet === '') {
-      return false;
-    }
-
-    if (item === '') {
-      return false;
-    }
-
-    return true;
-  };
-
-  if (isSurveyComplete()) {
-    return `So your name is ${name} and you are between ${age} years old.
-    The planet you picked is ${planet} and you whant to bring with you:${item}
-    Good luck with that!`
+  const handelSubmit = event => {
+    event.preventDefault()
+    setSummary(true)
   }
 
-
-
-  return (
-    <form>
+ return (
+   <>
+   {! summary ? (
+    <form className='form-container' onSubmit={handelSubmit}>
       <div>
         <UserName 
         setName={setName}
@@ -76,11 +55,21 @@ export const Form = () => {
          />
       </div>
       <div>
-        <button onClick={isSurveyComplete}>
+        <button>
           submit
         </button>
       </div>
     </form>
+    ):(
+      <Summary 
+      name={name} 
+      ageGroupSpan={age} 
+      planet={planet} 
+      item={item}
+      />
+
+    )}
+    </>
   )
 }
 

@@ -1,13 +1,18 @@
 import React from 'react'
 
-import { Form } from './components/Form';
+import { Form } from './components/Form'
+import { Header } from './components/Header'
 
 
 export const App = () => {
   return (
-    <main>
-      <h1>We have to leave our planet, so here is your chanse to select your future home.</h1>
+    <main className="main">
+      <div className="header">
+      <Header />
+      </div>
+      <div className="form">
       <Form />
+      </div>
     </main>
   )
 }
