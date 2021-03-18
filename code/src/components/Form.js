@@ -15,6 +15,33 @@ export const Form = () => {
   const [item, setInputItem] = useState('')
   const [planet, setPlanet] = useState('')
 
+  const isSurveyComplete = () => {
+   
+    if (name === '') {
+      return false;
+    }
+
+    if (age === '') {
+      return false;
+    }
+
+    if (planet === '') {
+      return false;
+    }
+
+    if (item === '') {
+      return false;
+    }
+
+    return true;
+  };
+
+  if (isSurveyComplete()) {
+    return `So your name is ${name} and you are between ${age} years old.
+    The planet you picked is ${planet} and you whant to bring with you:${item}
+    Good luck with that!`
+  }
+
 
 
   return (
@@ -49,7 +76,9 @@ export const Form = () => {
          />
       </div>
       <div>
-        <SubmitButton />
+        <button onClick={isSurveyComplete}>
+          submit
+        </button>
       </div>
     </form>
   )
