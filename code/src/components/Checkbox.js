@@ -3,7 +3,8 @@ import React, { useState } from 'react'
 const Checkbox = () => {
     const [wantsNewsletter, setwantsNewsletter] = useState("");
     return (
-        <label>
+        <div className="checkbox-container">
+          <label className="checkbox-label">
         <p className="checkbox-text">Newsletter?</p>
         <div className="checkbox-input">
         <input
@@ -15,6 +16,7 @@ const Checkbox = () => {
         />
         </div>
       </label>
+        </div>
     )
 }
 

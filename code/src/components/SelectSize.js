@@ -4,7 +4,8 @@ const SelectSize = () => {
     const [Size, setSize] = useState("");
 
     return (
-        <label className="select-section">
+        <div className="select-container">
+          <label className="select-section">
       <p>Size: {Size}</p>
 
       <select 
@@ -18,6 +19,7 @@ const SelectSize = () => {
         <option value="Large">Large</option>
       </select>
         </label>
+        </div>
     )
 }
 

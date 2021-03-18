@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f4e1;
 }
 
 code {
@@ -43,7 +44,7 @@ code {
 /* Radio Section */
 
 .form {
-  background-color: green;
+  background-color: #f8f4e1;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -54,7 +55,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: burlywood;
+  background-color: #897853;
   width: 90%;
   margin-bottom: 50px;
   margin-top: 50px;
@@ -65,7 +66,7 @@ code {
   display: grid;
   grid-template-columns: 1fr;
   width: 90%;
-  background-color: yellow;
+  background-color: #4e3620;
   margin-top: 50px;
   margin-bottom: 50px;
   border-radius: 25px;
@@ -79,6 +80,7 @@ code {
   width: 100%;
   transition: transform 1s;
   border-radius: 25px;
+  border: 1px solid #c8eed9;
 }
 
 .image:hover {
@@ -98,17 +100,17 @@ code {
 }
 
 .box {
-  background-color: purple;
-  border: 3px solid white;
+  background-color: #4e3620;
+  border-radius: 25px;
 }
 
 
 
 .container {
   margin-bottom: 50px;
-  border: 10px solid red;
+  border: 10px solid #c8eed9;
   border-radius: 25px;
-  background-color: red;
+  background-color: #c8eed9;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -120,12 +122,18 @@ code {
   background-color: brown;
   /*text-align: center; */
   width: 100%;
+  border-radius: 25px; /* Test */
 }
 
 .select-section select{
   width: 100%;
   height: 75px;
   font-size: 20px;
+}
+
+.select-container {
+  margin-bottom: 50px;
+  border: 3px solid black;
 }
 
 .form-section p {
@@ -141,6 +149,8 @@ label {
   display:flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 50px;
+  margin-top: 50px;
 }
 
 .checkbox {
@@ -162,9 +172,15 @@ label {
   font-size: 20px;
 }
 
+.amount-container {
+  margin-bottom: 50px;
+  border: 3px solid black;
+}
+
 button {
   height: 75px;
   border-radius: 25px;
+  width: 100%;
 }
 
 .radio-paragraf {
@@ -180,6 +196,18 @@ button {
 /* test2*/
 .email-container {
   margin-bottom: 50px;
+  border: 3px solid black;
+}
+
+.name-container {
+  margin-bottom: 50px;
+  border: 3px solid black;
+}
+
+
+.phone-container {
+  margin-bottom: 50px;
+  border: 3px solid black;
 }
 
 
@@ -199,6 +227,7 @@ button {
 @media (min-width:1300px) {
   .group-container {
     grid-template-columns: 1fr 1fr 1fr;
+    margin-bottom: 100px;
   }
 
   /*.amount-items input, .name input, .email input, .phone input{
@@ -223,14 +252,106 @@ button {
     width: 80%;
   }
 
-  .email-container {
+  .email-container { /* DU kan slå ihop dessa */
     display: flex;
     justify-content: center;
     align-items: center;  
+    margin-bottom: 0px; /* test */
   }
 
   .email {
     width: 50%;
+    border: 2px solid black;
+    margin-bottom: 0px;
+    background-color: palegoldenrod;
+    padding-top: 50px;
+  }
+
+  .select-section {
+    width: 50%;
+    margin-bottom: 0px;
+    padding-top: 50px;
+    
+  }
+
+  .select-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px; /* test */
+  }
+
+  .amount-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px; /* test */
+  }
+
+
+  .amount-items {
+    width: 50%;
+    background-color: red;
+    margin-bottom: 0px;
+    padding-top: 50px;
+  }
+ 
+  .name-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px; /* test */
 
   }
+
+  .name {
+    width: 50%;
+    background-color: green;
+    margin-bottom: 0px;
+    padding-top: 50px;
+  }
+
+  .phone-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0px; /* test */
+  }
+
+  .phone {
+    width: 50%;
+    background-color: orange;
+    margin-bottom: 0px;
+    padding-top: 50px;
+  }
+
+  .checkbox-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .checkbox-label
+   {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: orange;
+    margin-bottom: 50px;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  button {
+    width: 50%;
+  }
+
+
+
+
+
 }
