@@ -8,10 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
   font-size: 62.5%;
 }
 
@@ -20,30 +16,57 @@ code {
     monospace;
 }
 
+.root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
 .form-section {
   background-color: rgba(137, 43, 226, 0.596);
+  width: 60%;
+  height: auto;
   border-radius: 8px;
   padding: 20px;
-  bottom: 0;
   font-family: 'Montserrat', sans-serif;
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-message {
+  font-size: 2.4rem;
+  text-align: center;
+}
+
+.btn.start-btn {
+  width: 200px;
+  height: 50px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 30px;
 }
 
 form {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(4, 1fr);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
 }
 
 .form-label {
-  grid-column: 1 / 1;
-  grid-row: 1 / 2;
   font-size: 2rem;
+  margin: 0px 10px 20px 10px;
+  border-bottom: 2px solid rgb(131, 47, 170);
+  padding-bottom: 5px;
 }
 
 .form-text-input {
-  grid-column: 1 / 5;
-  grid-row: 2 / 3;
   border-radius: 8px;
   border: none;
   height: 50px;
@@ -55,23 +78,45 @@ form {
   font-size: 1.6rem;
 }
 
+.radio-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.drop-down {
+  width: 95%;
+  height: 50px;
+  align-self: center;
+  border-radius: 8px;
+  border: none;
+  color: #333;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 15px;
+  font-size: 1.6rem;
+}
+
+.buttons-div {
+  display: flex;
+}
+
 .form-text-input:focus {
   background-color: #fff;
 }
 
 .btn {
-  align-self: center;
-  justify-self: center;
   border: none;
   background-color: rgb(131, 47, 170);
   padding: 10px 20px;
   font-family: inherit;
   outline: none;
-  grid-row: 4 / 5;
   color: inherit;
   border-radius: 4px;
   transition: all 0.2s ease-out;
   cursor: pointer;
+  margin: 20px 10px 0px 10px;
 }
 
 .btn:hover {
@@ -80,31 +125,90 @@ form {
 }
 
 .btn.prev-btn {
-  grid-column: 1 / 2; 
-  justify-self: start;
+  margin-right: auto;
 }
 
 .btn.next-btn {
-  grid-column: 4 / 5;
-  justify-self: end;
+  margin-left: auto;
 }
 
 .form-section h4 {
-  grid-column: 1 / 3;
-  grid-row: 3 / 4;
+
 }
 
 h2 {
-  grid-column: 1 / 5;
-  grid-row: 1 / 2;
   font-size: 2rem;
   padding: 0;
+  font-weight: 500;
+  margin: 0px 10px 20px 10px;
+  border-bottom: 2px solid rgb(131, 47, 170);
+  padding-bottom: 5px;
 }
 
 .radio-btn {
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-end;
   font-size: 1.6rem;
+  width: 30%;
+  height: 65px;
+  margin: 10px 0;
+  position: relative;
 }
 
+.radio-btn input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 25px;
+  width: 25px;
+  z-index: 1;
+  top: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  /* right: 0; */
+  height: 26px;
+  width: 26px;
+  background-color:rgb(131, 47, 170);
+  cursor: pointer;
+  border-radius: 50%;
+  transition: all 0.2s ease-out;
+}
+
+.radio-btn:hover input ~ .custom-radio {
+  background: #8026AA;
+}
+
+.radio-btn input:checked ~ .custom-radio {
+  background-color: #8026AA;
+}
+
+.custom-radio::after {
+  content: '';
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 6px;
+  left: 6px;
+  background-color: #fff;
+  border-radius: 50px;
+  display: none;
+}
+
+.radio-btn input:checked ~ .custom-radio::after {
+  display: block;
+}
+
+.summary-text {
+  font-size: 2.6rem;
+  text-align: center;
+}
+
+.span-bold {
+  font-weight: 700;
+}

@@ -2,15 +2,21 @@ import React from 'react'
 
 const Buttons = (props) => {
 
-  const previousStep = (event) => {
-    event.preventDefault()
-    props.setStep(props.step - 1)
-  }
+  return (
+        <button className={props.className} onClick={props.step}>{props.btnText}</button>
 
-  const nextStep = (event) => {
-    event.preventDefault()
-    props.setStep(props.step + 1)
-  }
+  )
+}
+export default Buttons
+
+/*{props.step < 4 && (
+  <button className="btn next-btn" onClick={nextStep}>{btnText}</button>
+)}
+
+{props.step > 1 && props.step < 4 && (
+  <button className="btn prev-btn" onClick={previousStep}>{'<< Previous question'}</button>
+)}
+
 
   let btnText
   
@@ -19,18 +25,4 @@ const Buttons = (props) => {
   } else {
     btnText = 'Next question >>'
   }
-
-  return (
-    <>
-      {props.step < 4 && (
-        <button className="btn next-btn" onClick={nextStep}>{btnText}</button>
-      )}
-
-      {(props.step > 1, props.step < 4) && (
-        <button className="btn prev-btn" onClick={previousStep}>{'<< Previous question'}</button>
-      )}
-
-    </>
-  )
-}
-export default Buttons
+*/
