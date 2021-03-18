@@ -11,23 +11,19 @@ const Form = () => {
 
   const onMovieNameChange = (event) => {
     setMovieName(event.target.value);
-    console.log(movieName);
   };
 
   const onMovieGenreChange = (event) => {
     setMovieGenre(event.target.value);
-    console.log(movieGenre);
   };
 
   const onRatingChange = (event) => {
     setRating(event.target.value);
-    console.log(rating);
   };
 
   const onCounterChange = (event) => {
     event.preventDefault();
     setCounter(counter + 1);
-    console.log(counter);
   };
 
   if (counter === 0) {
@@ -62,7 +58,7 @@ const Form = () => {
             <option value="Western">Western</option>
           </select>
 
-          <label>How would you rate this survey? </label>
+          <label tabIndex="0">How would you rate this survey? </label>
           <div className="form-radioButton">
             <p>
               <input
