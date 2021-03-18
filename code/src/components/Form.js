@@ -4,7 +4,6 @@ import Intro from './Intro'
 import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
-// import RadioOption from './RadioOption'
 import Summary from './Summary'
 
 const flowers = ['rose', 'tulip', 'orchid']
@@ -14,72 +13,70 @@ const Form = () => {
     const [name, setName] = useState('');
     const [food, setFood] = useState('')
     const [flower, setFlower] = useState('')
+    const [questionIndex, setQuestionIndex] = useState(0)
 
-    // const [newQuestion, setNewQuestion] = useState(0)
-
-    // const onQuestionChange = () => {
-    //     console.log(newQuestion)
-    //     setNewQuestion(newQuestion +1)
-    // }
+    const onQuestionIndexChange = () => {
+        console.log(questionIndex)
+        setQuestionIndex(questionIndex +1)
+    }
 
     console.log(food, food, food)
     console.log(name, name, name)
     console.log(flower, flower, flower)
+    console.log(questionIndex)
 
     return (
         <>
             <form onSubmit={event => event.preventDefault()}>
                 
-                {/* ternery operator */}
+                {questionIndex === 0 && 
+                    <Intro/> 
+                }
 
-                <Intro/>
+                {questionIndex === 1 && 
+                    <QuestionOne 
+                        name={name}
+                        setName={setName}
+                    /> 
+                }
 
-                <QuestionOne
-                    name={name}
-                    setName={setName}
-                />
-                <QuestionTwo
-                    food={food}
-                    setFood={setFood}    
+                {questionIndex === 2 && 
+                    <QuestionTwo
+                        food={food}
+                        setFood={setFood}    
                     />
+                }
 
-                 {/* <QuestionThree
-                    flower={flower}
-                    setFlower={setFlower}
-                    /> */}
-                <div>
-                    {flowers.map((item) => {
-                        return (
-                            <QuestionThree
-                                flower={flower}
-                                setFlower={setFlower}
-                                item={item}
-                            />
-                        )
-                    })}
+                {questionIndex === 3 && 
+                    <>
+                        {flowers.map((item) => {
+                            return (
+                                <QuestionThree
+                                    flower={flower}
+                                    setFlower={setFlower}
+                                    item={item}
+                                />
+                             )
+                        })}
+                    
+                    </>
+                }
 
-                </div>
-
-                 <Summary 
-                    name={name} 
-                    food={food}
-                    flower={flower}
+                {questionIndex > 3 && 
+                    <Summary 
+                        name={name} 
+                        food={food}
+                        flower={flower}
                     />
+                }
                
-                 <button
-                    type="button" 
-                    // onClick={onQuestionChange}
-                >
+                <button 
+                    type="button"
+                    onClick={onQuestionIndexChange}>
                     Next
                 </button>
-
-
-                {/* {newQuestion > 0 && <Form/>} */}
-
                 
             </form>
-
-
         </>
     )
 }
