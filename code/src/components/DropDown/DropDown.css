@@ -1,3 +1,16 @@
-.drop-down{
-    color: red;
+.snack-header{
+    border-bottom: solid 2px white;
+    padding:10px;
+    
+}
+.select-snack{
+    display: flex;
+    background-color: var(--neon-border-color);
+    color: var(--neon-text-color);
+    padding: 10px;
+    width: 220px;
+    border: none;
+    outline: none; 
+    border-radius: 10px;
+    margin-left: 50px;
 }

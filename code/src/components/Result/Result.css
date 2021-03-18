@@ -1,0 +1,24 @@
+
+.form-result
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 60px;
+}
+
+.result-header{
+    display: flex;
+}
+
+.result-text{
+    display: inline-block;
+    width: 300px;
+}
+
+.robot-image{
+    display: flex;
+    margin-left:90px;
+    margin-bottom: 40px;
+}

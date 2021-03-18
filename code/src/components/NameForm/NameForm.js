@@ -9,18 +9,19 @@ const NameForm = ({name, setName}) =>{
     }
 
     return(
-        <>
-          <h2>1. A person I miss right now 💌 </h2> 
-            <form onSubmit={event => event.preventDefault()}>
-                <label htmlFor="name">Name</label>
-                <input id="name"
+        <div className="name-wrapper">
+          <h2 className="name-heading"> A person I miss right now 💌 </h2> 
+            <form className="name-form">
+                <label htmlFor="sr-only"></label>
+                <input className="name"
+                name="name"
                 type="text"
+                placeholder="name"
                 onChange={onNameChange}
                 value={name}
                 />
             </form> 
-            <p>I miss{name}</p>
-        </>
+        </div>
     )
 }
 

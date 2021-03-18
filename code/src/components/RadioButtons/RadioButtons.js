@@ -20,7 +20,7 @@ const RadioButtons = ({GenreGroup, setGenreGroup}) =>{
 
     return(
         <div>
-            <h2>My favorite movie genre is?</h2>
+            <h2 className="genre-heading">My favorite movie genre is?</h2>
                 {GenreGroups.map((group) => (
                     <label htmlFor={group} key={group}> 
                         <input
@@ -34,7 +34,6 @@ const RadioButtons = ({GenreGroup, setGenreGroup}) =>{
                         {group}
                     </label>  
                 ))}
-                {/* <p>you like to watch a {GenreGroup} movie</p> */}
         </div>
     )
 }

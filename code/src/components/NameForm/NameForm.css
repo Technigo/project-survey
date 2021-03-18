@@ -1,3 +1,26 @@
-.name-form{
-    color: green;
+
+.name-wrapper{
+    display: flex;
+    justify-content: space-betweens;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+}
+
+.name-heading{
+    margin-top: 0px;
+    margin-bottom: 20px;
+    padding:10px;
+    border-bottom: solid 2px white;
+}
+.name{
+    display: flex;
+    width: 150px;
+    padding: 10px;
+    border:0;
+    border-radius:10px;
+    font-size: 13px;
+    background-color: var(--neon-border-color);
+    margin-bottom: 130px;
+    margin-bottom: 10px;
 }

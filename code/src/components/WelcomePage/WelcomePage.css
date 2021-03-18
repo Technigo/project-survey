@@ -1,3 +1,20 @@
-div{
-    color: pink;
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
+
+.form-welcome{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 80px;
+}
+
+.welcome-heading {
+    border-bottom: solid 2px #40E0D0;
+    }
+    
+img{
+    margin-top:0px;
+    display: flex;
+    width: 440px;
+    height: 200px;
 }

@@ -1,10 +1,21 @@
-@import url(https://fonts.googleapis.com/css?family=Exo+2:200i);
+@import url('https://fonts.googleapis.com/css?family=Exo+2:200i');
+@import url('https://fonts.googleapis.com/css2?family=Balsamiq+Sans&display=swap');
 
+:root {
+  /* Set neon color */
+  --neon-text-color: #FF66CC;
+  --neon-border-color: #40E0D0;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+span{
+  color: var(--neon-text-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--neon-border-color);
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -24,29 +35,32 @@ body {
   flex-direction: column;
 }
 
-:root {
-  /* Base font size */
-  font-size: 10px;   
-  
-  /* Set neon color */
-  --neon-text-color: #FF66CC;
-  --neon-border-color: #40E0D0;
+h2{
+  font-size: 25px;
+  padding: 5px;
 }
+
+p{
+  font-size: 14px;
+  margin-bottom: 0px;
+}
+
 .head-container{
+  margin-top:40px;
+  display: flex;
   font-family: 'Exo 2', sans-serif;
-  top:0
   /* display: flex;
-  justify-content: center;
-  align-items: flex-start;   */
-  /* background: #000; */
+  justify-content: center; */
 }
 
 h1 {
+  text-align: center;
+  width:300px; 
   font-size: 50px;
-  font-weight: 200;
+  font-weight: 400;
+  /* margin-left: 20px; */
   font-style: italic;
   color: #fff;
-  /* padding: 2rem 4rem 4rem; */
   padding: 10px;
   border: 0.4rem solid #fff;
   border-radius: 2rem;
@@ -71,24 +85,24 @@ h1:focus {
 /* Animate neon flicker */
 @keyframes flicker {
     
-    0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    
+      text-shadow:
+          -0.2rem -0.2rem 1rem #fff,
+          0.2rem 0.2rem 1rem #fff,
+          0 0 2rem var(--neon-text-color),
+          0 0 4rem var(--neon-text-color),
+          0 0 6rem var(--neon-text-color),
+          0 0 8rem var(--neon-text-color),
+          0 0 10rem var(--neon-text-color);
       
-        text-shadow:
-            -0.2rem -0.2rem 1rem #fff,
-            0.2rem 0.2rem 1rem #fff,
-            0 0 2rem var(--neon-text-color),
-            0 0 4rem var(--neon-text-color),
-            0 0 6rem var(--neon-text-color),
-            0 0 8rem var(--neon-text-color),
-            0 0 10rem var(--neon-text-color);
-        
-        box-shadow:
-            0 0 .5rem #fff,
-            inset 0 0 .5rem #fff,
-            0 0 2rem var(--neon-border-color),
-            inset 0 0 2rem var(--neon-border-color),
-            0 0 4rem var(--neon-border-color),
-            inset 0 0 4rem var(--neon-border-color);        
+      box-shadow:
+          0 0 .5rem #fff,
+          inset 0 0 .5rem #fff,
+          0 0 2rem var(--neon-border-color),
+          inset 0 0 2rem var(--neon-border-color),
+          0 0 4rem var(--neon-border-color),
+          inset 0 0 4rem var(--neon-border-color);        
     }
     
     20%, 24%, 55% {        
@@ -96,8 +110,11 @@ h1:focus {
         box-shadow: none;
     }    
 }
+
+/******FORM SECTION******/
 .form-section{
-  width: 88%;
+  width: 300px;
+  margin-top:40px;
   height: 250px;
   padding: 30px 20px;
   background-color: rgba(104, 101, 101, 0.8);
@@ -108,5 +125,93 @@ h1:focus {
   justify-content: center;
   align-items: center;
   text-align: center;
+  font-family: 'Balsamiq Sans', cursive;
 }
 
+/*********BUTTON********/
+button {
+    width: 100px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-top: 60px;
+    font-family: 'Balsamiq Sans', cursive;
+    text-transform: uppercase;
+}
+
+button:before {
+    content: '';
+    background: linear-gradient(45deg, #FF66CC, #40E0D0, #FF66CC, #40E0D0);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    /* opacity: 0; */
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+button:active {
+    color: #000
+}
+
+button:after {
+    background: transparent;
+}
+
+button:before {
+    opacity: 1;
+}
+
+button:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 200% 0; }
+    100% { background-position: 0 0; }
+}
+
+@media (min-width: 768px) and (max-width:1024px){
+  h1 {
+    width: 400px; 
+    font-size: 50px;
+  }
+  .form-section{
+    width: 400px;
+    margin-left:10px;
+  }
+}
+
+@media (min-width: 1025px){ 
+  h1 {
+    width:400px; 
+    font-size: 60px;
+  }
+
+  .form-section{
+    width: 400px;
+    margin-left:10px;
+  }
+}

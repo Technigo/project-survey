@@ -3,9 +3,10 @@ import './WelcomePage.css'
 
 const WelcomePage = () =>{
     return(
-        <>
-            <div>this is A WELCOME MESSAGE </div>
-        </>
+        <div className="form-welcome">
+            <h2 className="welcome-heading">Welcome Movie night survey</h2>
+                <p>Get your cozy mood on and find out what you will be doing tonight</p>
+        </div>
     )
 }
 

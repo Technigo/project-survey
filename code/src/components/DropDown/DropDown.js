@@ -9,8 +9,8 @@ const DropDown = ({snack, setSnack}) =>{
     }
     return(
         <>
-            <h2>What is your favorite snack?</h2>
-                <select id="selectSnack"
+            <h2 className="snack-header">What is your favorite snack?</h2>
+                <select className="select-snack"
                 onChange={onOptionChange}
                 value={snack}
                 >
@@ -21,7 +21,6 @@ const DropDown = ({snack, setSnack}) =>{
                     <option value="candy">Mixed candy</option>
                     <option value="ice-cream">Ice cream</option>
                 </select>
-            <p>you live in {snack}</p>
         </>
     )
 }
