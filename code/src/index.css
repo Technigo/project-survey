@@ -21,7 +21,6 @@ body {
 /* HEADERS, PARAGRAPHS */
 
 .welcome, .name-input, .location, .radio-age, .summary {
-  border: 1px solid black;
   color: white;
 }
 
