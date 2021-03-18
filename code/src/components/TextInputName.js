@@ -26,6 +26,7 @@ const TextInputName = ({name, setName, email, setEmail}) => {
                     type="email"
                     value={email}
                     onChange={onEmailChange}
+                    required
                 />
             <p>Here is my name: {name}</p>
             </div>

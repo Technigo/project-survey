@@ -19,6 +19,7 @@ const ChooseDate = ({date, setDate, setSection, progress, setProgress, question}
         button="Next"
         progress={progress}
         setProgress= {setProgress}
+        state={date}
       />
     </div>
   )

@@ -1,0 +1,32 @@
+.header {
+  background: linear-gradient(117deg, rgba(240,201,41,1) 0%, rgba(244,139,41,0.9668242296918768) 100%);
+}
+.logo-buttons-wrapper{
+  display:flex;
+  justify-content: space-between;
+}
+.logo {
+  width: 90px;
+  margin: 10px 0px 20px 10px;
+}
+.heading-header{
+  font-size: 30px;
+  margin-bottom: 30px;
+  font-family: Della Respira;
+  color: #6c0808;
+  font-weight: 600;
+  text-align: center;
+}
+.media-buttons {
+  margin: 15px 10px;
+}
+.fab {
+  font-size: 30px;
+  margin-left: 5px;
+  color: #ac0d0d;
+  cursor: pointer;
+}
+
+.fab:hover {
+  opacity: 0.7;
+}

@@ -5,34 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #fbe6c2;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
-
-.header {
-  display: flex;
-  background-color: rgb(80, 54, 54);
-  justify-content: space-between;
-}
-.logo {
-  width: 80px;
-  height: 50px;
-  margin: 10px 0px 20px 10px;
-}
-.top-heading{
-  font-size: 30px;
-  margin: 30px;
-}
-.media-buttons {
-  margin: 10px 10px;
-}
-.fab {
-  font-size: 30px;
-  margin-left: 5px;
-  color: white;
 }
 
 .form-wrapper{

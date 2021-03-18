@@ -35,6 +35,7 @@ const VacationTypeRadioButton = ({setSection, vacationTypes, vacationType, name,
         button="Next"
         progress={progress}
         setProgress= {setProgress}
+        state={vacationType}
        />
     </div>
   )

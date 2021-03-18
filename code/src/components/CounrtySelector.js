@@ -17,6 +17,7 @@ const CountrySelector = ({setSection, question, country, setCountry, countries, 
         id="coutry"
         value={country}
         onChange={onCountryChange}
+        required
       >
         {countries.map((countryName, index) => {
           if (index === 0) {
@@ -34,6 +35,7 @@ const CountrySelector = ({setSection, question, country, setCountry, countries, 
       button="Next"
       progress={progress}
       setProgress= {setProgress}
+      state={country}
       />
     </div>
   )

@@ -6,7 +6,6 @@ const ProgressBar = ({progress}) => {
       <div className="progress-range-wrapper">
         <div className="progress-bar" style={{ width: `${progress}%`}}></div>
       </div>
-      <p> Here is progress: {progress}</p>
     </div>
   )
 }

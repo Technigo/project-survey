@@ -26,35 +26,12 @@ const Form = (props) => {
   const [section, setSection] = useState(questions[0]);
   const [progress, setProgress] = useState(0);
 
-  const stateArray = [needVacation, country, vacationType, date, name, email]
-  const isFormFilledExperiment = (array) => {
-    array.forEach( state => {
-      if(state===""){
-        console.log(state==="")
-        return true
-      }
-      else {return false}
-    })
-  }
-  isFormFilledExperiment(stateArray)
   //Function checking whether the form is filled
   const isFormFilled = () => {
-    if (needVacation === "") {
+    if (name === "") {
       return true
     }
-    if (country === "") {
-      return true
-    }
-    if (vacationType === "") {
-      return true
-    }
-    if (date === "") {
-      return true
-    }
-    if (name ===""){
-      return true
-    }
-    if (email === ""){
+    if (email === "") {
       return true
     }
     return false
@@ -69,13 +46,13 @@ const Form = (props) => {
     return (
       <form className="form-wrapper" onSubmit={handleSubmit}>
         { section === questions[0] && (
-          <WelcomeSection 
-            section={section} 
-            setSection={setSection} 
+          <WelcomeSection
+            section={section}
+            setSection={setSection}
             question={questions[1]}
             progress={progress}
-            setProgress={setProgress} 
-            />
+            setProgress={setProgress}
+          />
         )}
 
         { section === questions[1] && (
@@ -93,42 +70,42 @@ const Form = (props) => {
           <CountrySelector
             setSection={setSection}
             question={questions[3]}
-            country ={country}
+            country={country}
             setCountry={setCountry}
             countries={countries}
             progress={progress}
             setProgress={setProgress}
           />
-          )}
+        )}
 
-          {section === questions[3] &&(
-            <VacationTypeRadioButton
-              setSection={setSection}  
-              vacationTypes={data.vacationTypes}
-              vacationType={vacationType}
-              name="question3"
-              setVacationType={setVacationType}
-              question={questions[4]}
-              progress={progress}
-              setProgress= {setProgress}
-            />
-          )}
-          {section === questions[4] &&(
-            <ChooseDate 
-              date={date}
-              setDate={setDate}
-              question={questions[5]}
-              progress={progress}
-              setProgress={setProgress}
-              setSection={setSection}
-            />
-          )}
-          {section === questions[5] &&(
+        {section === questions[3] && (
+          <VacationTypeRadioButton
+            setSection={setSection}
+            vacationTypes={data.vacationTypes}
+            vacationType={vacationType}
+            name="question3"
+            setVacationType={setVacationType}
+            question={questions[4]}
+            progress={progress}
+            setProgress={setProgress}
+          />
+        )}
+        {section === questions[4] && (
+          <ChooseDate
+            date={date}
+            setDate={setDate}
+            question={questions[5]}
+            progress={progress}
+            setProgress={setProgress}
+            setSection={setSection}
+          />
+        )}
+        {section === questions[5] && (
           <div>
-            <TextInputName 
+            <TextInputName
               name={name}
               setName={setName}
-              email ={email}
+              email={email}
               setEmail={setEmail}
             />
             <button disabled={isFormFilled()} type="submit">
@@ -137,21 +114,21 @@ const Form = (props) => {
           </div>
         )}
         <div>
-          <ProgressBar progress={progress}/>
+          <ProgressBar progress={progress} />
         </div>
       </form>
     )
   } else {
     return (
-        <Summary 
-          needVacation={needVacation}
-          country={country}
-          vacationType={vacationType}
-          date={date}
-          email={email}
-        />
+      <Summary
+        name={name}
+        needVacation={needVacation}
+        country={country}
+        vacationType={vacationType}
+        date={date}
+        email={email}
+      />
     )
   }
-
 }
 export default Form

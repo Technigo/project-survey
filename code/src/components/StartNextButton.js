@@ -1,6 +1,11 @@
 import React from 'react';
+import './StartNextButton.css'
 
-const StartNextButton = ({question, setSection, button, progress, setProgress}) =>{
+const StartNextButton = ({question, setSection, button, progress, setProgress, state}) =>{
+  
+  const isStateUnchanged = () => {
+    return state===""
+  }
   const onSectionChange = ()=> {
     // console.log(progress)
     setSection(question)
@@ -10,7 +15,9 @@ const StartNextButton = ({question, setSection, button, progress, setProgress}) 
     setProgress(progress +20)
   }
   return (
-    <button 
+    <button
+    className="start-next-button"
+    disabled={isStateUnchanged()}
     type="button"
     onClick={onSectionChange}>
       {button}

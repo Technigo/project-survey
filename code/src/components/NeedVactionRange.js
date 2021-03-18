@@ -12,7 +12,6 @@ const NeedVacationRange = ({question, setSection, needVacation, setNeedVacation,
       <div className="wrapper">
       <label htmlFor="range" className="range-lable">
         <div className="range-item">Can wait and see</div>
-        <div className="range-item">Neutral</div>
         <div className="range-item">Must have vacation</div>
       </label>
       <input
@@ -23,6 +22,7 @@ const NeedVacationRange = ({question, setSection, needVacation, setNeedVacation,
         max= "10"
         value ={needVacation}
         onChange={onNeedVacationChange}
+        required
         // value = "5"
       />
       </div>
@@ -32,7 +32,8 @@ const NeedVacationRange = ({question, setSection, needVacation, setNeedVacation,
       setSection={setSection}
       progress={progress}
       setProgress= {setProgress} 
-      button="Next"/>
+      button="Next"
+      state={needVacation}/>
     </div>
   )
 }

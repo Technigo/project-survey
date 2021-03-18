@@ -1,0 +1,13 @@
+.start-next-button{
+  background: #f48b29;
+  padding: 10px;
+  border-radius: 15px;
+  color: #570b0b;
+  font-weight: 700;
+  font-size: 16px;
+  border: #570b0b 2px solid;
+}
+
+.start-next-button:hover{
+  background: #cb7c33;
+}
