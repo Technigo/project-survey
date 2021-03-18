@@ -8,7 +8,7 @@ import Phone from './Phone'
 import Amount from './Amount'
 import Checkbox from './Checkbox'
 import Radio from './Radio'
-import NextBtn from './NextBtn'
+import Range from './RangeSlider'
 
 const Test = () => {
     return (
@@ -25,11 +25,12 @@ const Test = () => {
                             <Email />
                             <Phone />
                             <Checkbox />
+                            <Range />
                             <OrderBtn />
                         </div>
                     </div>
                 </div>
-                <div><h1>TEST</h1></div>
+                <div><h1>TEST</h1></div> 
                 </div>
             </form>
     )

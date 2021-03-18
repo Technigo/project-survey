@@ -38,6 +38,13 @@ const Radio = () => {
         </label>
       ))}
       </div>
+      <div className="test3">
+        <ul className="test">
+          <a href='#size'><span className="test2">Next</span></a> 
+        </ul>
+        
+ 
+      </div>
     </label>
   )
 }

@@ -87,6 +87,10 @@ code {
   transform: scale(1.2); 
 }
 
+.test3 {
+  display: none;
+}
+
 /*test */
 
 
@@ -176,7 +180,7 @@ label {
   margin-bottom: 50px;
 }
 
-button {
+.sub-button {
   height: 75px;
   border-radius: 25px;
   width: 100%;
@@ -223,7 +227,7 @@ button {
 @media (min-width:1300px) {
   .group-container {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 50px;
+    margin-bottom: -50px;
   }
 
   /*.amount-items input, .name input, .email input, .phone input{
@@ -234,8 +238,26 @@ button {
     width: 50%;
   } */
 
-  .next-button-container {
+  .test3 {
+    display: block;
+  }
+
+  .test {
+    display: flex;
+    justify-content: flex-start;
+    border: 3px solid black;
     margin-bottom: 100px;
+  }
+
+  .test2 {
+    display: flex;
+    justify-content: flex-start;
+    background-color: #f8f4e1;
+    padding: 5px 20px;
+    font-size: 24px;
+    color: #000;
+    border-radius: 5px;
+    text-decoration: underline;
   }
 
  
@@ -351,20 +373,38 @@ button {
     align-items: center;
     width: 50%;
     background-color: #f8f4e1;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
     border-left: 30px solid #f8f4e1;
     border-right: 30px solid #f8f4e1;
     border-bottom: 30px solid #f8f4e1;
-    border-bottom-left-radius: 25px;
-    border-bottom-right-radius: 25px;
   }
+
+  .range-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 50px; /* test */
+  }
+
+  .range {
+    width: 50%;
+    background-color: #f8f4e1;
+    margin-bottom: 0px;
+    padding-top: 50px;
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
+    border-bottom: 30px solid #f8f4e1;
+    margin-bottom: 50px;
+  }
+
+
 
   .button-container {
     display: flex;
     justify-content: center;
   }
   
-  button {
+  .sub-button {
     width: 50%;
     margin-bottom: 50px;
     display: flex;

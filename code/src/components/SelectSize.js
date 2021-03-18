@@ -6,7 +6,7 @@ const SelectSize = () => {
     return (
         <div className="select-container">
           <label className="select-section">
-      <p >Size: {Size}</p>
+      <p id="size">Size: {Size}</p>
 
       <select 
         onChange={event => setSize(event.target.value)} //Skriv istället onChange={setSize}
