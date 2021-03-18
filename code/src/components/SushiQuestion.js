@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Question2 = ({ sushi, callbackOnChange }) => {
+const SushiQuestion = ({ sushi, callbackOnChange }) => {
 
-  const handleChange = (e) => {
+  const handleSushiChange = (e) => {
     callbackOnChange(e.target.name, e.target.value);
   };
 
@@ -12,7 +12,7 @@ const Question2 = ({ sushi, callbackOnChange }) => {
         <label htmlFor="sushi">Favourite sushi? </label>
         <select 
           id="sushi"
-          onChange={handleChange}
+          onChange={handleSushiChange}
           value={sushi}
           required
           name="sushi"
@@ -30,4 +30,4 @@ const Question2 = ({ sushi, callbackOnChange }) => {
   )
 }
 
-export default Question2;
+export default SushiQuestion;

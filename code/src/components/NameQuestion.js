@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Question1 = ({ name, callbackOnChange }) => {
+const NameQuestion = ({ name, callbackOnChange }) => {
 
-  const handleChange = (e) => {
+  const handleNameChange = (e) => {
     callbackOnChange(e.target.name, e.target.value);
   };
 
@@ -13,7 +13,7 @@ const Question1 = ({ name, callbackOnChange }) => {
         <input
           id="name"
           type="text"
-          onChange={handleChange}
+          onChange={handleNameChange}
           value={name}
           name="name" 
           required
@@ -23,4 +23,4 @@ const Question1 = ({ name, callbackOnChange }) => {
   );
 };
 
-export default Question1;
+export default NameQuestion;

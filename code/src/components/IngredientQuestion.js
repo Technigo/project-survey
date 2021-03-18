@@ -2,9 +2,9 @@ import React from 'react';
 
 const ingredients = ["salmon", "tuna", "shrimp", "crabstick", "avocado", "egg"]; 
 
-const Question3 = ({ ingredient, callbackOnChange }) => {
+const IngredientQuestion = ({ ingredient, callbackOnChange }) => {
   
-  const handleChange = (e) => {     
+  const handleIngredientChange = (e) => {     
     callbackOnChange(e.target.name, e.target.value);
   };
 
@@ -19,7 +19,7 @@ const Question3 = ({ ingredient, callbackOnChange }) => {
               id={ingred}   
               type="radio"
               value={ingred}
-              onChange={handleChange}
+              onChange={handleIngredientChange}
               name="ingredient"
               checked={ingred === ingredient}
               required 
@@ -32,4 +32,4 @@ const Question3 = ({ ingredient, callbackOnChange }) => {
   )
 }
 
-export default Question3;
+export default IngredientQuestion;

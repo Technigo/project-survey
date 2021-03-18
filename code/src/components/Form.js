@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-import Question1 from './Question1';
-import Question2 from './Question2';
-import Question3 from './Question3';
+import NameQuestion from './NameQuestion';
+import SushiQuestion from './SushiQuestion';
+import IngredientQuestion from './IngredientQuestion';
 import Submit from './Submit';
 import Summary from './Summary';
 
@@ -27,9 +27,9 @@ const Form = () => {
     <>
       {!showSummary ? (
         <form onSubmit={handleSubmit}>
-          <Question1 name={formData.name} callbackOnChange={handleInputChange} />
-          <Question2 sushi={formData.sushi} callbackOnChange={handleInputChange} />
-          <Question3 ingredient={formData.ingredient} callbackOnChange={handleInputChange} />
+          <NameQuestion name={formData.name} callbackOnChange={handleInputChange} />
+          <SushiQuestion sushi={formData.sushi} callbackOnChange={handleInputChange} />
+          <IngredientQuestion ingredient={formData.ingredient} callbackOnChange={handleInputChange} />
           <Submit />
         </form>
       ) : (
