@@ -1,0 +1,41 @@
+export const QuestionareData = [
+  
+  { id: "1", 
+    question: "How important is healthy food to you?",
+    options: [
+      "Not so important", 
+      "Somewhat important", 
+      "Very important"
+  ] 
+  }
+  {
+    id: "2",
+    question: "Do you eat healty when you eat out?",
+    options: [
+      "Never", 
+      "Rarely", 
+      "Always"
+  ] 
+  }
+  {
+    id: "3",
+    question: "How often do you eat fruit?",
+    options: [
+      "Occasionally", 
+      "Very often, 
+      "Never"
+  ] 
+  }
+  {
+    id: "4",
+    question: "Do you read nutrition information on what you buy?",
+    options: [
+      "Almost always", 
+      "Sometimes", 
+      "Never"
+  ] 
+  }
+];
+  
+
+export default QuestionareData;

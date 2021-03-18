@@ -12,7 +12,8 @@
     "eslint-plugin-react-hooks": "^4.1.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
-    "react-scripts": "3.4.3"
+    "react-scripts": "3.4.3",
+    "survey-react": "^1.8.36"
   },
   "scripts": {
     "start": "react-scripts start",
