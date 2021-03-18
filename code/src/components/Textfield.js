@@ -1,11 +1,11 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const Textfield = () => {
-  const [inputName, setInputName] = useState("");
+  const [inputName, setInputName] = useState('');
 
   return (
     <form onSubmit={event => event.preventDefault()}>
-      Please state your name: {inputName}
+      Please state your name: 
       <input
         type="text"
         id="inputName"
