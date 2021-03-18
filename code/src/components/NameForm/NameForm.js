@@ -16,7 +16,7 @@ const NameForm = ({name, setName}) =>{
                 <input className="name"
                 name="name"
                 type="text"
-                placeholder="name"
+                placeholder="Type name here"
                 onChange={onNameChange}
                 value={name}
                 />

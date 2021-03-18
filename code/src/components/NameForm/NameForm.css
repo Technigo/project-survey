@@ -13,14 +13,7 @@
     padding:10px;
     border-bottom: solid 2px white;
 }
-/* .name{
-    display: flex;
-    width: 150px;
-    padding: 10px;
-    border:0;
-    border-radius:10px;
-    font-size: 13px;
-    background-color: var(--neon-border-color);
-    margin-bottom: 130px;
-    margin-bottom: 10px;
-} */
+input[type=text] {
+    padding: 12px 20px;
+    margin: 8px 0;
+}
