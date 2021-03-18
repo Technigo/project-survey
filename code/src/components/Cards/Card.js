@@ -2,7 +2,7 @@ import React from 'react';
 
 import './Card.css';
 
-import Content from 'components/Content/Content'
+import Content from 'components/Content/Content';
 import Inputs from 'components/Inputs/Inputs';
 
 const Card = (props) => {
@@ -31,7 +31,11 @@ const Card = (props) => {
             <h3>Summary</h3>
             <p>Thank you for participating!</p>
             {Object.entries(props.data).map(([key, value]) => (
-              <p key={key}>{value}</p>
+              <p key={key}>
+                {value.optnum
+                  ? value.result[value.optnum]
+                  : `${value.result}${value.answer}`}
+              </p>
             ))}
           </>
         );

@@ -4,9 +4,21 @@ import Card from 'components/Cards/Card';
 import Steps from 'components/Steps/Steps';
 
 const defaultData = {
-  answer1: '',
-  answer2: '',
-  answer3: ''
+  answer1: {
+    id: 'answer1',
+    answer: '',
+    result: 'Dog made you think of '
+  },
+  answer2: {
+    id: 'answer2',
+    answer: '',
+    result: ['1', '2', '3', '4', '5']
+  },
+  answer3: {
+    id: 'answer3',
+    answer: '',
+    result: ['1', '2', '3', '4', '5']
+  }
 };
 
 const questions = [
