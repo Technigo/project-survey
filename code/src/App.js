@@ -13,13 +13,14 @@ const App = () => {
   const [accessory, setAccessory] = useState('necklaces')
   const [activity, setActivity] = useState ('do yoga')
   const [ratherNot, setRatherNot] = useState ('')
-  
+
   return (
     <section className="form-section">
       
       <Start
         step={step}
-        setStep={setStep} />
+        setStep={setStep}
+      />
       
       <Survey
         step={step}
@@ -43,7 +44,7 @@ const App = () => {
         animal={animal} 
         accessory={accessory}
         activity={activity}
-        ratherNot={ratherNot} 
+        ratherNot={ratherNot}
       />
 
     </section>
@@ -51,3 +52,4 @@ const App = () => {
 }
 
 export default App
+

@@ -5,6 +5,7 @@ import Dropdown from './Dropdown'
 import SurveyButtons from './SurveyButtons'
 
 const Survey = (props) => {
+
   const [step, setStep, name, setName, animal, setAnimal, accessory, setAccessory, activity, setActivity, ratherNot, setRatherNot] = [props.step, props.setStep, props.name, props.setName, props.animal, props.setAnimal, props.accessory, props.setAccessory, props.activity, props.setActivity, props.ratherNot, props.setRatherNot]
 
   const animalOptions = ['cat', 'dog', 'horse', 'elk', 'panda', 'frog']
@@ -48,12 +49,18 @@ const Survey = (props) => {
             questionName="rather-not" 
             questionText="Name a thing that you don't like to do 💩" 
             chosenValue={ratherNot} 
-            setValue={setRatherNot} />
+            setValue={setRatherNot}/>
         )}
         {step > 0 && step < 6 && (
           <SurveyButtons
             step={step}
-            setStep={setStep}/>
+            setStep={setStep}
+            name={name}
+            animal={animal}
+            accessory={accessory}
+            activity={activity}
+            ratherNot={ratherNot}
+            />
         )}
     </form>
   )

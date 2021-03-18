@@ -2,20 +2,39 @@ import React from 'react'
 import Button from './Button'
 
 const SurveyButtons = (props) => {
-
+  
   const previousStep = (event) => {
     event.preventDefault()
     props.setStep(props.step - 1)
   }
 
   const nextStep = (event) => {
+    
+    let check = true
+
     event.preventDefault()
-    props.setStep(props.step + 1)
+    if (props.step === 0) {
+      check = true
+    } else if (props.name === '' && props.step === 1) {
+      check = false
+    } else if (props.animal === '' && props.step === 2) {
+      check = false
+    } else if (props.accessory === '' && props.step === 3) {
+      check = false
+    } else if (props.activity === '' && props.step === 4) {
+      check = false
+    } else if (props.ratherNot === '' && props.step === 5) {
+      check = false
+    } 
+
+    check === true ? props.setStep(props.step + 1) : alert('Please enter a valid response 💁')
+
   }
 
   const restart = () => {
     window.location.reload();
   }
+
 
   return (
     <div className="buttons-div">
@@ -23,7 +42,8 @@ const SurveyButtons = (props) => {
         <Button 
           className="btn start-btn" 
           step={nextStep} 
-          btnText="Start 💃" 
+          btnText="Start 💃"
+           
         />
       )}
       {props.step > 1 && props.step < 6 && (

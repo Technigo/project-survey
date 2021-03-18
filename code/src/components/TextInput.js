@@ -9,7 +9,7 @@ const TextInput = (props) => {
   return (
     <>
       <label className="form-label" htmlFor={props.questionName}>{props.questionText}</label>
-      <input className="form-text-input" 
+      <input className="form-text-input"
         name={props.questionName} 
         type="text" 
         required
