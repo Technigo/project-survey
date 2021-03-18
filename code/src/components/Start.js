@@ -1,5 +1,5 @@
 import React from 'react'
-import Buttons from './Buttons'
+import SurveyButtons from './SurveyButtons'
 
 const Start = (props) => {
 
@@ -8,10 +8,10 @@ const Start = (props) => {
       {props.step === 0 && (
         <>
           <h1 className="start-message">Hey! Please click the button below to start the survey! 😍</h1>
-          <Buttons 
-          className="btn start-btn" 
-          step={props.nextStep} 
-          btnText="Start 💃" />
+          <SurveyButtons  
+            step={props.step} 
+            setStep={props.setStep}
+          />
         </>
       )}
     </>

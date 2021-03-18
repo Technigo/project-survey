@@ -3,28 +3,13 @@ import Survey from './components/Survey'
 import Summary from './components/Summary'
 import Start from './components/Start'
 
-export const App = () => {
+const App = () => {
   //SET Q STEP
   let [step, setStep] = useState(0)
 
-  const previousStep = (event) => {
-    event.preventDefault()
-    setStep(step - 1)
-  }
-
-  const nextStep = (event) => {
-    event.preventDefault()
-    setStep(step + 1)
-  }
-
-  const restart = (event) => {
-    event.preventDefault()
-    setStep(step = 0)
-  }
-  
   //COMPONENTS STATES
   const [name, setName] = useState('') 
-  const [animal, setAnimal] = useState ('')
+  const [animal, setAnimal] = useState ('cat')
   const [accessory, setAccessory] = useState('necklaces')
   const [activity, setActivity] = useState ('do yoga')
   const [ratherNot, setRatherNot] = useState ('')
@@ -34,11 +19,9 @@ export const App = () => {
       
       <Start
         step={step}
-        nextStep={nextStep} />
+        setStep={setStep} />
       
       <Survey
-        previousStep={previousStep}
-        nextStep={nextStep}
         step={step}
         setStep={setStep}
         name={name}
@@ -55,7 +38,7 @@ export const App = () => {
       
       <Summary 
         step={step}
-        restart={restart}
+        setStep={setStep}
         name={name} 
         animal={animal} 
         accessory={accessory}
@@ -67,3 +50,4 @@ export const App = () => {
   )  
 }
 
+export default App

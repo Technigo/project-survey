@@ -14,10 +14,11 @@ const Radiobuttons = (props) => {
       <div className="radio-div">
         {props.valueArray.map(value => (
           <div className="radio-btn">
-            <input name={props.questionName} type="radio"
-            onChange={onValueChange}
-            value={value}
-            checked={props.chosenValue === value} />
+            <input name={props.questionName} 
+              type="radio"
+              onChange={onValueChange}
+              value={value}
+              checked={props.chosenValue === value} />
             <span className="custom-radio"></span>
             <label htmlFor={props.questionName}>{value}</label>
           </div>
@@ -26,6 +27,5 @@ const Radiobuttons = (props) => {
     </>
   )
 }
-
 export default Radiobuttons
 

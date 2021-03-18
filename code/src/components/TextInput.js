@@ -9,9 +9,12 @@ const TextInput = (props) => {
   return (
     <>
       <label className="form-label" htmlFor={props.questionName}>{props.questionText}</label>
-      <input className="form-text-input" name={props.questionName} type="text" required
-      onChange={onValueChange}
-      value={props.chosenValue}
+      <input className="form-text-input" 
+        name={props.questionName} 
+        type="text" 
+        required
+        onChange={onValueChange}
+        value={props.chosenValue}
       
       /> 
     </>

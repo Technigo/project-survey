@@ -2,10 +2,10 @@ import React from 'react'
 import TextInput from './TextInput'
 import Radiobuttons from './Radiobuttons'
 import Dropdown from './Dropdown'
-import Buttons from './Buttons'
+import SurveyButtons from './SurveyButtons'
 
 const Survey = (props) => {
-  const [nextStep, previousStep, step, setStep, name, setName, animal, setAnimal, accessory, setAccessory, activity, setActivity, ratherNot, setRatherNot] = [props.nextStep, props.previousStep, props.step, props.setStep, props.name, props.setName, props.animal, props.setAnimal, props.accessory, props.setAccessory, props.activity, props.setActivity, props.ratherNot, props.setRatherNot]
+  const [step, setStep, name, setName, animal, setAnimal, accessory, setAccessory, activity, setActivity, ratherNot, setRatherNot] = [props.step, props.setStep, props.name, props.setName, props.animal, props.setAnimal, props.accessory, props.setAccessory, props.activity, props.setActivity, props.ratherNot, props.setRatherNot]
 
   const animalOptions = ['cat', 'dog', 'horse', 'elk', 'panda', 'frog']
   const accessoryOptions = ['necklaces', 'watches', 'earrings', 'hats', 'glasses', 'scarfs']
@@ -44,37 +44,18 @@ const Survey = (props) => {
             setValue={setActivity} />
         )}
         {step === 5 && (
-          <>
-            <TextInput 
-              questionName="rather-not" 
-              questionText="Name a thing that you don't like to do 💩" 
-              chosenValue={ratherNot} 
-              setValue={setRatherNot} />
-            <Buttons 
-              className="btn next-btn"
-              step={nextStep}
-              btnText="See results"
-            />
-          </>
+          <TextInput 
+            questionName="rather-not" 
+            questionText="Name a thing that you don't like to do 💩" 
+            chosenValue={ratherNot} 
+            setValue={setRatherNot} />
         )}
-        <div className="buttons-div">
-          {step > 1 && step < 6 && (
-            <Buttons 
-            className="btn prev-btn"
-            step={previousStep} 
-            btnText="Previous question"
-            />
-          )}
-          {step > 0 && step < 5 && (
-            <Buttons 
-            className="btn next-btn"
-            step={nextStep} 
-            btnText="Next question"
-            />
-          )}
-        </div>
+        {step > 0 && step < 6 && (
+          <SurveyButtons
+            step={step}
+            setStep={setStep}/>
+        )}
     </form>
   )
 }
-
 export default Survey
