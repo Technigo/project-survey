@@ -1,5 +1,6 @@
 import React from 'react'
 import RadioButtonWrapper from './RadioButtonsWrapper'
+import DropDown from './DropDown'
 
 const OptionsWrapper = (props) => {
     if (props.question.type === "radio") {
@@ -14,7 +15,15 @@ const OptionsWrapper = (props) => {
     } else if (props.question.type === "dropDown") {
         return (
             <div className="options-wrapper">
-                put dropdownwrapper here
+                <DropDown 
+                    question={props.question}
+                    bestAt = {props.bestAt}
+                    onBestAtChange = {props.onBestAtChange}
+                    nextToBestAt = {props.nextToBestAt}
+                    onNextToBestAtChange = {props.onNextToBestAtChange}
+                    worstAt = {props.worstAt}
+                    onWorstAtChange = {props.onWorstAtChange}
+                />
             </div>
         )
     } else {
@@ -24,15 +33,6 @@ const OptionsWrapper = (props) => {
             </div>
         )
     }
-    
-    return (
-        <div className="options-wrapper">
-            <RadioButtonWrapper 
-                question={props.question}
-                toChange={props.toChange}
-            />
-        </div>
-    )
 }
 
 export default OptionsWrapper;

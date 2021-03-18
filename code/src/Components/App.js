@@ -3,10 +3,15 @@ import QuestionWrapper from './QuestionWrapper'
 import questionData from '../questionData.json'
 
 //TO-DO:
-//[_] Set up hooks for each question storing the user's current input
+//[X] Set up hooks for each question storing the user's current input
 //[X] Maybe have hooks track everything live, live updating a summary paragraph,
 // but there is still a submit button for the recommendation!!
 //[_] Remove optionsData!
+//[X] Make radio buttons functional!
+//2h [_] Make select dropdown functional!
+//4h [_] Start styling
+//1h [_] Grasp what controlled inputs are again and double check mine are
+//All weekend [_] Accessability test
 
 // export const setHijinx = (value) => {
 //   setHijinx(value)
@@ -19,6 +24,12 @@ export const App = () => {
   const [hijinx, setHijinx] = useState(-10)
   const [grim, setGrim] = useState(-10)
   const [spiritual, setSpiritual] = useState(-10)
+
+  const [bestAt, setBestAt] = useState("")
+  const [nextToBestAt, setNextToBestAt] = useState("")
+  const [worstAt, setWorstAt] = useState("")
+  
+  //I might not need these as States after all, just one state per dropdown? Why is this? I think I'll be able to articulate it later
   const [str, setStr] = useState(-10)
   const [dex, setDex] = useState(-10)
   const [con, setCon] = useState(-10)
@@ -27,6 +38,7 @@ export const App = () => {
   const [cha, setCha] = useState(-10)
   //to my understanding, as long I send these arrays along as props, they will be forced to update on change
   
+  //radio button states
   const onHijinxChange = (value) => {
     setHijinx (value)    
   }
@@ -47,6 +59,21 @@ export const App = () => {
     setSpiritual (value)    
   }
 
+  //dropdown states
+  const onBestAtChange = (value) => {
+    setBestAt (value)    
+  }
+
+  const onNextToBestAtChange = (value) => {
+    setNextToBestAt (value)
+  }
+
+  const onWorstAtChange = (value) => {
+    setWorstAt (value)    
+  }
+
+
+  //I might not need these
   const onStrChange = (value) => {
     setStr (value)    
   }
@@ -95,8 +122,14 @@ export const App = () => {
         toChange={onHijinxChange}
       />
       <QuestionWrapper 
-        question={questionData.questions.statQuestions} 
-        toChange={onHijinxChange}
+        question={questionData.questions.statQuestions}
+        toChange={null} //is this a bad idea??
+        bestAt = {bestAt}
+        onBestAtChange = {onBestAtChange}
+        nextToBestAt = {nextToBestAt}
+        onNextToBestAtChange = {onNextToBestAtChange}
+        worstAt = {worstAt}
+        onWorstAtChange = {onWorstAtChange}
       />
       <div>
         <p>Hijinx: {hijinx}</p>
