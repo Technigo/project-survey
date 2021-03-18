@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
 
-const FormSelect = () => {
+const FormSelect = (props) => {
 
-  const [fruit, setFruit] = useState('')
+  const {fruit, setFruit} = props
 
   const onFruitChange = (event)=> {
     setFruit(event.target.value)

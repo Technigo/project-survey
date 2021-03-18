@@ -1,9 +1,9 @@
 import React, {useState} from 'react'
 
 
-const FormName = () => {
+const FormName = (props) => {
 
-  const [name, setName] = useState('')
+  const {name, setName} = props
 
   const onNameChange = (event) => {
     setName(event.target.value)
