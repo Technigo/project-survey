@@ -1,14 +1,15 @@
 // import React, { useState } from 'react'
 import React from 'react'
+import Form from './Form'
 
-// import Form from './Form'
-
-const Summary = () => {
+const Summary = (prop) => {
     return (
-        <div>
-            <h1>Hurra, en summary</h1>
-            {/* <h3>Your answers: Your name: {name}. You're favorite food: {food}.</h3> */}
-        </div>
+        <>
+            <div>
+                <h1>Hurra, en summary</h1>
+                <h3>Your answers: Your name: {prop.name}. You're favorite food: {prop.food}.</h3>
+            </div>
+        </>
     )
 
 }

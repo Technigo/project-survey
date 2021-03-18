@@ -1,10 +1,11 @@
-// import React, { useState } from 'react'
-import React from 'react'
+import React, { useState } from 'react'
+// import React from 'react'
+import  Button from './Button'
+import QuestionTwo from './QuestionTwo'
 
 const QuestionOne = ({ name, setName }) => {
 
     const onNameChange = (event) => {
-        console.log(name)
         setName(event.target.value)
     }
 
@@ -25,7 +26,8 @@ const QuestionOne = ({ name, setName }) => {
                     placeholder="Type your name"
                 />
             </div>
-            {/* <button type="button" onClick={onQuestionChange}>Next!</button> */}
+            <p>Your name: {name}</p>
+        
         </>
     )
 }

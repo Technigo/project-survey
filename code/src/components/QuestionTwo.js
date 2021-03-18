@@ -15,13 +15,18 @@ const QuestionTwo = ({ food, setFood }) => {
              </div>
             <div>
                 <label htmlFor="food"></label>
-                <select id="food" value={food} onChange={onFoodChange}>
+                <select 
+                    id="food"
+                    value={food}
+                    name="food"
+                    onChange={onFoodChange}>
+                    <option disabled></option>
                     <option>Pizza</option>
                     <option>Pasta</option>
                     <option>Soup</option>
                     <option>Sallad</option>
                 </select>
-                <h3>Chosen food: {food}</h3>
+                <p>Chosen food: {food}</p>
             </div>
         </>
     )

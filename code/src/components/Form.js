@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import Summary from './Summary'
 
+import Intro from './Intro'
 import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 // import QuestionThree from './QuestionThree'
+import Summary from './Summary'
 
 const Form = () => {
  
@@ -11,36 +12,48 @@ const Form = () => {
     const [food, setFood] = useState('')
     // const [flower, setFlower] = useState('')
 
-    // const [SubmitResult, setSubmitResult] = useState(0)
+    const [newQuestion, setNewQuestion] = useState(0)
 
-    // const onSubmit = (event) => {
-    //     console.log(name, food)
-    //     setSubmitResult(SubmitResult +1)
-    // }
+    const onQuestionChange = () => {
+        console.log(newQuestion)
+        setNewQuestion(newQuestion +1)
+    }
+
+    console.log(food, food, food)
+    console.log(name, name, name)
 
     return (
         <>
             <form onSubmit={event => event.preventDefault()}>
+                
+                {/* ternery operator */}
+
+                <Intro/>
+
                 <QuestionOne
                     name={name}
                     setName={setName}
                 />
-                {/* <QuestionTwo
+                <QuestionTwo
                     food={food}
                     setFood={setFood}    
-                    /> */}
-                {/* <QuestionThree/> */}
-               
-                {/* <button 
-                    type="submit"
-                    onClick={onSubmit}
-                >
-                    Submit answers!
-                </button> */}
+                    />
 
-                {/* <h3>Your answers: Your name: {name}. You're favorite food: {food}</h3> */}
+                 {/* <QuestionThree/> */}
+
+                 <Summary 
+                    name={name} 
+                    food={food}/>
                
-                {/* {SubmitResult > 0 && <Summary/>} */}
+                 <button
+                    type="button" 
+                    // onClick={onQuestionChange}
+                >
+                    Next
+                </button>
+
+
+                {/* {newQuestion > 0 && <Form/>} */}
 
                 
             </form>
