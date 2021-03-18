@@ -1,7 +1,7 @@
 import React from "react";
 import { useState } from "react";
 
-import Result from "./components/Result";
+import Result from "./Result";
 
 const Form = () => {
   const [movieName, setMovieName] = useState("");
@@ -44,7 +44,9 @@ const Form = () => {
             onChange={onMovieNameChange}
           />
 
-          <label htmlFor="dropDown">Which would you like to see more of?</label>
+          <label htmlFor="dropDown">
+            Which genre would you like to see more of?
+          </label>
           <select id="dropDown" onChange={onMovieGenreChange}>
             <option value="Other">Other</option>
             <option value="Action">Action</option>

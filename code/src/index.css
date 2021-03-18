@@ -22,12 +22,10 @@ code {
   justify-content: center;
   align-items: center;
   background-color: #cbcfd6;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: 30%;
+  margin-right: 30%;
   margin-top: 5%;
   height: 50px;
-
-  border: 2px solid green;
 }
 
 .form-wrapper {
@@ -36,8 +34,6 @@ code {
   align-items: center;
   margin-left: 10%;
   margin-right: 10%;
-
-  border: 2px solid red;
 }
 
 .form-display-column {
@@ -59,4 +55,12 @@ code {
   background-color: rgb(144, 196, 255);
   color: black;
   font-weight: bold;
+}
+
+.results-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
 }
