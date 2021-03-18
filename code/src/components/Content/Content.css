@@ -1,5 +1,5 @@
 /* Makes sure that each content element is properly aligned */
-.content{
+.content {
   margin: 25px 0;
 }
 
@@ -8,4 +8,3 @@
   width: 100%;
   height: auto;
 }
-

@@ -7,7 +7,8 @@ const Button = ({ otherClassName, isSubmit, action, text }) => {
     <button
       className={`button ${otherClassName}`}
       type={isSubmit ? 'submit' : 'button'}
-      onClick={action}>{text}
+      onClick={action}>
+      {text}
     </button>
   );
 };

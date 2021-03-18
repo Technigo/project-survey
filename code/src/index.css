@@ -11,8 +11,7 @@
 
 body {
   margin: 0 auto;
-  /* width: 30%; */
-  background-color: var(--darkAlt);  
+  background-color: var(--darkAlt);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -59,12 +58,14 @@ button {
   display: none;
 }
 
-@media (min-width:500px) {
+/* Styling for medium and large devices */
+@media (min-width: 500px) {
   body {
     margin: 0 auto;
     max-width: 700px;
   }
-  *, p {
+  *,
+  p {
     font-size: 20px;
   }
   h1 {
@@ -74,36 +75,16 @@ button {
     font-size: 30px;
   }
   h4 {
-    font-size:25px;
+    font-size: 25px;
   }
   .image {
-    width:60% !important;
+    width: 60% !important;
   }
   .card {
     padding: 40px !important;
   }
-  .button:hover, {
+  .button:hover {
     background-color: var(--primary);
     color: var(--darkAlt);
   }
 }
-/* @media (max-width: 1439px) and (min-width: 700px) {
-  body {
-    width: 70%;
-  }
-  *, p {
-    font-size: 20px;
-  }
-  h1 {
-    font-size: 66px;
-  }
-  h3 {
-    font-size: 30px;
-  }
-  h4 {
-    font-size:25px;
-  }
-  .image {
-    width:60% !important;
-  }
-} */

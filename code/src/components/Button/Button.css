@@ -1,3 +1,4 @@
+/* --------------------------- WRAPPER & ALIGNMENT -------------------------- */
 .button {
   width: fit-content;
   height: 50px;
@@ -9,7 +10,10 @@
   text-transform: uppercase;
 }
 
-.button:focus {
+/* ------------------------------ HOVER EFFECTS ----------------------------- */
+
+.button:focus,
+.button:hover {
   background-color: var(--primary);
   color: var(--darkAlt);
   outline: none;

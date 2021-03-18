@@ -7,18 +7,22 @@ import { checkValid } from 'actions/buttonOnClick';
 
 const Steps = ({ step, setStep, maxSteps }) => {
   const nextStep = () => {
+    // Makes sure that the button is not focused when viewing the next step
     document.querySelector('.steps-right').blur();
     if (checkValid('form')) {
       setStep(step + 1);
     } else {
+      // The form is invalid so we activate focus on the input
       document.querySelector('.input').focus();
     }
   };
   const prevStep = () => {
+    // Makes sure that the button is not focused when viewing the next step
     document.querySelector('.steps-left').blur();
     if (checkValid('form')) {
       setStep(step - 1);
     } else {
+      // The form is invalid so we activate focus on the input
       document.querySelector('.input').focus();
     }
   };

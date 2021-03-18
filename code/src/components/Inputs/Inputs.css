@@ -14,11 +14,12 @@
   transition: all 0.5s ease;
 }
 
+/* FOCUS effects*/
+
 [type='text']:focus {
   outline: none;
   padding-left: 30px;
 }
-
 .input-wrapper--text:focus-within::before {
   content: '';
   width: 100%;
@@ -30,13 +31,10 @@
   top: calc(50% - 10px);
 }
 
+/* custom style for placeholder text */
 ::placeholder {
   color: var(--secondary);
   opacity: 1;
-}
-
-:invalid:focus {
-  border-color: var(--error);
 }
 
 /* --------------------------------- SELECT --------------------------------- */
@@ -53,31 +51,37 @@
   right: 10px;
   cursor: pointer;
 }
-select {
+
+.input-select {
   appearance: none;
   background-color: transparent !important;
   border: 2px solid var(--primary);
   padding: 10px;
   cursor: pointer;
-  
 }
-select:focus {
+
+.input-select option {
+  background-color: var(--darkAlt);
+}
+
+/* FOCUS effects */
+.input-select:focus {
   outline: none;
   border-width: 4px;
 }
-.input-wrapper--select:focus-within::before{
+.input-wrapper--select:focus-within::before {
   top: 20px;
-}
-option {
-  background-color: var(--darkAlt);
 }
 
 /* ------------------------------ RADIO BUTTONS ----------------------------- */
 
+/* Hide the default styles */
 [type='radio'] {
   position: absolute;
   opacity: 0;
 }
+
+/* Alignment of new styles */
 .radio-label {
   position: relative;
   margin: 10px 0;
@@ -91,6 +95,7 @@ option {
   cursor: pointer;
 }
 
+/* Add psuedo elements to create custom radio buttons */
 .radio-input::before {
   content: '';
   position: absolute;
@@ -115,9 +120,7 @@ option {
   transition: all 0.2s ease;
 }
 
-[type="radio"]:invalid:focus ~ .radio-input::before {
-  border-color: var(--error);
-}
+/* FOCUS effects */
 .radio-label:focus-within > .radio-input::before {
   border-width: 4px;
   top: -2px;
@@ -134,4 +137,11 @@ option {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+/* ------------------------------ ERROR STYLES ------------------------------ */
+
+:invalid:focus,
+[type='radio']:invalid:focus ~ .radio-input::before {
+  border-color: var(--error);
 }

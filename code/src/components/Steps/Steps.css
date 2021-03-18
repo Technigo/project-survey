@@ -11,19 +11,20 @@
   position: relative;
 }
 
-.steps-right {
-  float: right;
-}
-
+/* sets the step counter text position and alignment */
 .steps-text {
   position: absolute;
-  margin:0;
+  margin: 0;
   top: 0;
   left: calc(50% - 40px);
   padding: 5% 0;
   display: inline-block;
 }
 
+/* Aligns the buttons either right or left */
+.steps-right {
+  float: right;
+}
 .steps-left {
   float: left;
 }

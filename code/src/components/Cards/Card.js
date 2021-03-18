@@ -5,14 +5,14 @@ import './Card.css';
 import Content from 'components/Content/Content';
 import Inputs from 'components/Inputs/Inputs';
 
-const Card = (props) => {
+const Card = ({ contentType, number, question, content, data, ...props }) => {
   const getContent = () => {
-    switch (props.contentType) {
+    switch (contentType) {
       case 'question':
         return (
           <>
-            <h3>Question {props.number}</h3>
-            <p>{props.question}</p>
+            <h3>Question {number}</h3>
+            <p>{question}</p>
             <Content {...props.content} />
             <h3>My Answer</h3>
             <Inputs {...props} />
@@ -30,7 +30,7 @@ const Card = (props) => {
           <>
             <h3>Summary</h3>
             <p>Thank you for participating!</p>
-            {Object.entries(props.data).map(([key, value]) => (
+            {Object.entries(data).map(([key, value]) => (
               <p key={key}>
                 {value.optnum
                   ? value.result[value.optnum]

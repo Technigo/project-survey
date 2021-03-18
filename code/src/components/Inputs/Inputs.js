@@ -5,10 +5,14 @@ import './Inputs.css';
 const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
   const handleChange = (event) => {
     const { name, value } = event.target;
+    // Get the custom attribute
     let optnum = event.target.getAttribute('optnum');
+    // special case handling for select inputs to get correct optnum value
     if (optnum === null && event.target.tagName === 'SELECT') {
       optnum = event.target.querySelector(`[value="${value}"]`).getAttribute('optnum');
     }
+
+    // Use callbacks and destructuring to set the Form component state with the user selected value
     setForm((prevState) => ({
       ...prevState,
       [name]: { ...formData[name], answer: value, optnum }
@@ -52,12 +56,12 @@ const Inputs = ({ formData, setForm, type, inputName, ...other }) => {
       case 'select':
         return (
           <select
-            className="input"
+            className="input input-select"
             name={inputName}
             onChange={handleChange}
             value={formData[inputName].answer}
             required>
-            <option value="">--Please choose an option--</option>
+            <option value="">-What do you see?-</option>
             {other.options.map((option, index) => (
               <option optnum={index} key={option} value={option}>
                 {option}
