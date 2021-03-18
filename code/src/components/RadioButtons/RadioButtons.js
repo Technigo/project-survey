@@ -10,8 +10,6 @@ const GenreGroups = [
     'Animated'
 ]
 
-
-
 const RadioButtons = ({GenreGroup, setGenreGroup}) =>{
 
     const onChangeGenre = (event) =>{

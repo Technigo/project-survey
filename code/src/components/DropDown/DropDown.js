@@ -2,8 +2,6 @@ import React from 'react'
 import './DropDown.css'
 
 const DropDown = ({snack, setSnack}) =>{
-    // const [snack, setSnack] = useState("");
-
     const onOptionChange = (e) =>{
         setSnack(e.target.value)
     }
