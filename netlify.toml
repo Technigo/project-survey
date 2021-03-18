@@ -3,4 +3,4 @@
 [build]
   base = "code/"
   publish = "build/"
-  command = "CI GITnpm run build"
+  command = "CI- npm run build"
