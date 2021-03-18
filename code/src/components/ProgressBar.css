@@ -5,18 +5,22 @@
     position:relative;
 }
 
+/*adds progression text before the bar*/
 .progress-bar__inner:before {
     position: absolute;
     bottom: 40px;
     content: 'Progress: Question 0/5'
 }
 
+/*adds progress by settting a inner div to specific width
+depending on question number class */
 .progress-bar__inner {
     height: 100%;
     width: 0%;
-    background-color: blue;
+    background-color: rgb(19, 206, 212);
 }
 
+/*adds a procetage number on the bar */
 .progress-bar__inner:after {
     color: black;
     content: '0%'

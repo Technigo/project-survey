@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./TextInput.css";
+import "./Question1.css";
 
-export const TextInput = ({ userInput, setUserInput }) => {
+export const Question1 = ({ userInput, setUserInput }) => {
 
   const handleChange = (e) => {
     setUserInput(e.target.value)

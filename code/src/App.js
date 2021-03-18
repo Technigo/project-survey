@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 
 import { Header } from "./components/Header";
+import { Question1 } from "./components/Question1";
+import { Question2 } from "./components/Question2";
+import { Question3 } from "./components/Question3";
+import { Question4 } from "./components/Question4";
 import { Summary } from "./components/Summary";
-import { Footer } from "./components/Footer";
-import { Questions } from "./components/Questions";
+import { ProgressBar } from "./components/ProgressBar";
 import { NextButton } from "./components/NextButton";
-import { ProgressBar } from './components/ProgressBar'
+import { Footer } from "./components/Footer";
 
 let i = 0;
 
@@ -19,7 +22,7 @@ export const App = () => {
   /*Returns a popup to tell the user to add a answer if s/he didn't and if the user
   did answer it sets the nextQuestion to the right state for showing the next question
   (or summary) */
-  const validation = () => {
+  const handleAnswer = () => {
     if (
       (nextQuestion === "Question1" && userInput === "") ||
       (nextQuestion === "Question2" && populationAge === "") ||
@@ -63,18 +66,15 @@ export const App = () => {
 
           {nextQuestion === "Question1" && (
             <section className="question" id="Question1">
-              <Questions
-                input="text"
-                userInput={userInput}
-                setUserInput={setUserInput}
-              />
+              <Question1 userInput={userInput} setUserInput={setUserInput} />
             </section>
           )}
 
           {nextQuestion === "Question2" && (
             <section className="question" id="Question2">
-              <Questions
-                input="range"
+              <Question2
+                min="0"
+                max="100"
                 popluationAge={populationAge}
                 setPopulationAge={setPopulationAge}
               />
@@ -83,8 +83,7 @@ export const App = () => {
 
           {nextQuestion === "Question3" && (
             <section className="question" id="Question3">
-              <Questions
-                input="select"
+              <Question3
                 yearsToMars={yearsToMars}
                 setYearsToMars={setYearsToMars}
               />
@@ -93,8 +92,7 @@ export const App = () => {
 
           {nextQuestion === "Question4" && (
             <section className="question" id="Question4">
-              <Questions
-                input="radio"
+              <Question4
                 futureExpectations={futureExpectations}
                 setFutureExpectations={setFutureExpectations}
               />
@@ -113,20 +111,14 @@ export const App = () => {
         />
       )}
 
-      <ProgressBar 
-       nextQuestion={nextQuestion}
-      />
+      <ProgressBar nextQuestion={nextQuestion} />
 
       {/*Shows the next question or summary or a chance to redo the form if
       you're done */}
-      <NextButton 
-        validation={validation} 
-        i={i} 
-      />
+      <NextButton handleAnswer={handleAnswer} i={i} />
 
       <footer className="footer">
-        <Footer 
-          copyRight="&copy; Pauline Andersson 2021" />
+        <Footer copyRight="&copy; Pauline Andersson 2021" />
       </footer>
     </div>
   );

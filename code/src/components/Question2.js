@@ -1,8 +1,8 @@
 import React from "react";
 
-import "./RangeSlider.css";
+import "./Question2.css";
 
-export const RangeSlider = ({populationAge, setPopulationAge, min, max}) => {
+export const Question2 = ({populationAge, setPopulationAge, min, max}) => {
 
   const sliderWithDisplay = (type) => {
     return (

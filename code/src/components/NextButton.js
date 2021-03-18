@@ -4,13 +4,13 @@ import "./NextButton.css";
 
 
 
-export const NextButton = ({validation, i}) => {
+export const NextButton = ({handleAnswer, i}) => {
   const buttonTxt = ["Let's go!", "Next", "Next", "Next", "Submit", "Redo"];
 
   return (
     <button
       className="next-button"
-      onClick={validation}
+      onClick={handleAnswer}
       data-content={buttonTxt[i]}
     ></button>
   );
