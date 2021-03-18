@@ -178,8 +178,7 @@ input[type=radio] {
   }
 
   .form-container {
-    top: 100px;
-    padding: 30px;
+    top: 80px;
   }
 
   .question-heading, .summary-heading {
@@ -208,10 +207,10 @@ input[type=radio] {
   }
 
   .summary-text-question {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .summary-text-answer {
-    font-size: 20px;
+    font-size: 16px;
   }
 }
