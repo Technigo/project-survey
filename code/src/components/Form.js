@@ -8,6 +8,7 @@ import Phone from './Phone'
 import Amount from './Amount'
 import Checkbox from './Checkbox'
 import Radio from './Radio'
+import NextBtn from './NextBtn'
 
 const Test = () => {
     return (

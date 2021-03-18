@@ -80,7 +80,7 @@ code {
   width: 100%;
   transition: transform 1s;
   border-radius: 25px;
-  border: 1px solid #c8eed9;
+  border: 1px solid #f8f4e1;
 }
 
 .image:hover {
@@ -108,9 +108,9 @@ code {
 
 .container {
   margin-bottom: 50px;
-  border: 10px solid #c8eed9;
+  border: 10px solid #f8f4e1;
   border-radius: 25px;
-  background-color: #c8eed9;
+  background-color: #f8f4e1;
   display: flex;
   justify-content: flex-start;
   align-items: center;
@@ -119,10 +119,10 @@ code {
 /* Select Section starts */
 
 .select-section {
-  background-color: brown;
+  background-color: #4e3620;
   /*text-align: center; */
   width: 100%;
-  border-radius: 25px; /* Test */
+   /* Test */
 }
 
 .select-section select{
@@ -133,12 +133,12 @@ code {
 
 .select-container {
   margin-bottom: 50px;
-  border: 3px solid black;
 }
 
 .form-section p {
   font-size: 24px;
   font-weight: bold;
+  color: #f8f4e1;
 }
 
 label {
@@ -174,7 +174,6 @@ label {
 
 .amount-container {
   margin-bottom: 50px;
-  border: 3px solid black;
 }
 
 button {
@@ -196,18 +195,15 @@ button {
 /* test2*/
 .email-container {
   margin-bottom: 50px;
-  border: 3px solid black;
 }
 
 .name-container {
   margin-bottom: 50px;
-  border: 3px solid black;
 }
 
 
 .phone-container {
   margin-bottom: 50px;
-  border: 3px solid black;
 }
 
 
@@ -227,7 +223,7 @@ button {
 @media (min-width:1300px) {
   .group-container {
     grid-template-columns: 1fr 1fr 1fr;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
   }
 
   /*.amount-items input, .name input, .email input, .phone input{
@@ -238,10 +234,15 @@ button {
     width: 50%;
   } */
 
+  .next-button-container {
+    margin-bottom: 100px;
+  }
+
  
   .form-section p {
     font-size: 30px;
     text-align: center;
+    color: #000;
   }
 
   .form-container {
@@ -261,17 +262,23 @@ button {
 
   .email {
     width: 50%;
-    border: 2px solid black;
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
     margin-bottom: 0px;
-    background-color: palegoldenrod;
+    background-color: #f8f4e1;
     padding-top: 50px;
   }
 
   .select-section {
     width: 50%;
+    background-color: #f8f4e1;
     margin-bottom: 0px;
     padding-top: 50px;
-    
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
+    border-top: 30px solid #f8f4e1;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
   }
 
   .select-container {
@@ -291,9 +298,11 @@ button {
 
   .amount-items {
     width: 50%;
-    background-color: red;
+    background-color: #f8f4e1;
     margin-bottom: 0px;
     padding-top: 50px;
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
   }
  
   .name-container {
@@ -306,9 +315,11 @@ button {
 
   .name {
     width: 50%;
-    background-color: green;
+    background-color: #f8f4e1;
     margin-bottom: 0px;
     padding-top: 50px;
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
   }
 
   .phone-container {
@@ -320,9 +331,11 @@ button {
 
   .phone {
     width: 50%;
-    background-color: orange;
+    background-color: #f8f4e1;
     margin-bottom: 0px;
     padding-top: 50px;
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
   }
 
   .checkbox-container {
@@ -337,8 +350,13 @@ button {
     justify-content: center;
     align-items: center;
     width: 50%;
-    background-color: orange;
+    background-color: #f8f4e1;
     margin-bottom: 50px;
+    border-left: 30px solid #f8f4e1;
+    border-right: 30px solid #f8f4e1;
+    border-bottom: 30px solid #f8f4e1;
+    border-bottom-left-radius: 25px;
+    border-bottom-right-radius: 25px;
   }
 
   .button-container {
@@ -348,6 +366,10 @@ button {
   
   button {
     width: 50%;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 

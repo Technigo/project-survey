@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
+
 import Image from './Image'
+
 
 const suitColors = ["Jacket: Marine Blue", "Jacket: Blue", "Jacket: Green", "Jacket: Gray", "Jacket: Red", "Jacket: Lightblue"]
 
