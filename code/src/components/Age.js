@@ -1,31 +1,30 @@
 import React from 'react'
 
-
+const ageGroups = ['0-19','20-29','30-39','40-49','50+',] 
 
 export const AgeRadioOption = ({ageGroupSpan, setAgeGroup}) => {
-  const onAgeSelect = (event) => {
-    setAgeGroup(event.target.value)
   
-  }
-
   return (
-  <>
-      <label htmlFor={ageGroupSpan}>{ageGroupSpan}</label>
-      <input
-      name="age"
-      id={ageGroupSpan}
-      value={ageGroupSpan}
-      type="radio"
-      onChange={(event) => {onAgeSelect(event)
-      }}
-    />
-   
-    
-  </>
-  )
+  <div>
+    <p>How old are you?</p>
+      {ageGroups.map((age) => (
+        <label htmlFor='age'>
+        <input
+        name='age'
+        type="radio"
+        value={age}
+        onChange={(event) => setAgeGroup(event.target.value)}
+        checked={ageGroupSpan === age}
+        aria-label='radio button select'
+        required
+        />
+        {age}
+        </label>
+      ))}
+    </div> 
+  
+)
 }
-
-
 
 
 

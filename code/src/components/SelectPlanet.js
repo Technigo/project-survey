@@ -15,6 +15,7 @@ export const SelectPlanet = ({planet, setPlanet}) => {
         id='planets'
         onChange={(event) => {onPlanetSelect(event)}}
         value={planet}
+        required
         >
           <option disabled></option>
           <option>Mercury</option>

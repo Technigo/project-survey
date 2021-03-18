@@ -14,6 +14,7 @@ export const UserName = ({name, setName}) => {
         type='text'
         value={name}
         onChange={(event) => {onNameChange(event)}}
+        required
       />
       </label>
     </div>

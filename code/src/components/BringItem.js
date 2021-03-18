@@ -16,6 +16,7 @@ export const BringItem = ({item, setInputItem}) => {
         type='text'
         value={item}
         onChange={(event) => {onItemSelect(event)}}
+        required
         />
       </label>
     </div>

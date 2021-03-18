@@ -6,11 +6,11 @@ import { SelectPlanet } from './SelectPlanet'
 import { BringItem } from './BringItem'
 import { Summary } from './Summery'
 
-const ageGroups = ['0-19','20-29','30-39','40-49','50+',] 
+
 
 
 export const Form = () => {
-  const [age, setAgeGroup] = useState('')
+  const [ageGroupSpan, setAgeGroup] = useState('')
   const [name, setName] = useState('')
   const [item, setInputItem] = useState('')
   const [planet, setPlanet] = useState('')
@@ -32,15 +32,10 @@ export const Form = () => {
         />
       </div>
       <div>
-      <p>How old are you?</p>
-      {ageGroups.map((age) => {
-        return (
           <AgeRadioOption 
-          ageGroupSpan={age}
+          ageGroupSpan={ageGroupSpan}
           setAgeGroup={setAgeGroup}
           />
-        )
-      })}
       </div>
       <div>
         <SelectPlanet
@@ -55,15 +50,15 @@ export const Form = () => {
          />
       </div>
       <div>
-        <button>
-          submit
-        </button>
+        <button className='submit-button' type='submit'>Submit!</button>
+          
+       
       </div>
     </form>
     ):(
       <Summary 
       name={name} 
-      ageGroupSpan={age} 
+      ageGroupSpan={ageGroupSpan} 
       planet={planet} 
       item={item}
       />
