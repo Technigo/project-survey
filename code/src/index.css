@@ -30,7 +30,24 @@ code {
 }
 
 .welcome-image {
-  width: 70%;
+  width: 100%;
+}
+
+.dinner-image {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.summary-section {
+display: flex;
+flex-direction: column;
+justify-content: center;
+}
+
+.button {
+  align-self: center;
 }
 
 /**MEDIA QUERIES**/

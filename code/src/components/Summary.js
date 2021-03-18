@@ -13,6 +13,7 @@ const Summary = ({dish, dish2, condiment} ) => {
     <>
     <div className="summary-section">
     <h1>Dinner will be ready soon!</h1>
+    <img className="dinner-image" src="assets/dinnerimage.jpg" alt="Friends toasting at dinner table" ></img>
     <button onClick={onButtonClick} className="button" type="submit" value="submit">SEND</button>
     <h2>Think no more. Here's what you can have today:</h2>
 
