@@ -7,7 +7,6 @@ const CheckboxContainer = styled.div`
   align-items: center;
   justify-content: center;
   flex-direction: column;
-  padding: 80px;
 `;
 
 const Row = styled.div`
@@ -33,7 +32,7 @@ const CheckboxLabel = styled.label`
   }
   &:after {
     content: "✔";
-    color: #04465c;
+    color: #4aa46f;
     font-size: 2.7rem;
     line-height: 2rem;
     position: absolute;

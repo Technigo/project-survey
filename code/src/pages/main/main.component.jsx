@@ -1,9 +1,9 @@
 import React from "react";
 
-import Form from "../../components/form/form.component";
+import Start from "../../components/start/start.component";
 
 const Main = () => {
-  return <Form />;
+  return <Start />;
 };
 
 export default Main;

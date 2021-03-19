@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
-const SeasonSelect = styled.select`
+const NameInput = styled.input`
   display: block;
   width: 400px;
-  margin-bottom: calc(var(--spacing) * 16);
   border: 1px solid #cbcbcb;
   padding: calc(var(--spacing) * 3) calc(var(--spacing) * 2);
   border-radius: calc(var(--spacing) * 2);
+  margin-bottom: calc(var(--spacing) * 16);
 `;
 
-export { SeasonSelect };
+export { NameInput };

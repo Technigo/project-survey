@@ -1,9 +1,9 @@
 import React from "react";
 
 import { ButtonContainer, ButtonText } from "../../assets/styles/shared";
-import { FormWrapper } from "./form.style";
+import { FormWrapper } from "./start.style";
 
-const Form = () => {
+const Start = () => {
   return (
     <FormWrapper>
       <ButtonContainer>
@@ -13,4 +13,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default Start;

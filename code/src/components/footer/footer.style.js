@@ -24,9 +24,6 @@ const wavesReverse = keyframes`
 const FooterContainer = styled.footer`
   width: 100%;
   height: 150px;
-  background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/74/68/4957bc61710d9ff.jpg");
-  background-size: cover;
-  background-attachment: fixed;
   position: absolute;
   bottom: 0;
 `;

@@ -2,7 +2,12 @@ import styled from "styled-components";
 
 const HeaderContainer = styled.header`
   width: 100%;
-  position: relative;
+  position: absolute;
+  top: 10%;
 `;
 
-export { HeaderContainer };
+const Title = styled.h1`
+  color: #4aa46f;
+`;
+
+export { HeaderContainer, Title };

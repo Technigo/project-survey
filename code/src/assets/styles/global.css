@@ -28,6 +28,10 @@ li {
   list-style: none;
 }
 
+p {
+  line-height: 26px;
+}
+
 ul,
 li {
   padding: 0;
@@ -90,4 +94,8 @@ select:focus {
   opacity: 1;
   -webkit-transform: scale(1);
   transform: scale(1);
+}
+
+progress::-moz-progress-bar {
+  background: #f1c21b;
 }

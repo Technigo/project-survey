@@ -3,7 +3,8 @@ import React from "react";
 import {
   ButtonContainer,
   ButtonText,
-  ButtonsContainer
+  ButtonsContainer,
+  Label
 } from "../../assets/styles/shared";
 
 import {
@@ -13,55 +14,63 @@ import {
   CheckboxLabel,
   Input,
   Title
-} from "./checkbox.style";
+} from "./equipments.style";
 
 const itemSelected = [];
 
-const CheckBox = () => {
+const Equipments = () => {
   const onItemChange = (e) => {
-    itemSelected.push(e.target.value);
+    const { value } = e.target;
+
+    if (itemSelected.includes(value)) {
+      itemSelected.splice(itemSelected.indexOf(value), 1);
+    } else {
+      itemSelected.push(value);
+    }
+    console.log(itemSelected);
   };
 
   const onNextHandler = (e) => {
     e.preventDefault();
-    localStorage.setItem("Items", itemSelected);
+    localStorage.setItem("equipments", itemSelected);
   };
 
   return (
     <CheckboxContainer onChange={onItemChange}>
+      <Label>What equipment can you bring with you?</Label>
       <Row>
         <Checkbox>
-          <Input type="checkbox" id="checkbox0" />
+          <Input type="checkbox" id="checkbox0" value="Harness" />
           <CheckboxLabel htmlFor="checkbox0" />
-          <Title>Selectors</Title>
+          <Title>Harness</Title>
         </Checkbox>
       </Row>
       <Row>
         <Checkbox>
-          <Input type="checkbox" id="checkbox1" value="Specificity" />
+          <Input type="checkbox" id="checkbox1" value="Climbing helmet" />
           <CheckboxLabel htmlFor="checkbox1" />
-          <Title className="title">Specificity</Title>
+          <Title className="title">Climbing helmet</Title>
         </Checkbox>
       </Row>
       <Row>
         <Checkbox>
-          <Input type="checkbox" id="checkbox4" value="Cascade" />
+          <Input type="checkbox" id="checkbox4" value="Climbing shoes" />
           <CheckboxLabel htmlFor="checkbox4" />
-          <Title className="title">Cascade</Title>
+          <Title className="title">Climbing shoes</Title>
         </Checkbox>
       </Row>
       <Row>
         <Checkbox>
-          <Input type="checkbox" id="checkbox2" value="Inheritance" />
+          <Input type="checkbox" id="checkbox2" value="Carabiners" />
           <CheckboxLabel htmlFor="checkbox2" />
-          <Title className="title">Inheritance</Title>
+          <Title className="title">Carabiners</Title>
         </Checkbox>
       </Row>
       <Row>
         <Checkbox>
-          <Input type="checkbox" id="checkbox3" value="Transition" />
+          <Input type="checkbox" id="checkbox3" value="Quickdraw" />
           <CheckboxLabel htmlFor="checkbox3" />
-          <Title className="title">Transition</Title>
+          <Title className="title">Quickdraw</Title>
         </Checkbox>
       </Row>
       <ButtonsContainer>
@@ -76,4 +85,4 @@ const CheckBox = () => {
   );
 };
 
-export default CheckBox;
+export default Equipments;

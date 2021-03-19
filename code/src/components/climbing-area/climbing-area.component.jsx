@@ -1,29 +1,31 @@
 import React, { useState } from "react";
 
-import TechnologyRadioOption from "../option/option";
+import AreaOption from "../area-option/area-option.component";
 import {
   ButtonContainer,
   ButtonText,
-  ButtonsContainer
+  ButtonsContainer,
+  Label
 } from "../../assets/styles/shared";
 
-const technologies = ["html", "css", "java", "ruby", "python", "js"];
+const areas = ["Indoor", "Outdoor"];
 
-const Tech = () => {
-  const [tech, setTech] = useState(localStorage.getItem("Tech") || "");
+const ClimbingArea = () => {
+  const [area, setArea] = useState(localStorage.getItem("area") || "");
   const onNextHandler = (e) => {
     e.preventDefault();
-    localStorage.setItem("Tech", tech);
+    localStorage.setItem("area", area);
   };
 
   return (
     <>
-      {technologies.map((technology) => {
+      <Label>What type of area for climbing do you prefer?</Label>
+      {areas.map((climbingArea) => {
         return (
-          <TechnologyRadioOption
-            technologyName={technology}
-            setTech={setTech}
-            key={technology} />
+          <AreaOption
+            area={climbingArea}
+            setArea={setArea}
+            key={climbingArea} />
         );
       })}
       <ButtonsContainer>
@@ -38,4 +40,4 @@ const Tech = () => {
   );
 };
 
-export default Tech;
+export default ClimbingArea;

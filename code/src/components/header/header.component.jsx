@@ -1,11 +1,11 @@
 import React from "react";
 
-import { HeaderContainer } from "./header.styles";
+import { HeaderContainer, Title } from "./header.styles";
 
 const Header = () => {
   return (
     <HeaderContainer>
-      <h1>Header Content</h1>
+      <Title>Climbing tour</Title>
     </HeaderContainer>
   );
 };

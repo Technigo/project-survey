@@ -10,27 +10,41 @@ import {
 import { Input } from "./color.style";
 
 const Color = () => {
-  const [color, setColor] = useState(
-    localStorage.getItem("Color") || ""
+  const [backgroundColor, setBackgroundColor] = useState(
+    localStorage.getItem("backgroundColor") || "#93d2e2"
+  );
+  const [textColor, setTextColor] = useState(
+    localStorage.getItem("textColor") || "#ffffff"
   );
 
-  const onColorChange = (e) => {
-    setColor(e.target.value);
+  const onBackgroundColorChange = (e) => {
+    setBackgroundColor(e.target.value);
+  };
+  const onTextColorChange = (e) => {
+    setTextColor(e.target.value);
   };
 
   const onResultHandler = (e) => {
     e.preventDefault();
-    localStorage.setItem("Color", color);
+    localStorage.setItem("backgroundColor", backgroundColor);
+    localStorage.setItem("textColor", textColor);
   };
   return (
     <>
-      <Label htmlFor="favcolor">Select your favorite color:</Label>
+      <Label htmlFor="favcolor">Please select your summary background color:</Label>
       <Input
         type="color"
         id="favcolor"
         name="favcolor"
-        value={color}
-        onChange={onColorChange} />
+        value={backgroundColor}
+        onChange={onBackgroundColorChange} />
+      <Label htmlFor="favcolor1">Please select your summary text color:</Label>
+      <Input
+        type="color"
+        id="favcolor1"
+        name="favcolor1"
+        value={textColor}
+        onChange={onTextColorChange} />
       <ButtonsContainer>
         <ButtonContainer type="submit">
           <ButtonText to="/step-5">Previous</ButtonText>
