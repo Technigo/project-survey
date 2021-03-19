@@ -8,6 +8,7 @@ import CheckBox from "../checkbox/checkbox.component";
 import Range from "../range/range.component";
 import RadioButton from "../radio-button/radio-button.component";
 import Color from "../color/color.component";
+import Result from "../result/result.component";
 
 function Survey() {
   return (
@@ -19,6 +20,7 @@ function Survey() {
         <Route path="/step-4" component={Range} />
         <Route path="/step-5" component={RadioButton} />
         <Route path="/step-6" component={Color} />
+        <Route path="/result" component={Result} />
 
       </Switch>
     </FormContainer>
