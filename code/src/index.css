@@ -71,6 +71,7 @@ code {
 .button {
   padding: 5px 10px;
   width:fit-content;
+  background-color: white;
   font-size: 16px;
   border-radius: 5px;
   box-shadow: 0px 5px 5px #527ea0;
