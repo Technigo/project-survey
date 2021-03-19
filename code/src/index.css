@@ -21,3 +21,26 @@ code {
   position: relative;
   object-fit: cover;
 }
+
+/* MEDIA QUERY TABLET */
+@media only screen and (min-width: 768px) {
+  
+/* Header */
+
+.stockholm-heading {
+  font-size: 3rem;
+}
+
+.live-music-heading {
+  font-size: 5.3rem;
+}
+
+}
+
+
+/* MEDIA QUERY DESKTOP */
+@media only screen and (min-width: 992px) {
+  /* Header */
+
+  }
+
