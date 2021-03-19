@@ -2,6 +2,7 @@ import React from "react";
 import NameInput from "./NameInput";
 import BookInput from "./BookInput";
 import DropDownMenu from "./DropDownMenu"
+import RadioButtonsInput from "./RadioButtonsInput";
 
 
 const Form = (props) => {
@@ -14,6 +15,10 @@ const Form = (props) => {
                 onBookChange={props.onBookChange} />
             <DropDownMenu feeling={props.feeling}
                 onFeelingChange={props.onFeelingChange} />
+            <RadioButtonsInput
+                onNumberOfBookChange={props.onNumberOfBookChange}
+                numberOfBook={props.numberOfBook}
+            />
         </form>
     )
 }

@@ -8,6 +8,7 @@ export const App = () => {
   const [name, setName] = useState('');
   const [bookname, setBookName] = useState('');
   const [feeling, setFeeling] = useState('');
+  const [numberOfBook, setnumberOfBook] = useState('');
 
   const onNameChange = (event) => {
     console.log(event.target.value)
@@ -21,6 +22,10 @@ export const App = () => {
     console.log(event.target.value)
     setFeeling(event.target.value)
   }
+  const onNumberOfBookChange = (event) => {
+    console.log(event.target.value)
+    setnumberOfBook(event.target.value)
+  }
   return (
     <div>
       <Form
@@ -29,7 +34,11 @@ export const App = () => {
         bookname={bookname}
         onBookChange={onBookChange}
         feeling={feeling}
-        onFeelingChange={onFeelingChange} />
+        onFeelingChange={onFeelingChange}
+        onNumberOfBookChange={onNumberOfBookChange}
+        numberOfBook={numberOfBook}
+
+      />
     </div>
   )
 }
