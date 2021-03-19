@@ -16,7 +16,7 @@ export const App = () => {
 
   //function for submit button
   const handleSubmit = (event) => {
-    console-log("handleSubmit called")
+    console.log("handleSubmit called")
     event.preventDefault()
     if (isSurveyComplete())
     {
