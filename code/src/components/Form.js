@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 
-import data from '../data.json'
+import data from '../data.json';
 
-import WelcomeSection from './WelcomeSection'
-import TextInputName from './TextInputName'
+import WelcomeSection from './WelcomeSection';
+import TextInputName from './TextInputName';
 import CountrySelector from './CounrtySelector';
 import NeedVacationRange from './NeedVactionRange'
 import VacationTypeRadioButton from './VacationTypeRadioButtons';
 import ChooseDate from './ChooseDate';
-import Summary from './Summary'
-import ProgressBar from './ProgressBar'
+import Summary from './Summary';
+import ProgressBar from './ProgressBar';
+import SubmitButton from './SubmitButton';
 
 
 
@@ -40,7 +41,11 @@ const Form = () => {
   //Funcion that handles submit form 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setSummaryHidden(false)
+    const regex = /^[a-zA-Z]+$/
+    if(!(regex.test(name))) {
+      alert("A name cannot contain numbers")
+    } else {setSummaryHidden(false)}
+    
   }
   //conditional rendering depending on whether summary is hidden or not
   if (summaryHidden === true) {
@@ -103,9 +108,7 @@ const Form = () => {
               email={email}
               setEmail={setEmail}
             />
-            <button disabled={isFormFilled()} type="submit" className="start-next-button">
-              Submit
-            </button>
+            <SubmitButton isFormFilled={isFormFilled}/>
           </div>
         )}
         <div>
