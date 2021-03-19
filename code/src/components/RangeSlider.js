@@ -1,18 +1,19 @@
 import React, {useState} from 'react'
 
-const Range = () => {
-    const [Rng, setRng] = useState(50);
+const Range = ({decideRange, IselectRange}) => {
+    //const [Rng, setRng] = useState(50);
+    //console.log(Rng)
 
     const Satisfaction = () => {
 
-            if (Rng <= 25) {
-                return ( <p className="satisfaction">Bad: {Rng}</p>)
-            } else if (Rng > 25 && Rng <50) {
-                return ( <p className="satisfaction">Not so good: {Rng}</p>)
-            } else if (Rng > 50 && Rng <75) {
-                return (<p className="satisfaction">Good: {Rng}</p>)
-            } else if (Rng > 75 ) 
-            { return (<p className="satisfaction">Very good: {Rng}</p>)
+            if (decideRange <= 25) {
+                return ( <p className="satisfaction">Bad: {decideRange}</p>)
+            } else if (decideRange > 25 && decideRange <50) {
+                return ( <p className="satisfaction">Not so good: {decideRange}</p>)
+            } else if (decideRange > 50 && decideRange <75) {
+                return (<p className="satisfaction">Good: {decideRange}</p>)
+            } else if (decideRange > 75 ) 
+            { return (<p className="satisfaction">Very good: {decideRange}</p>)
             }
     }
 
@@ -27,11 +28,11 @@ const Range = () => {
             type="range" 
             min="1" 
             max="100" 
-            value={Rng} //{Rng}
-            onChange={event => setRng(event.target.value)}
+            value={decideRange} //{Rng}
+            onChange={e => IselectRange(e)} // tog bort .value
             className="slider" />
             <div>
-                {Satisfaction()}
+            {Satisfaction()}
             </div>
             </label>
         </div>

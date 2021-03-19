@@ -1,17 +1,16 @@
 import React, {useState} from 'react'
 
-
-const SelectSize = ({sizeSelected, IselectSize}) => {
-    //const [Size, setSize] = useState("");
+const SelectSize = () => {
+    const [Size, setSize] = useState("");
 
     return (
         <div className="select-container">
           <label className="select-section">
-      <p id="size">Size: {sizeSelected} </p> 
+      <p id="size">Size: {e.target.value}</p>
 
       <select 
-        onChange={e => IselectSize(e)} //Skriv istället onChange={setSize}
-        value={sizeSelected}
+        onChange={event => setSize(event.target.value)} //Skriv istället onChange={setSize}
+        value={e.target.value}
         name="Suit Size"
       >
         <option disabled value="">Select Size:</option>

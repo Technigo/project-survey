@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
-const Checkbox = () => {
-    const [wantsNewsletter, setwantsNewsletter] = useState("");
+const Checkbox = ({checkboxInput, IselectCheckbox}) => {
+    //const [wantsNewsletter, setwantsNewsletter] = useState("");
+    //console.log(wantsNewsletter)
     return (
         <div className="checkbox-container">
           <label className="checkbox-label">
@@ -10,8 +11,8 @@ const Checkbox = () => {
         <input
           type="checkbox"
           name="Receive newsletter"
-          checked={wantsNewsletter}
-          onChange={event => setwantsNewsletter(event.target.checked)}
+          //checked={checkboxInput}
+          onChange={e => IselectCheckbox(e)}
           className="checkbox"
         />
         </div>

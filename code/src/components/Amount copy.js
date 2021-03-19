@@ -1,8 +1,8 @@
 import React, {useState} from 'react'
 
-const Amount = ({choosedAmount, IselectAmount}) => {
-    //const [myamount, setmyamount] = useState("");
-    //console.log(myamount)
+const Amount = () => {
+    const [myamount, setmyamount] = useState("");
+    console.log(myamount)
 
     return (
         <div className="amount-container">
@@ -11,8 +11,8 @@ const Amount = ({choosedAmount, IselectAmount}) => {
             <input 
             type="number" 
             name="Amount of Items" 
-            value={choosedAmount}
-            onChange={e => IselectAmount(e)}
+            value={myamount}
+            onChange={event => setmyamount(event.target.value)}
             placeholder="# of items" required />
             </label>
         </div>

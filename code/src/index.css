@@ -27,10 +27,11 @@ code {
 
 .hero-title {
   position: absolute;
-  top: 50%;
+  top: 40%;
+  width: 50%;
   right: 0;
   bottom: 0;
-  left: 0;
+  left: 30%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -87,7 +88,7 @@ code {
   transform: scale(1.2); 
 }
 
-.test3 {
+.next-btn-container {
   display: none;
 }
 
@@ -259,7 +260,22 @@ label {
 /* Range slider section ends here */
 
 
+@media (min-width:568px) {
+  .hero-title {
+    top: 20%;
+    width: 30%;
+    left: 35%;
+  }
+}
+
+
 @media (min-width:1024px) {
+
+  .hero-title {
+    top: 20%;
+    width: 40%;
+    left: 35%;
+  }
 
   .group-container {
     display: grid;
@@ -273,6 +289,13 @@ label {
 
 
 @media (min-width:1300px) {
+
+  .hero-title {
+    top: 20%;
+    width: 20%;
+    left: 40%;
+  }
+
   .group-container {
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: -50px;
@@ -286,22 +309,21 @@ label {
     width: 50%;
   } */
 
-  .test3 {
+  .next-btn-container {
     display: block;
   }
 
-  .test {
+  .next-btn {
     display: flex;
     justify-content: flex-start;
-    border: 3px solid black;
     margin-bottom: 100px;
   }
 
-  .test2 {
+  .link-btn {
     display: flex;
     justify-content: flex-start;
     background-color: #f8f4e1;
-    padding: 5px 20px;
+    padding: 15px 40px;
     font-size: 24px;
     color: #000;
     border-radius: 5px;

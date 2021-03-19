@@ -5,8 +5,8 @@ import Image from './Image'
 
 const suitColors = ["Jacket: Marine Blue", "Jacket: Blue", "Jacket: Green", "Jacket: Gray", "Jacket: Red", "Jacket: Lightblue"]
 
-const Radio = ({colorSelected, IselectColor}) => {
-  //const [Color, setColor] = useState();
+const Radio = () => {
+  const [Color, setColor] = useState();
   const images = ["./assets/jacket1.jpg", "./assets/jacket2.jpg", "./assets/jacket3.jpg", "./assets/jacket4.jpg", "./assets/jacket5.jpg", "./assets/jacket6.jpg"]
 
   return (
@@ -24,8 +24,8 @@ const Radio = ({colorSelected, IselectColor}) => {
             <input
             type="radio"
             value={group}
-            onChange={e => IselectColor(e)} // Du kan gära onChange ={SetColor}
-            checked={colorSelected === group}
+            onChange={event => setColor(event.target.value)} // Du kan gära onChange ={SetColor}
+            checked={Color === group}
             name="Selected jacket"
             className="my-input"
             required

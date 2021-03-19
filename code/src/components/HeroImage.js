@@ -6,7 +6,8 @@ const Hero = () => {
             <header className="hero">
                 <img className="hero-image" src="./assets/hero.jpg" alt="Hero Image" />  
             </header>
-            <div className="hero-title"><h1>GOING TO ADD LOGO HERE</h1></div>
+            <img className="hero-title" src="./assets/logo.png" alt="logotype" />
+            
         </>
     )
 }
