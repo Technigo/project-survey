@@ -10,7 +10,7 @@ const SecondQuestion = (props) => {
  
   return (
     <div className="question-container">
-      <h1>Your favorite time to read?</h1>
+      <h1 className="question-header">Your favorite time to read?</h1>
       <div className="custom-select">
         <select
         onChange={onFavoriteTime}

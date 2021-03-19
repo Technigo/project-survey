@@ -16,8 +16,8 @@ const FirstQuestion = (props) => {
   }
 
   return (
-    <div className="question-container" role="radiogroup" aria-label="How often do you read? 5 options">
-      <h1 tabIndex='0'>How often do you read?</h1>
+    <div className="question-container" aria-label="How often do you read? 5 options">
+      <h1 className="question-header">How often do you read?</h1>
       {amountOfTime.map(time => (
         <div className="radio-container" key={time}>
           <label htmlFor="time">

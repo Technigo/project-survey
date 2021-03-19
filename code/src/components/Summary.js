@@ -8,14 +8,17 @@ const Summary = (props) => {
 
   return (
     <section className="question-container summary">
-      <h1 className="summary-heading">Amazing!</h1>
+      <h1>Amazing {props.name}!</h1>
       <p>
-        Hi {props.name}! You read {props.time} during {props.favoriteTime} time. 
+        You read {props.time} during {props.favoriteTime} time. 
         I love that your favorite place to read is {props.place}.
       </p>
       <button 
       onClick={restart} 
       className="start-btn"
+      type="button"
+      tabIndex='0'
+      aria-label='Restart the survey'
       >
         Restart
       </button>

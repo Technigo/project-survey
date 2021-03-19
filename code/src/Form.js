@@ -15,9 +15,9 @@ export const Form = () => {
   const [favoriteTime, setFavoriteTime] = useState('')
   const [favoritePlace, setFavoritePlace] = useState ('')
   const [section, setSection] = useState('startPage')
-  const [progress, setProgress] = useState()
+  const [progress, setProgress] = useState(0)
 
- 
+
   const handleSubmit = (event) => {
     event.preventDefault()
     if (name === '') {
@@ -28,7 +28,7 @@ export const Form = () => {
       setProgress([30])
     } else if (favoriteTime ==='') {
       setSection('thirdQuestion')
-      setProgress([50])
+      setProgress([60])
     } else if (favoritePlace ==='') {
       setSection('fourthQuestion')
       setProgress([90])
@@ -38,9 +38,9 @@ export const Form = () => {
   }
 
   return (
-    <main className="test">
+    <main className="form">
       {section !== 'summary' ? (
-        <form className="test" onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit}>
           {section === 'startPage' && (
             <Header />
           )}
@@ -48,6 +48,7 @@ export const Form = () => {
           {section ==='firstQuestion' && (
             <>
               <NameQuestion name={name} setName={setName} />
+              <ProgressBar progress= {progress} />
             </>
           )}
           
@@ -56,7 +57,6 @@ export const Form = () => {
             <FirstQuestion readingTime={time} setTime={setTime} />
             <ProgressBar progress= {progress} />
             </>
-            
           )}
 
           {section ==='thirdQuestion' && (

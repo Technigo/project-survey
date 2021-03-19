@@ -1,11 +1,13 @@
 import React from 'react'
-import Filler from 'components/Filler'
 
 const ProgressBar = (props) => {
   return (
-    <div className="progress-bar question-container">
-      <Filler progress={props.progress}/>
-    </div>
+    <>
+      <div className="progress-bar question-container">
+        <div className="filler" style={{width: `${props.progress}%`}}>
+        </div>
+      </div>
+    </>
   )
 }
 

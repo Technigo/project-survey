@@ -11,17 +11,19 @@ const NameQuestion = (props) => {
 
   return (
     <div className="question-container">
-      <h1>What is your name?</h1> 
-      <label htmlFor="name">
-        <input
-        name="name"
-        type="text"
-        value={props.name}
-        onChange={onName}
-        required
-        />
-      </label>
-      <NextButton />
+      <h1 className="question-header">What is your name?</h1>
+      <div className="name-question">
+        <label htmlFor="name">
+          <input
+          name="name"
+          type="text"
+          value={props.name}
+          onChange={onName}
+          required
+          />
+        </label>
+        <NextButton />
+      </div> 
     </div>
   )
 }

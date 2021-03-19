@@ -17,8 +17,8 @@ const ThirdQuestion = (props) => {
   }
 
   return (
-      <div className="question-container" role="radiogroup" aria-label="Favorite place to read: 5 options">
-        <h1>Were is your favorite place to read?</h1>
+      <div className="question-container" aria-label="Favorite place to read: 5 options">
+        <h1 className="question-header">Favorite place to read?</h1>
         {places.map(places => (
         <div className="radio-container" key={places}>
           <label htmlFor="place">
