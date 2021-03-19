@@ -13,6 +13,7 @@ import Range from './RangeSlider'
 
 const Test = () => {
     // Nu testar jagss
+    const [sumHidden, setsumHidden] = useState(true);
     const [Size, setSize] = useState("");
     const [myamount, setmyamount] = useState("");
     const [Color, setColor] = useState();
@@ -69,9 +70,18 @@ const Test = () => {
         setColor(e.target.value)
     }
 
+    const OnSumChange = (event) => {
+        event.preventDefault()
+        setsumHidden (false)
+
+
+    }
+
+    if (sumHidden === true) {
+
+    
     return (
-        <>
-        <form action="http://httpbin.org/anything" method="POST">
+        <form onSubmit={OnSumChange}>
                 <Hero />
                 <div>
                 <div className="form">
@@ -91,13 +101,21 @@ const Test = () => {
                 </div>
                  
                 </div>
-            </form>
-
+            </form>)
+        } else {
+        return ( 
             <div>
-                <h1>Summary</h1>
+                <h1>{myphone}</h1>
+                <h1>{wantsNewsletter}</h1>
+                <h1>{myemail}</h1>
+                <h1>{myname}</h1>
+                <h1>{Color}</h1>
+                <h1>{myamount}</h1>
+                <h1>{Size}</h1>
             </div>
-            </>
-    )
+        )
+            
+            }
 }
 
 export default Test
