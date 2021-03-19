@@ -1,0 +1,27 @@
+button {
+    width: 70px;
+    border-radius: 10px;
+    outline: none;
+    justify-self: center;
+    margin: 0 10px 20px 10px;
+    background-color: rgb(126, 185, 185);
+    border: none;
+}
+
+button:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 700px) {
+    button {
+        width: 90px;
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    button {
+        width: 120px;
+        font-size: 20px;
+    }
+}

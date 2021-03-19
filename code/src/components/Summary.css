@@ -1,7 +1,18 @@
 .summary {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    overflow-y: auto;
-    overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* adds comma to separate words when displaying values from
+multiple checkboxes */
+.summary-future-choice:not(:last-of-type):after {
+  content: ", \00a0";
+}
+
+/* adds a & between second to last and last word */
+.summary-future-choice:nth-last-of-type(2):after {
+  content: "\00a0 & \00a0";
 }

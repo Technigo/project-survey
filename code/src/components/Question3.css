@@ -6,55 +6,60 @@
 
 /*clearing styles */
 select {
-    appearance: none;
-    background-color: transparent;
-    border: none;
-    padding: 0 1em 0 0;
-    margin: 0;
-    width: 100%;
-    font-family: inherit;
-    font-size: inherit;
-    cursor: inherit;
-    line-height: inherit;
-    outline: none;
+  appearance: none;
+  background-color: transparent;
+  border: none;
+  padding: 0 1em 0 0;
+  margin: 0;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  line-height: inherit;
+  outline: none;
 }
 
 /*adding custom*/
-.drop-down__inner{
-    width: 100%;
-    border: 1px solid black;
-    border-radius: 0.25em;
-    padding: 0.25em 0.5em;
-    font-size: 16px;
-    cursor: pointer;
-    line-height: 1.1;
-    background-color: rgb(255, 255, 255);
-    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
-    display: grid;
-    grid-template-areas: "select";
-    align-items: center;
+.drop-down__inner {
+  width: 100%;
+  border: 1px solid black;
+  border-radius: 0.25em;
+  padding: 0.25em 0.5em;
+  font-size: 16px;
+  cursor: pointer;
+  line-height: 1.1;
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+  display: grid;
+  grid-template-areas: "select";
+  align-items: center;
+}
+
+.drop-down__inner::after {
+  content: "";
+  width: 0.8em;
+  height: 0.5em;
+  background-color: rgb(93, 107, 116);
+  clip-path: polygon(100% 0%, 0 0%, 50% 100%);
+  justify-self: end;
+}
+
+select,
+.drop-down__inner::after {
+  grid-area: select;
+}
+
+@media screen and (min-width: 700px) {
+  .drop-down__inner {
+    margin-left: 25%;
+    width: 50%;
+    font-size: 18px;
   }
-
-  .drop-down__inner::after {
-    content: "";
-    width: 0.8em;
-    height: 0.5em;
-    background-color: rgb(93, 107, 116);
-    clip-path: polygon(100% 0%, 0 0%, 50% 100%);
-    justify-self: end;
+}
+@media screen and (min-width: 1500px) {
+  .drop-down__inner {
+    margin-left: 30%;
+    width: 30%;
+    font-size: 20px;
   }
-
-  select,
-  .drop-down__inner::after {
-      grid-area: select;
-  }
-
-  @media screen and (min-width: 1500px) {
-    .drop-down__inner {
-      margin-left: 30%;
-      width: 30%;
-      font-size: 18px;
-    }
-  }
-
-
+}

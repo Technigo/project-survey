@@ -4,14 +4,14 @@ import "./SubQuestion.css";
 
 export const SubQuestion = ({boxArray,setMoreFutureChoices,moreFutureChoices}) => {
 
-  /*function to add all checked checkbox choices to a string. Also checks if the user unchecked 
- a box and removes the answer from the string if this is true */
+  /*adds all checkbox answers to an array. Also filters out so there wont be two
+  of the same object if the box is clicked twice.  */
   const handleChange = (e) => {
-    e.target.checked
-      ? setMoreFutureChoices((moreFutureChoices += `${e.target.name}, `))
-      : setMoreFutureChoices(
-          moreFutureChoices.replace(`${e.target.name}, `, "")
-        );
+    moreFutureChoices.includes(e.target.name)
+      ? setMoreFutureChoices(
+          moreFutureChoices.filter((item) => item !== e.target.name)
+        )
+      : setMoreFutureChoices([e.target.name, ...moreFutureChoices]);
   };
 
   return (

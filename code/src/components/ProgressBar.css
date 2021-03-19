@@ -3,6 +3,7 @@
     Height: 30px;
     background-color: gainsboro;
     position:relative;
+    border-radius: 10px;
 }
 
 /*adds progression text before the bar*/
@@ -18,12 +19,13 @@ depending on question number class */
     height: 100%;
     width: 0%;
     background-color: rgb(19, 206, 212);
+    border-radius: 10px 0 0 10px;
 }
 
 /*adds a procetage number on the bar */
 .progress-bar__inner:after {
     color: black;
-    content: '0%'
+    content: '\00a0 0%'
 }
 
 .Question1:before {
@@ -35,7 +37,7 @@ depending on question number class */
 
 .Question1:after {
     color: white;
-    content: '20%'
+    content: '\00a0 20%'
 }
 
 .Question2:before {
@@ -48,7 +50,7 @@ depending on question number class */
 
 .Question2:after {
     color: white;
-    content: '40%'
+    content: '\00a0 40%'
 }
 
 .Question3:before {
@@ -61,7 +63,7 @@ depending on question number class */
 
 .Question3:after {
     color: white;
-    content: '60%'
+    content: '\00a0 60%'
 }
 
 .Question4:before {
@@ -74,31 +76,51 @@ depending on question number class */
 
 .Question4:after {
     color: white;
-    content: '80%'
+    content: '\00a0 80%'
 }
 
-.Question4-Sub:before {
+.Question5:before {
     content: 'Progress: Question 4,5/5'
 }
 
-.Question4-Sub {
+.Question5 {
     width: 90%;
 }
 
-.Question4-Sub:after {
+.Question5:after {
     color: white;
-    content: '90%'
+    content: '\00a0 90%'
 }
 
-.Summary:before {
+.End:before {
     content: 'Progress: Done!'
 }
 
-.Summary {
+.End {
     width: 100%;
+    border-radius: 10px;
 }
 
-.Summary:after {
+.End:after {
     color: white;
     content: '100%'
+}
+
+@media screen and (min-width: 700px) {
+    .progress-bar__inner:after {
+        font-size: 18px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .progress-bar {
+        Height: 35px;
+    }
+    .progress-bar__inner:before {
+        bottom: 45px;
+        font-size: 18px;
+    }
+    .progress-bar__inner:after {
+        font-size: 20px;
+    }
 }

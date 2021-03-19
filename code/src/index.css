@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap");
 
 body {
   margin: 0;
@@ -20,17 +20,17 @@ code {
   display: grid;
   grid-template-columns: 10% 1fr 10%;
   grid-template-rows: 300px 100px 1fr 70px 50px 70px 50px;
-  grid-template-areas: 
-  "header header header"
-  ". heading ."
-  ". main ."
-  ". . ."
-  ". progressbar ."
-  ". button ."
-  "footer footer footer";
+  grid-template-areas:
+    "header header header"
+    ". heading ."
+    ". main ."
+    ". . ."
+    ". progressbar ."
+    ". button ."
+    "footer footer footer";
   color: rgb(255, 255, 255);
   background-color: rgba(43, 88, 105, 0.973);
-  font-family: 'Titillium Web', sans-serif;
+  font-family: "Titillium Web", sans-serif;
 }
 
 h3 {
@@ -50,21 +50,32 @@ label {
   grid-area: header;
 }
 
-.question-heading, .summary-heading {
+.question-heading,
+.summary-heading {
   grid-area: heading;
   justify-self: center;
 }
 
-.question, .sub-question, .summary {
+.question,
+.sub-question,
+.summary,
+.start-page {
   grid-area: main;
+}
+
+.start-page {
+  display: flex;
+  justify-content: center;
 }
 
 .progress-bar {
   grid-area: progressbar;
 }
 
-.next-button {
-  grid-area:button;
+.direction-button__container {
+  grid-area: button;
+  display: flex;
+  justify-content: center;
 }
 
 button::before {
@@ -78,36 +89,19 @@ button::before {
 @media screen and (min-width: 700px) {
   .wrapper {
     grid-template-columns: 20% 1fr 20%;
+    grid-template-rows: 350px 100px 1fr 70px 50px 70px 50px;
   }
 
   h1 {
     font-size: 40px;
   }
 
-  p {
-    font-size: 18px;
-  }
-
-  h3 {
-    font-size: 20px;
-  }
-
-  label {
-    font-size: 18px;
-  }
-}
-
-@media screen and (min-width: 1500px) {
-  .wrapper {
-    grid-template-columns: 35% 1fr 35%;
-  }
-
-  h1 {
-    font-size: 60px;
+  h2 {
+    font-size: 30px;
   }
 
   p {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   h3 {
@@ -116,5 +110,41 @@ button::before {
 
   label {
     font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .wrapper {
+    grid-template-columns: 30% 1fr 30%;
+    grid-template-rows: 500px 100px 1fr 70px 70px 70px 50px;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  h2 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 22px;
+  }
+
+  h3 {
+    font-size: 30px;
+  }
+
+  label {
+    font-size: 22px;
+    line-height: 1;
+    width: 80%;
+  }
+
+  .question,
+  .sub-question,
+  .summary,
+  .start-page {
+    min-height: 500px;
   }
 }

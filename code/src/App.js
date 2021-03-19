@@ -6,7 +6,7 @@ import { Footer } from "./components/Footer";
 import { ToggleQuestions } from "./components/ToggleQuestions";
 
 export const App = () => {
-  const [nextQuestion, setNextQuestion] = useState("");
+  const [questionNumber, setQuestionNumber] = useState("");
 
   return (
     <div className="wrapper">
@@ -14,19 +14,19 @@ export const App = () => {
         <Header title="The FUTURE" />
       </header>
 
-      {nextQuestion === "" && (
-        <>
+      {questionNumber === "" && (
+        <div className="start-page">
           <h2 className="question-heading">Let's talk about the future!</h2>
-        </>
+        </div>
       )}
 
       <ToggleQuestions
-        nextQuestion={nextQuestion}
-        setNextQuestion={setNextQuestion}
+        questionNumber={questionNumber}
+        setQuestionNumber={setQuestionNumber}
       />
 
       {/*Shows progressionbar on questions done */}
-      <ProgressBar nextQuestion={nextQuestion} />
+      <ProgressBar questionNumber={questionNumber} />
 
       <footer className="footer">
         <Footer copyRight="&copy; Pauline Andersson 2021" />

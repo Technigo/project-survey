@@ -12,9 +12,7 @@
 @keyframes expandRight {
     from { width: 0%;}
     to { width: 100%;}
-
 }
-
 
 @media screen and  (min-width: 700px) {
     .text-input input {
@@ -22,12 +20,13 @@
         padding:  1em;
         padding-bottom:190px;
         height: 10px;
+        font-size: 18px;
     }
 }
 
 @media screen and (min-width: 1500px) {
     .text-input input {
         padding-bottom:300px;
-  
+        font-size: 20px;
     }
 }

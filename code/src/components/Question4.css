@@ -1,13 +1,32 @@
 h3 {
-    grid-column: 1/span 2;
+  grid-column: 1 / span 2;
 }
 
 .radio-buttons {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 label {
-    margin: 10px 10px 10px 0;
+  margin: 10px;
 }
 
+@media screen and (min-width: 700px) {
+  .radio-buttons input {
+    height: 20px;
+    width: 20px;
+  }
+
+  .radio-buttons label {
+    display: flex;
+    align-items: center;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .radio-buttons input {
+    height: 30px;
+    width: 30px;
+  }
+}

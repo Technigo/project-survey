@@ -2,7 +2,7 @@ import React from "react";
 
 import "./Question3.css";
 
-export const Question3 = ({ yearsToMars, setYearsToMars, valueArray}) => {
+export const Question3 = ({ yearsToMars, setYearsToMars, valueArray }) => {
 
   const handleChange = (e) => {
     setYearsToMars(e.target.value);
@@ -16,12 +16,7 @@ export const Question3 = ({ yearsToMars, setYearsToMars, valueArray}) => {
           on Mars?
         </h3>
         <div className="drop-down__inner">
-          <select
-            id="yearsToMars"
-            onChange={handleChange}
-            value={yearsToMars}
-            required
-          >
+          <select id="yearsToMars" onChange={handleChange} value={yearsToMars}>
             <option
               label="select option"
               value=""

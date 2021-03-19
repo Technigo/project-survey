@@ -60,7 +60,6 @@
   }
 }
 
-
 h1 {
   top: 10px;
   left: 40px;
@@ -75,27 +74,41 @@ h1 {
     .circle--big {
         width: 400px;
         height: 400px;
+        left: 10%;
+    }
+
+    .circle--small {
+      width: 250px;
+      height: 250px;
+      font-size: 30px;
     }
 
     h1 {
         top: 20px;
-        left: 100px
+        left: 100px;
+        left: 17%;
  }
 }
 
 @media screen and  (min-width: 1500px) {
 
     .circle--big {
-        width: 500px;
-        height: 500px;
-        top: -20px;
-        left: 30%;
+        width: 600px;
+        height: 600px;
+        top: -90px;
+        left: 25%;
     }
 
+    .circle--small {
+      width: 350px;
+      height: 350px;
+      top: 150px;
+      font-size: 40px;
+    }
 
     h1 {
-        top: 100px;
-        left: 35%;
+        top: 70px;
+        left: 30%;
  }
 
 }
