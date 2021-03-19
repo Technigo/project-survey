@@ -1,16 +1,24 @@
+.snack-wrapper{
+    display: flex;
+    justify-content: space-betweens;
+    align-items: center;
+    flex-direction: column;
+    height: 100px;
+}
+
 .snack-header{
-    border-bottom: solid 2px white;
+    margin-top: 0px;
+    margin-bottom: 20px;
     padding:10px;
+    border-bottom: solid 2px white;
     
 }
 .select-snack{
     display: flex;
-    background-color: var(--neon-border-color);
-    color: var(--neon-text-color);
-    padding: 10px;
-    width: 220px;
-    border: none;
-    outline: none; 
+    padding: 12px 20px;
+    margin: 8px 0;
     border-radius: 10px;
-    margin-left: 50px;
+    border: 2px solid var(--neon-border-color);
+    background-color: rgba(23, 22, 22, 0.8);
+    color: var(--neon-text-color);
 }

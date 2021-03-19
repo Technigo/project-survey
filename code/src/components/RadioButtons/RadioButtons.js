@@ -18,10 +18,10 @@ const RadioButtons = ({GenreGroup, setGenreGroup}) =>{
 
     return(
         <div>
-            <h2 className="genre-heading">My favorite movie genre is?</h2>
+            <h2 tabindex="0" className="genre-heading">My favorite movie genre is?</h2>
                 {GenreGroups.map((group) => (
                     <label htmlFor={group} key={group}> 
-                        <input
+                        <input autoFocus
                             name='group'
                             type='radio'
                             value={group}

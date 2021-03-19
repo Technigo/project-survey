@@ -2,8 +2,6 @@ import React from 'react'
 import './NameForm.css'
 
 const NameForm = ({name, setName}) =>{
-    // const [name, setName] = useState('')
-
     const onNameChange = (e) =>{
         setName(e.target.value)
     }

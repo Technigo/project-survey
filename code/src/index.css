@@ -11,11 +11,6 @@ code {
     monospace;
 }
 
-span{
-  color: var(--neon-text-color);
-  font-weight: 700;
-  border-bottom: 2px solid var(--neon-border-color);
-}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -38,21 +33,22 @@ body {
 
 h2{
   font-size: 25px;
-  padding: 5px;
-  margin-top:40px;
 }
 
 p{
   font-size: 17px;
-  margin-bottom: 20px;
+}
+
+span{
+  color: var(--neon-text-color);
+  font-weight: 700;
+  border-bottom: 2px solid var(--neon-border-color);
 }
 
 .head-container{
   margin-top:40px;
   display: flex;
   font-family: 'Exo 2', sans-serif;
-  /* display: flex;
-  justify-content: center; */
 }
 
 h1 {
@@ -116,9 +112,10 @@ h1:focus {
 /******FORM SECTION******/
 .form-section{
   width: 300px;
-  margin-top:40px;
-  height: 300px;
-  padding: 30px 20px;
+  margin-top:20px;
+  margin-bottom: 20px;
+  padding: 0 20px;
+  height: 400px;
   background-color: rgba(23, 22, 22, 0.8);
   box-shadow: 5px 5px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 50px;
@@ -132,77 +129,78 @@ h1:focus {
 
 /*********BUTTON********/
 button {
-    width: 100px;
-    height: 50px;
-    border: none;
-    outline: none;
-    color: #fff;
-    background: #111;
-    cursor: pointer;
-    position: relative;
-    z-index: 0;
-    border-radius: 10px;
-    margin-top: 90px;
-    font-family: 'Balsamiq Sans', cursive;
-    text-transform: uppercase;
+  width: 100px;
+  height: 50px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+  margin-top: 90px;
+  font-family: 'Balsamiq Sans', cursive;
+  text-transform: uppercase;
 }
 
 button:before {
-    content: '';
-    background: linear-gradient(45deg, #FF66CC, #40E0D0, #FF66CC, #40E0D0);
-    position: absolute;
-    top: -2px;
-    left:-2px;
-    background-size: 400%;
-    z-index: -1;
-    filter: blur(5px);
-    width: calc(100% + 4px);
-    height: calc(100% + 4px);
-    animation: glowing 20s linear infinite;
-    /* opacity: 0; */
-    transition: opacity .3s ease-in-out;
-    border-radius: 10px;
+  content: '';
+  background: linear-gradient(45deg, #FF66CC, #40E0D0, #FF66CC, #40E0D0);
+  position: absolute;
+  top: -2px;
+  left:-2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  transition: opacity .3s ease-in-out;
+  border-radius: 10px;
 }
 
 button:active {
-    color: #000
+  color: #000
 }
 
 button:after {
-    background: transparent;
+  background: transparent;
 }
 
 button:before {
-    opacity: 1;
+  opacity: 1;
 }
 
 button:after {
-    z-index: -1;
-    content: '';
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: #111;
-    left: 0;
-    top: 0;
-    border-radius: 10px;
+  z-index: -1;
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
 }
 
 
 @keyframes glowing {
-    0% { background-position: 0 0; }
-    50% { background-position: 200% 0; }
-    100% { background-position: 0 0; }
+  0% { background-position: 0 0; }
+  50% { background-position: 200% 0; }
+  100% { background-position: 0 0; }
 }
 
 @media (min-width: 768px) and (max-width:1024px){
+  
   h1 {
     width: 400px;
-  
     font-size: 50px;
   }
+
   .form-section{
     width: 400px;
+    height: 450px;
     margin-left:10px;
   }
 }
@@ -210,12 +208,20 @@ button:after {
 @media (min-width: 1025px){ 
   h1 {
     width:400px; 
-    
     font-size: 60px;
   }
 
   .form-section{
     width: 400px;
+    height: 450px;
     margin-left:10px;
+  }
+
+  h2{
+    font-size: 30px;
+  }
+  
+  p{
+    font-size: 20px;
   }
 }
