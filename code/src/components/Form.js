@@ -56,52 +56,22 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
         <form onSubmit={handleSubmit}>
           <> 
             <NameInputText
-             value={name} 
-             onChange={onNameChange}
-          />
-            {/* <p>We are so pleased to announce that you are the winner of a trip!</p>
-            <p>But first we need to gather some basic information so we can start organizing your next holidays!</p> 
-              
-            <div className="question one">
-              <label htmlFor="name">1. What's your name?</label> 
-                <input
-                  id="name"
-                  type="text"
-                  value={name} 
-                  onChange={onNameChange}
-                  className="form-input"
-                  placeholder="Type your name here"
-                  required
-                />
-            </div> */}
+             name={name} 
+             onNameChange={onNameChange}
+             question={'What is your name?'}
+            />
           </> 
         
           <>
             <p>2. Which country you want to travel to and spend 10 wonderful days?</p>
             {countries.map((country) => 
               <CountryInputRadioButton
-                onChange={onCountryChange}
+                onCountryChange={onCountryChange}
                 country={country}
                 key={country} 
               />
-              )
-             })
+            )}
           </>
-
-           {/*  {countries.map((country) => 
-            <label key={country} htmlFor={country}>
-            <input 
-              name="country"
-              id={country}
-              value={country}
-              type="radio"
-              onChange={onCountryChange}
-              required
-            />
-            {country}</label>
-            
-            )} */}
-          
 
           <>
             <label htmlFor="companion">
@@ -120,8 +90,6 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
           <>
             <p>4. What's the main activity you are looking forward to?</p>
             {activities.map((activity) =>
-            
-            
             <label key={activity} htmlFor={activity} >
             <input 
               name="activity"
