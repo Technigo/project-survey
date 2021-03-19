@@ -163,12 +163,4 @@ code {
   .next-button {
     margin: 35px;
   }
-
-  .form-popup-container {
-    top: -40px;
-  }
-
-  .align-content {
-    flex-direction: row;
-  }
 }
