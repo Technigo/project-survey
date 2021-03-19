@@ -16,6 +16,7 @@ export const App = () => {
 
   //function for submit button
   const handleSubmit = (event) => {
+    console-log("handleSubmit called")
     event.preventDefault()
     if (isSurveyComplete())
     {
@@ -59,9 +60,9 @@ export const App = () => {
     return true
   }
 
-    // if (isSurveyComplete()) {
-    //   console.log(`done!`);
-    // }
+    if (isSurveyComplete()) {
+       console.log(`done!`);
+     }
 
   return (
 
