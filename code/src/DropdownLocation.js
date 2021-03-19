@@ -4,7 +4,7 @@ const DropdownLocation = ( {label, location, onLocationChange}  ) => {
     return (
         <div className='dropdown-location'>
             <label htmlFor="location">
-                <h1 className='location-text'>Where do you live?</h1>
+                <h1 tabIndex="0" className='location-text'>Where do you live?</h1>
             </label>
             <select
                 className='dropdown-menu'

@@ -6,21 +6,21 @@ const RadioBtnAge = ( {onAgeChange} ) => {
     return (
         <>
         <div className='age-group'>
-            <h1 className='radio-heading'>What is your age?</h1>
+            <h1 tabIndex="0" className='radio-heading'>What is your age?</h1>
             {ageGroup.map(group => (
                 <label
                 key={group}
                 label='age'
                 className='radio-container'
                 >
-                    <input 
+                    <input  
                         name='age'
                         className='radio-btn'
                         type="radio" 
                         value={group} 
                         onChange={onAgeChange}
                     />
-                    <span class="checkmark"></span>
+                    <span tabIndex="0" class="checkmark"></span>
                     {group}
                 </label>
             ))}

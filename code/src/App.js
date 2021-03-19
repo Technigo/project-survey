@@ -44,7 +44,7 @@ const onAgeChange = (e) => {
             <Header />
             <button
               className='start-btn'
-              onClick={event => { setSection('name-input') }}
+              onClick={() => { setSection('name-input') }}
             >
               Start
             </button>

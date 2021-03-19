@@ -69,6 +69,8 @@ body {
   border-radius: 45px;
 }
 
+
+
 .back-button {
   background-color: #ffff;
 }
@@ -178,7 +180,8 @@ body {
     margin-top: 30px;
   }
 
-  .back-button, .next-button, .submit-button, .restart-btn {
+
+  .back-button, .next-button, .submit-button {
     margin-top: 80px;
   }
 

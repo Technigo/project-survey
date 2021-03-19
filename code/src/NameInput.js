@@ -4,7 +4,7 @@ const NameInput = ( {id, name, onNameChange} ) => {
     return (
         <div className='name-input-field'>
             <label htmlFor="name">
-                <h1 className='name-header'>What is your name?</h1>
+                <h1 tabIndex="0" className='name-header'>What is your name?</h1>
             </label>
             <input 
                 className='name-text'
