@@ -70,7 +70,7 @@ code {
 .button {
   background-color: #771144;
   position: fixed;
-  bottom: -1px;
+  bottom: -2px;
   left: 0;
   width: 100%;
   font-size: 40px;
