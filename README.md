@@ -2,7 +2,7 @@
 
 **Mission:** 
 
-*ccc*
+*This week's project is to use React to build a survey form. Your completed project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.*
 
 **Requirements:**
 - 🔵 COMPLETE (all)
