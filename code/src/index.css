@@ -353,6 +353,7 @@ footer a {
 
   button:disabled {
     box-shadow: none;
+    opacity: 0.8;
   }
 
   button:disabled:hover {

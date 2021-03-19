@@ -7,7 +7,8 @@
         "fifthSection",
         "sixthSection",
         "seventhSection",
-        "eighthSection"
+        "eighthSection",
+        "ninthSection"
     ],
     "name": {
         "label": "Name",
@@ -63,6 +64,7 @@
     },
     "icon": {
         "field": "icon",
+        "label": "Icon",
         "className": "icon-input",
         "source": [
             "./assets/archer.svg",
@@ -76,6 +78,33 @@
             "./assets/witch.svg",
             "./assets/wizard.svg"
         ]
+    },
+    "equipment": {
+        "field": "equipment",
+        "label": "Equipment",
+        "className": "equipment-input",
+        "source": {
+            "thief": [
+                "./assets/gold.svg",
+                "./assets/axe.svg"
+            ],
+            "mage": [
+                "./assets/spell.svg",
+                "./assets/feather.svg"
+            ],
+            "knight": [
+                "./assets/helmet.svg",
+                "./assets/sword.svg"
+            ],
+            "healer": [
+                "./assets/potion.svg",
+                "./assets/bible.svg"
+            ],
+            "ranger": [
+                "./assets/bow.svg",
+                "./assets/map.svg"
+            ]
+        }
     },
     "stats": {
         "allStats": [

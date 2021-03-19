@@ -14,6 +14,7 @@ const CharacterSheet = (props) => {
                 </div>
                 <div className="character-icon-container">
                     <img src={props.icon} className="character-icon" alt="character icon" />
+                    <img src={props.equipment} className="equipment-icon" alt="equipment icon" />
                 </div>
             </div>
             <div className="character-stats">

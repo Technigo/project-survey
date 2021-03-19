@@ -4,7 +4,7 @@ const NavigateButton = (props) => {
     const { source, goNext, section, setSection } = props
 
     const handleClick = () => {
-        if (goNext && section < 7) {
+        if (goNext && section < 8) {
             setSection(section + 1)
         } else if (!goNext && section > 0) {
             setSection(section - 1)

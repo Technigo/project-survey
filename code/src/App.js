@@ -20,6 +20,7 @@ const App = () => {
   const [section, setSection] = useState(0)
   const [name, setName] = useState("")
   const [characterClass, setCharacterClass] = useState("")
+  const [equipment, setEquipment] = useState("")
   const [race, setRace] = useState("")
   const [number, setNumber] = useState("")
   const [family, setFamily] = useState("")
@@ -35,6 +36,9 @@ const App = () => {
       return false
     }
     if (characterClass === "") {
+      return false
+    }
+    if (equipment === "") {
       return false
     }
     if (race === "") {
@@ -77,6 +81,7 @@ const App = () => {
             name={name}
             race={race}
             class={characterClass}
+            equipment={equipment}
             number={number}
             family={family}
             goal={goal}
@@ -110,48 +115,56 @@ const App = () => {
             />}
 
           {data.section[section] === "secondSection" &&
-            <SelectInput
-              choice={characterClass}
-              setChoice={setCharacterClass}
-              data={data.class}
-            />}
-
-          {data.section[section] === "thirdSection" &&
             <RadioInput
               choice={race}
               setChoice={setRace}
               data={data.race}
             />}
 
+          {data.section[section] === "thirdSection" &&
+            <SelectInput
+              choice={characterClass}
+              setChoice={setCharacterClass}
+              data={data.class}
+            />}
+
           {data.section[section] === "fourthSection" &&
+            <RadioInputIcon
+              choice={equipment}
+              setChoice={setEquipment}
+              data={data.equipment}
+              characterClass={characterClass}
+            />}
+
+          {data.section[section] === "fifthSection" &&
             <TextInput
               text={goal}
               setText={setGoal}
               data={data.goal}
             />}
 
-          {data.section[section] === "fifthSection" &&
+          {data.section[section] === "sixthSection" &&
             <NumberInput
               number={number}
               setNumber={setNumber}
               data={data.age}
             />}
 
-          {data.section[section] === "sixthSection" &&
+          {data.section[section] === "seventhSection" &&
             <SelectInput
               choice={family}
               setChoice={setFamily}
               data={data.family}
             />}
 
-          {data.section[section] === "seventhSection" &&
+          {data.section[section] === "eighthSection" &&
             <RadioInputIcon
               choice={icon}
               setChoice={setIcon}
               data={data.icon}
             />}
 
-          {data.section[section] === "eighthSection" &&
+          {data.section[section] === "ninthSection" &&
             <div className="stats-container">
               <h2>Stats</h2>
               <RangeInput
@@ -186,7 +199,7 @@ const App = () => {
                 setSection={setSection}
               />}
 
-            {data.section[section] !== "eighthSection" &&
+            {data.section[section] !== "ninthSection" &&
               <NavigateButton
                 source="./assets/arrow-right.svg"
                 goNext={true}
