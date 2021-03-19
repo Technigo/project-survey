@@ -3,6 +3,7 @@ import TextInput from './TextInput'
 import Radiobuttons from './Radiobuttons'
 import Dropdown from './Dropdown'
 import SurveyButtons from './SurveyButtons'
+import ProgressBar from './Progressbar'
 
 const Survey = (props) => {
 
@@ -52,15 +53,19 @@ const Survey = (props) => {
             setValue={setRatherNot}/>
         )}
         {step > 0 && step < 6 && (
-          <SurveyButtons
-            step={step}
-            setStep={setStep}
-            name={name}
-            animal={animal}
-            accessory={accessory}
-            activity={activity}
-            ratherNot={ratherNot}
-            />
+          <>
+            <SurveyButtons
+              step={step}
+              setStep={setStep}
+              name={name}
+              animal={animal}
+              accessory={accessory}
+              activity={activity}
+              ratherNot={ratherNot}
+              /*required={props.required}
+              setRequired={props.setRequired}*/
+              />
+          </>
         )}
     </form>
   )

@@ -1,7 +1,10 @@
-import React from ('react')
+import React from 'react'
 
 const ProgressBar = (props) => {
-  const { bgcolor, completed } = props
+  const step = props.step
+
+  let progress = step * 20
+  let width = ( progress / 100 ) * 200
 
   const containerStyles = {
     height: 20,
@@ -13,8 +16,8 @@ const ProgressBar = (props) => {
 
   const fillerStyles = {
     height: '100%',
-    width: `${completed}%`,
-    backgroundColor: bgcolor,
+    width: '50px',
+    backgroundColor: 'red',
     borderRadius: 'inherit',
     textAlign: 'right'
   }
@@ -28,10 +31,12 @@ const ProgressBar = (props) => {
   return (
     <div style={containerStyles}>
       <div style={fillerStyles}>
-        <span style={labelStyles}>{`${completed}%`}</span>
+        <div style={{width: `${width}px`}} className="labelStyles">
+          <p>{progress} %</p>
+        </div>
       </div>
     </div>
   );
 };
 
-export default ProgressBar;
+export default ProgressBar

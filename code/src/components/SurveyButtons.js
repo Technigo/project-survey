@@ -8,6 +8,10 @@ const SurveyButtons = (props) => {
     props.setStep(props.step - 1)
   }
 
+/*const addClass = () => {
+    props.setRequired(props.required = 'required')
+  }*/
+
   const nextStep = (event) => {
     
     let check = true
@@ -27,8 +31,7 @@ const SurveyButtons = (props) => {
       check = false
     } 
 
-    check === true ? props.setStep(props.step + 1) : alert('Please enter a valid response 💁')
-
+    check === true ? props.setStep(props.step + 1) : /*addClass()*/ alert('Please enter a valid answer 💁')
   }
 
   const restart = () => {

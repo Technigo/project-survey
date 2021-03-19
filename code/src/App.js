@@ -5,7 +5,9 @@ import Start from './components/Start'
 
 const App = () => {
   //SET Q STEP
-  let [step, setStep] = useState(0)
+  const [step, setStep] = useState(0)
+
+  //let [required, setRequired] = useState('')
 
   //COMPONENTS STATES
   const [name, setName] = useState('') 
@@ -35,6 +37,8 @@ const App = () => {
         setActivity={setActivity}
         ratherNot={ratherNot}
         setRatherNot={setRatherNot}
+        required={required}
+        setRequired={setRequired}
       />
       
       <Summary 
