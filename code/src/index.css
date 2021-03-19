@@ -5,9 +5,52 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: lightsteelblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-family: "Helvetica Neue";
+  font-size: 50px;
+  font-weight: 200;
+}
+
+h2 {
+  font-family: "Helvetica Neue";
+  font-size: 30px;
+  font-weight: 300;
+}
+
+p {
+  font-family: "Helvetica Neue";
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.intro-page {
+  padding: 50px;
+}
+
+.name-page {
+  padding: 50px;
+}
+
+.name-content {
+  padding: 50px;
+}
+
+.size-page {
+  padding: 50px;
+}
+
+.flower-page {
+  padding: 50px;
+}
+
+.summary-page {
+  padding: 50px;
 }

@@ -11,6 +11,7 @@ const ButtonNext = ({ questionIndex, setQuestionIndex }) => {
         <>
             <button 
                 type="button"
+                className='next-button'
                 onClick={onQuestionIndexChange}>
                 Next
             </button>

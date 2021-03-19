@@ -1,28 +1,28 @@
-// import React, { useState } from 'react'
 import React from 'react'
 
-const QuestionTwo = ({ food, setFood }) => {
+const QuestionTwo = ({ size, setSize }) => {
 
-    const onFoodChange = (event) => {
-        setFood(event.target.value)
+    const onSizeChange = (event) => {
+        setSize(event.target.value)
     }
 
     return (
         <>
-            <div>
-                <label htmlFor="food"></label>
-                <select 
-                    id="food"
-                    value={food}
-                    name="food"
-                    onChange={onFoodChange}>
+            <section className="dropdown-size">
+                <label htmlFor="size"></label>
+                <select
+                    id="size"
+                    value={size}
+                    name="size"
+                    onChange={onSizeChange}>
+
                     <option disabled></option>
-                    <option>Pizza</option>
-                    <option>Pasta</option>
-                    <option>Soup</option>
-                    <option>Sallad</option>
+                    <option>small</option>
+                    <option>medium</option>
+                    <option>large</option>
+                    <option>extra large</option>
                 </select>
-            </div>
+            </section>
         </>
     )
 

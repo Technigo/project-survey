@@ -9,7 +9,7 @@ const QuestionOne = ({ name, setName }) => {
 
     return (
         <>
-            <div>
+            <section>
                 <label htmlFor="name"></label>
                 <input 
                     name="name"
@@ -17,10 +17,9 @@ const QuestionOne = ({ name, setName }) => {
                     type="text"
                     value={name}
                     onChange={onNameChange}
-                    placeholder="Type your name"
+                    placeholder="Type here"
                 />
-            </div>
-        
+            </section>
         </>
     )
 }

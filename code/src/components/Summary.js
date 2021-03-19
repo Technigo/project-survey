@@ -2,13 +2,13 @@
 import React from 'react'
 import Form from './Form'
 
-const Summary = ({ name, food, flower }) => {
+const Summary = ({ name, size, flower }) => {
     return (
         <>
-            <div>
-                <h1>Thank you!</h1>
-                <h3>Your answers: Your name: {name}. You're favorite food: {food} Your favorite flower is {flower}.</h3>
-            </div>
+            <section>
+                <h1 tabIndex="0">Thank you for your order!</h1>
+                <h2 tabIndex="0">We will deliver a {size} bouquet with {flower} to {name}.</h2>
+            </section>
         </>
     )
 

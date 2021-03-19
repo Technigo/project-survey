@@ -11,15 +11,17 @@ const QuestionThree = ({ flower, setFlower, item }) => {
 
     return (
         <>
-            <label key={item} htmlFor={item}>{item}</label>
-                <input 
-                    name="flower" 
-                    id={flower} 
-                    type="radio" 
-                    value={item}
-                    onChange={onFlowerChange}
-                    checked={flower === item }  
-                />     
+            <section>
+                <label key={item} htmlFor={item}>{item}</label>
+                    <input 
+                        name="flower" 
+                        id={flower} 
+                        type="radio" 
+                        value={item}
+                        onChange={onFlowerChange}
+                        checked={flower === item }  
+                    />     
+            </section>
         </>
     )
 

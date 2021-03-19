@@ -10,6 +10,7 @@ const ButtonBack = ({ questionIndex, setQuestionIndex }) => {
         <>
             <button
                 type="button"
+                className='back-button'
                 onClick={onBackIndexChange}>
                 Back
             </button>
