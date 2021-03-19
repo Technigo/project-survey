@@ -1,5 +1,4 @@
 import React from 'react'
-import { Button } from 'components/Button'
 
 export const Summary = (props) => {
   const { genre, favorite, language, name, email } = props 
