@@ -4,7 +4,7 @@ const SurveyRadio = (props) => {
     const { type, setType } = props;
 
     return (
-        <form className="radio-form" >
+        <div className="radio-form" >
             <p className="radio-form-headline">How would you prefer to live?</p>
             <label>
                 <input className="radio-input"
@@ -50,7 +50,7 @@ const SurveyRadio = (props) => {
                 />
                 Camper
             </label>
-        </form>
+        </div>
     )
 }
 export default SurveyRadio;

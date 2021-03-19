@@ -5,7 +5,7 @@ const SurveyText = (props) => {
     const { email, setEmail } = props;
 
     return (
-        <form className="text-form">
+        <div className="text-form">
             <p className="text-label">What's your name?</p>
             <label>
                 <input className="text-input"
@@ -24,7 +24,7 @@ const SurveyText = (props) => {
                 onChange={event => setEmail(event.target.value)}
                 />
             </label>
-        </form>
+        </div>
     )
 }
 export default SurveyText;

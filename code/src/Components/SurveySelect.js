@@ -4,7 +4,7 @@ const SurveySelect = (props) => {
     const {buildstyle, setBuildstyle} = props;
 
     return (
-        <form className="select-form">
+        <div className="select-form">
             <p className="select-form-headline">What is your favourite style?</p>
             <label>
                 <select 
@@ -22,7 +22,7 @@ const SurveySelect = (props) => {
                 <option value="Supermodernism, 2000">Supermodernism, 2000</option>
                 </select>
             </label>
-        </form>
+        </div>
     )
 }
 export default SurveySelect;

@@ -6,7 +6,6 @@ function refreshPage() {
 
 const Summary = (props) => {
     const { name } = props;
-    const { email } = props;
     const { type } = props;
     const { buildstyle } = props;
 
