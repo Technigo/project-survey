@@ -39,31 +39,18 @@ export const App = () => {
       return false
     }
 
-    if (email === '') {
-      return false
+    if (name=== '') {
       alert(`You haven't answered all questions`)
+      return false
+    }
+
+    if (email === '') {
+      alert(`You haven't answered all questions`)
+      return false
     }
 
     return true
   }
-
-  // const changeState = () => {
-  //   if (genre === '') {
-  //     return false
-  //     alert(`You haven't answered all questions`)
-  //   } else if (favorite === '') {
-  //     return false
-  //   } else if (language === '') {
-  //     return false
-  //   } else if (name === '') {
-  //     return false
-  //   } else if (email === '') {
-  //     return false
-  //     alert(`You haven't answered all questions`)
-  //   } else {
-  //     return true
-  //   }
-  // }
 
   return (
     <>
