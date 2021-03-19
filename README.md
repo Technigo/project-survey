@@ -1,13 +1,6 @@
-# Survey form with React
+# Friend Match Survey with React
 
-Replace this readme with your own information about your project.
+This project, of a Friend Match Survey, was made as a Week 10 project for Technigo bootcamp. The aim of this project was to learn the purpose of state in React, use the useState hook in React and learn how to connect HTML form inputs to state.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+View it live
+https://friend-match.netlify.app
