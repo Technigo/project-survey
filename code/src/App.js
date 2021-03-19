@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import Form from './components/Form';
-
-
+import Summary from './components/Summary';
 
 
 export const App = () => {
@@ -43,9 +42,8 @@ export const App = () => {
         onNumberOfBookChange={onNumberOfBookChange}
         numberOfBook={numberOfBook}
         onrecomendationChange={onrecomendationChange}
-        recomendation={recomendation}
-
-      />
+        recomendation={recomendation} />
+      <Summary name={name} />
     </div>
   )
 }
