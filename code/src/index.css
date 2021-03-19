@@ -1,4 +1,6 @@
 body {
+  /* background-image: url(''); */
+  /* background-repeat: no-repeat; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -16,20 +18,84 @@ code {
   display: flex;
   border: 1px solid black; 
   
+  
 }
 .form-container {
   border: 1px solid red; 
 }
 
-.name-label {
-  display: flex;
-  justify-content: center;
+.name-input {
+  justify-content: flex-end;
 }
 
-.first-radio {
+.name-label {
+  display: flex;
+  justify-content: flex-start;
+}
 
+.dropdown-menu{
+  display: flex;
+  justify-content: flex-end;
+}
+
+.container-input-fields {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-name {
+  justify-content: center;
+  margin-bottom: 50px;
+}
+.first-radio {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid blue;
 }
 
 .second-radio {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid blue;
+}
+
+.radio-wrapper {
+  padding: 10 0;
 
 }
+
+.question-radio{
+  display: flex;
+  justify-content: flex-start;
+  margin: 0 40px 0 0;
+  padding: 0;
+}
+
+
+.submit-button {
+  margin: 30px; 
+}
+/* .slider-choice {
+  width: 100px;
+  height: 25px;
+  background: #6986e3;
+  opacity: 0.8;
+  transition: opacity .2s;
+}
+.slider-choice::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #0c0c0c;
+  cursor: pointer;
+}
+.slider-choice::-webkit-slider-thumb {
+  
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}
+.slider-choice:hover {
+  opacity: 1; 
+} */

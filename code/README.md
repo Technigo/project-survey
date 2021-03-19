@@ -1,19 +1,16 @@
-# Technigo React Starter App
+#Brief project-survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+Goal was to build a survey with React with at least 3 question using 3 different types, radio buttons, dropdown, input field and have a submit button that hide the form and show a summary of the inputs. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+#Summary
 
-## Usage
+It has been hard as I do not understand how to combine the components and therefore only used one. 
+Most difficult is to create the summary of teh inputs and how to collect the data. 
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+#Feedback 
+- How can I separate the Form into components? 
+- how to show one question at the time, best practice to do it? 
 
-Alternatively, if you don't want a new git repo on your account;
+Link to live site: 
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+
