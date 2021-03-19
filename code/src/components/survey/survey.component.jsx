@@ -5,6 +5,7 @@ import { FormContainer } from "./survey.style";
 import Name from "../name/name.component";
 import SelectBox from "../select-box/select-box.component";
 import CheckBox from "../checkbox/checkbox.component";
+import Range from "../range/range.component";
 
 function Survey() {
   return (
@@ -13,6 +14,7 @@ function Survey() {
         <Route path="/step-1" component={Name} />
         <Route path="/step-2" component={SelectBox} />
         <Route path="/step-3" component={CheckBox} />
+        <Route path="/step-4" component={Range} />
 
       </Switch>
     </FormContainer>
