@@ -1,21 +1,47 @@
-import React from 'react';
+// import React from 'react';
+// import QuestionThree from 'QuestionThree'
+
+// // const flowers = ['rose', 'tulip', 'orchid']
 
 
-const RadioOption = () => {
-    return (
-        <>
-            <label key={flower} htmlFor="Rose">Rose</label>
-                <input 
-                    name="flower" 
-                    id={flower} 
-                    type="radio" 
-                    value={flower}
-                    onChange={onFlowerChange}
-                    checked={flower === flower}  
-                />
-        </>
-    )
 
-}
+// const RadioOption = ({ flower, setFlower, item }) => {
 
-export default RadioOption;
+//     const onFlowerChange = (event) => {
+//         setFlower(event.target.value)
+//     }
+
+//     return (
+//         <>
+//             {/* <div>
+//                 <h2>Third Question</h2>
+//                 <p>What's your favorite flower</p>
+//             </div>
+
+//             <div>
+//                  {flowers.map((item) => {
+//                     return (
+//                         <QuestionThree
+//                             flower={flower}
+//                             setFlower={setFlower}
+//                             item={item}
+//                         />
+//                     )
+//                 })}
+//             </div> */}
+
+//             <label key={item} htmlFor={item}>{item}</label>
+//                 <input 
+//                     name="flower" 
+//                     id={flower} 
+//                     type="radio" 
+//                     value={item}
+//                     onChange={onFlowerChange}
+//                     checked={flower === item }  
+//                 /> 
+//         </>
+//     )
+
+// }
+
+// export default RadioOption;

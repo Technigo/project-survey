@@ -10,10 +10,6 @@ const QuestionOne = ({ name, setName }) => {
     return (
         <>
             <div>
-                <h2>First Question</h2>
-                <p>What's your name?</p>
-            </div>
-            <div>
                 <label htmlFor="name"></label>
                 <input 
                     name="name"
@@ -24,7 +20,6 @@ const QuestionOne = ({ name, setName }) => {
                     placeholder="Type your name"
                 />
             </div>
-            <p>Your name: {name}</p>
         
         </>
     )

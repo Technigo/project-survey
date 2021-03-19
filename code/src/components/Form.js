@@ -5,6 +5,9 @@ import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
 import Summary from './Summary'
+import ButtonNext from './ButtonNext'
+import ButtonBack from './ButtonBack'
+import RadioOption from './RadioOption'
 
 const flowers = ['rose', 'tulip', 'orchid']
 
@@ -15,10 +18,12 @@ const Form = () => {
     const [flower, setFlower] = useState('')
     const [questionIndex, setQuestionIndex] = useState(0)
 
-    const onQuestionIndexChange = () => {
-        console.log(questionIndex)
-        setQuestionIndex(questionIndex +1)
-    }
+
+
+    // const onBackIndexChange = () => {
+    //     setQuestionIndex(questionIndex -1)
+    // }
+
 
     console.log(food, food, food)
     console.log(name, name, name)
@@ -30,25 +35,69 @@ const Form = () => {
             <form onSubmit={event => event.preventDefault()}>
                 
                 {questionIndex === 0 && 
-                    <Intro/> 
+                    <>
+                        <Intro/> 
+
+                        <ButtonNext
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                />
+
+                    </>
                 }
 
                 {questionIndex === 1 && 
-                    <QuestionOne 
-                        name={name}
-                        setName={setName}
-                    /> 
+                    <>
+
+                        <h2>First Question</h2>
+                        <p>What's your name?</p>
+                        
+                        <QuestionOne 
+                            name={name}
+                            setName={setName}
+                        /> 
+
+                        <ButtonBack
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                        />
+
+                        <ButtonNext
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                        />
+
+                    </>
                 }
 
                 {questionIndex === 2 && 
-                    <QuestionTwo
-                        food={food}
-                        setFood={setFood}    
-                    />
+                    <>
+                        <h2>Second Question</h2>
+                        <p>What's your favorite food</p>            
+                        
+                        <QuestionTwo
+                            food={food}
+                            setFood={setFood}    
+                        />
+
+                        <ButtonBack
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                        />
+
+                        <ButtonNext
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                        />
+
+                    </>
                 }
 
                 {questionIndex === 3 && 
                     <>
+                        <h2>Third Question</h2>
+                        <p>What's your favorite flower?</p>   
+
                         {flowers.map((item) => {
                             return (
                                 <QuestionThree
@@ -59,22 +108,48 @@ const Form = () => {
                              )
                         })}
                     
+                        <ButtonBack
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                        />
+
+                        <ButtonNext
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                        />          
                     </>
                 }
 
                 {questionIndex > 3 && 
-                    <Summary 
-                        name={name} 
-                        food={food}
-                        flower={flower}
-                    />
+                    <>
+                        <Summary 
+                            name={name} 
+                            food={food}
+                            flower={flower}
+                        />
+
+                        <ButtonBack
+                            questionIndex={questionIndex}
+                            setQuestionIndex={setQuestionIndex}
+                        />
+                    </>
                 }
                
+
+
+                
+{/* 
                 <button 
                     type="button"
                     onClick={onQuestionIndexChange}>
                     Next
                 </button>
+
+                <button 
+                    type="button"
+                    onClick={onBackIndexChange}>
+                    Back
+                </button> */}
                 
             </form>
         </>

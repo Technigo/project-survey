@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import Form from './Form';
-import Button from './Button';
 
 const Intro = () => {
 
