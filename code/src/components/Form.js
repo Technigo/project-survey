@@ -4,7 +4,9 @@
 import React, { useState } from 'react'
 
 import FormQuestions from 'components/FormQuestions'
+import Checkboxes from 'components/Checkboxes'
 import Summary from 'components/Summary'
+
 const genderGroups = ["male", "female", "other"]
 
 
@@ -14,6 +16,7 @@ const Form = () => {
     const [gender, setGender] = useState('')
     const [symptom, setSymptom] = useState('')
     const [IsSubmited, setIsSubmited] = useState(false)
+    const [checkboxGroup, setCheckboxGroup] = useState([])
 
 
 
@@ -38,6 +41,18 @@ const Form = () => {
         setSymptom(e.target.value)
     } 
 
+    
+
+    const onCheckboxToggle = (checkBoxValue) => {
+        if (checkboxGroup.includes(checkBoxValue)) {
+            setCheckboxGroup(checkboxGroup.filter(item => item !== checkBoxValue))
+        } else {
+            setCheckboxGroup([checkBoxValue, ...checkboxGroup])
+        }
+    }    
+
+
+
 
     const isSurveyComplete = () => {
         if (fname === '') {
@@ -56,6 +71,9 @@ const Form = () => {
             return false
         }    
         
+        if (checkboxGroup.length === 0) {
+            return false
+        }
 
         return true
     }
@@ -109,6 +127,15 @@ const Form = () => {
                     onSymptomChange={onSymptomChange}
                     symptom={symptom} /> 
                 
+                <Checkboxes
+                    onCheckboxToggle={onCheckboxToggle}
+                    checkboxGroup={checkboxGroup}
+                    />
+                
+
+                        
+
+
     
                 <div>
                     <input
