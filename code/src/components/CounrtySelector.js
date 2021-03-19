@@ -2,7 +2,7 @@ import React from 'react';
 import StartNextButton from './StartNextButton';
 import './CountrySelector.css'
 
-const CountrySelector = ({ setSection, question, country, setCountry, countries, progress, setProgress }) => {
+const CountrySelector = ({ setQuestion, country, setCountry, countries, progress, setProgress }) => {
 
   const onCountryChange = (event) => {
     setCountry(event.target.value)
@@ -30,9 +30,7 @@ const CountrySelector = ({ setSection, question, country, setCountry, countries,
         })}
       </select>
       <StartNextButton
-        question={question}
-        setSection={setSection}
-        button="Next"
+        setQuestion={setQuestion}
         progress={progress}
         setProgress={setProgress}
         state={country}

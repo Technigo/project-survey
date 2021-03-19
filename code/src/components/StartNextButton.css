@@ -1,21 +1,14 @@
-:root{
-  --background: #9cacbf;
-  --question: #012e67;
-  --text: #032e42;
-  --background2: #90bff9;
-  --buttonBackground: #085ea5;
-}
-
 
 .start-next-button{
-  background: var(--buttonBackground);
+  background: var(--question);
   padding: 10px;
   border-radius: 15px;
   color: white;
   font-weight: 700;
   font-size: 16px;
-  border: white 2px solid;
+  border: white 1px solid;
   width: 150px;
+  box-shadow: 0px 0px 10px 10px #ddf3ff3c
 }
 .start-next-button:disabled{
   color: rgb(218, 214, 214);

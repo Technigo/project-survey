@@ -13,7 +13,7 @@ import ProgressBar from './ProgressBar'
 
 
 
-const Form = (props) => {
+const Form = () => {
   const questions = data.QuestionsNumberArray
   const countries = data.countries
   const [needVacation, setNeedVacation] = useState("");
@@ -23,8 +23,9 @@ const Form = (props) => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [summaryHidden, setSummaryHidden] = useState(true);
-  const [section, setSection] = useState(questions[0]);
   const [progress, setProgress] = useState(0);
+  const [question, setQuestion] = useState(questions[progress]);
+  
 
   //Function checking whether the form is filled
   const isFormFilled = () => {
@@ -45,20 +46,17 @@ const Form = (props) => {
   if (summaryHidden === true) {
     return (
       <form className="form-wrapper" onSubmit={handleSubmit}>
-        { section === questions[0] && (
+        { question === questions[0] && (
           <WelcomeSection
-            section={section}
-            setSection={setSection}
-            question={questions[1]}
+            setQuestion={setQuestion}
             progress={progress}
             setProgress={setProgress}
           />
         )}
 
-        { section === questions[1] && (
+        { question === questions[1] && (
           <NeedVacationRange
-            setSection={setSection}
-            question={questions[2]}
+            setQuestion={setQuestion}
             needVacation={needVacation}
             setNeedVacation={setNeedVacation}
             progress={progress}
@@ -66,10 +64,9 @@ const Form = (props) => {
           />
         )}
 
-        {section === questions[2] && (
+        {question === questions[2] && (
           <CountrySelector
-            setSection={setSection}
-            question={questions[3]}
+            setQuestion={setQuestion}
             country={country}
             setCountry={setCountry}
             countries={countries}
@@ -78,29 +75,27 @@ const Form = (props) => {
           />
         )}
 
-        {section === questions[3] && (
+        {question === questions[3] && (
           <VacationTypeRadioButton
-            setSection={setSection}
+            setQuestion={setQuestion}
             vacationTypes={data.vacationTypes}
             vacationType={vacationType}
-            name="question3"
+            name={questions[3]}
             setVacationType={setVacationType}
-            question={questions[4]}
             progress={progress}
             setProgress={setProgress}
           />
         )}
-        {section === questions[4] && (
+        {question === questions[4] && (
           <ChooseDate
             date={date}
             setDate={setDate}
-            question={questions[5]}
             progress={progress}
             setProgress={setProgress}
-            setSection={setSection}
+            setQuestion={setQuestion}
           />
         )}
-        {section === questions[5] && (
+        {question === questions[5] && (
           <div className="question-card">
             <TextInputName
               name={name}

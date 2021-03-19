@@ -6,23 +6,22 @@ import StartNextButton from './StartNextButton';
 
 
 
-const WelcomeSection = ({section, question, setSection, progress, setProgress}) => {
+const WelcomeSection = ({setQuestion, progress, setProgress}) => {
   return (
     <section className="welcome-card">
-      <h2 className="welcome-heading">Next holiday destination survey</h2>
-      <p className="welcome-text">
-        So, you want to go on a holiday but you’re not sure where you want to go. There are so many countries, regions, cities and towns in the world that just making this simple decision can be a bit overwhelming.
-      </p>
-      <p className="welcome-text">Great! We are here to help you choose it!</p>
-      <p className="welcome-text">Answer the survey questions and we come up with suggestions for your next holidays!</p>
-    <StartNextButton 
-      section={section} 
-      question={question} 
-      setSection={setSection} 
-      button="Start survey"
+
+      <div className="welcome-text-container">
+        <h1 className="welcome-heading">Are you ready for your next adventure?</h1>
+        <p className="welcome-text">Great! We are here to help you choose it!</p>
+        <p className="welcome-text">Answer the survey questions and we come up with suggestions for your next holidays!</p>
+      </div>
+      <StartNextButton
+      setQuestion={setQuestion} 
       progress={progress}
       setProgress= {setProgress}
       />
+
+
     </section>
   )
 }
