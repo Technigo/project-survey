@@ -5,7 +5,7 @@ import FavoriteBook from 'components/FavoriteBook';
 import HowManyBooks from 'components/HowManyBooks';
 import FavoriteGenre from 'components/FavoriteGenre';
 import Header from 'components/Header';
-import Summary from './components/Summary';
+import Summary from 'components/Summary';
 
 
 import './index.css'
