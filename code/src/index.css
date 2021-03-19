@@ -1,4 +1,5 @@
 body {
+  background-color: royalblue;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +11,47 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.surveyPage {
+  background: url(https://media.istockphoto.com/illustrations/throwing-swedish-graduation-caps-up-in-the-air-to-celebrate-illustration-id1150924445?k=6&m=1150924445&s=612x612&w=0&h=GmmVf3Sm1JIy8jgmW2fQUT4WFfNCMiyRb-LbpiEkTdI=);
+  background-size: cover;
+  color: yellow;
+  text-shadow:
+    0.07em 0 grey,
+    0 0.07em grey,
+    -0.07em 0 grey,
+    0 -0.07em grey;
+  width: 50%;
+  height: auto;
+  padding: 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  border-radius: 15px;
+}
+p{
+  font-weight: bold;
+  font-size: 18px;
+}
+input {
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+}
+select {
+  padding: 10px;
+  margin: 5px;
+  font-size: 14px;
+}
+button {
+  padding: 10px;
+  margin: 40px 20px 20px ;
+  background-color: royalblue;
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px;
+  border-radius: 4px;
 }
