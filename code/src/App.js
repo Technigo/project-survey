@@ -1,6 +1,7 @@
 import React from 'react'; //Outer depenency grouped (from Node module) 
 
 import Header from 'components/Header'; //Local depenencies grouped (created by developer) 
+import BackgroundImages from './components/BackgroundImage';
 import Form from './components/Form'; 
 import Footer from './components/Footer';
 
@@ -11,6 +12,7 @@ return (
 
     <>
     <Header />
+    <BackgroundImages />
     <Form />
     <Footer />
     </>
