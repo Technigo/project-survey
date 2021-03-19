@@ -85,10 +85,7 @@ const App = () => {
           chr={chr}
         />
         <ReturnButton
-          text="Go back"
-          renderSummary={renderSummary}
           setRenderSummary={setRenderSummary}
-          isComplete={isComplete}
           setSection={setSection}
         />
       </>
@@ -179,7 +176,6 @@ const App = () => {
 
             {data.section[section] !== "firstSection" &&
               <NavigateButton
-                text="Previous Question"
                 source="./assets/arrow-left.svg"
                 goNext={false}
                 section={section}
@@ -188,7 +184,6 @@ const App = () => {
 
             {data.section[section] !== "eighthSection" &&
               <NavigateButton
-                text="Next Question"
                 source="./assets/arrow-right.svg"
                 goNext={true}
                 section={section}
@@ -196,12 +191,9 @@ const App = () => {
               />}
 
             <SubmitButton
-              text="Submit"
-              renderSummary={renderSummary}
               setRenderSummary={setRenderSummary}
               isComplete={isComplete}
               section={section}
-              setSection={setSection}
             />
 
           </div>

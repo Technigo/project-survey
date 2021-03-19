@@ -1,7 +1,6 @@
 import React from "react"
 
-const RadioInput = (props) => {
-    const { choice, setChoice } = props
+const RadioInput = ({ choice, setChoice, data }) => {
 
     const handleChange = (event) => {
         setChoice(event.target.value)
@@ -9,13 +8,13 @@ const RadioInput = (props) => {
 
     return (
         <div className="input-container">
-            <h2>{props.data.label}</h2>
+            <h2>{data.label}</h2>
             <div className="radio-button-container">
-                {props.data.choices.map(item =>
+                {data.choices.map(item =>
                     <label key={item}>
                         <input
                             type="radio"
-                            name={props.data.field}
+                            name={data.field}
                             value={item}
                             onChange={handleChange}
                             checked={choice === item}

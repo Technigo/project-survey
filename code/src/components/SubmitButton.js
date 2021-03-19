@@ -10,7 +10,7 @@ const SubmitButton = (props) => {
     if (isComplete()) {
         return (
             <button onClick={handleSubmit}>
-                {props.text}
+                Submit
             </button>
         )
     } else if (section === 7) {

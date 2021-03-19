@@ -1,7 +1,6 @@
 import React from 'react'
 
-const TextInput = (props) => {
-    const { text, setText } = props
+const TextInput = ({ text, setText, data }) => {
 
     const handleInput = (event) => {
         setText(event.target.value)
@@ -10,12 +9,12 @@ const TextInput = (props) => {
     return (
         <div className="input-container">
             <label htmlFor="text">
-                <h2>{props.data.label}</h2>
+                <h2>{data.label}</h2>
             </label>
             <input
                 id="text"
                 type="text"
-                className={props.data.className}
+                className={data.className}
                 value={text}
                 onChange={handleInput}
             />

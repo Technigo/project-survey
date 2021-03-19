@@ -10,7 +10,7 @@ const ReturnButton = (props) => {
 
     return (
         <button onClick={handleReturn}>
-            {props.text}
+            Go back
         </button>
     )
 }

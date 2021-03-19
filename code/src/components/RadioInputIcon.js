@@ -1,7 +1,6 @@
 import React from "react"
 
-const RadioInputIcon = (props) => {
-    const { choice, setChoice } = props
+const RadioInputIcon = ({ choice, setChoice, data }) => {
 
     const handleChange = (event) => {
         setChoice(event.target.value)
@@ -11,7 +10,7 @@ const RadioInputIcon = (props) => {
         <div className="input-container">
             <h2>Icon</h2>
             <div className="icon-container">
-                {props.data.source.map(item =>
+                {data.source.map(item =>
                     <label key={item}>
                         <img src={item} className="character-icon" alt="character icon" />
                         <input

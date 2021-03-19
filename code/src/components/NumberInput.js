@@ -1,7 +1,6 @@
 import React from "react"
 
-const NumberInput = (props) => {
-    const { number, setNumber } = props
+const NumberInput = ({ number, setNumber, data }) => {
 
     const handleChange = (event) => {
         setNumber(event.target.value)
@@ -10,7 +9,7 @@ const NumberInput = (props) => {
     return (
         <div className="input-container">
             <label htmlFor="number">
-                <h2>{props.data.label}</h2>
+                <h2>{data.label}</h2>
             </label>
             <input
                 id="number"

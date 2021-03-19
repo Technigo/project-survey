@@ -1,7 +1,7 @@
 import React from "react"
 
 const NavigateButton = (props) => {
-    const { section, setSection, goNext } = props
+    const { source, goNext, section, setSection } = props
 
     const handleClick = () => {
         if (goNext && section < 7) {
@@ -14,7 +14,7 @@ const NavigateButton = (props) => {
     return (
         <button onClick={handleClick}>
             <img
-                src={props.source}
+                src={source}
                 className="arrow-icon"
                 alt="arrow icon"
             />
