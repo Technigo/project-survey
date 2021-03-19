@@ -31,18 +31,19 @@ const handleSubmit = event => {
 };
 
 return (
-  <div className="App">
+  <div className="app">
  
     {!showSummary && (
       <form onSubmit={handleSubmit}>
         <div>
           <h1>Answer a few questions about cats and you can win cat food for a whole year!</h1>
+        
         </div>
 
         <NameQuestion username={name} onNameChange={handleNameChange} />
 
         <FurQuestion
-          checked={furOption}
+          checked={FurQuestion === furOption}
           onfurOptionChange={handlefurOptionChange}
           />
 

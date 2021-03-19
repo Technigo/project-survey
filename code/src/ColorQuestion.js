@@ -3,10 +3,11 @@ import React from 'react'
 export const ColorQuestion = ({ color, onColorChange}) => {
 
   return (
-    <div>
+    <div className="color-question">
     <label>What color do you like a cat to have?</label>
     <select
       id="color"
+      className="select"
       required
       value={color}
       onChange={(e) => onColorChange(e)}

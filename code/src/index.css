@@ -14,8 +14,76 @@ code {
     monospace;
 }
 
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+
+h2 {
+  font-size: 20px;
+   text-align: center;
+}
+
+p {
+  font-size: 20px;
+  text-align: center;
+}
+
 .submit {
   border-radius: 40px;
   border: none;
   padding: 5px;
+  width: 70px;
+  height: 40px;
+  font-size: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  border: 5px solid red;
+  padding: 20px;
+  height: 100%;
+ 
+}
+
+.name-question {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+}
+
+.fur-question {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+  display:flex;
+  flex-direction: column;
+}
+
+.color-question {
+  font-size: 20px;
+  text-align: center;
+  margin: 20px;
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select {
+  width: 30%;
+  height: 25px;
+  
+}
+
+.summary-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+ 
 }
