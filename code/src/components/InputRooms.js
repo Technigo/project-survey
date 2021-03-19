@@ -1,0 +1,17 @@
+import React from "react";
+export const InputRooms = (props) => {
+  return (
+    <div className="each-question">
+      <select onChange={props.onRoomChange}>
+        <option value="">Select how many rooms you want:</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="3">4</option>
+        <option value="3">5</option>
+        <option value="3">6</option>
+        <option value="3">7+</option>
+      </select>
+    </div>
+  );
+};

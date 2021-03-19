@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const priceChoices = [
   "1-3000kr/month",
@@ -8,25 +8,21 @@ const priceChoices = [
   "10 000-13 000 kr/month",
 ];
 
-export const FormPrice = () => {
-  const [price, setPrice] = useState();
-
+export const InputPrice = (props) => {
   return (
     <div className="each-question">
-      <form>
-        Size:
-        {priceChoices.map((choice) => (
-          <label key={choice}>
-            <input
-              type="radio"
-              value={choice}
-              onChange={(event) => setPrice(event.target.value)}
-              checked={price === choice}
-            />
-            {choice}
-          </label>
-        ))}
-      </form>
+      Size:
+      {priceChoices.map((choice) => (
+        <label key={choice}>
+          <input
+            type="radio"
+            value={choice}
+            onChange={props.onPriceChange}
+            checked={props.price === choice}
+          />
+          {choice}
+        </label>
+      ))}
     </div>
   );
 };
