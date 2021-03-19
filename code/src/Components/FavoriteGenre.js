@@ -12,7 +12,7 @@ const FavoriteGenre = ({text, favoriteGenre, onGenreChange}) => {
     <div className="favorite-genre-container">
       <div className="inner-container">
 
-        <div><h2>{text}</h2></div>
+        <div><h2 tabIndex="0">{text}</h2></div>
 
           {bookGenre.map((genre) => (
           <label key={genre}>
@@ -23,6 +23,7 @@ const FavoriteGenre = ({text, favoriteGenre, onGenreChange}) => {
               value={genre}
               onChange={onGenreChange}
               checked={favoriteGenre === genre}
+
             />
             {genre}
           </label>

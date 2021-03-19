@@ -5,9 +5,9 @@ const Header = () => {
   return(
     <header className="header-container">
       <div className="header">
-        <h1>Welcome to this survey!</h1>
+        <h1 tabIndex="0">Welcome to this survey!</h1>
         <div>
-          <p>Want to answer a few questions about books?</p>
+          <p tabIndex="0">Want to answer a few questions about books?</p>
         </div>
         <button className="start-button"><a href='#many'>Sure!</a></button>
      </div>

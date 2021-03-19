@@ -7,17 +7,19 @@ const FavoriteBook = ({text, book, onBookChange}) => {
 
     <div className="favorite-book-container">
       <div className="inner-container">
-        <label htmlFor='favoritebook'><h2>{text}</h2>
+        <label htmlFor='favoritebook'><h2 tabIndex="0">{text}</h2>
         <input
           id="favoritebook"
           type="text"
           onChange={onBookChange}
           value={book}
+
         />
         </label>
       </div>
       <div>
-        <button className="start-button"><a href='#favorite'>Finish!</a></button>
+        <button className="start-button" type='submit'>
+         Finish!</button>
       </div>
     </div>
 

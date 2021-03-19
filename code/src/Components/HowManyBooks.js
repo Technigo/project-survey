@@ -13,6 +13,7 @@ const HowManyBooks = ({text, number, onNumberChange}) => {
       <select
         onChange={onNumberChange}
         value={number}
+
       >
         <option value="">Select number:</option>
         <option value="0-5">0-5</option>
