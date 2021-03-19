@@ -72,23 +72,25 @@ const App = () => {
   if (renderSummary) {
     return (
       <>
-        <CharacterSheet
-          name={name}
-          race={race}
-          class={characterClass}
-          number={number}
-          family={family}
-          goal={goal}
-          icon={icon}
-          str={str}
-          int={int}
-          dex={dex}
-          chr={chr}
-        />
-        <ReturnButton
-          setRenderSummary={setRenderSummary}
-          setSection={setSection}
-        />
+        <div className="summary">
+          <CharacterSheet
+            name={name}
+            race={race}
+            class={characterClass}
+            number={number}
+            family={family}
+            goal={goal}
+            icon={icon}
+            str={str}
+            int={int}
+            dex={dex}
+            chr={chr}
+          />
+          <ReturnButton
+            setRenderSummary={setRenderSummary}
+            setSection={setSection}
+          />
+        </div>
         <Footer />
       </>
     )

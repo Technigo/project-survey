@@ -18,7 +18,9 @@
         "choices": [
             "mage",
             "thief",
-            "knight"
+            "knight",
+            "healer",
+            "ranger"
         ],
         "label": "Class",
         "field": "class",
@@ -29,7 +31,9 @@
             "orc",
             "human",
             "dwarf",
-            "goblin"
+            "goblin",
+            "elf",
+            "halfling"
         ],
         "label": "Race",
         "field": "race",
@@ -44,7 +48,9 @@
         "choices": [
             "nobility",
             "farmer",
-            "worker"
+            "scholar",
+            "worker",
+            "merchant"
         ],
         "label": "Family",
         "field": "family",
