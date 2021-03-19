@@ -1,12 +1,18 @@
 body {
+  background-image: linear-gradient(blue, pink);
+  background-repeat: no-repeat;
+  background-position: center;
+ 
+  background-size: cover;
+ 
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: blueviolet;
-  margin: 10px;
+  /*background-color: blueviolet;*/
+ 
 }
 
 code {
@@ -44,7 +50,6 @@ form {
   justify-content: center;
   align-items: center;
   justify-content: space-between;
-  border: 5px solid red;
   padding: 20px;
   height: 100%;
  
@@ -84,6 +89,10 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  justify-content: space-between;
- 
+  padding: 30px;
+  background-image: url("./Assets/Catgreen.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
 }
