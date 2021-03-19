@@ -35,7 +35,7 @@ const SushiQuestion = ({ sushi, callbackOnChange, step, setStep }) => {
         />
       </div>
     </>
-  )
-}
+  );
+};
 
 export default SushiQuestion;

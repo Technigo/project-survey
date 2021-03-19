@@ -37,7 +37,7 @@ const IngredientQuestion = ({ ingredient, callbackOnChange, step, setStep }) => 
         />
       </div>
     </>
-  )
-}
+  );
+};
 
 export default IngredientQuestion;

@@ -10,19 +10,19 @@ const FormButtons = ({ step, setStep }) => {
   
   return (
     <>
-      {step >= 0 && step < 3 && (
-        <Button 
-          stepBtn={nextStep}
-          setStep={setStep}
-          btnTxt={buttonTexts[step]}
-        />
-      )}
-
       {step > 1 && step < 4 && (
         <Button 
           stepBtn={previousStep}
           setStep={setStep}
           btnTxt="Previous"
+        />
+      )}
+      
+      {step >= 0 && step < 3 && (
+        <Button 
+          stepBtn={nextStep}
+          setStep={setStep}
+          btnTxt={buttonTexts[step]}
         />
       )}
     </>

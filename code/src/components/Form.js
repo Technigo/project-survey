@@ -62,7 +62,7 @@ const Form = () => {
                 step={step}
                 setStep={setStep} 
               />
-              <Submit />    
+              <Submit />
             </>
           )}        
         </form>
