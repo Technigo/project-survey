@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Bottles from './Bottles.png'
+import Bottles from '../image/Bottles.png'
 
 export const Summary = ({ name, wineColor, country }) => {
   return (

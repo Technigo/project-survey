@@ -1,6 +1,6 @@
 import React from 'react'
 
-import Wine from './Wine.jpg'
+import Wine from '../image/Wine.jpg'
 
 export const Header = () => {
   return (
@@ -15,7 +15,7 @@ export const Header = () => {
       </div>
       <div className="header-text">
         <h2>
-                    We deliver wine from southern europe to your door!
+           We deliver wine from southern europe to your door!
         </h2>
       </div>
     </header>
