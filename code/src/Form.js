@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-import { FormHeading } from './FormHeading'
+import { FormHeading } from './components/FormHeading'
 import {FrequencyRadioOption } from './components/FrequencyRadioOption'
 import { BrandSelectOption } from './components/BrandSelectOption'
 
