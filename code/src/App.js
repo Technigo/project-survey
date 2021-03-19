@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import './index.css'
 
 import { ColorQuestion } from './ColorQuestion'
@@ -13,16 +13,16 @@ export const App = () => {
   const [name, setName] = useState("");
   const [showSummary, setShowSummary] = useState(false);
 
-const handlefurOptionChange = (furArray) => {
-  setFurOption(furArray);
+const handlefurOptionChange = (e) => {
+  setFurOption(e.target.value);
 };
 
-const handleColorChange = (newColor) => {
-  setColor(newColor);
+const handleColorChange = (e) => {
+  setColor(e.target.value);
 };
 
-const handleNameChange = (newName) => {
-  setName(newName);
+const handleNameChange = (e) => {
+  setName(e.target.value);
 };
 
 const handleSubmit = event => {
@@ -36,7 +36,7 @@ return (
     {!showSummary && (
       <form onSubmit={handleSubmit}>
         <div>
-          <h1>Answer a few questions and you can win cat food for a whole year!</h1>
+          <h1>Answer a few questions about cats and you can win cat food for a whole year!</h1>
         </div>
 
         <NameQuestion username={name} onNameChange={handleNameChange} />
@@ -51,7 +51,7 @@ return (
           onColorChange={handleColorChange}
         />
 
-        <button type="Submit">Submit</button>
+        <button className="submit" type="Submit">Send</button>
       </form>
     )}
 

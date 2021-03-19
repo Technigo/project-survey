@@ -14,8 +14,8 @@ code {
     monospace;
 }
 
-.survey-section {
-border: 2px solid;
-padding: 20px;
-width: 100%;
-} 
+.submit {
+  border-radius: 40px;
+  border: none;
+  padding: 5px;
+}

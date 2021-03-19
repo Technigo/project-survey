@@ -4,12 +4,12 @@ export const ColorQuestion = ({ color, onColorChange}) => {
 
   return (
     <div>
-    <label>Cats color</label>
+    <label>What color do you like a cat to have?</label>
     <select
       id="color"
       required
       value={color}
-      onChange={(event) => onColorChange(event.target.value)}
+      onChange={(e) => onColorChange(e)}
       >
       <option value="">Select</option>
       <option value="brown">Brown</option>
@@ -17,8 +17,8 @@ export const ColorQuestion = ({ color, onColorChange}) => {
       <option value="white">White</option>
       <option value="grey">Grey</option>
       <option value="red">Red</option>
-      <option value="mixed colors">Mixed colors</option>
+      <option value="mixed colors">Mixed</option>
     </select>
     </div>
-  )
-}
+  );
+};

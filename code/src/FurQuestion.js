@@ -1,19 +1,19 @@
 import React from 'react';
 
 export const FurQuestion = ({ furOption, onfurOptionChange}) => {
-  const furArray = ["long hair", "short hair", "no hair"];
-
+  const furArray = ["long-haired", "short-haired", "hair-less"];
+  
   return (
     <div>
-    What kinds of cat do you like?
+    What cat-coat do you prefer?
     {furArray.map(fur => (
       <label key={fur}>
         <input
           type='radio'
+          name="fur"
           value={fur}
-          onChange={(event) => onfurOptionChange(event.target.value)}
+          onChange={(e) => onfurOptionChange(e)}
           checked={furOption === fur}
-          required
         />
         {fur}
       </label>

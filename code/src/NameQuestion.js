@@ -6,10 +6,10 @@ export const NameQuestion = ({ name, onNameChange }) => {
 return (
 
   <div>
-    <label>Your cats name</label>
+    <label>What is best name for a cat?</label>
       <input
         type='text'
-        onChange={event => onNameChange(event.target.value)}
+        onChange={(e) => onNameChange(e)}
         required
         value={name}
         maxLength="20"
