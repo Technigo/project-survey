@@ -1,37 +1,21 @@
-import React, { useState } from 'react'
+import React from "react";
 
-const RadioButton = () => {
-    const [firstRadio, setFirstRadio] = useState(false)
-    const [secondRadio, setSecondRadio] = useState(false)
+const RadioButton = ({ technologyName, onChange }) => {
+  const onTechnologyChange = (e) => {
+    onChange(e.target.value);
+  };
 
-    const onFirstRadioChange = (e) => {
-        console.log(e.target.value)
-        setFirstRadio(e.target.value)
-    }
-
-    const onSecondRadioChange = (e) => {
-        console.log(e.target.value)
-        setSecondRadio(e.target.value)
-    }
-
-    return(
-        <div>
-            <label htmlFor='firstRadio'> First</label>
-            <input 
-                name="irstRadio"
-                type="radio" 
-                checked={firstRadio} 
-                onChange={onFirstRadioChange}>
-            </input>
-            <label htmlFor='secondRadio'> Second</label>
-            <input 
-                name="secondRadio"
-                type="radio" 
-                checked={secondRadio} 
-                onChange={onSecondRadioChange}>
-            </input>
-        </div>
-
-    )
-}
-export default RadioButton
+  return (
+    <div>
+      <label htmlFor={technologyName}> {technologyName.toUpperCase()} </label>
+      <input
+        name="technology"
+        type="radio"
+        id={technologyName}
+        value={technologyName}
+        onChange={onTechnologyChange}
+      ></input>
+    </div>
+  );
+};
+export default RadioButton;

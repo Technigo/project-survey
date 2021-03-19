@@ -1,30 +1,22 @@
-import React, { useState } from 'react'
+import React from "react";
 
-const Dropdown = () => {
+const Dropdown = ({ onChange, value }) => {
+  const onSeasonChange = (e) => {
+    onChange(e.target.value);
+  };
 
-    const [option, setOption] = useState ('')
+  return (
+    <div>
+      <label htmlFor="option">Select something</label>
+      <select id="season" onChange={onSeasonChange} value={value}>
+        <option disabled></option>
+        <option value="Winter">Winter</option>
+        <option value="Spring">Spring</option>
+        <option value="Fall">fall</option>
+        <option value="Fall">summer</option>
+      </select>
+    </div>
+  );
+};
 
-    const onOptionChange = (e) => {
-        console.log(e.target.value)
-        setOption(e.target.value)
-    }
-
-    return (
-        <div>
-            <label htmlFor="option">Select something</label>
-            <select name="option" onChange={onOptionChange}>
-                <option value="one">
-                    option 1
-                </option>
-                <option value="two">
-                    option 2
-                </option>
-                <option value="three">
-                    option 3
-                </option>
-            </select>
-        </div>
-    )
-}
-
-export default Dropdown
+export default Dropdown;

@@ -1,9 +1,7 @@
-import React from 'react'
+import React from "react";
 
-const SubmitButton = () => {
-    return (
-        <input type="submit" value="submit" />
-    )
-}
+const SubmitButton = ({ disabled }) => {
+  return <input type="submit" value="submit" disabled={disabled} />;
+};
 
-export default SubmitButton
+export default SubmitButton;

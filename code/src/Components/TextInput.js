@@ -1,25 +1,22 @@
-import React, { useState } from 'react'
+import React from "react";
 
-const TextInput = () => {
-    const [name, setName] = useState ('')
+const TextInput = ({ onChange, value, placeholder, id }) => {
+  const onInputChange = (e) => {
+    onChange(e.target.value);
+  };
 
-    const onNameChange = (e) => {
-        console.log(e.target.value)
-        setName(e.target.value)
-    }
+  return (
+    <div>
+      <label htmlFor={id}>Name</label>
+      <input
+        id={id}
+        type="text"
+        value={value}
+        placeholder={placeholder}
+        onChange={onInputChange}
+      />
+    </div>
+  );
+};
 
-    return (
-        <div>
-            <label htmlFor="name">Name</label>
-            <input 
-                id="name"
-                type="text"
-                value={name}
-                placeholder="Jane Doe"
-                onChange={onNameChange}
-            />
-        </div>
-    )
-}
-
-export default TextInput
+export default TextInput;
