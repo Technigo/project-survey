@@ -1,5 +1,10 @@
 import React from 'react';
+
+import RestartButton from './RestartButton.js'
+
 import './Summary.css'
+
+
 const Summary = ({ name, needVacation, country, vacationType, date, email }) => {
   return (
     <div className="summary-container">
@@ -13,6 +18,8 @@ const Summary = ({ name, needVacation, country, vacationType, date, email }) => 
         <li className="answer-text">You would want to start your vacation: <span className="answer">{new Date(date).toLocaleDateString("en", { year: "numeric", month: "long", day: "numeric" })}</span></li>
       </ul>
       <p className="summary-text"> We will get back to you with options for your vacation at <span className="email">{email}</span> as soon as possible!</p>
+    <RestartButton />
+    
     </div>
   )
 }
