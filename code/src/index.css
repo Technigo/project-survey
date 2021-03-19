@@ -106,6 +106,10 @@ button {
   flex-direction: column;
 }
 
+.radio-button-container label {
+  margin: 0 10px;
+}
+
 .icon-container {
   display: flex;
   flex-wrap: wrap;
@@ -278,8 +282,8 @@ footer a {
 @media (min-width: 1024px) {
   .form,
   .character-sheet {
+    margin: 0;
     width: 60%;
-    margin-top: 60px;
   }
 
   button:hover {
