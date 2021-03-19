@@ -32,6 +32,10 @@ const Label = styled.label`
   color: #626b6f;
   margin-bottom: calc(var(--spacing) * 8);
   text-align: left;
+  &::selection {
+    background-color: #93d2e2;
+    color: #fff;
+  }
 `;
 
 export { ButtonContainer, ButtonText, ButtonsContainer, Label };

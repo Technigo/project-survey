@@ -46,7 +46,7 @@ const Result = () => {
         <p style={{ color: `${textColor}` }}>{userName}, you chose {climbingType}. Luckily you have {equipments}. Also you {experienceText()} You prefer {area} climbing.</p>
       </div>
       <ButtonContainer onClick={onResetForm}>
-        <ButtonText to="/step-1">Start</ButtonText>
+        <ButtonText to="/step-1">Start Again</ButtonText>
       </ButtonContainer>
     </>
   );

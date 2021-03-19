@@ -18,7 +18,7 @@ const Name = () => {
   return (
     <>
       <Label htmlFor="name">Please tell us your name:</Label>
-      <NameInput id="name" type="text" value={name} onChange={onNameChange} />
+      <NameInput id="name" type="text" value={name} onChange={onNameChange} required />
       <ButtonContainer type="submit" onClick={onNextHandler}>
         <ButtonText to="/step-2">Next</ButtonText>
       </ButtonContainer>
