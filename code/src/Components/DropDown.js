@@ -1,10 +1,10 @@
 import React from 'react'
 
 export const DropDown = (props) => {
-   
+
   return (
-  <div className="dropdown">
-    <label htmlFor="dropdown">What´s your favorite transportation: </label>
+  <div className="dropdown" tabindex="0">
+    <label htmlFor="dropdown" > What´s your favorite transportation: </label>
     <select 
       id="dropdown"
       value={props.dropDown}

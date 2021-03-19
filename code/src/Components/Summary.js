@@ -9,7 +9,7 @@ export const Summary = (props) => {
   }
 
   return (
-    <div className="summary">
+    <div className="summary" tabindex="0">
       {props.radioValue === "Sun" && (<div className="sun"></div>)}
       <div className={changeClass}>
         <p>Hi {props.name}!</p>

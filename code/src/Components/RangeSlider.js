@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const RangeSlider = (props) => {
-  return (
+  return (   
     <div className="range-slider">
       <input
         type="range"
@@ -11,9 +11,9 @@ export const RangeSlider = (props) => {
         onChange={props.setRangeSlider}
         class="slider"
         id="myRangeSlider"
+        tabindex="0"
         >        
       </input>
-
     </div>
   )
 }

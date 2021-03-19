@@ -26,9 +26,13 @@ code {
 }
 
 .form input[type=text] {
-background-color: rgb(118, 182, 65);
+  background-color: rgb(118, 182, 65);
 }
 
+.form-wrapper {
+  margin:60px 0;  
+  max-width: 500px;  
+}
 .text-wrapper,
 .form-wrapper,
 .questions-wrapper {
@@ -43,11 +47,6 @@ button {
   background-color: rgb(127, 255, 212);
   border-radius: 5px;
   font-weight: bold;
-}
-
-.form-wrapper {
-  margin:60px 0;  
-  max-width: 500px;
 }
 
 .range-slider {
@@ -93,12 +92,10 @@ button {
 }
 
 .sun {
-  background-color: yellow;
+  background-color: rgb(255, 255, 0);
   width: 300px;
   height: 300px;
   border-radius: 50%;
-  animation: shine 1.5s infinite alternate;
-  position: relative;
-  top: 10px;
-  left: 190px;   
+  animation: shine 1.5s infinite alternate; 
 }
+

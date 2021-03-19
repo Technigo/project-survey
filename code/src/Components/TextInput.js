@@ -5,7 +5,7 @@ export const TextInput = (props) => {
   
 
   return (
-  <div className="text-input">
+  <div className="text-input" tabindex="0">
     <label htmlFor="name-input">What´s your name: </label>
     <input 
       id="name-input"

@@ -7,7 +7,6 @@ import { DropDown } from './DropDown'
 import { TextWrapper } from './TextWrapper'
 import { NextButton } from './NextButton'
 import { SubmitButton } from './SubmitButton'
-import { RangeSlider } from './RangeSlider'
 
 const typeOfTrip = ['Winter', 'Sun']
 
@@ -15,13 +14,11 @@ export const Form = () => {
   const [name, SetName] = useState('')
   const [radioValue, SetRadioValue] = useState('')
   const [dropDown, setDropDown] = useState('')  
-  const [newCounter, setNewCounter] = useState(0)
-  const [rangeSlider, setRangeSlider] = useState()
+  const [newCounter, setNewCounter] = useState(0)  
 
   const onCounterIncrease = () => {
   setNewCounter(newCounter + 1);
-  }
-  
+  }  
   const onNameChange = (event) => {
     console.log(event.target.value)
     SetName(event.target.value)
@@ -33,10 +30,6 @@ export const Form = () => {
   const onDropDown = (event) => {
     console.log(event.target.value)
     setDropDown(event.target.value)
-  }
-  const onRangeSlider = (event) => {    
-    console.log(event.target.value)
-    setRangeSlider(event.target.value)    
   }  
   
   return (
@@ -44,12 +37,7 @@ export const Form = () => {
     <form className="form" onSubmit={event => event.preventDefault()}> 
       <div className="form-wrapper">        
             {newCounter === 0 && (
-              <div> 
-                <RangeSlider
-                onRangeSlider={onRangeSlider}
-                rangeSlider={rangeSlider}
-                setRangeSlider={setRangeSlider}
-                />               
+              <div>                               
                 <TextWrapper />
                 <NextButton
                 onCounterIncrease={onCounterIncrease} />
@@ -88,7 +76,7 @@ export const Form = () => {
                   radioValue={radioValue}
                   dropDown={dropDown}                  
                 />
-                <button onClick={() => {
+                <button tabindex="0" onClick={() => {
                   setNewCounter(newCounter -4)
                   SetName('')
                   SetRadioValue('')

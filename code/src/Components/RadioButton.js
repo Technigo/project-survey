@@ -4,7 +4,7 @@ export const RadioButton = (props) => {
 
   return (
   <div className="radiobtn">
-      <p>What type of trip you prefer:</p> 
+      <p tabindex="0">What type of trip you prefer:</p> 
       {props.typeOfTrip.map(trip => ( 
         <label key={trip}>
           <input
