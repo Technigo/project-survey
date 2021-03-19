@@ -1,11 +1,11 @@
 import React, {useState} from 'react'
 
 
-import FavoriteBook from './components/FavoriteBook';
-import HowManyBooks from './components/HowManyBooks';
-import FavoriteGenre from './components/FavoriteGenre';
-import Header from './components/Header';
-import Summary from './components/Summary';
+import FavoriteBook from './Components/FavoriteBook';
+import HowManyBooks from './Components/HowManyBooks';
+import FavoriteGenre from './Components/FavoriteGenre';
+import Header from './Components/Header';
+import Summary from './Components/Summary';
 
 
 import './index.css'
