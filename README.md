@@ -1,13 +1,13 @@
+This project was made during week 10 at the Technigo bootcamp. The learning objective was to get familiar with state in React.
+
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to build a short survey with subject free of choice. The main purpose were to practice both useState hook and also connecting HTML form inputs to state. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started building components for the different form elements. Then I moved on to the trickier part where connecting the form input should result in a summary showing the users answers and at the same time hiding the form. I created a function to set the state of the summary, created in a separate component, to show or not show depending on the action on the submit button. Showing the summary without answers was the next problem so to handle that issue I used conditional rendering in a separate function depending on the input from the user. If I had more time I would continue with error message or some kind of response telling the user that the form needs to be answered before submitting. I would also explore som more form elements adding more questions to the survey.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://gracious-hypatia-2912b1.netlify.app/
