@@ -2,13 +2,13 @@ import React from 'react'
 
 const TextInput = (props) => {
   const { label, inputId, values, placeholder, onInputResponse } = props
-  // const value = values.[inputId]
-  console.log(placeholder)
+
   return (
     <>
       <label className="question-text" htmlFor={inputId}>{label}</label>
-      <input className="text input"
+      <input className="input text"
         id={inputId} 
+        spellCheck="false"
         autoComplete="off"
         type="text" 
         placeholder={placeholder}

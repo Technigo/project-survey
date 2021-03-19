@@ -7,7 +7,7 @@ const Select = ( props ) => {
     <>
       <label htmlFor={inputId}>{label}</label>
       <select 
-        class="select input"
+        className="input select"
         required
         id={inputId} 
         value={value}

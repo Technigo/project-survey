@@ -21,8 +21,8 @@ const Form = () => {
     { 
       type: 'textInput',
       options: '',
-      questionText: 'What is your name and bla bla bla it can get lengthy',
-      placeholder: 'Type your full name',
+      questionText: 'Hej Lisa hur känns det här',
+      placeholder: 'Här kan det stå lite text',
       required: true,
       inputId: 'name', 
     },
@@ -51,7 +51,7 @@ const Form = () => {
   }
   
   const onButtonResponse = e => {
-    console.log(values)
+    console.log(e)
     console.log('e.target.value ' + e.target.value)
     console.log('e.target.id ' + e.target.id)
     

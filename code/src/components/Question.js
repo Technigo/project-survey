@@ -5,7 +5,7 @@ import Button from './Button'
 import TextInput from './TextInput'
 
 const Question = (props) => {
-  let { values, question, onInputResponse, placeholder, onButtonResponse } = props
+  let { values, question, onInputResponse, onButtonResponse } = props
   let value = values.[question.inputId]
   switch (question.type) {
     case 'textInput' :
@@ -38,7 +38,7 @@ const Question = (props) => {
     case 'select' :
       return (
         <>
-          <h3 class="question-number">{values.step}</h3>
+          <h3 className="question-number">{values.step}</h3>
           <Select 
           label={question.questionText}
           inputId={question.inputId} 

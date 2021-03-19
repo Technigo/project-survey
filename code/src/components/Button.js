@@ -5,10 +5,12 @@ const Button = ({ buttonValue, label, onButtonResponse }) => {
   return (
     <input 
       className="button"
-      type="button"
+      type="submit"
       id={buttonValue}
       value={label}
-      onClick={(e) => onButtonResponse(e)}>
+      onClick={(e) => onButtonResponse(e)}
+      onKeyDown={(e) => console.log(e)}
+      >
     </input>
   )
 }
