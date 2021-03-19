@@ -10,8 +10,8 @@ import Summary from './Summary'
 const Form = () => {
   const [page, setPage] = useState(0)
   const [setShowSummary] = useState(false)
-  const [inhabitants, setInhabitants] = useState('') //should it's initial value be set to 5000 (First option) Think it is fine!
-  const [ageCategory, setAgeCategory] = useState('') //same here
+  const [inhabitants, setInhabitants] = useState('')
+  const [ageCategory, setAgeCategory] = useState('') 
   const [stageArtCategory, setStageArtCategory] = useState('')
   const [proposal, setProposal] = useState('');
   const [profession, setProfession] = useState('') 
@@ -25,7 +25,6 @@ const Form = () => {
     setShowSummary(true)
   }
 
-  console.log(page)
   return (
     <section className="form-container">
       <form onSubmit={handleSubmit}>

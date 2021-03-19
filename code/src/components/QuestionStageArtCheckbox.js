@@ -56,18 +56,18 @@ const QuestionStageArtCheckbox = ({
             className="form-popup"
           />
         )}
-      </div>
-      <div className="buttons-container">
-        <NextQuestionButton
-          page={page}
-          setPage={setPage}
-          currentState={stageArtCategory.length}
-          defaultState=''
-          message="Please choose what kind of overlapping stage arts you would like to experience first!"
-          onClick={onNextQuestion}
-          button="Next question button"
-          buttontext="Next question"
-        />
+          <div className="buttons-container-3">
+            <NextQuestionButton
+              page={page}
+              setPage={setPage}
+              currentState={stageArtCategory.length}
+              defaultState=''
+              message="Please choose what kind of overlapping stage arts you would like to experience first!"
+              onClick={onNextQuestion}
+              button="Next question button"
+              buttontext="Next question"
+            />
+          </div>
       </div>
     </article>
   )

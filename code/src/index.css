@@ -8,7 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rgb(238,174,202); /*#EEAECA*/
+  background: rgb(238,174,202);
   background: radial-gradient(circle, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
 }
 
@@ -28,10 +28,6 @@ code {
   letter-spacing: 1px;
 }
 
-.form-container {
-
-}
-
 .form-question {
   max-width: 60vw;
   display: flex;
@@ -44,7 +40,6 @@ code {
 .form-question-3 {
   max-width: 60vw;
   display: flex;
-  justify-content: left;
   flex-direction: column;
 }
 
@@ -67,7 +62,7 @@ code {
   margin: 30px;
 }
 
-/*Question Input Proposal + QuestionAgeRadio*/
+/* Question Input Proposal + QuestionAgeRadio */
 .question-content-container {
   height: 25vh;
   max-width: 80vw;
@@ -87,12 +82,17 @@ code {
 
 /* QuestionStageArtCheckbox */
 .question-content-container-3 {
-  height: 40vh;
+  height: 30vh;
   max-width: 80vw;
+  margin: 0 0 40px 0;
 }
 
 .checkbox-label {
   padding: 5px 30px;
+}
+
+.buttons-container-3 {
+  margin: 40px;
 }
 
 /* Text Proposal */
@@ -172,9 +172,3 @@ code {
     flex-direction: row;
   }
 }
-
-/* @media (width: 992px) {
-  .question-content-container {
-    max-width: 80vw;
-  }
-} */
