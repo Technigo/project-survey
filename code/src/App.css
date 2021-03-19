@@ -15,27 +15,24 @@ body::after {
 body {
   background-color: #D1CCC1;
 }
-/* APP */
-
-.app-container {
-border: 2px solid blueviolet;
-}
 
 /* FORM */
 
 .form-container {
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+} 
 
-}
-
-.submit-button {
-
-}
 
 /* HEADER */
 
 .header-box {
 display: flex;
 justify-content: center;
+margin-top: 5px;
 }
 
 h1 {
@@ -44,11 +41,6 @@ color:#37372C;
 font-size: 38px;
 width: 80%;
 text-align: center;
-
-}
-
-h1 .header-box {
-
 }
 
 
@@ -74,18 +66,11 @@ h2 {
   text-align: center;
 }
 
-h2 .name-box {
-
-
-}
-
  .fill-in {
   font-family: 'Poppins', sans-serif;
   font-weight: bold;
   color: #824947;
   flex-direction: column;
-  
-
 } 
 
 .fill-in-field {
@@ -96,7 +81,6 @@ height: 30px;
 width: 150px;
 font-size: 20px;
 border: solid 1px #824947;
-border-radius: 4%;
 }
 
 /* BUTTONS */
@@ -106,14 +90,13 @@ display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
-
-}
+}   
 
 .p-button-box {
   font-family: 'Poppins', sans-serif;
   color: #37372C;
   font-weight:bold;
-
+  font-size: 20px;
 }
 
 .button-box {
@@ -198,6 +181,7 @@ padding-bottom: 20px;
   font-family: 'Poppins', sans-serif;
   color: #824947;
   font-weight: bold;
+  padding: 3px;
 }
 
 .pick-field {
@@ -267,6 +251,199 @@ margin: auto;
   margin: 5px;
 }
 
-@media (min 667px){
+.again-btn-box {
+  display: flex;
+}
+
+.again-btn {
+  margin: 10px;
+  font-family: 'Monaco';
+  background-color: #AD8841;
+  color: #37372C;
+  border: solid 1px #824947;
+  height: 30px;
+}
+
+/*** MEDIA TABLETT ***/
+
+@media (min-width: 667px) {
+
+  .header-box {
+    margin-top: 10px;
+  }
+ 
+  h1 {
+    font-size: 40px;
+  }
+  .name-box {
+    width: 70%;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+   .fill-in-field {
+    height: 45px;
+    width: 180px;
+    font-size: 25px;
+   }
+
+   .p-button-box {
+     font-size: 25px;
+     width: 80%;
+     text-align: center;
+   }
+
+   .button-small-box {
+     width: 80%;
+     justify-content: space-evenly;
+     align-content: space-around;
+   }
+
+   .button-box {
+     width: 80%;
+     margin: auto;
+     font-size: 20px;
+     margin-bottom: 8px;
+     
+   }
+
+   .checkmark {
+     width: 25px;
+     height: 25px;
+   }
+   
+   .button-box .checkmark:after {
+     top: 8px;
+     left: 8px;
+   }
+
+   .p-drop-down-box {
+    font-size: 25px;
+    width: 70%; 
+   }
+
+   .pick-favorite {
+     font-size: 20px;
+     padding:5px;
+   }
+
+   .pick-field {
+     height: 45px;
+     font-size: 20px;
+   }
+
+   .sub-button-box {
+    margin: 25px 0 25px 0;
+  }
+
+   .submit-button {
+     height: 40px;
+     font-size: 20px;
+     
+   }
+
+   .again-btn {
+    margin: 20px;
+    height: 40px;
+    font-size: 20px;
+  }
+}
+
+/*** MEDIA DESKTOP ***/
+
+@media (min-width: 1024px) {
+
+  .header-box {
+    margin-top: 20px;
+  }
+
+  h1 {
+    font-size: 60px;
+    margin: 20px;
+  }
+
+  .name-box {
+    width: 60%;
+    margin: 20px 50px 20px 50px;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  .fill-in-field {
+    height: 55px;
+    width: 220px;
+    font-size: 40px;
+  }
+
+  .p-button-box {
+    font-size: 35px;
+    width: 90%;
+    text-align: center;
+    margin: 30px;
+  }
+
+  .button-small-box {
+    width: 80%;
+  }
+
+  .button-box {
+    width: 90%;
+    font-size: 30px;
+    margin-bottom: 10px;
+    padding-left: 45px;
+  }
+
+  .checkmark {
+    width: 33px;
+    height: 33px;
+  }
+  
+  .button-box .checkmark:after {
+    top: 12px;
+    left: 12px;
+  }
+
+  .p-drop-down-box {
+    font-size: 30px;
+    width: 80%; 
+    margin: 5px 5px 20px 5px;
+   }
+
+   .pick-favorite {
+     font-size: 25px;
+     padding:10px;
+   }
+
+   .pick-field {
+     height: 50px;
+     font-size: 25px;
+   }
+
+   .sub-button-box {
+    margin: 35px 0 35px 0;
+  }
+
+   .submit-button {
+     height: 55px;
+     font-size: 30px;
+   }
+
+   .p-result-box {
+     font-size: 35px;
+   }
+
+   .p-result-box-sum {
+     font-size: 25px;
+   }
+
+   .again-btn {
+    margin: 30px;
+    height: 50px;
+    font-size: 25px;
+  }
+
 
 }

@@ -6,10 +6,10 @@ import  DropDown  from './components/DropDown'
 import  Result  from './components/Result'
 
 const Form = () => {
-  const [name,setName] = useState('')
-  const [timeInterval, setTimeInterval] = useState('')
+  const [name,setName]= useState('')
+  const [timeInterval, setTimeInterval]= useState('')
   const [favorite, setFavorite]= useState('')
-  const [done, setDone] = useState(false)
+  const [done, setDone]= useState(false)
 
   const isResultComplete = () => {
     if (name === '') {
@@ -44,7 +44,7 @@ const Form = () => {
           < RadioButtons timeInterval={timeInterval} setTimeInterval={setTimeInterval} />
           < DropDown favorite={favorite} setFavorite={setFavorite} />
           <div className='sub-button-box'>
-            <button className='submit-button' type='submit'> Submit! </button>
+            <button className='submit-button' type='submit'> Check it out </button>
           </div>        
         </form>
        

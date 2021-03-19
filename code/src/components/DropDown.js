@@ -5,13 +5,15 @@ const DropDown = ({favorite, setFavorite}) => {
   
 return (
   <div className='drop-down-box'>
-    <p className='p-drop-down-box'>What flavor rock your boat &#38; get your brain freeze on?!</p>
-    <label className='pick-favorite'>Pick your favorite:</label>
+    <p className='p-drop-down-box'tabIndex='0'>What flavor rock your boat &#38; get your brain freeze on?!</p>
+    <label className='pick-favorite'tabIndex='0'>Pick your favorite:</label>
     <select className='pick-field'
     onChange={event => setFavorite(event.target.value)}
+    required
+    aria-label='Select a flavor'
     value={favorite}
     >
-      <option disabled></option>
+      <option disabled aria-label='Choose a flavor from the dropdown menu'></option>
       <option className='opt-po'value='Polka'>Polka</option>
       <option value='Pineapple'>Pineapple</option>
       <option value='Salty Licorice'>Salty Licorice</option>
