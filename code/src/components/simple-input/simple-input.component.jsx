@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { ButtonContainer, ButtonText, Label } from "../../assets/styles/shared";
-import { NameInput } from "./name.style";
+import { NameInput } from "./simple-input.style";
 
 const Name = () => {
   const [name, setName] = useState(localStorage.getItem("Name") || "");
