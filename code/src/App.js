@@ -40,7 +40,7 @@ const onAgeChange = (e) => {
     <>
       {/* WELCOME SECTION */}
       {section === 'welcome' && (
-          <div className='welcome'>
+          <div aria-label="Welcome" className='welcome'>
             <Header />
             <button
               className='start-btn'
@@ -54,7 +54,7 @@ const onAgeChange = (e) => {
 
       {/* NAME SECTION */}
       {section === 'name-input' && (
-        <section className='name-input'>
+        <section aria-label="Name input" className='name-input'>
 
             <NameInput
           name={name}
@@ -87,7 +87,7 @@ const onAgeChange = (e) => {
 
       {/* LOCATION SECTION */}
       {section === 'location' && (
-        <section className='location'>
+        <section aria-label="Location dropdown" className='location'>
         <DropdownLocation 
           location={location}
           label={name}
@@ -118,7 +118,7 @@ const onAgeChange = (e) => {
 
       {/* AGE SECTION */}
       {section === 'age' && (
-        <section className='radio-age'>
+        <section aria-label="Age select" className='radio-age'>
           <RadioBtnAge 
           ageGroup={ageGroup}
           onAgeChange={onAgeChange}
@@ -149,7 +149,7 @@ const onAgeChange = (e) => {
 
       {/* SUMMARY */}
       {section === 'summary' && (
-        <section>
+        <section aria-label="Summary">
           <Summary
           age={ageGroup}
           location={location}
