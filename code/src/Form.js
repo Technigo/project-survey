@@ -1,8 +1,10 @@
 import React, { useState } from 'react'
 
 import { FormHeading } from './components/FormHeading'
-import {FrequencyRadioOption } from './components/FrequencyRadioOption'
+import { NameInput } from './components/NameInput'
 import { BrandSelectOption } from './components/BrandSelectOption'
+import {FrequencyRadioOption } from './components/FrequencyRadioOption'
+
 
 const frequencies = ["Daily", "Weekly", "Monthly", "Never"]
 
@@ -12,31 +14,20 @@ export const Form = () => {
     const [brand, setBrand] = useState('')
     const [frequency, setFrequency] = useState('')
 
-    //Functions to change value of state
-    const onNameChange = (e) => {
-        console.log(`Name: ${e.target.value}`)
-        setName(e.target.value)
-    }
-
     return(
         <form>
             <FormHeading 
                 formTitle="We're all ears."
                 formText="We want to know what your sneaker deal is. Are you yay or nay? Take this 5 minute survey to help us understand your needs. You can tell us how you really feel!"
             />
-            <div>
-                <label htmlFor="name">What is Your Name: </label>
-                <input 
-                    id="name" 
-                    type="text" 
-                    value={name} 
-                    onChange={onNameChange}
-                />
-            </div>
-                <BrandSelectOption 
+            <NameInput 
+                name={name} 
+                setName={setName}
+            />
+            <BrandSelectOption 
                     brand={brand} 
                     setBrand={setBrand} 
-                />
+            />
             <div>
                 <p>How Often Do You Wear Sneakers?</p>
                 {
