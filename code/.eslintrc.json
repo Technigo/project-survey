@@ -25,6 +25,7 @@
     "react-hooks"
   ],
   "rules": {
+    "quotes": ["error", "double"],
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "brace-style": [

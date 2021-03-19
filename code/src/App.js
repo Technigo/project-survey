@@ -1,9 +1,23 @@
-import React from 'react'
+/* eslint-disable quotes */
+import React from "react";
+import { Switch, Route } from "react-router-dom";
 
-export const App = () => {
+import Header from "./components/header/header.component";
+import Main from "./pages/main/main.component";
+import NotFound from "./pages/not-found/not-found.component";
+import Footer from "./components/footer/footer.component";
+
+function App() {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+    <>
+      <Header />
+      <Switch>
+        <Route path="/" component={Main} exact />
+        <Route component={NotFound} />
+      </Switch>
+      <Footer />
+    </>
+  );
 }
+
+export default App;
