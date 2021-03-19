@@ -13,13 +13,13 @@ const SubmitButton = (props) => {
                 Submit
             </button>
         )
-    } else if (section === 7) {
-        return (
-            <p className="validation-warning">Go back & check if you've filled in everything!</p>
-        )
     }
     else {
-        return null
+        return (
+            <button onClick={handleSubmit} disabled>
+                Submit
+            </button>
+        )
     }
 }
 

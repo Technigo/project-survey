@@ -349,7 +349,15 @@ footer a {
   button:hover {
     box-shadow: none;
     transform: scale(1.3);
-  } 
+  }
+
+  button:disabled {
+    box-shadow: none;
+  }
+
+  button:disabled:hover {
+    transform: none;
+  }
 
   footer a:hover {
     text-decoration: underline;
