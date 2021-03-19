@@ -4,12 +4,14 @@ import BookInput from "./BookInput";
 import DropDownMenu from "./DropDownMenu"
 import RadioButtonsInput from "./RadioButtonsInput";
 import RadioButtonsRecomends from "./RadioButtonsRecomends";
+import SubmitButton from "./SubmitButton";
 
 
 const Form = (props) => {
 
     return (
-        <form>
+
+        <form onSubmit={event => event.preventDefault()}>
             <NameInput name={props.name}
                 onNameChange={props.onNameChange} />
             <BookInput bookname={props.bookname}
@@ -21,6 +23,7 @@ const Form = (props) => {
                 numberOfBook={props.numberOfBook} />
             <RadioButtonsRecomends onrecomendationChange={props.onrecomendationChange}
                 recomendation={props.recomendation} />
+            <SubmitButton />
         </form>
     )
 }
