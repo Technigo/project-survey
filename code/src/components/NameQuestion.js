@@ -10,9 +10,14 @@ const NameQuestion = ({ name, callbackOnChange, step, setStep }) => {
 
   return (
     <>
-      <div>
-        <label htmlFor="name">Your name: </label>
+      <div className="name-container">
+        <label 
+          className="name-label" 
+          htmlFor="name">
+            So, what's your name? 
+        </label>
         <input
+          className="name-input-text"
           id="name"
           type="text"
           onChange={handleNameChange}
@@ -21,12 +26,10 @@ const NameQuestion = ({ name, callbackOnChange, step, setStep }) => {
           required
         />
       </div>
-      <div>
         <FormButtons 
           step={step}
           setStep={setStep}
         />
-      </div>
     </>
   );
 };

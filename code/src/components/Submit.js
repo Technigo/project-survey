@@ -5,6 +5,7 @@ const Submit = () => {
     <>
     <div>
       <input 
+        className="btn submit-button grow"
         type="submit"
         value="Submit"
       />

@@ -3,11 +3,9 @@ import React from 'react';
 const Summary = (props) => {
   return (
     <>
-    <section>
-      <p>{props.formData.name}</p>
-      <p>{props.formData.sushi}</p>
-      <p>{props.formData.ingredient}</p>
-    </section>
+    <div>
+      <p>So... {props.formData.name}, you like {props.formData.sushi} with {props.formData.ingredient} then?</p>
+    </div>
     </>
   );
 };

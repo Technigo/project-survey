@@ -10,9 +10,14 @@ const SushiQuestion = ({ sushi, callbackOnChange, step, setStep }) => {
 
   return (
     <>
-      <div>
-        <label htmlFor="sushi">Favourite sushi? </label>
+      <div className="sushi-container">
+        <label 
+          className="sushi-label"
+          htmlFor="sushi">
+            Favourite sushi? 
+        </label>
         <select 
+          className="sushi-select"
           id="sushi"
           onChange={handleSushiChange}
           value={sushi}
@@ -28,12 +33,10 @@ const SushiQuestion = ({ sushi, callbackOnChange, step, setStep }) => {
           <option value="gunkan">Gunkan</option>
         </select>
       </div>
-      <div>
-        <FormButtons 
+      <FormButtons 
           step={step}
           setStep={setStep}
         />
-      </div>
     </>
   );
 };

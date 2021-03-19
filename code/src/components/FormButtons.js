@@ -10,6 +10,7 @@ const FormButtons = ({ step, setStep }) => {
   
   return (
     <>
+      <div className="buttons-container">
       {step > 1 && step < 4 && (
         <Button 
           stepBtn={previousStep}
@@ -25,6 +26,7 @@ const FormButtons = ({ step, setStep }) => {
           btnTxt={buttonTexts[step]}
         />
       )}
+      </div>
     </>
   );
 };

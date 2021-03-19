@@ -9,8 +9,8 @@ const FirstPage = ({ step, setStep }) => {
       {step === 0 && (
         <div className="first-page-container">
           <BlobOne />
-          <h1>Do you like sushi?</h1>
-          <p>Then enter this survey!</p>
+          <h1 className="first-page-header">Do you like sushi?</h1>
+          <p className="first-page-text">Then enter this survey!</p>
           <FormButtons 
             step={step}
             setStep={setStep}

@@ -30,12 +30,10 @@ const IngredientQuestion = ({ ingredient, callbackOnChange, step, setStep }) => 
           </label>
         ))}
       </fieldset>
-      <div>
         <FormButtons 
           step={step}
           setStep={setStep}
         />
-      </div>
     </>
   );
 };

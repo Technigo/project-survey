@@ -11,3 +11,149 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+#root {
+  min-height: 100vh;
+}
+
+.main {
+  font-family: 'Comfortaa', cursive;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  min-height: 80vh;
+  border: 6px solid #ffc371;
+  border-radius: 4px;
+  margin: 0 30px;
+}
+
+
+/*** FIRST PAGE ***/
+.first-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.first-page-header {
+  position: absolute;
+  display: flex;
+  align-self: center;
+  top: 50%;
+}
+
+.first-page-text {
+  position: absolute;
+  display: flex;
+  align-self: center;
+  top: 60%;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+
+/*** BUTTONS ***/
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.btn {
+  border: solid 2px #ff5f6d;
+  background-color: transparent; 
+  padding: 10px 20px;
+  font-family: inherit;
+  font-size: 18px;
+  font-weight: 700;
+  outline: none;
+  color: inherit;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  margin: 20px 10px 0px 10px;
+}
+
+.btn:hover {
+  background: rgb(255, 195, 113, 0.5);
+}
+
+.button {
+  position: absolute;
+  display: flex;
+  align-self: center;
+  top: 70%;
+}
+
+.submit-button {
+  position: absolute;
+  display: flex;
+  align-self: center;
+}
+
+.grow { 
+  transition: all .2s ease-in-out; 
+}
+  
+.grow:hover { 
+  transform: scale(1.1); 
+}
+
+
+/*** NAME QUESTION ***/
+.name-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.name-label {
+  font-size: 20px;
+  margin: 0px 10px 20px 10px;
+}
+
+.name-input-text {
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  padding: 0px 15px;
+  color: #333;
+  outline: none;
+  background-color: rgb(255, 195, 113, 0.5);
+  transition: all 0.2s ease-out;
+  font-size: 20px;
+}
+
+/*** SUSHI QUESTION ***/
+.sushi-container {
+
+}
+
+.sushi-label {
+
+}
+
+.sushi-select {
+
+}
+
+
+
+
+
+/*** MEDIA QUERIES ***/
+@media (min-width: 768px) {
+
+}
+
+
+@media (min-width: 1025px) {
+
+}
