@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Radiobuttons3 = () => {
-  const [selectSmallVenue, setSelectSmallVenue] = useState();
+const Radiobuttons3 = ({ selectSmallVenue, setSelectSmallVenue }) => {
 
   return (
     <form tabIndex="0">
@@ -11,9 +10,9 @@ const Radiobuttons3 = () => {
         <input
           id="berns"
           type="radio"
-          value="berns"
+          value="Berns"
           onChange={(event) => setSelectSmallVenue(event.target.value)}
-          checked={selectSmallVenue === "berns"} //Can perhaps be removed?
+          checked={selectSmallVenue === "Berns"} 
         />
        Berns
        </label>
@@ -22,9 +21,9 @@ const Radiobuttons3 = () => {
         <input
           id="debaser"
           type="radio"
-          value="debaser"
+          value="Debaser"
           onChange={(event) => setSelectSmallVenue(event.target.value)}
-          checked={selectSmallVenue === "debaser"}
+          checked={selectSmallVenue === "Debaser"}
         />
       Debaser
        </label>
@@ -33,9 +32,9 @@ const Radiobuttons3 = () => {
         <input
           id="nalen"
           type="radio"
-          value="nalen"
+          value="Nalen"
           onChange={(event) => setSelectSmallVenue(event.target.value)}
-          checked={selectSmallVenue === "nalen"}
+          checked={selectSmallVenue === "Nalen"}
         />
        Nalen
       </label>

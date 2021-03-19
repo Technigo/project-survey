@@ -1,11 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Textfield = () => {
-  const [inputName, setInputName] = useState('');
+const Textfield = ({ inputName, setInputName }) => {
 
   return (
     <form onSubmit={event => event.preventDefault()} tabIndex="0">
-      Please state your name: 
+      Please start the survey by stating your name: 
       <input
         type="text"
         id="inputName"

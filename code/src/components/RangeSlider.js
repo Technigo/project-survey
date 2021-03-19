@@ -1,8 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const RangeSlider = () => {
-
-  const [range, setRange] = useState(1); //WHAT GOES HERE?
+const RangeSlider = ({ range, setRange }) => {
 
   return (
     <form>
@@ -11,6 +9,7 @@ const RangeSlider = () => {
           type="range" 
           min="1" 
           max="10" 
+          // value="1"
           start={range} 
           onChange={(event) => setRange(event.target.value)}
           className="range" 

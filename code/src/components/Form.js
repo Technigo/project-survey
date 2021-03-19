@@ -1,14 +1,12 @@
 import React, { useState } from 'react';
 
 import TextField from './TextField';
-// import Checkbox from './Checkbox';
 import Dropdown1 from './Dropdown1';
 import Dropdown2 from './Dropdown2';
 import Radiobuttons1 from './Radiobuttons1';
 import Radiobuttons2 from './Radiobuttons2';
 import Radiobuttons3 from './Radiobuttons3';
 import RangeSlider from './RangeSlider';
-// import SubmitButton from './SubmitButton';
 import Summary from './Summary';
 
 const Form = () => {
@@ -19,48 +17,10 @@ const Form = () => {
   const [selectBigVenue, setSelectBigVenue] = useState();
   const [selectMidVenue, setSelectMidVenue] = useState();
   const [selectSmallVenue, setSelectSmallVenue] = useState();
-  const [range, setRange] = useState(1); //WHAT GOES HERE?
+  const [range, setRange] = useState(); //WHAT GOES HERE?
   const [showSummary, setShowSummary] = useState(false);
 
-  // const isSurveyComplete = () => {
- 
-  //   if (inputName === '') {
-  //     return false;
-  //   }
-
-  //   if (genre === '') {
-  //     return false;
-  //   }
-
-  //   if (cost === '') {
-  //     return false;
-  //   }
-
-  //   if (selectBigVenue === '') {
-  //     return false;
-  //   }
-
-  //   if (selectMidVenue === '') {
-  //     return false;
-  //   }
-
-  //   if (selectSmallVenue === '') {
-  //     return false;
-  //   }
-
-  //   if (range === '') {
-  //     return false;
-  //   }
-
-  //   return true;
-  // };
-
-  // if (isSurveyComplete()) {
-  //   console.log(`Survey Complete!`);
-  // }
-
   const handleSubmit = (event) => {
-    console.log(handleSubmit)
     event.preventDefault()
     setShowSummary(true);
   };
@@ -68,7 +28,7 @@ const Form = () => {
   return (
     <>
     {! showSummary ? (
-       <section onSubmit = {handleSubmit}>
+       <section className="main-wrapper">
        <TextField inputName = {inputName} setInputName = {setInputName} />
        <Dropdown1 genre = {genre} setGenre = {setGenre} />
        <Dropdown2 cost = {cost} setCost = {setCost} />
@@ -82,8 +42,14 @@ const Form = () => {
    
        </section>
 
-    ): (<Summary inputName = {inputName} genre = {genre} cost = {cost} selectBigVenue = {selectBigVenue} 
-      selectMidVenue = {selectMidVenue} selectSmallVenue = {selectSmallVenue} range = {range} />
+    ): (<Summary 
+      inputName = {inputName} 
+      genre = {genre} 
+      cost = {cost} 
+      selectBigVenue = {selectBigVenue} 
+      selectMidVenue = {selectMidVenue} 
+      selectSmallVenue = {selectSmallVenue} 
+      range = {range} />
      
     )}
     </>

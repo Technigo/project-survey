@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Dropdown2 = () => {
-const [cost, setCost] = useState('');
+const Dropdown2 = ({ cost, setCost }) => {
 
   return (
     <form>

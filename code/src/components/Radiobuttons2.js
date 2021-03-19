@@ -1,19 +1,19 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Radiobuttons2 = () => {
-  const [selectMidVenue, setSelectMidVenue] = useState();
+const Radiobuttons2 = ({ selectMidVenue, setSelectMidVenue }) => {
 
   return (
-    <form tabIndex="0">
+    <form className="medium-venues" tabIndex="0">
+ 
       What is your favourite medium live music venue?
 
       <label htmlFor="fryshuset">
         <input
           id="fryshuset"
           type="radio"
-          value="fryshuset"
+          value="Fryshuset"
           onChange={(event) => setSelectMidVenue(event.target.value)}
-          checked={selectMidVenue === "fryshuset"}
+          checked={selectMidVenue === "Fryshuset"}
         />
        Fryshuset
        </label>
@@ -22,9 +22,9 @@ const Radiobuttons2 = () => {
         <input
           id="munchenbryggeriet"
           type="radio"
-          value="munchenbryggeriet"
+          value="Münchenbryggeriet"
           onChange={(event) => setSelectMidVenue(event.target.value)}
-          checked={selectMidVenue === "munchenbryggeriet"}
+          checked={selectMidVenue === "Münchenbryggeriet"}
         />
       Münchenbryggeriet
        </label>
@@ -33,12 +33,13 @@ const Radiobuttons2 = () => {
         <input
           id="cirkus"
           type="radio"
-          value="cirkus"
+          value="Cirkus"
           onChange={(event) => setSelectMidVenue(event.target.value)}
-          checked={selectMidVenue === "cirkus"}
+          checked={selectMidVenue === "Cirkus"}
         />
         Cirkus
       </label>
+    
 
     </form>
   );

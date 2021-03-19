@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
-const Radiobuttons1 = () => {
-  const [selectBigVenue, setSelectBigVenue] = useState();
+const Radiobuttons1 = ({ selectBigVenue, setSelectBigVenue }) => {
 
   return (
     <form tabIndex="0">
@@ -11,9 +10,9 @@ const Radiobuttons1 = () => {
         <input
           id="globe"
           type="radio"
-          value="globe"
+          value="Ericsson Globe"
           onChange={(event) => setSelectBigVenue(event.target.value)}
-          checked={selectBigVenue === "globe"}
+          checked={selectBigVenue === "Ericsson Globe"}
         />
         Ericsson Globe
       </label>
@@ -22,9 +21,9 @@ const Radiobuttons1 = () => {
         <input
           id="friends"
           type="radio"
-          value="friends"
+          value="Friends Arena"
           onChange={(event) => setSelectBigVenue(event.target.value)}
-          checked={selectBigVenue === "friends"}
+          checked={selectBigVenue === "Friends Arena"}
         />
         Friends Arena
       </label>
@@ -33,9 +32,9 @@ const Radiobuttons1 = () => {
         <input
           id="tele2"
           type="radio"
-          value="tele2"
+          value="Tele2 Arena"
           onChange={(event) => setSelectBigVenue(event.target.value)}
-          checked={selectBigVenue === "tele2"}
+          checked={selectBigVenue === "Tele2 Arena"}
         />
         Tele2 Arena
       </label>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'; //Outer depenency grouped (from Node module) 
+import React from 'react'; //Outer depenency grouped (from Node module) 
 
 import Header from 'components/Header'; //Local depenencies grouped (created by developer) 
 import Form from './components/Form'; 

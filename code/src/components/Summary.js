@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Summary = ({ inputName, genre, cost, selectBigVenue, selectMidVenue, selectSmallVenue, range }) => {
     
@@ -7,7 +7,7 @@ const Summary = ({ inputName, genre, cost, selectBigVenue, selectMidVenue, selec
     <section className="summary">
       <h2>Hey {inputName}! 
        Your favourite music gengre is {genre} - cool! 
-       Prior to the panemic you usually spent {cost} on live gigs each month
+       Prior to the panemic you usually spent {cost} kr on live gigs each month
        Your favourite big sized live music venue in Stockholm is {selectBigVenue} 
        Your favourite medium sized live music venue in Stockholm is {selectMidVenue} 
        Your favourite small sized live music venue in Stockholm is {selectSmallVenue} 
