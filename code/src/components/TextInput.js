@@ -2,7 +2,8 @@ import React from 'react'
 
 const TextInput = (props) => {
   const { label, inputId, values, placeholder, onInputResponse } = props
-
+  console.log(values)
+  console.log(inputId)
   return (
     <>
       <label className="question-text" htmlFor={inputId}>{label}</label>
@@ -12,7 +13,7 @@ const TextInput = (props) => {
         autoComplete="off"
         type="text" 
         placeholder={placeholder}
-        value={values.[inputId]}
+        value={values[inputId]}
         onChange={(e) => onInputResponse(e)}/>
     </>
   )

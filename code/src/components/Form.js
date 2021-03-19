@@ -6,22 +6,26 @@ import Confirmation from './Confirmation'
 
 const defaultValues = () => {
   return {
-    step: 1,
-    formStatus: 'question',
+    // step: 1,
+    // formStatus: 'question',
     name: '',
     company: '',
-    age: ''
+    age: '',
+    preference: '',
+    fishSize: '',
   }
 }
 
 const Form = () => {
   const [values, setValues] = useState(defaultValues())
+  const [step, setStep] = useState(1)
+  const [formStatus, setFormStatus] = useState('question')
   
   const defaultQuestions = [
     { 
       type: 'textInput',
       options: '',
-      questionText: 'Hej Lisa hur känns det här',
+      questionText: 'Hej Lisa hur känns det här då?',
       placeholder: 'Här kan det stå lite text',
       required: true,
       inputId: 'name', 
@@ -29,27 +33,35 @@ const Form = () => {
     { 
       type: 'textInput',
       options: '',
-      questionText: 'maybe something is wrong',
-      placeholder: 'some nice placeholder',
-      required: true,
-      inputId: 'name', 
-    },
-    { 
-      type: 'textInput',
-      options: '',
-      questionText: 'Company',
+      questionText: 'What company do you work for?',
       placeholder: 'Type your company',
       required: true,
       inputId: 'company', 
     },
     { 
-      type: 'select',
+      type: 'checkboxes',
       options: ['0-10', '11-50', '51-100'],
       questionText: 'Age',
       placeholder: 'Select your age',
       required: true,
       inputId: 'age', 
     },
+    { 
+      type: 'textInput',
+      options: '',
+      questionText: 'What fish do you prefer?',
+      placeholder: 'Type your fish preference',
+      required: true,
+      inputId: 'preference', 
+    },
+    { 
+      type: 'select',
+      options: ['small', 'meduim', 'large', 'x-large'],
+      questionText: 'What size do you want the fish to be? Remember that the fins are included in the overall size and some more text to really make it wrap, i hope.',
+      placeholder: 'Choose size',
+      required: true,
+      inputId: 'fishSize', 
+    }
     ]
     
 
@@ -66,31 +78,45 @@ const Form = () => {
     switch (e.target.id) {
 
       case 'previous' :
-        if (values.formStatus === 'summary') {
+        if (formStatus === 'summary') {
           console.log(values)
-          setValues({ ...values, "step": (values.step - 1), "formStatus": 'question'})
+          setStep(step - 1)
+          setFormStatus('question')
+          // setValues({ ...values, "step": (step - 1), "formStatus": 'question'})
           // setValues({ ...values, "formStatus": 'question'})
         } else {
-          setValues({ ...values, "step": (values.step - 1)})
+          // setValues({ ...values, "step": (values.step - 1)})
+          setStep(step - 1)
+
         }
         break
 
       case 'next' :
-        if (values.step === defaultQuestions.length) {
+        if (step === defaultQuestions.length) {
           console.log('setting formStatus to summary')
-          setValues({ ...values, "formStatus": "summary"})
+          // setValues({ ...values, "formStatus": "summary"})
+          setFormStatus('summary')
+
         }
         else {
-          setValues({ ...values, "step": (values.step + 1)})
+          // setValues({ ...values, "step": (values.step + 1)})
+          setStep(step + 1)
+
         }
         break
 
       case 'submit' :
-        setValues({ ...values, "formStatus": "confirmation"})
+        // setValues({ ...values, "formStatus": "confirmation"})
+        setFormStatus('confirmation')
+
         break
 
       case 'reset' :
         setValues(defaultValues())
+        setStep(1)
+        setFormStatus('question')
+
+        
         break
 
       default :
@@ -98,12 +124,13 @@ const Form = () => {
     }
   }
 
-  switch (values.formStatus) {
+  switch (formStatus) {
     case 'question' :
       return (
         <Question 
         values={values}
-        question={defaultQuestions[values.step - 1]}
+        step={step}
+        question={defaultQuestions[step - 1]}
         onInputResponse={onInputResponse}
         onButtonResponse={onButtonResponse}
         />

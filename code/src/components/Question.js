@@ -3,15 +3,16 @@ import React from 'react'
 import Select from './Select'
 import Button from './Button'
 import TextInput from './TextInput'
+import Checkboxes from './Checkboxes'
 
 const Question = (props) => {
-  let { values, question, onInputResponse, onButtonResponse } = props
-  let value = values.[question.inputId]
+  let { values, step, question, onInputResponse, onButtonResponse } = props
+  let value = values[question.inputId]
   switch (question.type) {
     case 'textInput' :
       return (
         <>
-          <h3 className="question-number">{values.step}</h3>
+          <h3 className="question-number">{step}</h3>
           <TextInput 
           label={question.questionText}
           value={value}
@@ -20,7 +21,7 @@ const Question = (props) => {
           values={values}
           onInputResponse={onInputResponse}/>
           
-          {values.step !== 1 &&
+          {step !== 1 &&
             <Button 
             buttonValue="previous" 
             label="Previous" 
@@ -38,15 +39,43 @@ const Question = (props) => {
     case 'select' :
       return (
         <>
-          <h3 className="question-number">{values.step}</h3>
+          <h3 className="question-number">{step}</h3>
           <Select 
           label={question.questionText}
           inputId={question.inputId} 
           values={values}
+          placeholder={question.placeholder}
           onInputResponse={onInputResponse}
           options={question.options}/>
           
-          {values.step !== 1 &&
+          {step !== 1 &&
+            <Button 
+            buttonValue="previous" 
+            label="Previous" 
+            onButtonResponse={onButtonResponse} />
+          }
+
+          {value && 
+            <Button 
+            buttonValue="next" 
+            label="Next" 
+            onButtonResponse={onButtonResponse} />
+          }
+        </>
+      )
+    case 'checkboxes' :
+      return (
+        <>
+          <h3 className="question-number">{step}</h3>
+          <Checkboxes 
+          label={question.questionText}
+          inputId={question.inputId} 
+          values={values}
+          placeholder={question.placeholder}
+          onInputResponse={onInputResponse}
+          options={question.options}/>
+          
+          {step !== 1 &&
             <Button 
             buttonValue="previous" 
             label="Previous" 

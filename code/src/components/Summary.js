@@ -5,9 +5,14 @@ const Summary = ({ values, onButtonResponse }) => {
   return (
     <div>
       <h1>Does this look ok?</h1>
-      <p>{values.name}</p>
-      <p>{values.company}</p>
-      <p>{values.age}</p>
+
+      {Object.keys(values).map((key, index) => {
+        return (
+          <p key={index}>{key} {values[key]}</p>
+          
+        )
+      })}
+
       <Button 
       buttonValue="previous" 
       label="Previous" 
