@@ -29,7 +29,7 @@ export const Form = (props) => {
         </div>
 
         <div className="form-container-sections">
-          <label htmlFor="name">The name of your favorite book:</label>
+          <label htmlFor="favorite">The name of your favorite book:</label>
           <input
             id="favorite"
             type="text"

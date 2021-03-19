@@ -1,10 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Raleway:wght@100;300;400;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+HK:wght@100;200;300;400;500&display=swap');
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -78,7 +74,7 @@ header {
 
 .form-container {
   background-color: #F0DEB4;
-  margin: 0 0 20px;
+  margin: 0 0 40px;
   padding: 22px 27px;
 }
 
@@ -99,6 +95,14 @@ label {
   padding: 5px 0;
 }
 
+/*** submit / reload form button ***/
+
+.submit-button-container {
+  display: flex;
+  justify-content: center;
+  margin: 0 0 35px;
+}
+
 .submit-button {
   border: 1px solid;
   border-radius: 10px;
@@ -111,10 +115,12 @@ label {
   background-color: #F0DEB4;
 }
 
-.submit-container {
-  display: flex;
-  justify-content: center;
-  margin: 30px 0 35px;
+button:hover {
+  background-color: #d8c7a2;
+}
+
+button:active {
+  background-color: #c0b190;
 }
 
 .bold-span {
@@ -137,17 +143,14 @@ label {
 }
 
 .answers-container {
-  margin: 37px 45px 0;
+  margin: 15px 45px 35px;
   line-height: 35px;
   text-align: left;
   display: inline;
 }
 
-/* .summary-img-container */
-
 .summary-img {
   width: 100%;
-  margin-top: 50px;
 }
 
 @media (min-width: 767px) {
@@ -161,17 +164,21 @@ label {
   }
 
   .form-container {
-    margin: 0 115px 20px;
-    padding: 33px 115px 35px;
+    margin: 0 165px 35px;
+    padding: 45px 80px 50px;
   }
 
   .summary-text-container {
-    padding: 60px 105px 20px;
+    padding: 60px 125px 20px;
   }
 
   .answers-container {
-    margin: 10px 130px 15px;
+    margin: 0 130px 50px;
     text-align: center;
+  }
+
+  .summary-img {
+    margin-top: 50px;
   }
 }
 
@@ -200,27 +207,24 @@ label {
   }
 
   .form-container {
-    /* margin: 0 115px 20px; */
-    padding: 33px 115px 35px;
     width: 500px;
-    margin: auto;
+    margin: 40px auto;
   }
 
   .summary-text-container {
-    /* padding: 60px 105px 20px; */
     width: 920px;
     margin: 15px auto;
   }
 
   .answers-container {
-    margin: 10px 130px 15px;
+    margin: 10px 130px 60px;
     text-align: center;
   }
 
   .summary-img-container {
     display: flex;
     justify-content: center;
-    margin: 27px 0 60px;
+    margin: 30px 0 50px;
   }
 
   .summary-img {
