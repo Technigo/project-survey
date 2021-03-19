@@ -1,6 +1,8 @@
 import React from 'react';
 
-const SushiQuestion = ({ sushi, callbackOnChange }) => {
+import FormButtons from './FormButtons';
+
+const SushiQuestion = ({ sushi, callbackOnChange, step, setStep }) => {
 
   const handleSushiChange = (e) => {
     callbackOnChange(e.target.name, e.target.value);
@@ -25,6 +27,12 @@ const SushiQuestion = ({ sushi, callbackOnChange }) => {
           <option value="nigiri">Nigiri</option>
           <option value="gunkan">Gunkan</option>
         </select>
+      </div>
+      <div>
+        <FormButtons 
+          step={step}
+          setStep={setStep}
+        />
       </div>
     </>
   )

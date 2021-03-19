@@ -1,8 +1,10 @@
 import React from 'react';
 
+import FormButtons from './FormButtons';
+
 const ingredients = ["salmon", "tuna", "shrimp", "crabstick", "avocado", "egg"]; 
 
-const IngredientQuestion = ({ ingredient, callbackOnChange }) => {
+const IngredientQuestion = ({ ingredient, callbackOnChange, step, setStep }) => {
   
   const handleIngredientChange = (e) => {     
     callbackOnChange(e.target.name, e.target.value);
@@ -28,6 +30,12 @@ const IngredientQuestion = ({ ingredient, callbackOnChange }) => {
           </label>
         ))}
       </fieldset>
+      <div>
+        <FormButtons 
+          step={step}
+          setStep={setStep}
+        />
+      </div>
     </>
   )
 }

@@ -1,6 +1,8 @@
 import React from 'react';
 
-const NameQuestion = ({ name, callbackOnChange }) => {
+import FormButtons from './FormButtons';
+
+const NameQuestion = ({ name, callbackOnChange, step, setStep }) => {
 
   const handleNameChange = (e) => {
     callbackOnChange(e.target.name, e.target.value);
@@ -17,6 +19,12 @@ const NameQuestion = ({ name, callbackOnChange }) => {
           value={name}
           name="name" 
           required
+        />
+      </div>
+      <div>
+        <FormButtons 
+          step={step}
+          setStep={setStep}
         />
       </div>
     </>
