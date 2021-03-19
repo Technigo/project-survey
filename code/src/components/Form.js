@@ -15,7 +15,7 @@ const [summary, setSummary]= useState(false)
 
 //ARRAYS
 const countries = ['france', 'thailand', 'iceland', 'australia', 'peru']
-
+const activities = ['make a gastronomy tour', 'explore the cultural scene', 'hangout with the locals','party till sunrise']
    
   //FUNCTIONS 
 
@@ -80,6 +80,7 @@ const countries = ['france', 'thailand', 'iceland', 'australia', 'peru']
               value={country}
               type="radio"
               onChange={onCountryChange}
+              required
             />
             {country}</label>
             
@@ -102,46 +103,20 @@ const countries = ['france', 'thailand', 'iceland', 'australia', 'peru']
                 
           <>
             <p>4. What's the main activity you are looking forward to?</p>
-            <label htmlFor="nature">Enjoy nature!</label>
+            {activities.map((activity) =>
+            
+            
+            <label key={activity} htmlFor={activity} >
             <input 
               name="activity"
-              id="nature" 
-              value="nature"
+              id={activity}
+              value={activity}
               type="radio"
               onChange={onActivityChange} 
-            />
-            <label htmlFor="gastronomy">Make a gastronomic tour</label>
-            <input 
-              name="activity"
-              id="gastronomy" 
-              value="gastronomy" 
-              type="radio"
-              onChange={onActivityChange} 
-            />
-            <label htmlFor="culture">Explore the cultural scene</label>
-            <input 
-              name="activity"
-              id="culture" 
-              value="culture" 
-              type="radio"
-              onChange={onActivityChange} 
-            />
-            <label htmlFor="locals">I want to hang out with the locals!</label>
-            <input 
-              name="activity"
-              id="locals" 
-              value="locals" 
-              type="radio"
-              onChange={onActivityChange} 
-            />
-            <label htmlFor="party">Party hard till sunrise!</label>
-            <input 
-              name="activity"
-              id="party" 
-              value="party" 
-              type="radio"
-              onChange={onActivityChange} 
-            /> 
+            />{activity}</label>
+            
+            )}
+
             <button 
               onSubmit= {handleSubmit}
               type="submit"
@@ -152,19 +127,16 @@ const countries = ['france', 'thailand', 'iceland', 'australia', 'peru']
       )} 
       
       {( 
-
-      
-          <>
-            {summary && 
-            <Summary
-              name={name}
-              country={country}
-              companion={companion}
-              activity={activity}
-            />
-            }
-          </>
-      
+        <>
+          {summary && 
+          <Summary
+            name={name}
+            country={country}
+            companion={companion}
+            activity={activity}
+          />
+          }
+        </>
       )}
     </> 
 
