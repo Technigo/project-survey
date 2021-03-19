@@ -140,6 +140,43 @@ button {
 .stat {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.stat-input {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  background-color: var(--darkgreen);
+  border-radius: 20px;
+  max-width: 130px;
+  height: 10px;
+  opacity: 0.7;
+  transition: opacity .2s;
+}
+
+.stat-input:hover {
+  opacity: 1;
+}
+
+.stat-input::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background-color: var(--red);
+  border-radius: 50%;
+  border: 1px solid var(--black);
+  cursor: pointer;
+}
+
+.stat-input::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background-color: var(--red);
+  border-radius: 50%;
+  border: 1px solid var(--black);
+  cursor: pointer;
 }
 
 .progress-bar {
