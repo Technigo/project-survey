@@ -1,23 +1,28 @@
 import React, { useState } from 'react'
 
 import { FormHeading } from './FormHeading'
+import {FrequencyRadioOption } from './FrequencyRadioOption'
+
+const frequencies = ["Daily", "Weekly", "Monthly", "Never"]
 
 export const Form = () => {
+    //States
     const [name, setName] = useState('')
     const [brand, setBrand] = useState('')
+    const [frequency, setFrequency] = useState('')
 
+    //Functions to change value of state
     const onNameChange = (e) => {
-        console.log(e.target.value)
+        console.log(`Name: ${e.target.value}`)
         setName(e.target.value)
     }
 
     const onBrandChange = (e) => {
-        console.log(e.target.value)
+        console.log(`Brand: ${e.target.value}`)
         setBrand(e.target.value)
     }
 
     return(
-
         <form>
             <FormHeading 
                 formTitle="We're all ears."
@@ -25,10 +30,15 @@ export const Form = () => {
             />
             <div>
                 <label htmlFor="name">What is Your Name: </label>
-                <input id="name" type="text" value={name} onChange={onNameChange}/>
+                <input 
+                    id="name" 
+                    type="text" 
+                    value={name} 
+                    onChange={onNameChange}
+                />
             </div>
             <div>
-                <label htmlFor="brand">Choose 1 Favourite Sneaker Brand: </label>
+                <label htmlFor="brand">Favourite Sneaker Brand: </label>
                 <select id="brand" value={brand} onChange={onBrandChange}>
                     <option disabled></option>
                     <option>Nike</option>
@@ -41,15 +51,18 @@ export const Form = () => {
             </div>
             <div>
                 <p>How Often Do You Wear Sneakers?</p>
-                <label htmlFor="daily">Daily</label>
-                <input id="daily" type="radio"/>
-                <label htmlFor="weekly">Weekly</label>
-                <input id="weekly" type="radio"/>
-                <label htmlFor="monthly">Monthly</label>
-                <input id="monthly" type="radio"/>
-                <label htmlFor="never">Never</label>
-                <input id="never" type="radio"/>
+                {
+                    frequencies.map((frequency) => {
+                        return <FrequencyRadioOption
+                                key={frequency}
+                                frequencyValue={frequency} 
+                                setFrequency={setFrequency}
+                                />
+                    })
+                }
             </div>
+            {/* writes out the value chosen */}
+            <div>{frequency}</div>
         </form>
     )
 }
