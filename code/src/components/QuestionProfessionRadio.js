@@ -7,8 +7,6 @@ const QuestionProfessionRadio = ({
   setProfession,
   page,
   setPage,
-  onNextQuestion,
-  message, 
   handleSubmit
 }) => {
   const onProfessionChange = (e) => {
