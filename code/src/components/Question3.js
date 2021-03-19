@@ -1,34 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-
-const investmentTypes = [ "Gold", "Bitcoin", "Silver"];
-
-const Question3 = () => {
-    
-    const [investment, setInvestment] = useState();
-
-    const onInvestmentChange = (e) => {
-        console.log(e.target.value);
-        setInvestment(e.target.value);
-    }
+const Question3 = ( {investmentType, onInvestmentTypeChange} ) => {
+ const investmentTypes = [ "Gold", "Bitcoin", "Silver"];
 
     return (
-        <form onSubmit={event => event.preventDefault()}>
-            <div>
+        <div className="form-container">
                 <p>Preferred Investment:</p>
                  { investmentTypes.map(item => (
                      <label key={item}>
                         <input
                             type="radio"
+                            name="investmentType"
                             value={item}
-                            onChange={onInvestmentChange}
-                            checked={investment === item}
+                            onChange={(e) => onInvestmentTypeChange(e)}
+                            checked={investmentType === item}
                         />
                         {item}
                      </label>
                  ))} 
             </div>
-        </form>
     )
 }
 

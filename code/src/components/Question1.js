@@ -1,33 +1,28 @@
-import React, { useState } from 'react';
-import Question2 from './Question2';
+import React from 'react';
 
-const Question1 = () => {
-    const [name, setName] = useState('');
-
-    const onNameChange = (e) => {
-        console.log(e.target.value);
-        setName(e.target.value);
-    }
-
-    const renderQuestion = () => {
-        console.log ("next clicked")
-        return ( <Question2/> )
-    }
-
+const Question1 = ( {name, onNameChange}) => {
 
     return (
-        <form onSubmit={event => event.preventDefault()}>
+    <>
+    <div className="form-container">
+    <p>Start by entering your name  
+        <span role="img" aria-label="Smile Face Emoji">👇</span>  
+    </p>
             <div>
                 <label htmlFor="name">Name: </label>
                 <input
-                    id="name"
-                    type="text"
+                    type='text'
+                    onChange={(e) => onNameChange(e)}
+                    required
                     value={name}
-                    onChange={onNameChange}
+                    maxLength="20"
+                    minLength="1"
                 />
             </div>
-        </form>
+        </div>
+    </>
     )
 }
 
 export default Question1;
+

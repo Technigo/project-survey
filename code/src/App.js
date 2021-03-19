@@ -1,35 +1,88 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-
+// All components for questions 
 import Question1 from './components/Question1';
 import Question2 from './components/Question2';
 import Question3 from './components/Question3';
+import Summary from './components/Summary';
 
 
 
 export const App = () => {
+// All states for each component
+const [name, setName] = useState('');
+const [investmentTerm, setInvestmentTerm] = useState('');
+const [investmentType, setInvestmentType] = useState();
+const [showSummary, setShowSummary] = useState();
 
-  const renderQuestion = () => {
-    console.log ("next clicked")
-    return ( <Question2/> )
+
+
+// Event Handlers
+const handleNameChange = (e) => {
+  console.log(e.target.value);
+  setName(e.target.value);
 }
+
+const handleInvestmentTermChange = (e) => {
+  console.log(e.target.value);
+  setInvestmentTerm(e.target.value);
+}
+
+const handleInvestmentTypeChange = (e) => {
+  console.log(e.target.value);
+  setInvestmentType(e.target.value);
+}
+
+const handleSubmit = event => {
+  event.preventDefault();
+  setShowSummary(true);
+};
+
+
   return (
     <>
         <div className="form-container">
-          <span role="img" aria-label="Money bag image">💰</span>
-          <h1>Welcome to Investor Check ✅ </h1>
-          <p>Double check your investment goals 🤓 </p>
-          <p>Start by entering your name 👇 </p>
+        <span className="money-emoji" role="img" aria-label="Money Bag Emoji">💰</span>
+        <h1>Welcome to Investor Check  
+            <span role="img" aria-label="Checkbox Emoji">✅ </span> 
+        </h1>
+        <p>Double check your investment goals   
+            <span role="img" aria-label="Smile Face Emoji">🤓 </span> 
+        </p>
+        
 
-          <Question1 />
-          <Question2 />
-          <Question3 />
+        {!showSummary && (
+        <form onSubmit={handleSubmit}>
+
+          <Question1 
+          username={name} 
+          onNameChange={handleNameChange} 
+          />
 
 
-          <button type="submit" onClick={ () => renderQuestion()}>NEXT</button>
+          <Question2
+           value={investmentTerm}
+           onInvestmentTermChange={handleInvestmentTermChange}
+          />
 
+          <Question3
+          checked={investmentType}
+          onInvestmentTypeChange={handleInvestmentTypeChange}
+         
+          
+          />
+       
+        <button className="submit" type="Submit">Submit</button>
 
-        </div>
+        </form>
+    )}
+
+      {showSummary && (
+        <Summary name={name} checked={investmentType} value={investmentTerm} />
+      )}
+    
+    
+      </div>
     </>
   )
 }
