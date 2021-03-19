@@ -7,6 +7,7 @@ import Form from './components/Form';
 export const App = () => {
   const [name, setName] = useState('');
   const [bookname, setBookName] = useState('');
+  const [feeling, setFeeling] = useState('');
 
   const onNameChange = (event) => {
     console.log(event.target.value)
@@ -16,14 +17,19 @@ export const App = () => {
     console.log(event.target.value)
     setBookName(event.target.value)
   }
-
+  const onFeelingChange = (event) => {
+    console.log(event.target.value)
+    setFeeling(event.target.value)
+  }
   return (
     <div>
       <Form
         name={name}
         onNameChange={onNameChange}
         bookname={bookname}
-        onBookChange={onBookChange} />
+        onBookChange={onBookChange}
+        feeling={feeling}
+        onFeelingChange={onFeelingChange} />
     </div>
   )
 }
