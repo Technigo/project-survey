@@ -29,6 +29,14 @@ const Form = () => {
     { 
       type: 'textInput',
       options: '',
+      questionText: 'maybe something is wrong',
+      placeholder: 'some nice placeholder',
+      required: true,
+      inputId: 'name', 
+    },
+    { 
+      type: 'textInput',
+      options: '',
       questionText: 'Company',
       placeholder: 'Type your company',
       required: true,
