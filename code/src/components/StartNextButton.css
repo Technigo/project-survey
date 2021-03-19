@@ -8,7 +8,7 @@
   font-size: 16px;
   border: white 1px solid;
   width: 150px;
-  box-shadow: 0px 0px 10px 10px #ddf3ff3c
+  /* box-shadow: 0px 0px 10px 10px #ddf3ff3c */
 }
 .start-next-button:disabled{
   color: rgb(218, 214, 214);
