@@ -1,21 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 
 
-const NameInput = () => {
-    const [name, setName] = useState('')
+const NameInput = (props) => {
 
-    const onNameChange = (event) => {
-        console.log(event.target.value)
-        setName(event.target.value);
-    }
     return (
         <div>
             <label htmlFor="name">What's your name?</label>
             <input
                 id="name"
                 type="text"
-                value={name}
-                onChange={onNameChange}
+                value={props.name}
+                onChange={props.onNameChange}
             />
         </div>
     )

@@ -2,11 +2,12 @@ import React from "react";
 import NameInput from "./NameInput";
 
 
-const Form = () => {
+const Form = (props) => {
 
     return (
         <form>
-            <NameInput />
+            <NameInput name={props.name}
+                onNameChange={props.onNameChange} />
         </form>
     )
 }
