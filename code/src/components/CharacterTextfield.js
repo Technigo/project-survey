@@ -2,19 +2,19 @@ import React from 'react';
 
 const CharacterTextfield = ({name, setName, handleSubmit}) => {
     const onNameChange = (e) => {
-        console.log(`Name: ${e.target.value}`);
         setName(e.target.value);
       };
 
     return (
        <>
            <form className='textfield-input-form'>
-               <h2 className='question-heading'>Who is your favorite Game of Thrones character?</h2>
                <div className='textfield-button-container'>
                     <div>
-                        <label htmlFor='name'>
+                        <label tabIndex='0' htmlFor='name'>
+                        <h2 className='question-heading'>Who is your favorite Game of Thrones character?</h2>
                             <input
                                 type='text'
+                                aria-label='Type your favorite Game of Thrones character'
                                 onChange={onNameChange}
                                 value={name}
                                 name='name'
@@ -27,6 +27,9 @@ const CharacterTextfield = ({name, setName, handleSubmit}) => {
                     <div>
                         <button onSubmit={handleSubmit}
                             className='button'
+                            tabIndex='0'
+                            aria-pressed='false'
+                            aria-label='Next question'
                             type='submit'
                             > Next!
                         </button> 

@@ -1,10 +1,9 @@
 import React from 'react';
 
-const seasons = ['Game of Thrones, what is that?', '1 seasons', '2-3 seasons', '4-5 seasons', '6-7 seasons', 'Binge-watched all of them!']
+const seasons = ['Game of Thrones, what is that?', '1 season', '2-3 seasons', '4-5 seasons', '6-7 seasons', 'Binge-watched all of them!']
 
 export const NumberOfSeasonsRadio = ({numberOfSeasons, setNumberOfSeasons, handleSubmit}) => {
     const onNumberOfSeasonsChange = (e) => {
-        console.log(`Number of seasons: ${e.target.value}`);
         setNumberOfSeasons(e.target.value);
     };
 
@@ -17,7 +16,7 @@ export const NumberOfSeasonsRadio = ({numberOfSeasons, setNumberOfSeasons, handl
             <div>
                 <div className='radiobuttons-options'>
                 {seasons.map(number => (
-                <label htmlFor={number} key={number}>
+                <label tabIndex='0' htmlFor={number} key={number}>
                     <input
                         type='radio'
                         id={number}
@@ -34,6 +33,9 @@ export const NumberOfSeasonsRadio = ({numberOfSeasons, setNumberOfSeasons, handl
                 <div>
                     <button onSubmit={handleSubmit}
                         className='button'
+                        tabIndex='0'
+                        aria-pressed='false'
+                        aria-label='Next question'
                         type='submit'
                         > Next!
                     </button>

@@ -1,13 +1,12 @@
 # Survey form with React
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This is a project created during the Technigo Bootcamp. The assignment was to practise React state and controlled forms by building a survey form.
 
 ## The problem
+I started off by creating a parent component called Survey and several child components containing different input types as well as a welcome component and a summary component. I then focused on learning and implementing Logical && Operator to show either the form or the summary depending on if the form was completed or not. I had some issues adding validation to the form but managed to get it working with help from others and by testing different approaches.
+I styled the survey to in some extend look like Typeform but also wanted to add some styling to give it a little bit of "Game Of Thrones"-winter feeling.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time I would have tried to add checkboxes to the survey.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+See it Live at Netlify - 

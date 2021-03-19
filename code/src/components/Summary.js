@@ -17,10 +17,11 @@ const Summary = ({name, numberOfSeasons, gameOfThronesHouse, rateEnding}) => {
             <p className='summary-text-question'>Favorite House in Westeros:</p>
             <p className='summary-text-answer'>Answer: {gameOfThronesHouse}</p>
             <p className='summary-text-question'>Rating of final episode:</p>
-            <p className='summary-text-answer'>Answer: {rateEnding}</p>
+            <p className='summary-text-answer'>Answer: {rateEnding}</p> 
             <button className='button'
                 type='button'
                 tabIndex ='0'
+                aria-pressed='false'
                 aria-label='Back to homepage'
                 onClick ={backToStart}>
                     Back to homepage

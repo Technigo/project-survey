@@ -2,7 +2,6 @@ import React from 'react';
 
 const HousesSelect = ({gameOfThronesHouse, setGameOfThronesHouse, handleSubmit}) => {
     const onHouseChange = (e) => {
-        console.log(`Favorite GOT family: ${e.target.value}`);
         setGameOfThronesHouse(e.target.value);
     };
 
@@ -14,9 +13,10 @@ const HousesSelect = ({gameOfThronesHouse, setGameOfThronesHouse, handleSubmit})
             </h2>
             <div className='select-button-container'>
                 <div className='select-options'>
-                    <label htmlFor='game-of-thrones-houses'>Choose your favorite house:</label>
+                    <label tabIndex='0' htmlFor='game-of-thrones-houses'>Choose your favorite house:</label>
                     <select 
                         className='select'
+                        aria-label='Choose your favorite house'
                         name='game-of-thrones-houses' 
                         id='game-of-thrones-houses'
                         onChange={onHouseChange}
@@ -38,6 +38,9 @@ const HousesSelect = ({gameOfThronesHouse, setGameOfThronesHouse, handleSubmit})
                 <div>
                     <button onSubmit={handleSubmit}
                         className='button'
+                        tabIndex='0'
+                        aria-pressed='false'
+                        aria-label='Next question'
                         type='submit'
                         > Next!
                     </button> 

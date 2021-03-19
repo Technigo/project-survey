@@ -7,8 +7,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: black;
-  color:white;
+  background-color: whitesmoke;
+  color: #282828;
   background: url("./bgimg.jpg");
   height: 100vh;
   width: 100vw;
@@ -23,38 +23,43 @@ code {
 }
 
 .form-container {
-  border: 2px solid white;
   border-radius: 8px;
   width: 60%;
+  max-width: 450px;
   height: auto;
   display: flex;
-  justify-content: center;
   margin: 0 auto;
   padding: 15px 25px;
-  text-align: center;
-  background-color: rgba(0, 0, 0, 0.3);
+  text-align: left;
+  background-color: rgb(255,255,255, 0.5);
   position:relative;
-  top: 70px;
-  box-shadow: 0 1px 1px 1px rgba(80, 172, 241, 0.6), 
-              0 2px 2px rgba(82,126,160,0.6), 
-              0 4px 4px 4px rgba(82,126,160,0.6), 
-              0 8px 8px 8px rgba(82,126,160,0.6);
+  top: 100px;
+}
+
+.welcome-container {
+  text-align: center;
 }
 
 .main-heading {
   font-size: 30px;
   font-weight: 700;
-  text-shadow: 0px 5px 5px #527ea0;
+  text-shadow: 0px 3px 3px #527ea0;
   font-family: 'Montserrat', sans-serif;
   text-align: center;
 }
 
-.question-heading, .summary-heading {
-  font-weight: 550;
-  font-size: 25px;
-  text-shadow: 0px 5px 5px #527ea0;
+.question-heading {
+  font-weight: 500;
+  font-size: 24px;
   margin: 5px;
-  text-align: center;
+  text-align: left;
+}
+
+.summary-heading {
+  font-weight: 700;
+  font-size: 24px;
+  margin: 5px 0;
+  text-align: left;
 }
 
 .survey-intro {
@@ -67,38 +72,45 @@ code {
   padding: 5px 10px;
   width:fit-content;
   font-size: 16px;
-  border-radius: 10px;
+  border-radius: 5px;
   box-shadow: 0px 5px 5px #527ea0;
   cursor: pointer;
-  margin: 15px auto;
+  border: none;
+  margin-top: 15px;
+}
+
+.button:hover {
+  transform: scale(1.1);
 }
 
 /* Styling text input question */
 
 input[type=text] {
-  width: 70%;
+  width: 100%;
   font-size: 16px;
   padding: 10px 10px;
   box-sizing: border-box;
-  border-radius: 5px;
-  margin: 20px 20px;
-  background-color: #e4eef7;
+  border-top: none;
+  border-left: none;
+  border-right:none;
+  border-bottom: 1px solid #527ea0;
+  margin: 20px 0;
+  background-color: rgb(255,255,255, 0.3);
   color: black;
 }
 
 input[type=text]:focus {
   outline: none;
-  background-color: #9ecee6;
 }
 
 input:required:valid:focus {
   border-color:#20e17d;
-  border-width: 3px;
+  border-width: 1px;
 }
 
 input:required:invalid:focus {
   border-color: red;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 /* Styling radiobuttons component */
@@ -116,10 +128,9 @@ input[type=radio] {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 15px;
-  margin: 10px auto;
+  padding: 15px 0 15px 0; 
   font-size: 20px;
-  font-weight: 400;
+  font-weight: 500;
   text-align: left;
 }
 
@@ -137,13 +148,12 @@ input[type=radio] {
 .select-button-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 .select-options {
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 20px 0 15px 0;
   font-size: 20px;
 }
 
@@ -152,6 +162,7 @@ input[type=radio] {
 }
 
 .select {
+  width: fit-content;
   padding: 5px 10px;
   border-radius: 8px;
   font-size: 16px;
@@ -164,10 +175,13 @@ input[type=radio] {
 
 .summary-text-question {
   font-weight: bold;
+  font-size: 18px;
 }
 
 .summary-text-answer {
   font-style: italic;
+  font-weight: 500;
+  font-size: 18px;
 }
 
 /* Media queries */
@@ -177,13 +191,9 @@ input[type=radio] {
     font-size: 45px;
   }
 
-  .form-container {
-    top: 80px;
-  }
-
   .question-heading, .summary-heading {
-    font-size: 30px;
-    margin-bottom: 20px;
+    font-size: 25px;
+    margin-bottom: 10px;
   }
 
   .textfield-button-container {
@@ -193,24 +203,18 @@ input[type=radio] {
   }
 
   input[type=text] {
-    width: 60%;
-    font-size: 20px;
-  }
-
-  .button {
     font-size: 20px;
   }
 
   .select {
     width:fit-content;
-    margin: 0 auto;
-  }
+  } 
 
   .summary-text-question {
-    font-size: 16px;
+    font-size: 20px;
   }
 
   .summary-text-answer {
-    font-size: 16px;
+    font-size: 20px;
   }
 }

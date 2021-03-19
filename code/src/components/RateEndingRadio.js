@@ -4,7 +4,6 @@ const ratings = ['Epic ending', 'I voted that they should redo it...', 'I did no
 
 export const RateEndingRadio = ({rateEnding, setRateEnding, handleSubmit}) => {
     const onRateEndingChange = (e) => {
-        console.log(`Rate of ending: ${e.target.value}`);
         setRateEnding(e.target.value);
     };
 
@@ -16,7 +15,7 @@ export const RateEndingRadio = ({rateEnding, setRateEnding, handleSubmit}) => {
             </h2>
             <div className='radiobuttons-options'>
             {ratings.map(rating => (
-                <label htmlFor={rating} key={rating}>
+                <label tabIndex='0' htmlFor={rating} key={rating}>
                     <input
                         type='radio'
                         id={rating}
@@ -32,6 +31,9 @@ export const RateEndingRadio = ({rateEnding, setRateEnding, handleSubmit}) => {
             </div>
             <button onSubmit={handleSubmit}
                 className='button'
+                tabIndex='0'
+                aria-pressed='false'
+                aria-label='Submit survey'
                 type='submit'
                 > Submit!
             </button> 
