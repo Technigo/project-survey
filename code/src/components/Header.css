@@ -11,6 +11,14 @@
   border-radius: 50%;
 }
 
+.circle--big {
+    top: -50px;
+    width: 300px;
+    height: 300px;
+    border: solid rgb(5, 184, 255);
+    background-color: rgb(129, 181, 202);
+  }
+
 .circle--small {
   top: -200px;
   left: 50%;
@@ -53,13 +61,7 @@
   }
 }
 
-.circle--big {
-  top: -50px;
-  width: 300px;
-  height: 300px;
-  border: solid rgb(5, 184, 255);
-  background-color: rgb(129, 181, 202);
-}
+
 
 @keyframes bounce {
   0% {
@@ -126,4 +128,33 @@ h1 {
   z-index: 1;
   color: white;
   text-shadow: 5px 5px rgb(28, 217, 223);
+}
+
+@media screen and  (min-width: 700px) {
+    .circle--big {
+        width: 400px;
+        height: 400px;
+    }
+
+    h1 {
+        top: 20px;
+        left: 100px
+ }
+}
+
+@media screen and  (min-width: 1500px) {
+
+    .circle--big {
+        width: 500px;
+        height: 500px;
+        top: -20px;
+        left: 30%;
+    }
+
+
+    h1 {
+        top: 100px;
+        left: 35%;
+ }
+
 }

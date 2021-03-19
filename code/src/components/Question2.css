@@ -20,7 +20,6 @@ input[type=range] {
     -webkit-transition: .2s; 
     transition: opacity .2s;
   }
-  
 
   input[type=range]:hover {
     opacity: 1; 
@@ -42,4 +41,15 @@ input[type=range] {
     height: 25px; 
     background: #4CAF50; 
     cursor: pointer; 
+  }
+
+  @media screen and (min-width: 1500px) {
+    input[type=number] {
+      font-size: 18px;
+    }
+
+    .percent-sign {
+      line-height: 1em;
+      font-size: 25px;
+  }
   }

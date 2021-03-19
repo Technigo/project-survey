@@ -77,6 +77,19 @@ depending on question number class */
     content: '80%'
 }
 
+.Question4-Sub:before {
+    content: 'Progress: Question 4,5/5'
+}
+
+.Question4-Sub {
+    width: 90%;
+}
+
+.Question4-Sub:after {
+    color: white;
+    content: '90%'
+}
+
 .Summary:before {
     content: 'Progress: Done!'
 }

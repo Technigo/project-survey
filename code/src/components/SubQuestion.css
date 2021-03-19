@@ -1,0 +1,27 @@
+.sub-question {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.sub-question label {
+  display: flex;
+
+}
+
+.sub-question input {
+    margin-top: 7px;
+}
+
+@media screen and (min-width: 700px) {
+ 
+    .sub-question {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media screen and  (min-width: 1500px) {
+    .sub-question input {
+        margin-top: 10px;
+    }
+}
+

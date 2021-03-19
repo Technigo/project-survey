@@ -14,18 +14,12 @@ export const App = () => {
         <Header title="The FUTURE" />
       </header>
 
-      {/*While nextQuestion isn't "Summary" one heading shows*/}
-      {nextQuestion !== "Summary" && (
+      {nextQuestion === "" && (
         <>
           <h2 className="question-heading">Let's talk about the future!</h2>
         </>
       )}
-      {/*When nextQuestion === "Summary" a different heading shows*/}
-      {nextQuestion === "Summary" && (
-        <>
-          <h2 className="summary-heading">Your answers:</h2>
-        </>
-      )}
+
       <ToggleQuestions
         nextQuestion={nextQuestion}
         setNextQuestion={setNextQuestion}

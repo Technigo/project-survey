@@ -38,6 +38,14 @@ h3 {
   font-size: 17px;
 }
 
+p {
+  font-size: 16px;
+}
+
+label {
+  font-size: 16px;
+}
+
 .header {
   grid-area: header;
 }
@@ -47,9 +55,8 @@ h3 {
   justify-self: center;
 }
 
-.question, .sub-question .summary {
+.question, .sub-question, .summary {
   grid-area: main;
-  overflow-y: scroll;
 }
 
 .progress-bar {
@@ -66,4 +73,48 @@ button::before {
 
 .footer {
   grid-area: footer;
+}
+
+@media screen and (min-width: 700px) {
+  .wrapper {
+    grid-template-columns: 20% 1fr 20%;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  p {
+    font-size: 18px;
+  }
+
+  h3 {
+    font-size: 20px;
+  }
+
+  label {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 1500px) {
+  .wrapper {
+    grid-template-columns: 35% 1fr 35%;
+  }
+
+  h1 {
+    font-size: 60px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  label {
+    font-size: 20px;
+  }
 }

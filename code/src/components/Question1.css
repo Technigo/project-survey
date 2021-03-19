@@ -14,3 +14,20 @@
     to { width: 100%;}
 
 }
+
+
+@media screen and  (min-width: 700px) {
+    .text-input input {
+        text-align: left;
+        padding:  1em;
+        padding-bottom:190px;
+        height: 10px;
+    }
+}
+
+@media screen and (min-width: 1500px) {
+    .text-input input {
+        padding-bottom:300px;
+  
+    }
+}

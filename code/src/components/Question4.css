@@ -2,13 +2,12 @@ h3 {
     grid-column: 1/span 2;
 }
 
-.radio-buttons__inner {
+.radio-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr;
 }
 
-label{
+label {
     margin: 10px 10px 10px 0;
-    font-size: 16px;
 }
 
