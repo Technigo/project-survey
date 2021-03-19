@@ -28,4 +28,3 @@ const SurveyText = (props) => {
     )
 }
 export default SurveyText;
-

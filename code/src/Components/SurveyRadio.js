@@ -2,16 +2,10 @@ import React from 'react';
 
 const SurveyRadio = (props) => {
     const { type, setType } = props;
-    
-
-    //const ontypeOfLivingChange = (event) => {
-        //console.log(event.target.value);
-        //settypeOfLiving(event.target.value);
 
     return (
         <form className="radio-form" >
             <p className="radio-form-headline">How would you prefer to live?</p>
-            
             <label>
                 <input className="radio-input"
                 id="radio"
@@ -20,8 +14,6 @@ const SurveyRadio = (props) => {
                 value="house"
                 onChange={event => setType(event.target.value)}
                 checked = {type === "house"}
-                
-                
                 />
                 House
             </label>
@@ -62,4 +54,3 @@ const SurveyRadio = (props) => {
     )
 }
 export default SurveyRadio;
-

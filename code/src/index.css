@@ -11,9 +11,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -24,11 +21,7 @@ code {
   background-image: url("https://images.unsplash.com/photo-1568821137003-dfb91aa1d6ae?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1353&q=80");
   background-repeat: no-repeat;
   background-size: cover;
- 
   height: 175px;
-  
-  
-  
 }
 
 .header-headline {
@@ -43,10 +36,7 @@ code {
   font-family: 'Redressed', cursive;
 }
 
- 
-
-
-.content{
+.content {
   font-family: 'Thasadith', sans-serif;
   display: flex;
   flex-direction: row;
@@ -64,23 +54,19 @@ code {
   align-content: center;
   width: 70%;
   margin-left: 60px;
-  
-
 }
-.form-entire{
+
+.form-entire {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-content: center;
-  
 }
 
 .survey-complete {
   margin-left: 60px;
 }
-
-
 
 .text-form {
   margin-bottom: 30px;
@@ -101,7 +87,7 @@ code {
 margin-bottom: 30px;
 }
 
-.text-label{
+.text-label {
   margin-bottom:5px;
 }
 
@@ -111,77 +97,12 @@ margin-bottom: 30px;
   padding: 2px;
 }
 
-
-.checkbox-input {
-  -webkit-appearance: none;
-	background-color: #fafafa;
-	border: 1px solid #cacece;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05);
-	padding: 9px;
-	border-radius: 3px;
-	display: inline-block;
-	position: relative;
- 
-}
-.checkbox-input:active, .checkbox-input:checked:active {
-  box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
-}
-.checkbox-input:checked {
-  background-color: #e9ecee;
-	border: 1px solid #adb8c0;
-	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px -15px 10px -12px rgba(0,0,0,0.05), inset 15px 10px -12px rgba(255,255,255,0.1);
-	color: #99a1a7;
-}
-
-.checkbox-input:checked:after {
-  content: '\2714';
-	font-size: 14px;
-	position: absolute;
-	top: 0px;
-	left: 3px;
-	color: #99a1a7;
-}
-
-
-/*
-.radio-input{
-  margin-left: 10px;
-  margin-right: 5px;
-   remove standard background appearance 
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  create custom radiobutton appearance 
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  padding: 3px;
-  
-  background-color only for content 
-  background-clip: content-box;
-  border: 1px solid #444444;
-  
-  border-radius:50%
-  
- 
-}*/
-/*
-.radio-input:checked {
-  background-color: #444444;
-}
-*/
 label {
   display: flex;
   align-items: center;
   margin-bottom: 5px;
 }
-/*
-.radio-form {
-  display: inline-flex;
-  flex-direction: row;
-  
-  align-items: center;
-}*/
+
 .radio-input {
 	-webkit-appearance: none;
 	background-color: #fafafa;
@@ -192,10 +113,7 @@ label {
 	display:inline-block;
 	position: relative;
   align-content: center;
-  
 }
-
-
 
 .radio-input:checked:after {
 	content: ' ';
@@ -222,10 +140,6 @@ label {
 	box-shadow: 0 1px 2px rgba(0,0,0,0.05), inset 0px 1px 3px rgba(0,0,0,0.1);
 }
 
-
-
-
-
 .select-form-headline {
   margin-bottom: 5px;
 }
@@ -238,10 +152,6 @@ select {
   background-color: #ffffff;
 }
 
-
-
-
-
 .button-container {
   width: 100%;
   display: flex;
@@ -251,9 +161,6 @@ select {
 }
 
 .submit-button, .refresh-button {
-  /*display: flex;
-  justify-content: center;
-  align-content: center;*/
   width: 110px;
   padding-top: 5px;
   padding-bottom: 5px;
@@ -261,14 +168,12 @@ select {
   background-color: #6a6969;
   color: #ffffff;
   font-size: 16px;
-  
   border-radius: 3px;
 }
 
 .submit-button:hover, .refresh-button:hover {
   background-color: #932b24;
-
-  cursor:pointer ;
+  cursor:pointer;
 }
 
 .footer {
@@ -277,7 +182,6 @@ select {
 }
 
 .summary-select, .summary-radio, .summary-headline {
-
   margin-bottom: 25px;
 }
 
@@ -286,7 +190,202 @@ select {
   margin-top: 50px;
 }
 
+/*******styling for different screen sizes*******/
+@media (max-width: 320px) {
+  .content {
+    padding-top: 270px;
+    padding-bottom: 350px;
+  }
 
+  .form-summary {
+    margin-top: -30px;
+  }
+}
 
+@media (min-width: 321px) {
+  .content {
+    padding-top: 260px;
+    padding-bottom: 350px;
+  }
 
+  .form-summary {
+    margin-top: 200px;
+  }
+}
 
+@media (min-width: 400px) {
+  .content {
+    padding-top: 250px;
+    padding-bottom: 300px;
+  }
+
+  .form-summary {
+    margin-top: 150px;
+  }
+}
+
+@media (min-width: 500px) {
+  .header {
+    height: 225px;
+  }
+
+  .content {
+    padding-top:250px;
+    padding-bottom: 350px;
+  }
+
+  .form-summary {
+    margin-top: 225px;
+  }
+}
+
+@media (min-width: 750px) {
+  .header {
+    height: 295px;
+  }
+
+  .header-headline {
+    font-size: 30px;
+    left: 60px;
+  }
+
+  .content {
+    padding-top: 325px;
+    padding-bottom: 560px;
+    font-size: 20px;
+  }
+
+  .survey-intro-text {
+    margin-left: 100px;
+  }
+
+  .survey-complete {
+    margin-left: 100px;
+  }
+
+  .submit-button, .refresh-button {
+    width: 150px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 25px;
+    font-size: 22px;
+  }
+
+  .footer {
+    height: 90px;
+  }
+
+  .select, .text-input {
+    font-size: 16px;
+  }
+
+  .form-summary {
+    margin-top: 425px;
+  }
+}
+
+@media (min-width: 1000px) {
+  .header {
+    height: 380px;
+  }
+
+  .header-headline {
+   font-size: 40px;
+   left: 80px;
+  }
+
+  .content {
+    padding-top: 400px;
+    padding-bottom: 750px;
+    font-size: 24px;
+  }
+
+  .survey-intro-text {
+    margin-left: 130px;
+  }
+
+  .survey-complete {
+    margin-left: 130px;
+  }
+
+  .submit-button, .refresh-button {
+    width: 170px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-top: 30px;
+    font-size: 24px;
+  }
+
+  .footer {
+    height: 110px;
+  }
+
+  .text-input {
+    font-size: 18px;
+    padding: 6px;
+  }
+
+  select {
+    padding: 8px;
+    font-size: 15px;
+  }
+
+  .form-summary {
+    margin-top: 550px;
+    font-size: 30px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .header {
+    height: 535px;
+  }
+
+  .header-headline {
+   font-size: 52px;
+   left: 120px;
+  }
+
+  .content {
+    padding-top: 420px;
+    padding-bottom: 470px;
+    font-size: 28px;
+  }
+
+  .survey-intro-text {
+    margin-left: 320px;
+    width: 50%;
+  }
+
+  .survey-complete {
+    margin-left: 320px;
+    width: 60%;
+  }
+
+  .submit-button, .refresh-button {
+    width: 200px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    margin-top: 70px;
+    font-size: 30px;
+  }
+
+  .footer {
+    height: 150px;
+  }
+
+  .text-input {
+    font-size: 25px;
+    padding: 5px;
+  }
+
+  select {
+  padding: 8px;
+  font-size: 20px;
+  }
+
+  .form-summary {
+  margin-top: 300px;
+  font-size: 30px;
+  }
+}
