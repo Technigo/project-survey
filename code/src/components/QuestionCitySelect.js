@@ -43,7 +43,9 @@ const QuestionCitySelect = ({
           currentState={inhabitants}
           defaultState=''
           message="Please select the number of inhabitants where you live first."
-          onClick={onNextQuestion} //Change this?
+          onClick={onNextQuestion}
+          button="Next question button"
+          buttontext="Next question"
         />
       </div>
     </article>

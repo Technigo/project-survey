@@ -5,7 +5,9 @@ const NextQuestionButton = ({
   defaultState,
   page,
   setPage,
-  message
+  message, //take away message here or import Popup.js
+  buttontext,
+  button
 }) => {
   const onNextQuestion = () => setPage(page +1)
 
@@ -13,15 +15,16 @@ const NextQuestionButton = ({
   return (
     <>
       <button
-        type="button"
+        type={button}
         aria-label="button to the next question"
         className="next-button"
         onClick={onNextQuestion}
         message={message}
       >
-        Next question
+      {buttontext}
       </button>
     </>
   )
 }
 export default NextQuestionButton
+

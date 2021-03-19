@@ -17,7 +17,7 @@ const TextInputProposal = ({
   return (
     <article className="form-question">
       {/* Question */}
-      <label htmlFor="proposal" className="form-question" tabindex="0">
+      <label htmlFor="proposal" className="form-question" tabIndex="0">
         Do you have any other thoughts or proposals of what stage art you would like to experience post Covid-19?
       </label>
 
@@ -40,6 +40,8 @@ const TextInputProposal = ({
         defaultState=""
         message="Please write your ideas here, thank you!"
         onClick={onNextQuestion}
+        button="Next question button"
+        buttontext="Next question"
       />
       </div>
     </article>

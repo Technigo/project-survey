@@ -2,51 +2,23 @@ import React, { useState } from 'react'
 
 import QuestionCitySelect from './QuestionCitySelect'
 import QuestionAgeRadio from './QuestionAgeRadio'
-import QuestionStageArtRadio from './QuestionStageArtRadio'
+import QuestionStageArtCheckbox from './QuestionStageArtCheckbox'
 import TextInputProposal from './TextInputProposal'
-import QuestionProfessionCheckbox from './QuestionProfessionCheckbox'
-//import NextQuestionButton from './NextQuestionButton'
+import QuestionProfessionRadio from './QuestionProfessionRadio'
 import Summary from './Summary'
 
 const Form = () => {
   const [page, setPage] = useState(0)
-  const [showSummary, setShowSummary] = useState(false)
+  const [setShowSummary] = useState(false)
   const [inhabitants, setInhabitants] = useState('') //should it's initial value be set to 5000 (First option) Think it is fine!
   const [ageCategory, setAgeCategory] = useState('') //same here
-  const [stageArtCategory, setStageArtCategory] = useState('') //what is the value of a radiobutton?
+  const [stageArtCategory, setStageArtCategory] = useState('')
   const [proposal, setProposal] = useState('');
-  const [professions, setProfessions] = useState('')
+  const [profession, setProfession] = useState('') 
 
-  /* const onInhabitantsChange = (event) => {
-    setInhabitants(event.target.value);
-  } */
-
-  /* const onAgeChange = (event) => {
-    setAgeCategory(event.target.value)
-  } */
-
-  /* const onStageArtChange = (event) => {
-    setStageArtCategory(event.target.value)
-  } */
-
-  /* const onProposalChange = (event) => {
-    setProposal(event.target.value)
-  } */
-  
-/*   const onProfessionChange = (professionValue) => {
-    if (professions.includes(professionValue)) {
-      setProfessions(professions.filter((item) => item !== professionValue))
-    } else {
-      setProfessions([...professions, professionValue])
-    }
-  } */
-
-//THIS MAKS CHANGED WITH ME ::: it is not listening to any user input it is simply a function internal to the code
   const onPageChange = (pagenumber) => {
     setPage(pagenumber)
   }
-
-//  const onNextQuestion = () => setPage(page +1);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -82,7 +54,7 @@ const Form = () => {
 
         {page === 2 && (
           <div>
-            <QuestionStageArtRadio
+            <QuestionStageArtCheckbox
               stageArtCategory={stageArtCategory}
               setStageArtCategory={setStageArtCategory}
               page={page}
@@ -104,9 +76,9 @@ const Form = () => {
 
         {page === 4 && (
         <div>
-          <QuestionProfessionCheckbox
-            professions={professions}
-            setProfessions={setProfessions}
+          <QuestionProfessionRadio
+            profession={profession}
+            setProfession={setProfession}
             page={page}
             setPage={onPageChange}
           />
@@ -120,7 +92,7 @@ const Form = () => {
               ageCategory={ageCategory}
               stageArtCategory={stageArtCategory}
               proposal={proposal}
-              professions={professions}
+              profession={profession}
             />
           </div>
         )}

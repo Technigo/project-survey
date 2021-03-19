@@ -30,6 +30,7 @@ const QuestionAgeRadio = ({
             <input
               name="age"
               id={age}
+              value={age}
               type="radio"
               onChange={(e) => {onAgeChange(e)}}
               className="form-radiobuttons"
@@ -47,7 +48,9 @@ const QuestionAgeRadio = ({
           currentState={ageCategory}
           defaultState=''
           message="Please select your age first!"
-          onClick={onNextQuestion} //Change this?
+          onClick={onNextQuestion}
+          button="Next question button"
+          buttontext="Next question"
         />
       </div>
     </article>
