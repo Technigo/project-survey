@@ -1,4 +1,6 @@
-import React from 'react'
+import React, { useState } from 'react'
+
+import Popup from './Popup'
 
 const NextQuestionButton = ({
   currentState,
@@ -7,18 +9,29 @@ const NextQuestionButton = ({
   setPage,
   message,
   buttontext,
-  button
+  button,
+  handleSubmit
 }) => {
-  const onNextQuestion = () => setPage(page +1)
+  const [popup, setPopup] = useState(false)
 
-  //check if message is rendered anywhere, like in react dev tools - it should probably not be here***
-  return (
+  const onNextQuestion = () => {
+  if (currentState !== defaultState) {
+    setPage(page +1)
+  } else {
+    setPopup(true)
+  }
+}
+
+  return (  
     <>
+      {popup && <Popup message={message} className="form-popup" />}
+      
       <button
         type={button}
         aria-label="button to the next question"
         className="next-button"
         onClick={onNextQuestion}
+        onSubmit={handleSubmit}
         message={message}
       >
       {buttontext}

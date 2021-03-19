@@ -9,7 +9,7 @@ import Summary from './Summary'
 
 const Form = () => {
   const [page, setPage] = useState(0)
-  const [setShowSummary] = useState(false)
+  const [showSummary, setShowSummary] = useState(false)
   const [inhabitants, setInhabitants] = useState('')
   const [ageCategory, setAgeCategory] = useState('') 
   const [stageArtCategory, setStageArtCategory] = useState('')
@@ -21,7 +21,7 @@ const Form = () => {
   }
 
   const handleSubmit = (event) => {
-    event.preventDefault();
+    event.preventDefault()
     setShowSummary(true)
   }
 

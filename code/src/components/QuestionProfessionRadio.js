@@ -8,7 +8,8 @@ const QuestionProfessionRadio = ({
   page,
   setPage,
   onNextQuestion,
-  message
+  message, 
+  handleSubmit
 }) => {
   const onProfessionChange = (e) => {
     setProfession(e.target.value)
@@ -64,7 +65,7 @@ const QuestionProfessionRadio = ({
           currentState={profession}
           defaultState=''
           message="Please choose your profession first!"
-          onClick={onNextQuestion}	
+          onSubmit={handleSubmit}	
           button="Submit button"
           buttontext="Submit"
         />
