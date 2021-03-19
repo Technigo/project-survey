@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 import { FormHeading } from './FormHeading'
-import {FrequencyRadioOption } from './FrequencyRadioOption'
+import {FrequencyRadioOption } from './components/FrequencyRadioOption'
+import { BrandSelectOption } from './components/BrandSelectOption'
 
 const frequencies = ["Daily", "Weekly", "Monthly", "Never"]
 
@@ -17,16 +18,11 @@ export const Form = () => {
         setName(e.target.value)
     }
 
-    const onBrandChange = (e) => {
-        console.log(`Brand: ${e.target.value}`)
-        setBrand(e.target.value)
-    }
-
     return(
         <form>
             <FormHeading 
                 formTitle="We're all ears."
-                formText="We are interested of your sneaker experience. Take this 5 minute survey to help us understand your needs. You can tell us how you really feel!"
+                formText="We want to know what your sneaker deal is. Are you yay or nay? Take this 5 minute survey to help us understand your needs. You can tell us how you really feel!"
             />
             <div>
                 <label htmlFor="name">What is Your Name: </label>
@@ -37,18 +33,10 @@ export const Form = () => {
                     onChange={onNameChange}
                 />
             </div>
-            <div>
-                <label htmlFor="brand">Favourite Sneaker Brand: </label>
-                <select id="brand" value={brand} onChange={onBrandChange}>
-                    <option disabled></option>
-                    <option>Nike</option>
-                    <option>Jordan</option>
-                    <option>Adidas</option>
-                    <option>Reebok</option>
-                    <option>New Balance</option>
-                    <option>Karhu</option>
-                </select>
-            </div>
+                <BrandSelectOption 
+                    brand={brand} 
+                    setBrand={setBrand} 
+                />
             <div>
                 <p>How Often Do You Wear Sneakers?</p>
                 {
