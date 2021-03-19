@@ -102,9 +102,11 @@ label {
 .submit-button {
   border: 1px solid;
   border-radius: 10px;
+  font-family: Noto Sans HK;
+  line-height: 0;
   font-size: 16px;
-  font-weight: bold;
-  padding: 10px 20px;
+  font-weight: 400;
+  padding: 20px 20px;
   cursor: pointer;
   background-color: #F0DEB4;
 }
@@ -213,5 +215,15 @@ label {
   .answers-container {
     margin: 10px 130px 15px;
     text-align: center;
+  }
+
+  .summary-img-container {
+    display: flex;
+    justify-content: center;
+    margin: 27px 0 60px;
+  }
+
+  .summary-img {
+    width: 500px;
   }
 }

@@ -15,42 +15,42 @@ export const App = () => {
 
   // when clicking button it checks if all form-questions have been answered, if so summary is set to true and summary-div is shown
 
-    // const changeState = () => {
-    //   if (summary === false) {
-    //      return true;
-    //    } else {
-    //      return false;
-    //    }
-    //  }
-
     const changeState = () => {
-    if (genre === '') {
-      alert(`You haven't answered all questions`)
-      return false
-    }
+      if (summary === false) {
+         return true;
+       } else {
+         return false;
+       }
+     }
 
-    if (favorite === '') {
-      alert(`You haven't answered all questions`)
-      return false
-    }
+  //   const changeState = () => {
+  //   if (genre === '') {
+  //     alert(`You haven't answered all questions`)
+  //     return false
+  //   }
 
-    if (language === '') {
-      alert(`You haven't answered all questions`)
-      return false
-    }
+  //   if (favorite === '') {
+  //     alert(`You haven't answered all questions`)
+  //     return false
+  //   }
 
-    if (name=== '') {
-      alert(`You haven't answered all questions`)
-      return false
-    }
+  //   if (language === '') {
+  //     alert(`You haven't answered all questions`)
+  //     return false
+  //   }
 
-    if (email === '') {
-      alert(`You haven't answered all questions`)
-      return false
-    }
+  //   if (name=== '') {
+  //     alert(`You haven't answered all questions`)
+  //     return false
+  //   }
 
-    return true
-  }
+  //   if (email === '') {
+  //     alert(`You haven't answered all questions`)
+  //     return false
+  //   }
+
+  //   return true
+  // }
 
   return (
     <>

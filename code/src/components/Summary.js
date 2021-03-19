@@ -9,7 +9,7 @@ export const Summary = (props) => {
       <div className="summary-wrapper">
         <div className="summary-text-container">
           <h2>Thank you {name}!</h2>
-          <h3>This is a summary of your answers. Within a few minutes you will receive an e-mail with recommendations on books that we think you will love!</h3>
+          <h3>This is a summary of your answers. Within a few minutes you will receive an e-&nbsp; mail with recommendations on books that we think you will love!</h3>
         </div>
         <div className="answers-container">
           <p><span className="bold-span">Genre: </span> {genre}</p>
@@ -18,8 +18,9 @@ export const Summary = (props) => {
           <p><span className="bold-span">E-mail: </span> {email}</p>
         </div>
         </div>
-        <img className="summary-img" src="/assets/books_twig.jpg" alt="Three books with a twig with green leaves on top"/>
-      
+        <div className="summary-img-container">
+          <img className="summary-img" src="/assets/books_twig.jpg" alt="Three books with a twig with green leaves on top"/>
+        </div>
     </>
   )
 }
