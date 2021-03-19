@@ -96,7 +96,7 @@ input[type=text] {
   border-right:none;
   border-bottom: 1px solid #527ea0;
   margin: 20px 0;
-  background-color: rgb(255,255,255, 0.3);
+  background-color: rgba(255,255,255, 0.3);
   color: black;
 }
 
@@ -167,7 +167,7 @@ input[type=radio] {
   padding: 5px 10px;
   border-radius: 8px;
   font-size: 16px;
-  background: #e4eef7;
+  background-color: rgba(255,255,255, 0.5);
   cursor: pointer;
 }
 
