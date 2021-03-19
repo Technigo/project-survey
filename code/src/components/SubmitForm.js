@@ -1,14 +1,20 @@
+import React from 'react'
 
 
-// const isSurveyComplete = () => {
-// if ( === ""){
-//   return false; 
-// }
-// if ( === "") {
-//   return false; 
-// }
-// if (=== ""){
-//   return false; 
-// }
-// return true; 
-// };
+export const isSurveyComplete = () => {
+  if (name === ""){
+      return false; 
+    }
+if (dropdown === ""){
+  return false; 
+}
+if (radio === "") {
+  return false; 
+}
+if (secondRadio === ""){
+  return false; 
+}
+return true; 
+};
+
+export default isSurveyComplete;
