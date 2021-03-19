@@ -39,7 +39,7 @@ const QuestionProfessionRadio = ({
       </p>
 
       {/* A */}
-      <div className="question-content-container">
+      <div className="question-content-container-5">
         {professionGroup.map((professions) => (
           <span key={professions} className="form-radiobuttons">
             <input
@@ -57,7 +57,7 @@ const QuestionProfessionRadio = ({
           </span>
         ))}
       </div>
-      <div className="buttons-container">
+      <div className="buttons-container-4">
         <NextQuestionButton
           page={page}
           setPage={setPage}
@@ -65,7 +65,7 @@ const QuestionProfessionRadio = ({
           defaultState=''
           message="Please choose your profession first!"
           onClick={onNextQuestion}	
-		      button="Submit button"
+          button="Submit button"
           buttontext="Submit"
         />
       </div>

@@ -5,7 +5,7 @@ const NextQuestionButton = ({
   defaultState,
   page,
   setPage,
-  message, //take away message here or import Popup.js
+  message,
   buttontext,
   button
 }) => {

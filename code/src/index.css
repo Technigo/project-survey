@@ -41,6 +41,13 @@ code {
   padding: 50px;
 }
 
+.form-question-3 {
+  max-width: 60vw;
+  display: flex;
+  justify-content: left;
+  flex-direction: column;
+}
+
 .question-container {
   padding: 50px;
 }
@@ -60,7 +67,7 @@ code {
   margin: 30px;
 }
 
-/*Question Input Proposal + QuestionAgeRadio + QuestionStageArtRadio*/
+/*Question Input Proposal + QuestionAgeRadio*/
 .question-content-container {
   height: 25vh;
   max-width: 80vw;
@@ -78,7 +85,17 @@ code {
   margin: 5px; 
 }
 
-/*Check - which Components does this belong to now again?*/
+/* QuestionStageArtCheckbox */
+.question-content-container-3 {
+  height: 40vh;
+  max-width: 80vw;
+}
+
+.checkbox-label {
+  padding: 5px 30px;
+}
+
+/* Text Proposal */
 .form-input {
   display: block;
   background: none;
@@ -87,16 +104,40 @@ code {
   border-style: solid;
   border: none;
   border-bottom: 1px solid #000;
-  outline: none;
+  outline: none; 
+}
+
+.question-content-container-5 {
+  display: flex;
+  align-items: baseline;
+  flex-direction: column;
+}
+
+.buttons-container-4 {
+  margin: 40px;
 }
 
 .summary-question-container {
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 85px;
 }
 
+.summary-user-answers {
+  list-style: none;
+  border: 1px solid #5c1639;
+  padding: 30px 50px;
+}
 
 .button-retake-survey {
-  
+    margin: 30px 0 0 0;
+    padding: 5px 20px;
+    background: none;
+    border: 1px #000 solid;
+    font-family: 'Poppins';
 }
 
 /* MEDIA QUERIES */
@@ -123,7 +164,7 @@ code {
     margin: 35px;
   }
 
-  .form-popup-wrapper {
+  .form-popup-container {
     top: -40px;
   }
 
@@ -131,3 +172,9 @@ code {
     flex-direction: row;
   }
 }
+
+/* @media (width: 992px) {
+  .question-content-container {
+    max-width: 80vw;
+  }
+} */
