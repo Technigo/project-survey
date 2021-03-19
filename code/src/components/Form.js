@@ -92,6 +92,7 @@ const Form = () => {
               stageArtCategory={stageArtCategory}
               proposal={proposal}
               profession={profession}
+              showSummary={showSummary}
             />
           </div>
         )}
