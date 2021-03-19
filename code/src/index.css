@@ -203,10 +203,11 @@ button {
   border: 5px solid var(--darkgreen);
   box-sizing: border-box;
   padding: 20px 10px;
+  font-size: 25px;
 }
 
 .character-sheet p {
-  margin: 0;
+  margin: 5px 0;
 }
 
 .character-base div:first-of-type {
@@ -215,13 +216,12 @@ button {
 
 .character-icon-container {
   width: 30%;
+  margin-right: 5px;
   height: fit-content;
-  padding: 10px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
-  border: 5px solid var(--darkgreen);
 }
 
 .character-base {
@@ -232,10 +232,28 @@ button {
 
 .character-base .character-icon {
   width: 100px;
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+  border: 5px solid var(--darkgreen);
+  padding: 10px;
 }
 
 .character-stats {  
   width: 90%;
+}
+
+.equipment-icon {
+  width: 80%;
+  min-width: 50px;
+  max-width: 65px;
+  height: fit-content;
+  padding: 5px;
+  border-radius: 15px 225px 15px 255px/255px 15px 225px 15px;
+  border: 5px solid var(--darkgreen);
+  background-color: var(--almond);
+  position: relative;
+  bottom: 30px;
+  right: 50px;
+  box-sizing: border-box;
 }
 
 .line {
@@ -337,6 +355,11 @@ footer a {
   .character-icon-container {
     height: auto;
   }
+
+  .equipment-icon {
+    max-width: 70px;
+    right: 70px;
+  }
 }
 
 @media (min-width: 1024px) {
@@ -368,5 +391,9 @@ footer a {
   .form,
   .character-sheet {
     width: 50%;
+  }
+  .equipment-icon {
+    max-width: 70px;
+    right: 80px;
   }
 }

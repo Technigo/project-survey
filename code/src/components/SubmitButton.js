@@ -1,7 +1,7 @@
 import React from "react"
 
 const SubmitButton = (props) => {
-    const { section, setRenderSummary, isComplete } = props
+    const { setRenderSummary, isComplete } = props
 
     const handleSubmit = () => {
         setRenderSummary(isComplete())

@@ -210,7 +210,6 @@ const App = () => {
             <SubmitButton
               setRenderSummary={setRenderSummary}
               isComplete={isComplete}
-              section={section}
             />
 
           </div>
