@@ -17,7 +17,8 @@ code {
   box-sizing: border-box;
 }
 
-/* Big containers */
+/* Main container */
+
 .main-container {
   display: flex;
   align-items: center; 
@@ -28,16 +29,6 @@ code {
   position: fixed;
 }
 
-.circle {
-  width: 100vw;
-  border-radius: 0 0 0 100% / 200px;
-  background-color: #37aa9c;
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 65vh;
-}
-
 /* Start page */
 
 .start-container {
@@ -46,6 +37,16 @@ code {
   z-index: 1;
   margin-top: 20%;
   height: 100vh;
+}
+
+.circle {
+  width: 100vw;
+  border-radius: 0 0 0 100% / 200px;
+  background-color: #37aa9c;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 65vh;
 }
 
 .start-title {
@@ -64,12 +65,12 @@ code {
   color: #281833;
 }
 
-/* Submit Button */
+/* Start, continue and submit button */
 
 .button {
   background-color: #771144;
   position: fixed;
-  bottom: 0;
+  bottom: -1px;
   left: 0;
   width: 100%;
   font-size: 40px;
@@ -133,7 +134,7 @@ code {
   border: 1px solid #fdf0f6;
 }
 
-.filler {
+.progress-filler {
   background: #37aa9c;
   height: 100%;
   display: block;
@@ -164,7 +165,7 @@ code {
 }
 
 
-/* Select dropdown */
+/* Select dropdown for country selection */
 
 .select-country {
   color: #fdf0f6;
@@ -183,7 +184,7 @@ code {
   color: #771144;
 }
 
-/* Radio Buttons */
+/* Radio Buttons for travel type and amenities */
 
 .radio-buttons-container {
   display: flex;
@@ -233,13 +234,14 @@ code {
   opacity: 0.5;
 }
 
-.radio-button:checked + .radio-text {
+.radio-button:checked + .radio-text,
+.radio-button:focus + .radio-text {
   color: #fdf0f6;
 }
 
 .radio-button:checked + .radio-text::before {
   background-color: #771144;
-  border: 3px solid #771144;
+  border: 3px solid #fdf0f6;
   content: '';
   height: 100%;
   width: 100%;
@@ -265,7 +267,7 @@ code {
   margin-right: 10px;
 }
 
-/* Range slider */
+/* Range slider for satisfaction */
 
 .range-container {
   display: flex;
@@ -343,6 +345,7 @@ code {
   font-size: 32px;
 }
 
+/* Media queries for tablet and desktop */
 
 @media (min-width: 768px) {
   .circle {
@@ -440,6 +443,9 @@ code {
     font-size: 34px;
   }
 }
+
+
+/* Media queries for desktop */
 
 @media (min-width: 1200px) {
   .start-title {

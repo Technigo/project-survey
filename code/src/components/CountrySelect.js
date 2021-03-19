@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Button } from './Button';
 
+// Component for dropdown to select country 
+
 export const CountrySelect = ({setCountry, countryName}) => {
   const countries = ["Sweden", "Norway", "Denmark", "Finland"];
   const onCountryChange = (e) => {
@@ -18,13 +20,13 @@ export const CountrySelect = ({setCountry, countryName}) => {
         className="select-country"
         onChange={onCountryChange}
         aria-label="Use up and down arrows, then tab and enter"
-        required >
-        <option value="">Choose country:</option>
-        {countries.map(country => 
-          <option 
-            key={country} 
-            value={country}>{country}</option>
-        )}
+        required>
+          <option value="">Choose country:</option>
+          {countries.map(country => 
+            <option 
+              key={country} 
+              value={country}>{country}</option>
+          )}
       </select>
       <Button 
         button="CONTINUE" />

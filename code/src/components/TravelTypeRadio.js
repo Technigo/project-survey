@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Button } from './Button';
 
+// Component for the radio buttons with the travel type
+
 export const TravelTypeRadio = ({setTravelType}) => {
   const travelTypes = ["Holiday", "Business"];
   const onTravelTypeChange = (e) => {
@@ -28,7 +30,6 @@ export const TravelTypeRadio = ({setTravelType}) => {
           </div>
         )}
       </section>
-      
       <Button 
         button="CONTINUE" />
     </>

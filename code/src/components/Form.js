@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import { Welcome } from './Welcome';
+import { Start } from './Start';
 import { QuestionCounter } from './QuestionCounter';
 import { Name } from './Name';
 import { CountrySelect } from './CountrySelect';
@@ -20,6 +20,7 @@ export const Form = () => {
   const [summary, setSummary] = useState(false);
   const questionsTotal = 5;
 
+  // Function for when clicking button and that increments question counter and progress bar
   const onSubmit = (e) => {
     e.preventDefault();
     setQuestion(question + 1)
@@ -27,51 +28,51 @@ export const Form = () => {
     question === questionsTotal && setSummary(true);
   }
 
-return (
-  <>
-    {!summary ? 
-      <form className="form-container" onSubmit={onSubmit}>
-        <QuestionCounter 
-          percentage={percentage}
-          question={question}
-          total={questionsTotal}/>
-        {question === 0 && (
-          <Welcome/>
-        )}
-        {question === 1 && (
-          <Name 
-            name={name}
-            setName={setName}/>
-        )}
-        {question === 2 && (
-          <CountrySelect 
-            countryName={country}
-            setCountry={setCountry}/>
-        )}
-        {question === 3 && (
-          <TravelTypeRadio 
-            checked={TravelTypeRadio === travelType}
-            setTravelType={setTravelType}/>
-        )}
-        {question === 4 && (
-          <AmenitiesRadio
-            checked={AmenitiesRadio === amenities}
-            setAmenities={setAmenities}/>
-        )}
-        {question === 5 && (
-          <SatisfactionRange
-            satisfaction={satisfaction}
-            setSatisfaction={setSatisfaction}/>
-        )}
-      </form>
-    :
-      <Summary
-        name={name}
-        travelType={travelType}
-        country={country}
-        amenities={amenities}
-        satisfaction={satisfaction}/>
-    }
-  </>
-)
+  return (
+    <>
+      {!summary ? 
+        <form className="form-container" onSubmit={onSubmit}>
+          <QuestionCounter 
+            percentage={percentage}
+            question={question}
+            total={questionsTotal}/>
+          {question === 0 && (
+            <Start />
+          )}
+          {question === 1 && (
+            <Name 
+              name={name}
+              setName={setName}/>
+          )}
+          {question === 2 && (
+            <CountrySelect 
+              countryName={country}
+              setCountry={setCountry}/>
+          )}
+          {question === 3 && (
+            <TravelTypeRadio 
+              checked={TravelTypeRadio === travelType}
+              setTravelType={setTravelType}/>
+          )}
+          {question === 4 && (
+            <AmenitiesRadio
+              checked={AmenitiesRadio === amenities}
+              setAmenities={setAmenities}/>
+          )}
+          {question === 5 && (
+            <SatisfactionRange
+              satisfaction={satisfaction}
+              setSatisfaction={setSatisfaction}/>
+          )}
+        </form>
+      :
+        <Summary
+          name={name}
+          travelType={travelType}
+          country={country}
+          amenities={amenities}
+          satisfaction={satisfaction}/>
+      }
+    </>
+  )
 }

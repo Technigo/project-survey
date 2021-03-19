@@ -2,6 +2,8 @@ import React from 'react';
 
 import { Button } from './Button';
 
+// Component for the range to choose satisfaction level
+
 export const SatisfactionRange = ({satisfaction, setSatisfaction}) => {
   const onSatisfactionChange = (e) => {
     setSatisfaction(e.target.value)

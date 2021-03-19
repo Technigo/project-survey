@@ -1,9 +1,8 @@
 import React from 'react';
 
-export const Summary = ({name, country, travelType, satisfaction, amenities}) => {
-    // const onRestart = () => {
+// Component for the summary
 
-    // }
+export const Summary = ({name, country, travelType, satisfaction, amenities}) => {
   return (
     <section className="summary-container">
       <div className="circle"></div>

@@ -1,6 +1,8 @@
 import React from 'react';
 import { Button } from './Button';
 
+// Component for radio buttons to choose favorite amenity
+
 export const AmenitiesRadio = ({setAmenities}) => {
   const amenities = ["Spa", "Gym", "Service", "Restaurant"];
   const onAmenitiesChange = (e) => {
@@ -21,7 +23,8 @@ export const AmenitiesRadio = ({setAmenities}) => {
                 id={amenity}
                 value={amenity}
                 onChange={onAmenitiesChange}
-                required/>
+                required
+              />
               <span className="radio-text">{amenity}</span>
             </label>
           </div>

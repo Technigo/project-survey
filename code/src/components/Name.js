@@ -2,6 +2,7 @@ import React from 'react';
 
 import { Button } from './Button';
 
+// Component for the name input
 
 export const Name = ({setName, name}) => {
   const onNameChange = (e) => {
@@ -25,6 +26,5 @@ export const Name = ({setName, name}) => {
       <Button 
         button="CONTINUE" />
     </>
-
   )
 }

@@ -2,7 +2,9 @@ import React from 'react';
 
 import { Button } from './Button';
 
-export const Welcome = () => {
+// Component for the start page
+
+export const Start = () => {
   return (
     <section className="start-container">
       <div className="circle"></div>
