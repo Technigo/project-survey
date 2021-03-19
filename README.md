@@ -9,4 +9,4 @@ If I had more time I would have tried to add checkboxes to the survey.
 
 ## View it live
 
-See it Live at Netlify - 
+See it Live at Netlify - game-of-thrones-survey.netlify.app
