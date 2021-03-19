@@ -1,13 +1,22 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project ✅use React to build a survey form. ✅The completed project consist of at least 3 questions that need to be answered by users. ✅When the user presses submit, they see a summary of their answers.
 
-## The problem
+## The built and challanges 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+-This week I created a movie picker robot 🎬
+- The survey consist of  3 questions.
+-  One question consist of radio buttons.
+-  One question is a select dropdown.
+-  One is a name input field
+- There is a submit button. When pressed the app hides the input form and show a  summary of the user's submissions.
+- The site should follow accessibility guidelines for screen readers
+- Validation was added to the survey
+
+The challange was to using state hooks to pass information between the components. So that the infomration renders in the right place. Furhter to structre the component in such a way that they can be resuable. I used my team mates for help, stack overflow and a lot of google-ing to overcome this. 
 
 ## View it live
+View it live here 👇
+https://epic-kare-1bb05c.netlify.app/
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
