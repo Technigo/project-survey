@@ -22,18 +22,18 @@ const Checkbox = styled.div`
 const CheckboxLabel = styled.label`
   width: 2rem;
   height: 2rem;
-  border: 0.3rem solid #f1c21b;
+  border: 0.3rem solid #f79300;
   display: inline-block;
   border-radius: var(--spacing);
   position: relative;
   cursor: pointer;
   transition: border-color 0.5s;
   &:hover {
-    border-color: #e8b910;
+    border-color: #e08704;
   }
   &:after {
     content: "✔";
-    color: #72b0be;
+    color: #04465c;
     font-size: 2.7rem;
     line-height: 2rem;
     position: absolute;

@@ -13,6 +13,11 @@ body {
   height: 100vh;
   display: grid;
   align-items: center;
+  background-image: url("../images/sun.svg");
+  background-color: #e6eff4;
+  background-repeat: no-repeat;
+  background-size: 400px;
+  background-position: left top;
 }
 
 a {
@@ -68,7 +73,7 @@ select:focus {
   content: "";
   width: 12px;
   height: 12px;
-  background: #72b0be;
+  background: #f1c21b;
   position: absolute;
   top: 4px;
   left: 4px;
