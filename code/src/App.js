@@ -2,17 +2,22 @@ import React from 'react'
 
 import { Form } from './components/Form'
 import { Header } from './components/Header'
+import { Footer } from './components/Footer'
 
 
 export const App = () => {
   return (
-    <main className="main">
-      <div className="header">
+    <>
+    
+      <header className='header'>
       <Header />
-      </div>
-      <div className="form">
+      </header>
+      <main className='main'>
       <Form />
-      </div>
-    </main>
+      </main>
+      <footer className='footer'>
+      <Footer />
+      </footer>
+    </>
   )
 }

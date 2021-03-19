@@ -6,9 +6,9 @@ export const AgeRadioOption = ({ageGroupSpan, setAgeGroup}) => {
   
   return (
   <div>
-    <p>How old are you?</p>
+    <p>Age</p>
       {ageGroups.map((age) => (
-        <label htmlFor='age'>
+        <label htmlFor='age' key={age}>
         <input
         name='age'
         type="radio"

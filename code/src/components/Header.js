@@ -2,12 +2,16 @@ import React from 'react'
 
 export const Header = () => {
   return (
-    <div className="header">
+  <>
+    <div className='logo-container'>
       <img src="./images/logo.png" alt="logo"/>
-      <h1>Information from Institute of Space Stuff (IoSS)</h1>
-      <p>We have to leave our planet.</p>
-      <p>Here is your chance to select your future home.</p>
-      <span className="line"></span>
+      <h1>Institute of Space Stuff (IoSS)</h1>
+      </div>
+      <div className='evacuation-plan-container'>
+      <h3>EVACUATION-PLAN-LEAVING-EARTH-123</h3>
+      <h3>Version 1</h3>
+      
     </div>
+  </>
   )
 }

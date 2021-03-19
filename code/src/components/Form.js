@@ -22,9 +22,13 @@ export const Form = () => {
   }
 
  return (
-   <>
+  <>
    {! summary ? (
     <form className='form-container' onSubmit={handelSubmit}>
+      <div className='instruction-text-container'>
+      <p>To secure a spot in the evacuation progam.</p>
+      <p>Please fill in the form.</p>
+      </div>
       <div>
         <UserName 
         setName={setName}
@@ -33,9 +37,9 @@ export const Form = () => {
       </div>
       <div>
           <AgeRadioOption 
-          ageGroupSpan={ageGroupSpan}
           setAgeGroup={setAgeGroup}
-          />
+          ageGroupSpan={ageGroupSpan}
+         />
       </div>
       <div>
         <SelectPlanet
@@ -51,8 +55,6 @@ export const Form = () => {
       </div>
       <div>
         <button className='submit-button' type='submit'>Submit!</button>
-          
-       
       </div>
     </form>
     ):(
@@ -62,9 +64,8 @@ export const Form = () => {
       planet={planet} 
       item={item}
       />
-
     )}
-    </>
+  </>
   )
 }
 

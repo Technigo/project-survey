@@ -9,8 +9,9 @@ export const UserName = ({name, setName}) => {
 
   return (
     <div>
-      <label>What is your name?
+      <label>Name
       <input 
+        className='name-input'
         type='text'
         value={name}
         onChange={(event) => {onNameChange(event)}}
