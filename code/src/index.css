@@ -40,10 +40,22 @@ code {
   align-content: center;
 }
 
+.main-dish {
+  display: flex;
+  flex-direction: column;
+  align-content: space-between;
+}
+
+.side-dish {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
 .summary-section {
 display: flex;
 flex-direction: column;
 justify-content: center;
+align-items: center;
 }
 
 .button {
@@ -53,12 +65,11 @@ justify-content: center;
   color: white;
   padding: 15px 32px;
   margin-top: 16px;
-  width: 50%;
+  width: 100px;
   border-radius: 8px;
   text-align: center;
   text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  display: flex;
   transition-duration: 0.4s;
 }
 
