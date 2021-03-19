@@ -12,7 +12,6 @@ import ReturnButton from 'components/ReturnButton'
 import SubmitButton from 'components/SubmitButton'
 import CharacterSheet from './components/CharacterSheet'
 import ProgressBar from 'components/ProgressBar'
-import { render } from 'react-dom'
 
 
 const App = () => {
@@ -28,6 +27,7 @@ const App = () => {
   const [str, setStr] = useState("")
   const [int, setInt] = useState("")
   const [dex, setDex] = useState("")
+  const [chr, setChr] = useState("")
 
   const isComplete = () => {
     if (name === "") {
@@ -60,6 +60,9 @@ const App = () => {
     if (dex === "") {
       return false
     }
+    if (chr === "") {
+      return false
+    }
     else {
       return true
     }
@@ -79,6 +82,7 @@ const App = () => {
           str={str}
           int={int}
           dex={dex}
+          chr={chr}
         />
         <ReturnButton
           text="Go back"
@@ -163,6 +167,11 @@ const App = () => {
                 value={dex}
                 setValue={setDex}
                 data={data.stats.dexterity}
+              />
+              <RangeInput
+                value={chr}
+                setValue={setChr}
+                data={data.stats.charisma}
               />
             </div>}
 

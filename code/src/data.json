@@ -75,7 +75,8 @@
         "allStats": [
             "strength",
             "dexterity",
-            "intelligence"
+            "intelligence",
+            "charisma"
         ],
         "strength": {
             "className": "stat-input",
@@ -88,6 +89,10 @@
         "dexterity": {
             "className": "stat-input",
             "label": "dexterity"
+        },
+        "charisma": {
+            "className": "stat-input",
+            "label": "charisma"
         }
     }
 }
