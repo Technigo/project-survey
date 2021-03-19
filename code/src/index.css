@@ -69,9 +69,19 @@ body {
 .name-question {
 margin: 40px;
 }
+
+.name-input {
+  font-size: 15px;
+  padding: 5px;
+}
  
 .color-question {
   margin: 0px 50px 40px 50px;
+}
+
+.color-input {
+  height: 15px;
+  width: 15px;
 }
 
 .color-wine {
@@ -84,6 +94,11 @@ margin: 40px;
   margin: 40px 60px;
   display: flex;
   flex-direction: column;
+}
+
+.country-select {
+  font-size: 15px;
+  padding: 5px;
 }
 
 button {
