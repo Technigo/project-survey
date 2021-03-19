@@ -5,19 +5,31 @@
 import React, { useState } from 'react'
 
 import FormQuestions from 'components/FormQuestions'
-import Form from 'components/Form'
+import {fname, setFname} from 'components/Form'
 
 
-const Summary = ({fname, lname}) => {
+const Summary = ({fname, lname, gender, symptom}) => {
     return (
         
 
         
-        <div>Test
-            <h2>{fname}</h2>
-        </div>
-                
+        <div>Test 
+            <h1>{fname}</h1>
+            <h1>{lname}</h1>
+            <h2>{gender}</h2>
+            
+            <h2>{symptom}</h2>
 
+
+        </div>
+             
+        
+            
+
+        
+                
+        
+             
         
         
         

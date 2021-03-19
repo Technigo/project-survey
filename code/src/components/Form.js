@@ -132,7 +132,12 @@ const Form = () => {
     
     } else {
         return (
-            <Summary/>
+            <Summary
+            fname={fname}
+            lname={lname}
+            gender={gender}
+            symptom={symptom}
+            />
         ) 
     }
     
