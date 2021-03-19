@@ -29,7 +29,7 @@
   font-size: 20px;
   font-weight: 600;
   color: blue;
-  animation: bounce 15s linear infinite;
+  animation: bounce 10s linear infinite;
 }
 
 .circle--small:after {
@@ -62,62 +62,26 @@
 }
 
 
-
 @keyframes bounce {
   0% {
     transform: translate(0%, 0%);
   }
-  5% {
+  20% {
     transform: translate(100%, 100%);
   }
-  10% {
+  30% {
     transform: translate(10%, 200%);
   }
-  15% {
+  50% {
     transform: translate(-50%, 90%);
   }
-  20% {
+  70% {
     transform: translate(-100%, 200%);
   }
-  25% {
-    transform: translate(50%, 100%);
-  }
-  30% {
-    transform: translate(0%, 0%);
-  }
-  35% {
-    transform: translate(100%, 200%);
-  }
-  40% {
-    transform: translate(20%, 300%);
-  }
-  45% {
-    transform: translate(-60%, 150%);
-  }
-  50% {
-    transform: translate(-100%, 100%);
-  }
-  60% {
-    transform: translate(50%, 300%);
-  }
-  65% {
-    transform: translate(0%, 100%);
-  }
-  70% {
-    transform: translate(100%, 200%);
-  }
-  75% {
-    transform: translate(50%, 100%);
-  }
-  80% {
-    transform: translate(-10%, 200%);
-  }
-  85% {
-    transform: translate(-200%, 100%);
-  }
   90% {
-    transform: translate(50%, 200%);
+    transform: translate(50%, 100%);
   }
+ 
 }
 
 h1 {
