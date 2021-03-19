@@ -22,6 +22,9 @@ export const App = () => {
           <p>Start by entering your name 👇 </p>
 
           <Question1 />
+          <Question2 />
+          <Question3 />
+
 
           <button type="submit" onClick={ () => renderQuestion()}>NEXT</button>
 
