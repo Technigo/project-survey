@@ -5,9 +5,9 @@ const Summary = ({ values, onButtonResponse }) => {
   return (
     <div>
       <h1>Does this look ok?</h1>
-      <p>First name: {values.name}</p>
-      <p>Company: {values.company}</p>
-      <p>Age: {values.age}</p>
+      <p>{values.name}</p>
+      <p>{values.company}</p>
+      <p>{values.age}</p>
       <Button 
       buttonValue="previous" 
       label="Previous" 
