@@ -7,7 +7,6 @@ import FavoriteGenre from './Components/FavoriteGenre';
 import Header from './Components/Header';
 import Summary from './Components/Summary';
 
-
 import './index.css'
 
 
