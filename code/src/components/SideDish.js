@@ -9,7 +9,7 @@ const SideDish = () => {
     }
 
     return (
-        <form>
+        <form className="side-dish">
           <div>
             <label htmlFor="dish2">And now let's choose you a side dish</label>
             <select id="dish2" onChange={onDish2Change}  value={dish2} >

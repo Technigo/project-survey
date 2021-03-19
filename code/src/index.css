@@ -47,7 +47,24 @@ justify-content: center;
 }
 
 .button {
-  align-self: center;
+  background-color: 
+  #eec721;
+  border: 2px solid whitesmoke;
+  color: white;
+  padding: 15px 32px;
+  margin-top: 16px;
+  width: 50%;
+  border-radius: 8px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+}
+
+.button:hover {
+  background-color: whitesmoke; 
+  color: whitesmoke;
 }
 
 /**MEDIA QUERIES**/

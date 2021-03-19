@@ -9,7 +9,7 @@ const MainDish = () => {
     }
 
     return (
-        <form>
+        <form className="main-dish">
           <div>
             <label htmlFor="dish">Select your favorite main dish</label>
             <select onChange={onDishChange} id="dish" value={dish} >
