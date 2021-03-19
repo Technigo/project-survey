@@ -12,9 +12,12 @@ export const ColorQuestion = ({ color, onColorChange}) => {
       onChange={(event) => onColorChange(event.target.value)}
       >
       <option value="">Select</option>
-      <option value="Brown">Brown</option>
-      <option value="Black">Black</option>
-      <option value="White">White</option>
+      <option value="brown">Brown</option>
+      <option value="black">Black</option>
+      <option value="white">White</option>
+      <option value="grey">Grey</option>
+      <option value="red">Red</option>
+      <option value="mixed colors">Mixed colors</option>
     </select>
     </div>
   )

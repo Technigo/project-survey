@@ -1,7 +1,7 @@
 import React from 'react';
 
 export const FurQuestion = ({ furOption, onfurOptionChange}) => {
-  const furArray = ["long hair", "short hair", "naked"];
+  const furArray = ["long hair", "short hair", "no hair"];
 
   return (
     <div>
