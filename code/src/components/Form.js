@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Summary from 'components/Summary'
 import CountryInputRadioButton from 'components/CountryInputRadioButton'
 import NameInputText from 'components/NameInputText'
+import CompanionDropDown from 'components/CompanionDropDown'
 
 const Form = () => {
 
@@ -74,17 +75,11 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
           </>
 
           <>
-            <label htmlFor="companion">
-            3. Who are you taking with you on this trip?
-            </label>
-            <select id="companion" onChange={onCompanionChange} value={companion} >
-              <option disabled></option>
-              <option>partner</option>
-              <option>best friend</option>
-              <option>mom</option>
-              <option>child</option>
-              <option>dog</option>
-            </select>   
+           <CompanionDropDown
+           question={'Who would you like to take with you on this trip?'}
+           dropDownvalue = {companion}
+           onCompanionChange = {onCompanionChange}
+           />
           </>
                 
           <>
