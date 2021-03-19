@@ -3,9 +3,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont,"Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
 }
-
 
 html {
   background-image: url(https://policygenius-blog.imgix.net/2018/05/fruits-vegetables.jpg);
@@ -38,14 +36,12 @@ code {
   width: 400px;
   margin: 0 auto;
 
-  padding: 50px;
+  padding: 40px;
   font-size: 20px;
-
-
 }
 
 .inner-container {
-  padding: 30px;
+  padding: 20px;
 }
 
 .submit-Btn {
@@ -58,3 +54,41 @@ code {
   font-family: 'Roboto';
   cursor: pointer;
 }
+
+.submit-Btn:hover {
+  background-color: rgb(252, 122, 148);
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid rgb(141, 32, 32);
+  border-radius: 5px;
+
+}
+
+/* .radioLabel {
+  display: block;
+  position: relative;
+  padding-right: 20px;
+  /* margin-bottom: 10px; */
+  /* cursor: pointer;
+  user-select: none;
+}
+
+.radioLabel input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.radioButton {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: rgb(53, 40, 40);
+  border-radius: 50%;
+} */ 

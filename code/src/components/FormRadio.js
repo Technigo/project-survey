@@ -15,16 +15,19 @@ const FormRadio = (props) => {
       <p>How many fruits do you eat a day?</p>
         
         <div>
-          <label htmlFor='0 - 2'>0 - 2</label>
+          <label className='radioLabel' htmlFor='0 - 2'>0 - 2</label>
           <input type='radio' id='0 - 2' value='0 - 2' name='howManyFruits' onChange={onHowManyChange}></input>
+          <span className='radioButton'></span>
         </div>
         <div>
-          <label htmlFor='2 - 5'>2 - 5</label>
+          <label className='radioLabel' htmlFor='2 - 5'>2 - 5</label>
           <input type='radio' id='2 - 5' value='2 - 5' name='howManyFruits' onChange={onHowManyChange}></input>
+          <span className='radioButton'></span>
         </div>
         <div>
-          <label htmlFor='6 - 10'>6 - 10</label>
+          <label className='radioLabel' htmlFor='6 - 10'>6 - 10</label>
           <input type='radio' id='6 - 10' value='6 - 10' name='howManyFruits' onChange={onHowManyChange}></input>
+          <span className='radioButton'></span>
         </div>
     </>
   )
