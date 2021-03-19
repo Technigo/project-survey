@@ -3,7 +3,7 @@ import StartNextButton from './StartNextButton';
 
 import './ChooseDate.css'
 
-const ChooseDate = ({date, setDate, setSection, progress, setProgress, question}) => {
+const ChooseDate = ({date, setDate, setQuestion, progress, setProgress}) => {
   const onDateChange = (event) => {
     setDate(event.target.value)
   }
@@ -16,9 +16,7 @@ const ChooseDate = ({date, setDate, setSection, progress, setProgress, question}
         <input type="date" value={date} onChange={onDateChange} className="date"/>
       </label>
       <StartNextButton
-        question={question}
-        setSection={setSection}
-        button="Next"
+        setQuestion={setQuestion}
         progress={progress}
         setProgress= {setProgress}
         state={date}

@@ -1,5 +1,5 @@
 :root{
-  --background: #9cacbf;
+  --background: #7bc8f2;
   --question: #012e67;
   --text: #032e42;
   --background2: #90bff9;
@@ -14,7 +14,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--background);
+  background-color: #acc9d8;
+  display: grid;
 }
 
 code {
@@ -22,16 +23,37 @@ code {
     monospace;
 }
 
-.form-wrapper{
+.content-wrapper{
   margin: 10px;
-}
-
-
-.result {
-  width: 100%;
 }
 
 .question-card{
   max-width: 500px;
   margin: auto;
+}
+
+.image-container{
+  max-width: 500px;
+  margin: 30px auto;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 15px;
+  row-gap: 15px;
+
+}
+
+.image {
+  width: 100%;
+  filter: brightness(90%);
+  opacity: 0.7;
+  border-radius: 20%;
+  /* border: 1px white solid; */
+  
+}
+
+.form-wrapper{
+  margin: 30px 0 30px 0;
 }

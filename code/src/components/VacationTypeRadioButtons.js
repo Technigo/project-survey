@@ -2,7 +2,7 @@ import React from 'react';
 import StartNextButton from './StartNextButton'
 import './VacationTypeRadioButtons.css'
 
-const VacationTypeRadioButton = ({setSection, vacationTypes, vacationType, name, setVacationType, question, progress, setProgress}) => {
+const VacationTypeRadioButton = ({setQuestion, vacationTypes, vacationType, name, setVacationType, progress, setProgress}) => {
   
   const onVacationTypeChange = (event) => {
     setVacationType(event.target.value)
@@ -20,7 +20,6 @@ const VacationTypeRadioButton = ({setSection, vacationTypes, vacationType, name,
                 name={name}
                 value={type}
                 onChange={onVacationTypeChange}
-                // checked={answer === {buttonValue}}
               />
               {type}
             </label>
@@ -29,9 +28,7 @@ const VacationTypeRadioButton = ({setSection, vacationTypes, vacationType, name,
       }
       </div>
       <StartNextButton
-        question={question}
-        setSection={setSection}
-        button="Next"
+        setQuestion={setQuestion}
         progress={progress}
         setProgress= {setProgress}
         state={vacationType}

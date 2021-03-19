@@ -1,30 +1,31 @@
 import React from 'react';
 import './StartNextButton.css'
 
-const StartNextButton = ({question, setSection, button, progress, setProgress, state}) =>{
+import data from '../data.json'
+
+const StartNextButton = ({setQuestion, progress, setProgress, state}) =>{
   
   const isStateUnchanged = () => {
     return state===""
   }
-  const onSectionChange = ()=> {
-    // console.log(progress)
-    setSection(question)
+  const onQuestionChange = ()=> {
     onProgressChange()
+    setQuestion(data.QuestionsNumberArray[progress+1])
+    
   }
   const onProgressChange = () => {
-    setProgress(progress +20)
+    setProgress(progress +1)
   }
   return (
     <button
     className="start-next-button"
     disabled={isStateUnchanged()}
     type="button"
-    onClick={onSectionChange}>
-      {button}
+    onClick={onQuestionChange}>
+      {progress === 0 && ("Start survey")}
+      {progress> 0 && ("Next question")}
     </button>
   )
 }
 
 export default StartNextButton
-
-//type="button" value="secondQuestion" onClick={(event)=>setSection(event.target.value)
