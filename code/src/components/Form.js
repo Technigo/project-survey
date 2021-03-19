@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import Summary from 'components/Summary'
-/* import Button from 'components/Button' */
+import CountryInputRadioButton from 'components/CountryInputRadioButton'
+import NameInputText from 'components/NameInputText'
 
 const Form = () => {
-  //STATES
 
-  /* const [section, setSection] = useState('firstQuestion') */
+//STATES
+ 
 const [name, setName] = useState('')
 const [country, setCountry] = useState('')
 const [companion, setCompanion] = useState('')
@@ -14,9 +15,11 @@ const [summary, setSummary]= useState(false)
 
 
 //ARRAYS
+
 const countries = ['france', 'thailand', 'iceland', 'australia', 'peru']
 const activities = ['make a gastronomy tour', 'explore the cultural scene', 'hangout with the locals','party till sunrise']
    
+
   //FUNCTIONS 
 
   const handleSubmit = event => {
@@ -32,7 +35,7 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
   const onCountryChange = (e) => {
     console.log(e.target.value);
     setCountry(e.target.value);
-  }
+  } 
   
   const onCompanionChange = (e) => {
     console.log(e.target.value);
@@ -43,7 +46,7 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
     setActivity(e.target.value);
   }
 
-  /*QUESTIONS*/
+  // FORM & QUESTIONS
 
   return (
     <>
@@ -52,7 +55,11 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
 
         <form onSubmit={handleSubmit}>
           <> 
-            <p>We are so pleased to announce that you are the winner of a trip!</p>
+            <NameInputText
+             value={name} 
+             onChange={onNameChange}
+          />
+            {/* <p>We are so pleased to announce that you are the winner of a trip!</p>
             <p>But first we need to gather some basic information so we can start organizing your next holidays!</p> 
               
             <div className="question one">
@@ -66,13 +73,22 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
                   placeholder="Type your name here"
                   required
                 />
-            </div>
+            </div> */}
           </> 
         
           <>
             <p>2. Which country you want to travel to and spend 10 wonderful days?</p>
             {countries.map((country) => 
-            
+              <CountryInputRadioButton
+                onChange={onCountryChange}
+                country={country}
+                key={country} 
+              />
+              )
+             })
+          </>
+
+           {/*  {countries.map((country) => 
             <label key={country} htmlFor={country}>
             <input 
               name="country"
@@ -84,8 +100,8 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
             />
             {country}</label>
             
-            )}
-          </>
+            )} */}
+          
 
           <>
             <label htmlFor="companion">
