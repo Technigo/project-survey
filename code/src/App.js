@@ -7,11 +7,12 @@ import RadioInput from './components/RadioInput'
 import NumberInput from './components/NumberInput'
 import RadioInputIcon from './components/RadioInputIcon'
 import RangeInput from './components/RangeInput'
-import NavigateButton from 'components/NavigateButton'
-import ReturnButton from 'components/ReturnButton'
-import SubmitButton from 'components/SubmitButton'
+import NavigateButton from './components/NavigateButton'
+import ReturnButton from './components/ReturnButton'
+import SubmitButton from './components/SubmitButton'
 import CharacterSheet from './components/CharacterSheet'
-import ProgressBar from 'components/ProgressBar'
+import ProgressBar from './components/ProgressBar'
+import Footer from './components/Footer'
 
 
 const App = () => {
@@ -88,6 +89,7 @@ const App = () => {
           setRenderSummary={setRenderSummary}
           setSection={setSection}
         />
+        <Footer />
       </>
     )
   } else {

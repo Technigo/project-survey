@@ -21,6 +21,7 @@ body > div {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  min-height: 100vh;
 }
 
 h1 {
@@ -212,6 +213,25 @@ button {
   display: none;
 }
 
+footer {
+  width: 100%;
+  background-color: var(--darkgreen);
+  color: var(--almond);
+  font-size: 20px;
+  text-align: center;
+  padding: 20px;
+  margin-top: auto;
+  border-top: 5px solid var(--almond);
+  border-top-right-radius: 250px 10px ;
+  border-top-left-radius: 100px 10px;
+  box-sizing: border-box;
+}
+footer a {
+  color: var(--almond);
+  text-decoration: none;
+}
+
+
 /*********** MEDIA QUERIES **********/
 
 @media (min-width: 667px) {
@@ -265,7 +285,11 @@ button {
   button:hover {
     box-shadow: none;
     transform: scale(1.3);
-  }  
+  } 
+
+  footer a:hover {
+    text-decoration: underline;
+  }
 }
 @media (min-width: 1440px) {
   .form,
