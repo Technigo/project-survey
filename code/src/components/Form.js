@@ -14,7 +14,7 @@ const Form = () => {
     const [fname, setFname] = useState('')
     const [lname, setLname] = useState('')
     const [gender, setGender] = useState('')
-    const [symptom, setSymptom] = useState('')
+    const [anamnes, setAnamnes] = useState('')
     const [IsSubmited, setIsSubmited] = useState(false)
     const [checkboxGroup, setCheckboxGroup] = useState([])
 
@@ -35,10 +35,10 @@ const Form = () => {
         setGender(e.target.value)
     }
 
-    const onSymptomChange = (e) => {
+    const onAnamnesChange = (e) => {
         console.log("form question", e.target.value)
 
-        setSymptom(e.target.value)
+        setAnamnes(e.target.value)
     } 
 
     
@@ -67,7 +67,7 @@ const Form = () => {
             return false
         }
 
-        if (symptom === '') {
+        if (anamnes === '') {
             return false
         }    
         
@@ -124,8 +124,8 @@ const Form = () => {
                 ))}
                 
                 <FormQuestions 
-                    onSymptomChange={onSymptomChange}
-                    symptom={symptom} /> 
+                    onAnamnesChange={onAnamnesChange}
+                    anamnes={anamnes} /> 
                 
                 <Checkboxes
                     onCheckboxToggle={onCheckboxToggle}
@@ -163,7 +163,8 @@ const Form = () => {
             fname={fname}
             lname={lname}
             gender={gender}
-            symptom={symptom}
+            anamnes={anamnes}
+            checkboxGroup={checkboxGroup}
             />
         ) 
     }

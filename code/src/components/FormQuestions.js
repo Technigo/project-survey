@@ -4,29 +4,28 @@
 import React, { useState } from 'react'
 
 
-const FormQuestions = ({symptom, onSymptomChange}) => {
+const FormQuestions = ({anamnes, onAnamnesChange}) => {
 
-    /*const [symptom, setSymptom ] = useState('') */
+    
       
 
     return (
     
          <div>
-             <label htmlFor="symptoms">Symptoms</label>
+             <label htmlFor="symptoms">Anamnes</label>
              <select
 
-                 /*onChange ={(e) => setSymptom(e.target.value)} */
-                 onChange={onSymptomChange}
-                 value = {symptom}
+                 onChange={onAnamnesChange}
+                 value = {anamnes}
                  
                  >
-                 <option value = "">Do you have the following symptoms:</option>
-                 <option value = "headache">Headache</option>
-                 <option value = "cough">Cough</option>
-                 <option value = "lossOfSmell">Loss of smell</option>
-                 <option value = "lossOfTaste">Loss of taste</option>
-                 <option value = "difficultyToBreath">Difficulty to breath</option>
-                 <option value = "dizziness">Dizziness</option>
+                 <option value = "">In the past 6 months did you have:</option>
+                 <option value = "COVID-19">COVID-19 infection</option>
+                 <option value = "antibodies against coronavirus">Antibodies against coronavirus</option>
+                 <option value = "positive swab test for coronavirus">Positive swab test for coronavirus</option>
+                 <option value = "vaccination against coronavirus">Vaccination against COVID-19</option>
+                 <option value = "I am not aware of been infected by COVID-19">I am not aware of been infected by COVID-19</option>
+
              </select>
          </div>
 

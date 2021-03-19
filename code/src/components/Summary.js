@@ -8,17 +8,18 @@ import FormQuestions from 'components/FormQuestions'
 import {fname, setFname} from 'components/Form'
 
 
-const Summary = ({fname, lname, gender, symptom}) => {
+const Summary = ({fname, lname, gender, anamnes, checkboxGroup}) => {
     return (
         
 
         
-        <div>Test 
+        <div>
             <h1>{fname}</h1>
             <h1>{lname}</h1>
             <h2>{gender}</h2>
             
-            <h2>{symptom}</h2>
+            <h2>{anamnes}</h2>
+            <h2>{checkboxGroup.join(' ,')}</h2>
 
 
         </div>
