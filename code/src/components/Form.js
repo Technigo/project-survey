@@ -101,7 +101,7 @@ const Form = (props) => {
           />
         )}
         {section === questions[5] && (
-          <div>
+          <div className="question-card">
             <TextInputName
               name={name}
               setName={setName}

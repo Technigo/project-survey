@@ -9,6 +9,7 @@
 
 .progress-range-wrapper{
   max-width: 500px;
+  margin: auto;
   width: 100%;
   margin-top: 30px;
   border: solid 1px #032e4238;

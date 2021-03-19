@@ -6,7 +6,10 @@
   --border: #0a1417;
 }
 
-
+.welcome-card {
+  max-width: 500px;
+  margin: auto;
+}
 .welcome-heading{
   font-family: Averia Sans Libre;
   color: var(--question);
