@@ -12,7 +12,6 @@ code {
     monospace;
 }
 
-
 *{
   margin: 0;
   padding: 0;
@@ -35,7 +34,7 @@ body {
 .header-image {
   position: relative;
   height: 200px;
-  width: 100%;
+  width: 100vw;
   object-fit: cover;
 }
 .header-welcome {
@@ -136,16 +135,16 @@ button {
 
   .header-image {
     height: 350px;
-    width: 100%;
+    width: 100vw;
   }
 
   .header-welcome {
-    top: 100px;
+    top: 70px;
     font-size: 26px;
   }
   
   .header-text {
-    top: 180px;
+    top: 210px;
     font-size: 20px;
   }
   
@@ -183,7 +182,7 @@ button {
   
   .header-image {
     height: 400px;
-    width: 100%;
+    width: 100vw;
   }
 
   .header-welcome {

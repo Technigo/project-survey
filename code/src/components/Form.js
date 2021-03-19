@@ -34,7 +34,7 @@ export const Form = () => {
         <div className="form-container-questions">
           <div className="name-question">
             <label htmlFor="name">What is your name?
-              <input className="name-input" id="name" type="text" value={name} onChange={onNameChanged} required />
+              <input className="name-input" id="name" type="text" value={name} onChange={onNameChanged} />
             </label>
           </div>
           <div className="color-question">
@@ -49,8 +49,7 @@ export const Form = () => {
                     type="radio"
                     value={color}
                     onChange={onWineColorChanged}
-                    checked={wineColor === color}
-                    required />
+                    checked={wineColor === color} />
                   {color}
                 </label>
               ))}
@@ -59,7 +58,7 @@ export const Form = () => {
 
           <div className="country-question">
             <label htmlFor="country">Pick a country?
-              <select className="country-select" id="country" value={country} onChange={onCountryChanged} required>
+              <select className="country-select" id="country" value={country} onChange={onCountryChanged}>
                 <option value="">Select</option>
                 <option value="Italy">Italy</option>
                 <option value="Spain">Spain</option>
