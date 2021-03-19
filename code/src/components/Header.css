@@ -20,7 +20,7 @@
   }
 
 .circle--small {
-  top: -200px;
+  top: 0;
   left: 50%;
   border: solid rgb(5, 255, 180);
   background-color: rgb(130, 210, 221);
@@ -29,7 +29,7 @@
   font-size: 20px;
   font-weight: 600;
   color: blue;
-  animation: bounce 10s linear infinite;
+  animation: bounce 20s alternate infinite;
 }
 
 .circle--small:after {
@@ -64,22 +64,34 @@
 
 @keyframes bounce {
   0% {
-    transform: translate(0%, 0%);
+    transform: scale(0.2);
+    left:0;
+    opacity:0.5;
   }
   20% {
-    transform: translate(100%, 100%);
+    transform: scale(2.5);
+    left: 100%;
+    opacity:0.7;
   }
   30% {
-    transform: translate(10%, 200%);
+    transform: scale(1);
+    left: 0;
+    opacity:0;
   }
   50% {
-    transform: translate(-50%, 90%);
+    transform: scale(0.5);
+    left: 100%;
+    opacity:0.5;
   }
   70% {
-    transform: translate(-100%, 200%);
+    transform: scale(1.5);
+    left: 0;
+    opacity:0.2;
   }
   90% {
-    transform: translate(50%, 100%);
+    transform: scale(2);
+    left: 100%;
+    opacity:1;
   }
  
 }
