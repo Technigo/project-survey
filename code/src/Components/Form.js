@@ -7,6 +7,7 @@ import { DropDown } from './DropDown'
 import { TextWrapper } from './TextWrapper'
 import { NextButton } from './NextButton'
 import { SubmitButton } from './SubmitButton'
+import { RangeSlider } from './RangeSlider'
 
 const typeOfTrip = ['Winter', 'Sun']
 
@@ -14,7 +15,8 @@ export const Form = () => {
   const [name, SetName] = useState('')
   const [radioValue, SetRadioValue] = useState('')
   const [dropDown, setDropDown] = useState('')  
-  const [newCounter, setNewCounter] = useState(0);
+  const [newCounter, setNewCounter] = useState(0)
+  const [rangeSlider, setRangeSlider] = useState()
 
   const onCounterIncrease = () => {
   setNewCounter(newCounter + 1);
@@ -31,6 +33,10 @@ export const Form = () => {
   const onDropDown = (event) => {
     console.log(event.target.value)
     setDropDown(event.target.value)
+  }
+  const onRangeSlider = (event) => {    
+    console.log(event.target.value)
+    setRangeSlider(event.target.value)    
   }  
   
   return (
@@ -38,7 +44,12 @@ export const Form = () => {
     <form className="form" onSubmit={event => event.preventDefault()}> 
       <div className="form-wrapper">        
             {newCounter === 0 && (
-              <div>                
+              <div> 
+                <RangeSlider
+                onRangeSlider={onRangeSlider}
+                rangeSlider={rangeSlider}
+                setRangeSlider={setRangeSlider}
+                />               
                 <TextWrapper />
                 <NextButton
                 onCounterIncrease={onCounterIncrease} />
@@ -75,7 +86,7 @@ export const Form = () => {
                 <Summary 
                   name={name}
                   radioValue={radioValue}
-                  dropDown={dropDown}
+                  dropDown={dropDown}                  
                 />
                 <button onClick={() => {
                   setNewCounter(newCounter -4)
