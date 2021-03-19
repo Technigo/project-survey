@@ -15,7 +15,7 @@ const Header = () => {
     <h1 className="survey-heading" tabIndex="0">
     SURVEY
     </h1>
-      <h2 className="greeting" tabIndex="0"> Hey there music lover! 👋 
+      <h2 className="greeting" tabIndex="0"> Hey there music lover! <span role="img" aria-label="waving hand emoji">👋 </span> 
       </h2>
       <h3 className="survey-info" tabIndex="0">Yes, we all miss the live gig shenanigans like crazy. In the meantime, 
       let´s take the opportunity to evalute your Stockholm live music scene preferences!

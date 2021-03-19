@@ -3,8 +3,10 @@ import React from 'react';
 const Textfield = ({ inputName, setInputName }) => {
 
   return (
-    <form onSubmit={event => event.preventDefault()} tabIndex="0">
+    <form className="text-field" onSubmit={event => event.preventDefault()} tabIndex="0">
+      <h4>
       Please start the survey by stating your name: 
+      </h4>
       <input
         type="text"
         id="inputName"

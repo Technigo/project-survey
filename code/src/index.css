@@ -16,31 +16,16 @@ code {
     monospace;
 }
 
+.main-wrapper {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 50vh;
+  background-image: url(/images/aditya-chinchure-ZhQCZjr9fHo-unsplash.jpg);
+}
+
 
 .venue-img {
   position: relative;
   object-fit: cover;
 }
-
-/* MEDIA QUERY TABLET */
-@media only screen and (min-width: 768px) {
-  
-/* Header */
-
-.stockholm-heading {
-  font-size: 3rem;
-}
-
-.live-music-heading {
-  font-size: 5.3rem;
-}
-
-}
-
-
-/* MEDIA QUERY DESKTOP */
-@media only screen and (min-width: 992px) {
-  /* Header */
-
-  }
-
