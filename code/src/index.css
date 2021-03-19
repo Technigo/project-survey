@@ -238,6 +238,12 @@ footer a {
 
 /*********** MEDIA QUERIES **********/
 
+@media (max-width: 350px) {
+  button {
+    margin: 10px;
+  }
+}
+
 @media (min-width: 667px) {
   body {
     background-color: transparent;
