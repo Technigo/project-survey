@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 import React from "react";
 
 import { FooterContainer, Wave } from "./footer.style";

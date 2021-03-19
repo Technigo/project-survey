@@ -1,4 +1,3 @@
-/* eslint-disable quotes */
 import styled, { keyframes } from "styled-components";
 
 import wave from "./wave.svg";
@@ -14,7 +13,6 @@ const animationWave = keyframes`
 `;
 
 const wavesReverse = keyframes`
-
   0% {
     background-position: 1600px;
   }
@@ -25,10 +23,12 @@ const wavesReverse = keyframes`
 
 const FooterContainer = styled.footer`
   width: 100%;
-  height: 100vh;
+  height: 150px;
   background: url("https://png.pngtree.com/thumb_back/fw800/back_pic/03/74/68/4957bc61710d9ff.jpg");
   background-size: cover;
   background-attachment: fixed;
+  position: absolute;
+  bottom: 0;
 `;
 
 const Wave = styled.div`
@@ -36,8 +36,8 @@ const Wave = styled.div`
   width: 100%;
   /*height from the svg file*/
   height: 140px;
-  /* bottom: 0; */
-  /* left: 0; */
+  bottom: 0;
+  left: 0;
   background: url(${wave});
   animation: ${animationWave} 10s linear infinite;
 

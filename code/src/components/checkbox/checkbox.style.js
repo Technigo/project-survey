@@ -20,12 +20,11 @@ const Checkbox = styled.div`
   align-items: center;
 `;
 const CheckboxLabel = styled.label`
-  width: 3rem;
-  height: 3rem;
-  border: 0.5rem solid #f1c21b;
+  width: 2rem;
+  height: 2rem;
+  border: 0.3rem solid #f1c21b;
   display: inline-block;
-  border-radius: 5px;
-  margin-right: 25px;
+  border-radius: var(--spacing);
   position: relative;
   cursor: pointer;
   transition: border-color 0.5s;
@@ -35,8 +34,8 @@ const CheckboxLabel = styled.label`
   &:after {
     content: "✔";
     color: #72b0be;
-    font-size: 3.5rem;
-    line-height: 3rem;
+    font-size: 2.7rem;
+    line-height: 2rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -53,12 +52,13 @@ const Input = styled.input`
 `;
 
 const Title = styled.div`
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: 800;
   text-transform: uppercase;
   display: inline-block;
   position: relative;
   color: #04465c;
+  margin-left: calc(var(--spacing) * 4);
   &:after {
     content: "";
     display: inline-block;

@@ -64,13 +64,6 @@ const CheckBox = () => {
           <Title className="title">Transition</Title>
         </Checkbox>
       </Row>
-      <Row>
-        <Checkbox>
-          <Input type="checkbox" id="checkbox5" value="Transform" />
-          <CheckboxLabel htmlFor="checkbox5" />
-          <Title className="title">Transform</Title>
-        </Checkbox>
-      </Row>
       <ButtonsContainer>
         <ButtonContainer type="submit">
           <ButtonText to="/step-2">Previous</ButtonText>

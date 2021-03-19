@@ -10,7 +10,7 @@ import RadioButton from "../radio-button/radio-button.component";
 import Color from "../color/color.component";
 import Result from "../result/result.component";
 
-function Survey() {
+const Survey = () => {
   return (
     <FormContainer>
       <Switch>
@@ -21,7 +21,6 @@ function Survey() {
         <Route path="/step-5" component={RadioButton} />
         <Route path="/step-6" component={Color} />
         <Route path="/result" component={Result} />
-
       </Switch>
     </FormContainer>
   );
