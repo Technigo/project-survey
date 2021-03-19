@@ -1,13 +1,22 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Second project done with react. Got the assigment to create a small survey in the Technigo bootcamp. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+My biggest problem is that I still struggling with JS and now React. Have a hard time to understand the connections.
+
+This week has been a little bit better as I have gotten some help and guidience from my code coach. 
+I did the first part on my own, but then got some help to connect the compinents to the Form and App files to be able to send data properly. 
+Its beemn a lot of googling, watching the videos from Thechnigo and most of the help I got from my code coach. 
+
+If I had more time I would go through the accessibility part more and try to make it optimized. 
+Also I would have wanted to experiment with more functions, like range, progressbar and similar.
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://heuristic-albattani-176af8.netlify.app
+
+

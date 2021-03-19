@@ -16,7 +16,7 @@ return (
 
     <div className='button-small-box'>
       {timeIntervals.map(interval => (
-        <label key={interval} className='button-box'>
+        <label tabIndex='0' key={interval} className='button-box'>
         <input 
         type='radio'  
         value={interval}
