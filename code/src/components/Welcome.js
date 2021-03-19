@@ -5,9 +5,9 @@ import { Button } from './Button';
 export const Welcome = () => {
   return (
     <section className="start-container">
-      <div class="circle"></div>
-      <h1 className="start-title">Hello!</h1>
-      <h2 className="start-text">You stayed with us recently and we would love it if you could just answer a few quick questions!</h2>
+      <div className="circle"></div>
+      <h1 className="start-title" tabIndex="0">Hello!</h1>
+      <h2 className="start-text" tabIndex="0">You stayed with us recently and we would love it if you could just answer a few quick questions!</h2>
       <Button 
         button="LETS START!" />
     </section>

@@ -10,13 +10,14 @@ export const SatisfactionRange = ({satisfaction, setSatisfaction}) => {
   return (
     <>
       <label htmlFor="range">
-        <h2 className="question-title" tabindex="0"><span className="arrow">➛</span> How satisfied are you with your stay?</h2>
+        <h2 className="question-title" tabIndex="0"><span className="arrow">➛</span> How satisfied are you with your stay?</h2>
       </label>
       <div className="range-container">
         <input 
           className="range" 
           type="range" 
           name="satisfaction-range"
+          aria-label="Use arrows and then press enter"
           min="0" 
           max="10" 
           value={satisfaction} 

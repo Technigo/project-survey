@@ -9,7 +9,7 @@ export const AmenitiesRadio = ({setAmenities}) => {
 
   return (
     <>
-      <h2 className="question-title" tabindex="0"><span className="arrow">➛</span> Which of our amenities did you enjoy the most?</h2>
+      <h2 className="question-title" tabIndex="0"><span className="arrow">➛</span> Which of our amenities did you enjoy the most?</h2>
       <section className="radio-buttons-container">
         {amenities.map(amenity =>
           <div key={amenity} className="radio-box">

@@ -17,6 +17,7 @@ export const Name = ({setName, name}) => {
         type="text" 
         className="input-name"
         placeholder="Type your answer here"
+        pattern="[a-ö-A-Ö ]+"
         value={name}
         onChange={onNameChange}
         required

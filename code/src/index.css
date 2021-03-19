@@ -421,6 +421,9 @@ code {
     font-size: 70px;
     margin-top: 10px;
   }
+  .summary-container {
+    width: 95%;
+  }
 
   .summary-title {
     font-size: 60px;
@@ -439,10 +442,6 @@ code {
 }
 
 @media (min-width: 1200px) {
-  .start-container {
-    margin-top: 10%;
-  }
-
   .start-title {
     margin-bottom: 30px;
   }
