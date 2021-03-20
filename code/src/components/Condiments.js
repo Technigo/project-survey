@@ -1,25 +1,25 @@
 import React from 'react';
 
-const condiment = ["mustard", "mayo", "tomato sauce", "garlic sauce", "remoulade"];
+const condimentsArray = ["mustard", "mayo", "tomato sauce", "garlic sauce", "remoulade"];
 
 
-const Condiments = ({onCondimentChange}) => {
+const Condiments = ( {onCondimentChange} ) => {
  
   return (
     <>
-    <div className='condiments'>
+    <div className='condiments-header'>
       <h1 tabIndex="0" className='condiments-heading'>What is your go-to condiment?</h1>
-      {condiment.map(value => (
+      {condimentsArray.map(id => (
         <label
-        key={value}
+        key={id}
         label='condiment'
-        className='condiments'
+        className='condiments-container'
         >
           <input
             name='condiment'
             className='condiments'
             type="radio"
-            value={condiment}
+            value={id}
             onChange={onCondimentChange}
             />
         </label>
