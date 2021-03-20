@@ -30,7 +30,7 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
         (questionNumber === "Question4" && futureChoice === "") ||
         (questionNumber === "Question5" && moreFutureChoices.length === 0)
       ) {
-        alert("answer");
+        alert("Please answer the question.");
       } else {
         setNextQuestion();
       }
@@ -138,6 +138,7 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
               </section>
             </>
           )}
+          
           {questionNumber === "Question5" && (
             <>
               <h2 className="question-heading">Interesting, tell me more!</h2>
