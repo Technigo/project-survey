@@ -4,6 +4,7 @@ import Select from './Select'
 import Button from './Button'
 import TextInput from './TextInput'
 import Checkboxes from './Checkboxes'
+import RadioButtons from './RadioButtons'
 
 const Question = (props) => {
   let { values, step, question, onInputResponse, onButtonResponse } = props
@@ -82,7 +83,34 @@ const Question = (props) => {
             onButtonResponse={onButtonResponse} />
           }
 
-          {value && 
+          {value.length > 0 && 
+            <Button 
+            buttonValue="next" 
+            label="Next" 
+            onButtonResponse={onButtonResponse} />
+          }
+        </>
+      )
+    case 'radio' :
+      return (
+        <>
+          <h3 className="question-number">{step}</h3>
+          <RadioButtons 
+          label={question.questionText}
+          inputId={question.inputId} 
+          values={values}
+          placeholder={question.placeholder}
+          onInputResponse={onInputResponse}
+          options={question.options}/>
+          
+          {step !== 1 &&
+            <Button 
+            buttonValue="previous" 
+            label="Previous" 
+            onButtonResponse={onButtonResponse} />
+          }
+
+          {value.length > 0 && 
             <Button 
             buttonValue="next" 
             label="Next" 

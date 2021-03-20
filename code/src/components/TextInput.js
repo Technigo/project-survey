@@ -14,7 +14,8 @@ const TextInput = (props) => {
         type="text" 
         placeholder={placeholder}
         value={values[inputId]}
-        onChange={(e) => onInputResponse(e)}/>
+        onChange={(e) => onInputResponse(e.target.id, e.target.value, e.target.type)}
+        />
     </>
   )
 }

@@ -1,5 +1,8 @@
 *{
   /* border: 1px solid pink; */
+  border: 0;
+  padding: 0;
+  user-select: none;
 }
 
 body {
@@ -37,7 +40,7 @@ main {
   max-width: 800px;
   height: 300px;
 
-  margin: 30vh auto;
+  margin: 40vh auto 20vh;
 }
 
 .question-number {

@@ -9,9 +9,10 @@ const Select = ( props ) => {
       <select 
         className="input select"
         required
+        type="select"
         id={inputId} 
         value={value}
-        onChange={(e) => onInputResponse(e)}
+        onChange={(e) => onInputResponse(e.target.id, e.target.value, e.target.type)}
         // defaultValue="Please select your age"
         >
         <option hidden >{placeholder}</option> 

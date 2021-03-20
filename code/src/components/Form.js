@@ -3,14 +3,13 @@ import React, { useState } from 'react'
 import Question from './Question'
 import Summary from './Summary'
 import Confirmation from './Confirmation'
+import Button from './Button'
 
 const defaultValues = () => {
   return {
-    // step: 1,
-    // formStatus: 'question',
     name: '',
     company: '',
-    age: '',
+    age: [],
     preference: '',
     fishSize: '',
   }
@@ -23,8 +22,8 @@ const Form = () => {
   
   const defaultQuestions = [
     { 
-      type: 'textInput',
-      options: '',
+      type: 'radio',
+      options: ['0-10', '11-50', '51-100'],
       questionText: 'Hej Lisa hur känns det här då?',
       placeholder: 'Här kan det stå lite text',
       required: true,
@@ -56,7 +55,7 @@ const Form = () => {
     },
     { 
       type: 'select',
-      options: ['small', 'meduim', 'large', 'x-large'],
+      options: ['small', 'medium', 'large', 'x-large'],
       questionText: 'What size do you want the fish to be? Remember that the fins are included in the overall size and some more text to really make it wrap, i hope.',
       placeholder: 'Choose size',
       required: true,
@@ -65,10 +64,26 @@ const Form = () => {
     ]
     
 
-  const onInputResponse = (e) => {
-    console.log('onInputResponse received ' + e.target.value + ' from ' + e.target.id)
-    setValues({ ...values, [e.target.id]: e.target.value})
+  const onInputResponse = (id, value, type) => {
+    console.log('onInputResponse received ' + value + ' from ' + id + ' of type ' + type)
+    if (type === 'checkbox') {
+      const index = values[id].indexOf(value) 
+      if (index === -1) {
+        setValues({ ...values, [id]: [...values[id], value]})
+      } else {
+        const newArr = values[id]
+        newArr.splice(index, 1)
+        setValues({ ...values, [id]: newArr})
+      }
+    } else {
+
+      setValues({ ...values, [id]: value})
+    }
   }
+  // const onInputResponse = (e) => {
+  //   console.log('onInputResponse received ' + e.target.value + ' from ' + e.target.id)
+  //   setValues({ ...values, [e.target.id]: e.target.value})
+  // }
   
   const onButtonResponse = e => {
     console.log(e)
@@ -151,6 +166,7 @@ const Form = () => {
     )
 
   }
+
 }
 
 export default Form
