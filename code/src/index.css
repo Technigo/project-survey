@@ -1,4 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lobster+Two:ital@1&display=swap');
+
 body {
+  background-image: url(./assets/books-4.jpg);
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  flex-direction: column; 
+  justify-content: center;
+  
+ 
+  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +23,28 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+.form {
+ 
+  background-color: rgba(124, 98, 90, 0.7);
+  width: 70%;
+  height: 80;
+  border: 5px solid rgb(110, 73, 62);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(73, 56, 56);
+}
+
+h1 {
+  color: antiquewhite;
+  font-family: 'Lobster Two', cursive;
+}
+
+p {
+  color: antiquewhite;
+  font-family: 'Lobster Two', cursive;
+}
+
+input[type=text] {
+  
+  
 }
