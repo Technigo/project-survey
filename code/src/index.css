@@ -100,7 +100,7 @@ margin: 40px;
   padding: 5px;
 }
 
-button {
+.submit-button {
   font-family: 'Josefin Slab', serif;
   font-weight: bold;
   font-size: 20px;
