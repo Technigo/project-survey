@@ -7,7 +7,8 @@ const WorkArea = ({ workArea, setWorkArea}) => {
     }
 
     return (
-        <div className='questionContainer two'>
+
+        <div className='questionContainer two' id='workArea'>
             <div className='innerContainer'>
             
                 <h2 className='questionTitle' tabIndex='0'><i className="fas fa-arrow-circle-right"></i> What kind of role are you interested in?</h2>
@@ -19,7 +20,6 @@ const WorkArea = ({ workArea, setWorkArea}) => {
                     id='workArea'
                     onChange={onWorkAreaChange}
                     value={workArea}
-                    required
                 >
                     <option value=''>Select work area:</option>
                     <option value='frontend developer'>Frontend Developer</option>
@@ -42,4 +42,4 @@ const WorkArea = ({ workArea, setWorkArea}) => {
     )
 } 
 
-export default WorkArea;
+export default WorkArea

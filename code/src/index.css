@@ -111,7 +111,7 @@ form {
 }
 
 .questionContainer.two {
-  background-color: #ff89d8;
+  background-color: #bb748bc7;
 }
 
 .questionContainer.three {
@@ -202,7 +202,7 @@ form {
   font-size: 22px;
   color: #fff;
   height: 60px;
-  background-color: #ff89d8;
+  background-color: #c10140;
   border-radius: 10px;
   margin: 0;
   margin-bottom: 10px;
@@ -218,9 +218,9 @@ form {
   border-radius: 20%;
   margin-top: 25px;
   box-shadow: 1px 1px 4px rgb(90, 89, 89);
-  background: linear-gradient(210deg, #b3e6e9, #ff89d8, #fff);
-  background-clip: text;
-	-webkit-background-clip: button;
+  background: linear-gradient(210deg, #b3e6e9, #c10140);
+  background-clip: padding-box;
+	-webkit-background-clip: padding-box;
   color: transparent;
   padding: 0;
 
@@ -246,7 +246,7 @@ form {
   text-decoration: none;
   width: 95%;
   height: 60px;
-  background-color: #ff89d8;
+  background-color: #c10140;
   border-radius: 10px;
   margin: 0;
   margin-bottom: 10px; 

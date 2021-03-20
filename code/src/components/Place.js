@@ -8,7 +8,8 @@ const Place = ({/*  place, id,  */setPlace }) => {
     }
 
     return (
-        <div className='questionContainer three'>
+
+        <div className='questionContainer three' id='place'>
         <div className='innerContainer'>
         
             <h2 className='questionTitle' tabIndex='0'><i className="fas fa-arrow-circle-right"></i> In which one of our offices would you like to work?</h2>
