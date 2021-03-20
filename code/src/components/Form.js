@@ -64,7 +64,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
           <section className='intro'>
             <Intro />
           </section>
-          <section className='question-container'> 
+          <section className='name-section'> 
             <NameInputText
               question={'1. What is your name?'}
               nameValue={name} 
@@ -72,7 +72,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
             />
           </section> 
         
-          <section className='question-container'>
+          <section className='country-section'>
             <h1>2. Choose a country for your next adventure:</h1>
             {countries.map((country) => 
               <CountryInputRadioButton
@@ -83,7 +83,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
             )}
           </section>
 
-          <section className='question-container'>
+          <section className='companion-section'>
             <CompanionDropDown
             question={'3. Who are you taking with you on this trip?'}
             dropDownvalue = {companion}
@@ -91,7 +91,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
             />
           </section>
                 
-          <section className="last-container">
+          <section className="activity-section">
             <h1>4. What's the main activity you are looking forward to?</h1>
             {activities.map((activity) =>
               <ActivityInputRadioButton

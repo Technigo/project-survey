@@ -7,12 +7,10 @@
 
 body {
 	font-family: "Open Sans", sans-serif;
-	font-size: 19px;
+	font-size: 1.2rem;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background-color: #557174;
 	color: #f7f7e8;
-
 	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
 	background-size: 400% 400%;
 	animation: gradient 15s ease infinite;
@@ -30,11 +28,6 @@ body {
 	}
 }
 
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-		monospace;
-}
-
 .main-container {
 	margin: 40px;
 }
@@ -46,13 +39,13 @@ section {
 h1,
 .question {
 	font-family: "Amatic SC", cursive;
-	font-size: 35px;
+	font-size: 2.2rem;
 	font-weight: 700;
 	margin-bottom: 10px;
 }
 
 .title {
-	font-size: 70px;
+	font-size: 3.3rem;
 }
 
 .text-input {
@@ -63,6 +56,7 @@ h1,
 	width: 200px;
 	height: 35px;
 	margin: 10px;
+	font-size: 1.2rem;
 }
 
 .text-input:focus {
@@ -74,8 +68,9 @@ h1,
 }
 
 input::placeholder {
-	color: white;
-	font-size: 15px;
+	color: #432371;
+	font-size: 1.2rem;
+	font-family: Arial, sans-serif;
 }
 
 .dropdown-select {
@@ -86,7 +81,7 @@ input::placeholder {
 	width: 200px;
 	padding: 5px;
 	color: white;
-	font-size: 15px;
+	font-size: 1.1rem;
 	outline: none;
 }
 
@@ -95,13 +90,20 @@ input::placeholder {
 	color: white;
 }
 
-.last-container {
+.activity-section {
 	display: flex;
 	flex-direction: column;
 }
 
 .summary {
-	height: 100vh; /* to remove the square*/
+	font-size: 2rem; /*to remove the square*/
+}
+
+.tag {
+	color: #432371;
+	font-family: "Amatic SC", cursive;
+	font-weight: 700;
+	font-size: 2.5rem;
 }
 
 .button-section {
@@ -149,4 +151,15 @@ input::placeholder {
 	opacity: 1;
 	transition-duration: 0.85s;
 	transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
+}
+
+@media all and (min-width: 768px) {
+	body {
+		font-size: 1.4rem;
+	}
+
+	h1,
+	.question {
+		font-size: 2.6rem;
+	}
 }
