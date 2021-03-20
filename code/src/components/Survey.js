@@ -44,7 +44,7 @@ const Survey = () => {
                     <section>
                         <Input 
                             question={'Wanna tell me your name?'}
-                            value={inputName}
+                            nameValue={inputName}
                             onInputNameChange={onInputNameChanged}
                         />
                     </section> 
@@ -53,7 +53,7 @@ const Survey = () => {
                     
                         <Radio 
                             key={evaluation}
-                            value={evaluation}
+                            buttonValue={evaluation}
                             onRadioButtonChange={onRadioButtonChanged}
                         />
                 
@@ -63,16 +63,12 @@ const Survey = () => {
                         <Select 
                             question={'So how do you think Poya feels about getting your weekly evaluation?'}
                             onSelectChange={onSelectChanged}
-                            value={selectValue}
+                            selectAnswer={selectValue}
                         />
                     </section>
 
                     <div>
-                        <button
-                            onSubmit = {handleSubmit}
-                            type="submit">
-                                Submit
-                        </button>
+                        <button onSubmit = {handleSubmit} type="submit"> Submit </button>
                     </div>
                 </form>
         )}
@@ -82,9 +78,9 @@ const Survey = () => {
             {summary &&
                 <section>
                     <Summary 
-                        value={inputName}
-                        value={evaluation}
-                        value={selectValue}
+                        nameValue={inputName}
+                        selectAnswer={selectValue}
+                        buttonValue={evaluation}
                     />
                 </section>
             }
@@ -97,18 +93,3 @@ const Survey = () => {
 
 
 export default Survey;
-
-/*
-const isSurveyComplete = () => {
-    if (inputName === ''){
-        return false;
-    }
-    if (answerEvaluation === ''){
-        return false;
-    }
-    if (thought === ''){
-        return false;
-    }
-    return true;
-};
-    */

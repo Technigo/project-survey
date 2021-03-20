@@ -1,13 +1,13 @@
 import React from 'react';
 
-const Input = ({question, inputName, onInputNameChange}) => {
+const Input = ({question, nameValue, onInputNameChange}) => {
     return(
             <div>
-                <label htmlFor="name">{question}</label>
+                <label htmlFor={nameValue}>{question}</label>
                 <input 
-                    id="name" 
+                    id={nameValue} 
                     type="text"
-                    value={inputName}
+                    value={nameValue}
                     onChange={onInputNameChange}
                     required
                 />

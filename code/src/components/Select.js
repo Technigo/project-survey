@@ -2,14 +2,14 @@ import React from 'react';
 
 
 
-const Select = ({question, onSelectChanged, selectValue}) => {
+const Select = ({question, onSelectChanged, selectAnswer}) => {
     return(
             <div>
-                <label htmlFor="evaluationSelect">{question}</label>
+                <label htmlFor="selectAnswer" >{question}</label>
                 <select 
-                    id="evaluationSelect"
+                    id="selectAnswer"
                     onChange={onSelectChanged}
-                    value={selectValue}
+                    value={selectAnswer}
                     required
                 >
                     <option disabled value="">choose</option>
