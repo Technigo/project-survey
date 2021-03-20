@@ -1,11 +1,14 @@
 import React from 'react';
 
+import './Dropdown2.css'
+
 const Dropdown2 = ({ cost, setCost }) => {
 
   return (
-    <form>
-      <label htmlFor="cost" tabIndex="0"> Before the pandemic, how much did you usually spend on local live gigs each month?</label>
+    <form className="dropdown-cost">
+      <label className="cost-heading" htmlFor="cost" tabIndex="0"> Before the pandemic, how much did you usually spend on local live gigs each month?</label>
     <select
+    className="select-cost"
     onChange={event => setCost(event.target.value)} 
     value={cost}
     >

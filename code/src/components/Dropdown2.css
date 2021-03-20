@@ -1,0 +1,67 @@
+.dropdown-cost {
+  position: absolute;
+  top: 719px;
+  margin: 0.5rem 1.5rem 0 1.5rem;
+  background-color: rgba(2, 2, 2, 0.63);
+  border: solid 1px rgb(250, 246, 246);
+  padding: 12px;
+}
+
+.cost-heading {
+  font-family: Rockwell;
+  font-size: 1.2rem;
+  color: rgb(250, 246, 246);
+  margin: 4px;
+  display: contents;
+  line-height: 2rem;
+}
+
+.select-cost {
+  margin: 0 1rem 0 1.5rem;
+}
+
+/* MEDIA QUERY TABLET */
+@media only screen and (min-width: 768px) {
+
+  .dropdown-cost {
+    top: 748px;
+    margin-left: 3rem;
+    width: 647px;
+  }
+
+  .select-cost {
+    width: 190px;
+  }
+}
+  
+/* MEDIA QUERY DESKTOP */
+  @media only screen and (min-width: 992px) {
+
+  .dropdown-cost {
+    top: 870px;
+    width: 884px;
+  }
+
+  .cost-heading {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  } 
+
+  .select-cost {
+    width: 206px;
+  }
+}
+
+/* MEDIA QUERY BIGGER DESKTOP */
+
+@media only screen and (min-width: 1200px) {
+
+ .dropdown-cost {
+   width: 1285px;
+ }
+
+ .select-cost {
+   width: 272px;
+   height: 2rem;
+ }
+}

@@ -31,8 +31,8 @@ const Form = () => {
        <section className="main-wrapper">
        <TextField inputName = {inputName} setInputName = {setInputName} />
        <Dropdown1 genre = {genre} setGenre = {setGenre} />
-       {/* <Dropdown2 cost = {cost} setCost = {setCost} />
-       <Radiobuttons1 selectBigVenue = {selectBigVenue} setSelectBigVenue = {setSelectBigVenue} />
+       <Dropdown2 cost = {cost} setCost = {setCost} />
+       {/* <Radiobuttons1 selectBigVenue = {selectBigVenue} setSelectBigVenue = {setSelectBigVenue} />
        <Radiobuttons2 selectMidVenue = {selectMidVenue} setSelectMidVenue = {setSelectMidVenue} />
        <Radiobuttons3 selectSmallVenue = {selectSmallVenue} setSelectSmallVenue = {setSelectSmallVenue} />
        <RangeSlider range = {range} setRange = {setRange} />  */}
