@@ -3,11 +3,10 @@ import TextInput from './TextInput'
 import Radiobuttons from './Radiobuttons'
 import Dropdown from './Dropdown'
 import SurveyButtons from './SurveyButtons'
-import ProgressBar from './Progressbar'
 
-const Survey = (props) => {
+const Survey = ({ step, setStep, name, animal, accessory, activity, ratherNot, handleInputChange }) => {
 
-  const [step, setStep, name, setName, animal, setAnimal, accessory, setAccessory, activity, setActivity, ratherNot, setRatherNot] = [props.step, props.setStep, props.name, props.setName, props.animal, props.setAnimal, props.accessory, props.setAccessory, props.activity, props.setActivity, props.ratherNot, props.setRatherNot]
+  console.log(name, animal, accessory, activity, ratherNot)
 
   const animalOptions = ['cat', 'dog', 'horse', 'elk', 'panda', 'frog']
   const accessoryOptions = ['necklaces', 'watches', 'earrings', 'hats', 'glasses', 'scarfs']
@@ -19,7 +18,7 @@ const Survey = (props) => {
             questionName="name"
             questionText="What's your name? 👧"  
             chosenValue={name} 
-            setValue={setName} />
+            handleInputChange={handleInputChange} />
         )}
         {step === 2 && (
           <Radiobuttons 
@@ -27,7 +26,7 @@ const Survey = (props) => {
             questionText="Which animal is the cutest? 😺" 
             valueArray={animalOptions} 
             chosenValue={animal} 
-            setValue={setAnimal} />
+            handleInputChange={handleInputChange} />
         )}
         {step === 3 && (
           <Radiobuttons
@@ -35,22 +34,22 @@ const Survey = (props) => {
             questionText="What accessory can't you live without? 💍" 
             valueArray={accessoryOptions} 
             chosenValue={accessory} 
-            setValue={setAccessory} />
+            handleInputChange={handleInputChange} />
         )}
         {step === 4 && (
           <Dropdown 
             questionName="favourite-activity" 
             questionText="What's your favourite activity? 🏇" 
-            options={activityOptions}
+            optionArray={activityOptions}
             chosenValue={activity} 
-            setValue={setActivity} />
+            handleInputChange={handleInputChange} />
         )}
         {step === 5 && (
           <TextInput 
             questionName="rather-not" 
             questionText="Name a thing that you don't like to do 💩" 
             chosenValue={ratherNot} 
-            setValue={setRatherNot}/>
+            handleInputChange={handleInputChange} />
         )}
         {step > 0 && step < 6 && (
           <>
@@ -62,8 +61,6 @@ const Survey = (props) => {
               accessory={accessory}
               activity={activity}
               ratherNot={ratherNot}
-              /*required={props.required}
-              setRequired={props.setRequired}*/
               />
           </>
         )}

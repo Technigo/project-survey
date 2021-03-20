@@ -1,20 +1,20 @@
 import React from 'react'
 
-const TextInput = (props) => {
+const TextInput = ({ questionName, questionText, chosenValue, handleInputChange }) => {
 
   const onValueChange = (event) => {
-    props.setValue(event.target.value) 
+    handleInputChange(event.target.name, event.target.value) 
   }
 
   return (
     <>
-      <label className="form-label" htmlFor={props.questionName}>{props.questionText}</label>
+      <label className="form-label" htmlFor={questionName}>{questionText}</label>
       <input className="form-text-input"
-        name={props.questionName} 
+        name={questionName} 
         type="text" 
         required
         onChange={onValueChange}
-        value={props.chosenValue}
+        value={chosenValue}
       
       /> 
     </>

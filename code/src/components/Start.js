@@ -1,19 +1,15 @@
 import React from 'react'
 import SurveyButtons from './SurveyButtons'
 
-const Start = (props) => {
+const Start = ({ step, setStep }) => {
 
   return (
     <>
-      {props.step === 0 && (
-        <>
-          <h1 className="start-message">Hey! Please click the button below to start the survey! 😍</h1>
-          <SurveyButtons  
-            step={props.step} 
-            setStep={props.setStep}
-          />
-        </>
-      )}
+      <h1 className="start-message">Hey! Please click the button below to start the survey! 😍</h1>
+      <SurveyButtons  
+        step={step} 
+        setStep={setStep}
+      />
     </>
   )
 }

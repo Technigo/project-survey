@@ -1,37 +1,32 @@
 import React from 'react'
 import Button from './Button'
 
-const SurveyButtons = (props) => {
+const SurveyButtons = ({ step, setStep, name, animal, accessory, activity, ratherNot }) => {
   
   const previousStep = (event) => {
     event.preventDefault()
-    props.setStep(props.step - 1)
+    setStep(step - 1)
   }
 
-/*const addClass = () => {
-    props.setRequired(props.required = 'required')
-  }*/
-
   const nextStep = (event) => {
-    
     let check = true
 
     event.preventDefault()
-    if (props.step === 0) {
+    if (step === 0) {
       check = true
-    } else if (props.name === '' && props.step === 1) {
+    } else if (name === '' && step === 1) {
       check = false
-    } else if (props.animal === '' && props.step === 2) {
+    } else if (animal === '' && step === 2) {
       check = false
-    } else if (props.accessory === '' && props.step === 3) {
+    } else if (accessory === '' && step === 3) {
       check = false
-    } else if (props.activity === '' && props.step === 4) {
+    } else if (activity === '' && step === 4) {
       check = false
-    } else if (props.ratherNot === '' && props.step === 5) {
+    } else if (ratherNot === '' && step === 5) {
       check = false
     } 
 
-    check === true ? props.setStep(props.step + 1) : /*addClass()*/ alert('Please enter a valid answer 💁')
+    check === true ? setStep(step + 1) : alert('Please enter a valid answer 💁') 
   }
 
   const restart = () => {
@@ -41,7 +36,7 @@ const SurveyButtons = (props) => {
 
   return (
     <div className="buttons-div">
-      {props.step === 0 && (
+      {step === 0 && (
         <Button 
           className="btn start-btn" 
           step={nextStep} 
@@ -49,28 +44,28 @@ const SurveyButtons = (props) => {
            
         />
       )}
-      {props.step > 1 && props.step < 6 && (
+      {step > 1 && step < 6 && (
         <Button 
           className="btn prev-btn"
           step={previousStep}
           btnText="Previous question"
         />
       )}
-      {props.step > 0 && props.step < 5 && (
+      {step > 0 && step < 5 && (
         <Button 
           className="btn next-btn"
           step={nextStep} 
           btnText="Next question"
         />
       )}
-      {props.step === 5 && (
+      {step === 5 && (
         <Button 
           className="btn next-btn"
           step={nextStep}
           btnText="See results"
         />
       )}
-       {props.step === 6 && (
+       {step === 6 && (
         <Button
           className="btn start-btn"
           step={restart}

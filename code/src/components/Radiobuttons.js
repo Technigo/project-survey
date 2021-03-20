@@ -1,26 +1,27 @@
 import React from 'react'
 
 
-const Radiobuttons = (props) => {
+const Radiobuttons = ({ questionName, questionText, valueArray, chosenValue, handleInputChange }) => {
   
 
-  const onValueChange = (event) => {
-    props.setValue(event.target.value)
+  const onRadioChange = (event) => {
+    handleInputChange(event.target.name, event.target.value)
   }
 
   return (
     <>
-      <h2>{props.questionText}</h2>
+      <h2>{questionText}</h2>
       <div className="radio-div">
-        {props.valueArray.map(value => (
+        {valueArray.map(value => (
           <div className="radio-btn">
-            <input name={props.questionName} 
+            <input name={questionName} 
               type="radio"
-              onChange={onValueChange}
+              onChange={onRadioChange}
               value={value}
-              checked={props.chosenValue === value} />
+              //checked={chosenValue === value} 
+              />
             <span className="custom-radio"></span>
-            <label htmlFor={props.questionName}>{value}</label>
+            <label htmlFor={questionName}>{value}</label>
           </div>
         ))}
        </div>

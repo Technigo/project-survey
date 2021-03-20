@@ -1,20 +1,20 @@
 import React from 'react'
 
-const Dropdown = (props) => {
+const Dropdown = ({ questionName, questionText, optionArray, chosenValue, handleInputChange }) => {
 
-  const onValueChange = (event) => {
-    props.setValue(event.target.value)
+  const onSelectChange = (event) => {
+    handleInputChange(event.target.name, event.target.value)
   }
 
   return (
     <>
-      <label className="form-label">{props.questionText}</label>
+      <label className="form-label" name={questionName}>{questionText}</label>
         <select className="drop-down"
-          onChange={onValueChange}
-          value={props.chosenValue}
+          onChange={onSelectChange}
+          value={chosenValue}
         >
-          {props.options.map(option => (
-            <option value={option}>{option}</option>
+          {optionArray.map(option => (
+            <option value={option} htmlFor={questionName}>{option}</option>
           ))}
         </select>
     </>

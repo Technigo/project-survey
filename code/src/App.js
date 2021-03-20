@@ -7,50 +7,55 @@ const App = () => {
   //SET Q STEP
   const [step, setStep] = useState(0)
 
-  //let [required, setRequired] = useState('')
-
   //COMPONENTS STATES
-  const [name, setName] = useState('') 
-  const [animal, setAnimal] = useState ('cat')
-  const [accessory, setAccessory] = useState('necklaces')
-  const [activity, setActivity] = useState ('do yoga')
-  const [ratherNot, setRatherNot] = useState ('')
+  const [formData, setFormData] = useState({
+    name: 1,
+    animal: 2,
+    accessory: 3,
+    activity: 4,
+    ratherNot: 5
+  })
 
+  const handleInputChange = (name, value) => {
+    const newFormData = { ...formData }
+    newFormData[name] = value
+    setFormData(newFormData)
+  }
+  
   return (
     <section className="form-section">
       
-      <Start
-        step={step}
-        setStep={setStep}
-      />
-      
-      <Survey
-        step={step}
-        setStep={setStep}
-        name={name}
-        setName={setName}
-        animal={animal}
-        setAnimal={setAnimal}
-        accessory={accessory}
-        setAccessory={setAccessory}
-        activity={activity}
-        setActivity={setActivity}
-        ratherNot={ratherNot}
-        setRatherNot={setRatherNot}
-        required={required}
-        setRequired={setRequired}
-      />
-      
-      <Summary 
-        step={step}
-        setStep={setStep}
-        name={name} 
-        animal={animal} 
-        accessory={accessory}
-        activity={activity}
-        ratherNot={ratherNot}
-      />
+      {step === 0 && (
+        <Start
+          step={step}
+          setStep={setStep}
+        />
+      )}
+        
+      {step > 0 && step < 6 && (  
+        <Survey
+          step={step}
+          setStep={setStep}
+          name={formData.name}
+          animal={formData.animal}
+          accessory={formData.accessory}
+          activity={formData.activity}
+          ratherNot={formData.ratherNot}
+          handleInputChange={handleInputChange}
+        />
+      )}
 
+      {step === 6 && (
+        <Summary 
+          step={step}
+          setStep={setStep}
+          name={formData.name} 
+          animal={formData.animal} 
+          accessory={formData.accessory}
+          activity={formData.activity}
+          ratherNot={formData.ratherNot}
+        />
+      )}
     </section>
   )  
 }
