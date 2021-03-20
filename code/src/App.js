@@ -15,7 +15,7 @@ export const App = () => {
 
       {questionNumber === "" && (
         <main>
-        <div role="main" className="start-page" aria-labelledby="start-heading">
+        <div className="start-page" aria-labelledby="start-heading">
           <h2 className="question-heading" id="start-heading">Let's talk about the future!</h2>
         </div>
         </main>
