@@ -41,6 +41,7 @@ code {
   font-size: 25px;
 }
 
+/****************** DROPDOWN MENU *****************/
 .box {
   border: 2px solid rgb(78, 77, 77);
   font-size: 14px;
@@ -66,6 +67,7 @@ code {
   justify-content: center;
 }
 
+/*************** SUBMIT BUTTON *************************/
 input[type=submit]:disabled {
   background-color: rgb(235, 244, 245);
   border: 2px solid rgb(213, 213, 248);
