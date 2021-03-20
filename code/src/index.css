@@ -224,36 +224,6 @@ code {
   cursor: pointer;
 } */
 
-
-.radio-options:checked + .radio-text,
-.radio-options:focus + .radio-text {
-  color: #fdf0f6;
-}
-
-.radio-options:checked + .radio-text::before {
-  background-color: #771144;
-  border: 3px solid #fdf0f6;
-  content: '';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  z-index: -1; 
-}
-
-.radio-options:focus + .radio-text::before {
-  background-color: #771144;
-  content: '';
-  height: 100%;
-  width: 100%;
-  position: absolute;
-  top: -3px;
-  left: -3px;
-  z-index: -1;
-  outline: 4px solid #fdf0f6;
-}
-
 /* checkboxes section */
 
 .stack {
