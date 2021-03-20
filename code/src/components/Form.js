@@ -3,6 +3,7 @@ import Summary from 'components/Summary'
 import CountryInputRadioButton from 'components/CountryInputRadioButton'
 import NameInputText from 'components/NameInputText'
 import CompanionDropDown from 'components/CompanionDropDown'
+import ActivityInputRadioButton from './ActivityInputRadioButton'
 
 const Form = () => {
 
@@ -67,9 +68,11 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
             <p>2. Which country you want to travel to and spend 10 wonderful days?</p>
             {countries.map((country) => 
               <CountryInputRadioButton
-                onCountryChange={onCountryChange}
-                country={country}
                 key={country} 
+                country={country}
+                onCountryChange={onCountryChange}
+                
+                
               />
             )}
           </>
@@ -85,17 +88,12 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
           <>
             <p>4. What's the main activity you are looking forward to?</p>
             {activities.map((activity) =>
-            <label key={activity} htmlFor={activity} >
-            <input 
-              name="activity"
-              id={activity}
-              value={activity}
-              type="radio"
-              onChange={onActivityChange} 
-            />{activity}</label>
-            
+              <ActivityInputRadioButton
+                key={activity} 
+                activityValue={activity}
+                onActivityChangeFunction = {onActivityChange} 
+              />
             )}
-
             <button 
               onSubmit= {handleSubmit}
               type="submit"
