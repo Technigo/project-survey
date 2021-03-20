@@ -35,7 +35,8 @@ export const Form = () => {
   return (
   <div className="wrapper">          
     <form className="form" onSubmit={event => event.preventDefault()}> 
-      <div className="form-wrapper">        
+      <div className="form-wrapper">  
+            {/* newCounter decide what´s being showed, always updated onclick in NextButton       */}
             {newCounter === 0 && (
               <div>                               
                 <TextWrapper />

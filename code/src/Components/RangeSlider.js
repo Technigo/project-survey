@@ -1,5 +1,6 @@
 import React from 'react'
 
+// This one aint being used right now. Can be implementen in next version. Needs to add hook and function then
 export const RangeSlider = (props) => {
   return (   
     <div className="range-slider">
