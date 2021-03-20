@@ -11,6 +11,7 @@ import ChooseDate from './ChooseDate';
 import Summary from './Summary';
 import ProgressBar from './ProgressBar';
 import SubmitButton from './SubmitButton';
+import Checkboxes from './Checkboxes'
 
 
 
@@ -26,6 +27,8 @@ const Form = () => {
   const [summaryHidden, setSummaryHidden] = useState(true);
   const [progress, setProgress] = useState(0);
   const [question, setQuestion] = useState(questions[progress]);
+  const [agreeTerms, setAgreeTerms] = useState(false);
+  const [agreeNewsletter, setAgreeNewsletter] = useState(false);
   
 
   //Function checking whether the form is filled
@@ -34,6 +37,9 @@ const Form = () => {
       return true
     }
     if (email === "") {
+      return true
+    }
+    if (agreeTerms === false) {
       return true
     }
     return false
@@ -91,6 +97,7 @@ const Form = () => {
             setProgress={setProgress}
           />
         )}
+
         {question === questions[4] && (
           <ChooseDate
             date={date}
@@ -108,6 +115,14 @@ const Form = () => {
               email={email}
               setEmail={setEmail}
             />
+            <Checkboxes
+             agreeTerms={agreeTerms}
+             setAgreeTerms={setAgreeTerms}
+             agreeNewsletter={agreeNewsletter}
+             setAgreeNewsletter={setAgreeNewsletter}
+             />
+
+
             <SubmitButton isFormFilled={isFormFilled}/>
           </div>
         )}

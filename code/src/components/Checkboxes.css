@@ -1,0 +1,13 @@
+.checkboxes-container{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-bottom: 30px;
+}
+.checkbox-label-container{
+  margin-bottom: 5px;
+}
+.checkbox-label {
+  margin-left: 5px;
+  font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+}

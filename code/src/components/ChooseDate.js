@@ -9,7 +9,7 @@ const ChooseDate = ({date, setDate, setQuestion, progress, setProgress}) => {
   const onDateChange = (event) => {
     setDate(event.target.value)
   }
-  
+
   return(
     <div className="date-card">
       <h3 className="question-heading">When would you want to start your vacation?</h3>
