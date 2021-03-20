@@ -21,8 +21,12 @@ input[type="range"] {
   transition: opacity 0.2s;
 }
 
-input[type="range"]:hover {
+input[type="range"]:hover{
   opacity: 1;
+}
+
+input[type="range"]:focus {
+  border: solid #40b4ae;
 }
 
 /*change handle */

@@ -49,6 +49,10 @@ select,
   grid-area: select;
 }
 
+select:focus .drop-down__inner {
+  border: solid #40b4ae;
+}
+
 @media screen and (min-width: 700px) {
   .drop-down__inner {
     margin-left: 25%;
