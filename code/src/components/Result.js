@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./components.css";
-
 const Result = ({ onTimeOrRoundsChange, onResultChange, result }) => {
   return (
     <>
@@ -27,16 +25,11 @@ const Result = ({ onTimeOrRoundsChange, onResultChange, result }) => {
           />
         </div>
         <div>
-          <p>
-            Write your result there{" "}
-            <span role="img" alt="finger pointing right">
-              👉
-            </span>
-          </p>
+          <p>Write your result:</p>
           <input
             id="name"
             type="text"
-            value={result}
+            result={result}
             onChange={onResultChange}
           />
         </div>

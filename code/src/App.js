@@ -14,31 +14,31 @@ export const App = () => {
   const [timeOrRounds, setTimeOrRounds] = useState("");
   const [result, setResult] = useState("");
   const [question, setQuestion] = useState(1);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  let [isSubmitted, setIsSubmitted] = useState(false);
 
   const onNameChange = (e) => {
-    console.log(`Name: ${e.target.value}`);
     setName(e.target.value);
   };
 
   const onWhichWeekChange = (e) => {
-    console.log(e.target.value);
     setWhichWeek(e.target.value);
   };
 
   const onTimeOrRoundsChange = (e) => {
-    console.log(e.target.value);
     setTimeOrRounds(e.target.value);
   };
 
   const onResultChange = (e) => {
-    console.log(e.target.value);
     setResult(e.target.value);
   };
 
   const onQuestionIncrease = () => {
     setQuestion(question + 1);
   };
+
+  const questionSubmit = () => {
+    setIsSubmitted(isSubmitted = true);
+  }
 
   if (isSubmitted === false && question === 1) {
     return (
@@ -69,16 +69,16 @@ export const App = () => {
             onTimeOrRoundsChange={onTimeOrRoundsChange}
             onResultChange={onResultChange}
           />
-          <button onClick={onQuestionIncrease}>Next Question</button>
+          <button onClick={questionSubmit}>SUBMIT</button>
         </div>
       </>
     );
-  } else  {
+  } else if (isSubmitted === true ) {
     return (
       <>
         <div className="survey-container">
           <Header />
-          <Summary value={name} value={whichWeek} value={result} />;
+          <Summary value={name} weekvalue={whichWeek} timeOrRounds={timeOrRounds} result={result} />
         </div>
       </>
     );

@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./components.css";
-
 const Hello = ( {onNameChange, name}) => {
   return (
     <>
@@ -10,12 +8,11 @@ const Hello = ( {onNameChange, name}) => {
         <div>
           <h3>What is your name or nickname?</h3>
           <input
+            className="name-input"
             id="name"
             type="text"
             value={name}
-            onChange={(e) => {
-              onNameChange(e);
-            }}
+            onChange={onNameChange}
           />
         </div>
       </form>

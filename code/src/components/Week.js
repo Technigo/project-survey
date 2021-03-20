@@ -1,7 +1,5 @@
 import React from "react";
 
-import "./components.css";
-
 function Week({ onWhichWeekChange, whichWeek }) {
   return (
     <>
@@ -13,7 +11,7 @@ function Week({ onWhichWeekChange, whichWeek }) {
             type="week"
             id="week"
             name="week"
-            value={whichWeek}
+            weekvalue={whichWeek}
             onChange={onWhichWeekChange}
           />
         </div>
