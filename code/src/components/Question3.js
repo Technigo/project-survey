@@ -1,11 +1,11 @@
 import React from 'react';
 
-const Question3 = ( {investmentType, onInvestmentTypeChange} ) => {
+const Question3 = ( {onInvestmentTypeChange} ) => {
  const investmentTypes = [ "Gold", "Bitcoin", "Silver"];
 
     return (
-        <div className="form-container">
-                <p>Preferred Investment:</p>
+        <>       
+        <p>Preferred Investment:</p>
                  { investmentTypes.map(item => (
                      <label key={item}>
                         <input
@@ -13,12 +13,11 @@ const Question3 = ( {investmentType, onInvestmentTypeChange} ) => {
                             name="investmentType"
                             value={item}
                             onChange={(e) => onInvestmentTypeChange(e)}
-                            checked={investmentType === item}
                         />
                         {item}
                      </label>
                  ))} 
-            </div>
+        </>
     )
 }
 

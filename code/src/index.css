@@ -27,7 +27,6 @@ form {
   flex-direction: column;
   flex-wrap: wrap;
   justify-content: center;
-  align-items: center;
   background-color: rgb(203, 206, 18);
   padding: 20px;
   border-radius: 5px;
@@ -42,8 +41,8 @@ p {
 }
 
 .money-emoji {
-  font-size: 50px;
-  margin-top: 20px;
+  font-size: 80px;
+  margin-top: 90px;
 }
 
 p {
@@ -81,4 +80,5 @@ button {
   height: 450px;
   background-color: rgb(0, 183, 255);
   padding: 15px;
+  border-radius: 5px;
 }

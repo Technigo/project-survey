@@ -4,7 +4,6 @@ const Question1 = ( {name, onNameChange}) => {
 
     return (
     <>
-    <div className="form-container">
     <p>Start by entering your name  
         <span role="img" aria-label="Smile Face Emoji">👇</span>  
     </p>
@@ -19,7 +18,6 @@ const Question1 = ( {name, onNameChange}) => {
                     minLength="1"
                 />
             </div>
-        </div>
     </>
     )
 }

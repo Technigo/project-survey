@@ -49,7 +49,8 @@ const handleSubmit = event => {
         <p>Double check your investment goals   
             <span role="img" aria-label="Smile Face Emoji">🤓 </span> 
         </p>
-        
+        </div>
+
 
         {!showSummary && (
         <form onSubmit={handleSubmit}>
@@ -66,7 +67,7 @@ const handleSubmit = event => {
           />
 
           <Question3
-          checked={investmentType}
+          checked={Question3 === investmentType}
           onInvestmentTypeChange={handleInvestmentTypeChange}
          
           
@@ -82,7 +83,6 @@ const handleSubmit = event => {
       )}
     
     
-      </div>
     </>
   )
 }
