@@ -159,7 +159,10 @@ form {
 
 .place {
   font-size: 20px;
-  margin-right: 5px;
+}
+
+.radioLabel {
+  margin-left: 5px;
 }
 
 /*SUMMARY*/
@@ -314,22 +317,12 @@ form {
     width: 250px;
   }
 
-  .startButtonLink {
-    width: 250px;
-  }
-
   .okButton {
     width: 70px;
     height: 70px;
     margin-top: 50px;
   }
   
-  .okButtonLink {
-    width: 70px;
-    height: 70px;
-    font-size: 24px;
-  }
- 
   .submitButton {
     width: 250px;
     margin-left: auto;
@@ -363,18 +356,14 @@ form {
   }
 
   /*BUTTONS*/
-  
-  .startButton:hover {
-    cursor: pointer;
-  }
 
   .startButton {
     width: 350px;
     margin-bottom: 35px;
   }
 
- .startButtonLink {
+ .submitButton {
    width: 350px;
+   margin-bottom: 35px;
  }
-
 }

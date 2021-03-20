@@ -34,7 +34,7 @@ const Place = ({/*  place, id,  */setPlace }) => {
             type='radio'
             onChange={onPlaceChange}
             />
-            <label htmlFor='la'>Los Angeles</label>
+            <label htmlFor='la' className='radioLabel'>Los Angeles</label>
             </div>
 
             <div>
@@ -45,7 +45,7 @@ const Place = ({/*  place, id,  */setPlace }) => {
             type='radio'
             onChange={onPlaceChange}
             />
-            <label htmlFor='tokyo'>Tokyo</label>
+            <label htmlFor='tokyo' className='radioLabel'>Tokyo</label>
             </div>
 
             <div>
@@ -56,7 +56,7 @@ const Place = ({/*  place, id,  */setPlace }) => {
             type='radio'
             onChange={onPlaceChange}
             />
-            <label htmlFor='stockholm'>Stockholm</label>
+            <label htmlFor='stockholm' className='radioLabel'>Stockholm</label>
             </div>
 
             <div>
@@ -67,7 +67,7 @@ const Place = ({/*  place, id,  */setPlace }) => {
             type='radio'
             onChange={onPlaceChange}
             />
-            <label htmlFor='berlin'>Berlin</label>
+            <label htmlFor='berlin' className='radioLabel'>Berlin</label>
             </div>
  
         <input
