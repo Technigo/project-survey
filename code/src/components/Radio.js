@@ -7,7 +7,7 @@ const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
             <div>
                 <p>Have you filled out this weeks evaluation yet?</p>
                 {evaluationArray.map((evaluation) =>
-                <label htmlFor={buttonValue} key={evaluationRadioButton} >
+                <label htmlFor={buttonValue} key={evaluation} >
                         <input 
                             name="buttonValue"
                             id={buttonValue} 

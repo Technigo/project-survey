@@ -10,7 +10,7 @@ const Survey = () => {
 // states
     const [inputName, setInputName] = useState ('');
     const [evaluation, setEvaluation] = useState ('')
-    const [selectValue, setSelectValue] = useState ('');
+    const [selectAnswer, setSelectAnswer] = useState ('');
     const [summary, setSummary] = useState(false)
 // array
 
@@ -31,7 +31,7 @@ const Survey = () => {
     }
 
     const onSelectChanged = (e) => {
-        setSelectValue(e.target.value);
+        setSelectAnswer(e.target.value);
         console.log(e.target.value);
     }
 
@@ -63,7 +63,7 @@ const Survey = () => {
                         <Select 
                             question={'So how do you think Poya feels about getting your weekly evaluation?'}
                             onSelectChange={onSelectChanged}
-                            selectAnswer={selectValue}
+                            selectValue={selectAnswer}
                         />
                     </section>
 
@@ -79,7 +79,7 @@ const Survey = () => {
                 <section>
                     <Summary 
                         nameValue={inputName}
-                        selectAnswer={selectValue}
+                        selectValue={selectAnswer}
                         buttonValue={evaluation}
                     />
                 </section>
