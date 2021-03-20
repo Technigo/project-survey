@@ -28,7 +28,7 @@ export const Summary = (props) => {
   };
 
   return (
-    <>
+    <main>
      <div className="summary" aria-labelledby="summary">
       <h2 className="summary-heading" id="summary">Your answers:</h2>
         <p>
@@ -48,6 +48,6 @@ export const Summary = (props) => {
           !
         </p>
       </div>
-    </>
+    </main>
   );
 };

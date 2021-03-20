@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 
 import { Header } from "./components/Header";
-import { ProgressBar } from "./components/ProgressBar";
 import { Footer } from "./components/Footer";
 import { ToggleQuestions } from "./components/ToggleQuestions";
 
@@ -15,18 +14,17 @@ export const App = () => {
       </header>
 
       {questionNumber === "" && (
-        <div className="start-page" aria-labelledby="start-heading">
+        <main>
+        <div role="main" className="start-page" aria-labelledby="start-heading">
           <h2 className="question-heading" id="start-heading">Let's talk about the future!</h2>
         </div>
-      )}
-
+        </main>
+      )} 
+    
       <ToggleQuestions
         questionNumber={questionNumber}
         setQuestionNumber={setQuestionNumber}
       />
-
-      {/*Shows progressionbar on questions done */}
-      <ProgressBar questionNumber={questionNumber} />
 
       <footer className="footer" aria-labelledby="footer">
         <Footer copyRight="&copy; Pauline Andersson 2021" />

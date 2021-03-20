@@ -54,10 +54,7 @@ label {
   text-align: center;
 }
 
-.question,
-.sub-question,
-.summary,
-.start-page {
+main {
   grid-area: main;
 }
 
@@ -139,10 +136,7 @@ button::before {
     width: 80%;
   }
 
-  .question,
-  .sub-question,
-  .summary,
-  .start-page {
+  main{
     min-height: 500px;
   }
 }

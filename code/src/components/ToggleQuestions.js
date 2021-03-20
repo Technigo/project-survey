@@ -6,6 +6,7 @@ import { Question3 } from "./Question3";
 import { Question4 } from "./Question4";
 import { Summary } from "./Summary";
 import { DirectionButton } from "./DirectionButton";
+import { ProgressBar } from "./ProgressBar";
 import { ToggleSubQuestions } from "./ToggleSubQuestions";
 
 let i = 0;
@@ -51,12 +52,13 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
       i = 0;
       resetForm();
     }
+    window.scrollTo(0,0)
   };
 
   /* sets questionnumber when clicking "back" button */
   const onBackButtonClick = () => {
     i === 0 ? i-- : (i = i - 2);
-    setNextQuestion();
+    setNextQuestion(); 
   };
 
   //resets all inputs
@@ -74,7 +76,7 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
     <>
       {/*If the isSubmit !== true (eg it's false) */}
       {!isSubmit && (
-        <>
+          <main>
           {/*While isSubmit is false the question with the corresponding number
         of questionNumber will be shown*/}
           {questionNumber === "Question1" && (
@@ -138,8 +140,8 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
           )}
 
           {questionNumber === "Question5" && (
-            <section className="question" aria-labelledby="Question4.5">
-              <h2 className="question-heading" id="Question4.5">
+            <section className="question" aria-labelledby="Question5">
+              <h2 className="question-heading" id="Question5">
                 Interesting, tell me more!
               </h2>
               <ToggleSubQuestions
@@ -149,7 +151,7 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
               />
             </section>
           )}
-        </>
+        </main>
       )}
 
       {/*If the state of isSubmit === true */}
@@ -164,6 +166,9 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
           />
         </>
       )}
+
+      {/*Shows progressionbar on questions done */}
+      <ProgressBar questionNumber={questionNumber} />
 
       {/*Shows the next question or summary or a chance to redo the form if
       you're done, and a back button for all sections exept the start */}
