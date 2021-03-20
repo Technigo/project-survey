@@ -1,11 +1,14 @@
 import React from 'react';
 
+import './Dropdown1.css'
+
 const Dropdown1 = ({ genre, setGenre}) => {
 
   return (
-    <form>
-      <label htmlFor="genre" tabIndex="0">What is your favourite live music genre?</label>
+    <form className="dropdown-genre">
+      <label className="genre-heading" htmlFor="genre" tabIndex="0">What is your favourite live music genre?</label>
     <select
+    className="select-genre"
     onChange={event => setGenre(event.target.value)} 
     value={genre}
     >
