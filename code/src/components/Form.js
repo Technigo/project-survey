@@ -27,8 +27,7 @@ const Form = () => {
   const [summaryHidden, setSummaryHidden] = useState(true);
   const [progress, setProgress] = useState(0);
   const [question, setQuestion] = useState(questions[progress]);
-  const [agreeTerms, setAgreeTerms] = useState(false);
-  const [agreeNewsletter, setAgreeNewsletter] = useState(false);
+  const [checkboxGroup, setCheckboxGroup] = useState([])
   
 
   //Function checking whether the form is filled
@@ -39,7 +38,7 @@ const Form = () => {
     if (email === "") {
       return true
     }
-    if (agreeTerms === false) {
+    if (!(checkboxGroup.includes("agreeTerms"))) {
       return true
     }
     return false
@@ -116,12 +115,9 @@ const Form = () => {
               setEmail={setEmail}
             />
             <Checkboxes
-             agreeTerms={agreeTerms}
-             setAgreeTerms={setAgreeTerms}
-             agreeNewsletter={agreeNewsletter}
-             setAgreeNewsletter={setAgreeNewsletter}
+             checkboxGroup={checkboxGroup}
+             setCheckboxGroup={setCheckboxGroup}
              />
-
 
             <SubmitButton isFormFilled={isFormFilled}/>
           </div>
