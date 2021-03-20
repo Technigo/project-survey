@@ -29,8 +29,8 @@ export const Summary = (props) => {
 
   return (
     <>
-      <h2 className="summary-heading">Your answers:</h2>
-      <div className="summary">
+     <div className="summary" aria-labelledby="summary">
+      <h2 className="summary-heading" id="summary">Your answers:</h2>
         <p>
           Your own words about the future: <q>{userInput}</q> /Genius
         </p>

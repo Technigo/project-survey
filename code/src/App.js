@@ -9,14 +9,14 @@ export const App = () => {
   const [questionNumber, setQuestionNumber] = useState("");
 
   return (
-    <div className="wrapper">
-      <header className="header">
+    <div className="wrapper" aria-sort="descending">
+      <header className="header" aria-labelledby="header">
         <Header title="The FUTURE" />
       </header>
 
       {questionNumber === "" && (
-        <div className="start-page">
-          <h2 className="question-heading">Let's talk about the future!</h2>
+        <div className="start-page" aria-labelledby="start-heading">
+          <h2 className="question-heading" id="start-heading">Let's talk about the future!</h2>
         </div>
       )}
 
@@ -28,7 +28,7 @@ export const App = () => {
       {/*Shows progressionbar on questions done */}
       <ProgressBar questionNumber={questionNumber} />
 
-      <footer className="footer">
+      <footer className="footer" aria-labelledby="footer">
         <Footer copyRight="&copy; Pauline Andersson 2021" />
       </footer>
     </div>

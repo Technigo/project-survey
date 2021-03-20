@@ -19,10 +19,9 @@ code {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 10% 1fr 10%;
-  grid-template-rows: 300px 100px 1fr 70px 50px 70px 50px;
+  grid-template-rows: 300px 1fr 70px 50px 70px 50px;
   grid-template-areas:
     "header header header"
-    ". heading ."
     ". main ."
     ". . ."
     ". progressbar ."
@@ -52,8 +51,7 @@ label {
 
 .question-heading,
 .summary-heading {
-  grid-area: heading;
-  justify-self: center;
+  text-align: center;
 }
 
 .question,
@@ -89,7 +87,7 @@ button::before {
 @media screen and (min-width: 700px) {
   .wrapper {
     grid-template-columns: 20% 1fr 20%;
-    grid-template-rows: 350px 100px 1fr 70px 50px 70px 50px;
+    grid-template-rows: 350px 1fr 70px 50px 70px 50px;
   }
 
   h1 {
@@ -116,7 +114,7 @@ button::before {
 @media screen and (min-width: 1500px) {
   .wrapper {
     grid-template-columns: 30% 1fr 30%;
-    grid-template-rows: 500px 100px 1fr 70px 70px 70px 50px;
+    grid-template-rows: 500px 1fr 70px 70px 70px 50px;
   }
 
   h1 {

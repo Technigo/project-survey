@@ -78,78 +78,76 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
           {/*While isSubmit is false the question with the corresponding number
         of questionNumber will be shown*/}
           {questionNumber === "Question1" && (
-            <>
-              <h2 className="question-heading">Your thoughts</h2>
-              <section className="question" id="Question1">
-                <Question1 userInput={userInput} setUserInput={setUserInput} />
-              </section>
-            </>
+            <section className="question" aria-labelledby="Question1">
+              <h2 className="question-heading" id="Question1">
+                Your thoughts
+              </h2>
+              <Question1 userInput={userInput} setUserInput={setUserInput} />
+            </section>
           )}
 
           {questionNumber === "Question2" && (
-            <>
-              <h2 className="question-heading">We keep getting older...</h2>
-              <section className="question" id="Question2">
-                <Question2
-                  min="0"
-                  max="100"
-                  popluationAge={populationAge}
-                  setPopulationAge={setPopulationAge}
-                />
-              </section>
-            </>
+            <section className="question" aria-labelledby="Question2">
+              <h2 className="question-heading" id="Question2">
+                We keep getting older...
+              </h2>
+              <Question2
+                min="0"
+                max="100"
+                popluationAge={populationAge}
+                setPopulationAge={setPopulationAge}
+              />
+            </section>
           )}
 
           {questionNumber === "Question3" && (
-            <>
-              <h2 className="question-heading">What about space?</h2>
-              <section className="question" id="Question3">
-                <Question3
-                  valueArray={[
-                    "0-10 years",
-                    "10 to 20 years",
-                    "over 20 years",
-                    "over 100 years",
-                    "Never",
-                  ]}
-                  yearsToMars={yearsToMars}
-                  setYearsToMars={setYearsToMars}
-                />
-              </section>
-            </>
+            <section className="question" aria-labelledby="Question3">
+              <h2 className="question-heading" id="Question3">
+                What about space?
+              </h2>
+              <Question3
+                valueArray={[
+                  "0-10 years",
+                  "10 to 20 years",
+                  "over 20 years",
+                  "over 100 years",
+                  "Never",
+                ]}
+                yearsToMars={yearsToMars}
+                setYearsToMars={setYearsToMars}
+              />
+            </section>
           )}
 
           {questionNumber === "Question4" && (
-            <>
-              <h2 className="question-heading">
+            <section className="question" aria-labelledby="Question4">
+              <h2 className="question-heading" id="Question4">
                 If the Sci-Fi movies were right...
               </h2>
-              <section className="question" id="Question4">
-                <Question4
-                  optionArray={[
-                    "synthetic food",
-                    "flying cars",
-                    "cyborg society",
-                    "cool gadgets",
-                  ]}
-                  futureChoice={futureChoice}
-                  setFutureChoice={setFutureChoice}
-                />
-              </section>
-            </>
+              <Question4
+                optionArray={[
+                  "synthetic food",
+                  "flying cars",
+                  "cyborg society",
+                  "cool gadgets",
+                ]}
+                futureChoice={futureChoice}
+                setFutureChoice={setFutureChoice}
+              />
+            </section>
           )}
-          
+
           {questionNumber === "Question5" && (
-            <>
-              <h2 className="question-heading">Interesting, tell me more!</h2>
-              <section className="question" id="Question5">
-                <ToggleSubQuestions
-                  futureChoice={futureChoice}
-                  setMoreFutureChoices={setMoreFutureChoices}
-                  moreFutureChoices={moreFutureChoices}
-                />
-              </section>
-            </>
+            <section className="question" aria-labelledby="Question4.5">
+              <h2 className="question-heading" id="Question4.5">
+                Interesting, tell me more!
+              </h2>
+              <ToggleSubQuestions
+                futureChoice={futureChoice}
+                setMoreFutureChoices={setMoreFutureChoices}
+                moreFutureChoices={moreFutureChoices}
+              />
+            </section>
           )}
         </>
       )}
@@ -157,7 +155,6 @@ export const ToggleQuestions = ({ questionNumber, setQuestionNumber }) => {
       {/*If the state of isSubmit === true */}
       {isSubmit && (
         <>
-          <h2 className="summary-heading">Your answers:</h2>
           <Summary
             userInput={userInput}
             futureChoice={futureChoice}
