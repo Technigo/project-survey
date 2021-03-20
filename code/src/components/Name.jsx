@@ -7,16 +7,21 @@ export const Name = ({ name, setName }) => {
     }
     
     return (
-        <div className="form-components">
-            <label tabindex="0" htmlFor={name}>Enter your name:</label>
-            <input 
-                type="text"
-                onChange={onNameChange} 
-                value={name}
-                min="2"
-                max="50"
-                required
-            />
-        </div>
+        <>
+        <h4 tabIndex="0">What's your name?</h4>
+            <div className="form-components">
+                {/* <label tabIndex="0" htmlFor={name}>Enter your name:</label> */}
+                <input 
+                    type="text"
+                    onChange={onNameChange} 
+                    value={name}
+                    min="2"
+                    max="50"
+                    placeholder="Name"
+                    aria-label="Input your name"
+                    required
+                />
+            </div>
+        </>
     )
 }

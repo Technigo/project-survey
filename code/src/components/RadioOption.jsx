@@ -7,15 +7,15 @@ export const RadioOption = ({careerName, setRadio}) => {
     }
     
     return (
-        <div className="form-components">
-            <label tabindex="0" htmlFor="{careerName}">{careerName}</label>
+        <div className="form-components radio-options">
+            <label tabIndex="0" htmlFor="{careerName}">{careerName}</label>
                 <input
-                name="stack"
-                id={careerName}
-                value={careerName}
-                type="radio"
-                onChange={onRadioChange}
-                tabindex="0"
+                    name="stack"
+                    id={careerName}
+                    value={careerName}
+                    type="radio"
+                    tabIndex="0"
+                    aria-label="Choose a preferred career"
                 />
         </div>
     );

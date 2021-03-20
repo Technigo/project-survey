@@ -12,10 +12,11 @@ export const CheckBoxes = ({ stack, onChange }) => {
                 id={stack}
                 name={stack}
                 onChange={onCheckChange}
-                tabindex="0"
+                tabIndex="0"
+                aria-label="Select preferred stacks"
                 required
             />
-            <label tabindex="0" htmlFor={stack}>{stack}</label>
+            <label tabIndex="0" htmlFor={stack}>{stack}</label>
         </div>
     )
 }

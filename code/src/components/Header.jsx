@@ -2,6 +2,6 @@ import React from 'react';
 
 export const Header = () => {
     return (
-        <h1 tabindex="0" className="header">The dev survey</h1>
+        <h1 tabIndex="0" className="header">The dev survey</h1>
     )
 }
