@@ -2,28 +2,28 @@ import React, {useState} from 'react';
 
 const Form = () => {
 
-  const [humor, setHumor] = useState('')
+  const [energy, setEnergy] = useState('')
   const [checkBoxGroup, setCheckBoxGroup] = useState([])
-  const [office, setOffice] = useState('--- select ---')
+  const [composer, setComposer] = useState('--- select ---')
   const [name, setName] = useState('')
   const [hideForm, setHideForm] = useState('false')
   
-  const onHumorChange = (e) => {
-    setHumor(e.target.value)
+  const onEnergyChange = (e) => {
+    setEnergy(e.target.value)
   }
 
+  // if element is included in the array, it will be deleted from a new array
+  // if elemenent is not included in the array, it will be added to a new array together with the existing elements, if any
   const oncheckBoxGroupToggle = (checkBoxValue) => {
     if (checkBoxGroup.includes(checkBoxValue)) {
-      // deletes an element from array, accepts only items that are different from checkBoxValue
       setCheckBoxGroup(checkBoxGroup.filter(item => item !== checkBoxValue))
     } else { 
-      // adds an element into a new array together with the existing ones
       setCheckBoxGroup([checkBoxValue, ...checkBoxGroup]) 
     }
   }
   
-  const onOfficeChange = (e) => {
-      setOffice(e.target.value)
+  const onComposerChange = (e) => {
+      setComposer(e.target.value)
   }
 
   const onNameChange = (e) => {
@@ -31,78 +31,92 @@ const Form = () => {
   }
 
   const onSubmit = (e) => {
-    setHideForm(true)
+    if (energy !== '' && checkBoxGroup !== [] && composer !== '--- select ---' && name !== '') {
+      setHideForm(true)
+    } else {
+      alert('You need to fill in all forms')
+    }
   }
 
   if (hideForm === true) {
     return (
       <>
-      <div>Hej {name}! This is the summary of your answers:</div>
-      <div>How import is humor in the work place? {humor}</div>
-      <div>What is preventing you to use humor?{checkBoxGroup}</div>
-      <div>Where do you work? {office}</div>
+      <h2>Thank you for answering, {name}!</h2>
+      <div className="summary-wrapper">
+        <p>Energy level: {energy}</p>
+        <p>When do you enjoy classical music? {checkBoxGroup}</p>
+        <p>Selected composer? {composer}</p>
+        <p>Based on your answer, we suggest you the following piece:</p>
+            
+      </div>  
       </>
     )
-  } else {
+  }
+
     return (
       <>
       <form onSubmit = {onSubmit}>
       
         <div>
-          <p>On a scale of Ha (1) to Hahahahaha (5), how important is humor in the workplace?</p>
+          <p>On a scale 1 to 5, what is your energy level at the moment?</p>
           <div>
             <input 
-              id='ha' 
+              id='energy1' 
               type='radio'
-              name='humor'
-              value='ha'
-              onChange={onHumorChange}
+              name='energy'
+              value='1'
+              onChange={onEnergyChange}
+              required
             />
-            <label htmlFor='ha'>Ha</label>
+            <label htmlFor='1'>1 (very low energy)</label>
           </div>
           <div>
             <input 
-              id='haha' 
+              id='energy2' 
               type='radio'
-              name='humor'
-              value='haha'
-              onChange={onHumorChange}
+              name='energy'
+              value='2'
+              onChange={onEnergyChange}
+              required
             />
-            <label htmlFor='haha'>Haha</label>
+            <label htmlFor='energy2'>2 (slighly low energy)</label>
           </div>
           <div>
             <input 
-              id='hahaha' 
+              id='energy3' 
               type='radio'
-              name='humor'
-              value='hahaha'
-              onChange={onHumorChange}
+              name='energy'
+              value='3'
+              onChange={onEnergyChange}
+              required
             />
-            <label htmlFor='hahaha'>Hahaha</label>
+            <label htmlFor='energy3'>3 (normal energy)</label>
           </div>
           <div>
             <input 
-              id='hahahaha' 
+              id='energy4' 
               type='radio'
-              name='humor'
-              value='hahahaha'
-              onChange={onHumorChange} 
+              name='energy'
+              value='4'
+              onChange={onEnergyChange} 
+              required
             />
-            <label htmlFor='hahahaha'>Hahahaha</label>
+            <label htmlFor='energy4'>4 (slightly energetic)</label>
           </div>
           <div>
             <input 
-              id='hahahahaha' 
+              id='energy5' 
               type='radio'
-              name='humor' 
-              value='hahahahaha'
-              onChange={onHumorChange}
+              name='energy' 
+              value='5'
+              onChange={onEnergyChange}
+              required
             />
-            <label htmlFor='hahahahaha'>Hahahahaha</label>
+            <label htmlFor='energy5'>5 (very energetic)</label>
           </div>
         </div>
         <div>
-          <p>What is preventing you from using more humor at work?</p>
+          <p>When do you enjoy listening classical music?</p>
           <div>
             <input 
               id='check1' 
@@ -110,7 +124,7 @@ const Form = () => {
               checked= {checkBoxGroup.includes('check1')}
               onChange={() => oncheckBoxGroupToggle('check1')}  
             />
-            <label htmlFor='check1'>I don't know how</label>
+            <label htmlFor='check1'>In a concert.</label>
           </div>
           <div>
             <input 
@@ -119,7 +133,7 @@ const Form = () => {
               checked= {checkBoxGroup.includes('check2')}
               onChange={() => oncheckBoxGroupToggle('check2')}  
             />
-            <label htmlFor='check2'>I don't see its value</label>
+            <label htmlFor='check2'>When I want to relax.</label>
           </div>
           <div>
             <input 
@@ -128,7 +142,7 @@ const Form = () => {
               checked= {checkBoxGroup.includes('check3')}
               onChange={() => oncheckBoxGroupToggle('check3')}  
             />
-            <label htmlFor='check3'>I don't think its appropriate</label>
+            <label htmlFor='check3'>When I need to concentrate.</label>
           </div>
           <div>
             <input 
@@ -136,33 +150,40 @@ const Form = () => {
               type='checkbox' 
               checked= {checkBoxGroup.includes('check4')}
               onChange={() => oncheckBoxGroupToggle('check4')}
-              value='i-dunno' 
             />
-            <label htmlFor='check4'>Preventing? I use it all the time!</label>
+            <label htmlFor='check4'>I like to use it as background music.</label>
+          </div>
+          <div>
+            <input 
+              id='check5' 
+              type='checkbox' 
+              checked= {checkBoxGroup.includes('check5')}
+              onChange={() => oncheckBoxGroupToggle('check5')}
+            />
+            <label htmlFor='check4'>I enjoy it just as it is.</label>
           </div>
         </div>
         <div>
-          <label htmlFor='office-select'>Where do you work most of the time?</label>
-          <select id='office-select' value={office} onChange={onOfficeChange}>
+          <label htmlFor='composer-select'>Choose a composer from the list you like the most</label>
+          <select id='composer-select' value={composer} onChange={onComposerChange} required>
             <option disabled>--- select ---</option>
-            <option>At the office or workplace</option>
-            <option>Home</option>
-            <option>Other</option>
-            <option>It varies</option>
+            <option>Chopin</option>
+            <option>Bach</option>
+            <option>Beethoven</option>
+            <option>Liszt</option>
+            <option>Sibelius</option>
+            <option>Rachmaninov</option>
           </select>
         </div>
         <div>
-          <label htmlFor='name'>Let us know you little better, what is your name?</label>
-          <input id='name' type='text' value={name} onChange={onNameChange} />
+          <label htmlFor='name'>What is your name?</label>
+          <input id='name' type='text' value={name} onChange={onNameChange} required />
         </div>
-        
-        <button type='submit' onClick={(e) => onSubmit()}>Submit your answers</button>
+        <button type='submit' onClick={(e) => onSubmit()}>Find a suggestion</button>
       </form>
     
-      
       </>
     )
-  }
 }
 
 export default Form;
