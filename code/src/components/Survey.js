@@ -6,6 +6,7 @@ import Button from 'components/Button'
 import InputDropDown from 'components/InputDropDown'
 import InputText from 'components/InputText'
 import InputCheckBox from 'components/InputCheckBox'
+import InputCheckBoxGroup from 'components/InputCheckBoxGroup'
 
 const Survey = () => {
   
@@ -16,16 +17,28 @@ const Survey = () => {
   const [readingFormat, setReadingFormat] = useState('')
   const [book, setBook] = useState ('')
   const [isChecked, setIsChecked] = useState(false)
+  const [checkboxGroup, setCheckboxGroup] = useState([])
   const [showSummary, setShowSummary] = useState(false)
+  //const [errorMessage, setErrorMessage] = useState('')
 
   //VARIABLES
 
   const enjoyReadingArray = ['I enjoy reading a lot', 'I like reading sometimes', 'I do not like reading']
+  const checkboxGroupArray = ['Adventure', 'Classics', 'Detective', 'Fantasy', 'History', 'Romance', 'Science Fiction', 'Poetry', 'Self-Help', 'Other']
 
   //FUNCTIONS
 
   // This function leads to the next question
-  const onNextQuestionChange = () => setQuestion(question + 1)
+  const onNextQuestionChange = () => {
+    setQuestion(question + 1)
+  }
+  // const onNextQuestionChange = () => {
+  //   if (enjoyReading !== '') {
+  //     setQuestion(question + 1)
+  //   } else {
+  //     setErrorMessage('This field is required')
+  //   }
+  // }
 
   // This function goes back to the previous question
   const onPreviousQuestionChange = () => setQuestion(question - 1)
@@ -46,7 +59,19 @@ const Survey = () => {
   const onBookChange = event => setBook(event.target.value)
 
   // This function stores the answer from the fourth question (checkbox input)
-  const onIsCheckedChange = (event) => setIsChecked(event.target.checked)
+  const onIsCheckedChange = event => setIsChecked(event.target.checked)
+
+  // This function will update the value of an array/answer for the fifth question (checkbox group input)
+  const onCheckboxGroupToggle =(checkboxValue) => {
+    if (checkboxGroup.includes(checkboxValue)) {
+      // delete element from array by using filter method
+      setCheckboxGroup(checkboxGroup.filter(item => item !== checkboxValue))
+    } else {
+      // add element to array. Spread operator (...) will copy all the values from the previous heckboxGroup array 
+      setCheckboxGroup([checkboxValue, ...checkboxGroup])
+    }
+  }
+
 
   //RENDERING
 
@@ -59,12 +84,12 @@ const Survey = () => {
         {/* Survey starts here  */}
         {question === 0 && (
           <section className='start-page'>
-          <h1 className='header'>READING HABITS SURVEY</h1>
-          <p className='small-text'>Time to complete: 10 minutes</p>
-          <div className="start-button-container">
-            <Button onChangeDirection={onNextQuestionChange} textDisplay={'Start the survey'} className={'start-button'} />
-          </div>
-        </section>
+            <h1 className='header'>READING HABITS SURVEY</h1>
+            <p className='small-text'>Time to complete: 10 minutes</p>
+            <div className="start-button-container">
+              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Start the survey'} className={'start-button'} />
+            </div>
+          </section>
         )}
 
         {/* First question */}
@@ -99,7 +124,7 @@ const Survey = () => {
             <div className="button-container">
               <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
               <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
-          </div>
+            </div>
           </section>
         )}
 
@@ -114,7 +139,7 @@ const Survey = () => {
             <div className="button-container">
               <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
               <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
-          </div>
+            </div>
           </section>
         )}
 
@@ -129,24 +154,46 @@ const Survey = () => {
             <div className="button-container">
               <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
               <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
-          </div>
+            </div>
+          </section>
+        )}
+
+        {/* Fifth question */}
+        {question === 5 && (
+          <section className='question-container'>
+            <h2 className='question'>What types of books do you read most often?</h2>
+            <div className="checkbox-group-container">
+              {
+                checkboxGroupArray.map(genre => 
+                  <InputCheckBoxGroup 
+                    genre={genre}
+                    onChangeFunction={onCheckboxGroupToggle}
+                    checkboxGroup={checkboxGroup}
+                  />
+                )
+              }
+            </div>
+            <div className="button-container">
+              <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
+              <Button onChangeDirection={onNextQuestionChange} textDisplay={'Continue'} className={'button'} />
+            </div>
           </section>
         )}
 
         {/* Submit page */}
-        {question === 5 && (
+        {question === 6 && (
           <section className='question-container'>
-          <h2 className='header'>Ready to submit?</h2>
-          <div className="button-container">
+            <h2 className='header'>Ready to submit?</h2>
+            <div className="button-container">
               <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
               <button 
-              onSubmit={handleSubmit} 
-              className='submit-button' 
-              type='submit'>
-                Submit
-            </button>
-          </div>
-        </section>
+                onSubmit={handleSubmit} 
+                className='submit-button' 
+                type='submit'>
+                  Submit
+              </button>
+            </div>
+          </section>
         )}
       </form>
       ): (
@@ -157,6 +204,7 @@ const Survey = () => {
             readingFormat={readingFormat}
             book={book}
             isChecked={isChecked}
+            checkboxGroup={checkboxGroup}
           />
         </div>
       )}

@@ -2,6 +2,7 @@ import React from 'react'
 
 
 const Button = ({onChangeDirection, textDisplay, className}) => {
+  
   return (
     <button 
       onClick={onChangeDirection} 

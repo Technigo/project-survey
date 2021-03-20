@@ -1,6 +1,7 @@
 import React from 'react'
 
 const InputCheckBox = ({question, onChangeFunction, isChecked}) => {
+  
   return(
     <label htmlFor='check' className='checkbox-container'>
       <input
