@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const optionsQuestionThree = ['< 20', '20-25', '25 <']
 

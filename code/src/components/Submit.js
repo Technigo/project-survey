@@ -1,15 +1,5 @@
 import React from 'react'
 
-
-
-  //  const formResult = () => {
-  //   return (
-  //      <div>
-  //        Hello
-  //       </div>
-  //    )
-  //  }
-
 export const Submit = ({setSummary}) => {
 
   const formSubmit = event => {

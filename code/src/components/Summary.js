@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 // This should be the summary page that displays after the user has clicked the 'submit'-button
 
