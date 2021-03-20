@@ -15,7 +15,7 @@ export const Question3 = ({ yearsToMars, setYearsToMars, valueArray }) => {
           How many years do you think it will take for man to start settlements
           on Mars?
         </h3>
-        <div className="drop-down__inner" tabindex="0" aria-labelledby="yearsToMars">
+        <div className="drop-down__inner">
           <select id="yearsToMars" onChange={handleChange} value={yearsToMars}>
             <option
               label="select option"
