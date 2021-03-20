@@ -2,7 +2,7 @@ import React from 'react';
 
 import './TextInputName.css'
 
-const TextInputName = ({name, setName, email, setEmail}) => {
+const PersonalInformation = ({name, setName, email, setEmail}) => {
     const onNameChange = event => {
         setName(event.target.value)
     }
@@ -13,7 +13,7 @@ const TextInputName = ({name, setName, email, setEmail}) => {
    
         return (
             <div className="text-input-card">
-                <h3 className="question-heading">Please let us know how to contact you</h3>
+                <h3 className="question-heading">Please let us know the following information about you</h3>
                 <label htmlFor="name" className="text-input-label">Name</label>
                 <input
                     id="name"
@@ -32,8 +32,10 @@ const TextInputName = ({name, setName, email, setEmail}) => {
                     required
                     className="text-input"
                 />
+                
+                <h2>Indicate your age group (optional)</h2>
             </div>
 
         )
 }
-export default TextInputName
+export default PersonalInformation

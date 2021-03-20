@@ -3,7 +3,6 @@ import React, { useState } from 'react';
 import data from '../data.json';
 
 import WelcomeSection from './WelcomeSection';
-import TextInputName from './TextInputName';
 import CountrySelector from './CounrtySelector';
 import NeedVacationRange from './NeedVactionRange'
 import VacationTypeRadioButton from './VacationTypeRadioButtons';
@@ -12,6 +11,7 @@ import Summary from './Summary';
 import ProgressBar from './ProgressBar';
 import SubmitButton from './SubmitButton';
 import Checkboxes from './Checkboxes'
+import PersonalInformation from './PersonalInformation';
 
 
 
@@ -108,7 +108,7 @@ const Form = () => {
         )}
         {question === questions[5] && (
           <div className="question-card">
-            <TextInputName
+            <PersonalInformation
               name={name}
               setName={setName}
               email={email}
@@ -118,7 +118,6 @@ const Form = () => {
              checkboxGroup={checkboxGroup}
              setCheckboxGroup={setCheckboxGroup}
              />
-
             <SubmitButton isFormFilled={isFormFilled}/>
           </div>
         )}
@@ -136,6 +135,7 @@ const Form = () => {
         vacationType={vacationType}
         date={date}
         email={email}
+        checkboxGroup={checkboxGroup}
       />
     )
   }
