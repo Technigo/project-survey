@@ -21,7 +21,7 @@ const Test = () => {
     const [myemail, setmyemail] = useState("");
     const [wantsNewsletter, setwantsNewsletter] = useState("");
     const [myphone, setmyphone] = useState("");
-    const [Rng, setRng] = useState(50);
+    const [Rng, setRng] = useState("No Opinion"); //50
     console.log(myphone) // Ska bort
     console.log(wantsNewsletter) // Ska bort
     console.log(myemail) // Ska bort
@@ -104,14 +104,21 @@ const Test = () => {
             </form>)
         } else {
         return ( 
-            <div>
-                <h1>{myphone}</h1>
-                <h1>{wantsNewsletter}</h1>
-                <h1>{myemail}</h1>
-                <h1>{myname}</h1>
-                <h1>{Color}</h1>
-                <h1>{myamount}</h1>
-                <h1>{Size}</h1>
+            <div className="sum-container">
+                <div className="sum-box">
+                    <div className="sum">
+                        <h4>Order Summary</h4>
+                        <p>My name: <span>{myname}</span></p>
+                        <p>My Email: <span>{myemail}</span></p>
+                        <p>My Phone number: <span>{myphone}</span></p>
+                        <p>Selected product: <span>{Color}</span></p>
+                        <p>Selected Size: <span>{Size}</span></p>
+                        <p>Amount of item: <span>{myamount}</span></p>
+                        <p>Subscribe?: <span>{wantsNewsletter}</span></p>                        
+                        <p>My UX level: <span>{Rng}</span></p>
+                        <p>Thank you for your order, we will return to you as soon as possible with payment and cargo details!</p>
+                    </div>
+                </div>
             </div>
         )
             

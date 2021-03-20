@@ -259,12 +259,46 @@ label {
 
 /* Range slider section ends here */
 
+.sum-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f8f4e1 ;
+
+}
+
+.sum-box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 20%;
+  background-color: #897853;
+  width: 80%;
+  border-radius: 25px;
+}
+
+.sum {
+  width: 80%;
+}
+
+.sum span {
+  font-weight: bold;
+}
 
 @media (min-width:568px) {
   .hero-title {
     top: 20%;
     width: 30%;
     left: 35%;
+  }
+
+  .sum {
+    font-size: 24px;
+  }
+
+  .sum-box{
+    top: 25%;
   }
 }
 
