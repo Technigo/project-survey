@@ -3,18 +3,24 @@ import React from 'react'
 const Dropdown = ({ questionName, questionText, optionArray, chosenValue, handleInputChange }) => {
 
   const onSelectChange = (event) => {
+    console.log(event.target.name)
     handleInputChange(event.target.name, event.target.value)
   }
 
   return (
     <>
-      <label className="form-label" name={questionName}>{questionText}</label>
+      <label htmlFor={chosenValue} className="form-label" >{questionText}</label>
         <select className="drop-down"
+          name={questionName}
           onChange={onSelectChange}
           value={chosenValue}
         >
           {optionArray.map(option => (
-            <option value={option} htmlFor={questionName}>{option}</option>
+            <option key={option} 
+              value={option} 
+              >
+              {option}
+            </option>
           ))}
         </select>
     </>

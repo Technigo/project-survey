@@ -30,7 +30,7 @@ const Survey = ({ step, setStep, name, animal, accessory, activity, ratherNot, h
         )}
         {step === 3 && (
           <Radiobuttons
-            questionName="Accessory" 
+            questionName="accessory" 
             questionText="What accessory can't you live without? 💍" 
             valueArray={accessoryOptions} 
             chosenValue={accessory} 
@@ -38,7 +38,7 @@ const Survey = ({ step, setStep, name, animal, accessory, activity, ratherNot, h
         )}
         {step === 4 && (
           <Dropdown 
-            questionName="favourite-activity" 
+            questionName="activity" 
             questionText="What's your favourite activity? 🏇" 
             optionArray={activityOptions}
             chosenValue={activity} 
@@ -46,7 +46,7 @@ const Survey = ({ step, setStep, name, animal, accessory, activity, ratherNot, h
         )}
         {step === 5 && (
           <TextInput 
-            questionName="rather-not" 
+            questionName="ratherNot" 
             questionText="Name a thing that you don't like to do 💩" 
             chosenValue={ratherNot} 
             handleInputChange={handleInputChange} />
