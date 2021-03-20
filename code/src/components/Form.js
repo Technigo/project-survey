@@ -3,7 +3,7 @@ import NameInput from "./NameInput";
 import BookInput from "./BookInput";
 import DropDownMenu from "./DropDownMenu"
 import RadioButtonsInput from "./RadioButtonsInput";
-import RadioButtonsRecomends from "./RadioButtonsRecomends";
+import RadioButtonsRecommends from "./RadioButtonsRecomends";
 import SubmitButton from "./SubmitButton";
 
 
@@ -27,7 +27,7 @@ const Form = (props) => {
             <RadioButtonsInput
                 onNumberOfBookChange={props.onNumberOfBookChange}
                 numberOfBook={props.numberOfBook} />
-            <RadioButtonsRecomends onrecomendationChange={props.onrecomendationChange}
+            <RadioButtonsRecommends onrecomendationChange={props.onrecomendationChange}
                 recomendation={props.recomendation} />
             <SubmitButton isFormFinished={props.isFormFinished} />
         </form>

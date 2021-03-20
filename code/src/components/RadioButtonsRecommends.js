@@ -2,11 +2,11 @@ import React from 'react';
 
 const recomendationAnswer = ['Yes', 'No'];
 
-const RadioButtonsRecomends = (props) => {
+const RadioButtonsRecommends = (props) => {
 
     return (
         <div>
-            <p>Would you recomend the book to someone else?</p>
+            <p>Would you recommend the book to someone else?</p>
             {recomendationAnswer.map((answer) => (
                 <label htmlFor="books" key={answer}>
                     <input
@@ -23,4 +23,4 @@ const RadioButtonsRecomends = (props) => {
     );
 };
 
-export default RadioButtonsRecomends;
+export default RadioButtonsRecommends;
