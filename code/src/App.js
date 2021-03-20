@@ -47,7 +47,7 @@ export const App = () => {
     <>
     {/*WELCOME SECTION*/}
     {section === 'welcome' && (
-      <div aria-label="WELCOME" className='welcome'>
+      <div aria-label="Welcome" className='welcome'>
          <Welcome />
          <button
          className='start-btn'
@@ -68,11 +68,20 @@ export const App = () => {
       onNameChange={onNameChange}
       />
       <div className='button-wrapper'>
-        <button className='back-button'
+        <button
+        className='back-button'
         type='button'
         value='welcome'
         onClick={event => {setSection(event.target.value) }}
         >
+          Back
+          </button>
+          <button
+            className='next-button'
+            type="submit"
+            value='main-dish'
+            onClick={event => { setSection(event.target.value) }}
+            >
           Next
         </button>
       </div>
@@ -99,11 +108,18 @@ export const App = () => {
               </button>
               <button
               type="submit"
-              value="age"
+              value="name"
               onClick={event => {setSection(event.target.value)}}
               className="next-button"
               >
-                Next
+              <button
+            className='next-button'
+            type="submit"
+            value='side-dish'
+            onClick={event => { setSection(event.target.value) }}
+            >
+          Next
+        </button>
               </button>
 
           </div>
@@ -120,7 +136,7 @@ export const App = () => {
           <div className='button-wrapper'>
             <button
             type="button"
-            value="name-input"
+            value="main-dish"
             onClick={event => { setSection(event.target.value)}}
             className="back-button"
             >
@@ -128,19 +144,20 @@ export const App = () => {
               </button>
               <button
               type="submit"
-              value="age"
+              value="condiments"
               onClick={event => {setSection(event.target.value)}}
               className="next-button"
               >
                 Next
-              </button>
-
+                </button>
           </div>
         </section>
       )}
+
+
       {/*CONDIMENTS SECTION*/}
       {section === 'condiments' && (
-        <section aria-label="condiment select" classname='condiment'>
+        <section aria-label="condiment select" className='condiment'>
           <Condiments 
           condiments={Condiments}
           onCondimentChange={onCondimentChange}
@@ -149,7 +166,7 @@ export const App = () => {
           <div className='button-wrapper'>
             <button 
             type="button"
-            value="condiment"
+            value="side-dish"
             onClick={event => {setSection(event.target.value) }}
             className="back-button"
             >
@@ -165,6 +182,8 @@ export const App = () => {
           </div>
         </section>
       )}
+
+      
       {/*SUMMARY*/}
       {section === 'summary' && (
         <section aria-label="Summary">
@@ -176,7 +195,6 @@ export const App = () => {
           />
         </section>
       )}
-      <Summary />
     
     </> 
   ) 

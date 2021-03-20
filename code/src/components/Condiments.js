@@ -9,9 +9,9 @@ const Condiments = ({onCondimentChange}) => {
     <>
     <div className='condiments'>
       <h1 tabIndex="0" className='condiments-heading'>What is your go-to condiment?</h1>
-      {condiment.map(id => (
+      {condiment.map(value => (
         <label
-        key={id}
+        key={value}
         label='condiment'
         className='condiments'
         >
