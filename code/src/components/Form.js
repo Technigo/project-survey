@@ -2,12 +2,29 @@ import React, {useState} from 'react';
 
 const Form = () => {
 
+  const [humor, setHumor] = useState('')
+  const [checkBoxGroup, setCheckBoxGroup] = useState([])
   const [office, setOffice] = useState('--- select ---')
   const [name, setName] = useState('')
+  
+  const onHumorChange = (e) => {
+    setHumor(e.target.value)
+  }
+
+  const oncheckBoxGroupToggle = (checkBoxValue) => {
+    if (checkBoxGroup.includes(checkBoxValue)) {
+      // deletes an element from array, accepts only items that are different from checkBoxValue
+      setCheckBoxGroup(checkBoxGroup.filter(item => item !== checkBoxValue))
+    } else { 
+      // adds an element into a new array together with the existing ones
+      setCheckBoxGroup([checkBoxValue, ...checkBoxGroup]) 
+    }
+  }
   
   const onOfficeChange = (e) => {
       setOffice(e.target.value)
   }
+
   const onNameChange = (e) => {
     setName(e.target.value)
   }
@@ -17,23 +34,53 @@ const Form = () => {
       <div>
         <p>On a scale of Ha (1) to Hahahahaha (5), how important is humor in the workplace?</p>
         <div>
-          <input id='ha' type='radio'  />
+          <input 
+            id='ha' 
+            type='radio'
+            name='humor'
+            value='ha'
+            onChange={onHumorChange}
+          />
           <label htmlFor='ha'>Ha</label>
         </div>
         <div>
-          <input id='haha' type='radio' />
+          <input 
+            id='haha' 
+            type='radio'
+            name='humor'
+            value='haha'
+            onChange={onHumorChange}
+          />
           <label htmlFor='haha'>Haha</label>
         </div>
         <div>
-          <input id='hahaha' type='radio' />
+          <input 
+            id='hahaha' 
+            type='radio'
+            name='humor'
+            value='hahaha'
+            onChange={onHumorChange}
+          />
           <label htmlFor='hahaha'>Hahaha</label>
         </div>
         <div>
-          <input id='hahahaha' type='radio' />
+          <input 
+            id='hahahaha' 
+            type='radio'
+            name='humor'
+            value='hahahaha'
+            onChange={onHumorChange} 
+          />
           <label htmlFor='hahahaha'>Hahahaha</label>
         </div>
         <div>
-          <input id='hahahahaha' type='radio' />
+          <input 
+            id='hahahahaha' 
+            type='radio'
+            name='humor' 
+            value='hahahahaha'
+            onChange={onHumorChange}
+          />
           <label htmlFor='hahahahaha'>Hahahahaha</label>
         </div>
       </div>
@@ -44,7 +91,8 @@ const Form = () => {
           <input 
             id='check1' 
             type='checkbox' 
-            checked= {false}  
+            checked= {checkBoxGroup.includes('check1')}
+            onChange={() => oncheckBoxGroupToggle('check1')}  
           />
           <label htmlFor='check1'>I don't know how</label>
         </div>
@@ -52,7 +100,8 @@ const Form = () => {
           <input 
             id='check2' 
             type='checkbox' 
-            checked= {false}  
+            checked= {checkBoxGroup.includes('check2')}
+            onChange={() => oncheckBoxGroupToggle('check2')}  
           />
           <label htmlFor='check2'>I don't see its value</label>
         </div>
@@ -60,7 +109,8 @@ const Form = () => {
           <input 
             id='check3' 
             type='checkbox' 
-            checked= {false} 
+            checked= {checkBoxGroup.includes('check3')}
+            onChange={() => oncheckBoxGroupToggle('check3')}  
           />
           <label htmlFor='check3'>I don't think its appropriate</label>
         </div>
@@ -68,7 +118,8 @@ const Form = () => {
           <input 
             id='check4' 
             type='checkbox' 
-            checked= {false} 
+            checked= {checkBoxGroup.includes('check4')}
+            onChange={() => oncheckBoxGroupToggle('check4')}  
           />
           <label htmlFor='check4'>Preventing? I use it all the time!</label>
         </div>
