@@ -197,7 +197,7 @@ export const App = () => {
     } else {
         //filter according to magic choice
         magicFiltered = playbooks.filter(element => {
-        return element.magical === choice.magical || element.magical === choice.magical+1 || element.magical === choice.magical-1
+        return element.magical === choice.magical || element.magical === choice.magical+2 || element.magical === choice.magical-2
       });
     }
     console.log("after magic:")
@@ -215,7 +215,7 @@ export const App = () => {
     } else {
         //filter according to spiritual choice
         spiritualFiltered = magicFiltered.filter(element => {
-          return element.spiritual === choice.spiritual || element.spiritual === choice.spiritual+1 || element.spiritual === choice.spiritual-1
+          return element.spiritual === choice.spiritual || element.spiritual === choice.spiritual+2 || element.spiritual === choice.spiritual-2
         });
     }
     console.log("after spiritual:")
@@ -233,7 +233,7 @@ export const App = () => {
     } else {
         //filter according to tech choice
         techFiltered = spiritualFiltered.filter(element => {
-          return element.toolsNTech === choice.toolsNTech || element.toolsNTech === choice.toolsNTech+1 || element.toolsNTech === choice.toolsNTech-1
+          return element.toolsNTech === choice.toolsNTech || element.toolsNTech === choice.toolsNTech+2 || element.toolsNTech === choice.toolsNTech-2
         });
     }
     console.log("after tech:")
@@ -250,7 +250,7 @@ export const App = () => {
     } else {
         //filter according to grim choice
         grimFiltered = techFiltered.filter(element => {
-          return element.grim === choice.grim || element.grim === choice.grim+1 || element.grim === choice.grim-1
+          return element.grim === choice.grim || element.grim === choice.grim+2 || element.grim === choice.grim-2
         });
     }
     console.log("after grim:")
@@ -268,7 +268,7 @@ export const App = () => {
     } else {
         //filter according to grim choice
         hijinxFiltered = grimFiltered.filter(element => {
-          return element.hijinx === choice.hijinx || element.hijinx === choice.hijinx+1 || element.hijinx === choice.hijinx-1
+          return element.hijinx === choice.hijinx || element.hijinx === choice.hijinx+2 || element.hijinx === choice.hijinx-2
         });
     }
     console.log("after hijinx:")
