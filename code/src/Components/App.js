@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import QuestionWrapper from './QuestionWrapper'
 import questionData from '../questionData.json'
+import playbookData from '../playbookData.json'
 import SubmitButton from './SubmitButton'
 
 //TO-DO:
@@ -10,6 +11,9 @@ import SubmitButton from './SubmitButton'
 //[_] Remove optionsData!
 //[X] Make radio buttons functional!
 //2h [X] [X] Make select dropdown functional! What is missing is how to pass
+//1h [_] Add a "Eh, I don't care" option to the radio answers, setting the value to -99. This will later be picked up in the filterPlaybooks function and will simply skip that filter :))
+//1h [_] Add isSubmitted hook
+//1h [_] Add a "hey, that answer doesn't work" conditional that blocks UI progression (but only forwards!) have a function that returns true or false, and disable the UI forward button accordingly via the html attribute disable=function()
 //4h [_] Start styling
 //1h [_] Grasp what controlled inputs are again and double check mine are
 //All weekend [_] Accessability test
@@ -144,17 +148,19 @@ export const App = () => {
   }
 
   const onSubmit = () => {
-    console.log("HELLO!")
     
-    let results = {
-      spiritual: spiritual,
+
+    //NEEDS TO SHOW SUMMARY AND HIDE OPTIONS (a re-render, not toggling display in css)!
+    
+    const choice = {
       magical: magic,
+      spiritual: spiritual,
       toolsNTech: tech,
       grim: grim,
+      hijinx: hijinx,
       bestAt: bestAt,
       nextToBestAt: nextToBestAt,
       worstAt: worstAt,
-      hijinx: hijinx,
       usesSTR: str,
       usesDEX: dex,
       usesCON: con,
@@ -162,11 +168,197 @@ export const App = () => {
       usesWIS: wis,
       usesCHA: cha
     }
+    const playbooks = playbookData
 
-
-
+    if(choice.bestAt === choice.nextToBestAt || choice.worstAt === choice.nextToBestAt || choice.worstAt === choice.bestAt) {
+      console.log("no you IDIOT!!")
+    } else {
+      filterPlaybooks(choice, playbooks)
+    }
+    
   }
 
+  const filterPlaybooks = (choice, playbooks) => {
+    
+    //before filtering; status check
+    console.log("user choices:")
+    console.log(choice)
+    console.log("should be all playbooks:")
+    console.log(playbooks)
+
+    //__________ MAGIC __________
+
+    //create new array based on unfiltered playbooks
+    let magicFiltered = playbooks
+
+    if(choice.magical === null) {
+      //no filtering
+      console.log("was null - didn't filter magic")
+    } else {
+        //filter according to magic choice
+        magicFiltered = playbooks.filter(element => {
+        return element.magical === choice.magical || element.magical === choice.magical+1 || element.magical === choice.magical-1
+      });
+    }
+    console.log("after magic:")
+    console.log(magicFiltered)
+    
+
+    //__________ SPIRITUAL __________
+    
+    //create new array based on previous filter array
+    let spiritualFiltered = magicFiltered
+
+    if(choice.spiritual === null) {
+      //(no filtering since user choice was null)
+      console.log("was null - didn't filter spiritual")
+    } else {
+        //filter according to spiritual choice
+        spiritualFiltered = magicFiltered.filter(element => {
+          return element.spiritual === choice.spiritual || element.spiritual === choice.spiritual+1 || element.spiritual === choice.spiritual-1
+        });
+    }
+    console.log("after spiritual:")
+    console.log(spiritualFiltered)
+    
+
+    //__________ TECH __________
+
+    //create new array based on previous filter array
+    let techFiltered = spiritualFiltered
+
+    if(choice.toolsNTech === null) {
+      //(no filtering since user choice was null)
+      console.log("was null - didn't filter tech")
+    } else {
+        //filter according to tech choice
+        techFiltered = spiritualFiltered.filter(element => {
+          return element.toolsNTech === choice.toolsNTech || element.toolsNTech === choice.toolsNTech+1 || element.toolsNTech === choice.toolsNTech-1
+        });
+    }
+    console.log("after tech:")
+    console.log(techFiltered)
+
+    //__________ GRIM __________
+
+    //create new array based on previous filter array
+    let grimFiltered = techFiltered
+
+    if(choice.grim === null) {
+      //(no filtering since user choice was null)
+      console.log("was null - didn't filter grim")
+    } else {
+        //filter according to grim choice
+        grimFiltered = techFiltered.filter(element => {
+          return element.grim === choice.grim || element.grim === choice.grim+1 || element.grim === choice.grim-1
+        });
+    }
+    console.log("after grim:")
+    console.log(grimFiltered)
+
+
+    //__________ HIJINX __________
+
+    //create new array based on previous filter array
+    let hijinxFiltered = grimFiltered
+
+    if(choice.hijinx === null) {
+      //(no filtering since user choice was null)
+      console.log("was null - didn't filter hijinx")
+    } else {
+        //filter according to grim choice
+        hijinxFiltered = grimFiltered.filter(element => {
+          return element.hijinx === choice.hijinx || element.hijinx === choice.hijinx+1 || element.hijinx === choice.hijinx-1
+        });
+    }
+    console.log("after hijinx:")
+    console.log(hijinxFiltered)
+
+    //__________ BEST AT __________
+    
+    //create new array based on previous filter array
+    let bestAtFiltered = hijinxFiltered
+
+    switch (choice.bestAt) {
+      case "STR":
+        bestAtFiltered = hijinxFiltered.filter(element => {
+          return element.usesSTR > 0
+        });
+        break
+      case "DEX":
+        bestAtFiltered = hijinxFiltered.filter(element => {
+          return element.usesDEX > 0
+        });
+        break
+      case "CON":
+        bestAtFiltered = hijinxFiltered.filter(element => {
+          return element.usesCON > 0
+        });
+        break
+      case "INT":
+        bestAtFiltered = hijinxFiltered.filter(element => {
+          return element.usesINT > 0
+        });
+        break
+      case "WIS":
+        bestAtFiltered = hijinxFiltered.filter(element => {
+          return element.usesWIS > 0
+        });
+        break
+      case "CHA":
+        bestAtFiltered = hijinxFiltered.filter(element => {
+          return element.usesCHA > 0
+        });
+        break
+    }
+    console.log("after bestAt:")
+    console.log(bestAtFiltered)
+
+    //__________ WORST AT __________
+    
+    //create new array based on previous filter array
+    let worstAtFiltered = bestAtFiltered
+
+    switch (choice.worstAt) {
+      case "STR":
+        worstAtFiltered = bestAtFiltered.filter(element => {
+          return element.usesSTR < 1
+        });
+        break
+      case "DEX":
+        worstAtFiltered = bestAtFiltered.filter(element => {
+          return element.usesDEX < 1
+        });
+        break
+      case "CON":
+        worstAtFiltered = bestAtFiltered.filter(element => {
+          return element.usesCON < 1
+        });
+        break
+      case "INT":
+        worstAtFiltered = bestAtFiltered.filter(element => {
+          return element.usesINT < 1
+        });
+        break
+      case "WIS":
+        worstAtFiltered = bestAtFiltered.filter(element => {
+          return element.usesWIS < 1
+        });
+        break
+      case "CHA":
+        worstAtFiltered = bestAtFiltered.filter(element => {
+          return element.usesCHA < 1
+        });
+        break
+    }
+    console.log("after bestAt:")
+    console.log(bestAtFiltered)
+
+
+
+
+    
+  }
 
   //I might not need these
   const onStrChange = (value) => {
