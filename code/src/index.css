@@ -14,19 +14,13 @@ code {
     monospace;
 }
 
-.main {
-  background-color:#ac5d00;
+
+.welcome-wrapper {
+  font-family: 'Passion One', cursive;
+  font-size:40px;
+  background-color: #ac5d00;
   color: whitesmoke;
   text-align: center;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  top: 0px;  
-}
-
-.welcome-container h1 {
-  font-family: 'Passion One', cursive;
-  font-size:60px;
 }
 
 .welcome-image {
@@ -58,7 +52,7 @@ justify-content: center;
 align-items: center;
 }
 
-.button {
+.start-btn {
   background-color: 
   #eec721;
   border: 2px solid whitesmoke;
@@ -82,5 +76,8 @@ align-items: center;
 
 @media (min-width: 640px) {
 
+  .welcome-image {
+    width: 100%;
+  }
 
 }

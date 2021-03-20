@@ -78,7 +78,7 @@ export const App = () => {
           </button>
           <button
             className='next-button'
-            type="submit"
+            type='submit'
             value='main-dish'
             onClick={event => { setSection(event.target.value) }}
             >
@@ -99,19 +99,13 @@ export const App = () => {
             />
           <div className='button-wrapper'>
             <button
-            type="button"
-            value="name-input"
+            type='button'
+            value='name-input'
             onClick={event => { setSection(event.target.value)}}
-            className="back-button"
+            className='back-button'
             >
               Back
               </button>
-              <button
-              type="submit"
-              value="name"
-              onClick={event => {setSection(event.target.value)}}
-              className="next-button"
-              >
               <button
             className='next-button'
             type="submit"
@@ -120,7 +114,7 @@ export const App = () => {
             >
           Next
         </button>
-              </button>
+              
 
           </div>
         </section>
@@ -135,18 +129,18 @@ export const App = () => {
             />
           <div className='button-wrapper'>
             <button
-            type="button"
-            value="main-dish"
+            type='button'
+            value='main-dish'
             onClick={event => { setSection(event.target.value)}}
-            className="back-button"
+            className='back-button'
             >
               Back
               </button>
               <button
-              type="submit"
-              value="condiments"
+              type='submit'
+              value='condiments'
               onClick={event => {setSection(event.target.value)}}
-              className="next-button"
+              className='next-button'
               >
                 Next
                 </button>
@@ -165,10 +159,10 @@ export const App = () => {
 
           <div className='button-wrapper'>
             <button 
-            type="button"
-            value="side-dish"
+            type='button'
+            value='side-dish'
             onClick={event => {setSection(event.target.value) }}
-            className="back-button"
+            className='back-button'
             >
               Back
             </button>
@@ -183,7 +177,7 @@ export const App = () => {
         </section>
       )}
 
-      
+
       {/*SUMMARY*/}
       {section === 'summary' && (
         <section aria-label="Summary">
