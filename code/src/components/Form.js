@@ -12,7 +12,8 @@ const Form = (props) => {
     return (
 
         <form onSubmit={event => event.preventDefault()}>
-            <NameInput name={props.name}
+            <NameInput
+                name={props.name}
                 onNameChange={props.onNameChange} />
             <BookInput bookname={props.bookname}
                 onBookChange={props.onBookChange} />

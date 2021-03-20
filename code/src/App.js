@@ -9,6 +9,7 @@ export const App = () => {
   const [feeling, setFeeling] = useState('');
   const [numberOfBook, setnumberOfBook] = useState('');
   const [recomendation, setRecomendation] = useState('');
+  const [summary, setSummary] = useState('false')
 
 
   const onNameChange = (event) => {
@@ -31,7 +32,9 @@ export const App = () => {
     console.log(event.target.value);
     setRecomendation(event.target.value);
   }
-
+  const onsummaryChange = (event) => {
+    setSummary(summary)
+  }
 
   return (
     <div>
