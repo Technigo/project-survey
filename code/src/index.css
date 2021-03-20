@@ -37,6 +37,10 @@ h3, .question {
 
 .question-wrapper {
   padding: 20px 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
 .button {

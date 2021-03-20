@@ -8,25 +8,23 @@ import { NameInput } from './NameInput';
 
 const Form = () => {
 
-  const [energy, setEnergy] = useState('');
+  const [energy, setEnergy] = useState('1');
   const [mood, setMood] = useState('')
   const [checkBoxGroup, setCheckBoxGroup] = useState([]);
   const [composer, setComposer] = useState('--- select ---');
   const [name, setName] = useState('');
   const [hideForm, setHideForm] = useState('false');
 
-  const energyLevels= ['1', '2', '3', '4', '5']
   const moods = ['exited', 'happy', 'peaceful', 'sad']
   const checkBoxes = [{name: 'concert', text: 'In a concert'}, {name: 'relax', text: 'For relaxation'}, {name: 'concentrate', text: 'For concentration'}, {name:'background', text: 'As background music'}, {name: 'enjoy', text: 'Just for pleasure'}]
 
   console.log(checkBoxes.find(x => x.name === 'concert').text)
   const isSurveyComplete = () => {
-
     if (energy === '') {
       return false;
     }
 
-    if (energy === '') {
+    if (mood === '') {
       return false;
     }
 
@@ -46,7 +44,13 @@ const Form = () => {
   };
 
   const onSubmit = (e) => {
-    setHideForm(true);
+    e.preventDefault()
+    if (isSurveyComplete()) {
+      setHideForm(true);
+    } else {
+      alert('Survey is not complete. Please fill in all the questions.')
+      window.scroll(0,0)
+    }
 }
 
   if (hideForm === true) {
@@ -75,36 +79,46 @@ const Form = () => {
         <div className='form'>
           <h1>Welcome to Classical Music Explorer</h1>
           <h2>Perfect music for this moment</h2>
-          <div className='question-wrapper'>
-            <h3>On a scale 1 to 5, what is your energy level at the moment?</h3>
-            {energyLevels.map((energy) => {
-              return (
-                <EnergyLevelRadioOption key={energy} energy={energy} setEnergy={setEnergy} />
-              )
-            })}
+          <div className='question-wrapper' id='energy'>
+            <div className='inner-wrapper'>
+              <h3>On a scale 1(low) to 5(high), what is your energy level at the moment?</h3>
+              <EnergyLevelRadioOption energy={energy} setEnergy={setEnergy} />
+              <button><a href='#mood'>Next</a></button>
+            </div>
+                
           </div>
-          <div className='question-wrapper'>
-            <h3>What is your mood at the moment?</h3>
-            {moods.map((mood) => {
-              return (
-                <MoodOption key={mood} mood={mood} setMood={setMood} />
-              )
-            })}
+          <div className='question-wrapper' id='mood'>
+            <div className='inner-wrapper'>
+              <h3>What is your mood at the moment?</h3>
+              {moods.map((mood) => {
+                return (
+                  <MoodOption key={mood} mood={mood} setMood={setMood} />
+                )
+              })}
+              <button><a href='#purpose'>Next</a></button>
+            </div>
           </div>
-          <div className='question-wrapper'>
-            <h3>When or for what purpose do you enjoy listening classical music?</h3>
-            {checkBoxes.map((checkBox) => {
-              return (
-                <ClassicalMusicCheckBox key={checkBox.name} checkBox={checkBox} checkBoxGroup={checkBoxGroup} setCheckBoxGroup={setCheckBoxGroup} />
-              )
-            })} 
+          <div className='question-wrapper' id='purpose'>
+            <div className='inner-wrapper'>
+              <h3>When or for what purpose do you enjoy listening classical music?</h3>
+              {checkBoxes.map((checkBox) => {
+                return (
+                  <ClassicalMusicCheckBox key={checkBox.name} checkBox={checkBox} checkBoxGroup={checkBoxGroup} setCheckBoxGroup={setCheckBoxGroup} />
+                )
+              })}
+              <button><a href='#composer'>Next</a></button>
+            </div>
           </div>
-          
-          <ComposerSelect composer={composer} setComposer={setComposer} />
-          <NameInput name={name} setName={setName} />
-     
-      
-          <button className='button' title="All answers required" type='submit' onClick={(e) => onSubmit()} disabled={!isSurveyComplete()}>Submit answers</button>
+          <div className='question-wrapper' id='composer'>
+            <ComposerSelect composer={composer} setComposer={setComposer} />
+          </div>
+          <div className='question-wrapper' id='name'>
+            <div className='inner-wrapper'>
+              <NameInput name={name} setName={setName} />
+            </div>
+            <button className='button' type='submit'>Submit answers</button>
+          </div>
+
         </div>
       </form>
     )

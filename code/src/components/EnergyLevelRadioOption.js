@@ -9,11 +9,12 @@ export const EnergyLevelRadioOption = ( {energy, setEnergy}) => {
     <div>
       <input 
         id={energy}
-        type='radio'
-        name='energy'
+        type='range'
+        className='slider'
+        min='1'
+        max='5'
         value={energy}
         onChange={onEnergyChange}
-        required
       />
       <label htmlFor={energy}>{energy}</label>
     </div>

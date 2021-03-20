@@ -13,7 +13,6 @@ export const MoodOption = ( {mood, setMood}) => {
         name='mood'
         value={mood}
         onChange={onMoodChange}
-        required
       />
       <label htmlFor={mood}>{mood}</label>
     </div>
