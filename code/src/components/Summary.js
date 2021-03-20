@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Summary = ({name, country, companion, activity}) => {
+const Summary = ({nameValue, countryValue, companionValue, activityValue}) => {
     return (
         <div className="summary">
-            <p>Excellent, {name}! You definitely will enjoy a trip to {country} where you will be able to 
-               {activity} with your {companion}.
+            <p>Excellent, {nameValue}! You definitely will enjoy a trip to {countryValue} where you will be able to 
+               {activityValue} with your {companionValue}.
             </p>
             
         </div>

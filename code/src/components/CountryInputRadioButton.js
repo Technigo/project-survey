@@ -1,20 +1,20 @@
 import React from 'react'
 
-const CountryInputRadioButton = ({ country, onCountryChange }) => { 
+const CountryInputRadioButton = ({ countryValue, onCountryChangeFunction }) => { 
  
     return (
         <div>
           
-          <label key={country} htmlFor={country}>
+          <label key={countryValue} htmlFor={countryValue}>
             <input 
               name="country"
-              id={country}
-              value={country}
+              id={countryValue}
+              value={countryValue}
               type="radio"
-              onChange={onCountryChange} 
+              onChange={onCountryChangeFunction} 
               required
             />
-          {country}</label>
+          {countryValue}</label>
         </div>
     )
 }

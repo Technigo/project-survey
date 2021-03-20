@@ -18,8 +18,8 @@ const [summary, setSummary]= useState(false)
 
 //ARRAYS
 
-const countries = ['france', 'thailand', 'iceland', 'australia', 'peru']
-const activities = ['make a gastronomy tour', 'explore the cultural scene', 'hangout with the locals','party till sunrise']
+const countries = ['France', 'Thailand', 'Iceland', 'Australia', 'Peru']
+const activities = [' make a gastronomy tour', ' explore the cultural scene', ' hangout with the locals',' party till sunrise']
    
 
   //FUNCTIONS 
@@ -56,11 +56,13 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
       {!summary && ( 
 
         <form onSubmit={handleSubmit}>
+          
           <> 
             <NameInputText
-             name={name} 
-             onNameChange={onNameChange}
              question={'What is your name?'}
+             nameValue={name} 
+             onNameChangeFunction={onNameChange}
+             
             />
           </> 
         
@@ -69,20 +71,18 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
             {countries.map((country) => 
               <CountryInputRadioButton
                 key={country} 
-                country={country}
-                onCountryChange={onCountryChange}
-                
-                
+                countryValue={country}
+                onCountryChangeFunction={onCountryChange}
               />
             )}
           </>
 
           <>
-           <CompanionDropDown
-           question={'Who would you like to take with you on this trip?'}
-           dropDownvalue = {companion}
-           onCompanionChange = {onCompanionChange}
-           />
+            <CompanionDropDown
+            question={'Who would you like to take with you on this trip?'}
+            dropDownvalue = {companion}
+            onCompanionChangeFunction = {onCompanionChange}
+            />
           </>
                 
           <>
@@ -107,10 +107,10 @@ const activities = ['make a gastronomy tour', 'explore the cultural scene', 'han
         <>
           {summary && 
           <Summary
-            name={name}
-            country={country}
-            companion={companion}
-            activity={activity}
+            nameValue={name}
+            countryValue={country}
+            companionValue={companion}
+            activityValue={activity}
           />
           }
         </>

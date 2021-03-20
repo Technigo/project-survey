@@ -1,12 +1,12 @@
 import React from 'react'
 
-const CompanionDropDown = ( {question, dropDownvalue, onCompanionChange }) => {
+const CompanionDropDown = ( {question, dropDownvalue, onCompanionChangeFunction }) => {
     return (
         <div>
             <label htmlFor="companion">
             {question}
             </label>
-            <select id="companion" onChange={onCompanionChange} value={dropDownvalue} >
+            <select id="companion" onChange={onCompanionChangeFunction} value={dropDownvalue} >
               <option disabled></option>
               <option value="partner">partner</option>
               <option value="best friend">best friend</option>
