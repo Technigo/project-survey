@@ -6,7 +6,7 @@ const Radiobuttons1 = ({ selectBigVenue, setSelectBigVenue }) => {
 
   return (
     <form className="radio-big" tabIndex="0">
-      <h4 className="big-live-heading">What is your favourite big live music venue?
+      <h4 className="big-live-heading">What is your favourite big sized Stockholm live music venue?
       </h4>
 
       <label className="big-venue-heading" htmlFor="globe">

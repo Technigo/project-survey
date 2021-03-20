@@ -1,13 +1,15 @@
-.text-field {
+.radio-medium {
   position: absolute;
-  top: 533px;
+  top: 1042px;
   margin: 0.5rem 1.5rem 0 1.5rem;
   background-color: rgba(2, 2, 2, 0.63);
   border: solid 1px rgb(250, 246, 246);
   padding: 12px;
+  display: flex;
+  flex-direction: column;
 }
 
-.input-name-heading {
+.medium-live-heading {
   font-family: Rockwell;
   font-size: 1.2rem;
   color: rgb(250, 246, 246);
@@ -17,27 +19,39 @@
   font-weight: unset;
 }
 
-.input-field {
-  margin: 0 1rem 0 1.5rem;
+.medium-venue-heading {
+  font-family: Rockwell;
+  font-size: 1.2rem;
+  color: rgb(250, 246, 246);
+  margin: 4px;
+  line-height: 2rem;
+  display: flex;
+  align-items: baseline;
+}
+
+.medium-selection-dot {
+  margin-right: 1rem;
 }
 
 /* MEDIA QUERY TABLET */
 @media only screen and (min-width: 768px) {
 
-  .text-field {
-    top: 610px;
+  .radio-medium {
+    top: 1030px;
     margin-left: 3rem;
+    width: 647px;
   }
 }
   
 /* MEDIA QUERY DESKTOP */
   @media only screen and (min-width: 992px) {
 
-  .text-field {
-    top: 700px;
+  .radio-medium {
+    top: 1227px;
+    width: 883px;
   }
 
-  .input-name-heading {
+  .medium-live-heading, .medium-venue-heading {
     font-size: 1.6rem;
     line-height: 2.8rem;
   } 
@@ -47,12 +61,8 @@
 
 @media only screen and (min-width: 1200px) {
 
-  .text-field {
-    width: 785px;
-  }
-
-  .input-field {
-    width: 15rem;
-    height: 1.5rem;
-  }
+ .radio-medium {
+   top: 1184px;
+   width: 1286px;
+ }
 }

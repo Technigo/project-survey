@@ -1,6 +1,6 @@
 .radio-big {
   position: absolute;
-  top: 851px;
+  top: 840px;
   margin: 0.5rem 1.5rem 0 1.5rem;
   background-color: rgba(2, 2, 2, 0.63);
   border: solid 1px rgb(250, 246, 246);
@@ -37,6 +37,7 @@
 @media only screen and (min-width: 768px) {
 
   .radio-big {
+    top: 851px;
     margin-left: 3rem;
     width: 647px;
   }
