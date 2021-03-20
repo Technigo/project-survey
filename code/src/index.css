@@ -5,9 +5,81 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(201, 243, 245);
+  color: navy;
+  font-family: 'Droid Sans';
+  font-size: 20px;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.blanket {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.gender {
+  padding: 20px;
+}
+
+.anamnes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-size: 25px;
+}
+
+.box {
+  border: 2px solid rgb(78, 77, 77);
+  font-size: 14px;
+  color: #0c7cc2;
+  background-color: rgb(238, 238, 246);
+  border-radius: 5px;
+  box-shadow: 2px 3px 2px 2px rgba(7, 74, 100, 0.4);
+}
+
+.symptoms-header {
+  display: flex;
+  justify-content: center;
+  padding: 10px 0 15px 0;
+  font-size: 25px;
+}
+
+.checkboxes {
+  padding-bottom: 30px;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+}
+
+input[type=submit]:disabled {
+  background-color: rgb(235, 244, 245);
+  border: 2px solid rgb(213, 213, 248);
+  font-size: 15px;
+  font-weight: lighter;
+}
+
+input[type=submit] {
+  background-color: rgb(60, 255, 0);
+  border: 2px solid navy;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.underscore {
+  text-decoration: underline;
 }
