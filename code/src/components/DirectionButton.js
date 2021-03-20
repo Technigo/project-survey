@@ -25,7 +25,7 @@ export const DirectionButton = ({ onButtonClick, i, direction }) => {
   return (
     <button
       className="direction-button"
-      value={setButtonText()}
+      value={direction}
       onClick={onButtonClick}
       data-content={setButtonText()}
     ></button>
