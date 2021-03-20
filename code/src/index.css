@@ -16,12 +16,12 @@ code {
 
 .container {
   display: flex;
-  border: 1px solid black; 
-  
   
 }
-.form-container {
-  border: 1px solid red; 
+
+.hide {
+  display: none;
+ 
 }
 
 .name-input {

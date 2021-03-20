@@ -1,76 +1,82 @@
 import React, { useState} from 'react'
 
 const Form = () => {
-  const [name, setName] = useState(''); //current state, set state
-  const [dropdown, setDropdown] = useState(''); 
-  const [radio, setRadio] = useState('');
-  const [secondRadio, setSecondRadio] = useState('');
-  
-//array of radio buttons to map the data via props
+  const [name, setName] = useState('') //current state, set state
+  const [dropdown, setDropdown] = useState('') 
+  const [radio, setRadio] = useState('')
+  const [secondRadio, setSecondRadio] = useState('')
+ 
+
+//array of radio buttons to map the data 
 const bookDate = [
   'April 1st',
   'May 2nd',
   'July 13th',
-  'August 3rd'
+  'Aug 3rd',
+  'Sep 18th'
 ]
 const seatSection = [
-  'Stand Sec A',
-  'Stand Sec B',
-  'Sit Sec A',
-  'Sit Sec B'
+  'Standing',
+  'Section A',
+  'Section B',
+  'Section C',
+  'Section D'
 ]
+  
 
   const handleSubmit = (event) => {
-    event.preventDefault()
-   
+    event.preventDefault() 
+    
     alert (
-      `Confirmation of your purchase, 
-       Your name: ${name},
-       Artist: ${dropdown},
-       ${radio},
-       ${secondRadio}
+      `Confirmation of your purchase:
+
+       Your name: ${name}
+       Artist: ${dropdown}
+       Date: ${radio}
+       Section: ${secondRadio}
       `
     )
-   
-    console.log(event.target.value)
   }
   
   const onNameChange = (event) => {
-    console.log(`Name: ${event.target.value}`)
     setName (event.target.value) 
   }
   const onDropdownChange = (event) => {
-    console.log(`dropdown: ${event.target.value}`)
     setDropdown(event.target.value) 
   }
   const onRadioChange = (event) => {
-    console.log(`radio1: ${event.target.value}`)
     setRadio(event.target.value) 
   }
   const onRadioSecondChange = (event) => {
-    console.log(`radio2: ${event.target.value}`)
     setSecondRadio(event.target.value) 
   }
  
-  // const slider = document.getElementById("slider-choice");
-  // const output = document.getElementById("demo");
-  // output.innerHTML = slider.value;
+  const isSurveyComplete = () => {
+    if(name !== '' && dropdown !== '' && radio !== '' && secondRadio !== '' ){
+        return true;
+    }
+    return false;
+  }
+  if (isSurveyComplete()) {
+    alert(
+      `Confirmation of your purchase:
 
-  // slider.oninput = function() {
-  // output.innerHTML = {value};
-  // }
-  
+       Your name: ${name}
+       Artist: ${dropdown}
+       Date: ${radio}
+       Section: ${secondRadio}
+      `
+    )
+  }
+
   return (
     <form 
       className="form-container" 
       onSubmit={handleSubmit}
     >
-      <h2 className="header-name">
-        Thank you for chosing us for your next rock concert.
-      </h2>
-      <h2 className="header-name"> 
-        Please answer below question to purchase your tickets. 
-      </h2>
+      <h1 tabIndex="0" className="header-name">
+        Your next rock concert starts now!
+      </h1>
 {/* name input field */}
       <div className="container-input-fields">
         <div className="name-label">
@@ -96,7 +102,7 @@ const seatSection = [
       </div>
 {/* Question about date */}
       <div className="first-radio">
-        <h2 className="question-radio">When do you want to go?</h2>
+        <h3 tabIndex="0" className="question-radio">Date: </h3>
         {bookDate.map((date) => (
           <label key={date} htmlFor={date}>
           <input 
@@ -106,7 +112,6 @@ const seatSection = [
             value={date} 
             required
             onChange={onRadioChange}
-            //onChange={(event) => setRadio(event.target.value)}
             checked={radio === date}>
           </input>
           {date}   {/*why is this needed?? */}
@@ -115,7 +120,7 @@ const seatSection = [
       </div>
 {/* Question about Seat  */}
       <div className="question-radio">
-        <h2 className="question-radio">What section?</h2>
+        <h3 tabIndex="0" className="question-radio">Seat section:</h3>
         <div className="radio-wrapper">
          {seatSection.map((seat) => (
            <label key={seat} htmlFor={seat}>
@@ -126,58 +131,26 @@ const seatSection = [
              value={seat} 
              required
              onChange={onRadioSecondChange}
-            //  onChange={(event) => setSecondRadio(event.target.value)}
              checked={secondRadio === seat}>
            </input>
            {seat} 
            </label>
           ))}
         </div>
-
       </div>
-      {/* <div className= "slider-choice">
-        <h2>How many tickets are you buying today?</h2>
-        <input type="range" min="1" max="100" value="0" className="slider" id="slider-range">
-      </div> */}
+{/* submit form */}
       <button 
         className="submit-button" 
-        onSubmit={handleSubmit} 
+        onSubmit={handleSubmit}
         type="submit">
         BUY TICKETS
       </button>
+
     </form>
-   
-  )
-  
+  )  
  }
 
 export default Form; 
 
-  // if (showSummary === true) {
-  //   console.log('showSummary')
-  // }
-  
-  // else {
    
-
-// const isSurveyComplete = () => {
-//   if (name === ""){
-//       return false; 
-//     }
-// if (dropdown === ""){
-//   return false; 
-// }
-// if (radio === "") {
-//   return false; 
-// }
-// if (secondRadio === ""){
-//   return false; 
-// }
-// return true; 
-// };
-
-// if (isSurveyComplete()) {
-//   console.log(`Survey Complete!`);
-//   alert("Form submitted!")
-// }
 
