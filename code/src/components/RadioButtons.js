@@ -18,6 +18,7 @@ return (
       {timeIntervals.map(interval => (
         <label tabIndex='0' key={interval} className='button-box'>
         <input 
+        name='interval'
         type='radio'  
         value={interval}
         onChange={(event) => setTimeInterval(event.target.value)}
