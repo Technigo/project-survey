@@ -3,6 +3,7 @@ import QuestionWrapper from './QuestionWrapper'
 import questionData from '../questionData.json'
 import playbookData from '../playbookData.json'
 import SubmitButton from './SubmitButton'
+import NavWrapper from './NavWrapper'
 
 //TO-DO:
 //[X] Set up hooks for each question storing the user's current input
@@ -24,12 +25,20 @@ import SubmitButton from './SubmitButton'
 // }
 
 export const App = () => {
+  const lastPage = 4 //USED!!!!!!
+
   const [magic, setMagic] = useState(null)
   const [tech, setTech] = useState(null)
   const [hijinx, setHijinx] = useState(null)
   const [grim, setGrim] = useState(null)
   const [spiritual, setSpiritual] = useState(null)
 
+  //USED!!!!
+  const [source, setSource] = useState("")
+  const [currentPage, setCurrentPage] = useState(1)
+  const [problem, setProblem] = useState({isProblem:false,explanation:"default error! :D"})
+  
+  //USED!!!!
   const [bestAt, setBestAt] = useState("")
   const [nextToBestAt, setNextToBestAt] = useState("")
   const [worstAt, setWorstAt] = useState("")
@@ -62,6 +71,34 @@ export const App = () => {
 
   const onSpiritualChange = (value) => {
     setSpiritual (value)    
+  }
+
+  //actually USED:
+  const onSourceChange = (value) => {
+    setSource (value)
+  }
+
+  const alerter = () => {
+    
+  }
+
+  const onCurrentPageChange = (value) => {
+    
+    //console.log(problem.explanation)
+
+    //problem.isProblem = true
+
+    if (value === 1 && problem.isProblem === true) {
+      alert(problem.explanation)
+    } else {
+      if (value === -1 && currentPage === 1) {
+        //do nothing as to never go below first page
+      } else if (value === 1 && currentPage === lastPage) {
+        //do nothing as to never go beyond the last page
+      } else {
+        setCurrentPage (currentPage + value)
+      }
+    }
   }
 
   //dropdown states
@@ -149,36 +186,72 @@ export const App = () => {
 
   const onSubmit = () => {
     
+    const playbooks = playbookData
+    filterPlaybooks(source, playbooks)
 
     //NEEDS TO SHOW SUMMARY AND HIDE OPTIONS (a re-render, not toggling display in css)!
     
-    const choice = {
-      magical: magic,
-      spiritual: spiritual,
-      toolsNTech: tech,
-      grim: grim,
-      hijinx: hijinx,
-      bestAt: bestAt,
-      nextToBestAt: nextToBestAt,
-      worstAt: worstAt,
-      usesSTR: str,
-      usesDEX: dex,
-      usesCON: con,
-      usesINT: int,
-      usesWIS: wis,
-      usesCHA: cha
-    }
-    const playbooks = playbookData
+    // const choice = {
+    //   magical: magic,
+    //   spiritual: spiritual,
+    //   toolsNTech: tech,
+    //   grim: grim,
+    //   hijinx: hijinx,
+    //   bestAt: bestAt,
+    //   nextToBestAt: nextToBestAt,
+    //   worstAt: worstAt,
+    //   usesSTR: str,
+    //   usesDEX: dex,
+    //   usesCON: con,
+    //   usesINT: int,
+    //   usesWIS: wis,
+    //   usesCHA: cha
+    // }
+    // playbooks = playbookData
 
-    if(choice.bestAt === choice.nextToBestAt || choice.worstAt === choice.nextToBestAt || choice.worstAt === choice.bestAt) {
-      console.log("no you IDIOT!!")
-    } else {
-      filterPlaybooks(choice, playbooks)
-    }
+    // if(choice.bestAt === choice.nextToBestAt || choice.worstAt === choice.nextToBestAt || choice.worstAt === choice.bestAt) {
+    //   console.log("no you IDIOT!!")
+    // } else {
+    //   oldFilterPlaybooks(choice, playbooks)
+    // }
     
   }
 
-  const filterPlaybooks = (choice, playbooks) => {
+  const filterPlaybooks = (priority, playbooks) => {
+    //should NOT need to loop, as I can handle the asymettry HERE inside
+    
+    let playbooksFiltered = playbooks
+
+    switch (priority) {
+      case "magic":
+        playbooksFiltered = playbooks.filter(element => {
+          return element.magical > 2 && element.spiritual < 3
+        })
+        console.log("prioritized magic")
+        break
+      case "spiritual":
+        playbooksFiltered = playbooks.filter(element => {
+          return element.spiritual > 1
+        })
+        console.log("prioritized spiritualism")
+        break
+      case "tech":
+        playbooksFiltered = playbooks.filter(element => {
+          return element.toolsNTech > 2
+        })
+        console.log("prioritized tech")
+        break
+      case "skill":
+        playbooksFiltered = playbooks.filter(element => {
+          return element.magical < 3 && element.spiritual < 3 && element.toolsNTech < 3
+        })
+        console.log("prioritized skill")
+        break
+    }
+    console.log(playbooksFiltered)
+    return playbooksFiltered
+  }
+  const oldFilterPlaybooks = (choice, playbooks) => {
     
     //before filtering; status check
     console.log("user choices:")
@@ -274,10 +347,10 @@ export const App = () => {
     console.log("after hijinx:")
     console.log(hijinxFiltered)
 
-    //__________ BEST AT __________
+    //__________ BEST AT __________ [WARNING!: STILL RELIES ON HIJINXFILTERED]
     
     //create new array based on previous filter array
-    let bestAtFiltered = hijinxFiltered
+    let bestAtFiltered = hijinxFiltered //[WARNING!: STILL RELIES ON HIJINXFILTERED]
 
     switch (choice.bestAt) {
       case "STR":
@@ -385,9 +458,88 @@ export const App = () => {
     setCha (value)    
   }
 
+  //Conditional page rendering
+  switch (currentPage) {
+    case 1:
+      return (
+        <>
+          <NavWrapper
+            navigate={onCurrentPageChange}
+            currentPage={currentPage}
+            lastPage={lastPage}
+          />
+        </>
+      )
+      
+    case 2:
+      return (
+        <>
+          <QuestionWrapper 
+          question={questionData.questions.question_source}
+          toChange={onSourceChange}
+          />
+          <NavWrapper
+            navigate={onCurrentPageChange}
+            currentPage={currentPage}
+            lastPage={lastPage}
+          />
+        </>
+      )
+      
+    case 3:
+      return (
+        <>
+          <div className="stat-questions-wrapper">
+            <QuestionWrapper 
+              question={questionData.questions.statQuestions.bestAt}
+              options={questionData.questions.statQuestions.options}
+              toChange={onBestAtChange}
+              skillLevel = {bestAt}
+            />
+            <QuestionWrapper 
+              question={questionData.questions.statQuestions.nextToBestAt}
+              options={questionData.questions.statQuestions.options}
+              toChange={onNextToBestAtChange}
+              skillLevel = {nextToBestAt}
+            />
+            <QuestionWrapper 
+              question={questionData.questions.statQuestions.worstAt}
+              options={questionData.questions.statQuestions.options}
+              toChange={onWorstAtChange}
+              skillLevel = {worstAt}
+            />
+            <NavWrapper
+              navigate={onCurrentPageChange}
+              currentPage={currentPage}
+              lastPage={lastPage}
+            />
+          </div>
+          <div className="playbooks-wrapper">
+
+          </div>
+        </>
+      )
+
+      case 4:
+      return (
+        <>
+          <NavWrapper
+            navigate={onCurrentPageChange}
+            currentPage={currentPage}
+            lastPage={lastPage}
+          />
+        </>
+      )
+      
+  }
+
   return (
     <div>
-      <QuestionWrapper 
+      <SubmitButton 
+            onSubmit={onSubmit}
+          />
+      
+      {/* <QuestionWrapper 
         question={questionData.questions.question_magic}
         toChange={onMagicChange} 
         
@@ -411,32 +563,11 @@ export const App = () => {
         question={questionData.questions.question_hijinx} 
         toChange={onHijinxChange}
         
-      />
-      <QuestionWrapper 
-        question={questionData.questions.statQuestions.bestAt}
-        options={questionData.questions.statQuestions.options}
-        toChange={onBestAtChange}
-        skillLevel = {bestAt}
-      />
-      <QuestionWrapper 
-        question={questionData.questions.statQuestions.nextToBestAt}
-        options={questionData.questions.statQuestions.options}
-        toChange={onNextToBestAtChange}
-        skillLevel = {nextToBestAt}
-      />
-      <QuestionWrapper 
-        question={questionData.questions.statQuestions.worstAt}
-        options={questionData.questions.statQuestions.options}
-        toChange={onWorstAtChange}
-        skillLevel = {worstAt}
-      />
-
-      <SubmitButton 
-        onSubmit={onSubmit}
-      />
+      /> */}
+      
 
       <div>
-        <p>// Hijinx: {hijinx} // Magic: {magic} // Tech: {tech} // Spiritual: {spiritual} // Grim: {grim} //</p> 
+        <p>// Source: {source} // Hijinx: {hijinx} // Magic: {magic} // Tech: {tech} // Spiritual: {spiritual} // Grim: {grim} //</p> 
         <p>// STR: {str} // DEX: {dex} // CON: {con} //</p>
         <p>// INT: {int} // WIS: {wis} // CHA: {cha}//</p>
       </div>

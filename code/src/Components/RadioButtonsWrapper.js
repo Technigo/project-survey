@@ -25,6 +25,13 @@ const RadioButtonWrapper = (props) => {
                     optionNumber={2}
                 />
             </div>
+            <div className="button-label-wrapper">
+                <RadioButton 
+                    question={props.question}
+                    toChange={props.toChange}
+                    optionNumber={3}
+                />
+            </div>
         </form>
     )
 }

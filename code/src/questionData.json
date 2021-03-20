@@ -3,18 +3,36 @@
         "text": "intro text"
     },
     "questions": {
+        "question_source": {
+            "type":"radio",
+            "text": "Where do their signature abilities come from?",
+            "options": [   
+                {
+                    "label":"Skillful magic use", "value": "magic"
+                },
+                {
+                    "label":"Strong faith in the divine or mystical", "value": "spiritual"
+                },
+                {
+                    "label": "Use of advanced technology, either magically based or purely scientific", "value": "tech"
+                },
+                {
+                    "label": "Mastery of their craft, their mind or their body", "value": "skill"
+                }
+            ]
+        },
         "question_magic": {
             "type":"radio",
             "text": "Do you want them to use magic?",
             "options": [   
                 {
-                    "label":"Yes, lots!", "option": 4
+                    "label":"Yes, lots!", "value": 4
                 },
                 {
-                    "label":"Maybe some, or if it is subtle?", "option": 2
+                    "label":"Maybe some, or if it is subtle?", "value": 2
                 },
                 {
-                    "label": "Nope, no magic", "option": 0
+                    "label": "Nope, no magic", "value": 0
                 }
             ],
             "onChangeName": "onMagicChange"
@@ -24,13 +42,13 @@
             "text": "Are their abilities tied to religion or mysticism?",
             "options": [   
                 {
-                    "label":"Yes, their powers have spiritual ties", "option": 4
+                    "label":"Yes, their powers have spiritual ties", "value": 4
                 },
                 {
-                    "label":"Maybe?", "option": 2
+                    "label":"Maybe?", "value": 2
                 },
                 {
-                    "label": "Nope, powers ain't spiritual", "option": 0
+                    "label": "Nope, powers ain't spiritual", "value": 0
                 }
             ],
             "onChangeName": "onSpiritualChange"
@@ -40,13 +58,13 @@
             "text": "Do you want them to use special tools, technology or magitech?",
             "options": [   
                 {
-                    "label":"Yes, let’s go high-tech/magitech!", "option": 4
+                    "label":"Yes, let’s go high-tech/magitech!", "value": 4
                 },
                 {
-                    "label":"Maybe some special tool use, but not high-tech or magitech", "option": 2
+                    "label":"Maybe some special tool use, but not high-tech or magitech", "value": 2
                 },
                 {
-                    "label": "Nope, no tech or special tools", "option": 0
+                    "label": "Nope, no tech or special tools", "value": 0
                 }
             ],
             "onChangeName": "onTechChange"
@@ -56,13 +74,13 @@
             "text": "How grim or dark are your character’s abilities?",
             "options": [   
                 {
-                    "label":"Very grim!", "option": 4
+                    "label":"Very grim!", "value": 4
                 },
                 {
-                    "label":"Not necessarily grim, but could be?", "option": 2
+                    "label":"Not necessarily grim, but could be?", "value": 2
                 },
                 {
-                    "label": "I want them the opposite of grim!", "option": 0
+                    "label": "I want them the opposite of grim!", "value": 0
                 }
             ],
             "onChangeName": "onGrimChange"
@@ -72,13 +90,13 @@
             "text": "Do you want abilities extra suitable for hijinx?",
             "options": [   
                 {
-                    "label":"Yes, can’t wait to get up to all sorts of wild shenanigans!", "option": 4
+                    "label":"Yes, can’t wait to get up to all sorts of wild shenanigans!", "value": 4
                 },
                 {
-                    "label":"Some versatility would be nice, but I don't need anything crazy", "option": 2
+                    "label":"Some versatility would be nice, but I don't need anything crazy", "value": 2
                 },
                 {
-                    "label": "I’d like more down-to-earth abilities, forcing me to be creative in their use", "option": 0
+                    "label": "I’d like more down-to-earth abilities, forcing me to be creative in their use", "value": 0
                 }
             ],
             "onChangeName": "onHijinxChange"
@@ -89,22 +107,22 @@
             "worstAt": {"text": "What are they worst at?", "type":"dropDown"},
             "options": [   
                 {
-                    "label":"Strength and athleticism", "option": "STR"
+                    "label":"Strength and athleticism", "value": "STR"
                 },
                 {
-                    "label":"Nimbleness and precision", "option": "DEX"
+                    "label":"Nimbleness and precision", "value": "DEX"
                 },
                 {
-                    "label":"Resilience and protecting others", "option": "CON"
+                    "label":"Resilience and protecting others", "value": "CON"
                 },
                 {
-                    "label":"Knowledge and quick thinking", "option": "INT"
+                    "label":"Knowledge and quick thinking", "value": "INT"
                 },
                 {
-                    "label":"Instincts and magic", "option": "WIS"
+                    "label":"Instincts and magic", "value": "WIS"
                 },
                 {
-                    "label":"Social skills and deception", "option": "CHA"
+                    "label":"Social skills and deception", "value": "CHA"
                 }
             ]
         }

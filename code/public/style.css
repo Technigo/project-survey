@@ -1,3 +1,6 @@
+/* :root {
+    min-height: 500px;
+} */
 
 body {
     margin: 50px;
@@ -18,4 +21,12 @@ body {
 
 label {
     margin-left: 5px;
+}
+
+.nav-wrapper {
+    /* position: absolute;
+    top: 500px; */
+    align-self: flex-end;
+    display: flex;
+    justify-content: space-around;
 }
