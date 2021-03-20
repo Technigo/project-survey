@@ -1,14 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
 import "./components.css";
 
-const Result = ( {onTimeOrRoundsChange, onResultChange, result}) => {
- 
-
+const Result = ({ onTimeOrRoundsChange, onResultChange, result }) => {
   return (
     <>
-      <h3>Add your result</h3>
       <form>
+        <h3>Add your result</h3>
         <div>
           <p>Are you giving your result as time or as rounds?</p>
           <label htmlFor="time">Time</label>
@@ -29,7 +27,12 @@ const Result = ( {onTimeOrRoundsChange, onResultChange, result}) => {
           />
         </div>
         <div>
-          <p>Write your result there <span role="img" alt="finger pointing right">👉</span></p>
+          <p>
+            Write your result there{" "}
+            <span role="img" alt="finger pointing right">
+              👉
+            </span>
+          </p>
           <input
             id="name"
             type="text"
@@ -37,7 +40,6 @@ const Result = ( {onTimeOrRoundsChange, onResultChange, result}) => {
             onChange={onResultChange}
           />
         </div>
-        <button>Click to get the summary</button>
       </form>
     </>
   );

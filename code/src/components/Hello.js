@@ -18,7 +18,6 @@ const Hello = ( {onNameChange, name}) => {
             }}
           />
         </div>
-        <button>Click to select week</button>
       </form>
     </>
   );

@@ -13,6 +13,8 @@ export const App = () => {
   const [whichWeek, setWhichWeek] = useState("");
   const [timeOrRounds, setTimeOrRounds] = useState("");
   const [result, setResult] = useState("");
+  const [question, setQuestion] = useState(1);
+  const [isSubmitted, setIsSubmitted] = useState(false);
 
   const onNameChange = (e) => {
     console.log(`Name: ${e.target.value}`);
@@ -34,18 +36,53 @@ export const App = () => {
     setResult(e.target.value);
   };
 
-  return (
-    <>
-      <div className="survey-container">
-        <Header />
-        <Hello onNameChange={onNameChange} />
-        <Week onWhichWeekChange={onWhichWeekChange} />
-        <Result
-          onTimeOrRoundsChange={onTimeOrRoundsChange}
-          onResultChange={onResultChange}
-        />
-        <Summary value={name} value={whichWeek} value={result} />
-      </div>
-    </>
-  );
+  const onQuestionIncrease = () => {
+    setQuestion(question + 1);
+  };
+
+  if (isSubmitted === false && question === 1) {
+    return (
+      <>
+        <div className="survey-container">
+          <Header />
+          <Hello onNameChange={onNameChange} />
+          <button onClick={onQuestionIncrease}>Next Question</button>
+        </div>
+      </>
+    );
+  } else if (isSubmitted === false && question === 2) {
+    return (
+      <>
+        <div className="survey-container">
+          <Header />
+          <Week onWhichWeekChange={onWhichWeekChange} />
+          <button onClick={onQuestionIncrease}>Next Question</button>
+        </div>
+      </>
+    );
+  } else if (isSubmitted === false && question === 3) {
+    return (
+      <>
+        <div className="survey-container">
+          <Header />
+          <Result
+            onTimeOrRoundsChange={onTimeOrRoundsChange}
+            onResultChange={onResultChange}
+          />
+          <button onClick={onQuestionIncrease}>Next Question</button>
+        </div>
+      </>
+    );
+  } else  {
+    return (
+      <>
+        <div className="survey-container">
+          <Header />
+          <Summary value={name} value={whichWeek} value={result} />;
+        </div>
+      </>
+    );
+  }
 };
+
+

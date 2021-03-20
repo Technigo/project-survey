@@ -8,8 +8,6 @@ const Summary = ( { value } ) => {
         <div>
             <h3>Summary:</h3>
             <p>{value}</p>
- 
-           
         </div>
         </>
     )
