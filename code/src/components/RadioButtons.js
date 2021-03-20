@@ -12,7 +12,7 @@ const RadioButtons = ({timeInterval, setTimeInterval}) => {
 
 return (
   <div className='button-container'>
-    <p className='p-button-box'tabIndex='0'>How often do you crave the cream?</p> 
+    <h3 className='p-button-box'tabIndex='0'>How often do you crave the cream?</h3> 
 
     <div className='button-small-box'>
       {timeIntervals.map(interval => (

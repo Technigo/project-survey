@@ -5,7 +5,7 @@ const DropDown = ({favorite, setFavorite}) => {
   
 return (
   <div className='drop-down-box'>
-    <p className='p-drop-down-box'tabIndex='0'>What flavor rock your boat &#38; get your brain freeze on?!</p>
+    <h3 className='p-drop-down-box'tabIndex='0'>What flavor rock your boat &#38; get your brain freeze on?!</h3>
     <label className='pick-favorite'tabIndex='0'>Pick your favorite:</label>
     <select className='pick-field'
     onChange={event => setFavorite(event.target.value)}
