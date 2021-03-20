@@ -1,6 +1,6 @@
-.radio-big {
+.radio-small {
   position: absolute;
-  top: 840px;
+  top: 1245px;
   margin: 0.5rem 1.5rem 0 1.5rem;
   background-color: rgba(2, 2, 2, 0.63);
   border: solid 1px rgb(250, 246, 246);
@@ -9,7 +9,7 @@
   flex-direction: column;
 }
 
-.big-live-heading {
+.small-live-heading {
   font-family: Rockwell;
   font-size: 1.2rem;
   color: rgb(250, 246, 246);
@@ -19,7 +19,7 @@
   font-weight: unset;
 }
 
-.big-venue-heading {
+.small-venue-heading {
   font-family: Rockwell;
   font-size: 1rem;
   color: rgb(250, 246, 246);
@@ -29,15 +29,15 @@
   align-items: baseline;
 }
 
-.big-selection-dot {
+.small-selection-dot {
   margin-right: 1rem;
 }
 
 /* MEDIA QUERY TABLET */
 @media only screen and (min-width: 768px) {
 
-  .radio-big {
-    top: 851px;
+  .radio-small {
+    top: 1210px;
     margin-left: 3rem;
     width: 647px;
   }
@@ -46,12 +46,12 @@
 /* MEDIA QUERY DESKTOP */
   @media only screen and (min-width: 992px) {
 
-  .radio-big {
-    top: 998px;
+  .radio-small {
+    top: 1455px;
     width: 883px;
   }
 
-  .big-live-heading, .big-venue-heading {
+  .small-live-heading, .small-venue-heading {
     font-size: 1.6rem;
     line-height: 2.8rem;
   } 
@@ -61,8 +61,8 @@
 
 @media only screen and (min-width: 1200px) {
 
- .radio-big {
-   top: 956px;
+ .radio-small {
+   top: 1417px;
    width: 1286px;
  }
 }

@@ -1,13 +1,17 @@
 import React from "react";
 
+import './Radiobuttons3.css'
+
 const Radiobuttons3 = ({ selectSmallVenue, setSelectSmallVenue }) => {
 
   return (
-    <form tabIndex="0">
-      What is your favourite smaller live music venue?
-
-      <label htmlFor="berns">
+    <form className="radio-small" tabIndex="0">
+      <h4 className="small-live-heading">What is your favourite smaller sized Stockholm live music venue?
+      </h4>
+  
+      <label className="small-venue-heading" htmlFor="berns">
         <input
+          className="small-selection-dot"
           id="berns"
           type="radio"
           value="Berns"
@@ -17,8 +21,9 @@ const Radiobuttons3 = ({ selectSmallVenue, setSelectSmallVenue }) => {
        Berns
        </label>
 
-       <label htmlFor="debaser">
+       <label className="small-venue-heading" htmlFor="debaser">
         <input
+          className="small-selection-dot"
           id="debaser"
           type="radio"
           value="Debaser"
@@ -28,8 +33,9 @@ const Radiobuttons3 = ({ selectSmallVenue, setSelectSmallVenue }) => {
       Debaser
        </label>
 
-      <label htmlFor="nalen">
+      <label className="small-venue-heading" htmlFor="nalen">
         <input
+          className="small-selection-dot"
           id="nalen"
           type="radio"
           value="Nalen"
