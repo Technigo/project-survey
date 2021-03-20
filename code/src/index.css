@@ -39,6 +39,10 @@ h3, .question {
   padding: 20px 0;
 }
 
+.button {
+  pointer-events: auto;
+}
+
 @media (min-width: 768px) {
   body {
     width: 768px;
