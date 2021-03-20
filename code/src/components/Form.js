@@ -46,7 +46,7 @@ const Form = () => {
   //Funcion that handles submit form 
   const handleSubmit = (event) => {
     event.preventDefault();
-    const regex = /^[a-zA-Z]+$/
+    const regex = /^[a-zA-Z ]+$/
     if(!(regex.test(name))) {
       alert("A name cannot contain numbers")
     } else {setSummaryHidden(false)}
