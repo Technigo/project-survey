@@ -1,14 +1,17 @@
 import React, { useState } from 'react'
-import Summary from 'components/Summary'
-import CountryInputRadioButton from 'components/CountryInputRadioButton'
+
+import Intro from 'components/Intro'
 import NameInputText from 'components/NameInputText'
+import CountryInputRadioButton from 'components/CountryInputRadioButton'
 import CompanionDropDown from 'components/CompanionDropDown'
 import ActivityInputRadioButton from './ActivityInputRadioButton'
+import Summary from 'components/Summary'
 
 const Form = () => {
 
 //STATES
- 
+
+
 const [name, setName] = useState('')
 const [country, setCountry] = useState('')
 const [companion, setCompanion] = useState('')
@@ -43,6 +46,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
     console.log(e.target.value);
     setCompanion(e.target.value);
   }
+
   const onActivityChange = (e) => {
     console.log(e.target.value);
     setActivity(e.target.value);
@@ -52,22 +56,24 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
 
   return (
     <>
-      
+      <main className='main-container'>
       {!summary && ( 
 
         <form onSubmit={handleSubmit}>
-          
-          <> 
+
+          <section className='intro'>
+            <Intro />
+          </section>
+          <section className='question-container'> 
             <NameInputText
-             question={'What is your name?'}
-             nameValue={name} 
-             onNameChangeFunction={onNameChange}
-             
+              question={'1. What is your name?'}
+              nameValue={name} 
+              onNameChangeFunction={onNameChange}
             />
-          </> 
+          </section> 
         
-          <>
-            <p>2. Which country you want to travel to and spend 10 wonderful days?</p>
+          <section className='question-container'>
+            <h1>2. Choose a country for your next adventure:</h1>
             {countries.map((country) => 
               <CountryInputRadioButton
                 key={country} 
@@ -75,18 +81,18 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
                 onCountryChangeFunction={onCountryChange}
               />
             )}
-          </>
+          </section>
 
-          <>
+          <section className='question-container'>
             <CompanionDropDown
-            question={'Who would you like to take with you on this trip?'}
+            question={'3. Who are you taking with you on this trip?'}
             dropDownvalue = {companion}
             onCompanionChangeFunction = {onCompanionChange}
             />
-          </>
+          </section>
                 
-          <>
-            <p>4. What's the main activity you are looking forward to?</p>
+          <section className="last-container">
+            <h1>4. What's the main activity you are looking forward to?</h1>
             {activities.map((activity) =>
               <ActivityInputRadioButton
                 key={activity} 
@@ -94,11 +100,15 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
                 onActivityChangeFunction = {onActivityChange} 
               />
             )}
-            <button 
-              onSubmit= {handleSubmit}
-              type="submit"
-            >Submit</button>
-          </>
+            <div className="button-section"> 
+              <button 
+                onSubmit= {handleSubmit}
+                type="submit"
+                className='circleScaleBtn'
+
+              ><span>Submit</span></button>
+            </div>  
+          </section>
         </form> 
 
       )} 
@@ -106,18 +116,22 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
       {( 
         <>
           {summary && 
-          <Summary
-            nameValue={name}
-            countryValue={country}
-            companionValue={companion}
-            activityValue={activity}
-          />
+            <section className="summary">
+              <Summary
+                nameValue={name}
+                countryValue={country}
+                companionValue={companion}
+                activityValue={activity}
+              />
+            </section>
           }
         </>
       )}
-    </> 
+    </main> 
 
+    </> 
+  
   )
 }
 
-export default Form 
+export default Form
