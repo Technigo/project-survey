@@ -13,6 +13,10 @@ code {
     monospace;
 }
 
+img {
+  width: 100px;
+}
+
 .header-title {
   text-align: center;
   padding-bottom: 40px;
@@ -28,7 +32,24 @@ code {
 
 button {
   margin-top: 20px;
-  padding: 10px 15px;
+  padding: 15px 25px;
+  font-size: 20px;
+  cursor: pointer;
+  text-align: center;
+  outline: none;
+  color: #fff;
+  background-color: #e94545;
+  border: none;
   border-radius: 30px;
-  box-shadow: 5px 5px orangered;
+  box-shadow: 0 9px #2C201F;
+}
+
+button:hover {
+  background-color: #fb0000
+}
+
+button:active {
+  background-color: #e94545;
+  box-shadow: 0 1px black;
+  transform: translateY(6px);
 }
