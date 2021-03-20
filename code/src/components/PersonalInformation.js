@@ -33,7 +33,6 @@ const PersonalInformation = ({name, setName, email, setEmail}) => {
                     className="text-input"
                 />
                 
-                <h2>Indicate your age group (optional)</h2>
             </div>
 
         )
