@@ -1,7 +1,7 @@
 import React from 'react'
 
 const Checkboxes = (props) => {
-  let { label, inputId, values, placeholder, onInputResponse, options } = props
+  let { label, inputId, values, onInputResponse, options } = props
   let value = values[inputId]
 console.log(value)
   return (

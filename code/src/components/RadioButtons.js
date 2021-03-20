@@ -1,7 +1,7 @@
 import React from 'react'
 
 const RadioButtons = (props) => {
-  let { label, inputId, values, placeholder, onInputResponse, options } = props
+  let { label, inputId, values, onInputResponse, options } = props
   let value = values[inputId]
 console.log(values)
   return (

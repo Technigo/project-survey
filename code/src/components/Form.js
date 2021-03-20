@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Question from './Question'
 import Summary from './Summary'
 import Confirmation from './Confirmation'
-import Button from './Button'
 
 const defaultValues = () => {
   return {
@@ -142,6 +141,7 @@ const Form = () => {
   switch (formStatus) {
     case 'question' :
       return (
+        <form name="form" data-netlify="true">
         <Question 
         values={values}
         step={step}
@@ -149,6 +149,7 @@ const Form = () => {
         onInputResponse={onInputResponse}
         onButtonResponse={onButtonResponse}
         />
+        </form>
       )
     case 'summary' :
       return (
