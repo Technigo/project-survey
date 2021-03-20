@@ -4,71 +4,55 @@ import { Heading } from 'components/Header.js'
 import { Input1 } from 'components/Input1.js'
 import { Input2 } from 'components/Input2.js'
 import { Input3 } from 'components/Input3.js'
-
-
-// const isSurveyComplete = () => {
- 
-//   if (activity === '') {
-//     return false
-//   }
-
-//   if (month === '') {
-//     return false
-//   }
-
-//   if (temperature === '') {
-//     return false
-//   }
-//   return true
-// }
-
-// if (isSurveyComplete()) {
-//   console.log('Survey complete!')
-// }
-
+import { Submit } from 'components/Submit.js'
+import { SummaryWrapper } from 'components/Summary'
 
 export const App = () => {
 
+//useState Hooks
   const [activity, setActivity] = useState('')
   const [month, setMonth] = useState('')
   const [temperature, setTemperature] = useState()
+  const [summary, setSummary] = useState(false)
 
-   return (
-    <div>
-      < Heading
-        subheading="Whats your Vacay Mode?!"
-      />
-      <form className="form">
-        <div className="input-one text-input">
-          < Input1
-            //question="Favourite vacation activity"
-            //type="text" // maybe use name of component instead to specify type
-            setActivity={setActivity}
-            activity={activity}
+  return (
+     <>
+     {!summary ? (
+      <div>
+        < Heading
+          heading="Whats your Vacation Style?"
+        />
+        <form className="form">
+          <div className="input-one">
+            < Input1
+              setActivity={setActivity}
+              activity={activity}
+            />
+          </div>
+          <div className="input-two">
+            < Input2
+              setMonth={setMonth}
+              month={month}
+            />
+          </div>
+          <div className="input-three">
+            < Input3
+              setTemperature={setTemperature}
+              temperature={temperature}
+            />
+          </div>
+          < Submit 
+            setSummary={setSummary}
           />
-        </div>
-        <div className="input-two select-input">
-          < Input2
-            //question="Best summer month"
-            //type="select"
-            //options={optionsQuestionTwo}
-            setMonth={setMonth}
-            month={month}
+          </form> 
+      </div> 
+         ):(
+            < SummaryWrapper 
+                activity={activity} 
+                month={month} 
+                temperature={temperature}
           />
-        </div>
-        <div className="input-three radio-input">
-          < Input3
-            //question="Preferred temperature"
-            //type="radio"
-            //options={optionsQuestionThree}
-            setTemperature={setTemperature}
-            temperature={temperature}
-          />
-        </div>
-        <input type="submit">
-        </input>
-      </form> 
-    </div> 
-
-  )
+          )}
+        </>
+    )
 }

@@ -14,25 +14,31 @@ export const Input2 = ({setMonth, month}) => {
         <h3>
           Best summer month
         </h3>
-      </div>       
-      <select 
-        type="select"
-        onChange={(event) => {onMonthChange(event)}}
-        value={month}
-      >
+      </div>
+      <label>
+        Make your pick:       
+        <select 
+          type="select"
+          onChange={(event) => {onMonthChange(event)}}
+          value={month}
+          required
+          aria-label='Select your favourite summer month'
+        >
+        
+          {optionsQuestionTwo.map((month) => {
+            return (
+              <option 
+                key={month}
+                value={month}
+              >
+                {month}
+              </option>
+            )
+          })
+        }
+        </select>
+      </label> 
       
-        {optionsQuestionTwo.map((month) => {
-          return (
-            <option 
-              key={month}
-              value={month}
-            >
-               {month}
-            </option>
-          )
-        })
-      }
-      </select>
     </div>
   )
 }

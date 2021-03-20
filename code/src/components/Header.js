@@ -2,9 +2,9 @@ import React from 'react'
 
 export const Heading = (props) => {
   return (
-    <header>
-      <h1>My Important Survey</h1>
-      <h2>{props.subheading}</h2>
+    <header className="header">
+      <h2>My Important Survey</h2>
+      <h1>{props.heading}</h1>
     </header>
   )
 }

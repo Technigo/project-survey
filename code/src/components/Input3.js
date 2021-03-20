@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
 
-// Do I need a separate mapping for radio options & radio labels?
-
 const optionsQuestionThree = ['< 20', '20-25', '25 <']
 
 export const Input3 = ({temperature, setTemperature}) => {
@@ -18,17 +16,20 @@ export const Input3 = ({temperature, setTemperature}) => {
       </h3>
 
       <div>
-        {optionsQuestionThree.map((temperature) => {
+        {optionsQuestionThree.map((temperatureChoice) => {
           return (
-            <div key={temperature}>
+            <div key={temperatureChoice}>
               <label>
-                {temperature}
+                {temperatureChoice}
                   <input 
-                    id={temperature} 
+                    id={temperatureChoice} 
+                    name='temperature'
                     type="radio"
-                    value={temperature}
+                    value={temperatureChoice}
+                    required
+                    aria-label='select your preferred summer temperature'
                     onChange={(event) => {onTemperatureChange(event)}}
-                    // checked={temperature === temperature} // Går välja flera om jag tar bort denna
+                    checked={temperature === temperatureChoice} // Går välja flera om jag tar bort denna
                   />
               </label>              
             </div>
