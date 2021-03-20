@@ -2,7 +2,6 @@ import React from 'react';
 
 export const Age = ({age, setAge}) => {
     const onAgeChange = (e) => {
-        console.log(`Age ${e.target.value}`);
         setAge(e.target.value);
     }
 

@@ -2,7 +2,6 @@ import React from 'react';
 
 export const CheckBoxes = ({ stack, onChange }) => {
     const onCheckChange = (e) => {
-        console.log(`Stack: ${e.target.checked}`);
         onChange(e.target.checked, stack);
     }
     return (

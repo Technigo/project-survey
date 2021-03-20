@@ -8,7 +8,7 @@ import { SubmitButton } from './SubmitButton'
 
 
 const careerPaths= ['Frontend', 'Backend', 'Fullstack']
-const stacks = ['JS', 'CSS', 'HTML', 'React', 'Ruby on Rails', 'Angular', 'Vue', 'C#']
+const stacks = ['JS', 'CSS', 'HTML', 'React', 'Ruby', 'Angular', 'Vue', 'C#']
 
 export const Form = ({ onSubmit }) => {
 
@@ -19,30 +19,6 @@ export const Form = ({ onSubmit }) => {
     const [radio, setRadio] = useState('');
     const [selectedStacks, setSelectedStacks] = useState ([]);
     const [section, setSection] = useState('welcome')
-    
-    const isSurveyComplete = () => {
-        if (name === '') {
-          return false;
-        }
-    
-        if (location === '') {
-          return false;
-        }
-    
-        if (age === '') {
-          return false;
-        }
-
-        if (radio === '') {
-          return false;
-        }
-    
-        return true;
-    };
-    
-    if (isSurveyComplete()) {
-        console.log(`Survey Complete!`);
-    }
 
     const onSubmitButtonClick = (e) => {
         e.preventDefault();
@@ -68,7 +44,6 @@ export const Form = ({ onSubmit }) => {
         <>
             <form 
                 className="form" 
-                onSubmit={isSurveyComplete}
             >
                 {section === 'welcome' && (
                     <section className='section welcome'>

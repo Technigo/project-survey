@@ -2,7 +2,6 @@ import React from 'react';
 
 export const Location = ({location, setLocation}) => {
     const onLocationChange = (e) => {
-        console.log(`Location: ${e.target.value}`);
         setLocation(e.target.value);
     }
 
