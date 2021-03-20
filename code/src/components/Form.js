@@ -1,7 +1,5 @@
 import React, { useState} from 'react'
 
-
-
 const Form = () => {
   const [name, setName] = useState(''); //current state, set state
   const [dropdown, setDropdown] = useState(''); 
@@ -22,18 +20,19 @@ const seatSection = [
   'Sit Sec B'
 ]
 
-
   const handleSubmit = (event) => {
     event.preventDefault()
    
-    alert(
+    alert (
       `Confirmation of your purchase, 
        Your name: ${name},
        Artist: ${dropdown},
-       ${setRadio.date},
-       ${setSecondRadio}
+       ${radio},
+       ${secondRadio}
       `
     )
+   
+    console.log(event.target.value)
   }
   
   const onNameChange = (event) => {
@@ -41,14 +40,17 @@ const seatSection = [
     setName (event.target.value) 
   }
   const onDropdownChange = (event) => {
+    console.log(`dropdown: ${event.target.value}`)
     setDropdown(event.target.value) 
   }
-  // const onRadioChange = (event) => {
-  //   setRadio(event.target.value) 
-  // }
-  // const onRadioSecondChange = (event) => {
-  //   setSecondRadio(event.target.value) 
-  // }
+  const onRadioChange = (event) => {
+    console.log(`radio1: ${event.target.value}`)
+    setRadio(event.target.value) 
+  }
+  const onRadioSecondChange = (event) => {
+    console.log(`radio2: ${event.target.value}`)
+    setSecondRadio(event.target.value) 
+  }
  
   // const slider = document.getElementById("slider-choice");
   // const output = document.getElementById("demo");
@@ -69,9 +71,10 @@ const seatSection = [
       <h2 className="header-name"> 
         Please answer below question to purchase your tickets. 
       </h2>
+{/* name input field */}
       <div className="container-input-fields">
         <div className="name-label">
-          <label htmlFor="name">Full name:</label>
+          <label htmlFor={name}>Full name:</label>
           <input 
             className="name-input" 
             id="name" 
@@ -80,7 +83,7 @@ const seatSection = [
             onChange={onNameChange}
           /> 
         </div>
-
+{/* Question about artist */}
         <div className="dropdown-menu" >
           <label htmlFor="dropdown">Which concert are you attending?</label>
           <select value={dropdown}onChange={onDropdownChange}>
@@ -91,42 +94,46 @@ const seatSection = [
           </select>
         </div>
       </div>
-
+{/* Question about date */}
       <div className="first-radio">
         <h2 className="question-radio">When do you want to go?</h2>
         {bookDate.map((date) => (
-          <label key={date} htmlFor="date">
+          <label key={date} htmlFor={date}>
           <input 
+            id={date}
             name="date" 
             type="radio" 
             value={date} 
-            onChange={(event) => setRadio(event.target.value)}
+            required
+            onChange={onRadioChange}
+            //onChange={(event) => setRadio(event.target.value)}
             checked={radio === date}>
           </input>
-          {date}
+          {date}   {/*why is this needed?? */}
           </label>
-))}
-        
+        ))}      
       </div>
+{/* Question about Seat  */}
       <div className="question-radio">
         <h2 className="question-radio">What section?</h2>
         <div className="radio-wrapper">
          {seatSection.map((seat) => (
-           <label key={seat} htmlFor="seat">
+           <label key={seat} htmlFor={seat}>
            <input 
-             id="seat"
-             name="seats" 
+             id={seat}
+             name="seat" 
              type="radio" 
              value={seat} 
-             onChange={(event) => setSecondRadio(event.target.value)}
+             required
+             onChange={onRadioSecondChange}
+            //  onChange={(event) => setSecondRadio(event.target.value)}
              checked={secondRadio === seat}>
            </input>
-           {seat}
+           {seat} 
            </label>
-         
-         ))}
-        
+          ))}
         </div>
+
       </div>
       {/* <div className= "slider-choice">
         <h2>How many tickets are you buying today?</h2>
