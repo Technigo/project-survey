@@ -1,0 +1,64 @@
+.submit-section {
+  display: flex;
+  justify-content: center;
+  background: rgb(12, 12, 12);
+  height: 16vh;
+}
+
+.submit-button {
+  font-family: Rockwell;
+  font-size: 0.9rem;
+  color: white;
+  display: flex;
+  align-items: center;
+  height: 8vh;
+  width: 13rem;
+  margin: 2rem 0 1rem 0;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+  background: black;
+  border-radius: 10px;  
+  border: 2px solid white;
+}
+
+/* MEDIA QUERY TABLET */
+@media only screen and (min-width: 768px) {
+
+  .submit-section {
+    height: 12vh;
+  }
+}
+  
+/* MEDIA QUERY DESKTOP */
+  @media only screen and (min-width: 992px) {
+
+  .submit-section {
+     height: 10vh;
+     padding-top: 16px;
+   }
+
+  .submit-button {
+    height: 6vh;
+    width: 17rem;
+    display: flex;
+    justify-content: center;
+    }
+}
+
+/* MEDIA QUERY BIGGER DESKTOP */
+
+@media only screen and (min-width: 1200px) {
+
+  .submit-section {
+    height: 22vh;
+    padding-top: 35px;
+  }
+
+  .submit-button {
+    height: 12vh;
+    width: 28rem;
+    display: flex;
+    justify-content: center;
+    font-size: 1.4rem;
+    }
+}

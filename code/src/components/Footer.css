@@ -1,0 +1,17 @@
+.footer {
+  background: black;
+  color: white;
+  font-family: Rockwell;
+  font-size: 0.8rem;
+  padding: 1rem 0 1rem 1rem;
+}
+
+/* MEDIA QUERY BIGGER DESKTOP */
+
+@media only screen and (min-width: 1200px) {
+
+  .footer {
+    padding: 1rem 0 2rem 3rem;
+    font-size: 1rem;
+  }
+}

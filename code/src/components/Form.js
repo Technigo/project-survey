@@ -9,6 +9,8 @@ import Radiobuttons3 from './Radiobuttons3';
 import RangeSlider from './RangeSlider';
 import Summary from './Summary';
 
+import './Form.css'
+
 const Form = () => {
 
   const [inputName, setInputName] = useState('');
@@ -36,9 +38,12 @@ const Form = () => {
        <Radiobuttons2 selectMidVenue = {selectMidVenue} setSelectMidVenue = {setSelectMidVenue} />
        <Radiobuttons3 selectSmallVenue = {selectSmallVenue} setSelectSmallVenue = {setSelectSmallVenue} />
        <RangeSlider range = {range} setRange = {setRange} /> 
-       <div>
-        <button className="submit-button" type="submit" onClick={ handleSubmit }>SEND US YOUR ANSWERS!</button>
-       </div>
+       <section className="submit-section">
+        <button className="submit-button" type="submit" onClick={ handleSubmit }>
+          <h4>SEND US YOUR ANSWERS 
+          </h4>
+          </button>
+       </section>
    
        </section>
 

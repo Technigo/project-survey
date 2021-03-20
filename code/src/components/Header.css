@@ -3,26 +3,6 @@
   src: url(/fonts/Fiesta_Rumba.ttf);
 }
 
-@font-face {
-  font-family: Circus;
-  src: url(/fonts/Circus.ttf);
-}
-
-@font-face {
-  font-family: Adam;
-  src: url(/fonts/adam_gorry_inline.otf);
-}
-
-@font-face {
-  font-family: Things;
-  src: url(/fonts/Things.ttf);
-}
-
-@font-face {
-  font-family: Pop;
-  src: url(/fonts/PopArt-Regular.ttf);
-}
-
 .header {
   display: block;
   text-align: center;
