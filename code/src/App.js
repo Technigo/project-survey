@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import Survey from './components/Survey'
 import Start from './components/Start'
 import Summary from './components/Summary'
-import Buttons from './components/Buttons'
 
 export const App = () => {
 
@@ -15,7 +14,18 @@ export const App = () => {
 
   return (
     <main className="main">
-      <Start setSection={setSection} section={section}/>
+      <Start 
+        setSection={setSection} 
+        section={section}/>
+
+      <Summary 
+        setSection={setSection} 
+        section={section} 
+        tech={tech} 
+        hours={hours} 
+        pets={pets} 
+        coffee={coffee}/>
+
       <Survey 
         setTech={setTech} 
         setHours={setHours} 
@@ -26,8 +36,6 @@ export const App = () => {
         section={section}
         setSection={setSection}
       />
-      <Summary setSection={setSection} section={section} tech={tech} hours={hours} pets={pets} coffee={coffee}/>
-      <Buttons setSection={setSection} section={section}/>
     </main>  
   )
 }

@@ -7,15 +7,25 @@ const Buttons = ( {section, setSection} ) => {
     setSection(5)
   }
 
+  const nextSection = (e) => {
+    e.preventDefault()
+    setSection(section + 1)
+  }
+
+  const previousSection = (e) => {
+    e.preventDefault()
+    setSection(section - 1)
+  }
+
   return (
     <div className="btn-container">
 
       {section >= 2 && section <= 4 && (
-      <button className="button" onClick={() => setSection(section - 1)}>Previous Question</button>
+      <button className="button" onClick={previousSection}>Previous Question</button>
       )}
 
       {section < 4 && (
-        <button className="button" onClick={() => setSection(section + 1)}>{section === 0 ? 'START' : 'Next question'}</button>
+        <button className="button" onClick={nextSection}>{section === 0 ? 'START' : 'Next question'}</button>
       )}
 
       {section === 4 && (
