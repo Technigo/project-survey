@@ -11,12 +11,31 @@ const App = (props) => {
   const [color, setColor] = useState('')
   const [personality, setPersonality] = useState('');
   const [submitted, setSubmitted] = useState(false);
+  const [completed, setCompleted] = useState(false);
 
-     
+  const isSurveyComplete = () => {
+    if (name === '') {
+      return false;
+    } if (occupation === '') {
+      return false;
+    } if (email === '') {
+      return false;
+    } if (telephone === '') {
+      return false;
+    } if (color === '') {
+      return false;
+    } if (personality === '') {
+      return false;
+    } 
+    return true
+  }; 
+  
+  console.log({completed});
 
   return (
     <div className="surveyContainer">
       <h1 className="h1">My Business Card Generator</h1>
+      
       {submitted === false &&
       <Survey 
         name={name} 
@@ -33,6 +52,9 @@ const App = (props) => {
         setPersonality={setPersonality}
         submitted={submitted}
         setSubmitted={setSubmitted}
+        completed={completed}
+        setCompleted={setCompleted}
+        isSurveyComplete={isSurveyComplete}
       />} {submitted === true &&
       <Result 
       name={name}
@@ -46,4 +68,6 @@ const App = (props) => {
     </div>
   )
   }
+
+  
 export {App};

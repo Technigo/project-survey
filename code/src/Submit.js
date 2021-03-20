@@ -1,19 +1,26 @@
 import React from 'react'
 
+
+
 const Submit = (props) => {
   const {submitted, setSubmitted} = props;
-  const onSubmitChange = (event) => {
-    console.log(`Submitted: ${event.target.value}`);
-    setSubmitted(event.target.value);
-  };
+  const {completed, setCompleted} = props;
+  const {isSurveyComplete} = props;
+  
+  let submitButton;
+  
+  if (isSurveyComplete()) {
+    submitButton = <button onClick={() => setSubmitted(true)}>Submit!</button>
+  } else {
+    submitButton = <button disabled onClick={() => setSubmitted(true)}>Submit!</button>
+  }
 
   return (
     <>
-      
-      <button onClick={() => setSubmitted(true)}>Submit!</button>
-      {submitted === true && <p>You have submitted!</p>}
+      {submitButton}
     </>
   )
+  
 }
 
 export default Submit;

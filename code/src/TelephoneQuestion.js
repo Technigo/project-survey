@@ -8,9 +8,10 @@ const TelephoneQuestion = (props) => {
     setTelephone(event.target.value)
   };
   return (
-    <div className="text-input">
+    <div className="text-input-container">
       <label htmlFor="telephone">My Telephone Number:</label>
       <input 
+        className="text-input"
         type="text" 
         id="telephone" 
         onChange={onTelephoneChange}

@@ -8,9 +8,10 @@ const NameQuestion = (props) => {
     setName(event.target.value)
   };
   return (
-    <div className="text-input">
+    <div className="text-input-container">
       <label htmlFor="name">My name is:</label>
       <input 
+        className="text-input"
         type="text" 
         id="name" 
         onChange={onNameChange}

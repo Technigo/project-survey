@@ -9,17 +9,18 @@ const PersonalityQuestion = (props) => {
   
   return (
     <>
-    <select
+    <select 
+    className="select-menu"
     onChange={onPersonalityChange}
     value={personality}
     >
-      <option value="">I am:</option>
-      <option value="cute">Cute</option>
-      <option value="brave">Brave</option>
-      <option value="romantic">Romantic</option>
-      <option value="quirky">Quirky</option>
-      <option value="robot">Robot</option>
-      <option value="scary">Scary</option>
+      <option className="option" value="">My Style:</option>
+      <option className="option" value="cute">Cute</option>
+      <option className="option" value="brave">Brave</option>
+      <option className="option" value="romantic">Romantic</option>
+      <option className="option" value="quirky">Quirky</option>
+      <option className="option" value="robot">Robot</option>
+      <option className="option" value="scary">Scary</option>
       
     </select>
 

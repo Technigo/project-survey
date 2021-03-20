@@ -37,6 +37,9 @@ const Survey = (props) => {
       <Submit
         submitted={props.submitted}
         setSubmitted={props.setSubmitted}
+        completed={props.completed}
+        setCompleted={props.setCompleted}
+        isSurveyComplete={props.isSurveyComplete}
       /> 
     </form>
   )

@@ -1,16 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Hachi+Maru+Pop&family=Meddon&family=Ranchers&family=Ravi+Prakash&family=Shrikhand&family=Source+Sans+Pro&family=Syne+Mono&display=swap');
 
+:root {
+  --light-background: pink;
+  --medium-color: #f183f1;
+  --dark-color: darkmagenta;
+  --red: #ff9999;
+  --orange: #ffcc99;
+  --yellow: #ffff99;
+  --green: #ccff99;
+  --blue: #ccffff;
+  --purple: #ffccff;
+}
+
+
 body {
-  margin: 0;
-  background-color: pink;
+  margin: 0 10px;
+  min-height: 100vh;
+  background: #fc9de2;
+  background: linear-gradient(360deg, rgba(252,157,226,1) 0%, rgba(210,152,247,1) 37%, rgba(52,150,244,1) 100%);
+  background-repeat: no-repeat;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Source Sans Pro', sans-serif;
-  font-size: 26px;
-  color: darkmagenta
+  font-size: 24px;
+  color: var(--dark-color)
 }
 
 code {
@@ -20,9 +36,106 @@ code {
 
 .h1 {
   font-family: 'Shrikhand', cursive;
-  font-size: 52px;
-  color: magenta;
+  font-size: 48px;
+  color: #fc9de2;
   letter-spacing: 0.1em;
+  margin: 0;
+}
+
+.text-input {
+  width: 100%;
+  height: 38px;
+  padding: 2px;
+  box-sizing: border-box;
+  border: 2px solid var(--dark-color);
+  border-radius: 10px;
+  background-color: var(--medium-color);
+  color: var(--dark-color);
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.radio-buttons, .radio-buttons:before, .radio-buttons:after {
+  box-sizing: border-box;
+}
+
+.radio-buttons {
+  display: grid;
+  grid-template-columns: 40px auto;
+  grid-gap: 10px;
+  align-items: center;
+  margin: 5px 0;
+}
+.radio-input {
+  display: flex;
+}
+
+ .radio-input input{
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+} 
+
+.radio-control {
+  top: 0;
+  left: 0;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  box-sizing: border-box;
+  justify-self: center;
+}
+
+.red {
+  background-color: var(--red);
+}
+
+.orange {
+  background-color: var(--orange);
+}
+
+.yellow {
+  background-color: var(--yellow);
+}
+
+.green {
+  background-color: var(--green);
+}
+
+.blue {
+  background-color: var(--blue);
+}
+
+.purple {
+  background-color: var(--purple);
+}
+
+.radio-control:hover {
+  border: 5px solid white; 
+}
+
+.radio-control:focus {
+  border: 5px solid springgreen;
+}
+
+.radio-control:active {
+  border: 5px solid springgreen; 
+}
+
+.radio-buttons input:checked ~.radio-control {
+  border:  3px solid black;
+} 
+
+.select-menu {
+background-color: var(--medium-color);
+font-family: 'Source Sans Pro', sans-serif;
+font-size: 24px;
+color: var(--dark-color);
+border-radius: 10px;
+border: 2px solid var(--dark-color);
+margin: 30px 20px 30px 0;
 }
 
 .business-card {
@@ -36,45 +149,28 @@ code {
 }
 
 .business-card.red {
-  background-color: red;
+  background-color: var(--red);
 }
 
 .business-card.orange {
-  background-color: orange;
+  background-color: var(--orange);
 }
 
 .business-card.yellow {
-  background-color: yellow;
+  background-color: var(--yellow);
 }
 
 .business-card.green {
-  background-color: green;
+  background-color: var(--green);
 }
 
 .business-card.blue {
-  background-color: blue;
+  background-color: var(--blue);
 }
 
-.business-card.violet {
-  background-color: violet;
+.business-card.purple {
+  background-color: var(--purple);
 }
-
-.business-card.black {
-  background-color: black;
-  color: white;
-}
-
-.business-card.white {
-  background-color: white;
-}
-
-
-
-
-
-
-
-
 
 .category-cute {
   font-family: 'Hachi Maru Pop', cursive;

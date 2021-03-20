@@ -6,9 +6,7 @@ const colors = [
   'yellow',
   'green',
   'blue',
-  'violet',
-  'black',
-  'white',
+  'purple',
 ]
 
 const ColorQuestion = (props) => {
@@ -23,20 +21,20 @@ const ColorQuestion = (props) => {
     <>
       <p>My favourite colour is: </p>
       {colors.map((shade) => (
-        <div>
-          <label key={shade} htmlFor="color">
-          </label>
-          <input
-            id="color"
-            type="radio"
-            name="colorButton"
-            value={shade}
-            onChange={onColorChange}
-            checked={color === shade}
+        <label key={shade} className="radio-buttons">
+          <span className="radio-input">
+            <input
+              id="color"
+              type="radio"
+              name="colorButton"
+              value={shade}
+              onChange={onColorChange}
+              checked={color === shade}
             />
-        {shade}
-        </div>
-        
+            <span className={`radio-control ${shade}`}></span>
+          </span>
+            {shade} 
+        </label> 
       ))}
       
     </>

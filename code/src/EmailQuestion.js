@@ -8,9 +8,10 @@ const EmailQuestion = (props) => {
   };
    
   return (
-    <div className="text-input">
+    <div className="text-input-container">
       <label htmlFor="email">My E-mail address:</label>
       <input 
+        className="text-input"
         type="text" 
         id="email" 
         onChange= {onEmailChange}
