@@ -1,22 +1,26 @@
 import React from 'react';
 
+import './RangeSlider.css'
+
 const RangeSlider = ({ range, setRange }) => {
 
   return (
-    <form>
-      <label htmlFor="range" tabIndex="0">On a scale from 1 to 10: How much do you miss live music?
+    <form className="range-slider">
+      <label htmlFor="range" tabIndex="0">
+      <h4 className="range-slider-heading">On a scale from 1 to 10: How much do you miss live music?
+      </h4>
         <input 
+          className="range"
           type="range" 
           min="1" 
           max="10" 
           // value="1"
           start={range} 
           onChange={(event) => setRange(event.target.value)}
-          className="range" 
           id="range"
           list="tickmarks">
         </input>
-            <datalist id="tickmarks">
+            <datalist className="tickmarks" id="tickmarks">
               <option value="1" label="1"></option>
               <option value="2" label="2"></option>
               <option value="3" label="3"></option>

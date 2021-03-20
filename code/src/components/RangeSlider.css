@@ -1,0 +1,98 @@
+.range-slider {
+  position: absolute;
+  top: 1449px;
+  margin: 0.5rem 1.5rem 0 1.5rem;
+  background-color: rgba(2, 2, 2, 0.63);
+  border: solid 1px rgb(250, 246, 246);
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+}
+
+.range-slider-heading {
+  font-family: Rockwell;
+  font-size: 1.2rem;
+  color: rgb(250, 246, 246);
+  margin: 4px;
+  display: contents;
+  line-height: 2rem;
+  font-weight: unset;
+}
+
+.range {
+  width: 285px;
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+  margin: 1.5rem 0 1.5rem 0;
+}
+
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: white;
+  cursor: pointer;
+  margin-bottom: 14px;
+ 
+}
+
+.range::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #4CAF50;
+  cursor: pointer;
+}
+
+.tickmarks {
+  display: flex;
+  justify-content: space-between;
+  color:rgb(250, 246, 246);
+}
+
+
+/* MEDIA QUERY TABLET */
+@media only screen and (min-width: 768px) {
+
+  .range-slider {
+    top: 1393px;
+    margin-left: 3rem;
+    width: 627px;
+  }
+}
+  
+/* MEDIA QUERY DESKTOP */
+  @media only screen and (min-width: 992px) {
+
+   .range-slider {
+     top: 1686px;
+     width: 865px;
+   }
+
+   .range-slider-heading, .tickmarks {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+   }
+}
+
+/* MEDIA QUERY BIGGER DESKTOP */
+
+@media only screen and (min-width: 1200px) {
+
+  .range-slider {
+    top: 1653px;
+    width: 1265px;
+  }
+
+  .range {
+    margin: 2rem 0 2rem 0;
+  }
+}

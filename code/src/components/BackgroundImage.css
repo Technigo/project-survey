@@ -1,6 +1,6 @@
 .background-image {
   width: 100%;
-  height: 100vh;
+  height: 140vh;
   opacity: 0;
   object-fit: cover;
   position: relative;
@@ -20,5 +20,30 @@
 }
 
 .gallery {
-  animation: fader 90s cubic-bezier(1,-0.07,.49,.44) infinite;
+  animation: fader 70s cubic-bezier(1,-0.07,.49,.44) infinite;
+}
+
+/* MEDIA QUERY TABLET */
+@media only screen and (min-width: 768px) {
+
+  .background-image {
+    height: 99vh;
+  }
+}
+  
+/* MEDIA QUERY DESKTOP */
+  @media only screen and (min-width: 992px) {
+
+    .background-image {
+      height: 94vh;
+    }
+  }
+
+/* MEDIA QUERY BIGGER DESKTOP */
+
+@media only screen and (min-width: 1200px) {
+
+  .background-image {
+    height: 145vh;
+  }
 }
