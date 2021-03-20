@@ -24,3 +24,10 @@
   font-weight: bold;
   color: var(--text);
 }
+
+@media (min-width: 650px) {
+  .radio-label {
+    font-size: 16px;
+  }
+
+}
