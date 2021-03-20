@@ -1,26 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const MainDish = () => {
-    const [dish, setDish] = useState('');
-
-    const onDishChange= (e) => {
-        console.log(`Dish: ${e.target.value}`);
-        setDish(e.target.value);
-    }
-
+const MainDish = ({label, mainDish, onMainDishChange}) => {
+   
     return (
-        <form className="main-dish">
-          <div>
-            <label htmlFor="dish">Select your favorite main dish</label>
-            <select onChange={onDishChange} id="dish" value={dish} >
-            <option disabled>Pick one</option>
-              <option>Pasta</option>
-              <option>Meat</option>
-              <option>Seitan</option>
-              <option>Chicken</option>
+        <div className="main-dish">
+            <label htmlFor="mainDish">
+              <h1 tabindex="0" className='maindish-text'>What is your favorite main dish?</h1>
+              </label>
+            <select 
+                className='maindish-menu'
+                name={label}
+                value={mainDish}
+                onChange={onMainDishChange}
+                >
+                 <option disabled>Pick one</option>
+                 <option>Pasta</option>
+                 <option>Meat</option>
+                 <option>Seitan</option>
+                 <option>Chicken</option>
             </select>
           </div>
-        </form>
     );
 };
 

@@ -1,25 +1,25 @@
-import React, { useState } from 'react'
+import React from 'react'
 
-const SideDish = () => {
-    const [dish2, setDish2] = useState('');
-
-    const onDish2Change= (e) => {
-        console.log(`Dish2: ${e.target.value}`);
-        setDish2(e.target.value);
-    }
+const SideDish = ({label, sideDish, onSideDishChange}) => {
+    
 
     return (
-        <form className="side-dish">
-          <div>
-            <label htmlFor="dish2">And now let's choose you a side dish</label>
-            <select id="dish2" onChange={onDish2Change}  value={dish2} >
+          <div className='side-dish'>
+            <label htmlFor="sideDish">
+              <h1 tabIndex="0" className='sidedish-text'>And now let's choose you a side dish</h1>
+            </label>
+            <select 
+            className='sidedish-menu'
+              name={label}
+              value={sideDish}
+              onChange={onSideDishChange}
+              >
               <option>French fries</option>
               <option>Beans and onion salad</option>
               <option>Leafy greens</option>
               <option>Peas and carrots</option>
             </select>
-          </div>
-        </form>
+          </div>    
     );
 };
 

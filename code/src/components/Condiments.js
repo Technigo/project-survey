@@ -1,55 +1,31 @@
-import React, { useState } from 'react';
+import React from 'react';
+
+const condiment = ["mustard", "mayo", "tomato sauce", "garlic sauce", "remoulade"];
 
 
-const Condiments = () => {
-  const [condiment, setCondiment] = useState('');
-
-  const onCondimentChange= (e) => {
-    console.log(`Condiment: ${e.target.value}`);
-    setCondiment(e.target.value);
-  };
-
+const Condiments = ({onCondimentChange}) => {
+ 
   return (
-    <form>
-    <div>
-      <p>What is your go-to condiment?</p>
-      <label htmlFor="mustard">Mustard</label>
-      <input 
-      name="condiment" 
-      id="mustard"
-      value={condiment} 
-      type="radio" 
-      onChange={onCondimentChange}  />
-      <label htmlFor="mayo">Mayo</label>
-      <input
-      name="condiment"
-      id="mayo" 
-      value={condiment}
-      type="radio" 
-      onChange={onCondimentChange} />
-      <label htmlFor="tomato">Tomato sauce</label>
-      <input
-       name="condiment"
-       id="tomato"
-       value={condiment}
-       type="radio"
-       onChange={onCondimentChange} />
-      <label htmlFor="garlic-sauce">Garlic sauce</label>
-      <input
-       name="condiment"
-       id="garlic"
-       value={condiment}
-      type="radio" 
-      onChange={onCondimentChange} />
-      <label htmlFor="remoulade">Remoulade</label>
-      <input
-       name="condiment"
-       id="remoulade" 
-       value={condiment}
-       type="radio" 
-       onChange={onCondimentChange} />
-      </div>
-    </form>
+    <>
+    <div className='condiments'>
+      <h1 tabIndex="0" className='condiments-heading'>What is your go-to condiment?</h1>
+      {condiment.map(id => (
+        <label
+        key={id}
+        label='condiment'
+        className='condiments'
+        >
+          <input
+            name='condiment'
+            className='condiments'
+            type="radio"
+            value={condiment}
+            onChange={onCondimentChange}
+            />
+        </label>
+      ))}
+    </div>
+    </>
     );
   };
 
