@@ -19,7 +19,7 @@
   font-weight: unset;
 }
 
-.range {
+.range-bar {
   width: 285px;
   -webkit-appearance: none;
   width: 100%;
@@ -32,7 +32,7 @@
   margin: 1.5rem 0 1.5rem 0;
 }
 
-.range::-webkit-slider-thumb {
+.range-bar::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
   width: 20px;
@@ -44,7 +44,7 @@
  
 }
 
-.range::-moz-range-thumb {
+.range-bar::-moz-range-thumb {
   width: 25px;
   height: 25px;
   border-radius: 50%;
@@ -92,7 +92,7 @@
     width: 1265px;
   }
 
-  .range {
+  .range-bar {
     margin: 2rem 0 2rem 0;
   }
 }

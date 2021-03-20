@@ -10,7 +10,7 @@ const RangeSlider = ({ range, setRange }) => {
       <h4 className="range-slider-heading">On a scale from 1 to 10: How much do you miss live music?
       </h4>
         <input 
-          className="range"
+          className="range-bar"
           type="range" 
           min="1" 
           max="10" 

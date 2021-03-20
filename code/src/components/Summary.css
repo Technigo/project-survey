@@ -1,0 +1,66 @@
+.summary {
+  position: absolute;
+  top: 555px;
+  background-color: rgba(2, 2, 2, 0.63);
+  padding: 12px;
+  border: solid 1px rgb(250, 246, 246);
+  margin: 0.5rem 2.5rem 0 2.5rem;
+}
+
+.summary-text {
+  font-family: Rockwell;
+  font-size: 0.8rem;
+  color: rgb(250, 246, 246);
+  margin: 4px;
+  display: contents;
+  line-height: 2rem;
+  font-weight: unset;
+}
+
+.color-word {
+  color: rgb(235, 102, 113);
+}
+
+.end-message {
+  position: absolute;
+  top: 709px;
+  display: block;
+  text-align: center;
+  padding: 0;
+}
+
+.end-text {
+  font-family: Rockwell;
+  font-size: 1.8rem;
+  color: rgb(250, 246, 246);
+  margin: 4px;
+  display: contents;
+  line-height: 2.8rem;
+  font-weight: unset;
+}
+
+/* MEDIA QUERY TABLET */
+@media only screen and (min-width: 768px) {
+
+  .summary {
+    top: 624px;
+  }
+
+  .end-message {
+    top: 458px;
+    width: 287px;
+  }
+}
+  
+/* MEDIA QUERY DESKTOP */
+  @media only screen and (min-width: 992px) {
+
+  
+}
+
+/* MEDIA QUERY BIGGER DESKTOP */
+
+@media only screen and (min-width: 1200px) {
+
+
+}
