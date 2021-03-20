@@ -125,6 +125,7 @@ const App = () => {
             <SelectInput
               choice={characterClass}
               setChoice={setCharacterClass}
+              setEquipment={setEquipment}
               data={data.class}
             />}
 

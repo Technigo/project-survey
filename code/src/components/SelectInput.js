@@ -1,8 +1,11 @@
 import React from "react"
 
-const SelectInput = ({ choice, setChoice, data }) => {
+const SelectInput = ({ choice, setChoice, setEquipment, data }) => {
     const handleChange = (event) => {
         setChoice(event.target.value)
+        if (data.field === "class") {
+            setEquipment("")
+        }
     }
 
     return (
