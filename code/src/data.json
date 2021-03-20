@@ -1,0 +1,87 @@
+{
+  "name": {
+    "label": "Name",
+    "field": "name",
+    "className": "name-input"
+  },
+  "country": {
+    "label": "Country",
+    "field": "country",
+    "className": "country-input"
+  },
+  "region": {
+    "choices": [
+      "Anywhere",
+      "North America",
+      "Central America",
+      "South America",
+      "Nordic",
+      "Central Europe",
+      "Southern Europe",
+      "Western Europe",
+      "Eastern Europe",
+      "British Isles",
+      "Balkans",
+      "Northern Territory (Aus)",
+      "South Australia",
+      "Queensland (Aus)",
+      "New South Wales (Aus)",
+      "Victoria (Aus)",
+      "Tasmania (Aus)",
+      "Eastern Europe",
+      "Polynesia",
+      "Melanesia",
+      "Micronesia",
+      "Cental Asia",
+      "South Asia",
+      "Southeastern Asia",
+      "Western Asia",
+      "East Asia",
+      "Cental Africa",
+      "South Africa",
+      "North Africa",
+      "West Africa",
+      "East Africa"
+    ],
+    "label": "Regions",
+    "field": "regions",
+    "className": "regions-input"
+  },
+  "unit": {
+    "choices": [
+      "Price",
+      "Weight"
+    ],
+    "label": "Unit",
+    "field": "unit",
+    "className": "unit-input"
+  },
+  "amount": {
+    "price": {
+      "className": "stat-input",
+      "label": "price"
+    },
+    "weight": {
+      "className": "stat-input",
+      "label": "weight"
+    }
+  },
+  "allergies": {
+    "choices": [
+      "Lactose",
+      "Gluten",
+      "Egg",
+      "Nuts",
+      "Cacao",
+      "Sugar"
+    ],
+    "label": "Allergies",
+    "field": "allergies",
+    "className": "allergies-input"
+  },
+  "other": {
+    "label": "Other",
+    "field": "other",
+    "className": "other-input"
+  }
+}
