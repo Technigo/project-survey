@@ -14,6 +14,10 @@ const Form = () => {
     const [reminder, setReminder] = useState('')
     const [questionIndex, setQuestionIndex] = useState(0)
 
+    const restart = () => {
+        document.location.href=''
+    }
+
     const questionHandler = (event) => {
         event.preventDefault()
         if (word === '') {
@@ -22,8 +26,11 @@ const Form = () => {
             setQuestionIndex (1)
         } else if (lesson === '') {
             setQuestionIndex(2)
-        } else 
+        } else if (questionIndex === 2) {
             setQuestionIndex(3)
+        } else {
+            restart()
+        }
     }
 
     return (
@@ -65,7 +72,7 @@ const Form = () => {
                         lesson={lesson}
                         reminder={reminder}
                     />
-                    <Button text="Restart" labelText="Restart survey"/>
+                    <Button text="Restart" labelText="Restart survey" restartButton="restart" />
                 </>
             } 
         </form>              
