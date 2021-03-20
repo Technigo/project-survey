@@ -4,7 +4,7 @@ const InputText = ({question, inputTextValue, onChangeFunction}) => {
     
   return (
     <label htmlFor={inputTextValue} className='question-label-wrap'>
-      <h2 className='question'>{question}</h2>
+      <h2 tabindex='0' className='question'>{question}</h2>
       <input
         type='text'
         id={inputTextValue}

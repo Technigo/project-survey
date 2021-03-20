@@ -4,7 +4,7 @@ const InputDropDown = ({question, dropDownvalue, onChangeFunction}) => {
   
   return (
     <label htmlFor='select-format' className='question-label-wrap'>
-      <h2 className='question'>{question}</h2>
+      <h2 tabindex='0' className='question'>{question}</h2>
       <select value={dropDownvalue} onChange={onChangeFunction} id='select-format' name='select-format' className='select-format' required>
           <option disabled value="">Choose one ...</option>
           <option value="Electronic">Electronic</option>

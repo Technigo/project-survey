@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap');
 
-body {
+body, html {
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
@@ -12,12 +12,18 @@ body {
   align-items: center;
   justify-content: center;
   font-family: 'Lato', sans-serif;
+  overflow-x: hidden;
 }
 
 .main-container {
-  background-color: #0c0c0c1e;
+  background-color: #ffffff77;
   width: 100vw;
+  height: 500px;
   padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .header {
@@ -193,19 +199,19 @@ body {
 .summary-container {
   display: flex;
   justify-content: center;
+  align-items: center;
   margin:0;
 }
 
 .summary {
   max-width: 300px;
-  height: 100%;
   padding: 20px;
   display: flex;
   flex-direction: column;
   background-color: #cef6f2;
   color: #366b64;
   border-radius: 5px;
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .summary h2 {
@@ -232,7 +238,7 @@ body {
 
 @media (min-width: 668px) {
   .main-container {
-    padding: 100px 30px;
+    padding: 50px 30px;
   }
 
   .header {
@@ -296,6 +302,8 @@ body {
   .summary {
     max-width: 450px;
     font-size: 20px;
+    margin: 0;
+
   }
 
   .summary-list-item {
@@ -307,7 +315,7 @@ body {
 
 @media (min-width: 1024px) {
   .main-container {
-    padding: 130px 50px;
+    padding: 50px 50px;
   }
 
   .header {

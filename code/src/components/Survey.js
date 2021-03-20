@@ -19,7 +19,6 @@ const Survey = () => {
   const [isChecked, setIsChecked] = useState(false)
   const [checkboxGroup, setCheckboxGroup] = useState([])
   const [showSummary, setShowSummary] = useState(false)
-  //const [errorMessage, setErrorMessage] = useState('')
 
   //VARIABLES
 
@@ -32,13 +31,6 @@ const Survey = () => {
   const onNextQuestionChange = () => {
     setQuestion(question + 1)
   }
-  // const onNextQuestionChange = () => {
-  //   if (enjoyReading !== '') {
-  //     setQuestion(question + 1)
-  //   } else {
-  //     setErrorMessage('This field is required')
-  //   }
-  // }
 
   // This function goes back to the previous question
   const onPreviousQuestionChange = () => setQuestion(question - 1)
@@ -85,7 +77,7 @@ const Survey = () => {
         {question === 0 && (
           <section className='start-page'>
             <h1 className='header'>READING HABITS SURVEY</h1>
-            <p className='small-text'>Time to complete: 10 minutes</p>
+            <p className='small-text'>Time to complete: 3 minutes</p>
             <div className="start-button-container">
               <Button onChangeDirection={onNextQuestionChange} textDisplay={'Start the survey'} className={'start-button'} />
             </div>
@@ -95,7 +87,7 @@ const Survey = () => {
         {/* First question */}
         {question === 1 && (
           <section className='question-container'>
-            <h2 className='question'>How much do you enjoy reading?</h2>
+            <h2 tabindex='0' className='question'>How much do you enjoy reading?</h2>
             <div className="radio-buttons">
               {
                 enjoyReadingArray.map(item =>
@@ -161,7 +153,7 @@ const Survey = () => {
         {/* Fifth question */}
         {question === 5 && (
           <section className='question-container'>
-            <h2 className='question'>What types of books do you read most often?</h2>
+            <h2 tabindex='0' className='question'>What types of books do you read most often?</h2>
             <div className="checkbox-group-container">
               {
                 checkboxGroupArray.map(genre => 
@@ -183,7 +175,7 @@ const Survey = () => {
         {/* Submit page */}
         {question === 6 && (
           <section className='question-container'>
-            <h2 className='header'>Ready to submit?</h2>
+            <h2 tabindex='0' className='header'>Ready to submit?</h2>
             <div className="button-container">
               <Button onChangeDirection={onPreviousQuestionChange} textDisplay={'Go Back'} className={'button'} />
               <button 
