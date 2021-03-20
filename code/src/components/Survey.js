@@ -9,11 +9,11 @@ const Survey = () => {
 
 // states
     const [inputName, setInputName] = useState ('');
-    const [evaluationAnswer, setEvaluationAnswer] = useState ('')
+    const [evaluation, setEvaluation] = useState ('')
     const [selectValue, setSelectValue] = useState ('');
     const [summary, setSummary] = useState(false)
 // array
-    const evaluationArray = ['yes', 'no', 'none of your business']
+
 // functions
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -26,7 +26,7 @@ const Survey = () => {
     }
   
     const onRadioButtonChanged = (e) => {
-        setEvaluationAnswer(e.target.value);
+        setEvaluation(e.target.value);
         console.log(e.target.value)
     }
 
@@ -50,13 +50,13 @@ const Survey = () => {
                     </section> 
 
                     <section> 
-                    {evaluationArray.map((evaluation) =>
+                    
                         <Radio 
-                            onRadioButtonChange={onRadioButtonChanged}
                             key={evaluation}
                             value={evaluation}
+                            onRadioButtonChange={onRadioButtonChanged}
                         />
-                    )}
+                
                     </section>   
 
                     <section>
@@ -68,7 +68,11 @@ const Survey = () => {
                     </section>
 
                     <div>
-                        <button>Submit</button>
+                        <button
+                            onSubmit = {handleSubmit}
+                            type="submit">
+                                Submit
+                        </button>
                     </div>
                 </form>
         )}
@@ -79,7 +83,7 @@ const Survey = () => {
                 <section>
                     <Summary 
                         value={inputName}
-                        value={evaluationAnswer}
+                        value={evaluation}
                         value={selectValue}
                     />
                 </section>
