@@ -153,7 +153,7 @@ export const App = () => {
       {section === 'condiments' && (
         <section aria-label="condiment select" className='condiment'>
           <Condiments 
-          condiments={Condiments}
+          condimentsArray={Condiments}
           onCondimentChange={onCondimentChange}
           />
 

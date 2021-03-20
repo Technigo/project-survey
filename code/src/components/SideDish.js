@@ -14,10 +14,10 @@ const SideDish = ({label, sideDish, onSideDishChange}) => {
               value={sideDish}
               onChange={onSideDishChange}
               >
-              <option>French fries</option>
-              <option>Beans and onion salad</option>
-              <option>Leafy greens</option>
-              <option>Peas and carrots</option>
+              <option>french fries</option>
+              <option>beans and onion salad</option>
+              <option>leafy greens</option>
+              <option>peas and carrots</option>
             </select>
           </div>    
     );

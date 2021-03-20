@@ -9,7 +9,7 @@ const Condiments = ( {onCondimentChange} ) => {
     <>
     <div className='condiments-header'>
       <h1 tabIndex="0" className='condiments-heading'>What is your go-to condiment?</h1>
-      {condimentsArray.map(id => (
+      {condimentsArray.map((id) => (
         <label
         key={id}
         label='condiment'
@@ -22,6 +22,7 @@ const Condiments = ( {onCondimentChange} ) => {
             value={id}
             onChange={onCondimentChange}
             />
+            {id}
         </label>
       ))}
     </div>

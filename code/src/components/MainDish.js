@@ -13,11 +13,10 @@ const MainDish = ({label, mainDish, onMainDishChange}) => {
                 value={mainDish}
                 onChange={onMainDishChange}
                 >
-                 <option disabled>Pick one</option>
-                 <option>Pasta</option>
-                 <option>Meat</option>
-                 <option>Seitan</option>
-                 <option>Chicken</option>
+                 <option>pasta</option>
+                 <option>meat</option>
+                 <option>seitan</option>
+                 <option>chicken</option>
             </select>
           </div>
     );
