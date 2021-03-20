@@ -11,7 +11,12 @@ const Form = (props) => {
 
     return (
 
-        <form onSubmit={event => event.preventDefault()}>
+        <form onSubmit={props.handleSubmit}>
+            <>
+                <h1>Your latest book!</h1>
+                <p>We will be very happy to know a bit about the latest book you read!</p>
+                <p>Please take a few seconds to answer our questions:</p>
+            </>
             <NameInput
                 name={props.name}
                 onNameChange={props.onNameChange} />
@@ -24,9 +29,10 @@ const Form = (props) => {
                 numberOfBook={props.numberOfBook} />
             <RadioButtonsRecomends onrecomendationChange={props.onrecomendationChange}
                 recomendation={props.recomendation} />
-            <SubmitButton />
+            <SubmitButton isFormFinished={props.isFormFinished} />
         </form>
+
     )
 }
-
+console.log()
 export default Form

@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const Summary = (props) => {
     return (
         <div>
@@ -9,6 +10,7 @@ const Summary = (props) => {
             <p>You have read the book {props.numberOfBook} times!</p>
             <p>If someone would ask you if they should read {props.bookname} your answer will be{props.recomendation}!</p>
         </div>
+
     )
 }
 
