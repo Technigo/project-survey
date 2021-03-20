@@ -15,6 +15,7 @@ export const RadioOption = ({careerName, setRadio}) => {
                     value={careerName}
                     type="radio"
                     tabIndex="0"
+                    onChange={onRadioChange}
                     aria-label="Choose a preferred career"
                 />
         </div>
