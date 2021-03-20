@@ -157,12 +157,9 @@ form {
   padding: 5px 0;
 }
 
-.place {
-  font-size: 20px;
-}
-
 .radioLabel {
   margin-left: 5px;
+  font-size: 20px;
 }
 
 /*SUMMARY*/
@@ -288,14 +285,22 @@ form {
 
   .radioContainer {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-evenly;
     width: 100%;
   }
 
   /*FORM INPUT STYLING*/
 
-  .place {
-    font-size: 28px;
+  .emailInput { 
+    font-size: 22px;
+  }
+
+  .dropdownInput {
+    font-size: 22px;
+  }
+
+  .radioLabe {
+    font-size: 26px;
   }
 
   /*SUMMARY*/
@@ -354,6 +359,19 @@ form {
   .innerContainer {
     width: 60%;
   }
+
+  .emailInput { 
+    font-size: 24px;
+  }
+
+  .dropdownInput {
+    font-size: 24px;
+  }
+
+  .radioLabel {
+    font-size: 26px;
+  }
+
 
   /*BUTTONS*/
 

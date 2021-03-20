@@ -3,6 +3,7 @@ import React from 'react'
 const Welcome = () => {
     return (
         <header className='welcomeContainer'>
+            
             <h1 className='welcomeText' tabIndex='0'>Let's connect!</h1>
             <div className='welcomeContent'>
             <p tabIndex='0'>We would love to get to know you better.</p>

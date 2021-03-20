@@ -14,17 +14,6 @@ const Place = ({/*  place, id,  */setPlace }) => {
             <h2 className='questionTitle' tabIndex='0'><i className="fas fa-arrow-circle-right"></i> In which one of our offices would you like to work?</h2>
 
             <div className='radioContainer'>
-{/*                 <div>
-                <input
-                name='place'
-                id={id}
-                value={place}
-                type='radio'
-                onChange={onPlaceChange}
-                />
-
-                <label htmlFor={id}>{place}</label>
-            </div> */}
 
             <div>
             <input
