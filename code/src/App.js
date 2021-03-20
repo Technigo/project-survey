@@ -9,11 +9,40 @@ import Summary from './components/Summary'
 
 export const App = () => {
 
+
+/*   const validateForm = () => {
+    if (email === '' || place === '' || workArea.checked === false){
+      setdisplaySummary(false)
+    } else {
+      setdisplaySummary(true)
+  }
+} */
   //function for submit button
   const handleSubmit = (event) => {
     event.preventDefault()
+/*     validateForm() */
     setdisplaySummary(true)
   }
+
+
+/*   const cities = [
+    {
+      'id': 'la',
+      'name': 'Los Angeles'
+    },
+    {
+      'id': 'tokyo',
+      'name': 'Tokyo'
+    },
+    {
+      'id': 'stockholm',
+      'name': 'Stockholm'
+    },
+    {
+      'id': 'berlin',
+      'name': 'Berlin'
+    }
+  ] */
 
   //all props
   const [displaySummary, setdisplaySummary] = useState(false)
@@ -53,11 +82,10 @@ export const App = () => {
         {/* 3rd question - which office */}
           <section
           className='place'
-          id='place'>
-            <Place
+          id='place'>            
+            <Place 
             place={place}
-            setPlace={setPlace}
-            />
+            setPlace={setPlace}/>
           </section>
 
         </form>
@@ -79,3 +107,14 @@ export const App = () => {
     </div>
   )
 }
+
+/* {cities.map((city) => {
+  return(
+    <Place
+    key={city.name}
+    place={city.name}
+    setPlace={setPlace}
+    id={city.id}
+    />
+  )
+})} */

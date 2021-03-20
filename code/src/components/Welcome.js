@@ -8,7 +8,15 @@ const Welcome = () => {
             <p tabIndex='0'>We would love to get to know you better.</p>
             <p tabIndex='0'>Tell us a bit more about what kind of job you're interested in and we'll get in touch!</p>
             </div>
-            <a href='#email' className='startButtonLink'><button className='startButton'>Start adding info</button></a>
+
+            <button
+            className='startButton'
+            type='button'
+            onClick={(e) =>{
+                e.preventDefault();
+                window.location.href='#email'
+            }}>Start adding info</button>
+
         </header>
     )
 }

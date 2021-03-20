@@ -9,14 +9,15 @@ const WorkArea = ({ workArea, setWorkArea}) => {
     return (
         <div className='questionContainer two'>
             <div className='innerContainer'>
-            <label htmlFor='workArea'>
+            
                 <h2 className='questionTitle' tabindex='0'><i className="fas fa-arrow-circle-right"></i> What kind of role are you interested in?</h2>
+                <label htmlFor='workArea'>
                 <select
                     className='dropdownInput'
                     id='workArea'
                     onChange={onWorkAreaChange}
                     value={workArea}
-                    /* required */
+                    required
                 >
                     <option value=''>Select work area:</option>
                     <option value='frontend developer'>Frontend Developer</option>
@@ -25,9 +26,13 @@ const WorkArea = ({ workArea, setWorkArea}) => {
                 </select>
             </label>
 
-            <button className='okButton'>
-                <a href='#place' className='okButtonLink'>OK</a>
-            </button>
+            <button
+            className='okButton'
+            type='button'
+            onClick={(e) =>{
+                e.preventDefault();
+                window.location.href='#place'
+            }}>OK</button>
 
             </div>
         </div>
