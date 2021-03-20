@@ -70,7 +70,7 @@ const Form = () => {
           )}        
         </form>
       ) : (
-          <Summary formData={formData}/>
+          <Summary formData={formData} />
         )}
     </>
   );

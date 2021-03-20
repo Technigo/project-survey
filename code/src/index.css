@@ -26,35 +26,15 @@ code {
 
 .form {
   min-height: 80vh;
-  border: 6px solid #ffc371;
-  border-radius: 4px;
   margin: 0 30px;
 }
 
-
-/*** FIRST PAGE ***/
-.first-page-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 80vh;
-}
-
-.first-page-header {
-  position: absolute;
-  display: flex;
-  align-self: center;
-  top: 50%;
-}
-
-.first-page-text {
-  position: absolute;
-  display: flex;
-  align-self: center;
-  top: 60%;
-  font-weight: 700;
-  font-size: 18px;
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active {
+  transition: background-color 5000s;
+  -webkit-text-fill-color: #333 !important;
 }
 
 
@@ -65,7 +45,7 @@ code {
 }
 
 .btn {
-  border: solid 2px #ff5f6d;
+  border: solid 2px black;
   background-color: transparent; 
   padding: 10px 20px;
   font-family: inherit;
@@ -74,24 +54,20 @@ code {
   outline: none;
   color: inherit;
   border-radius: 4px;
-  transition: all 0.2s ease-out;
   cursor: pointer;
   margin: 20px 10px 0px 10px;
 }
 
-.btn:hover {
-  background: rgb(255, 195, 113, 0.5);
+.btn:hover .btn:focus {
+  background:  rgb(255, 95, 109, 0.5);
 }
 
 .button {
-  position: absolute;
   display: flex;
   align-self: center;
-  top: 70%;
 }
 
 .submit-button {
-  position: absolute;
   display: flex;
   align-self: center;
 }
@@ -104,6 +80,44 @@ code {
   transform: scale(1.1); 
 }
 
+/*** SVG ***/
+.svg-first-page {
+  width: 160%;
+  z-index: -1;
+}
+
+.svg-questions {
+  width: 210%;
+  z-index: -1;
+}
+
+.svg-summary {
+
+}
+
+/*** FIRST PAGE ***/
+.first-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.first-page-container .container {
+  position: absolute;
+}
+
+.first-page-header {
+  text-align: center;
+}
+
+.first-page-text {
+  text-align: center;
+  font-weight: 700;
+  font-size: 18px;
+}
+
 
 /*** NAME QUESTION ***/
 .name-container {
@@ -114,7 +128,14 @@ code {
   min-height: 80vh;
 }
 
+.name-container .container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
 .name-label {
+  text-align: center;
   font-size: 20px;
   margin: 0px 10px 20px 10px;
 }
@@ -126,23 +147,51 @@ code {
   padding: 0px 15px;
   color: #333;
   outline: none;
-  background-color: rgb(255, 195, 113, 0.5);
-  transition: all 0.2s ease-out;
+  background-color: rgb(255, 95, 109, 0.3);
   font-size: 20px;
 }
 
+
 /*** SUSHI QUESTION ***/
 .sushi-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
 
+.sushi-container .container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
 }
 
 .sushi-label {
-
+  text-align: center;
+  font-size: 20px;
+  margin: 0px 10px 20px 10px;
 }
 
 .sushi-select {
 
 }
+
+/*** INGREDIENT QUESTION ***/
+.ingredient-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.ingredient-container .container {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
 
 
 

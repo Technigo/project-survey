@@ -1,5 +1,6 @@
 import React from 'react';
 
+import BlobQuestions from './BlobQuestions';
 import FormButtons from './FormButtons';
 
 const NameQuestion = ({ name, callbackOnChange, step, setStep }) => {
@@ -11,25 +12,28 @@ const NameQuestion = ({ name, callbackOnChange, step, setStep }) => {
   return (
     <>
       <div className="name-container">
-        <label 
-          className="name-label" 
-          htmlFor="name">
-            So, what's your name? 
-        </label>
-        <input
-          className="name-input-text"
-          id="name"
-          type="text"
-          onChange={handleNameChange}
-          value={name}
-          name="name" 
-          required
-        />
+        <BlobQuestions />
+          <div className="container">
+            <label 
+              className="name-label" 
+              htmlFor="name">
+                So, what's your name? 
+            </label>
+            <input
+              className="name-input-text"
+              id="name"
+              type="text"
+              onChange={handleNameChange}
+              value={name}
+              name="name" 
+              required
+            />
+            <FormButtons 
+              step={step}
+              setStep={setStep}
+            />
+          </div>
       </div>
-        <FormButtons 
-          step={step}
-          setStep={setStep}
-        />
     </>
   );
 };
