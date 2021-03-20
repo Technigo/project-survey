@@ -30,6 +30,7 @@ const Form = () => {
   }
 
   return (
+    <>
     <form>
       <div>
         <p>On a scale of Ha (1) to Hahahahaha (5), how important is humor in the workplace?</p>
@@ -119,7 +120,8 @@ const Form = () => {
             id='check4' 
             type='checkbox' 
             checked= {checkBoxGroup.includes('check4')}
-            onChange={() => oncheckBoxGroupToggle('check4')}  
+            onChange={() => oncheckBoxGroupToggle('check4')}
+            value='i-dunno' 
           />
           <label htmlFor='check4'>Preventing? I use it all the time!</label>
         </div>
@@ -141,6 +143,13 @@ const Form = () => {
         <input id='name' type='text' value={name} onChange={onNameChange} />
       </div>
     </form>
+
+    // Summary
+    <div>Hej {name}! This is the summary of your answers:</div>
+    <div>How import is humor in the work place? {humor}</div>
+    <div>What is preventing you to use humor?{checkBoxGroup}</div>
+    <div>Where do you work? {office}</div>
+    </>
   )
 }
 
