@@ -1,14 +1,6 @@
 import React from 'react'
 
 const Summary = ( {section, tech, hours, pets, coffee} ) => {
-  
-  const generateEmoji = () => {
-    if ({pets} === "a dog") {
-      return (
-        <span>🐶</span>
-      )
-    }
-  }
 
   return (
     <>
@@ -18,7 +10,7 @@ const Summary = ( {section, tech, hours, pets, coffee} ) => {
     <h1>Thank you for participating!</h1>
     <h2>Below is a summary of your answers:</h2>
 
-    <p className="summary-text">You master {tech}. You code {hours} hours a day. You have {generateEmoji()} and you drink {coffee} cups of ☕️ a day!</p>
+    <p className="summary-text">You master {tech}. You code {hours} hours a day. You have {pets} and you drink {coffee} cups of ☕️ a day!</p>
 
     </div>
     </>
