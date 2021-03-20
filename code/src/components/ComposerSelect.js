@@ -5,7 +5,7 @@ export const ComposerSelect = ( {composer, setComposer}) => {
     setComposer(e.target.value)
   }
   return (
-    <div>
+    <div className='question-wrapper'>
       <label htmlFor='composer-select' className="question">Choose a composer from the list you like the most</label>
       <select id='composer-select' value={composer} onChange={onComposerChange} required>
         <option disabled>--- select ---</option>

@@ -5,7 +5,7 @@ export const NameInput = ( {name, setName}) => {
     setName(e.target.value)
   }
   return (
-    <div>
+    <div className='question-wrapper'>
       <label htmlFor='name' className='question'>What is your name?</label>
       <input id='name' type='text' value={name} onChange={onNameChange} required />
     </div>

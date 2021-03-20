@@ -11,12 +11,12 @@ export const ClassicalMusicCheckBox = ( {checkBox, checkBoxGroup, setCheckBoxGro
   return (
     <div>
       <input 
-        id={checkBox}
+        id={checkBox['name']}
         type='checkbox'
-        checked= {checkBoxGroup.includes(checkBox)}
-        onChange={() => oncheckBoxGroupToggle(checkBox)}  
+        checked= {checkBoxGroup.includes(checkBox['name'])}
+        onChange={() => oncheckBoxGroupToggle(checkBox['name'])}  
       />
-      <label htmlFor={checkBox}>{checkBox}</label>
+      <label htmlFor={checkBox}>{checkBox['text']}</label>
     </div>
   )
 }
