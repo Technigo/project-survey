@@ -42,11 +42,11 @@ code {
 .circle {
   width: 100vw;
   border-radius: 0 0 0 100% / 200px;
-  background-color: #37aa9c;
+  background-color: #fdf0f6;
   position: absolute;
   top: 0;
   left: 0;
-  height: 65vh;
+  height: 68vh;
 }
 
 .start-title {
@@ -82,9 +82,13 @@ code {
   text-align: center;
 }
 
-.button:hover {
-  background-color: #fdf0f6;
-  color: #771144;
+/*  Button hover that should only work on devices that can hover, e.g. not mobile phones */
+
+@media (hover:hover) {
+  .button:hover {
+    background-color: #fdf0f6;
+    color: #771144;
+  }
 }
 
 /* Form pages */
@@ -216,7 +220,7 @@ code {
   display: flex;
   align-items: center;
   border: 3px solid #fdf0f6;
-  background-color: #fdf0f6;
+  background-color: #281833;
   width: 100%;
   height: 100%;
   position: relative;
@@ -224,10 +228,11 @@ code {
 }
 
 .radio-text {
-  font-size: 26px;
+  font-size: 22px;
   padding-left: 20px;
-  color: #771144;
+  color: #fdf0f6;
   font-weight: bold;
+  letter-spacing: 1.5px;
 }
 
 .radio-button-label:hover {
@@ -257,7 +262,7 @@ code {
   height: 100%;
   width: 100%;
   position: absolute;
-  top: 0;
+  top: -3px;
   left: -3px;
   z-index: -1;
   outline: 4px solid #fdf0f6;
@@ -425,7 +430,7 @@ code {
     margin-top: 10px;
   }
   .summary-container {
-    width: 95%;
+    width: 90%;
   }
 
   .summary-title {
@@ -481,4 +486,40 @@ code {
   .summary-container {
     width: 80%;
   }
+}
+
+/* Media queries for smaller phones like iphone 5 */
+@media (max-height: 568px) {
+.circle {
+  height: 80vh;
+}
+
+.button {
+  font-size: 28px;
+}
+
+.question-title {
+  margin-top: -50px;
+}
+
+.radio-box {
+  height: 50px;
+}
+
+.radio-text {
+  font-size: 22px;
+}
+
+.range {
+  margin-top: 10px;
+}
+
+.summary-title {
+  font-size: 32px;
+}
+
+.summary-text {
+  font-size: 18px;
+  line-height: 26px;
+}
 }
