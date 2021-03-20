@@ -95,7 +95,8 @@ export const App = () => {
       ) : (
         // If displaySummary is true (set when pushing submit button) display this:
         <section
-        className='summary'>
+        className='summary'
+        tabIndex='0'>
           <Summary
           email={email}
           workArea={workArea}
