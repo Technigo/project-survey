@@ -1,13 +1,17 @@
 import React from "react";
 
+import './Radiobuttons1.css'
+
 const Radiobuttons1 = ({ selectBigVenue, setSelectBigVenue }) => {
 
   return (
-    <form tabIndex="0">
-      What is your favourite big live music venue?
+    <form className="radio-big" tabIndex="0">
+      <h4 className="big-live-heading">What is your favourite big live music venue?
+      </h4>
 
-      <label htmlFor="globe">
+      <label className="big-venue-heading" htmlFor="globe">
         <input
+          className="big-selection-dot"
           id="globe"
           type="radio"
           value="Ericsson Globe"
@@ -17,8 +21,9 @@ const Radiobuttons1 = ({ selectBigVenue, setSelectBigVenue }) => {
         Ericsson Globe
       </label>
 
-      <label htmlFor="friends">
+      <label className="big-venue-heading" htmlFor="friends">
         <input
+          className="big-selection-dot"
           id="friends"
           type="radio"
           value="Friends Arena"
@@ -28,8 +33,9 @@ const Radiobuttons1 = ({ selectBigVenue, setSelectBigVenue }) => {
         Friends Arena
       </label>
 
-      <label htmlFor="tele2">
+      <label className="big-venue-heading" htmlFor="tele2">
         <input
+          className="big-selection-dot"
           id="tele2"
           type="radio"
           value="Tele2 Arena"
