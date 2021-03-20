@@ -4,6 +4,7 @@ import './index.css'
 import { ColorQuestion } from './ColorQuestion'
 import { NameQuestion } from './NameQuestion'
 import { FurQuestion } from './FurQuestion'
+import { EmailSection } from './EmailSection'
 import { Summary } from './Summary'
 
 
@@ -11,6 +12,7 @@ export const App = () => {
   const [furOption, setFurOption] = useState("");
   const [color, setColor] = useState("");
   const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
   const [showSummary, setShowSummary] = useState(false);
 
 const handlefurOptionChange = (e) => {
@@ -25,6 +27,10 @@ const handleNameChange = (e) => {
   setName(e.target.value);
 };
 
+const handleEmailChange = (e) => {
+  setEmail(e.target.value);
+};
+
 const handleSubmit = event => {
   event.preventDefault();
   setShowSummary(true);
@@ -34,9 +40,9 @@ return (
   <div className="app">
  
     {!showSummary && (
-      <form onSubmit={handleSubmit}>
+      <form className="card" onSubmit={handleSubmit}>
         <div>
-          <h1>Answer a few questions about cats and you can win cat food for a whole year!</h1>
+          <h1 tabIndex="0">Answer a few questions about cats and you can win cat food for a whole year!</h1>
         </div>
 
         <NameQuestion username={name} onNameChange={handleNameChange} />
@@ -51,12 +57,17 @@ return (
           onColorChange={handleColorChange}
         />
 
+        <EmailSection
+        value={email}
+        onEmailChange={handleEmailChange}
+        />
+
         <button className="submit" type="Submit">Send</button>
       </form>
     )}
 
       {showSummary && (
-        <Summary name={name} checked={furOption} value={color} />
+        <Summary name={name} checked={furOption} value={color} email={email} />
       )}
     </div>
   );

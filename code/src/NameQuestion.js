@@ -6,7 +6,7 @@ export const NameQuestion = ({ name, onNameChange }) => {
 return (
 
   <div className="name-question">
-    <label>What is best name for a cat?</label>
+    <label tabIndex="0">What is best name for a cat?</label>
       <input
         type='text'
         onChange={(e) => onNameChange(e)}

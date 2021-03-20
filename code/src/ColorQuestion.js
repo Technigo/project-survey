@@ -4,8 +4,9 @@ export const ColorQuestion = ({ color, onColorChange}) => {
 
   return (
     <div className="color-question">
-    <label>What color do you like a cat to have?</label>
+    <label tabIndex="0">What color do you like a cat to have?</label>
     <select
+      tabIndex="0"
       id="color"
       className="select"
       required
