@@ -1,33 +1,25 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
 
-const Select = () => {
-    const [worldNeeds, setWorldNeeds] = useState ('');
-
-    const onWorldNeedsChanged = (e) => {
-        setWorldNeeds(e.target.value);
-        console.log(e.target.value);
-    }
-
-
+const Select = ({question, onSelectChanged, selectValue}) => {
     return(
-        <form>
             <div>
-                <label>What does the world need more of?</label>
+                <label htmlFor="evaluationSelect">{question}</label>
                 <select 
-                    id="whatWorldNeeds"
-                    onChange={onWorldNeedsChanged}
-                    value={worldNeeds}
+                    id="evaluationSelect"
+                    onChange={onSelectChanged}
+                    value={selectValue}
+                    required
                 >
-                    <option disabled></option>
-                    <option>Puppys</option>
-                    <option>Kindness</option>
-                    <option>Calmness</option>
-                    <option>Modesty</option>
+                    <option disabled value="">choose</option>
+                    <option>Happy</option>
+                    <option>Excited</option>
+                    <option>Angry</option>
+                    <option>Don't know - Don't care!</option>
+                    <option>None of your business</option>
                 </select>
             </div>
-        </form>
     )
 }
 

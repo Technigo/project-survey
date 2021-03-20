@@ -1,25 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Input = () => {
-    const [inputName, setInputName] = useState ('');
-
-    const onInputNameChanged = (e) => {
-        setInputName(e.target.value);
-        console.log(e.target.value);
-    }
-
+const Input = ({question, inputName, onInputNameChange}) => {
     return(
-        <form>
             <div>
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name">{question}</label>
                 <input 
                     id="name" 
                     type="text"
                     value={inputName}
-                    onChange={onInputNameChanged}
+                    onChange={onInputNameChange}
+                    required
                 />
             </div>
-        </form>
     )
 }
 

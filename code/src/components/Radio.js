@@ -1,25 +1,20 @@
-import React, { useState } from 'react'
-import CharacteristicsButtonOptions from 'CharachteristicsButtonOption'
+import React from 'react';
 
-const characteristics = ['great', 'fabulous', 'easygoing', 'kind'];
-
-const Radio = () => {
-    const [inputCharacteristics, setInputCharacteristics] = useState ('')
-
-
-
+const Radio = ({evaluationRadioButton, onRadioButtonChange}) => {
     return(
-        <form>
             <div>
-                <p>How would you describe yourself</p>
-                {characteristics.map((characteristic) =>{
-                    return <CharacteristicsButtonOptions 
-                    characteristicsName={characteristic} 
-                    setInputCharacteristics={setInputCharacteristics}
-                />;
-                })}
+                <p>Have you filled out this weeks evaluation yet?</p>
+                <label htmlFor={evaluationRadioButton} key={evaluationRadioButton} >
+                <input 
+                    name="evaluationAnswer"
+                    id={evaluationRadioButton} 
+                    value={evaluationRadioButton}
+                    type="radio"
+                    onChange={onRadioButtonChange}
+                />   
+                {evaluationRadioButton}
+                </label>
             </div>
-        </form>
     )
 }
 
