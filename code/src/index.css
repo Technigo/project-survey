@@ -12,6 +12,22 @@ code {
     monospace;
 }
 
+main {
+  max-width: 75vw;
+  margin: auto;
+  background-color: beige;
+  padding: 20px;
+  border-radius: 15%;
+}
+
+/*QUESTION*/
+.question-container {
+  padding: 5px;
+  margin: auto;
+} 
+.alternative-container {
+  padding: 3px;
+}
 
 /* DECLARED CLASSES IN COMPONENTS
 
@@ -20,15 +36,12 @@ FORM
 .question-container // div
 .question // h2 with quetsion from questionnaire JSON
 
-QUESTION
-.question // h2 containing question
 
 RADIO INPUT
 .radio-input // section container
 .radio-button // input tag
 
 SELECT INPUT
-.select-input // section container
 .select-dropdown // input tag
 
 */

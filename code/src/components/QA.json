@@ -4,7 +4,7 @@
         "questions": [
                     {   "id": "01",
                         "question": "What have you achieved since yesterday?",   
-                        "alternative":[ 
+                        "alternatives":[ 
                             "I did everything I set out to do!", 
                             "I carried out most of my plan!",
                             "I seized the day and did other stuff!" 
@@ -12,22 +12,23 @@
                     }, 
                     {   "id": "02",
                         "question": "What will you focus on today?", 
-                        "alternative": [ 
-                            "Yes",
-                            "No",
-                            "Maybe" 
+                        "alternatives": [ 
+                            "I will stick to my plan",
+                            "I need to make som adjustments",
+                            "I need a complete do-over" 
                         ]
                     }, 
                     {   "id": "03",
                         "question": "Do you have any blockers?", 
-                        "alternative":[ 
+                        "alternatives":[ 
                             "Yes", 
                             "No" 
                         ]
                     }, 
                     {   "id": "04",
                         "question": "Do you need help with something?", 
-                        "alternative":[ 
+                        "alternatives":[ 
+                            "Please make a selection!",
                             "I'm stuck and really need my team in teamroom asap!", 
                             "I just have a quick question!", 
                             "Actually, I'm all done!" 

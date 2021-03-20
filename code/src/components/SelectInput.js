@@ -1,14 +1,18 @@
-import React, {useState} from 'react'
+import React from 'react';
 
-
-const SelectInput = (props) => {
+const SelectInput  = ({ QuestionAlternative, setAlternative }) => {
+    const onAlternativeChange = (e) => {
+        console.log(e)
+          setAlternative(e.target.value)
+    }
     return (
-        <>
-            <select className="select-dropdown">
-            {props.generatedropdown.alternative}
-            </select>
-        </>
+    <option 
+        onChange={(e) => {
+            onAlternativeChange(e)
+        }}
+        >{QuestionAlternative}
+    </option>
     )
 }
-
+ 
 export default SelectInput;
