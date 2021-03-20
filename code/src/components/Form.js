@@ -30,12 +30,12 @@ const Form = () => {
     {! showSummary ? (
        <section className="main-wrapper">
        <TextField inputName = {inputName} setInputName = {setInputName} />
-       <Dropdown1 genre = {genre} setGenre = {setGenre} />
+       {/* <Dropdown1 genre = {genre} setGenre = {setGenre} />
        <Dropdown2 cost = {cost} setCost = {setCost} />
        <Radiobuttons1 selectBigVenue = {selectBigVenue} setSelectBigVenue = {setSelectBigVenue} />
        <Radiobuttons2 selectMidVenue = {selectMidVenue} setSelectMidVenue = {setSelectMidVenue} />
        <Radiobuttons3 selectSmallVenue = {selectSmallVenue} setSelectSmallVenue = {setSelectSmallVenue} />
-       <RangeSlider range = {range} setRange = {setRange} />
+       <RangeSlider range = {range} setRange = {setRange} /> */}
        <div>
         <button className="submit-button" type="submit" onClick={ handleSubmit }>SEND US YOUR ANSWERS!</button>
        </div>

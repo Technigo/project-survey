@@ -4,6 +4,7 @@
   opacity: 0;
   object-fit: cover;
   position: relative;
+  z-index: -1;
 }
 
 @keyframes fader {

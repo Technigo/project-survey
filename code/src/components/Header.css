@@ -57,7 +57,7 @@
   font-family: Rockwell;
   font-size: 1.8rem;
   margin-top: 40px;
-  color: rgb(250, 246, 246);
+  color: rgb(235, 102, 113);
 }
 
 .survey-info {
@@ -66,7 +66,7 @@
   margin-left: 2rem;
   margin-right: 2rem;
   line-height: 2rem;
-  color: rgb(250, 246, 246);
+  color: rgb(245, 250, 181);
 }
 
 /* MEDIA QUERY TABLET */

@@ -1,16 +1,66 @@
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.text-field {
+  position: absolute;
+  top: 533px;
+  margin: 0.5rem 1.5rem 0 1.5rem;
+  background-color: rgba(2, 2, 2, 0.63);
+  border: solid 1px rgb(250, 246, 246);
+  padding: 12px;
+}
+
+.input-name-heading {
+  font-family: Rockwell;
+  font-size: 1.2rem;
+  color: rgb(250, 246, 246);
+  margin: 4px;
+  display: contents;
+  line-height: 2rem;
+}
+
+.input-field {
+  margin: 0 1rem 0 1.5rem;
+}
 
 /* MEDIA QUERY TABLET */
 @media only screen and (min-width: 768px) {
 
+  .text-field {
+    top: 610px;
+  }
 }
   
 /* MEDIA QUERY DESKTOP */
   @media only screen and (min-width: 992px) {
 
+  .text-field {
+    top: 700px;
+  }
+
+  .main-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 3rem;
+  }
+
+  .input-name-heading {
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+  } 
 }
 
 /* MEDIA QUERY BIGGER DESKTOP */
 
 @media only screen and (min-width: 1200px) {
 
+  .text-field {
+    width: 785px;
+  }
+
+  .input-field {
+    width: 15rem;
+  }
 }

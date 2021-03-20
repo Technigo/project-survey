@@ -8,7 +8,7 @@ const BackgroundImages = () => {
 
     <div className="images-container">
       <div className="gallery">
-    <img className="background-image" src = "/images/noiseporn-fZGl__1jt3M-unsplash.jpg" />
+    <img className="background-image" src = "/images/noiseporn-fZGl__1jt3M-unsplash.jpg" alt="live music stage and crowd" />
     </div>
     </div>
 
