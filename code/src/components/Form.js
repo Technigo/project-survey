@@ -3,65 +3,78 @@ import React, { useState } from 'react'
 import Question from './Question'
 import Summary from './Summary'
 import Confirmation from './Confirmation'
+import CreateQuestions from './CreateQuestions'
+import Button from './Button'
 
 const defaultValues = () => {
   return {
-    name: '',
-    company: '',
-    age: [],
-    preference: '',
-    fishSize: '',
+    Name: '',
+    isMyRealName: '',
+    Capacity: '',
+    Rating: '',
+    howImpressedByUnfinishedFeature: '',
   }
+}
+
+const defaultQuestions = () => {
+  return (
+    [
+      { 
+        type: 'textInput',
+        options: '',
+        questionText: "Hey there! Thanks for checking out my survey project! I hope you will like it, I'm pretty pleased with it myself. Now that you are here - please fill out your name.",
+        placeholder: 'Type your name',
+        required: true,
+        inputId: 'Name', 
+      },
+      { 
+        type: 'radio',
+        options: ['Yes', 'No'],
+        questionText: "Thanks a lot for filling out your name. Or wait, maybe you just typed something silly? That is fine - I do that all the time. Or did you actually write your name?",
+        placeholder: '',
+        required: true,
+        inputId: 'isMyRealName', 
+      },
+      { 
+        type: 'checkboxes',
+        options: ['Prestigeous tech recruiter', 'Enigmatic CEO-type person', 'Code-reviewer', 'Technigo staff', "Random person", "Russian bot"],
+        questionText: 'In what capacity are you visiting this survey right now?',
+        placeholder: 'Select your age',
+        required: true,
+        inputId: 'Capacity', 
+      },
+      { 
+        type: 'select',
+        options: ['Could be better', "There is something a bit off about it", 'It is ok', 'This survey is a work of staggering genius'],
+        questionText: 'How are you liking this survey so far?',
+        placeholder: 'Choose an answer',
+        required: true,
+        inputId: 'Rating', 
+      },
+      { 
+        type: 'select',
+        options: ['Awesome job!', 'Sounds nice', "A for effort but 'nära skjuter ingen hare'", 'Sorry, no'],
+        questionText: 'If i told you that i ALMOST (like 90%!) managed to code this site in a way so that you can also create your own set of questions - would you be impressed?',
+        placeholder: 'Choose an answer',
+        required: true,
+        inputId: "howImpressedByUnfinishedFeature", 
+      
+      }
+    ] 
+  )
 }
 
 const Form = () => {
   const [values, setValues] = useState(defaultValues())
   const [step, setStep] = useState(1)
   const [formStatus, setFormStatus] = useState('question')
+  const [formQuestions, setFormQuestions] = useState(defaultQuestions())
+  // const [userValues, setUserValues] = useState([])
+  // const [userQuestions, setUserQuestions] = useState({})
+  // const [userCreateStep, setUserCreateStep] = useState(1)
+
   
-  const defaultQuestions = [
-    { 
-      type: 'radio',
-      options: ['0-10', '11-50', '51-100'],
-      questionText: 'Hej Lisa hur känns det här då?',
-      placeholder: 'Här kan det stå lite text',
-      required: true,
-      inputId: 'name', 
-    },
-    { 
-      type: 'textInput',
-      options: '',
-      questionText: 'What company do you work for?',
-      placeholder: 'Type your company',
-      required: true,
-      inputId: 'company', 
-    },
-    { 
-      type: 'checkboxes',
-      options: ['0-10', '11-50', '51-100'],
-      questionText: 'Age',
-      placeholder: 'Select your age',
-      required: true,
-      inputId: 'age', 
-    },
-    { 
-      type: 'textInput',
-      options: '',
-      questionText: 'What fish do you prefer?',
-      placeholder: 'Type your fish preference',
-      required: true,
-      inputId: 'preference', 
-    },
-    { 
-      type: 'select',
-      options: ['small', 'medium', 'large', 'x-large'],
-      questionText: 'What size do you want the fish to be? Remember that the fins are included in the overall size and some more text to really make it wrap, i hope.',
-      placeholder: 'Choose size',
-      required: true,
-      inputId: 'fishSize', 
-    }
-    ]
-    
+
 
   const onInputResponse = (id, value, type) => {
     console.log('onInputResponse received ' + value + ' from ' + id + ' of type ' + type)
@@ -75,19 +88,12 @@ const Form = () => {
         setValues({ ...values, [id]: newArr})
       }
     } else {
-
       setValues({ ...values, [id]: value})
     }
   }
-  // const onInputResponse = (e) => {
-  //   console.log('onInputResponse received ' + e.target.value + ' from ' + e.target.id)
-  //   setValues({ ...values, [e.target.id]: e.target.value})
-  // }
   
   const onButtonResponse = e => {
-    console.log(e)
-    console.log('e.target.value ' + e.target.value)
-    console.log('e.target.id ' + e.target.id)
+    console.log('onButtonResponse received ' + e.target.id)
     
     switch (e.target.id) {
 
@@ -96,43 +102,33 @@ const Form = () => {
           console.log(values)
           setStep(step - 1)
           setFormStatus('question')
-          // setValues({ ...values, "step": (step - 1), "formStatus": 'question'})
-          // setValues({ ...values, "formStatus": 'question'})
         } else {
-          // setValues({ ...values, "step": (values.step - 1)})
           setStep(step - 1)
-
         }
         break
 
       case 'next' :
-        if (step === defaultQuestions.length) {
+        if (step === formQuestions.length) {
           console.log('setting formStatus to summary')
-          // setValues({ ...values, "formStatus": "summary"})
           setFormStatus('summary')
-
-        }
-        else {
-          // setValues({ ...values, "step": (values.step + 1)})
+        } else {
           setStep(step + 1)
-
         }
         break
 
       case 'submit' :
-        // setValues({ ...values, "formStatus": "confirmation"})
         setFormStatus('confirmation')
-
         break
 
       case 'reset' :
         setValues(defaultValues())
         setStep(1)
         setFormStatus('question')
-
-        
         break
 
+      case 'createNew' :
+        setFormStatus('createNew')
+        break  
       default :
       return null
     }
@@ -140,16 +136,22 @@ const Form = () => {
 
   switch (formStatus) {
     case 'question' :
-      return (
-        <form name="form" data-netlify="true">
-        <Question 
-        values={values}
-        step={step}
-        question={defaultQuestions[step - 1]}
-        onInputResponse={onInputResponse}
-        onButtonResponse={onButtonResponse}
-        />
-        </form>
+      return ( 
+        <>
+          <form name="form" method="POST" data-netlify="true">
+          <Question 
+          values={values}
+          step={step}
+          question={formQuestions[step - 1]}
+          onInputResponse={onInputResponse}
+          onButtonResponse={onButtonResponse}
+          />
+          </form>
+          {/* <Button 
+              buttonValue="createNew"
+              label="Create new"
+              onButtonResponse={(e) => onButtonResponse(e)} /> */}
+        </>
       )
     case 'summary' :
       return (
@@ -161,13 +163,25 @@ const Form = () => {
       return (
         <Confirmation onButtonResponse={onButtonResponse} />
       )
+    // case 'createNew' :
+    //   return (
+    //     <CreateQuestions 
+    //     setFormQuestions={setFormQuestions}
+    //     setFormStatus={setFormStatus}
+    //     setValues={setValues}
+    //     values={values}
+    //     />
+    //   )
     default :
+    console.log(formStatus)
+    console.log(step)
+    console.log(JSON.stringify(values, null, 2))
     return (
       <p>Oops!</p>
     )
 
   }
-
+  
 }
 
 export default Form

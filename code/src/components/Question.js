@@ -119,8 +119,13 @@ const Question = (props) => {
         </>
       )
     default :
+    console.log(question.type)
+    // console.log(formStatus)
+    console.log(step)
+    console.log(JSON.stringify(values, null, 2))
+
       return (
-        <p>Oops!</p>
+        <p>Oops! 1</p>
       )
   }
 }

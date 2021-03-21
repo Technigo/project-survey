@@ -5,7 +5,7 @@ const TextInput = (props) => {
   console.log(values)
   console.log(inputId)
   return (
-    <>
+    <div className="question text">
       <label className="question-text" htmlFor={inputId}>{label}</label>
       <input className="input text"
         id={inputId} 
@@ -16,7 +16,7 @@ const TextInput = (props) => {
         value={values[inputId]}
         onChange={(e) => onInputResponse(e.target.id, e.target.value, e.target.type)}
         />
-    </>
+    </div>
   )
 }
 

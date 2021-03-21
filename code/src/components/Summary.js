@@ -8,7 +8,7 @@ const Summary = ({ values, onButtonResponse }) => {
 
       {Object.keys(values).map((key, index) => {
         return (
-          <p key={index}>{key} {values[key]}</p>
+          <p key={index}><b>{key}</b>: {values[key]}</p>
           
         )
       })}

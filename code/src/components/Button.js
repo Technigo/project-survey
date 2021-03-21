@@ -5,7 +5,7 @@ const Button = ({ buttonValue, label, onButtonResponse }) => {
   return (
     <input 
       className="button"
-      type="submit"
+      type="button"
       id={buttonValue}
       value={label}
       onClick={(e) => onButtonResponse(e)}
