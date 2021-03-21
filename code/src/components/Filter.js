@@ -21,7 +21,7 @@ const RecipesFiltering = ({ questionArray, answerArray, resetQuestion }) => {
 
   useEffect(() => {
     fecthData()
-  }, [])
+  }, [fecthData])
 
   return (
 
@@ -32,9 +32,9 @@ const RecipesFiltering = ({ questionArray, answerArray, resetQuestion }) => {
           showRecipes.map((recipe, index) => {
             return (
               <div className="filter-container-2" key={index}>
-                < a href={recipe.recipe.url} target="_blank">
+                < a href={recipe.recipe.url} target="_blank" rel="noopener noreferrer">
                   <div className="image-container">
-                    <img src={recipe.recipe.image} />
+                    <img src={recipe.recipe.image} alt="recipe-img" />
                   </div>
                   <p>{recipe.recipe.label}</p>
                 </a>
