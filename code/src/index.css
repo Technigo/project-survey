@@ -165,7 +165,7 @@ form {
   font-size: 20px;
 }
 
-.summaryContainer {
+/* .summaryContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -177,9 +177,9 @@ form {
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
-}
+} */
 
-.summaryContent {
+/* .summaryContent {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -191,7 +191,7 @@ form {
   font-size: 18px;
   color: #fff;
   width: 85%;
-}
+} */
 
 /*BUTTON STYLING*/
 
@@ -213,10 +213,6 @@ position: absolute;
 bottom: 110px;
 width: 80%;
 text-decoration: none;
-/* margin-left: 0;
-margin-right: 0;
-margin-left: auto;
-margin-right: auto; */
 font-size: 22px;
 color: #fff;
 height: 60px;
@@ -267,13 +263,13 @@ appearance: none;
     justify-content: center;
   }
 
-  .summaryContainer {
+/*   .summaryContainer {
     justify-content: center;
-  }
+  } */
 
-  .summaryContent {
+/*   .summaryContent {
     height: 50%;
-  }
+  } */
 
   .welcomeContent p,
   .summaryContent {
