@@ -154,6 +154,12 @@ form {
   padding: 5px 0;
 }
 
+.radioContainer {
+  display: flex;
+  flex-direction: column;
+  align-content: flex-start;
+}
+
 .radioLabel {
   margin-left: 5px;
   font-size: 20px;
@@ -202,14 +208,15 @@ form {
 }
 
 .submitButton {
+justify-self: center;
 position: absolute;
-bottom: 80px;
+bottom: 110px;
 width: 80%;
 text-decoration: none;
-margin-left: 0;
+/* margin-left: 0;
 margin-right: 0;
 margin-left: auto;
-margin-right: auto;
+margin-right: auto; */
 font-size: 22px;
 color: #fff;
 height: 60px;
