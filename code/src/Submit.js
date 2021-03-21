@@ -3,8 +3,7 @@ import React from 'react'
 
 
 const Submit = (props) => {
-  const {submitted, setSubmitted} = props;
-  const {completed, setCompleted} = props;
+  const {setSubmitted} = props;
   const {isSurveyComplete} = props;
   
   let submitButton;
