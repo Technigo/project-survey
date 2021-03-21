@@ -1,4 +1,11 @@
-body {
+* { 
+  -moz-box-sizing: border-box; 
+  -webkit-box-sizing: border-box; 
+   box-sizing: border-box; 
+}
+body, html {
+  width: 100%;
+  height: 100%;
   margin: 0;
   font-family: Montserrat;
   -webkit-font-smoothing: antialiased;
@@ -6,10 +13,14 @@ body {
   background-image: url("/assets/food-pattern.png");
   font-size: 16px;
 }
+#root{
+  width: 100%;
+  height: 100%;
+}
 
 .container{
   width: 100%;
-  height: 100vh;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
@@ -26,12 +37,13 @@ body {
   height: 9rem;
 }
 .text-section{
+  width: 100%;
   text-align: center;
   padding: 0rem 0.68rem;
 }
 .title{
   font-family: Oregano;
-  font-size: 1.6rem;
+  font-size: 2rem;
 }
 button{
   font-size: 1.5rem;
@@ -43,10 +55,11 @@ button{
   border: solid 2px #ffc107;
   background-color: #fe8e04;
   color: white;
+  align-self: center;
 }
 .question-container{
   width: 100%;
-  height: 25rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -65,6 +78,7 @@ button{
   height: 10%;
   display: flex;
   justify-content: center;
+  padding: 4rem 0rem;
 }
 .progress{
   width: 8rem;
@@ -88,4 +102,215 @@ button{
 .filter-container a{
   text-decoration: none;
   color: black;
+}
+.traker{
+  width: 70%;
+  height: 1.4rem;
+  background-color: #fe8e04;
+  border-radius: 10px;
+  box-shadow: inset 0 0 5px #ffc107;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+}
+.progress-tracker span{
+  color: white;
+  font-weight: bolder;
+}
+
+@media (min-width:375px){
+  body{
+    font-size: 25px;
+  }
+  .title{
+    font-size: 2rem;
+  }
+  .select option{
+    font-size: 1.2rem
+  }
+  .traker{
+    height: 1.8rem;
+  }
+}
+@media (min-width:414px){
+  body{
+    font-size: 25px;
+  }
+  .title{
+    font-size: 2.5rem;
+  }
+}
+@media (min-width:768px){
+  body{
+    font-size: 30px;
+  }
+  .title{
+    font-size: 3.5rem;
+  }
+  .main-section img{
+    width: auto;
+    height: 16rem;
+  }
+  button{
+    font-size: 2rem;
+    width: 12rem;
+    height: 6rem;
+  }
+  .traker{
+    height: 3.5rem;
+  }
+  .progress{
+    width: 15rem;
+    height: 3.9rem;
+  }
+  .select{
+    height: 2rem;
+    font-size: 1.5rem;
+  }
+  input[type=radio] {
+    border: 0px;
+    width: 1.5rem;
+    height: 1.5em;
+  }
+  .filter-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .filter-container-2{
+    width: 45%;
+    height: 20.6rem;
+
+  }
+  .title{
+    width: 100%;
+    text-align: center;
+  }
+
+}
+@media (min-width:1024px){
+  body{
+    font-size: 40px;
+  }
+  .title{
+    font-size: 4.5rem;
+  }
+  .main-section img{
+    width: auto;
+    height: 20rem;
+  }
+  button{
+    font-size: 3rem;
+    width: 16rem;
+    height: 8rem;
+  }
+  .traker{
+    height: 3.5rem;
+  }
+  .progress{
+    width: 18rem;
+    height: 3.9rem;
+  }
+  .select{
+    height: 3rem;
+    font-size: 2.5rem;
+  }
+  input[type=radio] {
+    border: 0px;
+    width: 2.2rem;
+    height: 2.2em;
+  }
+  .filter-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+  }
+  .filter-container-2{
+    width: 45%;
+    height: 24.6rem;
+
+  }
+  .image-container{
+    width: 100%;
+    height: 400px;
+    padding: 0px 15px;
+  }
+  .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+@media (min-width:1366px){
+  body{
+    font-size: 40px;
+  }
+  .title{
+    font-size: 4.5rem;
+  }
+  .main-section img{
+    width: auto;
+    height: 20rem;
+  }
+  button{
+    font-size: 3rem;
+    width: 16rem;
+    height: 8rem;
+  }
+  .traker{
+    height: 3.5rem;
+  }
+  .progress{
+    width: 18rem;
+    height: 3.9rem;
+  }
+  .select{
+    height: 3rem;
+    font-size: 2rem;
+  }
+  input[type=radio] {
+    border: 0px;
+    width: 2.2rem;
+    height: 2.2em;
+  }
+  .filter-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .filter-container-2{
+    width: 45%;
+    height: 24.6rem;
+  }
+  .traker{
+    width: 50%;}
+  
+}@media(min-width:1920px){
+  body{
+    font-size: 35px;
+  }
+  .image-container{
+    width: auto;
+    height: 600px;
+    padding: 0px 15px;
+  }
+  .image-container img{
+    width: 100%;
+    height: 100%;
+  }
+  .filter-container-2{
+    width: 45%;
+    height: 30.6rem
+  }
+
+
+
 }

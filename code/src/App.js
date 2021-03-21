@@ -7,12 +7,12 @@ export const App = () => {
   const [startQuestion, setStartQuestion] = useState(false)
 
   return (
-    <div>
+    <div className="container">
       {
         startQuestion === false ? (
           <Start onClickStart={setStartQuestion} />) :
           (
-            <Questions />
+            <Questions onClickStart={setStartQuestion} />
           )
       }
 

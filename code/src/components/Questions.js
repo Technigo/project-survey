@@ -3,22 +3,28 @@ import data from '../Data.json'
 import Answer from './Answer'
 import Final from './Final'
 import Filter from './Filter'
+import ProgressBar from './ProgressBar'
 
 
-const Questions = () => {
+const Questions = ({ onClickStart }) => {
   //State to control increase / decrease questions Id
   const [questionNumber, setQuestionNumber] = useState(0)
 
   //State to store answer.
   const [answerStored, setAnswerStored] = useState([])
 
+  const [progressBar, setProgressBar] = useState(0)
+
   //logic to jump between questions.
   const getAnswer = (questionId, answerSelected) => {
     if (questionId === 0 && answerSelected === "yes") {
       setQuestionNumber(2)
+      calculateProgressBar(1)
+
     }
     else {
       increaseQuestionNumber()
+      calculateProgressBar(questionId)
     }
     answerStored.push({
       questionId: questionId,
@@ -26,7 +32,6 @@ const Questions = () => {
     })
     setAnswerStored(answerStored)
   }
-
   //***********STAR FUNCTION ***************** "To control navigation buttons (between questions)""
   const increaseQuestionNumber = () => {
     let counter = questionNumber
@@ -49,6 +54,7 @@ const Questions = () => {
           questionArray={data.questions}
           answerArray={answerStored} />
         <Filter
+          resetQuestion={onClickStart}
           questionArray={data.questions}
           answerArray={answerStored} />
       </div>
@@ -56,6 +62,10 @@ const Questions = () => {
     )
   }
   //*************END FUCNTION************//
+
+  const calculateProgressBar = (questionId) => {
+    setProgressBar(data.questions.length - (questionId + 1))
+  }
 
   return (
     <article className="container">
@@ -68,6 +78,8 @@ const Questions = () => {
           onPressSubmit={getAnswer}
         />
       </div>
+      <ProgressBar
+        progressTraker={progressBar} />
       <div className="progress-section">
         <button className="progress" onClick={decreaseQuestionNumber}>▲</button>
         <button className="progress" onClick={increaseQuestionNumber}>▼</button>

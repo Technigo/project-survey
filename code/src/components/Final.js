@@ -1,6 +1,5 @@
 import React from 'react'
 
-
 const Final = ({ questionArray, answerArray }) => {
 
   return (
@@ -10,8 +9,8 @@ const Final = ({ questionArray, answerArray }) => {
         answerArray.map((showData) => {
           return (
             <div key={showData.questionId}>
-              <p><p className="mark">Q: </p>{questionArray[showData.questionId].question}</p>
-              <p><p className="mark">A: </p>{showData.answer}</p>
+              <p><span className="mark">Q: </span>{questionArray[showData.questionId].question}</p>
+              <p><span className="mark">A: </span>{showData.answer}</p>
             </div>
           )
         })

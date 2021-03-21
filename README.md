@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+In this assignment, I'm starting to use react states by implementing a Survey about food recipes that is connect with an API filtering by the user choices
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The problem: The filter was not part of the task but was a plus that I wanted to add and was challenging to implement all this logic together and make it works. To make it happen I have created a filter constructor function that concat all the answers selection and making a filter for the API for the moment that is being called 
+
+If would had more time I would add a custom message when the options are required before continue to the next question. Also, I would like to add an error message when the API returns 0 options 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+...

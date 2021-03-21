@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import { filterContructor } from '../helpers/filterContructor'
 
-const RecipesFiltering = ({ questionArray, answerArray }) => {
+const RecipesFiltering = ({ questionArray, answerArray, resetQuestion }) => {
+
   const [showRecipes, setShowRecipes] = useState([])
 
   const filters = filterContructor(questionArray, answerArray)
@@ -23,24 +24,28 @@ const RecipesFiltering = ({ questionArray, answerArray }) => {
   }, [])
 
   return (
-    <div className="filter-container">
+
+    <div className="container">
       <h1 className="title">Our suggestion for you :</h1>
-      {
-        showRecipes.map((recipe, index) => {
-          return (
-            <div key={index}>
-              < a href={recipe.recipe.url} target="_blank">
-                <div className="image-container">
-                  <img src={recipe.recipe.image} />
-                </div>
-                <p>{recipe.recipe.label}</p>
-              </a>
-            </div>
+      <div className="filter-container">
+        {
+          showRecipes.map((recipe, index) => {
+            return (
+              <div className="filter-container-2" key={index}>
+                < a href={recipe.recipe.url} target="_blank">
+                  <div className="image-container">
+                    <img src={recipe.recipe.image} />
+                  </div>
+                  <p>{recipe.recipe.label}</p>
+                </a>
+              </div>
 
-          )
+            )
 
-        })
-      }
+          })
+        }
+      </div>
+      <button onClick={() => resetQuestion(false)}>New Search</button>
     </div>
   )
 

@@ -10,7 +10,11 @@ const Answer = ({ questionId, optionType, options, onPressSubmit }) => {
   }
   const onSubmit = (e) => {
     e.preventDefault()
-    onPressSubmit(questionId, answerValues)
+    if (answerValues) {
+      onPressSubmit(questionId, answerValues)
+    } else {
+      alert("Please select one option")
+    }
   }
 
   if (optionType === "radio") {
@@ -19,19 +23,22 @@ const Answer = ({ questionId, optionType, options, onPressSubmit }) => {
         {
           options.map((optionName, index) => (
             <div key={`${questionId}-${index}`}>
-              <input onChange={onSelectAnswer} type="radio" id={optionName} name={optionType} value={optionName}></input>
-              <label htmlFor={optionName}>{optionName}</label>
+              <label className="radio" htmlFor={optionName}>
+                <input onChange={onSelectAnswer} type="radio" id={optionName} name={optionType} value={optionName} required></input>
+                {optionName}
+              </label>
+
             </div>
           ))
         }
-        <button onClick={onSubmit}>Submit</button>
+        <button type="submit" onClick={onSubmit}>Submit</button>
       </form>
     )
   }
   return (
     <form className="options">
-      <select onChange={onSelectAnswer} >
-        <option>Select One</option>
+      <select className="select" onChange={onSelectAnswer} >
+        <option className="select">Select One</option>
 
         {
           options.map((optionName, index) => (

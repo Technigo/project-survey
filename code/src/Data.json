@@ -16,12 +16,12 @@
       "filter": "q",
       "optionType": "radio",
       "options": [
-        "egg",
         "Chicken",
-        "meat",
+        "egg",
         "Fish",
-        "Pork",
-        "lamb"
+        "lamb",
+        "meat",
+        "Pork"
       ]
     },
     {
@@ -48,8 +48,7 @@
         "lunch",
         "dinner",
         "breakfast",
-        "snack",
-        "teatime"
+        "snack"
       ]
     },
     {
@@ -63,8 +62,7 @@
         "salad",
         "soup",
         "cereals",
-        "desserts",
-        "drinks"
+        "desserts"
       ]
     }
   ]
