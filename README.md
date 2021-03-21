@@ -12,4 +12,4 @@ Other than the above it went relatively smooth and I think it was a fun project!
 
 ## View it live
 
-https://jessikas-survey.netlify.app/
+https://hotel-survey.netlify.app/
