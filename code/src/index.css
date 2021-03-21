@@ -56,6 +56,10 @@ code {
   margin-bottom: 8px;
 }
 
+.fieldset {
+  border: none;
+}
+
 .radio-buttons, .radio-buttons:before, .radio-buttons:after {
   box-sizing: border-box;
 }

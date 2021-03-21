@@ -18,8 +18,8 @@ const ColorQuestion = (props) => {
   }
   console.log(props.color);
   return (
-    <>
-      <p>My favourite colour is: </p>
+    <fieldset className="fieldset">
+      <legend>My favourite colour is: </legend>
       {colors.map((shade) => (
         <label key={shade} className="radio-buttons">
           <span className="radio-input">
@@ -37,7 +37,7 @@ const ColorQuestion = (props) => {
         </label> 
       ))}
       
-    </>
+    </fieldset>
     
 
   )
