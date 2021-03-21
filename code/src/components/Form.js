@@ -31,7 +31,7 @@ const Form = () => {
             )}
             
             {currentPage === 1 && (
-                <div className="text-input-container">
+                <div className="question-one-container">
                   < TextInputOne
                     labelText = {"1. When you think of the term 'Witch' what are the first few words that comes to mind?🔮"}
                     id="1"
@@ -40,8 +40,8 @@ const Form = () => {
                 </div>
             )}
             {currentPage === 2 && (
-                <div className="second-question-container">
-                    <h2>What is the most accurate description of your practice/craft?🔮</h2>
+                <div className="question-two-container">
+                    <h2>2. What is the most accurate description of your practice/craft?🔮</h2>
                     <div className="radio-button-container">
                     {radioAnswers.map(radioAnswer => {
                         return (
@@ -58,7 +58,7 @@ const Form = () => {
                 </div>
             )}
             {currentPage === 3 && (
-                <div className="dropdown-container">
+                <div className="question-three-container">
                   < SelectList
                     questionText = {"3. How long have you been practicing witchcraft?🔮"}
                     setDropDown = {setDropDown}
@@ -66,9 +66,9 @@ const Form = () => {
                 </div>
             )}
             {currentPage === 4 && (
-                <div className="text-input-container">
+                <div className="question-four-container">
                   < TextInputTwo
-                    labelText = {"4. Do you think society's portrayal of witches is fair/accurate? Please explain your answer.🔮"}    
+                    labelText = {"4. Do you think society's portrayal of witches is fair? Please explain your answer.🔮"}    
                     id="4"       
                     setSocietysPortrayal={setSocietysPortrayal}
                   />

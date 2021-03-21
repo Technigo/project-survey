@@ -8,7 +8,7 @@ export const App = () => {
     <div>
       <picture>
         <source srcset="./images/galaxy.jpg" media="(max-width: 767px)" />
-        <source srcset="./images/moon-phases.jpg" media="(max-width: 1199px)" />
+        <source srcset="./images/moon-phases.jpg" />
         <img class="hero-image" src="./images/moon-phases.jpg" />
       </picture>
       <Form />
