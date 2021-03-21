@@ -1,5 +1,6 @@
 import React from 'react';
 
+/*the array with books is in its one file*/
 import {bookGenre} from '../utils/bookGenre'
 
 

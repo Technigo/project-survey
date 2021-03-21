@@ -9,7 +9,7 @@ const HowManyBooks = ({text, number, onNumberChange}) => {
   return(
     <div className = "number-of-books-container">
       <div className="inner-container">
-      <label className="label-radio"><h2>{text}</h2>
+      <label className="label-radio"><h2 tabIndex="0">{text}</h2>
       <select
         onChange={onNumberChange}
         value={number}

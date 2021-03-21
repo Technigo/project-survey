@@ -15,7 +15,7 @@ export const App = () => {
 
   //function for submit button
   const handleSubmit = (event) => {
-    console.log("handleSubmit called")
+
     event.preventDefault()
     if (isSurveyComplete())
     {
@@ -23,6 +23,7 @@ export const App = () => {
       setDisplaySummary(true)
     }
     else{
+      //if survey isn't complete, it will alert and scroll to top.
       alert("Survey not complete");
       window.scroll(0,0);
     }
@@ -59,9 +60,6 @@ export const App = () => {
     return true
   }
 
-    if (isSurveyComplete()) {
-       console.log(`done!`);
-     }
 
   return (
 

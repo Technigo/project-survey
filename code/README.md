@@ -1,19 +1,25 @@
-# Technigo React Starter App
+# Project react survey
+The project was to use React to build a survey form. It should consist of at least three questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+# My survey
+My survey consist of three questions with three different input-types. One textinput, one drop-down and one with radiobuttons. When the user press next-button the window scrolls down to the next question. When the user submit and have answered all the questions,the question-section will disappear and a summary will show.
+If the questions is not answered when the user press submit, the window will scroll to the top.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+# The process
+I divided my form into a few different components. One for each part of the survey.
+I think it might have been a bit easier if I would just have put all of the different inputs directly into app.js and not in separate files and import them. As a beginner it could maby have made it easier to get an overlook. But I wanted to get used to working with components that are in seperate files and practise in how to import/export and use props.
+I did a map() over the radio-buttons and if I had more time I would have tried to move the map to the app.js file instead to make the component with the radiobuttons more easy to re-use.
+Since the picture I chose for the mobile-version was not really a good fit for desktop, I decided to switch to a different one in media queries.
 
-## Usage
+Things I'd like to add: A button to restart the survey. A button so you can chose to go back to the previous question. A progress-bar. Some more questions. More css.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
 
-Alternatively, if you don't want a new git repo on your account;
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+# Tech used
+HTML
+CSS
+JavaScript
+React
+
+# View the site live
+https://book-survey-annsofi.netlify.app/
