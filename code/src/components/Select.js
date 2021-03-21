@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Select = ({question, onSelectChange, selectValue}) => {
+const Select = ({onSelectChange, selectValue}) => {
     return(
             <div className="select-element">
                 <label htmlFor="selectAnswer">
@@ -8,8 +8,7 @@ const Select = ({question, onSelectChange, selectValue}) => {
                         id="selectAnswer"
                         onChange={onSelectChange}
                         value={selectValue}
-                        required
-                    >
+                        required>
                         <option disabled value="">choose</option>
                         <option>happy</option>
                         <option>excited</option>

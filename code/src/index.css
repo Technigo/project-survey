@@ -19,6 +19,7 @@ code {
   flex-direction: column;
   align-items: center;
   height: 100vh;
+  width: 100vw;
   font-family: Spartan;
 }
 
@@ -31,6 +32,7 @@ code {
 }
 
 .maintitle{
+  margin-top: 50px;
   font-family: Fascinate;
   margin-bottom: 0;
   font-size: 28px;
@@ -51,7 +53,7 @@ form{
 }
 
 .nameinputelement{
-  width: 80%;
+  width: 100%;
   margin-top: 5px;
   border: 1px solid pink;
 }
@@ -131,8 +133,20 @@ button{
 }
 
 @media (min-width: 768px){
+  header{
+   background-image: url('./images/background.jpg');
+   height: 20vh;
+   position: relative;
+   }
+
   .maincontainer{
     justify-content: center;
+    position: absolute;
+    height: 60vh;
+  }
+
+  .maintitle{
+    margin-top: 60;
   }
 
   .radiobuttonbox{
@@ -146,8 +160,6 @@ button{
   .formelement{
     margin:  0 10px;
   }
-}
 
-@media (min-width: 1200px){
 
 }

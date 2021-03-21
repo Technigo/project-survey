@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Summary = ({nameValue, selectValue, buttonValue}) => {
+const Summary = ({nameValue, selectValue, buttonValue}) => {    
     return (
         <div className="formelement">
             <p>
@@ -16,15 +16,8 @@ const Summary = ({nameValue, selectValue, buttonValue}) => {
                 So, I won't be the judge of your actions now - I leave that up to you. But let me ask you one last question. Do you feel comfortable with how this turned out?
                 And with that I'll let you go - Class dismissed.
             </p>
-
-            <div className="submitbutton">
-                <button type="submit"> wanna rethink? </button>
-            </div>
-
         </div>
-
-
-    )}
-
+    )
+}
 
 export default Summary;

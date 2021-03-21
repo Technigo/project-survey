@@ -12,6 +12,7 @@ const Survey = () => {
     const [evaluation, setEvaluation] = useState ('')
     const [selectAnswer, setSelectAnswer] = useState ('');
     const [summary, setSummary] = useState(false)
+
 // array
 const evaluationArray = ['yes', 'no', 'none of your business']
 
@@ -21,13 +22,16 @@ const evaluationArray = ['yes', 'no', 'none of your business']
         setSummary(true)
     }
 
+
     const onInputNameChanged = (e) => {setInputName(e.target.value)}
     const onRadioButtonChanged = (e) => {setEvaluation(e.target.value)}
     const onSelectChanged = (e) => {setSelectAnswer(e.target.value)}
+    
 
 
     return (
         <>
+        <header></header>
             <main className="maincontainer">
                 <h1 className="maintitle">weekly evaluation form / reminder</h1>
                     {!summary && (
@@ -69,26 +73,26 @@ const evaluationArray = ['yes', 'no', 'none of your business']
                                     <button onSubmit = {handleSubmit} type="submit"> Submit </button>
                                 </div>
                             </div>
-                        </form>
-            )}
+                        </form>     
+                    )}
 
-            {(    
-                <>   
-                {summary &&
-                    <section>
-                        <Summary 
-                            nameValue={inputName}
-                            selectValue={selectAnswer}
-                            buttonValue={evaluation}
-                        />
-                    </section>
-                }
-    </>
-            )}
+                    {(    
+                        <>   
+                            {summary &&
+                                <section>
+                                    <Summary 
+                                        nameValue={inputName}
+                                        selectValue={selectAnswer}
+                                        buttonValue={evaluation}
+                                    />
+                                </section>
+                                
+                            }  
+                        </>
+                    )}
             </main>
         </>
     )
 }
-
 
 export default Survey;
