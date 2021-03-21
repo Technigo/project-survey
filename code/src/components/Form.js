@@ -57,6 +57,8 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
   return (
     <>
       <main className='main-container'>
+        <div className='section-container'>
+
       {!summary && ( 
 
         <form onSubmit={handleSubmit}>
@@ -123,10 +125,12 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
                 companionValue={companion}
                 activityValue={activity}
               />
+              <img src="/assets/packing.png" alt="suitcase being packed"/>
             </section>
           }
         </>
       )}
+      </div>
     </main> 
 
     </> 

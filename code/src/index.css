@@ -100,17 +100,6 @@ input::placeholder {
 	flex-direction: column;
 }
 
-.summary-section {
-	font-size: 2rem; /*to remove the square*/
-}
-
-.tag {
-	color: #432371;
-	font-family: "Amatic SC", cursive;
-	font-weight: 700;
-	font-size: 2.5rem;
-}
-
 .button-section {
 	margin: 40px;
 	text-align: center;
@@ -158,6 +147,26 @@ input::placeholder {
 	transform: translate3d(-50%, -50%, 0) scale3d(1, 1, 1);
 }
 
+.summary-section {
+	font-size: 1.5rem; /*to remove the square*/
+}
+
+.tag {
+	color: #432371;
+	font-family: "Amatic SC", cursive;
+	font-weight: 700;
+	font-size: 1.7rem;
+}
+
+.summary-section img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+	margin-top: 50px;
+	border: solid 4px white;
+}
+
 @media all and (min-width: 768px) {
 	body {
 		font-size: 1.4rem;
@@ -184,11 +193,48 @@ input::placeholder {
 		padding: 10px;
 	}
 
-	.summary-section {
-		height: 100vh;
-	}
-
 	.circleScaleBtn {
 		font-size: 1.6rem;
+	}
+
+	.summary-section {
+		height: 100vh;
+		font-size: 2rem;
+	}
+
+	.tag {
+		font-size: 2.5rem;
+	}
+
+	.summary-section img {
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+		width: 400px;
+		margin-top: 50px;
+		border: solid 4px white;
+	}
+}
+
+@media all and (min-width: 1024px) {
+	.main-container {
+		margin: 100px;
+	}
+	.section-container {
+		width: 800px;
+		border: 1px solid white;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	section {
+		margin-left: auto;
+		margin-right: auto;
+		width: 700px;
+	}
+
+	.summary-section img {
+		width: 350px;
+		margin-top: 50px;
 	}
 }
