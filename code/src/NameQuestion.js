@@ -8,6 +8,7 @@ return (
   <div className="name-question">
     <label tabIndex="0">What is best name for a cat?</label>
       <input
+        tabIndex="0"
         type='text'
         onChange={(e) => onNameChange(e)}
         required

@@ -13,13 +13,13 @@ export const ColorQuestion = ({ color, onColorChange}) => {
       value={color}
       onChange={(e) => onColorChange(e)}
       >
-      <option value="">Select</option>
-      <option value="brown">Brown</option>
-      <option value="black">Black</option>
-      <option value="white">White</option>
-      <option value="grey">Grey</option>
-      <option value="red">Red</option>
-      <option value="mixed colors">Mixed</option>
+      <option tabIndex="0" value="">Select</option>
+      <option tabIndex="0" value="brown">Brown</option>
+      <option tabIndex="0" value="black">Black</option>
+      <option tabIndex="0" value="white">White</option>
+      <option tabIndex="0" value="grey">Grey</option>
+      <option tabIndex="0" value="red">Red</option>
+      <option tabIndex="0" value="mixed colors">Mixed</option>
     </select>
     </div>
   );

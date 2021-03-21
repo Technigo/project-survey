@@ -14,7 +14,7 @@ export const Summary = ({ name, checked, value, email }) => {
         <p tabIndex="0">Your favorite cat name ever is {name}!</p>
       </div>
       <div className="ending">
-      <p>We couldn't agree with you more!</p>
+      <p tabIndex="0">We couldn't agree with you more!</p>
       </div>
     </section>
   );
