@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
 
+import Image from './Image'
 import FirstPage from './FirstPage'
 import Button from './Button'
 import ActivitySelect from './ActivitySelect'
 import LessonRadioOption from './LessonRadioOption'
+import Reminder from './Reminder'
 import FormSummary from './FormSummary'
 
 const Form = () => {
@@ -26,8 +28,10 @@ const Form = () => {
             setQuestionIndex (1)
         } else if (lesson === '') {
             setQuestionIndex(2)
-        } else if (questionIndex === 2) {
+        } else if (reminder === '') {
             setQuestionIndex(3)
+        } else if (questionIndex === 3) {
+            setQuestionIndex(4)
         } else {
             restart()
         }
@@ -35,6 +39,7 @@ const Form = () => {
 
     return (
         <form onSubmit={questionHandler}>
+            <Image />
             {questionIndex === 0 &&   
                 <>
                     <FirstPage 
@@ -56,15 +61,23 @@ const Form = () => {
             {questionIndex === 2 &&
                 <>
                     <LessonRadioOption
-                        lesson={lesson}
                         setLesson={setLesson}
+                        reminder={reminder}
+                        setReminder={setReminder}
+                    />
+                    <Button text="Next" labelText="Next question" />
+                </>
+            }
+            {questionIndex === 3 &&
+                <>
+                    <Reminder
                         reminder={reminder}
                         setReminder={setReminder}
                     />
                     <Button text="Submit" labelText="Submit survey" />
                 </>
             }
-            {questionIndex === 3 &&
+            {questionIndex === 4 &&
                 <>
                     <FormSummary
                         word={word}

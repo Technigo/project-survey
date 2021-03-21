@@ -3,15 +3,13 @@ import React from 'react'
 const Button = (props) => {
 
     return (
-        <div>
-            <button
-                type="submit"
-                className="button"
-                tabIndex='0'
-                aria-label={props.labelText}
+        <button
+            type="submit"
+            className="button"
+            tabIndex='0'
+            aria-label={props.labelText}
             >{props.text}
-            </button>
-        </div>
+        </button>
     )
 }
 
