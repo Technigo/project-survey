@@ -21,8 +21,8 @@ h1 {
 .header-container {
   display: flex;
   justify-content: space-evenly;
-  height: 350px;
-  /*border: 2px solid darkslategray;*/
+  height: 400px;
+  top: 0px;
   text-align: center;
   background: darkslategray;
   color: white;
@@ -143,7 +143,7 @@ h1 {
   text-align: start;
   background: darkslategray;
   color: white;
-  height: 220px;
+  height: 250px;
   display: flex;
   flex-direction: column;
 }

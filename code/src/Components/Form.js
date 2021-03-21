@@ -55,7 +55,7 @@ if (surveyComplete) {
   return (    
   
     <form className="form" onSubmit={handleSubmit}>
-      <p><b>What kind of job are you looking for?</b></p>
+      <p tabIndex="0"><b>What kind of job are you looking for?</b></p>
       <div className="time-container">
       {timeChoice.map((time) => (
            <label key={time} htmlFor={time}>
@@ -74,7 +74,7 @@ if (surveyComplete) {
       </div>
 
       <div className="genre-container">
-        <label htmlFor="genre">
+        <label tabIndex="0" htmlFor="genre">
          <b> Within which genre would you like to find a job?</b>
         </label>
         <select id="genre" onChange={onGenreChange} value={genre}>
@@ -94,7 +94,7 @@ if (surveyComplete) {
           <option>Sales</option>
         </select>
       </div>
-      <p>
+      <p tabIndex="0">
        <b>What is your level of experience?</b> 
       </p>
       <div className="experience">
