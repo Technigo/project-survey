@@ -4,11 +4,11 @@ import Form from './components/Form';
 
 const App = () => {
   return (
-    <>
-      <main className="main">
+    <div aria-live="polite" aria-relevant="all">
+      <main aria-label="Sushi survey" className="main" >
         <Form />
       </main>
-    </>
+    </div>
   );
 };
 
