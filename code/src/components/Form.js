@@ -5,37 +5,40 @@ const Form = () => {
   const [dropdown, setDropdown] = useState('') 
   const [radio, setRadio] = useState('')
   const [secondRadio, setSecondRadio] = useState('')
+  const [surveyComplete, setSurveyComplete] = useState(false)
  
-
 //array of radio buttons to map the data 
-const bookDate = [
-  'April 1st',
-  'May 2nd',
-  'July 13th',
-  'Aug 3rd',
-  'Sep 18th'
-]
-const seatSection = [
-  'Standing',
-  'Section A',
-  'Section B',
-  'Section C',
-  'Section D'
-]
-  
+  const bookDate = [
+    'April 1st',
+    'May 2nd',
+    'July 13th',
+    'Aug 3rd',
+    'Sep 18th'
+  ]
+  const seatSection = [
+    'Standing',
+    'Section A',
+    'Section B',
+    'Section C',
+    'Section D'
+  ]
+
+  const isSurveyComplete = () => {
+    if(name !== '' && dropdown !== '' && radio !== '' && secondRadio !== '' ){
+        return true;
+     }
+    return false; 
+  }
 
   const handleSubmit = (event) => {
     event.preventDefault() 
     
-    alert (
-      `Confirmation of your purchase:
-
-       Your name: ${name}
-       Artist: ${dropdown}
-       Date: ${radio}
-       Section: ${secondRadio}
-      `
-    )
+    if (isSurveyComplete()) {
+      setSurveyComplete(true)
+    } else {
+      alert("Please fill out all the fields")
+    }
+  
   }
   
   const onNameChange = (event) => {
@@ -50,24 +53,22 @@ const seatSection = [
   const onRadioSecondChange = (event) => {
     setSecondRadio(event.target.value) 
   }
- 
-  const isSurveyComplete = () => {
-    if(name !== '' && dropdown !== '' && radio !== '' && secondRadio !== '' ){
-        return true;
-    }
-    return false;
-  }
-  if (isSurveyComplete()) {
-    alert(
-      `Confirmation of your purchase:
 
-       Your name: ${name}
-       Artist: ${dropdown}
-       Date: ${radio}
-       Section: ${secondRadio}
-      `
+// conditional rendering - if complete true do this:
+  if (surveyComplete) {
+    return (
+      <div>
+        Confirmation of your purchase:
+
+          Your name: ${name}
+          Artist: ${dropdown}
+          Date: ${radio}
+          Section: ${secondRadio}
+      </div>
+      
     )
-  }
+   
+  } else {
 
   return (
     <form 
@@ -141,15 +142,15 @@ const seatSection = [
 {/* submit form */}
       <button 
         className="submit-button" 
-        onSubmit={handleSubmit}
-        type="submit">
+        // onSubmit={handleSubmit} // why does it not work to use the handleSubmit here? 
+      >
         BUY TICKETS
       </button>
 
     </form>
   )  
- }
-
+}
+}
 export default Form; 
 
    
