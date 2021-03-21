@@ -56,6 +56,7 @@ const App = () => {
           ratherNot={formData.ratherNot}
         />
       )}
+      
     </section>
   )  
 }

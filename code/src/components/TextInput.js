@@ -15,7 +15,6 @@ const TextInput = ({ questionName, questionText, chosenValue, handleInputChange 
         required
         onChange={onValueChange}
         value={chosenValue}
-      
       /> 
     </>
   )

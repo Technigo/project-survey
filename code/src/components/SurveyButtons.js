@@ -9,9 +9,9 @@ const SurveyButtons = ({ step, setStep, name, animal, accessory, activity, rathe
   }
 
   const nextStep = (event) => {
+    event.preventDefault()
     let check = true
 
-    event.preventDefault()
     if (step === 0) {
       check = true
     } else if (name === '' && step === 1) {
@@ -33,7 +33,6 @@ const SurveyButtons = ({ step, setStep, name, animal, accessory, activity, rathe
     window.location.reload();
   }
 
-
   return (
     <div className="buttons-div">
       {step === 0 && (
@@ -41,7 +40,6 @@ const SurveyButtons = ({ step, setStep, name, animal, accessory, activity, rathe
           className="btn start-btn" 
           step={nextStep} 
           btnText="Start 💃"
-           
         />
       )}
       {step > 1 && step < 6 && (
