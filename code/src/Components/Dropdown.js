@@ -7,13 +7,16 @@ const Dropdown = ({ onChange, value }) => {
 
   return (
     <div>
-      <label htmlFor="option">Select something</label>
-      <select id="season" onChange={onSeasonChange} value={value}>
-        <option disabled></option>
-        <option value="Winter">Winter</option>
-        <option value="Spring">Spring</option>
-        <option value="Fall">fall</option>
-        <option value="Fall">summer</option>
+      <label htmlFor="evaluation"></label>
+      <select 
+        className="dropdown-select"
+        id="evaluation" 
+        onChange={onSeasonChange} 
+        value={value}>
+        <option value="" disabled>Select here</option>
+        <option value="super happy">Super happy</option>
+        <option value="extreamly happy">Extreamly happy</option>
+        <option value="quite happy">Quite happy</option>
       </select>
     </div>
   );

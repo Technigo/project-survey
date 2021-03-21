@@ -1,20 +1,26 @@
 import React from "react";
 
-const RadioButton = ({ technologyName, onChange }) => {
+const RadioButton = ({ projectName, onChange }) => {
   const onTechnologyChange = (e) => {
     onChange(e.target.value);
   };
 
   return (
     <div>
-      <label htmlFor={technologyName}> {technologyName.toUpperCase()} </label>
       <input
+        className="radioInput"
         name="technology"
         type="radio"
-        id={technologyName}
-        value={technologyName}
+        id={projectName}
+        value={projectName}
         onChange={onTechnologyChange}
-      ></input>
+      >   
+      </input>
+      <label 
+        htmlFor={projectName} 
+        className="radio-label"> 
+        {projectName} 
+     </label>
     </div>
   );
 };

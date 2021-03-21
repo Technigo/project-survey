@@ -3,14 +3,15 @@ import TextInput from "./TextInput";
 import Dropdown from "./Dropdown";
 import RadioButton from "./RadioButton";
 import SubmitButton from "./SubmitButton";
+import Summary from "./Summary";
 
-const technologies = ["html", "css", "js"];
+const projects = ["Weather app", "Chatbot", "Music releas", "Survey"];
 
 const Form = () => {
   const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
-  const [season, setSeason] = useState("");
-  const [technology, setTechnology] = useState("");
+  const [evaluation, setEvaluation] = useState("");
+  const [project, setProject] = useState("");
+  const [thoughts, setThoughts] = useState("");
   const [inValid, setInValid] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
@@ -20,80 +21,93 @@ const Form = () => {
       return false;
     }
 
-    if (season === "") {
+    if (evaluation === "") {
       return false;
     }
 
-    if (technology === "") {
+    if (project === "") {
+      return false;
+    }
+
+    if (thoughts === "") {
       return false;
     }
 
     return true;
   };
+  
   // run the function everytime a value changes and checks if its complete
   useEffect(() => {
     if (isSurveyComplete()) {
-      console.log(`Survey Complete!`);
       setInValid(false);
     } else {
       setInValid(true);
     }
-  }, [name, lastName, season, technology]);
+  }, [name, evaluation, project, thoughts]);
 
-  // when submitted, show summery of answers (values)
+  // when submitted, show summery.
   if (submitted) {
     return (
-      <div>
-        <p>{name}</p>
-        <p>{lastName}</p>
-        <p>{season}</p>
-        <p>{technology}</p>
-      </div>
+      <Summary
+        name={name}
+        evaluation={evaluation}
+        project={project}
+        thoughts={thoughts}
+      />
     );
   }
 
   return (
     <form
-        // getting triggered when pressing submut buutton. 
-        // Preventing from reloading the page.
-        // Set submitted to true so that subbmited is rendered.
+      // getting triggered when pressing submit button.
+      // Preventing from reloading the page.
+      // Set submitted to true so that subbmited is rendered.
+      className="form"
       onSubmit={(e) => {
         e.preventDefault();
         setSubmitted(true);
       }}
     >
-      <div>
-        <h2>Start by entering something</h2>
+      <div className="question-container">
+        <p>Let's start simple - what's your name?</p>
         <TextInput
           onChange={setName}
           value={name}
-          placeholder="First name"
+          placeholder="Name"
           id="first name"
         />
-        <h2> Entering something</h2>
-        <TextInput
-          onChange={setLastName}
-          value={lastName}
-          placeholder="Last name"
-          id="last name"
-        />
       </div>
-      <div>
-        <h2>Select something</h2>
-        <Dropdown onChange={setSeason} value={season} />
+      <div className="dropdown-container">
+        <p>How thriled are you about becoming a frontend developer?</p>
+        <Dropdown 
+            onChange={setEvaluation} 
+            value={evaluation} />
       </div>
-      <div>
-        <h2>Choose one thing</h2>
-        {technologies.map((technology) => {
+      <div className="radio-container">
+        <p>
+          What has been your favourite project during Technigo bootcamp?
+        </p>
+        {projects.map((project) => {
           return (
             <RadioButton
-              technologyName={technology}
-              onChange={setTechnology}
-              key={technology}
+              projectName={project}
+              onChange={setProject}
+              key={project}
             />
           );
         })}
       </div>
+      <section className="question-container">
+        <p>
+          And finally, do you have some other thoughts you'd like to share?
+        </p>
+        <TextInput
+          onChange={setThoughts}
+          value={thoughts}
+          placeholder="Your thoughts"
+          id="thougts"
+        />
+      </section>
       <div>
         <SubmitButton disabled={inValid} />
       </div>

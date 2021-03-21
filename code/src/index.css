@@ -1,13 +1,96 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  width: 100vw;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+.survey-container {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: auto;
+
+}
+
+h1 {
+  margin-bottom: 50px;
+}
+
+p {
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 50px;
+}
+
+.text-box {
+  width: 100%;
+  border: none;
+  border-bottom: 2px solid cornflowerblue;
+  padding: 10px 0px;
+}
+
+.dropdown-container {
+  margin-bottom: 50px;
+}
+
+.dropdown-select {
+    width: 100%;
+    background: white;
+    border: none;
+    border-bottom: 2px solid cornflowerblue;
+    padding: 10px 0;
+}
+
+.radio-container {
+  margin-bottom: 25px;
+}
+
+.radio-label {
+  font-size: 14px;
+}
+
+.radioInput {
+  margin-bottom: 15px;
+}
+
+.submit {
+  width: 120px;
+  height: 35px;
+  border: none;
+  background: cornflowerblue;
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+
+.submit:hover {
+  background: rgb(11, 71, 182);
+}
+
+.answer-text {
+  font-weight: 600;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  margin-top: 50px;
+  margin-bottom: 25px;
+}
+
+.footer-text {
+  font-size: 10px;
+  color: gray;
 }

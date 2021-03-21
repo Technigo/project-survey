@@ -7,8 +7,9 @@ const TextInput = ({ onChange, value, placeholder, id }) => {
 
   return (
     <div>
-      <label htmlFor={id}>Name</label>
+      <label htmlFor={id}></label>
       <input
+        className="text-box"
         id={id}
         type="text"
         value={value}
