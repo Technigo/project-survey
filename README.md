@@ -1,13 +1,10 @@
-# Survey form with React
+# Technigo Bootcamp Week 10
 
-Replace this readme with your own information about your project.
+The assignment was to use React to build a survey site. I'm a gym owner and we have "week challenges" at our gym. So I decided to make a Week Challenge Registration survey. I hope to be able to develop this page later so that it also saves the results so that you can actually use this page. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+If I would have hade more time I would have done a button which allows user to change her/his answers before submmitting. 
 
-## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## Live Site
 
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://peaceful-kepler-96f7b6.netlify.app/
