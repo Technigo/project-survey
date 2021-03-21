@@ -25,6 +25,7 @@ code {
   justify-content: center;
 }
 
+/* FORM CONTAINER STYLING */
 .form-section {
   background-color: rgba(137, 43, 226, 0.596);
   width: 60%;
@@ -38,17 +39,10 @@ code {
   align-items: center;
 }
 
+/* START COMPONENT */
 .start-message {
   font-size: 2.4rem;
   text-align: center;
-}
-
-.btn.start-btn {
-  width: 200px;
-  height: 50px;
-  font-size: 1.6rem;
-  line-height: 1.6rem;
-  margin: 30px;
 }
 
 form {
@@ -66,83 +60,39 @@ form {
   padding-bottom: 5px;
 }
 
-.form-text-input {
-  border-radius: 8px;
-  border: none;
-  height: 50px;
-  color: #333;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.5);
-  transition: all 0.2s ease-out;
-  padding: 0 15px;
-  font-size: 1.6rem;
-}
-
-.radio-div {
-  display: flex;
-  justify-content: space-evenly;
-  margin: 20px 0;
-  flex-wrap: wrap;
-}
-
-.drop-down {
-  width: 95%;
-  height: 50px;
-  align-self: center;
-  border-radius: 8px;
-  border: none;
-  color: #333;
-  outline: none;
-  background-color: rgba(255, 255, 255, 0.5);
-  padding: 0 15px;
-  font-size: 1.6rem;
-}
-
-.buttons-div {
-  display: flex;
-}
-
-.form-text-input:focus {
-  background-color: #fff;
-}
-
-.btn {
-  border: none;
-  background-color: rgb(131, 47, 170);
-  padding: 10px 20px;
-  font-family: inherit;
-  outline: none;
-  color: inherit;
-  border-radius: 4px;
-  transition: all 0.2s ease-out;
-  cursor: pointer;
-  margin: 20px 10px 0px 10px;
-}
-
-.btn:hover {
-  background: rgb(118 6 171);
-  
-}
-
-.btn.prev-btn {
-  margin-right: auto;
-}
-
-.btn.next-btn {
-  margin-left: auto;
-}
-
-.form-section h4 {
-
-}
-
-h2 {
+.form-section h2 {
   font-size: 2rem;
   padding: 0;
   font-weight: 500;
   margin: 0px 10px 20px 10px;
   border-bottom: 2px solid rgb(131, 47, 170);
   padding-bottom: 5px;
+}
+
+.form-text-input {
+  align-self: center;
+  border-radius: 8px;
+  border: none;
+  height: 50px;
+  width: 95%;
+  color: #333;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  transition: all 0.2s ease-out;
+  padding: 0 15px;
+  font-size: 1.6rem;
+}
+
+.form-text-input:focus {
+  background-color: #fff;
+}
+
+/* STYLING RADIO BUTTONS */
+.radio-div {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 20px 0;
+  flex-wrap: wrap;
 }
 
 .radio-btn {
@@ -204,12 +154,90 @@ h2 {
   display: block;
 }
 
+/* STYLING DROP-DOWN */
+.drop-down {
+  width: 98%;
+  height: 50px;
+  align-self: center;
+  border-radius: 8px;
+  border: none;
+  color: #333;
+  outline: none;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 0 15px;
+  font-size: 1.6rem;
+}
+
+/* STYLING BUTTONS */
+.buttons-div {
+  display: flex;
+}
+
+.btn {
+  border: none;
+  background-color: rgb(131, 47, 170);
+  padding: 10px 20px;
+  font-family: inherit;
+  outline: none;
+  color: inherit;
+  border-radius: 4px;
+  transition: all 0.2s ease-out;
+  cursor: pointer;
+  margin: 20px 10px 0px 10px;
+}
+
+.btn:hover {
+  background: rgb(118 6 171);
+}
+
+.btn.prev-btn {
+  margin-right: auto;
+}
+
+.btn.next-btn {
+  margin-left: auto;
+}
+
+.btn.start-btn {
+  width: 200px;
+  height: 50px;
+  font-size: 1.6rem;
+  line-height: 1.6rem;
+  margin: 30px;
+}
+
+/* STYLING SUMMARY COMPONENT */
 .summary-text {
   font-size: 2.6rem;
   text-align: center;
 }
-
+/* to make the values bold in the summary */
 .span-bold {
   font-weight: 700;
 }
 
+
+@media (max-width: 767px) {
+  .form-section {
+    width: 80%;
+  }
+  .start-message {
+    font-size: 1.6rem;
+  }
+  .form-label, .form-section h2 {
+    font-size: 1.6rem;
+    margin: 0 0 20px 0;
+  }
+  .btn {
+    padding: 10px 5px;
+    margin: 20px 0 0 0
+  }
+  .radio-btn {
+    width: 40%;
+    font-size: 1.2rem;
+    padding-bottom: 10px;
+  }
+  .summary-text {
+    font-size: 1.6rem;
+  }
+}

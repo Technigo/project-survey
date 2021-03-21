@@ -14,6 +14,7 @@ const Dropdown = ({ questionName, questionText, optionArray, chosenValue, handle
           onChange={onSelectChange}
           value={chosenValue}
         >
+          <option default>Select {questionName}</option>
           {optionArray.map(option => (
             <option key={option} 
               value={option} 
