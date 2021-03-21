@@ -2,7 +2,7 @@ import React from 'react'
 
 import NextButton from 'components/NextButton'
 
-const amountOfTime= [
+const amountOfTimes= [
   '1-2 times a week',
   '2-3 times a week',
   '4-5 times a week',
@@ -18,21 +18,22 @@ const FirstQuestion = (props) => {
   return (
     <div className="question-container" aria-label="How often do you read? 5 options">
       <h1 className="question-header">How often do you read?</h1>
-      {amountOfTime.map(time => (
-        <div className="radio-container" key={time}>
+      {amountOfTimes.map(amountOfTime => {
+        return (
+        <div className="radio-container" key={amountOfTime}>
           <label htmlFor="time">
             <input
-            name="time"
-            type='radio'
-            value={time}
-            onChange={onTimeChange}
-            checked = {props.readingTime ===time}
-            required 
+              name="time"
+              type='radio'
+              value={amountOfTime}
+              onChange={onTimeChange}
+              checked = {props.readingTime === amountOfTime}
+              required 
             />
-            {time}
+            {amountOfTime}
           </label>
         </div>
-      ))} 
+      )})} 
       <NextButton />
     </div>
   

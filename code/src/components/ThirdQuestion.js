@@ -19,21 +19,23 @@ const ThirdQuestion = (props) => {
   return (
       <div className="question-container" aria-label="Favorite place to read: 5 options">
         <h1 className="question-header">Favorite place to read?</h1>
-        {places.map(places => (
-        <div className="radio-container" key={places}>
-          <label htmlFor="place">
-            <input
-            name="place"
-            type='radio'
-            value={places}
-            onChange={onPlaceChange}
-            checked = {props.place ===places}
-            required 
-            />
-            {places}
-          </label>
-        </div>
-      ))}
+        {places.map(place => {
+          return (
+            <div className="radio-container" key={place}>
+              <label htmlFor="place">
+                <input
+                  name="place"
+                  type='radio'
+                  value={place}
+                  onChange={onPlaceChange}
+                  checked = {props.place === place}
+                  required 
+                />
+                {place}
+              </label>
+            </div>
+          )}
+        )}
         <NextButton />
       </div>
   )

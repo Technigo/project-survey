@@ -4,7 +4,7 @@ import NextButton from 'components/NextButton'
  
 const SecondQuestion = (props) => {
 
-  const onFavoriteTime = (e) => {
+  const onFavoriteTimeChange = (e) => {
     props.setFavoriteTime(e.target.value)
   }
  
@@ -13,9 +13,9 @@ const SecondQuestion = (props) => {
       <h1 className="question-header">Your favorite time to read?</h1>
       <div className="custom-select">
         <select
-        onChange={onFavoriteTime}
-        value= {props.favoriteTime} 
-        required
+          onChange={onFavoriteTimeChange}
+          value= {props.favoriteTime} 
+          required
         >
           <option value="">Select a time</option>
           <option value="morning">Morning</option>

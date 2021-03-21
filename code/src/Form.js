@@ -1,15 +1,15 @@
 import React, { useState } from 'react'
 
 import Header from './components/Header'
+import NameQuestion from './components/NameQuestion'
 import FirstQuestion from './components/FirstQuestion'
 import SecondQuestion from './components/SecondQuestion'
 import ThirdQuestion from './components/ThirdQuestion'
 import Summary from './components/Summary'
 import ProgressBar from './components/ProgressBar'
-import NameQuestion from './components/NameQuestion'
 
 
-export const Form = () => {
+const Form = () => {
   const [name, setName] = useState('')
   const [time, setTime] = useState('')
   const [favoriteTime, setFavoriteTime] = useState('')
@@ -18,7 +18,7 @@ export const Form = () => {
   const [progress, setProgress] = useState(0)
 
 
-  const handleSubmit = (event) => {
+  const isSurveyComplete = (event) => {
     event.preventDefault()
     if (name === '') {
       setSection('firstQuestion')
@@ -26,10 +26,10 @@ export const Form = () => {
     } else if (time === '') {
       setSection('secondQuestion')
       setProgress([30])
-    } else if (favoriteTime ==='') {
+    } else if (favoriteTime === '') {
       setSection('thirdQuestion')
       setProgress([60])
-    } else if (favoritePlace ==='') {
+    } else if (favoritePlace === '') {
       setSection('fourthQuestion')
       setProgress([90])
     } else {
@@ -40,32 +40,28 @@ export const Form = () => {
   return (
     <main className="form">
       {section !== 'summary' ? (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={isSurveyComplete}>
           {section === 'startPage' && (
             <Header />
           )}
-
           {section ==='firstQuestion' && (
             <>
               <NameQuestion name={name} setName={setName} />
               <ProgressBar progress= {progress} />
             </>
           )}
-          
           {section ==='secondQuestion' && (
             <>
             <FirstQuestion readingTime={time} setTime={setTime} />
             <ProgressBar progress= {progress} />
             </>
           )}
-
           {section ==='thirdQuestion' && (
             <>
             <SecondQuestion favoriteTime={favoriteTime} setFavoriteTime={setFavoriteTime} />
             <ProgressBar progress= {progress} />
             </>
           )}
-
           {section ==='fourthQuestion' && (
             <>
             <ThirdQuestion place={favoritePlace} setFavoritePlace={setFavoritePlace} />
@@ -74,14 +70,12 @@ export const Form = () => {
           )}
         </form>
       ):(
-        <>
           <Summary 
             name={name}
             time={time} 
             favoriteTime={favoriteTime} 
             place={favoritePlace} 
           />
-        </>
       )}
     </main>
   )     

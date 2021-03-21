@@ -5,7 +5,7 @@ import NextButton from 'components/NextButton'
 
 const NameQuestion = (props) => {
 
-  const onName = (e) => {
+  const onNameChange = (e) => {
    props.setName(e.target.value)
   }
 
@@ -15,11 +15,11 @@ const NameQuestion = (props) => {
       <div className="name-question">
         <label htmlFor="name">
           <input
-          name="name"
-          type="text"
-          value={props.name}
-          onChange={onName}
-          required
+            name="name"
+            type="text"
+            value={props.name}
+            onChange={onNameChange}
+            required
           />
         </label>
         <NextButton />

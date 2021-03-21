@@ -4,7 +4,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="image-container">
-        <img className="image" src="assets/woman.png" alt="draw image of a woman reading a book"/>
+        <img className="image" src="assets/woman.png" alt="draw of a woman reading a book"/>
       </div>
       <div className="header-content">
         <h1>Are you a book lover?</h1>

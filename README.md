@@ -1,13 +1,21 @@
 # Survey form with React
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project is to use React to build a survey form ⚛ . This project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
 ## The problem
+Before I started to code I decided what question I wanted to ask in the survey. After that I clarified the logic, I added  the questions in different components and defined the states for each question in the Form.js component. I rendered all the questions and added some styling to the page. When I was done with the “core” of the survey I started to code the more advanced features:  
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+show different components 
+show a summary of the user’s submissions 
+
+I had some problems understanding how to make it work. I solved it by asking my team members, my teacher during a one to one and looking through stackoverflow. 
+
+With this help I could manage to understand how to make every component on a separate page with the if else statement and add the function to the onSubmit. I also managed to send the value from the states in Form.js and add it to the summary component with props.  
+
+## Tech 
+- React 
+- JSX
+- useState 
+- JavaScript 
+- CSS
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
