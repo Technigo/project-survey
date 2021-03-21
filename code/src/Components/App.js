@@ -41,19 +41,23 @@ export const App = () => {
   const [currentPage, setCurrentPage] = useState(0) //should be 1. Set to 0 to instantly go to currently set testing state
   const [blocker, setBlocker] = useState({blocking:false,explanation:"default error! :D"})
   const [filteredPlaybooks, setFilteredPlaybooks] = useState([])
+  //const [bestAtError, setBestAtError] = useState(false)
 
   //USED!!!!
-  const [bestAt, setBestAt] = useState("")
-  const [nextToBestAt, setNextToBestAt] = useState("")
-  const [worstAt, setWorstAt] = useState("")
+  const [bestAt, setBestAt] = useState({stat:"STR", overlap:false})
+  const [nextToBestAt, setNextToBestAt] = useState({stat:"WIS", overlap:false})
+  const [worstAt, setWorstAt] = useState({stat:"CHA", overlap:false})
+  // const [bestAt, setBestAt] = useState("")
+  // const [nextToBestAt, setNextToBestAt] = useState("")
+  // const [worstAt, setWorstAt] = useState("")
   
   //I might not need these as States after all, just one state per dropdown? Why is this? I think I'll be able to articulate it later
-  const [str, setStr] = useState(null)
-  const [dex, setDex] = useState(null)
-  const [con, setCon] = useState(null)
-  const [int, setInt] = useState(null)
-  const [wis, setWis] = useState(null)
-  const [cha, setCha] = useState(null)
+  const [str, setStr] = useState(2)
+  const [dex, setDex] = useState(0)
+  const [con, setCon] = useState(0)
+  const [int, setInt] = useState(0)
+  const [wis, setWis] = useState(1)
+  const [cha, setCha] = useState(-2)
   //to my understanding, as long I send these arrays along as props, they will be forced to update on change
   
   //radio button states
@@ -90,9 +94,13 @@ export const App = () => {
   }
 
   const checkBlocker = (direction) => {
-    console.log(`in checkBlocker`)
+    
+    //below is not a bad idea, but first I need a specific error hook...
+    if (currentPage === 2 && (bestAt.overlap || nextToBestAt.overlap || worstAt.overlap) && direction === 1) { 
+      setBlocker({blocking:true, explanation:"You can't have overlapping stat assignments (marked red)!"})
+    }
+
     if (currentPage === 1 && source === "" && direction === 1) { 
-      console.log(`SHOULD block`)
       setBlocker({blocking:true, explanation:"Please select an option before continuing."})
     }
 
@@ -126,11 +134,38 @@ export const App = () => {
   }
 
   //dropdown states
-  const onBestAtChange = (value) => {
-    console.log(`best at: ${value}`)
-    switch (value) {
+  const onBestAtChange = (newStat) => {
+    console.log(`was best at: ${bestAt.stat}`)
+    console.log(`is NOW best at: ${newStat}`)
+    
+    const previousStat = bestAt.stat
+
+    //Reset the numerics of the previous stat
+    switch (previousStat) {
       case "STR":
-        setStr(2) //The problem is right here: that stats are set but the previous one is never unset
+        setStr(0)
+        break
+      case "DEX":
+        setDex(0)
+        break
+      case "CON":
+        setCon(0)
+        break
+      case "INT":
+        setInt(0)
+        break
+      case "WIS":
+        setWis(0)
+        break
+      case "CHA":
+        setCha(0)
+        break
+    }
+
+    //Set the numerics of the new stat
+    switch (newStat) {
+      case "STR":
+        setStr(2)
         break
       case "DEX":
         setDex(2)
@@ -148,14 +183,67 @@ export const App = () => {
         setCha(2)
         break
     }
+
+    //remember! change the order of the hooks depending on onChange context!!
+    const overlappingWith = checkStatOverlap(newStat, nextToBestAt, worstAt)
     
-    setBestAt(value)
-  
+    if (overlappingWith === "a") {
+      setWorstAt({stat:worstAt.stat, overlap:false})
+      setBestAt({stat:newStat.stat, overlap:true})
+      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    } else if (overlappingWith === "b") {
+      setWorstAt({stat:worstAt.stat, overlap:true})
+      setBestAt({stat:newStat.stat, overlap:true})
+      setNextToBestAt({stat:nextToBestAt.stat, overlap:false})
+    } else if (overlappingWith === "both") {
+      setWorstAt({stat:worstAt.stat, overlap:true})
+      setBestAt({stat:newStat, overlap:true})
+      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    } else {
+      setBestAt({stat:newStat, overlap:false})
+    }
+    
+    //remember! change the order of the hooks depending on onChange context!!
+    // if (checkStatOverlap(newStat, nextToBestAt, worstAt)) {
+    //   setBestAt({stat:newStat, overlap:true})
+    // } else {
+    //   setBestAt({stat:newStat, overlap:false})
+    // }
+
+    // //can I make the other skillLevels restate themselves?
+    // setNextToBestAt(nextToBestAt)
+    // setWorstAt(worstAt)
   }
 
-  const onNextToBestAtChange = (value) => {
-    console.log(`next to best at: ${value}`)
-    switch (value) {
+  const onNextToBestAtChange = (newStat) => {
+    console.log(`was next to best at: ${nextToBestAt.stat}`)
+    console.log(`is NOW next to best at: ${newStat}`)
+    
+    const previousStat = nextToBestAt.stat
+
+    //Reset the numerics of the previous stat
+    switch (previousStat) {
+      case "STR":
+        setStr(0)
+        break
+      case "DEX":
+        setDex(0)
+        break
+      case "CON":
+        setCon(0)
+        break
+      case "INT":
+        setInt(0)
+        break
+      case "WIS":
+        setWis(0)
+        break
+      case "CHA":
+        setCha(0)
+        break
+    }
+    
+    switch (newStat) {
       case "STR":
         setStr(1)
         break
@@ -174,15 +262,68 @@ export const App = () => {
       case "CHA":
         setCha(1)
         break
-    } 
+    }
 
-    setNextToBestAt(value)
+    //remember! change the order of the hooks depending on onChange context!!
+    const overlappingWith = checkStatOverlap(newStat, bestAt, worstAt)
+    
+    if (overlappingWith === "a") {
+      setWorstAt({stat:worstAt.stat, overlap:false})
+      setBestAt({stat:bestAt.stat, overlap:true})
+      setNextToBestAt({stat:newStat, overlap:true})
+    } else if (overlappingWith === "b") {
+      setWorstAt({stat:worstAt.stat, overlap:true})
+      setBestAt({stat:bestAt.stat, overlap:false})
+      setNextToBestAt({stat:newStat.stat, overlap:true})
+    } else if (overlappingWith === "both") {
+      setWorstAt({stat:worstAt.stat, overlap:true})
+      setBestAt({stat:bestAt.stat, overlap:true})
+      setNextToBestAt({stat:newStat.stat, overlap:true})
+    } else {
+      setNextToBestAt({stat:newStat, overlap:false})
+    }
+    
+    //remember! change the order of the hooks depending on onChange context!!
+    // if (checkStatOverlap(newStat, bestAt, worstAt)) {
+    //   setNextToBestAt({stat:newStat, overlap:true})
+    // } else {
+    //   setNextToBestAt({stat:newStat, overlap:false})
+    // }
 
+    // //can I make the other skillLevels restate themselves?
+    // setBestAt(bestAt)
+    // setWorstAt(worstAt)
   }
 
-  const onWorstAtChange = (value) => {
-    console.log(`worst at: ${value}`)
-    switch (value) {
+  const onWorstAtChange = (newStat) => {
+    console.log(`was worst at: ${worstAt.stat}`)
+    console.log(`is NOW worst at: ${newStat}`)
+    
+    const previousStat = worstAt.stat
+
+    //Reset the numerics of the previous stat
+    switch (previousStat) {
+      case "STR":
+        setStr(0)
+        break
+      case "DEX":
+        setDex(0)
+        break
+      case "CON":
+        setCon(0)
+        break
+      case "INT":
+        setInt(0)
+        break
+      case "WIS":
+        setWis(0)
+        break
+      case "CHA":
+        setCha(0)
+        break
+    }
+    
+    switch (newStat) {
       case "STR":
         setStr(-2)
         break
@@ -203,7 +344,28 @@ export const App = () => {
         break
     }
     
-    setWorstAt(value)
+    //remember! change the order of the hooks depending on onChange context!!
+    const overlappingWith = checkStatOverlap(newStat, bestAt, nextToBestAt)
+    
+    if (overlappingWith === "a") {
+      setWorstAt({stat:newStat, overlap:true})
+      setBestAt({stat:bestAt.stat, overlap:true})
+      setNextToBestAt({stat:nextToBestAt.stat, overlap:false})
+    } else if (overlappingWith === "b") {
+      setWorstAt({stat:newStat, overlap:true})
+      setBestAt({stat:bestAt.stat, overlap:false})
+      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    } else if (overlappingWith === "both") {
+      setWorstAt({stat:newStat, overlap:true})
+      setBestAt({stat:bestAt.stat, overlap:true})
+      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    } else {
+      setWorstAt({stat:newStat, overlap:false})
+    }
+
+    //can I make the other skillLevels restate themselves?
+    // setNextToBestAt(nextToBestAt)
+    // setBestAt(bestAt)
 
   }
 
@@ -211,7 +373,24 @@ export const App = () => {
     
     //NEEDS TO SHOW SUMMARY AND HIDE OPTIONS (a re-render, not toggling display in css)!
     
+  }
 
+  const checkStatOverlap = (newStat, otherStat_a, otherStat_b) => {
+    
+    if (newStat === otherStat_a.stat && newStat === otherStat_b.stat) {
+      console.log(`${newStat} equals both ${otherStat_a.stat} and ${otherStat_b.stat}`)
+      return "both"
+    } else if (newStat === otherStat_a.stat) {
+      console.log(`${newStat} equals ${otherStat_a.stat}`)
+      return "a"
+    } else if (newStat === otherStat_b.stat) {
+      console.log(`${newStat} equals ${otherStat_b.stat}`)
+      return "b"
+    } else {
+      console.log(`${newStat} equals neither ${otherStat_a.stat} nor ${otherStat_b.stat}`)
+      return "none"
+    }
+    
   }
 
   const filterPlaybooks = (priority, playbooks) => {
@@ -323,27 +502,32 @@ export const App = () => {
     case 3:
       return (
         <>
-          {/* {console.log(`I am just about to render page ${currentPage} and just so you know blocker.blocking is ${blocker.blocking}`)} */}
-          <div className="stat-questions-wrapper">
+          <form className="stat-questions-wrapper">
             <QuestionWrapper 
               question={questionData.questions.statQuestions.bestAt}
               options={questionData.questions.statQuestions.options}
               toChange={onBestAtChange}
               skillLevel = {bestAt}
+              otherSkillLevel_a = {nextToBestAt}
+              otherSkillLevel_b = {worstAt}
             />
             <QuestionWrapper 
               question={questionData.questions.statQuestions.nextToBestAt}
               options={questionData.questions.statQuestions.options}
               toChange={onNextToBestAtChange}
               skillLevel = {nextToBestAt}
+              otherSkillLevel_a = {bestAt}
+              otherSkillLevel_b = {worstAt}
             />
             <QuestionWrapper 
               question={questionData.questions.statQuestions.worstAt}
               options={questionData.questions.statQuestions.options}
               toChange={onWorstAtChange}
               skillLevel = {worstAt}
+              otherSkillLevel_a = {bestAt}
+              otherSkillLevel_b = {nextToBestAt}
             />
-          </div>
+          </form>
           <div className="playbooks-wrapper">
             <PlaybookWrapper 
               playbooks={filteredPlaybooks}

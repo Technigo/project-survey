@@ -27,14 +27,16 @@ const supported = (props) => {
         if(i < 6) {
             i++
         } else {
-            console.log(`${key}`)
+            //console.log(`${key}`)
             let value = props.playbook[key];
             let userKey = key.substring(4)
             userKey = userKey.toLowerCase()
             // console.log(`userKey: ${userKey}`)
             // console.log(`should be STR, DEX etc: ${key.substring(4)}`)
-            console.log(`Their ${userKey} is ${props.playbook[key]}`)
-            console.log(`My ${userKey} is ${props[userKey]}`)
+            
+            // console.log(`Their ${userKey} is ${props.playbook[key]}`)
+            // console.log(`My ${userKey} is ${props[userKey]}`)
+            
             //so it is here where it gets fucked?
             switch(value) {
                 case 0:
@@ -93,7 +95,7 @@ const supported = (props) => {
     });
     
     //console.log(props.playbook)
-    console.log(debug)
+    //console.log(debug)
 
     //console.log(`${props.playbook.name}: ${support} support`)
     

@@ -1,6 +1,7 @@
 import React from 'react'
 import RadioButtonWrapper from './RadioButtonsWrapper'
 import DropDown from './DropDown'
+import DropDownWrapper from './DropDownWrapper'
 
 const OptionsWrapper = (props) => {
     if (props.question.type === "radio") {
@@ -16,13 +17,17 @@ const OptionsWrapper = (props) => {
     } else if (props.question.type === "dropDown") {
         return (
             <div className="options-wrapper">
-                <DropDown 
-                    question={props.question}
-                    toChange={props.toChange}
-                    options={props.options}
-                    skillLevel={props.skillLevel}
-                    source={props.source}
-                />
+                <form className="stat-questions-wrapper">
+                    <DropDown 
+                        question={props.question}
+                        toChange={props.toChange}
+                        options={props.options}
+                        skillLevel={props.skillLevel}
+                        otherSkillLevel_a = {props.otherSkillLevel_a}
+                        otherSkillLevel_b = {props.otherSkillLevel_b}
+                        source={props.source}
+                    />
+                </form>
             </div>
         )
     } else {
