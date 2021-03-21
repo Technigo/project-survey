@@ -10,6 +10,7 @@ export const FurQuestion = ({ furOption, onfurOptionChange}) => {
         <label tabIndex="0" className="fur-buttons" key={fur}>
           <input
             type='radio'
+            name='fur'
             value={fur}
             onChange={(e) => onfurOptionChange(e)}
         />
