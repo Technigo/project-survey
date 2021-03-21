@@ -16,6 +16,7 @@ export const FrequencyRadioOption = ({ frequencyValue, setFrequency }) => {
                     id={frequencyValue}
                     value={frequencyValue}
                     type="radio" 
+                    required
                     onChange={(e) => {onFrequencyChange(e)}} 
                 />
                 <label htmlFor={frequencyValue}>{frequencyValue}</label>

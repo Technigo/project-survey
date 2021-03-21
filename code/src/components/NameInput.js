@@ -10,13 +10,16 @@ export const NameInput = ({name, setName}) => {
     return(
         <>
             <div className="name-input-container">
-                <label htmlFor="name" className="name-label">What is Your Name: </label>
+                <label htmlFor="name" className="name-label" tabIndex="0">What is Your Name: </label>
                 <input 
                     id="name" 
                     type="text" 
                     value={name} 
                     onChange={onNameChange}
+                    placeholder="Type your name here..."
                     className="name-input"
+                    required
+                    tabIndex="0"
                 />
             </div>
         </>
