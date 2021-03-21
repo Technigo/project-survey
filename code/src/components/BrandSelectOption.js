@@ -9,7 +9,7 @@ export const BrandSelectOption = ({ brand, setBrand}) => {
     
     return(
         <>
-            <div>
+            <div className="select-container">
                 <label htmlFor="brand">Favourite Sneaker Brand: </label>
                 <select id="brand" value={brand} onChange={onBrandChange}>
                     <option disabled></option>

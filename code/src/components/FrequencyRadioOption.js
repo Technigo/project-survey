@@ -10,7 +10,7 @@ export const FrequencyRadioOption = ({ frequencyValue, setFrequency }) => {
 
     return (
         <>
-            <label htmlFor={frequencyValue}>{frequencyValue}</label>
+            <div className="radio-option-container">
                 <input 
                     name="frequency"
                     id={frequencyValue}
@@ -18,6 +18,8 @@ export const FrequencyRadioOption = ({ frequencyValue, setFrequency }) => {
                     type="radio" 
                     onChange={(e) => {onFrequencyChange(e)}} 
                 />
+                <label htmlFor={frequencyValue}>{frequencyValue}</label>
+            </div>
         </>
 
     )

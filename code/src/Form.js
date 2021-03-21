@@ -28,7 +28,7 @@ export const Form = () => {
     if(!showSummary){
         return(
             <>
-                <form onSubmit={handleSubmit}>
+                <form onSubmit={handleSubmit} className="form-container">
                     <FormHeading 
                         formTitle='We are all ears.'
                         formText='We want to know what your sneaker deal is. Are you yay or nay? Take this 5 minute survey to help us understand your needs. You can tell us how you really feel!'
