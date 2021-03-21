@@ -32,11 +32,13 @@ export const Form = ({ onSubmit }) => {
     }
 
     const onCheckBoxChange = (checked, stack) => {
-
-        if (checked) {
-            selectedStacks.push(stack)
+        if (checked) {            
+            setSelectedStacks([
+                ...selectedStacks,
+                stack
+            ]);
         } else {
-            selectedStacks.pop(stack)
+            setSelectedStacks(selectedStacks.filter(s => s !== stack));
         }
     }
     
