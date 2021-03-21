@@ -306,7 +306,7 @@ input:-webkit-autofill:active {
   }
 
   /* Summary */
-  .summary-container .container p {
+  .summary-container p {
     font-size: 58px;
   }
 }
