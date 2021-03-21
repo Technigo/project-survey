@@ -14,11 +14,17 @@ code {
     monospace;
 }
 
+header{
+  background-image: url('./images/background.jpg');
+  height: 15vh;
+  position: relative;
+  }
+
 .maincontainer{
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
+  height: 85vh;
   width: 100vw;
   font-family: Spartan;
 }
