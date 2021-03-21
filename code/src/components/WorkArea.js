@@ -11,7 +11,7 @@ const WorkArea = ({ workArea, setWorkArea }) => {
         <div className='questionContainer two' id='workArea'>
             <div className='innerContainer'>
             
-                <h2 className='questionTitle'><i className="fas fa-arrow-circle-right"></i> What kind of role are you interested in?</h2>
+                <h2 className='questionTitle' tabIndex='0'><i className="fas fa-arrow-circle-right"></i> What kind of role are you interested in?</h2>
                 
                 <label htmlFor='workArea'>
                 <select

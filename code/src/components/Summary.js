@@ -8,11 +8,11 @@ const Summary = ({ email, workArea, place }) => {
 
     return (
 
-        <summary className='summaryContainer' id='summary'>
+        <div className='summaryContainer' id='summary'>
             
             <div className='summaryContent'>
-            <p>Thank you for submitting your information!</p>
-            <p>We will contact you on {email} when we have any open {workArea} positions in {place}.</p>
+                <p tabIndex='0'>Thank you for submitting your information!</p>
+                <p tabIndex='0'>We will contact you on {email} when we have any open {workArea} positions in {place}.</p>
             </div>
 
             <button
@@ -21,7 +21,7 @@ const Summary = ({ email, workArea, place }) => {
             onClick={refreshPage}
             >Back to start page!</button>
 
-        </summary>
+        </div>
     )
 } 
 

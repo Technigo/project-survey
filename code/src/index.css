@@ -179,12 +179,7 @@ form {
   background-repeat: no-repeat;
 }
 
-.summaryContent {/*
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-*/
+.summaryContent {
   text-align: center;
   text-align: -moz-center;
   font-size: 18px;
@@ -209,6 +204,7 @@ form {
 .submitButtonContainer {
   display: flex;
   justify-content:  center;
+  
   width: 100%;
   margin-top: 40px;
 }
@@ -265,14 +261,6 @@ appearance: none;
   .welcomeContainer {
     justify-content: center;
   }
-
-/*   .summaryContainer {
-    justify-content: center;
-  } */
-
-/*   .summaryContent {
-    height: 50%;
-  } */
 
   .welcomeContent p,
   .summaryContent {
