@@ -58,12 +58,14 @@ const Place = ({ place, setPlace }) => {
                 />
                 <label htmlFor='berlin' className='radioLabel'>Berlin</label>
             </div>
- 
+
+            <div className='submitButtonContainer'>
             <input
             type='submit'
             className='submitButton'
             value='Submit your answers'>
             </input>
+            </div>
         </div>
     </div>
     </div>
