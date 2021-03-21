@@ -3,17 +3,44 @@
   }
 
 header {
-    height: 300px;
+    height: 200px;
     padding: 16px;
     position: relative;
-    
   }
 
-  .profile-image {
+  .header-accessory {
+      position: relative;
+      z-index: 1;
       width: 150px;
       height: 150px;
       border-radius: 50%;
+      color: white;
+      top: -97px;
+  }
 
+  .another-header-accessory {
+    position: relative;
+    z-index: 1;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    color: orange;
+    top: -97px;
+    left: 530px;
+  }
+
+  .header-section{
+      display: flex;
+      flex-direction: row;
+  }
+
+  h1 {
+    position: relative;
+    z-index: 2;
+    top: 20px;
+    left: 260px;
+    font-weight: 200;
+    font-size: 100px;
   }
 
 

@@ -4,8 +4,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: #D5484F;
-
 }
 
 form {
@@ -14,9 +12,43 @@ form {
     flex-direction: column;
     justify-content: space-between;
     background-color:#E0777D;
-    width: 40%;
+    width: 30%;
+    height: 300px;
     text-align: left;
     padding: 30px;
     margin-top: 10px;
-
+    border: grey solid 1px;
+    border-radius: 10px;
 }
+
+label {
+    margin-right: 30px;
+}
+
+.name-question {
+    margin-left: 20px ;
+}
+
+
+.musician-question {
+    margin-left: 20px ;
+}
+
+.musician-question input {
+    margin-right: 30px;
+}
+
+p {
+    margin-bottom: 10px;
+}
+
+.instrument-question {
+    margin-left: 20px;
+}
+
+.instrument-question, select {
+    margin-top: 10px;
+    width: 80%;
+}
+
+

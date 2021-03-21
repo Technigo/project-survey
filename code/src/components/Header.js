@@ -5,8 +5,11 @@ import './Header.css'
 const Header = (props) => {
     return (
         <header style={{ backgroundColor: props.backgroundColor }}>
-            <img className="profile-image" src={props.imgsrc}/>
-            <h1 style={{ textColor: props.textColor}}>{props.title}</h1>
+            <div className="header-section">
+            <div className="header-accessory" style={{ backgroundColor: props.headerAccessory}}> </div>
+            <h1 style={{ color: props.color }}>{props.title}</h1>
+            <div className="another-header-accessory" style={{ backgroundColor: props.anotherHeaderAccessory}}> </div>
+            </div>
         </header>
 
     )

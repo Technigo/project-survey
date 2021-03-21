@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import Header from 'components/Header.js';
 
 import Form from './components/Form';
+
 
 
 export const App = () => {
@@ -12,9 +13,11 @@ export const App = () => {
       <div>
         <Header 
         backgroundColor="#F0A8C5"
-        color="#F0A8C5" 
+        color="#D5484F" 
         title="Today's survey" 
-        imgsrc="url(../grumpy-cat.jpg)"/>
+        headerAccessory="white"
+        anotherHeaderAccessory="orange"
+        />
       </div>
       <div>
         <Form />

@@ -1,0 +1,9 @@
+.summary-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    background-color: orangered;
+    margin: 40px;
+    padding: 20px;
+}
