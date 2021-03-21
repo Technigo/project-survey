@@ -1,4 +1,5 @@
 import React, {useState} from 'react';
+import { Welcome } from './Welcome';
 import { EnergyLevelSlider } from './EnergyLevelSlider';
 import { MoodOption } from './MoodOption';
 import { ClassicalMusicCheckBox } from './ClassicalMusicCheckBox';
@@ -13,7 +14,7 @@ const Form = () => {
   const [checkBoxGroup, setCheckBoxGroup] = useState([]);
   const [composer, setComposer] = useState('--- select ---');
   const [name, setName] = useState('');
-  const [currentQuestion, setCurrentQuestion] = useState(1);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [isSubmitted, setIsSubmitted] = useState('false');
 
   const moods = ['exited', 'happy', 'peaceful', 'sad']
@@ -42,7 +43,10 @@ const Form = () => {
     return (
       <section className='form-container'>
         {(isSubmitted === 'false') ? (
-          <form onSubmit = {onSubmit}>
+          <form onSubmit = {onSubmit} className='form'>
+            {currentQuestion === 0 && (
+              <Welcome />
+            )}
             {currentQuestion === 1 && (
               <EnergyLevelSlider energy={energy} setEnergy={setEnergy} />
             )}
@@ -58,7 +62,7 @@ const Form = () => {
             {currentQuestion === 5 && (
               <NameInput name={name} setName={setName} />
             )}
-            <button className='button' type='submit'>Next</button>
+            <button className='button' type='submit'>NEXT</button>
           </form>
         ): 
           <Summary name={name} energy={energy} mood={mood} composer={composer} checkBoxGroup={checkBoxGroup} checkBoxes={checkBoxes} />

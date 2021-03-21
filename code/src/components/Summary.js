@@ -15,6 +15,7 @@ export const Summary = ({name, energy, mood, composer, checkBoxGroup, checkBoxes
         </ul>
         <p>Selected composer: {composer}</p>
         <p>Based on your answer, we suggest you the following piece:</p>    
+        <p>Richard Strauss: Sonata for Violin and Piano in E flat major op. 18 TrV 151 II. Improvisation. Andante cantabile</p>
       </div> 
     </div>
   )

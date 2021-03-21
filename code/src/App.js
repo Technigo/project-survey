@@ -4,7 +4,7 @@ import { Header } from 'Header';
 
 export const App = () => {
   return (
-    <div>
+    <div className='container'>
       <Header />
       <Form />
     </div>
