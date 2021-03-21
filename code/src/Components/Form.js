@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import TextInput from "./TextInput";
 import Dropdown from "./Dropdown";
 import RadioButton from "./RadioButton";
@@ -16,7 +16,7 @@ const Form = () => {
   const [submitted, setSubmitted] = useState(false);
 
   // checks if the survey is complete
-  const isSurveyComplete = () => {
+  const isSurveyComplete = useCallback(() => {
     if (name === "") {
       return false;
     }
@@ -34,8 +34,8 @@ const Form = () => {
     }
 
     return true;
-  };
-  
+  }, [name, evaluation, project, thoughts]);
+
   // run the function everytime a value changes and checks if its complete
   useEffect(() => {
     if (isSurveyComplete()) {
@@ -43,7 +43,7 @@ const Form = () => {
     } else {
       setInValid(true);
     }
-  }, [name, evaluation, project, thoughts]);
+  }, [name, evaluation, project, thoughts, isSurveyComplete]);
 
   // when submitted, show summery.
   if (submitted) {
@@ -79,14 +79,10 @@ const Form = () => {
       </div>
       <div className="dropdown-container">
         <p>How thriled are you about becoming a frontend developer?</p>
-        <Dropdown 
-            onChange={setEvaluation} 
-            value={evaluation} />
+        <Dropdown onChange={setEvaluation} value={evaluation} />
       </div>
       <div className="radio-container">
-        <p>
-          What has been your favourite project during Technigo bootcamp?
-        </p>
+        <p>What has been your favourite project during Technigo bootcamp?</p>
         {projects.map((project) => {
           return (
             <RadioButton
@@ -98,9 +94,7 @@ const Form = () => {
         })}
       </div>
       <section className="question-container">
-        <p>
-          And finally, do you have some other thoughts you'd like to share?
-        </p>
+        <p>And finally, do you have some other thoughts you'd like to share?</p>
         <TextInput
           onChange={setThoughts}
           value={thoughts}
