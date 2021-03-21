@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was about creating a survey form using React. It has a multiple of questions using different form elements and a summary after the questions have been submitted.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The most difficult part was to create a multi-step form, showing each question on its own page. This was created by using useState and conditionally rendering the questions one by one in JSX.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://ecstatic-hawking-89dea9.netlify.app/
