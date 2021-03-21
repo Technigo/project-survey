@@ -11,6 +11,9 @@ export const InputType = (props) => {
         <option value="house">House</option>
         <option value="summer-house">Summer House</option>
       </select>
+      <button type="submit" className="button">
+        Submit
+      </button>
     </div>
   );
 };

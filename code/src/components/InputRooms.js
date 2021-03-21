@@ -12,6 +12,9 @@ export const InputRooms = (props) => {
         <option value="3">6</option>
         <option value="3">7+</option>
       </select>
+      <button type="submit" className="button">
+        Submit
+      </button>
     </div>
   );
 };

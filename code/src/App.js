@@ -5,7 +5,7 @@ import { InputType } from "components/InputType";
 import { InputSubway } from "components/InputSubway";
 import { InputPrice } from "components/InputPrice";
 import { InputRooms } from "components/InputRooms";
-// import { Button } from "components/Button";
+import { Summary } from "components/Summary";
 
 export const App = () => {
   // Set question state to move on to next question onSubmit
@@ -16,8 +16,6 @@ export const App = () => {
   const [subway, setSubway] = useState(false);
   const [price, setPrice] = useState();
   const [additional, setAdditional] = useState("");
-  //Set state to show summary at end of the Survey
-  const [summary, setSummary] = useState(false);
 
   // Functions to get the input from my components lifted to the App.js
   const updateTypeState = (event) => {
@@ -37,65 +35,42 @@ export const App = () => {
   };
 
   const onSubmit = (event) => {
-    e.preventDefault();
-    setQuestion(question+1);
-  }
-  }
-
-
-  // if (setSummary === true) {
-  //   return (
-  //     <div className="summary-form">
-  //       <div>{additional}</div>
-  //       <div>{room}</div>
-  //       <div>{type}</div>
-  //       <div>{price}</div>
-  //       <div>{subway}</div>
-  //     </div>
-  //   );
-  // }
+    event.preventDefault();
+    setQuestion(question + 1);
+  };
 
   return (
     <>
-      {question === 0 && (
-        <form className="form-container" onSubmit={onSubmit}>
+      <form className="form-container" onSubmit={onSubmit}>
+        {question === 0 && (
           <div>
             <Header />
-            <button className="start-button"
-            onClick ={() => {setQuestion("type-question") }}
-            >
-            Start
+            <button type="submit" className="start-button">
+              Start
             </button>
           </div>
-      )}
-      {question === 0 && (
-        <InputType onTypeChange={updateTypeState} />
         )}
-      {question === 2 && (
-        <InputRooms onRoomChange={updateRoomState} />
+        {question === 1 && <InputType onTypeChange={updateTypeState} />}
+        {question === 2 && <InputRooms onRoomChange={updateRoomState} />}
+        {question === 3 && (
+          <InputSubway onSubwayChange={updateSubwayState} subway={subway} />
         )}
-      {question === 3 && (
-        <InputSubway onSubwayChange={updateSubwayState} subway={subway} />
+        {question === 4 && (
+          <InputPrice onPriceChange={updatePriceState} price={price} />
         )}
-      {question === 4 && (
-        <InputPrice onPriceChange={updatePriceState} price={price} />
+        {question === 5 && (
+          <InputAdditional onAdditionalChange={updateAdditionalState} />
         )}
-       {question === 5 && (
-        <InputAdditional onAdditionalChange={updateAdditionalState} />
+        {question > 5 && (
+          <Summary
+            type={type}
+            rooms={room}
+            subway={subway}
+            price={price}
+            additional={additional}
+          />
         )}
-      
-      
-          
-            
-              <InputAdditional onAdditionalChange={updateAdditionalState} />
-          )}
-          <div className="summary-button">
-            <button type="submit" onClick={(event) => onSubmit()}>
-              Show me possible homes!
-            </button>
-          </div>
-        </form>
-      </div>
+      </form>
     </>
   );
 };

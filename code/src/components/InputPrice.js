@@ -23,6 +23,9 @@ export const InputPrice = (props) => {
           {choice}
         </label>
       ))}
+      <button type="submit" className="button">
+        Submit
+      </button>
     </div>
   );
 };

@@ -12,6 +12,9 @@ export const InputSubway = (props) => {
         />
         Yes
       </label>
+      <button type="submit" className="button">
+        Submit
+      </button>
     </div>
   );
 };
