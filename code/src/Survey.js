@@ -9,6 +9,8 @@ import Submit from './Submit'
 
 const Survey = (props) => {
   return (
+    <>
+    <h1 className="h1">My Business Card Generator</h1>
     <form className="survey" onSubmit={(event) => event.preventDefault()}>
       <NameQuestion 
         name={props.name} 
@@ -39,6 +41,7 @@ const Survey = (props) => {
         isSurveyComplete={props.isSurveyComplete}
       /> 
     </form>
+    </>
   )
 }
 

@@ -9,7 +9,7 @@ const PersonalityQuestion = (props) => {
   
   return (
     <>
-    <label for="personality-select" className="personality-label">My Style is:</label>
+    <label htmlFor="personality-select" className="personality-label">My Style is:</label>
     <select 
     id="personality-select" 
     className="select-menu"

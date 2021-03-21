@@ -33,9 +33,7 @@ const App = (props) => {
   console.log({completed});
 
   return (
-    <div className="surveyContainer">
-      <h1 className="h1">My Business Card Generator</h1>
-      
+    <>
       {submitted === false &&
       <Survey 
         name={name} 
@@ -64,8 +62,10 @@ const App = (props) => {
       color={color} 
       personality={personality}
       submitted={submitted}
+      setSubmitted={setSubmitted}
       />}
-    </div>
+    </>
+    
   )
   }
 

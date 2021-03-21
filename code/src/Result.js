@@ -8,7 +8,7 @@ const Result = (props) => {
   
   return (
     <section className="business-card-result">
-    <h1 className="h1">Tadaaa!</h1>
+    <h1 className="result-header">Tadaaa!</h1>
     <div className={`business-card ${props.color}`}>
       <h1 className={categoryName}>{props.name}</h1>
       <h2 className={categoryName}>{props.occupation}</h2>
@@ -17,7 +17,8 @@ const Result = (props) => {
       
     </div>
 
-    <p>Here is Your business card! Take a screenshot and send it to your friends!</p>
+    <p>Here is Your business card!</p> <p>Take a screenshot and send it to your friends!</p>
+    <button className="return-button" onClick={() => props.setSubmitted(false)}>Make another one!</button>
     </section>
   )
 }

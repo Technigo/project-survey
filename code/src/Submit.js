@@ -9,9 +9,9 @@ const Submit = (props) => {
   let submitButton;
   
   if (isSurveyComplete()) {
-    submitButton = <button onClick={() => setSubmitted(true)}>Submit!</button>
+    submitButton = <button className="submit-button" onClick={() => setSubmitted(true)}>Submit!</button>
   } else {
-    submitButton = <button disabled onClick={() => setSubmitted(true)}>Submit!</button>
+    submitButton = <button disabled className="submit-button-disabled" onClick={() => setSubmitted(true)}>Submit!</button>
   }
 
   return (
