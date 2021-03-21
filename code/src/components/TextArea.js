@@ -18,7 +18,7 @@ const TextArea = ({ text, setText, data}) => {
         value={text}
         onChange={handleInput}
         rows="4"
-        cols="50"
+        cols="35"
       >
         Anything other you want us to know?
       </textarea>

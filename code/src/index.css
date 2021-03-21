@@ -7,7 +7,64 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  margin: 0;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.form-container {
+  background-color: #FADAB1;
+  margin: 0;
+  width: 310px;
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #472811;
+  font-size: 14px;
+}
+
+.input-container, 
+.selector-container, 
+.text-area-container, 
+.amount,
+.check-input,
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.checkboxes {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 300px;
+}
+
+.text-area-container {
+  width: 300px;
+}
+
+h1 {
+  font-size: 20px;
+  margin: 0;
+  padding-top: 10px;
+}
+
+h2 {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button {
+  margin: 15px;
 }

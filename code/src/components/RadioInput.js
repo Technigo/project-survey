@@ -10,19 +10,21 @@ const RadioInput = ({ choice, setChoice, data }) => {
       <label htmlFor="radio">
         <h2>{data.label}</h2>
       </label>
-      {data.choices.map(item =>
-        <label key={item}>
-          <input
-            id="radio"
-            type="radio"
-            name={data.field}
-            value={item}
-            onChange={handleChange}
-            checked={choice === item}
-          />
-          {item}
-        </label>
-      )}
+      <div className="radio-buttons">
+        {data.choices.map(item =>
+          <label key={item}>
+            <input
+              id="radio"
+              type="radio"
+              name={data.field}
+              value={item}
+              onChange={handleChange}
+              checked={choice === item}
+            />
+            {item}
+          </label>
+        )}
+      </div>
     </div>
   )
 }

@@ -1,11 +1,11 @@
 {
   "name": {
-    "label": "Name",
+    "label": "What's your name?",
     "field": "name",
     "className": "name-input"
   },
   "country": {
-    "label": "Country",
+    "label": "Which country are you from?",
     "field": "country",
     "className": "country-input"
   },
@@ -43,7 +43,7 @@
       "West Africa",
       "East Africa"
     ],
-    "label": "Regions",
+    "label": "Choose a region",
     "field": "regions",
     "className": "regions-input"
   },
@@ -52,7 +52,7 @@
       "Price",
       "Weight"
     ],
-    "label": "Unit",
+    "label": "Select a unit",
     "field": "unit",
     "className": "unit-input"
   },
@@ -68,6 +68,7 @@
   },
   "allergies": {
     "choices": [
+      "None",
       "Lactose",
       "Gluten",
       "Egg",
@@ -75,12 +76,12 @@
       "Cacao",
       "Sugar"
     ],
-    "label": "Allergies",
+    "label": "Allergies or preferences (not required)",
     "field": "allergies",
     "className": "allergies-input"
   },
   "other": {
-    "label": "Other",
+    "label": "Other (not required)",
     "field": "other",
     "className": "other-input"
   }

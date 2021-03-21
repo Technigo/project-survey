@@ -13,18 +13,20 @@ const CheckInput = ({ choice, setChoice, data }) => {
       <label htmlFor="check">
         <h2>{data.label}</h2>
       </label>
-      {data.choices.map(item =>
-        <label key={item}>
-          <input
-            id={item}
-            type="checkbox"
-            name={item}
-            value={item}
-            onChange={handleChange}
-          />
-          {item}
-        </label>
-      )}
+      <div className="checkboxes">
+        {data.choices.map(item =>
+          <label key={item}>
+            <input
+              id={item}
+              type="checkbox"
+              name={item}
+              value={item}
+              onChange={handleChange}
+            />
+            {item}
+          </label>
+        )}
+      </div>
     </div>
   )
 }
