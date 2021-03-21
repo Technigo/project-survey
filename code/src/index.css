@@ -165,11 +165,11 @@ form {
   font-size: 20px;
 }
 
-/* .summaryContainer {
+.summaryContainer {/*
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: space-evenly;*/
 
   background-image: url('./images/smoke.jpg');
   height: 100vh;
@@ -177,21 +177,21 @@ form {
   background-size: cover;
   overflow: hidden;
   background-repeat: no-repeat;
-} */
+}
 
-/* .summaryContent {
+.summaryContent {/*
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-
+*/
   text-align: center;
   text-align: -moz-center;
   height: 70%;
   font-size: 18px;
   color: #fff;
   width: 85%;
-} */
+}
 
 /*BUTTON STYLING*/
 
