@@ -1,0 +1,147 @@
+.form-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  justify-content: center;
+}
+
+.form-wrapper img {
+  width: 60%;
+  align-self: center;
+}
+
+select {
+  background: #414141;
+  height: 50px;
+  width: 90%;
+  font-size: 20px;
+  color: #fff;
+}
+
+select option {
+  color: #fff;
+}
+
+select:focus {
+  outline: 2px solid #ab4e55;
+  outline-offset: 5px;
+}
+
+.radio-circle input[type=radio] {
+  display: none;
+}
+
+.radio-circle {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.radio-circle .checkmark {
+  position: absolute;
+  top: 3px;
+  left: 0;
+  height: 22px;
+  width: 22px;
+  background: #fff;
+  border-radius: 50%;
+}
+
+input[type=radio]:focus {
+  outline-offset: 3px;
+}
+
+.radio-circle:hover input~.checkmark {
+  background: #f0b2a0;
+}
+
+.radio-circle input[type=radio]:checked~.checkmark {
+  background: #ca3e47;
+}
+
+.submit-btn {
+  box-shadow: inset 0px 1px 0px 0px #f7c5c0;
+  background: linear-gradient(to bottom, #ab4e55 5%, #ab4148 100%);
+  background-color: #ab4148;
+  border-radius: 6px;
+  border: 1px solid #d83526;
+  text-shadow: 0px 1px 0px #ab4148;
+  padding: 10px;
+  width: 300px;
+  margin: 40px auto;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 26px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+  background: linear-gradient(to bottom, #ab4148 5%, #ab4e55 100%);
+  background-color: #ab4148;
+}
+
+.submit-btn:focus {
+  outline-offset: 3px;
+}
+
+.correct-answer {
+  color: #ab4e55;
+}
+
+.question-card {
+  margin: 10px 0px;
+  padding: 0px 0px 30px 20px;
+  background-color: #414141;
+  border-radius: 20px;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.question-card div {
+  margin: 0px 20px;
+}
+
+.summary {
+  margin: 20px 0px;
+  padding: 20px 20px;
+  border-radius: 20px;
+  background-color: #414141;
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.summary div, .summary hr {
+  width: 80%;
+}
+
+@media only screen and (max-width: 640px) {
+  .question-card {
+      width: 100%;
+  }
+  .summary div, .summary hr {
+      width: 100%;
+  }
+  .summary {
+      width: 100%;
+      padding: 10px;
+      margin: 0px;
+      border-radius: 0px;
+  }
+}
