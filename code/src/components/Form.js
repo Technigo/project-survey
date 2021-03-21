@@ -20,7 +20,7 @@ const Form = () => {
     <>
     {!summary ? (
       <form className="form">
-        <h1> Daily standup🕴 </h1>
+        <h1> Daily standup</h1>
           <section className="question-container">
             <h2>{QA.form_content.questions[0].question.valueOf((question) => {
               return (
