@@ -6,69 +6,73 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.container {
-  display: flex;
-  margin: 10px;
-  /* height: 100vh; */
+.header {
+  display: block;
+  margin: 0;
+  width: 100vw; 
 }
-input[type=text], select {
+.radio-wrapper {
+  padding-bottom: 30px;
+}
+.form-container {
+  margin: auto;
+  max-width: 300px;
+  display: flex;
+  flex-direction: column;
+}
+input[type=number], select {
   width: 100%;
   padding: 10px 20px;
   margin: 20px 0;
   display: inline-block;
   border-radius: 5px;
   box-sizing: border-box;
-  border: 1px solid rgb(158, 155, 155);
 }
 input[type=radio], select {
   width: 100%;
-  padding: 12px 20px;
+  /* padding: 12px 20px; */
   margin: 8px 0;
-  display: block;
-  border: 1px solid rgb(158, 155, 155);
-  border-radius: 4px;
-  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  vertical-align: bottom;
 }
-label {
-  padding: 0;
-
+.name-label {
+  padding-top: 30px;
 }
 .header-name {
+  padding: 50px;
   text-align: center;
-  margin-bottom: 50px;
+  color: #ffffff;
+  background-image: url("./background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin: 0;
+}
+.label-container{
+  display: flex;
+  flex-direction: column;
 }
 .first-radio {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
+  padding-bottom: 30px;
 }
-
 .second-radio {
   display: flex;
   flex-direction: row;
-
+  padding-bottom: 30px;
+  margin: 0;
 }
-
-.radio-wrapper {
-  /* padding: 10 0; */
-
-}
-
 .question-radio{
-  display: flex;
-  justify-content: flex-start;
-  margin: 0 40px 0 0;
-  padding: 0;
-  font-weight: 400;
+ display: inline;
 }
-
 .submit-button {
   width: 100%;
-  background-color: #3d9c40;
+  background-color: #2a6ea1;
   color: #ffffff;
   padding: 15px 20px;
   margin: 8px 0;
@@ -77,18 +81,16 @@ label {
   border-radius: 4px;
   cursor: pointer;
 }
-
 .summary {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: column;
-  background-color:#3d9c40;
+  background-color:#2a6ea1;
   color: #ffffff;
   font-weight: bold;
 }
 
-@media (min-width: 700px) {
 
-
-}

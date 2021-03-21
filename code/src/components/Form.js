@@ -57,7 +57,7 @@ const Form = () => {
   if (surveyComplete) {
     return (
       <div className="summary">
-        {/* <h3>Thank you for choosing RockedyRock Concerts</h3> */}
+      
         <h3>Summary:</h3>
         <p>Tickets: {name}</p>
         <p>Artist: {dropdown}</p>
@@ -70,13 +70,17 @@ const Form = () => {
   } else {
 
   return (
+    <>
+    <header className="header">
+      <h1 tabIndex="0" className="header-name">
+        Your next rock concert starts now!
+      </h1>
+    </header>
     <form 
       className="form-container" 
       onSubmit={handleSubmit} //How does it know its submitted, is it working with the button? How?
     >
-      <h1 tabIndex="0" className="header-name">
-        Your next rock concert starts now!
-      </h1>
+      
 {/* name input field */}
       <div className="container-input-fields">
         <div className="name-label">
@@ -84,7 +88,7 @@ const Form = () => {
           <input 
             className="name-input" 
             id="name" 
-            type="text" 
+            type="number" 
             value={name} 
             onChange={onNameChange}
           /> 
@@ -103,10 +107,11 @@ const Form = () => {
         </div>
       </div>
 {/* Question about date */}
+<h3 tabIndex="0" className="question-radio">Date: </h3>
       <div className="first-radio">
-        <h3 tabIndex="0" className="question-radio">Date: </h3>
+        {/* <h3 tabIndex="0" className="question-radio">Date: </h3> */}
         {bookDate.map((date) => (
-          <label key={date} htmlFor={date}>
+          <label key={date} htmlFor={date} className="label-container">
           <input 
             id={date}
             name="date" 
@@ -121,8 +126,9 @@ const Form = () => {
         ))}      
       </div>
 {/* Question about Seat  */}
+      <h3 tabIndex="0" className="question-radio">Seat section:</h3>
       <div className="question-radio">
-        <h3 tabIndex="0" className="question-radio">Seat section:</h3>
+        
         <div className="radio-wrapper">
          {seatSection.map((seat) => (
            <label key={seat} htmlFor={seat}>
@@ -149,6 +155,7 @@ const Form = () => {
       </button>
 
     </form>
+    </>
   )  
 }
 }
