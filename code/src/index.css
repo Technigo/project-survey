@@ -152,6 +152,12 @@ form {
   font-size: 20px;
 }
 
+input {
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
+
 .summaryContainer {
   display: flex;
   justify-content: center;
@@ -202,7 +208,8 @@ color: #fff;
 height: 60px;
 background-color: #c10140;
 border-radius: 10px;
-margin: 0;
+margin-left: auto;
+margin-right: auto;
 margin-bottom: 10px;
 -webkit-appearance: none;
 -moz-appearance: none;
