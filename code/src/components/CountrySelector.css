@@ -1,18 +1,17 @@
-.selector-card{
+.selector-card {
   max-width: 500px;
   margin: auto;
 }
-.question-heading{
+.question-heading {
   font-size: 28px; 
 }
-.selector-label{
+.selector-label {
   font-family: Roboto;
   font-size: 16px;
   margin-bottom: 10px;
   display: none;
 }
-
-.selector{
+.selector {
   margin: 0 0 50px 0;
   font-size: 16px;
   padding: 8px;
@@ -24,7 +23,6 @@
   color: var(--text);
   font-weight: bold;
 }
-
 .selector:focus {
   outline-style: none;
   border: 2px solid #012048d9

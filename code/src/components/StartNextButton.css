@@ -1,4 +1,4 @@
-.start-next-button{
+.start-next-button {
   background: var(--question);
   padding: 10px;
   border-radius: 15px;
@@ -8,13 +8,11 @@
   border: white 1px solid;
   width: 150px;
 }
-
-.start-next-button:disabled{
+.start-next-button:disabled {
   color: rgb(218, 214, 214);
   border: rgb(218, 214, 214);
   opacity: 0.7;
 }
-
-.start-next-button:hover{
+.start-next-button:hover {
   background: #144288;
 }

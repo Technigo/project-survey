@@ -1,23 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'
 
-import data from '../data.json';
+import data from '../data.json'
 
-import WelcomeSection from './WelcomeSection';
-import CountrySelector from './CounrtySelector';
+import WelcomeSection from './WelcomeSection'
+import CountrySelector from './CounrtySelector'
 import NeedVacationRange from './NeedVactionRange'
-import VacationTypeRadioButton from './VacationTypeRadioButtons';
-import ChooseDate from './ChooseDate';
-import Summary from './Summary';
-import ProgressBar from './ProgressBar';
-import SubmitButton from './SubmitButton';
+import VacationTypeRadioButton from './VacationTypeRadioButtons'
+import ChooseDate from './ChooseDate'
+import Summary from './Summary'
+import ProgressBar from './ProgressBar'
+import SubmitButton from './SubmitButton'
 import Checkboxes from './Checkboxes'
-import PersonalInformation from './PersonalInformation';
+import PersonalInformation from './PersonalInformation'
 
-
+//all css related to Form element is in index.css
 
 const Form = () => {
   const questions = data.QuestionsNumberArray
   const countries = data.countries
+
+  // state declarations
   const [needVacation, setNeedVacation] = useState("");
   const [country, setCountry] = useState("");
   const [vacationType, setVacationType] = useState("");

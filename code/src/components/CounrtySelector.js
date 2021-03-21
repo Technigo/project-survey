@@ -1,5 +1,7 @@
-import React from 'react';
-import StartNextButton from './StartNextButton';
+import React from 'react'
+
+import StartNextButton from './StartNextButton'
+
 import './CountrySelector.css'
 
 const CountrySelector = ({ setQuestion, country, setCountry, countries, progress, setProgress }) => {
@@ -8,7 +10,7 @@ const CountrySelector = ({ setQuestion, country, setCountry, countries, progress
     setCountry(event.target.value)
   }
   return (
-    <div className="selector-card">
+    <section className="selector-card">
       <h3 className="question-heading">Where would you like to go?</h3>
       <label htmlFor="country" className="selector-label">
         Choose a country
@@ -35,7 +37,7 @@ const CountrySelector = ({ setQuestion, country, setCountry, countries, progress
         setProgress={setProgress}
         state={country}
       />
-    </div>
+    </section>
   )
 }
 

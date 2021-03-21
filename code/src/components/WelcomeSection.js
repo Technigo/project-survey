@@ -1,10 +1,8 @@
-import React from 'react';
+import React from 'react'
+
+import StartNextButton from './StartNextButton'
 
 import './WelcomeSection.css'
-
-import StartNextButton from './StartNextButton';
-
-
 
 const WelcomeSection = ({setQuestion, progress, setProgress}) => {
   return (
@@ -20,7 +18,6 @@ const WelcomeSection = ({setQuestion, progress, setProgress}) => {
       progress={progress}
       setProgress= {setProgress}
       />
-
 
     </section>
   )

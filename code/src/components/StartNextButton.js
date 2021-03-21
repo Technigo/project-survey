@@ -1,29 +1,30 @@
-import React from 'react';
+import React from 'react'
+
 import './StartNextButton.css'
 
 import data from '../data.json'
 
-const StartNextButton = ({setQuestion, progress, setProgress, state}) =>{
-  
+const StartNextButton = ({ setQuestion, progress, setProgress, state }) => {
+
   const isStateUnchanged = () => {
-    return state===""
+    return state === ""
   }
-  const onQuestionChange = ()=> {
+  const onQuestionChange = () => {
     onProgressChange()
-    setQuestion(data.QuestionsNumberArray[progress+1])
-    
+    setQuestion(data.QuestionsNumberArray[progress + 1])
+
   }
   const onProgressChange = () => {
-    setProgress(progress +1)
+    setProgress(progress + 1)
   }
   return (
     <button
-    className="start-next-button"
-    disabled={isStateUnchanged()}
-    type="button"
-    onClick={onQuestionChange}>
+      className="start-next-button"
+      disabled={isStateUnchanged()}
+      type="button"
+      onClick={onQuestionChange}>
       {progress === 0 && ("Start survey")}
-      {progress> 0 && ("Next question")}
+      {progress > 0 && ("Next question")}
     </button>
   )
 }

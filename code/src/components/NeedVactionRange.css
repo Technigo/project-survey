@@ -1,5 +1,3 @@
-
-
 .slider-container{
   max-width: 500px;
   margin: auto;
@@ -12,7 +10,6 @@
   width: 100%;
   margin-bottom: 50px;
 }
-
 .range-lable {
   display: flex;
   justify-content: space-between;
@@ -31,7 +28,6 @@
   background: var(--question);
   border-radius: 50%;
 }
-
 .slider:hover {
   opacity: 1;
 }
@@ -41,12 +37,10 @@
   font-family: Roboto;
   text-transform: uppercase;
   color: var(--text);
-  /* border: 1px solid pink; */
 }
 .range-item:first-child {
   text-align: left;
 }
-
 .range-item:last-child {
   text-align: right;
 }

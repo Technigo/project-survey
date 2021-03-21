@@ -1,21 +1,19 @@
-.radio-card{
+.radio-card {
   max-width: 500px;
   margin: auto;
 }
-
-.question{
+.question {
   font-family: Averia Sans Libre;
   color: #8e5006;
 }
-
-.label-container{
+.label-container {
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   column-gap: 5px;
   font-size: 12px;
 }
-.radio-label{
+.radio-label {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -29,5 +27,4 @@
   .radio-label {
     font-size: 16px;
   }
-
 }

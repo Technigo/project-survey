@@ -1,5 +1,5 @@
-import React from 'react';
-import StartNextButton from './StartNextButton';
+import React from 'react'
+import StartNextButton from './StartNextButton'
 
 import './ChooseDate.css'
 
@@ -11,7 +11,7 @@ const ChooseDate = ({date, setDate, setQuestion, progress, setProgress}) => {
   }
 
   return(
-    <div className="date-card">
+    <section className="date-card">
       <h3 className="question-heading">When would you want to start your vacation?</h3>
       <label className="date-label">
         Choose a date
@@ -23,7 +23,7 @@ const ChooseDate = ({date, setDate, setQuestion, progress, setProgress}) => {
         setProgress= {setProgress}
         state={date}
       />
-    </div>
+    </section>
   )
 }
 

@@ -1,14 +1,16 @@
-import React from 'react';
+import React from 'react'
+
 import StartNextButton from './StartNextButton'
+
 import './VacationTypeRadioButtons.css'
 
-const VacationTypeRadioButton = ({setQuestion, vacationTypes, vacationType, name, setVacationType, progress, setProgress}) => {
-  
+const VacationTypeRadioButton = ({ setQuestion, vacationTypes, vacationType, name, setVacationType, progress, setProgress }) => {
+
   const onVacationTypeChange = (event) => {
     setVacationType(event.target.value)
   }
   return (
-    <div className="radio-card">
+    <section className="radio-card">
       <h3 className="question-heading">What type of activities you prefer?</h3>
       <div className="label-container">
         {vacationTypes.map(type => {
@@ -23,17 +25,16 @@ const VacationTypeRadioButton = ({setQuestion, vacationTypes, vacationType, name
               />
               {type}
             </label>
-        )
-      })
-      }
+          )
+        })}
       </div>
       <StartNextButton
         setQuestion={setQuestion}
         progress={progress}
-        setProgress= {setProgress}
+        setProgress={setProgress}
         state={vacationType}
-       />
-    </div>
+      />
+    </section>
   )
 }
 

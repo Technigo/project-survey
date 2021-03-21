@@ -1,28 +1,25 @@
-.summary-container{
+.summary-container {
   max-width: 500px;
   margin: 0 auto 30px auto;
   padding: 10px;
 }
-
-.summary-text{
+.summary-text {
   font-family: Roboto;
   color: var(--text);
 }
-.answers-wrapper{
+.answers-wrapper {
   list-style: none;
   background: #90bff94a;
   font-family: Roboto;
   color: rgb(1, 1, 14);
   padding: 10px;
 }
-.answer-text{
+.answer-text {
   margin-bottom: 10px;
 }
-
-.answer{
+.answer {
   font-weight: 600;
 }
-
 .email {
   text-decoration: underline;
 }

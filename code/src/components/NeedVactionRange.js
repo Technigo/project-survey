@@ -1,5 +1,7 @@
-import React from 'react';
+import React from 'react'
+
 import StartNextButton from './StartNextButton'
+
 import './NeedVactionRange.css'
 
 const NeedVacationRange = ({setQuestion, needVacation, setNeedVacation, progress, setProgress }) => {
@@ -8,7 +10,7 @@ const NeedVacationRange = ({setQuestion, needVacation, setNeedVacation, progress
     setNeedVacation(event.target.value)
   })
   return (
-    <div className="slider-container">
+    <section className="slider-container">
       <h3 className="question-heading">From one to ten: how badly do you need vacation?</h3>
       <div className="label-slider-wrapper">
         <label htmlFor="range" className="range-lable">
@@ -31,7 +33,7 @@ const NeedVacationRange = ({setQuestion, needVacation, setNeedVacation, progress
         progress={progress}
         setProgress={setProgress}
         state={needVacation} />
-    </div>
+    </section>
   )
 }
 export default NeedVacationRange
