@@ -32,7 +32,7 @@ const QuestionStageArtCheckbox = ({
     <article className="form-question-3">
       {/* Q */}
       <p className="form-question" tabIndex="0">
-        What kind of stage art would you like too experience post Covid-19? Pick 2 as they are made to overlap a little! <span role="img" aria-label="smiling emoji with one eye blinking">😊</span>
+        What kind of stage art would you like too experience post Covid-19? Pick as many as you like! <span role="img" aria-label="smiling emoji with one eye blinking">😊</span>
       </p>
 
       {/* A */}
