@@ -1,13 +1,26 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project was to use React to build a survey form.
+The survey must contain at least 3 questions that need to be answered by users.
+When the user presses submit they should se a summary of their answers. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started of by reading all the material for this week and make a plan for what components i wanted to have.
+I decided that i wanted my survey to be a one-pager but with a similiar design to typeform. 
+
+I started off with the form component and basically finnishing one questions, one component, at a time. 
+I used a basic input type text, select dropdown and radiobuttons with a submit button at the end. 
+
+I found it quite easy to make all the components. I had a little bit of struggle to get the summary to show up at the end.
+But I solved it with if condition - so if the form was not completed the form would show. If the form was completed it would, after the submit button, render the summary component. 
+
+Once i got this to function smoothly I started with the styling. 
+When i started to test the accessibility i got some alerts that the radio buttons would be an issue if they werent wrapped in a fieldset tag. 
+
+If I would have more time I would do a multi-step form instead if a one-pager. 
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://sneakers-for-the-win.netlify.app/
