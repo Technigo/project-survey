@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 
 import SummaryOfForm from './SummaryOfForm';
 
+import './Form.css'
+
 
 const Form =() => {
     const [name, setName] = useState('');
@@ -10,23 +12,13 @@ const Form =() => {
     const [showForm, setShowForm] = useState(true);
     console.log(name);
 
-
-/*
-const onMusicianChange = (e) => {
-    setMusician(e.target.value);
-};
- 
-const onInstrumentChange = (e) => {
-    setInstrument(e.target.value);
-};*/
-
     return (
         <>
         {showForm ?
-            
+      <div className="form-section">      
         <form>
             <div className="name-question">
-            <label htmlFor="name">Name:</label>
+            <label htmlFor="name" placeholder="Name">Name:</label>
                 <input 
                     id="name" 
                     type="text" 
@@ -39,35 +31,38 @@ const onInstrumentChange = (e) => {
                 <p>Are you a musician?</p>
             <label htmlFor="musician">Yes</label>
                 <input 
+                    name="musicianRadio"
                     id="musician" 
                     type="radio" 
-                    value="Yes"
+                    value="I am a musician"
                     onChange={(e) => {
                         setMusician(e.target.value);}
                     
                      } />
             <label htmlFor="musician">No</label>
                 <input 
+                    name="musicianRadio"
                     id="musician" 
                     type="radio" 
-                    value="No"
+                    value="No, I'm not a musician"
                     onChange={(e) => {
                         setMusician(e.target.value);}
                       }  />
             </div>
             <div className="instrument-question">
-                <label htmlFor="instrument">Which is your instrument?</label>
+                <label htmlFor="instrument">What instrument do you play?</label>
                 <select id="instrument" onChange={(e) => {
                     setInstrument(e.target.value);
                     setTimeout(console.log(instrument), 1000)
                 }
 }>
-                    <option>tomt värde</option>
+                    <option></option>
                     <option>Singing</option>
                     <option>Piano</option>
                     <option>Drums</option>
                     <option>Guitarr</option>
                     <option>Bass</option>
+                    <option>I don't play any instrument</option>
                 </select>
             </div>
             <button
@@ -77,11 +72,13 @@ const onInstrumentChange = (e) => {
             }}
             >Submit</button>
         </form>
-    : <SummaryOfForm 
-    nameData = {name}
-    musicianData = {musician}
-    instrumentData = {instrument}
-/>}
+     </div>
+        : <SummaryOfForm 
+            nameData = {name}
+            musicianData = {musician}
+            instrumentData = {instrument}
+    />  
+        }
 
     </>
     
