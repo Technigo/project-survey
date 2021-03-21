@@ -34,4 +34,8 @@ My approach was to really go step by step, from simple to more complex.
 
 ## The problem
 
+I had some issues when creating the components for each question as the states wasnt updating but I got support by a classamte to understand this step and then I could easily create them.
+
 ## View it live
+
+https://survey-by-dannuzak.netlify.app/
