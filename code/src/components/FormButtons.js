@@ -1,30 +1,42 @@
 import React from 'react';
 
 import Button from './Button';
+import Submit from './Submit';
 
-let buttonTexts = ["Let's go!", "Next", "Next", "Submit"]; // fix the Submit button + add "Restart" if I want this function
+let buttonTexts = ["Let's go!", "Next", "Next", "Submit"]; // fix the Submit button
 
 const FormButtons = ({ step, setStep }) => {
-  const nextStep = step + 1;
-  const previousStep = step - 1;
+  const goToPrevStep = () => {
+    setStep(step - 1);
+  };
+
+  const goToNextStep = () => {
+    const form = document.querySelector(".buttons-container").closest("form");
+  
+    if (form.checkValidity()) {
+      setStep(step + 1); 
+    }
+
+  }
 
   return (
     <>
       <div className="buttons-container">
       {step > 1 && step < 4 && (
         <Button 
-          stepBtn={previousStep}
-          setStep={setStep}
           btnTxt="Previous"
+          onClickAction={goToPrevStep}
         />
       )}
       
       {step >= 0 && step < 3 && (
         <Button 
-          stepBtn={nextStep}
-          setStep={setStep}
           btnTxt={buttonTexts[step]}
+          onClickAction={goToNextStep}
         />
+      )}
+      {step === 3 && (
+        <Submit />
       )}
       </div>
     </>

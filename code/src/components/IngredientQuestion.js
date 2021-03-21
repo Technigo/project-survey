@@ -1,7 +1,6 @@
 import React from 'react';
 
 import FormButtons from './FormButtons';
-import Submit from './Submit';
 
 const ingredients = ["salmon", "tuna", "shrimp", "crabstick", "avocado", "egg"]; 
 
@@ -40,7 +39,6 @@ const IngredientQuestion = ({ ingredient, callbackOnChange, step, setStep }) => 
           step={step}
           setStep={setStep}
         />
-        <Submit />
       </div>
     </>
   );

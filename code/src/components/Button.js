@@ -1,14 +1,14 @@
 import React from 'react';
 
-const Button = ({ stepBtn, setStep, btnTxt }) => {
+const Button = ({ btnTxt, onClickAction }) => {
   return (
     <>
-      <input 
+      <button 
         className="btn button"
-        type="submit"
-        value={btnTxt}    
-        onClick={() => setStep(stepBtn)} 
-      />
+        onClick={() => onClickAction()} 
+      >
+        {btnTxt} 
+      </button>
     </>
   );
 };
