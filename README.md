@@ -1,13 +1,17 @@
-# Survey form with React
+# Order form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's project is to use React to build a order form. This project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started off by deciding what questions I should ask and what type of questions. Then I started to decide on their logic and in what order I should ask them. 
+
+I faced troubles with creating a logic where there is only one questions asked at time and when answered and clicking to next question, the next question pops up and the previous disappears. 
+
+Technlogies used:
+- React
+- CSS 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://kind-lamport-4a7b21.netlify.app/
