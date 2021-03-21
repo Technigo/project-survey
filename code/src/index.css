@@ -18,7 +18,7 @@ code {
 
 .root {
   width: 100%;
-  height: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +216,6 @@ form {
   font-weight: 700;
 }
 
-
 @media (max-width: 767px) {
   .form-section {
     width: 80%;
@@ -239,5 +238,10 @@ form {
   }
   .summary-text {
     font-size: 1.6rem;
+  }
+  .btn.prev-btn, .btn.btn.next-btn {
+    min-width: 140px;
+    height: 40px;
+    font-size: 0.9rem;
   }
 }
