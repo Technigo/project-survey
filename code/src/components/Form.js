@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import TextField from './TextField';
+import Textfield from './Textfield';
 import Dropdown1 from './Dropdown1';
 import Dropdown2 from './Dropdown2';
 import Radiobuttons1 from './Radiobuttons1';
@@ -31,7 +31,7 @@ const Form = () => {
     <>
     {! showSummary ? (
        <section className="main-wrapper">
-       <TextField inputName = {inputName} setInputName = {setInputName} />
+       <Textfield inputName = {inputName} setInputName = {setInputName} />
        <Dropdown1 genre = {genre} setGenre = {setGenre} />
        <Dropdown2 cost = {cost} setCost = {setCost} />
        <Radiobuttons1 selectBigVenue = {selectBigVenue} setSelectBigVenue = {setSelectBigVenue} />

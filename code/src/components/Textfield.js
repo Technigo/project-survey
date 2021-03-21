@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './TextField.css'
+import './Textfield.css'
 
-const TextField = ({ inputName, setInputName }) => {
+const Textfield = ({ inputName, setInputName }) => {
 
   return (
     <form className="text-field" onSubmit={event => event.preventDefault()} tabIndex="0">
@@ -20,4 +20,4 @@ const TextField = ({ inputName, setInputName }) => {
   );
 };
 
-export default TextField;
+export default Textfield;
