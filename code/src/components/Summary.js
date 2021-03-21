@@ -13,7 +13,7 @@ const Summary = ({ inputName, genre, cost, selectBigVenue, selectMidVenue, selec
       </div>
 
       <div className="summary-text">
-      <h2>Your favourite music genre is <span className="color-word">{genre}</span> - cool!</h2>  
+      <h2>So, your favourite music genre is <span className="color-word">{genre}</span> - cool!</h2>  
       </div>
 
       <div className="summary-text">

@@ -28,7 +28,7 @@
 
 .end-message {
   position: absolute;
-  top: 709px;
+  top: 768px;
   display: block;
   text-align: center;
   padding: 8px;
@@ -52,7 +52,7 @@
   }
 
   .end-message {
-    top: 458px;
+    top: 505px;
     width: 287px;
   }
 }
@@ -74,6 +74,10 @@
 /* MEDIA QUERY BIGGER DESKTOP */
 
 @media only screen and (min-width: 1200px) {
+
+  .summary {
+  margin: 47px 110px 47px 110px;
+  }
 
 
 }

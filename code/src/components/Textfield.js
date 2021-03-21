@@ -2,7 +2,7 @@ import React from 'react';
 
 import './TextField.css'
 
-const Textfield = ({ inputName, setInputName }) => {
+const TextField = ({ inputName, setInputName }) => {
 
   return (
     <form className="text-field" onSubmit={event => event.preventDefault()} tabIndex="0">
@@ -20,4 +20,4 @@ const Textfield = ({ inputName, setInputName }) => {
   );
 };
 
-export default Textfield;
+export default TextField;
