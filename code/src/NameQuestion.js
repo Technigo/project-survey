@@ -14,7 +14,7 @@ return (
         required
         value={name}
         placeholder="Cat name"
-        maxLength="20"
+        maxLength="30"
         minLength="1"
       />
     </label>

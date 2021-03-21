@@ -31,8 +31,6 @@ p {
   text-align: center;
 }
 
-
-
 form {
   display: flex;
   flex-direction: column;
@@ -51,6 +49,7 @@ form {
 }
 
 .name {
+  width: 150px;
   height: 25px;
   margin: 20px;
   border: 2px solid black;
@@ -64,7 +63,6 @@ form {
   flex-direction: column;
 }
 
-
 .color-question {
   font-size: 20px;
   text-align: center;
@@ -76,8 +74,8 @@ form {
 }
 
 .select {
-  width: 30%;
-  height: 25px;
+  width: 150px;
+  height: 30px;
   margin: 20px;
   border: 2px solid black;
 }
@@ -86,14 +84,15 @@ form {
   font-size: 20px;
   text-align: center;
   margin: 20px;
-  display:flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .email {
+  width: 170px;
   height: 25px;
-  margin: 20px;
+  margin: 10px;
   border: 2px solid black;
 }
 
@@ -128,9 +127,7 @@ flex-direction: column;
 font-style: oblique;
 }
 
-
 .ending {
 font-weight: 700;
 height: 200px;
-
 }
