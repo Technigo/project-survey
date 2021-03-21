@@ -5,7 +5,7 @@ import './Summary.css'
 const Summary = ({ inputName, genre, cost, selectBigVenue, selectMidVenue, selectSmallVenue, range }) => {
     
   return (
-
+<>
     <section className="summary">
 
       <div className="summary-text">
@@ -33,15 +33,17 @@ const Summary = ({ inputName, genre, cost, selectBigVenue, selectMidVenue, selec
       </div>
 
       <div className="summary-text">
-      <h2>On a scale from 1-10, you miss live music at a level of <span className="color-word">{range}</span></h2> 
+      <h2>On a scale from 1-10, you miss live music at a level of <span className="color-word">{range}</span> - fair enough!</h2> 
       </div>
 
-
+      <section className="end-container">
       <div className="end-message">
         <h2 className="end-text">THANK YOU FOR YOUR PARTICIPATION <span role="img" aria-label="waving hand emoji">🤘</span></h2>
       </div>
+      </section>
 
     </section>
+    </>
   );
 };
 

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import TextField from './TextField'
+import TextField from './TextField';
 import Dropdown1 from './Dropdown1';
 import Dropdown2 from './Dropdown2';
 import Radiobuttons1 from './Radiobuttons1';
@@ -19,7 +19,7 @@ const Form = () => {
   const [selectBigVenue, setSelectBigVenue] = useState();
   const [selectMidVenue, setSelectMidVenue] = useState();
   const [selectSmallVenue, setSelectSmallVenue] = useState();
-  const [range, setRange] = useState(); //WHAT GOES HERE?
+  const [range, setRange] = useState();
   const [showSummary, setShowSummary] = useState(false);
 
   const handleSubmit = (event) => {
