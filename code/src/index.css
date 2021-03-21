@@ -43,7 +43,7 @@ i {
   justify-content: space-evenly;
 
   background-image: url('./images/smoke.jpg');
-  height: 100vh;
+  min-height: 100vh;
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
@@ -104,7 +104,7 @@ form {
   justify-content: center;
   align-items: center;
 
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
 }
 
@@ -172,7 +172,7 @@ form {
   justify-content: space-evenly;
 
   background-image: url('./images/smoke.jpg');
-  height: 100vh;
+  min-height: 100vh;
   width: 100%;
   background-size: cover;
   overflow: hidden;
