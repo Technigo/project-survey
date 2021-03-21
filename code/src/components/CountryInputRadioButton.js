@@ -3,8 +3,8 @@ import React from 'react'
 const CountryInputRadioButton = ({ countryValue, onCountryChangeFunction }) => { 
  
     return (
-        <div>
-          
+        
+        <fieldset>
           <label key={countryValue} htmlFor={countryValue}>
             <input 
               name="country"
@@ -15,7 +15,8 @@ const CountryInputRadioButton = ({ countryValue, onCountryChangeFunction }) => {
               required
             />
           {countryValue}</label>
-        </div>
+        </fieldset>  
+        
     )
 }
 

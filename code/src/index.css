@@ -48,10 +48,6 @@ h1,
 	font-size: 3.3rem;
 }
 
-.country-section input {
-	margin-right: 8px;
-}
-
 .text-input {
 	background: none;
 	border: none;
@@ -78,6 +74,20 @@ input::placeholder {
 	opacity: 80%;
 }
 
+.country-section input {
+	margin-right: 8px;
+	cursor: grab;
+}
+
+.country-section label {
+	cursor: grab;
+}
+
+fieldset {
+	border: none;
+	padding: 0px;
+}
+
 .dropdown-select {
 	margin: 10px;
 	display: block;
@@ -88,6 +98,7 @@ input::placeholder {
 	color: white;
 	font-size: 1.2rem;
 	outline: none;
+	cursor: grab;
 }
 
 .dropdown-select:hover {
@@ -98,6 +109,11 @@ input::placeholder {
 .activity-section {
 	display: flex;
 	flex-direction: column;
+}
+
+.activity-section input,
+label {
+	cursor: grab;
 }
 
 .button-section {
@@ -115,6 +131,7 @@ input::placeholder {
 	z-index: 1;
 	border: none;
 	font-size: 1.2rem;
+	cursor: grab;
 }
 
 .circleScaleBtn span {
