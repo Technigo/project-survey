@@ -1,23 +1,37 @@
 <!-- @format -->
 
-survey-by-dannuzak.netlify.app
+# A survey form using React
 
-# Technigo React Starter App
+This week's project was to use React to build a survey form. It should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+## Learning objectives
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+- How to use form fields with React
+- How to use `useState`
+- How to use state to show different components based on where you are in the survey
 
-## Usage
+## How I built it
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+My approach was to really go step by step, from simple to more complex.
 
-Alternatively, if you don't want a new git repo on your account;
+1. Adding all the elements/questions in the form.js. Summary section and button that will show the summary included.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+2. Mapping of radio button input in the main component. This also helped to make the code shorter.
+
+3. Creating the components for each question.
+
+4. Styling the page following "mobile first" approach. Then Ipad and desktop view.
+
+5. Accesibility testing in:
+
+- Chrome, Edge and Firefox on Mac OS. On Edge the option elements are not visible unless they are on hover.
+
+- Chrome on Iphone 8 plus and Ipad.
+
+- WAVE: 0 errors.
+  W3C markup and CSS validator: 0 errors
+  Webdev: Accesibility 100%.
+
+## The problem
+
+## View it live
