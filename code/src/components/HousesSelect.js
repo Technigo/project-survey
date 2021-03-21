@@ -8,7 +8,7 @@ const HousesSelect = ({gameOfThronesHouse, setGameOfThronesHouse, handleSubmit})
     return (
         <>
         <form className='select-dropdown'>
-            <h2 className='question-heading'>
+            <h2 tabIndex='0' aria-label='There are nine Great Houses in Westeros. Which one is your favorite?' className='question-heading'>
                 There are nine Great Houses in Westeros. Which one is your favorite?
             </h2>
             <div className='select-button-container'>

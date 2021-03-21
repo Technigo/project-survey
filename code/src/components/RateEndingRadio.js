@@ -10,7 +10,7 @@ export const RateEndingRadio = ({rateEnding, setRateEnding, handleSubmit}) => {
     return (
         <>
         <form className='radiobuttons-form'>
-            <h2 className='question-heading'>
+            <h2 tabIndex='0' aria-label='What did you think about the final episode?' className='question-heading'>
                 What did you think about the final episode?
             </h2>
             <div className='radiobuttons-options'>

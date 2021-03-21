@@ -10,7 +10,7 @@ export const NumberOfSeasonsRadio = ({numberOfSeasons, setNumberOfSeasons, handl
     return (
         <>
         <form className='radiobuttons-form'>
-            <h2 className='question-heading'>
+            <h2 tabIndex='0' aria-label='How many seasons did you watch?' className='question-heading'>
                 How many seasons did you watch?
             </h2>
             <div>
