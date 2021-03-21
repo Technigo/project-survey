@@ -6,7 +6,10 @@ const ReturnButton = (props) => {
     setSummary(false)
   }
   return (
-    <button onClick={handleReturn}>
+    <button 
+    className="return-button"
+    onClick={handleReturn}
+    >
       Again?
     </button>
   )

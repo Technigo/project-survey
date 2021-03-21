@@ -7,7 +7,7 @@ const RangeInput = ({ value, setValue, data }) => {
   return (
     <div className="amount">
       <label htmlFor="range">
-        <h2>Amount</h2>
+        <h2>Amount:</h2>
       </label>
       <input
         id="range"

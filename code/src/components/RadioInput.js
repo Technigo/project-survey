@@ -1,10 +1,9 @@
 import React from "react"
 
-const RadioInput = ({ choice, setChoice, data }) => {
+const RadioInput = ({ choice, setChoice, data}) => {
   const handleChange = (event) => {
     setChoice(event.target.value)
   }
-
   return (
     <div className="radio-container">
       <label htmlFor="radio">

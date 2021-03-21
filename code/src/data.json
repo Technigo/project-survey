@@ -43,28 +43,25 @@
       "West Africa",
       "East Africa"
     ],
-    "label": "Choose a region",
+    "label": "Choose a region you wish to swap with:",
     "field": "regions",
     "className": "regions-input"
   },
   "unit": {
     "choices": [
-      "Price",
-      "Weight"
+      "£",
+      "$",
+      "€",
+      "kg",
+      "lbs"
     ],
-    "label": "Select a unit",
+    "label": "Select a unit:",
     "field": "unit",
     "className": "unit-input"
   },
   "amount": {
-    "price": {
-      "className": "stat-input",
-      "label": "price"
-    },
-    "weight": {
-      "className": "stat-input",
-      "label": "weight"
-    }
+    "className": "amount-input",
+    "label": "amount"
   },
   "allergies": {
     "choices": [
@@ -76,12 +73,12 @@
       "Cacao",
       "Sugar"
     ],
-    "label": "Allergies or preferences (not required)",
+    "label": "Allergies or preferences:",
     "field": "allergies",
     "className": "allergies-input"
   },
   "other": {
-    "label": "Other (not required)",
+    "label": "Other information:",
     "field": "other",
     "className": "other-input"
   }

@@ -9,7 +9,7 @@ const TextArea = ({ text, setText, data}) => {
   return (
     <div className="text-area-container">
       <label htmlFor="text">
-        <h2>{data.label}</h2>
+        <h2>{data.label} <span className="not-required">(not required)</span></h2>
       </label>
       <textarea
         id="text"

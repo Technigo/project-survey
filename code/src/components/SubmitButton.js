@@ -8,13 +8,19 @@ const SubmitButton = (props) => {
 
   if (isRequired()) {
     return (
-      <button onClick={handleSubmit}>
+      <button 
+      className="submit-button"
+      onClick={handleSubmit}
+      >
         Create card
       </button>
     )
   } else {
     return (
-      <button onClick={handleSubmit} disabled>
+      <button
+      className="submit-button"
+      onClick={handleSubmit} disabled
+      >
         Create card
       </button>
     )

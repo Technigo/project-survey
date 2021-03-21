@@ -1,12 +1,19 @@
 import React from "react"
 
+//Trying to display a random image from an array. The image is not showing though
+// const displayImage = () => {
+//   let imagesArray = ["./assets/candy1.png", "./assets/candy.png", "./assets/candy3.png", "./assets/cotton-candy.png", "./assets/lollipop.png"]
+//   let num = Math.floor(Math.random() * (imagesArray.length+1)); 
+//   document.candy.src = imagesArray[num];
+// }
+
 const SwapCard = (props) => {
   return (
     <div className="card">
       <div className="title">
-        <h2 className="swap-card-title">
+        <h1 className="swap-card-title">
           I'm looking for a swap-buddy!
-        </h2>
+        </h1>
       </div>
       <div className="information">
         <p>My name is: <span>{props.name}</span></p>
@@ -16,9 +23,9 @@ const SwapCard = (props) => {
         <p>I have these allergies/preferences: <span>{props.allergies}</span></p>
         <p>Other information: <span>{props.other}</span></p>
       </div>
-      <div className="image-container">
-
-      </div>
+      {/* <div className="image-container">
+        <img src={displayImage} name="candy" alt="A piece of candy"/>
+      </div> */}
     </div>
   )
 }

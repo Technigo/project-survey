@@ -1,6 +1,6 @@
 import React from "react"
 
-const CheckInput = ({ choice, setChoice, data }) => {
+const CheckboxInput = ({ choice, setChoice, data }) => {
   const handleChange = (event) => {
     choice.includes(event.target.value)
       ? setChoice(
@@ -11,7 +11,7 @@ const CheckInput = ({ choice, setChoice, data }) => {
   return (
     <div className="check-input">
       <label htmlFor="check">
-        <h2>{data.label}</h2>
+        <h2>{data.label} <span className="not-required">(not required)</span></h2>
       </label>
       <div className="checkboxes">
         {data.choices.map(item =>
@@ -31,4 +31,4 @@ const CheckInput = ({ choice, setChoice, data }) => {
   )
 }
 
- export default CheckInput
+ export default CheckboxInput

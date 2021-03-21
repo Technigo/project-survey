@@ -6,7 +6,7 @@ import TextInput from "./components/TextInput"
 import SelectInput from "./components/SelectInput"
 import RadioInput from "./components/RadioInput"
 import RangeInput from "./components/RangeInput"
-import CheckInput from "./components/CheckInput"
+import CheckboxInput from "./components/CheckboxInput"
 import TextArea from "./components/TextArea"
 import SubmitButton from "components/SubmitButton"
 import SwapCard from "./components/SwapCard"
@@ -90,7 +90,7 @@ export const App = () => {
             setValue={setAmount}
             data={data.amount}
           />
-          <CheckInput
+          <CheckboxInput
             choice={allergies}
             setChoice={setAllergies}
             data={data.allergies}
