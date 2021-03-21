@@ -152,6 +152,12 @@ form {
   font-size: 20px;
 }
 
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  }
+
 .summaryContainer {
   display: flex;
   justify-content: center;
@@ -189,7 +195,6 @@ form {
   border-radius: 10px;
   margin: 0;
   margin-bottom: 10px;
-  -webkit-appearance: none;
 }
 
 .startAndBackButton:hover,
