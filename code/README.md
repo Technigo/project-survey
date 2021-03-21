@@ -1,19 +1,17 @@
-# Technigo React Starter App
+# Survey tool
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The project of this week was to create a survey tool with react. The requirements said the survey had to have three question, out of which at least one had to be radio type and one dropdown. There also had to be a submit button, and when this is clicked, a summary should appear.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## The problem
 
-## Usage
+I started with creating a header component and a footer component, which I then made sure to display in the app. After this, I created a very basic form with just the labels and input types to start with. When I had all the basic form data, I made most of the styling. When this was completed, I continued with creating map methods for the radio button inputs, and also added tab index to make the survey tool more accessible. Last I put statements in the form, to decide when the summary should be visible and when it shouldn't. 
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+I have tested the accessibility with help from WAVE and W3C Validation. 
 
-Alternatively, if you don't want a new git repo on your account;
+What I struggled with the most was actually to deploy the site, but after looking for guidance on Stack Overflow and by asking my team for advice, I realized all warnings had to be fixed in advance. At first I also had a bit of a hard time making the summary appear correct, but sorted it out. 
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+If I had more time, I would create a multi-step form. I will most likely go back and do that anyway when there is time. 
+
+## View it live
+
+My deployed project can be viewed here: https://therese-survey.netlify.app/
