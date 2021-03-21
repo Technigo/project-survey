@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Create a survey using React. When the survey is complete the user should receive a summary of their answers.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I began by chosing which components to create and how to mount them in App.js. Next came the difficulties of lifting State and how to do this in a smart way.
+If I had more time I would have styled it (the styling now is attrocious) and tried for red and black level goals.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://hjsurvey.netlify.app
