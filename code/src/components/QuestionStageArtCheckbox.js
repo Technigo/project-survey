@@ -1,7 +1,6 @@
 import React from 'react';
 
 import NextQuestionButton from './NextQuestionButton'
-import Popup from './Popup'
 
 const QuestionStageArtCheckbox = ({
 	stageArtCategory,
@@ -50,12 +49,6 @@ const QuestionStageArtCheckbox = ({
             />
           </span>
         ))}
-        {stageArtCategory.length > 2 && (
-          <Popup
-            message="Please select 2 options!"
-            className="form-popup"
-          />
-        )}
           <div className="buttons-container-3">
             <NextQuestionButton
               page={page}
