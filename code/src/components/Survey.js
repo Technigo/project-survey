@@ -22,13 +22,10 @@ const evaluationArray = ['yes', 'no', 'none of your business']
         setSummary(true)
     }
 
-
     const onInputNameChanged = (e) => {setInputName(e.target.value)}
     const onRadioButtonChanged = (e) => {setEvaluation(e.target.value)}
     const onSelectChanged = (e) => {setSelectAnswer(e.target.value)}
     
-
-
     return (
         <>
         <header></header>
@@ -54,14 +51,13 @@ const evaluationArray = ['yes', 'no', 'none of your business']
                                             buttonValue={evaluation}
                                             onRadioButtonChange={onRadioButtonChanged}
                                         />
-                                    )}
-                                           </div>
+                                        )}
+                                    </div>
                                 </div>
                             </section>   
 
                             <section className="questioncontainer">
                                 <p>How do you think would Poya feel about getting your weekly evaluation?</p>
-
                                     <Select 
                                         onSelectChange={onSelectChanged}
                                         selectValue={selectAnswer}

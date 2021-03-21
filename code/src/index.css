@@ -14,9 +14,11 @@ code {
     monospace;
 }
 
+/* survey.js (mainfile) */
+
 header{
   background-image: url('./images/background.jpg');
-  height: 15vh;
+  height: 13vh;
   position: relative;
   }
 
@@ -29,16 +31,8 @@ header{
   font-family: Spartan;
 }
 
-.questioncontainer{
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0px 0 10px 0;
-  width: 100%;
-}
-
 .maintitle{
-  margin-top: 50px;
+  margin-top: 30px;
   font-family: Fascinate;
   margin-bottom: 0;
   font-size: 28px;
@@ -58,6 +52,37 @@ form{
   justify-content: center;
 }
 
+.questioncontainer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+p{
+  font-size: 12px;
+  text-align: center;
+  margin: 10px 0 5px 0;
+  width: 100%;
+  line-height: 20px;;
+}
+
+/* button */
+.submitbutton{
+  margin-top: 60px;
+  display: flex;
+  justify-content: center;
+}
+
+button{
+  font-family: fascinate;
+  font-size: 15px;
+  background-color: pink;
+  padding: 5px;
+  border-radius: 6px;
+}
+
+/* components */
 .nameinputelement{
   width: 250px;
   margin-top: 5px;
@@ -90,7 +115,6 @@ form{
   width: 100%;
   justify-content: center;
   height: 30px;
-
 }
 
 .radiobutton-name{
@@ -100,27 +124,8 @@ form{
   margin-top: 5px;
 }
 
-.answertext{
-  font-family: fascinate;
-  font-size: 12px;
-}
-
-p{
-  font-size: 12px;
-  text-align: center;
-  margin: 10px 0 5px 0;
-  width: 100%;
-  line-height: 20px;;
-}
-
 .select-element{
   margin-top: 5px;
-}
-
-.submitbutton{
-  margin-top: 60px;
-  display: flex;
-  justify-content: center;
 }
 
 select{
@@ -130,42 +135,79 @@ select{
   padding: 5px;
 }
 
-button{
+.answertext{
   font-family: fascinate;
-  font-size: 15px;
-  background-color: pink;
-  padding: 5px;
-  border-radius: 6px;
+  font-size: 12px;
 }
 
 @media (min-width: 768px){
+/* survey.js (mainfile)  */
   header{
-   background-image: url('./images/background.jpg');
-   height: 20vh;
-   position: relative;
-   }
+    background-image: url('./images/background.jpg');
+    height: 20vh;
+    position: relative;
+  }
 
   .maincontainer{
     justify-content: center;
     position: absolute;
-    height: 60vh;
+    height: 80vh;
   }
 
   .maintitle{
+    margin-top: 20px;
+  }
+
+  form{
+    justify-content: center;
+    margin: 0;
+  }
+
+  .submitbutton{
     margin-top: 60px;
+    display: flex;
+    justify-content: center;
+  }
+
+/* button */
+  button{
+    font-family: fascinate;
+    font-size: 15px;
+    background-color: pink;
+    padding: 5px;
+    border-radius: 6px;
+  }
+
+/* components */
+  .formelement{
+    margin:  0 10px;
   }
 
   .radiobuttonbox{
     height: 20px;
   }
+}
+
+@media (min-width: 1200px){
+/* survey.js (mainfile)  */
+  .maincontainer{
+    height: 70vh;
+  }  
+  
+  header{
+    height: 30vh;
+  }
+
+  .maintitle{
+    margin-top: 10vh;
+  }
 
   form{
-    justify-content: center;
+    margin: 0 200px;
   }
 
-  .formelement{
-    margin:  0 10px;
+  /* components */
+  .summarytext{
+    margin: 0 250px;
   }
-
-
 }
