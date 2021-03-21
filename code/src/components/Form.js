@@ -38,7 +38,6 @@ const Form = () => {
     } else {
       alert("Please fill out all the fields")
     }
-  
   }
   
   const onNameChange = (event) => {
@@ -57,15 +56,15 @@ const Form = () => {
 // conditional rendering - if complete true do this:
   if (surveyComplete) {
     return (
-      <div>
-        Confirmation of your purchase:
-
-          Your name: ${name}
-          Artist: ${dropdown}
-          Date: ${radio}
-          Section: ${secondRadio}
+      <div className="summary">
+        {/* <h3>Thank you for choosing RockedyRock Concerts</h3> */}
+        <h3>Summary:</h3>
+        <p>Tickets: {name}</p>
+        <p>Artist: {dropdown}</p>
+        <p> Date: {radio}</p>
+        <p>Section: {secondRadio}</p>
+        <p>Shortly you will be taken to the payment section.. </p>
       </div>
-      
     )
    
   } else {
@@ -73,7 +72,7 @@ const Form = () => {
   return (
     <form 
       className="form-container" 
-      onSubmit={handleSubmit}
+      onSubmit={handleSubmit} //How does it know its submitted, is it working with the button? How?
     >
       <h1 tabIndex="0" className="header-name">
         Your next rock concert starts now!
@@ -81,7 +80,7 @@ const Form = () => {
 {/* name input field */}
       <div className="container-input-fields">
         <div className="name-label">
-          <label htmlFor={name}>Full name:</label>
+          <label htmlFor={name}>Number of tickets:</label>
           <input 
             className="name-input" 
             id="name" 
@@ -91,13 +90,15 @@ const Form = () => {
           /> 
         </div>
 {/* Question about artist */}
-        <div className="dropdown-menu" >
+        <div>
           <label htmlFor="dropdown">Which concert are you attending?</label>
           <select value={dropdown}onChange={onDropdownChange}>
             <option disabled></option>
             <option >Bruce Springsteen</option>
             <option >Bob Dylan</option>
             <option >The Doors</option>
+            <option >Metallica</option>
+            <option >The Strokes</option>
           </select>
         </div>
       </div>

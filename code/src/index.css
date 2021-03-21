@@ -1,6 +1,4 @@
 body {
-  /* background-image: url(''); */
-  /* background-repeat: no-repeat; */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -13,54 +11,50 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
 .container {
   display: flex;
-  
+  margin: 10px;
+  /* height: 100vh; */
 }
-
-.hide {
-  display: none;
- 
+input[type=text], select {
+  width: 100%;
+  padding: 10px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border-radius: 5px;
+  box-sizing: border-box;
+  border: 1px solid rgb(158, 155, 155);
 }
-
-.name-input {
-  justify-content: flex-end;
+input[type=radio], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: block;
+  border: 1px solid rgb(158, 155, 155);
+  border-radius: 4px;
+  box-sizing: border-box;
 }
+label {
+  padding: 0;
 
-.name-label {
-  display: flex;
-  justify-content: flex-start;
 }
-
-.dropdown-menu{
-  display: flex;
-  justify-content: flex-end;
-}
-
-.container-input-fields {
-  display: flex;
-  justify-content: space-between;
-}
-
 .header-name {
-  justify-content: center;
+  text-align: center;
   margin-bottom: 50px;
 }
 .first-radio {
   display: flex;
   flex-direction: row;
-  border: 1px solid blue;
 }
 
 .second-radio {
   display: flex;
   flex-direction: row;
-  border: 1px solid blue;
+
 }
 
 .radio-wrapper {
-  padding: 10 0;
+  /* padding: 10 0; */
 
 }
 
@@ -69,33 +63,32 @@ code {
   justify-content: flex-start;
   margin: 0 40px 0 0;
   padding: 0;
+  font-weight: 400;
 }
-
 
 .submit-button {
-  margin: 30px; 
-}
-/* .slider-choice {
-  width: 100px;
-  height: 25px;
-  background: #6986e3;
-  opacity: 0.8;
-  transition: opacity .2s;
-}
-.slider-choice::-moz-range-thumb {
-  width: 25px;
-  height: 25px;
-  background: #0c0c0c;
+  width: 100%;
+  background-color: #3d9c40;
+  color: #ffffff;
+  padding: 15px 20px;
+  margin: 8px 0;
+  border: none;
+  font-size: 15px;
+  border-radius: 4px;
   cursor: pointer;
 }
-.slider-choice::-webkit-slider-thumb {
-  
-  appearance: none;
-  width: 25px;
-  height: 25px;
-  background: #4CAF50;
-  cursor: pointer;
+
+.summary {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color:#3d9c40;
+  color: #ffffff;
+  font-weight: bold;
 }
-.slider-choice:hover {
-  opacity: 1; 
-} */
+
+@media (min-width: 700px) {
+
+
+}
