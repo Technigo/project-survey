@@ -7,7 +7,7 @@ const Result = (props) => {
   console.log(props.color)
   
   return (
-    <>
+    <section className="business-card-result">
     <h1 className="h1">Tadaaa!</h1>
     <div className={`business-card ${props.color}`}>
       <h1 className={categoryName}>{props.name}</h1>
@@ -18,7 +18,7 @@ const Result = (props) => {
     </div>
 
     <p>Here is Your business card! Take a screenshot and send it to your friends!</p>
-    </>
+    </section>
   )
 }
 
