@@ -75,7 +75,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
           </section> 
         
           <section className='country-section'>
-            <h1>2. Choose a country for your next adventure:</h1>
+            <legend tabIndex="0"><h1>2. Choose a country for your next adventure:</h1></legend>
             {countries.map((country) => 
               <CountryInputRadioButton
                 key={country} 
@@ -94,7 +94,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
           </section>
                 
           <section className="activity-section">
-            <h1>4. What's the main activity you are looking forward to?</h1>
+          <legend tabIndex="0"><h1>4. What's the main activity you are looking forward to?</h1></legend>
             {activities.map((activity) =>
               <ActivityInputRadioButton
                 key={activity} 
