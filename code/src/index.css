@@ -40,8 +40,7 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  position: relative;
+  justify-content: space-between;
 
   background-image: url('./images/smoke.jpg');
   height: 100vh;
@@ -51,7 +50,17 @@ i {
   text-align: center;
 }
 
+.textContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  height: 70%;
+}
+
 .welcomeText {
+  justify-self:self-end;
   font-family: 'Staatliches', cursive;
   font-size: 80px;
   font-weight:100;
@@ -65,6 +74,7 @@ i {
 .welcomeContent {
   width: 85%;
   text-align: center;
+  text-align: -moz-center;
   font-size: 18px;
   color: #fff;
   font-weight: 200;
@@ -154,9 +164,9 @@ form {
 
 .summaryContainer {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
 
   background-image: url('./images/smoke.jpg');
   height: 100vh;
@@ -167,18 +177,22 @@ form {
 }
 
 .summaryContent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+
+  text-align: center;
+  text-align: -moz-center;
+  height: 70%;
   font-size: 18px;
   color: #fff;
-  text-align: center;
   width: 85%;
 }
 
 /*BUTTON STYLING*/
 
-.startAndBackButton
-/* .submitButton  */{
-  position: absolute;
-  bottom: 0;
+.startAndBackButton{
   width: 95%;
   text-decoration: none;
   margin: 0;
@@ -242,6 +256,10 @@ appearance: none;
 
   i {
     font-size: 44px;
+  }
+
+  .summaryContent {
+    height: 50%;
   }
 
   .welcomeContent p,
