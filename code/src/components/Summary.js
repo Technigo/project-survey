@@ -17,7 +17,6 @@ const Summary = ({nameValue, selectValue, buttonValue}) => {
                 And with that I'll let you go - Class dismissed.
             </p>
         </div>
-
     )}
 
 

@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 const Select = ({question, onSelectChange, selectValue}) => {
     return(
             <div>
@@ -16,8 +14,8 @@ const Select = ({question, onSelectChange, selectValue}) => {
                     <option>happy</option>
                     <option>excited</option>
                     <option>angry</option>
-                    <option>Don't know - Don't care!</option>
-                    <option>None of your business</option>
+                    <option>sad</option>
+                    <option>mad</option>
                 </select>
             </div>
     )

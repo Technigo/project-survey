@@ -5,8 +5,6 @@ import React from 'react';
 const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
     return(
             <div>
-
-                
                 <label htmlFor={buttonValue} key={buttonValue} >
                         <input 
                             name="buttonValue"
@@ -17,8 +15,7 @@ const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
                             required
                         />   
                     {evaluationRadioButton}
-                {buttonValue}</label>
-                 
+                {buttonValue}</label> 
             </div>
     )
 }

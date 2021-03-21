@@ -21,20 +21,9 @@ const evaluationArray = ['yes', 'no', 'none of your business']
         setSummary(true)
     }
 
-    const onInputNameChanged = (e) => {
-        setInputName(e.target.value);
-        console.log(e.target.value);
-    }
-  
-    const onRadioButtonChanged = (e) => {
-        setEvaluation(e.target.value);
-        console.log(e.target.value)
-    }
-
-    const onSelectChanged = (e) => {
-        setSelectAnswer(e.target.value);
-        console.log(e.target.value);
-    }
+    const onInputNameChanged = (e) => {setInputName(e.target.value)}
+    const onRadioButtonChanged = (e) => {setEvaluation(e.target.value)}
+    const onSelectChanged = (e) => {setSelectAnswer(e.target.value)}
 
 
     return (
@@ -63,7 +52,7 @@ const evaluationArray = ['yes', 'no', 'none of your business']
 
                     <section>
                         <Select 
-                            question={'So how do you think Poya feels about getting your weekly evaluation?'}
+                            question={'How do you think Poya feels about getting your weekly evaluation?'}
                             onSelectChange={onSelectChanged}
                             selectValue={selectAnswer}
                         />
