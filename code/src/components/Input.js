@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Input = ({question, nameValue, onInputNameChange}) => {
+const Input = ({nameValue, onInputNameChange}) => {
     return(
-            <div>
-                <label htmlFor={nameValue}>{question}</label>
-                <input 
+            <div className="formelement">
+                <label htmlFor={nameValue}></label>
+                <input className="nameinputelement"
                     id={nameValue} 
                     type="text"
                     value={nameValue}

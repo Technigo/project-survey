@@ -29,54 +29,60 @@ const evaluationArray = ['yes', 'no', 'none of your business']
     return (
         <>
             <main className="maincontainer">
-                {!summary && (
-                <form onSubmit={handleSubmit}>
+                <h1 className="maintitle">weekly evaluation form / reminder</h1>
+                    {!summary && (
+                        <form onSubmit={handleSubmit}>
+                            <section className="questioncontainer">
+                                <p>Wanna tell me your name?</p>
+                                    <Input 
+                                        nameValue={inputName}
+                                        onInputNameChange={onInputNameChanged}
+                                    />
+                            </section> 
+
+                            <section className="questioncontainer"> 
+                                <div className="buttoncontainer">
+                                    <p>Have you filled out this weeks evaluation yet?</p>
+                                        {evaluationArray.map((evaluation) =>
+                                        <Radio 
+                                            key={evaluation}
+                                            buttonValue={evaluation}
+                                            onRadioButtonChange={onRadioButtonChanged}
+                                        />
+                                    )}
+                                </div>
+                            </section>   
+
+                            <section className="questioncontainer">
+                                <p>How do you think would Poya feel about getting your weekly evaluation?</p>
+
+                                    <Select 
+                                        onSelectChange={onSelectChanged}
+                                        selectValue={selectAnswer}
+                                    />
+                            </section>
+
+                            <div className="questioncontainer">
+                                <div className="submitbutton">
+                                    <button onSubmit = {handleSubmit} type="submit"> Submit </button>
+                                </div>
+                            </div>
+                        </form>
+            )}
+
+            {(    
+                <>   
+                {summary &&
                     <section>
-                        <Input 
-                            question={'Wanna tell me your name?'}
+                        <Summary 
                             nameValue={inputName}
-                            onInputNameChange={onInputNameChanged}
-                        />
-                    </section> 
-
-                    <section> 
-                    <p>Have you filled out this weeks evaluation yet?</p>
-                    {evaluationArray.map((evaluation) =>
-                        <Radio 
-                            key={evaluation}
-                            buttonValue={evaluation}
-                            onRadioButtonChange={onRadioButtonChanged}
-                        />
-                    )}
-                    </section>   
-
-                    <section>
-                        <Select 
-                            question={'How do you think Poya feels about getting your weekly evaluation?'}
-                            onSelectChange={onSelectChanged}
                             selectValue={selectAnswer}
+                            buttonValue={evaluation}
                         />
                     </section>
-
-                    <div>
-                        <button onSubmit = {handleSubmit} type="submit"> Submit </button>
-                    </div>
-                </form>
-        )}
-
-        {(    
-            <>   
-            {summary &&
-                <section>
-                    <Summary 
-                        nameValue={inputName}
-                        selectValue={selectAnswer}
-                        buttonValue={evaluation}
-                    />
-                </section>
-            }
-</>
-        )}
+                }
+    </>
+            )}
             </main>
         </>
     )
