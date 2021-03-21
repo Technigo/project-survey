@@ -7,8 +7,7 @@ const QuestionCitySelect = ({
   setInhabitants, 
   page,
   setPage,
-  onNextQuestion,
-  message
+  onNextQuestion
 }) => {
   const onInhabitantsChange = (e) => {
     setInhabitants(e.target.value);

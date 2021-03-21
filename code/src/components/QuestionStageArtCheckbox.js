@@ -10,7 +10,6 @@ const QuestionStageArtCheckbox = ({
   setPage,
   onNextQuestion
 }) => {
-//const stageArtCategoryToString = stageArtCategory.toString()
   const onStageArtChange = (stageArtValue) => {
     if (stageArtCategory.includes(stageArtValue)) {
       setStageArtCategory(stageArtCategory.filter((item) => item !== stageArtValue))

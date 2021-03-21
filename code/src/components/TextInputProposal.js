@@ -7,8 +7,7 @@ const TextInputProposal = ({
   setProposal,
   page,
   setPage,
-  onNextQuestion,
-  message
+  onNextQuestion
 }) => {
   const onProposalChange = (event) => {
     setProposal(event.target.value)

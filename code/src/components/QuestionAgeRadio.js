@@ -7,8 +7,7 @@ const QuestionAgeRadio = ({
   setAgeCategory, 
   page,
   setPage,
-  onNextQuestion,
-  message
+  onNextQuestion
 }) => {
   const onAgeChange = (e) => {
     setAgeCategory(e.target.value)
