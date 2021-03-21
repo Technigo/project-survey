@@ -5,8 +5,11 @@ This project is a survey that is built with React. I consists of 3 questions tha
 ## The problem
 
 Tech I've used/practiced 💥
+
 React / State Hooks
+
 JavaScript
+
 CSS
 
 Started building the form structure in the Form.js. When the form worked as I wanted it to I continued by breaking out certain elements to their own components, for example all the questions. If I had more time I would've added some more questions and practice a lite bit more on the styling. 
