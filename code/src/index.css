@@ -26,6 +26,10 @@ h1 {
   font-size: 60px;
 }
 
+h3 {
+  font-size: 30px;
+}
+
 .form {
   display: grid;
   grid-template-columns: 2fr 1fr;
@@ -37,6 +41,18 @@ h1 {
 
 .form div {
   padding: 20px 10px;
+}
+
+input {
+  margin: 10px;
+  padding: 6px;
+}
+
+select {
+  padding: 6px;
+  display: flex;
+  width: 100%;
+  margin: 10px 10px 10px 4px;
 }
 
 .input-one {
@@ -82,6 +98,7 @@ button:hover {
 button:active {
   cursor: progress;
   transform: scale(1.2); 
+  transition: ease-in-out(0.5s);
 }
 
 .summary-section {
@@ -89,6 +106,8 @@ button:active {
   font-size: 30px;
   margin: 30px;
   padding: 15px;
+  height: 150px;
+  text-align: center;
 }
 
 h4 {

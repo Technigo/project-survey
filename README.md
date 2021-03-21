@@ -8,10 +8,5 @@ I started by defining the different components that I needed; 3 inputs, a header
 
 My intial plan was to make the components as re-usable as possible, ie to send all information as props. Although I had to revert this in order to make the summary section. So if I had more time I would go back to this plan. I would also, as always, work more with the styling. 
 
-Try to add a check if its completed?
-problem: how to mark the first select option as disabled when its in a map - aptions array index=0,
-add restart button.
-
-
 ## View it live
-Check it out here: 
+Check it out here: https://condescending-hawking-aea228.netlify.app/

@@ -12,7 +12,7 @@ export const Input2 = ({setMonth, month}) => {
     <div>
       <div>
         <h3>
-          Best summer month
+          Best summer month 🌸
         </h3>
       </div>
       <label>
@@ -21,7 +21,6 @@ export const Input2 = ({setMonth, month}) => {
           type="select"
           onChange={(event) => {onMonthChange(event)}}
           value={month}
-          required
           aria-label='Select your favourite summer month'
         >
         
@@ -42,5 +41,3 @@ export const Input2 = ({setMonth, month}) => {
     </div>
   )
 }
-
-//return first option with disabled

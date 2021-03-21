@@ -9,7 +9,7 @@ export const Submit = ({setSummary}) => {
 
   return (
   <button 
-    // type="submit-button" //funkar required nu? instant
+    type="submit"
     onClick = { formSubmit }
     >
       Submit

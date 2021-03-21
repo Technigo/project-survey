@@ -9,7 +9,7 @@ export const Input1 = ({setActivity, activity}) => {
   return (
     <div>
       <h3>
-        Favourite vacation activity
+        Favourite vacation activity 🏄
       </h3>
       <label>
         Type:
@@ -17,7 +17,6 @@ export const Input1 = ({setActivity, activity}) => {
           type="text"
           onChange={(event) => {onActivityChange(event)}}
           value={activity}
-          required minLength='1'
           aria-label='Enter your favourite activity here'
         />
       </label>

@@ -12,7 +12,7 @@ export const Input3 = ({temperature, setTemperature}) => {
   return (
     <div>
       <h3>
-        Preferred temperature
+        Preferred temperature 🔥
       </h3>
 
       <div>
@@ -26,10 +26,9 @@ export const Input3 = ({temperature, setTemperature}) => {
                     name='temperature'
                     type="radio"
                     value={temperatureChoice}
-                    required
                     aria-label='select your preferred summer temperature'
                     onChange={(event) => {onTemperatureChange(event)}}
-                    checked={temperature === temperatureChoice} // Går välja flera om jag tar bort denna
+                    checked={temperature === temperatureChoice}
                   />
               </label>              
             </div>
