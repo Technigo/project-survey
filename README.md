@@ -1,13 +1,19 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Our assignment was to create a survey using React and state properties/hooks. Unfortunatly my project isn't finished yet, but I hope there is enough to leave some feedback on.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The idea for this project was to not just build a survey, but to also have it recommend you what kind of character class to play in the tabletop role-playing game system Dungeon World. Unfortunatly, the project is far from finished as of yet, due to me vastly underestimating the complexity of coding the filtering from the ground up, along with its supporting functionality and json data, which was manually written. In hindsight I definitively should have started a lot smaller to meet the baseline requirements within the timeframe, and then add functionality as time allowed.
+
+Stuff left to do:
+> Accessability testing!
+> Intro and Summary pages
+> Proper styling
+> Ironing out bugs which still remain in the filtering
+> Code clean-up incl. better code comments for clarity
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Netlify build:
+heuristic-ramanujan-44af52.netlify.app
