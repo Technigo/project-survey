@@ -1,19 +1,10 @@
-# Technigo React Starter App
+# Technigo Bootcamp Week 10
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The assignment was to use React to build a survey site. I'm a gym owner and we have "week challenges" at our gym. So I decided to make a Week Challenge Registration survey. I hope to be able to develop this page later so that it also saves the results so that you can actually use this page. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+If I would have hade more time I would have done a button which allows user to change her/his answers before submmitting. 
 
-## Usage
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Live Site
 
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+https://peaceful-kepler-96f7b6.netlify.app/
