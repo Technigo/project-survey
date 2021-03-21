@@ -3,7 +3,6 @@ import React from 'react'
 export const NameInput = ({name, setName}) => {
 
     const onNameChange = (e) => {
-        console.log(`Name: ${e.target.value}`)
         setName(e.target.value)
     }
     

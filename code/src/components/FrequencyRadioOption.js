@@ -4,7 +4,6 @@ import React from 'react'
 export const FrequencyRadioOption = ({ frequencyValue, setFrequency }) => {
 
     const onFrequencyChange = (e) => {
-        console.log(`Frequency: ${frequencyValue}`)
         setFrequency(e.target.value)
     }
 

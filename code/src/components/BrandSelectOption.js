@@ -3,7 +3,6 @@ import React from 'react'
 export const BrandSelectOption = ({ brand, setBrand}) => {
 
     const onBrandChange = (e) => {
-        console.log(`Brand: ${e.target.value}`)
         setBrand(e.target.value)
     }
     
