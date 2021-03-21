@@ -26,8 +26,8 @@ export const Form = () => {
    {! summary ? (
     <form className='form-container' onSubmit={handelSubmit}>
       <div className='instruction-text-container'>
-      <p>To secure a spot in the evacuation progam.</p>
-      <p>Please fill in the form.</p>
+        <p>To secure a spot in the evacuation progam.</p>
+        <p>Please fill in the form.</p>
       </div>
       <div>
         <UserName 
@@ -36,9 +36,9 @@ export const Form = () => {
         />
       </div>
       <div>
-          <AgeRadioOption 
-          setAgeGroup={setAgeGroup}
-          ageGroupSpan={ageGroupSpan}
+        <AgeRadioOption 
+        setAgeGroup={setAgeGroup}
+        ageGroupSpan={ageGroupSpan}
          />
       </div>
       <div>
@@ -49,8 +49,8 @@ export const Form = () => {
       </div>
       <div>
         <BringItem
-         setInputItem={setInputItem}
-         item={item}
+        setInputItem={setInputItem}
+        item={item}
          />
       </div>
       <div>

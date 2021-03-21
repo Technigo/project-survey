@@ -8,7 +8,7 @@ export const UserName = ({name, setName}) => {
   }
 
   return (
-    <div>
+    <div className='name-input'>
       <label>Name
       <input 
         className='name-input'

@@ -6,6 +6,9 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
  height: 100%;
+ display: flex;
+ align-items: center;
+ justify-content: center;
 }
   
 
@@ -45,17 +48,21 @@ img {
 .header {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
- 
+  max-width: 1200px;
   
+ 
 }
 
 .logo-container {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 80%;
   border-bottom: 2px solid black;
+  max-width: 1200px;
   
 }
 
@@ -72,30 +79,24 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: cadetblue;
   width: 100%;
   
-  
- 
 }
 
 .instruction-text-container {
-
 width: 100%;
 text-align: center;
-padding: 30px 0;
+padding: 10px 0;
 
 }
 
 .form-container {
-  border-radius: 5px;
-  background-color: #f7f5f5;
   padding: 20px;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  margin: 30px 0;
+  margin: 50px 0;
 }
 
 label {
@@ -110,14 +111,85 @@ input {
   border-radius: 4px;
 }
 
+select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
 
-
-
+.summary {
+  padding: 20px;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  margin: 30px 0;
+}
 
 .footer {
-  
-  
-  text-align: center;
-  background-color: #fceec7;
-  
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   text-align: center;
+   
+  }
+
+  @media (min-width: 768px) {
+
+    h1 {
+      font-size: 12px;
+      margin: 0;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+      margin: 50px 0px 5px 0px;
+    
+    }
+
+    .header {
+      flex-direction: row;
+      border-bottom: 2px solid black;
+      justify-content: space-between;
+      
+    }
+
+    .logo-container {
+      display: flex;
+      flex-direction: column;
+      margin: 0px 0px 0px 0px;
+      border-bottom: none;
+     
+    }
+
+    .evacuation-plan-container {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 140px 0px 0px 0px;
+     
+    }
+
+    .main {
+      margin-top: 20px;
+      max-width: 1200px;
+      
+   }
+
+   .name-input {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+   
+  }
+
+  .age-input {
+    width: 250px;
+    padding: 10px;
+   
+  }
 }

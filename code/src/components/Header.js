@@ -10,7 +10,6 @@ export const Header = () => {
       <div className='evacuation-plan-container'>
       <h3>EVACUATION-PLAN-LEAVING-EARTH-123</h3>
       <h3>Version 1</h3>
-      
     </div>
   </>
   )

@@ -8,15 +8,14 @@ import { Footer } from './components/Footer'
 export const App = () => {
   return (
     <>
-    
       <header className='header'>
-      <Header />
+        <Header />
       </header>
       <main className='main'>
-      <Form />
+        <Form />
       </main>
       <footer className='footer'>
-      <Footer />
+        <Footer />
       </footer>
     </>
   )

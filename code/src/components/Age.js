@@ -1,11 +1,11 @@
 import React from 'react'
 
-const ageGroups = ['0-19','20-29','30-39','40-49','50+',] 
+const ageGroups = ['0-19','20-29','30+'] 
 
 export const AgeRadioOption = ({ageGroupSpan, setAgeGroup}) => {
   
   return (
-  <div>
+  <div className='age-input'>
     <p>Age</p>
       {ageGroups.map((age) => (
         <label htmlFor='age' key={age}>
