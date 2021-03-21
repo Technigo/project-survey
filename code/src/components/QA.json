@@ -29,7 +29,7 @@
                         "question": "Do you need help with something?", 
                         "alternatives":[ 
                             "Please make a selection!",
-                            "I'm stuck and really need my team in teamroom asap!", 
+                            "I need my team in teamroom asap!", 
                             "I just have a quick question!", 
                             "Actually, I'm all done!" 
                         ]

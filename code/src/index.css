@@ -3,6 +3,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-size: 18px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -13,35 +14,90 @@ code {
 }
 
 main {
-  max-width: 75vw;
-  margin: auto;
-  background-color: beige;
-  padding: 20px;
-  border-radius: 15%;
+  max-width: 100vw;
+  background-color: #ff4e00;
+  background-image: linear-gradient(315deg, #ff4e00 0%, #ec9f05 74%);
+  border-radius: 10%;
+  padding: 5vw;
+}
+
+.form {
+  margin-left: auto;
+  margin-right: auto;
+  
 }
 
 /*QUESTION*/
-.question-container {
-  padding: 5px;
-  
-} 
+
 .alternative-container {
   padding: 3px;
 }
 
-/* DECLARED CLASSES IN COMPONENTS
 
-FORM
-.form // form container
-.question-container // div
-.question // h2 with quetsion from questionnaire JSON
+select {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 15px;
+  width: 100%;
+}    
+select {
+      display: inline-block;
+      width: inherit;
+      cursor: pointer;
+      padding: 10px 15px;
+      outline: 0;
+      border: 0px solid #000000;
+      border-radius: 10px;
+      background: #e6e6e6;
+      color: #7b7b7b;
+  }
 
-
-RADIO INPUT
-.radio-input // section container
-.radio-button // input tag
-
-SELECT INPUT
-.select-dropdown // input tag
-
-*/
+button {
+  background: #F63D3D;
+  background-image: -webkit-linear-gradient(top, #F63D3D, #811616);
+  background-image: -moz-linear-gradient(top, #F63D3D, #811616);
+  background-image: -ms-linear-gradient(top, #F63D3D, #811616);
+  background-image: -o-linear-gradient(top, #F63D3D, #811616);
+  background-image: linear-gradient(to bottom, #F63D3D, #811616);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  border-radius: 20px;
+  color: #FFFFFF;
+  font-family: Open Sans;
+  width: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  padding: 12px;
+  box-shadow: 1px 1px 6px 0px #000000;
+  -webkit-box-shadow: 1px 1px 6px 0px #000000;
+  -moz-box-shadow: 1px 1px 6px 0px #000000;
+  text-shadow: 1px 1px 6px #000000;
+  border: solid #762C2C 1px;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+  }
+  
+ button:hover {
+     border: solid #ED3333 1px;
+     background: #811616;
+     background-image: -webkit-linear-gradient(top, #811616, #F63D3D);
+     background-image: -moz-linear-gradient(top, #811616, #F63D3D);
+     background-image: -ms-linear-gradient(top, #811616, #F63D3D);
+     background-image: -o-linear-gradient(top, #811616, #F63D3D);
+     background-image: linear-gradient(to bottom, #811616, #F63D3D);
+     -webkit-border-radius: 20px;
+     -moz-border-radius: 20px;
+     border-radius: 20px;
+     text-decoration: none;
+  }
+ 
+  @media only screen and (min-width: 768px) {
+    main {
+      max-width: 75vh;
+      margin: auto;
+    }
+    form {
+      max-width: 50vh;
+    }
+  }
