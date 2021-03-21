@@ -37,9 +37,6 @@ code {
   align-items: center;
 }
 
-
-
-
 /* HERO SECTION ENDS */
 
 /* Radio Section */
@@ -92,12 +89,6 @@ code {
   display: none;
 }
 
-/*test */
-
-
-
-/*test */
-
 .box-header {
   display: flex;
   justify-content: center;
@@ -108,8 +99,6 @@ code {
   background-color: #4e3620;
   border-radius: 25px;
 }
-
-
 
 .container {
   margin-bottom: 50px;
@@ -125,9 +114,7 @@ code {
 
 .select-section {
   background-color: #4e3620;
-  /*text-align: center; */
   width: 100%;
-   /* Test */
 }
 
 .select-section select{
@@ -136,7 +123,7 @@ code {
   font-size: 20px;
 }
 
-.select-container {
+.select-container, label {
   margin-bottom: 50px;
 }
 
@@ -146,9 +133,6 @@ code {
   color: #f8f4e1;
 }
 
-label {
-  margin-bottom: 50px;
-}
 
 .checkbox-text, .checkbox-input {
   display:flex;
@@ -163,10 +147,7 @@ label {
   width: 75px;
 }
 
-
-
 /* Select Section ends */
-
 
 /* Input section */
 
@@ -177,7 +158,7 @@ label {
   font-size: 20px;
 }
 
-.amount-container {
+.amount-container, .phone-container, .email-container, .name-container {  
   margin-bottom: 50px;
 }
 
@@ -192,8 +173,6 @@ label {
   color: #000;
 }
 
-
-
 .radio-paragraf {
   font-size: 24px;
   font-weight: bold;
@@ -204,19 +183,7 @@ label {
   height: 50px;
 }
 
-/* test2*/
-.email-container {
-  margin-bottom: 50px;
-}
-
-.name-container {
-  margin-bottom: 50px;
-}
-
-
-.phone-container {
-  margin-bottom: 50px;
-}
+/* Input section ends */
 
 /* Range Slider Section starts here */
 
@@ -225,12 +192,6 @@ label {
   justify-content: center;
   align-items: center;
 }
-
-/*.range {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}*/
 
 .range input {
   width: 100%;
@@ -256,15 +217,15 @@ label {
   cursor: pointer;
 }
 
-
 /* Range slider section ends here */
+
+/* Summary Section starts here */
 
 .sum-container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #f8f4e1 ;
-
 }
 
 .sum-box {
@@ -286,6 +247,8 @@ label {
   font-weight: bold;
 }
 
+/* Summary Section ends here */
+
 @media (min-width:568px) {
   .hero-title {
     top: 20%;
@@ -302,9 +265,7 @@ label {
   }
 }
 
-
 @media (min-width:1024px) {
-
   .hero-title {
     top: 20%;
     width: 40%;
@@ -321,9 +282,7 @@ label {
   }
 }
 
-
 @media (min-width:1300px) {
-
   .hero-title {
     top: 20%;
     width: 20%;
@@ -334,14 +293,6 @@ label {
     grid-template-columns: 1fr 1fr 1fr;
     margin-bottom: -50px;
   }
-
-  /*.amount-items input, .name input, .email input, .phone input{
-    width: 99.8%;
-  }*/
-
-  /*.amount-items input, .name input, .email input, .phone input{
-    width: 50%;
-  } */
 
   .next-btn-container {
     display: block;
@@ -364,36 +315,23 @@ label {
     text-decoration: underline;
   }
 
- 
   .form-section p {
     font-size: 30px;
     text-align: center;
     color: #000;
   }
 
-  .form-container {
-    width: 80%;
-  }
-  
-  .form-section{
+  .form-container, .form-section {
     width: 80%;
   }
 
-  .email-container { /* DU kan slå ihop dessa */
+  .email-container, .select-container, .amount-container, .name-container, .phone-container { 
     display: flex;
     justify-content: center;
     align-items: center;  
-    margin-bottom: 0px; /* test */
+    margin-bottom: 0px; 
   }
 
-  .email {
-    width: 50%;
-    border-left: 30px solid #f8f4e1;
-    border-right: 30px solid #f8f4e1;
-    margin-bottom: 0px;
-    background-color: #f8f4e1;
-    padding-top: 50px;
-  }
 
   .select-section {
     width: 50%;
@@ -407,55 +345,7 @@ label {
     border-top-right-radius: 25px;
   }
 
-  .select-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px; /* test */
-  }
-
-  .amount-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px; /* test */
-  }
-
-
-  .amount-items {
-    width: 50%;
-    background-color: #f8f4e1;
-    margin-bottom: 0px;
-    padding-top: 50px;
-    border-left: 30px solid #f8f4e1;
-    border-right: 30px solid #f8f4e1;
-  }
- 
-  .name-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px; /* test */
-
-  }
-
-  .name {
-    width: 50%;
-    background-color: #f8f4e1;
-    margin-bottom: 0px;
-    padding-top: 50px;
-    border-left: 30px solid #f8f4e1;
-    border-right: 30px solid #f8f4e1;
-  }
-
-  .phone-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 0px; /* test */
-  }
-
-  .phone {
+  .amount-items, .name, .phone, .email {
     width: 50%;
     background-color: #f8f4e1;
     margin-bottom: 0px;
@@ -470,8 +360,7 @@ label {
     align-items: center;
   }
 
-  .checkbox-label
-   {
+  .checkbox-label {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -492,26 +381,6 @@ label {
     border-bottom-right-radius: 25px;
   }
 
-  /*.range-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 50px; /* test */
-  /*}*/
-
-  /*.range {
-    width: 50%;
-    background-color: #f8f4e1;
-    margin-bottom: 0px;
-    padding-top: 50px;
-    border-left: 30px solid #f8f4e1;
-    border-right: 30px solid #f8f4e1;
-    border-bottom: 30px solid #f8f4e1;
-    margin-bottom: 50px;
-  }*/
-
-
-
   .button-container {
     display: flex;
     justify-content: center;
@@ -524,9 +393,4 @@ label {
     justify-content: center;
     align-items: center;
   }
-
-
-
-
-
 }

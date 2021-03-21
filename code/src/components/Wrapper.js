@@ -4,8 +4,7 @@ import Form from './Form'
 
 const Wrapper = () => {
     return (
-            <Form />
-
+      <Form />
     )
 }
 

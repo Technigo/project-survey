@@ -11,8 +11,7 @@ import Checkbox from './Checkbox'
 import Radio from './Radio'
 import Range from './RangeSlider'
 
-const Test = () => {
-    // Nu testar jagss
+const Form = () => {
     const [sumHidden, setsumHidden] = useState(true);
     const [Size, setSize] = useState("");
     const [myamount, setmyamount] = useState("");
@@ -21,18 +20,11 @@ const Test = () => {
     const [myemail, setmyemail] = useState("");
     const [wantsNewsletter, setwantsNewsletter] = useState("");
     const [myphone, setmyphone] = useState("");
-    const [Rng, setRng] = useState("No Opinion"); //50
-    console.log(myphone) // Ska bort
-    console.log(wantsNewsletter) // Ska bort
-    console.log(myemail) // Ska bort
-    console.log(myname) // Ska bort
-    console.log(Color) // Ska bort
-    console.log(myamount) // Ska bort
-    console.log(Size) // Ska bort
+    const [Rng, setRng] = useState("No Opinion");
 
     const SelectedRange = (e) => {
         console.log(e.target)
-        setRng(e.target.value) // Tog bort .value
+        setRng(e.target.value)
     }
 
     const SelectPhoneNumber = (e) => {
@@ -73,33 +65,29 @@ const Test = () => {
     const OnSumChange = (event) => {
         event.preventDefault()
         setsumHidden (false)
-
-
     }
 
     if (sumHidden === true) {
 
-    
     return (
         <form onSubmit={OnSumChange}>
                 <Hero />
                 <div>
-                <div className="form">
-                    <div className="form-container">
-                        <div className="form-section">
-                            <Radio colorSelected = {Color} IselectColor = {SelectColor} />
-                            <SelectSize sizeSelected = {Size} IselectSize = {SelectS} />
-                            <Amount choosedAmount = {myamount} IselectAmount= {SelectAmount} />
-                            <Name nameInput = {myname} IselectName = {SelectName} />
-                            <Email emailInput = {myemail} IselectEmail = {SelectEmail} />
-                            <Phone phoneInput={myphone} IselectPhone= {SelectPhoneNumber} />
-                            <Checkbox checkboxInput = {wantsNewsletter} IselectCheckbox = {SelectCheckbox} />
-                            <Range decideRange={Rng} IselectRange = {SelectedRange} />
-                            <OrderBtn />
+                    <div className="form">
+                        <div className="form-container">
+                            <div className="form-section">
+                                <Radio colorSelected = {Color} IselectColor = {SelectColor} />
+                                <SelectSize sizeSelected = {Size} IselectSize = {SelectS} />
+                                <Amount choosedAmount = {myamount} IselectAmount= {SelectAmount} />
+                                <Name nameInput = {myname} IselectName = {SelectName} />
+                                <Email emailInput = {myemail} IselectEmail = {SelectEmail} />
+                                <Phone phoneInput={myphone} IselectPhone= {SelectPhoneNumber} />
+                                <Checkbox checkboxInput = {wantsNewsletter} IselectCheckbox = {SelectCheckbox} />
+                                <Range decideRange={Rng} IselectRange = {SelectedRange} />
+                                <OrderBtn />
+                            </div>
                         </div>
                     </div>
-                </div>
-                 
                 </div>
             </form>)
         } else {
@@ -121,8 +109,7 @@ const Test = () => {
                 </div>
             </div>
         )
-            
             }
 }
 
-export default Test
+export default Form

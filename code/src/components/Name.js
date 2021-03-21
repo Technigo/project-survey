@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 
 const Name = ({nameInput, IselectName}) => {
-    //const [myname, setmyname] = useState("");
-    //console.log(myname)
   
     return (
         <div className="name-container">
@@ -10,7 +8,7 @@ const Name = ({nameInput, IselectName}) => {
         <p>Name & Surname</p> 
         <input 
         type="type" 
-        onChange={e => IselectName(e)} //Skriv istället onChange={setSize}
+        onChange={e => IselectName(e)} //onChange={setSize}
         value={nameInput}
         name="Name & Surname" 
         placeholder="Name Surname" 
