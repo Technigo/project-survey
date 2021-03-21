@@ -14,11 +14,12 @@ const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
                             onChange={onRadioButtonChange}
                             required
                         />
-                        <div className="radiobuttonclass">
-                            <span>{evaluationRadioButton}</span>
-                            <div className="radiobutton-name">{buttonValue}</div>
-                        </div>   
-               </label> 
+                        <div className="radiobutton-name">
+                            {evaluationRadioButton}
+                            {buttonValue}
+                        </div>
+                        
+                </label> 
             </div>
     )
 }

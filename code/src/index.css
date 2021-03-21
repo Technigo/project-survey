@@ -15,12 +15,11 @@ code {
 }
 
 .maincontainer{
-height: 100vh;
-display: flex;
-flex-wrap: wrap;
-align-items:center;
-margin: 0 20px;
-font-family: Spartan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20% 20px;
+  font-family: Spartan;
 }
 
 .questioncontainer{
@@ -35,13 +34,14 @@ font-family: Spartan;
   font-family: Fascinate;
   margin-bottom: 0;
   font-size: 28px;
-  text-align: center
+  text-align: center;
+  width: 100%;
 }
 
 form{
   display: flex;
   flex-wrap: wrap;
-  margin-bottom: 20px;
+  margin: 40px 0;
 }
 
 .formelement{
@@ -71,15 +71,25 @@ form{
 }
 
 .radiobuttonbox{
-  height: 10px;
+  height: 20px;
+  width: 70px;
   display: flex;
   flex-direction: column;
 }
 
-.radiobutton-name{
+.radiobutton-line{
+  display: flex;
   width: 100%;
   justify-content: center;
+  height: 30px;
+
+}
+
+.radiobutton-name{
+  width: 100%;
+  text-align: center;
   font-size: 8px;
+  margin-top: 5px;
 }
 
 .answertext{
@@ -89,8 +99,10 @@ form{
 
 p{
   font-size: 12px;
-  text-align: justify;
-  margin: 10px 0 0 0;
+  text-align: center;
+  margin: 10px 0 5px 0;
+  width: 100%;
+  line-height: 20px;;
 }
 
 .select-element{
@@ -116,4 +128,26 @@ button{
   background-color: pink;
   padding: 5px;
   border-radius: 6px;
+}
+
+@media (min-width: 768px){
+  .maincontainer{
+    margin-top: 0;
+    height: 100vh;
+    justify-content: center;
+  }
+
+  .radiobuttonbox{
+    height: 20px;
+  }
+
+  .formelement{
+    margin:  0 100px;
+  }
+}
+
+@media (min-width: 1200px){
+  .formelement{
+    margin:  0 300px;
+  }
 }

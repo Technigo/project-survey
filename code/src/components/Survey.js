@@ -43,13 +43,15 @@ const evaluationArray = ['yes', 'no', 'none of your business']
                             <section className="questioncontainer"> 
                                 <div className="buttoncontainer">
                                     <p>Have you filled out this weeks evaluation yet?</p>
+                                    <div className="radiobutton-line">
                                         {evaluationArray.map((evaluation) =>
-                                        <Radio 
+                                        <Radio className
                                             key={evaluation}
                                             buttonValue={evaluation}
                                             onRadioButtonChange={onRadioButtonChanged}
                                         />
                                     )}
+                                           </div>
                                 </div>
                             </section>   
 
