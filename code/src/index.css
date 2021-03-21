@@ -152,12 +152,6 @@ form {
   font-size: 20px;
 }
 
-input {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  }
-
 .summaryContainer {
   display: flex;
   justify-content: center;
@@ -181,8 +175,8 @@ input {
 
 /*BUTTON STYLING*/
 
-.startAndBackButton,
-.submitButton {
+.startAndBackButton
+/* .submitButton  */{
   position: absolute;
   bottom: 0;
   width: 95%;
@@ -197,6 +191,23 @@ input {
   margin-bottom: 10px;
 }
 
+.submitButton {
+position: absolute;
+bottom: 0;
+width: 95%;
+text-decoration: none;
+margin: 0;
+font-size: 22px;
+color: #fff;
+height: 60px;
+background-color: #c10140;
+border-radius: 10px;
+margin: 0;
+margin-bottom: 10px;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;
+}
 .startAndBackButton:hover,
 .okButton:hover,
 .submitButton:hover {
