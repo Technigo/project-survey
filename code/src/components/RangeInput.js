@@ -17,7 +17,7 @@ const RangeInput = ({ value, setValue, data }) => {
         max="100"
         value={value}
         onChange={handleChange}
-        oninput="this.nextElementSibling.value = this.value"
+        oninput="this.nextElementSibling.value = {setValue}"
       />
       <output>
         {value}
