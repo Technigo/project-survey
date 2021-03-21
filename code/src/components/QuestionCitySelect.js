@@ -28,7 +28,7 @@ const QuestionCitySelect = ({
           className="dropdown" 
           value={inhabitants} 
           onChange={onInhabitantsChange}>
-          <option disabled></option>
+          <option disabled value="">Make your choice</option>
           <option value="5000">Less than 5000</option>
           <option value="5000-25000">5000 - 25 000</option>
           <option value="25000-100000">25 000 - 100 000</option>

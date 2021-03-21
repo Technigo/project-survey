@@ -11,10 +11,10 @@ const Form = () => {
   const [page, setPage] = useState(0)
   const [showSummary, setShowSummary] = useState(false)
   const [inhabitants, setInhabitants] = useState('')
-  const [ageCategory, setAgeCategory] = useState('') 
-  const [stageArtCategory, setStageArtCategory] = useState('')
+  const [ageCategory, setAgeCategory] = useState(undefined) 
+  const [stageArtCategory, setStageArtCategory] = useState([])
   const [proposal, setProposal] = useState('');
-  const [profession, setProfession] = useState('') 
+  const [profession, setProfession] = useState(undefined) 
 
   const onPageChange = (pagenumber) => {
     setPage(pagenumber)

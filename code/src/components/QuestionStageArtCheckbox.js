@@ -10,6 +10,7 @@ const QuestionStageArtCheckbox = ({
   setPage,
   onNextQuestion
 }) => {
+//const stageArtCategoryToString = stageArtCategory.toString()
   const onStageArtChange = (stageArtValue) => {
     if (stageArtCategory.includes(stageArtValue)) {
       setStageArtCategory(stageArtCategory.filter((item) => item !== stageArtValue))
@@ -61,7 +62,7 @@ const QuestionStageArtCheckbox = ({
               page={page}
               setPage={setPage}
               currentState={stageArtCategory.length}
-              defaultState=''
+              defaultState={0}
               message="Please choose what kind of overlapping stage arts you would like to experience first!"
               onClick={onNextQuestion}
               button="Next question button"
