@@ -32,6 +32,7 @@ export const App = () => {
   }
 
   return (
+
     <div className = 'container'>
 
     {!displaySummary && (
@@ -40,8 +41,7 @@ export const App = () => {
         <Welcome />
 
         <div className='formContainer'>
-
-        <form onSubmit={handleSubmit}>
+          <form onSubmit={handleSubmit}>
 
             <Email
             email={email}
