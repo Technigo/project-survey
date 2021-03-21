@@ -18,4 +18,4 @@ I didn't achieve that many of the stretch goals this week but I am so happy with
 
 ## View it live
 
-You can view my survey live at https://nostalgic-curie-37b7ec.netlify.app/
+You can view my survey live at https://practical-williams-b581cf.netlify.app/
