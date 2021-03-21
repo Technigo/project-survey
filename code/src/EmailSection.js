@@ -1,12 +1,11 @@
 import React from 'react';
 
-
 export const EmailSection = ({ email, onEmailChange }) => {
 
 return (
-
   <div className="email-section">
-    <label tabIndex="0">Type your e-mail
+    <label tabIndex="0">
+      Type your e-mail
       <input
         className="email"
         tabIndex="0"
@@ -18,7 +17,6 @@ return (
       />
     </label>
   </div>
-
   );
 };
 
