@@ -14,7 +14,7 @@ Another tricky part of the project was to make custom radio buttons. I found use
 
 I am proud of how I managed to make use of values from the form input to create styling.
 
-Making the website accessable was one of the requirements of this project. To do that I tested the site in WAVE from webaim and The W3C Markup Validation Service. I also checked contrast by using a contrast checker from Webaim. I also checked other accessibility requirements from a checklist I had in Trello. An accessability issue I haven't yet solved is that there are no page regions deteced in WAVE. I have used semantic html such as <form> and <section>, but maybe it's because they are inside components that they are not visible?
+Making the website accessable was one of the requirements of this project. To do that I tested the site in WAVE from webaim and The W3C Markup Validation Service. I also checked contrast by using a contrast checker from Webaim. I tried to tab through the page using the keyboard and it seemed to work alright. I also used NVDA screen reader on the site. I also checked other accessibility requirements from a checklist I had in Trello. An accessability issue I haven't yet solved is that there are no page regions deteced in WAVE. I have used semantic html such as <form> and <section>, but maybe it's because they are inside components that they are not visible?
 
 If I had had more time I would like to add form input validation and automatic scroll to next question or perhaps make the form a multi-step one. I would also see if I should add any ARIA tags.
 

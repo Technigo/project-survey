@@ -64,6 +64,9 @@ const App = (props) => {
       submitted={submitted}
       setSubmitted={setSubmitted}
       />}
+      <footer className="copyright">
+      <span role="img" aria-label="copyright-symbol">©</span>Linnéa Helén 2021
+  </footer>
     </>
     
   )

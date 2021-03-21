@@ -243,12 +243,16 @@ margin: 0 20px 30px 0;
   color: black;
   text-align: center;
   overflow-wrap: break-word;
-  margin: 0 auto 60px;
+  margin: 0 auto 50px;
+}
+
+.result-text {
+  margin: 0 0 18px;
 }
 
 .return-button {
   width: 250px;
-  margin: auto;
+  margin: 20px auto 30px;
 }
 
 .business-card.red {
@@ -374,6 +378,136 @@ h2.category-robot {
   font-size: 30px;
   line-height: 40px;
   margin-bottom: 0;
+}
+
+.copyright {
+  font-size: 18px;
+}
+
+/*Styling for tablet and small laptop*/
+
+@media (min-width:768px) and (max-width: 1024px) {
+  body {
+    font-size: 28px;
+    margin: 0 50px;
+  }
+  .h1, .result-header {
+    font-size: 56px;
+  }
+  .text-input {
+    font-size: 28px;
+  }
+
+  .my-style-question {
+    width: 350px;
+    margin: 0;
+  }
+
+  .personality-label {
+    width: 350px;
+    margin: 0;
+  }
+
+  .select-menu {
+    font-size: 28px;
+  }
+  .submit-button, .return-button, .submit-button-disabled {
+    font-size: 30px;
+    margin: 0 50px;
+    }
+    
+    .submit-button-disabled, .submit-button {
+      position: absolute;
+      bottom: 200px;
+      right: 100px;
+    }
+
+    .business-card {
+      margin: 150px auto 100px;
+    }
+
+    .result-text {
+      font-size: 30px;
+    }
+
+    .return-button {
+      margin: 30px auto;
+    }
+
+    .copyright {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
+}
+
+/*Styling for bigger screens*/
+
+@media (min-width:1025px) {
+  body {
+    margin: 0 30px;
+    font-size: 32px;
+  }
+  .h1, .result-header {
+    font-size: 72px;
+    text-align: center;
+    margin-bottom: 40px;
+    text-shadow:
+   -2px -2px 0 var(--light-color),  
+    2px -2px 0 var(--light-color),
+    -2px 2px 0 var(--light-color),
+     2px 2px 0 var(--light-color);
+  }
+
+  .survey {
+    margin: auto;
+    display: grid;
+    grid-template-columns: 500px 300px;
+    grid-gap: 100px;
+    justify-content: center;
+  }
+  .text-input {
+    font-size: 32px;
+  }
+
+  .personality-label {
+    align-self: flex-start;
+  }
+  .select-menu {
+    width: 100%;
+    font-size: 32px;
+  }
+  .submit-button, .submit-button-disabled {
+    font-size: 45px;
+    border-radius: 20px;
+    margin: 0 50px;
+    height: 75px;
+    }
+
+    .return-button {
+      font-size: 45px;
+      border-radius: 20px;
+      width: 400px;
+      margin: 60px 0;
+    }
+
+    .business-card {
+      margin: 150px auto 100px;
+    }
+
+    .result-text {
+      font-size: 30px;
+    }
+
+    .return-button {
+      margin: 30px auto;
+    }
+
+    .copyright {
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+    }
 }
 
 /*Font references

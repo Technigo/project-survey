@@ -12,22 +12,24 @@ const Survey = (props) => {
     <>
     <h1 className="h1">My Business Card Generator</h1>
     <form className="survey" onSubmit={(event) => event.preventDefault()}>
-      <NameQuestion 
-        name={props.name} 
-        setName={props.setName}
-        />
-      <OccupationQuestion 
-        occupation = {props.occupation} 
-        setOccupation={props.setOccupation}
-        />
-      <EmailQuestion 
-        email = {props.email}
-        setEmail={props.setEmail}
-        />
-      <TelephoneQuestion
-        telephone= {props.telephone}
-        setTelephone={props.setTelephone}
-        />
+      <div className="contact-info-inputs">
+        <NameQuestion 
+          name={props.name} 
+          setName={props.setName}
+          />
+        <OccupationQuestion 
+          occupation = {props.occupation} 
+          setOccupation={props.setOccupation}
+          />
+        <EmailQuestion 
+          email = {props.email}
+          setEmail={props.setEmail}
+          />
+        <TelephoneQuestion
+          telephone= {props.telephone}
+          setTelephone={props.setTelephone}
+          />
+      </div>
       <ColorQuestion
         color={props.color}
         setColor={props.setColor}

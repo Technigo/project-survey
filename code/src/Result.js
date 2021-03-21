@@ -17,7 +17,7 @@ const Result = (props) => {
       
     </div>
 
-    <p>Here is Your business card!</p> <p>Take a screenshot and send it to your friends!</p>
+    <p className="result-text">Here is Your business card!</p> <p className="result-text">Take a screenshot and send it to your friends!</p>
     <button className="return-button" onClick={() => props.setSubmitted(false)}>Make another one!</button>
     </section>
   )
