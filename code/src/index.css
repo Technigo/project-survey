@@ -40,7 +40,7 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   background-image: url('./images/smoke.jpg');
   height: 100vh;
@@ -54,9 +54,6 @@ i {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
-
-  height: 70%;
 }
 
 .welcomeText {
@@ -166,7 +163,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
   background-image: url('./images/smoke.jpg');
   height: 100vh;
@@ -180,7 +177,7 @@ form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
 
   text-align: center;
   text-align: -moz-center;
@@ -193,7 +190,7 @@ form {
 /*BUTTON STYLING*/
 
 .startAndBackButton{
-  width: 95%;
+  width: 80%;
   text-decoration: none;
   margin: 0;
   font-size: 22px;
@@ -202,21 +199,22 @@ form {
   background-color: #c10140;
   border-radius: 10px;
   margin: 0;
-  margin-bottom: 10px;
 }
 
 .submitButton {
 position: absolute;
-bottom: 0;
-width: 95%;
+bottom: 80px;
+width: 80%;
 text-decoration: none;
-margin: 0;
+margin-left: 0;
+margin-right: 0;
+margin-left: auto;
+margin-right: auto;
 font-size: 22px;
 color: #fff;
 height: 60px;
 background-color: #c10140;
 border-radius: 10px;
-margin-bottom: 10px;
 -webkit-appearance: none;
 -moz-appearance: none;
 appearance: none;
@@ -256,6 +254,14 @@ appearance: none;
 
   i {
     font-size: 44px;
+  }
+
+  .welcomeContainer {
+    justify-content: center;
+  }
+
+  .summaryContainer {
+    justify-content: center;
   }
 
   .summaryContent {
@@ -298,6 +304,7 @@ appearance: none;
   
   .startAndBackButton {
     width: 250px;
+    margin-top: 50px;
   }
 
   .okButton {
@@ -339,7 +346,6 @@ appearance: none;
   .startAndBackButton,
   .submitButton {
     width: 350px;
-    margin-bottom: 35px;
   }
 
 }
