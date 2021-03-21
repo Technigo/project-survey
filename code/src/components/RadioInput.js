@@ -8,19 +8,19 @@ const RadioInput  = ({ QuestionAlternative, setAlternative }) => {
     return (
         <>
             <div className="alternative-container">
-                <label htmlFor={QuestionAlternative}>{QuestionAlternative}</label>
                 <input 
-                    name="radioInput"
-                    id={QuestionAlternative}
-                    value={QuestionAlternative}
                     type="radio"
+                    id={QuestionAlternative}
+                    name={QuestionAlternative}
+                    value={QuestionAlternative}
                     onChange={(e) => {
-                        onAlternativeChange(e)
+                    onAlternativeChange(e)
                     }}
                 />
-            </div>    
+                <label htmlFor={QuestionAlternative}>{QuestionAlternative}</label>  
+            </div>
         </>
-      )
+    )
 }
  
 export default RadioInput;

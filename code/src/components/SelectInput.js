@@ -1,17 +1,31 @@
 import React from 'react';
 
-const SelectInput  = ({ QuestionAlternative, setAlternative }) => {
+import QA from './QA.json'
+
+
+const SelectInput  = ({ setAlternative }) => {
     const onAlternativeChange = (e) => {
-        console.log(e)
-          setAlternative(e.target.value)
+        console.log(`Alternative: ${e.target.value}`) 
+        setAlternative(e.target.value)
     }
     return (
-    <option 
-        onChange={(e) => {
-            onAlternativeChange(e)
-        }}
-        >{QuestionAlternative}
-    </option>
+        <>
+            <label htmlFor="questionFour-select"></label>
+            <select 
+                name="questionFour" 
+                id="questionFour-select"
+                onChange={(e) => {
+                    onAlternativeChange(e)
+                }}>
+                {QA.form_content.questions[3].alternatives.map((alternative) => {
+                    return (
+                        <option
+                            key={alternative}
+                            >{alternative}
+                        </option>
+                    )})}
+            </select>
+        </>
     )
 }
  
