@@ -46,7 +46,7 @@ const evaluationArray = ['yes', 'no', 'none of your business']
                                     <p>Have you filled out this weeks evaluation yet?</p>
                                     <div className="radiobutton-line">
                                         {evaluationArray.map((evaluation) =>
-                                        <Radio className
+                                        <Radio 
                                             key={evaluation}
                                             buttonValue={evaluation}
                                             onRadioButtonChange={onRadioButtonChanged}

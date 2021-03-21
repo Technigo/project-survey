@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
+const Radio = ({onRadioButtonChange, buttonValue}) => {
     return(
         <div className="formelement">
             <label htmlFor={buttonValue} key={buttonValue} className="radiobuttonbox">
@@ -13,7 +13,6 @@ const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
                         required/>
 
                     <div className="radiobutton-name">
-                        {evaluationRadioButton}
                         {buttonValue}
                     </div>
             </label> 
