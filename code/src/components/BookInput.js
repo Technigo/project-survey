@@ -2,10 +2,10 @@ import React from 'react';
 
 const BookInput = (props) => {
     return (
-        <div>
-            <label
+        <div className="text-input-container">
+            <label className="text-input-label"
                 htmlFor="bookname">
-                What's the name of the latest book you read?
+                Name the latest book you read:
             </label>
             <input
                 id="bookname"

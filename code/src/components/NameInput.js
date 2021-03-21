@@ -4,8 +4,8 @@ import React from "react";
 const NameInput = (props) => {
 
     return (
-        <div>
-            <label htmlFor="name">What's your name?</label>
+        <div className="text-input-container">
+            <label className="text-input-label" htmlFor="name">What's your name?</label>
             <input
                 id="name"
                 type="text"

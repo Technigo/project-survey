@@ -2,11 +2,11 @@ import React from 'react';
 
 const DropDownMenu = (props) => {
     return (
-        <div>
-            <label htmlFor="feel">
+        <div className="dropdown-menu-container">
+            <label className="text-input-label" htmlFor="feel">
                 How did you feel after you had finished the book?
             </label>
-            <select
+            <select className="dropdown-menu"
                 id="feel"
                 value={props.feeling}
                 onChange={props.onFeelingChange}

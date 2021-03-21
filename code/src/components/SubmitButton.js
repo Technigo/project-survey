@@ -2,12 +2,15 @@ import React from 'react';
 
 const SubmitButton = (props) => {
     if (props.isFormFinished()) {
-        return (<button className="SubmitButton" type="submit" >Submit</button>
+        return (
+            <div>
+                <button className="submit-button" type="submit">Submit</button>
+            </div>
         )
     }
     else {
         return (
-            <button className="SubmitButton" type="submit" disabled>Submit</button>
+            <button className="submit-button" type="submit" disabled>Submit</button>
         )
     }
 }

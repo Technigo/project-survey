@@ -3,15 +3,6 @@
 body {
   background-image: url(./assets/books-4.jpg);
   background-position: center;
-  width: 100vw;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: column; 
-  justify-content: center;
-  
- 
-  
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -24,27 +15,190 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.form {
- 
-  background-color: rgba(124, 98, 90, 0.7);
-  width: 70%;
-  height: 80;
-  border: 5px solid rgb(110, 73, 62);
-  border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(73, 56, 56);
+
+.form-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
 h1 {
   color: antiquewhite;
   font-family: 'Lobster Two', cursive;
+  margin: 15px 0 0 0; 
 }
 
 p {
   color: antiquewhite;
-  font-family: 'Lobster Two', cursive;
+  font-family:  cursive;
+  font-size: 18px;
+  margin-left: 15px;
+}
+
+.form {
+  background-color: rgba(124, 98, 90, 0.7);
+  width: 70%;
+  height: auto;
+  border: 5px solid rgb(110, 73, 62);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(73, 56, 56);
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.text-input-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+   margin: 10px 0;
+}
+
+.text-input-label {
+  color: antiquewhite;
+  font-family:  cursive;
+  margin-left: 15px;
+  font-size: 18px;
 }
 
 input[type=text] {
-  
-  
+  background-color:antiquewhite; ;
+  border: none;
+  border-bottom: 3px solid rgba(34, 23, 21, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 10px 10px 10px rgb(36, 27, 27);
 }
+
+.dropdown-menu-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.dropdown-menu {
+  font-family: cursive;
+  background-color: antiquewhite;
+  border: none;
+  border-bottom: 3px solid rgba(34, 23, 21, 0.7);
+  padding: 5px;
+  border-radius: 5px;
+  width: 200px;
+  box-shadow: 10px 10px 10px rgb(36, 27, 27);
+}
+
+.radio-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.radio-buttons-container {
+  color: antiquewhite;
+  font-family: cursive;
+}
+
+.submit-button {
+  color: antiquewhite;
+  font-family: cursive;
+  margin: 15px;
+  background-color: rgba(46, 32, 28, 0.7);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(73, 56, 56);
+  padding: 10px;
+}
+  
+.summary-container {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin:0;
+}
+
+.summary {
+  background-color: rgba(124, 98, 90, 0.7);
+  width: 250px;
+  height: auto;
+  border: 5px solid rgb(110, 73, 62);
+  border-radius: 10px;
+  box-shadow: 10px 10px 10px rgb(73, 56, 56);
+  display: flex;
+  flex-direction: column;
+  margin: 0 
+}
+  
+.summary-header-container {
+  display: flex;
+  justify-content: center;
+}
+
+h2 {
+  color: antiquewhite;
+  font-family: 'Lobster Two', cursive;
+  margin-bottom: 15px
+}
+
+.summary p {
+  font-weight: 700;
+  margin: 5px 15px; 
+}
+
+/***Tablet***/
+  
+@media (min-width: 768px) {
+  .form {
+    width: 500px;
+    height: auto;
+   }
+   .summary {
+    width: 500px;
+    height: auto;
+   }
+   h4 {
+     font-size: 30px;
+   }
+   .summary p {
+     font-size: 20px;
+    }
+ }
+    
+ /***Desktop***/
+
+ @media (min-width: 992px) {
+   .form {
+     width: 550px;
+     height: auto;
+    }
+   .summary {
+     width: 550px;
+     height: auto;
+    }
+ }
+
+/***Large desktop***/
+
+ @media (min-width: 1200px) {
+   .summary {
+     width: 700px;
+     height: auto;
+   }
+ }
+  
+
+ 
+
+
+ 
+ 
