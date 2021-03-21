@@ -34,7 +34,12 @@ const Form = () => {
       <div className="form-container">
         {!showSummary ? (                   //if opposite of showSummary - run the form, else display summary
           <form className="form" onSubmit={handleSubmit}>
-            {step === 0 && <FirstPage step={step} setStep={setStep} />}
+            {step === 0 && (
+              <FirstPage 
+                step={step} 
+                setStep={setStep} 
+              />
+            )}
 
             {step === 1 && (
               <NameQuestion
@@ -42,7 +47,6 @@ const Form = () => {
                 callbackOnChange={handleInputChange}
                 step={step}
                 setStep={setStep}
-                //display={step === 1}
               />
             )}
 

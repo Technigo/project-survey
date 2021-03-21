@@ -5,7 +5,6 @@ import FormButtons from './FormButtons';
 const FirstPage = ({ step, setStep }) => {
   return (
     <>
-      {step === 0 && (
         <div className="first-page-container">
           <h1 className="first-page-header">Do you like sushi?</h1>
           <p className="first-page-text">Enter this survey then!</p>
@@ -14,7 +13,6 @@ const FirstPage = ({ step, setStep }) => {
             setStep={setStep}
           />
         </div>
-      )}
     </>
   );
 };

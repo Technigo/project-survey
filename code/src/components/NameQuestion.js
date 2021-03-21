@@ -2,7 +2,7 @@ import React from 'react';
 
 import FormButtons from './FormButtons';
 
-const NameQuestion = ({ name, callbackOnChange, step, setStep, display }) => {
+const NameQuestion = ({ name, callbackOnChange, step, setStep }) => {
 
   const handleNameChange = (e) => {
     callbackOnChange(e.target.name, e.target.value);
