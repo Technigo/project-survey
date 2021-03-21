@@ -1,13 +1,16 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project is a survey that is built with React. I consists of 3 questions that has to be answerd by the viewer of the site. When the viewer presses the submit button, a summary of the questions will appear.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Tech I've used/practiced 💥
+React / State Hooks
+JavaScript
+CSS
+
+Started building the form structure in the Form.js. When the form worked as I wanted it to I continued by breaking out certain elements to their own components, for example all the questions. If I had more time I would've added some more questions and practice a lite bit more on the styling. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://objective-babbage-c176f5.netlify.app/
