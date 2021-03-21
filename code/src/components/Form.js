@@ -116,7 +116,7 @@ const activities = [' make a gastronomy tour', ' explore the cultural scene', ' 
       {( 
         <>
           {summary && 
-            <section className="summary">
+            <section className="summary-section">
               <Summary
                 nameValue={name}
                 countryValue={country}

@@ -48,6 +48,10 @@ h1,
 	font-size: 3.3rem;
 }
 
+.country-section input {
+	margin-right: 8px;
+}
+
 .text-input {
 	background: none;
 	border: none;
@@ -71,6 +75,7 @@ input::placeholder {
 	color: #432371;
 	font-size: 1.2rem;
 	font-family: Arial, sans-serif;
+	opacity: 80%;
 }
 
 .dropdown-select {
@@ -81,7 +86,7 @@ input::placeholder {
 	width: 200px;
 	padding: 5px;
 	color: white;
-	font-size: 1.1rem;
+	font-size: 1.2rem;
 	outline: none;
 }
 
@@ -95,7 +100,7 @@ input::placeholder {
 	flex-direction: column;
 }
 
-.summary {
+.summary-section {
 	font-size: 2rem; /*to remove the square*/
 }
 
@@ -120,7 +125,7 @@ input::placeholder {
 	overflow: hidden;
 	z-index: 1;
 	border: none;
-	font-size: 17px;
+	font-size: 1.2rem;
 }
 
 .circleScaleBtn span {
@@ -161,5 +166,27 @@ input::placeholder {
 	h1,
 	.question {
 		font-size: 2.6rem;
+	}
+
+	.text-input {
+		margin-left: 20px;
+		font-size: 1.5rem;
+		width: 300px;
+	}
+
+	input::placeholder {
+		font-size: 1.5rem;
+	}
+
+	.dropdown-select {
+		font-size: 1.5rem;
+	}
+
+	.summary-section {
+		height: 100%;
+	}
+
+	.circleScaleBtn {
+		font-size: 1.6rem;
 	}
 }
