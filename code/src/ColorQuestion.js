@@ -6,7 +6,7 @@ const colors = [
   'yellow',
   'green',
   'blue',
-  'purple',
+  'violet',
 ]
 
 const ColorQuestion = (props) => {

@@ -1,16 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Hachi+Maru+Pop&family=Meddon&family=Ranchers&family=Ravi+Prakash&family=Shrikhand&family=Source+Sans+Pro&family=Syne+Mono&display=swap');
 
 :root {
-  --medium-color: #f183f1;
   --light-color: white;
-  --dark-color: purple;
+  --dark-color: #080038;
   --accent-pink: #D528EF;
-  --red: #ff9999;
-  --orange: #ffcc99;
-  --yellow: #ffff99;
-  --green: #ccff99;
-  --blue: #ccffff;
-  --purple: #ffccff;
+  --red: #ff6666;
+  --orange: #ff9933;
+  --yellow: #ffff66;
+  --green: #99ff66;
+  --blue: #66ccff;
+  --violet: #cc99ff;
 }
 
 
@@ -55,8 +54,8 @@ code {
   box-sizing: border-box;
   border: 2px solid var(--light-color);
   border-radius: 10px;
-  background-color: var(--medium-color);
-  color: var(--light-color);
+  background-color: var(--light-color);
+  color: black;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
   margin-bottom: 8px;
@@ -132,8 +131,8 @@ code {
   background-color: var(--blue);
 }
 
-.purple {
-  background-color: var(--purple);
+.violet {
+  background-color: var(--violet);
 }
 
 .radio-control:hover {
@@ -206,7 +205,7 @@ margin: 0 20px 30px 0;
 }
 
 .submit-button, .return-button {
-background-color:#080038;
+background-color:var(--dark-color);
 font-family: 'Source Sans Pro', sans-serif;
 font-size: 24px;
 color: var(--light-color);
@@ -216,7 +215,7 @@ margin: 0 20px 30px 0;
 }
 
 .submit-button-disabled {
-  background-color:var(--medium-color);
+  background-color:none;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 24px;
   color: grey;
@@ -272,8 +271,8 @@ margin: 0 20px 30px 0;
   background-color: var(--blue);
 }
 
-.business-card.purple {
-  background-color: var(--purple);
+.business-card.violet {
+  background-color: var(--violet);
 }
 
 .category-cute {
