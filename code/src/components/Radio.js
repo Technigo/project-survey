@@ -1,13 +1,13 @@
 import React from 'react';
 
-const evaluationArray = ['yes', 'no', 'none of your business']
+
 
 const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
     return(
             <div>
-                <p>Have you filled out this weeks evaluation yet?</p>
-                {evaluationArray.map((evaluation) =>
-                <label htmlFor={buttonValue} key={evaluation} >
+
+                
+                <label htmlFor={buttonValue} key={buttonValue} >
                         <input 
                             name="buttonValue"
                             id={buttonValue} 
@@ -17,8 +17,8 @@ const Radio = ({evaluationRadioButton, onRadioButtonChange, buttonValue}) => {
                             required
                         />   
                     {evaluationRadioButton}
-                {evaluation}</label>
-                    )}
+                {buttonValue}</label>
+                 
             </div>
     )
 }

@@ -13,6 +13,7 @@ const Survey = () => {
     const [selectAnswer, setSelectAnswer] = useState ('');
     const [summary, setSummary] = useState(false)
 // array
+const evaluationArray = ['yes', 'no', 'none of your business']
 
 // functions
     const handleSubmit = (e) => {
@@ -50,13 +51,14 @@ const Survey = () => {
                     </section> 
 
                     <section> 
-                    
+                    <p>Have you filled out this weeks evaluation yet?</p>
+                    {evaluationArray.map((evaluation) =>
                         <Radio 
                             key={evaluation}
                             buttonValue={evaluation}
                             onRadioButtonChange={onRadioButtonChanged}
                         />
-                
+                    )}
                     </section>   
 
                     <section>
