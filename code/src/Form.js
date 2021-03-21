@@ -41,7 +41,8 @@ export const Form = () => {
                             brand={brand} 
                             setBrand={setBrand} 
                     />
-                    <div>
+                    <fieldset>
+                        <legend>Frequency</legend>
                         <p>How Often Do You Wear Sneakers?</p>
                         {
                             frequencies.map((frequency) => {
@@ -52,7 +53,7 @@ export const Form = () => {
                                         />
                             })
                         }
-                    </div>
+                    </fieldset>
                     <SubmitButton handleSubmit={handleSubmit} />
                 </form>
             </>
