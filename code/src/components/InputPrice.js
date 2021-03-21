@@ -11,7 +11,7 @@ const priceChoices = [
 export const InputPrice = (props) => {
   return (
     <div className="each-question">
-      Size:
+      Rent price:
       {priceChoices.map((choice) => (
         <label key={choice}>
           <input

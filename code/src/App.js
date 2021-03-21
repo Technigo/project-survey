@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Header } from "./components/Header";
 import { InputAdditional } from "./components/InputAdditional";
 import { InputType } from "components/InputType";
-import { InputSubway } from "components/InputSubway";
 import { InputPrice } from "components/InputPrice";
 import { InputRooms } from "components/InputRooms";
 import { Summary } from "components/Summary";
@@ -13,7 +12,6 @@ export const App = () => {
   // Set state of my input-components
   const [type, setType] = useState(" ");
   const [room, setRooms] = useState(" ");
-  const [subway, setSubway] = useState(false);
   const [price, setPrice] = useState();
   const [additional, setAdditional] = useState("");
 
@@ -23,9 +21,6 @@ export const App = () => {
   };
   const updateRoomState = (event) => {
     setRooms(event.target.value);
-  };
-  const updateSubwayState = (event) => {
-    setSubway(event.target.value);
   };
   const updatePriceState = (event) => {
     setPrice(event.target.value);
@@ -53,19 +48,15 @@ export const App = () => {
         {question === 1 && <InputType onTypeChange={updateTypeState} />}
         {question === 2 && <InputRooms onRoomChange={updateRoomState} />}
         {question === 3 && (
-          <InputSubway onSubwayChange={updateSubwayState} subway={subway} />
-        )}
-        {question === 4 && (
           <InputPrice onPriceChange={updatePriceState} price={price} />
         )}
-        {question === 5 && (
+        {question === 4 && (
           <InputAdditional onAdditionalChange={updateAdditionalState} />
         )}
-        {question > 5 && (
+        {question > 4 && (
           <Summary
             type={type}
-            rooms={room}
-            subway={subway}
+            room={room}
             price={price}
             additional={additional}
           />

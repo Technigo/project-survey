@@ -14,7 +14,7 @@ code {
     monospace;
 }
 
-.site-container {
+.form-container {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -32,4 +32,14 @@ code {
 .summary-container {
   display: flex;
   align-items: center;
+}
+
+.summary-text {
+  font-size: 20px;
+  text-align: center;
+  text-decoration: bold;
+}
+
+.button {
+  background: #976464;
 }
