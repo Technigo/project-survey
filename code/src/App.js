@@ -19,7 +19,6 @@ export const App = () => {
     event.preventDefault()
     if (isSurveyComplete())
     {
-      console.log("complete...")
       setDisplaySummary(true)
     }
     else{
@@ -27,7 +26,6 @@ export const App = () => {
       alert("Survey not complete");
       window.scroll(0,0);
     }
-
   }
 
   const [number, setNumber] = useState("");
