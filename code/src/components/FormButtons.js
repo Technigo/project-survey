@@ -3,7 +3,7 @@ import React from 'react';
 import Button from './Button';
 import Submit from './Submit';
 
-let buttonTexts = ["Let's go!", "Next", "Next", "Submit"]; // fix the Submit button
+let buttonTexts = ["Let's go!", "Next", "Next", "Submit"]; 
 
 const FormButtons = ({ step, setStep }) => {
   const goToPrevStep = () => {
