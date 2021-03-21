@@ -4,9 +4,11 @@ export const Summary = ({name, brand, frequency}) => {
 
     return(
         <>
-            <p>Name: {name}</p>
-            <p>Brand: {brand}</p>
-            <p>How often: {frequency}</p>
+            <section className="summary-container">
+                <p>Thank you <span className="highlighted-text">{name}</span> for taking your time!</p>
+                <p>Your favourite brand is:<span className="highlighted-text"> {brand}</span></p>
+                <p>How often you wear sneakers:<span className="highlighted-text"> {frequency}</span></p>
+            </section>
         </>
     )
 }

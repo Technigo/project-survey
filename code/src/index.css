@@ -150,7 +150,7 @@ code {
   display: inline-block;
   margin: 0 5px 0 5px;
   padding: 5px;
-  width: 90px;
+  width: 80px;
   font-size: 14px;
   border: 2px solid #762d8696;
   border-radius: 4px;
@@ -193,10 +193,25 @@ code {
   border: 2px solid #752d86;
 }
 
+.summary-container {
+  margin: 100px 20px 100px 20px;
+  font-size: 16px;
+}
+
+.highlighted-text {
+  font-weight: bold;
+  line-height: 24px;
+  color: #752d86;
+}
+
 
 @media (min-width: 768px) {
 
   .form-container {
     max-width: 400px;
+  }
+
+  .summary-container {
+    font-size: 20px;
   }
 }
