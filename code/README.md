@@ -15,3 +15,7 @@ I'm extra proud over the progress bar with animations that I managed to do.
 - My validation is not currently working as I wish and it's displaying no matter if the last question is filled in or not.
 - A bug I currently have is that the value for dropdown and text input is showing the answers picked after you restarted the survey.
 - I would have wanted to add some more questions with different input types, such as checkboxes and sliders.
+
+## Find my project live here:
+
+https://awesome-sammet-72cb67.netlify.app/
