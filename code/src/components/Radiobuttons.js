@@ -13,9 +13,9 @@ const Radiobuttons = ({ questionName, questionText, valueArray, chosenValue, han
       <h2>{questionText}</h2>
       <div className="radio-div">
         {valueArray.map(value => (
-          <div className="radio-btn">
-            <input name={questionName} 
-              key={value}
+          <div key={value} className="radio-btn">
+            <input key={value} 
+              name={questionName}   
               type="radio"
               onChange={onRadioChange}
               value={value}

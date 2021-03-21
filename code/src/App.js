@@ -9,11 +9,11 @@ const App = () => {
 
   //COMPONENTS STATES
   const [formData, setFormData] = useState({
-    name: 1,
-    animal: 2,
-    accessory: 3,
-    activity: 4,
-    ratherNot: 5
+    name: '',
+    animal: '',
+    accessory: '',
+    activity: '',
+    ratherNot: ''
   })
 
   const handleInputChange = (name, value) => {

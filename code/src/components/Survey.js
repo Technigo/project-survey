@@ -6,8 +6,6 @@ import SurveyButtons from './SurveyButtons'
 
 const Survey = ({ step, setStep, name, animal, accessory, activity, ratherNot, handleInputChange }) => {
 
-  console.log(name, animal, accessory, activity, ratherNot)
-
   const animalOptions = ['cat', 'dog', 'horse', 'elk', 'panda', 'frog']
   const accessoryOptions = ['necklaces', 'watches', 'earrings', 'hats', 'glasses', 'scarfs']
   const activityOptions = ['do yoga', 'play guitar', 'go for a swim', 'play video games', 'go out dancing', 'eat ice cream']
