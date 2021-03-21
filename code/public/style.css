@@ -8,11 +8,21 @@ body {
     justify-content: center;
 }
 
-.stat-question-wrapper, .stat-questions-wrapper,.question-wrapper, .question {
+.stat-question-wrapper, .stat-questions-wrapper,.question-wrapper,.text-input-wrapper{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+}
+
+.text-input-wrapper textarea {
+    height: auto;
+    width: 90vw;
+    resize: none;
+  }
+
+.question {
+    /*center stuff?*/
 }
 
 h5 {

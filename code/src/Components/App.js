@@ -5,6 +5,7 @@ import playbookData from '../playbookData.json'
 import SubmitButton from './SubmitButton'
 import NavWrapper from './NavWrapper'
 import PlaybookWrapper from './PlaybookWrapper'
+import Text from './Text'
 
 //TO-DO:
 //[_] Add keys to components?
@@ -38,7 +39,7 @@ export const App = () => {
 
   //USED!!!!
   const [source, setSource] = useState("")
-  const [currentPage, setCurrentPage] = useState(0) //should be 1. Set to 0 to instantly go to currently set testing state
+  const [currentPage, setCurrentPage] = useState(1) //should be 1. Set to 0 to instantly go to currently set testing state
   const [blocker, setBlocker] = useState({blocking:false,explanation:"default error! :D"})
   const [filteredPlaybooks, setFilteredPlaybooks] = useState([])
   //const [bestAtError, setBestAtError] = useState(false)
@@ -464,16 +465,19 @@ export const App = () => {
   //Conditional page rendering
   switch (currentPage) {
     
-    //Styling mode hacks:
+    //Page 0 allows you to skip instantly to a desired
+    //page, for debug and styling purposes
     case 0:
       filterPlaybooks("skill", playbooks)
-      setCurrentPage(3)
+      setCurrentPage(4)
     ////////////////////////
 
     case 1:
       return (
         <>
-          {/* {console.log(`I am now rendering page ${currentPage}`)} */}
+          <Text
+            question={questionData.intro}
+          />
           <NavWrapper
             navigate={onCurrentPageChange}
             currentPage={currentPage}
@@ -485,7 +489,6 @@ export const App = () => {
     case 2:
       return (
         <>
-          {/* {console.log(`I am now rendering page ${currentPage}`)} */}
           <QuestionWrapper 
           question={questionData.questions.question_source}
           toChange={onSourceChange}
@@ -537,9 +540,6 @@ export const App = () => {
               int = {int}
               wis = {wis}
               cha = {cha}
-              // bestAt={bestAt}
-              // nextToBestAt={nextToBestAt}
-              // worstAt={worstAt}
             />
           </div>
             <NavWrapper
@@ -547,6 +547,7 @@ export const App = () => {
               currentPage={currentPage}
               lastPage={lastPage}
             />
+            <p>--------------- DEBUG AID ---------------</p>
             <p>// STR: {str} // DEX: {dex} // CON: {con} //</p>
             <p>// INT: {int} // WIS: {wis} // CHA: {cha}//</p>
         </>
@@ -555,6 +556,21 @@ export const App = () => {
       case 4:
       return (
         <>
+          <QuestionWrapper 
+              question={questionData.questions.personalityQuestions_fears}
+          />
+          <QuestionWrapper 
+              question={questionData.questions.personalityQuestions_fearsOrigin}
+          />
+          <QuestionWrapper 
+              question={questionData.questions.personalityQuestions_cultureGood}
+          />
+          <QuestionWrapper 
+              question={questionData.questions.personalityQuestions_cultureBad}
+          />
+          <QuestionWrapper 
+              question={questionData.questions.personalityQuestions_dream}
+          />
           <NavWrapper
             navigate={onCurrentPageChange}
             currentPage={currentPage}
@@ -566,6 +582,9 @@ export const App = () => {
       case 5:
       return (
         <>
+          <Text
+            question={questionData.results}
+          />
           <NavWrapper
             navigate={onCurrentPageChange}
             currentPage={currentPage}
@@ -581,39 +600,6 @@ export const App = () => {
       <SubmitButton 
             onSubmit={onSubmit}
       />
-      
-      {/* <QuestionWrapper 
-        question={questionData.questions.question_magic}
-        toChange={onMagicChange} 
-        
-      />
-      <QuestionWrapper 
-        question={questionData.questions.question_spiritual} 
-        toChange={onSpiritualChange}
-        
-      />
-      <QuestionWrapper 
-        question={questionData.questions.question_tech} 
-        toChange={onTechChange}
-        
-      />
-      <QuestionWrapper 
-        question={questionData.questions.question_grim} 
-        toChange={onGrimChange}
-        
-      />
-      <QuestionWrapper 
-        question={questionData.questions.question_hijinx} 
-        toChange={onHijinxChange}
-        
-      /> */}
-      
-
-      <div>
-        <p>// Source: {source} // Hijinx: {hijinx} // Magic: {magic} // Tech: {tech} // Spiritual: {spiritual} // Grim: {grim} //</p> 
-        <p>// STR: {str} // DEX: {dex} // CON: {con} //</p>
-        <p>// INT: {int} // WIS: {wis} // CHA: {cha}//</p>
-      </div>
     </div>
   )
 }

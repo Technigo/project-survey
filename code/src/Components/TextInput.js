@@ -4,9 +4,9 @@ const TextInput = (props) => {
   
   return (
     <form>
-      <input
+      <textarea
         type="text"
-      ></input>
+      ></textarea>
     </form>
   )
 }

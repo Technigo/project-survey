@@ -1,6 +1,6 @@
 {
     "intro": {
-        "text": "intro text"
+        "text": "intro text. this project isn't finished, so pardon the mess"
     },
     "questions": {
         "question_source": {
@@ -125,6 +125,26 @@
                     "label":"Social skills and deception", "value": "CHA"
                 }
             ]
+        },
+        "personalityQuestions_fears": {
+            "type":"text",
+            "text": "What fears motivate their actions?"
+        },
+        "personalityQuestions_fearsOrigin": {
+            "type":"text",
+            "text": "Where do these fears stem from?"
+        },
+        "personalityQuestions_cultureGood": {
+            "type":"text",
+            "text": "What aspect of their culture do they see as good and strongly encourage?"
+        },
+        "personalityQuestions_cultureBad": {
+            "type":"text",
+            "text": "What aspect of their culture do they despise and take an active stance against?"
+        },
+        "personalityQuestions_dream": {
+            "type":"text",
+            "text": "What is their big dream?"
         }
         
     },
