@@ -6,9 +6,7 @@ import RadioButtonsInput from "./RadioButtonsInput";
 import RadioButtonsRecommends from "./RadioButtonsRecommends";
 import SubmitButton from "./SubmitButton";
 
-
 const Form = (props) => {
-
     return (
         <div className="form-container">
             <form className="form" onSubmit={props.handleSubmit}>
@@ -20,20 +18,31 @@ const Form = (props) => {
                 </div>
                 <NameInput
                     name={props.name}
-                    onNameChange={props.onNameChange} />
-                <BookInput bookname={props.bookname}
-                    onBookChange={props.onBookChange} />
-                <DropDownMenu feeling={props.feeling}
-                    onFeelingChange={props.onFeelingChange} />
+                    onNameChange={props.onNameChange}
+                />
+                <BookInput
+                    bookname={props.bookname}
+                    onBookChange={props.onBookChange}
+                />
+                <DropDownMenu
+                    feeling={props.feeling}
+                    onFeelingChange={props.onFeelingChange}
+                />
                 <RadioButtonsInput
                     onNumberOfBookChange={props.onNumberOfBookChange}
-                    numberOfBook={props.numberOfBook} />
-                <RadioButtonsRecommends onrecomendationChange={props.onrecomendationChange}
-                    recomendation={props.recomendation} />
-                <SubmitButton isFormFinished={props.isFormFinished} />
+                    numberOfBook={props.numberOfBook}
+                />
+                <RadioButtonsRecommends
+                    onRecommendationChange={props.onRecommendationChange}
+                    recommendation={props.recommendation}
+                />
+                <SubmitButton
+                    isFormFinished={props.isFormFinished}
+                />
             </form>
         </div>
-    )
-}
-console.log()
-export default Form
+    );
+};
+
+export default Form;
+

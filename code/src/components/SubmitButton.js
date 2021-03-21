@@ -6,13 +6,12 @@ const SubmitButton = (props) => {
             <div>
                 <button className="submit-button" type="submit">Submit</button>
             </div>
-        )
-    }
-    else {
+        );
+    } else {
         return (
             <button className="submit-button" type="submit" disabled>Submit</button>
-        )
-    }
-}
+        );
+    };
+};
 
-export default SubmitButton
+export default SubmitButton;

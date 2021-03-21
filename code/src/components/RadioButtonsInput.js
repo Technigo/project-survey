@@ -9,7 +9,8 @@ const RadioButtonsInput = (props) => {
             <div className="radio-buttons-container">
                 {numberOfBooks.map((books) => (
                     <label htmlFor="books"
-                        key={books}>
+                        key={books}
+                    >
                         <input
                             id="books"
                             type="radio"
@@ -19,11 +20,10 @@ const RadioButtonsInput = (props) => {
                         />
                         {books}
                     </label>
-
-                ))}
+                ))};
             </div>
         </div>
     );
 };
 
-export default RadioButtonsInput
+export default RadioButtonsInput;

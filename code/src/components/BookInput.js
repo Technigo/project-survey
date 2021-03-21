@@ -3,10 +3,12 @@ import React from 'react';
 const BookInput = (props) => {
     return (
         <div className="text-input-container">
-            <label className="text-input-label"
-                htmlFor="bookname">
-                Name the latest book you read:
-            </label>
+            <label
+                className="text-input-label"
+                htmlFor="bookname"
+            >
+                Name of the latest book you read:
+      </label>
             <input
                 id="bookname"
                 type="text"
@@ -16,4 +18,4 @@ const BookInput = (props) => {
     );
 };
 
-export default BookInput
+export default BookInput;

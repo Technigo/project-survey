@@ -20,6 +20,6 @@ const DropDownMenu = (props) => {
                 <option value="uplifted">Uplifted</option>
             </select>
         </div>
-    )
-}
-export default DropDownMenu
+    );
+};
+export default DropDownMenu;
