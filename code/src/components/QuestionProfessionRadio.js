@@ -47,7 +47,7 @@ const QuestionProfessionRadio = ({
               type="radio"
               value={professions}
               onChange={onProfessionChange}
-              //checked={profession === professions}
+              checked={profession === professions}
               className="form-radiobuttons"
             />
             <label htmlFor={professions} aria-label={professions} tabIndex="0">

@@ -140,6 +140,20 @@ code {
     font-family: 'Poppins';
 }
 
+.form-popup-container {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 170px;
+}
+
+.form-popup {
+  font-size: 18px;
+  padding: 5px 30px;
+  margin: auto;
+  background: yellow;
+}
+
 /* MEDIA QUERIES */
 @media (max-width: 600px) {
   .form-input {
@@ -162,5 +176,9 @@ code {
 
   .next-button {
     margin: 35px;
+  }
+
+  .form-popup-container {
+    top: -40px;
   }
 }

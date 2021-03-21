@@ -32,6 +32,7 @@ const QuestionAgeRadio = ({
               value={age}
               type="radio"
               onChange={(e) => {onAgeChange(e)}}
+              checked={ageCategory === age}
               className="form-radiobuttons"
             />
             <label htmlFor={age} aria-label={age} tabIndex="0">
