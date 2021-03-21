@@ -57,7 +57,6 @@ const Form = () => {
   if (surveyComplete) {
     return (
       <div className="summary">
-      
         <h3>Summary:</h3>
         <p>Tickets: {name}</p>
         <p>Artist: {dropdown}</p>
@@ -107,9 +106,8 @@ const Form = () => {
         </div>
       </div>
 {/* Question about date */}
-<h3 tabIndex="0" className="question-radio">Date: </h3>
+      <h3 tabIndex="0" className="question-radio">Date: </h3>
       <div className="first-radio">
-        {/* <h3 tabIndex="0" className="question-radio">Date: </h3> */}
         {bookDate.map((date) => (
           <label key={date} htmlFor={date} className="label-container">
           <input 
@@ -129,7 +127,7 @@ const Form = () => {
       <h3 tabIndex="0" className="question-radio">Seat section:</h3>
       <div className="question-radio">
         
-        <div className="radio-wrapper">
+        <div className="radio-wrapper"> 
          {seatSection.map((seat) => (
            <label key={seat} htmlFor={seat}>
            <input 
