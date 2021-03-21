@@ -1,19 +1,17 @@
-# Technigo React Starter App
+# Project Survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+This project was part of Technigo Bootcamp and the assignment was to create a survey using React.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## The process
 
-## Usage
+I decided to create a survey on programming habits, with four questions. I quite quickly decided I wanted the survey to have a start section, one section for each question and a summary section with a restart button. I found it relatively easy to compile the first set up with questions and the summary in one page and then moved on to create logic with sections that trigged different questions, buttons etc depending on where you were in the survey.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+I am really happy with what I achieved being only the second project created with React and I really enjoy working in this very structured way with different components. I re-structured all the code about half way through the project to make the app very clean and created a survey component which had all the question components.
 
-Alternatively, if you don't want a new git repo on your account;
+I'm extra proud over the progress bar with animations that I managed to do.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Things I would like to add/fix if I had more time:
+
+- My validation is not currently working as I wish and it's displaying no matter if the last question is filled in or not.
+- A bug I currently have is that the value for dropdown and text input is showing the answers picked after you restarted the survey.
+- I would have wanted to add some more questions with different input types, such as checkboxes and sliders.
