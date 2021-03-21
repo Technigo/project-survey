@@ -420,20 +420,6 @@
         "usesCHA": 0
     },
     {
-        "name": "The Templar",
-        "spiritual": 4,
-        "magical": 3,
-        "toolsNTech": 0,
-        "grim": 4,
-        "hijinx": 0,
-        "usesSTR": 0,
-        "usesDEX": 0,
-        "usesCON": 0,
-        "usesINT": 0,
-        "usesWIS": 0,
-        "usesCHA": 2
-    },
-    {
         "name": "The Shaman",
         "spiritual": 4,
         "magical": 3,

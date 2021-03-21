@@ -9,6 +9,7 @@ const RadioButtonWrapper = (props) => {
                     question={props.question}
                     toChange={props.toChange}
                     optionNumber={0}
+                    source={props.source}
                 />
             </div>
             <div className="button-label-wrapper">
@@ -16,6 +17,7 @@ const RadioButtonWrapper = (props) => {
                     question={props.question}
                     toChange={props.toChange}
                     optionNumber={1}
+                    source={props.source}
                 />
             </div>
             <div className="button-label-wrapper">
@@ -23,6 +25,7 @@ const RadioButtonWrapper = (props) => {
                     question={props.question}
                     toChange={props.toChange}
                     optionNumber={2}
+                    source={props.source}
                 />
             </div>
             <div className="button-label-wrapper">
@@ -30,6 +33,7 @@ const RadioButtonWrapper = (props) => {
                     question={props.question}
                     toChange={props.toChange}
                     optionNumber={3}
+                    source={props.source}
                 />
             </div>
         </form>

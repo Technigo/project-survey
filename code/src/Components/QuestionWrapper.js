@@ -12,6 +12,7 @@ const QuestionWrapper = (props) => {
                 toChange={props.toChange}
                 skillLevel={props.skillLevel}
                 options={props.options}
+                source={props.source}
             />
         </div>
     )

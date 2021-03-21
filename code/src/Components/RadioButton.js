@@ -7,6 +7,7 @@ const RadioButton = (props) => {
                 name="radio" 
                 id="radio-button" 
                 type="radio"
+                checked={props.source === buttonValue}
                 onChange={() => {props.toChange(buttonValue)}}                       
             ></input>
             <label htmlFor="radio-button">

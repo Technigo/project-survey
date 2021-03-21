@@ -4,8 +4,10 @@ import questionData from '../questionData.json'
 import playbookData from '../playbookData.json'
 import SubmitButton from './SubmitButton'
 import NavWrapper from './NavWrapper'
+import PlaybookWrapper from './PlaybookWrapper'
 
 //TO-DO:
+//[_] Add keys to components?
 //[X] Set up hooks for each question storing the user's current input
 //[X] Maybe have hooks track everything live, live updating a summary paragraph,
 // but there is still a submit button for the recommendation!!
@@ -25,7 +27,8 @@ import NavWrapper from './NavWrapper'
 // }
 
 export const App = () => {
-  const lastPage = 4 //USED!!!!!!
+  const lastPage = 5 //USED!!!!!!
+  const playbooks = playbookData
 
   const [magic, setMagic] = useState(null)
   const [tech, setTech] = useState(null)
@@ -35,9 +38,10 @@ export const App = () => {
 
   //USED!!!!
   const [source, setSource] = useState("")
-  const [currentPage, setCurrentPage] = useState(1)
-  const [problem, setProblem] = useState({isProblem:false,explanation:"default error! :D"})
-  
+  const [currentPage, setCurrentPage] = useState(0) //should be 1. Set to 0 to instantly go to currently set testing state
+  const [blocker, setBlocker] = useState({blocking:false,explanation:"default error! :D"})
+  const [filteredPlaybooks, setFilteredPlaybooks] = useState([])
+
   //USED!!!!
   const [bestAt, setBestAt] = useState("")
   const [nextToBestAt, setNextToBestAt] = useState("")
@@ -78,25 +82,45 @@ export const App = () => {
     setSource (value)
   }
 
-  const alerter = () => {
-    
+  const meaninglessFunction = () => {
+    console.log(`meaningless function was called! Let's see if this fixes the hook having time to update`)
+    //the above doesn't change anything, which makes me think that statehooks only truly update either with some lag/delay, or intentionally waits until the END of the function which it called to change in
+    //I'm going to experiment: what if I set blocker flags in a separate function altogether? Then when that function ends, the hooks should update, if it indeed is about functions needing to end first...
+    //Result: 
   }
 
-  const onCurrentPageChange = (value) => {
-    
-    //console.log(problem.explanation)
+  const checkBlocker = (direction) => {
+    console.log(`in checkBlocker`)
+    if (currentPage === 1 && source === "" && direction === 1) { 
+      console.log(`SHOULD block`)
+      setBlocker({blocking:true, explanation:"Please select an option before continuing."})
+    }
 
-    //problem.isProblem = true
+  }
 
-    if (value === 1 && problem.isProblem === true) {
-      alert(problem.explanation)
+  const onCurrentPageChange = (direction) => {
+    console.log(`at the start of onCurrentPageChange. currentPage: ${currentPage}, blocker: ${blocker.blocking}`)
+    checkBlocker(direction)
+
+    //catching any blocker flags when advancing
+    if (blocker.blocking === true && direction === 1 && source === "") {
+      alert(blocker.explanation)
     } else {
-      if (value === -1 && currentPage === 1) {
+      if (direction === 1 && currentPage === 2) {
+        console.log(`hey I recognized that this is page 2 (currentPage: ${currentPage}) and now I'm gonna filter the playbookssss`)
+        filterPlaybooks(source, playbooks)
+      }
+      else if (blocker.blocking === true && direction === -1) {
+        console.log("blocker was on and I moved backwards so I'm gonna deactivate it")
+        setBlocker({blocking:false, explanation:"Please select an option before continuing."})
+      }      
+      if (direction === -1 && currentPage === 1) { //Safety prec. is made redundant if I conditionally just don't render the nav buttons when pressing is a nono
         //do nothing as to never go below first page
-      } else if (value === 1 && currentPage === lastPage) {
+      } else if (direction === 1 && currentPage === lastPage) {
         //do nothing as to never go beyond the last page
       } else {
-        setCurrentPage (currentPage + value)
+        console.log(`navigated to page ${currentPage + direction}`)
+        setCurrentPage (currentPage + direction)
       }
     }
   }
@@ -106,8 +130,7 @@ export const App = () => {
     console.log(`best at: ${value}`)
     switch (value) {
       case "STR":
-        setStr(2)
-        console.log(`STR: ${str}`)
+        setStr(2) //The problem is right here: that stats are set but the previous one is never unset
         break
       case "DEX":
         setDex(2)
@@ -186,35 +209,9 @@ export const App = () => {
 
   const onSubmit = () => {
     
-    const playbooks = playbookData
-    filterPlaybooks(source, playbooks)
-
     //NEEDS TO SHOW SUMMARY AND HIDE OPTIONS (a re-render, not toggling display in css)!
     
-    // const choice = {
-    //   magical: magic,
-    //   spiritual: spiritual,
-    //   toolsNTech: tech,
-    //   grim: grim,
-    //   hijinx: hijinx,
-    //   bestAt: bestAt,
-    //   nextToBestAt: nextToBestAt,
-    //   worstAt: worstAt,
-    //   usesSTR: str,
-    //   usesDEX: dex,
-    //   usesCON: con,
-    //   usesINT: int,
-    //   usesWIS: wis,
-    //   usesCHA: cha
-    // }
-    // playbooks = playbookData
 
-    // if(choice.bestAt === choice.nextToBestAt || choice.worstAt === choice.nextToBestAt || choice.worstAt === choice.bestAt) {
-    //   console.log("no you IDIOT!!")
-    // } else {
-    //   oldFilterPlaybooks(choice, playbooks)
-    // }
-    
   }
 
   const filterPlaybooks = (priority, playbooks) => {
@@ -249,188 +246,12 @@ export const App = () => {
         break
     }
     console.log(playbooksFiltered)
-    return playbooksFiltered
-  }
-  const oldFilterPlaybooks = (choice, playbooks) => {
-    
-    //before filtering; status check
-    console.log("user choices:")
-    console.log(choice)
-    console.log("should be all playbooks:")
-    console.log(playbooks)
+    setFilteredPlaybooks(playbooksFiltered)
 
-    //__________ MAGIC __________
-
-    //create new array based on unfiltered playbooks
-    let magicFiltered = playbooks
-
-    if(choice.magical === null) {
-      //no filtering
-      console.log("was null - didn't filter magic")
-    } else {
-        //filter according to magic choice
-        magicFiltered = playbooks.filter(element => {
-        return element.magical === choice.magical || element.magical === choice.magical+2 || element.magical === choice.magical-2
-      });
-    }
-    console.log("after magic:")
-    console.log(magicFiltered)
-    
-
-    //__________ SPIRITUAL __________
-    
-    //create new array based on previous filter array
-    let spiritualFiltered = magicFiltered
-
-    if(choice.spiritual === null) {
-      //(no filtering since user choice was null)
-      console.log("was null - didn't filter spiritual")
-    } else {
-        //filter according to spiritual choice
-        spiritualFiltered = magicFiltered.filter(element => {
-          return element.spiritual === choice.spiritual || element.spiritual === choice.spiritual+2 || element.spiritual === choice.spiritual-2
-        });
-    }
-    console.log("after spiritual:")
-    console.log(spiritualFiltered)
-    
-
-    //__________ TECH __________
-
-    //create new array based on previous filter array
-    let techFiltered = spiritualFiltered
-
-    if(choice.toolsNTech === null) {
-      //(no filtering since user choice was null)
-      console.log("was null - didn't filter tech")
-    } else {
-        //filter according to tech choice
-        techFiltered = spiritualFiltered.filter(element => {
-          return element.toolsNTech === choice.toolsNTech || element.toolsNTech === choice.toolsNTech+2 || element.toolsNTech === choice.toolsNTech-2
-        });
-    }
-    console.log("after tech:")
-    console.log(techFiltered)
-
-    //__________ GRIM __________
-
-    //create new array based on previous filter array
-    let grimFiltered = techFiltered
-
-    if(choice.grim === null) {
-      //(no filtering since user choice was null)
-      console.log("was null - didn't filter grim")
-    } else {
-        //filter according to grim choice
-        grimFiltered = techFiltered.filter(element => {
-          return element.grim === choice.grim || element.grim === choice.grim+2 || element.grim === choice.grim-2
-        });
-    }
-    console.log("after grim:")
-    console.log(grimFiltered)
+    //map through playbooks to create state hooks for their lit status?
+  
 
 
-    //__________ HIJINX __________
-
-    //create new array based on previous filter array
-    let hijinxFiltered = grimFiltered
-
-    if(choice.hijinx === null) {
-      //(no filtering since user choice was null)
-      console.log("was null - didn't filter hijinx")
-    } else {
-        //filter according to grim choice
-        hijinxFiltered = grimFiltered.filter(element => {
-          return element.hijinx === choice.hijinx || element.hijinx === choice.hijinx+2 || element.hijinx === choice.hijinx-2
-        });
-    }
-    console.log("after hijinx:")
-    console.log(hijinxFiltered)
-
-    //__________ BEST AT __________ [WARNING!: STILL RELIES ON HIJINXFILTERED]
-    
-    //create new array based on previous filter array
-    let bestAtFiltered = hijinxFiltered //[WARNING!: STILL RELIES ON HIJINXFILTERED]
-
-    switch (choice.bestAt) {
-      case "STR":
-        bestAtFiltered = hijinxFiltered.filter(element => {
-          return element.usesSTR > 0
-        });
-        break
-      case "DEX":
-        bestAtFiltered = hijinxFiltered.filter(element => {
-          return element.usesDEX > 0
-        });
-        break
-      case "CON":
-        bestAtFiltered = hijinxFiltered.filter(element => {
-          return element.usesCON > 0
-        });
-        break
-      case "INT":
-        bestAtFiltered = hijinxFiltered.filter(element => {
-          return element.usesINT > 0
-        });
-        break
-      case "WIS":
-        bestAtFiltered = hijinxFiltered.filter(element => {
-          return element.usesWIS > 0
-        });
-        break
-      case "CHA":
-        bestAtFiltered = hijinxFiltered.filter(element => {
-          return element.usesCHA > 0
-        });
-        break
-    }
-    console.log("after bestAt:")
-    console.log(bestAtFiltered)
-
-    //__________ WORST AT __________
-    
-    //create new array based on previous filter array
-    let worstAtFiltered = bestAtFiltered
-
-    switch (choice.worstAt) {
-      case "STR":
-        worstAtFiltered = bestAtFiltered.filter(element => {
-          return element.usesSTR < 1
-        });
-        break
-      case "DEX":
-        worstAtFiltered = bestAtFiltered.filter(element => {
-          return element.usesDEX < 1
-        });
-        break
-      case "CON":
-        worstAtFiltered = bestAtFiltered.filter(element => {
-          return element.usesCON < 1
-        });
-        break
-      case "INT":
-        worstAtFiltered = bestAtFiltered.filter(element => {
-          return element.usesINT < 1
-        });
-        break
-      case "WIS":
-        worstAtFiltered = bestAtFiltered.filter(element => {
-          return element.usesWIS < 1
-        });
-        break
-      case "CHA":
-        worstAtFiltered = bestAtFiltered.filter(element => {
-          return element.usesCHA < 1
-        });
-        break
-    }
-    console.log("after bestAt:")
-    console.log(bestAtFiltered)
-
-
-
-
-    
   }
 
   //I might not need these
@@ -458,11 +279,22 @@ export const App = () => {
     setCha (value)    
   }
 
+  
+
+
   //Conditional page rendering
   switch (currentPage) {
+    
+    //Styling mode hacks:
+    case 0:
+      filterPlaybooks("skill", playbooks)
+      setCurrentPage(3)
+    ////////////////////////
+
     case 1:
       return (
         <>
+          {/* {console.log(`I am now rendering page ${currentPage}`)} */}
           <NavWrapper
             navigate={onCurrentPageChange}
             currentPage={currentPage}
@@ -474,9 +306,11 @@ export const App = () => {
     case 2:
       return (
         <>
+          {/* {console.log(`I am now rendering page ${currentPage}`)} */}
           <QuestionWrapper 
           question={questionData.questions.question_source}
           toChange={onSourceChange}
+          source={source}
           />
           <NavWrapper
             navigate={onCurrentPageChange}
@@ -489,6 +323,7 @@ export const App = () => {
     case 3:
       return (
         <>
+          {/* {console.log(`I am just about to render page ${currentPage} and just so you know blocker.blocking is ${blocker.blocking}`)} */}
           <div className="stat-questions-wrapper">
             <QuestionWrapper 
               question={questionData.questions.statQuestions.bestAt}
@@ -508,19 +343,43 @@ export const App = () => {
               toChange={onWorstAtChange}
               skillLevel = {worstAt}
             />
+          </div>
+          <div className="playbooks-wrapper">
+            <PlaybookWrapper 
+              playbooks={filteredPlaybooks}
+              str = {str}
+              dex = {dex}
+              con = {con}
+              int = {int}
+              wis = {wis}
+              cha = {cha}
+              // bestAt={bestAt}
+              // nextToBestAt={nextToBestAt}
+              // worstAt={worstAt}
+            />
+          </div>
             <NavWrapper
               navigate={onCurrentPageChange}
               currentPage={currentPage}
               lastPage={lastPage}
             />
-          </div>
-          <div className="playbooks-wrapper">
-
-          </div>
+            <p>// STR: {str} // DEX: {dex} // CON: {con} //</p>
+            <p>// INT: {int} // WIS: {wis} // CHA: {cha}//</p>
         </>
       )
 
       case 4:
+      return (
+        <>
+          <NavWrapper
+            navigate={onCurrentPageChange}
+            currentPage={currentPage}
+            lastPage={lastPage}
+          />
+        </>
+      )
+
+      case 5:
       return (
         <>
           <NavWrapper
@@ -537,7 +396,7 @@ export const App = () => {
     <div>
       <SubmitButton 
             onSubmit={onSubmit}
-          />
+      />
       
       {/* <QuestionWrapper 
         question={questionData.questions.question_magic}
@@ -587,6 +446,205 @@ export const App = () => {
 // onWisChange={onWisChange}
 // onChaChange={onChaChange}
 
+// const oldFilterPlaybooks = (choice, playbooks) => {
+    
+  //   //before filtering; status check
+  //   console.log("user choices:")
+  //   console.log(choice)
+  //   console.log("should be all playbooks:")
+  //   console.log(playbooks)
+
+  //   //__________ MAGIC __________
+
+  //   //create new array based on unfiltered playbooks
+  //   let magicFiltered = playbooks
+
+  //   if(choice.magical === null) {
+  //     //no filtering
+  //     console.log("was null - didn't filter magic")
+  //   } else {
+  //       //filter according to magic choice
+  //       magicFiltered = playbooks.filter(element => {
+  //       return element.magical === choice.magical || element.magical === choice.magical+2 || element.magical === choice.magical-2
+  //     });
+  //   }
+  //   console.log("after magic:")
+  //   console.log(magicFiltered)
+    
+
+  //   //__________ SPIRITUAL __________
+    
+  //   //create new array based on previous filter array
+  //   let spiritualFiltered = magicFiltered
+
+  //   if(choice.spiritual === null) {
+  //     //(no filtering since user choice was null)
+  //     console.log("was null - didn't filter spiritual")
+  //   } else {
+  //       //filter according to spiritual choice
+  //       spiritualFiltered = magicFiltered.filter(element => {
+  //         return element.spiritual === choice.spiritual || element.spiritual === choice.spiritual+2 || element.spiritual === choice.spiritual-2
+  //       });
+  //   }
+  //   console.log("after spiritual:")
+  //   console.log(spiritualFiltered)
+    
+
+  //   //__________ TECH __________
+
+  //   //create new array based on previous filter array
+  //   let techFiltered = spiritualFiltered
+
+  //   if(choice.toolsNTech === null) {
+  //     //(no filtering since user choice was null)
+  //     console.log("was null - didn't filter tech")
+  //   } else {
+  //       //filter according to tech choice
+  //       techFiltered = spiritualFiltered.filter(element => {
+  //         return element.toolsNTech === choice.toolsNTech || element.toolsNTech === choice.toolsNTech+2 || element.toolsNTech === choice.toolsNTech-2
+  //       });
+  //   }
+  //   console.log("after tech:")
+  //   console.log(techFiltered)
+
+  //   //__________ GRIM __________
+
+  //   //create new array based on previous filter array
+  //   let grimFiltered = techFiltered
+
+  //   if(choice.grim === null) {
+  //     //(no filtering since user choice was null)
+  //     console.log("was null - didn't filter grim")
+  //   } else {
+  //       //filter according to grim choice
+  //       grimFiltered = techFiltered.filter(element => {
+  //         return element.grim === choice.grim || element.grim === choice.grim+2 || element.grim === choice.grim-2
+  //       });
+  //   }
+  //   console.log("after grim:")
+  //   console.log(grimFiltered)
 
 
+  //   //__________ HIJINX __________
+
+  //   //create new array based on previous filter array
+  //   let hijinxFiltered = grimFiltered
+
+  //   if(choice.hijinx === null) {
+  //     //(no filtering since user choice was null)
+  //     console.log("was null - didn't filter hijinx")
+  //   } else {
+  //       //filter according to grim choice
+  //       hijinxFiltered = grimFiltered.filter(element => {
+  //         return element.hijinx === choice.hijinx || element.hijinx === choice.hijinx+2 || element.hijinx === choice.hijinx-2
+  //       });
+  //   }
+  //   console.log("after hijinx:")
+  //   console.log(hijinxFiltered)
+
+  //   //__________ BEST AT __________ [WARNING!: STILL RELIES ON HIJINXFILTERED]
+    
+  //   //create new array based on previous filter array
+  //   let bestAtFiltered = hijinxFiltered //[WARNING!: STILL RELIES ON HIJINXFILTERED]
+
+  //   switch (choice.bestAt) {
+  //     case "STR":
+  //       bestAtFiltered = hijinxFiltered.filter(element => {
+  //         return element.usesSTR > 0
+  //       });
+  //       break
+  //     case "DEX":
+  //       bestAtFiltered = hijinxFiltered.filter(element => {
+  //         return element.usesDEX > 0
+  //       });
+  //       break
+  //     case "CON":
+  //       bestAtFiltered = hijinxFiltered.filter(element => {
+  //         return element.usesCON > 0
+  //       });
+  //       break
+  //     case "INT":
+  //       bestAtFiltered = hijinxFiltered.filter(element => {
+  //         return element.usesINT > 0
+  //       });
+  //       break
+  //     case "WIS":
+  //       bestAtFiltered = hijinxFiltered.filter(element => {
+  //         return element.usesWIS > 0
+  //       });
+  //       break
+  //     case "CHA":
+  //       bestAtFiltered = hijinxFiltered.filter(element => {
+  //         return element.usesCHA > 0
+  //       });
+  //       break
+  //   }
+  //   console.log("after bestAt:")
+  //   console.log(bestAtFiltered)
+
+  //   //__________ WORST AT __________
+    
+  //   //create new array based on previous filter array
+  //   let worstAtFiltered = bestAtFiltered
+
+  //   switch (choice.worstAt) {
+  //     case "STR":
+  //       worstAtFiltered = bestAtFiltered.filter(element => {
+  //         return element.usesSTR < 1
+  //       });
+  //       break
+  //     case "DEX":
+  //       worstAtFiltered = bestAtFiltered.filter(element => {
+  //         return element.usesDEX < 1
+  //       });
+  //       break
+  //     case "CON":
+  //       worstAtFiltered = bestAtFiltered.filter(element => {
+  //         return element.usesCON < 1
+  //       });
+  //       break
+  //     case "INT":
+  //       worstAtFiltered = bestAtFiltered.filter(element => {
+  //         return element.usesINT < 1
+  //       });
+  //       break
+  //     case "WIS":
+  //       worstAtFiltered = bestAtFiltered.filter(element => {
+  //         return element.usesWIS < 1
+  //       });
+  //       break
+  //     case "CHA":
+  //       worstAtFiltered = bestAtFiltered.filter(element => {
+  //         return element.usesCHA < 1
+  //       });
+  //       break
+  //   }
+  //   console.log("after bestAt:")
+  //   console.log(bestAtFiltered)
+  // }
+    
+    // const choice = {
+    //   magical: magic,
+    //   spiritual: spiritual,
+    //   toolsNTech: tech,
+    //   grim: grim,
+    //   hijinx: hijinx,
+    //   bestAt: bestAt,
+    //   nextToBestAt: nextToBestAt,
+    //   worstAt: worstAt,
+    //   usesSTR: str,
+    //   usesDEX: dex,
+    //   usesCON: con,
+    //   usesINT: int,
+    //   usesWIS: wis,
+    //   usesCHA: cha
+    // }
+    // playbooks = playbookData
+
+    // if(choice.bestAt === choice.nextToBestAt || choice.worstAt === choice.nextToBestAt || choice.worstAt === choice.bestAt) {
+    //   console.log("no you IDIOT!!")
+    // } else {
+    //   oldFilterPlaybooks(choice, playbooks)
+    // }
+    
 

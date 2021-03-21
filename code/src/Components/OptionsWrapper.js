@@ -9,6 +9,7 @@ const OptionsWrapper = (props) => {
                 <RadioButtonWrapper 
                     question={props.question}
                     toChange={props.toChange}
+                    source={props.source}
                 />
             </div>
         )
@@ -20,6 +21,7 @@ const OptionsWrapper = (props) => {
                     toChange={props.toChange}
                     options={props.options}
                     skillLevel={props.skillLevel}
+                    source={props.source}
                 />
             </div>
         )

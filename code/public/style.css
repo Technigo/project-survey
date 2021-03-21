@@ -4,14 +4,36 @@
 
 body {
     margin: 50px;
+    display: flex;
+    justify-content: center;
 }
 
-.question {
-    margin: 50px;
+.stat-question-wrapper, .stat-questions-wrapper,.question-wrapper, .question {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
+
+h5 {
+    position: relative;
+    top: 12px;
+    font-size: 11px;
+    line-height: 0px;
+    margin: 2px;
+    color: rgba(0, 0, 0, 0.5)
+}
+
+h4 {
+    margin: 5px;
+}
+
+/* .question {
+    margin: 50px;
+} */
 
 .options-wrapper {
-    margin: 30px;
+    margin: 10px;
 }
 
 .radio-buttons-wrapper {
@@ -20,7 +42,11 @@ body {
 }
 
 label {
-    margin-left: 5px;
+    margin-left: 15px 0 5px 0;
+}
+
+select {
+    margin: 0;
 }
 
 .nav-wrapper {
@@ -29,4 +55,27 @@ label {
     align-self: flex-end;
     display: flex;
     justify-content: space-around;
+}
+
+.playbooks-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.playbook {
+    /* display: flex;
+    align-items: center; */
+    font-size: 16px;
+    text-align: center;
+    display: inline-block;
+    background-color: skyblue;
+    height: 50px;
+    margin: 5px;
+    padding: 0 25px 12px 25px;
+    border-radius: 5%;
+    /* flex-grow: 0.1; */
+    /* flex-basis: 20%; */
+    filter: grayscale();
 }
