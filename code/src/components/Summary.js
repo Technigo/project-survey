@@ -12,6 +12,8 @@ const Summary = (props) => {
                 <p tabIndex="0">This is how many times you have read the book: {props.numberOfBook}</p>
                 <p tabIndex="0">If someone would ask you if they should read {props.bookname}, your answer will be: {props.recommendation}!</p>
                 <p tabIndex="0">Thank you for your time and have a great day!</p>
+                <p>Photo by <a href="https://unsplash.com/@chrislawton?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Chris Lawton</a> on <a href="/s/photos/books?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+                </p>
             </section>
         </div>
     );
