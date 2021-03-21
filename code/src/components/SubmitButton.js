@@ -4,7 +4,7 @@ const SubmitButton = (props) => {
     if (props.isFormFinished()) {
         return (
             <div>
-                <button className="submit-button" type="submit">Submit</button>
+                <button tabIndex="0" className="submit-button" type="submit">Submit</button>
             </div>
         );
     } else {

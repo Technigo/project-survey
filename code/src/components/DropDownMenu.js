@@ -12,11 +12,11 @@ const DropDownMenu = (props) => {
                 onChange={props.onFeelingChange}
             >
                 <option value="">Choose a feeling:</option>
-                <option value="sad">Sad</option>
-                <option value="scared">Scared</option>
-                <option value="happy">Happy</option>
-                <option value="angry">Angry</option>
-                <option value="satisfied">Satisfied</option>
+                <option tabIndex="0" value="sad">Sad</option>
+                <option tabIndex="0" value="scared">Scared</option>
+                <option tabIndex="0" value="happy">Happy</option>
+                <option tabIndex="0" value="angry">Angry</option>
+                <option tabIndex="0" value="satisfied">Satisfied</option>
                 <option value="uplifted">Uplifted</option>
             </select>
         </div>

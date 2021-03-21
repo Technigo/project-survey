@@ -7,7 +7,7 @@ const BookInput = (props) => {
                 className="text-input-label"
                 htmlFor="bookname"
             >
-                Name of the latest book you read:
+                Name of the latest book you have read:
       </label>
             <input
                 id="bookname"

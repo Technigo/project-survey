@@ -11,9 +11,9 @@ const Form = (props) => {
         <div className="form-container">
             <form className="form" onSubmit={props.handleSubmit}>
                 <div className="header-container">
-                    <h1>Book survey!</h1>
+                    <h1 tabIndex="0">Book survey!</h1>
                     <div className="text-container">
-                        <p>Please take a few seconds to answer some questions about the latest book you read:</p>
+                        <p tabIndex="0">Please take a few seconds to answer some questions about the latest book you have read:</p>
                     </div>
                 </div>
                 <NameInput

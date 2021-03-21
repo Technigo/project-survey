@@ -5,7 +5,7 @@ const numberOfBooks = ["1", "2", "3+"];
 const RadioButtonsInput = (props) => {
     return (
         <div className="radio-container">
-            <p>How many times have you read the book?</p>
+            <p tabIndex="0">How many times have you read the book?</p>
             <div className="radio-buttons-container">
                 {numberOfBooks.map((books) => (
                     <label htmlFor="books"

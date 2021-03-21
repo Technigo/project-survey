@@ -5,10 +5,11 @@ const recommendationAnswer = ['Yes', 'No'];
 const RadioButtonsRecommends = (props) => {
     return (
         <div className="radio-container">
-            <p>Would you recommend the book to someone else?</p>
+            <p tabIndex="0">Would you recommend the book to someone else?</p>
             <div className="radio-buttons-container">
                 {recommendationAnswer.map((answer) => (
                     <label
+                        tabindex="0"
                         htmlFor="books"
                         key={answer}
                     >
