@@ -9,7 +9,7 @@ html {
   background-image: url(https://policygenius-blog.imgix.net/2018/05/fruits-vegetables.jpg);
   height: 100vh;
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: auto;
   background-position: center;
 }
 
@@ -18,24 +18,29 @@ code {
     monospace;
 }
 
+h1 {
+  font-style: italic;
+  color:rgb(141, 32, 32)
+}
+
+h2 {
+  font-style: italic;
+  color:rgb(141, 32, 32)
+}
+
 .wrapper {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 100vh;
+  height: 100%;
 }
 
 .container {
-  background-color: rgba(250, 235, 215, 0.527);
-  border-radius: 15%;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-
-  width: 400px;
-  margin: 0 auto;
-
+  width: 100%;
+  margin: 5px;
   padding: 40px;
   font-size: 20px;
 }
@@ -68,27 +73,34 @@ input[type=text], select {
 
 }
 
-/* .radioLabel {
-  display: block;
-  position: relative;
-  padding-right: 20px;
-  /* margin-bottom: 10px; */
-  /* cursor: pointer;
-  user-select: none;
-}
+@media screen and (min-width: 700px) {
 
-.radioLabel input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-}
+  html {
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
 
-.radioButton {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 30px;
-  width: 30px;
-  background-color: rgb(53, 40, 40);
-  border-radius: 50%;
-} */ 
+  .wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: rgba(250, 235, 215, 0.527);
+    border-radius: 15%;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  
+    width: 400px;
+    margin: 0 auto;
+  
+    padding: 40px;
+    font-size: 20px;
+  }
+}

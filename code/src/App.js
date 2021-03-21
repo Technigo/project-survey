@@ -1,5 +1,6 @@
 import React, {useState} from 'react'
 
+import Header from './components/Header'
 import FormSelect from './components/FormSelect'
 import FormRadio from './components/FormRadio'
 import FormName from './components/FormName'
@@ -29,6 +30,7 @@ export const App = () => {
       ) : (
       <div className='container'>    
         <div className='inner-container'>
+          <Header />
           <FormSelect 
             fruit={fruit}
             setFruit={setFruit}
