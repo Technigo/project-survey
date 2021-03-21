@@ -16,7 +16,7 @@ const Form = () => {
     const onPageChange = () => {
         setCurrentPage (currentPage + 1)
     }
-    const radioAnswers = ["Yes", "No", "Not sure"]
+    const radioAnswers = ["Wiccan", "Pagan", "Eclectic", "Other"]
     console.log(firstThought)
     console.log(radioValue)
     console.log(dropDown)
@@ -25,20 +25,24 @@ const Form = () => {
     return (
         <form>
             {currentPage === 0 && (
-                <div className="first-page-container">
-                    <h1>Welcome to the witchy survey! Press the button and get started.</h1>
+                <div>
+                    <h1>Merry Meet and Blessed Be! 🔮<span>🕯️</span></h1>
                 </div>
             )}
             
             {currentPage === 1 && (
-                 < TextInputOne
-                    labelText = {"1. When you hear the term 'Witch' what are the first few words that come to mind?"}
+                <div className="text-input-container">
+                  < TextInputOne
+                    labelText = {"1. When you think of the term 'Witch' what are the first few words that comes to mind?🔮"}
                     id="1"
                     setFirstThought={setFirstThought}
-                 />
+                  />
+                </div>
             )}
             {currentPage === 2 && (
-                <div className = "radiobutton-container">
+                <div className="second-question-container">
+                    <h2>What is the most accurate description of your practice/craft?🔮</h2>
+                    <div className="radio-button-container">
                     {radioAnswers.map(radioAnswer => {
                         return (
                             < RadioButton
@@ -50,33 +54,41 @@ const Form = () => {
                             />
                         )
                     })}
+                    </div>
                 </div>
             )}
             {currentPage === 3 && (
-                 < SelectList
-                 setDropDown = {setDropDown}
-                 />
+                <div className="dropdown-container">
+                  < SelectList
+                    questionText = {"3. How long have you been practicing witchcraft?🔮"}
+                    setDropDown = {setDropDown}
+                  />
+                </div>
             )}
             {currentPage === 4 && (
-                 < TextInputTwo
-                 labelText = {"4. Do you think society's portrayal of witches is fair/accurate? Please explain your answer."}    
-                 id="4"       
-                 setSocietysPortrayal={setSocietysPortrayal}
-             />
+                <div className="text-input-container">
+                  < TextInputTwo
+                    labelText = {"4. Do you think society's portrayal of witches is fair/accurate? Please explain your answer.🔮"}    
+                    id="4"       
+                    setSocietysPortrayal={setSocietysPortrayal}
+                  />
+                </div>
             )}
             {currentPage === 5 && (
-                <div>
+                <>
+                <div className="summary-container">
                     < Summary 
                         radioValue = {radioValue}
                         dropDown = {dropDown}
                         firstThought = {firstThought}
                         societysPortrayal = {societysPortrayal}
                     />
+                </div>
                     < Button 
                         buttonText = "Submit"
                         buttonType = "Submit"
                     />
-                </div>
+                </>
             )}
             {currentPage !== 5 && ( 
                 < Button 

@@ -5,7 +5,7 @@ const RadioButton = ({labelText, id, name, setRadioValue}) => {
         setRadioValue(e.target.value)
     }
     return (
-        <div>
+        <>
             <label htmlFor={id}>{labelText}</label>
             <input 
                 type="radio"
@@ -14,7 +14,7 @@ const RadioButton = ({labelText, id, name, setRadioValue}) => {
                 onChange={onRadioValueChange}
                 value={id}
             />
-        </div>
+        </>
     )
 }
 export default RadioButton

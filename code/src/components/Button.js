@@ -2,7 +2,7 @@ import React from 'react'
 
 const Button = ({buttonText, onPageChange, buttonType="button"}) => {
     return (
-        <button onClick={onPageChange} type={buttonType}>
+        <button class="button" onClick={onPageChange} type={buttonType}>
             {buttonText}
         </button>
     )

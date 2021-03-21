@@ -5,10 +5,10 @@ const TextInputTwo = ({labelText, id, setSocietysPortrayal}) => {
         setSocietysPortrayal(e.target.value)
     } 
     return (
-        <div>
-            <label htmlFor={id}>{labelText}</label>
-            <input id={id} onChange={onThoughtChange}></input>
-        </div>
+        <>
+            <label className="label-text" htmlFor={id}>{labelText}</label>
+            <input className="input-box" id={id} onChange={onThoughtChange}></input>
+        </>
     )
 }
 

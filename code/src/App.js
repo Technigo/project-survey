@@ -1,16 +1,17 @@
 import React from 'react'
 
-import Header from './components/Header'
 import Form from './components/Form' 
-import Footer from './components/Footer'
 
 
 export const App = () => {
   return (
     <div>
-      <Header />
+      <picture>
+        <source srcset="./images/galaxy.jpg" media="(max-width: 767px)" />
+        <source srcset="./images/moon-phases.jpg" media="(max-width: 1199px)" />
+        <img class="hero-image" src="./images/moon-phases.jpg" />
+      </picture>
       <Form />
-      <Footer />
     </div>
   )
 }
