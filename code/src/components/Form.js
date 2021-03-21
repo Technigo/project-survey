@@ -22,17 +22,15 @@ const Form = () => {
   };
 
   const handleInputChange = (name, value) => {
-    const newFormData = { ...formData }; //create a variable, newFormData, containing a copy of the object formData using spread syntax
-    newFormData[name] = value; //assigns newFormData the property (incl. the value) of the components respectively
-    setFormData(newFormData); //invoke the setFormData function which changes the state of formData (changes the value),
-    //which React will listen to and render (in the summary in my solution below)
-    // setFormData({ ...formData, [name]: value });     does the same as the above, but this is a shorthand
+    const newFormData = { ...formData }; 
+    newFormData[name] = value; 
+    setFormData(newFormData); 
   };
 
   return (
     <>
       <div className="form-container">
-        {!showSummary ? (                   //if opposite of showSummary - run the form, else display summary
+        {!showSummary ? (                 
           <form 
             className="form" 
             onSubmit={handleSubmit}
