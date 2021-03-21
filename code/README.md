@@ -1,19 +1,20 @@
-# Technigo React Starter App
+# Requirements
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The Travel survey is a controlled form built with React using useState() hooks. The task was to have at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## Stretch goals
+1. Add validation to your survey
+2. Create a multi-step form
+3. Visualize to the user how far through the survey they are, and how much is left, by creating a progress bar
 
-## Usage
+## Approaching the problem
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+I used react useState hooks and conditional rendering to show one question at the time and collect the date from the user. The collected data summary is shown once the form is completed. 
 
-Alternatively, if you don't want a new git repo on your account;
+Regex validation is used to make sure for text input.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+To make sure the all questions of the form are answered the submit/next question buttons do not activate until a question is answered.
+
+## See it live
+Please see the project live: https://travel-survey-klimenko.netlify.app/
+
