@@ -42,7 +42,8 @@ code {
 .circle {
   width: 100vw;
   border-radius: 0 0 0 100% / 200px;
-  background-color: #fdf0f6;
+  background-color: #281833;
+  border-bottom: 8px solid #771144;
   position: absolute;
   top: 0;
   left: 0;
@@ -62,7 +63,7 @@ code {
   text-align: left;
   line-height: 38px;
   z-index: 1;
-  color: #281833;
+  color: #fdf0f6;
 }
 
 /* Start, continue and submit button */
@@ -338,7 +339,7 @@ code {
   line-height: 30px;
   letter-spacing: 1.7px;
   z-index: 1;
-  color: #281833;
+  color: #fdf0f6;
 }
 
 .fa-plane {
