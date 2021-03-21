@@ -7,15 +7,12 @@ export const FurQuestion = ({ furOption, onfurOptionChange}) => {
     <div className="fur-question" tabIndex="0">
     What cat-coat do you prefer?
     {furArray.map(fur => (
-      <label className="fur-buttons" key={fur}>
+      <label tabIndex="0" className="fur-buttons" key={fur}>
         <input
-          tabIndex="0"
           type='radio'
-          name="fur"
           value={fur}
           onChange={(e) => onfurOptionChange(e)}
-    
-        />
+      />
         {fur}
       </label>
     ))}

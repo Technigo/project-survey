@@ -7,7 +7,6 @@ export const ColorQuestion = ({ color, onColorChange}) => {
     <label tabIndex="0">What color do you like a cat to have?</label>
     <select
       tabIndex="0"
-      id="color"
       className="select"
       required
       value={color}
@@ -19,7 +18,7 @@ export const ColorQuestion = ({ color, onColorChange}) => {
       <option tabIndex="0" value="white">White</option>
       <option tabIndex="0" value="grey">Grey</option>
       <option tabIndex="0" value="red">Red</option>
-      <option tabIndex="0" value="mixed colors">Mixed</option>
+      <option tabIndex="0" value="has mixed colors">Mixed</option>
     </select>
     </div>
   );

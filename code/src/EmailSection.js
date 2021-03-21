@@ -6,8 +6,9 @@ export const EmailSection = ({ email, onEmailChange }) => {
 return (
 
   <div className="email-section">
-    <label tabIndex="0">Type your e-mail</label>
+    <label tabIndex="0">Type your e-mail
       <input
+        className="email"
         tabIndex="0"
         type='email'
         onChange={(e) => onEmailChange(e)}
@@ -15,7 +16,8 @@ return (
         email={email}
         placeholder="E-mail"
       />
-    </div>
+    </label>
+  </div>
 
   );
 };
