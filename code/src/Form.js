@@ -9,7 +9,7 @@ import { SubmitButton } from './components/SubmitButton'
 import { Summary }  from './components/Summary'
 
 //Array 
-const frequencies = ['Daily', 'Weekly', 'Monthly', 'Never']
+const frequencies = ['24/7','Daily', 'Weekly', 'Monthly', 'Never']
 
 export const Form = () => {
     //useState gathered here and and passed to child components as props
@@ -41,9 +41,9 @@ export const Form = () => {
                             brand={brand} 
                             setBrand={setBrand} 
                     />
-                    <fieldset>
-                        <legend>Frequency</legend>
-                        <p>How Often Do You Wear Sneakers?</p>
+                    <fieldset className="fieldset-radio">
+                        <legend className="radio-legend">How Often Do You Wear Sneakers?</legend>
+                        <div className="option-container">
                         {
                             frequencies.map((frequency) => {
                                 return <FrequencyRadioOption
@@ -53,6 +53,7 @@ export const Form = () => {
                                         />
                             })
                         }
+                        </div>
                     </fieldset>
                     <SubmitButton handleSubmit={handleSubmit} />
                 </form>

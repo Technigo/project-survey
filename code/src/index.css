@@ -59,7 +59,7 @@ code {
 .name-input-container {
   display: flex;
   flex-direction: column;
-  margin: 0 0 20px 0;
+  margin: 0 0 30px 0;
 }
 
 .name-input-container input[type=text] {
@@ -80,7 +80,7 @@ code {
 }
 
 .name-label, .option-label {
-  margin: 0 0 5px 0;
+  margin: 0 0 5px 5px;
   font-weight: bold;
   padding: 0 0 0 5px;
   font-size: 14px;
@@ -90,25 +90,54 @@ code {
 .select-container {
   display: flex;
   flex-direction: column;
+  margin: 0 0 30px 0;
+  max-width: 300px;
 }
 
 .select-container select {
+  border:2px solid #762d8696;
   border-radius: 20px;
   background: transparent;
 }
 
 .select-container select:focus {
   outline: none;
+  border: 2px solid #752d86;
+}
+
+.fieldset-radio {
+  display: flex;
+  flex-direction: row;
+  /* flex-wrap: wrap; */
+  max-width: 300px;
+  padding: 10px;
+  border:2px solid #762d8696;
+}
+
+.radio-legend {
+  font-size: 14px;
+  color: #3B4371;
+  font-weight: bold;
+}
+
+.option-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-self: center;
+    margin: 0 10px 5px 20px;
 }
 
 .radio-option-container {
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin: 10px 0 10px 10px;
 }
 
 .radio-option-container label {
-  margin-left: 5px;
+  margin: 0 5px 0 5px;
+  font-size: 14px;
 }
 
 .submit-button {
