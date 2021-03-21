@@ -33,7 +33,10 @@ const Form = () => {
     <>
       <div className="form-container">
         {!showSummary ? (                   //if opposite of showSummary - run the form, else display summary
-          <form className="form" onSubmit={handleSubmit}>
+          <form 
+            className="form" 
+            onSubmit={handleSubmit}
+          >
             {step === 0 && (
               <FirstPage 
                 step={step} 

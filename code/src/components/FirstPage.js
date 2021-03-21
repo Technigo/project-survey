@@ -7,7 +7,7 @@ const FirstPage = ({ step, setStep }) => {
     <>
         <div className="first-page-container">
           <h1 className="first-page-header">Do you like sushi?</h1>
-          <p className="first-page-text">Enter this survey then!</p>
+          <h2 className="first-page-text">Enter this survey then!</h2>
           <FormButtons 
             step={step}
             setStep={setStep}

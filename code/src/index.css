@@ -16,20 +16,20 @@ code {
   min-height: 100vh;
 }
 
-.main {
-  font-family: "Comfortaa", cursive;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s;
   -webkit-text-fill-color: #333 !important;
+}
+
+.main {
+  font-family: "Comfortaa", cursive;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 /*** FORM ***/
