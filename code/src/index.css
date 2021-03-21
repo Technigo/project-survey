@@ -17,26 +17,28 @@ code {
 }
 
 .main {
-  font-family: 'Comfortaa', cursive;
+  font-family: "Comfortaa", cursive;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.form {
-  min-height: 80vh;
-  margin: 0 30px;
-}
-
 input:-webkit-autofill,
-input:-webkit-autofill:hover, 
-input:-webkit-autofill:focus, 
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
 input:-webkit-autofill:active {
   transition: background-color 5000s;
   -webkit-text-fill-color: #333 !important;
 }
 
+/*** FORM ***/
+.form-container {
+  min-height: 80vh;
+  margin: 0 30px;
+  border: 3px solid rgb(255, 195, 113);
+  border-radius: 8px;
+}
 
 /*** BUTTONS ***/
 .buttons-container {
@@ -45,21 +47,22 @@ input:-webkit-autofill:active {
 }
 
 .btn {
-  border: solid 2px black;
-  background-color: transparent; 
+  border: solid 2px rgb(255, 195, 113);
+  background-color: transparent;
   padding: 10px 20px;
   font-family: inherit;
   font-size: 18px;
   font-weight: 700;
   outline: none;
   color: inherit;
-  border-radius: 4px;
+  border-radius: 8px;
   cursor: pointer;
+  transition: all 0.2s ease-out;
   margin: 20px 10px 0px 10px;
 }
 
-.btn:hover .btn:focus {
-  background:  rgb(255, 95, 109, 0.5);
+.btn:hover {
+  background: rgb(255, 195, 113, 0.5);
 }
 
 .button {
@@ -72,40 +75,13 @@ input:-webkit-autofill:active {
   align-self: center;
 }
 
-.grow { 
-  transition: all .2s ease-in-out; 
-}
-  
-.grow:hover { 
-  transform: scale(1.1); 
-}
-
-/*** SVG ***/
-.svg-first-page {
-  width: 160%;
-  z-index: -1;
-}
-
-.svg-questions {
-  width: 210%;
-  z-index: -1;
-}
-
-.svg-summary {
-
-}
-
 /*** FIRST PAGE ***/
 .first-page-container {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   min-height: 80vh;
-}
-
-.first-page-container .container {
-  position: absolute;
 }
 
 .first-page-header {
@@ -118,7 +94,6 @@ input:-webkit-autofill:active {
   font-size: 18px;
 }
 
-
 /*** NAME QUESTION ***/
 .name-container {
   display: flex;
@@ -128,15 +103,10 @@ input:-webkit-autofill:active {
   min-height: 80vh;
 }
 
-.name-container .container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-}
-
 .name-label {
-  text-align: center;
-  font-size: 20px;
+  display: flex;
+  align-self: center;
+  font-size: 26px;
   margin: 0px 10px 20px 10px;
 }
 
@@ -147,10 +117,9 @@ input:-webkit-autofill:active {
   padding: 0px 15px;
   color: #333;
   outline: none;
-  background-color: rgb(255, 95, 109, 0.3);
+  background-color: rgb(255, 195, 113, 0.5);
   font-size: 20px;
 }
-
 
 /*** SUSHI QUESTION ***/
 .sushi-container {
@@ -161,20 +130,22 @@ input:-webkit-autofill:active {
   min-height: 80vh;
 }
 
-.sushi-container .container {
-  position: absolute;
-  display: flex;
-  flex-direction: column;
-}
-
 .sushi-label {
-  text-align: center;
-  font-size: 20px;
+  display: flex;
+  align-self: center;
+  font-size: 26px;
   margin: 0px 10px 20px 10px;
 }
 
 .sushi-select {
-
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  color: #333;
+  outline: none;
+  background-color: rgb(255, 195, 113, 0.5);
+  padding: 0 45px;
+  font-size: 20px;
 }
 
 /*** INGREDIENT QUESTION ***/
@@ -186,23 +157,156 @@ input:-webkit-autofill:active {
   min-height: 80vh;
 }
 
-.ingredient-container .container {
-  position: absolute;
+.fieldset {
+  border: none;
+  border-radius: 8px;
+  margin: 20px 0;
   display: flex;
   flex-direction: column;
+  padding: 0 20px;
 }
 
+.legend {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 20px 0;
+}
 
+.ingredient-label {
+  font-size: 20px;
+  margin: 3px 0;
+}
 
+/*** SUMMARY ***/
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
 
+.summary-container p {
+  font-size: 26px;
+  font-weight: 700;
+}
 
+.summary-container p span {
+  display: block;
+}
 
 /*** MEDIA QUERIES ***/
 @media (min-width: 768px) {
+  /* Button */
+  .btn {
+    font-size: 25px;
+    margin: 30px 10px 0px 10px;
+  }
 
+  /* First page */
+  .first-page-header {
+    font-size: 42px;
+  }
+
+  .first-page-text {
+    font-size: 30px;
+  }
+
+  /* Name question */
+  .name-label {
+    font-size: 40px;
+  }
+
+  .name-input-text {
+    height: 60px;
+    font-size: 30px;
+  }
+
+  /* Sushi question */
+  .sushi-label {
+    font-size: 40px;
+  }
+
+  .sushi-select {
+    height: 60px;
+    font-size: 30px;
+  }
+
+  /* Ingredient question */
+  .fieldset {
+    margin: 30px 0;
+    padding: 0 60px;
+  }
+
+  .legend {
+    font-size: 40px;
+    margin: 20px 0;
+  }
+
+  .ingredient-label {
+    font-size: 30px;
+    margin: 3px 3px;
+  }
+
+  /* Summary */
+  .summary-container .container p {
+    font-size: 40px;
+  }
 }
 
-
 @media (min-width: 1025px) {
+  /* Button */
+  .btn {
+    font-size: 35px;
+    margin: 30px 10px 0px 10px;
+  }
 
+  /* First page */
+  .first-page-header {
+    font-size: 60px;
+  }
+
+  .first-page-text {
+    font-size: 40px;
+  }
+
+  /* Name question */
+  .name-label {
+    font-size: 58px;
+  }
+
+  .name-input-text {
+    height: 70px;
+    font-size: 40px;
+  }
+
+  /* Sushi question */
+  .sushi-label {
+    font-size: 58px;
+  }
+
+  .sushi-select {
+    height: 70px;
+    font-size: 40px;
+  }
+
+  /* Ingredient question */
+  .fieldset {
+    margin: 40px 0;
+  }
+
+  .legend {
+    font-size: 58px;
+    margin: 30px 0;
+  }
+
+  .ingredient-label {
+    font-size: 40px;
+    margin: 5px 5px;
+  }
+
+  /* Summary */
+  .summary-container .container p {
+    font-size: 58px;
+  }
 }

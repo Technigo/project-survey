@@ -4,7 +4,7 @@ const Button = ({ stepBtn, setStep, btnTxt }) => {
   return (
     <>
       <input 
-        className="btn button grow"
+        className="btn button"
         type="submit"
         value={btnTxt}    
         onClick={() => setStep(stepBtn)} 

@@ -3,13 +3,11 @@ import React from 'react';
 const Submit = () => {
   return (
     <>
-    <div>
       <input 
-        className="btn submit-button grow"
+        className="btn submit-button"
         type="submit"
         value="Submit"
       />
-    </div>
     </>
   );
 };

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import BlobQuestions from './BlobQuestions';
 import FormButtons from './FormButtons';
+import Submit from './Submit';
 
 const ingredients = ["salmon", "tuna", "shrimp", "crabstick", "avocado", "egg"]; 
 
@@ -14,31 +14,33 @@ const IngredientQuestion = ({ ingredient, callbackOnChange, step, setStep }) => 
   return (
     <>
       <div className="ingredient-container">
-        <div className="container">
-          <BlobQuestions />
-          <fieldset>
-            <legend>Favourite ingredient in sushi?</legend>
+        <fieldset className="fieldset">
+          <legend className="legend">Favourite ingredient in sushi?</legend>
 
-            {ingredients.map((ingred) => (
-              <label key={ingred} htmlFor={ingred}>
-                <input 
-                  id={ingred}   
-                  type="radio"
-                  value={ingred}
-                  onChange={handleIngredientChange}
-                  name="ingredient"
-                  checked={ingred === ingredient}
-                  required 
-                />
-                {ingred}
-              </label>
-            ))}
-          </fieldset>
-          <FormButtons 
-            step={step}
-            setStep={setStep}
-          />
-        </div>
+          {ingredients.map((ingred) => (
+            <label
+              className="ingredient-label" 
+              key={ingred} 
+              htmlFor={ingred}
+            >
+              <input 
+                id={ingred}   
+                type="radio"
+                value={ingred}
+                onChange={handleIngredientChange}
+                name="ingredient"
+                checked={ingred === ingredient}
+                required 
+              />
+              {ingred}
+            </label>
+          ))}
+        </fieldset>
+        <FormButtons 
+          step={step}
+          setStep={setStep}
+        />
+        <Submit />
       </div>
     </>
   );

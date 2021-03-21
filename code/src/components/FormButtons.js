@@ -8,6 +8,9 @@ const FormButtons = ({ step, setStep }) => {
   const nextStep = step + 1;
   const previousStep = step - 1;
   
+  // const check = true;
+
+
   return (
     <>
       <div className="buttons-container">
