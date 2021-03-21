@@ -21,7 +21,7 @@ const RecipesFiltering = ({ questionArray, answerArray, resetQuestion }) => {
 
   useEffect(() => {
     fecthData()
-  }, [fecthData])
+  }, [])
 
   return (
 
