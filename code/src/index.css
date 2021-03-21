@@ -61,8 +61,9 @@ input:-webkit-autofill:active {
   margin: 20px 10px 0px 10px;
 }
 
-.btn:hover {
+.btn:hover, .btn:focus {
   background: rgb(255, 195, 113, 0.5);
+  border: solid 2px black;
 }
 
 .button {
@@ -104,8 +105,7 @@ input:-webkit-autofill:active {
 }
 
 .name-label {
-  display: flex;
-  align-self: center;
+  text-align: center;
   font-size: 26px;
   margin: 0px 10px 20px 10px;
 }
@@ -131,8 +131,7 @@ input:-webkit-autofill:active {
 }
 
 .sushi-label {
-  display: flex;
-  align-self: center;
+  text-align: center;
   font-size: 26px;
   margin: 0px 10px 20px 10px;
 }
@@ -146,6 +145,10 @@ input:-webkit-autofill:active {
   background-color: rgb(255, 195, 113, 0.5);
   padding: 0 45px;
   font-size: 20px;
+}
+
+.sushi-select:focus {
+  border: solid 2px black;
 }
 
 /*** INGREDIENT QUESTION ***/

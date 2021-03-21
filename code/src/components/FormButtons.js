@@ -2,14 +2,11 @@ import React from 'react';
 
 import Button from './Button';
 
-let buttonTexts = ["Let's go!", "Next", "Next", "Submit"]; // add "Restart" if I want this function
+let buttonTexts = ["Let's go!", "Next", "Next", "Submit"]; // fix the Submit button + add "Restart" if I want this function
 
 const FormButtons = ({ step, setStep }) => {
   const nextStep = step + 1;
   const previousStep = step - 1;
-  
-  // const check = true;
-
 
   return (
     <>
