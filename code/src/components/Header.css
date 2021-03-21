@@ -78,44 +78,43 @@
   /* MEDIA QUERY DESKTOP */
   @media only screen and (min-width: 992px) {
 
-    .header {
-      height: 47rem;
-    }
+  .header {
+    height: 47rem;
+  }
 
-    .stockholm-heading {
-      font-size: 3.9rem;
-    }
+  .stockholm-heading {
+   font-size: 3.9rem;
+  }
 
-    .live-music-heading {
-      font-size: 6.3rem;
-      margin: 10px 0 0 0
-    }
+  .live-music-heading {
+    font-size: 6.3rem;
+    margin: 10px 0 0 0
+  }
 
-    .survey-heading {
-      font-size: 3.9rem;
-    }
+  .survey-heading {
+    font-size: 3.9rem;
+  }
 
-    .greeting {
-      font-size: 3rem;
-    }
+  .greeting {
+    font-size: 3rem;
+  }
 
-    .survey-info {
-      font-size: 1.7rem;
-      margin: 2rem 18rem 0rem 18rem;
-    }
-    }
+  .survey-info {
+    font-size: 1.7rem;
+    margin: 2rem 18rem 0rem 18rem;
+  }
+  }
 
     /* MEDIA QUERY BIGGER DESKTOP */
 
-    @media only screen and (min-width: 1200px) {
+  @media only screen and (min-width: 1200px) {
 
-      .header {
-        height: 45rem;
-      }
+  .header {
+    height: 45rem;
+  }
 
-      .survey-info {
-        font-size: 1.7rem;
-        margin: 2rem 26rem 0rem 26rem;
-      }
-    }
+  .survey-info {
+    margin: 2rem 26rem 0rem 26rem;
+  }
+  }
 

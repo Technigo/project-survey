@@ -11,7 +11,7 @@ import Summary from './Summary';
 
 import './Form.css'
 
-const Form = () => {
+  const Form = () => {
 
   const [inputName, setInputName] = useState('');
   const [genre, setGenre] = useState('');
@@ -28,23 +28,24 @@ const Form = () => {
   };
 
   return (
+
     <>
     {! showSummary ? (
-       <section className="main-wrapper">
-       <Textfield inputName = {inputName} setInputName = {setInputName} />
-       <Dropdown1 genre = {genre} setGenre = {setGenre} />
-       <Dropdown2 cost = {cost} setCost = {setCost} />
-       <Radiobuttons1 selectBigVenue = {selectBigVenue} setSelectBigVenue = {setSelectBigVenue} />
-       <Radiobuttons2 selectMidVenue = {selectMidVenue} setSelectMidVenue = {setSelectMidVenue} />
-       <Radiobuttons3 selectSmallVenue = {selectSmallVenue} setSelectSmallVenue = {setSelectSmallVenue} />
-       <RangeSlider range = {range} setRange = {setRange} /> 
-       <section className="submit-section">
-        <button className="submit-button" type="submit" onClick={ handleSubmit }>
-          <h4>SEND US YOUR ANSWERS 
-          </h4>
-          </button>
-       </section>
-   
+        <section className="main-wrapper">
+          <Textfield inputName = {inputName} setInputName = {setInputName} />
+          <Dropdown1 genre = {genre} setGenre = {setGenre} />
+          <Dropdown2 cost = {cost} setCost = {setCost} />
+          <Radiobuttons1 selectBigVenue = {selectBigVenue} setSelectBigVenue = {setSelectBigVenue} />
+          <Radiobuttons2 selectMidVenue = {selectMidVenue} setSelectMidVenue = {setSelectMidVenue} />
+          <Radiobuttons3 selectSmallVenue = {selectSmallVenue} setSelectSmallVenue = {setSelectSmallVenue} />
+          <RangeSlider range = {range} setRange = {setRange} /> 
+
+          <section className="submit-section">
+            <button className="submit-button" type="submit" onClick={ handleSubmit }>
+              <h4>SEND US YOUR ANSWERS 
+              </h4>
+            </button>
+          </section>
        </section>
 
     ): (<Summary 
@@ -55,7 +56,6 @@ const Form = () => {
       selectMidVenue = {selectMidVenue} 
       selectSmallVenue = {selectSmallVenue} 
       range = {range} />
-     
     )}
     </>
   )

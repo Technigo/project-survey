@@ -26,6 +26,7 @@
   justify-content: center;
 }
 
+
 .end-message {
   position: absolute;
   top: 768px;
@@ -61,23 +62,27 @@
   @media only screen and (min-width: 992px) {
 
     .summary {
-      top: 705px;
-      display: flex;
-    flex-flow: wrap;
+    top: 705px;
+    display: block;
     padding: 44px;
     margin: 47px;
     }
-
-  
 }
 
 /* MEDIA QUERY BIGGER DESKTOP */
 
 @media only screen and (min-width: 1200px) {
 
+  .summary-container {
+    display: flex;
+    justify-content: center;
+  }
+
   .summary {
   margin: 47px 110px 47px 110px;
   }
 
-
+  .summary-text {
+    font-size: 1rem;
+  }
 }

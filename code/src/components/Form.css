@@ -1,4 +1,5 @@
 .submit-section {
+z-index: 1;
   display: flex;
   justify-content: center;
   background: rgb(12, 12, 12);
@@ -33,16 +34,16 @@
   @media only screen and (min-width: 992px) {
 
   .submit-section {
-     height: 10vh;
-     padding-top: 16px;
-   }
+    height: 10vh;
+    padding-top: 16px;
+  }
 
   .submit-button {
     height: 6vh;
     width: 17rem;
     display: flex;
     justify-content: center;
-    }
+  }
 }
 
 /* MEDIA QUERY BIGGER DESKTOP */
