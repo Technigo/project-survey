@@ -7,7 +7,7 @@ export const Heading = () => {
 
     return(
         <div className="questions-container">
-            < h1 className="main-titel"> Face It!?!</h1>
+            < h1 className="main-titel"> Face It!</h1>
         </div>  
     );
 };

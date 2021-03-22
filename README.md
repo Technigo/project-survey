@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This weeks project was to build create a survey site using React. With useState and diffrent components.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The user should be able to file in the servey and get a repons. I have choosed to build a servey about how you look and then give the summary as a collage of pictures instead of texts.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+No problem realy.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://face-survey-ylva-landoff-lindberg.netlify.app/

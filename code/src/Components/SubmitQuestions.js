@@ -9,7 +9,7 @@ export const SubmitQuestions = ({submit, setSubmit}) => {
             <input 
             className="submit-btn" 
             type="submit" 
-            value="submit" 
+            value="Face it now?" 
             onClick={(e) => onSetSubmit(e)}
             />
         </div>  
