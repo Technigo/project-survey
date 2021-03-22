@@ -2,7 +2,7 @@ import React from 'react';
 
 import './TextField.css'
 
-const Textfield = ({ inputName, setInputName }) => {
+const TextField = ({ inputName, setInputName }) => {
 
   return (
 
@@ -21,4 +21,4 @@ const Textfield = ({ inputName, setInputName }) => {
   );
 };
 
-export default Textfield;
+export default TextField;
