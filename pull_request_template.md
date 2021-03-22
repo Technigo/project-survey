@@ -15,5 +15,3 @@ I think the project's OK, but I had to redo some things when I deployed it and t
 Things I'd like to have clarified or explained in more detail:
 
 I have read about the accessibility again but I'm still not sure what is best practice. If I don't add tabIndex='0' to my h:es and p:s I can't get the screen reader to read them, but I don't find any info about it being necessary to do tabIndex to elements like this.
-
-I can't get the flexbox in the summary section to work when deployed and viewed on iPhone.

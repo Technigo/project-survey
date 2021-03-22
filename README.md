@@ -21,8 +21,6 @@ After I was done I also tried to create a component with the OK button, which wo
 
 The site it tested for web accessibility (colors and semantics) and you can tab through it and the screen reader reads all the text.
 
-! There's an issue with flex in the summary and it's not working when looking at the deployed site on an iPhone. Need to fix !
-
 ## View it live
 
 https://job-connect-form.netlify.app/
