@@ -1,5 +1,5 @@
-import React, { useState } from 'react'
-// import React from 'react'
+import React from 'react'
+
 
 const QuestionOne = ({ name, setName }) => {
 

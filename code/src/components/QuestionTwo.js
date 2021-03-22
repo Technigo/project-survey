@@ -8,7 +8,7 @@ const QuestionTwo = ({ size, setSize }) => {
 
     return (
         <>
-            <section className="dropdown-size">
+            <section>
                 <label htmlFor="size"></label>
                 <select
                     id="size"

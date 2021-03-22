@@ -1,6 +1,4 @@
-// import React, { useState } from 'react'
 import React from 'react'
-import Form from './Form'
 
 const Summary = ({ name, size, flower }) => {
     return (
