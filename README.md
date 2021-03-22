@@ -1,13 +1,18 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks assignment was to build a survey using React. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started this project deciding on a witchy theme, then I continued by looking for fonts and background images on Pixabay and Google Fonts. I decided I wanted a form with multiple steps where each step represented a new page. I started adding the components for each input type and applied logic to show them separately. I considered re-using a component for question 1 and 4 but ended up creating two different components (it didn't work out using one and time was running low). 
+
+If I had more time I would have added a function that allowed the user to go back to the previous questions. Some validaton for the inputs would have been nice as well.
+
+Technologies used: CSS, JSX, React, hooks, UseState, components.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://witchy-survey.netlify.app/
+
+
+
