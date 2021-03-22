@@ -193,7 +193,7 @@ button{
 }
 @media (min-width:1024px){
   body{
-    font-size: 40px;
+    font-size: 30px;
   }
   .title{
     font-size: 4.5rem;
@@ -249,7 +249,7 @@ button{
 }
 @media (min-width:1366px){
   body{
-    font-size: 40px;
+    font-size: 35px;
   }
   .title{
     font-size: 4.5rem;
@@ -301,7 +301,7 @@ button{
   
 }@media(min-width:1920px){
   body{
-    font-size: 35px;
+    font-size: 30px;
   }
   .image-container{
     width: auto;
