@@ -292,6 +292,12 @@ button{
   }
   .traker{
     width: 50%;}
+
+  @media(min-width:1600px){
+    html {
+    font-size: 30px;
+    }
+  }
   
 }@media(min-width:1920px){
   body{
