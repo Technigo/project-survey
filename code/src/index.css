@@ -55,6 +55,7 @@ code {
   height: 30px;
   border: none;
   background-color: black;
+  cursor: pointer;
 }
 
 .wrapper {
@@ -91,7 +92,13 @@ code {
   font-size: 35px;
   color: gray;
   text-align: center;
+  cursor: pointer;
 }
+
+.text-input {
+  cursor: text;
+}
+
 .submit-btn,
 .reload-btn {
   display: inline-block;
