@@ -1,6 +1,6 @@
 import React from 'react';
 
-import './Textfield.css'
+import './TextField.css'
 
 const Textfield = ({ inputName, setInputName }) => {
 

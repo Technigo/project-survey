@@ -5,6 +5,7 @@ import './Dropdown1.css'
   const Dropdown1 = ({ genre, setGenre}) => {
 
   return (
+    
     <form className="dropdown-genre">
       <label className="genre-heading" htmlFor="genre" tabIndex="0">What is your favourite live music genre?</label>
         <select
