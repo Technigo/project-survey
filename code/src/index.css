@@ -143,7 +143,7 @@ button{
 }
 @media (min-width:768px){
   body{
-    font-size: 30px;
+    font-size: 25px;
   }
   .title{
     font-size: 3.5rem;
@@ -193,7 +193,7 @@ button{
 }
 @media (min-width:1024px){
   body{
-    font-size: 30px;
+    font-size: 25px;
   }
   .title{
     font-size: 4.5rem;
