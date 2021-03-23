@@ -12,6 +12,8 @@ code {
     monospace;
 }
 
+/* Survey Form */
+
 main {
   display: flex;
   justify-content: center;
@@ -62,7 +64,7 @@ main {
   background: lightgray;
   padding: 10px;
   margin-top: 20px;
-  width: 90%
+  width: 100%;
 }
 
 .input-field:focus {
@@ -90,12 +92,31 @@ main {
   background: #00bf6f;
   border: none;
   border-radius: 5px;
-  width: 80%;
+  width: 100%;
   justify-self: center;
 }
 
 .submit-button:focus {
   outline: none;
+}
+
+/* Survey Summary */
+
+.answer {
+  font-weight: bold;
+  color: #444;
+  padding: 0 0 40px 40px;
+}
+
+.end-phrase {
+  color: #00bf6f;
+  font-family: Oxygen, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 1.25;
+  width: 90%;
+  margin-top: 40px;
 }
 
 @media only screen and (min-width: 768px) {
@@ -104,8 +125,8 @@ main {
     width: 60%;
   }
 
-  .select-field, .input-field {
-    width: 60%;
+  .select-field, .input-field, .question {
+    width: 100%;
   }
 }
 
@@ -115,7 +136,11 @@ main {
     width: 40%;
   }
 
+  .select-field, .input-field {
+    width: 60%;
+  }
+
   .submit-button {
-    width: 50%;
+    width: 20%;
   }
 }
