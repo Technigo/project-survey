@@ -256,19 +256,19 @@ button{
   }
   .main-section img{
     width: auto;
-    height: 20rem;
+    height: 18rem;
   }
   button{
     font-size: 3rem;
-    width: 16rem;
-    height: 7rem;
+    width: 14rem;
+    height: 6rem;
   }
   .traker{
-    height: 3.5rem;
+    height: 2.5rem;
   }
   .progress{
-    width: 18rem;
-    height: 3.2rem;
+    width: 16rem;
+    height: 2.2rem;
   }
   .select{
     height: 2rem;
