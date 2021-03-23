@@ -33,8 +33,12 @@ const WorkArea = ({ workArea, setWorkArea }) => {
                 className='okButton'
                 type='button'
                 onClick={(e) =>{
+                    if (workArea) {
                     e.preventDefault();
                     window.location.href='#place'
+                    } else {
+                        alert('Please choose what kind of job you\'re interested in.')
+                    }
                 }}>OK
                 </button>
 

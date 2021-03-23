@@ -15,12 +15,12 @@ const Email = ({ email, setEmail }) => {
                 
                 <label htmlFor='email'>
                 <input
-                className='emailInput'
-                id='email'
-                type='email'
-                onChange={onEmailChange}
-                value={email}
-                placeholder='name@email.com'
+                    className='emailInput'
+                    id='email'
+                    type='email'
+                    onChange={onEmailChange}
+                    value={email}
+                    placeholder='name@email.com'
                 />
                 </label>
 
@@ -28,8 +28,12 @@ const Email = ({ email, setEmail }) => {
                 className='okButton'
                 type='button'
                 onClick={(e) =>{
+                    if (email.includes('@')) {
                     e.preventDefault();
                     window.location.href='#workArea'
+                    } else {
+                        alert('Please add a valid email adress.')
+                    }
                 }}>OK</button>
 
             </div>

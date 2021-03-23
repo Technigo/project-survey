@@ -17,53 +17,53 @@ const Place = ({ place, setPlace }) => {
 
                     <div>
                         <input
-                        name={place}
-                        id='la'
-                        value='Los Angeles'
-                        type='radio'
-                        onChange={onPlaceChange}
+                            name={place}
+                            id='la'
+                            value='Los Angeles'
+                            type='radio'
+                            onChange={onPlaceChange}
                         />
                         <label htmlFor='la' className='radioLabel'>Los Angeles</label>
                     </div>
 
                     <div>
                         <input
-                        name={place}
-                        id='tokyo'
-                        value='Tokyo'
-                        type='radio'
-                        onChange={onPlaceChange}
+                            name={place}
+                            id='tokyo'
+                            value='Tokyo'
+                            type='radio'
+                            onChange={onPlaceChange}
                         />
                         <label htmlFor='tokyo' className='radioLabel'>Tokyo</label>
                     </div>
 
                     <div>
                         <input
-                        name={place}
-                        id='stockholm'
-                        value='Stockholm'
-                        type='radio'
-                        onChange={onPlaceChange}
+                            name={place}
+                            id='stockholm'
+                            value='Stockholm'
+                            type='radio'
+                            onChange={onPlaceChange}
                         />
                         <label htmlFor='stockholm' className='radioLabel'>Stockholm</label>
                     </div>
 
                     <div>
                         <input
-                        name={place}
-                        id='berlin'
-                        value='Berlin'
-                        type='radio'
-                        onChange={onPlaceChange}
+                            name={place}
+                            id='berlin'
+                            value='Berlin'
+                            type='radio'
+                            onChange={onPlaceChange}
                         />
                         <label htmlFor='berlin' className='radioLabel'>Berlin</label>
                     </div>
 
                     <div className='submitButtonContainer'>
                         <input
-                        type='submit'
-                        className='submitButton'
-                        value='Submit your answers'>
+                            type='submit'
+                            className='submitButton'
+                            value='Submit your answers'>
                         </input>
                     </div>
                 </div>
