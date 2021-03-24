@@ -1,4 +1,7 @@
+/*Outer Dependencies*/
 import React, { useState } from "react";
+
+/*Local Dependencies*/
 import { Header } from "./components/Header";
 import { InputAdditional } from "./components/InputAdditional";
 import { InputType } from "components/InputType";
@@ -12,19 +15,22 @@ export const App = () => {
   // Set state of my input-components
   const [type, setType] = useState(" ");
   const [room, setRooms] = useState(" ");
-  const [price, setPrice] = useState();
-  const [additional, setAdditional] = useState("");
+  const [price, setPrice] = useState(" ");
+  const [additional, setAdditional] = useState(" ");
 
   // Functions to get the input from my components lifted to the App.js
   const updateTypeState = (event) => {
     setType(event.target.value);
   };
+
   const updateRoomState = (event) => {
     setRooms(event.target.value);
   };
+
   const updatePriceState = (event) => {
     setPrice(event.target.value);
   };
+
   const updateAdditionalState = (event) => {
     setAdditional(event.target.value);
   };
