@@ -61,7 +61,7 @@ const defaultUserCreateValues = () => {
       setStep(1)
 
 
-
+      break
       default :
       return 
     }
@@ -196,7 +196,7 @@ const defaultUserCreateValues = () => {
         id="save"
         value="save"
         label="Save"
-        onClick={(e) => userCreateButtonResponse(userQuestion, e.target.id)}>Save
+        onClick={(e) => userCreateButtonResponse(userQuestion, e.target.id)}>Save question
       </button>
       }
       { userQuestions.length &&

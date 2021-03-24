@@ -15,16 +15,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
   color: var(--dark-grey-color);
   font-family: var(--font-primary);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  monospace;
 }
 
 
@@ -40,14 +37,25 @@ code {
 }
 
 main {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
   max-width: 800px;
   width: 70vw;
   min-height: 300px;
-  position: absolute;
-  bottom: 30%;
+  /* position: absolute; */
+  /* bottom: 30%; */
   left: 50%;
-  transform: translateX(-50%);
+  transform: translateX(-0%);
   margin: 0 auto;
+  margin-top: 10%;
+
 }
 
 .question-number {
@@ -59,7 +67,7 @@ main {
 
 .question-text {
   margin: 30px 0;
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1.4;
   font-size: 20px;
 }
@@ -90,7 +98,7 @@ main {
 
 .button {
   outline: none;
-  margin-right: 24px;
+  margin: 0 24px 24px 0;
   height: 44px;
   padding: 0 16px;
   min-width: 112px;
@@ -130,15 +138,15 @@ main {
 
 #createNew.button {
   position: fixed;
-  bottom: -22vh;
-  right: -10vw;
+  bottom: -10px;
+  right: 0;
   height: 30px;
   color: var(--light-grey-color);
   border: 1px solid var(--light-grey-color);
   font-size: 16px;
   font-weight: 400;
   line-height: 1.5;
-  transform: translate(0, 100%);
+  transform: translate(0, -100%);
   /* width: 300px; */
   /* margin-top: 100px; */
 }

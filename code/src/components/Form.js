@@ -12,7 +12,7 @@ const defaultValues = () => {
     isMyRealName: '',
     Capacity: '',
     Rating: '',
-    howImpressedByUnfinishedFeature: '',
+    howImpressedByBonusFeature: '',
   }
 }
 
@@ -144,7 +144,7 @@ const Form = () => {
           </form>
           <Button 
               buttonValue="createNew"
-              label="I want to create my own survey"
+              label="Create survey"
               onButtonResponse={(e) => onButtonResponse(e)} />
         </>
       )
