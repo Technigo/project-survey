@@ -72,7 +72,7 @@ const Form = () => {
             return false
         }
     
-        return true;
+        return true
     }
 
     const handleSubmit = (event) => {

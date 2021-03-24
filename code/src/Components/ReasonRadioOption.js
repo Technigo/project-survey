@@ -2,7 +2,6 @@ import React from 'react'
 
 export const ReasonRadioOption = ({ reasonForTravelName, setReasonForTravel }) => {
     const onReasonForTravelChanged = (event) => {
-        console.log(`Completed the task: ${event.target.value}`)
         setReasonForTravel(event.target.value)
     }
 
