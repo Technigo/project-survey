@@ -22,25 +22,25 @@ const defaultQuestions = () => {
       { 
         type: 'textInput',
         options: '',
-        questionText: "Hey there! Thanks for checking out my survey project! I hope you will like it, I'm pretty pleased with it myself. Now that you are here - please fill out your name.",
+        questionText: "Hey there! Thanks for checking out my survey project, I hope you will like it. Let's start with your name.",
         placeholder: 'Type your name',
-        required: true,
+        required: false,
         inputId: 'Name', 
       },
       { 
         type: 'radio',
         options: ['Yes', 'No'],
-        questionText: "Thanks a lot for filling out your name. Or wait, maybe you just typed something silly? That is fine - I do that all the time. Or did you actually write your name?",
+        questionText: "Thanks a lot for filling out your name. Or wait, maybe you just typed something silly? That is fine - completely normal behaviour. Or did you actually write your name?",
         placeholder: '',
         required: true,
         inputId: 'isMyRealName', 
       },
       { 
         type: 'checkboxes',
-        options: ['Prestigeous tech recruiter', 'Enigmatic CEO-type person', 'Code-reviewer', 'Technigo staff', "Random person", "Russian bot"],
-        questionText: 'In what capacity are you visiting this survey right now?',
+        options: ['Founder of charitable yet lucrative startup on verge of success', 'Enigmatic CEO-type person in search of frontend devloper', 'Prestigeous tech recruiter', 'Code-reviewer', 'Technigo staff', "Random person", "Russian bot"],
+        questionText: 'In what capacity are you visiting my survey today?',
         placeholder: 'Select your age',
-        required: true,
+        required: false,
         inputId: 'Capacity', 
       },
       { 
@@ -53,11 +53,11 @@ const defaultQuestions = () => {
       },
       { 
         type: 'select',
-        options: ['Awesome job!', 'Sounds nice', "A for effort but 'nära skjuter ingen hare'", 'Sorry, no'],
-        questionText: 'If i told you that i ALMOST (like 90%!) managed to code this site in a way so that you can also create your own set of questions - would you be impressed?',
+        options: ['Wow, yes awesome job!', 'Sounds nice', 'I feel neutral about it', 'Sorry, no'],
+        questionText: 'Ok. You know, this site can not only show this survey - it also allows you to create your own survey. Just click that grey button in the bottom right corner. See it? Are you impressed?',
         placeholder: 'Choose an answer',
-        required: true,
-        inputId: "howImpressedByUnfinishedFeature", 
+        required: false,
+        inputId: "howImpressedByBonusFeature", 
       
       }
     ] 
@@ -69,12 +69,6 @@ const Form = () => {
   const [step, setStep] = useState(1)
   const [formStatus, setFormStatus] = useState('question')
   const [formQuestions, setFormQuestions] = useState(defaultQuestions())
-  // const [userValues, setUserValues] = useState([])
-  // const [userQuestions, setUserQuestions] = useState({})
-  // const [userCreateStep, setUserCreateStep] = useState(1)
-
-  
-
 
   const onInputResponse = (id, value, type) => {
     console.log('onInputResponse received ' + value + ' from ' + id + ' of type ' + type)
@@ -124,6 +118,7 @@ const Form = () => {
         setValues(defaultValues())
         setStep(1)
         setFormStatus('question')
+        setFormQuestions(defaultQuestions())
         break
 
       case 'createNew' :
@@ -147,10 +142,10 @@ const Form = () => {
           onButtonResponse={onButtonResponse}
           />
           </form>
-          {/* <Button 
+          <Button 
               buttonValue="createNew"
-              label="Create new"
-              onButtonResponse={(e) => onButtonResponse(e)} /> */}
+              label="I want to create my own survey"
+              onButtonResponse={(e) => onButtonResponse(e)} />
         </>
       )
     case 'summary' :
@@ -163,25 +158,23 @@ const Form = () => {
       return (
         <Confirmation onButtonResponse={onButtonResponse} />
       )
-    // case 'createNew' :
-    //   return (
-    //     <CreateQuestions 
-    //     setFormQuestions={setFormQuestions}
-    //     setFormStatus={setFormStatus}
-    //     setValues={setValues}
-    //     values={values}
-    //     />
-    //   )
+    case 'createNew' :
+      return (
+        <CreateQuestions 
+        setFormQuestions={setFormQuestions}
+        setStep={setStep}
+        setFormStatus={setFormStatus}
+        setValues={setValues}
+        defaultValues={defaultValues}
+        defaultQuestions={defaultQuestions}
+        values={values}
+        />
+      )
     default :
-    console.log(formStatus)
-    console.log(step)
-    console.log(JSON.stringify(values, null, 2))
     return (
-      <p>Oops!</p>
+      <p>Error! Invalid formStatus</p>
     )
-
   }
-  
 }
 
 export default Form

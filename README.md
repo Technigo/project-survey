@@ -10,9 +10,9 @@ I started by making the questions appear all at the same time, once i got that w
 
 The main problems that i still have to work out are:
 
-1 - when you create a question with answer options (like a select, radiobuttons, or checkboxes) - those values need to be stored as an array. The user types the different options in as comma separated text. I have figured out how to turn that string into an array, but the problem is inserting it back into the questions variable. I'm still not friends with the spread operator :)
+1 - when you create a question with answer options (like a select, radiobuttons, or checkboxes) - those values need to be stored as an array. The user types the different options in as comma separated text. I have figured out how to turn that string into an array, but the problem is inserting it back into the questions variable. I'm still not friends with the spread operator :) --check!
 
-2 - when all the user-created questions are done and stored in the userQuestions array of objects, i need to create a sort of "container" object (state object "values") where the responses can later be stored. For each user created question, the "inputId" value should become a key in the "values" object. I don't know how to do that, and also i'm not sure it is the right approach. 
+2 - when all the user-created questions are done and stored in the userQuestions array of objects, i need to create a sort of "container" object (state object "values") where the responses can later be stored. For each user created question, the "inputId" value should become a key in the "values" object. I don't know how to do that, and also i'm not sure it is the right approach. --check!
 
 This function is disabled at the moment (commented out in Form.js 150-153 and 166-174, and the component itself is CreateQuestions.js
 
@@ -23,3 +23,10 @@ Overall i'm very happy with the project, i feel like i gave it my best shot and 
 ## View it live
 
 https://survey-kitten.netlify.app/
+
+
+
+### todo
+validate options values - check!
+css bug
+

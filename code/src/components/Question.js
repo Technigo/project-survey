@@ -7,8 +7,15 @@ import Checkboxes from './Checkboxes'
 import RadioButtons from './RadioButtons'
 
 const Question = (props) => {
+  
   let { values, step, question, onInputResponse, onButtonResponse } = props
   let value = values[question.inputId]
+  const showNext = (value) => {
+    return value || !question.required
+  }
+
+  console.log('values: ' + JSON.stringify(values, null, 2))
+
   switch (question.type) {
     case 'textInput' :
       return (
@@ -29,7 +36,7 @@ const Question = (props) => {
             onButtonResponse={onButtonResponse} />
           }
 
-          {value && 
+          {showNext(value) && 
             <Button 
             buttonValue="next" 
             label="Next" 
@@ -56,7 +63,7 @@ const Question = (props) => {
             onButtonResponse={onButtonResponse} />
           }
 
-          {value && 
+          {showNext(value) && 
             <Button 
             buttonValue="next" 
             label="Next" 
@@ -83,7 +90,7 @@ const Question = (props) => {
             onButtonResponse={onButtonResponse} />
           }
 
-          {value.length > 0 && 
+          {showNext(value.length) && 
             <Button 
             buttonValue="next" 
             label="Next" 
@@ -110,7 +117,7 @@ const Question = (props) => {
             onButtonResponse={onButtonResponse} />
           }
 
-          {value.length > 0 && 
+          {showNext(value.length) && 
             <Button 
             buttonValue="next" 
             label="Next" 
@@ -120,13 +127,11 @@ const Question = (props) => {
       )
     default :
     console.log(question.type)
-    // console.log(formStatus)
     console.log(step)
     console.log(JSON.stringify(values, null, 2))
-
-      return (
-        <p>Oops! 1</p>
-      )
+    return (
+      <p>Error! question.type is invalid </p>
+    )
   }
 }
 

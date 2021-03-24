@@ -9,7 +9,7 @@ const Checkboxes = (props) => {
       {options.map((option, index) => {
         return (
           <div key={index} className="checkbox">
-            <label htmlFor={option}>
+            <label>
             <input 
             className="check"
             type="checkbox" 

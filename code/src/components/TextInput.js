@@ -2,8 +2,6 @@ import React from 'react'
 
 const TextInput = (props) => {
   const { label, inputId, values, placeholder, onInputResponse } = props
-  console.log(values)
-  console.log(inputId)
   return (
     <div className="question text">
       <label className="question-text" htmlFor={inputId}>{label}</label>
