@@ -32,7 +32,7 @@ const Email = ({ email, setEmail }) => {
                     e.preventDefault();
                     window.location.href='#workArea'
                     } else {
-                        window.confirm('Please add a valid email adress.')
+                        window.alert('Please add a valid email adress.')
                     }
                 }}>OK</button>
 

@@ -37,7 +37,7 @@ const WorkArea = ({ workArea, setWorkArea }) => {
                     e.preventDefault();
                     window.location.href='#place'
                     } else {
-                        window.confirm('Please choose what kind of job you\'re interested in.')
+                        window.alert('Please choose what kind of job you\'re interested in.')
                     }
                 }}>OK
                 </button>
