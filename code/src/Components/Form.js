@@ -4,8 +4,8 @@ import { Header } from './Header'
 import { TaskRadioOption } from './TaskRadioOption'
 import { ReasonRadioOption } from './ReasonRadioOption'
 
-const completedTasks = ['Yes', 'No']
-const reasonForTravels = ['Business', 'Personal', 'Other']
+const completedTasks = ['Yes', 'No'] // Question 3
+const reasonForTravels = ['Business', 'Personal', 'Other'] // Question 6
 
 const Form = () => {
     const [timeSinceVisit, setTimeSinceVisit] = useState('')
@@ -17,29 +17,28 @@ const Form = () => {
     const [likeToShare, setLikeToShare] = useState('')
     const [surveyComplete, setSurveyComplete] = useState(false)
 
-
+    // Question 1 
     const onTimeSinceVisitChanged = (event) => {
-        console.log(`Time since last visit: ${event.target.value}`)
         setTimeSinceVisit(event.target.value)
     }
 
+    // Question 2
     const onReasonForVisitChanged = (event) => {
-        console.log(`Reason for visit: ${event.target.value}`)
         setReasonForVisit(event.target.value)
     }
 
+    // Question 4
     const onLikeAboutAppChanged = (event) => {
-        console.log(`Like about app: ${event.target.value}`)
         setLikeAboutApp(event.target.value)
     }
 
+    // Question 5
     const onChangeAboutAppChanged = (event) => {
-        console.log(`Change about app: ${event.target.value}`)
         setChangeAboutApp(event.target.value)
     }
 
+    // Question 7
     const onLikeToShareChanged = (event) => {
-        console.log(`Share about app: ${event.target.value}`)
         setLikeToShare(event.target.value)
     }
 
@@ -80,7 +79,6 @@ const Form = () => {
         
         if (isSurveyComplete()) {
             setSurveyComplete(true)
-            console.log(`Survey Complete!`)
         } else {
             alert('Please answer all the questions')
         }
