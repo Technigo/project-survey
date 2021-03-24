@@ -100,7 +100,7 @@ const defaultUserCreateValues = () => {
   console.log('userQuestionIsReady:' + userQuestionIsReady())
 
   return (
-    <div className="create-question">
+    <form className="create-question">
       <h1 className="question-number">Question #{userCreateStep}</h1>
       <h3>Question topic</h3>
       <input 
@@ -111,7 +111,7 @@ const defaultUserCreateValues = () => {
         autoComplete="off"
         // label="What is this question about? Oh and - sorry, but no spaces allowed here"
         value={userQuestion.inputId}
-        placeholder="Type question name here"
+        placeholder="No spaces allowed for topic (sorry)"
         onChange={(e) => {
           userCreateInputResponse(e.target.value, e.target.id)}
         }
@@ -215,7 +215,7 @@ const defaultUserCreateValues = () => {
         onClick={(e) => userCreateButtonResponse(userQuestions, e.target.id)}>
           Cancel
         </button>
-    </div>
+    </form>
   )
 }
 

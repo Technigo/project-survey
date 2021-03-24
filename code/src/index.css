@@ -34,6 +34,8 @@ code {
   --pink-color: #FB538F;
   --font-primary: 'Roboto', sans-serif;
   --font-secondary: 'Playfair Display', serif;
+  width: 100%;
+
 }
 
 main {
@@ -47,8 +49,9 @@ main {
 
 form {
   max-width: 800px;
-  width: 70vw;
+  width: auto;
   min-height: 300px;
+  padding: 0 16px;
   /* position: absolute; */
   /* bottom: 30%; */
   left: 50%;
@@ -69,7 +72,7 @@ form {
   margin: 30px 0;
   font-weight: 500;
   line-height: 1.4;
-  font-size: 20px;
+  font-size: 16px;
 }
 .input {
   display: block;
@@ -81,9 +84,9 @@ form {
   background: none;
   font-family: var(--font-secondary);
   font-weight: 600;
-  font-size: 36px;
+  font-size: 20px;
   color: var(--dark-grey-color);
-  padding: 4px 0;
+  padding: 0;
 }
 
 .input:focus,
@@ -147,6 +150,7 @@ form {
   font-weight: 400;
   line-height: 1.5;
   transform: translate(0, -100%);
+  
   /* width: 300px; */
   /* margin-top: 100px; */
 }
@@ -172,6 +176,10 @@ form {
   height: auto;
 }
 
+.create-question {
+  width: 100%;
+}
+
 .create-question .input.text,
 .create-question .input.select {
   height: 28px;
@@ -185,6 +193,7 @@ form {
   margin-top: 44px;
   margin-bottom: 4px;
   font-weight: 500;
+
 }
 
 .create-question h1 {
@@ -221,4 +230,24 @@ form {
 
 .check {
   margin: 8px 8px 8px 0;
+}
+
+/* BREAKPOINTS */
+
+@media (min-width: 600px) {
+  .input {
+    font-size: 36px;
+    padding: 4px 0;
+  }
+
+  form {
+    width: 70vw;
+  }
+
+  .question-text {
+    font-size: 20px;
+  }
+  
+  
+  
 }
