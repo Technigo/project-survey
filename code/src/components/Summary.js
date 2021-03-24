@@ -33,7 +33,7 @@ export const Summary = (props) => {
 
         <h1>
           Your score is {score} of 6
-          {score === 6 ? " Wow! You are a true GOTTER!" : ""}
+          {score === 6 ? " Wow! You are a true Fan!" : ""}
         </h1>
         <hr />
         <div className="qa">

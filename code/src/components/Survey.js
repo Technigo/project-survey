@@ -11,8 +11,8 @@ const favSongs = ["Holiday Song", "Smelly Cat", "Sticky Shoes", "Jingle Bitch"]
 const reasons = ["Rachel fell in love with her boss", "They didn't love each other anymore ", "Rachel had to move to Paris ", "Rachel was too busy with work to pay attention to Ross"]
 // Made an object for all the question, because I wanted to show them in Summary as well
 const questions = {
-  q1: "How many times have Sansa been married?",
-  q2: "What does Hodor stand for?",
+  q1: "How many times have Ross been married?",
+  q2: "Where did hang out the most?",
   q3: "Where did Monika and Chandler start dating?",
   q4: "What kind of pet did Chandler and Joey have?",
   q5: "Pheobe's famous song?",
@@ -63,7 +63,7 @@ export const Survey = () => {
       {!submitted && (
         <div className="form-wrapper">
           <h2>How well do you remember Friends?</h2>
-          <img src="assets/friends-crew.png" alt="The friends crew" />
+          <img src="./public/assets/photo.jpg" alt="The friends crew" />
           <form onSubmit={handelSubmit} className="form-style">
 
             <div className="question-card">
