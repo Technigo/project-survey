@@ -13,6 +13,7 @@ const Question3 = ( {onInvestmentTypeChange} ) => {
                             name="investmentType"
                             value={item}
                             onChange={(e) => onInvestmentTypeChange(e)}
+                            required
                         />
                         {item}
                      </label>

@@ -10,6 +10,7 @@ const Question1 = ( {name, onNameChange}) => {
             <div>
                 <label htmlFor="name">Name: </label>
                 <input
+                    id='name'
                     type='text'
                     onChange={(e) => onNameChange(e)}
                     required

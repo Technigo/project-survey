@@ -40,6 +40,11 @@ p {
   margin-top: 10px;
 }
 
+input,
+select {
+  padding: 10px;
+}
+
 .money-emoji {
   font-size: 80px;
   margin-top: 90px;

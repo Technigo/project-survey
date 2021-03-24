@@ -19,17 +19,14 @@ const [showSummary, setShowSummary] = useState();
 
 // Event Handlers
 const handleNameChange = (e) => {
-  console.log(e.target.value);
   setName(e.target.value);
 }
 
 const handleInvestmentTermChange = (e) => {
-  console.log(e.target.value);
   setInvestmentTerm(e.target.value);
 }
 
 const handleInvestmentTypeChange = (e) => {
-  console.log(e.target.value);
   setInvestmentType(e.target.value);
 }
 
