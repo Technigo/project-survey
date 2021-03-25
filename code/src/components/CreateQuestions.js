@@ -20,14 +20,11 @@ const defaultUserCreateValues = () => {
 
   // Local event handler for input fields changes
   const userCreateInputResponse = (value, id) => {
-    console.log(`userCreateInputResponse received ${value} from ${id}`)
     setUserQuestion({...userQuestion, [id]: value})
-    
   }
   
   // Local button handler for Save and Done buttons
   const userCreateButtonResponse = (value, id) => {
-    console.log(`userCreateButtonResponse received ${value} from ${id}`)
     switch (id) {
       // When one complete question is saved
       case 'save' :
@@ -95,13 +92,10 @@ const defaultUserCreateValues = () => {
         return true
       } else {return false}
   }
-  console.log('questionTypeNeedsOptions ' + questionTypeNeedsOptions())
-  console.log('optionsReady: ' + optionsReady())
-  console.log('userQuestionIsReady:' + userQuestionIsReady())
 
   return (
     <form className="create-question">
-      <h1 className="question-number">Question #{userCreateStep}</h1>
+      <h1 className="question-number">Let's create question #{userCreateStep}</h1>
       <h3>Question topic</h3>
       <input 
         className="input text"
@@ -109,7 +103,6 @@ const defaultUserCreateValues = () => {
         id="inputId"
         spellCheck="false"
         autoComplete="off"
-        // label="What is this question about? Oh and - sorry, but no spaces allowed here"
         value={userQuestion.inputId}
         placeholder="No spaces allowed for topic (sorry)"
         onChange={(e) => {
@@ -122,7 +115,6 @@ const defaultUserCreateValues = () => {
         className="input text"
         type="text" 
         id="questionText"
-        // label="Your question"
         value={userQuestion.questionText}
         placeholder="Type your question here"
         onChange={(e) => userCreateInputResponse(e.target.value, e.target.id)}
@@ -132,7 +124,6 @@ const defaultUserCreateValues = () => {
       <select 
         type="select"
         className="input select" 
-        label="What kind of question is this?"
         id="type" 
         value={userQuestion.type}
         onChange={(e) => userCreateInputResponse(e.target.value, e.target.id)}
@@ -168,8 +159,8 @@ const defaultUserCreateValues = () => {
         onChange={(e) => userCreateInputResponse(e.target.value, e.target.id)}
       />
       <h3>Is this a required field?</h3>
-      <div>
-      <label>Yes
+      <div className="required">
+      <label>
         <input 
           type="radio" 
           className="input radio create"
@@ -177,9 +168,9 @@ const defaultUserCreateValues = () => {
           name="required" 
           value={true}
           onChange={(e) => userCreateInputResponse(e.target.value, e.target.id)}
-        />
+        />Yes
         </label>
-        <label>No
+        <label>
         <input 
           type="radio" 
           className="input radio create"
@@ -187,7 +178,7 @@ const defaultUserCreateValues = () => {
           name="required" 
           value={false}
           onChange={(e) => userCreateInputResponse(e.target.value, e.target.id)}
-        />
+        />No
         </label>
       </div>
       {userQuestionIsReady() &&

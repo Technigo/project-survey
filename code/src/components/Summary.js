@@ -9,19 +9,20 @@ const Summary = ({ values, onButtonResponse }) => {
       {Object.keys(values).map((key, index) => {
         return (
           <p key={index}><b>{key}</b>: {values[key]}</p>
-          
         )
       })}
 
       <Button 
-      buttonValue="previous" 
-      label="Previous" 
-      onButtonResponse={onButtonResponse} />
+        buttonValue="previous" 
+        label="Previous" 
+        onButtonResponse={onButtonResponse} 
+      />
 
       <Button 
-      buttonValue="submit" 
-      label="Submit" 
-      onButtonResponse={onButtonResponse} />
+        buttonValue="submit" 
+        label="Submit" 
+        onButtonResponse={onButtonResponse} 
+      />
     </div>
   )
 }

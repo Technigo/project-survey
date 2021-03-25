@@ -10,14 +10,15 @@ const RadioButtons = (props) => {
         return (
           <div key={index} className="radiobuttons">
             <input 
-            type="radio" 
-            className="actual-button"
-            defaultChecked={value === option}
-            id={option} 
-            name={inputId}
-            value={value}
-            onChange={(e) => onInputResponse(e.target.name, e.target.id, e.target.type)}
-            key={index} />
+              type="radio" 
+              className="actual-button"
+              defaultChecked={value === option}
+              id={option} 
+              name={inputId}
+              value={value}
+              onChange={(e) => onInputResponse(e.target.name, e.target.id, e.target.type)}
+              key={index} 
+            />
             <label htmlFor={option}>{option}</label>
           </div>
         )

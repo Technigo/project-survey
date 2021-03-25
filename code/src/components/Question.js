@@ -14,8 +14,6 @@ const Question = (props) => {
     return value || !question.required
   }
 
-  console.log('values: ' + JSON.stringify(values, null, 2))
-
   switch (question.type) {
     case 'textInput' :
       return (
@@ -126,9 +124,6 @@ const Question = (props) => {
         </>
       )
     default :
-    console.log(question.type)
-    console.log(step)
-    console.log(JSON.stringify(values, null, 2))
     return (
       <p>Error! question.type is invalid </p>
     )

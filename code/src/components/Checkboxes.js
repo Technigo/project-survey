@@ -10,16 +10,18 @@ const Checkboxes = (props) => {
         return (
           <div key={index} className="checkbox">
             <label>
-            <input 
-            className="check"
-            type="checkbox" 
-            defaultChecked={value.includes(option)}
-            id={inputId} 
-            name={option}
-            value={value}
-            onChange={(e) => onInputResponse(e.target.id, e.target.name, e.target.type)}
-            key={index}></input>
-            {option}</label>
+              <input 
+                className="check"
+                type="checkbox" 
+                defaultChecked={value.includes(option)}
+                id={inputId} 
+                name={option}
+                value={value}
+                onChange={(e) => onInputResponse(e.target.id, e.target.name, e.target.type)}
+                key={index}>
+              </input>
+              {option}
+            </label>
           </div>
         )
       })}

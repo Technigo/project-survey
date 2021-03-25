@@ -9,7 +9,6 @@ const Button = ({ buttonValue, label, onButtonResponse }) => {
       id={buttonValue}
       value={label}
       onClick={(e) => onButtonResponse(e)}
-      onKeyDown={(e) => console.log(e)}
       >
     </input>
   )

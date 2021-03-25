@@ -71,7 +71,6 @@ const Form = () => {
   const [formQuestions, setFormQuestions] = useState(defaultQuestions())
 
   const onInputResponse = (id, value, type) => {
-    console.log('onInputResponse received ' + value + ' from ' + id + ' of type ' + type)
     if (type === 'checkbox') {
       const index = values[id].indexOf(value) 
       if (index === -1) {
@@ -87,13 +86,11 @@ const Form = () => {
   }
   
   const onButtonResponse = e => {
-    console.log('onButtonResponse received ' + e.target.id)
     
     switch (e.target.id) {
 
       case 'previous' :
         if (formStatus === 'summary') {
-          console.log(values)
           setStep(step - 1)
           setFormStatus('question')
         } else {
@@ -103,7 +100,6 @@ const Form = () => {
 
       case 'next' :
         if (step === formQuestions.length) {
-          console.log('setting formStatus to summary')
           setFormStatus('summary')
         } else {
           setStep(step + 1)
@@ -134,25 +130,27 @@ const Form = () => {
       return ( 
         <>
           <form name="form" method="POST" data-netlify="true">
-          <Question 
-          values={values}
-          step={step}
-          question={formQuestions[step - 1]}
-          onInputResponse={onInputResponse}
-          onButtonResponse={onButtonResponse}
-          />
+            <Question 
+              values={values}
+              step={step}
+              question={formQuestions[step - 1]}
+              onInputResponse={onInputResponse}
+              onButtonResponse={onButtonResponse}
+            />
           </form>
           <Button 
-              buttonValue="createNew"
-              label="Create survey"
-              onButtonResponse={(e) => onButtonResponse(e)} />
+            buttonValue="createNew"
+            label="Create survey"
+            onButtonResponse={(e) => onButtonResponse(e)} 
+          />
         </>
       )
     case 'summary' :
       return (
         <Summary values={values} 
-        onInputResponse={onInputResponse} 
-        onButtonResponse={onButtonResponse} />
+          onInputResponse={onInputResponse} 
+          onButtonResponse={onButtonResponse} 
+        />
       )
     case 'confirmation' :
       return (
@@ -161,13 +159,13 @@ const Form = () => {
     case 'createNew' :
       return (
         <CreateQuestions 
-        setFormQuestions={setFormQuestions}
-        setStep={setStep}
-        setFormStatus={setFormStatus}
-        setValues={setValues}
-        defaultValues={defaultValues}
-        defaultQuestions={defaultQuestions}
-        values={values}
+          setFormQuestions={setFormQuestions}
+          setStep={setStep}
+          setFormStatus={setFormStatus}
+          setValues={setValues}
+          defaultValues={defaultValues}
+          defaultQuestions={defaultQuestions}
+          values={values}
         />
       )
     default :

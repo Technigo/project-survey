@@ -6,9 +6,10 @@ const Confirmation = ({ onButtonResponse }) => {
     <>
       <h1>All done!</h1>
       <Button 
-      label="Do it again" 
-      buttonValue="reset" 
-      onButtonResponse={onButtonResponse} />
+        label="Do it again" 
+        buttonValue="reset" 
+        onButtonResponse={onButtonResponse} 
+      />
     </>
   )
 }
