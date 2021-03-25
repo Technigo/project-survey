@@ -30,14 +30,14 @@ const defaultQuestions = () => {
       { 
         type: 'radio',
         options: ['Yes', 'No'],
-        questionText: "Thanks a lot for filling out your name. Or wait, maybe you just typed something silly? That is fine - completely normal behaviour. Or did you actually write your name?",
+        questionText: "Thanks a lot for filling out your name. Or wait, maybe you just typed something silly? That is fine - completely normal behaviour. Did you write your actual name?",
         placeholder: '',
         required: true,
         inputId: 'isMyRealName', 
       },
       { 
         type: 'checkboxes',
-        options: ['Founder of charitable yet lucrative startup on verge of success', 'Enigmatic CEO-type person in search of frontend devloper', 'Prestigeous tech recruiter', 'Code-reviewer', 'Technigo staff', "Random person", "Russian bot"],
+        options: ['Founder of charitable yet lucrative startup on verge of massive success', 'Enigmatic CEO-type person in search of frontend devloper', 'Prestigeous tech recruiter', 'Code-reviewer', 'Technigo staff', "Random person", "Russian bot"],
         questionText: 'In what capacity are you visiting my survey today?',
         placeholder: 'Select your age',
         required: false,
@@ -45,7 +45,7 @@ const defaultQuestions = () => {
       },
       { 
         type: 'select',
-        options: ['Could be better', "There is something a bit off about it", 'It is ok', 'This survey is a work of staggering genius'],
+        options: ['Could be better', "There is something a bit off about it", 'It is ok', 'It is quirky and cute and i LOVE it', 'This survey is a work of staggering genius'],
         questionText: 'How are you liking this survey so far?',
         placeholder: 'Choose an answer',
         required: true,
@@ -59,7 +59,16 @@ const defaultQuestions = () => {
         required: false,
         inputId: "howImpressedByBonusFeature", 
       
+      },
+      { 
+        type: 'textInput',
+        options: '',
+        questionText: "Anything else you would like to add? Remember that whatever you write below will not be saved in any backend (even though I tried to hook up Netlify forms) - it will be permanently erased as soon as you click Submit in the next step. Consider this your imaginary friend and confidante whom you can tell anything and everything!",
+        placeholder: 'Type profound thoughts here',
+        required: true,
+        inputId: 'profoundThought', 
       }
+
     ] 
   )
 }
