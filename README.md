@@ -4,8 +4,8 @@ This week's project is to use React to build a survey form ⚛ . This project sh
 ## The problem
 Before I started to code I decided what question I wanted to ask in the survey. After that I clarified the logic, I added  the questions in different components and defined the states for each question in the Form.js component. I rendered all the questions and added some styling to the page. When I was done with the “core” of the survey I started to code the more advanced features:  
 
--show different components 
--show a summary of the user’s submissions 
+- Show different components 
+- Show a summary of the user’s submissions 
 
 I had some problems understanding how to make it work. I solved it by asking my team members, my teacher during a one to one and looking through stackoverflow. 
 
