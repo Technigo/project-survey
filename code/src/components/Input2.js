@@ -19,7 +19,7 @@ export const Input2 = ({setMonth, month}) => {
         Make your pick:       
         <select 
           type="select"
-          onChange={(event) => {onMonthChange(event)}}
+          onChange={onMonthChange}
           value={month}
           aria-label='Select your favourite summer month'
         >

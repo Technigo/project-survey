@@ -15,7 +15,7 @@ export const Input1 = ({setActivity, activity}) => {
         Type:
         <input 
           type="text"
-          onChange={(event) => {onActivityChange(event)}}
+          onChange= {onActivityChange}
           value={activity}
           aria-label='Enter your favourite activity here'
         />

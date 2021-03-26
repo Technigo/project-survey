@@ -1,6 +1,6 @@
 import React from 'react'
 
-const optionsQuestionThree = ['< 20', '20-25', '25 <']
+const optionsQuestionThree = ['< 20', '20-25', '25+']
 
 export const Input3 = ({temperature, setTemperature}) => {
 
@@ -27,7 +27,7 @@ export const Input3 = ({temperature, setTemperature}) => {
                     type="radio"
                     value={temperatureChoice}
                     aria-label='select your preferred summer temperature'
-                    onChange={(event) => {onTemperatureChange(event)}}
+                    onChange={onTemperatureChange}
                     checked={temperature === temperatureChoice}
                   />
               </label>              
