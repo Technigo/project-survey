@@ -1,7 +1,7 @@
 import React, { useState} from 'react'
 
 const Form = () => {
-  const [name, setName] = useState('') //current state, set state
+  const [name, setName] = useState('') 
   const [dropdown, setDropdown] = useState('') 
   const [radio, setRadio] = useState('')
   const [secondRadio, setSecondRadio] = useState('')
@@ -129,7 +129,7 @@ const Form = () => {
         
         <div className="radio-wrapper"> 
          {seatSection.map((seat) => (
-           <label key={seat} htmlFor={seat}>
+           <label key={seat} htmlFor={seat} className="label-container">
            <input 
              id={seat}
              name="seat" 

@@ -17,6 +17,7 @@ code {
 }
 .radio-wrapper {
   padding-bottom: 30px;
+  
 }
 .form-container {
   margin: auto;
@@ -33,9 +34,9 @@ input[type=number], select {
   box-sizing: border-box;
 }
 input[type=radio], select {
-  width: 100%;
+  /* width: 100%; */
   /* padding: 12px 20px; */
-  margin: 8px 0;
+  margin-right: 40px;
   display: flex;
   flex-direction: row;
   vertical-align: bottom;
@@ -54,7 +55,8 @@ input[type=radio], select {
 }
 .label-container{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
+  padding-bottom: 20px;
 }
 .first-radio {
   display: flex;
@@ -63,9 +65,8 @@ input[type=radio], select {
 }
 .second-radio {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   padding-bottom: 30px;
-  margin: 0;
 }
 .question-radio{
  display: inline;
