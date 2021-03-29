@@ -80,6 +80,7 @@ const Form = () => {
   const [formQuestions, setFormQuestions] = useState(defaultQuestions())
 
   const onInputResponse = (id, value, type) => {
+    console.log(id, value)
     if (type === 'checkbox') {
       const index = values[id].indexOf(value) 
       if (index === -1) {
@@ -93,10 +94,23 @@ const Form = () => {
       setValues({ ...values, [id]: value})
     }
   }
+
+  const onEnterResponse = (e) => {
+    e.preventDefault()
+    if (e.key === 'Enter') {
+      console.log('onEnterResponse')
+      if (step === formQuestions.length) {
+        setFormStatus('summary')
+      } else {
+        setStep(step + 1)
+      }
+
+    }
+  }
   
   const onButtonResponse = e => {
-    
-    switch (e.target.id) {
+    console.log(e)
+    switch (e) {
 
       case 'previous' :
         if (formStatus === 'summary') {
@@ -138,15 +152,16 @@ const Form = () => {
     case 'question' :
       return ( 
         <>
-          <form name="form" method="POST" data-netlify="true">
+          <div className="form" name="form">
             <Question 
               values={values}
               step={step}
               question={formQuestions[step - 1]}
               onInputResponse={onInputResponse}
               onButtonResponse={onButtonResponse}
+              onEnterResponse={onEnterResponse}
             />
-          </form>
+          </div>
           <Button 
             buttonValue="createNew"
             label="Create survey"

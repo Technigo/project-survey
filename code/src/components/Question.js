@@ -8,7 +8,7 @@ import RadioButtons from './RadioButtons'
 
 const Question = (props) => {
   
-  let { values, step, question, onInputResponse, onButtonResponse } = props
+  let { values, step, question, onInputResponse, onEnterResponse, onButtonResponse } = props
   let value = values[question.inputId]
   const showNext = (value) => {
     return value || !question.required
@@ -25,7 +25,10 @@ const Question = (props) => {
           placeholder={question.placeholder}
           inputId={question.inputId}
           values={values}
-          onInputResponse={onInputResponse}/>
+          onInputResponse={onInputResponse}
+          onEnterResponse={onEnterResponse}
+          onButtonResponse={onButtonResponse}
+          />
           
           {step !== 1 &&
             <Button 
@@ -38,7 +41,10 @@ const Question = (props) => {
             <Button 
             buttonValue="next" 
             label="Next" 
-            onButtonResponse={onButtonResponse} />
+            onButtonResponse={onButtonResponse}
+            onEnterResponse={onEnterResponse}
+            
+            />
           }
         </>
       )
@@ -65,7 +71,8 @@ const Question = (props) => {
             <Button 
             buttonValue="next" 
             label="Next" 
-            onButtonResponse={onButtonResponse} />
+            onButtonResponse={onButtonResponse}
+             />
           }
         </>
       )

@@ -190,7 +190,8 @@ const defaultUserCreateValues = () => {
         onClick={(e) => userCreateButtonResponse(userQuestion, e.target.id)}>Save question
       </button>
       }
-      { userQuestions.length &&
+      {/* { userQuestions.length && */}
+      { Boolean(userQuestions.length) &&
       <button 
         className="button secondary"
         value="done"
