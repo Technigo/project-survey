@@ -19,5 +19,5 @@ With this help I could manage to understand how to make every component on a sep
 - CSS
 
 ## View it live
-https://book-lover.netlify.app/
+https://book-lover.netlify.app/ 
 

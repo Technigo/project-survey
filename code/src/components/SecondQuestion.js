@@ -17,7 +17,7 @@ const SecondQuestion = (props) => {
           value= {props.favoriteTime} 
           required
         >
-          <option value="">Select a time</option>
+          <option disabled value="">Select a time</option>
           <option value="morning">Morning</option>
           <option value="lunch">Lunch time</option>
           <option value="evening">Evening</option>
