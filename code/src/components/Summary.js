@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Summary = (props) => {
+export const Summary = props => {
   const { genre, favorite, language, name, email } = props 
   
   return (

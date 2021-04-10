@@ -95,6 +95,16 @@ label {
   padding: 5px 0;
 }
 
+.label-radio {
+  font-size: 16px;
+}
+
+select,
+input,
+option {
+  padding: 3px 2px;
+}
+
 /*** submit / reload form button ***/
 
 .submit-button-container {

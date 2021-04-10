@@ -2,12 +2,8 @@ import React from 'react'
 
 const languages = [' english', ' swedish', ' both'] // array for radio-buttons under language
 
-export const Form = (props) => {
-  const { genre, setGenre } = props
-  const { favorite, setFavorite } = props
-  const { language, setLanguage } = props
-  const { name, setName } = props
-  const { email, setEmail } = props
+export const Form = props => {
+  const { genre, setGenre, favorite, setFavorite, language, setLanguage, name, setName, email, setEmail } = props
 
   return (
     <div className="form-container">
@@ -40,11 +36,11 @@ export const Form = (props) => {
         </div>
 
         <div className="form-container-sections">
-          <label htmlFor="language">Select preferred language:</label>
+          <label htmlFor={language}>Select preferred language:</label>
           {languages.map(lang => (
-            <label key={lang}>
+            <label className="label-radio" key={lang}>
               <input 
-                id="language"
+                id={lang}
                 type="radio"
                 value={lang}
                 checked={language === lang}

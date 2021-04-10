@@ -16,7 +16,7 @@ export const App = () => {
   // checks if all form-questions have been answered, if so summary state is set to true and summary is shown
   const isSurveyComplete = () => {
     if (
-      genre === '' ||
+      genre === '' || 
       favorite === '' ||
       language === '' ||
       name === '' ||
@@ -29,7 +29,7 @@ export const App = () => {
     }
   }
 
-  // refreshes page when button on summary-page is clicked
+  // refreshes page when button on summary-page is clicked so user returns to form
   const refreshPage = () => {
     window.location.reload()
   }

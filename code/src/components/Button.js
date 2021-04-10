@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const Button = (props) => {
+export const Button = props => {
+  const { onClick, title } = props
+
   return (
     <div className='submit-button-container'>
-      <button onClick={props.onClick} className='submit-button' type='submit' form=''>{props.title}</button>
+      <button onClick={onClick} className='submit-button' type='submit' form=''>{title}</button>
     </div>
   )
 }
