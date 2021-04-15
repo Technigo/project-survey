@@ -1,13 +1,14 @@
-# Survey form with React
+# Project 10, Technigo bootcamp, BUils a survey form using React
 
 Goal was to build a survey with React with at least 3 question using 3 different types, radio buttons, dropdown, input field and have a submit button that hide the form and show a summary of the inputs. 
 
 ## The problem
 
-It has been hard as I do not understand how to combine the components and therefore only used one. 
-Most difficult is to create the summary of the inputs and how to collect the data. 
-
-Stackoverflow, a lot of tutorials and read up on React has made it possible to accomplish this form. still missing a bit styling, but functionality is working as it should. 
+- Your survey should consist of at least 3 questions.
+- At least one question should use radio buttons.
+- At least one question should use a select dropdown.
+- There should be a submit button. When pressed your app should hide the input form and show a summary of the user's submissions.
+- Your site should follow accessibility guidelines
 
 
 
@@ -16,9 +17,4 @@ Stackoverflow, a lot of tutorials and read up on React has made it possible to a
 Link to live site: 
 https://optimistic-stonebraker-71d34e.netlify.app
 
-Feedback 
 
-- How can I separate the Form into components? 
-- how to show one question at the time, best practice to do it? 
-- Please help me understand the things I have commented in the code 
--How do I align the radio buttons with text?
