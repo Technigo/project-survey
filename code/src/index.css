@@ -134,6 +134,10 @@ form {
   background: #8026AA;
 }
 
+.radio-btn input:focus ~ .custom-radio {
+  border: 2px solid #fff;  
+}
+
 .radio-btn input:checked ~ .custom-radio {
   background-color: #8026AA;
 }
@@ -168,6 +172,10 @@ form {
   font-size: 1.6rem;
 }
 
+.drop-down:focus {
+  border: 2px solid #fff;
+}
+
 /* STYLING BUTTONS */
 .buttons-div {
   display: flex;
@@ -184,6 +192,10 @@ form {
   transition: all 0.2s ease-out;
   cursor: pointer;
   margin: 20px 10px 0px 10px;
+}
+
+.btn:focus {
+  border: 1px solid #fff;  
 }
 
 .btn:hover {

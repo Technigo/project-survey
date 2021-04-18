@@ -15,14 +15,15 @@ const Radiobuttons = ({ questionName, questionText, valueArray, chosenValue, han
         {valueArray.map(value => (
           <div key={value} className="radio-btn">
             <input key={value} 
-              name={questionName}   
+              name={questionName}
+              id={value}   
               type="radio"
               onChange={onRadioChange}
               value={value}
               checked={chosenValue === value} 
               />
             <span className="custom-radio"></span>
-            <label htmlFor={questionName}>{value}</label>
+            <label htmlFor={value}>{value}</label>
           </div>
         ))}
        </div>
