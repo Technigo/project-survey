@@ -3,7 +3,7 @@ import React from 'react';
 const Radio = ({onRadioButtonChange, buttonValue}) => {
     return(
         <div className="formelement">
-            <label htmlFor={buttonValue} key={buttonValue} className="radiobuttonbox">
+            <label htmlFor={buttonValue} className="radiobuttonbox">
                     <input className="radiobutton"
                         name="buttonValue"
                         id={buttonValue} 

@@ -8,84 +8,83 @@ import Summary from 'components/Summary';
 const Survey = () => {
 
 // states
-    const [inputName, setInputName] = useState ('');
-    const [evaluation, setEvaluation] = useState ('')
-    const [selectAnswer, setSelectAnswer] = useState ('');
-    const [summary, setSummary] = useState(false)
+const [inputName, setInputName] = useState ('');
+const [evaluation, setEvaluation] = useState ('')
+const [selectAnswer, setSelectAnswer] = useState ('');
+const [summary, setSummary] = useState(false)
 
 // array
 const evaluationArray = ['yes', 'no', 'none of your business']
 
 // functions
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        setSummary(true)
-    }
+const handleSubmit = (e) => {
+    e.preventDefault();
+    setSummary(true)
+}
 
-    const onInputNameChanged = (e) => {setInputName(e.target.value)}
-    const onRadioButtonChanged = (e) => {setEvaluation(e.target.value)}
-    const onSelectChanged = (e) => {setSelectAnswer(e.target.value)}
+const onInputNameChanged = (e) => {setInputName(e.target.value)}
+const onRadioButtonChanged = (e) => {setEvaluation(e.target.value)}
+const onSelectChanged = (e) => {setSelectAnswer(e.target.value)}
     
-    return (
-        <>
-        <header></header>
-            <main className="maincontainer">
-                <h1 className="maintitle">weekly evaluation form / reminder</h1>
-                    {!summary && (
-                        <form onSubmit={handleSubmit}>
-                            <section className="questioncontainer">
-                                <p>Wanna tell me your name?</p>
-                                    <Input 
-                                        nameValue={inputName}
-                                        onInputNameChange={onInputNameChanged}
+return (
+    <>
+    <header></header>
+        <main className="maincontainer">
+            <h1 className="maintitle">weekly evaluation form / reminder</h1>
+                {!summary && (
+                    <form onSubmit={handleSubmit}>
+                        <section className="questioncontainer">
+                            <p>Wanna tell me your name?</p>
+                                <Input 
+                                    nameValue={inputName}
+                                    onInputNameChange={onInputNameChanged}
+                                />
+                        </section> 
+
+                        <section className="questioncontainer"> 
+                            <div className="buttoncontainer">
+                                <p>Have you filled out this weeks evaluation yet?</p>
+                                <div className="radiobutton-line">
+                                    {evaluationArray.map((evaluation) =>
+                                    <Radio 
+                                        key={evaluation}
+                                        buttonValue={evaluation}
+                                        onRadioButtonChange={onRadioButtonChanged}
                                     />
-                            </section> 
-
-                            <section className="questioncontainer"> 
-                                <div className="buttoncontainer">
-                                    <p>Have you filled out this weeks evaluation yet?</p>
-                                    <div className="radiobutton-line">
-                                        {evaluationArray.map((evaluation) =>
-                                        <Radio 
-                                            key={evaluation}
-                                            buttonValue={evaluation}
-                                            onRadioButtonChange={onRadioButtonChanged}
-                                        />
-                                        )}
-                                    </div>
-                                </div>
-                            </section>   
-
-                            <section className="questioncontainer">
-                                <p>How do you think would Poya feel about getting your weekly evaluation?</p>
-                                    <Select 
-                                        onSelectChange={onSelectChanged}
-                                        selectValue={selectAnswer}
-                                    />
-                            </section>
-
-                            <div className="questioncontainer">
-                                <div className="submitbutton">
-                                    <button onSubmit = {handleSubmit} type="submit"> Submit </button>
+                                    )}
                                 </div>
                             </div>
-                        </form>     
-                    )}
+                        </section>   
 
-                    {(    
-                        <>   
-                            {summary &&
-                                <section>
-                                    <Summary 
-                                        nameValue={inputName}
-                                        selectValue={selectAnswer}
-                                        buttonValue={evaluation}
-                                    />
-                                </section>
-                                
-                            }  
-                        </>
-                    )}
+                        <section className="questioncontainer">
+                            <p>How do you think would Poya feel about getting your weekly evaluation?</p>
+                                <Select 
+                                    onSelectChange={onSelectChanged}
+                                    selectValue={selectAnswer}
+                                />
+                        </section>
+
+                        <div className="questioncontainer">
+                            <div className="submitbutton">
+                                <button onSubmit = {handleSubmit} type="submit"> Submit </button>
+                            </div>
+                        </div>
+                    </form>     
+                )}
+
+                {(    
+                    <>   
+                        {summary &&
+                            <section>
+                                <Summary 
+                                    nameValue={inputName}
+                                    selectValue={selectAnswer}
+                                    buttonValue={evaluation}
+                                />
+                            </section>
+                        }  
+                    </>
+                )}
             </main>
         </>
     )
