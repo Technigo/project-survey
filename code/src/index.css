@@ -5,34 +5,41 @@ body {
   background-color: #828282;
   margin: 0;
   min-width: 300px;
+  background-image: url("/assets/game-of-thrones-bg.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+@font-face {
+  font-family: 'MyFont';
+  src: local('MyFont'), url('/fonts/game-of-thrones.ttf') format('ttf');
 }
 
 * {
   box-sizing: border-box;
+  font-family: 'MyFont', cursive;
 }
 
 h1 {
-  font-family: 'Indie Flower', cursive;
   font-size: 40px;
 }
 
 h2 {
   color: #ca3e47;
-  font-family: 'Indie Flower', cursive;
   font-size: 38px;
   width: 100%;
   text-align: center;
+  text-transform: uppercase;
   /* -webkit-text-stroke: 1px #fff; */
   text-shadow: 2px 2px 0 #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff;
 }
 
 h3 {
-  font-family: 'Indie Flower', cursive;
+  
   font-size: 27px;
 }
 
 h4 {
-  font-family: 'Indie Flower', cursive;
   font-size: 22px;
 }
 

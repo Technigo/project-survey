@@ -4,7 +4,7 @@ import React from 'react'
 export const Header = () => {
   return (
     <header>
-      <img src="public/assets/Friends-Logo-PNG.png" alt="friends-logo" />
+      <img src="/assets/game-of-thrones-logo.png" alt="Game of Thrones" />
     </header>
 
   )

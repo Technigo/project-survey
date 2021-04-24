@@ -1,22 +1,18 @@
 import React from 'react'
 
-export const Summary = (props) => {
-
-  console.log(props.answers)
+export const Summary = ({ questions, userAnswers }) => {
 
   // Comparing user answer and the current answer to set a score
-  const result = () => {
+  const getScore = () => {
     let score = 0
-    if (props.answers.married === props.marriages) { score++ }
-    if (props.answers.spots === props.hangoutSpot) { score++ }
-    if (props.answers.places === props.datingPlace) { score++ }
-    if (props.answers.pets === props.animal) { score++ }
-    if (props.answers.favSongs === props.song) { score++ }
-    if (props.answers.reasons === props.breakup) { score++ }
+    for (let i = 0; i < userAnswers.length; i++) {
+      if (userAnswers[i] === questions[i].correctAnswer)
+        score += 1
+    }
     return score
   }
 
-  const score = result()
+  const score = getScore()
 
   // JS function to reload the page, if user click on the "try-again" button
   const handelSubmit = (event) => {
@@ -26,53 +22,24 @@ export const Summary = (props) => {
 
   return (
     <div>
-      <h2><span role="img" aria-label="star">🌟</span>&nbsp;Thank you Got fan!&nbsp;<span role="img" aria-label="star">🌟</span></h2>
-
+      <h2><span role="img" aria-label="star">🌟</span>&nbsp;Thank you GOT fan!&nbsp;<span role="img" aria-label="star">🌟</span></h2>
       <div className="summary">
 
-
         <h1>
-          Your score is {score} of 6
-          {score === 6 ? " Wow! You are a true Fan!" : ""}
+          Your score is {score} of {questions.length}
+          {score === questions.length ? " Wow! You are a true Fan!" : ""}
         </h1>
         <hr />
-        <div className="qa">
-          <h4>{props.questions.q1}</h4>
-          <p className="user-answer highlight">Your answer: {props.marriages}</p>
-          <p className="correct-answer">{props.answers.married === props.marriages ? "" : `Correct answer: ${props.answers.married}`}</p>
-        </div>
-        <hr />
-        <div className="qa">
-          <h4>{props.questions.q2}</h4>
-          <p className="user-answer highlight">Your answer: {props.hangoutSpot}</p>
-          <p className="correct-answer">{props.answers.spots === props.hangoutSpot ? "" : `Correct answer: ${props.answers.spots}`}</p>
-        </div>
-        <hr />
-        <div className="qa">
-          <h4>{props.questions.q3}</h4>
-          <p className="user-answer highlight">Your answer: {props.datingPlace}</p>
-          <p className="correct-answer">{props.answers.places === props.datingPlace ? "" : `Correct answer: ${props.answers.places}`}</p>
-        </div>
-        <hr />
-        <div className="qa">
-          <h4>{props.questions.q4}</h4>
-          <p className="user-answer highlight">Your answer: {props.animal}</p>
-          <p className="correct-answer">{props.answers.pets === props.animal ? "" : `Correct answer: ${props.answers.pets}`}</p>
 
-        </div>
-        <hr />
-        <div className="qa">
-          <h4>{props.questions.q5}</h4>
-          <p className="user-answer highlight">Your answer: {props.song}</p>
-          <p className="correct-answer">{props.answers.favSongs === props.song ? "" : `Correct answer: ${props.answers.favSongs}`}</p>
-        </div>
-        <hr />
-        <div className="qa">
-          <h4>{props.questions.q6}</h4>
-          <p className="user-answer highlight">Your answer: {props.breakup}</p>
-          <p className="correct-answer">{props.answers.reasons === props.breakup ? "" : `Correct answer: ${props.answers.reasons}`}</p>
-
-        </div>
+        { questions.map((item, index) => (
+            <div className="qa">
+            <h4>{item.question}</h4>
+            <p className="user-answer highlight">Your answer: {userAnswers[index]}</p>
+            <p className="correct-answer">{item.correctAnswer === userAnswers[index] ? "" : `Correct answer: ${item.correctAnswer}`}</p>
+          </div>
+          ))
+        }
+ 
         <hr />
         <button className="submit-btn" onClick={handelSubmit}> Try again! </button>
       </div>
