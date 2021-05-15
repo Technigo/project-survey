@@ -5,12 +5,12 @@ const RadioButton = (props) => {
         <>
             <input
                 name="radio" 
-                id="radio-button" 
+                id={`radio-button-${props.optionNumber}`} 
                 type="radio"
                 checked={props.source === buttonValue}
                 onChange={() => {props.toChange(buttonValue)}}                       
             ></input>
-            <label htmlFor="radio-button">
+            <label htmlFor={`radio-button-${props.optionNumber}`}>
                 {props.question.options[props.optionNumber].label}
             </label>
         </>

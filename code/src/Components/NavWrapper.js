@@ -9,6 +9,7 @@ const NavWrapper = (props) => {
             <NavButton 
                 direction={-1}
                 navigate={props.navigate}
+                currentPage={props.currentPage}
             />
             <PageCounter 
                 currentPage={props.currentPage}
@@ -17,6 +18,7 @@ const NavWrapper = (props) => {
             <NavButton 
                 direction={1}
                 navigate={props.navigate}
+                currentPage={props.currentPage}
             />
         </div>
     )

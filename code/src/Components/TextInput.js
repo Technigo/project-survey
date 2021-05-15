@@ -1,12 +1,17 @@
 import React from 'react'
 
 const TextInput = (props) => {
-  
+  console.log(props.backstoryAspect)
   return (
-    <form>
+    <form className="text-input-wrapper">
       <textarea
         type="text"
-      ></textarea>
+        placeholder={`//example: ${props.placeholder}`}
+        value={props.backstoryAspect.value}
+        onChange={event => props.onChange(props.backstoryAspect, event.target.value)}
+      >
+
+      </textarea>
     </form>
   )
 }

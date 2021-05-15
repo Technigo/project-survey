@@ -1,11 +1,17 @@
-/* :root {
-    min-height: 500px;
-} */
+:root {
+  
+}
 
 body {
     margin: 50px;
-    display: flex;
-    justify-content: center;
+    padding: 30px;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .stat-question-wrapper, .stat-questions-wrapper,.question-wrapper,.text-input-wrapper{
@@ -17,8 +23,9 @@ body {
 
 .text-input-wrapper textarea {
     height: auto;
-    width: 90vw;
+    width: 80vw;
     resize: none;
+    padding: 10px;
   }
 
 .question {
@@ -51,6 +58,10 @@ h4 {
     flex-direction: column;
 }
 
+.submit-button-wrapper {
+  margin: 30px;
+}
+
 label {
     margin-left: 15px 0 5px 0;
 }
@@ -63,16 +74,25 @@ select {
     background-color: lightcoral;
 }
 
+option .error :checked {
+  background-color: rgb(133, 58, 58);
+}
+
 .okay {
-    background-color: none;
+    background-color: #fff;
 }
 
 .nav-wrapper {
     /* position: absolute;
     top: 500px; */
-    align-self: flex-end;
+    /* align-self: flex-end; */
     display: flex;
     justify-content: space-around;
+    margin: 50px;
+}
+
+.page-counter {
+  margin: 0 15px 0 15px;
 }
 
 .playbooks-wrapper {

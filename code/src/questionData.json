@@ -1,154 +1,194 @@
 {
-    "intro": {
-        "text": "intro text. this project isn't finished, so pardon the mess"
-    },
-    "questions": {
-        "question_source": {
-            "type":"radio",
-            "text": "Where do their signature abilities come from?",
-            "options": [   
-                {
-                    "label":"Skillful magic use", "value": "magic"
-                },
-                {
-                    "label":"Strong faith in the divine or mystical", "value": "spiritual"
-                },
-                {
-                    "label": "Use of advanced technology, either magically based or purely scientific", "value": "tech"
-                },
-                {
-                    "label": "Mastery of their craft, their mind or their body", "value": "skill"
-                }
-            ]
+  "intro": {
+    "text": "intro text. this project isn't finished, so pardon the mess"
+  },
+  "questions": {
+    "question_source": {
+      "type": "radio",
+      "text": "Where do their signature abilities come from?",
+      "options": [
+        {
+          "label": "Skillful magic use",
+          "value": "magic"
         },
-        "question_magic": {
-            "type":"radio",
-            "text": "Do you want them to use magic?",
-            "options": [   
-                {
-                    "label":"Yes, lots!", "value": 4
-                },
-                {
-                    "label":"Maybe some, or if it is subtle?", "value": 2
-                },
-                {
-                    "label": "Nope, no magic", "value": 0
-                }
-            ],
-            "onChangeName": "onMagicChange"
+        {
+          "label": "Strong faith in the divine or mystical",
+          "value": "spiritual"
         },
-        "question_spiritual": {
-            "type":"radio",
-            "text": "Are their abilities tied to religion or mysticism?",
-            "options": [   
-                {
-                    "label":"Yes, their powers have spiritual ties", "value": 4
-                },
-                {
-                    "label":"Maybe?", "value": 2
-                },
-                {
-                    "label": "Nope, powers ain't spiritual", "value": 0
-                }
-            ],
-            "onChangeName": "onSpiritualChange"
+        {
+          "label": "Use of advanced technology, either magically based or purely scientific",
+          "value": "tech"
         },
-        "question_tech": {
-            "type":"radio",
-            "text": "Do you want them to use special tools, technology or magitech?",
-            "options": [   
-                {
-                    "label":"Yes, let’s go high-tech/magitech!", "value": 4
-                },
-                {
-                    "label":"Maybe some special tool use, but not high-tech or magitech", "value": 2
-                },
-                {
-                    "label": "Nope, no tech or special tools", "value": 0
-                }
-            ],
-            "onChangeName": "onTechChange"
-        },
-        "question_grim": {
-            "type":"radio",
-            "text": "How grim or dark are your character’s abilities?",
-            "options": [   
-                {
-                    "label":"Very grim!", "value": 4
-                },
-                {
-                    "label":"Not necessarily grim, but could be?", "value": 2
-                },
-                {
-                    "label": "I want them the opposite of grim!", "value": 0
-                }
-            ],
-            "onChangeName": "onGrimChange"
-        },
-        "question_hijinx": {
-            "type":"radio",
-            "text": "Do you want abilities extra suitable for hijinx?",
-            "options": [   
-                {
-                    "label":"Yes, can’t wait to get up to all sorts of wild shenanigans!", "value": 4
-                },
-                {
-                    "label":"Some versatility would be nice, but I don't need anything crazy", "value": 2
-                },
-                {
-                    "label": "I’d like more down-to-earth abilities, forcing me to be creative in their use", "value": 0
-                }
-            ],
-            "onChangeName": "onHijinxChange"
-        },
-        "statQuestions": {
-            "bestAt": {"text": "What are they best at?", "type":"dropDown"},
-            "nextToBestAt": {"text": "What are they next to best at?", "type":"dropDown"},
-            "worstAt": {"text": "What are they worst at?", "type":"dropDown"},
-            "options": [   
-                {
-                    "label":"Strength and athleticism", "value": "STR"
-                },
-                {
-                    "label":"Nimbleness and precision", "value": "DEX"
-                },
-                {
-                    "label":"Resilience and protecting others", "value": "CON"
-                },
-                {
-                    "label":"Knowledge and quick thinking", "value": "INT"
-                },
-                {
-                    "label":"Instincts and magic", "value": "WIS"
-                },
-                {
-                    "label":"Social skills and deception", "value": "CHA"
-                }
-            ]
-        },
-        "personalityQuestions_fears": {
-            "type":"text",
-            "text": "What fears motivate their actions?"
-        },
-        "personalityQuestions_fearsOrigin": {
-            "type":"text",
-            "text": "Where do these fears stem from?"
-        },
-        "personalityQuestions_cultureGood": {
-            "type":"text",
-            "text": "What aspect of their culture do they see as good and strongly encourage?"
-        },
-        "personalityQuestions_cultureBad": {
-            "type":"text",
-            "text": "What aspect of their culture do they despise and take an active stance against?"
-        },
-        "personalityQuestions_dream": {
-            "type":"text",
-            "text": "What is their big dream?"
+        {
+          "label": "Mastery of their craft, their mind or their body",
+          "value": "skill"
         }
-        
+      ]
     },
-    "results": {
-        "text": "results text"
-    }        
+    "question_magic": {
+      "type": "radio",
+      "text": "Do you want them to use magic?",
+      "options": [
+        {
+          "label": "Yes, lots!",
+          "value": 4
+        },
+        {
+          "label": "Maybe some, or if it is subtle?",
+          "value": 2
+        },
+        {
+          "label": "Nope, no magic",
+          "value": 0
+        }
+      ],
+      "onChangeName": "onMagicChange"
+    },
+    "question_spiritual": {
+      "type": "radio",
+      "text": "Are their abilities tied to religion or mysticism?",
+      "options": [
+        {
+          "label": "Yes, their powers have spiritual ties",
+          "value": 4
+        },
+        {
+          "label": "Maybe?",
+          "value": 2
+        },
+        {
+          "label": "Nope, powers ain't spiritual",
+          "value": 0
+        }
+      ],
+      "onChangeName": "onSpiritualChange"
+    },
+    "question_tech": {
+      "type": "radio",
+      "text": "Do you want them to use special tools, technology or magitech?",
+      "options": [
+        {
+          "label": "Yes, let’s go high-tech/magitech!",
+          "value": 4
+        },
+        {
+          "label": "Maybe some special tool use, but not high-tech or magitech",
+          "value": 2
+        },
+        {
+          "label": "Nope, no tech or special tools",
+          "value": 0
+        }
+      ],
+      "onChangeName": "onTechChange"
+    },
+    "question_grim": {
+      "type": "radio",
+      "text": "How grim or dark are your character’s abilities?",
+      "options": [
+        {
+          "label": "Very grim!",
+          "value": 4
+        },
+        {
+          "label": "Not necessarily grim, but could be?",
+          "value": 2
+        },
+        {
+          "label": "I want them the opposite of grim!",
+          "value": 0
+        }
+      ],
+      "onChangeName": "onGrimChange"
+    },
+    "question_hijinx": {
+      "type": "radio",
+      "text": "Do you want abilities extra suitable for hijinx?",
+      "options": [
+        {
+          "label": "Yes, can’t wait to get up to all sorts of wild shenanigans!",
+          "value": 4
+        },
+        {
+          "label": "Some versatility would be nice, but I don't need anything crazy",
+          "value": 2
+        },
+        {
+          "label": "I’d like more down-to-earth abilities, forcing me to be creative in their use",
+          "value": 0
+        }
+      ],
+      "onChangeName": "onHijinxChange"
+    },
+    "statQuestions": {
+      "bestAt": {
+        "text": "What are they best at?",
+        "type": "dropDown"
+      },
+      "nextToBestAt": {
+        "text": "What are they next to best at?",
+        "type": "dropDown"
+      },
+      "worstAt": {
+        "text": "What are they worst at?",
+        "type": "dropDown"
+      },
+      "options": [
+        {
+          "label": "Strength and athleticism",
+          "value": "STR"
+        },
+        {
+          "label": "Nimbleness and precision",
+          "value": "DEX"
+        },
+        {
+          "label": "Resilience and protecting others",
+          "value": "CON"
+        },
+        {
+          "label": "Knowledge and quick thinking",
+          "value": "INT"
+        },
+        {
+          "label": "Instincts and magic",
+          "value": "WIS"
+        },
+        {
+          "label": "Social skills and deception",
+          "value": "CHA"
+        }
+      ]
+    },
+    "backstoryQuestions": {
+      "fears": {
+        "type": "text",
+        "text": "They are here because they are afraid of...",
+        "placeholder": "not being strong enough, when they are needed" 
+      },
+      "fearsOrigin": {
+        "type": "text",
+        "text": "... a fear which stems from ...",
+        "placeholder": "failing to protect their siblings from bandits"
+      },
+      "cultureGood": {
+        "type": "text",
+        "text": "In reaction to their life and culture, they encourage people to...",
+        "placeholder": "actively fight crime, even as civilians"
+      },
+      "cultureBad": {
+        "type": "text",
+        "text": "... while condemning people who... ",
+        "placeholder": "make a living off of other's suffering"
+      },
+      "dream": {
+        "type": "text",
+        "text": "They dream of one day...",
+        "placeholder": "avenging their siblings"
+      }
+    }
+  },
+  "results": {
+    "text": "So, in summary..."
+  }
 }

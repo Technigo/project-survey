@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import QuestionWrapper from './QuestionWrapper'
 import questionData from '../questionData.json'
 import playbookData from '../playbookData.json'
@@ -45,12 +45,21 @@ export const App = () => {
   //const [bestAtError, setBestAtError] = useState(false)
 
   //USED!!!!
-  const [bestAt, setBestAt] = useState({stat:"STR", overlap:false})
-  const [nextToBestAt, setNextToBestAt] = useState({stat:"WIS", overlap:false})
-  const [worstAt, setWorstAt] = useState({stat:"CHA", overlap:false})
+  const [bestAt, setBestAt] = useState("STR")
+  const [bestAtOverlap, setBestAtOverlap] = useState(false)
+  const [nextToBestAt, setNextToBestAt] = useState("WIS")
+  const [nextToBestAtOverlap, setNextToBestAtOverlap] = useState(false)
+  const [worstAt, setWorstAt] = useState("CHA")
+  const [worstAtOverlap, setWorstAtOverlap] = useState(false)
   // const [bestAt, setBestAt] = useState("")
   // const [nextToBestAt, setNextToBestAt] = useState("")
   // const [worstAt, setWorstAt] = useState("")
+
+  const [fears, setFears] = useState({ aspect: "fears", value: "" })
+  const [fearsOrigin, setFearsOrigin] = useState({ aspect: "fearsOrigin", value: "" })
+  const [cultureGood, setCultureGood] = useState({ aspect: "cultureGood", value: "" })
+  const [cultureBad, setCultureBad] = useState({ aspect: "cultureBad", value: "" })
+  const [dreams, setDreams] = useState({ aspect: "dreams", value: "" })
   
   //I might not need these as States after all, just one state per dropdown? Why is this? I think I'll be able to articulate it later
   const [str, setStr] = useState(2)
@@ -87,59 +96,103 @@ export const App = () => {
     setSource (value)
   }
 
-  const meaninglessFunction = () => {
-    console.log(`meaningless function was called! Let's see if this fixes the hook having time to update`)
-    //the above doesn't change anything, which makes me think that statehooks only truly update either with some lag/delay, or intentionally waits until the END of the function which it called to change in
-    //I'm going to experiment: what if I set blocker flags in a separate function altogether? Then when that function ends, the hooks should update, if it indeed is about functions needing to end first...
-    //Result: 
+  const handleBackstoryChange = (toUpdate, newText) => {
+    // console.log(questionData.questions.backstoryQuestions.fears)
+    console.log(toUpdate)
+    switch (toUpdate.aspect) {
+      case "fears":
+        setFears({ aspect: fears.aspect, value: newText })
+        break
+      case "fearsOrigin":
+        setFearsOrigin({ aspect: fearsOrigin.aspect, value: newText })
+        break
+      case "cultureGood":
+        setCultureGood({ aspect: cultureGood.aspect, value: newText })
+        break
+      case "cultureBad":
+        setCultureBad({ aspect: cultureBad.aspect, value: newText })
+        break
+      case "dreams":
+        setDreams({ aspect: dreams.aspect, value: newText })
+        break
+    }
   }
 
-  const checkBlocker = (direction) => {
-    
-    //below is not a bad idea, but first I need a specific error hook...
-    if (currentPage === 2 && (bestAt.overlap || nextToBestAt.overlap || worstAt.overlap) && direction === 1) { 
+  const checkBlocker = () => {
+
+    //blocker reset
+    setBlocker({blocking:false, explanation:"Should not be blocking!"})
+
+    console.log(`checkBlocker thinks the current page is ${currentPage}`)
+    console.log(`checkBlocker thinks nextToBestAtOverlap is ${nextToBestAtOverlap}`)
+    console.log(`checkBlocker thinks worstAtOverlap is ${worstAtOverlap}`)
+    console.log(`checkBlocker thinks bestAtOverlap is ${bestAtOverlap}`)
+
+    if (currentPage === 3 && (bestAtOverlap || nextToBestAtOverlap || worstAtOverlap)) { 
+      console.log("noticed that there is overlap issue and trying to set blocker...")
       setBlocker({blocking:true, explanation:"You can't have overlapping stat assignments (marked red)!"})
     }
 
-    if (currentPage === 1 && source === "" && direction === 1) { 
+    if (currentPage === 2 && source === "") { 
       setBlocker({blocking:true, explanation:"Please select an option before continuing."})
     }
 
   }
 
-  const onCurrentPageChange = (direction) => {
-    console.log(`at the start of onCurrentPageChange. currentPage: ${currentPage}, blocker: ${blocker.blocking}`)
-    checkBlocker(direction)
+  //So like... let's tie blocker to a useEffect tied to source and the bestAt etc.
 
-    //catching any blocker flags when advancing
-    if (blocker.blocking === true && direction === 1 && source === "") {
-      alert(blocker.explanation)
-    } else {
-      if (direction === 1 && currentPage === 2) {
-        console.log(`hey I recognized that this is page 2 (currentPage: ${currentPage}) and now I'm gonna filter the playbookssss`)
-        filterPlaybooks(source, playbooks)
-      }
-      else if (blocker.blocking === true && direction === -1) {
-        console.log("blocker was on and I moved backwards so I'm gonna deactivate it")
-        setBlocker({blocking:false, explanation:"Please select an option before continuing."})
-      }      
-      if (direction === -1 && currentPage === 1) { //Safety prec. is made redundant if I conditionally just don't render the nav buttons when pressing is a nono
-        //do nothing as to never go below first page
-      } else if (direction === 1 && currentPage === lastPage) {
-        //do nothing as to never go beyond the last page
-      } else {
-        console.log(`navigated to page ${currentPage + direction}`)
-        setCurrentPage (currentPage + direction)
-      }
+  const onCurrentPageChange = (direction) => {
+    //console.log(`was on page: ${currentPage}, blocker: ${blocker.blocking}`)
+
+    switch (direction) {
+      case 1: //moving forwards
+        if (blocker.blocking) {
+          alert(blocker.explanation)
+        } else if (currentPage === lastPage) {
+          //Do nothin
+        } else {
+          setCurrentPage (currentPage + direction)
+        }
+        break
+      case -1: //moving backwards
+        if (currentPage === 1) {
+          //Do nothin
+        } else {
+          setBlocker({blocking:false, explanation:"You went back!"})
+          setCurrentPage (currentPage + direction)
+        }
+      break
     }
+
+    // //catching any blocker flags when advancing
+    // if (blocker.blocking && direction === 1) {
+    //   alert(blocker.explanation)
+    // } else {
+    //   if (direction === 1 && currentPage === 2) {
+    //     //console.log(`hey I recognized that this is page 2 (currentPage: ${currentPage}) and now I'm gonna filter the playbookssss`)
+    //     filterPlaybooks(source, playbooks)
+    //   }
+    //   else if (blocker.blocking && direction === -1) {
+    //     //console.log("blocker was on and I moved backwards so I'm gonna deactivate it")
+    //     setBlocker({blocking:false, explanation:"You went back!"})
+    //   }      
+    //   if (direction === -1 && currentPage === 1) { //Safety prec. is made redundant if I conditionally just don't render the nav buttons when pressing is a nono
+    //     //do nothing as to never go below first page
+    //   } else if (direction === 1 && currentPage === lastPage) {
+    //     //do nothing as to never go beyond the last page
+    //   } else {
+    //     //console.log(`navigated to page ${currentPage + direction}`)
+    //     setCurrentPage (currentPage + direction)
+    //   }
+    //}
   }
 
   //dropdown states
   const onBestAtChange = (newStat) => {
-    console.log(`was best at: ${bestAt.stat}`)
+    console.log(`was best at: ${bestAt}`)
     console.log(`is NOW best at: ${newStat}`)
     
-    const previousStat = bestAt.stat
+    const previousStat = bestAt
 
     //Reset the numerics of the previous stat
     switch (previousStat) {
@@ -185,24 +238,28 @@ export const App = () => {
         break
     }
 
+    setBestAt(newStat)
+
+    checkStatOverlap()
+
     //remember! change the order of the hooks depending on onChange context!!
-    const overlappingWith = checkStatOverlap(newStat, nextToBestAt, worstAt)
+    // const overlappingWith = checkStatOverlap(newStat, nextToBestAt, worstAt)
     
-    if (overlappingWith === "a") {
-      setWorstAt({stat:worstAt.stat, overlap:false})
-      setBestAt({stat:newStat.stat, overlap:true})
-      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
-    } else if (overlappingWith === "b") {
-      setWorstAt({stat:worstAt.stat, overlap:true})
-      setBestAt({stat:newStat.stat, overlap:true})
-      setNextToBestAt({stat:nextToBestAt.stat, overlap:false})
-    } else if (overlappingWith === "both") {
-      setWorstAt({stat:worstAt.stat, overlap:true})
-      setBestAt({stat:newStat, overlap:true})
-      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
-    } else {
-      setBestAt({stat:newStat, overlap:false})
-    }
+    // if (overlappingWith === "a") {
+    //   setWorstAt({stat:worstAt.stat, overlap:false})
+    //   setBestAt({stat:newStat.stat, overlap:true})
+    //   setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    // } else if (overlappingWith === "b") {
+    //   setWorstAt({stat:worstAt.stat, overlap:true})
+    //   setBestAt({stat:newStat.stat, overlap:true})
+    //   setNextToBestAt({stat:nextToBestAt.stat, overlap:false})
+    // } else if (overlappingWith === "both") {
+    //   setWorstAt({stat:worstAt.stat, overlap:true})
+    //   setBestAt({stat:newStat, overlap:true})
+    //   setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    // } else {
+    //   setBestAt({stat:newStat, overlap:false})
+    // }
     
     //remember! change the order of the hooks depending on onChange context!!
     // if (checkStatOverlap(newStat, nextToBestAt, worstAt)) {
@@ -217,10 +274,10 @@ export const App = () => {
   }
 
   const onNextToBestAtChange = (newStat) => {
-    console.log(`was next to best at: ${nextToBestAt.stat}`)
+    console.log(`was next to best at: ${nextToBestAt}`)
     console.log(`is NOW next to best at: ${newStat}`)
     
-    const previousStat = nextToBestAt.stat
+    const previousStat = nextToBestAt
 
     //Reset the numerics of the previous stat
     switch (previousStat) {
@@ -265,24 +322,28 @@ export const App = () => {
         break
     }
 
+    setNextToBestAt(newStat)
+
+    checkStatOverlap()
+
     //remember! change the order of the hooks depending on onChange context!!
-    const overlappingWith = checkStatOverlap(newStat, bestAt, worstAt)
+    // const overlappingWith = checkStatOverlap(newStat, bestAt, worstAt)
     
-    if (overlappingWith === "a") {
-      setWorstAt({stat:worstAt.stat, overlap:false})
-      setBestAt({stat:bestAt.stat, overlap:true})
-      setNextToBestAt({stat:newStat, overlap:true})
-    } else if (overlappingWith === "b") {
-      setWorstAt({stat:worstAt.stat, overlap:true})
-      setBestAt({stat:bestAt.stat, overlap:false})
-      setNextToBestAt({stat:newStat.stat, overlap:true})
-    } else if (overlappingWith === "both") {
-      setWorstAt({stat:worstAt.stat, overlap:true})
-      setBestAt({stat:bestAt.stat, overlap:true})
-      setNextToBestAt({stat:newStat.stat, overlap:true})
-    } else {
-      setNextToBestAt({stat:newStat, overlap:false})
-    }
+    // if (overlappingWith === "a") {
+    //   setWorstAt({stat:worstAt.stat, overlap:false})
+    //   setBestAt({stat:bestAt.stat, overlap:true})
+    //   setNextToBestAt({stat:newStat, overlap:true})
+    // } else if (overlappingWith === "b") {
+    //   setWorstAt({stat:worstAt.stat, overlap:true})
+    //   setBestAt({stat:bestAt.stat, overlap:false})
+    //   setNextToBestAt({stat:newStat.stat, overlap:true})
+    // } else if (overlappingWith === "both") {
+    //   setWorstAt({stat:worstAt.stat, overlap:true})
+    //   setBestAt({stat:bestAt.stat, overlap:true})
+    //   setNextToBestAt({stat:newStat.stat, overlap:true})
+    // } else {
+    //   setNextToBestAt({stat:newStat, overlap:false})
+    // }
     
     //remember! change the order of the hooks depending on onChange context!!
     // if (checkStatOverlap(newStat, bestAt, worstAt)) {
@@ -297,10 +358,10 @@ export const App = () => {
   }
 
   const onWorstAtChange = (newStat) => {
-    console.log(`was worst at: ${worstAt.stat}`)
+    console.log(`was worst at: ${worstAt}`)
     console.log(`is NOW worst at: ${newStat}`)
     
-    const previousStat = worstAt.stat
+    const previousStat = worstAt
 
     //Reset the numerics of the previous stat
     switch (previousStat) {
@@ -344,25 +405,30 @@ export const App = () => {
         setCha(-2)
         break
     }
+
+    setWorstAt(newStat)
+
+    //by the time this fires, the stat hasn't had time to update yet,
+    //and inside this function
     
     //remember! change the order of the hooks depending on onChange context!!
-    const overlappingWith = checkStatOverlap(newStat, bestAt, nextToBestAt)
+    // const overlappingWith = checkStatOverlap(newStat, bestAt, nextToBestAt)
     
-    if (overlappingWith === "a") {
-      setWorstAt({stat:newStat, overlap:true})
-      setBestAt({stat:bestAt.stat, overlap:true})
-      setNextToBestAt({stat:nextToBestAt.stat, overlap:false})
-    } else if (overlappingWith === "b") {
-      setWorstAt({stat:newStat, overlap:true})
-      setBestAt({stat:bestAt.stat, overlap:false})
-      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
-    } else if (overlappingWith === "both") {
-      setWorstAt({stat:newStat, overlap:true})
-      setBestAt({stat:bestAt.stat, overlap:true})
-      setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
-    } else {
-      setWorstAt({stat:newStat, overlap:false})
-    }
+    // if (overlappingWith === "a") {
+    //   setWorstAt({stat:newStat, overlap:true})
+    //   setBestAt({stat:bestAt.stat, overlap:true})
+    //   setNextToBestAt({stat:nextToBestAt.stat, overlap:false})
+    // } else if (overlappingWith === "b") {
+    //   setWorstAt({stat:newStat, overlap:true})
+    //   setBestAt({stat:bestAt.stat, overlap:false})
+    //   setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    // } else if (overlappingWith === "both") {
+    //   setWorstAt({stat:newStat, overlap:true})
+    //   setBestAt({stat:bestAt.stat, overlap:true})
+    //   setNextToBestAt({stat:nextToBestAt.stat, overlap:true})
+    // } else {
+    //   setWorstAt({stat:newStat, overlap:false})
+    // }
 
     //can I make the other skillLevels restate themselves?
     // setNextToBestAt(nextToBestAt)
@@ -370,28 +436,31 @@ export const App = () => {
 
   }
 
-  const onSubmit = () => {
-    
+  const onSubmit = (event) => {
+    event.preventDefault()
+    setCurrentPage(6)
     //NEEDS TO SHOW SUMMARY AND HIDE OPTIONS (a re-render, not toggling display in css)!
-    
   }
 
-  const checkStatOverlap = (newStat, otherStat_a, otherStat_b) => {
+  const checkStatOverlap = () => {
     
-    if (newStat === otherStat_a.stat && newStat === otherStat_b.stat) {
-      console.log(`${newStat} equals both ${otherStat_a.stat} and ${otherStat_b.stat}`)
-      return "both"
-    } else if (newStat === otherStat_a.stat) {
-      console.log(`${newStat} equals ${otherStat_a.stat}`)
-      return "a"
-    } else if (newStat === otherStat_b.stat) {
-      console.log(`${newStat} equals ${otherStat_b.stat}`)
-      return "b"
+    if (bestAt === nextToBestAt || bestAt === worstAt) {
+      setBestAtOverlap(true) //issue, this self-triggers the useEffect
     } else {
-      console.log(`${newStat} equals neither ${otherStat_a.stat} nor ${otherStat_b.stat}`)
-      return "none"
+      setBestAtOverlap(false)
     }
-    
+
+    if (nextToBestAt === bestAt || nextToBestAt === worstAt) {
+      setNextToBestAtOverlap(true)
+    } else {
+      setNextToBestAtOverlap(false)
+    }
+
+    if (worstAt === bestAt || worstAt === nextToBestAt) {
+      setWorstAtOverlap(true)
+    } else {
+      setWorstAtOverlap(false)
+    }
   }
 
   const filterPlaybooks = (priority, playbooks) => {
@@ -434,6 +503,23 @@ export const App = () => {
 
   }
 
+  const getStatString = (skillLevel) => {
+    switch(skillLevel) {
+      case "STR":
+        return "strong"
+      case "DEX":
+        return "nimble"
+      case "CON":
+        return "resilient"
+      case "INT":
+        return "smart"
+      case "WIS":
+        return "in tune with their surroundings"
+      case "CHA":
+        return "smooth"
+    }
+  }
+
   //I might not need these
   const onStrChange = (value) => {
     setStr (value)    
@@ -459,10 +545,26 @@ export const App = () => {
     setCha (value)    
   }
 
-  
+  useEffect (() => {
+    console.log("checking stat overlap...")
+    checkStatOverlap()
+    checkBlocker()
+  },[currentPage, bestAt, nextToBestAt, worstAt])
+
+  useEffect (() => {
+    console.log("NOTICES OVERLAP OWO!")
+    checkBlocker()
+  },[bestAtOverlap, nextToBestAtOverlap, worstAtOverlap])
+
+  useEffect (() => {
+    console.log("Source changed!")
+    checkBlocker()
+  },[source])
+
 
 
   //Conditional page rendering
+
   switch (currentPage) {
     
     //Page 0 allows you to skip instantly to a desired
@@ -474,21 +576,20 @@ export const App = () => {
 
     case 1:
       return (
-        <>
-          <Text
-            question={questionData.intro}
-          />
+        <div className="page-wrapper">
+          <h1>TRPG Character-Outliner</h1>
+          <p>Feeling stuck on what to play for an upcoming campaign? Answer this form to get your gears turning ^^</p>
           <NavWrapper
             navigate={onCurrentPageChange}
             currentPage={currentPage}
             lastPage={lastPage}
           />
-        </>
+        </div>
       )
       
     case 2:
       return (
-        <>
+        <div className="page-wrapper">
           <QuestionWrapper 
           question={questionData.questions.question_source}
           toChange={onSourceChange}
@@ -499,18 +600,20 @@ export const App = () => {
             currentPage={currentPage}
             lastPage={lastPage}
           />
-        </>
+        </div>
       )
       
     case 3:
+      //if (blocker.blocking)
       return (
-        <>
+        <div className="page-wrapper">
           <form className="stat-questions-wrapper">
             <QuestionWrapper 
               question={questionData.questions.statQuestions.bestAt}
               options={questionData.questions.statQuestions.options}
               toChange={onBestAtChange}
               skillLevel = {bestAt}
+              doesOverlap = {bestAtOverlap}
               otherSkillLevel_a = {nextToBestAt}
               otherSkillLevel_b = {worstAt}
             />
@@ -519,6 +622,7 @@ export const App = () => {
               options={questionData.questions.statQuestions.options}
               toChange={onNextToBestAtChange}
               skillLevel = {nextToBestAt}
+              doesOverlap = {nextToBestAtOverlap}
               otherSkillLevel_a = {bestAt}
               otherSkillLevel_b = {worstAt}
             />
@@ -527,11 +631,12 @@ export const App = () => {
               options={questionData.questions.statQuestions.options}
               toChange={onWorstAtChange}
               skillLevel = {worstAt}
+              doesOverlap = {worstAtOverlap}
               otherSkillLevel_a = {bestAt}
               otherSkillLevel_b = {nextToBestAt}
             />
           </form>
-          <div className="playbooks-wrapper">
+          {/* <div className="playbooks-wrapper">
             <PlaybookWrapper 
               playbooks={filteredPlaybooks}
               str = {str}
@@ -541,67 +646,95 @@ export const App = () => {
               wis = {wis}
               cha = {cha}
             />
-          </div>
+          </div> */}
             <NavWrapper
               navigate={onCurrentPageChange}
               currentPage={currentPage}
               lastPage={lastPage}
             />
-            <p>--------------- DEBUG AID ---------------</p>
+            {/* <p>--------------- DEBUG AID ---------------</p>
             <p>// STR: {str} // DEX: {dex} // CON: {con} //</p>
-            <p>// INT: {int} // WIS: {wis} // CHA: {cha}//</p>
-        </>
+            <p>// INT: {int} // WIS: {wis} // CHA: {cha}//</p> */}
+        </div>
       )
 
-      case 4:
+    case 4:
       return (
-        <>
+        <div className="page-wrapper">
           <QuestionWrapper 
-              question={questionData.questions.personalityQuestions_fears}
+            question={questionData.questions.backstoryQuestions.fears}
+            onChange={handleBackstoryChange}
+            backstoryAspect={fears}
           />
           <QuestionWrapper 
-              question={questionData.questions.personalityQuestions_fearsOrigin}
-          />
-          <QuestionWrapper 
-              question={questionData.questions.personalityQuestions_cultureGood}
-          />
-          <QuestionWrapper 
-              question={questionData.questions.personalityQuestions_cultureBad}
-          />
-          <QuestionWrapper 
-              question={questionData.questions.personalityQuestions_dream}
+            question={questionData.questions.backstoryQuestions.fearsOrigin}
+            onChange={handleBackstoryChange}
+            backstoryAspect={fearsOrigin}
           />
           <NavWrapper
             navigate={onCurrentPageChange}
             currentPage={currentPage}
             lastPage={lastPage}
           />
-        </>
+        </div>
       )
-
       case 5:
+        return (
+          <div className="page-wrapper">
+            <QuestionWrapper 
+              question={questionData.questions.backstoryQuestions.cultureGood}
+              onChange={handleBackstoryChange}
+              backstoryAspect={cultureGood}
+            />
+            <QuestionWrapper 
+              question={questionData.questions.backstoryQuestions.cultureBad}
+              onChange={handleBackstoryChange}
+              backstoryAspect={cultureBad}
+            />
+            <QuestionWrapper 
+              question={questionData.questions.backstoryQuestions.dream}
+              onChange={handleBackstoryChange}
+              backstoryAspect={dreams}
+            />
+            <SubmitButton onSubmit={onSubmit}/>
+            <NavWrapper
+              navigate={onCurrentPageChange}
+              currentPage={currentPage}
+              lastPage={lastPage}
+            />
+          </div>
+        )
+    case 6:
+      if (fears.value[fears.value.length-1] === ".") {
+        setFears({ aspect: fears.aspect, value: fears.value.slice(0, fears.value.length-1) })
+      }
+      if (fearsOrigin.value[fearsOrigin.value.length-1] === ".") {
+        setFearsOrigin({ aspect: fearsOrigin.aspect, value: fearsOrigin.value.slice(0, fearsOrigin.value.length-1) })
+      }
+      if (cultureGood.value[cultureGood.value.length-1] === ".") {
+        setCultureGood({ aspect: cultureGood.aspect, value: cultureGood.value.slice(0, cultureGood.value.length-1) })
+      }
+      if (cultureBad.value[cultureBad.value.length-1] === ".") {
+        setCultureBad({ aspect: cultureBad.aspect, value: cultureBad.value.slice(0, cultureBad.value.length-1) })
+      }
+      if (dreams.value[dreams.value.length-1] === ".") {
+        setDreams({ aspect: dreams.aspect, value: dreams.value.slice(0, dreams.value.length-1) })
+      }
+      
       return (
         <>
           <Text
             question={questionData.results}
           />
-          <NavWrapper
-            navigate={onCurrentPageChange}
-            currentPage={currentPage}
-            lastPage={lastPage}
-          />
+          <p>
+            {`Your character is really ${getStatString(bestAt)} and pretty ${getStatString(nextToBestAt)}, but not very ${getStatString(worstAt)}.`}
+          </p>
+          <p> 
+            {`They are here because they are afraid of ${fears.value}, a fear which stems from ${fearsOrigin.value}. They encourage people to ${cultureGood.value}, while condemning people who ${cultureBad.value}. They dream of one day ${dreams.value}.`}
+          </p>
         </>
-      )
-      
+      )   
   }
-
-  return (
-    <div>
-      <SubmitButton 
-            onSubmit={onSubmit}
-      />
-    </div>
-  )
 }
 
 //onMagicChange={onMagicChange}
