@@ -16,7 +16,7 @@ const questions = [
     correctAnswer: "With Joffrey's crossbow"
   },
   {
-    question: "Which character did The Mountain when he took on the Viper?",
+    question: "Which character did The Mountain push off the cliff when he took on the Viper?",
     answers: ["Oberyn Martell", "Cersie", "Sansa", "Daenerys"],
     correctAnswer: "Oberyn Martell"
   },
