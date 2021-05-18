@@ -19,9 +19,10 @@ const Form =() => {
                 <form>
                     <div className="name-question">
                     <label htmlFor="name" placeholder="Name">Name:</label>
-                        <input 
+                        <input
                             id="name" 
                             type="text" 
+                            placeholder="Write your name here "
                             value={name}
                             onChange={(e) => {
                                 setName(e.target.value);}
@@ -54,8 +55,8 @@ const Form =() => {
                         <label htmlFor="instrument">What instrument do you play?</label>
                         <select id="instrument" onChange={(e) => {
                             setInstrument(e.target.value);
-                            setTimeout(console.log(instrument), 1000)
                         }}>
+                            <option disabled selected value>Select an option</option>
                             <option>Singing</option>
                             <option>Piano</option>
                             <option>Drums</option>
