@@ -9,7 +9,7 @@ import Form from './components/Form';
 export const App = () => {
 
   return (
-    <>
+    <div className="form-main">
       <div>
         <Header 
         backgroundColor="#F0A8C5"
@@ -22,7 +22,7 @@ export const App = () => {
       <div>
         <Form />
       </div>
-    </>
+    </div>
     
   )
 }

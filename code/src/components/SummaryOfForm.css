@@ -1,9 +1,21 @@
-.summary-section {
+.summary {
     display: flex;
     justify-content: center;
-    align-items: center;
-    width: 60%;
-    background-color: orangered;
+    flex-direction: column;
+    width: 20%;
+    background-color: rgb(193, 90, 53, 0.5);
     margin: 40px;
-    padding: 20px;
+    padding: 40px;
+}
+
+.summary-result {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 80%;
+    margin: 20px;
+}
+
+.summary-questions {
+    margin-top: 5px;
 }

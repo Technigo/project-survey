@@ -1,3 +1,9 @@
+body {
+    background-image: url('../images/headphones.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+}
 
 .form-section {
     display: flex;
@@ -7,18 +13,18 @@
 }
 
 form {
-
+    text-align: left;
     display: flex;
+    align-content: center;
     flex-direction: column;
-    justify-content: space-between;
-    background-color:#E0777D;
-    width: 30%;
+    background-color:rgba(151, 93, 187, 0.5);
+    width: 40%;
     height: 300px;
     text-align: left;
-    padding: 30px;
+    padding: 50px;
     margin-top: 10px;
     border: grey solid 1px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 label {
@@ -26,15 +32,18 @@ label {
 }
 
 .name-question {
+    margin-bottom: 10px;
     margin-left: 20px ;
 }
 
 
 .musician-question {
+    margin-bottom: 10px;
     margin-left: 20px ;
 }
 
 .musician-question input {
+    margin-bottom: 10px;
     margin-right: 30px;
 }
 
@@ -49,6 +58,11 @@ p {
 .instrument-question, select {
     margin-top: 10px;
     width: 80%;
+}
+
+button {
+    width: 60px;
+    margin: 40px 20px;
 }
 
 
