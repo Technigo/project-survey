@@ -1,5 +1,4 @@
-
-This is a project made during the Technigo Bootcamp. 
+Project week 10 of Technigo bootcamp
 
 # Let's Connect! Job connect form.
 
