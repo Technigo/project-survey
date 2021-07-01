@@ -1,21 +1,24 @@
 import React from 'react';
-import Select from '@material-ui/core/Select';
+
+import { InputContainer, Label, Option, Select } from './styled-components/FormElements'
+
 
 const QuestionFavorite = () => {
+  
   return (
-    <div>
-    <label htmlFor="favoriteBook">What is your favorite Jane Austen novel?</label>
+    <InputContainer>
+    <Label htmlFor="favoriteBook">What is your favorite Jane Austen novel?</Label>
     <Select id="favoriteBook">
-      <option value="" disabled selected>Select your favorite</option>
-      <option>Pride and Prejudice</option>
-      <option>Sense and Sensibility</option>
-      <option>Mansfield Park</option>
-      <option>Emma</option>
-      <option>Persuasion</option>
-      <option>Northanger Abbey</option>
-      <option>Lady Susan</option>
+      <Option value="" disabled selected>Select your favorite</Option>
+      <Option>Pride and Prejudice</Option>
+      <Option>Sense and Sensibility</Option>
+      <Option>Mansfield Park</Option>
+      <Option>Emma</Option>
+      <Option>Persuasion</Option>
+      <Option>Northanger Abbey</Option>
+      <Option>Lady Susan</Option>
     </Select>
-  </div>
+  </InputContainer>
   )
 };
 

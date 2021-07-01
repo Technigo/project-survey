@@ -1,47 +1,44 @@
 import React from 'react';
+import { InputContainer, RadioWrapper, Label, RadioLabel, RadioInput } from './styled-components/FormElements'
 
 
 const QuestionBooks = () => {
   return (
-    <div>
-    <label htmlFor="books">How many of Jane's novels have you read?</label>
-      <input 
-        type="radio" 
-        name="radioQuestion" 
-        id="none"
-      />
-      <label htmlFor="none">none</label>
-      <input 
-        type="radio" 
-        name="radioQuestion"
-        id="one"
-      />
-      <label htmlFor="one">1</label>
-      <input 
-        type="radio"
-        name="radioQuestion" 
-        id="two"
-      />
-      <label htmlFor="two">2</label>
-      <input 
-        type="radio" 
-        name="radioQuestion"
-        id="three"
-      />
-      <label htmlFor="three">3</label>
-      <input 
-        type="radio" 
-        name="radioQuestion"
-        id="fourmore"
-      />
-      <label htmlFor="fourmore">4-6</label>
-      <input 
-        type="radio" 
-        name="radioQuestion"
-        id="all"
-      />
-      <label htmlFor="all">all of them</label>
-  </div>
+    <InputContainer>     
+      <Label htmlFor="books">How many of Jane's novels have you read?</Label>
+      <RadioWrapper>
+        <RadioInput 
+          type="radio" 
+          name="radioQuestion" 
+          id="none"
+        />
+        <RadioLabel htmlFor="none">None</RadioLabel>
+      </RadioWrapper>
+      <RadioWrapper>
+        <RadioInput 
+          type="radio" 
+          name="radioQuestion"
+          id="oneortwo"
+        />
+        <RadioLabel htmlFor="one">One or Two</RadioLabel>
+      </RadioWrapper>
+      <RadioWrapper>
+        <RadioInput 
+          type="radio" 
+          name="radioQuestion"
+          id="three"
+        />
+        <RadioLabel htmlFor="three">Three or more</RadioLabel>
+      </RadioWrapper>
+      <RadioWrapper>
+        <RadioInput 
+          type="radio" 
+          name="radioQuestion"
+          id="all"
+        />
+        <RadioLabel htmlFor="all">All of them, even the short stories!</RadioLabel>
+      </RadioWrapper>
+  </InputContainer>
   )
 };
 
