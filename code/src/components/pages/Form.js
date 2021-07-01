@@ -18,7 +18,7 @@ const Form = () => {
         </ImageWrapper>
       </Header>
       <SurveyForm>
-        <QuestionName />
+        <WhatsYourName />
         <QuestionBooks />
         <QuestionFavorite />
         <QuestionFilms />

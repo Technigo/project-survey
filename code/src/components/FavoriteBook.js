@@ -3,7 +3,7 @@ import React from 'react';
 import { InputContainer, Label, Option, Select } from './styled-components/FormElements'
 
 
-const QuestionFavorite = () => {
+const FavoriteBook = () => {
   
   return (
     <InputContainer>
@@ -22,4 +22,4 @@ const QuestionFavorite = () => {
   )
 };
 
-export default QuestionFavorite;
+export default FavoriteBook;

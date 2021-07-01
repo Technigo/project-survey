@@ -2,7 +2,7 @@ import React from 'react';
 
 import { InputContainer, Label, Select, Option } from './styled-components/FormElements'
 
-const QuestionFilms = () => {
+const FavoriteFilm = () => {
   return (
     <InputContainer>
         <Label htmlFor="film">What was your favorite film or adaptation of Pride and Prejudice?</Label>        
@@ -21,4 +21,4 @@ const QuestionFilms = () => {
   )
 };
 
-export default QuestionFilms;
+export default FavoriteFilm;

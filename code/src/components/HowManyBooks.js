@@ -2,7 +2,7 @@ import React from 'react';
 import { InputContainer, RadioWrapper, Label, RadioLabel, RadioInput } from './styled-components/FormElements'
 
 
-const QuestionBooks = () => {
+const HowManyBooks = () => {
   return (
     <InputContainer>     
       <Label htmlFor="books">How many of Jane's novels have you read?</Label>
@@ -42,4 +42,4 @@ const QuestionBooks = () => {
   )
 };
 
-export default QuestionBooks;
+export default HowManyBooks;
