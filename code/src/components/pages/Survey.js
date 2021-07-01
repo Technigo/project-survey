@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 
-import WhatsYourName from "components/WhatsYourName";
-import HowManyBooks from "components/HowManyBooks";
-import FavoriteBook from "components/FavoriteBook";
-import FavoriteFilm from "components/FavoriteFilm";
+import WhatsYourName from "../WhatsYourName";
+import HowManyBooks from "../HowManyBooks";
+import FavoriteBook from "../FavoriteBook";
+import FavoriteFilm from "../FavoriteFilm";
+import Summary from "../Summary"
 
 const Survey = () => {
-  const [name, setName] = useState('');
+  const [name, setName] = useState("");
   const [howManyBooks, setHowManyBooks] = useState();
-  const [favoriteBook, setFavoriteBook] = useState();
-  const [favoriteFilm, setFavoriteFilm] = useState();
+  const [favoriteBook, setFavoriteBook] = useState("");
+  const [favoriteFilm, setFavoriteFilm] = useState("");
   const [question, setQuestion] = useState("welcome");
 
   const questionOrder = [
@@ -20,38 +21,38 @@ const Survey = () => {
     "summary",
   ];
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    nextQuestionIndex = questionOrder.indexOf(question);
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    const nextQuestionIndex = questionOrder.indexOf(question);
     setQuestion(questionOrder[nextQuestionIndex + 1]);
   };
 
   return (
     <>
       <section className="form-container">
-        {section !== "summary" && (
+        {question !== "summary" && (
           <form onSubmit={handleSubmit}>
-            {section === "welcome" && (
+            {question === "welcome" && (
               <WhatsYourName
                 name={name}
                 setName={setName}
                 handleSubmit={handleSubmit}
               />
             )}
-            {section === "question1" && (
+            {question === "question1" && (
               <HowManyBooks 
                 howManyBooks={howManyBooks}
                 setHowManyBooks={setHowManyBooks}
                 handleSubmit={handleSubmit} />
             )}
-            {section === "question2" && (
+            {question === "question2" && (
               <FavoriteBook
                 favoriteBook={favoriteBook}
                 setFavoriteBook={setFavoriteBook}
                 handleSubmit={handleSubmit}
               />
             )}
-            {section === "question3" && (
+            {question === "question3" && (
               <FavoriteFilm
                 favoriteFilm={favoriteFilm}
                 setFavoriteFilm={setFavoriteFilm}
@@ -60,8 +61,7 @@ const Survey = () => {
             )}
           </form>
         )}
-        ;
-        {section === "summary" && (
+        {question === "summary" && (
           <Summary
             name={name}
             howManyBooks={howManyBooks}
@@ -71,7 +71,7 @@ const Survey = () => {
         )}
       </section>
     </>
-  );
+  )
 };
 
 export default Survey;

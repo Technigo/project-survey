@@ -7,23 +7,50 @@ const Summary = ({ name, howManyBooks, favoriteBook, favoriteFilm }) => {
   return (
     <>
       <section>
-        <h2 className="summary-title">Summary</h2>
+        <h2
+          tabIndex="0"
+          className="summary-title"
+          aria-label="Summary of survey"
+        >
+          Summary of Survey
+        </h2>
         <div>
-          <p>Hello {name}! Let's take another look at your answers!</p>
+          <p
+            tabIndex="0"
+            aria-label="Hello let's take another look at your answers!"
+          >
+            Hello {name}! Let's take another look at your answers!
+          </p>
         </div>
         <div>
-          <p>How many of Jane Austen's books have you read?</p>
-          <p>Answer: {howManyBooks}</p>
+          <p
+            tabIndex="0"
+            aria-label="How many of Jane Austen's books have you read?"
+          >
+            How many of Jane Austen's books have you read?
+          </p>
+          <p tabIndex="0" aria-label="Answer">
+            Answer: {howManyBooks}
+          </p>
         </div>
         <div>
-          <p>Which was your favorite of her novels?</p>
-          <p>Answer: {favoriteBook}</p>
+          <p tabIndex="0" aria-label="Which was your favorite of her novels?">
+            Which was your favorite of her novels?
+          </p>
+          <p tabIndex="0" aria-label="Answer">
+            Answer: {favoriteBook}
+          </p>
         </div>
         <div>
-          <p>
+          <p
+            tabIndex="0"
+            aria-label="What was your favorite film/tv adaptation of Pride and Prejudice?"
+          >
             What was your favorite film/tv adaptation of Pride and Prejudice?
           </p>
-          <p>Answer: {favoriteFilm}</p>
+          <p tabIndex="0" aria-label="Answer">
+            Answer: {favoriteFilm}
+          </p>
         </div>
         <button
           type="button"
@@ -36,5 +63,7 @@ const Summary = ({ name, howManyBooks, favoriteBook, favoriteFilm }) => {
         </button>
       </section>
     </>
-  );
+  )
 };
+
+export default Summary;
