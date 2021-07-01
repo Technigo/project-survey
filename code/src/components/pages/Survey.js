@@ -1,8 +1,9 @@
 import React from 'react';
+import Form from './Form';
 
 const Survey = () => {
   return (
-    <div> Survey form here.</div>
+    <Form />
   )
 };
 
