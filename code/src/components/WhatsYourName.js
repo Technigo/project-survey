@@ -8,7 +8,7 @@ import {
   TextField,
   Title,
   ButtonContainer,
-  Button
+  Button,
 } from "./styled-components/FormElements";
 
 const WhatsYourName = ({ name, setName, handleSubmit }) => {
@@ -19,10 +19,7 @@ const WhatsYourName = ({ name, setName, handleSubmit }) => {
   return (
     <Form>
       <InputContainer>
-        <Title 
-          tabIndex="0" 
-          aria-label="Welcome to our Survey!"
-        >
+        <Title tabIndex="0" aria-label="Welcome to our Survey!">
           Welcome to our Survey!
         </Title>
         <Label tabIndex="0" htmlFor="name" aria-label="What is your name?">
@@ -38,18 +35,20 @@ const WhatsYourName = ({ name, setName, handleSubmit }) => {
         />
       </InputContainer>
       <ButtonContainer>
-      <Button onSubmit={handleSubmit}
-            className='button'
-            tabIndex='0'
-            aria-pressed='false'
-            aria-label='Start survey'
-            type='submit'
-            > 
-            Let's Begin!<FaLongArrowAltRight />
+        <Button
+          onSubmit={handleSubmit}
+          className="button"
+          tabIndex="0"
+          aria-pressed="false"
+          aria-label="Start survey"
+          type="submit"
+        >
+          Let's Begin!
+          <FaLongArrowAltRight />
         </Button>
       </ButtonContainer>
     </Form>
-  )
+  );
 };
 
 export default WhatsYourName;

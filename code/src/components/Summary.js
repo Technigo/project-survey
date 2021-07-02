@@ -8,7 +8,7 @@ import {
   TextAnswer,
   ButtonContainer,
   Button,
-  Span
+  Span,
 } from "./styled-components/FormElements";
 
 const Summary = ({ name, howManyBooks, favoriteBook, favoriteFilm }) => {
@@ -30,7 +30,7 @@ const Summary = ({ name, howManyBooks, favoriteBook, favoriteFilm }) => {
             tabIndex="0"
             aria-label="Hello let's take another look at your answers!"
           >
-            Hello <Span>{name}!</Span> 
+            Hello <Span>{name}!</Span>
             <br />
             <br />
             Let's take another look at your answers!
@@ -48,7 +48,10 @@ const Summary = ({ name, howManyBooks, favoriteBook, favoriteFilm }) => {
           </TextAnswer>
         </TextWrapper>
         <TextWrapper>
-          <TextQuestion tabIndex="0" aria-label="Which was your favorite of her novels?">
+          <TextQuestion
+            tabIndex="0"
+            aria-label="Which was your favorite of her novels?"
+          >
             Which was your favorite of her novels?
           </TextQuestion>
           <TextAnswer tabIndex="0" aria-label="Answer">

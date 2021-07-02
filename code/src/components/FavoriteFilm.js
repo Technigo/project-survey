@@ -8,7 +8,7 @@ import {
   Option,
   ButtonContainer,
   Button,
-  Form
+  Form,
 } from "./styled-components/FormElements";
 
 const FavoriteFilm = ({ favoriteFilm, setFavoriteFilm, handleSubmit }) => {
@@ -18,7 +18,7 @@ const FavoriteFilm = ({ favoriteFilm, setFavoriteFilm, handleSubmit }) => {
   return (
     <Form>
       <InputContainer>
-        <Label 
+        <Label
           tabIndex="0"
           htmlFor="film"
           aria-label="What was your favorite film or adaption of Pride and Prejudice?"
@@ -59,7 +59,7 @@ const FavoriteFilm = ({ favoriteFilm, setFavoriteFilm, handleSubmit }) => {
         </Button>
       </ButtonContainer>
     </Form>
-  )
+  );
 };
 
 export default FavoriteFilm;

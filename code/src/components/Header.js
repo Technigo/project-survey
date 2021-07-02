@@ -1,22 +1,20 @@
-import React from 'react';
-import styled from 'styled-components/macro';
+import React from "react";
+import styled from "styled-components/macro";
 
-import JaneProfile from './assets/janeprofile.png'
+import JaneProfile from "./assets/janeprofile.png";
 
 const Header = () => {
   return (
-      <HeaderContainer>
-        <Title>All About Jane</Title>
-        <ImageWrapper>
-          <Image src={JaneProfile} alt="jane-austin" />
-        </ImageWrapper>
-      </HeaderContainer>
-  )
+    <HeaderContainer>
+      <Title>All About Jane</Title>
+      <ImageWrapper>
+        <Image src={JaneProfile} alt="jane-austin" />
+      </ImageWrapper>
+    </HeaderContainer>
+  );
 };
 
 export default Header;
-
-
 
 const HeaderContainer = styled.header`
   display: flex;
@@ -27,20 +25,20 @@ const HeaderContainer = styled.header`
   margin-top: 35px;
   z-index: 1;
   @media (min-width: 991px) {
-    margin-top: 20px;
+    margin-top: 10px;
   }
-`
+`;
 
 const Title = styled.h1`
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
   color: #00000;
   font-size: 40px;
   margin-right: 10px;
-  @media (min-width: 768px){
+  @media (min-width: 768px) {
     font-size: 60px;
     margin-right: 18px;
   }
-`
+`;
 const ImageWrapper = styled.div`
   border-radius: 50%
   border: 2px solid black;
@@ -50,7 +48,7 @@ const ImageWrapper = styled.div`
     width: 80px;
     height: 120px; 
   }
-`
+`;
 const Image = styled.img`
   width: 100%;
-`
+`;

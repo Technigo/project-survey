@@ -8,7 +8,7 @@ import {
   Select,
   ButtonContainer,
   Button,
-  Form
+  Form,
 } from "./styled-components/FormElements";
 
 const FavoriteBook = ({ favoriteBook, setFavoriteBook, handleSubmit }) => {
@@ -56,7 +56,7 @@ const FavoriteBook = ({ favoriteBook, setFavoriteBook, handleSubmit }) => {
         </Button>
       </ButtonContainer>
     </Form>
-  )
+  );
 };
 
 export default FavoriteBook;

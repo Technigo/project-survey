@@ -7,7 +7,7 @@ body {
   font-family: "PT Serif", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url('./components/assets/victorianbkg.jpg');
+  background-image: url("./components/assets/victorianbkg.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   height: 120vh;
@@ -18,5 +18,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
-

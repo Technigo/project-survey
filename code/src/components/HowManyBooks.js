@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLongArrowAltRight } from 'react-icons/fa'
+import { FaLongArrowAltRight } from "react-icons/fa";
 import {
   InputContainer,
   RadioWrapper,
@@ -8,7 +8,7 @@ import {
   RadioInput,
   ButtonContainer,
   Button,
-  Form
+  Form,
 } from "./styled-components/FormElements";
 
 const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
@@ -27,6 +27,7 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
         </Label>
         <RadioWrapper>
           <RadioInput
+            required
             type="radio"
             name="radioQuestion"
             id="none"
@@ -38,6 +39,7 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
         </RadioWrapper>
         <RadioWrapper>
           <RadioInput
+            required
             type="radio"
             name="radioQuestion"
             id="oneortwo"
@@ -49,6 +51,7 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
         </RadioWrapper>
         <RadioWrapper>
           <RadioInput
+            required
             type="radio"
             name="radioQuestion"
             id="three"
@@ -60,6 +63,7 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
         </RadioWrapper>
         <RadioWrapper>
           <RadioInput
+            required
             type="radio"
             name="radioQuestion"
             id="all"
@@ -85,7 +89,7 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
         </Button>
       </ButtonContainer>
     </Form>
-  )
+  );
 };
 
 export default HowManyBooks;
