@@ -3,8 +3,12 @@ import { FaLongArrowAltRight } from "react-icons/fa";
 
 import {
   InputContainer,
+  Form,
   Label,
   TextField,
+  Title,
+  ButtonContainer,
+  Button
 } from "./styled-components/FormElements";
 
 const WhatsYourName = ({ name, setName, handleSubmit }) => {
@@ -13,14 +17,14 @@ const WhatsYourName = ({ name, setName, handleSubmit }) => {
   };
 
   return (
-    <form>
+    <Form>
       <InputContainer>
-        <h1 
+        <Title 
           tabIndex="0" 
           aria-label="Welcome to our Survey!"
         >
           Welcome to our Survey!
-        </h1>
+        </Title>
         <Label tabIndex="0" htmlFor="name" aria-label="What is your name?">
           What is your name?
         </Label>
@@ -33,8 +37,8 @@ const WhatsYourName = ({ name, setName, handleSubmit }) => {
           onChange={onNameChange}
         />
       </InputContainer>
-      <div>
-      <button onSubmit={handleSubmit}
+      <ButtonContainer>
+      <Button onSubmit={handleSubmit}
             className='button'
             tabIndex='0'
             aria-pressed='false'
@@ -42,9 +46,9 @@ const WhatsYourName = ({ name, setName, handleSubmit }) => {
             type='submit'
             > 
             Let's Begin!<FaLongArrowAltRight />
-        </button>
-      </div>
-    </form>
+        </Button>
+      </ButtonContainer>
+    </Form>
   )
 };
 

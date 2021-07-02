@@ -6,6 +6,9 @@ import {
   Label,
   Option,
   Select,
+  ButtonContainer,
+  Button,
+  Form
 } from "./styled-components/FormElements";
 
 const FavoriteBook = ({ favoriteBook, setFavoriteBook, handleSubmit }) => {
@@ -13,7 +16,7 @@ const FavoriteBook = ({ favoriteBook, setFavoriteBook, handleSubmit }) => {
     setFavoriteBook(e.target.value);
   };
   return (
-    <form>
+    <Form>
       <InputContainer>
         <Label
           tabIndex="0"
@@ -40,8 +43,8 @@ const FavoriteBook = ({ favoriteBook, setFavoriteBook, handleSubmit }) => {
           <Option>Lady Susan</Option>
         </Select>
       </InputContainer>
-      <div>
-        <button
+      <ButtonContainer>
+        <Button
           onSubmit={handleSubmit}
           className="button"
           tabIndex="0"
@@ -50,9 +53,9 @@ const FavoriteBook = ({ favoriteBook, setFavoriteBook, handleSubmit }) => {
           type="submit"
         >
           Third Question <FaLongArrowAltRight />
-        </button>
-      </div>
-    </form>
+        </Button>
+      </ButtonContainer>
+    </Form>
   )
 };
 

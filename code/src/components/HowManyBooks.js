@@ -6,6 +6,9 @@ import {
   Label,
   RadioLabel,
   RadioInput,
+  ButtonContainer,
+  Button,
+  Form
 } from "./styled-components/FormElements";
 
 const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
@@ -13,7 +16,7 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
     setHowManyBooks(e.target.value);
   };
   return (
-    <form>
+    <Form>
       <InputContainer>
         <Label
           tabIndex="0"
@@ -69,8 +72,8 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
           </RadioLabel>
         </RadioWrapper>
       </InputContainer>
-      <div>
-        <button
+      <ButtonContainer>
+        <Button
           onSubmit={handleSubmit}
           className="button"
           tabIndex="0"
@@ -79,9 +82,9 @@ const HowManyBooks = ({ howManyBooks, setHowManyBooks, handleSubmit }) => {
           type="submit"
         >
           Second Question <FaLongArrowAltRight />
-        </button>
-      </div>
-    </form>
+        </Button>
+      </ButtonContainer>
+    </Form>
   )
 };
 

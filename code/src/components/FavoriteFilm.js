@@ -6,6 +6,9 @@ import {
   Label,
   Select,
   Option,
+  ButtonContainer,
+  Button,
+  Form
 } from "./styled-components/FormElements";
 
 const FavoriteFilm = ({ favoriteFilm, setFavoriteFilm, handleSubmit }) => {
@@ -13,7 +16,7 @@ const FavoriteFilm = ({ favoriteFilm, setFavoriteFilm, handleSubmit }) => {
     setFavoriteFilm(e.target.value);
   };
   return (
-    <form>
+    <Form>
       <InputContainer>
         <Label 
           tabIndex="0"
@@ -43,8 +46,8 @@ const FavoriteFilm = ({ favoriteFilm, setFavoriteFilm, handleSubmit }) => {
           </Option>
         </Select>
       </InputContainer>
-      <div>
-        <button
+      <ButtonContainer>
+        <Button
           onSubmit={handleSubmit}
           className="button"
           tabIndex="0"
@@ -53,9 +56,9 @@ const FavoriteFilm = ({ favoriteFilm, setFavoriteFilm, handleSubmit }) => {
           type="submit"
         >
           Let's Summarize! <FaLongArrowAltRight />
-        </button>
-      </div>
-    </form>
+        </Button>
+      </ButtonContainer>
+    </Form>
   )
 };
 

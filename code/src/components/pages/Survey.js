@@ -1,10 +1,11 @@
 import React, { useState } from "react";
+import styled from "styled-components/macro";
 
 import WhatsYourName from "../WhatsYourName";
 import HowManyBooks from "../HowManyBooks";
 import FavoriteBook from "../FavoriteBook";
 import FavoriteFilm from "../FavoriteFilm";
-import Summary from "../Summary"
+import Summary from "../Summary";
 
 const Survey = () => {
   const [name, setName] = useState("");
@@ -29,9 +30,9 @@ const Survey = () => {
 
   return (
     <>
-      <section className="form-container">
+      <SurveyWrapper className="form-container">
         {question !== "summary" && (
-          <form onSubmit={handleSubmit}>
+          <Form onSubmit={handleSubmit}>
             {question === "welcome" && (
               <WhatsYourName
                 name={name}
@@ -40,10 +41,11 @@ const Survey = () => {
               />
             )}
             {question === "question1" && (
-              <HowManyBooks 
+              <HowManyBooks
                 howManyBooks={howManyBooks}
                 setHowManyBooks={setHowManyBooks}
-                handleSubmit={handleSubmit} />
+                handleSubmit={handleSubmit}
+              />
             )}
             {question === "question2" && (
               <FavoriteBook
@@ -59,7 +61,7 @@ const Survey = () => {
                 handleSubmit={handleSubmit}
               />
             )}
-          </form>
+          </Form>
         )}
         {question === "summary" && (
           <Summary
@@ -69,9 +71,32 @@ const Survey = () => {
             favoriteFilm={favoriteFilm}
           />
         )}
-      </section>
+      </SurveyWrapper>
     </>
-  )
+  );
 };
 
 export default Survey;
+
+const SurveyWrapper = styled.main`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: auto 20px;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+`
+
+const Form = styled.form`
+  background-color: rgba(255, 250, 229, 0.7);
+  border-radius: 20px;
+  border: 2px solid #2F0E07;
+  width: 90%;
+  height: 80%;
+`
