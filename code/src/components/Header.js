@@ -25,6 +25,10 @@ const HeaderContainer = styled.header`
   align-items: center;
   padding: 20px;
   margin-top: 35px;
+  z-index: 1;
+  @media (min-width: 991px) {
+    margin-top: 20px;
+  }
 `
 
 const Title = styled.h1`
@@ -46,7 +50,6 @@ const ImageWrapper = styled.div`
     width: 80px;
     height: 120px; 
   }
-
 `
 const Image = styled.img`
   width: 100%;

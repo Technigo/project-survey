@@ -91,6 +91,7 @@ const SurveyWrapper = styled.main`
   -webkit-transform: translateY(-50%);
   -ms-transform: translateY(-50%);
   transform: translateY(-50%);
+  z-index: 0;
 `
 
 const Form = styled.form`
@@ -99,4 +100,8 @@ const Form = styled.form`
   border: 2px solid #2F0E07;
   width: 90%;
   height: 80%;
+  @media (min-width: 991px){
+    width: 50%;
+    height: 60%;
+  }
 `
