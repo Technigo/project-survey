@@ -6,7 +6,21 @@ import SubmitButton from "./SubmitButton";
 import Summary from "./Summary";
 
 // Options for radiobuttons
-const projects = ["Weather app", "Chatbot", "Music releas", "Survey", "Todo app", "Happy thougts", "Final Project"];
+const projects = [
+  "Weather app", 
+  "Chatbot", 
+  "Portfolio",
+  "Music releas", 
+  "Survey", 
+  "Todo app", 
+  "Happy thougts",
+  "Movie site",
+  "Mobile app",
+  "Quize", 
+  "Maze Game",
+  "Mongo-backend API",
+  "Form - authentification",
+  "Final Project"];
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -21,7 +35,7 @@ const Form = () => {
     if (name === "") {
       return false;
     }
-    
+
     if (evaluation === "") {
       return false;
     }
@@ -85,6 +99,7 @@ const Form = () => {
         {projects.map((project) => {
           return (
             <RadioButton
+              // Send projectName and ochChange as props to RadioButton component 
               projectName={project}
               onChange={setProject}
               key={project}

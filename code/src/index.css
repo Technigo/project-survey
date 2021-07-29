@@ -82,15 +82,3 @@ p {
 .answer-text {
   font-weight: 600;
 }
-
-footer {
-  display: flex;
-  justify-content: center;
-  margin-top: 50px;
-  margin-bottom: 25px;
-}
-
-.footer-text {
-  font-size: 10px;
-  color: gray;
-}
