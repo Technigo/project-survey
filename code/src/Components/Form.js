@@ -5,7 +5,8 @@ import RadioButton from "./RadioButton";
 import SubmitButton from "./SubmitButton";
 import Summary from "./Summary";
 
-const projects = ["Weather app", "Chatbot", "Music releas", "Survey"];
+// Options for radiobuttons
+const projects = ["Weather app", "Chatbot", "Music releas", "Survey", "Todo app", "Happy thougts", "Final Project"];
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -20,7 +21,7 @@ const Form = () => {
     if (name === "") {
       return false;
     }
-
+    
     if (evaluation === "") {
       return false;
     }
@@ -45,7 +46,7 @@ const Form = () => {
     }
   }, [name, evaluation, project, thoughts, isSurveyComplete]);
 
-  // when submitted, show summery.
+  // conditional rendering
   if (submitted) {
     return (
       <Summary
@@ -59,9 +60,7 @@ const Form = () => {
 
   return (
     <form
-      // getting triggered when pressing submit button.
-      // Preventing from reloading the page.
-      // Set submitted to true so that subbmited is rendered.
+      // triggered when pressing submit, prevent reloading, set submitted to true
       className="form"
       onSubmit={(e) => {
         e.preventDefault();
