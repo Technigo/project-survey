@@ -1,4 +1,5 @@
 import React, { useCallback, useEffect, useState } from "react";
+
 import TextInput from "./TextInput";
 import Dropdown from "./Dropdown";
 import RadioButton from "./RadioButton";
@@ -71,10 +72,8 @@ const Form = () => {
       />
     );
   }
-
   return (
     <form
-      // triggered when pressing submit, prevent reloading, set submitted to true
       className="form"
       onSubmit={(e) => {
         e.preventDefault();
@@ -84,22 +83,24 @@ const Form = () => {
       <div className="question-container">
         <p>Let's start simple - what's your name?</p>
         <TextInput
-          onChange={setName}
-          value={name}
-          placeholder="Name"
           id="first name"
+          placeholder="Name"
+          value={name}
+          onChange={setName}
         />
       </div>
       <div className="dropdown-container">
         <p>How thriled are you about becoming a frontend developer?</p>
-        <Dropdown onChange={setEvaluation} value={evaluation} />
+        <Dropdown 
+          value={evaluation} 
+          onChange={setEvaluation}/>
       </div>
       <div className="radio-container">
         <p>What has been your favourite project during Technigo bootcamp?</p>
         {projects.map((project) => {
           return (
             <RadioButton
-              // Send projectName and ochChange as props to RadioButton component 
+              // Send projectName and onChange as props to RadioButton component 
               projectName={project}
               onChange={setProject}
               key={project}

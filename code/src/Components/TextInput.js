@@ -10,10 +10,10 @@ const TextInput = ({ onChange, value, placeholder, id }) => {
       <label htmlFor={id}></label>
       <input
         className="text-box"
-        id={id}
         type="text"
-        value={value}
+        id={id}
         placeholder={placeholder}
+        value={value}
         onChange={onInputChange}
       />
     </div>
