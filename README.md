@@ -1,12 +1,8 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+The goal of the project was to create a form using useState hook in React, and to connect HTML form inputs to state. I made flower delivery order form.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Created during Technigo Frontend Bootcamp week 10.
 
 ## View it live
 
