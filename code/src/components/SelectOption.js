@@ -2,10 +2,10 @@ import React from 'react'
 
 import NextButton from 'components/NextButton'
  
-const SecondQuestion = (props) => {
+const SelectOption = ({ setFavoriteTime, favoriteTime }) => {
 
   const onFavoriteTimeChange = (e) => {
-    props.setFavoriteTime(e.target.value)
+    setFavoriteTime(e.target.value)
   }
  
   return (
@@ -14,8 +14,7 @@ const SecondQuestion = (props) => {
       <div className="custom-select">
         <select
           onChange={onFavoriteTimeChange}
-          value= {props.favoriteTime} 
-          required
+          value= {favoriteTime} 
         >
           <option disabled value="">Select a time</option>
           <option value="morning">Morning</option>
@@ -29,5 +28,5 @@ const SecondQuestion = (props) => {
   )
 }
 
-export default SecondQuestion
+export default SelectOption
 

@@ -2,17 +2,12 @@ import React from 'react'
 
 import NextButton from 'components/NextButton'
 
-const amountOfTimes= [
-  '1-2 times a week',
-  '2-3 times a week',
-  '4-5 times a week',
-  'everyday'
-]
+import { amountOfTimes } from '../reusable/constants'
 
-const FirstQuestion = (props) => {
+const RadioButtonOne = ({ setTime, readingTime }) => {
 
   const onTimeChange = (e) => {
-    props.setTime(e.target.value)
+    setTime(e.target.value)
   }
 
   return (
@@ -27,8 +22,7 @@ const FirstQuestion = (props) => {
               type='radio'
               value={amountOfTime}
               onChange={onTimeChange}
-              checked = {props.readingTime === amountOfTime}
-              required 
+              checked = {readingTime === amountOfTime}
             />
             {amountOfTime}
           </label>
@@ -36,8 +30,7 @@ const FirstQuestion = (props) => {
       )})} 
       <NextButton />
     </div>
-  
   )
 }
 
-export default FirstQuestion
+export default RadioButtonOne

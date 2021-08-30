@@ -11,7 +11,8 @@ const Header = () => {
         <h2>By answering this questions you will see your reading pattern.</h2>
         <button
           aria-label='Start the survey'
-          className="start-btn">
+          className="start-btn"
+          >
             Start
         </button>
       </div>

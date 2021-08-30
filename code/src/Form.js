@@ -2,83 +2,50 @@ import React, { useState } from 'react'
 
 import Header from './components/Header'
 import NameQuestion from './components/NameQuestion'
-import FirstQuestion from './components/FirstQuestion'
-import SecondQuestion from './components/SecondQuestion'
-import ThirdQuestion from './components/ThirdQuestion'
+import RadioButtonOne from './components/RadioButtonOne'
+import SelectOption from './components/SelectOption'
+import RadioButtonTwo from './components/RadioButtonTwo'
+import Checkbox from './components/Checkbox'
 import Summary from './components/Summary'
-import ProgressBar from './components/ProgressBar'
 
 
 const Form = () => {
   const [name, setName] = useState('')
-  const [time, setTime] = useState('')
+  const [readingTime, setreadingTime] = useState('')
   const [favoriteTime, setFavoriteTime] = useState('')
   const [favoritePlace, setFavoritePlace] = useState ('')
-  const [section, setSection] = useState('startPage')
-  const [progress, setProgress] = useState(0)
-
+  const [isChecked, setIsChecked] = useState([])
+  const [isSubmited, setIsSubmited] = useState(false)
+  const [questionIndex, setQuestionIndex] = useState(0)
 
   const isSurveyComplete = (event) => {
     event.preventDefault()
-    if (name === '') {
-      setSection('firstQuestion')
-      setProgress([0])
-    } else if (time === '') {
-      setSection('secondQuestion')
-      setProgress([30])
-    } else if (favoriteTime === '') {
-      setSection('thirdQuestion')
-      setProgress([60])
-    } else if (favoritePlace === '') {
-      setSection('fourthQuestion')
-      setProgress([90])
-    } else {
-      setSection('summary')
-    } 
+    setIsSubmited(true)
   }
+
 
   return (
     <main className="form">
-      {section !== 'summary' ? (
-        <form onSubmit={isSurveyComplete}>
-          {section === 'startPage' && (
+      <form onSubmit={isSurveyComplete}>
+        {!isSubmited ? (
+          <>
             <Header />
-          )}
-          {section ==='firstQuestion' && (
-            <>
-              <NameQuestion name={name} setName={setName} />
-              <ProgressBar progress= {progress} />
-            </>
-          )}
-          {section ==='secondQuestion' && (
-            <>
-            <FirstQuestion readingTime={time} setTime={setTime} />
-            <ProgressBar progress= {progress} />
-            </>
-          )}
-          {section ==='thirdQuestion' && (
-            <>
-            <SecondQuestion favoriteTime={favoriteTime} setFavoriteTime={setFavoriteTime} />
-            <ProgressBar progress= {progress} />
-            </>
-          )}
-          {section ==='fourthQuestion' && (
-            <>
-            <ThirdQuestion place={favoritePlace} setFavoritePlace={setFavoritePlace} />
-            <ProgressBar progress= {progress} />
-            </>
-          )}
-        </form>
-      ):(
+            <NameQuestion name={name} setName={setName} />
+            <RadioButtonOne readingTime={readingTime} setTime={setreadingTime} />
+            <SelectOption favoriteTime={favoriteTime} setFavoriteTime={setFavoriteTime} />
+            <RadioButtonTwo favoritePlace={favoritePlace} setFavoritePlace={setFavoritePlace} />
+            <Checkbox isChecked={isChecked} setIsChecked={setIsChecked}/>
+          </>
+          ) : (
           <Summary 
-            name={name}
-            time={time} 
+            readingTime={readingTime} 
             favoriteTime={favoriteTime} 
             place={favoritePlace} 
           />
-      )}
+        )}
+      </form>
     </main>
-  )     
+  )    
 }
 
 export default Form 

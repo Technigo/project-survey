@@ -2,11 +2,10 @@ import React from 'react'
 
 import NextButton from 'components/NextButton'
 
-
-const NameQuestion = (props) => {
+const NameQuestion = ({ setName, name }) => {
 
   const onNameChange = (e) => {
-   props.setName(e.target.value)
+   setName(e.target.value)
   }
 
   return (
@@ -17,9 +16,8 @@ const NameQuestion = (props) => {
           <input
             name="name"
             type="text"
-            value={props.name}
+            value={name}
             onChange={onNameChange}
-            required
           />
         </label>
         <NextButton />

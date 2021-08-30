@@ -2,18 +2,13 @@ import React from 'react'
 
 import NextButton from 'components/NextButton'
 
-const places = [
-  'in the library',
-  'while commuting',
-  'in the park',
-  'at home',
-  'in a group'
-]
+import { places } from '../reusable/constants'
 
-const ThirdQuestion = (props) => {
+
+const RadioButtonTwo = ({ setFavoritePlace, favoritePlace }) => {
 
   const onPlaceChange = (e) => {
-    props.setFavoritePlace(e.target.value)
+    setFavoritePlace(e.target.value)
   }
 
   return (
@@ -28,8 +23,7 @@ const ThirdQuestion = (props) => {
                   type='radio'
                   value={place}
                   onChange={onPlaceChange}
-                  checked = {props.place === place}
-                  required 
+                  checked = {favoritePlace === place}
                 />
                 {place}
               </label>
@@ -41,4 +35,4 @@ const ThirdQuestion = (props) => {
   )
 }
 
-export default ThirdQuestion
+export default RadioButtonTwo
