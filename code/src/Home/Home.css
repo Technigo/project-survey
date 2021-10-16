@@ -1,0 +1,33 @@
+.home_container{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.home_image_container{
+    margin: 50px;
+}
+
+.home_image{
+    width: 300px;
+    height: 300px;
+}
+
+.home_text{
+    text-align: center;
+    color: rgb(240, 165, 0);
+    margin-top: 200px;
+    width: 80%;
+}
+
+.home_button{
+    background-color: rgb(240, 165, 0);
+    border-color: 1 px solid rgb(51, 71, 86);
+    color: rgb(51, 71, 86);
+    width: 200px;
+    height: 50px;
+    font-size: 2rem;
+    font-weight: bold;
+    margin: 50px;
+}

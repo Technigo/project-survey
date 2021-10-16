@@ -1,8 +1,9 @@
-# Technigo React Starter App
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+# Week 10 - Technigo bootCamp
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+# Survey Tool
+
+This week we will be practicing React state and controlled forms by making a Typeform like product. Your completed project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
 ## Usage
 

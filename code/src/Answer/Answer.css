@@ -1,0 +1,30 @@
+.answer_text{
+    color: white;
+}
+
+.answer_form_radio{
+    color: white;
+    font-size: 1.5rem;
+
+    
+}
+
+.form_radio_input{
+    margin: 5px;
+    cursor: pointer;
+
+
+}
+
+.form_radio_label{
+    margin: 5px;
+     
+}
+
+.form_radio_dark{
+ background: blue;
+}
+
+.form_radio_ligth{
+    background:cyan;
+}
