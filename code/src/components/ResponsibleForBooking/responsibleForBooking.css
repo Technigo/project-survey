@@ -1,0 +1,6 @@
+.responsible-booking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  width: 80%;
+}
