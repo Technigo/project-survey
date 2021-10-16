@@ -25,7 +25,7 @@ const questions = [
 
 const AllQuestions = () => {
   return questions.map((question) => {
-    return <Question question={question} />;
+    return <Question key={question.number} question={question} />;
   });
 };
 

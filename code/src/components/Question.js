@@ -6,7 +6,6 @@ import TextInput from "./TextInput";
 
 const Question = (props) => {
   const { question } = props;
-  console.log("Question", { question });
 
   return (
     <>

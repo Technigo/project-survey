@@ -14,7 +14,7 @@ const SelectInput = (props) => {
             Choose one
           </option>
           {props.options.map((option) => {
-            return <option value={option}>{option}</option>;
+            return <option key={option} value={option}>{option}</option>;
           })}
         </select>
       </form>
