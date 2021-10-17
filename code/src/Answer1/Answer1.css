@@ -1,0 +1,38 @@
+.answer_form_radio_container{
+    color: white;
+}
+
+.answer_form_radio{
+    color: white;
+    font-size: 1.5rem;
+    display: flex;
+        justify-content: center;
+}
+
+.form_radio_input{
+    margin: 5px;
+    cursor: pointer;
+
+}
+
+.form_radio_label{
+    margin: 5px;
+     
+}
+
+.form_radio_dark{
+ background: rgb(8, 32, 50);
+ color: white;
+}
+
+.form_radio_ligth{
+background:white;
+color: rgb(8, 32, 50);
+}
+
+.form_option_background{
+width: 100px;
+height: 30px;
+padding: 15px;
+margin: 15px;
+}

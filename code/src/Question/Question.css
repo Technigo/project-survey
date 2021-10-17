@@ -1,7 +1,10 @@
 .question_container{
     width: 100%;
+  
 }
 
 .question_text{
     color: rgb(240, 165, 0);
+    display: flex;
+    justify-content: center;
 }

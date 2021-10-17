@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Home from "./Home/Home"
 import Footer from "./Footer/Footer"
-import QuestionsCard from "./Questions/QuestionsCard"
+import QuestionsCard from "./QuestionsCard/QuestionsCard"
 import data from "./data.json"
 
 export const App = () => {

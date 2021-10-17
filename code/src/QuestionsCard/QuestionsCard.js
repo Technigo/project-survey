@@ -19,6 +19,7 @@ const QuestionsCard = ({ data, current, setCurrent, setShowStory, setQuestionsRe
             questionsRecord.push(newCurrent)
             setQuestionsRecord(questionsRecord)
 
+            console.log("next", newCurrent)
         } else if (current === totalQuestions) {
             setShowStory(true)
         }
@@ -26,10 +27,13 @@ const QuestionsCard = ({ data, current, setCurrent, setShowStory, setQuestionsRe
     }
 
     const previousQuestion = () => {
-        if (current.lenght > 0) {
-            questionsRecord.pop()
-            console.log("previous", current)
-        } else {
+        const newCurrent = current - 1
+        setCurrent(newCurrent)
+
+        questionsRecord.pop()
+        setQuestionsRecord(questionsRecord)
+
+        if (newCurrent === 0) {
             setShowHome(true)
         }
 

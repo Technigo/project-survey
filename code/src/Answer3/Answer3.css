@@ -1,0 +1,28 @@
+.answer3_radio_label{
+    color: white;
+    display: flex;
+    align-items: center;
+    margin: 10px;
+}
+
+
+.answer3_form_radio_container{
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.answer3_form_radio{
+    align-items: center;
+}
+.answer3_radio_image{
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    margin: 10px;
+    border: 3px solid rgb(240, 165, 0);
+}
+
+.answer3_radio_text{
+    width: 90px;
+}

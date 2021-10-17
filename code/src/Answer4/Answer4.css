@@ -1,0 +1,44 @@
+.answer4_dropdown_container{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+}
+
+.select4_form_dropdown{
+    width: 200px;
+    height: 50px;
+    font-size: 1.3rem;
+    background: white;
+    color: rgb(8, 32, 50);
+}
+
+.answer4_form_dropdown{
+margin-bottom: 70px;
+
+}
+
+.dropdown4_image_container, .dropdown4_image_uni_container{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    color: white;
+    text-align: center;
+}
+
+.dropdown4_image{
+    max-width: 200px;
+    max-height: 200px;
+    overflow: hidden;
+    padding: 5px;
+    align-self: center;
+    margin-top: 15px;
+}
+
+.dropdown4_image_ligth{
+    border: 5px solid white;
+}
+
+.dropdown4_image_dark{
+    border: 5px solid rgb(8, 32, 50);;
+}
