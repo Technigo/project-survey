@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from "react";
+
+import OptionsForm from "./components/OptionsForm";
+import InputsForm from "./components/InputsForm";
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <>
+      <div>Hello</div>
+      <InputsForm />
+      <OptionsForm />
+    </>
+  );
+};

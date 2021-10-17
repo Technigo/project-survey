@@ -11,3 +11,12 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.form-container {
+  border: 2px solid red;
+}
+
+form {
+  display: grid;
+  border: 3px solid green;
+}
