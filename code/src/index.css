@@ -1,13 +1,238 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+	padding: 0 auto;
+	margin: 0 auto;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+		"Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+		sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+		monospace;
+}
+
+.container {
+	padding: 0px 15px;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	align-items: center;
+	justify-content: center;
+	grid-gap: 10px;
+}
+
+/* Header */
+
+.header {
+	grid-column: 1/3;
+	grid-row: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 100%;
+}
+
+/* List items */
+.listContainer {
+	grid-column: 1/3;
+	grid-row: 3;
+	height: 100%;
+}
+
+.todo-list {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr;
+	grid-auto-rows: 1fr;
+	grid-gap: 10px;
+	margin-bottom: 10px;
+	height: 100%;
+}
+
+.todo-pre {
+	background-color: rgb(116, 116, 116);
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Forms */
+
+.create {
+	grid-column: 1/3;
+	grid-row: 2;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	width: 100%;
+	align-items: center;
+	justify-content: center;
+	background-color: blanchedalmond;
+}
+
+.typingTodoContainer {
+	font-size: 14px;
+	width: 98%;
+	line-break: normal;
+}
+
+.contentContainer {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(141, 141, 141);
+	margin-bottom: 10px;
+}
+
+.ContainerOne {
+	height: 100%;
+	width: 100%;
+}
+.ContainerTwo {
+	height: 100%;
+	width: 100%;
+
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	background-color: rgba(248, 241, 241, 0.514);
+	font-size: 14px;
+}
+
+.content {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 10px;
+	width: 100%;
+}
+
+.contentRadio {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-around;
+}
+
+.contentSelect {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 5px 0 5px 10px;
+}
+
+.content button {
+	margin-top: 0px;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+	.container {
+		display: grid;
+		grid-template-columns: 4fr 3fr;
+		align-items: center;
+		justify-content: center;
+		grid-gap: 10px;
+	}
+
+	.header {
+		grid-column: 1/3;
+		grid-row: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/* List items */
+	.listContainer {
+		grid-column: 1/3;
+		grid-row: 3;
+	}
+
+	.todo-list {
+		display: grid;
+		grid-template-columns: repeat(2, 3fr);
+		grid-template-rows: repeat(1, 1fr 1fr);
+		grid-auto-rows: 1fr;
+		grid-gap: 15px;
+	}
+
+	/*  */
+
+	.create {
+		grid-column: 1/3;
+		grid-row: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+}
+
+/* DESKTOP */
+
+@media (min-width: 1025px) {
+	.container {
+		display: grid;
+		grid-template-columns: 4fr 2fr;
+		grid-template-rows: 1fr 2fr;
+		align-items: center;
+		justify-content: center;
+
+		background-color: rgb(255, 255, 255);
+	}
+
+	.contentContainer {
+		background-color: rgb(141, 141, 141);
+		display: flex;
+		justify-content: center;
+		width: 100%;
+		margin: 0px;
+	}
+
+	.header {
+		grid-column: 1/3;
+		grid-row: 1;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 100%;
+	}
+
+	/* List items */
+	.listContainer {
+		grid-column: 1/2;
+		grid-row: 2;
+	}
+
+	.todo-list {
+		display: grid;
+		grid-template-columns: repeat(3, 3fr);
+		grid-template-rows: repeat(2, 1fr);
+		grid-auto-rows: 1fr;
+		grid-gap: 15px;
+	}
+
+	/* Forms */
+
+	.create {
+		grid-column: 2/3;
+		grid-row: 2;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
 }

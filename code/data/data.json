@@ -1,0 +1,28 @@
+{
+  "todo": [
+    {
+      "title": "Städa",
+      "task": "Göra rent hall",
+      "location": "Home",
+      "check": "Important",
+      "time": "20:17",
+      "id": 1
+    },
+    {
+      "title": "vdsds",
+      "task": "dsdsd",
+      "location": "Work",
+      "check": "",
+      "time": "",
+      "id": 2
+    },
+    {
+      "title": "hghg",
+      "task": "ghh",
+      "location": "Other",
+      "check": "Not important",
+      "time": "23:22",
+      "id": 3
+    }
+  ]
+}
