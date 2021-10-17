@@ -1,7 +1,12 @@
 import React from 'react'
+import { SurveyWrapper } from 'components/SurveyWrapper'
 
 export const App = () => {
-  return <div>Find me in src/app.js!</div>
+  return (
+    <div>
+      <SurveyWrapper />
+    </div>
+  )
 }
 //
 
