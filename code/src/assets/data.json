@@ -1,0 +1,14 @@
+{
+  "questions": [
+    {
+      "title": "question title",
+      "number": 1,
+      "type": "radio",
+      "options": [
+        { "answer": "yes", "next_question": "question_id" },
+        { "answer": "no", "next_question": "question_id" }
+      ],
+      "id": "som unique id"
+    }
+  ]
+}
