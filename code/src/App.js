@@ -1,10 +1,20 @@
-import React from 'react'
-import { SurveyWrapper } from 'components/SurveyWrapper'
+import React, { useState } from 'react'
+import { FormWrapper } from 'components/FormWrapper'
+import { FormSummary } from 'components/FormSummary'
 
 export const App = () => {
+  const [answer, setAnswer] = useState({
+    answer: { q1: 'this is the answers', q2: 'answer to q2' },
+  })
+
+  const handleAnswers = newValue => {
+    setAnswer(newValue)
+  }
+
   return (
     <div>
-      <SurveyWrapper />
+      <FormWrapper onChange={handleAnswers} />
+      <FormSummary state={answer} />
     </div>
   )
 }

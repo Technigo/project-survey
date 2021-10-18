@@ -6,7 +6,7 @@
       "type": "text",
       "fields": [
         { "label": "First name", "id": "firstName", "placeholder": "Type your first name" },
-        { "label": "First name", "id": "firstName", "placeholder": "Type your last name" }
+        { "label": "Last name", "id": "lastName", "placeholder": "Type your last name" }
       ],
       "id": 1
     },

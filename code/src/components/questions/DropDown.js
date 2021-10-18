@@ -5,7 +5,7 @@ export const DropDown = props => {
   // console.log('radio props: ', props)
   // console.log('radio fields: ', options)
   return (
-    <div>
+    <>
       <h2>{title}</h2>
       <select name='select' id='select' defaultValue={'Select an option'}>
         {options.map(option => {
@@ -16,6 +16,6 @@ export const DropDown = props => {
           )
         })}
       </select>
-    </div>
+    </>
   )
 }

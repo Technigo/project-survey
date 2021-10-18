@@ -1,17 +1,17 @@
 import React from 'react'
 import data from 'assets/data.json'
-import { TextField } from 'components/questions/TextField'
+import { TextInput } from 'components/questions/TextInput'
 import { Radio } from 'components/questions/Radio'
 import { DropDown } from 'components/questions/DropDown'
 
 console.log(data)
 
-export const SurveyWrapper = () => {
+export const FormWrapper = () => {
   return (
-    <div>
+    <form>
       {data.questions.map(item => {
         if (item.type === 'text') {
-          return <TextField key={item.id} data={item} />
+          return <TextInput key={item.id} data={item} />
         } else if (item.type === 'radio') {
           return <Radio key={item.id} data={item} />
         } else if (item.type === 'dropdown') {
@@ -19,6 +19,6 @@ export const SurveyWrapper = () => {
         }
         return null
       })}
-    </div>
+    </form>
   )
 }
