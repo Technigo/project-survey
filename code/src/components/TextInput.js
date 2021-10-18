@@ -1,17 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 
 const TextInput = (props) => {
-  const [text, setText] = useState("");
+
+  const onTextInputChange = (event) => {
+    props.onValueChange(event.target.value)
+  }
 
   return (
     <>
       <form action="">
-        <label htmlFor={props.question}></label>
+        <label htmlFor={props.label}></label>
         <input
           type="text"
-          id={props.question}
-          onChange={(event) => setText(event.target.value)}
-          value={text}
+          id={props.label}
+          onChange={onTextInputChange}
+          value={props.value}
         />
       </form>
     </>

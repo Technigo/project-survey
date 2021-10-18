@@ -25,8 +25,18 @@ const questions = [
 
 const AllQuestions = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
+  const [answers, setAnswers] = useState({});
 
-  // const lastQuestion = (questions) => {
+  const onQNumberChange = () => {
+    setQuestionNumber(questionNumber + 1)
+  }
+
+  const onAnswerChange = (newAnswer) => {
+    answers[questionNumber] = newAnswer;
+    setAnswers(answers)
+  }
+
+  // const lastQuestion = () => {
   //   return questionNumber === questions.length;
   // };
 
@@ -37,13 +47,17 @@ const AllQuestions = () => {
           <Question
             key={questions[questionNumber].number}
             question={questions[questionNumber]}
+            answer={answers[questionNumber]}
+            setAnswer={onAnswerChange}
           />
-          <button onClick={() => setQuestionNumber(questionNumber + 1)}>
-            {questionNumber === (questions.length - 1) ? "Submit" : "Next Question"}
+          <button onClick={onQNumberChange}>
+            {questionNumber === questions.length - 1
+              ? "Submit"
+              : "Next Question"}
           </button>
         </div>
       ) : (
-        <div>Thanks for submiting your form</div>
+        <div>Thanks for submiting your form + {answers[0]} + {answers[1]} + {answers[2]}</div>
       )}
     </>
   );

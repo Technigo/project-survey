@@ -3,6 +3,10 @@ import React, { useState } from "react";
 const RadioInput = (props) => {
   const [choice, setChoice] = useState();
 
+  const onInputChange = (event) => {
+    setChoice(event.target.value)
+  }
+
   return (
     <>
       <form action="">
@@ -11,7 +15,7 @@ const RadioInput = (props) => {
             <input
               type="radio"
               value={option}
-              onChange={(event) => setChoice(event.target.value)}
+              onChange={onInputChange}
               checked={choice === option}
             />
             {option}

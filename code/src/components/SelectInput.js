@@ -3,11 +3,15 @@ import React, { useState } from "react";
 const SelectInput = (props) => {
   const [selection, setSelection] = useState("");
 
+  const onSelectChange = (event) => {
+    setSelection(event.target.value)
+  }
+
   return (
     <>
       <form action="">
         <select
-          onChange={(event) => setSelection(event.target.value)}
+          onChange={onSelectChange}
           value={selection}
         >
           <option value="" disabled>
