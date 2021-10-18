@@ -1,18 +1,6 @@
 import React from "react";
-import { useState } from "react";
-import Name from "./components/Name";
-import CatType from "./components/CatType";
-import CatFeel from "./components/CatFeel";
-import Newsletter from "./components/Newsletter";
+import Form from "components/Form";
 
 export const App = () => {
-  const [wantsNewsletter, setWantsNewsletter] = useState(false);
-  return (
-    <>
-      <Name />
-      <CatType />
-      <CatFeel />
-      <Newsletter />
-    </>
-  );
+  return <Form />;
 };
