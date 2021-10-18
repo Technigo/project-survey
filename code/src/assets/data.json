@@ -15,8 +15,8 @@
       "number": 2,
       "type": "radio",
       "options": [
-        { "label": "Option 1", "value": "yes", "next_question": "question_id" },
-        { "label": "Option 2", "value": "no", "next_question": "question_id" }
+        { "label": "Option 1", "value": "yes", "id": "radioYes", "next_question": "question_id" },
+        { "label": "Option 2", "value": "no", "id": "radioNo", "next_question": "question_id" }
       ],
       "id": 2
     },

@@ -22,9 +22,9 @@ export const FormWrapper = () => {
         if (item.type === 'text') {
           return <TextInput key={item.id} data={item} state={state} handleChange={handleChange} />
         } else if (item.type === 'radio') {
-          return <Radio key={item.id} data={item} />
+          return <Radio key={item.id} data={item} state={state} handleChange={handleChange} />
         } else if (item.type === 'dropdown') {
-          return <DropDown key={item.id} data={item} />
+          return <DropDown key={item.id} data={item} state={state} handleChange={handleChange} />
         }
         return null
       })}
