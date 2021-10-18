@@ -1,20 +1,10 @@
-import React, { useState } from 'react'
+import React from 'react'
 import { FormWrapper } from 'components/FormWrapper'
-import { FormSummary } from 'components/FormSummary'
 
 export const App = () => {
-  const [answer, setAnswer] = useState({
-    answer: { q1: 'this is the answers', q2: 'answer to q2' },
-  })
-
-  const handleAnswers = newValue => {
-    setAnswer(newValue)
-  }
-
   return (
     <div>
-      <FormWrapper onChange={handleAnswers} />
-      <FormSummary state={answer} />
+      <FormWrapper />
     </div>
   )
 }
