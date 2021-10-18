@@ -5,20 +5,19 @@ const SecondQuestion = () => {
   const [question, setQuestion] = useState("");
   return (
     <div className="QuestionContainer">
-      <p className="textQuestion">
-        What is your programming language of choice?
-      </p>
-      <div className="selectContainer">
+      <p>Who is your favourite queen?</p>
+      <div className="selectForm">
         <form>
           <select
             onChange={(event) => setQuestion(event.target.value)}
             value={question}
           >
-            <option>Javascript</option>
-            <option>C++</option>
-            <option>Java</option>
-            <option>Python</option>
-            <option>PHP</option>
+            <option>Bimini Bon Boulash</option>
+            <option>Tayce</option>
+            <option>Aquaria</option>
+            <option>Gottmik</option>
+            <option>Kandy Muse</option>
+            <option>Krystal Methyd</option>
           </select>
         </form>
       </div>

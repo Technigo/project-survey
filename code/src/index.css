@@ -1,6 +1,7 @@
 body {
   margin: 0;
-  background-color: rgb(225, 221, 253);
+  background-color: #fff;
+  /* https://reactgo.com/react-background-image/ */
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -13,27 +14,63 @@ code {
     monospace;
 }
 
+.headerText {
+  color: hotpink;
+  font-size: 30px;
+  font-weight: 400;
+  display: block;
+  width: fit-content;
+  margin: 50px auto 30px;
+}
+
+p {
+  color: hotpink;
+}
+
+.containerIntroduction {
+  background-color: #fff;
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: left;
+  margin: 60px auto 60px;
+  border-radius: 15px;
+  border: 1px solid rgb(250, 229, 233);
+  box-shadow: 10px 10px 50px hotpink;
+}
+
+.containerIntroductionText {
+  font-size: 20px;
+  font-weight: 400px;
+  margin: 5px auto;
+  padding: 10px;
+}
+
+.imgLink {
+  margin: 5px auto;
+  font-size: 12px;
+  text-decoration: none;
+  color: rgb(253, 213, 220);
+}
+
+.imgLink:hover {
+  text-decoration: underline;
+}
+
 .QuestionContainer {
   background-color: #fff;
   width: 300px;
   height: 100px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
-  justify-content: left;
-  margin: 20px auto;
+  justify-content: center;
+  margin: 60px auto 60px;
   border-radius: 15px;
-  border: 1px solid rgb(129, 98, 240);
-}
-
-.headerText {
-  color: rgb(129, 98, 240);
-  font-size: 24px;
-  font-weight: 500;
-  display: block;
-  width: fit-content;
-  margin: 20px auto 50px;
-  text-transform: uppercase;
+  border: 1px solid rgb(250, 229, 233);
+  box-shadow: 10px 10px 50px hotpink;
 }
 
 .textQuestion {
@@ -57,8 +94,30 @@ button {
   justify-content: center;
   width: fit-content;
   margin: auto;
+  padding: 7px;
+  color: rgb(248, 11, 130);
+  background-color: pink;
+  border: 1px solid hotpink;
+  border-radius: 5px;
 }
 
-.questionSummary {
-  display: block;
+.containerSummary {
+  background-color: #fff;
+  width: 300px;
+  height: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 60px auto 60px;
+  border-radius: 15px;
+  border: 1px solid rgb(250, 229, 233);
+  box-shadow: 10px 10px 50px hotpink;
+}
+
+.containerSummaryText {
+  font-size: 16px;
+  font-weight: 400px;
+  margin: auto;
+  padding: 10px;
 }

@@ -1,10 +1,33 @@
 import React from "react";
+import { useState } from "react";
 
 const FirstQuestion = () => {
+  const [experience, setExperience] = useState(""); // change the name here
   return (
     <div className="QuestionContainer">
-      <p className="textQuestion">Do you like programming?</p>
-      <input className="textInput" type="text" placeholder="yes or no?" />
+      <p>Do you watch Rupaul's Drag Race?</p>
+      <div className="radioForm">
+        <form>
+          <label>
+            Yes
+            <input
+              type="radio"
+              value="yes"
+              onChange={(event) => setExperience(event.target.value)}
+              checked={experience === "yes"}
+            />
+          </label>
+          <label>
+            No I have bad taste
+            <input
+              type="radio"
+              value="no"
+              onChange={(event) => setExperience(event.target.value)}
+              checked={experience === "no"}
+            />
+          </label>
+        </form>
+      </div>
     </div>
   );
 };

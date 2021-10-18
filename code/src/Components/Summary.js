@@ -1,12 +1,14 @@
 import React from "react";
+import ImageComponent from "./SummaryImg";
 
 const Summary = () => {
   return (
-    <div className="QuestionContainer">
-      <h2>Your answers</h2>
-      <p className="questionSummary">Q1 : </p>
-      <p className="questionSummary">Q2 : </p>
-      <p className="questionSummary">Q3 : </p>
+    <div className="containerSummary">
+      <div className="containerSummaryText">
+        <p>If you can't love yourself</p>
+        <p>How the hell you gonna love somebody else?</p>
+        <ImageComponent />
+      </div>
     </div>
   );
 };

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Introduction from "Components/Introduction";
 import FirstQuestion from "Components/FirstQuestion";
 import SecondQuestion from "Components/SecondQuestion";
 import ThirdQuestion from "Components/ThirdQuestion";
@@ -10,29 +11,36 @@ const Form = () => {
   if (step === 1) {
     return (
       <div>
-        <FirstQuestion />
-        <button onClick={() => setStep(step + 1)}>next question</button>
+        <Introduction />
+        <button onClick={() => setStep(step + 1)}>Start your engines!</button>
       </div>
     );
   } else if (step === 2) {
     return (
       <div>
-        <SecondQuestion />
+        <FirstQuestion />
         <button onClick={() => setStep(step + 1)}>next question</button>
       </div>
     );
   } else if (step === 3) {
     return (
       <div>
-        <ThirdQuestion />
+        <SecondQuestion />
         <button onClick={() => setStep(step + 1)}>next question</button>
       </div>
     );
   } else if (step === 4) {
     return (
       <div>
+        <ThirdQuestion />
+        <button onClick={() => setStep(step + 1)}>next question</button>
+      </div>
+    );
+  } else if (step === 5) {
+    return (
+      <div>
         <Summary />
-        <button onClick={() => setStep(step - 3)}>Restart Survey</button>
+        <button onClick={() => setStep(step - 4)}>Amen!</button>
       </div>
     );
   }
