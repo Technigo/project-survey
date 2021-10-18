@@ -5,9 +5,70 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./assets/leaves.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  max-width: 100%;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+ * {
+   box-sizing: border-box;
+ }
+
+ .main-container {
+   background-color: #adbfb475;
+   width: 100vw;
+   height: 500px;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+ }
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.time-survey {
+  margin-top: 10px;
+  font-size: 16px;
+}
+.name-survey {
+  margin: 0;
+  color: aquamarine;
+  font-family: Helvetica;
+  font-size: 35px;
+  font-weight: 700;
+
+}
+.start-overview {
+  display: flex;
+  color: aquamarine;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.button {
+  background-color: aquamarine;
+  color: green;
+  font-size: 20px;
+  cursor: pointer;
+  border:none;
+  width: 150px;
+  margin-top: 30px;
+  border-radius: 50px;
+  padding: 15px 20px;
+  font-weight: 800;
 }
