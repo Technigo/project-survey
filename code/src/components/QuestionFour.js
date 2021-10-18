@@ -5,9 +5,9 @@ const QuestionFour = ({ questionFourInput, onQuestionFourInputChange, onStepChan
         <div>
             <form>
                 <label htmlFor="questionFourInput"> If animals could talk, which would be the rudest?</label>
-                <input id="questionFourInput" type="text" value={questionFourInput} onChange={onQuestionFourInputChange}>
+                <input id="questionFourInput" type="text" value={questionFourInput} onChange={onQuestionFourInputChange} required>
                 </input>
-                <button onClick={onStepChange}>Next question!</button>
+                <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
             </form>
         </div>
     )

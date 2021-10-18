@@ -5,9 +5,9 @@ const QuestionThree = ({ questionThreeInput, onQuestionThreeInputChange, onStepC
         <div>
             <form>
                 <label htmlFor="questionThreeInput">What sport would be the funniest to add a mandatory amount of alcohol to?</label>
-                <input id="questionThreeInput" type="text" value={questionThreeInput} onChange={onQuestionThreeInputChange}>
+                <input id="questionThreeInput" type="text" value={questionThreeInput} onChange={onQuestionThreeInputChange} required>
                 </input>
-                <button onClick={onStepChange}>Next question!</button>
+                <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
             </form>
         </div>
     )
