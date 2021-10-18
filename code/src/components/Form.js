@@ -85,7 +85,11 @@ export const Form = () => {
                 viewInput={viewInput}
                 onStepChange={onStepChange}
                 />
-                
+                <Suggestion
+                moodInput={moodInput}
+                socialInput={socialInput}
+                viewInput={viewInput}
+                />
                 </>
             )}
         </form>

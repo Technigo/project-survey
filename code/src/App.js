@@ -1,17 +1,20 @@
 import React from 'react'
 import { Form } from 'components/Form'
+import logo from './images/logo_white.png'
 
 export const App = () => {
 
   return (
-    <>
+    <div className="header-wrapper">
       <header>
-        <h1 className="header-title">Game finder</h1>
+        <img src={logo} alt="my logo"/>
       </header>
       <div className="survey-info">
+        <div className="container">
       <h2 className="survey-text">Find a game based on your profile</h2>
-      </div>
       <Form/>
-   </>
+      </div>
+      </div>
+   </div>
   )
 }
