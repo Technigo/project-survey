@@ -13,7 +13,12 @@ const [task, setTask] = useState('')
 const [location, setLocation] = useState('Home')
 const [check, setCheck] = useState('')
 const [time, setTime] = useState('')
+const [step, setStep] = useState(1);
 
+
+const onStepChange = () => {
+    setStep(step + 1);
+};
 
 
 const handleSubmit = (e) =>{
@@ -33,50 +38,54 @@ const handleSubmit = (e) =>{
 
 
     return (
-<div className="contentContainer">
+
 <form className="form" onSubmit={handleSubmit}>
 <div className="ContainerOne">
 
- 
 
-
-
-
+{step === 1 && (
 <First
 
 QuestionAlternative={title}
 setAlternative={setTitle}
-                  
+onStepChange={onStepChange}                  
 />
 
+)}
 
+{step === 2 && (
 <Second
 
 QuestionAlternative={task}
 setAlternative={setTask}
-                  
+onStepChange={onStepChange}                  
 />
 
-
+)}
 <div className="contentRadio"> 
    
-
+{step === 3 && (
 <Third
 
 QuestionAlternative={check}
 setAlternative={setCheck}
-
+onStepChange={onStepChange}
 
 />
 
- 
+)}
+
+{step === 4 && (
+
 <Fourth
 
 QuestionAlternative={location}
 setAlternative={setLocation}
-
+onStepChange={onStepChange}
 />
-
+)}
+{step === 5 && (
+    <div className="box">
 <Fifth 
 
 QuestionAlternative={time}
@@ -85,28 +94,33 @@ setAlternative={setTime}
 />
 
 
-</div>
-
-
-
-
-<div className="content"> 
- 
 <button>Add Todo</button>
 
+
+
 </div>
+
+)}
+
+
+
+
+
+
+
+</div>
+
+
 </div>
 <div className="ContainerTwo">
-
 <div className="typingTodoContainer">
-
 <div className="todoPreDiv">
 <p> {check} </p>
 <p> {time} </p>
 <p>{location} </p>
 </div>
 <h2>{title} </h2>
-<p> To do: {task} </p>
+<p className="toDotext"> To do: {task} </p>
 
 </div>
 </div>
@@ -115,7 +129,7 @@ setAlternative={setTime}
 
 </form>
 
-</div>
+
 
 
     )

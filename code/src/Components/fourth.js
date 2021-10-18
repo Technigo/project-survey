@@ -4,15 +4,17 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Fourth = ({QuestionAlternative, setAlternative }) => {
+const Fourth = ({QuestionAlternative, setAlternative, onStepChange }) => {
 
 
     return (
         
+<div className="box">
 
-<>
+<div><label className="label">Location</label></div>
+
 <div className="contentSelect"> 
-<label>Location</label>
+
 <select
 
 value={QuestionAlternative}
@@ -24,7 +26,10 @@ onChange ={(e) => setAlternative(e.target.value)}
     <option value="Other">Other</option>
 </select>
 </div>
-</>
+<div>
+<button className="next" onClick={onStepChange}>Next questions</button>
+</div>
+</div>
 
     )
 }

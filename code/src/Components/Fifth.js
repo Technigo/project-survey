@@ -5,12 +5,14 @@ const Fifth = ({QuestionAlternative, setAlternative }) => {
 
 
     return (
-        
-
-<>
+ <>       
+<div> 
+<label className="label">When</label>
+</div>
 
 <div className="contentSelect"> 
-<label>When</label>
+
+
 <input type="time"
 value={QuestionAlternative}
 onChange ={(e) => setAlternative(e.target.value)}

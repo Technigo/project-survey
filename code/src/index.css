@@ -1,3 +1,13 @@
+
+:root{
+
+
+
+}
+
+
+
+
 body {
 	padding: 0 auto;
 	margin: 0 auto;
@@ -20,7 +30,7 @@ code {
 }
 
 .container {
-	padding: 0px 15px;
+	padding: 15px 15px;
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: 1fr;
@@ -28,6 +38,7 @@ code {
 	justify-content: center;
 	grid-gap: 10px;
 	color: rgb(232, 236, 240);
+	height: 100%;
 	
 
 }
@@ -40,11 +51,9 @@ code {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	
 	height: 50%;
-
-font-family: monospace;
-font-size: 2em;
+    font-family: monospace;
+     font-size: 2em;
 
 }
 
@@ -71,28 +80,34 @@ background-color: rgba(62, 48, 73, 0.945);
 	grid-template-rows: 1fr;
 	grid-auto-rows: 1fr;
 	grid-gap: 10px;
-	margin-bottom: 10px;
+
 	height: 100%;
 }
 
 .todoPre {
 	background-color: rgba(73, 48, 72, 0.972);
 	width: 100%;
+	height: 250px;
+	overflow: hidden;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
+	justify-content: flex-start;
+	
+	
 }
+
 
 
 .todoPreDiv{
 
 display: flex;
 flex-direction: row;
-justify-content: space-evenly;
+justify-content: space-around;
 font-size: 0.7em;
 font-weight: bold;
 width: 100%;
+
 
 }
 
@@ -106,109 +121,136 @@ width: 100%;
 	grid-column: 1/3;
 	grid-row: 2;
 	height: 100%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	background-color: rgba(62, 48, 73, 0.945);
+	width: 100%;
 
+	display: flexbox;
+	align-items: start;
+	justify-content: start;
+	background-color: rgba(62, 48, 73, 0.945);
 font-family:Arial, Helvetica, sans-serif;
 font-weight: bold;
 font-size: 1.2em;
 white-space: nowrap;
 
-}
-
-.form {
-	display: flex;
-	flex-direction: column;
-	height: 100%;
-	width: 100%;
-	align-items: center;
-	justify-content: center;
-
-	
-}
-
-.labelTodoForm{
-
-
-font-size: 1.3em;
 
 }
 
-.typingTodoContainer {
-	
-	width: 98%;
-	line-break: normal;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-font-size: 1em;
-font-weight: normal;
-	padding: 15px 0;
+
+.form{
+
+
+height: 100%;
+width: 100%;
+display: grid;
+grid-template-columns: 1fr;
+grid-template-rows: repeat(2, 1fr);
 
 }
 
-.contentContainer {
-	width: 100%;
-	height: 100%;
-	
-	margin-bottom: 0px;
-}
 
-.ContainerOne {
-	height: 100%;
-	width: 100%;
-	padding-bottom: 5px;
-	
-	
-}
 .ContainerTwo {
 	height: 100%;
 	width: 100%;
-
 	display: flex;
-	align-items: flex-start;
+	align-items: center;
 	justify-content: center;
 	background-color: rgba(56, 36, 55, 0.972);
+	white-space: normal;
+
+	
 	
 }
 
-.content {
+.label{
+
+font-size: 1.5em;
+
+}
+
+
+.typingTodoContainer{
+
+margin: 0px 10px;
+	width: 100%;
+	height: 100%;
 	display: flex;
 	flex-direction: column;
-	justify-content: flex-start;
 	align-items: center;
-	margin-top: 15px;
-	width: 100%;
+	justify-content: space-evenly;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 1.2em;
+
+}
+.toDotext{
+font-weight: normal;
+
 }
 
-.contentRadio {
-	display: flex;
-	flex-direction: row;
-	justify-content: space-around;
-	align-items:center;
-	margin-top: 15px;
-	height: 90px;
+
+
+.box{
+height: 250px;
+width: 100%;
+display: flex;
+flex-direction: column;
+justify-content: space-evenly;
+align-items: center;
+
+}
+
+
+
+
+
+.radioContainer{
+display: flex;
+flex-direction: row;
+margin-top: 25px;
+
+
+
+}
+
+
+
+
+
+textarea{
 	
+  width: 350px !important;
+	height: 70px;
+	font-size:  1.2em;
+
+
+
 }
 
-  input, select{
+ input{
+	
+	
+	height: 40px;
+	font-size:  1.2em;
 
-	margin-top: 2px;
-      box-sizing:border-box;
-	min-width: 100px;
-	  height: 40px;
-	  font-size:  0.8em;;
+
 }
+
+select{
+
+	width: 100% !important;
+	height: 40px;
+	font-size:  1.2em;
+
+
+}
+
+
 
 
 .radio{
-	margin-top: 10px;
-	width:20px !important;
-	height: 20px !important;
+
+
+	width:25px !important;
+	
 	
 }
 
@@ -216,10 +258,10 @@ font-weight: normal;
 .contentSelect {
 	display: flex;
 	flex-direction: column;
-	align-items: flex-start;
 	align-items: center;
-height: 90px;
-margin-top: 25px;
+width: 40%;
+margin: 20px;
+
 	
 
 }
@@ -227,15 +269,11 @@ margin-top: 25px;
 
 
 
-.contentTime label{
-margin-right: 10px;
-
-}
 
 
 
-.content button {
-	margin: 0 0 10px 0;
+button {
+
 	font-size: 1.2em;
 	font-weight: bold;
 	background-color: rgb(154, 142, 158);
@@ -244,7 +282,7 @@ margin-right: 10px;
 
 }
 
-.content button:hover {
+button:hover {
 
 	background-color: rgb(90, 76, 94);
 	color: rgb(255, 255, 255);
@@ -290,6 +328,9 @@ margin-right: 10px;
 
 	/*  */
 
+	
+
+
 	.create {
 		grid-column: 1/3;
 		grid-row: 2;
@@ -308,19 +349,32 @@ margin-right: 10px;
 body{
 
 	height: 100%;
-	background-size:unset;
+	background-size:cover;
 
 }
+
+
+.header{
+
+	font-size: 2.5em;
+
+}
+
+
 
 	.container {
 		
 		display: grid;
 		grid-template-columns: 4fr 2fr;
-		grid-template-rows: 1fr 2fr	;
+		grid-template-rows: 1fr	;
 		align-items: center;
 		justify-content: center;
 
 	}
+
+	.box{
+		height: 450px; }
+
 
 	.contentContainer {
 		
@@ -347,7 +401,7 @@ body{
 
 	.todo-list {
 		display: grid;
-		grid-template-columns: repeat(3, 3fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-template-rows: repeat(2, 1fr);
 		grid-auto-rows: 1fr;
 		grid-gap: 10px;
@@ -366,6 +420,39 @@ body{
 	}
 
 	
+
+
+
+		
+		.typingTodoContainer{
+		
+		margin: 0px 10px;
+			width: 100%;
+			height: 100%;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: space-evenly;
+			font-family:Arial, Helvetica, sans-serif;
+			font-size: 1.3em;
+		
+		}
+		
+		
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

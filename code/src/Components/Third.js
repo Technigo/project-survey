@@ -1,13 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 
-const Third = ({ QuestionAlternative, setAlternative   }) => {
+const Third = ({ QuestionAlternative, setAlternative, onStepChange }) => {
 
     return (
-     <>   
+<div className="box">
 
+<div className="radioContainer"> 
 <div className="contentSelect">
-<label>Important</label>
+<label className="label">Important</label>
 <input 
 className="radio"
 type="radio"
@@ -19,7 +20,7 @@ checked={QuestionAlternative === "Important"}
 </div>
 
 <div className="contentSelect">
-<label>Not important</label>
+<label className="label">Not important</label>
 <input 
 className="radio"
 type="radio"
@@ -28,8 +29,11 @@ onChange = {(e) => setAlternative(e.target.value)}
 checked={QuestionAlternative === "Not important"}
 />
 </div>
-
-</>
+</div>
+<div>
+<button className="next" onClick={onStepChange}>Next questions</button>
+</div>
+</div>
     )
 }
 
