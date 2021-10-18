@@ -1,10 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import First from 'First'
-import Second from 'Second'
-import Third from 'Third'
-import Fourth from 'fourth'
-import Fifth from 'Fifth'
+import First from 'Components/First'
+import Second from 'Components/Second'
+import Third from 'Components/Third'
+import Fourth from 'Components/fourth'
+import Fifth from 'Components/Fifth'
 
 
 const Create = () => {

@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
-import Header from 'Header'
-import Create from 'Create'
-import AddDataTodoList from 'AddDataTodoList'
+import Header from './Components/Header'
+import Create from './Components/Create'
+import AddDataTodoList from './Components/AddDataTodoList'
 
 
 export const App = () => {
