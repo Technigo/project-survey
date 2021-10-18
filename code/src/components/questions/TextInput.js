@@ -1,13 +1,8 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 export const TextInput = props => {
   const { title, fields } = props.data
-  const [state, setState] = useState({})
-
-  const handleChange = e => {
-    const { id, value } = e.target
-    setState({ ...state, [id]: value })
-  }
+  const { state, handleChange } = props
 
   return (
     <>
