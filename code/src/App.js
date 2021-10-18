@@ -1,14 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
-import OptionsForm from "./components/OptionsForm";
-import InputsForm from "./components/InputsForm";
+import InputsForm from "./Components/InputsForm";
 
 export const App = () => {
   return (
     <>
-      <div>Hello</div>
-      <InputsForm />
-      <OptionsForm />
+      <section className="container-all">
+        <div>Hello</div>
+        <InputsForm />
+      </section>
     </>
   );
 };

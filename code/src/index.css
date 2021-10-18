@@ -12,11 +12,9 @@ code {
     monospace;
 }
 
-.form-container {
-  border: 2px solid red;
-}
-
 form {
+  border: 2px solid red;
   display: grid;
-  border: 3px solid green;
+
+  width: 70%;
 }
