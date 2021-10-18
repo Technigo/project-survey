@@ -1,11 +1,20 @@
 .form__passengers-information {
   display: flex;
-  width: 80%;
   justify-content: center;
   align-items: center;
 }
 
-.form__name {
+.form__passengers-information input {
+  width: 100px;
+}
+
+.form__names {
   display: flex;
   flex-direction: row;
+  column-gap: 20px;
+}
+
+.form__name {
+  display: flex;
+  flex-direction: column;
 }

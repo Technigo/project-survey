@@ -1,7 +1,30 @@
-.submit {
-  margin-top: 20px;
+.sr-only {
+  position: absolute;
+  left: -99999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
 }
 
-.previous-step {
-  margin-top: 10px;
+.form__btns-container {
+  display: flex;
+  column-gap: 10px;
+  margin-top: 80px;
+}
+
+.btn {
+  padding: 8px;
+  border: solid 1px black;
+  text-transform: uppercase;
+  background-color: var(--white);
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: var(--main-color);
+  transition: all ease-in 200ms;
+}
+
+.btn:focus {
+  background-color: var(--main-color);
 }

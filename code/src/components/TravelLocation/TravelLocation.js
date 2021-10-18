@@ -9,7 +9,7 @@ export const TravelLocation = ({
 }) => {
   return (
     <>
-      <h2 className="dropdown-header-title">Where do you wanna travel?</h2>
+      <h2 className="dropdown-header-title">Where do you want to travel?</h2>
       <div className="dropdown-container">
         <input
           type="text"
@@ -32,27 +32,30 @@ export const TravelLocation = ({
           <option>Prague</option>
         </datalist>
       </div>
-
-      <div className="form__radio-btn-container">
-        <label htmlFor="oneway">One way trip</label>
-        <input
-          id="oneway"
-          type="radio"
-          name="trip"
-          value="One way trip"
-          required
-          checked={travelType === "One way trip"}
-          onChange={() => onTravelTypeChanged("One way trip")}
-        />
-        <label htmlFor="returntrip">Return trip</label>
-        <input
-          id="returntrip"
-          type="radio"
-          name="trip"
-          value="Return trip"
-          checked={travelType === "Return trip"}
-          onChange={() => onTravelTypeChanged("Return trip")}
-        />
+      <div className="form__radio-btns-container">
+        <div className="form__radio-btn-container">
+          <label htmlFor="oneWay">One way trip</label>
+          <input
+            id="oneWay"
+            type="radio"
+            name="trip"
+            value="One way trip"
+            checked={travelType === "One way trip"}
+            onChange={() => onTravelTypeChanged("One way trip")}
+            required
+          />
+        </div>
+        <div className="form__radio-btn-container">
+          <label htmlFor="returnTrip">Return trip</label>
+          <input
+            id="returnTrip"
+            type="radio"
+            name="trip"
+            value="Return trip"
+            checked={travelType === "Return trip"}
+            onChange={() => onTravelTypeChanged("Return trip")}
+          />
+        </div>
       </div>
     </>
   );

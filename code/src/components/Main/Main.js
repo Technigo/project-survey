@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import "./main.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faChevronDoubleRight,
+  faChevronDoubleLeft,
+} from "@fortawesome/pro-duotone-svg-icons";
 import { Header } from "../Header/Header";
 import { TravelLocation } from "../TravelLocation/TravelLocation";
 import { AmountTravellers } from "../AmountTravellers/AmountTravellers";
@@ -8,7 +13,7 @@ import { ResponsibleForBooking } from "../ResponsibleForBooking/ResponsibleForBo
 import { ShowBooking } from "../ShowBooking/ShowBooking";
 
 export const Main = () => {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(4);
   const [city, setCity] = useState("");
   const [travelType, setTravelType] = useState("");
   const [amountOfTravellers, setAmountOfTravellers] = useState(1);
@@ -43,14 +48,14 @@ export const Main = () => {
   const [telephoneNumber, setTelephoneNumber] = useState("");
 
   const onSetFirstName = (firstName, passengerNumber) => {
-    let nameListCopy = [...nameList];
+    const nameListCopy = [...nameList];
     const passenger = nameListCopy[passengerNumber - 1];
     passenger.firstName = firstName;
     setNameList(nameListCopy);
   };
 
   const onSetLastName = (lastName, passengerNumber) => {
-    let nameListCopy = [...nameList];
+    const nameListCopy = [...nameList];
     const passenger = nameListCopy[passengerNumber - 1];
     passenger.lastName = lastName;
     setNameList(nameListCopy);
@@ -132,18 +137,23 @@ export const Main = () => {
           />
         )}
 
-        {step !== 5 && (
-          <button type="submit" className="btn submit" onSubmit={onBtnClick}>
-            Submit
-          </button>
-        )}
-        <button
-          type="button"
-          className="btn previous-step"
-          onClick={() => setStep(step === 1 ? 1 : step - 1)}
-        >
-          Previous step
-        </button>
+        <div className="form__btns-container">
+          {step !== 1 && (
+            <button
+              type="button"
+              className="btn previous-step"
+              onClick={() => setStep(step === 1 ? 1 : step - 1)}
+            >
+              <FontAwesomeIcon icon={faChevronDoubleLeft} /> Previous step
+            </button>
+          )}
+
+          {step !== 5 && (
+            <button type="submit" className="btn submit" onSubmit={onBtnClick}>
+              Continue <FontAwesomeIcon icon={faChevronDoubleRight} />
+            </button>
+          )}
+        </div>
       </form>
     </div>
   );

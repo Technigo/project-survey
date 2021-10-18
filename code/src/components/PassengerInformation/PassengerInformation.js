@@ -12,20 +12,22 @@ export const PassengerInformation = ({
     items.push(
       <div className="form__passengers-information" key={i}>
         <div>
-          <h3>Passenger {i}</h3>
+          <h3 tabIndex="2">Passenger {i}</h3>
 
-          <div className="form__name">
-            <div>
-              <span>First Name</span>
-              <label htmlFor="firstName" />
+          <div className="form__names">
+            <div className="form__name">
+              <label htmlFor="firstName">
+                <span>First Name</span>
+              </label>
               <input
+                autoFocus
                 id="firstName"
                 type="text"
                 onChange={(e) => onChangeFirstName(e.target.value, i)}
                 required
               />
             </div>
-            <div>
+            <div className="form__name">
               <span>Last Name</span>
               <label htmlFor="lastName" />
               <input
@@ -42,7 +44,7 @@ export const PassengerInformation = ({
   }
   return (
     <>
-      <h2>Passenger Information</h2>
+      <h2 tabIndex="1">Passenger Information</h2>
       {items}
     </>
   );

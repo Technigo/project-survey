@@ -9,7 +9,7 @@ export const AmountTravellers = ({
 }) => {
   return (
     <>
-      <h2>How many travellers?</h2>
+      <h2 tabIndex="1">How many travellers?</h2>
       <div className="slidecontainer">
         <Slider
           activeDotStyle={{
@@ -17,7 +17,9 @@ export const AmountTravellers = ({
           }}
           handleStyle={{
             color: "var(--main-color)",
+            borderColor: "var(--main-color)",
           }}
+          trackStyle={{ backgroundColor: "var(--main-color)" }}
           min={1}
           max={5}
           defaultValue={amountOfTravellers}

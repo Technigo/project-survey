@@ -3,3 +3,7 @@
   color: black;
   margin: 20px 0 40px 0;
 }
+
+.slidecontainer:active {
+  border-color: 1px solid var(--main-color);
+}

@@ -7,9 +7,10 @@ export const ResponsibleForBooking = ({
 }) => {
   return (
     <>
-      <h2>Who is responisble for the booking?</h2>
+      <h2>Who is responsible for the booking?</h2>
+      <h3>Contact information</h3>
       <div className="responsible-booking">
-        <div>
+        <div className="responsible-booking__email-number">
           <span>Email</span>
           <label htmlFor="email" />
           <input
@@ -19,8 +20,8 @@ export const ResponsibleForBooking = ({
             onChange={(e) => onChangeEmail(e.target.value)}
           />
         </div>
-        <div>
-          <span>Telephone number</span>
+        <div className="responsible-booking__email-number">
+          <span>Phone nr</span>
           <label htmlFor="number" />
           <input
             id="number"
