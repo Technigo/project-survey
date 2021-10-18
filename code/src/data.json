@@ -1,0 +1,38 @@
+{
+  "title": "Quiz Time",
+  "showProgressBar": "bottom",
+  "startQuizHtml": "You are about to start the quiz. Please click on 'Start Quiz' button when you are ready.",
+  "pages": [
+    {
+      "questions": [
+        {
+          "type": "radio",
+          "name": "Movie",
+          "title": "What's the name of the movie?",
+          "choices": ["Matrix", "Interstellar", "Pulp Fiction", "Inception"],
+          "correctAnswer": "Inception",
+          "img_url": "./assets/questionOne.jpg",
+          "id": "1"
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "radio",
+          "name": "Movie",
+          "title": "What's the name of the movie?",
+          "choices": [
+            "Dirty dancing",
+            "Flashdance",
+            "Saturday night fever",
+            "Fame"
+          ],
+          "correctAnswer": "Dirty dancing",
+          "img_url": "./assets/questionTwo.jpg",
+          "id": "2"
+        }
+      ]
+    }
+  ]
+}
