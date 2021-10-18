@@ -1,20 +1,20 @@
 import React from "react";
 
-const TextInput = (props) => {
+const TextInput = ({label, value, onValueChange}) => {
 
   const onTextInputChange = (event) => {
-    props.onValueChange(event.target.value)
+    onValueChange(event.target.value)
   }
 
   return (
     <>
       <form action="">
-        <label htmlFor={props.label}></label>
+        <label htmlFor={label}></label>
         <input
           type="text"
-          id={props.label}
+          id={label}
           onChange={onTextInputChange}
-          value={props.value}
+          value={value}
         />
       </form>
     </>

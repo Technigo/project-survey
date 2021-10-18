@@ -1,9 +1,11 @@
-import React, { useState } from "react";
+import React, {useState} from "react";
 
-const SelectInput = (props) => {
-  const [selection, setSelection] = useState("");
+const SelectInput = ({options, selection, onValueChange}) => {
+  const [innerSelection, setSelection] = useState(selection || "");
+
 
   const onSelectChange = (event) => {
+    onValueChange(event.target.value)
     setSelection(event.target.value)
   }
 
@@ -11,13 +13,13 @@ const SelectInput = (props) => {
     <>
       <form action="">
         <select
+          value={innerSelection}
           onChange={onSelectChange}
-          value={selection}
         >
           <option value="" disabled>
             Choose one
           </option>
-          {props.options.map((option) => {
+          {options.map((option) => {
             return <option key={option} value={option}>{option}</option>;
           })}
         </select>
