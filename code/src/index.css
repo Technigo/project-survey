@@ -58,3 +58,7 @@ button {
   width: fit-content;
   margin: auto;
 }
+
+.questionSummary {
+  display: block;
+}

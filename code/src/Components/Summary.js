@@ -7,11 +7,11 @@ import ThirdQuestion from "Components/ThirdQuestion";
 
 const Summary = () => {
   return (
-    <div>
+    <div className="QuestionContainer">
       <h2>Your answers</h2>
-      <p>Q1 : </p>
-      <p>Q2 : </p>
-      <p>Q3 : </p>
+      <p className="questionSummary">Q1 : </p>
+      <p className="questionSummary">Q2 : </p>
+      <p className="questionSummary">Q3 : </p>
     </div>
   );
 };

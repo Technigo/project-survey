@@ -6,5 +6,10 @@ import ThirdQuestion from "Components/ThirdQuestion";
 import Summary from "Components/Summary";
 
 export const App = () => {
-  return <Form />;
+  return (
+    <div>
+      <h1 className="headerText">My survey</h1>
+      <Form />
+    </div>
+  );
 };
