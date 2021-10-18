@@ -30,6 +30,7 @@ header {
   color:#000;
   text-align: center;
   font-family: 'Quicksand', sans-serif;
+  margin: 0;
 }
 
 
@@ -38,11 +39,12 @@ header {
 .third-container,
 .fourth-container,
 .submit-container,
-.overview-container {
+.overview-container,
+.game-container {
   text-align: center;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
 }
 
 button {
@@ -146,6 +148,7 @@ button:hover:after {
     margin: 60px;
     min-width: 890px;
     max-width: 900px;
+    height: 600px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
