@@ -19,7 +19,6 @@ export const TextInput = props => {
               value={state[id]}
               onChange={handleChange}
             />
-            <p>Input:{state[id]}</p>
           </label>
         )
       })}
