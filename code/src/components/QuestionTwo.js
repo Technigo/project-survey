@@ -6,20 +6,15 @@ const QuestionTwo = ({ destination, onDestinationChange, onStepChange }) => {
 
   return (
     <form>
-      <select onChange={onDestinationChange} value={destination}>
-        <option value=''>Where do you want to go?</option>
+      <select onChange={onDestinationChange} value={destination} required>
+        <option value='' disabled selected hidden>
+          Where do you want to go?
+        </option>
         <option value='sarek'>Sarek</option>
         <option value='padjelanta'>Padjelanta</option>
         <option value='kungsleden'>Kungsleden</option>
       </select>
-      {/* <label htmlFor='surnameInput'>Preferred surname: </label>
-      <input
-        id='surnameInput'
-        type='text'
-        value={surnameInput}
-        onChange={onSurnameInputChange}
-      /> */}
-      <button type='submit' onClick={onStepChange}>
+      <button className='form-button' type='submit' onClick={onStepChange}>
         Next question
       </button>
     </form>

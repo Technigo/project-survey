@@ -12,7 +12,6 @@ const Form = () => {
   const [fruit, setFruit] = useState();
   const [step, setStep] = useState(1);
 
-  //Q1
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
   };

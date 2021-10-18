@@ -17,7 +17,9 @@ const QuestionThree = ({ fruit, onFruitChange, onStepChange }) => {
           {frukt}
         </label>
       ))}
-      <button onClick={onStepChange}>Next question</button>
+      <button className='form-button' onClick={onStepChange}>
+        Next question
+      </button>
     </form>
   );
 };
