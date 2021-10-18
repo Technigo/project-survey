@@ -1,11 +1,12 @@
 import React from 'react';
 
-const Overview = ({ nameInput, surnameInput }) => {
+const Overview = ({ nameInput, destination, fruit }) => {
   return (
     <section>
       <h2>My values from form :</h2>
       <p>Name: {nameInput}</p>
-      <p>Surname: {surnameInput}</p>
+      <p>Preferred destination: {destination}</p>
+      <p>Selected fruit: {fruit}</p>
     </section>
   );
 };
