@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 import Question from "./Question";
 
@@ -24,9 +24,29 @@ const questions = [
 ];
 
 const AllQuestions = () => {
-  return questions.map((question) => {
-    return <Question key={question.number} question={question} />;
-  });
+  const [questionNumber, setQuestionNumber] = useState(0);
+
+  // const lastQuestion = (questions) => {
+  //   return questionNumber === questions.length;
+  // };
+
+  return (
+    <>
+      {questionNumber < questions.length ? (
+        <div>
+          <Question
+            key={questions[questionNumber].number}
+            question={questions[questionNumber]}
+          />
+          <button onClick={() => setQuestionNumber(questionNumber + 1)}>
+            {questionNumber === (questions.length - 1) ? "Submit" : "Next Question"}
+          </button>
+        </div>
+      ) : (
+        <div>Thanks for submiting your form</div>
+      )}
+    </>
+  );
 };
 
 export default AllQuestions;

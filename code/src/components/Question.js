@@ -10,7 +10,7 @@ const Question = (props) => {
   return (
     <>
       <h1>
-        {question.number} {question.text}
+        {question.number}. {question.text}
       </h1>
       {question.inputType === "text" && <TextInput question={question.Text} />}
       {question.inputType === "radio" && (
@@ -19,7 +19,6 @@ const Question = (props) => {
       {question.inputType === "select" && (
         <SelectInput options={question.options} />
       )}
-      <button>Continue</button>
     </>
   );
 };
