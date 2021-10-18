@@ -35,7 +35,9 @@ const Form = () => {
     }
 
     return (
-        <div>
+        <div className="container">
+            {step <= 5 && (<h1>Question number: {step}/5</h1>) }
+
             {step === 1 && (
                 <FirstQuestion
                     nameInput={nameInput}
