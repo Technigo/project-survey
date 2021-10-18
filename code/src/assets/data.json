@@ -5,27 +5,32 @@
       "number": 1,
       "type": "radio",
       "options": [
-        { "value": "yes", "next_question": "question_id" },
-        { "value": "no", "next_question": "question_id" }
+        { "label": "Option 1", "value": "yes", "next_question": "question_id" },
+        { "label": "Option 2", "value": "no", "next_question": "question_id" }
       ],
-      "id": "som unique id"
+      "id": "1"
     },
     {
       "title": "question 2 title",
       "number": 2,
-      "type": "multi-dropdown",
+      "type": "dropdown",
       "options": [
-        { "value": "green", "next_question": "question_id" },
-        { "value": "blue", "next_question": "question_id" },
-        { "value": "red", "next_question": "question_id" }
+        { "label": "Select an option", "value": "default", "hidden": true },
+        { "label": "Option 1", "value": "green", "hidden": false, "next_question": "question_id" },
+        { "label": "Option 2", "value": "blue", "hidden": false, "next_question": "question_id" },
+        { "label": "Option 3", "value": "red", "hidden": false, "next_question": "question_id" }
       ],
-      "id": "som unique id"
+      "id": "2"
     },
     {
       "title": "question 3 title",
       "number": 3,
       "type": "text",
-      "id": "som unique id"
+      "fields": [
+        { "label": "First name", "id": "firstName", "placeholder": "Type your first name" },
+        { "label": "First name", "id": "firstName", "placeholder": "Type your last name" }
+      ],
+      "id": "3"
     }
   ]
 }

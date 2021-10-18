@@ -1,16 +1,19 @@
 import React from 'react'
 
 export const Radio = props => {
+  const { title, options, type, id } = props.data
+
   return (
     <div>
-      <label>Option 1</label>
-      <input type='radio' name='radio' />
-      <label> option 2</label>
-      <input type='radio' name='radio' />
-      <label> option 3</label>
-      <input type='radio' name='radio' />
-      <label> option 4</label>
-      <input type='radio' name='radio' />
+      <h2>{title}</h2>
+      {options.map(option => {
+        return (
+          <label key={Math.random() * 10 + id}>
+            {option.label}
+            <input type='radio' name={type + id} />
+          </label>
+        )
+      })}
     </div>
   )
 }

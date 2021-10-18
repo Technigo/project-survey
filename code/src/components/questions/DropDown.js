@@ -1,14 +1,20 @@
 import React from 'react'
 
 export const DropDown = props => {
+  const { title, options, type, id } = props.data
+  console.log('radio props: ', props)
+  console.log('radio fields: ', options)
   return (
     <div>
-      <label>Options </label>
-      <select name='select' id='select' placeholder={'Select an option'}>
-        <option disabled>Select an option</option>
-        <option value='option1'>option1</option>
-        <option value='option2'>option2</option>
-        <option value='option3'>option3</option>
+      <h2>{title}</h2>
+      <select name='select' id='select' defaultValue={'Select an option'}>
+        {options.map(option => {
+          return (
+            <option value={option.value} hidden={option.hidden}>
+              {option.label}
+            </option>
+          )
+        })}
       </select>
     </div>
   )

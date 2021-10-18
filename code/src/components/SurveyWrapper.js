@@ -9,9 +9,16 @@ console.log(data)
 export const SurveyWrapper = () => {
   return (
     <div>
-      <TextField />
-      <Radio />
-      <DropDown />
+      {data.questions.map(item => {
+        if (item.type === 'text') {
+          return <TextField key={item.id} data={item} />
+        } else if (item.type === 'radio') {
+          return <Radio key={item.id} data={item} />
+        } else if (item.type === 'dropdown') {
+          return <DropDown key={item.id} data={item} />
+        }
+        return null
+      })}
     </div>
   )
 }
