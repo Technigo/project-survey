@@ -2,7 +2,6 @@ import React from 'react'
 
 export const Radio = props => {
   const { title, options, type, id } = props.data
-
   return (
     <div>
       <h2>{title}</h2>

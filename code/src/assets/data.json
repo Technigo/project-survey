@@ -1,18 +1,28 @@
 {
   "questions": [
     {
-      "title": "question 1 title",
+      "title": "Your name?",
       "number": 1,
+      "type": "text",
+      "fields": [
+        { "label": "First name", "id": "firstName", "placeholder": "Type your first name" },
+        { "label": "First name", "id": "firstName", "placeholder": "Type your last name" }
+      ],
+      "id": 1
+    },
+    {
+      "title": "Take the survey?",
+      "number": 2,
       "type": "radio",
       "options": [
         { "label": "Option 1", "value": "yes", "next_question": "question_id" },
         { "label": "Option 2", "value": "no", "next_question": "question_id" }
       ],
-      "id": "1"
+      "id": 2
     },
     {
-      "title": "question 2 title",
-      "number": 2,
+      "title": "Which color do you prefer?",
+      "number": 3,
       "type": "dropdown",
       "options": [
         { "label": "Select an option", "value": "default", "hidden": true },
@@ -20,17 +30,7 @@
         { "label": "Option 2", "value": "blue", "hidden": false, "next_question": "question_id" },
         { "label": "Option 3", "value": "red", "hidden": false, "next_question": "question_id" }
       ],
-      "id": "2"
-    },
-    {
-      "title": "question 3 title",
-      "number": 3,
-      "type": "text",
-      "fields": [
-        { "label": "First name", "id": "firstName", "placeholder": "Type your first name" },
-        { "label": "First name", "id": "firstName", "placeholder": "Type your last name" }
-      ],
-      "id": "3"
+      "id": 3
     }
   ]
 }
