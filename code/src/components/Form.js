@@ -1,17 +1,29 @@
 import React, { useState } from 'react'
 
 import IntroPage from './IntroPage'
-import RadioButtons from './RadioButtons'
+import UserInfo from './UserInfo'
 import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
+import QuestionFour from './QuestionFour'
 import Overview from './Overview'
 
 const Form = () => {
+    const [aliasInput, setAliasInput] = useState('')
+    const [radioButtonInput, setRadioButtonInput] = useState('')
     const [questionOneInput, setQuestionOneInput] = useState('')
     const [questionTwoInput, setQuestionTwoInput] = useState('')
     const [questionThreeInput, setQuestionThreeInput] = useState('')
+    const [questionFourInput, setQuestionFourInput] = useState('')
     const [step, setStep] = useState(1)
+
+    const onAliasInputChange = (event) => {
+        setAliasInput(event.target.value)
+    }
+
+    const onRadioButtonChange = (event) => {
+        setRadioButtonInput(event.target.value)
+    }
 
     const onQuestionOneInputChange = (event) => {
         setQuestionOneInput(event.target.value)
@@ -23,6 +35,10 @@ const Form = () => {
 
     const onQuestionThreeInputChange = (event) => {
         setQuestionThreeInput(event.target.value)
+    }
+
+    const onQuestionFourInputChange = (event) => {
+        setQuestionFourInput(event.target.value)
     }
 
     const onStepChange = () => {
@@ -37,9 +53,11 @@ const Form = () => {
                 />
             )}
             {step === 2 && (
-                <RadioButtons
-                    questionOneInput={questionOneInput}
-                    onQuestionOneInputChange={onQuestionOneInputChange}
+                <UserInfo
+                    aliasInput={aliasInput}
+                    onAliasInputChange={onAliasInputChange}
+                    radioButtonInput={radioButtonInput}
+                    onRadioButtonChange={onRadioButtonChange}
                     onStepChange={onStepChange}
                 />
             )}
@@ -65,7 +83,16 @@ const Form = () => {
                 />
             )}
             {step === 6 && (
+                <QuestionFour
+                    questionFourInput={questionFourInput}
+                    onQuestionFourInputChange={onQuestionFourInputChange}
+                    onStepChange={onStepChange}
+                />
+            )}
+            {step === 7 && (
                 <Overview
+                    aliasInput={aliasInput}
+                    radioButtonInput={radioButtonInput}
                     questionOneInput={questionOneInput}
                     questionTwoInput={questionTwoInput}
                     questionThreeInput={questionThreeInput}

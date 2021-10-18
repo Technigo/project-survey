@@ -4,7 +4,7 @@ const QuestionThree = ({ questionThreeInput, onQuestionThreeInputChange, onStepC
     return (
         <div>
             <form>
-                <label htmlFor="questionThreeInput">Type your answer!</label>
+                <label htmlFor="questionThreeInput">What sport would be the funniest to add a mandatory amount of alcohol to?</label>
                 <input id="questionThreeInput" type="text" value={questionThreeInput} onChange={onQuestionThreeInputChange}>
                 </input>
                 <button onClick={onStepChange}>Next question!</button>
