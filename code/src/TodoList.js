@@ -12,12 +12,14 @@ return (
       
 <div className="todo-list"> 
 {todos.map((todo) => (
-<div className="todo-pre" key={todo.id}>
+<div className="todoPre" key={todo.id}>
+    <div className="todoPreDiv">
+<p>{todo.check} </p>
     <p> {todo.time} </p>
-    <p>{todo.check} </p>
-<h2> {todo.title} </h2>
-<p>Todo  {todo.task}</p>
-<p>Where  {todo.location}</p> 
+    <p> {todo.location}</p> 
+    </div>
+<h3> {todo.title} </h3>
+<p>To do:  {todo.task}</p>
 </div>
 ))}
 

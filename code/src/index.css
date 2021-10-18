@@ -6,6 +6,12 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+height: 100%;
+background-size: cover;
+
+	background-image: url(./images/shubham-dhage-D2udHWcz4wI-unsplash.jpg);
+	
+	
 }
 
 code {
@@ -21,6 +27,9 @@ code {
 	align-items: center;
 	justify-content: center;
 	grid-gap: 10px;
+	color: rgb(232, 236, 240);
+	
+
 }
 
 /* Header */
@@ -31,15 +40,29 @@ code {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	width: 100%;
-	height: 100%;
+	
+	height: 50%;
+
+font-family: monospace;
+font-size: 2em;
+
 }
+
+.header h1{
+padding: 0 5px;
+background-color: rgba(62, 48, 73, 0.945);
+}
+
+
 
 /* List items */
 .listContainer {
 	grid-column: 1/3;
 	grid-row: 3;
 	height: 100%;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 1.5em;
+
 }
 
 .todo-list {
@@ -52,14 +75,30 @@ code {
 	height: 100%;
 }
 
-.todo-pre {
-	background-color: rgb(116, 116, 116);
+.todoPre {
+	background-color: rgba(73, 48, 72, 0.972);
 	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
 }
+
+
+.todoPreDiv{
+
+display: flex;
+flex-direction: row;
+justify-content: space-evenly;
+font-size: 0.7em;
+font-weight: bold;
+width: 100%;
+
+}
+
+
+
+
 
 /* Forms */
 
@@ -70,6 +109,13 @@ code {
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	background-color: rgba(62, 48, 73, 0.945);
+
+font-family:Arial, Helvetica, sans-serif;
+font-weight: bold;
+font-size: 1.2em;
+white-space: nowrap;
+
 }
 
 .form {
@@ -79,25 +125,45 @@ code {
 	width: 100%;
 	align-items: center;
 	justify-content: center;
-	background-color: blanchedalmond;
+
+	
+}
+
+.labelTodoForm{
+
+
+font-size: 1.3em;
+
 }
 
 .typingTodoContainer {
-	font-size: 14px;
+	
 	width: 98%;
 	line-break: normal;
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+font-size: 1em;
+font-weight: normal;
+	padding: 15px 0;
+
 }
 
 .contentContainer {
 	width: 100%;
 	height: 100%;
-	background-color: rgb(141, 141, 141);
-	margin-bottom: 10px;
+	
+	margin-bottom: 0px;
 }
 
 .ContainerOne {
 	height: 100%;
 	width: 100%;
+	padding-bottom: 5px;
+	
+	
 }
 .ContainerTwo {
 	height: 100%;
@@ -106,8 +172,8 @@ code {
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
-	background-color: rgba(248, 241, 241, 0.514);
-	font-size: 14px;
+	background-color: rgba(56, 36, 55, 0.972);
+	
 }
 
 .content {
@@ -115,7 +181,7 @@ code {
 	flex-direction: column;
 	justify-content: flex-start;
 	align-items: center;
-	margin-top: 10px;
+	margin-top: 15px;
 	width: 100%;
 }
 
@@ -123,18 +189,70 @@ code {
 	display: flex;
 	flex-direction: row;
 	justify-content: space-around;
+	align-items:center;
+	margin-top: 15px;
+	height: 90px;
+	
 }
+
+  input, select{
+
+	margin-top: 2px;
+      box-sizing:border-box;
+	min-width: 100px;
+	  height: 40px;
+	  font-size:  0.8em;;
+}
+
+
+.radio{
+	margin-top: 10px;
+	width:20px !important;
+	height: 20px !important;
+	
+}
+
 
 .contentSelect {
 	display: flex;
 	flex-direction: column;
+	align-items: flex-start;
 	align-items: center;
-	margin: 5px 0 5px 10px;
+height: 90px;
+margin-top: 25px;
+	
+
 }
 
-.content button {
-	margin-top: 0px;
+
+
+
+.contentTime label{
+margin-right: 10px;
+
 }
+
+
+
+.content button {
+	margin: 0 0 10px 0;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: rgb(154, 142, 158);
+	color: rgb(255, 255, 255);
+
+
+}
+
+.content button:hover {
+
+	background-color: rgb(90, 76, 94);
+	color: rgb(255, 255, 255);
+}
+
+
+
+
 
 /* Tablet */
 
@@ -185,21 +303,30 @@ code {
 /* DESKTOP */
 
 @media (min-width: 1025px) {
+
+
+body{
+
+	height: 100%;
+	background-size:unset;
+
+}
+
 	.container {
+		
 		display: grid;
 		grid-template-columns: 4fr 2fr;
-		grid-template-rows: 1fr 2fr;
+		grid-template-rows: 1fr 2fr	;
 		align-items: center;
 		justify-content: center;
 
-		background-color: rgb(255, 255, 255);
 	}
 
 	.contentContainer {
-		background-color: rgb(141, 141, 141);
+		
 		display: flex;
 		justify-content: center;
-		width: 100%;
+		
 		margin: 0px;
 	}
 
@@ -209,7 +336,7 @@ code {
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		width: 100%;
+		
 	}
 
 	/* List items */
@@ -223,7 +350,8 @@ code {
 		grid-template-columns: repeat(3, 3fr);
 		grid-template-rows: repeat(2, 1fr);
 		grid-auto-rows: 1fr;
-		grid-gap: 15px;
+		grid-gap: 10px;
+	
 	}
 
 	/* Forms */
@@ -234,5 +362,10 @@ code {
 		display: flex;
 		align-items: center;
 		justify-content: center;
+	
 	}
+
+	
+
+
 }

@@ -1,28 +1,36 @@
 {
   "todo": [
     {
-      "title": "Städa",
-      "task": "Göra rent hall",
+      "title": "Clean",
+      "task": "Bedroom",
       "location": "Home",
-      "check": "Important",
-      "time": "20:17",
+      "check": "Not important",
+      "time": "16:30",
       "id": 1
     },
     {
-      "title": "vdsds",
-      "task": "dsdsd",
+      "title": "Deadline",
+      "task": "Budget",
       "location": "Work",
-      "check": "",
-      "time": "",
+      "check": "Important",
+      "time": "12:00",
       "id": 2
     },
     {
-      "title": "hghg",
-      "task": "ghh",
+      "title": "Yoga",
+      "task": "Class",
       "location": "Other",
-      "check": "Not important",
-      "time": "23:22",
+      "check": "Important",
+      "time": "19:00",
       "id": 3
+    },
+    {
+      "title": "Get flowers",
+      "task": "Go to shop",
+      "location": "Other",
+      "check": "Important",
+      "time": "15:00",
+      "id": 4
     }
   ]
 }
