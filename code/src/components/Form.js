@@ -7,6 +7,7 @@ import { SubmitButton } from "./SubmitButton"
 import { Overview } from "./Overview"
 import { Suggestion } from "./Suggestion"
 
+
 export const Form = () => {
     const [nameInput, setNameInput] = useState('')
     const [moodInput, setMoodInput] = useState('')
@@ -76,7 +77,7 @@ export const Form = () => {
             )}
 
             {step === 6 && (
-                <>
+              <>
                 <Overview
                 nameInput={nameInput}
                 moodInput={moodInput}
@@ -84,11 +85,7 @@ export const Form = () => {
                 viewInput={viewInput}
                 onStepChange={onStepChange}
                 />
-                <Suggestion
-                moodInput={moodInput}
-                socialInput={socialInput}
-                viewInput={viewInput}
-                />
+                
                 </>
             )}
         </form>

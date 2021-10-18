@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
 
 
-export const Overview = ({ nameInput, moodInput, socialInput, viewInput }) => {
+export const Overview = ({ nameInput, moodInput, socialInput, viewInput, onStepChange }) => {
 	return (
-        <>
 		<section className='overview-container'>
 			<h2>Based on your profile:</h2>
 			<p>Name: {nameInput}</p>
@@ -11,11 +10,5 @@ export const Overview = ({ nameInput, moodInput, socialInput, viewInput }) => {
             <p>Socially: {socialInput}</p>
             <p>View the world: {viewInput}</p>
 		</section>
-
-        <section>
-        <h2>You should play:</h2>
-            
-        </section>
-        </>
 	)
 }

@@ -1,10 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 'Quicksand', sans-serif;
 }
 
 code {
@@ -12,11 +8,84 @@ code {
     monospace;
 }
 
+header {
+  background-image: url(./images/nintendo_comp_small.jpg);
+  background-repeat: no-repeat;
+  z-index: -1;
+  width: 100%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  /*background-position:*/
+  background-size:100vh;
+  align-items: center;
+}
+
+.header-title {
+  color: #000;
+  background-color: #fff;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 40px;
+  border: black solid 3px;
+}
+
+.survey-text {
+  color: blue;
+  text-align: center;
+  font-family: 'Quicksand', sans-serif;
+}
+
+
 .first-container, 
 .second-container,
 .third-container,
 .fourth-container,
 .submit-container,
 .overview-container {
-  border: blue solid 2px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
+
+
+button {
+  background-color: #3DD1E7;
+  border: 0 solid #E5E7EB;
+  box-sizing: border-box;
+  color: #000000;
+  display: flex;
+  font-family: 'Quicksand', sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  justify-content: center;
+  padding: 10px;
+  position: relative;
+  text-align: center;
+  text-decoration: none #000 solid;
+  width: 150px;
+  margin-top: 30px;
+  position: relative;
+  cursor: pointer;
+  transform: rotate(-2deg);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+button:after {
+  content: '';
+  position: absolute;
+  border: 1px solid #000000;
+  bottom: 4px;
+  left: 4px;
+  width: calc(100% - 1px);
+  height: calc(100% - 1px);
+}
+
+button:hover:after {
+  bottom: 2px;
+  left: 2px;
+}
+

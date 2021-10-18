@@ -5,7 +5,7 @@ export const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
 
         <div className="first-container">
             <label htmlFor='nameInput'>
-                <h3>First name</h3>
+                <h3>What's your first name?</h3>
             </label>
             <input id='nameInput'
             type='text' 

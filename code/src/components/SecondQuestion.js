@@ -1,6 +1,8 @@
 import React, {useState} from "react"
 
 export const SecondQuestion = ({moodInput, onMoodInputChange, onStepChange}) => {
+
+    
     return (
 
         <div className="second-container">
@@ -34,7 +36,7 @@ export const SecondQuestion = ({moodInput, onMoodInputChange, onStepChange}) => 
                 checked={moodInput === 'Overthinking'}
                 />
             </label>
-            <button onClick={onStepChange}>Next Question</button>
+            <button onClick={onStepChange}>Next question</button>
 
         </div>
     )
