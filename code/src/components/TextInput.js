@@ -1,10 +1,9 @@
 import React from "react";
 
-const TextInput = ({label, value, onValueChange}) => {
-
+const TextInput = ({ label, value, onValueChange }) => {
   const onTextInputChange = (event) => {
-    onValueChange(event.target.value)
-  }
+    onValueChange(event.target.value);
+  };
 
   return (
     <>

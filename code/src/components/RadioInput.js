@@ -1,14 +1,13 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-const RadioInput = ({options, choice, onValueChange}) => {
+const RadioInput = ({ options, choice, onValueChange }) => {
   const [innerChoice, setChoice] = useState(choice);
-
 
   const onInputChange = (event) => {
     onValueChange(event.target.value);
-    setChoice(event.target.value)
+    setChoice(event.target.value);
   };
-  
+
   return (
     <>
       <form action="">
