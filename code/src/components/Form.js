@@ -66,3 +66,6 @@ const Form = () => {
 }
 
 export default Form
+
+
+// GÖR KOMPONENT AV EMOJIS!

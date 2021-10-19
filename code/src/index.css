@@ -5,18 +5,81 @@ html {
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: poppins, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  padding: 1rem;
+  padding: 5rem 1rem 2rem 1rem;
+  background-color: #1a1a1a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+/* code {
+  font-family: poppins, source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
     padding: 4rem;
+} */
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* padding: 6rem 0 2rem 0; */
+
+}
+
+h1 {
+  font-weight: 900;
+  font-size: 48px;
+  line-height: 52px;
+  /* -webkit-text-stroke: aqua; */
+}
+
+h2 {
+  font-weight: 900;
+  font-size: 32px;
+  line-height: 36px;
+}
+
+p {
+  font-size: 1.5rem;
+  width: 90%;
+}
+
+
+.btn {
+  border-radius: 24px;
+  background-color: #fff;
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border: 0;
+  height: 48px;
+  padding: 0 1rem 0 1rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
+input {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  height: 48px;
+  margin-top: 0.5rem;
+  border-radius: 24px;
+  border: none;
 }
 
 .form {

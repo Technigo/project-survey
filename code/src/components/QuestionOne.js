@@ -14,7 +14,7 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange }) => {
                     value={nameInput}
                     onChange={onNameInputChange}
                 />
-                <button onClick={onStepChange}>Next please! 👉🏽</button>
+                <button onClick={onStepChange} className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
             </form>
         </section>
     )

@@ -13,7 +13,7 @@ const QuestionThree = ({surnameInput, onSurNameInputChange, onStepChange}) => {
             value={surnameInput} 
             onChange={onSurNameInputChange}
             />
-            <button onClick={onStepChange}>Next please! 👉🏽</button>
+           <button onClick={onStepChange} className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
         </form>
     </div>
     )
