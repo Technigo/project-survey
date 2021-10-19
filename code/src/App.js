@@ -1,9 +1,6 @@
-import React from 'react'
+import React from 'react'; //importing hooks . Do this in all components if you want it there.
+import Form from './components/From';
 
 export const App = () => {
-  return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+	return <Form />;
+};
