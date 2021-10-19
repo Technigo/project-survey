@@ -11,11 +11,12 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
 
   return (
     <form className="form">
-      <h2>third question</h2>
+      <h2 className="page-header">third question</h2>
       <p>What is your age?</p>
       {ageGroup.map(group => (
-        <label key={group}>
+        <label className="label" key={group}>
           <input
+            className="input"
             type="radio"
             required
             value={group}
@@ -26,7 +27,9 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
         </label>
       ))}
 
-      <button onClick={onStepChange}>Go to summary</button>
+      <a className="button-container" onClick={onStepChange}>
+        <img className="button-icon" src="./img/chevron.png" alt=""></img>
+      </a>
     </form>
   );
 };

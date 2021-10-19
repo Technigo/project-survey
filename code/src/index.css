@@ -25,11 +25,16 @@ code {
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
+  font-size: 48px;
 }
 
-.first-page-header {
-  font-size: 64px;
+.page-header {
+  font-size: 54px;
   text-align: center;
+}
+
+p {
+  font-size: 24pt;
 }
 
 .main {
@@ -70,6 +75,25 @@ code {
   animation: bounce 2s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
+  border-radius: 50%;
+  animation-direction: alternate;
+}
+
+@keyframes press {
+  0% {
+    background-color: var(--beige);
+  }
+  100% {
+    background-color: #de8971;
+  }
+}
+
+.button-icon:hover {
+  animation: press 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  animation-direction: alternate;
 }
 
 .form {
@@ -77,4 +101,36 @@ code {
   flex-direction: column;
   justify-content: center;
   align-items: left;
+}
+
+.label {
+  padding: 24px 0;
+  font-size: 20px;
+}
+
+.input {
+  padding: 10px;
+  background-color: var(--beige);
+}
+
+.input::after {
+  padding: 10px;
+  background-color: var(--beige);
+}
+
+.button-container {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.summary-container {
+  width: 80%;
+}
+
+.last-message {
+  margin-top: 100px;
+  font-size: 54px;
+  color: #de8971;
+  text-align: center;
+  font-weight: 700;
 }

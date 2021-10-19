@@ -7,9 +7,12 @@ const SecondQuestion = ({
 }) => {
   return (
     <form className="form">
-      <h2>second question</h2>
-      <label htmlFor="interstInput">What is your interest?</label>
+      <h2 className="page-header">second question</h2>
+      <label className="label" htmlFor="interstInput">
+        <p>What is your interest?</p>
+      </label>
       <select
+        className="input"
         id="interestInput"
         type="text"
         value={interestInput}
@@ -20,7 +23,9 @@ const SecondQuestion = ({
         <option value="seller">Seller</option>
         <option value="buyer-and-seller">Buyer and seller</option>
       </select>
-      <button onClick={onStepChange}>Next question</button>
+      <a className="button-container" onClick={onStepChange}>
+        <img className="button-icon" src="./img/chevron.png" alt=""></img>
+      </a>
     </form>
   );
 };
