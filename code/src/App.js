@@ -8,7 +8,7 @@ export const App = () => {
   return (
     <div>
       <Header />
-      <img src="assets/website.webp" alt="Screenshot of Birgits portfolio site" />
+      <img className="website-image" src="assets/website.webp" alt="Screenshot of Birgits portfolio site" />
       <Form />
       <Footer />
     </div>

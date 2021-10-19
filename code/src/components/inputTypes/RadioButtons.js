@@ -1,16 +1,15 @@
 import React from "react"
 
-const Color = ({color, setColor, yesNo}) => {
+const RadioButtons = ({value, setValue, valueArray}) => {
   return (
     <form onSubmit= {event => event.preventDefault()}>
-        <p>Do you like the color scheme?</p>
-        {yesNo.map((item) => (
+        {valueArray.map((item) => (
           <label key={item}>
             <input
               type="radio"
               value={item}
-              onChange = {event => setColor(event.target.value)}
-              checked={color === item}
+              onChange = {event => setValue(event.target.value)}
+              checked={value === item}
             />
             {item}
           </label>     
@@ -19,4 +18,4 @@ const Color = ({color, setColor, yesNo}) => {
   )
 }
 
-export default Color
+export default RadioButtons
