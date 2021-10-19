@@ -16,7 +16,7 @@ export const App = () => {
         <div>Contact</div>
       </nav>
     </header>
-    <div className="question-box">
+    <div className="question-container">
       <Form />
 
   

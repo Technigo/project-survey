@@ -15,17 +15,8 @@ code {
     monospace;
 }
 
-.question-box {
-  width: 50%;
-  height: 400px;
-  padding: 20px;
-  margin: 200px auto;
-  border: 5px solid #283618;
-  border-radius: 25px;
-  text-align: center;
-  
-}
-
+/* mobile first */
+/* Header */
 .header {
   width: 100%;
   height: 50px;
@@ -39,3 +30,36 @@ code {
   align-items: center;
   background-color: #eec170;
 }
+
+
+/* Questions container */
+.question-container {
+  width: 50%;
+  height: 400px;
+  padding: 20px;
+  margin: 200px auto;
+  border: 5px solid #283618;
+  border-radius: 25px;
+}
+
+.question-box {
+  justify-items: center;
+  display: grid;
+  grid-column: 1fr;
+}
+
+label {
+  display: block;
+}
+
+button {
+  display: block;
+  margin: 20px auto;
+  border-radius: 25px;
+  background-color: chocolate;
+}
+
+
+/* Question 2 */
+/* Range slider */
+
