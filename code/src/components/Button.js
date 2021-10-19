@@ -1,12 +1,11 @@
 import React from "react"
 
-const Button = ({ button, onStepChange }) => {
+const Button = ({ button }) => {
     return (
         <div>
             <button
                 className="button"
-                type="submit"
-                onClick={onStepChange}>
+                type="submit">
                 {button}
             </button>
         </div>

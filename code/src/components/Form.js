@@ -1,11 +1,10 @@
 import React, { useState } from "react"
 
-import Name from './Name'
-import QuantityPlants from "./QuantityPlants"
+import NameText from './NameText'
+import QuantitySelect from "./QuantitySelect"
 import Overview from "./Overview"
-import Characteristics from "./Characteristics"
+import CharacteristicsRadio from "./CharacteristicsRadio"
 import Start from "./Start"
-import Button from "./Button"
 
 const Form = () => {
     const [nameInput, setNameInput] = useState('')
@@ -15,6 +14,7 @@ const Form = () => {
 
     const onSubmit = (event) => {
         event.preventDefault();
+        setStep(step + 1)
     }
 
     //custom functions to update the state properties
@@ -28,53 +28,44 @@ const Form = () => {
     const onPlantFeatureChange = (event) => {
         setPlantFeature(event.target.value)
     }
-    const onStepChange = () => {
-        setStep(step + 1)
-    }
+
     return (
         <form className="form-container" onSubmit={onSubmit}>
             {step === 0 && (
-                <>
-                    <Start onStepChange={onStepChange} />
-                    <Button button="Start" onStepChange={onStepChange} />
-                </>
+                <Start />
             )}
             {step === 1 && (
-                <>
-                    <Name
-                        nameInput={nameInput}
-                        onNameInputChange={onNameInputChange} />
-                    <Button button="Continue" onStepChange={onStepChange}
-                    />
-                </>
-            )}
-            {step === 2 && (
-                <>
-                    <QuantityPlants
+                <NameText
+                    nameInput={nameInput}
+                    onNameInputChange={onNameInputChange} />
+            )
+            }
+            {
+                step === 2 && (
+                    <QuantitySelect
                         quantity={quantity}
                         onQuantityChange={onQuantityChange}
                     />
-                    <Button button="Continue" onStepChange={onStepChange} />
-                </>
-            )}
-            {step === 3 && (
-                <>
-                    <Characteristics
+                )
+            }
+            {
+                step === 3 && (
+                    <CharacteristicsRadio
                         plantFeature={plantFeature}
                         onPlantFeatureChange={onPlantFeatureChange}
-                        onStepChange={onStepChange}
                     />
-                    <Button button="Submit" onStepChange={onStepChange} />
-                </>
-            )}
-            {step === 4 && (
-                <Overview
-                    nameInput={nameInput}
-                    quantity={quantity}
-                    plantFeature={plantFeature}
-                />
-            )}
-        </form>
+                )
+            }
+            {
+                step === 4 && (
+                    <Overview
+                        nameInput={nameInput}
+                        quantity={quantity}
+                        plantFeature={plantFeature}
+                    />
+                )
+            }
+        </form >
     )
 }
 

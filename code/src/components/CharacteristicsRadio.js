@@ -1,6 +1,8 @@
 import React from "react"
 
-const Characteristics = ({ plantFeature, onPlantFeatureChange, onStepChange }) => {
+import Button from "./Button"
+
+const CharacteristicsRadio = ({ plantFeature, onPlantFeatureChange }) => {
 
     const plantFeatures = ["aestetic", "color", "maintenance (easy to care)", "rarity"]
 
@@ -18,8 +20,9 @@ const Characteristics = ({ plantFeature, onPlantFeatureChange, onStepChange }) =
                     {feature}
                 </label>
             ))}
+            <Button button="Continue" />
         </>
     )
 }
 
-export default Characteristics
+export default CharacteristicsRadio

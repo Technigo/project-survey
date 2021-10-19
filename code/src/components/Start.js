@@ -1,11 +1,16 @@
 import React from "react"
 
+import Button from './Button'
+
 const Start = () => {
     return (
-        <section className="start-overview">
-            <h1 className="name-survey">About your plants survey</h1>
-            <p className="time-survey">It will only take some minutes</p>
-        </section>
+        <>
+            <section className="start-overview">
+                <h1 className="name-survey">About your plants survey</h1>
+                <p className="time-survey">Time to complete: ≈ 1 minute</p>
+            </section>
+            <Button button="start" />
+        </>
     )
 }
 
