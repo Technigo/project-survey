@@ -11,3 +11,42 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.header-continer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgb(226, 232, 226);
+}
+
+.logosbox {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.technigo-logo,
+.bravo-logo {
+  width: 300px;
+}
+
+.bravomentor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.mentorcardbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.mentorcard {
+  width: 300px;
+  height: 300px;
+  image-rendering: auto;
+}
+
+.mentorcard-text {
+  width: 300px;
+}
