@@ -3,6 +3,7 @@ import Intro from './Intro'
 import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
+import QuestionFour from './QuestionFour'
 import Summery from './Summery'
 
 
@@ -10,6 +11,9 @@ const Form = () => {
   const [nameInput, setNameInput] = useState('')
   const [surnameInput, setSurnameInput] = useState('')
   const [step, setStep] = useState(0)
+  const [selectOption, setSelectOption] = useState('')
+  const [radioInput, setRadioInput] = useState('')
+    
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value)
@@ -18,6 +22,15 @@ const Form = () => {
   const onSurNameInputChange = (event) => {
     setSurnameInput(event.target.value)
   }
+
+  const onSelectOptionChange = (event) => {
+    setSelectOption(event.target.value)
+  }
+
+  const onRadioInputChange = (event) => {
+    setRadioInput(event.target.value)
+  }
+
 
   const onStepChange = () => {
       setStep(step + 1)
@@ -49,15 +62,24 @@ const Form = () => {
         )}
         {step === 3 && (
             <QuestionThree 
-                surname={surnameInput}
-                onSurNameInputChange={onSurNameInputChange}
+                selectOption={selectOption}
+                onSelectOptionChange={onSelectOptionChange}
                 onStepChange={onStepChange}
             />
          )}
-         {step === 4 && (
+        {step === 4 && (
+            <QuestionFour 
+                radioInput={radioInput}
+                onRadioInputChange={onRadioInputChange}
+                onStepChange={onStepChange}
+            />
+         )}
+         {step === 5 && (
             <Summery 
                 nameInput={nameInput} 
                 surnameInput={surnameInput}
+                selectOption={selectOption}
+                radioInput={radioInput}
             />
          )}
     </div>
@@ -66,6 +88,3 @@ const Form = () => {
 }
 
 export default Form
-
-
-// GÖR KOMPONENT AV EMOJIS!

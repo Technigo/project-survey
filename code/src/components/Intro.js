@@ -8,7 +8,7 @@ const Intro = ({onStepChange}) => {
       <p>Be a sport and click the first button <span role="img" aria-label="happy emoji">😄</span> !</p>
       <div className="start-btn">
       <button onClick={onStepChange} className="btn"><a href="#question-one">Sure thing</a></button> 
-      {/* <button onClick={onStepChange}>No way Jose'</button>  */}
+      {/* <button onClick={onAnswerNo}>No way Jose'</button>  */}
       </div>
     </section>
     )
