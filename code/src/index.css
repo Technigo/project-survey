@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +15,139 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.hero-image {
+  background-color: #003ba2;
+  width: 100%;
+  height: 100vh;
+  min-width: 320;
+}
+
+.content-wrapper {
+  width: 70%;
+  max-width: 450;
+  margin: 0 auto;
+  padding-top: 100px;
+  color: white;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex-wrap: nowrap;
+}
+.top-label {
+  display: flex;
+  flex-direction: column;
+}
+
+.ask-a-question {
+  height: 70px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+.question-indicator {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background-color: crimson;
+  display: inline-block;
+}
+
+.question-text {
+  height: 30px;
+  line-height: 30px;
+  display: inline;
+  font-size: 30px;
+}
+
+.input {
+  max-width: 250px;
+  height: 25px;
+  line-height: 25px;
+  border: 0;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+.name-input:focus {
+  max-width: 250px;
+  height: 35px;
+  line-height: 25px;
+  border: 0;
+}
+.next-question {
+  margin-top: 10px;
+  width: 50px;
+  height: 35px;
+  background-color: #547bc5;
+  border: 0;
+  box-shadow: 0;
+  border-radius: 2px;
+  color: white;
+}
+
+.arrow-wrapper {
+  margin-top: 30px;
+  display: flex;
+  gap: 10px;
+}
+.view-questions {
+  font-size: 16px;
+}
+
+.arrow {
+  fill: #547bc5;
+}
+.arrow:hover {
+  fill: crimson;
+}
+.progress-text {
+  margin-right: 7px;
+}
+progress {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  height: 10px;
+  margin-top: 3px;
+}
+
+progress::-webkit-progress-value {
+  background-color: crimson;
+}
+.rating-number-wrapper {
+  display: flex;
+  gap: 1px;
+  align-items: center;
+}
+.rating-single-number {
+  width: 30px;
+  height: 30px;
+  border: 0;
+  box-shadow: 0;
+}
+.rating-single-number:hover {
+  background-color: #547bc5;
+  color: white;
+  width: 35px;
+  height: 35px;
+}
+
+@media only screen and (min-width: 768px) {
+  .content-wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 200px;
+    height: 812px;
+  }
 }
