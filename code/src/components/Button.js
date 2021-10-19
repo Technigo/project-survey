@@ -1,10 +1,3 @@
 import React from 'react'
 
-export const Button = props => {
-  return (
-    <>
-      <button onClick={props.incrementStep}>Next</button>
-      <p>Step number: {props.step}</p>
-    </>
-  )
-}
+export const Button = props => <button onClick={props.incrementStep}>{props.text}</button>

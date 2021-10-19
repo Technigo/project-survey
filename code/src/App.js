@@ -5,13 +5,16 @@ import { Button } from 'components/Button'
 export const App = () => {
   const [step, setStep] = useState(1)
   const incrementStep = () => {
-    step <= 3 ? setStep(step + 1) : setStep('end')
+    step < 3 ? setStep(step + 1) : setStep('end')
   }
+
+  const handleRestart = () => setStep(1)
 
   return (
     <div>
       <FormWrapper step={step} />
-      <Button step={step} incrementStep={incrementStep} />
+      {step !== 'end' && <Button incrementStep={incrementStep} text={'Next question'} />}
+      {step === 'end' && <Button incrementStep={handleRestart} text={'Restart'} />}
     </div>
   )
 }
