@@ -1,15 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
-const awareness = ["Yes", "No"];
+const awareness = ["Nothing", "Not much", "Some", "A lot"];
 
-const CryptoAwareness = () => {
-  const [cryptoAwareness, setCryptoAwareness] = useState();
-
-  const onCryptoAwarenessChange = (event) =>
-    setCryptoAwareness(event.target.value);
-
+const CryptoAwareness = ({
+  onStepChange,
+  cryptoAwareness,
+  onCryptoAwarenessChange,
+}) => {
   return (
     <div>
+      <h2>How much do you know about cryptocurrencies?</h2>
       {awareness.map((item) => (
         <label key={item}>
           <input
@@ -21,6 +21,7 @@ const CryptoAwareness = () => {
           {item}
         </label>
       ))}
+      <button onClick={onStepChange}>Next</button>
     </div>
   );
 };

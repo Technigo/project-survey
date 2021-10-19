@@ -1,13 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
-const NameCoin = () => {
-  const [nameCoin, setNameCoin] = useState("");
-
-  const onNameCoinChange = (event) => setNameCoin(event.target.value);
-
+const NameCoin = ({ onStepChange, onNameCoinChange, nameCoin }) => {
   return (
     <div>
-      <input type="text" onChange={onNameCoinChange} value={nameCoin} />
+      <h2>
+        Please provide the name of the coin which is the largest asset in your
+        portfolio
+      </h2>
+      <label htmlFor="coin">
+        <input
+          type="text"
+          id="coin"
+          onChange={onNameCoinChange}
+          value={nameCoin}
+        />
+      </label>
+      <button onClick={onStepChange}>Next</button>
     </div>
   );
 };

@@ -1,16 +1,15 @@
-import React, { useState } from "react";
+import React from "react";
 
 const investment = ["Yes", "No"];
 
-const CryptoInvestment = () => {
-  const [cryptoInvestment, setCryptoInvestment] = useState();
-
-  const onCryptoInvestmentChange = (event) =>
-    setCryptoInvestment(event.target.value);
-
+const CryptoInvestment = ({
+  onStepChange,
+  cryptoInvestment,
+  onCryptoInvestmentChange,
+}) => {
   return (
     <div>
-      <p>Have you invested in cryptocurrencies?</p>
+      <h2>Have you invested in cryptocurrencies?</h2>
       {investment.map((item) => (
         <label key={item}>
           <input
@@ -22,6 +21,7 @@ const CryptoInvestment = () => {
           {item}
         </label>
       ))}
+      <button onClick={onStepChange}>Next</button>
     </div>
   );
 };

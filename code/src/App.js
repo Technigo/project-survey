@@ -4,9 +4,11 @@ import Form from "components/Form";
 
 export const App = () => {
   return (
-    <div>
+    <div className="survey-wrapper">
       <h1>Public adoption of Cryptocurrency</h1>
-      <Form />
+      <form onSubmit={(event) => event.preventDefault()}>
+        <Form />
+      </form>
     </div>
   );
 };
