@@ -2,7 +2,6 @@ body {
   margin: 0;
   background-image: url(https://images.pexels.com/photos/7232493/pexels-photo-7232493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
   background-repeat: no-repeat;
-  overflow: hidden;
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -17,7 +16,7 @@ code {
 }
 
 .headerText {
-  color: hotpink;
+  color: purple;
   font-size: 30px;
   font-weight: 400;
   display: block;
@@ -26,7 +25,8 @@ code {
 }
 
 p {
-  color: hotpink;
+  font-size: 16px;
+  color: purple;
 }
 
 .containerIntroduction {
@@ -40,7 +40,7 @@ p {
   margin: 60px auto 60px;
   border-radius: 15px;
   border: 1px solid rgb(250, 229, 233);
-  box-shadow: 10px 10px 50px hotpink;
+  box-shadow: 10px 10px 50px purple;
 }
 
 .containerIntroductionText {
@@ -68,11 +68,11 @@ p {
 .radioForm,
 .selectForm,
 .inputForm {
-  margin: 0px auto 20px;
+  margin: 10px auto 20px;
 }
 
 .QuestionContainer {
-  background-color: #fff;
+  background-color: rgb(253, 239, 241);
   width: 300px;
   height: fit-content;
   display: flex;
@@ -82,39 +82,48 @@ p {
   margin: 60px auto 60px;
   border-radius: 15px;
   border: 1px solid rgb(250, 229, 233);
-  box-shadow: 10px 10px 50px hotpink;
+  box-shadow: 10px 10px 50px purple;
 }
 
 .textQuestion {
-  width: 400px;
-  font-size: 16px;
   font-weight: 400;
   padding: 20px;
 }
 
+select {
+  color: purple;
+  padding: 10px;
+}
+
 label {
-  font-size: 14px;
+  color: purple;
+  font-size: 16px;
+  margin: 10px;
 }
 
 .textInput {
-  width: 80px;
+  color: purple;
+  font-size: 16px;
+  width: fit-content;
   margin-right: 20px;
+  padding: 10px;
 }
 
 button {
+  font-size: 16px;
   display: block;
   justify-content: center;
   width: fit-content;
   margin: auto;
-  padding: 7px;
-  color: rgb(248, 11, 130);
-  background-color: pink;
-  border: 1px solid hotpink;
+  padding: 10px;
+  color: purple;
+  background-color: rgb(253, 239, 241);
+  border: 1px solid purple;
   border-radius: 5px;
 }
 
 .containerSummary {
-  background-color: #fff;
+  background-color: rgb(253, 239, 241);
   width: 300px;
   height: fit-content;
   display: flex;
@@ -124,7 +133,7 @@ button {
   margin: 60px auto 60px;
   border-radius: 15px;
   border: 1px solid rgb(250, 229, 233);
-  box-shadow: 10px 10px 50px hotpink;
+  box-shadow: 10px 10px 50px purple;
 }
 
 .containerSummaryText {
@@ -143,10 +152,15 @@ button {
   .QuestionContainer,
   .containerSummary {
     width: 600px;
-    margin: 150px auto 80px;
+    margin: 50px auto;
   }
 
   .QuestionContainer {
-    height: 30vh;
+    height: fit-content;
+  }
+
+  button {
+    margin: 0 auto 50px;
+    padding: 12px;
   }
 }

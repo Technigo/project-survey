@@ -2,36 +2,37 @@ import React from "react";
 import { useState } from "react";
 import ImageComponent from "./FirstImg";
 
+// lägg till en key till labels, den ska läggas in på "checked" istället för {userWatches === "yes"}?
+
 const FirstQuestion = () => {
-  const [experience, setExperience] = useState(""); // change the name here
+  const [step, setStep] = useState(1);
+  const [userWatches, setUserWatches] = useState("");
   return (
     <div className="QuestionContainer">
       <p>Do you watch Rupaul's Drag Race?</p>
       <div className="radioForm">
-        <form>
+        <form onSubmit={(event) => event.preventDefault()}>
           <label>
-            Yes
             <input
               type="radio"
               value="yes"
-              onChange={(event) => setExperience(event.target.value)}
-              checked={experience === "yes"}
+              onChange={(event) => setUserWatches(event.target.value)}
+              checked={userWatches === "yes"}
             />
+            Yes!
           </label>
           <label>
-            No I have bad taste
             <input
               type="radio"
               value="no"
-              onChange={(event) => setExperience(event.target.value)}
-              checked={experience === "no"}
+              onChange={(event) => setUserWatches(event.target.value)}
+              checked={userWatches === "no"}
             />
+            No, I have bad taste.
           </label>
         </form>
       </div>
-      <div>
-        <ImageComponent />
-      </div>
+      <ImageComponent />
     </div>
   );
 };
