@@ -1,7 +1,20 @@
 import React from 'react'
 
-const FirstQuestion = () => {
-  return <div></div>
+const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+  return (
+    <form>
+      <label htmlFor="nameInput">Type your name</label>
+      <input
+        id="nameInput"
+        type="text"
+        value={nameInput}
+        onChange={onNameInputChange}
+      />
+      <button type="button" onClick={onStepChange}>
+        Next question
+      </button>
+    </form>
+  )
 }
 
 export default FirstQuestion
