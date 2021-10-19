@@ -5,7 +5,6 @@ import ImageComponent from "./FirstImg";
 // lägg till en key till labels, den ska läggas in på "checked" istället för {userWatches === "yes"}?
 
 const FirstQuestion = () => {
-  const [step, setStep] = useState(1);
   const [userWatches, setUserWatches] = useState("");
   return (
     <div className="QuestionContainer">
