@@ -11,7 +11,7 @@ export const Header = ({onSignUp}) => {
         className="hero-img"
         alt="Ingredients and utensils for baking on a pastel background"
       />
-      <h1 className="hero-text"> Want to take a baking course? </h1>
+      <h1 className="hero-text"> Eat cake for breakfast? </h1>
 
       <SignUpButton
       onSignUp={onSignUp}

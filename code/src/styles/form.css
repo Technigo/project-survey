@@ -1,5 +1,8 @@
+
+
 .wrapper {
     padding: 50px;
+    background-color: #c2f3f6;
 }
 
 .form {
@@ -11,7 +14,7 @@
     padding: 50px;
 }
 
-.next-button {
+.submit-button {
     font-size: 24px;
     top: 65%;
     right: 20%;
@@ -21,6 +24,6 @@
     cursor: pointer;
 }
 
-.question1-wrapper {
-    margin-top: 50px;
+.form-row {
+    margin: 10px;
   }

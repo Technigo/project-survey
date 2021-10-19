@@ -1,19 +1,18 @@
 import React from 'react';
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+const FirstQuestion = ({ nameInput, onNameInputChange }) => {
 	// const { nameInput, onNameInputChange } = props;
 
 	return (
-		<form className="question1-wrapper">
+		<div className="form-row">
 			<label htmlFor="nameInput">Type your name</label>
 			<input
 				id="nameInput"
 				type="text"
 				value={nameInput}
 				onChange={onNameInputChange}
-
 			/>
-		</form>
+		</div>
 	);
 };
 

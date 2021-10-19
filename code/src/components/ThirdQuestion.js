@@ -6,7 +6,7 @@ const ThirdQuestion = ({ setPastry, chosenPastry, onStepChange }) => {
     const choosePastry =["Cookies", "Cakes", "Bread"];
 
     return (
-		<form>
+		<div className="form-row">
             What do you like to learn to bake?:
             {choosePastry.map(pastry => (
                 <label key={pastry}>
@@ -20,7 +20,7 @@ const ThirdQuestion = ({ setPastry, chosenPastry, onStepChange }) => {
             </label>
             ))}
 			{/* <button type="button" onClick={onStepChange}>Next question</button> */}
-            </form >
+            </div >
 	);
 };
 

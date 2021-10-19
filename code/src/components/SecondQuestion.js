@@ -1,10 +1,10 @@
 import React from 'react';
 
-const SecondQuestion = ({ setExperience, experience, onStepChange }) => {
+const SecondQuestion = ({ setExperience, experience }) => {
 
 
 	return (
-		<form>
+		<div className="form-row">
 			<select 
 			onChange={event => setExperience(event)}
 			value={experience}
@@ -14,7 +14,7 @@ const SecondQuestion = ({ setExperience, experience, onStepChange }) => {
 				<option value="know the basics">Know the basics</option>
 				<option value="experienced">Experienced</option>
 				</select>
-		</form>
+		</div>
 	);
 };
 
