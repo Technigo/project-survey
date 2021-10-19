@@ -6,16 +6,16 @@ const QuestionTwo = ({ destination, onDestinationChange, onStepChange }) => {
 
   return (
     <form>
-      <select onChange={onDestinationChange} value={destination} required>
-        <option value='' disabled selected hidden>
+      <select onChange={onDestinationChange} required value={destination}>
+        <option value='' disabled>
           Where do you want to go?
         </option>
         <option value='sarek'>Sarek</option>
         <option value='padjelanta'>Padjelanta</option>
         <option value='kungsleden'>Kungsleden</option>
       </select>
-      <button className='form-button' type='submit' onClick={onStepChange}>
-        Next question
+      <button className='form-button' type='button' onClick={onStepChange}>
+        Next
       </button>
     </form>
   );

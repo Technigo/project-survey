@@ -51,6 +51,23 @@ h1 {
   background: #668ad8;
 }
 
+.label-text {
+  font-size: 30px;
+  color: #fff;
+}
+
+input[type='text'],
+select {
+  border: 5px solid white;
+  /* -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.5);
+  margin: 0 0 10px 0;
+}
+
 .form-question {
   display: flex;
   flex-direction: column;
@@ -60,4 +77,19 @@ form {
   display: flex;
   flex-direction: column;
   gap: 20px;
+  align-items: center;
+}
+
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+}
+
+.progress-bar-heading {
+  font-size: 25px;
+  color: #fff;
+  font-weight: 200;
+  margin-bottom: 0px;
 }

@@ -8,7 +8,7 @@ import Overview from './Overview';
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('');
-  const [destination, setDestination] = useState();
+  const [destination, setDestination] = useState('');
   const [fruit, setFruit] = useState();
   const [step, setStep] = useState(1);
 
