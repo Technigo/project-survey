@@ -10,7 +10,7 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
   ];
 
   return (
-    <form>
+    <form className="form">
       <h2>third question</h2>
       <p>What is your age?</p>
       {ageGroup.map(group => (

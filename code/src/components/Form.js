@@ -29,7 +29,7 @@ const Form = () => {
   // good practice to put funtion up here
 
   return (
-    <div>
+    <main className="main">
       {step === 0 && <StartPage onStepChange={onStepChange} />}
       {step === 1 && (
         <FirstQuestion
@@ -59,7 +59,7 @@ const Form = () => {
           ageInput={ageInput}
         />
       )}
-    </div>
+    </main>
   );
 };
 
