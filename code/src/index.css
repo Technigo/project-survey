@@ -1,17 +1,23 @@
+:root {
+  --beige: #fffaf2;
+  --yellow: #ffb535;
+  --dark-pink: #b10044;
+  --light-pink: #ffc8e6;
+  --transparent: #dfdfdf95;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Oxygen", "Fira Sans", "Droid Sans", "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
   margin: 0 auto;
   width: 100vw;
   height: 100vh;
-  background-color: rgb(247, 181, 12);
-  /* background-image: url("https://www.wallpaperuse.com/wallp/94-943330_m.jpg");
+  /* background-color: var (--yellow) */
+  background-image: url("https://www.wallpaperuse.com/wallp/94-943330_m.jpg");
   background-repeat: no-repeat;
-  background-size: cover; */
+  background-size: cover;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,12 +29,11 @@ h1 {
   text-align: center;
 }
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: "Courier New", monospace;
 }
 
 #nameInput {
-  background-color: rgb(255, 234, 232);
+  background-color: var(--light-pink);
   width: 300px;
   height: 30px;
 }
@@ -41,11 +46,11 @@ code {
   /* top: 30%;
   left: 50%;
   transform: translate(-50%, -50%); */
-  background-color: rgba(255, 251, 251, 0);
+  background-color: var(--transparent);
 }
 
 .namebox {
-  background-color: pink;
+  background-color: var(--light-pink);
   font-size: 24px;
   margin: 0 auto;
   justify-content: center;
@@ -58,7 +63,7 @@ form {
   flex-direction: column;
 }
 .main-contaniner {
-  background-color: #ffffff77;
+  background-color: var(--transparent);
   width: 100vw;
   height: 500px;
   padding: 30px;
@@ -66,16 +71,94 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #ff1495;
+  color: var(--dark-pink);
 }
 
-button {
-  background-color: #edcbe6;
-  color: #ff1495;
+/* button {
+  background-color: var(--light-pink);
+  color: var(--dark-pink);
   padding: 10px 25px;
   border-radius: 20px;
   border: none;
   cursor: pointer;
+
+} */
+
+.glow-on-hover {
+  width: 100px;
+  height: 40px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #111;
+  cursor: pointer;
+  position: relative;
+  z-index: 0;
+  border-radius: 10px;
+}
+
+.glow-on-hover:before {
+  content: "";
+  background: linear-gradient(
+    45deg,
+    #ff0000,
+    #ff7300,
+    #fffb00,
+    #48ff00,
+    #00ffd5,
+    #002bff,
+    #7a00ff,
+    #ff00c8,
+    #ff0000
+  );
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  background-size: 400%;
+  z-index: -1;
+  filter: blur(5px);
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  animation: glowing 20s linear infinite;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.glow-on-hover:active {
+  color: #000;
+}
+
+.glow-on-hover:active:after {
+  background: transparent;
+}
+
+.glow-on-hover:hover:before {
+  opacity: 1;
+}
+
+.glow-on-hover:after {
+  z-index: -1;
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #111;
+  left: 0;
+  top: 0;
+  border-radius: 10px;
+}
+
+@keyframes glowing {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
 }
 
 .button-container {
@@ -101,15 +184,21 @@ button {
   font-size: 28px;
   text-align: center;
   padding: 30px 10px;
-  color: #cb0073;
+  color: var(--beige);
 }
 
 footer h4 {
   font-family: "Ubuntu";
   font-size: 1em;
   color: grey;
-  border-top: 1px solid rgb(60, 60, 60);
+  border-top: 1px solid var(--transparent);
   text-align: center;
   padding-top: 16px;
   display: none;
+}
+
+@media (min-width: 668px) {
+  .main-container {
+    padding: 50px 30px;
+  }
 }

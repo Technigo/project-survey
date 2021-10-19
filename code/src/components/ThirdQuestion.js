@@ -16,8 +16,12 @@ const ThirdQuestion = ({
         <option value="Platon"> Platon </option>
       </select>
       <div className="button-container">
-        <button onClick={onPreviousQuestionChange}>Go Back</button>
-        <button onClick={onNextQuestionChange}>Continue</button>
+        <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
+          Go Back
+        </button>
+        <button className="glow-on-hover" onClick={onNextQuestionChange}>
+          Continue
+        </button>
       </div>
     </form>
   )

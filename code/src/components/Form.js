@@ -4,19 +4,36 @@ import Starter from "./Starter"
 import FirstQuestion from "./FirstQuestion"
 import SecondQuestion from "./SecondQuestion"
 import ThirdQuestion from "./ThirdQuestion"
-import FourthQuestion from "./FourthQuestion"
+// import Checkboxgroup from "./Checkboxgroup"
+import Imagecheckbox from "./Imagecheckbox"
 
 import Summary from "./Summary"
 import Footer from "./Footer"
 
 const Form = () => {
+  // ----- STATES -----
+
   const [nameInput, setNameInput] = useState("")
   const [locationInput, setLocationInput] = useState()
   const [ageInput, setAgeInput] = useState([])
-  // const [character, setcharacter] = useState([])
   const [step, setStep] = useState(0)
-
   const [checkboxGroup, setCheckboxGroup] = useState([])
+
+  // ----- FUNCTIONS -----
+
+  // This function stores the answer from the first question (text input)
+  const onNameInputChange = (event) => {
+    setNameInput(event.target.value)
+  }
+  // This function stores the answer from the second question (radio input)
+  const onAgeInputChange = (event) => {
+    setAgeInput(event.target.value)
+  }
+
+  // This function stores the answer from the third question (select input)
+  const onLocationInputChange = (event) => {
+    setLocationInput(event.target.value)
+  }
 
   // This function will update the value of an array/answer for the fifth question (checkbox group input)
   const onCheckboxGroupToggle = (checkboxValue) => {
@@ -29,17 +46,7 @@ const Form = () => {
     }
   }
 
-  const onNameInputChange = (event) => {
-    setNameInput(event.target.value)
-  }
-  const onLocationInputChange = (event) => {
-    setLocationInput(event.target.value)
-  }
-
-  const onAgeInputChange = (event) => {
-    setAgeInput(event.target.value)
-  }
-
+  // used only for the starter page
   const onStepChange = () => {
     setStep(step + 1)
   }
@@ -54,19 +61,23 @@ const Form = () => {
     setStep(step - 1)
   }
 
+  // ----- RENDERING -----
+
   return (
     <main className="main-contaniner">
       {step === 0 && <Starter onStepChange={onStepChange} />}
+
+      {/* FirstQuestion */}
       {step === 1 && (
         <FirstQuestion
           nameInput={nameInput}
           onNameInputChange={onNameInputChange}
-          // onStepChange={onStepChange}
           onNextQuestionChange={onNextQuestionChange}
           onPreviousQuestionChange={onPreviousQuestionChange}
         />
       )}
 
+      {/* SecondQuestion */}
       {step === 2 && (
         <SecondQuestion
           ageInput={ageInput}
@@ -75,6 +86,8 @@ const Form = () => {
           onPreviousQuestionChange={onPreviousQuestionChange}
         />
       )}
+
+      {/* ThirdQuestion */}
       {step === 3 && (
         <ThirdQuestion
           locationInput={locationInput}
@@ -83,19 +96,20 @@ const Form = () => {
           onPreviousQuestionChange={onPreviousQuestionChange}
         />
       )}
+
+      {/* FourthQuestion */}
       {step === 4 && (
         <section className="question-container">
-          {/* {checkboxGroupArray.map((character) => ( */}
-          <FourthQuestion
-            // character={character}
-            onChangeFunction={onCheckboxGroupToggle}
+          <Imagecheckbox
             checkboxGroup={checkboxGroup}
+            onChangeFunction={onCheckboxGroupToggle}
             onNextQuestionChange={onNextQuestionChange}
             onPreviousQuestionChange={onPreviousQuestionChange}
           />
-          {/* ))} */}
         </section>
       )}
+
+      {/* Output Page*/}
       {step === 5 && (
         <Summary
           nameInput={nameInput}

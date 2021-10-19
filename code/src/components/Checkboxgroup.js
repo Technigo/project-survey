@@ -1,6 +1,6 @@
 import React from "react"
 
-const FourthQuestion = ({
+const Checkboxgroup = ({
   //   character,
   onChangeFunction,
   checkboxGroup,
@@ -40,11 +40,15 @@ const FourthQuestion = ({
         ))}
       </form>
       <div className="button-container">
-        <button onClick={onPreviousQuestionChange}>Go Back</button>
-        <button onClick={onNextQuestionChange}>Continue</button>
+        <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
+          Go Back
+        </button>
+        <button className="glow-on-hover" onClick={onNextQuestionChange}>
+          Continue
+        </button>
       </div>
     </>
   )
 }
 
-export default FourthQuestion
+export default Checkboxgroup
