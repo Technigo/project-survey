@@ -2,15 +2,15 @@ import React, { useState} from 'react'
 import NameQuestion from './NameQuestion'
 import LocationQuestion from './LocationQuestion'
 import Overview from './Overview'
+import FavouriteAnimal from './FavouriteAnimal'
 
 
  const Form = () => {
   const [nameInput, setNameInput] = useState ('');
   const [locationInput, setLocationInput] = useState ('')
+  const [animalInput, setAnimalInput] = useState ('')
   const [step, setStep] = useState (1)
   
-  
-  {/* creates a function to changed name input, considered a good approach to create a new function to do this*/}
   
   const onNameInputChange = (event) =>{
     setNameInput(event.target.value)
@@ -21,7 +21,9 @@ import Overview from './Overview'
   const onstepChange = () => {
       setStep(step+1)
   }
-
+const onAnimalInputChange = (event) => {
+    setAnimalInput(event.target.value)
+}
   if (step === 1) {
     return (
       <div> < NameQuestion 
@@ -39,9 +41,18 @@ import Overview from './Overview'
     
   } else if (step === 3) {
     return (
+      <div> <FavouriteAnimal
+      animalInput={animalInput}
+      onAnimalInputChange={onAnimalInputChange}
+      onstepChange = {onstepChange}
+      /> </div>
+    )
+  } else if (step === 4) {
+    return (
       <div> <Overview 
       nameInput={nameInput}
-      locationInput={locationInput}/></div>
+      locationInput={locationInput}
+      animalInput={animalInput}/> </div>
     )
   }
 }
