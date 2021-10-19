@@ -1,13 +1,115 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  margin: 0 auto;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(247, 181, 12);
+  /* background-image: url("https://www.wallpaperuse.com/wallp/94-943330_m.jpg");
+  background-repeat: no-repeat;
+  background-size: cover; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
 }
 
+h1 {
+  text-align: center;
+}
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+#nameInput {
+  background-color: rgb(255, 234, 232);
+  width: 300px;
+  height: 30px;
+}
+
+.starter {
+  width: 600px;
+  height: 300px;
+  position: absolute;
+  display: contents;
+  /* top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+  background-color: rgba(255, 251, 251, 0);
+}
+
+.namebox {
+  background-color: pink;
+  font-size: 24px;
+  margin: 0 auto;
+  justify-content: center;
+  align-items: center;
+  display: contents;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+.main-contaniner {
+  background-color: #ffffff77;
+  width: 100vw;
+  height: 500px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #ff1495;
+}
+
+button {
+  background-color: #edcbe6;
+  color: #ff1495;
+  padding: 10px 25px;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+}
+
+.button-container {
+  padding-top: 40px;
+  width: 230px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.checkbox-label-wrap {
+  display: inline-flex;
+  height: 30px;
+}
+
+.checkbox-label-wrap h3 {
+  margin: 0;
+}
+
+.question {
+  font-family: "Fira Sans";
+  margin: 0;
+  font-weight: 900;
+  font-size: 28px;
+  text-align: center;
+  padding: 30px 10px;
+  color: #cb0073;
+}
+
+footer h4 {
+  font-family: "Ubuntu";
+  font-size: 1em;
+  color: grey;
+  border-top: 1px solid rgb(60, 60, 60);
+  text-align: center;
+  padding-top: 16px;
+  display: none;
 }
