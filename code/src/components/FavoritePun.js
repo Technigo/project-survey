@@ -3,15 +3,18 @@ import React from "react";
 const FavoritePun = ({ firstPunInput, handlePunInputChange, onStepChange }) => {
   return (
     <>
-      <section>
+      <section className="form-container">
         <form>
-          <label htmlFor="punInput">Favorite pun</label>
+          <label className="label-text" htmlFor="punInput">
+            Last song you listened to?
+          </label>
           <input
+            className="input-field"
             required
-            id="punInput"
+            id="songInput"
             type="text"
-            placeholder="place pun here"
-            name="pun"
+            placeholder="enter song here"
+            name="song"
             value={firstPunInput}
             onChange={handlePunInputChange}
           />

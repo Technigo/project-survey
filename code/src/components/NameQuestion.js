@@ -7,11 +7,14 @@ const NameQuestion = ({
 }) => {
   return (
     <>
-      <section>
+      <section className="form-container">
         <form>
-          <label htmlFor="firstNameInput">what is your name?</label>
+          <label className="label-text" htmlFor="firstNameInput">
+            what is your name?
+          </label>
           <input
             required
+            className="input-field"
             id="nameInput"
             type="text"
             placeholder="type here please"

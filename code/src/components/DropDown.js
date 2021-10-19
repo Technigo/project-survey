@@ -3,15 +3,18 @@ import React from "react";
 const DropDown = ({ dropdown, handleBirdInput, onStepChange }) => {
   return (
     <form>
-      <label>Least favorite bird</label>
+      <label className="label-text">Least favorite bird</label>
       <select value={dropdown} onChange={handleBirdInput}>
+        <option className="select-default" value="pick bird">
+          Pick bird here
+        </option>
         <option value="fiskmås">fiskmås</option>
         <option value="skata">skata</option>
         <option value="svan">svan</option>
-        <option value="kanadagäss">kanadagäss</option>
+        <option value="kanadagås">kanadagås</option>
       </select>
 
-      <button onClick={onStepChange}>Show Summary</button>
+      <button onClick={onStepChange}>Next question</button>
     </form>
   );
 };
