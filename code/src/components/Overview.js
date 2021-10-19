@@ -2,18 +2,23 @@ import React from 'react'
 
 const Overview = ({ 
     nameInput, 
-    musicInput, 
-    artistInput,
-    songInput
+    radioInput, 
+    dropdownInput,
+    songInput,
+    onRestartChange
+    
 }) => {
 	return (
-		<section>
+        <>
+		<section className="overview-container">
 			<h2>My values from form :</h2>
 			<p>Name : {nameInput}</p>
-			<p>Type of Music : {musicInput}</p>
-            <p>Artist : {artistInput}</p>
+			<p>Type of Music : {radioInput}</p>
+            <p>Artist : {dropdownInput}</p>
             <p>Best song : {songInput}</p>
-		</section>
+        <button onClick={onRestartChange}>Restart</button>
+        </section>
+        </>
 	)
 }
 

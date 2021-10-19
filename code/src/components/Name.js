@@ -3,14 +3,15 @@ import React from 'react'
 const Name = ({ 
     nameInput, 
     onNameInputChange, 
-    onStepChange }) => {
-	// const { nameInput, onNameInputChange } = props;
+    onStepChange
+ }) => {
+	
 
 	return (
 		<>
-		<section className="survey-container">
+		<article className="survey-article">
 		<h2>What is your name?</h2>
-		<form>
+		<form className="form" onSubmit={event => event.preventDefault()}>
 			<label htmlFor="nameInput">Name here</label>
 			<input
 				id="nameInput"
@@ -18,9 +19,9 @@ const Name = ({
 				value={nameInput}
 				onChange={onNameInputChange}
 			/>
-			<button onClick={onStepChange}>Next questions</button>
+			<button className="btn" onClick={onStepChange}>Next questions</button>
 		</form>
-		</section>
+		</article>
 		</>
 	)
 }

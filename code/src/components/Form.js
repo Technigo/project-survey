@@ -1,27 +1,28 @@
 import React, { useState } from 'react'
 
 import Name from './Name'
-import Music from './Music'
-import Artist from './Artist'
+import Radio from './Radio'
+import Dropdown from './Dropdown'
 import Song from './Song'
 import Overview from './Overview'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [musicInput, setMusicInput] = useState('')
-  const [artistInput, setArtistInput] = useState('')
+  const [radioInput, setRadioInput] = useState([])
+  const [dropdownInput, setDropdownInput] = useState('')
   const [songInput, setSongInput] = useState('')
   const [step, setStep] = useState(1)
+  const [restart, setRestart] = useState(1)
   // const [counter, setCounter] = useState(0)
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value)
   }
-  const onMusicInputChange = (event) => {
-    setMusicInput(event.target.value)
+  const onRadioInputChange = (event) => {
+    setRadioInput(event.target.value)
   }
-  const onArtistInputChange = (event) => {
-    setArtistInput(event.target.value)
+  const onDropdownInputChange = (event) => {
+    setDropdownInput(event.target.value)
   }
   const onSongInputChange = (event) => {
     setSongInput(event.target.value)
@@ -31,8 +32,14 @@ const Form = () => {
     setStep(step + 1)
   }
 
+  const onRestartChange = () => {
+    setRestart(restart)
+  }
+
 	return (
-		<div>
+    <>
+    <main className="main-container">
+		<section className="survey-container">
 			{step === 1 && (
 				<Name
 					nameInput={nameInput}
@@ -41,16 +48,16 @@ const Form = () => {
 				/>
 			)}
 			{step === 2 && (
-				<Music
-          MusicInput={musicInput}
-					onMusicInputChange={onMusicInputChange}
+				<Radio
+          radioInput={radioInput}
+					onRadioInputChange={onRadioInputChange}
 					onStepChange={onStepChange}
 				/>
 			)}
       {step === 3 && (
-				<Artist
-          artistInput={artistInput} 
-          onArtistInputChange={onArtistInputChange}
+				<Dropdown
+          dropdownInput={dropdownInput} 
+          onDropdownInputChange={onDropdownInputChange}
 					onStepChange={onStepChange} 
           />
 			)}
@@ -64,15 +71,16 @@ const Form = () => {
 			{step === 5 && (
 				<Overview 
           nameInput={nameInput} 
-          musicInput={musicInput} 
-          artistInput={artistInput}
+          radioInput={radioInput} 
+          dropdownInput={dropdownInput}
+          songInput={songInput}
+          onRestartChange={onRestartChange}
           />
 			)}
-		</div>
+		</section>
+    </main>
+    </>
 	)
 }
-{/* <div> */}
-  {/* <div>My counter is: {counter}</div> */}
-    {/* <button onClick={() => setCounter(counter + 1)}>Click</button> */}
-   {/* </div> */}
+
 export default Form

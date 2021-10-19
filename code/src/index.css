@@ -4,6 +4,11 @@
   --tertiary: #a0a0a0;
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -18,6 +23,60 @@ code {
     monospace;
 }
 
+.main-container {
+  background-color: yellowgreen;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
 .survey-container {
-  background-color: var(--tertiary);
+  width: 100%;
+  padding: 10%;
+}
+
+.survey-article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2%;
+  border: 4px solid var(--tertiary);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn {
+  display: inline-block;
+  text-align: center;
+  width: 160px;
+  height: 40px;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.6);
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  border: none;
+  mix-blend-mode: screen;
+  transition: 0.15s ease-in-out;
+}
+
+.btn:hover {
+  background: rgba(255, 255, 255, 1);
+  transition: 0.15s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:focus,
+.btn:active {
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+  box-shadow: none;
+  outline-offset: 3px;
+  transition: 0.15s ease-in-out;
 }
