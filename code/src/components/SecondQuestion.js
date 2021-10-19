@@ -2,7 +2,7 @@ import React from "react";
 
 // how much do you like autumn? range slider
 
-const SecondQuestion = ({ rangeInput, onRangeInputChange, onStepChange }) => {
+const SecondQuestion = ({ rangeInput, onRangeInputChange, onStepChange, onMinusStepChange }) => {
     return (
         <form>
             <label htmlFor="rangeInput"> How much do you like the Autumn?</label>
@@ -21,6 +21,7 @@ const SecondQuestion = ({ rangeInput, onRangeInputChange, onStepChange }) => {
             </div>
 
             <button onClick={onStepChange}>Next question</button>
+            <button onClick={onMinusStepChange}>Previous question</button>
         </form>
     )
 

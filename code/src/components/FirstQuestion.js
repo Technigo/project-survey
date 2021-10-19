@@ -1,7 +1,7 @@
 import React from "react";
 
 // name. Input type text
-const FirstQuestion = ({ nameInput, onNameInputChange, surnameInput, onSurnameInputChange, onStepChange }) => {
+const FirstQuestion = ({ nameInput, onNameInputChange, surnameInput, onSurnameInputChange, onStepChange, onMinusStepChange }) => {
     return (
         <form>
             {/* Insert name */}
@@ -23,7 +23,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, surnameInput, onSurnameIn
                 onChange={onSurnameInputChange} 
             />
         <button onClick={onStepChange}>Next question</button>
-       
+        <button onClick={onMinusStepChange}>Previous question</button>
 
       </form>
     )

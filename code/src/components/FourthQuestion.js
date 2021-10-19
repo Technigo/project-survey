@@ -2,7 +2,7 @@ import React from "react";
 
 // what do you not like about Autumn? radio buttons
 
-const FourthQuestion = ({ radioInput, onRadioInputChange, onStepChange }) => {
+const FourthQuestion = ({ radioInput, onRadioInputChange, onStepChange, onMinusStepChange }) => {
     const notLike = ["Everything", "Winter is coming", "The weather", "Nothing, I love the Autumn!"];
 
     return (
@@ -13,7 +13,7 @@ const FourthQuestion = ({ radioInput, onRadioInputChange, onStepChange }) => {
                     <input
                       type="radio"
                       value={selection}
-                      onChange={onRadioInputChange}
+                      onChange={(event) => onRadioInputChange(event.target.value)}
                       checked={radioInput === selection}
                     />
                     {selection}
@@ -26,6 +26,7 @@ const FourthQuestion = ({ radioInput, onRadioInputChange, onStepChange }) => {
 
 
             <button onClick={onStepChange}>Next question</button>
+            <button onClick={onMinusStepChange}>Previous question</button>
         </form>
     )
 }

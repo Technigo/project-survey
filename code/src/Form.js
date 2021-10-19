@@ -5,7 +5,6 @@ import FirstQuestion from './components/FirstQuestion';
 import SecondQuestion from './components/SecondQuestion';
 import ThirdQuestion from './components/ThirdQuestion';
 import FourthQuestion from './components/FourthQuestion';
-import FifthQuestion from './components/FifthQuestion';
 import Overview from "components/Overview";
 
 const Form = () => {
@@ -13,7 +12,7 @@ const Form = () => {
     const [surnameInput, setSurnameInput] = useState('');
     const [rangeInput, setRangeInput] = useState('5');
     const [selectInput, setSelectInput] = useState('');
-    const [radioInput, setRadioInput] = useState();
+    const [radioInput, onRadioInputChange] = useState();
     const [step, setStep] = useState(0);
   
   
@@ -33,14 +32,18 @@ const Form = () => {
       setSelectInput(event.target.value)
     };
 
-   const onRadioInputChange = (event) => {
-      setRadioInput(event.target.value)
-   }
+   
 
 
     const onStepChange = () => {
 		setStep(step + 1);
 	  };
+
+    const onMinusStepChange = () => {
+      setStep(step - 1);
+    };
+
+    
 
     return (
       
@@ -58,6 +61,7 @@ const Form = () => {
                 surname={surnameInput}
                 onSurnameInputChange={onSurnameInputChange}
                 onStepChange={onStepChange}
+                onMinusStepChange={onMinusStepChange}
             />
           )}
 
@@ -66,6 +70,7 @@ const Form = () => {
                 rangeInput={rangeInput}
                 onRangeInputChange={onRangeInputChange}
                 onStepChange={onStepChange}
+                onMinusStepChange={onMinusStepChange}
             />
           )}
 
@@ -75,29 +80,30 @@ const Form = () => {
             selectInput={selectInput}
             onSelectInputChange={onSelectInputChange}
             onStepChange={onStepChange}
+            onMinusStepChange={onMinusStepChange}
             />
+            
           )}
 
-           {step === 4 && (
+          {step === 4 && (
             <FourthQuestion
             radioInput={radioInput}
             onRadioInputChange={onRadioInputChange}
             onStepChange={onStepChange}
+            onMinusStepChange={onMinusStepChange}
             />
+            
           )}
 
-           {step === 5 && (
-            <FifthQuestion
-            onStepChange={onStepChange}
-            />
-          )}
 
-           {step === 6 && (
+          {step === 5 && (
             <Overview
                 nameInput={nameInput}
                 surnameInput={surnameInput}
                 rangeInput={rangeInput}
                 selectInput={selectInput}
+                radioInput={radioInput}
+                
             />
           )}
 

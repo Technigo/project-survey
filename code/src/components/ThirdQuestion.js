@@ -2,7 +2,7 @@ import React from "react";
 
 // what do you like to do during the autumn? dropdown
 
-const ThirdQuestion = ({ selectInput, onSelectInputChange, onStepChange}) => {
+const ThirdQuestion = ({ selectInput, onSelectInputChange, onStepChange, onMinusStepChange }) => {
     
     return (
         <form>
@@ -35,6 +35,7 @@ const ThirdQuestion = ({ selectInput, onSelectInputChange, onStepChange}) => {
             </select>
 
             <button onClick={onStepChange}>Next question</button>
+            <button onClick={onMinusStepChange}>Previous question</button>
         </form>
     )
     
