@@ -6,6 +6,7 @@ export const SecondQuestion = ({moodInput, onMoodInputChange, onStepChange}) => 
     return (
 
         <div className="second-container">
+            <h2 className="survey-text">Find a game based on your profile</h2>
             <h3>What's your mood?</h3>
             <label>
             <h4>Chill</h4>

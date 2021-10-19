@@ -11,7 +11,7 @@ export const App = () => {
       </header>
       <div className="survey-info">
         <div className="container">
-      <h2 className="survey-text">Find a game based on your profile</h2>
+      
       <Form/>
       </div>
       </div>

@@ -4,6 +4,7 @@ export const ThirdQuestion = ({socialInput, onSocialInputChange, onStepChange}) 
     return (
 
         <div className="third-container">
+            <h2 className="survey-text">Find a game based on your profile</h2>
             <h3>How are you socially?</h3>
             <select value={socialInput} onChange={onSocialInputChange}>
                 <option disabled value=''>Select something</option>

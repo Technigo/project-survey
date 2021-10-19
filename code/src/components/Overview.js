@@ -4,6 +4,7 @@ import React from 'react'
 export const Overview = ({ nameInput, moodInput, socialInput, viewInput, onStepChange }) => {
 	return (
 		<section className='overview-container'>
+			<h2 className="survey-text">Game Finder</h2>
 			<h2>Based on your profile:</h2>
 			<p>Name: {nameInput}</p>
 			<p>Mood: {moodInput}</p>

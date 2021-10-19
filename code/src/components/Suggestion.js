@@ -2,6 +2,7 @@ import React from "react"
 import { FirstPersonShooter } from "./FirstPersonShooter"
 import { Moba } from "./Moba"
 import { Strategy } from "./Strategy"
+import { Survival } from "./Survival"
 
 export const Suggestion = ({moodInput, socialInput, viewInput}) => {
     return (
@@ -12,23 +13,53 @@ export const Suggestion = ({moodInput, socialInput, viewInput}) => {
     {moodInput === 'Chill' && socialInput === 'Forever alone' && viewInput === 'From my own perspective' &&
     (<div>
         <FirstPersonShooter/>
-    </div>)
+    </div>)}
 
-    }
-
-    {moodInput === 'Hyped' && socialInput === 'Love to be in a group' && viewInput === 'By controlling others' &&
+    {moodInput === 'Chill' && socialInput === 'A few peeps is enough' && viewInput === 'From my own perspective' &&
     (<div>
-        <Moba/>
-    </div>)
+        <FirstPersonShooter/>
+    </div>)}
 
-    }
-
-    {moodInput === 'Overthinking' && socialInput === 'A few peeps is enough' && viewInput === 'Watching from the outside' &&
+    {moodInput === 'Chill' && socialInput === 'Love to be in a group' && viewInput === 'From my own perspective' &&
     (<div>
-        <Strategy/>
-    </div>)
+        <FirstPersonShooter/>
+    </div>)}
 
-    }
+    {moodInput === 'Hyped' && socialInput === 'Forever alone' && viewInput === 'From my own perspective' &&
+    (<div>
+        <Survival/>
+    </div>)}
+
+    {moodInput === 'Hyped' && socialInput === 'A few peeps is enough' && viewInput === 'From my own perspective' &&
+    (<div>
+        <Survival/>
+    </div>)}
+
+    {moodInput === 'Hyped' && socialInput === 'Love to be in a group' && viewInput === 'From my own perspective' &&
+    (<div>
+        <Survival/>
+    </div>)}
+
+    {moodInput === 'Overthinking' && socialInput === 'Forever alone' && viewInput === 'From my own perspective' &&
+    (<div>
+        <FirstPersonShooter/>
+    </div>)}
+
+    {moodInput === 'Overthinking' && socialInput === 'A few peeps is enough' && viewInput === 'From my own perspective' &&
+    (<div>
+        <FirstPersonShooter/>
+    </div>)}
+
+    {moodInput === 'Overthinking' && socialInput === 'Love to be in a group' && viewInput === 'From my own perspective' &&
+    (<div>
+        <FirstPersonShooter/>
+    </div>)}
+
+    {moodInput === '' && socialInput === '' && viewInput === '' &&
+    (<div>
+      Hello
+    </div>)}
+
     </div>
     </>)
 }

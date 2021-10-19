@@ -4,6 +4,7 @@ export const FourthQuestion = ({viewInput, onViewInputChange, onStepChange}) => 
 
     return (
         <div className="fourth-container">
+            <h2 className="survey-text">Find a game based on your profile</h2>
         <h3>How do you prefer viewing the world?</h3>
         <select value={viewInput} onChange={onViewInputChange}>
             <option disabled value=''>Select something</option>
