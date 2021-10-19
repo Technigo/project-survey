@@ -1,6 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
-import Create from './Create'
+
 
 const First = ({QuestionAlternative, setAlternative, onStepChange }) => {
 
@@ -17,7 +16,7 @@ const First = ({QuestionAlternative, setAlternative, onStepChange }) => {
 
 <div>
 <input 
-maxlength="20"
+maxLength="20"
 type="text"
 required
 value={QuestionAlternative}
@@ -34,6 +33,7 @@ onChange = {(e) => setAlternative(e.target.value)}
 
 
 </div>
+
 
     )
 }

@@ -2,7 +2,7 @@
 
 
 import React from 'react'
-import { useState } from 'react'
+
 
 const Fourth = ({QuestionAlternative, setAlternative, onStepChange }) => {
 

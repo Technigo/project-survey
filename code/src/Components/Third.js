@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+
 
 const Third = ({ QuestionAlternative, setAlternative, onStepChange }) => {
 
@@ -7,7 +7,7 @@ const Third = ({ QuestionAlternative, setAlternative, onStepChange }) => {
 <div className="box">
 
 <div className="radioContainer"> 
-<div className="contentSelect">
+<div className="contentRadio">
 <label className="label">Important</label>
 <input 
 className="radio"
@@ -19,7 +19,7 @@ checked={QuestionAlternative === "Important"}
 />
 </div>
 
-<div className="contentSelect">
+<div className="contentRadio">
 <label className="label">Not important</label>
 <input 
 className="radio"
