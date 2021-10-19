@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import Header from "./Header";
 import FirstQuestion from "./FirstQuestion";
 import SecondQuestion from "./SecondQuestion";
 import ThirdQuestion from "./ThirdQuestion";
@@ -34,44 +35,47 @@ const Form = () => {
   };
 
   return (
-    <div>
-      {step === 1 && (
-        <FirstQuestion
-          nameInput={nameInput}
-          onNameInputChange={onNameInputChange}
-          onStepChange={onStepChange}
-        />
-      )}
-      {step === 2 && (
-        <SecondQuestion
-          surname={surnameInput}
-          onSurnameInputChange={onSurnameInputChange}
-          onStepChange={onStepChange}
-        />
-      )}
-      {step === 3 && (
-        <ThirdQuestion
-          ageGroup={ageGroup}
-          onAgeGroupChange={onAgeGroupChange}
-          onStepChange={onStepChange}
-        />
-      )}
-      {step === 4 && (
-        <FourthQuestion
-          believesInput={believesInput}
-          onBelievesInputChange={onBelievesInputChange}
-          onStepChange={onStepChange}
-        />
-      )}
-      {step === 5 && (
-        <Overview
-          nameInput={nameInput}
-          surnameInput={surnameInput}
-          ageGroup={ageGroup}
-          believesInput={believesInput}
-        />
-      )}
-    </div>
+    <>
+      <Header />
+      <div className="main-container">
+        {step === 1 && (
+          <FirstQuestion
+            nameInput={nameInput}
+            onNameInputChange={onNameInputChange}
+            onStepChange={onStepChange}
+          />
+        )}
+        {step === 2 && (
+          <SecondQuestion
+            surname={surnameInput}
+            onSurnameInputChange={onSurnameInputChange}
+            onStepChange={onStepChange}
+          />
+        )}
+        {step === 3 && (
+          <ThirdQuestion
+            ageGroup={ageGroup}
+            onAgeGroupChange={onAgeGroupChange}
+            onStepChange={onStepChange}
+          />
+        )}
+        {step === 4 && (
+          <FourthQuestion
+            believesInput={believesInput}
+            onBelievesInputChange={onBelievesInputChange}
+            onStepChange={onStepChange}
+          />
+        )}
+        {step === 5 && (
+          <Overview
+            nameInput={nameInput}
+            surnameInput={surnameInput}
+            ageGroup={ageGroup}
+            believesInput={believesInput}
+          />
+        )}
+      </div>
+    </>
   );
 };
 

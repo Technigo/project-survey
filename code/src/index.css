@@ -5,10 +5,48 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: aqua;
+  color: aliceblue;
+  background-color: black;
+  background-image: url(./components/assets/space-stars-img.jpeg);
+  background-repeat: no-repeat, repeat;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  justify-self: center;
+  justify-content: center;
+}
+
+h1 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: cornflowerblue;
+}
+
+h4 {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: blueviolet;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  /* justify-content: space-between; */
+  /* align-items: center; */
+  padding: 10px;
+  height: 500px;
+  border: solid cornflowerblue;
 }
