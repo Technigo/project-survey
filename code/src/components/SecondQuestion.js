@@ -1,15 +1,15 @@
 import React from "react";
 
-export const SecondQuestion = ({ lastNameInput, onLastNameInputChange, nextQuestion }) => {
+export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => {
 	return (
 		<form onSubmit={(event) => event.preventDefault()}>
-			<label htmlFor="nameInput">Type your last name</label>
+			<label htmlFor="ageInput">What is your age?</label>
 			{/* prettier-ignore */}
 			<input
-          id="nameInput"
+          id="ageInput"
           type="text"
-          value={lastNameInput}
-          onChange={onLastNameInputChange}>
+          value={ageInput}
+          onChange={onAgeInputChange}>
       </input>
 			<button onClick={nextQuestion}>Next question</button>
 		</form>

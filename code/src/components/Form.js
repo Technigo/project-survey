@@ -5,21 +5,21 @@ import { ThirdQuestion } from "./ThirdQuestion";
 import { Overview } from "./Overview";
 
 const Form = () => {
-	const [firstNameInput, setFirstNameInput] = useState("");
-	const [lastNameInput, setLastNameInput] = useState("");
+	const [nameInput, setNameInput] = useState("");
 	const [ageInput, setAgeInput] = useState("");
+	const [streamingInput, setStreamingInput] = useState("");
 	const [step, setStep] = useState(1);
 
-	const onFirstNameInputChange = (event) => {
-		setFirstNameInput(event.target.value);
-	};
-
-	const onLastNameInputChange = (event) => {
-		setLastNameInput(event.target.value);
+	const onNameInputChange = (event) => {
+		setNameInput(event.target.value);
 	};
 
 	const onAgeInputChange = (event) => {
 		setAgeInput(event.target.value);
+	};
+
+	const onStreamingInputChange = (event) => {
+		setStreamingInput(event.target.value);
 	};
 
 	const nextQuestion = () => {
@@ -30,8 +30,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
     <FirstQuestion
-      firstNameInput={firstNameInput}
-      onFirstNameInputChange={onFirstNameInputChange}
+      nameInput={nameInput}
+      onNameInputChange={onNameInputChange}
       nextQuestion={nextQuestion}
     />
     );
@@ -39,8 +39,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
     <SecondQuestion
-      lastNameInput={lastNameInput}
-      onLastNameInputChange={onLastNameInputChange}
+      ageInput={ageInput}
+      onAgeInputChange={onAgeInputChange}
       nextQuestion={nextQuestion}
     />
     );
@@ -48,8 +48,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
     <ThirdQuestion
-      ageInput={ageInput}
-      onAgeInputChange={onAgeInputChange}
+      streamingInput={streamingInput}
+      onStreamingInputChange={onStreamingInputChange}
       nextQuestion={nextQuestion}
     />
     );
@@ -57,9 +57,9 @@ const Form = () => {
 		// prettier-ignore
 		return (
 	  <Overview
-	    firstNameInput={firstNameInput}
-	    lastNameInput={lastNameInput}
+	    nameInput={nameInput}
 	    ageInput={ageInput}
+	    streamingInput={streamingInput}
 	  />
     );
 	}

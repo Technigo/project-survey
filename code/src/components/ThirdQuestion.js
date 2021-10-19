@@ -1,17 +1,17 @@
 import React from "react";
 
-export const ThirdQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => {
+export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQuestion }) => {
 	return (
 		<form onSubmit={(event) => event.preventDefault()}>
-			<label htmlFor="nameInput">What is your age?</label>
+			<label htmlFor="streamingInput">Which streaming service do you prefer?</label>
 			{/* prettier-ignore */}
 			<input
-          id="nameInput"
+          id="streamingInput"
           type="text"
-          value={ageInput}
-          onChange={onAgeInputChange}>
+          value={streamingInput}
+          onChange={onStreamingInputChange}>
       </input>
-			<button onClick={nextQuestion}>Next question</button>
+			<button onClick={nextQuestion}>Submit</button>
 		</form>
 	);
 };
