@@ -24,40 +24,6 @@ const onStepChange = () => {
 
 
 
-const handleSubmit = (e) =>{
-    e.preventDefault()
-
-    const todoTitle = title 
-    const todoTask = task
- const todoLocation = location
-const todoCheck = check
-const todoTime = time
-   
-const newTodo = () =>{
-
-return(
-
-<>
-<p> {todoTitle} </p>
-        <p> {todoTime} </p>
-        <p>{todoLocation} </p>
-        <h2>{todoTitle} </h2>
-        <p className="toDotext"> To do: {todoTask} </p>
-    </>
-
-)
-    
-}
-
-return (
-    <>
- 
-   </>
-    )
-
-}
-
-
 
 
     return (
