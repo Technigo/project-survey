@@ -7,9 +7,9 @@ export const App = () => {
   const [currentStep, setStep] = useState("welcome");
   const [rootState, setRootState] = useState({});
   if (currentStep === "welcome") {
-    return <Welcome moveOn={() => setStep("wisard")} />;
+    return <Welcome moveOn={() => setStep("wizard")} />;
   }
-  if (currentStep === "wisard") {
+  if (currentStep === "wizard") {
     return <Wizard toFeedback={() => setStep("summary")} />;
   }
   if (currentStep === "summary") {

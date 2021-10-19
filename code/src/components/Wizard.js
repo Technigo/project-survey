@@ -53,12 +53,16 @@ export const Wizard = ({ toFeedback }) => {
     }
   };
   return (
-    <div>
-      <div>Progress bar: {answered} out of 10</div>
-      <SwitchFunction currentStep={currentStep} />
-      <button className="btn" onClick={toNextStep}>
-        {currentStep === "questionTen" ? "Finish" : "Continue"}
-      </button>
+    <div className="container">
+      <div className="card">
+        <div>Progress bar: {answered} out of 10</div>
+        <SwitchFunction currentStep={currentStep} />
+        <div>
+          <button className="btn" onClick={toNextStep}>
+            {currentStep === "questionTen" ? "Finish" : "Continue"}
+          </button>
+        </div>
+      </div>
     </div>
   );
 };

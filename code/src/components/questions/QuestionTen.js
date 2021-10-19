@@ -18,7 +18,9 @@ export const QuestionTen = ({ percent }) => {
           name="nameInput"
           id="nameInput"
           onChange={(event) => setNameInput(event.target.value)}
-          placeholder="name"
+          placeholder="Jane Frost"
+          // pattern="[a-zA-Z ]{1-32}"
+          // oninvalid="setCustomValidity('Please enter alphabets only.')"
           required
         />
       </label>
@@ -30,10 +32,13 @@ export const QuestionTen = ({ percent }) => {
           name="emailInput"
           id="emailInput"
           onChange={(event) => setEmailInput(event.target.value)}
-          placeholder="email"
+          // placeholder="your_email@gmail.com"
+          // oninvalid="setCustomValidity('Please enter valid email.')"
           required
         />
       </label>
     </form>
   );
 };
+
+// https://stackoverflow.com/questions/41296668/reactjs-form-input-validation

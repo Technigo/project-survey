@@ -17,8 +17,77 @@ code {
   position: absolute;
 }
 
+.give-btn {
+  color: white;
+  background: black;
+  font-weight: bold;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+  width: 119px;
+  font-size: 12px;
+  height: 34px;
+  padding: 0;
+  border: none;
+}
+
+.give-btn:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 0 5px white;
+}
+
 .btn {
   margin-top: 100px;
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 50px;
+}
+
+.container {
+  z-index: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.card {
+  z-index: 0;
+  width: 320px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  align-content: space-between;
+  color: black;
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.welcome {
+  background-image: url(https://i.ibb.co/025Q5ZK/mobileheadphones.jpg);
+  opacity: 0.9;
+  background-color: goldenrod;
+  border-radius: 12px;
+}
+
+@media (min-width: 768px) {
+  .card {
+    width: 700px;
+    height: 650px;
+    font-size: 24px;
+  }
+  .welcome {
+    background-image: url("https://i.ibb.co/2YN8msm/headphones.jpg");
+  }
+  .give-btn {
+    margin-top: 20px;
+    width: 218px;
+    font-size: 18px;
+    height: 48px;
+  }
+  .give-btn:hover {
+    color: rgba(255, 255, 255, 1);
+    box-shadow: 0 0 15px white;
+  }
 }
