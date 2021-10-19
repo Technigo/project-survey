@@ -96,6 +96,7 @@ const Form = () => {
                     questionOneInput={questionOneInput}
                     questionTwoInput={questionTwoInput}
                     questionThreeInput={questionThreeInput}
+                    questionFourInput={questionFourInput}
                 />
             )}
         </div>

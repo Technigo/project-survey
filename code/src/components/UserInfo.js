@@ -1,6 +1,6 @@
 import React from 'react'
 
-const radioButtonInputs = ['Apple', 'Banana', 'Ananas', 'Pear']
+const radioButtonInputs = ['Happy', 'Bored', 'Hungry', 'Candy?']
 
 const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioButtonChange, onStepChange }) => {
     return (
@@ -8,15 +8,16 @@ const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioBut
             <h2 className="user-alias-question">What's your alias?</h2>
             <form className="alias-name">
                 <label htmlFor="aliasInput"></label>
-                <input required id="aliasInput" type="text" value={aliasInput} onChange={onAliasInputChange} >
+                <input className="input-form" id="aliasInput" type="text" value={aliasInput} onChange={onAliasInputChange} >
                 </input>
             </form>
 
-            <h2 className="user-preference-question">What's your favorite fruit?</h2>
+            <h2 className="user-preference-question">How are you feeling today?</h2>
             <form className="radio-buttons-container">
                 {radioButtonInputs.map(radiobutton => (
                     <label key={radiobutton}>
                         <input
+                            className="radio-button"
                             type="radio"
                             value={radiobutton}
                             onChange={onRadioButtonChange}

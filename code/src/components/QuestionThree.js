@@ -2,13 +2,13 @@ import React from 'react'
 
 const QuestionThree = ({ questionThreeInput, onQuestionThreeInputChange, onStepChange }) => {
     return (
-        <div>
-            <form>
-                <label htmlFor="questionThreeInput">What sport would be the funniest to add a mandatory amount of alcohol to?</label>
-                <input id="questionThreeInput" type="text" value={questionThreeInput} onChange={onQuestionThreeInputChange} required>
+        <div className="question-three-container">
+            <form className="question-three">
+                <label htmlFor="questionThreeInput">If you could be a fly on the wall, who would you want to listen in on?</label>
+                <input className="input-form" id="questionThreeInput" type="text" value={questionThreeInput} onChange={onQuestionThreeInputChange} required>
                 </input>
-                <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
             </form>
+            <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
         </div>
     )
 

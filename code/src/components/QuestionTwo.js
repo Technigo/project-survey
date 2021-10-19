@@ -2,15 +2,15 @@ import React from 'react'
 
 const QuestionTwo = ({ questionTwoInput, onQuestionTwoInputChange, onStepChange }) => {
     return (
-        <div>
-            <form>
-                <select onChange={onQuestionTwoInputChange} value={questionTwoInput} required>
-                    <option value=''>Is cereal soup?</option>
-                    <option value='yes'>Of course it is!</option>
-                    <option value='no'>Absolutely not!</option>
+        <div className="question-two-container">
+            <form className="question-two">Is cereal soup?
+                <select className="input-form" onChange={onQuestionTwoInputChange} value={questionTwoInput} required>
+                    <option value=''></option>
+                    <option value='Of course it is!'>Of course it is!</option>
+                    <option value='Absolutely not!'>Absolutely not!</option>
                 </select>
-                <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
             </form>
+            <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
         </div>
     )
 
