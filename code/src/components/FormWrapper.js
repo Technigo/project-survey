@@ -9,6 +9,7 @@ console.log(data)
 
 export const FormWrapper = () => {
   const [state, setState] = useState({})
+  const [step, setStep] = useState(1)
   //  firstName: '', lastName: ''
 
   const handleChange = e => {
@@ -18,17 +19,20 @@ export const FormWrapper = () => {
 
   return (
     <form>
-      {data.questions.map(item => {
-        if (item.type === 'text') {
-          return <TextInput key={item.id} data={item} state={state} handleChange={handleChange} />
-        } else if (item.type === 'radio') {
-          return <Radio key={item.id} data={item} state={state} handleChange={handleChange} />
-        } else if (item.type === 'dropdown') {
-          return <DropDown key={item.id} data={item} state={state} handleChange={handleChange} />
-        }
-        return null
-      })}
-      <FormSummary state={state} />
+      {data.questions
+        .filter(item => item.number === step)
+        .map(item => {
+          if (item.type === 'text') {
+            return <TextInput key={item.id} data={item} state={state} handleChange={handleChange} />
+          } else if (item.type === 'radio') {
+            return <Radio key={item.id} data={item} state={state} handleChange={handleChange} />
+          } else if (item.type === 'dropdown') {
+            return <DropDown key={item.id} data={item} state={state} handleChange={handleChange} />
+          }
+          return null
+        })}
+
+      {step === 1 && <FormSummary state={state} />}
     </form>
   )
 }
