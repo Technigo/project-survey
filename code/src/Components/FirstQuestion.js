@@ -1,11 +1,10 @@
 import React from "react";
-import { useState } from "react";
 import ImageComponent from "./FirstImg";
 
-// lägg till en key till labels, den ska läggas in på "checked" istället för {userWatches === "yes"}?
+// lägg till en key till labels?
 
-const FirstQuestion = () => {
-  const [userWatches, setUserWatches] = useState("");
+const FirstQuestion = ({ radioChecked, setRadiochecked }) => {
+  //const [radioChecked, setRadiochecked] = useState("");
   return (
     <div className="QuestionContainer">
       <p>Do you watch Rupaul's Drag Race?</p>
@@ -15,8 +14,8 @@ const FirstQuestion = () => {
             <input
               type="radio"
               value="yes"
-              onChange={(event) => setUserWatches(event.target.value)}
-              checked={userWatches === "yes"}
+              onChange={(event) => setRadiochecked(event.target.value)}
+              checked={radioChecked === "yes"}
             />
             Yes!
           </label>
@@ -24,8 +23,8 @@ const FirstQuestion = () => {
             <input
               type="radio"
               value="no"
-              onChange={(event) => setUserWatches(event.target.value)}
-              checked={userWatches === "no"}
+              onChange={(event) => setRadiochecked(event.target.value)}
+              checked={radioChecked === "no"}
             />
             No, I have bad taste.
           </label>

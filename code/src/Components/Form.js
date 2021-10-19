@@ -8,6 +8,9 @@ import Goodbye from "Components/Goodbye";
 
 const Form = () => {
   const [step, setStep] = useState(1);
+  // const [radioChecked, setRadiochecked] = useState("");
+  const [selectOption, setSelectOption] = useState("");
+  const [fundamentalInput, setFundamentalInput] = useState("");
 
   if (step === 1) {
     return (
@@ -20,28 +23,34 @@ const Form = () => {
     return (
       <div>
         <FirstQuestion />
-        <button onClick={() => setStep(step + 1)}>next question</button>
+        <button onClick={() => setStep(step + 1)}>Next question</button>
       </div>
     );
   } else if (step === 3) {
     return (
       <div>
-        <SecondQuestion />
-        <button onClick={() => setStep(step + 1)}>next question</button>
+        <SecondQuestion
+          selectOption={selectOption}
+          setSelectOption={setSelectOption}
+        />
+        <button onClick={() => setStep(step + 1)}>Next question</button>
       </div>
     );
   } else if (step === 4) {
     return (
       <div>
-        <ThirdQuestion />
-        <button onClick={() => setStep(step + 1)}>next question</button>
+        <ThirdQuestion
+          fundamentalInput={fundamentalInput}
+          setFundamentalInput={setFundamentalInput}
+        />
+        <button onClick={() => setStep(step + 1)}>Next question</button>
       </div>
     );
   } else if (step === 5) {
     return (
       <div>
-        <Summary />
-        <button onClick={() => setStep(step + 1)}>next</button>
+        <Summary fundamentalInput={fundamentalInput} />
+        <button onClick={() => setStep(step + 1)}>Next</button>
       </div>
     );
   } else if (step === 6) {

@@ -1,17 +1,17 @@
-import { useState } from "react";
 import React from "react";
 import ImageComponent from "Components/SecondImg";
 
-const SecondQuestion = () => {
-  const [question, setQuestion] = useState("");
+const SecondQuestion = ({ selectOption, setSelectOption }) => {
+  // const [selectOption, setSelectOption] = useState("");
   return (
     <div className="QuestionContainer">
-      <p>Who is your favourite queen?</p>
       <div className="selectForm">
-        <form>
+        <form onSubmit={(event) => event.preventDefault()}>
+          <label htmlFor="select">Who is your favourite queen?</label>
           <select
-            onChange={(event) => setQuestion(event.target.value)}
-            value={question}
+            value={selectOption}
+            id="select"
+            onChange={(event) => setSelectOption(event.target.value)}
           >
             <option>Bimini Bon Boulash</option>
             <option>Tayce</option>
