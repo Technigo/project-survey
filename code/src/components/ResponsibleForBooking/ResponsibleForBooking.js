@@ -4,6 +4,8 @@ import "./responsibleForBooking.css";
 export const ResponsibleForBooking = ({
   onChangeEmail,
   onChangeTelephoneNumber,
+  email,
+  telephoneNumber,
 }) => {
   return (
     <>
@@ -14,6 +16,7 @@ export const ResponsibleForBooking = ({
           <span>Email</span>
           <label htmlFor="email" />
           <input
+            value={email}
             id="email"
             type="email"
             required
@@ -24,6 +27,7 @@ export const ResponsibleForBooking = ({
           <span>Phone nr</span>
           <label htmlFor="number" />
           <input
+            value={telephoneNumber}
             id="number"
             type="tel"
             required

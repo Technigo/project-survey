@@ -1,15 +1,7 @@
-.sr-only {
-  position: absolute;
-  left: -99999px;
-  height: 1px;
-  width: 1px;
-  overflow: hidden;
-}
-
 .form__btns-container {
   display: flex;
   column-gap: 10px;
-  margin-top: 80px;
+  margin: 80px 0 40px 0;
 }
 
 .btn {
@@ -28,3 +20,13 @@
 .btn:focus {
   background-color: var(--main-color);
 }
+
+.content {
+  min-height: 100vh;
+  max-width: 700px;
+  flex-direction: column;
+  display: flex;
+  align-items: center;
+}
+
+/*------------- IPAD ADJUSTEMENTS ----------------  */

@@ -13,7 +13,7 @@ import { ResponsibleForBooking } from "../ResponsibleForBooking/ResponsibleForBo
 import { ShowBooking } from "../ShowBooking/ShowBooking";
 
 export const Main = () => {
-  const [step, setStep] = useState(4);
+  const [step, setStep] = useState(1);
   const [city, setCity] = useState("");
   const [travelType, setTravelType] = useState("");
   const [amountOfTravellers, setAmountOfTravellers] = useState(1);
@@ -117,11 +117,14 @@ export const Main = () => {
             amountOfTravellers={amountOfTravellers}
             onChangeFirstName={onSetFirstName}
             onChangeLastName={onSetLastName}
+            nameList={nameList}
           />
         )}
 
         {step === 4 && (
           <ResponsibleForBooking
+            email={email}
+            telephoneNumber={telephoneNumber}
             onChangeEmail={onSetEmail}
             onChangeTelephoneNumber={onSetTelephoneNumber}
           />

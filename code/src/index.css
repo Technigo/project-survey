@@ -13,7 +13,9 @@ body {
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
   background-image: var(--secondary-color);
-  height: 100vh;
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 code {

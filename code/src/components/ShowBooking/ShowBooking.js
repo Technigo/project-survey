@@ -15,17 +15,16 @@ export const ShowBooking = ({
         You have ordered a {travelType} to {city}.
       </p>
       <h3>Passengers</h3>
-      {nameList.map((passenger) => {
-        if (passenger.firstName === "") {
-          return <></>;
-        } else {
+
+      {nameList
+        .filter((passenger) => passenger.firstName !== "")
+        .map((passenger) => {
           return (
             <div className="names-container" key={passenger.passengerNumber}>
               {passenger.firstName} {passenger.lastName}
             </div>
           );
-        }
-      })}
+        })}
       <span>
         We will send any updates about your trip to your emailadress: {email}{" "}
         and telephone number: {telephoneNumber}

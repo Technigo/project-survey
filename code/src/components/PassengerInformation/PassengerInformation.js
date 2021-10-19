@@ -5,6 +5,7 @@ export const PassengerInformation = ({
   amountOfTravellers,
   onChangeFirstName,
   onChangeLastName,
+  nameList,
 }) => {
   const items = [];
 
@@ -23,6 +24,7 @@ export const PassengerInformation = ({
                 autoFocus
                 id="firstName"
                 type="text"
+                value={nameList[i - 1].firstName}
                 onChange={(e) => onChangeFirstName(e.target.value, i)}
                 required
               />
@@ -32,6 +34,7 @@ export const PassengerInformation = ({
               <label htmlFor="lastName" />
               <input
                 id="lastName"
+                value={nameList[i - 1].lastName}
                 type="text"
                 required
                 onChange={(e) => onChangeLastName(e.target.value, i)}
