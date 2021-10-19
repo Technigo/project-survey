@@ -13,10 +13,10 @@ export const Radio = props => {
             {option.label}
             <input
               type='radio'
+              checked={state[type + id] === option.value}
               name={type + id}
               id={type + id}
               value={option.value}
-              checked={state[type + id] === option.value}
               onChange={handleChange}
             />
           </label>

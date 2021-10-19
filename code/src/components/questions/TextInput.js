@@ -17,7 +17,7 @@ export const TextInput = props => {
               id={id}
               placeholder={placeholder}
               value={state[id]}
-              onChange={e => handleChange(e.target.id, e.target.value)}
+              onChange={handleChange}
             />
           </label>
         )

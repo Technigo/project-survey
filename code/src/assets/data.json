@@ -15,8 +15,8 @@
       "number": 2,
       "type": "radio",
       "options": [
-        { "label": "Option 1", "value": "yes", "id": "radioYes", "next_question": "question_id" },
-        { "label": "Option 2", "value": "no", "id": "radioNo", "next_question": "question_id" }
+        { "label": "Yes", "value": "Yes", "id": "radioYes", "next_question": "question_id" },
+        { "label": "No", "value": "No", "id": "radioNo", "next_question": "question_id" }
       ],
       "id": 2
     },
@@ -26,9 +26,9 @@
       "type": "dropdown",
       "options": [
         { "label": "Select an option", "value": "default", "hidden": true },
-        { "label": "Option 1", "value": "green", "hidden": false, "next_question": "question_id" },
-        { "label": "Option 2", "value": "blue", "hidden": false, "next_question": "question_id" },
-        { "label": "Option 3", "value": "red", "hidden": false, "next_question": "question_id" }
+        { "label": "Green", "value": "Green", "hidden": false, "next_question": "question_id" },
+        { "label": "Blue", "value": "Blue", "hidden": false, "next_question": "question_id" },
+        { "label": "Red", "value": "Red", "hidden": false, "next_question": "question_id" }
       ],
       "id": 3
     }
