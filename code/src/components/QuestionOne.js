@@ -2,10 +2,10 @@ import React from 'react';
 
 const QuestionOne = ({
   questionOneData,
-  onStepChange,
   questionOneAnswer,
-  // eslint-disable-next-line comma-dangle
   onQuestionOneChange,
+  // eslint-disable-next-line comma-dangle
+  handleSubmit,
 }) => {
   // console.log('questionOneData: ', questionOneData);
   // console.log('name: ', questionOneData.questionOneData.name);
@@ -13,7 +13,8 @@ const QuestionOne = ({
   return (
     <div>
       {/* onSubmit={(event) => event.preventDefault()} */}
-      <form onSubmit={onStepChange}>
+      {/* onSubmit={onStepChange} */}
+      <form onSubmit={handleSubmit}>
         <h2>{questionOneData.name}</h2>
         <h3>{questionOneData.title}</h3>
         {questionOneData.choices.map((choice) => (

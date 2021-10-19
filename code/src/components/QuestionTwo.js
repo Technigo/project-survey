@@ -2,17 +2,18 @@ import React from 'react';
 
 const QuestionTwo = ({
   questionTwoData,
-  onStepChange,
+  // onStepChange,
   questionTwoAnswer,
-  // eslint-disable-next-line comma-dangle
   onQuestionTwoChange,
+  // eslint-disable-next-line comma-dangle
+  handleSubmit,
 }) => {
   // console.log('questionOneData: ', questionOneData);
   // console.log('name: ', questionOneData.questionOneData.name);
   // console.log('title: ', questionOneData.questionOneData.title);
   return (
     <div>
-      <form onSubmit={(event) => event.preventDefault()}>
+      <form onSubmit={handleSubmit}>
         <h2>{questionTwoData.name}</h2>
         <h3>{questionTwoData.title}</h3>
         {questionTwoData.choices.map((choice) => (
@@ -23,6 +24,7 @@ const QuestionTwo = ({
               onChange={onQuestionTwoChange}
               checked={questionTwoAnswer === choice}
               required
+              name='choice'
             />
             {choice}
             <br />
@@ -35,7 +37,11 @@ const QuestionTwo = ({
           height='140'
         />
         <br />
-        <button type='button' onClick={onStepChange}>
+        <button
+          aria-pressed='false'
+          aria-label='Go to next question'
+          type='submit'
+        >
           Next &gt;&gt;
         </button>
       </form>

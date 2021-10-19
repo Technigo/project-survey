@@ -7,7 +7,7 @@
       "questions": [
         {
           "type": "radio",
-          "name": "Movie",
+          "name": "🎬 Movie 🍿",
           "title": "What's the name of the movie?",
           "choices": ["Matrix", "Interstellar", "Pulp Fiction", "Inception"],
           "correctAnswer": "Inception",
@@ -20,7 +20,7 @@
       "questions": [
         {
           "type": "radio",
-          "name": "Movie",
+          "name": "🎬 Movie 🍿",
           "title": "What's the name of the movie?",
           "choices": [
             "Dirty dancing",
@@ -31,6 +31,33 @@
           "correctAnswer": "Dirty dancing",
           "img_url": "./assets/questionTwo.jpg",
           "id": "2"
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "select",
+          "name": "🎵 Disney music 🎵",
+          "title": "Play the music. The song belongs to which Disney movie?",
+          "choices": ["Mulan", "Moana", "Pocahontas", "Frozen"],
+          "correctAnswer": "Pocahontas",
+          "mp3_url": "./assets/questionThree.mp3",
+          "id": "3"
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "select",
+          "name": "Decode Emojis",
+          "title": "the example picture stands for IKEA. Can you decode the second picture (hint: it's a song title)? Who is the singer of this song?",
+          "choices": ["Bon Jovi", "Beyoncé", "Evanescence", "Madonna"],
+          "correctAnswer": "Madonna",
+          "img_url": "./assets/questionFour.jpg",
+          "img_url_example": "./assets/QuestionFourExample.jpg",
+          "id": "4"
         }
       ]
     }

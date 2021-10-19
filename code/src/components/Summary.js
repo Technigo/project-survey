@@ -1,30 +1,36 @@
 import React from 'react';
 
 const Summary = ({ correctAnswers, selectedAnswers }) => {
-  console.log('correctAnswers: ', correctAnswers);
-  console.log('your answers: ', selectedAnswers);
+  // console.log('correctAnswers: ', correctAnswers);
+  // console.log('your answers: ', selectedAnswers);
+
+  // const greenColor = {
+  //   color: '#00695c',
+  // };
+
   return (
     <>
       <h2>Summary</h2>
-      <table border='1'>
-        <tr>
-          <th>Question:</th>
-          {correctAnswers.map((_, index) => (
-            <td key={index}>{index + 1}</td>
+      <table border='1' className='summary-table'>
+        <thead>
+          <tr>
+            <th>Question</th>
+            <th>Correct Answer</th>
+            <th>Selected Answer</th>
+          </tr>
+        </thead>
+        <tbody>
+          {correctAnswers.map((answer, index) => (
+            <tr key={answer} className='summary-answers'>
+              <th>{index + 1}</th>
+              <td>{answer}</td>
+              <td>{selectedAnswers[index]}</td>
+            </tr>
+            //   {correctAnswers[index] === selectedAnswers[index] && (
+            //     style={greenColor}
+            // )}
           ))}
-        </tr>
-        <tr className='summary-answers'>
-          <th>Correct answer:</th>
-          {correctAnswers.map((answer) => (
-            <td key={answer}>{answer}</td>
-          ))}
-        </tr>
-        <tr>
-          <th>Your answer:</th>
-          {selectedAnswers.map((answer) => (
-            <td key={answer}>{answer}</td>
-          ))}
-        </tr>
+        </tbody>
       </table>
     </>
   );
