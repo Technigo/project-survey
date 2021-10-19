@@ -13,12 +13,13 @@ const SecondQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
 				<input
 					id="emailInput"
 					type="email"
+					name="emailInput"
 					placeholder="Type your email adress here"
 					value={emailInput}
 					onChange={onEmailInputChange}
 					required
 				/>
-				<button onClick={onStepChange}>Next</button>
+				<button type="button"  onClick={onStepChange}>Next</button>
 			</form>
 
 		</section>

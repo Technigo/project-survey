@@ -5,7 +5,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #ed1b76;
   color: white;
-
 }
 
 code {
@@ -18,8 +17,6 @@ h1 {
   font-size: 130px;
   margin: 0;
 }
-
-
 
 button {
   font-size: 30px;
@@ -97,11 +94,14 @@ input[type=email] {
   font-size: 20px;
 }
 
+
 .speech-bubble {
 	position: relative;
 	background: #ffffff;
+  color: black;
 	border-radius: 5px;
-  height: 100px;
+  width:50%;
+  height: auto;
   text-align: center;
 }
 
@@ -137,13 +137,37 @@ img {
   width: 80%;
 }
 
-.speech-bubble-text {
-  color: black;
+.select-input {
   padding: 10px;
+  margin: 20px auto;
+  width:100%;
+  font-family: 'Roboto';
+  font-size: 16px;
+}
+
+.radio-buttons-container {
+  margin: 20px auto; 
+  display: flex;
+
+}
+
+.radio-button {
+  justify-content: flex-start;
 }
 
 
-/* MEDIA QUERIES */ 
 
 
+/*** MEDIA QUERIES ***/ 
+
+@media (min-width: 0px) and (max-width: 768px) {
+  h1 {
+    font-size: 90px;
+  }
+
+  button {
+    font-size: 20px;
+    width: 40%;
+  }
+}
 

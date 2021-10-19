@@ -3,14 +3,19 @@ import React, { useState } from 'react';
 import StartScreen from './StartScreen';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
+import CityQuestion from './CityQuestion';
+import AgeQuestion from './AgeQuestion';
 import Overview from './Overview';
+
 
 const Form = () => {
 
 	const [nameInput, setNameInput] = useState('');
 	const [emailInput, setEmailInput] = useState('');
-	const [step, setStep] = useState(0);
+	const [cityInput, setCityInput] = useState('');
+	const [ageInput, setAgeInput] = useState('');
 
+	const [step, setStep] = useState(0);
 
 	const onNameInputChange = (event) => {
 		setNameInput(event.target.value);
@@ -18,6 +23,14 @@ const Form = () => {
 
 	const onEmailInputChange = (event) => {
 		setEmailInput(event.target.value);
+	};
+
+	const onCityInputChange = (event) => {
+		setCityInput(event.target.value);
+	};
+
+	const onAgeInputChange = (selectRadioBtn) => {
+		setAgeInput(selectRadioBtn);
 	};
 
 	const onStepChange = () => {
@@ -32,21 +45,35 @@ const Form = () => {
 				/>
 			)}
 			{step === 1 && (
-				<FirstQuestion
+					<FirstQuestion 
 					nameInput={nameInput}
 					onNameInputChange={onNameInputChange}
 					onStepChange={onStepChange}
-				/>
+					/>
 			)}
 			{step === 2 && (
 				<SecondQuestion
-					surname={emailInput}
-					onSurnameInputChange={onEmailInputChange}
+					email={emailInput}
+					onEmailInputChange={onEmailInputChange}
 					onStepChange={onStepChange}
 				/>
 			)}
 			{step === 3 && (
-				<Overview nameInput={nameInput} />
+				<CityQuestion
+				cityInput={cityInput}
+				onCityInputChange={onCityInputChange}
+				onStepChange={onStepChange}
+				/>
+			)}
+			{step === 4 && (
+				<AgeQuestion
+				ageInput={ageInput}
+				onAgeInputChange={onAgeInputChange}
+				onStepChange={onStepChange}
+				/>
+			)}
+			{step === 5 && (
+				<Overview nameInput={nameInput} cityInput={cityInput} ageInput={ageInput} emailInput={emailInput}/>
 			)}
 		</main>
 
