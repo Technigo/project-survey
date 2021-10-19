@@ -7,9 +7,10 @@ import { FormSummary } from 'components/FormSummary'
 
 console.log(data)
 
-export const FormWrapper = () => {
+export const FormWrapper = props => {
   const [state, setState] = useState({})
-  const [step, setStep] = useState(1)
+  const { step } = props
+  // const [number, setNumber] = useState(0)
   //  firstName: '', lastName: ''
 
   const handleChange = e => {
@@ -32,7 +33,7 @@ export const FormWrapper = () => {
           return null
         })}
 
-      {step === 1 && <FormSummary state={state} />}
+      {step === 'end' && <FormSummary state={state} />}
     </form>
   )
 }

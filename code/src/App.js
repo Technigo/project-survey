@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FormWrapper } from 'components/FormWrapper'
+import { Button } from 'components/Button'
 
 export const App = () => {
+  const [step, setStep] = useState(1)
+  const incrementStep = () => {
+    step <= 3 ? setStep(step + 1) : setStep('end')
+  }
+
   return (
     <div>
-      <FormWrapper />
+      <FormWrapper step={step} />
+      <Button step={step} incrementStep={incrementStep} />
     </div>
   )
 }
