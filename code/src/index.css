@@ -65,7 +65,7 @@ form {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding-top: 3em;
+  padding-top: 1em;
   font-size: 20px;
 }
 
@@ -84,6 +84,25 @@ input:focus-visible {
   outline: -webkit-focus-ring-color none;
   outline-color: none;
   outline-style: none;
+}
+
+.label-checkbox {
+  text-shadow: 2px 2px 5px grey;
+  font-size: 20px;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.input-child {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .footer {

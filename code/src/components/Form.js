@@ -1,13 +1,13 @@
 import React, { useState } from 'react'
 
 import FirstQuestion from './FirstQuestion'
-import SecondQuestion from './PreferenceQuestion'
+import PreferenceQuestion from './PreferenceQuestion'
 import LastQuestion from './EmailQuestion'
 import Summary from './Summary'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [surnameInput, setSurnameInput] = useState('')
+  const [preferenceInput, setPreferenceInput] = useState('false')
   const [emailInput, setEmailInput] = useState('')
   const [step, setStep] = useState(1)
 
@@ -15,8 +15,8 @@ const Form = () => {
     setNameInput(event.target.value)
   }
 
-  const onSurnameInputChange = (event) => {
-    setSurnameInput(event.target.value)
+  const onPreferenceInputChange = (event) => {
+    setPreferenceInput(event.target.value)
   }
 
   const onEmailInputChange = (event) => {
@@ -27,6 +27,13 @@ const Form = () => {
     setStep(step + 1)
   }
 
+  const onEnter = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      setStep(step + 1)
+    }
+  }
+
   return (
     <div className="form-container">
       {step === 1 && (
@@ -34,13 +41,15 @@ const Form = () => {
           nameInput={nameInput}
           onNameInputChange={onNameInputChange}
           onStepChange={onStepChange}
+          onKeyPress={onEnter}
         />
       )}
       {step === 2 && (
-        <SecondQuestion
-          surname={surnameInput}
-          onSurnameInputChange={onSurnameInputChange}
+        <PreferenceQuestion
+          preference={preferenceInput}
+          onPreferenceInputChange={onPreferenceInputChange}
           onStepChange={onStepChange}
+          onKeyPress={onEnter}
         />
       )}
       {step === 3 && (
@@ -48,13 +57,15 @@ const Form = () => {
           emailInput={emailInput}
           onEmailInputChange={onEmailInputChange}
           onStepChange={onStepChange}
+          onKeyPress={onEnter}
         />
       )}
       {step === 4 && (
         <Summary
           nameInput={nameInput}
-          surnameInput={surnameInput}
+          preferenceInput={preferenceInput}
           emailInput={emailInput}
+          onKeyPress={onEnter}
         />
       )}
     </div>

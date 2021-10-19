@@ -1,8 +1,13 @@
 import React from 'react'
 
-const EmailQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
+const EmailQuestion = ({
+  emailInput,
+  onEmailInputChange,
+  onStepChange,
+  onEnter,
+}) => {
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <form>
       <label htmlFor="emailInput">Type your Email address</label>
       <input
         id="emailInput"
@@ -10,6 +15,7 @@ const EmailQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
         placeholder="type your Email address here"
         value={emailInput}
         onChange={onEmailInputChange}
+        onKeyPress={onEnter}
         required
       />
       <button className="btn6" type="button" onClick={onStepChange}>

@@ -1,8 +1,13 @@
 import React from 'react'
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+const FirstQuestion = ({
+  nameInput,
+  onNameInputChange,
+  onStepChange,
+  onEnter,
+}) => {
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <form>
       <label htmlFor="nameInput">Hey there! Whats your name?</label>
       <input
         id="nameInput"
@@ -10,6 +15,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         placeholder="Type your name here"
         value={nameInput}
         onChange={onNameInputChange}
+        onKeyPress={onEnter}
       />
       <button className="btn6" type="button" onClick={onStepChange}>
         Next question
