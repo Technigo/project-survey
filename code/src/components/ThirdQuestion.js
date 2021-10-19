@@ -17,6 +17,7 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
         <label key={group}>
           <input
             type="radio"
+            required
             value={group}
             onChange={onAgeInputChange}
             checked={ageInput === group}
