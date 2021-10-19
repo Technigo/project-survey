@@ -14,7 +14,10 @@ const App = () => {
         </a>
       </header>
       <section className="main-container">
-        <h1 className="head-title"> Newsletter signup </h1>
+        <h1 className="head-title">Välkommen in till 6/5/4 familjen!</h1>
+        <p className="signup-text">
+          Få reda på specialerbjudanden, nyheter, event och annat skoj!
+        </p>
         <div>
           <Form />
         </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 
 import FirstQuestion from './FirstQuestion'
-import SecondQuestion from './SecondQuestion'
-import LastQuestion from './LastQuestion'
+import SecondQuestion from './PreferenceQuestion'
+import LastQuestion from './EmailQuestion'
 import Summary from './Summary'
 
 const Form = () => {
