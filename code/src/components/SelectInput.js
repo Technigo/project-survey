@@ -10,20 +10,18 @@ const SelectInput = ({ options, selection, onValueChange }) => {
 
   return (
     <>
-      <form action="">
-        <select value={innerSelection} onChange={onSelectChange}>
-          <option value="" disabled>
-            Choose one
-          </option>
-          {options.map((option) => {
-            return (
-              <option key={option} value={option}>
-                {option}
-              </option>
-            );
-          })}
-        </select>
-      </form>
+      <select value={innerSelection} onChange={onSelectChange}>
+        <option value="" disabled>
+          Choose one
+        </option>
+        {options.map((option) => {
+          return (
+            <option key={option} value={option}>
+              {option}
+            </option>
+          );
+        })}
+      </select>
     </>
   );
 };

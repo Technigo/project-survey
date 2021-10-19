@@ -10,19 +10,17 @@ const RadioInput = ({ options, choice, onValueChange }) => {
 
   return (
     <>
-      <form action="">
-        {options.map((option) => (
-          <label key={option}>
-            <input
-              type="radio"
-              value={option}
-              onChange={onInputChange}
-              checked={innerChoice === option}
-            />
-            {option}
-          </label>
-        ))}
-      </form>
+      {options.map((option) => (
+        <label key={option}>
+          <input
+            type="radio"
+            value={option}
+            onChange={onInputChange}
+            checked={innerChoice === option}
+          />
+          {option}
+        </label>
+      ))}
     </>
   );
 };

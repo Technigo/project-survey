@@ -7,15 +7,13 @@ const TextInput = ({ label, value, onValueChange }) => {
 
   return (
     <>
-      <form action="">
-        <label htmlFor={label}></label>
-        <input
-          type="text"
-          id={label}
-          onChange={onTextInputChange}
-          value={value}
-        />
-      </form>
+      <label htmlFor={label}></label>
+      <input
+        type="text"
+        id={label}
+        onChange={onTextInputChange}
+        value={value}
+      />
     </>
   );
 };

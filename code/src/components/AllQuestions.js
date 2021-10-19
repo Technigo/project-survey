@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 
 import Question from "./Question";
+import ReviewSubmit from "./ReviewSubmit";
 
 const questions = [
   {
@@ -27,7 +28,8 @@ const AllQuestions = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [answers, setAnswers] = useState({});
 
-  const onQNumberChange = () => {
+  const handleSubmission = (event) => {
+    event.preventDefault();
     setQuestionNumber(questionNumber + 1);
   };
 
@@ -41,21 +43,19 @@ const AllQuestions = () => {
   return (
     <>
       {questionNumber < questions.length ? (
-        <div>
+        <form onSubmit={handleSubmission}>
           <Question
             key={questions[questionNumber].number}
             question={questions[questionNumber]}
             answer={answers[questionNumber]}
             setAnswer={onAnswerChange}
           />
-          <button onClick={onQNumberChange}>
+          <button type="submit">
             {lastQuestion ? "Submit" : "Next Question"}
           </button>
-        </div>
+        </form>
       ) : (
-        <div>
-          {JSON.stringify(answers)}
-        </div>
+        <ReviewSubmit answers={answers}/>
       )}
     </>
   );
