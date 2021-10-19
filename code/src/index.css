@@ -30,7 +30,7 @@ code {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-evenly;
-
+display: block;
 
 }
 
@@ -54,6 +54,7 @@ code {
 .header h1{
 padding: 0 5px;
 background-color: rgba(62, 48, 73, 0.945);
+text-align: center;
 }
 
 
@@ -101,7 +102,8 @@ flex-direction: column;
 justify-content: space-evenly;
 align-items: center;
 white-space: normal;
-word-break: normal;
+word-break:normal;
+
 }
 
 
@@ -141,6 +143,7 @@ font-weight: bold;
 .label{
 
 	font-size: 1.5em;
+	margin-bottom: 10px;
 	
 	}
 	
@@ -155,6 +158,8 @@ font-weight: bold;
 		justify-content: space-evenly;
 		font-family:Arial, Helvetica, sans-serif;
 		font-size: 2.1em;
+		word-break: normal;
+		white-space: normal;
 	
 	}
 	.toDotext{
@@ -199,7 +204,7 @@ textarea{
 	
 	min-width: 100px!important;
 	height: 70px;
-	font-size:  1.5em;
+	font-size:  1.2em;
 
 
 
@@ -209,16 +214,16 @@ textarea{
 	
 	
 	height: 40px;
-	font-size:  1.2em;
-	min-width: 200px;
+	font-size:  1em;
+	min-width: 100px;
 
 }
 
 select{
 
-	min-width: 100px !important;
+	min-width: 150px !important;
 	height: 40px;
-	font-size:  1.2em;
+	font-size:  1em;
 
 
 }
@@ -260,7 +265,7 @@ margin: 20px;
 
 button {
 
-	font-size: 1.2em;
+	font-size: 1.5em;
 	font-weight: bold;
 	background-color: rgb(154, 142, 158);
 	color: rgb(255, 255, 255);
@@ -276,7 +281,83 @@ button:hover {
 
 
 
+@media (min-width:768px) {
 
+	.todoPreDiv{
+
+font-size: 1.7em;
+
+	}
+
+	.toDotext{
+
+		font-size: 1.7em;
+	}
+
+.submitTitle{
+
+font-size: 3.5em;
+
+}
+
+
+
+	/* input */
+
+
+	textarea{
+	
+	
+		height: 70px;
+		width: 350px;
+		font-size:  1.7em;
+	
+	
+	
+	}
+	
+	 input{
+		
+		
+		height: 40px;
+		font-size:  1.6em;
+	
+	
+	}	
+
+	
+
+.radio{
+
+
+	height:30px !important;
+	width: 10px;
+	
+}
+
+.radioContainer{
+	display: flex;
+	flex-direction: row;
+	margin-top: 25px;
+	justify-content: center;
+	align-items: center;
+	font-size: 1em;
+	width: 100%;
+
+	
+	}
+	
+	select{
+
+		min-width: 200px !important;
+		height: 40px;
+		font-size:  1.3em;
+	
+	
+	}
+
+	
+}
 
 
 

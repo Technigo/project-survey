@@ -11,11 +11,11 @@ return(
 
     <div className="todoPreDiv">
         
-        <p> {todoTitle} </p>
+        <p> {todoCheck} </p>
         <p> {todoTime} </p>
         <p>{todoLocation} </p>
         </div>
-        <h2>{todoTitle} </h2>
+        <h2 className="submitTitle">{todoTitle} </h2>
         <p className="toDotext"> To do: {todoTask} </p>
         
         </div>
