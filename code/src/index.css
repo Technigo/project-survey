@@ -10,9 +10,8 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-height: 100vh;
+height: 105vh;
 background-size: cover;
-background-repeat: no-repeat;
 width: 100%;
 	background-image: url(./images/shubham-dhage-D2udHWcz4wI-unsplash.jpg);
 	
@@ -30,7 +29,8 @@ code {
 	height: 100%;
 	display: flex;
 	flex-direction: column;
-	
+	justify-content: space-evenly;
+
 
 }
 
@@ -45,7 +45,7 @@ code {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 50%;
+	height: 100%;
     font-family: monospace;
      font-size: 2em;
 
@@ -273,8 +273,6 @@ button:hover {
 	background-color: rgb(90, 76, 94);
 	color: rgb(255, 255, 255);
 }
-
-
 
 
 
