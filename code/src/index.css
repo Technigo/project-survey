@@ -1,5 +1,7 @@
 body {
   margin: 0;
+  padding:0;
+  box-sizing: border-box;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +12,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* Header */
+.header {
+  background-color: yellow;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* background-image:url(./images/code-image.jpeg); */
+}
+.heading-one {
+  border:1px solid red;
+ 
+  
 }
