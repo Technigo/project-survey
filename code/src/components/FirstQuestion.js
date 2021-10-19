@@ -6,11 +6,11 @@ export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion }) =>
 			<label htmlFor="nameInput">What is your name?</label>
 			{/* prettier-ignore */}
 			<input
-          id="nameInput"
-          type="text"
-          value={nameInput}
-          onChange={onNameInputChange}>
-      </input>
+        id="nameInput"
+        type="text"
+        value={nameInput}
+        onChange={onNameInputChange}
+      />
 			<button onClick={nextQuestion}>Next question</button>
 		</form>
 	);

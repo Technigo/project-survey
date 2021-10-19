@@ -15,7 +15,7 @@ const Form = () => {
 	};
 
 	const onAgeInputChange = (event) => {
-		setAgeInput(event.target.value);
+		setAgeInput(event.target.value); // or should this be setAgeInput(event.target.checked) ?
 	};
 
 	const onStreamingInputChange = (event) => {
