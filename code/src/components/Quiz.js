@@ -26,7 +26,9 @@ const Quiz = () => {
   const [step, setStep] = useState(-1);
   const [questionOne, setQuestionOne] = useState('');
   const [questionTwo, setQuestionTwo] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [questionThree, setQuestionThree] = useState('');
+  // eslint-disable-next-line no-unused-vars
   const [questionFour, setQuestionFour] = useState('');
 
   // const saveSelectedAnswer = (answer) => {
