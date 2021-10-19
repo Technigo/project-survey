@@ -1,11 +1,9 @@
 .show-booking {
   display: flex;
-  align-items: center;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 .show-booking span {
   margin-top: 20px;
-  text-align: center;
 }

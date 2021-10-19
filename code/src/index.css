@@ -52,6 +52,10 @@ h3 {
 
 input {
   width: 100%;
+  background-color: var(--secondary-color);
+  border: 1px solid black;
+  border-radius: 3px;
+  padding: 6px;
 }
 
 input:focus {

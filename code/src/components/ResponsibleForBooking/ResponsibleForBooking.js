@@ -23,7 +23,7 @@ export const ResponsibleForBooking = ({
           />
         </div>
         <div className="responsible-booking__email-number">
-          <label htmlFor="number">Phone nr</label>
+          <label htmlFor="number">Telephone number</label>
           <input
             value={telephoneNumber}
             id="number"

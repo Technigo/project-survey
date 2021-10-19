@@ -12,7 +12,7 @@ export const ShowBooking = ({
     <div className="show-booking">
       <h2>Booking Summary</h2>
       <p>
-        You have ordered a {travelType} to {city}.
+        You have ordered a <b>{travelType}</b> to <b>{city}</b>.
       </p>
       <h3>Passengers</h3>
 
@@ -26,9 +26,10 @@ export const ShowBooking = ({
           );
         })}
       <span>
-        We will send any updates about your trip to your emailadress: {email}{" "}
-        and telephone number: {telephoneNumber}
+        We will send updates about your trip to <b>{email}</b> and to your
+        telephone number <b>{telephoneNumber}.</b>
       </span>
+      <span>Have an awesome trip!</span>
     </div>
   );
 };
