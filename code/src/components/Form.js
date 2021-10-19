@@ -2,7 +2,8 @@ import React, { useState } from "react";
 import FirstQuestion from "./FirstQuestion";
 import SecondQuestion from "./SecondQuestion";
 import ThirdQuestion from "./ThirdQuestion";
-// import Intro from "./Intro";
+import FourthQuestion from "./FourthQuestion";
+import Intro from "./Intro";
 
 const Form = () => {
   // variables for counter
@@ -12,7 +13,8 @@ const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [surnameInput, setSurnameInput] = useState("");
   const [favouriteCandyInput, setFavouriteCandyInput] = useState("");
-  const [step, setStep] = useState(1);
+  const [creatureInput, setCreatureInput] = useState("");
+  const [step, setStep] = useState(0);
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
@@ -23,13 +25,21 @@ const Form = () => {
   const onFavouriteCandyInputChange = (event) => {
     setFavouriteCandyInput(event.target.value);
   };
+  const onCreatureInputChange = (event) => {
+    setCreatureInput(event.target.value);
+  };
   const onStepChange = () => {
     setStep(step + 1);
   };
 
   console.log(nameInput);
-
-  if (step === 1) {
+  if (step === 0) {
+    return (
+      <div>
+        <Intro onStepChange={onStepChange} />
+      </div>
+    );
+  } else if (step === 1) {
     return (
       <div>
         <form>
@@ -52,7 +62,15 @@ const Form = () => {
       </div>
     );
   } else if (step === 3) {
-    return <ThirdQuestion />;
+    return <ThirdQuestion onStepChange={onStepChange} />;
+  } else if (step === 4) {
+    return (
+      <FourthQuestion
+        creatureInput={creatureInput}
+        onCreatureInputChange={onCreatureInputChange}
+        onStepChange={onStepChange}
+      />
+    );
   }
 };
 

@@ -1,19 +1,13 @@
-// import React from "react";
+import React from "react";
 
-// const Intro = (nameInput, onNameInputChange, onStepChange) => {
-//   return (
-//     <div>
-//       <p>Hej you</p>
-//       <input
-//         id="nameInput"
-//         type="text"
-//         value={nameInput}
-//         onChange={onNameInputChange}
-//       />
+const Intro = ({ onStepChange }) => {
+  return (
+    <div>
+      <h1>Halloween is here</h1>
+      <p>Hej you!Ready for your survey?</p>
+      <button onClick={onStepChange}>Start</button>
+    </div>
+  );
+};
 
-//       <button onClick={onStepChange}>Next question</button>
-//     </div>
-//   );
-// };
-
-// export default Intro;
+export default Intro;
