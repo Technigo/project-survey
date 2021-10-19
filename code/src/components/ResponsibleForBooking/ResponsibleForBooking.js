@@ -11,10 +11,9 @@ export const ResponsibleForBooking = ({
     <>
       <h2>Who is responsible for the booking?</h2>
       <h3>Contact information</h3>
-      <div className="responsible-booking">
+      <div class="responsible-booking">
         <div className="responsible-booking__email-number">
-          <span>Email</span>
-          <label htmlFor="email" />
+          <label htmlFor="email">Email</label>
           <input
             value={email}
             id="email"
@@ -24,8 +23,7 @@ export const ResponsibleForBooking = ({
           />
         </div>
         <div className="responsible-booking__email-number">
-          <span>Phone nr</span>
-          <label htmlFor="number" />
+          <label htmlFor="number">Phone nr</label>
           <input
             value={telephoneNumber}
             id="number"

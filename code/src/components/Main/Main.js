@@ -86,12 +86,6 @@ export const Main = () => {
     setTelephoneNumber(telephoneNumber);
   };
 
-  console.log(city);
-  console.log(travelType);
-  console.log(amountOfTravellers);
-  console.log(nameList);
-  console.log(email);
-  console.log(telephoneNumber);
   return (
     <div className="content">
       <Header step={step} />
@@ -147,7 +141,7 @@ export const Main = () => {
               className="btn previous-step"
               onClick={() => setStep(step === 1 ? 1 : step - 1)}
             >
-              <FontAwesomeIcon icon={faChevronDoubleLeft} /> Previous step
+              <FontAwesomeIcon icon={faChevronDoubleLeft} /> Previous
             </button>
           )}
 

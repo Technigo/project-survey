@@ -1,17 +1,17 @@
 .form__passengers-information {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  width: 100%;
 }
 
 .form__passengers-information input {
-  width: 130px;
+  width: 100%;
 }
 
 .form__names {
   display: flex;
-  flex-direction: row;
-  column-gap: 20px;
+  flex-direction: column;
+  row-gap: 6px;
 }
 
 .form__name {

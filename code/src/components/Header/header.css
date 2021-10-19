@@ -2,20 +2,20 @@
   position: relative;
   height: 14px;
   width: 14px;
-  background-color: var(--main-color);
+
   border-radius: 50%;
   display: inline-block;
+  transition: all 500ms ease-in-out;
 }
 
 .line {
-  background-color: var(--main-color);
-  width: 60px;
+  width: 40px;
   height: 3px;
   display: inline-block;
+  transition: all 500ms ease-in-out;
 }
 
 .header {
-  margin: 40px 0 0 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -26,7 +26,7 @@
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  background-color: var(--main-color);
+
   color: white;
   height: 30px;
   width: 30px;

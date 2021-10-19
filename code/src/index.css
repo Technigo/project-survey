@@ -1,9 +1,8 @@
 html {
-  --main-color: #f9b232;
+  --main-color: #cc1e1f;
   --active-color: #2f6147;
-  --secondary-color: linear-gradient(to TOP, #ffffff, #bdbbb9);
-  --background-color-even: #f4f4f4;
-  --white: rgb(244, 244, 244);
+  --secondary-color: rgb(240, 240, 240);
+  --white: rgb(255, 255, 255);
 }
 
 body {
@@ -12,7 +11,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   box-sizing: border-box;
-  background-image: var(--secondary-color);
+  background-color: var(--secondary-color);
   height: 100%;
   display: flex;
   justify-content: center;
@@ -37,8 +36,10 @@ h2 {
 }
 
 h3 {
-  margin: 30px 0 10px 0;
+  margin: 20px 0 10px 0;
   font-weight: 500;
+  font-size: 16px;
+  width: 100%;
 }
 
 .sr-only {
@@ -47,4 +48,20 @@ h3 {
   height: 1px;
   width: 1px;
   overflow: hidden;
+}
+
+input {
+  width: 100%;
+}
+
+input:focus {
+  outline-color: var(--main-color);
+}
+
+label {
+  font-size: 12px;
+}
+
+form {
+  width: 100%;
 }

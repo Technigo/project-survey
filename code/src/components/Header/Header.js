@@ -10,53 +10,56 @@ export const Header = ({ step }) => {
         className="dot"
         style={{
           backgroundColor:
-            step >= 1 ? "var(--active-color)" : "var(--main-color)",
+            step >= 1 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       ></div>
       <div
         className="line"
         style={{
           backgroundColor:
-            step >= 2 ? "var(--active-color)" : "var(--main-color)",
+            step >= 2 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       ></div>
       <div
         className="dot"
         style={{
           backgroundColor:
-            step >= 2 ? "var(--active-color)" : "var(--main-color)",
+            step >= 2 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       ></div>
       <div
         className="line"
         style={{
           backgroundColor:
-            step >= 3 ? "var(--active-color)" : "var(--main-color)",
+            step >= 3 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       ></div>
       <div
         className="dot"
         style={{
           backgroundColor:
-            step >= 3 ? "var(--active-color)" : "var(--main-color)",
+            step >= 3 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       ></div>
       <div
         className="line"
         style={{
           backgroundColor:
-            step >= 4 ? "var(--active-color)" : "var(--main-color)",
+            step >= 4 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       ></div>
       <div
         className="dot"
-        style={{ backgroundColor: step >= 4 ? "green" : "var(--main-color)" }}
+        style={{
+          backgroundColor:
+            step >= 4 ? "var(--main-color)" : "var(--secondary-color)",
+        }}
       ></div>
       <div
         className="line"
         style={{
           backgroundColor:
-            step >= 5 ? "var(--active-color)" : "var(--main-color)",
+            step >= 5 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       ></div>
 
@@ -64,7 +67,7 @@ export const Header = ({ step }) => {
         className="icon-container"
         style={{
           backgroundColor:
-            step >= 5 ? "var(--active-color)" : "var(--main-color)",
+            step >= 5 ? "var(--main-color)" : "var(--secondary-color)",
         }}
       >
         <FontAwesomeIcon icon={faPlane} />

@@ -1,15 +1,31 @@
 .form__btns-container {
-  display: flex;
-  column-gap: 10px;
-  margin: 80px 0 40px 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 8px;
+  margin-top: 60px;
+  width: 100%;
 }
 
 .btn {
-  padding: 8px;
-  border: solid 1px black;
-  text-transform: uppercase;
-  background-color: var(--white);
+  padding: 8px 10px;
+  border: none;
+  border-radius: 2px;
+  background-color: var(--main-color);
   cursor: pointer;
+  color: var(--white);
+  font-weight: 100;
+  align-items: center;
+}
+
+.previous-step {
+  display: grid;
+  grid-template-columns: auto 1fr;
+}
+
+.submit {
+  grid-column-start: 2;
+  display: grid;
+  grid-template-columns: 1fr auto;
 }
 
 .btn:hover {
@@ -22,11 +38,16 @@
 }
 
 .content {
-  min-height: 100vh;
-  max-width: 700px;
+  max-width: 320px;
+  min-width: 320px;
   flex-direction: column;
   display: flex;
   align-items: center;
+  background-color: var(--white);
+  padding: 20px;
+  -webkit-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  -moz-box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin-top: 20px;
+  border-bottom: #cc1e1f 2px solid;
 }
-
-/*------------- IPAD ADJUSTEMENTS ----------------  */
