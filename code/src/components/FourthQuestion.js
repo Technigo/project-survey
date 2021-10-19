@@ -10,7 +10,6 @@ const FourthQuestion = ({ selected, onSelect, onStepChange }) => {
 
             <DatePicker selected={selected} onChange={(date) => onSelect(date)} 
             />       
-            <button type="button" onClick={onStepChange}>Next question</button>
         </>
         );
   };

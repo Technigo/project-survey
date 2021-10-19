@@ -19,7 +19,7 @@ const ThirdQuestion = ({ setPastry, chosenPastry, onStepChange }) => {
                 {pastry}
             </label>
             ))}
-			<button type="button" onClick={onStepChange}>Next question</button>
+			{/* <button type="button" onClick={onStepChange}>Next question</button> */}
             </form >
 	);
 };

@@ -14,7 +14,6 @@ const SecondQuestion = ({ setExperience, experience, onStepChange }) => {
 				<option value="know the basics">Know the basics</option>
 				<option value="experienced">Experienced</option>
 				</select>
-			<button type="button" onClick={onStepChange}>Next question</button>
 		</form>
 	);
 };

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Overview = ({ nameInput, experience, chosenPastry, date }) => {
+const Overview = ({ nameInput, experience, chosenPastry, date, setHappiness  }) => {
 	return (
 		<section>
 			<h2>My values from form :</h2>
@@ -8,6 +8,9 @@ const Overview = ({ nameInput, experience, chosenPastry, date }) => {
 			<p>Experience: {experience}</p>
             <p>Pastry: {chosenPastry}</p>
             <p>Selected: {date.toDateString()}</p>
+			<p>Happiness: {setHappiness}</p>
+
+
 
 		</section>
 	);

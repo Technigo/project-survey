@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400&display=swap');
+
+emoji-slider {
+  --emoji-slider-bar-color: rgb(212, 212, 212);
+  --emoji-slider-bar-active-color: rgb(223, 192, 192);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +17,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1, h2, .start-button {
+  font-family: 'Lexend Deca', sans-serif;
+  letter-spacing: 2px;
 }

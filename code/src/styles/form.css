@@ -1,0 +1,26 @@
+.wrapper {
+    padding: 50px;
+}
+
+.form {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+.next-button {
+    font-size: 24px;
+    top: 65%;
+    right: 20%;
+    padding: 20px;
+    border: 1px solid #1DB9C3;
+    background: #1DB9C3;
+    cursor: pointer;
+}
+
+.question1-wrapper {
+    margin-top: 50px;
+  }

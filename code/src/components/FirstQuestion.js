@@ -4,15 +4,15 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 	// const { nameInput, onNameInputChange } = props;
 
 	return (
-		<form>
+		<form className="question1-wrapper">
 			<label htmlFor="nameInput">Type your name</label>
 			<input
 				id="nameInput"
 				type="text"
 				value={nameInput}
 				onChange={onNameInputChange}
+
 			/>
-			<button type="button" onClick={onStepChange}>Next questions</button>
 		</form>
 	);
 };
