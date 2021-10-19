@@ -2,7 +2,7 @@ import React from "react";
 
 const ageGroup = ["Under 13", "13-17", "18-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75+"];
 
-export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => {
+export const SecondQuestion = ({ onAgeInputChange, nextQuestion }) => {
 	return (
 		<form onSubmit={(event) => event.preventDefault()}>
 			What is your age?
