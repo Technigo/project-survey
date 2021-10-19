@@ -1,17 +1,17 @@
 import React, { useState } from "react";
 
 import NameQuestion from "./NameQuestion";
-import FavoritePun from "./FavoritePun";
-import DropDown from "./DropDown";
-import RadioButtons from "./RadioButtons";
+import LastSong from "./LastSong";
+import DropDown from "./BirdQuestion";
+import ElbowRadio from "./ElbowRadio";
 import AgeRadio from "./AgeRadio";
 import Summary from "./Summary";
 
 const InputsForm = () => {
   const [startImage] = useState("");
   const [nameInput, setNameInput] = useState("");
-  const [punInput, setPunInput] = useState("");
-  const [dropdown, setDropdown] = useState("");
+  const [songInput, setSongInput] = useState("");
+  const [birdInput, setBirdInput] = useState("");
   const [radioInput, setRadioInput] = useState("");
   const [ageRadioInput, setAgeRadioInput] = useState("");
   const [step, setStep] = useState(1);
@@ -20,12 +20,12 @@ const InputsForm = () => {
     setNameInput(event.target.value);
   };
 
-  const handlePunInputChange = event => {
-    setPunInput(event.target.value);
+  const handleSongInputChange = event => {
+    setSongInput(event.target.value);
   };
 
-  const handleBirdInput = event => {
-    setDropdown(event.target.value);
+  const handleBirdInputChange = event => {
+    setBirdInput(event.target.value);
   };
 
   const handleRadioInputChange = event => {
@@ -44,11 +44,12 @@ const InputsForm = () => {
     <div>
       {step === 1 && (
         <>
-          <section className="image-section">
+          <section className="image-section" tabIndex="0">
             <div className="image-container">
               <img
                 value={startImage}
                 src="https://i.postimg.cc/Y09prSzC/arrows.jpg"
+                alt="neon arrow signs"
               />
               <button className="startBtn" onClick={onStepChange}>
                 Start random quiz
@@ -65,21 +66,21 @@ const InputsForm = () => {
         />
       )}
       {step === 3 && (
-        <FavoritePun
-          punInput={punInput}
-          handlePunInputChange={handlePunInputChange}
+        <LastSong
+          songInput={songInput}
+          handleSongInputChange={handleSongInputChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 4 && (
         <DropDown
-          dropdown={dropdown}
-          handleBirdInput={handleBirdInput}
+          birdInput={birdInput}
+          handleBirdInputChange={handleBirdInputChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 5 && (
-        <RadioButtons
+        <ElbowRadio
           radioInput={radioInput}
           handleRadioInputChange={handleRadioInputChange}
           onStepChange={onStepChange}
@@ -96,8 +97,8 @@ const InputsForm = () => {
         <>
           <Summary
             nameInput={nameInput}
-            punInput={punInput}
-            dropdown={dropdown}
+            songInput={songInput}
+            birdInput={birdInput}
             radioInput={radioInput}
             ageRadioInput={ageRadioInput}
           />

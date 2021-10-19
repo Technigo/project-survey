@@ -6,9 +6,9 @@ const AgeRadio = ({
   onStepChange,
 }) => {
   return (
-    <section className="radio-question form-container">
+    <section className="form-container" tabIndex="0">
       <form>
-        How old do you feel inside?
+        <h2 className="label-text"> How old do you feel inside?</h2>
         <label>
           <input
             type="radio"

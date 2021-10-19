@@ -5,7 +5,6 @@
 
 body {
   margin: 0;
-
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: url("./images/bricksmall.jpg");
@@ -19,9 +18,9 @@ code {
 }
 
 .neon-text {
-  font-family: "Anonymous Pro", monospace;
-  width: 50%;
-  margin: 60px auto;
+  font-family: "Megrim", cursive;
+  width: 30%;
+  margin: 30px auto;
   text-align: center;
   text-transform: uppercase;
   color: #fff;
@@ -36,6 +35,7 @@ code {
 }
 
 .image-container {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,14 +53,19 @@ img {
 }
 
 .label-text {
+  text-align: center;
   text-transform: uppercase;
   margin: 30px auto 0 auto;
+}
+
+label {
+  color: white;
 }
 
 .form-container {
   margin-top: 50px;
   padding: 20px;
-  background: rgba(255, 251, 251, 0.664);
+  background: rgba(59, 57, 57, 0.664);
   position: absolute;
   display: flex;
   flex-direction: column;
@@ -90,7 +95,7 @@ button {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   width: 50%;
-  margin: 10px auto;
+  margin: 20px auto 0 auto;
   cursor: pointer;
   border-radius: 20px;
   font-family: "Anonymous Pro", monospace;
@@ -114,13 +119,14 @@ input {
 
 select {
   margin: 0 auto;
-  width: 30%;
-  height: 70px;
+  width: 60%;
+  height: 40px;
   font-family: "Allerta Stencil";
 }
 
-select .select-default {
-  font-weight: bold;
+.select-default {
+  text-transform: uppercase;
+  margin: 0 auto;
 }
 
 .label-text {
@@ -130,12 +136,17 @@ select .select-default {
 }
 
 .summary-container {
-  padding: 20px 30px;
+  height: 70%;
+  padding: 0 30px;
 }
 
 .summary-container p {
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.answer-text {
+  color: fuchsia;
 }
 
 .submitBtn {
@@ -144,4 +155,46 @@ select .select-default {
 
 .submit-button-form {
   height: auto;
+}
+
+p {
+  color: white;
+  text-shadow: 1px 1px #000;
+}
+
+@media (max-width: 767px) {
+  .neon-text {
+    width: 90%;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .startBtn {
+    width: 90%;
+  }
+
+  iframe {
+    width: 90%;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .neon-text {
+    font-size: 42px;
+    width: 80%;
+  }
+
+  .image-container {
+    top: 80px;
+  }
+
+  .startBtn {
+    width: 40%;
+  }
+
+  .form-container {
+    width: 400px;
+  }
 }

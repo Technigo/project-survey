@@ -1,9 +1,9 @@
 import React from "react";
 
-const FavoritePun = ({ firstPunInput, handlePunInputChange, onStepChange }) => {
+const LastSong = ({ songInput, handleSongInputChange, onStepChange }) => {
   return (
     <>
-      <section className="form-container">
+      <section className="form-container" tabIndex="0">
         <form>
           <label className="label-text" htmlFor="punInput">
             Last song you listened to?
@@ -15,8 +15,8 @@ const FavoritePun = ({ firstPunInput, handlePunInputChange, onStepChange }) => {
             type="text"
             placeholder="enter song here"
             name="song"
-            value={firstPunInput}
-            onChange={handlePunInputChange}
+            value={songInput}
+            onChange={handleSongInputChange}
           />
           <button onClick={onStepChange}>Next Question</button>
         </form>
@@ -25,4 +25,4 @@ const FavoritePun = ({ firstPunInput, handlePunInputChange, onStepChange }) => {
   );
 };
 
-export default FavoritePun;
+export default LastSong;

@@ -1,12 +1,17 @@
 import React from "react";
 
-const DropDown = ({ dropdown, handleBirdInput, onStepChange }) => {
+const BirdQuestion = ({ birdInput, handleBirdInputChange, onStepChange }) => {
   return (
-    <form>
-      <label className="label-text">Least favorite bird</label>
-      <select value={dropdown} onChange={handleBirdInput}>
+    <form className="form-container" tabIndex="0">
+      <label className="label-text">
+        Least favorite bird
+        <span role="img" aria-label="bird emoji">
+          🐦
+        </span>
+      </label>
+      <select value={birdInput} onChange={handleBirdInputChange}>
         <option className="select-default" value="pick bird">
-          Pick bird here
+          PICK BIRD HERE
         </option>
         <option value="fiskmås">fiskmås</option>
         <option value="skata">skata</option>
@@ -18,7 +23,7 @@ const DropDown = ({ dropdown, handleBirdInput, onStepChange }) => {
     </form>
   );
 };
-export default DropDown;
+export default BirdQuestion;
 
 /* <form>
       <h2>select colors MAP</h2>
