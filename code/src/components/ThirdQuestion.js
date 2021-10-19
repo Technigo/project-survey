@@ -2,7 +2,7 @@ import React from "react";
 
 export const ThirdQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => {
 	return (
-		<form>
+		<form onSubmit={(event) => event.preventDefault()}>
 			<label htmlFor="nameInput">What is your age?</label>
 			{/* prettier-ignore */}
 			<input

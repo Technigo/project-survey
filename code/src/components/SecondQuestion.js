@@ -2,7 +2,7 @@ import React from "react";
 
 export const SecondQuestion = ({ lastNameInput, onLastNameInputChange, nextQuestion }) => {
 	return (
-		<form>
+		<form onSubmit={(event) => event.preventDefault()}>
 			<label htmlFor="nameInput">Type your last name</label>
 			{/* prettier-ignore */}
 			<input
