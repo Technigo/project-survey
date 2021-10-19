@@ -16,6 +16,7 @@ export const Radio = props => {
               name={type + id}
               id={type + id}
               value={option.value}
+              checked={state[type + id] === option.value}
               onChange={handleChange}
             />
           </label>

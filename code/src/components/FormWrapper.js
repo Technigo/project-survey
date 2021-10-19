@@ -15,6 +15,7 @@ export const FormWrapper = props => {
 
   const handleChange = e => {
     const { id, value } = e.target
+    console.log('handleChange id: ', id, 'value: ', value)
     setState({ ...state, [id]: value })
   }
 
