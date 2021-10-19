@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 // build on the tutorial https://dev.to/narendersaini32/how-to-create-range-slider-with-bubble-in-react-2eep
 
-export const QuestionThree = () => {
+export const QuestionSeven = () => {
   const [value, onChange] = useState(1);
   console.log(value);
   useEffect(() => {
@@ -14,7 +14,7 @@ export const QuestionThree = () => {
   return (
     <form>
       <div>
-        <h1>Variety</h1>
+        <h1>Friendliness</h1>
       </div>
       <div className="slider-parent">
         <input

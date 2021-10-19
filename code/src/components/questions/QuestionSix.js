@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
-export const QuestionFour = () => {
+export const QuestionSix = () => {
   const [option, optionsState] = useState("default");
   console.log(option);
   return (
     <form>
-      <h1>Quality</h1>
+      <h1>Delivery Time</h1>
       <select value={option} onChange={(e) => optionsState(e.target.value)}>
         <option disabled value={"default"}>
           Select most suitable option
         </option>
-        <option value={"Awesome"}>Awesome</option>
+        <option value={"Super fast"}>Super fast</option>
         <option value={"Overall decent"}>Overall decent</option>
         <option value={"Good"}>Good</option>
         <option value={"Acceptable"}>Acceptable</option>

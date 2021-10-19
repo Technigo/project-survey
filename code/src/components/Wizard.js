@@ -3,7 +3,7 @@ import { SwitchFunction } from "./SwitchFunction";
 
 export const Wizard = ({ toFeedback }) => {
   const [currentStep, setStep] = useState("questionOne");
-  const [answered, setAnswered] = useState(0);
+  const [answered, setAnswered] = useState(1);
   const toNextStep = () => {
     switch (currentStep) {
       case "questionOne":
@@ -20,6 +20,34 @@ export const Wizard = ({ toFeedback }) => {
         break;
       case "questionFour":
         setAnswered(answered + 1);
+        setStep("questionFive");
+        break;
+      case "questionFive":
+        setAnswered(answered + 1);
+        setStep("questionSix");
+        break;
+      case "questionSix":
+        setAnswered(answered + 1);
+        setStep("questionSeven");
+        break;
+      case "questionSeven":
+        setAnswered(answered + 1);
+        setStep("questionEight");
+        break;
+      case "questionEight":
+        setAnswered(answered + 1);
+        setStep("questionNine");
+        break;
+      case "questionNine":
+        setAnswered(answered + 1);
+        setStep("anySuggestion");
+        break;
+      case "anySuggestion":
+        setAnswered(answered + 1);
+        setStep("questionTen");
+        break;
+      case "questionTen":
+        setAnswered(answered + 1);
         toFeedback();
         break;
     }
@@ -29,7 +57,7 @@ export const Wizard = ({ toFeedback }) => {
       <div>Progress bar: {answered} out of 10</div>
       <SwitchFunction currentStep={currentStep} />
       <button className="btn" onClick={toNextStep}>
-        {currentStep === "questionFour" ? "Finish" : "Continue"}
+        {currentStep === "questionTen" ? "Finish" : "Continue"}
       </button>
     </div>
   );
