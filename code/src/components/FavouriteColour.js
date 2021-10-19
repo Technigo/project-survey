@@ -9,7 +9,7 @@ const FavouriteColour = ({colourInput, onColourInputChange, onstepChange}) => {
               type="text" 
               value={colourInput} 
               onChange={onColourInputChange}
-              /* ^ is another way of writing the following line: onChange={(event) => onNameInputChange(event)}*/
+              
             />
         <button onClick = {onstepChange}>Next Question</button>
         </form>

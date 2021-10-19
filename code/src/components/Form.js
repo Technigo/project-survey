@@ -1,9 +1,11 @@
 import React, { useState} from 'react'
+import FirstPage from './FirstPage'
 import NameQuestion from './NameQuestion'
 import LocationQuestion from './LocationQuestion'
 import Overview from './Overview'
 import FavouriteAnimal from './FavouriteAnimal'
 import FavouriteColour from './FavouriteColour'
+import AeroplaneQuestion from './AeroplaneQuestion'
 
 
  const Form = () => {
@@ -11,6 +13,7 @@ import FavouriteColour from './FavouriteColour'
   const [locationInput, setLocationInput] = useState ('')
   const [animalInput, setAnimalInput] = useState ('')
   const [colourInput, setColourInput] = useState ('')
+  const [aeroplaneInput, setAeroplaneInput] = useState ('')
   const [step, setStep] = useState (1)
   
   
@@ -26,18 +29,27 @@ import FavouriteColour from './FavouriteColour'
   const onColourInputChange = (event) => {
     setColourInput(event.target.value)
   }
+  const onAeroplaneInputChange = (event) => {
+    setAeroplaneInput(event.target.value)
+  }
   const onstepChange = () => {
       setStep(step + 1)
   }
 
   if (step === 1) {
     return (
+      <div> < FirstPage 
+      onstepChange = {onstepChange}/></div> 
+    )
+  }
+  else if (step === 2) {
+    return (
       <div> < NameQuestion 
       nameInput={nameInput} 
       onNameInputChange={onNameInputChange}
       onstepChange = {onstepChange}/></div> 
     )
-  } else if (step === 2) {
+  } else if (step === 3) {
     return (
       <div> <LocationQuestion 
       locationInput={locationInput} 
@@ -45,7 +57,7 @@ import FavouriteColour from './FavouriteColour'
       onstepChange = {onstepChange}/> </div>
     )
     
-  } else if (step === 3) {
+  } else if (step === 4) {
     return (
       <div> <FavouriteAnimal
       animalInput={animalInput}
@@ -53,7 +65,7 @@ import FavouriteColour from './FavouriteColour'
       onstepChange = {onstepChange}
       /> </div>
     )
-  } else if (step === 4) {
+  } else if (step === 5) {
     return (
       <div> <FavouriteColour 
       colourInput={colourInput}
@@ -61,14 +73,22 @@ import FavouriteColour from './FavouriteColour'
       onstepChange = {onstepChange}
       /> </div>
     )
-  }
-  else if (step === 5) {
+  } else if (step === 6) {
+    return (
+      <div> <AeroplaneQuestion 
+      AeroplaneInput={aeroplaneInput}
+      onAeroplaneInputChange={onAeroplaneInputChange}
+      onstepChange = {onstepChange}/>
+      </div>
+    )
+  } else if (step === 7) {
     return (
       <div> <Overview 
       nameInput={nameInput}
       locationInput={locationInput}
-      animalInput={animalInput}/> 
-      colourInput ={colourInput}</div>
+      animalInput={animalInput}
+      colourInput={colourInput}
+      aeroplaneInput={aeroplaneInput}/></div>
     )
   }
 }

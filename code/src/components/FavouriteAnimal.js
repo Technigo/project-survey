@@ -8,6 +8,7 @@ const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange}) => {
               id="AnimalInput"
               value={animalInput} 
               onChange={onAnimalInputChange}>
+                <option disabled value=''>Select an option:</option>
                 <option value="Dolphin" selected>Dolphin</option>
                 <option value="Shark" selected>Shark</option>
                 <option value="Tiger" selected>Tiger</option>
