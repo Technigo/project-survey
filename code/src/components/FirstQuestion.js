@@ -3,7 +3,7 @@ import React from "react";
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   console.log(nameInput);
   return (
-    <form className="form">
+    <form id="firstPage" className="form">
       <h2 className="page-header">Your name please</h2>
       <label className="label" htmlFor="nameInput">
         <p>Type your name here</p>
@@ -15,10 +15,13 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         value={nameInput}
         onChange={onNameInputChange}
       />
-      <a className="button-container" onClick={onStepChange}>
+      <a
+        href="#secondQuestion"
+        className="button-container"
+        onClick={onStepChange}
+      >
         <img className="button-icon" src="./img/chevron.png" alt=""></img>
       </a>
-      {/* <button onClick={onStepChange}>Next question</button> */}
     </form>
   );
 };

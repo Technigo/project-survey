@@ -6,7 +6,7 @@ const SecondQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form className="form">
+    <form id="secondQuestion" className="form">
       <h2 className="page-header">second question</h2>
       <label className="label" htmlFor="interstInput">
         <p>What is your interest?</p>
@@ -23,7 +23,11 @@ const SecondQuestion = ({
         <option value="seller">Seller</option>
         <option value="buyer-and-seller">Buyer and seller</option>
       </select>
-      <a className="button-container" onClick={onStepChange}>
+      <a
+        href="#thirdQuestion"
+        className="button-container"
+        onClick={onStepChange}
+      >
         <img className="button-icon" src="./img/chevron.png" alt=""></img>
       </a>
     </form>

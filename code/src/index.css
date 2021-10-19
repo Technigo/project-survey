@@ -25,12 +25,13 @@ code {
   text-transform: uppercase;
   text-align: center;
   font-weight: 400;
-  font-size: 48px;
+  font-size: 32px;
 }
 
 .page-header {
-  font-size: 54px;
+  font-size: 64px;
   text-align: center;
+  font-weight: 400;
 }
 
 p {
@@ -72,7 +73,7 @@ p {
 .button-icon {
   width: 100px;
   align-items: center;
-  animation: bounce 2s;
+  animation: bounce 1s;
   animation-timing-function: ease;
   animation-iteration-count: infinite;
   border-radius: 50%;
@@ -123,6 +124,23 @@ p {
   margin-top: 50px;
 }
 
+.link-button {
+  background-color: var(--orange);
+  width: 100%;
+  border: none;
+  color: var(--beige);
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 10px 0;
+}
+
+.link-button:hover {
+  animation: press 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
 .summary-container {
   width: 80%;
 }
@@ -132,5 +150,4 @@ p {
   font-size: 54px;
   color: #de8971;
   text-align: center;
-  font-weight: 700;
 }
