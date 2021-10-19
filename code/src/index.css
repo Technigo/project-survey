@@ -1,7 +1,9 @@
 body {
   margin: 0;
-  background-color: #fff;
-  /* https://reactgo.com/react-background-image/ */
+  background-image: url(https://images.pexels.com/photos/7232493/pexels-photo-7232493.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  background-repeat: no-repeat;
+  overflow: hidden;
+
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -28,7 +30,7 @@ p {
 }
 
 .containerIntroduction {
-  background-color: #fff;
+  background-color: rgb(253, 239, 241);
   width: 300px;
   height: fit-content;
   display: flex;
@@ -48,6 +50,10 @@ p {
   padding: 10px;
 }
 
+.giphyText {
+  margin: 5px auto 30px;
+}
+
 .imgLink {
   margin: 5px auto;
   font-size: 12px;
@@ -59,10 +65,16 @@ p {
   text-decoration: underline;
 }
 
+.radioForm,
+.selectForm,
+.inputForm {
+  margin: 0px auto 20px;
+}
+
 .QuestionContainer {
   background-color: #fff;
   width: 300px;
-  height: 100px;
+  height: fit-content;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -120,4 +132,21 @@ button {
   font-weight: 400px;
   margin: auto;
   padding: 10px;
+}
+
+/* MEDIA QUERIES HERE */
+
+/* TABLET */
+
+@media (min-width: 666px) {
+  .containerIntroduction,
+  .QuestionContainer,
+  .containerSummary {
+    width: 600px;
+    margin: 150px auto 80px;
+  }
+
+  .QuestionContainer {
+    height: 30vh;
+  }
 }

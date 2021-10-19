@@ -5,15 +5,16 @@ class ImageComponent extends Component {
     return (
       <div>
         <iframe
-          title="summaryimg"
-          src="https://giphy.com/embed/3KNV9PuUxqPcvcXgHZ"
+          title="firstImg"
+          src="https://giphy.com/embed/EY4ID9rvRbgGY"
           width="240"
           height="135"
+          allowFullScreen
         ></iframe>
-        <p>
+        <p className="giphyText">
           <a
             className="imgLink"
-            href="https://giphy.com/gifs/rupaulsdragrace-season-13-drag-race-rpdr-3KNV9PuUxqPcvcXgHZ"
+            href="https://giphy.com/gifs/violet-EY4ID9rvRbgGY"
           >
             via GIPHY
           </a>

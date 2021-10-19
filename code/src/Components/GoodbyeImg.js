@@ -5,8 +5,8 @@ class ImageComponent extends Component {
     return (
       <div>
         <iframe
-          title="introimg"
-          src="https://giphy.com/embed/2sdHCTZZeQIm0Qxb7r"
+          title="GoodbyeImg"
+          src="https://giphy.com/embed/3KNV9PuUxqPcvcXgHZ"
           width="240"
           height="135"
           allowFullScreen
@@ -14,7 +14,7 @@ class ImageComponent extends Component {
         <p className="giphyText">
           <a
             className="imgLink"
-            href="https://giphy.com/gifs/rupaulsdragrace-episode-14-rupauls-drag-race-2sdHCTZZeQIm0Qxb7r"
+            href="https://giphy.com/gifs/rupaulsdragrace-season-13-drag-race-rpdr-3KNV9PuUxqPcvcXgHZ"
           >
             via GIPHY
           </a>

@@ -1,5 +1,6 @@
 import { useState } from "react";
 import React from "react";
+import ImageComponent from "Components/SecondImg";
 
 const SecondQuestion = () => {
   const [question, setQuestion] = useState("");
@@ -21,6 +22,7 @@ const SecondQuestion = () => {
           </select>
         </form>
       </div>
+      <ImageComponent />
     </div>
   );
 };

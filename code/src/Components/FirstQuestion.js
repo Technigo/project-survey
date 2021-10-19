@@ -1,5 +1,6 @@
 import React from "react";
 import { useState } from "react";
+import ImageComponent from "./FirstImg";
 
 const FirstQuestion = () => {
   const [experience, setExperience] = useState(""); // change the name here
@@ -27,6 +28,9 @@ const FirstQuestion = () => {
             />
           </label>
         </form>
+      </div>
+      <div>
+        <ImageComponent />
       </div>
     </div>
   );

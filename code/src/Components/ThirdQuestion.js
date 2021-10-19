@@ -1,4 +1,5 @@
 import React from "react";
+import ImageComponent from "Components/ThirdImg";
 
 const ThirdQuestion = (props) => {
   return (
@@ -7,6 +8,7 @@ const ThirdQuestion = (props) => {
       <div className="inputForm">
         <input className="textInput" type="text" placeholder="fundamental!" />
       </div>
+      <ImageComponent />
     </div>
   );
 };

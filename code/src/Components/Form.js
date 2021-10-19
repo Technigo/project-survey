@@ -4,6 +4,7 @@ import FirstQuestion from "Components/FirstQuestion";
 import SecondQuestion from "Components/SecondQuestion";
 import ThirdQuestion from "Components/ThirdQuestion";
 import Summary from "Components/Summary";
+import Goodbye from "Components/Goodbye";
 
 const Form = () => {
   const [step, setStep] = useState(1);
@@ -40,7 +41,14 @@ const Form = () => {
     return (
       <div>
         <Summary />
-        <button onClick={() => setStep(step - 4)}>Amen!</button>
+        <button onClick={() => setStep(step + 1)}>next</button>
+      </div>
+    );
+  } else if (step === 6) {
+    return (
+      <div>
+        <Goodbye />
+        <button onClick={() => setStep(step - 5)}>Amen!</button>
       </div>
     );
   }
