@@ -3,7 +3,7 @@ import React, { useState } from "react";
 export const Summary = () => {
   return (
     <div>
-      <div>
+      <div className="summary">
         <div>
           <h1>Thank you for your feedback!</h1>
           <h2>Check you inbox for a complimentary voucher.</h2>
