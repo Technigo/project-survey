@@ -1,5 +1,4 @@
 import React from 'react'
-import SecondQuestion from './SecondQuestion'
 
 const ThirdQuestion = ({ onQuestionChange, alias, weapon, onWeaponChange }) => {
     return (
@@ -7,7 +6,7 @@ const ThirdQuestion = ({ onQuestionChange, alias, weapon, onWeaponChange }) => {
             <h2>Time to gear up</h2>
             <p>{alias}, choose your weapon:</p>
             <form>
-                <label htmlFor="paperclip">📎</label>
+                <label htmlFor="paperclip"><span role="img" aria-label="paper clip">📎</span></label>
                 <input 
                     type="radio" 
                     name="weapon"
@@ -16,11 +15,11 @@ const ThirdQuestion = ({ onQuestionChange, alias, weapon, onWeaponChange }) => {
                     onChange={onWeaponChange}
                     onClick={onQuestionChange}
                     />
-                    <label htmlFor="chalk">🖍</label>
+                    <label htmlFor="crayon"><span role="img" aria-label="crayon">🖍</span></label>
                 <input 
                     type="radio"
                     name="weapon"
-                    id="chalk" 
+                    id="crayon" 
                     value={weapon}
                     onChange={onWeaponChange}
                     onClick={onQuestionChange}

@@ -13,10 +13,10 @@ const FourthQuestion = ({ onQuestionChange, weapon, companion, onCompanionChange
                     onChange={onCompanionChange}
                 >
                     <option value="">Select a companion</option>
-                    <option value="">The Flamingo 🦩</option>
-                    <option value="">The moon 🌛</option>
-                    <option value="">A burrito 🌯</option>
-                    <option value="">A unicorn 🦄</option>
+                    <option value="">The Flamingo <span role="img" aria-label="flamingo emoji">🦩</span></option>
+                    <option value="">The moon <span role="img" aria-label="moon emoji">🌛</span></option>
+                    <option value="">A burrito <span role="img" aria-label="burrito emoji">🌯</span></option>
+                    <option value="">A unicorn <span role="img" aria-label="unicorn emoji">🦄</span></option>
                 </select>
             </form>
             <button onClick={onQuestionChange}>Choose companion</button>

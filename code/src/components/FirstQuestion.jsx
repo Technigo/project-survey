@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import SecondQuestion from './SecondQuestion'
+import React from 'react'
 
 const FirstQuestion = ({ onQuestionChange }) => {
 

@@ -1,5 +1,4 @@
-import React, { useState } from 'react'
-import ThirdQuestion from './ThirdQuestion'
+import React from 'react'
 
 const SecondQuestion = ({ onQuestionChange, alias, onAliasChange }) => {
     return (
