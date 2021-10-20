@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import MovieType from "./MovieType";
 
-const MovieSelector = ({ onStepChange }) => {
+const MovieSelector = () => {
   const [selectedGenre, setGenre] = useState("");
 
   const onGenreSelectorChange = (event) => setGenre(event.target.value);
@@ -14,7 +14,12 @@ const MovieSelector = ({ onStepChange }) => {
         <div className="hero-content">
           <h1 className="hero-title">Time to select category</h1>
           <h2 className="hero-subtitle"> Use the dropdown to select</h2>
-          <select onChange={onGenreSelectorChange} value={selectedGenre}>
+
+          <select
+            className="selector-dropdown"
+            onChange={onGenreSelectorChange}
+            value={selectedGenre}
+          >
             <option disabled value="">
               Select movie category
             </option>

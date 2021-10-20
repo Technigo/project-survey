@@ -54,7 +54,7 @@ code {
 .hero-button {
   margin-bottom: 20px;
   border-radius: 5px;
-  background-color: #ae2d59;
+  background-color: #ae2d9f;
   color: white;
   border: 1px solid #cb376a;
   margin-top: 2rem;
@@ -65,19 +65,8 @@ code {
   cursor: pointer;
 }
 .hero-button:hover {
-  background-color: #cb376a;
-  border: 1px solid #db7598;
-}
-
-.start-box {
-  display: flex;
-  border: solid red;
-  align-items: center;
-}
-
-.start-box-child {
-  border: solid pink;
-  margin: 20px;
+  background-color: #e2702b;
+  border: 1px solid #e6724f;
 }
 
 .selector {
@@ -100,4 +89,167 @@ code {
   background-size: cover;
   background-position: center center;
   filter: brightness(60%);
+}
+.selector-dropdown {
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 20px;
+  color: #e2702b;
+  font-size: large;
+  background-color: #26220cc7;
+}
+
+.list {
+  text-align: left;
+  margin-left: 60px;
+  align-self: auto;
+  font-size: x-large;
+  font-family: ui-monospace;
+  color: antiquewhite;
+  align-content: center;
+}
+.movie-time {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.movie-time::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url(./popcorn.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  filter: brightness(0.5);
+}
+.label-style {
+  font-size: large;
+  color: #e2702b;
+}
+
+.choice {
+  font-size: xx-large;
+  color: #2be2c0;
+}
+.movie-text {
+  color: bisque;
+}
+
+@media (min-width: 1200px) {
+  .list {
+    text-align: left;
+    margin-left: 389px;
+    font-size: 60px;
+    font-family: ui-monospace;
+    color: antiquewhite;
+  }
+  .movie-text {
+    font-size: 50px;
+    color: bisque;
+  }
+  .radio-button {
+    margin: 50px;
+  }
+  input[type="radio"] {
+    transform: scale(4);
+  }
+  .label-style {
+    font-weight: bold;
+    font-size: 40px;
+    color: #e2702b;
+    padding: 30px;
+    align-content: space-between;
+  }
+  .hero-title {
+    font-size: 80px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .hero-subtitle {
+    font-size: 55px;
+    font-weight: 400;
+  }
+  .selector-dropdown {
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 40px;
+    color: #e2702b;
+    font-size: 40px;
+    background-color: #26220cc7;
+  }
+}
+
+@media (min-width: 678px) {
+  .movie-text {
+    font-size: 45px;
+    color: bisque;
+  }
+  .list {
+    text-align: left;
+    margin-left: 240px;
+    align-self: auto;
+    font-size: 35px;
+    font-family: ui-monospace;
+    color: antiquewhite;
+    align-content: center;
+  }
+  .hero-content {
+    font-size: 35px;
+    position: relative;
+    font-family: "Monserrat", sans-serif;
+    color: white;
+    text-align: center;
+    margin: 0.625rem;
+  }
+  .hero-button {
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #ae2d9f;
+    color: white;
+    border: 1px solid #cb376a;
+    margin-top: 2rem;
+    padding: 0.9375rem1.875rem;
+    font-family: "Monserrat", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  .hero-subtitle {
+    font-size: 40px;
+    font-weight: 400;
+  }
+  .selector-dropdown {
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 30px;
+    color: #e2702b;
+    font-size: 30px;
+    background-color: #26220cc7;
+  }
+  .hero-title {
+    font-size: 69px;
+    font-weight: 600;
+    margin-bottom: 0;
+  }
+  .choice {
+    font-size: 60px;
+    color: #2be2c0;
+  }
+  input[type="radio"] {
+    transform: scale(2);
+    margin: 20px;
+  }
+  .label-style {
+    font-size: 35px;
+    color: #e2702b;
+    margin: 10px;
+  }
 }

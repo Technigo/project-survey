@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import SignIn from "./SignIn";
 import MovieSelector from "./MovieSelector";
-import MovieRecommendation from "./MovieRecommendation";
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
@@ -27,7 +26,6 @@ const Form = () => {
         </div>
       )}
       {step === 2 && <MovieSelector onStepChange={onStepChange} />}
-      {step === 4 && <MovieRecommendation />}
     </div>
   );
 };
