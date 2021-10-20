@@ -1,7 +1,7 @@
 import React from 'react'
 
 export const Radio = props => {
-  const { title, options, type, id } = props.data
+  const { title, options, type, id, number } = props.data
   const { state, handleChange } = props
 
   return (
@@ -17,7 +17,7 @@ export const Radio = props => {
               name={type + id}
               id={type + id}
               value={option.value}
-              onChange={e => handleChange(e, option.next_question, title, id)}
+              onChange={e => handleChange(e, option.next_question, title, number, 'Answer')}
             />
           </label>
         )

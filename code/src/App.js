@@ -11,13 +11,13 @@ export const App = () => {
   const [step, setStep] = useState(1)
   const [steps, setSteps] = useState([1])
 
-  const handleChange = (e, nextQuestion, title, number) => {
+  const handleChange = (e, nextQuestion, title, number, label) => {
     const { id, value } = e.target
     let newAnswers = [...state.answers]
     if (state.answers[number - 1]) {
-      newAnswers[number - 1] = { ...newAnswers[number - 1], [id]: value }
+      newAnswers[number - 1] = { ...newAnswers[number - 1], [id]: { value: value, label: label } }
     } else {
-      newAnswers = [...newAnswers, { title: title, [id]: value }]
+      newAnswers = [...newAnswers, { title: title, [id]: { value: value, label: label } }]
     }
     setState({
       ...state,

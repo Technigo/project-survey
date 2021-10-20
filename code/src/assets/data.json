@@ -4,7 +4,7 @@
       "title": "Your name?",
       "number": 1,
       "type": "text",
-      "fields": [
+      "options": [
         { "label": "First name", "id": "firstName", "placeholder": "Type your first name" },
         { "label": "Last name", "id": "lastName", "placeholder": "Type your last name" }
       ],
