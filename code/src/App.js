@@ -6,6 +6,10 @@ import { Summary } from "./components/Summary";
 export const App = () => {
   const [currentStep, setStep] = useState("welcome");
   const [rootState, setRootState] = useState({
+    name: "",
+    nameInvalid: false,
+    email: "",
+    emailInvalid: false,
     rating: "5",
     features: {
       soundQuality: false,
@@ -15,9 +19,10 @@ export const App = () => {
     },
     featuresOthers: "",
   });
+  console.log("root", rootState);
 
   const setValueInRootState = (key, value) => {
-    setRootState({ ...rootState, [key]: value });
+    setRootState((oldState) => ({ ...oldState, [key]: value }));
   };
 
   // setValueInRootState('rating', 5);

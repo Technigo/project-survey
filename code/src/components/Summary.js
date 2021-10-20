@@ -8,8 +8,8 @@ export const Summary = ({ rootState }) => {
           <h1 className="questions-main-heading">Thank you for your feedback!</h1>
           <h2 className="instructions">Check you inbox for a complimentary voucher.</h2>
           <h3 className="instructions">Your details:</h3>
-          <p>Name:</p>
-          <p>Email:</p>
+          <p>Name:{rootState.name}</p>
+          <p>Email:{rootState.email}</p>
           <div>
             <h3 className="instructions">Feedback summary:</h3>
             <p>Q1 answer</p>

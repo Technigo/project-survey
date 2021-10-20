@@ -50,6 +50,22 @@ export const SwitchFunction = ({ currentStep, rootState, setValueInRootState }) 
     return <AnySuggestion />;
   }
   if (currentStep === "questionTen") {
-    return <QuestionTen />;
+    return (
+      <QuestionTen
+        name={rootState.name}
+        email={rootState.email}
+        percent={rootState.rating >= 6 ? 20 : 25}
+        onNameChange={(name) => {
+          setValueInRootState("name", name);
+          setValueInRootState("nameInvalid", false);
+        }}
+        onEmailChange={(email) => {
+          setValueInRootState("email", email);
+          setValueInRootState("emailInvalid", false);
+        }}
+        nameInvalid={rootState.nameInvalid}
+        emailInvalid={rootState.emailInvalid}
+      />
+    );
   }
 };

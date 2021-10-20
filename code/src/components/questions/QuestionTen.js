@@ -1,11 +1,6 @@
 import React, { useState } from "react";
 
-export const QuestionTen = ({ percent }) => {
-  const [nameInput, setNameInput] = useState("");
-  const [emailInput, setEmailInput] = useState("");
-  console.log("nameInput", nameInput);
-  console.log("emailInput", emailInput);
-
+export const QuestionTen = ({ percent, name, email, onNameChange, onEmailChange, nameInvalid, emailInvalid }) => {
   return (
     <form>
       <div>
@@ -16,28 +11,20 @@ export const QuestionTen = ({ percent }) => {
         Name:
         <input
           type="text"
-          value={nameInput}
+          value={name}
           name="nameInput"
           id="nameInput"
-          onChange={(event) => setNameInput(event.target.value)}
+          onChange={(event) => onNameChange(event.target.value)}
           placeholder="Jane Frost"
-          // pattern="[a-zA-Z ]{1-32}"
-          // oninvalid="setCustomValidity('Please enter alphabets only.')"
           required
         />
+        {nameInvalid && <span style={{ color: "red" }}>User name is required</span>}
       </label>
+      <br />
       <label htmlFor="emailInput">
         Contact email:
-        <input
-          type="email"
-          value={emailInput}
-          name="emailInput"
-          id="emailInput"
-          onChange={(event) => setEmailInput(event.target.value)}
-          // placeholder="your_email@gmail.com"
-          // oninvalid="setCustomValidity('Please enter valid email.')"
-          required
-        />
+        <input type="email" value={email} name="emailInput" id="emailInput" onChange={(event) => onEmailChange(event.target.value)} required />
+        {emailInvalid && <span style={{ color: "red" }}>Email is required</span>}
       </label>
     </form>
   );

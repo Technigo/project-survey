@@ -3,7 +3,6 @@ import { SwitchFunction } from "./SwitchFunction";
 
 export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
   const [currentStep, setStep] = useState("questionEight");
-
   const [answered, setAnswered] = useState(1);
   const toNextStep = () => {
     switch (currentStep) {
@@ -53,8 +52,21 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
         setStep("questionTen");
         break;
       case "questionTen":
-        setAnswered(answered + 1);
-        toFeedback();
+        let valid = true;
+        console.log("9999", rootState.email, rootState.email === "");
+        if (!rootState.email) {
+          console.log("check email");
+          setValueInRootState("emailInvalid", true);
+          valid = false;
+        }
+        if (rootState.name === "") {
+          setValueInRootState("nameInvalid", true);
+          valid = false;
+        }
+        if (valid) {
+          setAnswered(answered + 1);
+          toFeedback();
+        }
         break;
     }
   };
