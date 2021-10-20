@@ -9,7 +9,7 @@ import ColorPicker from "./ColorPicker";
 import Checkboxes from "./Checkboxes";
 import Summary from "./Summary";
 
-const InputsForm = () => {
+export const InputsForm = () => {
   const [startImage] = useState("");
   const [nameInput, setNameInput] = useState("");
   const [songInput, setSongInput] = useState("");
@@ -149,4 +149,4 @@ const InputsForm = () => {
     </div>
   );
 };
-export default InputsForm;
+

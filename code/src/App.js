@@ -1,6 +1,6 @@
 import React from "react";
 
-import InputsForm from "./Components/InputsForm";
+import { InputsForm } from "./Components/InputsForm";
 
 export const App = () => {
   return (
