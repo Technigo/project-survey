@@ -172,24 +172,26 @@ h4 {
     border-radius: 50%;
     background: white;
     animation: ripple 15s infinite;
-    box-shadow: 0px 0px 1px 0px #508fb9;
+    z-index: -1;
+    /* box-shadow: 0px 0px 1px 0px #508fb9; */
   }
   
-  .small{
-    width: 50px;
-    height: 50px;
-    left: -100px;
-    bottom: -100px;
+  .small {
+    width: 150px;
+    height: 150px;
+    left: 40px;
+    bottom: 50px;
+    background-color: #444
   }
   
-  .medium{
-    width: 900px;
-    height: 900px;
-    left: 300px;
-    bottom: 300px;
+  .medium {
+    width: 100px;
+    height: 100px;
+    left: 0;
+    bottom: 0;
   }
   
-  .large{
+  .large {
     width: 300px;
     height: 300px;
     left: -100px;
@@ -197,7 +199,7 @@ h4 {
     background-color: tomato;
   }
   
-  .xlarge{
+  .xlarge {
     width: 500px;
     height: 500px;
     left: 1000px;
@@ -205,7 +207,7 @@ h4 {
     background-color: yellow;
   }
   
-  .xxlarge{
+  .xxlarge {
     width: 400px;
     height: 400px;
     left: 100px;
@@ -213,22 +215,22 @@ h4 {
     background-color: aqua;
   }
   
-  .shade1{
+  .shade1 {
     opacity: 0.2;
   }
-  .shade2{
+  .shade2 {
     opacity: 0.5;
   }
   
-  .shade3{
+  .shade3 {
     opacity: 0.7;
   }
   
-  .shade4{
+  .shade4 {
     opacity: 0.8;
   }
   
-  .shade5{
+  .shade5 {
     opacity: 0.9;
   }
   
