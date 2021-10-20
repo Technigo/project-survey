@@ -1,15 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 
-const YourName = () => {
-  const [name, setName] = useState("");
-  // v1
+const YourName = ({ name, onNameChange, onStepChange }) => {
   return (
     <form className="name-container">
       <label htmlFor="nameInput">Name:</label>
-      <input id="nameInput" type="text" value={name} />
-      {/* <label htmlFor="lastnameInput">Last name:</label>
-      <input id="lastnameInput" type="text" /> */}
-      <button>Next question</button>
+      <input id="nameInput" type="text" value={name} onChange={onNameChange} />
+
+      <button onClick={onStepChange}>Next question</button>
     </form>
   );
 };

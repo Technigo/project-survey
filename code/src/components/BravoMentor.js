@@ -1,6 +1,6 @@
 import React from "react";
 
-const BravoMentor = () => {
+const BravoMentor = ({ bravo, onStepChange }) => {
   return (
     <form className="bravomentor">
       <span class="mentorcardbox">
@@ -9,6 +9,8 @@ const BravoMentor = () => {
           type="image"
           src="pictures/Erika-Jayne.jpeg"
           alt="erika jayne"
+          value="Erika Jayne"
+          onClick={onStepChange}
         />
         <p className="mentorcard-text">
           Erika Jayne: The queen of fabolous. Having zero fucks to give.
@@ -20,6 +22,8 @@ const BravoMentor = () => {
           type="image"
           src="pictures/tom-schwartz.png"
           alt="tom schwartz"
+          value="Tom Schwartz"
+          onClick={onStepChange}
         />
         <p className="mentorcard-text">
           Tom Schwartz: Everyone loves Schwartzie. However making decicions are
@@ -33,6 +37,8 @@ const BravoMentor = () => {
           type="image"
           src="pictures/craig-conover.jpg"
           alt="craig conover"
+          value="Craig Conover"
+          onClick={onStepChange}
         />
         <p className="mentorcard-text">
           Craig Conover: The southern gentelman who loves to sew. And party. And
@@ -45,6 +51,8 @@ const BravoMentor = () => {
           type="image"
           src="pictures/kate-chastain.jpeg"
           alt="kate chastain"
+          value="Kate Chastain"
+          onClick={onStepChange}
         />
         <p className="mentorcard-text">
           Kate Chastain: Has served every celebreity there is. Master of resting
