@@ -9,7 +9,11 @@ const ThirdQuestion = ({
   return (
     <form>
       <label className="question"> Where do you live?</label>
-      <select onChange={onLocationInputChange} value={locationInput}>
+      <select
+        className="dropdownInput"
+        onChange={onLocationInputChange}
+        value={locationInput}
+      >
         <option value=""> Select location </option>
         <option value="somewhere on Earth"> somewhere on Earth </option>
         <option value="Moon"> Moon </option>

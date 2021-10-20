@@ -38,6 +38,29 @@ code {
   height: 30px;
 }
 
+.welcome-text {
+  justify-self: self-end;
+  font-family: "Staatliches", cursive;
+  font-size: 80px;
+  font-weight: 100;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 80, 255, 1) 5%,
+    rgba(255, 0, 0, 1) 31%,
+    rgba(243, 255, 0, 1) 61%,
+    rgba(255, 156, 60, 1) 85%
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  margin-bottom: 30px;
+}
+.dropdownInput {
+  font-size: 18px;
+  width: 100%;
+  padding: 5px;
+}
+
 .starter {
   width: 600px;
   height: 300px;
