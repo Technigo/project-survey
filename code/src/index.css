@@ -11,3 +11,8 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+.survey-box {
+  width: 400px;
+  height: 400px;
+  background-color: beige;
+}

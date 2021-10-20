@@ -5,6 +5,7 @@ const FourthQuestion = ({
   onCreatureInputChange,
   onStepChange,
 }) => {
+  console.log(creatureInput);
   return (
     <>
       <h2>What is your favourite supernatural creature? </h2>

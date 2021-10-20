@@ -1,18 +1,15 @@
 import React, { useState } from "react";
+import Intro from "./Intro";
 import FirstQuestion from "./FirstQuestion";
 import SecondQuestion from "./SecondQuestion";
 import ThirdQuestion from "./ThirdQuestion";
 import FourthQuestion from "./FourthQuestion";
-import Intro from "./Intro";
+import Overview from "./Overview";
 
 const Form = () => {
-  // variables for counter
-  // const [counter, setCounter] = useState(0);
-  // const updateCounter = () => {
-  //   setCounter(counter + 1);
   const [nameInput, setNameInput] = useState("");
   const [surnameInput, setSurnameInput] = useState("");
-  const [favouriteCandyInput, setFavouriteCandyInput] = useState("");
+  const [candyInput, setCandyInput] = useState("");
   const [creatureInput, setCreatureInput] = useState("");
   const [step, setStep] = useState(0);
 
@@ -22,8 +19,8 @@ const Form = () => {
   const onSurnameInputChange = (event) => {
     setSurnameInput(event.target.value);
   };
-  const onFavouriteCandyInputChange = (event) => {
-    setFavouriteCandyInput(event.target.value);
+  const onCandyInputChange = (event) => {
+    setCandyInput(event.target.value);
   };
   const onCreatureInputChange = (event) => {
     setCreatureInput(event.target.value);
@@ -32,57 +29,49 @@ const Form = () => {
     setStep(step + 1);
   };
 
-  console.log(nameInput);
-  if (step === 0) {
-    return (
-      <div>
-        <Intro onStepChange={onStepChange} />
-      </div>
-    );
-  } else if (step === 1) {
-    return (
-      <div>
-        <form>
+  return (
+    <container>
+      <div className="survey-box">
+        {step === 0 && <Intro onStepChange={onStepChange} />}
+        {step === 1 && (
           <FirstQuestion
             nameInput={nameInput}
             onNameInputChange={onNameInputChange}
             onStepChange={onStepChange}
           />
-        </form>
+        )}
+        {step === 2 && (
+          <SecondQuestion
+            surnameInput={surnameInput}
+            onSurnameInputChange={onSurnameInputChange}
+            onStepChange={onStepChange}
+          />
+        )}
+        {step === 3 && (
+          <ThirdQuestion
+            onStepChange={onStepChange}
+            candyInput={candyInput}
+            onCandyInputChange={onCandyInputChange}
+          />
+        )}
+        {step === 4 && (
+          <FourthQuestion
+            creatureInput={creatureInput}
+            onCreatureInputChange={onCreatureInputChange}
+            onStepChange={onStepChange}
+          />
+        )}
+        {step === 5 && (
+          <Overview
+            nameInput={nameInput}
+            surnameInput={surnameInput}
+            candyInput={candyInput}
+            creatureInput={creatureInput}
+          />
+        )}
       </div>
-    );
-  } else if (step === 2) {
-    return (
-      <div>
-        <SecondQuestion
-          surnameInput={surnameInput}
-          onSurnameInputChange={onSurnameInputChange}
-          onStepChange={onStepChange}
-        />
-      </div>
-    );
-  } else if (step === 3) {
-    return <ThirdQuestion onStepChange={onStepChange} />;
-  } else if (step === 4) {
-    return (
-      <FourthQuestion
-        creatureInput={creatureInput}
-        onCreatureInputChange={onCreatureInputChange}
-        onStepChange={onStepChange}
-      />
-    );
-  }
+    </container>
+  );
 };
 
 export default Form;
-
-//   } else if (step === 3) {
-//     return (
-//       <div>
-//         <section>
-//           <h2>Your summary:</h2>
-//           <p>Name: {nameInput}</p>
-//           <p>Surname: {surnameInput}</p>{" "}
-//         </section>
-//       </div>
-//     );

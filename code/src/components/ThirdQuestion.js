@@ -1,18 +1,15 @@
 import React from "react";
-const ThirdQuestion = ({
-  favouriteCandy,
-  onFavouriteCandyInputChange,
-  onStepChange,
-}) => {
+const ThirdQuestion = ({ candyInput, onCandyInputChange, onStepChange }) => {
+  console.log(candyInput);
   return (
     <>
       <h2>Select your favourite Halloween candy</h2>
       <form>
-        <select value={favouriteCandy} onChange={onFavouriteCandyInputChange}>
+        <select value={candyInput} onChange={onCandyInputChange}>
           <option value="">Select...</option>
-          <option value="chocolade">Chocolad eyes😱</option>
-          <option value="jelly">Jelly brain</option>
-          <option value="candy">Hard candy</option>
+          <option value="chocolade eyes">Chocolad eyes😱</option>
+          <option value="jelly brain">Jelly brain</option>
+          <option value="hard candy">Hard candy</option>
         </select>
         <button onClick={onStepChange}>Next question</button>
       </form>
