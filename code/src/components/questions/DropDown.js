@@ -13,13 +13,15 @@ export const DropDown = props => {
         // defaultValue={'Select an option'}
         onChange={handleChange}>
         {options.map(option => {
+          const { hidden, value, label, next_question } = option
           return (
             <option
-              hidden={option.hidden}
-              selected={state[type + id] === option.value}
-              key={option.label + id}
-              value={option.value}>
-              {option.label}
+              hidden={hidden}
+              selected={state[type + id] === value}
+              key={label + id}
+              value={value}
+              next-question={next_question}>
+              {label}
             </option>
           )
         })}

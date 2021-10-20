@@ -8,7 +8,7 @@ export const TextInput = props => {
     <>
       <h2>{title}</h2>
       {fields.map(field => {
-        const { id, label, placeholder } = field
+        const { id, label, placeholder, next_question } = field
         return (
           <label key={id}>
             {label}
@@ -18,6 +18,7 @@ export const TextInput = props => {
               placeholder={placeholder}
               value={state[id]}
               onChange={handleChange}
+              next-question={next_question}
             />
           </label>
         )
