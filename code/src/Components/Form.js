@@ -9,10 +9,8 @@ import Goodbye from "Components/Goodbye";
 const Form = () => {
   const [step, setStep] = useState(1);
   const [radioChecked, setRadioChecked] = useState("");
-  const [selectOption, setSelectOption] = useState("yes");
+  const [selectOption, setSelectOption] = useState("");
   const [fundamentalInput, setFundamentalInput] = useState("");
-
-  // const onRadioChecked =
 
   if (step === 1) {
     return (
@@ -54,7 +52,11 @@ const Form = () => {
   } else if (step === 5) {
     return (
       <div>
-        <Summary fundamentalInput={fundamentalInput} />
+        <Summary
+          fundamentalInput={fundamentalInput}
+          selectOption={selectOption}
+          radioChecked={radioChecked}
+        />
         <button onClick={() => setStep(step + 1)}>Sashay to next</button>
       </div>
     );

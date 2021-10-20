@@ -11,15 +11,14 @@ const SecondQuestion = ({ selectOption, setSelectOption }) => {
             <label htmlFor="select">Who is your favourite queen?</label>
             <select
               value={selectOption}
-              id="select"
               onChange={(event) => setSelectOption(event.target.value)}
             >
-              <option>Bimini Bon Boulash</option>
-              <option>Tayce</option>
-              <option>Aquaria</option>
-              <option>Gottmik</option>
-              <option>Kandy Muse</option>
-              <option>Krystal Methyd</option>
+              <option value="Bimini Bon Boulash">Bimini Bon Boulash</option>
+              <option value="Tayce">Tayce</option>
+              <option value="Aquaria">Aquaria</option>
+              <option value="Gottmik">Gottmik</option>
+              <option value="Kandy Muse">Kandy Muse</option>
+              <option value="Krystal Methyd">Krystal Methyd</option>
             </select>
           </form>
         </div>
