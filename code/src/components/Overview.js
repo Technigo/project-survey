@@ -4,12 +4,12 @@ const Overview = ({ questionOneInput, questionTwoInput, questionThreeInput, alia
     return (
         <section className="overview-container">
             <h2>My survey answers</h2>
-            <p>Chosen alias: {aliasInput}</p>
-            <p>Feeling: {radioButtonInput}</p>
-            <p>Question 1: {questionOneInput}</p>
-            <p>Question 2: {questionTwoInput}</p>
-            <p>Question 3: {questionThreeInput}</p>
-            <p>Question 4: {questionFourInput}</p>
+            <p>Your chosen alias is {aliasInput}.</p>
+            <p>Your are feeling {radioButtonInput} today!</p>
+            <p>The rudest animal would be {questionOneInput}.</p>
+            <p>Cereal is {questionTwoInput} soup!</p>
+            <p>You would listen in to {questionThreeInput}.</p>
+            <p>The best therapist would be {questionFourInput}!</p>
             <h3>Thank you for answering!</h3>
         </section>
     )

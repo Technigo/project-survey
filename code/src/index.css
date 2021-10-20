@@ -16,6 +16,11 @@ code {
   font-family: 'Josefin Sans', sans-serif;
 }
 
+.progress-bar-container {
+  text-align: end;
+  color: #ffc964;
+}
+
 .welcome-message-container, .alias-buttons-container, .question-one-container, .question-two-container, .question-three-container, .question-four-container {
   display: flex;
   flex-direction: column;
@@ -51,17 +56,13 @@ code {
   text-shadow: 1px 1px #cc9837;
 }
 
-option {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-}
-
 .radio-buttons-container {
   font-size: 16px;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
   display: flex;
   flex-direction: column;
+  row-gap: 5px;
 }
 
 /*******Custom Button*******/
@@ -100,6 +101,15 @@ option {
 }
 
 /*******Custom Radio Buttons*******/
+
+.radio-buttons-container {
+  font-size: 16px;
+  color: #ffc964;
+  text-shadow: 1px 1px #cc9837;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
 
 .radio-button-overlay {
   padding: 6px;
@@ -179,6 +189,66 @@ option {
   color: #ffc964;
   font-weight: 400;
   border-width: 2px;
+}
+
+/*******Custom Select Menu*******/
+
+.select-style {
+  position: relative;
+  display: flex;
+  width: 50%;
+  height: 3em;
+  line-height: 3;
+  background: #4e350746;
+  overflow: hidden;
+  border-radius: .25em;
+}
+
+.select-style::after {
+  content: '\25BC';
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 1em;
+  background: #4e350746;
+  cursor: pointer;
+  pointer-events: none;
+  transition: .25s all ease;
+}
+
+.select-style:hover::after {
+  color: #ffc964;
+}
+
+.select-form {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: 0;
+  box-shadow: none;
+  border: 0!important;
+  background: #4e350746;
+  background-image: none;
+  flex: 1;
+  padding: 0 .5em;
+  color: #ffc964;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.select-form::-ms-expand {
+  display: none;
+}
+
+.option {
+  background-color: #704f11a2;
+}
+
+option:hover {
+  background-color: #ad750ca2;
+  color: #ffc964;
 }
 
 /*******Tablet Display*******/
