@@ -1,10 +1,10 @@
 import React from "react";
 
-const Header = ({ nameInput, onNameInputChange, onStepChange }) => {
+const Header = () => {
   return (
-    <section>
+    <section className="header">
       <h1>HELLO!?</h1>
-      <h4>- is there somebody out there? 👽</h4>
+      <h4> is there anyone out there...</h4>
     </section>
   );
 };

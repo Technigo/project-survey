@@ -7,7 +7,7 @@ const SecondQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form className="container">
+    <form className="second-container">
       <label className="label-container" htmlFor="surnameInput">
         What's your surname?
       </label>
@@ -18,8 +18,12 @@ const SecondQuestion = ({
         value={surnameInput}
         onChange={onSurnameInputChange}
       />
-      <button className="button" onClick={onStepChange}>
-        Next question{" "}
+      <button
+        className="second-button"
+        disable={surnameInput === ""}
+        onClick={onStepChange}
+      >
+        Next question
       </button>
     </form>
   );

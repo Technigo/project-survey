@@ -1,0 +1,26 @@
+.start-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(100, 148, 237, 0.516);
+  gap: 20px;
+  border-radius: 10px;
+}
+
+.start-button {
+  padding: 20px;
+  border-radius: 10px;
+  border-color: blueviolet;
+  background-color: black;
+  color: azure;
+}
+
+h2 {
+  font-family: "Creepster", cursive;
+  color: blueviolet;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

@@ -1,8 +1,9 @@
 import React from "react";
+import "./Overview.css";
 
 const Overview = ({ nameInput, surnameInput, ageGroup, believesInput }) => {
   return (
-    <section>
+    <section className="container">
       <h2>Summary</h2>
       <p>Name: {nameInput}</p>
       <p>Surname: {surnameInput}</p>

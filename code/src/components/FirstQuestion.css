@@ -2,15 +2,20 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 50px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: rgba(205, 180, 228, 0.447);
+  gap: 20px;
+  border-radius: 10px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  font-size: 20px;
 }
 
 .label-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 10px;
-  margin-bottom: 20px;
 }
 
 .input-container {
@@ -18,7 +23,6 @@
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 40px;
   padding: 10px;
   border-radius: 10px;
   border-color: cornflowerblue;
@@ -27,8 +31,9 @@
 .button {
   display: flex;
   flex-direction: column;
-  padding: 5px;
+  padding: 10px;
   border-radius: 10px;
   border-color: cornflowerblue;
   background-color: blueviolet;
+  font-family: "Oswald", sans-serif;
 }

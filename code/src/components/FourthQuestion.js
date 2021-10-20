@@ -6,10 +6,10 @@ const FourthQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form>
+    <form className="second-container">
       Do you believe there's life on another planet?
       <select onChange={onBelievesInputChange} value={believesInput}>
-        <option value="">Select answer</option>
+        <option value="">Select your answer</option>
         <option value="Yes">
           Yes, I believe there's life on another planet.
         </option>
@@ -20,7 +20,13 @@ const FourthQuestion = ({
           Possibly, I'm not sure what to believe.
         </option>
       </select>
-      <button onClick={onStepChange}>Next question </button>
+      <button
+        className="second-button"
+        disable={believesInput === ""}
+        onClick={onStepChange}
+      >
+        Next question
+      </button>
     </form>
   );
 };

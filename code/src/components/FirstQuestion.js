@@ -14,7 +14,11 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         value={nameInput}
         onChange={onNameInputChange}
       />
-      <button className="button" onClick={onStepChange}>
+      <button
+        className="button"
+        disable={nameInput === ""}
+        onClick={onStepChange}
+      >
         Next question
       </button>
     </form>
