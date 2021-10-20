@@ -5,7 +5,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange }) => {
 
 	return (
 		<div className="form-row">
-			<label htmlFor="nameInput">Type your name</label>
+			<label htmlFor="nameInput"><p>Type your name</p></label>
 			<input
 				id="nameInput"
 				type="text"

@@ -6,18 +6,18 @@ const ThirdQuestion = ({ setPastry, chosenPastry, onStepChange }) => {
     const choosePastry =["Cookies 🍪 ", "Cakes 🍰", "Bread 🍞"];
 
     return (
-            <div class="wrapper-col">
-            What do you like to learn to bake?
+            <div className="wrapper-col">
+            <p>What would you like to learn to bake?</p>
             {choosePastry.map(pastry => (
                 <label className="radiobutton-container" key={pastry}>
-                <input 
+                <input aria-label="choose pastry"
                 type="radio"
                 value={pastry}
                 onChange={event => setPastry(event)}
                 checked={chosenPastry === pastry}
                 />
                 {pastry}
-                <span class="custom-radio"></span>
+                <span className="custom-radio"></span>
             </label>
             ))}
             </div >

@@ -1,33 +1,67 @@
 .wrapper {
-    height: 400px;
-    padding: 50px;
-    background-color: #c2f3f6;
+    height: 100vh;
+    padding: 0px 30px 0px 30px;
+    background-color: #bee5e9;
 }
 
-.form {
-    display: grid;
-    grid-template-columns: repeat(12, 1fr);
+.form-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
     text-align: center;
-    justify-content: center;
-    padding: 50px;
+}
+
+#form {
+    border-radius: 10px;
+    background-color: #96dee4;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+}
+
+/*input*/
+
+input[type=text] {
+    width: 100%;
+    background-color: #45c5cf;
+    padding: 12px 20px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border: 3px solid #f6acb0;
+    border-radius: 2px;
+}
+
+input[type=text]:focus {
+    background-color: #f6acb0;
+    border-radius: 2px;
 }
 
 .submit-button {
-    font-size: 24px;
-    top: 65%;
-    right: 20%;
-    padding: 20px;
-    border: 1px solid #1DB9C3;
-    background: #1DB9C3;
+    margin-top: 50px;
+    font-family: 'Truculenta', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 13px 30px 13px;
+    border: 1px solid #f6acb0;
+    border-radius: 10px;
     cursor: pointer;
+    background-color: #f6acb0;
 }
 
-.form-row {
-    margin: 10px;
-  }
-
+.submit-button:hover {
+    border: 1px solid #f6acb0;
+    background-color: #f6acb0;
+    transform: scale(1.1);
+    transition: .3s ease;
+}
 
 /*radiobutton*/
+
 .wrapper-col {
     flex-direction: column;
 }
@@ -36,7 +70,7 @@
     display: block;
     position: relative;
     padding-left: 25px;
-    margin:  4px 0  5px 0;
+    margin: 4px 0 5px 0;
     user-select: none;
     font-size: 0.8rem;
     margin-bottom: 5px;
@@ -51,36 +85,72 @@
 }
 
 .custom-radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 19px;
-  width: 19px;
-  background-color: #eb8a87;  
-  cursor: pointer;
-  border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: #fbdadc;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-.radiobutton-container:hover input ~.custom-radio{
-    background-color: #eb8a87;
+.radiobutton-container:hover input~.custom-radio {
+    background-color: #fbdadc;
 }
 
-.radiobutton-container input:checked ~.custom-radio{
-    background-color: #eb8a87;
+.radiobutton-container input:checked~.custom-radio {
+    background-color: #f6acb0;
 }
 
 .custom-radio:after {
     content: "";
     position: absolute;
     top: 6px;
-    left:6px;
+    left: 6px;
     width: 7px;
     height: 7px;
-    background-color:#fbdadc;
+    background-color: #fbdadc;
     border-radius: 50%;
     display: none;
-    }
-    
-    .radiobutton-container input:checked ~.custom-radio::after{
+}
+
+.radiobutton-container input:checked~.custom-radio::after {
     display: block;
-    }
+}
+
+
+.custom-select {
+    margin-top: 20px;
+    border: 1px solid #ccc;
+    width: 250px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #fff;
+    background: #fff;
+    position: relative;
+}
+.custom-select select {
+    padding: 5px 8px;
+    width: 100%;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+}
+.custom-select:after {
+    top: 0%;
+    left: 80%;
+    content: '🧁';
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 5px;
+    margin-top: -2px;
+    
+}
+.custom-select select:focus {
+    outline: none;
+}

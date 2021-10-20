@@ -2,17 +2,14 @@ import React from 'react';
 import 'emoji-slider';
 
 
-const Slider = ({ happiness, setHappiness }) => {
+const Slider = ({ }) => {
 return (
     <>
-    <p>Drag the cookie</p>
-<emoji-slider emoji="🍪" onChange={(event) => setHappiness(event)}></emoji-slider>
+    <p><strong>"Rememeber! A balanced diet is a cookie in each hand!"</strong>/Cookiemonster</p>
+<emoji-slider emoji="🍪"></emoji-slider>
 </>
-
 
 );
 };
-
-
 
 export default Slider;

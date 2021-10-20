@@ -92,7 +92,7 @@ const Form = () => {
             )}
 
             {showSummary === true && (
-                <Summary nameInput={nameInput} experience={experience} chosenPastry={pastry} date={date} setHappiness={setHappiness}
+                <Summary nameInput={nameInput} experience={experience} chosenPastry={pastry} date={date}
 
                 />
             )}

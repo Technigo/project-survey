@@ -5,7 +5,7 @@ const SignUpButton =({reset, element, onSignUp}) => {
 
 return (
 <button onClick={onSignUp} className="signup-button">
-          Sign up below!
+          Sign up here!
         </button>
 );
 };

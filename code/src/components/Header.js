@@ -7,7 +7,7 @@ export const Header = ({onSignUp}) => {
   return (
     <header className="header">
       <img
-        src="../img/hero-image.jpg"
+        src="../img/hero-image.jpeg"
         className="hero-img"
         alt="Ingredients and utensils for baking on a pastel background"
       />
