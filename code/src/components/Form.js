@@ -2,12 +2,14 @@ import React, { useState } from "react";
 import { FirstQuestion } from "./FirstQuestion";
 import { SecondQuestion } from "./SecondQuestion";
 import { ThirdQuestion } from "./ThirdQuestion";
+import { FourthQuestion } from "./FourthQuestion";
 import { Overview } from "./Overview";
 
 const Form = () => {
 	const [nameInput, setNameInput] = useState("");
-	const [ageInput, setAgeInput] = useState("");
+	const [ageInput, setAgeInput] = useState();
 	const [streamingInput, setStreamingInput] = useState("");
+	const [genresInput, setGenresInput] = useState(false);
 	const [step, setStep] = useState(1);
 
 	const onNameInputChange = (event) => {
@@ -15,11 +17,15 @@ const Form = () => {
 	};
 
 	const onAgeInputChange = (event) => {
-		setAgeInput(event.target.value); // or should this be setAgeInput(event.target.checked) ?
+		setAgeInput(event.target.value);
 	};
 
 	const onStreamingInputChange = (event) => {
 		setStreamingInput(event.target.value);
+	};
+
+	const onGenresInputChange = (event) => {
+		setGenresInput(event.target.checked);
 	};
 
 	const nextQuestion = () => {
@@ -56,10 +62,20 @@ const Form = () => {
 	} else if (step === 4) {
 		// prettier-ignore
 		return (
+	  <FourthQuestion
+			genresInput={genresInput}
+			onGenresInputChange={onGenresInputChange}
+			nextQuestion={nextQuestion}
+	  />
+    );
+	} else if (step === 5) {
+		// prettier-ignore
+		return (
 	  <Overview
 	    nameInput={nameInput}
 	    ageInput={ageInput}
 	    streamingInput={streamingInput}
+			genresInput={genresInput}
 	  />
     );
 	}

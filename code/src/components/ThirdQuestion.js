@@ -11,7 +11,7 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 				<option value="svtPlay">SVT Play</option>
 				<option value="hbo">HBO</option>
 			</select>
-			<button onClick={nextQuestion}>Submit</button>
+			<button onClick={nextQuestion}>Next question</button>
 		</form>
 	);
 };
