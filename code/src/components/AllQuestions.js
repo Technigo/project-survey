@@ -27,10 +27,28 @@ const questions = [
 const AllQuestions = () => {
   const [questionNumber, setQuestionNumber] = useState(0);
   const [answers, setAnswers] = useState({});
+  const [valid, setValid] = useState(true);
 
   const handleSubmission = (event) => {
     event.preventDefault();
-    setQuestionNumber(questionNumber + 1);
+    // This condition will only set the question number up one if the answer given was valid. If not valid, a message will appear instead.
+    if (
+      answers[questionNumber] === "" ||
+      answers[questionNumber] === undefined
+    ) {
+      setValid(false);
+    } else {
+      setValid(true);
+      setQuestionNumber(questionNumber + 1);
+    }
+  };
+
+  const handleGoingBack = (event) => {
+    event.preventDefault();
+
+    if (questionNumber > 0) {
+      setQuestionNumber(questionNumber - 1);
+    }
   };
 
   const onAnswerChange = (newAnswer) => {
@@ -39,23 +57,32 @@ const AllQuestions = () => {
   };
 
   const lastQuestion = questionNumber === questions.length - 1;
+  const firstQuestion = questionNumber === 0;
+  const questionsRemaining = questionNumber < questions.length;
 
   return (
     <>
-      {questionNumber < questions.length ? (
-        <form onSubmit={handleSubmission}>
-          <Question
-            key={questions[questionNumber].number}
-            question={questions[questionNumber]}
-            answer={answers[questionNumber]}
-            setAnswer={onAnswerChange}
-          />
-          <button type="submit">
-            {lastQuestion ? "Submit" : "Next Question"}
-          </button>
-        </form>
+      {questionsRemaining ? (
+        <>
+          <form onSubmit={handleSubmission}>
+            <Question
+              key={questions[questionNumber].number}
+              question={questions[questionNumber]}
+              answer={answers[questionNumber]}
+              setAnswer={onAnswerChange}
+            />
+            <button onClick={handleGoingBack} disabled={firstQuestion}>
+              Go back
+            </button>
+
+            <button type="submit">
+              {lastQuestion ? "Submit" : "Next Question"}
+            </button>
+          </form>
+          {!valid && <p>Please enter a response</p>}
+        </>
       ) : (
-        <ReviewSubmit answers={answers}/>
+        <ReviewSubmit answers={answers} />
       )}
     </>
   );
