@@ -7,20 +7,42 @@ import { FormSummary } from 'components/FormSummary'
 
 console.log(data)
 
-export const FormWrapper = props => {
-  const { step, state, handleChange } = props
-
+export const FormWrapper = ({ step, state, handleChange, setValid }) => {
   return (
-    <form>
+    <form className='form'>
       {data.questions
         .filter(item => item.number === step)
         .map(item => {
           if (item.type === 'text') {
-            return <TextInput key={item.id} data={item} state={state} handleChange={handleChange} />
+            return (
+              <TextInput
+                key={item.id}
+                data={item}
+                state={state}
+                handleChange={handleChange}
+                setValid={setValid}
+              />
+            )
           } else if (item.type === 'radio') {
-            return <Radio key={item.id} data={item} state={state} handleChange={handleChange} />
+            return (
+              <Radio
+                key={item.id}
+                data={item}
+                state={state}
+                handleChange={handleChange}
+                setValid={setValid}
+              />
+            )
           } else if (item.type === 'dropdown') {
-            return <DropDown key={item.id} data={item} state={state} handleChange={handleChange} />
+            return (
+              <DropDown
+                key={item.id}
+                data={item}
+                state={state}
+                handleChange={handleChange}
+                setValid={setValid}
+              />
+            )
           }
           return null
         })}
