@@ -7,8 +7,8 @@ import Summary from './Summary'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('') // state property called nameInput
-  const [ageInput, setAgeInput] = useState('') // state property called surnameInput
-  const [activityInput, setActivityInput] = useState('') // state property called surnameInput
+  const [ageInput, setAgeInput] = useState('age') // state property called surnameInput
+  const [activityInput, setActivityInput] = useState('tutoring') // state property called surnameInput
   const [emailInput, setEmailInput] = useState('') // state property called surnameInput
   const [step, setStep] = useState(1)
   const [showResult, setShowResult] = useState(false)
