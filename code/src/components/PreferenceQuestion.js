@@ -2,7 +2,13 @@ import React from 'react'
 
 const PreferenceQuestion = ({
   preferenceInput,
+  clothingInput,
+  travelInput,
+  eventsInput,
   onPreferenceInputChange,
+  onClothingInputChange,
+  onTravelInputChange,
+  onEventsInputChange,
   onStepChange,
   onEnter,
 }) => {
@@ -18,54 +24,54 @@ const PreferenceQuestion = ({
             id="surfInput"
             type="checkbox"
             checked={preferenceInput}
-            value="surf"
+            value={preferenceInput}
             onChange={onPreferenceInputChange}
             onKeyPress={onEnter}
           />
         </div>
+        *{' '}
         <div className="input-child">
-          <label className="label-checkbox" htmlFor="preferenceInput">
+          <label className="label-checkbox" htmlFor="clothingInput">
             {' '}
             Clothing{' '}
           </label>
           <input
             id="clothingInput"
             type="checkbox"
-            checked={preferenceInput}
-            value={preferenceInput}
-            onChange={onPreferenceInputChange}
+            checked={clothingInput}
+            value={clothingInput}
+            onChange={onClothingInputChange}
             onKeyPress={onEnter}
           />
         </div>
-        {/*
         <div className="input-child">
-          <label className="label-checkbox" htmlFor="preferenceInput">
+          <label className="label-checkbox" htmlFor="eventsInput">
             {' '}
             Events{' '}
           </label>
           <input
             id="eventsInput"
             type="checkbox"
-            checked={preferenceInput}
-            value={preferenceInput}
-            onChange={onPreferenceInputChange}
+            checked={eventsInput}
+            value={eventsInput}
+            onChange={onEventsInputChange}
             onKeyPress={onEnter}
           />
         </div>
         <div className="input-child">
-          <label className="label-checkbox" htmlFor="preferenceInput">
+          <label className="label-checkbox" htmlFor="travelInput">
             {' '}
             Travel{' '}
           </label>
           <input
-            id="preferenceInput"
+            id="travelInput"
             type="checkbox"
-            checked={preferenceInput}
-            value={preferenceInput}
-            onChange={onPreferenceInputChange}
+            checked={travelInput}
+            value={travelInput}
+            onChange={onTravelInputChange}
             onKeyPress={onEnter}
           />
-        </div> */}
+        </div>
       </form>
       <button
         disabled={preferenceInput === false}

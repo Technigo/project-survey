@@ -21,7 +21,7 @@ const FirstQuestion = ({
       <button
         disabled={nameInput === ''}
         className="btn6"
-        type="button"
+        type="submit"
         onClick={onStepChange}
       >
         Next question

@@ -7,7 +7,11 @@ import Summary from './Summary'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [preferenceInput, setPreferenceInput] = useState('false')
+  const [preferenceInput, setPreferenceInput] = useState(false)
+  const [clothingInput, setClothingInput] = useState(false)
+  const [travelInput, setTravelInput] = useState(false)
+  const [eventsInput, setEventsInput] = useState(false)
+
   const [emailInput, setEmailInput] = useState('')
   const [step, setStep] = useState(1)
 
@@ -15,9 +19,17 @@ const Form = () => {
     setNameInput(event.target.value)
   }
 
-  // one more fx for event.target.value
   const onPreferenceInputChange = (event) => {
     setPreferenceInput(event.target.checked)
+  }
+  const onClothingInputChange = (event) => {
+    setClothingInput(event.target.checked)
+  }
+  const onTravelInputChange = (event) => {
+    setTravelInput(event.target.checked)
+  }
+  const onEventsInputChange = (event) => {
+    setEventsInput(event.target.checked)
   }
 
   const onEmailInputChange = (event) => {
@@ -28,10 +40,10 @@ const Form = () => {
     setStep(step + 1)
   }
 
+  //need one for email here inside of the enter key.
   const onEnter = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && event.target.value !== '') {
       event.preventDefault()
-      // (nameInput !==)
       setStep(step + 1)
     }
   }
@@ -50,6 +62,12 @@ const Form = () => {
         <PreferenceQuestion
           preference={preferenceInput}
           onPreferenceInputChange={onPreferenceInputChange}
+          clothing={clothingInput}
+          onClothingInputChange={onClothingInputChange}
+          travelInput={travelInput}
+          onTravelInputChange={onTravelInputChange}
+          eventsinput={eventsInput}
+          onEventsInputChange={onEventsInputChange}
           onStepChange={onStepChange}
           onEnter={onEnter}
         />
@@ -67,6 +85,9 @@ const Form = () => {
           nameInput={nameInput}
           emailInput={emailInput}
           preferenceInput={preferenceInput}
+          clothingInput={clothingInput}
+          travelInput={travelInput}
+          eventsInput={eventsInput}
           onEnter={onEnter}
         />
       )}
