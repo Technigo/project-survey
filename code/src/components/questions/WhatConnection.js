@@ -1,7 +1,11 @@
 import React from "react"
 import SelectDropdown from "../inputTypes/SelectDropdown"
 
-const Connection = ({role, setRole}) => {
+const Connection = ({
+  role, 
+  setRole,
+  onStepChange,
+}) => {
   const roles = [
     {value: 'teacher', description: 'Codecoach'},
     {value: 'student', description: 'Fellow student'},
@@ -19,6 +23,7 @@ const Connection = ({role, setRole}) => {
           valueArray={roles}
         />
       </label> 
+      <button onClick={onStepChange}>Next question</button>
     </form>  
   )
 }

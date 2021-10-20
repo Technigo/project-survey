@@ -1,17 +1,17 @@
 import React from "react"
 import TextField from "./../inputTypes/TextField"
 
-const Suggestions = ({
-  improve, 
-  setImprove,
+const MoreToAdd = ({
+  moreColor,
+  setMoreColor,
   onStepChange,
 }) => {
   return(
     <form>
-      <label>How can the portfolio be improved?  
+      <label>How could I improve the color scheme?  
         <TextField
-          value={improve}
-          setValue={setImprove}
+          value={moreColor}
+          setValue={setMoreColor}
         />  
       </label> 
       <button onClick={onStepChange}>Next question</button>
@@ -19,4 +19,4 @@ const Suggestions = ({
   )
 }
 
-export default Suggestions
+export default MoreToAdd

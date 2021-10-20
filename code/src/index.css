@@ -16,7 +16,8 @@ code {
 
 .website-image {
   display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 95%;
+/*   margin-left: auto;
+  margin-right: auto; */
+  height: 400px;
+  /* width: 95%; */
 }

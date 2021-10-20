@@ -1,7 +1,11 @@
 import React from "react"
 import RangeSlider from "../inputTypes/RangeSlider"
 
-const VisualAppearance = ({visualAppearance, setVisualAppearance}) => {
+const VisualAppearance = ({
+  visualAppearance, 
+  setVisualAppearance,
+  onStepChange,
+}) => {
   return(
     <form>
       <label> How visually appealing is the header section to you?
@@ -11,7 +15,8 @@ const VisualAppearance = ({visualAppearance, setVisualAppearance}) => {
           min={1}
           max={5}
         />
-      </label>   
+      </label>
+      <button onClick={onStepChange}>Next question</button>   
     </form>
   )
 }

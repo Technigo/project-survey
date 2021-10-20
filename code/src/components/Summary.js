@@ -6,9 +6,11 @@ const Summary = ({
   color,
   text,
   recommend,
-  improve}) => {
+  improve,
+}) => {
   return (
     <div>
+      <h2>Summary</h2>
       <p>You are a {role}</p>
       <p>You give the visual Appearance of the Portfolio-page a rating of {visualAppearance}</p>
       <p>You {color === 'yes'?'like':'do not like'} the color choice of the Portfolio-page</p>
