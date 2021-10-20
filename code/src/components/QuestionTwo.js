@@ -5,7 +5,6 @@ const QuestionTwo = ({
   // onStepChange,
   questionTwoAnswer,
   onQuestionTwoChange,
-  // eslint-disable-next-line comma-dangle
   handleSubmit,
 }) => {
   // console.log('questionOneData: ', questionOneData);

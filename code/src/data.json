@@ -1,7 +1,6 @@
 {
   "title": "Quiz Time",
-  "showProgressBar": "bottom",
-  "startQuizHtml": "You are about to start the quiz. Please click on 'Start Quiz' button when you are ready.",
+  "startQuizHtml": "You are about to start the quiz. Please click on the 'Start Quiz' button when you are ready.",
   "pages": [
     {
       "questions": [
@@ -52,12 +51,21 @@
         {
           "type": "select",
           "name": "Decode Emojis",
-          "title": "the example picture stands for IKEA. Can you decode the second picture (hint: it's a song title)? Who is the singer of this song?",
+          "title": "The example picture stands for IKEA. Can you decode the second picture (hint: it's a song title)?",
           "choices": ["Bon Jovi", "Beyoncé", "Evanescence", "Madonna"],
           "correctAnswer": "Madonna",
-          "img_url": "./assets/questionFour.jpg",
-          "img_url_example": "./assets/QuestionFourExample.jpg",
           "id": "4"
+        }
+      ]
+    },
+    {
+      "questions": [
+        {
+          "type": "range",
+          "name": "Lego 🖐",
+          "title": "How many Lego bricks does the average person have?",
+          "correctAnswer": "80",
+          "id": "5"
         }
       ]
     }

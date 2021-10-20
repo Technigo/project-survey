@@ -7,6 +7,7 @@ import QuestionOne from './QuestionOne';
 import QuestionTwo from './QuestionTwo';
 import QuestionThree from './QuestionThree';
 import QuestionFour from './QuestionFour';
+import QuestionFive from './QuestionFive';
 import Summary from './Summary';
 import ProgressBar from './ProgressBar';
 
@@ -17,11 +18,9 @@ const saveSelectedAnswers = [];
 const totalQuestions = data.pages.length;
 
 const Quiz = () => {
-  const testData = { bgcolor: '#00695c', completed: 0 };
-
-  const updateProgressBar = (step) => {
-    testData.completed = step;
-  };
+  // const updateProgressBar = (step) => {
+  //   progressBarData.completed = step;
+  // };
 
   const [step, setStep] = useState(-1);
   const [questionOne, setQuestionOne] = useState('');
@@ -30,6 +29,8 @@ const Quiz = () => {
   const [questionThree, setQuestionThree] = useState('');
   // eslint-disable-next-line no-unused-vars
   const [questionFour, setQuestionFour] = useState('');
+  // eslint-disable-next-line no-unused-vars
+  const [questionFive, setQuestionFive] = useState(50);
 
   // const saveSelectedAnswer = (answer) => {
   //   saveSelectedAnswers.push(answer);
@@ -56,6 +57,11 @@ const Quiz = () => {
   const onQuestionFourChange = (event) => {
     setQuestionFour(event.target.value);
     saveSelectedAnswers[3] = event.target.value;
+  };
+
+  const onQuestionFiveChange = (event) => {
+    setQuestionFive(event.target.value);
+    saveSelectedAnswers[4] = event.target.value;
   };
 
   const onStepChange = () => {
@@ -93,7 +99,6 @@ const Quiz = () => {
         )}
         {step === 1 && (
           <>
-            {updateProgressBar(step)}
             <QuestionOne
               questionOneData={data.pages[0].questions[0]}
               questionOneAnswer={questionOne}
@@ -101,17 +106,12 @@ const Quiz = () => {
               handleSubmit={handleSubmit}
             />
             <div className='progress-bar'>
-              <ProgressBar
-                bgcolor={testData.bgcolor}
-                completed={testData.completed}
-                totalQuestions={totalQuestions}
-              />
+              <ProgressBar completed={step} totalQuestions={totalQuestions} />
             </div>
           </>
         )}
         {step === 2 && (
           <>
-            {updateProgressBar(step)}
             <QuestionTwo
               questionTwoData={data.pages[1].questions[0]}
               questionTwoAnswer={questionTwo}
@@ -119,17 +119,12 @@ const Quiz = () => {
               handleSubmit={handleSubmit}
             />
             <div className='progress-bar'>
-              <ProgressBar
-                bgcolor={testData.bgcolor}
-                completed={testData.completed}
-                totalQuestions={totalQuestions}
-              />
+              <ProgressBar completed={step} totalQuestions={totalQuestions} />
             </div>
           </>
         )}
         {step === 3 && (
           <>
-            {updateProgressBar(step)}
             <QuestionThree
               questionThreeData={data.pages[2].questions[0]}
               // questionThreeAnswer={questionThree}
@@ -137,17 +132,12 @@ const Quiz = () => {
               handleSubmit={handleSubmit}
             />
             <div className='progress-bar'>
-              <ProgressBar
-                bgcolor={testData.bgcolor}
-                completed={testData.completed}
-                totalQuestions={totalQuestions}
-              />
+              <ProgressBar completed={step} totalQuestions={totalQuestions} />
             </div>
           </>
         )}
         {step === 4 && (
           <>
-            {updateProgressBar(step)}
             <QuestionFour
               questionFourData={data.pages[3].questions[0]}
               // questionFourAnswer={questionFour}
@@ -155,15 +145,24 @@ const Quiz = () => {
               handleSubmit={handleSubmit}
             />
             <div className='progress-bar'>
-              <ProgressBar
-                bgcolor={testData.bgcolor}
-                completed={testData.completed}
-                totalQuestions={totalQuestions}
-              />
+              <ProgressBar completed={step} totalQuestions={totalQuestions} />
             </div>
           </>
         )}
         {step === 5 && (
+          <>
+            <QuestionFive
+              questionFiveData={data.pages[4].questions[0]}
+              questionFive={questionFive}
+              onQuestionFiveChange={onQuestionFiveChange}
+              handleSubmit={handleSubmit}
+            />
+            <div className='progress-bar'>
+              <ProgressBar completed={step} totalQuestions={totalQuestions} />
+            </div>
+          </>
+        )}
+        {step === 6 && (
           <Summary
             correctAnswers={data.pages.map(
               (page) => page.questions[0].correctAnswer

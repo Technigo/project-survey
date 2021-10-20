@@ -14,10 +14,7 @@ const StartPage = ({ onStepChange }) => {
         (<span className='message'>Bye bye!</span>))
       ) : (
         <>
-          <h1>
-            Ready for some Quiz time?
-            {/* {hidden ? null : 'Ready for some Quiz time?'} */}
-          </h1>
+          <h1>Ready for Quiz time?</h1>
           <div className='start-buttons'>
             <button type='button' onClick={onStepChange}>
               Yes

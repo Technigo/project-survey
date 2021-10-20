@@ -30,7 +30,7 @@
         "allowSingleLine": true
       }
     ],
-    "comma-dangle": ["error", "never"],
+    "comma-dangle": "off",
     "consistent-return": "off",
     "curly": "error",
     "eol-last": "off",

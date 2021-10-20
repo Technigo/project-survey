@@ -1,13 +1,6 @@
 import React from 'react';
 
 const Summary = ({ correctAnswers, selectedAnswers }) => {
-  // console.log('correctAnswers: ', correctAnswers);
-  // console.log('your answers: ', selectedAnswers);
-
-  // const greenColor = {
-  //   color: '#00695c',
-  // };
-
   return (
     <>
       <h2>Summary</h2>
@@ -24,14 +17,23 @@ const Summary = ({ correctAnswers, selectedAnswers }) => {
             <tr key={answer} className='summary-answers'>
               <th>{index + 1}</th>
               <td>{answer}</td>
-              <td>{selectedAnswers[index]}</td>
+              <td
+                style={{
+                  backgroundColor:
+                    correctAnswers[index] === selectedAnswers[index]
+                      ? '#81e681'
+                      : '#f19696',
+                }}
+              >
+                {selectedAnswers[index]}
+              </td>
             </tr>
-            //   {correctAnswers[index] === selectedAnswers[index] && (
-            //     style={greenColor}
-            // )}
           ))}
         </tbody>
       </table>
+      <button type='button' onClick={() => window.location.reload(false)}>
+        Play again
+      </button>
     </>
   );
 };

@@ -23,7 +23,7 @@ const QuestionThree = ({
             </option>
           ))}
         </select>
-        <br /> <br />
+        <br />
         {/* <AudioPlayer /> */}
         {/* <audio src='../../public/assets/questionThree.mp3' controls /> */}
         <audio controlsList='nodownload' controls>
@@ -36,7 +36,7 @@ const QuestionThree = ({
           />
           Your browser does not support the audio tag.
         </audio>
-        <br /> <br />
+        <br />
         <button
           aria-pressed='false'
           aria-label='Go to next question'

@@ -1,31 +1,29 @@
 import React from 'react';
 
 const ProgressBar = (props) => {
-  const { bgcolor, completed, totalQuestions } = props;
+  const { completed, totalQuestions } = props;
 
   const containerStyles = {
     height: 20,
-    width: '60%',
+    width: '100%',
     backgroundColor: '#e0e0de',
     borderRadius: 50,
-    // eslint-disable-next-line comma-dangle
     margin: 50,
   };
 
   const fillerStyles = {
     height: '100%',
-    // width: `${completed}%`,
     width: `${(completed / totalQuestions) * 100}%`,
-    backgroundColor: bgcolor,
+    backgroundColor: '#00695c',
     borderRadius: 'inherit',
-    // eslint-disable-next-line comma-dangle
     textAlign: 'right',
   };
 
   const labelStyles = {
     padding: 5,
     color: 'white',
-    // eslint-disable-next-line comma-dangle
+    fontSize: 10,
+    letterSpacing: -1,
     fontWeight: 'bold',
   };
 
