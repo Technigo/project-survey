@@ -10,7 +10,7 @@ const SignIn = ({ onStepChange }) => {
         <h2>Enter your E-mail and start the Movie Selector</h2>
         <div className="start-box-child">
           <form>
-            <p>Put your Email her Movie Selector</p>
+            <p> Movie Selector</p>
             <label className="name-input" htmlFor="nameInput"></label>
             <input
               id="nameInput"
