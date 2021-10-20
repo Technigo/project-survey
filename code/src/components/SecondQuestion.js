@@ -36,8 +36,5 @@ const SecondQuestion = ({
     </form>
   )
 }
-{
-  /* <button onClick={() => window.location.reload(false)} className="btn">Let' start over! <span role="img" aria-label="handpointer">👋🏼</span></button> */
-}
 
 export default SecondQuestion

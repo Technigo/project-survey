@@ -28,12 +28,14 @@ const Summary = ({
           . . .{" "}
         </span>{" "}
       </h3>
+      <button
+        onClick={() => window.location.reload(false)}
+        className="glow-on-hover"
+      >
+        SUBMIT
+      </button>
     </section>
   )
 }
-
+//  <span className='highlighted-text'>{checkboxGroup.join(', ')}</span>
 export default Summary
-
-{
-  //  <span className='highlighted-text'>{checkboxGroup.join(', ')}</span>
-}
