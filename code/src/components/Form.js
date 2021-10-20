@@ -56,7 +56,6 @@ const Form = () => {
         )}
         {step === 3 && (
           <ThirdQuestion 
-            feeling={feeling} 
             onFeelingChange={onFeelingChange} 
             onStepChange={onStepChange} 
           />
