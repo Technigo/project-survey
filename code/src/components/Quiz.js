@@ -105,9 +105,9 @@ const Quiz = () => {
               onQuestionOneChange={onQuestionOneChange}
               handleSubmit={handleSubmit}
             />
-            <div className='progress-bar'>
-              <ProgressBar completed={step} totalQuestions={totalQuestions} />
-            </div>
+            {/* <div className='progress-bar'> */}
+            <ProgressBar completed={step} totalQuestions={totalQuestions} />
+            {/* </div> */}
           </>
         )}
         {step === 2 && (
@@ -118,9 +118,7 @@ const Quiz = () => {
               onQuestionTwoChange={onQuestionTwoChange}
               handleSubmit={handleSubmit}
             />
-            <div className='progress-bar'>
-              <ProgressBar completed={step} totalQuestions={totalQuestions} />
-            </div>
+            <ProgressBar completed={step} totalQuestions={totalQuestions} />
           </>
         )}
         {step === 3 && (
@@ -131,9 +129,7 @@ const Quiz = () => {
               onQuestionThreeChange={onQuestionThreeChange}
               handleSubmit={handleSubmit}
             />
-            <div className='progress-bar'>
-              <ProgressBar completed={step} totalQuestions={totalQuestions} />
-            </div>
+            <ProgressBar completed={step} totalQuestions={totalQuestions} />
           </>
         )}
         {step === 4 && (
@@ -144,9 +140,7 @@ const Quiz = () => {
               onQuestionFourChange={onQuestionFourChange}
               handleSubmit={handleSubmit}
             />
-            <div className='progress-bar'>
-              <ProgressBar completed={step} totalQuestions={totalQuestions} />
-            </div>
+            <ProgressBar completed={step} totalQuestions={totalQuestions} />
           </>
         )}
         {step === 5 && (

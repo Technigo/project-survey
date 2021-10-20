@@ -6,7 +6,7 @@
       "questions": [
         {
           "type": "radio",
-          "name": "🎬 Movie 🍿",
+          "name": "1 🎬 Movie 🍿",
           "title": "What's the name of the movie?",
           "choices": ["Matrix", "Interstellar", "Pulp Fiction", "Inception"],
           "correctAnswer": "Inception",
@@ -19,7 +19,7 @@
       "questions": [
         {
           "type": "radio",
-          "name": "🎬 Movie 🍿",
+          "name": "2 🎬 Movie 🍿",
           "title": "What's the name of the movie?",
           "choices": [
             "Dirty dancing",
@@ -37,7 +37,7 @@
       "questions": [
         {
           "type": "select",
-          "name": "🎵 Disney music 🎵",
+          "name": "3 🎵 Disney music 🎵",
           "title": "Play the music. The song belongs to which Disney movie?",
           "choices": ["Mulan", "Moana", "Pocahontas", "Frozen"],
           "correctAnswer": "Pocahontas",
@@ -50,7 +50,7 @@
       "questions": [
         {
           "type": "select",
-          "name": "Decode Emojis",
+          "name": "4 Decode Emojis",
           "title": "The example picture stands for IKEA. Can you decode the second picture (hint: it's a song title)?",
           "choices": ["Bon Jovi", "Beyoncé", "Evanescence", "Madonna"],
           "correctAnswer": "Madonna",
@@ -62,7 +62,7 @@
       "questions": [
         {
           "type": "range",
-          "name": "Lego 🖐",
+          "name": "5 Lego 🖐",
           "title": "How many Lego bricks does the average person have?",
           "correctAnswer": "80",
           "id": "5"

@@ -17,27 +17,32 @@ const QuestionOne = ({
       <form onSubmit={handleSubmit}>
         <h2>{questionOneData.name}</h2>
         <h3>{questionOneData.title}</h3>
-        {questionOneData.choices.map((choice) => (
-          <label key={choice} htmlFor={choice}>
-            <input
-              type={questionOneData.type}
-              value={choice}
-              onChange={onQuestionOneChange}
-              checked={questionOneAnswer === choice}
-              // required={choice[0]}
-              required
-              name='choice'
-            />
-            {choice}
-            <br />
-          </label>
-        ))}
-        <img
-          src={questionOneData.img_url}
-          alt='question one'
-          width='200'
-          height='160'
-        />
+        <div className='input-image-container'>
+          <div className='input-container'>
+            {questionOneData.choices.map((choice) => (
+              <label key={choice} htmlFor={choice}>
+                <input
+                  type={questionOneData.type}
+                  value={choice}
+                  onChange={onQuestionOneChange}
+                  checked={questionOneAnswer === choice}
+                  // required={choice[0]}
+                  required
+                  id={choice}
+                  name='choice'
+                />
+                {choice}
+                <br />
+              </label>
+            ))}
+          </div>
+          <img
+            src={questionOneData.img_url}
+            alt='question one'
+            width='200'
+            height='160'
+          />
+        </div>
         <br />
         <button
           aria-pressed='false'
