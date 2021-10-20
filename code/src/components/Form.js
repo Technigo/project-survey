@@ -28,8 +28,9 @@ const Form = () => {
 		setGenresInput(event.target.checked);
 	};
 
-	const nextQuestion = () => {
+	const nextQuestion = (event) => {
 		setStep(step + 1);
+		event.preventDefault();
 	};
 
 	if (step === 1) {
@@ -66,7 +67,6 @@ const Form = () => {
 			genresInput={genresInput}
 			onGenresInputChange={onGenresInputChange}
 			nextQuestion={nextQuestion}
-			genresInput={genresInput}
 	  />
     );
 	} else if (step === 5) {

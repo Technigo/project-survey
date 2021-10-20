@@ -2,7 +2,7 @@ import React from "react";
 
 export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQuestion }) => {
 	return (
-		<form onSubmit={(event) => event.preventDefault()}>
+		<form onSubmit={nextQuestion}>
 			<label htmlFor="streamingInput">Which streaming service do you prefer?</label>
 
 			<select onChange={onStreamingInputChange} value={streamingInput}>
@@ -11,7 +11,9 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 				<option value="svtPlay">SVT Play</option>
 				<option value="hbo">HBO</option>
 			</select>
-			<button onClick={nextQuestion}>Next question</button>
+			<button type="submit" onClick={nextQuestion}>
+				Next question
+			</button>
 		</form>
 	);
 };

@@ -4,7 +4,7 @@ const ageGroup = ["Under 13", "13-17", "18-24", "25-34", "35-44", "45-54", "55-6
 
 export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => {
 	return (
-		<form onSubmit={(event) => event.preventDefault()}>
+		<form onSubmit={nextQuestion}>
 			What is your age?
 			{ageGroup.map((age) => (
 				<label key={age} htmlFor={age}>
@@ -19,7 +19,7 @@ export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => 
 					{age}
 				</label>
 			))}
-			<button onClick={nextQuestion}>Next question</button>
+			<button type="submit">Next question</button>
 		</form>
 	);
 };

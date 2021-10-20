@@ -2,7 +2,8 @@ import React from "react";
 
 export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion }) => {
 	return (
-		<form onSubmit={(event) => event.preventDefault()}>
+		// <form onSubmit={(event) => event.preventDefault()}>
+		<form onSubmit={nextQuestion}>
 			<label htmlFor="nameInput">What is your name?</label>
 			{/* prettier-ignore */}
 			<input
@@ -11,7 +12,8 @@ export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion }) =>
         value={nameInput}
         onChange={onNameInputChange}
       />
-			<button onClick={nextQuestion}>Next question</button>
+			{/* <button onClick={nextQuestion}>Next question</button> */}
+			<button type="submit">Next question</button>
 		</form>
 	);
 };
