@@ -1,7 +1,6 @@
 import React from "react";
 
 const Question1 = ({ traditionInput, onTraditionInputChange, onStepChange }) => {
-    /* const { traditionInput, onTraditionInputChange } = props */
 
     return (
         <form>
