@@ -66,6 +66,7 @@ const Form = () => {
 			genresInput={genresInput}
 			onGenresInputChange={onGenresInputChange}
 			nextQuestion={nextQuestion}
+			genresInput={genresInput}
 	  />
     );
 	} else if (step === 5) {
@@ -75,7 +76,7 @@ const Form = () => {
 	    nameInput={nameInput}
 	    ageInput={ageInput}
 	    streamingInput={streamingInput}
-			genresInput={genresInput}
+			// genresInput={genresInput}
 	  />
     );
 	}
