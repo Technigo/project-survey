@@ -7,7 +7,7 @@ import Summary from './Summary'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [preferenceInput, setPreferenceInput] = useState('false')
+  const [preferenceInput, setPreferenceInput] = useState(false)
   const [emailInput, setEmailInput] = useState('')
   const [step, setStep] = useState(1)
 
@@ -16,7 +16,7 @@ const Form = () => {
   }
 
   const onPreferenceInputChange = (event) => {
-    setPreferenceInput(event.target.value)
+    setPreferenceInput(event.target.checked)
   }
 
   const onEmailInputChange = (event) => {
@@ -41,7 +41,7 @@ const Form = () => {
           nameInput={nameInput}
           onNameInputChange={onNameInputChange}
           onStepChange={onStepChange}
-          onKeyPress={onEnter}
+          onEnter={onEnter}
         />
       )}
       {step === 2 && (
@@ -49,7 +49,7 @@ const Form = () => {
           preference={preferenceInput}
           onPreferenceInputChange={onPreferenceInputChange}
           onStepChange={onStepChange}
-          onKeyPress={onEnter}
+          onEnter={onEnter}
         />
       )}
       {step === 3 && (
@@ -57,7 +57,7 @@ const Form = () => {
           emailInput={emailInput}
           onEmailInputChange={onEmailInputChange}
           onStepChange={onStepChange}
-          onKeyPress={onEnter}
+          onEnter={onEnter}
         />
       )}
       {step === 4 && (
@@ -65,7 +65,7 @@ const Form = () => {
           nameInput={nameInput}
           preferenceInput={preferenceInput}
           emailInput={emailInput}
-          onKeyPress={onEnter}
+          onEnter={onEnter}
         />
       )}
     </div>

@@ -22,7 +22,7 @@ const PreferenceQuestion = ({
             onKeyPress={onEnter}
           />
         </div>
-        <div className="input-child">
+        {/* <div className="input-child">
           <label className="label-checkbox" htmlFor="preferenceInput">
             {' '}
             Clothing{' '}
@@ -63,7 +63,7 @@ const PreferenceQuestion = ({
             onChange={onPreferenceInputChange}
             onKeyPress={onEnter}
           />
-        </div>
+        </div> */}
       </form>
       <button className="btn6" type="button" onClick={onStepChange}>
         Last question
