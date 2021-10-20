@@ -16,11 +16,15 @@ const Song = ({
             value={songInput} 
             onChange={onSongInputChange}
             required
+            className="dropdown-label"
             >
                 <option value="">Select your favorite:</option>
-                <option value="Lastkaj 14">Lastkaj 14</option>
-                <option value="Tenacious D">Tenacious D</option>
-                <option value="Elton John">Elton John</option>
+                <option value="The thing">The Thing</option>
+                <option value="Michael Myers">Michael Myers</option>
+                <option value="Freddy Krueger">Freddy Krueger</option>
+                <option value="Ghostface">Ghostface</option>
+                <option value="Pennywise">Pennywise</option>
+                <option value="Jason">Jason</option>
             </select>
             <input className="btn" type="submit" value="End survey" onClick={onStepChange} />
 		</form>

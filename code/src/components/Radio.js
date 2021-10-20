@@ -15,7 +15,7 @@ const Radio = ({
 		<h2>Best horror director?</h2>
 		<form className="form" onSubmit={event => event.preventDefault()}>
 			{typeOfMusic.map(type => 
-				<label key={type}>
+				<label className="radio-label" key={type}>
 					<input 
 						className="radio-input"
 						id="check"
@@ -25,7 +25,9 @@ const Radio = ({
 						checked={radioInput === type}
 						required
 					/>
+				
 					{type}
+					
 			</label>
 		)}
 		<input className="btn" type="submit" value="continue" onClick={onStepChange} />

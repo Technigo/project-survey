@@ -39,7 +39,7 @@ const Form = () => {
 	return (
     <>
     <header>
-      <h1 className="vampire">SPOOKY</h1>
+      
     </header>
     <main className="main-container">
 		<section className="survey-container">
