@@ -41,21 +41,7 @@ export const App = () => {
     setSteps([...steps, newSteps])
   }
 
-  // const incrementStep = () => {
-  //   if (state.nextQuestion) {
-  //     setStep(state.nextQuestion)
-  //     setSteps([...steps, state.nextQuestion])
-  //   } else if (!state.nextQuestion) {
-  //     setStep(step + 1)
-  //     setSteps([...steps, step + 1])
-  //   } else {
-  //     setStep('end')
-  //     setSteps([...steps, 'end'])
-  //   }
-  // }
-
   const decrementStep = () => {
-    // console.log(steps.length)
     if (steps.length > 1) {
       const newSteps = steps.filter((e, i) => i < steps.length - 1)
       const newStep = newSteps[newSteps.length - 1]

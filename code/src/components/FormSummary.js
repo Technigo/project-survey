@@ -1,13 +1,12 @@
 import React from 'react'
 
 export const FormSummary = props => {
-  const { state, data } = props
-  const { answers } = state
+  const { state } = props
+
   return (
     <div>
       <h3>Survey Summary</h3>
       {state.answers.map(answer => {
-        // console.log(state.answers[question.title]) (key === 'value' && <p>{answer[key]}</p>)
         return (
           <>
             <h4>{answer.title}</h4>
@@ -24,8 +23,6 @@ export const FormSummary = props => {
           </>
         )
       })}
-
-      {/* <p>The summary: {JSON.stringify(state)}</p> */}
     </div>
   )
 }

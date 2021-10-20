@@ -8,7 +8,6 @@ export const TextInput = props => {
     <>
       <h2>{title}</h2>
       {options.map(option => {
-        // const { id, label, placeholder } =
         return (
           <label key={option.id}>
             {option.label}
