@@ -45,14 +45,14 @@ import AeroplaneQuestion from './AeroplaneQuestion'
   }*/
   if (step === 1) {
     return (
-      <div> < NameQuestion 
+      <div class="main"> < NameQuestion 
       nameInput={nameInput} 
       onNameInputChange={onNameInputChange}
       onstepChange = {onstepChange}/></div> 
     )
   } else if (step === 2) {
     return (
-      <div> <LocationQuestion 
+      <div class="main"> <LocationQuestion 
       locationInput={locationInput} 
       onLocationInputChange={onLocationInputChange}
       onstepChange = {onstepChange}/> </div>
@@ -60,7 +60,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
     
   } else if (step === 3) {
     return (
-      <div> <FavouriteAnimal
+      <div class="main"> <FavouriteAnimal
       animalInput={animalInput}
       onAnimalInputChange={onAnimalInputChange}
       onstepChange = {onstepChange}
@@ -68,7 +68,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
     )
   } else if (step === 4) {
     return (
-      <div> <FavouriteColour 
+      <div class="main"> <FavouriteColour 
       colourInput={colourInput}
       onColourInputChange={onColourInputChange}
       onstepChange = {onstepChange}
@@ -76,7 +76,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
     )
   } else if (step === 5) {
     return (
-      <div> <AeroplaneQuestion 
+      <div class="main"> <AeroplaneQuestion 
       AeroplaneInput={aeroplaneInput}
       onAeroplaneInputChange={onAeroplaneInputChange}
       onstepChange = {onstepChange}/>
