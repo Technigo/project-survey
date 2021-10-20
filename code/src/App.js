@@ -3,7 +3,15 @@ import { FormWrapper } from 'components/FormWrapper'
 import { Button } from 'components/Button'
 
 export const App = () => {
+  const [state, setState] = useState({})
   const [step, setStep] = useState(1)
+
+  const handleChange = e => {
+    const { id, value } = e.target
+    console.log('handleChange id: ', id, 'value: ', value)
+    setState({ ...state, [id]: value })
+  }
+
   const incrementStep = () => {
     step < 3 ? setStep(step + 1) : setStep('end')
   }
@@ -12,7 +20,7 @@ export const App = () => {
 
   return (
     <div>
-      <FormWrapper step={step} />
+      <FormWrapper step={step} state={state} handleChange={handleChange} />
       {step !== 'end' && <Button incrementStep={incrementStep} text={'Next question'} />}
       {step === 'end' && <Button incrementStep={handleRestart} text={'Restart'} />}
     </div>
