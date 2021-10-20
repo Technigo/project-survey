@@ -8,16 +8,16 @@ export const TextInput = props => {
     <>
       <h2>{title}</h2>
       {fields.map(field => {
-        const { id, label, placeholder } = field
+        // const { id, label, placeholder } =
         return (
-          <label key={id}>
-            {label}
+          <label key={field.id}>
+            {field.label}
             <input
               type='text'
-              id={id}
-              placeholder={placeholder}
-              value={state[id]}
-              onChange={handleChange}
+              id={field.id}
+              placeholder={field.placeholder}
+              value={state[field.id]}
+              onChange={e => handleChange(e, 0, title, props.data.id)}
             />
           </label>
         )

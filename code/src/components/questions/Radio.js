@@ -17,7 +17,7 @@ export const Radio = props => {
               name={type + id}
               id={type + id}
               value={option.value}
-              onChange={e => handleChange(e, option.next_question)}
+              onChange={e => handleChange(e, option.next_question, title, id)}
             />
           </label>
         )

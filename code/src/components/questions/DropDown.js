@@ -18,7 +18,7 @@ export const DropDown = props => {
         name='select'
         id={type + id}
         value={state[type + id]}
-        onChange={e => handleChange(e, nextQuestion[e.target.value])}>
+        onChange={e => handleChange(e, nextQuestion[e.target.value], title, id)}>
         {options.map(option => {
           return (
             <option hidden={option.hidden} key={option.label + id} value={option.value}>

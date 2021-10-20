@@ -25,7 +25,7 @@ export const FormWrapper = props => {
           return null
         })}
 
-      {step === 'end' && <FormSummary state={state} />}
+      {step === 'end' && <FormSummary state={state} data={data} />}
     </form>
   )
 }

@@ -2,26 +2,40 @@ import React, { useState } from 'react'
 import { FormWrapper } from 'components/FormWrapper'
 import { Button } from 'components/Button'
 
+import data from 'assets/data.json'
+
 export const App = () => {
-  const initialState = { nextQuestion: 0 }
+  const initialState = { nextQuestion: 0, questions: data.questions.length, answers: [] }
 
   const [state, setState] = useState(initialState)
   const [step, setStep] = useState(1)
   const [steps, setSteps] = useState([1])
 
-  const handleChange = (e, nextQuestion) => {
+  const handleChange = (e, nextQuestion, title, number) => {
     const { id, value } = e.target
-    setState({ ...state, [id]: value, nextQuestion: nextQuestion })
+    let newAnswers = [...state.answers]
+    if (state.answers[number - 1]) {
+      newAnswers[number - 1] = { ...newAnswers[number - 1], [id]: value }
+    } else {
+      newAnswers = [...newAnswers, { title: title, [id]: value }]
+    }
+    setState({
+      ...state,
+      [id]: value,
+      answers: [...newAnswers],
+      nextQuestion: nextQuestion,
+    })
   }
 
   const incrementStep = () => {
     let newSteps = ''
-    if (state.nextQuestion) {
-      newSteps = state.nextQuestion
-    } else if (!state.nextQuestion) {
-      newSteps = step + 1
-    } else {
+    console.log(state.questions)
+    if (step === state.questions) {
       newSteps = 'end'
+    } else if (state.nextQuestion) {
+      newSteps = state.nextQuestion
+    } else {
+      newSteps = step + 1
     }
     setStep(newSteps)
     setSteps([...steps, newSteps])
@@ -60,9 +74,9 @@ export const App = () => {
   return (
     <div className='container'>
       <FormWrapper step={step} state={state} handleChange={handleChange} />
-      <Button disabled={step === 1} incrementStep={decrementStep} text={'^'} />
-      <Button disabled={step === 'end'} incrementStep={incrementStep} text={'v'} />
-      {step === 'end' && <Button incrementStep={handleRestart} text={'Restart'} />}
+      <Button disabled={step === 1} changeStep={decrementStep} text={'^'} />
+      <Button disabled={step === 'end'} changeStep={incrementStep} text={'v'} />
+      {step === 'end' && <Button incrementStep={handleRestart} text={'Reset'} />}
     </div>
   )
 }
