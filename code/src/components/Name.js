@@ -1,20 +1,37 @@
+//First question
 import React from "react";
-import { useState } from "react";
 
-const Name = (props) => {
-  const [name, setName] = useState("Already in the name box");
+const Name = ({ name, onNameChange, onStepChange }) => {
   return (
     <>
-      <h1>Hello, {name}!</h1>
-      <p>I’m a form with three questions about cats. Are you ready to start?</p>
+      <div>
+        <img className="nameImg" src="../images/pineapple.png"></img>
 
-      <form>
-        <input
-          type="text"
-          onChange={(event) => setName(event.target.value)}
-          value={name}
-        />
-      </form>
+        <div className="container">
+          <div className="name">
+            <h1>Hello! ✨</h1>
+            <h2>I’m so exited that you want to attend to my party!</h2>
+            <p>
+              This is a form with three questions, please answer them all, they
+              are going to help me make an awesome party! 🥳
+            </p>
+
+            <form className="nameForm">
+              Please enter your name below:
+              <input
+                id="name"
+                type="text"
+                onChange={onNameChange}
+                value={name}
+                placeholder="Name"
+              />
+              <button disabled={name === ""} onClick={onStepChange}>
+                Next Question
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -1,15 +1,23 @@
+//Question 5
 import React from "react";
-import Name from "./Name";
-import CatType from "./CatType";
-import CatFeels from "./CatFeel";
-import Newsletter from "./Newsletter";
 
-const Answers = () => {
+const Answers = ({ name, food, game, email, snack, licoriceCandy, drink }) => {
   return (
-    <>
-      <h1>Hello!</h1>
-      <p>Here are you answers:</p>
-    </>
+    <div className="container">
+      <div className="fifthQuestion">
+        <h1>That's it, well done!🎈 </h1>
+        <h2>Your answers in the form were:</h2>
+        <p>{name}</p>
+        <p>{food}</p>
+        <p>{game}</p>
+        <p>{snack}</p>
+        <p>{licoriceCandy}</p>
+        <p>{drink}</p>
+        {email === true && (
+          <p>An email with your answers will also be sent to you. </p>
+        )}
+      </div>
+    </div>
   );
 };
 

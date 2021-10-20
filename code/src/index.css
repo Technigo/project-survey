@@ -7,7 +7,121 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+html, body, #root, .container {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+:root {
+  --main: #ef8b3f;
+  --secondary: #7a59e4;
+  --font: 'Oxygen', sans-serif;
+}
+
+.name h1 {
+  text-align: center;
+}
+
+h1, h2, h3 {
+  color: var(--secondary);
+  font-family: var(--font);
+  font-weight: 700;
+  margin-top: 0px;
+  text-align: left;
+}
+
+p {
+  font-family: var(--font);
+  padding: 10px 30px;
+}
+button {
+  background-color: var(--secondary);
+  color: white;
+  width: 150px;
+  padding: 16px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: none;
+  transition-duration: 0.4s;
+  box-shadow: none;
+  margin: 10px;
+
+}
+
+button:hover {
+  background-color: white;
+  color: var(--secondary);
+  font-size: 16px;
+  padding: 16px 16px;
+  border-radius: 4px;
+  border: none;
+  transition-duration: 0.4s;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+
+}
+
+.container {
+  background-color: var(--main);
+  padding: 0px 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+ .name {
+  background-color: var(--main);
+  border: 2px solid black;
+  padding: 30px 0px;
+
+}
+.nameForm {
+  /* border: 2px solid lime; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+header {
+  height: 250px;
+}
+
+.nameImg {
+  width: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+
+
+}
+
+.secondQuestion {
+  border: 2px solid black;
+  padding: 100px 0px;
+}
+
+
+.diet {
+  display: flex;
+  align-items: center;
+  flex-direction: column; 
+
+}
+
+.thirdQuestion {
+  border: 2px solid black;
+  padding: 100px 0px;
+}
+/*
+.fourthQuestion {
+  background-color: var(--main);
+}
+.fifthQuestion {
+  background-color: var(--main);
+} */
