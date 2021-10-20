@@ -3,8 +3,9 @@ import React, { useState } from 'react';
 import StartScreen from './StartScreen';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
-import CityQuestion from './CityQuestion';
-import AgeQuestion from './AgeQuestion';
+import ThirdQuestion from './ThirdQuestion';
+import FourthQuestion from './FourthQuestion';
+import FifthQuestion from './FifthQuestion';
 import Overview from './Overview';
 
 
@@ -12,8 +13,9 @@ const Form = () => {
 
 	const [nameInput, setNameInput] = useState('');
 	const [emailInput, setEmailInput] = useState('');
-	const [cityInput, setCityInput] = useState('');
+	const [countryInput, setCountryInput] = useState('');
 	const [ageInput, setAgeInput] = useState('');
+	const [moneyInput, setMoneyInput] = useState('');
 
 	const [step, setStep] = useState(0);
 
@@ -25,12 +27,16 @@ const Form = () => {
 		setEmailInput(event.target.value);
 	};
 
-	const onCityInputChange = (event) => {
-		setCityInput(event.target.value);
+	const onCountryInputChange = (event) => {
+		setCountryInput(event.target.value);
 	};
 
 	const onAgeInputChange = (selectRadioBtn) => {
 		setAgeInput(selectRadioBtn);
+	};
+
+	const onMoneyInputChange = (event) => {
+		setMoneyInput(event.target.value);
 	};
 
 	const onStepChange = () => {
@@ -40,16 +46,16 @@ const Form = () => {
 	return (
 		<main className="main-container">
             {step === 0 && (
-                <StartScreen
+				<StartScreen
 					onStepChange={onStepChange}
 				/>
 			)}
 			{step === 1 && (
-					<FirstQuestion 
+				<FirstQuestion 
 					nameInput={nameInput}
 					onNameInputChange={onNameInputChange}
 					onStepChange={onStepChange}
-					/>
+				/>
 			)}
 			{step === 2 && (
 				<SecondQuestion
@@ -59,26 +65,38 @@ const Form = () => {
 				/>
 			)}
 			{step === 3 && (
-				<CityQuestion
-				cityInput={cityInput}
-				onCityInputChange={onCityInputChange}
-				onStepChange={onStepChange}
+				<ThirdQuestion
+					countryInput={countryInput}
+					onCountryInputChange={onCountryInputChange}
+					onStepChange={onStepChange}
 				/>
 			)}
 			{step === 4 && (
-				<AgeQuestion
-				ageInput={ageInput}
-				onAgeInputChange={onAgeInputChange}
-				onStepChange={onStepChange}
+				<FourthQuestion
+					ageInput={ageInput}
+					onAgeInputChange={onAgeInputChange}
+					onStepChange={onStepChange}
 				/>
 			)}
 			{step === 5 && (
-				<Overview nameInput={nameInput} cityInput={cityInput} ageInput={ageInput} emailInput={emailInput}/>
+				<FifthQuestion
+					moneyInput={moneyInput}
+					onMoneyInputChange={onMoneyInputChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+			{step === 6 && (
+				<Overview 
+					nameInput={nameInput} 
+					countryInput={countryInput} 
+					ageInput={ageInput} 
+					emailInput={emailInput}
+				/>
 			)}
 		</main>
-
 	)
-
  }
 
+
 export default Form;
+

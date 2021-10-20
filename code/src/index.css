@@ -15,6 +15,7 @@ code {
 h1 {
   font-family: 'Game of Squids';
   font-size: 130px;
+  text-shadow: 8px 6px #323232;
   margin: 0;
 }
 
@@ -103,6 +104,8 @@ input[type=email] {
   width:50%;
   height: auto;
   text-align: center;
+  padding: 20px;
+  font-size: 24px;
 }
 
 .speech-bubble:after {
@@ -146,14 +149,19 @@ img {
 }
 
 .radio-buttons-container {
-  margin: 20px auto; 
+  margin: 20px 0; 
+  font-size: 20px;
   display: flex;
-
 }
 
 .radio-button {
   justify-content: flex-start;
+  font-size: 22px;
 }
+
+
+
+
 
 
 

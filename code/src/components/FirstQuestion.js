@@ -17,10 +17,12 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 					placeholder="Type your name here"
 					value={nameInput}
 					onChange={onNameInputChange}
-					required
-
+					
 				/>
-				<button type="button" onClick={onStepChange}>Next</button>
+				<button 
+				// disabled={ (nameInput==='') }
+				onClick={onStepChange}>Next
+				</button>
 			</form>
 
 		</section>

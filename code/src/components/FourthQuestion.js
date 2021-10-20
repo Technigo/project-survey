@@ -1,6 +1,6 @@
 import React from 'react';
 
-const AgeQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
+const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
     const ages = ['0-30', '31-60', '61-100']
 
 	return (
@@ -19,15 +19,16 @@ const AgeQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
                             aria-label={age}
                             key={age}>
                         <input 
-                            type="radio"
-                            name="radio-age"
-                            id="radio-age"
+                            className="radio-input"
+                            type="checkbox"
                             value={age} 
                             onChange={(event) => onAgeInputChange(event.target.value)}
                             checked={ageInput === age}
-                            required/>
+                            />
+                          <span class="checkmark"></span>
                         {age}
                         </label>
+
                         </div>
 
                     ))}
@@ -41,4 +42,4 @@ const AgeQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
 	);
 };
 
-export default AgeQuestion;
+export default FourthQuestion;
