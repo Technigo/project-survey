@@ -6,7 +6,7 @@ import React from 'react';
 /*const locationGroup = ["Stockholm", "Barcelona", "Oslo"]*/
 
     
-const DropDown = ({ setLocationInput, location }) => {
+const DropDown = ({ setLocationInput, location, onStepChange }) => {
     return (
         <form className="dropdown">
             <select
@@ -18,6 +18,8 @@ const DropDown = ({ setLocationInput, location }) => {
                <option value="Barcelona">Barcelona</option>
                <option value="Oslo">Oslo</option>
             </select>
+
+            <button className="submit-button" onClick={onStepChange}>See overview</button>
         </form>
     )
 };
