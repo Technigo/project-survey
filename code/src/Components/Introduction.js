@@ -3,9 +3,9 @@ import ImageComponent from "./IntroImg";
 
 const Introduction = () => {
   return (
-    <div className="containerIntroduction">
-      <div className="containerIntroductionText">
-        <p>Survey eleganza extravaganza</p>
+    <div className="container">
+      <div className="contentWrapper">
+        <p>Welcome queens!</p>
         <ImageComponent />
       </div>
     </div>

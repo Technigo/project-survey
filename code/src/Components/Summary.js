@@ -3,16 +3,22 @@ import ImageComponent from "Components/SummaryImg";
 
 // value?? {FirstQuestion.radioChecked}
 
-const Summary = ({ fundamentalInput, selectOption }) => {
+const Summary = ({ fundamentalInput, selectOption, radioChecked }) => {
   return (
     // CHANGE NAMES HERE!
-    <div className="containerSummary">
-      <div className="containerSummaryText">
-        <p>1. Do you watch Drag Race?:</p>
-        <p>2. Your favourite queen: {selectOption}</p>
-        <p>3. Reading is: {fundamentalInput}</p>
+    <div className="container">
+      <div className="contentWrapper">
+        <p className="summaryQuestion">Are you a Drag Race fan? </p>{" "}
+        <p className="summaryAnswer">
+          {radioChecked === "yes"
+            ? "Yasssss queen!"
+            : "Nope, I have bad taste."}
+        </p>
+        <p className="summaryQuestion">Your favourite queen is </p>
+        <p className="summaryQuestion">Reading is... </p>
+        <p className="summaryAnswer"> {fundamentalInput}</p>
+        <ImageComponent />
       </div>
-      <ImageComponent />
     </div>
   );
 };
