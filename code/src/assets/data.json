@@ -25,10 +25,10 @@
       "number": 3,
       "type": "dropdown",
       "options": [
-        { "label": "Select an option", "value": "default", "hidden": true },
-        { "label": "Green", "value": "Green", "hidden": false },
-        { "label": "Blue", "value": "Blue", "hidden": false },
-        { "label": "Red", "value": "Red", "hidden": false }
+        { "label": "Select an option", "value": "default", "hidden": true, "next_question": "end" },
+        { "label": "Green", "value": "Green", "hidden": false, "next_question": "end" },
+        { "label": "Blue", "value": "Blue", "hidden": false, "next_question": "end" },
+        { "label": "Red", "value": "Red", "hidden": false, "next_question": "end" }
       ],
       "id": 3
     }

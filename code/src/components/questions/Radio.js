@@ -8,18 +8,16 @@ export const Radio = props => {
     <>
       <h2>{title}</h2>
       {options.map(option => {
-        const { id, label, value, next_question } = option
         return (
-          <label key={id}>
-            {label}
+          <label key={option.id}>
+            {option.label}
             <input
               type='radio'
-              checked={state[type + id] === value}
+              checked={state[type + id] === option.value}
               name={type + id}
               id={type + id}
-              value={value}
-              onChange={handleChange}
-              next-question={next_question}
+              value={option.value}
+              onChange={e => handleChange(e, option.next_question)}
             />
           </label>
         )

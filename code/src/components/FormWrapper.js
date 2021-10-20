@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import data from 'assets/data.json'
 import { TextInput } from 'components/questions/TextInput'
 import { Radio } from 'components/questions/Radio'

@@ -4,24 +4,25 @@ export const DropDown = props => {
   const { title, options, id, type } = props.data
   const { state, handleChange } = props
 
+  // generate object with next question
+  const nextQuestion = options.reduce(
+    (o, option) => ({ ...o, [option.value]: option.next_question }),
+    {}
+  )
+  console.log(nextQuestion)
+
   return (
     <>
       <h2>{title}</h2>
       <select
         name='select'
         id={type + id}
-        // defaultValue={'Select an option'}
-        onChange={handleChange}>
+        value={state[type + id]}
+        onChange={e => handleChange(e, nextQuestion[e.target.value])}>
         {options.map(option => {
-          const { hidden, value, label, next_question } = option
           return (
-            <option
-              hidden={hidden}
-              selected={state[type + id] === value}
-              key={label + id}
-              value={value}
-              next-question={next_question}>
-              {label}
+            <option hidden={option.hidden} key={option.label + id} value={option.value}>
+              {option.label}
             </option>
           )
         })}

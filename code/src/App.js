@@ -3,60 +3,61 @@ import { FormWrapper } from 'components/FormWrapper'
 import { Button } from 'components/Button'
 
 export const App = () => {
-  const [state, setState] = useState({})
-  const [step, setStep] = useState(1)
+  const initialState = { nextQuestion: 0 }
 
-  const handleChange = e => {
+  const [state, setState] = useState(initialState)
+  const [step, setStep] = useState(1)
+  const [steps, setSteps] = useState([1])
+
+  const handleChange = (e, nextQuestion) => {
     const { id, value } = e.target
-    console.log('handleChange id: ', id, 'value: ', value)
-    setState({ ...state, [id]: value })
+    console.log(e.target)
+    setState({ ...state, [id]: value, nextQuestion: nextQuestion })
   }
 
   const incrementStep = () => {
-    step < 3 ? setStep(step + 1) : setStep('end')
+    if (state.nextQuestion) {
+      setStep(state.nextQuestion)
+      setSteps([...steps, state.nextQuestion])
+    } else if (!state.nextQuestion) {
+      setStep(step + 1)
+      setSteps([...steps, step + 1])
+    } else {
+      setStep('end')
+      setSteps([...steps, 'end'])
+    }
   }
 
-  const handleRestart = () => setStep(1)
+  const decrementStep = () => {
+    console.log(steps.length)
+    if (steps.length > 1) {
+      const newSteps = steps.filter((e, i) => i < steps.length - 1)
+      const newStep = newSteps[newSteps.length - 1]
+      console.log('newsteps', newSteps)
+      setStep(newStep)
+      setSteps([...newSteps])
+      setState({ ...state, nextQuestion: 0 })
+    }
+  }
+
+  const handleRestart = () => {
+    setStep(1)
+    setState(initialState)
+    setSteps([1])
+  }
 
   return (
     <div>
       <FormWrapper step={step} state={state} handleChange={handleChange} />
-      {step !== 'end' && <Button incrementStep={incrementStep} text={'Next question'} />}
+      <Button disabled={step === 1} incrementStep={decrementStep} text={'^'} />
+      <Button disabled={step === 'end'} incrementStep={incrementStep} text={'v'} />
       {step === 'end' && <Button incrementStep={handleRestart} text={'Restart'} />}
     </div>
   )
 }
-//
 
 /*
 
-create json data with array of questions (3 questions to start)
-
-data should have:
-data 
-  type: 'type of question, multi select, free text, radio, select option, etc (the type of input / component to generate)'
-  question title: 'start ng of the question'
-  options: 'different options if this i available'
-  more data that is needed to decide the child questions if there are any
-  question number? needed for the state to be able to select question to display, can i use the array index?
-  Unique key? generated from somewhere 
-  array with child questions, with same data needs as "parent" questions? or how to structure a way to skip questions based on answer?
-
-start simple with array of 3 questions
-
-components to build
-- a wrapper component for the questions
-    - in this map over the questions array to display all questions
-    - maybe hav separate function to do the map/filter to the question to display
-- component for each question type
-- title component for the whole survey
-- results component to display all the answers 
-
-extra:
-- component to set theme state
-
-
-try to display only one question at at a Time, a "next question" button needed + state to track question to be generated 
-
 add theme selection and pass theme object as props to child components, needs to be in wrapper component 
+
 */
