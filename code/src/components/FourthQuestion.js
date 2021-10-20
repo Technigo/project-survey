@@ -1,15 +1,17 @@
 import React from 'react'
 
-const FourthQuestion = ({ favoriteInput, onFavoriteInputChange, onStepChange }) => {
+const FourthQuestion = ({ favoriteInput, onFavoriteInputChange, onStepChange, onStepChangeBack }) => {
     return (
         <form>
+            What's your favorite language
             <select value={favoriteInput} onChange={onFavoriteInputChange}>
-                <option value="">Select your favorite:</option>
-                <option value="Dog">Dog</option>
-                <option value="Cat">Cat</option>
-                <option value="Fox">Fox</option>
+                <option value="">Select your favorite language:</option>
+                <option value="HTML">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="JS">JS</option>
             </select>
-            <button onClick={onStepChange}>Next question</button>
+            <button disabled={favoriteInput === ''} onClick={onStepChange}>Next question</button>
+            <button onClick={onStepChangeBack}>Previous Question</button>
         </form>
     )
 }

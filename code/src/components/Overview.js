@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Overview = ({ nameInput, surnameInput, ageInput, favoriteInput, ratingInput }) => {
+const Overview = ({ nameInput, surnameInput, ageInput, favoriteInput, ratingInput, sliderInput }) => {
     return (
         <section>
             <h2>Submitted answers:</h2>
@@ -9,6 +9,9 @@ const Overview = ({ nameInput, surnameInput, ageInput, favoriteInput, ratingInpu
             <p>Age: {ageInput}</p>
             <p>Favorite: {favoriteInput}</p>
             <p>Rating: {ratingInput}</p>
+            <p>Slide factor: {sliderInput}%</p>
+
+            <button onClick={() => window.location.reload(false)}>Restart</button>
         </section>
     )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
+const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange, onStepChangeBack }) => {
     return (
         <form>
             <label htmlFor="ageInput">Type your age</label>
@@ -10,7 +10,8 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
                 value={ageInput}
                 onChange={onAgeInputChange}
             />
-            <button onClick={onStepChange}>Next Question</button>
+            <button disabled={ageInput === ''} onClick={onStepChange}>Next Question</button>
+            <button onClick={onStepChangeBack}>Previous Question</button>
         </form>
     )
 }

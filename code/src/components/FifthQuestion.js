@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange }) => {
+const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange, onStepChangeBack }) => {
     return (
         <form>
             Rate this survey
@@ -49,7 +49,8 @@ const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange }) => {
                 />
                 5
             </label>
-            <button onClick={onStepChange}>Overview</button>
+            <button disabled={ratingInput === ''} onClick={onStepChange}>Next Question</button>
+            <button onClick={onStepChangeBack}>Previous Question</button>
         </form>
     )
 }

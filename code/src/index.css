@@ -19,14 +19,13 @@ code {
   border: 1px solid lightgrey;
   padding: 50px;
 }
-
 label {
   display: block;
 }
-input {
+input,
+select {
   margin-top: 10px;
 }
-
 button {
   display: block;
   margin-top: 20px;

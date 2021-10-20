@@ -5,6 +5,7 @@ import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
 import FifthQuestion from './FifthQuestion'
+import SixthQuestion from './SixthQuestion'
 import Overview from './Overview'
 
 const Form = () => {
@@ -13,6 +14,7 @@ const Form = () => {
     const [ageInput, setAgeInput] = useState('')
     const [favoriteInput, setFavoriteInput] = useState('')
     const [ratingInput, setRatingInput] = useState('')
+    const [sliderInput, setSliderInput] = useState('50')
     const [step, setStep] = useState(1)
 
     const onNameInputChange = (event) => {
@@ -30,13 +32,19 @@ const Form = () => {
     const onRatingInputChange = (event) => {
         setRatingInput(event.target.value)
     }
+    const onSliderInputChange = (event) => {
+        setSliderInput(event.target.value)
+    }
     const onStepChange = () => {
         setStep(step +1)
+    }
+    const onStepChangeBack = () => {
+        setStep(step -1)
     }
 
     return (
         <div className="container">
-            {step <= 5 && (<h1>Question number: {step}/5</h1>) }
+            {step <= 6 && (<h2>Question number: {step}/6</h2>) }
 
             {step === 1 && (
                 <FirstQuestion
@@ -50,6 +58,7 @@ const Form = () => {
                     surnameInput={surnameInput}
                     onSurnameInputChange={onSurnameInputChange}
                     onStepChange={onStepChange}
+                    onStepChangeBack={onStepChangeBack}
                 />
             )}
             {step === 3 && (
@@ -57,6 +66,7 @@ const Form = () => {
                     ageInput={ageInput}
                     onAgeInputChange={onAgeInputChange}
                     onStepChange={onStepChange}
+                    onStepChangeBack={onStepChangeBack}
                 />
             )}
             {step === 4 && (
@@ -64,6 +74,7 @@ const Form = () => {
                     favoriteInput={favoriteInput}
                     onFavoriteInputChange={onFavoriteInputChange}
                     onStepChange={onStepChange}
+                    onStepChangeBack={onStepChangeBack}
                 />
             )}
             {step === 5 && (
@@ -71,15 +82,25 @@ const Form = () => {
                     ratingInput={ratingInput}
                     onRatingInputChange={onRatingInputChange}
                     onStepChange={onStepChange}
+                    onStepChangeBack={onStepChangeBack}
                 />
             )}
             {step === 6 && (
+                <SixthQuestion
+                    sliderInput={sliderInput}
+                    onSliderInputChange={onSliderInputChange}
+                    onStepChange={onStepChange}
+                    onStepChangeBack={onStepChangeBack}
+                />
+            )}
+            {step === 7 && (
                 <Overview
                     nameInput={nameInput}
                     surnameInput={surnameInput}
                     ageInput={ageInput}
                     favoriteInput={favoriteInput}
                     ratingInput={ratingInput}
+                    sliderInput={sliderInput}
                 />
             )}
         </div>
