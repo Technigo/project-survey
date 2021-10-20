@@ -19,29 +19,37 @@ const QuestionThree = ({selectValue, onSelectOptionChange, onStepChange}) => {
             value: "Friends forever!",
           },
           {
-            label: "Sleeping. I am ao tired.",
+            label: "Sleeping. I am SO tired.",
             value: "I am so sleepy...Let´s sleep!",
+          },
+          {
+            label: "Just give me a good book!",
+            value: "Just give me a good book!",
           },
         ];
 
     return (
-    <div>
-        <h2>That is a good choice!</h2>
-        <p>What would constitute a “perfect” day for you?</p>
+    <section className="section">
+        <div className="intro-text">
+          <h2>That is a good choice!</h2>
+          <p>What would constitute a “perfect” day for you?</p>
+        </div>
         <form className="form">
-            <label htmlFor="select">Choose one option</label>
-                <select
-                    id="select-option" 
-                    value={selectValue} 
-                    onChange={onSelectOptionChange}
-                >
-                    {options.map((option) => (
-                    <option key={option.value} value={option.value}>{option.label}</option>
-                    ))}
-                </select>
-           <button onClick={onStepChange} className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+            <label htmlFor="select">Oh, perfect day...</label>
+            <select
+                id="select-option" 
+                value={selectValue} 
+                onChange={onSelectOptionChange}
+            >
+                {options.map((option) => (
+                <option key={option.value} value={option.value}>{option.label}</option>
+                ))}
+            </select>
+            <div className="buttons">
+                <button onClick={onStepChange} className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+            </div>
         </form>
-    </div>
+    </section>
     )
 }
 

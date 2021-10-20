@@ -49,7 +49,8 @@ const Form = () => {
   // }
 
   return (
-    <div>
+    <main>
+
         <Progress_bar />
 
         {step === 0 && (
@@ -66,8 +67,9 @@ const Form = () => {
             )}
         {step === 2 && (
             <>
-            <h2>Nice to meet you {nameInput}!</h2>
+            {/* <h2>Nice to meet you {nameInput}!</h2> */}
             <QuestionTwo 
+                nameInput={nameInput} 
                 surname={surnameInput}
                 onSurNameInputChange={onSurNameInputChange}
                 onStepChange={onStepChange}
@@ -96,7 +98,7 @@ const Form = () => {
                 radioInput={radioInput}
             />
          )}
-    </div>
+    </main>
   )
 
 }
