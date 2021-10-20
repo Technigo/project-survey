@@ -13,11 +13,11 @@ export const Home = ({ setShowHome, setCurrent, questionsRecord, setQuestionsRec
     return (
         <div className="home_container">
             <div className="home_text">
-                <h1>Are you ready to answer some questions today?</h1>
+                <h1>Are you ready to answer some questions  and create your own story today?</h1>
                 <h2>Let's go!</h2>
             </div>
             <div className="home_image_container">
-                <img className="home_image" src="./images/trivia.jpeg" alt="trivia time" />
+                <img className="home_image" src="./images/home-image.jpeg" alt="star wars image" />
             </div>
             <button className="home_button" onClick={changeScreen}>Start quiz</button>
         </div>

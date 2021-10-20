@@ -2,6 +2,12 @@ import React from 'react'
 import './Answer1.css'
 
 const Answer1 = ({ answer, setResult, result }) => {
+    const handleOnChange = (event) => {
+        event.preventDefault()
+        setResult({ ...result, answer1: event.target.value })
+
+    }
+
     return (
         <div className="answer_form_radio_container">
             {answer.questionNumber === 1 &&
@@ -10,10 +16,11 @@ const Answer1 = ({ answer, setResult, result }) => {
                         return (
                             <div key={option} className={`form_option_background ${option === result.answer1 && `form_radio_${option}`}`}>
                                 <input
+                                    required
                                     type="radio"
                                     id={option}
                                     value={option}
-                                    onChange={event => setResult({ answer1: event.target.value })}
+                                    onChange={handleOnChange}
                                     checked={option === result.answer1}
                                     className="form_radio_input"
                                 />

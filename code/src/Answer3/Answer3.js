@@ -17,6 +17,7 @@ const Answer3 = ({ answer, setResult, result }) => {
                         return (
                             <div key={option.planet} className="answer3_form_radio_container">
                                 <input
+                                    required
                                     type="radio"
                                     id={option.planet}
                                     value={option.planet}

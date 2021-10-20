@@ -7,17 +7,21 @@
 
 .home_image_container{
     margin: 50px;
+    display: flex;
 }
 
 .home_image{
-    width: 300px;
-    height: 300px;
+    width: 50%;
+    height: 50%;
+    border-radius: 10%;
+    overflow: hidden;
+    margin: 0 auto;
 }
 
 .home_text{
     text-align: center;
     color: rgb(240, 165, 0);
-    margin-top: 200px;
+    margin-top: 150px;
     width: 80%;
 }
 

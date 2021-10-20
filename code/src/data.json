@@ -84,16 +84,17 @@
             }
         },
         {
-            "questionNumber": 6,
+            "questionNumber": 5,
             "question": "How many aliases do you want for a war?",
-            "options": [
-                0,
-                100,
-                1000,
-                5000,
-                10000,
-                100000
-            ]
+            "options": {
+                "min": "0",
+                "max": "100000"
+            }
+        },
+        {
+            "questionNumber": 6,
+            "question": "What name do you use if you were a master",
+            "options": ""
         }
     ]
 }
