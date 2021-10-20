@@ -59,7 +59,7 @@ export const InputsForm = () => {
   return (
     <div>
       <div className="question-number">
-        {step <= 6 && <p>Question number: {step}/6</p>}
+        {step <= 7 && <p>Question number: {step}/7</p>}
       </div>
       {step === 0 && (
         <>
@@ -149,4 +149,3 @@ export const InputsForm = () => {
     </div>
   );
 };
-
