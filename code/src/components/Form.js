@@ -6,6 +6,7 @@ import { FourthQuestion } from "./FourthQuestion";
 import Overview from "./Overview";
 import FifthQuestionYes from "./FifthQuestionYes";
 import FifthQuestionNo from "./FifthQuestionNo";
+import WelcomePage from "./WelcomePage";
 
 export const Form = () => {
   const [nameInput, setNameInput] = useState("");
@@ -36,71 +37,60 @@ export const Form = () => {
     setStep(step + 1);
   };
 
-  const onEnter = (event) => {
-    if (event.key === "Enter") {
-      event.preventDefault();
-      setStep(step + 1);
-    }
-  };
-
   if (step === 1) {
+    return <WelcomePage onStepChange={onStepChange} />;
+  } else if (step === 2) {
     return (
       <FirstQuestion
         nameInput={nameInput}
         onNameInputChange={onNameInputChange}
         onStepChange={onStepChange}
-        onEnter={onEnter}
       />
     );
-  } else if (step === 2) {
+  } else if (step === 3) {
     return (
       <SecondQuestion
         adressInput={adressInput}
         onAdressInputChange={onAdressInputChange}
         onStepChange={onStepChange}
-        onEnter={onEnter}
       />
     );
-  } else if (step === 3) {
+  } else if (step === 4) {
     return (
       <ThirdQuestion
         houseTypeInput={houseTypeInput}
         adressInput={adressInput}
         onHouseTypeInputChange={onHouseTypeInputChange}
         onStepChange={onStepChange}
-        onEnter={onEnter}
       />
     );
-  } else if (step === 4) {
+  } else if (step === 5) {
     return (
       <FourthQuestion
         satisfactionInput={satisfactionInput}
         onSatisfactionInputChange={onSatisfactionInputChange}
         onStepChange={onStepChange}
-        onEnter={onEnter}
       />
     );
-  } else if (step === 5 && satisfactionInput === "Ja") {
+  } else if (step === 6 && satisfactionInput === "Ja") {
     return (
       <FifthQuestionYes
         nameInput={nameInput}
         satisfactionTextInput={satisfactionTextInput}
         onSatisfactionTextInputChange={onSatisfactionTextInputChange}
-        onEnter={onEnter}
         onStepChange={onStepChange}
       />
     );
-  } else if (step === 5 && satisfactionInput === "Nej") {
+  } else if (step === 6 && satisfactionInput === "Nej") {
     return (
       <FifthQuestionNo
         nameInput={nameInput}
         satisfactionTextInput={satisfactionTextInput}
         onSatisfactionTextInputChange={onSatisfactionTextInputChange}
-        onEnter={onEnter}
         onStepChange={onStepChange}
       />
     );
-  } else if (step === 6) {
+  } else if (step === 7) {
     return (
       <Overview
         nameInput={nameInput}
