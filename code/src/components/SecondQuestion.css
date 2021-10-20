@@ -20,4 +20,14 @@
   border-color: blueviolet;
   background-color: cornflowerblue;
   font-family: "Oswald", sans-serif;
+  color: blueviolet;
+}
+
+@media (min-width: 768px) {
+  .second-container {
+    margin: 50px;
+  }
+  .second-button {
+    font-size: 18px;
+  }
 }

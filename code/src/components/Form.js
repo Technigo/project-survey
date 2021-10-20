@@ -47,6 +47,7 @@ const Form = () => {
         {step === 1 && (
           <StartQuestion
             startQuestion={startQuestion}
+            onStartQuestionChange={onStartQuestionChange}
             onStepChange={onStepChange}
           />
         )}

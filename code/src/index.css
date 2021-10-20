@@ -18,12 +18,7 @@ code {
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  justify-self: center;
-  justify-content: center;
+  display: block;
 }
 
 h1 {
@@ -46,4 +41,13 @@ h4 {
   flex-direction: column;
   padding: 10px;
   margin-top: 50px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 42px;
+  }
+  h4 {
+    font-size: 26px;
+  }
 }

@@ -3,3 +3,14 @@
   align-items: center;
   font-size: 16px;
 }
+
+@media (min-width: 768px) {
+  .label-age-container {
+    font-size: 18px;
+  }
+
+  .age-header {
+    font-size: 26px;
+    margin: 0;
+  }
+}

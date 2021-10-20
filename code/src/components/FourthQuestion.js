@@ -1,4 +1,5 @@
 import React from "react";
+import "./FourthQuestion.css";
 
 const FourthQuestion = ({
   believesInput,
@@ -7,8 +8,14 @@ const FourthQuestion = ({
 }) => {
   return (
     <form className="second-container">
-      Do you believe there's life on another planet?
-      <select onChange={onBelievesInputChange} value={believesInput}>
+      <h2 className="fourth-text">
+        Do you believe there's life on another planet?
+      </h2>
+      <select
+        className="select-container"
+        onChange={onBelievesInputChange}
+        value={believesInput}
+      >
         <option value="">Select your answer</option>
         <option value="Yes">
           Yes, I believe there's life on another planet.

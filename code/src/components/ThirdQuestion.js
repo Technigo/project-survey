@@ -5,7 +5,7 @@ const ThirdQuestion = ({ ageGroup, onAgeGroupChange, onStepChange }) => {
   const ageGroups = ["0-18", "19-30", "30+"];
   return (
     <form className="container">
-      How old are you?
+      <h3 className="age-header">How old are you?</h3>
       {ageGroups.map((group) => (
         <label className="label-age-container" key={group}>
           <input

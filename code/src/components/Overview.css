@@ -1,3 +1,30 @@
-.header {
-  display: none;
+.summary-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 20px;
+  background-color: rgba(205, 180, 228, 0.447);
+  border-radius: 10px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+.summary-header {
+  color: black;
+}
+
+.summary-text {
+  display: flex;
+  flex-direction: column;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .summary-container {
+    margin: 50px;
+  }
+  .summary-header {
+    font-size: 26px;
+  }
 }

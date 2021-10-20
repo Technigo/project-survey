@@ -36,4 +36,23 @@
   border-color: cornflowerblue;
   background-color: blueviolet;
   font-family: "Oswald", sans-serif;
+  color: cornflowerblue;
+}
+
+@media (min-width: 768px) {
+  .container {
+    margin: 50px;
+  }
+
+  .label-container {
+    font-size: 26px;
+  }
+
+  .input-container {
+    padding: 15px;
+  }
+
+  .button {
+    font-size: 18px;
+  }
 }
