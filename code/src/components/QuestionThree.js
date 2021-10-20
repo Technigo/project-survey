@@ -2,7 +2,7 @@ import React from 'react';
 
 const fruits = ['apple', 'melon', 'lemon'];
 
-const QuestionThree = ({ fruit, onFruitChange, onStepChange }) => {
+const QuestionThree = ({ fruit, onFruitChange, onStepChange, onEnter }) => {
   return (
     <form>
       Favourite fruit:
@@ -13,6 +13,7 @@ const QuestionThree = ({ fruit, onFruitChange, onStepChange }) => {
             value={frukt}
             onChange={onFruitChange}
             checked={fruit === frukt}
+            onKeyPress={onEnter}
           />
           {frukt}
         </label>

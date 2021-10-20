@@ -1,9 +1,15 @@
 import React from 'react';
 
 import ProgressBar from './ProgressBar';
+import Alert from './Alert';
 
-const QuestionOne = ({ nameInput, onNameInputChange, onStepChange }) => {
-  // const { nameInput, onNameInputChange } = props;
+const QuestionOne = ({
+  nameInput,
+  onNameInputChange,
+  onStepChange,
+  onEnter,
+  alert,
+}) => {
   return (
     <div className='form-question'>
       <form>
@@ -16,7 +22,9 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange }) => {
           placeholder='Your name goes here'
           value={nameInput}
           onChange={onNameInputChange}
+          onKeyPress={onEnter}
         />
+        {alert && <Alert />}
         <button className='form-button' type='button' onClick={onStepChange}>
           Next
         </button>
