@@ -6,11 +6,11 @@ const SecondQuestion = ({
   onPreviousQuestionChange,
   onNextQuestionChange,
 }) => {
-  const ageGroup = ["younger than 18", "18-30", "30-50", "older than 50"]
+  const ageGroup = ["3 ", "7", "10", "more than 15"]
 
   return (
     <form id="secondQuestion">
-      <p className="question"> How old are you? </p>
+      <p className="question">How many days would you like to stay?</p>
       {ageGroup.map((group) => (
         <label className="label" key={group}>
           <input
@@ -27,14 +27,17 @@ const SecondQuestion = ({
 
       <div className="button-container">
         <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
-          Go Back
+          PREVIOUS
         </button>
         <button className="glow-on-hover" onClick={onNextQuestionChange}>
-          Continue
+          NEXT
         </button>
       </div>
     </form>
   )
+}
+{
+  /* <button onClick={() => window.location.reload(false)} className="btn">Let' start over! <span role="img" aria-label="handpointer">👋🏼</span></button> */
 }
 
 export default SecondQuestion

@@ -8,23 +8,26 @@ const ThirdQuestion = ({
 }) => {
   return (
     <form>
-      <label className="question"> Where do you live?</label>
+      <label className="question">
+        Which spaceships would you like to be in?
+      </label>
       <select
         className="dropdownInput"
         onChange={onLocationInputChange}
         value={locationInput}
       >
-        <option value=""> Select location </option>
-        <option value="somewhere on Earth"> somewhere on Earth </option>
-        <option value="Moon"> Moon </option>
-        <option value="Platon"> Platon </option>
+        <option value=""> Select a spaceship </option>
+        <option value="Arcadia"> Arcadia </option>
+        <option value="Phoenix"> Phoenix </option>
+        <option value="Battlestar"> Battlestar </option>
+        <option value="Romulus"> Romulus </option>
       </select>
       <div className="button-container">
         <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
-          Go Back
+          PREVIOUS
         </button>
         <button className="glow-on-hover" onClick={onNextQuestionChange}>
-          Continue
+          NEXT
         </button>
       </div>
     </form>

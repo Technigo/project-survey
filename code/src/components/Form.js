@@ -6,7 +6,7 @@ import SecondQuestion from "./SecondQuestion"
 import ThirdQuestion from "./ThirdQuestion"
 // import Checkboxgroup from "./Checkboxgroup"
 import Imagecheckbox from "./Imagecheckbox"
-
+import ColorInput from "./Colorinput"
 import Summary from "./Summary"
 import Footer from "./Footer"
 
@@ -18,6 +18,7 @@ const Form = () => {
   const [ageInput, setAgeInput] = useState([])
   const [step, setStep] = useState(0)
   const [checkboxGroup, setCheckboxGroup] = useState([])
+  const [colorInput, setColorInput] = useState()
 
   // ----- FUNCTIONS -----
 
@@ -44,6 +45,10 @@ const Form = () => {
       // add element to array. Spread operator (...) will copy all the values from the previous heckboxGroup array
       setCheckboxGroup([checkboxValue, ...checkboxGroup])
     }
+  }
+
+  const handleColorInputChange = (event) => {
+    setColorInput(event.target.value)
   }
 
   // used only for the starter page
@@ -108,14 +113,25 @@ const Form = () => {
           />
         </section>
       )}
+      {step === 5 && (
+        <section className="question-container">
+          <ColorInput
+            colorInput={colorInput}
+            handleColorInputChange={handleColorInputChange}
+            onNextQuestionChange={onNextQuestionChange}
+            onPreviousQuestionChange={onPreviousQuestionChange}
+          />
+        </section>
+      )}
 
       {/* Output Page*/}
-      {step === 5 && (
+      {step === 6 && (
         <Summary
           nameInput={nameInput}
           locationInput={locationInput}
           ageInput={ageInput}
           checkboxGroup={checkboxGroup}
+          colorInput={colorInput}
         />
       )}
 

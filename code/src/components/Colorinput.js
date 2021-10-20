@@ -1,33 +1,32 @@
 import React from "react"
 
-const FirstQuestion = ({
-  nameInput,
-  onNameInputChange,
+const ColorInput = ({
+  colorInput,
   onPreviousQuestionChange,
+  handleColorInputChange,
   onNextQuestionChange,
 }) => {
   return (
     <form className="namebox">
       <label className="question" htmlFor="nameInput">
-        Please tell your name
+        Please select your spacesuits color
       </label>
       <input
-        id="nameInput"
-        type="text"
-        value={nameInput}
-        onChange={onNameInputChange}
-        required
+        className="color-input"
+        type="color"
+        value={colorInput}
+        onChange={handleColorInputChange}
       />
       <div className="button-container">
         <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
-          Go Back
+          PREVIOUS
         </button>
         <button className="glow-on-hover" onClick={onNextQuestionChange}>
-          Continue
+          NEXT
         </button>
       </div>
     </form>
   )
 }
 
-export default FirstQuestion
+export default ColorInput

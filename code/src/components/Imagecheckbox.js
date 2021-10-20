@@ -7,22 +7,31 @@ const Imagecheckbox = ({
   onPreviousQuestionChange,
   onNextQuestionChange,
 }) => {
-  const images = [
-    "PIVOT!!!",
-    "I'm more than just a pretty blonde with an ass that won't quit.",
-    "They don't know that we know that they know!",
-    "You can’t just give up! Is that what a dinosaur would do?",
-    "Okay, no uterus, no opinion.",
-    "I’m not so good with the advice. Can I interest you in a sarcastic comment?",
+  // const images = [
+  //   "PIVOT!!!",
+  //   "I'm more than just a pretty blonde with an ass that won't quit.",
+  //   "They don't know that we know that they know!",
+  //   "You can’t just give up! Is that what a dinosaur would do?",
+  //   "Okay, no uterus, no opinion.",
+  //   "I’m not so good with the advice. Can I interest you in a sarcastic comment?",
+  // ]
+
+  const checkboxGroupArray = [
+    "Joey",
+    "Monica",
+    "Rachel",
+    "Phoebe",
+    "Ross",
+    "Chandler",
   ]
 
   return (
     <>
       <form>
         <h2 tabindex="0" className="question">
-          What is your favorite quote?
+          Which "Friends" character should you be with there?{" "}
         </h2>
-        {images.map((image) => (
+        {checkboxGroupArray.map((image) => (
           <label htmlFor={image} className="checkbox-label-wrap" key={image}>
             <input
               type="checkbox"
@@ -37,10 +46,10 @@ const Imagecheckbox = ({
       </form>
       <div className="button-container">
         <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
-          Go Back
+          PREVIOUS
         </button>
         <button className="glow-on-hover" onClick={onNextQuestionChange}>
-          Continue
+          NEXT
         </button>
       </div>
     </>
