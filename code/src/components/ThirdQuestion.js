@@ -4,13 +4,13 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 	return (
 		<form onSubmit={(event) => event.preventDefault()}>
 			<label htmlFor="streamingInput">Which streaming service do you prefer?</label>
-			{/* prettier-ignore */}
-			<input
-        id="streamingInput"
-        type="text"
-        value={streamingInput}
-        onChange={onStreamingInputChange}
-      />
+
+			<select onChange={onStreamingInputChange} value={streamingInput}>
+				<option value="">Select</option>
+				<option value="netflix">Netflix</option>
+				<option value="svtPlay">SVT Play</option>
+				<option value="hbo">HBO</option>
+			</select>
 			<button onClick={nextQuestion}>Submit</button>
 		</form>
 	);
