@@ -9,6 +9,7 @@ const TextInput = ({ label, value, onValueChange }) => {
     <>
       <label htmlFor={label}></label>
       <input
+      className="text-input"
         type="text"
         id={label}
         onChange={onTextInputChange}

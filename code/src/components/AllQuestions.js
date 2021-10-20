@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 
 import Question from "./Question";
+import ProgressBar from "./ProgressBar";
 import ReviewSubmit from "./ReviewSubmit";
+
 
 const questions = [
   {
@@ -52,13 +54,13 @@ const AllQuestions = () => {
   };
 
   const onAnswerChange = (newAnswer) => {
-    answers[questionNumber] = newAnswer;
-    setAnswers(answers);
+    setAnswers({...answers, [questionNumber]: newAnswer});
   };
 
   const lastQuestion = questionNumber === questions.length - 1;
   const firstQuestion = questionNumber === 0;
   const questionsRemaining = questionNumber < questions.length;
+  const progress = (questionNumber/questions.length)*100
 
   return (
     <>
@@ -68,18 +70,19 @@ const AllQuestions = () => {
             <Question
               key={questions[questionNumber].number}
               question={questions[questionNumber]}
-              answer={answers[questionNumber]}
+              answer={answers[questionNumber] || ""}
               setAnswer={onAnswerChange}
             />
-            <button type="button" onClick={handleGoingBack} disabled={firstQuestion}>
+            <button className="back-btn" type="button" onClick={handleGoingBack} disabled={firstQuestion}>
               Go back
             </button>
 
-            <button type="submit">
+            <button className="enter-btn" type="submit">
               {lastQuestion ? "Submit" : "Next Question"}
             </button>
           </form>
           {!valid && <p>Please enter a response</p>}
+          <ProgressBar progress={progress}/>
         </>
       ) : (
         <ReviewSubmit answers={answers} />

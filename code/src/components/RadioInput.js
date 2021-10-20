@@ -1,22 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 
 const RadioInput = ({ options, choice, onValueChange }) => {
-  const [innerChoice, setChoice] = useState(choice);
 
   const onInputChange = (event) => {
     onValueChange(event.target.value);
-    setChoice(event.target.value);
   };
 
   return (
     <>
       {options.map((option) => (
-        <label key={option}>
+        <label className="radio-btn-label" key={option}>
           <input
+          className="radio-btn"
             type="radio"
             value={option}
             onChange={onInputChange}
-            checked={innerChoice === option}
+            checked={choice === option}
           />
           {option}
         </label>

@@ -9,7 +9,7 @@ const Question = (props) => {
 
   return (
     <>
-      <h1>
+      <h1 className="question-text">
         {question.number}. {question.text}
       </h1>
       {question.inputType === "text" && (

@@ -1,22 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
 
 const SelectInput = ({ options, selection, onValueChange }) => {
-  const [innerSelection, setSelection] = useState(selection || "");
 
   const onSelectChange = (event) => {
     onValueChange(event.target.value);
-    setSelection(event.target.value);
   };
 
   return (
     <>
-      <select value={innerSelection} onChange={onSelectChange}>
-        <option value="" disabled>
+      <select className="select-box" value={selection} onChange={onSelectChange}>
+        <option className="default-option" value="" disabled>
           Choose one
         </option>
         {options.map((option) => {
           return (
-            <option key={option} value={option}>
+            <option className="select-option" key={option} value={option}>
               {option}
             </option>
           );
