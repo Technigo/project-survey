@@ -61,7 +61,7 @@ const ElbowRadio = ({
             type="radio"
             value="ONLY IN SPANISH (EL-BOW)"
             onChange={handleRadioInputChange}
-            checked={radioInput === "5ONLY IN SPANISH (EL-BOW)"}
+            checked={radioInput === "ONLY IN SPANISH (EL-BOW)"}
           />
           only in spanish (el-bow)
         </label>
