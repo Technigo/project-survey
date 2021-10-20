@@ -2,7 +2,7 @@ import React from "react";
 
 const ageGroup = ["Under 13", "13-17", "18-24", "25-34", "35-44", "45-54", "55-64", "65-74", "75+"];
 
-export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => {
+export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion, previousQuestion }) => {
 	return (
 		<form onSubmit={nextQuestion}>
 			What is your age?
@@ -20,6 +20,7 @@ export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion }) => 
 				</label>
 			))}
 			<button type="submit">Next question</button>
+			<button onClick={previousQuestion}>Previous question</button>
 		</form>
 	);
 };

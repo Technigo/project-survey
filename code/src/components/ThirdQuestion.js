@@ -1,6 +1,6 @@
 import React from "react";
 
-export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQuestion }) => {
+export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQuestion, previousQuestion }) => {
 	return (
 		<form onSubmit={nextQuestion}>
 			<label htmlFor="streamingInput">Which streaming service do you prefer?</label>
@@ -14,6 +14,7 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 			<button type="submit" onClick={nextQuestion}>
 				Next question
 			</button>
+			<button onClick={previousQuestion}>Previous question</button>
 		</form>
 	);
 };
