@@ -28,7 +28,7 @@ export const App = () => {
 						<Form />
 					</section>
 				</div>
-			)};
+			)}
 		</>
 	);
 };
