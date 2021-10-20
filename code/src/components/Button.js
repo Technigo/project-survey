@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Button = props => (
-  <button disabled={props.disabled} onClick={props.changeStep}>
-    {props.text}
+export const Button = ({ disabled, onClick, text }) => (
+  <button disabled={disabled} onClick={onClick}>
+    {text}
   </button>
 )

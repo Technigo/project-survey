@@ -60,9 +60,9 @@ export const App = () => {
   return (
     <div className='container'>
       <FormWrapper step={step} state={state} handleChange={handleChange} />
-      <Button disabled={step === 1} changeStep={decrementStep} text={'^'} />
-      <Button disabled={step === 'end'} changeStep={incrementStep} text={'v'} />
-      {step === 'end' && <Button incrementStep={handleRestart} text={'Reset'} />}
+      <Button disabled={step === 1} onClick={decrementStep} text={'^'} />
+      <Button disabled={step === 'end'} onClick={incrementStep} text={'v'} />
+      {step === 'end' && <Button onClick={handleRestart} text={'Reset'} />}
     </div>
   )
 }
