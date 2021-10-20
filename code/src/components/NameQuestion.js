@@ -22,7 +22,9 @@ const NameQuestion = ({
             value={firstNameInput}
             onChange={handleFirstNameInputChange}
           />
-          <button onClick={onStepChange}>Next Question</button>
+          <button type="submit" onClick={onStepChange}>
+            Next Question
+          </button>
         </form>
       </section>
     </>

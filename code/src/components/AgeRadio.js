@@ -8,7 +8,7 @@ const AgeRadio = ({
 }) => {
   return (
     <section className="form-container" tabIndex="0">
-      <form>
+      <form onSubmit={e => e.preventDefault()}>
         <h2 className="label-text"> How old do you feel inside?</h2>
         <label>
           <input
