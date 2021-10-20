@@ -1,6 +1,9 @@
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
+  background: linear-gradient(45deg, blue, red);
+  background-repeat: no;
+
 }
 
 code {
@@ -17,6 +20,17 @@ code {
 p {
   font-size: 20px;
   font-weight: 600;
+  margin: 8px;
+}
+
+a {
+  text-decoration-style: solid;
+  text-decoration-color: teal;
+  color: black;
+}
+
+a:hover {
+  text-decoration-color: orange;
 }
 
 header {
@@ -37,11 +51,11 @@ header {
   font-family: 'Lilita One';
   font-size: 40px;
   margin-top: 15px;
+  margin-bottom: 0;
 }
 
 .survey-info {
-  padding: 20px;
-  height: 500px;
+  padding-bottom: 50px;
 }
 
 input, select {
@@ -59,7 +73,7 @@ input, select {
 .fourth-container,
 .submit-container,
 .overview-container,
-.game-container {
+.suggestion-container {
   text-align: center;
   display: flex;
   flex-direction: column;
@@ -106,6 +120,20 @@ button:hover:after {
   left: 2px;
 }
 
+.suggestion-container h2 {
+  margin-top: 0;
+}
+
+.game-container {
+ display: flex;
+ flex-direction: column;
+}
+
+.game-container img {
+  width: 300px;
+  height: auto;
+}
+
 @media (min-width: 640px) and (max-width: 900px) {
 
   .container {
@@ -126,6 +154,7 @@ button:hover:after {
     margin: 30px;
     min-width: 600px;
     max-width: 900px;
+    height: 800px;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
@@ -143,9 +172,25 @@ button:hover:after {
   .survey-info {
   padding: 20px;
   width: 100%;
-  height: 100%;
   background-color: #fff;
-  
+  }
+
+  .suggestion-container h2 {
+    margin-top: 0;
+  }
+
+  .game-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
+   row-gap: 1em;
+   column-gap: 1em;
+  }
+
+  .game-container img {
+    width: 120px;
+    height: auto;
   }
 }
 
@@ -172,7 +217,6 @@ button:hover:after {
     height: 600px;
     display: flex;
     flex-direction: row;
-    
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   }
 
@@ -187,7 +231,21 @@ button:hover:after {
   .survey-info {
   width: 100%;
   background-color: #fff;
-  
+  }
+
+  .suggestion-container h2 {
+    margin-top: 0;
+  }
+
+  .game-container {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+  }
+
+  .game-container img {
+    width: 120px;
+    height: auto;
   }
 }
 
