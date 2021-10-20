@@ -4,7 +4,7 @@ const ThirdQuestion = (props) => {
 const {onFeelingChange, onStepChange} = props
 
   return (
-    <form id="form">
+    <form className="form">
       <label>
         <input 
           id="feeling" 

@@ -4,7 +4,7 @@ const FourthQuestion = (props) => {
 const {flavour, onFlavourChange, onFinalQuestion} = props
 
   return (
-    <form id="form">
+    <form className="form">
       <label>
         Pick your popcorn flavour
         <select value={flavour} onChange={onFlavourChange}>

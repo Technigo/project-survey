@@ -44,8 +44,9 @@ const Form = () => {
         surnameInput = {surnameInput}
         feeling = {feeling}
         flavour = {flavour}
-      />:
-      <div id="form">
+      />
+      :
+      <section className="form-container">
         {step === 1 && (
           <FirstQuestion 
             nameInput={nameInput} 
@@ -73,7 +74,7 @@ const Form = () => {
             onFinalQuestion={onFinalQuestion} 
           />
         )}
-      </div>
+      </section>
   )
 }
 
