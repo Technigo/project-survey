@@ -4,23 +4,28 @@ import WelcomePage from './WelcomePage';
 import QuestionOne from './QuestionOne';
 import QuestionTwo from './QuestionTwo';
 import QuestionThree from './QuestionThree';
+import QuestionFour from './QuestionFour';
 import Overview from './Overview';
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('');
-  const [destination, setDestination] = useState('');
-  const [fruit, setFruit] = useState('');
+  const [plantSkill, setPlantSkill] = useState('');
+  const [humidity, setHumidity] = useState('');
+  const [favouritePlant, setFavouritePlant] = useState('');
   const [step, setStep] = useState(1);
   const [alert, setAlert] = useState(false);
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
   };
-  const onDestinationChange = (event) => {
-    setDestination(event.target.value);
+  const onPlantSkillChange = (event) => {
+    setPlantSkill(event.target.value);
   };
-  const onFruitChange = (event) => {
-    setFruit(event.target.value);
+  const onHumidityChange = (event) => {
+    setHumidity(event.target.value);
+  };
+  const onFavouritePlantChange = (event) => {
+    setFavouritePlant(event.target.value);
   };
 
   //Change question + validation
@@ -33,15 +38,24 @@ const Form = () => {
         setStep(step + 1);
       }
     } else if (step === 3) {
-      if (destination === '') {
-        alert('Choice of destination is required');
+      if (plantSkill === '') {
+        setAlert(true);
       } else {
+        setAlert(false);
         setStep(step + 1);
       }
     } else if (step === 4) {
-      if (fruit === '') {
-        alert('Choice of fruit is required');
+      if (humidity === '') {
+        setAlert(true);
       } else {
+        setAlert(false);
+        setStep(step + 1);
+      }
+    } else if (step === 5) {
+      if (favouritePlant === '') {
+        setAlert(true);
+      } else {
+        setAlert(false);
         setStep(step + 1);
       }
     } else {
@@ -49,18 +63,12 @@ const Form = () => {
     }
   };
 
-  // const onStepChange = (event) => {
-  //   setStep(step + 1);
-  // }
-
   const onEnter = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
       setStep(step + 1);
     }
   };
-
-  console.log('Name:', nameInput);
 
   return (
     <div>
@@ -76,25 +84,37 @@ const Form = () => {
       )}
       {step === 3 && (
         <QuestionTwo
-          destination={destination}
-          onDestinationChange={onDestinationChange}
+          plantSkill={plantSkill}
+          onPlantSkillChange={onPlantSkillChange}
+          alert={alert}
           onStepChange={onStepChange}
           onEnter={onEnter}
         />
       )}
       {step === 4 && (
         <QuestionThree
-          fruit={fruit}
-          onFruitChange={onFruitChange}
+          humidity={humidity}
+          onHumidityChange={onHumidityChange}
+          alert={alert}
           onStepChange={onStepChange}
           onEnter={onEnter}
         />
       )}
       {step === 5 && (
+        <QuestionFour
+          favouritePlant={favouritePlant}
+          onFavouritePlantChange={onFavouritePlantChange}
+          alert={alert}
+          onStepChange={onStepChange}
+          onEnter={onEnter}
+        />
+      )}
+      {step === 6 && (
         <Overview
           nameInput={nameInput}
-          destination={destination}
-          fruit={fruit}
+          plantSkill={plantSkill}
+          humidity={humidity}
+          favouritePlant={favouritePlant}
         />
       )}
     </div>

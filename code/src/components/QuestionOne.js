@@ -14,7 +14,7 @@ const QuestionOne = ({
     <div className='form-question'>
       <form>
         <label className='label-text' htmlFor='nameInput'>
-          Preferred name:{' '}
+          What is your name?{' '}
         </label>
         <input
           id='nameInput'
@@ -30,10 +30,7 @@ const QuestionOne = ({
         </button>
       </form>
 
-      <div className='progress-bar'>
-        <h3 className='progress-bar-heading'>Progress</h3>
-        <ProgressBar bgcolor='orange' progress='0' height={20} />
-      </div>
+      <ProgressBar bgcolor='orange' progress='25' height={20} />
     </div>
   );
 };

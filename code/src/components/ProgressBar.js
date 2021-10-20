@@ -24,9 +24,13 @@ const ProgressBar = ({ bgcolor, progress, height }) => {
   };
 
   return (
-    <div style={Parentdiv}>
-      <div style={Childdiv}>
-        <span style={progresstext}>{`${progress}%`}</span>
+    <div className='progress-bar'>
+      <h3 className='progress-bar-heading'>Progress</h3>
+
+      <div style={Parentdiv}>
+        <div style={Childdiv}>
+          <span style={progresstext}>{`${progress}%`}</span>
+        </div>
       </div>
     </div>
   );

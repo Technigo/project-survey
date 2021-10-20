@@ -1,25 +1,34 @@
 import React from 'react';
 
-const fruits = ['apple', 'melon', 'lemon'];
+import Alert from './Alert';
 
-const QuestionThree = ({ fruit, onFruitChange, onStepChange, onEnter }) => {
+const humidityArray = ['60%', '90%', 'Eh.. what?!'];
+
+const QuestionThree = ({
+  humidity,
+  onHumidityChange,
+  alert,
+  onStepChange,
+  onEnter,
+}) => {
   return (
     <form>
-      Favourite fruit:
-      {fruits.map((frukt) => (
-        <label key={frukt}>
+      What is you indoor humidity?
+      {humidityArray.map((value) => (
+        <label key={value}>
           <input
             type='radio'
-            value={frukt}
-            onChange={onFruitChange}
-            checked={fruit === frukt}
+            value={value}
+            onChange={onHumidityChange}
+            checked={humidity === value}
             onKeyPress={onEnter}
           />
-          {frukt}
+          {value}
         </label>
       ))}
+      {alert && <Alert />}
       <button type='button' className='form-button' onClick={onStepChange}>
-        Submit
+        Next
       </button>
     </form>
   );
