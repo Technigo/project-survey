@@ -5,7 +5,7 @@ const ProgressBar = ({ done }) => {
     <>
       <div className="progress-container">
         <progress
-          forHTML="progressBar"
+          htmlFor="progressBar"
           className="progress-bar"
           value={done}
           max="100"

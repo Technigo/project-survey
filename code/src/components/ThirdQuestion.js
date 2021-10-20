@@ -14,7 +14,7 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
       <h2 className="page-header">third question</h2>
       <p>What is your age?</p>
       {ageGroup.map(group => (
-        <label className="label" key={group}>
+        <label className="label radio-item" key={group}>
           <input
             className="input"
             type="radio"

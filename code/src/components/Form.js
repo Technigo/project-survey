@@ -11,7 +11,7 @@ const Form = () => {
   const [interestInput, setInterestInput] = useState("");
   const [ageInput, setAgeInput] = useState("");
   const [step, setStep] = useState(0);
-  const [value, updateValue] = useState(20);
+  // const [value, updateValue] = useState(20);
 
   const onNameInputChange = event => {
     setNameInput(event.target.value);
