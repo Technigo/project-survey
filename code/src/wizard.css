@@ -1,0 +1,43 @@
+.btn {
+  width: 150px;
+  height: 36px;
+  color: var(--main-text);
+  background-color: var(--background);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-size: 12px;
+  padding: 0;
+  border: 1px solid var(--highlight);
+  box-shadow: 0 0 8px var(--main-text);
+  font-weight: bold;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+.progress-bar {
+  font-size: 12px;
+  margin-top: 36px;
+}
+
+.current-step {
+  display: flex;
+  margin: 20px;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .progress-bar {
+    font-size: 18px;
+    margin-top: 0;
+  }
+  .btn {
+    width: 240px;
+    height: 50px;
+    font-size: 18px;
+    margin-top: 400px;
+  }
+  .current-step {
+    margin: 30px;
+  }
+}

@@ -12,10 +12,10 @@ export const QuestionEight = () => {
   };
   return (
     <form>
-      <h1>What is your favorite feature about our product?</h1>
-      <p>Feel free to select all applicable options or/and provide your custom answer:</p>
-
       <div>
+        <h1 className="questions-main-heading">What is your favorite feature about our product?</h1>
+      </div>
+      <div className="checkbox">
         <input
           type="checkbox"
           id="Sound quality"
@@ -29,7 +29,7 @@ export const QuestionEight = () => {
         />
         Sound quality
       </div>
-      <div>
+      <div className="checkbox">
         <input
           type="checkbox"
           id="Ergonomic design"
@@ -43,7 +43,7 @@ export const QuestionEight = () => {
         />
         Ergonomic design
       </div>
-      <div>
+      <div className="checkbox">
         <input
           type="checkbox"
           id="Affordability"
@@ -57,7 +57,7 @@ export const QuestionEight = () => {
         />
         Affordability
       </div>
-      <div>
+      <div className="other-input">
         <input type="text" id="Other" name="Other" value={userInputs} onChange={(event) => savedInputs(event.target.value)} placeholder="Your custom option" />
       </div>
     </form>

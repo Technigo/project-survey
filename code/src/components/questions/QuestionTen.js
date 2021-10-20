@@ -8,8 +8,10 @@ export const QuestionTen = ({ percent }) => {
 
   return (
     <form>
-      <h1>Thank you for your feedback!</h1>
-      <h2>Would you like {percent}% off your next purchase?</h2>
+      <div>
+        <h1 className="questions-main-heading">Thank you for your feedback!</h1>
+        <h2 className="instructions">Would you like {percent}% off your next purchase?</h2>
+      </div>
       <label htmlFor="nameInput">
         Name:
         <input

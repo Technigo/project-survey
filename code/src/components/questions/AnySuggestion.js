@@ -7,7 +7,7 @@ export const AnySuggestion = () => {
 
   return (
     <form>
-      <h1>Any suggestions on how we can improve?</h1>
+      <h1 className="questions-main-heading">Any suggestions on how we can improve?</h1>
       <input
         type="text"
         value={feedbackInput}

@@ -8,5 +8,4 @@
 
 ## Resources
 
-Photo by C D-X on Unsplash
-Photo by Stephen Frank on Unsplash
+Photo by Jason Leung on Unsplash

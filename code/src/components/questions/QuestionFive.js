@@ -1,9 +1,5 @@
 import React, { useState } from "react";
 
 export const QuestionFive = () => {
-  return (
-    <div>
-      <h1>Tell us about the delivery.</h1>
-    </div>
-  );
+  return <h1 className="questions-main-heading">Tell us about the delivery.</h1>;
 };

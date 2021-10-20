@@ -1,0 +1,17 @@
+.eight-wrapper {
+  margin: 0;
+  padding: 0;
+}
+
+.eight {
+  margin-top: 0;
+}
+
+.checkbox {
+  font-size: 12px;
+}
+
+.other-input {
+  margin-top: 10px;
+  margin-bottom: -8px;
+}

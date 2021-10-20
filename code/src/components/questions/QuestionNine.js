@@ -11,8 +11,10 @@ export const QuestionNine = () => {
 
   return (
     <form>
-      <h1>How likely would you recommend our product?</h1>
-      <p>Please select an associated number on a scale from 1 to 10, where 1 is "Very Unlikely" and 10 is "Will definitely recommend!"</p>
+      <div>
+        <h1 className="questions-main-heading">How likely would you recommend our product?</h1>
+        <p className="instructions">Please select a number on a scale from 1 to 10 , where 1 is "Very Unlikely" and 10 is "100% will recommend!"</p>
+      </div>
       <input type="radio" value="1" name="one" id="one" checked={selectedOption === "1"} onChange={handleOptionChange} />
       <label htmlFor="one">1</label>
       <input type="radio" value="2" name="two" id="two" checked={selectedOption === "2"} onChange={handleOptionChange} />

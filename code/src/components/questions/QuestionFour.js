@@ -5,7 +5,7 @@ export const QuestionFour = () => {
   console.log(option);
   return (
     <form>
-      <h1>Quality</h1>
+      <h1 className="questions-main-heading">Quality</h1>
       <select value={option} onChange={(e) => optionsState(e.target.value)}>
         <option disabled value={"default"}>
           Select most suitable option

@@ -1,0 +1,59 @@
+.welcome {
+  background-image: url("https://i.ibb.co/QM5SqDZ/mobile.jpg");
+  opacity: 0.9;
+}
+
+.give-btn {
+  color: rgba(255, 255, 255, 1);
+  background: var(--background);
+  font-weight: normal;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
+  margin-top: 20px;
+  width: 150px;
+  font-size: 12px;
+  height: 34px;
+  padding: 0;
+  border: none;
+  box-shadow: 0 0 8px var(--main-text);
+  border-radius: 4px;
+}
+
+.give-btn:hover {
+  box-shadow: 0 0 8px var(--highlight);
+}
+
+.welcome-header-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.welcome-header {
+  display: inline-flex;
+  margin-top: 10px;
+}
+
+.greetings {
+  margin-bottom: 10px;
+  margin-top: 5px;
+}
+
+@media (min-width: 768px) {
+  .welcome {
+    background-image: url("https://i.ibb.co/xH0KXJw/desktop.jpg");
+  }
+  .give-btn {
+    margin-top: 50px;
+    width: 240px;
+    font-size: 20px;
+    height: 50px;
+  }
+  .welcome-header {
+    font-size: 66px;
+  }
+  .greetings {
+    margin-bottom: 26px;
+    font-size: 28px;
+  }
+}

@@ -1,13 +1,19 @@
 import React, { useState } from "react";
+import AnimatedTextSpring from "./AnimatedTextSpring";
 
 export const Welcome = ({ moveOn }) => {
   return (
-    <div className="container">
+    <div className="container text">
       <div className="card welcome">
-        <h1>WAVES X3</h1>
-        <p>Thank you for shopping with us!</p>
-        <p>Your feedback drives change!</p>
-        <button className="give-btn" onClick={moveOn}>
+        <div className="welcome-header-container">
+          <h1 className="welcome-header">
+            WAVES
+            <AnimatedTextSpring />
+          </h1>
+        </div>
+        <p className="greetings">Thank you for shopping with us!</p>
+        <p className="greetings">Your feedback drives change!</p>
+        <button className="give-btn interaction" onClick={moveOn}>
           give feedback
         </button>
       </div>

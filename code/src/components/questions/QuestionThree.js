@@ -14,7 +14,7 @@ export const QuestionThree = () => {
   return (
     <form>
       <div>
-        <h1>Variety</h1>
+        <h1 className="questions-main-heading">Variety</h1>
       </div>
       <div className="slider-parent">
         <input

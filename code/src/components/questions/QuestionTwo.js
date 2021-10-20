@@ -11,7 +11,7 @@ export const QuestionTwo = () => {
 
   return (
     <form>
-      <h1>Design</h1>
+      <h1 className="questions-main-heading">Design</h1>
       <input type="radio" value="1" name="one" id="one" checked={selectedOption === "1"} onChange={handleOptionChange} />
       <label htmlFor="one">1</label>
       <input type="radio" value="2" name="two" id="two" checked={selectedOption === "2"} onChange={handleOptionChange} />

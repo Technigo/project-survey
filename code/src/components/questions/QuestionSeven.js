@@ -14,7 +14,7 @@ export const QuestionSeven = () => {
   return (
     <form>
       <div>
-        <h1>Friendliness</h1>
+        <h1 className="questions-main-heading">Friendliness</h1>
       </div>
       <div className="slider-parent">
         <input
