@@ -71,7 +71,7 @@ const AllQuestions = () => {
               answer={answers[questionNumber]}
               setAnswer={onAnswerChange}
             />
-            <button onClick={handleGoingBack} disabled={firstQuestion}>
+            <button type="button" onClick={handleGoingBack} disabled={firstQuestion}>
               Go back
             </button>
 
