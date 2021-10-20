@@ -1,20 +1,33 @@
 import React from "react";
 
-const SecondQuestion = ({
-  surnameInput,
-  onSurnameInputChange,
-  onStepChange,
-}) => {
+const SecondQuestion = ({ animalInput, onAnimalInputChange, onStepChange }) => {
   return (
     <form>
-      <label htmlFor="surnameInput">Type your surname</label>
+      <h2>
+        Would rather have 100 duck-sized elephants or 1 elephant-sized duck?
+      </h2>
+      <label htmlFor="animalInput">Elephant</label>
       <input
-        id="nameInput"
-        type="text"
-        value={surnameInput}
-        onChange={onSurnameInputChange}
+        type="radio"
+        value="elephant"
+        onChange={onAnimalInputChange}
+        checked={animalInput === "elephant"}
       />
-      <button onClick={onStepChange}>See overview</button>
+      <span role="img" aria-label="elephant">
+        🐘
+      </span>
+
+      <label htmlFor="animalInput">Duck</label>
+      <input
+        type="radio"
+        value="duck"
+        onChange={onAnimalInputChange}
+        checked={animalInput === "duck"}
+      />
+      <span role="img" aria-label="elephant">
+        🦆
+      </span>
+      <button onClick={onStepChange}>Next Question</button>
     </form>
   );
 };

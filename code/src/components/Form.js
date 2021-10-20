@@ -2,19 +2,43 @@ import React, { useState } from "react";
 
 import FirstQuestion from "./FirstQuestion";
 import SecondQuestion from "./SecondQuestion";
+import ThirdQuestion from "./ThirdQuestion";
+import FourthQuestion from "./FourthQuestion";
+import FifthQuestion from "./FifthQuestion";
+import SixtQuestion from "./SixtQuestion";
 import Overview from "./Overview";
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
-  const [surnameInput, setSurnameInput] = useState("");
+  const [animalInput, setAnimalInput] = useState("");
+  const [bodyInput, setBodyInput] = useState("");
+  const [gameInput, setGameInput] = useState("");
+  const [pizzaInput, setPizzaInput] = useState("");
+  const [outfitInput, setOutfitInput] = useState("");
   const [step, setStep] = useState(1);
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
   };
 
-  const onSurnameInputChange = (event) => {
-    setSurnameInput(event.target.value);
+  const onAnimalInputChange = (event) => {
+    setAnimalInput(event.target.value);
+  };
+
+  const onBodyInputChange = (event) => {
+    setBodyInput(event.target.value);
+  };
+
+  const onGameInputChange = (event) => {
+    setGameInput(event.target.value);
+  };
+
+  const onPizzaInputChange = (event) => {
+    setPizzaInput(event.target.value);
+  };
+
+  const onOutfitInputChange = (event) => {
+    setOutfitInput(event.target.value);
   };
 
   const onStepChange = () => {
@@ -32,64 +56,51 @@ const Form = () => {
       )}
       {step === 2 && (
         <SecondQuestion
-          surnameInput={surnameInput}
-          onSurnameInputChange={onSurnameInputChange}
+          animalInput={animalInput}
+          onAnimalInputChange={onAnimalInputChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 3 && (
-        <Overview nameInput={nameInput} surnameInput={surnameInput} />
+        <ThirdQuestion
+          bodyInput={bodyInput}
+          onBodyInputChange={onBodyInputChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 4 && (
+        <FourthQuestion
+          gameInput={gameInput}
+          onGameInputChange={onGameInputChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 5 && (
+        <FifthQuestion
+          pizzaInput={pizzaInput}
+          onPizzaInputChange={onPizzaInputChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 6 && (
+        <SixtQuestion
+          outfitInput={outfitInput}
+          onOutfitInputChange={onOutfitInputChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 7 && (
+        <Overview
+          nameInput={nameInput}
+          animalInput={animalInput}
+          bodyInput={bodyInput}
+          gameInput={gameInput}
+          pizzaInput={pizzaInput}
+          outfitInput={outfitInput}
+        />
       )}
     </div>
   );
-
-  //   if (step === 1) {
-  //     return (
-  //       <FirstQuestion
-  //         nameInput={nameInput}
-  //         onNameInputChange={onNameInputChange}
-  //         onStepChange={onStepChange}
-  //       />
-  //     );
-  //   } else if (step === 2) {
-  //     return (
-  //       <SecondQuestion
-  //         surnameInput={surnameInput}
-  //         onSurnameInputChange={onSurnameInputChange}
-  //         onStepChange={onStepChange}
-  //       />
-  //     );
-  //   } else if (step === 3) {
-  //     return <Overview nameInput={nameInput} surnameInput={surnameInput} />;
-  //   }
-
-  // return (
-  //   <div>
-  //     <form>
-  //       <label htmlFor="nameInput">Type your name</label>
-  //       <input
-  //         id="nameInput"
-  //         type="text"
-  //         value={nameInput}
-  //         onChange={onNameInputChange}
-  //       />
-
-  //       <label htmlFor="surnameInput">Type your surname</label>
-  //       <input
-  //         id="nameInput"
-  //         type="text"
-  //         value={surnameInput}
-  //         onChange={onSurnameInputChange}
-  //       />
-  //     </form>
-
-  // <section>
-  //   <h2>My values from form:</h2>
-  //   <p>Name: {nameInput}</p>
-  //   <p>Surname: {surnameInput}</p>
-  // </section>
-  //   </div>
-  // );
 };
 
 export default Form;
