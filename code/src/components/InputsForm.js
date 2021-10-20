@@ -5,6 +5,7 @@ import LastSong from "./LastSong";
 import DropDown from "./BirdQuestion";
 import ElbowRadio from "./ElbowRadio";
 import AgeRadio from "./AgeRadio";
+import ColorPicker from "./ColorPicker";
 import Summary from "./Summary";
 
 const InputsForm = () => {
@@ -14,7 +15,8 @@ const InputsForm = () => {
   const [birdInput, setBirdInput] = useState("");
   const [radioInput, setRadioInput] = useState("");
   const [ageRadioInput, setAgeRadioInput] = useState("");
-  const [step, setStep] = useState(1);
+  const [colorInput, setColor] = useState(null);
+  const [step, setStep] = useState(0);
 
   const handleFirstNameInputChange = event => {
     setNameInput(event.target.value);
@@ -36,13 +38,24 @@ const InputsForm = () => {
     setAgeRadioInput(event.target.value);
   };
 
+  const handleColorInputChange = event => {
+    setColor(event.target.value);
+  };
+
   const onStepChange = () => {
     setStep(step + 1);
   };
 
+  const onPreviousQuestionChange = () => {
+    setStep(step - 1);
+  };
+
   return (
     <div>
-      {step === 1 && (
+      <div className="question-number">
+        {step <= 6 && <p>Question number: {step}/6</p>}
+      </div>
+      {step === 0 && (
         <>
           <section className="image-section" tabIndex="0">
             <div className="image-container">
@@ -58,38 +71,52 @@ const InputsForm = () => {
           </section>
         </>
       )}
-      {step === 2 && (
+
+      {step === 1 && (
         <NameQuestion
           nameInput={nameInput}
           handleFirstNameInputChange={handleFirstNameInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 2 && (
+        <LastSong
+          songInput={songInput}
+          handleSongInputChange={handleSongInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 3 && (
-        <LastSong
-          songInput={songInput}
-          handleSongInputChange={handleSongInputChange}
+        <DropDown
+          birdInput={birdInput}
+          handleBirdInputChange={handleBirdInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 4 && (
-        <DropDown
-          birdInput={birdInput}
-          handleBirdInputChange={handleBirdInputChange}
+        <ElbowRadio
+          radioInput={radioInput}
+          handleRadioInputChange={handleRadioInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 5 && (
-        <ElbowRadio
-          radioInput={radioInput}
-          handleRadioInputChange={handleRadioInputChange}
+        <AgeRadio
+          ageRadioInput={ageRadioInput}
+          handleAgeRadioInputChange={handleAgeRadioInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 6 && (
-        <AgeRadio
-          ageRadioInput={ageRadioInput}
-          handleAgeRadioInputChange={handleAgeRadioInputChange}
+        <ColorPicker
+          colorInput={colorInput}
+          handleColorInputChange={handleColorInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
@@ -101,6 +128,7 @@ const InputsForm = () => {
             birdInput={birdInput}
             radioInput={radioInput}
             ageRadioInput={ageRadioInput}
+            colorInput={colorInput}
           />
         </>
       )}

@@ -1,9 +1,14 @@
 import React from "react";
 
-const ElbowRadio = ({ radioInput, handleRadioInputChange, onStepChange }) => {
+const ElbowRadio = ({
+  radioInput,
+  handleRadioInputChange,
+  onStepChange,
+  onPreviousQuestionChange,
+}) => {
   return (
     <section className="form-container" tabIndex="0">
-      <form>
+      <form onSubmit={e => e.preventDefault()}>
         <h2 className="label-text">
           CAN YOU LICK YOUR ELBOWS?
           <span role="img" aria-label="muscle emoji">
@@ -61,7 +66,12 @@ const ElbowRadio = ({ radioInput, handleRadioInputChange, onStepChange }) => {
           only in spanish (el-bow)
         </label>
       </form>
-      <button onClick={onStepChange}>Summary</button>
+      <div className="button-container">
+        <button onClick={onPreviousQuestionChange}>Prev question</button>
+        <button type="submit" name="submit-button" onClick={onStepChange}>
+          Next question
+        </button>
+      </div>
     </section>
   );
 };

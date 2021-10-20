@@ -6,34 +6,43 @@ const Summary = ({
   birdInput,
   radioInput,
   ageRadioInput,
+  colorInput,
 }) => {
   return (
     <section className="form-container">
       <h2 className="label-text">Here's your summary</h2>
       <div className="summary-container">
         <p>
-          name:<span class="answer-text"> {nameInput}</span>
+          name:<span className="answer-text"> {nameInput}</span>
         </p>
         <p>
-          last song listened to: <span class="answer-text"> {songInput}</span>
+          last song listened to:{" "}
+          <span className="answer-text"> {songInput}</span>
         </p>
         <p>
           {" "}
-          least favorite bird:<span class="answer-text"> {birdInput} </span>
+          least favorite bird:<span className="answer-text"> {birdInput} </span>
         </p>
         <p>
-          can you lick your elbow? <span class="answer-text">{radioInput}</span>
+          can you lick your elbow?{" "}
+          <span className="answer-text">{radioInput}</span>
         </p>
         <p>
-          you feel this old:<span class="answer-text"> {ageRadioInput}</span>
+          you feel this old:
+          <span className="answer-text"> {ageRadioInput}</span>
         </p>
-        <form className="submit-button-form">
-          <button className="submitBtn" type="submit">
+        <p>
+          fourth favorite color in code:
+          <span className="answer-text"> {colorInput}</span>
+        </p>
+        <form classNameName="submit-button-form">
+          <button classNameName="submitBtn" type="submit" onSubmit="">
             restart
           </button>
         </form>
         <div>
           <iframe
+            title="confetti"
             className="confetti"
             src="https://giphy.com/embed/PMV7yRpwGO5y9p3DBx"
             frameBorder="0"

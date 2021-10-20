@@ -4,10 +4,11 @@ const AgeRadio = ({
   ageRadioInput,
   handleAgeRadioInputChange,
   onStepChange,
+  onPreviousQuestionChange,
 }) => {
   return (
     <section className="form-container" tabIndex="0">
-      <form>
+      <form onSubmit={e => e.preventDefault()}>
         <h2 className="label-text"> How old do you feel inside?</h2>
         <label>
           <input
@@ -46,7 +47,12 @@ const AgeRadio = ({
           ready for retirement
         </label>
       </form>
-      <button onClick={onStepChange}>Summary</button>
+      <div className="button-container">
+        <button onClick={onPreviousQuestionChange}>Prev question</button>
+        <button type="submit" name="age-question" onClick={onStepChange}>
+          Next Question
+        </button>
+      </div>
     </section>
   );
 };

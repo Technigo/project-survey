@@ -1,8 +1,17 @@
 import React from "react";
 
-const BirdQuestion = ({ birdInput, handleBirdInputChange, onStepChange }) => {
+const BirdQuestion = ({
+  birdInput,
+  handleBirdInputChange,
+  onStepChange,
+  onPreviousQuestionChange,
+}) => {
   return (
-    <form className="form-container" tabIndex="0">
+    <form
+      className="form-container"
+      tabIndex="0"
+      onSubmit={e => e.preventDefault()}
+    >
       <label className="label-text">
         Least favorite bird
         <span role="img" aria-label="bird emoji">
@@ -18,8 +27,12 @@ const BirdQuestion = ({ birdInput, handleBirdInputChange, onStepChange }) => {
         <option value="svan">svan</option>
         <option value="kanadagås">kanadagås</option>
       </select>
-
-      <button onClick={onStepChange}>Next question</button>
+      <div className="button-container">
+        <button onClick={onPreviousQuestionChange}>Prev question</button>
+        <button type="submit" name="bird-question" onClick={onStepChange}>
+          Next question
+        </button>
+      </div>
     </form>
   );
 };

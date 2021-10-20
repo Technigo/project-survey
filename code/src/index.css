@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Raleway", sans-serif;
 }
 
 body {
@@ -15,6 +15,13 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.question-number {
+  color: white;
+  text-align: center;
+  position: relative;
+  top: 50px;
 }
 
 .neon-text {
@@ -53,17 +60,22 @@ img {
 }
 
 .label-text {
+  font-family: "Raleway", sans-serif;
   text-align: center;
   text-transform: uppercase;
   margin: 30px auto 0 auto;
+  color: white;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 
 label {
+  font-family: "Raleway", sans-serif;
   color: white;
 }
 
 .form-container {
-  margin-top: 50px;
+  margin-top: 70px;
   padding: 20px;
   background: rgba(59, 57, 57, 0.664);
   position: absolute;
@@ -98,7 +110,8 @@ button {
   margin: 20px auto 0 auto;
   cursor: pointer;
   border-radius: 20px;
-  font-family: "Anonymous Pro", monospace;
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
   height: 50px;
 }
 
@@ -129,10 +142,11 @@ select {
   margin: 0 auto;
 }
 
-.label-text {
-  color: white;
-  font-size: 24px;
-  margin-bottom: 30px;
+.color-input {
+  height: 50px;
+  width: 80px;
+  padding: 5px;
+  margin: 0 auto;
 }
 
 .summary-container {
@@ -162,12 +176,17 @@ p {
   text-shadow: 1px 1px #000;
 }
 
+.confetti {
+  margin: 0 auto;
+}
+
 @media (max-width: 767px) {
   .neon-text {
     width: 90%;
   }
 
   .form-container {
+    max-height: 70%;
     width: 90%;
   }
 
@@ -175,8 +194,8 @@ p {
     width: 90%;
   }
 
-  iframe {
-    width: 90%;
+  .confetti {
+    display: none;
   }
 }
 
