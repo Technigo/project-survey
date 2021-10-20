@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AeroplaneQuestion = ({aeroplaneInput, onAeroplaneInputChange, onstepChange}) =>{
+const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange}) =>{
 
     return(
         <form>
@@ -10,7 +10,7 @@ const AeroplaneQuestion = ({aeroplaneInput, onAeroplaneInputChange, onstepChange
                     <input 
                         id="aeroplaneInput"
                         type="radio" 
-                        value={aeroplaneInput} 
+                        value="Yes"
                         onChange={onAeroplaneInputChange}
                         className="radio"/>
                 </label>
@@ -19,18 +19,12 @@ const AeroplaneQuestion = ({aeroplaneInput, onAeroplaneInputChange, onstepChange
                     <input 
                         id="aeroplaneInput"
                         type="radio" 
-                        value={aeroplaneInput} 
+                        value="No"
                         onChange={onAeroplaneInputChange}
                         className="radio"/>
                 </label>
             </div>
-            
-          
-          
-          
-          
-          
-          
+         
         <button onClick = {onstepChange}>Next Question</button>
         </form>
     )

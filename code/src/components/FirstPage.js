@@ -2,8 +2,7 @@ import React from 'react'
 
 const FirstPage = ({onStepChange}) => {
 
-
-    return(
+    return (
         <section className="intro-container">
             <img></img>
             <div className="text-container">

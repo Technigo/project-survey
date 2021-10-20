@@ -9,6 +9,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
 
 
  const Form = () => {
+  
   const [nameInput, setNameInput] = useState ('');
   const [locationInput, setLocationInput] = useState ('')
   const [animalInput, setAnimalInput] = useState ('')
@@ -36,20 +37,20 @@ import AeroplaneQuestion from './AeroplaneQuestion'
       setStep(step + 1)
   }
 
-  if (step === 1) {
+  /*if (step === 1) {
     return (
       <div> < FirstPage 
       onstepChange = {onstepChange}/></div> 
     )
-  }
-  else if (step === 2) {
+  }*/
+  if (step === 1) {
     return (
       <div> < NameQuestion 
       nameInput={nameInput} 
       onNameInputChange={onNameInputChange}
       onstepChange = {onstepChange}/></div> 
     )
-  } else if (step === 3) {
+  } else if (step === 2) {
     return (
       <div> <LocationQuestion 
       locationInput={locationInput} 
@@ -57,7 +58,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
       onstepChange = {onstepChange}/> </div>
     )
     
-  } else if (step === 4) {
+  } else if (step === 3) {
     return (
       <div> <FavouriteAnimal
       animalInput={animalInput}
@@ -65,7 +66,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
       onstepChange = {onstepChange}
       /> </div>
     )
-  } else if (step === 5) {
+  } else if (step === 4) {
     return (
       <div> <FavouriteColour 
       colourInput={colourInput}
@@ -73,7 +74,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
       onstepChange = {onstepChange}
       /> </div>
     )
-  } else if (step === 6) {
+  } else if (step === 5) {
     return (
       <div> <AeroplaneQuestion 
       AeroplaneInput={aeroplaneInput}
@@ -81,7 +82,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
       onstepChange = {onstepChange}/>
       </div>
     )
-  } else if (step === 7) {
+  } else if (step === 6) {
     return (
       <div> <Overview 
       nameInput={nameInput}
