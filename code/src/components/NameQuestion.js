@@ -1,10 +1,13 @@
 import React from 'react';
 
+import ProgressBar from '@ramonak/react-progress-bar';
+
 const NameQuestion = ({
   nameInput,
   onNameInputChange,
   onStepChange,
-  onEnter
+  onEnter,
+  step
 }) => {
   return (
     <div className='form-container'>
@@ -17,10 +20,17 @@ const NameQuestion = ({
           onChange={onNameInputChange}
           onKeyPress={onEnter}
         />
-        <button type='button' onClick={onStepChange}>
-          Next question
+        <button
+          type='button'
+          onClick={onStepChange}
+          disabled={nameInput === ''}
+        >
+          Next questions
         </button>
       </form>
+      <div className='progress-bar'>
+        <ProgressBar completed={step * 10} />
+      </div>
     </div>
   );
 };

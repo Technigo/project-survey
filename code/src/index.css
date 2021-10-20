@@ -8,7 +8,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  background-color: rgb(175, 214, 175);
+  /* background-color: rgb(175, 214, 175); */
+  background: #00c9ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to left, #00c9ff, #92fe9d); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to left, #00c9ff, #92fe9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
 
 
@@ -62,6 +65,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
 form {
@@ -82,9 +87,15 @@ form > * {
   margin: 10px;
 }
 
+h2 {
+  font-size: 1.2em;
+}
+
 label {
+  color: rgba(11, 30, 78, 1);
   text-align: center;
   font-size: 1.5em;
+  font-weight: 700;
 }
 
 input {
@@ -93,6 +104,32 @@ input {
   border-bottom: 3px solid black;
   width: 70%;
 }
+
+.radio-form {
+  font-size: 1em;
+  display: flex;
+  align-items: flex-start;
+}
+
+.radio-input {
+  width: initial;
+  margin-right: 23px;
+}
+
+.radio-form label {
+  margin-left: 25px;
+}
+
+.radio-form button {
+  display: flex;
+  align-self: center;
+}
+
+.progress-bar {
+  margin-top: 10px;
+  width: 70%;
+}
+
 
 /* button styling from https://getcssscan.com/css-buttons-examples */
 button {

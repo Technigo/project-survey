@@ -7,6 +7,9 @@ import AgeQuestion from './AgeQuestion';
 import HeightQuestion from './HeightQuestion';
 import HipQuestion from './HipQuestion';
 import WaistQuestion from './WaistQuestion';
+import ActivityQuestion from './ActivityQuestion';
+import OtherQuestion from './OtherQuestion';
+import Overview from './Overview';
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('');
@@ -15,6 +18,7 @@ const Form = () => {
   const [heightInput, setHeightInput] = useState('');
   const [hipInput, setHipInput] = useState('');
   const [waistInput, setWaistInput] = useState('');
+  const [activityInput, setActivityInput] = useState('');
   const [step, setStep] = useState(1);
 
   const onNameInputChange = (event) => {
@@ -41,14 +45,18 @@ const Form = () => {
     setWaistInput(event.target.value);
   };
 
+  const onActivityInputChange = (event) => {
+    setActivityInput(event.target.value);
+  };
+
   const onStepChange = () => {
     setStep(step + 1);
   };
 
   const onEnter = (event) => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && event.target.value !== '') {
       event.preventDefault();
-      setStep(step + 1);
+      onStepChange();
     }
   };
 
@@ -57,12 +65,15 @@ const Form = () => {
       <div>
         {step === 1 && <LandingPage onStepChange={onStepChange} />}
         {step === 2 && (
-          <NameQuestion
-            nameInput={nameInput}
-            onNameInputChange={onNameInputChange}
-            onStepChange={onStepChange}
-            onEnter={onEnter}
-          />
+          <>
+            <NameQuestion
+              nameInput={nameInput}
+              onNameInputChange={onNameInputChange}
+              onStepChange={onStepChange}
+              onEnter={onEnter}
+              step={step}
+            />
+          </>
         )}
         {step === 3 && (
           <AgeQuestion
@@ -102,6 +113,26 @@ const Form = () => {
             onWaistInputChange={onWaistInputChange}
             onStepChange={onStepChange}
             onEnter={onEnter}
+          />
+        )}
+        {step === 8 && (
+          <ActivityQuestion
+            activityInput={activityInput}
+            onActivityInputChange={onActivityInputChange}
+            onStepChange={onStepChange}
+            onEnter={onEnter}
+          />
+        )}
+        {step === 9 && <OtherQuestion onStepChange={onStepChange} />}
+        {step === 10 && (
+          <Overview
+            nameInput={nameInput}
+            ageInput={ageInput}
+            weightInput={weightInput}
+            heightInput={heightInput}
+            hipInput={hipInput}
+            waistInput={waistInput}
+            activityInput={activityInput}
           />
         )}
       </div>
