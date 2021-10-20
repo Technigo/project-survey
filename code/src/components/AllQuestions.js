@@ -66,7 +66,7 @@ const AllQuestions = () => {
     <>
       {questionsRemaining ? (
         <>
-          <form onSubmit={handleSubmission}>
+          <form className="form" onSubmit={handleSubmission}>
             <Question
               key={questions[questionNumber].number}
               question={questions[questionNumber]}
@@ -81,7 +81,7 @@ const AllQuestions = () => {
               {lastQuestion ? "Submit" : "Next Question"}
             </button>
           </form>
-          {!valid && <p>Please enter a response</p>}
+          {!valid && <p className="validation-text">Please enter a response</p>}
           <ProgressBar progress={progress}/>
         </>
       ) : (
