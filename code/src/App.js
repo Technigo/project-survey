@@ -11,29 +11,40 @@ export const App = () => {
 
   const handleChange = (e, nextQuestion) => {
     const { id, value } = e.target
-    console.log(e.target)
     setState({ ...state, [id]: value, nextQuestion: nextQuestion })
   }
 
   const incrementStep = () => {
+    let newSteps = ''
     if (state.nextQuestion) {
-      setStep(state.nextQuestion)
-      setSteps([...steps, state.nextQuestion])
+      newSteps = state.nextQuestion
     } else if (!state.nextQuestion) {
-      setStep(step + 1)
-      setSteps([...steps, step + 1])
+      newSteps = step + 1
     } else {
-      setStep('end')
-      setSteps([...steps, 'end'])
+      newSteps = 'end'
     }
+    setStep(newSteps)
+    setSteps([...steps, newSteps])
   }
+
+  // const incrementStep = () => {
+  //   if (state.nextQuestion) {
+  //     setStep(state.nextQuestion)
+  //     setSteps([...steps, state.nextQuestion])
+  //   } else if (!state.nextQuestion) {
+  //     setStep(step + 1)
+  //     setSteps([...steps, step + 1])
+  //   } else {
+  //     setStep('end')
+  //     setSteps([...steps, 'end'])
+  //   }
+  // }
 
   const decrementStep = () => {
     console.log(steps.length)
     if (steps.length > 1) {
       const newSteps = steps.filter((e, i) => i < steps.length - 1)
       const newStep = newSteps[newSteps.length - 1]
-      console.log('newsteps', newSteps)
       setStep(newStep)
       setSteps([...newSteps])
       setState({ ...state, nextQuestion: 0 })

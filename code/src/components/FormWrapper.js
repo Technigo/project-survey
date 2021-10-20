@@ -8,17 +8,7 @@ import { FormSummary } from 'components/FormSummary'
 console.log(data)
 
 export const FormWrapper = props => {
-  // const [state, setState] = useState({})
-
   const { step, state, handleChange } = props
-  // const [number, setNumber] = useState(0)
-  //  firstName: '', lastName: ''
-
-  // const handleChange = e => {
-  //   const { id, value } = e.target
-  //   console.log('handleChange id: ', id, 'value: ', value)
-  //   setState({ ...state, [id]: value })
-  // }
 
   return (
     <form>
