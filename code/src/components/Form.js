@@ -29,6 +29,11 @@ const Form = () => {
     setStep(step + 1);
   };
 
+  const handleSubmit = event => {
+    event.preventDefault();
+    onStepChange();
+  };
+
   // const onUpdateValueChange = () => {
   //   updateValue(value + 20);
   // };
@@ -43,45 +48,45 @@ const Form = () => {
       )}
       {step === 1 && (
         <section>
-          <Progressbar
-            // onUpdateValueChange={onUpdateValueChange}
-            done="25"
-          />
           <FirstQuestion
             nameInput={nameInput}
             onNameInputChange={onNameInputChange}
-            onStepChange={onStepChange}
+            handleSubmit={handleSubmit}
+          />
+          <Progressbar
+            // onUpdateValueChange={onUpdateValueChange}
+            done="25"
           />
         </section>
       )}
       {step === 2 && (
         <section>
-          <Progressbar done="50" />
           <SecondQuestion
             interestInput={interestInput}
             onInterestInputChange={onInterestInputChange}
-            onStepChange={onStepChange}
+            handleSubmit={handleSubmit}
           />
+          <Progressbar done="50" />
         </section>
       )}
       {step === 3 && (
         <section>
-          <Progressbar done="75" />
           <ThirdQuestion
             ageInput={ageInput}
             onAgeInputChange={onAgeInputChange}
-            onStepChange={onStepChange}
+            handleSubmit={handleSubmit}
           />
+          <Progressbar done="75" />
         </section>
       )}
       {step === 4 && (
         <section className="summary-container">
-          <Progressbar done="100" />
           <Summary
             nameInput={nameInput}
             interestInput={interestInput}
             ageInput={ageInput}
           />
+          <Progressbar done="100" />
         </section>
       )}
     </main>

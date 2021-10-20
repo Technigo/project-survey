@@ -1,15 +1,14 @@
 import React from "react";
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
-  console.log(nameInput);
+const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
   return (
-    <form id="firstPage" className="form">
+    <form onSubmit={handleSubmit}>
       <h2 className="page-header">Your name please</h2>
       <label className="label" htmlFor="nameInput">
         <p>Type your name here</p>
       </label>
       <input
-        className="input"
+        className="input-first-question"
         id="nameInput"
         type="text"
         value={nameInput}
@@ -18,7 +17,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         required="required"
       />
 
-      <button type="submit" className="link-button" onClick={onStepChange}>
+      <button type="submit" className="link-button">
         Next question
       </button>
     </form>

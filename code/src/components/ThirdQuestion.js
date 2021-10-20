@@ -1,6 +1,6 @@
 import React from "react";
 
-const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
+const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
   const ageGroup = [
     "younger than 18",
     "18-30",
@@ -10,7 +10,7 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
   ];
 
   return (
-    <form id="thirdQuestion" className="form">
+    <form onSubmit={handleSubmit} id="thirdQuestion" className="form">
       <h2 className="page-header">third question</h2>
       <p>What is your age?</p>
       {ageGroup.map(group => (
@@ -27,7 +27,7 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
         </label>
       ))}
 
-      <button type="button" className="link-button" onClick={onStepChange}>
+      <button type="submit" className="link-button">
         Next question
       </button>
     </form>

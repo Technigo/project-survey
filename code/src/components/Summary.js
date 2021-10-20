@@ -8,6 +8,14 @@ const Summary = ({ nameInput, interestInput, ageInput, onStepChange }) => {
       <p>We are happy to hear you want to be a {interestInput} at our place.</p>
       <p>Your age is between: {ageInput} </p>
       <p className="last-message">Enjoy!</p>
+
+      <button
+        onClick={() => window.location.reload(false)}
+        type="button"
+        className="link-button"
+      >
+        Lets do it one more time
+      </button>
     </>
   );
 };

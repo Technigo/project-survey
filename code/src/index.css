@@ -23,6 +23,10 @@ code {
     monospace;
 }
 
+section {
+  width: 80%;
+}
+
 /* TEXT */
 .description {
   text-transform: uppercase;
@@ -59,8 +63,8 @@ p {
 }
 
 .progress-bar {
-  width: 80%;
-  padding: 20px;
+  width: 100%;
+  padding: 40px;
   color: red;
 }
 
@@ -99,6 +103,17 @@ p {
   animation-direction: alternate;
 }
 
+.input-first-question {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--beige);
+  border: none;
+}
+
+.input-first-question::after {
+  background-color: var(--beige);
+}
+
 @keyframes press {
   0% {
     background-color: var(--beige);
@@ -124,7 +139,7 @@ p {
 }
 
 .label {
-  padding: 24px 0;
+  padding: 12px 0;
   font-size: 20px;
 }
 
@@ -134,7 +149,6 @@ p {
 }
 
 .input::after {
-  padding: 10px;
   background-color: var(--beige);
 }
 
