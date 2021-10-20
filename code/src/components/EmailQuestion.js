@@ -12,7 +12,7 @@ const EmailQuestion = ({
       <input
         id="emailInput"
         type="email"
-        placeholder="type your Email address here"
+        placeholder="Email goes here"
         value={emailInput}
         onChange={onEmailInputChange}
         onKeyPress={onEnter}
@@ -24,7 +24,7 @@ const EmailQuestion = ({
         type="button"
         onClick={onStepChange}
       >
-        See your entered information
+        Complete sign-up
       </button>
     </form>
   )

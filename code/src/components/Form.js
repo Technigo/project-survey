@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import FirstQuestion from './FirstQuestion'
 import PreferenceQuestion from './PreferenceQuestion'
 import EmailQuestion from './EmailQuestion'
-import Summary from './Summary'
+import Final from './Final'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
@@ -81,7 +81,7 @@ const Form = () => {
         />
       )}
       {step === 4 && (
-        <Summary
+        <Final
           nameInput={nameInput}
           emailInput={emailInput}
           preferenceInput={preferenceInput}

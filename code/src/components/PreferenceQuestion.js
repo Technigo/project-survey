@@ -14,7 +14,7 @@ const PreferenceQuestion = ({
 }) => {
   return (
     <>
-      <h2> Click on which type of content you'd like to see more of</h2>
+      <h2> Which type of content do you prefer?</h2>
       <form className="checkbox-container">
         <div className="input-child">
           <label className="label-checkbox" htmlFor="surfInput">
@@ -28,8 +28,7 @@ const PreferenceQuestion = ({
             onChange={onPreferenceInputChange}
             onKeyPress={onEnter}
           />
-        </div>
-        *{' '}
+        </div>{' '}
         <div className="input-child">
           <label className="label-checkbox" htmlFor="clothingInput">
             {' '}

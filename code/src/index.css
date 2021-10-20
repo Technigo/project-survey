@@ -54,7 +54,8 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  color: #2f6f7a;
+  /* color: #2f6f7a; */
+  color: black;
   font-family: Nunito;
   height: 10em;
   padding-bottom: 5em;
@@ -71,8 +72,11 @@ form {
 
 input {
   padding-top: 1em;
+  text-align: center;
+  opacity: 0.8;
   font-size: 1.75rem;
   color: #2f6f7a;
+  /* color: black; */
   border-style: none;
   background-color: transparent;
   border-bottom: 2px solid #ff6a13;
@@ -87,6 +91,7 @@ input:focus-visible {
 .label-checkbox {
   text-shadow: 2px 2px 5px grey;
   font-size: 20px;
+  color: black;
 }
 
 .checkbox-container {
@@ -108,7 +113,6 @@ input:focus-visible {
   font-weight: 700;
   font-family: Nunito;
   font-size: 20px;
-  /* background-color: #ff6a13; */
   background-color: #2f6f7a;
   display: flex;
   flex-direction: row;
@@ -129,7 +133,6 @@ input:focus-visible {
   transition: all 0.4s cubic-bezier(0.5, 0.24, 0, 1);
   padding: 15px 100px;
   margin: 10px 4px;
-  /* color: #ff6a13; */
   color: black;
   font-family: Nunito;
   font-size: 20px;
