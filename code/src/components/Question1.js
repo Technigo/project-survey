@@ -3,7 +3,7 @@ import React from "react";
 const Question1 = ({ traditionInput, onTraditionInputChange, onStepChange }) => {
 
     return (
-        <form>
+        <form className="form">
             <label htmlFor="traditionInput">Favorite Christmas tradition?</label>
             <input id="traditionInput" type="text" value={traditionInput} onChange={onTraditionInputChange} />
 

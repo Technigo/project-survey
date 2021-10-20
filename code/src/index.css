@@ -15,6 +15,48 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
 }
+
+.survey-title {
+  display: flex;
+  justify-content: center;
+  font-size: 40px;
+}
+
+p {
+  font-size: 28px;
+}
+
+button {
+  font-size: 30px;
+  background-color: rgb(134, 74, 74);
+  color: whitesmoke;
+  padding: 15px 20px;
+  border: none;
+  text-decoration: none;
+  max-width: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.intro-section {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form {
+  border: solid 1px red;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+input {
+  max-width: 300px;
+}
+
+
   
 @media (min-width: 668px){
   body {

@@ -45,28 +45,28 @@ const Survey = () => {
            )}
            {step === 2 && (
                <Question1
-               tradition={traditionInput}
+               traditionInput={traditionInput}
                onTraditionInputChange={onTraditionInputChange}
                onStepChange={onStepChange}
                />
            )}
             {step === 3 && (
                <Question2
-               tree={treeInput}
+               treeInput={treeInput}
                onTreeInputChange={onTreeInputChange}
                onStepChange={onStepChange}
                />
            )}
             {step === 4 && (
                <Question3
-               food={foodInput}
+               foodInput={foodInput}
                onFoodInputChange={onFoodInputChange}
                onStepChange={onStepChange}
                />
            )}
             {step === 5 && (
                <Question4
-               movie={movieInput}
+               movieInput={movieInput}
                onMovieInputChange={onMovieInputChange}
                onStepChange={onStepChange}
                />
@@ -75,6 +75,7 @@ const Survey = () => {
                <Overview
                 traditionInput={traditionInput}
                 treeInput={treeInput}
+                foodInput={foodInput}
                 movieInput={movieInput}
                 />
            )}
