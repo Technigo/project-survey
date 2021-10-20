@@ -215,5 +215,6 @@ p {
 
   .form-container {
     width: 400px;
+    height: auto;
   }
 }
