@@ -4,8 +4,8 @@ const Header = () => {
 
   return (
     <header>
-      <h1>Beer-picker</h1>
-      <h2>Pick your wishlist for this christmas!</h2>
+      <h1 className="headline">Beer-picker</h1>
+      <h2 className="headline-underscore">Pick your wishlist for this christmas!</h2>
     </header>
   )
 }
