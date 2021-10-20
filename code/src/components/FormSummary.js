@@ -19,6 +19,7 @@ export const FormSummary = props => {
                   </>
                 )
               }
+              return null
             })}
           </>
         )
