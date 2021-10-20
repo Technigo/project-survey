@@ -1,0 +1,15 @@
+header {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+img {
+  width: 70px;
+  height: auto;
+}
+
+h1 {
+  text-align: center;
+  color: #494c50;
+}

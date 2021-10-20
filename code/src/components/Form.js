@@ -33,8 +33,9 @@ export const Form = () => {
     setSatisfactionTextInput(event.target.value);
   };
 
-  const onStepChange = () => {
+  const onStepChange = (event) => {
     setStep(step + 1);
+    event.preventDefault();
   };
 
   if (step === 1) {

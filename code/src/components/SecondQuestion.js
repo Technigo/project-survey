@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 
 export const SecondQuestion = ({
   adressInput,
@@ -6,21 +7,25 @@ export const SecondQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form onSubmit={onStepChange}>
-      <div>
-        <h2>Var bor du?</h2>
-        <label htmlFor="adressInput">
-          Adress:
-          <input
-            id="adressInput"
-            type="text"
-            value={adressInput}
-            onChange={onAdressInputChange}
-          />
-        </label>
-      </div>
-      <button type="submit">Nästa</button>
-    </form>
+    <>
+      <Header />
+      <form onSubmit={onStepChange} className="content-container">
+        <div>
+          <h2>Var bor du?</h2>
+          <label htmlFor="adressInput" className="input-label-container">
+            Adress:
+            <input
+              id="adressInput"
+              type="text"
+              value={adressInput}
+              onChange={onAdressInputChange}
+              className="input-field"
+            />
+          </label>
+        </div>
+        <button type="submit">Nästa</button>
+      </form>
+    </>
   );
 };
 

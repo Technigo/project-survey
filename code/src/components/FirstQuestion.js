@@ -1,4 +1,5 @@
 import React from "react";
+import Header from "./Header";
 
 export const FirstQuestion = ({
   nameInput,
@@ -6,21 +7,23 @@ export const FirstQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form onSubmit={onStepChange}>
-      <div>
+    <div>
+      <Header />
+      <form onSubmit={onStepChange} className="content-container">
         <h2>Vem är du?</h2>
-        <label htmlFor="nameInput">
+        <label htmlFor="nameInput" className="input-label-container">
           För och efternamn:
           <input
             id="nameInput"
             type="text"
             value={nameInput}
             onChange={onNameInputChange}
+            className="input-field"
           />
         </label>
-      </div>
-      <button disabled={nameInput === ""}>Nästa</button>
-    </form>
+        <button disabled={nameInput === ""}>Nästa</button>
+      </form>
+    </div>
   );
 };
 

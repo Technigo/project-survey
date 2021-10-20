@@ -1,10 +1,13 @@
 import React from "react";
+import Header from "./Header";
 
 const WelcomePage = ({ onStepChange }) => {
   return (
-    <>
-      <section>
-        <h1>Välkommen till Citymails enkät</h1>
+    <div className="content-container">
+      <Header />
+
+      <section className="welcome-container">
+        <h2>Välkommen till Citymails kundundersökning</h2>
         <p>
           Vi jobbar ständigt för att förbättra oss och skickar därför ut en
           enkät för att ta reda på hur vi kan jobba mot nöjdare kunder. Enkäten
@@ -13,7 +16,7 @@ const WelcomePage = ({ onStepChange }) => {
         </p>
       </section>
       <button onClick={onStepChange}>Starta</button>
-    </>
+    </div>
   );
 };
 
