@@ -1,7 +1,5 @@
 import React from 'react'
 
-
-
 const FirstQuestion = (props) => {
 const {nameInput, onNameInputChange, onStepChange} = props
 
@@ -14,7 +12,10 @@ const {nameInput, onNameInputChange, onStepChange} = props
         value={nameInput} 
         onChange={onNameInputChange} 
       />
-      <button onClick={onStepChange}>Next question</button>
+      <button 
+        disabled={nameInput === ''}
+        onClick={onStepChange}>Next question
+      </button>
     </form>
   )
 }

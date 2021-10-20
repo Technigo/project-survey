@@ -12,7 +12,10 @@ const SecondQuestion = (props) => {
             value={surnameInput} 
             onChange={onSurnameInputChange} 
           />
-      <button onClick={onStepChange}>See overview</button>
+      <button 
+        disabled={surnameInput === ''}
+        onClick={onStepChange}>Next question
+      </button>
       </form>
   )
 }
