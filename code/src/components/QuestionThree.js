@@ -3,31 +3,31 @@ import React from 'react'
 const QuestionThree = ({selectValue, onSelectOptionChange, onStepChange}) => {
     const options = [
         {
-            label: "Let's pick one",
-            value: "lets pick one",
+            label: "Choose one option",
+            value: "Choose one option",
           },
         {
-            label: "Portugal",
-            value: "portugal",
+            label: "Beachday in a far away country!",
+            value: "Beachday, ofcourse!",
           },
           {
-            label: "Spain",
-            value: "spain",
+            label: "All day in bed watching Netflix",
+            value: "All day in bed watching Netflix",
           },
           {
-            label: "Banana",
-            value: "banana",
+            label: "As long as I'm with friends. WHATEVER!",
+            value: "Friends forever!",
           },
           {
-            label: "Pineapple",
-            value: "pineapple",
+            label: "Sleeping. I am ao tired.",
+            value: "I am so sleepy...Let´s sleep!",
           },
         ];
 
     return (
     <div>
-        <h2>That´s what we thought!</h2>
-        <p>This is the body text for the question three.</p>
+        <h2>That is a good choice!</h2>
+        <p>What would constitute a “perfect” day for you?</p>
         <form className="form">
             <label htmlFor="select">Choose one option</label>
                 <select

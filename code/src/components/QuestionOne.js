@@ -1,13 +1,13 @@
 import React from 'react'
 
-const QuestionOne = ({ nameInput, onNameInputChange, onStepChange }) => {
+const QuestionOne = ({ nameInput, onNameInputChange, onStepChange}) => {
     // const { nameInput, onNameInputChange } = props
     return (
-        <section>
-            <h2>You ARE a real sport! Thanks!</h2>
-            <p>Lets start out with your name.</p>
+        <section id="one" >
+            <h2>First let's get to know eachother!</h2>
+            <p>My name is Jessi, what's your?</p>
             <form id="question-one" className="form">
-                <label htmlFor="nameInput">Your name here!</label>
+                <label htmlFor="nameInput">Type your name here</label>
                 <input
                     id="nameInput"
                     type="text"

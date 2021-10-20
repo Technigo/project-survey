@@ -3,7 +3,7 @@ import React from 'react'
 const QuestionTwo = ({surnameInput, onSurNameInputChange, onStepChange}) => {
     return (
     <div>
-        <p>How about answering question two</p>
+        <p>Given the choice of anyone in the world, whom would you want as a dinner guest?</p>
         <form className="form">
             <label htmlFor="surnameInput">Lorem ipsum dolor</label>
             <input 

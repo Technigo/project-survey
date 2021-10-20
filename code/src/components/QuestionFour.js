@@ -2,17 +2,16 @@ import React from 'react'
 
 const QuestionFour = ({radioInput, onRadioInputChange, onStepChange}) => {
 
-    const radioValues = ['Number one', 'Number two', 'Number three']
+    const radioValues = ['My family', 'My dog', 'My friends', 'All together']
 
     return (
     <div>
-        <h2>Heading for step four</h2>
-        <p>This is the fourth question?</p>
+        <h2>What is gratitude for you? </h2>
+        <p>For what in your life do you feel most grateful?</p>
         <form className="form">
-            <label htmlFor="surnameInput">Choose fruit of your taste</label>
             {radioValues.map(radioValue => (
             <label key={radioValue}>
-                <input 
+                <input
                     type="radio" 
                     value={radioValue} 
                     onChange={onRadioInputChange}
