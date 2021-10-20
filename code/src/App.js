@@ -27,7 +27,7 @@ export const App = () => {
             <a href="#drink"><img className="glogg" src="../assets/glogg.png" alt="glogg"></img></a>
           </header>
           <section className="section-content drink" id="drink">
-            <h2>How do you want your glögg?</h2>
+            <h2>How do you like your glögg?</h2>
             <select
               onChange={event => setDrink(event.target.value)}
               value={drink}
@@ -36,13 +36,14 @@ export const App = () => {
               <option value="">Select answer</option>
               <option value="to drink it strong">With alcohol</option>
               <option value="to have a weak one">Without alcohol</option>
-              <option value="to not drink glögg, you drink svagdricka?">Saft</option>
+              <option value="to not drink glögg, you drink svagdricka?">Just Saft</option>
             </select>
             <button><a href="#snack">Next</a></button>
           </section>
 
           <section className="section-content snack" id="snack">
-            <h2>What do you add to your glögg?</h2>
+            <h2>What do you add in your glögg?</h2>
+            <h4>For example: Russin, mandel, kanel?</h4>
             <input className="snack-input"
               type="text"
               onChange={event => setSnack(event.target.value)}
