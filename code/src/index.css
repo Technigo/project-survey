@@ -17,7 +17,7 @@ code {
 }
 
 header {
-  background-color: whitesmoke;
+  background-color: #2f6f7a;
   height: 5em;
   margin-bottom: 2em;
 }
@@ -108,14 +108,19 @@ input:focus-visible {
   font-weight: 700;
   font-family: Nunito;
   font-size: 20px;
-  margin-top: 2em;
   /* background-color: #ff6a13; */
   background-color: #2f6f7a;
-  height: 5em;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
+  flex: 33%;
+  padding: 1.5em;
+}
+
+.footer-text {
+  font-size: 12px;
+  text-align: center;
 }
 
 .btn6 {

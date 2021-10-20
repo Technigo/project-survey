@@ -18,7 +18,12 @@ const EmailQuestion = ({
         onKeyPress={onEnter}
         required
       />
-      <button className="btn6" type="button" onClick={onStepChange}>
+      <button
+        disabled={emailInput === ''}
+        className="btn6"
+        type="button"
+        onClick={onStepChange}
+      >
         See your entered information
       </button>
     </form>

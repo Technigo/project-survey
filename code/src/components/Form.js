@@ -2,12 +2,12 @@ import React, { useState } from 'react'
 
 import FirstQuestion from './FirstQuestion'
 import PreferenceQuestion from './PreferenceQuestion'
-import LastQuestion from './EmailQuestion'
+import EmailQuestion from './EmailQuestion'
 import Summary from './Summary'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [preferenceInput, setPreferenceInput] = useState(false)
+  const [preferenceInput, setPreferenceInput] = useState('false')
   const [emailInput, setEmailInput] = useState('')
   const [step, setStep] = useState(1)
 
@@ -15,6 +15,7 @@ const Form = () => {
     setNameInput(event.target.value)
   }
 
+  // one more fx for event.target.value
   const onPreferenceInputChange = (event) => {
     setPreferenceInput(event.target.checked)
   }
@@ -30,6 +31,7 @@ const Form = () => {
   const onEnter = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault()
+      // (nameInput !==)
       setStep(step + 1)
     }
   }
@@ -53,7 +55,7 @@ const Form = () => {
         />
       )}
       {step === 3 && (
-        <LastQuestion
+        <EmailQuestion
           emailInput={emailInput}
           onEmailInputChange={onEmailInputChange}
           onStepChange={onStepChange}
@@ -63,8 +65,8 @@ const Form = () => {
       {step === 4 && (
         <Summary
           nameInput={nameInput}
-          preferenceInput={preferenceInput}
           emailInput={emailInput}
+          preferenceInput={preferenceInput}
           onEnter={onEnter}
         />
       )}

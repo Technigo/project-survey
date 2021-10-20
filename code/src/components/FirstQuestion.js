@@ -13,11 +13,17 @@ const FirstQuestion = ({
         id="nameInput"
         type="text"
         placeholder="Type your name here"
+        required
         value={nameInput}
         onChange={onNameInputChange}
         onKeyPress={onEnter}
       />
-      <button className="btn6" type="button" onClick={onStepChange}>
+      <button
+        disabled={nameInput === ''}
+        className="btn6"
+        type="button"
+        onClick={onStepChange}
+      >
         Next question
       </button>
     </form>

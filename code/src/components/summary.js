@@ -6,7 +6,7 @@ const Summary = ({ nameInput, preferenceInput, emailInput, onStepChange }) => {
       <h2>Your added info below</h2>
       <p>Full Name : {nameInput}</p>
       <p>Email : {emailInput}</p>
-      <p>Content: {preferenceInput} </p>
+      <p>Content: {preferenceInput.toString()}</p>
 
       <button className="btn6" type="button" onClick={onStepChange}>
         {' '}
