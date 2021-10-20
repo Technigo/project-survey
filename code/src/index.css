@@ -145,6 +145,7 @@ font-weight: bold;
 	font-size: 1.5em;
 	margin-bottom: 10px;
 	
+	
 	}
 	
 	
@@ -170,7 +171,13 @@ font-weight: bold;
 	
 	
 
-
+	.title{
+		text-align: center;
+		
+		
+		min-width: 100px;
+	
+		}
 
 
 
@@ -299,6 +306,8 @@ font-size: 1.7em;
 font-size: 3.5em;
 
 }
+
+
 
 
 

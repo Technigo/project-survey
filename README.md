@@ -1,13 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A Survey to add a To do - with options like title, descripton, relevance, location and time.
 
 ## The problem
+For this project we were tasked to build a survey using React and practice using React useState hook. We had free reign to choose what our survey should be about, but we were asked to fill the basic requirements:
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The survey should consist of at least 3 questions.
+At least one question should consist of radio buttons and the select dropdown.
+There should be a submit button, which when pressed should hide the form and reveal a summary of the data inputted by the user.
+The site should follow accessibility guidelines.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://what-to-do-j.netlify.app/

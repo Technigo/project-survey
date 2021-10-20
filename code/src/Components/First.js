@@ -10,8 +10,9 @@ const First = ({QuestionAlternative, setAlternative, onStepChange }) => {
 <div className="box">
 
 
-<div>
-<label className="label"> Write a To Do </label>
+<div className="title">
+<label className="label"> Write a To do title: </label>
+
 </div>
 
 <div>

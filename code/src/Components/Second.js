@@ -5,8 +5,8 @@ const Second = ({QuestionAlternative, setAlternative,onStepChange }) => {
     return (
 <div className="box">
 
-<div>
-<label className="label">To do</label>
+<div className="title">
+<label className="label">Write a To do description:</label>
 </div>
 <div className="contentSelect"> 
 <textarea 
