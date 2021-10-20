@@ -4,8 +4,10 @@ import "./taglines.css";
 const Taglines = ({ tagline, onTaglineChange, onStepChange }) => {
   // v1
   return (
-    <div className="name-container">
-      <h2 className="taglinetitle">Choose your tag-line:</h2>
+    <div className="question-container">
+      <h2 className="question-title">
+        As a reality-tv star you need a tag line. Which one will be yours?
+      </h2>
       <form className="tagline-container">
         <label className="taglines">
           <input
@@ -51,7 +53,7 @@ const Taglines = ({ tagline, onTaglineChange, onStepChange }) => {
         </label>
 
         <button className="next-button" onClick={onStepChange}>
-          Next question
+          Next question >>
         </button>
       </form>
     </div>

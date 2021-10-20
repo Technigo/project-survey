@@ -1,20 +1,43 @@
+.question-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: #f8f1f1;
+}
+
 .bravomentor {
   display: grid;
-  grid-template-columns: 1fr 1fr;
   justify-items: center;
 }
 
 .mentorcardbox {
   display: flex;
   flex-direction: column;
+  margin-top: 20px;
 }
 
 .mentorcard {
-  width: 300px;
-  height: 300px;
+  width: 250px;
+  height: 250px;
   image-rendering: auto;
+  border-radius: 50px 10px;
+  box-shadow: 3px 5px 8px #888888;
 }
 
 .mentorcard-text {
-  width: 300px;
+  width: 250px;
+  background: white;
+  padding: 10px;
+  border-radius: 15px 5px;
+  box-shadow: 3px 5px 8px #888888;
+}
+
+@media (min-width: 730px) {
+  .bravomentor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
+    gap: 50px;
+  }
 }

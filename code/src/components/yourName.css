@@ -1,26 +1,27 @@
-.name-container {
+.question-container {
   display: flex;
   justify-content: center;
-  background: lightgray;
+  background: #f8f1f1;
 }
 
 .name-form {
   display: flex;
   flex-direction: column;
   width: 300px;
-  background-color: rgb(204, 249, 238);
-  border: 1px solid;
+  background-color: rgb(247, 149, 25, 0.7);
   border-radius: 30px 10px;
   padding: 20px;
   margin-top: 30px;
+  box-shadow: 3px 5px 8px #888888;
 }
 
 .lable-text {
   padding: 5px;
+  margin: 10px 0;
 }
 
 .input-place {
-  padding: 10px;
+  padding: 15px;
   border: 1px solid;
   border-radius: 15px 5px;
 }
@@ -29,13 +30,17 @@
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+  font-size: 17px;
   font-style: italic;
-  width: 150px;
-  margin: 5px 0;
+  font-weight: bold;
+  color: rgb(247 149 25);
+  width: 200px;
+  margin: 15px 0;
   padding: 10px;
-  background-color: rgb(249, 197, 230);
-  border: 1px solid white;
+  background-color: rgb(252, 241, 225);
+  border: none;
   border-radius: 10px 5px;
+  box-shadow: 3px 5px 8px #878787;
 }
 
 @media (min-width: 730px) {

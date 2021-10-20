@@ -3,7 +3,7 @@ import "./yourName.css";
 
 const YourName = ({ name, onNameChange, onStepChange }) => {
   return (
-    <div className="name-container">
+    <div className="question-container">
       <form className="name-form">
         <label className="lable-text" htmlFor="nameInput">
           Type your full name:

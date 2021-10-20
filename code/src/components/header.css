@@ -35,19 +35,24 @@
   font-size: 20px;
   text-align: center;
   font-style: italic;
+  font-weight: bold;
   width: 250px;
 }
 
 @media (min-width: 730px) {
   .logosbox {
     flex-direction: row;
-    margin: 20px auto;
+    margin: 70px auto 30px;
   }
 
   .technigo-logo,
   .bravo-logo {
     width: 300px;
     padding: 5px;
+  }
+
+  .bravo-logo {
+    margin-left: 15px;
   }
 
   .meets {

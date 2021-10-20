@@ -18,7 +18,7 @@ const Header = () => {
         />
       </div>
       <p className="intro-text">
-        Imagine if there was a reality show about programmers. Who would you be?
+        Imagine there was a reality show about programmers. Who would you be?
       </p>
     </header>
   );
