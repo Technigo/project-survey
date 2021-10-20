@@ -5,14 +5,31 @@ import { Summary } from "./components/Summary";
 
 export const App = () => {
   const [currentStep, setStep] = useState("welcome");
-  const [rootState, setRootState] = useState({});
+  const [rootState, setRootState] = useState({
+    rating: "5",
+    features: {
+      soundQuality: false,
+      ergonomicDesign: false,
+      affordability: false,
+      other: false,
+    },
+    featuresOthers: "",
+  });
+
+  const setValueInRootState = (key, value) => {
+    setRootState({ ...rootState, [key]: value });
+  };
+
+  // setValueInRootState('rating', 5);
+
+  // before: const [rating, setRating] = useState("5");
   if (currentStep === "welcome") {
     return <Welcome moveOn={() => setStep("wizard")} />;
   }
   if (currentStep === "wizard") {
-    return <Wizard toFeedback={() => setStep("summary")} />;
+    return <Wizard rootState={rootState} setValueInRootState={setValueInRootState} toFeedback={() => setStep("summary")} />;
   }
   if (currentStep === "summary") {
-    return <Summary />;
+    return <Summary rootState={rootState} />;
   }
 };

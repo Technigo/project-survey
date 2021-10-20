@@ -1,15 +1,15 @@
 import React, { useState } from "react";
 
-export const QuestionEight = () => {
-  const [isChecked, setIsChecked] = useState(false);
-  const [userInputs, savedInputs] = useState({});
-  console.log(isChecked);
-  const handleOnChange = () => {
-    setIsChecked(!isChecked);
-  };
-  const writeDown = () => {
-    savedInputs(userInputs);
-  };
+export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFeaturesOthersChange }) => {
+  // const [values, setValues] = useState({
+  //   soundQuality: false,
+  //   ergonomicDesign: false,
+  //   affordability: false,
+  //   other: false,
+  // });
+
+  // const [userInput, setUserInput] = useState("");
+
   return (
     <form>
       <div>
@@ -18,13 +18,14 @@ export const QuestionEight = () => {
       <div className="checkbox">
         <input
           type="checkbox"
-          id="Sound quality"
-          name="Sound quality"
-          value="Sound quality"
-          checked={isChecked && userInputs === "Sound quality"}
-          onChange={() => {
-            handleOnChange();
-            writeDown();
+          checked={features.soundQuality}
+          onChange={(e) => {
+            onFeaturesChange({
+              soundQuality: e.target.checked,
+              ergonomicDesign: features.ergonomicDesign,
+              affordability: features.affordability,
+              other: features.other,
+            });
           }}
         />
         Sound quality
@@ -32,13 +33,12 @@ export const QuestionEight = () => {
       <div className="checkbox">
         <input
           type="checkbox"
-          id="Ergonomic design"
-          name="Ergonomic design"
-          value="Ergonomic design"
-          checked={isChecked && userInputs === "Sound quality"}
-          onChange={() => {
-            handleOnChange();
-            writeDown();
+          checked={features.ergonomicDesign}
+          onChange={(e) => {
+            onFeaturesChange({
+              ...features,
+              ergonomicDesign: e.target.checked,
+            });
           }}
         />
         Ergonomic design
@@ -47,19 +47,40 @@ export const QuestionEight = () => {
         <input
           type="checkbox"
           id="Affordability"
-          name="Affordability"
+          name="affordability"
           value="Affordability"
-          checked={isChecked && userInputs === "Sound quality"}
-          onChange={() => {
-            handleOnChange();
-            writeDown();
+          checked={features.affordability}
+          onChange={(e) => {
+            onFeaturesChange({
+              soundQuality: features.soundQuality,
+              ergonomicDesign: features.ergonomicDesign,
+              affordability: e.target.checked,
+              other: features.other,
+            });
           }}
         />
         Affordability
       </div>
-      <div className="other-input">
-        <input type="text" id="Other" name="Other" value={userInputs} onChange={(event) => savedInputs(event.target.value)} placeholder="Your custom option" />
+      <div className="checkbox">
+        <input
+          type="checkbox"
+          checked={features.other}
+          onChange={(e) => {
+            onFeaturesChange({
+              soundQuality: features.soundQuality,
+              ergonomicDesign: features.ergonomicDesign,
+              affordability: features.affordability,
+              other: e.target.checked,
+            });
+          }}
+        />
+        Other
       </div>
+      {features.other && (
+        <div className="other-input">
+          <input type="text" value={featuresOthers} onChange={(event) => onFeaturesOthersChange(event.target.value)} placeholder="Your custom option" />
+        </div>
+      )}
     </form>
   );
 };

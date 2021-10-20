@@ -11,7 +11,7 @@ import { QuestionNine } from "./questions/QuestionNine";
 import { AnySuggestion } from "./questions/AnySuggestion";
 import { QuestionTen } from "./questions/QuestionTen";
 
-export const SwitchFunction = ({ currentStep }) => {
+export const SwitchFunction = ({ currentStep, rootState, setValueInRootState }) => {
   if (currentStep === "questionOne") {
     return <QuestionOne />;
   }
@@ -34,10 +34,17 @@ export const SwitchFunction = ({ currentStep }) => {
     return <QuestionSeven />;
   }
   if (currentStep === "questionEight") {
-    return <QuestionEight />;
+    return (
+      <QuestionEight
+        features={rootState.features}
+        featuresOthers={rootState.featuresOthers}
+        onFeaturesChange={(values) => setValueInRootState("features", values)}
+        onFeaturesOthersChange={(input) => setValueInRootState("featuresOthers", input)}
+      />
+    );
   }
   if (currentStep === "questionNine") {
-    return <QuestionNine />;
+    return <QuestionNine rating={rootState.rating} onRatingChange={(value) => setValueInRootState("rating", value)} />;
   }
   if (currentStep === "anySuggestion") {
     return <AnySuggestion />;

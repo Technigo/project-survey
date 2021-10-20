@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import { SwitchFunction } from "./SwitchFunction";
 
-export const Wizard = ({ toFeedback }) => {
-  const [currentStep, setStep] = useState("questionOne");
+export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
+  const [currentStep, setStep] = useState("questionEight");
+
   const [answered, setAnswered] = useState(1);
   const toNextStep = () => {
     switch (currentStep) {
@@ -39,8 +40,13 @@ export const Wizard = ({ toFeedback }) => {
         setStep("questionNine");
         break;
       case "questionNine":
-        setAnswered(answered + 1);
-        setStep("anySuggestion");
+        if (rootState.rating >= 6) {
+          setAnswered(answered + 2);
+          setStep("questionTen");
+        } else {
+          setAnswered(answered + 1);
+          setStep("anySuggestion");
+        }
         break;
       case "anySuggestion":
         setAnswered(answered + 1);
@@ -57,7 +63,7 @@ export const Wizard = ({ toFeedback }) => {
       <div className="card">
         <div className="progress-bar">Progress bar: {answered} out of 10</div>
         <div className="current-step">
-          <SwitchFunction currentStep={currentStep} />
+          <SwitchFunction rootState={rootState} setValueInRootState={setValueInRootState} currentStep={currentStep} />
         </div>
         <div>
           <button className="btn interaction " onClick={toNextStep}>

@@ -1,5 +1,7 @@
 .welcome {
   background-image: url("https://i.ibb.co/QM5SqDZ/mobile.jpg");
+  background-size: cover;
+  background-position: center;
   opacity: 0.9;
 }
 
