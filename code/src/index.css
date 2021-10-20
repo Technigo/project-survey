@@ -6,6 +6,9 @@
   --transparent-dark: rgba(0, 0, 0, 0.5);
 }
 
+* {
+  box-sizing: border-box;
+}
 body {
   margin: 0;
   font-family: raleway;
@@ -53,6 +56,22 @@ p {
   width: 80%;
   margin-top: 20vh;
   color: var(--orange);
+}
+
+.progress-bar {
+  width: 80%;
+  padding: 20px;
+  color: red;
+}
+
+.progress-container {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.label-progressBar {
+  padding: 20px;
 }
 
 @keyframes bounce {
@@ -132,6 +151,7 @@ p {
   font-size: 24px;
   border-radius: 10px;
   padding: 10px 0;
+  margin-top: 20px;
 }
 
 .link-button:hover {
@@ -147,7 +167,7 @@ p {
 
 .last-message {
   margin-top: 100px;
-  font-size: 54px;
+  font-size: 62px;
   color: #de8971;
   text-align: center;
 }

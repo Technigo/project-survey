@@ -14,14 +14,13 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         type="text"
         value={nameInput}
         onChange={onNameInputChange}
+        name="nameInput"
+        required="required"
       />
-      <a
-        href="#secondQuestion"
-        className="button-container"
-        onClick={onStepChange}
-      >
-        <img className="button-icon" src="./img/chevron.png" alt=""></img>
-      </a>
+
+      <button type="submit" className="link-button" onClick={onStepChange}>
+        Next question
+      </button>
     </form>
   );
 };

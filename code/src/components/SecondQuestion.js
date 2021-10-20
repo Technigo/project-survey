@@ -23,13 +23,9 @@ const SecondQuestion = ({
         <option value="seller">Seller</option>
         <option value="buyer-and-seller">Buyer and seller</option>
       </select>
-      <a
-        href="#thirdQuestion"
-        className="button-container"
-        onClick={onStepChange}
-      >
-        <img className="button-icon" src="./img/chevron.png" alt=""></img>
-      </a>
+      <button type="submit" className="link-button" onClick={onStepChange}>
+        Next question
+      </button>
     </form>
   );
 };
