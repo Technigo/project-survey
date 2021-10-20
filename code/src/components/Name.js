@@ -12,14 +12,18 @@ const Name = ({
 		<article className="survey-article">
 		<h2>What is your name?</h2>
 		<form className="form" onSubmit={event => event.preventDefault()}>
-			<label htmlFor="nameInput">Name here</label>
+			<label className="form-label" htmlFor="nameInput">Name here</label>
 			<input
+				className="text-input"
+				placeholder="name"
 				id="nameInput"
 				type="text"
 				value={nameInput}
 				onChange={onNameInputChange}
+				required
 			/>
-			<button className="btn" onClick={onStepChange}>Next questions</button>
+			<input className="btn" type="submit" value="continue" onClick={onStepChange} />
+			{/* <button  >Next questions</button> */}
 		</form>
 		</article>
 		</>

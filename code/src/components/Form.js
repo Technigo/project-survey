@@ -38,6 +38,9 @@ const Form = () => {
 
 	return (
     <>
+    <header>
+      <h1 className="vampire">SPOOKY</h1>
+    </header>
     <main className="main-container">
 		<section className="survey-container">
 			{step === 1 && (
@@ -79,6 +82,8 @@ const Form = () => {
 			)}
 		</section>
     </main>
+    <footer>Photo by <a href="https://unsplash.com/@solidpixel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pelly Benassi</a> on <a href="https://unsplash.com/s/photos/horror-it?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+  </footer>
     </>
 	)
 }
