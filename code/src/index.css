@@ -4,8 +4,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
-  height: 98.6vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.329)), url("./assets/background-image.webp");
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.418)), url("./assets/background-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -16,32 +16,16 @@ code {
   font-family: 'Josefin Sans', sans-serif;
 }
 
-.welcome-message-container, .alias-buttons-container, .question-one-container, .question-two-container, .question-three-container, .question-four-container, .overview-container {
+.welcome-message-container, .alias-buttons-container, .question-one-container, .question-two-container, .question-three-container, .question-four-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 300px;
-}
-
-.question-one-container {
-  row-gap: 260px
-}
-
-.question-two-container {
-  row-gap: 343px;
-}
-
-.question-three-container {
-  row-gap: 220px;
-}
-
-.question-four-container {
-  row-gap: 220px;
+  margin-top: 50px;
 }
 
 .welcome-message {
   text-align: center;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 400;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
@@ -49,11 +33,52 @@ code {
 
 .overview-container {
   text-align: center;
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffc964;
+  text-shadow: 1px 1px #cc9837;
+  margin-top: 120px;
+}
+
+.user-alias-question, .user-preference-question, .question-one, .question-two, .question-three, .question-four {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  font-size: 30px;
   font-weight: 400;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
 }
+
+.question-one, .question-two, .question-three, .question-four {
+  margin-bottom: 10vh;
+}
+
+option {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+}
+
+.radio-buttons-container {
+  font-size: 16px;
+  color: #ffc964;
+  text-shadow: 1px 1px #cc9837;
+  margin-bottom: 5vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.input-form {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 20px;
+  background-color: #ffcd6f;
+  width: 200px;
+  height: 30px;
+  border-radius: 5px;
+}
+
+/*******Custom Button*******/
 
 .start-survey-button, .button-next {
   font-family: 'Josefin Sans', sans-serif;
@@ -62,9 +87,9 @@ code {
   text-decoration: none;
   background: #ffcd6f;
   color: #FFF;
-  width: 120px;
-  height: 120px;
-  line-height: 120px;
+  width: 110px;
+  height: 110px;
+  line-height: 110px;
   border-radius: 50%;
   text-align: center;
   font-weight: bold;
@@ -86,37 +111,50 @@ code {
   border-bottom: none;
 }
 
-.user-alias-question, .user-preference-question, .question-one, .question-two, .question-three, .question-four {
-  text-align: center;
-  font-size: 40px;
-  font-weight: 400;
-  color: #ffc964;
-  text-shadow: 1px 1px #cc9837;
-}
-
-option {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-}
-
-.radio-buttons-container {
-  font-size: 20px;
-  color: #ffc964;
-  text-shadow: 1px 1px #cc9837;
-  margin-bottom: 10vh;
-}
-
-.input-form {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  background-color: #ffcd6f;
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-}
-
 /*******Custom Radio Buttons*******/
 
-.radio-button {
+.radio-button-overlay {
+  padding: 6px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
   cursor: pointer;
+  transition: background .2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.radio-button-overlay:hover, .radio-button-overlay:focus-within {
+  background: #4e350769;
+}
+
+.radio-button {
+  vertical-align: middle;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  background: none;
+  border: 0;
+  box-shadow: inset 0 0 0 1px #cc9837;
+  box-shadow: inset 0 0 0 1.5px #cc9837;
+  appearance: none;
+  padding: 0;
+  transition: box-shadow 150ms cubic-bezier(.95, .15, .5, 1.25);
+  pointer-events: none;
+  margin: 0 5px 0 0;
+}
+
+.radio-button:focus {
+  outline: none;
+}
+
+.radio-button:checked {
+  box-shadow: inset 0 0 0 6px #ffcd6f;
+}
+
+/*******Tablet Display*******/
+
+@media (min-width: 768px) {
+  .welcome-message-container, .alias-buttons-container, .question-one-container, .question-two-container, .question-three-container, .question-four-container, .overview-container {
+    align-items: center;
+  }
 }

@@ -15,14 +15,13 @@ const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioBut
             <h2 className="user-preference-question">How are you feeling today?</h2>
             <form className="radio-buttons-container">
                 {radioButtonInputs.map(radiobutton => (
-                    <label key={radiobutton}>
+                    <label className="radio-button-overlay" key={radiobutton}>
                         <input
                             className="radio-button"
                             type="radio"
                             value={radiobutton}
                             onChange={onRadioButtonChange}
                             checked={radioButtonInput === radiobutton} required>
-
                         </input>
                         {radiobutton}
                     </label>
