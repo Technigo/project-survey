@@ -3,8 +3,9 @@ import React from 'react'
 const QuestionTwo = ({ questionTwoInput, onQuestionTwoInputChange, onStepChange }) => {
     return (
         <div className="question-two-container">
-            <form className="question-two">Is cereal soup?
-                <select className="input-form" onChange={onQuestionTwoInputChange} value={questionTwoInput} required>
+            <h2 className="question">Is cereal soup?</h2>
+            <form className="form-style">
+                <select className="select-form" onChange={onQuestionTwoInputChange} value={questionTwoInput} required>
                     <option value=''></option>
                     <option value='Of course it is!'>Of course it is!</option>
                     <option value='Absolutely not!'>Absolutely not!</option>

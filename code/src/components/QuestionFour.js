@@ -3,9 +3,10 @@ import React from 'react'
 const QuestionFour = ({ questionFourInput, onQuestionFourInputChange, onStepChange }) => {
     return (
         <div className="question-four-container">
-            <form className="question-four">
-                <label htmlFor="questionFourInput"> What superhero/villain would make the best therapist?</label>
-                <input className="input-form" id="questionFourInput" type="text" value={questionFourInput} onChange={onQuestionFourInputChange} required>
+            <h2 className="question">What superhero/villain would make the best therapist?</h2>
+            <form className="form-style">
+                <label htmlFor="questionFourInput" className="form-label">Your answer</label>
+                <input className="input-form" id="questionFourInput" type="input" value={questionFourInput} onChange={onQuestionFourInputChange} placeholder="Your Answer">
                 </input>
             </form>
             <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>

@@ -40,19 +40,15 @@ code {
   margin-top: 120px;
 }
 
-.user-alias-question, .user-preference-question, .question-one, .question-two, .question-three, .question-four {
+.question {
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-size: 30px;
+  font-size: 24px;
   font-weight: 400;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
-}
-
-.question-one, .question-two, .question-three, .question-four {
-  margin-bottom: 10vh;
 }
 
 option {
@@ -64,32 +60,22 @@ option {
   font-size: 16px;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
-  margin-bottom: 5vh;
   display: flex;
   flex-direction: column;
-}
-
-.input-form {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 20px;
-  background-color: #ffcd6f;
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
 }
 
 /*******Custom Button*******/
 
 .start-survey-button, .button-next {
   font-family: 'Josefin Sans', sans-serif;
-  font-size: 30px;
+  font-size: 24px;
   display: inline-block;
   text-decoration: none;
   background: #ffcd6f;
   color: #FFF;
-  width: 110px;
-  height: 110px;
-  line-height: 110px;
+  width: 100px;
+  height: 100px;
+  line-height: 100px;
   border-radius: 50%;
   text-align: center;
   font-weight: bold;
@@ -101,6 +87,8 @@ option {
   border-right: none;
   border-bottom: solid 3px #cc9837;
   transition: .4s;
+  margin-top: 10vh;
+  cursor: pointer;
 }
 
 .start-survey-button:active, .button-next:active {
@@ -149,6 +137,48 @@ option {
 
 .radio-button:checked {
   box-shadow: inset 0 0 0 6px #ffcd6f;
+}
+
+/*******Custom Input Form*******/
+
+.form-style {
+  position: relative;
+  padding: 15px 0 0;
+  width: 50%;
+}
+
+.input-form {
+  font-family: 'Josefin Sans', sans-serif;
+  width: 100%;
+  border: 0;
+  border-bottom: 2px solid #cc9837;
+  outline: 0;
+  font-size: 18px;
+  color: white;
+  padding: 7px 0;
+  background: #4e350746;
+  border-radius: 5px 5px 0 0;
+}
+
+.input-form::placeholder {
+  color: transparent;
+}
+
+.form-label {
+  top: 0;
+  display: block;
+  font-size: 18px;
+  color: #ffc964;
+  text-shadow: 1px 1px #cc9837;
+}
+
+.input-form:focus {
+  top: 0;
+  display: block;
+  font-size: 18px;
+  color: #ffc964;
+  font-weight: 400;
+  border-width: 2px;
 }
 
 /*******Tablet Display*******/
