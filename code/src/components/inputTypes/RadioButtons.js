@@ -2,7 +2,7 @@ import React from "react"
 
 const RadioButtons = ({value, setValue, valueArray}) => {
   return (
-    <form onSubmit= {event => event.preventDefault()}>
+    <div onSubmit= {event => event.preventDefault()}>
         {valueArray.map((item) => (
           <label key={item}>
             <input
@@ -14,7 +14,7 @@ const RadioButtons = ({value, setValue, valueArray}) => {
             {item}
           </label>     
         ))}   
-      </form>
+      </div>
   )
 }
 

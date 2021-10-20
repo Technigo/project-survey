@@ -1,18 +1,12 @@
 import React, { useState } from "react"
 
-import SelectDropdown from "./inputTypes/SelectDropdown"
-import RangeSlider from "./inputTypes/RangeSlider"
-import RadioButtons from "./inputTypes/RadioButtons"
-import TextField from "./inputTypes/TextField"
-
-
-const roles = [
-  {value: 'teacher', description: 'Codecoach'},
-  {value: 'student', description: 'Fellow student'},
-  {value: 'recruiter', description: 'Recruiter'},
-  {value: 'friend', description: 'Friend'},
-  {value: 'other', description: 'Other'}
-]
+import WhatConnection from "./questions/WhatConnection"
+import LikeHeader from "./questions/LikeHeader"
+import CanRecommend from "./questions/CanRecommend"
+import LikeColor from "./questions/LikeColor"
+import LikeText from "./questions/LikeText"
+import Suggestions from "./questions/Suggestions"
+import Summary from "./Summary"
 
 const Form = () => {
   const [role, setRole] = useState('')
@@ -22,45 +16,39 @@ const Form = () => {
   const [recommend, setRecommend] = useState(0)
   const [improve, setImprove] = useState('')
   
-
   return (
     <>
-      <p>What's your connection to Birgit?</p>
-      <SelectDropdown
-        optionValue={role}
-        setOptionValue={setRole}
-        valueArray={roles}
+      <WhatConnection 
+        role={role}
+        setRole={setRole}
       />
-      <p>How visually appealing is the header section to you?</p>
-      <RangeSlider
-        value={visualAppearance}
-        setValue={setVisualAppearance}
-        min={1}
-        max={5}
-      />   
-      <p>Do you like the color scheme?</p> 
-      <RadioButtons
-        value={color}
-        setValue={setColor}
-        valueArray={['yes', 'no']}
+      <LikeHeader
+        visualAppearance={visualAppearance}
+        setVisualAppearance={setVisualAppearance}
       /> 
-      <p>What about the presentation text? Does it provide good information?</p> 
-      <RadioButtons
-        value={text}
-        setValue={setText}
-        valueArray={['yes', 'no']}
+      <LikeColor
+        color={color}
+        setColor={setColor}
+      />  
+      <LikeText
+        text={text}
+        setText={setText}
       />
-      <p>How likely is it, that you would recommend the portfolio to a friend or colleague?</p>  
-      <RangeSlider
-        value={recommend}
-        setValue={setRecommend}
-        min={1}
-        max={5}
+      <CanRecommend
+        recommend={recommend}
+        setRecommend={setRecommend}
+       /> 
+      <Suggestions
+        improve={improve}
+        setImprove={setImprove}
       />
-      <p>How can the portfolio be improved?</p>  
-      <TextField
-        value={improve}
-        setValue={setImprove}
+      <Summary 
+        role={role}
+        visualAppearance={visualAppearance}
+        color={color}
+        text={text}
+        recommend={recommend}
+        improve={improve}
       />  
     </>  
   )

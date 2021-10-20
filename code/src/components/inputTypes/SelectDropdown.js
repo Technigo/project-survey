@@ -2,7 +2,7 @@ import React from "react"
 
 const SelectDropdown = ({optionValue, setOptionValue, valueArray}) => {
   return (
-  <form onSubmit= {event => event.preventDefault()}>
+  <div onSubmit= {event => event.preventDefault()}>
         <select
           onChange= {event => setOptionValue(event.target.value)}
           value= {optionValue}
@@ -10,11 +10,11 @@ const SelectDropdown = ({optionValue, setOptionValue, valueArray}) => {
           <option disabled value="">Select an option: </option>
           {valueArray.map((item) => {
             return (
-              <option value={item.value}>{item.description}</option>
+              <option key={item.value} value={item.value}>{item.description}</option>
             )
           })}
         </select>
-      </form>
+      </div>
   )    
 }
 
