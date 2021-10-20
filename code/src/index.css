@@ -1,9 +1,6 @@
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background: linear-gradient(45deg, blue, red);
-  background-repeat: no;
-
 }
 
 code {
@@ -134,6 +131,13 @@ button:hover:after {
   height: auto;
 }
 
+.game-container img:hover,
+.game-container img:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em orange;
+  transform: translateY(-0.25em);
+}
+
+
 @media (min-width: 640px) and (max-width: 900px) {
 
   .container {
@@ -230,6 +234,7 @@ button:hover:after {
   
   .survey-info {
   width: 100%;
+  padding: 10px;
   background-color: #fff;
   }
 
