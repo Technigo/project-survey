@@ -1,4 +1,5 @@
 import React from "react";
+import "./header.css";
 
 const Header = () => {
   return (
@@ -9,14 +10,14 @@ const Header = () => {
           src="pictures/technigo-logo.png"
           alt="technigo"
         />
-        <h2>meets..</h2>
+        <h2 className="meets">meets..</h2>
         <img
           className="bravo-logo"
           src="pictures/bravoLogo2.jpeg"
           alt="bravo"
         />
       </div>
-      <p>
+      <p className="intro-text">
         Imagine if there was a reality show about programmers. Who would you be?
       </p>
     </header>

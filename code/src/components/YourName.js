@@ -1,13 +1,26 @@
 import React from "react";
+import "./yourName.css";
 
 const YourName = ({ name, onNameChange, onStepChange }) => {
   return (
-    <form className="name-container">
-      <label htmlFor="nameInput">Name:</label>
-      <input id="nameInput" type="text" value={name} onChange={onNameChange} />
+    <div className="name-container">
+      <form className="name-form">
+        <label className="lable-text" htmlFor="nameInput">
+          Type your full name:
+        </label>
+        <input
+          className="input-place"
+          id="nameInput"
+          type="text"
+          value={name}
+          onChange={onNameChange}
+        />
 
-      <button onClick={onStepChange}>Next question</button>
-    </form>
+        <button className="next-button" onClick={onStepChange}>
+          Lets start >>
+        </button>
+      </form>
+    </div>
   );
 };
 

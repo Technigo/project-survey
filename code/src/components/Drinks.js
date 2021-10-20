@@ -1,4 +1,5 @@
 import React from "react";
+import "./drinks.css";
 
 const Drinks = ({ drink, onDrinkChange, onStepChange }) => {
   // v1

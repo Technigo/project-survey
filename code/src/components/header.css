@@ -1,0 +1,61 @@
+.header-continer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    rgb(240, 218, 218) 0%,
+    rgb(249, 197, 230) 50%,
+    rgb(183, 214, 225) 50%,
+    rgb(204, 249, 238) 100%
+  );
+}
+
+.logosbox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+  margin-top: 10px;
+}
+
+.technigo-logo,
+.bravo-logo {
+  width: 200px;
+}
+
+.meets {
+  font-style: italic;
+  margin-top: 15px;
+  margin-bottom: 25px;
+}
+
+.intro-text {
+  font-size: 20px;
+  text-align: center;
+  font-style: italic;
+  width: 250px;
+}
+
+@media (min-width: 730px) {
+  .logosbox {
+    flex-direction: row;
+    margin: 20px auto;
+  }
+
+  .technigo-logo,
+  .bravo-logo {
+    width: 300px;
+    padding: 5px;
+  }
+
+  .meets {
+    padding: 5px;
+  }
+
+  .intro-text {
+    margin-bottom: 50px;
+    width: 500px;
+  }
+}

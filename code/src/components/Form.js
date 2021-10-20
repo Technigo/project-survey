@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "./form.css";
 
 import YourName from "components/YourName";
 import Taglines from "./Taglines";
@@ -35,7 +36,7 @@ const Form = () => {
 
   // v1
   return (
-    <div>
+    <div className="main-container">
       {step === 1 && (
         <YourName
           name={name}

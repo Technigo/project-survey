@@ -1,4 +1,5 @@
 import React from "react";
+import "./bravoMentor.css";
 
 const BravoMentor = ({ bravo, onStepChange }) => {
   return (
@@ -9,11 +10,11 @@ const BravoMentor = ({ bravo, onStepChange }) => {
           type="image"
           src="pictures/Erika-Jayne.jpeg"
           alt="erika jayne"
-          value="Erika Jayne"
+          value={bravo}
           onClick={onStepChange}
         />
         <p className="mentorcard-text">
-          Erika Jayne: The queen of fabolous. Having zero fucks to give.
+          Erika Jayne: The queen of fabulous. Having zero fucks to give.
         </p>
       </span>
       <span class="mentorcardbox">

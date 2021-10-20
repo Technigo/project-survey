@@ -1,0 +1,20 @@
+.bravomentor {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+}
+
+.mentorcardbox {
+  display: flex;
+  flex-direction: column;
+}
+
+.mentorcard {
+  width: 300px;
+  height: 300px;
+  image-rendering: auto;
+}
+
+.mentorcard-text {
+  width: 300px;
+}

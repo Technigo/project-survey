@@ -1,0 +1,27 @@
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: lightgray;
+}
+
+.taglinetitle {
+  margin-top: 50px;
+  font-style: italic;
+}
+
+.tagline-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 300px;
+  background-color: rgb(204, 249, 238);
+  border: 1px solid;
+  border-radius: 30px 10px;
+  padding: 20px;
+}
+
+.taglines {
+  padding: 10px;
+}
