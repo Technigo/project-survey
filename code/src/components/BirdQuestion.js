@@ -7,11 +7,7 @@ const BirdQuestion = ({
   onPreviousQuestionChange,
 }) => {
   return (
-    <form
-      className="form-container"
-      tabIndex="0"
-      onSubmit={e => e.preventDefault()}
-    >
+    <form className="form-container" tabIndex="0">
       <label className="label-text">
         Least favorite bird
         <span role="img" aria-label="bird emoji">
@@ -27,9 +23,9 @@ const BirdQuestion = ({
         <option value="svan">svan</option>
         <option value="kanadagås">kanadagås</option>
       </select>
-      <div className="button-container">
+      <div>
         <button onClick={onPreviousQuestionChange}>Prev question</button>
-        <button type="submit" name="bird-question" onClick={onStepChange}>
+        <button type="submit" onClick={onStepChange}>
           Next question
         </button>
       </div>

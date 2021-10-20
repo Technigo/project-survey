@@ -23,14 +23,9 @@ const LastSong = ({
             value={songInput}
             onChange={handleSongInputChange}
           />
-          <div button-container>
+          <div>
             <button onClick={onPreviousQuestionChange}>Prev question</button>
-            <button
-              onSubmit={e => e.preventDefault()}
-              type="submit"
-              name="song-question"
-              onClick={onStepChange}
-            >
+            <button type="submit" onClick={onStepChange}>
               Next Question
             </button>
           </div>

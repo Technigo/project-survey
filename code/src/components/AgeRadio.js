@@ -8,7 +8,7 @@ const AgeRadio = ({
 }) => {
   return (
     <section className="form-container" tabIndex="0">
-      <form onSubmit={e => e.preventDefault()}>
+      <form>
         <h2 className="label-text"> How old do you feel inside?</h2>
         <label>
           <input
@@ -47,9 +47,9 @@ const AgeRadio = ({
           ready for retirement
         </label>
       </form>
-      <div className="button-container">
+      <div>
         <button onClick={onPreviousQuestionChange}>Prev question</button>
-        <button type="submit" name="age-question" onClick={onStepChange}>
+        <button type="submit" onClick={onStepChange}>
           Next Question
         </button>
       </div>

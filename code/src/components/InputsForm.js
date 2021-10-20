@@ -6,6 +6,7 @@ import DropDown from "./BirdQuestion";
 import ElbowRadio from "./ElbowRadio";
 import AgeRadio from "./AgeRadio";
 import ColorPicker from "./ColorPicker";
+import Checkboxes from "./Checkboxes";
 import Summary from "./Summary";
 
 const InputsForm = () => {
@@ -15,7 +16,8 @@ const InputsForm = () => {
   const [birdInput, setBirdInput] = useState("");
   const [radioInput, setRadioInput] = useState("");
   const [ageRadioInput, setAgeRadioInput] = useState("");
-  const [colorInput, setColor] = useState(null);
+  const [colorInput, setColor] = useState("");
+  const [happiness, setHappiness] = useState("");
   const [step, setStep] = useState(0);
 
   const handleFirstNameInputChange = event => {
@@ -40,6 +42,10 @@ const InputsForm = () => {
 
   const handleColorInputChange = event => {
     setColor(event.target.value);
+  };
+
+  const onHappinessChange = feeling => {
+    setHappiness(feeling);
   };
 
   const onStepChange = () => {
@@ -121,6 +127,13 @@ const InputsForm = () => {
         />
       )}
       {step === 7 && (
+        <Checkboxes
+          happiness={happiness}
+          onHappinessChange={onHappinessChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 8 && (
         <>
           <Summary
             nameInput={nameInput}
@@ -129,6 +142,7 @@ const InputsForm = () => {
             radioInput={radioInput}
             ageRadioInput={ageRadioInput}
             colorInput={colorInput}
+            happiness={happiness}
           />
         </>
       )}

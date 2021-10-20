@@ -7,6 +7,7 @@ const Summary = ({
   radioInput,
   ageRadioInput,
   colorInput,
+  happiness,
 }) => {
   return (
     <section className="form-container">
@@ -35,8 +36,11 @@ const Summary = ({
           fourth favorite color in code:
           <span className="answer-text"> {colorInput}</span>
         </p>
-        <form classNameName="submit-button-form">
-          <button classNameName="submitBtn" type="submit" onSubmit="">
+        <p>
+          mood today: <span className="answer-text"> {happiness}</span>{" "}
+        </p>
+        <form className="submit-button-form">
+          <button className="submitBtn" type="submit">
             restart
           </button>
         </form>

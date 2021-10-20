@@ -8,7 +8,7 @@ const ElbowRadio = ({
 }) => {
   return (
     <section className="form-container" tabIndex="0">
-      <form onSubmit={e => e.preventDefault()}>
+      <form>
         <h2 className="label-text">
           CAN YOU LICK YOUR ELBOWS?
           <span role="img" aria-label="muscle emoji">
@@ -66,9 +66,9 @@ const ElbowRadio = ({
           only in spanish (el-bow)
         </label>
       </form>
-      <div className="button-container">
+      <div>
         <button onClick={onPreviousQuestionChange}>Prev question</button>
-        <button type="submit" name="submit-button" onClick={onStepChange}>
+        <button type="submit" onClick={onStepChange}>
           Next question
         </button>
       </div>
