@@ -28,13 +28,4 @@ const SignIn = ({ onStepChange }) => {
   );
 };
 
-{
-  /* <header>
-<img className="hero-img"></img>
-
-<button className="entrebutton" onClick={() => setStep(step + 1)}>
-  {"ENTRÉ THE MOVIE SELECTOR "}
-</button>
-</header> */
-}
 export default SignIn;
