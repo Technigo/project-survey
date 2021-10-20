@@ -1,16 +1,16 @@
-import React, { useState } from "React";
+import React, { useState } from 'React';
 
-import Greeting from "./Greeting";
-import FirstQuestion from "./FirstQuestion";
-import SecondQuestion from "./SecondQuestion";
-import ThirdQuestion from "./ThirdQuestion";
-import Overview from "./Overview";
+import Greeting from './Greeting';
+import FirstQuestion from './FirstQuestion';
+import SecondQuestion from './SecondQuestion';
+import ThirdQuestion from './ThirdQuestion';
+import Overview from './Overview';
 
 const Form = () => {
-  const [bandChoice, setBandChoice] = useState("");
-  const [arenaChoice, setArenaChoice] = useState("");
-  const [seatChoice, setSeatChoice] = useState("");
-  const [step, setStep] = useState("");
+  const [bandChoice, setBandChoice] = useState('');
+  const [arenaChoice, setArenaChoice] = useState('');
+  const [seatChoice, setSeatChoice] = useState('');
+  const [step, setStep] = useState(0);
 
   const onBandChoiceSet = (event) => {
     setBandChoice(event.target.value);
@@ -53,11 +53,7 @@ const Form = () => {
         />
       )}
       {step === 4 && (
-        <Overview
-          bandChoice={bandChoice}
-          arenaChoice={arenaChoice}
-          seatChoice={seatChoice}
-        />
+        <Overview bandChoice={bandChoice} arenaChoice={arenaChoice} seatChoice={seatChoice} />
       )}
     </div>
   );

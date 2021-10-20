@@ -1,6 +1,6 @@
 import React from "react";
 
-const Greeting = (onStepChange) => {
+const Greeting = ({onStepChange}) => {
   return (
     <div>
       <h1>Welcome!</h1>
