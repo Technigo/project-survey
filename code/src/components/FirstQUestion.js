@@ -4,7 +4,7 @@ const FirstQuestion = (props) => {
 const {nameInput, onNameInputChange, onStepChange} = props
 
   return (
-    <form>
+    <form id="form">
       <label htmlFor="nameInput">Type your name</label>
       <input 
         id="nameInput" 

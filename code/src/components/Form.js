@@ -22,11 +22,11 @@ const Form = () => {
   }
 
   const onFeelingChange = (event) => {
-    setFeeling(feeling)
+    setFeeling(event.target.value)
   }
 
   const onFlavourChange = (event) => {
-    setFlavour(flavour)
+    setFlavour(event.target.value)
   }
 
   const onStepChange = () => {
@@ -38,8 +38,14 @@ const Form = () => {
   }
 
   return (
-    showResult ? <Overview nameInput={nameInput} surnameInput = {surnameInput}/>:
-      <div>
+    showResult ? 
+      <Overview 
+        nameInput={nameInput} 
+        surnameInput = {surnameInput}
+        feeling = {feeling}
+        flavour = {flavour}
+      />:
+      <div id="form">
         {step === 1 && (
           <FirstQuestion 
             nameInput={nameInput} 
@@ -68,22 +74,7 @@ const Form = () => {
           />
         )}
       </div>
-      )
-  // if(step===1) {
-  //   return <FirstQuestion 
-  //     nameInput={nameInput} 
-  //     onNameInputChange={onNameInputChange}
-  //     onStepChange={onStepChange} />
-  // } else if (step===2) {
-  //   return <SecondQuestion 
-  //     surnameInput={surnameInput} 
-  //     onSurnameInputChange={onSurnameInputChange} 
-  //     onStepChange={onStepChange} />
-  // } else if (step===3) {
-  //   return <Overview 
-  //   nameInput={nameInput}
-  //   surnameInput = {surnameInput}/>
-  // }
+  )
 }
 
 export default Form

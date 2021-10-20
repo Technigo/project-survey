@@ -4,7 +4,7 @@ const FourthQuestion = (props) => {
 const {flavour, onFlavourChange, onFinalQuestion} = props
 
   return (
-    <form>
+    <form id="form">
       <label>
         Pick your popcorn flavour
         <select value={flavour} onChange={onFlavourChange}>
@@ -15,10 +15,7 @@ const {flavour, onFlavourChange, onFinalQuestion} = props
         </select>
       </label>
       
-      <button 
-        onClick={onFinalQuestion}>
-          See overview
-      </button>
+      <button onClick={onFinalQuestion}>See overview</button>
     </form>
   )
 }
