@@ -5,10 +5,10 @@ const ProgressBar = (props) => {
 
   const containerStyles = {
     height: 20,
-    width: '100%',
+    width: '90%',
     backgroundColor: '#e0e0de',
     borderRadius: 50,
-    margin: 50,
+    marginTop: 30,
   };
 
   const fillerStyles = {
@@ -20,9 +20,9 @@ const ProgressBar = (props) => {
   };
 
   const labelStyles = {
-    padding: 5,
+    paddingRight: 5,
     color: 'white',
-    fontSize: 10,
+    fontSize: 12,
     letterSpacing: -1,
     fontWeight: 'bold',
   };
@@ -30,7 +30,7 @@ const ProgressBar = (props) => {
   return (
     <div style={containerStyles}>
       <div style={fillerStyles}>
-        <span style={labelStyles}>{`${completed} of ${totalQuestions}`}</span>
+        <span style={labelStyles}>{`${completed} / ${totalQuestions}`}</span>
       </div>
     </div>
   );
