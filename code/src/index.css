@@ -142,10 +142,10 @@ code {
   color: bisque;
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1150px) {
   .list {
     text-align: left;
-    margin-left: 389px;
+    margin-left: 500px;
     font-size: 60px;
     font-family: ui-monospace;
     color: antiquewhite;
