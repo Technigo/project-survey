@@ -6,17 +6,20 @@ export const SecondQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form>
+    <form onSubmit={onStepChange}>
       <div>
-        <label htmlFor="adressInput">Var bor du?</label>
-        <input
-          id="adressInput"
-          type="text"
-          value={adressInput}
-          onChange={onAdressInputChange}
-        />
+        <h2>Var bor du?</h2>
+        <label htmlFor="adressInput">
+          Adress:
+          <input
+            id="adressInput"
+            type="text"
+            value={adressInput}
+            onChange={onAdressInputChange}
+          />
+        </label>
       </div>
-      <button onClick={onStepChange}>Nästa</button>
+      <button type="submit">Nästa</button>
     </form>
   );
 };

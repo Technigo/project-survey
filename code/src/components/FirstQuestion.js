@@ -6,17 +6,20 @@ export const FirstQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form>
+    <form onSubmit={onStepChange}>
       <div>
-        <label htmlFor="nameInput">För och efternamn:</label>
-        <input
-          id="nameInput"
-          type="text"
-          value={nameInput}
-          onChange={onNameInputChange}
-        />
+        <h2>Vem är du?</h2>
+        <label htmlFor="nameInput">
+          För och efternamn:
+          <input
+            id="nameInput"
+            type="text"
+            value={nameInput}
+            onChange={onNameInputChange}
+          />
+        </label>
       </div>
-      <button onClick={onStepChange}>Nästa</button>
+      <button disabled={nameInput === ""}>Nästa</button>
     </form>
   );
 };

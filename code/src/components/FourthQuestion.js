@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const FourthQuestion = ({
   satisfactionInput,
@@ -6,31 +6,32 @@ export const FourthQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form>
-      Är du nöjd med din utdeling av post?
+    <form onSubmit={onStepChange}>
+      <h2> Är du nöjd med utdeling av din post?</h2>
       <div>
-        <label>
+        <label htmlFor="SatisfactionYes">
+          Ja
           <input
+            id="SatisfactionYes"
             type="radio"
             value="Ja"
             onChange={onSatisfactionInputChange}
             checked={satisfactionInput === "Ja"}
           />
-          Ja
         </label>
-        <label>
+        <label htmlFor="SatisfactionNo">
+          Nej
           <input
+            id="SatisfactionNo"
             type="radio"
             value="Nej"
             onChange={onSatisfactionInputChange}
             checked={satisfactionInput === "Nej"}
           />
-          Nej
         </label>
       </div>
-      <button onClick={onStepChange}>Nästa</button>
+      <button type="submit">Nästa</button>
     </form>
   );
 };
-
 export default FourthQuestion;

@@ -3,12 +3,16 @@ import { FirstQuestion } from "./FirstQuestion";
 import { SecondQuestion } from "./SecondQuestion";
 import { ThirdQuestion } from "./ThirdQuestion";
 import { FourthQuestion } from "./FourthQuestion";
+import Overview from "./Overview";
+import FifthQuestionYes from "./FifthQuestionYes";
+import FifthQuestionNo from "./FifthQuestionNo";
 
 export const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [adressInput, setAdressInput] = useState("");
   const [houseTypeInput, setHouseTypeInput] = useState();
   const [satisfactionInput, setSatisfactionInput] = useState();
+  const [satisfactionTextInput, setSatisfactionTextInput] = useState();
   const [step, setStep] = useState(1);
 
   const onNameInputChange = (event) => {
@@ -24,8 +28,19 @@ export const Form = () => {
     setSatisfactionInput(event.target.value);
   };
 
+  const onSatisfactionTextInputChange = (event) => {
+    setSatisfactionTextInput(event.target.value);
+  };
+
   const onStepChange = () => {
     setStep(step + 1);
+  };
+
+  const onEnter = (event) => {
+    if (event.key === "Enter") {
+      event.preventDefault();
+      setStep(step + 1);
+    }
   };
 
   if (step === 1) {
@@ -34,6 +49,7 @@ export const Form = () => {
         nameInput={nameInput}
         onNameInputChange={onNameInputChange}
         onStepChange={onStepChange}
+        onEnter={onEnter}
       />
     );
   } else if (step === 2) {
@@ -42,14 +58,17 @@ export const Form = () => {
         adressInput={adressInput}
         onAdressInputChange={onAdressInputChange}
         onStepChange={onStepChange}
+        onEnter={onEnter}
       />
     );
   } else if (step === 3) {
     return (
       <ThirdQuestion
         houseTypeInput={houseTypeInput}
+        adressInput={adressInput}
         onHouseTypeInputChange={onHouseTypeInputChange}
         onStepChange={onStepChange}
+        onEnter={onEnter}
       />
     );
   } else if (step === 4) {
@@ -58,6 +77,37 @@ export const Form = () => {
         satisfactionInput={satisfactionInput}
         onSatisfactionInputChange={onSatisfactionInputChange}
         onStepChange={onStepChange}
+        onEnter={onEnter}
+      />
+    );
+  } else if (step === 5 && satisfactionInput === "Ja") {
+    return (
+      <FifthQuestionYes
+        nameInput={nameInput}
+        satisfactionTextInput={satisfactionTextInput}
+        onSatisfactionTextInputChange={onSatisfactionTextInputChange}
+        onEnter={onEnter}
+        onStepChange={onStepChange}
+      />
+    );
+  } else if (step === 5 && satisfactionInput === "Nej") {
+    return (
+      <FifthQuestionNo
+        nameInput={nameInput}
+        satisfactionTextInput={satisfactionTextInput}
+        onSatisfactionTextInputChange={onSatisfactionTextInputChange}
+        onEnter={onEnter}
+        onStepChange={onStepChange}
+      />
+    );
+  } else if (step === 6) {
+    return (
+      <Overview
+        nameInput={nameInput}
+        adressInput={adressInput}
+        houseTypeInput={houseTypeInput}
+        satisfactionInput={satisfactionInput}
+        satisfactionTextInput={satisfactionTextInput}
       />
     );
   }
