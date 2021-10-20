@@ -41,7 +41,7 @@ export const App = () => {
   // }
 
   const decrementStep = () => {
-    console.log(steps.length)
+    // console.log(steps.length)
     if (steps.length > 1) {
       const newSteps = steps.filter((e, i) => i < steps.length - 1)
       const newStep = newSteps[newSteps.length - 1]
@@ -58,7 +58,7 @@ export const App = () => {
   }
 
   return (
-    <div>
+    <div className='container'>
       <FormWrapper step={step} state={state} handleChange={handleChange} />
       <Button disabled={step === 1} incrementStep={decrementStep} text={'^'} />
       <Button disabled={step === 'end'} incrementStep={incrementStep} text={'v'} />
