@@ -3,7 +3,7 @@ import React from 'react'
 const LocationQuestion = ({locationInput, onLocationInputChange, onstepChange}) => {
 
     return (
-        <form>
+        <form className="form-container">
         <label htmlFor="locationInput">Where do you live?</label>
         <input 
             id="locationInput"

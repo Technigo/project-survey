@@ -2,7 +2,7 @@ import React from 'react'
 
 const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange}) => {
     return (
-        <form>
+        <form className="form-container">
         <label htmlFor="AnimalInput">Which of these animals do you like the best?</label>
           <select 
               id="AnimalInput"

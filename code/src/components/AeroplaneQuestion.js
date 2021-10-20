@@ -3,7 +3,7 @@ import React from 'react'
 const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange}) =>{
 
     return(
-        <form>
+        <form className="form-container">
             <div className="radioRow">
                 <h2>Can you make an aeroplane out of paper?</h2>
                 <label className= "radiobutton-container"htmlFor="aeroplaneInput">Yes

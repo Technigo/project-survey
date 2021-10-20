@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: palevioletred;
+  background-image: url("./assets/header.jpg");
 }
 
 code {
@@ -13,3 +14,23 @@ code {
     monospace;
 }
 
+.header{
+  height:300px;
+  width: 100%;
+  background-color: white;
+  border-bottom:solid 10px yellow;
+  margin-bottom: 20px;
+  
+}
+.header img {
+  width: 300px;
+  margin: 0 auto;
+  padding: 50px 0;
+  display: block;
+}
+.form-container {
+  width: 60%;
+  background: white;
+  border: solid 1px pink;
+  display: block;
+}
