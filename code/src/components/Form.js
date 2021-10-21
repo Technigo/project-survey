@@ -5,7 +5,6 @@ import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
 import FourthQuestion from './FourthQuestion'
-import Slider from './Slider'
 import Summary from './Summary';
 import SubmitButton from './SubmitButton';
 import 'styles/form.css';
@@ -19,7 +18,6 @@ const Form = () => {
     const [experience, setExperience] = useState('');
     const [pastry, setPastry] = useState('');
     const [date, setDate] = useState('');
-    const [happiness, setHappiness] = useState('');
     const [showSummary, setShowSummary] = useState(false);
     /* Functions for handling input from form */
 
@@ -39,10 +37,6 @@ const Form = () => {
         setDate(event);
     };
 
-    const onHappinessSet = (event) => {
-        setHappiness(event.detail.value);
-    };
-
     const onShowSummary = (event) => {
         if (nameInput === '') {
             setAlert(true)
@@ -54,18 +48,6 @@ const Form = () => {
             setShowSummary(true);
         }
     }
-
-    // const onShowSummary = () => {
-    //     if (nameInput === '') {
-    //         alert('Name is required')
-    //     }
-    //     else if (date === '') {
-    //         alert('Date is requierd')
-    //     }
-    //     else {
-    //         setShowSummary(true);
-    //     }
-    // }
 
     // v1
     return (
@@ -93,10 +75,6 @@ const Form = () => {
                         onSelect={onDateInputChange} //when day is clicked
                     />
                     {alert && <Alert />}
-                    <Slider
-                        happiness={happiness}
-                        setHappiness={onHappinessSet}
-                    />
 
                     <SubmitButton
                         onSetShowSummary={onShowSummary}

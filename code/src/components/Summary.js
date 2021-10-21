@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Overview = ({ nameInput, experience, chosenPastry, date,  }) => {
+const Summary = ({ nameInput, experience, chosenPastry, date,  }) => {
 	return (
 		<section className="summary">
 		<h2 className="summary-header">Welcome on a morning baking course {nameInput}!</h2>
@@ -17,4 +17,4 @@ const Overview = ({ nameInput, experience, chosenPastry, date,  }) => {
 	);
 };
 
-export default Overview;
+export default Summary;

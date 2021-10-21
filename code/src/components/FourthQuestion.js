@@ -12,7 +12,14 @@ const FourthQuestion = ({ selected, onSelect }) => {
 </div>
             <DatePicker placeholderText="Please select a date" selected={selected} onChange={(date) => onSelect(date)} 
             />       
+        <div>
+
+<h2 className="quote">"Rememeber! A balanced diet is a cookie in each hand!"</h2>
+</div>
+        
         </>
+
+        
         
         );
   };

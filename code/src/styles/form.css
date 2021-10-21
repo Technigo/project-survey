@@ -86,7 +86,7 @@ input:-webkit-autofill,
     font-family: 'Truculenta', sans-serif;
     font-size: 16px;
     color: rgb(0, 0, 0);
-    cursor: pointer;
+    
 }
 
 .custom-select {
@@ -197,7 +197,7 @@ display: block;
 }
 
 .quote {
-    font-size: 18px;
+    font-size: 23px;
     margin-top: 25px;
     font-family: 'Truculenta', sans-serif;
     text-align: center;
@@ -214,6 +214,7 @@ display: block;
     cursor: pointer;
     background-color: #f6acb0;
     color: black;
+   
 }
 
 .submit-button:hover {
