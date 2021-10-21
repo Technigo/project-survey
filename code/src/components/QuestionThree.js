@@ -10,27 +10,45 @@ const QuestionThree = ({
   alert,
   onStepChange,
   onEnter,
+  onPreviousQuestionChange,
+  step,
 }) => {
   return (
-    <form>
-      What is you indoor humidity?
-      {humidityArray.map((value) => (
-        <label key={value}>
-          <input
-            type='radio'
-            value={value}
-            onChange={onHumidityChange}
-            checked={humidity === value}
-            onKeyPress={onEnter}
-          />
-          {value}
-        </label>
-      ))}
-      {alert && <Alert />}
-      <button type='button' className='form-button' onClick={onStepChange}>
-        Next
-      </button>
-    </form>
+    <div className='form-container'>
+      <form className='form-question'>
+        <label className='label-text'>What is your indoor humidity?</label>
+        <div className='radio-button-container'>
+          {humidityArray.map((value) => (
+            <label className='radio-option-humidity' key={value}>
+              <input
+                type='radio'
+                value={value}
+                onChange={onHumidityChange}
+                checked={humidity === value}
+                onKeyPress={onEnter}
+              />
+              {value}
+            </label>
+          ))}
+        </div>
+        {alert && <Alert />}
+        <div className='button-container'>
+          <button
+            className='form-button'
+            type='button'
+            onClick={onPreviousQuestionChange}
+          >
+            Back
+          </button>
+          <button className='form-button' type='button' onClick={onStepChange}>
+            Next
+          </button>
+        </div>
+      </form>
+      <div className='progress-counter'>
+        {step <= 4 && <p>Question: {step}/4</p>}
+      </div>
+    </div>
   );
 };
 

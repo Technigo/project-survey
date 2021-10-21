@@ -3,5 +3,10 @@ import React from 'react';
 import Form from './components/Form';
 
 export const App = () => {
-  return <Form />;
+  return (
+    <>
+      <h1>Plant Survey</h1>
+      <Form />;
+    </>
+  );
 };

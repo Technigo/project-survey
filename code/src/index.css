@@ -1,7 +1,7 @@
 body {
   margin: 0;
   font-family: 'Quicksand', sans-serif;
-  background-image: url('./assets/background-small.jpeg');
+  background-image: url('./assets/plant-img.jpeg');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -23,22 +23,29 @@ body {
 } */
 
 h1 {
-  font-size: 60px;
-  font-weight: bold;
+  position: absolute;
+  top: 1vh;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 65px;
+  font-weight: 500;
   color: white;
+  text-shadow:
+    /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
+    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
+    0 0 151px #0fa;
 }
 
-.form-button {
+.start-button,
+.form-button,
+.back-button {
   display: inline-block;
   font-family: 'Quicksand', sans-serif;
   text-decoration: none;
-  background: #87befd;
+  background: #22492f;
   color: #fff;
-  width: 120px;
-  height: 120px;
-  font-size: 25px;
-  font-weight: 200;
-  line-height: 120px;
+  font-size: 23px;
+  font-weight: 500;
   border-radius: 50%;
   text-align: center;
   vertical-align: middle;
@@ -47,8 +54,52 @@ h1 {
   border: 0px;
 }
 
-.form-button:hover {
-  background: #668ad8;
+.start-button:hover,
+.form-button:hover,
+.back-button:hover {
+  background: #3e5230;
+}
+
+.start-button {
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+}
+
+.form-button {
+  width: 90px;
+  height: 90px;
+  line-height: 90px;
+}
+
+/* .form-question,
+.overview {
+  display: flex;
+  flex-direction: column;
+} */
+
+.form-container {
+  margin-top: 15vh;
+  padding: 15px;
+  border: 2px solid #3ba05d;
+  border-radius: 25px;
+  background-color: rgba(13, 31, 1, 0.5);
+}
+
+.form-question,
+.overview {
+  padding: 2vh 1vh;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+  width: 280px;
+}
+
+.alert-msg {
+  font-size: 20px;
+  color: #fff;
+  margin-top: -25px;
 }
 
 .label-text {
@@ -65,19 +116,12 @@ select {
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
   padding: 15px;
   background: rgba(255, 255, 255, 0.5);
-  margin: 0 0 10px 0;
+  margin: 0;
 }
 
-.form-question {
-  display: flex;
-  flex-direction: column;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: center;
+::placeholder {
+  color: black;
+  opacity: 1;
 }
 
 .progress-bar {
@@ -92,4 +136,39 @@ form {
   color: #fff;
   font-weight: 200;
   margin-bottom: 0px;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.radio-button-container,
+.overview-details {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.radio-option-humidity {
+  font-size: 22px;
+  color: #fff;
+}
+
+.radio-option-plant {
+  font-size: 27px;
+}
+
+p {
+  margin: 0;
+  color: #fff;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 75px;
+    top: 5vh;
+  }
 }

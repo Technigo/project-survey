@@ -12,7 +12,7 @@ const Form = () => {
   const [plantSkill, setPlantSkill] = useState('');
   const [humidity, setHumidity] = useState('');
   const [favouritePlant, setFavouritePlant] = useState('');
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
   const [alert, setAlert] = useState(false);
 
   const onNameInputChange = (event) => {
@@ -30,28 +30,28 @@ const Form = () => {
 
   //Change question + validation
   const onStepChange = (event) => {
-    if (step === 2) {
+    if (step === 1) {
       if (nameInput === '') {
         setAlert(true);
       } else {
         setAlert(false);
         setStep(step + 1);
       }
-    } else if (step === 3) {
+    } else if (step === 2) {
       if (plantSkill === '') {
         setAlert(true);
       } else {
         setAlert(false);
         setStep(step + 1);
       }
-    } else if (step === 4) {
+    } else if (step === 3) {
       if (humidity === '') {
         setAlert(true);
       } else {
         setAlert(false);
         setStep(step + 1);
       }
-    } else if (step === 5) {
+    } else if (step === 4) {
       if (favouritePlant === '') {
         setAlert(true);
       } else {
@@ -63,6 +63,10 @@ const Form = () => {
     }
   };
 
+  const onPreviousQuestionChange = () => {
+    setStep(step - 1);
+  };
+
   const onEnter = (event) => {
     if (event.key === 'Enter') {
       event.preventDefault();
@@ -72,44 +76,51 @@ const Form = () => {
 
   return (
     <div>
-      {step === 1 && <WelcomePage onStepChange={onStepChange} />}
-      {step === 2 && (
+      {step === 0 && <WelcomePage onStepChange={onStepChange} />}
+      {step === 1 && (
         <QuestionOne
           nameInput={nameInput}
           onNameInputChange={onNameInputChange}
           alert={alert}
           onStepChange={onStepChange}
           onEnter={onEnter}
+          step={step}
         />
       )}
-      {step === 3 && (
+      {step === 2 && (
         <QuestionTwo
           plantSkill={plantSkill}
           onPlantSkillChange={onPlantSkillChange}
           alert={alert}
           onStepChange={onStepChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onEnter={onEnter}
+          step={step}
         />
       )}
-      {step === 4 && (
+      {step === 3 && (
         <QuestionThree
           humidity={humidity}
           onHumidityChange={onHumidityChange}
           alert={alert}
           onStepChange={onStepChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onEnter={onEnter}
+          step={step}
         />
       )}
-      {step === 5 && (
+      {step === 4 && (
         <QuestionFour
           favouritePlant={favouritePlant}
           onFavouritePlantChange={onFavouritePlantChange}
           alert={alert}
           onStepChange={onStepChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onEnter={onEnter}
+          step={step}
         />
       )}
-      {step === 6 && (
+      {step === 5 && (
         <Overview
           nameInput={nameInput}
           plantSkill={plantSkill}
