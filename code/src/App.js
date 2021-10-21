@@ -11,20 +11,19 @@ export const App = () => {
   const [state, setState] = useState(initialState)
   const [step, setStep] = useState(1)
   const [steps, setSteps] = useState([1])
+  const [color, setColor] = useState()
 
   const handleChange = (e, nextQuestion, title, number, label, questionId, validated) => {
-    // console.log(e.target)
     const { id, value } = e.target
-    if (title.includes('color')) {
-      console.log('color', value)
-      handleTheme(value)
-    }
+    if (title.includes('color')) setColor(value)
+
     let newAnswers = [...state.answers]
     if (state.answers[number - 1]) {
       newAnswers[number - 1] = { ...newAnswers[number - 1], [id]: { value: value, label: label } }
     } else {
       newAnswers = [...newAnswers, { title: title, [id]: { value: value, label: label } }]
     }
+
     setState({
       ...state,
       [questionId]: validated,
@@ -32,10 +31,6 @@ export const App = () => {
       answers: [...newAnswers],
       nextQuestion: nextQuestion,
     })
-  }
-
-  const handleTheme = color => {
-    setState({ ...state, theme: color })
   }
 
   const incrementStep = () => {
@@ -68,18 +63,20 @@ export const App = () => {
   }
 
   return (
-    <div className={'container'}>
-      <FormWrapper
-        step={step}
-        state={state}
-        handleChange={handleChange}
-        incrementStep={incrementStep}
-        decrementStep={decrementStep}
-      />
-      {step === 'end' && <FormSummary state={state} />}
-      <div className='button-container'>
-        {step === 'end' && <Button text={''} type={'up'} onClick={decrementStep} />}
-        {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
+    <div style={{ backgroundColor: color }}>
+      <div className={'container'}>
+        <FormWrapper
+          step={step}
+          state={state}
+          handleChange={handleChange}
+          incrementStep={incrementStep}
+          decrementStep={decrementStep}
+        />
+        {step === 'end' && <FormSummary state={state} />}
+        <div className='button-container'>
+          {step === 'end' && <Button text={''} type={'up'} onClick={decrementStep} />}
+          {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
+        </div>
       </div>
     </div>
   )
