@@ -1,0 +1,32 @@
+.start {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0;
+}
+
+.startButton,
+.time {
+  display: flex;
+  padding: 0;
+  margin: 0;
+  align-items: center;
+ }
+
+ .startButton span{
+
+    font-weight: bold;
+ }
+.time > p {
+  display: flex;
+  line-height: 18px;
+}
+
+svg {
+  margin-right: 10px;
+
+  width: 20px;
+  height: 20px;
+}
