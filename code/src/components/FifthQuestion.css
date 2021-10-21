@@ -1,0 +1,23 @@
+.fifth-text {
+  color: blueviolet;
+  text-align: center;
+  font-size: 26px;
+  padding: 10px;
+}
+
+.select-container {
+  text-align: center;
+  padding: 10px;
+  border-radius: 20px;
+  width: 80%;
+  color: blueviolet;
+  background-color: cornflowerblue;
+  border: 1px solid blueviolet;
+  font-family: "Oswald", sans-serif;
+}
+
+@media (min-width: 768px) {
+  .select-container {
+    font-size: 18px;
+  }
+}

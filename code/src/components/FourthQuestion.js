@@ -2,39 +2,33 @@ import React from "react";
 import "./FourthQuestion.css";
 
 const FourthQuestion = ({
-  believesInput,
-  onBelievesInputChange,
+  experienceInput,
+  onExperienceInputChange,
   onStepChange,
 }) => {
   return (
-    <form className="second-container">
-      <h2 className="fourth-text">
-        Do you believe there's life on another planet?
-      </h2>
-      <select
-        className="select-container"
-        onChange={onBelievesInputChange}
-        value={believesInput}
-      >
-        <option value="">Select your answer</option>
-        <option value="Yes">
-          Yes, I believe there's life on another planet.
-        </option>
-        <option value="No">
-          No, I don't believe there's life on another planet.
-        </option>
-        <option value="Possibly">
-          Possibly, I'm not sure what to believe.
-        </option>
-      </select>
+    <div className="second-container">
+      On a scale from 1 - 100, how certain are you that life exists outside our
+      planet?
+      <div className="slide-container">
+        <input
+          type="range"
+          min="1"
+          max="100"
+          value={experienceInput}
+          className="slider"
+          id="myRange"
+          onChange={onExperienceInputChange}
+        ></input>
+      </div>
       <button
         className="second-button"
-        disabled={believesInput === ""}
+        disabled={experienceInput === ""}
         onClick={onStepChange}
       >
-        Show Summary
+        Next question
       </button>
-    </form>
+    </div>
   );
 };
 

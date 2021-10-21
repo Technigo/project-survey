@@ -1,23 +1,39 @@
-.fourth-text {
-  color: rgb(226, 224, 224);
+.second-container {
   text-align: center;
-  font-size: 26px;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+.slide-container {
+  width: 90%;
   padding: 10px;
 }
 
-.select-container {
-  text-align: center;
-  padding: 10px;
-  border-radius: 10px;
-  width: 80%;
-  color: blueviolet;
-  background-color: cornflowerblue;
-  border: 1px solid blueviolet;
-  font-family: "Oswald", sans-serif;
+.slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background-color: blueviolet;
+  outline: none;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
 }
 
-@media (min-width: 768px) {
-  .select-container {
-    font-size: 18px;
-  }
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: cornflowerblue;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: cornflowerblue;
+  cursor: pointer;
 }

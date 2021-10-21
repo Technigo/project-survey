@@ -6,6 +6,7 @@ import FirstQuestion from "./FirstQuestion";
 import SecondQuestion from "./SecondQuestion";
 import ThirdQuestion from "./ThirdQuestion";
 import FourthQuestion from "./FourthQuestion";
+import FifthQuestion from "./FifthQuestion";
 import Overview from "./Overview";
 
 const Form = () => {
@@ -13,6 +14,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [surnameInput, setSurnameInput] = useState("");
   const [ageGroup, setAgeGroup] = useState("");
+  const [experienceInput, setExperienceInput] = useState("");
   const [believesInput, setBelievesInput] = useState("");
   const [step, setStep] = useState(1);
 
@@ -30,6 +32,10 @@ const Form = () => {
 
   const onAgeGroupChange = (event) => {
     setAgeGroup(event.target.value);
+  };
+
+  const onExperienceInputChange = (event) => {
+    setExperienceInput(event.target.value);
   };
 
   const onBelievesInputChange = (event) => {
@@ -74,16 +80,24 @@ const Form = () => {
         )}
         {step === 5 && (
           <FourthQuestion
+            experienceInput={experienceInput}
+            onExperienceInputChange={onExperienceInputChange}
+            onStepChange={onStepChange}
+          />
+        )}
+        {step === 6 && (
+          <FifthQuestion
             believesInput={believesInput}
             onBelievesInputChange={onBelievesInputChange}
             onStepChange={onStepChange}
           />
         )}
-        {step === 6 && (
+        {step === 7 && (
           <Overview
             nameInput={nameInput}
             surnameInput={surnameInput}
             ageGroup={ageGroup}
+            experienceInput={experienceInput}
             believesInput={believesInput}
           />
         )}
