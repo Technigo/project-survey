@@ -52,7 +52,7 @@ const AllForms = (props) => {
       />
     );
   } else if (step === 2) {
-    return <LastQuestion onStepChange={onStepChange} />;
+    return <RadioButtons onStepChange={onStepChange} />;
   } else if (step === 3) {
     return <LastQuestion onStepChange={onStepChange} />;
   } else if (step === 4) {

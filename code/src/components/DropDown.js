@@ -11,7 +11,7 @@ const DropDown = (props) => {
       <section className="questions-section">
         <h2 className="heading-two">All about arrays</h2>
         <form className="drop-down">
-          <label htmlFor="array-question" className="label-dropdown">
+          <label htmlFor="array-question" className="label">
             What is the difference between forEach() and map() ?
           </label>
           <select
@@ -41,7 +41,7 @@ const DropDown = (props) => {
 
         {/* Second form */}
         <form className="drop-down">
-          <label htmlFor="array-question" className="label-dropdown">
+          <label htmlFor="array-question" className="label">
             What is the difference between find() and filter() ?
           </label>
           <select

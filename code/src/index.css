@@ -10,7 +10,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-background-color: rgb(12, 236, 221); 
+  background-color: rgb(12, 236, 221);
+  font-size: 20px;
 }
 
 code {
@@ -37,12 +38,12 @@ code {
   align-items: center;
   height: 100px;
   padding: 0 30px;
-  margin:0 20px;
+  margin: 0 20px;
   background-color: rgb(255, 243, 56);
-  color:#000;
+  color: #000;
   text-align: center;
   font-size: 40px;
-  font-family: 'Anton', sans-serif;
+  font-family: "Anton", sans-serif;
 }
 
 .input-name {
@@ -57,7 +58,7 @@ code {
 .label-firstName {
   display: block;
   margin: 10px 0px;
-  color:#fff;
+  color: #fff;
   font-size: 20px;
   font-weight: 800;
   padding: 20px;
@@ -72,31 +73,31 @@ code {
   height: 700px;
 }
 .questions-section {
-  margin:0 auto;
-  width: 70%;
+  margin: 0 auto;
+  width: 90%;
   margin-top: 50px;
-  height: 500px;
-  background-color: rgb(235, 146, 190,0.2);
+  padding-bottom: 25px;
+  background-color: rgb(235, 146, 190, 0.2);
   /* background-color: rgb(255, 239, 120,0.3); */
 }
 
 /* dropdown form*/
 
 .heading-two {
-  width: 300px;
-  margin: 0 auto;
-  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  padding-top: 25px;
   text-transform: uppercase;
   color: rgb(214, 52, 23);
   font-weight: 800;
 }
 .drop-down {
-  margin-top:20px;
+  margin-top: 20px;
 }
-.label-dropdown {
+.label {
   font-size: 20px;
   font-weight: 700;
-  padding:10px 0;
+  padding: 10px 10px;
   padding-left: 6px;
   display: block;
   line-height: 28px;
@@ -113,30 +114,74 @@ code {
   outline: none;
 }
 .next-btn {
-margin:0 auto;
-display: block;
-width: 40%;
-border-radius: 20px;
-margin-top: 50px;
-padding: 10px 0;
-font-size: 20px;
-font-weight: 800;
-background-color: #fff;
-
+  margin: 0 auto;
+  display: block;
+  width: 40%;
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+  border-color: rgb(214, 52, 23);
+  background-color: #fff;
+  color: rgb(214, 52, 23);
 }
+
 .next-btn:hover {
-  transform: scale(1.1,1.1);
+  transform: scale(1.1, 1.1);
   background-color: rgb(214, 52, 23);
-  color:#fff;
+  color: #fff;
+}
+/* overview section */
+.overview-btn {
+  padding: 10px;
+  margin-top: 50px;
+}
+.overview-section,
+.correct-answers-section {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 25px;
+  margin-bottom: 20px;
+  padding-bottom: 25px;
+  padding: 20px;
+  background-color: rgb(235, 146, 190, 0.2);
 }
 
-.overview {
-  padding:10px;
-  margin-top:50px;
+.heading-answer-user {
+  color: #1e676d;
 }
-@media (min-width:768px) {
 
-.questions-section {
-max-width: 700px;
+.user-question {
+  color: #1e676d;
+  padding-top: 30px;
+  padding-bottom: 5px;
 }
+
+/* correct answer section */
+.correct-answers-section {
+  background-color: rgb(235, 146, 190, 0.6);
+}
+
+.heading-answer-computer {
+  color: #189b39;
+}
+.correct-answer {
+  margin-top: 30px;
+  display: flex;
+}
+.correct-answer > span {
+  color: #189b39;
+  font-weight: bolder;
+}
+
+@media (min-width: 768px) {
+  .questions-section {
+    max-width: 700px;
+  }
+
+  .overview-section,
+  .correct-answers-section {
+    max-width: 700px;
+  }
 }
