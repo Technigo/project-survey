@@ -1,6 +1,14 @@
 import React from 'react'
 
-const Overview = ({ questionOneInput, questionTwoInput, questionThreeInput, aliasInput, radioButtonInput, questionFourInput }) => {
+const hungerLevel = {
+    1: 'are not hungry at all!',
+    2: 'could use a nibble at least!',
+    3: 'could eat some cookies!',
+    4: 'must take a break and have lunch or something!',
+    5: 'are starving!'
+}
+
+const Overview = ({ aliasInput, radioButtonInput, questionOneInput, questionTwoInput, questionThreeInput, questionFourInput, questionFiveInput }) => {
     return (
         <section className="overview-container">
             <h2>My survey answers</h2>
@@ -10,6 +18,7 @@ const Overview = ({ questionOneInput, questionTwoInput, questionThreeInput, alia
             <p>Cereal is {questionTwoInput} soup!</p>
             <p>You would listen in to {questionThreeInput}.</p>
             <p>The best therapist would be {questionFourInput}!</p>
+            <p>You {hungerLevel[questionFiveInput]}</p>
             <h3>Thank you for answering!</h3>
         </section>
     )

@@ -4,8 +4,8 @@ const QuestionFour = ({ questionFourInput, onQuestionFourInputChange, onStepChan
     return (
         <div>
             <div className="progress-bar-container">
-                <label htmlfor="survey">Survey progress: </label>
-                <progress className="progress-bar" id="survey" value="5" max="5"></progress>
+                <label htmlFor="survey">Survey progress: </label>
+                <progress className="progress-bar" id="survey" value="5" max="6"></progress>
             </div>
 
             <div className="question-four-container">

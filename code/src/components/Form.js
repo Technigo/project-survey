@@ -6,6 +6,7 @@ import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
 import QuestionFour from './QuestionFour'
+import QuestionFive from './QuestionFive'
 import Overview from './Overview'
 
 const Form = () => {
@@ -15,6 +16,7 @@ const Form = () => {
     const [questionTwoInput, setQuestionTwoInput] = useState('')
     const [questionThreeInput, setQuestionThreeInput] = useState('')
     const [questionFourInput, setQuestionFourInput] = useState('')
+    const [questionFiveInput, setQuestionFiveInput] = useState('')
     const [step, setStep] = useState(1)
 
     const onAliasInputChange = (event) => {
@@ -39,6 +41,10 @@ const Form = () => {
 
     const onQuestionFourInputChange = (event) => {
         setQuestionFourInput(event.target.value)
+    }
+
+    const onQuestionFiveInputChange = (event) => {
+        setQuestionFiveInput(event.target.value)
     }
 
     const onStepChange = () => {
@@ -90,6 +96,13 @@ const Form = () => {
                 />
             )}
             {step === 7 && (
+                <QuestionFive
+                    questionFiveInput={questionFiveInput}
+                    onQuestionFiveInputChange={onQuestionFiveInputChange}
+                    onStepChange={onStepChange}
+                />
+            )}
+            {step === 8 && (
                 <Overview
                     aliasInput={aliasInput}
                     radioButtonInput={radioButtonInput}
@@ -97,6 +110,7 @@ const Form = () => {
                     questionTwoInput={questionTwoInput}
                     questionThreeInput={questionThreeInput}
                     questionFourInput={questionFourInput}
+                    questionFiveInput={questionFiveInput}
                 />
             )}
         </div>

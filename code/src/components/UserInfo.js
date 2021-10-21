@@ -1,12 +1,12 @@
 import React from 'react'
 
-const radioButtonInputs = ['Happy', 'Bored', 'Hungry', 'Candy?']
+const radioButtonInputs = ['happy', 'hored', 'excited', 'sleepy']
 
 const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioButtonChange, onStepChange }) => {
     return (
         <div>
             <div className="progress-bar-container">
-                <label htmlfor="survey">Survey progress: </label>
+                <label htmlFor="survey">Survey progress: </label>
                 <progress className="progress-bar" id="survey" value="1" max="6"></progress>
             </div>
 
@@ -28,7 +28,7 @@ const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioBut
                                 type="radio"
                                 value={radiobutton}
                                 onChange={onRadioButtonChange}
-                                checked={radioButtonInput === radiobutton} required>
+                                checked={radioButtonInput === radiobutton}>
                             </input>
                             {radiobutton}
                         </label>
