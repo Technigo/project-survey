@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const ThirdQuestion = ({ countryInput, onCountryInputChange, onStepChange}) => {
+const ThirdQuestion = ({ countryInput, onCountryInputChange, onStepChange, onPreviousQuestionChange}) => {
 	return (
     	<section className="content-container">
 			<form className="form">
@@ -26,11 +26,13 @@ const ThirdQuestion = ({ countryInput, onCountryInputChange, onStepChange}) => {
 						<option value="Poland">Poland 🇵🇱</option>
 						<option value="Polen">UK 🇬🇧</option>
         		</select>
-				<button onClick={onStepChange}>Next</button>
+				<div className="button-container">
+					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
+					<button onClick={onStepChange}>Next &rarr;</button>			
+				</div>
 			</form>
 
 		</section>
-
 	);
 
 };

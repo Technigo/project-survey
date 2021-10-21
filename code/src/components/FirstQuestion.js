@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 
 	return (
@@ -8,7 +9,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 				<label 
 					className="label-title" 
 					htmlFor="nameInput">
-						What's your <span className="bold">full name?*</span>
+						What's your <span className="bold">name?*</span>
 				</label>
 				<input
 					id="nameInput"
@@ -20,7 +21,6 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 					
 				/>
 				<button 
-				// disabled={ (nameInput==='') }
 				onClick={onStepChange}>Next
 				</button>
 			</form>

@@ -1,7 +1,7 @@
 import React from 'react';
 import Avatar from 'img/avatar.jpeg'
 
-const Overview = ({ nameInput, countryInput, ageInput, emailInput }) => {
+const Overview = ({ nameInput, countryInput, ageInput, emailInput, moodInput }) => {
 
 	return (
 		<section className="overview-container">
@@ -10,11 +10,16 @@ const Overview = ({ nameInput, countryInput, ageInput, emailInput }) => {
 				</div>
 				<div className="speech-bubble">
 					<p>Thank you for your application, <span className="bold">{nameInput}</span>!</p>
-					<p>We will reach out to you by  <span className="bold">{emailInput}</span>.
-					You live in  <span className="bold">{countryInput}</span>  and your age is between  <span className="bold">{ageInput}</span>.  
-					While you are waiting for us to contact you, visit our webpage  
-					 <a href="https://www.netflix.com/se/title/81040344" target="_blank" rel="noopener noreferrer">here</a>	
+					<p>Our office in <span className="bold">{countryInput}</span> will contact you at the specified email address <span className="bold">{emailInput}</span>.
+					Your age <span className="bold">{ageInput}</span> is common in our games 
+					You can read more about us on our page 
+
+					<a href="https://www.netflix.com/se/title/81040344" target="_blank" rel="noopener noreferrer">here</a>	
+
+					<span className="bold">Best regards,</span> 
+					Pink Soldier
 					</p>
+					<button onClick={() => {window.location.reload(false)}}>Reset</button>
 				</div>
 		</section>
 	);

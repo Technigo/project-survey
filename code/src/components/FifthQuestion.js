@@ -1,20 +1,35 @@
 import React from 'react';
 
-const FifthQuestion = ({onStepChange }) => {
+const FifthQuestion = ({moodInput, onMoodInputChange, onStepChange, onPreviousQuestionChange }) => {
 
 	return (
 		<section className="content-container">
 			<form className="form">
 				<label 
-					className="label-title" 
-					htmlFor="nameInput">
-						How much <span className="bold">money*</span> do you expect to get? 
+					className="label-title" >
+						How excited are you for this game?
 				</label>
+				<div>
+					<div className="emojies-container">
+						<span role="emoji" className="emoji">🥱</span>
+						<span role="emoji" className="emoji">😀</span>
+					</div>
+					<input 
+					type="range" 
+					min="1" 
+					max="10" 
+					value={moodInput} 
+					onInput={onMoodInputChange}
+					className="slider"
+					/>
+				</div>
+				<p className="input-text">{moodInput}</p>
 
-				<button 
-				// disabled={ (nameInput==='') }
-				onClick={onStepChange}>Next
-				</button>
+
+				<div className="button-container">
+					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
+					<button type="button" onClick={onStepChange}>Next &rarr;</button>				
+				</div>
 			</form>
 
 		</section>

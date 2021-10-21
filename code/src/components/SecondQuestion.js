@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SecondQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
+const SecondQuestion = ({ emailInput, onEmailInputChange, onStepChange, onPreviousQuestionChange }) => {
 
 	return (
 		<section className="content-container">
@@ -8,7 +8,7 @@ const SecondQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
 				<label 
 					className="label-title" 
 					htmlFor="emailInput">
-						What is your <span className="bold">email?*</span>
+						What's your <span className="bold">email adress?*</span>
 				</label>
 				<input
 					id="emailInput"
@@ -18,7 +18,11 @@ const SecondQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
 					value={emailInput}
 					onChange={onEmailInputChange}
 				/>
-				<button type="button" onClick={onStepChange}>Next</button>
+				<div className="button-container">
+					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
+					<button disabled={ (emailInput==='') } type="button" onClick={onStepChange}>Next &rarr;</button>				
+				</div>
+
 			</form>
 
 		</section>

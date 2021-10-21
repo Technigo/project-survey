@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
+const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange, onPreviousQuestionChange }) => {
     const ages = ['0-30', '31-60', '61-100']
 
 	return (
@@ -9,7 +9,7 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
 				<label 
 					className="label-title" 
 					htmlFor="ageInput">
-						What is your <span className="bold">age?*</span>
+						What's your <span className="bold">age?*</span>
 				</label>
                 <div className="radio-buttons-container">
                     {ages.map(age => (
@@ -33,8 +33,10 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange }) => {
 
                     ))}
                 </div>
-
-				<button type="button" onClick={onStepChange}>Next</button>
+				<div className="button-container">
+					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
+					<button type="button" onClick={onStepChange}>Next &rarr;</button>				
+				</div>
 			</form>
 
 		</section>

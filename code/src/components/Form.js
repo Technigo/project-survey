@@ -15,7 +15,8 @@ const Form = () => {
 	const [emailInput, setEmailInput] = useState('');
 	const [countryInput, setCountryInput] = useState('');
 	const [ageInput, setAgeInput] = useState('');
-	const [moneyInput, setMoneyInput] = useState('');
+	const [moodInput, setMoodInput] = useState('');
+
 
 	const [step, setStep] = useState(0);
 
@@ -35,16 +36,27 @@ const Form = () => {
 		setAgeInput(selectRadioBtn);
 	};
 
-	const onMoneyInputChange = (event) => {
-		setMoneyInput(event.target.value);
+	const onMoodInputChange = (event) => {
+		setMoodInput(event.target.value);
 	};
 
 	const onStepChange = () => {
-		setStep(step + 1);
+			setStep(step + 1);
+
 	};
+
+	const onPreviousQuestionChange = () => {
+		setStep(step - 1);
+	  };
+	
+
+
+
+
 
 	return (
 		<main className="main-container">
+
             {step === 0 && (
 				<StartScreen
 					onStepChange={onStepChange}
@@ -55,6 +67,7 @@ const Form = () => {
 					nameInput={nameInput}
 					onNameInputChange={onNameInputChange}
 					onStepChange={onStepChange}
+
 				/>
 			)}
 			{step === 2 && (
@@ -62,6 +75,7 @@ const Form = () => {
 					email={emailInput}
 					onEmailInputChange={onEmailInputChange}
 					onStepChange={onStepChange}
+					onPreviousQuestionChange={onPreviousQuestionChange}
 				/>
 			)}
 			{step === 3 && (
@@ -69,6 +83,7 @@ const Form = () => {
 					countryInput={countryInput}
 					onCountryInputChange={onCountryInputChange}
 					onStepChange={onStepChange}
+					onPreviousQuestionChange={onPreviousQuestionChange}
 				/>
 			)}
 			{step === 4 && (
@@ -76,13 +91,15 @@ const Form = () => {
 					ageInput={ageInput}
 					onAgeInputChange={onAgeInputChange}
 					onStepChange={onStepChange}
+					onPreviousQuestionChange={onPreviousQuestionChange}
 				/>
 			)}
 			{step === 5 && (
 				<FifthQuestion
-					moneyInput={moneyInput}
-					onMoneyInputChange={onMoneyInputChange}
+					moodInput={moodInput}
+					onMoodInputChange={onMoodInputChange}
 					onStepChange={onStepChange}
+					onPreviousQuestionChange={onPreviousQuestionChange}
 				/>
 			)}
 			{step === 6 && (
@@ -91,9 +108,13 @@ const Form = () => {
 					countryInput={countryInput} 
 					ageInput={ageInput} 
 					emailInput={emailInput}
+					moneyInput={moodInput}
 				/>
 			)}
 		</main>
+
+
+		
 	)
  }
 
