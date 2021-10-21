@@ -9,10 +9,10 @@ const Food = ({
 }) => {
   return (
     <div className="wrapper">
+      <p className="food-header">Favorite type of food:</p>
       <form>
-        <p className="food-header">Favorite type of food:</p>
         <div className="food-wrapper">
-          <div className="food-types">
+          <span className="food-types">
             <label className="radiobutton-container">
               <div>
                 <img
@@ -21,7 +21,7 @@ const Food = ({
                   alt="swedish meatball dish"
                 />
               </div>
-              <div>
+              <div className="radio-wrapper">
                 <input
                   className="radio-button"
                   type="radio"
@@ -29,10 +29,11 @@ const Food = ({
                   onChange={onFoodInputChange}
                   checked={foodInput === "swedish"}
                 />
-                Swedish food
+                <span className="custom-radio"></span>
+                <p className="food-title">Swedish food</p>
               </div>
             </label>
-          </div>
+          </span>
           <div className="food-types">
             <label className="radiobutton-container">
               <div>
@@ -42,7 +43,7 @@ const Food = ({
                   alt="hamburger dish"
                 />
               </div>
-              <div>
+              <div className="radio-wrapper">
                 <input
                   className="radio-button"
                   type="radio"
@@ -50,7 +51,8 @@ const Food = ({
                   onChange={onFoodInputChange}
                   checked={foodInput === "american"}
                 />
-                American food
+                <span className="custom-radio"></span>
+                <p className="food-title">American food</p>
               </div>
             </label>
           </div>
@@ -64,7 +66,7 @@ const Food = ({
                   alt="pasta dish"
                 />
               </div>
-              <div>
+              <div className="radio-wrapper">
                 <input
                   className="radio-button"
                   type="radio"
@@ -72,7 +74,8 @@ const Food = ({
                   onChange={onFoodInputChange}
                   checked={foodInput === "italian"}
                 />
-                Italian food
+                <span className="custom-radio"></span>
+                <p className="food-title">Italian food</p>
               </div>
             </label>
           </div>
@@ -85,7 +88,7 @@ const Food = ({
                   alt="sushi dish"
                 />
               </div>
-              <div>
+              <div className="radio-wrapper">
                 <input
                   className="radio-button"
                   type="radio"
@@ -93,7 +96,8 @@ const Food = ({
                   onChange={onFoodInputChange}
                   checked={foodInput === "japanese"}
                 />
-                Japanese food
+                <span className="custom-radio"></span>
+                <p className="food-title">Japanese food</p>
               </div>
             </label>
           </div>
@@ -106,7 +110,7 @@ const Food = ({
                   alt="tacos dish"
                 />
               </div>
-              <div>
+              <div className="radio-wrapper">
                 <input
                   className="radio-button"
                   type="radio"
@@ -114,7 +118,8 @@ const Food = ({
                   onChange={onFoodInputChange}
                   checked={foodInput === "mexican"}
                 />
-                Mexican food
+                <span className="custom-radio"></span>
+                <p className="food-title">Mexican food</p>
               </div>
             </label>
           </div>
@@ -127,7 +132,7 @@ const Food = ({
                   alt="indian dish"
                 />
               </div>
-              <div>
+              <div className="radio-wrapper">
                 <input
                   className="radio-button"
                   type="radio"
@@ -135,7 +140,8 @@ const Food = ({
                   onChange={onFoodInputChange}
                   checked={foodInput === "indian"}
                 />
-                Indian food
+                <span className="custom-radio"></span>
+                <p className="food-title">Indian food</p>
               </div>
             </label>
           </div>

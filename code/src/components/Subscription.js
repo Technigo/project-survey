@@ -10,7 +10,8 @@ const Subscription = ({
     <div className="wrapper">
       <div className="form-wrapper">
         <p>
-          Subscribe to our newsletter to recive restaurant news in your e-mail
+          Subscribe to our newsletter to submit and recive restaurant news in
+          your e-mail
         </p>
         <form>
           <label htmlFor="subscriptionInput">Type your e-mail</label>
@@ -19,13 +20,14 @@ const Subscription = ({
             type="email"
             value={subscriptionInput}
             onChange={onSubscriptionInputChange}
-            required
           />
         </form>
       </div>
       <div className="button-wrapper">
         <button onClick={onPreviousStepChange}>Previous question</button>
-        <button onClick={onStepChange}>Next question</button>
+        <button disabled={subscriptionInput === ""} onClick={onStepChange}>
+          Next question
+        </button>
       </div>
     </div>
   );

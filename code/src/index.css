@@ -64,12 +64,34 @@ button {
   margin: 40px 10px;
   background-color: #344b5b;
   color: white;
-  border-radius: 10%;
+  border-radius: 0.5rem;
 }
 
 .slider-wrapper {
   align-items: center;
   text-align: center;
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  margin-right: 15px;
+  width: 200px;
+  height: 0;
+  background: white;
+  border-radius: 0.5rem;
+  background-image: linear-gradient(#344b5b, #344b5b);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  background: #8a083c;
+  cursor: ew-resize;
+  box-shadow: 0 0 2px 0 #555;
+  transition: background 0.3s ease-in-out;
 }
 
 .overview-wrapper {
@@ -106,51 +128,11 @@ button {
 
   h1 {
     font-size: 80px;
-    text-align: center;
-    margin: 0;
-  }
-
-  h2 {
-    font-size: 30px;
-    text-align: center;
-    margin-top: 0;
-  }
-
-  .wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-
-  p,
-  label {
-    font-size: 30px;
-    margin: 0;
-  }
-
-  .form-wrapper {
-    text-align: center;
-    margin-top: 20px;
   }
 
   input,
   select {
-    padding: 10px;
-    margin-left: 15px;
-  }
-
-  button {
-    padding: 10px 40px;
-    font-size: 20px;
-    margin: 40px 10px;
-    background-color: #344b5b;
-    color: white;
-    border-radius: 8%;
-  }
-
-  .slider-wrapper {
-    align-items: center;
-    text-align: center;
+    font-size: 25px;
   }
 
   .overview-wrapper {

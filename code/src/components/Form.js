@@ -62,7 +62,7 @@ const Form = () => {
       )}
       {step === 3 && (
         <City
-          city={cityInput}
+          cityInput={cityInput}
           onCityInputChange={onCityInputChange}
           onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}
@@ -70,7 +70,7 @@ const Form = () => {
       )}
       {step === 4 && (
         <Food
-          food={foodInput}
+          foodInput={foodInput}
           onFoodInputChange={onFoodInputChange}
           onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}
@@ -78,7 +78,7 @@ const Form = () => {
       )}
       {step === 5 && (
         <Restaurant
-          restaurant={restaurantInput}
+          restaurantInput={restaurantInput}
           onRestaurantInputChange={onRestaurantInputChange}
           onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}
@@ -86,7 +86,7 @@ const Form = () => {
       )}
       {step === 6 && (
         <Price
-          price={priceInput}
+          priceInput={priceInput}
           onPriceInputChange={onPriceInputChange}
           onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}

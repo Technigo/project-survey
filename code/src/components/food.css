@@ -19,9 +19,60 @@
 
 /* -- Radio button -- */
 
-.radio-button:checked {
+.radiobutton-container {
+  display: block;
+  position: relative;
+  padding-left: 25px;
+  margin: 5px;
+  font-size: 16px;
+  user-select: none;
+}
+
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~ .custom-radio {
+  background-color: #8a083c;
+}
+
+.radiobutton-container input:checked ~ .custom-radio {
   background-color: #344b5b;
-  border: 2px solid #8a083c;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: #fff;
+  border-radius: 50%;
+  display: none;
+}
+
+.radiobutton-container input:checked ~ .custom-radio::after {
+  display: block;
+}
+
+.radiobutton-container input:focus + .custom-radio {
+  outline: #8a083c auto 2px;
 }
 
 /* TABLET VERSION */
@@ -36,6 +87,11 @@
 
   .food-header {
     margin-top: 15px;
+  }
+
+  .radio-wrapper {
+    display: flex;
+    flex-direction: column;
   }
 }
 
@@ -57,6 +113,10 @@
     height: 200px;
     width: 300px;
     object-fit: cover;
+  }
+
+  .food-title {
+    font-size: 25px;
   }
 
   /* -- Radio button -- */
