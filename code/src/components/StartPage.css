@@ -5,6 +5,7 @@
   align-items: center;
   width: 80%;
   color: var(--orange);
+  margin: 0 auto;
 }
 
 @keyframes bounce {

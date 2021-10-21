@@ -37,3 +37,8 @@
   background: #04aa6d; /* Green background */
   cursor: pointer; /* Cursor on hover */
 }
+
+.img-container-q4 {
+  display: flex;
+  justify-content: space-between;
+}

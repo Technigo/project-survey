@@ -7,7 +7,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
     <form onSubmit={handleSubmit}>
       <h2 className="page-header">Your name please</h2>
       <label className="label" htmlFor="nameInput">
-        <p>Type your name here</p>
+        <p>Type your coder name here</p>
       </label>
       <input
         className="input-first-question"

@@ -11,7 +11,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [interestInput, setInterestInput] = useState("");
   const [ageInput, setAgeInput] = useState("");
-  const [moodInput, setMoodInput] = useState(80);
+  const [moodInput, setMoodInput] = useState(50);
   const [step, setStep] = useState(0);
   // const [value, updateValue] = useState(20);
 
@@ -57,7 +57,7 @@ const Form = () => {
           </section>
         )}
         {step === 1 && (
-          <section>
+          <section className="section-container">
             <FirstQuestion
               nameInput={nameInput}
               onNameInputChange={onNameInputChange}
@@ -70,7 +70,7 @@ const Form = () => {
           </section>
         )}
         {step === 2 && (
-          <section>
+          <section className="section-container">
             <SecondQuestion
               interestInput={interestInput}
               onInterestInputChange={onInterestInputChange}
@@ -80,7 +80,7 @@ const Form = () => {
           </section>
         )}
         {step === 3 && (
-          <section>
+          <section className="section-container">
             <ThirdQuestion
               ageInput={ageInput}
               onAgeInputChange={onAgeInputChange}
@@ -90,7 +90,7 @@ const Form = () => {
           </section>
         )}
         {step === 4 && (
-          <section>
+          <section className="section-container">
             <FourthQuestion
               moodInput={moodInput}
               onMoodInputChange={onMoodInputChange}
