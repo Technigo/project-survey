@@ -7,13 +7,13 @@ import Song from './Song'
 import Overview from './Overview'
 
 const Form = () => {
+  const [startImage] = useState("");
   const [nameInput, setNameInput] = useState('')
   const [radioInput, setRadioInput] = useState([])
   const [dropdownInput, setDropdownInput] = useState('')
   const [songInput, setSongInput] = useState('')
-  const [step, setStep] = useState(1)
-  const [restart, setRestart] = useState(1)
-  // const [counter, setCounter] = useState(0)
+  const [step, setStep] = useState(0)
+
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value)
@@ -32,21 +32,37 @@ const Form = () => {
     setStep(step + 1)
   }
 
-  const onRestartChange = () => {
-    setRestart(restart)
-  }
+  const onPreviousQuestionChange = () => {
+    setStep(step - 1);
+  };
 
 	return (
     <>
     <header>
-      
+        		{step <= 5 && <p>Question number: {step}/5</p>}
     </header>
     <main className="main-container">
 		<section className="survey-container">
+      {step === 0 && (
+        <>
+            <div aria-label="image of horror poster" className="image-container">
+            <button className="btn" onClick={onStepChange}>
+                Start
+              </button>
+              <img
+                className="start-image"
+                value={startImage}
+                src="https://i.ibb.co/hyPxMWW/horror.png"
+                alt="horror-image"
+              />
+            </div>
+        </>
+      )}
 			{step === 1 && (
 				<Name
 					nameInput={nameInput}
 					onNameInputChange={onNameInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
 					onStepChange={onStepChange}
 				/>
 			)}
@@ -54,6 +70,7 @@ const Form = () => {
 				<Radio
           radioInput={radioInput}
 					onRadioInputChange={onRadioInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
 					onStepChange={onStepChange}
 				/>
 			)}
@@ -61,6 +78,7 @@ const Form = () => {
 				<Dropdown
           dropdownInput={dropdownInput} 
           onDropdownInputChange={onDropdownInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
 					onStepChange={onStepChange} 
           />
 			)}
@@ -68,6 +86,7 @@ const Form = () => {
 				<Song
           songInput={songInput} 
           onSongInputChange={onSongInputChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
 					onStepChange={onStepChange} 
           />
 			)}
@@ -77,12 +96,11 @@ const Form = () => {
           radioInput={radioInput} 
           dropdownInput={dropdownInput}
           songInput={songInput}
-          onRestartChange={onRestartChange}
           />
 			)}
 		</section>
     </main>
-    <footer>Photo by <a href="https://unsplash.com/@solidpixel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Pelly Benassi</a> on <a href="https://unsplash.com/s/photos/horror-it?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    <footer>Photo by <a href="https://unsplash.com/@jeneyeo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jene Yeo</a> on <a href="https://unsplash.com/s/photos/horror?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
   </footer>
     </>
 	)

@@ -5,7 +5,7 @@ const Overview = ({
     radioInput, 
     dropdownInput,
     songInput,
-    onRestartChange
+    step
     
 }) => {
 	return (
@@ -18,8 +18,15 @@ const Overview = ({
             <li aria-label={dropdownInput}>Best movie: {dropdownInput}</li>
             <li aria-label={songInput}>Scariest villain: {songInput}</li>
             </ul>
-        <button className="btn" onClick={onRestartChange}>Restart</button>
+            <div className="question-number">
+        		{step <= 5 && <p>Question number: {step}/5</p>}
+     		</div>
         </section>
+        <form className="btn-container">
+          <button className="btn" type="submit">
+            restart
+          </button>
+        </form>
         </>
 	)
 }

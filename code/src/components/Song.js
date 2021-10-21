@@ -3,7 +3,8 @@ import React from 'react'
 const Song = ({ 
     songInput, 
     onSongInputChange, 
-    onStepChange
+    onStepChange,
+    onPreviousQuestionChange
  }) => {
 	// const { nameInput, onNameInputChange } = props;
 
@@ -17,6 +18,8 @@ const Song = ({
             onChange={onSongInputChange}
             required
             className="dropdown-label"
+            name="select"
+            required
             >
                 <option value="">Select your favorite:</option>
                 <option value="The thing">The Thing</option>
@@ -26,9 +29,12 @@ const Song = ({
                 <option value="Pennywise">Pennywise</option>
                 <option value="Jason">Jason</option>
             </select>
-            <input className="btn" type="submit" value="End survey" onClick={onStepChange} />
 		</form>
         </article>
+		<div className="btn-container">
+            <button className="btn" onClick={onPreviousQuestionChange}>back</button>
+            <button className="btn" type="submit" onClick={onStepChange}> end survey</button>
+        </div>
         </>
 		
 	)

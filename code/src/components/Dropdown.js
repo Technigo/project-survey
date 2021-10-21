@@ -3,7 +3,9 @@ import React from 'react'
 const Dropdown = ({ 
     dropdownInput, 
     onDropdownInputChange, 
-    onStepChange }) => {
+    onStepChange,
+    onPreviousQuestionChange
+}) => {
 	// const { nameInput, onNameInputChange } = props;
 
 	return (
@@ -16,6 +18,8 @@ const Dropdown = ({
             onChange={onDropdownInputChange}
             required
             className="dropdown-label"
+            name="select"
+            required
             >
                 <option value="">Choose your favorite:</option>
                 <option value="the thing">The thing (1982)</option>
@@ -27,9 +31,12 @@ const Dropdown = ({
                 <option value="the birds">The birds (1963)</option>
 
             </select>
-            <input className="btn" type="submit" value="continue" onClick={onStepChange} />
-		</form>
+		    </form>
 		</article>
+		<div className="btn-container">
+            <button className="btn" onClick={onPreviousQuestionChange}>back</button>
+            <button className="btn" type="submit" onClick={onStepChange}> continue</button>
+        </div>
 		</>
 	)
 }

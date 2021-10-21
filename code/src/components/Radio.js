@@ -7,6 +7,7 @@ const Radio = ({
 	radioInput,
 	onRadioInputChange,
 	onStepChange,
+	onPreviousQuestionChange
 	
 }) => {
 	return (
@@ -17,6 +18,7 @@ const Radio = ({
 			{typeOfMusic.map(type => 
 				<label className="radio-label" key={type}>
 					<input 
+						name="radio"
 						className="radio-input"
 						id="check"
 						type="radio"
@@ -25,14 +27,16 @@ const Radio = ({
 						checked={radioInput === type}
 						required
 					/>
-				
 					{type}
 					
 			</label>
 		)}
-		<input className="btn" type="submit" value="continue" onClick={onStepChange} />
 	</form>
 	</article>
+	<div className="btn-container">
+            <button className="btn" onClick={onPreviousQuestionChange}>back</button>
+            <button className="btn" type="submit" onClick={onStepChange}> continue</button>
+        </div>
 	</>
 )
 }

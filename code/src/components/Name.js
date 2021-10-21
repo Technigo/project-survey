@@ -15,7 +15,7 @@ const Name = ({
 			<label className="form-label" htmlFor="nameInput">Name here</label>
 			<input
 				className="text-input"
-				placeholder="name"
+				name="text"
 				id="nameInput"
 				type="text"
 				value={nameInput}
