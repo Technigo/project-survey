@@ -37,6 +37,7 @@ a {
   flex-direction: column;
   max-width: 700px;
   margin: auto;
+  /* padding: 5rem 0; */
 }
 
 .intro {
@@ -47,7 +48,7 @@ a {
 }
 
 .intro-text {
-  padding-top: 3rem;
+  padding-top: 4rem;
   padding-bottom: 2rem;
   text-align: center;
 }
@@ -55,24 +56,23 @@ a {
 
 h1 {
   font-weight: 900;
-  font-size: 48px;
-  line-height: 56px;
-  margin: 3rem 0 5rem 0;
-  /* -webkit-text-stroke: aqua; */
+  font-size: 40px;
+  line-height: 48px;
+  margin: 3rem 0 3rem 0;
 }
 
 h2 {
   font-weight: 900;
-  font-size: 32px;
-  line-height: 42px;
+  font-size: 24px;
+  line-height: 30px;
   width: 80%;
   margin: auto;
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
 p {
   display: inline-block;
-  font-size: 1.5rem;
+  font-size: 1rem;
   width: 90%;
   margin: 1rem;
 }
@@ -92,11 +92,25 @@ p {
   width: 100%;
 }
 
+.start-btn {
+  border-radius: 24px;
+  background-color: #fff;
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border: 0;
+  height: 48px;
+  padding: 0 4rem 0 4rem;
+  margin: 1rem 0;
+  cursor: pointer;
+}
+
 
 .buttons {
   display: flex;
   margin: auto;
   width: 100%;
+  justify-content: center;
 }
 
 input {
@@ -239,7 +253,7 @@ h4 {
 }
 
 
-@media (min-width: 800px) {
+@media (min-width: 768px) {
 
   body {
     padding-top: 9rem;
@@ -248,6 +262,15 @@ h4 {
   h1 {
     font-size: 56px;
     line-height: 66px;
+  }
+
+  h2 {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  
+  p {
+    font-size: 1.5rem;
   }
 
   .medium {
@@ -278,6 +301,10 @@ h4 {
   .radio-select {
     width: 24px;
     margin: 0 1rem 0 0;
+  }
+
+  .intro-text {
+    padding-top: 3rem;
   }
   
 }

@@ -8,7 +8,7 @@ const Intro = ({onStepChange}) => {
         <h1>I have a couple of questions for you, let's get to know eachother a bit better?</h1>
       </div>
       <div className="buttons">
-        <button onClick={onStepChange} className="btn"><a href="#one">Yes let's!</a></button> 
+        <button onClick={onStepChange} className="start-btn"><a href="#one">Yes let's!</a></button> 
       </div>
     </section>
     )

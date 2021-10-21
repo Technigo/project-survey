@@ -5,7 +5,7 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange}) => {
     return (
         <section className="section" id="one" >
             <div className="intro-text">
-            <label>LOREM IPSUM DOLOR SIT AMET</label>
+            <label>ALL YOU NEED IS LOVE</label>
                 <h2>I'd love to know your name! My name is Jessi, what is yours?</h2>
                 <p>Did you know that the most popular names over the last 100 years are James & Mary?</p>
             </div>

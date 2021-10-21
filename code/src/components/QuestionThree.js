@@ -31,7 +31,7 @@ const QuestionThree = ({selectValue, onSelectOptionChange, onStepChange}) => {
     return (
     <section id="three" className="section">
         <div className="intro-text">
-          <label>LOVE IS ALL YOU NEED</label>
+          <label>ALL YOU NEED IS LOVE</label>
           <h2>That is a good choice!</h2>
           <p>What would constitute a “perfect” day for you?</p>
         </div>
