@@ -1,6 +1,6 @@
 import React from 'react';
 
-const steps = ['5,000 steps', '7,500 steps', '10,000 steps', '12,500 steps'];
+const steps = ['>5,000 steps', '7,500 steps', '10,000 steps', '12,500 steps'];
 
 const ActivityQuestion = ({
   activityInput,
