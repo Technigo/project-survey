@@ -16,7 +16,6 @@ const Dropdown = ({
             <select 
             value={dropdownInput} 
             onChange={onDropdownInputChange}
-            required
             className="dropdown-label"
             name="select"
             required

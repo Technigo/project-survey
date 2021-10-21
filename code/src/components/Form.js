@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import Name from './Name'
 import Radio from './Radio'
 import Dropdown from './Dropdown'
-import Song from './Song'
+import LastDrop from './LastDrop'
 import Overview from './Overview'
 
 const Form = () => {
@@ -11,7 +11,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState('')
   const [radioInput, setRadioInput] = useState([])
   const [dropdownInput, setDropdownInput] = useState('')
-  const [songInput, setSongInput] = useState('')
+  const [lastDropInput, setLastDropInput] = useState('')
   const [step, setStep] = useState(0)
 
 
@@ -24,8 +24,8 @@ const Form = () => {
   const onDropdownInputChange = (event) => {
     setDropdownInput(event.target.value)
   }
-  const onSongInputChange = (event) => {
-    setSongInput(event.target.value)
+  const onLastDropInputChange = (event) => {
+    setLastDropInput(event.target.value)
   }
 
   const onStepChange = () => {
@@ -53,7 +53,7 @@ const Form = () => {
                 className="start-image"
                 value={startImage}
                 src="https://i.ibb.co/hyPxMWW/horror.png"
-                alt="horror-image"
+                alt="poster"
               />
             </div>
         </>
@@ -83,9 +83,9 @@ const Form = () => {
           />
 			)}
       {step === 4 && (
-				<Song
-          songInput={songInput} 
-          onSongInputChange={onSongInputChange}
+				<LastDrop
+          lastDropInput={lastDropInput} 
+          onLastDropInputChange={onLastDropInputChange}
           onPreviousQuestionChange={onPreviousQuestionChange}
 					onStepChange={onStepChange} 
           />
@@ -95,7 +95,7 @@ const Form = () => {
           nameInput={nameInput} 
           radioInput={radioInput} 
           dropdownInput={dropdownInput}
-          songInput={songInput}
+          lastDropInput={lastDropInput}
           />
 			)}
 		</section>

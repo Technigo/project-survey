@@ -1,8 +1,8 @@
 import React from 'react'
 
 const Song = ({ 
-    songInput, 
-    onSongInputChange, 
+    lastDropInput, 
+    onLastDropInputChange, 
     onStepChange,
     onPreviousQuestionChange
  }) => {
@@ -14,9 +14,8 @@ const Song = ({
         <h2>Scariest horror villain?</h2>
 		<form className="form" onSubmit={event => event.preventDefault()}>
             <select 
-            value={songInput} 
-            onChange={onSongInputChange}
-            required
+            value={lastDropInput} 
+            onChange={onLastDropInputChange}
             className="dropdown-label"
             name="select"
             required
