@@ -4,8 +4,7 @@ import Starter from "./Starter"
 import FirstQuestion from "./FirstQuestion"
 import SecondQuestion from "./SecondQuestion"
 import ThirdQuestion from "./ThirdQuestion"
-// import Checkboxgroup from "./Checkboxgroup"
-import Imagecheckbox from "./Imagecheckbox"
+import CheckboxGroup from "./CheckboxGroup"
 import ColorInput from "./Colorinput"
 import Summary from "./Summary"
 import Footer from "./Footer"
@@ -52,9 +51,9 @@ const Form = () => {
   }
 
   // used only for the starter page
-  const onStepChange = () => {
-    setStep(step + 1)
-  }
+  // const onStepChange = () => {
+  //   setStep(step + 1)
+  // }
 
   // This function leads to the next question
   const onNextQuestionChange = () => {
@@ -70,7 +69,7 @@ const Form = () => {
 
   return (
     <main className="main-contaniner">
-      {step === 0 && <Starter onStepChange={onStepChange} />}
+      {step === 0 && <Starter onNextQuestionChange={onNextQuestionChange} />}
 
       {/* FirstQuestion */}
       {step === 1 && (
@@ -105,7 +104,7 @@ const Form = () => {
       {/* FourthQuestion */}
       {step === 4 && (
         <section className="question-container">
-          <Imagecheckbox
+          <CheckboxGroup
             checkboxGroup={checkboxGroup}
             onChangeFunction={onCheckboxGroupToggle}
             onNextQuestionChange={onNextQuestionChange}
@@ -134,7 +133,7 @@ const Form = () => {
           colorInput={colorInput}
         />
       )}
-
+      {/* {step <= 5 && 1 <= step && <h2>Question number: {step}/5</h2>} */}
       <Footer />
     </main>
   )

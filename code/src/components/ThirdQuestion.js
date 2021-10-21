@@ -12,7 +12,7 @@ const ThirdQuestion = ({
         Which spaceships would you like to be in?
       </label>
       <select
-        className="dropdownInput"
+        className="input-box"
         onChange={onLocationInputChange}
         value={locationInput}
       >
@@ -27,7 +27,7 @@ const ThirdQuestion = ({
           PREVIOUS
         </button>
         <button className="glow-on-hover" onClick={onNextQuestionChange}>
-          NEXT
+          CONTINUE
         </button>
       </div>
     </form>

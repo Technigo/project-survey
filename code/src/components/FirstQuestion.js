@@ -12,18 +12,18 @@ const FirstQuestion = ({
         Please tell your name
       </label>
       <input
-        id="nameInput"
+        className="input-box"
         type="text"
+        required="required"
         value={nameInput}
         onChange={onNameInputChange}
-        required
       />
       <div className="button-container">
         <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
-          Go Back
+          PREVIOUS
         </button>
         <button className="glow-on-hover" onClick={onNextQuestionChange}>
-          Continue
+          CONTINUE
         </button>
       </div>
     </form>

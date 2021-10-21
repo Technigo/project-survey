@@ -22,7 +22,7 @@ const ColorInput = ({
           PREVIOUS
         </button>
         <button className="glow-on-hover" onClick={onNextQuestionChange}>
-          NEXT
+          CONTINUE
         </button>
       </div>
     </form>

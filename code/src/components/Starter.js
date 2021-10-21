@@ -1,18 +1,21 @@
 import React from "react"
 
-const Starter = ({ onStepChange }) => {
+const Starter = ({ onNextQuestionChange }) => {
   return (
-    <div className="starter">
+    <section className="starter">
       <h1 className="welcome-text">
         Apply now for a free trip to the moon{" "}
         <span role="img" aria-label="rocket">
           🚀
         </span>
       </h1>
-      <button className="glow-on-hover" onClick={onStepChange}>
+
+      {/* <div className="button-container"> */}
+      <button className="glow-on-hover" onClick={onNextQuestionChange}>
         START
       </button>
-    </div>
+      {/* </div> */}
+    </section>
   )
 }
 

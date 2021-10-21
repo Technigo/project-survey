@@ -18,4 +18,4 @@ Alternatively, if you don't want a new git repo on your account;
 1. Install required dependencies with npm: `npm install`
 1. Start the project: `npm start`
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/dfea5f2d-1c06-47b6-8029-b09be1de181a/deploy-status)](https://app.netlify.com/sites/reverent-sinoussi-79135a/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/dfea5f2d-1c06-47b6-8029-b09be1de181a/deploy-status)](https://app.netlify.com/sites/pinar-project-survey/deploys)

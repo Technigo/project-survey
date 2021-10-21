@@ -1,6 +1,6 @@
 :root {
   --beige: #fffaf2;
-  --yellow: #ffb535a5;
+  --yellow: #fee900;
   --dark-pink: #ffffff;
   --transparent: #2b2b2b98;
 }
@@ -33,14 +33,15 @@ code {
 
 #nameInput {
   background-color: var(--beige);
-  width: 300px;
+  width: 200px;
   height: 30px;
+  border: none;
 }
 
 .welcome-text {
   justify-self: self-end;
   font-family: "Staatliches", cursive;
-  font-size: 60px;
+  font-size: 40px;
   color: var(--beige);
   font-weight: 100;
   /* background: linear-gradient(
@@ -53,12 +54,15 @@ code {
   /* background-clip: text;
   -webkit-background-clip: text;
   color: transparent; */
-  margin-bottom: 30px;
+  padding: 10px;
 }
-.dropdownInput {
+.input-box {
   font-size: 18px;
-  width: 100%;
+  width: 300px;
+  margin: 0 auto;
   padding: 5px;
+  background-color: var(--beige);
+  border: none;
 }
 
 .starter {
@@ -87,9 +91,8 @@ form {
 }
 .main-contaniner {
   background-color: var(--transparent);
-  width: 50vw;
-  height: 300px;
-  padding: 30px;
+  width: 400px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -97,17 +100,18 @@ form {
   color: var(--dark-pink);
 }
 
-.button {
+button {
   cursor: pointer;
   width: 80px;
+  font-weight: 900;
 }
 
 .glow-on-hover {
   width: 100px;
-  height: 50px;
+  height: 40px;
   border: none;
   outline: none;
-  color: #fff;
+  color: #000;
   background: #111;
   cursor: pointer;
   position: relative;
@@ -158,6 +162,7 @@ form {
   width: 100%;
   height: 100%;
   background: rgb(232, 4, 8);
+  background: var(--yellow);
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -175,27 +180,53 @@ form {
   }
 }
 
-.button-container {
-  padding-top: 40px;
-  width: 230px;
+.submit-button {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
+.button-container {
+  padding-top: 40px;
+  width: 400px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  justify-items: center;
+}
+
+.summary-text {
+  padding: 20px;
+  font-size: 16px;
+  font-family: auto;
+}
+
+input.color-input {
+  width: 60px;
+  border: none;
+  padding: 0;
+}
+
+.radio-label {
+  font-size: 16px;
+  padding-left: 30px;
+}
 .checkbox-label-wrap {
   display: inline-flex;
-  height: 30px;
+  padding-left: 30px;
 }
 
 .checkbox-label-wrap h3 {
   margin: 0;
+  font-size: 16px;
+  font-family: "Fira Sans";
+  padding-left: 5px;
 }
 
 .question {
   font-family: "Fira Sans";
   margin: 0;
   font-weight: 900;
-  font-size: 28px;
+  font-size: 20px;
   text-align: center;
   padding: 30px 10px;
   color: var(--beige);
@@ -214,5 +245,20 @@ footer h4 {
 @media (min-width: 668px) {
   .main-container {
     padding: 50px 30px;
+  }
+
+  .welcome-text {
+    justify-self: self-end;
+    font-family: "Staatliches", cursive;
+
+    font-size: 60px;
+
+    color: var(--beige);
+    font-weight: 100;
+    margin-bottom: 30px;
+  }
+
+  #nameInput {
+    width: 300px;
   }
 }
