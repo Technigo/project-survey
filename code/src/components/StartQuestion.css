@@ -6,10 +6,22 @@
 
 .start-button {
   padding: 20px;
+  margin-top: 20px;
   border-radius: 20px;
   border-color: blueviolet;
   background-color: black;
-  color: azure;
+}
+
+.start-button:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+  filter: invert(1);
+}
+
+.alien-emoji:hover {
+  transform: scale(1.2);
+  transition: all 0.2s ease-in-out;
+  filter: invert(1);
 }
 
 h2 {

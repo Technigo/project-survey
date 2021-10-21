@@ -25,15 +25,16 @@ h1 {
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: whitesmoke;
-  font-size: 36px;
+  color: rgb(226, 224, 224);
+  font-size: 58px;
 }
 
 h4 {
+  font-family: "Oswald", sans-serif;
   display: flex;
   flex-direction: column;
   text-align: center;
-  color: whitesmoke;
+  color: rgb(226, 224, 224);
 }
 
 .main-container {
@@ -45,18 +46,9 @@ h4 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 48px;
+    font-size: 64px;
   }
   h4 {
     font-size: 32px;
-  }
-}
-
-@media (min-width: 1024px) {
-  h1 {
-    font-size: 52px;
-  }
-  h4 {
-    font-size: 36px;
   }
 }

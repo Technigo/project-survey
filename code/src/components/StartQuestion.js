@@ -7,7 +7,7 @@ const StartQuestion = ({ onStepChange }) => {
       <button className="start-button" onClick={onStepChange}>
         <h2>
           Start The Survey{" "}
-          <span role="img" aria-label="Alien-emoji">
+          <span className="alien-emoji" role="img" aria-label="Alien-emoji">
             👽
           </span>
         </h2>
