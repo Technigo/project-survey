@@ -1,22 +1,30 @@
 import React from "react";
 
-const Overview = ({ nameInput, restaurantInput, cityInput, foodInput }) => {
+const Overview = ({
+  nameInput,
+  restaurantInput,
+  cityInput,
+  foodInput,
+  priceInput,
+  subscriptionInput,
+}) => {
   return (
-    <>
-      <section>
+    <div className="wrapper">
+      <div className="overview-wrapper">
         <h2>Thanks for answering the survey</h2>
         <p>Name: {nameInput}</p>
+        <p>E-mail: {subscriptionInput}</p>
         <p> City: {cityInput}</p>
-        <p> Favorite type of food: {foodInput}</p>
+        <p> Favorite type of food: {foodInput} food</p>
         <p>Favorite Restaurant: {restaurantInput}</p>
-      </section>
-      {/* <section>
-        <h3>
-          Would you like to subscribe to our newsletter and keep updated on new
-          restaurants in your city?
-        </h3>
-      </section> */}
-    </>
+        <p>Usual cost per plate: {priceInput}</p>
+      </div>
+      <form>
+        <div className="button-wrapper">
+          <button type="submit">Restart survey</button>
+        </div>
+      </form>
+    </div>
   );
 };
 

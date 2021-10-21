@@ -4,20 +4,28 @@ const Restaurant = ({
   restaurantInput,
   onRestaurantInputChange,
   onStepChange,
+  onPreviousStepChange,
 }) => {
   return (
-    <form>
-      <label htmlFor="restaurantInput">
-        Write the name of your favorite restaurant
-      </label>
-      <input
-        id="restaurantInput"
-        type="text"
-        value={restaurantInput}
-        onChange={onRestaurantInputChange}
-      />
-      <button onClick={onStepChange}>Submit your answers</button>
-    </form>
+    <div className="wrapper">
+      <div className="form-wrapper">
+        <form>
+          <label htmlFor="restaurantInput">
+            Write the name of your favorite restaurant
+          </label>
+          <input
+            id="restaurantInput"
+            type="text"
+            value={restaurantInput}
+            onChange={onRestaurantInputChange}
+          />
+        </form>
+      </div>
+      <div className="button-wrapper">
+        <button onClick={onPreviousStepChange}>Previous question</button>
+        <button onClick={onStepChange}>Next question</button>
+      </div>
+    </div>
   );
 };
 

@@ -2,9 +2,8 @@ import React from "react";
 
 const Intro = ({ onStepChange }) => {
   return (
-    <div>
-      <img src="./pictures/eat.jpg" alt="neon sign saying eat" />
-      <p>
+    <div className="wrapper">
+      <p className="form-wrapper">
         Please answer the following questions regarding restaurants in Sweden
       </p>
 

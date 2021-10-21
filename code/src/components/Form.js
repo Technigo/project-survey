@@ -4,18 +4,17 @@ import Name from "./Name";
 import City from "./City";
 import Food from "./Food";
 import Restaurant from "./Restaurant";
+import Price from "./Price";
 import Overview from "./Overview";
+import Subscription from "./Subscription";
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
-  console.log("name input", nameInput);
   const [cityInput, setCityInput] = useState("");
-  console.log("city", cityInput);
   const [foodInput, setFoodInput] = useState("");
-  console.log("food", foodInput);
   const [restaurantInput, setRestaurantInput] = useState("");
-  console.log("restaurant", restaurantInput);
-
+  const [priceInput, setPriceInput] = useState("");
+  const [subscriptionInput, setSubscriptionInput] = useState("");
   const [step, setStep] = useState(1);
 
   const onNameInputChange = (event) => {
@@ -34,8 +33,20 @@ const Form = () => {
     setRestaurantInput(event.target.value);
   };
 
+  const onPriceInputChange = (event) => {
+    setPriceInput(event.target.value);
+  };
+
+  const onSubscriptionInputChange = (event) => {
+    setSubscriptionInput(event.target.value);
+  };
+
   const onStepChange = () => {
     setStep(step + 1);
+  };
+
+  const onPreviousStepChange = () => {
+    setStep(step - 1);
   };
 
   return (
@@ -45,6 +56,7 @@ const Form = () => {
         <Name
           nameInput={nameInput}
           onNameInputChange={onNameInputChange}
+          onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}
         />
       )}
@@ -52,6 +64,7 @@ const Form = () => {
         <City
           city={cityInput}
           onCityInputChange={onCityInputChange}
+          onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}
         />
       )}
@@ -59,6 +72,7 @@ const Form = () => {
         <Food
           food={foodInput}
           onFoodInputChange={onFoodInputChange}
+          onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}
         />
       )}
@@ -66,11 +80,35 @@ const Form = () => {
         <Restaurant
           restaurant={restaurantInput}
           onRestaurantInputChange={onRestaurantInputChange}
+          onPreviousStepChange={onPreviousStepChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 6 && (
-        <Overview nameInput={nameInput} restaurantInput={restaurantInput} />
+        <Price
+          price={priceInput}
+          onPriceInputChange={onPriceInputChange}
+          onPreviousStepChange={onPreviousStepChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 7 && (
+        <Subscription
+          subscriptionInput={subscriptionInput}
+          onSubscriptionInputChange={onSubscriptionInputChange}
+          onPreviousStepChange={onPreviousStepChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {step === 8 && (
+        <Overview
+          nameInput={nameInput}
+          cityInput={cityInput}
+          foodInput={foodInput}
+          restaurantInput={restaurantInput}
+          priceInput={priceInput}
+          subscriptionInput={subscriptionInput}
+        />
       )}
     </div>
   );

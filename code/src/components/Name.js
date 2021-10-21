@@ -1,17 +1,29 @@
 import React from "react";
 
-const Name = ({ nameInput, onNameInputChange, onStepChange }) => {
+const Name = ({
+  nameInput,
+  onNameInputChange,
+  onStepChange,
+  onPreviousStepChange,
+}) => {
   return (
-    <form>
-      <label htmlFor="nameInput">Type your name</label>
-      <input
-        id="nameInput"
-        type="text"
-        value={nameInput}
-        onChange={onNameInputChange}
-      />
-      <button onClick={onStepChange}>Next questions</button>
-    </form>
+    <div className="wrapper">
+      <form>
+        <div className="form-wrapper">
+          <label htmlFor="nameInput">Type your name</label>
+          <input
+            id="nameInput"
+            type="text"
+            value={nameInput}
+            onChange={onNameInputChange}
+          />{" "}
+        </div>
+        <div className="button-wrapper">
+          <button onClick={onPreviousStepChange}>Previous question</button>
+          <button onClick={onStepChange}>Next question</button>
+        </div>
+      </form>
+    </div>
   );
 };
 
