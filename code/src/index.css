@@ -81,6 +81,16 @@ section img {
   border-radius: 6px;
 }
 
+section img:hover {
+  transform: scale(1.1);
+  cursor: zoom-in;
+}
+
+section img:hover:active {
+  transform: scale(1.5);
+  cursor: zoom-out;
+}
+
 .start-buttons {
   display: flex;
   justify-content: space-evenly;
