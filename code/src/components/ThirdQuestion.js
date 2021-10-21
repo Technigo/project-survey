@@ -3,11 +3,11 @@ import React from 'react';
 const ThirdQuestion = ({ setPastry, chosenPastry, onStepChange }) => {
 
 
-    const choosePastry =["Cakes 🍰", "Cookies 🍪", "Bread 🍞", "Pies 🥧",];
+    const choosePastry =["Cakes 🍰", "Cookies 🍪", "Bread 🍞"];
 
     return (
+        <div><p>Baking is Love made Edible, select want you want to learn: </p>
             <div className="wrapper-row">
-            <p>Baking is Love made Edible, select want you want to learn: </p>
             {choosePastry.map(pastry => (
                 <label className="radiobutton-container" key={pastry}>
                 <input aria-label="choose pastry"
@@ -22,6 +22,8 @@ const ThirdQuestion = ({ setPastry, chosenPastry, onStepChange }) => {
             </label>
             
             ))}
+                    </div>
+
             </div >
             
 	);
