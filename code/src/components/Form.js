@@ -16,14 +16,11 @@ const Form = () => {
   const [step, setStep] = useState(0);
 
   const onStepChange = (event) => {
-    console.log('here', event.target.innerText);
-    {
-      event.target.innerText === 'Back' && setStep(step - 1);
-    }
-    {
-      (event.target.innerText === 'OK' || event.target.innerText === 'Start') &&
-        setStep(step + 1);
-    }
+    
+    event.target.innerText ==='Back' && setStep(step - 1);
+    (event.target.innerText === 'OK' || event.target.innerText === 'Start') &&
+       setStep(step + 1);
+    
   };
 
   return (
