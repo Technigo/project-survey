@@ -14,7 +14,7 @@ const Summary = ({ fundamentalInput, selectOption, radioChecked }) => {
         </p>
         <p className="summaryQuestion">Your favourite queen is </p>
         <p className="summaryAnswer"> {selectOption}</p>
-        <p className="summaryQuestion">Reading is... </p>
+        <p className="summaryQuestion">Reading is.. </p>
         <p className="summaryAnswer"> {fundamentalInput}</p>
         <ImageComponent />
       </div>

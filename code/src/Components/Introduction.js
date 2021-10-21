@@ -6,6 +6,7 @@ const Introduction = () => {
     <div className="container">
       <div className="contentWrapper">
         <p>Welcome queens!</p>
+        <p>Good luck, and don't fuck it up!</p>
         <ImageComponent />
       </div>
     </div>

@@ -13,12 +13,12 @@ const SecondQuestion = ({ selectOption, setSelectOption }) => {
               value={selectOption}
               onChange={(event) => setSelectOption(event.target.value)}
             >
-              <option value="Bimini Bon Boulash">Bimini Bon Boulash</option>
-              <option value="Tayce">Tayce</option>
               <option value="Aquaria">Aquaria</option>
+              <option value="Bimini Bon Boulash">Bimini Bon Boulash</option>
+              <option value="Violet Chachki">Violet Chachki</option>
               <option value="Gottmik">Gottmik</option>
-              <option value="Kandy Muse">Kandy Muse</option>
-              <option value="Krystal Methyd">Krystal Methyd</option>
+              <option value="Bianca Del Rio">Bianca Del Rio</option>
+              <option value="Sharon Needles">Sharon Needles</option>
             </select>
           </form>
         </div>

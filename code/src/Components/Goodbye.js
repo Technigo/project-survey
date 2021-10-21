@@ -7,7 +7,8 @@ const Goodbye = () => {
     <div className="container">
       <div className="contentWrapper">
         <p>If you can't love yourself</p>
-        <p>How the hell you gonna love somebody else?</p>
+        <p>How the hell you gonna</p>
+        <p>love somebody else?</p>
         <ImageComponent />
       </div>
     </div>
