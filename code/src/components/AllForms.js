@@ -1,77 +1,70 @@
 import React, { useState } from "react";
-import FirstQuestion from "./FirstQuestion";
-import SecondQuestion from "./SecondQuestion";
 import RadioButtons from "./RadioButtons";
 import DropDown from "./DropDown";
 import CheckBox from "./CheckBox";
 import Overview from "./Overview";
+import LastQuestion from "./LastQuestion";
 
-const AllForms = () => {
-  /* React states*/
-  const [nameInput, setNameInput] = useState(""); /*FQ*/
-  const [surnameInput, setSurnameInput] = useState(""); /*SQ*/
-  const [step, setStep] = useState(1); /*STEP*/
+const AllForms = (props) => {
+  /*Overview component props */
+  const { name } = props;
 
-  /* Functions */
-  const onNameInputChange = (e) => {
-    setNameInput(e.target.value);
-  };
-  const onSurnameInputChange = (e) => {
-    setSurnameInput(e.target.value);
-  };
+  /* ALL STATES HERE: */
+  const [arrayAnswer, setArrayAnswer] =
+    useState(""); /* States for the dropdown component */
+  const [arrayAnswer2, setArrayAnswer2] =
+    useState(""); /* States for the dropdown component */
+  const [arrayAnswer3, setArrayAnswer3] =
+    useState(""); /* States for the dropdown component */
+
+  const [step, setStep] = useState(1); /* step state */
+
+  /* ALL FUNCTIONS HERE */
   const onStepChange = () => {
+    /* Function step*/
     setStep(step + 1);
   };
 
- /* Conditions to run the questions*/ 
+  const onSetArrayAnswer = (event) => {
+    /* Function dropdown */
+    setArrayAnswer(event.target.value);
+  };
+  const onSetArrayAnswer2 = (event) => {
+    /* Function dropdown */
+    setArrayAnswer2(event.target.value);
+  };
+  const onSetArrayAnswer3 = (event) => {
+    /* Function dropdown */
+    setArrayAnswer3(event.target.value);
+  };
+
+  /* IF STATEMENTS */
   if (step === 1) {
     return (
-      <FirstQuestion
-        name={nameInput}
-        onNameInputChange={onNameInputChange}
+      <DropDown
+        arrayAnswer={arrayAnswer}
+        onSetArrayAnswer={onSetArrayAnswer}
+        arrayAnswer2={arrayAnswer2}
+        onSetArrayAnswer2={onSetArrayAnswer2}
+        arrayAnswer3={arrayAnswer3}
+        onSetArrayAnswer3={onSetArrayAnswer3}
         onStepChange={onStepChange}
       />
     );
   } else if (step === 2) {
-    return (
-      <SecondQuestion
-        surname={surnameInput}
-        onSurnameInputChange={onSurnameInputChange}
-        onStepChange={onStepChange}
-      />
-    );
+    return <LastQuestion onStepChange={onStepChange} />;
   } else if (step === 3) {
-    return (
-      <CheckBox 
-      name={nameInput}
-      onStepChange={onStepChange}
-      />
-    );
-
-  } else if(step === 4) {
-    return (
-      <DropDown
-      onStepChange={onStepChange} />
-    );
-
-
-  } else if(step === 5) {
-
+    return <LastQuestion onStepChange={onStepChange} />;
+  } else if (step === 4) {
     return (
       <Overview
-    name={nameInput}
-    surname={surnameInput}
-    onStepChange={onStepChange}
-  />
-    )
+        name={props.name}
+        arrayAnswer={arrayAnswer}
+        arrayAnswer2={arrayAnswer2}
+        arrayAnswer3={arrayAnswer3}
+      />
+    );
   }
 };
 
 export default AllForms;
-
-// return (
-//   <div>
-//     <div>My counter is:{counter}</div>
-//     <button onClick={() => setCounter(counter + 1)}>Click</button>
-//   </div>
-// )

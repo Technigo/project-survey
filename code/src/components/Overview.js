@@ -1,14 +1,25 @@
 import React from "react";
 
-const Overview = ({name, surname}) => {
+const Overview = (props) => {
+
+  // const { name, arrayAnswer, arrayAnswer2, arrayAnswer3 } = props;
+
   return (
     <section>
-      <h3>My values from form:</h3>
-      <p>Name:{name}</p>
-      <p>Surname:{surname}</p>
-      {/* <button onClick={onStepChange}>second question</button> */}
 
+      <h2>Here are your answers {props.name}</h2>
+      <h3 className="user-answers">1) What is the difference between forEach() and map() ?</h3>
+      <p>{props.arrayAnswer}</p>
+      <h3 className="user-answers">1) What is the difference between forEach() and map() ?</h3>
+      <p>{props.arrayAnswer2}</p>
+      <h3 className="user-answers">1) What is the difference between forEach() and map() ?</h3>
+      <p>{props.arrayAnswer3}</p>
+
+      
     </section>
+  
   );
+
+
 };
 export default Overview;

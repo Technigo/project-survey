@@ -1,12 +1,16 @@
-body {
+* {
   margin: 0;
-  padding:0;
+  padding: 0;
   box-sizing: border-box;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+background-color: rgb(12, 236, 221); 
 }
 
 code {
@@ -19,12 +23,120 @@ code {
   background-color: yellow;
   height: 90vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  /* background-image:url(./images/code-image.jpeg); */
+  background-image: url(./images/code-image.jpeg);
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
 }
+
 .heading-one {
-  border:1px solid red;
- 
-  
+  display: flex;
+  align-items: center;
+  height: 100px;
+  padding: 0 30px;
+  margin:0 20px;
+  background-color: rgb(255, 243, 56);
+  color:#000;
+  text-align: center;
+  font-size: 40px;
+  font-family: 'Anton', sans-serif;
+}
+
+.input-name {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: whitesmoke;
+}
+.input-name:focus {
+  outline: none;
+}
+.label-firstName {
+  display: block;
+  margin: 10px 0px;
+  color:#fff;
+  font-size: 20px;
+  font-weight: 800;
+  padding: 20px;
+  background-color: black;
+  margin-top: 30px;
+  letter-spacing: 1px;
+  font-size: 22px;
+}
+/* MAIN */
+
+.main {
+  height: 700px;
+}
+.questions-section {
+  margin:0 auto;
+  width: 70%;
+  margin-top: 50px;
+  height: 500px;
+  background-color: rgb(235, 146, 190,0.2);
+  /* background-color: rgb(255, 239, 120,0.3); */
+}
+
+/* dropdown form*/
+
+.heading-two {
+  width: 300px;
+  margin: 0 auto;
+  padding-top: 10px;
+  text-transform: uppercase;
+  color: rgb(214, 52, 23);
+  font-weight: 800;
+}
+.drop-down {
+  margin-top:20px;
+}
+.label-dropdown {
+  font-size: 20px;
+  font-weight: 700;
+  padding:10px 0;
+  padding-left: 6px;
+  display: block;
+  line-height: 28px;
+}
+
+.dropdown {
+  width: 100%;
+  height: 40px;
+  border: none;
+  background-color: whitesmoke;
+}
+
+.dropdown:focus {
+  outline: none;
+}
+.next-btn {
+margin:0 auto;
+display: block;
+width: 40%;
+border-radius: 20px;
+margin-top: 50px;
+padding: 10px 0;
+font-size: 20px;
+font-weight: 800;
+background-color: #fff;
+
+}
+.next-btn:hover {
+  transform: scale(1.1,1.1);
+  background-color: rgb(214, 52, 23);
+  color:#fff;
+}
+
+.overview {
+  padding:10px;
+  margin-top:50px;
+}
+@media (min-width:768px) {
+
+.questions-section {
+max-width: 700px;
+}
 }

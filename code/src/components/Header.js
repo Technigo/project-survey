@@ -1,13 +1,22 @@
-import React from "react";
+import React, {useState} from "react";
+import FirstName from "./FirstName";
 
-const Header = () => {
-    return (
+const Header = (props) => {
+    // const { name, onNameInputChange } = props;
 
-    <header className="header">
+  return (
+    <>
+      <header className="header">
         <h1 className="heading-one">JavaScript Test</h1>
-    </header>
-        )
 
-}
+        <FirstName
+      name={props.name}
+      onNameInputChange={props.onNameInputChange}
+      />
+
+      </header>
+    </>
+  );
+};
 
 export default Header;

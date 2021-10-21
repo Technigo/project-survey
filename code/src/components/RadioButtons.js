@@ -12,7 +12,7 @@ const RadioButtons = (props) => {
         {webLanguages.map((language) => (
           <label key={language}>
             <input
-              tupe="radio"
+              type="radio"
               value={language}
               onChange={(event) => setWebLanguage(event.target.value)}
               checked={WebLanguage === language}
