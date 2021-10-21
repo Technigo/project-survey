@@ -1,27 +1,32 @@
 import React from "react";
 
 const InvestPossibility = ({
-  onStepChange,
   investPossibility,
   onInvestPossibilityChange,
+  onStepChange,
 }) => {
   return (
-    <div>
+    <div className="question-wrapper">
       <div>
-        <h2>
-          How likely is you to invest in cryptocurrencies in the next 5 years?
-        </h2>
-        <input
-          type="range"
-          min="1"
-          max="10"
-          step="1"
-          onChange={onInvestPossibilityChange}
-          value={investPossibility}
-        />
-        {investPossibility}
+        <div>
+          <h2 className="question-header">
+            How likely is you to invest in cryptocurrencies in the next 5 years?
+          </h2>
+          <input
+            className="slider"
+            type="range"
+            min="1"
+            max="10"
+            step="1"
+            onChange={onInvestPossibilityChange}
+            value={investPossibility}
+          />
+          {investPossibility}
+        </div>
       </div>
-      <button onClick={onStepChange}>Next</button>
+      <button className="button" onClick={onStepChange}>
+        Submit
+      </button>
     </div>
   );
 };

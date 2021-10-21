@@ -3,25 +3,33 @@ import React from "react";
 const investment = ["Yes", "No"];
 
 const CryptoInvestment = ({
-  onStepChange,
   cryptoInvestment,
   onCryptoInvestmentChange,
+  onStepChange,
 }) => {
   return (
-    <div>
-      <h2>Have you invested in cryptocurrencies?</h2>
+    <div className="question-wrapper">
+      <h2 className="question-header">
+        Have you invested in cryptocurrencies?
+      </h2>
       {investment.map((item) => (
-        <label key={item}>
-          <input
-            type="radio"
-            value={item}
-            onChange={onCryptoInvestmentChange}
-            checked={cryptoInvestment === item}
-          />
-          {item}
-        </label>
+        <div key={item} className="label-container">
+          <label htmlFor="investment" className="label">
+            <input
+              id="investment"
+              className="input-radio"
+              type="radio"
+              value={item}
+              onChange={onCryptoInvestmentChange}
+              checked={cryptoInvestment === item}
+            />
+            {item}
+          </label>
+        </div>
       ))}
-      <button onClick={onStepChange}>Next</button>
+      <button className="button" onClick={onStepChange}>
+        Next
+      </button>
     </div>
   );
 };

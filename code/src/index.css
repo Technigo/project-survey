@@ -1,10 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Roboto", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: beige;
 }
 
 code {
@@ -15,4 +14,138 @@ code {
 .survey-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px 20px;
+}
+
+.start,
+.button {
+  background-color: #00bf6f;
+  color: white;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  padding: 10px;
+}
+
+.button {
+  width: 20%;
+  align-self: center;
+}
+
+.header {
+  text-align: center;
+
+  font-size: 25px;
+  font-weight: 600;
+  color: #00bf6f;
+}
+
+.question-header {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.label {
+  font-size: 18px;
+  font-weight: 300;
+  margin-left: 5px;
+}
+
+.label-container {
+  margin-bottom: 10px;
+}
+
+.input-radio {
+  margin-right: 8px;
+  transform: scale(1.3);
+}
+
+.question-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+select {
+  background-color: #00bf6f;
+}
+
+.slider {
+  appearance: none;
+  height: 15px;
+  border-radius: 10x;
+  color: #00bf6f;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04aa6d;
+  cursor: pointer;
+}
+
+input[type="text"] {
+  text-transform: uppercase;
+}
+
+.overview-answers {
+  font-size: 16px;
+}
+
+.answer {
+  color: #00bf6f;
+}
+
+.container-p {
+  height: 20px;
+  width: 100%;
+  background-color: white;
+  border-radius: 50px;
+  margin: 50px;
+}
+
+.filler-style {
+  height: 100%;
+  background-color: #04aa6d;
+  border-radius: inherit;
+  text-align: "right";
+}
+
+@media (min-width: 768px) {
+  .survey-wrapper {
+    margin: 200px;
+  }
+
+  .start,
+  .button {
+    font-size: 23px;
+    border-radius: 10px;
+    border: none;
+    padding: 15px;
+  }
+
+  .button {
+    width: 30%;
+  }
+
+  .header {
+    font-size: 30px;
+  }
+
+  .question-header {
+    font-size: 22px;
+  }
+
+  .input-radio {
+    margin-right: 10px;
+    transform: scale(1.4);
+  }
 }

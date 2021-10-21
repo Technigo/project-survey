@@ -3,25 +3,33 @@ import React from "react";
 const awareness = ["Nothing", "Not much", "Some", "A lot"];
 
 const CryptoAwareness = ({
-  onStepChange,
   cryptoAwareness,
   onCryptoAwarenessChange,
+  onStepChange,
 }) => {
   return (
-    <div>
-      <h2>How much do you know about cryptocurrencies?</h2>
+    <div className="question-wrapper">
+      <h2 className="question-header">
+        How much do you know about cryptocurrencies?
+      </h2>
       {awareness.map((item) => (
-        <label key={item}>
-          <input
-            type="radio"
-            value={item}
-            onChange={onCryptoAwarenessChange}
-            checked={cryptoAwareness === item}
-          />
-          {item}
-        </label>
+        <div key={item} className="label-container">
+          <label htmlFor="awareness" className="label">
+            <input
+              id="awareness"
+              className="input-radio"
+              type="radio"
+              value={item}
+              onChange={onCryptoAwarenessChange}
+              checked={cryptoAwareness === item}
+            />
+            {item}
+          </label>
+        </div>
       ))}
-      <button onClick={onStepChange}>Next</button>
+      <button className="button" onClick={onStepChange}>
+        Next
+      </button>
     </div>
   );
 };
