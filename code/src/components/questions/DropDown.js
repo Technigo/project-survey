@@ -1,11 +1,8 @@
 import React from 'react'
 
-export const DropDown = props => {
-  const { title, options, id, type, number } = props.data
-  const { state, handleChange } = props
-
+export const DropDown = ({ state, handleChange, data }) => {
   // generate object with next question
-  const nextQuestion = options.reduce(
+  const nextQuestion = data.options.reduce(
     (o, option) => ({ ...o, [option.value]: option.next_question }),
     {}
   )
@@ -13,15 +10,17 @@ export const DropDown = props => {
 
   return (
     <>
-      <h2>{title}</h2>
+      <h2>{data.title}</h2>
       <select
         name='select'
-        id={type + id}
-        value={state[type + id]}
-        onChange={e => handleChange(e, nextQuestion[e.target.value], title, number, 'Answer')}>
-        {options.map(option => {
+        id={data.type + data.id}
+        value={state[data.type + data.id]}
+        onChange={e =>
+          handleChange(e, nextQuestion[e.target.value], data.title, data.number, 'Answer', data.id)
+        }>
+        {data.options.map(option => {
           return (
-            <option hidden={option.hidden} key={option.label + id} value={option.value}>
+            <option hidden={option.hidden} key={option.label + data.id} value={option.value}>
               {option.label}
             </option>
           )

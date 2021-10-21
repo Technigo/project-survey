@@ -7,7 +7,14 @@ import { FormSummary } from 'components/FormSummary'
 
 console.log(data)
 
-export const FormWrapper = ({ step, state, handleChange, setValid }) => {
+export const FormWrapper = ({
+  step,
+  state,
+  handleChange,
+  setValid,
+  incrementStep,
+  decrementStep,
+}) => {
   return (
     <form className='form'>
       {data.questions
@@ -21,6 +28,9 @@ export const FormWrapper = ({ step, state, handleChange, setValid }) => {
                 state={state}
                 handleChange={handleChange}
                 setValid={setValid}
+                step={step}
+                incrementStep={incrementStep}
+                decrementStep={decrementStep}
               />
             )
           } else if (item.type === 'radio') {
@@ -31,6 +41,9 @@ export const FormWrapper = ({ step, state, handleChange, setValid }) => {
                 state={state}
                 handleChange={handleChange}
                 setValid={setValid}
+                step={step}
+                incrementStep={incrementStep}
+                decrementStep={decrementStep}
               />
             )
           } else if (item.type === 'dropdown') {
@@ -41,6 +54,9 @@ export const FormWrapper = ({ step, state, handleChange, setValid }) => {
                 state={state}
                 handleChange={handleChange}
                 setValid={setValid}
+                step={step}
+                incrementStep={incrementStep}
+                decrementStep={decrementStep}
               />
             )
           }
