@@ -41,6 +41,19 @@ h2 {
   transform: rotate(-5deg);
 }
 
+header {
+  background-image: url(./images/horror-banner.jpg);
+  background-size: contain;
+  height: 80px;
+}
+
+.page-counter {
+  display: flex;
+  background-color: var(--tertiary);
+  justify-content: center;
+  opacity: 0.8;
+}
+
 footer,
 a,
 a:hover {
@@ -56,10 +69,14 @@ a:hover {
 }
 
 .image-container {
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+}
+
+.start-image {
+  width: 50%;
 }
 
 .survey-container {
@@ -80,6 +97,17 @@ a:hover {
   display: flex;
   flex-direction: column;
   width: 100%;
+}
+
+.text-input {
+  font-size: 20px;
+  margin: 0px 0px 40px;
+  height: 30px;
+  border-radius: 5px;
+  width: 80%;
+  border: none;
+  align-self: center;
+  width: 70%;
 }
 
 .form-label {
@@ -128,17 +156,6 @@ li {
   font-style: italic;
 }
 
-.text-input {
-  font-size: 20px;
-  margin: 0px 0px 40px;
-  height: 30px;
-  border-radius: 5px;
-  width: 80%;
-  border: none;
-  align-self: center;
-  width: 70%;
-}
-
 .btn-container {
   display: flex;
   justify-content: center;
@@ -175,13 +192,6 @@ li {
   box-shadow: none;
   outline-offset: 3px;
   transition: 0.15s ease-in-out;
-}
-
-header {
-  display: flex;
-  background-color: var(--tertiary);
-  justify-content: center;
-  opacity: 0.8;
 }
 
 @media (min-width: 768px) {

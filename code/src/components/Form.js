@@ -38,9 +38,8 @@ const Form = () => {
 
 	return (
     <>
-    <header>
-        		{step <= 5 && <p>Question number: {step}/5</p>}
-    </header>
+    <header></header>
+    <div className="page-counter">{step <= 5 && <p>Question number: {step}/5</p>}</div>
     <main className="main-container">
 		<section className="survey-container">
       {step === 0 && (
