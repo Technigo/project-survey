@@ -9,9 +9,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
   /* background-color: rgb(175, 214, 175); */
-  background: #00c9ff; /* fallback for old browsers */
-  background: -webkit-linear-gradient(to left, #00c9ff, #92fe9d); /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to left, #00c9ff, #92fe9d); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgb(78,223,194);
+  background: linear-gradient(175deg, rgba(78,223,194,1) 0%, rgba(25,22,84,1) 100%);
 }
 
 
@@ -128,6 +127,11 @@ input {
 .progress-bar {
   margin-top: 10px;
   width: 70%;
+  /* background-color:rgba(81, 87, 81, 0.25) */
+}
+
+.progress-bar div div div {
+  background-color:rgba(238, 66, 102) !important;
 }
 
 
@@ -143,7 +147,7 @@ button {
   color: rgba(11, 30, 78, 1);
   cursor: pointer;
   display: inline-flex;
-  font-family: "JetBrains Mono",monospace;
+  font-family: var(--ff);
   height: 48px;
   justify-content: center;
   line-height: 1;

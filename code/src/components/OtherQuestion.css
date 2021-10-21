@@ -27,3 +27,15 @@
     background: #04AA6D;
     cursor: pointer;
   }
+
+  .slider-text {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    font-size: 14px;
+
+  }
+
+  .other-question-content label{
+    padding-bottom: 2rem;
+  }

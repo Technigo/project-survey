@@ -9,7 +9,7 @@ const HeightQuestion = ({
   return (
     <div className='form-container'>
       <form>
-        <label htmlFor={heightInput}>Type your height in cm</label>
+        <label htmlFor={heightInput}>Type your height in meters</label>
         <input
           id='heightInput'
           type='text'

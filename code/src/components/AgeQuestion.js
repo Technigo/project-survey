@@ -12,7 +12,7 @@ const AgeQuestion = ({ ageInput, onAgeInputChange, onStepChange, onEnter }) => {
           onChange={onAgeInputChange}
           onKeyPress={onEnter}
         />
-        <button type='button' onClick={onStepChange}>
+        <button type='button' onClick={onStepChange} disabled={ageInput === ''}>
           Next questions
         </button>
       </form>

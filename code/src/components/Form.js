@@ -19,6 +19,8 @@ const Form = () => {
   const [hipInput, setHipInput] = useState('');
   const [waistInput, setWaistInput] = useState('');
   const [activityInput, setActivityInput] = useState('');
+  const [sliderAInput, setSliderAInput] = useState('');
+  const [sliderBInput, setSliderBInput] = useState('');
   const [step, setStep] = useState(1);
 
   const onNameInputChange = (event) => {
@@ -47,6 +49,14 @@ const Form = () => {
 
   const onActivityInputChange = (event) => {
     setActivityInput(event.target.value);
+  };
+
+  const onSliderAInputChange = (event) => {
+    setSliderAInput(event.target.value);
+  };
+
+  const onSliderBInputChange = (event) => {
+    setSliderBInput(event.target.value);
   };
 
   const onStepChange = () => {
@@ -123,7 +133,15 @@ const Form = () => {
             onEnter={onEnter}
           />
         )}
-        {step === 9 && <OtherQuestion onStepChange={onStepChange} />}
+        {step === 9 && (
+          <OtherQuestion
+            onStepChange={onStepChange}
+            sliderAInput={sliderAInput}
+            onSliderAInputChange={onSliderAInputChange}
+            sliderBInput={sliderBInput}
+            onSliderBInputChange={onSliderBInputChange}
+          />
+        )}
         {step === 10 && (
           <Overview
             nameInput={nameInput}
@@ -133,6 +151,8 @@ const Form = () => {
             hipInput={hipInput}
             waistInput={waistInput}
             activityInput={activityInput}
+            sliderAInput={sliderAInput}
+            sliderBInput={sliderBInput}
           />
         )}
       </div>
