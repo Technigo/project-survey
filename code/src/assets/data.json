@@ -28,12 +28,41 @@
       "required": "false",
       "type": "dropdown",
       "options": [
-        { "label": "Select an option", "value": "default", "hidden": true, "next_question": "end" },
-        { "label": "Green", "value": "Green", "hidden": false, "next_question": "end" },
-        { "label": "Blue", "value": "Blue", "hidden": false, "next_question": "end" },
-        { "label": "Red", "value": "Red", "hidden": false, "next_question": "end" }
+        { "label": "Select an option", "value": "default", "hidden": true },
+        { "label": "Green", "value": "Green", "hidden": false },
+        { "label": "Blue", "value": "Blue", "hidden": false },
+        { "label": "Red", "value": "Red", "hidden": false }
       ],
       "id": 3
+    },
+    {
+      "title": "Which color do you prefer?",
+      "number": 4,
+      "required": "false",
+      "type": "dropdown",
+      "options": [
+        { "label": "Select an option", "value": "default", "hidden": true },
+        { "label": "Green", "value": "Green", "hidden": false },
+        { "label": "Blue", "value": "Blue", "hidden": false },
+        { "label": "Red", "value": "Red", "hidden": false }
+      ],
+      "id": 4
+    },
+    {
+      "title": "How good is this survey?",
+      "number": 5,
+      "required": "true",
+      "type": "range",
+      "options": [{ "label": "Select an option", "min": "1", "max": "100", "value": "50" }],
+      "id": 5
+    },
+    {
+      "title": "Finish the survey?",
+      "number": 6,
+      "required": "true",
+      "type": "radio",
+      "options": [{ "label": "Yes", "value": "Yes", "id": "radioYes", "next_question": "end" }],
+      "id": 6
     }
   ]
 }

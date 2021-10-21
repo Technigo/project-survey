@@ -4,6 +4,7 @@ import data from 'assets/data.json'
 import { TextInput } from 'components/questions/TextInput'
 import { Radio } from 'components/questions/Radio'
 import { DropDown } from 'components/questions/DropDown'
+import { Range } from 'components/questions/Range'
 
 console.log(data)
 
@@ -40,6 +41,18 @@ export const FormWrapper = ({ step, state, handleChange, incrementStep, decremen
           } else if (item.type === 'dropdown') {
             return (
               <DropDown
+                key={item.id}
+                data={item}
+                state={state}
+                handleChange={handleChange}
+                step={step}
+                incrementStep={incrementStep}
+                decrementStep={decrementStep}
+              />
+            )
+          } else if (item.type === 'range') {
+            return (
+              <Range
                 key={item.id}
                 data={item}
                 state={state}

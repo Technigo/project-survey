@@ -18,3 +18,9 @@ code {
   height: 100vh;
   margin: auto;
 }
+
+/* @media (min-width: 540px) {
+  .container {
+    width: 500px;
+  }
+} */

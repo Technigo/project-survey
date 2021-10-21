@@ -1,6 +1,7 @@
 import React from 'react'
 import 'components/questions/dropDown.css'
 import { Button } from 'components/Button'
+import { QuestionHeading } from 'components/QuestionHeading'
 
 export const DropDown = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
   // generate object with next question
@@ -32,7 +33,7 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
 
   return (
     <>
-      <h2>{data.title}</h2>
+      <QuestionHeading number={data.number} title={data.title} />
       <select
         className='dropdown'
         name='select'

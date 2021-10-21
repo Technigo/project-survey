@@ -1,9 +1,9 @@
 import React from 'react'
-import 'components/questions/radio.css'
+import 'components/questions/range.css'
 import { Button } from 'components/Button'
 import { QuestionHeading } from 'components/QuestionHeading'
 
-export const Radio = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
+export const Range = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
   const checkValid = e => {
     if (data.required && e.target.value) {
       return true
@@ -25,12 +25,12 @@ export const Radio = ({ state, handleChange, data, step, incrementStep, decremen
           <label className='label' key={option.id}>
             {option.label}
             <input
-              className='radio'
-              type='radio'
-              checked={state[data.type + data.id] === option.value}
-              name={data.type + data.id}
+              className='range'
+              type='range'
+              min={option.min}
+              max={option.max}
               id={data.type + data.id}
-              value={option.value}
+              value={state[data.type + data.id]}
               onChange={e => onChangeHandler(e, option)}
             />
           </label>
