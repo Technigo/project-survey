@@ -1,6 +1,15 @@
 import React from 'react'
+import { Button } from 'components/Button'
 
-export const Radio = ({ state, handleChange, data, setValid }) => {
+export const Radio = ({
+  state,
+  handleChange,
+  data,
+  setValid,
+  step,
+  incrementStep,
+  decrementStep,
+}) => {
   const validate = (e, option) => {
     console.log('validate radio', e.target.value)
     if (data.required && e.target.value) {
@@ -9,8 +18,19 @@ export const Radio = ({ state, handleChange, data, setValid }) => {
       setValid(false)
     }
   }
+
+  const checkValid = (e, option) => {
+    if (data.required && e.target.value) {
+      return true
+    } else {
+      return false
+    }
+  }
+
   const onChangeHandler = (e, option) => {
-    handleChange(e, option.next_question, data.title, data.number, 'Answer', data.id)
+    let validated = checkValid(e, option)
+    console.log('validator', validated)
+    handleChange(e, option.next_question, data.title, data.number, 'Answer', data.id, validated)
     validate(e, option)
   }
 
@@ -33,6 +53,8 @@ export const Radio = ({ state, handleChange, data, setValid }) => {
           </label>
         )
       })}
+      <Button disabled={step === 1} text={'^'} onClick={decrementStep} />
+      <Button disabled={step === 'end' || !state[data.id]} text={'v'} onClick={incrementStep} />
     </>
   )
 }
