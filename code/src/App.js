@@ -31,7 +31,6 @@ export const App = () => {
 
   const incrementStep = () => {
     let newSteps = ''
-    console.log(state.questions)
     if (step === state.questions) {
       newSteps = 'end'
     } else if (state.nextQuestion) {
