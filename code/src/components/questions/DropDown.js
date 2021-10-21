@@ -1,7 +1,7 @@
 import React from 'react'
 import 'components/questions/dropDown.css'
 import { Button } from 'components/Button'
-import { QuestionHeading } from 'components/QuestionHeading'
+import { Heading } from 'components/Heading'
 
 export const DropDown = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
   // generate object with next question
@@ -32,7 +32,7 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
 
   return (
     <>
-      <QuestionHeading number={data.number} title={data.title} />
+      <Heading number={data.number} title={data.title} />
       <label className='label-dropdown label' key={data.id}>
         {data.label}
         <span className='required'>{data.required ? ' *required' : ''}</span>

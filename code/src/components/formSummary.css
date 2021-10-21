@@ -1,5 +1,6 @@
 .form-summary {
   padding: 20px;
+  overflow: scroll;
 }
 
 .form-summary h4 {

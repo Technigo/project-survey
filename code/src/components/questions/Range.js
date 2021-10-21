@@ -1,7 +1,7 @@
 import React from 'react'
 import 'components/questions/range.css'
 import { Button } from 'components/Button'
-import { QuestionHeading } from 'components/QuestionHeading'
+import { Heading } from 'components/Heading'
 
 export const Range = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
   const checkValid = e => {
@@ -19,7 +19,7 @@ export const Range = ({ state, handleChange, data, step, incrementStep, decremen
 
   return (
     <>
-      <QuestionHeading number={data.number} title={data.title} />
+      <Heading number={data.number} title={data.title} />
       {data.options.map(option => {
         return (
           <label className='label-range label' key={option.id}>

@@ -1,11 +1,12 @@
 import React from 'react'
 import 'components/formSummary.css'
 import { Button } from 'components/Button'
+import { Heading } from 'components/Heading'
 
 export const FormSummary = ({ state, decrementStep, handleRestart, step }) => {
   return (
     <div className='form-summary'>
-      <h3>Survey Summary</h3>
+      <Heading number={''} title={'Survey Summary'} />
       {state.answers.map(answer => {
         return (
           <>
@@ -21,13 +22,13 @@ export const FormSummary = ({ state, decrementStep, handleRestart, step }) => {
               }
               return null
             })}
-            <div className='button-container'>
-              {step === 'end' && <Button text={''} type={'up'} onClick={decrementStep} />}
-              {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
-            </div>
           </>
         )
       })}
+      <div className='button-container'>
+        {step === 'end' && <Button text={''} type={'up'} onClick={decrementStep} />}
+        {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
+      </div>
     </div>
   )
 }

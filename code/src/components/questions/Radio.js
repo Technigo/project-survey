@@ -1,7 +1,7 @@
 import React from 'react'
 import 'components/questions/radio.css'
 import { Button } from 'components/Button'
-import { QuestionHeading } from 'components/QuestionHeading'
+import { Heading } from 'components/Heading'
 
 export const Radio = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
   const checkValid = e => {
@@ -19,7 +19,7 @@ export const Radio = ({ state, handleChange, data, step, incrementStep, decremen
 
   return (
     <>
-      <QuestionHeading number={data.number} title={data.title} />
+      <Heading number={data.number} title={data.title} />
 
       {data.options.map(option => {
         return (

@@ -1,7 +1,7 @@
 import React from 'react'
 import 'components/questions/textInput.css'
 import { Button } from 'components/Button'
-import { QuestionHeading } from 'components/QuestionHeading'
+import { Heading } from 'components/Heading'
 
 export const TextInput = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
   const siblingValid = option => {
@@ -27,7 +27,7 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
   }
   return (
     <>
-      <QuestionHeading number={data.number} title={data.title} />
+      <Heading number={data.number} title={data.title} />
       {data.options.map(option => {
         return (
           <label className='label-text-input label' key={option.id}>
