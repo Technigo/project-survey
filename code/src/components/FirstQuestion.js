@@ -1,17 +1,28 @@
 import React from 'react';
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+const FirstQuestion = ({ movie, onMovieChange, onStepChange }) => {
 	//const { nameInput, onNameInputChange } = props; // Object destructuring, to extract properties from objects and bind them to variables
 	return (
-		<form>
-			<label htmlFor="nameInput">Type your name</label>
-			<input
-				id="nameInput" //connects to the HTML-form
-				type="text" //the type of input
-				value={nameInput} //necessary in order to make the input controlled
-				onChange={onNameInputChange} //eventlistner that updates the input. And necessary in order to make the input controlled
-			/>
-			<button onClick={onStepChange}>Next Question</button>
+		<form className="form-container1" tabIndex="0">
+			<label>
+				<h1> Pick your scary movie ! </h1>
+			</label>
+
+			<select
+				className="select"
+				value={movie}
+				onChange={(event) => onMovieChange(event.target.value)}
+			>
+				<option value="The Shining">The Shining</option>
+				<option value="Jaws">Jaws</option>
+				<option value="Poltergeist">Poltergeist</option>
+				<option value="Carrie">Carrie</option>
+				<option value="Ghostbusters"> Ghostbusters</option>
+			</select>
+
+			<button className="button" onClick={onStepChange}>
+				Next question
+			</button>
 		</form>
 	);
 };

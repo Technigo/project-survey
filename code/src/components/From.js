@@ -1,27 +1,40 @@
-import React, { useState } from 'react'; //importing hooks
-//do this in all components if you want it there.
+import React, { useState, useEffect } from 'react'; //importing hooks
+//importing from other components
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
+import FourthQuestion from './FourthQuestion';
+import FifthQuestion from './FifthQuestion';
 import Overview from './Overview';
 
 const Form = () => {
-	const [nameInput, setNameInput] = useState(''); //state property storing the name. A default input current empty but can be set
-	const [surnameInput, setSurnameInput] = useState(''); //state property storing the surname.
+	const [movie, setMovie] = useState(''); //state property storing the movie. A default input current empty but can be set
+	const [seat, setSeat] = useState('1'); //state property storing the seat.
+	const [ticketInput, setTicket] = useState('');
+	const [snack, setSnack] = useState('popcorn');
+	const [nameInput, setNameInput] = useState('');
 	const [step, setStep] = useState(1); //state property storing the current question.
-	const [location, setLocation] = useState('');
+
 	// A custom/separate function that pass the function name
-	const onNameInputChange = (event) => {
-		setNameInput(event.target.value);
+	const onMovieChange = (movie) => {
+		setMovie(movie);
 	};
 
 	// A custom/separate function that pass the function surname
-	const onSurnameInputChange = (event) => {
-		setSurnameInput(event.target.value);
+	const onSeatInputChange = (seat) => {
+		setSeat(seat);
 	};
 
-	const onLocationInputChange = (event) => {
-		setLocation(event.target.value);
+	const onTicketInputChange = (event) => {
+		setTicket(event.target.value);
+	};
+
+	const onSnackChange = (snack) => {
+		setSnack(snack);
+	};
+
+	const onNameInputChange = (event) => {
+		setNameInput(event.target.value);
 	};
 
 	//A custom/separate function that keep track of the current question
@@ -29,99 +42,58 @@ const Form = () => {
 		setStep(step + 1);
 	};
 
-	//Option 3 - syntatic sugar
 	return (
 		<div>
 			{step === 1 && (
 				<FirstQuestion
-					nameInput={nameInput}
-					onNameInputChange={onNameInputChange}
+					movie={movie}
+					onMovieChange={onMovieChange}
 					onStepChange={onStepChange}
 				/>
 			)}
 			{step === 2 && (
 				<SecondQuestion
-					surnameInput={surnameInput}
-					onSurnameInputChange={onSurnameInputChange}
+					seat={seat}
+					onSeatChange={onSeatInputChange}
 					onStepChange={onStepChange}
 				/>
 			)}
 
 			{step === 3 && (
 				<ThirdQuestion
-					location={location}
-					onLocationInputChange={onLocationInputChange}
+					ticketInput={ticketInput}
+					onTicketInputChange={onTicketInputChange}
 					onStepChange={onStepChange}
 				/>
 			)}
+
 			{step === 4 && (
-				<Overview
+				<FourthQuestion
+					snack={snack}
+					onSnackChange={onSnackChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+
+			{step === 5 && (
+				<FifthQuestion
 					nameInput={nameInput}
-					surnameInput={surnameInput}
-					location={location}
+					onNameInputChange={onNameInputChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+
+			{step === 6 && (
+				<Overview
+					movie={movie}
+					seat={seat}
+					snack={snack}
+					nameInput={nameInput}
+					ticketInput={ticketInput}
 				/>
 			)}
 		</div>
 	);
-
-	//Option 2
-	// if (step === 1) {
-	// 	return (
-	// 		<FirstQuestion
-	// 			nameInput={nameInput}
-	// 			onNameInputChange={onNameInputChange}
-	// 			onStepChange={onStepChange}
-	// 		/>
-	// 	);
-	// } else if (step === 2) {
-	// 	return (
-	// 		<SecondQuestion
-	// 			surnameInput={surnameInput}
-	// 			onSurnameInputChange={onSurnameInputChange}
-	// 			onStepChange={onStepChange}
-	// 		/>
-	// 	);
-	// } else if (step === 3) {
-	// 	return <Overview nameInput={nameInput} surnameInput={surnameInput} />;
-	// }
-
-	//Option 3
-	// return (
-	// 	<div>
-	// 		<form>
-	// 			<label htmlFor="nameInput">Type your name</label>
-	// 			<input
-	// 				id="nameInput" //connects to the HTML-form
-	// 				type="text"
-	// 				value={nameInput} //necessary in order to make the input controlled
-	// 				onChange={onNameInputChange} //eventlistner that updates the input. And necessary in order to make the input controlled
-	// 			/>
-
-	// 			<label htmlFor="surnameInput">Type your surname</label>
-	// 			<input
-	// 				id="surnameInput" //connects to the HTML-form
-	// 				type="text"
-	// 				value={surnameInput} //necessary in order to make the input controlled
-	// 				onChange={onSurnameInputChange} //eventlistner that updates the input. And necessary in order to make the input controlled
-	// 			/>
-	// 		</form>
-
-	// 		{/* a section that displays the users input */}
-	// 		<section>
-	// 			<h2> Your answers from the quiz: </h2>
-	// 			<p>Name: {nameInput} </p>
-	// 			<p>Surname:{surnameInput}</p>
-	// 			<p> </p>
-	// 			<p> </p>
-	// 			<p> </p>
-	// 		</section>
-	// 	</div>
-
-	// <div>
-	// 	<div> my Counter is: {counter}</div>
-	// 	<button onClick={() => setCounter(counter + 1)}>Click</button>
-	// </div>
 };
 
-//adding a function the button add onClick={ }
 export default Form;

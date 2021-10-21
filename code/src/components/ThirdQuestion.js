@@ -1,17 +1,30 @@
 import React from 'react';
 
-const ThirdQuestion = ({ location, onLocationInputChange, onStepChange }) => {
+const ticketTypes = ['Adult', 'Student', 'Pensioner'];
+
+const ThirdQuestion = ({ ticketInput, onTicketInputChange, onStepChange }) => {
 	return (
-		<form>
-			<label htmlFor="locationInput">Pick your workout space</label>
-			<select onChange={onLocationInputChange} value={location}>
-				<option value=""> select location:</option>
-				<option value="home"> At Home</option>
-				<option value="gym"> At the Gym</option>
-				<option value="yogastudio"> At yogastudio</option>
-				<option value="park"> At the park</option>
-			</select>
-			<button onClick={onStepChange}>Next Question</button>
+		<form className="form-container3" tabIndex="3">
+			<h1>Ticket Types</h1>
+			{ticketTypes.map(
+				(
+					ticket //iterating through each ticketType array
+				) => (
+					<label className="ticket-types" key={ticket}>
+						<input
+							type="radio"
+							value={ticket}
+							onChange={onTicketInputChange}
+							checked={ticketInput === ticket}
+							required
+						/>
+						{ticket}
+					</label>
+				)
+			)}
+			<button className="button" onClick={onStepChange}>
+				Next question
+			</button>
 		</form>
 	);
 };

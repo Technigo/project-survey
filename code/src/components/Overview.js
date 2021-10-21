@@ -1,16 +1,28 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
-const Overview = ({ nameInput, surnameInput }) => {
+// const audioTune = new Audio('</assets/soundfile.mp3>');
+// const [playInLoop, setPlayInLoop] = useState(false);
+// useEffect(() => {
+// 	audioTune.load();
+// }, []);
+
+const Overview = ({ movie, seat, ticket, snack, nameInput }) => {
 	return (
-		<section>
-			<h2> Your answers from the quiz: </h2>
-			<p>Name: {nameInput} </p>
-			<p>Surname:{surnameInput}</p>
-			<p>Workout place:{}</p>
-			<p> </p>
-			<p> </p>
+		<section className="summary" tabIndex="6">
+			<h2>
+				Enjoy your scary movie <br />{' '}
+				<span className="name-overview"> {nameInput}! </span>
+			</h2>
+			<p>
+				You have a {ticket} ticket to {movie} on seat number {seat} with {snack}
+				!
+			</p>
 		</section>
 	);
 };
 
 export default Overview;
+
+/* <p style={{ color: flavor === 'garlic' ? 'red' : 'blue' }}>
+				You want {flavor} popcorn
+			</p> */
