@@ -43,8 +43,10 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
           </label>
         )
       })}
-      <Button disabled={step === 1} text={'^'} onClick={decrementStep} />
-      <Button disabled={step === 'end' || !state[data.id]} text={'v'} onClick={incrementStep} />
+      <div className='button-container'>
+        <Button disabled={step === 1} text={'^'} onClick={decrementStep} />
+        <Button disabled={step === 'end' || !state[data.id]} text={'v'} onClick={incrementStep} />
+      </div>
     </>
   )
 }

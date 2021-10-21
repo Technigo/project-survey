@@ -4,7 +4,6 @@ import data from 'assets/data.json'
 import { TextInput } from 'components/questions/TextInput'
 import { Radio } from 'components/questions/Radio'
 import { DropDown } from 'components/questions/DropDown'
-import { FormSummary } from 'components/FormSummary'
 
 console.log(data)
 
@@ -53,8 +52,6 @@ export const FormWrapper = ({ step, state, handleChange, incrementStep, decremen
           }
           return null
         })}
-
-      {step === 'end' && <FormSummary state={state} data={data} />}
     </form>
   )
 }

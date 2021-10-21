@@ -1,0 +1,16 @@
+.form-summary {
+  padding: 20px;
+}
+
+.form-summary h4 {
+  margin-bottom: 5px;
+}
+
+.form-summary-label {
+  display: inline;
+  margin-right: 10px;
+}
+
+.form-summary-answer {
+  display: inline;
+}

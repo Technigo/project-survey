@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { FormWrapper } from 'components/FormWrapper'
+import { FormSummary } from 'components/FormSummary'
 import { Button } from 'components/Button'
 
 import data from 'assets/data.json'
@@ -67,8 +68,11 @@ export const App = () => {
         incrementStep={incrementStep}
         decrementStep={decrementStep}
       />
-      {step === 'end' && <Button text={'^'} onClick={decrementStep} />}
-      {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
+      {step === 'end' && <FormSummary state={state} />}
+      <div className='button-container'>
+        {step === 'end' && <Button text={'^'} onClick={decrementStep} />}
+        {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
+      </div>
     </div>
   )
 }

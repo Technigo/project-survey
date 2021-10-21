@@ -47,8 +47,10 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
           )
         })}
       </select>
-      <Button disabled={step === 1} text={'^'} onClick={decrementStep} />
-      <Button disabled={step === 'end' || !state[data.id]} text={'v'} onClick={incrementStep} />
+      <div className='button-container'>
+        <Button disabled={step === 1} text={'^'} onClick={decrementStep} />
+        <Button disabled={step === 'end' || !state[data.id]} text={'v'} onClick={incrementStep} />
+      </div>
     </>
   )
 }

@@ -5,7 +5,7 @@ export const FormSummary = props => {
   const { state } = props
 
   return (
-    <div>
+    <div className='form-summary'>
       <h3>Survey Summary</h3>
       {state.answers.map(answer => {
         return (
@@ -14,10 +14,10 @@ export const FormSummary = props => {
             {Object.keys(answer).map(key => {
               if (answer[key].label) {
                 return (
-                  <>
-                    <p>{answer[key].label}</p>
-                    <p>{answer[key].value}</p>
-                  </>
+                  <div className='form-summary-section'>
+                    <p className='form-summary-label'>{answer[key].label}:</p>
+                    <p className='form-summary-answer'>{answer[key].value}</p>
+                  </div>
                 )
               }
               return null
