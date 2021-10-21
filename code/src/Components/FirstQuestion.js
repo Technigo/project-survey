@@ -27,7 +27,7 @@ const FirstQuestion = ({ radioChecked, setRadioChecked }) => {
                 onChange={(event) => setRadioChecked(event.target.value)}
                 checked={radioChecked === "no"}
               />
-              No, I have bad taste.
+              No.
             </label>
           </form>
         </div>

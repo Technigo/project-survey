@@ -10,9 +10,7 @@ const Summary = ({ fundamentalInput, selectOption, radioChecked }) => {
       <div className="contentWrapper">
         <p className="summaryQuestion">Are you a Drag Race fan? </p>{" "}
         <p className="summaryAnswer">
-          {radioChecked === "yes"
-            ? "Yasssss queen!"
-            : "Nope, I have bad taste."}
+          {radioChecked === "yes" ? "Yasssss queen!" : "Nope, I'm shady af."}
         </p>
         <p className="summaryQuestion">Your favourite queen is </p>
         <p className="summaryAnswer"> {selectOption}</p>
