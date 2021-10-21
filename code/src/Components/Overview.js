@@ -18,7 +18,7 @@ const Overview = ({
       <p>Plan to do: {willDoInput}</p>
       <p>
         I{' '}
-        {blockers === 'yes' ? 'do have blockers :' : 'do not have any blockers'}
+        {blockers === 'yes' ? 'do have blockers.' : 'do not have any blockers.'}
       </p>
       <p>{blockersDescription}</p>
     </section>

@@ -11,7 +11,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
           type="text"
           value={nameInput}
           onChange={onNameInputChange}
-          placeholder="First name and surname"
+          placeholder="First and last"
         />
         <button disabled={nameInput === ''} onClick={onStepChange}>
           Next question

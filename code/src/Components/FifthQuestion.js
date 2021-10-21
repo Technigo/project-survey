@@ -1,13 +1,21 @@
 import React from 'react';
 
-const FifthQuestion = ({ blockers, onBlockersChange, onStepChange }) => {
+const FifthQuestion = ({
+  blockers,
+  onBlockersChange,
+  onStepChange,
+  handleShowOverview,
+}) => {
+  // tänker att handleShowOverview är en egen function som visar den sista sidan.
+
   const renderButton = () => {
     if (blockers === 'yes') {
       return <button onClick={onStepChange}>Next question</button>;
     } else {
-      return <button onClick={onStepChange}>Overview</button>;
+      return <button onClick={handleShowOverview}>Overview</button>;
     }
   };
+
   return (
     <form>
       Do you have any blockers?
@@ -35,9 +43,3 @@ const FifthQuestion = ({ blockers, onBlockersChange, onStepChange }) => {
 };
 
 export default FifthQuestion;
-
-{
-  /* <span role="img" aria-label="Stop">
-        
-      </span> */
-}

@@ -8,64 +8,41 @@ import FifthQuestion from './FifthQuestion';
 import SixthQuestion from './SixthQuestion';
 import Overview from './Overview';
 
-//ADD PREVENT DEFAULT?
 export const Form = () => {
   const [nameInput, setNameInput] = useState('');
-  // const [surnameInput, setSurnameInput] = useState('');
   const [team, setTeam] = useState('');
   // const [happiness, setHappiness] = useState('happy');
   const [doneInput, setDoneInput] = useState('');
-  // const [flavor, setFlavor] = useState('');
-
   const [willDoInput, setWillDoInput] = useState('');
-
   const [blockers, setBlockers] = useState('no');
-
   const [blockersDescription, setBlockersDescription] = useState('');
-
   const [step, setStep] = useState(1);
-  // const [showResult, setShowResult] = useState(false);
-
-  // console.log('My name input: ', nameInput);
+  const [showOverview, setShowOverview] = useState(false);
 
   // god practise to make a function out of onChange event
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
   };
-  // const onSurnameInputChange = (event) => {
-  //   setSurnameInput(event.target.value);
-  // };
-
   const onTeamChange = (event) => {
     setTeam(event.target.value);
   };
-
-  // const onHappinessChange = (feeling) => {
-  //   setHappiness(feeling);
-  // };
-
   const onDoneInputChange = (event) => {
     setDoneInput(event.target.value);
   };
-
-  // const onFlavorChange = (event) => {
-  //   setFlavor(event.target.value);
-  // };
-
   const onWillDoInputChange = (event) => {
     setWillDoInput(event.target.value);
   };
-
   const onBlockersChange = (blockers) => {
     setBlockers(blockers);
   };
-
   const onBlockersDescriptionChange = (event) => {
     setBlockersDescription(event.target.value);
   };
-
   const onStepChange = () => {
     setStep(step + 1);
+  };
+  const handleShowOverview = () => {
+    setShowOverview(true);
   };
 
   // Version 1
@@ -73,54 +50,8 @@ export const Form = () => {
     // add first start page here
 
     // Add a button to start the questions
-    <div>
-      {step === 1 && (
-        <FirstQuestion
-          nameInput={nameInput}
-          onNameInputChange={onNameInputChange}
-          onStepChange={onStepChange}
-        />
-      )}
-      {step === 2 && (
-        <SecondQuestion
-          team={team}
-          onTeamChange={onTeamChange}
-          onStepChange={onStepChange}
-        />
-      )}
-      {step === 3 && (
-        <ThirdQuestion
-          doneInput={doneInput}
-          onDoneInputChange={onDoneInputChange}
-          onStepChange={onStepChange}
-        />
-      )}
-
-      {step === 4 && (
-        <FourthQuestion
-          willDoInput={willDoInput}
-          onWillDoInputChange={onWillDoInputChange}
-          onStepChange={onStepChange}
-        />
-      )}
-
-      {step === 5 && (
-        <FifthQuestion
-          blockers={blockers}
-          onBlockersChange={onBlockersChange}
-          onStepChange={onStepChange}
-        />
-      )}
-
-      {step === 6 && (
-        <SixthQuestion
-          blockersDescription={blockersDescription}
-          onBlockersDescrtiptionChange={onBlockersDescriptionChange}
-          onStepChange={onStepChange}
-        />
-      )}
-
-      {step === 7 && (
+    <>
+      {showOverview ? (
         <Overview
           nameInput={nameInput}
           team={team}
@@ -129,8 +60,114 @@ export const Form = () => {
           blockers={blockers}
           blockersDescription={blockersDescription}
         />
+      ) : (
+        <div>
+          {step === 1 && (
+            <FirstQuestion
+              nameInput={nameInput}
+              onNameInputChange={onNameInputChange}
+              onStepChange={onStepChange}
+            />
+          )}
+          {step === 2 && (
+            <SecondQuestion
+              team={team}
+              onTeamChange={onTeamChange}
+              onStepChange={onStepChange}
+            />
+          )}
+          {step === 3 && (
+            <ThirdQuestion
+              doneInput={doneInput}
+              onDoneInputChange={onDoneInputChange}
+              onStepChange={onStepChange}
+            />
+          )}
+
+          {step === 4 && (
+            <FourthQuestion
+              willDoInput={willDoInput}
+              onWillDoInputChange={onWillDoInputChange}
+              onStepChange={onStepChange}
+            />
+          )}
+
+          {step === 5 && (
+            <FifthQuestion
+              blockers={blockers}
+              onBlockersChange={onBlockersChange}
+              onStepChange={onStepChange}
+            />
+          )}
+
+          {step === 6 && (
+            <SixthQuestion
+              blockersDescription={blockersDescription}
+              onBlockersDescriptionChange={onBlockersDescriptionChange}
+              onStepChange={handleShowOverview} //ändrat från onStepChange, även testat {() => setShowOverview(true)}
+            />
+          )}
+        </div>
       )}
-    </div>
+    </>
+    // <div>
+    //   {step === 1 && (
+    //     <FirstQuestion
+    //       nameInput={nameInput}
+    //       onNameInputChange={onNameInputChange}
+    //       onStepChange={onStepChange}
+    //     />
+    //   )}
+    //   {step === 2 && (
+    //     <SecondQuestion
+    //       team={team}
+    //       onTeamChange={onTeamChange}
+    //       onStepChange={onStepChange}
+    //     />
+    //   )}
+    //   {step === 3 && (
+    //     <ThirdQuestion
+    //       doneInput={doneInput}
+    //       onDoneInputChange={onDoneInputChange}
+    //       onStepChange={onStepChange}
+    //     />
+    //   )}
+
+    //   {step === 4 && (
+    //     <FourthQuestion
+    //       willDoInput={willDoInput}
+    //       onWillDoInputChange={onWillDoInputChange}
+    //       onStepChange={onStepChange}
+    //     />
+    //   )}
+
+    //   {step === 5 && (
+    //     <FifthQuestion
+    //       blockers={blockers}
+    //       onBlockersChange={onBlockersChange}
+    //       onStepChange={onStepChange}
+    //     />
+    //   )}
+
+    //   {step === 6 && (
+    //     <SixthQuestion
+    //       blockersDescription={blockersDescription}
+    //       onBlockersDescriptionChange={onBlockersDescriptionChange}
+    //       onStepChange={onStepChange}
+    //     />
+    //   )}
+
+    //   {/* {step === 7 && (
+    //     <Overview
+    //       nameInput={nameInput}
+    //       team={team}
+    //       doneInput={doneInput}
+    //       willDoInput={willDoInput}
+    //       blockers={blockers}
+    //       blockersDescription={blockersDescription}
+    //     />
+    //   )} */}
+    // </div>
 
     // add a chart?
   );

@@ -2,8 +2,8 @@ import React from 'react';
 
 const SixthQuestion = ({
   blockersDescription,
-  onBlockersDescription,
-  onStepChange,
+  onBlockersDescriptionChange,
+  handleShowOverview,
 }) => {
   return (
     <form>
@@ -11,12 +11,15 @@ const SixthQuestion = ({
       <textarea
         id="blockersDescription"
         rows="2"
-        cols="50"
+        cols="30"
         value={blockersDescription}
-        onChange={onBlockersDescription}
+        onChange={onBlockersDescriptionChange}
         placeholder="Add a description so we easily can help you remove the blocker"
       />
-      <button disabled={blockersDescription === ''} onClick={onStepChange}>
+      <button
+        disabled={blockersDescription === ''}
+        onClick={handleShowOverview}
+      >
         Overview
       </button>
     </form>
