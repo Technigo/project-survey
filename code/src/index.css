@@ -21,7 +21,7 @@ code {
   color: white;
   text-align: center;
   position: relative;
-  top: 50px;
+  top: 30px;
 }
 
 .neon-text {
@@ -177,10 +177,6 @@ p {
   text-shadow: 1px 1px #000;
 }
 
-.confetti {
-  margin: 0 auto;
-}
-
 .checkbox-container {
   display: flex;
   justify-content: center;
@@ -202,10 +198,6 @@ p {
   .startBtn {
     width: 90%;
   }
-
-  .confetti {
-    display: none;
-  }
 }
 
 @media (min-width: 767px) and (max-width: 1024px) {
@@ -225,10 +217,6 @@ p {
   .form-container {
     font-size: 12px;
     margin: 100px 0;
-  }
-
-  .confetti {
-    display: none;
   }
 
   .question-number p {

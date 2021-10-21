@@ -45,14 +45,6 @@ const Summary = ({
             restart
           </button>
         </form>
-        <div>
-          <iframe
-            title="confetti"
-            className="confetti"
-            src="https://giphy.com/embed/PMV7yRpwGO5y9p3DBx"
-            frameBorder="0"
-          ></iframe>
-        </div>
       </div>
     </section>
   );
