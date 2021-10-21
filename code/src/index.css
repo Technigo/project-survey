@@ -108,7 +108,7 @@ button {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   width: 50%;
-  margin: auto;
+  margin: 20px auto;
   align-items: center;
   cursor: pointer;
   border-radius: 20px;
