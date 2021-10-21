@@ -7,9 +7,8 @@ const SecondQuestion = ({
 }) => {
   return (
     <form>
-      <label htmlFor="dropDownInput">
-        How do you feel after today's lesson?
-      </label>
+      <h2>How do you feel after today's lesson?</h2>
+      <label htmlFor="dropDownInput"></label>
       <select
         id="dropDownInput"
         value={dropDownInput}
