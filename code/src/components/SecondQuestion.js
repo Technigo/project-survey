@@ -17,7 +17,7 @@ const SecondQuestion = ({
         type="text"
         value={interestInput}
         onChange={onInterestInputChange}
-        required
+        // required
       >
         <option value="">Select what you are interested in</option>
         <option value="buyer">Buyer</option>

@@ -14,17 +14,20 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
       <h2 className="page-header">third question</h2>
       <p>What is your age?</p>
       {ageGroup.map(group => (
-        <label className="label radio-item" key={group}>
-          <input
-            className="input"
-            type="radio"
-            required
-            value={group}
-            onChange={onAgeInputChange}
-            checked={ageInput === group}
-          />
-          {group}
-        </label>
+        <div className="wrapper">
+          <label className="radiobutton-container" key={group}>
+            <input
+              className="input"
+              type="radio"
+              required
+              value={group}
+              onChange={onAgeInputChange}
+              checked={ageInput === group}
+            />
+            <span className="custom-radio"></span>
+            {group}
+          </label>
+        </div>
       ))}
 
       <button type="submit" className="link-button">

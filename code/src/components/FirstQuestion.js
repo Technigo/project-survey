@@ -14,7 +14,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
         value={nameInput}
         onChange={onNameInputChange}
         name="nameInput"
-        required="required"
+        // required
       />
 
       <button type="submit" className="link-button">
