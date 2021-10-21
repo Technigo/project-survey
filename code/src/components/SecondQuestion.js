@@ -1,20 +1,22 @@
 import React from "react";
 
 const SecondQuestion = ({
-  surnameInput,
-  onSurnameInputChange,
+  secretnameInput,
+  onSecretnameInputChange,
   onStepChange,
 }) => {
   return (
     <form>
-      <label htmlFor="surnameInput">Type your surname</label>
+      <label htmlFor="secretnameInput">
+        Type your secret name (I won´t tell) :
+      </label>
       <input
-        id="surnameInput"
+        id="secretnameInput"
         type="text"
-        value={surnameInput}
-        onChange={onSurnameInputChange}
+        value={secretnameInput}
+        onChange={onSecretnameInputChange}
       />
-      <button onClick={onStepChange}>See overview</button>
+      <button onClick={onStepChange}>Next question</button>
     </form>
   );
 };

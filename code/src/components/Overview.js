@@ -1,11 +1,13 @@
 import React from "react";
 
-const Overview = ({ nameInput, surnameInput }) => {
+const Overview = ({ nameInput, secretnameInput, themeInput, lifeInput }) => {
   return (
     <section>
       <h2>My values from form: </h2>
       <p>Name : {nameInput}</p>
-      <p>Surname : {surnameInput}</p>
+      <p>Hero Name : {secretnameInput}</p>
+      <p>Theme Song : {themeInput}</p>
+      <p>Lifes saved : {lifeInput}</p>
     </section>
   );
 };
