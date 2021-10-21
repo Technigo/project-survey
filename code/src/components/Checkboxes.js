@@ -14,7 +14,10 @@ const Checkboxes = ({
     <>
       <section className="form-container">
         <h2 className="label-text">
-          WHAT DO YOU FEEL WHEN YOU SEE KITTENS? 😸
+          WHAT DO YOU FEEL WHEN YOU SEE KITTENS?
+          <span role="img" aria-label="cat emoji">
+            😸
+          </span>
         </h2>
         <div className="checkbox-container">
           <label>
