@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import Intro from "components/Intro";
+import Intro from "./components/Intro";
 import FirstQuestion from './components/FirstQuestion';
 import SecondQuestion from './components/SecondQuestion';
 import ThirdQuestion from './components/ThirdQuestion';
