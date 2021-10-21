@@ -27,10 +27,12 @@ const ReviewSubmit = ({ answers }) => {
       <p>We hope you like the {answers[2]} background!</p>
       <p>Here's a CSS code snippet you might like:</p>
       <div className="css-container">
-        <p>.{answers[1]} {`{`}</p>
+          <p className="css-first-line">
+            <span className="css-class">.{answers[1]}</span> {`{`}
+          </p>
         <ul>
-          <li>background-color: {answers[2]};</li>
-          <li>font-family: "{answers[3]}";</li>
+          <li><span className="css-property">background-color</span>: <span className="css-attribute">{answers[2]}</span>;</li>
+          <li><span className="css-property">font-family</span>: <span className="css-attribute">"{answers[3]}"</span>;</li>
           <li>{`}`}</li>
         </ul>
       </div>
