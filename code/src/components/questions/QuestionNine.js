@@ -1,10 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const QuestionNine = ({ rating, onRatingChange }) => {
-  //const [selectedOption, setState] = useState("5");
-
-  console.log("rating (in rating form)", rating);
-
   const handleOptionChange = (changeEvent) => {
     onRatingChange(changeEvent.target.value);
   };

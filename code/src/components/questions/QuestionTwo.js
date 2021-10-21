@@ -16,7 +16,7 @@ export const QuestionTwo = ({ design, onDesignRatioChange }) => {
       <label htmlFor="three">3</label>
       <input type="radio" value="4" name="four" id="four" checked={design === "4"} onChange={handleOptionChange} />
       <label htmlFor="four">4</label>
-      <input type="radio" value="5" name="five" id="five" checked={design === "5"} onChange={handleOptionChange} />
+      <input type="radio" defaultValue="5" name="five" id="five" checked={design === "5"} onChange={handleOptionChange} />
       <label htmlFor="five">5</label>
     </form>
   );

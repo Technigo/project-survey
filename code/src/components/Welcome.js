@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import AnimatedTextSpring from "./AnimatedTextSpring";
 
 export const Welcome = ({ moveOn }) => {

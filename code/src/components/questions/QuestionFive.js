@@ -1,5 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const QuestionFive = () => {
-  return <h1 className="questions-main-heading">Tell us about the delivery.</h1>;
+  return <h1 className="questions-main-heading">Tell us about the delivery</h1>;
 };

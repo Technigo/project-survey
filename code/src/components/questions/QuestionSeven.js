@@ -1,10 +1,6 @@
-import React, { useState, useEffect } from "react";
-
-// build on the tutorial https://dev.to/narendersaini32/how-to-create-range-slider-with-bubble-in-react-2eep
+import React, { useEffect } from "react";
 
 export const QuestionSeven = ({ friendliness, onFriendlinessChange }) => {
-  // const [value, onChange] = useState(1);
-
   const handleRangeChange = (changeEvent) => {
     onFriendlinessChange(changeEvent.target.value);
   };

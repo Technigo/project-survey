@@ -6,13 +6,13 @@ import { Summary } from "./components/Summary";
 export const App = () => {
   const [currentStep, setStep] = useState("welcome");
   const [rootState, setRootState] = useState({
-    design: "",
-    variety: "",
+    design: "5",
+    variety: "5",
     quality: "",
     invalidQuality: false,
     deliveryTime: "",
     invalidTime: false,
-    friendliness: "",
+    friendliness: "5",
     suggestionInput: "",
     name: "",
     nameInvalid: false,

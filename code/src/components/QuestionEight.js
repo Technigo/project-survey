@@ -1,15 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFeaturesOthersChange }) => {
-  // const [values, setValues] = useState({
-  //   soundQuality: false,
-  //   ergonomicDesign: false,
-  //   affordability: false,
-  //   other: false,
-  // });
-
-  // const [userInput, setUserInput] = useState("");
-
   return (
     <form>
       <div>
@@ -21,6 +12,7 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
           checked={features.soundQuality}
           onChange={(e) => {
             onFeaturesChange({
+              // this it the initial code and below it will be a refactored version with use os spread
               soundQuality: e.target.checked,
               ergonomicDesign: features.ergonomicDesign,
               affordability: features.affordability,
@@ -36,6 +28,7 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
           checked={features.ergonomicDesign}
           onChange={(e) => {
             onFeaturesChange({
+              // refactored version
               ...features,
               ergonomicDesign: e.target.checked,
             });
@@ -52,10 +45,8 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
           checked={features.affordability}
           onChange={(e) => {
             onFeaturesChange({
-              soundQuality: features.soundQuality,
-              ergonomicDesign: features.ergonomicDesign,
+              ...features,
               affordability: e.target.checked,
-              other: features.other,
             });
           }}
         />
@@ -67,9 +58,7 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
           checked={features.other}
           onChange={(e) => {
             onFeaturesChange({
-              soundQuality: features.soundQuality,
-              ergonomicDesign: features.ergonomicDesign,
-              affordability: features.affordability,
+              ...features,
               other: e.target.checked,
             });
           }}

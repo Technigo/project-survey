@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const QuestionFour = ({ quality, onQualityChange }) => {
   const handleSelectChange = (e) => {
