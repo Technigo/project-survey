@@ -4,24 +4,27 @@ import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
 import QuestionFour from './QuestionFour'
+import QuestionFive from './QuestionFive'
 import Summery from './Summery'
-import Progress_bar from './Progress_bar'
+// import Progress_bar from './Progress_bar'
 
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [surnameInput, setSurnameInput] = useState('')
+  const [guestInput, setGuestInput] = useState('')
   const [step, setStep] = useState(0)
   const [selectOption, setSelectOption] = useState('')
   const [radioInput, setRadioInput] = useState('')
+  const [select2Option, setSelect2Option] = useState('')
+  const [anchorTarget, setAnchorTarget] = useState(null);
     
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value)
   }
 
-  const onSurNameInputChange = (event) => {
-    setSurnameInput(event.target.value)
+  const onGuestInputChange = (event) => {
+    setGuestInput(event.target.value)
   }
 
   const onSelectOptionChange = (event) => {
@@ -32,26 +35,19 @@ const Form = () => {
     setRadioInput(event.target.value)
   }
 
+  const onSelect2OptionChange = (event) => {
+    setSelect2Option(event.target.value)
+  }
+
   const onStepChange = () => {
       setStep(step + 1)
   }
 
-  // const refreshPage = () => { 
-  //   window.location.reload(true)
-  // }
-
-//   const onEndStep = () => {
-//     setStep(step === )
-// }
-
-  // const btnScroll = () => {
-  //   executeScroll = document.getElementById('one')
-  // }
 
   return (
     <main>
 
-        <Progress_bar />
+        {/* <Progress_bar /> */}
 
         {step === 0 && (
             <Intro 
@@ -70,8 +66,8 @@ const Form = () => {
             {/* <h2>Nice to meet you {nameInput}!</h2> */}
             <QuestionTwo 
                 nameInput={nameInput} 
-                surname={surnameInput}
-                onSurNameInputChange={onSurNameInputChange}
+                guestInput={guestInput}
+                onGuestInputChange={onGuestInputChange}
                 onStepChange={onStepChange}
             />
             </>
@@ -90,12 +86,20 @@ const Form = () => {
                 onStepChange={onStepChange}
             />
          )}
-         {step === 5 && (
+          {step === 5 && (
+            <QuestionFive 
+                select2Option={select2Option}
+                onSelect2OptionChange={onSelect2OptionChange}
+                onStepChange={onStepChange}
+            />
+         )}
+         {step === 6 && (
             <Summery 
                 nameInput={nameInput} 
-                surnameInput={surnameInput}
+                guestInput={guestInput}
                 selectOption={selectOption}
                 radioInput={radioInput}
+                select2Option={select2Option}
             />
          )}
     </main>

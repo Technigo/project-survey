@@ -29,13 +29,14 @@ const QuestionThree = ({selectValue, onSelectOptionChange, onStepChange}) => {
         ];
 
     return (
-    <section className="section">
+    <section id="three" className="section">
         <div className="intro-text">
+          <label>LOVE IS ALL YOU NEED</label>
           <h2>That is a good choice!</h2>
           <p>What would constitute a “perfect” day for you?</p>
         </div>
         <form className="form">
-            <label htmlFor="select">Oh, perfect day...</label>
+            <label htmlFor="select">Oh, perfect day would be like...</label>
             <select
                 id="select-option" 
                 value={selectValue} 
@@ -46,7 +47,7 @@ const QuestionThree = ({selectValue, onSelectOptionChange, onStepChange}) => {
                 ))}
             </select>
             <div className="buttons">
-                <button onClick={onStepChange} className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+                <button onClick={onStepChange} href="#four" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
             </div>
         </form>
     </section>

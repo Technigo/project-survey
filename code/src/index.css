@@ -24,7 +24,6 @@ body {
   background-color: #1a1a1a;
   color: #fff;
   padding: 1rem;
-  /* background-image: url('./images/9_pitch_nvv.png'); */
 }
 
 a {
@@ -44,6 +43,7 @@ a {
   display: flex;
   flex-direction: column;
   max-width: 700px;
+  margin: auto;
 }
 
 .intro-text {
@@ -56,7 +56,7 @@ a {
 h1 {
   font-weight: 900;
   font-size: 48px;
-  line-height: 52px;
+  line-height: 56px;
   margin: 3rem 0 5rem 0;
   /* -webkit-text-stroke: aqua; */
 }
@@ -64,14 +64,16 @@ h1 {
 h2 {
   font-weight: 900;
   font-size: 32px;
-  line-height: 36px;
-  margin: 0;
+  line-height: 42px;
+  width: 80%;
+  margin: auto;
+  padding-top: 4rem;
 }
 
 p {
   display: inline-block;
   font-size: 1.5rem;
-  /* width: 90%; */
+  width: 90%;
   margin: 1rem;
 }
 
@@ -87,6 +89,13 @@ p {
   padding: 0 1rem 0 1rem;
   margin: 1rem 0;
   cursor: pointer;
+  width: 100%;
+}
+
+
+.buttons {
+  display: flex;
+  margin: auto;
   width: 100%;
 }
 
@@ -115,7 +124,7 @@ select {
 .form {
   display: flex;
   flex-direction: column;
-  background-color: #333;
+  background-color: #222;
   border-radius: 12px;
   padding: 1.5rem;
   max-width: 700px;
@@ -133,16 +142,11 @@ select {
   margin: 0 1rem 0 0;
 }
 
-/* .summery-list {
-  background-color: #444;
-  border-radius: 12px;
-  padding: 1rem;
-} */
 
 .summery-list-item {
   display: flex;
   flex-direction: column;
-  background-color: #444;
+  background-color: #222;
   border-radius: 12px;
   padding: 0.5rem 1rem;
   margin-bottom: 0.5rem;
@@ -160,6 +164,80 @@ h4 {
   margin: 0;
 }
 
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 10s infinite;
+  z-index: -1;
+  clip: rect(auto, auto, auto, auto);
+}
+
+.small {
+  width: 150px;
+  height: 150px;
+  left: 40px;
+  bottom: 50px;
+  background-color: #444;
+}
+
+.medium {
+  display: none;
+}
+
+.large {
+  width: 300px;
+  height: 300px;
+  left: -100px;
+  bottom: 400px;
+  background-color: tomato;
+}
+
+.xlarge {
+  display: none;
+}
+
+.xxlarge {
+  width: 400px;
+  height: 400px;
+  left: 100px;
+  bottom: 100px;
+  background-color: aqua;
+}
+
+.shade1 {
+  opacity: 0.2;
+}
+.shade2 {
+  opacity: 0.5;
+}
+
+.shade3 {
+  opacity: 0.7;
+}
+
+.shade4 {
+  opacity: 0.8;
+}
+
+.shade5 {
+  opacity: 0.9;
+}
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
+}
+
 
 @media (min-width: 800px) {
 
@@ -167,85 +245,39 @@ h4 {
     padding-top: 9rem;
   }
 
-  .circle{
-    position: absolute;
-    border-radius: 50%;
-    background: white;
-    animation: ripple 15s infinite;
-    z-index: -1;
-    /* box-shadow: 0px 0px 1px 0px #508fb9; */
+  h1 {
+    font-size: 56px;
+    line-height: 66px;
   }
-  
-  .small {
-    width: 150px;
-    height: 150px;
-    left: 40px;
-    bottom: 50px;
-    background-color: #444
-  }
-  
+
   .medium {
-    width: 100px;
-    height: 100px;
-    left: 0;
-    bottom: 0;
+    display: block;
+    width: 200px;
+    height: 200px;
+    left: 1100px;
+    bottom: 50px;
+    background-color: rgb(141, 46, 98);
   }
-  
-  .large {
-    width: 300px;
-    height: 300px;
-    left: -100px;
-    bottom: 400px;
-    background-color: tomato;
-  }
-  
+
   .xlarge {
+    display: block;
     width: 500px;
     height: 500px;
     left: 1000px;
     bottom: 500px;
     background-color: yellow;
   }
-  
-  .xxlarge {
-    width: 400px;
-    height: 400px;
-    left: 100px;
-    bottom: 100px;
-    background-color: aqua;
+
+  .radio-label {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: left
   }
   
-  .shade1 {
-    opacity: 0.2;
-  }
-  .shade2 {
-    opacity: 0.5;
-  }
-  
-  .shade3 {
-    opacity: 0.7;
-  }
-  
-  .shade4 {
-    opacity: 0.8;
-  }
-  
-  .shade5 {
-    opacity: 0.9;
-  }
-  
-  @keyframes ripple{
-    0%{
-      transform: scale(0.8);
-    }
-    
-    50%{
-      transform: scale(1.2);
-    }
-    
-    100%{
-      transform: scale(0.8);
-    }
+  .radio-select {
+    width: 24px;
+    margin: 0 1rem 0 0;
   }
   
 }

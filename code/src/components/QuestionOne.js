@@ -5,8 +5,9 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange}) => {
     return (
         <section className="section" id="one" >
             <div className="intro-text">
-                <h2>First let's get to know eachother!</h2>
-                <p>My name is Jessi, what's yours?</p>
+            <label>LOREM IPSUM DOLOR SIT AMET</label>
+                <h2>I'd love to know your name! My name is Jessi, what is yours?</h2>
+                <p>Did you know that the most popular names over the last 100 years are James & Mary?</p>
             </div>
             <form id="question-one" className="form">
                 <label htmlFor="nameInput">Type your name here</label>
@@ -17,7 +18,7 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange}) => {
                     onChange={onNameInputChange}
                 />
                 <div className="buttons">
-                    <button onClick={onStepChange} className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+                    <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
                 </div>
             </form>
         </section>

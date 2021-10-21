@@ -2,15 +2,13 @@ import React from 'react'
 
 const Intro = ({onStepChange}) => {
     return (
-    <section className="section">
+    <section id="#intro" className="section">
       <div className="intro-text">
         <label>LOVE IS ALL YOU NEED</label>
-        <h1>Lets talk about something important, life.</h1>
-        {/* <p>Be a sport and click the first button <span role="img" aria-label="happy emoji">😄</span> !</p> */}
+        <h1>I have a couple of questions for you, let's get to know eachother a bit better?</h1>
       </div>
       <div className="buttons">
-        <button onClick={onStepChange} className="btn"><a href="#question-one">Yes let's!</a></button> 
-        {/* <button onClick={}>No way Jose'</button>  */}
+        <button onClick={onStepChange} className="btn"><a href="#one">Yes let's!</a></button> 
       </div>
     </section>
     )
