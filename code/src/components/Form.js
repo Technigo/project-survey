@@ -4,15 +4,17 @@ import "./form.css";
 import YourName from "components/YourName";
 import Taglines from "./Taglines";
 import Drinks from "./Drinks";
-import BravoMentor from "./BravoMentor";
+//import BravoMentor from "./BravoMentor";
 import Summary from "./Summary";
+import Mentors from "./Mentors";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [drink, setDrink] = useState("");
   const [tagline, setTagline] = useState("");
-  const [bravo, setBravo] = useState("");
+  //const [bravo, setBravo] = useState("");
   const [step, setStep] = useState(1);
+  const [mentor, setMentor] = useState("");
 
   const onNameChange = (event) => {
     setName(event.target.value);
@@ -26,12 +28,20 @@ const Form = () => {
     setTagline(event.target.value);
   };
 
-  const onBravoChange = (event) => {
-    setBravo(event.target.value);
+  // const onBravoChange = (event) => {
+  //   setBravo(event.target.value);
+  // };
+
+  const onMentorChange = (event) => {
+    setMentor(event.target.value);
   };
 
   const onStepChange = () => {
     setStep(step + 1);
+  };
+
+  const onPreviousQuestionChange = () => {
+    setStep(step - 1);
   };
 
   // v1
@@ -48,6 +58,7 @@ const Form = () => {
         <Taglines
           tagline={tagline}
           onTaglineChange={onTaglineChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
@@ -55,18 +66,20 @@ const Form = () => {
         <Drinks
           drink={drink}
           onDrinkChange={onDrinkChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 4 && (
-        <BravoMentor
-          bravo={bravo}
-          onBravoChange={onBravoChange}
+        <Mentors
+          mentor={mentor}
+          onMentorChange={onMentorChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 5 && (
-        <Summary name={name} drink={drink} tagline={tagline} bravo={bravo} />
+        <Summary name={name} drink={drink} tagline={tagline} mentor={mentor} />
       )}
     </div>
   );

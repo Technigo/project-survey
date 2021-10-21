@@ -1,7 +1,7 @@
 import React from "react";
 import "./summary.css";
 
-const Summary = ({ name, drink, tagline, bravo }) => {
+const Summary = ({ name, drink, tagline, bravo, mentor }) => {
   return (
     <div className="question-container">
       <h2 className="question-title">
@@ -19,8 +19,13 @@ const Summary = ({ name, drink, tagline, bravo }) => {
           <b>Tagline:</b> {tagline}
         </p>
         <p className="summary-text">
-          <b>Mentor:</b> {bravo}
+          <b>Mentor:</b> {mentor}
         </p>
+        <form className="submit-button-form">
+          <button className="next-button" type="submit">
+            Do it again?
+          </button>
+        </form>
       </section>
     </div>
   );

@@ -1,7 +1,12 @@
 import React from "react";
 import "./drinks.css";
 
-const Drinks = ({ drink, onDrinkChange, onStepChange }) => {
+const Drinks = ({
+  drink,
+  onDrinkChange,
+  onStepChange,
+  onPreviousQuestionChange,
+}) => {
   // v1
   return (
     <div className="question-container">
@@ -25,9 +30,15 @@ const Drinks = ({ drink, onDrinkChange, onStepChange }) => {
           <option value="coke">Coke</option>
           <option value="milk">Milk</option>
         </select>
-        <button className="next-button" onClick={onStepChange}>
-          Next question >>
-        </button>
+
+        <div className="button-box">
+          <button className="next-button" onClick={onPreviousQuestionChange}>
+             ← Go back?
+          </button>
+          <button className="next-button" onClick={onStepChange}>
+            Next question →
+          </button>
+        </div>
       </form>
     </div>
   );

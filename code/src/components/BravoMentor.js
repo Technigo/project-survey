@@ -1,12 +1,12 @@
 import React from "react";
 import "./bravoMentor.css";
 
-const BravoMentor = ({ bravo, onStepChange }) => {
+const BravoMentor = ({ bravo, onBravoChange, onStepChange }) => {
   return (
     <div className="question-container">
       <h2 className="question-title">
-        Since getting into reality can be quite daunting. So you get to choose
-        your mentor:
+        Since getting into reality can be quite daunting you get to choose your
+        mentor:
       </h2>
       <form className="bravomentor">
         <span class="mentorcardbox">
@@ -15,7 +15,7 @@ const BravoMentor = ({ bravo, onStepChange }) => {
             type="image"
             src="pictures/Erika-Jayne.jpeg"
             alt="erika jayne"
-            value={bravo}
+            value="Erika Janye"
             onClick={onStepChange}
           />
           <p className="mentorcard-text">

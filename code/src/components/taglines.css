@@ -30,6 +30,16 @@
   font-style: italic;
 }
 
+.taglines-quotes {
+  cursor: pointer;
+}
+
+.button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 @media (min-width: 730px) {
   .tagline-container {
     width: 500px;
@@ -38,5 +48,11 @@
   .question-title {
     width: 600px;
     font-size: revert;
+  }
+
+  .button-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
   }
 }

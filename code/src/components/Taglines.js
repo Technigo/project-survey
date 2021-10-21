@@ -1,7 +1,11 @@
 import React from "react";
 import "./taglines.css";
 
-const Taglines = ({ tagline, onTaglineChange, onStepChange }) => {
+const Taglines = ({
+  onTaglineChange,
+  onStepChange,
+  onPreviousQuestionChange,
+}) => {
   // v1
   return (
     <div className="question-container">
@@ -51,10 +55,14 @@ const Taglines = ({ tagline, onTaglineChange, onStepChange }) => {
           />
           "I have fame and fortune, and I've googled it!"
         </label>
-
-        <button className="next-button" onClick={onStepChange}>
-          Next question >>
-        </button>
+        <div className="button-box">
+          <button className="next-button" onClick={onPreviousQuestionChange}>
+            ← Go back?
+          </button>
+          <button className="next-button" onClick={onStepChange}>
+            Next question →
+          </button>
+        </div>
       </form>
     </div>
   );
