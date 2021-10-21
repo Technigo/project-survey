@@ -1,8 +1,6 @@
 # This file tells netlify where the code for this project is and
 # how it should build the JavaScript assets to deploy from.
-
-
-[[redirects]]
-  from = "/*"
-  to = "/"
-  status = 200
+[build]
+   base = "code/"
+   publish = "build/"
+   command = "npm run build"
