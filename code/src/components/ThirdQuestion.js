@@ -4,9 +4,12 @@ const ThirdQuestion = ({ candyInput, onCandyInputChange, onStepChange }) => {
   return (
     <>
       <h2>
-        Trick or treat!<span>👻</span>
+        Trick or treat!
+        <span role="img" aria-label="ghost">
+          👻
+        </span>
       </h2>
-      <img className="svg-image" src="./icons/candy.svg"></img>
+      <img className="svg-image" alt="candy-svg" src="./icons/candy.svg"></img>
       <p>Select your favourite Halloween candy</p>
       <form>
         <select
