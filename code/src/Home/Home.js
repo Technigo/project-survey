@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react'
 import './Home.css'
 
-export const Home = ({ setShowHome, setCurrent, questionsRecord, setQuestionsRecord, current }) => {
+export const Home = ({ setShowHome, setCurrent, questionsRecord, setQuestionsRecord }) => {
 
-    const changeScreen = () => {
+    const handleChangeScreen = () => {
         setShowHome(false)
         setCurrent(1)
         questionsRecord.push(1);
@@ -19,7 +19,7 @@ export const Home = ({ setShowHome, setCurrent, questionsRecord, setQuestionsRec
             <div className="home_image_container">
                 <img className="home_image" src="./images/home-image.jpeg" alt="star wars image" />
             </div>
-            <button className="home_button" onClick={changeScreen}>Start quiz</button>
+            <button className="home_button" onClick={handleChangeScreen}>Start</button>
         </div>
     )
 }

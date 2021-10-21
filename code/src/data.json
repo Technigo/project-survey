@@ -10,7 +10,7 @@
         },
         {
             "questionNumber": 2,
-            "question": "What is your favorite master",
+            "question": "What is your favorite master?",
             "options": {
                 "dark": [
                     {
@@ -44,7 +44,7 @@
         },
         {
             "questionNumber": 3,
-            "question": "What is the most beautifull planet in the galaxi?",
+            "question": "What is the most beautiful planet in the galaxi?",
             "options": [
                 {
                     "planet": "Kamino",
@@ -88,12 +88,12 @@
             "question": "How many aliases do you want for a war?",
             "options": {
                 "min": "0",
-                "max": "100000"
+                "max": "1000"
             }
         },
         {
             "questionNumber": 6,
-            "question": "What name do you use if you were a master",
+            "question": "What name would you like to use as a master?",
             "options": ""
         }
     ]

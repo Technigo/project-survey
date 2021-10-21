@@ -10,36 +10,36 @@ export const App = () => {
   const [current, setCurrent] = useState(null)
   const [questionsRecord, setQuestionsRecord] = useState([])
   const [showStory, setShowStory] = useState(false)
-  const [result, setResult] = useState({})
-  const [name, setName] = useState("")
+  const [result, setResult] = useState({ answer1: 'light' })
 
   return (
-    <section className="main-content">
-      {showHome && <><Home
-        setShowHome={setShowHome}
-        current={current}
-        setCurrent={setCurrent}
-        setQuestionsRecord={setQuestionsRecord}
-        questionsRecord={questionsRecord} />
-        <Footer /></>}
-      {current && <QuestionsCard
-        setShowHome={setShowHome}
-        showHome={showHome}
-        data={data}
-        current={current}
-        setCurrent={setCurrent}
-        setShowStory={setShowStory}
-        setQuestionsRecord={setQuestionsRecord}
-        questionsRecord={questionsRecord}
-        setResult={setResult}
-        result={result}
-        setName={setName}
-        name={name} />
-      }
-      {showStory && <Story
-        result={result}
-      />}
-
-    </section>
+    <>
+      <section className="main-content">
+        {showHome && <Home
+          setShowHome={setShowHome}
+          current={current}
+          setCurrent={setCurrent}
+          setQuestionsRecord={setQuestionsRecord}
+          questionsRecord={questionsRecord} />
+        }
+        {current && <QuestionsCard
+          setShowHome={setShowHome}
+          showHome={showHome}
+          data={data}
+          current={current}
+          setCurrent={setCurrent}
+          setShowStory={setShowStory}
+          setQuestionsRecord={setQuestionsRecord}
+          questionsRecord={questionsRecord}
+          setResult={setResult}
+          result={result}
+        />
+        }
+        {showStory && <Story
+          result={result}
+        />}
+      </section>
+      <Footer />
+    </>
   )
 }

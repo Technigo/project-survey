@@ -4,7 +4,20 @@ import AnswerCollector from "../AnswerCollector/AnswerCollector"
 import './QuestionsCard.css'
 
 
-const QuestionsCard = ({ data, current, setCurrent, setShowStory, setQuestionsRecord, questionsRecord, showHome, setShowHome, setResult, result, name, setName }) => {
+const QuestionsCard = ({
+    data,
+    current,
+    setCurrent,
+    setShowStory,
+    setQuestionsRecord,
+    questionsRecord,
+    showHome,
+    setShowHome,
+    setResult,
+    result,
+    name,
+    setName
+}) => {
     const totalQuestions = data.questions.length;
 
     const question = data.questions.filter(question => {
@@ -19,7 +32,6 @@ const QuestionsCard = ({ data, current, setCurrent, setShowStory, setQuestionsRe
             questionsRecord.push(newCurrent)
             setQuestionsRecord(questionsRecord)
 
-            console.log("next", newCurrent)
         } else if (current === totalQuestions) {
             setShowStory(true)
             setCurrent(null)
@@ -41,9 +53,9 @@ const QuestionsCard = ({ data, current, setCurrent, setShowStory, setQuestionsRe
     }
 
     return (
-        <div className="questions_container">
-            <button className="questions_return_button" onClick={previousQuestion}>Return</button>
-            <div className="questions_text">
+        <div className="questionsCard_container">
+            <button className="questionsCard_return_button" onClick={previousQuestion}>Return</button>
+            <div className="questionsCard_text">
                 <Question question={question[0]} />
                 <AnswerCollector
                     answer={question[0]}
@@ -59,7 +71,7 @@ const QuestionsCard = ({ data, current, setCurrent, setShowStory, setQuestionsRe
 
                 />
             </div>
-            <button className="questions_next_button" onClick={nextQuestion}>Next</button>
+            <button className="questionsCard_next_button" onClick={nextQuestion}>Next</button>
 
         </div>
     )

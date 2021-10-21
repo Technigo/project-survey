@@ -16,19 +16,20 @@ const Story = ({ result }) => {
             <section class="star-wars">
                 <div className="story_container">
                     <h3 className="story_text">
-                        <div class="title">
+                        <div class="story_title">
                             <p>Episode XXXI</p>
                             <h1>A New New New Hope!</h1>
                         </div>
                         <p>It is a period of civil war.</p>
                         <p>In some planets around the galaxy some
                             army forces from ligth and dark side are wrestling
-                            for the control.</p>
-                        <p>The leader from <strong>{result.answer1}</strong> side of the force are winning
+                            for the control of the galaxy.</p>
+                        <p>The leader from <strong>{result.answer1}</strong> side of the force is winning
                             all the battles. </p>
                         <p>Finally <strong>{result.answer2}</strong> is gettin get advantage
                             to get the control of the galaxy.</p>
-                        <p>Meanwhile in <strong>{result.answer3}</strong> the leader of the rebel forces "name"
+                        <p>Meanwhile in <strong>{result.answer3}</strong> the leader of
+                            the rebel forces {result.answer6}"
                             have an arm of <strong>{result.answer5}</strong> alliases.</p>
                         <p>The <strong>{result.answer4}</strong> ligth of
                             the leader sable guide this new rebels to the victory to

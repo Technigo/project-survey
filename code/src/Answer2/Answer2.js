@@ -6,9 +6,7 @@ const Answer2 = ({ answer, setResult, result }) => {
     const onChangeSets = (event) => {
         event.preventDefault()
         setResult({ ...result, answer2: event.target.value })
-
     }
-
 
     return (
         <div className="answer_dropdown_container">
@@ -16,6 +14,7 @@ const Answer2 = ({ answer, setResult, result }) => {
                 <>
                     <div className="answer_form_dropdown">
                         <select
+                            required
                             className="select_form_dropdown"
                             onChange={onChangeSets}
                             value={result.answer2}
@@ -36,13 +35,19 @@ const Answer2 = ({ answer, setResult, result }) => {
                             })}
                         </select>
                     </div>
+                    <div className="dropdown_image_title">
+                        <h2>Do you know every master?</h2>
+                    </div>
                     <div className="dropdown_image_container">
                         {result.answer1 === "dark" && answer.options.dark.map(option => {
                             return (
-                                <div key={option.character} className="dropdown_image_uni_container">
-                                    <img className="dropdown_image_dark dropdown_image" src={option.image} />
-                                    <p>{option.character}</p>
-                                </div>
+                                <>
+                                    <div key={option.character} className="dropdown_image_uni_container">
+                                        <img className="dropdown_image_dark dropdown_image" src={option.image} />
+                                        <p>{option.character}</p>
+                                    </div>
+
+                                </>
                             )
                         })}
                         {result.answer1 === "ligth" && answer.options.ligth.map(option => {
@@ -59,6 +64,5 @@ const Answer2 = ({ answer, setResult, result }) => {
         </div>
     )
 }
-
 
 export default Answer2

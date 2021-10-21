@@ -1,8 +1,8 @@
-.answer_form_radio_container{
+.form_radio_container{
     color: white;
 }
 
-.answer_form_radio{
+/* .answer_form_radio{
     color: white;
     font-size: 1.5rem;
     display: flex;
@@ -35,4 +35,4 @@ width: 100px;
 height: 30px;
 padding: 15px;
 margin: 15px;
-}
+} */

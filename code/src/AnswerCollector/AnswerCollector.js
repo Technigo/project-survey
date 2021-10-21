@@ -11,8 +11,6 @@ const AnswerCollector = ({
     answer,
     setResult,
     result,
-    setName,
-    name,
     showHome,
     setQuestionsRecord,
     questionsRecord,
@@ -21,8 +19,6 @@ const AnswerCollector = ({
 
     return (
         <div className="answer_container">
-
-
             {answer.questionNumber === 1 &&
                 <Answer1 answer={answer} setResult={setResult} result={result} />
             }
@@ -43,8 +39,6 @@ const AnswerCollector = ({
                     answer={answer}
                     setResult={setResult}
                     result={result}
-                    setName={setName}
-                    name={name}
                     showHome={showHome}
                     setQuestionsRecord={setQuestionsRecord}
                     questionsRecord={questionsRecord}
@@ -54,6 +48,5 @@ const AnswerCollector = ({
         </div>
     )
 }
-
 
 export default AnswerCollector

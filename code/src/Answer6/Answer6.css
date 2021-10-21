@@ -1,6 +1,19 @@
+.form_text{
+    display: flex;
+    flex-direction: column;
+    margin: 10px auto;
+}
+
 .form_text_input{
-    width: 100px;
-    height: 30px;
-    background: wheat;
-    color:white
+    width: 200px;
+    height: 40px;
+    background: rgb(230, 180, 87);
+    color:black;
+    margin: 20px auto;
+    font-size: 1rem;
+}
+
+.form_text_label{
+    color: white;
+    margin: 0px 10px;
 }

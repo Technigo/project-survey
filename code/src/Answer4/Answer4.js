@@ -8,7 +8,6 @@ const Answer4 = ({ answer, setResult, result }) => {
         setResult({ ...result, answer4: event.target.value })
     }
 
-
     return (
         <div className="answer4_dropdown_container">
             {answer.questionNumber === 4 &&
@@ -35,7 +34,7 @@ const Answer4 = ({ answer, setResult, result }) => {
                             })}
                         </select>
                     </div>
-                    {/* <div className="dropdown4_image_container">
+                    <div className="dropdown4_image_container">
                         {result.answer1 === "dark" && answer.options.dark.map(option => {
                             return (
                                 <div key={option.character} className="dropdown4_image_uni_container">
@@ -52,7 +51,7 @@ const Answer4 = ({ answer, setResult, result }) => {
                                 </div>
                             )
                         })}
-                    </div> */}
+                    </div>
                 </>
             }
         </div>

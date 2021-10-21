@@ -1,33 +1,32 @@
 import React from 'react'
 import './Answer6.css'
 
-const Answer6 = ({ answer, setResult, result }) => {
+const Answer6 = ({ setResult, result }) => {
 
-    const changeScreen = (event) => {
-        setResult({ answer6: event.target.value })
+    const handleOnChange = (event) => {
+        setResult({ ...result, answer6: event.target.value })
     }
 
     return (
-        <div className="answer_form_radio_container">
-            <form onSubmit={event => event.preventDefault()} className="answer_form_text">
+        <div className="form_text_container">
+            <form onSubmit={event => event.preventDefault()} className="form_text">
                 <input
                     required
                     type="text"
-                    id="answer0"
+                    id={result.answer6}
                     value={result.answer6}
-                    onChange={(event) => changeScreen(event)}
+                    onChange={(event) => handleOnChange(event)}
                     className="form_text_input"
+                    placeholder={result.answer1 === "dark" ? "Darth Ovidious" : "Jar Ovidious"}
                 />
                 <label
                     className="form_text_label"
-                    for="answer0">
-                    <span>{result.answer6}</span>
+                    for={result.answer6}>
+                    <span>Would you like {result.answer6 ? result.answer6 : "to use your own name"}?</span>
                 </label>
             </form>
         </div>
-
     )
 }
-
 
 export default Answer6
