@@ -7,7 +7,7 @@ body {
   flex-direction: column;
   justify-content: center;
   height: 100vh;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.418)), url("./assets/background-image.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.699), rgba(0, 0, 0, 0.623)), url("./assets/background-image.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,6 +30,7 @@ code {
   font-weight: 400;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
+  font-family: 'Covered By Your Grace';
 }
 
 .question {
@@ -48,7 +49,6 @@ code {
   font-size: 18px;
   font-weight: 400;
   color: #ffc964;
-  text-shadow: 1px 1px #cc9837;
   margin-top: -90px;
 }
 
@@ -125,7 +125,6 @@ code {
 .radio-buttons-container {
   font-size: 16px;
   color: #ffc964;
-  text-shadow: 1px 1px #cc9837;
   display: flex;
   flex-direction: column;
   row-gap: 5px;
@@ -198,7 +197,6 @@ code {
   display: block;
   font-size: 18px;
   color: #ffc964;
-  text-shadow: 1px 1px #cc9837;
 }
 
 .input-form:focus {
@@ -250,7 +248,7 @@ code {
   background-image: none;
   flex: 1;
   padding: 0 .5em;
-  color: #cc9837;
+  color: #a56c03;
   cursor: pointer;
   font-size: 18px;
   font-family: 'Josefin Sans', sans-serif;
@@ -264,6 +262,7 @@ code {
 
 .slider-container {
   width: 75%;
+  line-height: 20px;
 }
 
 .slider {
@@ -295,7 +294,6 @@ code {
 
 .slider-values-container {
   color: #ffc964;
-  text-shadow: 1px 1px #cc9837;
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
@@ -332,6 +330,15 @@ code {
   .welcome-message-container, .alias-buttons-container, .question-one-container, .question-two-container, .question-three-container, .question-four-container, .question-five-container, .overview-container {
     align-items: center;
   }
+  .welcome-message {
+    font-size: 60px;
+  }
+  .radio-button-overlay, .answer-overview {
+    font-size: 20px;
+  }
+  .question, .overview-title {
+    font-size: 30px;
+  }
   .progress-bar {
     width: 200px;
   }
@@ -346,47 +353,23 @@ code {
   }
 }
 
-/* @media (min-width: 992px) {
-  .progress-bar {
-    width: 30%;
-  }
-  .form-style {
-    width: 60%;
-  }
-  .select-style {
-    width: 40%;
-  }
-  .slider-container {
-    width: 50%;
-  }
-}
-
 @media (min-width: 1200px) {
-  .progress-bar {
-    width: 25%;
-  }
-  .form-style {
-    width: 50%;
-  }
-  .select-style {
-    width: 35%;
-  }
   .slider-container {
-    width: 40%;
+    width: 500px;
   }
 }
 
 @media (min-width: 1400px) {
-  .progress-bar {
-    width: 300px;
+  .welcome-message {
+    font-size: 80px;
   }
-  .form-style {
-    width: 45%;
-  }
-  .select-style {
-    width: 30%;
+  .radio-button-overlay, .answer-overview, .overview-message {
+    font-size: 24px;
   }
   .slider-container {
-    width: 35%;
+    width: 600px;
   }
-} */
+  .question, .overview-title {
+    font-size: 38px;
+  }
+}

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const radioButtonInputs = ['happy', 'hored', 'excited', 'sleepy']
+const radioButtonInputs = ['happy', 'bored', 'excited', 'sleepy']
 
 const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioButtonChange, onStepChange }) => {
     return (
