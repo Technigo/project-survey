@@ -5,9 +5,71 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px;
+}
+
+h2 {
+  font-size: 20px;
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* border: solid #a259ff 5px; */
+  box-shadow: 0 2px 40px grey;
+  border-radius: 10px;
+  min-width: 200px;
+  max-width: 800px;
+  height: 400px;
+  background-color: white;
+  padding: 30px;
+}
+
+input {
+  margin: 20px;
+}
+
+.input-radio {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-select {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: 20px;
+  min-width: 70px;
+}
+
+.radio-choice {
+}
+
+button {
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  font-weight: bold;
 }

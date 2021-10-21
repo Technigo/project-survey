@@ -11,10 +11,10 @@ import Overview from "./Overview";
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [animalInput, setAnimalInput] = useState("");
-  const [bodyInput, setBodyInput] = useState("");
+  const [astleyInput, setAstleyInput] = useState("");
   const [gameInput, setGameInput] = useState("");
   const [pizzaInput, setPizzaInput] = useState("");
-  const [outfitInput, setOutfitInput] = useState("");
+  const [mathInput, setMathInput] = useState("");
   const [step, setStep] = useState(1);
 
   const onNameInputChange = (event) => {
@@ -25,8 +25,8 @@ const Form = () => {
     setAnimalInput(event.target.value);
   };
 
-  const onBodyInputChange = (event) => {
-    setBodyInput(event.target.value);
+  const onAstleyInputChange = (event) => {
+    setAstleyInput(event.target.value);
   };
 
   const onGameInputChange = (event) => {
@@ -37,8 +37,8 @@ const Form = () => {
     setPizzaInput(event.target.value);
   };
 
-  const onOutfitInputChange = (event) => {
-    setOutfitInput(event.target.value);
+  const onMathInputChange = (event) => {
+    setMathInput(event.target.value);
   };
 
   const onStepChange = () => {
@@ -63,8 +63,8 @@ const Form = () => {
       )}
       {step === 3 && (
         <ThirdQuestion
-          bodyInput={bodyInput}
-          onBodyInputChange={onBodyInputChange}
+          astleyInput={astleyInput}
+          onAstleyInputChange={onAstleyInputChange}
           onStepChange={onStepChange}
         />
       )}
@@ -84,8 +84,8 @@ const Form = () => {
       )}
       {step === 6 && (
         <SixtQuestion
-          outfitInput={outfitInput}
-          onOutfitInputChange={onOutfitInputChange}
+          mathInput={mathInput}
+          onMathInputChange={onMathInputChange}
           onStepChange={onStepChange}
         />
       )}
@@ -93,10 +93,10 @@ const Form = () => {
         <Overview
           nameInput={nameInput}
           animalInput={animalInput}
-          bodyInput={bodyInput}
+          astleyInput={astleyInput}
           gameInput={gameInput}
           pizzaInput={pizzaInput}
-          outfitInput={outfitInput}
+          mathInput={mathInput}
         />
       )}
     </div>

@@ -1,30 +1,17 @@
 import React from "react";
 
-const ThirdQuestion = ({ bodyInput, onBodyInputChange, onStepChange }) => {
+const ThirdQuestion = ({ astleyInput, onAstleyInputChange, onStepChange }) => {
   return (
     <form>
-      <h2>Would you rather be without elbows or without knees?</h2>
-      <label htmlFor="bodyInput">Elbow</label>
-      <input
-        type="radio"
-        value="elbow"
-        onChange={onBodyInputChange}
-        checked={bodyInput === "elbow"}
-      />
-      <span role="img" aria-label="elbow">
-        💪
-      </span>
-
-      <label htmlFor="bodyInput">Knee</label>
-      <input
-        type="radio"
-        value="knee"
-        onChange={onBodyInputChange}
-        checked={bodyInput === "knee"}
-      />
-      <span role="img" aria-label="knee">
-        🥢
-      </span>
+      <h2>Rick Astley is never gonna:</h2>
+      <select onChange={onAstleyInputChange} value={astleyInput}>
+        <option value="">Select:</option>
+        <option value="give-you-up">give you up</option>
+        <option value="let-you-down">let you down</option>
+        <option value="make.you-cry">make you cry</option>
+        <option value="hurt-you">hurt you</option>
+        <option value="all-above">all of the above</option>
+      </select>
       <button onClick={onStepChange}>Next Question</button>
     </form>
   );

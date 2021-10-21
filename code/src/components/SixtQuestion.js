@@ -1,27 +1,16 @@
 import React from "react";
 
-const SixtQuestion = ({ outfitInput, onOutfitInputChange, onStepChange }) => {
+const SixtQuestion = ({ mathInput, onMathInputChange, onStepChange }) => {
   return (
     <form>
-      <h2>
-        If it meant you could save pizza from extinction, would you eat a
-        cricket?
-      </h2>
-      <label htmlFor="outfitInput">Pyjamas</label>
-      <input
-        type="radio"
-        value="pyjamas"
-        onChange={onOutfitInputChange}
-        checked={outfitInput === "pyjamas"}
-      />
-
-      <label htmlFor="outfitInput">Suit</label>
-      <input
-        type="radio"
-        value="suit"
-        onChange={onOutfitInputChange}
-        checked={outfitInput === "suit"}
-      />
+      <h2>Mental break time, you deserve an easy question. What is 1+1?</h2>
+      <select onChange={onMathInputChange} value={mathInput}>
+        <option value="">Select:</option>
+        <option value="a">a. not this one</option>
+        <option value="b">b. still not this one</option>
+        <option value="c">c. 2</option>
+        <option value="d">d. you've gone too far, go back to C.</option>
+      </select>
       <button onClick={onStepChange}>See Overview</button>
     </form>
   );

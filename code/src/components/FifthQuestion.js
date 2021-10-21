@@ -14,6 +14,9 @@ const FifthQuestion = ({ pizzaInput, onPizzaInputChange, onStepChange }) => {
         onChange={onPizzaInputChange}
         checked={pizzaInput === "yes"}
       />
+      <span role="img" aria-label="pizza">
+        🦗🍕
+      </span>
 
       <label htmlFor="pizzaInput">No</label>
       <input
@@ -22,6 +25,9 @@ const FifthQuestion = ({ pizzaInput, onPizzaInputChange, onStepChange }) => {
         onChange={onPizzaInputChange}
         checked={pizzaInput === "no"}
       />
+      <span role="img" aria-label="">
+        🤢
+      </span>
       <button onClick={onStepChange}>Next Question</button>
     </form>
   );

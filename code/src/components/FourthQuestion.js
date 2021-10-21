@@ -14,6 +14,9 @@ const FourthQuestion = ({ gameInput, onGameInputChange, onStepChange }) => {
         onChange={onGameInputChange}
         checked={gameInput === "inside"}
       />
+      <span role="img" aria-label="gaming consol">
+        🎮
+      </span>
 
       <label htmlFor="gameInput">Outside</label>
       <input
@@ -22,6 +25,9 @@ const FourthQuestion = ({ gameInput, onGameInputChange, onStepChange }) => {
         onChange={onGameInputChange}
         checked={gameInput === "outside"}
       />
+      <span role="img" aria-label="">
+        🌍
+      </span>
       <button onClick={onStepChange}>Next Question</button>
     </form>
   );
