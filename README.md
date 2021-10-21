@@ -15,11 +15,12 @@ Red
 
 Black      
         
-- Visualize to the user how far through the survey they are, and how much is left, by creating a progress bar
 - Use Regex validation for some input on your survey
 - Show different questions depending on the answer to a specific question
 
 Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+more time - styled components package
 
 ## View it live
 
