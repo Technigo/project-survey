@@ -1,8 +1,12 @@
 import React from "react";
+import Confetti from "./Confetti";
 
 export const Summary = ({ rootState }) => {
   return (
     <div>
+      <div>
+        <Confetti />
+      </div>
       <div className="summary">
         <div>
           <h1 className="questions-main-heading">Thank you for your feedback!</h1>

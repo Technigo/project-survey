@@ -20,14 +20,6 @@ code {
   font-family: "Helvetica Neue";
 }
 
-.slider-parent {
-  position: relative;
-}
-
-.bubble {
-  position: absolute;
-}
-
 .container {
   z-index: 0;
   display: flex;

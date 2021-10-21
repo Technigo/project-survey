@@ -8,7 +8,7 @@ export const QuestionSeven = ({ friendliness, onFriendlinessChange }) => {
   useEffect(() => {
     const slider = document.querySelector(".bubble");
     if (slider) {
-      slider.style.left = `${Number(friendliness * 12 - 5)}px`;
+      slider.style.left = `${Number(friendliness * 20)}px`;
     }
   });
   return (
@@ -17,7 +17,7 @@ export const QuestionSeven = ({ friendliness, onFriendlinessChange }) => {
         <h1 className="questions-main-heading">Friendliness</h1>
       </div>
       <div className="slider-parent">
-        <input type="range" min="1" max="10" value={friendliness} onChange={handleRangeChange} />
+        <input className="range" type="range" min="1" max="10" value={friendliness} onChange={handleRangeChange} />
         <div className="bubble">{friendliness}</div>
       </div>
     </form>
