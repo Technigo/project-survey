@@ -1,5 +1,6 @@
 import React, { useState } from "react"
 
+import Header from "./Header"
 import Starter from "./Starter"
 import FirstQuestion from "./FirstQuestion"
 import SecondQuestion from "./SecondQuestion"
@@ -68,74 +69,77 @@ const Form = () => {
   // ----- RENDERING -----
 
   return (
-    <main className="main-contaniner">
-      {step === 0 && <Starter onNextQuestionChange={onNextQuestionChange} />}
+    <>
+      <Header />
+      <main className="main-contaniner">
+        {step === 0 && <Starter onNextQuestionChange={onNextQuestionChange} />}
 
-      {/* FirstQuestion */}
-      {step === 1 && (
-        <FirstQuestion
-          nameInput={nameInput}
-          onNameInputChange={onNameInputChange}
-          onNextQuestionChange={onNextQuestionChange}
-          onPreviousQuestionChange={onPreviousQuestionChange}
-        />
-      )}
+        {/* FirstQuestion */}
+        {step === 1 && (
+          <FirstQuestion
+            nameInput={nameInput}
+            onNameInputChange={onNameInputChange}
+            onNextQuestionChange={onNextQuestionChange}
+            onPreviousQuestionChange={onPreviousQuestionChange}
+          />
+        )}
 
-      {/* SecondQuestion */}
-      {step === 2 && (
-        <SecondQuestion
-          ageInput={ageInput}
-          onAgeInputChange={onAgeInputChange}
-          onNextQuestionChange={onNextQuestionChange}
-          onPreviousQuestionChange={onPreviousQuestionChange}
-        />
-      )}
+        {/* SecondQuestion */}
+        {step === 2 && (
+          <SecondQuestion
+            ageInput={ageInput}
+            onAgeInputChange={onAgeInputChange}
+            onNextQuestionChange={onNextQuestionChange}
+            onPreviousQuestionChange={onPreviousQuestionChange}
+          />
+        )}
 
-      {/* ThirdQuestion */}
-      {step === 3 && (
-        <ThirdQuestion
-          locationInput={locationInput}
-          onLocationInputChange={onLocationInputChange}
-          onNextQuestionChange={onNextQuestionChange}
-          onPreviousQuestionChange={onPreviousQuestionChange}
-        />
-      )}
+        {/* ThirdQuestion */}
+        {step === 3 && (
+          <ThirdQuestion
+            locationInput={locationInput}
+            onLocationInputChange={onLocationInputChange}
+            onNextQuestionChange={onNextQuestionChange}
+            onPreviousQuestionChange={onPreviousQuestionChange}
+          />
+        )}
 
-      {/* FourthQuestion */}
-      {step === 4 && (
-        <section className="question-container">
-          <CheckboxGroup
+        {/* FourthQuestion */}
+        {step === 4 && (
+          <section className="question-container">
+            <CheckboxGroup
+              checkboxGroup={checkboxGroup}
+              onChangeFunction={onCheckboxGroupToggle}
+              onNextQuestionChange={onNextQuestionChange}
+              onPreviousQuestionChange={onPreviousQuestionChange}
+            />
+          </section>
+        )}
+        {step === 5 && (
+          <section className="question-container">
+            <ColorInput
+              colorInput={colorInput}
+              handleColorInputChange={handleColorInputChange}
+              onNextQuestionChange={onNextQuestionChange}
+              onPreviousQuestionChange={onPreviousQuestionChange}
+            />
+          </section>
+        )}
+
+        {/* Output Page*/}
+        {step === 6 && (
+          <Summary
+            nameInput={nameInput}
+            locationInput={locationInput}
+            ageInput={ageInput}
             checkboxGroup={checkboxGroup}
-            onChangeFunction={onCheckboxGroupToggle}
-            onNextQuestionChange={onNextQuestionChange}
-            onPreviousQuestionChange={onPreviousQuestionChange}
-          />
-        </section>
-      )}
-      {step === 5 && (
-        <section className="question-container">
-          <ColorInput
             colorInput={colorInput}
-            handleColorInputChange={handleColorInputChange}
-            onNextQuestionChange={onNextQuestionChange}
-            onPreviousQuestionChange={onPreviousQuestionChange}
           />
-        </section>
-      )}
-
-      {/* Output Page*/}
-      {step === 6 && (
-        <Summary
-          nameInput={nameInput}
-          locationInput={locationInput}
-          ageInput={ageInput}
-          checkboxGroup={checkboxGroup}
-          colorInput={colorInput}
-        />
-      )}
-      {/* {step <= 5 && 1 <= step && <h2>Question number: {step}/5</h2>} */}
+        )}
+        {/* {step <= 5 && 1 <= step && <h2>Question number: {step}/5</h2>} */}
+      </main>
       <Footer />
-    </main>
+    </>
   )
 }
 

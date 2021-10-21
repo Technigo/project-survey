@@ -1,13 +1,14 @@
 :root {
   --beige: #fffaf2;
-  --yellow: #fee900;
+  --yellow: #def200;
+
   --dark-pink: #ffffff;
   --transparent: #2b2b2b98;
 }
 
 body {
-  font-family: "Oxygen", "Fira Sans", "Droid Sans", "Helvetica Neue";
-  /* font-family: "Staatliches", cursive; */
+  font-family: "Raleway", sans-serif;
+
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 
@@ -27,68 +28,17 @@ body {
 h1 {
   text-align: center;
 }
+
 code {
   font-family: "Courier New", monospace;
 }
 
-#nameInput {
-  background-color: var(--beige);
-  width: 200px;
-  height: 30px;
-  border: none;
-}
-
-.welcome-text {
-  justify-self: self-end;
-  font-family: "Staatliches", cursive;
-  font-size: 40px;
-  color: var(--beige);
-  font-weight: 100;
-  /* background: linear-gradient(
-    90deg,
-    rgba(0, 80, 255, 1) 5%,
-    rgba(255, 0, 0, 1) 31%,
-    rgba(243, 255, 0, 1) 61%,
-    rgba(255, 156, 60, 1) 85%
-  ); */
-  /* background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent; */
-  padding: 10px;
-}
-.input-box {
-  font-size: 18px;
-  width: 300px;
-  margin: 0 auto;
-  padding: 5px;
-  background-color: var(--beige);
-  border: none;
-}
-
-.starter {
-  width: 600px;
-  height: 300px;
-  position: absolute;
-  display: contents;
-  /* top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
-  background-color: var(--transparent);
-}
-
-.namebox {
-  background-color: var(--beige);
-  font-size: 24px;
-  margin: 0 auto;
-  justify-content: center;
-  align-items: center;
-  display: contents;
-}
-
+/* for all questions */
 form {
   display: flex;
   flex-direction: column;
 }
+
 .main-contaniner {
   background-color: var(--transparent);
   width: 400px;
@@ -100,6 +50,41 @@ form {
   color: var(--dark-pink);
 }
 
+.starter {
+  display: contents;
+}
+
+.welcome-text {
+  justify-self: self-end;
+  font-family: "Staatliches", cursive;
+  font-size: 40px;
+  color: var(--beige);
+  font-weight: 100;
+}
+
+/* for name input and the drop down menu */
+.input-box {
+  font-size: 18px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 5px;
+  background-color: var(--beige);
+  border: none;
+}
+.namebox {
+  display: contents;
+}
+
+/* BUTTONS STYLING */
+
+.button-container {
+  width: 400px;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 10px;
+  padding-top: 40px;
+}
 button {
   cursor: pointer;
   width: 80px;
@@ -117,6 +102,7 @@ button {
   position: relative;
   z-index: 0;
   border-radius: 10px;
+  font-family: "Raleway", sans-serif;
 }
 
 .glow-on-hover:before {
@@ -124,11 +110,12 @@ button {
   background: linear-gradient(
     45deg,
     #00ffd5,
-    #002bff,
+    #00ff1f,
     #7a00ff,
-    #061d9f,
+    #b5e201,
     #17a2d5
   );
+
   position: absolute;
   top: -2px;
   left: -2px;
@@ -185,27 +172,17 @@ button {
   justify-content: center;
 }
 
-.button-container {
-  padding-top: 40px;
-  width: 400px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-column-gap: 10px;
-  justify-items: center;
-}
+/* button styling ends */
 
-.summary-text {
-  padding: 20px;
-  font-size: 16px;
-  font-family: auto;
+.question {
+  font-family: "Raleway", sans-serif;
+  font-weight: 900;
+  font-size: 20px;
+  text-align: center;
+  padding: 30px 10px;
+  margin: 0;
+  color: var(--beige);
 }
-
-input.color-input {
-  width: 60px;
-  border: none;
-  padding: 0;
-}
-
 .radio-label {
   font-size: 16px;
   padding-left: 30px;
@@ -216,49 +193,65 @@ input.color-input {
 }
 
 .checkbox-label-wrap h3 {
-  margin: 0;
   font-size: 16px;
-  font-family: "Fira Sans";
+  margin: 0;
   padding-left: 5px;
 }
 
-.question {
-  font-family: "Fira Sans";
-  margin: 0;
-  font-weight: 900;
-  font-size: 20px;
+input.color-input {
+  width: 40px;
+  border: none;
+  padding: 0;
+}
+
+.summary-text {
+  padding: 20px;
+  font-size: 16px;
+  font-family: auto;
+  font-family: "Raleway", sans-serif;
+}
+header {
+  top: 10px;
+  right: 30px;
+  position: absolute;
   text-align: center;
-  padding: 30px 10px;
+  font-family: "Poiret One", cursive;
+  margin-top: 10px;
+  display: flex;
+}
+
+header h4 {
   color: var(--beige);
+  margin: 0;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  text-align: center;
+  font-family: "Poiret One", cursive;
 }
 
 footer h4 {
-  font-family: "Ubuntu";
-  font-size: 1em;
-  color: grey;
+  color: var(--yellow);
   border-top: 1px solid var(--transparent);
-  text-align: center;
-  padding-top: 16px;
-  display: none;
+  padding: 14px 0 0 22px;
 }
 
-@media (min-width: 668px) {
+.fa {
+  text-decoration: none;
+  margin: 5px 2px;
+  border-radius: 50%;
+}
+
+.fa-github {
+  color: var(--yellow);
+  font-size: 18px;
+}
+
+@media (min-width: 768px) {
   .main-container {
     padding: 50px 30px;
-  }
-
-  .welcome-text {
-    justify-self: self-end;
-    font-family: "Staatliches", cursive;
-
-    font-size: 60px;
-
-    color: var(--beige);
-    font-weight: 100;
-    margin-bottom: 30px;
-  }
-
-  #nameInput {
-    width: 300px;
+    width: 500px;
   }
 }
