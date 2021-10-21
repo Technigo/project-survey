@@ -1,12 +1,13 @@
 .range {
   width: 90%;
-  /* flex-wrap: wrap; */
-  /* margin-left: 5px; */
-  /* flex-grow: 1; */
 }
 
 .label-range {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.range {
+  transform: scale(1.1);
 }
