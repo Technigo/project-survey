@@ -47,6 +47,7 @@
 .dropdown_image_uni_container{
     flex-direction: column;
     margin: auto 10px;
+    cursor: pointer;
 }
 
 .dropdown_image{

@@ -28,7 +28,7 @@ const Answer5 = ({ answer, setResult, result }) => {
                             onChange={event => handleInputChange(event)}
                             className="form_range_input"
                         />
-                        <span className="range_output">{result.answer5 ? result.answer5 : "0"}</span>
+                        <span className="range_output">{result.answer5 ? result.answer5 : "500"}</span>
                     </div>
 
                 </form>

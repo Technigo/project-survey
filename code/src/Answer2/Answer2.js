@@ -3,9 +3,13 @@ import './Answer2.css'
 
 const Answer2 = ({ answer, setResult, result }) => {
 
-    const onChangeSets = (event) => {
+    const selectCharacter = (selectedCharater) => {
+        setResult({ ...result, answer2: selectedCharater })
+    }
+
+    const handleOnChange = (event) => {
         event.preventDefault()
-        setResult({ ...result, answer2: event.target.value })
+        selectCharacter(event.target.value)
     }
 
     return (
@@ -16,7 +20,7 @@ const Answer2 = ({ answer, setResult, result }) => {
                         <select
                             required
                             className="select_form_dropdown"
-                            onChange={onChangeSets}
+                            onChange={handleOnChange}
                             value={result.answer2}
                         >
                             {result.answer1 === "dark" && answer.options.dark.map(option => {
@@ -42,8 +46,8 @@ const Answer2 = ({ answer, setResult, result }) => {
                         {result.answer1 === "dark" && answer.options.dark.map(option => {
                             return (
                                 <>
-                                    <div key={option.character} className="dropdown_image_uni_container">
-                                        <img className="dropdown_image_dark dropdown_image" src={option.image} />
+                                    <div key={option.character} className="dropdown_image_uni_container" >
+                                        <img className="dropdown_image_dark dropdown_image" src={option.image} onClick={() => selectCharacter(option.character)} />
                                         <p>{option.character}</p>
                                     </div>
 
@@ -52,8 +56,8 @@ const Answer2 = ({ answer, setResult, result }) => {
                         })}
                         {result.answer1 === "ligth" && answer.options.ligth.map(option => {
                             return (
-                                <div key={option.character} className="dropdown_image_uni_container">
-                                    <img className="dropdown_image_ligth dropdown_image" src={option.image} />
+                                <div key={option.character} className="dropdown_image_uni_container" >
+                                    <img className="dropdown_image_ligth dropdown_image" src={option.image} onClick={() => selectCharacter(option.character)} />
                                     <p>{option.character}</p>
                                 </div>
                             )

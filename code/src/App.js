@@ -10,17 +10,18 @@ export const App = () => {
   const [current, setCurrent] = useState(null)
   const [questionsRecord, setQuestionsRecord] = useState([])
   const [showStory, setShowStory] = useState(false)
-  const [result, setResult] = useState({ answer1: 'light' })
+  const [result, setResult] = useState({ answer1: 'dark', answer3: 'Kamino' })
 
   return (
     <>
       <section className="main-content">
-        {showHome && <Home
+        {showHome && <><Home
           setShowHome={setShowHome}
           current={current}
           setCurrent={setCurrent}
           setQuestionsRecord={setQuestionsRecord}
           questionsRecord={questionsRecord} />
+          <Footer /></>
         }
         {current && <QuestionsCard
           setShowHome={setShowHome}
@@ -39,7 +40,7 @@ export const App = () => {
           result={result}
         />}
       </section>
-      <Footer />
+
     </>
   )
 }

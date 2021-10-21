@@ -1,5 +1,8 @@
 .form_radio{
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
 }
 
 .answer_form_radio{
@@ -13,63 +16,72 @@
 .form_radio_input{
     margin: 5px;
     cursor: pointer;
+    color: white;
 }
 
 .form_radio_label{
     margin: 20px auto;
     font-size: 1.5rem;
+    
    
 }
 
 .form_radio_dark{
- background: rgb(8, 32, 50);
- color: white;
+    background: rgb(8, 32, 50);
+    color: white;
 }
 
 .form_radio_ligth{
-background:white;
-color: rgb(8, 32, 50);
+    background:white;
+    color: rgb(8, 32, 50);
 }
 
 .form_option_background{
     display: flex;
     align-items: center;
-    width: 70%;
+    width: 100%;
     margin: 20px auto;
+    padding: 10px;
+    justify-content: center;
 }
 
 .form_radio_label_with_image{
     display: inline;
     margin: 10px auto;
- 
-       
+    color: white;
+    display: contents;
+   
 }
+
 .radio_label_image{
-    max-width: 200px;
+    width: 200px;
     height: 200px;
     overflow: hidden;
     margin: 10px;
     border: 3px solid rgb(240, 165, 0);
+    cursor: pointer;
+    padding: 5px;
+    
 }
 
 .radio_label_with_image_text{
- width: 10%;
+    width: 50px;
+    color: white;
+
 }
 
 
 
 @media (min-width: 768px) {
 .form_option_background{
-    display: inline-flex;
-    width: 100%;
-    margin: 0 auto;
+    width: 40%;
+    flex-flow: column;
+}
+
+.form_radio{
+    flex-direction: row;
 }
 }
 
 @media (min-width: 992px) {
-    /* .dropdown_image_container{
-          flex-direction: row;
-     
-      
-    } */
 }

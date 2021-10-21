@@ -30,6 +30,10 @@
   font-size: 100%;
   text-align: center;
 }
+.result_info{
+  color:darkorange;
+  text-decoration: underline;
+}
 
 @keyframes starwar {
   0% {

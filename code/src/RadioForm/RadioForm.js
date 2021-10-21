@@ -11,7 +11,7 @@ const RadioForm = ({ answer, setResult, result }) => {
         if (answer.questionNumber === 3) {
             setResult({ ...result, answer3: event.target.value })
         }
-        event.preventDefault()
+
     }
 
     return (
@@ -32,7 +32,7 @@ const RadioForm = ({ answer, setResult, result }) => {
                                 onChange={handleOnChange}
                                 checked={answer.questionNumber === 1 ? option === result.answer1 : option.planet === result.answer3}
                                 className="form_radio_input"
-                                name="side"
+                                name={result.answer1}
                             />
                             {option}
                         </label>}
@@ -41,6 +41,7 @@ const RadioForm = ({ answer, setResult, result }) => {
                                 <label
                                     required
                                     className="form_radio_label_with_image"
+
                                 >
                                     <input
                                         required
@@ -50,11 +51,13 @@ const RadioForm = ({ answer, setResult, result }) => {
                                         onChange={handleOnChange}
                                         checked={answer.questionNumber === 1 ? option === result.answer1 : option.planet === result.answer3}
                                         className="form_radio_input"
-                                        name="side"
-                                    />{option.planet}
+                                        name={result.answer3}
+                                    />
 
+                                    <img className="radio_label_image" src={option.image} alt={option.planet} />
+                                    <span className="radio_label_with_image_text">{option.planet}</span>
                                 </label>
-                                <img className="radio_label_image" src={option.image} />
+
                             </>}
 
                     </div>)

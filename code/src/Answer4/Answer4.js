@@ -34,24 +34,6 @@ const Answer4 = ({ answer, setResult, result }) => {
                             })}
                         </select>
                     </div>
-                    <div className="dropdown4_image_container">
-                        {result.answer1 === "dark" && answer.options.dark.map(option => {
-                            return (
-                                <div key={option.character} className="dropdown4_image_uni_container">
-                                    <img className="dropdown4_image_dark dropdown_image" src={option.image} />
-                                    <p>{option.character}</p>
-                                </div>
-                            )
-                        })}
-                        {result.answer1 === "ligth" && answer.options.ligth.map(option => {
-                            return (
-                                <div key={option.character} className="dropdown4_image_uni_container">
-                                    <img className="dropdown4_image_ligth dropdown_image" src={option.image} />
-                                    <p>{option.character}</p>
-                                </div>
-                            )
-                        })}
-                    </div>
                 </>
             }
         </div>

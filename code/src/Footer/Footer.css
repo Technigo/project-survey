@@ -4,8 +4,12 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
-    height: 90px;
-    margin-top: 90px;
+    height: 70px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
 }
 
 .footer_text {
