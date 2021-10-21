@@ -42,11 +42,15 @@ input[type=text] {
 input[type=text]:focus {
     border: 3px solid #f6acb0;
     border-radius: 2px;
+       border: none;
+    outline: none;
 }
 
 input[type=text]:after {
-    background-color: #45c5cf;
+    background-color: #f6acb0;
     border-radius: 2px;
+    border: none;
+    outline: none;
 }
 
 input[type=date] {
@@ -59,11 +63,17 @@ input[type=date] {
     outline: none;
 }
 
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #f6acb0 inset;
+  }
+
+
 ::placeholder {
     color: rgb(48, 64, 80);
     font-size: 16px;
     font-family: 'Truculenta', sans-serif;
 }
+
 
 /*select drop-down*/
 
@@ -79,7 +89,6 @@ input[type=date] {
     width: 250px;
     border-radius: 3px;
     overflow: hidden;
-    background-color: rgb(255, 255, 255);
     background: #45c5cf;
     position: relative;
 }
@@ -94,6 +103,7 @@ input[type=date] {
 }
 
 .custom-select:after {
+    width: 250px;
     top: 0%;
     left: 80%;
     content: '🧁';
@@ -124,7 +134,6 @@ font-size: 16px;
 }
 
 .radiobutton-container {
-    
     display: block;
     position: relative;
     padding-left: 25px;
@@ -176,6 +185,7 @@ display: none;
 .radiobutton-container input:checked ~.custom-radio::after{
 display: block;
 }
+
 
 .date-row {
     font-size: 23px;
