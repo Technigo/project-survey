@@ -1,10 +1,13 @@
 import React from 'react';
 
+import ProgressBar from '@ramonak/react-progress-bar';
+
 const WaistQuestion = ({
   waistInput,
   onWaistInputChange,
   onStepChange,
-  onEnter
+  onEnter,
+  step
 }) => {
   return (
     <div className='form-container'>
@@ -21,6 +24,9 @@ const WaistQuestion = ({
           Next questions
         </button>
       </form>
+      <div className='progress-bar'>
+        <ProgressBar completed={step * 10} />
+      </div>
     </div>
   );
 };

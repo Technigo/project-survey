@@ -1,6 +1,14 @@
 import React from 'react';
 
-const AgeQuestion = ({ ageInput, onAgeInputChange, onStepChange, onEnter }) => {
+import ProgressBar from '@ramonak/react-progress-bar';
+
+const AgeQuestion = ({
+  ageInput,
+  onAgeInputChange,
+  onStepChange,
+  onEnter,
+  step
+}) => {
   return (
     <div id='container' className='form-container'>
       <form>
@@ -16,6 +24,9 @@ const AgeQuestion = ({ ageInput, onAgeInputChange, onStepChange, onEnter }) => {
           Next questions
         </button>
       </form>
+      <div className='progress-bar'>
+        <ProgressBar completed={step * 10} />
+      </div>
     </div>
   );
 };

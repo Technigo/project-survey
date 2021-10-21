@@ -91,6 +91,7 @@ const Form = () => {
             onAgeInputChange={onAgeInputChange}
             onStepChange={onStepChange}
             onEnter={onEnter}
+            step={step}
           />
         )}
         {step === 4 && (
@@ -99,6 +100,7 @@ const Form = () => {
             onWeightInputChange={onWeightInputChange}
             onStepChange={onStepChange}
             onEnter={onEnter}
+            step={step}
           />
         )}
         {step === 5 && (
@@ -107,6 +109,7 @@ const Form = () => {
             onHeightInputChange={onHeightInputChange}
             onStepChange={onStepChange}
             onEnter={onEnter}
+            step={step}
           />
         )}
         {step === 6 && (
@@ -115,6 +118,7 @@ const Form = () => {
             onHipInputChange={onHipInputChange}
             onStepChange={onStepChange}
             onEnter={onEnter}
+            step={step}
           />
         )}
         {step === 7 && (
@@ -123,6 +127,7 @@ const Form = () => {
             onWaistInputChange={onWaistInputChange}
             onStepChange={onStepChange}
             onEnter={onEnter}
+            step={step}
           />
         )}
         {step === 8 && (
@@ -131,6 +136,7 @@ const Form = () => {
             onActivityInputChange={onActivityInputChange}
             onStepChange={onStepChange}
             onEnter={onEnter}
+            step={step}
           />
         )}
         {step === 9 && (
@@ -140,6 +146,7 @@ const Form = () => {
             onSliderAInputChange={onSliderAInputChange}
             sliderBInput={sliderBInput}
             onSliderBInputChange={onSliderBInputChange}
+            step={step}
           />
         )}
         {step === 10 && (
@@ -153,6 +160,8 @@ const Form = () => {
             activityInput={activityInput}
             sliderAInput={sliderAInput}
             sliderBInput={sliderBInput}
+            step={step}
+            onWeightInputChange={onStepChange}
           />
         )}
       </div>

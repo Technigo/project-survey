@@ -1,6 +1,14 @@
 import React from 'react';
 
-const HipQuestion = ({ hipInput, onHipInputChange, onStepChange, onEnter }) => {
+import ProgressBar from '@ramonak/react-progress-bar';
+
+const HipQuestion = ({
+  hipInput,
+  onHipInputChange,
+  onStepChange,
+  onEnter,
+  step
+}) => {
   return (
     <div className='form-container'>
       <form>
@@ -16,6 +24,9 @@ const HipQuestion = ({ hipInput, onHipInputChange, onStepChange, onEnter }) => {
           Next questions
         </button>
       </form>
+      <div className='progress-bar'>
+        <ProgressBar completed={step * 10} />
+      </div>
     </div>
   );
 };

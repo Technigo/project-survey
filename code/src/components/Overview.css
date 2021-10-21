@@ -1,6 +1,5 @@
 .overview-container {
     width: 100%;
-    /* height: 100vh; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -22,7 +21,7 @@
     position: fixed;
 }
 
-.overview-container > * {
+.overview-content > * {
     padding: 1em;
 }
 
@@ -33,4 +32,14 @@
 .spacing {
     width: 10rem;
     height: 10rem;
+}
+
+.overview-progress-bar {
+    position: absolute;
+    top: 222%;
+}
+
+.end-survey-btn {
+    position: absolute;
+    top: 250%;
 }

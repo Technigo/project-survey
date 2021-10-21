@@ -1,6 +1,8 @@
 import React from 'react';
 import './Overview.css';
 
+import ProgressBar from '@ramonak/react-progress-bar';
+
 const Overview = ({
   nameInput,
   ageInput,
@@ -10,7 +12,9 @@ const Overview = ({
   waistInput,
   activityInput,
   sliderAInput,
-  sliderBInput
+  sliderBInput,
+  step,
+  onStepChange
 }) => {
   const h2 = heightInput * heightInput;
   const BMI = weightInput / h2;
@@ -29,28 +33,36 @@ const Overview = ({
 
         <div className='BMI-info'>
           <p>BMI: {BMI.toFixed(2)}</p>
+          <p>
+            {(() => {
+              switch (true) {
+                case BMI.toFixed(2) < 18.5:
+                  return 'Underweight';
+                case BMI.toFixed(2) <= 24.9 && BMI.toFixed(2) >= 18.5:
+                  return 'Healthy Weight';
+                case BMI.toFixed(2) <= 29.9 && BMI.toFixed(2) >= 25:
+                  return 'Overweight';
+                case BMI.toFixed(2) > 30:
+                  return 'Obesity';
+                default:
+                  return 'no data found';
+              }
+            })()}
+          </p>
         </div>
 
         <div className='WHR-info'>
-          <h2 className='overview-h2'>
-            Waist to Hip Ratio is a useful measure of fat distribution. f you
-            have more weight around your waist you have a greater risk of
-            lifestyle related diseases such as heart disease and diabetes than
-            those with weight around their hips. Ideally, women should have a
-            waist-to-hip ratio of 0.8 or less, whereas men should have a
-            waist-to-hip ratio of 0.95 or less.{' '}
-          </h2>
           <h3>For women:</h3>
           <p>Waist-to-Hip Ratio:{WHR.toFixed(2)}</p>
           <p>
             {(() => {
               switch (true) {
                 case WHR.toFixed(2) < 0.85:
-                  return 'low risk';
+                  return 'Low Risk';
                 case WHR.toFixed(2) <= 0.9 && WHR.toFixed(2) >= 0.85:
-                  return 'moderate risk';
+                  return 'Moderate Risk';
                 case WHR.toFixed(2) > 0.9:
-                  return 'high risk';
+                  return 'High Risk';
                 default:
                   return 'no data found';
               }
@@ -62,11 +74,11 @@ const Overview = ({
             {(() => {
               switch (true) {
                 case WHR.toFixed(2) < 0.9:
-                  return 'low risk';
+                  return 'Low Risk';
                 case WHR.toFixed(2) <= 0.95 && WHR.toFixed(2) >= 0.9:
-                  return 'moderate risk';
+                  return 'Moderate Risk';
                 case WHR.toFixed(2) > 0.95:
-                  return 'high risk';
+                  return 'High Risk';
                 default:
                   return 'no data found';
               }
@@ -80,13 +92,13 @@ const Overview = ({
             {(() => {
               switch (activityInput) {
                 case '>5,000 steps':
-                  return 'Sedentary lifestyle';
+                  return 'Sedentary Lifestyle';
                 case '7,500 steps':
-                  return 'Low active lifestyle';
+                  return 'Low Active Lifestyle';
                 case '10,000 steps':
-                  return 'Moderate active lifestyle';
+                  return 'Moderate Active Lifestyle';
                 case '12,500 steps':
-                  return 'Highly active lifestyle ';
+                  return 'Highly Active Lifestyle ';
                 default:
                   return 'no data found';
               }
@@ -97,11 +109,11 @@ const Overview = ({
             {(() => {
               switch (true) {
                 case sliderAInput < 30:
-                  return 'low intensity smoker';
+                  return 'Low Intensity Smoker';
                 case sliderAInput <= 75 && sliderAInput >= 30:
-                  return 'moderate intensity smoker';
+                  return 'Moderate Intensity Smoker';
                 case sliderAInput > 75:
-                  return 'high intensity smoker';
+                  return 'High Intensity Smoker';
                 default:
                   return 'no data found';
               }
@@ -112,11 +124,11 @@ const Overview = ({
             {(() => {
               switch (true) {
                 case sliderBInput < 30:
-                  return 'occasional drinker';
+                  return 'Occasional Drinker';
                 case sliderBInput <= 75 && sliderBInput >= 30:
-                  return 'moderate drinker';
+                  return 'Moderate Drinker';
                 case sliderBInput > 75:
-                  return 'heavy drinker';
+                  return 'Heavy Drinker';
                 default:
                   return 'no data found';
               }
@@ -124,6 +136,12 @@ const Overview = ({
           </p>
         </div>
       </section>
+      <div className='progress-bar overview-progress-bar'>
+        <ProgressBar completed={step * 10} />
+      </div>
+      <button type='button' className='end-survey-btn' onClick={onStepChange}>
+        End Survey
+      </button>
     </div>
   );
 };

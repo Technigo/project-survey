@@ -1,12 +1,15 @@
 import React from 'react';
 import './OtherQuestion.css';
 
+import ProgressBar from '@ramonak/react-progress-bar';
+
 const OtherQuestion = ({
   onStepChange,
   sliderAInput,
   onSliderAInputChange,
   sliderBInput,
-  onSliderBInputChange
+  onSliderBInputChange,
+  step
 }) => {
   return (
     <div className='form-container'>
@@ -47,6 +50,9 @@ const OtherQuestion = ({
           Next question
         </button>
       </form>
+      <div className='progress-bar'>
+        <ProgressBar completed={step * 10} />
+      </div>
     </div>
   );
 };
