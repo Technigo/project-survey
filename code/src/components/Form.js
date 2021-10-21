@@ -63,6 +63,10 @@ const Form = () => {
     setStep(step + 1);
   };
 
+  const onEndSurvey = () => {
+    window.location.reload();
+  };
+
   const onEnter = (event) => {
     if (event.key === 'Enter' && event.target.value !== '') {
       event.preventDefault();
@@ -161,7 +165,7 @@ const Form = () => {
             sliderAInput={sliderAInput}
             sliderBInput={sliderBInput}
             step={step}
-            onWeightInputChange={onStepChange}
+            onEndSurvey={onEndSurvey}
           />
         )}
       </div>

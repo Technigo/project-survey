@@ -14,7 +14,7 @@ const Overview = ({
   sliderAInput,
   sliderBInput,
   step,
-  onStepChange
+  onEndSurvey
 }) => {
   const h2 = heightInput * heightInput;
   const BMI = weightInput / h2;
@@ -139,7 +139,7 @@ const Overview = ({
       <div className='progress-bar overview-progress-bar'>
         <ProgressBar completed={step * 10} />
       </div>
-      <button type='button' className='end-survey-btn' onClick={onStepChange}>
+      <button type='button' className='end-survey-btn' onClick={onEndSurvey}>
         End Survey
       </button>
     </div>
