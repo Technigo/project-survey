@@ -37,6 +37,7 @@ section {
 
 .page-header {
   font-size: 64px;
+  margin-top: 0;
   text-align: center;
   font-weight: 400;
 }
@@ -46,6 +47,18 @@ p {
 }
 
 .main {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -87,4 +100,11 @@ p {
   font-size: 62px;
   color: #de8971;
   text-align: center;
+}
+
+.footer {
+  position: absolute;
+  display: block;
+  bottom: 10px;
+  left: 20px;
 }

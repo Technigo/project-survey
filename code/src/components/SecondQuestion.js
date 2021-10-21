@@ -1,5 +1,6 @@
 import React from "react";
 import ButtonNextQuestion from "./ButtonNextPage";
+import "./SecondQuestion.css";
 
 const SecondQuestion = ({
   interestInput,
@@ -13,7 +14,7 @@ const SecondQuestion = ({
         <p>What is your interest?</p>
       </label>
       <select
-        className="input"
+        className="input-select"
         id="interestInput"
         type="text"
         value={interestInput}

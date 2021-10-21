@@ -1,0 +1,9 @@
+.input-select {
+  padding: 10px;
+  font-size: 20px;
+  background-color: var(--beige);
+}
+
+.input-select::after {
+  background-color: var(--beige);
+}

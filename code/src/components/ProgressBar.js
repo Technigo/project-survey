@@ -5,7 +5,6 @@ const ProgressBar = ({ done }) => {
   const ProgressContainer = {
     height: 40,
     width: "100%",
-    backgroundColor: "black",
   };
 
   const ProgressBar = {
