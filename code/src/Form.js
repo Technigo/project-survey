@@ -5,7 +5,7 @@ import FirstQuestion from './components/FirstQuestion';
 import SecondQuestion from './components/SecondQuestion';
 import ThirdQuestion from './components/ThirdQuestion';
 import FourthQuestion from './components/FourthQuestion';
-import Overview from "components/Overview";
+import Overview from "./components/Overview";
 
 const Form = () => {
     const [colorInput, setColorInput] = useState('#000')
