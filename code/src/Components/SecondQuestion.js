@@ -2,7 +2,7 @@ import React from 'react';
 
 const SecondQuestion = ({ team, onTeamChange, onStepChange }) => {
   return (
-    <form>
+    <form className="form">
       <label htmlFor="team">What team do you belong to?</label>
       <select id="team" value={team} onChange={onTeamChange}>
         <option value="" disabled selected>
@@ -16,7 +16,9 @@ const SecondQuestion = ({ team, onTeamChange, onStepChange }) => {
         <option value="hippos">Hippos 🦛</option>
         <option value="lions">Lions 🦁</option>
       </select>
-      <button onClick={onStepChange}>Next question</button>
+      <button className="button" onClick={onStepChange}>
+        Next question
+      </button>
     </form>
   );
 };

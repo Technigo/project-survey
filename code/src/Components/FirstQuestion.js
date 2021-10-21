@@ -1,10 +1,11 @@
 import React from 'react';
+import './firstQuestion.css';
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
   // or: const { nameInput, onNameInputChange } = props
   {
     return (
-      <form>
+      <form className="form">
         <label htmlFor="nameInput">Type your name: </label>
         <input
           id="nameInput"
@@ -13,7 +14,11 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
           onChange={onNameInputChange}
           placeholder="First and last"
         />
-        <button disabled={nameInput === ''} onClick={onStepChange}>
+        <button
+          className="button bouncy"
+          disabled={nameInput === ''}
+          onClick={onStepChange}
+        >
           Next question
         </button>
       </form>

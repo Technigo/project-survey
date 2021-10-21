@@ -38,8 +38,74 @@ code {
 .form-wrapper {
   padding: 30px;
   height: 100%;
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  /* grid-template-columns: auto; */
+  grid-template-rows: max-content;
+  justify-items: center;
+}
+
+.form {
+  display: grid;
+  margin-top: 6em;
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5em 3em;
+  border: 0.16em solid black;
+  margin: 2em 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: black;
+  text-align: center;
+  transition: all 0.15s;
+}
+
+.button:hover {
+  background: black;
+  color: #ffff;
+}
+
+.bouncy {
+  animation: bouncy 5s infinite linear;
+  position: relative;
+}
+@keyframes bouncy {
+  0% {
+    top: 0em;
+  }
+  40% {
+    top: 0em;
+  }
+  43% {
+    top: -0.9em;
+  }
+  46% {
+    top: 0em;
+  }
+  48% {
+    top: -0.4em;
+  }
+  50% {
+    top: 0em;
+  }
+  100% {
+    top: 0em;
+  }
+}
+
+label {
+  font-weight: bold;
+  display: block;
+  width: 100%;
+  float: left;
+  margin-bottom: 0.5em;
+}
+
+input[type='text'],
+select {
+  padding: 0.6em;
 }
 
 /* DESKTOP
