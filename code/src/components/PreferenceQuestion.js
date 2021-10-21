@@ -15,14 +15,15 @@ const PreferenceQuestion = ({
   return (
     <>
       <h2> Which type of content do you prefer?</h2>
-      <form className="checkbox-container">
+      <form className="checkbox-container form">
         <div className="input-child">
-          <label className="label-checkbox" htmlFor="surfInput">
+          <label className="label-checkbox" htmlFor="name">
             Surf
           </label>
           <input
             id="surfInput"
             type="checkbox"
+            name="surfInput"
             checked={preferenceInput}
             value={preferenceInput}
             onChange={onPreferenceInputChange}
@@ -37,6 +38,7 @@ const PreferenceQuestion = ({
           <input
             id="clothingInput"
             type="checkbox"
+            name="clothingInput"
             // checked={clothingInput}
             value={clothingInput}
             onChange={onClothingInputChange}
@@ -52,6 +54,7 @@ const PreferenceQuestion = ({
           <input
             id="eventsInput"
             type="checkbox"
+            name="eventsInput"
             checked={eventsInput}
             value={eventsInput}
             onChange={onEventsInputChange}
@@ -66,6 +69,7 @@ const PreferenceQuestion = ({
           <input
             id="travelInput"
             type="checkbox"
+            name="travelInput"
             checked={travelInput}
             value={travelInput}
             onChange={onTravelInputChange}

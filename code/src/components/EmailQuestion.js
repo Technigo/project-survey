@@ -7,9 +7,10 @@ const EmailQuestion = ({
   // onEnter,
 }) => {
   return (
-    <form onSubmit={onStepChange}>
+    <form className="form" onSubmit={onStepChange}>
       <label htmlFor="emailInput">Type your Email address</label>
       <input
+        name="emailInput"
         id="emailInput"
         type="email"
         placeholder="Email goes here"

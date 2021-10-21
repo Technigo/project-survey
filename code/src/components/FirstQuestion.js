@@ -7,9 +7,10 @@ const FirstQuestion = ({
   onEnter,
 }) => {
   return (
-    <form>
+    <form className="form">
       <label htmlFor="nameInput">Hey there! Whats your name?</label>
       <input
+        name="name"
         id="nameInput"
         type="text"
         placeholder="Type your name here"

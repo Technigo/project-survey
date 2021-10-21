@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+// import emailjs from 'emailjs'
 
 import FirstQuestion from './FirstQuestion'
 import PreferenceQuestion from './PreferenceQuestion'
@@ -47,6 +48,21 @@ const Form = () => {
       setStep(step + 1)
     }
   }
+  // function sendEmail(e) {
+  //   e.preventDefault()
+
+  //   emailjs
+  //     .sendForm(
+  //       'service_8yjsskq',
+  //       'template_vkmyufs',
+  //       Form,
+  //       'user_CLE2dCfZbNVh3CenFnpxS'
+  //     )
+  //     .then((res) => {
+  //       console.log(res)
+  //     })
+  //     .catch((err) => console.log(err))
+  // }
 
   return (
     <div className="form-container">
@@ -88,6 +104,7 @@ const Form = () => {
           travelInput={travelInput}
           eventsInput={eventsInput}
           onEnter={onEnter}
+          // onClick={sendEmail}
         />
       )}
     </div>

@@ -18,8 +18,8 @@ code {
 
 header {
   background-color: #2f6f7a;
-  height: 5em;
-  margin-bottom: 2em;
+  height: 6em;
+  margin-bottom: 3em;
 }
 .img-logo {
   margin-left: 10%;
@@ -35,17 +35,19 @@ header {
   display: flex;
   flex-direction: column;
   padding: 0em 1em 0em 1em;
-  padding-bottom: 2em;
+  padding-bottom: 9em;
 }
 
 .head-title {
-  padding-left: 1em;
+  text-align: center;
   margin: 0 auto;
   padding-bottom: 0.25rem;
   font-size: 2em;
 }
 
 .signup-text {
+  padding-top: 1em;
+  text-align: center;
   font-size: 20px;
   margin: 0 auto;
   line-height: 1.5;
