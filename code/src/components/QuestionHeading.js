@@ -3,7 +3,7 @@ import 'components/questionHeading.css'
 
 export const QuestionHeading = ({ number, title }) => {
   return (
-    <h2>
+    <h2 className='question-title'>
       {number}. {title}
     </h2>
   )

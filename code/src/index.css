@@ -19,8 +19,8 @@ code {
   margin: auto;
 }
 
-/* @media (min-width: 540px) {
+@media (min-width: 400px) {
   .container {
-    width: 390px;
+    width: 350px;
   }
-} */
+}

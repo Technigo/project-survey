@@ -1,9 +1,8 @@
 import React from 'react'
 import 'components/formSummary.css'
+import { Button } from 'components/Button'
 
-export const FormSummary = props => {
-  const { state } = props
-
+export const FormSummary = ({ state, decrementStep, handleRestart, step }) => {
   return (
     <div className='form-summary'>
       <h3>Survey Summary</h3>
@@ -22,6 +21,10 @@ export const FormSummary = props => {
               }
               return null
             })}
+            <div className='button-container'>
+              {step === 'end' && <Button text={''} type={'up'} onClick={decrementStep} />}
+              {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
+            </div>
           </>
         )
       })}
