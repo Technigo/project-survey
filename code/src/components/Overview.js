@@ -10,17 +10,23 @@ const hungerLevel = {
 
 const Overview = ({ aliasInput, radioButtonInput, questionOneInput, questionTwoInput, questionThreeInput, questionFourInput, questionFiveInput }) => {
     return (
-        <section className="overview-container">
-            <h2>My survey answers</h2>
-            <p>Your chosen alias is {aliasInput}.</p>
-            <p>Your are feeling {radioButtonInput} today!</p>
-            <p>The rudest animal would be {questionOneInput}.</p>
-            <p>Cereal is {questionTwoInput} soup!</p>
-            <p>You would listen in to {questionThreeInput}.</p>
-            <p>The best therapist would be {questionFourInput}!</p>
-            <p>You {hungerLevel[questionFiveInput]}</p>
-            <h3>Thank you for answering!</h3>
-        </section>
+        <div>
+            <section className="overview-container">
+                <h2>Survey answers</h2>
+                <p>Your chosen alias is {aliasInput}.</p>
+                <p>Your are feeling {radioButtonInput} today!</p>
+                <p>The rudest animal would be {questionOneInput}.</p>
+                <p>Cereal is {questionTwoInput} soup!</p>
+                <p>You would listen in to {questionThreeInput}.</p>
+                <p>The best therapist would be {questionFourInput}!</p>
+                <p>You {hungerLevel[questionFiveInput]}</p>
+                <h3>Thank you for answering!</h3>
+            </section>
+            <footer className="footer-container">
+                <h4 className="creator">Created & developed by</h4>
+                <p className="creator">~ Anna Dimitrakopoulos ~</p>
+            </footer>
+        </div>
     )
 }
 export default Overview

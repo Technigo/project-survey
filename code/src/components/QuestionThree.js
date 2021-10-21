@@ -15,7 +15,7 @@ const QuestionThree = ({ questionThreeInput, onQuestionThreeInputChange, onStepC
                     <input className="input-form" id="questionThreeInput" type="input" value={questionThreeInput} onChange={onQuestionThreeInputChange} placeholder="Your Answer">
                     </input>
                 </form>
-                <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
+                <button className="button-next" type="submit" onClick={onStepChange}>Next</button>
             </div>
         </div>
     )

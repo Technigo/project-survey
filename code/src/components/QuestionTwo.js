@@ -17,7 +17,7 @@ const QuestionTwo = ({ questionTwoInput, onQuestionTwoInputChange, onStepChange 
                         <option value='absolutely not a'>Absolutely not!</option>
                     </select>
                 </form>
-                <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
+                <button className="button-next" type="submit" onClick={onStepChange}>Next</button>
             </div>
         </div>
     )

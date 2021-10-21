@@ -35,7 +35,7 @@ const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioBut
 
                     ))}
                 </form>
-                <button className="button-next" type="submit" onClick={onStepChange}>Next Question!</button>
+                <button className="button-next" type="submit" onClick={onStepChange}>Next</button>
             </div>
         </div>
     )

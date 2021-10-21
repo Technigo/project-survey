@@ -1,4 +1,5 @@
 body {
+  margin: 0;
   font-family: 'Josefin Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,11 +15,6 @@ body {
 
 code {
   font-family: 'Josefin Sans', sans-serif;
-}
-
-.progress-bar-container {
-  text-align: end;
-  color: #ffc964;
 }
 
 .welcome-message-container, .alias-buttons-container, .question-one-container, .question-two-container, .question-three-container, .question-four-container, .question-five-container {
@@ -53,6 +49,35 @@ code {
   font-weight: 400;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
+}
+
+/*******Custom Progress Bar*******/
+
+.progress-bar-container {
+  text-align: end;
+  color: #ffc964;
+  margin: 1vh;
+}
+
+.progress-bar {
+  width: 40%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 13px;
+}
+
+.progress-bar::-webkit-progress-value {
+  background: #cc9837;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background: #ffa60259;
+}
+
+.progress-bar::-moz-progress-bar {
+  background: #ffa60259;
 }
 
 /*******Custom Button*******/
@@ -157,7 +182,6 @@ code {
   color: white;
   padding: 7px 0;
   background: #4e350746;
-  border-radius: 5px 5px 0 0;
 }
 
 .input-form::placeholder {
@@ -191,7 +215,6 @@ code {
   line-height: 3;
   background: #4e350746;
   overflow: hidden;
-  border-radius: .25em;
 }
 
 .select-style::after {
@@ -271,6 +294,25 @@ code {
   display: flex;
   justify-content: space-between;
   padding-top: 10px;
+}
+
+/*******Footer*******/
+
+.footer-container {
+  background-color: #fdc1523f;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.creator {
+  color: #ffc964;
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 0px;
+  padding: 10px;
 }
 
 /*******Tablet Display*******/

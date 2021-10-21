@@ -20,7 +20,7 @@ const QuestionFive = ({ questionFiveInput, onQuestionFiveInputChange, onStepChan
                         <span>5</span>
                     </div>
                 </div>
-                <button className="button-next" type="submit" onClick={onStepChange}>Next question!</button>
+                <button className="button-next" type="submit" onClick={onStepChange}>Next</button>
             </div>
         </div>
     )
