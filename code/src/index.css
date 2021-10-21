@@ -16,8 +16,9 @@ code {
 .root {
   position: absolute;
   inset: 0;
-  background-image: url(./assets/background.jpg);
+  background-image: url(./assets/coding.jpg);
   background-repeat: no-repeat;
+  background-size: cover;
   font-family: 'Quicksand', sans-serif;
 
 }
@@ -120,6 +121,33 @@ code {
 
 .progress {
   margin: 3px;
-  font-family: 'Source Code Pro', monospace;
+  font-family: "Source Code Pro", monospace;
 
+}
+
+.review-container {
+  padding: 1em;
+  border-radius: 5px;
+}
+
+.css-container {
+  background-color: black;
+  color: white;
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  padding: 1em;
+}
+
+.css-container > ul {
+  list-style: none;
+}
+
+.footer {
+  position: absolute;
+  width: 100%;
+  margin: auto;
+  background-color: #fff;
+  font-size: 8px;
+  text-align: center;
+  bottom: 0;
 }

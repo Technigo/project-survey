@@ -10,7 +10,7 @@ const TextInput = ({ label, value, onValueChange, valid }) => {
       <label htmlFor={label}></label>
       <input
         className={`text-input valid-${valid}`}
-        placeholder="Type here..."
+        placeholder={valid ? "Type here..." : "Required field"}
         type="text"
         id={label}
         onChange={onTextInputChange}

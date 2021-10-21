@@ -8,21 +8,27 @@ import ReviewSubmit from "./ReviewSubmit";
 const questions = [
   {
     number: 1,
-    text: "What is your favourite colour?",
+    text: "What is your name?",
     inputType: "text",
-    options: ["red", "blue", "green", "yellow"],
+    options: [],
   },
   {
     number: 2,
-    text: "What is your second favourite colour?",
+    text: "What is your favourite word or phrase?",
+    inputType: "text",
+    options: [],
+  },
+  {
+    number: 3,
+    text: "What is your favourite colour?",
     inputType: "radio",
     options: ["red", "blue", "green", "yellow", "purple"],
   },
   {
-    number: 3,
-    text: "What is your third favourite colour?",
+    number: 4,
+    text: "What is your favourite font?",
     inputType: "select",
-    options: ["red", "blue", "green", "yellow", "orange"],
+    options: ["Times New Roman", "Arial", "Courier New", "Brush Script MT", "Roboto", "Comic Sans MS"],
   },
 ];
 
