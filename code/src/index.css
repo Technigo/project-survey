@@ -19,12 +19,14 @@ code {
   font-family: 'Lobster', cursive;
   color:rgb(233, 191, 7);
   font-size: 52px;
+  font-weight: 500;
 }
 
 .headline-underscore {
   font-family: 'Lobster', cursive;
   color:rgb(233, 191, 7);
   font-size: 36px;
+  font-weight: 100;
 }
 
 .main-container {
@@ -50,4 +52,10 @@ code {
   align-items: flex-start;
   align-content: center;
   flex-wrap: wrap;
+  justify-content: center;
+}
+
+.form-element {
+  font-family: inherit;
+  font-size: 24px;
 }

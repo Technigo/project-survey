@@ -8,14 +8,14 @@ const {flavour, onFlavourChange, onFinalQuestion} = props
       <label>
         Pick your popcorn flavour
         <select value={flavour} onChange={onFlavourChange}>
-          <option value="salty">salty</option>
-          <option value="sweet">sweet</option>
-          <option value="garlic">garlic</option>
-          <option value="butter">butter</option>
+          <option value="salty" className="form-element">salty</option>
+          <option value="sweet" className="form-element">sweet</option>
+          <option value="garlic" className="form-element">garlic</option>
+          <option value="butter" className="form-element">butter</option>
         </select>
       </label>
       
-      <button onClick={onFinalQuestion}>See overview</button>
+      <button onClick={onFinalQuestion} className="form-element">See overview</button>
     </form>
   )
 }

@@ -11,6 +11,7 @@ const {onFeelingChange, onStepChange} = props
           type="radio" 
           value="happy"
           onChange={onFeelingChange} 
+          className="form-element"
         />
         <span role="img" aria-label="happy-face">
           😃
@@ -23,12 +24,13 @@ const {onFeelingChange, onStepChange} = props
           type="radio" 
           value="sad"
           onChange={onFeelingChange} 
+          className="form-element"
         />
         <span role="img" aria-label="sad-face">
           😥
         </span>
       </label>
-      <button onClick={onStepChange}>Next question</button>
+      <button onClick={onStepChange} className="form-element">Next question</button>
     </form>
   )
 }

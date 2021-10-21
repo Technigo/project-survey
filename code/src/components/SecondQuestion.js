@@ -11,10 +11,13 @@ const SecondQuestion = (props) => {
             type="text" 
             value={surnameInput} 
             onChange={onSurnameInputChange} 
+            className="form-element"
           />
       <button 
         disabled={surnameInput === ''}
-        onClick={onStepChange}>Next question
+        onClick={onStepChange}
+        className="form-element">
+          Next question
       </button>
       </form>
   )

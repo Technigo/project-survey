@@ -51,6 +51,8 @@ const Form = () => {
           <FirstQuestion 
             nameInput={nameInput} 
             onNameInputChange={onNameInputChange}
+            surnameInput={surnameInput} 
+            onSurnameInputChange={onSurnameInputChange} 
             onStepChange={onStepChange} 
           />
         )}
