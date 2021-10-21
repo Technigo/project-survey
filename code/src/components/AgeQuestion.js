@@ -2,7 +2,7 @@ import React from 'react';
 
 const AgeQuestion = ({ ageInput, onAgeInputChange, onStepChange, onEnter }) => {
   return (
-    <div className='form-container'>
+    <div id='container' className='form-container'>
       <form>
         <label htmlFor={ageInput}>What&apos;s your age?</label>
         <input
