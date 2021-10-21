@@ -1,24 +1,29 @@
-import React from "react";
+import React from "react"
 
 const Question4 = ({ movieInput, onMovieInputChange, onStepChange }) => {
 
     return (
         <form className="form">
-            <label>
-				<label htmlFor="movieInput">Best Christmas movie??</label>
-				<select value={movieInput} onChange={event => onMovieInputChange(event.target.value)}>
-					<option value="Home Alone">Home Alone</option>
-					<option value="The Grinch">The Grinch</option>
-					<option value="Scrooged">Scrooged</option>
-					<option value="Elf">Elf</option>
-                    <option value="All of these">All of these</option>
-                    <option value="None of these">None of these</option>
+			<label htmlFor="movieInput">4. Best Christmas movie?</label>
+				<select
+					className="dropdown-select" 
+					value={movieInput} 
+					onChange={event => onMovieInputChange(event.target.value)}
+					required
+				>
+					<option className="dropdown-content" disabled value="">Select an option</option>
+					<option className="dropdown-content"value="Home Alone">Home Alone</option>
+					<option className="dropdown-content"value="The Grinch">The Grinch</option>
+					<option className="dropdown-content"value="Scrooged">Scrooged</option>
+					<option className="dropdown-content"value="Elf">Elf</option>
+                    <option className="dropdown-content"value="All of these">All of these</option>
+                    <option className="dropdown-content"value="None of these">None of these</option>
 				</select>
-			</label>
+				
+				<button onClick={onStepChange}>Submit</button>
+				
+		</form>
+	)
+}
 
-            <button onClick={onStepChange}>Submit</button>
-        </form>
-    );
-};
-
-export default Question4;
+export default Question4

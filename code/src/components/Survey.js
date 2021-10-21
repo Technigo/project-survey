@@ -8,7 +8,7 @@ import Question4 from './Question4';
 import Overview from './Overview';
 
 
-
+/* all states from the mounted components */
 const Survey = () => {
     const [traditionInput, setTraditionInput] = useState('');
     const [treeInput, setTreeInput] = useState('');
