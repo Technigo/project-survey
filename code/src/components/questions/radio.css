@@ -2,3 +2,9 @@
   margin-left: 20px;
   margin-right: 40%;
 }
+
+.label-radio {
+  display: flex;
+  justify-content: flex-end;
+  text-align: unset;
+}

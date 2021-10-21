@@ -22,7 +22,7 @@ export const Range = ({ state, handleChange, data, step, incrementStep, decremen
       <QuestionHeading number={data.number} title={data.title} />
       {data.options.map(option => {
         return (
-          <label className='label' key={option.id}>
+          <label className='label-range label' key={option.id}>
             {option.label}
             <input
               className='range'

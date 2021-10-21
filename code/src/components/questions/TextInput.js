@@ -30,8 +30,9 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
       <QuestionHeading number={data.number} title={data.title} />
       {data.options.map(option => {
         return (
-          <label className='label' key={option.id}>
+          <label className='label-text-input label' key={option.id}>
             {option.label}
+            <span className='required'>{data.required ? ' *required' : ''}</span>
             <input
               className='text-input'
               required={data.required === 'true'}

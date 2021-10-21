@@ -1,4 +1,15 @@
 .text-input {
-  margin-left: 5px;
-  flex-grow: 1;
+  /* margin-left: 5px; */
+  /* flex-grow: 2; */
+  /* margin-left: 8%; */
+  width: 100%;
+  font-size: 1.2rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.label-text-input {
+  font-size: 0.7rem;
+  /* flex-direction: column; */
+  text-align: left;
 }

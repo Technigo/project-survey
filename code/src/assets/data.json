@@ -34,7 +34,7 @@
       "id": 3
     },
     {
-      "title": "How excited are you to du this survey?",
+      "title": "How excited are you to do this survey?",
       "number": 4,
       "required": "true",
       "type": "range",

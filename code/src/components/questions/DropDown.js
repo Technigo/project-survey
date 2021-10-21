@@ -9,7 +9,6 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
     (o, option) => ({ ...o, [option.value]: option.next_question }),
     {}
   )
-  console.log(nextQuestion)
 
   const checkValid = e => {
     if (data.required && e.target.value) {
@@ -34,8 +33,9 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
   return (
     <>
       <QuestionHeading number={data.number} title={data.title} />
-      <label className='label' key={data.id}>
+      <label className='label-dropdown label' key={data.id}>
         {data.label}
+        <span className='required'>{data.required ? ' *required' : ''}</span>
         <select
           className='dropdown'
           name='select'

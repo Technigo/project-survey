@@ -13,7 +13,12 @@ export const App = () => {
   const [steps, setSteps] = useState([1])
 
   const handleChange = (e, nextQuestion, title, number, label, questionId, validated) => {
+    // console.log(e.target)
     const { id, value } = e.target
+    if (title.includes('color')) {
+      console.log('color', value)
+      handleTheme(value)
+    }
     let newAnswers = [...state.answers]
     if (state.answers[number - 1]) {
       newAnswers[number - 1] = { ...newAnswers[number - 1], [id]: { value: value, label: label } }
@@ -27,6 +32,10 @@ export const App = () => {
       answers: [...newAnswers],
       nextQuestion: nextQuestion,
     })
+  }
+
+  const handleTheme = color => {
+    setState({ ...state, theme: color })
   }
 
   const incrementStep = () => {
@@ -59,7 +68,7 @@ export const App = () => {
   }
 
   return (
-    <div className='container'>
+    <div className={'container'}>
       <FormWrapper
         step={step}
         state={state}

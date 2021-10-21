@@ -5,14 +5,7 @@
 }
 
 .label {
-  display: flex;
-  justify-content: space-between;
   margin: 2px 0;
-}
-
-.label-radio {
-  justify-content: space-around;
-  text-align: right;
 }
 
 .label:first-of-type {
@@ -27,4 +20,8 @@
   display: flex;
   justify-content: flex-end;
   padding-top: 20px;
+}
+
+.required {
+  color: red;
 }

@@ -1,4 +1,12 @@
 .dropdown {
-  margin-left: 5px;
-  flex-grow: 1;
+  width: 100%;
+  font-size: 1.2rem;
+  border: 1px solid grey;
+  border-radius: 5px;
+}
+
+.label-dropdown {
+  font-size: 0.7rem;
+
+  text-align: left;
 }
