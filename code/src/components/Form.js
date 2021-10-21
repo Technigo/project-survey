@@ -8,7 +8,7 @@ import Final from './Final'
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
   const [preferenceInput, setPreferenceInput] = useState(false)
-  const [clothingInput, setClothingInput] = useState(false)
+  const [clothingInput, setClothingInput] = useState(true)
   const [travelInput, setTravelInput] = useState(false)
   const [eventsInput, setEventsInput] = useState(false)
 
@@ -77,7 +77,6 @@ const Form = () => {
           emailInput={emailInput}
           onEmailInputChange={onEmailInputChange}
           onStepChange={onStepChange}
-          onEnter={onEnter}
         />
       )}
       {step === 4 && (

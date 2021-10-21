@@ -4,10 +4,10 @@ const EmailQuestion = ({
   emailInput,
   onEmailInputChange,
   onStepChange,
-  onEnter,
+  // onEnter,
 }) => {
   return (
-    <form>
+    <form onSubmit={onStepChange}>
       <label htmlFor="emailInput">Type your Email address</label>
       <input
         id="emailInput"
@@ -15,14 +15,14 @@ const EmailQuestion = ({
         placeholder="Email goes here"
         value={emailInput}
         onChange={onEmailInputChange}
-        onKeyPress={onEnter}
+        // onKeyPress={onEnter}
         required
       />
       <button
-        disabled={emailInput === ''}
+        // disabled={emailInput === ''}
         className="btn6"
-        type="button"
-        onClick={onStepChange}
+        type="submit"
+        // onClick={onStepChange}
       >
         Complete sign-up
       </button>

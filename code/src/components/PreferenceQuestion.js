@@ -37,7 +37,7 @@ const PreferenceQuestion = ({
           <input
             id="clothingInput"
             type="checkbox"
-            checked={clothingInput}
+            checked={clothingInput === false}
             value={clothingInput}
             onChange={onClothingInputChange}
             onKeyPress={onEnter}
