@@ -6,7 +6,10 @@ const StartQuestion = ({ onStepChange }) => {
     <div className="start-container">
       <button className="start-button" onClick={onStepChange}>
         <h2>
-          Start The Survey <span>👽</span>
+          Start The Survey{" "}
+          <span role="img" aria-label="Alien-emoji">
+            👽
+          </span>
         </h2>
       </button>
     </div>

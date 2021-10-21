@@ -19,10 +19,10 @@ const ThirdQuestion = ({ ageGroup, onAgeGroupChange, onStepChange }) => {
       ))}
       <button
         className="button"
-        disable={ageGroup === ""}
+        disabled={ageGroup === ""}
         onClick={onStepChange}
       >
-        Next question{" "}
+        Next question
       </button>
     </form>
   );

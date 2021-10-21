@@ -29,10 +29,10 @@ const FourthQuestion = ({
       </select>
       <button
         className="second-button"
-        disable={believesInput === ""}
+        disabled={believesInput === ""}
         onClick={onStepChange}
       >
-        Next question
+        Show Summary
       </button>
     </form>
   );

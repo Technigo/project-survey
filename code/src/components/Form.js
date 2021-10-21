@@ -60,7 +60,7 @@ const Form = () => {
         )}
         {step === 3 && (
           <SecondQuestion
-            surname={surnameInput}
+            surnameInput={surnameInput}
             onSurnameInputChange={onSurnameInputChange}
             onStepChange={onStepChange}
           />

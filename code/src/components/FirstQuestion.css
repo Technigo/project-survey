@@ -6,7 +6,7 @@
   padding-bottom: 20px;
   background-color: rgba(205, 180, 228, 0.447);
   gap: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
   font-size: 20px;
@@ -41,7 +41,9 @@
 
 @media (min-width: 768px) {
   .container {
-    margin: 50px;
+    margin-top: 60px;
+    width: 400px;
+    align-self: center;
   }
 
   .label-container {
@@ -54,5 +56,11 @@
 
   .button {
     font-size: 18px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    width: 500px;
   }
 }

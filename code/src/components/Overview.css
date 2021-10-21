@@ -4,7 +4,7 @@
   align-items: center;
   padding-bottom: 20px;
   background-color: rgba(205, 180, 228, 0.447);
-  border-radius: 10px;
+  border-radius: 20px;
   font-family: "Oswald", sans-serif;
   font-weight: 700;
 }
@@ -22,9 +22,22 @@
 
 @media (min-width: 768px) {
   .summary-container {
-    margin: 50px;
+    margin-top: 60px;
+    width: 450px;
+    align-self: center;
   }
   .summary-header {
-    font-size: 26px;
+    font-size: 28px;
+  }
+  .summary-text {
+    font-size: 22px;
+  }
+}
+@media (min-width: 1024px) {
+  .summary-container {
+    width: 500px;
+  }
+  .summary-header {
+    font-size: 32px;
   }
 }

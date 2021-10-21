@@ -6,7 +6,7 @@
 
 .start-button {
   padding: 20px;
-  border-radius: 10px;
+  border-radius: 20px;
   border-color: blueviolet;
   background-color: black;
   color: azure;
@@ -23,10 +23,16 @@ h2 {
 @media (min-width: 768px) {
   .start-button {
     padding: 40px;
-    margin-top: 40px;
+    margin-top: 80px;
   }
 
   h2 {
     font-size: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .start-button {
+    margin-top: 100px;
   }
 }

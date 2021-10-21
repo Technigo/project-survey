@@ -20,7 +20,7 @@ const SecondQuestion = ({
       />
       <button
         className="second-button"
-        disable={surnameInput === ""}
+        disabled={surnameInput === ""}
         onClick={onStepChange}
       >
         Next question
