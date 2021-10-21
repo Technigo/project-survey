@@ -2,60 +2,52 @@ import React from 'react';
 
 const QuestionOne = ({
   questionOneData,
-  questionOneAnswer,
-  onQuestionOneChange,
-  // eslint-disable-next-line comma-dangle
+  questionAnswer,
+  onAnswerChange,
   handleSubmit,
 }) => {
-  // console.log('questionOneData: ', questionOneData);
-  // console.log('name: ', questionOneData.questionOneData.name);
-  // console.log('title: ', questionOneData.questionOneData.title);
   return (
-    <div>
-      {/* onSubmit={(event) => event.preventDefault()} */}
-      {/* onSubmit={onStepChange} */}
-      <form onSubmit={handleSubmit}>
-        <h2>{questionOneData.name}</h2>
-        <h3>{questionOneData.title}</h3>
-        <div className='input-image-container'>
-          <div className='input-container'>
-            {questionOneData.choices.map((choice) => (
-              <label key={choice} htmlFor={choice}>
-                <input
-                  type={questionOneData.type}
-                  value={choice}
-                  onChange={onQuestionOneChange}
-                  checked={questionOneAnswer === choice}
-                  // required={choice[0]}
-                  required
-                  id={choice}
-                  name='choice'
-                />
-                {choice}
-                <br />
-              </label>
-            ))}
-          </div>
-          <img
-            src={questionOneData.img_url}
-            alt='question one'
-            width='200'
-            height='160'
-          />
+    <form
+      onSubmit={(event) => {
+        handleSubmit(event, questionAnswer);
+      }}
+    >
+      <h2 aria-label='Question 1. Movie'>{questionOneData.name}</h2>
+      <h3>{questionOneData.title}</h3>
+      <div className='input-image-container'>
+        <div className='input-container'>
+          {questionOneData.choices.map((choice) => (
+            <label key={choice} htmlFor={choice}>
+              <input
+                type={questionOneData.type}
+                value={choice}
+                onChange={onAnswerChange}
+                checked={questionAnswer === choice}
+                required
+                id={choice}
+                name='choice'
+              />
+              {choice}
+              <br />
+            </label>
+          ))}
         </div>
-        <br />
-        <button
-          aria-pressed='false'
-          aria-label='Go to next question'
-          type='submit'
-        >
-          Next &gt;&gt;
-        </button>
-        {/* <button type='button' onClick={onStepChange}>
-          Next &gt;&gt;
-        </button> */}
-      </form>
-    </div>
+        <img
+          src={questionOneData.img_url}
+          alt='Question one. Lego figures floating in a gravity fight scene.'
+          width='200'
+          height='160'
+        />
+      </div>
+      <br />
+      <button
+        aria-pressed='false'
+        aria-label='Go to next question'
+        type='submit'
+      >
+        Next &gt;&gt;
+      </button>
+    </form>
   );
 };
 

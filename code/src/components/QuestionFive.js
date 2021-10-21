@@ -2,14 +2,17 @@ import React from 'react';
 
 const QuestionFive = ({
   questionFiveData,
-  questionFive,
-  onQuestionFiveChange,
-  // eslint-disable-next-line comma-dangle
+  questionAnswer,
+  onAnswerChange,
   handleSubmit,
 }) => {
   return (
-    <form onSubmit={handleSubmit}>
-      <h2>{questionFiveData.name}</h2>
+    <form
+      onSubmit={(event) => {
+        handleSubmit(event, questionAnswer);
+      }}
+    >
+      <h2 aria-label='Question 5. Lego.'>{questionFiveData.name}</h2>
       <h3>{questionFiveData.title}</h3>
       <div className='slide-container'>
         <label htmlFor='slider'>
@@ -22,9 +25,9 @@ const QuestionFive = ({
             id='slider'
             name='slider'
             className='slider'
-            value={questionFive}
-            onInput={onQuestionFiveChange}
-            onChange={onQuestionFiveChange}
+            value={questionAnswer}
+            onInput={onAnswerChange}
+            onChange={onAnswerChange}
           />
           <input
             type='number'
@@ -33,18 +36,14 @@ const QuestionFive = ({
             step='10'
             id='amount'
             name='amount'
-            value={questionFive}
-            onChange={onQuestionFiveChange}
+            value={questionAnswer}
+            onChange={onAnswerChange}
           />
         </label>
       </div>
       <br />
-      <button
-        aria-pressed='false'
-        aria-label='Go to next question'
-        type='submit'
-      >
-        Next &gt;&gt;
+      <button aria-pressed='false' aria-label='Go to summary' type='submit'>
+        Submit &gt;&gt;
       </button>
     </form>
   );

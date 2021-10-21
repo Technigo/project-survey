@@ -32,7 +32,7 @@ const Summary = ({ correctAnswers, selectedAnswers }) => {
         </tbody>
       </table>
       <button type='button' onClick={() => window.location.reload(false)}>
-        Play again
+        Play again &gt;&gt;
       </button>
     </>
   );

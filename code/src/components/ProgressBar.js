@@ -22,7 +22,6 @@ const ProgressBar = (props) => {
   const labelStyles = {
     paddingRight: 5,
     color: 'white',
-    // fontSize: 12,
     letterSpacing: -1,
     fontWeight: 'bold',
   };
@@ -30,7 +29,11 @@ const ProgressBar = (props) => {
   return (
     <div style={containerStyles} className='progress-bar'>
       <div style={fillerStyles}>
-        <span className='progress-font-size' style={labelStyles}>
+        <span
+          className='progress-font-size'
+          style={labelStyles}
+          aria-label='Progress bar. You are currently on question.'
+        >
           {`${completed} / ${totalQuestions}`}
         </span>
       </div>
