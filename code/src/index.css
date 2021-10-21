@@ -87,7 +87,7 @@ label {
   border-radius: 20px;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
-  width: 60%;
+  width: 50%;
 }
 
 .name-question {
@@ -107,7 +107,7 @@ button {
   box-shadow: 0 0 40px 40px #bc13fe inset, 0 0 0 0 #bc13fe;
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
-  width: 30%;
+  width: 50%;
   margin: auto;
   align-items: center;
   cursor: pointer;
