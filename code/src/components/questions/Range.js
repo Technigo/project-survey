@@ -24,6 +24,7 @@ export const Range = ({ state, handleChange, data, step, incrementStep, decremen
         return (
           <label className='label-range label' key={option.id}>
             {option.label}
+
             <input
               className='range'
               type='range'
@@ -36,6 +37,7 @@ export const Range = ({ state, handleChange, data, step, incrementStep, decremen
           </label>
         )
       })}
+      <span className='required'>{data.required ? ' *required' : ''}</span>
       <div className='button-container'>
         <Button disabled={step === 1} text={''} type={'up'} onClick={decrementStep} />
         <Button

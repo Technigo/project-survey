@@ -20,10 +20,12 @@ export const Radio = ({ state, handleChange, data, step, incrementStep, decremen
   return (
     <>
       <QuestionHeading number={data.number} title={data.title} />
+
       {data.options.map(option => {
         return (
           <label className='label-radio' key={option.id}>
             {option.label}
+
             <input
               className='radio'
               type='radio'
@@ -36,6 +38,7 @@ export const Radio = ({ state, handleChange, data, step, incrementStep, decremen
           </label>
         )
       })}
+      <span className='required'>{data.required ? ' *required' : ''}</span>
       <div className='button-container'>
         <Button disabled={step === 1} text={''} type={'up'} onClick={decrementStep} />
         <Button

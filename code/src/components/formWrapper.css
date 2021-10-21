@@ -24,5 +24,6 @@
 
 .required {
   color: red;
+  font-size: 0.7rem;
   float: right;
 }
