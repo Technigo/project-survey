@@ -96,7 +96,6 @@ p {
 .first {
   display: flex;
   flex-direction: column;
-  padding: ;
 }
 input {
   width: 60%;
