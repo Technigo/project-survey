@@ -21,7 +21,8 @@ code {
   color: white;
   text-align: center;
   position: relative;
-  top: 20px;
+  top: 10px;
+  display: block;
 }
 
 .neon-text {
@@ -79,12 +80,10 @@ label {
   margin-top: 70px;
   padding: 10px;
   background: rgba(59, 57, 57, 0.664);
-  position: absolute;
+  position: relative;
   display: flex;
   flex-direction: column;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  margin: 30px auto;
   border-radius: 20px;
   box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #bc13fe,
     0 0 0.8rem #bc13fe, 0 0 2.8rem #bc13fe, inset 0 0 1.3rem #bc13fe;
