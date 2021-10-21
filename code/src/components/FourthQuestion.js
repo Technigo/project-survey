@@ -25,9 +25,11 @@ const FourthQuestion = ({ radioInput, onRadioInputChange, onStepChange, onMinusS
 
 
             <div className="button-box">
-                <input type="submit" 
-                    className="button"
-                    onClick={onStepChange}></input>
+                <button type="submit" 
+                className="button"
+                onClick={onStepChange}>
+                    Next question
+                </button>
                 
                 <button 
                 className="button"

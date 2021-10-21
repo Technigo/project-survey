@@ -8,7 +8,6 @@ import FourthQuestion from './components/FourthQuestion';
 import Overview from './components/Overview';
 
 const Form = () => {
-    const [colorInput, setColorInput] = useState('#000')
     const [nameInput, setNameInput] = useState('');
     const [surnameInput, setSurnameInput] = useState('');
     const [rangeInput, setRangeInput] = useState('5');
@@ -16,11 +15,6 @@ const Form = () => {
     const [radioInput, onRadioInputChange] = useState();
     const [step, setStep] = useState(0);
   
-  
-    const onColorChange = (event) => {
-      setColorInput(event.target.value)
-    }
-
 
     const onNameInputChange = (event) => {
       setNameInput(event.target.value);
@@ -38,10 +32,6 @@ const Form = () => {
       setSelectInput(event.target.value)
     };
 
-    
-   
-
-
     const onStepChange = () => {
 		setStep(step + 1);
 	  };
@@ -57,8 +47,6 @@ const Form = () => {
         <div className="question-box">
           {step === 0 && (
             <Intro 
-            colorInput={colorInput}
-            onColorChange={onColorChange}
             onStepChange={onStepChange}
             />
           )}

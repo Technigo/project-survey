@@ -35,9 +35,11 @@ const ThirdQuestion = ({ selectInput, onSelectInputChange, onStepChange, onMinus
             </select>
 
             <div className="button-box">
-            <input type="submit" 
+            <button type="submit" 
                 className="button"
-                onClick={onStepChange}></input>
+                onClick={onStepChange}>
+                   Next question
+            </button>
             
             <button 
             className="button"
