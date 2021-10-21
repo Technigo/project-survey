@@ -116,7 +116,7 @@ p {
 
 @keyframes press {
   0% {
-    background-color: var(--beige);
+    background-color: #dca08f;
   }
   100% {
     background-color: #de8971;
