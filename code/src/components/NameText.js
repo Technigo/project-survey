@@ -17,6 +17,7 @@ const NameText = ({ nameInput, onNameInputChange }) => {
                 onChange={onNameInputChange}
                 required
             />
+
             <Button button="continue" />
         </>
     )

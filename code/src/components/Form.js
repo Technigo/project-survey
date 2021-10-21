@@ -5,16 +5,26 @@ import QuantitySelect from "./QuantitySelect"
 import Overview from "./Overview"
 import CharacteristicsRadio from "./CharacteristicsRadio"
 import Start from "./Start"
+import CareQualityRange from "./CareQualityRange"
+import QuestionProgress from "./QuestionProgress"
+import RatingStars from "./RatingStars"
 
 const Form = () => {
     const [nameInput, setNameInput] = useState('')
     const [quantity, setQuantity] = useState('')
     const [plantFeature, setPlantFeature] = useState('')
     const [step, setStep] = useState(0)
+    const [careQuality, setCareQuality] = useState(3)
+    const [percent, setPercent] = useState(0)
+    const [gradeIndex, setGradeIndex] = useState(0);
+
+    const questionsAmount = 5
+
 
     const onSubmit = (event) => {
-        event.preventDefault();
+        event.preventDefault()
         setStep(step + 1)
+        setPercent(percent + 20)
     }
 
     //custom functions to update the state properties
@@ -29,8 +39,19 @@ const Form = () => {
         setPlantFeature(event.target.value)
     }
 
+    const OnCareQualityChange = (event) => {
+        setCareQuality(event.target.value)
+    }
+
+    const OnGradeIndexChange = (index) => {
+        setGradeIndex(index);
+    }
     return (
         <form className="form-container" onSubmit={onSubmit}>
+            <QuestionProgress
+                percent={percent}
+                step={step}
+                questionsAmount={questionsAmount} />
             {step === 0 && (
                 <Start />
             )}
@@ -58,10 +79,25 @@ const Form = () => {
             }
             {
                 step === 4 && (
+                    <CareQualityRange
+                        careQuality={careQuality}
+                        OnCareQualityChange={OnCareQualityChange}
+                    />
+                )
+            }
+            {
+                step === 5 && (
+                    <RatingStars OnGradeIndexChange={OnGradeIndexChange} gradeIndex={gradeIndex} />
+                )
+            }
+            {
+                step === 6 && (
                     <Overview
                         nameInput={nameInput}
                         quantity={quantity}
                         plantFeature={plantFeature}
+                        careQuality={careQuality}
+                        gradeIndex={gradeIndex}
                     />
                 )
             }

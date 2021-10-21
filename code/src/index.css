@@ -1,8 +1,7 @@
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./assets/leaves.jpg);
@@ -16,12 +15,14 @@ body {
   justify-content: center;
   color: white;
   max-width: 100%;
+  font-family: 'Indie Flower', cursive;
+  font-weight: bold;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+  scroll-behavior: smooth;
 }
+
  * {
    box-sizing: border-box;
  }
@@ -29,7 +30,7 @@ code {
  .main-container {
    background-color: #548e6679;
    width: 100vw;
-   height: 350px;
+   height: 500px;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -38,7 +39,6 @@ code {
 .form-container {
   display: flex;
   flex-direction: column;
-  font-size: 30px;
   padding: 0 30px;
   justify-content: center;
   text-align: center;
@@ -50,7 +50,7 @@ code {
 .name-survey {
   margin: 0;
   color: aquamarine;
-  font-family: Helvetica;
+  font-family: 'Indie Flower', cursive;
   font-size: 35px;
   font-weight: 900;
 
@@ -69,10 +69,11 @@ code {
   cursor: pointer;
   border:none;
   width: 150px;
-  margin-top: 30px;
+  margin-top: 20px;
   border-radius: 50px;
-  padding: 15px 20px;
+  padding: 13px 20px;
   font-weight: 600;
+  font-family: 'Indie Flower', cursive;
   box-shadow: 0px 5px 5px black;
 }
 
@@ -81,13 +82,14 @@ code {
 }
 
 .label-title {
-  font-size: 24px;
+  font-size: 28px;
   margin-bottom: 30px;
   letter-spacing: 1.2px;
 }
 .input-label {
   border: none;
   background-color: transparent;
+  margin-bottom: 25px;
   border-bottom: 2px solid white;
   color: white;
   font-size: 16px;
@@ -96,4 +98,220 @@ code {
 ::placeholder {
   color: white;
   opacity: 0.4;
+}
+.select-qty {
+  color: white;
+  opacity: 0.7;
+  background-color: transparent;
+  font-size: 20px;
+  margin: 20px 0px;
+  padding: 5px;
+  border: 1px solid white;
+}
+
+.option {
+  text-align: center;
+}
+.radio-buttons-container {
+  display: flex;
+  flex-direction: column;
+  font-size: 22px;
+  line-height: 30px;
+  letter-spacing: 1.2px;
+  font-weight: 700;
+}
+.input-radio {
+  margin-right: 10px;
+}
+.overview-container {
+  max-width: 350px;
+  font-size: 16px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.overview-text {
+  font-size: 30px;
+  letter-spacing: 1.2px;
+}
+.summary-text{
+  font-size: 25px;
+  text-align: left;
+  margin-bottom: 0;
+  text-decoration: underline;
+}
+.list-overview {
+  padding: 0px;
+  width: 100%;
+  margin-left: 18px;
+  text-align: left;
+}
+.list {
+  margin-bottom: 0px;
+  font-size: 18px;
+}
+.answers {
+  color: aquamarine;
+  font-size: 25px;
+}
+.range-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.range {
+  margin-top: 10px;
+  -webkit-appearance: none;
+  width: 90%;
+  height: 12px;
+  border-radius: 5px;
+  background: lightblue;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.range:hover {
+  opacity: 1;
+}
+/* round circle on range  */
+.range::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
+/* CSS pseudo-element is a Mozilla extension that represents the thumb */
+.range::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background:white;
+  cursor: pointer;
+}
+.range-number {
+  font-size: 25px;
+}
+.question-counter {
+  position: fixed;
+  top: 20px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  font-size: 20px;
+}
+.progress-bar {
+  position: relative;
+  height: 20px;
+  border-radius: 4px;
+  width: 70%;
+  border: 1px solid white;
+  
+}
+
+.progress-filler {
+  background-color: whitesmoke;
+  opacity: 0.7;
+  height: 100%;
+}
+
+.result {
+  text-align: center;
+  font-family: 'Indie Flower', cursive;
+}
+
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.star {
+  position: relative;
+  cursor: pointer;
+}
+.star:hover{
+  transform: scale(1.2);
+}
+.stars_radio-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+@media (min-width: 768px) {
+  .name-survey {
+    font-size: 48px;
+  }
+  .time-survey{
+    font-size: 25px;
+  }
+  .button{
+    width: 200px;
+    height: 80px;
+    font-size: 25px;
+  }
+  .question-counter{
+    top: 40px;
+    font-size: 28px;
+  }
+  .label-title {
+    font-size: 40px;
+  }
+  .input-label{
+    font-size: 22px;
+  }
+  .label-feature {
+    font-size: 28px;
+  }
+  .radio-buttons-container{
+    line-height: 33px;
+    justify-content: center;
+    align-items: center;
+  }
+  .input-radio{
+    width: 20px;
+    height: 20px;
+  }
+  .range-number {
+    font-size: 40px;
+    margin-top: 15px;
+  }
+  .result {
+    font-size: 33px;
+  }
+  .overview-text{
+    font-size: 35px;
+  }
+  .overview-container{
+    max-width: 550px;
+    background-color: #548e66;
+    border-radius: 30px;
+    height: 450px;
+  }
+  .summary-text{
+    font-size: 30px;
+    margin-top: 0;
+  }
+  .list {
+    font-size: 22px;
+    color: whitesmoke;
+  }
+  .answers {
+    font-size: 30px;
+  }
+  select {
+    margin: 0 auto; 
+    width: 60%;
+    height: 40px;
+  }
 }

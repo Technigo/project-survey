@@ -4,23 +4,29 @@ import Button from "./Button"
 
 const CharacteristicsRadio = ({ plantFeature, onPlantFeatureChange }) => {
 
-    const plantFeatures = ["aestetic", "color", "maintenance (easy to care)", "rarity"]
+    const plantFeatures = ["aesthetic pleasure", "color", "easy maintenance", "rarity", "air-purifying feature", "mood booster"]
 
     return (
         <>
-            <p>What is the most important for you in a plant?</p>
-            {plantFeatures.map((feature) => (
-                <label key={feature}>
-                    <input
-                        type="radio"
-                        value={feature}
-                        onChange={onPlantFeatureChange}
-                        checked={plantFeature === feature}
-                    />
-                    {feature}
-                </label>
-            ))}
-            <Button button="Continue" />
+            <p className="label-title">What is the most important for you when you buy a plant?</p>
+            <section className="radio-buttons-container">
+                {plantFeatures.map((feature) => (
+                    <label key={feature} htmlFor="plantProperty" className="label-feature">
+                        <input
+                            id="plantProperty"
+                            type="radio"
+                            name="feature-type"
+                            value={feature}
+                            onChange={onPlantFeatureChange}
+                            checked={plantFeature === feature}
+                            required
+                            className="input-radio"
+                        />
+                        {feature}
+                    </label>
+                ))}
+            </section>
+            <Button button="NEXT" />
         </>
     )
 }
