@@ -5,20 +5,24 @@ const SecondQuestion = (props) => {
 
   return (
       <form className="form">
-        <label htmlFor="surnameInput">Type your surname</label>
-          <input 
-            id="surnameInput" 
-            type="text" 
-            value={surnameInput} 
-            onChange={onSurnameInputChange} 
-            className="form-element"
-          />
-      <button 
-        disabled={surnameInput === ''}
-        onClick={onStepChange}
-        className="form-element">
-          Next question
-      </button>
+        <label 
+          htmlFor="surnameInput" 
+          className="form-label">
+            Type your surname
+        </label>
+        <input 
+          id="surnameInput" 
+          type="text" 
+          value={surnameInput} 
+          onChange={onSurnameInputChange} 
+          className="form-element"
+        />
+        <button 
+          disabled={surnameInput === ''}
+          onClick={onStepChange}
+          className="form-button">
+            Next question
+        </button>
       </form>
   )
 }

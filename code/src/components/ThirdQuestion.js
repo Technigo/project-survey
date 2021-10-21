@@ -5,9 +5,9 @@ const {onFeelingChange, onStepChange} = props
 
   return (
     <form className="form">
-      <label>
+      <label  htmlFor="feeling-happy" className="form-label"></label>
         <input 
-          id="feeling" 
+          id="feeling-happy" 
           type="radio" 
           value="happy"
           onChange={onFeelingChange} 
@@ -16,11 +16,15 @@ const {onFeelingChange, onStepChange} = props
         <span role="img" aria-label="happy-face">
           😃
         </span>
-      </label>
+      
 
-      <label>
+      <label 
+        htmlFor="feeling-sad"
+        className="form-label"
+        >
+      </label>
         <input 
-          id="feeling" 
+          id="feeling-sad" 
           type="radio" 
           value="sad"
           onChange={onFeelingChange} 
@@ -29,8 +33,8 @@ const {onFeelingChange, onStepChange} = props
         <span role="img" aria-label="sad-face">
           😥
         </span>
-      </label>
-      <button onClick={onStepChange} className="form-element">Next question</button>
+      
+      <button onClick={onStepChange} className="form-button">Next question</button>
     </form>
   )
 }

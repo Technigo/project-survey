@@ -4,7 +4,7 @@ const Overview = (props) => {
   const {nameInput, surnameInput, feeling, flavour} = props
   return (
 
-      <div> 
+      <div className="form"> 
         <section>
           <h2>My values: </h2>
           <p>Name {nameInput}</p>
