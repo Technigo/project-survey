@@ -37,9 +37,10 @@ const PreferenceQuestion = ({
           <input
             id="clothingInput"
             type="checkbox"
-            checked={clothingInput === false}
+            // checked={clothingInput}
             value={clothingInput}
             onChange={onClothingInputChange}
+            defaultChecked={clothingInput}
             onKeyPress={onEnter}
           />
         </div>
