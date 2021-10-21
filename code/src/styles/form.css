@@ -188,10 +188,11 @@ display: block;
     font-size: 18px;
     margin-top: 25px;
     font-family: 'Truculenta', sans-serif;
+    text-align: center;
 }
 
 .submit-button {
-    margin-top: 30px;
+    margin-top: 15px;
     font-family: 'Truculenta', sans-serif;
     font-size: 20px;
     letter-spacing: 1px;
