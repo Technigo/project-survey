@@ -1,4 +1,5 @@
 import React from 'react'
+import 'components/questions/radio.css'
 import { Button } from 'components/Button'
 
 export const Radio = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
@@ -12,7 +13,6 @@ export const Radio = ({ state, handleChange, data, step, incrementStep, decremen
 
   const onChangeHandler = (e, option) => {
     let validated = checkValid(e)
-    console.log('validator', validated)
     handleChange(e, option.next_question, data.title, data.number, 'Answer', data.id, validated)
   }
 
@@ -21,9 +21,10 @@ export const Radio = ({ state, handleChange, data, step, incrementStep, decremen
       <h2>{data.title}</h2>
       {data.options.map(option => {
         return (
-          <label key={option.id}>
+          <label className='label' key={option.id}>
             {option.label}
             <input
+              className='radio'
               type='radio'
               checked={state[data.type + data.id] === option.value}
               name={data.type + data.id}

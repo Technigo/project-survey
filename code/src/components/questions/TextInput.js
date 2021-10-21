@@ -1,9 +1,9 @@
 import React from 'react'
+import 'components/questions/textInput.css'
 import { Button } from 'components/Button'
 
 export const TextInput = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
   const siblingValid = option => {
-    console.log('validate sibling')
     if (data.options.length > 1) {
       return data.options
         .filter(opt => option.id !== opt.id)
@@ -21,9 +21,7 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
   }
 
   const onChangeHandler = (e, option) => {
-    console.log('onchangehandler')
     let validated = checkValid(e, option)
-    console.log('validator', validated)
     handleChange(e, 0, data.title, data.number, option.label, data.id, validated)
   }
   return (
@@ -31,9 +29,10 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
       <h2>{data.title}</h2>
       {data.options.map(option => {
         return (
-          <label key={option.id}>
+          <label className='label' key={option.id}>
             {option.label}
             <input
+              className='text-input'
               required={data.required === 'true'}
               type='text'
               id={option.id}

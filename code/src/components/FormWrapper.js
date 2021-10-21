@@ -1,4 +1,5 @@
 import React from 'react'
+import 'components/formWrapper.css'
 import data from 'assets/data.json'
 import { TextInput } from 'components/questions/TextInput'
 import { Radio } from 'components/questions/Radio'

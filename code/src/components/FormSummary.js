@@ -1,4 +1,5 @@
 import React from 'react'
+import 'components/formSummary.css'
 
 export const FormSummary = props => {
   const { state } = props

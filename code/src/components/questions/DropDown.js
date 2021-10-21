@@ -1,4 +1,5 @@
 import React from 'react'
+import 'components/questions/dropDown.css'
 import { Button } from 'components/Button'
 
 export const DropDown = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
@@ -18,7 +19,6 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
   }
   const onChangeHandler = e => {
     let validated = checkValid(e)
-    console.log('validator', validated)
     handleChange(
       e,
       nextQuestion[e.target.value],
@@ -34,6 +34,7 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
     <>
       <h2>{data.title}</h2>
       <select
+        className='dropdown'
         name='select'
         id={data.type + data.id}
         value={state[data.type + data.id]}
