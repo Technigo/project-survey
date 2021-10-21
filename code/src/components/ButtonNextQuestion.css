@@ -1,0 +1,26 @@
+@keyframes press {
+  0% {
+    background-color: #dca08f;
+  }
+  100% {
+    background-color: #de8971;
+  }
+}
+
+.link-button {
+  background-color: var(--orange);
+  width: 100%;
+  border: none;
+  color: var(--beige);
+  font-size: 24px;
+  border-radius: 10px;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+.link-button:hover {
+  animation: press 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}

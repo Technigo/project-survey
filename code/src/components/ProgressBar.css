@@ -1,0 +1,10 @@
+.progress-bar {
+  background-color: tomato;
+}
+
+.progress-container {
+  width: 100%;
+  margin-top: 40px;
+  text-align: center;
+  border: 1px solid black;
+}

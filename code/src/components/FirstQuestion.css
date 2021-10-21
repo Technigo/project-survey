@@ -1,0 +1,10 @@
+.input-first-question {
+  width: 100%;
+  padding: 15px;
+  background-color: var(--beige);
+  border: none;
+}
+
+.input-first-question::after {
+  background-color: var(--beige);
+}

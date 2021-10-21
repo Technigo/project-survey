@@ -1,0 +1,60 @@
+/* radio-button */
+.wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+/* The one below is taking out default */
+.radiobutton-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radiobutton-container {
+  display: block;
+  position: relative;
+  font-size: 20px;
+  padding-left: 24px;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: var(--beige);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.radiobutton-container:hover input ~ .custom-radio {
+  background-color: #de8971;
+}
+
+.radiobutton-container input:checked ~ .custom-radio {
+  background-color: black;
+}
+
+.custom-radio:after {
+  content: "";
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  width: 7px;
+  height: 7px;
+  background-color: var(--purple);
+  border-radius: 50%;
+  display: none;
+}
+
+.radiobutton-container input:checked ~ .custom-radio:after {
+  display: block;
+}
+
+.radiobutton-container input:focus + .custom-radio {
+  outline: #de8971 auto 4px;
+}

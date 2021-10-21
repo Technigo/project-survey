@@ -1,19 +1,27 @@
 import React from "react";
+import "./ProgressBar.css";
 
 const ProgressBar = ({ done }) => {
+  const ProgressContainer = {
+    height: 40,
+    width: "100%",
+    backgroundColor: "black",
+  };
+
+  const ProgressBar = {
+    height: "100%",
+    width: `${done}%`,
+  };
+
   return (
     <>
-      <div className="progress-container">
-        <progress
-          htmlFor="progressBar"
-          className="progress-bar"
-          value={done}
-          max="100"
-        />
-        <label className="label-progressBar" id="progressBar">
+      <div className="progress-container" style={ProgressContainer}>
+        <div className="progress-bar" style={ProgressBar}>
           {done}%
-        </label>
-        {/* <button className="link-button" onClick={onUpdateValueChange}></button> */}
+        </div>
+        {/* <label className="label-progressBar" id="progressBar">
+          
+        </label> */}
       </div>
     </>
   );

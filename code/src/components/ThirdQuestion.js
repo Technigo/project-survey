@@ -1,4 +1,6 @@
 import React from "react";
+import "./ThirdQuestion.css";
+import ButtonNextQuestion from "./ButtonNextPage";
 
 const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
   const ageGroup = [
@@ -30,9 +32,7 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
         // </div>
       ))}
 
-      <button type="submit" className="link-button">
-        Next question
-      </button>
+      <ButtonNextQuestion />
     </form>
   );
 };

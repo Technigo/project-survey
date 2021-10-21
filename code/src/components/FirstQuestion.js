@@ -1,4 +1,6 @@
 import React from "react";
+import ButtonNextQuestion from "./ButtonNextPage";
+import "./FirstQuestion.css";
 
 const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
   return (
@@ -16,10 +18,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
         name="nameInput"
         // required
       />
-
-      <button type="submit" className="link-button">
-        Next question
-      </button>
+      <ButtonNextQuestion />
     </form>
   );
 };

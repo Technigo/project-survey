@@ -1,0 +1,42 @@
+.start-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin-top: 20vh;
+  color: var(--orange);
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  30% {
+    transform: translateY(-20px);
+  }
+  50% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.button-icon {
+  width: 100px;
+  align-items: center;
+  animation: bounce 1s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  animation-direction: alternate;
+}
+
+.button-icon:hover {
+  animation: press 2s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  border-radius: 50%;
+  animation-direction: alternate;
+}

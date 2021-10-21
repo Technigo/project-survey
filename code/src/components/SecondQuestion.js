@@ -1,4 +1,5 @@
 import React from "react";
+import ButtonNextQuestion from "./ButtonNextPage";
 
 const SecondQuestion = ({
   interestInput,
@@ -24,9 +25,7 @@ const SecondQuestion = ({
         <option value="seller">Seller</option>
         <option value="buyer-and-seller">Buyer and seller</option>
       </select>
-      <button type="submit" className="link-button">
-        Next question
-      </button>
+      <ButtonNextQuestion />
     </form>
   );
 };
