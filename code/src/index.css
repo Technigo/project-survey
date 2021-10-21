@@ -108,7 +108,8 @@ button {
   -webkit-transition: all 150ms ease-in-out;
   transition: all 150ms ease-in-out;
   width: 30%;
-  margin: 20px auto;
+  display: flex;
+  justify-content: center;
   cursor: pointer;
   border-radius: 20px;
   font-family: "Raleway", sans-serif;
