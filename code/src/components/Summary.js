@@ -14,7 +14,7 @@ const Summary = ({ correctAnswers, selectedAnswers }) => {
         </thead>
         <tbody>
           {correctAnswers.map((answer, index) => (
-            <tr key={answer} className='summary-answers'>
+            <tr key={answer}>
               <th>{index + 1}</th>
               <td>{answer}</td>
               <td

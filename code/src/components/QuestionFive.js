@@ -5,6 +5,7 @@ const QuestionFive = ({
   questionAnswer,
   onAnswerChange,
   handleSubmit,
+  handlePrevButton,
 }) => {
   return (
     <form
@@ -42,9 +43,18 @@ const QuestionFive = ({
         </label>
       </div>
       <br />
-      <button aria-pressed='false' aria-label='Go to summary' type='submit'>
-        Submit &gt;&gt;
-      </button>
+      <div className='buttons-container'>
+        <button
+          aria-label='Go to previously question'
+          type='button'
+          onClick={handlePrevButton}
+        >
+          &lt;&lt; Prev
+        </button>
+        <button aria-label='Go to summary' type='submit'>
+          Submit &gt;&gt;
+        </button>
+      </div>
     </form>
   );
 };

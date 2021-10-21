@@ -5,6 +5,7 @@ const QuestionThree = ({
   questionAnswer,
   onAnswerChange,
   handleSubmit,
+  handlePrevButton,
 }) => {
   return (
     <form
@@ -34,13 +35,18 @@ const QuestionThree = ({
         ))}
       </select>
       <br />
-      <button
-        aria-pressed='false'
-        aria-label='Go to next question'
-        type='submit'
-      >
-        Next &gt;&gt;
-      </button>
+      <div className='buttons-container'>
+        <button
+          aria-label='Go to previously question'
+          type='button'
+          onClick={handlePrevButton}
+        >
+          &lt;&lt; Prev
+        </button>
+        <button aria-label='Go to next question' type='submit'>
+          Next &gt;&gt;
+        </button>
+      </div>
     </form>
   );
 };

@@ -17,8 +17,6 @@ const saveSelectedAnswers = [];
 const Quiz = () => {
   const [step, setStep] = useState(-1);
   const [answer, setAnswer] = useState('');
-  // to do!! Fix State 50 question 5. And Progress Bar!
-  // const [questionFive, setQuestionFive] = useState(50);
 
   const onAnswerChange = (event) => {
     setAnswer(event.target.value);
@@ -26,12 +24,26 @@ const Quiz = () => {
 
   const onStepChange = () => {
     setStep(step + 1);
+    // want the default value for the question 5 to be 50 (slider), min value is 50
+    if (step === 4) {
+      setAnswer(50);
+    }
   };
 
   const handleSubmit = (event, selectedAnswer) => {
+    // prevent page reload
     event.preventDefault();
+    // increase step
     onStepChange();
-    saveSelectedAnswers.push(selectedAnswer);
+    // save the selected answer in an array named saveSelectedAnswers
+    saveSelectedAnswers[step - 1] = selectedAnswer;
+    // saveSelectedAnswers.push(selectedAnswer);
+  };
+
+  const handlePrevButton = () => {
+    // when user click on Prev-button, it will decrease the step
+    setStep(step - 1);
+    // saveSelectedAnswers.splice(step - 1, 1, '');
   };
 
   return (
@@ -52,59 +64,48 @@ const Quiz = () => {
           />
         )}
         {step === 1 && (
-          <>
-            <QuestionOne
-              questionOneData={data.pages[0].questions[0]}
-              questionAnswer={answer}
-              onAnswerChange={onAnswerChange}
-              handleSubmit={handleSubmit}
-            />
-            <ProgressBar completed={step} totalQuestions={data.pages.length} />
-          </>
+          <QuestionOne
+            questionOneData={data.pages[0].questions[0]}
+            questionAnswer={answer}
+            onAnswerChange={onAnswerChange}
+            handleSubmit={handleSubmit}
+          />
         )}
         {step === 2 && (
-          <>
-            <QuestionTwo
-              questionTwoData={data.pages[1].questions[0]}
-              questionAnswer={answer}
-              onAnswerChange={onAnswerChange}
-              handleSubmit={handleSubmit}
-            />
-            <ProgressBar completed={step} totalQuestions={data.pages.length} />
-          </>
+          <QuestionTwo
+            questionTwoData={data.pages[1].questions[0]}
+            questionAnswer={answer}
+            onAnswerChange={onAnswerChange}
+            handleSubmit={handleSubmit}
+            handlePrevButton={handlePrevButton}
+          />
         )}
         {step === 3 && (
-          <>
-            <QuestionThree
-              questionThreeData={data.pages[2].questions[0]}
-              questionAnswer={answer}
-              onAnswerChange={onAnswerChange}
-              handleSubmit={handleSubmit}
-            />
-            <ProgressBar completed={step} totalQuestions={data.pages.length} />
-          </>
+          <QuestionThree
+            questionThreeData={data.pages[2].questions[0]}
+            questionAnswer={answer}
+            onAnswerChange={onAnswerChange}
+            handleSubmit={handleSubmit}
+            handlePrevButton={handlePrevButton}
+          />
         )}
         {step === 4 && (
-          <>
-            <QuestionFour
-              questionFourData={data.pages[3].questions[0]}
-              questionAnswer={answer}
-              onAnswerChange={onAnswerChange}
-              handleSubmit={handleSubmit}
-            />
-            <ProgressBar completed={step} totalQuestions={data.pages.length} />
-          </>
+          <QuestionFour
+            questionFourData={data.pages[3].questions[0]}
+            questionAnswer={answer}
+            onAnswerChange={onAnswerChange}
+            handleSubmit={handleSubmit}
+            handlePrevButton={handlePrevButton}
+          />
         )}
         {step === 5 && (
-          <>
-            <QuestionFive
-              questionFiveData={data.pages[4].questions[0]}
-              questionAnswer={answer}
-              onAnswerChange={onAnswerChange}
-              handleSubmit={handleSubmit}
-            />
-            <ProgressBar completed={step} totalQuestions={data.pages.length} />
-          </>
+          <QuestionFive
+            questionFiveData={data.pages[4].questions[0]}
+            questionAnswer={answer}
+            onAnswerChange={onAnswerChange}
+            handleSubmit={handleSubmit}
+            handlePrevButton={handlePrevButton}
+          />
         )}
         {step === 6 && (
           <Summary
@@ -113,6 +114,10 @@ const Quiz = () => {
             )}
             selectedAnswers={saveSelectedAnswers}
           />
+        )}
+        {step >= 1 && step <= 5 && (
+          // Progress bar for question 1 to 5
+          <ProgressBar completed={step} totalQuestions={data.pages.length} />
         )}
       </section>
       <footer>

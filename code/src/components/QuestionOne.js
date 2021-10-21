@@ -41,8 +41,8 @@ const QuestionOne = ({
       </div>
       <br />
       <button
-        aria-pressed='false'
         aria-label='Go to next question'
+        // need a submit button because of the form
         type='submit'
       >
         Next &gt;&gt;
