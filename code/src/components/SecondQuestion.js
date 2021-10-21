@@ -22,6 +22,13 @@ const SecondQuestion = ({ location, onLocationChange, onStepChange }) => {
           Next <span role="img" aria-label="arrow"></span>
         </button>
       </div>
+      <p className="current-step">
+        ➤ Personal Information ➤ Destination{" "}
+        <span className="progress">
+          {" "}
+          ➤ Price conditions ➤ Nights ➤ Overview
+        </span>
+      </p>
     </section>
   )
 }

@@ -1,59 +1,69 @@
 import React from "react"
 
-const ThirdQuestion = ({ timeButton, onTimeButtonChange, onStepChange }) => {
+const ThirdQuestion = ({
+  priceConditions,
+  onPriceConditionsChange,
+  onStepChange,
+}) => {
   return (
     <section className="form-wrapper">
       <div className="form-container">
-        <h1>Choose the length of your stay</h1>
+        <h1 className="fourthQ-header">
+          Do you want the cheapest or fastest way?{" "}
+        </h1>
         <div className="form-parent">
           <form>
-            <label htmlFor="weekend">
+            <label htmlFor="fastest">
               <p>
-                For a weekend
+                The Fastest way
                 <span className="radio-btn">
                   <input
                     type="radio"
-                    value="weekend getaway"
-                    onChange={onTimeButtonChange}
-                    checked={timeButton === "weekend getaway"}
+                    value="fastest"
+                    onChange={onPriceConditionsChange}
+                    checked={priceConditions === "fastest"}
                   />
                 </span>
               </p>
             </label>
 
-            <label htmlFor="week">
+            <label htmlFor="cheapest">
               <p>
-                For one week
+                The cheapest way
                 <span className="radio-btn">
                   <input
                     type="radio"
-                    value="one week"
-                    onChange={onTimeButtonChange}
-                    checked={timeButton === "one week"}
+                    value="cheapest"
+                    onChange={onPriceConditionsChange}
+                    checked={priceConditions === "cheapest"}
                   />
                 </span>
               </p>
             </label>
 
-            <label htmlFor="month">
+            <label htmlFor="combination">
               <p>
-                For a month
+                A combination
                 <span className="radio-btn">
                   <input
                     type="radio"
-                    value="one month stay"
-                    onChange={onTimeButtonChange}
-                    checked={timeButton === "one month stay"}
+                    value="combination"
+                    onChange={onPriceConditionsChange}
+                    checked={priceConditions === "combination"}
                   />
                 </span>
               </p>
             </label>
           </form>
           <button onClick={onStepChange}>
-            See overview <span role="img" aria-label="arrow"></span>
+            Next <span role="img" aria-label="arrow"></span>
           </button>
         </div>
       </div>
+      <p className="current-step">
+        ➤ Personal Information ➤ Destination ➤ Price conditions{" "}
+        <span className="progress"> ➤ Nights ➤ Overview</span>
+      </p>
     </section>
   )
 }
