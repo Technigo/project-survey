@@ -130,6 +130,7 @@ export const InputsForm = () => {
         <Checkboxes
           happiness={happiness}
           onHappinessChange={onHappinessChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onStepChange={onStepChange}
         />
       )}

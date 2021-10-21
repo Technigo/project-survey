@@ -5,8 +5,8 @@ const Checkboxes = ({
   onHappinessChange,
   onPreviousQuestionChange,
   onStepChange,
-  sad,
   happy,
+  sad,
   angry,
   love,
 }) => {
