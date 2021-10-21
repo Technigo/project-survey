@@ -1,0 +1,11 @@
+select {
+  border: none;
+  width: 50%;
+  padding: 10px;
+  margin: 30px auto;
+  background-color: transparent;
+  border-bottom: 2px solid var(--prim);
+  font-family: var(--font);
+  font-size: 20px;
+  color: var(--sek);
+}

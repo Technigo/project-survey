@@ -1,4 +1,5 @@
 import React from "react"
+import './SelectDropdown.css'
 
 const SelectDropdown = ({optionValue, setOptionValue, valueArray}) => {
   return (

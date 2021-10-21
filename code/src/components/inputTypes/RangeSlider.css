@@ -1,1 +1,31 @@
+.range-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
+.range-slider-span {
+  padding: 10px;
+  font-size: 24px;
+}
+
+input[type="range"] {
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: #a0a0a0;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+  height: 8px;
+  -webkit-appearance: none;
+  color: var(--prim);
+  margin-top: -1px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  background: #434343;
+  box-shadow: -80px 0 0 80px var(--prim);
+}

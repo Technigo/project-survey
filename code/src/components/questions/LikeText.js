@@ -11,7 +11,7 @@ const LikeText =({
 }) => {
   return(
     <form>
-      <label>What about the presentation text? Does it provide good information?
+      <label>What about the presentation text? Do you like it?
         <RadioButtons
           value={text}
           setValue={setText}

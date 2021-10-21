@@ -14,7 +14,9 @@ const Suggestions = ({
           setValue={setImprove}
         />  
       </label> 
-      <button onClick={onStepChange}>Next question</button>
+      <button 
+        onClick={onStepChange}>Go to Summary
+      </button>
     </form>
   )
 }
