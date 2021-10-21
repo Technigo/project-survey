@@ -2,6 +2,8 @@ import React from 'react'
 
 const OlderQuestion = ({olderInput, onOlderInputChange, onstepChange}) => {
     return (
+        <div className ="container-bella">
+         <img src="/assets/bella.jpg"></img>   
         <fieldset className="fieldset">
            <legend className="legend" >Questions by Bella + Bubbles</legend>
              <form className="form-container">
@@ -18,6 +20,8 @@ const OlderQuestion = ({olderInput, onOlderInputChange, onstepChange}) => {
             </form>
               
         </fieldset>
+        </div>
+        
     )
 }
 

@@ -2,7 +2,9 @@ import React from 'react'
 
 const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange}) => {
     return (
-        <fieldset className="fieldset">
+        <div className = "container-bubbles">
+           <img src="/assets/bubbles.jpg"></img> 
+            <fieldset className="fieldset">
             <legend className="legend" >Questions by Bella + Bubbles</legend>
 
             <form className="form-container">
@@ -23,6 +25,8 @@ const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange}) => {
             <button className="button" onClick = {onstepChange}>Next Question</button>
             </form>
         </fieldset>
+        </div>
+        
         
     
     )

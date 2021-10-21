@@ -3,7 +3,9 @@ import React from 'react'
 const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange}) =>{
 
     return(
-        <fieldset className="fieldset">
+       <div className="container-bubbles">
+           <img src="/assets/bubbles.jpg"></img>
+            <fieldset className="fieldset">
            <legend className="legend" >Questions by Bella + Bubbles</legend>
             <form className="form-container">
                 <div className="radioColumn">
@@ -35,6 +37,7 @@ const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange}) =>{
         <button className="button" onClick = {onstepChange}>Next Question</button>
         </form>
         </fieldset>
+       </div>
     )
 }
 export default AeroplaneQuestion

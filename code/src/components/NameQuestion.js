@@ -3,7 +3,8 @@ import React from 'react'
 const NameQuestion = ( {nameInput, onNameInputChange, onstepChange}) => {
 
     return (
-       
+       <div className ="container-bella">
+        <img src="/assets/bella.jpg"></img>
         <fieldset className="fieldset">
            <legend className="legend" >Questions by Bella + Bubbles</legend>
              <form className="form-container">
@@ -20,7 +21,7 @@ const NameQuestion = ( {nameInput, onNameInputChange, onstepChange}) => {
             </form>
               
         </fieldset>
-       
+       </div>
         
     )
 }

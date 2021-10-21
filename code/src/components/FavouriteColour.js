@@ -2,7 +2,9 @@ import React from 'react'
 
 const FavouriteColour = ({colourInput, onColourInputChange, onstepChange}) => {
     return (
-        <fieldset className="fieldset">
+        <div className ="container-bella">
+          <img src="/assets/bella.jpg"></img>  
+          <fieldset className="fieldset">
          <legend className="legend" >Questions by Bella + Bubbles</legend>
             <form className="form-container">
               <label className="label" htmlFor="colourInput">Which is your favourite colour?</label>
@@ -15,7 +17,9 @@ const FavouriteColour = ({colourInput, onColourInputChange, onstepChange}) => {
                 />
                 <button className="button" onClick = {onstepChange}>Next Question</button>
             </form>
-        </fieldset>
+        </fieldset>  
+        </div>
+        
         
         
     )
