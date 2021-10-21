@@ -5,6 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   height: 100vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.473), rgba(0, 0, 0, 0.418)), url("./assets/background-image.jpg");
   background-position: center;
@@ -21,20 +22,11 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 30px;
 }
 
 .welcome-message {
   text-align: center;
   font-size: 40px;
-  font-weight: 400;
-  color: #ffc964;
-  text-shadow: 1px 1px #cc9837;
-}
-
-.overview-container {
-  text-align: center;
-  font-size: 18px;
   font-weight: 400;
   color: #ffc964;
   text-shadow: 1px 1px #cc9837;
@@ -51,12 +43,25 @@ code {
   text-shadow: 1px 1px #cc9837;
 }
 
+.overview-container {
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  color: #ffc964;
+  text-shadow: 1px 1px #cc9837;
+  margin-top: -90px;
+}
+
 /*******Custom Progress Bar*******/
 
 .progress-bar-container {
   text-align: end;
   color: #ffc964;
   margin: 1vh;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
 }
 
 .progress-bar {
@@ -315,10 +320,73 @@ code {
   padding: 10px;
 }
 
-/*******Tablet Display*******/
+/*******Media Queries*******/
+
+@media (min-width: 360px) {
+  .radio-buttons-container {
+    flex-direction: row;
+  }
+}
 
 @media (min-width: 768px) {
   .welcome-message-container, .alias-buttons-container, .question-one-container, .question-two-container, .question-three-container, .question-four-container, .question-five-container, .overview-container {
     align-items: center;
   }
+  .progress-bar {
+    width: 200px;
+  }
+  .form-style {
+    width: 400px;
+  }
+  .select-style {
+    width: 400px;
+  }
+  .slider-container {
+    width: 400px;
+  }
 }
+
+/* @media (min-width: 992px) {
+  .progress-bar {
+    width: 30%;
+  }
+  .form-style {
+    width: 60%;
+  }
+  .select-style {
+    width: 40%;
+  }
+  .slider-container {
+    width: 50%;
+  }
+}
+
+@media (min-width: 1200px) {
+  .progress-bar {
+    width: 25%;
+  }
+  .form-style {
+    width: 50%;
+  }
+  .select-style {
+    width: 35%;
+  }
+  .slider-container {
+    width: 40%;
+  }
+}
+
+@media (min-width: 1400px) {
+  .progress-bar {
+    width: 300px;
+  }
+  .form-style {
+    width: 45%;
+  }
+  .select-style {
+    width: 30%;
+  }
+  .slider-container {
+    width: 35%;
+  }
+} */
