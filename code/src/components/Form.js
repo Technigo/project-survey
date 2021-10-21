@@ -25,8 +25,8 @@ const Form = () => {
     setCityInput(event.target.value);
   };
 
-  const onFoodInputChange = (foodInput) => {
-    setFoodInput(foodInput);
+  const onFoodInputChange = (event) => {
+    setFoodInput(event.target.value);
   };
 
   const onRestaurantInputChange = (event) => {

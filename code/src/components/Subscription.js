@@ -10,8 +10,7 @@ const Subscription = ({
     <div className="wrapper">
       <div className="form-wrapper">
         <p>
-          Subscribe to our newsletter to recive your answers and restaurant news
-          in your e-mail
+          Subscribe to our newsletter to recive restaurant news in your e-mail
         </p>
         <form>
           <label htmlFor="subscriptionInput">Type your e-mail</label>

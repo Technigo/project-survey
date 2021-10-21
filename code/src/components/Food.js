@@ -13,20 +13,20 @@ const Food = ({
         <p className="food-header">Favorite type of food:</p>
         <div className="food-wrapper">
           <div className="food-types">
-            <label class="radiobutton-container">
+            <label className="radiobutton-container">
               <div>
                 <img
                   className="food-image"
                   src="./pictures/swedish.jpg"
                   alt="swedish meatball dish"
-                />{" "}
+                />
               </div>
               <div>
                 <input
                   className="radio-button"
                   type="radio"
                   value="swedish"
-                  onChange={() => onFoodInputChange("swedish")}
+                  onChange={onFoodInputChange}
                   checked={foodInput === "swedish"}
                 />
                 Swedish food
@@ -34,7 +34,7 @@ const Food = ({
             </label>
           </div>
           <div className="food-types">
-            <label class="radiobutton-container">
+            <label className="radiobutton-container">
               <div>
                 <img
                   className="food-image"
@@ -47,7 +47,7 @@ const Food = ({
                   className="radio-button"
                   type="radio"
                   value="american"
-                  onChange={() => onFoodInputChange("american")}
+                  onChange={onFoodInputChange}
                   checked={foodInput === "american"}
                 />
                 American food
@@ -55,7 +55,7 @@ const Food = ({
             </label>
           </div>
           <div className="food-types">
-            <label class="radiobutton-container">
+            <label className="radiobutton-container">
               {" "}
               <div>
                 <img
@@ -69,7 +69,7 @@ const Food = ({
                   className="radio-button"
                   type="radio"
                   value="italian"
-                  onChange={() => onFoodInputChange("italian")}
+                  onChange={onFoodInputChange}
                   checked={foodInput === "italian"}
                 />
                 Italian food
@@ -83,14 +83,14 @@ const Food = ({
                   className="food-image"
                   src="./pictures/japanese.jpg"
                   alt="sushi dish"
-                />{" "}
+                />
               </div>
               <div>
                 <input
                   className="radio-button"
                   type="radio"
                   value="japanese"
-                  onChange={() => onFoodInputChange("japanese")}
+                  onChange={onFoodInputChange}
                   checked={foodInput === "japanese"}
                 />
                 Japanese food
@@ -98,7 +98,7 @@ const Food = ({
             </label>
           </div>
           <div className="food-types">
-            <label class="radiobutton-container">
+            <label className="radiobutton-container">
               <div>
                 <img
                   className="food-image"
@@ -111,7 +111,7 @@ const Food = ({
                   className="radio-button"
                   type="radio"
                   value="mexican"
-                  onChange={() => onFoodInputChange("mexican")}
+                  onChange={onFoodInputChange}
                   checked={foodInput === "mexican"}
                 />
                 Mexican food
@@ -119,7 +119,7 @@ const Food = ({
             </label>
           </div>
           <div className="food-types">
-            <label class="radiobutton-container">
+            <label className="radiobutton-container">
               <div>
                 <img
                   className="food-image"
@@ -132,7 +132,7 @@ const Food = ({
                   className="radio-button"
                   type="radio"
                   value="indian"
-                  onChange={() => onFoodInputChange("indian")}
+                  onChange={onFoodInputChange}
                   checked={foodInput === "indian"}
                 />
                 Indian food
