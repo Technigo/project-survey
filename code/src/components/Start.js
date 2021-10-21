@@ -8,7 +8,7 @@ const Start = ({ onStepChange }) => {
           <h1>WELCOME TO INSTANT TRIP</h1>
         </label>
 
-        <button onClick={onStepChange}>
+        <button className="start-btn" onClick={onStepChange}>
           Take me to the booking <span role="img" aria-label="arrow"></span>{" "}
         </button>
       </div>

@@ -4,11 +4,12 @@ const ThirdQuestion = ({
   priceConditions,
   onPriceConditionsChange,
   onStepChange,
+  onPreStepChange,
 }) => {
   return (
     <section className="form-wrapper">
       <div className="form-container">
-        <h1 className="fourthQ-header">
+        <h1 className="thirdQ-header">
           Do you want the cheapest or fastest way?{" "}
         </h1>
         <div className="form-parent">
@@ -55,14 +56,18 @@ const ThirdQuestion = ({
               </p>
             </label>
           </form>
-          <button onClick={onStepChange}>
-            Next <span role="img" aria-label="arrow"></span>
-          </button>
         </div>
+        <button className="back-btn" onClick={onPreStepChange}>
+          <span className="back-arrow" role="img" aria-label="arrow"></span>
+          Go back
+        </button>
+        <button onClick={onStepChange}>
+          Next <span role="img" aria-label="arrow"></span>
+        </button>
       </div>
       <p className="current-step">
         ➤ Personal Information ➤ Destination ➤ Price conditions{" "}
-        <span className="progress"> ➤ Nights ➤ Overview</span>
+        <span className="progress"> ➤ Departure ➤ Overview</span>
       </p>
     </section>
   )

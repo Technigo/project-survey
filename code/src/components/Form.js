@@ -14,7 +14,7 @@ const Form = () => {
   const [emailInput, setEmailInput] = useState("")
   const [location, setLocation] = useState("")
   const [priceConditions, setPriceConditions] = useState("")
-  const [nights, setNights] = useState("")
+  const [departure, setDeparture] = useState("")
   const [step, setStep] = useState(1)
 
   const onNameInputChange = (event) => {
@@ -33,12 +33,16 @@ const Form = () => {
     setPriceConditions(event.target.value)
   }
 
-  const onNightsChange = (event) => {
-    setNights(event.target.value)
+  const onDepartureChange = (event) => {
+    setDeparture(event.target.value)
   }
 
   const onStepChange = () => {
     setStep(step + 1)
+  }
+
+  const onPreStepChange = () => {
+    setStep(step - 1)
   }
 
   return (
@@ -52,6 +56,7 @@ const Form = () => {
           onEmailInputChange={onEmailInputChange}
           onNameInputChange={onNameInputChange}
           onStepChange={onStepChange}
+          onPreStepChange={onPreStepChange}
         />
       )}
       {step === 3 && (
@@ -59,6 +64,7 @@ const Form = () => {
           location={location}
           onLocationChange={onLocationChange}
           onStepChange={onStepChange}
+          onPreStepChange={onPreStepChange}
         />
       )}
 
@@ -67,14 +73,16 @@ const Form = () => {
           priceConditions={priceConditions}
           onPriceConditionsChange={onPriceConditionsChange}
           onStepChange={onStepChange}
+          onPreStepChange={onPreStepChange}
         />
       )}
 
       {step === 5 && (
         <FourthQuestion
-          nights={nights}
-          onNightsChange={onNightsChange}
+          departure={departure}
+          onDepartureChange={onDepartureChange}
           onStepChange={onStepChange}
+          onPreStepChange={onPreStepChange}
         />
       )}
 
@@ -83,40 +91,12 @@ const Form = () => {
           nameInput={nameInput}
           location={location}
           priceConditions={priceConditions}
-          nights={nights}
+          departure={departure}
           emailInput={emailInput}
         />
       )}
     </div>
   )
 }
-
-// return (
-//   <div>
-//     <form>
-//       <label htmlFor="nameInput">Type your name</label>
-//       <input
-//         id="nameInput"
-//         type="text"
-//         value={nameInput}
-//         onChange={onNameInputChange}
-//       />
-
-//       <label htmlFor="surnameInput">Type your surname</label>
-//       <input
-//         id="surnameInput"
-//         type="text"
-//         value={surnameInput}
-//         onChange={onSurnameInputChange}
-//       />
-//     </form>
-
-//     <section>
-//       <h2>My values from the form: </h2>
-//       <p>Name : {nameInput}</p>
-//       <p>Surname : {surnameInput}</p>
-//     </section>
-//   </div>
-// )
 
 export default Form
