@@ -1,18 +1,146 @@
 body {
+  background-image: url("./images/pumpkin.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Creepster" -apple-system, BlinkMacSystemFont, "Segoe UI",
+    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+    "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* display: block; */
+  display: flex;
+  text-align: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-.survey-box {
-  width: 400px;
-  height: 400px;
-  background-color: beige;
+h1 {
+  font-family: "Creepster";
+  /* padding-top: 30px; */
+  color: #e66b09;
+  font-size: 4.5rem;
 }
+/* .neonText {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+} */
+
+h2 {
+  /* font-family: "Nosifer"; */
+  font-size: 3rem;
+  font-weight: 700;
+  font-family: "Jolly Lodger", cursive;
+  color: whitesmoke;
+}
+
+h4 {
+  color: whitesmoke;
+}
+p {
+  color: whitesmoke;
+  font-size: 1.8rem;
+}
+
+.btn {
+  border-radius: 4%;
+  background-color: grey;
+  width: 35%;
+  height: 55px;
+  text-decoration: none;
+  font-family: "Megrim", cursive;
+  width: 30%;
+  margin: 30px auto;
+  text-align: center;
+  color: #fff;
+  border: 0.2rem solid #fff;
+  border-radius: 20px;
+  padding: 0.4em;
+  box-shadow: 0 0 0.2rem #fff, 0 0 0.2rem #fff, 0 0 2rem #3fab43,
+    0 0 0.8rem #3fab43, 0 0 2.8rem #3fab43, inset 0 0 1.3rem #3fab43;
+}
+.start {
+  color: blue;
+}
+/* .glow-btn:hover {
+  color: rgba(255, 255, 255, 1);
+  box-shadow: 0 5px 15px rgba(145, 92, 182, 0.4);
+} */
+
+.main {
+  height: 100vh;
+  width: 100vw;
+}
+
+.main-container {
+  position: relative;
+  top: 50px;
+
+  width: 70%;
+  height: 750px;
+  background-color: rgba(0, 0, 0, 0.7);
+
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  margin: 100px 100px 100px 150px;
+}
+
+/* First Question */
+
+.first {
+  display: flex;
+  flex-direction: column;
+  padding: ;
+}
+input {
+  width: 60%;
+  height: 40px;
+  border-radius: 10px;
+}
+.select {
+  width: 40%;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.footer {
+  padding-top: 100px;
+  position: absolute;
+  height: 400px;
+  color: whitesmoke;
+  color: rgba(0, 0, 0, 0.7);
+  bottom: 0;
+}
+.svg {
+  width: 180px;
+  height: 180px;
+  padding-top: 50px;
+  /* /* animation: spin 4s ease-in-out; */
+}
+.svg-image {
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+}
+
+@keyframes spin {
+  0% {
+    transform: translateX(-130%);
+  }
+  50% {
+    transform: translateX(80%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+/* Progress bar */

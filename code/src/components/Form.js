@@ -5,6 +5,7 @@ import SecondQuestion from "./SecondQuestion";
 import ThirdQuestion from "./ThirdQuestion";
 import FourthQuestion from "./FourthQuestion";
 import Overview from "./Overview";
+import { Footer } from "./Footer";
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
@@ -30,8 +31,8 @@ const Form = () => {
   };
 
   return (
-    <container>
-      <div className="survey-box">
+    <main className="main">
+      <section className="main-container">
         {step === 0 && <Intro onStepChange={onStepChange} />}
         {step === 1 && (
           <FirstQuestion
@@ -69,8 +70,10 @@ const Form = () => {
             creatureInput={creatureInput}
           />
         )}
-      </div>
-    </container>
+      </section>
+
+      <Footer />
+    </main>
   );
 };
 

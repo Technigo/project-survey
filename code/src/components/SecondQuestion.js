@@ -6,16 +6,25 @@ const SecondQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form>
-      <label htmlFor="surnameInput">Type your surname</label>
-      <input
-        id="surnameInput"
-        type="text"
-        value={surnameInput}
-        onChange={onSurnameInputChange}
-      />
-      <button onClick={onStepChange}>See overwiew</button>
-    </form>
+    <>
+      <p>Boring i know but....will also need last name</p>
+      <form>
+        <label className="input" htmlFor="surnameInput"></label>
+        <input
+          className="input"
+          id="surnameInput"
+          type="text"
+          value={surnameInput}
+          onChange={onSurnameInputChange}
+        />
+        <button className="btn" onClick={onStepChange}>
+          Next question
+          <span role="img" aria-label="pumpkin">
+            🎃
+          </span>
+        </button>
+      </form>
+    </>
   );
 };
 

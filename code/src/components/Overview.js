@@ -20,6 +20,12 @@ const Overview = ({
           Favourite night creature:
           {creatureInput}
         </p>
+        <button className="btn" onClick={() => window.location.reload(false)}>
+          Start over{" "}
+          <span role="img" aria-label="ghost">
+            👻{" "}
+          </span>{" "}
+        </button>
       </section>
     </div>
   );

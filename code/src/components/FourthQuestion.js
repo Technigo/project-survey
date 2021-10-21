@@ -35,7 +35,12 @@ const FourthQuestion = ({
           />
           werewolf
         </label>
-        <button onClick={onStepChange}>Next question</button>
+        <button className="btn" onClick={onStepChange}>
+          Overview
+          <span role="img" aria-label="pumpkin">
+            🎃
+          </span>
+        </button>
       </form>
     </>
   );
