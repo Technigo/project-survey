@@ -1,7 +1,6 @@
 import React from "react";
 
-const RadioInput = ({ options, choice, onValueChange }) => {
-
+const RadioInput = ({ options, choice, onValueChange, valid }) => {
   const onInputChange = (event) => {
     onValueChange(event.target.value);
   };
@@ -9,9 +8,9 @@ const RadioInput = ({ options, choice, onValueChange }) => {
   return (
     <>
       {options.map((option) => (
-        <label className="radio-btn-label" key={option}>
+        <label className={`radio-btn-label valid-${valid}`} key={option}>
           <input
-          className="radio-btn"
+            className="radio-btn"
             type="radio"
             value={option}
             onChange={onInputChange}

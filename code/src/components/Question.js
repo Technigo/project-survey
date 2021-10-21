@@ -25,6 +25,8 @@ const Question = (props) => {
           options={question.options}
           choice={answer}
           onValueChange={setAnswer}
+          valid={valid}
+
         />
       )}
       {question.inputType === "select" && (
@@ -32,6 +34,8 @@ const Question = (props) => {
           options={question.options}
           selection={answer}
           onValueChange={setAnswer}
+          valid={valid}
+
         />
       )}
     </>

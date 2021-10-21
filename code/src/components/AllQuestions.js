@@ -56,6 +56,7 @@ const AllQuestions = () => {
 
     if (questionNumber > 0) {
       setQuestionNumber(questionNumber - 1);
+      setValid(true)
     }
   };
 

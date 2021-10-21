@@ -1,6 +1,6 @@
 import React from "react";
 
-const SelectInput = ({ options, selection, onValueChange }) => {
+const SelectInput = ({ options, selection, onValueChange, valid }) => {
 
   const onSelectChange = (event) => {
     onValueChange(event.target.value);
@@ -8,7 +8,7 @@ const SelectInput = ({ options, selection, onValueChange }) => {
 
   return (
     <>
-      <select className="select-box" value={selection} onChange={onSelectChange}>
+      <select className={`select-box valid-${valid}`} value={selection} onChange={onSelectChange}>
         <option className="default-option" value="" disabled>
           Choose one
         </option>
