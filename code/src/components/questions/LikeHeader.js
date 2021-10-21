@@ -8,7 +8,7 @@ const VisualAppearance = ({
 }) => {
   return(
     <form>
-      <label> How visually appealing is the header section to you?
+      <label> How visually appealing is the shown header section to you?
         <RangeSlider
           value={visualAppearance}
           setValue={setVisualAppearance}

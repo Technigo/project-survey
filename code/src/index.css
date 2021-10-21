@@ -1,23 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  color: #5c003d;;
+  font-family: 'Montserrat', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+.site-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+h1, h2 {
+  color: #db0092;
+}
+
+form {
+  margin: 30px 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #5c003d;
+  font-weight: 500;
+}
+
+button {
+  width: fit-content;
+  align-self: center;
+  border: none;
+  background-color: transparent;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #5c003d;
+}
+
+.footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #5c003d;
+}
+
+select {
+  border: none;
+  width: 50%;
+  padding: 10px;
+  margin: 30px auto;
+  background-color: transparent;
+  border-bottom: 2px solid #db0092;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  color: #5c003d;
+}
+
+input[type=text] {
+  border: none;
+  width: 50%;
+  padding: 10px;
+  margin: 30px auto;
+  background-color: transparent;
+  border-bottom: 2px solid #db0092;
+  font-size: 24px;
+}
+
+input[type=radio] {
+ margin: 30px 5px 30px 15px;
 }
 
 
+/* ::placeholder {
+  color: rgb(170, 170, 170);
+  font-size: 20px;
+} */
 
-.website-image {
-  display: block;
-/*   margin-left: auto;
-  margin-right: auto; */
-  height: 400px;
-  /* width: 95%; */
+.range-slider-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.range-slider-span {
+  padding: 10px;
+  font-size: 24px;
+}
+
+input[type='range'] {
+  overflow: hidden;
+  -webkit-appearance: none;
+  background-color: #a0a0a0;
+}
+
+input[type='range']::-webkit-slider-runnable-track {
+  height: 5px;
+  -webkit-appearance: none;
+  color: #db0092;
+  margin-top: -1px;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  width: 10px;
+  -webkit-appearance: none;
+  height: 10px;
+  background: #434343;
+  box-shadow: -80px 0 0 80px #db0092;
+}
+
+.summary-container {
+  align-self: center;
+}
+
+.summary-text {
+  text-align: left;
 }
