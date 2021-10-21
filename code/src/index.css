@@ -5,9 +5,27 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: white;
+  background-image: url(./images/scary_background.jpg);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-size: 30px;
+
+}
+
+
+.questionBox{
+  display: flex;
+  width: 280px;
+  justify-content: center;
+  padding: 20px;
+  margin: 10px auto;
+  background-color: rgba(0,0, 0, 0.5);
+
 }

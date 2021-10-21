@@ -6,6 +6,7 @@ const CostumeQ = ({
     onStepChange,
 }) => {
 return (
+    <div className="questionBox">
 <form>
     <label>
         Choose your costume: 
@@ -21,6 +22,7 @@ return (
             </label>
             <button onClick={onStepChange}>Next question</button>
 </form> 
+</div>
 );
 };
 

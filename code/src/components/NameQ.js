@@ -1,7 +1,9 @@
 import React from "react";
+
 // declaring props inside the curly brackets
 const NameQ =({ nameInput, onNameInputChange, onStepChange }) => {
 return (
+    <div className="questionBox">
     <form>
     <label htmlFor="nameInput">What's your name? </label>
         <input 
@@ -17,6 +19,7 @@ return (
             Next question
         </button>
     </form>
+    </div>
 )};
 
 export default NameQ;
