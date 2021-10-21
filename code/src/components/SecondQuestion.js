@@ -7,14 +7,25 @@ const SecondQuestion = ({
 }) => {
 	return (
 		<form>
-			<label htmlFor="surnameInput">Type your surname</label>
+			<label htmlFor="surnameInput">
+			<h1 className="title">Type your surname</h1> 
+			</label>
 			<input
+				className="witing-question"
 				id="surnameInput"
+				placeholder="Type your surname here"
 				type="text"
 				value={surnameInput}
 				onChange={onSurnameInputChange}
 			/>
-			<button onClick={onStepChange}>See overview</button>
+			<button 
+			className="button"
+			disabled={surnameInput === ''}
+			onClick={onStepChange}
+			><span className="button-text">
+			Next Question</span>
+			</button>
+		
 		</form>
 	);
 };

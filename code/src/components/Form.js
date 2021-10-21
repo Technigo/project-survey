@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
+import ThirdQuestion from './ThirdQuestion';
+import FourthQuestion from './FourthQuestion';
 import Overview from './Overview';
 
 const Form = () => {
 	const [nameInput, setNameInput] = useState('');
 	const [surnameInput, setSurnameInput] = useState('');
+	const [weakness, setWeakness] = useState('HTML')
+	const [strength, setStrength] = useState('HTML')
 	const [step, setStep] = useState(1);
 
 	const onNameInputChange = (event) => {
@@ -17,13 +21,20 @@ const Form = () => {
 		setSurnameInput(event.target.value);
 	};
 
+	const onWeaknessChange = (code) => {
+		setWeakness(code)
+	}
+	
+	const onStrengthChange = (strength) => {
+		setStrength(strength)
+	}
 	const onStepChange = () => {
 		setStep(step + 1);
 	};
 
 	// v1
 	return (
-		<div>
+		<div className="wrapper">
 			{step === 1 && (
 				<FirstQuestion
 					nameInput={nameInput}
@@ -39,7 +50,21 @@ const Form = () => {
 				/>
 			)}
 			{step === 3 && (
-				<Overview nameInput={nameInput} surnameInput={surnameInput} />
+				<ThirdQuestion
+					weakness={weakness}
+					onWeaknessChange={onWeaknessChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+			{step === 4 && (
+				<FourthQuestion
+					strength={strength}
+					onStrengthChange={onStrengthChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+			{step === 5 && (
+				<Overview nameInput={nameInput} surnameInput={surnameInput} weakness={weakness} strength={strength} />
 			)}
 		</div>
 	);

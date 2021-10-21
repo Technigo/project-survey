@@ -11,3 +11,119 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.wrapper{
+  width:100vw;
+  height:100vh;
+  align-content: center;
+}
+
+
+form{
+  display:flex;
+  flex-direction: column; 
+  align-items: center;
+  padding-top:5em;
+  margin:0;
+  width:100vw;  
+  /* padding-left: 20%; */
+  
+}
+
+.witing-question{
+    display: block;
+    width:10em;
+    font-family: inherit;
+    color: rgb(81, 73, 57);
+    border: none;
+    outline: none;
+    border-radius: 0px;
+    font-size: 30px;
+    line-height: unset;
+    box-shadow: rgb(81 73 57 / 30%) 0px 1px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
+}
+
+/* .submit{
+  width: 10em;
+  transition-duration: 0.4s;
+  background-color: white;
+  color: black;
+  border: 2px solid #555555;
+  border-radius: 5%;
+  height: 4em;
+}
+
+.submit:hover {
+  background-color: #555555;
+  color: white;
+} */
+
+.title {
+  margin:0;
+}
+button{
+display: inline-block;
+  border-radius: 4px;
+  background-color: #555555;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 0.6em;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.button-text{
+  font-size: 0.7em;
+}
+
+::placeholder{
+  font-size: 0.9em;
+  opacity: 50%;
+}
+
+
+@media (min-width: 600px) {
+  .witing-question{
+    width:15em;
+  }
+}
+
+@media (min-width: 981px){
+
+  .witing-question{
+    width:20em;
+  }
+
+}
