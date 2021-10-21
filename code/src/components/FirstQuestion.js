@@ -5,10 +5,11 @@ const FirstQuestion = ({ nameInput, onNameInputChange }) => {
 
 	return (
 		<div className="form-row">
-			<label htmlFor="nameInput"><p>Type your name</p></label>
+			<label htmlFor="nameInput"><h3>Bake someone happy!</h3></label>
 			<input
 				id="nameInput"
 				type="text"
+				placeholder="Type your name here"
 				value={nameInput}
 				onChange={onNameInputChange}
 			/>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Alert from './Alert';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
@@ -7,13 +8,13 @@ import FourthQuestion from './FourthQuestion'
 import Slider from './Slider'
 import Summary from './Summary';
 import SubmitButton from './SubmitButton';
-
 import 'styles/form.css';
 
 
 const Form = () => {
     /* State hooks */
 
+    const [alert, setAlert] = useState(false);
     const [nameInput, setNameInput] = useState('');
     const [experience, setExperience] = useState('');
     const [pastry, setPastry] = useState('');
@@ -42,17 +43,29 @@ const Form = () => {
         setHappiness(event.detail.value);
     };
 
-    const onShowSummary = () => {
+    const onShowSummary = (event) => {
         if (nameInput === '') {
-            alert('Name is required')
+            setAlert(true)
         }
         else if (date === '') {
-            alert('Date is requierd')
+            setAlert(true)
         }
         else {
             setShowSummary(true);
         }
     }
+
+    // const onShowSummary = () => {
+    //     if (nameInput === '') {
+    //         alert('Name is required')
+    //     }
+    //     else if (date === '') {
+    //         alert('Date is requierd')
+    //     }
+    //     else {
+    //         setShowSummary(true);
+    //     }
+    // }
 
     // v1
     return (
@@ -63,11 +76,12 @@ const Form = () => {
                         nameInput={nameInput}
                         onNameInputChange={onNameInputChange}
                     />
-
+                    {alert && <Alert />}
                     <SecondQuestion
                         experience={experience}
                         setExperience={onExperienceInputChange}
                     />
+
 
                     <ThirdQuestion
                         chosenPastry={pastry}
@@ -78,7 +92,7 @@ const Form = () => {
                         selected={date}
                         onSelect={onDateInputChange} //when day is clicked
                     />
-
+                    {alert && <Alert />}
                     <Slider
                         happiness={happiness}
                         setHappiness={onHappinessSet}

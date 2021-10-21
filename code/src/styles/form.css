@@ -1,14 +1,13 @@
 .wrapper {
     height: 100vh;
     padding: 0px 30px 0px 30px;
-    background-color: #bee5e9;
+    background-color: #74d1db;
 }
 
 .form-wrapper {
     display: flex;
     flex-direction: column;
     padding-top: 20px;
-    text-align: center;
 }
 
 #form {
@@ -16,7 +15,15 @@
     background-color: #96dee4;
     display: flex;
     flex-direction: column;
-    padding: 30px;
+    padding: 10px 30px 40px 30px;
+    margin-bottom: 10px;
+}
+
+.alert {
+    color: #bb1082;
+    font-size: 16px;
+    font-weight: 700;
+    font-family: 'Truculenta', sans-serif;
 }
 
 /*input*/
@@ -26,6 +33,7 @@ input[type=text] {
     background-color: #45c5cf;
     padding: 12px 20px;
     margin-bottom: 4px;
+    border-radius: 3px;
     box-sizing: border-box;
     border: none;
     outline: none;
@@ -36,13 +44,154 @@ input[type=text]:focus {
     border-radius: 2px;
 }
 
-input[type=text]:focus {
-    background-color: #f6acb0;
+input[type=text]:after {
+    background-color: #45c5cf;
     border-radius: 2px;
 }
 
+input[type=date] {
+    width: 100%;
+    background-color: #45c5cf;
+    padding: 12px 20px;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+}
+
+::placeholder {
+    color: rgb(48, 64, 80);
+    font-size: 16px;
+    font-family: 'Truculenta', sans-serif;
+}
+
+/*select drop-down*/
+
+.custom-select select {
+    font-family: 'Truculenta', sans-serif;
+    font-size: 16px;
+    color: rgb(48, 64, 80);
+}
+
+.custom-select {
+    margin-top: 20px;
+    border: 1px solid #45c5cf;
+    width: 250px;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: rgb(255, 255, 255);
+    background: #45c5cf;
+    position: relative;
+}
+
+.custom-select select {
+    padding: 5px 8px;
+    border: none;
+    box-shadow: none;
+    background-color: transparent;
+    background-image: none;
+    appearance: none;
+}
+
+.custom-select:after {
+    top: 0%;
+    left: 80%;
+    content: '🧁';
+    position: absolute;
+    pointer-events: none;
+    border-color: rgba(0, 0, 0, 0);
+    border-top-color: #000000;
+    border-width: 5px;
+    margin-top: -2px;
+}
+
+.custom-select select:focus {
+    outline: none;
+}
+
+
+/*radiobuttons*/
+.wrapper-col {
+    display: flex;
+    flex-direction: column;
+}
+
+span.pastry-name {
+display: flex;
+font-family: 'Truculenta', sans-serif;
+font-size: 16px;
+
+}
+
+.radiobutton-container {
+    
+    display: block;
+    position: relative;
+    padding-left: 25px;
+    margin:  4px 0  5px 0;
+    user-select: none;
+    font-size: 0.8rem;
+    margin-bottom: 5px;
+}
+
+.radiobutton-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.custom-radio {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 19px;
+  width: 19px;
+  background-color: #eee;  
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.radiobutton-container:hover input ~.custom-radio{
+    background-color:#fbdadc;
+}
+
+.radiobutton-container input:checked ~.custom-radio{
+    background-color: #f6acb0;
+}
+
+.custom-radio:after {
+content: "";
+position: absolute;
+top: 6px;
+left:6px;
+width: 7px;
+height: 7px;
+background-color: white;
+border-radius: 50%;
+display: none;
+}
+
+.radiobutton-container input:checked ~.custom-radio::after{
+display: block;
+}
+
+.date-row {
+    font-size: 23px;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    font-family: 'Truculenta', sans-serif;
+}
+
+.quote {
+    font-size: 18px;
+    margin-top: 25px;
+    font-family: 'Truculenta', sans-serif;
+}
+
 .submit-button {
-    margin-top: 50px;
+    margin-top: 30px;
     font-family: 'Truculenta', sans-serif;
     font-size: 20px;
     letter-spacing: 1px;
@@ -60,97 +209,39 @@ input[type=text]:focus {
     transition: .3s ease;
 }
 
-/*radiobutton*/
-
-.wrapper-col {
-    flex-direction: column;
-}
-
-.radiobutton-container {
-    display: block;
-    position: relative;
-    padding-left: 25px;
-    margin: 4px 0 5px 0;
-    user-select: none;
-    font-size: 0.8rem;
-    margin-bottom: 5px;
-}
-
-.radiobutton-container input {
-    position: absolute;
-    opacity: 0;
+.reset-button {
+    font-family: 'Truculenta', sans-serif;
+    font-size: 20px;
+    letter-spacing: 1px;
+    padding: 13px 30px 13px;
+    border: 1px solid #f6acb0;
+    border-radius: 10px;
     cursor: pointer;
-    height: 0;
-    width: 0;
-}
-
-.custom-radio {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 19px;
-    width: 19px;
-    background-color: #fbdadc;
-    cursor: pointer;
-    border-radius: 50%;
-}
-
-.radiobutton-container:hover input~.custom-radio {
-    background-color: #fbdadc;
-}
-
-.radiobutton-container input:checked~.custom-radio {
     background-color: #f6acb0;
 }
 
-.custom-radio:after {
-    content: "";
-    position: absolute;
-    top: 6px;
-    left: 6px;
-    width: 7px;
-    height: 7px;
-    background-color: #fbdadc;
-    border-radius: 50%;
-    display: none;
+.reset-button:hover {
+    border: 1px solid #f6acb0;
+    background-color: #f6acb0;
+    transform: scale(1.1);
+    transition: .3s ease;
 }
 
-.radiobutton-container input:checked~.custom-radio::after {
-    display: block;
+.summary {
+    padding: 20px;
 }
 
+@media (min-width: 768px) {
+    .form-wrapper {
+      padding: 25px;
+    }
+    #form {
+        margin-top: 50px;
+        align-items: center;
+    }
+.react-datepicker-wrapper {
+    width: auto;
+}
 
-.custom-select {
-    margin-top: 20px;
-    border: 1px solid #ccc;
-    width: 250px;
-    border-radius: 3px;
-    overflow: hidden;
-    background-color: #fff;
-    background: #fff;
-    position: relative;
-}
-.custom-select select {
-    padding: 5px 8px;
-    width: 100%;
-    border: none;
-    box-shadow: none;
-    background-color: transparent;
-    background-image: none;
-    appearance: none;
-}
-.custom-select:after {
-    top: 0%;
-    left: 80%;
-    content: '🧁';
-    position: absolute;
-    pointer-events: none;
-    border-color: rgba(0, 0, 0, 0);
-    border-top-color: #000000;
-    border-width: 5px;
-    margin-top: -2px;
     
-}
-.custom-select select:focus {
-    outline: none;
 }
