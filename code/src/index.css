@@ -2,6 +2,7 @@ body {
   background: rgb(209, 240, 179);
   min-height: 100vh;
   padding: 0;
+  background-image: url('./assets/background-beer-large.jpg');
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -14,14 +15,23 @@ code {
     monospace;
 }
 
+.headline {
+  font-family: 'Lobster', cursive;
+  color:rgb(233, 191, 7);
+  font-size: 52px;
+}
+
+.headline-underscore {
+  font-family: 'Lobster', cursive;
+  color:rgb(233, 191, 7);
+  font-size: 36px;
+}
+
 .main-container {
   display:flex;
   flex-direction: column;
   width: 80%;
-  height: 50%;
-  background: white;
-  border: 3px solid grey;
-  border-radius: 10px;
+  max-width: 800px;
   margin: auto 0;
   position: absolute;
   top: 50%;
@@ -31,6 +41,10 @@ code {
 }
 
 .form {
+  background: rgb(255, 255, 255);
+  border: 10px solid rgb(233, 191, 7);
+  height: 600px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
