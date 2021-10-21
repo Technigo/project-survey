@@ -3,6 +3,7 @@ import "./header.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlane } from "@fortawesome/free-solid-svg-icons";
 
+// Made a progressbar which updates with different colors depending on the step.
 export const Header = ({ step }) => {
   return (
     <section className="header">

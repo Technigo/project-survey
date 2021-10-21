@@ -11,6 +11,7 @@ export const AmountTravellers = ({
     <>
       <h2 tabIndex="1">How many travellers?</h2>
       <div className="slidecontainer">
+        {/* Slider with 5 set values which on change updates the onAmountOfTravellers with the value */}
         <Slider
           activeDotStyle={{
             borderColor: "var(--main-color)",

@@ -12,6 +12,7 @@ import { PassengerInformation } from "../PassengerInformation/PassengerInformati
 import { ResponsibleForBooking } from "../ResponsibleForBooking/ResponsibleForBooking";
 import { ShowBooking } from "../ShowBooking/ShowBooking";
 
+// Set step to 1, set city and traveltype to "", set amountOfTravellers to 1 as default and make a empty namelist. Set telephone and email to "".
 export const Main = () => {
   const [step, setStep] = useState(1);
   const [city, setCity] = useState("");
@@ -47,6 +48,7 @@ export const Main = () => {
   const [email, setEmail] = useState("");
   const [telephoneNumber, setTelephoneNumber] = useState("");
 
+  //Functions with a copy of the nameList to be able to edit the values and then update the original namelist with the new values so that the state changes.
   const onSetFirstName = (firstName, passengerNumber) => {
     const nameListCopy = [...nameList];
     const passenger = nameListCopy[passengerNumber - 1];
@@ -61,11 +63,13 @@ export const Main = () => {
     setNameList(nameListCopy);
   };
 
+  //Function that setStep = (Step + 1)
   const onBtnClick = (e) => {
     e.preventDefault();
     setStep(step + 1);
   };
 
+  //functions that sets what city, traveltype, amount of passenger, email and telephonenr.
   const onSetCity = (e) => {
     setCity(e.target.value);
   };
@@ -86,6 +90,7 @@ export const Main = () => {
     setTelephoneNumber(telephoneNumber);
   };
 
+  //This part control and renders what will happen at each step and sends the needed props to the childcomponent.
   return (
     <div className="content">
       <Header step={step} />
@@ -133,7 +138,7 @@ export const Main = () => {
             travelType={travelType}
           />
         )}
-
+        {/*If step is not 1 there will be a previous button.  */}
         <div className="form__btns-container">
           {step !== 1 && (
             <button
@@ -145,6 +150,7 @@ export const Main = () => {
             </button>
           )}
 
+          {/* If step is not 5 there will be a continue button.  */}
           {step !== 5 && (
             <button type="submit" className="btn submit" onSubmit={onBtnClick}>
               Continue <FontAwesomeIcon icon={faChevronDoubleRight} />

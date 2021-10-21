@@ -10,6 +10,8 @@ export const TravelLocation = ({
   return (
     <>
       <h2 className="dropdown-header-title">Where do you want to travel?</h2>
+
+      {/* call for onCityChanged onChange and onSelect. */}
       <div className="dropdown-container">
         <input
           type="text"
@@ -32,6 +34,8 @@ export const TravelLocation = ({
           <option>Prague</option>
         </datalist>
       </div>
+
+      {/* 2 radio buttons for one way trip and return trip. Onchange calls for onTraveltypeChanged("with eiter onewaytrip or returntrip") */}
       <div className="form__radio-btns-container">
         <div className="form__radio-btn-container">
           <label htmlFor="oneWay">One way trip</label>
@@ -45,6 +49,7 @@ export const TravelLocation = ({
             required
           />
         </div>
+
         <div className="form__radio-btn-container">
           <label htmlFor="returnTrip">Return trip</label>
           <input

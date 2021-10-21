@@ -14,6 +14,7 @@ export const ResponsibleForBooking = ({
       <div class="responsible-booking">
         <div className="responsible-booking__email-number">
           <label htmlFor="email">Email</label>
+          {/* on change the onChangeEmail and the onChangeTelephoneNumber is called with the value of the input as the value */}
           <input
             value={email}
             id="email"
