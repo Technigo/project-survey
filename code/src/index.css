@@ -8,7 +8,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   height: 100vh;
-  /* background-color: rgb(175, 214, 175); */
+  background-repeat: no-repeat;
   background: rgb(78,223,194);
   background: linear-gradient(175deg, rgba(78,223,194,1) 0%, rgba(25,22,84,1) 100%);
 }
@@ -59,13 +59,12 @@ body {
 }
 
 .form-container {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  justify-content: center;
 }
 
 form {
@@ -74,7 +73,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: honeydew;
+  background-color: rgb(240, 255, 240);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
   width: 70%;
   margin: 0 auto;
