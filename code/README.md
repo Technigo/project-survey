@@ -10,7 +10,7 @@ The aproach this week was to create a survey to build a story whith the response
 I tried to create separated elements for question and answers depending on the question number. The data come from a json document created in scr. The logic from next and previous question was based on the number of question, the answers were saved in an object to used at the end with a story. 
 
 # View it live
-See: 
+See: https://project-survey-priscilaalfaro.netlify.app/
 
 ## Usage
 
