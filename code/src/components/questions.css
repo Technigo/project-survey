@@ -1,0 +1,29 @@
+.question-input {
+    width: 50%;
+    padding: 10px;
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(243, 239, 239);
+  }
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  align-items: center;
+  background-color: black;
+  color: white;
+  margin-top: 40px;
+}
+
+
+/* tablet menu */
+
+@media (min-width: 768px) {
+
+    .question-container {
+        width: 600px;
+    }
+}

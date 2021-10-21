@@ -1,4 +1,5 @@
 import React from 'react';
+import './questions.css';
 
 const SecondQuestion = ({
 	surnameInput,
@@ -8,13 +9,16 @@ const SecondQuestion = ({
 	return (
 		<form className="question-container">
 			<label htmlFor="surnameInput">What's your surname?</label>
-			<input
+			<input className="question-input"
 				id="surnameInput"
 				type="text"
 				value={surnameInput}
 				onChange={onSurnameInputChange}
 			/>
-			<button className="submit-button" onClick={onStepChange}>Next question</button>
+			<button className="submit-button" 
+			    disabled={surnameInput === ''}
+				onClick={onStepChange}>Next question
+			</button>
 		</form>
 	);
 };

@@ -33,7 +33,6 @@ const Form = () => {
 		setStep(step + 1);
 	};
 
-	// v1
 	return (
 		<div>
 			{step === 1 && (

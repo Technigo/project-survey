@@ -1,0 +1,36 @@
+.overview-container {
+  background-color: black;
+  width: 300px;
+  padding: 20px;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.overview-box {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.overview-heading {
+  font-family: "Roboto", sans-serif;
+  color: whitesmoke;
+}
+
+.overview-text {
+  font-family: "Roboto", sans-serif;
+  color: whitesmoke;
+}
+
+/* tablet menu */
+
+@media (min-width: 768px) {
+  .overview-container {
+    width: 600px;
+  }
+
+  .overview-box {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1px;
+  }
+}
