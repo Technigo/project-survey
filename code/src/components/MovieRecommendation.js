@@ -96,8 +96,9 @@ const MovieRecommendation = ({ genre, movieType }) => {
     <section className="movie-time">
       <div className="hero-content">
         <h1 className="movie-text">
-          You selected {genre} and {movieType}, so here are some movies you
-          probably enjoy:
+          You selected <span className="answer-text"> {genre} </span>and{" "}
+          <span className="answer-text">{movieType} </span>, so here are some
+          movies you probably enjoy:
         </h1>
         <h2 className="movie-text"> MOVIE LIST</h2>
         <div className="list-box">

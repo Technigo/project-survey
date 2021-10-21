@@ -141,6 +141,9 @@ code {
 .movie-text {
   color: bisque;
 }
+.answer-text {
+  color: coral;
+}
 
 @media (min-width: 678px) {
   .movie-text {
