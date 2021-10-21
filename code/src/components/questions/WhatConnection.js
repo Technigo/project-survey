@@ -16,14 +16,17 @@ const Connection = ({
 
   return (
     <form>
-    <label> What's your connection to Birgit?
+      <label> What's your connection to Birgit?
         <SelectDropdown
           optionValue={role}
           setOptionValue={setRole}
           valueArray={roles}
         />
       </label> 
-      <button onClick={onStepChange}>Next question</button>
+      <button 
+        disabled={role === ''}
+        onClick={onStepChange}>Next question
+      </button>
     </form>  
   )
 }

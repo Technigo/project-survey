@@ -7,6 +7,7 @@ const TextField = ({value, setValue}) => {
       type="text"
       onChange= {event => setValue(event.target.value)}
       value= {value}
+      placeholder="Type here"
     />  
   </div>
   )

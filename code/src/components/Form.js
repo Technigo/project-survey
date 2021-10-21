@@ -7,20 +7,20 @@ import LikeColor from "./questions/LikeColor"
 import LikeText from "./questions/LikeText"
 import Suggestions from "./questions/Suggestions"
 import Summary from "./Summary"
-import MoreToAdd from "./questions/MoreToAdd"
 
 const Form = () => {
   const [step, setStep] = useState(1)
   const [role, setRole] = useState('')
   const [visualAppearance, setVisualAppearance] = useState(0)
-  const [color, setColor] = useState()
-  const [text, setText] = useState()
+  const [color, setColor] = useState('')
+  const [text, setText] = useState('')
   const [recommend, setRecommend] = useState(0)
   const [improve, setImprove] = useState('')
-  const [moreColor, setMoreColor] = useState('')
+  const [additional, setAdditional] = useState('')
+  const [addText, setAddText] = useState('')
 
   const onStepChange = () => {
-    setStep(step + 1)
+    setStep(step + 1) 
   }
   
   
@@ -31,7 +31,7 @@ const Form = () => {
         role={role}
         setRole={setRole}
         onStepChange={onStepChange}
-      />
+      /> 
       )}
       {step === 2 && (
         <LikeHeader
@@ -44,24 +44,20 @@ const Form = () => {
         <LikeColor
         color={color}
         setColor={setColor}
+        additional={additional}
+        setAdditional={setAdditional}
         onStepChange={onStepChange}
       /> 
       )}
       {step === 4 && (
-        <>
-          {color === 'no' ? 
-          <MoreToAdd
-            moreColor={moreColor}
-            setMoreColor={setMoreColor}
-            onStepChange={onStepChange}
-          /> : 
-          <LikeText
-            text={text}
-            setText={setText}
-            onStepChange={onStepChange}
-          />}
-        </>
-        )}
+        <LikeText
+          text={text}
+          setText={setText}
+          addText={addText}
+          setAddText={setAddText}
+          onStepChange={onStepChange}
+        />
+      )}
       {step === 5 && (
         <CanRecommend
         recommend={recommend}
@@ -81,7 +77,9 @@ const Form = () => {
         role={role}
         visualAppearance={visualAppearance}
         color={color}
+        additional={additional}
         text={text}
+        addText={addText}
         recommend={recommend}
         improve={improve}
       /> 

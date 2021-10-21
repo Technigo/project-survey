@@ -2,20 +2,19 @@ import React from "react"
 import TextField from "./../inputTypes/TextField"
 
 const MoreToAdd = ({
-  moreColor,
-  setMoreColor,
-  onStepChange,
+  additional,
+  setAdditional,
+  labeltext,
 }) => {
   return(
-    <form>
-      <label>How could I improve the color scheme?  
+    <>
+      <label>{labeltext}  
         <TextField
-          value={moreColor}
-          setValue={setMoreColor}
+          value={additional}
+          setValue={setAdditional}
         />  
       </label> 
-      <button onClick={onStepChange}>Next question</button>
-    </form>
+    </>
   )
 }
 

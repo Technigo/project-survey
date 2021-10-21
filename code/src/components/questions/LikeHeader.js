@@ -16,7 +16,10 @@ const VisualAppearance = ({
           max={5}
         />
       </label>
-      <button onClick={onStepChange}>Next question</button>   
+      <button 
+        disabled={visualAppearance === 0}
+        onClick={onStepChange}>Next question
+      </button>   
     </form>
   )
 }

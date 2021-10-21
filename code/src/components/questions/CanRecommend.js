@@ -15,8 +15,11 @@ const Recommendation = ({
           min={1}
           max={5}
         />
-        <button onClick={onStepChange}>Next question</button>
-      </label>
+      </label>  
+      <button 
+        disabled={recommend === 0}
+        onClick={onStepChange}>Next question
+      </button>
     </form>
   )
 }

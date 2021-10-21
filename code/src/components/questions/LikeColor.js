@@ -1,10 +1,13 @@
 import React from "react"
 import RadioButtons from "components/inputTypes/RadioButtons"
+import MoreToAdd from "./MoreToAdd"
 
 const likeColor = ({
   color, 
   setColor,
   onStepChange,
+  additional,
+  setAdditional
 }) => {
   return(
     <form>
@@ -14,8 +17,20 @@ const likeColor = ({
           setValue={setColor}
           valueArray={['yes', 'no']}
         />
-      </label> 
-      <button onClick={onStepChange}>Next question</button>
+      </label>
+
+      {color === 'no' && (
+        <MoreToAdd
+        labeltext={'How could I improve the color scheme?'}
+        additional={additional}
+        setAdditional={setAdditional}
+      /> 
+      )} 
+      
+      <button 
+        disabled={color === ''}
+        onClick={onStepChange}>Next question
+      </button>
     </form>
   )
 }
