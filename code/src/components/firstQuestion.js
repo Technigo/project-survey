@@ -1,7 +1,11 @@
 import React from 'react';
 import './questions.css';
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+const FirstQuestion = ({ 
+	nameInput, 
+	onNameInputChange, 
+	onStepChange 
+}) => {
 
 	return (
 		<form className="question-container">
@@ -13,7 +17,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 				onChange={onNameInputChange}
 			/>
 			<button className="submit-button" 
-			    disabled={nameInput === ''}
+			    disabled={nameInput === ''} 
 				onClick={onStepChange}>Next question
 			</button>
 		</form>

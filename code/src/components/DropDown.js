@@ -6,7 +6,11 @@ import React from 'react';
 /*const locationGroup = ["Stockholm", "Barcelona", "Oslo"]*/
 
     
-const DropDown = ({ locationInput, setLocationInput, onStepChange }) => {
+const DropDown = ({ 
+    locationInput, 
+    setLocationInput, 
+    onStepChange 
+}) => {
     return (
         <form className="dropdown">
             <label>
@@ -30,6 +34,6 @@ const DropDown = ({ locationInput, setLocationInput, onStepChange }) => {
     )
 };
 
-console.log(DropDown)
+console.log()
 
 export default DropDown;

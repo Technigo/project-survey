@@ -4,8 +4,9 @@ import './questions.css';
 const SecondQuestion = ({
 	surnameInput,
 	onSurnameInputChange,
-	onStepChange,
+	onStepChange
 }) => {
+
 	return (
 		<form className="question-container">
 			<label htmlFor="surnameInput">What's your surname?</label>
@@ -16,11 +17,11 @@ const SecondQuestion = ({
 				onChange={onSurnameInputChange}
 			/>
 			<button className="submit-button" 
-			    disabled={surnameInput === ''}
+			    disabled={surnameInput === undefined} 
 				onClick={onStepChange}>Next question
 			</button>
 		</form>
 	);
-};
+}; 
 
 export default SecondQuestion;

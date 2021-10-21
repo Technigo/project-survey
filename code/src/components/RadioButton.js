@@ -10,7 +10,7 @@ const RadioButton = ({
 
     return (
         <form>
-            <div  className="radiobutton-container">
+            <div className="radiobutton-container">
             <h2 className="radiobutton-heading">Age group:</h2>
             {ageGroup.map(group => (
                 <label key={group}>
