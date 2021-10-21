@@ -1,25 +1,8 @@
 import React from 'react'
 import { Button } from 'components/Button'
 
-export const Radio = ({
-  state,
-  handleChange,
-  data,
-  setValid,
-  step,
-  incrementStep,
-  decrementStep,
-}) => {
-  const validate = (e, option) => {
-    console.log('validate radio', e.target.value)
-    if (data.required && e.target.value) {
-      setValid(true)
-    } else {
-      setValid(false)
-    }
-  }
-
-  const checkValid = (e, option) => {
+export const Radio = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
+  const checkValid = e => {
     if (data.required && e.target.value) {
       return true
     } else {
@@ -28,17 +11,15 @@ export const Radio = ({
   }
 
   const onChangeHandler = (e, option) => {
-    let validated = checkValid(e, option)
+    let validated = checkValid(e)
     console.log('validator', validated)
     handleChange(e, option.next_question, data.title, data.number, 'Answer', data.id, validated)
-    validate(e, option)
   }
 
   return (
     <>
       <h2>{data.title}</h2>
       {data.options.map(option => {
-        // data.required ? validate(option) : setValid(true)
         return (
           <label key={option.id}>
             {option.label}

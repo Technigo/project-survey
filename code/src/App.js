@@ -10,7 +10,6 @@ export const App = () => {
   const [state, setState] = useState(initialState)
   const [step, setStep] = useState(1)
   const [steps, setSteps] = useState([1])
-  const [valid, setValid] = useState(false)
 
   const handleChange = (e, nextQuestion, title, number, label, questionId, validated) => {
     const { id, value } = e.target
@@ -24,12 +23,11 @@ export const App = () => {
       ...state,
       [questionId]: validated,
       [id]: value,
-      [id + 'Valid']: valid,
       answers: [...newAnswers],
       nextQuestion: nextQuestion,
     })
   }
-  // { ...state[questionId], [id]: value, valid: validated }
+
   const incrementStep = () => {
     let newSteps = ''
     console.log(state.questions)
@@ -42,7 +40,6 @@ export const App = () => {
     }
     setStep(newSteps)
     setSteps([...steps, newSteps])
-    setValid(false)
   }
 
   const decrementStep = () => {
@@ -52,7 +49,6 @@ export const App = () => {
       setStep(newStep)
       setSteps([...newSteps])
       setState({ ...state, nextQuestion: 0 })
-      setValid(true)
     }
   }
 
@@ -60,28 +56,19 @@ export const App = () => {
     setStep(1)
     setState(initialState)
     setSteps([1])
-    setValid(false)
   }
 
   return (
     <div className='container'>
       <FormWrapper
-        setValid={setValid}
         step={step}
         state={state}
         handleChange={handleChange}
         incrementStep={incrementStep}
         decrementStep={decrementStep}
       />
-      <Button disabled={step === 1} onClick={decrementStep} text={'^'} />
-      <Button disabled={step === 'end' || !valid} onClick={incrementStep} text={'v'} />
-      {step === 'end' && <Button onClick={handleRestart} text={'Reset'} />}
+      {step === 'end' && <Button text={'^'} onClick={decrementStep} />}
+      {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
     </div>
   )
 }
-
-/*
-
-add theme selection and pass theme object as props to child components, needs to be in wrapper component 
-
-*/

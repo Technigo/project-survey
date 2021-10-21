@@ -7,14 +7,7 @@ import { FormSummary } from 'components/FormSummary'
 
 console.log(data)
 
-export const FormWrapper = ({
-  step,
-  state,
-  handleChange,
-  setValid,
-  incrementStep,
-  decrementStep,
-}) => {
+export const FormWrapper = ({ step, state, handleChange, incrementStep, decrementStep }) => {
   return (
     <form className='form'>
       {data.questions
@@ -27,7 +20,6 @@ export const FormWrapper = ({
                 data={item}
                 state={state}
                 handleChange={handleChange}
-                setValid={setValid}
                 step={step}
                 incrementStep={incrementStep}
                 decrementStep={decrementStep}
@@ -40,7 +32,6 @@ export const FormWrapper = ({
                 data={item}
                 state={state}
                 handleChange={handleChange}
-                setValid={setValid}
                 step={step}
                 incrementStep={incrementStep}
                 decrementStep={decrementStep}
@@ -53,7 +44,6 @@ export const FormWrapper = ({
                 data={item}
                 state={state}
                 handleChange={handleChange}
-                setValid={setValid}
                 step={step}
                 incrementStep={incrementStep}
                 decrementStep={decrementStep}
