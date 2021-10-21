@@ -1,9 +1,9 @@
 .question-input {
-    width: 50%;
-    padding: 10px;
-    font-family: "Poppins", sans-serif;
-    background-color: rgb(243, 239, 239);
-  }
+  width: 50%;
+  padding: 10px;
+  font-family: "Poppins", sans-serif;
+  background-color: rgb(243, 239, 239);
+}
 
 .question-container {
   display: flex;
@@ -18,12 +18,10 @@
   margin-top: 40px;
 }
 
-
 /* tablet menu */
 
 @media (min-width: 768px) {
-
-    .question-container {
-        width: 600px;
-    }
+  .question-container {
+    width: 600px;
+  }
 }
