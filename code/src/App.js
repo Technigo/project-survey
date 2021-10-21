@@ -6,6 +6,14 @@ import { Summary } from "./components/Summary";
 export const App = () => {
   const [currentStep, setStep] = useState("welcome");
   const [rootState, setRootState] = useState({
+    design: "",
+    variety: "",
+    quality: "",
+    invalidQuality: false,
+    deliveryTime: "",
+    invalidTime: false,
+    friendliness: "",
+    suggestionInput: "",
     name: "",
     nameInvalid: false,
     email: "",
@@ -25,9 +33,6 @@ export const App = () => {
     setRootState((oldState) => ({ ...oldState, [key]: value }));
   };
 
-  // setValueInRootState('rating', 5);
-
-  // before: const [rating, setRating] = useState("5");
   if (currentStep === "welcome") {
     return <Welcome moveOn={() => setStep("wizard")} />;
   }

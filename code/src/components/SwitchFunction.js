@@ -16,22 +16,22 @@ export const SwitchFunction = ({ currentStep, rootState, setValueInRootState }) 
     return <QuestionOne />;
   }
   if (currentStep === "questionTwo") {
-    return <QuestionTwo />;
+    return <QuestionTwo design={rootState.design} onDesignRatioChange={(ratio) => setValueInRootState("design", ratio)} />;
   }
   if (currentStep === "questionThree") {
-    return <QuestionThree />;
+    return <QuestionThree variety={rootState.variety} onVarietyChange={(ratio) => setValueInRootState("variety", ratio)} />;
   }
   if (currentStep === "questionFour") {
-    return <QuestionFour />;
+    return <QuestionFour quality={rootState.quality} onQualityChange={(evaluation) => setValueInRootState("quality", evaluation)} />;
   }
   if (currentStep === "questionFive") {
     return <QuestionFive />;
   }
   if (currentStep === "questionSix") {
-    return <QuestionSix />;
+    return <QuestionSix deliveryTime={rootState.deliveryTime} onDeliveryTimeChange={(time) => setValueInRootState("deliveryTime", time)} />;
   }
   if (currentStep === "questionSeven") {
-    return <QuestionSeven />;
+    return <QuestionSeven friendliness={rootState.friendliness} onFriendlinessChange={(range) => setValueInRootState("friendliness", range)} />;
   }
   if (currentStep === "questionEight") {
     return (
@@ -47,7 +47,9 @@ export const SwitchFunction = ({ currentStep, rootState, setValueInRootState }) 
     return <QuestionNine rating={rootState.rating} onRatingChange={(value) => setValueInRootState("rating", value)} />;
   }
   if (currentStep === "anySuggestion") {
-    return <AnySuggestion />;
+    return (
+      <AnySuggestion suggestionInput={rootState.suggestionInput} onSuggestionInputChange={(suggestion) => setValueInRootState("suggestionInput", suggestion)} />
+    );
   }
   if (currentStep === "questionTen") {
     return (

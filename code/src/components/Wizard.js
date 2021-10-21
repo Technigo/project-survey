@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { SwitchFunction } from "./SwitchFunction";
 
 export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
-  const [currentStep, setStep] = useState("questionEight");
+  const [currentStep, setStep] = useState("questionOne");
   const [answered, setAnswered] = useState(1);
   const toNextStep = () => {
     switch (currentStep) {
@@ -19,16 +19,32 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
         setAnswered(answered + 1);
         break;
       case "questionFour":
-        setAnswered(answered + 1);
-        setStep("questionFive");
+        let validity = true;
+        if (!rootState.quality) {
+          alert("Please make a selection");
+          setValueInRootState("invalidQuality", true);
+          validity = false;
+        }
+        if (validity) {
+          setAnswered(answered + 1);
+          setStep("questionFive");
+        }
         break;
       case "questionFive":
         setAnswered(answered + 1);
         setStep("questionSix");
         break;
       case "questionSix":
-        setAnswered(answered + 1);
-        setStep("questionSeven");
+        let validTime = true;
+        if (!rootState.deliveryTime) {
+          alert("Please make a selection");
+          setValueInRootState("invalidTime", true);
+          validTime = false;
+        }
+        if (validTime) {
+          setAnswered(answered + 1);
+          setStep("questionSeven");
+        }
         break;
       case "questionSeven":
         setAnswered(answered + 1);
@@ -53,7 +69,6 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
         break;
       case "questionTen":
         let valid = true;
-        console.log("9999", rootState.email, rootState.email === "");
         if (!rootState.email) {
           console.log("check email");
           setValueInRootState("emailInvalid", true);
@@ -73,7 +88,7 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
   return (
     <div className="container">
       <div className="card">
-        <div className="progress-bar">Progress bar: {answered} out of 10</div>
+        <div className="progress-bar">Progress bar: {answered} out of 11</div>
         <div className="current-step">
           <SwitchFunction rootState={rootState} setValueInRootState={setValueInRootState} currentStep={currentStep} />
         </div>

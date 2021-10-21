@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 export const Summary = ({ rootState }) => {
   return (
@@ -12,19 +12,32 @@ export const Summary = ({ rootState }) => {
           <p>Email:{rootState.email}</p>
           <div>
             <h3 className="instructions">Feedback summary:</h3>
-            <p>Q1 answer</p>
-            <p>Q2 answer</p>
-            <p>Q3 answer</p>
-            <p>Q4 answer</p>
-            <p>Q5 answer</p>
-            <p>Q6 answer</p>
-            {rootState.features.soundQuality && <p>Sound quality ☑️ </p>}
-            <p>Ergonomic design {rootState.features.ergonomicDesign ? "☑️" : "unchecked"}</p>
-            <p>Affordability {rootState.features.affordability ? "☑️" : "unchecked"}</p>
-            <p>Q7 answer: other input {rootState.featuresOthers}</p>
-            <p>Q8 answer: rating {rootState.rating}</p>
-            <p>Q9 answer</p>
-            <p>Q10 answer</p>
+            {rootState.design && <p> Design: {rootState.design}</p>}
+            {rootState.variety && <p>Variety: {rootState.variety} </p>}
+            {rootState.quality && <p>Quality: {rootState.quality} </p>}
+            {rootState.deliveryTime && <p>Delivery Time: {rootState.deliveryTime} </p>}
+            {rootState.friendliness && <p>Delivery Friendliness: {rootState.friendliness} </p>}
+            {rootState.features.soundQuality && (
+              <p>
+                I liked
+                <span>☑️</span> Sound quality feature
+              </p>
+            )}
+            {rootState.features.ergonomicDesign && (
+              <p>
+                I liked
+                <span>☑️</span> Ergonomic design feature
+              </p>
+            )}
+            {rootState.features.affordability && (
+              <p>
+                I liked
+                <span>☑️</span> Affordability feature
+              </p>
+            )}
+            {rootState.featuresOthers && <p>Comment: "{rootState.featuresOthers}"</p>}
+            {rootState.rating && <p>Recommendation rating: {rootState.rating}</p>}
+            {rootState.suggestionInput && <p>Improvement suggestion: "{rootState.suggestionInput}"</p>}
           </div>
         </div>
       </div>
