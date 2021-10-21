@@ -43,10 +43,10 @@ const QuestionTwo = ({
             Next
           </button>
         </div>
+        <div className='progress-counter'>
+          {step <= 4 && <p>Question: {step}/4</p>}
+        </div>
       </form>
-      <div className='progress-counter'>
-        {step <= 4 && <p>Question: {step}/4</p>}
-      </div>
     </div>
   );
 };

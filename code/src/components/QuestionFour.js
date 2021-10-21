@@ -41,13 +41,13 @@ const QuestionFour = ({
             Back
           </button>
           <button className='form-button' type='button' onClick={onStepChange}>
-            Next
+            Submit
           </button>
         </div>
+        <div className='progress-counter'>
+          {step <= 4 && <p>Question: {step}/4</p>}
+        </div>
       </form>
-      <div className='progress-counter'>
-        {step <= 4 && <p>Question: {step}/4</p>}
-      </div>
     </div>
   );
 };

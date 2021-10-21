@@ -24,10 +24,10 @@ body {
 
 h1 {
   position: absolute;
-  top: 1vh;
+  top: 3vh;
   left: 50%;
   transform: translate(-50%);
-  font-size: 65px;
+  font-size: 55px;
   font-weight: 500;
   color: white;
   text-shadow:
@@ -52,6 +52,7 @@ h1 {
   overflow: hidden;
   transition: 0.4s;
   border: 0px;
+  letter-spacing: 0.07em;
 }
 
 .start-button:hover,
@@ -72,14 +73,8 @@ h1 {
   line-height: 90px;
 }
 
-/* .form-question,
-.overview {
-  display: flex;
-  flex-direction: column;
-} */
-
 .form-container {
-  margin-top: 15vh;
+  margin-top: 13vh;
   padding: 15px;
   border: 2px solid #3ba05d;
   border-radius: 25px;
@@ -110,9 +105,9 @@ h1 {
 input[type='text'],
 select {
   border: 5px solid white;
-  /* -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
     0 0 16px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1); */
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
   padding: 15px;
   background: rgba(255, 255, 255, 0.5);
@@ -170,5 +165,36 @@ p {
   h1 {
     font-size: 75px;
     top: 5vh;
+  }
+
+  .form-container {
+    padding: 20px;
+    border: 3px solid #3ba05d;
+  }
+
+  .form-question,
+  .overview {
+    padding: 3vh 2vh;
+    width: 350px;
+  }
+
+  .start-button {
+    width: 140px;
+    height: 140px;
+    line-height: 140px;
+    font-size: 30px;
+  }
+
+  .form-button {
+    width: 90px;
+    height: 90px;
+    line-height: 90px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 85px;
+    top: 10vh;
   }
 }
