@@ -72,11 +72,12 @@ img {
 label {
   font-family: "Raleway", sans-serif;
   color: white;
+  padding: 2.5px 0;
 }
 
 .form-container {
   margin-top: 70px;
-  padding: 20px;
+  padding: 10px;
   background: rgba(59, 57, 57, 0.664);
   position: absolute;
   display: flex;
@@ -180,14 +181,22 @@ p {
   margin: 0 auto;
 }
 
-@media (max-width: 767px) {
+.checkbox-container {
+  display: flex;
+  justify-content: center;
+  font-size: 28px;
+}
+
+@media (max-width: 768px) {
   .neon-text {
     width: 90%;
+    margin-top: 100px;
   }
 
   .form-container {
-    max-height: 70%;
+    max-height: 80%;
     width: 90%;
+    text-align: center;
   }
 
   .startBtn {

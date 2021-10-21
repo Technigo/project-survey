@@ -37,7 +37,8 @@ const Summary = ({
           <span className="answer-text"> {colorInput}</span>
         </p>
         <p>
-          mood today: <span className="answer-text"> {happiness}</span>{" "}
+          kittens makes you feel like this:
+          <span className="answer-text"> {happiness}</span>
         </p>
         <form className="submit-button-form">
           <button className="submitBtn" type="submit">
