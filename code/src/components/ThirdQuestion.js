@@ -7,13 +7,11 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 
 			<select onChange={onStreamingInputChange} value={streamingInput}>
 				<option value="">Select</option>
-				<option value="netflix">Netflix</option>
-				<option value="svtPlay">SVT Play</option>
-				<option value="hbo">HBO</option>
+				<option value="Netflix">Netflix</option>
+				<option value="SVT Play">SVT Play</option>
+				<option value="HBO">HBO</option>
 			</select>
-			<button type="submit" onClick={nextQuestion}>
-				Next question
-			</button>
+			{streamingInput !== "" && <button type="submit">Next question</button>}
 			<button onClick={previousQuestion}>Previous question</button>
 		</form>
 	);
