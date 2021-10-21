@@ -42,7 +42,7 @@ input[type=text] {
 input[type=text]:focus {
     border: 3px solid #f6acb0;
     border-radius: 2px;
-       border: none;
+    border: none;
     outline: none;
 }
 
@@ -63,13 +63,15 @@ input[type=date] {
     outline: none;
 }
 
-input:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0px 1000px #f6acb0 inset;
+input:-webkit-autofill,
+  input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+    font-family: 'Truculenta', sans-serif;
+    font-size: 16px;
   }
 
-
 ::placeholder {
-    color: rgb(48, 64, 80);
+    color: rgb(0, 0, 0);
     font-size: 16px;
     font-family: 'Truculenta', sans-serif;
 }
@@ -80,7 +82,7 @@ input:-webkit-autofill {
 .custom-select select {
     font-family: 'Truculenta', sans-serif;
     font-size: 16px;
-    color: rgb(48, 64, 80);
+    color: rgb(0, 0, 0);
 }
 
 .custom-select {
