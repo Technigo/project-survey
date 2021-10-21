@@ -1,0 +1,18 @@
+h1 {
+  font-family: "Abril Fatface", cursive;
+  letter-spacing: 2px;
+  font-size: 48px;
+  text-transform: uppercase;
+}
+
+.start-button {
+  font-family: "Abril Fatface", cursive;
+  font-size: 24px;
+  letter-spacing: 2px;
+  padding: 20px;
+  margin: 30px 0;
+  cursor: pointer;
+  font-size: 24px;
+  border: 1px solid green;
+  background: green;
+}
