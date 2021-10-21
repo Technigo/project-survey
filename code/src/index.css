@@ -14,6 +14,10 @@ code {
   
 }
 
+h2 {
+  margin: 8px;
+}
+
 p {
   font-size: 20px;
   font-weight: 600;
@@ -64,17 +68,13 @@ input, select {
 }
 
 
-.first-container, 
-.second-container,
-.third-container,
-.fourth-container,
-.submit-container,
-.overview-container,
-.suggestion-container {
+.step-container {
+  align-items: center;
   text-align: center;
   display: flex;
   flex-direction: column;
   padding: 10px;
+  column-gap: 10px;
 }
 
 button {
@@ -84,14 +84,14 @@ button {
   box-sizing: border-box;
   color: #000000;
   font-family: 'Quicksand', sans-serif;
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
   justify-content: center;
   padding: 10px;
   position: relative;
   text-align: center;
   text-decoration: none #000 solid;
-  width: 150px;
+  width: 100px;
   margin-top: 30px;
   position: relative;
   cursor: pointer;
@@ -117,8 +117,15 @@ button:hover:after {
   left: 2px;
 }
 
-.suggestion-container h2 {
-  margin-top: 0;
+.next-question {
+  transform: rotate(2deg);
+}
+
+.button-wrapper {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 35px;
+  
 }
 
 .game-container {
@@ -135,6 +142,14 @@ button:hover:after {
 .game-container img:focus {
   box-shadow: 0 0.5em 0.5em -0.4em orange;
   transform: translateY(-0.25em);
+}
+
+footer {
+  text-align: center;
+}
+
+footer p {
+  font-family: 'Nothing You Could Do';
 }
 
 @media (min-width: 640px) and (max-width: 900px) {

@@ -35,6 +35,14 @@ export const Form = () => {
 		setStep(step + 1)
 	}
 
+    const onPrevQuestionChange = () => {
+        setStep(step - 1)
+    }
+
+    const startOver = () => {
+        setStep(step - 5)
+    }
+
 
     return (
         <form>
@@ -50,6 +58,7 @@ export const Form = () => {
                 <SecondQuestion
                 moodInput={moodInput}
                 onMoodInputChange={onMoodInputChange}
+                onPrevQuestionChange={onPrevQuestionChange}
                 onStepChange={onStepChange}
                 />
             )}  
@@ -58,6 +67,7 @@ export const Form = () => {
                 <ThirdQuestion
                 socialInput={socialInput}
                 onSocialInputChange={onSocialInputChange}
+                onPrevQuestionChange={onPrevQuestionChange}
                 onStepChange={onStepChange}
                 />
             )}  
@@ -66,6 +76,7 @@ export const Form = () => {
                 <FourthQuestion
                 viewInput={viewInput}
                 onViewInputChange={onViewInputChange}
+                onPrevQuestionChange={onPrevQuestionChange}
                 onStepChange={onStepChange}
                 />
             )} 
@@ -73,6 +84,7 @@ export const Form = () => {
             {step === 5 && (
                 <SubmitButton
                 onStepChange={onStepChange}
+                onPrevQuestionChange={onPrevQuestionChange}
                 />
             )}
 
@@ -84,6 +96,7 @@ export const Form = () => {
                 socialInput={socialInput}
                 viewInput={viewInput}
                 onStepChange={onStepChange}
+                startOver={startOver}
                 />
                 <Suggestion
                 moodInput={moodInput}

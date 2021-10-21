@@ -5,6 +5,7 @@ import logo from './images/logo_white.png'
 export const App = () => {
 
   return (
+    <>
     <div className="header-wrapper">
       <header>
         <img src={logo} alt="my logo"/>
@@ -16,5 +17,10 @@ export const App = () => {
       </div>
       </div>
    </div>
+   <footer>
+     <h3>Designed and Developed by:</h3>
+     <p>Lovisa Carling</p>
+   </footer>
+   </>
   )
 }

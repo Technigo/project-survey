@@ -7,7 +7,7 @@ import { Survival } from "./Survival"
 export const Suggestion = ({moodInput, socialInput, viewInput}) => {
 
     return (
-    <div className="suggestion-container">
+    <div className="step-container">
     <h2>You should play:</h2>
 
     {viewInput === 'From my own perspective' && (

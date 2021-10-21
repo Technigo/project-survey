@@ -1,11 +1,11 @@
 import React from "react"
 
-export const SecondQuestion = ({moodInput, onMoodInputChange, onStepChange}) => {
+export const SecondQuestion = ({moodInput, onMoodInputChange, onStepChange, onPrevQuestionChange}) => {
 
     
     return (
 
-        <div className="second-container">
+        <div className="step-container">
             <h2 className="survey-text">Find a game based on your profile</h2>
             <h3>What's your mood?</h3>
             <label>
@@ -37,8 +37,10 @@ export const SecondQuestion = ({moodInput, onMoodInputChange, onStepChange}) => 
                 checked={moodInput === 'Overthinking'}
                 />
             </label>
-            <button onClick={onStepChange}>Next question</button>
-
+            <div className="button-wrapper">
+            <button onClick={onPrevQuestionChange}>Previous question</button>
+            <button className="next-question" onClick={onStepChange}>Next question</button>
+            </div>
         </div>
     )
 }
