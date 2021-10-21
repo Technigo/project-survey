@@ -1,6 +1,7 @@
 import React from "react";
 import "./showBooking.css";
 
+//Function where all the information of the booking gets written out.
 export const ShowBooking = ({
   travelType,
   city,

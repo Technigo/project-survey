@@ -9,6 +9,7 @@ export const PassengerInformation = ({
 }) => {
   const items = [];
 
+  //A for loop in which we push the information into the empty array which we created above.
   for (let i = 1; i <= amountOfTravellers; i++) {
     items.push(
       <div className="form__passengers-information" key={i}>
@@ -47,6 +48,7 @@ export const PassengerInformation = ({
   return (
     <>
       <h2 tabIndex="1">Passenger Information</h2>
+      {/* items render everything when being called for here */}
       {items}
     </>
   );

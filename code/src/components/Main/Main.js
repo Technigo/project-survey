@@ -138,7 +138,7 @@ export const Main = () => {
             travelType={travelType}
           />
         )}
-        {/*If step is not 1 there will be a previous button.  */}
+        {/* If step is not 1 there will be a previous button.  */}
         <div className="form__btns-container">
           {step !== 1 && (
             <button
