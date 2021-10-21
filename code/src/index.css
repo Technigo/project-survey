@@ -5,10 +5,15 @@
 }
 
 body {
-  margin: 0;
+  margin: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: 'Courier New';
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
 }
 
 .background-image {
@@ -31,11 +36,11 @@ section {
     0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa; */
   text-align: center;
   width: 100%;
-  max-width: 90%;
-  position: absolute;
+  /* max-width: 90%; */
+  /* position: absolute;
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
 
   border: 3px solid #fff;
   border-radius: 22px;
@@ -146,6 +151,10 @@ audio {
   margin: 0 auto;
 }
 
+.progress-font-size {
+  font-size: 12px;
+}
+
 .summary-table {
   margin: 0 auto;
   height: 100%;
@@ -176,9 +185,10 @@ td {
 }  */
 
 footer {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+  position: relative;
+  bottom: 0px;
+  left: 0px;
+  margin: 14px 10px;
 }
 
 footer p {
@@ -192,6 +202,10 @@ footer p {
 
 /* tablet */
 @media (min-width: 768px) {
+  section {
+    width: 90%;
+    margin: 0 auto;
+  }
   section h1 {
     font-size: 38px;
     line-height: 70px;
@@ -241,9 +255,9 @@ footer p {
     padding: 12px;
     font-size: 44px;
   }
-  /* .progress-font-size {
-    font-size: 22px;
-  } */
+  .progress-font-size {
+    font-size: 18px;
+  }
   .summary-table {
     max-width: 700px;
     font-size: 24px;
@@ -253,6 +267,9 @@ footer p {
   }
   td {
     padding: 8px;
+  }
+  footer {
+    margin: 14px 64px;
   }
   footer p {
     font-size: 16px;
