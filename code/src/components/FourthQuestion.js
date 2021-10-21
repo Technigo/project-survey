@@ -8,25 +8,31 @@ const FourthQuestion = ({ radioInput, onRadioInputChange, onStepChange, onMinusS
     return (
         <form>
             <p> What do you not like about the Autumn? </p>
-                {notLike.map((selection) => (
-                    <label key={selection}>
+            {notLike.map((selection) => (
+                <label key={selection}>
                     <input
-                      type="radio"
-                      value={selection}
-                      onChange={(event) => onRadioInputChange(event.target.value)}
-                      checked={radioInput === selection}
+                    type="radio"
+                    value={selection}
+                    onChange={(event) => onRadioInputChange(event.target.value)}
+                    checked={radioInput === selection}
                     />
                     {selection}
-                  </label>
-                )
+                </label>
+            )
                 
-                )}
+            )}
 
 
 
-
-            <button onClick={onStepChange}>Next question</button>
-            <button onClick={onMinusStepChange}>Previous question</button>
+            <div className="button-box">
+                <input type="submit" 
+                    className="button"
+                    onClick={onStepChange}></input>
+                
+                <button 
+                className="button"
+                onClick={onMinusStepChange}>Previous question</button>
+            </div>
         </form>
     )
 }

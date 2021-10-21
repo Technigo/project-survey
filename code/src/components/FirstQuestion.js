@@ -1,11 +1,12 @@
 import React from "react";
 
 // name. Input type text
-const FirstQuestion = ({ nameInput, onNameInputChange, surnameInput, onSurnameInputChange, onStepChange, onMinusStepChange }) => {
+const FirstQuestion = ({ colorInput, nameInput, onNameInputChange, surnameInput, onSurnameInputChange, onStepChange, onMinusStepChange }) => {
     return (
         <form>
             {/* Insert name */}
-            <label htmlFor="nameInput">
+            <label htmlFor="nameInput"
+            color={colorInput}>
                 Type your first name: 
             </label>
             <input 
@@ -13,17 +14,29 @@ const FirstQuestion = ({ nameInput, onNameInputChange, surnameInput, onSurnameIn
                 type="text" 
                 value={nameInput} 
                 onChange={onNameInputChange} 
+                
             />
             <label htmlFor="surnameInput">
                 Type your surname:
             </label>
             <input id="surnameInput"
                 type="text"
+
                 value={surnameInput}
                 onChange={onSurnameInputChange} 
             />
-        <button onClick={onStepChange}>Next question</button>
-        <button onClick={onMinusStepChange}>Previous question</button>
+
+        <div className="button-box">
+            <input type="submit" 
+                className="button"
+               onClick={onStepChange}>
+            </input>
+            <button 
+                className="button"
+                onClick={onMinusStepChange}>
+                Previous question
+            </button>
+        </div>
 
       </form>
     )

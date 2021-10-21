@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 
-import Intro from "components/intro";
+import Intro from "components/Intro";
 import FirstQuestion from './components/FirstQuestion';
 import SecondQuestion from './components/SecondQuestion';
 import ThirdQuestion from './components/ThirdQuestion';
@@ -8,6 +8,7 @@ import FourthQuestion from './components/FourthQuestion';
 import Overview from "components/Overview";
 
 const Form = () => {
+    const [colorInput, setColorInput] = useState('#000')
     const [nameInput, setNameInput] = useState('');
     const [surnameInput, setSurnameInput] = useState('');
     const [rangeInput, setRangeInput] = useState('5');
@@ -16,6 +17,11 @@ const Form = () => {
     const [step, setStep] = useState(0);
   
   
+    const onColorChange = (event) => {
+      setColorInput(event.target.value)
+    }
+
+
     const onNameInputChange = (event) => {
       setNameInput(event.target.value);
     };
@@ -32,6 +38,7 @@ const Form = () => {
       setSelectInput(event.target.value)
     };
 
+    
    
 
 
@@ -50,6 +57,8 @@ const Form = () => {
         <div className="question-box">
           {step === 0 && (
             <Intro 
+            colorInput={colorInput}
+            onColorChange={onColorChange}
             onStepChange={onStepChange}
             />
           )}

@@ -20,8 +20,17 @@ const SecondQuestion = ({ rangeInput, onRangeInputChange, onStepChange, onMinusS
                 {rangeInput}
             </div>
 
-            <button onClick={onStepChange}>Next question</button>
-            <button onClick={onMinusStepChange}>Previous question</button>
+            <div className="button-box">
+            <input type="submit" 
+                className="button"
+                onClick={onStepChange}></input>
+            
+            <button 
+            className="button"
+            onClick={onMinusStepChange}>Previous question</button>
+            </div>
+
+
         </form>
     )
 
