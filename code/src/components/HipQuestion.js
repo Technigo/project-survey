@@ -15,7 +15,7 @@ const HipQuestion = ({
         <label htmlFor={hipInput}>Type your hip measurement in cm</label>
         <input
           id='hipInput'
-          type='text'
+          type='number'
           value={hipInput}
           onChange={onHipInputChange}
           onKeyPress={onEnter}

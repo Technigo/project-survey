@@ -15,7 +15,7 @@ const WaistQuestion = ({
         <label htmlFor={waistInput}>Type your waist measurement in cm</label>
         <input
           id='waistInput'
-          type='text'
+          type='number'
           value={waistInput}
           onChange={onWaistInputChange}
           onKeyPress={onEnter}

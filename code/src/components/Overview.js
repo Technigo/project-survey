@@ -26,13 +26,22 @@ const Overview = ({
         <h1>{nameInput}&apos;s Overall Health Overview</h1>
 
         <div className='AWH-info'>
-          <p>Age: {ageInput}</p>
-          <p>Weight: {weightInput}</p>
-          <p>Height:{heightInput}</p>
+          <p>
+            <span>Age:</span> {ageInput}
+          </p>
+          <p>
+            <span>Weight:</span> {weightInput}
+          </p>
+          <p>
+            <span>Height:</span>
+            {heightInput}
+          </p>
         </div>
 
         <div className='BMI-info'>
-          <p>BMI: {BMI.toFixed(2)}</p>
+          <p>
+            <span>BMI:</span> {BMI.toFixed(2)}
+          </p>
           <p>
             {(() => {
               switch (true) {
@@ -53,7 +62,10 @@ const Overview = ({
 
         <div className='WHR-info'>
           <h3>For women:</h3>
-          <p>Waist-to-Hip Ratio:{WHR.toFixed(2)}</p>
+          <p>
+            <span>Waist-to-Hip Ratio:</span>
+            {WHR.toFixed(2)}
+          </p>
           <p>
             {(() => {
               switch (true) {
@@ -69,7 +81,9 @@ const Overview = ({
             })()}
           </p>
           <h3>For men:</h3>
-          <p>Waist-to-Hip Ratio: {WHR.toFixed(2)}</p>
+          <p>
+            <span>Waist-to-Hip Ratio:</span> {WHR.toFixed(2)}
+          </p>
           <p>
             {(() => {
               switch (true) {
@@ -87,7 +101,9 @@ const Overview = ({
         </div>
 
         <div className='other-info'>
-          <p>Physical Activity: {activityInput}</p>
+          <p>
+            <span>Physical Activity:</span>
+          </p>
           <p>
             {(() => {
               switch (activityInput) {
@@ -105,10 +121,12 @@ const Overview = ({
             })()}
           </p>
           <p>
-            Smoking habit:
+            <span>Smoking Habit:</span>
             {(() => {
               switch (true) {
-                case sliderAInput < 30:
+                case sliderAInput === 0:
+                  return 'Non-Smoker';
+                case sliderAInput <= 30 && sliderAInput >= 0:
                   return 'Low Intensity Smoker';
                 case sliderAInput <= 75 && sliderAInput >= 30:
                   return 'Moderate Intensity Smoker';
@@ -120,7 +138,7 @@ const Overview = ({
             })()}
           </p>
           <p>
-            Drinking habit:
+            <span>Drinking Habit:</span>
             {(() => {
               switch (true) {
                 case sliderBInput < 30:

@@ -24,6 +24,7 @@ const OtherQuestion = ({
             onChange={onSliderAInputChange}
             className='slider'
             id={sliderAInput}
+            required
           />
           <div className='slider-text'>
             <div>not at all</div>
@@ -40,6 +41,7 @@ const OtherQuestion = ({
             onChange={onSliderBInputChange}
             className='slider'
             id={sliderBInput}
+            required
           />
           <div className='slider-text'>
             <div>not at all</div>

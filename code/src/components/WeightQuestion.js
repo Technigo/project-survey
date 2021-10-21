@@ -15,7 +15,7 @@ const WeightQuestion = ({
         <label htmlFor={weightInput}>What is your weight in kg?</label>
         <input
           id='weightInput'
-          type='text'
+          type='number'
           value={weightInput}
           onChange={onWeightInputChange}
           onKeyPress={onEnter}

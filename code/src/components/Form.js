@@ -19,8 +19,8 @@ const Form = () => {
   const [hipInput, setHipInput] = useState('');
   const [waistInput, setWaistInput] = useState('');
   const [activityInput, setActivityInput] = useState('');
-  const [sliderAInput, setSliderAInput] = useState('');
-  const [sliderBInput, setSliderBInput] = useState('');
+  const [sliderAInput, setSliderAInput] = useState(0);
+  const [sliderBInput, setSliderBInput] = useState(0);
   const [step, setStep] = useState(1);
 
   const onNameInputChange = (event) => {

@@ -12,10 +12,13 @@ const HeightQuestion = ({
   return (
     <div className='form-container'>
       <form>
-        <label htmlFor={heightInput}>Type your height in meters</label>
+        <label htmlFor={heightInput}>
+          Type your height in meters (use period)
+        </label>
         <input
           id='heightInput'
-          type='text'
+          type='number'
+          pattern='([1-2].[1-9]{2})'
           value={heightInput}
           onChange={onHeightInputChange}
           onKeyPress={onEnter}

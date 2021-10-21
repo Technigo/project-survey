@@ -11,18 +11,16 @@ const AgeQuestion = ({
 }) => {
   return (
     <div id='container' className='form-container'>
-      <form>
+      <form onSubmit={onStepChange}>
         <label htmlFor={ageInput}>What&apos;s your age?</label>
         <input
           id='ageInput'
-          type='text'
+          type='number'
           value={ageInput}
           onChange={onAgeInputChange}
           onKeyPress={onEnter}
         />
-        <button type='button' onClick={onStepChange} disabled={ageInput === ''}>
-          Next questions
-        </button>
+        <button type='submit'>Next questions</button>
       </form>
       <div className='progress-bar'>
         <ProgressBar completed={step * 10} />

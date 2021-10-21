@@ -29,6 +29,10 @@
     font-size: 0.75em;
 }
 
+.overview-content p {
+    padding: 2px 0;
+}
+
 .spacing {
     width: 10rem;
     height: 10rem;
@@ -42,4 +46,9 @@
 .end-survey-btn {
     position: absolute;
     top: 250%;
+}
+
+span {
+    font-weight: 700;
+    padding-right: 10px;
 }

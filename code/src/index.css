@@ -101,6 +101,8 @@ input {
   border-color: transparent;
   border-bottom: 3px solid black;
   width: 70%;
+  font-size: 26px;
+  text-align: center;
 }
 
 .radio-form {
