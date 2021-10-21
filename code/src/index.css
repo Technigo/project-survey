@@ -137,7 +137,6 @@ button:hover:after {
   transform: translateY(-0.25em);
 }
 
-
 @media (min-width: 640px) and (max-width: 900px) {
 
   .container {
