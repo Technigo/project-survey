@@ -19,8 +19,14 @@ const Overview = ({
           Do you believe that life exists outside of this planet?{" "}
           {experienceInput}%
         </p>
-        <p>
-          Have you ever experienced something out of this world? {believesInput}
+        <p>Have you ever experienced something out of this world? </p>
+        <p
+          style={{
+            color:
+              believesInput === "Yes" ? "blueviolet" : "rgb(226, 224, 224)",
+          }}
+        >
+          {believesInput}
         </p>
       </div>
     </section>

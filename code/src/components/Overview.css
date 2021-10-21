@@ -31,6 +31,8 @@
   }
   .summary-text {
     font-size: 22px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 }
 @media (min-width: 1024px) {
