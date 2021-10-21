@@ -22,9 +22,9 @@ export const App = () => {
       {!showSummary ? (
         <form onSubmit={handleSubmit}>
           <header id="header">
-            <h3>Glögg Survey</h3>
+            <h3>Glögg</h3>
             <h1>What´s your favorite?</h1>
-            <a href="#drink"><img className="glogg" src="../assets/glogg.png" alt="glogg"></img></a>
+            <a href="#drink"><img className="glogg" src="../assets/gloggdown.png" alt="glogg"></img></a>
           </header>
           <section className="section-content drink" id="drink">
             <h2>How do you like your glögg?</h2>
@@ -43,7 +43,7 @@ export const App = () => {
 
           <section className="section-content snack" id="snack">
             <h2>What do you add in your glögg?</h2>
-            <h4>For example: Russin, mandel, kanel?</h4>
+            <h4>For example: Raisins, almond, cinnamon?</h4>
             <input className="snack-input"
               type="text"
               onChange={event => setSnack(event.target.value)}
@@ -54,7 +54,7 @@ export const App = () => {
           </section>
 
           <section className="section-content party" id="party">
-            <h2>Do you going to have a glöggmingel?</h2>
+            <h2>Are you having a glöggmingel?</h2>
             <div className="radio-buttons">
               {partyOptions.map(group => (
                 <label key={group}>

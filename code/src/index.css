@@ -22,6 +22,7 @@ h2 {
 }
 
 h3 {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -36,7 +37,7 @@ a {
   color: white;
 }
 
-/* Christmas button, link in ReadMe */
+/* Christmas button, link/credit in ReadMe */
 button {
 	display: inline-block;
 	-webkit-box-sizing:border-box;
@@ -92,7 +93,7 @@ button:hover {
 		
 }
 button:focus {
-	outline: none; /*FF*/
+	outline: none; 
 }
 button:active {
 	box-shadow:

@@ -9,10 +9,13 @@ export const Summary = (props) => {
 
   return (
     <section className="summary-section">
-      <h2>Summary of your glögg</h2>
-      <p>You like {drink} and you add {snack}. {party === "Yes" && <p>If you are having a glöggmingel, you need to invite me, what time?</p>}
+      <h2>Summary of your favorite glögg</h2>
+      <p>You like {drink} and you add {snack}. 
+      {party === "Yes" && <p>If you are having a glöggmingel, you need to invite me, what time should I come?</p>}
+      {party === "No" && <p>No glöggmingel? You can come to mine.</p>}
+      {party === "Maybe" && <p>Maybe, maybe not a glöggmingel.. You need to drink some Glögg and think about it.</p>}
       </p>
-      <button><a href="">Return</a></button>
+      <button><a href="return">Return</a></button>
     </section>
   )
 }
