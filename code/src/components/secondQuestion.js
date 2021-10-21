@@ -6,7 +6,7 @@ const SecondQuestion = ({
 	onSurnameInputChange,
 	onStepChange
 }) => {
-
+console.log(surnameInput)
 	return (
 		<form className="question-container">
 			<label htmlFor="surnameInput">What's your surname?</label>
@@ -16,9 +16,14 @@ const SecondQuestion = ({
 				value={surnameInput}
 				onChange={onSurnameInputChange}
 			/>
+
+            <button className="submit-button" 
+				onClick={() => onStepChange('prev')}>Previous question
+			</button>
+			
 			<button className="submit-button" 
-			    disabled={surnameInput === undefined} 
-				onClick={onStepChange}>Next question
+			    disabled={surnameInput === ''} 
+				onClick={() => onStepChange('next')}>Next question
 			</button>
 		</form>
 	);

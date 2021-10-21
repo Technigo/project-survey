@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState } from 'react'; //UseState är en typ av hook
 
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
@@ -7,34 +7,42 @@ import DropDown from './DropDown';
 import Overview from './Overview'; 
 
 const Form = () => {
-	const [nameInput, setNameInput] = useState('');
-	const [surnameInput, setSurnameInput] = useState('');
-	const [ageInput, setAgeInput] = useState('');
-	const [locationInput, setLocationInput] = useState('');
-	const [step, setStep] = useState(1);
+	const [nameInput, setNameInput] = useState('name');
+	const [surnameInput, setSurnameInput] = useState('surname');
+	const [ageInput, setAgeInput] = useState('30+');
+	const [locationInput, setLocationInput] = useState('Oslo');
+	const [step, setStep] = useState(2);
+
+  /*   useEffect(() => {alert ('hey')})  */
 
 	const onNameInputChange = (event) => {
-		setNameInput(event.target.value);
+	    setNameInput(event.target.value);
 	};
+
 
 	const onSurnameInputChange = (event) => {
 		setSurnameInput(event.target.value);
 	};
 
-	const onAgeInputChange = (event) => {
-		setAgeInput(event.target.value);
+	const onAgeInputChange = (value) => {
+	    setAgeInput(value);
 	};
 
 	const onLocationInputChange = (event) => {
 		setLocationInput(event.target.value);
 	}
 
-	const onStepChange = () => {
-		setStep(step + 1);
+	const onStepChange = (stepChange) => {
+		if (stepChange === 'prev') {
+			setStep(step - 1);
+		} else {
+			setStep(step + 1);
+		}
 	};
 
 	return (
 		<div>
+			<div className="header">TEXT</div>
 			{step === 1 && (
 				<FirstQuestion
 					nameInput={nameInput}
@@ -44,7 +52,7 @@ const Form = () => {
 			)}
 			{step === 2 && (
 				<SecondQuestion
-					surname={surnameInput}
+					surnameInput={surnameInput}
 					onSurnameInputChange={onSurnameInputChange}
 					onStepChange={onStepChange}
 				/>

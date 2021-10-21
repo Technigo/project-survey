@@ -6,12 +6,12 @@ const FirstQuestion = ({
 	onNameInputChange, 
 	onStepChange 
 }) => {
-
+console.log(nameInput)
 	return (
 		<form className="question-container">
 			<label htmlFor="nameInput">What's your name?</label>
 			<input className="question-input"
-				id="nameInput"
+			    id="nameInput"
 				type="text" 
 				value={nameInput}
 				onChange={onNameInputChange}
