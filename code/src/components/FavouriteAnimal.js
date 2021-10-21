@@ -6,10 +6,10 @@ const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange}) => {
             <legend className="legend" >Questions by Bella + Bubbles</legend>
 
             <form className="form-container">
-            <label className="label"htmlFor="AnimalInput">Which of these animals do you like the best?</label>
+            <label className="label"htmlFor="animalInput">Which of these animals do you like the best?</label>
             <select 
                 className="input"
-                id="AnimalInput"
+                id="animalInput"
                 value={animalInput} 
                 onChange={onAnimalInputChange}>
                     <option disabled value=''>Select an option:</option>

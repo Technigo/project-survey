@@ -6,28 +6,31 @@ const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange}) =>{
         <fieldset className="fieldset">
            <legend className="legend" >Questions by Bella + Bubbles</legend>
             <form className="form-container">
-            <div className="radioRow">
+                <div className="radioColumn">
                 <h2>Can you make an aeroplane out of paper?</h2>
-                <label className= "radiobutton-container"htmlFor="aeroplaneInput">Yes
+                <div className="radioRow"> 
+                <label className= "radiobutton-label"htmlFor="aeroplaneInput">Yes
                     <input 
-                        className="input"
                         id="aeroplaneInput"
                         type="radio" 
                         value="Yes"
                         onChange={onAeroplaneInputChange}
                         className="radio"/>
+                        <span className="custom-radio"></span>
                 </label>
 
-                <label className= "radiobutton-container"htmlFor="aeroplaneInput">No
+                <label className="radiobutton-label" htmlFor="aeroplaneInput">No
                     <input 
-                        className="input"
                         id="aeroplaneInput"
                         type="radio" 
                         value="No"
                         onChange={onAeroplaneInputChange}
-                        /*className="radio"*//>
+                        className="radio"/>
+                    <span className="custom-radio"></span>
                 </label>
-            </div>
+            </div>  
+                </div>
+                
          
         <button className="button" onClick = {onstepChange}>Next Question</button>
         </form>

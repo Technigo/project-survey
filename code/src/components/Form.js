@@ -1,4 +1,5 @@
 import React, { useState} from 'react'
+
 import FirstPage from './FirstPage'
 import NameQuestion from './NameQuestion'
 import LocationQuestion from './LocationQuestion'
@@ -6,7 +7,8 @@ import Overview from './Overview'
 import FavouriteAnimal from './FavouriteAnimal'
 import FavouriteColour from './FavouriteColour'
 import AeroplaneQuestion from './AeroplaneQuestion'
-
+import OlderQuestion from './OlderQuestion'
+import SellotapeQuestion from './SellotapeQuestion'
 
  const Form = () => {
   
@@ -15,6 +17,8 @@ import AeroplaneQuestion from './AeroplaneQuestion'
   const [animalInput, setAnimalInput] = useState ('')
   const [colourInput, setColourInput] = useState ('')
   const [aeroplaneInput, setAeroplaneInput] = useState ('')
+  const [olderInput, setOlderInput] = useState ('')
+  const [sellotapeInput, setSellotapeInput] =useState ('')
   const [step, setStep] = useState (1)
   
   
@@ -32,6 +36,12 @@ import AeroplaneQuestion from './AeroplaneQuestion'
   }
   const onAeroplaneInputChange = (event) => {
     setAeroplaneInput(event.target.value)
+  }
+  const onOlderInputChange = (event) => {
+    setOlderInput(event.target.value)
+  }
+  const onSellotapeInputChange = (event) => {
+    setSellotapeInput(event.target.value)
   }
   const onstepChange = () => {
       setStep(step + 1)
@@ -77,21 +87,39 @@ import AeroplaneQuestion from './AeroplaneQuestion'
   } else if (step === 5) {
     return (
       <div className="main"> <AeroplaneQuestion 
-      AeroplaneInput={aeroplaneInput}
+      aeroplaneInput={aeroplaneInput}
       onAeroplaneInputChange={onAeroplaneInputChange}
       onstepChange = {onstepChange}/>
       </div>
     )
   } else if (step === 6) {
     return (
-      <div className="main"> <Overview 
-      nameInput={nameInput}
-      locationInput={locationInput}
-      animalInput={animalInput}
-      colourInput={colourInput}
-      aeroplaneInput={aeroplaneInput}/></div>
+      <div className="main"> <OlderQuestion 
+      olderInput ={olderInput}
+      onOlderInputChange ={onOlderInputChange}
+      onstepChange = {onstepChange}/>
+      </div>
     )
-  }
+  }else if (step === 7) {
+    return (
+      <div className="main"> <SellotapeQuestion 
+      sellotapeInput = {sellotapeInput}
+      onSellotapeInputChange = {onSellotapeInputChange}
+      onstepChange = {onstepChange}/>
+      </div>
+    )
+} else if (step === 8) {
+  return (
+    <div className="main"> <Overview 
+    nameInput = {nameInput}
+    locationInput ={ locationInput}
+    animalInput = {animalInput}
+    colourInput = {colourInput}
+    aeroplaneInput = {aeroplaneInput}
+    olderInput = {olderInput}
+    sellotapeInput = {sellotapeInput}
+    /></div>
+  )
 }
-
+ }
 export default Form
