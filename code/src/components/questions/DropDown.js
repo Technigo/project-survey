@@ -34,23 +34,31 @@ export const DropDown = ({ state, handleChange, data, step, incrementStep, decre
   return (
     <>
       <QuestionHeading number={data.number} title={data.title} />
-      <select
-        className='dropdown'
-        name='select'
-        id={data.type + data.id}
-        value={state[data.type + data.id]}
-        onChange={e => onChangeHandler(e)}>
-        {data.options.map(option => {
-          return (
-            <option hidden={option.hidden} key={option.label + data.id} value={option.value}>
-              {option.label}
-            </option>
-          )
-        })}
-      </select>
+      <label className='label' key={data.id}>
+        {data.label}
+        <select
+          className='dropdown'
+          name='select'
+          id={data.type + data.id}
+          value={state[data.type + data.id]}
+          onChange={e => onChangeHandler(e)}>
+          {data.options.map(option => {
+            return (
+              <option hidden={option.hidden} key={option.label + data.id} value={option.value}>
+                {option.label}
+              </option>
+            )
+          })}
+        </select>
+      </label>
       <div className='button-container'>
-        <Button disabled={step === 1} text={'^'} onClick={decrementStep} />
-        <Button disabled={step === 'end' || !state[data.id]} text={'v'} onClick={incrementStep} />
+        <Button disabled={step === 1} text={''} type={'up'} onClick={decrementStep} />
+        <Button
+          disabled={step === 'end' || !state[data.id]}
+          text={''}
+          type={'down'}
+          onClick={incrementStep}
+        />
       </div>
     </>
   )

@@ -69,7 +69,7 @@ export const App = () => {
       />
       {step === 'end' && <FormSummary state={state} />}
       <div className='button-container'>
-        {step === 'end' && <Button text={'^'} onClick={decrementStep} />}
+        {step === 'end' && <Button text={''} type={'up'} onClick={decrementStep} />}
         {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
       </div>
     </div>

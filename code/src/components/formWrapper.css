@@ -7,6 +7,15 @@
 .label {
   display: flex;
   justify-content: space-between;
+  margin: 2px 0;
+}
+
+.label:first-of-type {
+  margin-top: initial;
+}
+
+.label:last-of-type {
+  margin-bottom: initial;
 }
 
 .button-container {

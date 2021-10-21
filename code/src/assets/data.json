@@ -27,6 +27,7 @@
       "number": 3,
       "required": "false",
       "type": "dropdown",
+      "label": "Select color",
       "options": [
         { "label": "Select an option", "value": "default", "hidden": true },
         { "label": "Green", "value": "Green", "hidden": false },
@@ -40,6 +41,7 @@
       "number": 4,
       "required": "false",
       "type": "dropdown",
+      "label": "Select color",
       "options": [
         { "label": "Select an option", "value": "default", "hidden": true },
         { "label": "Green", "value": "Green", "hidden": false },

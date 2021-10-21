@@ -1,5 +1,26 @@
 .button {
-  width: 30px;
+  min-width: 30px;
   height: 30px;
+  border: 1px solid;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+}
+
+.button:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.button-icon {
+  width: 20px;
+}
+
+.button:disabled img {
+  filter: opacity(0.2);
 }
