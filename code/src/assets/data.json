@@ -1,44 +1,61 @@
 {
   "questions": [
     {
-      "title": "Your name?",
+      "title": "Start the survey?",
       "number": 1,
+      "required": "true",
+      "type": "radio",
+      "options": [
+        { "label": "Yes", "value": "Yes", "id": "radioYes" },
+        { "label": "No", "value": "No", "id": "radioNo", "next_question": "end" }
+      ],
+      "id": 1
+    },
+    {
+      "title": "Your name?",
+      "number": 2,
       "required": "true",
       "type": "text",
       "options": [
         { "label": "First name", "id": "firstName", "placeholder": "Type your first name" },
         { "label": "Last name", "id": "lastName", "placeholder": "Type your last name" }
       ],
-      "id": 1
-    },
-    {
-      "title": "Take the survey?",
-      "number": 2,
-      "required": "true",
-      "type": "radio",
-      "options": [
-        { "label": "Yes", "value": "Yes", "id": "radioYes", "next_question": 3 },
-        { "label": "No", "value": "No", "id": "radioNo", "next_question": "end" }
-      ],
       "id": 2
     },
     {
-      "title": "Which color do you prefer?",
+      "title": "Are you excited?",
       "number": 3,
       "required": "false",
-      "type": "dropdown",
-      "label": "Select color",
+      "type": "radio",
       "options": [
-        { "label": "Select an option", "value": "default", "hidden": true },
-        { "label": "Green", "value": "Green", "hidden": false },
-        { "label": "Blue", "value": "Blue", "hidden": false },
-        { "label": "Red", "value": "Red", "hidden": false }
+        { "label": "Yes", "value": "Yes", "id": "radioYes" },
+        { "label": "No", "value": "No", "id": "radioNo" }
       ],
       "id": 3
     },
     {
-      "title": "Which color do you prefer?",
+      "title": "How excited are you to du this survey?",
       "number": 4,
+      "required": "true",
+      "type": "range",
+      "options": [{ "label": "Select an option", "min": "1", "max": "100", "value": "50" }],
+      "id": 4
+    },
+    {
+      "title": "Ok, lets do this?",
+      "number": 5,
+      "required": "false",
+      "type": "radio",
+      "options": [
+        { "label": "Yes", "value": "Yes", "id": "radioYes" },
+        { "label": "Skip a questions", "value": "Skip", "id": "radioSkip", "next_question": 7 },
+        { "label": "No", "value": "No", "id": "radioNo", "next_question": "end" }
+      ],
+      "id": 5
+    },
+    {
+      "title": "Which color do you prefer?",
+      "number": 6,
       "required": "false",
       "type": "dropdown",
       "label": "Select color",
@@ -48,23 +65,45 @@
         { "label": "Blue", "value": "Blue", "hidden": false },
         { "label": "Red", "value": "Red", "hidden": false }
       ],
-      "id": 4
+      "id": 6
     },
     {
-      "title": "How good is this survey?",
-      "number": 5,
+      "title": "Your dream job:",
+      "number": 7,
+      "required": "false",
+      "type": "text",
+      "options": [{ "label": "Dream job", "id": "dreamJob", "placeholder": "Type your dream job" }],
+      "id": 7
+    },
+    {
+      "title": "Which color would be best for this survey?",
+      "number": 8,
+      "required": "false",
+      "type": "dropdown",
+      "label": "Select color",
+      "options": [
+        { "label": "Select an option", "value": "default", "hidden": true },
+        { "label": "Green", "value": "Green", "hidden": false },
+        { "label": "Blue", "value": "Blue", "hidden": false },
+        { "label": "Red", "value": "Red", "hidden": false }
+      ],
+      "id": 8
+    },
+    {
+      "title": "How good is this survey, so far?",
+      "number": 9,
       "required": "true",
       "type": "range",
       "options": [{ "label": "Select an option", "min": "1", "max": "100", "value": "50" }],
-      "id": 5
+      "id": 9
     },
     {
       "title": "Finish the survey?",
-      "number": 6,
+      "number": 10,
       "required": "true",
       "type": "radio",
       "options": [{ "label": "Yes", "value": "Yes", "id": "radioYes", "next_question": "end" }],
-      "id": 6
+      "id": 10
     }
   ]
 }

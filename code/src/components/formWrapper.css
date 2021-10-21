@@ -12,6 +12,7 @@
 
 .label-radio {
   justify-content: space-around;
+  text-align: right;
 }
 
 .label:first-of-type {
