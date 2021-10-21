@@ -111,7 +111,11 @@ const Form = () => {
         )}
         {/* </div>  */}
       </main>
-      <footer class="footer">Footer</footer>;
+      <footer class="footer">
+        <p>by Elin Diczfalusy </p>
+        <p> 2021 Student project via Technigo</p>
+      </footer>
+      ;
     </>
   );
 };

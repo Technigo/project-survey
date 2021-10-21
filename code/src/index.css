@@ -37,7 +37,6 @@ section {
 
 .page-header {
   font-size: 64px;
-  margin-top: 0;
   text-align: center;
   font-weight: 400;
 }
@@ -107,4 +106,26 @@ p {
   display: block;
   bottom: 10px;
   left: 20px;
+  font-size: 14px;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .main {
+    margin-top: 5vh;
+  }
+  .page-header {
+    font-size: 40px;
+  }
+}
+
+p {
+  font-size: 16px;
+}
+
+.last-message {
+  margin-top: 40px;
+  font-size: 40px;
+  color: #de8971;
+  text-align: center;
 }
