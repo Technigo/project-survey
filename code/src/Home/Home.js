@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Home.css'
 
 export const Home = ({ setShowHome, setCurrent, questionsRecord, setQuestionsRecord }) => {
@@ -17,7 +17,7 @@ export const Home = ({ setShowHome, setCurrent, questionsRecord, setQuestionsRec
                 <h2>Let's go!</h2>
             </div>
             <div className="home_image_container">
-                <img className="home_image" src="./images/home-image.jpeg" alt="star wars image" />
+                <img className="home_image" src="./images/home-image.jpeg" alt="star-wars" />
             </div>
             <button className="home_button" onClick={handleChangeScreen}>Start</button>
         </div>

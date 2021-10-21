@@ -47,7 +47,7 @@ const Answer2 = ({ answer, setResult, result }) => {
                             return (
                                 <>
                                     <div key={option.character} className="dropdown_image_uni_container" >
-                                        <img className="dropdown_image_dark dropdown_image" src={option.image} onClick={() => selectCharacter(option.character)} />
+                                        <img className="dropdown_image_dark dropdown_image" src={option.image} alt={option.character} onClick={() => selectCharacter(option.character)} />
                                         <p>{option.character}</p>
                                     </div>
 
@@ -57,7 +57,7 @@ const Answer2 = ({ answer, setResult, result }) => {
                         {result.answer1 === "ligth" && answer.options.ligth.map(option => {
                             return (
                                 <div key={option.character} className="dropdown_image_uni_container" >
-                                    <img className="dropdown_image_ligth dropdown_image" src={option.image} onClick={() => selectCharacter(option.character)} />
+                                    <img className="dropdown_image_ligth dropdown_image" src={option.image} alt={option.character} onClick={() => selectCharacter(option.character)} />
                                     <p>{option.character}</p>
                                 </div>
                             )
