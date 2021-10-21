@@ -213,6 +213,7 @@ display: block;
     border-radius: 10px;
     cursor: pointer;
     background-color: #f6acb0;
+    color: black;
 }
 
 .submit-button:hover {
@@ -231,6 +232,7 @@ display: block;
     border-radius: 10px;
     cursor: pointer;
     background-color: #f6acb0;
+    color: black;
 }
 
 .reset-button:hover {
