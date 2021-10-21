@@ -72,6 +72,7 @@ const AllQuestions = () => {
               question={questions[questionNumber]}
               answer={answers[questionNumber] || ""}
               setAnswer={onAnswerChange}
+              valid={valid}
             />
             <button className="back-btn" type="button" onClick={handleGoingBack} disabled={firstQuestion}>
               Go back

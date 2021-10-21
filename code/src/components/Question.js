@@ -5,7 +5,7 @@ import SelectInput from "./SelectInput";
 import TextInput from "./TextInput";
 
 const Question = (props) => {
-  const { question, answer, setAnswer } = props;
+  const { question, answer, setAnswer, valid } = props;
 
   return (
     <>
@@ -17,6 +17,7 @@ const Question = (props) => {
           label={question.text}
           value={answer}
           onValueChange={setAnswer}
+          valid={valid}
         />
       )}
       {question.inputType === "radio" && (

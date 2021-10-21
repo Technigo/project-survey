@@ -1,6 +1,6 @@
 import React from "react";
 
-const TextInput = ({ label, value, onValueChange }) => {
+const TextInput = ({ label, value, onValueChange, valid }) => {
   const onTextInputChange = (event) => {
     onValueChange(event.target.value);
   };
@@ -9,7 +9,8 @@ const TextInput = ({ label, value, onValueChange }) => {
     <>
       <label htmlFor={label}></label>
       <input
-      className="text-input"
+        className={`text-input valid-${valid}`}
+        placeholder="Type here..."
         type="text"
         id={label}
         onChange={onTextInputChange}
