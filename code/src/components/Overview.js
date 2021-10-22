@@ -88,11 +88,11 @@ const Overview = ({
             {(() => {
               switch (true) {
                 case WHR.toFixed(2) < 0.9:
-                  return 'Low Risk';
+                  return 'Low Risk for Cardiovascular diseases';
                 case WHR.toFixed(2) <= 0.95 && WHR.toFixed(2) >= 0.9:
-                  return 'Moderate Risk';
+                  return 'Moderate Risk for Cardiovascular diseases';
                 case WHR.toFixed(2) > 0.95:
-                  return 'High Risk';
+                  return 'High Risk for Cardiovascular diseases';
                 default:
                   return 'no data found';
               }
@@ -126,7 +126,7 @@ const Overview = ({
               switch (true) {
                 case sliderAInput === 0:
                   return 'Non-Smoker';
-                case sliderAInput <= 30 && sliderAInput >= 0:
+                case sliderAInput <= 30 && sliderAInput > 0:
                   return 'Low Intensity Smoker';
                 case sliderAInput <= 75 && sliderAInput >= 30:
                   return 'Moderate Intensity Smoker';

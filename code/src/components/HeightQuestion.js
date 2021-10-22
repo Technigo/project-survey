@@ -18,7 +18,6 @@ const HeightQuestion = ({
         <input
           id='heightInput'
           type='number'
-          pattern='([1-2].[1-9]{2})'
           value={heightInput}
           onChange={onHeightInputChange}
           onKeyPress={onEnter}
