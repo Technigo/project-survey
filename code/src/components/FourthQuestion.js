@@ -13,19 +13,20 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange, onPreviousQu
 				</label>
                 <div className="radio-buttons-container">
                     {ages.map(age => (
-                        <div className="radio-button">
+                        <div key={age} className="radio-button">
                         <label 
                             htmlFor={ages}
                             aria-label={age}
                             key={age}>
                         <input 
+                            key={age}
                             className="radio-input"
                             type="checkbox"
                             value={age} 
                             onChange={(event) => onAgeInputChange(event.target.value)}
                             checked={ageInput === age}
                             />
-                          <span class="checkmark"></span>
+                          <span className="checkmark"></span>
                         {age}
                         </label>
 
@@ -34,7 +35,7 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange, onPreviousQu
                     ))}
                 </div>
 				<div className="button-container">
-					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
+					<button type="button" onClick={onPreviousQuestionChange}>&larr; Back</button>
 					<button type="button" onClick={onStepChange}>Next &rarr;</button>				
 				</div>
 			</form>

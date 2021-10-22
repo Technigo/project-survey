@@ -20,8 +20,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 					onChange={onNameInputChange}
 					
 				/>
-				<button 
-				onClick={onStepChange}>Next
+				<button type="button" onClick={onStepChange}>Next
 				</button>
 			</form>
 

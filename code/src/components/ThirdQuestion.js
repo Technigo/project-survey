@@ -27,8 +27,8 @@ const ThirdQuestion = ({ countryInput, onCountryInputChange, onStepChange, onPre
 						<option value="Polen">UK</option>
         		</select>
 				<div className="button-container">
-					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
-					<button onClick={onStepChange}>Next &rarr;</button>			
+					<button type="button" onClick={onPreviousQuestionChange}>&larr; Back</button>
+					<button type="button" onClick={onStepChange}>Next &rarr;</button>			
 				</div>
 			</form>
 

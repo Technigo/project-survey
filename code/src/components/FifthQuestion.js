@@ -20,6 +20,7 @@ const FifthQuestion = ({moodInput, onMoodInputChange, onStepChange, onPreviousQu
 					max="10" 
 					value={moodInput} 
 					onInput={onMoodInputChange}
+					onChange={onMoodInputChange}
 					className="slider"
 					/>
 				</div>
@@ -28,7 +29,7 @@ const FifthQuestion = ({moodInput, onMoodInputChange, onStepChange, onPreviousQu
 
 				<div className="button-container">
 					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
-					<button type="button" onClick={onStepChange}>Next &rarr;</button>				
+					<button type="submit" onClick={onStepChange}>Submit &rarr;</button>				
 				</div>
 			</form>
 
