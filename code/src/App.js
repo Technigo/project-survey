@@ -10,7 +10,7 @@ export const App = () => {
   const [state, setState] = useState(initialState)
   const [step, setStep] = useState(1)
   const [steps, setSteps] = useState([1])
-  const [color, setColor] = useState()
+  const [color, setColor] = useState('white')
 
   const handleChange = (e, nextQuestion, title, number, label, questionId, validated) => {
     const { id, value } = e.target

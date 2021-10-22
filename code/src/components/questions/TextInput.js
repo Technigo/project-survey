@@ -4,6 +4,10 @@ import { Button } from 'components/Button'
 import { Heading } from 'components/Heading'
 
 export const TextInput = ({ state, handleChange, data, step, incrementStep, decrementStep }) => {
+  console.log('[data is required]:', !data.required)
+  console.log('[step end]:', step === 'end')
+  console.log('[!state[data.id]]:', state[data.id] ? true : false)
+
   const siblingValid = option => {
     if (data.options.length > 1) {
       return data.options
@@ -14,7 +18,8 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
   }
 
   const checkValid = (e, option) => {
-    if (data.required && e.target.value && siblingValid(option)) {
+    console.log('[sibling is valid]:', siblingValid(option))
+    if (e.target.value && siblingValid(option)) {
       return true
     } else {
       return false
@@ -22,7 +27,8 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
   }
 
   const onChangeHandler = (e, option) => {
-    let validated = checkValid(e, option)
+    let validated = data.required ? checkValid(e, option) : true
+    console.log('[is validated]:', validated)
     handleChange(e, 0, data.title, data.number, option.label, data.id, validated)
   }
   return (
@@ -48,7 +54,7 @@ export const TextInput = ({ state, handleChange, data, step, incrementStep, decr
       <div className='button-container'>
         <Button disabled={step === 1} text={''} type={'up'} onClick={decrementStep} />
         <Button
-          disabled={step === 'end' || !state[data.id]}
+          disabled={step === 'end' || (!state[data.id] && data.required)}
           text={''}
           type={'down'}
           onClick={incrementStep}

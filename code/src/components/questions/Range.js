@@ -41,7 +41,7 @@ export const Range = ({ state, handleChange, data, step, incrementStep, decremen
       <div className='button-container'>
         <Button disabled={step === 1} text={''} type={'up'} onClick={decrementStep} />
         <Button
-          disabled={step === 'end' || !state[data.id]}
+          disabled={step === 'end' || (!state[data.id] && data.required)}
           text={''}
           type={'down'}
           onClick={incrementStep}

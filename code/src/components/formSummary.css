@@ -1,6 +1,12 @@
 .form-summary {
   padding: 20px;
   overflow: scroll;
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.form-summary::-webkit-scrollbar {
+  display: none;
 }
 
 .form-summary h4 {

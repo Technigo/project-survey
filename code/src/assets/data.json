@@ -3,7 +3,7 @@
     {
       "title": "Start the survey?",
       "number": 1,
-      "required": "true",
+      "required": true,
       "type": "radio",
       "options": [
         { "label": "Yes", "value": "Yes", "id": "radioYes" },
@@ -14,7 +14,7 @@
     {
       "title": "Your name?",
       "number": 2,
-      "required": "",
+      "required": false,
       "type": "text",
       "options": [
         { "label": "First name", "id": "firstName", "placeholder": "Type your first name" },
@@ -25,7 +25,7 @@
     {
       "title": "Are you excited?",
       "number": 3,
-      "required": "",
+      "required": false,
       "type": "radio",
       "options": [
         { "label": "Yes", "value": "Yes", "id": "radioYes" },
@@ -36,7 +36,7 @@
     {
       "title": "How excited are you to do this survey?",
       "number": 4,
-      "required": "",
+      "required": true,
       "type": "range",
       "options": [{ "label": "Select an option", "min": "1", "max": "100", "value": "50" }],
       "id": 4
@@ -44,7 +44,7 @@
     {
       "title": "Ok, lets do this?",
       "number": 5,
-      "required": "",
+      "required": false,
       "type": "radio",
       "options": [
         { "label": "Yes", "value": "Yes", "id": "radioYes" },
@@ -56,7 +56,7 @@
     {
       "title": "Which color do you prefer?",
       "number": 6,
-      "required": "",
+      "required": false,
       "type": "dropdown",
       "label": "Select color",
       "options": [
@@ -70,7 +70,7 @@
     {
       "title": "Your dream job:",
       "number": 7,
-      "required": "",
+      "required": false,
       "type": "text",
       "options": [{ "label": "Dream job", "id": "dreamJob", "placeholder": "Type your dream job" }],
       "id": 7
@@ -78,7 +78,7 @@
     {
       "title": "Which color would be best for this survey?",
       "number": 8,
-      "required": "",
+      "required": false,
       "type": "dropdown",
       "label": "Select color",
       "options": [
@@ -92,7 +92,7 @@
     {
       "title": "How good is this survey, so far?",
       "number": 9,
-      "required": "true",
+      "required": true,
       "type": "range",
       "options": [{ "label": "Select an option", "min": "1", "max": "100", "value": "50" }],
       "id": 9
@@ -100,7 +100,7 @@
     {
       "title": "Finish the survey?",
       "number": 10,
-      "required": "true",
+      "required": true,
       "type": "radio",
       "options": [{ "label": "Yes", "value": "Yes", "id": "radioYes", "next_question": "end" }],
       "id": 10
