@@ -9,6 +9,7 @@ header {
   position: sticky;
   top: 0;
   background-color: white;
+  margin-bottom: 30px;
 }
 img {
   width: 70px;

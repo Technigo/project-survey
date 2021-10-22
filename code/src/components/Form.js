@@ -4,8 +4,7 @@ import { SecondQuestion } from "./SecondQuestion";
 import { ThirdQuestion } from "./ThirdQuestion";
 import { FourthQuestion } from "./FourthQuestion";
 import Overview from "./Overview";
-import FifthQuestionYes from "./FifthQuestionYes";
-import FifthQuestionNo from "./FifthQuestionNo";
+import FifthQuestion from "./FifthQuestion";
 import WelcomePage from "./WelcomePage";
 
 export const Form = () => {
@@ -73,25 +72,27 @@ export const Form = () => {
         onStepChange={onStepChange}
       />
     );
-  } else if (step === 6 && satisfactionInput === "Ja") {
+  } else if (step === 6) {
     return (
-      <FifthQuestionYes
+      <FifthQuestion
         nameInput={nameInput}
         satisfactionTextInput={satisfactionTextInput}
         onSatisfactionTextInputChange={onSatisfactionTextInputChange}
         onStepChange={onStepChange}
-      />
-    );
-  } else if (step === 6 && satisfactionInput === "Nej") {
-    return (
-      <FifthQuestionNo
-        nameInput={nameInput}
-        satisfactionTextInput={satisfactionTextInput}
-        onSatisfactionTextInputChange={onSatisfactionTextInputChange}
-        onStepChange={onStepChange}
+        satisfactionInput={satisfactionInput}
       />
     );
   } else if (step === 7) {
+    return (
+      <Overview
+        nameInput={nameInput}
+        adressInput={adressInput}
+        houseTypeInput={houseTypeInput}
+        satisfactionInput={satisfactionInput}
+        satisfactionTextInput={satisfactionTextInput}
+      />
+    );
+  } else {
     return (
       <Overview
         nameInput={nameInput}

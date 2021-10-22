@@ -14,6 +14,9 @@ p {
 label {
   color: #494c50;
 }
+.welcome-container {
+  width: 100%;
+}
 
 button {
   background-color: #1ea742;
@@ -32,12 +35,19 @@ button:hover {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  margin: 30px;
+  margin: 0px 30px;
+}
+
+.content-container-welcome {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .options-spacing {
   display: flex;
   justify-content: space-evenly;
+  margin: 20px 0px;
 }
 
 /* Customize the label (the container) */
@@ -136,10 +146,13 @@ textarea {
   border-radius: 4px;
   background-color: #f8f8f8;
   resize: none;
+  font-size: 20px;
+  font-family: inherit;
+  color: #494c50;
 }
 textarea:focus {
   border: 2px solid #ea5929;
-  box-shadow: 3px 3px 10px #ea5929;
+  box-shadow: 2px 2px 5px #ea5929;
 }
 
 .input-field {
@@ -153,4 +166,51 @@ textarea:focus {
 
 .input-field:focus {
   box-shadow: 3px 3px 20px #d8d8d9;
+}
+
+.overview-wrapper {
+  background-color: #edeeee;
+  border-radius: 4px;
+  padding: 20px;
+  max-width: 500px;
+  align-self: center;
+  box-shadow: 3px 3px 7px #a7a7a7;
+}
+.overview-wrapper h2 {
+  color: #1ea742;
+  margin: 0px;
+  text-align: center;
+  text-decoration: underline #1ea742;
+}
+
+/*MOBILE*/
+@media (max-width: 767px) {
+  .side-picture {
+    display: none;
+  }
+}
+
+/*TABLET*/
+@media (min-width: 768px) and (max-width: 991px) {
+  .side-picture {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) {
+  .page-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 30px;
+    align-items: flex-start;
+  }
+  .content-container {
+    width: 45%;
+  }
+  .side-picture {
+    width: 45%;
+    height: 400px;
+    object-fit: cover;
+  }
 }
