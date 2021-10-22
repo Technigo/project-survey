@@ -1,22 +1,41 @@
 import React from 'react';
 
-const SecondQuestion = ({ bandChoice, onBandChoiceChange, onStepChange, arenaChoice, tickets }) => {
+const venues = [
+  'Smaller inside venue',
+  'Larger inside venue',
+  'Smaller outside venue',
+  'Larger outside venue',
+];
+
+const SecondQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountChoiceSet }) => {
   return (
-    <form>
-      <label htmlFor="band-select"><h1>These bands are available in your chosen venue: {arenaChoice}</h1></label>
-      <select id="band-select" className="band-choice" value={bandChoice} onChange={onBandChoiceChange}>
-        <option value="">Select a band</option>
-        <option value="Rammstein">Rammstein</option>
-        <option value="Håkan Hellström">Håkan Hellström</option>
-        <option value="Coldplay">Coldplay</option>
-        <option value="Depeche Mode">Depeche Mode</option>
-      </select>
-      
-      <h2>This is what you picked this far:</h2>
-      <p>Venue choice: {arenaChoice}</p>
-      <p>You chose to get: {tickets} tickets</p>
-      
-      <button className="button" onClick={onStepChange}>Next Question</button>
+    <form className="arena-choice">
+      <h1>What kind of venue would you like to be in?</h1>
+      {venues.map(
+        (
+          venue //iterating through each venue available
+        ) => (
+          <label key={venue}>
+            <input
+              value={venue}
+              onChange={onArenaChoiceSet}
+              checked={arenaChoice === venue}
+              type="radio"
+              id={venue}
+            />
+            {venue}
+          </label>
+        )
+      )}
+      <h2>How many tickets would you like?</h2>
+      <label htmlFor="amount">
+        Pick amount:
+        <input onChange={onAmountChoiceSet} type="number" id="amount" name="amount-of-tickets" min="1" max="10" />
+      </label>
+
+      <button className="button" onClick={onStepChange}>
+        Next question
+      </button>
     </form>
   );
 };

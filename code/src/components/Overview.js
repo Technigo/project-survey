@@ -1,9 +1,10 @@
 import React from 'react';
 
-const Overview = ({bandChoice, seatChoice, arenaChoice, tickets}) => {
+const Overview = ({genreChoice, bandChoice, seatChoice, arenaChoice, tickets}) => {
   return (
     <form>
-      <h1>Congratulations! These were your choices!</h1>
+      <h1>Congratulations!</h1>
+      <h2>Apparently you're into {genreChoice} so these were your choices!</h2> 
       <p>You chose this venue: {arenaChoice}</p>
       <p>You chose this many tickets: {tickets}</p>
       <p>You chose this band: {bandChoice}</p>
