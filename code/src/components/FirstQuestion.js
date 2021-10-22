@@ -2,11 +2,11 @@ import React from "react";
 
 export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion, step }) => {
 	return (
-		<div>
+		<main className="main-container">
 			<form className="form-container">
 				<div className="question-container">
 					<p className="question-number">Question {step}</p>
-					<label className="question-label" htmlFor="nameInput">
+					<label className="question-heading" htmlFor="nameInput">
 						What is your name?
 					</label>
 					{/* prettier-ignore */}
@@ -17,13 +17,13 @@ export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion, step
          onChange={onNameInputChange}
         />
 				</div>
-				{nameInput !== "" && (
-					<button aria-label="Next question" onClick={nextQuestion}>
-						<span aria-hidden="true">Next</span>
-					</button>
-				)}
 			</form>
-		</div>
+			{nameInput !== "" && (
+				<button aria-label="Next question" onClick={nextQuestion}>
+					<span aria-hidden="true">Next</span>
+				</button>
+			)}
+		</main>
 	);
 };
 

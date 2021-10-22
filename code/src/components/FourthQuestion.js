@@ -4,13 +4,13 @@ const genresGroup = ["Drama", "Romance", "International", "Adventure", "Feelgood
 
 export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
-		<div>
+		<main className="main-container">
 			<button aria-label="Previous question" onClick={previousQuestion}>
 				<span class="fas fa-arrow-left"></span>
 			</button>
 			<form className="form-container" onSubmit={nextQuestion}>
 				<p className="question-number">Question {step}</p>
-				<h2 className="question-label">What genres of TV shows do you prefer?</h2>
+				<h2 className="question-heading">What genres of TV shows do you prefer?</h2>
 				{genresGroup.map((genres) => (
 					<div className="question-container">
 						<label key={genres} htmlFor={genres}>
@@ -32,6 +32,6 @@ export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion,
 					</button>
 				)}
 			</form>
-		</div>
+		</main>
 	);
 };
