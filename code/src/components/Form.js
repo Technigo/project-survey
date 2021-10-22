@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import Name from "./Name";
-import CatType from "./CatType";
-import Questions3 from "components/Questions3";
-import Newsletter from "./Newsletter";
+import Food from "./Food";
+import Preferences from "components/Preferences";
+import Email from "./Email";
 import Answers from "components/Answers";
 
 const Form = () => {
@@ -34,7 +34,7 @@ const Form = () => {
         />
       )}
       {step === 2 && (
-        <CatType
+        <Food
           food={food}
           onFoodChange={onFoodChange}
           onStepChange={onStepChange}
@@ -42,7 +42,7 @@ const Form = () => {
       )}
       {step === 3 && (
         <>
-          <Questions3
+          <Preferences
             game={game}
             onGameChange={onGameChange}
             snack={snack}
@@ -57,13 +57,11 @@ const Form = () => {
       )}
 
       {step === 4 && (
-        <div className="fourthQuestion">
-          <Newsletter
-            email={email}
-            onEmailChange={onEmailChange}
-            onStepChange={onStepChange}
-          />
-        </div>
+        <Email
+          email={email}
+          onEmailChange={onEmailChange}
+          onStepChange={onStepChange}
+        />
       )}
       {step === 5 && (
         <Answers

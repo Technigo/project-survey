@@ -1,12 +1,18 @@
 //Question 3
 import React from "react";
 
-const games = ["tipspromenad", "kubb"];
-const snacks = ["Popcorn", "Chips", "icecream", "cockies"];
-const licorice = ["salty licorice", "sweet licorice", "I don't like licorice"];
-const drinks = ["soda", "bear", "wine"];
+const games = ["Tipspromenad", "Kubb", "I don't like games"];
+const snacks = [
+  "Popcorn",
+  "Chips",
+  "Icecream",
+  "Cockies",
+  "I dont like snacks",
+];
+const licorice = ["Salty licorice", "Sweet licorice", "I don't like licorice"];
+const drinks = ["Soda", "Bear", "Wine", "I can't decide..."];
 
-const Questions3 = ({
+const Preferences = ({
   game,
   onGameChange,
   onStepChange,
@@ -21,9 +27,9 @@ const Questions3 = ({
     <div className="container">
       <div className="thirdQuestion">
         <h1>What do you like better?</h1>
-        <p>Pick the one alternative you like the most!</p>
+        <h2>Pick the one alternative you like the most!</h2>
 
-        <form>
+        <form className="radio-buttons">
           <h3>What would you like to drink at the party?</h3>
           {drinks.map((currentDrink) => (
             <label key={currentDrink}>
@@ -38,7 +44,7 @@ const Questions3 = ({
           ))}
         </form>
 
-        <form>
+        <form className="radio-buttons">
           <h3>what kind of game do you like?</h3>
           {games.map((currentGame) => (
             <label key={currentGame}>
@@ -52,7 +58,7 @@ const Questions3 = ({
             </label>
           ))}
         </form>
-        <form>
+        <form className="radio-buttons">
           <h3>What kind of snack do you like?</h3>
           {snacks.map((currentSnacks) => (
             <label key={currentSnacks}>
@@ -67,7 +73,7 @@ const Questions3 = ({
           ))}
         </form>
 
-        <form>
+        <form className="radio-buttons">
           <h3>
             I love licorice, so there will be some different kinds at the party,
             witch kind do you like?
@@ -91,4 +97,4 @@ const Questions3 = ({
   );
 };
 
-export default Questions3;
+export default Preferences;

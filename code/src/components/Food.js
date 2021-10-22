@@ -2,14 +2,12 @@
 
 import React from "react";
 
-const CatType = ({ food, onFoodChange, onStepChange }) => {
+const Food = ({ food, onFoodChange, onStepChange }) => {
   return (
     <div className="container">
       <div className="secondQuestion">
         <form>
-          <h1 className="secondH1">
-            Do you have any special dietary preferences? 🍣
-          </h1>
+          <h1>Do you have any special dietary preferences? 🍣</h1>
           <p>
             I would like to know if you have any restrictions regarding food, so
             i can make something really delicious!
@@ -34,4 +32,4 @@ const CatType = ({ food, onFoodChange, onStepChange }) => {
     </div>
   );
 };
-export default CatType;
+export default Food;

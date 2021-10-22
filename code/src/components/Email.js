@@ -2,10 +2,10 @@
 import React from "react";
 import { useState } from "react";
 
-const Newsletter = ({ email, onEmailChange, onStepChange }) => {
+const Email = ({ email, onEmailChange, onStepChange }) => {
   const [wantsNewsletter, setWantsNewsletter] = useState(false);
   return (
-    <div className="container">
+    <div className="container fourth-question">
       <form>
         <label>
           <h1>Do you want a e-mail to confirm your answers?</h1>
@@ -21,4 +21,4 @@ const Newsletter = ({ email, onEmailChange, onStepChange }) => {
   );
 };
 
-export default Newsletter;
+export default Email;

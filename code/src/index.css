@@ -25,9 +25,23 @@ code {
 .name h1 {
   text-align: center;
 }
+.secondQuestion h1 {
+  text-align: center;
+}
+.name h2 {
+  padding: 10px 30px;
+}
 
-h1, h2, h3 {
+h1, h3{
   color: var(--secondary);
+  font-family: var(--font);
+  font-weight: 700;
+  margin-top: 0px;
+  text-align: left;
+}
+
+h2 {
+  color: black;
   font-family: var(--font);
   font-weight: 700;
   margin-top: 0px;
@@ -115,13 +129,25 @@ header {
 }
 
 .thirdQuestion {
+  padding: 30px 0px;
+  cursor: pointer;
+}
+
+.radio-buttons {
+  display: grid;
+  margin: 50px 0px;
+}
+
+
+
+.fourth-question {
   border: 2px solid black;
-  padding: 100px 0px;
+ 
+  align-content: stretch;
+  margin: 30px;
+
 }
-/*
-.fourthQuestion {
-  background-color: var(--main);
+
+.fifthQuestion p{
+  margin: 0px;
 }
-.fifthQuestion {
-  background-color: var(--main);
-} */
