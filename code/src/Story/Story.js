@@ -14,19 +14,19 @@ const Story = ({ result }) => {
                             <h1>A New New New Hope!</h1>
                         </div>
                         <p>It is a period of civil war.</p>
-                        <p>In some planets around the galaxy some
-                            army forces from ligth and dark side are wrestling
+                        <p>In some planets around the galaxy
+                            army forces from the ligth and the dark side are battling
                             for the control of the galaxy.</p>
                         <p>Finally <span className="result_info">{result.answer2}</span> the
-                            leader from <span className="result_info">{result.answer1}</span> side
-                            of the force is gettin advantage in all the battles
-                            and getting the control of the galaxy.</p>
-                        <p>Meanwhile in the beatiful planet <span className="result_info">{result.answer3}</span> the new leader of
-                            the rebel forces <span className="result_info">{result.answer6}</span> is
-                            planning an attack to enemy bases. Now
-                            the arm of alliases have incremented in <span className="result_info">{result.answer5}</span> soldiers.</p>
-                        <p>The <span className="result_info">{result.answer4}</span> ligth of
-                            the new leader sable will guide this new rebels to the victory to
+                            leader from the <span className="result_info">{result.answer1}</span> side
+                            of the force is getting advantage in all the battles
+                            and gaining the control of the galaxy.</p>
+                        <p>Meanwhile in the beatiful planet <span className="result_info">{result.answer3}</span> the new
+                            captain <span className="result_info">{result.answer6}</span> is
+                            planning an attack to the enemy bases now that
+                            the <span className="result_info">{result.answer6}</span>'s allies have incremented in <span className="result_info">{result.answer5}</span> soldiers.</p>
+                        <p>From now on, the <span className="result_info">{result.answer4}</span> ligth of
+                            the new captain's saber will guide this new forces to the victory and finally
                             restore the balance in the galaxy.</p>
                     </h3>
                 </div>

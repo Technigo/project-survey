@@ -16,6 +16,7 @@ const Answer4 = ({ answer, setResult, result }) => {
                     onChange={handleOnChange}
                     value={result.answer4}
                 >
+                    <option value=""></option>
                     {result.answer1 === "dark" && answer.options.dark.map(option => {
                         return (
                             <option value={option} key={option}>
