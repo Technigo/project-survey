@@ -41,6 +41,10 @@ const Form = () => {
     setStep(step + 1)
   }
 
+  const onEndSurvey = () => {
+    window.location.reload()
+  }
+
   const onEnter = (event) => {
     if (event.key === 'Enter' && event.target.value !== '') {
       event.preventDefault()
@@ -88,6 +92,7 @@ const Form = () => {
           travelInput={travelInput}
           eventsInput={eventsInput}
           onEnter={onEnter}
+          onEndSurvey={onEndSurvey}
           // onClick={sendEmail}
         />
       )}
