@@ -17,6 +17,9 @@
 .progress-bar {
   font-size: 12px;
   margin-top: 36px;
+  color: var(--highlight);
+  font-weight: lighter;
+  font-family: Helvetica, sans-serif;
 }
 
 .current-step {
@@ -28,7 +31,7 @@
 
 @media (min-width: 768px) {
   .progress-bar {
-    font-size: 18px;
+    font-size: 16px;
     margin-top: 0;
   }
   .btn {

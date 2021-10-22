@@ -1,0 +1,36 @@
+.question-ten-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-ten-heading {
+  font-size: 16px;
+  justify-self: center;
+  text-align: center;
+  line-height: 24px;
+  margin-top: 0;
+}
+
+.label-size {
+  font-size: 12px;
+}
+
+@media (min-width: 768px) {
+  .question-ten-wrapper {
+    margin-bottom: 20px;
+  }
+  .question-ten-heading {
+    font-size: 28px;
+    line-height: 36px;
+    margin-bottom: 10px;
+  }
+  .label-size {
+    font-size: 16px;
+  }
+  .input-wrapper {
+    margin-top: 40px;
+  }
+  .finish {
+    margin-top: 10px;
+  }
+}

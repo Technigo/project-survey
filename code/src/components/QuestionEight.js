@@ -2,7 +2,7 @@ import React from "react";
 
 export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFeaturesOthersChange }) => {
   return (
-    <form>
+    <form className="select-container">
       <div>
         <h1 className="questions-main-heading">What is your favorite feature about our product?</h1>
       </div>
@@ -67,7 +67,13 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
       </div>
       {features.other && (
         <div className="other-input">
-          <input type="text" value={featuresOthers} onChange={(event) => onFeaturesOthersChange(event.target.value)} placeholder="Your custom option" />
+          <input
+            className="custom-input"
+            type="text"
+            value={featuresOthers}
+            onChange={(event) => onFeaturesOthersChange(event.target.value)}
+            placeholder="Your custom option"
+          />
         </div>
       )}
     </form>

@@ -14,7 +14,7 @@
 }
 
 .range {
-  width: 220px;
+  width: 270px;
   height: 15px;
   -webkit-appearance: none;
   background: rgb(48, 47, 47);
@@ -41,7 +41,7 @@
     font-size: 22px;
   }
   .range {
-    width: 400px;
+    width: 500px;
     height: 22px;
   }
   .range::-webkit-slider-thumb {

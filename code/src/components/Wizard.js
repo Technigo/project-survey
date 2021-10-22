@@ -92,12 +92,12 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
   return (
     <div className="container">
       <div className="card">
-        <div className="progress-bar">Progress bar: {answered} out of 11</div>
+        <div className="progress-bar">{answered} / 11</div>
         <div className="current-step">
           <SwitchFunction rootState={rootState} setValueInRootState={setValueInRootState} currentStep={currentStep} />
         </div>
         <div>
-          <button className="btn interaction " onClick={toNextStep}>
+          <button className="btn interaction finish " onClick={toNextStep}>
             {currentStep === "questionTen" ? "Finish" : "Continue"}
           </button>
         </div>

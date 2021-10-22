@@ -1,16 +1,24 @@
 import React, { useEffect } from "react";
+import useWindowSize from "react-use/lib/useWindowSize";
 
 export const QuestionSeven = ({ friendliness, onFriendlinessChange }) => {
   const handleRangeChange = (changeEvent) => {
     onFriendlinessChange(changeEvent.target.value);
   };
 
+  const { width } = useWindowSize();
+
   useEffect(() => {
     const slider = document.querySelector(".bubble");
     if (slider) {
-      slider.style.left = `${Number(friendliness * 20)}px`;
+      if (width <= 767) {
+        slider.style.left = `${Number(friendliness * 27 - 15)}px`;
+      } else {
+        slider.style.left = `${Number(friendliness * 52 - 38)}px`;
+      }
     }
   });
+
   return (
     <form>
       <div>

@@ -2,9 +2,9 @@ import React from "react";
 
 export const QuestionSix = ({ deliveryTime, onDeliveryTimeChange }) => {
   return (
-    <form>
+    <form className="select-container">
       <h1 className="questions-main-heading">Delivery Time</h1>
-      <select value={deliveryTime} onChange={(e) => onDeliveryTimeChange(e.target.value)}>
+      <select className="dropdown gentle-interaction" value={deliveryTime} onChange={(e) => onDeliveryTimeChange(e.target.value)}>
         <option defaultValue={"Prefer not to answer"}>Select most suitable option</option>
         <option value={"Super fast"}>Super fast</option>
         <option value={"Overall decent"}>Overall decent</option>

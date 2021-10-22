@@ -6,9 +6,9 @@ export const QuestionFour = ({ quality, onQualityChange }) => {
   };
 
   return (
-    <form>
+    <form className="select-container">
       <h1 className="questions-main-heading">Quality</h1>
-      <select name="quality" id="quality" value={quality} onChange={handleSelectChange}>
+      <select className="dropdown gentle-interaction" name="quality" id="quality" value={quality} onChange={handleSelectChange}>
         <option defaultValue={"Prefer not to answer"}>Select most suitable answer</option>
         <option value={"Awesome"}>Awesome</option>
         <option value={"Overall decent"}>Overall decent</option>

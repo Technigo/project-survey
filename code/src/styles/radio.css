@@ -1,0 +1,87 @@
+.buttons-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio-input {
+  color: var(--fg);
+  font: 1em/1.5 Helvetica, sans-serif;
+}
+
+.radio-container,
+.label {
+  width: 270px;
+}
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  display: block;
+  text-align: center;
+  -webkit-tap-highlight-color: transparent;
+}
+.label:first-child input {
+  border-radius: 0.5em 0 0 0.5em;
+  box-shadow: 0.1em 0 0 #2726267f inset, -0.1em 0 0 #27262600 inset, 0 0.1em 0 #afa490 inset, 0 -0.1em 0 #ffffff3f, 0 0.2em 0.5em #0000007f,
+    0 -0.1em 0 #926086 inset, -0.1em -0.2em 0 #ffffff7f inset, 0.2em 0 0 #ffffff7f inset;
+}
+.label:last-child input {
+  border-radius: 0 0.5em 0.5em 0;
+  box-shadow: 0 -0.1em 0 #926086 inset, 0.1em 0 0 #2726267f inset, -0.1em 0 0 #2726267f inset, 0 0.1em 0 #afa490 inset, -0.1em 0 0 #afa490 inset,
+    0 -0.1em 0 #ffffff3f, 0 0.2em 0.5em #0000007f, -0.1em -0.1em 0 0.1em #ffffff7f inset;
+}
+.label:first-child input:checked {
+  box-shadow: 0.1em 0 0 #ccff02 inset, -0.1em 0 0 #272626 inset, 0 0.1em 0 #847a62 inset, 0 -0.1em 0 #ffffff3f, 0 0.1em 0 #ffffff7f, 0 -0.1em 0 #ccff02 inset,
+    -0.1em -0.2em 0 #ffffff7f inset, 0.2em 0 0 #ffffff7f inset;
+}
+.label:last-child input:checked {
+  box-shadow: 0.1em 0 0 #ccff02 inset, -0.1em 0 0 #272626 inset, 0 -0.1em 0 #ccff02 inset, 0 0.1em 0 #847a62 inset, -0.1em 0 0 #847a62 inset,
+    0 -0.1em 0 #ffffff3f, 0 0.1em 0 #ffffff7f, -0.1em -0.1em 0 0.1em #ffffff7f inset;
+}
+.radio-input {
+  background-image: linear-gradient(#ffffff 33%, #414751 58%, #837b52, #c5baa1, #c3adaa);
+  border-radius: 0;
+  box-shadow: 0.1em 0 0 #2726267f inset, -0.1em 0 0 #27262600 inset, 0 0.1em 0 #afa490 inset, 0 -0.1em 0 #ffffff3f, 0 0.2em 0.5em #0000007f,
+    0 -0.1em 0 #926086 inset, -0.1em -0.2em 0 #ffffff7f inset;
+  cursor: pointer;
+  display: block;
+  margin-bottom: 0.5em;
+  width: 100%;
+  height: 1em;
+  transition: box-shadow var(--transDur) ease-in-out;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.radio-input:checked {
+  background-image: linear-gradient(#ffffff 33%, #414751 58%, #827a7b, #c0b6ac, #c3adaa);
+  box-shadow: 0.1em 0 0 #ccff02 inset, -0.1em 0 0 #272626 inset, 0 0.1em 0 #847a62 inset, 0 -0.1em 0 #ffffff3f, 0 0.1em 0 #ffffff7f, 0 -0.1em 0 #ccff02 inset,
+    -0.1em -0.2em 0 #ffffff7f inset;
+}
+.radio-input:checked + span {
+  opacity: 1;
+}
+.radio-input:focus {
+  outline: transparent;
+}
+.radio-input + span {
+  opacity: 0.65;
+  transition: opacity var(--transDur) ease-in-out;
+}
+
+.extra-space {
+  width: 310px;
+}
+
+@media (min-width: 768px) {
+  .radio-container,
+  .label {
+    width: 500px;
+  }
+  .extra-space {
+    width: 600px;
+  }
+}

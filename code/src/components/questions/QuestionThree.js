@@ -12,9 +12,9 @@ export const QuestionThree = ({ variety, onVarietyChange }) => {
     const slider = document.querySelector(".bubble");
     if (slider) {
       if (width <= 767) {
-        slider.style.left = `${Number(variety * 20 - 3)}px`;
+        slider.style.left = `${Number(variety * 27 - 15)}px`;
       } else {
-        slider.style.left = `${Number(variety * 42 - 29)}px`;
+        slider.style.left = `${Number(variety * 52 - 38)}px`;
       }
     }
   });
