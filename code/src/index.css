@@ -5,6 +5,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: black;
   background-color: black;
+  /* background-color: darkslateblue; */
   background-image: url(./components/assets/space-stars-img.jpeg);
   background-repeat: no-repeat, repeat;
   background-position: center;
