@@ -1,10 +1,11 @@
 import React from 'react';
 import Range from './Range';
+import './thirdquestion.css';
 
 const ThirdQuestionEase = ({ rangeValue, onRangeChange }) => {
   return (
-    <div>
-      <p>
+    <div className= "thirdQuestion">
+      <p className="question">
         3{' '}
         <span>
           <b>&#x2192;</b>

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SeventhQuestionReason = ({ textInput, performanceRange }) => {
+const SeventhQuestionRecommend = ({ textInput, performanceRange }) => {
   return (
     <div>
       <p className="question">
@@ -8,7 +8,7 @@ const SeventhQuestionReason = ({ textInput, performanceRange }) => {
         <span>
           <b>&#x2192;</b>
         </span>{' '}
-        Could you tell us why you rated {performanceRange}?
+        You have rated {performanceRange}, would you recommend it?
       </p>
       <div>
         <input
@@ -21,4 +21,4 @@ const SeventhQuestionReason = ({ textInput, performanceRange }) => {
   );
 };
 
-export default SeventhQuestionReason;
+export default SeventhQuestionRecommend;

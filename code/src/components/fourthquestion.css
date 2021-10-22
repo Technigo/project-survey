@@ -1,0 +1,8 @@
+.fourthQuestion {
+  width: 100%;
+}
+
+.checkbox {
+  display: flex;
+  flex-direction: column;
+}

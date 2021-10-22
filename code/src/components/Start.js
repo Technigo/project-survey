@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import './start.css'
+import './start.css';
 
 import { ReactComponent as Clock } from '../icons/clock.svg';
 
@@ -10,7 +10,11 @@ const Start = ({ onStepChange }) => {
       <h2> What do you think of our app?</h2>
       <p>Please help us improve by completing this short survey</p>
       <div className="startButton">
-        <Button buttonText="Start" onStepChange={onStepChange} />
+        <Button
+          buttonType="button"
+          buttonText="Start"
+          whenClicked={onStepChange}
+        />
         <p>
           press <span>Enter</span> &#x21b5;
         </p>

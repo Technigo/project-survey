@@ -7,30 +7,37 @@ import FourthQuestionLike from './FourthQuestionLike';
 import FifthQuestionMore from './FifthQuestionMore';
 import SixthQuestionPerformance from './SixthQuestionPerformance';
 import SeventhQuestionReason from './SeventhQuestionReason';
+import SeventhQuestionRecommend from './SeventhQuestionRecommend';
 import Summary from './Summary';
 import Button from './Button';
+import EndPage from './EndPage';
 //Style //
 import './form.css';
 
 const Form = () => {
   const [step, setStep] = useState(0);
   const [usage, setUsage] = useState('Type or select an option...');
-  const [easeRange, setEaseRange] = useState(0)
+  const [easeRange, setEaseRange] = useState(0);
   const [performanceRange, setPerformanceRange] = useState(0);
-  
+  const [rating, setRating] = useState(1);
+
+  const onSubmission = () => {
+    return <EndPage />;
+  };
 
   const onStepChange = (event) => {
-    
-    event.target.innerText ==='Back' && setStep(step - 1);
+    event.target.innerText === 'Back' && setStep(step - 1);
     (event.target.innerText === 'OK' || event.target.innerText === 'Start') &&
-       setStep(step + 1);
-    
+      setStep(step + 1);
+  };
+
+  const onSetRating = (index) => {
+    setRating(index);
   };
 
   const onUsageChange = (event) => {
-     setUsage (event)
-
-  }
+    setUsage(event);
+  };
 
   const onEaseChange = (event) => {
     console.log('range1', event.target.value);
@@ -44,7 +51,9 @@ const Form = () => {
     <div className="mainForm">
       <form>
         {step === 0 && <Start onStepChange={onStepChange} />}
-        {step === 1 && <FirstQuestionRating />}
+        {step === 1 && (
+          <FirstQuestionRating rating={rating} onSetRating={onSetRating} />
+        )}
         {step === 2 && (
           <SecondQuestionAppUse usage={usage} onUsageChange={onUsageChange} />
         )}
@@ -64,20 +73,43 @@ const Form = () => {
             onRangeChange={onPerformanceChange}
           />
         )}
-        {step === 7 && (
+        {step === 7 && performanceRange <= 3 && (
           <SeventhQuestionReason
             textInputPerformance="Type your answer here..."
-            performanceRate="3"
+            performanceRange={performanceRange}
           />
         )}
-        {step === 8 && <Summary />}
+        {step === 7 && performanceRange >= 4 && (
+          <SeventhQuestionRecommend
+            textInputPerformance="Type your answer here..."
+            performanceRange={performanceRange}
+          />
+        )}
+        {step === 8 && (
+          <>
+            <Summary rating={rating} />
+            <Button
+              buttonType="button"
+              buttonText="Submit"
+              whenClicked={onSubmission}
+            />
+          </>
+        )}
       </form>
       <div className="buttons">
-        {step !== 0 && step <= 6 && (
-          <Button buttonText="OK" onStepChange={onStepChange} />
+        {step !== 0 && step <= 7 && (
+          <Button
+            buttonType="button"
+            buttonText="OK"
+            whenClicked={onStepChange}
+          />
         )}
-        {step > 1 && step <= 7 && (
-          <Button buttonText="Back" onStepChange={onStepChange} />
+        {step > 1 && step <= 8 && (
+          <Button
+            buttonType="button"
+            buttonText="Back"
+            whenClicked={onStepChange}
+          />
         )}
       </div>
     </div>

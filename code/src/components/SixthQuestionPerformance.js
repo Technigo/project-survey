@@ -6,7 +6,7 @@ import './sixthquestion.css'
 const SixthQuestionPerformance = ({ rangeValue, onRangeChange }) => {
   return (
     <div>
-      <p>
+      <p className="question">
         6{' '}
         <span>
           <b>&#x2192;</b>

@@ -1,0 +1,9 @@
+.thirdQuestion {
+    width:100%;
+}
+.question {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+  min-width: 320px;
+}

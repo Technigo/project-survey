@@ -7,15 +7,39 @@
   padding: 0;
 }
 
-.stars {
+.starRating {
   display: flex;
-  font-size: 28px;
-  padding-left:30px;
+  padding-left:100px;
 }
 
-.stars h2{
+.star{
 
-    margin-right: 15px;
+    margin-right:25px;
+    width: 32px;
+    height: 32px;
+    font-size: 48px;
 
 }
+
+.starRating button {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  
+  
+}
+.on {
+  color: #644e02;
+  
+}
+.off {
+  color:#ccc;
+}
+.number{
+    color: #644e02;
+    margin-right: 25px;
+    font-size: 18px;
+}
+
 

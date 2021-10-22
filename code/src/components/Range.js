@@ -3,7 +3,7 @@ import './range.css'
 
 const Range = ({ legend1, legend2, rangeValue, onRangeChange }) => {
   return (
-    <>
+    <div className= "range">
       <input
         id="rangeInput"
         type="range"
@@ -26,7 +26,7 @@ const Range = ({ legend1, legend2, rangeValue, onRangeChange }) => {
         <span>{legend1}</span>
         <span>{legend2}</span>
       </div>
-    </>
+    </div>
   );
 };
 

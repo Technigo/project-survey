@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Summary = () => {
+const Summary = ({rating}) => {
   return (
     <div>
-      <p>summary</p>
+      <p>Rating: {rating} Stars</p>
     </div>
   );
 };

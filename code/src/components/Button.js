@@ -1,11 +1,28 @@
 import React from 'react';
 import './button.css';
 
-const Button = ({ buttonText, onStepChange }) => {
+const Button = ({ buttonType, buttonText, whenClicked }) => {
   return (
-    <button className="button" onClick={onStepChange}>
-      {buttonText}
-    </button>
+    <>
+      {buttonType === 'button' && (
+        <button
+          className="customButton"
+          type={buttonType}
+          onClick={whenClicked}
+        >
+          {buttonText}
+        </button>
+      )}
+      {buttonType === 'submit' && (
+        <button
+          className="customButton"
+          type={buttonType}
+          onClick={whenClicked}
+        >
+          {buttonText}
+        </button>
+      )}
+    </>
   );
 };
 
