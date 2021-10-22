@@ -1,6 +1,6 @@
 import React from 'react'
 import AnimalChoices from './AnimalChoices'
-{/*import ChosenColour from './ChosenColour'*/}
+
  export const Overview = ({ nameInput, locationInput, animalInput, colourInput, aeroplaneInput, olderInput, sellotapeInput }) => {
 
     return (
