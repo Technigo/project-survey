@@ -4,7 +4,7 @@ const FifthQuestion = ({moodInput, onMoodInputChange, onStepChange, onPreviousQu
 
 	return (
 		<section className="content-container">
-			<form className="form">
+			<div className="form">
 				<label 
 					className="label-title" >
 						How excited are you for this game?
@@ -31,7 +31,7 @@ const FifthQuestion = ({moodInput, onMoodInputChange, onStepChange, onPreviousQu
 					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
 					<button type="submit" onClick={onStepChange}>Submit &rarr;</button>				
 				</div>
-			</form>
+			</div>
 
 		</section>
 

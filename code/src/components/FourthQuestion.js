@@ -5,7 +5,7 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange, onPreviousQu
 
 	return (
 		<section className="content-container">
-			<form className="form">
+			<div className="form">
 				<label 
 					className="label-title" 
 					htmlFor="ageInput">
@@ -35,7 +35,7 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange, onPreviousQu
 					<button type="button" onClick={onPreviousQuestionChange}>&larr; Back</button>
 					<button type="button" onClick={onStepChange}>Next &rarr;</button>				
 				</div>
-			</form>
+			</div>
 
 		</section>
 

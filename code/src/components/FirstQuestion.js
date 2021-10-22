@@ -5,7 +5,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange}) => {
 
 	return (
 		<section className="content-container">
-			<form className="form" >
+			<div className="form" >
 				<label 
 					className="label-title" 
 					htmlFor="nameInput">
@@ -22,7 +22,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange}) => {
 				/>
 				<button  type="submit" onClick={onStepChange}>Next
 				</button>
-			</form>
+			</div>
 
 		</section>
 

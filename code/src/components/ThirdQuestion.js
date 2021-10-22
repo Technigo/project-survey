@@ -4,7 +4,7 @@ import React from 'react';
 const ThirdQuestion = ({ countryInput, onCountryInputChange, onStepChange, onPreviousQuestionChange}) => {
 	return (
     	<section className="content-container">
-			<form className="form">
+			<div className="form">
 				<label 
 					className="label-title" 
 					htmlFor="countryInput">
@@ -30,7 +30,7 @@ const ThirdQuestion = ({ countryInput, onCountryInputChange, onStepChange, onPre
 					<button type="button" onClick={onPreviousQuestionChange}>&larr; Back</button>
 					<button type="button" onClick={onStepChange}>Next &rarr;</button>			
 				</div>
-			</form>
+			</div>
 
 		</section>
 	);

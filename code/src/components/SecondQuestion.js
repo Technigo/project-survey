@@ -4,7 +4,7 @@ const SecondQuestion = ({ emailInput, onEmailInputChange, onStepChange, onPrevio
 
 	return (
 		<section className="content-container">
-			<form className="form">
+			<div className="form">
 				<label 
 					className="label-title" 
 					htmlFor="emailInput">
@@ -23,7 +23,7 @@ const SecondQuestion = ({ emailInput, onEmailInputChange, onStepChange, onPrevio
 					<button disabled={ (emailInput==='') } type="button" onClick={onStepChange}>Next &rarr;</button>				
 				</div>
 
-			</form>
+			</div>
 
 		</section>
 
