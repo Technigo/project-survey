@@ -1,9 +1,8 @@
 :root {
   --beige: #fffaf2;
-  --yellow: #def200;
-
-  --dark-pink: #ffffff;
-  --transparent: #2b2b2b98;
+  --lemon: #def200;
+  --transparent: #00000095;
+  --yellow: #ffe100;
 }
 
 body {
@@ -33,6 +32,21 @@ code {
   font-family: "Courier New", monospace;
 }
 
+header {
+  top: 10px;
+  right: 30px;
+  position: absolute;
+  text-align: center;
+  font-family: "Poiret One", cursive;
+  margin-top: 10px;
+  display: flex;
+}
+
+header h4 {
+  color: var(--beige);
+  margin: 0;
+}
+
 /* for all questions */
 form {
   display: flex;
@@ -47,7 +61,7 @@ form {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: var(--dark-pink);
+  color: var(--beige);
 }
 
 .starter {
@@ -148,8 +162,7 @@ button {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgb(232, 4, 8);
-  background: var(--yellow);
+  background: var(--lemon);
   left: 0;
   top: 0;
   border-radius: 10px;
@@ -177,7 +190,7 @@ button {
 .question {
   font-family: "Raleway", sans-serif;
   font-weight: 900;
-  font-size: 20px;
+  font-size: 18px;
   text-align: center;
   padding: 30px 10px;
   margin: 0;
@@ -210,32 +223,22 @@ input.color-input {
   font-family: auto;
   font-family: "Raleway", sans-serif;
 }
-header {
-  top: 10px;
-  right: 30px;
-  position: absolute;
-  text-align: center;
-  font-family: "Poiret One", cursive;
-  margin-top: 10px;
-  display: flex;
-}
-
-header h4 {
-  color: var(--beige);
-  margin: 0;
+.hello-world {
+  width: 200px;
 }
 
 footer {
-  position: fixed;
+  position: absolute;
   bottom: 0;
   text-align: center;
   font-family: "Poiret One", cursive;
+  font-size: 12px;
 }
 
 footer h4 {
   color: var(--beige);
   border-top: 1px solid var(--transparent);
-  padding: 14px 0 0 22px;
+  padding: 14px 0 0 60px;
 }
 
 .fa {
@@ -249,9 +252,23 @@ footer h4 {
   font-size: 18px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 668px) {
   .main-container {
     padding: 50px 30px;
     width: 500px;
+  }
+
+  .question {
+    font-size: 20px;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    font-size: 14px;
+  }
+
+  footer h4 {
+    padding: 14px 0 0 30px;
   }
 }

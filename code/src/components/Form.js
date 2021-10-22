@@ -8,6 +8,7 @@ import ThirdQuestion from "./ThirdQuestion"
 import CheckboxGroup from "./Checkboxgroup"
 import ColorInput from "./Colorinput"
 import Summary from "./Summary"
+import Alien from "./Alien"
 import Footer from "./Footer"
 
 const Form = () => {
@@ -134,8 +135,11 @@ const Form = () => {
             ageInput={ageInput}
             checkboxGroup={checkboxGroup}
             colorInput={colorInput}
+            onNextQuestionChange={onNextQuestionChange}
           />
         )}
+        {step === 7 && <Alien />}
+
         {/* {step <= 5 && 1 <= step && <h2>Question number: {step}/5</h2>} */}
       </main>
       <Footer />
