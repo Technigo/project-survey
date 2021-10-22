@@ -24,10 +24,6 @@ const Pop = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) => {
         <option value="Tove Styrke">Tove Styrke</option>
         <option value="Miss Li">Miss Li</option>
       </select>
-
-      <button className="button" onClick={onStepChange}>
-        Next Question
-      </button>
     </form>
   );
 };

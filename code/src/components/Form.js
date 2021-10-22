@@ -44,7 +44,6 @@ const Form = () => {
       {step === 0 && <Greeting onStepChange={onStepChange} />}
       {step === 1 && (
         <FirstQuestion
-          
           arenaChoice={arenaChoice}
           onArenaChoiceSet={onArenaChoiceSet}
           onStepChange={onStepChange}
@@ -64,18 +63,15 @@ const Form = () => {
           bandChoice={bandChoice}
           onBandChoiceSet={onBandChoiceSet}
           onStepChange={onStepChange}
-          arenaChoice={arenaChoice}
-          tickets={tickets}
+          genreChoice={genreChoice}
         />
       )}
       {step === 4 && (
         <FourthQuestion
           seatChoice={seatChoice}
           onSeatChoiceSet={onSeatChoiceSet}
-          arenaChoice={arenaChoice}
           onStepChange={onStepChange}
-          bandChoice={bandChoice}
-          tickets={tickets}
+
         />
       )}
       {step === 5 && (
@@ -83,6 +79,7 @@ const Form = () => {
           arenaChoice={arenaChoice}
           bandChoice={bandChoice}
           seatChoice={seatChoice}
+          genreChoice={genreChoice}
           tickets={tickets}
         />
       )}

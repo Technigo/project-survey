@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Songwriter= ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) => {
+const Songwriter = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) => {
   return (
     <form>
       <label htmlFor="band-select">
@@ -24,10 +24,6 @@ const Songwriter= ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) =
         <option value="Lars Winnerbäck">Lars Winnerbäck</option>
         <option value="First Aid Kit">First Aid Kit</option>
       </select>
-
-      <button className="button" onClick={onStepChange}>
-        Next Question
-      </button>
     </form>
   );
 };

@@ -22,10 +22,6 @@ const Rap = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) => {
         <option value="Einár">Einár</option>
         <option value="Grekazo">Grekazo</option>
       </select>
-
-      <button className="button" onClick={onStepChange}>
-        Next Question
-      </button>
     </form>
   );
 };

@@ -24,10 +24,6 @@ const Electric = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) =>
         <option value="David Guetta">David Guetta</option>
         <option value="Galantis">Galantis</option>
       </select>
-
-      <button className="button" onClick={onStepChange}>
-        Next Question
-      </button>
     </form>
   );
 };

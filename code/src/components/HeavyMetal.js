@@ -24,10 +24,6 @@ const HeavyMetal = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) 
         <option value="Sabaton">Sabaton</option>
         <option value="Arch Enemy">Arch Enemy</option>
       </select>
-
-      <button className="button" onClick={onStepChange}>
-        Next Question
-      </button>
     </form>
   );
 };

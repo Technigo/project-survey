@@ -24,10 +24,6 @@ const Rock = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) => {
         <option value="Mötley Crüe">Mötley Crüe</option>
         <option value="Mustasch">Mustasch</option>
       </select>
-
-      <button className="button" onClick={onStepChange}>
-        Next Question
-      </button>
     </form>
   );
 };
