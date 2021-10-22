@@ -5,7 +5,7 @@ const RadioButtons = ({value, setValue, valueArray}) => {
   return (
     <div className="radio-container">
       {valueArray.map((item) => (
-        <label key={item}>
+        <label className="radio-label" key={item}>
           <input
             type="radio"
             value={item}

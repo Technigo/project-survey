@@ -1,11 +1,31 @@
-input[type="radio"] {
-  margin: 30px 5px 30px 0;
-}
-
 .radio-container{
   display: flex;
   justify-content: space-between;
   width: 170px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.radio-label {
+  margin: 30px 0;
+}
+
+input[type="radio"] {
+  margin: 0 5px 0 0;
+  appearance: none;
+  border-radius: 50px;
+  border: 1px solid var(--sek);
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+}
+
+input[type="radio"]:hover {
+  padding: 1px;
+  background-color: gray;
+}
+
+input[type="radio"]:checked {
+  padding: 1px;
+  background-color: var(--prim);
 }
