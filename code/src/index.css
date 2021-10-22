@@ -25,7 +25,7 @@ h1 {
 }
 h2 {
   font-family: "Jua", sans-serif;
-  margin-top: 20px;
+  margin: 20px 10px auto 10px;
   color: rgb(95, 0, 219);
 }
 p {

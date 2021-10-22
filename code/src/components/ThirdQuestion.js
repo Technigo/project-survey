@@ -15,7 +15,7 @@ const ThirdQuestion = ({
         value={experienceInput}
         onChange={onExperienceInputChange}
       >
-        <option value="">Shose your experience here:</option>
+        <option value="">Chose your experience here:</option>
         <option value="really bad">Crappiest planet in space!</option>
         <option value="bad">Have bin on better ones</option>
         <option value="okey">This planet was okey</option>

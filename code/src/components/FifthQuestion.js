@@ -7,7 +7,7 @@ const FifthQuestion = ({
 }) => {
   return (
     <form>
-      <h2>What temperature are you use to have on your planet?</h2>
+      <h2>What temperature are you used to have on your planet?</h2>
       <input
         className="input-padding"
         type="range"
