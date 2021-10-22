@@ -3,7 +3,7 @@ import React from 'react'
 const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange, onStepChangeBack }) => {
     return (
         <form>
-            Rate this survey
+            <label htmlFor="ratingInput">Rate this survey</label>
             <label>
                 <input 
                     type="radio"
@@ -49,10 +49,10 @@ const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange, onStepC
                 />
                 5
             </label>
-            <img src="./assets/q5.svg" alt="question-step-5"></img>
+            <img className="progress" src="./assets/q5.svg" alt="question-step-5"></img>
             <div className="buttons">
-                <button onClick={onStepChangeBack}>&#9669; Previous Question</button>
-                <button disabled={ratingInput === ''} onClick={onStepChange}>Next Question &#9659;</button>
+                <button onClick={onStepChangeBack}>&#9669; Previous</button>
+                <button disabled={ratingInput === ''} onClick={onStepChange}>Next &#9659;</button>
             </div>
         </form>
     )

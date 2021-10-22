@@ -11,10 +11,10 @@ const SecondQuestion = ({ lastnameInput, onLastnameInputChange, onStepChange, on
                 value={lastnameInput}
                 onChange={onLastnameInputChange}
             />
-            <img src="./assets/q2.svg" alt="question-step-2"></img>
+            <img className="progress" src="./assets/q2.svg" alt="question-step-2"></img>
             <div className="buttons">
-                <button onClick={onStepChangeBack}>&#9669; Previous Question</button>
-                <button disabled={lastnameInput === ''} onClick={onStepChange}>Next Question &#9659;</button>
+                <button onClick={onStepChangeBack}>&#9669; Previous</button>
+                <button disabled={lastnameInput === ''} onClick={onStepChange}>Next &#9659;</button>
             </div>
         </form>
     )

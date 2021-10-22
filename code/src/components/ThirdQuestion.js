@@ -11,10 +11,10 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, onStepChange, onStepChangeB
                 value={ageInput}
                 onChange={onAgeInputChange}
             />
-            <img src="./assets/q3.svg" alt="question-step-3"></img>
+            <img className="progress" src="./assets/q3.svg" alt="question-step-3"></img>
             <div className="buttons">
-                <button onClick={onStepChangeBack}>&#9669; Previous Question</button>
-                <button disabled={ageInput === ''} onClick={onStepChange}>Next Question &#9659;</button>
+                <button onClick={onStepChangeBack}>&#9669; Previous</button>
+                <button disabled={ageInput === ''} onClick={onStepChange}>Next &#9659;</button>
             </div>
         </form>
     )

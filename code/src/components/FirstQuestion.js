@@ -12,9 +12,9 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
                 value={nameInput}
                 onChange={onNameInputChange}
             />
-            <img src="./assets/q1.svg" alt="question-step-1"></img>
+            <img className="progress" src="./assets/q1.svg" alt="question-step-1"></img>
             <div className="first-button">
-                <button className="first-btn" disabled={nameInput === ''} onClick={onStepChange}>Next Question &#9659;</button>
+                <button className="first-btn" disabled={nameInput === ''} onClick={onStepChange}>Next &#9659;</button>
             </div>
         </form>
     )
