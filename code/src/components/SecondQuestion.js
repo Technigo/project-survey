@@ -4,7 +4,7 @@ const SecondQuestion = ({ animalInput, onAnimalInputChange, onStepChange }) => {
   return (
     <form>
       <h2>
-        Would rather have 100 duck-sized elephants or 1 elephant-sized duck?
+        Would you rather have 100 duck-sized elephants OR 1 elephant-sized duck?
       </h2>
       <section className="radio-container">
         <div className="radio-select">

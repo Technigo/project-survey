@@ -5,7 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background: linear-gradient(
+    0.25turn,
+    rgb(255, 105, 180),
+    rgb(255, 20, 147),
+    rgb(255, 105, 180)
+  );
 }
 
 code {
@@ -20,9 +25,22 @@ code {
   margin: 50px;
 }
 
-h2 {
-  font-size: 20px;
+h1 {
+  font-family: "Bungee Shade", cursive;
+  /* font-family: "Monoton", cursive; */
+  color: whitesmoke;
+  font-size: 65px;
   text-align: center;
+}
+
+h2 {
+  font-size: 40px;
+  text-align: center;
+  color: whitesmoke;
+  /* text-transform: uppercase; */
+  /* font-family: "Bubblegum Sans", cursive; */
+  font-family: "Lilita One", cursive;
+  line-height: 50px;
 }
 
 form {
@@ -31,12 +49,12 @@ form {
   justify-content: center;
   align-items: center;
   /* border: solid #a259ff 5px; */
-  box-shadow: 0 2px 40px grey;
-  border-radius: 10px;
-  min-width: 200px;
+  /* box-shadow: 0 2px 40px grey;
+  border-radius: 10px; */
+  min-width: 300px;
   max-width: 800px;
   height: 400px;
-  background-color: white;
+  /* background-color: white; */
   padding: 30px;
 }
 
@@ -60,16 +78,22 @@ input {
   /* justify-content: center; */
   align-items: center;
   margin: 20px;
-  min-width: 70px;
+  min-width: 90px;
+  color: whitesmoke;
+  font-family: "Monoton", cursive;
+  font-size: 25px;
+  /* font-family: "Bungee Shade", cursive; */
+  /* text-transform: uppercase; */
 }
 
 .radio-choice {
 }
 
 button {
-  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  background: whitesmoke;
   padding: 10px;
   border: none;
   border-radius: 10px;
   font-weight: bold;
+  color: rgb(255, 20, 147);
 }
