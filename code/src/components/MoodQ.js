@@ -6,35 +6,47 @@ const MoodQ = ({
     onStepChange,
 }) => {
 return (
-<form>
+    <div className="bigWrapper">
+    <form>
+        <div className="formWrapper">
+    
     <label>
-        <input 
-        id="radiotest" 
-        type="radio" 
-        value="blood"
-        onChange={() => onMoodChange('blood')}
-        checked={mood === "blood"}
-        />
-    <span role="img" aria-label="blood" >
-    🔪 🩸  
-    </span>
-   </label>
+        What are you in the mood for?
+        <div className="radiobutton"> 
+            <input 
+            id="radiobutton" 
+            type="radio" 
+            value="blood"
+            onChange={() => onMoodChange('blood')}
+            checked={mood === "blood"}
+            />
+            <span role="img" aria-label="blood" >
+            🔪🩸  
+            </span>
+        </div>
+    </label>
+
 
    <label>
+   <div className="radiobutton"> 
         <input 
-        id="radiotest" 
+        id="radiobutton" 
         type="radio" 
         value="candy"
         onChange={() => onMoodChange('candy')}
         checked={mood === "candy"}
         />
     <span role="img" aria-label="candy" >
-        🍭 🍬
+        🍭 🍬 
     </span>
+    </div>
    </label>
 
-   <button onClick={onStepChange}>Next</button>
-</form> 
+   <button className="button" onClick={onStepChange}>Next</button>
+   
+   </div>
+    </form>
+    </div>
 
 );
 };

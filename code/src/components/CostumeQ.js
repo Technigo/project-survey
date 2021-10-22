@@ -6,8 +6,9 @@ const CostumeQ = ({
     onStepChange,
 }) => {
 return (
-    <div className="questionBox">
-<form>
+    <div className="bigWrapper">
+    <form>
+        <div className="formWrapper">
     <label>
         Choose your costume: 
         <select value={costume} onChange={event => onCostumeChange(event.target.value)}>
@@ -21,8 +22,9 @@ return (
             </select>
             </label>
             <button onClick={onStepChange}>Next question</button>
-</form> 
-</div>
+            </div>
+    </form>
+    </div>
 );
 };
 

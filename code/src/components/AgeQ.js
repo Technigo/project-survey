@@ -1,8 +1,15 @@
 import React from "react";
 
-const AgeQ = ({ageInput, onAgeInputChange, onStepChange}) => {
+const AgeQ = ({
+    ageInput, 
+    onAgeInputChange, 
+    onStepChange
+}) => {
+
 return (
-<form>
+    <div className="bigWrapper">
+    <form>
+        <div className="formWrapper">
     <label htmlFor="ageInput">How old are you?</label>
         <input 
         id="ageInput" 
@@ -10,8 +17,15 @@ return (
         value={ageInput} 
         onChange={onAgeInputChange}
         />
-    <button onClick={onStepChange}>Next question</button>
-</form> 
+    <button 
+    disabled={ageInput === ''}
+    onClick={onStepChange}
+    >
+    Next question
+    </button>
+    </div>
+    </form>
+    </div>
 );
 };
 

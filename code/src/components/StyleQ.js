@@ -6,7 +6,9 @@ const StyleQ = ({
     onStepChange,
 }) => {
 return (
-<form>
+    <div className="bigWrapper">
+    <form>
+        <div className="formWrapper">
     <label>
         What style are you up for? 
         <select value={style} onChange={event => onStyleChange(event.target.value)}>
@@ -17,7 +19,9 @@ return (
             </select>
             </label>
             <button onClick={onStepChange}>Next question</button>
-</form> 
+            </div>
+    </form>
+    </div>
 );
 };
 

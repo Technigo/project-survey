@@ -1,23 +1,31 @@
 import React from "react";
 
 // declaring props inside the curly brackets
-const NameQ =({ nameInput, onNameInputChange, onStepChange }) => {
+const NameQ =({ 
+    nameInput, 
+    onNameInputChange, 
+    onStepChange 
+}) => {
+
 return (
-    <div className="questionBox">
+    <div className="bigWrapper">
     <form>
-    <label htmlFor="nameInput">What's your name? </label>
+        <div className="formWrapper">
+    <label>What's your name? 
         <input 
             id="nameInput" 
             type="text" 
             value={nameInput} 
             onChange={(event) => onNameInputChange(event)}
         />
+        </label>
         <button 
         disabled={nameInput === ''}
         onClick={onStepChange}
         >
-            Next question
+        Next question
         </button>
+        </div>
     </form>
     </div>
 )};

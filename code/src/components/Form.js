@@ -16,6 +16,7 @@ const Form = () => {
     const [costume, setCostume] = useState('');
     const [mood, setMood] = useState('blood');
     const [step, setStep] = useState(1);
+    const [reboot, setReboot] = useState(1);
 
     const onNameInputChange = (event) => {
         setNameInput(event.target.value)
@@ -41,8 +42,12 @@ const Form = () => {
         setStep(step + 1)
     }
 
+    const onRebootChange = () => {
+        setReboot(reboot - 6)
+    }
+
     return (
-    <div>
+        <div>
         {step === 1 && (<NameQ 
          nameInput={nameInput}
          onNameInputChange={onNameInputChange}
@@ -84,6 +89,7 @@ const Form = () => {
         style={style}
         costume={costume}
         mood={mood}
+        onRebootChange={onRebootChange}
         />  
         )}
     </div>

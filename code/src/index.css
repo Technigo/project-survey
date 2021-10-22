@@ -7,6 +7,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
   color: white;
   background-image: url(./images/scary_background.jpg);
+  background-size: cover;
+  background-position: top;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  overflow: hidden;
 }
 
 code {
@@ -14,18 +19,84 @@ code {
     monospace;
 }
 
-h1 {
-  font-size: 30px;
+p {
+  font-family: Roboto;
+  font-size: 14px;
+
+}
+
+label {
+  font-family: Roboto;
+  font-size: 18px;
+
+}
+
+input {
+    /* display: block;
+    align-items: center; */
+    background: rgba(0, 0, 0, 0.5);
+    border: 1px solid rgb(246, 173, 71);
+    border-radius: 5px;
+    padding: 2px;
+    margin: 5px;
+    margin-bottom: 15px;
+
+}
+
+select {
+  /* display: block;
+  align-items: center; */
+  background: rgba(246, 173, 71);
+  border: 1px solid rgb(246, 173, 71);
+  border-radius: 5px;
+  padding: 2px;
+  margin: 5px;
+  margin-bottom: 15px;
 
 }
 
 
-.questionBox{
-  display: flex;
-  width: 280px;
-  justify-content: center;
-  padding: 20px;
-  margin: 10px auto;
-  background-color: rgba(0,0, 0, 0.5);
+input:focus {
+ background: rgba(246, 173, 71, 0.8);
+}
 
+button {
+  /* display: block;
+  justify-content: center; */
+  background-color: rgba(139, 0, 0, 0.5);
+  border: none;
+  border-radius: 2px;
+  font-size: 14px;
+  color: white;
+  text-align: center;
+  padding: 5px 10px;
+  margin: 10px auto;
+
+
+}
+
+.bigWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  width: 280px;
+  min-height: 180px;
+  
+  margin: 10px auto;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+  border: 2px dotted white
+
+}
+
+.formWrapper {
+  display: grid;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.radiobutton {
+  padding: 2px;
 }
