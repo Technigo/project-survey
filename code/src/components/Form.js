@@ -13,7 +13,7 @@ const Form = () => {
   const [plantSkill, setPlantSkill] = useState('');
   const [humidity, setHumidity] = useState('');
   const [favouritePlant, setFavouritePlant] = useState('');
-  const [sliderInput, setSliderInput] = useState(0);
+  const [sliderInput, setSliderInput] = useState(2);
   const [step, setStep] = useState(0);
   const [alert, setAlert] = useState(false);
 
@@ -64,12 +64,7 @@ const Form = () => {
         setStep(step + 1);
       }
     } else if (step === 5) {
-      if (sliderInput === '') {
-        setAlert(true);
-      } else {
-        setAlert(false);
-        setStep(step + 1);
-      }
+      setStep(step + 1);
     } else {
       setStep(step + 1);
     }
