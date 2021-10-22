@@ -29,7 +29,7 @@ const likeColor = ({
       
       <button 
         disabled={color === ''}
-        onClick={onStepChange}>Next question
+        onClick={onStepChange}>Next question <span><b>>></b></span>
       </button>
     </form>
   )

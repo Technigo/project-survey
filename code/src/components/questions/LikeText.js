@@ -29,7 +29,7 @@ const LikeText =({
 
       <button 
         disabled={text === ''}
-        onClick={onStepChange}>Next question
+        onClick={onStepChange}>Next question <span><b>>></b></span>
       </button>
     </form>
   )

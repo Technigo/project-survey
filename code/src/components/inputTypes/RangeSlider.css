@@ -2,6 +2,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 10px;
 }
 
 .range-slider-span {
@@ -13,6 +14,7 @@ input[type="range"] {
   overflow: hidden;
   -webkit-appearance: none;
   background-color: #a0a0a0;
+  width: 200px;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {

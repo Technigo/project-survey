@@ -15,7 +15,7 @@ const Suggestions = ({
         />  
       </label> 
       <button 
-        onClick={onStepChange}>Go to Summary
+        onClick={onStepChange}>Go to Summary <span><b>>></b></span>
       </button>
     </form>
   )

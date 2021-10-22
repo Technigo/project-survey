@@ -21,7 +21,8 @@ h1, h2 {
 }
 
 h2 {
-  margin-bottom: 40px;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }
 
 form {
@@ -45,7 +46,7 @@ button {
   background-color: transparent;
   font-family: var(--font);
   font-size: 20px;
-  color: var(--sek);
+  color: var(--prim);
   transition: all .3s ease-in-out;
 }
 
@@ -73,7 +74,6 @@ button:hover {
   top: 0px;
   width: 100%;
   height: 100%;
-  padding: 20px;
   background-color: var(--background);
 }
 
@@ -88,12 +88,13 @@ button:hover {
 .footer {
   margin-top: auto;
   color: var(--sek);
-  z-index: 1;
+}
+
+.thankYou {
+  margin-top: 100px;
+  color: var(--prim);
 }
 
 .footer-link {
-  display: inline-block;
-  margin-top: 70px;
-  text-align: center;
   color: var(--prim);
 }
