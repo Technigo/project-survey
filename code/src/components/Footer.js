@@ -18,7 +18,7 @@ const Footer = () => {
           />
         </a>
       </footer>
-      <div class="blur"></div>
+      <div className="blur"></div>
     </>
   )
 }

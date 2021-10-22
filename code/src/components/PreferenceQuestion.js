@@ -1,11 +1,11 @@
 import React from 'react'
 
 const PreferenceQuestion = ({
-  preferenceInput,
+  surfInput,
   clothingInput,
   travelInput,
   eventsInput,
-  onPreferenceInputChange,
+  onSurfInputChange,
   onClothingInputChange,
   onTravelInputChange,
   onEventsInputChange,
@@ -24,9 +24,9 @@ const PreferenceQuestion = ({
             id="surfInput"
             type="checkbox"
             name="surfInput"
-            checked={preferenceInput}
-            value={preferenceInput}
-            onChange={onPreferenceInputChange}
+            checked={surfInput}
+            value={surfInput}
+            onChange={onSurfInputChange}
             onKeyPress={onEnter}
           />
         </div>{' '}
@@ -78,7 +78,7 @@ const PreferenceQuestion = ({
         </div>
       </form>
       <button
-        disabled={preferenceInput === false}
+        // disabled={surfInput === false}
         className="btn6"
         type="button"
         onClick={onStepChange}

@@ -8,7 +8,7 @@ import Final from './Final'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [preferenceInput, setPreferenceInput] = useState(false)
+  const [surfInput, setSurfInput] = useState(false)
   const [clothingInput, setClothingInput] = useState(true)
   const [travelInput, setTravelInput] = useState(false)
   const [eventsInput, setEventsInput] = useState(false)
@@ -20,8 +20,8 @@ const Form = () => {
     setNameInput(event.target.value)
   }
 
-  const onPreferenceInputChange = (event) => {
-    setPreferenceInput(event.target.checked)
+  const onSurfInputChange = (event) => {
+    setSurfInput(event.target.checked)
   }
   const onClothingInputChange = (event) => {
     setClothingInput(event.target.checked)
@@ -41,28 +41,12 @@ const Form = () => {
     setStep(step + 1)
   }
 
-  //need one for email here inside of the enter key.
   const onEnter = (event) => {
     if (event.key === 'Enter' && event.target.value !== '') {
       event.preventDefault()
       setStep(step + 1)
     }
   }
-  // function sendEmail(e) {
-  //   e.preventDefault()
-
-  //   emailjs
-  //     .sendForm(
-  //       'service_8yjsskq',
-  //       'template_vkmyufs',
-  //       Form,
-  //       'user_CLE2dCfZbNVh3CenFnpxS'
-  //     )
-  //     .then((res) => {
-  //       console.log(res)
-  //     })
-  //     .catch((err) => console.log(err))
-  // }
 
   return (
     <div className="form-container">
@@ -76,8 +60,8 @@ const Form = () => {
       )}
       {step === 2 && (
         <PreferenceQuestion
-          preference={preferenceInput}
-          onPreferenceInputChange={onPreferenceInputChange}
+          surf={surfInput}
+          onSurfInputChange={onSurfInputChange}
           clothing={clothingInput}
           onClothingInputChange={onClothingInputChange}
           travelInput={travelInput}
@@ -99,7 +83,7 @@ const Form = () => {
         <Final
           nameInput={nameInput}
           emailInput={emailInput}
-          preferenceInput={preferenceInput}
+          surfInput={surfInput}
           clothingInput={clothingInput}
           travelInput={travelInput}
           eventsInput={eventsInput}

@@ -3,20 +3,20 @@ import emailjs from 'emailjs-com'
 
 const Final = ({
   nameInput,
-  onNameInputChange,
-  onEmailInputChange,
-  onPreferenceInputChange,
-  onClothingInputChange,
-  onTravelInputChange,
-  onEventsInputChange,
-  preferenceInput,
+  emailInput,
+  surfInput,
   clothingInput,
   travelInput,
   eventsInput,
-  emailInput,
+  onNameInputChange,
+  onEmailInputChange,
+  onSurfInputChange,
+  onClothingInputChange,
+  onTravelInputChange,
+  onEventsInputChange,
 }) => {
-  function sendEmail(e) {
-    e.preventDefault()
+  function sendEmail(email) {
+    email.preventDefault()
 
     emailjs
       .sendForm(
@@ -30,9 +30,10 @@ const Final = ({
       })
       .catch((err) => console.log(err))
   }
+
   return (
     <>
-      <form>
+      <form className="form-none">
         <input
           name="name"
           onChange={onNameInputChange}
@@ -45,9 +46,8 @@ const Final = ({
         ></input>
         <input
           name="surfInput"
-          defaultValue
-          value={preferenceInput}
-          onChange={onPreferenceInputChange}
+          value={surfInput}
+          onChange={onSurfInputChange}
         ></input>
         <input
           name="clothingInput"
@@ -65,18 +65,16 @@ const Final = ({
           onChange={onEventsInputChange}
         ></input>
       </form>
-      {/* <section className="submitted-container">
+      <section className="submitted-container">
         <h2>Your added info below</h2>
         <h4>Full Name : {nameInput}</h4>
         <h4>Email : {emailInput}</h4>
         <h4>
-          Prefered content :{preferenceInput ? 'Surf' : ''}{' '}
-          {clothingInput ? 'Clothing' : ''} {travelInput ? 'Travel' : ''}{' '}
-          {eventsInput ? 'Events' : ''}
+          Prefered content :{surfInput ? 'Surf' : ''}
+          {clothingInput ? 'Clothing' : ''}
+          {travelInput ? 'Travel' : ''} {eventsInput ? 'Events' : ''}
         </h4>
-      </section> */}
-      {/* onClick={onStepChange} */}
-
+      </section>{' '}
       <button className="btn6" type="submit" onClick={sendEmail}>
         {' '}
         Click here to finish{' '}

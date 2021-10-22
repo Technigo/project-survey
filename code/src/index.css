@@ -100,7 +100,6 @@ input {
   opacity: 0.8;
   font-size: 20px;
   color: #2f6f7a;
-  /* color: black; */
   border-style: none;
   background-color: transparent;
   border-bottom: 2px solid #ff6a13;
@@ -222,4 +221,8 @@ input:-internal-autofill-selected {
 .btn6:hover {
   border-left: 1px solid #ff6a13;
   border-right: 1px solid #ff6a13;
+}
+
+.form-none {
+  display: none;
 }
