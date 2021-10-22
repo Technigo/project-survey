@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 //This form has a radio-button 
 const ThirdQuestion = ({ onStepChange, temp, onTempChange }) => {
