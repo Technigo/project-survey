@@ -4,7 +4,14 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   return (
     <form>
       <h1>kicks and giggles</h1>
-      <label htmlFor="nameInput">What's your name?</label>
+      <p className="intro-p">adult recess.</p>
+      <p className="intro-p-brackets">(yes, we need playtime too)</p>
+      <label htmlFor="nameInput">
+        <span role="img" aria-label="owl">
+          🦉
+        </span>{" "}
+        whooo's here today?
+      </label>
       <input
         id="nameInput"
         type="text"

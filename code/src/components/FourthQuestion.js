@@ -7,27 +7,39 @@ const FourthQuestion = ({ gameInput, onGameInputChange, onStepChange }) => {
         Would you rather be trapped inside a video game or have that video game
         come to life in the real world?
       </h2>
-      <label htmlFor="gameInput">Inside</label>
-      <input
-        type="radio"
-        value="inside"
-        onChange={onGameInputChange}
-        checked={gameInput === "inside"}
-      />
-      <span role="img" aria-label="gaming consol">
-        🎮
-      </span>
+      <section className="radio-container">
+        <div className="radio-select">
+          <label>
+            <div className="radio-choice">
+              <input
+                type="radio"
+                value="inside"
+                onChange={onGameInputChange}
+                checked={gameInput === "inside"}
+              />
+              <span role="img" aria-label="gaming consol">
+                🙋 → 🎮
+              </span>
+            </div>
+          </label>
+        </div>
 
-      <label htmlFor="gameInput">Outside</label>
-      <input
-        type="radio"
-        value="outside"
-        onChange={onGameInputChange}
-        checked={gameInput === "outside"}
-      />
-      <span role="img" aria-label="">
-        🌍
-      </span>
+        <div className="radio-select">
+          <label>
+            <div className="radio-choice">
+              <input
+                type="radio"
+                value="outside"
+                onChange={onGameInputChange}
+                checked={gameInput === "outside"}
+              />
+              <span role="img" aria-label="">
+                🎮 → 🌍
+              </span>
+            </div>
+          </label>
+        </div>
+      </section>
       <button onClick={onStepChange}>Next Question</button>
     </form>
   );

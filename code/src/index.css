@@ -5,6 +5,9 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
   background: linear-gradient(
     0.25turn,
     rgb(255, 105, 180),
@@ -22,7 +25,8 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 50px;
+  /* margin: 50px; */
+  height: 600px;
 }
 
 h1 {
@@ -31,6 +35,27 @@ h1 {
   color: whitesmoke;
   font-size: 65px;
   text-align: center;
+  margin-bottom: 20px;
+}
+
+.intro-p {
+  color: whitesmoke;
+  font-family: "Lilita One", cursive;
+  margin-top: 0;
+  margin-bottom: 5px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 35px;
+}
+
+.intro-p-brackets {
+  color: whitesmoke;
+  font-family: "Lilita One", cursive;
+  margin-top: 0;
+  margin-bottom: 60px;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 17px;
 }
 
 h2 {
@@ -58,8 +83,26 @@ form {
   padding: 30px;
 }
 
+form label {
+  color: whitesmoke;
+  font-weight: bold;
+}
+
 input {
   margin: 20px;
+  font-size: 24px;
+  padding: 5px;
+  border: none;
+  border-radius: 10px;
+}
+
+select {
+  font-size: 20px;
+  padding: 5px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 10px;
+  color: rgb(255, 20, 147);
 }
 
 .input-radio {
@@ -75,18 +118,36 @@ input {
 .radio-select {
   display: flex;
   flex-direction: column;
-  /* justify-content: center; */
+  justify-content: center;
   align-items: center;
   margin: 20px;
   min-width: 90px;
   color: whitesmoke;
   font-family: "Monoton", cursive;
-  font-size: 25px;
+  /* font-size: 25px; */
   /* font-family: "Bungee Shade", cursive; */
   /* text-transform: uppercase; */
 }
 
 .radio-choice {
+  font-size: 30px;
+}
+
+.radio-choice-duck {
+  font-size: 55px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+input[type="radio"] + span {
+  opacity: 0.7;
+  cursor: pointer;
+}
+
+input[type="radio"]:checked + span {
+  opacity: 1;
 }
 
 button {
@@ -96,4 +157,18 @@ button {
   border-radius: 10px;
   font-weight: bold;
   color: rgb(255, 20, 147);
+}
+
+.overview-container {
+  color: whitesmoke;
+  margin: 20px;
+  font-family: "Lilita One", cursive;
+}
+
+.overview-p {
+  /* border: solid 1px whitesmoke;
+  border-radius: 10px;
+  padding: 10px; */
+  margin: 0;
+  line-height: 20px;
 }

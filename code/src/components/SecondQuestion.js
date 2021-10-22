@@ -8,33 +8,35 @@ const SecondQuestion = ({ animalInput, onAnimalInputChange, onStepChange }) => {
       </h2>
       <section className="radio-container">
         <div className="radio-select">
-          <label htmlFor="animalInput">elephants</label>
-          <div className="radio-choice">
-            <input
-              type="radio"
-              value="elephant"
-              onChange={onAnimalInputChange}
-              checked={animalInput === "elephant"}
-            />
-            <span role="img" aria-label="elephant">
-              🐘
-            </span>
-          </div>
+          <label>
+            <div className="radio-choice">
+              <input
+                type="radio"
+                value="elephant"
+                onChange={onAnimalInputChange}
+                checked={animalInput === "elephant"}
+              />
+              <span role="img" aria-label="elephants">
+                🐘🐘🐘
+              </span>
+            </div>
+          </label>
         </div>
 
         <div className="radio-select">
-          <label htmlFor="animalInput">duck</label>
-          <div className="radio-choice">
-            <input
-              type="radio"
-              value="duck"
-              onChange={onAnimalInputChange}
-              checked={animalInput === "duck"}
-            />
-            <span role="img" aria-label="duck">
-              🦆
-            </span>
-          </div>
+          <label>
+            <div className="radio-choice-duck">
+              <input
+                type="radio"
+                value="duck"
+                onChange={onAnimalInputChange}
+                checked={animalInput === "duck"}
+              />
+              <span role="img" aria-label="duck">
+                🦆
+              </span>
+            </div>
+          </label>
         </div>
       </section>
       <button onClick={onStepChange}>Next Question</button>
