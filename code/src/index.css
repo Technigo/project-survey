@@ -8,6 +8,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: hidden;
+  overflow-x: hidden;
 
 }
 
@@ -24,14 +26,13 @@ code {
 }
 
 .header{
-  /* color: black; */
   margin: 0;
   border-bottom: 2px solid rgba(43, 41, 41, 0.1);
   margin-bottom: 1em;
 }
 
 h1{
-  /* text-transform: uppercase; */
+  
   font-family: 'Roboto';
   font-size: 1.7em;
 }
@@ -73,7 +74,7 @@ form{
 .witing-question{
     display: block;
     width:10em;
-    font-family: inherit;
+    font-family: 'Roboto';
     color: rgb(81, 73, 57);
     border: none;
     outline: none;
