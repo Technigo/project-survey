@@ -67,6 +67,9 @@ p {
   transition: 0.5s;
   outline: none;
 }
+.name-input[value] {
+  font-size: 20px;
+}
 
 .name-input[type="text"]:focus {
   border: 3px solid rgb(95, 0, 219);
@@ -137,6 +140,7 @@ input[type="radio"]:checked:before {
 }
 option[value] {
   background-color: rgba(83, 226, 107, 0.534);
+  font-size: 20px;
 }
 
 .weather-buttons input {
@@ -199,5 +203,8 @@ input[type="range"]::-webkit-slider-thumb {
   }
   h1 {
     font-size: 70px;
+  }
+  .weather-buttons input {
+    font-size: 20px;
   }
 }
