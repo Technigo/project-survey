@@ -85,7 +85,7 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
         }
         break;
       default:
-        console.error(error);
+        console.log("smth is not correct Wizard.js");
         break;
     }
   };
