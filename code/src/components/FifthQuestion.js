@@ -8,7 +8,7 @@ const FifthQuestion = ({
   return (
     <section className="form-wrapper">
       <form>
-        <h2>Submit a question you would like me to answer next lesson.</h2>
+        <h2>Submit a question you would like me to answer next class!</h2>
         <label htmlFor="questionInput"></label>
         <input
           id="questionInput"

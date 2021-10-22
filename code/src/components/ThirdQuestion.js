@@ -8,8 +8,10 @@ const ThirdQuestion = ({
   return (
     <section className="form-wrapper">
       <form>
-        <h2>How well do you feel you understand the content?</h2>
-        <label htmlFor="notatallwell-input">Not at all well</label>
+        <h2>How well do you feel you understood the content?</h2>
+        <label className="radiobutton-label" htmlFor="notatallwell-input">
+          Not at all well
+        </label>
         <input
           id="notatallwell-input"
           type="radio"
@@ -18,7 +20,9 @@ const ThirdQuestion = ({
           checked={radioButtonInput === "not at all well"}
         />
 
-        <label htmlFor="notsowell-input">Not so well</label>
+        <label className="radiobutton-label" htmlFor="notsowell-input">
+          Not so well
+        </label>
         <input
           id="notsowell-input"
           type="radio"
@@ -27,7 +31,9 @@ const ThirdQuestion = ({
           checked={radioButtonInput === "not so well"}
         />
 
-        <label htmlFor="somewhatwell-input">Somewhat well</label>
+        <label className="radiobutton-label" htmlFor="somewhatwell-input">
+          Somewhat well
+        </label>
         <input
           id="somewhatwell-input"
           type="radio"
@@ -36,7 +42,9 @@ const ThirdQuestion = ({
           checked={radioButtonInput === "somewhat well"}
         />
 
-        <label htmlFor="verywell-input">Very well</label>
+        <label className="radiobutton-label" htmlFor="verywell-input">
+          Very well
+        </label>
         <input
           id="verywell-input"
           type="radio"
@@ -45,7 +53,9 @@ const ThirdQuestion = ({
           checked={radioButtonInput === "very well"}
         />
 
-        <label htmlFor="extremelywell-input">Extremely well</label>
+        <label className="radiobutton-label" htmlFor="extremelywell-input">
+          Extremely well
+        </label>
         <input
           id="extremelywell-input"
           type="radio"

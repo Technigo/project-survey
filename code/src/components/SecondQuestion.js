@@ -8,7 +8,7 @@ const SecondQuestion = ({
   return (
     <section className="form-wrapper">
       <form>
-        <h2>How do you feel after today's lesson?</h2>
+        <h2>How do you feel after today's class?</h2>
         <label htmlFor="dropDownInput"></label>
         <select
           id="dropDownInput"

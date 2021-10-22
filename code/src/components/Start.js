@@ -11,12 +11,10 @@ const Start = ({ onStepChange }) => {
           Please take a few minutes to reflect on today's class!
           <span role="img" aria-label="woman teacher">
             {" "}
-            👩🏼‍🏫
+            ✏️
           </span>
         </p>
-        <button className="start-button" onClick={onStepChange}>
-          Start here
-        </button>
+        <button onClick={onStepChange}>Start here</button>
       </form>
     </section>
   );

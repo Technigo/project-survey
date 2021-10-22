@@ -1,18 +1,34 @@
 h1 {
-  font-family: "Abril Fatface", cursive;
+  font-family: "Reenie Beanie", cursive;
   letter-spacing: 2px;
-  font-size: 48px;
+  font-size: 60px;
   text-transform: uppercase;
+  text-align: center;
+  margin: 30px;
 }
 
-.start-button {
-  font-family: "Abril Fatface", cursive;
-  font-size: 24px;
+button {
+  font-family: "Roboto", sans-serif;
+  color: #f5eee8;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
   letter-spacing: 2px;
   padding: 20px;
-  margin: 30px 0;
+  margin: 50px 0;
   cursor: pointer;
-  font-size: 24px;
-  border: 1px solid green;
-  background: green;
+  border: 1px solid #de7254;
+  background: #de7254;
 }
+
+/* @media (min-width: 768px) {
+  h1 {
+    font-size: 75px;
+  }
+}
+
+@media (min-width: 992px) {
+  h1 {
+    font-size: 85px;
+  }
+} */
