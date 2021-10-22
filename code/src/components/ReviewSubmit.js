@@ -25,6 +25,8 @@ const ReviewSubmit = ({ answers }) => {
         <span style={phraseStyle}>{answers[1]}</span> writen in {answers[3]}.
       </p>
       <p>We hope you like the {answers[2]} background!</p>
+      <p>{answers[4]}</p>
+
       <p>Here's a CSS code snippet you might like:</p>
       <div className="css-container">
           <p className="css-first-line">

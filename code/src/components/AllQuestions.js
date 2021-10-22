@@ -30,6 +30,12 @@ const questions = [
     inputType: "select",
     options: ["Times New Roman", "Arial", "Courier New", "Brush Script MT", "Roboto", "Comic Sans MS"],
   },
+  {
+    number: 5,
+    text: "What is your font weight?",
+    inputType: "radio",
+    options: ["bold", "normal"],
+  },
 ];
 
 const AllQuestions = () => {
