@@ -5,6 +5,11 @@ emoji-slider {
   --emoji-slider-bar-active-color: rgb(223, 192, 192);
 }
 
+:root  {
+  --main-bg-color: #74d1db;
+}
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -50,10 +55,19 @@ h3 {
   text-shadow: 1px 1px #47777c;
 }
 
+h4 {
+  font-family: 'Truculenta', sans-serif;
+  color: #d48287;
+  font-size: 22px;
+  line-height: 100%;
+  font-weight: 800;
+  text-align: center;
+}
+
 
 p {
   font-family: 'Truculenta', sans-serif;
-  color: #161b1b;
+  color: #000000;
   font-size: 20px;
   line-height: 110%;
   font-weight: 400;

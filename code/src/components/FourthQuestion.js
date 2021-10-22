@@ -14,7 +14,6 @@ const FourthQuestion = ({ selected, onSelect }) => {
             />       
         <div>
 
-<h2 className="quote">"Rememeber! A balanced diet is a cookie in each hand!"</h2>
 </div>
         
         </>

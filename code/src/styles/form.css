@@ -1,9 +1,8 @@
 /*form*/
-
 .wrapper {
     height: 100vh;
     padding: 0px 30px 0px 30px;
-    background-color: #74d1db;
+    background-color: var(--main-bg-color);
 }
 
 .form-wrapper {
@@ -21,15 +20,15 @@
     margin-bottom: 10px;
 }
 
+/*alert*/
 .alert {
-    color: #bb1082;
+    color: #14626b;
     font-size: 16px;
     font-weight: 700;
     font-family: 'Truculenta', sans-serif;
 }
 
 /*input*/
-
 input[type=text] {
     width: 100%;
     background-color: #45c5cf;
@@ -66,12 +65,11 @@ input[type=date] {
     outline: none;
 }
 
-input:-webkit-autofill,
-  input:-webkit-autofill:focus {
+input:-webkit-autofill, input:-webkit-autofill:focus {
     transition: background-color 600000s 0s, color 600000s 0s;
     font-family: 'Truculenta', sans-serif;
     font-size: 16px;
-  }
+}
 
 ::placeholder {
     color: rgb(0, 0, 0);
@@ -79,14 +77,12 @@ input:-webkit-autofill,
     font-family: 'Truculenta', sans-serif;
 }
 
-
 /*select drop-down*/
 
 .custom-select select {
     font-family: 'Truculenta', sans-serif;
     font-size: 16px;
     color: rgb(0, 0, 0);
-    
 }
 
 .custom-select {
@@ -124,16 +120,16 @@ input:-webkit-autofill,
     outline: none;
 }
 
-
 /*radiobuttons*/
+
 .wrapper-row {
     display: grid;
     grid-template-columns: repeat(3, 1fr)
 }
 
 span.pastry-name {
-font-family: 'Truculenta', sans-serif;
-font-size: 14px;
+    font-family: 'Truculenta', sans-serif;
+    font-size: 14px;
 }
 
 .radiobutton-container {
@@ -154,40 +150,40 @@ font-size: 14px;
 }
 
 .custom-radio {
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 19px;
-  width: 19px;
-  background-color: #eee;  
-  cursor: pointer;
-  border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 19px;
+    width: 19px;
+    background-color: #eee;
+    cursor: pointer;
+    border-radius: 50%;
 }
 
-.radiobutton-container:hover input ~.custom-radio{
-    background-color:#fbdadc;
+.radiobutton-container:hover input~.custom-radio {
+    background-color: #fbdadc;
 }
 
-.radiobutton-container input:checked ~.custom-radio{
+.radiobutton-container input:checked~.custom-radio {
     background-color: #f6acb0;
 }
 
 .custom-radio:after {
-content: "";
-position: absolute;
-top: 6px;
-left:6px;
-width: 7px;
-height: 7px;
-background-color: white;
-border-radius: 50%;
-display: none;
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: 6px;
+    width: 7px;
+    height: 7px;
+    background-color: white;
+    border-radius: 50%;
+    display: none;
 }
 
-.radiobutton-container input:checked ~.custom-radio::after{
-display: block;
+.radiobutton-container input:checked~.custom-radio::after {
+    display: block;
 }
-
+/*date input*/
 
 .date-row {
     font-size: 23px;
@@ -196,11 +192,11 @@ display: block;
     font-family: 'Truculenta', sans-serif;
 }
 
-.quote {
-    font-size: 23px;
-    margin-top: 25px;
-    font-family: 'Truculenta', sans-serif;
-    text-align: center;
+/*sumbit*/
+
+.submit {
+    display: flex;
+    justify-content: center;
 }
 
 .submit-button {
@@ -214,7 +210,6 @@ display: block;
     cursor: pointer;
     background-color: #f6acb0;
     color: black;
-   
 }
 
 .submit-button:hover {
@@ -223,6 +218,8 @@ display: block;
     transform: scale(1.1);
     transition: .3s ease;
 }
+
+/*reset bottom on summary site*/
 
 .reset-button {
     cursor: pointer;
@@ -236,23 +233,20 @@ display: block;
 }
 
 .summary {
-padding: 20px;
+    padding: 20px;
 }
 
-/*tablet*/
+/*tablet & desktop*/
 
 @media (min-width: 768px) {
     .form-wrapper {
-      padding: 25px;
+        padding: 25px;
     }
     #form {
         margin-top: 50px;
         align-items: center;
     }
-.react-datepicker-wrapper {
-    width: auto;
-}
-
-
-    
+    .react-datepicker-wrapper {
+        width: auto;
+    }
 }

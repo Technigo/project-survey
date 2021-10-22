@@ -49,7 +49,6 @@ const Form = () => {
         }
     }
 
-    // v1
     return (
         <div id="form">
             {showSummary === false && (

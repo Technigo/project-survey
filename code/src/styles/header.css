@@ -53,7 +53,7 @@
 
 /* MEDIA QUERIES */
 
-/*TABLET*/
+/*TABLET & desktop*/
 
 @media (min-width: 768px) {
 
@@ -70,10 +70,4 @@
     top: 60%;
    }
 
-}
-
-/*DESKTOP*/
-
-@media (min-width: 1024px) {
-  
 }
