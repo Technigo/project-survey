@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionFive = ({selectValue, onSelect2OptionChange, onStepChange}) => {
+const QuestionFive = ({selectValue, onSelect2OptionChange, onStepChange, onStepBackChange}) => {
     const options = [
         {
             label: "Choose here",
@@ -47,8 +47,9 @@ const QuestionFive = ({selectValue, onSelect2OptionChange, onStepChange}) => {
                 ))}
             </select>
             <div className="buttons">
-                <button onClick={onStepChange} href="#four" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
-            </div>
+              <button onClick={onStepBackChange} href="#two" className="btn"> <span role="img" aria-label="handpointer">👈🏽</span> Go back!</button>
+              <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+           </div>
         </form>
     </section>
     )

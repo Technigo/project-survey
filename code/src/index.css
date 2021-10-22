@@ -24,7 +24,11 @@ body {
   background-color: #1a1a1a;
   color: #fff;
   padding: 1rem;
+  height: 100vh;
 }
+
+
+/* TEXT STYLING */
 
 a {
   text-decoration: none;
@@ -32,15 +36,39 @@ a {
   font-size: 1rem;
 }
 
-.section {
-  display: flex;
-  flex-direction: column;
-  max-width: 700px;
-  margin: auto;
-  /* padding: 5rem 0; */
+h1 {
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 48px;
+  margin: 3rem 0 3rem 0;
 }
 
-.intro {
+h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 30px;
+  width: 80%;
+  margin: auto;
+  padding-top: 2rem;
+}
+
+h4 {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+p {
+  display: inline-block;
+  font-size: 1rem;
+  width: 90%;
+  margin: 1rem;
+}
+
+
+/* COMMON STYLING FOR STEPS */
+
+.section {
   display: flex;
   flex-direction: column;
   max-width: 700px;
@@ -53,46 +81,48 @@ a {
   text-align: center;
 }
 
-
-h1 {
-  font-weight: 900;
-  font-size: 40px;
-  line-height: 48px;
-  margin: 3rem 0 3rem 0;
+.form {
+  display: flex;
+  flex-direction: column;
+  background-color: #222;
+  border-radius: 12px;
+  padding: 1.5rem;
 }
-
-h2 {
-  font-weight: 900;
-  font-size: 24px;
-  line-height: 30px;
-  width: 80%;
-  margin: auto;
-  padding-top: 2rem;
-}
-
-p {
-  display: inline-block;
-  font-size: 1rem;
-  width: 90%;
-  margin: 1rem;
-}
-
 
 .btn {
+  width: 48%;
   border-radius: 24px;
   background-color: #fff;
   font-family: poppins;
   font-weight: 600;
-  font-size: 1.125rem;
+  font-size: 1rem;
   border: 0;
   height: 48px;
-  padding: 0 1rem 0 1rem;
-  margin: 1rem 0;
   cursor: pointer;
-  width: 100%;
 }
 
+/* BUTTON CONTAINER STICKY */
+
+  .buttons {
+    position: fixed;
+    position:-webkit-sticky; 
+    padding: 3rem 1rem 3rem 1rem;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    display: flex;	
+    align-items: center;
+    justify-content: space-between;
+    height: 48px;  
+    background-color: #1a1a1a;
+}
+
+
+/* FOR INTRO AND START OVER BUTTON */
+
 .start-btn {
+  display: block;
   border-radius: 24px;
   background-color: #fff;
   font-family: poppins;
@@ -101,17 +131,29 @@ p {
   border: 0;
   height: 48px;
   padding: 0 4rem 0 4rem;
-  margin: 1rem 0;
-  cursor: pointer;
-}
-
-
-.buttons {
-  display: flex;
+  width: 200px;
   margin: auto;
-  width: 100%;
-  justify-content: center;
 }
+
+.startover-btn {
+  display: block;
+  border-radius: 24px;
+  background-color: #fff;
+  font-family: poppins;
+  font-weight: 600;
+  font-size: 1.125rem;
+  border: 0;
+  height: 48px;
+  padding: 0 4rem 0 4rem;
+  margin: auto;
+}
+
+.end-button {
+  padding-top: 3rem;
+}
+
+
+/* FORM ELEMENTS */
 
 input {
   display: block;
@@ -135,20 +177,10 @@ select {
   background-position-x: 95%;
 }
 
-.form {
-  display: flex;
-  flex-direction: column;
-  background-color: #222;
-  border-radius: 12px;
-  padding: 1.5rem;
-  max-width: 700px;
-}
-
 .radio-label {
   display: flex;
   flex: row;
   align-items: center;
-  justify-content: left
 }
 
 .radio-select {
@@ -156,6 +188,9 @@ select {
   margin: 0 1rem 0 0;
 }
 
+
+
+/* SUMMERY */
 
 .summery-list-item {
   display: flex;
@@ -172,11 +207,8 @@ select {
   margin: 0;
 }
 
-h4 {
-  font-size: 14px;
-  font-weight: 400;
-  margin: 0;
-}
+
+/* BACKGROUND ANIMATION */
 
 .circle{
   position: absolute;
@@ -188,15 +220,19 @@ h4 {
 }
 
 .small {
-  width: 150px;
-  height: 150px;
+  width: 100px;
+  height: 100px;
   left: 40px;
-  bottom: 50px;
+  bottom: 100px;
   background-color: #444;
 }
 
 .medium {
-  display: none;
+  width: 120px;
+  height: 120px;
+  left: 220px;
+  bottom: 50px;
+  background-color: rgb(204, 69, 186);
 }
 
 .large {
@@ -208,14 +244,18 @@ h4 {
 }
 
 .xlarge {
-  display: none;
+  width: 120px;
+  height: 120px;
+  left: 240px;
+  bottom: 550px;
+  background-color: yellow;
 }
 
 .xxlarge {
-  width: 400px;
-  height: 400px;
+  width: 200px;
+  height: 200px;
   left: 100px;
-  bottom: 100px;
+  bottom: 200px;
   background-color: aqua;
 }
 
@@ -253,7 +293,10 @@ h4 {
 }
 
 
-@media (min-width: 768px) {
+
+/* MEDIAQUERIES */
+
+@media (min-width: 991px) {
 
   body {
     padding-top: 9rem;
@@ -273,24 +316,6 @@ h4 {
     font-size: 1.5rem;
   }
 
-  .medium {
-    display: block;
-    width: 200px;
-    height: 200px;
-    left: 1100px;
-    bottom: 50px;
-    background-color: rgb(141, 46, 98);
-  }
-
-  .xlarge {
-    display: block;
-    width: 500px;
-    height: 500px;
-    left: 1000px;
-    bottom: 500px;
-    background-color: yellow;
-  }
-
   .radio-label {
     display: flex;
     flex-direction: row;
@@ -305,6 +330,47 @@ h4 {
 
   .intro-text {
     padding-top: 3rem;
+  }
+
+  .btn {
+    font-size: 1.125rem;
+    padding: 0 3rem 0 3rem;
+    width: auto;
+  }
+
+  .buttons {
+    padding: 4rem 3rem;
+}
+
+
+  /* BACKGROUND ANIMATION */
+
+  .small {
+    width: 150px;
+    height: 150px;
+    left: 40px;
+    bottom: 50px;
+  }
+
+  .medium {
+    width: 200px;
+    height: 200px;
+    left: 1100px;
+    bottom: 50px;
+  }
+
+  .xlarge {
+    width: 500px;
+    height: 500px;
+    left: 1000px;
+    bottom: 500px;
+  }
+
+  .xxlarge {
+    width: 400px;
+    height: 400px;
+    left: 100px;
+    bottom: 100px;
   }
   
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionFour = ({radioInput, onRadioInputChange, onStepChange}) => {
+const QuestionFour = ({radioInput, onRadioInputChange, onStepChange, onStepBackChange}) => {
 
     const radioValues = ['Your family', 'Your dog', 'Your friends', 'All together']
 
@@ -24,10 +24,11 @@ const QuestionFour = ({radioInput, onRadioInputChange, onStepChange}) => {
                 {radioValue}
             </label>
             ))}
-            <div className="buttons">
-                <button onClick={onStepChange} id="#summery" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
-            </div>
         </form>
+        <div className="buttons">
+            <button onClick={onStepBackChange} href="#two" className="btn"> <span role="img" aria-label="handpointer">👈🏽</span> Go back!</button>
+            <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+        </div>
     </section>
     )
 }

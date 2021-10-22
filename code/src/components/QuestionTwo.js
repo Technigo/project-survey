@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionTwo = ({guestInput, nameInput, onGuestInputChange, onStepChange}) => {
+const QuestionTwo = ({guestInput, nameInput, onGuestInputChange, onStepChange, onStepBackChange}) => {
     return (
     <section className="section" id="two">
          <div className="intro-text">
@@ -16,10 +16,11 @@ const QuestionTwo = ({guestInput, nameInput, onGuestInputChange, onStepChange}) 
                 value={guestInput} 
                 onChange={onGuestInputChange}
             />
-             <div className="buttons">
-                <button onClick={onStepChange} href="#three" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
-            </div>
         </form>
+        <div className="buttons">
+            <button onClick={onStepBackChange} href="#intro" className="btn"> <span role="img" aria-label="handpointer">👈🏽</span> Go back!</button>
+            <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+        </div>
     </section>
     )
 }

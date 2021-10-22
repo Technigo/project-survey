@@ -43,6 +43,10 @@ const Form = () => {
       setStep(step + 1)
   }
 
+  const onStepBackChange = () => {
+    setStep(step - 1)
+}
+
 
   return (
     <main>
@@ -59,6 +63,7 @@ const Form = () => {
                 nameInput={nameInput}
                 onNameInputChange={onNameInputChange}
                 onStepChange={onStepChange}
+                onStepBackChange={onStepBackChange}
             />
             )}
         {step === 2 && (
@@ -69,6 +74,7 @@ const Form = () => {
                 guestInput={guestInput}
                 onGuestInputChange={onGuestInputChange}
                 onStepChange={onStepChange}
+                onStepBackChange={onStepBackChange}
             />
             </>
         )}
@@ -77,6 +83,7 @@ const Form = () => {
                 selectOption={selectOption}
                 onSelectOptionChange={onSelectOptionChange}
                 onStepChange={onStepChange}
+                onStepBackChange={onStepBackChange}
             />
          )}
         {step === 4 && (
@@ -84,6 +91,7 @@ const Form = () => {
                 radioInput={radioInput}
                 onRadioInputChange={onRadioInputChange}
                 onStepChange={onStepChange}
+                onStepBackChange={onStepBackChange}
             />
          )}
           {step === 5 && (
@@ -91,6 +99,7 @@ const Form = () => {
                 select2Option={select2Option}
                 onSelect2OptionChange={onSelect2OptionChange}
                 onStepChange={onStepChange}
+                onStepBackChange={onStepBackChange}
             />
          )}
          {step === 6 && (
@@ -100,6 +109,7 @@ const Form = () => {
                 selectOption={selectOption}
                 radioInput={radioInput}
                 select2Option={select2Option}
+                onStepBackChange={onStepBackChange}
             />
          )}
     </main>

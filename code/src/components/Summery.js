@@ -29,8 +29,8 @@ const Summery = ({nameInput, guestInput, selectOption, radioInput, select2Option
           <p className="summery-value">{select2Option}</p>
         </div>
       </div>
-      <div className="buttons">
-        <button onClick={() => window.location.reload(false)} className="btn">Let's talk some more <span role="img" aria-label="handpointer">🤩</span></button>
+      <div class="end-button">
+        <button onClick={() => window.location.reload(false)} className="startover-btn">Let's talk some more <span role="img" aria-label="handpointer">🤩</span></button>
       </div>
     </section>
     )

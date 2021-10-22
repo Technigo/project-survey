@@ -1,12 +1,12 @@
 import React from 'react'
 
-const QuestionOne = ({ nameInput, onNameInputChange, onStepChange}) => {
+const QuestionOne = ({ nameInput, onNameInputChange, onStepChange, onStepBackChange}) => {
     // const { nameInput, onNameInputChange } = props
     return (
         <section className="section" id="one" >
             <div className="intro-text">
             <label>ALL YOU NEED IS LOVE</label>
-                <h2>I'd love to know your name! My name is Jessi, what is yours?</h2>
+                <h2>I would love to know your name! My name is Jessi, what is yours?</h2>
                 <p>Did you know that the most popular names over the last 100 years are James & Mary?</p>
             </div>
             <form id="question-one" className="form">
@@ -17,10 +17,12 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange}) => {
                     value={nameInput}
                     onChange={onNameInputChange}
                 />
-                <div className="buttons">
-                    <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
-                </div>
             </form>
+            <div className="buttons">
+                <button onClick={onStepBackChange} href="#two" className="btn"> <span role="img" aria-label="handpointer">👈🏽</span> Go back!</button>
+                <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+            </div>
+            
         </section>
     )
 
