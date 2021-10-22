@@ -5,7 +5,7 @@ const seats = ['Standing', 'Sitting', 'VIP-section'];
 const FourthQuestion = ({
   seatChoice,
   onSeatChoiceSet,
-  onStepChange
+  onStepChange, onStepGoBack
 }) => {
   return (
     <form className="seat-choice">
@@ -28,6 +28,9 @@ const FourthQuestion = ({
         )
       )}
       </ul>
+      <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
       <button className="button" onClick={onStepChange}>
         See overview
       </button>

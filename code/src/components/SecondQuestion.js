@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SecondQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange }) => {
+const SecondQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange, onStepGoBack }) => {
   return (
     <form>
       <label htmlFor="genre-select">
@@ -23,7 +23,9 @@ const SecondQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange }) => {
         <option value="Singer/Songwriter">Singer/Songwriter</option>
         <option value="Electronic dance music">Electronic dance music</option>
       </select>
-
+      <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
       <button className="button" onClick={onStepChange}>
         Next Question
       </button>

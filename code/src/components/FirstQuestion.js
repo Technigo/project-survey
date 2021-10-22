@@ -8,7 +8,7 @@ const venues = [
   'Larger outside venue',
 ];
 
-const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountChoiceSet }) => {
+const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountChoiceSet, onStepGoBack }) => {
   return (
     <form className="arena-choice">
       <h1>What kind of venue would you like to be in?</h1>
@@ -33,7 +33,9 @@ const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountCh
         Pick amount:
         <input onChange={onAmountChoiceSet} type="number" id="amount" name="amount-of-tickets" min="1" max="10" />
       </label>
-
+      <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
       <button className="button" onClick={onStepChange}>
         Next question
       </button>

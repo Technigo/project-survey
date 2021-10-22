@@ -6,7 +6,7 @@ import Rap from './Rap';
 import Songwriter from './Songwriter';
 import Electric from './Electric';
 
-const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange }) => {
+const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange, onStepGoBack }) => {
   if (genreChoice === 'Heavy Metal') {
     return (
       <>
@@ -15,6 +15,9 @@ const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange 
           bandChoice={bandChoice}
           onBandChoiceSet={onBandChoiceSet}
         />
+        <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
         <button className="button" onClick={onStepChange}>
           Next Question
         </button>
@@ -24,6 +27,10 @@ const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange 
     return (
       <>
         <Pop genreChoice={genreChoice} bandChoice={bandChoice} onBandChoiceSet={onBandChoiceSet} />
+
+        <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
         <button className="button" onClick={onStepChange}>
           Next Question
         </button>
@@ -42,6 +49,9 @@ const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange 
     return (
       <>
         <Rap genreChoice={genreChoice} bandChoice={bandChoice} onBandChoiceSet={onBandChoiceSet} />
+        <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
         <button className="button" onClick={onStepChange}>
           Next Question
         </button>
@@ -55,6 +65,9 @@ const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange 
           bandChoice={bandChoice}
           onBandChoiceSet={onBandChoiceSet}
         />
+        <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
         <button className="button" onClick={onStepChange}>
           Next Question
         </button>
@@ -68,6 +81,9 @@ const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange 
           bandChoice={bandChoice}
           onBandChoiceSet={onBandChoiceSet}
         />
+        <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
         <button className="button" onClick={onStepChange}>
           Next Question
         </button>

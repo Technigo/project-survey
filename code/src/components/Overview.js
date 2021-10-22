@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Overview = ({genreChoice, bandChoice, seatChoice, arenaChoice, tickets}) => {
+const Overview = ({genreChoice, bandChoice, seatChoice, arenaChoice, tickets, onStepGoBack, goBackToStart}) => {
   return (
     <form>
       <h1>Congratulations!</h1>
@@ -10,7 +10,14 @@ const Overview = ({genreChoice, bandChoice, seatChoice, arenaChoice, tickets}) =
       <p>You chose this band: {bandChoice}</p>
       <p>You chose this seat: {seatChoice}</p>
       <p>Great! We will send you your tickets! Have fun!</p>
+      <button className="button" onClick={goBackToStart}>
+        Go back to start
+      </button>
+      <button className="button" onClick={onStepGoBack}>
+        Previous question
+      </button>
     </form>
+    
   );
 };
 

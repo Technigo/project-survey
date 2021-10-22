@@ -39,6 +39,14 @@ const Form = () => {
     setStep(step + 1);
   };
 
+  const onStepGoBack = () => {
+    setStep(step - 1);
+  };
+
+  const goBackToStart = () => {
+    setStep(step - 5);
+  };
+
   return (
     <div>
       {step === 0 && <Greeting onStepChange={onStepChange} />}
@@ -47,6 +55,7 @@ const Form = () => {
           arenaChoice={arenaChoice}
           onArenaChoiceSet={onArenaChoiceSet}
           onStepChange={onStepChange}
+          onStepGoBack={onStepGoBack}
           onAmountChoiceSet={onAmountChoiceSet}
           tickets={tickets}
         />
@@ -56,6 +65,7 @@ const Form = () => {
           genreChoice={genreChoice}
           onGenreChoiceSet={onGenreChoiceSet}
           onStepChange={onStepChange}
+          onStepGoBack={onStepGoBack}
         />
       )}
       {step === 3 && (
@@ -63,6 +73,7 @@ const Form = () => {
           bandChoice={bandChoice}
           onBandChoiceSet={onBandChoiceSet}
           onStepChange={onStepChange}
+          onStepGoBack={onStepGoBack}
           genreChoice={genreChoice}
         />
       )}
@@ -71,7 +82,7 @@ const Form = () => {
           seatChoice={seatChoice}
           onSeatChoiceSet={onSeatChoiceSet}
           onStepChange={onStepChange}
-
+          onStepGoBack={onStepGoBack}
         />
       )}
       {step === 5 && (
@@ -80,7 +91,9 @@ const Form = () => {
           bandChoice={bandChoice}
           seatChoice={seatChoice}
           genreChoice={genreChoice}
+          onStepGoBack={onStepGoBack}
           tickets={tickets}
+          goBackToStart={goBackToStart}
         />
       )}
     </div>
