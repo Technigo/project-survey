@@ -4,7 +4,7 @@ This week's project was to build a survey tool using React. The goal was to cont
 
 ## The problem
 
-I work as a teacher alongside the bootcamp and decided to make a formative assessment tool ("Exit Ticket") that could be used at the end of my classes to help the studens reflect on what they have learned and how they feel about the course. In the beginning I focused on creating all the components and writing the code that I needed in order to make all he steps in the survey work. It took me some time to make all the HTML form inputs work properly and also to do the styling of them. In the end everything turned out well, but if I had more time I would:
+I work as a teacher alongside the bootcamp and decided to make a formative assessment tool ("Exit Ticket") that could be used at the end of my classes to help the studens reflect on what they have learned and how they felt about the lesson. In the beginning I focused on creating all the components and writing the code that I needed in order to make all he steps in the survey work. It took me some time to make all the HTML form inputs work properly and also to do the styling of them. In the end everything turned out well, but if I had more time I would:
 
 -Structure the JS and CSS code better and create more components (for example for the button).
 
