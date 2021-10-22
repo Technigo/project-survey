@@ -11,11 +11,12 @@ const Summary = ({ nameInput, interestInput, ageInput, moodInput }) => {
           and coding is not always the best combination
         </p>
         <p>
-          It is nice that you dont hate {interestInput} as much as the other,
-          way to go on looking on the bright side of life.{" "}
+          It is nice that you dont hate {interestInput} as much as the other
+          stuff, way to go on looking on the bright side of life.{" "}
         </p>
         <p>
-          Take your hour to {ageInput} and {moodInput}
+          {ageInput} on your free hour and you will feel more than {moodInput}{" "}
+          about you know what !
         </p>
       </article>
 

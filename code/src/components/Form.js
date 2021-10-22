@@ -12,7 +12,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [interestInput, setInterestInput] = useState("");
   const [ageInput, setAgeInput] = useState("");
-  const [moodInput, setMoodInput] = useState(50);
+  const [moodInput, setMoodInput] = useState(0);
   const [step, setStep] = useState(0);
   // const [value, updateValue] = useState(20);
 
@@ -52,7 +52,6 @@ const Form = () => {
     <>
       <BackgroundImg />
       <main className="main">
-        {/* <div aria-label="" className="container"> */}
         {step === 0 && (
           <section className="start-page-container">
             <StartPage onStepChange={onStepChange} />
@@ -112,13 +111,11 @@ const Form = () => {
             <Progressbar done={(step / numberOfQuestions) * 100} />
           </section>
         )}
-        {/* </div>  */}
       </main>
       <footer class="footer">
         <p>by Elin Diczfalusy </p>
         <p> 2021 Student project via Technigo</p>
       </footer>
-      ;
     </>
   );
 };

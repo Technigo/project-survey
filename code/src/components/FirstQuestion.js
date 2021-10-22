@@ -6,9 +6,8 @@ const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
   return (
     <form onSubmit={handleSubmit}>
       <h2 className="page-header">Your name please</h2>
-      <label className="label" htmlFor="nameInput">
-        <p>What name would suit you when you "vabbar"</p>
-      </label>
+      <p>What nickname would suit you when you "vabbar"?</p>
+      <label className="label" htmlFor="nameInput"></label>
       <input
         className="input-first-question"
         id="nameInput"

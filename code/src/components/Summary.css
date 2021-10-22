@@ -3,3 +3,12 @@
   padding: 10px;
   border-radius: 10px;
 }
+
+.summary-container {
+  max-width: 500px;
+}
+
+.summary-text p {
+  font-size: 18px;
+  margin: 5px 0;
+}

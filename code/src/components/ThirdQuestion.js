@@ -12,7 +12,7 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
   ];
 
   return (
-    <form onSubmit={handleSubmit} id="thirdQuestion" className="form">
+    <form onSubmit={handleSubmit}>
       <h2 className="page-header">You have one hour off..</h2>
       <p>..what will you do?</p>
       {ageGroup.map(group => (
