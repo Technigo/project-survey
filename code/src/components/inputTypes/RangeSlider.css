@@ -14,7 +14,6 @@ input[type="range"] {
   overflow: hidden;
   -webkit-appearance: none;
   background-color: #a0a0a0;
-  width: 200px;
 }
 
 input[type="range"]::-webkit-slider-runnable-track {

@@ -3,14 +3,14 @@ import './TextField.css'
 
 const TextField = ({value, setValue}) => {
   return (
-    <div onSubmit= {event => event.preventDefault()}>
-    <input
-      type="text"
-      onChange= {event => setValue(event.target.value)}
-      value= {value}
-      placeholder="Type here"
-    />  
-  </div>
+    <div>
+      <input
+        type="text"
+        onChange= {event => setValue(event.target.value)}
+        value= {value}
+        placeholder="Type here"
+      />  
+    </div>
   )
 }
 
