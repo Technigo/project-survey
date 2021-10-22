@@ -2,6 +2,59 @@
     color: white;
 }
 
+.form_radio{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+.form_option_background{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 20px auto;
+    padding: 10px;
+    justify-content: center;
+}
+
+.form_radio_dark{
+    background: rgb(8, 32, 50);
+    color: white;
+}
+
+.form_radio_ligth{
+    background:white;
+    color: rgb(8, 32, 50);
+}
+
+.form_radio_label{
+    margin: 20px auto;
+    font-size: 1.5rem;  
+}
+
+
+.form_radio_input{
+    margin: 5px;
+    cursor: pointer;
+    color: white;
+}
+
+
+@media (min-width: 768px) {
+.form_option_background{
+    width: 40%;
+    flex-flow: column;
+}
+
+.form_radio{
+    flex-direction: row;
+}
+}
+
+@media (min-width: 992px) {
+}
+
 /* .answer_form_radio{
     color: white;
     font-size: 1.5rem;

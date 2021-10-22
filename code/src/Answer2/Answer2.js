@@ -14,7 +14,7 @@ const Answer2 = ({ answer, setResult, result }) => {
 
     return (
         <div className="answer_dropdown_container">
-            {answer.questionNumber === 2 &&
+            {
                 <>
                     <div className="answer_form_dropdown">
                         <select
@@ -23,6 +23,7 @@ const Answer2 = ({ answer, setResult, result }) => {
                             onChange={handleOnChange}
                             value={result.answer2}
                         >
+                            <option value=""></option>
                             {result.answer1 === "dark" && answer.options.dark.map(option => {
                                 return (
                                     <option value={option.character} key={option.character}>

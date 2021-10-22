@@ -14,9 +14,7 @@ const QuestionsCard = ({
     showHome,
     setShowHome,
     setResult,
-    result,
-    name,
-    setName
+    result
 }) => {
     const totalQuestions = data.questions.length;
 
@@ -49,26 +47,22 @@ const QuestionsCard = ({
         if (newCurrent === 0) {
             setShowHome(true)
         }
-
     }
 
     return (
         <div className="questionsCard_container">
-            <button className="questionsCard_return_button" onClick={previousQuestion}>Return</button>
+            <button className="questionsCard_return_button" onClick={previousQuestion}>Previous</button>
             <div className="questionsCard_text">
                 <Question question={question[0]} />
                 <AnswerCollector
                     answer={question[0]}
                     setResult={setResult}
                     result={result}
-                    setName={setName}
-                    name={name}
                     showHome={showHome}
                     setQuestionsRecord={setQuestionsRecord}
                     questionsRecord={questionsRecord}
                     setShowHome={setShowHome}
                     setCurrent={setCurrent}
-
                 />
             </div>
             <button className="questionsCard_next_button" onClick={nextQuestion}>Next</button>

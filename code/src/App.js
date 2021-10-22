@@ -10,7 +10,14 @@ export const App = () => {
   const [current, setCurrent] = useState(null)
   const [questionsRecord, setQuestionsRecord] = useState([])
   const [showStory, setShowStory] = useState(false)
-  const [result, setResult] = useState({ answer1: 'dark', answer3: 'Kamino' })
+  const [result, setResult] = useState({
+    answer1: 'dark',
+    answer2: '',
+    answer3: 'Kamino',
+    answer4: '',
+    answer5: 500,
+    asnwer6: ''
+  })
 
   return (
     <>
