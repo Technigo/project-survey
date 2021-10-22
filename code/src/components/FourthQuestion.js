@@ -9,20 +9,22 @@ const {flavour, onFlavourChange, onFinalQuestion, onStepChange} = props
         htmlFor="flavours" 
         className="form-label">
           Pick your popcorn flavour
-        </label>
+      </label>
 
-        <select 
-          value={flavour} 
-          onChange={onFlavourChange}
-          id="flavours">
-            <option value="salty" className="form-element">salty</option>
-            <option value="sweet" className="form-element">sweet</option>
-            <option value="garlic" className="form-element">garlic</option>
-            <option value="butter" className="form-element">butter</option>
-        </select>
+      <select 
+        value={flavour} 
+        onChange={onFlavourChange}
+        id="flavours">
+          <option value="salty" className="form-element">salty</option>
+          <option value="sweet" className="form-element">sweet</option>
+          <option value="garlic" className="form-element">garlic</option>
+          <option value="butter" className="form-element">butter</option>
+      </select>
       
+      <div className="button-container">
         <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
-      <button onClick={onFinalQuestion} className="form-button">See overview</button>
+        <button onClick={onFinalQuestion} className="form-button">See overview</button>
+      </div>
     </form>
   )
 }

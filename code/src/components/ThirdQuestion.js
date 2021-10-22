@@ -37,8 +37,10 @@ const {onFeelingChange, onStepChange} = props
         <span role="img" aria-label="sad-face">
           😥
         </span>
-        <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
-        <button onClick={() => onStepChange("next")} className="form-button">Next question</button>
+        <div className="button-container">
+          <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
+          <button onClick={() => onStepChange("next")} className="form-button">Next question</button>
+        </div>
         
     </form>
   )
