@@ -8,6 +8,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
 }
 
 code {
@@ -18,6 +19,7 @@ code {
 .wrapper{
   width:100vw;
   height:100vh;
+  background: #fcfcfc;
 
 }
 
@@ -47,14 +49,14 @@ form{
   margin:0;
   width:100vw;  
   animation-name: falling;
-  animation-duration: 5s;
+  animation-duration: 2s;
   animation-timing-function:ease-out;
   opacity: 1;
 }
 
 @keyframes falling {
   0% {
-    opacity:-5;
+    opacity:-1;
     transform: translateY(-10em);
   }
   50% {
@@ -81,7 +83,6 @@ form{
     box-shadow: rgb(81 73 57 / 30%) 0px 1px;
     margin-bottom: 1em;
     margin-top: 1em;
-    transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
 }
 
 
