@@ -23,16 +23,11 @@ const AnimalChoices = ({animalInput}) => {
         return (
             <img src="/assets/unicorn.png" alt = "Unicorn icon"></img>
         )
-    } else if (animalInput === "Tiger") {
+    } else {
         return (
             <img src="/assets/tiger.png" alt = "Tiger icon"></img>
         )
     }
-    else {
-        return (
-            <img></img>
-        )
-    } 
     
     }
 

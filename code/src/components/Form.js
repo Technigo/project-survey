@@ -52,24 +52,27 @@ import SellotapeQuestion from './SellotapeQuestion'
 
   if (step === 1) {
     return (
-      <div className="intro"> < FirstPage 
+      <div className = "intro"> 
+      <FirstPage 
       onstepChange = {onstepChange}/></div> 
     )
   }
    else if (step === 2) {
     return (
-      <div className="main"> < NameQuestion 
-      nameInput={nameInput} 
-      onNameInputChange={onNameInputChange}
+      <div className = "main"> 
+      <NameQuestion 
+      nameInput = {nameInput} 
+      onNameInputChange = {onNameInputChange}
       onstepChange = {onstepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div> 
     )
   } else if (step === 3) {
     return (
-      <div className="main"> <LocationQuestion 
-      locationInput={locationInput} 
-      onLocationInputChange={onLocationInputChange}
+      <div className = "main"> 
+      <LocationQuestion 
+      locationInput = {locationInput} 
+      onLocationInputChange = {onLocationInputChange}
       onstepChange = {onstepChange}
       onStepMinusChange = {onStepMinusChange}
       /> </div>
@@ -77,53 +80,58 @@ import SellotapeQuestion from './SellotapeQuestion'
     
   } else if (step === 4) {
     return (
-      <div className="main"> <FavouriteAnimal
-      animalInput={animalInput}
-      onAnimalInputChange={onAnimalInputChange}
+      <div className = "main"> 
+      <FavouriteAnimal
+      animalInput = {animalInput}
+      onAnimalInputChange = {onAnimalInputChange}
       onstepChange = {onstepChange}
       onStepMinusChange = {onStepMinusChange}
       /> </div>
     )
   } else if (step === 5) {
     return (
-      <div className="main"> <FavouriteColour 
-      colourInput={colourInput}
-      onColourInputChange={onColourInputChange}
+      <div className = "main"> 
+      <FavouriteColour 
+      colourInput = {colourInput}
+      onColourInputChange = {onColourInputChange}
       onstepChange = {onstepChange}
       onStepMinusChange = {onStepMinusChange}
       /> </div>
     )
   } else if (step === 6) {
     return (
-      <div className="main"> <AeroplaneQuestion 
-      aeroplaneInput={aeroplaneInput}
-      onAeroplaneInputChange={onAeroplaneInputChange}
+      <div className="main"> 
+      <AeroplaneQuestion 
+      aeroplaneInput = {aeroplaneInput}
+      onAeroplaneInputChange = {onAeroplaneInputChange}
       onstepChange = {onstepChange}
       onStepMinusChange = {onStepMinusChange}
-      />
-      </div>
+      /></div>
     )
   } else if (step === 7) {
     return (
-      <div className="main"> <OlderQuestion 
-      olderInput ={olderInput}
-      onOlderInputChange ={onOlderInputChange}
+      <div className = "main"> 
+      <OlderQuestion 
+      olderInput = {olderInput}
+      onOlderInputChange = {onOlderInputChange}
       onstepChange = {onstepChange}
-      onStepMinusChange = {onStepMinusChange}/>
-      </div>
+      onStepMinusChange = {onStepMinusChange}
+      /></div>
     )
   } else if (step === 8) {
     return (
-      <div className="main"> <SellotapeQuestion 
+      <div className = "main"> 
+      <SellotapeQuestion 
       sellotapeInput = {sellotapeInput}
       onSellotapeInputChange = {onSellotapeInputChange}
       onstepChange = {onstepChange}
-      onStepMinusChange = {onStepMinusChange}/>
-      </div>
+      onStepMinusChange = {onStepMinusChange}
+      /></div>
     )
 } else if (step === 9) {
   return (
-    <div className="main"> <Overview
+    <div className = "main"> 
+    <Overview
     nameInput = {nameInput}
     locationInput ={ locationInput}
     animalInput = {animalInput}
