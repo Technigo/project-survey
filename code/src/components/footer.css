@@ -1,0 +1,36 @@
+footer {
+  height: 250px;
+  background: linear-gradient(rgb(183, 214, 225) 0%, rgb(204, 249, 238) 100%);
+}
+
+.footer-text {
+  margin: 0;
+  color: white;
+  text-align: center;
+  padding-top: 50px;
+  font-style: italic;
+}
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-top: 10px;
+}
+
+.circles {
+  border: 2px solid white;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  width: 15px;
+  height: 20px;
+  padding: 8px;
+}

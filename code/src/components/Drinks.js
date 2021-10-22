@@ -1,12 +1,7 @@
 import React from "react";
 import "./drinks.css";
 
-const Drinks = ({
-  drink,
-  onDrinkChange,
-  onStepChange,
-  onPreviousQuestionChange,
-}) => {
+const Drinks = ({ drink, onDrinkChange, onStepChange, onStepBackChange }) => {
   // v1
   return (
     <div className="question-container">
@@ -32,7 +27,7 @@ const Drinks = ({
         </select>
 
         <div className="button-box">
-          <button className="next-button" onClick={onPreviousQuestionChange}>
+          <button className="next-button" onClick={onStepBackChange}>
              ← Go back?
           </button>
           <button className="next-button" onClick={onStepChange}>

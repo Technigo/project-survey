@@ -5,9 +5,8 @@ const Mentors = ({
   mentor,
   onMentorChange,
   onStepChange,
-  onPreviousQuestionChange,
+  onStepBackChange,
 }) => {
-  // v1
   return (
     <div className="question-container">
       <h2 className="question-title">
@@ -16,17 +15,19 @@ const Mentors = ({
       </h2>
       <form>
         <div className="bravomentor">
-          <lable className="mentorcardbox">
+          <label className="mentorcardbox">
             <input
               type="checkbox"
               value="Erika Jayne"
-              onChange={onMentorChange}
+              onChange={(event) =>
+                onMentorChange(event, "./pictures/Erika-Jayne.jpeg")
+              }
               checked={mentor === "Erika Jayne"}
             />
-            <span role="img">
+            <span role="img" aria-label="mentor">
               <img
                 className="mentorcard"
-                src="pictures/Erika-Jayne.jpeg"
+                src="./pictures/Erika-Jayne.jpeg"
                 alt="Erika Jayne"
               />
               <p className="mentorcard-text">
@@ -34,19 +35,21 @@ const Mentors = ({
                 give.
               </p>
             </span>
-          </lable>
+          </label>
 
-          <lable className="mentorcardbox">
+          <label className="mentorcardbox">
             <input
               type="checkbox"
               value="Tom Schwartz"
-              onChange={onMentorChange}
+              onChange={(event) =>
+                onMentorChange(event, "./pictures/tom-schwartz.png")
+              }
               checked={mentor === "Tom Schwartz"}
             />
-            <span role="img">
+            <span role="img" aria-label="mentor">
               <img
                 className="mentorcard"
-                src="pictures/tom-schwartz.png"
+                src="./pictures/tom-schwartz.png"
                 alt="Tom Schwartz"
               />
               <p className="mentorcard-text">
@@ -55,19 +58,21 @@ const Mentors = ({
                 bad cop, Tom is golden!
               </p>
             </span>
-          </lable>
+          </label>
 
-          <lable className="mentorcardbox">
+          <label className="mentorcardbox">
             <input
               type="checkbox"
               value="Kate Chastain"
-              onChange={onMentorChange}
+              onChange={(event) =>
+                onMentorChange(event, "./pictures/kate-chastain.jpeg")
+              }
               checked={mentor === "Kate Chastain"}
             />
-            <span role="img">
+            <span role="img" aria-label="mentor">
               <img
                 className="mentorcard"
-                src="pictures/kate-chastain.jpeg"
+                src="./pictures/kate-chastain.jpeg"
                 alt="Kate Chastain"
               />
               <p className="mentorcard-text">
@@ -76,19 +81,21 @@ const Mentors = ({
                 and earn the biggest tip of the season.
               </p>
             </span>
-          </lable>
+          </label>
 
-          <lable className="mentorcardbox">
+          <label className="mentorcardbox">
             <input
               type="checkbox"
               value="Craig Conover"
-              onChange={onMentorChange}
+              onChange={(event) =>
+                onMentorChange(event, "./pictures/craig-conover.jpg")
+              }
               checked={mentor === "Craig Conover"}
             />
-            <span role="img">
+            <span role="img" aria-label="mentor">
               <img
                 className="mentorcard"
-                src="pictures/craig-conover.jpg"
+                src="./pictures/craig-conover.jpg"
                 alt="Craig Conover"
               />
               <p className="mentorcard-text">
@@ -97,11 +104,11 @@ const Mentors = ({
                 make money while still being polite? Craig's your man!
               </p>
             </span>
-          </lable>
+          </label>
         </div>
 
         <div className="button-box">
-          <button className="next-button" onClick={onPreviousQuestionChange}>
+          <button className="next-button" onClick={onStepBackChange}>
             ← Go back?
           </button>
           <button className="next-button" onClick={onStepChange}>

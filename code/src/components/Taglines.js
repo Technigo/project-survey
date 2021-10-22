@@ -1,11 +1,7 @@
 import React from "react";
 import "./taglines.css";
 
-const Taglines = ({
-  onTaglineChange,
-  onStepChange,
-  onPreviousQuestionChange,
-}) => {
+const Taglines = ({ onTaglineChange, onStepChange, onStepBackChange }) => {
   // v1
   return (
     <div className="question-container">
@@ -28,6 +24,7 @@ const Taglines = ({
           <input
             className="taglines-quotes"
             type="radio"
+            name="tagline"
             value="I'm never disengaging, I'm reacting!"
             onChange={onTaglineChange}
           />
@@ -56,7 +53,7 @@ const Taglines = ({
           "I have fame and fortune, and I've googled it!"
         </label>
         <div className="button-box">
-          <button className="next-button" onClick={onPreviousQuestionChange}>
+          <button className="next-button" onClick={onStepBackChange}>
             ← Go back?
           </button>
           <button className="next-button" onClick={onStepChange}>

@@ -13,6 +13,11 @@
   font-style: italic;
 }
 
+.ment-box {
+  display: flex;
+  flex-direction: column;
+}
+
 @media (min-width: 730px) {
   .summarybox {
     width: 500px;

@@ -1,9 +1,3 @@
-.question-container {
-  display: flex;
-  justify-content: center;
-  background: #f8f1f1;
-}
-
 .name-form {
   display: flex;
   flex-direction: column;
@@ -24,24 +18,6 @@
   padding: 15px;
   border: 1px solid;
   border-radius: 15px 5px;
-}
-
-.next-button {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  font-size: 17px;
-  font-style: italic;
-  font-weight: bold;
-  color: rgb(247 149 25);
-  width: 200px;
-  margin: 15px 0;
-  padding: 10px;
-  background-color: rgb(252, 241, 225);
-  border: none;
-  border-radius: 10px 5px;
-  box-shadow: 3px 5px 8px #878787;
-  cursor: pointer;
 }
 
 @media (min-width: 730px) {
