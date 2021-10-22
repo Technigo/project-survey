@@ -14,7 +14,7 @@ const Form = () => {
     const [ageInput, setAgeInput] = useState('');
     const [style, setStyle] = useState('');
     const [costume, setCostume] = useState('');
-    const [mood, setMood] = useState('blood');
+    const [mood, setMood] = useState('');
     const [step, setStep] = useState(1);
     const [reboot, setReboot] = useState(1);
 
