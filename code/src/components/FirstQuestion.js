@@ -1,5 +1,7 @@
 import React from "react";
 
+// Question that asks for the users name. Button is disabled until user fills in some text input.
+
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   return (
     <section className="form-wrapper">

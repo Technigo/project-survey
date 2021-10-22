@@ -8,6 +8,8 @@ import FourthQuestion from "./FourthQuestion";
 import FifthQuestion from "./FifthQuestion";
 import Summary from "./Summary";
 
+// State hooks
+
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [dropDownInput, setDropDownInput] = useState("");
@@ -15,6 +17,8 @@ const Form = () => {
   const [textInput, setTextInput] = useState("");
   const [questionInput, setQuestionInput] = useState("");
   const [step, setStep] = useState(1);
+
+  // Functions that handle input from the user
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);

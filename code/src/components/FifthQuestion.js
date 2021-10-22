@@ -1,5 +1,7 @@
 import React from "react";
 
+// Here the user is asked to submit a question. Same structure as the fourth question
+
 const FifthQuestion = ({
   questionInput,
   onQuestionInputChange,

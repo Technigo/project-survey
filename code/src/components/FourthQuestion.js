@@ -1,5 +1,7 @@
 import React from "react";
 
+// Question with text input asking about one thing the user has learned
+
 const FourthQuestion = ({ textInput, onTextInputChange, onStepChange }) => {
   return (
     <section className="form-wrapper">

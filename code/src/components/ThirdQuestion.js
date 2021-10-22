@@ -1,5 +1,7 @@
 import React from "react";
 
+// Question with radio buttons about how well the user understood the content
+
 const ThirdQuestion = ({
   radioButtonInput,
   onRadioButtonInputChange,

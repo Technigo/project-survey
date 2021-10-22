@@ -1,5 +1,7 @@
 import React from "react";
 
+// Question that asks how the user feels and the user chooses an option from a drop-down menu
+
 const SecondQuestion = ({
   dropDownInput,
   onDropDownInputChange,
