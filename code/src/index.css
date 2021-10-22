@@ -48,8 +48,8 @@ h1 {
   font-size: 23px;
   font-weight: 500;
   border-radius: 50%;
-  text-align: center;
-  vertical-align: middle;
+  /* text-align: center;
+  vertical-align: middle; */
   overflow: hidden;
   transition: 0.4s;
   border: 0px;
@@ -176,6 +176,7 @@ select {
   border-radius: 50%;
   background: url('./assets/slider-img.png');
   cursor: pointer;
+  border: 0px;
 }
 
 .slider::-moz-range-thumb {
@@ -184,6 +185,7 @@ select {
   border-radius: 50%;
   background: url('./assets/slider-img.png');
   cursor: pointer;
+  border: 0px;
 }
 
 .slider-text {
