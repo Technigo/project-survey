@@ -5,7 +5,7 @@ const Answers = ({ name, food, game, email, snack, licoriceCandy, drink }) => {
   return (
     <div className="container">
       <div className="fifthQuestion">
-        <h1>That's it, well done!🎈 </h1>
+        <h1>That's it, well done! 🎈</h1>
         <h2>Your answers were:</h2>
         <p>
           <strong>Name:</strong> {name}
@@ -17,16 +17,15 @@ const Answers = ({ name, food, game, email, snack, licoriceCandy, drink }) => {
           <strong>Drink:</strong> {drink}
         </p>
         <p>
-          <strong>Game:</strong>
-          {game}
+          <strong>Game:</strong> {game}
         </p>
         {email === true && (
           <p>An email with your answers will also be sent to you. </p>
         )}
         {licoriceCandy === "I don't like licorice" && (
           <p>
-            I'm afraid that i have to end our friendship here. I can't be
-            friends with anyone that don't like licorice...
+            I'm afraid that I have to end our friendship here. I can't be
+            friends with anyone that doesn't like licorice...
           </p>
         )}
       </div>

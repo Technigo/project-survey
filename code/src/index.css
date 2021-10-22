@@ -18,6 +18,8 @@ html, body, #root, .outer-container {
 }
 .container {
   width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
 }
 footer {
   width: 100%;
@@ -134,6 +136,3 @@ footer h1 {
   font-size: 2em;
   margin: default auto;
 }
-
-
-

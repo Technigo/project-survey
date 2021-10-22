@@ -26,12 +26,11 @@ const Form = () => {
   const onDrinkChange = (event) => setDrink(event.target.value);
   const onEmailChange = (event) => setEmail(event.target.checked);
   const onStepChange = () => setStep(step + 1);
-  const onNoChange = () => setNo("no");
+  const onNoChange = () => setStep(10);
 
   return (
     <div className="outer-container">
       <header></header>
-      {no === "no" && <DontAttend />}
 
       {step === 0 && (
         <Attend onNoChange={onNoChange} onStepChange={onStepChange} />
@@ -83,6 +82,8 @@ const Form = () => {
           email={email}
         />
       )}
+
+      {step === 10 && <DontAttend />}
       <footer>
         <h1>Hedvig Mejstedt 🦁</h1>
       </footer>
