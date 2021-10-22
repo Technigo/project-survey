@@ -3,10 +3,10 @@
 
 h2 {
     color:whitesmoke;
-    font-size: 20px;
+    font-size: 24px;
     font-weight: 500;
     font-family: Helvetica, sans-serif;
-    margin: 110px 100px 20px 140px;
+    margin: 110px 100px 30px 140px;
 }
 
 .overview  {
@@ -16,9 +16,9 @@ h2 {
     text-align: center;
      */
     margin: 10px auto 20px auto;
+    padding-bottom: 20px;
     margin-left: 10px;
     margin-right: 10px;
-    backdrop-filter: brightness(80%);
 }
 
 .summary-p  {
@@ -27,19 +27,21 @@ h2 {
     flex-direction: row;
     text-align: center; */
     font-family: Helvetica, sans-serif;
-    margin-left: 10px;
-    margin-bottom: 20px;
-    backdrop-filter: brightness(50%);
+    margin-left: 40px;
+    margin-bottom: 30px;
 }
 
 h3 {
     color: rgb(119, 56, 56);
+    position: absolute;
+    left: 30%;
+    top: 55%;
     margin-top: 60px;
     margin-left: 25px;
     font-size: 16x;
     font-weight: 400;
     font-family: Helvetica, sans-serif;
-    /* text-transform: uppercase; */
+    text-transform: uppercase;
 }
 
 

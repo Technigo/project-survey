@@ -11,7 +11,7 @@ const Overview = ({ traditionInput, treeInput, foodInput, movieInput }) => {
             <p className="summary-p">Best Christmas movie: {movieInput}</p>
         </section>
         <div>
-            <h3>Have yourself a Merry little Christmas!</h3>
+            <h3>THANK YOU!</h3>
         </div></>
     )
 }
