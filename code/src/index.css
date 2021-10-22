@@ -59,6 +59,7 @@ p {
   width: 100%;
   height: 100%;
   margin: 10vh auto 0 auto;
+  max-width: 500px;
 }
 
 .section-container {
