@@ -16,7 +16,6 @@ const Form = () => {
     const [costume, setCostume] = useState('pumpkin');
     const [mood, setMood] = useState('');
     const [step, setStep] = useState(1);
-    const [reboot, setReboot] = useState(1);
 
     const onNameInputChange = (event) => {
         setNameInput(event.target.value)
@@ -43,7 +42,7 @@ const Form = () => {
     }
 
     const onRebootChange = () => {
-        setReboot(reboot - 6)
+        setStep(step - 5)
     }
 
     return (
