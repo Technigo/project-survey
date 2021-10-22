@@ -1,11 +1,9 @@
 import React from "react";
 
-import "../css/start.css";
-
 const Start = ({ onStepChange }) => {
   return (
     <section className="form-wrapper">
-      <form className="main-form">
+      <form className="form-section">
         <h1>Exit Ticket</h1>
         <p>
           Please take a few minutes to reflect on today's class!

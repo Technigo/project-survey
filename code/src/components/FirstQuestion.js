@@ -3,7 +3,7 @@ import React from "react";
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   return (
     <section className="form-wrapper">
-      <form>
+      <form className="form-section">
         <h2>What is your name?</h2>
         <label htmlFor="nameInput"></label>
         <input

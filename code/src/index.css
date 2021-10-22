@@ -30,7 +30,7 @@ code {
   flex-direction: column;
 }
 
-form {
+.form-section {
   width: 70%;
   height: 70%;
   padding: 30px;
@@ -43,14 +43,14 @@ form {
 p {
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 }
 
 h2 {
   font-family: "Reenie Beanie", cursive;
-  font-size: 60px;
-  margin: 10px;
+  font-size: 45px;
+  margin: 30px 0;
   text-align: center;
 }
 
@@ -65,7 +65,7 @@ input[type="text"] {
   padding: 20px;
   margin: 30px auto;
   background-color: transparent;
-  border-bottom: 2px solid #515053;
+  border-bottom: 2px solid black;
   font-size: 24px;
 }
 
@@ -85,18 +85,99 @@ select {
 }
 
 .radiobutton-label {
-  font-size: 20px;
+  font-size: 30px;
   margin: 15px 0 10px 0;
+  text-align: center;
+  padding: 15px;
 }
 
-/* @media (min-width: 768px) {
-  h2 {
-    font-size: 65px;
-  }
+.radiobutton-container {
+  display: flex;
+}
+
+.radiobutton-label-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-family: "Reenie Beanie", cursive;
+  letter-spacing: 2px;
+  font-size: 60px;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 30px;
+}
+
+button {
+  font-family: "Roboto", sans-serif;
+  color: #f5eee8;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 20px;
+  letter-spacing: 2px;
+  padding: 20px;
+  margin: 50px 0;
+  cursor: pointer;
+  border: 1px solid #fc3f0f;
+  background: #fc3f0f;
+  border-radius: 6px;
+}
+
+button:hover {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.4) 0 0);
+  opacity: 0.75;
+}
+
+.summary-text {
+  text-align: left;
+}
+
+.summary-section {
+  width: 70%;
+  height: 70%;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 @media (min-width: 992px) {
-  h2 {
-    font-size: 75px;
+  body {
+    background: #f5eee8;
   }
-} */
+
+  .form-section {
+    background: -webkit-linear-gradient(
+      -45deg,
+      #ffff88 81%,
+      #ffff88 82%,
+      #ffff88 82%,
+      #ffffc6 100%
+    );
+    width: 400px;
+    height: 400px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  }
+
+  .summary-section {
+    background: -webkit-linear-gradient(
+      -45deg,
+      #ffff88 81%,
+      #ffff88 82%,
+      #ffff88 82%,
+      #ffffc6 100%
+    );
+    width: 600px;
+    height: 600px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+}
