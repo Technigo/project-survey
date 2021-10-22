@@ -22,8 +22,12 @@ const ThirdQuestion = ({ ticketInput, onTicketInputChange, onStepChange }) => {
 					</label>
 				)
 			)}
-			<button className="button" onClick={onStepChange}>
-				Next question
+			<button
+				disabled={ticketInput === ''}
+				className="button"
+				onClick={onStepChange}
+			>
+				Next Question
 			</button>
 		</form>
 	);

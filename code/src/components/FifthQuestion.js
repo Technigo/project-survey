@@ -6,7 +6,7 @@ const FifthQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 	return (
 		<form className="form-container5" tabIndex="5">
 			<label htmlFor="nameInput">
-				<h1>Type your name and surname</h1>
+				<h1>Type your name</h1>
 			</label>
 			<input
 				id="nameInput"
@@ -16,7 +16,7 @@ const FifthQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 			/>
 			<button
 				className="button"
-				disabled={nameInput === ''} // to make sure you are not allowing button to be pressed if input is empty.
+				disabled={nameInput === ''} // if input is empty user can't proceed.
 				onClick={onStepChange}
 			>
 				Check Out

@@ -8,7 +8,7 @@ import FifthQuestion from './FifthQuestion';
 import Overview from './Overview';
 
 const Form = () => {
-	const [movie, setMovie] = useState('The Shining'); //state property storing the movie.
+	const [movie, setMovie] = useState('A Nightmare on Elm Street'); //state property storing the movie.
 	const [seat, setSeat] = useState('1'); //state property storing the seat.
 	const [ticketInput, setTicket] = useState('');
 	const [snack, setSnack] = useState('popcorn');
@@ -87,8 +87,8 @@ const Form = () => {
 				<Overview
 					movie={movie}
 					seat={seat}
-					snack={snack}
 					ticketInput={ticketInput}
+					snack={snack}
 					nameInput={nameInput}
 				/>
 			)}

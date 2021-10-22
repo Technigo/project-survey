@@ -14,7 +14,8 @@ h2 {
 
 p {
 	color: white;
-	font-family: 'IBM Plex Sans', sans-serif;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
 }
 
 body {
@@ -33,7 +34,7 @@ code {
 /*------------------Button styling----------------*/
 .button {
 	font-size: 15px;
-	font-family: Arial;
+	font-family: 'Poppins', sans-serif;
 	width: 120px;
 	height: 40px;
 	border-width: 1px;
@@ -44,9 +45,8 @@ code {
 	border-top-right-radius: 20px;
 	border-bottom-left-radius: 20px;
 	border-bottom-right-radius: 20px;
-	/* box-shadow: 3px 4px 0px 0px #899599; */
 	text-shadow: 0px 1px 0px #e1e2ed;
-	background: yellow;
+	background: #fee440;
 }
 
 .button:hover {
@@ -65,7 +65,7 @@ code {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 10px;
+	row-gap: 20px;
 }
 
 .form-container2 {
@@ -78,7 +78,7 @@ code {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 10px;
+	row-gap: 20px;
 }
 
 .form-container3 {
@@ -92,7 +92,7 @@ code {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 10px;
+	row-gap: 20px;
 }
 
 .form-container4 {
@@ -105,7 +105,7 @@ code {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 10px;
+	row-gap: 20px;
 }
 
 .form-container5 {
@@ -118,15 +118,13 @@ code {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 10px;
+	row-gap: 30px;
 }
 
 .select {
 	margin-left: 0;
 }
-.ticket-types {
-	color: white;
-}
+
 .summary {
 	background-image: url(/assets/overview.jpg);
 	background-repeat: no-repeat;
@@ -137,7 +135,14 @@ code {
 	justify-content: center;
 	align-items: center;
 	flex-direction: column;
-	row-gap: 10px;
+	row-gap: 20px;
+}
+
+.summary-details-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 70%;
 }
 
 .name-overview {
@@ -147,7 +152,8 @@ code {
 }
 
 .details {
-	color: yellow;
+	color: #fee440;
+	font-weight: 800;
 }
 
 /*------------------input styling----------------*/
@@ -155,10 +161,42 @@ code {
 input {
 	padding: 5px;
 	font-size: 15px;
+	font-family: 'Poppins', sans-serif;
+}
+
+input[type='text']:focus {
+	border: 3px solid #555;
 }
 
 input[type='radio'] {
+	font-family: 'Poppins', sans-serif;
+	vertical-align: right;
 }
 
-input[type=''] {
+.ticket-types {
+	color: white;
+	font-family: 'Poppins', sans-serif;
+}
+
+select {
+	background-color: #a20003;
+	color: white;
+	border-radius: 5px;
+	display: flex;
+	align-items: center;
+	font-family: 'Poppins', sans-serif;
+}
+
+/*------------------Media Queries----------------*/
+
+/* DESKTOP VERSION */
+@media (min-width: 992px) {
+	.form-container1,
+	.form-container2,
+	.form-container3,
+	.form-container4,
+	.form-container5,
+	.summary {
+		width: 800px;
+	}
 }
