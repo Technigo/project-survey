@@ -57,7 +57,7 @@ button,
   font-size: 18px;
   padding: 10px;
   width: 40vw;
-  margin: 5px;
+  margin: 20px 5px 0px 5pxd;
   transition: 0.7s;
 }
 
@@ -80,7 +80,7 @@ button span:after {
 .email-input,
 .calendar {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 10px 10 20px 10px;
   margin: 10px;
   width: 70%;
   border: 0;
@@ -165,6 +165,8 @@ input[type="radio"] {
   margin-left: 5px;
 }
 
+/* 👇 validation for the span */
+
 span::after {
   padding-left: 5px;
 }
@@ -177,7 +179,7 @@ input:valid + span::after {
   content: "✓";
 }
 
-/* ------ MEDIA QUERIES FOR TABLET ------ */
+/* ------ MEDIA QUERIES FOR TABLET 👇  ------ */
 
 @media (min-width: 768px) {
   h1 {
@@ -213,9 +215,7 @@ input:valid + span::after {
     margin-bottom: 40px;
   }
   .radio-btn {
-    float: right;
     padding-right: 45%;
-    color: black;
   }
 
   .form-parent p {
@@ -235,7 +235,7 @@ input:valid + span::after {
   }
 }
 
-/* ------ MEDIA QUERIES FOR DESKTOP ------ */
+/* ------ MEDIA QUERIES FOR DESKTOP 👇  ------ */
 
 @media (min-width: 1025px) {
   h1 {
@@ -272,7 +272,6 @@ input:valid + span::after {
   }
 
   button span {
-    /* display: inline-block; */
     position: relative;
     transition: 0.7s;
   }
@@ -304,7 +303,6 @@ input:valid + span::after {
   select {
     margin-bottom: 40px;
     width: 35%;
-    transition: 0.5s;
   }
 
   .summary-section {

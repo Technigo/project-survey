@@ -23,7 +23,6 @@ const FirstQuestion = ({
               placeholder="Name"
               value={nameInput}
               onChange={onNameInputChange}
-              required
             />
 
             <label htmlFor="email">
@@ -34,7 +33,6 @@ const FirstQuestion = ({
                 id="email"
                 value={emailInput}
                 onChange={onEmailInputChange}
-                required
               />
             </label>
           </form>

@@ -44,7 +44,7 @@ const Form = () => {
   const onPreStepChange = () => {
     setStep(step - 1)
   }
-
+  // the steps-logic that renders the different components
   return (
     <div>
       {step === 1 && <Start onStepChange={onStepChange} />}
