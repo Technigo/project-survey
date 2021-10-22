@@ -7,7 +7,7 @@ import { Overview } from "./Overview";
 
 const Form = () => {
 	const [nameInput, setNameInput] = useState("");
-	const [ageInput, setAgeInput] = useState();
+	const [ageInput, setAgeInput] = useState("");
 	const [streamingInput, setStreamingInput] = useState("");
 	const [genresInput, setGenresInput] = useState(false);
 	const [step, setStep] = useState(1);
@@ -52,6 +52,7 @@ const Form = () => {
       nameInput={nameInput}
       onNameInputChange={onNameInputChange}
       nextQuestion={nextQuestion}
+			step={step}
     />
     );
 	} else if (step === 2) {
@@ -62,6 +63,7 @@ const Form = () => {
       onAgeInputChange={onAgeInputChange}
       nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
+			step={step}
     />
     );
 	} else if (step === 3) {
@@ -72,6 +74,7 @@ const Form = () => {
       onStreamingInputChange={onStreamingInputChange}
       nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
+			step={step}
     />
     );
 	} else if (step === 4) {
@@ -82,6 +85,7 @@ const Form = () => {
 			onGenresInputChange={onGenresInputChange}
 			nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
+			step={step}
 	  />
     );
 	} else if (step === 5) {
@@ -92,6 +96,7 @@ const Form = () => {
 	    ageInput={ageInput}
 	    streamingInput={streamingInput}
 			// genresInput={genresInput}
+			step={step}
 	  />
     );
 	}
