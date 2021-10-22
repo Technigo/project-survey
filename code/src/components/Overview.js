@@ -82,7 +82,7 @@ const Overview = (props) => {
           <span className="highlight-span">
             Check this out in your console!
           </span>
-          /* 0 ? console.log("truthy") : console.log("falsy") */ it returns
+          {/* 0 ? console.log("truthy") : console.log("falsy") */} it returns
           falsy because 0 is false!
         </p>
       </section>

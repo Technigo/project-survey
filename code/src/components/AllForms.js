@@ -1,12 +1,10 @@
 import React, { useState } from "react";
 import RadioButtons from "./RadioButtons";
 import DropDown from "./DropDown";
-import CheckBox from "./CheckBox";
 import Overview from "./Overview";
 import OverviewButton from "./OverviewButton.js";
 const AllForms = (props) => {
   /*Overview component props */
-  const { name } = props;
 
   /* ALL STATES HERE: */
   const [arrayAnswer, setArrayAnswer] = useState(""); /* dropdown component */
