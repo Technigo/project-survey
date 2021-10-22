@@ -146,7 +146,20 @@ h1 {
 /* Tablet */
 
 @media (min-width: 768px) {
+  .question-container {
+    width: 45%;
+    height: 450px;
+  }
+
   .question-box {
     margin: 20px;
   }
 }
+
+@media (min-width: 1024px) {
+  .question-container {
+    width: 40%;
+    height: 475px;
+  }
+}
+

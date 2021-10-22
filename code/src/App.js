@@ -16,11 +16,11 @@ export const App = () => {
       <div className="question-container">
         <Form />
       </div>
-      <footer className="footer">
+      {/* <footer className="footer">
         <div>LinkedIn</div>
         <div>Facebook</div>
         <div>Instagram</div>
-      </footer>
+      </footer> */}
     </>
   )
 }
