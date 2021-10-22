@@ -19,14 +19,13 @@ code {
 }
 h1 {
   font-family: "Bangers", cursive;
-  margin: 80px;
-  font-size: 50px;
+  margin: 50px auto;
   letter-spacing: 1px;
   color: rgb(55, 194, 78);
 }
 h2 {
   font-family: "Jua", sans-serif;
-  margin-top: 30px;
+  margin-top: 20px;
   color: rgb(95, 0, 219);
 }
 p {
@@ -172,7 +171,7 @@ input[type="range"]::-webkit-slider-thumb {
 /* the ranking stars */
 .container {
   padding: 5px;
-  margin: 40px auto;
+  margin: 50px auto;
 }
 .stars {
   display: flex;
@@ -200,9 +199,6 @@ input[type="range"]::-webkit-slider-thumb {
     width: 40%;
     height: 600px;
     font-size: 25px;
-  }
-  h1 {
-    font-size: 70px;
   }
   .weather-buttons input {
     font-size: 20px;
