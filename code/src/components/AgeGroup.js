@@ -22,7 +22,7 @@ const AgeGroup = ({ onAgeGroupChange, ageGroup, onStepChange }) => {
           </label>
         </div>
       ))}
-      <button className="button" onClick={onStepChange}>
+      <button disabled={!ageGroup} className="button" onClick={onStepChange}>
         Next
       </button>
     </div>

@@ -10,12 +10,16 @@ const LevelEducation = ({
       <h2 className="question-header">What is your level of education?</h2>
       <select onChange={onLevelEducationChange} value={levelEducation}>
         <option value="">Education</option>
-        <option value="high-school">High school</option>
-        <option value="university">University</option>
-        <option value="master-phd">Master or Phd</option>
-        <option value="other">Other</option>
+        <option value="High-school">High school</option>
+        <option value="University">University</option>
+        <option value="Master-phd">Master or Phd</option>
+        <option value="Other">Other</option>
       </select>
-      <button className="button" onClick={onStepChange}>
+      <button
+        disabled={!levelEducation}
+        className="button"
+        onClick={onStepChange}
+      >
         Next
       </button>
     </div>

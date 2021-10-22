@@ -9,8 +9,6 @@ const NameCoin = ({ onStepChange, onNameCoinChange, nameCoin }) => {
       </h2>
       <label htmlFor="coin">
         <input
-          minLength="3"
-          maxLength="15"
           type="text"
           id="coin"
           onChange={onNameCoinChange}
@@ -18,7 +16,7 @@ const NameCoin = ({ onStepChange, onNameCoinChange, nameCoin }) => {
         />
       </label>
       <button
-        className="button"
+        className="button submit"
         disabled={nameCoin === ""}
         onClick={onStepChange}
       >

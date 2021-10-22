@@ -27,7 +27,11 @@ const CryptoInvestment = ({
           </label>
         </div>
       ))}
-      <button className="button" onClick={onStepChange}>
+      <button
+        disabled={!cryptoInvestment}
+        className="button"
+        onClick={onStepChange}
+      >
         Next
       </button>
     </div>

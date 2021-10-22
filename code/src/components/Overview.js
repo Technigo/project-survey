@@ -10,7 +10,7 @@ const Overview = ({
 }) => {
   if (cryptoInvestment === "Yes") {
     return (
-      <div>
+      <div className="overview">
         <h2 className="question-header">Your overview:</h2>
         <p className="overview-answers">
           Age group: <span className="answer">{ageGroup}</span>
@@ -19,11 +19,11 @@ const Overview = ({
           Education: <span className="answer"> {levelEducation}</span>
         </p>
         <p className="overview-answers">
-          Knowledge about cryptos:{" "}
+          Knowledge about cryptos:
           <span className="answer">{cryptoAwareness}</span>
         </p>
         <p className="overview-answers">
-          Investment on crypto:{" "}
+          Investment on crypto:
           <span className="answer">{cryptoInvestment}</span>
         </p>
         <p className="overview-answers">
@@ -33,7 +33,7 @@ const Overview = ({
     );
   } else {
     return (
-      <div>
+      <div className="overview">
         <h2 className="question-header">Your overview:</h2>
         <p className="overview-answers">
           Age group: <span className="answer">{ageGroup}</span>
@@ -42,15 +42,15 @@ const Overview = ({
           Education: <span className="answer">{levelEducation}</span>
         </p>
         <p className="overview-answers">
-          Knowledge about cryptos:{" "}
+          Knowledge about cryptos:
           <span className="answer">{cryptoAwareness}</span>
         </p>
         <p className="overview-answers">
-          Investment on crypto:{" "}
+          Investment on crypto:
           <span className="answer">{cryptoInvestment}</span>
         </p>
         <p className="overview-answers">
-          Likelihood of investing in cryptos:{" "}
+          Likelihood of investing in cryptos:
           <span className="answer">{investPossibility}</span>
         </p>
       </div>

@@ -1,3 +1,7 @@
+:root {
+  --primary: #00bf6f;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -19,9 +23,10 @@ code {
   margin: 100px 20px;
 }
 
+/* Styling for all the buttons */
 .start,
 .button {
-  background-color: #00bf6f;
+  background-color: var(--primary);
   color: white;
   font-size: 18px;
   border-radius: 10px;
@@ -34,12 +39,17 @@ code {
   align-self: center;
 }
 
+.submit {
+  width: 24%;
+}
+
+/* Styling for header and form elements */
 .header {
   text-align: center;
 
   font-size: 25px;
   font-weight: 600;
-  color: #00bf6f;
+  color: var(--primary);
 }
 
 .question-header {
@@ -60,6 +70,7 @@ code {
 .input-radio {
   margin-right: 8px;
   transform: scale(1.3);
+  filter: sepia(80%);
 }
 
 .question-wrapper {
@@ -68,18 +79,40 @@ code {
 }
 
 select {
-  background-color: #00bf6f;
+  background-color: var(--primary);
 }
 
+/* Styling for the slider 
+code from w3schools*/
+
 .slider {
-  appearance: none;
-  height: 15px;
-  border-radius: 10x;
-  color: #00bf6f;
+  -webkit-appearance: none;
+  width: 40%;
+  height: 10px;
+  border-radius: 5px;
   background: #d3d3d3;
   outline: none;
   opacity: 0.7;
+  -webkit-transition: 0.2s;
   transition: opacity 0.2s;
+  margin-bottom: 50px;
+}
+
+select {
+  width: 50%;
+  height: 30px;
+  padding: 2px;
+  font-size: 15px;
+  margin-bottom: 50px;
+  border-radius: 5px;
+}
+
+.overview-answers {
+  font-size: 16px;
+}
+
+.answer {
+  color: var(--primary);
 }
 
 .slider::-webkit-slider-thumb {
@@ -88,33 +121,27 @@ select {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  background: #04aa6d;
+  background: var(--primary);
   cursor: pointer;
 }
 
 input[type="text"] {
   text-transform: uppercase;
+  margin-bottom: 50px;
 }
 
-.overview-answers {
-  font-size: 16px;
-}
-
-.answer {
-  color: #00bf6f;
-}
-
+/* Styling for the progress bar */
 .container-p {
   height: 20px;
   width: 100%;
   background-color: white;
   border-radius: 50px;
-  margin: 50px;
+  margin-top: 50px;
 }
 
 .filler-style {
   height: 100%;
-  background-color: #04aa6d;
+  background-color: var(--primary);
   border-radius: inherit;
   text-align: "right";
 }
@@ -147,5 +174,15 @@ input[type="text"] {
   .input-radio {
     margin-right: 10px;
     transform: scale(1.4);
+  }
+}
+
+@media (min-width: 992px) {
+  .overview {
+    margin-left: -200px;
+  }
+
+  .submit {
+    width: 20%;
   }
 }

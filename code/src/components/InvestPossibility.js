@@ -15,7 +15,7 @@ const InvestPossibility = ({
           <input
             className="slider"
             type="range"
-            min="1"
+            min="0"
             max="10"
             step="1"
             onChange={onInvestPossibilityChange}
@@ -24,7 +24,7 @@ const InvestPossibility = ({
           {investPossibility}
         </div>
       </div>
-      <button className="button" onClick={onStepChange}>
+      <button className="button submit" onClick={onStepChange}>
         Submit
       </button>
     </div>
