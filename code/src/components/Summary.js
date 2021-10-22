@@ -16,6 +16,7 @@ const Summary = ({
         </span>{" "}
         Here's your summary to the Moon trip with the {locationInput} Spaceship
       </h3>
+
       <h3>
         {" "}
         <span role="img" aria-label="calender">
