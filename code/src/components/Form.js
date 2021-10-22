@@ -15,7 +15,6 @@ const Form = () => {
   const [licoriceCandy, setLicoriceCandy] = useState();
   const [drink, setDrink] = useState();
   const [step, setStep] = useState(0);
-  const [no, setNo] = useState(0);
   const [email, setEmail] = useState(false);
 
   const onNameChange = (event) => setName(event.target.value);
