@@ -24,19 +24,19 @@ export const Summary = ({ rootState }) => {
             {rootState.features.soundQuality && (
               <p>
                 I liked
-                <span>☑️</span> Sound quality feature
+                <span aria-label="tick">☑️</span> Sound quality feature
               </p>
             )}
             {rootState.features.ergonomicDesign && (
               <p>
                 I liked
-                <span>☑️</span> Ergonomic design feature
+                <span aria-label="tick">☑️</span> Ergonomic design feature
               </p>
             )}
             {rootState.features.affordability && (
               <p>
                 I liked
-                <span>☑️</span> Affordability feature
+                <span aria-label="tick">☑️</span> Affordability feature
               </p>
             )}
             {rootState.featuresOthers && <p>Comment: "{rootState.featuresOthers}"</p>}

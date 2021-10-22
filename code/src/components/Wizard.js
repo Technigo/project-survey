@@ -84,6 +84,9 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
           toFeedback();
         }
         break;
+      default:
+        console.error(error);
+        break;
     }
   };
   return (

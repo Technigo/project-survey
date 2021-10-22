@@ -4,5 +4,5 @@ import useWindowSize from "react-use/lib/useWindowSize";
 
 export default () => {
   const { width, height } = useWindowSize();
-  return <Confetti width={width} height={height} numberOfPieces={400} wind={0.01} />;
+  return <Confetti width={width} height={height} numberOfPieces={1000} wind={0.01} />;
 };
