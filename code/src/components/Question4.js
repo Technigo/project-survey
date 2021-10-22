@@ -16,8 +16,8 @@ const Question4 = ({ movieInput, onMovieInputChange, onStepChange }) => {
 					<option className="dropdown-content"value="The Grinch">The Grinch</option>
 					<option className="dropdown-content"value="Scrooged">Scrooged</option>
 					<option className="dropdown-content"value="Elf">Elf</option>
-                    <option className="dropdown-content"value="All of these">All of these</option>
-                    <option className="dropdown-content"value="None of these">None of these</option>
+                    <option className="dropdown-content"value="A Christmas Story">A Christmas Story</option>
+                    <option className="dropdown-content"value="Other">Other</option>
 				</select>
 				
 				<button onClick={onStepChange}>Submit</button>

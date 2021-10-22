@@ -6,20 +6,20 @@ const Question2 = ({ treeInput, onTreeInputChange, onStepChange }) => {
         <form className="form">
             <label htmlFor="treeInput">2. What type of Christmas tree do you prefer?</label>
             <div className="radiobuttons-container">
-                <div className="real-tree-container">
+                <div className="label-container">
                     <label className="radiobutton-label">
                         <input 
                             className="radiobutton-input"
                             type="radio"
-                            value="Real Tree"
-                            onChange={() =>onTreeInputChange('Real Tree')}
-                            checked={treeInput === 'Real Tree'}
+                            value="Real tree"
+                            onChange={() =>onTreeInputChange('Real tree')}
+                            checked={treeInput === 'Real tree'}
                         />
                         <p className="radiobutton-p">Real tree</p>
                     </label>
                 </div>
 
-                <div className="fake-tree-container">
+                <div className="label-container">
                     <label className="radiobutton-label">
                         <input 
                             className="radiobutton-input"
@@ -32,7 +32,7 @@ const Question2 = ({ treeInput, onTreeInputChange, onStepChange }) => {
                     </label>
                 </div>
 
-                <div className="fake-tree-container">
+                <div className="label-container">
                     <label className="radiobutton-label">
                         <input 
                             className="radiobutton-input"
