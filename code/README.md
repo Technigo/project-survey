@@ -1,19 +1,15 @@
 # Technigo React Starter App
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+1. Project brief:
+   By making a Typeform like product practicing React state and controlled forms. Once a user has submitted the survey you create, it doesn't actually need to be submitted anywhere - the focus here is to practice using React state and controlling forms, they should see a summary
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+2. About the project
+   Used React state and controlling forms and components. Have split up every component with own css. I also challanged myself trying to do own design and more colorful background and am really pleased with that result. Some people have mentioned it is reminding of Technigo and yeah, I guess it is :) Semanticly I tried to be without divs, for better acessibility.
 
-## Usage
+I validated the project via:
+https://validator.w3.org/
+Lighthouse chrome extension
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+If I had more time I would fix better answer for summary and also change the range for more user friendly and gone through with screen reader
 
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+3. CHeck the project out on: https://project-survey-ajliin.netlify.app/#firstPage
