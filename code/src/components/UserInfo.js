@@ -15,7 +15,7 @@ const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioBut
                 <h2 className="question">What's your alias?</h2>
                 <form className="form-style">
                     <label htmlFor="aliasInput" className="form-label">Your Alias</label>
-                    <input className="input-form" id="aliasInput" type="input" value={aliasInput} onChange={onAliasInputChange} placeholder="Your Alias">
+                    <input className="input-form" id="aliasInput" type="text" value={aliasInput} onChange={onAliasInputChange} placeholder="Your Alias">
                     </input>
                 </form>
 
@@ -32,7 +32,6 @@ const UserInfo = ({ aliasInput, onAliasInputChange, radioButtonInput, onRadioBut
                             </input>
                             {radiobutton}
                         </label>
-
                     ))}
                 </form>
                 <button className="button-next" type="submit" onClick={onStepChange}>Next</button>

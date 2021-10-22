@@ -12,7 +12,7 @@ const QuestionFour = ({ questionFourInput, onQuestionFourInputChange, onStepChan
                 <h2 className="question">What superhero/villain would make the best therapist?</h2>
                 <form className="form-style">
                     <label htmlFor="questionFourInput" className="form-label">Your answer</label>
-                    <input className="input-form" id="questionFourInput" type="input" value={questionFourInput} onChange={onQuestionFourInputChange} placeholder="Your Answer">
+                    <input className="input-form" id="questionFourInput" type="text" value={questionFourInput} onChange={onQuestionFourInputChange} placeholder="Your Answer">
                     </input>
                 </form>
                 <button className="button-next" type="submit" onClick={onStepChange}>Next</button>

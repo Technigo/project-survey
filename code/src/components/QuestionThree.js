@@ -12,7 +12,7 @@ const QuestionThree = ({ questionThreeInput, onQuestionThreeInputChange, onStepC
                 <h2 className="question">If you could be a fly on the wall, who would you want to listen in on?</h2>
                 <form className="form-style">
                     <label htmlFor="questionThreeInput" className="form-label">Your answer</label>
-                    <input className="input-form" id="questionThreeInput" type="input" value={questionThreeInput} onChange={onQuestionThreeInputChange} placeholder="Your Answer">
+                    <input className="input-form" id="questionThreeInput" type="text" value={questionThreeInput} onChange={onQuestionThreeInputChange} placeholder="Your Answer">
                     </input>
                 </form>
                 <button className="button-next" type="submit" onClick={onStepChange}>Next</button>

@@ -1,8 +1,6 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The goal of this project was to practice React state and controlled forms by making a Typeform like product. The completed project consists of an introduction page, a user information page and 5 questions. When the user presses submit, they see a summary of their answers.
 
 ## The problem
 
