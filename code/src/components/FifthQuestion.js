@@ -15,7 +15,6 @@ const FifthQuestion = ({
         max="121"
         value={degreesInput}
         onChange={onDegreesInputChange}
-        className="slider"
         id="myRange"
       />
       <p>

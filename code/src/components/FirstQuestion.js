@@ -12,7 +12,6 @@ const FirstQuestion = ({
       <label className="name-label" htmlFor="nameInput" onSubmit={prevent}>
         Names:
         <input
-          className="input-padidng"
           className="name-input"
           name="nameInput"
           id="nameInput"
