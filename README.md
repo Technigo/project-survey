@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Project making a survey with react states.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Did a generic survey trying to add diffrent question approaches practicing react states. Added radio buttons, dropdown menu, slider & a progress bar. Had a hard time figuering out something fun to survey but lack of inspiration kept it generic.
+If I had more time I would've wanted to add more questions with more technigues and maybe style it a bit more.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://elastic-galileo-ca3ac1.netlify.app/
