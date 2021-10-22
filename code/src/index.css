@@ -40,8 +40,12 @@ input {
     padding: 2px;
     margin: 5px;
     margin-bottom: 15px;
+    color: white;
 
 }
+input:focus {
+  background: rgba(246, 173, 71, 0.8);
+ }
 
 select {
   /* display: block;
@@ -56,9 +60,7 @@ select {
 }
 
 
-input:focus {
- background: rgba(246, 173, 71, 0.8);
-}
+
 
 button {
   /* display: block;
@@ -66,10 +68,10 @@ button {
   background-color: rgba(139, 0, 0, 0.5);
   border: none;
   border-radius: 2px;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   text-align: center;
-  padding: 5px 10px;
+  padding: 7px 14px;
   margin: 10px auto;
 
 
@@ -83,8 +85,8 @@ button {
   width: 280px;
   min-height: 180px;
   
-  margin: 10px auto;
-  background-color: rgba(0, 0, 0, 0.2);
+  margin: 30px auto;
+  background-color: rgba(0, 0, 0, 0.3);
   border-radius: 8px;
   border: 2px dotted white
 
@@ -100,3 +102,58 @@ button {
 .radiobutton {
   padding: 2px;
 }
+
+
+
+
+
+/* ------ MEDIA QUERIES TABLET ------ */
+
+@media (min-width: 768px) {
+  label {
+    font-size: 20px;
+  
+  }
+  
+  input {
+      padding: 5px;
+      margin: 10px;
+      margin-bottom: 20px;
+  }
+
+  select {
+    padding: 5px;
+    margin: 10px;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    font-size: 20px;
+    padding: 10px 20px;
+    margin: 10px auto;
+  }
+  
+  .bigWrapper {  
+    width: 340px;
+    min-height: 280px;
+  }
+  
+  .formWrapper {
+    padding: 40px;
+  }
+  
+  .radiobutton {
+    padding: 5px;
+  }
+   
+  }
+      
+      
+  /* ------ MEDIA QUERIES DESKTOP  ------ */
+      
+  @media (min-width: 1025px) {    
+  
+
+      
+  }
+  

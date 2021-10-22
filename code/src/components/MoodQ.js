@@ -42,7 +42,9 @@ return (
     </div>
    </label>
 
-   <button className="button" onClick={onStepChange}>Next</button>
+   <button className="button" onClick={onStepChange}>
+       See result!
+   </button>
    
    </div>
     </form>

@@ -15,7 +15,7 @@
 
   .summeryBox h1 {
     font-family: 'Creepster', cursive;
-    font-size: 25px;
+    font-size: 26px;
     padding: 5px;
     margin: 0;
 
@@ -23,9 +23,42 @@
 
   .summeryBox p{
     font-family: 'Roboto', sans-serif;
-    font-size: 14px;
+    font-size: 18px;
     margin: 0;
     padding: 10px 5px 20px 5px;
 
   }
+
+
+  /* ------ MEDIA QUERIES TABLET ------ */
+
+@media (min-width: 768px) {
+  .summeryBox {
+    width: 340px;
+    padding: 40px;
+
+  }
+
+  .summeryBox h1 {
+    font-size: 35px;
+    padding: 10px;
+
+  }
+
+  .summeryBox p {
+    font-size: 22px;
+    padding: 15px 10px 25px 10px;
+
+  }
+
+
+  }
+      
+      
+  /* ------ MEDIA QUERIES DESKTOP  ------ */
+      
+  @media (min-width: 1025px) {    
+  
+  }
+      
 

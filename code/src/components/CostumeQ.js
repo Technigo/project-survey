@@ -11,7 +11,9 @@ return (
         <div className="formWrapper">
     <label>
         Choose your costume: 
-        <select value={costume} onChange={event => onCostumeChange(event.target.value)}>
+        <select 
+        value={costume} 
+        onChange={event => onCostumeChange(event.target.value)}>
             <option value="pumpkin">Pumpkin</option>
             <option value="vampire">Vampire</option>
             <option value="unicorn">Unicorn</option>

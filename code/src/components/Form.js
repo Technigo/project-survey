@@ -12,8 +12,8 @@ import Overview from "./Overview";
 const Form = () => {
     const [nameInput, setNameInput] = useState('');
     const [ageInput, setAgeInput] = useState('');
-    const [style, setStyle] = useState('');
-    const [costume, setCostume] = useState('');
+    const [style, setStyle] = useState('scary');
+    const [costume, setCostume] = useState('pumpkin');
     const [mood, setMood] = useState('');
     const [step, setStep] = useState(1);
     const [reboot, setReboot] = useState(1);
