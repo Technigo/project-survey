@@ -5,7 +5,7 @@ const Name = ({ name, onNameChange, onStepChange }) => {
   return (
     <div className="container">
       <div className="name">
-        <h2>I’m so exited that you want to attend to my party!</h2>
+        <h2>I’m so excited that you want to attend my party!</h2>
 
         <form className="nameForm">
           Please enter your name below:
@@ -17,7 +17,7 @@ const Name = ({ name, onNameChange, onStepChange }) => {
             placeholder="Name"
           />
           <button disabled={name === ""} onClick={onStepChange}>
-            Next Question
+            Next
           </button>
         </form>
       </div>

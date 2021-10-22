@@ -1,16 +1,16 @@
 //Question 3
 import React from "react";
 
-const games = ["Tipspromenad", "Kubb", "I don't like games"];
+const games = ["Quiz walk", "Kubb", "I don't like games"];
 const snacks = [
   "Popcorn",
   "Chips",
-  "Icecream",
-  "Cockies",
-  "I dont like snacks",
+  "Ice cream",
+  "Cookies",
+  "I don't like snacks",
 ];
 const licorice = ["Salty licorice", "Sweet licorice", "I don't like licorice"];
-const drinks = ["Soda", "Bear", "Wine", "I can't decide..."];
+const drinks = ["Soda", "Beer", "Wine", "I can't decide..."];
 
 const Preferences = ({
   game,
@@ -76,7 +76,7 @@ const Preferences = ({
         <form className="radio-buttons">
           <h3>
             I love licorice, so there will be some different kinds at the party,
-            witch kind do you like?
+            which kind do you like?
           </h3>
           {licorice.map((currentLicorice) => (
             <label key={currentLicorice}>
@@ -91,7 +91,7 @@ const Preferences = ({
           ))}
         </form>
 
-        <button onClick={onStepChange}>Next Question</button>
+        <button onClick={onStepChange}>Next</button>
       </div>
     </div>
   );

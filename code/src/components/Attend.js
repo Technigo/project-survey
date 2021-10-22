@@ -7,8 +7,9 @@ const Attend = ({ /* no, onNoChange, */ onStepChange, onNoChange }) => {
       <div className="attend">
         <h1>Hello! ✨</h1>
         <h2>
-          Tis is a RSVP form for my big party. Please take the time to fill in
-          some answers to my form so i can plan the party to be an epic event.{" "}
+          This is an RSVP form for my big party. Please take the time to fill in
+          some answers in my form so that I can plan the party to be an epic
+          event.
         </h2>
         <div>
           <p>Are you coming to my party?</p>
