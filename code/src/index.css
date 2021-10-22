@@ -8,12 +8,11 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Roboto';
 }
 
 h1 {
-  font-family: 'Game of Squids';
+  font-family: 'Game of Squids', 'Roboto';
   font-size: 130px;
   text-shadow: 8px 6px #323232;
   margin: 0;
