@@ -42,10 +42,3 @@
     height: 200px;
 }
 }
-
-@media (min-width: 992px) {
-    .home_image{
-    width: 70%;
-    height: 70%;
-}
-}
