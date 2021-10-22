@@ -16,11 +16,36 @@ html, body, #root, .outer-container {
   justify-content: space-between;
   background-color: var(--main);
 }
+
+
+
+
 .container {
   width: 100%;
   max-width: 500px;
   margin: 0 auto;
+
+  animation-name: falling;
+  animation-duration: 2s;
+  animation-timing-function:ease-out;
+  opacity: 1;
 }
+
+@keyframes falling {
+  0% {
+    opacity:-1;
+    transform: translateY(-10em);
+  }
+  50% {
+    opacity:1;
+    transform: translateY(0em)
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
 footer {
   width: 100%;
 }
@@ -80,6 +105,7 @@ p {
 .container {
   box-sizing: border-box;
   padding: 0px 30px;
+
   /*
   display: flex;
   justify-content: center;
@@ -92,18 +118,15 @@ p {
   flex-direction: row;
 }
 
-.name {
+.name, .fifthQuestion {
   border: 2px solid black;
   padding: 30px;
 }
 .nameForm, .emailForm, .dietForm {
-  /* border: 2px solid lime; */
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-
-
 
 .radio-buttons {
   display: grid;

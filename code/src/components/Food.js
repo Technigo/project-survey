@@ -21,7 +21,8 @@ const Food = ({ food, onFoodChange, onStepChange }) => {
             <option disabled value="">
               {"Choose diet preference"}
             </option>
-            <option value="">I eat anything</option>
+            <option value=""></option>
+            <option value="anything">I eat anything</option>
             <option value="vegetarian">I'm a vegetarian</option>
             <option value="vegan">I'm a vegan</option>
             <option value="pescetarian">I'm a pescetarian</option>
@@ -29,7 +30,9 @@ const Food = ({ food, onFoodChange, onStepChange }) => {
             <option value="lactose">I'm allergic to lactose</option>
             <option value="other">I have other dietary restrictions</option>
           </select>
-          <button onClick={onStepChange}>Next</button>
+          <button disabled={food === ""} onClick={onStepChange}>
+            Next
+          </button>
         </form>
       </div>
     </div>
