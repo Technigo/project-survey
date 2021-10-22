@@ -195,5 +195,6 @@ input[type="range"]::-webkit-slider-thumb {
   .form-container {
     width: 40%;
     height: 600px;
+    font-size: 25px;
   }
 }
