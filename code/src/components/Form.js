@@ -99,7 +99,7 @@ const Form = () => {
 			)}
 		</section>
     </main>
-    <footer>Photo by <a href="https://unsplash.com/@jeneyeo?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Jene Yeo</a> on <a href="https://unsplash.com/s/photos/horror?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+    <footer>
   </footer>
     </>
 	)
