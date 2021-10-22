@@ -10,6 +10,7 @@ h2 {
 
 p {
   color: #494c50;
+  font-size: 17px;
 }
 label {
   color: #494c50;
@@ -175,12 +176,25 @@ textarea:focus {
   max-width: 500px;
   align-self: center;
   box-shadow: 3px 3px 7px #a7a7a7;
+  border: 2px solid #494c50;
+  margin-bottom: 50px;
 }
 .overview-wrapper h2 {
   color: #1ea742;
   margin: 0px;
   text-align: center;
   text-decoration: underline #1ea742;
+  font-weight: 600;
+}
+.alert-paragraf {
+  color: #ea5929;
+  margin: 0px;
+}
+.p-overview {
+  background-color: white;
+  padding: 10px 0px;
+  color: #494c50;
+  padding-left: 10px;
 }
 
 /*MOBILE*/

@@ -11,9 +11,10 @@ export const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [adressInput, setAdressInput] = useState("");
   const [houseTypeInput, setHouseTypeInput] = useState();
-  const [satisfactionInput, setSatisfactionInput] = useState();
+  const [satisfactionInput, setSatisfactionInput] = useState("");
   const [satisfactionTextInput, setSatisfactionTextInput] = useState();
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
+  const [valid, setValid] = useState(true);
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
@@ -33,13 +34,29 @@ export const Form = () => {
   };
 
   const onStepChange = (event) => {
-    setStep(step + 1);
     event.preventDefault();
+    if (step === 4) {
+      if (satisfactionInput === "") {
+        setValid(false);
+      } else {
+        setStep(step + 1);
+        setValid(true);
+        event.preventDefault();
+      }
+    } else {
+      setStep(step + 1);
+      setValid(true);
+      event.preventDefault();
+    }
   };
 
-  if (step === 1) {
+  const onValidChange = () => {
+    setValid(false);
+  };
+
+  if (step === 0) {
     return <WelcomePage onStepChange={onStepChange} />;
-  } else if (step === 2) {
+  } else if (step === 1) {
     return (
       <FirstQuestion
         nameInput={nameInput}
@@ -47,7 +64,7 @@ export const Form = () => {
         onStepChange={onStepChange}
       />
     );
-  } else if (step === 3) {
+  } else if (step === 2) {
     return (
       <SecondQuestion
         adressInput={adressInput}
@@ -55,7 +72,7 @@ export const Form = () => {
         onStepChange={onStepChange}
       />
     );
-  } else if (step === 4) {
+  } else if (step === 3) {
     return (
       <ThirdQuestion
         houseTypeInput={houseTypeInput}
@@ -64,15 +81,16 @@ export const Form = () => {
         onStepChange={onStepChange}
       />
     );
-  } else if (step === 5) {
+  } else if (step === 4) {
     return (
       <FourthQuestion
         satisfactionInput={satisfactionInput}
         onSatisfactionInputChange={onSatisfactionInputChange}
         onStepChange={onStepChange}
+        valid={valid}
       />
     );
-  } else if (step === 6) {
+  } else if (step === 5) {
     return (
       <FifthQuestion
         nameInput={nameInput}
@@ -82,7 +100,7 @@ export const Form = () => {
         satisfactionInput={satisfactionInput}
       />
     );
-  } else if (step === 7) {
+  } else if (step === 6) {
     return (
       <Overview
         nameInput={nameInput}

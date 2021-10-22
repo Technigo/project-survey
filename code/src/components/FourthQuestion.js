@@ -5,6 +5,7 @@ export const FourthQuestion = ({
   satisfactionInput,
   onSatisfactionInputChange,
   onStepChange,
+  valid,
 }) => {
   return (
     <>
@@ -17,6 +18,7 @@ export const FourthQuestion = ({
         />
         <form onSubmit={onStepChange} className="content-container">
           <h2> Är du nöjd med utdeling av din post?</h2>
+          {!valid && <p className="alert-paragraf">Gör ett val</p>}
           <div className="options-spacing">
             <label htmlFor="SatisfactionYes" className="radio-button-container">
               Ja
@@ -27,7 +29,6 @@ export const FourthQuestion = ({
                 name="radio"
                 onChange={onSatisfactionInputChange}
                 checked={satisfactionInput === "Ja"}
-                required="required"
               />
               <span className="radio-button"></span>
             </label>
@@ -40,7 +41,6 @@ export const FourthQuestion = ({
                 name="radio"
                 onChange={onSatisfactionInputChange}
                 checked={satisfactionInput === "Nej"}
-                required="required"
               />
               <span className="radio-button"></span>
             </label>
