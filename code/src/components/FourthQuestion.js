@@ -12,6 +12,7 @@ const FourthQuestion = ({
       {weathers.map((weather) => (
         <label key={weather} className="weather-buttons">
           <input
+            className="input-padding"
             type="submit"
             value={weather}
             onClick={(weatherInput === weather, onWeatherInputChange)}

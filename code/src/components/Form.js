@@ -81,6 +81,7 @@ const Form = () => {
           degreesInput={degreesInput}
           onDegreesInputChange={onDegreesInputChange}
           onStepChange={onStepChange}
+          rateInput={rateInput}
         />
       )}
       {step === 6 && (
