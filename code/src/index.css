@@ -20,6 +20,7 @@ code {
 h1 {
   font-family: "Bangers", cursive;
   margin-top: 80px;
+  font-size: 40px;
   letter-spacing: 1px;
   color: rgb(55, 194, 78);
 }
@@ -196,8 +197,5 @@ input[type="range"]::-webkit-slider-thumb {
     width: 40%;
     height: 600px;
     font-size: 25px;
-  }
-  h1 {
-    font-size: 40px;
   }
 }
