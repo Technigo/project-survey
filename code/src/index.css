@@ -1,8 +1,8 @@
 body {
-  background: rgb(209, 240, 179);
   min-height: 100vh;
   padding: 0;
-  background-image: url('./assets/background-beer-large.jpg');
+  /* source for image: https://unsplash.com/photos/Lq1rOaigDoY */
+  background-image: url('./assets/background-beer-small.jpg');
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -18,14 +18,14 @@ code {
 .headline {
   font-family: 'Lobster', cursive;
   color:rgb(233, 191, 7);
-  font-size: 52px;
+  font-size: 42px;
   font-weight: 500;
 }
 
 .headline-underscore {
   font-family: 'Lobster', cursive;
   color:rgb(233, 191, 7);
-  font-size: 36px;
+  font-size: 24px;
   font-weight: 100;
 }
 
@@ -43,9 +43,9 @@ code {
 }
 
 .form {
-  background: rgb(255, 255, 255);
+  background: rgba(255, 255, 255, 0.7);
   border: 10px solid rgb(233, 191, 7);
-  height: 600px;
+  height: 300px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
@@ -55,11 +55,13 @@ code {
   justify-content: center;
 }
 
-.form-element, .form-button, .form-label {
+.form-element {
   font-family: inherit;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .form-label, .form-button {
+  font-family: inherit;
+  font-size: 14px; 
   margin-top: 15px;
 }

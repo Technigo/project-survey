@@ -17,12 +17,14 @@ const SecondQuestion = (props) => {
           onChange={onSurnameInputChange} 
           className="form-element"
         />
+        <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
         <button 
           disabled={surnameInput === ''}
-          onClick={onStepChange}
+          onClick={() => onStepChange("next")}
           className="form-button">
             Next question
         </button>
+        
       </form>
   )
 }

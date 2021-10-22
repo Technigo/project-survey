@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FourthQuestion = (props) => {
-const {flavour, onFlavourChange, onFinalQuestion} = props
+const {flavour, onFlavourChange, onFinalQuestion, onStepChange} = props
 
   return (
     <form className="form">
@@ -21,7 +21,7 @@ const {flavour, onFlavourChange, onFinalQuestion} = props
             <option value="butter" className="form-element">butter</option>
         </select>
       
-      
+        <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
       <button onClick={onFinalQuestion} className="form-button">See overview</button>
     </form>
   )

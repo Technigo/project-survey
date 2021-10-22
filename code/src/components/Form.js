@@ -29,7 +29,11 @@ const Form = () => {
     setFlavour(event.target.value)
   }
 
-  const onStepChange = () => {
+  const onStepChange = (motion) => {
+    motion === "back" ? (
+      setStep(step - 1)
+    )
+    :
     setStep(step + 1)
   }
 

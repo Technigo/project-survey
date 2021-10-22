@@ -34,7 +34,7 @@ const {nameInput, onNameInputChange,surnameInput, onSurnameInputChange, onStepCh
       />
 
       <button 
-        disabled={nameInput === ''}
+        disabled={nameInput === '' || surnameInput === ''}
         onClick={onStepChange}
         className="form-button">
           Next question
