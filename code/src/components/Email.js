@@ -1,9 +1,7 @@
 // Question 4
 import React from "react";
-import { useState } from "react";
 
 const Email = ({ email, onEmailChange, onStepChange }) => {
-  const [wantsNewsletter, setWantsNewsletter] = useState(false);
   return (
     <div className="container fourth-question">
       <form>

@@ -5,7 +5,7 @@ const Name = ({ name, onNameChange, onStepChange }) => {
   return (
     <>
       <div>
-        <img className="nameImg" src="../images/pineapple.png"></img>
+        {/*  <img className="nameImg" src="../images/pineapple.png"></img> */}
 
         <div className="container">
           <div className="name">

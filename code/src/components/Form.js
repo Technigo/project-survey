@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import Attend from "components/Attend";
 import Name from "./Name";
 import Food from "./Food";
 import Preferences from "components/Preferences";
 import Email from "./Email";
 import Answers from "components/Answers";
+import DontAttend from "./DontAttend";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -12,7 +14,8 @@ const Form = () => {
   const [snack, setSnacks] = useState();
   const [licoriceCandy, setLicoriceCandy] = useState();
   const [drink, setDrink] = useState();
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
+  const [no, setNo] = useState(0);
   const [email, setEmail] = useState(false);
 
   const onNameChange = (event) => setName(event.target.value);
@@ -23,9 +26,21 @@ const Form = () => {
   const onDrinkChange = (event) => setDrink(event.target.value);
   const onEmailChange = (event) => setEmail(event.target.checked);
   const onStepChange = () => setStep(step + 1);
+  const onNoChange = () => setNo(no + 1);
+  console.log(onNoChange);
 
   return (
+    //outer container används inte för tillfället
     <div className="outer-container">
+      {step === 0 && (
+        <Attend
+          /* no={no} onNoChange={onNoChange}  */
+          onNoChange={onNoChange}
+          onStepChange={onStepChange}
+        />
+      )}
+      {no === 1 && <DontAttend />}
+
       {step === 1 && (
         <Name
           name={name}
@@ -74,6 +89,7 @@ const Form = () => {
           email={email}
         />
       )}
+      {no === 6 && <DontAttend />}
     </div>
   );
 };
