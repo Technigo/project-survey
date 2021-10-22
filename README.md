@@ -1,13 +1,13 @@
+# Week 10-Technigo bootcamp 
+
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project, "About your plants" survey, was made as a Week 10 project for Technigo bootcamp. The aim of this project was to learn the purpose of state in React, use the useState hook in React, learn how to connect HTML form inputs to state and use form fields with React.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The toughest part was to show different components based on where you are in the survey, but I solved it with a separate button component that was imported to each of the component displayed on separate page. I quite quickly reached the blue level, so I spend some extra time on making red and black features such as progress bar to visualize to the users how far through the survey they and how much is left. Moreover, I created a range slider from 0 to 10 and connected it to React state. If I had more time, I would also show different questions depending on the answer to a specific question, but I am not sure it is so easy applied to my topic. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://survey-about-plants.netlify.app/ 

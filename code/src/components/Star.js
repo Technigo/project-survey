@@ -4,7 +4,7 @@ const Star = (props) => {
     const changeGrade = (event) => {
         props.OnGradeIndexChange(event.target.value);
     }
-    console.log(props.index)
+
 
     return (
         <label className="star">

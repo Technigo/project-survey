@@ -21,7 +21,7 @@ const QuantitySelect = ({ quantity, onQuantityChange }) => {
                     {amount.map((qty) => {
                         return (
                             <option className="option" key={qty}
-                                value={qty}>{qty}</option>
+                                value={qty}>{qty} plants</option>
                         )
                     })}
                 </select>

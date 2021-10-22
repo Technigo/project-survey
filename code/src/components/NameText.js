@@ -10,6 +10,7 @@ const NameText = ({ nameInput, onNameInputChange }) => {
             <input
                 id="nameInput"
                 name="name"
+                maxLength="20"
                 className="input-label"
                 type="text"
                 placeholder="Type your name here"

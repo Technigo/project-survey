@@ -7,7 +7,7 @@ const Start = () => {
         <>
             <section className="start-overview">
                 <h1 className="name-survey">"About your plants" survey</h1>
-                <p className="time-survey">Time to complete: ≈ 1 minute</p>
+                <p className="time-survey">Time to complete: ≈ 1-2 minutes</p>
             </section>
             <Button button="start" />
         </>

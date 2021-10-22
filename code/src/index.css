@@ -19,9 +19,6 @@ body {
   font-weight: bold;
 }
 
-html {
-  scroll-behavior: smooth;
-}
 
  * {
    box-sizing: border-box;
@@ -108,7 +105,11 @@ html {
   padding: 5px;
   border: 1px solid white;
 }
-
+select {
+  margin: 0 auto; 
+  width: 80%;
+  height: 40px;
+}
 .option {
   text-align: center;
 }
@@ -123,6 +124,7 @@ html {
 .input-radio {
   margin-right: 10px;
 }
+
 .overview-container {
   max-width: 350px;
   font-size: 16px;
@@ -131,11 +133,11 @@ html {
   flex-direction: column;
 }
 .overview-text {
-  font-size: 30px;
+  font-size: 25px;
   letter-spacing: 1.2px;
 }
 .summary-text{
-  font-size: 25px;
+  font-size: 20px;
   text-align: left;
   margin-bottom: 0;
   text-decoration: underline;
@@ -196,7 +198,7 @@ html {
 .range-number {
   font-size: 25px;
 }
-.question-counter {
+.counter {
   position: fixed;
   top: 20px;
   left: 0px;
@@ -206,16 +208,14 @@ html {
   width: 100%;
   font-size: 20px;
 }
-.progress-bar {
-  position: relative;
+.progress {
   height: 20px;
   border-radius: 4px;
   width: 70%;
   border: 1px solid white;
-  
 }
 
-.progress-filler {
+.progress-bar {
   background-color: whitesmoke;
   opacity: 0.7;
   height: 100%;
@@ -260,7 +260,7 @@ html {
     height: 80px;
     font-size: 25px;
   }
-  .question-counter{
+  .counter{
     top: 40px;
     font-size: 28px;
   }
@@ -313,5 +313,8 @@ html {
     margin: 0 auto; 
     width: 60%;
     height: 40px;
+  }
+  .progress{
+    width: 60%;
   }
 }
