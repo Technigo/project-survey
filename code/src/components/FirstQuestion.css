@@ -1,10 +1,15 @@
 .input-first-question {
-  width: 100%;
   padding: 15px;
   background-color: var(--beige);
   border: 1px solid var(--blue);
+  border-radius: 10px;
+  width: 100%;
 }
 
 .input-first-question::after {
+  background-color: var(--beige);
+}
+
+.test:after {
   background-color: var(--beige);
 }

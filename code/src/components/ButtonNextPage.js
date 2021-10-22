@@ -1,7 +1,7 @@
 import React from "react";
-import "./ButtonNextQuestion.css";
+import "./ButtonNextPage.css";
 
-const ButtonNextQuestion = () => {
+const ButtonNextPage = () => {
   return (
     <button type="submit" className="link-button">
       Next question
@@ -9,4 +9,4 @@ const ButtonNextQuestion = () => {
   );
 };
 
-export default ButtonNextQuestion;
+export default ButtonNextPage;

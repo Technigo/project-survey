@@ -1,12 +1,12 @@
 import React from "react";
 import "./ThirdQuestion.css";
-import ButtonNextQuestion from "./ButtonNextPage";
+import ButtonNextPage from "./ButtonNextPage";
 
 const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
   const ageGroup = [
     "Go for a run",
-    "That will never happen in",
-    'Stare in the blanc aka "meditate"',
+    "That will never happen",
+    'Stare into nothing aka "meditate"',
     "Code, doh!",
     "Ice-cream",
   ];
@@ -16,7 +16,6 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
       <h2 className="page-header">You have one hour off..</h2>
       <p>..what will you do?</p>
       {ageGroup.map(group => (
-        // <div className="wrapper">
         <label className="radiobutton-container" key={group}>
           <input
             className="input"
@@ -29,10 +28,9 @@ const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
           <span className="custom-radio"></span>
           <p>{group}</p>
         </label>
-        // </div>
       ))}
 
-      <ButtonNextQuestion />
+      <ButtonNextPage />
     </form>
   );
 };

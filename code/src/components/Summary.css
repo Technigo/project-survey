@@ -1,5 +1,5 @@
 .summary-text {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.7);
   padding: 10px;
   border-radius: 10px;
 }
@@ -9,6 +9,6 @@
 }
 
 .summary-text p {
-  font-size: 18px;
+  font-size: 16px;
   margin: 5px 0;
 }

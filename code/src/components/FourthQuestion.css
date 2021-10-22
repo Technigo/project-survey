@@ -3,6 +3,14 @@
   text-align: center;
 }
 
+.input-slider-number {
+  color: var(--beige);
+  background: var(--blue);
+  border-radius: 10px;
+  border: none;
+  text-align: center;
+}
+
 /* The slider itself */
 .slider {
   -webkit-appearance: none;
@@ -39,6 +47,6 @@
   opacity: 0.8;
   display: flex;
   justify-content: space-between;
-  padding: 30px 10px;
+  padding: 20px 10px;
   border-radius: 10px;
 }

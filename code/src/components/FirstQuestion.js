@@ -15,8 +15,9 @@ const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
         value={nameInput}
         onChange={onNameInputChange}
         name="nameInput"
-        // required
+        required
       />
+      <span className="test"></span>
       <ButtonNextQuestion />
     </form>
   );

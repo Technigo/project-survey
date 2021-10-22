@@ -32,7 +32,7 @@
 }
 
 .radiobutton-container:hover input ~ .custom-radio {
-  background-color: #de8971;
+  background-color: var(--orange);
 }
 
 .radiobutton-container input:checked ~ .custom-radio {

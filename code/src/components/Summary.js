@@ -16,7 +16,7 @@ const Summary = ({ nameInput, interestInput, ageInput, moodInput }) => {
         </p>
         <p>
           {ageInput} on your free hour and you will feel more than {moodInput}{" "}
-          about you know what !
+          about you know what 😜 !
         </p>
       </article>
 

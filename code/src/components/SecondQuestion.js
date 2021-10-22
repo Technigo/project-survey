@@ -18,7 +18,7 @@ const SecondQuestion = ({
         type="text"
         value={interestInput}
         onChange={onInterestInputChange}
-        // required
+        required
       >
         <option value="">My favorite thing is</option>
         <option value="cleaning">Clean</option>

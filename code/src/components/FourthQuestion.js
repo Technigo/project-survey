@@ -22,6 +22,7 @@ const FourthQuestion = ({ moodInput, onMoodInputChange, handleSubmit }) => {
           />
 
           <input
+            className="input-slider-number"
             type="number"
             min="-100"
             max="100"

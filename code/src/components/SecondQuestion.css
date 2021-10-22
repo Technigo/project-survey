@@ -1,6 +1,9 @@
 .input-select {
   padding: 15px;
   background-color: var(--beige);
+  border: 1px solid var(--blue);
+  border-radius: 10px;
+  width: 100%;
 }
 
 .input-select::after {
