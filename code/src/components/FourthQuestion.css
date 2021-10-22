@@ -39,6 +39,10 @@
 }
 
 .img-container-q4 {
+  background: var(--beige);
+  opacity: 0.8;
   display: flex;
   justify-content: space-between;
+  padding: 30px 10px;
+  border-radius: 10px;
 }

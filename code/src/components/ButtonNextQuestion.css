@@ -10,7 +10,7 @@
 .link-button {
   background-color: var(--blue);
   width: 100%;
-  border: none;
+  border: 1px solid var(--beige);
   color: var(--beige);
   font-size: 20px;
   border-radius: 10px;
