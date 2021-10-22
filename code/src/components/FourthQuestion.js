@@ -10,8 +10,11 @@ const FourthQuestion = ({ favoriteInput, onFavoriteInputChange, onStepChange, on
                 <option value="CSS">CSS</option>
                 <option value="JS">JS</option>
             </select>
-            <button disabled={favoriteInput === ''} onClick={onStepChange}>Next question</button>
-            <button onClick={onStepChangeBack}>Previous Question</button>
+            <img src="./assets/q4.svg" alt="question-step-4"></img>
+            <div className="buttons">
+                <button onClick={onStepChangeBack}>&#9669; Previous Question</button>
+                <button disabled={favoriteInput === ''} onClick={onStepChange}>Next Question &#9659;</button>
+            </div>
         </form>
     )
 }

@@ -10,7 +10,7 @@ import Overview from './Overview'
 
 const Form = () => {
     const [nameInput, setNameInput] = useState('')
-    const [surnameInput, setSurnameInput] = useState('')
+    const [lastnameInput, setLastnameInput] = useState('')
     const [ageInput, setAgeInput] = useState('')
     const [favoriteInput, setFavoriteInput] = useState('')
     const [ratingInput, setRatingInput] = useState('')
@@ -20,8 +20,8 @@ const Form = () => {
     const onNameInputChange = (event) => {
         setNameInput(event.target.value)
     }
-    const onSurnameInputChange = (event) => {
-        setSurnameInput(event.target.value)
+    const onLastnameInputChange = (event) => {
+        setLastnameInput(event.target.value)
     }
     const onAgeInputChange = (event) => {
         setAgeInput(event.target.value)
@@ -44,7 +44,8 @@ const Form = () => {
 
     return (
         <div className="container">
-            {step <= 6 && (<h2>Question number: {step}/6</h2>) }
+            <h1>The Survey</h1>
+            {step <= 6 && (<h3>Question {step}/6</h3>) }
 
             {step === 1 && (
                 <FirstQuestion
@@ -55,8 +56,8 @@ const Form = () => {
             )}
             {step === 2 && (
                 <SecondQuestion
-                    surnameInput={surnameInput}
-                    onSurnameInputChange={onSurnameInputChange}
+                    lastnameInput={lastnameInput}
+                    onLastnameInputChange={onLastnameInputChange}
                     onStepChange={onStepChange}
                     onStepChangeBack={onStepChangeBack}
                 />
@@ -96,7 +97,7 @@ const Form = () => {
             {step === 7 && (
                 <Overview
                     nameInput={nameInput}
-                    surnameInput={surnameInput}
+                    lastnameInput={lastnameInput}
                     ageInput={ageInput}
                     favoriteInput={favoriteInput}
                     ratingInput={ratingInput}

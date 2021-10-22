@@ -1,17 +1,21 @@
 import React from 'react'
 
-const SecondQuestion = ({ surnameInput, onSurnameInputChange, onStepChange, onStepChangeBack }) => {
+const SecondQuestion = ({ lastnameInput, onLastnameInputChange, onStepChange, onStepChangeBack }) => {
     return (
         <form>
-            <label htmlFor="surnameInput">Type your surname</label>
+            <label htmlFor="lastnameInput">Type your last name</label>
             <input 
-                id="surnameInput"
+                className="input-field"
+                id="lastnameInput"
                 type="text"
-                value={surnameInput}
-                onChange={onSurnameInputChange}
+                value={lastnameInput}
+                onChange={onLastnameInputChange}
             />
-            <button disabled={surnameInput === ''} onClick={onStepChange}>Next Question</button>
-            <button onClick={onStepChangeBack}>Previous Question</button>
+            <img src="./assets/q2.svg" alt="question-step-2"></img>
+            <div className="buttons">
+                <button onClick={onStepChangeBack}>&#9669; Previous Question</button>
+                <button disabled={lastnameInput === ''} onClick={onStepChange}>Next Question &#9659;</button>
+            </div>
         </form>
     )
 }

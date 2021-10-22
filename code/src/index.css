@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  background-color: blue;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -13,10 +14,12 @@ code {
 }
 
 .container {
+  background-color: white;
   width: 300px;
   margin: 0 auto;
   margin-top: 50px;
-  border: 1px solid lightgrey;
+  border: 10px solid lightsteelblue;
+  border-radius: 10px;
   padding: 50px;
 }
 label {
@@ -26,7 +29,36 @@ input,
 select {
   margin-top: 10px;
 }
+select {
+  width: 100%;
+}
+.input-field {
+  width: 292px;
+}
+.first-button {
+  display: flex;
+  justify-content: flex-end;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
 button {
-  display: block;
   margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: lightsteelblue;
+}
+.slider {
+  width: 100%;
+}
+.slider-p {
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+  border-bottom: 1px solid lightgrey;
+  padding-bottom: 20px;
 }

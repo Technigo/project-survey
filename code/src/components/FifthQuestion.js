@@ -49,8 +49,11 @@ const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange, onStepC
                 />
                 5
             </label>
-            <button disabled={ratingInput === ''} onClick={onStepChange}>Next Question</button>
-            <button onClick={onStepChangeBack}>Previous Question</button>
+            <img src="./assets/q5.svg" alt="question-step-5"></img>
+            <div className="buttons">
+                <button onClick={onStepChangeBack}>&#9669; Previous Question</button>
+                <button disabled={ratingInput === ''} onClick={onStepChange}>Next Question &#9659;</button>
+            </div>
         </form>
     )
 }
