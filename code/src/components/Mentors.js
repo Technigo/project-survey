@@ -76,9 +76,9 @@ const Mentors = ({
                 alt="Kate Chastain"
               />
               <p className="mentorcard-text">
-                <b>Kate Chastain:</b> Has served every celebreity there is.
-                Master of resting bitchface and can make every cocktail there is
-                and earn the biggest tip of the season.
+                <b>Kate Chastain:</b> Has served every celebrity there is.
+                Master of resting bitch face and can make every cocktail there
+                is and earn the biggest tip of the season.
               </p>
             </span>
           </label>
@@ -99,7 +99,7 @@ const Mentors = ({
                 alt="Craig Conover"
               />
               <p className="mentorcard-text">
-                <b>Craig Conover:</b> The southern gentelman and entrepreneur
+                <b>Craig Conover:</b> The southern gentleman and entrepreneur
                 who built an empire of pillows. You like to party, flirt and
                 make money while still being polite? Craig's your man!
               </p>

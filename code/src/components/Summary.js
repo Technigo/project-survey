@@ -1,5 +1,6 @@
 import React from "react";
 import "./summary.css";
+import Range from "./Range";
 
 const Summary = ({ name, drink, tagline, mentor, mentorImage }) => {
   return (
@@ -24,6 +25,7 @@ const Summary = ({ name, drink, tagline, mentor, mentorImage }) => {
           </p>
           <img className="mentorcard" alt="mentor" src={mentorImage} />
         </div>
+        <Range />
         <form className="submit-button-form">
           <button className="next-button" type="submit">
             Do it again?

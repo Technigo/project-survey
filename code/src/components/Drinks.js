@@ -20,10 +20,10 @@ const Drinks = ({ drink, onDrinkChange, onStepChange, onStepBackChange }) => {
           <option disabled value="">
             --Please choose an option--
           </option>
-          <option value="coffe">Coffee</option>
-          <option value="redbull">Redbull</option>
-          <option value="coke">Coke</option>
-          <option value="milk">Milk</option>
+          <option value="Coffe ☕️">Coffe</option>
+          <option value="Redbull ⚡️">Redbull</option>
+          <option value="Coke 🥤">Coke</option>
+          <option value="Milk 🥛">Milk</option>
         </select>
 
         <div className="button-box">

@@ -5,14 +5,12 @@ import YourName from "components/YourName";
 import Taglines from "./Taglines";
 import Drinks from "./Drinks";
 import Mentors from "./Mentors";
-//import BravoMentor from "./BravoMentor";
 import Summary from "./Summary";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [drink, setDrink] = useState("");
   const [tagline, setTagline] = useState("");
-  //const [bravo, setBravo] = useState("");
   const [step, setStep] = useState(1);
   const [mentor, setMentor] = useState("");
   const [mentorImage, setMentorImage] = useState("");
@@ -29,10 +27,6 @@ const Form = () => {
     setTagline(event.target.value);
   };
 
-  // const onBravoChange = (event) => {
-  //   setBravo(event.target.value);
-  // };
-
   const onMentorChange = (event, img) => {
     setMentor(event.target.value);
     setMentorImage(img);
@@ -46,7 +40,6 @@ const Form = () => {
     setStep(step - 1);
   };
 
-  // v1
   return (
     <div className="main-container">
       {step === 1 && (

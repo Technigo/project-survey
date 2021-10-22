@@ -2,7 +2,6 @@ import React from "react";
 import "./taglines.css";
 
 const Taglines = ({ onTaglineChange, onStepChange, onStepBackChange }) => {
-  // v1
   return (
     <div className="question-container">
       <h2 className="question-title">
