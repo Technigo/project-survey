@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonNextQuestion from "./ButtonNextPage";
+import ButtonNextPage from "./ButtonNextPage";
 import "./SecondQuestion.css";
 
 const SecondQuestion = ({
@@ -26,7 +26,7 @@ const SecondQuestion = ({
         <option value="dust">Dusting</option>
         <option value="empty">Empty dish washer</option>
       </select>
-      <ButtonNextQuestion />
+      <ButtonNextPage />
     </form>
   );
 };
