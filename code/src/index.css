@@ -101,6 +101,7 @@ input[type=email] {
 }
 
 
+/* SPEEACH BUBBLE*/
 .speech-bubble {
 	position: relative;
 	background: #ffffff;
@@ -169,6 +170,7 @@ img {
   font-size: 22px;
 }
 
+/*SLIDER */ 
 .slider {
   -webkit-appearance: none;
   width: 100%;
@@ -240,6 +242,14 @@ img {
   button {
     font-size: 20px;
     width: 40%;
+  }
+
+  .overview-container {
+    flex-direction: column;
+  }
+
+  .speech-bubble {
+    width: 100%;
   }
 }
 
