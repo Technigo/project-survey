@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Question3 = ({ foodInput, onFoodInputChange, onStepChange }) => {
 
@@ -10,11 +10,12 @@ const Question3 = ({ foodInput, onFoodInputChange, onStepChange }) => {
                 type="text" 
                 value={foodInput} 
                 onChange={onFoodInputChange}
-                placeholder="Type your answer here..." />
+                placeholder="Type your answer here..."
+            />
 
             <button onClick={onStepChange}>Next</button>
         </form>
-    );
-};
+    )
+}
 
-export default Question3;
+export default Question3

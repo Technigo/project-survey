@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Question2 = ({ treeInput, onTreeInputChange, onStepChange }) => {
 
@@ -11,6 +11,9 @@ const Question2 = ({ treeInput, onTreeInputChange, onStepChange }) => {
                         <input 
                             className="radiobutton-input"
                             type="radio"
+                            name="tree-type"
+                            id="real-tree"
+                            aria-checked="false"
                             value="Real tree"
                             onChange={() =>onTreeInputChange('Real tree')}
                             checked={treeInput === 'Real tree'}
@@ -24,6 +27,9 @@ const Question2 = ({ treeInput, onTreeInputChange, onStepChange }) => {
                         <input 
                             className="radiobutton-input"
                             type="radio"
+                            name="tree-type"
+                            id="fake-tree"
+                            aria-checked="false"
                             value="Fake tree"
                             onChange={() =>onTreeInputChange('Fake tree')}
                             checked={treeInput === 'Fake tree'}
@@ -37,6 +43,9 @@ const Question2 = ({ treeInput, onTreeInputChange, onStepChange }) => {
                         <input 
                             className="radiobutton-input"
                             type="radio"
+                            name="tree-type"
+                            id="no-tree"
+                            aria-checked="false"
                             value="No tree"
                             onChange={() =>onTreeInputChange('No tree')}
                             checked={treeInput === 'No tree'}
@@ -49,8 +58,8 @@ const Question2 = ({ treeInput, onTreeInputChange, onStepChange }) => {
             <button onClick={onStepChange}>Next</button>
 
         </form>
-    );
-};
+    )
+}
 
-export default Question2;
+export default Question2
 

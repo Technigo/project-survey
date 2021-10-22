@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const Intro = ({ onStepChange }) => {
 
@@ -12,7 +12,7 @@ const Intro = ({ onStepChange }) => {
                 <p class="time-paragraph">Takes 1 min</p>
             </div>
     </div>
-    );
-};
+    )
+}
 
-export default Intro;
+export default Intro

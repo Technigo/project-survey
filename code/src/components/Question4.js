@@ -9,7 +9,6 @@ const Question4 = ({ movieInput, onMovieInputChange, onStepChange }) => {
 					className="dropdown-select" 
 					value={movieInput} 
 					onChange={event => onMovieInputChange(event.target.value)}
-					required
 				>
 					<option className="dropdown-content" disabled value="">Select an option</option>
 					<option className="dropdown-content"value="Home Alone">Home Alone</option>
