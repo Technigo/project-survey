@@ -3,6 +3,7 @@ body {
   padding: 0;
   /* source for image: https://unsplash.com/photos/Lq1rOaigDoY */
   background-image: url('./assets/background-beer-small.jpg');
+  background-size: cover;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -18,6 +19,7 @@ code {
 .headline {
   font-family: 'Lobster', cursive;
   color:rgb(233, 191, 7);
+  margin-top: 0;
   font-size: 42px;
   font-weight: 500;
 }
