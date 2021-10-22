@@ -7,7 +7,9 @@ const FourthQuestion = ({
 }) => {
 	return (
 		<form>
+			<div className="header">
 			<h1 className="title">Pick your strength</h1> 
+			</div>
 			<label>
 				
 				<select value={strength} onChange={ event => onStrengthChange(event.target.value)}> 

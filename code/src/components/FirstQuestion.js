@@ -9,8 +9,10 @@ const FirstQuestion = ({
 
 	return (
 		<form>
+			<div className="header">
+			<h1 className="title">Type your first name</h1>
+			</div> 
 			<label htmlFor="nameInput">
-				<h1 className="title">Type your first name</h1> 
 				</label>
 			<input
 				className="witing-question"

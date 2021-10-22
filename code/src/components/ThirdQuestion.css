@@ -1,3 +1,19 @@
+.radio-container{
+    margin:2em 0 2em 0;
+}
 
+.radio-label{
+    display:flex;
+    margin-top:1em;
+}
+
+.radio-text{
+    margin-left: 0.5em;
+}
+
+
+.radio-button{
+    box-sizing: border-box;
+}
 
 

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300&display=swap');
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -15,7 +18,24 @@ code {
 .wrapper{
   width:100vw;
   height:100vh;
-  align-content: center;
+
+}
+
+.header{
+  /* color: black; */
+  margin: 0;
+  border-bottom: 2px solid rgba(43, 41, 41, 0.1);
+  margin-bottom: 1em;
+}
+
+h1{
+  /* text-transform: uppercase; */
+  font-family: 'Roboto';
+  font-size: 1.7em;
+}
+
+.title {
+  margin:0.2em;
 }
 
 
@@ -26,9 +46,27 @@ form{
   padding-top:5em;
   margin:0;
   width:100vw;  
-  /* padding-left: 20%; */
-  
+  animation-name: falling;
+  animation-duration: 5s;
+  animation-timing-function:ease-out;
+  opacity: 1;
 }
+
+@keyframes falling {
+  0% {
+    opacity:-5;
+    transform: translateY(-10em);
+  }
+  50% {
+    opacity:1;
+    transform: translateY(0em)
+  }
+  100% {
+    opacity:1;
+    transform: translateY(0);
+  }
+}
+
 
 .witing-question{
     display: block;
@@ -46,24 +84,7 @@ form{
     transition: background-color 1e+08s ease 0s, box-shadow 0.1s ease-out 0s;
 }
 
-/* .submit{
-  width: 10em;
-  transition-duration: 0.4s;
-  background-color: white;
-  color: black;
-  border: 2px solid #555555;
-  border-radius: 5%;
-  height: 4em;
-}
 
-.submit:hover {
-  background-color: #555555;
-  color: white;
-} */
-
-.title {
-  margin:0;
-}
 button{
 display: inline-block;
   border-radius: 4px;
@@ -84,6 +105,7 @@ display: inline-block;
   display: inline-block;
   position: relative;
   transition: 0.5s;
+  font-family: 'Montserrat';
 }
 
 .button span:after {
@@ -97,6 +119,7 @@ display: inline-block;
 
 .button:hover span {
   padding-right: 25px;
+  
 }
 
 .button:hover span:after {
@@ -109,8 +132,9 @@ display: inline-block;
 }
 
 ::placeholder{
-  font-size: 0.9em;
+  font-size: 0.7em;
   opacity: 50%;
+  font-family: 'Montserrat';
 }
 
 

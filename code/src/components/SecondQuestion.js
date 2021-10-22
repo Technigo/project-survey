@@ -7,8 +7,10 @@ const SecondQuestion = ({
 }) => {
 	return (
 		<form>
-			<label htmlFor="surnameInput">
+			<div className="header">
 			<h1 className="title">Type your surname</h1> 
+			</div>
+			<label htmlFor="surnameInput">
 			</label>
 			<input
 				className="witing-question"
