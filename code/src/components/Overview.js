@@ -78,13 +78,6 @@ const Overview = (props) => {
           same as the boolean value false, empty strings, null, undefined and
           NaN.
         </p>
-        <p className="highlight-text">
-          <span className="highlight-span">
-            Check this out in your console!
-          </span>
-          {/* 0 ? console.log("truthy") : console.log("falsy") */} it returns
-          falsy because 0 is false!
-        </p>
       </section>
     </div>
   );
