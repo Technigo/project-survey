@@ -98,6 +98,7 @@ p {
 }
 
 input[type="radio"] {
+  margin-top: 20px;
   -webkit-appearance: none;
   width: 15px;
   height: 15px;
@@ -202,5 +203,8 @@ input[type="range"]::-webkit-slider-thumb {
   }
   .weather-buttons input {
     font-size: 20px;
+  }
+  h1 {
+    font-size: 50px;
   }
 }
