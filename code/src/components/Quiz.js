@@ -119,19 +119,19 @@ const Quiz = () => {
           // Progress bar for question 1 to 5
           <ProgressBar completed={step} totalQuestions={data.pages.length} />
         )}
+        <footer>
+          <p aria-label='Quiz time by Katie Wu. Team Foxes, Technigo.'>
+            &#169; by Katie Wu
+          </p>
+          <p aria-hidden='true'>
+            Team Foxes
+            <span role='img' aria-label='fox emoji'>
+              &nbsp;🦊&nbsp;
+            </span>
+            | Technigo
+          </p>
+        </footer>
       </section>
-      <footer>
-        <p aria-label='Quiz time by Katie Wu. Team Foxes, Technigo.'>
-          &#169; by Katie Wu
-        </p>
-        <p aria-hidden='true'>
-          Team Foxes
-          <span role='img' aria-label='fox emoji'>
-            &nbsp;🦊&nbsp;
-          </span>
-          | Technigo
-        </p>
-      </footer>
     </>
   );
 };

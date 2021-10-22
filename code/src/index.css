@@ -171,6 +171,7 @@ audio {
   max-width: 300px;
   font-size: 14px;
   border-collapse: collapse;
+  border: none;
 }
 
 th {
@@ -183,10 +184,11 @@ td {
 }
 
 footer {
-  position: relative;
-  bottom: 0px;
-  left: 0px;
-  margin: 14px 10px;
+  /* position: relative; */
+  /* bottom: 0px;
+  left: 0px; */
+  /* margin: 14px 10px; */
+  margin-top: 20px;
 }
 
 footer p {
@@ -201,7 +203,7 @@ footer p {
 /* tablet and desktop */
 @media (min-width: 768px) {
   section {
-    width: 92%;
+    width: 70%;
     margin: 0 auto;
   }
   section h1 {
@@ -228,13 +230,13 @@ footer p {
     text-align: left;
   }
   section label {
-    font-size: 26px;
+    font-size: 18px;
     line-height: 42px;
   }
   section img {
-    width: 350px;
-    height: 250px;
-    margin-left: 50px;
+    width: 260px;
+    height: 180px;
+    margin-left: 20px;
   }
   .example-container {
     margin-right: 50px;
@@ -267,9 +269,20 @@ footer p {
     padding: 8px;
   }
   footer {
-    margin: 14px 64px;
+    /* margin: 14px 204px; */
+    margin-top: 40px;
   }
   footer p {
     font-size: 16px;
+  }
+}
+@media (min-width: 992px) {
+  section img {
+    width: 350px;
+    height: 250px;
+    margin-left: 50px;
+  }
+  section label {
+    font-size: 24px;
   }
 }
