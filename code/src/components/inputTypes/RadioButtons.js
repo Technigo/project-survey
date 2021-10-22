@@ -1,6 +1,7 @@
 import React from "react"
 import './RadioButtons.css'
 
+/* This is a custom Radio-Button component, that shows as many radio-buttons as are given in the valueArray */
 const RadioButtons = ({value, setValue, valueArray}) => {
   return (
     <div className="radio-container">

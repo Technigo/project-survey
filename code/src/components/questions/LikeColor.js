@@ -19,6 +19,7 @@ const likeColor = ({
         />
       </label>
 
+      {/* The <MoreToAdd /> only gets called, if the user clicks 'no' in the above question */}
       {color === 'no' && (
         <MoreToAdd
         labeltext={'How could I improve the color scheme?'}

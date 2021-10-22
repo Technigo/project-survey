@@ -19,6 +19,7 @@ const LikeText =({
         />
       </label>
 
+      {/* The <MoreToAdd /> only gets called, if the user clicks 'no' in the above question */}
       {text === 'no' && (
         <MoreToAdd
         labeltext={'Do you have any suggestions for a better text?'}

@@ -12,7 +12,7 @@
 
 input[type="radio"] {
   margin: 0 5px 0 0;
-  appearance: none;
+  appearance: none;    //this is needed to get rid of default-styling
   border-radius: 50px;
   border: 1px solid var(--sek);
   height: 15px;
