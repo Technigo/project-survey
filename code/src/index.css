@@ -20,7 +20,7 @@ code {
 h1 {
   font-family: "Bangers", cursive;
   margin-top: 80px;
-  font-size: 40px;
+  font-size: 50px;
   letter-spacing: 1px;
   color: rgb(55, 194, 78);
 }
@@ -48,7 +48,6 @@ p {
 }
 /* the Form container */
 .form-container {
-  font-size: 15px;
   background-color: rgba(255, 255, 255, 0.692);
   margin-top: 30px;
   margin-bottom: 100px;
@@ -197,5 +196,8 @@ input[type="range"]::-webkit-slider-thumb {
     width: 40%;
     height: 600px;
     font-size: 25px;
+  }
+  h1 {
+    font-size: 60px;
   }
 }
