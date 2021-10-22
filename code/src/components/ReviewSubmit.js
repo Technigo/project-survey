@@ -11,7 +11,7 @@ const ReviewSubmit = ({ answers }) => {
 
   const phraseStyle = {
     display: "block",
-    fontWeight: "bold",
+    fontWeight: answers[4],
     fontSize: "18px",
     textAlign: "center",
     lineHeight: "30px",
@@ -22,11 +22,9 @@ const ReviewSubmit = ({ answers }) => {
       <p>Hello {answers[0]},</p>
       <p style={pStyle}>
         Your favourite word or phrase is:{" "}
-        <span style={phraseStyle}>{answers[1]}</span> writen in {answers[3]}.
+        <span style={phraseStyle}>"{answers[1]}"</span> writen in {answers[3]} with a {answers[4]} font-weight.
       </p>
       <p>We hope you like the {answers[2]} background!</p>
-      <p>{answers[4]}</p>
-
       <p>Here's a CSS code snippet you might like:</p>
       <div className="css-container">
           <p className="css-first-line">
@@ -35,6 +33,8 @@ const ReviewSubmit = ({ answers }) => {
         <ul>
           <li><span className="css-property">background-color</span>: <span className="css-attribute">{answers[2]}</span>;</li>
           <li><span className="css-property">font-family</span>: <span className="css-attribute">"{answers[3]}"</span>;</li>
+          <li><span className="css-property">font-weight</span>: <span className="css-attribute">"{answers[4]}"</span>;</li>
+
           <li>{`}`}</li>
         </ul>
       </div>

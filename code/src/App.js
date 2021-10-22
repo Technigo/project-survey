@@ -1,23 +1,23 @@
-import React from "react";
+import React, {useState} from "react";
 
 import AllQuestions from "components/AllQuestions";
+import WelcomePage from "components/WelcomePage";
+import Footer from "components/Footer";
 
 export const App = () => {
+  const [welcome, setWelcome] = useState(true);
+
+  const handleWelcomeClick = (e) => {
+    e.preventDefault()
+    setWelcome(false)
+  }
+
   return (
     <>
       <div className="main">
-        <AllQuestions />
+        {welcome ? <WelcomePage setWelcome={handleWelcomeClick}/> : <AllQuestions />}
       </div>
-      <footer className="footer">
-        Photo by{" "}
-        <a href="https://unsplash.com/@codestorm?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-          Safar Safarov
-        </a>{" "}
-        on{" "}
-        <a href="https://unsplash.com/s/photos/coding?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-          Unsplash
-        </a>
-      </footer>
+      <Footer />
     </>
   );
 };
