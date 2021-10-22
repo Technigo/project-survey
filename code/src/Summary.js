@@ -14,7 +14,7 @@ export const Summary = (props) => {
         {party === 'No' && <p>No glöggmingel? You can come to mine.</p>}
         {party === 'Maybe' && <p>Maybe, maybe not a glöggmingel.. You need to drink some Glögg and think about it.</p>}
       </p>
-      <button type="submit"><a href="return">Return</a></button>
+      <button type="button"><a href="return">Return</a></button>
     </section>
   )
 }

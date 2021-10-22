@@ -1,14 +1,20 @@
-# Survey form with React
+## Build a Survey Tool
 
-Replace this readme with your own information about your project.
+This week we practicing React state and controlled forms by making a Typeform like product. The project should consist of at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This week I run into some issues with npm installments and deploying site on Netlify. I solved it by:
+1.Delete package-lock.json
+2.Delete node_modules
+3.Remove “eslint” from dependencies and/or devDependesies
+4.Run npm install
+5.Deploy it on Netlify again
+
+I also needed to go back a few steps in what I built in order to have it work so if I had more time I would add the things I had to remove (audio & animations). 
 
 ## View it live
+
 https://glogg-for-everyone.netlify.app/
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
