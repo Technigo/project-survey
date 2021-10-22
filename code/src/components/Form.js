@@ -51,7 +51,7 @@ const Form = () => {
               <img
                 className="start-image"
                 value={startImage}
-                src="https://i.ibb.co/hyPxMWW/horror.png"
+                src="https://i.ibb.co/xqfxzct/horror-poster.jpg"
                 alt="poster"
               />
             </div>

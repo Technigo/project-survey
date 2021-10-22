@@ -6,7 +6,6 @@ const Dropdown = ({
     onStepChange,
     onPreviousQuestionChange
 }) => {
-	// const { nameInput, onNameInputChange } = props;
 
 	return (
 		<>

@@ -6,7 +6,6 @@ const Song = ({
     onStepChange,
     onPreviousQuestionChange
  }) => {
-	// const { nameInput, onNameInputChange } = props;
 
 	return (
         <>

@@ -23,7 +23,6 @@ const Name = ({
 				required
 			/>
 			<input className="btn" type="submit" value="continue" onClick={onStepChange} />
-			{/* <button  >Next questions</button> */}
 		</form>
 		</article>
 		</>
