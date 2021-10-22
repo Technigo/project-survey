@@ -11,8 +11,8 @@ const FifthQuestion = ({moodInput, onMoodInputChange, onStepChange, onPreviousQu
 				</label>
 				<div>
 					<div className="emojies-container">
-						<span role="emoji" className="emoji">🥱</span>
-						<span role="emoji" className="emoji">😀</span>
+						<span role="img" className="emoji" aria-label="img">🥱</span>
+						<span role="img" className="emoji" aria-label="img">😀</span>
 					</div>
 					<input 
 					type="range" 

@@ -14,17 +14,17 @@ const ThirdQuestion = ({ countryInput, onCountryInputChange, onStepChange, onPre
 				<select className="select-input" value={countryInput} onChange={onCountryInputChange}>
           			<option value="">Select country:</option>
 					<optgroup label="Scandinavia"></optgroup>
-						<option value="Sweden">Sweden 🇸🇪</option>
-						<option value="Norway">Norway 🇳🇴 </option>
-						<option value="Denmark">Denmark 🇩🇰 </option>
-						<option value="Finland">Finland 🇫🇮</option>
+						<option value="Sweden">Sweden</option>
+						<option value="Norway">Norway</option>
+						<option value="Denmark">Denmark</option>
+						<option value="Finland">Finland</option>
 					<optgroup label="Europe"></optgroup>
-						<option value="Germany">Germany 🇩🇪 </option>
-						<option value="Spain">Spain 🇪🇸 </option>
-						<option value="France">France 🇫🇷 </option>
-						<option value="Polen">Italy 🇮🇹 </option>
-						<option value="Poland">Poland 🇵🇱</option>
-						<option value="Polen">UK 🇬🇧</option>
+						<option value="Germany">Germany</option>
+						<option value="Spain">Spain</option>
+						<option value="France">France </option>
+						<option value="Polen">Italy</option>
+						<option value="Poland">Poland</option>
+						<option value="Polen">UK</option>
         		</select>
 				<div className="button-container">
 					<button onClick={onPreviousQuestionChange}>&larr; Back</button>
