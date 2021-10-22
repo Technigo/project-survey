@@ -9,7 +9,7 @@ const Form = () => {
 	const [nameInput, setNameInput] = useState("");
 	const [ageInput, setAgeInput] = useState("");
 	const [streamingInput, setStreamingInput] = useState("");
-	const [genresInput, setGenresInput] = useState(false);
+	const [genresInput, setGenresInput] = useState("");
 	const [step, setStep] = useState(1);
 
 	const onNameInputChange = (event) => {
@@ -25,7 +25,7 @@ const Form = () => {
 	};
 
 	const onGenresInputChange = (event) => {
-		setGenresInput(event.target.checked);
+		setGenresInput(event.target.value);
 	};
 
 	const nextQuestion = (event) => {
@@ -95,7 +95,7 @@ const Form = () => {
 	    nameInput={nameInput}
 	    ageInput={ageInput}
 	    streamingInput={streamingInput}
-			// genresInput={genresInput}
+			genresInput={genresInput}
 			step={step}
 	  />
     );

@@ -2,55 +2,36 @@ import React from "react";
 
 const genresGroup = ["Drama", "Romance", "International", "Adventure", "Feelgood", "Fantasy", "Action"];
 
-export const FourthQuestion = ({ onGenresInputChange, nextQuestion, previousQuestion, step }) => {
+export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
-		<form onSubmit={nextQuestion}>
-			<div className="question-container">
-				<p className="question-number">Question {step}</p>
-				<h2 className="question-label">What genres of TV shows do you like?</h2>
-				{genresGroup.map((genresInput) => (
-					<label key={genresInput} htmlFor={genresInput}>
-						{/* prettier-ignore */}
-						<input
-             id={genresInput}
-             type="checkbox" 
-             value={genresInput}
-             onChange={onGenresInputChange}
-             // checked={genresInput}
-            />
-						{genresInput}
-					</label>
-				))}
-			</div>
-			<button className="submit-btn" type="submit" onClick={nextQuestion}>
-				Submit answers
+		<div>
+			<button aria-label="Previous question" onClick={previousQuestion}>
+				<span class="fas fa-arrow-left"></span>
 			</button>
-			<button onClick={previousQuestion}>Previous question</button>
-		</form>
+			<form className="form-container" onSubmit={nextQuestion}>
+				<p className="question-number">Question {step}</p>
+				<h2 className="question-label">What genres of TV shows do you prefer?</h2>
+				{genresGroup.map((genres) => (
+					<div className="question-container">
+						<label key={genres} htmlFor={genres}>
+							{/* prettier-ignore */}
+							<input
+            	id={genres}
+            	type="radio"
+            	value={genres}
+            	onChange={onGenresInputChange}
+            	checked={genres === genresInput}
+          	/>
+							{genres}
+						</label>
+					</div>
+				))}
+				{genresInput !== "" && (
+					<button aria-label="Submit answers" type="submit">
+						<span aria-hidden="true">Submit</span>
+					</button>
+				)}
+			</form>
+		</div>
 	);
 };
-
-// export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion, previousQuestion }) => {
-// 	return (
-// 		<form onSubmit={nextQuestion}>
-// 			<h2>What genres of TV shows do you like?</h2>
-// 			{genresGroup.map((genres) => (
-// 				<label key={genres} htmlFor={genres}>
-// 					{/* prettier-ignore */}
-// 					<input
-//             id={genres}
-//             type="checkbox"
-//             value={genres}
-//             onChange={onGenresInputChange}
-//             checked={genresInput}
-//           />
-// 					{genres}
-// 				</label>
-// 			))}
-// 			<button type="submit" onClick={nextQuestion}>
-// 				Submit answers
-// 			</button>
-//      <button onClick={previousQuestion}>Previous question</button>
-// 		</form>
-// 	);
-// };

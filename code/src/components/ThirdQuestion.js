@@ -2,8 +2,11 @@ import React from "react";
 
 export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
-		<form onSubmit={nextQuestion}>
-			<div className="question-container">
+		<div>
+			<button aria-label="Previous question" onClick={previousQuestion}>
+				<span class="fas fa-arrow-left"></span>
+			</button>
+			<form className="form-container">
 				<p className="question-number">Question {step}</p>
 				<label className="question-label" htmlFor="streamingInput">
 					Which streaming service do you prefer?
@@ -14,13 +17,12 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 					<option value="SVT Play">SVT Play</option>
 					<option value="HBO">HBO</option>
 				</select>
-			</div>
-			{streamingInput !== "" && (
-				<button className="next-btn" type="submit">
-					Next question
-				</button>
-			)}
-			<button onClick={previousQuestion}>Previous question</button>
-		</form>
+				{streamingInput !== "" && (
+					<button aria-label="Next question" onClick={nextQuestion}>
+						<span aria-hidden="true">Next</span>
+					</button>
+				)}
+			</form>
+		</div>
 	);
 };

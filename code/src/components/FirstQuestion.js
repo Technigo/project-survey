@@ -2,26 +2,28 @@ import React from "react";
 
 export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion, step }) => {
 	return (
-		<form className="form-container" onSubmit={nextQuestion}>
-			<div className="question-container">
-				<p className="question-number">Question {step}</p>
-				<label className="question-label" htmlFor="nameInput">
-					What is your name?
-				</label>
-				{/* prettier-ignore */}
-				<input
+		<div>
+			<form className="form-container">
+				<div className="question-container">
+					<p className="question-number">Question {step}</p>
+					<label className="question-label" htmlFor="nameInput">
+						What is your name?
+					</label>
+					{/* prettier-ignore */}
+					<input
          id="nameInput"
          type="text"
          value={nameInput}
          onChange={onNameInputChange}
         />
-			</div>
-			{nameInput !== "" && (
-				<button className="next-btn" type="submit">
-					Next question
-				</button>
-			)}
-		</form>
+				</div>
+				{nameInput !== "" && (
+					<button aria-label="Next question" onClick={nextQuestion}>
+						<span aria-hidden="true">Next</span>
+					</button>
+				)}
+			</form>
+		</div>
 	);
 };
 
