@@ -7,6 +7,7 @@ export const FifthQuestion = ({
   satisfactionTextInput,
   onSatisfactionTextInputChange,
   satisfactionInput,
+  onStepBackChange,
 }) => {
   if (satisfactionInput === "Ja") {
     return (
@@ -38,7 +39,12 @@ export const FifthQuestion = ({
                 />
               </label>
             </div>
-            <button type="submit">Skicka</button>
+            <div className="button-wrapper">
+              <button className="go-back-button" onClick={onStepBackChange}>
+                Tillbaka
+              </button>
+              <button type="submit">Skicka</button>
+            </div>
           </form>
         </div>
       </>
@@ -76,7 +82,12 @@ export const FifthQuestion = ({
                 />
               </label>
             </div>
-            <button type="submit">Skicka</button>
+            <div className="button-wrapper">
+              <button className="go-back-button" onClick={onStepBackChange}>
+                Tillbaka
+              </button>
+              <button type="submit">Skicka</button>
+            </div>
           </form>
         </div>
       </>

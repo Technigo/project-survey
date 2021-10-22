@@ -1,6 +1,7 @@
 body {
   margin: 0;
   font-family: "Source Sans Pro", sans-serif;
+  background-color: white;
 }
 
 h2 {
@@ -28,6 +29,19 @@ button {
   padding: 20px 40px;
   margin-top: 40px;
 }
+.go-back-button {
+  background-color: #ea5929;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 20px 40px;
+  margin-top: 40px;
+}
+.go-back-button:hover {
+  box-shadow: 3px 3px 10px #494c50;
+}
+
 button:hover {
   box-shadow: 3px 3px 10px #494c50;
 }

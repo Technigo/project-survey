@@ -6,6 +6,7 @@ export const FourthQuestion = ({
   onSatisfactionInputChange,
   onStepChange,
   valid,
+  onStepBackChange,
 }) => {
   return (
     <>
@@ -45,6 +46,9 @@ export const FourthQuestion = ({
               <span className="radio-button"></span>
             </label>
           </div>
+          <button className="go-back-button" onClick={onStepBackChange}>
+            Tillbaka
+          </button>
           <button type="submit">Nästa</button>
         </form>
       </div>

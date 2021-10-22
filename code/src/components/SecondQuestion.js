@@ -5,6 +5,7 @@ export const SecondQuestion = ({
   adressInput,
   onAdressInputChange,
   onStepChange,
+  onStepBackChange,
 }) => {
   return (
     <>
@@ -29,6 +30,9 @@ export const SecondQuestion = ({
               />
             </label>
           </div>
+          <button className="go-back-button" onClick={onStepBackChange}>
+            Tillbaka
+          </button>
           <button type="submit">Nästa</button>
         </form>
       </div>

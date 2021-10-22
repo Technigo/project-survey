@@ -14,6 +14,7 @@ export const Form = () => {
   const [satisfactionInput, setSatisfactionInput] = useState("");
   const [satisfactionTextInput, setSatisfactionTextInput] = useState();
   const [step, setStep] = useState(0);
+
   const [valid, setValid] = useState(true);
 
   const onNameInputChange = (event) => {
@@ -41,17 +42,15 @@ export const Form = () => {
       } else {
         setStep(step + 1);
         setValid(true);
-        event.preventDefault();
       }
     } else {
       setStep(step + 1);
       setValid(true);
-      event.preventDefault();
     }
   };
-
-  const onValidChange = () => {
-    setValid(false);
+  const onStepBackChange = (event) => {
+    setStep(step - 1);
+    event.preventDefault();
   };
 
   if (step === 0) {
@@ -62,6 +61,7 @@ export const Form = () => {
         nameInput={nameInput}
         onNameInputChange={onNameInputChange}
         onStepChange={onStepChange}
+        onStepBackChange={onStepBackChange}
       />
     );
   } else if (step === 2) {
@@ -70,6 +70,7 @@ export const Form = () => {
         adressInput={adressInput}
         onAdressInputChange={onAdressInputChange}
         onStepChange={onStepChange}
+        onStepBackChange={onStepBackChange}
       />
     );
   } else if (step === 3) {
@@ -79,6 +80,7 @@ export const Form = () => {
         adressInput={adressInput}
         onHouseTypeInputChange={onHouseTypeInputChange}
         onStepChange={onStepChange}
+        onStepBackChange={onStepBackChange}
       />
     );
   } else if (step === 4) {
@@ -88,6 +90,7 @@ export const Form = () => {
         onSatisfactionInputChange={onSatisfactionInputChange}
         onStepChange={onStepChange}
         valid={valid}
+        onStepBackChange={onStepBackChange}
       />
     );
   } else if (step === 5) {
@@ -98,6 +101,7 @@ export const Form = () => {
         onSatisfactionTextInputChange={onSatisfactionTextInputChange}
         onStepChange={onStepChange}
         satisfactionInput={satisfactionInput}
+        onStepBackChange={onStepBackChange}
       />
     );
   } else if (step === 6) {
@@ -108,6 +112,7 @@ export const Form = () => {
         houseTypeInput={houseTypeInput}
         satisfactionInput={satisfactionInput}
         satisfactionTextInput={satisfactionTextInput}
+        onStepBackChange={onStepBackChange}
       />
     );
   } else {
@@ -118,6 +123,7 @@ export const Form = () => {
         houseTypeInput={houseTypeInput}
         satisfactionInput={satisfactionInput}
         satisfactionTextInput={satisfactionTextInput}
+        onStepBackChange={onStepBackChange}
       />
     );
   }

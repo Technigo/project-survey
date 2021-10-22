@@ -7,6 +7,7 @@ const Overview = ({
   houseTypeInput,
   satisfactionInput,
   satisfactionTextInput,
+  onStepBackChange,
 }) => {
   return (
     <>
@@ -32,6 +33,9 @@ const Overview = ({
             </p>
             <p className="p-overview">Varför: {satisfactionTextInput}</p>
           </div>
+          <button className="go-back-button" onClick={onStepBackChange}>
+            Tillbaka
+          </button>
         </section>
       </div>
     </>
