@@ -18,7 +18,7 @@ const FourthQuestion = ({ snack, onSnackChange, onStepChange }) => {
 			</select>
 
 			<button className="button" onClick={onStepChange}>
-				Next question
+				Next Question
 			</button>
 		</form>
 	);

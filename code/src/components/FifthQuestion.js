@@ -1,5 +1,4 @@
 import React from 'react';
-import Overview from './Overview';
 
 const FifthQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 	// const { nameInput, onNameInputChange } = props;

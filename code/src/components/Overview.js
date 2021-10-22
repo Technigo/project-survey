@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 
 // const audioTune = new Audio('</assets/soundfile.mp3>');
 // const [playInLoop, setPlayInLoop] = useState(false);
@@ -14,8 +14,10 @@ const Overview = ({ movie, seat, ticket, snack, nameInput }) => {
 				<span className="name-overview"> {nameInput}! </span>
 			</h2>
 			<p>
-				You have a {ticket} ticket to {movie} on seat number {seat} with {snack}
-				!
+				You have a <span className="details"> {ticket} </span> ticket to{' '}
+				<span className="details">{movie} </span> on seat number{' '}
+				<span className="details">{seat}</span> with{' '}
+				<span className="details">{snack}</span>!
 			</p>
 		</section>
 	);

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'; //importing hooks
+import React, { useState } from 'react'; //importing hooks
 //importing from other components
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
@@ -8,14 +8,14 @@ import FifthQuestion from './FifthQuestion';
 import Overview from './Overview';
 
 const Form = () => {
-	const [movie, setMovie] = useState(''); //state property storing the movie. A default input current empty but can be set
+	const [movie, setMovie] = useState('The Shining'); //state property storing the movie.
 	const [seat, setSeat] = useState('1'); //state property storing the seat.
 	const [ticketInput, setTicket] = useState('');
 	const [snack, setSnack] = useState('popcorn');
 	const [nameInput, setNameInput] = useState('');
 	const [step, setStep] = useState(1); //state property storing the current question.
 
-	// A custom/separate function that pass the function name
+	// A custom/separate variable that pass the function name
 	const onMovieChange = (movie) => {
 		setMovie(movie);
 	};
@@ -88,8 +88,8 @@ const Form = () => {
 					movie={movie}
 					seat={seat}
 					snack={snack}
-					nameInput={nameInput}
 					ticketInput={ticketInput}
+					nameInput={nameInput}
 				/>
 			)}
 		</div>

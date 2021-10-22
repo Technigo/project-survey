@@ -14,14 +14,16 @@ const FirstQuestion = ({ movie, onMovieChange, onStepChange }) => {
 				onChange={(event) => onMovieChange(event.target.value)}
 			>
 				<option value="The Shining">The Shining</option>
-				<option value="Jaws">Jaws</option>
+				<option value="A Nightmare on Elm Street">
+					A Nightmare on Elm Street
+				</option>
 				<option value="Poltergeist">Poltergeist</option>
 				<option value="Carrie">Carrie</option>
 				<option value="Ghostbusters"> Ghostbusters</option>
 			</select>
 
 			<button className="button" onClick={onStepChange}>
-				Next question
+				Next Question
 			</button>
 		</form>
 	);
