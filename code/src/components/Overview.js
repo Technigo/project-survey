@@ -4,7 +4,7 @@ const Overview = ({ nameInput, surnameInput, weakness, strength }) => {
     return(
         <form className="summary">
         <div class="underline-values">
-        <h1 className="values">My values from Form</h1>
+        <h1 className="values">Your values from Form</h1>
         </div>
         <p className="name"><span className="highlightme">Name</span> : {nameInput}</p>
         <p className="surname"><span className="highlightme">Surname</span> : {surnameInput}</p>
