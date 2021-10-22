@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonNextQuestion from "./ButtonNextPage";
+import ButtonNextPage from "./ButtonNextPage";
 import "./FirstQuestion.css";
 
 const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
@@ -18,7 +18,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, handleSubmit }) => {
         required
       />
       <span className="test"></span>
-      <ButtonNextQuestion />
+      <ButtonNextPage />
     </form>
   );
 };

@@ -1,5 +1,5 @@
 import React from "react";
-import ButtonNextQuestion from "./ButtonNextPage";
+import ButtonNextPage from "./ButtonNextPage";
 import "./FourthQuestion.css";
 
 const FourthQuestion = ({ moodInput, onMoodInputChange, handleSubmit }) => {
@@ -43,7 +43,7 @@ const FourthQuestion = ({ moodInput, onMoodInputChange, handleSubmit }) => {
         <img className="img-mood" src="./img/empty.jpg" alt="empty"></img>
         <img className="img-mood" src="./img/power.jpg" alt="fist in sky"></img>
       </div>
-      <ButtonNextQuestion />
+      <ButtonNextPage />
     </form>
   );
 };
