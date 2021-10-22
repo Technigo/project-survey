@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange}) => {
 
 	return (
 		<section className="content-container">
-			<form className="form">
+			<form className="form" >
 				<label 
 					className="label-title" 
 					htmlFor="nameInput">
@@ -20,7 +20,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 					onChange={onNameInputChange}
 					
 				/>
-				<button type="button" onClick={onStepChange}>Next
+				<button  type="submit" onClick={onStepChange}>Next
 				</button>
 			</form>
 

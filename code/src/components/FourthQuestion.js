@@ -11,10 +11,10 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange, onPreviousQu
 					htmlFor="ageInput">
 						What's your <span className="bold">age?*</span>
 				</label>
-                <div className="radio-buttons-container">
+                <div className="checkbox-container">
                     {ages.map(age => (
-                        <div key={age} className="radio-button">
                         <label 
+                            className="checkbox"
                             htmlFor={ages}
                             aria-label={age}
                             key={age}>
@@ -26,12 +26,9 @@ const FourthQuestion = ({ ageInput, onAgeInputChange, onStepChange, onPreviousQu
                             onChange={(event) => onAgeInputChange(event.target.value)}
                             checked={ageInput === age}
                             />
-                          <span className="checkmark"></span>
-                        {age}
+                          <span>{age}</span>
+
                         </label>
-
-                        </div>
-
                     ))}
                 </div>
 				<div className="button-container">
