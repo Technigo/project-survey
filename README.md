@@ -1,13 +1,17 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The aim of this project was to build a short survey using React to store data as the State form. The site should be accessible. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I used the hook "useState".The React components were relatively straightforward to build, once a flow had been established. I used CSS to style the form, which was quite involved. I added a previous button - so that the user could go back.
+
+If there was more time, I would add a progress bar
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+
+karahowes-survey.netlify.app
+

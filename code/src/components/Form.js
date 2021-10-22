@@ -3,7 +3,7 @@ import React, { useState} from 'react'
 import FirstPage from './FirstPage'
 import NameQuestion from './NameQuestion'
 import LocationQuestion from './LocationQuestion'
-import Overview from './Overview'
+import { Overview } from './Overview'
 import FavouriteAnimal from './FavouriteAnimal'
 import FavouriteColour from './FavouriteColour'
 import AeroplaneQuestion from './AeroplaneQuestion'
@@ -56,7 +56,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       onstepChange = {onstepChange}/></div> 
     )
   }
-  if (step === 2) {
+   else if (step === 2) {
     return (
       <div className="main"> < NameQuestion 
       nameInput={nameInput} 
@@ -112,7 +112,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       onStepMinusChange = {onStepMinusChange}/>
       </div>
     )
-  }else if (step === 8) {
+  } else if (step === 8) {
     return (
       <div className="main"> <SellotapeQuestion 
       sellotapeInput = {sellotapeInput}
@@ -123,7 +123,7 @@ import SellotapeQuestion from './SellotapeQuestion'
     )
 } else if (step === 9) {
   return (
-    <div className="main"> <Overview 
+    <div className="main"> <Overview
     nameInput = {nameInput}
     locationInput ={ locationInput}
     animalInput = {animalInput}

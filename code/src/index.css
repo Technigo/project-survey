@@ -310,7 +310,11 @@ border: 4px solid darkgrey;
   margin: 20px auto;
 }
 
-
+.animal img {
+  width: 30%;
+  display: block;
+  margin: 10px auto;
+}
 
 /*media queries*/
 
