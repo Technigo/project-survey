@@ -10,7 +10,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(12, 236, 221);
+  background-color: rgb(255, 243, 56);
   font-size: 20px;
 }
 
@@ -21,7 +21,6 @@ code {
 
 /* Header */
 .header {
-  background-color: yellow;
   height: 90vh;
   display: flex;
   flex-direction: column;
@@ -36,8 +35,7 @@ code {
 .heading-one {
   display: flex;
   align-items: center;
-  height: 100px;
-  padding: 0 30px;
+  padding: 30px;
   margin: 0 20px;
   background-color: rgb(255, 243, 56);
   color: #000;
@@ -52,14 +50,16 @@ code {
   border: none;
   background-color: whitesmoke;
 }
+
 .input-name:focus {
   outline: none;
 }
+
 .label-firstName {
   display: block;
   margin: 10px 0px;
+  margin: 30px 0px 2px;
   color: #fff;
-  font-size: 20px;
   font-weight: 800;
   padding: 20px;
   background-color: black;
@@ -67,20 +67,41 @@ code {
   letter-spacing: 1px;
   font-size: 22px;
 }
-/* MAIN */
 
-.main {
-  height: 700px;
-}
-.questions-section {
+.submit-btn {
   margin: 0 auto;
-  width: 90%;
-  margin-top: 50px;
-  padding-bottom: 25px;
-  background-color: rgb(235, 146, 190, 0.2);
-  /* background-color: rgb(255, 239, 120,0.3); */
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 10px 0;
+  font-size: 20px;
+  color:#fff;
+  font-weight: 900;
+  font-size: 25px;
+  background: #d41919;
 }
 
+.intro-message {
+  color: #fff;
+  margin-top: 100px;
+  padding: 25px;
+  background: #dc910ae3;
+  border-radius: 10px 40px;
+}
+/* MAIN */
+.dropDown-section,
+.radioButtons-section,
+.overview-section,
+.radioButtons-section,
+.correct-answers-section {
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 20px;
+  margin-bottom: 50px;
+  line-height: 30px;
+  background-color: rgb(235, 146, 190, 0.2);
+}
 /* dropdown form*/
 
 .heading-two {
@@ -91,13 +112,15 @@ code {
   color: rgb(214, 52, 23);
   font-weight: 800;
 }
+
 .drop-down {
   margin-top: 20px;
 }
+
 .label {
   font-size: 20px;
   font-weight: 700;
-  padding: 10px 10px;
+  padding: 15px 10px;
   padding-left: 6px;
   display: block;
   line-height: 28px;
@@ -113,6 +136,7 @@ code {
 .dropdown:focus {
   outline: none;
 }
+
 .next-btn {
   margin: 0 auto;
   display: block;
@@ -132,21 +156,8 @@ code {
   background-color: rgb(214, 52, 23);
   color: #fff;
 }
+
 /* overview section */
-.overview-btn {
-  padding: 10px;
-  margin-top: 50px;
-}
-.overview-section,
-.correct-answers-section {
-  width: 90%;
-  margin: 0 auto;
-  margin-top: 25px;
-  margin-bottom: 20px;
-  padding-bottom: 25px;
-  padding: 20px;
-  background-color: rgb(235, 146, 190, 0.2);
-}
 
 .heading-answer-user {
   color: #1e676d;
@@ -158,30 +169,92 @@ code {
   padding-bottom: 5px;
 }
 
+.overview-btn {
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  margin-bottom: 50px;
+  border-radius: 20px;
+  margin-top: 50px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+  border-color: rgb(214, 52, 23);
+  background-color: #fff;
+  color: rgb(214, 52, 23);
+}
+
+.overview-btn:hover {
+  transform: scale(1.1, 1.1);
+  background-color: rgb(214, 52, 23);
+  color: #fff;
+}
+
+/* radioButton section */
+.radioButton-text {
+  margin-top: 20px;
+  font-size: 20px;
+  font-weight: 700;
+}
 /* correct answer section */
 .correct-answers-section {
-  background-color: rgb(235, 146, 190, 0.6);
+  background-color: rgb(63 201 186 / 60%);
+  margin-top: 1px;
+}
+
+.flex-boxes {
+  display: flex;
+  flex-direction: column;
 }
 
 .heading-answer-computer {
   color: #189b39;
 }
+
 .correct-answer {
   margin-top: 30px;
   display: flex;
 }
+
 .correct-answer > span {
   color: #189b39;
   font-weight: bolder;
+  padding-right: 10px;
 }
 
+.highlight-span {
+  display: block;
+  color: #3c53b9;
+  font-weight: 500;
+}
+
+.highlight-text {
+  display: block;
+  color: #3c53b9;
+  margin-top: 6px;
+  padding-left: 40px;
+}
+
+
 @media (min-width: 768px) {
-  .questions-section {
+  .heading-one {
+    padding: 50px;
+  }
+
+  .dropDown-section,
+  .radioButtons-section {
     max-width: 700px;
   }
 
   .overview-section,
   .correct-answers-section {
-    max-width: 700px;
+    max-width: 47%;
+  }
+  .correct-answers-section {
+    margin-top: 40px;
+  }
+
+  .flex-boxes {
+    flex-direction: row;
   }
 }

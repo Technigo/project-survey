@@ -3,19 +3,20 @@ import RadioButtons from "./RadioButtons";
 import DropDown from "./DropDown";
 import CheckBox from "./CheckBox";
 import Overview from "./Overview";
-import LastQuestion from "./LastQuestion";
-
+import OverviewButton from "./OverviewButton.js";
 const AllForms = (props) => {
   /*Overview component props */
   const { name } = props;
 
   /* ALL STATES HERE: */
-  const [arrayAnswer, setArrayAnswer] =
-    useState(""); /* States for the dropdown component */
-  const [arrayAnswer2, setArrayAnswer2] =
-    useState(""); /* States for the dropdown component */
-  const [arrayAnswer3, setArrayAnswer3] =
-    useState(""); /* States for the dropdown component */
+  const [arrayAnswer, setArrayAnswer] = useState(""); /* dropdown component */
+  const [arrayAnswer2, setArrayAnswer2] = useState(""); /* dropdown component */
+  const [arrayAnswer3, setArrayAnswer3] = useState(""); /* dropdown component */
+  const [trueOrFalse, setTrueOrFalse] = useState(); /* radioButton component */
+  const [trueOrFalse2, setTrueOrFalse2] =
+    useState(); /* radioButton component */
+  const [trueOrFalse3, setTrueOrFalse3] =
+    useState(); /* radioButton component */
 
   const [step, setStep] = useState(1); /* step state */
 
@@ -38,6 +39,19 @@ const AllForms = (props) => {
     setArrayAnswer3(event.target.value);
   };
 
+  const onSetTrueOrFalse = (event) => {
+    /* Function radioButtons */
+    setTrueOrFalse(event.target.value);
+  };
+  const onSetTrueOrFalse2 = (event) => {
+    /* Function radioButtons */
+    setTrueOrFalse2(event.target.value);
+  };
+  const onSetTrueOrFalse3 = (event) => {
+    /* Function radioButtons */
+    setTrueOrFalse3(event.target.value);
+  };
+
   /* IF STATEMENTS */
   if (step === 1) {
     return (
@@ -52,9 +66,19 @@ const AllForms = (props) => {
       />
     );
   } else if (step === 2) {
-    return <RadioButtons onStepChange={onStepChange} />;
+    return (
+      <RadioButtons
+        trueOrFalse={trueOrFalse}
+        onSetTrueOrFalse={onSetTrueOrFalse}
+        trueOrFalse2={trueOrFalse2}
+        onSetTrueOrFalse2={onSetTrueOrFalse2}
+        trueOrFalse3={trueOrFalse3}
+        onSetTrueOrFalse3={onSetTrueOrFalse3}
+        onStepChange={onStepChange}
+      />
+    );
   } else if (step === 3) {
-    return <LastQuestion onStepChange={onStepChange} />;
+    return <OverviewButton onStepChange={onStepChange} />;
   } else if (step === 4) {
     return (
       <Overview
@@ -62,6 +86,9 @@ const AllForms = (props) => {
         arrayAnswer={arrayAnswer}
         arrayAnswer2={arrayAnswer2}
         arrayAnswer3={arrayAnswer3}
+        trueOrFalse={trueOrFalse}
+        trueOrFalse2={trueOrFalse2}
+        trueOrFalse3={trueOrFalse3}
       />
     );
   }

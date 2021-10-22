@@ -1,45 +1,73 @@
 import React from "react";
 import { useState } from "react/cjs/react.development";
 
-
-// const radioButtonsAnswers = ["true", "false", "unsure"];
-
+const radioButtonsAnswers = ["True", "False"];
 
 const RadioButtons = (props) => {
-  const [WebLanguage, setWebLanguage] = useState();
-  const radioButtonsAnswers = ["true", "false", "unsure"];
-
-
   return (
+    <section className="radioButtons-section">
+      <h2 className="heading-two">True or False ?</h2>
 
-    <section className="questions-section">
-    <h2 className="heading-two">True or False</h2>
+      <p className="radioButton-text">
+        {" "}
+        1. A parameter is the value inside the function once is invoked.
+      </p>
 
-
-   
       <form>
-        A parameter is the value inside the function once is invoked:
         {radioButtonsAnswers.map((answer) => (
-          <label className="label-dropdown" key={answer}>
+          <label className="label" key={answer}>
             <input
               type="radio"
               value={answer}
-              onChange={(event) => setWebLanguage(event.target.value)}
-              checked={WebLanguage === answer}
+              onChange={props.onSetTrueOrFalse}
+              checked={props.trueOrFalse === answer}
             />
             {answer}
           </label>
         ))}
       </form>
 
+      <p className="radioButton-text">
+        2. Variables that start with const can not be reassigned.{" "}
+      </p>
 
+      <form>
+        {radioButtonsAnswers.map((answer2) => (
+          <label className="label" key={answer2}>
+            <input
+              type="radio"
+              value={answer2}
+              onChange={props.onSetTrueOrFalse2}
+              checked={props.trueOrFalse2 === answer2}
+            />
+            {answer2}
+          </label>
+        ))}
+      </form>
 
-      <button onClick={props.onStepChange}>next question</button>
+      <p className="radioButton-text">
+        3. In JavaScript, the number zero is considered a falsy value.{" "}
+      </p>
 
-      </section>
+      <form>
+        {radioButtonsAnswers.map((answer3) => (
+          <label className="label" key={answer3}>
+            <input
+              type="radio"
+              value={answer3}
+              onChange={props.onSetTrueOrFalse3}
+              checked={props.trueOrFalse3 === answer3}
+            />
+            {answer3}
+          </label>
+        ))}
+      </form>
+
+      <button className="next-btn" onClick={props.onStepChange}>
+        Next
+      </button>
+    </section>
   );
 };
 
 export default RadioButtons;
-
-

@@ -2,10 +2,12 @@ import React, {useState} from "react";
 import FirstName from "./FirstName";
 
 const Header = (props) => {
-    // const { name, onNameInputChange } = props;
+
+
+  
 
   return (
-    <>
+    
       <header className="header">
         <h1 className="heading-one">JavaScript Test</h1>
 
@@ -15,7 +17,7 @@ const Header = (props) => {
       />
 
       </header>
-    </>
+    
   );
 };
 
