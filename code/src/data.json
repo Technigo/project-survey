@@ -10,6 +10,7 @@
           "choices": ["Matrix", "Interstellar", "Pulp Fiction", "Inception"],
           "correctAnswer": "Inception",
           "img_url": "./assets/questionOne.jpg",
+          "img_alt": "Question one. Lego figures floating in a gravity fight scene.",
           "id": "1"
         }
       ]
@@ -28,6 +29,7 @@
           ],
           "correctAnswer": "Dirty dancing",
           "img_url": "./assets/questionTwo.jpg",
+          "img_alt": "Question two. Lego figures dancing. Doing a lift.",
           "id": "2"
         }
       ]

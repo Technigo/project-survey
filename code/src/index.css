@@ -184,10 +184,6 @@ td {
 }
 
 footer {
-  /* position: relative; */
-  /* bottom: 0px;
-  left: 0px; */
-  /* margin: 14px 10px; */
   margin-top: 20px;
 }
 
@@ -269,13 +265,13 @@ footer p {
     padding: 8px;
   }
   footer {
-    /* margin: 14px 204px; */
     margin-top: 40px;
   }
   footer p {
     font-size: 16px;
   }
 }
+
 @media (min-width: 992px) {
   section img {
     width: 350px;

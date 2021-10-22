@@ -18,6 +18,9 @@ const Summary = ({ correctAnswers, selectedAnswers }) => {
               <th>{index + 1}</th>
               <td>{answer}</td>
               <td
+                // if selected answer is the same as the correct answer
+                // it will show a green bg color
+                // otherwise it will show a red bg color
                 style={{
                   backgroundColor:
                     correctAnswers[index] === selectedAnswers[index]

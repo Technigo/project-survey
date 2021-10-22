@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import data from '../data.json';
 import StartPage from './StartPage';
 import StartQuiz from './StartQuiz';
-import QuestionOne from './QuestionOne';
-import QuestionTwo from './QuestionTwo';
+import QuestionRadioBtn from './QuestionRadioBtn';
 import QuestionThree from './QuestionThree';
 import QuestionFour from './QuestionFour';
 import QuestionFive from './QuestionFive';
@@ -37,13 +36,10 @@ const Quiz = () => {
     onStepChange();
     // save the selected answer in an array named saveSelectedAnswers
     saveSelectedAnswers[step - 1] = selectedAnswer;
-    // saveSelectedAnswers.push(selectedAnswer);
   };
-
+  // when user click on Prev-button, it will decrease the step
   const handlePrevButton = () => {
-    // when user click on Prev-button, it will decrease the step
     setStep(step - 1);
-    // saveSelectedAnswers.splice(step - 1, 1, '');
   };
 
   return (
@@ -63,17 +59,9 @@ const Quiz = () => {
             onStepChange={onStepChange}
           />
         )}
-        {step === 1 && (
-          <QuestionOne
-            questionOneData={data.pages[0].questions[0]}
-            questionAnswer={answer}
-            onAnswerChange={onAnswerChange}
-            handleSubmit={handleSubmit}
-          />
-        )}
-        {step === 2 && (
-          <QuestionTwo
-            questionTwoData={data.pages[1].questions[0]}
+        {step >= 1 && step <= 2 && (
+          <QuestionRadioBtn
+            questionData={data.pages[step - 1].questions[0]}
             questionAnswer={answer}
             onAnswerChange={onAnswerChange}
             handleSubmit={handleSubmit}
