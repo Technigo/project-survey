@@ -14,6 +14,10 @@ import './form.css';
 
 const Form = () => {
   const [step, setStep] = useState(0);
+  const [usage, setUsage] = useState('Type or select an option...');
+  const [easeRange, setEaseRange] = useState(0)
+  const [performanceRange, setPerformanceRange] = useState(0);
+  
 
   const onStepChange = (event) => {
     
@@ -23,18 +27,43 @@ const Form = () => {
     
   };
 
+  const onUsageChange = (event) => {
+     setUsage (event)
+
+  }
+
+  const onEaseChange = (event) => {
+    console.log('range1', event.target.value);
+    setEaseRange(event.target.value);
+  };
+  const onPerformanceChange = (event) => {
+    console.log('range2', event.target.value);
+    setPerformanceRange(event.target.value);
+  };
   return (
     <div className="mainForm">
       <form>
         {step === 0 && <Start onStepChange={onStepChange} />}
         {step === 1 && <FirstQuestionRating />}
-        {step === 2 && <SecondQuestionAppUse />}
-        {step === 3 && <ThirdQuestionEase />}
+        {step === 2 && (
+          <SecondQuestionAppUse usage={usage} onUsageChange={onUsageChange} />
+        )}
+        {step === 3 && (
+          <ThirdQuestionEase
+            rangeValue={easeRange}
+            onRangeChange={onEaseChange}
+          />
+        )}
         {step === 4 && <FourthQuestionLike />}
         {step === 5 && (
           <FifthQuestionMore textInput="Type your answer here..." />
         )}
-        {step === 6 && <SixthQuestionPerformance />}
+        {step === 6 && (
+          <SixthQuestionPerformance
+            rangeValue={performanceRange}
+            onRangeChange={onPerformanceChange}
+          />
+        )}
         {step === 7 && (
           <SeventhQuestionReason
             textInputPerformance="Type your answer here..."

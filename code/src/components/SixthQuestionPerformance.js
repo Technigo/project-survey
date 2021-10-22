@@ -1,9 +1,9 @@
 import React from 'react';
-import Button from './Button';
+import Range from './Range';
 import './sixthquestion.css'
 
 
-const SixthQuestionPerformance = () => {
+const SixthQuestionPerformance = ({ rangeValue, onRangeChange }) => {
   return (
     <div>
       <p>
@@ -14,12 +14,12 @@ const SixthQuestionPerformance = () => {
         How would you rate the app's performance?
       </p>
       <div>
-        <Button buttonText="0" />
-        <Button buttonText="1" />
-        <Button buttonText="2" />
-        <Button buttonText="3" />
-        <Button buttonText="4" />
-        <Button buttonText="5" />
+        <Range
+          legend1="Very poor"
+          legend2="Very good"
+          rangeValue={rangeValue}
+          onRangeChange={onRangeChange}
+        />
       </div>
     </div>
   );

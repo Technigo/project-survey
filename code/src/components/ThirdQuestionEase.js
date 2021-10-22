@@ -1,7 +1,7 @@
 import React from 'react';
-import Button from './Button';
+import Range from './Range';
 
-const ThirdQuestionEase = () => {
+const ThirdQuestionEase = ({ rangeValue, onRangeChange }) => {
   return (
     <div>
       <p>
@@ -12,12 +12,12 @@ const ThirdQuestionEase = () => {
         How easy is it to use?
       </p>
       <div>
-        <Button buttonText="0" />
-        <Button buttonText="1" />
-        <Button buttonText="2" />
-        <Button buttonText="3" />
-        <Button buttonText="4" />
-        <Button buttonText="5" />
+        <Range
+          legend1="Too complicated"
+          legend2="Very easy"
+          rangeValue={rangeValue}
+          onRangeChange={onRangeChange}
+        />
       </div>
     </div>
   );

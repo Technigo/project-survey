@@ -1,0 +1,17 @@
+.secondQuestion{
+    width:100%;
+}
+
+
+.appUsage{
+    height: 30px;
+    width: 80%;
+    border: 0;
+    border-bottom: 1px solid;
+    background: transparent;
+
+}
+
+.defaultValue{
+    text-decoration-color: darkgrey;
+}

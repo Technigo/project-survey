@@ -1,0 +1,135 @@
+input[type='range'] {
+  -webkit-appearance: none; /* Hides the slider so that custom slider can be made */
+  width: 80%; /* Specific width is required for Firefox. */
+  background: transparent; /* Otherwise white in Chrome */
+  margin: 10px 0;
+}
+
+input[type='range']::-webkit-slider-thumb {
+  -webkit-appearance: none;
+}
+
+input[type='range']:focus {
+  outline: none; /* Removes the blue border. You should probably do some kind of focus styling for accessibility reasons though. */
+}
+
+input[type='range']::-ms-track {
+  width: 80%;
+  cursor: pointer;
+
+  /* Hides the slider so custom styles can be added */
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type='range']:focus {
+  outline: none;
+}
+input[type='range']::-webkit-slider-runnable-track {
+  width: 80%;
+  height: 11px;
+  cursor: pointer;
+
+  box-shadow: 0px 0px 0px #644e02;
+  background: #644e02;
+  border-radius: 1px;
+  border: 0px solid #644e02;
+}
+input[type='range']::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0px #644e02;
+  border: 1px solid #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  background: #fff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -7px;
+}
+input[type='range']:focus::-webkit-slider-runnable-track {
+  background: #644e02;
+}
+input[type='range']::-moz-range-track {
+  width: 80%;
+  height: 11px;
+  cursor: pointer;
+
+  box-shadow: 0px 0px 0px #644e02;
+  background: #644e02;
+  border-radius: 1px;
+  border: 0px solid #644e02;
+}
+input[type='range']::-moz-range-thumb {
+  box-shadow: 0px 0px 0px #644e02;
+  border: 1px solid #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  background: #fff;
+  cursor: pointer;
+}
+input[type='range']::-ms-track {
+  width: 80%;
+  height: 11px;
+  cursor: pointer;
+
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type='range']::-ms-fill-lower {
+  background: #644e02;
+  border: 0px solid #644e02;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #644e02;
+}
+input[type='range']::-ms-fill-upper {
+  background: #644e02;
+  border: 0px solid #644e02;
+  border-radius: 2px;
+  box-shadow: 0px 0px 0px #644e02;
+}
+input[type='range']::-ms-thumb {
+  margin-top: 1px;
+  box-shadow: 0px 0px 0px #644e02;
+  border: 1px solid #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 25px;
+  background: #fff;
+  cursor: pointer;
+}
+input[type='range']:focus::-ms-fill-lower {
+  background: #644e02;
+}
+input[type='range']:focus::-ms-fill-upper {
+  background: #644e02;
+}
+
+.ticks {
+  display: flex;
+  width: 80%;
+  justify-content: space-between;
+  margin-top: -23px;
+  padding-top: 0px;
+  margin-left: 35px;
+}
+.ticks span {
+  width: 2ex;
+  display: flex;
+  justify-content: center;
+  height: 42px;
+  align-items: flex-end;
+  /* background-image: url(tick.png); */
+  height: 4.5ex;
+  background-position-y: -15px;
+  background-position-x: center;
+  z-index: -1;
+}
+
+.legend {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  padding: 0;
+}
