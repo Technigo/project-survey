@@ -1,18 +1,20 @@
 import React from "react";
 
 const SecondQuestion = ({
-  planetInput,
   onPlanetInputChange,
   onStepChange,
-  planetsInput,
+  planetInput,
   prevent,
 }) => {
+  const planetsInput = ["Mercuru", "Venus", "Mars", "Jupiter"];
   return (
-    <form onSubmit={prevent}>
+    <form className="planet-form" onSubmit={prevent}>
       <h2>What planet are you from?</h2>
       {planetsInput.map((planet) => (
-        <label key={planet}>
+        <label key={planet} htmlFor="planet">
           <input
+            id="planet"
+            name="planet"
             type="radio"
             value={planet}
             onChange={onPlanetInputChange}
@@ -21,7 +23,12 @@ const SecondQuestion = ({
           {planet}
         </label>
       ))}
-      <button onClick={onStepChange}>Next questions</button>
+      <input
+        className="button"
+        type="submit"
+        disabled={!planetInput}
+        onClick={onStepChange}
+      />
     </form>
   );
 };

@@ -1,5 +1,11 @@
-body {
+* {
   margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Signika Negative", sans-serif;
+}
+
+body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -10,4 +16,184 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+h1 {
+  font-family: "Bangers", cursive;
+  margin-top: 80px;
+  letter-spacing: 1px;
+  color: rgb(55, 194, 78);
+}
+h2 {
+  font-family: "Jua", sans-serif;
+  margin-top: 30px;
+  color: rgb(95, 0, 219);
+}
+p {
+  line-height: 1.5;
+  padding: 10px;
+}
+/* background with image */
+.main {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  background-image: url("./img/nasa-Q1p7bh3SHj8-unsplash.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+}
+/* the Form container */
+.form-container {
+  font-size: 15px;
+  background-color: rgba(255, 255, 255, 0.692);
+  margin-top: 30px;
+  margin-bottom: 100px;
+  width: 90%;
+  height: 800px;
+  border-radius: 10px;
+}
+/* Style for the name input */
+.name-input[type="text"] {
+  width: 70%;
+  padding: 12px 20px;
+  margin: 50px 5px 20px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+.name-input[type="text"]:focus {
+  border: 3px solid rgb(95, 0, 219);
+}
+.name-label {
+  font-family: "Jua", sans-serif;
+}
+/* Next button styling */
+.button {
+  height: 75px;
+  width: 75px;
+  border-radius: 50%;
+  background-color: rgb(55, 194, 78);
+  cursor: pointer;
+  border: none;
+  margin: 10px;
+}
+.button:hover {
+  background-color: rgb(83, 226, 107);
+}
+/*radio-buttons */
+.planet-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 2;
+}
+
+input[type="radio"] {
+  -webkit-appearance: none;
+  width: 15px;
+  height: 15px;
+  border: 1px solid rgb(95, 0, 219);
+  border-radius: 50%;
+  outline: none;
+  box-shadow: 0 0 5px 0px rgb(95, 0, 219);
+}
+
+input[type="radio"]:hover {
+  box-shadow: 0 0 5px 0px rgb(95, 0, 219);
+}
+
+input[type="radio"]:before {
+  content: "";
+  display: block;
+  width: 60%;
+  height: 60%;
+  margin: 20% auto;
+  border-radius: 50%;
+}
+input[type="radio"]:checked:before {
+  background: rgb(83, 226, 107);
+}
+/* The dropdown menu */
+.drop-down-list {
+  width: 90%;
+  padding: 12px 20px;
+  margin: 50px 5px 20px;
+  box-sizing: border-box;
+  border: 3px solid #ccc;
+  border-radius: 5px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+.drop-down-list:focus {
+  border: 3px solid rgb(95, 0, 219);
+}
+option[value] {
+  background-color: rgba(83, 226, 107, 0.534);
+}
+
+.weather-buttons input {
+  margin: 50px 5px;
+  padding: 10px;
+  background-color: rgb(83, 226, 107);
+  border: solid 2px rgb(95, 0, 219);
+  border-radius: 5px;
+}
+/* The range slider */
+input[type="range"] {
+  overflow: hidden;
+  -webkit-appearance: unset;
+  background-color: #43e5f7;
+  border-radius: 20px;
+  width: 200px;
+  margin-top: 50px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  -webkit-appearance: unset;
+  background: rgb(95, 0, 219);
+  box-shadow: -200px 0 0 200px rgb(83, 226, 107);
+}
+
+/* the ranking stars */
+.container {
+  padding: 5px;
+  margin: 40px auto;
+}
+.stars {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+}
+.star {
+  position: relative;
+  cursor: pointer;
+}
+.stars_radio-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+.stars_radio-input:checked ~ svg {
+  transform: rotate(50deg);
+}
+
+@media (min-width: 799px) {
+  .form-container {
+    width: 40%;
+    height: 600px;
+  }
 }

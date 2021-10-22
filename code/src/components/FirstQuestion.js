@@ -9,16 +9,24 @@ const FirstQuestion = ({
   return (
     <form onSubmit={prevent}>
       <h2>Your name and surname please!</h2>
-      <label htmlFor="nameInput">
+      <label className="name-label" htmlFor="nameInput" onSubmit={prevent}>
         Names:
         <input
+          className="input-padidng"
+          className="name-input"
+          name="nameInput"
           id="nameInput"
           type="text"
           value={nameInput}
           onChange={onNameInputChange}
         ></input>
       </label>
-      <button onClick={onStepChange}>Next questions</button>
+      <input
+        className="button"
+        disabled={nameInput === ""}
+        type="submit"
+        onClick={onStepChange}
+      />
     </form>
   );
 };

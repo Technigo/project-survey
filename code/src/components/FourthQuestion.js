@@ -5,18 +5,17 @@ const FourthQuestion = ({
   onStepChange,
   weatherInput,
 }) => {
-  const weathers = ["Sun", "Rain", "Snow", "Windy"];
+  const weathers = ["Sun", "Rain", "Snow", "Wind"];
   return (
     <form onSubmit={onStepChange}>
       <h2>What kind of weather was it during your stay?</h2>
       {weathers.map((weather) => (
-        <label key={weather}>
+        <label key={weather} className="weather-buttons">
           <input
             type="submit"
             value={weather}
             onClick={(weatherInput === weather, onWeatherInputChange)}
           />
-          {weather}
         </label>
       ))}
     </form>

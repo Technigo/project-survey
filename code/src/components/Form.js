@@ -4,9 +4,8 @@ import SecondQuestion from "./SecondQuestion";
 import ThirdQuestion from "./ThirdQuestion";
 import FourthQuestion from "./FourthQuestion";
 import FifthQuestion from "./FifthQuestion";
+import SixthQuestion from "./SixthQuestion";
 import Summ from "./Summ";
-
-const planetsInput = ["Mercuru", "Venus", "Mars", "Jupiter"];
 
 const prevent = (event) => {
   event.preventDefaul();
@@ -19,7 +18,8 @@ const Form = () => {
   const [experienceInput, setExperienceInput] = useState();
   const [weatherInput, setWeatherInput] = useState("");
   const [degreesInput, setDegreesInput] = useState(0);
-
+  const [rateInput, setRateInput] = useState(0);
+  const [gradeIndex, setGradeIndex] = useState();
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
   };
@@ -36,12 +36,15 @@ const Form = () => {
   const onDegreesInputChange = (event) => {
     setDegreesInput(event.target.value);
   };
+  const onRateInputChange = (event) => {
+    setRateInput(event.target.value);
+  };
   const onStepChange = () => {
     setStep(step + 1);
   };
 
   return (
-    <div>
+    <section className="form-container">
       {step === 1 && (
         <FirstQuestion
           nameInput={nameInput}
@@ -55,7 +58,6 @@ const Form = () => {
           planetInput={planetInput}
           onPlanetInputChange={onPlanetInputChange}
           onStepChange={onStepChange}
-          planetsInput={planetsInput}
           prevent={prevent}
         />
       )}
@@ -82,16 +84,25 @@ const Form = () => {
         />
       )}
       {step === 6 && (
+        <SixthQuestion
+          onStepChange={onStepChange}
+          gradeIndex={gradeIndex}
+          setGradeIndex={setGradeIndex}
+        />
+      )}
+      {step === 7 && (
         <Summ
           experienceInput={experienceInput}
           nameInput={nameInput}
           planetInput={planetInput}
           weatherInput={weatherInput}
           degreesInput={degreesInput}
+          gradeIndex={gradeIndex}
+          onRateInputChange={onRateInputChange}
           prevent={prevent}
         />
       )}
-    </div>
+    </section>
   );
 };
 export default Form;

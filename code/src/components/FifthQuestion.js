@@ -6,8 +6,10 @@ const FifthQuestion = ({
   onStepChange,
 }) => {
   return (
-    <form class="slidecontainer">
+    <form>
+      <h2>What temperature are you use to have on your planet?</h2>
       <input
+        className="input-padding"
         type="range"
         min="-157"
         max="121"
@@ -17,10 +19,12 @@ const FifthQuestion = ({
         id="myRange"
       />
       <p>
-        Value: {degreesInput}
+        Degrees: {degreesInput}
         <span id="demo"></span>
       </p>
-      <button onClick={onStepChange}>Next questions</button>
+      <button className="button" onClick={onStepChange}>
+        Next questions
+      </button>
     </form>
   );
 };
