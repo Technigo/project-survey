@@ -70,7 +70,7 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
       case "questionTen":
         let valid = true;
         const nameRegex = /^[a-zA-Z ]{1,32}$/gi;
-        const regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        const regex = /\S+@\S+\.\S+/;
         if (!regex.test(rootState.email)) {
           setValueInRootState("emailInvalid", true);
           valid = false;
