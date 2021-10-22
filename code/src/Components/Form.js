@@ -11,7 +11,6 @@ import Overview from './Overview';
 export const Form = () => {
   const [nameInput, setNameInput] = useState('');
   const [team, setTeam] = useState('');
-  // const [happiness, setHappiness] = useState('happy');
   const [doneInput, setDoneInput] = useState('');
   const [willDoInput, setWillDoInput] = useState('');
   const [blockers, setBlockers] = useState('no');
@@ -97,6 +96,7 @@ export const Form = () => {
               blockers={blockers}
               onBlockersChange={onBlockersChange}
               onStepChange={onStepChange}
+              handleShowOverview={handleShowOverview}
             />
           )}
 
@@ -104,7 +104,7 @@ export const Form = () => {
             <SixthQuestion
               blockersDescription={blockersDescription}
               onBlockersDescriptionChange={onBlockersDescriptionChange}
-              onStepChange={handleShowOverview} //ändrat från onStepChange, även testat {() => setShowOverview(true)}
+              handleShowOverview={handleShowOverview} //ändrat från onStepChange, även testat {() => setShowOverview(true)}
             />
           )}
         </div>

@@ -21,6 +21,7 @@ const Overview = ({
         {blockers === 'yes' ? 'do have blockers.' : 'do not have any blockers.'}
       </p>
       <p>{blockersDescription}</p>
+      <button type="submit">Send to Slack</button>
     </section>
   );
 };

@@ -6,17 +6,20 @@ const SixthQuestion = ({
   handleShowOverview,
 }) => {
   return (
-    <form>
-      <label htmlFor="blockersDescription">Describe your blocker: </label>
-      <textarea
-        id="blockersDescription"
-        rows="2"
-        cols="30"
-        value={blockersDescription}
-        onChange={onBlockersDescriptionChange}
-        placeholder="Add a description so we easily can help you remove the blocker"
-      />
+    <form className="form">
+      <label>
+        Describe your blocker:
+        <textarea
+          id="blockersDescription"
+          rows="2"
+          cols="30"
+          value={blockersDescription}
+          onChange={onBlockersDescriptionChange}
+          placeholder="Add a description so we easily can help you remove the blocker"
+        />
+      </label>
       <button
+        className="button"
         disabled={blockersDescription === ''}
         onClick={handleShowOverview}
       >

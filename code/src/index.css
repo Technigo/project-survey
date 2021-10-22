@@ -60,6 +60,7 @@ code {
   color: black;
   text-align: center;
   transition: all 0.15s;
+  /* ADDING appearance none etc*/
 }
 
 .button:hover {

@@ -6,14 +6,16 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
   {
     return (
       <form className="form">
-        <label htmlFor="nameInput">Type your name: </label>
-        <input
-          id="nameInput"
-          type="text"
-          value={nameInput}
-          onChange={onNameInputChange}
-          placeholder="First and last"
-        />
+        <label>
+          Type your name:
+          <input
+            id="nameInput"
+            type="text"
+            value={nameInput}
+            onChange={onNameInputChange}
+            placeholder="First and last"
+          />
+        </label>
         <button
           className="button bouncy"
           disabled={nameInput === ''}

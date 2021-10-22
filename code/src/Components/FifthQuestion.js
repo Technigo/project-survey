@@ -10,14 +10,23 @@ const FifthQuestion = ({
 
   const renderButton = () => {
     if (blockers === 'yes') {
-      return <button onClick={onStepChange}>Next question</button>;
+      return (
+        <button className="button" onClick={onStepChange}>
+          Next question
+        </button>
+      );
     } else {
-      return <button onClick={handleShowOverview}>Overview</button>;
+      return (
+        <button className="button" onClick={handleShowOverview}>
+          Overview
+        </button>
+      );
     }
+    console.log('HANDLE', handleShowOverview);
   };
 
   return (
-    <form>
+    <form className="form">
       Do you have any blockers?
       <label>
         <input
