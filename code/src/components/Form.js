@@ -5,13 +5,41 @@ import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
 import Overview from './Overview'
 
+import { beer } from '../beer.js'
+
+const initialState = [
+    {
+      "name": "Lager",
+      "checked": false
+    },
+    {
+      "name": "Ale",
+      "checked": false
+    },
+    {
+      "name": "Sour",
+      "checked": false
+    },
+    {
+      "name": "Porter",
+      "checked": false
+    }
+  ]
+
 const Form = () => {
   const [nameInput, setNameInput] = useState ('') 
   const [surnameInput, setSurnameInput] = useState('')
-  const [feeling, setFeeling] = useState('')
   const [flavour, setFlavour] = useState('')
   const [step, setStep] = useState(1)
   const [showResult, setShowResult] = useState(false)
+  const [selectedBeers, setSelectedBeers] = useState(initialState)
+
+  const handleOnChange = (beerType) => {
+    const updatedSelections = selectedBeers.map((beer) =>
+    beer.name === beerType ? { ...beer, checked: !beer.checked } : beer
+    )
+    setSelectedBeers(updatedSelections)
+  }
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value)
@@ -19,10 +47,6 @@ const Form = () => {
 
   const onSurnameInputChange = (event) => {
     setSurnameInput(event.target.value)
-  }
-
-  const onFeelingChange = (event) => {
-    setFeeling(event.target.value)
   }
 
   const onFlavourChange = (event) => {
@@ -46,7 +70,6 @@ const Form = () => {
       <Overview 
         nameInput={nameInput} 
         surnameInput = {surnameInput}
-        feeling = {feeling}
         flavour = {flavour}
       />
       :
@@ -69,8 +92,10 @@ const Form = () => {
         )}
         {step === 3 && (
           <ThirdQuestion 
-            onFeelingChange={onFeelingChange} 
+            handleOnChange={handleOnChange} 
             onStepChange={onStepChange} 
+            selectedBeers={selectedBeers}
+            beer={beer}
           />
         )}
         {step === 4 && (

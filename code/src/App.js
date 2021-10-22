@@ -1,4 +1,3 @@
-// React is by default, useState is by named export
 import React from 'react'
 
 import Header from './components/Header'
@@ -9,6 +8,7 @@ export const App = () => {
     <>
       < Header/>
       < Form/>
+      {/* < Footer/> */}
     </>)
 }
 

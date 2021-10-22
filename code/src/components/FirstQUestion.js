@@ -36,6 +36,7 @@ const {nameInput, onNameInputChange,surnameInput, onSurnameInputChange, onStepCh
       <button 
         disabled={nameInput === '' || surnameInput === ''}
         onClick={onStepChange}
+        type="submit"
         className="form-button">
           Next question
       </button>
