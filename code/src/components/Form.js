@@ -26,20 +26,15 @@ const Form = () => {
   const onDrinkChange = (event) => setDrink(event.target.value);
   const onEmailChange = (event) => setEmail(event.target.checked);
   const onStepChange = () => setStep(step + 1);
-  const onNoChange = () => setNo(no + 1);
-  console.log(onNoChange);
+  const onNoChange = () => setNo("no");
 
   return (
-    //outer container används inte för tillfället
     <div className="outer-container">
+      {no === "no" && <DontAttend />}
+
       {step === 0 && (
-        <Attend
-          /* no={no} onNoChange={onNoChange}  */
-          onNoChange={onNoChange}
-          onStepChange={onStepChange}
-        />
+        <Attend onNoChange={onNoChange} onStepChange={onStepChange} />
       )}
-      {no === 1 && <DontAttend />}
 
       {step === 1 && (
         <Name
@@ -56,19 +51,17 @@ const Form = () => {
         />
       )}
       {step === 3 && (
-        <>
-          <Preferences
-            game={game}
-            onGameChange={onGameChange}
-            snack={snack}
-            onSnacksChange={onSnacksChange}
-            licoriceCandy={licoriceCandy}
-            onLicoriceCandyChange={onLicoriceCandyChange}
-            drink={drink}
-            onDrinkChange={onDrinkChange}
-            onStepChange={onStepChange}
-          />
-        </>
+        <Preferences
+          game={game}
+          onGameChange={onGameChange}
+          snack={snack}
+          onSnacksChange={onSnacksChange}
+          licoriceCandy={licoriceCandy}
+          onLicoriceCandyChange={onLicoriceCandyChange}
+          drink={drink}
+          onDrinkChange={onDrinkChange}
+          onStepChange={onStepChange}
+        />
       )}
 
       {step === 4 && (
@@ -89,7 +82,9 @@ const Form = () => {
           email={email}
         />
       )}
-      {no === 6 && <DontAttend />}
+      <footer>
+        <h1>Hedvig Mejstedt 🦁</h1>
+      </footer>
     </div>
   );
 };

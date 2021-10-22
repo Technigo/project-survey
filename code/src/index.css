@@ -7,15 +7,31 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-html, body, #root, .container {
+html, body, #root, .outer-container {
   min-height: 100vh;
-  scroll-behavior: smooth;
 }
+.outer-container {
+  display: flex;
+  flex-direction: column;
+  background-color: lime;
+  justify-content: space-evenly;
+}
+.container {
+  width: 100%;
+  background-color: cyan;
+  flex-grow: 1;
+}
+footer {
+  width: 100%;
+  background-color: blue;
+}
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
 :root {
   --main: #ef8b3f;
   --secondary: #7a59e4;
@@ -24,34 +40,74 @@ code {
 
 .name h1 {
   text-align: center;
-}
-.secondQuestion h1 {
-  text-align: center;
-}
-.name h2 {
-  padding: 10px 30px;
+  font-size: 4em;
 }
 
-h1, h3{
+h1 {
+  font-family: var(--font);
+  color: var(--secondary);
+  font-weight: 700;
+  font-size: 2em;
+  text-align: center;
+}
+h2 {
   color: var(--secondary);
   font-family: var(--font);
   font-weight: 700;
-  margin-top: 0px;
   text-align: left;
 }
-
-h2 {
+h3{
   color: black;
   font-family: var(--font);
-  font-weight: 700;
-  margin-top: 0px;
-  text-align: left;
+  font-weight: 200;
+  text-align: center;
 }
 
 p {
   font-family: var(--font);
-  padding: 10px 30px;
 }
+
+.boldH3 {
+  color: black;
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: 1em;
+  text-align: left;
+}
+
+.outer-container {
+  /*
+  background-color: var(--main);
+  justify-content: center;
+  */
+}
+.container {
+  padding: 0px 30px;
+  /*
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  */
+}
+/* RSVP */
+.rsvp-buttons {
+  display: flex;
+}
+
+.name {
+  border: 2px solid black;
+  padding: 30px;
+}
+.nameForm {
+  /* border: 2px solid lime; */
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+
 button {
   background-color: var(--secondary);
   color: white;
@@ -63,7 +119,6 @@ button {
   transition-duration: 0.4s;
   box-shadow: none;
   margin: 10px;
-
 }
 
 button:hover {
@@ -75,79 +130,15 @@ button:hover {
   border: none;
   transition-duration: 0.4s;
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
-
 }
 
-.container {
-  background-color: var(--main);
-  padding: 0px 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
- .name {
-  background-color: var(--main);
-  border: 2px solid black;
-  padding: 30px 0px;
+footer {
 
 }
-.nameForm {
-  /* border: 2px solid lime; */
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-}
-
-header {
-  height: 250px;
-}
-
-.nameImg {
-  width: 100%;
-
-  /* Position and center the image to scale nicely on all screens */
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  position: relative;
-
-
-}
-
-.secondQuestion {
-  border: 2px solid black;
-  padding: 100px 0px;
-}
-
-
-.diet {
-  display: flex;
-  align-items: center;
-  flex-direction: column; 
-
-}
-
-.thirdQuestion {
-  padding: 30px 0px;
-  cursor: pointer;
-}
-
-.radio-buttons {
-  display: grid;
-  margin: 50px 0px;
+footer h1 {
+  font-size: 2em;
+  margin: default auto;
 }
 
 
 
-.fourth-question {
-  border: 2px solid black;
- 
-  align-content: stretch;
-  margin: 30px;
-
-}
-
-.fifthQuestion p{
-  margin: 0px;
-}

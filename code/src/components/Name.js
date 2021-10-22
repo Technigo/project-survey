@@ -9,12 +9,7 @@ const Name = ({ name, onNameChange, onStepChange }) => {
 
         <div className="container">
           <div className="name">
-            <h1>Hello! ✨</h1>
             <h2>I’m so exited that you want to attend to my party!</h2>
-            <p>
-              This is a form with three questions, please answer them all, they
-              are going to help me make an awesome party! 🥳
-            </p>
 
             <form className="nameForm">
               Please enter your name below:
