@@ -16,8 +16,8 @@ const Final = ({
   // onTravelInputChange,
   // onEventsInputChange,
 }) => {
-  function sendEmail(email) {
-    email.preventDefault()
+  function sendEmail() {
+    // email.preventDefault()
 
     emailjs
       .sendForm(
@@ -30,6 +30,12 @@ const Final = ({
         console.log(res)
       })
       .catch((err) => console.log(err))
+  }
+
+  const handleButtonClick = (email) => {
+    email.preventDefault()
+    sendEmail()
+    setTimeout(onEndSurvey, 5000)
   }
 
   return (
@@ -82,11 +88,7 @@ const Final = ({
           {travelInput ? 'Travel' : ''} {eventsInput ? 'Events' : ''}
         </h4>
       </section>{' '}
-      <button
-        className="btn6"
-        type="submit"
-        onClick={setTimeout(onEndSurvey, 3000) && sendEmail}
-      >
+      <button className="btn6" type="submit" onClick={handleButtonClick}>
         {' '}
         Click here to finish{' '}
       </button>
