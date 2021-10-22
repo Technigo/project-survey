@@ -22,7 +22,7 @@ const questions = [
     number: 3,
     text: "What is your favourite colour?",
     inputType: "radio",
-    options: ["red", "blue", "green", "yellow", "purple"],
+    options: ["red", "blue", "green", "black", "purple"],
   },
   {
     number: 4,

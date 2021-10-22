@@ -24,7 +24,7 @@ const ReviewSubmit = ({ answers }) => {
         Your favourite word or phrase is:{" "}
         <span style={phraseStyle}>"{answers[1]}"</span> writen in {answers[3]} with a {answers[4]} font-weight.
       </p>
-      <p>We hope you like the {answers[2]} background!</p>
+      <p style={pStyle}>We hope you like the {answers[2]} background!</p>
       <p>Here's a CSS code snippet you might like:</p>
       <div className="css-container">
           <p className="css-first-line">
