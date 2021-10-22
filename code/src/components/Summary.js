@@ -3,55 +3,59 @@ import Confetti from "./Confetti";
 
 export const Summary = ({ rootState }) => {
   return (
-    <div>
+    <div className="main-wrapper">
       <div>
         <Confetti />
       </div>
       <div className="summary">
-        <div>
-          <h1 className="questions-main-heading">Thank you for your feedback!</h1>
-          <h2 className="instructions">Check you inbox for a complimentary voucher.</h2>
-          <h3 className="instructions">Your details:</h3>
-          <p>Name:{rootState.name}</p>
-          <p>Email:{rootState.email}</p>
-          <div>
-            <h3 className="instructions">Feedback summary:</h3>
-            {rootState.design && <p> Design: {rootState.design}</p>}
-            {rootState.variety && <p>Variety: {rootState.variety} </p>}
-            {rootState.quality && <p>Quality: {rootState.quality} </p>}
-            {rootState.deliveryTime && <p>Delivery Time: {rootState.deliveryTime} </p>}
-            {rootState.friendliness && <p>Delivery Friendliness: {rootState.friendliness} </p>}
-            {rootState.features.soundQuality && (
-              <p>
-                I liked
-                <span role="img" aria-label="tick">
-                  ☑️
-                </span>
-                Sound quality feature
-              </p>
-            )}
-            {rootState.features.ergonomicDesign && (
-              <p>
-                I liked
-                <span role="img" aria-label="tick">
-                  ☑️
-                </span>
-                Ergonomic design feature
-              </p>
-            )}
-            {rootState.features.affordability && (
-              <p>
-                I liked
-                <span role="img" aria-label="tick">
-                  ☑️
-                </span>
-                Affordability feature
-              </p>
-            )}
-            {rootState.featuresOthers && <p>Comment: "{rootState.featuresOthers}"</p>}
-            {rootState.rating && <p>Recommendation rating: {rootState.rating}</p>}
-            {rootState.suggestionInput && <p>Improvement suggestion: "{rootState.suggestionInput}"</p>}
-          </div>
+        <div className="thankyou-wrapper">
+          <h1 className="questions-main-heading highlight">Thank you for your feedback!</h1>
+          <h2 className="instructions">
+            Check you inbox for a complimentary <span className="highlight">voucher</span>.
+          </h2>
+        </div>
+        <div className="details-wrapper">
+          <h3 className="instructions highlight center">Your details:</h3>
+          <p className="instructions">Name:&nbsp;{rootState.name}</p>
+          <p className="instructions">Email:&nbsp;{rootState.email}</p>
+        </div>
+        <div className="details-wrapper">
+          <h3 className="instructions highlight center">Feedback summary:</h3>
+          {rootState.design && <p className="instructions"> Design:&nbsp;{rootState.design}</p>}
+          {rootState.variety && <p className="instructions">Variety:&nbsp;{rootState.variety} </p>}
+          {rootState.quality && <p className="instructions">Quality:&nbsp;{rootState.quality} </p>}
+          {rootState.deliveryTime && <p className="instructions">Delivery Time:&nbsp;{rootState.deliveryTime} </p>}
+          {rootState.friendliness && <p className="instructions">Delivery Friendliness:&nbsp;{rootState.friendliness} </p>}
+          {rootState.features.soundQuality && (
+            <p className="instructions">
+              I liked &nbsp;
+              <span role="img" aria-label="tick" className="highlight tick-img">
+                ☑️
+              </span>
+              &nbsp;Sound quality feature
+            </p>
+          )}
+          {rootState.features.ergonomicDesign && (
+            <p className="instructions">
+              I liked&nbsp;
+              <span role="img" aria-label="tick" className="highlight tick-img">
+                ☑️
+              </span>
+              &nbsp;Ergonomic design feature
+            </p>
+          )}
+          {rootState.features.affordability && (
+            <p className="instructions">
+              I liked&nbsp;
+              <span role="img" aria-label="tick" className="highlight tick-img">
+                ☑️
+              </span>
+              &nbsp;Affordability feature
+            </p>
+          )}
+          {rootState.featuresOthers && <p className="instructions">Comment:&nbsp;"{rootState.featuresOthers}"</p>}
+          {rootState.rating && <p className="instructions">Recommendation rating:&nbsp;{rootState.rating}</p>}
+          {rootState.suggestionInput && <p className="instructions">Improvement suggestion:&nbsp;"{rootState.suggestionInput}"</p>}
         </div>
       </div>
     </div>

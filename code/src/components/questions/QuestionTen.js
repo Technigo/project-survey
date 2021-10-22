@@ -3,14 +3,14 @@ import React from "react";
 export const QuestionTen = ({ percent, name, email, onNameChange, onEmailChange, nameInvalid, emailInvalid }) => {
   return (
     <form className="select-container">
-      <div className="question-ten-wrapper">
-        <h1 className="question-ten-heading move-apart">Thank you for your feedback!</h1>
+      <div>
+        <h1 className="questions-main-heading  ">Thank you for your feedback!</h1>
       </div>
-      <h2 className="instructions move-apart">
+      <h2 className="instructions ">
         Would you like <span className="highlight">{percent}%</span> off your next purchase?
       </h2>
-      <div className="input-wrapper">
-        <label className="label-size" htmlFor="nameInput">
+      <div>
+        <label htmlFor="nameInput">
           Name:
           <input
             className="custom-input"
@@ -29,7 +29,7 @@ export const QuestionTen = ({ percent, name, email, onNameChange, onEmailChange,
           )}
         </label>
         <br />
-        <label className="label-size" htmlFor="emailInput">
+        <label htmlFor="emailInput">
           Contact email:
           <input
             className="custom-input"

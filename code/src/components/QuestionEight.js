@@ -2,13 +2,16 @@ import React from "react";
 
 export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFeaturesOthersChange }) => {
   return (
-    <form className="select-container">
+    <form>
       <div>
         <h1 className="questions-main-heading">What is your favorite feature about our product?</h1>
       </div>
-      <div className="checkbox">
+      <div className="form-group">
         <input
           type="checkbox"
+          id="sound"
+          name="sound"
+          value="sound"
           checked={features.soundQuality}
           onChange={(e) => {
             onFeaturesChange({
@@ -20,10 +23,13 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        Sound quality
+        <label htmlFor="sound">Sound quality</label>
       </div>
-      <div className="checkbox">
+      <div className="form-group">
         <input
+          id="ergonomic"
+          name="ergonomic"
+          value="ergonomic"
           type="checkbox"
           checked={features.ergonomicDesign}
           onChange={(e) => {
@@ -34,14 +40,14 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        Ergonomic design
+        <label htmlFor="ergonomic"> Ergonomic design </label>
       </div>
-      <div className="checkbox">
+      <div className="form-group">
         <input
           type="checkbox"
-          id="Affordability"
+          id="affordability"
           name="affordability"
-          value="Affordability"
+          value="affordability"
           checked={features.affordability}
           onChange={(e) => {
             onFeaturesChange({
@@ -50,11 +56,14 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        Affordability
+        <label htmlFor="affordability">Affordability</label>
       </div>
-      <div className="checkbox">
+      <div className="form-group">
         <input
           type="checkbox"
+          id="other"
+          name="other"
+          value="other"
           checked={features.other}
           onChange={(e) => {
             onFeaturesChange({
@@ -63,10 +72,10 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        Other
+        <label htmlFor="other"> Other</label>
       </div>
       {features.other && (
-        <div className="other-input">
+        <div>
           <input
             className="custom-input"
             type="text"

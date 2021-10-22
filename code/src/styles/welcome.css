@@ -6,7 +6,7 @@
 }
 
 .give-btn {
-  color: rgba(255, 255, 255, 1);
+  color: var(--main-text);
   background: var(--background);
   font-weight: normal;
   letter-spacing: 1px;
@@ -17,13 +17,15 @@
   font-size: 12px;
   height: 34px;
   padding: 0;
-  border: none;
   box-shadow: 0 0 8px var(--main-text);
   border-radius: 4px;
+  box-shadow: 0 0 8px var(--highlight);
+  border: 1px solid var(--highlight);
 }
 
 .give-btn:hover {
-  box-shadow: 0 0 8px var(--highlight);
+  box-shadow: 0 3px 38px var(--main-text);
+  border: 1px solid var(--highlight);
 }
 
 .welcome-header-container {

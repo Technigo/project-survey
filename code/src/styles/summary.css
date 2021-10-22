@@ -1,0 +1,42 @@
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.summary {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+  flex-direction: column;
+  background-color: var(--background);
+  color: var(--main-text);
+}
+
+.thankyou-wrapper,
+.center {
+  text-align: center;
+}
+
+.tick-img {
+  height: 8px;
+  width: 8px;
+}
+
+@media (min-width: 768px) {
+  /* .questions-main-heading {
+      font-size: 28px;
+      line-height: 36px;
+    }
+    .instructions {
+      font-size: 18px;
+      align-items: center;
+      justify-content: left;
+      line-height: 20px;
+    } */
+  .tick-img {
+    height: 12px;
+    width: 12px;
+  }
+}

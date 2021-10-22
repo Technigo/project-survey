@@ -95,21 +95,19 @@ select {
   font-family: Helvetica, sans-serif;
 }
 
-.summary {
-  font-size: 10px;
-  background-color: var(--background);
-  color: var(--main-text);
-}
-
 @media (min-width: 768px) {
   .questions-main-heading {
-    font-size: 28px;
-    line-height: 36px;
+    /* font-size: 28px;
+    line-height: 36px; */
+    font-size: 36px;
+    line-height: 46px;
   }
   .instructions {
-    font-size: 18px;
+    /* font-size: 18px; */
+    font-size: 28px;
     align-items: center;
     justify-content: left;
-    line-height: 20px;
+    /* line-height: 20px; */
+    line-height: 33px;
   }
 }

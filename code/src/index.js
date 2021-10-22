@@ -7,7 +7,8 @@ import "./styles/eight.css";
 import "./styles/slider.css";
 import "./styles/radio.css";
 import "./styles/select.css";
-import "./styles/move.css";
+import "./styles/checkbox.css";
+import "./styles/summary.css";
 
 import { App } from "./App";
 

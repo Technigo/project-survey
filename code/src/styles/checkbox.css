@@ -1,0 +1,49 @@
+.form-group {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.form-group label {
+  position: relative;
+}
+
+.form-group label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 1px solid var(--main-text);
+  box-shadow: 0 1px 2px rgba(43, 43, 43, 0.29), inset 0px -15px 10px -12px rgba(85, 85, 85, 0.338);
+  padding: 10px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.form-group input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 3px;
+  left: 8px;
+  width: 5px;
+  height: 10px;
+  box-shadow: none;
+  border: 1px solid var(--highlight);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.form-group input:checked + label::before {
+  border: 1px solid var(--highlight);
+}
