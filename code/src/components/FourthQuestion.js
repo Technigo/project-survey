@@ -8,8 +8,10 @@ const FourthQuestion = ({
 }) => {
   return (
     <div className="second-container">
-      On a scale from 1 - 100, how certain are you that life exists outside our
-      planet?
+      <label className="label-container" htmlFor="experienceInput">
+        <p className="fourth-text">On a scale from 1 - 100%</p>
+        <p> How certain are you that life exists outside our planet?</p>
+      </label>
       <div className="slide-container">
         <input
           type="range"
@@ -21,6 +23,7 @@ const FourthQuestion = ({
           onChange={onExperienceInputChange}
         ></input>
       </div>
+      <p className="fourth-text">{experienceInput}%</p>
       <button
         className="second-button"
         disabled={experienceInput === ""}

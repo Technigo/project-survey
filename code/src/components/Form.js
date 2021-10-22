@@ -14,7 +14,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [surnameInput, setSurnameInput] = useState("");
   const [ageGroup, setAgeGroup] = useState("");
-  const [experienceInput, setExperienceInput] = useState("");
+  const [experienceInput, setExperienceInput] = useState("50");
   const [believesInput, setBelievesInput] = useState("");
   const [step, setStep] = useState(1);
 

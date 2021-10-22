@@ -24,7 +24,8 @@ const Overview = ({
           Your age:
           <p
             style={{
-              color: ageGroup === "30+" ? "darkviolet" : "rgb(226, 224, 224)",
+              color:
+                ageGroup === "30+" ? "cornflowerblue" : "rgb(226, 224, 224)",
             }}
           >
             {ageGroup}
