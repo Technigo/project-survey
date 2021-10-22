@@ -24,6 +24,9 @@ button {
   padding: 20px 40px;
   margin-top: 40px;
 }
+button:hover {
+  box-shadow: 3px 3px 10px #494c50;
+}
 
 .content-container {
   display: flex;
@@ -34,12 +37,73 @@ button {
 
 .options-spacing {
   display: flex;
-  justify-content: center;
-  margin: auto;
+  justify-content: space-evenly;
 }
 
-.margin {
-  margin: 0px 40px;
+/* Customize the label (the container) */
+.radio-button-container {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-button-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom radio button */
+.radio-button {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #76787b;
+  border-radius: 50%;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-button-container:hover input ~ .radio-button {
+  background-color: #ea5929;
+}
+
+/* When the radio button is checked, add a blue background */
+.radio-button-container input:checked ~ .radio-button {
+  background-color: #ea5929;
+}
+
+/* Create the indicator (the dot/circle - hidden when not checked) */
+.radio-button:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the indicator (dot/circle) when checked */
+.radio-button-container input:checked ~ .radio-button:after {
+  display: block;
+}
+
+/* Style the indicator (dot/circle) */
+.radio-button-container .radio-button:after {
+  top: 9px;
+  left: 9px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
 }
 
 .input-container {
@@ -51,10 +115,42 @@ button {
   display: flex;
   flex-direction: column;
 }
+select {
+  margin-top: 10px;
+  padding: 10px;
+  border: 2px solid #76787b;
+  border-radius: 4px;
+  color: #494c50;
+  font-size: 20px;
+}
+select:focus {
+  border: 2px solid #ea5929;
+}
+
+textarea {
+  width: 100%;
+  height: 150px;
+  padding: 12px 20px;
+  box-sizing: border-box;
+  border: 2px solid #76787b;
+  border-radius: 4px;
+  background-color: #f8f8f8;
+  resize: none;
+}
+textarea:focus {
+  border: 2px solid #ea5929;
+  box-shadow: 3px 3px 10px #ea5929;
+}
 
 .input-field {
-  padding: 3px;
+  padding: 5px;
   margin: 10px 0px;
   border: 2px solid #d8d8d9;
   border-radius: 5px;
+  font-size: 20px;
+  color: #494c50;
+}
+
+.input-field:focus {
+  box-shadow: 3px 3px 20px #d8d8d9;
 }

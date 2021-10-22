@@ -2,7 +2,13 @@ header {
   align-items: center;
   display: flex;
   flex-direction: column;
-  margin-top: 20px;
+  padding-top: 20px;
+  height: fit-content;
+  border-bottom: 2px solid #ea5929;
+  width: 100%;
+  position: sticky;
+  top: 0;
+  background-color: white;
 }
 img {
   width: 70px;
