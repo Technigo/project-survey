@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange, onStepMinusChange}) =>{
+const AeroplaneQuestion = ({onAeroplaneInputChange, onStepChange, onStepMinusChange}) =>{
 
     return(
        <div className = "container-bubbles">
@@ -34,7 +34,7 @@ const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange, onStepMinusCha
                 </div>
                 
          
-        <button className = "button" onClick = {onstepChange}>Next Question</button>
+        <button className = "button" onClick = {onStepChange}>Next Question</button>
         <button className = "button" onClick = {onStepMinusChange}> Previous Question</button>
         </form>
         </fieldset>

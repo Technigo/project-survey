@@ -1,6 +1,6 @@
 import React from 'react'
 
-const LocationQuestion = ({locationInput, onLocationInputChange, onstepChange, onStepMinusChange}) => {
+const LocationQuestion = ({locationInput, onLocationInputChange, onStepChange, onStepMinusChange}) => {
 
     return (
         <div className = "container-bella">
@@ -16,7 +16,7 @@ const LocationQuestion = ({locationInput, onLocationInputChange, onstepChange, o
                         value = {locationInput} 
                         onChange = {onLocationInputChange}
                     />
-                    <button className = "button" onClick = {onstepChange}>Next Question</button>
+                    <button className = "button" onClick = {onStepChange}>Next Question</button>
                     <button className = "button" onClick = {onStepMinusChange}> Previous Question</button>
                 </form>
             </fieldset>

@@ -43,7 +43,7 @@ import SellotapeQuestion from './SellotapeQuestion'
   const onSellotapeInputChange = (event) => {
     setSellotapeInput(event.target.value)
   }
-  const onstepChange = () => {
+  const onStepChange = () => {
       setStep(step + 1)
   }
   const onStepMinusChange = () => {
@@ -54,7 +54,7 @@ import SellotapeQuestion from './SellotapeQuestion'
     return (
       <div className = "intro"> 
       <FirstPage 
-      onstepChange = {onstepChange}/></div> 
+      onstepChange = {onStepChange}/></div> 
     )
   }
    else if (step === 2) {
@@ -63,7 +63,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       <NameQuestion 
       nameInput = {nameInput} 
       onNameInputChange = {onNameInputChange}
-      onstepChange = {onstepChange}
+      onstepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div> 
     )
@@ -73,7 +73,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       <LocationQuestion 
       locationInput = {locationInput} 
       onLocationInputChange = {onLocationInputChange}
-      onstepChange = {onstepChange}
+      onstepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /> </div>
     )
@@ -84,7 +84,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       <FavouriteAnimal
       animalInput = {animalInput}
       onAnimalInputChange = {onAnimalInputChange}
-      onstepChange = {onstepChange}
+      onstepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /> </div>
     )
@@ -94,7 +94,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       <FavouriteColour 
       colourInput = {colourInput}
       onColourInputChange = {onColourInputChange}
-      onstepChange = {onstepChange}
+      onstepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /> </div>
     )
@@ -104,7 +104,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       <AeroplaneQuestion 
       aeroplaneInput = {aeroplaneInput}
       onAeroplaneInputChange = {onAeroplaneInputChange}
-      onstepChange = {onstepChange}
+      onstepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div>
     )
@@ -114,7 +114,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       <OlderQuestion 
       olderInput = {olderInput}
       onOlderInputChange = {onOlderInputChange}
-      onstepChange = {onstepChange}
+      onstepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div>
     )
@@ -124,7 +124,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       <SellotapeQuestion 
       sellotapeInput = {sellotapeInput}
       onSellotapeInputChange = {onSellotapeInputChange}
-      onstepChange = {onstepChange}
+      onstepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div>
     )

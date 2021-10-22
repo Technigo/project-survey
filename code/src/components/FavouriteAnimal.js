@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange, onStepMinusChange}) => {
+const FavouriteAnimal = ({animalInput, onAnimalInputChange, onStepChange, onStepMinusChange}) => {
     return (
         <div className = "container-bubbles">
            <img src = "/assets/bubbles.jpg" alt="child who asked the question"></img> 
@@ -14,7 +14,7 @@ const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange, onStep
                 id = "animalInput"
                 value = {animalInput} 
                 onChange = {onAnimalInputChange}>
-                    <option disabled value=''>Select an option:</option>
+                    <option disabled value =''>Select an option:</option>
                     <option value="Dolphin" selected>Dolphin</option>
                     <option value="Tiger" selected>Tiger</option>
                     <option value="Koala" selected>Koala</option>
@@ -22,7 +22,8 @@ const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange, onStep
                     <option value="Shark" selected>Shark</option>
                     <option value="Penguin" selected>Penguin</option>
                 </select>
-            <button className = "button" onClick = {onstepChange}>Next Question</button>
+                
+            <button disabled = {animalInput === ''} className = "button" onClick = {onStepChange}>Next Question</button>
             <button className = "button" onClick = {onStepMinusChange}> Previous Question</button>
             </form>
         </fieldset>

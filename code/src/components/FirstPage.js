@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FirstPage = ({onstepChange}) => {
+const FirstPage = ({onStepChange}) => {
 
     return (
         <section className = "intro-container">
@@ -11,7 +11,7 @@ const FirstPage = ({onstepChange}) => {
                     and all of the other really important questions in life. Don't worry, we will go easy on you!
                 </p>
             </div>
-            <button className = "intro-button" onClick = {onstepChange}>Let's start!</button>
+            <button className = "intro-button" onClick = {onStepChange}>Let's start!</button>
         </section>
     )
 

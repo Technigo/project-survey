@@ -1,6 +1,6 @@
 import React from 'react'
 
-const OlderQuestion = ({olderInput, onOlderInputChange, onstepChange, onStepMinusChange}) => {
+const OlderQuestion = ({olderInput, onOlderInputChange, onStepChange, onStepMinusChange}) => {
     return (
         <div className = "container-bella">
          <img src = "/assets/bella.jpg" alt = "child who asked the question"></img>   
@@ -16,7 +16,7 @@ const OlderQuestion = ({olderInput, onOlderInputChange, onstepChange, onStepMinu
                     onChange = {onOlderInputChange}
                     />
                 
-                <button className = "button" onClick = {onstepChange}>Next Question</button>
+                <button className = "button" onClick = {onStepChange}>Next Question</button>
                 <button className = "button" onClick = {onStepMinusChange}> Previous Question</button>
             </form>
               
