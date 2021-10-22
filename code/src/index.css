@@ -13,17 +13,17 @@ html, body, #root, .outer-container {
 .outer-container {
   display: flex;
   flex-direction: column;
-  background-color: lime;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  background-color: var(--main);
 }
 .container {
   width: 100%;
-  background-color: cyan;
-  flex-grow: 1;
 }
 footer {
   width: 100%;
-  background-color: blue;
+}
+header {
+  height: 0px;
 }
 
 
@@ -75,13 +75,8 @@ p {
   text-align: left;
 }
 
-.outer-container {
-  /*
-  background-color: var(--main);
-  justify-content: center;
-  */
-}
 .container {
+  box-sizing: border-box;
   padding: 0px 30px;
   /*
   display: flex;
@@ -132,9 +127,6 @@ button:hover {
   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
 }
 
-footer {
-
-}
 footer h1 {
   font-size: 2em;
   margin: default auto;

@@ -30,6 +30,7 @@ const Form = () => {
 
   return (
     <div className="outer-container">
+      <header></header>
       {no === "no" && <DontAttend />}
 
       {step === 0 && (
