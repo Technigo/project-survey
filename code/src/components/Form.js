@@ -84,6 +84,7 @@ const Form = () => {
                     onRatingInputChange={onRatingInputChange}
                     onStepChange={onStepChange}
                     onStepChangeBack={onStepChangeBack}
+                    favoriteInput={favoriteInput}
                 />
             )}
             {step === 6 && (

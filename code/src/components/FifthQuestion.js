@@ -1,9 +1,9 @@
 import React from 'react'
 
-const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange, onStepChangeBack }) => {
+const FifthQuestion = ({ ratingInput, onRatingInputChange, onStepChange, onStepChangeBack, favoriteInput }) => {
     return (
         <form>
-            <label htmlFor="ratingInput">Rate this survey</label>
+            <label htmlFor="ratingInput">Rate your {favoriteInput} knowledge</label>
             <label>
                 <input 
                     type="radio"
