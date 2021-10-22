@@ -11,3 +11,122 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+main {
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.background-img {
+  background-image: url(https://images.unsplash.com/photo-1617374128851-c84e37dc9f37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .9;
+}
+
+.form, .overview{
+  background-color: rgb(143, 143, 180);
+  padding: 2rem;
+  width: fit-content;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 3px 3px 5px 3px rgba(44, 44, 250, 0.2);
+  border-radius: 30px;
+}
+
+.overview {
+  background-image: url(https://images.unsplash.com/photo-1617374128851-c84e37dc9f37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
+  z-index: -1;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: .9;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.buttons {
+  padding: 10px;
+  margin: 10px;
+}
+
+.buttons:hover {
+  transform: scale(1.1);
+
+}
+
+.weapon-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weapon-radio-button {
+  display: flex;
+}
+
+
+.game-image {
+  width: 100px;
+}
+
+.game-radio-button {
+  visibility: visible;
+}
+
+.logos-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: black;
+}
+
+/* not being used as of right now */
+.bottom-circle {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 10px;
+  background-color: #e7aad0;
+  border-radius: 50%;
+}
+
+.bottom-icon {
+  position: absolute;
+  display: flex;
+  padding-left: 25px;
+  margin-top: -55px;
+  margin-left: 10px;
+  width: 30px;
+}
+
+.no-underline-link {
+  text-decoration: none;
+  color:black;
+}
+
+.no-underline-link:hover {
+  transform: scale(1.2);
+}
+
+footer {
+  background-color: rgba(115, 115, 247, 0.4);
+  height: 20vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: auto;
+}
