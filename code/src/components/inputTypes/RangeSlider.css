@@ -30,3 +30,16 @@ input[type="range"]::-webkit-slider-thumb {
   background: #434343;
   box-shadow: -80px 0 0 80px var(--prim);
 }
+
+
+@media (min-width: 667px) {
+  .range-slider-container {
+    margin-top: 20px;
+  }
+}
+
+@media (min-width: 667px) {
+  .range-slider-container {
+    margin-top: 30px;
+  }
+}

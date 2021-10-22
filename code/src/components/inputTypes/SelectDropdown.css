@@ -1,11 +1,24 @@
 select {
   border: none;
   width: 50%;
+  max-width: 390px;
   padding: 10px;
   margin: 30px auto;
   background-color: transparent;
   border-bottom: 2px solid var(--prim);
   font-family: var(--font);
-  font-size: 20px;
+  font-size: 17px;
   color: var(--sek);
+}
+
+@media (min-width: 667px) {
+  select {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  select {
+    font-size: 22px;
+  }
 }

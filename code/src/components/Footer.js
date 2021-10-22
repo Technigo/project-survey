@@ -1,5 +1,13 @@
 import React from "react"
 
-const Footer = () => <p className="footer">© BumBumBurka</p>
+const Footer = () => {
+  return (
+    <>
+      <div className="footer-spacing"></div>
+      <p className="footer">© BumBumBurka</p>
+    </>
+  )
+}
+
 
 export default Footer

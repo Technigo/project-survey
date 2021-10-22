@@ -1,14 +1,35 @@
 input[type="text"] {
   border: none;
-  width: 70%;
-  padding: 10px;
-  margin: 30px auto;
-  background-color: transparent;
+  width: 300px;
+  margin: 20px auto 10px auto;
+  background-color: #cecece;
   border-bottom: 2px solid var(--prim);
   font-size: 24px;
 }
 
 ::placeholder {
-  color: rgb(170, 170, 170);
+  padding: 10px;
+  color: gray;
   font-size: 20px;
 }
+
+/* TABLET */
+
+@media (min-width: 667px){
+
+  input[type="text"] {
+    width: 450px;
+    margin: 20px auto;
+  }
+}
+
+/* DESKTOP */
+
+@media (min-width: 1024px){
+
+  input[type="text"] {
+    width: 500px;
+    margin: 20px auto 30px auto;
+  }
+}
+

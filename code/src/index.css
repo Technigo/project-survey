@@ -7,7 +7,12 @@
   --font: "Montserrat", sans-serif;
 }
 
+* {
+  box-sizing: border-box;
+}
+
 body {
+  padding: 0;
   margin: 0;
   color: var(--sek);
   background-color: var(--background);
@@ -38,10 +43,15 @@ form {
   font-weight: 500;
 }
 
+label {
+  width: 100%;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 button {
   height: 80px;
-  width: 50%;
-  align-self: center;
   border: none;
   background-color: transparent;
   font-family: var(--font);
@@ -55,14 +65,20 @@ button:hover {
 }
 
 .site-container {
+  padding: 0 5px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
   text-align: center;
   min-height: 100vh;
 }
 
 .website-image {
-  width: 95%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  max-width:500px;
   border-radius: 5px;
  }
 
@@ -79,22 +95,95 @@ button:hover {
 
 .summary-text-container {
   width: 90%;
+  overflow-wrap: break-word;
+  max-width: 900px;
+  background-color:#cecaca;
+  padding: 2px 5px;
+  border-radius: 5px;
 }
 
 .summary-text {
   text-align: left;
 }
 
+
 .footer {
+  font-size: 18px;
   margin-top: auto;
   color: var(--sek);
 }
 
 .thankYou {
-  margin-top: 100px;
+  margin-top: 20px;
   color: var(--prim);
 }
 
 .footer-link {
   color: var(--prim);
+}
+
+
+@media (min-width: 667px) {
+
+  h1 {
+    margin-top: 40px;
+  }
+
+  h2 {
+    margin-top: 80px;
+    margin-bottom: 40px;
+    font-size: 26px;
+  }
+
+  .website-image {
+    max-width:600px;
+   }
+
+  form {
+    font-size: 23px;
+    margin: 40px 0;
+  }
+
+  button {
+    font-size: 23px;
+    z-index: 1;
+  }
+
+  .summary-text-container {
+    width: 85%;
+    padding: 2px 20px;
+  }
+
+  .thankYou {
+    margin-top: 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+
+  h2 {
+    margin-top: 40px;
+    font-size: 30px;
+  }
+
+  p, a {
+    font-size: 25px;
+  }
+
+  p {
+    margin: 10px auto;
+  }
+
+  .summary-text-container {
+    padding: 2px 30px;
+  }
+
+  .footer-spacing {
+    height: 100px;
+  }
+
+  .thankYou {
+    margin-top: 60px;
+  }
+
 }
