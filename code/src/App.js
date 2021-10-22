@@ -1,13 +1,13 @@
 
 import React, { useState } from 'react'
-import { Summary } from './Summary';
+import { Summary } from './Summary'
 import './app.css'
 
 export const App = () => {
-  const [drink, setDrink] = useState('');
-  const [snack, setSnack] = useState('');
-  const [party, setParty] = useState('');
-  const [showSummary, setShowSummary] = useState(false);
+  const [drink, setDrink] = useState('')
+  const [snack, setSnack] = useState('')
+  const [party, setParty] = useState('')
+  const [showSummary, setShowSummary] = useState(false)
 
   const partyOptions = ['Yes', 'No', 'Maybe']
 

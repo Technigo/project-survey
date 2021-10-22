@@ -13,12 +13,22 @@ h1 {
   font-family: 'Lobster', cursive;
   font-size: 50px;
   margin: 0;
+  color: #fff;
+  text-shadow:
+      0 0 7px #fff,
+      0 0 10px #fff,
+      0 0 151px #EE4B2B; 
 }
 
 h2 {
   font-family: 'Lobster', cursive;
   font-size: 40px;
   margin: 0;
+  color: #fff;
+  text-shadow:
+  0 0 7px #fff,
+  0 0 10px #fff,
+  0 0 151px #EE4B2B; 
 }
 
 h3 {
