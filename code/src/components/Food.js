@@ -7,7 +7,12 @@ const Food = ({ food, onFoodChange, onStepChange }) => {
     <div className="container">
       <div className="secondQuestion">
         <form className="dietForm">
-          <h1>Do you have any special dietary preferences? 🍣</h1>
+          <h1>
+            Do you have any special dietary preferences?{" "}
+            <span role="img" aria-label="sushi emoji">
+              🍣
+            </span>
+          </h1>
           <p>
             I would like to know if you have any restrictions regarding food, so
             that I can make something really delicious!

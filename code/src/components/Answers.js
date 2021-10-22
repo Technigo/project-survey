@@ -5,7 +5,12 @@ const Answers = ({ name, food, game, email, snack, licoriceCandy, drink }) => {
   return (
     <div className="container">
       <div className="fifthQuestion">
-        <h1>That's it, well done! 🎈</h1>
+        <h1>
+          That's it, well done!{" "}
+          <span role="img" aria-label="balloon emoji">
+            🎈
+          </span>
+        </h1>
         <h2>Your answers were:</h2>
         <p>
           <strong>Name:</strong> {name}

@@ -84,7 +84,12 @@ const Form = () => {
 
       {step === 10 && <DontAttend />}
       <footer>
-        <h1>Hedvig Mejstedt 🦁</h1>
+        <h1>
+          Hedvig Mejstedt{" "}
+          <span role="img" aria-label="lion emoji">
+            🦁
+          </span>
+        </h1>
       </footer>
     </div>
   );

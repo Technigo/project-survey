@@ -5,7 +5,12 @@ const Attend = ({ /* no, onNoChange, */ onStepChange, onNoChange }) => {
   return (
     <div className="container">
       <div className="attend">
-        <h1>Hello! ✨</h1>
+        <h1>
+          Hello!{" "}
+          <span role="img" aria-label="twinkling stars emoji">
+            ✨
+          </span>
+        </h1>
         <h2>
           This is an RSVP form for my big party. Please take the time to fill in
           some answers in my form so that I can plan the party to be an epic
