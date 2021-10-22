@@ -19,6 +19,7 @@ const CharacteristicsRadio = ({ plantFeature, onPlantFeatureChange }) => {
                             value={feature}
                             onChange={onPlantFeatureChange}
                             checked={plantFeature === feature}
+                            aria-label="Navigate with arrows and then press Enter"
                             required
                             className="input-radio"
                         />

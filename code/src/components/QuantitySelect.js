@@ -14,7 +14,7 @@ const QuantitySelect = ({ quantity, onQuantityChange }) => {
                     id="plantsqty"
                     className="select-qty"
                     value={quantity}
-                    aria-label="Use up or down arrows, then tab and enter"
+                    aria-label="Navigate with arrows and then press Enter"
                     onChange={onQuantityChange}
                     required>
                     <option className="option" value="">Select amount:</option>

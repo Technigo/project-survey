@@ -2,7 +2,7 @@ import React from "react"
 
 const QuestionProgress = ({ percent, step, questionsAmount }) => {
     return (
-        <div className="counter">
+        <div className="counter" aria-label="question-progress-bar">
             {step <= 5 && step > 0 ? (
                 <div className="progress">
                     <div className="progress-bar" style={{ width: percent + "%" }} >
