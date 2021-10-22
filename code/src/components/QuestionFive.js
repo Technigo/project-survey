@@ -43,7 +43,7 @@ const QuestionFive = ({
             Back
           </button>
           <button className='form-button' type='button' onClick={onStepChange}>
-            Submit
+            Next
           </button>
         </div>
         <div className='progress-counter'>

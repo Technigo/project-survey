@@ -13,22 +13,13 @@ body {
   text-align: center;
 }
 
-/* .welcome-page {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  height: 90vh;
-} */
-
 h1 {
   position: absolute;
   width: 100%;
   top: 3vh;
   left: 50%;
   transform: translate(-50%);
-  font-size: 55px;
+  font-size: 50px;
   font-weight: 500;
   color: white;
   text-shadow:
@@ -45,11 +36,11 @@ h1 {
   text-decoration: none;
   background: #22492f;
   color: #fff;
-  font-size: 23px;
+  font-size: 20px;
   font-weight: 500;
   border-radius: 50%;
-  /* text-align: center;
-  vertical-align: middle; */
+  text-align: center;
+  vertical-align: middle;
   overflow: hidden;
   transition: 0.4s;
   border: 0px;
@@ -63,6 +54,7 @@ h1 {
 }
 
 .start-button {
+  margin-top: -100px;
   width: 120px;
   height: 120px;
   line-height: 120px;
@@ -75,7 +67,11 @@ h1 {
 }
 
 .form-container {
-  margin-top: 13vh;
+  margin-top: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   padding: 15px;
   border: 2px solid #3ba05d;
   border-radius: 25px;
@@ -197,6 +193,13 @@ select {
   width: 100%;
   justify-content: space-between;
   font-size: 16px;
+}
+
+h2 {
+  font-size: 30px;
+  color: #fff;
+  font-weight: 400;
+  margin: 0px;
 }
 
 p {

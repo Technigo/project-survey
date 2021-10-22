@@ -2,7 +2,7 @@ import React from 'react';
 
 const WelcomePage = ({ onStepChange }) => {
   return (
-    <div className='welcome-page'>
+    <div>
       <button className='start-button' onClick={onStepChange}>
         Start
       </button>
