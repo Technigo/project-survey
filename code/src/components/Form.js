@@ -46,6 +46,9 @@ import SellotapeQuestion from './SellotapeQuestion'
   const onstepChange = () => {
       setStep(step + 1)
   }
+  const onStepMinusChange = () => {
+    setStep(step - 1)
+  }
 
   if (step === 1) {
     return (
@@ -58,14 +61,18 @@ import SellotapeQuestion from './SellotapeQuestion'
       <div className="main"> < NameQuestion 
       nameInput={nameInput} 
       onNameInputChange={onNameInputChange}
-      onstepChange = {onstepChange}/></div> 
+      onstepChange = {onstepChange}
+      onStepMinusChange = {onStepMinusChange}
+      /></div> 
     )
   } else if (step === 3) {
     return (
       <div className="main"> <LocationQuestion 
       locationInput={locationInput} 
       onLocationInputChange={onLocationInputChange}
-      onstepChange = {onstepChange}/> </div>
+      onstepChange = {onstepChange}
+      onStepMinusChange = {onStepMinusChange}
+      /> </div>
     )
     
   } else if (step === 4) {
@@ -74,6 +81,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       animalInput={animalInput}
       onAnimalInputChange={onAnimalInputChange}
       onstepChange = {onstepChange}
+      onStepMinusChange = {onStepMinusChange}
       /> </div>
     )
   } else if (step === 5) {
@@ -82,6 +90,7 @@ import SellotapeQuestion from './SellotapeQuestion'
       colourInput={colourInput}
       onColourInputChange={onColourInputChange}
       onstepChange = {onstepChange}
+      onStepMinusChange = {onStepMinusChange}
       /> </div>
     )
   } else if (step === 6) {
@@ -89,7 +98,9 @@ import SellotapeQuestion from './SellotapeQuestion'
       <div className="main"> <AeroplaneQuestion 
       aeroplaneInput={aeroplaneInput}
       onAeroplaneInputChange={onAeroplaneInputChange}
-      onstepChange = {onstepChange}/>
+      onstepChange = {onstepChange}
+      onStepMinusChange = {onStepMinusChange}
+      />
       </div>
     )
   } else if (step === 7) {
@@ -97,7 +108,8 @@ import SellotapeQuestion from './SellotapeQuestion'
       <div className="main"> <OlderQuestion 
       olderInput ={olderInput}
       onOlderInputChange ={onOlderInputChange}
-      onstepChange = {onstepChange}/>
+      onstepChange = {onstepChange}
+      onStepMinusChange = {onStepMinusChange}/>
       </div>
     )
   }else if (step === 8) {
@@ -105,7 +117,8 @@ import SellotapeQuestion from './SellotapeQuestion'
       <div className="main"> <SellotapeQuestion 
       sellotapeInput = {sellotapeInput}
       onSellotapeInputChange = {onSellotapeInputChange}
-      onstepChange = {onstepChange}/>
+      onstepChange = {onstepChange}
+      onStepMinusChange = {onStepMinusChange}/>
       </div>
     )
 } else if (step === 9) {

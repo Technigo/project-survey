@@ -1,6 +1,6 @@
 import React from 'react'
 
-const NameQuestion = ( {nameInput, onNameInputChange, onstepChange}) => {
+const NameQuestion = ( {nameInput, onNameInputChange, onstepChange, onStepMinusChange}) => {
 
     return (
        <div className ="container-bella">
@@ -17,7 +17,8 @@ const NameQuestion = ( {nameInput, onNameInputChange, onstepChange}) => {
                     onChange={onNameInputChange}
                     />
                 
-                <button className="button" onClick = {onstepChange}>Next Question</button>
+                <button className="button" onClick = {onstepChange}>Next Question </button>
+                <button className="button" onClick = {onStepMinusChange}> Previous Question</button>
             </form>
               
         </fieldset>

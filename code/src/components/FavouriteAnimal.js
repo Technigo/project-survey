@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange}) => {
+const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange, onStepMinusChange}) => {
     return (
         <div className = "container-bubbles">
            <img src="/assets/bubbles.jpg"></img> 
@@ -23,6 +23,7 @@ const FavouriteAnimal = ({animalInput, onAnimalInputChange, onstepChange}) => {
                     <option value="Penguin" selected>Penguin</option>
                 </select>
             <button className="button" onClick = {onstepChange}>Next Question</button>
+            <button className="button" onClick = {onStepMinusChange}> Previous Question</button>
             </form>
         </fieldset>
         </div>

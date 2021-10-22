@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SellotapeQuestion = ({sellotapeInput, onSellotapeInputChange, onstepChange}) => {
+const SellotapeQuestion = ({sellotapeInput, onSellotapeInputChange, onstepChange, onStepMinusChange}) => {
     return (
         <div className="container-bubbles">
          <img src="/assets/bubbles.jpg"></img>   
@@ -19,6 +19,7 @@ const SellotapeQuestion = ({sellotapeInput, onSellotapeInputChange, onstepChange
                     </textarea>
                 
                 <button className="button" onClick = {onstepChange}>To the Overview</button>
+                <button className="button" onClick = {onStepMinusChange}> Previous Question</button>
             </form>
               
         </fieldset>

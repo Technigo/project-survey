@@ -3,7 +3,7 @@ import React from 'react'
 const Overview = ({ nameInput, locationInput, animalInput, colourInput, aeroplaneInput, olderInput, sellotapeInput }) => {
 
     return (
-      <>
+      <section className="overview-all">
       <fieldset className="fieldset">
         <legend className="legend">The Overview</legend>
           <form className="form-container">
@@ -21,11 +21,12 @@ const Overview = ({ nameInput, locationInput, animalInput, colourInput, aeroplan
       </fieldset>
       
         <div className="thank-you">
+          <h1> THANK YOU!</h1>
         <p>Thank you so much for taking time to answer our questions! We always have so many
           questions and it is great that you answered some for us.
         </p>
       </div>
-      </>
+      </section>
     )
 }
 export default Overview
