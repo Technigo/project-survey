@@ -1,31 +1,41 @@
+
 import React from 'react';
 
-const FirstQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange }) => {
+const venues = [
+  'Smaller inside venue',
+  'Larger inside venue',
+  'Smaller outside venue',
+  'Larger outside venue',
+];
+
+const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountChoiceSet }) => {
   return (
-    <form>
-      <label htmlFor="genre-select">
-        <h1>Please pick which genre you prefer:</h1>
+    <form className="arena-choice">
+      <h1>What kind of venue would you like to be in?</h1>
+      {venues.map(
+        (
+          venue //iterating through each venue available
+        ) => (
+          <label key={venue}>
+            <input
+              value={venue}
+              onChange={onArenaChoiceSet}
+              checked={arenaChoice === venue}
+              type="radio"
+              id={venue}
+            />
+            {venue}
+          </label>
+        )
+      )}
+      <h2>How many tickets would you like?</h2>
+      <label htmlFor="amount">
+        Pick amount:
+        <input onChange={onAmountChoiceSet} type="number" id="amount" name="amount-of-tickets" min="1" max="10" />
       </label>
 
-      <select
-        id="genre-select"
-        className="genre-choice"
-        value={genreChoice}
-        onChange={onGenreChoiceSet}
-      >
-        <option disabled value="">
-          Select your preffered genre
-        </option>
-        <option value="Heavy Metal">Heavy Metal</option>
-        <option value="Pop">Pop</option>
-        <option value="Rock">Rock</option>
-        <option value="Rap & RNB">Rap & RNB</option>
-        <option value="Singer/Songwriter">Singer/Songwriter</option>
-        <option value="Electronic dance music">Electronic dance music</option>
-      </select>
-
       <button className="button" onClick={onStepChange}>
-        Next Question
+        Next question
       </button>
     </form>
   );

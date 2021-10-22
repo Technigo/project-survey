@@ -44,18 +44,19 @@ const Form = () => {
       {step === 0 && <Greeting onStepChange={onStepChange} />}
       {step === 1 && (
         <FirstQuestion
-          genreChoice={genreChoice}
-          onGenreChoiceSet={onGenreChoiceSet}
-          onStepChange={onStepChange}
-        />
-      )}
-      {step === 2 && (
-        <SecondQuestion
+          
           arenaChoice={arenaChoice}
           onArenaChoiceSet={onArenaChoiceSet}
           onStepChange={onStepChange}
           onAmountChoiceSet={onAmountChoiceSet}
           tickets={tickets}
+        />
+      )}
+      {step === 2 && (
+        <SecondQuestion
+          genreChoice={genreChoice}
+          onGenreChoiceSet={onGenreChoiceSet}
+          onStepChange={onStepChange}
         />
       )}
       {step === 3 && (
