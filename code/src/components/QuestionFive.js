@@ -2,13 +2,11 @@ import React from 'react';
 
 import Alert from './Alert';
 
-const plantsArray = ['🌴', '🌷', '🌻'];
-
-const QuestionFour = ({
-  favouritePlant,
-  onFavouritePlantChange,
-  alert,
+const QuestionFive = ({
   onStepChange,
+  sliderInput,
+  onSliderInputChange,
+  alert,
   onEnter,
   onPreviousQuestionChange,
   step,
@@ -16,21 +14,25 @@ const QuestionFour = ({
   return (
     <div className='form-container'>
       <form className='form-question'>
-        <label className='label-text'>What is you favourite plant?</label>
-        <div className='radio-button-container'>
-          {plantsArray.map((plant) => (
-            <label className='radio-option-plant' key={plant}>
-              <input
-                type='radio'
-                value={plant}
-                onChange={onFavouritePlantChange}
-                checked={favouritePlant === plant}
-                onKeyPress={onEnter}
-              />
-              {plant}
-            </label>
-          ))}
-        </div>
+        <label className='label-text' htmlFor={sliderInput}>
+          How many plants do you have?
+          <input
+            type='range'
+            min='1'
+            max='3'
+            value={sliderInput}
+            onChange={onSliderInputChange}
+            className='slider'
+            id={sliderInput}
+            required
+            onKeyPress={onEnter}
+          />
+          <div className='slider-text'>
+            <div>0</div>
+            <div>10-ish</div>
+            <div>100</div>
+          </div>
+        </label>
         {alert && <Alert />}
         <div className='button-container'>
           <button
@@ -41,7 +43,7 @@ const QuestionFour = ({
             Back
           </button>
           <button className='form-button' type='button' onClick={onStepChange}>
-            Next
+            Submit
           </button>
         </div>
         <div className='progress-counter'>
@@ -52,4 +54,4 @@ const QuestionFour = ({
   );
 };
 
-export default QuestionFour;
+export default QuestionFive;

@@ -44,7 +44,7 @@ const QuestionTwo = ({
           </button>
         </div>
         <div className='progress-counter'>
-          {step <= 4 && <p>Question: {step}/4</p>}
+          {step <= 5 && <p>Question: {step}/5</p>}
         </div>
       </form>
     </div>

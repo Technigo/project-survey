@@ -31,7 +31,7 @@ const QuestionOne = ({
         </button>
         {/* <ProgressBar bgcolor='orange' progress='0' height={20} /> */}
         <div className='progress-counter'>
-          {step <= 4 && <p>Question: {step}/4</p>}
+          {step <= 5 && <p>Question: {step}/5</p>}
         </div>
       </form>
     </div>

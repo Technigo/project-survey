@@ -24,6 +24,7 @@ body {
 
 h1 {
   position: absolute;
+  width: 100%;
   top: 3vh;
   left: 50%;
   transform: translate(-50%);
@@ -59,6 +60,7 @@ h1 {
 .form-button:hover,
 .back-button:hover {
   background: #3e5230;
+  cursor: pointer;
 }
 
 .start-button {
@@ -155,6 +157,47 @@ select {
   font-size: 27px;
 }
 
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url('./assets/slider-img.png');
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: url('./assets/slider-img.png');
+  cursor: pointer;
+}
+
+.slider-text {
+  position: relative;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  justify-content: space-between;
+  font-size: 16px;
+}
+
 p {
   margin: 0;
   color: #fff;
@@ -164,7 +207,7 @@ p {
 @media (min-width: 768px) {
   h1 {
     font-size: 75px;
-    top: 5vh;
+    top: 3vh;
   }
 
   .form-container {
@@ -195,6 +238,6 @@ p {
 @media (min-width: 1024px) {
   h1 {
     font-size: 85px;
-    top: 10vh;
+    top: 5vh;
   }
 }

@@ -5,6 +5,7 @@ import QuestionOne from './QuestionOne';
 import QuestionTwo from './QuestionTwo';
 import QuestionThree from './QuestionThree';
 import QuestionFour from './QuestionFour';
+import QuestionFive from './QuestionFive';
 import Overview from './Overview';
 
 const Form = () => {
@@ -12,6 +13,7 @@ const Form = () => {
   const [plantSkill, setPlantSkill] = useState('');
   const [humidity, setHumidity] = useState('');
   const [favouritePlant, setFavouritePlant] = useState('');
+  const [sliderInput, setSliderInput] = useState(0);
   const [step, setStep] = useState(0);
   const [alert, setAlert] = useState(false);
 
@@ -26,6 +28,9 @@ const Form = () => {
   };
   const onFavouritePlantChange = (event) => {
     setFavouritePlant(event.target.value);
+  };
+  const onSliderInputChange = (event) => {
+    setSliderInput(event.target.value);
   };
 
   //Change question + validation
@@ -53,6 +58,13 @@ const Form = () => {
       }
     } else if (step === 4) {
       if (favouritePlant === '') {
+        setAlert(true);
+      } else {
+        setAlert(false);
+        setStep(step + 1);
+      }
+    } else if (step === 5) {
+      if (sliderInput === '') {
         setAlert(true);
       } else {
         setAlert(false);
@@ -121,11 +133,23 @@ const Form = () => {
         />
       )}
       {step === 5 && (
+        <QuestionFive
+          sliderInput={sliderInput}
+          onSliderInputChange={onSliderInputChange}
+          alert={alert}
+          onStepChange={onStepChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
+          onEnter={onEnter}
+          step={step}
+        />
+      )}
+      {step === 6 && (
         <Overview
           nameInput={nameInput}
           plantSkill={plantSkill}
           humidity={humidity}
           favouritePlant={favouritePlant}
+          sliderInput={sliderInput}
         />
       )}
     </div>
