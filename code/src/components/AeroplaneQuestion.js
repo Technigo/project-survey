@@ -4,7 +4,7 @@ const AeroplaneQuestion = ({onAeroplaneInputChange, onstepChange, onStepMinusCha
 
     return(
        <div className="container-bubbles">
-           <img src="/assets/bubbles.jpg"></img>
+           <img src="/assets/bubbles.jpg" alt="child who asked the question"></img>
             <fieldset className="fieldset">
            <legend className="legend" >Questions by Bella + Bubbles</legend>
             <form className="form-container">

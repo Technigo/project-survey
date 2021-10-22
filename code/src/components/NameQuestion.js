@@ -4,7 +4,7 @@ const NameQuestion = ( {nameInput, onNameInputChange, onstepChange, onStepMinusC
 
     return (
        <div className ="container-bella">
-        <img src="/assets/bella.jpg"></img>
+        <img src="/assets/bella.jpg" alt="child who asked the question"></img>
         <fieldset className="fieldset">
            <legend className="legend" >Questions by Bella + Bubbles</legend>
              <form className="form-container">
