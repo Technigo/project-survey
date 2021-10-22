@@ -1,18 +1,22 @@
 import React from "react";
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
-  // const { nameInput, onNameInputChange } = props;
-
   return (
-    <form>
-      <label htmlFor="nameInput">Type your name</label>
+    <form className="form-container">
+      <label class="label-text" htmlFor="nameInput">
+        What is/would be your in-game name?
+      </label>
       <input
+        className="input-text"
+        required
         id="nameInput"
         type="text"
         value={nameInput}
         onChange={onNameInputChange}
       />
-      <button onClick={onStepChange}>Next questions</button>
+      <button type="submit" onClick={onStepChange}>
+        Next question
+      </button>
     </form>
   );
 };

@@ -1,11 +1,12 @@
 import React from "react";
 
-const Overview = ({ nameInput, surnameInput }) => {
+const Overview = props => {
   return (
     <section>
       <h2>My values from form :</h2>
-      <p>Name : {nameInput}</p>
-      <p>Surname : {surnameInput}</p>
+      <p>Name : {props.nameInput}</p>
+      <p>Role : {props.roleInput}</p>
+      <p>Class : {props.classInput}</p>
     </section>
   );
 };
