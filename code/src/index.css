@@ -4,7 +4,12 @@ body {
   "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
   sans-serif;
   -webkit-font-smoothing: antialiased;
+  -webkit-appearance: none;
+  appearance: none;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('./greg-rakozy-oMpAz-DN-9I-unsplash.jpg');
+  background-repeat: no-repeat; 
+  background-size: cover;
 }
 
 code {
@@ -12,25 +17,65 @@ code {
     monospace;
 }
 
+.main {
+  color: rgb(252, 221, 250);
+  display: flex;
+  flex-direction: column;
+}
+
 .page {
   width: 50%;
-  margin: 200px auto;
+  margin: 100px auto;
   border: 3px solid black;
+  border-radius: 10%;
   display: block;
   align-content: center;
   justify-content: center;
   padding: 50px;
-  background-color: rgb(197, 253, 201)
+  background-color: rgb(37, 77, 36)
+
 };
 
+.section {
+  margin-left: 25%;
+}
+
 button {
- background-color: rgb(69, 114, 2);
- margin: 50px;
+  background-color: rgb(117, 2, 98);
+  color:rgb(250, 207, 225);
+  margin-left: 33%;
+  margin-top: 40px;
+  padding: 10px;
 };
 
 label {
   display: block;
+  margin-bottom: 10px;;
 }
 
+input {
+  display: block;
+}
+  
+input[type="radio"] {    
+  display: none;
+}
+  
+input[type="radio"] + span {
+  opacity: 0.3;
+  cursor: pointer;
+}
+  
+input[type="radio"]:checked + span {
+  opacity: 1;
+}
+
+
+
+@media (minmax ) {
+
+
+
+}
 
 

@@ -11,6 +11,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState('');
   const [surnameInput, setSurnameInput] = useState ('');
   const [seasonInput, setSeasonInput] = useState('');
+  const [temp, setTemp] = useState('');
   const [step, setStep] = useState(1);
 
 const onNameInputChange = (event) => {
@@ -22,10 +23,12 @@ const onSurnameInputChange = (event) => {
 };
 
 const onSeasonInputChange = (event) => {
-  setSeasonInputChange(event.target.value);
+  setSeasonInput(event.target.value);
 }
 
-const // I will continue here with the third question
+const onTempChange = (event) => {
+  setTemp(event.target.value);
+}
 
 const onStepChange = () => {
     setStep(step + 1);
@@ -50,23 +53,23 @@ return (
     {step === 3 && (
       <SecondQuestion //drop-down
         seasonInput={seasonInput}
-        SeasonInputChange={SeasonInputChange}
         onSeasonInputChange={onSeasonInputChange}
         onStepChange={onStepChange}
       />
     )} 
     {step === 4 && (
       <ThirdQuestion //radio button
-        nameInput={nameInput}
-        surnameInput={surnameInput}
-        season={season.value}
+        temp={temp}
+        onTempChange={onTempChange}
+        onStepChange={onStepChange}
       />
     )}
     {step === 5 && (
       <Overview //submitting all values
         nameInput={nameInput}
         surnameInput={surnameInput}
-        season={season.value}
+        seasonInput={seasonInput}
+        temp={temp}
 
       />
     )}

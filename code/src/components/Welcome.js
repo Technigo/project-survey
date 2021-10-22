@@ -1,12 +1,12 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-//This is the first page the user is greeted by, and the servey starts with "onStepChange"
+//This is the first page the user is greeted by, and the servey starts with "onStepChange" when button is clicked
 const Welcome = ({ onStepChange }) => {
     return(
-        <form>
-          <label>Welcome to my survey</label>
-            <h2>This weeks topic: Seasons!</h2>
-            <button onClick={onStepChange}>Click here to start the survey!</button>
+        <form className="section">
+            <h2>Welcome!</h2>
+                <label>This is a small survey about seasons!</label>
+            <button onClick={onStepChange}>Let's begin</button>
         </form>
     )};
 
