@@ -1,14 +1,14 @@
 @keyframes press {
   0% {
-    background-color: #dca08f;
+    background-color: var(--blue);
   }
   100% {
-    background-color: #de8971;
+    background-color: var(--purple);
   }
 }
 
 .link-button {
-  background-color: var(--orange);
+  background-color: var(--blue);
   width: 100%;
   border: none;
   color: var(--beige);

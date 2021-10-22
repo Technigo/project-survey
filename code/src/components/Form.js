@@ -6,6 +6,7 @@ import ThirdQuestion from "./ThirdQuestion";
 import FourthQuestion from "./FourthQuestion";
 import Summary from "./Summary";
 import Progressbar from "./ProgressBar";
+import BackgroundImg from "./BackgroundImg";
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
@@ -49,6 +50,7 @@ const Form = () => {
 
   return (
     <>
+      <BackgroundImg />
       <main className="main">
         {/* <div aria-label="" className="container"> */}
         {step === 0 && (
@@ -105,6 +107,7 @@ const Form = () => {
               nameInput={nameInput}
               interestInput={interestInput}
               ageInput={ageInput}
+              moodInput={moodInput}
             />
             <Progressbar done={(step / numberOfQuestions) * 100} />
           </section>

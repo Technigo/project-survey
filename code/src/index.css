@@ -1,7 +1,8 @@
 :root {
-  --purple: #7b6079;
-  --orange: #de8971;
-  --beige: #ffe9d6;
+  --purple: #edbfb9;
+  --orange: #ff9534;
+  --beige: #faeedd;
+  --blue: #0040a0;
   --transparent-light: rgba(0, 0, 0, 0.2);
   --transparent-dark: rgba(0, 0, 0, 0.5);
 }
@@ -14,8 +15,9 @@ body {
   font-family: raleway;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--purple);
-  color: var(--beige);
+  /* background-color: var(--purple); */
+  color: black;
+  /* background-image: url(../public/img/background.png); */
 }
 
 code {
@@ -33,6 +35,7 @@ section {
   text-align: center;
   font-weight: 400;
   font-size: 32px;
+  color: var(--blue);
 }
 
 .page-header {
@@ -117,7 +120,8 @@ p {
 .last-message {
   margin-top: 100px;
   font-size: 70px;
-  color: #de8971;
+  color: black;
+  background: (--purple);
   text-align: center;
   margin: 0;
 }
@@ -142,6 +146,10 @@ p {
     font-size: 40px;
   }
 
+  .description {
+    font-size: 28px;
+  }
+
   p {
     font-size: 16px;
   }
@@ -161,8 +169,6 @@ p {
   .last-message {
     margin: 0;
     font-size: 40px;
-    color: #de8971;
-    text-align: center;
   }
 
   .footer p {

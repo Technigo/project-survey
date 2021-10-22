@@ -9,9 +9,9 @@ const SecondQuestion = ({
 }) => {
   return (
     <form onSubmit={handleSubmit} id="secondQuestion" className="form">
-      <h2 className="page-header">second question</h2>
+      <h2 className="page-header">Favourite thing!</h2>
       <label className="label" htmlFor="interstInput">
-        <p>What is your interest?</p>
+        <p>What is your favourite household thing?</p>
       </label>
       <select
         className="input-select"
@@ -21,10 +21,10 @@ const SecondQuestion = ({
         onChange={onInterestInputChange}
         // required
       >
-        <option value="">Select what you are interested in</option>
-        <option value="buyer">Buyer</option>
-        <option value="seller">Seller</option>
-        <option value="buyer-and-seller">Buyer and seller</option>
+        <option value="">My favorite thing is</option>
+        <option value="clean">Clean</option>
+        <option value="vaccum">Vaccum</option>
+        <option value="dust">Dust</option>
       </select>
       <ButtonNextQuestion />
     </form>

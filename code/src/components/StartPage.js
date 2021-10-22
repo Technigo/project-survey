@@ -5,7 +5,7 @@ const StartPage = ({ onStepChange }) => {
   return (
     <>
       <h1 className="description">survey</h1>
-      <h2 className="page-header">Hello front end developer!</h2>
+      <h2 className="page-header">Hello there and welcome!</h2>
       <a
         aria-label="button to next page"
         href="#firstPage"

@@ -3,12 +3,18 @@ import "./ThirdQuestion.css";
 import ButtonNextQuestion from "./ButtonNextPage";
 
 const ThirdQuestion = ({ ageInput, onAgeInputChange, handleSubmit }) => {
-  const ageGroup = ["JavaScript", "Sleeping in", "HTML", "CSS", "React"];
+  const ageGroup = [
+    "Go for a run",
+    "That will never happen in",
+    'Stare in the blanc aka "meditate"',
+    "Code, doh!",
+    "Ice-cream",
+  ];
 
   return (
     <form onSubmit={handleSubmit} id="thirdQuestion" className="form">
-      <h2 className="page-header">third question</h2>
-      <p>Select your passion</p>
+      <h2 className="page-header">You have one hour off..</h2>
+      <p>..what will you do?</p>
       {ageGroup.map(group => (
         // <div className="wrapper">
         <label className="radiobutton-container" key={group}>

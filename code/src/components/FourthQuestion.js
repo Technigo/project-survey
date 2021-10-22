@@ -16,7 +16,7 @@ const FourthQuestion = ({ moodInput, onMoodInputChange, handleSubmit }) => {
             className="slider"
             id="myRange"
             name="slider"
-            step="50"
+            step="25"
             value={moodInput}
             onChange={onMoodInputChange}
           />

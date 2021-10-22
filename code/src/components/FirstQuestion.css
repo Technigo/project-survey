@@ -2,7 +2,7 @@
   width: 100%;
   padding: 15px;
   background-color: var(--beige);
-  border: none;
+  border: 1px solid var(--blue);
 }
 
 .input-first-question::after {
