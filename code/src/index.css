@@ -135,7 +135,7 @@ display: inline-block;
 
 ::placeholder{
   font-size: 0.7em;
-  opacity: 50%;
+  
   font-family: 'Montserrat';
 }
 
