@@ -4,6 +4,10 @@ body {
     flex-direction: column;
 }
 
+.overview  {
+    max-width: 300px;
+}
+
 h2 {
     color:whitesmoke;
     font-size: 24px;
@@ -12,21 +16,6 @@ h2 {
     display: flex;
     justify-content: center;
     margin-bottom: 20px;
-}
-
-.overview  {
-    max-width: 300px;
-}
-
-.summary-p  {
-    font-size: 17px;
-    font-family: Helvetica, sans-serif;
-    margin-bottom: 20px;
-    margin-top: 15px;
-    display: flex;
-    flex-direction: row;
-    text-align: start;
-    padding-top: 10px;
 }
 
 h3 {
@@ -41,19 +30,22 @@ h3 {
     text-transform: uppercase;
 }
 
+.summary-p  {
+    font-size: 17px;
+    font-family: Helvetica, sans-serif;
+    margin-bottom: 20px;
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    text-align: start;
+    padding-top: 10px;
+}
 
 
-
-/* tablet and desktop */
+/* tablet and desktop view */
 @media (min-width: 668px){
 .overview  {
     max-width: 700px;
-}
-.summary-p  {
-    font-size: 24px;
-    margin-bottom: 0;
-    display: flex;
-    flex-direction: row;
 }
 
 h2 {
@@ -64,6 +56,13 @@ h2 {
 h3 {
     font-size: 28px;
     margin-top: 40px;
+}
+
+.summary-p  {
+    font-size: 24px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
 }
 }
 

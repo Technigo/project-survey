@@ -7,9 +7,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen","Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
   background-image: url("https://images.unsplash.com/photo-1575116703938-36c55eff7c4f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=418&q=80");
-  
   backdrop-filter: brightness(85%);
   height: 100vh;
   width: 100vw;
@@ -18,7 +16,6 @@ body {
   background-repeat: no-repeat;
   color: whitesmoke; 
   box-sizing: border-box;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -27,6 +24,10 @@ body {
   
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+h1 {
+  font-family: 'Catamaran', sans-serif;
 }
 
 p {
@@ -65,7 +66,6 @@ button:hover {
   display: flex;
   flex-direction: column;
   align-items: center;
-  
 }
 
 .survey-title {
@@ -74,10 +74,6 @@ button:hover {
   font-size: 28px;
   letter-spacing: 2px;
   font-weight: 500;
-}
-
-h1 {
-  font-family: 'Catamaran', sans-serif;
 }
 
 .time {
@@ -96,7 +92,7 @@ h1 {
   margin-top: 2px;
 }
 
-/* Styling for Question 1-4 */
+/* Styling for Question 1-5 */
 .form {
   padding: 10px;
   margin: 120px 30px;
@@ -124,7 +120,7 @@ input {
   font-size: 18px;
 }
 
-/* styling for radiobuttons  */
+/* styling for radiobuttons */
 .radiobutton-input {
   appearance: none;
   position: relative;
@@ -176,7 +172,6 @@ input {
 
 .dropdown-content {
   position: absolute;
-  /* background-color: rgb(119, 56, 56); */
   background-color: whitesmoke;
   min-width: 100px;
   box-shadow: 0px 8px 16px 0px rgba(58, 57, 57, 0.2);
@@ -184,6 +179,7 @@ input {
   z-index: 1;
 }
 
+/* styling for rangeslider */
 .rate-description {
   font-size: 16px;
   margin-top: 15px;
@@ -217,7 +213,7 @@ input {
 }
 
 
-/* tablet */
+/* tablet view */
 @media (min-width: 668px){
   .intro-section {
     max-width: 500px;
@@ -275,11 +271,9 @@ input {
     font-size: 26px;
     margin-top: 30px;
   }
-
-  
 }
 
-  /* desktop */
+  /* desktop view */
 @media only screen and (min-width: 1024px){
   body {
     background-image: url("https://images.unsplash.com/photo-1575110170591-983f78ecedab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=820&q=80");
@@ -328,5 +322,4 @@ input {
   .rate-description {
     font-size: 24px;
   }
-
 }
