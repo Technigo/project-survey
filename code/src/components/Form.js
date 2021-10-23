@@ -28,8 +28,9 @@ const initialState = [
 
 const Form = () => {
   const [nameInput, setNameInput] = useState ('') 
-  const [surnameInput, setSurnameInput] = useState('')
-  const [flavour, setFlavour] = useState('')
+  const [emailInput, setEmailInput] = useState('')
+  const [addressInput, setAddressInput] = useState('')
+  const [brewery, setBrewery] = useState('')
   const [step, setStep] = useState(1)
   const [showResult, setShowResult] = useState(false)
   const [selectedBeers, setSelectedBeers] = useState(initialState)
@@ -45,12 +46,16 @@ const Form = () => {
     setNameInput(event.target.value)
   }
 
-  const onSurnameInputChange = (event) => {
-    setSurnameInput(event.target.value)
+  const onEmailInputChange = (event) => {
+    setEmailInput(event.target.value)
   }
 
-  const onFlavourChange = (event) => {
-    setFlavour(event.target.value)
+  const onAddressInputChange = (event) => {
+    setAddressInput(event.target.value)
+  }
+
+  const onBreweryChange = (event) => {
+    setBrewery(event.target.value)
   }
 
   const onStepChange = (motion) => {
@@ -73,8 +78,9 @@ const Form = () => {
     showResult ? 
       <Overview 
         nameInput={nameInput} 
-        surnameInput = {surnameInput}
-        flavour = {flavour}
+        emailInput = {emailInput}
+        addressInput={addressInput}
+        brewery = {brewery}
         selectedBeers = {selectedBeers}
         onOverview = {onOverview}
       />
@@ -84,15 +90,15 @@ const Form = () => {
           <FirstQuestion 
             nameInput={nameInput} 
             onNameInputChange={onNameInputChange}
-            surnameInput={surnameInput} 
-            onSurnameInputChange={onSurnameInputChange} 
+            emailInput={emailInput} 
+            onEmailInputChange={onEmailInputChange} 
             onStepChange={onStepChange} 
           />
         )}
         {step === 2 && (
           <SecondQuestion 
-            surnameInput={surnameInput} 
-            onSurnameInputChange={onSurnameInputChange} 
+            addressInput={addressInput} 
+            onAddressInputChange={onAddressInputChange} 
             onStepChange={onStepChange} 
           />
         )}
@@ -106,8 +112,9 @@ const Form = () => {
         )}
         {step === 4 && (
           <FourthQuestion 
-            flavour={flavour} 
-            onFlavourChange={onFlavourChange} 
+            brewery={brewery} 
+            onBreweryChange={onBreweryChange}
+            onStepChange={onStepChange}  
             onFinalQuestion={onFinalQuestion} 
           />
         )}

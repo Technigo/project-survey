@@ -39,7 +39,7 @@ code {
   display:flex;
   flex-direction: column;
   width: 80%;
-  max-width: 800px;
+  max-width: 40rem;
   margin: auto 0;
   position: absolute;
   top: 50%;
@@ -50,9 +50,9 @@ code {
 
 .form {
   background: rgba(255, 255, 255, 0.7);
-  border: 10px solid rgb(233, 191, 7);
-  height: 300px;
-  border-radius: 25px;
+  border: 0.5em solid rgb(233, 191, 7);
+  height: 20rem;
+  border-radius: 1.2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -61,38 +61,44 @@ code {
   justify-content: center;
 }
 
-.form-element {
-  font-family: inherit;
-  font-size: 18px;
-}
-
 .form-label, .form-button {
   font-family: inherit;
-  font-size: 14px; 
-  margin-top: 15px;
+  font-size: 1rem; 
+  margin-top: 1.2rem;
 }
 
-input[type="text"] {
-  border: 2px solid black;
-  border-radius: 16px;
-  box-shadow: 1px 1px 1px rgb(223, 202, 15);
-  height: 32px;
-  padding: 0 10px;
-  font-size: 14px;
-  letter-spacing: 1px;
+.form-label {
+  font-weight: 500;
+  margin-bottom: 0.3rem;
+}
+
+input[type="text"], input[type="email"] {
+  border: 0.16em solid black;
+  border-radius: 1rem;
+  height: 2.5rem;
+  padding: 0 0.8rem;
+  font-size: 0.8rem;
+  width: 15rem;
   outline: none;
 }
 
-input[type="text"]:hover {
+input[type="text"]:hover, input[type="email"]:hover {
   background: rgb(235, 235, 235);
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-around;
+  width: 15rem;
 }
 
 .form-button {
   display: inline-block;
-  margin-left: 0.3em;
-  padding: 0.3em 0.8em;
+  height: 2.2rem;
+  padding: 0.3em 0.8rem;
+  margin-top: 1.5rem;
   border: 0.16em solid rgb(0, 0, 0);
-  border-radius: 2em;
+  border-radius: 2rem;
   box-sizing: border-box;
   text-decoration: none;
   color: black;
@@ -120,8 +126,9 @@ input[type="text"]:hover {
 }
 
 .error {
-  font-size: 12px;
-  margin: inherit;
+  font-size: 0.7rem;
+  margin-left: 0.3rem;
+  margin-top: 0;
 }
 
 @keyframes bouncy {

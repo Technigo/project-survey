@@ -1,7 +1,7 @@
 import React from 'react'
 
 const FirstQuestion = (props) => {
-const {nameInput, onNameInputChange,surnameInput, onSurnameInputChange, onStepChange} = props
+const {nameInput, onNameInputChange,emailInput, onEmailInputChange, onStepChange} = props
 
   return (
     <form className="form">
@@ -20,28 +20,32 @@ const {nameInput, onNameInputChange,surnameInput, onSurnameInputChange, onStepCh
       />
 
       <label 
-        htmlFor="surnameInput" 
+        htmlFor="emailInput" 
         className="form-label">
-          Type your surname
+          Type your e-mail
       </label>
       <input 
-        id="surnameInput" 
-        type="text" 
-        value={surnameInput} 
-        onChange={onSurnameInputChange} 
+        id="emailInput" 
+        type="email" 
+        value={emailInput} 
+        onChange={onEmailInputChange} 
         className="form-element"
-        placeholder="Surname"
+        placeholder="emailsson@email.com"
       />
 
+
+
       <button 
-        disabled={nameInput === '' || surnameInput === ''}
+        disabled={nameInput === '' || emailInput === ''}
         onClick={onStepChange}
         type="submit"
         className="form-button bouncy">
           Next question
       </button>
-      {(nameInput === '' || surnameInput === '') && 
-      <p className="error">You need to fill in your name and e-mail</p>}
+
+      {(nameInput === '' || emailInput === '') && 
+      <p className="error">Please fill in {nameInput === '' && 'name'} {(nameInput === ''&&  emailInput === '') && 'and'} {emailInput === '' && 'e-mail'}</p>}
+      
     </form>
   )
 }

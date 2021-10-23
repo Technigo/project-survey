@@ -22,8 +22,8 @@ const {handleOnChange, onStepChange, selectedBeers, beer} = props
       </ul>
 
       <div className="button-container">
-        <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
-        <button onClick={() => onStepChange("next")} className="form-button">Next question</button>
+        <button onClick={() => onStepChange("back")} className="form-button bouncy">Go back</button>
+        <button onClick={() => onStepChange("next")} className="form-button bouncy">Next question</button>
       </div>
         
     </form>

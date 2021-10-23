@@ -1,32 +1,34 @@
 import React from 'react'
 
 const SecondQuestion = (props) => {
-  const {surnameInput, onSurnameInputChange, onStepChange} = props
+  const {addressInput, onAddressInputChange, onStepChange} = props
 
   return (
       <form className="form">
         <label 
-          htmlFor="surnameInput" 
+          htmlFor="addressInput" 
           className="form-label">
-            Type your surname
+            Type your address
         </label>
         <input 
-          id="surnameInput" 
+          id="addressInput" 
           type="text" 
-          value={surnameInput} 
-          onChange={onSurnameInputChange} 
+          value={addressInput} 
+          onChange={onAddressInputChange} 
           className="form-element"
+          placeholder="city citycode"
         />
 
         <div className="button-container">
           <button onClick={() => onStepChange("back")} className="form-button bouncy">Go back</button>
           <button 
-            disabled={surnameInput === ''}
+            disabled={addressInput === ''}
             onClick={() => onStepChange("next")}
-            className="form-button">
+            className="form-button bouncy">
               Next question
           </button>
         </div>
+        {(addressInput === '') && <p className="error">Please fill in your e-mail</p>}
         
       </form>
   )

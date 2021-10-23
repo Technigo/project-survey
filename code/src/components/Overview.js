@@ -1,23 +1,26 @@
 import React from 'react'
 
 const Overview = (props) => {
-  const {nameInput, surnameInput, selectedBeers, flavour, onOverview} = props
+  const {nameInput, emailInput, addressInput, selectedBeers, brewery, onOverview} = props
   return (
 
-      <div className="form"> 
+      <div className="overview"> 
         <section>
           <h2>My values</h2>
           <p>Name: {nameInput}</p>
-          <p>Surname: {surnameInput}</p>
+          <p>E-mail: {emailInput}</p>
+          <p>Address: {addressInput}</p>
           <p>You have ordered the following beer-types:</p>
-          {selectedBeers.map((beertype) => (
-            beertype.checked && (<div>{beertype.name}</div>)
-          ))}
-          <p>You want {flavour} popcorn</p>
+          <ul>
+            {selectedBeers.map((beertype) => (
+              beertype.checked && (<li>{beertype.name}</li>)
+            ))}
+          </ul>
+          <p>You will receive beers from {brewery} and similar brewery's</p>
         </section>
         
         <div className="button-container">
-          <button onClick={onOverview} className="form-button">Restart</button>
+          <button onClick={onOverview} className="form-button bouncy">Restart</button>
         </div>
       </div>
     
