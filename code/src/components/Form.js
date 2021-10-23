@@ -6,7 +6,7 @@ import QuestionThree from './QuestionThree'
 import QuestionFour from './QuestionFour'
 import QuestionFive from './QuestionFive'
 import Summery from './Summery'
-// import Progress_bar from './Progress_bar'
+import Progress_bar from './Progress_bar'
 
 
 const Form = () => {
@@ -47,28 +47,35 @@ const Form = () => {
     setStep(step - 1)
 }
 
+  const numberOfQuestions = 5
+
 
   return (
     <main>
-
-        {/* <Progress_bar /> */}
-
         {step === 0 && (
             <Intro 
                 onStepChange={onStepChange}
             />
         )}
         {step === 1 && (
+          <>
+            <Progress_bar
+                progress={(step / numberOfQuestions) * 100}
+            />
             <QuestionOne 
                 nameInput={nameInput}
                 onNameInputChange={onNameInputChange}
                 onStepChange={onStepChange}
                 onStepBackChange={onStepBackChange}
             />
+            </>
             )}
+
         {step === 2 && (
             <>
-            {/* <h2>Nice to meet you {nameInput}!</h2> */}
+            <Progress_bar
+                progress={(step / numberOfQuestions) * 100}
+            />
             <QuestionTwo 
                 nameInput={nameInput} 
                 guestInput={guestInput}
@@ -78,30 +85,49 @@ const Form = () => {
             />
             </>
         )}
+
         {step === 3 && (
+          <>
+            <Progress_bar
+                progress={(step / numberOfQuestions) * 100}
+            />  
             <QuestionThree 
                 selectOption={selectOption}
                 onSelectOptionChange={onSelectOptionChange}
                 onStepChange={onStepChange}
                 onStepBackChange={onStepBackChange}
             />
+          </>
          )}
+
         {step === 4 && (
+          <>
+            <Progress_bar
+                progress={(step / numberOfQuestions) * 100}
+            /> 
             <QuestionFour 
                 radioInput={radioInput}
                 onRadioInputChange={onRadioInputChange}
                 onStepChange={onStepChange}
                 onStepBackChange={onStepBackChange}
             />
+            </>
          )}
+
           {step === 5 && (
+            <>
+            <Progress_bar
+                progress={(step / numberOfQuestions) * 100}
+            /> 
             <QuestionFive 
                 select2Option={select2Option}
                 onSelect2OptionChange={onSelect2OptionChange}
                 onStepChange={onStepChange}
                 onStepBackChange={onStepBackChange}
             />
+            </>
          )}
+
          {step === 6 && (
             <Summery 
                 nameInput={nameInput} 

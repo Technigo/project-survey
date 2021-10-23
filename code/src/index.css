@@ -65,6 +65,10 @@ p {
   margin: 1rem;
 }
 
+div {
+  padding-bottom: 0;
+}
+
 
 /* COMMON STYLING FOR STEPS */
 
@@ -73,11 +77,12 @@ p {
   flex-direction: column;
   max-width: 700px;
   margin: auto;
+  padding-top: 2rem;
 }
 
 .intro-text {
-  padding-top: 4rem;
-  padding-bottom: 2rem;
+  /* padding-top: 2rem; */
+  padding-bottom: 1rem;
   text-align: center;
 }
 
@@ -99,7 +104,21 @@ p {
   border: 0;
   height: 48px;
   cursor: pointer;
+  -webkit-transition: all 200ms ease-in;
+  -ms-transition: all 200ms ease-in;
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  position: relative;
 }
+
+.btn:hover {
+  z-index: 2;
+  -webkit-transition: all 200ms ease-in; 
+  -moz-transition: all 200ms ease-in;
+  transition: all 200ms ease-in;
+  background-color:#dedede;
+}
+
 
 /* BUTTON CONTAINER STICKY */
 
@@ -133,7 +152,31 @@ p {
   padding: 0 4rem 0 4rem;
   width: 200px;
   margin: auto;
+  cursor: pointer;
+  -webkit-transition: all 200ms ease-in;
+  -webkit-transform: scale(1); 
+  -ms-transition: all 200ms ease-in;
+  -ms-transform: scale(1); 
+  -moz-transition: all 200ms ease-in;
+  -moz-transform: scale(1);
+  transition: all 200ms ease-in;
+  transform: scale(1);  
+  position: relative;
 }
+
+.start-btn:hover {
+    z-index: 2;
+    -webkit-transition: all 200ms ease-in;
+    -webkit-transform: scale(1.2);
+    -ms-transition: all 200ms ease-in;
+    -ms-transform: scale(1.2);   
+    -moz-transition: all 200ms ease-in;
+    -moz-transform: scale(1.2);
+    transition: all 200ms ease-in;
+    transform: scale(1.2);
+    background-color:#dedede;
+}
+
 
 .startover-btn {
   display: block;
@@ -146,6 +189,7 @@ p {
   height: 48px;
   padding: 0 4rem 0 4rem;
   margin: auto;
+  cursor: pointer;
 }
 
 .end-button {
