@@ -6,7 +6,7 @@ const Overview = ({ date, movie, seat, ticket, snack, nameInput }) => {
 			<h2>
 				Enjoy your scary movie <br />{' '}
 				<span className="name-overview"> {nameInput}! </span>
-				<audio src="/assets/horror.mp3" autoPlay />
+				<audio src="/assets/soundfile.mp3" autoPlay />
 			</h2>
 
 			<div className="summary-details-container">
