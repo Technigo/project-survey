@@ -184,6 +184,38 @@ input {
   z-index: 1;
 }
 
+.rate-description {
+  font-size: 16px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.rangeslider-value {
+  margin-top: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  border: none;
+  height: 0;
+  border-radius: 5px;  
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: rgb(119, 56, 56);
+  cursor: pointer;
+}
+
 
 /* tablet */
 @media (min-width: 668px){
@@ -248,11 +280,9 @@ input {
 }
 
   /* desktop */
-@media (min-width: 1024px){
+@media only screen and (min-width: 1024px){
   body {
     background-image: url("https://images.unsplash.com/photo-1575110170591-983f78ecedab?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=820&q=80");
-    height: 100vh;
-    width: 100vw;
     position: relative;
     background-size: cover;
   }
@@ -263,7 +293,7 @@ input {
   }
 
   p {
-    font-size: 28px;
+    font-size: 26px;
   }
 
   button {
@@ -293,6 +323,10 @@ input {
 
   .dropdown-select {
     width: 300px;
+  }
+
+  .rate-description {
+    font-size: 24px;
   }
 
 }

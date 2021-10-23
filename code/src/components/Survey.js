@@ -5,6 +5,7 @@ import Question1 from './Question1'
 import Question2 from './Question2'
 import Question3 from './Question3'
 import Question4 from './Question4'
+import Question5 from './Question5'
 import Overview from './Overview'
 
 
@@ -14,6 +15,8 @@ const Survey = () => {
     const [treeInput, setTreeInput] = useState('')
     const [foodInput, setFoodInput] = useState('')
     const [movieInput, setMovieInput] = useState('')
+    const [feelingInput, setFeelingInput] = useState('3')
+
     const [step, setStep] = useState(1)
 
     const onTraditionInputChange = (event) => {
@@ -30,6 +33,10 @@ const Survey = () => {
 
     const onMovieInputChange = (movieInput) => {
         setMovieInput(movieInput)
+    }
+
+    const onFeelingInputChange = (event) => {
+        setFeelingInput(event.target.value)
     }
 
     const onStepChange = () => {
@@ -72,6 +79,13 @@ const Survey = () => {
                />
            )}
             {step === 6 && (
+               <Question5
+                feelingInput={feelingInput}
+                onFeelingInputChange={onFeelingInputChange}
+                onStepChange={onStepChange}
+               />
+           )}
+            {step === 7 && (
                <Overview
                 traditionInput={traditionInput}
                 treeInput={treeInput}

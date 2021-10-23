@@ -19,7 +19,7 @@ const Question4 = ({ movieInput, onMovieInputChange, onStepChange }) => {
                     <option className="dropdown-content"value="Other">Other</option>
 				</select>
 				
-				<button onClick={onStepChange}>Submit</button>
+				<button onClick={onStepChange}>Next</button>
 				
 		</form>
 	)

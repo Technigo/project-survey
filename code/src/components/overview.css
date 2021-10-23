@@ -24,7 +24,8 @@ h2 {
     margin-bottom: 20px;
     margin-top: 15px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    text-align: start;
     padding-top: 10px;
 }
 
@@ -46,19 +47,23 @@ h3 {
 /* tablet and desktop */
 @media (min-width: 668px){
 .overview  {
-    max-width: 500px;
+    max-width: 700px;
 }
 .summary-p  {
-    font-size: 28px;   
+    font-size: 24px;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: row;
 }
 
 h2 {
-    font-size: 40px;
+    font-size: 36px;
+    margin-bottom: 30px;
 }
 
 h3 {
-    font-size: 30px;
-    margin-top: 48px;
+    font-size: 28px;
+    margin-top: 40px;
 }
 }
 
