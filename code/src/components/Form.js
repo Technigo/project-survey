@@ -1,5 +1,7 @@
 import React, { useState} from 'react'
 
+import ProgressBar from './ProgressBar'
+
 import FirstPage from './FirstPage'
 import NameQuestion from './NameQuestion'
 import LocationQuestion from './LocationQuestion'
@@ -10,7 +12,7 @@ import AeroplaneQuestion from './AeroplaneQuestion'
 import OlderQuestion from './OlderQuestion'
 import SellotapeQuestion from './SellotapeQuestion'
 
- const Form = () => {
+  export const Form = () => {
   
   const [nameInput, setNameInput] = useState ('');
   const [locationInput, setLocationInput] = useState ('')
@@ -49,12 +51,13 @@ import SellotapeQuestion from './SellotapeQuestion'
   const onStepMinusChange = () => {
     setStep(step - 1)
   }
-
+ 
   if (step === 1) {
     return (
       <div className = "intro"> 
       <FirstPage 
-      onStepChange = {onStepChange}/></div> 
+      onStepChange = {onStepChange}/>
+      </div> 
     )
   }
    else if (step === 2) {
@@ -65,41 +68,62 @@ import SellotapeQuestion from './SellotapeQuestion'
       onNameInputChange = {onNameInputChange}
       onStepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
-      /></div> 
+      />
+     </div> 
     )
   } else if (step === 3) {
     return (
-      <div className = "main"> 
-      <LocationQuestion 
-      locationInput = {locationInput} 
-      onLocationInputChange = {onLocationInputChange}
-      onStepChange = {onStepChange}
-      onStepMinusChange = {onStepMinusChange}
-      /> </div>
+      <div ClassName="body-container">
+        <div className = "main"> 
+        <LocationQuestion 
+        locationInput = {locationInput} 
+        onLocationInputChange = {onLocationInputChange}
+        onStepChange = {onStepChange}
+        onStepMinusChange = {onStepMinusChange}
+        /></div> 
+          <div ClassName="progress"><ProgressBar
+          bgcolor="#86E5D1" 
+          progress='15'  
+          height={50}/></div>
+      </div>
+      
     )
     
   } else if (step === 4) {
-    return (
+    return ( 
+    <div ClassName="body-container">
       <div className = "main"> 
       <FavouriteAnimal
       animalInput = {animalInput}
       onAnimalInputChange = {onAnimalInputChange}
       onStepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
-      /> </div>
+      /></div>
+      <div ClassName="progress"><ProgressBar
+      bgcolor="#86E5D1" 
+      progress='30'  
+      height={50}/></div>
+      </div>
     )
   } else if (step === 5) {
     return (
+      <div ClassName="body-container">
       <div className = "main"> 
       <FavouriteColour 
       colourInput = {colourInput}
       onColourInputChange = {onColourInputChange}
       onStepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
-      /> </div>
+      /></div>
+      <div ClassName="progress"><ProgressBar
+      bgcolor="#86E5D1" 
+      progress='45'  
+      height={50}/></div>
+    </div>
     )
   } else if (step === 6) {
     return (
+      <div ClassName="body-container">
       <div className="main"> 
       <AeroplaneQuestion 
       aeroplaneInput = {aeroplaneInput}
@@ -107,9 +131,15 @@ import SellotapeQuestion from './SellotapeQuestion'
       onStepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div>
+      <div ClassName="progress"><ProgressBar
+      bgcolor="#86E5D1" 
+      progress='60'  
+      height={50}/></div>
+      </div>
     )
   } else if (step === 7) {
     return (
+      <div ClassName="body-container">
       <div className = "main"> 
       <OlderQuestion 
       olderInput = {olderInput}
@@ -117,9 +147,15 @@ import SellotapeQuestion from './SellotapeQuestion'
       onStepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div>
+      <div ClassName="progress"><ProgressBar
+      bgcolor="#86E5D1" 
+      progress='75'  
+      height={50}/></div>
+      </div>
     )
   } else if (step === 8) {
     return (
+      <div ClassName="body-container">
       <div className = "main"> 
       <SellotapeQuestion 
       sellotapeInput = {sellotapeInput}
@@ -127,20 +163,31 @@ import SellotapeQuestion from './SellotapeQuestion'
       onStepChange = {onStepChange}
       onStepMinusChange = {onStepMinusChange}
       /></div>
+      <div ClassName="progress"><ProgressBar
+      bgcolor="#86E5D1" 
+      progress='90'  
+      height={50}/></div>
+      </div>
     )
-} else if (step === 9) {
-  return (
-    <div className = "main"> 
-    <Overview
-    nameInput = {nameInput}
-    locationInput ={ locationInput}
-    animalInput = {animalInput}
-    colourInput = {colourInput}
-    aeroplaneInput = {aeroplaneInput}
-    olderInput = {olderInput}
-    sellotapeInput = {sellotapeInput}
-    /></div>
-  )
+  } else if (step === 9) {
+    return (
+      <div ClassName="body-container">
+      <div className = "main"> 
+      <Overview
+      nameInput = {nameInput}
+      locationInput ={ locationInput}
+      animalInput = {animalInput}
+      colourInput = {colourInput}
+      aeroplaneInput = {aeroplaneInput}
+      olderInput = {olderInput}
+      sellotapeInput = {sellotapeInput}
+      /></div>
+      <div ClassName="progress"><ProgressBar
+      bgcolor="#86E5D1" 
+      progress='100'  
+      height={50}/></div>
+      </div>
+    )
+  }
+ 
 }
- }
-export default Form

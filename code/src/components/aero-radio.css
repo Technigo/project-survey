@@ -1,4 +1,4 @@
-/*radio styling - might go in a separate css file*/
+/* Styles radio buttons in aeroplane questioo*/
 .radio {
     border-radius: 5px;
     font-family: helvetica;
@@ -6,7 +6,7 @@
     color: #808080;
   }
   .radioColumn {
-    display:flex;
+    display: flex;
     flex-direction: column;
   }
   
