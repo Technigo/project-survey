@@ -1,3 +1,10 @@
 .summary {
-  background: antiquewhite;
+  display: grid;
+  margin-top: 3em;
+  height: fit-content;
+  /* margin-top: 3.8em; */
+}
+
+.italic {
+  font-style: italic;
 }

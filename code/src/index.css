@@ -2,14 +2,16 @@ html,
 body,
 #root {
   height: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
 }
 
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
+  /* -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  box-sizing: border-box; */
 }
 
 body {
@@ -74,6 +76,7 @@ code {
   animation: bouncy 5s infinite linear;
   position: relative;
 }
+
 @keyframes bouncy {
   0% {
     top: 0em;

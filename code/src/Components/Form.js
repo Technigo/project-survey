@@ -43,6 +43,10 @@ export const Form = () => {
   const handleShowOverview = () => {
     setShowOverview(true);
   };
+  const onRestartChange = () => {
+    setStep(step === 1);
+    setShowOverview(false);
+  };
 
   // Version 1
   return (
@@ -58,6 +62,7 @@ export const Form = () => {
           willDoInput={willDoInput}
           blockers={blockers}
           blockersDescription={blockersDescription}
+          onRestartChange={onRestartChange}
         />
       ) : (
         <div>

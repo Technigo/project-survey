@@ -21,7 +21,6 @@ const FifthQuestion = ({
         </button>
       );
     }
-    console.log('HANDLE', handleShowOverview);
   };
 
   return (
