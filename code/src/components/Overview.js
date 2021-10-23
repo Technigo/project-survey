@@ -1,12 +1,19 @@
 import React from 'react';
 
-const Overview = ({ nameInput, surnameInput }) => {
+import { ReactComponent as MyDecorline } from "../assets/decorline.svg";
+
+const Overview = ({ nameInput, experience, mood, gratitudeOne, gratitudeTwo, gratitudeThree }) => {
 	return (
-		<section>
-			<h2>My values from form :</h2>
-			<p>Name : {nameInput}</p>
-			<p>Surname : {surnameInput}</p>
-		</section>
+		<>
+			<p>Summary of todays reflections</p>
+			<div className="summaryQuote">
+				<MyDecorline />
+				<p>This day was {experience}.<br/>Right now I feel {mood}.<br/>I'm grateful for {gratitudeOne}, {gratitudeTwo} and {gratitudeThree}.</p>
+				<MyDecorline />
+			</div>
+			<p>Thank you for practicing gratitude here today.</p>
+			<p>Hope you see you soon again, {nameInput}!</p>
+		</>
 	);
 };
 
