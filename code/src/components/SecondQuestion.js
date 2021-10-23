@@ -1,8 +1,13 @@
 import React from 'react';
 
-const SecondQuestion = ({ seatInput, onSeatChange, onStepChange }) => {
+const SecondQuestion = ({
+	seatInput,
+	onSeatChange,
+	onStepChange,
+	onMinusStepChange,
+}) => {
 	return (
-		<form className="form-container2" tabIndex="1">
+		<form className="form-container2" tabIndex="2">
 			<label>
 				<h1>Pick your seat </h1>
 			</label>
@@ -26,14 +31,18 @@ const SecondQuestion = ({ seatInput, onSeatChange, onStepChange }) => {
 				<option value="14">14</option>
 				<option value="15">15</option>
 			</select>
-
-			<button
-				className="button"
-				disabled={seatInput === ''} // to make sure you are not allowing button to be pressed if input is empty.
-				onClick={onStepChange}
-			>
-				Next Question
-			</button>
+			<div className="button-box">
+				<button className="button" onClick={onMinusStepChange}>
+					Previous
+				</button>
+				<button
+					className="button"
+					disabled={seatInput === ''}
+					onClick={onStepChange}
+				>
+					Next
+				</button>
+			</div>
 		</form>
 	);
 };

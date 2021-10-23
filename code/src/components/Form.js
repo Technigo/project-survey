@@ -6,21 +6,22 @@ import ThirdQuestion from './ThirdQuestion';
 import FourthQuestion from './FourthQuestion';
 import FifthQuestion from './FifthQuestion';
 import Overview from './Overview';
+import Date from './Date';
+import IntroPage from './IntroPage';
 
 const Form = () => {
 	const [movie, setMovie] = useState('A Nightmare on Elm Street'); //state property storing the movie.
 	const [seat, setSeat] = useState('1'); //state property storing the seat.
-	const [ticketInput, setTicket] = useState('');
-	const [snack, setSnack] = useState('popcorn');
-	const [nameInput, setNameInput] = useState('');
+	const [ticketInput, setTicket] = useState(''); //state property storing the ticket.
+	const [snack, setSnack] = useState('popcorn'); //state property storing the snack.
+	const [nameInput, setNameInput] = useState(''); //state property storing the name.
+	const [date, setDate] = useState(''); //state property storing the date.
 	const [step, setStep] = useState(1); //state property storing the current question.
 
-	// A custom/separate variable that pass the function name
 	const onMovieChange = (movie) => {
 		setMovie(movie);
 	};
 
-	// A custom/separate function that pass the function surname
 	const onSeatInputChange = (seat) => {
 		setSeat(seat);
 	};
@@ -37,59 +38,80 @@ const Form = () => {
 		setNameInput(event.target.value);
 	};
 
-	//A custom/separate function that keep track of the current question
+	const onDateInputChange = (event) => {
+		setDate(event.target.value);
+	};
+
 	const onStepChange = () => {
 		setStep(step + 1);
 	};
 
+	const onMinusStepChange = () => {
+		setStep(step - 1);
+	};
+
 	return (
 		<div>
-			{step === 1 && (
+			{step === 1 && <IntroPage onStepChange={onStepChange} />}
+
+			{step === 2 && (
 				<FirstQuestion
 					movie={movie}
 					onMovieChange={onMovieChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-			{step === 2 && (
+			{step === 3 && (
 				<SecondQuestion
 					seat={seat}
 					onSeatChange={onSeatInputChange}
 					onStepChange={onStepChange}
+					onMinusStepChange={onMinusStepChange}
 				/>
 			)}
 
-			{step === 3 && (
+			{step === 4 && (
 				<ThirdQuestion
 					ticketInput={ticketInput}
 					onTicketInputChange={onTicketInputChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-
-			{step === 4 && (
-				<FourthQuestion
-					snack={snack}
-					onSnackChange={onSnackChange}
-					onStepChange={onStepChange}
-				/>
-			)}
-
 			{step === 5 && (
-				<FifthQuestion
-					nameInput={nameInput}
-					onNameInputChange={onNameInputChange}
+				<Date
+					date={date}
+					onDateInputChange={onDateInputChange}
 					onStepChange={onStepChange}
+					onMinusStepChange={onMinusStepChange}
 				/>
 			)}
 
 			{step === 6 && (
+				<FourthQuestion
+					snack={snack}
+					onSnackChange={onSnackChange}
+					onStepChange={onStepChange}
+					onMinusStepChange={onMinusStepChange}
+				/>
+			)}
+
+			{step === 7 && (
+				<FifthQuestion
+					nameInput={nameInput}
+					onNameInputChange={onNameInputChange}
+					onStepChange={onStepChange}
+					onMinusStepChange={onMinusStepChange}
+				/>
+			)}
+
+			{step === 8 && (
 				<Overview
 					movie={movie}
 					seat={seat}
 					ticketInput={ticketInput}
 					snack={snack}
 					nameInput={nameInput}
+					date={date}
 				/>
 			)}
 		</div>

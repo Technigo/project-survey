@@ -2,7 +2,12 @@ import React from 'react';
 
 const ticketTypes = ['Adult', 'Student', 'Pensioner'];
 
-const ThirdQuestion = ({ ticketInput, onTicketInputChange, onStepChange }) => {
+const ThirdQuestion = ({
+	ticketInput,
+	onTicketInputChange,
+	onStepChange,
+	onMinusStepChange,
+}) => {
 	return (
 		<form className="form-container3" tabIndex="3">
 			<h1>Ticket Types</h1>
@@ -22,13 +27,19 @@ const ThirdQuestion = ({ ticketInput, onTicketInputChange, onStepChange }) => {
 					</label>
 				)
 			)}
-			<button
-				disabled={ticketInput === ''}
-				className="button"
-				onClick={onStepChange}
-			>
-				Next Question
-			</button>
+
+			<div className="button-box">
+				<button className="button" onClick={onMinusStepChange}>
+					Previous
+				</button>
+				<button
+					className="button"
+					disabled={ticketInput === ''}
+					onClick={onStepChange}
+				>
+					Next
+				</button>
+			</div>
 		</form>
 	);
 };

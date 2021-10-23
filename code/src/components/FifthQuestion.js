@@ -1,10 +1,15 @@
 import React from 'react';
 
-const FifthQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+const FifthQuestion = ({
+	nameInput,
+	onNameInputChange,
+	onStepChange,
+	onMinusStepChange,
+}) => {
 	// const { nameInput, onNameInputChange } = props;
 
 	return (
-		<form className="form-container5" tabIndex="5">
+		<form className="form-container5" tabIndex="6">
 			<label htmlFor="nameInput">
 				<h1>Type your name</h1>
 			</label>
@@ -14,13 +19,19 @@ const FifthQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 				value={nameInput}
 				onChange={onNameInputChange}
 			/>
-			<button
-				className="button"
-				disabled={nameInput === ''} // if input is empty user can't proceed.
-				onClick={onStepChange}
-			>
-				Check Out
-			</button>
+
+			<div className="button-box">
+				<button className="button" onClick={onMinusStepChange}>
+					Previous
+				</button>
+				<button
+					className="button"
+					disabled={nameInput === ''}
+					onClick={onStepChange}
+				>
+					Check Out
+				</button>
+			</div>
 		</form>
 	);
 };

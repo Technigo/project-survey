@@ -3,9 +3,9 @@ import React from 'react';
 const FirstQuestion = ({ movie, onMovieChange, onStepChange }) => {
 	//const { nameInput, onNameInputChange } = props; // Object destructuring, to extract properties from objects and bind them to variables
 	return (
-		<form className="form-container1" tabIndex="0">
+		<form className="form-container1" tabIndex="1">
 			<label>
-				<h1> Pick your scary movie ! </h1>
+				<h1> Pick your movie</h1>
 			</label>
 
 			<select
@@ -23,7 +23,7 @@ const FirstQuestion = ({ movie, onMovieChange, onStepChange }) => {
 			</select>
 
 			<button className="button" onClick={onStepChange}>
-				Next Question
+				Next
 			</button>
 		</form>
 	);

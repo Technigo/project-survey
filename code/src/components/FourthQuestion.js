@@ -1,9 +1,14 @@
 import React from 'react';
 
-const FourthQuestion = ({ snack, onSnackChange, onStepChange }) => {
+const FourthQuestion = ({
+	snack,
+	onSnackChange,
+	onStepChange,
+	onMinusStepChange,
+}) => {
 	//const { nameInput, onNameInputChange } = props; // Object destructuring, to extract properties from objects and bind them to variables
 	return (
-		<form className="form-container4" tabIndex="4">
+		<form className="form-container4" tabIndex="5">
 			<label>
 				<h1>Pick your snack!</h1>
 			</label>
@@ -17,9 +22,14 @@ const FourthQuestion = ({ snack, onSnackChange, onStepChange }) => {
 				<option value="Twizzlers">Twizzlers</option>
 			</select>
 
-			<button className="button" onClick={onStepChange}>
-				Next Question
-			</button>
+			<div className="button-box">
+				<button className="button" onClick={onMinusStepChange}>
+					Previous
+				</button>
+				<button className="button" onClick={onStepChange}>
+					Next
+				</button>
+			</div>
 		</form>
 	);
 };
