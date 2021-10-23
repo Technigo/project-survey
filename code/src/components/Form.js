@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Introduction from './Introduction';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
@@ -36,21 +37,23 @@ const Form = () => {
 	// veiw 1
 	return (
 		<div>
-			{step === 1 && (
+			{step === 1 && <Introduction onStepChange={onStepChange} />}
+
+			{step === 2 && (
 				<FirstQuestion
 					nameInput={nameInput}
 					onNameInputChange={onNameInputChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-			{step === 2 && (
+			{step === 3 && (
 				<SecondQuestion
 					surnameInput={surnameInput}
 					onSurnameInputChange={onSurnameInputChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-			{step === 3 && (
+			{step === 4 && (
 				<ThirdQuestion
 					happiness={happiness}
 					onHappinessChange={onHappinessChange}
@@ -58,14 +61,14 @@ const Form = () => {
 				/>
 			)}
 
-			{step === 4 && (
+			{step === 5 && (
 				<FourthQuestion
 					flavour={flavour}
 					onFlavourChange={onFlavourChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-			{step === 5 && (
+			{step === 6 && (
 				<Overview
 					nameInput={nameInput}
 					surnameInput={surnameInput}
