@@ -7,6 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* The background is to make it similar to the color of a post it note */
   background: -webkit-linear-gradient(
     -45deg,
     #ffff88 81%,
@@ -85,6 +86,8 @@ h2 {
   text-align: center;
 }
 
+/* Styling for different form inputs */
+
 input:focus,
 select:focus {
   outline: none;
@@ -110,7 +113,7 @@ select {
   padding: 4px;
   font-family: "Roboto", sans-serif;
   font-weight: 700;
-  border: 2px solid #515053;
+  border: 2px solid black;
   border-radius: 6px;
   font-size: 16px;
 }
@@ -124,6 +127,7 @@ select {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .radiobutton-label {
@@ -132,6 +136,57 @@ select {
   text-align: center;
   padding: 15px;
 }
+
+.radiobutton-label-wrapper > [type="radio"] {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 100%;
+  width: 100%;
+  bottom: 0;
+}
+
+.checked {
+  position: absolute;
+  height: 12.5px;
+  width: 12.5px;
+  background-color: white;
+  border-radius: 50%;
+  bottom: 0;
+}
+
+.radiobutton-label-wrapper > [type="radio"] ~ .checked {
+  background-color: white;
+  border: 1px solid black;
+}
+
+.radiobutton-label-wrapper > [type="radio"]:checked ~ .checked {
+  background-color: black;
+  border: 1px solid black;
+}
+
+.checked:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.radiobutton-label-wrapper > [type="radio"]:checked ~ .checked:after {
+  display: block;
+}
+
+.radiobutton-label-wrapper .checked:after {
+  bottom: 4px;
+  right: 4px;
+  top: 4px;
+  left: 4px;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* Summary page */
 
 .summary-section {
   width: 70%;
@@ -147,6 +202,8 @@ select {
 .summary-text-input {
   text-align: left;
 }
+
+/* Media queries */
 
 @media (min-width: 992px) {
   body {

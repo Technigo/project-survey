@@ -25,6 +25,7 @@ const ThirdQuestion = ({
               onChange={onRadioButtonInputChange}
               checked={radioButtonInput === "not at all well"}
             />
+            <span className="checked"></span>
           </div>
 
           <div className="radiobutton-label-wrapper">
@@ -40,6 +41,7 @@ const ThirdQuestion = ({
               onChange={onRadioButtonInputChange}
               checked={radioButtonInput === "not so well"}
             />
+            <span className="checked"></span>
           </div>
 
           <div className="radiobutton-label-wrapper">
@@ -55,6 +57,7 @@ const ThirdQuestion = ({
               onChange={onRadioButtonInputChange}
               checked={radioButtonInput === "somewhat well"}
             />
+            <span className="checked"></span>
           </div>
 
           <div className="radiobutton-label-wrapper">
@@ -70,6 +73,7 @@ const ThirdQuestion = ({
               onChange={onRadioButtonInputChange}
               checked={radioButtonInput === "very well"}
             />
+            <span className="checked"></span>
           </div>
 
           <div className="radiobutton-label-wrapper">
@@ -85,6 +89,7 @@ const ThirdQuestion = ({
               onChange={onRadioButtonInputChange}
               checked={radioButtonInput === "extremely well"}
             />
+            <span className="checked"></span>
           </div>
         </div>
         <button disabled={radioButtonInput === ""} onClick={onStepChange}>
