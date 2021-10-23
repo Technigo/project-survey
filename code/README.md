@@ -1,19 +1,22 @@
-# Technigo React Starter App
+# String Quartet Booking App
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+A simple form to book an imaginary string quartet for your next event. It's made with React JS.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## Features
 
-## Usage
+- Use of React components and states
+- Radio buttons
+- Drop-down menu
+- Date picker
+- Responsive
+- Follows accessibility standards
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Challenges and Lessons Learned
 
-Alternatively, if you don't want a new git repo on your account;
+- The use of props was tricky. Missing them in just one place caused bugs that weren't easy to backtrace. This was the origin of the malfunction of radio buttons. It got fixed as soon as I placed the missing prop in the right place.
+- Mapping through both radio button and drop down menu options was also a challenge. I solved it by manually writing the component with all the options, and then "translating" it to its map version.
+- The most difficult part was the drop down menu, since JSX doesn't allow for such a broad implementation of logic as I was used to with vanilla Javascript. But I managed to solved it by using switch.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## View it live
+
+Deployed version: https://string-quartet-booking.netlify.app/
