@@ -1,13 +1,11 @@
 # Survey form with React
+The goal for this project was to build a survey form with React. A survey form of some sort, that consists of at least 3 questions and a summary.
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+## What I learnt
+During this project I learnt about React state and controlled forms. 
+I also continued practicing how to structure React components and write JSX.
+A big part of this project was the styling. Styling forms are always a fun challenge - the radiobuttons and rangeslider was a bit tricky.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://christmas-survey-kim.netlify.app/
