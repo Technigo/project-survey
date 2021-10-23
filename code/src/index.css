@@ -163,7 +163,7 @@ ul {
     width: 40%;
   }
   form {
-    margin: 3% 25%;
+    margin: 1% 25%;
   }
 
   .short-text-form {
@@ -182,13 +182,20 @@ ul {
 
   .Summary {
     font-size: 20px;
+    margin: 5% 25%;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  form {
+    margin: 3% 25%;
   }
 }
 
 @media only screen and (min-width: 2560px) {
   form {
     font-size: 40px;
-    margin-top: 10%;
+    margin: 5% 25%;
   }
 
   .short-text-form {
