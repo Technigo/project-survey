@@ -3,7 +3,7 @@ import React from "react";
 export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
-			<button aria-label="Previous question" onClick={previousQuestion}>
+			<button className="back-btn" aria-label="Previous question" onClick={previousQuestion}>
 				<span class="fas fa-arrow-left"></span>
 			</button>
 			<form className="form-container">
@@ -19,7 +19,7 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 				</select>
 			</form>
 			{streamingInput !== "" && (
-				<button aria-label="Next question" onClick={nextQuestion}>
+				<button className="next-btn" aria-label="Next question" onClick={nextQuestion}>
 					<span aria-hidden="true">Next</span>
 				</button>
 			)}

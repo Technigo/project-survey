@@ -11,15 +11,15 @@ export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion, step
 					</label>
 					{/* prettier-ignore */}
 					<input
-         id="nameInput"
-         type="text"
-         value={nameInput}
-         onChange={onNameInputChange}
-        />
+         		id="nameInput"
+         		type="text"
+         		value={nameInput}
+         		onChange={onNameInputChange}
+        	/>
 				</div>
 			</form>
 			{nameInput !== "" && (
-				<button aria-label="Next question" onClick={nextQuestion}>
+				<button className="next-btn" aria-label="Next question" onClick={nextQuestion}>
 					<span aria-hidden="true">Next</span>
 				</button>
 			)}

@@ -5,7 +5,7 @@ const genresGroup = ["Drama", "Romance", "International", "Adventure", "Feelgood
 export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
-			<button aria-label="Previous question" onClick={previousQuestion}>
+			<button className="back-btn" aria-label="Previous question" onClick={previousQuestion}>
 				<span class="fas fa-arrow-left"></span>
 			</button>
 			<form className="form-container" onSubmit={nextQuestion}>
@@ -16,18 +16,18 @@ export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion,
 						<label key={genres} htmlFor={genres}>
 							{/* prettier-ignore */}
 							<input
-            	id={genres}
-            	type="radio"
-            	value={genres}
-            	onChange={onGenresInputChange}
-            	checked={genres === genresInput}
-          	/>
+            		id={genres}
+            		type="radio"
+            		value={genres}
+            		onChange={onGenresInputChange}
+            		checked={genres === genresInput}
+          		/>
 							{genres}
 						</label>
 					</div>
 				))}
 				{genresInput !== "" && (
-					<button aria-label="Submit answers" type="submit">
+					<button className="submit-btn" aria-label="Submit answers" type="submit">
 						<span aria-hidden="true">Submit</span>
 					</button>
 				)}
