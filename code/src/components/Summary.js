@@ -33,7 +33,7 @@ const Summary = ({
               return <p className='Music-style'> Rock/Metal</p>;
             case 'Hip Hop':
               return <p className='Music-style'> Hip Hop</p>;
-            case 'Other':
+            default:
               return <p className='Music-style'> Other</p>;
           }
         })()}
