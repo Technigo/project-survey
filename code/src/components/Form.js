@@ -13,7 +13,7 @@ const Form = () => {
   const [arenaChoice, setArenaChoice] = useState('');
   const [seatChoice, setSeatChoice] = useState('');
   const [tickets, setTickets] = useState('');
-  const [step, setStep] = useState(0);
+  const [step, setStep] = useState(1);
 
   const onGenreChoiceSet = (event) => {
     setGenreChoice(event.target.value);
@@ -49,8 +49,8 @@ const Form = () => {
 
   return (
     <div className="mainContainer">
-      {step === 0 && <Greeting onStepChange={onStepChange} />}
-      {step === 1 && (
+      {step === 1 && <Greeting onStepChange={onStepChange} />}
+      {step === 2 && (
         <FirstQuestion
           arenaChoice={arenaChoice}
           onArenaChoiceSet={onArenaChoiceSet}
@@ -60,7 +60,7 @@ const Form = () => {
           tickets={tickets}
         />
       )}
-      {step === 2 && (
+      {step === 3 && (
         <SecondQuestion
           genreChoice={genreChoice}
           onGenreChoiceSet={onGenreChoiceSet}
@@ -68,7 +68,7 @@ const Form = () => {
           onStepGoBack={onStepGoBack}
         />
       )}
-      {step === 3 && (
+      {step === 4 && (
         <ThirdQuestion
           bandChoice={bandChoice}
           onBandChoiceSet={onBandChoiceSet}
@@ -77,7 +77,7 @@ const Form = () => {
           genreChoice={genreChoice}
         />
       )}
-      {step === 4 && (
+      {step === 5 && (
         <FourthQuestion
           seatChoice={seatChoice}
           onSeatChoiceSet={onSeatChoiceSet}
@@ -85,7 +85,7 @@ const Form = () => {
           onStepGoBack={onStepGoBack}
         />
       )}
-      {step === 5 && (
+      {step === 6 && (
         <Overview
           arenaChoice={arenaChoice}
           bandChoice={bandChoice}

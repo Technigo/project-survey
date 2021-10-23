@@ -7,10 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url('images/background_intro.jpg');
   background-repeat: no-repeat;
-  background-size: 100% 100%;
+  background-size: cover;
   background-position: center;
   height:100vh;
-  
+  width:100vw;
 }
 
 code {
@@ -36,10 +36,10 @@ p {
   margin-top:10px !important;
   margin:0 auto;
   text-align: center;
+  background:white;
 }
 
 .greeting, .formContainer {
-  background:white;
   padding:40px 20px;
   word-wrap: normal;
 }
@@ -62,9 +62,41 @@ p {
 .venue-choice {
   display:flex;
   align-items: center;
+  align-content: center;
   padding:5px;
 }
 
 .venue-choice label {
   padding:2px 12px;
+}
+
+@media only screen and (min-width:599px) {
+
+  h1 {
+    font-size: 34px;
+  }
+  
+  h2 {
+    font-size: 28px;
+  }
+  
+  p {
+    font-size: 16px;
+  }
+  
+  .mainContainer {
+    width:80%;
+    max-width: 1200px;
+    height:80%;
+    min-width:500px;
+    margin-top:100px !important;
+    margin:0 auto;
+    text-align: center;
+  }
+
+  .formContainer {
+    max-width: 60%;
+    margin:0 auto;
+  }
+
 }

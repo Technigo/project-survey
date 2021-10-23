@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SecondQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange, onStepGoBack }) => {
+const SecondQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange, onStepGoBack, step }) => {
   return (
     <form className="formContainer">
       <label htmlFor="genre-select">

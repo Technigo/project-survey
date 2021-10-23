@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This app has been made with React by Linnea Isebrink.
+It's a short survey for a free concert ticket giveaway. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+To make this applikation I used HTML, CSS and React. For me it felt kind of easy once I got the hang of how to use React. I really like coding with components and using state. This project was really fun to do!
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+You can view the project live here: https://alisebrink-survey-react.netlify.app/

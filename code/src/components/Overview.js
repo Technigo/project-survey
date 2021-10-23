@@ -7,7 +7,7 @@ const Overview = ({
   arenaChoice,
   tickets,
   onStepGoBack,
-  goBackToStart,
+  goBackToStart, step
 }) => {
   return (
     <form className="formContainer">
@@ -19,13 +19,14 @@ const Overview = ({
       <p>You chose this seat: {seatChoice}</p>
       <p>Great! We will send you your tickets! Have fun!</p>
       <div className="buttonContainer">
-        <button className="button" onClick={goBackToStart}>
-          Go back to start
-        </button>
         <button className="button" onClick={onStepGoBack}>
           Previous question
         </button>
+        <button className="button" onClick={goBackToStart}>
+          Go back to start
+        </button>
       </div>
+      <p>Please send us your email so we can get you the tickets!</p>
     </form>
   );
 };

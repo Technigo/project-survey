@@ -8,7 +8,7 @@ const venues = [
   'Larger outside venue',
 ];
 
-const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountChoiceSet, onStepGoBack }) => {
+const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountChoiceSet, onStepGoBack, step }) => {
   return (
     <form className="formContainer">
       <h1>What kind of venue would you like to be in?</h1>
@@ -16,7 +16,7 @@ const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountCh
         (
           venue //iterating through each venue available
         ) => (
-          <div className="venue-choice">
+          <div key={venue} className="venue-choice">
             <input
               value={venue}
               onChange={onArenaChoiceSet}
@@ -24,7 +24,7 @@ const FirstQuestion = ({ arenaChoice, onArenaChoiceSet, onStepChange, onAmountCh
               type="radio"
               id={venue}
             />
-            <label htmlFor={venue} key={venue}>{venue}</label>
+            <label htmlFor={venue} >{venue}</label>
           </div>
         )
       )}

@@ -6,7 +6,7 @@ import Rap from './Rap';
 import Songwriter from './Songwriter';
 import Electric from './Electric';
 
-const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange, onStepGoBack }) => {
+const ThirdQuestion = ({ bandChoice, onBandChoiceSet, genreChoice, onStepChange, onStepGoBack, step }) => {
   if (genreChoice === 'Heavy Metal') {
     return (
       <form  className="formContainer">
