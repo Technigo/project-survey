@@ -36,6 +36,7 @@ select {
   justify-content: center;
   align-items: center;
   margin-top: 30px;
+  margin-bottom: 30px;
   align-self: center;
   justify-self: center;
 }
@@ -44,6 +45,7 @@ select {
   z-index: 0;
   width: 90vw;
   height: calc(100vh - 60px);
+  height: calc(100vh - 60px - env(safe-area-inset-bottom));
   display: flex;
   flex-direction: column;
   align-items: center;
