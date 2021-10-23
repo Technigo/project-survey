@@ -10,10 +10,11 @@ const MusicStyleQuestion = ({
   return (
     <form className='short-text-form'>
       <p>What kind of music would you like us to perform?</p>
-      <select value={musicInput} onChange={onMusicInputChange}>
-        {/* <option value='Classical'>Classical</option>
-        <option value='Pop'>Pop</option>
-        <option value='Other'>Other</option> */}
+      <select
+        className='dropdown'
+        value={musicInput}
+        onChange={onMusicInputChange}
+      >
         {musicStyles.map((musicStyle) => (
           <option
             key={musicStyle}

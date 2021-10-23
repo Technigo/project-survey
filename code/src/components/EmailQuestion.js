@@ -7,6 +7,7 @@ const EmailQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
         We'll send you a quotation via email. What's your address?
       </label>
       <input
+        className='input-box'
         id='emailInput'
         type='email'
         value={emailInput}

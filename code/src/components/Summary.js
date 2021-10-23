@@ -6,6 +6,7 @@ const Summary = ({
   eventInput,
   musicInput,
   dateInput,
+  onRestartChange,
 }) => {
   return (
     <section class='Summary'>
@@ -38,6 +39,7 @@ const Summary = ({
         })()}
       </span>
       <p>Date: {dateInput.replace('T', ' ')}</p>
+      <button onClick={onRestartChange}>Restart</button>
     </section>
   );
 };

@@ -40,6 +40,10 @@ const Form = () => {
     setStep(step + 1);
   };
 
+  const onRestartChange = () => {
+    setStep(step - 5);
+  };
+
   return (
     <div>
       {step === 1 && (
@@ -84,6 +88,7 @@ const Form = () => {
           dateInput={dateInput}
           nameInput={nameInput}
           emailInput={emailInput}
+          onRestartChange={onRestartChange}
         />
       )}
     </div>

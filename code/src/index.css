@@ -1,29 +1,24 @@
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif; */
-  font-family: 'Mulish';
+  font-family: -apple-system, BlinkMacSystemFont, 'Mulish', 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #2b2e5c;
   color: #fff;
 }
 
-/*PALETTE 
+/* ----------------------------------------------- */
+/*                COLOR PALETTE                    */
+/* ----------------------------------------------- */
 
-79.9% #2b2e5c Blue
-8.4% #dc4873 Pink
-4.0% #150b1c Black
-2.4% #7a3362 Violet
-2.0% #8c8999 Grey
-1.3% #d60939 Red
-0.7% #f4c32c Yellow
-0.7% #636feb Blue
-0.3% #0d2f7b Blue
-0.2% #d3711b Orange
-
-*/
+:root {
+  --base: #fff;
+  --primary: #2b2e5c;
+  --secondary: #dc4873;
+  --tertiary: #aa6f7f;
+}
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
@@ -31,9 +26,9 @@ code {
 }
 
 form {
-  background: #fff;
-  color: #2b2e5c;
-  margin: 10%;
+  background: var(--base);
+  color: var(--primary);
+  margin: 20% 10%;
   padding: 5%;
   text-align: center;
   position: relative;
@@ -46,8 +41,8 @@ form {
 }
 
 .Summary {
-  background: #fff;
-  color: #2b2e5c;
+  background: var(--base);
+  color: var(--primary);
   margin: 10%;
   padding: 5%;
   text-align: center;
@@ -65,8 +60,8 @@ form {
 }
 
 button {
-  background: #dc4873;
-  color: #fff;
+  background: var(--secondary);
+  color: var(--base);
   font-weight: 600;
   font-size: 16px;
   width: 80%;
@@ -80,8 +75,40 @@ button {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
 }
 
+.dropdown {
+  padding: 5%;
+  margin: 2%;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
+.date-picker {
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  padding: 2%;
+  margin: 8%;
+}
+
+.input-box {
+  border-radius: 12px;
+  display: block;
+  font-size: 16px;
+  padding: 2%;
+  margin: 8% auto;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+}
+
 button:hover {
-  background: #aa6f7f;
+  background: var(--tertiary);
 }
 
 .eventTypeOptions {
@@ -98,4 +125,95 @@ ul {
   display: inline-block;
   padding: 0;
   margin: 0;
+}
+
+/* ----------------------------------------------- */
+/*                MEDIA QUERIES                    */
+/* ----------------------------------------------- */
+
+@media only screen and (min-width: 768px) {
+  form {
+    font-size: 25px;
+    margin-top: 5%;
+  }
+
+  .short-text-form {
+    margin: 30% 20%;
+  }
+
+  button {
+    margin: 1%;
+  }
+
+  .date-picker {
+    font-size: 16px;
+  }
+  .dropdown {
+    margin: 3%;
+  }
+
+  ul {
+    padding: 0;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  button {
+    margin: 5%;
+    width: 40%;
+  }
+  form {
+    margin: 3% 25%;
+  }
+
+  .short-text-form {
+    margin: 10% 20%;
+  }
+
+  .dropdown {
+    padding: 2%;
+    margin: 0 40%;
+    font-size: 16px;
+  }
+
+  .date-picker {
+    font-size: 20px;
+  }
+
+  .Summary {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (min-width: 2560px) {
+  form {
+    font-size: 40px;
+    margin-top: 10%;
+  }
+
+  .short-text-form {
+    margin: 10% 25%;
+  }
+
+  button {
+    padding: 5%;
+    font-size: 35px;
+    width: 50%;
+  }
+
+  .dropdown {
+    font-size: 35px;
+  }
+
+  .date-picker {
+    font-size: 30px;
+  }
+
+  .input-box {
+    font-size: 30px;
+  }
+
+  .Summary {
+    font-size: 40px;
+  }
 }

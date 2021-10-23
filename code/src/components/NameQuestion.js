@@ -5,6 +5,7 @@ const NameQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
     <form className='short-text-form'>
       <label htmlFor='nameInput'>What's your name?</label>
       <input
+        className='input-box'
         id='nameInput'
         type='text'
         value={nameInput}

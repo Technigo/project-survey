@@ -5,6 +5,7 @@ const DateQuestion = ({ dateInput, onDateInputChange, onStepChange }) => {
     <form className='short-text-form'>
       <label htmlFor='dateInput'>When is the event taking place?</label>
       <input
+        className='date-picker'
         id='dateInput'
         type='datetime-local'
         value={dateInput}
