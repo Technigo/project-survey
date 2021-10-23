@@ -23,7 +23,9 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        <label htmlFor="sound">Sound quality</label>
+        <label className="instructions" htmlFor="sound">
+          Sound quality
+        </label>
       </div>
       <div className="form-group">
         <input
@@ -40,7 +42,9 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        <label htmlFor="ergonomic"> Ergonomic design </label>
+        <label className="instructions" htmlFor="ergonomic">
+          Ergonomic design
+        </label>
       </div>
       <div className="form-group">
         <input
@@ -56,7 +60,9 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        <label htmlFor="affordability">Affordability</label>
+        <label className="instructions" htmlFor="affordability">
+          Affordability
+        </label>
       </div>
       <div className="form-group">
         <input
@@ -72,7 +78,9 @@ export const QuestionEight = ({ features, featuresOthers, onFeaturesChange, onFe
             });
           }}
         />
-        <label htmlFor="other"> Other</label>
+        <label className="instructions" htmlFor="other">
+          Other
+        </label>
       </div>
       {features.other && (
         <div>

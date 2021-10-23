@@ -47,3 +47,9 @@
 .form-group input:checked + label::before {
   border: 1px solid var(--highlight);
 }
+
+@media (min-width: 768px) {
+  .form-group input:checked + label:after {
+    top: 5px;
+  }
+}

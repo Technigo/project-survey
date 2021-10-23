@@ -15,22 +15,31 @@
   transition: all 0.5s ease;
   position: relative;
   font-size: 16px;
-  color: #747272;
+  color: var(--placeholders);
   height: 30px;
   text-align: left;
+  background: none;
+  border: 2px solid var(--highlight);
 }
 
 .dropdown:hover,
 .custom-input:hover {
   opacity: 1;
+  color: var(--background);
+  background-color: var(--highlight);
   box-shadow: 0 0 5px var(--highlight);
   border: 2px solid var(--highlight);
+}
+
+.custom-input:hover::placeholder {
+  color: var(--background);
 }
 
 .dropdown:focus,
 .custom-input:focus {
   opacity: 1;
-  background-color: #f8f8f8;
+  color: var(--main-text);
+  background: none;
   border: 2px solid var(--highlight);
 }
 
