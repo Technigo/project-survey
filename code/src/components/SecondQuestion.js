@@ -13,7 +13,7 @@ export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion, previ
 				<h2 className="question-heading">What is your age? consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore</h2>
 				{ageGroup.map((age) => (
 					<div className="question-container">
-						<label className="option-text" key={age} htmlFor={age}>
+						<label className="radio-input" key={age} htmlFor={age}>
 							{/* prettier-ignore */}
 							<input
             		className="radio-button"
@@ -28,11 +28,9 @@ export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion, previ
 					</div>
 				))}
 			</form>
-			{ageInput !== "" && (
-				<button className="next-btn" aria-label="Next question" onClick={nextQuestion}>
-					<span aria-hidden="true">Next</span>
-				</button>
-			)}
+			<button className="next-btn" disabled={ageInput === ""} onClick={nextQuestion}>
+				Next
+			</button>
 		</main>
 	);
 };

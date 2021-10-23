@@ -1,6 +1,6 @@
 import React from "react";
 
-const genresGroup = ["Drama", "Romance", "International", "Adventure", "Feelgood", "Fantasy", "Action"];
+const genresGroup = ["Drama", "Romance", "Fantasy", "Action"];
 
 export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
@@ -13,9 +13,10 @@ export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion,
 				<h2 className="question-heading">What genres of TV shows do you prefer?</h2>
 				{genresGroup.map((genres) => (
 					<div className="question-container">
-						<label key={genres} htmlFor={genres}>
+						<label className="radio-input" key={genres} htmlFor={genres}>
 							{/* prettier-ignore */}
 							<input
+								className="radio-button"
             		id={genres}
             		type="radio"
             		value={genres}
@@ -26,11 +27,9 @@ export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion,
 						</label>
 					</div>
 				))}
-				{genresInput !== "" && (
-					<button className="submit-btn" aria-label="Submit answers" type="submit">
-						<span aria-hidden="true">Submit</span>
-					</button>
-				)}
+				<button className="submit-btn" disabled={genresInput === ""} aria-label="Submit answers" type="submit">
+					<span aria-hidden="true">Submit</span>
+				</button>
 			</form>
 		</main>
 	);

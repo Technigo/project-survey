@@ -2,18 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
-	/* border: solid 1px black; */
 }
-
-/* body {
-	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
-	-webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
-}
-
-code {
-	font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
-} */
 
 /* Main content */
 
@@ -33,23 +22,28 @@ code {
 	justify-content: space-between;
 }
 
-.form-container {
+.form-container,
+.overview-container {
 	background-color: #ffffff;
 	width: 100%;
 	border-radius: 10px;
 	padding: 30px 25px;
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 
 /* Buttons */
 
 .back-btn {
 	color: #ffffff;
-	border: solid 2px #ffffff;
+	border: solid 1px #ffffff;
 	background-color: rgba(0, 0, 0, 0);
 	width: 44px;
 	height: 44px;
 	border-radius: 50%;
+}
+
+.back-btn span {
+	font-size: 16px;
 }
 
 .submit-btn,
@@ -62,11 +56,6 @@ code {
 	font-size: 14px;
 	font-weight: 700;
 	line-height: 14px;
-}
-
-.radio-button {
-	margin-top: 20px;
-	margin-right: 10px;
 }
 
 /* Texts */
@@ -85,8 +74,35 @@ code {
 	margin-top: 8px;
 }
 
-.option-text {
+/* Inputs */
+
+.text-input,
+.radio-input,
+.option-input {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 19px;
 }
+
+.radio-button {
+	margin-right: 10px;
+}
+
+.radio-button,
+.text-input,
+.dropdown {
+	margin-top: 20px;
+}
+
+.text-input,
+.dropdown {
+	width: 100%;
+	height: 43px;
+	padding: 0 10px;
+	border: 1px solid #707070;
+	border-radius: 10px;
+}
+
+/* .dropdown {
+	appearance: none;
+} */

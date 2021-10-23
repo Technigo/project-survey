@@ -9,20 +9,26 @@ export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQues
 			<form className="form-container">
 				<p className="question-number">Question {step}</p>
 				<label className="question-heading" htmlFor="streamingInput">
-					Which streaming service do you prefer?
+					<h2 className="question-heading">Which streaming service do you prefer?</h2>
 				</label>
-				<select onChange={onStreamingInputChange} value={streamingInput}>
-					<option value="">Select</option>
-					<option value="Netflix">Netflix</option>
-					<option value="SVT Play">SVT Play</option>
-					<option value="HBO">HBO</option>
+				<select className="dropdown" onChange={onStreamingInputChange} value={streamingInput}>
+					<option className="option-input" value="">
+						Select
+					</option>
+					<option className="option-input" value="Netflix">
+						Netflix
+					</option>
+					<option className="option-input" value="SVT Play">
+						SVT Play
+					</option>
+					<option className="option-input" value="HBO">
+						HBO
+					</option>
 				</select>
 			</form>
-			{streamingInput !== "" && (
-				<button className="next-btn" aria-label="Next question" onClick={nextQuestion}>
-					<span aria-hidden="true">Next</span>
-				</button>
-			)}
+			<button className="next-btn" disabled={streamingInput === ""} onClick={nextQuestion}>
+				Next
+			</button>
 		</main>
 	);
 };
