@@ -61,6 +61,10 @@ const Form = () => {
     setStep(step + 1)
   }
 
+  const onOverview = () => {
+    setStep(1)
+  }
+
   const onFinalQuestion = () => {
     setShowResult(true)
   }
@@ -71,6 +75,8 @@ const Form = () => {
         nameInput={nameInput} 
         surnameInput = {surnameInput}
         flavour = {flavour}
+        selectedBeers = {selectedBeers}
+        onOverview = {onOverview}
       />
       :
       <section className="form-container">
