@@ -87,17 +87,6 @@ input[type="text"]:hover {
   background: rgb(235, 235, 235);
 }
 
-input[type="checkbox"] {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 44px;
-  height: 24px;
-  border-radius: 12px;
-  border: 2px solid black;
-  background: #eee;
-  transition: all 0.4s;
-}
-
 .form-button {
   display: inline-block;
   margin-left: 0.3em;
@@ -141,7 +130,8 @@ input[type="checkbox"] {
   100% { transform: translateY(0) }
 }
 
-@media (min-width: 762px) {
+@media screen and (min-width: 762px),
+       screen and (min-height: 650px) {
   body {
     background-image: url('./assets/background-beer.jpg');
   }

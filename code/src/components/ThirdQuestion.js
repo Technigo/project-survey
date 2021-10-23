@@ -20,59 +20,6 @@ const {handleOnChange, onStepChange, selectedBeers, beer} = props
           </li>
         ))}
       </ul>
-      {/* <label  
-        className="form-label"
-      >
-        <input 
-          id="lager" 
-          type="checkbox" 
-          value="lager"
-          name="beer-type"
-          checked={checkedState[0]} 
-          onChange={() => handleOnChange(0)}
-          className="form-element"
-        />
-          Lager
-      </label>
-
-      <label className="form-label">
-        <input 
-          id="ale" 
-          type="checkbox" 
-          value="ale"
-          name="beer-type"
-          checked={checkedState[1]} 
-          onChange={() => handleOnChange(1)}
-          className="form-element"
-        />
-          Ales (session ale, pale ale, india pale ale etc.)
-      </label>
-
-      <label className="form-label">
-        <input 
-          id="sour" 
-          type="checkbox" 
-          value="sour"
-          name="beer-type"
-          checked={checkedState[2]} 
-          onChange={() => handleOnChange(2)}
-          className="form-element"
-        />
-          Sour beer (spontaneously fermented (ex. lambic) and additional cultures (ex. kettle sour))
-      </label>
-
-      <label className="form-label">
-        <input 
-          id="porter-stout" 
-          type="checkbox"
-          value="porter-stout"
-          name="beer-type"
-          checked={checkedState[3]} 
-          onChange={() => handleOnChange(3)}
-          className="form-element"
-        />
-          Porter and stout
-      </label> */}
 
       <div className="button-container">
         <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
