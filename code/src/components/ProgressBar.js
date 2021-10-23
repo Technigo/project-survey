@@ -2,7 +2,7 @@ import React from 'react'
 
  
 
-const Progress_bar = ({progress}) => {
+const ProgressBar = ({progress}) => {
      
     const Parentdiv = {
 
@@ -40,4 +40,4 @@ const Progress_bar = ({progress}) => {
     )
 }
   
-export default Progress_bar
+export default ProgressBar

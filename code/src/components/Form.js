@@ -6,7 +6,7 @@ import QuestionThree from './QuestionThree'
 import QuestionFour from './QuestionFour'
 import QuestionFive from './QuestionFive'
 import Summery from './Summery'
-import Progress_bar from './Progress_bar'
+import ProgressBar from './ProgressBar'
 
 
 const Form = () => {
@@ -59,7 +59,7 @@ const Form = () => {
         )}
         {step === 1 && (
           <>
-            <Progress_bar
+            <ProgressBar
                 progress={(step / numberOfQuestions) * 100}
             />
             <QuestionOne 
@@ -73,7 +73,7 @@ const Form = () => {
 
         {step === 2 && (
             <>
-            <Progress_bar
+            <ProgressBar
                 progress={(step / numberOfQuestions) * 100}
             />
             <QuestionTwo 
@@ -88,7 +88,7 @@ const Form = () => {
 
         {step === 3 && (
           <>
-            <Progress_bar
+            <ProgressBar
                 progress={(step / numberOfQuestions) * 100}
             />  
             <QuestionThree 
@@ -102,7 +102,7 @@ const Form = () => {
 
         {step === 4 && (
           <>
-            <Progress_bar
+            <ProgressBar
                 progress={(step / numberOfQuestions) * 100}
             /> 
             <QuestionFour 
@@ -116,7 +116,7 @@ const Form = () => {
 
           {step === 5 && (
             <>
-            <Progress_bar
+            <ProgressBar
                 progress={(step / numberOfQuestions) * 100}
             /> 
             <QuestionFive 
