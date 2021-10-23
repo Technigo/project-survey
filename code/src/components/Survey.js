@@ -91,6 +91,7 @@ const Survey = () => {
                 treeInput={treeInput}
                 foodInput={foodInput}
                 movieInput={movieInput}
+                feelingInput={feelingInput}
                 />
            )}
 
