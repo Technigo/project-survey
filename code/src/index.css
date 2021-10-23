@@ -137,7 +137,6 @@ box-shadow: 0 0 15px 3px #C0C5C9;
 display: block;
 margin: 0 auto 50px auto;
 }
-/*image of Violette*/
 
 .container-bubbles img {
   width: 50%;
@@ -215,34 +214,6 @@ border: 4px solid darkgrey;
   border: 1px solid #F9A7C4
 }
 
-/*radio styling - might go in a separate css file*/
-.radio {
-  border-radius: 5px;
-  font-family: helvetica;
-  font-size: 16px;
-  color: #808080;
-}
-.radioColumn {
-  display:flex;
-  flex-direction: column;
-}
-
-.radioRow {
-  display: flex;
-  justify-content: center;
-}
-
-.radiobutton-label {
-  padding: 10px 15px;
-  margin: 0 30px 20px 0;
-  height: 40px;
-  display: block;
-  position: relative;
-
-}
-/*.custom-radio {
-
-}*/
 
 /* Text area*/
 
@@ -256,69 +227,8 @@ border: 4px solid darkgrey;
   margin: 0 0 20px;
   border-radius: 5px;
 }
-/* Overview styling*/
-
-
-.overview-all {
-  display: flex;
-  flex-direction: column;
-}
-.overview {
-  width: 90%;
-  line-height: 20px;
-  min-width: 275px;
-}
-
-.overview p {
-  margin: 6px;
-}
-.overview p span {
-  font-weight: 800;
-}
-
-.thank-you {
-  width: 90%;
-  max-width: 500px;
-  margin: 20px auto;
-  text-align: center;
-  line-height: 2rem;
-}
-.thank-you h1 {
-  font-family: 'Archivo Black';
-  color: #A39161;
-  font-size: 2.5rem;
-  margin: 25px 0;
-}
-
-/*Footer, again, might add oin different component*/
-.footer {
-  width: 100%;
-  height: 150px;
-  border-top: 10px solid yellow;
-  background: white;
-  text-align: center;
-}
-
-.footer-text{
-  width: 90%;
-  max-width: 600px;
-  margin: 40px auto;
-  font-family: 'Nunito';
-  font-weight: 700;
-}
-.footer-text h2 {
-  margin: 20px auto;
-}
-
-.animal img {
-  width: 30%;
-  display: block;
-  margin: 30px auto;
-}
 
 /*media queries*/
-
-@media (min-width: 750px) {}
 
 @media (min-width: 950px) {
 
@@ -330,12 +240,6 @@ border: 4px solid darkgrey;
   .container-bella img, .container-bubbles img {
     width: 30%;
     height: 30%;
-    /*border-radius: 50%;
-    border: 10px solid #86E5D1;
-    max-width: 400px;
-    object-fit: cover;
-    box-shadow: 0 0 15px 3px #C0C5C9;
-    display: block;*/
     margin: 0 50px 0 20px;
     }
 }

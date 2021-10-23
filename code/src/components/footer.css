@@ -1,0 +1,19 @@
+.footer {
+    width: 100%;
+    height: 150px;
+    border-top: 10px solid yellow;
+    background: white;
+    text-align: center;
+  }
+  
+  .footer-text{
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    font-family: 'Nunito';
+    font-weight: 700;
+  }
+  .footer-text h2 {
+    margin: 20px auto;
+  }
+  

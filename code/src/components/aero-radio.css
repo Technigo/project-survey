@@ -1,0 +1,25 @@
+/*radio styling - might go in a separate css file*/
+.radio {
+    border-radius: 5px;
+    font-family: helvetica;
+    font-size: 16px;
+    color: #808080;
+  }
+  .radioColumn {
+    display:flex;
+    flex-direction: column;
+  }
+  
+  .radioRow {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .radiobutton-label {
+    padding: 10px 15px;
+    margin: 0 30px 20px 0;
+    height: 40px;
+    display: block;
+    position: relative;
+  
+  }

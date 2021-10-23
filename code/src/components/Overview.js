@@ -1,5 +1,6 @@
 import React from 'react'
 import AnimalChoices from './AnimalChoices'
+import './overview.css'
 
  export const Overview = ({ nameInput, locationInput, animalInput, colourInput, aeroplaneInput, olderInput, sellotapeInput }) => {
 

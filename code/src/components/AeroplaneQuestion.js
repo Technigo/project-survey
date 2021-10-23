@@ -1,4 +1,5 @@
 import React from 'react'
+import './aero-radio.css'
 
 const AeroplaneQuestion = ({onAeroplaneInputChange, onStepChange, onStepMinusChange}) =>{
 
