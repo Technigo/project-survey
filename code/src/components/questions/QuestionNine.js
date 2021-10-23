@@ -8,13 +8,29 @@ export const QuestionNine = ({ rating, onRatingChange }) => {
   return (
     <form className="radio-container extra-space">
       <div>
-        <h1 className="questions-main-heading">How likely would you recommend our product?</h1>
-        <p className="instructions">Please select a number on a scale from 1 to 10 , where 1 is "Very Unlikely" and 10 is "100% will recommend!"</p>
+        <h1 className="questions-main-heading">Would you recommend our product?</h1>
+        <p className="instructions">
+          <span role="img" aria-label="tick" className="general-tick-color tick-img">
+            ☑️
+          </span>
+          &nbsp;
+          <span role="text" aria-label="instruction">
+            1 - "Very Unlikely"
+          </span>
+          <br />
+          <span role="img" aria-label="tick" className="highlight tick-img">
+            ☑️
+          </span>
+          &nbsp;
+          <span role="text" aria-label="instruction">
+            10 - "100% will recommend!"
+          </span>
+        </p>
       </div>
       <div class="buttons-wrapper">
         <label className="label" htmlFor="one">
           <input className="radio-input" type="radio" value="1" name="one" id="one" checked={rating === "1"} onChange={handleOptionChange} />
-          <span>1</span>{" "}
+          <span>1</span>
         </label>
         <label className="label" htmlFor="two">
           <input className="radio-input" type="radio" value="2" name="two" id="two" checked={rating === "2"} onChange={handleOptionChange} />

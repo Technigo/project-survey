@@ -3,6 +3,15 @@
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  margin: 0;
+}
+
+.confetti-wrapper {
+  display: flex;
+  z-index: 0;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
 }
 
 .summary {
@@ -12,6 +21,8 @@
   flex-direction: column;
   background-color: var(--background);
   color: var(--main-text);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
 }
 
 .thankyou-wrapper,
@@ -22,19 +33,14 @@
 .tick-img {
   height: 8px;
   width: 8px;
+  fill: var(--highlight);
+}
+
+.general-tick-color {
+  color: var(--main-text);
 }
 
 @media (min-width: 768px) {
-  /* .questions-main-heading {
-      font-size: 28px;
-      line-height: 36px;
-    }
-    .instructions {
-      font-size: 18px;
-      align-items: center;
-      justify-content: left;
-      line-height: 20px;
-    } */
   .tick-img {
     height: 12px;
     width: 12px;

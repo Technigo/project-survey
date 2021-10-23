@@ -13,9 +13,9 @@
   text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   margin-top: 20px;
-  width: 150px;
+  width: 180px;
   font-size: 12px;
-  height: 34px;
+  height: 36px;
   padding: 0;
   box-shadow: 0 0 8px var(--main-text);
   border-radius: 4px;

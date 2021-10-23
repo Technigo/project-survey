@@ -4,7 +4,7 @@ import Confetti from "./Confetti";
 export const Summary = ({ rootState }) => {
   return (
     <div className="main-wrapper">
-      <div>
+      <div className="confetti-wrapper">
         <Confetti />
       </div>
       <div className="summary">
