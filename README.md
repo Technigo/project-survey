@@ -1,13 +1,10 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+The aim of project was to learn how implement "useState"-hooks and use form fields in React, as well as how to connect HTML form input to state. I made a survey imitating a cinema check out experience, asking the user to pick movie, seats, dates and snacks. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## The problem
+I enjoyed working and learning about "useState"-hooks, and would like to challenge myself to use more conditional renderings in future projects. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://mt-dotse-scarymovie-survey.netlify.app/
