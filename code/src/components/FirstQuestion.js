@@ -1,9 +1,11 @@
 import React from "react";
 
-export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion, step }) => {
+export const FirstQuestion = ({ nameInput, onNameInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
-			<div className="hidden-element"></div>
+			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
+				<span class="fas fa-arrow-left"></span>
+			</button>
 			<form className="form-container">
 				<div className="question-container">
 					<p className="question-number">Question {step}</p>

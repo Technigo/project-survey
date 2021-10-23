@@ -60,6 +60,15 @@
 
 /* Texts */
 
+.big-heading {
+	color: #ffffff;
+	font-size: 23px;
+	text-align: center;
+	margin: 0 auto 50px auto;
+	width: 200px;
+	line-height: 30px;
+}
+
 .question-number {
 	font-size: 13px;
 	font-weight: 400;

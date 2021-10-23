@@ -4,13 +4,15 @@ import { SecondQuestion } from "./SecondQuestion";
 import { ThirdQuestion } from "./ThirdQuestion";
 import { FourthQuestion } from "./FourthQuestion";
 import { Overview } from "./Overview";
+import { SubmitQuestion } from "./SubmitQuestion";
+import { IntroQuestion } from "./IntroQuestion";
 
 const Form = () => {
 	const [nameInput, setNameInput] = useState("");
 	const [ageInput, setAgeInput] = useState("");
 	const [streamingInput, setStreamingInput] = useState("");
 	const [genresInput, setGenresInput] = useState("");
-	const [step, setStep] = useState(1);
+	const [step, setStep] = useState(0);
 
 	const onNameInputChange = (event) => {
 		setNameInput(event.target.value);
@@ -45,13 +47,21 @@ const Form = () => {
 	// 	}
 	// };
 
-	if (step === 1) {
+	if (step === 0) {
+		// prettier-ignore
+		return (
+	  <IntroQuestion
+			nextQuestion={nextQuestion}
+		/>
+    );
+	} else if (step === 1) {
 		// prettier-ignore
 		return (
     <FirstQuestion
       nameInput={nameInput}
       onNameInputChange={onNameInputChange}
       nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
 			step={step}
     />
     );
@@ -89,6 +99,14 @@ const Form = () => {
 	  />
     );
 	} else if (step === 5) {
+		// prettier-ignore
+		return (
+	  <SubmitQuestion
+			nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
+		/>
+    );
+	} else if (step === 6) {
 		// prettier-ignore
 		return (
 	  <Overview

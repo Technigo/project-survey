@@ -8,7 +8,7 @@ export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion,
 			<button className="back-btn" aria-label="Previous question" onClick={previousQuestion}>
 				<span class="fas fa-arrow-left"></span>
 			</button>
-			<form className="form-container" onSubmit={nextQuestion}>
+			<form className="form-container">
 				<p className="question-number">Question {step}</p>
 				<h2 className="question-heading">What genres of TV shows do you prefer?</h2>
 				{genresGroup.map((genres) => (
@@ -27,10 +27,10 @@ export const FourthQuestion = ({ genresInput, onGenresInputChange, nextQuestion,
 						</label>
 					</div>
 				))}
-				<button className="submit-btn" disabled={genresInput === ""} aria-label="Submit answers" type="submit">
-					<span aria-hidden="true">Submit</span>
-				</button>
 			</form>
+			<button className="next-btn" disabled={genresInput === ""} onClick={nextQuestion}>
+				Next
+			</button>
 		</main>
 	);
 };

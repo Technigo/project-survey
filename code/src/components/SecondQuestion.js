@@ -5,7 +5,7 @@ const ageGroup = ["Under 18", "18+", "65+"];
 export const SecondQuestion = ({ ageInput, onAgeInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
-			<button className="back-btn" aria-label="Previous question" onClick={previousQuestion}>
+			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
 				<span class="fas fa-arrow-left"></span>
 			</button>
 			<form className="form-container">
