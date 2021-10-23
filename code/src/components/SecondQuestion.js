@@ -8,14 +8,18 @@ const SecondQuestion = ({
 	return (
 		<>
 			<form>
-				<label htmlFor="surnameInput">Type your surname</label>
+				<label htmlFor="surnameInput">
+					Whats the best place you've ever been to?
+				</label>
 				<input
 					id="surnameInput"
 					type="text"
 					value={surnameInput}
 					onChange={onSurnameInputChange}
 				/>
-				<button onClick={onStepChange}>See overveiw</button>
+				<button disabled={surnameInput === ''} onClick={onStepChange}>
+					Next question
+				</button>
 			</form>
 		</>
 	);

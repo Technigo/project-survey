@@ -2,11 +2,15 @@ import React, { useState } from 'react';
 
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
+import ThirdQuestion from './ThirdQuestion';
+import FourthQuestion from './FourthQuestion';
 import Overview from './Overview';
 
 const Form = () => {
 	const [nameInput, setNameInput] = useState('');
 	const [surnameInput, setSurnameInput] = useState('');
+	const [happiness, setHappiness] = useState('happy');
+	const [flavour, setFlavour] = useState('');
 	const [step, setStep] = useState(1);
 
 	const onNameInputChange = (event) => {
@@ -15,6 +19,14 @@ const Form = () => {
 
 	const onSurnameInputChange = (event) => {
 		setSurnameInput(event.target.value);
+	};
+
+	const onHappinessChange = (feeling) => {
+		setHappiness(feeling);
+	};
+
+	const onFlavourChange = (flavour) => {
+		setFlavour(flavour);
 	};
 
 	const onStepChange = () => {
@@ -39,7 +51,27 @@ const Form = () => {
 				/>
 			)}
 			{step === 3 && (
-				<Overview ameInput={nameInput} surnameInput={surnameInput} />
+				<ThirdQuestion
+					happiness={happiness}
+					onHappinessChange={onHappinessChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+
+			{step === 4 && (
+				<FourthQuestion
+					flavour={flavour}
+					onFlavourChange={onFlavourChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+			{step === 5 && (
+				<Overview
+					nameInput={nameInput}
+					surnameInput={surnameInput}
+					happiness={happiness}
+					flavour={flavour}
+				/>
 			)}
 		</div>
 	);
