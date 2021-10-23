@@ -78,7 +78,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  /* color: #2f6f7a; */
   color: black;
   font-family: Nunito;
   height: 10em;
@@ -92,6 +91,29 @@ form {
   align-items: center;
   padding-top: 1em;
   font-size: 20px;
+
+  -webkit-animation-name: falling;
+  animation-name: falling;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+  opacity: 1;
+}
+
+@keyframes falling {
+  0% {
+    opacity: -1;
+    transform: translateY(-10em);
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(0em);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 input {
