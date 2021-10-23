@@ -10,12 +10,13 @@ export const App = () => {
   const [state, setState] = useState(initialState)
   const [step, setStep] = useState(1)
   const [steps, setSteps] = useState([1])
-  const [color, setColor] = useState('white')
+  const [colorTheme, setColorTheme] = useState('white')
 
   const handleChange = (e, nextQuestion, title, number, label, questionId, validated) => {
     const { id, value } = e.target
-    if (title.includes('color')) setColor(value)
+    if (title.includes('color')) setColorTheme(value.toLowerCase())
 
+    // building answers array
     let newAnswers = [...state.answers]
     if (state.answers[number - 1]) {
       newAnswers[number - 1] = { ...newAnswers[number - 1], [id]: { value: value, label: label } }
@@ -62,7 +63,7 @@ export const App = () => {
   }
 
   return (
-    <div style={{ backgroundColor: color }}>
+    <div className={colorTheme}>
       <div className={'container'}>
         <FormWrapper
           step={step}
