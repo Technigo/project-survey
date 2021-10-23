@@ -1,4 +1,5 @@
 import React from 'react';
+import './fifthQuestion.css';
 
 const FifthQuestion = ({
   blockers,
@@ -6,8 +7,6 @@ const FifthQuestion = ({
   onStepChange,
   handleShowOverview,
 }) => {
-  // tänker att handleShowOverview är en egen function som visar den sista sidan.
-
   const renderButton = () => {
     if (blockers === 'yes') {
       return (
@@ -26,25 +25,29 @@ const FifthQuestion = ({
   };
 
   return (
-    <form className="form">
+    <form className="form radio">
       Do you have any blockers?
       <label>
-        <input
-          type="radio"
-          value="yes"
-          onChange={() => onBlockersChange('yes')}
-          checked={blockers === 'yes'}
-        />
-        Yes
+        <span className="radio-input">
+          <input
+            type="radio"
+            value="yes"
+            onChange={() => onBlockersChange('yes')}
+            checked={blockers === 'yes'}
+          />
+          <span className="radio-text">Yes</span>
+        </span>
       </label>
       <label>
-        <input
-          type="radio"
-          value="no"
-          onChange={() => onBlockersChange('no')}
-          checked={blockers === 'no'}
-        />
-        No
+        <span className="radio-input">
+          <input
+            type="radio"
+            value="no"
+            onChange={() => onBlockersChange('no')}
+            checked={blockers === 'no'}
+          />
+          <span className="radio-text">No</span>
+        </span>
       </label>
       {renderButton()}
     </form>

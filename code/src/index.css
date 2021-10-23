@@ -46,7 +46,7 @@ code {
 
 .form {
   display: grid;
-  margin-top: 6em;
+  margin-top: 3.8em;
 }
 
 .button {
@@ -60,6 +60,8 @@ code {
   color: black;
   text-align: center;
   transition: all 0.15s;
+  justify-self: center;
+  width: max-content;
   /* ADDING appearance none etc*/
 }
 
@@ -98,14 +100,22 @@ code {
 
 label {
   font-weight: bold;
-  display: block;
+  display: contents;
   width: 100%;
-  float: left;
+  /* float: left; */
   margin-bottom: 0.5em;
+  justify-self: center;
+  width: min-content;
+}
+
+input,
+textarea {
+  margin-top: 0.5em;
 }
 
 input[type='text'],
-select {
+select,
+textarea {
   padding: 0.6em;
 }
 

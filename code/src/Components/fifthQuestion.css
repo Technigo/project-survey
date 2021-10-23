@@ -1,0 +1,18 @@
+.radio {
+  display: grid;
+  /* grid-template-columns: min-content auto; */
+  grid-gap: 0.5em;
+}
+
+.radio-input {
+  display: flex;
+  align-items: baseline;
+}
+
+.radio-text {
+  margin: 0 0 0 0.5em;
+}
+/* 
+.radio label {
+  line-height: -2;
+} */

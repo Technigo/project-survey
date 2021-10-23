@@ -15,7 +15,7 @@ const SixthQuestion = ({
           cols="30"
           value={blockersDescription}
           onChange={onBlockersDescriptionChange}
-          placeholder="Add a description so we easily can help you remove the blocker"
+          placeholder="So we easily can help you remove the blocker"
         />
       </label>
       <button
