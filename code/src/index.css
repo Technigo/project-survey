@@ -132,7 +132,7 @@ select {
 
 .radiobutton-label {
   font-size: 30px;
-  margin: 15px 0 10px 0;
+  margin-bottom: 10px;
   text-align: center;
   padding: 15px;
 }
