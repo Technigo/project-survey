@@ -13,7 +13,7 @@ const FourthQuestion = ({
 }) => {
 	return (
 		<>
-			<p>Find three things you are grateful for today.</p>
+			<p>Find three things<br/>that you are grateful for today.</p>
 			<form className="formContainer">
 				<div className="three-things">
 					<label value="gratitudeInputOne">Number 1</label>
@@ -44,6 +44,8 @@ const FourthQuestion = ({
 				</div>
 				<button 
 					disabled={gratitudeThree === ''}
+					disabled={gratitudeTwo === ''}
+					disabled={gratitudeOne === ''}
 					onClick={onStepChange} >
 					<MyArrow className="arrow pulse" />
 				</button>
