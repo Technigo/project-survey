@@ -37,9 +37,11 @@ const {nameInput, onNameInputChange,surnameInput, onSurnameInputChange, onStepCh
         disabled={nameInput === '' || surnameInput === ''}
         onClick={onStepChange}
         type="submit"
-        className="form-button">
+        className="form-button bouncy">
           Next question
       </button>
+      {(nameInput === '' || surnameInput === '') && 
+      <p className="error">You need to fill in your name and e-mail</p>}
     </form>
   )
 }

@@ -19,7 +19,7 @@ const SecondQuestion = (props) => {
         />
 
         <div className="button-container">
-          <button onClick={() => onStepChange("back")} className="form-button">Go back</button>
+          <button onClick={() => onStepChange("back")} className="form-button bouncy">Go back</button>
           <button 
             disabled={surnameInput === ''}
             onClick={() => onStepChange("next")}
