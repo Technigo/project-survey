@@ -2,6 +2,8 @@
   --background: black;
   --main-text: white;
   --highlight: #ccff02;
+  --validations: #ff0075;
+  --placeholders: rgb(172, 172, 172);
   --bg: #e3e4e8;
   --fg: #17181c;
   --transDur: 0.1s;
@@ -55,6 +57,8 @@ select {
   font-weight: 500;
   border-radius: 12px;
   box-shadow: 0 0 10px var(--highlight);
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
 .interaction {
@@ -81,6 +85,8 @@ select {
   justify-content: left;
   line-height: 24px;
   margin-top: 0;
+  margin-bottom: 20px;
+  margin-top: 10px;
 }
 
 .instructions {
@@ -97,21 +103,27 @@ select {
 .validations {
   font-weight: lighter;
   font-family: Helvetica, sans-serif;
+  color: var(--validations);
+  font-size: 14px;
+}
+::placeholder {
+  color: var(--placeholders);
 }
 
 @media (min-width: 768px) {
   .questions-main-heading {
-    /* font-size: 28px;
-    line-height: 36px; */
-    font-size: 36px;
-    line-height: 46px;
+    font-size: 26px;
+    line-height: 36px;
+    margin-bottom: 30px;
+    margin-top: 20px;
   }
   .instructions {
-    /* font-size: 18px; */
-    font-size: 28px;
+    font-size: 20px;
     align-items: center;
     justify-content: left;
-    /* line-height: 20px; */
-    line-height: 33px;
+    line-height: 20px;
+  }
+  .validations {
+    font-size: 16px;
   }
 }

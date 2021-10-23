@@ -9,7 +9,7 @@ export const QuestionNine = ({ rating, onRatingChange }) => {
     <form className="radio-container extra-space">
       <div>
         <h1 className="questions-main-heading">Would you recommend our product?</h1>
-        <p className="instructions">
+        <div className="instructions instruction-wrapper">
           <span role="img" aria-label="tick" className="general-tick-color tick-img">
             ☑️
           </span>
@@ -21,7 +21,7 @@ export const QuestionNine = ({ rating, onRatingChange }) => {
           </span>
           &nbsp;
           <span>10 - "100% will recommend!"</span>
-        </p>
+        </div>
       </div>
       <div class="buttons-wrapper">
         <label className="label" htmlFor="one">

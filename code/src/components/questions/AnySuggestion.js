@@ -3,7 +3,7 @@ import React from "react";
 export const AnySuggestion = ({ suggestionInput, onSuggestionInputChange }) => {
   return (
     <form className="select-container">
-      <h1 className="questions-main-heading">Any suggestions on how we can improve?</h1>
+      <h1 className="questions-main-heading">How we can improve?</h1>
       <input
         className="custom-input"
         type="text"

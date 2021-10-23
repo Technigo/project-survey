@@ -15,7 +15,7 @@
   transition: all 0.5s ease;
   position: relative;
   font-size: 16px;
-  color: #474747;
+  color: #747272;
   height: 30px;
   text-align: left;
 }
@@ -34,14 +34,21 @@
   border: 2px solid var(--highlight);
 }
 
+.client-details-wrapper {
+  margin-bottom: 14px;
+}
+
 @media (min-width: 768px) {
   .select-container {
-    width: 500px;
+    width: 480px;
   }
   .dropdown,
   .custom-input {
-    width: 500px;
+    width: 480px;
     font-size: 18px;
     height: 40px;
+  }
+  .client-details-wrapper {
+    margin-bottom: 20px;
   }
 }

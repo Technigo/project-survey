@@ -96,8 +96,8 @@ export const Wizard = ({ toFeedback, setValueInRootState, rootState }) => {
         <div className="current-step">
           <SwitchFunction rootState={rootState} setValueInRootState={setValueInRootState} currentStep={currentStep} />
         </div>
-        <div>
-          <button className="btn interaction finish " onClick={toNextStep}>
+        <div className="button-wrapper">
+          <button className="btn interaction" onClick={toNextStep}>
             {currentStep === "questionTen" ? "Finish" : "Continue"}
           </button>
         </div>

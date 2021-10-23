@@ -6,6 +6,7 @@
 .radio-input {
   color: var(--fg);
   font: 1em/1.5 Helvetica, sans-serif;
+  margin-top: 10px;
 }
 
 .radio-container,
@@ -76,6 +77,13 @@
   width: 310px;
 }
 
+.instruction-wrapper {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  line-height: 30px;
+}
+
 @media (min-width: 768px) {
   .radio-container,
   .label {
@@ -83,5 +91,14 @@
   }
   .extra-space {
     width: 600px;
+  }
+  .radio-input {
+    margin-top: 20px;
+  }
+  .instruction-wrapper {
+    margin-top: 40px;
+    margin-bottom: 40px;
+    margin-left: auto;
+    line-height: 46px;
   }
 }

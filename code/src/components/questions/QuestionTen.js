@@ -4,13 +4,12 @@ export const QuestionTen = ({ percent, name, email, onNameChange, onEmailChange,
   return (
     <form className="select-container">
       <div>
-        <h1 className="questions-main-heading  ">Thank you for your feedback!</h1>
+        <h1 className="questions-main-heading  ">
+          Would you like <span className="highlight">{percent}%</span> off your next purchase?
+        </h1>
       </div>
-      <h2 className="instructions ">
-        Would you like <span className="highlight">{percent}%</span> off your next purchase?
-      </h2>
-      <div>
-        <label htmlFor="nameInput">
+      <div className="client-details-wrapper">
+        <label className="instructions" htmlFor="nameInput">
           Name:
           <input
             className="custom-input"
@@ -22,15 +21,12 @@ export const QuestionTen = ({ percent, name, email, onNameChange, onEmailChange,
             placeholder="Jane Frost"
             required
           />
-          {nameInvalid && (
-            <span className="validations" style={{ color: "var(--highlight)" }}>
-              Required field: alphabets only
-            </span>
-          )}
+          {nameInvalid && <span className="validations">Required field: alphabets only</span>}
         </label>
-        <br />
-        <label htmlFor="emailInput">
-          Contact email:
+      </div>
+      <div className="client-details-wrapper">
+        <label className="instructions" htmlFor="emailInput">
+          Email:
           <input
             className="custom-input"
             type="email"
@@ -41,11 +37,7 @@ export const QuestionTen = ({ percent, name, email, onNameChange, onEmailChange,
             required
             placeholder="yourEmail@gmail.com"
           />
-          {emailInvalid && (
-            <span className="validations" style={{ color: "var(--highlight)" }}>
-              Required field: should include '@'.{" "}
-            </span>
-          )}
+          {emailInvalid && <span className="validations">Required field: should include '@'.</span>}
         </label>
       </div>
     </form>
