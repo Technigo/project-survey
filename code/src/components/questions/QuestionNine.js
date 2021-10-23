@@ -14,17 +14,13 @@ export const QuestionNine = ({ rating, onRatingChange }) => {
             ☑️
           </span>
           &nbsp;
-          <span role="text" aria-label="instruction">
-            1 - "Very Unlikely"
-          </span>
+          <span>1 - "Very Unlikely"</span>
           <br />
           <span role="img" aria-label="tick" className="highlight tick-img">
             ☑️
           </span>
           &nbsp;
-          <span role="text" aria-label="instruction">
-            10 - "100% will recommend!"
-          </span>
+          <span>10 - "100% will recommend!"</span>
         </p>
       </div>
       <div class="buttons-wrapper">
