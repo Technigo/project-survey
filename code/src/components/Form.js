@@ -48,7 +48,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <div className="mainContainer">
       {step === 0 && <Greeting onStepChange={onStepChange} />}
       {step === 1 && (
         <FirstQuestion

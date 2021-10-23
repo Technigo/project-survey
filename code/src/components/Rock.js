@@ -2,7 +2,7 @@ import React from 'react';
 
 const Rock = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) => {
   return (
-    <form>
+    <>
       <label htmlFor="band-select">
         <h1>These bands are available with your chosen genre</h1>
         <p>You chose {genreChoice}</p>
@@ -24,7 +24,7 @@ const Rock = ({ bandChoice, onBandChoiceSet, onStepChange, genreChoice }) => {
         <option value="Mötley Crüe">Mötley Crüe</option>
         <option value="Mustasch">Mustasch</option>
       </select>
-    </form>
+    </>
   );
 };
 

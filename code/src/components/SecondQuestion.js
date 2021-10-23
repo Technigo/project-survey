@@ -2,7 +2,7 @@ import React from 'react';
 
 const SecondQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange, onStepGoBack }) => {
   return (
-    <form>
+    <form className="formContainer">
       <label htmlFor="genre-select">
         <h1>Please pick which genre you prefer:</h1>
       </label>
@@ -23,15 +23,16 @@ const SecondQuestion = ({ genreChoice, onGenreChoiceSet, onStepChange, onStepGoB
         <option value="Singer/Songwriter">Singer/Songwriter</option>
         <option value="Electronic dance music">Electronic dance music</option>
       </select>
-      <button className="button" onClick={onStepGoBack}>
-        Previous question
-      </button>
-      <button className="button" onClick={onStepChange}>
-        Next Question
-      </button>
+      <div className="buttonContainer">
+        <button className="button" onClick={onStepGoBack}>
+          Previous question
+        </button>
+        <button className="button" onClick={onStepChange}>
+          Next Question
+        </button>
+      </div>
     </form>
   );
 };
 
 export default SecondQuestion;
-

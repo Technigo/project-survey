@@ -1,13 +1,70 @@
+@import url('https://fonts.googleapis.com/css2?family=Zen+Kurenaido&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Zen Kurenaido', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url('images/background_intro.jpg');
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+  height:100vh;
+  
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-size: 26px;
+}
+
+h2 {
+  font-size: 22px;
+}
+
+p {
+  font-size: 12px;
+}
+
+.mainContainer {
+  width:calc(100% - 20px);
+  height:calc(100% - 20px);
+  margin-top:10px !important;
+  margin:0 auto;
+  text-align: center;
+}
+
+.greeting, .formContainer {
+  background:white;
+  padding:40px 20px;
+  word-wrap: normal;
+}
+
+.button-container {
+  display:flex;
+}
+
+.button {
+  background:black;
+  color:white;
+  border:none;
+  padding:10px 20px;
+  border-radius: 2px;
+  cursor: pointer;
+  margin:0 auto;
+  margin:20px 5px;
+}
+
+.venue-choice {
+  display:flex;
+  align-items: center;
+  padding:5px;
+}
+
+.venue-choice label {
+  padding:2px 12px;
 }

@@ -8,7 +8,7 @@ const FourthQuestion = ({
   onStepChange, onStepGoBack
 }) => {
   return (
-    <form className="seat-choice">
+    <form className="formContainer">
       <h1>Where would you like to sit?</h1>
       <ul>
       {seats.map(
@@ -28,12 +28,14 @@ const FourthQuestion = ({
         )
       )}
       </ul>
-      <button className="button" onClick={onStepGoBack}>
-        Previous question
-      </button>
-      <button className="button" onClick={onStepChange}>
-        See overview
-      </button>
+      <div className="buttonContainer">
+        <button className="button" onClick={onStepGoBack}>
+          Previous question
+        </button>
+        <button className="button" onClick={onStepChange}>
+          Next Question
+        </button>
+      </div>
     </form>
   );
 };
