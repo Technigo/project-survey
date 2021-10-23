@@ -2,7 +2,7 @@ import React from 'react';
 
 const NameQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   return (
-    <form>
+    <form className='short-text-form'>
       <label htmlFor='nameInput'>What's your name?</label>
       <input
         id='nameInput'

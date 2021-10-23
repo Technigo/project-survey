@@ -8,7 +8,7 @@ const Summary = ({
   dateInput,
 }) => {
   return (
-    <section>
+    <section class='Summary'>
       <h2>Here's your booking info, {nameInput}: </h2>
       <p>Name: {nameInput}</p>
       <p>Email: {emailInput}</p>
@@ -17,19 +17,26 @@ const Summary = ({
         {eventInput === 'Wedding/Anniversary'
           ? ' Wedding/Anniversary'
           : ' Birthday'
-          ? ' Other'
+          ? ' Birthday'
           : ' Other'}
       </p>
-      <p>
-        Music Style:
-        {musicInput === 'Pop'
-          ? ' Pop'
-          : ' Classical'
-          ? ' Rock/Metal'
-          : ' Hip Hop'
-          ? ' Other'
-          : ' Other'}
-      </p>
+      <span>
+        Music Style:{' '}
+        {(() => {
+          switch (musicInput) {
+            case 'Classical':
+              return <p className='Music-style'> Classical</p>;
+            case 'Pop':
+              return <p className='Music-style'> Pop</p>;
+            case 'Rock/Metal':
+              return <p className='Music-style'> Rock/Metal</p>;
+            case 'Hip Hop':
+              return <p className='Music-style'> Hip Hop</p>;
+            case 'Other':
+              return <p className='Music-style'> Other</p>;
+          }
+        })()}
+      </span>
       <p>Date: {dateInput.replace('T', ' ')}</p>
     </section>
   );

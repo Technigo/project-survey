@@ -10,7 +10,7 @@ import Summary from './Summary';
 
 const Form = () => {
   const [eventInput, setEventInput] = useState('Wedding/Anniversary');
-  const [musicInput, setMusicInput] = useState('Pop');
+  const [musicInput, setMusicInput] = useState('Classical');
   const [dateInput, setDateInput] = useState('');
   const [nameInput, setNameInput] = useState('');
   const [emailInput, setEmailInput] = useState('');
@@ -20,7 +20,7 @@ const Form = () => {
     setEventInput(event.target.value);
   };
 
-  const onMusicStyleChange = (event) => {
+  const onMusicInputChange = (event) => {
     setMusicInput(event.target.value);
   };
 
@@ -51,8 +51,8 @@ const Form = () => {
       )}
       {step === 2 && (
         <MusicStyleQuestion
-          eventInput={musicInput}
-          onEventInputChange={onMusicStyleChange}
+          musicInput={musicInput}
+          onMusicInputChange={onMusicInputChange}
           onStepChange={onStepChange}
         />
       )}
@@ -79,6 +79,8 @@ const Form = () => {
       )}
       {step === 6 && (
         <Summary
+          eventInput={eventInput}
+          musicInput={musicInput}
           dateInput={dateInput}
           nameInput={nameInput}
           emailInput={emailInput}

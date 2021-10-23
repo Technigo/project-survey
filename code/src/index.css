@@ -1,13 +1,101 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif; */
+  font-family: 'Mulish';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: #2b2e5c;
+  color: #fff;
 }
 
+/*PALETTE 
+
+79.9% #2b2e5c Blue
+8.4% #dc4873 Pink
+4.0% #150b1c Black
+2.4% #7a3362 Violet
+2.0% #8c8999 Grey
+1.3% #d60939 Red
+0.7% #f4c32c Yellow
+0.7% #636feb Blue
+0.3% #0d2f7b Blue
+0.2% #d3711b Orange
+
+*/
+
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+form {
+  background: #fff;
+  color: #2b2e5c;
+  margin: 10%;
+  padding: 5%;
+  text-align: center;
+  position: relative;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.Summary {
+  background: #fff;
+  color: #2b2e5c;
+  margin: 10%;
+  padding: 5%;
+  text-align: center;
+  position: relative;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.short-text-form {
+  margin: 60% 10%;
+}
+
+button {
+  background: #dc4873;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  width: 80%;
+  margin: 5% 10%;
+  padding: 3%;
+  border-radius: 12px;
+  -webkit-border-radius: 12px;
+  -moz-border-radius: 12px;
+  -ms-border-radius: 12px;
+  -o-border-radius: 12px;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+
+button:hover {
+  background: #aa6f7f;
+}
+
+.eventTypeOptions {
+  margin: 3% 0;
+}
+
+ul {
+  list-style: none;
+  padding: 2% 0;
+  text-align: center;
+}
+
+.Music-style {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
 }

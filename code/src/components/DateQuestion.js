@@ -2,7 +2,7 @@ import React from 'react';
 
 const DateQuestion = ({ dateInput, onDateInputChange, onStepChange }) => {
   return (
-    <form>
+    <form className='short-text-form'>
       <label htmlFor='dateInput'>When is the event taking place?</label>
       <input
         id='dateInput'

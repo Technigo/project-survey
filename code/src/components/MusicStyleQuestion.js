@@ -1,23 +1,26 @@
 import React from 'react';
 
-const musicStyles = ['Pop', 'Classical', 'Rock/Metal', 'Hip Hop', 'Other'];
+const musicStyles = ['Classical', 'Pop', 'Rock/Metal', 'Hip Hop', 'Other'];
 
 const MusicStyleQuestion = ({
   musicInput,
-  onMusicStyleChange,
+  onMusicInputChange,
   onStepChange,
 }) => {
   return (
-    <form>
+    <form className='short-text-form'>
       <p>What kind of music would you like us to perform?</p>
-      <select>
-        {musicStyles.map((musicStyl) => (
+      <select value={musicInput} onChange={onMusicInputChange}>
+        {/* <option value='Classical'>Classical</option>
+        <option value='Pop'>Pop</option>
+        <option value='Other'>Other</option> */}
+        {musicStyles.map((musicStyle) => (
           <option
-            key={musicStyl}
-            value={musicInput}
-            onChange={onMusicStyleChange}
+            key={musicStyle}
+            value={musicStyle}
+            onChange={onMusicInputChange}
           >
-            {musicStyl}
+            {musicStyle}
           </option>
         ))}
       </select>
