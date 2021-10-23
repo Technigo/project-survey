@@ -20,14 +20,32 @@ label {
   width: 100%;
 }
 
+.button-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
 button {
   background-color: #1ea742;
   color: white;
   font-size: 20px;
   border-radius: 5px;
   border: 0px;
-  padding: 20px 40px;
+  padding: 20px 0px;
   margin-top: 40px;
+  width: 65%;
+  text-align: center;
+}
+.welcome-button {
+  background-color: #1ea742;
+  color: white;
+  font-size: 20px;
+  border-radius: 5px;
+  border: 0px;
+  padding: 20px 0px;
+  margin-top: 40px;
+  width: 100%;
+  text-align: center;
 }
 .go-back-button {
   background-color: #ea5929;
@@ -35,8 +53,10 @@ button {
   font-size: 20px;
   border-radius: 5px;
   border: 0px;
-  padding: 20px 40px;
+  padding: 20px 0px;
   margin-top: 40px;
+  width: 30%;
+  text-align: center;
 }
 .go-back-button:hover {
   box-shadow: 3px 3px 10px #494c50;

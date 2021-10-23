@@ -21,7 +21,9 @@ const WelcomePage = ({ onStepChange }) => {
               till en bättre utdelning.
             </p>
           </section>
-          <button onClick={onStepChange}>Starta</button>
+          <button className="welcome-button" onClick={onStepChange}>
+            Starta
+          </button>
         </div>
       </div>
     </>

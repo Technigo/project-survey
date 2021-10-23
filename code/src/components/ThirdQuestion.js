@@ -31,10 +31,12 @@ export const ThirdQuestion = ({
               </select>
             </label>
           </div>
-          <button className="go-back-button" onClick={onStepBackChange}>
-            Tillbaka
-          </button>
-          <button type="submit">Nästa</button>
+          <div className="button-wrapper">
+            <button className="go-back-button" onClick={onStepBackChange}>
+              Tillbaka
+            </button>
+            <button type="submit">Nästa</button>
+          </div>
         </form>
       </div>
     </>
