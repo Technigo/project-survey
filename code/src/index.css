@@ -75,7 +75,7 @@ code {
   margin-top: 10px;
   padding: 10px 0;
   font-size: 20px;
-  color:#fff;
+  color: #fff;
   font-weight: 900;
   font-size: 25px;
   background: #d41919;
@@ -137,21 +137,48 @@ code {
   outline: none;
 }
 
-.next-btn {
+.next-btn,
+.overview-btn {
   margin: 0 auto;
   display: block;
-  width: 40%;
+  width: 200px;
   border-radius: 20px;
-  margin-top: 50px;
   padding: 10px 0;
   font-size: 20px;
   font-weight: 800;
   border-color: rgb(214, 52, 23);
   background-color: #fff;
   color: rgb(214, 52, 23);
+  margin-top: 20px;
 }
 
 .next-btn:hover {
+  transform: scale(1.1, 1.1);
+  background-color: rgb(214, 52, 23);
+  color: #fff;
+}
+
+.overview-btn:hover {
+  transform: scale(1.1, 1.1);
+  background-color: rgb(214, 52, 23);
+  color: #fff;
+}
+
+.previous-btn {
+  margin: 0 auto;
+  display: block;
+  width: 200px;
+  border-radius: 20px;
+  padding: 10px 0;
+  font-size: 20px;
+  font-weight: 800;
+  border-color: rgb(214, 52, 23);
+  color: #fff;
+  background-color: rgb(214, 52, 23);
+  margin-top: 20px;
+  margin-bottom: 50px;
+}
+.previous-btn:hover {
   transform: scale(1.1, 1.1);
   background-color: rgb(214, 52, 23);
   color: #fff;
@@ -167,27 +194,6 @@ code {
   color: #1e676d;
   padding-top: 30px;
   padding-bottom: 5px;
-}
-
-.overview-btn {
-  margin: 0 auto;
-  display: block;
-  width: 200px;
-  margin-bottom: 50px;
-  border-radius: 20px;
-  margin-top: 50px;
-  padding: 10px 0;
-  font-size: 20px;
-  font-weight: 800;
-  border-color: rgb(214, 52, 23);
-  background-color: #fff;
-  color: rgb(214, 52, 23);
-}
-
-.overview-btn:hover {
-  transform: scale(1.1, 1.1);
-  background-color: rgb(214, 52, 23);
-  color: #fff;
 }
 
 /* radioButton section */
@@ -234,7 +240,6 @@ code {
   margin-top: 6px;
   padding-left: 40px;
 }
-
 
 @media (min-width: 768px) {
   .heading-one {

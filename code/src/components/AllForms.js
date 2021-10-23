@@ -23,6 +23,10 @@ const AllForms = (props) => {
     /* Function step*/
     setStep(step + 1);
   };
+  const onStepChangeMinus = () => {
+    /* Function step to go back */
+    setStep(step - 1);
+  };
 
   const onSetArrayAnswer = (event) => {
     /* Function dropdown */
@@ -73,10 +77,16 @@ const AllForms = (props) => {
         trueOrFalse3={trueOrFalse3}
         onSetTrueOrFalse3={onSetTrueOrFalse3}
         onStepChange={onStepChange}
+        onStepChangeMinus={onStepChangeMinus}
       />
     );
   } else if (step === 3) {
-    return <OverviewButton onStepChange={onStepChange} />;
+    return (
+      <OverviewButton
+        onStepChange={onStepChange}
+        onStepChangeMinus={onStepChangeMinus}
+      />
+    );
   } else if (step === 4) {
     return (
       <Overview
@@ -87,6 +97,7 @@ const AllForms = (props) => {
         trueOrFalse={trueOrFalse}
         trueOrFalse2={trueOrFalse2}
         trueOrFalse3={trueOrFalse3}
+        onStepChangeMinus={onStepChangeMinus}
       />
     );
   }

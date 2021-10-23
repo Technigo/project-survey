@@ -65,6 +65,10 @@ const RadioButtons = (props) => {
       <button className="next-btn" onClick={props.onStepChange}>
         Next
       </button>
+
+      <button className="previous-btn" onClick={props.onStepChangeMinus}>
+        Previous
+      </button>
     </section>
   );
 };
