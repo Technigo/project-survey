@@ -1,0 +1,10 @@
+.progress {
+  display: flex;
+  flex-wrap: nowrap;
+  height: 3px;
+}
+
+.bar {
+  height: 100%;
+  background-color: rgb(75, 128, 75);
+}

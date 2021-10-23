@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FormWrapper } from 'components/FormWrapper'
 import { FormSummary } from 'components/FormSummary'
+import { ProgressBar } from 'components/ProgressBar'
 
 import data from 'assets/data.json'
 
@@ -64,6 +65,7 @@ export const App = () => {
 
   return (
     <div className={colorTheme}>
+      <ProgressBar state={state} steps={steps} />
       <div className={'container'}>
         <FormWrapper
           step={step}
