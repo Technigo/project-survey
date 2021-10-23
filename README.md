@@ -7,9 +7,10 @@ I created a React app that, through a form, collects simple data about an indivi
 
 I started by realizing what I would like my app to do any why.
 
-I took help from the live session.
+I took help from the live session to get the base code going.
+I used React with a library of emailjs to generate an email being sent out once the form is complete. This was we are able to save all the data of each newsletter signe.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I hade more time I would change the checkbox styling and connect my app to a database where I would be able to manage my sign ups even better.
 
 ## View it live
 
