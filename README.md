@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Practicing React state and controlled forms by making a Typeform like product. The project consist of 6 questions that need to be answered by users. When the user presses submit, they see a summary of their answers.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The project
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+React, JSX, CSS and HTML.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://kicks-and-giggles.netlify.app/
