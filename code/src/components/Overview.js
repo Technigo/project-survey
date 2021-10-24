@@ -2,13 +2,24 @@ import React from "react";
 
 const Overview = ({ nameInput, secretnameInput, themeInput, lifeInput }) => {
   return (
-    <section>
-      <h2>My values from form: </h2>
-      <p>Name : {nameInput}</p>
-      <p>Hero Name : {secretnameInput}</p>
-      <p>Theme Song : {themeInput}</p>
-      <p>Lifes saved : {lifeInput}</p>
-    </section>
+    <div className="question-container">
+      <section>
+        <h2>You are clearly a hero, here´s your results: </h2>
+        <p>
+          <span className="bold">Name :</span>
+          {nameInput}
+        </p>
+        <p>
+          <span className="bold">Hero Name :</span> {secretnameInput}
+        </p>
+        <p>
+          <span className="bold">Theme Song :</span> {themeInput}
+        </p>
+        <p>
+          <span className="bold">Lifes saved :</span> {lifeInput}
+        </p>
+      </section>
+    </div>
   );
 };
 
