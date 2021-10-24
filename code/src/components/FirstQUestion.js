@@ -5,35 +5,41 @@ const {nameInput, onNameInputChange,emailInput, onEmailInputChange, onStepChange
 
   return (
     <form className="form">
-      <label 
-        htmlFor="nameInput" 
-        className="form-label">
-          Type your name
-      </label>
-      <input 
-        id="nameInput" 
-        type="text" 
-        value={nameInput} 
-        onChange={onNameInputChange} 
-        className="form-element"
-        placeholder="Name"
-      />
+      <div className="inner-container">
+        <label 
+          htmlFor="nameInput" 
+          className="form-label">
+            Type your name
+        </label>
+        <input 
+          id="nameInput" 
+          type="text" 
+          value={nameInput} 
+          onChange={onNameInputChange} 
+          className="form-element"
+          placeholder="Name"
+        />
 
-      <label 
-        htmlFor="emailInput" 
-        className="form-label">
-          Type your e-mail
-      </label>
-      <input 
-        id="emailInput" 
-        type="email" 
-        value={emailInput} 
-        onChange={onEmailInputChange} 
-        className="form-element"
-        placeholder="emailsson@email.com"
-      />
+        {(nameInput === '') && <p className="error">Please fill in your name</p>}
+      </div>
 
-
+      <div className="inner-container">
+        <label 
+          htmlFor="emailInput" 
+          className="form-label">
+            Type your e-mail
+        </label>
+        <input 
+          id="emailInput" 
+          type="email" 
+          value={emailInput} 
+          onChange={onEmailInputChange} 
+          className="form-element"
+          placeholder="emailsson@email.com"
+        />
+        
+        {(emailInput === '') && <p className="error">Please fill in your e-mail</p>}
+      </div>
 
       <button 
         disabled={nameInput === '' || emailInput === ''}
@@ -42,9 +48,6 @@ const {nameInput, onNameInputChange,emailInput, onEmailInputChange, onStepChange
         className="form-button bouncy">
           Next question
       </button>
-
-      {(nameInput === '' || emailInput === '') && 
-      <p className="error">Please fill in {nameInput === '' && 'name'} {(nameInput === ''&&  emailInput === '') && 'and'} {emailInput === '' && 'e-mail'}</p>}
       
     </form>
   )

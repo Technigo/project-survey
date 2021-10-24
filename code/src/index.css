@@ -64,6 +64,19 @@ code {
   transform: translate(-50%, -50%);
 }
 
+.inner-container {
+  width: var(--container-width);
+  margin-bottom: 0.5rem;
+  height: var(--inner-container-height);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.text-summary {
+  width: var(--container-width);
+}
+
 .form {
   background: rgba(255, 255, 255, 0.7);
   border: 0.5em solid rgb(233, 191, 7);
@@ -71,7 +84,7 @@ code {
   border-radius: 1.2rem;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: center;
   align-content: center;
   flex-wrap: wrap;
   justify-content: center;
@@ -79,13 +92,13 @@ code {
 
 .form-label, .form-button {
   font-family: inherit;
-  font-size: var(--font-size-medium); 
   margin-top: 1.2rem;
 }
 
 .form-label {
+  font-size: var(--font-size-big);
   font-weight: 500;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 input[type="text"], input[type="email"] {
@@ -105,11 +118,12 @@ input[type="text"]:hover, input[type="email"]:hover {
 .button-container {
   display: flex;
   justify-content: space-around;
-  width: 15rem;
+  width: 100%;
 }
 
 .form-button {
   display: inline-block;
+  font-size: var(--font-size-medium);
   padding: 0.3rem 0.8rem;
   margin-top: 1.5rem;
   border: 0.16rem solid rgb(0, 0, 0);
@@ -144,11 +158,12 @@ input[type="text"]:hover, input[type="email"]:hover {
   font-size: var(--font-size-small);
   margin-left: 0.3rem;
   margin-top: 0;
+  margin-right: 0;
+  margin-bottom: 0;
 }
 
 .p-text {
   font-size: var(--font-size-medium);
-  width: var(--container-width);
 }
 
 @keyframes bouncy {
@@ -160,9 +175,11 @@ input[type="text"]:hover, input[type="email"]:hover {
 @media (max-width: 761px) {
   :root {
     --container-width: 80%;
-    --container-height: 20em;
+    --container-height: 32em;
+    --inner-container-height: 8rem;
     --font-size-small: 0.7rem;
     --font-size-medium: 1rem;
+    --font-size-big: 1.3rem;
     --font-header: 2.5rem;
     --font-header-underscore: 1.5rem;
     --margin-header: 0.8rem;
@@ -179,9 +196,10 @@ input[type="text"]:hover, input[type="email"]:hover {
   :root {
     --container-width-max: 100rem;
     --container-width: 80%;
-    --container-height: 25rem;
+    --container-height: 35rem;
     --font-size-small: 0.9rem;
     --font-size-medium: 1.1rem;
+    --font-size-big: 1.4rem;
     --font-header: 3rem;
     --font-header-underscore: 1.8rem;
     --margin-header: 1rem;

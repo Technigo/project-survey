@@ -4,9 +4,9 @@ const Overview = (props) => {
   const {nameInput, emailInput, addressInput, selectedBeers, brewery, onOverview} = props
   return (
 
-      <div className="overview"> 
-        <section>
-          <h2>My values</h2>
+      <div className="form"> 
+        <section className="text-summary">
+          <h2>Summary</h2>
           <p>Name: {nameInput}</p>
           <p>E-mail: {emailInput}</p>
           <p>Address: {addressInput}</p>

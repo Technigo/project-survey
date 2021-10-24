@@ -5,19 +5,23 @@ const SecondQuestion = (props) => {
 
   return (
       <form className="form">
-        <label 
-          htmlFor="addressInput" 
-          className="form-label">
-            Type your address
-        </label>
-        <input 
-          id="addressInput" 
-          type="text" 
-          value={addressInput} 
-          onChange={onAddressInputChange} 
-          className="form-element"
-          placeholder="city citycode"
-        />
+        <div className="inner-container">
+          <label 
+            htmlFor="addressInput" 
+            className="form-label">
+              Type your address
+          </label>
+          <input 
+            id="addressInput" 
+            type="text" 
+            value={addressInput} 
+            onChange={onAddressInputChange} 
+            className="form-element"
+            placeholder="city citycode"
+          />        
+          
+          {(addressInput === '') && <p className="error">Please fill in your address</p>}
+        </div>
 
         <div className="button-container">
           <button onClick={() => onStepChange(-1)} className="form-button bouncy">Go back</button>
@@ -28,7 +32,7 @@ const SecondQuestion = (props) => {
               Next question
           </button>
         </div>
-        {(addressInput === '') && <p className="error">Please fill in your address</p>}
+
         
       </form>
   )
