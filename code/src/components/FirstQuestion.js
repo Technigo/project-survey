@@ -4,8 +4,10 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 	return (
 		<section className="containerInfo">
 			<label htmlFor="nameInput">
-				Please type your favorite cake! If you don't like cake-please type in
-				another baked good that is your favorite!
+				<p>
+					Please type your favorite cake! If you don't like cake-please type in
+					another baked good that is your favorite!{' '}
+				</p>
 			</label>
 			<input
 				id="nameInput"

@@ -5,6 +5,7 @@ body {
 		sans-serif;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
+	background-color: #fec5bb;
 }
 
 code {
@@ -13,11 +14,44 @@ code {
 }
 
 .containerInfo {
-	position: absolute;
-	width: 375px;
-	height: 573px;
-
+	/*position: absolute; denna behövs inte*/
+	width: 300px; /* ändrat width och height så det passar mobil*/
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	margin: 20px auto; /* 20px ovan+under, auto vågrätt*/
 	background: #fffefe;
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 	border-radius: 10px;
+	background-color: #fae1dd;
+}
+
+h1,
+p {
+	font-size: 16px;
+	margin: 5px auto;
+	max-width: 200px;
+	padding: 20px auto;
+}
+
+button {
+	width: fit-content;
+	padding: 10px;
+	margin: auto;
+	border-radius: 3px;
+	background-color: #d8e2dc;
+}
+
+@media (min-width: 600px) {
+	.containerInfo {
+		width: 600px;
+		margin: 100px auto;
+	}
+
+	h1,
+	p {
+		font-size: 18px;
+		margin: 10px auto;
+		max-width: 500px;
+	}
 }

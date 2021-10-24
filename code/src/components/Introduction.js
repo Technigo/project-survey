@@ -8,8 +8,8 @@ const Introduction = ({
 	return (
 		<section className="containerInfo">
 			<label htmlFor="IntroductionInput">
-				<h1 className="h1Class">Hello friend!</h1>
-				<h2>A positive suggestion form for you to feel better!</h2>
+				<h2>Hello friend!</h2>
+				<p>A positive suggestion form for you to feel better!</p>
 			</label>
 			<button onClick={onStepChange}>Start here!</button>
 		</section>

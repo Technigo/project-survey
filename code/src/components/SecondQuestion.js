@@ -9,7 +9,7 @@ const SecondQuestion = ({
 		<section className="containerInfo">
 			<form>
 				<label htmlFor="surnameInput">
-					Whats the best place you've ever been to?
+					<p>Whats the best place you've ever been to?</p>
 				</label>
 				<input
 					id="surnameInput"

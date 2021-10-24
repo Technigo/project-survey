@@ -5,7 +5,7 @@ const FourthQuestion = ({ flavour, onFlavourChange, onStepChange }) => {
 		<section className="containerInfo">
 			<form>
 				<label>
-					Pick your popcorn flavour
+					<p>Pick your popcorn flavour</p>
 					<span role="img" aria-label="corn">
 						🌽
 					</span>
