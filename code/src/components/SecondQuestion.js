@@ -26,10 +26,10 @@ const SecondQuestion = ({
 			<p>Good evening {nameInput}!</p>
 			<label value="experience">How have you experienced your day today?</label>
 			<select value={experience} onChange={event => onExperienceChange(event.target.value)}>
-				<option value="" selected disabled>It was...</option>
+				<option value="" defaultValue disabled>It was...</option>
 				{today.map(item => {
 					return (
-						<option id={item} value={item}>{item}</option>
+						<option key={item} value={item}>{item}</option>
 					)
 				})}
 			</select>
