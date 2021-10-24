@@ -20,15 +20,15 @@ const SecondQuestion = (props) => {
         />
 
         <div className="button-container">
-          <button onClick={() => onStepChange("back")} className="form-button bouncy">Go back</button>
+          <button onClick={() => onStepChange(-1)} className="form-button bouncy">Go back</button>
           <button 
             disabled={addressInput === ''}
-            onClick={() => onStepChange("next")}
+            onClick={() => onStepChange(1)}
             className="form-button bouncy">
               Next question
           </button>
         </div>
-        {(addressInput === '') && <p className="error">Please fill in your e-mail</p>}
+        {(addressInput === '') && <p className="error">Please fill in your address</p>}
         
       </form>
   )

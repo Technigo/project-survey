@@ -37,7 +37,7 @@ const {nameInput, onNameInputChange,emailInput, onEmailInputChange, onStepChange
 
       <button 
         disabled={nameInput === '' || emailInput === ''}
-        onClick={onStepChange}
+        onClick={() => onStepChange(1)}
         type="submit"
         className="form-button bouncy">
           Next question

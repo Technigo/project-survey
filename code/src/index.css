@@ -67,7 +67,7 @@ code {
 .form {
   background: rgba(255, 255, 255, 0.7);
   border: 0.5em solid rgb(233, 191, 7);
-  height: 20rem;
+  height: var(--container-height);
   border-radius: 1.2rem;
   display: flex;
   flex-direction: column;
@@ -147,6 +147,10 @@ input[type="text"]:hover, input[type="email"]:hover {
   margin-top: 0;
 }
 
+.p-text {
+  font-size: var(--font-size-medium);
+}
+
 @keyframes bouncy {
   0%   { transform: translateY(0) }
   50%  { transform: translateY(-5px) }
@@ -156,6 +160,7 @@ input[type="text"]:hover, input[type="email"]:hover {
 @media (max-width: 761px) {
   :root {
     --container-width: 80%;
+    --container-height: 20em;
     --font-size-small: 0.7rem;
     --font-size-medium: 1rem;
     --font-header: 2.5rem;
@@ -173,10 +178,17 @@ input[type="text"]:hover, input[type="email"]:hover {
 @media screen and (min-width: 762px) {
   :root {
     --container-width-max: 100rem;
+    --container-width: 80%;
+    --container-height: 25rem;
+    --font-size-small: 0.9rem;
+    --font-size-medium: 1.1rem;
+    --font-header: 3rem;
+    --font-header-underscore: 1.8rem;
+    --margin-header: 1rem;
   }
 }
 
-@media screen and  (min-width: 1094px) {
+@media screen and (min-width: 1094px) {
   body {
     background-image: url('./assets/background-beer-large.jpg');
   }

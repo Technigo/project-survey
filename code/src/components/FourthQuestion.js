@@ -23,7 +23,7 @@ const {brewery, onBreweryChange, onFinalQuestion, onStepChange} = props
       </select>
       
       <div className="button-container">
-      <button onClick={() => onStepChange("back")} className="form-button bouncy">Go back</button>
+      <button onClick={() => onStepChange(-1)} className="form-button bouncy">Go back</button>
         <button onClick={onFinalQuestion} className="form-button bouncy">See overview</button>
       </div>
     </form>

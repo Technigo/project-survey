@@ -22,8 +22,13 @@ const {handleOnChange, onStepChange, selectedBeers, beer} = props
       </ul>
 
       <div className="button-container">
-        <button onClick={() => onStepChange("back")} className="form-button bouncy">Go back</button>
-        <button onClick={() => onStepChange("next")} className="form-button bouncy">Next question</button>
+        <button onClick={() => onStepChange(-1)} className="form-button bouncy">Go back</button>
+        <button onClick={() => (
+          selectedBeers.every((val) => val.checked === false ) ? onStepChange(2) : onStepChange(1)
+          )} 
+          className="form-button bouncy">
+            Next question
+          </button>
       </div>
         
     </form>

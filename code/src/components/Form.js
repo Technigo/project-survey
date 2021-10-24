@@ -3,6 +3,7 @@ import FirstQuestion from './FirstQUestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
+import FifthQuestion from './FifthQuestion'
 import Overview from './Overview'
 
 import { beer } from '../beer.js'
@@ -59,14 +60,16 @@ const Form = () => {
   }
 
   const onStepChange = (motion) => {
-    motion === "back" ? (
-      setStep(step - 1)
-    )
-    :
-    setStep(step + 1)
+    setStep(step + motion)
   }
 
   const onOverview = () => {
+    setShowResult(false)
+    setNameInput('')
+    setEmailInput('')
+    setAddressInput('')
+    setBrewery('')
+    setSelectedBeers(initialState)
     setStep(1)
   }
 
@@ -116,6 +119,12 @@ const Form = () => {
             onBreweryChange={onBreweryChange}
             onStepChange={onStepChange}  
             onFinalQuestion={onFinalQuestion} 
+          />
+        )}
+        {step === 5 && (
+          <FifthQuestion 
+            nameInput={nameInput}
+            onStepChange={onStepChange}
           />
         )}
       </section>
