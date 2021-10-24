@@ -6,8 +6,7 @@ const Overview = ({ nameInput, secretnameInput, themeInput, lifeInput }) => {
       <section>
         <h2>You are clearly a hero, here´s your results: </h2>
         <p>
-          <span className="bold">Name :</span>
-          {nameInput}
+          <span className="bold">Name :</span> {nameInput}
         </p>
         <p>
           <span className="bold">Hero Name :</span> {secretnameInput}
