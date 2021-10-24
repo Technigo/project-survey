@@ -13,6 +13,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         type="text"
         value={nameInput}
         onChange={onNameInputChange}
+        placeholder="Type your ign.."
       />
       <button type="submit" onClick={onStepChange}>
         Next question

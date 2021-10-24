@@ -28,7 +28,7 @@ const Form = () => {
   };
 
   return (
-    <div>
+    <form>
       {step === 1 && (
         <FirstQuestion
           nameInput={nameInput}
@@ -38,15 +38,17 @@ const Form = () => {
       )}
       {step === 2 && (
         <SecondQuestion
-          surname={roleInput}
+          roleInput={roleInput}
           onRoleInputChange={onRoleInputChange}
           onStepChange={onStepChange}
         />
       )}
       {step === 3 && (
         <ThirdQuestion
-          class={classInput}
+          classInput={classInput}
           onClassInputChange={onClassInputChange}
+          roleInput={roleInput}
+          onRoleInputChange={onRoleInputChange}
           onStepChange={onStepChange}
         />
       )}
@@ -55,9 +57,11 @@ const Form = () => {
           nameInput={nameInput}
           roleInput={roleInput}
           classInput={classInput}
+          onRoleInputChange={onRoleInputChange}
+          onClassInputChange={onClassInputChange}
         />
       )}
-    </div>
+    </form>
   );
 };
 

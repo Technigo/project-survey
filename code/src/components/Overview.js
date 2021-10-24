@@ -2,7 +2,7 @@ import React from "react";
 
 const Overview = props => {
   return (
-    <section>
+    <section className="form-container">
       <h2>My values from form :</h2>
       <p>Name : {props.nameInput}</p>
       <p>Role : {props.roleInput}</p>

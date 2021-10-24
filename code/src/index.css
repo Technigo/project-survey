@@ -6,14 +6,26 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin-top: 10%;
-  background: #161616;
+  background-image: url(./images/keyboard.jpg);
+
+  background-size: cover;
+  background-repeat: no-repeat;
   color: #ffffff;
 }
+
+/* html {
+  background-color: #161616;
+} */
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+h1 {
+  font-size: 50px;
+  margin: 0;
+  padding: 15px;
 }
 
 .form-container {
@@ -22,6 +34,75 @@ code {
   align-items: center;
 }
 
+.label-text {
+  padding: 20px;
+  font-size: 25px;
+}
+
+select {
+  width: 150px;
+  padding: 5px;
+  margin: 15px;
+  border-radius: 4px;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 14px;
+  color: #36395a;
+}
+
+/* CSS */
 button {
-  width: 70px;
+  align-items: center;
+  appearance: none;
+  margin: 25px;
+  background-color: #fcfcfd;
+  border-radius: 4px;
+  border-width: 0;
+  width: 150px;
+  box-shadow: rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  box-sizing: border-box;
+  color: #36395a;
+  cursor: pointer;
+  display: inline-flex;
+  font-family: "JetBrains Mono", monospace;
+  height: 48px;
+  justify-content: center;
+  line-height: 1;
+  list-style: none;
+  overflow: hidden;
+  padding-left: 16px;
+  padding-right: 16px;
+  position: relative;
+  text-align: left;
+  text-decoration: none;
+  transition: box-shadow 0.15s, transform 0.15s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  white-space: nowrap;
+  will-change: box-shadow, transform;
+  font-size: 14px;
+}
+
+button:focus {
+  box-shadow: #d6d6e7 0 0 0 1.5px inset, rgba(45, 35, 66, 0.4) 0 2px 4px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+}
+
+button:hover {
+  box-shadow: rgba(45, 35, 66, 0.4) 0 4px 8px,
+    rgba(45, 35, 66, 0.3) 0 7px 13px -3px, #d6d6e7 0 -3px 0 inset;
+  transform: translateY(-2px);
+}
+
+button:active {
+  box-shadow: #d6d6e7 0 3px 7px inset;
+  transform: translateY(2px);
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  padding: 20px 0;
+  width: 100%;
 }
