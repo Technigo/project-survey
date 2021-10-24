@@ -19,7 +19,7 @@ const Overview = ({
       <p className="overview-p">
         {" "}
         {animalInput === "elephant"
-          ? "In this upside-down land of miniature mountains, infinite puddles they lives with their 100 tiny pet elephants."
+          ? "In this upside-down land of miniature mountains and infinite puddles they lived with their 100 tiny pet elephants."
           : "In this upside-down land of miniature mountains and infinite puddles they lived with their pet duck. But this was no ordinairy duck, it was the biggest duck you had ever seen, it was as big as an elephant."}
       </p>
       <p className="overview-p">
