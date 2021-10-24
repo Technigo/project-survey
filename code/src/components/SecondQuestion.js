@@ -39,7 +39,9 @@ const SecondQuestion = ({ animalInput, onAnimalInputChange, onStepChange }) => {
           </label>
         </div>
       </section>
-      <button onClick={onStepChange}>Next Question</button>
+      <button disabled={animalInput === ""} onClick={onStepChange}>
+        Next Question
+      </button>
     </form>
   );
 };

@@ -3,7 +3,9 @@ import React from "react";
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   return (
     <form>
-      <h1>kicks and giggles</h1>
+      <div className="header-container">
+        <h1>kicks and giggles</h1>
+      </div>
       <p className="intro-p">adult recess.</p>
       <p className="intro-p-brackets">(yes, we need playtime too)</p>
       <label htmlFor="nameInput">

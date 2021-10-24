@@ -38,14 +38,16 @@ const FifthQuestion = ({ pizzaInput, onPizzaInputChange, onStepChange }) => {
                 onChange={onPizzaInputChange}
                 checked={pizzaInput === "no"}
               />
-              <span role="img" aria-label="">
+              <span role="img" aria-label="naseaus face">
                 🤢
               </span>
             </div>
           </label>
         </div>
       </section>
-      <button onClick={onStepChange}>Next Question</button>
+      <button disabled={pizzaInput === ""} onClick={onStepChange}>
+        Next Question
+      </button>
     </form>
   );
 };

@@ -25,8 +25,8 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  /* margin: 50px; */
-  height: 600px;
+  margin: 80px;
+  /* height: 700px; */
 }
 
 h1 {
@@ -36,6 +36,12 @@ h1 {
   font-size: 65px;
   text-align: center;
   margin-bottom: 20px;
+}
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  width: 100px;
 }
 
 .intro-p {
@@ -59,7 +65,7 @@ h1 {
 }
 
 h2 {
-  font-size: 40px;
+  font-size: 30px;
   text-align: center;
   color: whitesmoke;
   /* text-transform: uppercase; */
@@ -77,7 +83,7 @@ form {
   /* box-shadow: 0 2px 40px grey;
   border-radius: 10px; */
   min-width: 300px;
-  max-width: 800px;
+  max-width: 750px;
   height: 400px;
   /* background-color: white; */
   padding: 30px;
@@ -99,7 +105,8 @@ input {
 select {
   font-size: 20px;
   padding: 5px;
-  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-bottom: 30px;
   border: none;
   border-radius: 10px;
   color: rgb(255, 20, 147);
@@ -171,4 +178,103 @@ button {
   padding: 10px; */
   margin: 0;
   line-height: 20px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 80px;
+  }
+  h2 {
+    font-size: 40px;
+  }
+
+  .overview-p {
+    font-size: 18px;
+    line-height: 30px;
+  }
+
+  .form-container {
+    margin: 60px;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 110px;
+  }
+  h2 {
+    font-size: 55px;
+  }
+
+  .radio-choice {
+    font-size: 40px;
+  }
+
+  .radio-choice-duck {
+    font-size: 85px;
+  }
+
+  button {
+    margin-top: 10px;
+    font-size: 20px;
+  }
+
+  .overview-p {
+    font-size: 28px;
+    line-height: 40px;
+  }
+
+  .form-container {
+    margin: 130px;
+  }
+
+  input {
+    font-size: 30px;
+  }
+
+  form label {
+    font-size: 23px;
+  }
+
+  .intro-p {
+    font-size: 48px;
+  }
+
+  .intro-p-brackets {
+    font-size: 23px;
+  }
+}
+
+@media (min-width: 1200px) {
+  h1 {
+    font-size: 140px;
+  }
+
+  .form-container {
+    margin: 250px;
+  }
+
+  input {
+    font-size: 40px;
+  }
+
+  form label {
+    font-size: 30px;
+  }
+
+  .intro-p {
+    margin-top: 10px;
+    font-size: 60px;
+  }
+
+  .intro-p-brackets {
+    font-size: 28px;
+    margin-bottom: 100px;
+  }
+
+  button {
+    margin-top: 20px;
+    font-size: 30px;
+  }
 }

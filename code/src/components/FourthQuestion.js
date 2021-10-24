@@ -40,7 +40,9 @@ const FourthQuestion = ({ gameInput, onGameInputChange, onStepChange }) => {
           </label>
         </div>
       </section>
-      <button onClick={onStepChange}>Next Question</button>
+      <button disabled={gameInput === ""} onClick={onStepChange}>
+        Next Question
+      </button>
     </form>
   );
 };
