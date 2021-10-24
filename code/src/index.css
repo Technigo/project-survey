@@ -143,6 +143,14 @@ progress::-webkit-progress-value {
   height: 35px;
 }
 
+.missingInfo {
+  background-color: crimson;
+  color: white;
+  text-align: center;
+  border-radius: 2px;
+  padding: 0 7px;
+}
+
 @media only screen and (min-width: 768px) {
   .content-wrapper {
     max-width: 450px;
