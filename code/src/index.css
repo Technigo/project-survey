@@ -26,7 +26,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 70px;
+  /* margin: 70px; */
 }
 
 h1 {
@@ -78,7 +78,7 @@ form {
   align-items: center;
   min-width: 300px;
   max-width: 750px;
-  height: 400px;
+  /* height: 400px; */
   padding: 30px;
 }
 
@@ -197,9 +197,9 @@ button {
     line-height: 30px;
   }
 
-  .form-container {
+  /* .form-container {
     margin: 100px;
-  }
+  } */
 
   .radio-choice {
     font-size: 35px;
@@ -236,9 +236,9 @@ button {
     line-height: 40px;
   }
 
-  .form-container {
+  /* .form-container {
     margin: 90px;
-  }
+  } */
 
   input {
     font-size: 18px;

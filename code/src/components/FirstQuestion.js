@@ -22,7 +22,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         onChange={onNameInputChange}
       />
       <button disabled={nameInput === ""} onClick={onStepChange}>
-        Next Question
+        Open Sesame
       </button>
     </form>
   );
