@@ -20,6 +20,14 @@ code {
     monospace;
 }
 
+.main-container {
+  display:flex;
+  flex-direction: column;
+  width: var(--container-width);
+  max-width: var(--container-width-max);
+  margin: 40px auto;
+}
+
 .header {
   background: rgba(0, 0, 0, 0.7);
   border: 0.5em solid rgb(233, 191, 7);
@@ -49,19 +57,6 @@ code {
   margin-left: var(--margin-header);
   font-size: var(--font-header-underscore);
   font-weight: 100;
-}
-
-.main-container {
-  display:flex;
-  flex-direction: column;
-  width: var(--container-width);
-  max-width: var(--container-width-max);
-  margin: auto 0;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
 }
 
 .inner-container {
@@ -175,7 +170,7 @@ input[type="text"]:hover, input[type="email"]:hover {
 @media (max-width: 761px) {
   :root {
     --container-width: 80%;
-    --container-height: 32em;
+    --container-height: 32rem;
     --inner-container-height: 8rem;
     --font-size-small: 0.7rem;
     --font-size-medium: 1rem;
@@ -194,7 +189,7 @@ input[type="text"]:hover, input[type="email"]:hover {
 
 @media screen and (min-width: 762px) {
   :root {
-    --container-width-max: 100rem;
+    --container-width-max: 600px;
     --container-width: 80%;
     --container-height: 35rem;
     --font-size-small: 0.9rem;
@@ -209,5 +204,17 @@ input[type="text"]:hover, input[type="email"]:hover {
 @media screen and (min-width: 1094px) {
   body {
     background-image: url('./assets/background-beer-large.jpg');
+  }
+
+  :root {
+    --container-width-max: 850px;
+    --container-width: 80%;
+    --container-height: 35rem;
+    --font-size-small: 1rem;
+    --font-size-medium: 1.2rem;
+    --font-size-big: 1.6rem;
+    --font-header: 3.2rem;
+    --font-header-underscore: 2rem;
+    --margin-header: 1.5rem;
   }
 }
