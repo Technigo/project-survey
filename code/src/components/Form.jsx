@@ -1,11 +1,11 @@
-import React, {useState} from "react";
-import FirstQuestion from "./FirstQuestion";
-import SecondQuestion from "./SecondQuestion";
-import ThirdQuestion from "./ThirdQuestion";
+import React, {useState} from "react"
+import FirstQuestion from "./FirstQuestion"
+import SecondQuestion from "./SecondQuestion"
+import ThirdQuestion from "./ThirdQuestion"
 import FourthQuestion from "./FourthQuestion"
-import FifthQuestion from "./FifthQuestion";
-import Overview from "./Overview";
-import Footer from "./Footer";
+import FifthQuestion from "./FifthQuestion"
+import Overview from "./Overview"
+import Footer from "./Footer"
 
 const Form = () => {
 	const [question, setQuestion] = useState(1)
@@ -15,7 +15,11 @@ const Form = () => {
 	const [game, setGame] = useState('')
 
 	const restartGame = () => {
-		setQuestion(question === 1)
+		setQuestion(1)
+		setAlias('')
+		setWeapon('')
+		setCompanion('')
+		setGame('')
 	}
 	
 	const onQuestionChange = () => {
@@ -105,8 +109,8 @@ const Form = () => {
 						restartGame={restartGame}				
 					/>
 				)}
-				</div>
-				<Footer />
+			</div>
+			<Footer />
 		</main>
 	)
 }

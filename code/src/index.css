@@ -46,12 +46,18 @@ main {
 }
 
 .overview {
-  background-image: url(https://images.unsplash.com/photo-1617374128851-c84e37dc9f37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
   z-index: -1;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   opacity: .9;
+}
+
+.input, .dropdown {
+  border-radius: 10px;
+  border: 0;
+  height: 25px;
+  margin: 5px;
 }
 
 .button-container {
@@ -62,11 +68,15 @@ main {
 .buttons {
   padding: 10px;
   margin: 10px;
+  border-radius: 20px;
+  border: 0;
+  background-color: rgb(219, 219, 243);
+  box-shadow: 3px 3px 5px 3px rgba(44, 44, 250, 0.2); 
+
 }
 
 .buttons:hover {
   transform: scale(1.1);
-
 }
 
 .weapon-container {
@@ -78,29 +88,26 @@ main {
   display: flex;
 }
 
-
 .game-image {
-  width: 100px;
+  height: 200px;
+  border-radius: 10px;
+  box-shadow: 3px 3px 5px 3px rgba(44, 44, 250, 0.3); 
+}
+
+.game-image:hover {
+  transform: scale(1.05);
+}
+
+.game-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
 
 .game-radio-button {
-  visibility: visible;
-}
-
-.logos-bottom {
+  visibility: hidden;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: black;
-}
-
-/* not being used as of right now */
-.bottom-circle {
-  position: relative;
-  margin-left: 10px;
-  margin-right: 10px;
-  background-color: #e7aad0;
-  border-radius: 50%;
+  flex-direction: column;
 }
 
 .bottom-icon {
@@ -126,7 +133,20 @@ footer {
   height: 20vh;
   display: flex;
   flex-direction: column;
+  margin-top: auto;
+}
+
+.logo-container {
+  display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: auto;
+  margin: auto;
+  gap: 10px;
+}
+
+.logos-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: black;
 }

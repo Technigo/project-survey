@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react"
 
 const FourthQuestion = ({ onQuestionBackChange, onQuestionChange, weapon, companion, onCompanionChange }) => {
 	return (
@@ -7,6 +7,7 @@ const FourthQuestion = ({ onQuestionBackChange, onQuestionChange, weapon, compan
 				<h2>Now, you need to choose a companion on this journey</h2>
 				<label htmlFor="companion">Who will you bring?</label>
 				<select 
+					className="dropdown"
 					name="companions" 
 					id="companion" 
 					value={companion}
@@ -19,12 +20,12 @@ const FourthQuestion = ({ onQuestionBackChange, onQuestionChange, weapon, compan
 					<option value="🦄">A unicorn</option>
 				</select>
 				<div className="button-container">
-				<button 
+					<button 
 						type="button"
 						className="buttons" 
 						onClick={onQuestionBackChange}
 					>
-						Go Back
+					Go Back
 					</button>
 					<button 
 						type="button"
@@ -32,7 +33,7 @@ const FourthQuestion = ({ onQuestionBackChange, onQuestionChange, weapon, compan
 						disabled={companion === ''}
 						onClick={onQuestionChange}
 					>
-						Continue
+					Continue
 					</button>
 				</div>
 			</form>

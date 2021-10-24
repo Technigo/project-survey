@@ -4,8 +4,11 @@ const SecondQuestion = ({ onQuestionBackChange, onQuestionChange, alias, onAlias
 	return (
 		<form className="form">
 			{/* Choose alias */}
-			<label htmlFor="alias">Choose your alias:</label>
+			<label htmlFor="alias">
+				<h2>Choose your alias:</h2>
+			</label>
 			<input 
+				className="input"
 				id="alias" 
 				type="text" 
 				value={alias} 
@@ -18,16 +21,16 @@ const SecondQuestion = ({ onQuestionBackChange, onQuestionChange, alias, onAlias
 						className="buttons" 
 						onClick={onQuestionBackChange}
 					>
-						Go Back
-					</button>
-					<button 
-						type="button"
-						className="buttons" 
-						disabled={(alias === '')}
-						onClick={onQuestionChange}
-					>
-						Continue
-					</button>
+					Go Back
+				</button>
+				<button 
+					type="button"
+					className="buttons" 
+					disabled={(alias === '')}
+					onClick={onQuestionChange}
+				>
+				Continue
+				</button>
 			</div>
 		</form>
 	)

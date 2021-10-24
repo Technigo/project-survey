@@ -27,7 +27,7 @@ const ThirdQuestion = ({ onQuestionBackChange, onQuestionChange, alias, weapon, 
 					/>
 					talk to snakes
 					</label>	
-				{/* super speed */}
+					{/* super speed */}
 					<label className="weapon-radio-button">
 					<input 
 						type="radio"
@@ -46,7 +46,7 @@ const ThirdQuestion = ({ onQuestionBackChange, onQuestionChange, alias, weapon, 
 						className="buttons" 
 						onClick={onQuestionBackChange}
 					>
-						Go Back
+					Go Back
 					</button>
 					<button 
 						type="button"
@@ -54,7 +54,7 @@ const ThirdQuestion = ({ onQuestionBackChange, onQuestionChange, alias, weapon, 
 						disabled={(weapon === '')}
 						onClick={onQuestionChange}
 					>
-						Continue
+					Continue
 					</button>
 				</div>
 			</form>
