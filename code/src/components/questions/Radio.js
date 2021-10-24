@@ -40,7 +40,7 @@ export const Radio = ({ state, handleChange, data, step, incrementStep, decremen
       })}
       <span className='required'>{data.required ? ' *required' : ''}</span>
       <div className='button-container'>
-        <Button disabled={step === 1} text={''} type={'up'} onClick={decrementStep} />
+        <Button disabled={step === 0} text={''} type={'up'} onClick={decrementStep} />
         <Button
           disabled={step === 'end' || (!state[data.id] && data.required)}
           text={''}
