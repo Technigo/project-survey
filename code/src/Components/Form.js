@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 
-import FirstQuestion from './FirstQuestion';
-import SecondQuestion from './SecondQuestion';
-import ThirdQuestion from './ThirdQuestion';
-import FourthQuestion from './FourthQuestion';
-import FifthQuestion from './FifthQuestion';
-import SixthQuestion from './SixthQuestion';
+import NameQuestion from './NameQuestion';
+import SecondQuestion from './TeamQuestion';
+import ThirdQuestion from './DoneQuestion';
+import FourthQuestion from './WillDoQuestion';
+import FifthQuestion from './BlockersQuestion';
+import SixthQuestion from './BlockersDescriptionQuestion';
 import Overview from './Overview';
 
 export const Form = () => {
@@ -44,8 +44,7 @@ export const Form = () => {
     setShowOverview(true);
   };
   const onRestartChange = () => {
-    setStep(step === 1);
-    setShowOverview(false);
+    window.location.reload(false);
   };
 
   // Version 1
@@ -67,7 +66,7 @@ export const Form = () => {
       ) : (
         <div>
           {step === 1 && (
-            <FirstQuestion
+            <NameQuestion
               nameInput={nameInput}
               onNameInputChange={onNameInputChange}
               onStepChange={onStepChange}

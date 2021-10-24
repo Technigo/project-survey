@@ -22,7 +22,9 @@ const Overview = ({
       </p>
       <p>
         I{' '}
-        {blockers === 'yes' ? 'do have blockers.' : 'do not have any blockers.'}
+        {blockers === 'yes'
+          ? 'do have blockers: '
+          : 'do not have any blockers.'}
       </p>
       <p>
         <span className="italic">{blockersDescription}</span>

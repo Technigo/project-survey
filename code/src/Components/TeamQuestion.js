@@ -1,7 +1,7 @@
 import React from 'react';
-import './secondQuestion.css';
+import './teamQuestion.css';
 
-const SecondQuestion = ({ team, onTeamChange, onStepChange }) => {
+const TeamQuestion = ({ team, onTeamChange, onStepChange }) => {
   return (
     <form className="form">
       <label>
@@ -26,16 +26,4 @@ const SecondQuestion = ({ team, onTeamChange, onStepChange }) => {
   );
 };
 
-export default SecondQuestion;
-
-/* <form>
-      
-<label htmlFor="surnameInput">Type your surname: </label>
-<input
-  id="surnameInput"
-  type="text"
-  value={surnameInput}
-  onChange={onSurnameInputChange}
-/>
-<button onClick={onStepChange}>Next question</button>
-</form> */
+export default TeamQuestion;

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FourthQuestion = ({ willDoInput, onWillDoInputChange, onStepChange }) => {
+const WillDoQuestion = ({ willDoInput, onWillDoInputChange, onStepChange }) => {
   return (
     <form className="form">
       <label>
@@ -25,4 +25,4 @@ const FourthQuestion = ({ willDoInput, onWillDoInputChange, onStepChange }) => {
   );
 };
 
-export default FourthQuestion;
+export default WillDoQuestion;

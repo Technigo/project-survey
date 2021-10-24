@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SixthQuestion = ({
+const BlockersDescriptionQuestion = ({
   blockersDescription,
   onBlockersDescriptionChange,
   handleShowOverview,
@@ -29,4 +29,4 @@ const SixthQuestion = ({
   );
 };
 
-export default SixthQuestion;
+export default BlockersDescriptionQuestion;

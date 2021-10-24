@@ -1,7 +1,7 @@
 import React from 'react';
-import './fifthQuestion.css';
+import './blockersQuestion.css';
 
-const FifthQuestion = ({
+const BlockersQuestion = ({
   blockers,
   onBlockersChange,
   onStepChange,
@@ -53,4 +53,4 @@ const FifthQuestion = ({
   );
 };
 
-export default FifthQuestion;
+export default BlockersQuestion;

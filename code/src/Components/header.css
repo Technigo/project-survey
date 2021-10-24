@@ -3,6 +3,7 @@
   /* height: 150px;
   padding: 0 0 4em; */
   display: flex;
+  justify-content: center;
 }
 
 .header h1 {
@@ -10,8 +11,8 @@
   color: #fecafa;
   background: RGBA(254, 202, 255, 0.2);
   margin: revert;
-  width: 100%;
+  width: fit-content;
   display: grid;
-  align-items: center;
-  justify-items: center;
+  /* align-items: center;
+  justify-items: center; */
 }

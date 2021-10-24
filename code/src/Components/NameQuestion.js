@@ -1,7 +1,7 @@
 import React from 'react';
-import './firstQuestion.css';
+import './nameQuestion.css';
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
+const NameQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
   // or: const { nameInput, onNameInputChange } = props
   {
     return (
@@ -27,4 +27,4 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) =>
     );
   };
 
-export default FirstQuestion;
+export default NameQuestion;
