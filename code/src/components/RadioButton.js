@@ -5,6 +5,9 @@ const RadioButton = ({ onAgeInputChange, ageInput, onStepChange }) => {
   return (
     <form>
       <div className="radio-container">
+        <div>
+          <p className="question">How old are you?</p>
+        </div>
         <label>
           <input
             className="input-container"

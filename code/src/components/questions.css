@@ -1,8 +1,8 @@
 .question-input {
-  width: 50%;
+  width: 80%;
   padding: 10px;
   font-family: "Poppins", sans-serif;
-  background-color: rgb(243, 239, 239);
+  background-color: lightgray;
 }
 
 .question-container {
@@ -16,6 +16,12 @@
   background-color: black;
   color: white;
   margin-top: 40px;
+  border-style: outset;
+}
+
+.question {
+  margin: 0;
+  font-size: 20px;
 }
 
 /* tablet menu */
@@ -23,5 +29,9 @@
 @media (min-width: 768px) {
   .question-container {
     width: 600px;
+  }
+
+  .question-input {
+    width: 50%;
   }
 }

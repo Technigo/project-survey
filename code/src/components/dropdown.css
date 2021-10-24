@@ -8,10 +8,27 @@
   padding: 20px;
   color: whitesmoke;
   margin-top: 40px;
-  align-items: center;
+  border-style: outset;
 }
 
 .dropdown-question {
   margin: 0;
   margin-bottom: 25px;
+  font-size: 25px;
+}
+
+.dropdown {
+  width: 100%;
+  padding: 10px;
+  background-color: lightgray;
+}
+
+@media (min-width: 768px) {
+    .dropdown-container {
+      width:600px;
+    }
+
+  .dropdown-question {
+      font-size: 16px;
+  }
 }

@@ -4,6 +4,7 @@
   padding: 20px;
   margin: 0 auto;
   margin-top: 40px;
+  border-style: outset;
 }
 
 .overview-box {
@@ -19,6 +20,7 @@
 .overview-text {
   font-family: "Roboto", sans-serif;
   color: whitesmoke;
+  font-size: 20px;
 }
 
 /* tablet menu */

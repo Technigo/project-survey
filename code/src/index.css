@@ -5,7 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: grey;
+  background-color: black;
 }
 
 code {
@@ -25,12 +25,20 @@ code {
   color: whitesmoke;
   background-color: rgba(137, 179, 137, 0.404);
   padding: 7px;
-  font-size: 10px;
-  border-radius: 1em;
-  width: 100px;
+  font-size: 12px;
+  border-radius: 0.5em;
+  width: 125px;
 }
 
 .header {
   text-align: center;
   color: white;
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .submit-button {
+    width: 200px;
+    font-size: 16px;
+  }
 }

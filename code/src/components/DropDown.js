@@ -6,8 +6,10 @@ const DropDown = ({ locationInput, onLocationInputChange, onStepChange }) => {
     <form>
       <div className="dropdown-container">
         <label>
-          <p className="dropdown-question">What is your location?</p>
-          <select value={locationInput} onChange={onLocationInputChange}>
+          <div className="dropdown-question">
+            <p className="question">What is your location?</p>
+          </div>
+          <select value={locationInput} onChange={onLocationInputChange} className="dropdown">
             <option value="New York">New york</option>
             <option value="Stockholm">Stockholm</option>
             <option value="Barcelona">Barcelona</option>
