@@ -31,8 +31,8 @@ const Overview = ({
       <p className="overview-p">
         {" "}
         {gameInput === "inside"
-          ? "But one night as they drifted off to sleep and into the land of dreams, they left all of that behind tavelled into a video game. The world they had known had been traded in for a new one. And as it turns out this was not a dream you wake up from, they were trapped."
-          : "One day they woke up to find the world they had known changed forever, a video game had come to life in the real world. This must be a dream they thought, but they were already awake."}{" "}
+          ? "But one night as they drifted off to sleep and into the land of dreams, they left all of that behind and tavelled into a video game. The world they had known had now been traded in for a new one. And as it turns out this was not a dream you wake up from, they were trapped."
+          : "One day they woke up to find the world they had known had changed forever, a video game had come to life in the real world. This must be a dream they thought, but they were already awake."}{" "}
       </p>
       <p className="overview-p">
         {" "}
