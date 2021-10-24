@@ -65,7 +65,7 @@ export const App = () => {
   }
 
   return (
-    <div className={colorTheme} style={{ height: window.innerHeight }}>
+    <div className={colorTheme} style={{ height: '100vh' }}>
       {step > 0 && <ProgressBar state={state} steps={steps} />}
       <div className={'container'}>
         {step === 0 && <StartSurvey incrementStep={incrementStep} />}
