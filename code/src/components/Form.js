@@ -40,13 +40,6 @@ const Form = () => {
 		event.preventDefault();
 	};
 
-	// const nextQuestion = (event) => {
-	// 	if (event.key === "Enter" && event.target.value !== "") {
-	// 		setStep(step + 1);
-	// 		event.preventDefault();
-	// 	}
-	// };
-
 	if (step === 0) {
 		// prettier-ignore
 		return (
