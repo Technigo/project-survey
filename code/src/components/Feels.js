@@ -8,7 +8,7 @@ const Feels = ( {setFeels} ) => {
   <>
   
     <div className="survey-item-feels">
-    <p className="section-heading">How do you feel when drinking coffee ☕️?</p>
+    <p className="section-heading">How do you feel when drinking coffee?</p>
       {hourArray.map(choice => (
       <label className="feels" key={choice}>
       <input

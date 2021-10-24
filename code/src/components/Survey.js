@@ -7,22 +7,6 @@ import Buttons from './Buttons'
 
 const Survey = (props) => {
 
-  const isSurveyComplete = () => {
-
-    if (props.enjoy === '') {
-      return false;
-    }
-    if (props.feels === '') {
-      return false;
-    }
-    if (props.options === 'Choose below') {
-      return false;
-    }
-    if (props.coffee === '') {
-      return false;
-    }
-    return true;
-  };
 
   return (
     <>
