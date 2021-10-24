@@ -83,7 +83,10 @@ p {
   body {
     background-image: url(https://source.unsplash.com/random/2560x1440);
   }
+  .form-container {
+    height: 75vh;
 }
+
 @media only screen and (min-width: 2560px) {
   .form-container {
     padding-top: 50px;
