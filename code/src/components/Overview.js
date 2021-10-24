@@ -46,7 +46,7 @@ const Overview = ({
           ? "The only way to return things to normal was by solving a seemingly impossible mathematical equation. Of course this was no match for this genious, easy peasy lemon squeezy. And like waking up from a dream, the world returned to normal and they lived happily ever."
           : "The only way to return things to normal was by solving a seemingly impossible mathematical equation. However this equation turned out not to be very difficult, luckily. They would have been in trouble otherwise. Back to lala-land they went and lived happily ever."}{" "}
       </p>
-      <p className="overview-p">The End.</p>
+      <p className="overview-end">the end.</p>
     </section>
   );
 };
