@@ -4,7 +4,6 @@ import { FirstQuestion } from "./FirstQuestion";
 import { SecondQuestion } from "./SecondQuestion";
 import { ThirdQuestion } from "./ThirdQuestion";
 import { FourthQuestion } from "./FourthQuestion";
-import { FifthQuestion } from "./FifthQuestion";
 import { Overview } from "./Overview";
 import { SubmitQuestion } from "./SubmitQuestion";
 
@@ -13,7 +12,6 @@ const Form = () => {
 	const [frameworkInput, FrameworkInput] = useState("");
 	const [problemSolvingInput, setproblemSolvingInput] = useState("");
 	const [backgroundInput, setBackgroundInput] = useState("");
-	const [hiringInput, setHiringInput] = useState("");
 	const [step, setStep] = useState(0);
 
 	const onLanguageInputChange = (event) => {
@@ -30,10 +28,6 @@ const Form = () => {
 
 	const onBackgroundInputChange = (event) => {
 		setBackgroundInput(event.target.value);
-	};
-
-	const onHiringInputChange = (event) => {
-		setHiringInput(event.target.value);
 	};
 
 	const nextQuestion = (event) => {
@@ -100,23 +94,12 @@ const Form = () => {
 	} else if (step === 5) {
 		// prettier-ignore
 		return (
-	  <FifthQuestion
-			hiringInput={hiringInput}
-			onHiringInputChange={onHiringInputChange}
-			nextQuestion={nextQuestion}
-			previousQuestion={previousQuestion}
-			step={step}
-	  />
-    );
-	} else if (step === 6) {
-		// prettier-ignore
-		return (
 	  <SubmitQuestion
 			nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
 		/>
     );
-	} else if (step === 7) {
+	} else if (step === 6) {
 		// prettier-ignore
 		return (
 	  <Overview
@@ -124,8 +107,6 @@ const Form = () => {
 	    frameworkInput={frameworkInput}
 	    problemSolvingInput={problemSolvingInput}
 			backgroundInput={backgroundInput}
-			hiringInput={hiringInput}
-			step={step}
 	  />
     );
 	}

@@ -6,6 +6,12 @@
 
 /* Main content */
 
+body {
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 19px;
+}
+
 .root {
 	width: 100vw;
 	height: 100vh;
@@ -32,13 +38,18 @@
 	justify-content: space-between;
 }
 
-.form-container,
-.overview-container {
+.form-container {
 	background-color: #ffffff;
 	width: 100%;
 	border-radius: 15px;
 	padding: 30px 25px;
-	/* margin-bottom: 50px; */
+	/* margin-bottom: 25px; */
+	margin-bottom: 50px;
+}
+
+.overview-container {
+	border-radius: 15px;
+	padding: 30px 25px;
 }
 
 /* Animations */
