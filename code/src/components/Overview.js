@@ -12,8 +12,8 @@ const Overview = (props) => {
           <p>Address: {addressInput}</p>
           <p>You have ordered the following beer-types:</p>
           <ul>
-            {selectedBeers.map((beertype) => (
-              beertype.checked && (<li>{beertype.name}</li>)
+            {selectedBeers.map((beertype, index) => (
+              beertype.checked && (<li key={index}>{beertype.name}</li>)
             ))}
           </ul>
           <p>You will receive beers from {brewery} and similar brewery's</p>

@@ -1,6 +1,5 @@
 :root {
   --primary-color: rgb(233, 191, 7);
-  --container-width-small: 40rem;
 }
 
 body {
@@ -25,6 +24,7 @@ code {
   background: rgba(0, 0, 0, 0.7);
   border: 0.5em solid rgb(233, 191, 7);
   border-radius: 1.2rem;
+  max-width: var(--container-width-max);
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -37,27 +37,25 @@ code {
 .headline {
   font-family: 'Lobster', cursive;
   color:rgb(233, 191, 7);
-  margin-top: 0.8rem;
-  margin-bottom: 0.8rem;
-  margin-left: 0.8rem;
-  font-size: 42px;
-  font-weight: 500;
+  margin: var(--margin-header);
+  font-size: var(--font-header);
+  font-weight: 400;
 }
 
 .headline-underscore {
   font-family: 'Lobster', cursive;
   color:rgb(233, 191, 7);
   margin-top: 0;
-  margin-left: 0.8rem;
-  font-size: 24px;
+  margin-left: var(--margin-header);
+  font-size: var(--font-header-underscore);
   font-weight: 100;
 }
 
 .main-container {
   display:flex;
   flex-direction: column;
-  width: 80%;
-  max-width: 40rem;
+  width: var(--container-width);
+  max-width: var(--container-width-max);
   margin: auto 0;
   position: absolute;
   top: 50%;
@@ -81,7 +79,7 @@ code {
 
 .form-label, .form-button {
   font-family: inherit;
-  font-size: 1rem; 
+  font-size: var(--font-size-medium); 
   margin-top: 1.2rem;
 }
 
@@ -91,12 +89,12 @@ code {
 }
 
 input[type="text"], input[type="email"] {
-  border: 0.16em solid black;
+  border: 0.16rem solid black;
   border-radius: 1rem;
   height: 2.5rem;
   padding: 0 0.8rem;
-  font-size: 0.8rem;
-  width: 15rem;
+  font-size: var(--font-size-medium);
+  width: var(--container-width);
   outline: none;
 }
 
@@ -112,10 +110,10 @@ input[type="text"]:hover, input[type="email"]:hover {
 
 .form-button {
   display: inline-block;
-  height: 2.2rem;
-  padding: 0.3em 0.8rem;
+  /* height: 2.2rem; */
+  padding: 0.3rem 0.8rem;
   margin-top: 1.5rem;
-  border: 0.16em solid rgb(0, 0, 0);
+  border: 0.16rem solid rgb(0, 0, 0);
   border-radius: 2rem;
   box-sizing: border-box;
   text-decoration: none;
@@ -133,7 +131,7 @@ input[type="text"]:hover, input[type="email"]:hover {
 
 .form-button:disabled {
   background-color:#bda580;
-  border: 0.16em solid rgb(138, 135, 135);
+  border: 0.16rem solid rgb(138, 135, 135);
   animation: none;
   cursor: not-allowed;
 }
@@ -144,7 +142,7 @@ input[type="text"]:hover, input[type="email"]:hover {
 }
 
 .error {
-  font-size: 0.7rem;
+  font-size: var(--font-size-small);
   margin-left: 0.3rem;
   margin-top: 0;
 }
@@ -155,14 +153,30 @@ input[type="text"]:hover, input[type="email"]:hover {
   100% { transform: translateY(0) }
 }
 
-@media screen and (min-width: 762px),
-       screen and (min-height: 650px) {
+@media (max-width: 761px) {
+  :root {
+    --container-width: 80%;
+    --font-size-small: 0.7rem;
+    --font-size-medium: 1rem;
+    --font-header: 2.5rem;
+    --font-header-underscore: 1.5rem;
+    --margin-header: 0.8rem;
+  }
+}
+
+@media screen and (min-width: 762px), screen and (min-height: 650px) {
   body {
     background-image: url('./assets/background-beer.jpg');
   }
 }
 
-@media (min-width: 1094px) {
+@media screen and (min-width: 762px) {
+  :root {
+    --container-width-max: 100rem;
+  }
+}
+
+@media screen and  (min-width: 1094px) {
   body {
     background-image: url('./assets/background-beer-large.jpg');
   }
