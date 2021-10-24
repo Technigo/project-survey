@@ -110,7 +110,6 @@ input[type="text"]:hover, input[type="email"]:hover {
 
 .form-button {
   display: inline-block;
-  /* height: 2.2rem; */
   padding: 0.3rem 0.8rem;
   margin-top: 1.5rem;
   border: 0.16rem solid rgb(0, 0, 0);
@@ -149,6 +148,7 @@ input[type="text"]:hover, input[type="email"]:hover {
 
 .p-text {
   font-size: var(--font-size-medium);
+  width: var(--container-width);
 }
 
 @keyframes bouncy {
