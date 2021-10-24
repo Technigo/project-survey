@@ -1,0 +1,11 @@
+h1 {
+  font-size: 20px;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 24px;
+  }
+}

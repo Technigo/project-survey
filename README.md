@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project was to create a survey using React, and introduced me to React State. I decided to make a survey about Autumn habits.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+As stated above, I used React State for the first time in this project. I read the project brief and watched some videos on what React State is. I also looked to Stack Overflow for answers to some questions I had.
+
+If I had more time I would have designed the range slider and the radio buttons. I would also have added more questions with other types of inputs.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://britishswede-project-survey.netlify.app/
