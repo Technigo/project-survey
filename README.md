@@ -6,4 +6,4 @@ A small survey practicing React state and controlled forms. The project consists
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://xenodochial-brattain-569790.netlify.app/
