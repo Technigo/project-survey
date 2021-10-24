@@ -13,25 +13,25 @@ const Overview = ({
       <h2>Story Time!</h2>
 
       <p className="overview-p">
-        Once upon a time in Lala-land lived a very special person called{" "}
-        {nameInput},
+        Once upon a time in a place called Lalaland lived a very special person
+        called {nameInput}.
       </p>
       <p className="overview-p">
         {" "}
         {animalInput === "elephant"
-          ? "in this upside-down land of miniature mountains, infinite puddles they lives with their 100 tiny pet elephants."
-          : "in this upside-down land of miniature mountains and infinite puddles they lived with their pet duck, but this eas no ordinairy duck, it was the biggest duck you had ever seen. It was as big as an elephant."}
+          ? "In this upside-down land of miniature mountains, infinite puddles they lives with their 100 tiny pet elephants."
+          : "In this upside-down land of miniature mountains and infinite puddles they lived with their pet duck. But this was no ordinairy duck, it was the biggest duck you had ever seen, it was as big as an elephant."}
       </p>
       <p className="overview-p">
         {" "}
         {astleyInput === "all-above"
-          ? "and they would never give them up, let them down, make them cry or hurt them."
-          : "and they would never give them up, let them down, make them cry or hurt them."}{" "}
+          ? "And they would never give them up, let them down, make them cry or hurt them."
+          : "And they would never give them up, let them down, make them cry or hurt them."}{" "}
       </p>
       <p className="overview-p">
         {" "}
         {gameInput === "inside"
-          ? "But one night as they drifted off to sleep and into the land of dreams, they left all of that behind tavelled into a video game. The world they had known had been traded in for a new one. And as it turns out this was not a dream you wake from, they were trapped."
+          ? "But one night as they drifted off to sleep and into the land of dreams, they left all of that behind tavelled into a video game. The world they had known had been traded in for a new one. And as it turns out this was not a dream you wake up from, they were trapped."
           : "One day they woke up to find the world they had known changed forever, a video game had come to life in the real world. This must be a dream they thought, but they were already awake."}{" "}
       </p>
       <p className="overview-p">

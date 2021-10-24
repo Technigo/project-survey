@@ -17,7 +17,7 @@ const FourthQuestion = ({ gameInput, onGameInputChange, onStepChange }) => {
                 onChange={onGameInputChange}
                 checked={gameInput === "inside"}
               />
-              <span role="img" aria-label="gaming consol">
+              <span role="img" aria-label="person, arrow, gaming consol">
                 🙋 → 🎮
               </span>
             </div>
@@ -33,7 +33,7 @@ const FourthQuestion = ({ gameInput, onGameInputChange, onStepChange }) => {
                 onChange={onGameInputChange}
                 checked={gameInput === "outside"}
               />
-              <span role="img" aria-label="">
+              <span role="img" aria-label="gaming consol, globe">
                 🎮 → 🌍
               </span>
             </div>

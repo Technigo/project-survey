@@ -38,7 +38,7 @@ const FifthQuestion = ({ pizzaInput, onPizzaInputChange, onStepChange }) => {
                 onChange={onPizzaInputChange}
                 checked={pizzaInput === "no"}
               />
-              <span role="img" aria-label="naseaus face">
+              <span role="img" aria-label="nauseous face">
                 🤢
               </span>
             </div>
