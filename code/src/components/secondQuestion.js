@@ -18,17 +18,19 @@ const SecondQuestion = ({
         onChange={onSurnameInputChange}
       />
 
-      <button className="submit-button" onClick={() => onStepChange("prev")}>
-        Previous question
-      </button>
+      <div className="button-container">
+        <button className="submit-button" onClick={() => onStepChange("prev")}>
+          Previous question
+        </button>
 
-      <button
-        className="submit-button"
-        disabled={surnameInput === ""}
-        onClick={() => onStepChange("next")}
-      >
-        Next question
-      </button>
+        <button
+          className="submit-button"
+          disabled={surnameInput === ""}
+          onClick={() => onStepChange("next")}
+        >
+          Next question
+        </button>
+      </div>
     </form>
   );
 };

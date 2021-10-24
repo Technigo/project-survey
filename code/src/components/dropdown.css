@@ -1,0 +1,17 @@
+.dropdown-container {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  color: whitesmoke;
+  margin-top: 40px;
+  align-items: center;
+}
+
+.dropdown-question {
+  margin: 0;
+  margin-bottom: 25px;
+}

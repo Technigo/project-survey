@@ -11,7 +11,7 @@ const Form = () => {
   const [surnameInput, setSurnameInput] = useState("surname");
   const [ageInput, setAgeInput] = useState("30+");
   const [locationInput, setLocationInput] = useState("Oslo");
-  const [step, setStep] = useState(2);
+  const [step, setStep] = useState(4);
 
   /*   useEffect(() => {alert ('hey')})  */
 
@@ -41,7 +41,9 @@ const Form = () => {
 
   return (
     <div>
-      <div className="header">TEXT</div>
+      <div>
+        <h1 className="header">This is a survey</h1>
+      </div>
       {step === 1 && (
         <FirstQuestion
           nameInput={nameInput}

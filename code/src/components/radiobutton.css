@@ -1,0 +1,11 @@
+.radio-container {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  color: whitesmoke;
+  margin-top: 40px;
+}

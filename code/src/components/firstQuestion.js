@@ -13,6 +13,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
         value={nameInput}
         onChange={onNameInputChange}
       />
+
       <button
         className="submit-button"
         disabled={nameInput === ""}
