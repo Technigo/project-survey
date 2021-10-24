@@ -1,33 +1,39 @@
 import React, { useState } from "react";
+import { IntroQuestion } from "./IntroQuestion";
 import { FirstQuestion } from "./FirstQuestion";
 import { SecondQuestion } from "./SecondQuestion";
 import { ThirdQuestion } from "./ThirdQuestion";
 import { FourthQuestion } from "./FourthQuestion";
+import { FifthQuestion } from "./FifthQuestion";
 import { Overview } from "./Overview";
 import { SubmitQuestion } from "./SubmitQuestion";
-import { IntroQuestion } from "./IntroQuestion";
 
 const Form = () => {
-	const [nameInput, setNameInput] = useState("");
-	const [ageInput, setAgeInput] = useState("");
-	const [streamingInput, setStreamingInput] = useState("");
-	const [genresInput, setGenresInput] = useState("");
+	const [languageInput, setlanguageInput] = useState("");
+	const [frameworkInput, FrameworkInput] = useState("");
+	const [problemSolvingInput, setproblemSolvingInput] = useState("");
+	const [backgroundInput, setBackgroundInput] = useState("");
+	const [yesOrNoInput, setYesOrNoInput] = useState("");
 	const [step, setStep] = useState(0);
 
-	const onNameInputChange = (event) => {
-		setNameInput(event.target.value);
+	const onLanguageInputChange = (event) => {
+		setlanguageInput(event.target.value);
 	};
 
-	const onAgeInputChange = (event) => {
-		setAgeInput(event.target.value);
+	const onFrameworkInputChange = (event) => {
+		FrameworkInput(event.target.value);
 	};
 
-	const onStreamingInputChange = (event) => {
-		setStreamingInput(event.target.value);
+	const onProblemSolvingChange = (event) => {
+		setproblemSolvingInput(event.target.value);
 	};
 
-	const onGenresInputChange = (event) => {
-		setGenresInput(event.target.value);
+	const onBackgroundInputChange = (event) => {
+		setBackgroundInput(event.target.value);
+	};
+
+	const onYesOrNoInputChange = (event) => {
+		setYesOrNoInput(event.target.value);
 	};
 
 	const nextQuestion = (event) => {
@@ -51,8 +57,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
     <FirstQuestion
-      nameInput={nameInput}
-      onNameInputChange={onNameInputChange}
+      languageInput={languageInput}
+      onLanguageInputChange={onLanguageInputChange}
       nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
 			step={step}
@@ -62,8 +68,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
     <SecondQuestion
-      ageInput={ageInput}
-      onAgeInputChange={onAgeInputChange}
+			frameworkInput={frameworkInput}
+      onFrameworkInputChange={onFrameworkInputChange}
       nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
 			step={step}
@@ -73,8 +79,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
     <ThirdQuestion
-      streamingInput={streamingInput}
-      onStreamingInputChange={onStreamingInputChange}
+			problemSolvingInput={problemSolvingInput}
+      onProblemSolvingChange={onProblemSolvingChange}
       nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
 			step={step}
@@ -84,8 +90,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
 	  <FourthQuestion
-			genresInput={genresInput}
-			onGenresInputChange={onGenresInputChange}
+			backgroundInput={backgroundInput}
+			onBackgroundInputChange={onBackgroundInputChange}
 			nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
 			step={step}
@@ -94,19 +100,30 @@ const Form = () => {
 	} else if (step === 5) {
 		// prettier-ignore
 		return (
+	  <FifthQuestion
+			yesOrNoInput={yesOrNoInput}
+			onYesOrNoInputChange={onYesOrNoInputChange}
+			nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
+			step={step}
+	  />
+    );
+	} else if (step === 6) {
+		// prettier-ignore
+		return (
 	  <SubmitQuestion
 			nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
 		/>
     );
-	} else if (step === 6) {
+	} else if (step === 7) {
 		// prettier-ignore
 		return (
 	  <Overview
-	    nameInput={nameInput}
-	    ageInput={ageInput}
-	    streamingInput={streamingInput}
-			genresInput={genresInput}
+			languageInput={languageInput}
+	    frameworkInput={frameworkInput}
+	    problemSolvingInput={problemSolvingInput}
+			backgroundInput={backgroundInput}
 			step={step}
 	  />
     );

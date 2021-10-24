@@ -1,32 +1,34 @@
 import React from "react";
 
-export const ThirdQuestion = ({ streamingInput, onStreamingInputChange, nextQuestion, previousQuestion, step }) => {
+const yesOrNoArray = ["Yes", "No"];
+
+export const ThirdQuestion = ({ problemSolvingInput, onProblemSolvingChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
-			<button className="back-btn" aria-label="Previous question" onClick={previousQuestion}>
+			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
 				<span class="fas fa-arrow-left"></span>
 			</button>
 			<form className="form-container">
 				<p className="question-number">Question {step}</p>
-				<label className="question-heading" htmlFor="streamingInput">
-					<h2 className="question-heading">Which streaming service do you prefer?</h2>
-				</label>
-				<select className="dropdown" onChange={onStreamingInputChange} value={streamingInput}>
-					<option className="option-input" value="">
-						Select
-					</option>
-					<option className="option-input" value="Netflix">
-						Netflix
-					</option>
-					<option className="option-input" value="SVT Play">
-						SVT Play
-					</option>
-					<option className="option-input" value="HBO">
-						HBO
-					</option>
-				</select>
+				<h2 className="question-heading">Is problem solving skills a good trait for a developer?</h2>
+				{yesOrNoArray.map((yesOrNo) => (
+					<div className="question-container">
+						<label className="radio-input" key={yesOrNo} htmlFor={yesOrNo}>
+							{/* prettier-ignore */}
+							<input
+            		className="radio-button"
+								id={yesOrNo}
+            		type="radio"
+            		value={yesOrNo}
+            		onChange={onProblemSolvingChange}
+            		checked={yesOrNo === problemSolvingInput}
+          		/>
+							{yesOrNo}
+						</label>
+					</div>
+				))}
 			</form>
-			<button className="next-btn" disabled={streamingInput === ""} onClick={nextQuestion}>
+			<button className="next-btn" disabled={problemSolvingInput === ""} onClick={nextQuestion}>
 				Next
 			</button>
 		</main>

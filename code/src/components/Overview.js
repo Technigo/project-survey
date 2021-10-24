@@ -5,11 +5,16 @@ export const Overview = ({ nameInput, ageInput, streamingInput, genresInput }) =
 		<main className="main-container">
 			<div className="overview-container">
 				<h2 className="question-heading">Overview</h2>
-				<p>First name: {nameInput}</p>
+
+				{ageInput === "18+" && <p>You can drink wine!</p>}
+
+				{/* <p>First name: {nameInput}</p>
 				<p>Your age group: {ageInput}</p>
 				<p>Preferred streaming service: {streamingInput}</p>
-				<p>Preferred genres of TV shows: {genresInput}</p>
+				<p>Preferred genres of TV shows: {genresInput}</p> */}
 			</div>
 		</main>
 	);
 };
+
+// {ageInput === "18+" && <p>You can drink wine!</p>}

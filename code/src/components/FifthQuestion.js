@@ -2,7 +2,7 @@ import React from "react";
 
 const yesOrNoArray = ["Yes", "No"];
 
-export const FourthQuestion = ({ backgroundInput, onBackgroundInputChange, nextQuestion, previousQuestion, step }) => {
+export const FifthQuestion = ({ yesOrNoInput, onYesOrNoInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
 			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
@@ -10,7 +10,7 @@ export const FourthQuestion = ({ backgroundInput, onBackgroundInputChange, nextQ
 			</button>
 			<form className="form-container">
 				<p className="question-number">Question {step}</p>
-				<h2 className="question-heading">Is a background in Graphic Design valuable?</h2>
+				<h2 className="question-heading">Are you looking for a junior developer?</h2>
 				{yesOrNoArray.map((yesOrNo) => (
 					<div className="question-container">
 						<label className="radio-input" key={yesOrNo} htmlFor={yesOrNo}>
@@ -20,15 +20,15 @@ export const FourthQuestion = ({ backgroundInput, onBackgroundInputChange, nextQ
 								id={yesOrNo}
             		type="radio"
             		value={yesOrNo}
-            		onChange={onBackgroundInputChange}
-            		checked={yesOrNo === backgroundInput}
+            		onChange={onYesOrNoInputChange}
+            		checked={yesOrNo === yesOrNoInput}
           		/>
 							{yesOrNo}
 						</label>
 					</div>
 				))}
 			</form>
-			<button className="next-btn" disabled={backgroundInput === ""} onClick={nextQuestion}>
+			<button className="next-btn" disabled={yesOrNoInput === ""} onClick={nextQuestion}>
 				Next
 			</button>
 		</main>
