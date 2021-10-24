@@ -1,9 +1,6 @@
 import React from 'react';
-import QuestionThree from './QuestionThree'
-import QuestionFour from './QuestionFour'
 
-const pet = ['dog', 'cat', 'rat']
-
+const pets = ['dog', 'cat', 'rat', 'fish', 'dragon']
 
 
 const RadioOption = ({ pet, setPet, item }) => {
@@ -13,36 +10,27 @@ const RadioOption = ({ pet, setPet, item }) => {
     }
 
     return (
-        <>
-            <div>
-                <h2>Third Question</h2>
-                <p>Which animal will be your pet?</p>
-            </div>
-
-            <div>
-                 {pet.map((item) => {
-                    return (
-                        <QuestionThree
-                            pet={pet}
-                            setPet={setPet}
-                            item={item}
-                        />
-                    )
-                })}
-            </div>
-
-            <label key={item} htmlFor={item}>{item}</label>
-                <input 
-                    name="pet" 
-                    id={pet} 
-                    type="radio" 
-                    value={item}
-                    onChange={onPetChange}
-                    checked={pet === item }  
-                /> 
-        </>
-    )
-
+        <section>
+            <div className='form-container'>
+      <form className='form-question'>
+    
+        <div className='radio-button-container'>
+          {pets.map((item) => (
+            <label className='radio-option-humidity' key={item}>
+              <input
+                type='radio'
+                value={item}
+                onChange={onPetChange}
+                checked={pet === item}
+              />
+              {item}
+            </label>
+          ))}
+        </div>
+        </form>
+        </div>
+        </section>
+)
 }
-
 export default RadioOption;
+
