@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was to create a survey form in React with at least 3 questions.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+One of the problems was to only display the sixth question if the user answered "Yes" on the previous question, if not the Overview should be displayed. I made a function that handled the apperance of Overview, and then added an if/else-statement to change the onClick event.
+
+Another major issue was the error when using emojis in the drop down menu, when using aria-labels the emoji did't display and if I didn't use it the page couldn't be uploaded on Netlify. Found a solution on Stack Overflow that you could use the emojis Unicode instead.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
