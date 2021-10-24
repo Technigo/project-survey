@@ -8,6 +8,12 @@ export const FirstQuestion = ({
 }) => {
   return (
     <div className='step-container'>
+      <progress
+        className='progress-bar'
+        id='survey'
+        value='1'
+        max='6'
+      ></progress>
       <h2 className='survey-text'>Find a game based on your profile</h2>
       <label htmlFor='nameInput'>
         <h3>What's your first name?</h3>

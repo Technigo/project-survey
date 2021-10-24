@@ -10,6 +10,12 @@ export const Overview = ({
 }) => {
   return (
     <section className='step-container'>
+      <progress
+        className='progress-bar'
+        id='survey'
+        value='6'
+        max='6'
+      ></progress>
       <h2 className='survey-text'>Game Finder</h2>
       <button className='restart-button' onClick={startOver}>
         Start over

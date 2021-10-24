@@ -8,6 +8,12 @@ export const SubmitButton = ({
 }) => {
   return (
     <div className='step-container'>
+      <progress
+        className='progress-bar'
+        id='survey'
+        value='5'
+        max='6'
+      ></progress>
       <h2 className='survey-text'>Find a game based on your profile</h2>
       <h3>Are you ready {nameInput} to find a suitable game?</h3>
 

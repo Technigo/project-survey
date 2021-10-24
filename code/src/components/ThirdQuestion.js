@@ -8,6 +8,12 @@ export const ThirdQuestion = ({
 }) => {
   return (
     <div className='step-container'>
+      <progress
+        className='progress-bar'
+        id='survey'
+        value='3'
+        max='6'
+      ></progress>
       <h2 className='survey-text'>Find a game based on your profile</h2>
       <h3>How are you socially?</h3>
       <select value={socialInput} onChange={onSocialInputChange}>

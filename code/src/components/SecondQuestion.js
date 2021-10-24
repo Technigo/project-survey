@@ -9,6 +9,12 @@ export const SecondQuestion = ({
 }) => {
   return (
     <div className='step-container'>
+      <progress
+        className='progress-bar'
+        id='survey'
+        value='2'
+        max='6'
+      ></progress>
       <h2 className='survey-text'>Find a game based on your profile</h2>
       <h3>What's your mood?</h3>
       <label className='radio-wrapper'>
