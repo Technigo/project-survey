@@ -19,14 +19,18 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange, onStepBackCha
                 />
             </form>
             <div className="buttons">
-                <button onClick={onStepBackChange} href="#two" className="btn"> <span role="img" aria-label="handpointer">👈🏽</span> Go back!</button>
-                <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+                <button onClick={onStepBackChange} href="#two" className="btn">Go back!</button>
+                <button onClick={onStepChange} href="#two" className="btn">Next please!</button>
             </div>
             
         </section>
     )
 
 }
+
+// WITH EMOJIS ON BTNS
+{/* <span role="img" aria-label="handpointer">👈🏽</span>  */}
+{/* <span role="img" aria-label="handpointer">👉🏽</span> */}
 
 
 export default QuestionOne

@@ -47,8 +47,8 @@ const QuestionFive = ({selectValue, onSelect2OptionChange, onStepChange, onStepB
                 ))}
             </select>
             <div className="buttons">
-              <button onClick={onStepBackChange} href="#two" className="btn"> <span role="img" aria-label="handpointer">👈🏽</span> Go back!</button>
-              <button onClick={onStepChange} href="#two" className="btn">Next please! <span role="img" aria-label="handpointer">👉🏽</span></button>
+              <button onClick={onStepBackChange} href="#two" className="btn">Go back!</button>
+              <button onClick={onStepChange} href="#two" className="btn">Next please!</button>
            </div>
         </form>
     </section>
