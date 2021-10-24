@@ -28,10 +28,6 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepChange, onStepBackCha
 
 }
 
-// WITH EMOJIS ON BTNS
-{/* <span role="img" aria-label="handpointer">👈🏽</span>  */}
-{/* <span role="img" aria-label="handpointer">👉🏽</span> */}
-
 
 export default QuestionOne
 
