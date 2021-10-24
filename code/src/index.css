@@ -37,14 +37,13 @@ p {
   display: flex;
   flex-direction: column;
   align-items: centerx;
-  padding: 30px;
-  padding-top: 30px;
-  height: 80vh;
+  padding: 30px 30px;
+  height: 100vh;
 }
 
 .form-element-wrapper {
-  background-color: rgb(33, 34, 16);
-  margin-bottom: 20px;
+  background-color: #000;
+  margin-bottom: 30px;
   display: flex;
   flex-direction: column;
   border-radius: 5px;
@@ -58,7 +57,7 @@ p {
 
 @media only screen and (min-width: 768px) {
   .container {
-    width: 650px;
+    width: 500px;
   }
 
   h1 {
@@ -66,12 +65,12 @@ p {
   }
 
   .form-element-wrapper {
-    padding: 20px 75px;
+    padding: 20px 65px;
   }
 }
 @media only screen and (min-width: 1440px) {
   .container {
-    width: 850px;
+    width: 650px;
   }
   .form-container {
     padding-top: 35px;
@@ -83,6 +82,10 @@ p {
 @media only screen and (min-width: 1920px) {
   body {
     background-image: url(https://source.unsplash.com/random/2560x1440);
+  }
+  .form-container {
+    padding-top: 50px;
+    height: 50vh;
   }
 }
 

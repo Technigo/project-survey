@@ -24,3 +24,9 @@ select {
         padding-inline-end: 0;
     }
 }
+
+@media only screen and (min-width: 1440px) {
+    select {
+    max-width: 640px;
+    }
+}
