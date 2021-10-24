@@ -5,7 +5,10 @@ const FourthQuestion = ({ flavour, onFlavourChange, onStepChange }) => {
 		<section className="containerInfo">
 			<form>
 				<label>
-					Pick your popcorn flavour🌽
+					Pick your popcorn flavour
+					<span role="img" aria-label="corn">
+						🌽
+					</span>
 					<select
 						value={flavour}
 						onChange={(event) => onFlavourChange(event.target.value)}

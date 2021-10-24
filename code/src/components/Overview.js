@@ -14,7 +14,12 @@ const Overview = ({ nameInput, surnameInput, happiness, flavour }) => {
 				. Maybe some {flavour} popcorn will help? 🍿{' '}
 			</p>
 
-			<p>Thank you for stopping by! Hope you have a nice day 🤍</p>
+			<p>
+				Thank you for stopping by! Hope you have a nice day{' '}
+				<span role="img" aria-label="White heart">
+					🤍
+				</span>
+			</p>
 		</section>
 	);
 };
