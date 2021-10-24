@@ -1,10 +1,7 @@
 import React from "react";
 import ImageComponent from "./FirstImg";
 
-// lägg till en key till labels?
-
 const FirstQuestion = ({ radioChecked, setRadioChecked }) => {
-  //const [radioChecked, setRadiochecked] = useState("");
   return (
     <div className="container">
       <div className="contentWrapper">

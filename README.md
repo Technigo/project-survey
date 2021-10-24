@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to make a survey using components and the hook useState in React.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The survey includes a form with a text input, a select dropdown form and a form with radio buttons. I made image components for every question that each include an embedded GIF. I have made one media query for tablet sized screens and bigger, as I made a simple design I feel it works for bigger screens as well. I chose to style my survey in a global css file as the project is small, had simple styling and I already had image components for every question.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://survey-extravaganza.netlify.app/

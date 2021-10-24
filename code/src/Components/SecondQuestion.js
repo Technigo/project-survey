@@ -2,7 +2,6 @@ import React from "react";
 import ImageComponent from "Components/SecondImg";
 
 const SecondQuestion = ({ selectOption, setSelectOption }) => {
-  // const [selectOption, setSelectOption] = useState("");
   return (
     <div className="container">
       <div className="contentWrapper">

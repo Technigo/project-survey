@@ -2,7 +2,6 @@ import React from "react";
 import ImageComponent from "Components/ThirdImg";
 
 const ThirdQuestion = ({ fundamentalInput, setFundamentalInput }) => {
-  // const [fundamentalInput, setFundamentalInput] = useState("");
   return (
     <div className="container">
       <div className="contentWrapper">

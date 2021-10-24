@@ -106,8 +106,6 @@ select {
   padding: 10px;
 }
 
-/* MEDIA QUERIES HERE */
-
 /* TABLET */
 
 @media (min-width: 500px) {
