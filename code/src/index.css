@@ -15,14 +15,6 @@ body {
 .root {
 	width: 100vw;
 	height: 100vh;
-	/* background-image: linear-gradient(135deg, #0e235e, #5d3877); */
-	/* background-image: linear-gradient(135deg, #550bec, #a12626); */
-	/* background-image: linear-gradient(135deg, #432bb5, #c469e0); */
-	/* background-image: linear-gradient(135deg, #0e235e, #cb67da); */
-	/* background-image: linear-gradient(135deg, #5e3a82, #eb4a90); */
-	/* background-image: linear-gradient(135deg, #4027d5, #4a6cea); */
-	/* background-image: linear-gradient(135deg, #241da3, #3c58bd); */
-	/* background-image: linear-gradient(135deg, #201a8d, #3c58bd); */
 	background-image: linear-gradient(135deg, #30176b, #2ec1c8);
 	font-family: "Montserrat", sans-serif;
 	color: #222221;
@@ -48,8 +40,9 @@ body {
 }
 
 .overview-container {
-	border-radius: 15px;
 	padding: 30px 25px;
+	background-image: linear-gradient(135deg, #6091fa, #81f6fc);
+	height: 100vh;
 }
 
 /* Animations */
@@ -146,6 +139,16 @@ body {
 	font-weight: 700;
 	line-height: 24px;
 	margin-top: 8px;
+}
+
+.overview-heading {
+	font-size: 14px;
+	font-weight: 700;
+	/* line-height: 24px; */
+}
+
+.overview-paragraph {
+	margin-bottom: 13px;
 }
 
 /* Inputs */
