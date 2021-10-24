@@ -1,4 +1,5 @@
 import React from "react"
+import './select.css'
 
 const Select = ( {
     goal,

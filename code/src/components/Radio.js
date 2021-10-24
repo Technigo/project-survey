@@ -1,4 +1,5 @@
 import React from "react"
+import './radio.css'
 
 const Radio = ( {
     nameInput,
@@ -20,7 +21,7 @@ const Radio = ( {
                             onChange={() => onPurposeChange('business')}
                             checked={purpose === 'business'}
                         />
-                        👩🏼‍💼 Business
+                        Business 👩🏼‍💼 
                     </label>
                     <label>
                         <input
@@ -30,7 +31,7 @@ const Radio = ( {
                             onChange={() => onPurposeChange('pleasure')}
                             checked={purpose === 'pleasure'}
                         />
-                        💃🏼 Pleasure
+                        Pleasure 💃🏼 
                     </label>
                     <button className="btn" onClick={onStepChange}>ok ✓</button>
                 </div>
