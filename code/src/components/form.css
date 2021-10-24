@@ -1,0 +1,81 @@
+form {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.question-heading {
+    font-size: 24px;
+    padding-block-end: 15px;
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+label {
+    display: block;
+    flex-direction: column;
+    font-size: 20px;
+}
+
+.text-input {
+    padding: 0px 0px 6px;
+    border: none;
+    border-radius: none;
+    box-shadow: rgb(219 57 141 / 30%) 0px 1px;
+}
+
+select {
+    border: 1px solid;
+    padding-inline-start: 4px;
+}
+
+input {
+    color: #DB398D;
+}
+
+select, .text-input {
+    font-size: 20px;
+    color: #DB398D;
+    width: 100%;
+    height: 40px;
+    box-sizing: content-box;
+    outline: none;
+}
+
+select ::after {
+    color: #DB398D;
+}
+
+.element-container {
+    display: block;  
+}
+
+::placeholder {
+    color: #DB398D;
+}
+
+.btn {
+    outline: none;
+    border: 1px solid transparent;
+    background: #DB398D;
+    border-radius: 5px;
+    padding: 6px 14px;
+    color: #fff;
+    margin: 15px auto;
+    font-size: inherit;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.btn:disabled {
+    filter: opacity(.2);
+}
+
+@media only screen and (min-width: 768px) {
+    select, .text-input {
+        font-size: 22px;
+    }
+    .label {
+        font-size: 22px;
+    }
+}

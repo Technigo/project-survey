@@ -5,9 +5,69 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  color: rgb(33, 34, 16);
+  background-image: url(https://source.unsplash.com/random/1920x1080);
+  object-fit: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  width: 325px;
+  margin: 0 auto;
+}
+
+h1 {
+  font-size: 40px;
+}
+
+.lead {
+  margin-block-start: 0;
+}
+
+p {
+  font-size: 18px;
+}
+
+.form-container {
+  background: linear-gradient(rgba(117, 19, 93, 0.73),rgba(245, 246, 252, 0.52));
+  display: flex;
+  flex-direction: column;
+  align-items: centerx;
+  padding: 30px;
+  padding-top: 50px;
+  height: 85vh;
+}
+
+.form-element-wrapper {
+  background-color: #fff;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  padding: 10px 25px;
+}
+
+.question-container {
+  display: flex;
+  flex-direction: column;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    width: 650px;
+  }
+
+  .form-container {
+    padding-top: 35px;
+    padding-bottom: 20px;
+    height: 85vh;
+  }
+
+  .form-element-wrapper {
+    padding: 20px 75px;
+  }
 }
