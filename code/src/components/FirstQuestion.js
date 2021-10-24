@@ -17,6 +17,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
       <input
         id="nameInput"
         type="text"
+        placeholder="Type your name"
         value={nameInput}
         onChange={onNameInputChange}
       />

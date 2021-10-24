@@ -1,8 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   -webkit-appearance: none;
@@ -14,6 +14,7 @@ body {
     rgb(255, 20, 147),
     rgb(255, 105, 180)
   );
+  font-family: "Lilita One", cursive;
 }
 
 code {
@@ -84,14 +85,18 @@ form {
 form label {
   color: whitesmoke;
   font-weight: bold;
+  letter-spacing: 0.5px;
 }
 
 input {
+  font-family: "Lilita One", cursive;
   margin: 20px;
-  font-size: 24px;
-  padding: 5px;
+  font-size: 18px;
+  padding: 10px;
   border: none;
   border-radius: 10px;
+  color: rgb(255, 20, 147);
+  text-align: center;
 }
 
 select {
@@ -102,6 +107,7 @@ select {
   border: none;
   border-radius: 10px;
   color: rgb(255, 20, 147);
+  font-family: "Lilita One", cursive;
 }
 
 .input-radio {
@@ -147,12 +153,14 @@ input[type="radio"]:checked + span {
 }
 
 button {
+  font-family: "Lilita One", cursive;
   background: whitesmoke;
   padding: 10px;
   border: none;
   border-radius: 10px;
   font-weight: bold;
   color: rgb(255, 20, 147);
+  letter-spacing: 0.5px;
 }
 
 .overview-container {
@@ -233,7 +241,8 @@ button {
   }
 
   input {
-    font-size: 23px;
+    font-size: 18px;
+    padding: 12px;
   }
 
   form label {
