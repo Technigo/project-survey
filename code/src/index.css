@@ -201,7 +201,7 @@ button {
 
 @media (min-width: 1024px) {
   h1 {
-    font-size: 100px;
+    font-size: 90px;
   }
   h2 {
     font-size: 55px;
@@ -230,18 +230,18 @@ button {
   }
 
   input {
-    font-size: 25px;
+    font-size: 23px;
   }
 
   form label {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .intro-p {
-    font-size: 43px;
+    font-size: 41px;
   }
 
   .intro-p-brackets {
-    font-size: 20px;
+    font-size: 19px;
   }
 }
