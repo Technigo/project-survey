@@ -1,8 +1,9 @@
 import React from 'react'
 import { Heading } from 'components/Heading'
-import { Button } from 'components/Button'
+import UpArrow from 'assets/icons/up-arrow.svg'
+import 'components/submitSurvey.css'
 
-export const SubmitSurvey = ({ step, setStep, decrementStep, handleRestart }) => {
+export const SubmitSurvey = ({ setStep, decrementStep }) => {
   const handleSubmit = () => {
     setStep('end')
   }
@@ -10,14 +11,13 @@ export const SubmitSurvey = ({ step, setStep, decrementStep, handleRestart }) =>
   return (
     <>
       <Heading title={'Submit survey?'} />
-      <div className='label'>
-        <button className='button-start' onClick={handleSubmit}>
+      <div className='button-container-submit'>
+        <button className='button-submit' onClick={decrementStep}>
+          <img className='button-icon' src={UpArrow} alt='up-arrow' />
+        </button>
+        <button className='button-submit' onClick={handleSubmit}>
           Submit
         </button>
-      </div>
-      <div className='button-container'>
-        {step === 'end' && <Button text={''} type={'up'} onClick={decrementStep} />}
-        {step === 'end' && <Button text={'Reset'} onClick={handleRestart} />}
       </div>
     </>
   )

@@ -66,7 +66,7 @@ export const App = () => {
 
   return (
     <div className={colorTheme} style={{ height: '100vh' }}>
-      {step > 0 && <ProgressBar state={state} steps={steps} />}
+      {(step > 0 || step === 'submit') && <ProgressBar state={state} steps={steps} />}
       <div className={'container'}>
         {step === 0 && <StartSurvey incrementStep={incrementStep} />}
         {(step > 0 || step === 'submit') && (

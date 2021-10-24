@@ -1,0 +1,25 @@
+.button-submit {
+  min-width: 30px;
+  height: 30px;
+  border: 1px solid;
+  border-radius: 5px;
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.button-submit:first-of-type {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.button-submit:last-of-type {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.button-container-submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
