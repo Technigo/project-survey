@@ -26,7 +26,7 @@ const Summary = ({ name, drink, tagline, mentor, mentorImage }) => {
           <img className="mentorcard" alt="mentor" src={mentorImage} />
         </div>
         <Range />
-        <form className="submit-button-form">
+        <form>
           <button className="next-button" type="submit">
             Do it again?
           </button>

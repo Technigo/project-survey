@@ -1,5 +1,5 @@
 import React from "react";
-import "./bravoMentor.css";
+import "./mentor.css";
 
 const Mentors = ({
   mentor,
