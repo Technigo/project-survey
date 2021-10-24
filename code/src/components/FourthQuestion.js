@@ -28,7 +28,7 @@ const FourthQuestion = ({ moodInput, onMoodInputChange, handleSubmit }) => {
             max="100"
             id="amount"
             name="amount"
-            step="50"
+            step="100"
             value={moodInput}
             onchange={onMoodInputChange}
           />

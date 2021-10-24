@@ -21,10 +21,10 @@ const SecondQuestion = ({
         required
       >
         <option value="">My favorite thing is</option>
-        <option value="cleaning">Clean</option>
-        <option value="vacuuming">Vaccum</option>
-        <option value="dust">Dusting</option>
-        <option value="empty">Empty dish washer</option>
+        <option value="cleaning">Cleaning</option>
+        <option value="vacuuming">Vaccuming</option>
+        <option value="dusting">Dusting</option>
+        <option value="empty dish washer">Empty dish washer</option>
       </select>
       <ButtonNextPage />
     </form>

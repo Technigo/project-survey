@@ -12,10 +12,10 @@ const Summary = ({ nameInput, interestInput, ageInput, moodInput }) => {
         </p>
         <p>
           It is nice that you dont hate {interestInput} as much as the other
-          stuff, way to go on looking on the bright side of life.{" "}
+          stuff, way to go on looking on the bright side of life.
         </p>
         <p>
-          {ageInput} on your free hour and you will feel more than {moodInput}{" "}
+          {ageInput} on your free hour and you will feel more than {moodInput}
           about you know what 😜 !
         </p>
       </article>
