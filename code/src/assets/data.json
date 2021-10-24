@@ -1,13 +1,13 @@
 {
   "questions": [
     {
-      "title": "Start the survey?",
+      "title": "Skip to the end?",
       "number": 1,
       "required": true,
       "type": "radio",
       "options": [
-        { "label": "Yes", "value": "Yes", "id": "radioYes" },
-        { "label": "No", "value": "No", "id": "radioNo", "next_question": "end" }
+        { "label": "Yes", "value": "Yes", "id": "radioYes", "next_question": "submit" },
+        { "label": "No", "value": "No", "id": "radioNo" }
       ],
       "id": 1
     },
@@ -62,16 +62,15 @@
       "number": 6,
       "required": true,
       "type": "text",
-      "options": [{ "label": "Dream job", "id": "dreamJob", "placeholder": "Type your dream job" }],
+      "options": [
+        {
+          "label": "Dream job",
+          "id": "dreamJob",
+          "placeholder": "Type your dream job",
+          "next_question": "submit"
+        }
+      ],
       "id": 6
-    },
-    {
-      "title": "Finish the survey?",
-      "number": 7,
-      "required": true,
-      "type": "radio",
-      "options": [{ "label": "Yes", "value": "Yes", "id": "radioYes", "next_question": "end" }],
-      "id": 7
     }
   ]
 }

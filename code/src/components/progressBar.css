@@ -1,7 +1,10 @@
 .progress {
+  position: sticky;
+  top: 0;
+  z-index: 1;
   display: flex;
   flex-wrap: nowrap;
-  height: 3px;
+  height: 4px;
 }
 
 .bar {

@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { StartSurvey } from 'components/StartSurvey'
 import { FormWrapper } from 'components/FormWrapper'
 import { FormSummary } from 'components/FormSummary'
 import { ProgressBar } from 'components/ProgressBar'
@@ -9,9 +10,9 @@ export const App = () => {
   const initialState = { nextQuestion: 0, questions: data.questions.length, answers: [] }
 
   const [state, setState] = useState(initialState)
-  const [step, setStep] = useState(1)
-  const [steps, setSteps] = useState([1])
-  const [colorTheme, setColorTheme] = useState('white')
+  const [step, setStep] = useState(0)
+  const [steps, setSteps] = useState([0])
+  const [colorTheme, setColorTheme] = useState('blue')
 
   const handleChange = (e, nextQuestion, title, number, label, questionId, validated) => {
     const { id, value } = e.target
@@ -37,7 +38,7 @@ export const App = () => {
   const incrementStep = () => {
     let newSteps = ''
     if (step === state.questions) {
-      newSteps = 'end'
+      newSteps = 'submit'
     } else if (state.nextQuestion) {
       newSteps = state.nextQuestion
     } else {
@@ -58,22 +59,27 @@ export const App = () => {
   }
 
   const handleRestart = () => {
-    setStep(1)
+    setStep(0)
     setState(initialState)
-    setSteps([1])
+    setSteps([0])
   }
 
   return (
-    <div className={colorTheme}>
-      <ProgressBar state={state} steps={steps} />
+    <div className={colorTheme} style={{ height: window.innerHeight }}>
+      {step > 0 && <ProgressBar state={state} steps={steps} />}
       <div className={'container'}>
-        <FormWrapper
-          step={step}
-          state={state}
-          handleChange={handleChange}
-          incrementStep={incrementStep}
-          decrementStep={decrementStep}
-        />
+        {step === 0 && <StartSurvey incrementStep={incrementStep} />}
+        {(step > 0 || step === 'submit') && (
+          <FormWrapper
+            step={step}
+            setStep={setStep}
+            state={state}
+            handleChange={handleChange}
+            incrementStep={incrementStep}
+            decrementStep={decrementStep}
+            handleRestart={handleRestart}
+          />
+        )}
         {step === 'end' && (
           <FormSummary
             state={state}
