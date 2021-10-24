@@ -2,7 +2,7 @@ import React from 'react';
 
 const Overview = ({ nameInput, surnameInput, happiness, flavour }) => {
 	return (
-		<section>
+		<section className="containerInfo">
 			<h2>Thank you for your input! This is how I feel about it:</h2>
 			<p>
 				Imagine enjoying your favorite {nameInput} in {surnameInput}. What a

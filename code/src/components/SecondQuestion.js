@@ -6,7 +6,7 @@ const SecondQuestion = ({
 	onStepChange,
 }) => {
 	return (
-		<>
+		<section className="containerInfo">
 			<form>
 				<label htmlFor="surnameInput">
 					Whats the best place you've ever been to?
@@ -21,7 +21,7 @@ const SecondQuestion = ({
 					Next question
 				</button>
 			</form>
-		</>
+		</section>
 	);
 };
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 	return (
-		<>
+		<section className="containerInfo">
 			<label htmlFor="nameInput">
 				Please type your favorite cake! If you don't like cake-please type in
 				another baked good that is your favorite!
@@ -16,7 +16,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 			<button disabled={nameInput === ''} onClick={onStepChange}>
 				Next question
 			</button>
-		</>
+		</section>
 	);
 };
 
