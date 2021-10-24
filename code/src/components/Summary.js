@@ -10,8 +10,8 @@ const Summary = ( {section, enjoy, feels, options, coffee} ) => {
     <h1>Go and enjoy your coffee!</h1>
     <h2> Here are your answers:</h2>
 
-    <p className="summary-text">You {enjoy} enjoy ☕️ and feel {feels} when drinking it. You prefer your coffee {options} and you drink {coffee} cups of ☕️ a day!</p>
-
+    <p className="summary-text">You {enjoy} enjoy coffee and feel {feels} when drinking it. You prefer your coffee {options} and you drink {coffee} cups a day!</p>
+    
     </div>
     </>
     )}

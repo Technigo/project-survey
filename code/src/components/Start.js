@@ -7,7 +7,7 @@ const Start = ( {section} ) => {
     <>
     <h1>Survey of</h1>
   
-    <h2>━ Coffee habits ☕️</h2>
+    <h2>━ Coffee habits</h2>
     </>
     )}
     </>

@@ -5,7 +5,7 @@ const Options = ({setOptions, options}) => {
 
   return (
     <div className="survey-item options">
-      <label className="section-heading" htmlFor="option">How would you like your coffee ☕️?</label>
+      <label className="section-heading" htmlFor="option">How would you like your coffee?</label>
       <select onChange={(e) => {setOptions(e.target.value)}} id="option" value={options}>
         <option disabled>Choose below</option>
         <option>with milk</option>

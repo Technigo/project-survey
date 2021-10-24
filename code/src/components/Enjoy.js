@@ -7,7 +7,7 @@ const Enjoy = ({ setEnjoy }) => {
 
   return (
     <div className="survey-item enjoy">
-      <p className="section-heading">Do you enjoy coffee ☕️?</p>
+      <p className="section-heading">Do you enjoy coffee?</p>
 
       {enjoyArray.map((item) => (
         <label className="enjoy" key={item}>
