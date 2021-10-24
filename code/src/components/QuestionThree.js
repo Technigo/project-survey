@@ -48,8 +48,8 @@ const QuestionThree = ({selectValue, onSelectOptionChange, onStepChange, onStepB
             </select>
         </form>
         <div className="buttons">
-            <button onClick={onStepBackChange} href="#two" className="btn">Go back!</button>
-            <button onClick={onStepChange} href="#two" className="btn">Next please!</button>
+            <button type="submit" onClick={onStepBackChange} href="#two" className="btn">Go back!</button>
+            <button type="submit" onClick={onStepChange} href="#two" className="btn">Next please!</button>
         </div>
     </section>
     )

@@ -30,7 +30,7 @@ const Summery = ({nameInput, guestInput, selectOption, radioInput, select2Option
         </div>
       </div>
       <div class="end-button">
-        <button onClick={() => window.location.reload(false)} className="startover-btn">Let's talk some more <span role="img" aria-label="handpointer">❤️</span></button>
+        <button type="submit" onClick={() => window.location.reload(false)} className="startover-btn">Let's talk some more <span role="img" aria-label="handpointer">❤️</span></button>
       </div>
     </section>
     )

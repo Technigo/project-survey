@@ -443,7 +443,7 @@ select {
 @media (min-width: 991px) {
 
   body {
-    padding-top: 9rem;
+    padding-top: 3rem;
   }
 
   h1 {
@@ -518,6 +518,3 @@ select {
   }
   
 }
-
-
-
