@@ -38,7 +38,7 @@ const Overview = ({
         {" "}
         {pizzaInput === "yes"
           ? "In this new reality they were sent out on a very important mission - to save pizza from extinction. No one could be more perfec for this, as no one had ever loved pizza more than them. They would go to any lenghts to prevent this from happening, as it turns out even eat a cricket."
-          : "In this new reality pizza had become extinct beacuse someone had refused to eat a cricket to prevent it from happening and the world was not the same because of it. It was a little less joyful and a little less greasy."}{" "}
+          : "In this new reality pizza had become extinct beacuse someone had refused to eat a cricket to prevent it from happening and the world was not the same because of it. It was a little less joyful and a lot less greasy."}{" "}
       </p>
       <p className="overview-p">
         {" "}
