@@ -21,7 +21,7 @@ main {
 .background-img {
   background-image: url(https://images.unsplash.com/photo-1617374128851-c84e37dc9f37?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=870&q=80);
   width: 100%;
-  height: 100%;
+  height: 100vh;
   position: absolute;
   z-index: -1;
   background-position: center;
@@ -34,6 +34,7 @@ main {
   background-color: rgb(143, 143, 180);
   padding: 2rem;
   width: fit-content;
+  max-width: 668px;
   margin-right: auto;
   margin-left: auto;
   margin-top: 20vh;
@@ -130,7 +131,7 @@ main {
 
 footer {
   background-color: rgba(115, 115, 247, 0.4);
-  height: 20vh;
+  height: 15vh;
   display: flex;
   flex-direction: column;
   margin-top: auto;
@@ -141,7 +142,7 @@ footer {
   justify-content: center;
   align-items: center;
   margin: auto;
-  gap: 10px;
+  gap: 20px;
 }
 
 .logos-bottom {
@@ -149,4 +150,16 @@ footer {
   flex-direction: row;
   justify-content: center;
   color: black;
+}
+
+@media (min-width: 768px) {
+  .form, .overview {
+    max-width: 600px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .form, .overview {
+    max-width: 1000px;
+  }
 }

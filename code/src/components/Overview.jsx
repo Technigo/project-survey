@@ -7,8 +7,8 @@ const Overview = ({ alias, weapon, companion, game, restartGame }) => {
 			<h2>Your avatar:</h2>
 			<p>Alias: {alias}</p>
 			<p>Weapon: {weapon}</p>
-			<p>Compaion: {companion}</p>
-			<p>First task will be in: {game}</p>
+			<p>Companion: {companion}</p>
+			<p>First task will be: {game}</p>
 			<button
 				type="reset"
 				onClick={restartGame}

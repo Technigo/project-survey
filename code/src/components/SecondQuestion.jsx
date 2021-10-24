@@ -8,6 +8,7 @@ const SecondQuestion = ({ onQuestionBackChange, onQuestionChange, alias, onAlias
 				<h2>Choose your alias:</h2>
 			</label>
 			<input 
+				required
 				className="input"
 				id="alias" 
 				type="text" 

@@ -12,7 +12,7 @@ const FifthQuestion = ({ game, onGameChange, onQuestionBackChange, onQuestionCha
                             type="radio" 
                             id="savanna" 
                             name="game"
-                            value="savanna"
+                            value="the savanna"
                             onChange={onGameChange}
                         />
                         <img 
@@ -28,7 +28,7 @@ const FifthQuestion = ({ game, onGameChange, onQuestionBackChange, onQuestionCha
                         type="radio" 
                         id="rainforest" 
                         name="game"
-                        value="rainforest"
+                        value="the rainforest"
                         onChange={onGameChange}
                     />
                     <img 

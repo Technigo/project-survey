@@ -7,6 +7,7 @@ const FourthQuestion = ({ onQuestionBackChange, onQuestionChange, weapon, compan
 				<h2>Now, you need to choose a companion on this journey</h2>
 				<label htmlFor="companion">Who will you bring?</label>
 				<select 
+					required
 					className="dropdown"
 					name="companions" 
 					id="companion" 
