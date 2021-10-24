@@ -1,12 +1,8 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+A small survey practicing React state and controlled forms. The project consists of a few questions about coffee habits. When the user presses submit, there is a summary of the answers.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
 ## View it live
 
