@@ -12,7 +12,7 @@ These were the goals I was aiming for to fulfill:
 - There should be a submit button. When pressed your app should hide the input form and show a summary of the user's submissions.
 - Your site should follow accessibility guidelines
 
-I would focus more on styleing and to also break down the CSS into components
+I would focus more on styleing and to also break down the CSS into components.
 
 ## View it live
 
