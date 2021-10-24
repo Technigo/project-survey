@@ -37,7 +37,7 @@ code {
   padding: 30px;
   height: 100%;
   display: grid;
-  grid-gap: 4em;
+  grid-gap: 5em;
   grid-template-rows: max-content;
   justify-items: center;
 }

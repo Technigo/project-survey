@@ -1,10 +1,8 @@
 .summary {
   display: grid;
   height: fit-content;
-  margin-top: 4.5em;
   width: 19em;
   justify-content: center;
-  padding: 1.6em;
 }
 
 .italic {
