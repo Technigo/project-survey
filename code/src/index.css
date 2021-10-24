@@ -59,15 +59,14 @@ p {
   .container {
     width: 500px;
   }
-
   h1 {
     font-size: 40px;
   }
-
   .form-element-wrapper {
     padding: 20px 65px;
   }
 }
+
 @media only screen and (min-width: 1440px) {
   .container {
     width: 650px;
@@ -85,6 +84,7 @@ p {
   }
   .form-container {
     height: 75vh;
+  }
 }
 
 @media only screen and (min-width: 2560px) {
@@ -93,4 +93,3 @@ p {
     height: 50vh;
   }
 }
-
