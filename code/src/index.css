@@ -1,13 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Serif', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: rgba(82, 69, 62, 0.199);
+  background: linear-gradient(
+    0deg,
+    rgb(35, 33, 25) 0%,
+    rgb(61, 48, 6) 100%
+  );
+  background-repeat:repeat;
+  height: auto;
+  width: auto;
+  color: white;
+  font-family: 'Noto Serif', serif;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Noto Serif', serif;
+}
+
+h1,
+h2 {
+  text-align: center;
+  font-weight: 500;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: auto;
+}
+
+.summary-section,
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 960px;
+  margin: auto;
+  margin-top: 80px;
+  padding: 8px;
+}
+
+.summary-text {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.survey-item {
+  margin: 20px;
+}
+
+.options,
+.coffee {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.enjoy {
+  
+  font-size: 13px;
+  
+}
+
+.enjoy label{
+  padding: 5px;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: right;
+
+}
+
+.feels{
+  
+  font-size: 13px;
+
+}
+
+
+.feels label{
+  padding: 15px;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+
+.coffee input,
+.options select {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  align-self: center;
+  margin-top: 18px;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.button {
+  width: 160px;
+  height: 50px;
+  font-size: 16px;
+  font-weight: 500;
+  border-radius: 10px;
+  border-color: rgb(95, 80, 71);
+  color: rgb(82, 52, 8);
+  font-family: inherit;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  margin: 40px 10px;
+}
+
+
+
+@media (min-width: 768px) {
+  h1 {
+    font-size: 40px;
+  }
+  
+  h2 {
+    font-size: 25px;
+  }
+  
+  .enjoy {
+    margin-right: 15px;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+  .feels {
+    margin-right: 15px;
+    font-size: 20px;
+    padding: 5px;
+  }
+
+.section-heading {
+  font-size: 50px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.form {
+  margin-top:80px
+  }
+
+.coffee input,
+.options select {
+ 
+  height: 50px;
+  width: 400px;
+  font-size: 20px;
+  }
+
+  summary-section, .main {
+  margin-top: 200px;
+  }
+
+  .summary-text {
+  font-size: 18px;
+  line-height: 2;
+  padding: 20px 30px;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 70px;
+  }
+  
+  h2 {
+    font-size: 50px;
+  }
+  
+  .enjoy label {
+    margin-right: 15px;
+    font-size: 30px;
+}
+.section-heading {
+  font-size: 60px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.feels {
+  margin-right: 15px;
+  font-size: 30px;
+}
+
+.summary-text {
+  font-size: 25px;
+  line-height: 1.8;
+  padding:8px;
+  
+}
+.coffee input,
+.options select {
+ 
+  height: 50px;
+  width: 400px;
+  font-size: 20px;
+  
+}
 }
