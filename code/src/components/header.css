@@ -1,0 +1,9 @@
+.header {
+  background-color: rgba(151, 126, 78, 0.4);
+  color: white;
+  position: absolute;
+  font-size: 30px;
+  top: 10px;
+  padding: 20px;
+  text-shadow: 2px 2px 5px green;
+}

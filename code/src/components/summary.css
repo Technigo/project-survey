@@ -1,0 +1,33 @@
+.summSection {
+  background-image: url(../comeAsYouAre.jpg);
+  height: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 80%;
+  position: absolute;
+  top: 150px;
+}
+
+.summSection p {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.sumtext {
+  color: white;
+  position: absolute;
+  width: 100%;
+  margin: auto;
+}
+
+h2 {
+  color: rgb(249, 250, 247);
+  font-size: 30px;
+}
+
+h2,
+p {
+  background-color: rgba(60, 26, 26, 0.7);
+  flex-wrap: wrap;
+}

@@ -1,0 +1,31 @@
+button {
+  width: 100px;
+  height: 50px;
+  border-radius: 10px;
+  background: green;
+  color: #fff;
+  margin: 5px;
+  font-weight: 600;
+  box-shadow: 0 2px #999;
+}
+
+.reloadbutton {
+  z-index: 2;
+  top: 5px;
+  position: absolute;
+}
+
+button:hover {
+  background: #2df837;
+}
+
+button:active {
+  background-color: #3e8e41;
+  box-shadow: 0 5px #555;
+  transform: translate(4px);
+}
+
+button:disabled {
+  background: red;
+  color: white;
+}

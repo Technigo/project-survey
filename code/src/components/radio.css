@@ -1,0 +1,7 @@
+.radio-container {
+  display: grid;
+  grid-auto-columns: 1fr, 1fr;
+  grid-gap: 10px;
+  background-color: #6c747a;
+  padding: 5px;
+}

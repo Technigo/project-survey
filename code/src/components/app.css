@@ -1,0 +1,40 @@
+.wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+  justify-content: center;
+  padding: 20px;
+  position: relative;
+}
+
+h2 {
+  padding: 20px;
+}
+
+.survey,
+.introduction {
+  color: white;
+  position: absolute;
+  top: 250px;
+  margin: 20%;
+  background-color: rgba(38, 36, 36, 0.4);
+  margin: 20px;
+  padding: 10px;
+  max-width: 300px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+@media screen and (min-width: 768px) {
+  .wrapper {
+    padding: 20%;
+  }
+
+  .survey,
+  .introduction {
+    top: 350px;
+  }
+}
