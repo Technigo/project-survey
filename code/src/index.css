@@ -130,7 +130,7 @@ select {
 }
 
 .radio-choice-duck {
-  font-size: 55px;
+  font-size: 65px;
 }
 
 input[type="radio"] {
@@ -189,6 +189,14 @@ button {
 
   .form-container {
     margin: 100px;
+  }
+
+  .radio-choice {
+    font-size: 35px;
+  }
+
+  .radio-choice-duck {
+    font-size: 75px;
   }
 }
 
