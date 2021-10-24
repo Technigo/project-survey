@@ -9,16 +9,18 @@ select {
 select {
     font-size: 20px;
     color: #DB398D;
-    width: 100%;
     max-width: 230px;
     height: 40px;
     box-sizing: content-box;
     outline: none;
     padding-inline-start: 6px;
+    padding-inline-end: 48px;
 }
 
 @media only screen and (min-width: 768px) {
     select {
-        max-width: 100%;
+        width: 100%;
+        max-width: 440px;
+        padding-inline-end: 0;
     }
 }
