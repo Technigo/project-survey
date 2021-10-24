@@ -2,7 +2,7 @@ import React from "react";
 
 const yesOrNoArray = ["Yes", "No"];
 
-export const FifthQuestion = ({ yesOrNoInput, onYesOrNoInputChange, nextQuestion, previousQuestion, step }) => {
+export const FifthQuestion = ({ hiringInput, onHiringInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
 			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
@@ -20,15 +20,15 @@ export const FifthQuestion = ({ yesOrNoInput, onYesOrNoInputChange, nextQuestion
 								id={yesOrNo}
             		type="radio"
             		value={yesOrNo}
-            		onChange={onYesOrNoInputChange}
-            		checked={yesOrNo === yesOrNoInput}
+            		onChange={onHiringInputChange}
+            		checked={yesOrNo === hiringInput}
           		/>
 							{yesOrNo}
 						</label>
 					</div>
 				))}
 			</form>
-			<button className="next-btn" disabled={yesOrNoInput === ""} onClick={nextQuestion}>
+			<button className="next-btn" disabled={hiringInput === ""} onClick={nextQuestion}>
 				Next
 			</button>
 		</main>

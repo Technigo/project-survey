@@ -27,8 +27,8 @@ export const FirstQuestion = ({ languageInput, onLanguageInputChange, nextQuesti
 					<option className="option-input" value="Node.js">
 						Node.js
 					</option>
-					<option className="option-input" value="French">
-						French
+					<option className="option-input" value="German">
+						German
 					</option>
 				</select>
 			</form>

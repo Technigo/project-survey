@@ -13,7 +13,7 @@ const Form = () => {
 	const [frameworkInput, FrameworkInput] = useState("");
 	const [problemSolvingInput, setproblemSolvingInput] = useState("");
 	const [backgroundInput, setBackgroundInput] = useState("");
-	const [yesOrNoInput, setYesOrNoInput] = useState("");
+	const [hiringInput, setHiringInput] = useState("");
 	const [step, setStep] = useState(0);
 
 	const onLanguageInputChange = (event) => {
@@ -32,8 +32,8 @@ const Form = () => {
 		setBackgroundInput(event.target.value);
 	};
 
-	const onYesOrNoInputChange = (event) => {
-		setYesOrNoInput(event.target.value);
+	const onHiringInputChange = (event) => {
+		setHiringInput(event.target.value);
 	};
 
 	const nextQuestion = (event) => {
@@ -101,8 +101,8 @@ const Form = () => {
 		// prettier-ignore
 		return (
 	  <FifthQuestion
-			yesOrNoInput={yesOrNoInput}
-			onYesOrNoInputChange={onYesOrNoInputChange}
+			hiringInput={hiringInput}
+			onHiringInputChange={onHiringInputChange}
 			nextQuestion={nextQuestion}
 			previousQuestion={previousQuestion}
 			step={step}
@@ -124,6 +124,7 @@ const Form = () => {
 	    frameworkInput={frameworkInput}
 	    problemSolvingInput={problemSolvingInput}
 			backgroundInput={backgroundInput}
+			hiringInput={hiringInput}
 			step={step}
 	  />
     );
