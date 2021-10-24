@@ -18,19 +18,6 @@ const Form = () => {
     const [character, setCharacter] = useState('')
     const [questionIndex, setQuestionIndex] = useState(0)
 
-
-
-    // const onBackIndexChange = () => {
-    //     setQuestionIndex(questionIndex -1)
-    // }
-
-
-    console.log(size, size, size)
-    console.log(name, name, name)
-    console.log(pet, pet, pet)
-    console.log(character, character, character)
-    console.log(questionIndex)
-
     return (
         <>
             <form onSubmit={event => event.preventDefault()}>
