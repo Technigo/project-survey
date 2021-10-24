@@ -2,9 +2,11 @@ import React from "react";
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   return (
-    <container>
+    <div className="firstQ">
       <form>
-        <h2>Looking forward to finding out your Halloween personality </h2>
+        <h2 className="first-h2">
+          Looking forward to finding out your Halloween personality{" "}
+        </h2>
         <p>
           Let's start with your name
           <span role="img" aria-label="pointing-finger">
@@ -21,14 +23,14 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
             onChange={onNameInputChange}
           />
           <button className="btn" onClick={onStepChange}>
-            Next question
-            <span role="img" aria-label="pumpkin">
+            NEXT QUESTION
+            {/* <span role="img" aria-label="pumpkin">
               🎃
-            </span>
+            </span> */}
           </button>
         </div>
       </form>
-    </container>
+    </div>
   );
 };
 

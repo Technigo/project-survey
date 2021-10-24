@@ -1,27 +1,19 @@
 import React from "react";
 
-const Overview = ({
-  // onStepChange,
-  nameInput,
-  surnameInput,
-  candyInput,
-  creatureInput,
-
-  // onCreatureInputChange,
-}) => {
+const Overview = ({ nameInput, surnameInput, candyInput, creatureInput }) => {
   return (
     <div>
-      <section>
-        <h2>Your summary:</h2>
+      <section className="summary">
+        <h2 className="summary-h2">Your summary:</h2>
         <p>Name: {nameInput}</p>
         <p>Surname: {surnameInput}</p>
         <p>Favourite candy:{candyInput}</p>
         <p>
-          Favourite night creature:
+          Favourite creature:
           {creatureInput}
         </p>
         <button className="btn" onClick={() => window.location.reload(false)}>
-          Start over{" "}
+          START OVER{" "}
           <span role="img" aria-label="ghost">
             👻{" "}
           </span>{" "}

@@ -5,68 +5,45 @@ const FourthQuestion = ({
   onCreatureInputChange,
   onStepChange,
 }) => {
-  console.log(creatureInput);
   return (
-    <>
+    <div className="fourthQ">
+      <img className="bat" src="./icons/bat.svg"></img>
       <h2>What is your favourite supernatural creature? </h2>
-      <form>
-        <label>
-          <input
-            type="radio"
-            value="vampire"
-            onChange={onCreatureInputChange}
-            checked={creatureInput === "vampire"}
-          />
-          vampire
-        </label>
-        <label>
-          <input
-            type="radio"
-            value="zombie"
-            onChange={onCreatureInputChange}
-            checked={creatureInput === "zombie"}
-          />
-          zombie
-          <input
-            type="radio"
-            value="werewolf"
-            onChange={onCreatureInputChange}
-            checked={creatureInput === "werewolf"}
-          />
-          werewolf
-        </label>
+      <form className="creature-form">
+        <div className="fourth-buttons">
+          <label className="creature">
+            <input
+              type="radio"
+              value="vampire"
+              onChange={onCreatureInputChange}
+              checked={creatureInput === "vampire"}
+            />
+            vampire
+          </label>
+          <label className="creature">
+            <input
+              type="radio"
+              value="zombie"
+              onChange={onCreatureInputChange}
+              checked={creatureInput === "zombie"}
+            />
+            zombie
+          </label>
+          <label className="creature">
+            <input
+              type="radio"
+              value="werewolf"
+              onChange={onCreatureInputChange}
+              checked={creatureInput === "werewolf"}
+            />
+            werewolf
+          </label>
+        </div>
         <button className="btn" onClick={onStepChange}>
-          Overview
-          <span role="img" aria-label="pumpkin">
-            🎃
-          </span>
+          SUMMARY
         </button>
       </form>
-    </>
+    </div>
   );
 };
 export default FourthQuestion;
-
-// const creatureGroup = ["vampire", "zombie", "werewolf"];
-
-// const FourthQuestion = () => {
-//   const [creatureGroup, setCreatureGroup] = useState();
-//   return (
-//     <form>
-//       Creature:
-//       {creatureGroup.map((group) => (
-//         <label key={group}>
-//           <input
-//             type="radio"
-//             value={group}
-//             onChange={(event) => setCreatureGroup(event.target.value)}
-//             checked={creatureGroup === group}
-//           />
-//           {/* <button onClick={onStepChange}>Next question</button> */}
-//         </label>
-//       ))}
-//     </form>
-//   );
-// };
-
-// export default FourthQuestion;

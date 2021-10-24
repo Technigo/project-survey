@@ -1,19 +1,18 @@
 import React from "react";
 const ThirdQuestion = ({ candyInput, onCandyInputChange, onStepChange }) => {
-  console.log(candyInput);
   return (
-    <>
-      <h2>
+    <div className="thirdQ">
+      <h2 className="trick">
         Trick or treat!
         <span role="img" aria-label="ghost">
           👻
         </span>
       </h2>
-      <img className="svg-image" alt="candy-svg" src="./icons/candy.svg"></img>
+      <img className="candy" alt="candy-svg" src="./icons/candy.svg"></img>
       <p>Select your favourite Halloween candy</p>
-      <form>
+      <form className="form-third">
         <select
-          className="select"
+          className="select-third"
           value={candyInput}
           onChange={onCandyInputChange}
         >
@@ -23,13 +22,10 @@ const ThirdQuestion = ({ candyInput, onCandyInputChange, onStepChange }) => {
           <option value="crunchy fingers">Crunchy fingers</option>
         </select>
         <button className="btn" onClick={onStepChange}>
-          Next question
-          <span role="img" aria-label="pumpkin">
-            🎃
-          </span>
+          NEXT QUESTION
         </button>
       </form>
-    </>
+    </div>
   );
 };
 export default ThirdQuestion;
