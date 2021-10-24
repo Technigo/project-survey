@@ -110,10 +110,12 @@ textarea {
   margin-top: 0.5em;
 }
 
+/* prevent zooming in on iPhone when font-size is min 16px */
 input[type='text'],
 select,
 textarea {
   padding: 0.6em;
+  font-size: 16px;
 }
 
 /* MEDIA QUERY TABLET */
