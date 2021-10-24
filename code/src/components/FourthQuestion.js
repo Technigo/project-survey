@@ -44,8 +44,6 @@ const FourthQuestion = ({
 				</div>
 				<button 
 					disabled={gratitudeThree === ''}
-					disabled={gratitudeTwo === ''}
-					disabled={gratitudeOne === ''}
 					onClick={onStepChange} >
 					<MyArrow className="arrow pulse" />
 				</button>

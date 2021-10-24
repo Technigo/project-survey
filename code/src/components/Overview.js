@@ -11,8 +11,8 @@ const Overview = ({ nameInput, experience, mood, gratitudeOne, gratitudeTwo, gra
 				<p>This day was {experience}.<br/>Right now I feel {mood}.<br/>I'm grateful for {gratitudeOne}, {gratitudeTwo} and {gratitudeThree}.</p>
 				<MyDecorline />
 			</div>
-			<p>Thank you for practicing gratitude here today.</p>
-			<p>Welcome back anytime, {nameInput}!</p>
+			<p className="goodbye">{nameInput}, thank you<br/>for practicing gratitude here today.</p>
+			<p>See you tomorrow.</p>
 		</>
 	);
 };

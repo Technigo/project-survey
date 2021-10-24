@@ -11,13 +11,14 @@ const FirstQuestion = ({
 }) => {
 	return (
 		<>
-			<p>Welcome to</p>
-			<div className="summaryQuote">
-				<MyDecorline />
-				<h1>gratitude practice</h1>
-				<MyDecorline />
+			<div className="welcome">
+				<p>Welcome to</p>
+				<div className="summaryQuote">
+					<MyDecorline />
+					<h1>gratitude practice</h1>
+					<MyDecorline />
+				</div>
 			</div>
-			<br/>
 			<form className="formContainer">
 				<label value="nameInput">What is your name?</label>
 				<input

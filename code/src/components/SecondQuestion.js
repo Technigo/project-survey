@@ -3,12 +3,16 @@ import React from 'react';
 import { ReactComponent as MyArrow } from "../assets/arrow.svg";
 
 const today = [
+	'absorbing',
 	'amazing',
 	'calm',
-	'fun',
-	'interesting',
-	'mellow',
-	'stressful'
+	'cheerful',
+	'easy-going',
+	'intense',
+	'mundane',
+	'stressful',
+	'surprising',
+	'thought-provoking'
 ]
 
 const SecondQuestion = ({
@@ -20,13 +24,12 @@ const SecondQuestion = ({
 	return (
 		<form className="formContainer">
 			<p>Good evening {nameInput}!</p>
-			<p>Time for some reflections.</p>
 			<label value="experience">How have you experienced your day today?</label>
 			<select value={experience} onChange={event => onExperienceChange(event.target.value)}>
 				<option value="" selected disabled>It was...</option>
 				{today.map(item => {
 					return (
-						<option value={item}>{item}</option>
+						<option id={item} value={item}>{item}</option>
 					)
 				})}
 			</select>
