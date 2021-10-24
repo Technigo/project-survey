@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This project was an assignment where the goal was to create a survey using React.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Reflections
 
-## The problem
+It was difficult to plan and lay a structure for the different parts of the code. I ended up working on different parts of the survey at the same time, which in the end led to more time being consumed. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+As always, I would have liked some more time for the styling. I am proud of implementing CSS-variables to be able to style the page easier. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://week-10-project-survey.netlify.app/
