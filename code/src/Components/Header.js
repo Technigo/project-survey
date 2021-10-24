@@ -1,7 +1,6 @@
 import React from 'react';
 import './header.css';
 
-// HEADER COMPONENT
 const Header = () => {
   return (
     <header className="header">

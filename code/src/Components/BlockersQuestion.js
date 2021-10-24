@@ -7,6 +7,7 @@ const BlockersQuestion = ({
   onStepChange,
   handleShowOverview,
 }) => {
+  // function to change button text and path depending on answer
   const renderButton = () => {
     if (blockers === 'yes') {
       return (

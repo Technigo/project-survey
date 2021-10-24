@@ -22,10 +22,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url('./assets/survey-background.jpg');
-  /* background-position: 50%; */
-  /* height: 520px; */
-  /* background-position: 50%; */
-  /* width: 500px; */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -41,14 +37,13 @@ code {
   padding: 30px;
   height: 100%;
   display: grid;
-  /* grid-template-columns: auto; */
+  grid-gap: 4em;
   grid-template-rows: max-content;
   justify-items: center;
 }
 
 .form {
   display: grid;
-  margin-top: 4.5em;
 }
 
 .button {
@@ -64,7 +59,6 @@ code {
   transition: all 0.15s;
   justify-self: center;
   width: max-content;
-  /* ADDING appearance none etc*/
 }
 
 .button:hover {
@@ -122,8 +116,32 @@ textarea {
   padding: 0.6em;
 }
 
-/* DESKTOP
-background-size: cover;
-  background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed; */
+/* MEDIA QUERY TABLET */
+@media (min-width: 768px) {
+  .form-wrapper {
+    padding: 0;
+  }
+}
+
+/* MEDIA QUERY DESKTOP */
+@media (min-width: 1025px) {
+  body {
+    background-position: top;
+  }
+
+  label,
+  button {
+    font-size: 20px;
+  }
+
+  .form-wrapper {
+    grid-gap: 10%;
+  }
+}
+
+/* MEDIA QUERY LARGE DESKTOP */
+@media (min-width: 1280px) {
+  .form-wrapper {
+    grid-gap: 25%;
+  }
+}

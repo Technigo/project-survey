@@ -8,4 +8,6 @@ One of the problems was to only display the sixth question if the user answered 
 
 Another major issue was the error when using emojis in the drop down menu, when using aria-labels the emoji did't display and if I didn't use it the page couldn't be uploaded on Netlify. Found a solution on Stack Overflow that you could use the emojis Unicode instead.
 
+If I had more time with this project I would have added a start page, a footer and make it possible to post the overview in a slack channel.
+
 ## View it live

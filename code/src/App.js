@@ -1,5 +1,4 @@
 import React from 'react';
-//ADD PREVENT DEFAULT?
 import Form from './Components/Form';
 import Header from 'Components/Header';
 

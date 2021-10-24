@@ -47,11 +47,7 @@ export const Form = () => {
     window.location.reload(false);
   };
 
-  // Version 1
   return (
-    // add first start page here
-
-    // Add a button to start the questions
     <>
       {showOverview ? (
         <Overview

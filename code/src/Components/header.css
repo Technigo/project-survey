@@ -1,7 +1,5 @@
 .header {
   width: 85%;
-  /* height: 150px;
-  padding: 0 0 4em; */
   display: flex;
   justify-content: center;
 }
@@ -13,6 +11,19 @@
   margin: revert;
   width: fit-content;
   display: grid;
-  /* align-items: center;
-  justify-items: center; */
+}
+
+/* MEDIA QUERY TABLET */
+@media (min-width: 768px) {
+  .header h1 {
+    font-size: 3.2em;
+  }
+}
+
+/* MEDIA QUERY DESKTOP */
+@media (min-width: 1025px) {
+  .header h1 {
+    font-size: 6em;
+    margin: 0.3em;
+  }
 }

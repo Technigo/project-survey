@@ -8,7 +8,7 @@ const DoneQuestion = ({ doneInput, onDoneInputChange, onStepChange }) => {
         <textarea
           id="doneInput"
           rows="4"
-          cols="50"
+          cols="30"
           value={doneInput}
           onChange={onDoneInputChange}
           placeholder="Describe what you have been doing since last standup"
