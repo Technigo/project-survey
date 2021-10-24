@@ -41,7 +41,8 @@ body {
 
 .overview-container {
 	padding: 30px 25px;
-	background-image: linear-gradient(135deg, #6091fa, #81f6fc);
+	/* background-image: linear-gradient(135deg, #6091fa, #81f6fc); */
+	background-color: #ffffff;
 	height: 100vh;
 }
 
