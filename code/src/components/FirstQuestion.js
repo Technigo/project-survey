@@ -24,9 +24,6 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
           />
           <button className="btn" onClick={onStepChange}>
             NEXT QUESTION
-            {/* <span role="img" aria-label="pumpkin">
-              🎃
-            </span> */}
           </button>
         </div>
       </form>
