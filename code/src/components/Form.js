@@ -141,6 +141,13 @@ const Form = () => {
         )}
       </form>
       <div className="buttons">
+        {step > 1 && step <= 8 && (
+          <Button
+            buttonType="button"
+            buttonText="Back"
+            whenClicked={onStepChange}
+          />
+        )}
         {step !== 0 && step <= 7 && (
           <Button
             buttonType="button"
@@ -153,13 +160,6 @@ const Form = () => {
             buttonType="button"
             buttonText="Submit"
             whenClicked={onSubmission}
-          />
-        )}
-        {step > 1 && step <= 8 && (
-          <Button
-            buttonType="button"
-            buttonText="Back"
-            whenClicked={onStepChange}
           />
         )}
       </div>
