@@ -3,7 +3,7 @@ import './fifthQuestion.css';
 
 const FifthQuestionMore = ({ whatsMissing, onWhatsMissingChange }) => {
   return (
-    <div className="fifthQuestion">
+    <div className="fifth-question">
       <p className="question">
         5{' '}
         <span>
@@ -13,7 +13,7 @@ const FifthQuestionMore = ({ whatsMissing, onWhatsMissingChange }) => {
       </p>
       <div>
         <input
-          className="whatsMissing"
+          className="whats-missing"
           type="Text"
           placeholder="Type your answer here..."
           value={whatsMissing}

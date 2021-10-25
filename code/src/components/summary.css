@@ -1,0 +1,11 @@
+.summary {
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+}
+
+.evaluation {
+  margin: 10px 0;
+  border: 1px solid #644e02;
+  padding: 10px;
+}

@@ -9,7 +9,7 @@ const Start = ({ onStepChange }) => {
     <div className="start">
       <h2> What do you think of our app?</h2>
       <p>Please help us improve by completing this short survey</p>
-      <div className="startButton">
+      <div className="start-button">
         <Button
           buttonType="button"
           buttonText="Start"

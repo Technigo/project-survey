@@ -6,7 +6,7 @@ const SeventhQuestionRecommend = ({
   onRecommendationChange,
 }) => {
   return (
-    <div className="seventhQuestionRecommend">
+    <div className="seventh-question-recommend">
       <p className="question">
         7{' '}
         <span>
@@ -16,7 +16,7 @@ const SeventhQuestionRecommend = ({
         recommend it?
       </p>
       <div className="recommend">
-        <label className="recommendLabel">
+        <label className="recommend-label">
           <input
             type="radio"
             name="yes"
@@ -26,7 +26,7 @@ const SeventhQuestionRecommend = ({
           Yes
         </label>
 
-        <label className="recommendLabel">
+        <label className="recommend-label">
           <input
             type="radio"
             name="no"

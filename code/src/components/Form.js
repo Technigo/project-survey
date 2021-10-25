@@ -22,7 +22,7 @@ const Form = () => {
   const [rating, setRating] = useState(1);
   const [whatsMissing, setWhatsMissing] = useState('');
   const [myReason, setMyReason] = useState('');
-  const [recommend, setRecommendation]= useState("")
+  const [recommend, setRecommendation] = useState('');
 
   const whatYouLike = ['Features', 'Ease of Use', 'Design', 'Content'];
   const [checkedState, setCheckedState] = useState(
@@ -31,9 +31,8 @@ const Form = () => {
   const [selectedOnes, updateSelectedOnes] = useState([]);
 
   const onRecommendationChange = (event) => {
-    
-    setRecommendation(event.target.value)
-  }
+    setRecommendation(event.target.value);
+  };
 
   const handleOnChange = (position) => {
     const updatedCheckedState = checkedState.map((item, index) =>
@@ -71,15 +70,15 @@ const Form = () => {
   };
 
   const onEaseChange = (event) => {
-    console.log('range1', event.target.value);
+   
     setEaseRange(event.target.value);
   };
   const onPerformanceChange = (event) => {
-    console.log('range2', event.target.value);
+   
     setPerformanceRange(event.target.value);
   };
   return (
-    <div className="mainForm">
+    <div className="main-form">
       <form>
         {step === 0 && <Start onStepChange={onStepChange} />}
         {step === 1 && (
@@ -138,11 +137,6 @@ const Form = () => {
               myReason={myReason}
               recommend={recommend}
             />
-            <Button
-              buttonType="button"
-              buttonText="Submit"
-              whenClicked={onSubmission}
-            />
           </>
         )}
       </form>
@@ -152,6 +146,13 @@ const Form = () => {
             buttonType="button"
             buttonText="OK"
             whenClicked={onStepChange}
+          />
+        )}
+        {step === 8 && (
+          <Button
+            buttonType="button"
+            buttonText="Submit"
+            whenClicked={onSubmission}
           />
         )}
         {step > 1 && step <= 8 && (

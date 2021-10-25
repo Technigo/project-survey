@@ -6,7 +6,7 @@ const Button = ({ buttonType, buttonText, whenClicked }) => {
     <>
       {buttonType === 'button' && (
         <button
-          className="customButton"
+          className="custom-button"
           type={buttonType}
           onClick={whenClicked}
         >
@@ -15,7 +15,7 @@ const Button = ({ buttonType, buttonText, whenClicked }) => {
       )}
       {buttonType === 'submit' && (
         <button
-          className="customButton"
+          className="custom-button"
           type={buttonType}
           onClick={whenClicked}
         >

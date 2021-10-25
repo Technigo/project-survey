@@ -5,7 +5,7 @@ const FourthQuestionLike = ({ whatYouLike, checkedState, handleOnChange }) => {
 
   
   return (
-    <div className="fourthQuestion">
+    <div className="fourth-question">
       <p className="question">
         4{' '}
         <span>

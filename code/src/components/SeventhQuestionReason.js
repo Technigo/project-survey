@@ -7,7 +7,7 @@ const SeventhQuestionReason = ({
   onMyReasonChange,
 }) => {
   return (
-    <div className="seventhQuestionReason">
+    <div className="seventh-questionReason">
       <p className="question">
         7{' '}
         <span>

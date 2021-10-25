@@ -5,7 +5,7 @@ const FirstQuestionRating = ({rating, onSetRating}) => {
 
   const [hover, setHover] = useState(0);
   return (
-    <div className="firstQuestion">
+    <div className="first-question">
       <p className="question">
         1{' '}
         <span>
@@ -13,7 +13,7 @@ const FirstQuestionRating = ({rating, onSetRating}) => {
         </span>{' '}
         How would you rate the app overall?
       </p>
-      <div className="starRating">
+      <div className="star-rating">
         {[...Array(5)].map((star, index) => {
           index += 1;
           return (
