@@ -13,10 +13,12 @@ const SecondQuestionAppUse = ({ usage, onUsageChange }) => {
       </p>
       <select
         className="app-usage"
-        defaultValue={usage}
+        defaultValue="Type or select an option..."
         onChange={(event) => onUsageChange(event.target.value)}
       >
-        <option selected >Type or select an option ...</option>
+        <option value="Type or select an option..." disabled>
+          Type or select an option...
+        </option>
         <option value="Multiple times a day">Multiple times a day</option>
         <option value="Once a day">Once a day</option>
         <option value="Couple of times a week">Couple of times a week</option>

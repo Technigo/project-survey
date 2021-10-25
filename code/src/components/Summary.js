@@ -21,13 +21,14 @@ const Summary = ({
           </span>{' '}
           You have given our app {rating} stars.
         </p>
-        <p>
-          <span>
-            <b>&#x2192;</b>
-          </span>{' '}
-          You used our app "{usage}".
-        </p>
-
+        {usage !== 'Type or select an option...' && (
+          <p>
+            <span>
+              <b>&#x2192;</b>
+            </span>{' '}
+            You used our app "{usage}".
+          </p>
+        )}
         {easeRange <= 1 && (
           <p>
             {' '}
@@ -69,14 +70,15 @@ const Summary = ({
             );
           })}
         </p>
-        <p>
-          {' '}
-          <span>
-            <b>&#x2192;</b>
-          </span>{' '}
-          You also wants to have "{whatsMissing}" in our app.
-        </p>
-
+        {whatsMissing !== '' && (
+          <p>
+            {' '}
+            <span>
+              <b>&#x2192;</b>
+            </span>{' '}
+            You also wants to have "{whatsMissing}" in our app.
+          </p>
+        )}
         {performanceRange <= 1 && (
           <p>
             {' '}

@@ -13,6 +13,7 @@ const FifthQuestionMore = ({ whatsMissing, onWhatsMissingChange }) => {
       </p>
       <div>
         <input
+          
           className="whats-missing"
           type="Text"
           placeholder="Type your answer here..."
