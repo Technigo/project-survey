@@ -75,6 +75,11 @@
   outline: #8a083c auto 2px;
 }
 
+.radio-button:checked {
+  background-color: #344b5b;
+  border: 2px solid #8a083c;
+}
+
 /* TABLET VERSION */
 
 @media (min-width: 768px) {
@@ -117,12 +122,5 @@
 
   .food-title {
     font-size: 25px;
-  }
-
-  /* -- Radio button -- */
-
-  .radio-button:checked {
-    background-color: #344b5b;
-    border: 2px solid #8a083c;
   }
 }

@@ -1,8 +1,8 @@
-# Technigo React Starter App
+# Project Restaurant Survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The project is a survey page created using React. It has different input types, multiple components and uses states.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+The project was quite straight foward and I could solve it's issues by fixing the error messages and using Stack Overflow.
 
 ## View it live
 

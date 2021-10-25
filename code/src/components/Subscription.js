@@ -26,7 +26,7 @@ const Subscription = ({
       <div className="button-wrapper">
         <button onClick={onPreviousStepChange}>Previous question</button>
         <button disabled={subscriptionInput === ""} onClick={onStepChange}>
-          Next question
+          Submit
         </button>
       </div>
     </div>
