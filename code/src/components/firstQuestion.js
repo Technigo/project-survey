@@ -5,7 +5,9 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   console.log(nameInput);
   return (
     <form className="question-container">
-      <label htmlFor="nameInput"><p className="question">What's your name?</p></label>
+      <label htmlFor="nameInput">
+        <p className="question">What's your name?</p>
+      </label>
       <input
         className="question-input"
         id="nameInput"

@@ -9,7 +9,9 @@ const SecondQuestion = ({
   console.log(surnameInput);
   return (
     <form className="question-container">
-      <label htmlFor="surnameInput"><p className="question">What's your surname?</p></label>
+      <label htmlFor="surnameInput">
+        <p className="question">What's your surname?</p>
+      </label>
       <input
         className="question-input"
         id="surnameInput"
