@@ -1,7 +1,9 @@
 import React from 'react';
 import './fourthquestion.css';
 
-const FourthQuestionLike = () => {
+const FourthQuestionLike = ({ whatYouLike, checkedState, handleOnChange }) => {
+
+  
   return (
     <div className="fourthQuestion">
       <p className="question">
@@ -11,23 +13,29 @@ const FourthQuestionLike = () => {
         </span>{' '}
         What do you like most about the app?
       </p>
-      <div className="checkbox">
-        <span>
-          <input type="checkbox" id="features" />
-          <label htmlFor="features"> Features</label>
-        </span>
-        <span>
-          <input type="checkbox" id="ease" />
-          <label htmlFor="ease"> Ease of Use</label>
-        </span>
-        <span>
-          <input type="checkbox" id="design" />
-          <label htmlFor="design"> Design</label>
-        </span>
-        <span>
-          <input type="checkbox" id="content" />
-          <label htmlFor="content"> Content</label>
-        </span>
+      
+      <div className="what-you-like">
+        <ul className="checkbox-list">
+          {whatYouLike.map((name, index) => {
+            return (
+              <li key={index}>
+                <div className="checkbox-list-item">
+                  <div className="left-section">
+                    <input
+                      type="checkbox"
+                      id={`custom-checkbox-${index}`}
+                      name={name}
+                      value={name}
+                      checked={checkedState[index]}
+                      onChange={() => handleOnChange(index)}
+                    />
+                    <label htmlFor={`custom-checkbox-${index}`}>{name}</label>
+                  </div>
+                </div>
+              </li>
+            );
+          })}
+        </ul>
       </div>
     </div>
   );

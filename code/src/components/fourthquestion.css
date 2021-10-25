@@ -2,7 +2,29 @@
   width: 100%;
 }
 
-.checkbox {
+.checkbox-list {
+  list-style: none;
+  padding: 0;
+}
+
+.checkbox-list-item {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
+
+
+.checkbox-list li {
+  margin-bottom: 0.5rem;
+}
+
+.checkbox-list-item label {
+  vertical-align: text-bottom;
+  margin-left: 0.2rem;
+}
+.left-section{
+
+    margin: 0 8rem;
+    text-align: left;
+}
+

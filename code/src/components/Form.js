@@ -10,7 +10,7 @@ import SeventhQuestionReason from './SeventhQuestionReason';
 import SeventhQuestionRecommend from './SeventhQuestionRecommend';
 import Summary from './Summary';
 import Button from './Button';
-import EndPage from './EndPage';
+
 //Style //
 import './form.css';
 
@@ -21,10 +21,30 @@ const Form = () => {
   const [performanceRange, setPerformanceRange] = useState(0);
   const [rating, setRating] = useState(1);
 
-  const onSubmission = () => {
-    return <EndPage />;
+  const whatYouLike = ['Features', 'Ease of Use', 'Design', 'Content'];
+  const [checkedState, setCheckedState] = useState(
+    new Array(whatYouLike.length).fill(false)
+  );
+  const [selectedOnes, updateSelectedOnes] = useState([])
+  
+  const handleOnChange = (position) => {
+    const updatedCheckedState = checkedState.map((item, index) => 
+      index === position ? !item : item
+    );
+    setCheckedState(updatedCheckedState);
+
+    const youLiked = updatedCheckedState.map((item, index) => 
+
+      item=== true ?  whatYouLike[index] : item
+      
+    );
+
+    updateSelectedOnes(youLiked);
   };
 
+
+
+  const onSubmission = () => {};
   const onStepChange = (event) => {
     event.target.innerText === 'Back' && setStep(step - 1);
     (event.target.innerText === 'OK' || event.target.innerText === 'Start') &&
@@ -63,7 +83,13 @@ const Form = () => {
             onRangeChange={onEaseChange}
           />
         )}
-        {step === 4 && <FourthQuestionLike />}
+        {step === 4 && (
+          <FourthQuestionLike
+            whatYouLike={whatYouLike}
+            checkedState={checkedState}
+            handleOnChange={handleOnChange}
+          />
+        )}
         {step === 5 && (
           <FifthQuestionMore textInput="Type your answer here..." />
         )}
@@ -87,7 +113,13 @@ const Form = () => {
         )}
         {step === 8 && (
           <>
-            <Summary rating={rating} />
+            <Summary
+              rating={rating}
+              usage={usage}
+              easeRange={easeRange}
+              checkedState={selectedOnes}
+              performanceRange={performanceRange}
+            />
             <Button
               buttonType="button"
               buttonText="Submit"
