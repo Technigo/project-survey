@@ -1,21 +1,18 @@
 
-/* Desktop version */
-@media (min-width: 1024px) {
+/* mobile version */
+@media (max-width:767px) {
 
 body {
   margin: 0;
   font-family: 'Zen Kurenaido', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 50em;
+  height: 500px;
   background-image: url("./assets/main\ photo.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  cursor: default;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 code {
@@ -64,11 +61,222 @@ p {
   font-size: 20px;
   font-weight: 300;
 }
+
+.back-button, .next-button{
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
 }
 
-@media (min-width: 769px) {
+.back-button:hover,
+.back-button:focus {
+  background-color: #F082AC;
+}
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
   
+body {
+  margin: 0;
+  font-family: 'Zen Kurenaido', sans-serif;
+  height: 1000px;
+  background-image: url("./assets/main\ photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-@media (min-width: 400px) {
+code {
+font-family: 'Zen Kurenaido', sans-serif;
+color: white;
+}
+
+h1 {
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 80px;
+  font-weight: 200;
+  margin:0;
+}
+
+h2 {
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.intro-page, .name-page,.name-content, .size-page, .pet-page, .character-page, .summary-page {
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-option-pet{
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 40px;
+  font-weight: 300;
+}
+
+.back-button, .next-button{
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background-color: #F082AC;
+}
+}
+
+@media (min-width: 1024px) {
+  
+body {
+  margin: 0;
+  font-family: 'Zen Kurenaido', sans-serif;
+  height: 1000px;
+  background-image: url("./assets/main\ photo.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+code {
+font-family: 'Zen Kurenaido', sans-serif;
+color: white;
+}
+
+h1 {
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 100px;
+  font-weight: 200;
+  margin: 0;
+}
+
+h2 {
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 70px;
+  font-weight: 300;
+}
+
+p {
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 50px;
+  font-weight: 300;
+}
+
+.intro-page, .name-page,.name-content, .size-page, .pet-page, .character-page, .summary-page {
+  padding: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-button-container{
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.radio-option-pet{
+  font-family: 'Zen Kurenaido', sans-serif;
+  color: white;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+
+.back-button, .next-button{
+  background-color: #EA4C89;
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  height: 40px;
+  line-height: 20px;
+  list-style: none;
+  margin: 0;
+  outline: none;
+  padding: 10px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  transition: color 100ms;
+  vertical-align: baseline;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.back-button:hover,
+.back-button:focus {
+  background-color: #F082AC;
+}
 }
