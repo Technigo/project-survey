@@ -9,12 +9,12 @@
 
 .starRating {
   display: flex;
-  padding-left:100px;
+  padding-left:15px;
 }
 
 .star{
 
-    margin-right:25px;
+    margin-right:10px;
     width: 32px;
     height: 32px;
     font-size: 48px;

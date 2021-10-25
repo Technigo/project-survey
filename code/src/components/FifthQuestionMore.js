@@ -1,9 +1,9 @@
 import React from 'react';
+import './fifthQuestion.css';
 
-            
-const FifthQuestionMore = ({whatsMissing, onWhatsMissingChange}) => {
+const FifthQuestionMore = ({ whatsMissing, onWhatsMissingChange }) => {
   return (
-    <div>
+    <div className="fifthQuestion">
       <p className="question">
         5{' '}
         <span>
@@ -13,6 +13,7 @@ const FifthQuestionMore = ({whatsMissing, onWhatsMissingChange}) => {
       </p>
       <div>
         <input
+          className="whatsMissing"
           type="Text"
           placeholder="Type your answer here..."
           value={whatsMissing}

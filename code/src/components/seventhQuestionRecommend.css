@@ -1,0 +1,11 @@
+.recommend {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 15px;
+}
+
+.recommendLabel {
+  cursor: pointer;
+  margin: 10px;
+}

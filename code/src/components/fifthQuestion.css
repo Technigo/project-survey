@@ -1,0 +1,27 @@
+.fifthQuestion {
+  width: 100%;
+  color: #644e02;
+}
+.question {
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
+.whatsMissing {
+  font-size: 14px;
+  margin: 30px 0;
+  height: 40px;
+  width: 80%;
+  border: 0;
+  border-bottom: #644e02 1px solid;
+  background: transparent;
+  padding: 5px;
+}
+
+.whatsMissing:focus {
+  outline: none;
+  border-bottom: #bb561f 3px solid;
+  background-color: rgb(223, 223, 223);
+  border-radius: 5px;
+}

@@ -1,4 +1,5 @@
 import React from 'react';
+import './seventhQuestionReason.css'
 
 const SeventhQuestionReason = ({
   myReason,
@@ -6,7 +7,7 @@ const SeventhQuestionReason = ({
   onMyReasonChange,
 }) => {
   return (
-    <div>
+    <div className="seventhQuestionReason">
       <p className="question">
         7{' '}
         <span>
@@ -16,6 +17,7 @@ const SeventhQuestionReason = ({
       </p>
       <div>
         <input
+          className="reason"
           type="Text"
           placeholder="Type your answer here..."
           value={myReason}

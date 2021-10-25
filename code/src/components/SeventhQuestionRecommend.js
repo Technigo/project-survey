@@ -1,11 +1,12 @@
 import React from 'react';
+import './seventhQuestionRecommend.css'
 
 const SeventhQuestionRecommend = ({
   performanceRange,
   onRecommendationChange,
 }) => {
   return (
-    <div>
+    <div className="seventhQuestionRecommend">
       <p className="question">
         7{' '}
         <span>
@@ -14,8 +15,8 @@ const SeventhQuestionRecommend = ({
         You have rated its performance as {performanceRange}, would you
         recommend it?
       </p>
-      <div>
-        <label className="recommend">
+      <div className="recommend">
+        <label className="recommendLabel">
           <input
             type="radio"
             name="yes"
@@ -25,7 +26,7 @@ const SeventhQuestionRecommend = ({
           Yes
         </label>
 
-        <label className="recommend">
+        <label className="recommendLabel">
           <input
             type="radio"
             name="no"

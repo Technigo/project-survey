@@ -14,3 +14,22 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.wrapper {
+  width: 70%;
+  max-width: 450;
+  margin: 0 auto;
+  padding-top: 100px;
+  color: white;
+}
+
+@media only screen and (min-width: 768px) {
+  .wrapper {
+    max-width: 450px;
+    margin: 0 auto;
+    padding-top: 200px;
+    height: 812px;
+  }
+}
+
