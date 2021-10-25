@@ -2,7 +2,7 @@ import React from "react"
 
 const Summary = ({
   nameInput,
-  ageInput,
+  timeInput,
   locationInput,
   checkboxGroup,
   colorInput,
@@ -25,7 +25,7 @@ const Summary = ({
           <span role="img" aria-label="calender">
             📆
           </span>{" "}
-          You will stay there {ageInput} !
+          You will stay there {timeInput}.
         </h3>
         <h3>
           <span role="img" aria-label="astrounot">

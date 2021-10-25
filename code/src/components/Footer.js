@@ -5,9 +5,8 @@ export const Footer = () => {
     <footer>
       <h4>
         {" "}
-        Developed and Designed by Pinar Demirel 2021
+        Developed and Designed by Pinar Demirel 2021{" "}
         <a href="https://github.com/pdetli" target="blank">
-          {" "}
           <i className="fa fa-github"></i>
         </a>
       </h4>

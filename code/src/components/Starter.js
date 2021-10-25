@@ -4,7 +4,7 @@ const Starter = ({ onNextQuestionChange }) => {
   return (
     <section className="starter">
       <h1 className="welcome-text">
-        Apply now for a free trip to the moon{" "}
+        Apply for a free trip to the moon{" "}
         <span role="img" aria-label="rocket">
           🚀
         </span>

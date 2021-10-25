@@ -16,7 +16,7 @@ const Form = () => {
 
   const [nameInput, setNameInput] = useState("")
   const [locationInput, setLocationInput] = useState()
-  const [ageInput, setAgeInput] = useState([])
+  const [timeInput, setTimeInput] = useState([])
   const [step, setStep] = useState(0)
   const [checkboxGroup, setCheckboxGroup] = useState([])
   const [colorInput, setColorInput] = useState()
@@ -28,8 +28,8 @@ const Form = () => {
     setNameInput(event.target.value)
   }
   // This function stores the answer from the second question (radio input)
-  const onAgeInputChange = (event) => {
-    setAgeInput(event.target.value)
+  const onTimeInputChange = (event) => {
+    setTimeInput(event.target.value)
   }
 
   // This function stores the answer from the third question (select input)
@@ -88,8 +88,8 @@ const Form = () => {
         {/* SecondQuestion */}
         {step === 2 && (
           <SecondQuestion
-            ageInput={ageInput}
-            onAgeInputChange={onAgeInputChange}
+            timeInput={timeInput}
+            onTimeInputChange={onTimeInputChange}
             onNextQuestionChange={onNextQuestionChange}
             onPreviousQuestionChange={onPreviousQuestionChange}
           />
@@ -127,12 +127,12 @@ const Form = () => {
           </section>
         )}
 
-        {/* Output Page*/}
+        {/* Output Ptime*/}
         {step === 6 && (
           <Summary
             nameInput={nameInput}
             locationInput={locationInput}
-            ageInput={ageInput}
+            timeInput={timeInput}
             checkboxGroup={checkboxGroup}
             colorInput={colorInput}
             onNextQuestionChange={onNextQuestionChange}
