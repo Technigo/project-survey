@@ -4,7 +4,7 @@ const FourthQuestion = ({ emailInput, onEmailInputChange, onStepChange }) => {
 
   return (
     <form>
-    <label htmlFor="emailInput">Best e-mail address for you?</label>
+    <label htmlFor="emailInput">4 -&gt; Best e-mail address for you?</label>
       <input 
       id="emailInput" 
       type="text" 

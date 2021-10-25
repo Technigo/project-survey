@@ -7,22 +7,22 @@ import Summary from './Summary'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('') // state property called nameInput
-  const [ageInput, setAgeInput] = useState('age') // state property called surnameInput
-  const [activityInput, setActivityInput] = useState('tutoring') // state property called surnameInput
-  const [emailInput, setEmailInput] = useState('') // state property called surnameInput
+  const [activityInput, setActivityInput] = useState('tutoring') // state property
+  const [hearAboutInput, setHearAboutInput] = useState('searchengine') // state property
+  const [emailInput, setEmailInput] = useState('') // state property
   const [step, setStep] = useState(1)
-  const [showResult, setShowResult] = useState(false)
+  // const [showResult, setShowResult] = useState(false)
 
   const onNameInputChange = (event) => { // parent component that delegates the logic to its children, delegates its action to its children.
     setNameInput(event.target.value)
   }
 
-  const onAgeInputChange = (event) => {
-    setAgeInput(event.target.value)
+  const onHearAboutInputChange = (hearabout) => {
+    setHearAboutInput(hearabout)
   }
 
-  const onActivityInputChange = (event) => {
-    setActivityInput(event.target.value)
+  const onActivityInputChange = (activity) => {
+    setActivityInput(activity)
   }
   
   const onEmailInputChange = (event) => {
@@ -34,7 +34,7 @@ const Form = () => {
   }
 
   return (
-    <div>
+    <div className='wrapper'>
       {step === 1 && (
         <FirstQuestion   
           nameInput={nameInput}
@@ -44,21 +44,21 @@ const Form = () => {
       )}
       {step === 2 && (
         <SecondQuestion
-          age={ageInput}
-          onAgeInputChange={onAgeInputChange}
+          activityInput={activityInput}
+          onActivityInputChange={onActivityInputChange}
           onStepChange={onStepChange} 
         />
       )}
       {step === 3 && (
         <ThirdQuestion
-          activity={activityInput}
-          onActivityInputChange={onActivityInputChange}
+          hearAbout={hearAboutInput}
+          onHearAboutInputChange={onHearAboutInputChange}
           onStepChange={onStepChange} 
         />
       )}
       {step === 4 && (
         <FourthQuestion
-          email={emailInput}
+          emailInput={emailInput}
           onEmailInputChange={onEmailInputChange}
           onStepChange={onStepChange} 
         />
@@ -66,9 +66,9 @@ const Form = () => {
       {step === 5 && (
         <Summary 
           nameInput={nameInput} 
-          ageInput={ageInput}
-          activity={activityInput}
-          email={emailInput}
+          activityInput={activityInput}
+          hearAboutInput={hearAboutInput}
+          emailInput={emailInput}
         />
       )}
     </div>

@@ -1,18 +1,18 @@
 import React from 'react'
 
 const ThirdQuestion = ({
-	ageInput,
-	onAgeInputChange,
+	hearAboutInput,
+	onHearAboutInputChange,
 	onStepChange,
 }) => {
   return (
     <form>
       <label>
-        <p>How did you hear about us?</p>
+        <p>3 -&gt; How did you hear about us?</p>
         <input
           type="radio"
           value="searchengine"
-          onChange={() => onAgeInputChange('')}
+          onChange={() => onHearAboutInputChange('Search engine')}
         />
         <span>Search engine (Google, Yahoo, etc.)</span>
       </label>
@@ -21,7 +21,7 @@ const ThirdQuestion = ({
         <input
           type="radio"
           value="socialmedia"
-          onChange={() => onAgeInputChange('')}
+          onChange={() => onHearAboutInputChange('Social media')}
         />
         <span>Social media</span>
       </label>
@@ -30,7 +30,7 @@ const ThirdQuestion = ({
         <input
           type="radio"
           value="friend"
-          onChange={() => onAgeInputChange('')}
+          onChange={() => onHearAboutInputChange('Recommended by a friend or colleague')}
         />
          <span>Recommended by friend or colleague</span>
       </label>
@@ -39,10 +39,11 @@ const ThirdQuestion = ({
         <input
           type="radio"
           value="other"
-          onChange={() => onAgeInputChange('')}
+          onChange={() => onHearAboutInputChange('Other')}
         />
          <span>Other</span>
       </label>
+      <button onClick={onStepChange}>Continue</button>
      </form>
   )
 }

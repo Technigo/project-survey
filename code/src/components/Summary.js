@@ -1,14 +1,13 @@
 import React from 'react'
 
-const Summary = ({ nameInput, ageInput, activityInput, emailInput }) => {
+const Summary = ({ nameInput, activityInput, hearAboutInput, emailInput }) => {
   return (
     <section>
-    <h2>Thank you for showing interest. Your information was sent perfectly. We will get back to you as soon as possible. </h2>
-    <p>Name : {nameInput}</p>
-    <p>Age : {ageInput}</p>
+    <h2>Thank you for showing interest. Your information was sent perfectly. </h2>
+    <p>Name: {nameInput}</p>
     <p>Volunteer activities: {activityInput}</p>
+    <p>Where did you hear about us? : {hearAboutInput}</p>
     <p>E-mail: {emailInput} </p>
-
     </section>
   )
 }

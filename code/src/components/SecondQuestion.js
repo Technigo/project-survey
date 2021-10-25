@@ -1,18 +1,22 @@
 import React from 'react'
 
-const SecondQuestion = ({activity, onActivityInputChange, onStepChange}) => {
+const SecondQuestion = ({
+  activity, 
+  onActivityInputChange, 
+  onStepChange
+}) => {
   return (
     <form>
       <label>
-        Which of the following volunteer activities most interests you?
+        2 -&gt; Which of the following volunteer activities most interests you?
         <select value={activity} onChange={event => onActivityInputChange(event.target.value)}>
-          <option value="tutoring">Tutoring</option>
-					<option value="daycare">Daycare</option>
-					<option value="fundraising">Fundraising</option>
-					<option value="administration">Administration</option>
+          <option value="Tutoring">Tutoring</option>
+					<option value="Daycare">Daycare</option>
+					<option value="Fundraising">Fundraising</option>
+					<option value="Administration">Administration</option>
         </select>
       </label>
-      <button onClick={onStepChange}>Submit</button>
+      <button onClick={onStepChange}>Continue</button>
      </form>
   )
 }
