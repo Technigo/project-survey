@@ -100,7 +100,7 @@ p {
 body {
   margin: 0;
   font-family: 'Zen Kurenaido', sans-serif;
-  height: 1000px;
+  height: 600px;
   background-image: url("./assets/main\ photo.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -189,7 +189,7 @@ p {
 body {
   margin: 0;
   font-family: 'Zen Kurenaido', sans-serif;
-  height: 1000px;
+  height: 700px;
   background-image: url("./assets/main\ photo.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -262,7 +262,7 @@ p {
   height: 40px;
   line-height: 20px;
   list-style: none;
-  margin: 0;
+  margin: 20px;
   outline: none;
   padding: 10px 16px;
   position: relative;
