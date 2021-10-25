@@ -7,7 +7,8 @@ const Summary = ({
   checkedState,
   whatsMissing,
   performanceRange,
-  myReason
+  myReason,
+  recommend
 }) => {
   console.log(checkedState);
   return (
@@ -43,10 +44,15 @@ const Summary = ({
       {performanceRange > 3 && (
         <p> You considered our app performs quite well!</p>
       )}
-      {(myReason) && (
+      {myReason && (
         <p> You think reason of unsatisfactory performance is "{myReason}"</p>
-      )
-      }
+      )}
+      {recommend === 'Yes' && (
+        <p> We are glad that you want to recommend it.</p>
+      )}
+      {recommend === 'No' && (
+        <p> Its unfortunate that you do not want to recommend it.</p>
+      )}
     </div>
   );
 };

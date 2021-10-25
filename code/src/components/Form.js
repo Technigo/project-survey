@@ -22,12 +22,18 @@ const Form = () => {
   const [rating, setRating] = useState(1);
   const [whatsMissing, setWhatsMissing] = useState('');
   const [myReason, setMyReason] = useState('');
+  const [recommend, setRecommendation]= useState("")
 
   const whatYouLike = ['Features', 'Ease of Use', 'Design', 'Content'];
   const [checkedState, setCheckedState] = useState(
     new Array(whatYouLike.length).fill(false)
   );
   const [selectedOnes, updateSelectedOnes] = useState([]);
+
+  const onRecommendationChange = (event) => {
+    
+    setRecommendation(event.target.value)
+  }
 
   const handleOnChange = (position) => {
     const updatedCheckedState = checkedState.map((item, index) =>
@@ -116,9 +122,8 @@ const Form = () => {
         )}
         {step === 7 && performanceRange >= 4 && (
           <SeventhQuestionRecommend
-            myReason={myReason}
             performanceRange={performanceRange}
-            onMyReasonChange={onMyReasonChange}
+            onRecommendationChange={onRecommendationChange}
           />
         )}
         {step === 8 && (
@@ -131,6 +136,7 @@ const Form = () => {
               whatsMissing={whatsMissing}
               performanceRange={performanceRange}
               myReason={myReason}
+              recommend={recommend}
             />
             <Button
               buttonType="button"

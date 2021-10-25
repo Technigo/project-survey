@@ -1,6 +1,9 @@
 import React from 'react';
 
-const SeventhQuestionRecommend = ({ textInput, performanceRange }) => {
+const SeventhQuestionRecommend = ({
+  performanceRange,
+  onRecommendationChange,
+}) => {
   return (
     <div>
       <p className="question">
@@ -8,14 +11,29 @@ const SeventhQuestionRecommend = ({ textInput, performanceRange }) => {
         <span>
           <b>&#x2192;</b>
         </span>{' '}
-        You have rated {performanceRange}, would you recommend it?
+        You have rated its performance as {performanceRange}, would you
+        recommend it?
       </p>
       <div>
-        <input
-          type="Text"
-          value={textInput}
-          placeholder="Type your answer here..."
-        />
+        <label className="recommend">
+          <input
+            type="radio"
+            name="yes"
+            value="Yes"
+            onChange={onRecommendationChange}
+          />
+          Yes
+        </label>
+
+        <label className="recommend">
+          <input
+            type="radio"
+            name="no"
+            value="No"
+            onChange={onRecommendationChange}
+          />
+          No
+        </label>
       </div>
     </div>
   );
