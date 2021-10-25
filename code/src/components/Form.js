@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-// import emailjs from 'emailjs'
 
 import FirstQuestion from './FirstQuestion'
 import PreferenceQuestion from './PreferenceQuestion'
@@ -93,7 +92,6 @@ const Form = () => {
           eventsInput={eventsInput}
           onEnter={onEnter}
           onEndSurvey={onEndSurvey}
-          // onClick={sendEmail}
         />
       )}
     </div>

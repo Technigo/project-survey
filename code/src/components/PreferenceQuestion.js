@@ -39,7 +39,6 @@ const PreferenceQuestion = ({
             id="clothingInput"
             type="checkbox"
             name="clothingInput"
-            // checked={clothingInput}
             value={clothingInput}
             onChange={onClothingInputChange}
             defaultChecked={clothingInput}
@@ -77,12 +76,7 @@ const PreferenceQuestion = ({
           />
         </div>
       </form>
-      <button
-        // disabled={surfInput === false}
-        className="btn6"
-        type="button"
-        onClick={onStepChange}
-      >
+      <button className="btn6" type="button" onClick={onStepChange}>
         Last question
       </button>
     </>

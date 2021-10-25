@@ -9,12 +9,6 @@ const Final = ({
   travelInput,
   eventsInput,
   onEndSurvey,
-  // onNameInputChange,
-  // onEmailInputChange,
-  // onSurfInputChange,
-  // onClothingInputChange,
-  // onTravelInputChange,
-  // onEventsInputChange,
 }) => {
   function sendEmail() {
     // email.preventDefault()
@@ -41,41 +35,20 @@ const Final = ({
   return (
     <>
       <form className="form-none">
-        <input
-          name="name"
-          // onChange={onNameInputChange}
-          // value={nameInput}
-          defaultValue={nameInput}
-        ></input>
-        <input
-          name="emailInput"
-          // onChange={onEmailInputChange}
-          // value={emailInput}
-          defaultValue={emailInput}
-        ></input>
-        <input
-          name="surfInput"
-          // value={surfInput}
-          defaultValue={surfInput ? 'Yes' : 'No'}
-          // onChange={onSurfInputChange}
-        ></input>
+        <input name="name" defaultValue={nameInput}></input>
+        <input name="emailInput" defaultValue={emailInput}></input>
+        <input name="surfInput" defaultValue={surfInput ? 'Yes' : 'No'}></input>
         <input
           name="clothingInput"
-          // value={clothingInput}
           defaultValue={clothingInput ? 'Yes' : 'No'}
-          // onChange={onClothingInputChange}
         ></input>
         <input
           name="travelInput"
-          // value={travelInput}
           defaultValue={travelInput ? 'Yes' : 'No'}
-          // onChange={onTravelInputChange}
         ></input>
         <input
           name="eventsInput"
-          // value={eventsInput}
           defaultValue={eventsInput ? 'Yes' : 'No'}
-          // onChange={onEventsInputChange}
         ></input>
       </form>
       <section className="submitted-container">
