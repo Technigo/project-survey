@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this week’s project, we started practicing React state and controlled forms. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The end goal for this project was to create a Typeform like product that contains at least 3 questions that need to be answered by users. In addition, when the user presses submit, they should see a summary of their answers.
+
+For this project, I focused on getting the blue (or minimal) requirements done, using dummy content only. If I had more time, I would love to also work on the red and black requirements as well as to come up with an idea for a real Typeform product where I could apply the knowledge I acquired this week. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://molbimien-week-10-project-survey.netlify.app
