@@ -1,6 +1,10 @@
 import React from 'react';
 
-const SeventhQuestionReason = ({ textInput, performanceRange }) => {
+const SeventhQuestionReason = ({
+  myReason,
+  performanceRange,
+  onMyReasonChange,
+}) => {
   return (
     <div>
       <p className="question">
@@ -13,8 +17,9 @@ const SeventhQuestionReason = ({ textInput, performanceRange }) => {
       <div>
         <input
           type="Text"
-          value={textInput}
           placeholder="Type your answer here..."
+          value={myReason}
+          onChange={onMyReasonChange}
         />
       </div>
     </div>

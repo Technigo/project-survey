@@ -20,29 +20,34 @@ const Form = () => {
   const [easeRange, setEaseRange] = useState(0);
   const [performanceRange, setPerformanceRange] = useState(0);
   const [rating, setRating] = useState(1);
+  const [whatsMissing, setWhatsMissing] = useState('');
+  const [myReason, setMyReason] = useState('');
 
   const whatYouLike = ['Features', 'Ease of Use', 'Design', 'Content'];
   const [checkedState, setCheckedState] = useState(
     new Array(whatYouLike.length).fill(false)
   );
-  const [selectedOnes, updateSelectedOnes] = useState([])
-  
+  const [selectedOnes, updateSelectedOnes] = useState([]);
+
   const handleOnChange = (position) => {
-    const updatedCheckedState = checkedState.map((item, index) => 
+    const updatedCheckedState = checkedState.map((item, index) =>
       index === position ? !item : item
     );
     setCheckedState(updatedCheckedState);
 
-    const youLiked = updatedCheckedState.map((item, index) => 
-
-      item=== true ?  whatYouLike[index] : item
-      
+    const youLiked = updatedCheckedState.map((item, index) =>
+      item === true ? whatYouLike[index] : item
     );
 
     updateSelectedOnes(youLiked);
   };
 
-
+  const onWhatsMissingChange = (event) => {
+    setWhatsMissing(event.target.value);
+  };
+  const onMyReasonChange = (event) => {
+    setMyReason(event.target.value);
+  };
 
   const onSubmission = () => {};
   const onStepChange = (event) => {
@@ -91,7 +96,10 @@ const Form = () => {
           />
         )}
         {step === 5 && (
-          <FifthQuestionMore textInput="Type your answer here..." />
+          <FifthQuestionMore
+            whatsMissing={whatsMissing}
+            onWhatsMissingChange={onWhatsMissingChange}
+          />
         )}
         {step === 6 && (
           <SixthQuestionPerformance
@@ -101,14 +109,16 @@ const Form = () => {
         )}
         {step === 7 && performanceRange <= 3 && (
           <SeventhQuestionReason
-            textInputPerformance="Type your answer here..."
+            myReason={myReason}
             performanceRange={performanceRange}
+            onMyReasonChange={onMyReasonChange}
           />
         )}
         {step === 7 && performanceRange >= 4 && (
           <SeventhQuestionRecommend
-            textInputPerformance="Type your answer here..."
+            myReason={myReason}
             performanceRange={performanceRange}
+            onMyReasonChange={onMyReasonChange}
           />
         )}
         {step === 8 && (
@@ -118,7 +128,9 @@ const Form = () => {
               usage={usage}
               easeRange={easeRange}
               checkedState={selectedOnes}
+              whatsMissing={whatsMissing}
               performanceRange={performanceRange}
+              myReason={myReason}
             />
             <Button
               buttonType="button"

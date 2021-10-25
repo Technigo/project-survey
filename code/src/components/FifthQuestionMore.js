@@ -1,6 +1,7 @@
 import React from 'react';
 
-const FifthQuestionMore = ({textInput}) => {
+            
+const FifthQuestionMore = ({whatsMissing, onWhatsMissingChange}) => {
   return (
     <div>
       <p className="question">
@@ -11,7 +12,12 @@ const FifthQuestionMore = ({textInput}) => {
         Is there anything you feel is missing?
       </p>
       <div>
-        <input type="Text" placeholder="Type your answer here..." />
+        <input
+          type="Text"
+          placeholder="Type your answer here..."
+          value={whatsMissing}
+          onChange={onWhatsMissingChange}
+        />
       </div>
     </div>
   );
