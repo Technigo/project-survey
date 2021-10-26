@@ -1,6 +1,7 @@
 import React from 'react'
 
 const FirstQuestion = ({ nameInput, onNameInputChange }) => {
+
     return (
         <div className="container">
 

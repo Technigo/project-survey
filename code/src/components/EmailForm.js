@@ -1,9 +1,9 @@
 import emailjs from 'emailjs-com'
 import React from 'react'
 
-function EmailForm() {
+const EmailForm = () => {
 
-    function sendEmail(e) {
+ const sendEmail = (e) => {
         e.preventDefault()
 
     emailjs.sendForm('service_ox3a7js', 'confession_room_template', e.target, 'user_ZAAkZDO5mMgnzCLiV5Fga')
