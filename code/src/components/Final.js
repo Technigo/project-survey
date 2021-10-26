@@ -29,7 +29,7 @@ const Final = ({
   const handleButtonClick = (email) => {
     email.preventDefault()
     sendEmail()
-    setTimeout(onEndSurvey, 5000)
+    setTimeout(onEndSurvey, 1600)
   }
 
   return (
