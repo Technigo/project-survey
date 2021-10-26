@@ -16,11 +16,14 @@ const QuestionFour = ({
   return (
     <div className='form-container'>
       <form className='form-question'>
-        <label className='label-text'>What is you favourite plant?</label>
+        <label className='label-text' htmlFor='favouritePlant'>
+          What is you favourite plant?
+        </label>
         <div className='radio-button-container'>
           {plantsArray.map((plant) => (
             <label className='radio-option-plant' key={plant}>
               <input
+                id={favouritePlant}
                 type='radio'
                 value={plant}
                 onChange={onFavouritePlantChange}

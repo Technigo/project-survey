@@ -14,8 +14,11 @@ const QuestionTwo = ({
   return (
     <div className='form-container'>
       <form className='form-question'>
-        <label className='label-text'>Describe your plant skills:</label>
+        <label className='label-text' htmlFor='plantSkill'>
+          Describe your plant skills:
+        </label>
         <select
+          id={plantSkill}
           onChange={onPlantSkillChange}
           required
           value={plantSkill}

@@ -2,7 +2,7 @@ import React from 'react';
 
 import Alert from './Alert';
 
-const humidityArray = ['60%', '90%', 'Eh.. what?!'];
+const humidityArray = ['60%', '90%', 'No idea'];
 
 const QuestionThree = ({
   humidity,
@@ -19,9 +19,14 @@ const QuestionThree = ({
         <label className='label-text'>What is your indoor humidity?</label>
         <div className='radio-button-container'>
           {humidityArray.map((value) => (
-            <label className='radio-option-humidity' key={value}>
+            <label
+              className='radio-option-humidity'
+              key={value}
+              htmlFor='humidity'
+            >
               <input
                 type='radio'
+                id={humidity}
                 value={value}
                 onChange={onHumidityChange}
                 checked={humidity === value}
