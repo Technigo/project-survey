@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A survey created with react, thd survey starts with a start button. Only one question is shown at at time. The survey end with a summary.The questions are generated from a json file. There is a possibility to generate any number of questions, just edit the json. Only limitation is there is only four question types (radio, text, range, dropdown).
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The scope was to learn using react useState hook, and create a survey. My idea was to generate as much as possible dynamically since I could focus on the solution instead of the content.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://awesome-survey.netlify.app/
