@@ -41,7 +41,7 @@ const Form = () => {
   };
 
   const onRestartChange = () => {
-    setStep(step - 5);
+    window.location.reload(false);
   };
 
   return (
