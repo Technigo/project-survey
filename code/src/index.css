@@ -1,13 +1,73 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+  margin: 0 auto;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Lato', sans-serif;
+}
+
+#root {
+  background-color: linen;
+  width: 100%;
+  height: 100vh;
+  padding: 10%;
+}
+
+.form-wrapper, button, footer {
+  background-color: rgb(130, 60, 60);
+}
+
+.form-wrapper {
+  width: 80%;
+  min-height: 50%;
+  color: white;
+  border-radius: 0.4rem;
+  padding: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+input[type=text], select {
+  width: 100%;
+  padding: 0.6rem 1rem;
+  margin: 0.6rem 0;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+}
+
+button {
+  width: 100%;
+  color: linen;
+  padding: 0.6rem 1rem;
+  margin: 1.8rem 0;
+  border: 1px solid black;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+p {
+  line-height: 1.8rem;
+  padding: 0 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem;
+}
+
+footer, a {
+  color: white;
+  text-decoration: none;
 }
