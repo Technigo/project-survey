@@ -34,7 +34,7 @@ const Form = () => {
   };
 
   //Change question + validation
-  const onStepChange = (event) => {
+  const onStepChange = () => {
     if (step === 1) {
       if (nameInput === '') {
         setAlert(true);
