@@ -33,5 +33,3 @@ export const QuestionThree = ({ variety, onVarietyChange }) => {
     </form>
   );
 };
-
-// https://codepen.io/shashank_coder/pen/jOqxOpK
