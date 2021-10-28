@@ -23,6 +23,7 @@ const QuestionOne = ({
           value={nameInput}
           onChange={onNameInputChange}
           onKeyPress={onEnter}
+          autoComplete='off'
         />
         {alert && <Alert />}
         <button className='form-button' type='button' onClick={onStepChange}>
