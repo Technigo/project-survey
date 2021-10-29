@@ -8,4 +8,4 @@ I started the project with drawing it. Then I made all componens with diffrent q
 
 ## View it live
 
-https://priceless-keller-300ce1.netlify.app/
+https://movie-servey.netlify.app
