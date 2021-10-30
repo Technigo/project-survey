@@ -17,12 +17,14 @@ code {
 .bigContainer {
   height: 100vh;
   width: 100vw;
+  min-height: 700px;
   background-image: url(./assets/gradient_background.jpg);
   background-position: right;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
 }
+
 
 .questionContainer {
   margin: auto;
