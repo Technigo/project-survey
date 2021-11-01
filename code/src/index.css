@@ -2,75 +2,90 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Passion-One', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
-
-
-.welcome-wrapper {
-  font-family: 'Passion One', cursive;
-  font-size:40px;
-  background-color: #ac5d00;
-  color: whitesmoke;
+.main {
+  display: flex;
+  justify-content: space-around;
   text-align: center;
+  height: 100vh;
+  padding: 20% 7%; 
+  overflow: hidden;
 }
 
-.welcome-image {
-  width: 100%;
-}
-
-.dinner-image {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-content: center;
-}
-
-.main-dish {
-  display: flex;
+.summary {
+  display:flex;
+  justify-content:space-around;
   flex-direction: column;
-  align-content: space-between;
 }
 
-.side-dish {
-  flex-direction: row;
-  justify-content: space-between;
+.summary-image {
+  width: 100%;
+  height: 100%;
 }
 
-.summary-section {
-display: flex;
-flex-direction: column;
-justify-content: center;
-align-items: center;
-}
+
+/*HEADERS, PARAGRAPHS*/
+
+
+
+/* BUTTONS */
 
 .start-btn {
-  background-color: 
-  #eec721;
-  border: 2px solid whitesmoke;
-  color: white;
-  padding: 15px 32px;
-  margin-top: 16px;
   width: 100px;
   border-radius: 8px;
-  text-align: center;
-  text-decoration: none;
-  display: flex;
-  transition-duration: 0.4s;
+  font-family: 'Passion-One', sans-serif;
+  line-height: 24px;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 45px;
+  background-color: #EFEFEF;
 }
 
-.button:hover {
-  background-color: whitesmoke; 
-  color: whitesmoke;
+.start-btn:hover {
+  background-color: #fcba03;
+  color: #ffff;
 }
+
+.back-button, .next-button, .submit-button, .restart-btn {
+  font-family: 'Passion-One', sans-serif;
+  line-height: 24px;
+  font-size: 20px;
+  padding: 10px 30px 10px;
+  margin-top: 30px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 45px;
+}
+
+.back-button {
+  background-color: #ffff;
+}
+
+.next-button, .submit-button, .restart-btn {
+  margin-left: 30px;  
+  background-color:#fcba03;
+  color: #ffff;
+}
+
+.submit-button:hover, .next-button:hover {
+  background-color: #F89453
+}
+
+.back-button:hover {
+  background-color: #F89453;
+  color: #ffff;
+}
+
 
 /**MEDIA QUERIES**/
 

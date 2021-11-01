@@ -15,6 +15,13 @@ const Summary = ({name, mainDish, sideDish, condiment} ) => {
     <p>Enjoy your dinner!</p>
 
     </div>
+    <button
+            className = 'restart-btn'
+            type="button"
+            onClick={() => window.location.reload()}>
+            Restart
+        </button>
+      
     </>
   )
 }

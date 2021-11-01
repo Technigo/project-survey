@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import Welcome from './components/Welcome';
+import Header from './components/Header';
 import NameInput from './components/NameInput'
 import MainDish from './components/MainDish';
 import SideDish from './components/SideDish';
@@ -48,7 +48,7 @@ export const App = () => {
     {/*WELCOME SECTION*/}
     {section === 'welcome' && (
       <div aria-label="Welcome" className='welcome'>
-         <Welcome />
+         <Header />
          <button
          className='start-btn'
          onClick={() => {setSection('name-input') }}
