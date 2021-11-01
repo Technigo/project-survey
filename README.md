@@ -1,24 +1,9 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A survey website made from React components which use the State hook to determine when and what to mount. A final page that captures and displays all the data added by the user.
 
 ## The problem
-Blue
-
-- Your site should follow accessibility guidelines
-
-Red
-- Use a form element you haven't tried before (such as a [range slider](https://www.w3schools.com/howto/howto_js_rangeslider.asp)) and connect it to React state. You can find a list of input types [here](https://www.w3schools.com/html/html_form_input_types.asp).
-
-
-Black      
-        
-- Use Regex validation for some input on your survey
-- Show different questions depending on the answer to a specific question
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by thinking about which aspects of the site would be repeatable and should therefore have a seperate component, so I began with a question component which mounted a different input component depending on what the question input should be. Although this has meant that I can add and remove new questions fairly quickly without having to write new code, it does have the issue that the input types were harder to style depending on which question they were for. Given more time I would have a think about how to achieve this, maybe resturctuing the components, and maybe by passing down some specific information in the props to create a dynamic class-name or alternative.
 
 https://wave.webaim.org/report#/https://sarah-mottram-survey.netlify.app/
 more time - styled components package
