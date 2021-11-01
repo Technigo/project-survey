@@ -1,13 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Plant survey app/website created in React, using components and state. The results from the survey are displayed in an overview in the end of the survey.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The app is created in React and its different parts are divided into components. I started off creating state objects for the different questions in order to store property values and re-render the components when the objects are changes. Each question has its own component, as well as the overview and welcome page. By using if-else logic the different questions are displayed after each other.
+I added alert messages so that all questions must be answered before moving on in the survey, and later on I changed so that there is a message shown in the app instead of an alert. The app also has a counter that informs the user which question is being answered and how many are left.
+
+If I had more time I would like different questions to appear depending on the answer on previous questions.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://technigo-plant-survey.netlify.app/

@@ -65,6 +65,12 @@ h1 {
   line-height: 90px;
 }
 
+.button-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .form-container {
   margin-top: 10vh;
   position: absolute;
