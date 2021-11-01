@@ -31,7 +31,13 @@ body {
 
 /*HEADERS, PARAGRAPHS*/
 
-
+.name-header, .name-text, .header-text, .header-paragraph, .maindish-text, .maindish-menu, .sidedish-text, .sidedish-menu, .condiments-heading, .condiments, .summary-title, .summary-text, .condiments-container, p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;  
+  line-height: 25px;
+}
 
 /* BUTTONS */
 
@@ -89,10 +95,13 @@ body {
 
 /**MEDIA QUERIES**/
 
-@media (min-width: 640px) {
+@media (min-width: 1025px) {
+  .main {
+    background-size: auto 100vh;
+    background-position-x: right;
+    padding: 5% 3%;
+    justify-content: flex-start;
+    background-color: #161616;
+    }
 
-  .welcome-image {
-    width: 100%;
   }
-
-}
