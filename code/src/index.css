@@ -63,7 +63,6 @@ code {
   font-size: 18px;
   max-width: 320px;
   height: 35px;
-
 }
 
 .radio-btn-label {
@@ -119,7 +118,8 @@ code {
 
 /* Buttons. */
 .back-btn,
-.enter-btn, .start-btn {
+.enter-btn,
+.start-btn {
   font-family: "Source Code Pro", monospace;
   line-height: 20px;
   font-size: 14px;
@@ -155,7 +155,7 @@ code {
   justify-content: right;
   align-items: center;
   margin: 0;
-  background-color: #03A700;
+  background-color: #03a700;
   height: 100%;
   border-radius: 10px;
 }
@@ -259,7 +259,33 @@ code {
 }
 
 @media (min-width: 769px) {
-}
+  .main {
+    max-width: 760px;
+    max-height: 70vh;
+    height: 700px;
+  }
 
-@media (min-width: 1024px) {
+  .review-container {
+    width: 760px;
+    max-height: 70vh;
+    height: 700px;
+  }
+
+  .question-text,
+  .welcome-text {
+    font-size: 30px;
+  }
+
+  .text-input,
+  .select-box {
+    font-size: 24px;
+  }
+
+  .back-btn,
+  .enter-btn,
+  .start-btn,
+  .css-container {
+    font-size: 20px;
+    height: 55px;
+  }
 }
