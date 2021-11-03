@@ -10,4 +10,4 @@ As always, I would have liked some more time for the styling. I am proud of impl
 
 ## View it live
 
-https://week-10-project-survey.netlify.app/
+https://beer-survey-sofia-willebrand.netlify.app/
