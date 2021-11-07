@@ -41,7 +41,6 @@ body {
 
 .overview-container {
 	padding: 30px 25px;
-	/* background-image: linear-gradient(135deg, #6091fa, #81f6fc); */
 	background-color: #ffffff;
 	height: 100vh;
 }
@@ -165,8 +164,6 @@ body {
 
 .radio-button {
 	margin-right: 10px;
-	/* width: 16px;
-	height: 16px; */
 }
 
 .radio-input {

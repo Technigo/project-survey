@@ -3,7 +3,7 @@ import React from "react";
 export const FirstQuestion = ({ languageInput, onLanguageInputChange, nextQuestion, previousQuestion, step }) => {
 	return (
 		<main className="main-container">
-			<button className="back-btn" aria-label="Previous question" onClick={previousQuestion}>
+			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
 				<span class="fas fa-arrow-left"></span>
 			</button>
 			<form className="form-container">
@@ -38,38 +38,3 @@ export const FirstQuestion = ({ languageInput, onLanguageInputChange, nextQuesti
 		</main>
 	);
 };
-
-// const languageArray = ["HTML5", "CSS3", "JavaScript", "Node.js", "French"];
-
-// export const FirstQuestion = ({ languageInput, onLanguageInputChange, nextQuestion, previousQuestion, step }) => {
-// 	return (
-// 		<main className="main-container">
-// 			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
-// 				<span class="fas fa-arrow-left"></span>
-// 			</button>
-// 			<form className="form-container">
-// 				<p className="question-number">Question {step}</p>
-// 				<h2 className="question-heading">Which language is most important for a developer?</h2>
-// 				{languageArray.map((language) => (
-// 					<div className="question-container">
-// 						<label className="radio-input" key={language} htmlFor={language}>
-// 							{/* prettier-ignore */}
-// 							<input
-//             		className="radio-button"
-// 								id={language}
-//             		type="radio"
-//             		value={language}
-//             		onChange={onLanguageInputChange}
-//             		checked={language === languageInput}
-//           		/>
-// 							{language}
-// 						</label>
-// 					</div>
-// 				))}
-// 			</form>
-// 			<button className="next-btn" disabled={languageInput === ""} onClick={nextQuestion}>
-// 				Next
-// 			</button>
-// 		</main>
-// 	);
-// };

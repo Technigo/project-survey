@@ -4,15 +4,8 @@ export const Overview = ({ languageInput, frameworkInput, problemSolvingInput, b
 	return (
 		<main className="overview-container">
 			<h3 className="overview-heading">Question 1</h3>
-			{languageInput === "HTML5" && <p className="overview-paragraph">You find HTML5 to be the most useful language as a developer. That is great – Ebba is skilled in HTML5, CSS3, JavaScript as well as Node.js</p>}
 
-			{languageInput === "CSS3" && <p className="overview-paragraph">You find CSS3 to be the most useful language as a developer. That is great – Ebba is skilled in CSS3, HTML5, JavaScript as well as Node.js</p>}
-
-			{languageInput === "JavaScript" && <p className="overview-paragraph">You find JavaScript to be the most useful language as a developer. That is great – Ebba is skilled in JavaScript, HTML5, CSS3 as well as Node.js</p>}
-
-			{languageInput === "Node.js" && <p className="overview-paragraph">You find Node.js to be the most useful language as a developer. That is great – Ebba is skilled in Node.js, HTML5, CSS3 as well as JavaScript</p>}
-
-			{languageInput === "German" && <p className="overview-paragraph">Oh noo!! You find German to be the most useful language as a developer. Ebba doesn't know any German.</p>}
+			{languageInput === "German" ? <p className="overview-paragraph">Oh noo!! You find German to be the most useful language as a developer. Ebba doesn't know any German.</p> : <p className="overview-paragraph">You find {languageInput} to be the most useful language as a developer. That is great! Ebba is skilled in JavaScript, HTML5, CSS3 as well as Node.js</p>}
 
 			<h3 className="overview-heading">Question 2</h3>
 			{frameworkInput === "React" && <p className="overview-paragraph">React is most commonly used framework at your company. Amazing! Ebba loves using the framework React.</p>}
@@ -20,7 +13,7 @@ export const Overview = ({ languageInput, frameworkInput, problemSolvingInput, b
 			{frameworkInput === "Other" && <p className="overview-paragraph">You use another framework at your company that Ebba is not yet familiar with. But don’t worry! Ebba is passionate in anything code related and loves to learn new things.</p>}
 
 			<h3 className="overview-heading">Question 3</h3>
-			{problemSolvingInput === "Yes" && <p className="overview-paragraph">You find problem solving skills to be a good trait for a developer. Perfect – Ebba is a great problem solver.</p>}
+			{problemSolvingInput === "Yes" && <p className="overview-paragraph">You find problem solving skills to be a good trait for a developer. Perfect, Ebba is a great problem solver!</p>}
 			{problemSolvingInput === "No" && <p className="overview-paragraph">You don’t find problem solving skills to be a good trait for a developer. That is unfortunate. Ebba is a great problem solver.</p>}
 
 			<h3 className="overview-heading">Question 4</h3>

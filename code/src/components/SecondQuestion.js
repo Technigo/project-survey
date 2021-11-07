@@ -11,19 +11,19 @@ export const SecondQuestion = ({ frameworkInput, onFrameworkInputChange, nextQue
 			<form className="form-container">
 				<p className="question-number">Question {step}</p>
 				<h2 className="question-heading">Which framework is most commonly used by developers at your company?</h2>
-				{frameworkArray.map((age) => (
+				{frameworkArray.map((framework) => (
 					<div className="question-container">
-						<label className="radio-input" key={age} htmlFor={age}>
+						<label className="radio-input" key={framework} htmlFor={framework}>
 							{/* prettier-ignore */}
 							<input
             		className="radio-button"
-								id={age}
+								id={framework}
             		type="radio"
-            		value={age}
+            		value={framework}
             		onChange={onFrameworkInputChange}
-            		checked={age === frameworkInput}
+            		checked={framework === frameworkInput}
           		/>
-							{age}
+							{framework}
 						</label>
 					</div>
 				))}

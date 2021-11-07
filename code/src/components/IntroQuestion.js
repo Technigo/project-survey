@@ -13,5 +13,3 @@ export const IntroQuestion = ({ nextQuestion }) => {
 		</main>
 	);
 };
-
-// Will Ebba become a great developer

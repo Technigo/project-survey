@@ -9,7 +9,7 @@ import { SubmitQuestion } from "./SubmitQuestion";
 
 const Form = () => {
 	const [languageInput, setlanguageInput] = useState("");
-	const [frameworkInput, FrameworkInput] = useState("");
+	const [frameworkInput, setFrameworkInput] = useState("");
 	const [problemSolvingInput, setproblemSolvingInput] = useState("");
 	const [backgroundInput, setBackgroundInput] = useState("");
 	const [step, setStep] = useState(0);
@@ -19,7 +19,7 @@ const Form = () => {
 	};
 
 	const onFrameworkInputChange = (event) => {
-		FrameworkInput(event.target.value);
+		setFrameworkInput(event.target.value);
 	};
 
 	const onProblemSolvingChange = (event) => {
