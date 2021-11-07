@@ -12,6 +12,9 @@ export const Overview = ({ nameInput, locationInput, animalInput, colourInput, a
       <Confetti
         width={width}
         height={3000}
+        colors={['#feaeb9', '#a49262', '#86e5d1','#c3a2db']}
+        gravity={0.08}
+        numberOfPieces={350}
       />
       <fieldset className="fieldset">
         <legend className="legend">The Overview</legend>
