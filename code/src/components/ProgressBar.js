@@ -1,7 +1,7 @@
 import React from 'react'
 
 const ProgressBar = ({bgcolor,progress,height}) => {
-    const Parentdiv = {
+    const parentdiv = {
         height: height,
         width: '90%',
         backgroundColor: 'whitesmoke',
@@ -9,7 +9,7 @@ const ProgressBar = ({bgcolor,progress,height}) => {
         margin: 50
       }
       
-      const Childdiv = {
+      const childdiv = {
         height: '100%',
         width: `${progress}%`,
         backgroundColor: bgcolor,
@@ -26,8 +26,8 @@ const ProgressBar = ({bgcolor,progress,height}) => {
       }
         
     return (
-    <div style={Parentdiv}>
-      <div style={Childdiv}>
+    <div style={parentdiv}>
+      <div style={childdiv}>
         <span style={progresstext}>{`${progress}%`}</span>
       </div>
     </div>

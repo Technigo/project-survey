@@ -32,8 +32,6 @@ export const Overview = ({ nameInput, locationInput, animalInput, colourInput, a
 
       </fieldset>
 
-
-
       <div className="animal">
         <AnimalChoices
           animalInput={animalInput} />
