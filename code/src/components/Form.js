@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import IntroPage from './IntroPage'
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
@@ -34,7 +35,12 @@ const Form = () => {
   }
 
   return (
-    <div className='wrapper'>
+    <main className='wrapper'>
+      {step === 0 && (
+        <IntroPage 
+          onStepChange={onStepChange}
+        />
+      )}
       {step === 1 && (
         <FirstQuestion   
           nameInput={nameInput}
@@ -71,7 +77,7 @@ const Form = () => {
           emailInput={emailInput}
         />
       )}
-    </div>
+    </main>
 
   )
 }

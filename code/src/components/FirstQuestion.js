@@ -9,6 +9,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
       <input 
       id="nameInput" 
       type="text" 
+      placeholder="full name is required"
       value={nameInput} //state property
       onChange={onNameInputChange} //function to update the property
     />
