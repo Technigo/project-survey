@@ -1,5 +1,5 @@
 .welcome {
-  background-image: url("https://i.ibb.co/QM5SqDZ/mobile.jpg");
+  background-image: url("../components/headphones.jpg");
   background-size: cover;
   background-position: center;
   opacity: 0.9;
@@ -45,7 +45,7 @@
 
 @media (min-width: 768px) {
   .welcome {
-    background-image: url("https://i.ibb.co/xH0KXJw/desktop.jpg");
+    background-image: url("../components/headphones.jpg");
   }
   .give-btn {
     margin-top: 50px;
