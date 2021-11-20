@@ -8,4 +8,4 @@ First, I created the form elements in one file, and later divided them into indi
 
 ## View it live
 
-https://amazing-wing-2aa0ea.netlify.app
+https://hedvigs-happy-thoughts.netlify.app/
