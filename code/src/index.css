@@ -10,6 +10,10 @@ code {
     monospace;
 }
 
+html {
+  height: 100%;
+}
+
 .container {
   margin: 0 auto;
   max-width: 320px;
@@ -174,6 +178,9 @@ button:hover:after {
 
 footer {
   text-align: center;
+  width: 100%;
+  bottom: 0;
+  position: absolute;
 }
 
 footer p {
