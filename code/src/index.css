@@ -15,7 +15,8 @@ body {
 .root {
   width: 100vw;
   height: 100vh;
-  background-image: linear-gradient(135deg, #30176b, #2ec1c8);
+  background-image: url('./assets/background-survey.png');
+  background-size: cover;
   font-family: "Montserrat", sans-serif;
   color: #222221;
   overflow: hidden;
@@ -41,8 +42,10 @@ body {
 
 .overview-container {
   padding: 30px 25px;
-  background-color: #ffffff;
+  background-image: url('./assets/background-survey.png');
+  background-size: cover;
   height: 100vh;
+  color: white;
 }
 
 /* Animations */
