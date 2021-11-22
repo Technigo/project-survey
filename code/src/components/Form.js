@@ -1,163 +1,115 @@
-import React, { useState } from 'react'
-
-import Intro from './Intro'
-import QuestionOne from './QuestionOne'
-import QuestionTwo from './QuestionTwo'
-import RadioOption from './RadioOption'
-import QuestionFour from './QuestionFour'
-import Summary from './Summary'
-import ButtonNext from './ButtonNext'
-import ButtonBack from './ButtonBack'
-
+import React, { useState } from "react";
+import { IntroQuestion } from "./IntroQuestion";
+import { FirstQuestion } from "./FirstQuestion";
+import { SecondQuestion } from "./SecondQuestion";
+import { ThirdQuestion } from "./ThirdQuestion";
+import { FourthQuestion } from "./FourthQuestion";
+import { Overview } from "./Overview";
+import { SubmitQuestion } from "./SubmitQuestion";
 
 const Form = () => {
- 
-    const [name, setName] = useState('');
-    const [size, setSize] = useState('')
-    const [pet, setPet] = useState('')
-    const [character, setCharacter] = useState('')
-    const [questionIndex, setQuestionIndex] = useState(0)
+  const [socialInput, setSocialInput] = useState("");
+  const [emotionalInput, setEmotionalInput] = useState("");
+  const [physicalInput, setPhysicalInput] = useState("");
+  const [workInput, setWorkInput] = useState("");
+  const [step, setStep] = useState(0);
 
+  const onSocialInputChange = (event) => {
+    setSocialInput(event.target.value);
+  };
+
+  const onEmotionalInputChange = (event) => {
+    setEmotionalInput(event.target.value);
+  };
+
+  const onPhysicalInputChange = (event) => {
+    setPhysicalInput(event.target.value);
+  };
+
+  const onWorkInputChange = (event) => {
+    setWorkInput(event.target.value);
+  };
+
+  const nextQuestion = (event) => {
+    setStep(step + 1);
+    event.preventDefault();
+  };
+
+  const previousQuestion = (event) => {
+    setStep(step - 1);
+    event.preventDefault();
+  };
+
+  if (step === 0) {
+    // prettier-ignore
     return (
-        <>
-            <form onSubmit={event => event.preventDefault()}>
-                
-                {/* INTRO SECTION */}
-                {questionIndex === 0 && 
-                    <>
-                        <section aria-label="Intro page" className='intro-page'>
-                            <Intro/> 
-                            <ButtonNext
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-                        </section>
-                    </>
-                }
-
-                {/* NAME SECTION */}
-                {questionIndex === 1 && 
-                    <>
-                        <section aria-label="Name input page" className='name-page'>
-                                <h2 tabIndex="0">Name your pet!</h2>
-                                <p tabIndex="0">Type your pet's name</p>
-                        
-                                <QuestionOne 
-                                    name={name}
-                                    setName={setName}
-                                /> 
-
-                                <ButtonBack
-                                    questionIndex={questionIndex}
-                                    setQuestionIndex={setQuestionIndex}
-                                />
-
-                                <ButtonNext
-                                    questionIndex={questionIndex}
-                                    setQuestionIndex={setQuestionIndex}
-                                />
-                        </section>
-
-                    </>
-                }
-
-                {/* SIZE SECTION */}
-                {questionIndex === 2 && 
-                    <>
-                        <section aria-label="Size option page" className='size-page'>
-                            <h2 tabIndex="0">What size of pet do you want?</h2>
-                            <p tabIndex="0">Please choose below</p>            
-                        
-                            <QuestionTwo
-                                size={size}
-                                setSize={setSize}    
-                            />
-
-                            <ButtonBack
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-
-                            <ButtonNext
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-                        </section>
-                    </>
-                }
-
-                {/* PET SECTION */}
-                {questionIndex === 3 && 
-                    <>
-                        <section aria-label="Pet option page" className='pet-page'>
-                            <h2 tabIndex="0">Which animal are you thinking?</h2>
-                            <p tabIndex="0">Please choose below</p>            
-                        
-                            <RadioOption
-                                pet={pet}
-                                setPet={setPet}    
-                            />
-
-                            <ButtonBack
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-
-                            <ButtonNext
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-                        </section>
-                    </>
-                }
-
-                {/* CHARACTERISTIC SECTION */}
-                {questionIndex === 4 && 
-                    <>
-                        <section aria-label="Character option page" className='character-page'>
-                            <h2 tabIndex="0">How would you define your pet's personality?</h2>
-                            <p tabIndex="0">Please choose below</p>   
-
-                            <QuestionFour
-                                character={character}
-                                setCharacter={setCharacter}    
-                            />
-
-                            <ButtonBack
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-
-                            <ButtonNext
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-                        </section>        
-                    </>
-                }
-
-                {/* SUMMARY SECTION */}
-                {questionIndex > 4 && 
-                    <>
-                        <section aria-label="Summary page" className='summary-page'>
-                            <Summary 
-                                name={name} 
-                                size={size}
-                                pet={pet}
-                                character={character}
-                            />
-
-                            <ButtonBack
-                                questionIndex={questionIndex}
-                                setQuestionIndex={setQuestionIndex}
-                            />
-                        </section>
-                    </>
-                }
-               
-            </form>
-        </>
-    )
-}
+	  <IntroQuestion
+			nextQuestion={nextQuestion}
+		/>
+    );
+  } else if (step === 1) {
+    // prettier-ignore
+    return (
+    <FirstQuestion
+      socialInput={socialInput}
+      onSocialInputChange={onSocialInputChange}
+      nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
+			step={step}
+    />
+    );
+  } else if (step === 2) {
+    // prettier-ignore
+    return (
+    <SecondQuestion
+			emotionalInput={emotionalInput}
+      onEmotionalInputChange={onEmotionalInputChange}
+      nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
+			step={step}
+    />
+    );
+  } else if (step === 3) {
+    // prettier-ignore
+    return (
+    <ThirdQuestion
+    physicalInput={physicalInput}
+      onPhysicalInputChange={onPhysicalInputChange}
+      nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
+			step={step}
+    />
+    );
+  } else if (step === 4) {
+    // prettier-ignore
+    return (
+	  <FourthQuestion
+			workInput={workInput}
+			onWorkInputChange={onWorkInputChange}
+			nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
+			step={step}
+	  />
+    );
+  } else if (step === 5) {
+    // prettier-ignore
+    return (
+	  <SubmitQuestion
+			nextQuestion={nextQuestion}
+			previousQuestion={previousQuestion}
+		/>
+    );
+  } else if (step === 6) {
+    // prettier-ignore
+    return (
+	  <Overview
+			socialInput={socialInput}
+	    emotionalInput={emotionalInput}
+	    physicalInput={physicalInput}
+			workInput={workInput}
+	  />
+    );
+  }
+};
 
 export default Form;

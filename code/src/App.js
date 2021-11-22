@@ -1,15 +1,6 @@
-
-import React from 'react'
-
-import Form from './components/Form'
+import React from "react";
+import Form from "./components/Form";
 
 export const App = () => {
-
-  return (
-    <>
-      <div>
-        <Form/>
-      </div>
-    </>
-  )
-}
+	return <Form />;
+};
