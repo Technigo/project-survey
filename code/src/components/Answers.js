@@ -1,13 +1,22 @@
 //Question 5
-import React from "react";
+import React from 'react';
+import JSConfetti from 'js-confetti';
 
 const Answers = ({ name, food, game, email, snack, licoriceCandy, drink }) => {
+  const jsConfetti = new JSConfetti();
+
   return (
-    <div className="container">
-      <div className="fifthQuestion">
+    <div className='container'>
+      <div className='fifthQuestion'>
+        {jsConfetti.addConfetti({
+          confettiRadius: 4,
+          confettiNumber: 300,
+          emojis: ['✨', '🥂', '🥳'],
+          emojiSize: 50,
+        })}
         <h1>
-          That's it, well done!{" "}
-          <span role="img" aria-label="balloon emoji">
+          That's it, well done!{' '}
+          <span role='img' aria-label='balloon emoji'>
             🎈
           </span>
         </h1>
