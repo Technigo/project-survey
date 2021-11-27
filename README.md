@@ -12,4 +12,4 @@ Lighthouse chrome extension
 
 If I had more time I would fix better answer for summary and also change the range for more user friendly and gone through with screen reader
 
-3. CHeck the project out on: https://project-survey-ajliin.netlify.app/#firstPage
+3. CHeck the project out on: https://project-survey-ajliin.netlify.app
