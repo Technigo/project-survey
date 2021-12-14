@@ -126,11 +126,6 @@ body {
 	margin-top: 8px;
 }
 
-/* .overview-heading {
-	font-size: 14px;
-	font-weight: 700;
-} */
-
 .overview-paragraph {
 	margin-bottom: 25px;
 }
@@ -138,12 +133,16 @@ body {
 /* Inputs */
 
 .text-input,
-.radio-input,
-.option-input,
-.dropdown {
+.radio-input {
 	font-size: 14px;
 	font-weight: 500;
 	line-height: 19px;
+}
+
+.dropdown {
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 21px;
 }
 
 .radio-button {
