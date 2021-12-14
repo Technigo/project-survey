@@ -1,17 +1,33 @@
 import React from "react";
 
-export const FirstQuestion = ({ languageInput, onLanguageInputChange, nextQuestion, previousQuestion, step }) => {
+export const FirstQuestion = ({
+	languageInput,
+	onLanguageInputChange,
+	nextQuestion,
+	previousQuestion,
+	step,
+}) => {
 	return (
 		<main className="main-container">
-			<button className="back-btn" aria-label="Go back" onClick={previousQuestion}>
+			<button
+				className="back-btn"
+				aria-label="Go back"
+				onClick={previousQuestion}
+			>
 				<span class="fas fa-arrow-left"></span>
 			</button>
 			<form className="form-container">
 				<p className="question-number">Question {step}</p>
 				<label className="question-heading" htmlFor="languageInput">
-					<h2 className="question-heading">Which language is most important for a developer?</h2>
+					<h2 className="question-heading">
+						Which language is most important for a developer?
+					</h2>
 				</label>
-				<select className="dropdown" onChange={onLanguageInputChange} value={languageInput}>
+				<select
+					className="dropdown"
+					onChange={onLanguageInputChange}
+					value={languageInput}
+				>
 					<option className="option-input" value="">
 						Select
 					</option>
@@ -32,7 +48,11 @@ export const FirstQuestion = ({ languageInput, onLanguageInputChange, nextQuesti
 					</option>
 				</select>
 			</form>
-			<button className="next-btn" disabled={languageInput === ""} onClick={nextQuestion}>
+			<button
+				className="next-btn"
+				disabled={languageInput === ""}
+				onClick={nextQuestion}
+			>
 				Next
 			</button>
 		</main>
