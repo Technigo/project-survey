@@ -11,7 +11,7 @@ export const Summary = ({ rootState }) => {
         <div className="thankyou-wrapper">
           <h1 className="questions-main-heading highlight">Thank you for your feedback!</h1>
           <h2 className="instructions">
-            Check you inbox for a complimentary <span className="highlight">voucher</span>.
+            Check your inbox for a complimentary <span className="highlight">voucher</span>.
           </h2>
         </div>
         <div className="details-wrapper">
