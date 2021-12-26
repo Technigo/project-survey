@@ -52,11 +52,6 @@ const Form = () => {
     setColorInput(event.target.value)
   }
 
-  // used only for the starter page
-  // const onStepChange = () => {
-  //   setStep(step + 1)
-  // }
-
   // This function leads to the next question
   const onNextQuestionChange = () => {
     setStep(step + 1)

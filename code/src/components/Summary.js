@@ -15,34 +15,31 @@ const Summary = ({
         <h3>
           <span role="img" aria-label="rocket">
             🚀
-          </span>{" "}
+          </span>
           Here's your summary to the Moon trip with the {locationInput}{" "}
           Spaceship!
         </h3>
-
         <h3>
-          {" "}
           <span role="img" aria-label="calender">
             📆
-          </span>{" "}
+          </span>
           You will stay there {timeInput}.
         </h3>
         <h3>
           <span role="img" aria-label="astrounot">
             👩🏻‍🚀
-          </span>{" "}
-          Your spacesuits' color will be{" "}
+          </span>
+          Your spacesuits' color will be
           <span
             style={{ backgroundColor: `${colorInput}`, color: `${colorInput}` }}
           >
-            {" "}
-            . . .{" "}
-          </span>{" "}
+            . . .
+          </span>
         </h3>
         <h3>
           <span role="img" aria-label="astrounot">
             🌚
-          </span>{" "}
+          </span>
           You won't be alone!
           <span> {checkboxGroup.join(" and ")} </span> will keep your company!
         </h3>

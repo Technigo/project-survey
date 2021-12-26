@@ -11,7 +11,6 @@ const SecondQuestion = ({
   return (
     <form id="secondQuestion">
       <p className="question">How long would you like to stay there?</p>
-      {/* <div> */}
       {timeGroup.map((group) => (
         <label className="radio-label" key={group}>
           <input
@@ -25,7 +24,6 @@ const SecondQuestion = ({
           {group}
         </label>
       ))}
-      {/* </div> */}
 
       <div className="button-container">
         <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
@@ -38,7 +36,5 @@ const SecondQuestion = ({
     </form>
   )
 }
-
-/* <button onClick={() => window.location.reload(false)} className="btn">Let' start over! <span role="img" aria-label="handpointer">👋🏼</span></button> */
 
 export default SecondQuestion

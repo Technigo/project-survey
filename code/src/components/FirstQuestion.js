@@ -18,6 +18,7 @@ const FirstQuestion = ({
         value={nameInput}
         onChange={onNameInputChange}
       />
+
       <div className="button-container">
         <button className="glow-on-hover" onClick={onPreviousQuestionChange}>
           PREVIOUS
