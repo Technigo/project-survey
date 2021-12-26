@@ -134,8 +134,6 @@ const Form = () => {
           />
         )}
         {step === 7 && <Alien />}
-
-        {/* {step <= 5 && 1 <= step && <h2>Question number: {step}/5</h2>} */}
       </main>
       <Footer />
     </>

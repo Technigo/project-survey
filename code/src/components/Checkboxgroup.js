@@ -1,7 +1,6 @@
 import React from "react"
 
 const CheckboxGroup = ({
-  //   image,
   onChangeFunction,
   checkboxGroup,
   onPreviousQuestionChange,
