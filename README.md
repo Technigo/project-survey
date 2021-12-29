@@ -1,13 +1,17 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A simple survey in React utilizing state to store and later on present the user input.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Multi-step survey where you input your name, chose from a drop-down, and radio button before you are presented with your choices and information about them.
+
+This took a little brain-work to understand properly and how state can get saved and 'passed around' throughout React components to later be utilized.
+
+The nice part about React is how much you can break it apart and work on specific 'tasks' or in this case steps in the form. It makes for a focused work experience, but also requires you to understand where and when things go and should be used. While modularity is nice, it can easily create complexity.
+
+I kept it fairly easy in this project to make sure it was clean and I understood what I did and how it all worked.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://quirky-poincare-f6f78c.netlify.app/
