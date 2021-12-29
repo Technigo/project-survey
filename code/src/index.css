@@ -57,6 +57,13 @@ button {
   cursor: pointer;
 }
 
+button:hover,
+button:focus {
+  background-color: linen;
+  color: rgb(130, 60, 60);
+  transition: 0.25s;
+}
+
 p {
   line-height: 1.8rem;
   padding: 0 1rem;
