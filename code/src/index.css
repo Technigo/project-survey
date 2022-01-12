@@ -5,9 +5,137 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url("./images/772158.jpg");
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  color: #fff;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+.mainContainer {
+  background-color: #000;
+  width: 300px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 30px auto 30px;
+  padding: 20px 30px;
+  border-radius: 8px;
+}
+
+.imageContainer {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.radioForm,
+.selectForm,
+.checkForm {
+  margin: 10px auto;
+  flex-direction: column;
+  text-align: left;
+}
+
+.movie {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+  text-align: left;
+}
+
+input[type="text"] {
+  display: block;
+  margin: 10px auto 0;
+  padding: 5px 5px;
+  width: 80px;
+}
+
+p,
+h1 {
+  color: #c760c2;
+  font-weight: bolder;
+}
+
+label {
+  color: #fff;
+}
+
+.marginless {
+  margin: 0;
+  color: #666363;
+}
+
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 15px;
+}
+
+iframe {
+  width: 240px;
+  margin: 20px auto 0px;
+}
+
+button {
+  font-size: 16px;
+  display: block;
+  justify-content: center;
+  width: fit-content;
+  margin: 0 auto 40px;
+  padding: 10px;
+  color: #fff;
+  background-color: #c760c2;
+  border: none;
+  border-radius: 5px;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+}
+
+.summaryQuestion {
+  margin: 5px;
+  font-weight: 600;
+}
+
+.summaryAnswer {
+  margin: 5px;
+  font-style: italic;
+}
+
+select {
+  display: block;
+  margin: 10px auto;
+  color: #c760c2;
+  padding: 10px;
+}
+
+/* TABLET */
+
+@media (min-width: 500px) {
+  .headerText {
+    font-size: 52px;
+    margin: 40px auto 0px;
+  }
+
+  .mainContainer {
+    width: 500px;
+    height: auto;
+    margin: 100px auto 50px;
+  }
+
+  button {
+    margin: 0 auto 50px;
+    padding: 10px;
+  }
 }
