@@ -103,10 +103,10 @@ input[type=email] {
 
 /* SPEEACH BUBBLE*/
 .speech-bubble {
-	position: relative;
-	background: #ffffff;
+  position: relative;
+  background: #ffffff;
   color: black;
-	border-radius: 5px;
+  border-radius: 5px;
   width:50%;
   height: auto;
   text-align: center;
@@ -116,18 +116,18 @@ input[type=email] {
 }
 
 .speech-bubble:after {
-	content: '';
-	position: absolute;
-	left: 0;
-	top: 50%;
-	width: 0;
-	height: 0;
-	border: 41px solid transparent;
-	border-right-color: #ffffff;
-	border-left: 0;
-	border-bottom: 0;
-	margin-top: -20.5px;
-	margin-left: -41px;
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 0;
+  height: 0;
+  border: 41px solid transparent;
+  border-right-color: #ffffff;
+  border-left: 0;
+  border-bottom: 0;
+  margin-top: -20.5px;
+  margin-left: -41px;
 }
 
 img {
@@ -265,16 +265,6 @@ img {
 .checkbox-container {
   margin: 20px 0;
 }
-
-
-
-
-
-
-
-
-
-
 
 /*** MEDIA QUERIES ***/ 
 
