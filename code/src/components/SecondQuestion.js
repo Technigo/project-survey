@@ -8,7 +8,7 @@ const SecondQuestion = ({
 }) => {
 	return (
 		<form className="form-container2" tabIndex="2">
-			<label>
+			<label htmlFor="seat">
 				<h1>Pick your seat </h1>
 			</label>
 			<select

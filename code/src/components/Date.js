@@ -14,7 +14,7 @@ const Date = ({ date, onDateInputChange, onStepChange, onMinusStepChange }) => {
 				id="start"
 				date="trip-start"
 				value={date}
-				min="2021-10-23"
+				min="2021-10-25"
 				max="2022-10-31"
 				onChange={onDateInputChange}
 				required

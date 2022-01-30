@@ -2,7 +2,7 @@ import React from 'react';
 
 const Overview = ({ date, movie, seat, ticket, snack, nameInput }) => {
 	return (
-		<section className="summary" tabIndex="7">
+		<section htmlFor="summary " className="summary" tabIndex="7">
 			<h2>
 				Enjoy your scary movie <br />{' '}
 				<span className="name-overview"> {nameInput}! </span>

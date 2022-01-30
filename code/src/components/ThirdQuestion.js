@@ -15,7 +15,7 @@ const ThirdQuestion = ({
 				(
 					ticket //iterating through each ticketType array
 				) => (
-					<label className="ticket-types" key={ticket}>
+					<label htmlFor="ticket" className="ticket-types" key={ticket}>
 						<input
 							type="radio"
 							value={ticket}

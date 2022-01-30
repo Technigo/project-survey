@@ -10,13 +10,13 @@ import Date from './Date';
 import IntroPage from './IntroPage';
 
 const Form = () => {
-	const [movie, setMovie] = useState('A Nightmare on Elm Street'); //state property storing the movie.
-	const [seat, setSeat] = useState('1'); //state property storing the seat.
-	const [ticketInput, setTicket] = useState(''); //state property storing the ticket.
-	const [snack, setSnack] = useState('popcorn'); //state property storing the snack.
-	const [nameInput, setNameInput] = useState(''); //state property storing the name.
-	const [date, setDate] = useState(''); //state property storing the date.
-	const [step, setStep] = useState(1); //state property storing the current question.
+	const [movie, setMovie] = useState('A Nightmare on Elm Street'); //state variable storing the movie.
+	const [seat, setSeat] = useState('1'); //state variable storing the seat.
+	const [ticketInput, setTicket] = useState(''); //state variable storing the ticket.
+	const [snack, setSnack] = useState('popcorn'); //state variable storing the snack.
+	const [nameInput, setNameInput] = useState(''); //state variable storing the name.
+	const [date, setDate] = useState(''); //state variable storing the date.
+	const [step, setStep] = useState(1); //state variable storing the current question.
 
 	const onMovieChange = (movie) => {
 		setMovie(movie);

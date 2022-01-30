@@ -9,7 +9,7 @@ const FourthQuestion = ({
 	//const { nameInput, onNameInputChange } = props; // Object destructuring, to extract properties from objects and bind them to variables
 	return (
 		<form className="form-container4" tabIndex="5">
-			<label>
+			<label htmlFor="snack">
 				<h1>Pick your snack!</h1>
 			</label>
 			<select
