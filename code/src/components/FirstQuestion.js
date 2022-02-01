@@ -20,7 +20,7 @@ export const FirstQuestion = ({
 				<p className="question-number">Question {step}</p>
 				<label className="question-heading" htmlFor="languageInput">
 					<h2 className="question-heading">
-						Which language is most important for a developer?
+						Which language is most important for a frontend developer?
 					</h2>
 				</label>
 				<select
