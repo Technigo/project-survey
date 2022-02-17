@@ -9,5 +9,5 @@ If I hade more time I would style it some more, validate the forms and maybe add
 
 ## View it live
 
-https://kriss-github-tracker.netlify.app/
+https://dazzling-lovelace-b281db.netlify.app
 
