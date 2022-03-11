@@ -1,7 +1,7 @@
 import React from "react";
+import PreviousButton from "./buttons-components/PreviousButton";
 
 const Overview = (props) => {
-  // const { name, arrayAnswer, arrayAnswer2, arrayAnswer3 } = props;
 
   return (
     <>
@@ -81,9 +81,7 @@ const Overview = (props) => {
           </p>
         </section>
       </div>
-      <button className="previous-btn" onClick={props.onStepChangeMinus}>
-        Previous
-      </button>
+      <PreviousButton onStepChangeMinus={props.onStepChangeMinus} />
     </>
   );
 };

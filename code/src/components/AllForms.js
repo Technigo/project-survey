@@ -2,59 +2,69 @@ import React, { useState } from "react";
 import RadioButtons from "./RadioButtons";
 import DropDown from "./DropDown";
 import Overview from "./Overview";
-import OverviewButton from "./OverviewButton.js";
+
+
 const AllForms = (props) => {
-  /*Overview component props */
 
-  /* ALL STATES HERE: */
-  const [arrayAnswer, setArrayAnswer] = useState(""); /* dropdown component */
-  const [arrayAnswer2, setArrayAnswer2] = useState(""); /* dropdown component */
-  const [arrayAnswer3, setArrayAnswer3] = useState(""); /* dropdown component */
-  const [trueOrFalse, setTrueOrFalse] = useState(); /* radioButton component */
-  const [trueOrFalse2, setTrueOrFalse2] =
-    useState(); /* radioButton component */
-  const [trueOrFalse3, setTrueOrFalse3] =
-    useState(); /* radioButton component */
+   /* ------------------- ALL LOCAL STATES HERE -------------------- */
 
-  const [step, setStep] = useState(1); /* step state */
+  /* states for the dropdown component */
+  const [arrayAnswer, setArrayAnswer] = useState(""); 
+  const [arrayAnswer2, setArrayAnswer2] = useState(""); 
+  const [arrayAnswer3, setArrayAnswer3] = useState(""); 
+  
+ /* states for the radioButton component */
+  const [trueOrFalse, setTrueOrFalse] = useState(); 
+  const [trueOrFalse2, setTrueOrFalse2] = useState(); 
+  const [trueOrFalse3, setTrueOrFalse3] = useState(); 
 
-  /* ALL FUNCTIONS HERE */
+ /* state for the steps */
+  const [step, setStep] = useState(1); 
+
+  
+  /* ------------------- ALL FUNCTIONS HERE -------------------- */
+
+  /* Function for increasing the steps and therefore, being able to move forward */
+  /* Which is trigger in each component with a Next button and the See overview button */
   const onStepChange = () => {
-    /* Function step*/
     setStep(step + 1);
   };
+
+   /* Function for decreasing the steps and therefore, being able to go to previous page */
+   /* Which is trigger in the RadioButtons and Overview components with a Previous button */
   const onStepChangeMinus = () => {
-    /* Function step to go back */
     setStep(step - 1);
   };
 
+   /* Function for all the dropsdown */
   const onSetArrayAnswer = (event) => {
-    /* Function dropdown */
     setArrayAnswer(event.target.value);
   };
+
   const onSetArrayAnswer2 = (event) => {
-    /* Function dropdown */
     setArrayAnswer2(event.target.value);
   };
+  
   const onSetArrayAnswer3 = (event) => {
-    /* Function dropdown */
     setArrayAnswer3(event.target.value);
   };
 
+
+   /* Function for all radioButtons */
   const onSetTrueOrFalse = (event) => {
-    /* Function radioButtons */
     setTrueOrFalse(event.target.value);
   };
+
   const onSetTrueOrFalse2 = (event) => {
-    /* Function radioButtons */
     setTrueOrFalse2(event.target.value);
   };
+
   const onSetTrueOrFalse3 = (event) => {
-    /* Function radioButtons */
     setTrueOrFalse3(event.target.value);
   };
 
-  /* IF STATEMENTS */
+
+ /* ------------------- IF STATEMENTS BASED ON THE STEP STATE -------------------- */
   if (step === 1) {
     return (
       <DropDown
@@ -64,7 +74,7 @@ const AllForms = (props) => {
         onSetArrayAnswer2={onSetArrayAnswer2}
         arrayAnswer3={arrayAnswer3}
         onSetArrayAnswer3={onSetArrayAnswer3}
-        onStepChange={onStepChange}
+        onStepChange={onStepChange} 
       />
     );
   } else if (step === 2) {
@@ -80,14 +90,8 @@ const AllForms = (props) => {
         onStepChangeMinus={onStepChangeMinus}
       />
     );
+  
   } else if (step === 3) {
-    return (
-      <OverviewButton
-        onStepChange={onStepChange}
-        onStepChangeMinus={onStepChangeMinus}
-      />
-    );
-  } else if (step === 4) {
     return (
       <Overview
         name={props.name}

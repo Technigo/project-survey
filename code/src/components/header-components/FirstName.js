@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { IntroMessage } from "./IntroMessage";
 
 const FirstName = (props) => {
-  const { name, onNameInputChange } = props;
 
+  const { name, onNameInputChange } = props; /* object destructuring: another way of passing props */
   const [step, setStep] = useState(1); /* step state */
 
+/*  */
   const onStepChange = () => {
     setStep(step + 1);
   };
@@ -22,22 +23,19 @@ const FirstName = (props) => {
           value={name}
           className="input-name"
           onChange={onNameInputChange}
-          // onChange={(e) => onNameInputChange(e)}
-          // onChange={(e) => setNameInput(e.target.value)}
         />
 
         <button
           className="submit-btn"
           disabled={name === ""}
-          onClick={onStepChange}
+          onClick={onStepChange} /* When the user clicks submit, the function onStepChange is called and adds one to the step variable,therefore, the condition is not true anymore */
         >
           Submit
         </button>
       </form>
     );
   } else {
-    return <IntroMessage
-    name={name} />;
+    return <IntroMessage name={name} />;
   }
 };
 

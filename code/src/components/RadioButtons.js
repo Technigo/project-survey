@@ -1,4 +1,6 @@
 import React from "react";
+import OverviewButton from "./buttons-components/OverviewButton";
+import PreviousButton from "./buttons-components/PreviousButton";
 
 const radioButtonsAnswers = ["True", "False"];
 
@@ -62,13 +64,9 @@ const RadioButtons = (props) => {
         ))}
       </form>
 
-      <button className="next-btn" onClick={props.onStepChange}>
-        Next
-      </button>
+     <OverviewButton onStepChange={props.onStepChange} />
+     <PreviousButton onStepChangeMinus={props.onStepChangeMinus} />
 
-      <button className="previous-btn" onClick={props.onStepChangeMinus}>
-        Previous
-      </button>
     </section>
   );
 };

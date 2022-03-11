@@ -1,14 +1,13 @@
 import React from "react";
+import NextButton from "./buttons-components/NextButton";
 
 const DropDown = (props) => {
-  //   const { arrayAnswer, onSetArrayAnswer } = props;
-  //   const { arrayAnswer2, onSetArrayAnswer2 } = props;
-  //   const { arrayAnswer3, onSetArrayAnswer3, onStepChange } = props;
-
+  
   return (
     <section className="dropDown-section">
       <h2 className="heading-two">All about arrays</h2>
 
+      {/* First form */}
       <form className="drop-down">
         <label htmlFor="question1" className="label">
           What is the difference between forEach() and map() ?
@@ -94,9 +93,8 @@ const DropDown = (props) => {
           </option>
         </select>
       </form>
-      <button className="next-btn" onClick={props.onStepChange}>
-        Next
-      </button>
+
+      <NextButton onStepChange={props.onStepChange} />
     </section>
   );
 };
