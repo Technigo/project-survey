@@ -4,7 +4,7 @@ const NextButton = (props) => {
   const { onStepChange } = props;
   return (
     <>
-      <button className="overview-btn" onClick={onStepChange}>
+      <button className="next-btn" onClick={onStepChange}>
         Next
       </button>
       

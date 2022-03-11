@@ -63,8 +63,8 @@ const AllForms = (props) => {
     setTrueOrFalse3(event.target.value);
   };
 
-
  /* ------------------- IF STATEMENTS BASED ON THE STEP STATE -------------------- */
+
   if (step === 1) {
     return (
       <DropDown
@@ -77,6 +77,7 @@ const AllForms = (props) => {
         onStepChange={onStepChange} 
       />
     );
+    
   } else if (step === 2) {
     return (
       <RadioButtons

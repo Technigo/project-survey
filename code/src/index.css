@@ -90,7 +90,6 @@ code {
 }
 /* MAIN */
 .dropDown-section,
-.radioButtons-section,
 .overview-section,
 .radioButtons-section,
 .correct-answers-section {
@@ -146,7 +145,7 @@ code {
   padding: 10px 0;
   font-size: 20px;
   font-weight: 800;
-  border-color: rgb(214, 52, 23);
+  border: 1px solid rgb(214, 52, 23);
   background-color: #fff;
   color: rgb(214, 52, 23);
   margin-top: 20px;
@@ -156,12 +155,14 @@ code {
   transform: scale(1.1, 1.1);
   background-color: rgb(214, 52, 23);
   color: #fff;
+  border: 1px solid #fff;
 }
 
 .overview-btn:hover {
   transform: scale(1.1, 1.1);
   background-color: rgb(214, 52, 23);
   color: #fff;
+  border: 1px solid #fff;
 }
 
 .previous-btn {
@@ -172,16 +173,18 @@ code {
   padding: 10px 0;
   font-size: 20px;
   font-weight: 800;
-  border-color: rgb(214, 52, 23);
+  border: 1px solid #fff;
   color: #fff;
   background-color: rgb(214, 52, 23);
   margin-top: 20px;
   margin-bottom: 50px;
 }
+
 .previous-btn:hover {
   transform: scale(1.1, 1.1);
-  background-color: rgb(214, 52, 23);
-  color: #fff;
+  background-color: #fff;
+  border: 1px solid rgb(214, 52, 23);
+  color:rgb(214, 52, 23);
 }
 
 /* overview section */

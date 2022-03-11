@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { IntroMessage } from "./IntroMessage";
+import SubmitButton from "components/buttons-components/SubmitButton";
 
 const FirstName = (props) => {
 
-  const { name, onNameInputChange } = props; /* object destructuring: another way of passing props */
-  const [step, setStep] = useState(1); /* step state */
+  /* object destructuring: another way of passing props */
+  const { name, onNameInputChange } = props; 
 
-/*  */
+  /* local state */
+  const [step, setStep] = useState(1); 
+
+  /* Function for increasing the steps and therefore, being able to render the IntroMessage component */
   const onStepChange = () => {
     setStep(step + 1);
   };
 
+  /* If statement based on the step state */
   if (step === 1) {
     return (
       <form onSubmit={(event) => event.preventDefault()}>
@@ -24,14 +29,7 @@ const FirstName = (props) => {
           className="input-name"
           onChange={onNameInputChange}
         />
-
-        <button
-          className="submit-btn"
-          disabled={name === ""}
-          onClick={onStepChange} /* When the user clicks submit, the function onStepChange is called and adds one to the step variable,therefore, the condition is not true anymore */
-        >
-          Submit
-        </button>
+        <SubmitButton onStepChange={onStepChange} name={name} />
       </form>
     );
   } else {

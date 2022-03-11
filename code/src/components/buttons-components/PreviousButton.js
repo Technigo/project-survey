@@ -4,7 +4,7 @@ const PreviousButton = (props) => {
   const { onStepChangeMinus } = props;
   return (
     <>
-      <button className="overview-btn" onClick={onStepChangeMinus}>
+      <button className="previous-btn" onClick={onStepChangeMinus}>
         Previous
       </button>
       
