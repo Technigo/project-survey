@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import AllForms from "./components/AllForms";
+import AllForms from "./components/forms-components/AllForms";
 import Header from "components/header-components/Header";
 
 export const App = () => {
@@ -16,8 +16,7 @@ export const App = () => {
   return (
     <>
       <Header name={nameInput} onNameInputChange={onNameInputChange} />  {/* we are passing via props the nameInput variable and also the function to the header component */}
-
-      <AllForms name={nameInput} />
+      <AllForms name={nameInput} />  {/* we are passing via props the nameInput variable and is being used in the overview component */}
     </>
   );
 };

@@ -1,6 +1,6 @@
 import React from "react";
-import OverviewButton from "./buttons-components/OverviewButton";
-import PreviousButton from "./buttons-components/PreviousButton";
+import OverviewButton from "../buttons-components/OverviewButton";
+import PreviousButton from "../buttons-components/PreviousButton";
 
 const radioButtonsAnswers = ["True", "False"];
 

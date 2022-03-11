@@ -1,5 +1,5 @@
 import React from "react";
-import NextButton from "./buttons-components/NextButton";
+import NextButton from "../buttons-components/NextButton";
 
 const DropDown = (props) => {
   
