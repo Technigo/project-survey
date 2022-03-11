@@ -11,7 +11,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: rgb(255, 243, 56);
-  font-size: 20px;
 }
 
 code {
@@ -256,7 +255,8 @@ code {
 
   .overview-section,
   .correct-answers-section {
-    max-width: 47%;
+    width: 40%;
+    max-width: 900px;
   }
   .correct-answers-section {
     margin-top: 40px;
