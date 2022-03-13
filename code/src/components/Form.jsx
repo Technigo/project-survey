@@ -4,17 +4,17 @@ import QuestionText from "./QuestionText"
 import QuestionRadio from "./QuestionRadio"
 import QuestionCheckox from "./QuestionCheckox"
 // import QuestionMultipleCheckoxes from "./QuestionMultipleCheckoxes"
-import Summary from "./Summary"
+import QuestionRangeSlider from "./QuestionRangeSlider"
 import QuestionSelectMenu from './QuestionSelectMenu'
+import Summary from "./Summary"
 
 const Form = () => {
   const [name, setName] = useState("")
   const [ageGroup, setAgeGroup] = useState()
   const [wantsNewsletter, setWantsNewsletter] = useState(false)
-  // const [fruitLiked, setFruitLiked] = useState(
-  //   new Array(fruits.length).fill(false)
-  // )
+  // const [multiple, setMultiple] = useState(false)
   const [location, setLocation] = useState("")
+  const [like, setLike] = useState("")
   const [step, setStep] = useState(1)
   const [showSummary, setShowSummary] = useState(false)
 
@@ -30,9 +30,13 @@ const Form = () => {
     setWantsNewsletter(event.target.checked)
   }
 
-  // const onFruitLikedChange = (event) => {
-  //   setFruitLiked(event.target.checked)
+  // const onMultipleChange = (event) => {
+  //   setMultiple(event.target.checked)
   // }
+
+  const onLikeChange = (event) => {
+    setLike(event.target.value)
+  }
 
   const onLocationChange = (event) => {
     setLocation(event.target.value)
@@ -43,6 +47,8 @@ const Form = () => {
     setName("")
     setAgeGroup("")
     setWantsNewsletter("")
+    // setMultiple("")
+    setLike("")
     setLocation("")
     setStep(1)
   }
@@ -60,6 +66,8 @@ const Form = () => {
       name={name}
       ageGroup={ageGroup}
       wantsNewsletter={wantsNewsletter}
+      // multiple={multiple}
+      like={like}
       location={location}
       onSummary={onSummary}
     />
@@ -88,12 +96,19 @@ const Form = () => {
       )}
       {/* {step === 4 && (
         <QuestionMultipleCheckoxes
-          fruitLiked={fruitLiked}
-          onFruitLikedChange={onFruitLikedChange}
-          onFinalQuestion={onFinalQuestion}
+          multiple={multiple}
+          onMultipleChange={onMultipleChange}
+          onStepChange={onStepChange}
         />
       )} */}
             {step === 4 && (
+        <QuestionRangeSlider
+          like={like}
+          onLikeChange={onLikeChange}
+          onStepChange={onStepChange}
+        />
+      )}
+            {step === 5 && (
         <QuestionSelectMenu
           location={location}
           onLocationChange={onLocationChange}
