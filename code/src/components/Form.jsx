@@ -3,16 +3,19 @@ import React, { useState } from "react"
 import QuestionText from "./QuestionText"
 import QuestionRadio from "./QuestionRadio"
 import QuestionCheckox from "./QuestionCheckox"
-// import QuestionMultipleCheckoxes from "./QuestionMultipleCheckoxes"
+import QuestionMultipleCheckoxes from "./QuestionMultipleCheckoxes"
 import QuestionRangeSlider from "./QuestionRangeSlider"
-import QuestionSelectMenu from './QuestionSelectMenu'
+import QuestionSelectMenu from "./QuestionSelectMenu"
 import Summary from "./Summary"
 
 const Form = () => {
   const [name, setName] = useState("")
   const [ageGroup, setAgeGroup] = useState()
   const [wantsNewsletter, setWantsNewsletter] = useState(false)
-  // const [multiple, setMultiple] = useState(false)
+  const [multiple, setMultiple] = useState({
+    test1: false,
+    test2: false,
+  })
   const [location, setLocation] = useState("")
   const [like, setLike] = useState("")
   const [step, setStep] = useState(1)
@@ -30,9 +33,13 @@ const Form = () => {
     setWantsNewsletter(event.target.checked)
   }
 
-  // const onMultipleChange = (event) => {
-  //   setMultiple(event.target.checked)
-  // }
+  const onMultipleChange = (event) => {
+    console.log(event)
+    setMultiple({
+      ...multiple,
+      [event.target.name]: event.target.checked,
+    })
+  }
 
   const onLikeChange = (event) => {
     setLike(event.target.value)
@@ -47,7 +54,10 @@ const Form = () => {
     setName("")
     setAgeGroup("")
     setWantsNewsletter("")
-    // setMultiple("")
+    setMultiple({
+      test1: false,
+      test2: false,
+    })
     setLike("")
     setLocation("")
     setStep(1)
@@ -66,7 +76,7 @@ const Form = () => {
       name={name}
       ageGroup={ageGroup}
       wantsNewsletter={wantsNewsletter}
-      // multiple={multiple}
+      multiple={multiple}
       like={like}
       location={location}
       onSummary={onSummary}
@@ -94,21 +104,21 @@ const Form = () => {
           onStepChange={onStepChange}
         />
       )}
-      {/* {step === 4 && (
+      {step === 4 && (
         <QuestionMultipleCheckoxes
           multiple={multiple}
           onMultipleChange={onMultipleChange}
           onStepChange={onStepChange}
         />
-      )} */}
-            {step === 4 && (
+      )}
+      {step === 5 && (
         <QuestionRangeSlider
           like={like}
           onLikeChange={onLikeChange}
           onStepChange={onStepChange}
         />
       )}
-            {step === 5 && (
+      {step === 6 && (
         <QuestionSelectMenu
           location={location}
           onLocationChange={onLocationChange}

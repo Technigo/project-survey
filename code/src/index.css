@@ -12,3 +12,62 @@ code {
     monospace;
 }
 
+.question1 {
+  --width-end: 4%;
+}
+
+.question2 {
+  --width-start: 4%;
+  --width-end: 20%;
+}
+
+.question3 {
+  --width-start: 20%;
+  --width-end: 36%;
+}
+
+.question4 {
+  --width-start: 36%;
+  --width-end: 52%;
+}
+
+.question5 {
+  --width-start: 52%;
+  --width-end: 68%;
+}
+
+.question6 {
+  --width-start: 68%;
+  --width-end: 84%;
+}
+
+.summary {
+  --width-start: 84%;
+  --width-end: 100%;
+}
+
+.progress {
+  background: red;
+  justify-content: flex-start;
+  border-radius: 100px;
+  align-items: center;
+  position: relative;
+  padding: 0 5px;
+  display: flex;
+  height: 40px;
+  width: 500px;
+}
+
+.progress-value {
+  animation: load 3s normal forwards;
+  box-shadow: 0 10px 40px -10px #fff;
+  border-radius: 100px;
+  background: blue;
+  height: 30px;
+  width: 0;
+}
+
+@keyframes load {
+  0% { width: var(--width-start); }
+  100% { width: var(--width-end); }
+}

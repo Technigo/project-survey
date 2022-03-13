@@ -6,22 +6,27 @@ const QuestionRadio = (props) => {
   const { ageGroup, onGroupChange, onStepChange } = props
 
   return (
-    <form>
-      Age group:
-      {ageGroups.map((group) => (
-        <label key={group}>
-          <input
-            type="radio"
-            value={group}
-            onChange={onGroupChange}
-            checked={ageGroup === group}
-          />
-          {group}
-        </label>
-      ))}
-      <button onClick={() => onStepChange(-1)}>Go back</button>
-      <button onClick={() => onStepChange(1)}>Next question</button>
-    </form>
+    <>
+      <div class="progress">
+        <div class="progress-value question2"></div>
+      </div>
+      <form>
+        Age group:
+        {ageGroups.map((group) => (
+          <label key={group}>
+            <input
+              type="radio"
+              value={group}
+              onChange={onGroupChange}
+              checked={ageGroup === group}
+            />
+            {group}
+          </label>
+        ))}
+        <button onClick={() => onStepChange(-1)}>Go back</button>
+        <button onClick={() => onStepChange(1)}>Next question</button>
+      </form>
+    </>
   )
 }
 
