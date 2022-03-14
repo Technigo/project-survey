@@ -23,10 +23,10 @@ const Closing = (data) => {
 
   return (
     <section className='page'>
-      <h2>Thank </h2>
+      <h2>Thanks for sharing! Your feedback is greatly appreciated.</h2>
       <p>You are in the {age} age group.</p>
       <p>{hoursResponse()}</p>
-      <p>You prefer to work {location}</p>
+      <p>You prefer to work {location}.</p>
       <p>{productivityResponse()}</p>
       <p>{stressResponse()}</p>
     </section>

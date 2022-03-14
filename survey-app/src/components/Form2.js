@@ -8,10 +8,11 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
       <h2>2. Would you prefer a company that offers flexible work hours?</h2>
       <form>
         <p>
-          <label>
+          <label htmlFor='yesButton'>
             <input
               type='radio'
               value='yes'
+              id='yesButton'
               onChange={event => setHours(event.target.value)}
               checked={hours === 'yes'}
             />
@@ -19,10 +20,11 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
           </label>
         </p>
         <p>
-          <label>
+          <label htmlFor='noButton'>
             <input
               type='radio'
               value='no'
+              id='noButton'
               onChange={event => setHours(event.target.value)}
               checked={hours === 'no'}
             />
@@ -30,7 +32,7 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
           </label>
         </p>
       </form>
-      <button onClick={() => { changePage(); retrieveHoursData(hours) }}>Next</button>
+      <button disabled={!hours} onClick={() => { changePage(); retrieveHoursData(hours) }}>Next</button>
     </section>
   )
 }

@@ -7,11 +7,12 @@ const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
     <section className='page'>
       <h2>3. How would you prefer to work?</h2>
       <form>
-        <label>
+        <label htmlFor='locationsOptions'>
           Select location
         <select
           onChange={event => setLocation(event.target.value)}
           value={location}  
+          id='locationsOptions'
         >
           <option value="">Choose a location:</option>
           <option value='in office'>Fully at the office</option>
@@ -22,7 +23,7 @@ const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
         </select>
         </label>
       </form>
-      <button onClick={() => { changePage(); retrieveLocationData(location) }}>Next</button>
+      <button disabled={!location} onClick={() => { changePage(); retrieveLocationData(location) }}>Next</button>
     </section>
   )
 }
