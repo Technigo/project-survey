@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import Step1Player from './Step1Player'
 
+import orange from 'orange.png'
+
 
 
 const Form = () => {
@@ -16,7 +18,11 @@ return (
 
    <div className="form-wrapper">
         <div>
-            <h1>Hello gorgeous!</h1>
+            <h1>Hello gorgeous!</h1> 
+            <img 
+            src={orange}
+            alt="picture of an orange"
+            className="orange" />
             <p>Please have a seat.</p>
         </div>
 
@@ -27,4 +33,5 @@ return (
         />
     </div>
 )}
+
 export default Form

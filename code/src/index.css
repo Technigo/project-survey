@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,300&display=swap");
 
 * {
   margin: 0 auto;
@@ -11,21 +12,29 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: #fbf6db;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 h1 {
   font-family: "Quintessential", sans-serif;
   font-size: 50px;
   color: #d79500;
+}
+
+input,
+button {
+  font-family: "Jost", sans-serif;
+}
+
+.orange {
+  width: 3.5em;
+  opacity: 0.8;
 }
