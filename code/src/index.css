@@ -13,36 +13,71 @@ code {
 }
 
 .question1 {
-  --width-end: 4%;
+  --width-end: 0%;
 }
 
 .question2 {
-  --width-start: 4%;
-  --width-end: 20%;
+  --width-start: 0%;
+  --width-end: calc(7.7% * 1);
 }
 
 .question3 {
-  --width-start: 20%;
-  --width-end: 36%;
+  --width-start: calc(7.7% * 1);
+  --width-end: calc(7.7% * 2);
 }
 
 .question4 {
-  --width-start: 36%;
-  --width-end: 52%;
+  --width-start: calc(7.7% * 2);
+  --width-end: calc(7.7% * 3);
 }
 
 .question5 {
-  --width-start: 52%;
-  --width-end: 68%;
+  --width-start: calc(7.7% * 3);
+  --width-end: calc(7.7% * 4);
 }
 
 .question6 {
-  --width-start: 68%;
-  --width-end: 84%;
+  --width-start: calc(7.7% * 4);
+  --width-end: calc(7.7% * 5);
+}
+
+.question7 {
+  --width-start: calc(7.7% * 5);
+  --width-end: calc(7.7% * 6);
+}
+
+.question8 {
+  --width-start: calc(7.7% * 6);
+  --width-end: calc(7.7% * 7);
+}
+
+.question9 {
+  --width-start: calc(7.7% * 7);
+  --width-end: calc(7.7% * 8);
+}
+
+.question10 {
+  --width-start: calc(7.7% * 8);
+  --width-end: calc(7.7% * 9);
+}
+
+.question11 {
+  --width-start: calc(7.7% * 9);
+  --width-end: calc(7.7% * 10);
+}
+
+.question12 {
+  --width-start: calc(7.7% * 10);
+  --width-end: calc(7.7% * 11);
+}
+
+.question13 {
+  --width-start: calc(7.7% * 11);
+  --width-end: calc(7.7% * 12);
 }
 
 .summary {
-  --width-start: 84%;
+  --width-start: calc(7.7% * 12);
   --width-end: 100%;
 }
 
@@ -59,7 +94,7 @@ code {
 }
 
 .progress-value {
-  animation: load 3s normal forwards;
+  animation: load 1s normal forwards;
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
   background: blue;
