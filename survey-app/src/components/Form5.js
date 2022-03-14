@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 
-const StressRange = ({ changePage }) => {
+const StressRange = ({ changePage, retrieveStressData }) => {
   const [stress, setStress] = useState();
 
   return (
@@ -11,11 +11,12 @@ const StressRange = ({ changePage }) => {
           type='range'
           min='0'
           max='5'
-          onChange={(event) => setStress(event.target.value)}
+          onChange={event => setStress(event.target.value)}
         />
-        <p><span>no change</span><span>less stressed {stress}</span></p>
+        <p><span>no change</span><span>less stressed</span></p>
+        <p>The age range is {stress}</p>
       </form>
-      <button onClick={() => {changePage()}}>Next</button>
+      <button onClick={() => { changePage(); retrieveStressData(stress) }}>Next</button>
     </section>
   )
 }

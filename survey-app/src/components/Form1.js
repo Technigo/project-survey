@@ -1,25 +1,25 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 
-const AgeInput = ({changePage}) => {
+const AgeInput = ({ changePage, retrieveAgeData }) => {
   const [ageGroup, setAgeGroup] = useState();
 
   return (
     <section className='page'>
       <h2>1. How old are you?</h2>
       <form>
-        Age Groups: 
+        Age Groups:
         <label>
-        <input 
-          type='radio' 
-          value='18-24' 
-          onChange={event => setAgeGroup(event.target.value)}
-          checked={ageGroup === '18-24'}
-        />
-        18-24
+          <input
+            type='radio'
+            value='18-24'
+            onChange={event => setAgeGroup(event.target.value)}
+            checked={ageGroup === '18-24'}
+          />
+          18-24
         </label>
         <label>
-          <input 
-            type='radio' 
+          <input
+            type='radio'
             value='25-34'
             onChange={event => setAgeGroup(event.target.value)}
             checked={ageGroup === '25-34'}
@@ -27,25 +27,25 @@ const AgeInput = ({changePage}) => {
           25-34
         </label>
         <label>
-          <input 
-            type='radio' 
+          <input
+            type='radio'
             value='35-44'
             onChange={event => setAgeGroup(event.target.value)}
-            checked={ageGroup === '35-44'} 
+            checked={ageGroup === '35-44'}
           />
           35-44
         </label>
         <label>
-          <input 
-            type='radio' 
+          <input
+            type='radio'
             value='45+'
             onChange={event => setAgeGroup(event.target.value)}
-            checked={ageGroup === '45+'} 
+            checked={ageGroup === '45+'}
           />
           45+
         </label>
-        <button onClick={() => { changePage()}}>Next</button>
       </form>
+      <button onClick={() => { changePage(); retrieveAgeData(ageGroup) }}>Next</button>
     </section>
   )
 }

@@ -1,24 +1,28 @@
 import React, { useState } from 'react'
 
-const PreferredHoursInput = ({ changePage }) => {
+const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
   const [location, setLocation] = useState();
 
   return (
     <section className='page'>
       <h2>3. How would you prefer to work?</h2>
       <form>
+        <label>
+          Select location
         <select
           onChange={event => setLocation(event.target.value)}
-          value={location}
+          value={location}  
         >
-          <option value='office'>Fully at the office</option>
-          <option value='mostOffice'>Most days at the office</option>
+          <option value="">Choose a location:</option>
+          <option value='in office'>Fully at the office</option>
+          <option value='mostly in office'>Most days at the office</option>
           <option value='hybrid'>Hybrid (50 - 50)</option>
-          <option value='mostRemote'>Most days remote</option>
+          <option value='mostly remote'>Most days remote</option>
           <option value='remote'>Fully remote</option>
         </select>
+        </label>
       </form>
-      <button onClick={() => { changePage() }}>Next</button>
+      <button onClick={() => { changePage(); retrieveLocationData(location) }}>Next</button>
     </section>
   )
 }
