@@ -4,10 +4,9 @@ const Question2 = () => {
 
     const ageGroups = [
         '18-25',
-        '26-35',
-        '36-45',
-        '46-55',
-        '56 and above'
+        '26-40',
+        '41-55',
+        '56+',
     ];
 
     const [ageGroup, setAgeGroup] = useState();
