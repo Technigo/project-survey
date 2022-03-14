@@ -3,12 +3,12 @@
 import React, { useState } from 'react'
 
 import { PronounInput } from 'components/PronounInput'
-import { NameInput } from 'components/NameInput'
+import { TextInput } from 'components/TextInput'
 import { AgeInput } from 'components/AgeInput'
 import { Overview } from 'components/Overview'
-import { LocationInput } from 'components/LocationInput'
 import { DateInput } from 'components/DateInput'
 import { TimeInput } from 'components/TimeInput'
+import { Button } from 'components/Buttons'
 
 
 export const App = () => {
@@ -23,6 +23,7 @@ export const App = () => {
     gift: '',
     rvspDate: '',
     rvspTo: '',
+    rvspContactDetails: '',
   }
 
   const [state, setState] = useState(initialState)
@@ -62,66 +63,86 @@ export const App = () => {
       <form className='container' onSubmit={handleSubmit}>
 
         {/* Name and gender */}
-        <NameInput 
-          text={'Name'}
-          state={state.name}
-          handleInput={handleInput}
-        />
+        <div className='question-wrapper'>
+          <TextInput 
+            text={'Name'}
+            inputName={'name'}
+            placeholder={'name'}
+            state={state.name}
+            handleInput={handleInput}
+            />
 
-        <PronounInput 
-          pronoun={pronoun}
-          setPronoun={setPronoun}
-        />
+          <PronounInput 
+            pronoun={pronoun}
+            setPronoun={setPronoun}
+          />
 
-        <button onClick={handlePrevStepClick}>Back</button>
-        <button onClick={handleNextStepClick}>Next</button>    
+          <Button
+            prevBtn={handlePrevStepClick}
+            nextBtn={handleNextStepClick}
+            />
+        </div>
           
         {/* Age */}
-        <AgeInput 
+        <div className='question-wrapper'>
+          <AgeInput 
           state={state.age}
           handleInput={handleInput}
-        />
+          />
 
-        <button onClick={handlePrevStepClick}>Back</button>
-        <button onClick={handleNextStepClick}>Next</button>    
+        <Button
+          prevBtn={handlePrevStepClick}
+          nextBtn={handleNextStepClick}
+          />  
+        </div>
 
         {/* Location */}
-        <LocationInput 
+        <div className='question-wrapper'>
+          <TextInput
+          text={'Location'}
+          inputName={'location'}
+          placeholder={'location/adress'} 
           state={state.location}
           handleInput={handleInput}
-        />
-        <button onClick={handlePrevStepClick}>Back</button>
-        <button onClick={handleNextStepClick}>Next</button>    
+          />
+        <Button
+          prevBtn={handlePrevStepClick}
+          nextBtn={handleNextStepClick}
+          />     
+        </div>
 
         
         {/* Date and time */}
-        <DateInput 
+        <div className='question-wrapper'>
+          <DateInput 
           text={'Date'}
           state={state.date}
           handleInput={handleInput}
-        />
+          />
 
-          <TimeInput 
+        <TimeInput 
           text={'From'}
           state={state.timeFrom}
-          handleInput={handleInput}/>
+          handleInput={handleInput}
+          />
 
+        <TimeInput 
+          text={'To'}
+          state={state.timeTo}
+          handleInput={handleInput}
+          />
 
-
-        <label htmlFor='timeTo'>To:
-          <input 
-            id='timeTo'
-            type='time'
-            name='timeTo'
-            value={state.timeTo}
-            onChange={handleInput} 
-            /> 
-        </label>  
-        <button onClick={handlePrevStepClick}>Back</button>
-        <button onClick={handleNextStepClick}>Next</button>    
+        <Button
+          prevBtn={handlePrevStepClick}
+          nextBtn={handleNextStepClick}
+          />   
+        </div>
+        
+            
 
         {/* Gifts     */}
-        <legend>Gifts</legend>
+        <div className='question-wrapper'>
+          <legend>Gifts</legend>
         <label>
           <input
             type='radio'
@@ -145,25 +166,44 @@ export const App = () => {
             />
             No
           </label>
-        <button onClick={handlePrevStepClick}>Back</button>
-        <button onClick={handleNextStepClick}>Next</button>    
+        
+        <Button
+          prevBtn={handlePrevStepClick}
+          nextBtn={handleNextStepClick}
+          />               
+        </div>
       
 
         {/* RVSP */}
-        <DateInput 
+        <div className='question-wrapper'>
+          <DateInput 
           text={'RVSP'}
           state={state.rvspDate}
           handleInput={handleInput}
-        />
+          />
         
-        <NameInput 
+        <TextInput 
           text={'RVSP TO'}
+          inputName={'rvspTo'}
+          placeholder={'name'}
           state={state.rvspTo}
           handleInput={handleInput}
-        />
+          />
 
-        <button onClick={handlePrevStepClick}>Back</button>
-        <button onClick={handleNextStepClick}>Next</button>        
+        <TextInput 
+          text={'Phone/email'}
+          inputName={'rvspContactDetails'}
+          placeholder={'phone/email'}
+          state={state.rvspContactDetails}
+          handleInput={handleInput}
+          />
+
+        <Button
+          prevBtn={handlePrevStepClick}
+          nextBtn={handleNextStepClick}
+          />           
+        </div>
+                
         
       {/* Select styling */}
         
