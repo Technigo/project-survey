@@ -18,7 +18,7 @@ return (
 
    <div className="form-wrapper">
         <div className="header-title">
-            <h1 className="hello-gorgeous">Hello gorgeous!</h1> 
+            <h1 className="hello-gorgeous">Hello gorgeous! </h1> 
             <img 
             src={orange}
             alt="picture of an orange"

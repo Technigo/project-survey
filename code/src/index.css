@@ -11,7 +11,7 @@
 } */
 
 body {
-  margin: 0;
+  margin: 10px;
   font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,7 +25,7 @@ body {
 
 h1 {
   font-family: "Quintessential", sans-serif;
-  font-size: 50px;
+  font-size: 40px;
   color: #c99c53;
 }
 
@@ -45,7 +45,7 @@ label {
   font-size: 18px;
 }
 
-form-wrapper {
+.form-wrapper {
   border: 1px solid #d79500;
   border-radius: 20px;
   padding: 20px;
@@ -60,9 +60,10 @@ form-wrapper {
 }
 
 .orange {
-  width: 3.5em;
+  width: 2.5em;
   opacity: 0.8;
   float: left;
+  margin-left: 10px;
 }
 
 /* MEDIA QUERY FOR TABLET */
