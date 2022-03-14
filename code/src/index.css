@@ -1,13 +1,50 @@
+:root {
+  --clr-one: #FDDBBC;
+}
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Archivo', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: var(--clr-one);
+  background: linear-gradient(29deg, rgba(255,196,143,1) 38%, rgba(253,228,188,1) 66%, rgb(211, 209, 206) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Archivo', sans-serif;
+}
+
+h1 {
+  font-family: 'Playfair Display', serif;
+  font-weight: 500;
+}
+
+
+/*************************/
+/*** REUSABLE ELEMENTS ***/
+/*************************/
+
+.flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 375px;
+}
+
+
+/***********************/
+/****     FORMS     ****/
+/***********************/
+
+legend {
+  border: 1px solid black;
 }
