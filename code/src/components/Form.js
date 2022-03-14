@@ -17,15 +17,15 @@ const Form = () => {
 return (
 
    <div className="form-wrapper">
-        <div>
-            <h1>Hello gorgeous!</h1> 
+        <div className="header-title">
+            <h1 className="hello-gorgeous">Hello gorgeous!</h1> 
             <img 
             src={orange}
             alt="picture of an orange"
             className="orange" />
-            <p>Please have a seat.</p>
         </div>
 
+        <p>Please have a seat.</p>
 
         <Step1Player 
         nameInput={nameInput}

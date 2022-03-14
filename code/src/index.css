@@ -26,7 +26,7 @@ body {
 h1 {
   font-family: "Quintessential", sans-serif;
   font-size: 50px;
-  color: #d79500;
+  color: #c99c53;
 }
 
 input,
@@ -35,8 +35,9 @@ button {
   border: none;
   font-size: 16px;
   border-radius: 30px;
-  color: #d79500;
+  color: #b47c23;
   padding: 10px;
+  margin-right: 10px;
 }
 
 p,
@@ -44,13 +45,30 @@ label {
   font-size: 18px;
 }
 
-.orange {
-  width: 3.5em;
-  opacity: 0.8;
-}
-
 form-wrapper {
   border: 1px solid #d79500;
   border-radius: 20px;
   padding: 20px;
 }
+
+.header-title {
+  overflow: auto;
+}
+
+.hello-gorgeous {
+  float: left;
+}
+
+.orange {
+  width: 3.5em;
+  opacity: 0.8;
+  float: left;
+}
+
+/* MEDIA QUERY FOR TABLET */
+/* @media (min-width: 801px) {}
+  /* CONTENT HERE */
+
+/* MEDIA QUERY FOR DESKTOP */
+/* @media (min-width:1281px) {}
+*/
