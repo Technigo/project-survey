@@ -13,7 +13,7 @@ const Step1Player = ({ nameInput, onNameInputChange }) => {
             <input
                 id="nameInput"
                 type="text"
-                placeholder="Your name, please"
+                placeholder="Put it right here"
                 value={nameInput}
                 onChange={onNameInputChange}
                 required
@@ -21,7 +21,7 @@ const Step1Player = ({ nameInput, onNameInputChange }) => {
 
         <button type="submit">Let's go!</button>
         </div>
-        
+
         </form>
     )
 
