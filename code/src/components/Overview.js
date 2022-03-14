@@ -1,6 +1,4 @@
 import React from 'react'
-import { ThemeInput } from './ThemeInput'
-
 
 export const Overview = ({ pronoun, state }) => {
 

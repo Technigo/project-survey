@@ -52,6 +52,7 @@ export const App = () => {
 
   const handleSubmit = e => {
     e.preventDefault()
+    setCounter(counter + 1)
   }
 
   return (
@@ -61,144 +62,173 @@ export const App = () => {
       {counter === 0 && (
         <div className='introPage-wrapper'>
           <IntroPage />
+          <Button 
+            nextBtn={handleNextStepClick}
+          />
         </div>
       )}
+    </section>
 
+    <section>
       <form className='container' onSubmit={handleSubmit}>
         {/* Name and gender */}
-          {counter === 1 && (
+        {counter === 1 && (
         <div className='question-wrapper'>
-            <>
-            <TextInput 
+          <TextInput 
             text={'Name'}
             inputName={'name'}
             placeholder={'name'}
             state={state.name}
             handleInput={handleInput}
-            />
+          />
 
           <PronounInput 
             pronoun={pronoun}
             setPronoun={setPronoun}
-            />
+          />
           <Button
             prevBtn={handlePrevStepClick}
             nextBtn={handleNextStepClick}
-            />
-          </>
+          />
         </div>
-          )}
+        )}
           
         {/* Age */}
-        <div className='question-wrapper'>
-          <AgeInput 
-          state={state.age}
-          handleInput={handleInput}
-          />
-          <Button
-            prevBtn={handlePrevStepClick}
-            nextBtn={handleNextStepClick}
-          />  
+        {counter === 2 && (
+
+          <div className='question-wrapper'>
+            <AgeInput 
+              state={state.age}
+              handleInput={handleInput}
+            />
+            <Button
+              prevBtn={handlePrevStepClick}
+              nextBtn={handleNextStepClick}
+            />  
           </div>
+        )}  
 
         {/* Location */}
-        <div className='question-wrapper'>
-          <TextInput
-          text={'Location'}
-          inputName={'location'}
-          placeholder={'location/adress'} 
-          state={state.location}
-          handleInput={handleInput}
-          />
-          <Button
-            prevBtn={handlePrevStepClick}
-            nextBtn={handleNextStepClick}
-          />     
-        </div>
+        {counter === 3 && (
+
+          <div className='question-wrapper'>
+            <TextInput
+              text={'Location'}
+              inputName={'location'}
+              placeholder={'location/adress'} 
+              state={state.location}
+              handleInput={handleInput}
+            />
+
+            <Button
+              prevBtn={handlePrevStepClick}
+              nextBtn={handleNextStepClick}
+            />     
+          </div>
+        )}
 
         
         {/* Date and time */}
-        <div className='question-wrapper'>
-          <DateInput 
-            text={'Date'}
-            inputName={'date'}
-            state={state.date}
-            handleInput={handleInput}
-          />
+        {counter === 4 && (
 
-          <TimeInput 
-            text={'From'}
-            inputName={'timeFrom'}
-            state={state.timeFrom}
-            handleInput={handleInput}
-          />
+          <div className='question-wrapper'>
+            <DateInput 
+              text={'Date'}
+              inputName={'date'}
+              state={state.date}
+              handleInput={handleInput}
+            />
 
-          <TimeInput 
-            text={'To'}
-            inputName={'timeTo'}
-            state={state.timeTo}
-            handleInput={handleInput}
-          />
-          <Button
-            prevBtn={handlePrevStepClick}
-            nextBtn={handleNextStepClick}
-          />   
-        </div>
+            <TimeInput 
+              text={'From'}
+              inputName={'timeFrom'}
+              state={state.timeFrom}
+              handleInput={handleInput}
+            />
+
+            <TimeInput 
+              text={'To'}
+              inputName={'timeTo'}
+              state={state.timeTo}
+              handleInput={handleInput}
+            />
+            <Button
+              prevBtn={handlePrevStepClick}
+              nextBtn={handleNextStepClick}
+            />   
+          </div>
+        )}
         
             
 
         {/* Gifts */}
-        <div className='question-wrapper'>
-          <GiftInput 
-            state={state.gift}
-            handleInput={handleInput}  
-          />
-          <Button
-            prevBtn={handlePrevStepClick}
-            nextBtn={handleNextStepClick}
-          />               
-        </div>
+        {counter === 5 && (
+
+          <div className='question-wrapper'>
+            <GiftInput 
+              state={state.gift}
+              handleInput={handleInput}  
+            />
+            <Button
+              prevBtn={handlePrevStepClick}
+              nextBtn={handleNextStepClick}
+            />               
+          </div>
+        )}
       
 
         {/* RVSP */}
+        {counter === 6 && (
         <div className='question-wrapper'>  
           <TextInput 
-            text={'to'}
+            text={'To'}
             inputName={'rvspTo'}
             placeholder={'name'}
             state={state.rvspTo}
             handleInput={handleInput}
           />
-
-          <TextInput 
-            text={'Phone/email'}
-            inputName={'rvspContactDetails'}
-            placeholder={'phone/email'}
-            state={state.rvspContactDetails}
-            handleInput={handleInput}
-          />
-          <Button
-            prevBtn={handlePrevStepClick}
-            nextBtn={handleNextStepClick}
-          />           
-        </div>
+            <TextInput 
+              text={'Phone/email'}
+              inputName={'rvspContactDetails'}
+              placeholder={'phone/email'}
+              state={state.rvspContactDetails}
+              handleInput={handleInput}
+            />
+            <Button
+              prevBtn={handlePrevStepClick}
+              nextBtn={handleNextStepClick}
+            />           
+          </div>
+        )}
                 
-        
       {/* Select styling */}
-      <ThemeInput 
-        state={state.theme}
-        handleInput={handleInput}  
-      /> 
+      {counter === 7 && (
+        <div className='question-wrapper'>
+          <ThemeInput 
+            state={state.theme}
+            handleInput={handleInput}  
+          /> 
+          <Button 
+            nextBtn={handleNextStepClick}
+          />
+          <button>Submit</button>
+        </div>  
+      )}
 
       </form>
     </section>
 
       {/* Overview */}
+
     <section>
-      <Overview 
-        pronoun={pronoun}
-        state={state}
-      />
+      {counter === 8 && (
+        <div className='Overview-wrapper'>
+          <Overview 
+            pronoun={pronoun}
+            state={state}
+          />
+        </div>
+      )}
     </section>
           
   </main>
