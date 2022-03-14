@@ -40,11 +40,23 @@ h1 {
   width: 375px;
 }
 
-
 /***********************/
 /****     FORMS     ****/
 /***********************/
 
 legend {
   border: 1px solid black;
+}
+
+label {
+  display: block;
+  padding: 1em;
+}
+
+input {
+  font-size: 16px;
+}
+
+img {
+  width: 50px;
 }

@@ -1,12 +1,12 @@
 import React from 'react'
 
-export const DateInput = ({ text, state, handleInput }) => {
+export const DateInput = ({ text, inputName, state, handleInput }) => {
   
   return (
-    <label htmlFor='date'>{text}
+    <label htmlFor={inputName}>{text}
       <input 
       type='date'
-      name='date'
+      name={inputName}
       value={state}
       onChange={handleInput} 
       /> 

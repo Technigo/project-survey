@@ -1,16 +1,18 @@
 import React from 'react'
 
-export const TimeInput = ({ text, state, handleInput }) => {
+export const TimeInput = ({ text, inputName, state, handleInput }) => {
   
   return (
-    <label htmlFor='timeFrom'>From:
+
+    <label htmlFor={inputName}>{text}
     <input 
-      id='timeFrom'
+      id={inputName}
       type='time'
-      name='timeFrom'
+      name={inputName}
       value={state}
       onChange={handleInput} 
-    /> 
+      /> 
     </label>  
+
   )
 }
