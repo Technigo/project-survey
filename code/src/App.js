@@ -1,7 +1,7 @@
 import React, {useState} from 'react'
 import Header from 'components/Header'
 import Name from 'components/Name'
-import Gender from 'components/Gender'
+// import Gender from 'components/Gender'
 import AgeGroup from 'components/AgeGroup'
 import TipiDropDown from 'components/TipiDropDown'
 import { TipiChart } from 'components/TipiChart'
