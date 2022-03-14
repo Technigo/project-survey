@@ -31,6 +31,34 @@ p span {
   display: block;
 }
 
+/* Page */
+.page {
+  width: 375px;
+  margin: 0 auto;
+}
+
+/* Dropdown Style Questions - For Media Queries? */
+/* .grid {
+  display: grid;
+  grid-template-columns: 2;
+}
+
+.column-1 {
+  grid-column: 1 / span 1;
+}
+
+.column-2 {
+  grid-column: 2 / span 1;
+} */
+
+
+
+
+
+
+
+
+/* LEGACY CSS */
 /* Matrix Style Questions */
 /* .grid-header {
   display: flex;
@@ -58,18 +86,3 @@ p span {
   align-items: center;
   border-bottom: 1px solid #ccc;
 } */
-
-/* Dropdown Style Questions */
-
-.grid {
-  display: grid;
-  grid-template-columns: 2;
-}
-
-.column-1 {
-  grid-column: 1 / span 1;
-}
-
-.column-2 {
-  grid-column: 2 / span 1;
-}

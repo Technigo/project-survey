@@ -3,7 +3,7 @@ import React from 'react'
 const Gender = (props) => {
     return (
         <>
-        <h2>Please select your gender:</h2>
+        <h2>Please disclose your gender:</h2>
         <div>
         <input type="radio" name="gender" value="Female" onChange={(event) => props.askGender(event.target.value)}></input>
         <label>Female</label>
