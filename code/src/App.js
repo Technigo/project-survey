@@ -1,6 +1,7 @@
 import React from 'react'
 
 import Header from './components/Header.js'
+import QuestionContainer from 'components/Questions.js'
 
 export const App = () => {
   return (
@@ -9,9 +10,8 @@ export const App = () => {
         <Header />
       </header>
       <div>
-        Find me in src/app.js!
+        <QuestionContainer />
       </div>
     </>
-
   )
 }

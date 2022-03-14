@@ -16,12 +16,15 @@ h1 {
 }
 
 header {
-  margin: 10rem 0 0;
+  margin: 7rem 0 0;
 }
 
 .container {
   margin: 0 auto;
   width: 340px;
+}
+
+.question-container {
 }
 
 
