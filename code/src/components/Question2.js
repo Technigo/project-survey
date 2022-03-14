@@ -17,7 +17,6 @@ const Question2 = () => {
             <p className="question">
                 How old are you?
             </p>
-            <form>
                 {ageGroups.map((group) => (
                     <label key={group}>
                     <input 
@@ -29,7 +28,6 @@ const Question2 = () => {
                     {group}
                 </label>
                 ))}
-            </form>
         </div>
     );
   };
