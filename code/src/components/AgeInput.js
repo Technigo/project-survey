@@ -9,7 +9,7 @@ export const AgeInput = ({ state, handleInput }) => {
       <select 
         type='text'
         name='age'
-        value={state.age}
+        value={state}
         onChange={handleInput} 
       >
 

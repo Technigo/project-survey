@@ -7,6 +7,8 @@ import { NameInput } from 'components/NameInput'
 import { AgeInput } from 'components/AgeInput'
 import { Overview } from 'components/Overview'
 import { LocationInput } from 'components/LocationInput'
+import { DateInput } from 'components/DateInput'
+import { TimeInput } from 'components/TimeInput'
 
 
 export const App = () => {
@@ -61,9 +63,11 @@ export const App = () => {
 
         {/* Name and gender */}
         <NameInput 
-          state={state}
+          text={'Name'}
+          state={state.name}
           handleInput={handleInput}
-          />
+        />
+
         <PronounInput 
           pronoun={pronoun}
           setPronoun={setPronoun}
@@ -74,7 +78,7 @@ export const App = () => {
           
         {/* Age */}
         <AgeInput 
-          state={state}
+          state={state.age}
           handleInput={handleInput}
         />
 
@@ -83,7 +87,7 @@ export const App = () => {
 
         {/* Location */}
         <LocationInput 
-          state={state}
+          state={state.location}
           handleInput={handleInput}
         />
         <button onClick={handlePrevStepClick}>Back</button>
@@ -91,24 +95,18 @@ export const App = () => {
 
         
         {/* Date and time */}
-        <label htmlFor='date'>Date From:
-          <input 
-            type='date'
-            name='date'
-            value={state.date}
-            onChange={handleInput} 
-            /> 
-        </label>  
+        <DateInput 
+          text={'Date'}
+          state={state.date}
+          handleInput={handleInput}
+        />
 
-        <label htmlFor='timeFrom'>From:
-          <input 
-            id='timeFrom'
-            type='time'
-            name='timeFrom'
-            value={state.timeFrom}
-            onChange={handleInput} 
-            /> 
-        </label>  
+          <TimeInput 
+          text={'From'}
+          state={state.timeFrom}
+          handleInput={handleInput}/>
+
+
 
         <label htmlFor='timeTo'>To:
           <input 
@@ -152,25 +150,18 @@ export const App = () => {
       
 
         {/* RVSP */}
-        <label htmlFor='date'>RVSP:
-          <input 
-            type='date'
-            name='rvspDate'
-            value={state.rvspDate}
-            onChange={handleInput} 
-          /> 
-        </label>
+        <DateInput 
+          text={'RVSP'}
+          state={state.rvspDate}
+          handleInput={handleInput}
+        />
         
-        <label htmlFor='rvspTo'>To:
-          <input 
-            type='text'
-            name='rvspTo'
-            placeholder='tel/email'
-            value={state.rvspTo}
-            onChange={handleInput}
-            required 
-            />
-        </label>
+        <NameInput 
+          text={'RVSP TO'}
+          state={state.rvspTo}
+          handleInput={handleInput}
+        />
+
         <button onClick={handlePrevStepClick}>Back</button>
         <button onClick={handleNextStepClick}>Next</button>        
         

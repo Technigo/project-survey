@@ -1,15 +1,15 @@
 import React from 'react'
 
-export const NameInput = ({ state, handleInput }) => {
+export const NameInput = ({ text, state, handleInput }) => {
 
   return (
 
-    <label htmlFor='name'>What is the name of the birthday kid?
+    <label htmlFor='name'>{text}
       <input 
         type='text'
         name='name'
         placeholder='name'
-        value={state.name}
+        value={state}
         onChange={handleInput} 
       />
     </label>   

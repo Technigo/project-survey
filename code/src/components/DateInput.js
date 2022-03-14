@@ -1,13 +1,13 @@
 import React from 'react'
 
-export const LocationInput = ({ state, handleInput }) => {
+export const DateInput = ({ text, state, handleInput }) => {
   
   return (
-    <label htmlFor='date'>Date From:
+    <label htmlFor='date'>{text}
       <input 
       type='date'
       name='date'
-      value={state.date}
+      value={state}
       onChange={handleInput} 
       /> 
     </label>  

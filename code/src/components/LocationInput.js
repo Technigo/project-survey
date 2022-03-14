@@ -8,7 +8,7 @@ export const LocationInput = ({ state, handleInput }) => {
         type='text'
         name='location'
         placeholder='location'
-        value={state.location}
+        value={state}
         onChange={handleInput} 
         />
     </label>
