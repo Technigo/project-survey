@@ -32,9 +32,25 @@ h1 {
 input,
 button {
   font-family: "Jost", sans-serif;
+  border: none;
+  font-size: 16px;
+  border-radius: 30px;
+  color: #d79500;
+  padding: 10px;
+}
+
+p,
+label {
+  font-size: 18px;
 }
 
 .orange {
   width: 3.5em;
   opacity: 0.8;
+}
+
+form-wrapper {
+  border: 1px solid #d79500;
+  border-radius: 20px;
+  padding: 20px;
 }
