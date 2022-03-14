@@ -5,19 +5,37 @@ const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
 
   return (
     <section className='page'>
-      <h2>4. If you had the opportunity to work in a flexible work environment, would you be more productive?</h2>
+      <h2><span className='symbols'>4. </span>
+        If you had the opportunity to work in a flexible
+        <span className='block'>work environment, would you be more productive?
+          <span className='symbols'> *</span>
+        </span></h2>
+      <p>0 = no change
+        <span className='text-right'>5 = very productive</span>
+      </p>
       <form>
-        <label htmlFor='productivityRange'> on a scale from 0 (no change) - 5 (more productive) </label>
-        <input
-          type='range'
-          id='productivityRange'
-          min='0'
-          max='5'
-          defaultValue='0'
-          onChange={(event) => setProductivity(event.target.value)}
-        />
+        <label htmlFor='productivityRange'>
+          <input
+            type='range'
+            id='productivityRange'
+            min='0'
+            max='5'
+            defaultValue='0'
+            onChange={(event) => setProductivity(event.target.value)}
+          />
+          <p className='numbers'>
+            <span>0</span>
+            <span className='numbers-right'>5</span>
+          </p>
+        </label>
       </form>
-      <button disabled={!productivity} onClick={() => { changePage(); retrieveProductivityData(productivity) }}>Next</button>
+      <button
+        disabled={!productivity}
+        onClick={() => {
+          changePage();
+          retrieveProductivityData(productivity)
+        }}>Next
+      </button>
     </section>
   )
 }

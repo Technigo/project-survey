@@ -5,8 +5,11 @@ const AgeInput = ({ changePage, retrieveAgeData }) => {
 
   return (
     <section className='page'>
-      <h2>1. How old are you?</h2>
-      <form>
+      <h2><span className='symbols'>1. </span>
+        How old are you?
+        <span className='symbols'> *</span>
+      </h2>
+      <form className='age-inputs'>
         Age Groups:
         <label htmlFor='18-24-input'>
           <input
@@ -49,7 +52,12 @@ const AgeInput = ({ changePage, retrieveAgeData }) => {
           45+
         </label>
       </form>
-      <button disabled={!ageGroup} onClick={() => { changePage(); retrieveAgeData(ageGroup) }}>Next</button>
+      <button 
+        disabled={!ageGroup} 
+        onClick={() => 
+        { changePage(); retrieveAgeData(ageGroup) 
+        }}>Next
+      </button>
     </section>
   )
 }

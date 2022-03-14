@@ -5,7 +5,10 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
 
   return (
     <section className='page'>
-      <h2>2. Would you prefer a company that offers flexible work hours?</h2>
+      <h2><span className='symbols'>2. </span>
+        Would you prefer a company that offers flexible work hours?
+        <span className='symbols'> *</span>
+      </h2>
       <form>
         <p>
           <label htmlFor='yesButton'>
@@ -32,7 +35,13 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
           </label>
         </p>
       </form>
-      <button disabled={!hours} onClick={() => { changePage(); retrieveHoursData(hours) }}>Next</button>
+      <button 
+        disabled={!hours} 
+        onClick={() => 
+        { changePage(); 
+        retrieveHoursData(hours) 
+        }}>Next
+      </button>
     </section>
   )
 }

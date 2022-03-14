@@ -1,8 +1,13 @@
 import React from 'react';
 
+import Button from './Button';
+
 const Closing = (data) => {
   const {age, hours, location, productivity, stress} = data;
 
+  const refreshPage = () => {
+    window.location.reload();
+  };
   const hoursResponse = () => {
     return (hours === 'yes')
       ? 'You prefer a company that offers flexible work hours.'
@@ -22,13 +27,16 @@ const Closing = (data) => {
   }
 
   return (
-    <section className='page'>
+    <section className='closing page'>
       <h2>Thanks for sharing! Your feedback is greatly appreciated.</h2>
-      <p>You are in the {age} age group.</p>
-      <p>{hoursResponse()}</p>
-      <p>You prefer to work {location}.</p>
-      <p>{productivityResponse()}</p>
-      <p>{stressResponse()}</p>
+      <ul>
+        <li>You are in the {age} age group.</li>
+        <li>You prefer to work {location}.</li>
+        <li>{hoursResponse()}</li>
+        <li>{productivityResponse()}</li>
+        <li>{stressResponse()}</li>
+      </ul>
+      <Button change={refreshPage} innerText={"reload"} />
     </section>
   )
 }

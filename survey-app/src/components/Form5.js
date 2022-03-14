@@ -5,21 +5,37 @@ const StressRange = ({ changePage, retrieveStressData }) => {
 
   return (
     <section className='page'>
-      <h2>4. If you had the opportunity to work in a flexible work environment, would you feel less stressed?</h2>
+      <h2><span className='symbols'>5. </span>
+        If you had the opportunity to work in a flexible
+        <span className='block'>work environment, would you feel less stressed?
+          <span className='symbols'> *</span>
+        </span></h2>
+      <p>0 = no change
+        <span className='text-right'>5 = very productive</span>
+      </p>
       <form>
         <label htmlFor='stressRange'>
-          on a scale from 0 (no change) - 5 (less stressed)
-        <input
-          type='range'
-          id='stressRange'
-          min='0'
-          max='5'
-          defaultValue='0'
-          onChange={event => setStress(event.target.value)}
-        />
+          <input
+            type='range'
+            id='stressRange'
+            min='0'
+            max='5'
+            defaultValue='0'
+            onChange={event => setStress(event.target.value)}
+          />
+          <p className='numbers'>
+            <span>0</span>
+            <span className='numbers-right'>5</span>
+          </p>
         </label>
       </form>
-      <button disabled={!stress} onClick={() => { changePage(); retrieveStressData(stress) }}>Next</button>
+      <button
+        disabled={!stress}
+        onClick={() => {
+          changePage();
+          retrieveStressData(stress)
+        }}>Next
+      </button>
     </section>
   )
 }
