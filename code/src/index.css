@@ -1,13 +1,75 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	text-rendering: optimizeLegibility;
+	text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+/* Text */
+.underline {
+  text-decoration: underline;
+}
+
+p span {
+  display: block;
+}
+
+/* Matrix Style Questions */
+/* .grid-header {
+  display: flex;
+  align-items: flex-end;
+}
+.grid-row {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid #ccc;
+}
+.header-item {
+  text-align: center;
+  width: 12.5%;
+}
+.flex-label {
+  display: flex;
+  width: 12.5%;
+  justify-content: flex-start;
+  align-items: center;
+}
+.flex-item {
+  display: flex;
+  width: 12.5%;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid #ccc;
+} */
+
+/* Dropdown Style Questions */
+
+.grid {
+  display: grid;
+  grid-template-columns: 2;
+}
+
+.column-1 {
+  grid-column: 1 / span 1;
+}
+
+.column-2 {
+  grid-column: 2 / span 1;
 }
