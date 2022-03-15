@@ -10,7 +10,7 @@ const QuestionTextUserName = (props) => {
       </div>
       <form>
         <h1>What’s your name?</h1>
-        <input type="text" onChange={onUserNameChange} value={username} />
+        <input type="text" onChange={onUserNameChange} value={username}/>
         <button onClick={() => onStepChange(1)}>Next question</button>
       </form>
     </>

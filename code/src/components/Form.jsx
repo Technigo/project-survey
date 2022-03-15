@@ -18,12 +18,12 @@ import Summary from "./Summary"
 const Form = () => {
   const [userName, setUserName] = useState("")
   const [gender, setGender] = useState("")
-  const [weatherType, setWeatherType] = useState()
-  const [vehicleType, setVehicleType] = useState()
+  const [weatherType, setWeatherType] = useState("")
+  const [vehicleType, setVehicleType] = useState("")
   const [speed, setSpeed] = useState("")
   const [snack, setSnack] = useState("")
   const [notFriendName, setNotFriendName] = useState("")
-  const [beverageType, setBeverageType] = useState()
+  const [beverageType, setBeverageType] = useState("")
   const [friendName, setFriendName] = useState("")
   const [likeSports, setLikeSports] = useState(false)
   const [sport, setSport] = useState("")
@@ -43,6 +43,7 @@ const Form = () => {
   const [showSummary, setShowSummary] = useState(false)
 
   const onUserNameChange = (event) => {
+    // event.preventDefault()
     setUserName(event.target.value)
   }
 
@@ -89,7 +90,7 @@ const Form = () => {
   const onSandwichChange = (event) => {
     setSandwich({
       ...sandwich,
-      [event.target.name]: event.target.checked,
+      [event.target.value]: event.target.checked,
     })
   }
 
