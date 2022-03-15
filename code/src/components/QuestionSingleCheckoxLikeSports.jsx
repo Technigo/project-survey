@@ -8,7 +8,7 @@ const QuestionSingleCheckoxLikeSports = (props) => {
       <div className="progress">
         <div className="progress-value question10"></div>
       </div>
-      <form>
+      <form onSubmit={() => onStepChange(likeSports ? 1 : 2)}>
         <label>
         <h1>Check this box if you like watching sports on TV.</h1>
           <input
@@ -18,8 +18,8 @@ const QuestionSingleCheckoxLikeSports = (props) => {
           />
         </label>
 
-        <button onClick={() => onStepChange(likeSports ? 1 : 2)}>Next question</button>
-        <button onClick={() => onStepChange(-1)}>Go back</button>
+        <button type='submit'>Next question</button>
+        <button type="button" onClick={() => onStepChange(-1)}>Go back</button>
       </form>
     </>
   )

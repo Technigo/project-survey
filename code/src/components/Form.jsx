@@ -11,23 +11,23 @@ import QuestionRadioBeverage from "./QuestionRadioBeverage"
 import QuestionTextFriendName from "./QuestionTextFriendName"
 import QuestionSingleCheckoxLikeSports from "./QuestionSingleCheckoxLikeSports"
 import QuestionSelectMenuSports from "./QuestionSelectMenuSports"
-import QuestionMultipleCheckboxesSandwich from "./QuestionMultipleCheckboxesSandwich"
+import QuestionMultipleCheckboxesIngredients from "./QuestionMultipleCheckboxesIngredients"
 import QuestionSelectMenuPhone from "./QuestionSelectMenuPhone"
 import Summary from "./Summary"
 
 const Form = () => {
   const [userName, setUserName] = useState("")
   const [gender, setGender] = useState("")
-  const [weatherType, setWeatherType] = useState("")
-  const [vehicleType, setVehicleType] = useState("")
+  const [weather, setWeather] = useState("")
+  const [vehicle, setVehicle] = useState("")
   const [speed, setSpeed] = useState("")
   const [snack, setSnack] = useState("")
   const [notFriendName, setNotFriendName] = useState("")
-  const [beverageType, setBeverageType] = useState("")
+  const [beverage, setBeverage] = useState("")
   const [friendName, setFriendName] = useState("")
   const [likeSports, setLikeSports] = useState(false)
   const [sport, setSport] = useState("")
-  const [sandwich, setSandwich] = useState({
+  const [ingredient, setIngredient] = useState({
     ham: false,
     cheese: false,
     egg: false,
@@ -43,7 +43,8 @@ const Form = () => {
   const [showSummary, setShowSummary] = useState(false)
 
   const onUserNameChange = (event) => {
-    // event.preventDefault()
+    //event.preventDefault()
+    // document.getElementById('patate').disabled = !event.target.value
     setUserName(event.target.value)
   }
 
@@ -51,12 +52,12 @@ const Form = () => {
     setGender(event.target.value)
   }
 
-  const onWeatherTypeChange = (event) => {
-    setWeatherType(event.target.value)
+  const onWeatherChange = (event) => {
+    setWeather(event.target.value)
   }
 
-  const onVehicleTypeChange = (event) => {
-    setVehicleType(event.target.value)
+  const onVehicleChange = (event) => {
+    setVehicle(event.target.value)
   }
 
   const onSpeedChange = (event) => {
@@ -71,8 +72,8 @@ const Form = () => {
     setNotFriendName(event.target.value)
   }
 
-  const onBeverageTypeChange = (event) => {
-    setBeverageType(event.target.value)
+  const onBeverageChange = (event) => {
+    setBeverage(event.target.value)
   }
 
   const onFriendNameChange = (event) => {
@@ -87,9 +88,9 @@ const Form = () => {
     setSport(event.target.value)
   }
 
-  const onSandwichChange = (event) => {
-    setSandwich({
-      ...sandwich,
+  const onIngredientChange = (event) => {
+    setIngredient({
+      ...ingredient,
       [event.target.value]: event.target.checked,
     })
   }
@@ -102,16 +103,16 @@ const Form = () => {
     setShowSummary(false)
     setUserName("")
     setGender("")
-    setWeatherType("")
-    setVehicleType("")
+    setWeather("")
+    setVehicle("")
     setSpeed("")
     setSnack("")
     setNotFriendName("")
-    setBeverageType("")
+    setBeverage("")
     setFriendName("")
     setLikeSports("")
     setSport("")
-    setSandwich({
+    setIngredient({
       ham: false,
       cheese: false,
       egg: false,
@@ -138,16 +139,16 @@ const Form = () => {
     <Summary
       userName={userName}
       gender={gender}
-      weatherType={weatherType}
-      vehicleType={vehicleType}
+      weather={weather}
+      vehicle={vehicle}
       speed={speed}
       snack={snack}
       notFriendName={notFriendName}
-      beverageType={beverageType}
+      beverage={beverage}
       friendName={friendName}
       likeSports={likeSports}
       sport={sport}
-      sandwich={sandwich}
+      ingredient={ingredient}
       phone={phone}
       onSummary={onSummary}
     />
@@ -172,24 +173,24 @@ const Form = () => {
 
       {step === 3 && (
         <QuestionRadioWeather
-          weatherType={weatherType}
-          onWeatherTypeChange={onWeatherTypeChange}
+          weather={weather}
+          onWeatherChange={onWeatherChange}
           onStepChange={onStepChange}
         />
       )}
 
       {step === 4 && (
         <QuestionRadioVehicle
-          weatherType={weatherType}
-          vehicleType={vehicleType}
-          onVehicleTypeChange={onVehicleTypeChange}
+          weather={weather}
+          vehicle={vehicle}
+          onVehicleChange={onVehicleChange}
           onStepChange={onStepChange}
         />
       )}
 
       {step === 5 && (
         <QuestionRangeSliderSpeed
-          vehicleType={vehicleType}
+          vehicle={vehicle}
           speed={speed}
           onSpeedChange={onSpeedChange}
           onStepChange={onStepChange}
@@ -216,15 +217,15 @@ const Form = () => {
 
       {step === 8 && (
         <QuestionRadioBeverage
-          beverageType={beverageType}
-          onBeverageTypeChange={onBeverageTypeChange}
+          beverage={beverage}
+          onBeverageChange={onBeverageChange}
           onStepChange={onStepChange}
         />
       )}
 
       {step === 9 && (
         <QuestionTextFriendName
-          beverageType={beverageType}
+          beverage={beverage}
           friendName={friendName}
           onFriendNameChange={onFriendNameChange}
           onStepChange={onStepChange}
@@ -249,9 +250,9 @@ const Form = () => {
       )}
 
       {step === 12 && (
-        <QuestionMultipleCheckboxesSandwich
-          sandwich={sandwich}
-          onSandwichChange={onSandwichChange}
+        <QuestionMultipleCheckboxesIngredients
+          ingredient={ingredient}
+          onIngredientChange={onIngredientChange}
           onStepChange={onStepChange}
         />
       )}
@@ -260,6 +261,7 @@ const Form = () => {
         <QuestionSelectMenuPhone
           phone={phone}
           onPhoneChange={onPhoneChange}
+          onStepChange={onStepChange}
           onFinalQuestion={onFinalQuestion}
         />
       )}

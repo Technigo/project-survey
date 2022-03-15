@@ -1,37 +1,57 @@
 import React from "react"
 
+import {
+  RandomUserName,
+  RandomGender,
+  RandomWeather,
+  RandomVehicle,
+  RandomSpeed,
+  RandomSnack,
+  RandomNotFriendName,
+  RandomBeverage,
+  RandomFriendName,
+  RandomSport,
+  RandomIngredientOne,
+  RandomIngredientTwo,
+  RandomPhone,
+} from "../RandomChoices"
+
 const Summary = (props) => {
   const {
     userName,
     gender,
-    weatherType,
-    vehicleType,
+    weather,
+    vehicle,
     speed,
     snack,
     notFriendName,
-    beverageType,
+    beverage,
     friendName,
     likeSports,
     sport,
-    sandwich,
+    ingredient,
     phone,
   } = props
 
-  Object.keys(sandwich).forEach((key) => {
-    if (!sandwich[key]) delete sandwich[key]
-  })
-  const firstIngredient = Object.entries(sandwich)[0][0]
-  const secondIngredient = Object.entries(sandwich)[1][0]
+  let userNameToUse
+  if (userName === "") {
+    userNameToUse = RandomUserName()
+  }
 
-  let characterTitle = ""
-  let characterName = ""
-  let pronounSubject = ""
-  let pronounSubjectCapitalized = ""
-  let pronounDirect = ""
-  let pronounReflexive = ""
-  let pronounPossessive = ""
-  
-  if (gender === "feminine") {
+  let genderToUse
+  if (gender === "") {
+    genderToUse = RandomGender()
+  }
+
+  let characterTitle
+  let characterName
+  let pronounSubject
+  let pronounSubjectCapitalized
+  let pronounDirect
+  let pronounReflexive
+  let pronounPossessive
+
+  if (genderToUse === "feminine") {
     characterTitle = "Mrs."
     characterName = "Sheis"
     pronounSubject = "she"
@@ -39,7 +59,7 @@ const Summary = (props) => {
     pronounDirect = "her"
     pronounReflexive = "herself"
     pronounPossessive = "her"
-  } else if (gender === "masculine") {
+  } else if (genderToUse === "masculine") {
     characterTitle = "Mr."
     characterName = "Heis"
     pronounSubject = "he"
@@ -57,6 +77,64 @@ const Summary = (props) => {
     pronounPossessive = "their"
   }
 
+  let weatherToUse
+  if (weather === "") {
+    weatherToUse = RandomWeather()
+  }
+
+  let vehicleToUse
+  if (vehicle === "") {
+    vehicleToUse = RandomVehicle()
+  }
+
+  let speedToUse
+  if (speed === "") {
+    speedToUse = RandomSpeed()
+  }
+
+  let snackToUse
+  if (snack === "") {
+    snackToUse = RandomSnack()
+  }
+
+  let notFriendNameToUse
+  if (notFriendName === "") {
+    notFriendNameToUse = RandomNotFriendName()
+  }
+
+  let beverageToUse
+  if (beverage === "") {
+    beverageToUse = RandomBeverage()
+  }
+
+  let friendNameToUse
+  if (friendName === "") {
+    friendNameToUse = RandomFriendName()
+  }
+
+  let sportToUse
+  if (sport === "") {
+    sportToUse = RandomSport()
+  }
+
+  Object.keys(ingredient).forEach((key) => {
+    if (!ingredient[key]) delete ingredient[key]
+  })
+  let firstIngredientToUse
+  let secondIngredientToUse
+  if (Object.keys(ingredient).length === 2) {
+    firstIngredientToUse = Object.entries(ingredient)[0][0]
+    secondIngredientToUse = Object.entries(ingredient)[1][0]
+  } else {
+    firstIngredientToUse = RandomIngredientOne()
+    secondIngredientToUse = RandomIngredientTwo()
+  }
+
+  let phoneToUse
+  if (phone === "") {
+    phoneToUse = RandomPhone()
+  }
+
   return (
     <>
       <div className="progress">
@@ -65,30 +143,28 @@ const Summary = (props) => {
       <div className="form">
         <section className="text-summary">
           <h2>Summary</h2>
-          <p>Name: {userName}</p>
+          <p>User name: {userNameToUse}</p>
           <p>
-            Gender: {gender} - text: {characterTitle} {characterName} Theone. {pronounSubjectCapitalized} {gender === "feminine" | "masculine" ? "is" : "are"} {pronounReflexive} and who {pronounSubject} {gender === "feminine" | "masculine" ? "is" : "are"}, I like {pronounDirect} and {pronounPossessive} voice!
+            Gender: {genderToUse} - text: {characterTitle} {characterName}{" "}
+            Theone. {pronounSubjectCapitalized}{" "}
+            {genderToUse === "non-binary" ? "are" : "is"} {pronounReflexive} and
+            who {pronounSubject} {genderToUse === "non-binary" ? "are" : "is"},
+            I like {pronounDirect} and {pronounPossessive} voice!
           </p>
-          <p>Weather type: {weatherType}</p>
-          <p>Vehicle type: {vehicleType}</p>
-          <p>Speed: {speed}</p>
-          <p>Snack: {snack}</p>
-          <p>Not friend name: {notFriendName}</p>
-          <p>Beverage type: {beverageType}</p>
-          <p>Friend name: {friendName}</p>
+          <p>Weather: {weatherToUse}</p>
+          <p>Vehicle: {vehicleToUse}</p>
+          <p>Speed: {speedToUse}</p>
+          <p>Snack: {snackToUse}</p>
+          <p>Not friend name: {notFriendNameToUse}</p>
+          <p>Beverage: {beverageToUse}</p>
+          <p>Friend name: {friendNameToUse}</p>
           <p>Like sports: {likeSports ? "yes" : "no"}</p>
-          <p>Sport: {sport}</p>
-          <p>Wants ham: {sandwich.ham ? "yes" : "no"}</p>
-          <p>Wants cheese: {sandwich.cheese ? "yes" : "no"}</p>
-          <p>Wants egg: {sandwich.egg ? "yes" : "no"}</p>
-          <p>Wants mayo: {sandwich.mayo ? "yes" : "no"}</p>
-          <p>Wants turkey: {sandwich.turkey ? "yes" : "no"}</p>
-          <p>Wants lettuce: {sandwich.lettuce ? "yes" : "no"}</p>
-          <p>Wants tuna: {sandwich.tuna ? "yes" : "no"}</p>
-          <p>Wants tomato: {sandwich.tomato ? "yes" : "no"}</p>
-          <p>Wants cucumber: {sandwich.cucumber ? "yes" : "no"}</p>
-          <p>Brand of mobile phone: {phone}</p>
-          <p> My name is {userName ? userName : "secret"} and I really {!likeSports ? "don't " : ""}like sports. I eat my {firstIngredient} and {secondIngredient} sandwich.</p>
+          <p>Sport: {sportToUse}</p>
+          <p>Brand of mobile phone: {phoneToUse}</p>
+          <p>
+            I really {!likeSports ? "don't " : ""}like sports. I eat my{" "}
+            {firstIngredientToUse} and {secondIngredientToUse} sandwich.
+          </p>
         </section>
       </div>
     </>

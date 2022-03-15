@@ -1,18 +1,20 @@
 import React from "react"
 
+import { RandomBeverage } from '../RandomChoices'
+
 const QuestionTextFriendName = (props) => {
-  const { beverageType, friendName, onFriendNameChange, onStepChange } = props
+  const { beverage, friendName, onFriendNameChange, onStepChange } = props
 
   return (
     <>
       <div className="progress">
         <div className="progress-value question9"></div>
       </div>
-      <form>
-        <h1>Who would you rather drink your {beverageType} with? A friend or a nice colleague maybe?</h1>
+      <form onSubmit={() => onStepChange(1)}>
+        <h1>Who would you rather drink your {beverage ? beverage : RandomBeverage()} with? Maybe a friend or a nice colleague?</h1>
         <input type="text" onChange={onFriendNameChange} value={friendName} />
-        <button onClick={() => onStepChange(1)}>Next question</button>
-        <button onClick={() => onStepChange(-1)}>Go back</button>
+        <button type='submit'>Next question</button>
+        <button type="button" onClick={() => onStepChange(-1)}>Go back</button>
       </form>
     </>
   )
