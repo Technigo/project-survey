@@ -1,6 +1,5 @@
 import react, { useState } from "react";
 import { App } from "App";
-import { useState } from "react/cjs/react.production.min";
 
 const travelStyle = ["with friends", "with my pet", "with family", "solo trip"];
 
