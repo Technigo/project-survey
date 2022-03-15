@@ -53,7 +53,7 @@ let femaleLabel = ''
 
 export const TipiChart = (props) => {
 
-    console.log(props)
+    // console.log(props)
 
     const extr = ((parseInt(props.q1Answer, 10) + parseInt(props.q6Answer, 10)) / 2)
     const agre = ((parseInt(props.q2Answer, 10) + parseInt(props.q7Answer, 10)) / 2)
@@ -122,6 +122,7 @@ export const TipiChart = (props) => {
 
     return (
     <>
+    <h2>Big 5 Personality Trait Scores</h2>
     <Radar 
     data={{
         labels: ['Extraversion', 'Agreeableness', 'Conscientiousness', 'Emotional Stability', 'Openness to Experiences'],
@@ -129,6 +130,23 @@ export const TipiChart = (props) => {
     }} 
     options={options}
     />
+    <div>
+        <h3>Explanation of Big 5 Personality Traits</h3>
+        <p>Extraversion:</p>
+        <p>outgoing/energetic vs. solitary/reserved</p>
+        <p>Agreeableness: </p>
+        <p>friendly/compassionate vs. critical/rational</p>
+        <p>Conscientiousness: </p>
+        <p>efficient/organized vs. extravagant/careless</p>
+        <p>Emotional Stability: </p>
+        <p>resilient/confident vs. sensitive/nervous</p>
+        <p>Openness to Experiences:</p>
+        <p>inventive/curious vs. consistent/cautious</p>
+        <h4>More about the TIPI scale used here:</h4>
+        <p><a href="http://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
+        <h4>More about the Big 5 personality traits and their predictive effects on life:</h4>
+        <p><a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits" target="_blank" rel="noopener noreferrer">Wikipedia Article on Big Five Personality Traits</a></p>
+    </div>
     </>
     )
 }

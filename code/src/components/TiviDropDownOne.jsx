@@ -8,10 +8,10 @@ let s = ''
 let are = 'are'
 let tries = 'try'
 let does = 'do'
-let has = 'have'
+// let has = 'have'
 
 const TiviDropDownOne = (props) => {
-    console.log(props)
+    // console.log(props)
 
     if (props.gender === 'Female') {
         capital = 'She'
@@ -22,7 +22,7 @@ const TiviDropDownOne = (props) => {
         tries = 'tries'
         s = 's'
         does = 'does'
-        has = 'has'
+        // has = 'has'
     } if (props.gender === 'Male') {
         capital = 'He'
         lower = 'he'
@@ -32,7 +32,7 @@ const TiviDropDownOne = (props) => {
         tries = 'tries'
         s = 's'
         does = 'does'
-        has = 'has'
+        // has = 'has'
     } if (props.gender === 'Neither') {
         capital = 'They'
         lower = 'they'
@@ -197,8 +197,6 @@ const TiviDropDownOne = (props) => {
                 <option value="6">6 - Very much like me</option>
             </select>
             </div>
-
-            
 
         </div>
         </>

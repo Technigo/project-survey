@@ -7,10 +7,11 @@ let lower3 = 'them'
 let s = ''
 let are = 'are'
 let tries = 'try'
-let does = 'do'
+// let does = 'do'
 let has = 'have'
 
 let TiviDropDownTwo = (props) => {
+    // console.log(props)
 
     if (props.gender === 'Female') {
         capital = 'She'
@@ -20,7 +21,7 @@ let TiviDropDownTwo = (props) => {
         are = 'is'
         tries = 'tries'
         s = 's'
-        does = 'does'
+        // does = 'does'
         has = 'has'
     } if (props.gender === 'Male') {
         capital = 'He'
@@ -30,7 +31,7 @@ let TiviDropDownTwo = (props) => {
         are = 'is'
         tries = 'tries'
         s = 's'
-        does = 'does'
+        // does = 'does'
         has = 'has'
     } if (props.gender === 'Neither') {
         capital = 'They'
