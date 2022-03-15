@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-import Welcome from "./Welcome";
-import AgeInput from "./Form1";
-import WorkHoursInput from "./Form2";
-import PreferredHoursInput from "./Form3";
-import ProductivityRange from "./Form4";
-import StressRange from "./Form5";
-import Closing from "./Closing";
+import Welcome from "./pages/Welcome";
+import AgeInput from "./forms/Form1";
+import WorkHoursInput from "./forms/Form2";
+import PreferredHoursInput from "./forms/Form3";
+import ProductivityRange from "./forms/Form4";
+import StressRange from "./forms/Form5";
+import Closing from "./pages/Closing";
 
 export const TypeForm = () => {
   const [page, setPage] = useState(0);

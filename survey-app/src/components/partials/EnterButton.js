@@ -1,9 +1,9 @@
 import React from 'react';
 
-const Button = ({ change, innerText }) => {
+const Button = ({ changePage, innerText }) => {
   return (
     <div className="button-wrapper">
-      <button className="button" onClick={change}>{innerText}</button>
+      <button className="button" onClick={changePage}>{innerText}</button>
       <p className="button-text">press <span>Enter</span> ↵</p>
     </div>
   )

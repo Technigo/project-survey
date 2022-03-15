@@ -1,13 +1,12 @@
 import React from 'react';
 
-import Button from './Button';
+import EnterButton from '../partials/EnterButton';
+
+const refreshPage = () => window.location.reload();
 
 const Closing = (data) => {
   const {age, hours, location, productivity, stress} = data;
 
-  const refreshPage = () => {
-    window.location.reload();
-  };
   const hoursResponse = () => {
     return (hours === 'yes')
       ? 'You prefer a company that offers flexible work hours.'
@@ -15,7 +14,7 @@ const Closing = (data) => {
   }
 
   const productivityResponse = () => {
-    return (productivity >= 3 )
+    return (productivity >= 3)
       ? 'You feel you would be more productive in a flexible work environment.'
       : 'You feel you would be less productive in a flexible work environment.'
   }
@@ -36,7 +35,7 @@ const Closing = (data) => {
         <li>{productivityResponse()}</li>
         <li>{stressResponse()}</li>
       </ul>
-      <Button change={refreshPage} innerText={"reload"} />
+      <EnterButton changePage={refreshPage} innerText={"reload"} />
     </section>
   )
 }

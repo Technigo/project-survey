@@ -1,7 +1,7 @@
 import React from "react";
 
-import Button from './Button';
-import clock from '../images/clock.png';
+import EnterButton from '../partials/EnterButton';
+import clock from '../../images/clock.png';
 
 const Welcome = ({ changePage }) => {
   return (
@@ -10,7 +10,7 @@ const Welcome = ({ changePage }) => {
       <h1>Workplace Flexibility Survey</h1>
       <p>We’d love to hear your thoughts on <br />
         workplace flexibility. Care to share?</p>
-      <Button change={changePage} innerText={"Sure, let's go"} />
+      <EnterButton changePage={changePage} innerText={"Sure, let's go"} />
       <p className="time">
         <img className="icon" src={clock} alt="clock icon" />
         Takes 1 min

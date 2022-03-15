@@ -1,6 +1,6 @@
 # This file tells netlify where the code for this project is and
 # how it should build the JavaScript assets to deploy from.
 [build]
-  base = "survey/"
-  publish = "survey/"
+  base = "survey-app/"
+  publish = "survey-app/"
   command = "npm run build"

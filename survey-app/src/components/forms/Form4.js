@@ -1,15 +1,21 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
+
+import NextButton from '../partials/NextButton';
+import SubHeader from '../partials/SubHeader';
+
+const headerText = 'If you had the opportunity to work in a flexible';
+const headerText2 = 'work environment, would you be more productive?';
 
 const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
   const [productivity, setProductivity] = useState();
 
   return (
     <section className='page'>
-      <h2><span className='symbols'>4. </span>
-        If you had the opportunity to work in a flexible
-        <span className='block'>work environment, would you be more productive?
-          <span className='symbols'> *</span>
-        </span></h2>
+      <SubHeader 
+        pageNumber={4} 
+        headerText={headerText} 
+        headerText2={headerText2}
+      />  
       <p>0 = no change
         <span className='text-right'>5 = very productive</span>
       </p>
@@ -29,15 +35,13 @@ const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
           </p>
         </label>
       </form>
-      <button
-        disabled={!productivity}
-        onClick={() => {
-          changePage();
-          retrieveProductivityData(productivity)
-        }}>Next
-      </button>
+      <NextButton 
+        changePage={changePage} 
+        retrieveData={retrieveProductivityData} 
+        state={productivity} 
+      />
     </section>
   )
-}
+};
 
 export default ProductivityRange;
