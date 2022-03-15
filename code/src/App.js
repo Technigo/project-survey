@@ -178,7 +178,10 @@ export const App = () => {
         q20Answer = {tiviq20Answer}
       />
       <EndPage />
-      {/* <NavButtons /> */}
+      <NavButtons 
+        pageNumber = {pageNumber}
+        navBar = {navBar}
+      />
       <Footer />
     </section>
   )
