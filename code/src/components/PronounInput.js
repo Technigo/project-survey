@@ -8,11 +8,11 @@ export const PronounInput = ({ pronoun, setPronoun }) => {
     <legend>Pronoun
       {pronouns.map(pron => (
         
-        <label key={pron}>
+        <label key={pron} className='radio'>
         <input
           type='radio'
           name='pronoun'
-          value={pron} //how to update state??
+          value={pron}
           onChange={e => setPronoun(e.target.value)}
           checked={pronoun === pron}
           required

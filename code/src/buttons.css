@@ -1,0 +1,47 @@
+button.btn {
+  padding: 10px 35px;
+	margin: 1.5em 0;
+	width: 225px;
+	cursor: pointer;
+	font-size: inherit;
+	text-transform: uppercase;
+	font-family: inherit;
+	font-weight: 700;
+	color: var(--clr-black);
+	border: none;
+}
+
+button.next-btn {
+	background: var(--clr-dark);
+}
+
+button.next-btn:hover,
+button.next-btn:focus {
+	background: var(--clr-medium);
+}
+
+button.back-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	padding: 0;
+	position: absolute;
+	bottom: 1em;
+	left: 1em;
+	background: var(--clr-black);
+	background: url('./assets/back-btn.png');
+	background-size: contain;
+}
+
+button.back-btn:hover,
+button.back-btn:focus {
+	transform: scale(1.1);
+	transition: all 0.3s ease-in-out;
+}
+
+button.submit-btn {
+	background: linear-gradient(45deg,
+        #ec5f67, #f99157, #fac863, #99c794,
+        #5fb3b3, #6699cc, #c594c5)
+}
+

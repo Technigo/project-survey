@@ -14,7 +14,6 @@ export const Overview = ({ pronoun, state }) => {
   // if else for ThemeInput, find out how to change on svg
 
   return (
-    <section>
       <div className='initation-card--wrapper'>
         <h1>{state.name}</h1>
         <h2>Invites you to celebrate {possPronoun} {state.pronouns} {state.age} birthday</h2>   
@@ -23,6 +22,5 @@ export const Overview = ({ pronoun, state }) => {
         <p>RVSP TO {state.rvspTo} {state.rvspDate}</p>
         <p>{state.gift === 'No' ? 'Please, no gifts! Consider a donation instead.' : ''}</p> 
       </div>
-    </section>
   )
 }

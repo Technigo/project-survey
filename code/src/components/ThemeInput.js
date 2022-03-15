@@ -18,7 +18,7 @@ export const ThemeInput = ({state, handleInput}) => {
             checked={state === 'themeone'}
             required
           />
-        <img src={ThemeOne}/>
+        <img src={ThemeOne} alt="color theme for gift card"/>
       </label>
 
       <label>
@@ -30,7 +30,7 @@ export const ThemeInput = ({state, handleInput}) => {
             checked={state === 'themetwo'}
             required
           />
-        <img src={ThemeTwo}/>
+        <img src={ThemeTwo} alt="color theme for gift card"/>
       </label>
 
       <label>
@@ -42,7 +42,7 @@ export const ThemeInput = ({state, handleInput}) => {
           checked={state === 'themethree'}
           required
         />
-        <img src={ThemeThree}/>
+        <img src={ThemeThree} alt="color theme for gift card"/>
       </label>
 
       <label>
@@ -54,7 +54,7 @@ export const ThemeInput = ({state, handleInput}) => {
           checked={state === 'themefour'}
           required
         />
-        <img src={ThemeFour}/>
+        <img src={ThemeFour} alt="color theme for gift card"/>
       </label>
 
       <label>
@@ -65,7 +65,7 @@ export const ThemeInput = ({state, handleInput}) => {
           checked={state === 'themefive'}
           required
         />
-        <img src={ThemeFive}/>
+        <img src={ThemeFive} alt="color theme for gift card"/>
       </label>
 
     </div>

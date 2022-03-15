@@ -1,18 +1,26 @@
 :root {
-  --clr-one: #FDDBBC;
+  --clr-lighter: #FCFAF6;
+  --clr-light: #FDDBBC;
+  --clr-dark: #F47F65;
+  --clr-medium: #f47f65ab;
+  --clr-black: #111111;
+  --clr-white: #FFFFFF;
 }
-
 
 body {
   margin: 0;
   font-family: 'Archivo', sans-serif;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--clr-one);
-  background: linear-gradient(29deg, rgba(255,196,143,1) 38%, rgba(253,228,188,1) 66%, rgb(211, 209, 206) 100%);
+  background: var(--clr-light);
+  color: var(--clr-black);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
+  text-align: center;
 }
 
 code {
@@ -22,22 +30,29 @@ code {
 h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
+  font-size: 3.5rem;
+  
 }
 
+h2 {
+  font-size: 1.5rem;
+}
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+}
 
 /*************************/
 /*** REUSABLE ELEMENTS ***/
 /*************************/
 
-.flex {
+.container {
+  width: 375px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
 
-.container {
-  width: 375px;
 }
 
 /***********************/
@@ -46,17 +61,70 @@ h1 {
 
 legend {
   border: 1px solid black;
+  text-transform: uppercase;
+  font-weight: 700;
 }
 
 label {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
   padding: 1em;
+  text-transform: uppercase;
 }
 
-input {
-  font-size: 16px;
+
+label.radio {
+  text-transform: capitalize;
+  font-weight: 400; 
+}
+
+input[type=text],
+select {
+  font-size: 18px;
+  width: 225px;
+  height: 37px;
+  border: none;
+  background-color: var(--clr-light);
+}
+
+input:active,
+input:focus {
+  outline: none;
+
+  border-bottom: 3px solid var(--clr-dark);
 }
 
 img {
   width: 50px;
+}
+
+/***********************/
+/****    LAYOUT    ****/
+/**********************/
+
+section {
+min-height: 100vh;
+display: flex;
+}
+
+section:first-of-type {
+  background: linear-gradient(29deg, rgba(255,196,143,1) 38%, rgba(253,228,188,1) 66%, rgb(255, 203, 126) 100%);
+}
+
+section:not(:first-of-type) {
+  background: var(--clr-lighter);
+}
+
+section:last-of-type {
+  background: var(--clr-white);
+}
+
+.question-wrapper {
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }

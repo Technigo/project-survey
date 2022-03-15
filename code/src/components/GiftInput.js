@@ -6,7 +6,7 @@ export const GiftInput = ({ state, handleInput }) => {
 
   <legend>Gifts
 
-    <label>
+    <label className='radio'>
       <input
         type='radio'
         name='gift'
@@ -18,7 +18,7 @@ export const GiftInput = ({ state, handleInput }) => {
         Yes
       </label>
 
-    <label>
+    <label className='radio'>
       <input
         type='radio'
         name='gift'

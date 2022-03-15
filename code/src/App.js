@@ -10,7 +10,7 @@ import { Overview } from 'components/Overview'
 import { DateInput } from 'components/DateInput'
 import { TimeInput } from 'components/TimeInput'
 import { GiftInput } from 'components/GiftInput'
-import { Button } from 'components/Buttons'
+import { Button, StartButton, SubmitButton } from 'components/Buttons'
 import { ThemeInput } from 'components/ThemeInput'
 
 
@@ -57,12 +57,12 @@ export const App = () => {
 
   return (
 
-  <main>
-    <section>
+  <main className='container'>
+    <section className='intropage-wrapper'>
       {counter === 0 && (
-        <div className='introPage-wrapper'>
+        <div className='container'>
           <IntroPage />
-          <Button 
+          <StartButton 
             nextBtn={handleNextStepClick}
           />
         </div>
@@ -72,7 +72,7 @@ export const App = () => {
     <section>
       <form className='container' onSubmit={handleSubmit}>
         {/* Name and gender */}
-        {counter === 1 && (
+        {counter === 0 && (
         <div className='question-wrapper'>
           <TextInput 
             text={'Name'}
@@ -94,7 +94,7 @@ export const App = () => {
         )}
           
         {/* Age */}
-        {counter === 2 && (
+        {counter === 0 && (
 
           <div className='question-wrapper'>
             <AgeInput 
@@ -109,7 +109,7 @@ export const App = () => {
         )}  
 
         {/* Location */}
-        {counter === 3 && (
+        {counter === 0 && (
 
           <div className='question-wrapper'>
             <TextInput
@@ -129,7 +129,7 @@ export const App = () => {
 
         
         {/* Date and time */}
-        {counter === 4 && (
+        {counter === 0 && (
 
           <div className='question-wrapper'>
             <DateInput 
@@ -162,7 +162,7 @@ export const App = () => {
             
 
         {/* Gifts */}
-        {counter === 5 && (
+        {counter === 0 && (
 
           <div className='question-wrapper'>
             <GiftInput 
@@ -178,7 +178,7 @@ export const App = () => {
       
 
         {/* RVSP */}
-        {counter === 6 && (
+        {counter === 0 && (
         <div className='question-wrapper'>  
           <TextInput 
             text={'To'}
@@ -202,16 +202,15 @@ export const App = () => {
         )}
                 
       {/* Select styling */}
-      {counter === 7 && (
+      {counter === 0 && (
         <div className='question-wrapper'>
           <ThemeInput 
             state={state.theme}
             handleInput={handleInput}  
           /> 
-          <Button 
+          <SubmitButton 
             nextBtn={handleNextStepClick}
           />
-          <button>Submit</button>
         </div>  
       )}
 
@@ -221,8 +220,8 @@ export const App = () => {
       {/* Overview */}
 
     <section>
-      {counter === 8 && (
-        <div className='Overview-wrapper'>
+      {counter === 0 && (
+        <div className='overview-wrapper container'>
           <Overview 
             pronoun={pronoun}
             state={state}
