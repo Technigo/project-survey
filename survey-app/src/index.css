@@ -1,11 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@300;400;500;600;700;800&display=swap');
 
+:root {
+  --clr-primary: #dda200;
+  --clr-secondary: #e3e3e3;
+}
+
 body {
   margin: 0;
-  font-size: 20px;
+  font-size: 14px;
+  text-align: center;
   font-family: 'Karla', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
+  font-size: 30px;
+  z-index: 1;
+  margin-bottom: 0;
 }
 
 form {
@@ -16,6 +28,7 @@ section {
   background-color: #F5EEE9;
   padding: 20px;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -24,41 +37,146 @@ section {
 }
 
 button {
-  font-size: 16px;
+  background-color: rgb(212, 29, 29);
+  font-weight: bold;
+  color: white;
+  padding: 10px;
   border-radius: 10px;
-  padding: 6px 7px;
+  cursor: pointer;
+  margin: 20px 0;
 }
 
-.button-text {
-  margin-left: 160px;
+.welcome {
+  color: white;
+  position: relative;
+  background-image: url('./images/screens.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
   position: absolute;
-  font-size: 16px;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.welcome p {
+  z-index: 1;
+}
+
+.welcome span {
+  font-weight: 700;
+}
+
+.text-content {
+  font-size: 20px;
 }
 
 .button-wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
 }
 
 .button {
   position: relative;
-  font-size: 20px;
+  margin-left: 110px;
 }
 
-.sub-header {
-  display: block;
+.button-text {
+  margin-left: 10px;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+  margin-right: 8px;
+  width: 20px;
+  height: 20px;
+}
+
+.symbols {
+  color: var(--clr-primary);
 }
 
 select {
   display: block;
   margin-top: 10px;
-  font-size: 18px;
+  padding: 10px;
+  cursor: pointer;
 }
 
-.symbols {
-  color: #dda200; 
+select:focus {
+  outline: none !important;
+  border-color: var(--clr-primary);
+  box-shadow: 0 0 5px var(--clr-primary);
 }
 
-.age-inputs label {
-  margin-left: 10px;
+.closing ul {
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.closing li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.closing li::before {
+  content: '';
+  display: inline-block;
+  height: 23px;
+  width: 24px;
+  margin-right: 10px;
+  background-image: url('./images/star.png');
+  -moz-animation: spin 5s infinite linear;
+  -webkit-animation: spin 5s infinite linear;
+  animation:spin 5s linear infinite;
+}
+
+ @-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
+} 
+
+@media (min-width: 768px) {
+  body,
+  button {
+    font-size: 16px;
+  }
+
+  h1 {
+    font-size: 40px;
+  }
+
+  select {
+    font-size: 18px;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .sub-header {
+    display: block;
+  }
 }

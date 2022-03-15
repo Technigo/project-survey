@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
-import NextButton from '../partials/NextButton';
+import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
+
+import '../../styled-components/Radio.css';
 
 const ageGroups = ['18-24', '25-34', '35-44', '45+'];
 const headerText = 'How old are you?';
@@ -11,11 +13,14 @@ const AgeInput = ({ changePage, retrieveAgeData }) => {
 
   return (
     <section className='page'>
-      <SubHeader pageNumber={1} headerText={headerText}/>
+      <SubHeader pageNumber={1} headerText={headerText} />
       <form className='age-inputs'>
-        Age Groups:
         {ageGroups.map(group => (
-          <label key={group} htmlFor={`${group}-input`}>
+          <label 
+            key={group} 
+            htmlFor={`${group}-input`} 
+            className='container'
+            aria-label='age groups'>
             <input 
               type='radio'
               value={group}
@@ -23,11 +28,12 @@ const AgeInput = ({ changePage, retrieveAgeData }) => {
               onChange={event => setAgeGroup(event.target.value)}
               checked={ageGroup === group}
             />
+            <span className='dot'></span>
           {group}
           </label>
         ))}
       </form>
-     <NextButton 
+     <Buttons 
       changePage={changePage} 
       retrieveData={retrieveAgeData} 
       state={ageGroup} 

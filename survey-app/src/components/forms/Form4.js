@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import NextButton from '../partials/NextButton';
+import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
 import Numbers from '../partials/Numbers';
 
@@ -36,7 +36,7 @@ const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
          <Numbers />
         </label>
       </form>
-      <NextButton 
+      <Buttons 
         changePage={changePage} 
         retrieveData={retrieveProductivityData} 
         state={productivity} 

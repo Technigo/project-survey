@@ -1,6 +1,6 @@
 import React from 'react';
 
-import EnterButton from '../partials/EnterButton';
+import Buttons from '../partials/Buttons';
 
 const refreshPage = () => window.location.reload();
 
@@ -35,9 +35,9 @@ const Closing = (data) => {
         <li>{productivityResponse()}</li>
         <li>{stressResponse()}</li>
       </ul>
-      <EnterButton changePage={refreshPage} innerText={"reload"} />
+      <Buttons changePage={refreshPage} innerText={"reload"} />
     </section>
   )
-}
+};
 
 export default Closing;

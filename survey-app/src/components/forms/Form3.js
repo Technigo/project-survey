@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
-import NextButton from '../partials/NextButton';
+import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
 
 const allLocations = [
   '-- choose a location --',
-  'fully in office', 
-  'mostly in office', 
-  'hybrid', 
-  'mostly remote', 
-  'fully remote'
+  'Fully in office', 
+  'Mostly in office', 
+  'Hybrid', 
+  'Mostly remote', 
+  'Fully remote'
 ];
 
 const headerText = 'How would you prefer to work?';
@@ -35,7 +35,7 @@ const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
           </select>
         </label>
       </form>
-      <NextButton 
+      <Buttons
         changePage={changePage} 
         retrieveData={retrieveLocationData} 
         state={location} 

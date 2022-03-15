@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 
-import NextButton from '../partials/NextButton';
+import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
+
+import '../../styled-components/Radio.css';
 
 const preferences = ['yes', 'no'];
 const headerText = 'Would you prefer a company that offers flexible work hours?';
@@ -15,7 +17,10 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
       <form>
         {preferences.map(preference => (
           <p>
-            <label key={preference} htmlFor={`${preference}-input`}>
+            <label 
+              key={preference} 
+              htmlFor={`${preference}-input`} 
+              className='container'>
               <input
                 type='radio'
                 value={preference}
@@ -23,12 +28,13 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
                 onChange={event => setHours(event.target.value)}
                 checked={preference === hours}
               />
+              <span className='dot'></span>
               {preference}
             </label>
           </p>
         ))}
       </form>
-      <NextButton 
+      <Buttons
         changePage={changePage} 
         retrieveData={retrieveHoursData} 
         state={hours} 
