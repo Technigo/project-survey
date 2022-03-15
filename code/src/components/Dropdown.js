@@ -14,7 +14,7 @@ const [location,setLocation] = useState("")
        <option value="">Choose your gear </option>
          <option value="Lemond and radio">A lemon and a radio</option>
          <option value="Llama and kite">A llama and a kite</option>
-         <option value="Gun and sunglasses">A shotgun whit ammo and a pair of sunglasses</option>
+         <option value="Bow and sunglasses">A bow whit arrows and a pair of sunglasses</option>
          <option value="Gassoline and bicycle">A gallon of gasoline and a bicycle</option>
        </select>
        </form>

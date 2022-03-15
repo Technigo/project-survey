@@ -15,6 +15,7 @@ const Inputfield = () =>{
          value={name}
          />
        </form>
+       
        </div>
       
     )

@@ -4,12 +4,8 @@ import Header from 'components/Header'
 import Inputfield from 'components/Inputfield'
 import Radiobtn from 'components/Radiobtn'
 import Dropdown from 'components/Dropdown'
+import {Infobanner} from 'components/Infobanner'
 
-// const ageGroups= [
-//   '0-18',
-//   '19-30',
-//   '30+'
-// ]
 
 
 export const App = () => {
@@ -19,7 +15,6 @@ export const App = () => {
 
   return (
   <section>
-
     <header>
       <Header/>
     </header>
@@ -27,19 +22,20 @@ export const App = () => {
     <div>
       <Inputfield/>
     </div>
-
     <div>
       <Radiobtn/>
     </div>
-
     <div>
       <Dropdown/>
     </div>
 
-
     <div>
     <h2>SUPER COUNTER TECHNIGO</h2>
       <Counter counter = {counter} setCounter= {setCounter}/>
+    </div>
+
+    <div>
+      <Infobanner counter = {counter}/>
     </div>
 
 
