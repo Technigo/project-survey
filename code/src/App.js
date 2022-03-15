@@ -1,22 +1,49 @@
 import React, {useState} from 'react'
+import {Counter} from 'components/Counter'
+import Header from 'components/Header'
+import Inputfield from 'components/Inputfield'
+import Radiobtn from 'components/Radiobtn'
+import Dropdown from 'components/Dropdown'
 
-const ageGroups= [
-  '0-18',
-  '19-30',
-  '30+'
-]
+// const ageGroups= [
+//   '0-18',
+//   '19-30',
+//   '30+'
+// ]
+
+
 export const App = () => {
-  const [temperature, setTemperature] = useState(20);
-  const [name, setName] = useState('input here')
-  const [location,setLocation] = useState("")
-  const [wantsNewsletter, setWantsNewsletter] = useState(false)
-  const [ageGroup, setAgeGroup] = useState()
-
+  // const [temperature, setTemperature] = useState(20);
+  // const [wantsNewsletter, setWantsNewsletter] = useState(false)
+  const [counter, setCounter] = useState(0)
 
   return (
   <section>
 
-     <div>
+    <header>
+      <Header/>
+    </header>
+
+    <div>
+      <Inputfield/>
+    </div>
+
+    <div>
+      <Radiobtn/>
+    </div>
+
+    <div>
+      <Dropdown/>
+    </div>
+
+
+    <div>
+    <h2>SUPER COUNTER TECHNIGO</h2>
+      <Counter counter = {counter} setCounter= {setCounter}/>
+    </div>
+
+
+     {/* <div>
      <h1>Current temperature: {temperature} degrees </h1>
     
      <button onClick={() => setTemperature(-5)}>Freez!</button>
@@ -24,27 +51,6 @@ export const App = () => {
    <button onClick={() => setTemperature(120)}>Boiling!</button>
    </div>
 
-      
-       <form onSubmit={event=>event.preventDefault()}>
-         <h1>The state is: {name}</h1>
-         <input
-         type="text"
-         onChange={(event)=> setName(event.target.value)}
-         value={name}
-         />
-       </form>
-
-       <form>
-         <select
-        onChange={event=> setLocation(event.target.value)}
-        value={location}
-        >
-       <option value="">select location</option>
-         <option value="New York">New York</option>
-         <option value="Miami">Miami</option>
-         <option value="Stockholm">Stockholm</option>
-       </select>
-       </form>
 
        <form>
          <label> Newsletter?
@@ -62,21 +68,7 @@ export const App = () => {
            />
          </label>
        </form>
-     
-      <form>
-        ageGroup:
-        {ageGroups.map((group)=>
-        <label key={group}>
-          <input
-          type="radio"
-          value={group}
-          onChange={(event)=> setAgeGroup(event.target.value)}
-          checked={ageGroup === group}
-          />
-          {group}
-          </label>
-        )}
-      </form>
+      */}
           </section>
   )
 }
