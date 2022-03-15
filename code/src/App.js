@@ -1,9 +1,14 @@
-import React from 'react'
+import React, { useState } from "react";
 
 export const App = () => {
+  const [name, setName] = useState("");
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <form>
+      <input
+        type="text"
+        onChange={(event) => setName(event.target.value)}
+        value={name}
+      />
+    </form>
+  );
+};
