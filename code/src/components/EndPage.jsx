@@ -10,7 +10,7 @@ const EndPage = () => {
             <h2>Thank you for your participation!</h2>
             <p>We hope you enjoyed the survey. Feel free to restart the survey using the "Restart" button.</p>
             <div className="button-container">
-            <button onClick={refreshPage}>Restart</button>
+            <button className="restart-button" onClick={refreshPage}>Restart</button>
             </div>
         </div>
     )

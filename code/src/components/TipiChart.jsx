@@ -51,6 +51,21 @@ const femaleGroupSix = [4.21, 5.5, 5.39, 4.84, 5.39]
 let maleLabel = ''
 let femaleLabel = ''
 
+// Function for Opening and Closing Accordion
+
+// Function for opening and closing the projects items
+const openSesame = () => {
+    let accordionHeader = document.querySelector('.tipi-header');
+    let accordionBody = accordionHeader.nextElementSibling;
+    if (getComputedStyle(accordionBody).display === "none") {
+        accordionBody.style.display = "block";
+        accordionHeader.classList.add("accordion-header--active")
+    } else {
+        accordionBody.style.display = "none";
+        accordionHeader.classList.remove("accordion-header--active")
+    }
+}
+
 export const TipiChart = (props) => {
 
     // console.log(props)
@@ -131,23 +146,29 @@ export const TipiChart = (props) => {
     options={options}
     />
     <div>
-        <h3>Explanation of Big 5 Personality Traits</h3>
-        <h4>Introduction:</h4>
-        <p>The Big 5 personality traits is a suggested grouping or taxonomy of personality traits. They have decades of empirical evidence, supported by many researchers using factor analysis to group traits into underlying factors of personality, which have independently revealed these five dimensions. Studies indicate that the Big Five traits (the effects of personality) can statistically predict many aspects of an individual, but mostly within social functioning and rules-driven behaviour, such as mental health disorders, romantic relationships, academic success and learning styles, and employment and work success.</p>
-        <h4>Extraversion:</h4>
-        <p>outgoing/energetic vs. solitary/reserved</p>
-        <h4>Agreeableness:</h4>
-        <p>friendly/compassionate vs. critical/rational</p>
-        <h4>Conscientiousness:</h4>
-        <p>efficient/organized vs. extravagant/careless</p>
-        <h4>Emotional stability:</h4>
-        <p>resilient/confident vs. sensitive/nervous</p>
-        <h4>Openness to experiences:</h4>
-        <p>inventive/curious vs. consistent/cautious</p>
-        <h4>More about the TIPI scale used here:</h4>
-        <p><a href="http://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
-        <h4>More about the Big 5 personality traits and their predictive effects on life:</h4>
-        <p><a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits" target="_blank" rel="noopener noreferrer">Wikipedia Article on Big Five Personality Traits</a></p>
+        <button className="tipi-header" onClick={openSesame}>
+            Explanation of Big 5 Personality Traits
+        </button>
+        <div className="accordion-info">
+            <h4>Introduction:</h4>
+            <p>The Big 5 personality traits is a suggested grouping or taxonomy of personality traits. They have decades of empirical evidence, supported by many researchers using factor analysis to group traits into underlying factors of personality, which have independently revealed these five dimensions. Studies indicate that the Big Five traits (the effects of personality) can statistically predict many aspects of an individual, but mostly within social functioning and rules-driven behaviour, such as mental health disorders, romantic relationships, academic success and learning styles, and employment and work success.</p>
+            <br />
+            <h4>Extraversion:</h4>
+            <p>outgoing/energetic vs. solitary/reserved</p>
+            <h4>Agreeableness:</h4>
+            <p>friendly/compassionate vs. critical/rational</p>
+            <h4>Conscientiousness:</h4>
+            <p>efficient/organized vs. extravagant/careless</p>
+            <h4>Emotional stability:</h4>
+            <p>resilient/confident vs. sensitive/nervous</p>
+            <h4>Openness to experiences:</h4>
+            <p>inventive/curious vs. consistent/cautious</p>
+            <br />
+            <h4>More about the TIPI scale used here:</h4>
+            <p><a href="http://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
+            <h4>More about the Big 5 personality traits and their predictive effects on life:</h4>
+            <p><a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits" target="_blank" rel="noopener noreferrer">Wikipedia Article on Big Five Personality Traits</a></p>
+        </div>
     </div>
     </div>
     )
