@@ -1,16 +1,21 @@
 import React from 'react'
 
 export const SecondQuestion = (props) => {
-    const {surnameInput, onSurnameInputChange, onStepChange} = props
+    const {positionInput, onPositionInputChange, onStepChange, onStepBackChange} = props
     return(
-        <form>
-            <label htmlFor="surnameInput">Type your surname</label>
-            <input 
-            id="surnameInput"
-            type="text" 
-            value={surnameInput} 
-            onChange={onSurnameInputChange}/>
+        <div>
+            <label htmlFor="positionInput">Type your surname</label>
+            <select 
+                id="positionInput"
+                value={positionInput}
+                onChange={onPositionInputChange}>
+                <option value="">Select position:</option>
+                <option value="frontend developer">frontend developer</option>
+                <option value="backend developer">backend developer</option>
+                <option value="fullstack developer">fullstack developer</option>
+            </select>
             <button onClick={onStepChange}>Next question</button>
-        </form>
+            <button onClick={onStepBackChange}>Previous question</button>
+        </div>
       )
 } 
