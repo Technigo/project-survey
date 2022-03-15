@@ -1,9 +1,12 @@
 import React from 'react'
 
+import IsMember from 'components/IsMember'
+
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <main>
+      <h1>Hi!</h1>
+      <IsMember />
+    </main>
   )
 }
