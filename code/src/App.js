@@ -8,7 +8,7 @@ import TipiDropDown from 'components/TipiDropDown'
 import { TipiChart } from 'components/TipiChart'
 import TiviDropDownOne from 'components/TiviDropDownOne'
 import TiviDropDownTwo from 'components/TiviDropDownTwo'
-import { TiviChartOne } from 'components/TiviChartOne'
+import { TiviChart } from 'components/TiviChart'
 import EndPage from 'components/EndPage'
 import NavButtons from 'components/NavButtons'
 import Footer from 'components/Footer'
@@ -155,7 +155,7 @@ export const App = () => {
         q19Question = {tiviq19Question}
         q20Question = {tiviq20Question}
       />
-      <TiviChartOne
+      <TiviChart
         q1Answer = {tiviq1Answer}
         q2Answer = {tiviq2Answer}
         q3Answer = {tiviq3Answer}
@@ -374,7 +374,7 @@ export const App = () => {
   //   return (
   //     <section className="page">
   //     <Header />
-  //     <TiviChartOne
+  //     <TiviChart
   //       q1Answer = {tiviq1Answer}
   //       q2Answer = {tiviq2Answer}
   //       q3Answer = {tiviq3Answer}

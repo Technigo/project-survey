@@ -132,15 +132,15 @@ export const TipiChart = (props) => {
     />
     <div>
         <h3>Explanation of Big 5 Personality Traits</h3>
-        <p>Extraversion:</p>
+        <p>EXTRAVERSION:</p>
         <p>outgoing/energetic vs. solitary/reserved</p>
-        <p>Agreeableness: </p>
+        <p>AGREEABLENESS: </p>
         <p>friendly/compassionate vs. critical/rational</p>
-        <p>Conscientiousness: </p>
+        <p>CONSCIENTIOUSNESS: </p>
         <p>efficient/organized vs. extravagant/careless</p>
-        <p>Emotional Stability: </p>
+        <p>EMOTIONAL STABILITY: </p>
         <p>resilient/confident vs. sensitive/nervous</p>
-        <p>Openness to Experiences:</p>
+        <p>OPENNESS TO EXPERIENCES:</p>
         <p>inventive/curious vs. consistent/cautious</p>
         <h4>More about the TIPI scale used here:</h4>
         <p><a href="http://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
