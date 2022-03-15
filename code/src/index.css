@@ -20,7 +20,7 @@
 } */
 
 body {
-  background-color: gray;
+  background-color: #555;
 }
 
 header {
@@ -40,13 +40,18 @@ footer {
   text-decoration: underline;
 }
 
-p span {
-  display: block;
+.bold {
+  font-weight: 700;
+}
+
+.center {
+  text-align: center;
 }
 
 /* Page */
 .page {
-  width: 375px;
+  min-width: 375px;
+  max-width: 80%;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
 }
@@ -54,13 +59,15 @@ p span {
 .page-container {
   background-color: white;
   border-radius: 5px;
-  padding: 5px 10px;
+  padding: 15px 15px;
+  margin: 10px 0;
 }
 
 /* Grid Display for Radio Buttons & Drop-down */
 .grid {
   display: grid;
   grid-template-columns: 2;
+  gap: 10px;
 }
 
 .column-1 {
@@ -142,10 +149,44 @@ input[type=text] {
   vertical-align: -0.125em;
 }
 
-label {
+.column-2 label {
   cursor: pointer;
 }
 
+/* Styling Drop-Down Menu */
+
+select {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 2px solid #555;
+}
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Navbuttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-buttons button {
+  border-radius: 5px;
+  border: 2px solid #555;
+  padding: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* .column-1 label {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+} */
 
 
 

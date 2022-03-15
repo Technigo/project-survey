@@ -3,7 +3,7 @@ import React from 'react'
 const Gender = (props) => {
     return (
         <div className="page-container">
-        <h2>Please disclose your gender:</h2>
+        <h2>Please select your gender:</h2>
         <div className="grid">
 
             <div className="column-1">

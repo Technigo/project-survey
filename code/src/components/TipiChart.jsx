@@ -121,8 +121,8 @@ export const TipiChart = (props) => {
     ]
 
     return (
-    <>
-    <h2>Big 5 Personality Trait Scores</h2>
+    <div className="page-container">
+    <h2 className="center">Big 5 Personality Trait Scores</h2>
     <Radar 
     data={{
         labels: ['Extraversion', 'Agreeableness', 'Conscientiousness', 'Emotional Stability', 'Openness to Experiences'],
@@ -132,21 +132,23 @@ export const TipiChart = (props) => {
     />
     <div>
         <h3>Explanation of Big 5 Personality Traits</h3>
-        <p>EXTRAVERSION:</p>
+        <h4>Introduction:</h4>
+        <p>The Big 5 personality traits is a suggested grouping or taxonomy of personality traits. They have decades of empirical evidence, supported by many researchers using factor analysis to group traits into underlying factors of personality, which have independently revealed these five dimensions. Studies indicate that the Big Five traits (the effects of personality) can statistically predict many aspects of an individual, but mostly within social functioning and rules-driven behaviour, such as mental health disorders, romantic relationships, academic success and learning styles, and employment and work success.</p>
+        <h4>Extraversion:</h4>
         <p>outgoing/energetic vs. solitary/reserved</p>
-        <p>AGREEABLENESS: </p>
+        <h4>Agreeableness:</h4>
         <p>friendly/compassionate vs. critical/rational</p>
-        <p>CONSCIENTIOUSNESS: </p>
+        <h4>Conscientiousness:</h4>
         <p>efficient/organized vs. extravagant/careless</p>
-        <p>EMOTIONAL STABILITY: </p>
+        <h4>Emotional stability:</h4>
         <p>resilient/confident vs. sensitive/nervous</p>
-        <p>OPENNESS TO EXPERIENCES:</p>
+        <h4>Openness to experiences:</h4>
         <p>inventive/curious vs. consistent/cautious</p>
         <h4>More about the TIPI scale used here:</h4>
         <p><a href="http://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
         <h4>More about the Big 5 personality traits and their predictive effects on life:</h4>
         <p><a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits" target="_blank" rel="noopener noreferrer">Wikipedia Article on Big Five Personality Traits</a></p>
     </div>
-    </>
+    </div>
     )
 }

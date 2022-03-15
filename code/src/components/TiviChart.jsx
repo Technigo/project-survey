@@ -79,8 +79,8 @@ export function TiviChart (props) {
     ]
 
     return (
-        <>
-        <h2>Universal Motivating Human Values Scores</h2>
+        <div className="page-container">
+        <h2 className="center">Universal Motivating Human Values Scores</h2>
         <PolarArea
         data={{
             labels: ['Stimulation', 'Self-Direction', 'Universalism', 'Benevolence', 'Conformity', 'Tradition', 'Security', 'Power', 'Achievement', 'Hedonism'],
@@ -123,6 +123,6 @@ export function TiviChart (props) {
         <p><a href="https://gosling.psy.utexas.edu/two-short-measures-of-values-tivi-and-twivi/" target="_blank" rel="noopener noreferrer">Wikipedia Article on Theory of Basic Human Values</a></p>
         <h4>In-Depth Paper "An Overview of the Schwartz Theory of Basic Values"</h4>
         <p><a href="https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1116&context=orpc" target="_blank" rel="noopener noreferrer">The Hebrew University of Jerusalem</a></p>
-        </>
+        </div>
         );
 }
