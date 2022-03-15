@@ -1,3 +1,5 @@
+
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -10,4 +12,21 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+main{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  background-color: pink;
+}
+
+
+footer{
+  margin-top: auto; /*this keeps the footer always at tht bottom of the page*/
+  background-color: azure;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
