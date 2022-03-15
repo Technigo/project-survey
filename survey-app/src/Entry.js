@@ -1,5 +1,5 @@
-import React from "react";
+import React from 'react';
 
-import TypeForm from "./components/TypeForm"
+import TypeForm from './components/TypeForm';
 
 export const Entry = () => <TypeForm />

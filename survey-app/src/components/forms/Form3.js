@@ -5,10 +5,10 @@ import SubHeader from '../partials/SubHeader';
 
 const allLocations = [
   '-- choose a location --',
-  'Fully in office', 
-  'Mostly in office', 
-  'Hybrid', 
-  'Mostly remote', 
+  'Fully in office',
+  'Mostly in office',
+  'Hybrid',
+  'Mostly remote',
   'Fully remote'
 ];
 
@@ -23,23 +23,21 @@ const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
       <form>
         <label htmlFor='locationsOptions' aria-label='choose a location'>
           <select
-            onChange={event => setLocation(event.target.value)}
+            onChange={(event) => setLocation(event.target.value)}
             value={location}
-            id='locationsOptions'
-          >
-          {allLocations.map(locations => (
-            locations === '-- choose a location -- '
-              ? <option value=''>{locations}</option>
-              : <option value={locations}>{locations}</option>
-          ))}
+            id='locationsOptions'>
+            {allLocations.map((locations) => (
+              locations === '-- choose a location -- '
+                ? <option value=''>{locations}</option>
+                : <option value={locations}>{locations}</option>
+            ))}
           </select>
         </label>
       </form>
       <Buttons
-        changePage={changePage} 
-        retrieveData={retrieveLocationData} 
-        state={location} 
-      />
+        changePage={changePage}
+        retrieveData={retrieveLocationData}
+        state={location} />
     </section>
   )
 };

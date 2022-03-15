@@ -5,7 +5,7 @@ import Buttons from '../partials/Buttons';
 const refreshPage = () => window.location.reload();
 
 const Closing = (data) => {
-  const {age, hours, location, productivity, stress} = data;
+  const { age, hours, location, productivity, stress } = data;
 
   const hoursResponse = () => {
     return (hours === 'yes')
@@ -20,7 +20,7 @@ const Closing = (data) => {
   }
 
   const stressResponse = () => {
-    return (stress >= 3) 
+    return (stress >= 3)
       ? 'You feel you would be less stressed in a flexible work environment.'
       : 'You feel your stress level would not change in a flexible work environment.'
   }
@@ -35,7 +35,7 @@ const Closing = (data) => {
         <li>{productivityResponse()}</li>
         <li>{stressResponse()}</li>
       </ul>
-      <Buttons changePage={refreshPage} innerText={"reload"} />
+      <Buttons changePage={refreshPage} innerText='reload' />
     </section>
   )
 };

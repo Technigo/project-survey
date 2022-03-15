@@ -38,6 +38,7 @@
       "error",
       "never"
     ],
+    "jsx-quotes": [2, "prefer-single"],
     "consistent-return": "off",
     "curly": "error",
     "eol-last": "off",

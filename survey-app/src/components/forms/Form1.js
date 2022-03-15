@@ -15,29 +15,27 @@ const AgeInput = ({ changePage, retrieveAgeData }) => {
     <section className='page'>
       <SubHeader pageNumber={1} headerText={headerText} />
       <form className='age-inputs'>
-        {ageGroups.map(group => (
-          <label 
-            key={group} 
-            htmlFor={`${group}-input`} 
+        {ageGroups.map((group) => (
+          <label
+            key={group}
+            htmlFor={`${group}-input`}
             className='container'
             aria-label='age groups'>
-            <input 
+            <input
               type='radio'
               value={group}
               id={`${group}-input`}
-              onChange={event => setAgeGroup(event.target.value)}
-              checked={ageGroup === group}
-            />
-            <span className='dot'></span>
-          {group}
+              onChange={(event) => setAgeGroup(event.target.value)}
+              checked={ageGroup === group} />
+            <span className='dot' />
+            {group}
           </label>
         ))}
       </form>
-     <Buttons 
-      changePage={changePage} 
-      retrieveData={retrieveAgeData} 
-      state={ageGroup} 
-    />
+      <Buttons
+        changePage={changePage}
+        retrieveData={retrieveAgeData}
+        state={ageGroup} />
     </section>
   )
 };

@@ -15,30 +15,28 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
     <section className='page'>
       <SubHeader pageNumber={2} headerText={headerText} />
       <form>
-        {preferences.map(preference => (
+        {preferences.map((preference) => (
           <p>
-            <label 
-              key={preference} 
-              htmlFor={`${preference}-input`} 
+            <label
+              key={preference}
+              htmlFor={`${preference}-input`}
               className='container'>
               <input
                 type='radio'
                 value={preference}
                 id={`${preference}-input`}
-                onChange={event => setHours(event.target.value)}
-                checked={preference === hours}
-              />
-              <span className='dot'></span>
+                onChange={(event) => setHours(event.target.value)}
+                checked={preference === hours} />
+              <span className='dot' />
               {preference}
             </label>
           </p>
         ))}
       </form>
       <Buttons
-        changePage={changePage} 
-        retrieveData={retrieveHoursData} 
-        state={hours} 
-      />
+        changePage={changePage}
+        retrieveData={retrieveHoursData}
+        state={hours} />
     </section>
   )
 };
