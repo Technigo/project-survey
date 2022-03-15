@@ -1,4 +1,5 @@
 import React from 'react';
+import './FirstQuestion.css'
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
        

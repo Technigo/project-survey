@@ -1,4 +1,5 @@
 import React from "react";
+import './ThirdQuestion.css'
 
 const ThirdQuestion = ({
     where, 

@@ -1,4 +1,5 @@
 import React from "react";
+import'./SecondQuestion.css'
 
 const SecondQuestion = ({
     days,
@@ -19,7 +20,7 @@ const SecondQuestion = ({
             </label>
         
 
-        <button onClick={() => setStep(step + 2)}>Nästa fråga</button>
+        <button onClick={onStepChange}>Nästa fråga</button>
         </form>
     );
 };

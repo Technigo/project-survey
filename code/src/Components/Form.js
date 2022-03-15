@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 
-import { FirstQuestion } from './FirstQuestion';
-import { SecondQuestion } from './SecondQuestion';
-import { ThirdQuestion } from './ThirdQuestion';
-import { Overview } from './Overview';
+import FirstQuestion  from './FirstQuestion';
+import SecondQuestion from './SecondQuestion';
+import ThirdQuestion from './ThirdQuestion';
+import Overview from './Overview';
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('');
   const [step, setStep] = useState(1);
-  const [showResult, setShowResult] = useState(false);
+ // const [showResult, setShowResult] = useState(false);
   const [where, setWhere] = useState('hos mig');
   const [days, setDayChange] = useState('')
 
@@ -24,7 +24,7 @@ const Form = () => {
     setDayChange(days)
   }
 
-  const onStepChange = () => {
+  const onStepChange = (step) => {
       setStep(step + 1);
   };
 
