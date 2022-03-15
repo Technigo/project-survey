@@ -2,5 +2,5 @@
 # how it should build the JavaScript assets to deploy from.
 [build]
   base = "survey-app/"
-  publish = "survey-app/"
+  publish = "build/"
   command = "npm run build"
