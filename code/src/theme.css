@@ -1,0 +1,18 @@
+.theme-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+input[type=radio].theme {
+	position: absolute;
+	opacity: 0;
+}
+  
+input[type=radio] + img {
+  cursor: pointer;
+}
+  
+img {
+  width: 50px;
+}

@@ -15,7 +15,7 @@ body {
   box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: var(--clr-light);
+  background: var(--clr-lighter);
   color: var(--clr-black);
   background-repeat: no-repeat;
   background-size: cover;
@@ -31,7 +31,6 @@ h1 {
   font-family: 'Playfair Display', serif;
   font-weight: 500;
   font-size: 3.5rem;
-  
 }
 
 h2 {
@@ -47,7 +46,7 @@ h3 {
 /*************************/
 
 .container {
-  width: 375px;
+  /* width: 375px; */
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,10 +58,29 @@ h3 {
 /****     FORMS     ****/
 /***********************/
 
+fieldset {
+  position: relative;
+  border: 1px solid var(--clr-black);
+  border-radius: 5px;
+}
+
+fieldset.radiobutton-wrapper {
+  max-width: 40px;
+}
+
 legend {
-  border: 1px solid black;
   text-transform: uppercase;
-  font-weight: 700;
+}
+
+legend.radio-legend {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+
+legend.radio-legend-two {
+  display: flex;
+  align-items: center;
 }
 
 label {
@@ -73,13 +91,30 @@ label {
   text-transform: uppercase;
 }
 
-
 label.radio {
   text-transform: capitalize;
   font-weight: 400; 
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 0em 1em 1em;
+  display: inline-block;
+  position: relative;
+  top: 20px;
+  left: 0;
+}
+
+label.radio-two {
+  padding: 2em 0.3em;
+  display: inline-block;
+  position: relative;
+  top: 50px;
+  left: 0;
 }
 
 input[type=text],
+input[type=date],
+input[type=time],
 select {
   font-size: 18px;
   width: 225px;
@@ -88,15 +123,21 @@ select {
   background-color: var(--clr-light);
 }
 
+input[type="radio"] {
+  position: relative;
+  margin-right: 0.8em;
+  padding: 0.4em 0.4em;
+  height: 2px;
+  background: var(--clr-dark);
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
 input:active,
 input:focus {
   outline: none;
-
   border-bottom: 3px solid var(--clr-dark);
-}
-
-img {
-  width: 50px;
 }
 
 /***********************/
@@ -120,11 +161,45 @@ section:last-of-type {
   background: var(--clr-white);
 }
 
+.overview-wrapper {
+  background: var(--clr-lighter);
+}
+
+.intropage-wrapper {
+  min-width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
 .question-wrapper {
   position: relative;
   min-height: 100vh;
+  min-width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.invitation-card--wrapper {
+  width: 370px;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: var(--clr-white);
+  border: 1px solid var(--clr-dark);
+}
+
+img.pennant {
+  width: 370px;
+}
+
+/* svg path.dark {
+  fill: #F47F65;
+} */
+
+.date-wrapper {
+  text-align: left;
 }

@@ -5,6 +5,7 @@ import ThemeThree from '../assets/theme-three.png'
 import ThemeFour from '../assets/theme-four.png'
 import ThemeFive from '../assets/theme-five.png'
 
+import '../theme.css'
 
 export const ThemeInput = ({state, handleInput}) => {
   return (
@@ -16,6 +17,7 @@ export const ThemeInput = ({state, handleInput}) => {
             value="themeone"
             onChange={handleInput}
             checked={state === 'themeone'}
+            className='theme'
             required
           />
         <img src={ThemeOne} alt="color theme for gift card"/>
@@ -28,6 +30,7 @@ export const ThemeInput = ({state, handleInput}) => {
             value="themetwo"
             onChange={handleInput}
             checked={state === 'themetwo'}
+            className='theme'
             required
           />
         <img src={ThemeTwo} alt="color theme for gift card"/>
@@ -40,6 +43,7 @@ export const ThemeInput = ({state, handleInput}) => {
           value="themethree"
           onChange={handleInput}
           checked={state === 'themethree'}
+          className='theme'
           required
         />
         <img src={ThemeThree} alt="color theme for gift card"/>
@@ -52,6 +56,7 @@ export const ThemeInput = ({state, handleInput}) => {
           value="themefour"
           onChange={handleInput}
           checked={state === 'themefour'}
+          className='theme'
           required
         />
         <img src={ThemeFour} alt="color theme for gift card"/>
@@ -63,6 +68,7 @@ export const ThemeInput = ({state, handleInput}) => {
           value="themefive" 
           onChange={handleInput}
           checked={state === 'themefive'}
+          className='theme'
           required
         />
         <img src={ThemeFive} alt="color theme for gift card"/>

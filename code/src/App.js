@@ -87,8 +87,8 @@ export const App = () => {
             setPronoun={setPronoun}
           />
           <Button
-            prevBtn={handlePrevStepClick}
             nextBtn={handleNextStepClick}
+            prevBtn={handlePrevStepClick}
           />
         </div>
         )}
@@ -102,8 +102,8 @@ export const App = () => {
               handleInput={handleInput}
             />
             <Button
-              prevBtn={handlePrevStepClick}
               nextBtn={handleNextStepClick}
+              prevBtn={handlePrevStepClick}
             />  
           </div>
         )}  
@@ -121,8 +121,8 @@ export const App = () => {
             />
 
             <Button
-              prevBtn={handlePrevStepClick}
               nextBtn={handleNextStepClick}
+              prevBtn={handlePrevStepClick}
             />     
           </div>
         )}
@@ -131,31 +131,34 @@ export const App = () => {
         {/* Date and time */}
         {counter === 0 && (
 
-          <div className='question-wrapper'>
-            <DateInput 
-              text={'Date'}
-              inputName={'date'}
-              state={state.date}
-              handleInput={handleInput}
-            />
+          <div className='question-wrapper date'>
+            <div className='date-wrapper'>
+              <DateInput 
+                text={'Date'}
+                inputName={'date'}
+                state={state.date}
+                handleInput={handleInput}
+              />
 
-            <TimeInput 
-              text={'From'}
-              inputName={'timeFrom'}
-              state={state.timeFrom}
-              handleInput={handleInput}
-            />
+              <TimeInput 
+                text={'From'}
+                inputName={'timeFrom'}
+                state={state.timeFrom}
+                handleInput={handleInput}
+              />
 
-            <TimeInput 
-              text={'To'}
-              inputName={'timeTo'}
-              state={state.timeTo}
-              handleInput={handleInput}
-            />
-            <Button
-              prevBtn={handlePrevStepClick}
-              nextBtn={handleNextStepClick}
-            />   
+              <TimeInput 
+                text={'To'}
+                inputName={'timeTo'}
+                state={state.timeTo}
+                handleInput={handleInput}
+                />
+            </div> 
+
+              <Button
+                nextBtn={handleNextStepClick}
+                prevBtn={handlePrevStepClick}
+              />  
           </div>
         )}
         
@@ -170,8 +173,8 @@ export const App = () => {
               handleInput={handleInput}  
             />
             <Button
-              prevBtn={handlePrevStepClick}
               nextBtn={handleNextStepClick}
+              prevBtn={handlePrevStepClick}
             />               
           </div>
         )}
@@ -195,8 +198,8 @@ export const App = () => {
               handleInput={handleInput}
             />
             <Button
-              prevBtn={handlePrevStepClick}
               nextBtn={handleNextStepClick}
+              prevBtn={handlePrevStepClick}
             />           
           </div>
         )}
@@ -204,13 +207,15 @@ export const App = () => {
       {/* Select styling */}
       {counter === 0 && (
         <div className='question-wrapper'>
-          <ThemeInput 
-            state={state.theme}
-            handleInput={handleInput}  
-          /> 
-          <SubmitButton 
-            nextBtn={handleNextStepClick}
-          />
+          <div className='theme-wrapper'>
+            <ThemeInput 
+              state={state.theme}
+              handleInput={handleInput}  
+            /> 
+          </div>  
+            <SubmitButton 
+              nextBtn={handleNextStepClick}
+            />
         </div>  
       )}
 
@@ -221,7 +226,7 @@ export const App = () => {
 
     <section>
       {counter === 0 && (
-        <div className='overview-wrapper container'>
+        <div className='overview-wrapper'>
           <Overview 
             pronoun={pronoun}
             state={state}

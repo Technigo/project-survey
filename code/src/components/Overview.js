@@ -1,5 +1,8 @@
 import React from 'react'
 
+import Pennant from '../assets/pennant.svg'
+
+
 export const Overview = ({ pronoun, state }) => {
 
   let possPronoun
@@ -14,7 +17,8 @@ export const Overview = ({ pronoun, state }) => {
   // if else for ThemeInput, find out how to change on svg
 
   return (
-      <div className='initation-card--wrapper'>
+      <div className='invitation-card--wrapper'>
+        <img className='pennant' src={Pennant} alt='Pennant flags'/>
         <h1>{state.name}</h1>
         <h2>Invites you to celebrate {possPronoun} {state.pronouns} {state.age} birthday</h2>   
         <p>{state.date} {state.timeFrom} - {state.timeTo}</p>

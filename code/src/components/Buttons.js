@@ -1,16 +1,15 @@
 import React from 'react'
 import '../buttons.css'
 
-export const Button = ({ prevBtn, nextBtn }) => {
+export const Button = ({ nextBtn, prevBtn }) => {
   
   return (
     <>
-    <button className='btn back-btn' onClick={prevBtn}></button>
     <button className='btn next-btn' onClick={nextBtn}>Next</button>    
+    <button className='btn back-btn' onClick={prevBtn}></button>
     </>
   )
 }
-
 
 export const StartButton = ({ nextBtn }) => {
   return (
@@ -18,8 +17,11 @@ export const StartButton = ({ nextBtn }) => {
   )
 }
 
-export const SubmitButton =  ({ nextBtn }) => {
+export const SubmitButton =  ({ nextBtn, prevBtn }) => {
   return (
-    <button className='btn submit-btn' onClick={nextBtn}>Look at card</button>  
+    <>
+    <button className='btn submit-btn' onClick={nextBtn}>Look at card</button>
+    <button className='btn back-btn' onClick={prevBtn}></button>  
+    </>
   )
 }
