@@ -1,11 +1,17 @@
 import React from 'react';
 
+const refreshPage = () => {
+    window.location.reload();
+}
+
 const EndPage = () => {
     return (
         <div className="page-container">
-            <h1>This is the end page.</h1>
-            <button>Restart</button>
-            <div>Share Icons</div>
+            <h2>Thank you for your participation!</h2>
+            <p>We hope you enjoyed the survey. Feel free to restart the survey using the "Restart" button.</p>
+            <div className="button-container">
+            <button onClick={refreshPage}>Restart</button>
+            </div>
         </div>
     )
 }

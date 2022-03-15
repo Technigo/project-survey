@@ -21,7 +21,7 @@ const Gender = (props) => {
             </div>
             <div className="column-2 radio-container">
             <label>
-            <input type="radio" name="gender" value="Female" onChange={(event) => props.askGender(event.target.value)} />
+            <input type="radio" name="gender" value="Male" onChange={(event) => props.askGender(event.target.value)} />
             <span></span>
             </label>
             </div>
@@ -31,7 +31,7 @@ const Gender = (props) => {
             </div>
             <div className="column-2 radio-container">
             <label>
-            <input type="radio" name="gender" value="Female" onChange={(event) => props.askGender(event.target.value)} />
+            <input type="radio" name="gender" value="Neither" onChange={(event) => props.askGender(event.target.value)} />
             <span></span>
             </label>
             </div>

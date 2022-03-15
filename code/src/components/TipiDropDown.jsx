@@ -5,8 +5,10 @@ const TipiDropDown = (props) => {
         <div className="page-container">
         <h2>Personality Inventory</h2>
         <p>Here are a number of personality traits that may or may not apply to you. Please select a number next to each statement to indicate the extent to which <span className="underline">you agree or disagree with that statement.</span></p> 
+        <br />
         <p>You should rate the extent to which <em>the pair</em> of traits applies to you, <span className="underline">even if one characteristic applies more strongly than the other.</span></p>
-        <p className="bold">I see myself as:</p>
+        <br />
+        <h3>I see myself as:</h3>
 
         <div className="grid">
 

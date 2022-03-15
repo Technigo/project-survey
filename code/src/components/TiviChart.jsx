@@ -56,8 +56,6 @@ export function TiviChart (props) {
     const achi = ((parseInt(props.q8Answer, 10) + parseInt(props.q18Answer, 10)) / 2)
     const hedo = ((parseInt(props.q7Answer, 10) + parseInt(props.q17Answer, 10)) / 2)
 
-    console.log('stim', stim, 'self', self, 'univ', univ, 'bene', bene, 'conf', conf, 'trad', trad, 'secu', secu, 'powe', powe, 'achi', achi, 'hedo', hedo)
-
     const data = [
         {
             // label: '# of Votes',

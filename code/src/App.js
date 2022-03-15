@@ -396,6 +396,10 @@ export const App = () => {
   //       q19Answer = {tiviq19Answer}
   //       q20Answer = {tiviq20Answer}
   //     />
+  //     <NavButtons
+  //       pageNumber = {pageNumber}
+  //       navBar = {navBar}
+  //     />
   //     <Footer />
   //     </section>
   //   )

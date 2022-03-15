@@ -27,6 +27,7 @@ header {
   font-family: 'Montserrat', sans-serif;
   font-weight: 900;
   font-size: 20px;
+  color: white;
 }
 
 footer {
@@ -48,12 +49,23 @@ footer {
   text-align: center;
 }
 
+h2 {
+  padding-bottom: 10px;
+}
+
+p {
+  line-height: 1.25;
+}
+
 /* Page */
 .page {
   min-width: 375px;
   max-width: 80%;
+  min-height: 100vh;
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
+  position: relative;
+  padding-bottom: 2.5rem;
 }
 
 .page-container {
@@ -61,6 +73,7 @@ footer {
   border-radius: 5px;
   padding: 15px 15px;
   margin: 10px 0;
+  border: 2px solid black;
 }
 
 /* Grid Display for Radio Buttons & Drop-down */
@@ -68,6 +81,7 @@ footer {
   display: grid;
   grid-template-columns: 2;
   gap: 10px;
+  margin-top: 10px;
 }
 
 .column-1 {
@@ -138,7 +152,7 @@ input[type=text] {
 }
 
 [type=radio]:checked + span:before {
-  background: green;
+  background: black;
   box-shadow: 0 0 0 3px #666;
 }
 
@@ -154,7 +168,6 @@ input[type=text] {
 }
 
 /* Styling Drop-Down Menu */
-
 select {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
@@ -168,20 +181,48 @@ select {
   justify-content: center;
 }
 
-/* Navbuttons */
-.nav-buttons {
-  display: flex;
-  justify-content: space-between;
-}
+/* End Page */
 
-.nav-buttons button {
+.page-container button {
   border-radius: 5px;
-  border: 2px solid #555;
+  border: 2px solid black;
   padding: 10px 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
   font-weight: 500;
 }
+
+.button-container {
+  width: 100px;
+  margin: 10px auto 0 auto;
+}
+
+/* Navbuttons */
+.nav-buttons {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.nav-buttons button {
+  border-radius: 5px;
+  border: 2px solid black;
+  padding: 10px 10px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Footer */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  height: 2.5rem;
+  color: white;
+}
+
 
 /* .column-1 label {
   font-family: 'Roboto', sans-serif;
