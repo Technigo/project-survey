@@ -6,7 +6,7 @@ let numberOfCheckedItems = 0
 const QuestionMultipleCheckboxesIngredients = (props) => {
   const { notFriendName, ingredient, onIngredientChange, onStepChange } = props
 
-  const testing = (event) => {
+  const checkIngredient = (event) => {
     const checkboxes = document.getElementsByName("test")
     numberOfCheckedItems = 0
     for (let i = 0; i < checkboxes.length; i++) {
@@ -20,7 +20,7 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
     onIngredientChange(event)
   }
 
-  const testing2 = (event) => {
+  const submitIngredients = (event) => {
     event.preventDefault()
     if (numberOfCheckedItems === 1) {
       alert("You need to select two ingredients!")
@@ -28,13 +28,13 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
     }
     onStepChange(1)
   }
-
+console.log(ingredient.ham)
   return (
     <>
       <div className="progress">
         <div className="progress-value question12"></div>
       </div>
-      <form onSubmit={testing2}>
+      <form onSubmit={submitIngredients}>
         <h1>
           Imagine that you can choose a boring sandwich for{" "}
           {notFriendName ? notFriendName : RandomNotFriendName()} to eat for
@@ -43,82 +43,82 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
         <input
           type="checkbox"
           id="ham"
-          name="test"
+          name="ham"
           value="ham"
           checked={ingredient.ham}
-          onChange={testing}
+          onChange={checkIngredient}
         />
         <label htmlFor="ham">ham</label>{" "}
         <input
           type="checkbox"
           id="cheese"
-          name="test"
+          name="cheese"
           value="cheese"
           checked={ingredient.cheese}
-          onChange={testing}
+          onChange={checkIngredient}
         />
         <label htmlFor="cheese">cheese</label>{" "}
         <input
           type="checkbox"
           id="egg"
-          name="test"
+          name="egg"
           value="egg"
           checked={ingredient.egg}
-          onChange={testing}
+          onChange={checkIngredient}
         />
         <label htmlFor="egg">egg</label>{" "}
         <input
           type="checkbox"
           id="mayo"
-          name="test"
+          name="mayo"
           value="mayo"
           checked={ingredient.mayo}
-          onChange={onIngredientChange}
+          onChange={checkIngredient}
         />
         <label htmlFor="mayo">mayo</label>{" "}
         <input
           type="checkbox"
           id="turkey"
-          name="test"
+          name="turkey"
           value="turkey"
           checked={ingredient.turkey}
-          onChange={onIngredientChange}
+          onChange={checkIngredient}
         />
         <label htmlFor="turkey">turkey</label>{" "}
         <input
           type="checkbox"
           id="lettuce"
-          name="test"
+          name="lettuce"
           value="lettuce"
           checked={ingredient.lettuce}
-          onChange={onIngredientChange}
+          onChange={checkIngredient}
         />
         <label htmlFor="lettuce">lettuce</label>{" "}
         <input
           type="checkbox"
           id="tuna"
-          name="test"
+          name="tuna"
           value="tuna"
           checked={ingredient.tuna}
-          onChange={onIngredientChange}
+          onChange={checkIngredient}
         />
         <label htmlFor="tuna">tuna</label>{" "}
         <input
           type="checkbox"
           id="tomato"
-          name="test"
+          name="tomato"
           value="tomato"
           checked={ingredient.tomato}
-          onChange={onIngredientChange}
+          onChange={checkIngredient}
         />
         <label htmlFor="tomato">tomato</label>{" "}
         <input
           type="checkbox"
           id="cucumber"
-          name="test"
+          name="cucumber"
           value="cucumber"
           checked={ingredient.cucumber}
-          onChange={onIngredientChange}
+          onChange={checkIngredient}
         />
         <label htmlFor="cucumber">cucumber</label>{" "}
         <button type='submit'>Next question</button>

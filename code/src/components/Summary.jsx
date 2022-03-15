@@ -142,7 +142,7 @@ const Summary = (props) => {
       </div>
       <div className="form">
         <section className="text-summary">
-          <h2>Summary</h2>
+          <h1>Summary</h1>
           <p>User name: {userNameToUse}</p>
           <p>
             Gender: {genderToUse} - text: {characterTitle} {characterName}{" "}
