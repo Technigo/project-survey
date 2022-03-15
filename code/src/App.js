@@ -1,9 +1,16 @@
-import React from 'react'
+import React, {useState} from 'react'
+import { Counter } from 'components/Counter';
+import { InfoBanner } from 'components/InfoBanner';
 
 export const App = () => {
+  const [counter, setCounter] = useState(0);
+
   return (
     <div>
-      Find me in src/app.js!
-    </div>
-  )
+     <h2> SUPER COUNTER TECHNIGO</h2>
+     <Counter counter = { counter } setCounter = {setCounter}/>
+     <InfoBanner counter = { counter } />
+
+</div>
+    )
 }
