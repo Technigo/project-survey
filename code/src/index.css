@@ -20,7 +20,9 @@
 } */
 
 body {
-  background-color: #555;
+  /* background-color: #555; */
+  background-image: url('assets/susan-wilkinson-unsplash.jpg');
+  background-size: cover;
 }
 
 header {
@@ -74,7 +76,7 @@ p {
   border-radius: 5px;
   padding: 15px 15px;
   margin: 10px 0;
-  border: 2px solid black;
+  border: 3px solid #424874;
 }
 
 /* Progress Bar */
@@ -82,8 +84,8 @@ p {
   width: 100%;
   height: 20px;
   border-radius: 5px;
-  background-color: white;
-  border: 2px solid black;
+  background-color: #dcf0fc;
+  border: 3px solid #424874;
 }
 
 /* Grid Display for Radio Buttons & Drop-down */
@@ -115,7 +117,7 @@ input[type=text] {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   border-radius: 5px;
-  border: 2px solid #555;
+  border: 2px solid #424874;
 }
 
 /* Styling Radio Buttons */
@@ -127,13 +129,13 @@ input[type=text] {
   width: 50px;
   align-items: center;
   font-size: 14px;
-  color: #999;
+  color: #424874;
 }
 
 .radio-container:nth-child(1) {
   border: none;
   font-size: 14px;
-  color: #000;
+  color: #424874;
   width: 90px;
   /* justify-content: left; */
 }
@@ -157,13 +159,13 @@ input[type=text] {
   vertical-align: -0.25em;
   border-radius: .25em;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px #555;
+  box-shadow: 0 0 0 2px #424874;
   transition: 0.5s ease all;
 }
 
 [type=radio]:checked + span:before {
-  background: black;
-  box-shadow: 0 0 0 3px #666;
+  background: #fbbd40;
+  box-shadow: 0 0 0 3px #424874;
 }
 
 [type=radio]:focus span:after {
@@ -182,7 +184,7 @@ select {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   border-radius: 5px;
-  border: 2px solid #555;
+  border: 2px solid #424874;
   padding: 5px 2px;
 }
 
@@ -227,7 +229,7 @@ select {
 
 .restart-button {
   border-radius: 5px;
-  border: 2px solid black;
+  border: 2px solid #424874;
   padding: 10px 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;
@@ -249,7 +251,8 @@ select {
 
 .nav-buttons button {
   border-radius: 5px;
-  border: 2px solid black;
+  border: 3px solid #424874;
+  background-color: #dcf0fc;
   padding: 10px 10px;
   font-family: 'Montserrat', sans-serif;
   font-size: 16px;

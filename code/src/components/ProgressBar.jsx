@@ -8,7 +8,7 @@ const ProgressBar = (props) => {
     const progressStatus = {
         height: '100%',
         width: `${completed}%`,
-        backgroundColor: 'black',
+        backgroundColor: '#ffd88a',
         transition: 'width 1s ease-in-out',
     }
     return (
