@@ -1,0 +1,94 @@
+h1 {
+  font-size: 40px;
+  z-index: 1;
+  margin-bottom: 0;
+}
+
+.welcome {
+  color: white;
+  position: relative;
+  background-image: url('../images/screens.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.time {
+  display: flex;
+  align-items: center;
+}
+
+.icon {
+  -webkit-filter: grayscale(1) invert(1);
+  filter: grayscale(1) invert(1);
+  margin-right: 8px;
+}
+
+.welcome p {
+  z-index: 1;
+}
+
+.welcome span {
+  font-weight: 700;
+}
+
+.welcome button,
+.closing button {
+  background-color: rgb(212, 29, 29);
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 1;
+  cursor: pointer;
+  margin: 30px 0;
+}
+
+.closing .button-text {
+  margin-left: 100px;
+}
+
+.closing ul {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.closing li {
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.closing li::before {
+  content: '';
+  display: inline-block;
+  height: 23px;
+  width: 24px;
+  margin-right: 10px;
+  background-image: url('../images/star.png');
+  -moz-animation: spin 5s infinite linear;
+  -webkit-animation: spin 5s infinite linear;
+  animation:spin 5s linear infinite;
+}
+
+@-moz-keyframes spin {
+  from { -moz-transform: rotate(0deg); }
+  to { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin{
+	from{transform:rotate(0deg)}
+	to{transform:rotate(360deg)}	
+}

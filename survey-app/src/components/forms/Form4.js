@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import NextButton from '../partials/NextButton';
 import SubHeader from '../partials/SubHeader';
+import Numbers from '../partials/Numbers';
+
+import "../../styled-components/Slider.css"
 
 const headerText = 'If you had the opportunity to work in a flexible';
 const headerText2 = 'work environment, would you be more productive?';
@@ -22,6 +25,7 @@ const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
       <form>
         <label htmlFor='productivityRange'>
           <input
+            className="slider"
             type='range'
             id='productivityRange'
             min='0'
@@ -29,10 +33,7 @@ const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
             defaultValue='0'
             onChange={(event) => setProductivity(event.target.value)}
           />
-          <p className='numbers'>
-            <span>0</span>
-            <span className='numbers-right'>5</span>
-          </p>
+         <Numbers />
         </label>
       </form>
       <NextButton 

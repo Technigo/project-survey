@@ -1,0 +1,41 @@
+.slider {
+  -webkit-appearance: none;
+  width: 200px;
+  height: 16px;
+  border-radius: 13px;  
+  background: #e3e3e3;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #dda200;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #dda200;
+  cursor: pointer;
+}
+
+.numbers {
+  margin-top: 5px;
+}
+
+.numbers span {
+  margin-left: 25px;
+}
+
+.numbers span:first-child {
+  margin-left: 8px;
+}
+
+.text-right {
+  margin-left: 15px;
+}

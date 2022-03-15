@@ -4,7 +4,7 @@ import NextButton from '../partials/NextButton';
 import SubHeader from '../partials/SubHeader';
 
 const preferences = ['yes', 'no'];
-const headerText = ' Would you prefer a company that offers flexible work hours?';
+const headerText = 'Would you prefer a company that offers flexible work hours?';
 
 const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
   const [hours, setHours] = useState();

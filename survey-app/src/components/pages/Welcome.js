@@ -3,6 +3,8 @@ import React from "react";
 import EnterButton from '../partials/EnterButton';
 import clock from '../../images/clock.png';
 
+import "../../styled-components/Pages.css"
+
 const Welcome = ({ changePage }) => {
   return (
     <section className="welcome page">

@@ -2,6 +2,9 @@ import React, { useState } from 'react';
 
 import NextButton from '../partials/NextButton';
 import SubHeader from '../partials/SubHeader';
+import Numbers from '../partials/Numbers';
+
+import "../../styled-components/Slider.css"
 
 const headerText = 'If you had the opportunity to work in a flexible';
 const headerText2 = 'work environment, would you feel less stressed?';
@@ -16,12 +19,14 @@ const StressRange = ({ changePage, retrieveStressData }) => {
         headerText={headerText} 
         headerText2={headerText2} 
       />  
-      <p>0 = no change
+      <p>
+        0 = no change
         <span className='text-right'>5 = less stressed</span>
       </p>
       <form>
         <label htmlFor='stressRange'>
           <input
+            className="slider"
             type='range'
             id='stressRange'
             min='0'
@@ -29,10 +34,7 @@ const StressRange = ({ changePage, retrieveStressData }) => {
             defaultValue='0'
             onChange={event => setStress(event.target.value)}
           />
-          <p className='numbers'>
-            <span>0</span>
-            <span className='numbers-right'>5</span>
-          </p>
+         <Numbers />
         </label>
       </form>
       <NextButton 
