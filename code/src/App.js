@@ -4,7 +4,7 @@ export const App = () => {
   const questions = [
     {
       id: "dish",
-      question: "If you could only eat one dish for the rest of your life, what would it be?Í",
+      question: "If you could only eat one dish for the rest of your life, what would it be?",
       answer_type: "text",
     },
     {
@@ -67,12 +67,19 @@ export const App = () => {
         <>
           <div className="questionCard">
             <h2>{questions[2].question}</h2>
-            <input id={questions[2].id} type="text"></input>
+
+            <select id={questions[2].id}>
+              <option selected disabled>Choose option</option>
+              <option value={questions[2].options[0]}>{questions[2].options[0]}</option>
+              <option value={questions[2].options[1]}>{questions[2].options[1]}</option>
+              <option value={questions[2].options[2]}>{questions[2].options[2]}</option>
+            </select>
           </div>
           <button
-            onClick={() =>
-              updateAnswers((arr) => [...arr, document.getElementById(questions[2].id).value])
-            }
+            onClick={() => {
+              let menu = document.getElementById(questions[2].id);
+              return updateAnswers((arr) => [...arr, menu.options[menu.selectedIndex].text]);
+            }}
           >
             Submit questions
           </button>
@@ -80,6 +87,6 @@ export const App = () => {
         </>
       );
     default:
-      return <h1>Thank you! You answered: {answers}</h1>;
+      return <h1>Thank you! You answered: {answers[0]}, {answers[1]}, and {answers[2]}</h1>;
   }
 };
