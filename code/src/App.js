@@ -2,13 +2,19 @@ import React, { useState } from "react";
 
 export const App = () => {
   const questions = [
-    { question: "What is your name?", answer_type: "text" },
     {
-      question: "What is your favorite cuisine?",
+      id: "dish",
+      question: "If you could only eat one dish for the rest of your life, what would it be?Í",
+      answer_type: "text",
+    },
+    {
+      id: "cuisine",
+      question: "Which of the two is your favorite cuisine?",
       answer_type: "radio",
       options: ["Mexican", "Japanese"],
     },
     {
+      id: "herbs",
       question: "What herb is superior?",
       answer_type: "select",
       options: ["Basil", "Coriander", "Parsley"],
@@ -23,15 +29,16 @@ export const App = () => {
         <>
           <div className="questionCard">
             <h2>{questions[0].question}</h2>
-            <input id="question1" type="text"></input>
+            <input id={questions[0].id} type="text"></input>
           </div>
           <button
             onClick={() =>
-              updateAnswers((arr) => [...arr, document.getElementById("question1").value])
+              updateAnswers((arr) => [...arr, document.getElementById(questions[0].id).value])
             }
           >
             Next question
           </button>
+          {/* {console.log(questions[0].id)} */}
         </>
       );
     case 1:
@@ -39,9 +46,9 @@ export const App = () => {
         <>
           <div className="questionCard">
             <h2>{questions[1].question}</h2>
-            <label for="radio1">{questions[1].options[0]}</label>
+            <label htmlFor={questions[1].options[0]}>{questions[1].options[0]}</label>
             <input className="radio" type="radio" value={questions[1].options[0]} />
-            <label for="radio2">{questions[1].options[1]}</label>
+            <label htmlFor={questions[1].options[1]}>{questions[1].options[1]}</label>
             <input className="radio" type="radio" value={questions[1].options[1]} />
           </div>
           <button
@@ -52,6 +59,7 @@ export const App = () => {
           >
             Next question
           </button>
+          {/* {console.log(questions[1].id)} */}
         </>
       );
     case 2:
@@ -59,15 +67,16 @@ export const App = () => {
         <>
           <div className="questionCard">
             <h2>{questions[2].question}</h2>
-            <input id="questionColor" type="text"></input>
+            <input id={questions[2].id} type="text"></input>
           </div>
           <button
             onClick={() =>
-              updateAnswers((arr) => [...arr, document.getElementById("questionColor").value])
+              updateAnswers((arr) => [...arr, document.getElementById(questions[2].id).value])
             }
           >
             Submit questions
           </button>
+          {/* {console.log(questions[2].id)} */}
         </>
       );
     default:
