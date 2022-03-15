@@ -24,7 +24,7 @@ const options = {
     scales: {
       r:
         {
-          min: 1,
+          min: 0,
           max: 7,
           stepSize: 0.5,
         },
