@@ -24,5 +24,3 @@ export const InfoBanner = (props) => {
 
 
 
-
-
