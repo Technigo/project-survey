@@ -2,15 +2,14 @@ import React from 'react'
 
 const Summary = ({nameInput, qualityInput, homeInput}) => {
     return(
-
-    <div>
-        <p> Hello {nameInput}!
-        You are {qualityInput} and you belong to {homeInput}.</p>
+        <section className="questionWrapper">
+        <div className="question">
+    <p> Hello {nameInput}!
+    You are {qualityInput} and you belong to {homeInput}.</p>
     </div>
-
-    )
+    </section>
+    )      
 }
-
 
 
 

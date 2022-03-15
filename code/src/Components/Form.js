@@ -30,7 +30,6 @@ const Form = () => {
 
 return (
     <main className="main">
-        <section class="contentContainer">
             {step===0 && <Intro onStepChange={onStepChange} />}
             {step===1 && (
                 <FirstQuestion 
@@ -63,8 +62,8 @@ return (
                 />
 
 
+
             )}
-        </section>
 
     </main>
 

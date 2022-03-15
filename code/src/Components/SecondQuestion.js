@@ -2,7 +2,8 @@ import React from 'react'
 
 const SecondQuestion = ({onStepChange, onQualityInputChange, qualityInput}) => {
     return (
-        <div className="secondQuestion">
+        <section className="questionWrapper">
+        <div className="question">
             <form>
                 <h2>Which of these qualities fits you best?</h2>
                 <select
@@ -19,6 +20,7 @@ const SecondQuestion = ({onStepChange, onQualityInputChange, qualityInput}) => {
             </form>
 
         </div>
+        </section>
 
 
 

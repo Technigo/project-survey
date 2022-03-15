@@ -3,7 +3,8 @@ import React from 'react'
 
 const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
     return (
-        <div className="thirdQuestion">
+        <section className="questionWrapper">
+        <div className="question">
             <form>
                 <h2>In which dormitory do you think you belong?</h2>
                 <label className="dormitorys">
@@ -24,7 +25,27 @@ const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
                     onChange = {onHomeInputChange}
                     defaultChecked = {homeInput==="Rawenclaw"}
                     />
-                    Rawenclaw
+                    Ravenclaw
+                    </label>
+                    <label className="dormitory">
+                    <input 
+                    type="radio"
+                    name="dormitorys"
+                    value="gryffindor"
+                    onChange = {onHomeInputChange}
+                    defaultChecked = {homeInput==="Gryffindor"}
+                    />
+                    Gryffindor
+                    </label>
+                    <label className="dormitory">
+                    <input 
+                    type="radio"
+                    name="dormitorys"
+                    value="hufflepuff"
+                    onChange = {onHomeInputChange}
+                    defaultChecked = {homeInput==="Hufflepuff"}
+                    />
+                    Hufflepuff
                     </label>
 
     <button className="btn" onClick={onStepChange}>Next Question</button>            
@@ -32,6 +53,7 @@ const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
                 
             </form>
         </div>
+        </section>
 
 
 
