@@ -4,7 +4,7 @@ import QuestionOne from './QuestionOne'
 import QuestionTwo from './QuestionTwo'
 import QuestionThree from './QuestionThree'
 import QuestionFour from './QuestionFour'
-import Summery from './Summery'
+import Summary from './Summary'
 
 
 
@@ -91,7 +91,7 @@ const Form = () => {
      )}
      
      {step === 5 && (
-        <Summery 
+        <Summary 
           nameInput = {nameInput}
           musicInput = {musicInput}
           selectOptionInput = {selectOptionInput}

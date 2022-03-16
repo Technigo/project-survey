@@ -7,8 +7,8 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
     <main>
       <section className="head-section" id="two">
         <p>Question one</p>
-        <h2>Hi {nameInput}, nice to meet you!</h2>
-        <h2>Might be the most horrible question in the world but: Your top one song in the whole wide world?</h2>
+        <h2 className="header-text">Hi {nameInput}, nice to meet you!</h2>
+        <h2 className="header-text">Might be the most horrible question in the world but: Your top one song in the whole wide world?</h2>
 
         <form>
           <label htmlFor="musicInput">Type your fav song here</label>

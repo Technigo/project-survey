@@ -10,7 +10,7 @@ const Intro = ({ onNextStepChange }) => {
           together?
         </h2>
       </section>
-      <button type="submit" onClick={onNextStepChange} className="start-btn"> let's!
+      <button type="submit" onClick={onNextStepChange} className="next-btn"> let's!
       </button>
     </main>
     </>
