@@ -84,7 +84,9 @@ input:focus {
 .question-list {
   display: flex;
 }
-
+.question-author {
+  display: block;
+}
 .summary {
   display: flex;
   flex-direction: column;

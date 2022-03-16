@@ -20,7 +20,6 @@ const QuestionAboutAuthor = ({ onFormSubmit }) => {
   };
   const onFormCompleted = (e) => {
     e.preventDefault();
-    console.log("author, select", select);
     switch (select) {
       case "Joanne":
         onFormSubmit("correct");
