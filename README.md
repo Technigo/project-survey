@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+A simple quiz web application built by React.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The challenge was to structure each component to be re-usable which is not achieved in this project, because each question requires different input formant. This can be improved in the future. Another challenge was including form validation. For example, question about author has alert state to avoid submitting for with empty input value.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://technigo-survey-2022.netlify.app
