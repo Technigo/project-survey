@@ -1,0 +1,17 @@
+{ 
+    "name": "surveyByJoanna",
+    "questions": [
+        { 
+            "number": 1,
+            "question": "What is your name?",
+            "type": "input" 
+        },
+        {
+            "number": 2,
+            "question": "How old are you?",
+            "type": "radio"
+        }
+    ]
+}
+        
+    
