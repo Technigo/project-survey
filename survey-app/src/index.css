@@ -99,6 +99,7 @@ button {
 }
 
 .arrow {
+  display: none;
   font-weight: 800;
   font-size: 20px;
 }
@@ -200,6 +201,10 @@ select:focus {
   .icon {
     width: 24px;
     height: 24px;
+  }
+
+  .arrow {
+    display: inline;
   }
 
   .sub-header {

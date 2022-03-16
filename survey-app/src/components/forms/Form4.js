@@ -19,8 +19,8 @@ const ProductivityRange = ({ nextPage, backPage, retrieveProductivityData }) => 
         pageNumber={4}
         headerText={headerText}
         headerText2={headerText2} />
-      <p>0 = no change
-        <span className='text-right'>5 = very productive</span>
+      <p>0 = No change
+        <span className='text-right'>5 = Very productive</span>
       </p>
       <form>
         <label htmlFor='productivityRange'>

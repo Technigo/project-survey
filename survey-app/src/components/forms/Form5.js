@@ -20,8 +20,8 @@ const StressRange = ({ nextPage, backPage, retrieveStressData }) => {
         headerText={headerText}
         headerText2={headerText2} />
       <p>
-        0 = no change
-        <span className='text-right'>5 = less stressed</span>
+        0 = No change
+        <span className='text-right'>5 = Less stressed</span>
       </p>
       <form>
         <label htmlFor='stressRange'>

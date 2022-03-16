@@ -6,7 +6,7 @@ import SubHeader from '../partials/SubHeader';
 
 import '../../styled-components/Radio.css';
 
-const preferences = ['yes', 'no'];
+const preferences = ['Yes', 'No'];
 const headerText = 'Would you prefer a company that offers flexible work hours?';
 
 const WorkHoursInput = ({ nextPage, backPage, retrieveHoursData }) => {
