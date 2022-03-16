@@ -1,21 +1,22 @@
 import React, { useState } from "react";
+import QuestionText from "components/QuestionText";
 
 export const App = () => {
   const questions = [
     {
       id: "dish",
-      question: "If you could only eat one dish for the rest of your life, what would it be?",
+      question_text: "If you could only eat one dish for the rest of your life, what would it be?",
       answer_type: "text",
     },
     {
       id: "cuisine",
-      question: "Which of the two is your favorite cuisine?",
+      question_text: "Which of the two is your favorite cuisine?",
       answer_type: "radio",
       options: ["Mexican", "Japanese"],
     },
     {
       id: "herbs",
-      question: "What herb is superior?",
+      question_text: "What herb is superior?",
       answer_type: "select",
       options: ["Basil", "Coriander", "Parsley"],
     },
@@ -32,10 +33,13 @@ export const App = () => {
             return updateAnswers((arr) => [...arr, document.getElementById(questions[0].id).value]);
           }}
         >
-          <div className="questionCard">
-            <h2>{questions[0].question}</h2>
+          <QuestionText question={questions[0]} />
+
+          {/* <div className="questionCard">
+            <h2>{questions[0].question_text}</h2>
             <input id={questions[0].id} type="text"></input>
-          </div>
+          </div> */}
+
           <button type="submit">Next question</button>
         </form>
       );
@@ -53,7 +57,7 @@ export const App = () => {
           }}
         >
           <div className="questionCard">
-            <h2>{questions[1].question}</h2>
+            <h2>{questions[1].question_text}</h2>
             <div id={questions[1].id}>
               <label htmlFor={questions[1].options[0]}>{questions[1].options[0]}</label>
               <input
@@ -62,7 +66,7 @@ export const App = () => {
                 className="radio"
                 type="radio"
                 value={questions[1].options[0]}
-                checked
+                defaultChecked
               />
               <label htmlFor={questions[1].options[1]}>{questions[1].options[1]}</label>
               <input
@@ -87,10 +91,10 @@ export const App = () => {
           }}
         >
           <div className="questionCard">
-            <h2>{questions[2].question}</h2>
+            <h2>{questions[2].question_text}</h2>
 
             <select id={questions[2].id} required>
-              <option selected disabled>
+              <option defaultValue disabled>
                 Choose option
               </option>
               <option value={questions[2].options[0]}>{questions[2].options[0]}</option>
