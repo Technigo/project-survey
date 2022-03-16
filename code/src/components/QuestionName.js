@@ -1,6 +1,6 @@
 import React from "react";
 
-const QuestionName = ({ nameInput, onNameInputChange }) => {
+const QuestionName = ({ name, onNameChange }) => {
   return {};
 };
 
