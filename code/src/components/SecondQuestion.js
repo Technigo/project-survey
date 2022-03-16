@@ -1,6 +1,6 @@
 import React from 'react'
 
-const budget = ['0-1000', '2000-5000', '5000-6000']
+const budgetArray = ['0-1000', '2000-5000', '5000-6000']
 
     export const SecondQuestion = ({budgetInput, onbudgetInputChange, nextQuestion, step}) => {
     return (
@@ -8,23 +8,25 @@ const budget = ['0-1000', '2000-5000', '5000-6000']
           <form className='form-container'> 
               <p>Question number: {step}</p>
               <h3 className='question-title'>Budget per day</h3>
-              {budget.map((budget) => (
-                  <>
+              {budgetArray.map((budget) => (
                   <label>
                     <input
                       id={budget}
                        type='radio'
                        value={budget}
-                       checked ={budget === budgetInput}
                        onChange={onbudgetInputChange}
+                       checked={budget === budgetInput}
                     />
                       {budget}
 
                   </label>
-                  </>
               ))}
+              <button 
+              className='next-btn' 
+              onClick={nextQuestion}>
+                    Next
+                </button>
           </form>
-
         </main>
     )
 }
