@@ -25,10 +25,9 @@ const Button = ({ nextPage, backPage, innerText, retrieveData, state }) => {
             Next &nbsp;<span className='arrow'>{'>'}</span>
           </button>
         </>
-        : <>
-            <button className='button' onClick={nextPage}>{innerText}</button>
-            <p className='button-text'>press <span>Enter</span> ↵</p>
-          </>}
+        :
+        <button className='button' onClick={nextPage}>{innerText}</button>
+      }
     </div>
   )
 };

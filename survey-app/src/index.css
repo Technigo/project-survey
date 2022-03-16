@@ -84,7 +84,6 @@ button {
 
 .button {
   position: relative;
-  margin-left: 110px;
 }
 
 .back-button,
@@ -102,10 +101,6 @@ button {
   display: none;
   font-weight: 800;
   font-size: 20px;
-}
-
-.button-text {
-  margin-left: 10px;
 }
 
 .time {
