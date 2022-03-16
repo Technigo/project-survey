@@ -2,32 +2,38 @@ import React from "react"
 
 import { RandomNotFriendName } from "../RandomChoices"
 
-let numberOfCheckedItems = 0
+// let numberOfCheckedItems = 0
 const QuestionMultipleCheckboxesIngredients = (props) => {
+
+  // const { notFriendName, onStepChange } = props
+
   const { notFriendName, ingredient, onIngredientChange, onStepChange } = props
 
-  const checkIngredient = (event) => {
-    const checkboxes = document.getElementsByName("item")
-    numberOfCheckedItems = 0
-    for (let i = 0; i < checkboxes.length; i++) {
-      if (checkboxes[i].checked) numberOfCheckedItems++
-    }
-    if (numberOfCheckedItems > 2) {
-      numberOfCheckedItems = 2
-      alert("You can't select more than two ingredients!")
-      return
-    }
-    onIngredientChange(event)
-  }
+  // const checkIngredient = (event) => {
+  //   const checkboxes = document.getElementsByName("item")
+  //   numberOfCheckedItems = 0
+  //   for (let i = 0; i < checkboxes.length; i++) {
+  //     if (checkboxes[i].checked) numberOfCheckedItems++
+  //   }
+  //   if (numberOfCheckedItems > 2) {
+  //     numberOfCheckedItems = 2
+  //     alert("You can't select more than two ingredients!")
+  //     return
+  //   }
+  //   onIngredientChange(event)
+  // }
 
-  const submitIngredients = (event) => {
-    event.preventDefault()
-    if (numberOfCheckedItems === 1) {
-      alert("You need to select two ingredients!")
-      return
-    }
-    onStepChange(1)
-  }
+  // const submitIngredients = (event) => {
+  //   event.preventDefault()
+  //   if (numberOfCheckedItems === 1) {
+  //     alert("You need to select two ingredients!")
+  //     return
+  //   }
+  //   onStepChange(1)
+  // }
+
+
+
 
   return (
     <>
@@ -37,6 +43,36 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
         each day from now on. Choose two ingredients.
       </h1>
       <input
+        type="checkbox"
+        id="patate"
+        name="item"
+        value="patate"
+        checked={ingredient.includes('patate')}
+        onChange={() => onIngredientChange('patate')}
+      />
+      <label htmlFor="patate">patate</label>
+
+      <input
+        type="checkbox"
+        id="tomate"
+        name="item"
+        value="tomate"
+        checked={ingredient.includes('tomate')}
+        onChange={() => onIngredientChange('tomate')}
+      />
+      <label htmlFor="tomate">tomate</label>
+
+      <input
+        type="checkbox"
+        id="carotte"
+        name="item"
+        value="carotte"
+        checked={ingredient.includes('carotte')}
+        onChange={() => onIngredientChange('carotte')}
+      />
+      <label htmlFor="carotte">carotte</label>
+
+      {/* <input
         type="checkbox"
         id="ham"
         name="item"
@@ -116,8 +152,8 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
         checked={ingredient.cucumber}
         onChange={checkIngredient}
       />
-      <label htmlFor="cucumber">cucumber</label>{" "}
-      <button onClick={submitIngredients}>Next</button>
+      <label htmlFor="cucumber">cucumber</label>{" "} */}
+      {/* <button onClick={submitIngredients}>Next</button> */}
       <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )

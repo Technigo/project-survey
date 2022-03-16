@@ -33,15 +33,9 @@ const Summary = (props) => {
     phone,
   } = props
 
-  let userNameToUse
-  if (userName === "") {
-    userNameToUse = RandomUserName()
-  }
 
-  let genderToUse
-  if (gender === "") {
-    genderToUse = RandomGender()
-  }
+  let userNameToUse = userName === "" ? RandomUserName() : userName
+  let genderToUse = gender === "" ? RandomGender() : gender
 
   let characterTitle
   let characterName
@@ -77,63 +71,17 @@ const Summary = (props) => {
     pronounPossessive = "their"
   }
 
-  let weatherToUse
-  if (weather === "") {
-    weatherToUse = RandomWeather()
-  }
-
-  let vehicleToUse
-  if (vehicle === "") {
-    vehicleToUse = RandomVehicle()
-  }
-
-  let speedToUse
-  if (speed === "") {
-    speedToUse = RandomSpeed()
-  }
-
-  let snackToUse
-  if (snack === "") {
-    snackToUse = RandomSnack()
-  }
-
-  let notFriendNameToUse
-  if (notFriendName === "") {
-    notFriendNameToUse = RandomNotFriendName()
-  }
-
-  let beverageToUse
-  if (beverage === "") {
-    beverageToUse = RandomBeverage()
-  }
-
-  let friendNameToUse
-  if (friendName === "") {
-    friendNameToUse = RandomFriendName()
-  }
-
-  let sportToUse
-  if (sport === "") {
-    sportToUse = RandomSport()
-  }
-
-  Object.keys(ingredient).forEach((key) => {
-    if (!ingredient[key]) delete ingredient[key]
-  })
-  let firstIngredientToUse
-  let secondIngredientToUse
-  if (Object.keys(ingredient).length === 2) {
-    firstIngredientToUse = Object.entries(ingredient)[0][0]
-    secondIngredientToUse = Object.entries(ingredient)[1][0]
-  } else {
-    firstIngredientToUse = RandomIngredientOne()
-    secondIngredientToUse = RandomIngredientTwo()
-  }
-
-  let phoneToUse
-  if (phone === "") {
-    phoneToUse = RandomPhone()
-  }
+  let weatherToUse = weather === "" ? RandomWeather() : weather
+  let vehicleToUse = vehicle === "" ? RandomVehicle() : vehicle
+  let speedToUse = speed === "" ? RandomSpeed() : speed
+  let snackToUse = snack === "" ? RandomSnack() : snack
+  let notFriendNameToUse = notFriendName === "" ? RandomNotFriendName() : notFriendName
+  let beverageToUse = beverage === "" ? RandomBeverage() : beverage
+  let friendNameToUse = friendName === "" ? RandomFriendName() : friendName
+  let sportToUse = sport === "" ? RandomSport() : sport
+  let firstIngredientToUse = ingredient.length === 2 ? ingredient[0] : RandomIngredientOne()
+  let secondIngredientToUse = ingredient.length === 2 ? ingredient[1] : RandomIngredientTwo()
+  let phoneToUse = phone === "" ? RandomPhone() : phone
 
   return (
     <>
