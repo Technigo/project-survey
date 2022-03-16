@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 import { Welcome } from "./Welcome";
-import { QuestionOne } from 'Components/QuestionOne'
+import { QuestionOne } from "./QuestionOne"
 import { QuestionTwo } from "./QuestionTwo";
 import { QuestionThree } from "./QuestionThree";
 import { QuestionFour } from "./QuestionFour";
@@ -9,10 +9,26 @@ import { Summary } from "./Summary";
 
 export const Form = () => {
   const [count, setCount] = useState(1);
-  // const [name, SetName] = useState("");
-  // const [location, SetLocation] = useState("");
-  // const [wantNewsletter, SetWantNewsletter] = useState(false);
-  // const [ageGroup, SetAgeGroup] = useState();
+  const [name, SetName] = useState("");
+  const [location, SetLocation] = useState("");
+  const [wantNewsletter, SetWantNewsletter] = useState(false);
+  const [ageGroup, SetAgeGroup] = useState();
+
+  const handleNameInputChange = (event) => {
+    SetName(event.target.value);
+  }
+
+  const handleLocationInputChange = (event) => {
+    SetLocation(event.target.value);
+  }
+
+  const handleNewsletterInputChange = (event) => {
+    SetWantNewsletter(event.target.value);
+  }
+
+  const handleAgeGroupInputChange = (event) => {
+    SetAgeGroup(event.target.value);
+  }
 
   if (count === 1) {
     return (
@@ -25,8 +41,8 @@ export const Form = () => {
     return (
       <div className="form-container">
       <QuestionOne
-      // name={name}
-      // SetName={SetName}
+        name={name}
+        onNameInputChange={handleNameInputChange}
       />
       <button onClick={() => setCount(count + 1)}>NEXT</button>
       </div>
@@ -35,8 +51,8 @@ export const Form = () => {
     return (
       <div className="form-container">
       <QuestionTwo
-      // location={location}
-      // SetLocation={SetLocation}
+        location={location}
+        onLocationInputChange={handleLocationInputChange}
       />
       <button onClick={() => setCount(count + 1)}>NEXT</button>
       </div>
@@ -45,8 +61,8 @@ export const Form = () => {
     return (
       <div className="form-container">
       <QuestionThree
-      // wantNewsletter={wantNewsletter}
-      // SetWantNewsletter={SetWantNewsletter}
+        wantNewsletter={wantNewsletter}
+        onNewsletterInputChange={handleNewsletterInputChange}
       />
       <button onClick={() => setCount(count + 1)}>NEXT</button>
       </div>
@@ -55,8 +71,8 @@ export const Form = () => {
     return (
       <div className="form-container">
       <QuestionFour
-      // ageGroup={ageGroup}
-      // SetAgeGroup={SetAgeGroup}
+        ageGroup={ageGroup}
+        onAgeGroupInputChange={handleAgeGroupInputChange}
       />
       <button onClick={() => setCount(count + 1)}>SUMMARY</button>
       </div>
@@ -64,7 +80,12 @@ export const Form = () => {
   } else {
     return (
       <div className="form-container">
-      <Summary/>
+      <Summary
+        name={name} 
+        location={location} 
+        wantNewsletter={wantNewsletter} 
+        ageGroup={ageGroup}
+      />
       </div>
     )
   }

@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const QuestionOne = () => {
-  const [name, SetName] = useState("");
+export const QuestionOne = ({ name, onNameInputChange }) => {
 
   return (
     <form onSubmit={event => event.preventDefault()}>
-      <label>Your name</label>
+      <label htmlFor="name">Your name</label>
       <input
         type="text"
-        onChange={event => SetName(event.target.value)}
         value={name}
+        onChange={onNameInputChange}
         required
         placeholder="Type your name"
       />
     </form>
   )
 }
+

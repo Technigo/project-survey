@@ -1,13 +1,13 @@
 import React from "react";
 
-export const Summary = props => {
+export const Summary = ({ name, location, wantNewsletter, ageGroup }) => {
   return (
     <div className="form-container">
       <h2>Summary:</h2>
-      <p>Name: {props.name}</p>
-      <p>Location: {props.location}</p>
-      <p>Newsletter: {props.wantNewsletter}</p>
-      <p>Age: {props.ageGroup}</p>
+      <p>Name: {name}</p>
+      <p>Location: {location}</p>
+      <p>Newsletter: {wantNewsletter}</p>
+      <p>Age: {ageGroup}</p>
     </div>
   )
 }

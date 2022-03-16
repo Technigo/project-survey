@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 
-export const QuestionThree = () => {
-  const [wantNewsletter, SetWantNewsletter] = useState(false);
+export const QuestionThree = ({ wantNewsletter, onNewsletterInputChange}) => {
 
   return (
     <form onSubmit={event => event.preventDefault()}>
-      <label>Do you want to sign up to our newsletter?
+      <label htmlFor="newsletter">Do you want to sign up to our newsletter?
         <input
         type="checkbox"
         checked={wantNewsletter}
-        onChange={event => SetWantNewsletter(event.target.checked)}
+        onChange={onNewsletterInputChange}
         />
       </label>
     </form>
