@@ -10,57 +10,48 @@ import OverView from "./Overview";
 import Confirmation from "./Confirmation";
 import NextBtn from "./NextBtn";
 import PrevBtn from "./PrevBtn";
+import ProgressBar from "./ProgressBar";
+
+// This array is for QuestionTwo
+const satisfactionRating = ['Terrible 😞', 'Bad 🙁', 'Okay 🙂', 'Happy 😊', 'Very happy 😍'];
 
 
 const Form = () => {
 
     const [questionNum, setQuestionNum] = useState(1);
-    const [date, setDate] = useState('');
-    const [rating, setRating] = useState(2);
+    const [date, setDate] = useState(''); 
+    const [rating, setRating] = useState(3);
+    const [satisfaction, setSatisfaction] = useState(satisfactionRating[rating]);
     const [frequency, setFrequency] = useState('');
     const [loyalty, setLoyalty] = useState('');
     const [feedback, setFeedback] = useState('');
     const [submitted, setSubmitted] = useState(false);
 
 
-    const nextQuestion = () => {
-        return setQuestionNum(questionNum + 1);
-    }
-
-    const prevQuestion = () => {
-        return setQuestionNum(questionNum - 1);
-    }
-
-    const getDate = (date) => {
-        return setDate(date);
-    }
-
-    const getRating = (satisfaction) => {
-        return setRating(satisfaction);
-    }
-
-    const getBookingFrequency = (frequency) => {
-        return setFrequency(frequency);
-    }
-
-    const getLoyaltyRating = (rating) => {
-        return setLoyalty(rating);
-    }
-
-    const getFeedback = (feedback) => {
-        return setFeedback(feedback);
-    }
+    const nextQuestion = () => setQuestionNum(questionNum + 1);
+    
+    const prevQuestion = () => setQuestionNum(questionNum - 1);
+    
+    const getDate = (date) =>  setDate(date);
+    
+    const getRating = (satisfaction) => setRating(satisfaction);
+    
+    const getBookingFrequency = (frequency) => setFrequency(frequency);
+    
+    const getLoyaltyRating = (rating) => setLoyalty(rating);
+    
+    const getFeedback = (feedback) => setFeedback(feedback);
     
     const submit = (e) => {
         e.preventDefault();
         setSubmitted(true);       
     }
 
-    return <div>
-        {submitted === false ? (
+    return <>
+        {!submitted ? (
 
         <form id='form' onSubmit={submit}>
-
+        <ProgressBar questionNum = {questionNum} />
         <Heading />
 
         {questionNum === 1 && (
@@ -80,6 +71,9 @@ const Form = () => {
             questionNum = {questionNum}
             rating = {rating}
             getRating = {getRating}
+            satisfactionRating = {satisfactionRating}
+            satisfaction = {satisfaction}
+            setSatisfaction = {setSatisfaction}
             />
             <PrevBtn prevQuestion={prevQuestion} />
             <NextBtn nextQuestion={nextQuestion} />
@@ -128,6 +122,7 @@ const Form = () => {
             <OverView 
             date = {date} 
             rating = {rating}
+            satisfaction = {satisfaction}
             frequency = {frequency}
             loyalty = {loyalty}
             feedback = {feedback} 
@@ -138,7 +133,7 @@ const Form = () => {
         
         : <Confirmation /> }
 
-    </div>
+    </>
 
 }
 

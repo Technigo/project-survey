@@ -1,4 +1,3 @@
-import { it } from "eslint/lib/rule-tester/rule-tester";
 import React, { useState } from "react";
 
 const options = ['Definitely 😊', 'Might or might not', 'Definitely not']

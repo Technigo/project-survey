@@ -1,42 +1,24 @@
-import React, { useState } from "react";
-
-const options = ['Terrible 😞', 'Bad 🙁', 'Okay 🙂', 'Happy 😊', 'Very happy 😍'];
+import React from "react";
 
 
-const QuestionTwo = ({ questionNum, rating, getRating }) => {
+const QuestionTwo = ({ questionNum, rating, getRating, satisfactionRating, satisfaction, setSatisfaction }) => {
 
-    const mapTh = (rating) => {
-        return <p>{options[rating]}</p>
-    }
+    setSatisfaction(satisfactionRating[rating])
 
    return <>
-        <p>How happy are you?</p>
+        <p>{questionNum} How happy are you with the cleanliness?</p>
         <input 
         type='range'
         min='0'
-        max={options.length - 1}
+        max={satisfactionRating.length - 1}
         value={rating}
         onChange={e => getRating(e.target.value)} />
-        {mapTh(rating)}
+          
+         <p>{satisfaction}</p>
+    
     </>
 
-    /*
-    return <form>
-        <p><span>{questionNum}</span> How happy are you with the cleanliness?</p>
 
-         {options.map(option => {
-             return <label key={option}>
-                 <input 
-                 type = 'radio'
-                 value = {option}
-                 checked = {rating === option}
-                 onChange={e => {getRating(e.target.value)}}
-                 />
-                {option}
-             </label>
-         })}
-    </form>
-    */
 }
 
 export default QuestionTwo;
