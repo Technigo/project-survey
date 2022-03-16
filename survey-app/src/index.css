@@ -39,7 +39,7 @@ section {
 .welcome {
   color: white;
   position: relative;
-  background-image: url('./images/screens.jpg');
+  background-image: url('/images/screens.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -164,7 +164,7 @@ select:focus {
   height: 23px;
   width: 24px;
   margin: 0 10px -5px 0;
-  background-image: url('./images/star.png');
+  background-image: url('/images/star.png');
   -moz-animation: spin 5s infinite linear;
   -webkit-animation: spin 5s infinite linear;
   animation:spin 5s linear infinite;
