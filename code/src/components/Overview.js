@@ -1,4 +1,3 @@
-import { arraySchema } from 'eslint-plugin-jsx-a11y/lib/util/schemas'
 import React from 'react'
 
 import { PennantImage } from './PennantImage'
@@ -12,11 +11,11 @@ export const Overview = ({ pronoun, state }) => {
   } else if (pronoun === 'he/him') {
     possPronoun = 'his'
   } else {
-    possPronoun = 'thier'
+    possPronoun = 'their'
   }
 
   //return month as month
-  const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
+  // const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
   
   const date = state.date
   console.log(date)
