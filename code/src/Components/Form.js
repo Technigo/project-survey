@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import IntroPage from './IntroPage';
+import TheChoice from './TheChoice';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
@@ -11,6 +12,7 @@ const Form = () => {
     const [budgetInput, setBudgetInput] = useState('');
     const [awayInput, setAwayInput] = useState('');
     const [step, setStep] = useState(0);
+
 
     const handleDestinationInputChange = (event) => {
         setDestinationInput(event.target.value);
@@ -32,7 +34,13 @@ const Form = () => {
     if (step === 0) { 
     return < IntroPage nextQuestion={nextQuestion} />
 
-    } else if (step === 1 ) {
+    } else if (step === 1 ){ 
+        return < TheChoice 
+        nextQuestion={nextQuestion}
+        step={step}
+        />
+
+    } else if (step === 2 ) {
         return ( 
         <FirstQuestion 
         destinationInput={destinationInput}
@@ -41,7 +49,7 @@ const Form = () => {
         step={step}
         />
         )
-    } else if (step === 2) {
+    } else if (step === 3) {
         return (
             <SecondQuestion 
             budgetInput={budgetInput}
@@ -50,7 +58,7 @@ const Form = () => {
             step={step}
          />
         )
-    } else if (step === 3) {
+    } else if (step === 4) {
         return (
             <ThirdQuestion 
             awayInput={awayInput}
@@ -59,13 +67,13 @@ const Form = () => {
             step={step}
          />
         )
-    } else if (step === 4) {
+    } else if (step === 5) {
         return (
             <SubmitSurvey 
             nextQuestion={nextQuestion}
             />
         )
-    } else if (step === 5) {
+    } else if (step === 6) {
         return (
             <Summary 
             destinationInput={destinationInput}
