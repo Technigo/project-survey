@@ -14,9 +14,9 @@ export const ThemeInput = ({state, handleInput}) => {
         <input 
             type="radio" 
             name="theme" 
-            value="themeone"
+            value="purpleyellow"
             onChange={handleInput}
-            checked={state === 'themeone'}
+            checked={state === 'purpleyellow'}
             className='theme'
             required
           />
@@ -27,9 +27,9 @@ export const ThemeInput = ({state, handleInput}) => {
         <input 
             type="radio" 
             name="theme" 
-            value="themetwo"
+            value="yellowpink"
             onChange={handleInput}
-            checked={state === 'themetwo'}
+            checked={state === 'yellowpink'}
             className='theme'
             required
           />
@@ -40,9 +40,9 @@ export const ThemeInput = ({state, handleInput}) => {
       <input 
           type="radio" 
           name="theme" 
-          value="themethree"
+          value="pinkgreen"
           onChange={handleInput}
-          checked={state === 'themethree'}
+          checked={state === 'pinkgreen'}
           className='theme'
           required
         />
@@ -53,9 +53,9 @@ export const ThemeInput = ({state, handleInput}) => {
         <input 
           type="radio" 
           name="theme" 
-          value="themefour"
+          value="greenblue"
           onChange={handleInput}
-          checked={state === 'themefour'}
+          checked={state === 'greenblue'}
           className='theme'
           required
         />
@@ -65,9 +65,9 @@ export const ThemeInput = ({state, handleInput}) => {
       <label>
         <input type="radio" 
           name="theme" 
-          value="themefive" 
+          value="bluepurple" 
           onChange={handleInput}
-          checked={state === 'themefive'}
+          checked={state === 'bluepurple'}
           className='theme'
           required
         />

@@ -5,10 +5,9 @@ export const PronounInput = ({ pronoun, setPronoun }) => {
 
   return (
     <fieldset className='radiobutton-wrapper'>
-      <legend className='radio-legend-two'>Pronoun
+      <legend className='radio'>pronoun</legend>  
         {pronouns.map(pron => (
-          
-        <label key={pron} className='radio-two'>
+        <label key={pron} className='radio'>
           <input
             type='radio'
             name='pronoun'
@@ -20,7 +19,6 @@ export const PronounInput = ({ pronoun, setPronoun }) => {
             <p>{pron}</p>
         </label>
         ))}
-      </legend>
     </fieldset>
   )
 }
