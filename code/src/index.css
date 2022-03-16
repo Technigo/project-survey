@@ -20,8 +20,10 @@
 } */
 
 body {
-  /* background-color: #555; */
-  background-image: url('assets/susan-wilkinson-unsplash.jpg');
+  background-color: lightslategray;
+  /* background-image: url('assets/susan-wilkinson-unsplash.jpg');
+  background-size: cover; */
+  background-image: url('assets/nathan-blackaby-unsplash.jpg');
   background-size: cover;
 }
 
@@ -86,6 +88,12 @@ p {
   border-radius: 5px;
   background-color: #dcf0fc;
   border: 3px solid #424874;
+}
+
+.progress-bar {
+  background-color: #424874;
+  transition: width 1s ease-in-out;
+  height: 100%;
 }
 
 /* Grid Display for Radio Buttons & Drop-down */
@@ -219,26 +227,6 @@ select {
 
 .tipi-header:hover, .tivi-header:hover, .accordion-header--active {
 
-}
-
-
-
-
-
-/* End Page */
-
-.restart-button {
-  border-radius: 5px;
-  border: 2px solid #424874;
-  padding: 10px 10px;
-  font-family: 'Montserrat', sans-serif;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.button-container {
-  width: 100px;
-  margin: 10px auto 0 auto;
 }
 
 /* Navbuttons */
