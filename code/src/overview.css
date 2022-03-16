@@ -1,0 +1,83 @@
+section.overview-wrapper {
+	background: var(--clr-white);
+	display: flex;
+}
+
+.overview-wrapper {
+	background: var(--clr-lighter);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+img.pennant {
+	width: 370px;
+	position: relative;
+	top: 30px;
+}
+
+svg {
+	overflow: visible;
+	position: absolute;
+	top: 0;
+	width: 370px;
+}
+
+.highlight {
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0) 40%, #ced7da 90%);
+}
+
+span.month {
+	padding: 1.025em 1.5em;
+	border-top: 2px solid var(--clr-black);
+	border-bottom: 2px solid var(--clr-black);
+	display: flex;
+	align-items: center;
+	/* height: 0px; */
+}
+
+.time {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+p.date-text {
+	display: flex;
+	align-items: center;
+	text-transform: uppercase;
+}
+
+span.time-upper {
+	padding: 0.5em 1.5em 0;
+	border-top: 2px solid var(--clr-black);
+	max-width: 6ch;
+}
+
+span.time-lower {
+	padding: 0 1.9em 0.5em 1.6em;
+	border-bottom: 2px solid var(--clr-black);
+	max-width: 6ch;
+}
+
+span.day {
+	font-size: 3rem;
+}
+
+.location-text {
+	padding: 1.5em 0;
+	font-weight: 700;
+}
+
+.rvsp-text {
+	border-top: 1px solid var(--clr-black);
+	padding: 0.25em;
+}
+
+.gift-text {
+	padding-top: 1.75em;
+	font-size: 0.8rem;
+	font-weight: 700;
+	text-transform: uppercase;
+}

@@ -71,8 +71,10 @@ export const App = () => {
 
       <section>
         <form className='container' onSubmit={handleSubmit}>
+
+
           {/* Name and gender */}
-          {counter === 1 && (
+          {counter === 0 && (
           <div className='question-wrapper'>
             <h3>What is the name of the person to be celebrated?</h3>
             <TextInput 
@@ -94,8 +96,9 @@ export const App = () => {
           </div>
           )}
             
+
           {/* Age */}
-          {counter === 2 && (
+          {counter === 0 && (
 
             <div className='question-wrapper'>
               <AgeInput 
@@ -109,15 +112,16 @@ export const App = () => {
             </div>
           )}  
 
+
           {/* Location */}
-          {counter === 3 && (
+          {counter === 0 && (
 
             <div className='question-wrapper'>
               <h3>Where should the party be?</h3>
               <TextInput
                 text={'Location'}
                 inputName={'location'}
-                placeholder={'location/adress'} 
+                placeholder={'location/address'} 
                 state={state.location}
                 handleInput={handleInput}
               />
@@ -131,7 +135,7 @@ export const App = () => {
 
           
           {/* Date and time */}
-          {counter === 4 && (
+          {counter === 0 && (
 
             <div className='question-wrapper date'>
               <div className='date-wrapper'>
@@ -164,10 +168,9 @@ export const App = () => {
             </div>
           )}
           
-              
 
           {/* Gifts */}
-          {counter === 5 && (
+          {counter === 0 && (
 
             <div className='question-wrapper'>
               <GiftInput 
@@ -183,11 +186,11 @@ export const App = () => {
         
 
           {/* RVSP */}
-          {counter === 6 && (
+          {counter === 0 && (
           <div className='question-wrapper'>  
           <h3>Who should the invited respond to?</h3>
             <TextInput 
-              text={'To'}
+              text={'Respont to'}
               inputName={'rvspTo'}
               placeholder={'name'}
               state={state.rvspTo}
@@ -206,9 +209,10 @@ export const App = () => {
             />           
             </div>
           )}
-                  
+
+
         {/* Select styling */}
-        {counter === 7 && (
+        {counter === 0 && (
           <div className='question-wrapper'>
             <div className='theme-wrapper'>
               <ThemeInput 
@@ -218,15 +222,17 @@ export const App = () => {
             </div>  
               <SubmitButton 
                 nextBtn={handleNextStepClick}
-              />
+                prevBtn={handlePrevStepClick}
+              />  
           </div>  
         )}
 
         </form>
       </section>
 
+
       {/* Overview */}
-      {counter === 8 && (
+      {counter === 0 && (
         <section className='overview-wrapper'>
             <Overview 
               pronoun={pronoun}
@@ -236,6 +242,5 @@ export const App = () => {
       )}
             
     </main>
-
   )
 }

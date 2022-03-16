@@ -1,47 +1,66 @@
-import React from 'react'
+import React from "react";
 
-import { PennantImage } from './PennantImage'
- 
+import { PennantImage } from "./PennantImage";
+import "../overview.css";
 
 export const Overview = ({ pronoun, state }) => {
+	let possPronoun;
+	if (pronoun === "she/her") {
+		possPronoun = "her";
+	} else if (pronoun === "he/him") {
+		possPronoun = "his";
+	} else {
+		possPronoun = "their";
+	}
 
-  let possPronoun
-  if (pronoun === 'she/her') {
-    possPronoun = 'her'
-  } else if (pronoun === 'he/him') {
-    possPronoun = 'his'
-  } else {
-    possPronoun = 'their'
-  }
+	//return month as month
+	const months = [
+		"Jan",
+		"Feb",
+		"March",
+		"April",
+		"May",
+		"June",
+		"July",
+		"Aug",
+		"Sep",
+		"Oct",
+		"Nov",
+		"Dec",
+	];
 
-  //return month as month
-  // const months = ['January','February','March','April','May','June','July','August','September','October','November','December']
-  
-  const date = state.date
-  console.log(date)
-  const formattedDate = new Date(date);
-  console.log(formattedDate)
-  let currentMonth =  formattedDate.getMonth();
-  currentMonth += 1;  // JavaScript months are 0-11
-  console.log('m', currentMonth)
+	const formattedDate = new Date(state.date);
+	let month = months[formattedDate.getMonth()];
+	let day = formattedDate.getDate();
 
-  // const month = months
-// loop thoruh arraySchema, print index that is equal to current month??
-  // if else for ThemeInput, find out how to change on svg
+	return (
+		<div className="invitation-card--wrapper">
+			<PennantImage color={state.theme} alt="pennant in colors" />
+			<h1 className="highlight">{state.name}</h1>
+			<h2>
+				Invites you to celebrate {possPronoun} {state.pronouns} {state.age}{" "}
+				birthday
+			</h2>
+			<p className="date-text">
+				<span className="month">{month}</span>
+				<span className="day">{day}</span>{" "}
+				<div className="time">
+					<span className="time-upper">{state.timeFrom}-</span>
+					<span className="time-lower">{state.timeTo}</span>
+				</div>
+			</p>
 
-  return (
-      <div className='invitation-card--wrapper'>
-        {/* <img className='pennant' src={Pennant} alt='Pennant flags'/> */}
-        <PennantImage 
-          color={state.theme}
-          alt='pennant in colors'
-        />
-        <h1>{state.name}</h1>
-        <h2>Invites you to celebrate {possPronoun} {state.pronouns} {state.age} birthday</h2>   
-        <p>{state.date} {state.timeFrom} - {state.timeTo}</p>
-        <p>The party will be held at {state.location}</p>
-        <p>RVSP TO {state.rvspTo} {state.rvspContactDetails}</p>
-        <p>{state.gift === 'Donation' ? 'Please, no gifts! Consider a donation instead.' : ''}</p> 
-      </div>
-  )
-}
+			<p className="location-text">
+				The party will be held at {state.location}
+			</p>
+			<p className="rvsp-text">
+				RVSP {state.rvspTo}: {state.rvspContactDetails}
+			</p>
+			<em className="gift-text">
+				{state.gift === "Donation"
+					? "Please, no gifts! Consider a donation instead."
+					: ""}
+			</em>
+		</div>
+	);
+};

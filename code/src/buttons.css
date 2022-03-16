@@ -1,5 +1,5 @@
 button.btn {
-  padding: 10px 35px;
+	padding: 10px 35px;
 	margin: 2.5em 0;
 	width: 225px;
 	cursor: pointer;
@@ -28,7 +28,7 @@ button.back-btn {
 	position: absolute;
 	bottom: 1.5em;
 	background: var(--clr-black);
-	background: url('./assets/back-btn.png');
+	background: url("./assets/back-btn.png");
 	background-size: contain;
 }
 
@@ -39,8 +39,13 @@ button.back-btn:focus {
 }
 
 button.submit-btn {
-	background: linear-gradient(45deg,
-        #ec5f67, #f99157, #fac863, #99c794,
-        #5fb3b3, #6699cc, #c594c5)
+	background: linear-gradient(
+		45deg,
+		#ac699d,
+		#ffeba1,
+		#fdbcbc,
+		#75a996,
+		#5d87b8,
+		#ac699d
+	);
 }
-
