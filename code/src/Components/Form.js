@@ -86,6 +86,7 @@ export const Form = () => {
         wantNewsletter={wantNewsletter} 
         ageGroup={ageGroup}
       />
+      <button onClick={() => setCount(count - 5)}>RESTART</button>
       </div>
     )
   }
