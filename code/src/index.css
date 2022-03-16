@@ -5,9 +5,98 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #f6df6d;
+  font-family: "Fredoka", sans-serif;
+  font-weight: 300;
+  width: 100vw;
+  height: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+input {
+  background-color: transparent;
+  border: none;
+}
+
+input:active,
+input:focus {
+  outline: none;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 3em;
+}
+
+.question-title {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+.question-subtitle {
+  font-size: 1.25rem;
+}
+.question-number {
+  color: #6ab7b6;
+  font-size: 1.25rem;
+}
+.answer-radio,
+.answer {
+  border-bottom: 2px solid #397a75;
+  padding-bottom: 0.2em;
+  margin-bottom: 1rem;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #397a75;
+}
+
+.answer {
+  display: block;
+  width: 50vw;
+}
+
+.submit-button {
+  padding: 0.25em 1em;
+  font-size: 1.5rem;
+  font-weight: 500;
+  border: none;
+  background-color: #6ab7b6;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 1em;
+}
+
+.question-img {
+  height: 50vh;
+  object-fit: cover;
+}
+
+.strong {
+  font-weight: 500;
+}
+
+.question-list {
+  display: flex;
+}
+
+.question-author {
+  display: flex;
+}
+
+.summary {
+  display: flex;
+}
+
+.summary-text {
+  font-size: 1.25rem;
+}
+
+.summary-answer {
+  color: #6ab7b6;
+  font-size: 1.25rem;
 }
