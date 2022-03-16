@@ -1,21 +1,29 @@
 import React, { useState } from 'react'
 
 import FirstQuestion from './FirstQuestion'
+import RandomCardioQuestion from './RandomCardioQuestion'
 import TimeQuestion from './TimeQuestion'
 import UpperBodyQuestion from './UpperBodyQuestion'
 import LowerBodyQuestion from './LowerBodyQuestion'
+import CardioTypeQuestion from './CardioTypeQuestion'
 import Overview from './Overview'
 
 const Form = () => {
 	const [nameInput, setNameInput] = useState('')
+	const [random, setRandom] = useState('')
 	const [time, setTime] = useState('')
     const [upperBody, setUpperBody] =useState('')
     const [lowerBody, setLowerBody] =useState('')
+	const [cardioTypes, setCardioTypes] =useState('')
 	const [step, setStep] = useState(1);
 
 	const onNameInputChange = (event) => {
-		setNameInput(event.target.value);
+		setNameInput(event.target.value)
 	}
+
+	const onRandomChange = (random) => {
+		setRandom(random)
+	  }
 
 	const onTimeChange = (event) => {
 		setTime(event.target.value)
@@ -29,9 +37,17 @@ const Form = () => {
 		setLowerBody(event.target.value)
 	}
 
+	const onCardioTypeChange = (event) => {
+		setCardioTypes(event.target.value)
+	}
+
 	const onStepChange = () => {
 		setStep(step + 1)
 	}
+
+	//const handleShowOverview = () => {
+		//setShowOverview(true)
+	 // }
 
 	return (
 		<div>
@@ -42,29 +58,44 @@ const Form = () => {
 					onStepChange={onStepChange}
 				/>
 			)}
-			{step === 2 && (
+			 {step === 2 && (
+            <RandomCardioQuestion
+              random={random}
+              onRandomChange={onRandomChange}
+              onStepChange={onStepChange}
+              //handleShowOverview={handleShowOverview}
+            />
+          )}
+			{step === 3 && (
 				<TimeQuestion
 					time={time}
 					onTimeChange={onTimeChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-            {step === 3 && (
+            {step === 4 && (
 				<UpperBodyQuestion
                     upperBody={upperBody}
 					onUpperBodyChange={onUpperBodyChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-             {step === 4 && (
+             {step === 5 && (
 				<LowerBodyQuestion
                     lowerBody={lowerBody}
 					onLowerBodyChange={onLowerBodyChange}
 					onStepChange={onStepChange}
 				/>
 			)}
-			{step === 5 && (
-				<Overview nameInput={nameInput} time={time} upperBody={upperBody} lowerBody={lowerBody} />
+			 {step === 6 && (
+				<CardioTypeQuestion
+                    cardioTypes={cardioTypes}
+					onCardioTypeChange={onCardioTypeChange}
+					onStepChange={onStepChange}
+				/>
+			)}
+			{step === 7 && (
+				<Overview nameInput={nameInput} time={time} upperBody={upperBody} lowerBody={lowerBody} cardioTypes={cardioTypes} random={random} />
 			)}
 		</div>
 	)
