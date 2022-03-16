@@ -1,39 +1,32 @@
 import React, { useState } from 'react'
-
+import Intro from './Intro'
 import FirstQuestion from './FirstQuestion'
 
 
 const Form = () => {
 
 
-    // Declaring the variables here
-    const [nameInput, setNameInput] = useState('')
+// Declaring all the pretty variables here
+const [nameInput, setNameInput] = useState('')
 
 
-    const onNameInputChange = (event) => {
-       setNameInput(event.target.value)
-   }
-
-   // Prevents default
-   const handleSubmit = (event) => {event.preventDefault()
+const onNameInputChange = (event) => {
+    setNameInput(event.target.value)
 }
 
-
 return (
+  
+<form className="form-wrapper">
+    
+<Intro />
 
-<form onSubmit={handleSubmit}>
-   <div className="form-wrapper">
-        <div className="header-title">
-            <h1 className="hello">Hey you! </h1> 
-        </div>
+<FirstQuestion 
+    nameInput={nameInput}
+    onNameInputChange={onNameInputChange}
+/>
 
+</form>
 
-        <FirstQuestion 
-        nameInput={nameInput}
-        onNameInputChange={onNameInputChange}
-        />
-    </div>
-    </form>
 )}
 
 export default Form

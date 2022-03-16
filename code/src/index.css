@@ -27,17 +27,18 @@ h1 {
   font-family: "Quintessential", sans-serif;
   font-size: 40px;
   color: #c99c53;
+  text-align: center;
 }
 
 input,
-button {
+.btn {
   font-family: "Jost", sans-serif;
   border: none;
   font-size: 16px;
   border-radius: 30px;
   color: #b47c23;
   padding: 10px;
-  margin-right: 10px;
+  margin: 10px 10px 10px 0;
 }
 
 p,
@@ -53,10 +54,7 @@ label {
 
 .header-title {
   overflow: auto;
-}
-
-.hello {
-  float: left;
+  margin-bottom: 20px;
 }
 
 /* .orange {

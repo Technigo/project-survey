@@ -11,6 +11,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
 
             <div>
                     <input
+                    className="question"
                     id="name" 
                     type="text" 
                     placeholder="Put it right here" 
@@ -18,7 +19,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
                     onChange={onNameInputChange} 
                     required />
 
-                <button type="submit" onClick={setNameInput}>Let's go!</button>
+                <button className="btn" type="submit" onClick={setNameInput}>Next question!</button>
             </div>
 
        </div>
