@@ -30,6 +30,7 @@ const QuestionAboutName = ({ onFormSubmit }) => {
         onChange={onInputChange}
         value={username}
         autoComplete="off"
+        required
       />
       <button type="submit" className="submit-button">
         OK

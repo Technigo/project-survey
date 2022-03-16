@@ -9,7 +9,6 @@ export const App = () => {
   const [count, setCount] = useState(0);
   const onFormSubmit = (value) => {
     answers.push(value);
-    console.log("answers", answers);
     setCount((prev) => prev + 1);
   };
 

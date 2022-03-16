@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 const QuestionAboutAuthor = ({ onFormSubmit }) => {
   const [select, setSelect] = useState("");
+  const [alert, setAlert] = useState(false);
   const answerList = [
     "Jacqueline",
     "Jane",
@@ -10,10 +11,26 @@ const QuestionAboutAuthor = ({ onFormSubmit }) => {
     "Julie",
     "Joanne",
   ];
+
+  const onAlert = () => {
+    setAlert(true);
+    setTimeout(() => {
+      setAlert(false);
+    }, 2000);
+  };
   const onFormCompleted = (e) => {
     e.preventDefault();
-    if (select === "Joanne") onFormSubmit("correct");
-    else onFormSubmit("wrong");
+    console.log("author, select", select);
+    switch (select) {
+      case "Joanne":
+        onFormSubmit("correct");
+        break;
+      case "":
+        onAlert();
+        break;
+      default:
+        onFormSubmit("wrong");
+    }
   };
 
   return (
@@ -31,10 +48,10 @@ const QuestionAboutAuthor = ({ onFormSubmit }) => {
         alt="JK Rowling portrait"
         src="https://www.barnensbibliotek.se/portals/0/image/RowlingJK_Foto_Debra%20Hurford%20Brown_460q.jpg?ver=IB4sUphdL4RjieEQ5OyONg%3D%3D"
       />
-
       <select
         className="question-list"
         onChange={(e) => setSelect(e.target.value)}
+        required
       >
         <option className="answer-option">Select an option:</option>
         {answerList.map((answer) => (
@@ -43,9 +60,11 @@ const QuestionAboutAuthor = ({ onFormSubmit }) => {
           </option>
         ))}
       </select>
+
       <button type="submit" className="submit-button">
         OK
       </button>
+      {alert && <div>Select an answer!</div>}
     </form>
   );
 };

@@ -39,6 +39,7 @@ const QuestionAboutPainting = ({ onFormSubmit }) => {
             name="painting"
             onChange={(e) => setSelect(e.target.value)}
             value={answer}
+            required
           />
           {answer}
         </label>
