@@ -8,7 +8,7 @@ const Closing = (data) => {
   const { age, hours, location, productivity, stress } = data;
 
   const hoursResponse = () => {
-    return (hours === 'yes')
+    return (hours === 'Yes')
       ? 'You prefer a company that offers flexible work hours.'
       : 'You do not prefer a company that offers flexible work hours.'
   }
