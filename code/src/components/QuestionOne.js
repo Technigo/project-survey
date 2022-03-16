@@ -4,9 +4,12 @@ import React from "react";
 const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextStepChange }) => {
   return (
     <>
-      <section className="section" id="one">
-        <h1>Header for question one</h1>
+    <main>
+      <section className="head-section" id="one">
+        <p>Question one</p>
+        <h2 className="header-text">Very curious - What's your name darling?</h2>
         <form>
+          <label htmlFor="nameInput">Type your name here please</label>
           <input
             id="nameInput"
             type="text"
@@ -20,8 +23,7 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextSte
           type="submit"
           aria-label="Go back"
           onClick={onStepBackChange}
-          href="#two"
-          className="btn"
+          className="back-btn"
         >
           back
         </button>
@@ -29,12 +31,13 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextSte
         <button
           type="submit"
           onClick={onNextStepChange}
-          href="#two"
-          className="btn"
+          className="next-btn"
+          disabled= {nameInput === ""}
         >
           next
         </button>
       </div>
+      </main>
     </>
   );
 };

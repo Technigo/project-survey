@@ -1,12 +1,51 @@
 import React from "react";
 
-// radio button input
-const QuestionFour = () => {
+const drinksArray = ["Champagne", "Milk", "Beer", "Hot chocolate"];
+
+const QuestionFour = ({radioInput, onRadioInputChange, onNextStepChange, onStepBackChange}) => {
   return (
-    <section className="section" id="four">
-      <h1>Some text goes here</h1>
-      <form></form>
-    </section>
+    <>
+    <main>
+      <section className="head-section" id="four">
+        <p>Question Four</p>
+        <h2 className="header-text">Drink that boost your mood?</h2>
+        <form>
+          {drinksArray.map(drinks => (
+            <label className="radio-label" key={drinks} htmlFor={drinks}>
+              <input
+                className="radio-button"
+                id= {drinks}
+                type="radio"
+                value={drinks}
+                onChange={onRadioInputChange}
+                checked={drinks === radioInput}
+              />  
+              {drinks}
+            </label>
+          ))}
+        </form>
+        <div className="buttons">
+            <button
+              type="submit"
+              aria-label="Go back"
+              onClick={onStepBackChange}
+              className="back-btn"
+            >
+              back
+            </button>
+
+            <button
+              type="submit"
+              onClick={onNextStepChange}
+              className="next-btn"
+              disabled= {radioInput === ""}
+            >
+              next
+            </button>
+          </div>
+      </section>
+    </main>
+    </>
   );
 };
 

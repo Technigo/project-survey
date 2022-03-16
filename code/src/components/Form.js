@@ -49,18 +49,56 @@ const Form = () => {
 
       {step === 0 && (
         <Intro 
-          onNextStepChange={onNextStepChange}
+          onNextStepChange = {onNextStepChange}
         />
       )}
      
-     {step === 1 && (
-      <QuestionOne />
+      {step === 1 && (
+        <QuestionOne 
+          nameInput = {nameInput} 
+          onNameInputChange = {onNameInputChange} 
+          onStepBackChange = {onStepBackChange}
+          onNextStepChange = {onNextStepChange}
+        />
+      )}
+
+     {step === 2 && (
+        <QuestionTwo 
+          nameInput = {nameInput} 
+          musicInput = {musicInput}
+          onMusicInputChange = {onMusicInputChange} 
+          onStepBackChange = {onStepBackChange}
+          onNextStepChange = {onNextStepChange}
+        />
      )}
 
-      <QuestionTwo />
-      <QuestionThree />
-      <QuestionFour />
-      <Summery />
+     {step === 3 && (
+        <QuestionThree 
+          selectOptionInput = {selectOptionInput}
+          onSelectOptionInputChange = {onSelectOptionInputChange} 
+          onStepBackChange = {onStepBackChange}
+          onNextStepChange = {onNextStepChange}
+        />
+     )}
+
+     {step === 4 && (
+        <QuestionFour 
+          radioInput = {radioInput}
+          onRadioInputChange = {onRadioInputChange} 
+          onStepBackChange = {onStepBackChange}
+          onNextStepChange = {onNextStepChange}
+        />
+     )}
+     
+     {step === 5 && (
+        <Summery 
+          nameInput = {nameInput}
+          musicInput = {musicInput}
+          selectOptionInput = {selectOptionInput}
+          radioInput = {radioInput}
+          onNextStepChange = {onNextStepChange}
+        />
+     )}
     </main>
     
   )

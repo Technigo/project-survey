@@ -4,9 +4,14 @@ import React from "react";
 const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChange, onStepBackChange}) => {
   return (
     <>
-      <section className="section" id="two">
+    <main>
+      <section className="head-section" id="two">
+        <p>Question one</p>
         <h2>Hi {nameInput}, nice to meet you!</h2>
+        <h2>Might be the most horrible question in the world but: Your top one song in the whole wide world?</h2>
+
         <form>
+          <label htmlFor="musicInput">Type your fav song here</label>
           <input
               id="musicInput"
               type="text"
@@ -19,8 +24,7 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
             type="submit"
             aria-label="Go back"
             onClick={onStepBackChange}
-            href="#two"
-            className="btn"
+            className="back-btn"
           >
             back
           </button>
@@ -28,13 +32,14 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
           <button
             type="submit"
             onClick={onNextStepChange}
-            href="#two"
-            className="btn"
+            className="next-btn"
+            disabled= {musicInput === ""}
           >
             next
           </button>
         </div>
       </section>
+    </main>
     </>
   );
 };
