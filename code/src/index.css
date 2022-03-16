@@ -5,9 +5,104 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: pink;
+  background-image: url('./assets/confetti.jpg');
+
 }
+
+/*@import url('href="https://fonts.googleapis.com/css2?family=Fredoka&display=swap');*/
+
+
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.profile-picture {
+  background-image: url('./assets/Lovisa\ Brorson\ 2.jpg');
+  background-size: cover;
+  border-radius: 10%;
+  width: 10em;
+  height: 10em;
+  background-position-y: 35%; 
+  
+
+}
+
+
+.form-container {
+background-color: rgba(255, 192, 203, 0.548);
+border-radius: 25px;
+border: rgb(255, 4, 171) 3px solid;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+flex-wrap: wrap;
+margin: 50px 10px;
+padding: 10px;
+}
+
+
+
+
+h1 {
+  text-align: center;
+}
+
+.form {
+border: rgb(255, 4, 171) 3px solid;
+border-radius: 5px;
+font-size: 10px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+padding: 10px 0px 10px 10px;
+/*font-family: 'Fredoka', sans-serif;*/
+}
+
+.button {
+border: rgb(255, 4, 171) 3px solid;
+border-radius: 5px;
+font-family:Verdana, Geneva, Tahoma, sans-serif;
+padding: 10px;
+margin: 10px;
+align-self: center;
+}
+
+.summary-container {
+  padding: 20px;
+  max-width: 500px;
+  height: auto;
+  background-color: rgba(255, 192, 203, 0.548);
+  border-radius: 25px;
+  border: rgb(255, 4, 171) 3px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 100px;
+
+}
+
+
+@media (min-width: 667px) {
+  
+  .form-container {
+    padding: 20px;
+    max-width: 500px;
+    height: auto;
+    background-color: rgba(255, 192, 203, 0.548);
+    border-radius: 25px;
+    border: rgb(255, 4, 171) 3px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+}
+
+
+@media (min-width: 1025px) {
+  
 }
