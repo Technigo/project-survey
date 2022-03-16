@@ -28,7 +28,7 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
     }
     onStepChange(1)
   }
-console.log(ingredient.ham)
+
   return (
     <>
       <div className="progress">
@@ -43,7 +43,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="ham"
-          name="ham"
+          name="test"
           value="ham"
           checked={ingredient.ham}
           onChange={checkIngredient}
@@ -52,7 +52,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="cheese"
-          name="cheese"
+          name="test"
           value="cheese"
           checked={ingredient.cheese}
           onChange={checkIngredient}
@@ -61,7 +61,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="egg"
-          name="egg"
+          name="test"
           value="egg"
           checked={ingredient.egg}
           onChange={checkIngredient}
@@ -70,7 +70,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="mayo"
-          name="mayo"
+          name="test"
           value="mayo"
           checked={ingredient.mayo}
           onChange={checkIngredient}
@@ -79,7 +79,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="turkey"
-          name="turkey"
+          name="test"
           value="turkey"
           checked={ingredient.turkey}
           onChange={checkIngredient}
@@ -88,7 +88,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="lettuce"
-          name="lettuce"
+          name="test"
           value="lettuce"
           checked={ingredient.lettuce}
           onChange={checkIngredient}
@@ -97,7 +97,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="tuna"
-          name="tuna"
+          name="test"
           value="tuna"
           checked={ingredient.tuna}
           onChange={checkIngredient}
@@ -106,7 +106,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="tomato"
-          name="tomato"
+          name="test"
           value="tomato"
           checked={ingredient.tomato}
           onChange={checkIngredient}
@@ -115,7 +115,7 @@ console.log(ingredient.ham)
         <input
           type="checkbox"
           id="cucumber"
-          name="cucumber"
+          name="test"
           value="cucumber"
           checked={ingredient.cucumber}
           onChange={checkIngredient}
