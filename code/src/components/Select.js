@@ -3,10 +3,11 @@ import React from 'react'
 import { Option } from 'components/Option'
 
 export const Select = ({ageValue, setAgeValue, questions}) => {
+    console.log("from select component", ageValue)
     return (
         <select 
 			defaultValue={ageValue} 
-			onChange={event => setAgeValue(event.target.value)}>
+			onChange={setAgeValue}>
 			{<option value="default" disabled hidden>Choose age</option>}
 			{questions.age.map((a) =>
                 <Option
