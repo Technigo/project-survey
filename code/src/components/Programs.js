@@ -2,30 +2,24 @@ import React from 'react'
 
 const programs = ['p1', 'p2']
 
-const GetYourProgram = ({ }) => {
+const GetYourProgram = ({}) => {
  
 
-    const program = programs[Math.floor(Math.random()*programs.length)]
-
-    if (program === 'p1' || program === 'p2') {
+    const program = programs[Math.floor(programs.length*Math.random())]
+console.log(program)
+    if (program === 'p1') {
         return (
-            Overview()
+            <p>helloo</p>
         )
-    } else {
+    } else if (program === 'p2') {
+        return (
+            <p>hola</p>
+        )
+    }
         return (
             <p>sorry something wrong</p>
         )
     }
-}    
-         
-        
-
     
-
-     
-
-     
-  
-  
-  
-  export default GetYourProgram 
+         
+export default GetYourProgram 

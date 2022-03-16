@@ -6,7 +6,7 @@ import TimeQuestion from './TimeQuestion'
 import UpperBodyQuestion from './UpperBodyQuestion'
 import LowerBodyQuestion from './LowerBodyQuestion'
 import CardioTypeQuestion from './CardioTypeQuestion'
-import GetYourProgram from './Programs'
+import OverviewForRandom from './OverviewForRandom'
 import Overview from './Overview'
 
 const Form = () => {
@@ -25,7 +25,7 @@ const Form = () => {
 
 	const onRandomChange = (random) => {
 		setRandom(random)
-	  }
+	}
 
 	const onTimeChange = (event) => {
 		setTime(event.target.value)
@@ -44,7 +44,7 @@ const Form = () => {
 	}
 
 	const goPrograms = () => {
-		setStep(7)
+		setStep(8)
 	  }
 
 	const onStepChange = () => {
@@ -99,6 +99,9 @@ const Form = () => {
 			)}
 			{step === 7 && (
 				<Overview nameInput={nameInput} time={time} upperBody={upperBody} lowerBody={lowerBody} cardioTypes={cardioTypes} random={random} />
+			)}
+			{step === 8 && (
+				<OverviewForRandom />
 			)}
 		</div>
 	)
