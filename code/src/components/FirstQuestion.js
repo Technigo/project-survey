@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 
 const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
 
+    const [step, setStep] = useState(0)
+
+    const onStepBack = () => {
+        setStep(step - 1)
+    }
 
     return (
         
@@ -20,6 +25,8 @@ const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
                     required />
 
                 <button className="btn" type="submit" onClick={setNameInput}>Next question!</button>
+
+                <button className="btn" type="submit" onClick={onStepBack}>↩️ Go back</button>
             </div>
 
        </div>

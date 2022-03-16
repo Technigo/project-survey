@@ -11,9 +11,13 @@ const [nameInput, setNameInput] = useState('')
 
 const [step, setStep] = useState(0)
 
-// This function calls new question
+// These functions calls new question or goes back
 const onStepChange = () => {
     setStep(step + 1)
+}
+
+const onStepBack = () => {
+    setStep(step - 1)
 }
 
 
@@ -32,14 +36,9 @@ return (
     <FirstQuestion 
     nameInput={nameInput} 
     onNameInputChange={onNameInputChange} 
-    onStepChange={onStepChange} />
+    onStepChange={onStepChange}
+    onStepBack={onStepBack} />
     )}
-
-{/* <FirstQuestion 
-    nameInput={nameInput}
-    onNameInputChange={onNameInputChange}
-    setNameInput={setNameInput}
-/> */}
 
 </form>
 
