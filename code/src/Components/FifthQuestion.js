@@ -6,7 +6,7 @@ const FifthQuestion = ({setLike, onLikeInputChange, onStepChange}) => {
             <div className="question">
                
             <p>Custom range slider:</p>
-            <input type="range" min="1" max="100" value="0" class="slider" id="myRange" onChange={setLike} />
+            <input type="range" min="1" max="100" value="0" className="slider" id="myRange" onChange={setLike} />
             </div> 
 
             <button className = "btnslider" onClick = {onStepChange} > Start </button>

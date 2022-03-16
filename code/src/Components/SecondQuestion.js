@@ -5,15 +5,17 @@ const SecondQuestion = ({onStepChange, onQualityInputChange, qualityInput}) => {
         <section className="questionWrapper">
         <div className="question">
             <form>
-                <h2>Which of these qualities fits you best?</h2>
+                <h2>Which one is your favourite</h2>
                 <select
                 className="dropdown"
                 value={qualityInput}
                 onChange={onQualityInputChange}>
-                    <option value="">select your personality..</option>
-                    <option value="caring">Caring</option>
-                    <option value="evil">Evil</option>
-                    <option value="funny">Funny</option>
+                    <option value="">select your character..</option>
+                    <option value="Harry Potter">Harry Potter</option>
+                    <option value="Hermione Granger">Hermione Granger</option>
+                    <option value="Ron Weasley">Ron Weasley</option>
+                    <option value="Voldemort">Voldemort</option>
+                    <option value="Luna Lovelace">Luna Lovelace</option>
                 </select>
 
                 <button className="btn" onClick={onStepChange}>Next Question</button>

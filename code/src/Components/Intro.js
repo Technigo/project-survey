@@ -6,7 +6,7 @@ const Intro = ({onStepChange}) => {
         <section className="questionWrapper">
 <div className="question"> 
 <img 
-classname="logo" 
+className="logo" 
 src={logo} alt="harry potter logo"/>
     <h1>Which Harry Potter character are you?</h1>
     <button className = "btn" onClick = {onStepChange}> Start </button>
