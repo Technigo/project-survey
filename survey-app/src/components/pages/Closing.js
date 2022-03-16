@@ -35,7 +35,7 @@ const Closing = (data) => {
         <li>{productivityResponse()}</li>
         <li>{stressResponse()}</li>
       </ul>
-      <Buttons changePage={refreshPage} innerText='reload' />
+      <Buttons nextPage={refreshPage} innerText='reload' />
     </section>
   )
 };

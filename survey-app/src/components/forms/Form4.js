@@ -9,7 +9,7 @@ import '../../styled-components/Slider.css';
 const headerText = 'If you had the opportunity to work in a flexible';
 const headerText2 = 'work environment, would you be more productive?';
 
-const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
+const ProductivityRange = ({ nextPage, backPage, retrieveProductivityData }) => {
   const [productivity, setProductivity] = useState();
 
   return (
@@ -35,7 +35,8 @@ const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
         </label>
       </form>
       <Buttons
-        changePage={changePage}
+        nextPage={nextPage}
+        backPage={backPage}
         retrieveData={retrieveProductivityData}
         state={productivity} />
     </section>

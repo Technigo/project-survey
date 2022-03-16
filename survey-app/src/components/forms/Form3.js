@@ -14,7 +14,7 @@ const allLocations = [
 
 const headerText = 'How would you prefer to work?';
 
-const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
+const PreferredHoursInput = ({ nextPage, backPage, retrieveLocationData }) => {
   const [location, setLocation] = useState();
 
   return (
@@ -28,14 +28,15 @@ const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
             id='locationsOptions'>
             {allLocations.map((locations) => (
               locations === '-- choose a location -- '
-                ? <option value=''>{locations}</option>
-                : <option value={locations}>{locations}</option>
+                ? <option key={locations} value=''>{locations}</option>
+                : <option key={locations} value={locations}>{locations}</option>
             ))}
           </select>
         </label>
       </form>
       <Buttons
-        changePage={changePage}
+        nextPage={nextPage}
+        backPage={backPage}
         retrieveData={retrieveLocationData}
         state={location} />
     </section>

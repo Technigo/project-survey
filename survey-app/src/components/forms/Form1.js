@@ -8,7 +8,7 @@ import '../../styled-components/Radio.css';
 const ageGroups = ['18-24', '25-34', '35-44', '45+'];
 const headerText = 'How old are you?';
 
-const AgeInput = ({ changePage, retrieveAgeData }) => {
+const AgeInput = ({ nextPage, backPage, retrieveAgeData }) => {
   const [ageGroup, setAgeGroup] = useState();
 
   return (
@@ -33,7 +33,8 @@ const AgeInput = ({ changePage, retrieveAgeData }) => {
         ))}
       </form>
       <Buttons
-        changePage={changePage}
+        nextPage={nextPage}
+        backPage={backPage}
         retrieveData={retrieveAgeData}
         state={ageGroup} />
     </section>

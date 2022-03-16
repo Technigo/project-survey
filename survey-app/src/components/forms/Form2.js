@@ -8,7 +8,7 @@ import '../../styled-components/Radio.css';
 const preferences = ['yes', 'no'];
 const headerText = 'Would you prefer a company that offers flexible work hours?';
 
-const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
+const WorkHoursInput = ({ nextPage, backPage, retrieveHoursData }) => {
   const [hours, setHours] = useState();
 
   return (
@@ -16,9 +16,8 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
       <SubHeader pageNumber={2} headerText={headerText} />
       <form>
         {preferences.map((preference) => (
-          <p>
+          <p key={preference}>
             <label
-              key={preference}
               htmlFor={`${preference}-input`}
               className='container'>
               <input
@@ -34,7 +33,8 @@ const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
         ))}
       </form>
       <Buttons
-        changePage={changePage}
+        nextPage={nextPage}
+        backPage={backPage}
         retrieveData={retrieveHoursData}
         state={hours} />
     </section>

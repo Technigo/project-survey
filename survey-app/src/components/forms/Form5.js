@@ -9,7 +9,7 @@ import '../../styled-components/Slider.css';
 const headerText = 'If you had the opportunity to work in a flexible';
 const headerText2 = 'work environment, would you feel less stressed?';
 
-const StressRange = ({ changePage, retrieveStressData }) => {
+const StressRange = ({ nextPage, backPage, retrieveStressData }) => {
   const [stress, setStress] = useState();
 
   return (
@@ -36,7 +36,8 @@ const StressRange = ({ changePage, retrieveStressData }) => {
         </label>
       </form>
       <Buttons
-        changePage={changePage}
+        nextPage={nextPage}
+        backPage={backPage}
         retrieveData={retrieveStressData}
         state={stress} />
     </section>

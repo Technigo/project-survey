@@ -36,16 +36,6 @@ section {
   height: 100vh;
 }
 
-button {
-  background-color: rgb(212, 29, 29);
-  font-weight: bold;
-  color: white;
-  padding: 10px;
-  border-radius: 10px;
-  cursor: pointer;
-  margin: 20px 0;
-}
-
 .welcome {
   color: white;
   position: relative;
@@ -82,9 +72,34 @@ button {
   align-items: center;
 }
 
+button {
+  background-color: rgb(212, 29, 29);
+  font-weight: bold;
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
 .button {
   position: relative;
   margin-left: 110px;
+}
+
+.back-button,
+.back-button + .button {
+  display: flex;
+  align-items: center;
+}
+
+.back-button + .button {
+  margin-left: 20px;
+}
+
+.arrow {
+  font-weight: 800;
+  font-size: 20px;
 }
 
 .button-text {
@@ -122,13 +137,13 @@ select:focus {
 }
 
 .closing ul {
-  text-align: left;
   margin-bottom: 30px;
 }
 
 .closing li {
   margin-bottom: 10px;
   list-style: none;
+  line-height: 20px;
 }
 
 .closing li::before {
@@ -136,7 +151,7 @@ select:focus {
   display: inline-block;
   height: 23px;
   width: 24px;
-  margin-right: 10px;
+  margin: 0 10px -5px 0;
   background-image: url('./images/star.png');
   -moz-animation: spin 5s infinite linear;
   -webkit-animation: spin 5s infinite linear;
@@ -178,5 +193,9 @@ select:focus {
 
   .sub-header {
     display: block;
+  }
+
+  .closing ul {
+    text-align: left;
   }
 }

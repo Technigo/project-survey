@@ -1,18 +1,29 @@
 import React from 'react';
 
-const Button = ({ changePage, innerText, retrieveData, state }) => {
+const Button = ({ nextPage, backPage, innerText, retrieveData, state }) => {
   return (
     <div className='button-wrapper'>
       {(!innerText)
-        ? <button
+        ? <>
+        <button
+          className='back-button'
+          onClick={() => {
+            backPage(); 
+            }}><span className='arrow'>{'<'}&nbsp;</span>Back
+        </button>
+        <button
           className='button'
           disabled={!state}
           onClick={() => {
-            changePage(); retrieveData(state)
-          }}>Next
+            nextPage(); retrieveData(state)
+            }}>Next &nbsp;<span className='arrow'>{'>'}</span>
         </button>
-        : <button className='button' onClick={changePage}>{innerText}</button>}
-      <p className='button-text'>press <span>Enter</span> ↵</p>
+        </>
+        : <>
+          <button className='button' onClick={nextPage}>{innerText}</button>
+          <p className='button-text'>press <span>Enter</span> ↵</p>
+        </>
+        }
     </div>
   )
 };
