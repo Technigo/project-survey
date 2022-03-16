@@ -1,5 +1,6 @@
-import react, { useState } from "react";
+import React, { useState } from "react";
 
+import Info from "./Info";
 import QuestionName from "./QuestionName";
 import QuestionDestination from "./QuestionDestination";
 import QuestionCompany from "./QuestionCompany";
@@ -35,9 +36,26 @@ const Form = () => {
   const onGoalChange = (event) => {
     setGoal(event.target.value);
   };
+  const onStepChange = () => {
+    setStep(step + 1);
+  };
 
-  //Results call structure:
-  return <form className="form" onSubmit={onSubmit}></form>;
+  //Let's structure the steps:
+  return (
+    <form className="form">
+      {step === 0 && <Info />}
+      {step === 1 && <QuestionName name={name} onNameChange={onNameChange} />}
+      {step === 2 && (
+        <QuestionDestination
+          destination={destination}
+          onDestinationChange={onDestinationChange}
+        />
+      )}
+      {step === 3 && (
+        <QuestionCompany company={company} onCompanyChange={onCompanyChange} />
+      )}
+    </form>
+  );
 };
 
 export default Form;
