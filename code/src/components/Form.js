@@ -12,7 +12,7 @@ export const Form = () => {
     const [environmentInput, setenvironmentInput] = useState('')
     const [budgetInput, setbudgetInput] = useState('')
     const [dayInput, setdayInput] = useState('')
-    const [travelInput, settravelInput] = useState('')
+    const [travelInput, settravelInput] = useState('false')
     const [step, setStep] = useState (0)
     
     const handleEnvironmentInputChange = (event) => {

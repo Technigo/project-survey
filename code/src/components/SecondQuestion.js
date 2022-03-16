@@ -1,6 +1,6 @@
 import React from 'react'
 
-const budgetArray = ['0-5000', '5000-10.000', '10.000-20.000', 'More']
+const budgetArray = ['0-5000 kr', '5000-10.000 kr', '10.000-20.000 kr', 'More']
 
     export const SecondQuestion = ({
         budgetInput, 

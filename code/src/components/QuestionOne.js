@@ -10,7 +10,7 @@ export const FirstQuestion = ({environmentInput, onEnvironmentInputChange, nextQ
                 </label>
                 <select onChange={onEnvironmentInputChange}
                 value={environmentInput}>
-                    <option value=''>
+                    <option disabled value=''>
                         Select environment
                     </option>
                     <option value='city'>
