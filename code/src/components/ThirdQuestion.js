@@ -1,15 +1,15 @@
 import React from 'react'
 
-const durationArray = ['Thu-Sun','Fri-Sun', 'Sat-Sun']
+const durationArray = ['1-2 days', 'A weekend', '1-2 weeks', 'A month or longer']
 
 export const ThirdQuestion = ({dayInput, ondayInputChange, nextQuestion, step}) => {
     return (
         <main className='main-container'>
             <form className='form-container'>
                 <p>Question number: {step}</p>
-                <h3 className='question-title'>For how long do you want to go away?</h3>
+                <h3 className='question-title'>For how long do you prefer to go away?</h3>
                 {durationArray.map((days) => (
-                    <label>
+                    <label htmlFor={days} key={days} >
                         <input
                         id={days}
                         type='radio'

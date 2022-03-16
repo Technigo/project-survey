@@ -4,9 +4,9 @@ export const FirstQuestion = ({environmentInput, onEnvironmentInputChange, nextQ
     return (
         <main className='main-container'>
             <form className='form-container'>
-                <p>Question number: {step}</p>
+                <p>Question number: {step} </p>
                 <label className='question-title'>
-                    <h3>What are you looking for?</h3>
+                    <h3>What kind of environment do you prefer?</h3>
                 </label>
                 <select onChange={onEnvironmentInputChange}
                 value={environmentInput}>
@@ -20,7 +20,7 @@ export const FirstQuestion = ({environmentInput, onEnvironmentInputChange, nextQ
                         Nature
                     </option>
                     <option value='beach'>
-                        Beach
+                        Ocean
                     </option>
                 </select>
                 <button className='next-btn' onClick={nextQuestion}>

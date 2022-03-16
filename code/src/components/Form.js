@@ -3,24 +3,32 @@ import {Introduction} from './IntroductionPage'
 import {FirstQuestion} from './QuestionOne'
 import {SecondQuestion} from './SecondQuestion'
 import {ThirdQuestion} from './ThirdQuestion'
+import {QuestionFour} from './QuestionFour'
+import {SubmitSurvey} from './Submit'
+import {Summary} from './Summary'
 
 
 export const Form = () => {
     const [environmentInput, setenvironmentInput] = useState('')
     const [budgetInput, setbudgetInput] = useState('')
     const [dayInput, setdayInput] = useState('')
+    const [travelInput, settravelInput] = useState('')
     const [step, setStep] = useState (0)
     
-    const onEnvironmentInputChange = (event) => {
+    const handleEnvironmentInputChange = (event) => {
         setenvironmentInput(event.target.value)
     }
 
-    const onbudgetInputChange = (event) => {
+    const handlebudgetInputChange = (event) => {
         setbudgetInput(event.target.value)
     }
 
-    const ondayInputChange = (event) => {
+    const handledayInputChange = (event) => {
         setdayInput(event.target.value)
+    }
+
+    const handletravelInputChange = (event) => {
+        settravelInput(event.target.value)
     }
 
     const nextQuestion = (event) => {
@@ -35,7 +43,7 @@ export const Form = () => {
             return (
                 <FirstQuestion
                 environmentInput={environmentInput}
-                onEnvironmentInputChange={onEnvironmentInputChange}
+                onEnvironmentInputChange={handleEnvironmentInputChange}
                 nextQuestion={nextQuestion}
                 step = {step}
                 />
@@ -44,7 +52,7 @@ export const Form = () => {
             return (
                 <SecondQuestion
                 budgetInput={budgetInput}
-                onbugetInputChange={onbudgetInputChange}
+                onbudgetInputChange={handlebudgetInputChange}
                 nextQuestion={nextQuestion}
                 step={step}
                 />
@@ -53,12 +61,38 @@ export const Form = () => {
             return (
                 <ThirdQuestion
                 dayInput= {dayInput}
-                ondayInputChange={ondayInputChange}
+                ondayInputChange={handledayInputChange}
                 nextQuestion={nextQuestion}
                 step={step}
                 />
 
             )
-        }
+        } else if (step === 4) {
+            return (
+                <QuestionFour
+                travelInput= {travelInput}
+                ontravelInputChange={handletravelInputChange}
+                nextQuestion={nextQuestion}
+                step={step}
+                />
+
+            )
+        
+        }else if (step === 5) {
+            return (
+                <SubmitSurvey 
+                nextQuestion={nextQuestion} 
+                />
+            )
+        } else if (step === 6){
+        return (
+            <Summary
+            environmentInput={environmentInput}
+            budgetInput={budgetInput}
+            dayInput={dayInput}
+            />
+        
+        )
+    }
     }         
           
