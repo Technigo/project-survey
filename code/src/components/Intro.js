@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Intro = ({ onStepChange}) => {
+const Intro = ({ nextPage }) => {
 
 return (
 
@@ -10,10 +10,7 @@ return (
             <h1 className="hello">Hey you! </h1> 
             <p>Would you like to subscribe to our newsletter?</p>
 
-            <button className="btn" onClick={onStepChange}> Very much yes
-            </button>
-
-            <button className="btn" onClick={onStepChange}>Nope</button>
+            <button className="btn" onClick={nextPage}> Very much yes </button>
         </div>
         
 

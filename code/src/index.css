@@ -6,10 +6,6 @@
   box-sizing: border-box;
 }
 
-/* html {
-  scroll-behavior: smooth;
-} */
-
 body {
   margin: 10px;
   font-family: "Jost", sans-serif;
@@ -17,11 +13,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: #fbf6db;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
 
 h1 {
   font-family: "Quintessential", sans-serif;

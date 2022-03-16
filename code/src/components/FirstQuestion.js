@@ -1,13 +1,14 @@
 import React, { useState } from 'react'
 
 
-const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
+const FirstQuestion = ({ 
+    nameInput, 
+    onNameInputChange, 
+    setNameInput, 
+    surnameInput,
+    onSurnameInputChange
 
-    const [step, setStep] = useState(0)
-
-    const backPage = () => {
-        setStep(step - 1)
-    }
+}) => {
 
     return (
         
@@ -19,14 +20,23 @@ const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
                     className="question"
                     id="name" 
                     type="text" 
-                    placeholder="Put it right here" 
+                    placeholder="First name" 
                     value={nameInput}
-                    onChange={onNameInputChange} 
-                    required />
+                    onChange={onNameInputChange}
+                    />
 
+                    <input
+                    className="question"
+                    id="name" 
+                    type="text" 
+                    placeholder="Surname" 
+                    value={surnameInput}
+                    onChange={onSurnameInputChange} 
+                    />      
+
+                <div>
                 <button className="btn" type="submit" onClick={setNameInput}>Next question!</button>
-
-                <button className="btn" type="submit" onClick={backPage}>↩️ Go back</button>
+                </div>
             </div>
 
        </div>
