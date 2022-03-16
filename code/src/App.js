@@ -1,9 +1,11 @@
-import React from 'react'
+import React from 'react';
+import Footer from "components/Footer";
+import Start from "components/Start";
+
 
 export const App = () => {
-  return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
+  return <main>
+  <Start/>
+  <Footer /> 
+  </main>
 }
