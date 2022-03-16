@@ -1,21 +1,24 @@
 import React from 'react'
 
-const SecondQuestion = ({ ageGroup,setAgeGroup, ageGroups }) => {
+const SecondQuestion = ({  setAgeGroup, ageGroups }) => {
+    
     return (
-        <div>
+        <article>
             <h3>How old are you?</h3>
             {ageGroups.map(ageGroup => (
                 <label key={ageGroup}>
                     <input type="radio" 
                         name="age" 
                         onChange={event =>setAgeGroup(event.target.value)} 
-                        checked={ageGroups === ageGroup} 
+                        defaultChecked={ageGroups === ageGroup} 
                         value={ageGroup}
                     />
                     {ageGroup}
                 </label>
+
+                
             ))}
-            </div>
+            </article>
         
     )
 
