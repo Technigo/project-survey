@@ -1,13 +1,331 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Antic+Didone&family=Open+Sans:wght@400;500&display=swap');
+
+/* ===== GLOBAL CSS VARIABLES ===== */
+
+:root {
+  --white: #e9e4de;
+  --black: #1d1b1a; 
+  --blue: #53c6d5;
+  --red: #fb530f;
+  --offwhite: #cdb9a7;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+  background-color: var(--white);
+  color: var(--black); 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+h1 {
+  font-family: 'Melodrama', serif;
+}
+
+p {
+  font-size: 18px;
+  display: flex;
+  text-align: center;
+  font-family: 'Satoshi', sans-serif;
+}
+
+/* ===== BUTTONS ===== */
+
+button {
+  font-size: 20px;
+  background-color: var(--white);
+  color: var(--red);
+  margin: 30px 0;
+  padding: 10px 60px;
+  border: 2px solid var(--red);
+  text-decoration: none;
+  display: flex;
+  letter-spacing: 2px;
+  border-radius: 10px;
+  cursor: pointer;
+  align-self: center;
+  font-family: 'Satoshi', sans-serif;
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: var(--red);
+  color: var(--white);
+  transition: ease 1s;
+}
+
+/* ===== INTRO ===== */
+
+.intro-section {
+  margin: 50px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.survey-title {
+  display: flex;
+  justify-content: center;
+  font-size: 125px;
+  letter-spacing: 2px;
+  width: 300px;
+  border: 2px solid var(--black);
+  margin-bottom: 5px;
+}
+
+.alt-color {
+  color: var(--blue);
+}
+
+.survey-title-small {
+  display: flex;
+  justify-content: center;
+  font-size: 75px;
+  letter-spacing: 2px;
+  width: 300px;
+  color: var(--white);
+  background-color: var(--red);
+  margin-top: 5px;
+}
+
+.survey-description {
+  display: flex;
+  letter-spacing: 0.5px;
+  margin-top: 30px;
+}
+
+/* ===== FORM QUESTION ===== */
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+label {
+  font-size: 20px;
+  width: 300px;
+  /* margin-bottom: 10px; */
+}
+
+input {
+  color: var(--black);
+  border: none;
+  border-bottom: 2px solid var(--red);
+  background-color: transparent;
+  padding: 12px 6px;
+  width: 300px;
+}
+
+::placeholder {
+  color: var(--red);
+  font-size: 14px;
+}
+
+/* ===== RADIO ===== */
+
+.radiobutton-input {
+  appearance: none;
+  position: relative;
+  border-radius: 10px;
+  border: 2px solid var(--red);
+  height: 15px;
+  width: 15px;
+  cursor: pointer;
+  padding: 0px; /* GETS FUCKED UP IF THE VALUE IS NOT SET */
+}
+
+.radiobutton-input:checked::before {
+  position: absolute;
+}
+
+.radiobutton-input:hover {
+  background-color: var(--blue);
+}
+
+.radiobutton-input:checked {
+  background-color: var(--blue);
+  border: 2px solid var(--blue);
+}
+
+.radiobuttons-container {
+  display: inline-block;
+  width: 300px;
+  margin-top: 30px;
+}
+
+.radiobutton-p {
+  display: inline-block;
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+
+/* ===== DROPDOWN ===== */
+
+.dropdown-select {
+  margin: 10px 0;
+  font-size: 18px;
+  cursor: pointer;
+  color: var(--red);
+  background: transparent;
+  padding: 10px 0;
+  width: 300px;
+  border: none;
+  border-bottom: 2px solid var(--red);
+}
+
+.dropdown-content {
+  position: absolute;
+  background-color: var(--white);
+  min-width: 100px;
+  padding: 5px 10px;
+  z-index: 1;
+}
+
+/* ===== SLIDER ===== */
+
+.rate-description {
+  font-size: 16px;
+  margin: 10px 0;
+}
+
+.rangeslider-value {
+  margin-top: 10px;
+}
+
+.slider {
+  -webkit-appearance: none;
+  border: none;
+  height: 0;
+  border-radius: 10px;  
+  background: var(--blue);
+  outline: none;
+  opacity: 0.9;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%; 
+  background: var(--blue);
+  cursor: pointer;
+}
+
+
+/* tablet view */
+@media (min-width: 668px){
+  .intro-section {
+    max-width: 500px;
+  }
+  
+  .form {
+    max-width: 700px;
+    margin-top: 50px;
+  }
+
+  p {
+    font-size: 28px;
+  }
+
+  .survey-title {
+    font-size: 42px;
+  }
+
+  button {
+    font-size: 26px;
+    max-width: 150px;
+  }
+
+
+  label {
+    font-size: 34px;
+    margin: 0 auto;
+  }
+
+  ::placeholder {
+    font-size: 26px;
+  }
+
+  input {
+    width: 350px;
+  }
+
+  input[type=text] {
+    font-size: 26px;
+  }
+
+  .radiobutton-p {
+    margin-left: 35px;
+  }
+
+  .dropdown-select {
+    width: 350px;
+    font-size: 26px;
+    margin-top: 30px;
+  }
+}
+
+  /* desktop view */
+@media only screen and (min-width: 1024px){
+  body {
+    position: relative;
+    background-size: cover;
+  }
+
+  .survey-title {
+    font-size: 40px;
+    margin-top: 80px;
+  }
+
+  p {
+    font-size: 26px;
+  }
+
+  button {
+    font-size: 20px;
+    max-width: 150px;
+  }
+
+  .time-paragraph {
+    font-size: 17px;
+  }
+
+  .fa-clock {
+    font-size: 16px;
+  }
+
+  .form {
+    margin: 160px 30px;
+  }
+
+  label {
+    font-size: 30px;
+  }
+
+  input {
+    width: 300px;
+  }
+
+  .dropdown-select {
+    width: 300px;
+  }
+
+  .rate-description {
+    font-size: 24px;
+  }
 }
