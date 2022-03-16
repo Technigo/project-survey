@@ -1,13 +1,169 @@
+/* @font-face {
+  src:'https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap'
+}
+
+  */
+
+  *{
+margin: 0px;
+padding: 0px;
+  }
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "opensans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
+  background-color: rgb(53, 193, 172);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+ /* FONTS  */
+
+h1{
+  font-size: 40px;
+  font-family:  Helvetica, sans-serif;
+  font-style: light;
+  color: white;
+  /* margin-top: 20%;
+  margin-left: 30%; */
+} 
+
+h2 {
+  font-size: 24px;
+  line-height: 30px;
+  color: white;
+}
+
+p{
+  color: white;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+}
+
+/* GENERAL STYLING */
+
+.section {
+  display: flex;
+  flex-direction: column;
+  max-width: 700px;
+  margin: 70px;
+  padding-top: 2rem;
+}
+
+.btn {
+  border-radius: 24px;
+  background-color: rgb(255, 255, 255);
+  width: 20%;
+  height: 48px;
+  cursor: pointer;
+  position: relative;
+
+}
+/* BACKGROUND ANIMATION */
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 10s infinite;
+  z-index: -1;
+  clip: rect(auto, auto, auto, auto);
+}
+
+/* .small {
+  width: 100px;
+  height: 100px;
+  left: 40px;
+  bottom: 100px;
+  background-color: #444;
+}
+
+.medium {
+  width: 120px;
+  height: 120px;
+  left: 220px;
+  bottom: 50px;
+  background-color: rgb(204, 69, 186);
+}
+
+.large {
+  width: 300px;
+  height: 300px;
+  left: -100px;
+  bottom: 400px;
+  background-color: tomato;
+}
+
+.xlarge {
+  width: 120px;
+  height: 120px;
+  left: 240px;
+  bottom: 550px;
+  background-color: yellow;
+} */
+
+.xxlarge {
+  width: 700px;
+  height: 700px;
+  left: 100px;
+  bottom: 10%;
+  background-color: rgb(39, 150, 134);
+}
+
+/* .shade1 {
+  opacity: 0.2;
+}
+.shade2 {
+  opacity: 0.5;
+}
+
+.shade3 {
+  opacity: 0.7;
+}
+
+.shade4 {
+  opacity: 0.8;
+}
+
+.shade5 {
+  opacity: 0.9;
+} */
+
+@keyframes ripple{
+  0%{
+    transform: scale(0.8);
+  }
+  
+  50%{
+    transform: scale(1.2);
+  }
+  
+  100%{
+    transform: scale(0.8);
+  }
+
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 50px;
+    background-color: lightpink;
+    color: white;
+    text-align: center;
+  }
 }
