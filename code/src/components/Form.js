@@ -6,6 +6,7 @@ import QuestionDestination from "./QuestionDestination";
 import QuestionCompany from "./QuestionCompany";
 import QuestionGoal from "./QuestionGoal";
 import QuestionActivity from "./QuestionActivity";
+import Summary from "./Summary";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -16,7 +17,7 @@ const Form = () => {
   const [step, setStep] = useState(0);
   const numberOfQuestions = 5;
 
-  const onSubmbit = (event) => {
+  const onSubmit = (event) => {
     event.preventDefault();
     setStep(step + 1);
   };
@@ -43,7 +44,7 @@ const Form = () => {
 
   //Let's structure the steps:
   return (
-    <form className="form">
+    <form className="form" onSubmit={onSubmit}>
       {step === 0 && <Info />}
       {step === 1 && <QuestionName name={name} onNameChange={onNameChange} />}
       {step === 2 && (

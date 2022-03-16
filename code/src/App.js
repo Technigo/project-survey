@@ -1,9 +1,12 @@
 import React from "react";
 import Form from "./components/Form";
-import Css from "./";
 
 export const App = () => {
-  return <Form />;
+  return (
+    <main>
+      <Form />
+    </main>
+  );
 };
 
 // import React, { useState } from "react";
