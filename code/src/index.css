@@ -1,4 +1,5 @@
 body {
+  box-sizing: border-box;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -11,3 +12,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  text-align: center;
+  padding: 150px;
+  margin-top: 0;
+  color: #FFF;
+}
+
+h2 {
+  color: #FFF;
+}
+
+.main-container {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  
+}
+
+.question-title {
+  font-size: 2rem;
+}
+
+.start {
+  background-image: url(img/compass.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.next-btn {
+  padding: 30px;
+  border-radius: 5%;
+  border: none;
+  background-color: bisque;
+  font-size: medium;
+
+}
+
+.summary {
+  background-image: url(img/finished.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  font-size: 4.5rem;
+  text-align: center;
+  padding: 10rem;
+  color: blanchedalmond;
+}
+
+.option {
+  padding: 30px;
+}
+
+.radiobutton {
+  padding: 20px;
+}
+

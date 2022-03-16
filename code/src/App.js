@@ -1,9 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Form from './Components/Form';
 
-export const App = () => {
+
+const App = () => {
+
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
-  )
-}
+    <>
+      < Form />
+    </>
+  );
+};
+
+export default App;
+
+
+
+
