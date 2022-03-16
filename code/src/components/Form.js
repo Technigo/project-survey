@@ -9,16 +9,11 @@ const Form = () => {
 // Declaring all the pretty variables here
 const [nameInput, setNameInput] = useState('')
 
-const [step, setStep] = useState(0)
+const [page, setPage] = useState(0)
 
-// These functions calls new question or goes back
-const onStepChange = () => {
-    setStep(step + 1)
-}
-
-const onStepBack = () => {
-    setStep(step - 1)
-}
+// These functions calls new question or goes back one page
+const nextPage = () => {setPage(page + 1)}
+const backPage = () => {setPage(page - 1)}
 
 
 const onNameInputChange = (event) => {
@@ -30,14 +25,14 @@ return (
 <form className="form-wrapper">
 
 
-    {step === 0 && <Intro onStepChange={onStepChange} />}
+    {page === 0 && <Intro nextPage={nextPage} />}
     
-    {step === 1 && (
+    {page === 1 && (
     <FirstQuestion 
     nameInput={nameInput} 
     onNameInputChange={onNameInputChange} 
-    onStepChange={onStepChange}
-    onStepBack={onStepBack} />
+    nextPage={nextPage}
+    backPage={backPage} />
     )}
 
 </form>

@@ -31,10 +31,19 @@ h1 {
   margin-bottom: 20px;
 }
 
-input,
-.btn {
+input {
   font-family: "Jost", sans-serif;
   border: none;
+  font-size: 16px;
+  border-radius: 30px;
+  color: #b47c23;
+  padding: 10px;
+  margin: 20px 10px 10px 0;
+}
+
+.btn {
+  font-family: "Jost", sans-serif;
+  border: 0.6px solid #b47c23;
   font-size: 16px;
   border-radius: 30px;
   color: #b47c23;

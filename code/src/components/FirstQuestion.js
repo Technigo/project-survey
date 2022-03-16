@@ -5,7 +5,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
 
     const [step, setStep] = useState(0)
 
-    const onStepBack = () => {
+    const backPage = () => {
         setStep(step - 1)
     }
 
@@ -26,7 +26,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, setNameInput }) => {
 
                 <button className="btn" type="submit" onClick={setNameInput}>Next question!</button>
 
-                <button className="btn" type="submit" onClick={onStepBack}>↩️ Go back</button>
+                <button className="btn" type="submit" onClick={backPage}>↩️ Go back</button>
             </div>
 
        </div>
