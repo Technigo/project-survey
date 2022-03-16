@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import QuestionText from "components/QuestionText";
+import Question from "components/Question";
 
 export const App = () => {
   const questions = [
@@ -22,50 +22,38 @@ export const App = () => {
     },
   ];
 
-  const [answers, updateAnswers] = useState([]);
+  const [answers, setAnswers] = useState([]);
+  const [inputValue, setInputValue] = useState("");
+
+  const onChange = (e) => setInputValue(e.target.value);
+
+  const handleOnSubmit = (event) => {
+    event.preventDefault();
+    setAnswers((arr) => [...arr, inputValue]);
+    setInputValue("");
+  };
 
   switch (answers.length) {
     case 0:
       return (
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            return updateAnswers((arr) => [...arr, document.getElementById(questions[0].id).value]);
-          }}
-        >
-          <QuestionText question={questions[0]} />
+        <form onSubmit={handleOnSubmit}>
+          <Question {...questions[0]} inputValue={inputValue} onChange={onChange} />
 
           <button type="submit">Next question</button>
         </form>
       );
     case 1:
       return (
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            let option1 = document.getElementById(questions[1].id + "1");
-            let option2 = document.getElementById(questions[1].id + "2");
-
-            option1.checked
-              ? updateAnswers((arr) => [...arr, option1.value])
-              : updateAnswers((arr) => [...arr, option2.value]);
-          }}
-        >
-          <QuestionText question={questions[1]} />
+        <form onSubmit={handleOnSubmit}>
+          <Question {...questions[1]} inputValue={inputValue} onChange={onChange} />
 
           <button type="submit">Next question</button>
         </form>
       );
     case 2:
       return (
-        <form
-          onSubmit={(event) => {
-            event.preventDefault();
-            let menu = document.getElementById(questions[2].id);
-            return updateAnswers((arr) => [...arr, menu.options[menu.selectedIndex].text]);
-          }}
-        >
-          <QuestionText question={questions[2]} />
+        <form onSubmit={handleOnSubmit}>
+          <Question {...questions[2]} inputValue={inputValue} onChange={onChange} />
 
           <button type="submit">Submit questions</button>
         </form>
