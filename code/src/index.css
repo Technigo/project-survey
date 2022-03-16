@@ -28,6 +28,7 @@ h1 {
   font-size: 40px;
   color: #c99c53;
   text-align: center;
+  margin-bottom: 20px;
 }
 
 input,
@@ -38,18 +39,19 @@ input,
   border-radius: 30px;
   color: #b47c23;
   padding: 10px;
-  margin: 10px 10px 10px 0;
+  margin: 20px 10px 10px 0;
 }
 
 p,
 label {
-  font-size: 18px;
+  font-size: 20px;
 }
 
 .form-wrapper {
   border: 1px solid #d79500;
   border-radius: 20px;
   padding: 20px;
+  text-align: center;
 }
 
 .header-title {
