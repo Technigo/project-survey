@@ -38,9 +38,6 @@ const Form = () => {
   const onGoalChange = (event) => {
     setGoal(event.target.value);
   };
-  const onStepChange = () => {
-    setStep(step + 1);
-  };
 
   //Let's structure the steps:
   return (
