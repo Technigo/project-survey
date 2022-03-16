@@ -43,8 +43,4 @@ const AgeInput = ({ nextPage, backPage, retrieveAgeData }) => {
   )
 };
 
-// inputFieldContent !== "" 
-// ? setStateToChangeQuestion() : sendAWarning('You need to fill out your name before proceeding to next question');
-
-
 export default AgeInput;
