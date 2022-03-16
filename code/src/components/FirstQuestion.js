@@ -1,8 +1,9 @@
 import React from "react";
 
 const FirstQuestion = ({ username, onInputChange}) => {
-    resturn (
+    return (
 <div>
+    <p>To begin with, what is your name?</p>
 <label htmlFor="name">Type your name here</label>
 <input
 id="name"
