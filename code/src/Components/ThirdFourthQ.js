@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, setIsSummaryDisplayed}) => {
+const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, setShirt}) => {
     return (
 
         <article>
@@ -22,12 +22,12 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                     <input type="checkbox" 
                     name="yes" 
                     value="yes"
-                    onChange={event =>setBands(event.target.value)}/>
+                    onChange={event =>setShirt(event.target.value)}/>
                     <input 
                     type="checkbox" 
                     name="no"
                     value="no"
-                    onChange={event =>setBands(event.target.value)}
+                    onChange={event =>setShirt(event.target.value)}
                     />
                 </label>
             </div>

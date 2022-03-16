@@ -4,6 +4,7 @@ const Summary = (props) => {
     const name = props.name
     const age = props.ageGroup
     const band = props.bands
+    const shirt = props.shirt
 
 // if (age === "0-17") {
 //     alert
@@ -14,7 +15,8 @@ const Summary = (props) => {
     return (
         <article>
             <div className='summary-will-show'>
-                <p>Hello {name}, you are {age} and you are going to see {band}</p>
+                <p>Hello {name}, you are {age} and you are going to see {band}. 
+                You will recieve a shirt: {shirt}</p>
             </div>
         </article>
     )
