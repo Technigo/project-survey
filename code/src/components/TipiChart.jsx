@@ -115,22 +115,22 @@ export const TipiChart = (props) => {
         {
             label: name + "'s personality matrix",
             data: [extr, agre, cons, emot, open],
-            backgroundColor: 'rgba(161, 85, 185, 0.6)',
-            borderColor: 'rgba(108, 47, 128, 1)',
+            backgroundColor: 'rgba(251, 133, 0, 0.7)',
+            borderColor: 'rgba(251, 133, 0, 1)',
             borderWidth: 3,
         },
         {
             label: maleLabel,
             data: maleData,
-            backgroundColor: 'rgba(22, 91, 169, 0.2)',
-            borderColor: 'rgba(14, 59, 110, 1)',
+            backgroundColor: 'rgba(150, 217, 227, 0.5)',
+            borderColor: 'rgba(150, 217, 227, 1)',
             borderWidth: 1,
         },
         {
             label: femaleLabel,
             data: femaleData,
-            backgroundColor: 'rgba(247, 100, 162, 0.2)',
-            borderColor: 'rgba(199, 64, 121, 1)',
+            backgroundColor: 'rgba(255, 184, 189, 0.5)',
+            borderColor: 'rgba(255, 184, 189, 1)',
             borderWidth: 1,
         },
     ]

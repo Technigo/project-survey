@@ -1,7 +1,6 @@
 import React from 'react'
 
 const TipiDropDown = (props) => {
-    console.log(props)
 
     const tipiArray = [
         {

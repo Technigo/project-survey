@@ -115,23 +115,23 @@ export function TiviChart (props) {
           <p>Each of these ten universal values can be defined by a central goal as an underlying motivator. They can also be organized into four higher-order groups (displayed below). The theory also explains how these ten values are interconnected and influence each other, since the pursuit of any of the values results in either accordance with one another, or conflict with at least one other value. The values are organized in a circular structure, because they can more lightly or strongly oppose each other. Although the theory distinguishes ten values, the borders between the values are artificial, and adjacent values flow into each other, by sharing motivational emphases.</p>
           <br/>
           <h4>Openness to change</h4>
-          <p>Stimulation: Excitement, novelty, and challenge in life.</p>
-          <p>Self-direction: Independent thought and action - choosing, creating, exploring.</p>
+          <p><span className="underline">Stimulation:</span> Excitement, novelty, and challenge in life.</p>
+          <p><span className="underline">Self-direction:</span> Independent thought and action - choosing, creating, exploring.</p>
 
           <h4>Self-transcendence</h4>
-          <p>Universalism: Understanding, appreciation, tolerance, and protection for the welfare of all people and for nature.</p>
-          <p>Benevolence: Preserving and enhancing the welfare of those with whom one is in frequent personal contact (the 'in-group').</p>
+          <p><span className="underline">Universalism:</span> Understanding, appreciation, tolerance, and protection for the welfare of all people and for nature.</p>
+          <p><span className="underline">Benevolence:</span> Preserving and enhancing the welfare of those with whom one is in frequent personal contact (the 'in-group').</p>
           
 
           <h4>Conservation</h4>
-          <p>Conformity: Restraint of actions, inclinations, and impulses likely to upset or harm others and violate social expectations or norms.</p>
-          <p>Tradition: Respect, commitment, and acceptance of the customs and ideas that one's culture or religion provides.</p>
-          <p>Security: Safety, harmony, and stability of society, of relationships, and of self.</p>
+          <p><span className="underline">Conformity:</span> Restraint of actions, inclinations, and impulses likely to upset or harm others and violate social expectations or norms.</p>
+          <p><span className="underline">Tradition:</span> Respect, commitment, and acceptance of the customs and ideas that one's culture or religion provides.</p>
+          <p><span className="underline">Security:</span> Safety, harmony, and stability of society, of relationships, and of self.</p>
 
           <h4>Self-enhancement</h4>
-          <p>Power: Social status and prestige, control or dominance over people and resources.</p>
-          <p>Achievement: Personal success through demonstrating competence according to social standards.</p>
-          <p>Hedonism: Pleasure or sensuous gratification for oneself.</p>
+          <p><span className="underline">Power:</span> Social status and prestige, control or dominance over people and resources.</p>
+          <p><span className="underline">Achievement:</span> Personal success through demonstrating competence according to social standards.</p>
+          <p><span className="underline">Hedonism:</span> Pleasure or sensuous gratification for oneself.</p>
 
           <p>Note: Hedonism is a border value between self-enhancement and openness to change.</p>
           <br/>
