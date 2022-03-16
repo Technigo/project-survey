@@ -11,3 +11,61 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+label {
+  margin: 30px;
+}
+
+.input-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 15px;
+}
+
+.input-fields input {
+border: 2px solid grey;
+border-radius: 8px;
+font-size: 25px;
+width: 20vw;
+height: 3vh;
+}
+
+.input-fields select {
+  border: 2px solid grey;
+  border-radius: 8px;
+  font-size: 20px;
+  width: 20vw;
+  height: 5vh;
+}
+
+form div {
+  text-align: center;
+}
+
+.form-response-div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.submit-button {
+  margin-top: 10vh;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 8px;
+  background-color: lightblue;
+}
+
+.submit-button:hover {
+  filter: brightness(90%);
+}
