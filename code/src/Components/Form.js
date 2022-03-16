@@ -1,13 +1,20 @@
 import React, {useState} from 'react'
 import Summary from './Summary'
+import FirstQuestion from './FirstQ'
+import SecondQuestion from './SecondQ'
 
 const Form = () => {
     const [name, setName] = useState('')
-    const [ageGroup, setAgeGroup] = useState()
+    const [ageGroup, setAgeGroup] = useState(false)
+    const [artists, setArtist] = useState('')
+
+    //Another state property to hide and display summary
+    const [isSummaryDisplayed, setIsSummaryDisplayed] = useState(false)
 
     const ageGroups = ["0-17", "18 and older"]
 
     const handleSubmit = (event) => {event.preventDefault()
+    
     const orderTickets = {name, ageGroups}
 
     console.log(orderTickets)
@@ -20,12 +27,17 @@ const Form = () => {
 
         <form onSubmit={handleSubmit}>
             <h2>Answer the following five questions and submit to order your awesome tickets</h2>
+            <FirstQuestion name={name} setName={setName}/>
+            {/* <label hmtlFor="name">What's your name?
+                <input 
+                type="text" 
+                name="name" 
+                onChange={(event)=>setName(event.target.value)} 
+                value={name} />
+            </label> */}
 
-            <label>What's your name?
-                <input type="text" name="name" onChange={(event)=>setName(event.target.value)} value={name} />
-            </label>
-
-            <h3>How old are you?</h3>
+            <SecondQuestion />
+            {/* <h3>How old are you?</h3>
             {ageGroups.map(ageGroup => (
                 <label key={ageGroup}>
                     <input type="radio" 
@@ -36,13 +48,25 @@ const Form = () => {
                     />
                     {ageGroup}
                 </label>
-            ))}
-            <button>Buy tickets</button>
+            ))}*/}
+            <label> 
+                <select />
+            </label>
+            <button
+            onClick={()=> setIsSummaryDisplayed(true)}>
+            Buy tickets
+            </button>
         </form>
 
+        {isSummaryDisplayed && ( 
+            
             <Summary name = {name} 
             ageGroup = {ageGroup}
             />
+            
+            )}
+
+            
         </section>
     )
 }
