@@ -1,12 +1,20 @@
-import React from 'react'
+import React from "react"
 
-import IsMember from 'components/IsMember'
+import Start from "components/Start"
 
-export const App = () => {
+const App = () => {
+
   return (
     <main>
-      <h1>Hi!</h1>
-      <IsMember />
+      <div className="app-wrapper">
+        <h1>Libertas Book Club</h1>
+        <div className="app-container-bg-pattern">
+          <img className="bg-img" src="./images/bg.svg" alt="background"/>
+           <Start />
+        </div>
+      </div>
     </main>
   )
 }
+
+export default App

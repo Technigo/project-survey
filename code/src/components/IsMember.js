@@ -1,11 +1,9 @@
 import React from "react"
 
-import Start from "./Start"
 
 const IsMember = () => {
     return (
         <form>
-            <Start />
             Are you a member?
             <label>
                 <input 
