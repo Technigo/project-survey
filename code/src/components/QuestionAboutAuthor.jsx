@@ -49,7 +49,7 @@ const QuestionAboutAuthor = ({ onFormSubmit }) => {
         src="https://www.barnensbibliotek.se/portals/0/image/RowlingJK_Foto_Debra%20Hurford%20Brown_460q.jpg?ver=IB4sUphdL4RjieEQ5OyONg%3D%3D"
       />
       <select
-        className="question-list"
+        className="question-author"
         onChange={(e) => setSelect(e.target.value)}
         required
       >
@@ -60,7 +60,6 @@ const QuestionAboutAuthor = ({ onFormSubmit }) => {
           </option>
         ))}
       </select>
-
       <button type="submit" className="submit-button">
         OK
       </button>

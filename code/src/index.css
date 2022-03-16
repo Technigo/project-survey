@@ -69,6 +69,7 @@ input:focus {
   border-radius: 5px;
   cursor: pointer;
   margin-top: 1em;
+  display: block;
 }
 
 .question-img {
@@ -84,12 +85,10 @@ input:focus {
   display: flex;
 }
 
-.question-author {
-  display: flex;
-}
-
 .summary {
   display: flex;
+  flex-direction: column;
+  width: 100%;
 }
 
 .summary-text {
@@ -99,4 +98,21 @@ input:focus {
 .summary-answer {
   color: #6ab7b6;
   font-size: 1.25rem;
+}
+
+@media screen and (max-width: 765px) {
+  #root {
+    padding: 1em;
+  }
+  .question {
+    width: 100%;
+  }
+  .question-img {
+    max-width: 360px;
+    height: auto;
+  }
+
+  .submit-button {
+    max-width: 360px;
+  }
 }

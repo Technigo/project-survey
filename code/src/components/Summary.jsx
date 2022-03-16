@@ -1,7 +1,7 @@
 import React from "react";
 
 const Summary = ({ result }) => (
-  <div className="sumary">
+  <div className="summary">
     <h2 className="summary-message">Hello {result[0]}!</h2>
     <p className="summary-text">
       Your first answer about <strong>The persistence of memory</strong> is
