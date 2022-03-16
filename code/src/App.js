@@ -53,28 +53,6 @@ export const App = () => {
         >
           <QuestionText question={questions[1]} />
 
-          {/* <div className="questionCard">
-            <h2>{questions[1].question_text}</h2>
-            <div id={questions[1].id}>
-              <label htmlFor={questions[1].options[0]}>{questions[1].options[0]}</label>
-              <input
-                id={questions[1].id + "1"}
-                name="radio"
-                className="radio"
-                type="radio"
-                value={questions[1].options[0]}
-                defaultChecked
-              />
-              <label htmlFor={questions[1].options[1]}>{questions[1].options[1]}</label>
-              <input
-                name="radio"
-                id={questions[1].id + "2"}
-                className="radio"
-                type="radio"
-                value={questions[1].options[1]}
-              />
-            </div>
-          </div> */}
           <button type="submit">Next question</button>
         </form>
       );
@@ -89,18 +67,6 @@ export const App = () => {
         >
           <QuestionText question={questions[2]} />
 
-          {/* <div className="questionCard">
-            <h2>{questions[2].question_text}</h2>
-
-            <select id={questions[2].id} required>
-              <option defaultValue disabled>
-                Choose option
-              </option>
-              <option value={questions[2].options[0]}>{questions[2].options[0]}</option>
-              <option value={questions[2].options[1]}>{questions[2].options[1]}</option>
-              <option value={questions[2].options[2]}>{questions[2].options[2]}</option>
-            </select>
-          </div> */}
           <button type="submit">Submit questions</button>
         </form>
       );
