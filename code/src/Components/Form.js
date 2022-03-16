@@ -4,14 +4,21 @@ import Summary from './Summary'
 const Form = () => {
     const [name, setName] = useState('')
     const [ageGroup, setAgeGroup] = useState()
+
     const ageGroups = ["0-17", "18 and older"]
 
+    const handleSubmit = (event) => {event.preventDefault()
+    const orderTickets = {name, ageGroups}
+
+    console.log(orderTickets)
+    }
+    
 
     return (
 
         <section>
 
-        <form onSubmit={(event) => event.preventDefault()}>
+        <form onSubmit={handleSubmit}>
             <h2>Answer the following five questions and submit to order your awesome tickets</h2>
 
             <label>What's your name?
@@ -30,7 +37,7 @@ const Form = () => {
                     {ageGroup}
                 </label>
             ))}
-            
+            <button>Buy tickets</button>
         </form>
 
             <Summary name = {name} 
