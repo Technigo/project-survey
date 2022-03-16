@@ -14,9 +14,9 @@ const CardioTypeQuestion = ({
             <span className="radio-input">
               <input
                 type="radio"
-                value="myom"
+                value="MYOM"
                 onChange={onCardioTypeChange}
-                checked={cardioTypes === 'myom'}
+                checked={cardioTypes === 'MYOM'}
               />
               <span className="radio-text">MYOM</span>
             </span>
@@ -25,9 +25,9 @@ const CardioTypeQuestion = ({
             <span className="radio-input">
               <input
                 type="radio"
-                value="amrap"
+                value="AMRAP"
                 onChange={onCardioTypeChange}
-                checked={cardioTypes === 'amrap'}
+                checked={cardioTypes === 'AMRAP'}
               />
               <span className="radio-text">AMRAP</span>
             </span>
@@ -36,9 +36,9 @@ const CardioTypeQuestion = ({
             <span className="radio-input">
               <input
                 type="radio"
-                value="straight"
+                value="Straight Reps"
                 onChange={onCardioTypeChange}
-                checked={cardioTypes === 'straight'}
+                checked={cardioTypes === 'Straight Reps'}
               />
               <span className="radio-text">STRAIGHT REPS</span>
             </span>

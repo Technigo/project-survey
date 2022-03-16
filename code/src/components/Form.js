@@ -16,7 +16,6 @@ const Form = () => {
     const [upperBody, setUpperBody] =useState('')
     const [lowerBody, setLowerBody] =useState('')
 	const [cardioTypes, setCardioTypes] =useState('')
-	//const [goPrograms, setGoPrograms] = useState(false)
 	const [step, setStep] = useState(1)
 
 	const onNameInputChange = (event) => {

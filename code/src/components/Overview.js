@@ -8,12 +8,6 @@ const Overview = ({ nameInput, time, upperBody, lowerBody, cardioTypes, random, 
             <p>Selected motion for the upper body : {upperBody}</p>
             <p>Selected motion for the lower body : {lowerBody}</p>
 			<p>Selected cardio type : {cardioTypes}</p>
-			<p>show random value no : {random}</p>
-
-			{time < 15 && <p>less than 10</p>}
-			{time > 15 && <p>more than 10</p>}
-			{time === 15 && <p>equal</p>}
-
 		</section>                         
 	)                   
 }
