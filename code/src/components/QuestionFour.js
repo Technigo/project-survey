@@ -2,12 +2,13 @@ import React from 'react'
 
 const TravelArray = ['Yes', 'No']
 
-export const QuestionFour = ({travelInput, ontravelInputChange, nextQuestion, step}) => {
+export const QuestionFour = ({travelInput, ontravelInputChange, nextQuestion, previousQuestion, step}) => {
     return (
         <main className='main-container'>
-            <p>Question number: {step} </p>
-            <h3 className='question-title'>Have you a travel booked for this year?</h3>
+             <button className='back-btn' onClick={previousQuestion}>Go back</button>
             <form>
+            <p>Question {step} of 4</p>
+            <h3 className='question-title'>Have you a travel booked for this year?</h3>
                 {TravelArray.map ((travel) => (
                     <label htmlFor={travel} key={travel}>
                         <input 
@@ -22,6 +23,7 @@ export const QuestionFour = ({travelInput, ontravelInputChange, nextQuestion, st
                 ))}
                 <button 
               className='next-btn' 
+              disabled={travelInput === ''}
               onClick={nextQuestion}>
                     Next
                 </button>

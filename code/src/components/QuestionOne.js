@@ -1,10 +1,11 @@
 import React from 'react'
 
-export const FirstQuestion = ({environmentInput, onEnvironmentInputChange, nextQuestion, step}) => {
+export const FirstQuestion = ({environmentInput, onEnvironmentInputChange, nextQuestion, previousQuestion, step}) => {
     return (
         <main className='main-container'>
+            <button className='back-btn' onClick={previousQuestion}>Go back</button>
             <form className='form-container'>
-                <p>Question number: {step} </p>
+                <p>Question {step} of 4</p>
                 <label className='question-title'>
                     <h3>What kind of environment do you prefer?</h3>
                 </label>

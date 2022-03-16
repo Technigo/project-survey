@@ -12,7 +12,7 @@ export const Form = () => {
     const [environmentInput, setenvironmentInput] = useState('')
     const [budgetInput, setbudgetInput] = useState('')
     const [dayInput, setdayInput] = useState('')
-    const [travelInput, settravelInput] = useState('false')
+    const [travelInput, settravelInput] = useState('')
     const [step, setStep] = useState (0)
     
     const handleEnvironmentInputChange = (event) => {
@@ -35,6 +35,11 @@ export const Form = () => {
         setStep(step +1)
         event.preventDefault()
     }
+
+    const previousQuestion = (event) => {
+        setStep(step -1)
+        event.preventDefault()
+    }
         
         if (step === 0) {
             return <Introduction nextQuestion={nextQuestion}/>
@@ -45,6 +50,7 @@ export const Form = () => {
                 environmentInput={environmentInput}
                 onEnvironmentInputChange={handleEnvironmentInputChange}
                 nextQuestion={nextQuestion}
+                previousQuestion={previousQuestion}
                 step = {step}
                 />
             )
@@ -54,6 +60,7 @@ export const Form = () => {
                 budgetInput={budgetInput}
                 onbudgetInputChange={handlebudgetInputChange}
                 nextQuestion={nextQuestion}
+                previousQuestion={previousQuestion}
                 step={step}
                 />
             )
@@ -63,6 +70,7 @@ export const Form = () => {
                 dayInput= {dayInput}
                 ondayInputChange={handledayInputChange}
                 nextQuestion={nextQuestion}
+                previousQuestion={previousQuestion}
                 step={step}
                 />
 
@@ -73,6 +81,7 @@ export const Form = () => {
                 travelInput= {travelInput}
                 ontravelInputChange={handletravelInputChange}
                 nextQuestion={nextQuestion}
+                previousQuestion={previousQuestion}
                 step={step}
                 />
 
@@ -82,6 +91,7 @@ export const Form = () => {
             return (
                 <SubmitSurvey 
                 nextQuestion={nextQuestion} 
+                previousQuestion={previousQuestion}
                 />
             )
         } else if (step === 6){
@@ -90,6 +100,7 @@ export const Form = () => {
             environmentInput={environmentInput}
             budgetInput={budgetInput}
             dayInput={dayInput}
+            travelInput={travelInput}
             />
         
         )

@@ -6,12 +6,14 @@ const budgetArray = ['0-5000 kr', '5000-10.000 kr', '10.000-20.000 kr', 'More']
         budgetInput, 
         onbudgetInputChange, 
         nextQuestion, 
+        previousQuestion,
         step
     }) => {
     return (
         <main className='main-container'>
+             <button className='back-btn' onClick={previousQuestion}>Go back</button>
           <form className='form-container'> 
-              <p>Question number: {step} </p>
+              <p>Question {step} of 4</p>
               <h3 className='question-title'>How much do you spend on travels per year? </h3>
               {budgetArray.map((budget) => (
                   <label htmlFor={budget} key={budget}>
@@ -28,6 +30,7 @@ const budgetArray = ['0-5000 kr', '5000-10.000 kr', '10.000-20.000 kr', 'More']
               ))}
               <button 
               className='next-btn' 
+              disabled ={budgetInput === ''}
               onClick={nextQuestion}>
                     Next
                 </button>
