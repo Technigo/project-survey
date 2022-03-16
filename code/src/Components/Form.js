@@ -30,11 +30,15 @@ export const Form = () => {
     SetAgeGroup(event.target.value);
   }
 
+  const Counter = () => {
+    setCount(count + 1)
+  }
+
   if (count === 1) {
     return (
       <div className="form-container">
       <Welcome/>
-      <button onClick={() => setCount(count + 1)}>START</button>
+      <button onClick={Counter}>START</button>
       </div>
     )
   } else if (count === 2) {
@@ -44,7 +48,7 @@ export const Form = () => {
         name={name}
         onNameInputChange={handleNameInputChange}
       />
-      <button onClick={() => setCount(count + 1)}>NEXT</button>
+      <button onClick={Counter}>NEXT</button>
       </div>
     )
   } else if (count === 3) {
@@ -54,7 +58,7 @@ export const Form = () => {
         location={location}
         onLocationInputChange={handleLocationInputChange}
       />
-      <button onClick={() => setCount(count + 1)}>NEXT</button>
+      <button onClick={Counter}>NEXT</button>
       </div>
     )
   } else if (count === 4) {
@@ -64,7 +68,7 @@ export const Form = () => {
         wantNewsletter={wantNewsletter}
         onNewsletterInputChange={handleNewsletterInputChange}
       />
-      <button onClick={() => setCount(count + 1)}>NEXT</button>
+      <button onClick={Counter}>NEXT</button>
       </div>
     )
   } else if (count === 5) {
@@ -74,7 +78,7 @@ export const Form = () => {
         ageGroup={ageGroup}
         onAgeGroupInputChange={handleAgeGroupInputChange}
       />
-      <button onClick={() => setCount(count + 1)}>SUMMARY</button>
+      <button onClick={Counter}>SUMMARY</button>
       </div>
     )
   } else {
@@ -86,7 +90,7 @@ export const Form = () => {
         wantNewsletter={wantNewsletter} 
         ageGroup={ageGroup}
       />
-      <button onClick={() => setCount(count - 5)}>RESTART</button>
+      <button onClick={() => window.location.reload()}>THANK YOU!</button>
       </div>
     )
   }
