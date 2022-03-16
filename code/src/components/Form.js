@@ -1,37 +1,39 @@
 import React, { useState } from 'react'
 
-import Step1Player from './Step1Player'
-
-import orange from 'orange.png'
-
+import FirstQuestion from './FirstQuestion'
 
 
 const Form = () => {
 
-   const [nameInput, setNameInput] = useState('')
-   const onNameInputChange = (event) => {
+
+    // Declaring the variables here
+    const [nameInput, setNameInput] = useState('')
+
+
+    const onNameInputChange = (event) => {
        setNameInput(event.target.value)
    }
+
+   // Prevents default
+   const handleSubmit = (event) => {event.preventDefault()
+}
 
 
 return (
 
+<form onSubmit={handleSubmit}>
    <div className="form-wrapper">
         <div className="header-title">
-            <h1 className="hello-gorgeous">Hello gorgeous! </h1> 
-            <img 
-            src={orange}
-            alt="picture of an orange"
-            className="orange" />
+            <h1 className="hello">Hey you! </h1> 
         </div>
 
-        <p>Please have a seat.</p>
 
-        <Step1Player 
+        <FirstQuestion 
         nameInput={nameInput}
         onNameInputChange={onNameInputChange}
         />
     </div>
+    </form>
 )}
 
 export default Form

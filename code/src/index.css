@@ -55,16 +55,16 @@ label {
   overflow: auto;
 }
 
-.hello-gorgeous {
+.hello {
   float: left;
 }
 
-.orange {
-  width: 2.5em;
+/* .orange {
+  width: 1em;
   opacity: 0.8;
   float: left;
   margin-left: 10px;
-}
+} */
 
 /* MEDIA QUERY FOR TABLET */
 /* @media (min-width: 801px) {}
