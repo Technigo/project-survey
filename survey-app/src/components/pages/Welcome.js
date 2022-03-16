@@ -12,7 +12,7 @@ const Welcome = ({ nextPage }) => {
       </p>
       <Buttons nextPage={nextPage} innerText="Sure, let's go" />
       <p className='time'>
-        <img className="icon" src={'/images/clock.png'} alt='clock icon' />
+        <img className="icon" src='/images/clock.png' alt='clock icon' />
         Takes 1 min
       </p>
     </section>

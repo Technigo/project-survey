@@ -28,7 +28,7 @@ const PreferredHoursInput = ({ nextPage, backPage, retrieveLocationData }) => {
             value={location}
             id='locationsOptions'>
             {allLocations.map((locations) => (
-              locations === '-- choose a location -- '
+              (locations === '-- choose a location --')
                 ? <option key={locations} value=''>{locations}</option>
                 : <option key={locations} value={locations}>{locations}</option>
             ))}

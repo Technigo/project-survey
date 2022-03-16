@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
-import { AlertContainer } from 'react-custom-alert';
 
-import Buttons from '../partials/Buttons';
+import RangeInput from 'components/partials/RangeInput';
 import SubHeader from '../partials/SubHeader';
-import Numbers from '../partials/Numbers';
 
 import '../../styled-components/Slider.css';
 
@@ -22,25 +20,13 @@ const ProductivityRange = ({ nextPage, backPage, retrieveProductivityData }) => 
       <p>0 = No change
         <span className='text-right'>5 = Very productive</span>
       </p>
-      <form>
-        <label htmlFor='productivityRange'>
-          <input
-            className='slider'
-            type='range'
-            id='productivityRange'
-            min='0'
-            max='5'
-            defaultValue='0'
-            onChange={(event) => setProductivity(event.target.value)} />
-          <Numbers />
-        </label>
-      </form>
-      <AlertContainer floatingTime={2000} />
-      <Buttons
+      <RangeInput
         nextPage={nextPage}
         backPage={backPage}
-        retrieveData={retrieveProductivityData}
-        state={productivity} />
+        state={productivity}
+        setState={setProductivity}
+        forAndClassname='productivityRange'
+        retrieveData={retrieveProductivityData} />
     </section>
   )
 };

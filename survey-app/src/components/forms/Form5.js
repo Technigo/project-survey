@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
-import { AlertContainer } from 'react-custom-alert';
 
-import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
-import Numbers from '../partials/Numbers';
 
 import '../../styled-components/Slider.css';
+import RangeInput from '../partials/RangeInput';
 
 const headerText = 'If you had the opportunity to work in a flexible';
 const headerText2 = 'work environment, would you feel less stressed?';
@@ -23,25 +21,13 @@ const StressRange = ({ nextPage, backPage, retrieveStressData }) => {
         0 = No change
         <span className='text-right'>5 = Less stressed</span>
       </p>
-      <form>
-        <label htmlFor='stressRange'>
-          <input
-            className='slider'
-            type='range'
-            id='stressRange'
-            min='0'
-            max='5'
-            defaultValue='0'
-            onChange={(event) => setStress(event.target.value)} />
-          <Numbers />
-        </label>
-      </form>
-      <AlertContainer floatingTime={2000} />
-      <Buttons
+      <RangeInput
         nextPage={nextPage}
         backPage={backPage}
         retrieveData={retrieveStressData}
-        state={stress} />
+        state={stress}
+        setState={setStress}
+        forAndClassname='stressRange' />
     </section>
   )
 };

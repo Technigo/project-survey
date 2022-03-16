@@ -46,15 +46,15 @@
   background: var(--clr-secondary);
 }
 
-.age-inputs {
+.age-input form {
   display: flex;
   flex-wrap: wrap;
 }
 
-.age-inputs label {
+.age-input label {
   margin-left: 10px;
 }
 
-.age-inputs label:first-child {
+.age-input label:first-child {
   margin-left: 20px;
 }

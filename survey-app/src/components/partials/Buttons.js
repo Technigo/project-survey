@@ -22,12 +22,10 @@ const Button = ({ nextPage, backPage, innerText, retrieveData, state }) => {
                 ? alertWarning()
                 : nextPage(); retrieveData(state)
             }}>
-            Next &nbsp;<span className='arrow'>{'>'}</span>
+          Next &nbsp;<span className='arrow'>{'>'}</span>
           </button>
-        </>
-        :
-        <button className='button' onClick={nextPage}>{innerText}</button>
-      }
+          </>
+        : <button className='button' onClick={nextPage}>{innerText}</button>}
     </div>
   )
 };
