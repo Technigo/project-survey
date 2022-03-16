@@ -4,9 +4,9 @@ import React, { useState } from 'react'
 const FirstQuestion = ({ 
     nameInput, 
     onNameInputChange, 
-    setNameInput, 
     surnameInput,
-    onSurnameInputChange
+    onSurnameInputChange,
+    nextPage
 
 }) => {
 
@@ -35,7 +35,7 @@ const FirstQuestion = ({
                     />      
 
                 <div>
-                <button className="btn" type="submit" onClick={setNameInput}>Next question!</button>
+                <button className="btn" type="submit" onClick={nextPage}>Next question!</button>
                 </div>
             </div>
 

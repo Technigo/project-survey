@@ -48,7 +48,7 @@ return (
     surnameInput={surnameInput}
     onSurnameInputChange={onSurnameInputChange}
     nextPage={nextPage}
-    backPage={backPage} />
+    />
     )}
 
     {/* SECOND PAGE */}
