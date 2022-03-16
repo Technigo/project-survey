@@ -48,19 +48,11 @@ const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
                     Hufflepuff
                     </label>
 
-    <button className="btn" onClick={onStepChange}>Next Question</button>            
+                    <button className="btn" onClick={onStepChange}>Next Question</button>            
 
                 
             </form>
         </div>
         </section>
-
-
-
-    )
-
-
-}
-
-
+    )}
 export default ThirdQuestion

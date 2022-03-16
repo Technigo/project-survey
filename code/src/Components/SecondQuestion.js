@@ -7,6 +7,7 @@ const SecondQuestion = ({onStepChange, onQualityInputChange, qualityInput}) => {
             <form>
                 <h2>Which of these qualities fits you best?</h2>
                 <select
+                className="dropdown"
                 value={qualityInput}
                 onChange={onQualityInputChange}>
                     <option value="">select your personality..</option>
