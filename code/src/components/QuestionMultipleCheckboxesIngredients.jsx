@@ -7,7 +7,7 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
   const { notFriendName, ingredient, onIngredientChange, onStepChange } = props
 
   const checkIngredient = (event) => {
-    const checkboxes = document.getElementsByName("test")
+    const checkboxes = document.getElementsByName("item")
     numberOfCheckedItems = 0
     for (let i = 0; i < checkboxes.length; i++) {
       if (checkboxes[i].checked) numberOfCheckedItems++
@@ -31,99 +31,94 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
 
   return (
     <>
-      <div className="progress">
-        <div className="progress-value question12"></div>
-      </div>
-      <form onSubmit={submitIngredients}>
-        <h1>
-          Imagine that you can choose a boring sandwich for{" "}
-          {notFriendName ? notFriendName : RandomNotFriendName()} to eat for
-          lunch each day from now on. Choose two ingredients.
-        </h1>
-        <input
-          type="checkbox"
-          id="ham"
-          name="test"
-          value="ham"
-          checked={ingredient.ham}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="ham">ham</label>{" "}
-        <input
-          type="checkbox"
-          id="cheese"
-          name="test"
-          value="cheese"
-          checked={ingredient.cheese}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="cheese">cheese</label>{" "}
-        <input
-          type="checkbox"
-          id="egg"
-          name="test"
-          value="egg"
-          checked={ingredient.egg}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="egg">egg</label>{" "}
-        <input
-          type="checkbox"
-          id="mayo"
-          name="test"
-          value="mayo"
-          checked={ingredient.mayo}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="mayo">mayo</label>{" "}
-        <input
-          type="checkbox"
-          id="turkey"
-          name="test"
-          value="turkey"
-          checked={ingredient.turkey}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="turkey">turkey</label>{" "}
-        <input
-          type="checkbox"
-          id="lettuce"
-          name="test"
-          value="lettuce"
-          checked={ingredient.lettuce}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="lettuce">lettuce</label>{" "}
-        <input
-          type="checkbox"
-          id="tuna"
-          name="test"
-          value="tuna"
-          checked={ingredient.tuna}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="tuna">tuna</label>{" "}
-        <input
-          type="checkbox"
-          id="tomato"
-          name="test"
-          value="tomato"
-          checked={ingredient.tomato}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="tomato">tomato</label>{" "}
-        <input
-          type="checkbox"
-          id="cucumber"
-          name="test"
-          value="cucumber"
-          checked={ingredient.cucumber}
-          onChange={checkIngredient}
-        />
-        <label htmlFor="cucumber">cucumber</label>{" "}
-        <button type='submit'>Next question</button>
-        <button type="button" onClick={() => onStepChange(-1)}>Go back</button>
-      </form>
+      <h1>
+        Imagine that you can choose a boring sandwich for{" "}
+        {notFriendName ? notFriendName : RandomNotFriendName()} to eat for lunch
+        each day from now on. Choose two ingredients.
+      </h1>
+      <input
+        type="checkbox"
+        id="ham"
+        name="item"
+        value="ham"
+        checked={ingredient.ham}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="ham">ham</label>{" "}
+      <input
+        type="checkbox"
+        id="cheese"
+        name="item"
+        value="cheese"
+        checked={ingredient.cheese}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="cheese">cheese</label>{" "}
+      <input
+        type="checkbox"
+        id="egg"
+        name="item"
+        value="egg"
+        checked={ingredient.egg}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="egg">egg</label>{" "}
+      <input
+        type="checkbox"
+        id="mayo"
+        name="item"
+        value="mayo"
+        checked={ingredient.mayo}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="mayo">mayo</label>{" "}
+      <input
+        type="checkbox"
+        id="turkey"
+        name="item"
+        value="turkey"
+        checked={ingredient.turkey}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="turkey">turkey</label>{" "}
+      <input
+        type="checkbox"
+        id="lettuce"
+        name="item"
+        value="lettuce"
+        checked={ingredient.lettuce}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="lettuce">lettuce</label>{" "}
+      <input
+        type="checkbox"
+        id="tuna"
+        name="item"
+        value="tuna"
+        checked={ingredient.tuna}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="tuna">tuna</label>{" "}
+      <input
+        type="checkbox"
+        id="tomato"
+        name="item"
+        value="tomato"
+        checked={ingredient.tomato}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="tomato">tomato</label>{" "}
+      <input
+        type="checkbox"
+        id="cucumber"
+        name="item"
+        value="cucumber"
+        checked={ingredient.cucumber}
+        onChange={checkIngredient}
+      />
+      <label htmlFor="cucumber">cucumber</label>{" "}
+      <button onClick={submitIngredients}>Next</button>
+      <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )
 }

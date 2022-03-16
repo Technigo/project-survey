@@ -7,10 +7,6 @@ const QuestionRadioWeather = (props) => {
 
   return (
     <>
-      <div className="progress">
-        <div className="progress-value question3"></div>
-      </div>
-      <form onSubmit={() => onStepChange(1)}>
       <h1>Look by the window. Is it sunny or cloudy outside?</h1>
         {weatherTypes.map((type) => (
           <label key={type}>
@@ -23,9 +19,8 @@ const QuestionRadioWeather = (props) => {
             {type}
           </label>
         ))}
-        <button type='submit'>Next question</button>
-        <button type="button" onClick={() => onStepChange(-1)}>Go back</button>
-      </form>
+        {/* <button onClick={() => onStepChange(1)}>Next</button> */}
+        <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )
 }

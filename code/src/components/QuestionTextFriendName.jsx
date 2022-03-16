@@ -7,15 +7,10 @@ const QuestionTextFriendName = (props) => {
 
   return (
     <>
-      <div className="progress">
-        <div className="progress-value question9"></div>
-      </div>
-      <form onSubmit={() => onStepChange(1)}>
         <h1>Who would you rather drink your {beverage ? beverage : RandomBeverage()} with? Maybe a friend or a nice colleague?</h1>
         <input type="text" onChange={onFriendNameChange} value={friendName} />
-        <button type='submit'>Next question</button>
-        <button type="button" onClick={() => onStepChange(-1)}>Go back</button>
-      </form>
+        {/* <button onClick={() => onStepChange(1)}>Next</button> */}
+        <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )
 }

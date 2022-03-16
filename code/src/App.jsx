@@ -1,11 +1,11 @@
 import React from 'react'
 
-import Form from './components/Form'
+import FormWrapper from './components/FormWrapper'
 
 const App = () => {
   return (
    <div>
-        <Form />
+        <FormWrapper />
       </div>
   )
 }

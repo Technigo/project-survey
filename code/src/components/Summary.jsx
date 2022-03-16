@@ -137,9 +137,6 @@ const Summary = (props) => {
 
   return (
     <>
-      <div className="progress">
-        <div className="progress-value summary"></div>
-      </div>
       <div className="form">
         <section className="text-summary">
           <h1>Summary</h1>
@@ -149,7 +146,7 @@ const Summary = (props) => {
             Theone. {pronounSubjectCapitalized}{" "}
             {genderToUse === "non-binary" ? "are" : "is"} {pronounReflexive} and
             who {pronounSubject} {genderToUse === "non-binary" ? "are" : "is"},
-            I like {pronounDirect} and {pronounPossessive} voice!
+            I know {pronounDirect} and {pronounPossessive} name!
           </p>
           <p>Weather: {weatherToUse}</p>
           <p>Vehicle: {vehicleToUse}</p>
