@@ -12,9 +12,16 @@
         "65+"
     ],
 
-    "jobTitle": "What is your current title",
+    "jobTitle": "What is your current title?",
 
     "currentPositionDuration": "How long have you had that position?",
 
-    "education": "What is your level of formal education?"
+    "education": "What is your level of formal education?",
+
+    "city": [
+        "Gothenburg",
+        "Malmo",
+        "Stockholm",
+        "Other"
+    ]
 }

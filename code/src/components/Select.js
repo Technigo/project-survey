@@ -1,11 +1,18 @@
 import React from 'react'
 
-export const Select = (props) => {
+import { Option } from 'components/Option'
+
+export const Select = ({ageValue, setAgeValue, questions}) => {
     return (
-        <select>
-            <option disabled value=''>Select an option:</option>
-            <option value='option1'>Option 1</option>
-            <option value='option2'>Option 2</option>
-        </select>
+        <select 
+			defaultValue={ageValue} 
+			onChange={event => setAgeValue(event.target.value)}>
+			{<option value="default" disabled hidden>Choose age</option>}
+			{questions.age.map((a) =>
+                <Option
+                    value = {a}
+                />
+			)}
+		</select>
     )
-  }
+}

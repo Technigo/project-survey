@@ -11,3 +11,17 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.form-container {
+  font-size: 2rem;
+  color: rgb(87, 87, 87);
+  height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  background-color: rgb(217, 216, 218);
+  width: fit-content;
+  padding: 2rem;
+}
