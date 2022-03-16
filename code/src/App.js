@@ -1,17 +1,18 @@
-import React, {useState} from 'react'
-import {Counter} from 'components/Counter'
+import React from 'react'
+
+// import {Counter} from 'components/Counter'
+// import {Infobanner} from 'components/Infobanner'
+
+// Imported Components
+import Form from 'components/Form'
 import Header from 'components/Header'
-import Inputfield from 'components/Inputfield'
-import Radiobtn from 'components/Radiobtn'
-import Dropdown from 'components/Dropdown'
-import {Infobanner} from 'components/Infobanner'
 
 
 
 export const App = () => {
   // const [temperature, setTemperature] = useState(20);
   // const [wantsNewsletter, setWantsNewsletter] = useState(false)
-  const [counter, setCounter] = useState(0)
+  // const [counter, setCounter] = useState(0)
 
   return (
   <section>
@@ -19,35 +20,28 @@ export const App = () => {
       <Header/>
     </header>
 
-    <div>
-      <Inputfield/>
-    </div>
-    <div>
-      <Radiobtn/>
-    </div>
-    <div>
-      <Dropdown/>
-    </div>
+    <Form/>
 
-    <div>
+    
+    {/* <div>
     <h2>SUPER COUNTER TECHNIGO</h2>
       <Counter counter = {counter} setCounter= {setCounter}/>
     </div>
-
+    
     <div>
       <Infobanner counter = {counter}/>
-    </div>
-
-
+    </div> */}
+    
+    
      {/* <div>
      <h1>Current temperature: {temperature} degrees </h1>
     
      <button onClick={() => setTemperature(-5)}>Freez!</button>
      <button onClick={() => setTemperature(30)}>warm!</button>
-   <button onClick={() => setTemperature(120)}>Boiling!</button>
-   </div>
-
-
+    <button onClick={() => setTemperature(120)}>Boiling!</button>
+    </div>
+    
+    
        <form>
          <label> Newsletter?
            <input
