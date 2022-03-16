@@ -5,6 +5,7 @@ import QuestionName from "./QuestionName";
 import QuestionDestination from "./QuestionDestination";
 import QuestionCompany from "./QuestionCompany";
 import QuestionGoal from "./QuestionGoal";
+import QuestionActivity from "./QuestionActivity";
 
 const Form = () => {
   const [name, setName] = useState("");
@@ -52,8 +53,15 @@ const Form = () => {
         />
       )}
       {step === 3 && (
+        <QuestionActivity
+          activity={activity}
+          onActivityChange={onActivityChange}
+        />
+      )}
+      {step === 4 && (
         <QuestionCompany company={company} onCompanyChange={onCompanyChange} />
       )}
+      {step === 5 && <QuestionGoal goal={goal} onGoalChange={onGoalChange} />}
     </form>
   );
 };

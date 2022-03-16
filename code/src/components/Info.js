@@ -1,4 +1,5 @@
 import React from "react";
+import Button from "./Button";
 
 const Info = ({ onStepChange }) => {
   return (
@@ -9,7 +10,7 @@ const Info = ({ onStepChange }) => {
       </div>
       <div>
         <button type="submit" onClick={onStepChange} className="start-btn">
-          <a href="#one">Yes let's!</a>
+          <a href="#one">Let's go!</a>
         </button>
       </div>
     </section>
