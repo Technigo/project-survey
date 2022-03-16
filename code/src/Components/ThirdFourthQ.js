@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThirdAndFourthQuestion = ({setBands, bandOptions}) => {
+const ThirdAndFourthQuestion = ({setBands, bandOptions, setIsSummaryDisplayed}) => {
     return (
 
         <article>
@@ -32,6 +32,12 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions}) => {
                 </label>
             </div>
             
+            <button
+            onClick={()=> setIsSummaryDisplayed(true)}>
+            Buy tickets
+            </button>
+
+
         </article>
     )
 }

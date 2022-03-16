@@ -12,6 +12,8 @@ const Form = () => {
 
     //Another state property to hide and display summary
     const [isSummaryDisplayed, setIsSummaryDisplayed] = useState(false)
+    
+    //State properties to go to next question
     const [isFirstQDisplayed, setIsFirstQDisplayed] = useState(true)
     const [isSecondQDisplayed, setIsSecondQDisplayed] = useState(false)
     const [isThirdFourthQDisplayed, setIsThirdFourthDisplayed] = useState(false)
@@ -46,12 +48,11 @@ const Form = () => {
             setBands={setBands}
             shirt={shirt}
             setShirt={setShirt}
-            />)}
+            setIsSummaryDisplayed={setIsSummaryDisplayed}
+            />
+            )}
             
-            <button
-            onClick={()=> setIsSummaryDisplayed(true)}>
-            Buy tickets
-            </button>
+            
         </form>
 
             {isSummaryDisplayed && ( 
