@@ -1,7 +1,11 @@
 import React from "react"
 
 
-const IsMember = () => {
+const IsMember = ({nextQuestion}) => {
+    const onMemberClick = (event) => {
+        IsMember(event.target.value)
+        nextQuestion()
+    }
     return (
         <form>
             Are you a member?
@@ -10,7 +14,7 @@ const IsMember = () => {
                   type="radio"
                   name="isMember"
                   value="Yes"
-                  onChange={event => IsMember(event.target.value)}
+                  onChange={onMemberClick}
                 />
                 Yes
             </label>
@@ -19,7 +23,7 @@ const IsMember = () => {
                   type="radio"
                   name="isMember"
                   value="No"
-                  onChange={event => IsMember(event.target.value)}
+                  onChange={onMemberClick}
                 />
                 No
             </label>

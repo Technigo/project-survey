@@ -11,41 +11,54 @@ body {
 
 h1 {
   font-family: ballet;
-  font-size: 30px;
+  font-size: 100px;
   margin: 20px auto 0 auto;
 }
 
-h2 {
+h2, form {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: asar;
+}
+
+.summary {
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 30px;
   position: absolute;
   display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 600px;
+  text-align: center;
+  font-family: asar;
   top: 0;
+  bottom: 0;
   left: 0;
   right: 0;
 
 }
 
+
+
 .bg-img{
   display: flex;
   position: relative;
-  max-width: 365px;
+  max-width: 100%;
+  height: 400px
 }
 
-
-
-@media (min-width: 900px) {
-  h1 {
-    font-size: 100px;
-  }
-
-  h2 {
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-  }
-
-  .bg-img{
-    max-width: 100%;
-    height: 400px
-  }
+.form-suggest-book {
+  display: flex;
+  flex-direction: column;
 }
+
+/* @media (min-width: 900px) { */
