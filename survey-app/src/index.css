@@ -91,6 +91,7 @@ button {
 .back-button + .button {
   display: flex;
   align-items: center;
+  background-color: #989898;
 }
 
 .back-button + .button {
@@ -134,6 +135,16 @@ select:focus {
   outline: none !important;
   border-color: var(--clr-primary);
   box-shadow: 0 0 5px var(--clr-primary);
+}
+
+.--react--toast-alert {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.--react--toast-alert p {
+  margin-left: 10px;
 }
 
 .closing ul {

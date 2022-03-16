@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AlertContainer } from 'react-custom-alert';
 
 import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
@@ -32,6 +33,7 @@ const AgeInput = ({ nextPage, backPage, retrieveAgeData }) => {
           </label>
         ))}
       </form>
+      <AlertContainer floatingTime={2000} />
       <Buttons
         nextPage={nextPage}
         backPage={backPage}
@@ -40,5 +42,9 @@ const AgeInput = ({ nextPage, backPage, retrieveAgeData }) => {
     </section>
   )
 };
+
+// inputFieldContent !== "" 
+// ? setStateToChangeQuestion() : sendAWarning('You need to fill out your name before proceeding to next question');
+
 
 export default AgeInput;

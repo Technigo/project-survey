@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { AlertContainer } from 'react-custom-alert';
 
 import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
@@ -32,6 +33,7 @@ const WorkHoursInput = ({ nextPage, backPage, retrieveHoursData }) => {
           </p>
         ))}
       </form>
+      <AlertContainer floatingTime={2000} />
       <Buttons
         nextPage={nextPage}
         backPage={backPage}
