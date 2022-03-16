@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const LowerBodyQuestion = ({
 	lowerBody,
@@ -21,7 +21,7 @@ const LowerBodyQuestion = ({
       </label>
 			<button onClick={onStepChange}>Next question</button>
 		</form>
-	);
-};
+	)
+}
 
-export default LowerBodyQuestion;
+export default LowerBodyQuestion

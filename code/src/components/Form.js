@@ -6,6 +6,7 @@ import TimeQuestion from './TimeQuestion'
 import UpperBodyQuestion from './UpperBodyQuestion'
 import LowerBodyQuestion from './LowerBodyQuestion'
 import CardioTypeQuestion from './CardioTypeQuestion'
+import GetYourProgram from './Programs'
 import Overview from './Overview'
 
 const Form = () => {
@@ -15,7 +16,8 @@ const Form = () => {
     const [upperBody, setUpperBody] =useState('')
     const [lowerBody, setLowerBody] =useState('')
 	const [cardioTypes, setCardioTypes] =useState('')
-	const [step, setStep] = useState(1);
+	//const [goPrograms, setGoPrograms] = useState(false)
+	const [step, setStep] = useState(1)
 
 	const onNameInputChange = (event) => {
 		setNameInput(event.target.value)
@@ -41,13 +43,14 @@ const Form = () => {
 		setCardioTypes(event.target.value)
 	}
 
+	const goPrograms = () => {
+		setStep(7)
+	  }
+
 	const onStepChange = () => {
 		setStep(step + 1)
 	}
 
-	//const handleShowOverview = () => {
-		//setShowOverview(true)
-	 // }
 
 	return (
 		<div>
@@ -63,7 +66,7 @@ const Form = () => {
               random={random}
               onRandomChange={onRandomChange}
               onStepChange={onStepChange}
-              //handleShowOverview={handleShowOverview}
+			  goPrograms={goPrograms}
             />
           )}
 			{step === 3 && (

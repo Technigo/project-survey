@@ -45,8 +45,8 @@ const CardioTypeQuestion = ({
           </label>
           <button onClick={onStepChange}>Check your cardio!</button>
         </form>
-      );
-    };
+      )
+    }
 
     export default CardioTypeQuestion
 	

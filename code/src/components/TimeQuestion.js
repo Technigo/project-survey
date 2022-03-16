@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const TimeQuestion = ({
 	time,
@@ -20,7 +20,7 @@ const TimeQuestion = ({
       </label>
 			<button onClick={onStepChange}>Next question</button>
 		</form>
-	);
-};
+	)
+}
 
-export default TimeQuestion;
+export default TimeQuestion

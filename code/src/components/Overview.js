@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const Overview = ({ nameInput, time, upperBody, lowerBody, cardioTypes, random }) => {
 	return (
@@ -15,7 +15,7 @@ const Overview = ({ nameInput, time, upperBody, lowerBody, cardioTypes, random }
 			{time === 15 && <p>equal</p>}
 
 		</section>                         
-	);                   
-};
+	)                   
+}
 
-export default Overview;
+export default Overview

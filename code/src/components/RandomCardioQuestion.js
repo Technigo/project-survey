@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react'
 
 const RandomCardioQuestion = ({
   random,
   onRandomChange,
   onStepChange,
-  handleShowOverview,
+  goPrograms,
 }) => {
-  // function to change button text and path depending on answer
+
   const presentButton = () => {
     if (random === 'no') {
       return (
@@ -16,7 +16,7 @@ const RandomCardioQuestion = ({
       );
     } else {
       return (
-        <button className="button" onClick={handleShowOverview}>
+        <button className="button" onClick={goPrograms}>
           Overview
         </button>
       );
@@ -50,7 +50,7 @@ const RandomCardioQuestion = ({
       </label>
       {presentButton()}
     </form>
-  );
-};
+  )
+}
 
 export default RandomCardioQuestion;
