@@ -13,24 +13,23 @@ const QuestionDestination = (destination, onDestinationChange) => {
     <>
       <p className="question">Where would you like to travel?</p>
       <section className="radio-buttons-wrap">
-        {destinationOptions.map((chosenDestination) => (
+        {destinationOptions.map((destinationValue) => (
           <label
-            key={chosenDestination}
+            key={destinationValue}
             htmlFor="destination-type"
             className="label-destination"
           >
             <input
-              id="destination"
+              className="destination"
               type="radio"
               name="destination-type"
-              value={chosenDestination}
+              value={destinationValue}
               onChange={onDestinationChange}
-              checked={destination === chosenDestination}
+              checked={destination === destinationValue}
               aria-label="Navigate with arrows and then press Enter"
               required
-              className="input-radio"
             />
-            {chosenDestination}
+            {destinationValue}
           </label>
         ))}
       </section>
