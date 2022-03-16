@@ -35,11 +35,6 @@ export const App = () => {
         >
           <QuestionText question={questions[0]} />
 
-          {/* <div className="questionCard">
-            <h2>{questions[0].question_text}</h2>
-            <input id={questions[0].id} type="text"></input>
-          </div> */}
-
           <button type="submit">Next question</button>
         </form>
       );
@@ -56,7 +51,9 @@ export const App = () => {
               : updateAnswers((arr) => [...arr, option2.value]);
           }}
         >
-          <div className="questionCard">
+          <QuestionText question={questions[1]} />
+
+          {/* <div className="questionCard">
             <h2>{questions[1].question_text}</h2>
             <div id={questions[1].id}>
               <label htmlFor={questions[1].options[0]}>{questions[1].options[0]}</label>
@@ -77,7 +74,7 @@ export const App = () => {
                 value={questions[1].options[1]}
               />
             </div>
-          </div>
+          </div> */}
           <button type="submit">Next question</button>
         </form>
       );
@@ -90,7 +87,9 @@ export const App = () => {
             return updateAnswers((arr) => [...arr, menu.options[menu.selectedIndex].text]);
           }}
         >
-          <div className="questionCard">
+          <QuestionText question={questions[2]} />
+
+          {/* <div className="questionCard">
             <h2>{questions[2].question_text}</h2>
 
             <select id={questions[2].id} required>
@@ -101,7 +100,7 @@ export const App = () => {
               <option value={questions[2].options[1]}>{questions[2].options[1]}</option>
               <option value={questions[2].options[2]}>{questions[2].options[2]}</option>
             </select>
-          </div>
+          </div> */}
           <button type="submit">Submit questions</button>
         </form>
       );
