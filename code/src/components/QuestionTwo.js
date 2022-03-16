@@ -9,7 +9,7 @@ const QuestionTwo = ({ questionNum, rating, getRating }) => {
         return <p>{options[rating]}</p>
     }
 
-   return <form>
+   return <>
         <p>How happy are you?</p>
         <input 
         type='range'
@@ -18,7 +18,7 @@ const QuestionTwo = ({ questionNum, rating, getRating }) => {
         value={rating}
         onChange={e => getRating(e.target.value)} />
         {mapTh(rating)}
-    </form>
+    </>
 
     /*
     return <form>

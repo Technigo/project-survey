@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const  QuestionOne = ({ questionNum, date, getDate }) => {
    
         
-    return <form>
+    return <>
         <label htmlFor='date' ><span>{questionNum}</span> When did you use our service?</label>
         <input 
         type='date' 
@@ -14,7 +14,7 @@ const  QuestionOne = ({ questionNum, date, getDate }) => {
         onChange={(e) => getDate(e.target.value)}
         />
         
-    </form>
+    </>
 
 
 }

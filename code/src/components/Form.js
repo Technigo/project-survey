@@ -7,6 +7,7 @@ import QuestionThree from "./QuestionThree";
 import QuestionFour from "./QuestionFour";
 import QuestionFive from "./QuestionFive";
 import OverView from "./Overview";
+import Confirmation from "./Confirmation";
 import NextBtn from "./NextBtn";
 import PrevBtn from "./PrevBtn";
 
@@ -19,6 +20,7 @@ const Form = () => {
     const [frequency, setFrequency] = useState('');
     const [loyalty, setLoyalty] = useState('');
     const [feedback, setFeedback] = useState('');
+    const [submitted, setSubmitted] = useState(false);
 
 
     const nextQuestion = () => {
@@ -49,10 +51,20 @@ const Form = () => {
         return setFeedback(feedback);
     }
     
-    const getQuestion = () => {
-        if (questionNum === 1) {
+    const submit = (e) => {
+        e.preventDefault();
+        setSubmitted(true);       
+    }
 
-            return <>
+    return <div>
+        {submitted === false ? (
+
+        <form id='form' onSubmit={submit}>
+
+        <Heading />
+
+        {questionNum === 1 && (
+            <>
             <QuestionOne 
             questionNum = {questionNum} 
             date = {date}
@@ -60,10 +72,10 @@ const Form = () => {
             />
             <NextBtn nextQuestion={nextQuestion} />
             </>
- 
-        } else if (questionNum === 2) {
+        )} 
 
-            return <>          
+        {questionNum === 2 && (
+            <>          
             <QuestionTwo 
             questionNum = {questionNum}
             rating = {rating}
@@ -73,9 +85,10 @@ const Form = () => {
             <NextBtn nextQuestion={nextQuestion} />
             </>
 
-        } else if (questionNum === 3) {
+        )} 
 
-            return <>
+        {questionNum === 3 && (
+            <>
             <QuestionThree 
             questionNum = {questionNum} 
             frequency = {frequency}
@@ -84,22 +97,23 @@ const Form = () => {
             <PrevBtn prevQuestion={prevQuestion} />
             <NextBtn nextQuestion={nextQuestion} />
             </>
+        )}
 
-        } else if (questionNum === 4) {
-
-            return <>
+        {questionNum === 4 && (
+            <>   
             <QuestionFour 
             questionNum = {questionNum} 
-            loyalty = {loyalty}
-            getLoyaltyRating = {getLoyaltyRating}
+            loyalty={loyalty} 
+            getLoyaltyRating={getLoyaltyRating}
             />
             <PrevBtn prevQuestion={prevQuestion} />
             <NextBtn nextQuestion={nextQuestion} />
             </>
+        )}
 
-        } else if (questionNum === 5) {
-
-            return <>   
+        {questionNum === 5 && (
+            <>
+            
             <QuestionFive 
             questionNum = {questionNum} 
             feedback = {feedback}
@@ -108,25 +122,24 @@ const Form = () => {
             <PrevBtn prevQuestion={prevQuestion} />
             <NextBtn nextQuestion={nextQuestion} />
             </>
-            
-        } else {
-            return <OverView 
+        )} 
+
+        {questionNum === 6 && (
+            <OverView 
             date = {date} 
             rating = {rating}
             frequency = {frequency}
             loyalty = {loyalty}
-            feedback = {feedback}    
+            feedback = {feedback} 
             />
-        }
-    }
+        )}
 
+        </form>) 
+        
+        : <Confirmation /> }
 
-    return (
-      <div>
-        <Heading/>
-        {getQuestion()}
-      </div>
-    )
+    </div>
+
 }
 
 export default Form

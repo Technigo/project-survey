@@ -6,14 +6,14 @@ const bookingFrequency = ['Once a week', 'Once a month', 'Twice a week', 'More t
 const QuestionThree = ({ questionNum, frequency, getBookingFrequency }) => {
     
 
-    return <form>
+    return <>
         <label> <span>{questionNum}</span> How often do you use our cleaning service ? </label>
         <select onChange={e => getBookingFrequency(e.target.value)} value={frequency}>
         {bookingFrequency.map(item => {
             return <option key={item} value={item}>{item}</option>
         })}
           </select>
-    </form>
+    </>
 }
 
 export default QuestionThree;
