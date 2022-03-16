@@ -12,9 +12,11 @@ const Summary = (props) => {
     
 
     return (
-        <div className='summary-will-show'>
-            <p>Hello {name}, you are {age} and you are going to see {band}</p>
-        </div>
+        <article>
+            <div className='summary-will-show'>
+                <p>Hello {name}, you are {age} and you are going to see {band}</p>
+            </div>
+        </article>
     )
 }
 

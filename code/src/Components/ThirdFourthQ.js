@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThirdAndFourthQuestion = ({setBands, bandOptions, setIsSummaryDisplayed}) => {
+const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, setIsSummaryDisplayed}) => {
     return (
 
         <article>
@@ -31,9 +31,15 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, setIsSummaryDisplayed}) 
                     />
                 </label>
             </div>
-            
+
+                <button
+                onClick= {backSection}
+                >
+                Back question</button>
+
+
             <button
-            onClick={()=> setIsSummaryDisplayed(true)}>
+            onClick= {nextSection}>
             Buy tickets
             </button>
 

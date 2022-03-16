@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SecondQuestion = ({  setAgeGroup, ageGroups }) => {
+const SecondQuestion = ({  setAgeGroup, ageGroups, nextSection, backSection }) => {
     
     return (
         <article>
@@ -15,9 +15,17 @@ const SecondQuestion = ({  setAgeGroup, ageGroups }) => {
                     />
                     {ageGroup}
                 </label>
+                ))}
 
-                
-            ))}
+                <button
+                onClick= {nextSection}
+                >
+                Next question</button>
+
+                <button
+                onClick= {backSection}
+                >
+                Back question</button>
             </article>
         
     )

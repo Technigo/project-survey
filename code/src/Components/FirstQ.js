@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FirstQuestion = ({name, setName}) => {
+const FirstQuestion = ({name, setName, nextSection, backSection}) => {
     return (
         <article>
             <label htmlFor="name">What's your name?
@@ -10,6 +10,10 @@ const FirstQuestion = ({name, setName}) => {
                 onChange={(event)=>setName(event.target.value)} 
                 value={name} />
             </label> 
+            <button
+            onClick= {nextSection}
+            >
+            Next question</button>
         </article>
         
     )
