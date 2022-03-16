@@ -26,28 +26,32 @@ export const App = () => {
   switch (answers.length) {
     case 0:
       return (
-        <form>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            return updateAnswers((arr) => [...arr, document.getElementById(questions[0].id).value]);
+          }}
+        >
           <div className="questionCard">
             <h2>{questions[0].question}</h2>
             <input id={questions[0].id} type="text"></input>
           </div>
-          <button
-            onClick={(event) => {
-              event.preventDefault();
-              return updateAnswers((arr) => [
-                ...arr,
-                document.getElementById(questions[0].id).value,
-              ]);
-            }}
-          >
-            Next question
-          </button>
-          {/* {console.log(questions[0].id)} */}
+          <button type="submit">Next question</button>
         </form>
       );
     case 1:
       return (
-        <form>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            let option1 = document.getElementById(questions[1].id + "1");
+            let option2 = document.getElementById(questions[1].id + "2");
+
+            option1.checked
+              ? updateAnswers((arr) => [...arr, option1.value])
+              : updateAnswers((arr) => [...arr, option2.value]);
+          }}
+        >
           <div className="questionCard">
             <h2>{questions[1].question}</h2>
             <div id={questions[1].id}>
@@ -70,25 +74,18 @@ export const App = () => {
               />
             </div>
           </div>
-          <button
-            onClick={(event) => {
-              event.preventDefault();
-              let option1 = document.getElementById(questions[1].id + "1");
-              let option2 = document.getElementById(questions[1].id + "2");
-
-              option1.checked
-                ? updateAnswers((arr) => [...arr, option1.value])
-                : updateAnswers((arr) => [...arr, option2.value]);
-            }}
-          >
-            Next question
-          </button>
-          {/* {console.log(questions[1].id)} */}
+          <button type="submit">Next question</button>
         </form>
       );
     case 2:
       return (
-        <form>
+        <form
+          onSubmit={(event) => {
+            event.preventDefault();
+            let menu = document.getElementById(questions[2].id);
+            return updateAnswers((arr) => [...arr, menu.options[menu.selectedIndex].text]);
+          }}
+        >
           <div className="questionCard">
             <h2>{questions[2].question}</h2>
 
@@ -101,17 +98,7 @@ export const App = () => {
               <option value={questions[2].options[2]}>{questions[2].options[2]}</option>
             </select>
           </div>
-          <button
-            type="submit"
-            onClick={(event) => {
-              event.preventDefault();
-              let menu = document.getElementById(questions[2].id);
-              return updateAnswers((arr) => [...arr, menu.options[menu.selectedIndex].text]);
-            }}
-          >
-            Submit questions
-          </button>
-          {/* {console.log(questions[2].id)} */}
+          <button type="submit">Submit questions</button>
         </form>
       );
     default:
