@@ -8,12 +8,21 @@ import Summary from "components/Summary"
 
 
 const Start = () => {
-    const [ question, SetQuestion ] = useState(0)
+    const [ question, setQuestion ] = useState(0)
+
+    const [member, setMember] = useState("")
+    const [ageGroup, setAgeGroup] = useState("")
+    const [submitBook, setSubmitBook] = useState({
+        title: "",
+        author: "",
+        ISBN: ""
+    })
 
 
     const OnNextQuestion = () => {
-        SetQuestion(state=>state+1)
+        setQuestion(state=>state+1)
     } 
+
 
     console.log(question)
     
@@ -26,6 +35,8 @@ const Start = () => {
             <IsMember 
             nextQuestion={OnNextQuestion}
             question={question}
+            member={member}
+            setMember={setMember}
             />
         )
     
@@ -34,6 +45,8 @@ const Start = () => {
             <AgeGroup
             nextQuestion={OnNextQuestion}
             question={question}
+            ageGroup={ageGroup}
+            setAgeGroup={setAgeGroup}
             />
         )
     } else if (question === 3) {
@@ -41,12 +54,22 @@ const Start = () => {
             <SubmitBook
             nextQuestion={OnNextQuestion}
             question={question}
+            setSubmitBook={setSubmitBook}
+            title={submitBook.title}
+            author={submitBook.author}
+            isbn={submitBook.ISBN}
+            
+
             />
         )
     } else if (question === 4) {
         return (
             <Summary
-            
+            member={member}
+            ageGroup={ageGroup}
+            title={submitBook.title}
+            author={submitBook.author}
+            isbn={submitBook.ISBN}
             />
         )
     }

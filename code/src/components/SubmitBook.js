@@ -1,8 +1,12 @@
 import React from "react"
 
-const SubmitBook = ({nextQuestion}) => {
+const SubmitBook = ({
+    nextQuestion,
+    submitBook,
+    setSubmitBook
+}) => {
     const onSubmitBook = (event) => {
-        SubmitBook(event.target.value)
+        setSubmitBook(event.target.value)
         event.preventDefault()
         nextQuestion()
     }

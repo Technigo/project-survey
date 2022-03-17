@@ -1,14 +1,19 @@
 import React from "react"
 
-const AgeGroup = ({nextQuestion}) => {
+const AgeGroup = ({
+    nextQuestion,
+    ageGroup,
+    setAgeGroup
+}) => {
     const onAgeGroupSelect = (event) => {
-        AgeGroup(event.target.value)
+        setAgeGroup(event.target.value)
         nextQuestion()
     }
     return (
         <form>
             <select
               onChange={onAgeGroupSelect}
+              value={ageGroup}
             >
             <option value="<18"> Under 18 </option>
             <option value="19-39"> 19 - 39 </option>

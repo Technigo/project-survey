@@ -1,9 +1,14 @@
 import React from "react"
 
 
-const IsMember = ({nextQuestion}) => {
+const IsMember = ({
+    nextQuestion,
+    member,
+    setMember
+  }) => {
+
     const onMemberClick = (event) => {
-        IsMember(event.target.value)
+        setMember(event.target.value)
         nextQuestion()
     }
     return (
@@ -15,6 +20,7 @@ const IsMember = ({nextQuestion}) => {
                   name="isMember"
                   value="Yes"
                   onChange={onMemberClick}
+                  checked={member === "Yes"}
                 />
                 Yes
             </label>
@@ -24,6 +30,7 @@ const IsMember = ({nextQuestion}) => {
                   name="isMember"
                   value="No"
                   onChange={onMemberClick}
+                  checked={member === "No"}
                 />
                 No
             </label>
