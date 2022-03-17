@@ -69,3 +69,5 @@ form div {
 .submit-button:hover {
   filter: brightness(90%);
 }
+
+/* Fix media queries mobile first */
