@@ -6,6 +6,7 @@ import Question1 from './Question1'
 import Question2 from './Question2'
 import Question3 from './Question3'
 import Overview from './Overview'
+import Footer from './Footer'
 
 
 
@@ -34,7 +35,7 @@ const Form = () => {
   const onWandChange = (event) => {
     setWand(event.target.value)
   }
-  
+
 
   return (
     <div>
@@ -58,6 +59,7 @@ const Form = () => {
     {step === 3 && (
          <Question2
          pet={pet}
+         house={house}
          onPetChange={onPetChange}
          onStepChange={onStepChange}
          />
@@ -73,12 +75,13 @@ const Form = () => {
 
     {step === 5 && (
          <Overview
+         wand={wand}
          name={name}
          house={house}
          pet={pet}
-         wand={wand}
          />
       )}
+      <Footer />
 
     </div>
   )
