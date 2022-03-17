@@ -17,6 +17,8 @@ const RadioForm = ({roles, setRoles}) => {
                 <input 
                     type="radio"
                     value={role}
+                    name="work-role"
+                    required
                     onChange={event => setRoles(event.target.value)}
                     checked={false ? roles : roles === role}                      
                 />
