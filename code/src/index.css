@@ -1,5 +1,29 @@
 :root {
-  accent-color: rgb(121, 109, 114);
+  accent-color: rgb(167, 46, 96);
+  --primary: rgb(68, 13, 36);
+  --red: rgba(255, 44, 44, 0.473);
+  --white: rgb(255, 255, 255);
+}
+
+h1 {
+  color: #fff;
+  text-shadow: 0 0 7px #fff,
+    0 0 10px #fff,
+    0 0 12px rgb(255, 44, 44),
+    0 0 14px rgb(255, 74, 29),
+    0 0 18px rgb(255, 44, 44),
+    0 0 19px rgb(255, 44, 44),
+    0 0 20px rgb(255, 44, 44),
+    0 0 25px rgb(255, 44, 44);
+  font-weight: 400;
+  text-align: center;
+  font-size: 3rem;
+}
+
+h2 {
+  color: var(--white);
+  margin: 0;
+  font-size: 2rem;
 }
 
 body {
@@ -9,6 +33,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  background: url(./assets/alexandru-acea-RQgKM1h2agA-unsplash.jpg);
+  background-size: contain;
+  background-repeat: space;
+  background-color: #0c0d0f;
 }
 
 code {
@@ -24,43 +53,31 @@ code {
 }
 
 .form-container {
-  margin: 1rem 0;
-  font-size: 2rem;
-  color: rgb(87, 87, 87);
-  background-color: rgb(217, 216, 218);
-  /* height: 100vh; */
-  /* display: grid;
-  justify-content: center;
-  align-items: center; */
-  width: 50vw;
-  height: 50vh;
-  overflow-x: hidden;
-  overflow-y: auto;
-  text-align:justify;
-}
-
-.form-main-content-container {
   display: grid;
   justify-content: center;
   align-items: center;
-  /* min-height: 50vh;
-  min-width: 60vw; */
-  gap: 50px;
+  font-size: 1.5rem;
+  color: var(--light-pink);
+  width: 60vw;
+  min-height: 70vh;
+  border-radius: 2rem;
+  background-color: var(--red);
+  font-size: 1.5rem;
 }
 
-form {
+.traits-container {
   display: grid;
-  justify-content: center;
-  
-  /* width: fit-content; */
-  padding: 2rem;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 5px;
 }
 
-.question {
-  margin: 2rem;
-  background-color: rgb(235, 232, 232);
-  min-width: 50%;
-  min-height: 50%;
+.current-page {
+  display: grid;
+  gap: 3rem;
+  justify-content: center;
+  justify-items: start;
+  color: var(--primary);
+  padding: 1.5rem;
 }
 
 button {
@@ -70,7 +87,3 @@ button {
 .trait {
   display: block;
 }
-
-/* .radio-button {
-  accent-color: accent-color;
-} */

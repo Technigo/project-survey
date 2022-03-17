@@ -26,26 +26,33 @@
     "traitsQuestion": "What are some of my worst charachter traits?",
 
     "traits": [
-        "Lazy",
-        "Late",
-        "Boring",
-        "Ugly",
-        "Stubborn",
-        "Loud",
-        "Mean",
-        "Petty",
-        "Vain",
-        "Selfish",
-        "Self-indulgent",
-        "Greedy",
-        "Narcissistic",
-        "Judgmental",
-        "Spoiled",
-        "Needing to be right",
+        "lazy",
+        "late",
+        "boring",
+        "ugly",
+        "stubborn",
+        "loud",
+        "mean",
+        "petty",
+        "vain",
+        "selfish",
+        "self-indulgent",
+        "greedy",
+        "narcissistic",
+        "judgmental",
+        "spoiled",
+        "needing to be right",
         "All of the above"
     ],
 
     "backTogetherQuestion": "Would you ever consider getting back together with me?",
+
+    "backTogetherAlts": [
+        "Absolutely!",
+        "Never in a million years!",
+        "Nah.",
+        "Maybe?"
+    ],
 
     "dateFriendQuestion": "Would you let one of your friends date me?",
 

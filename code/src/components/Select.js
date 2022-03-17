@@ -6,7 +6,7 @@ export const Select = ({shipDuration, setShipDuration, durationQuestion, duratio
     // console.log("from select component", shipDuration)
     return (
         <label>
-            {durationQuestion}
+            <h2>{durationQuestion}</h2>
             <select 
                 defaultValue={shipDuration} 
                 onChange={setShipDuration}>
