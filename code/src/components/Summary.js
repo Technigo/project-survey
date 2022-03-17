@@ -3,7 +3,6 @@ import React from 'react'
 const Summary = ({nameInput, musicInput, selectOptionInput, radioInput}) => {
   return (
     <>  
-    <main>
       <section className="head-section" id="summary">
         <div className="summary-header">
           <h2 className="header-text">{nameInput}, here is your Monday Mantra!</h2>
@@ -26,10 +25,9 @@ const Summary = ({nameInput, musicInput, selectOptionInput, radioInput}) => {
             <h3>..and be soft to yourself - It's a transition day, alright?</h3>
           </div>
         </div>
-        <button type="submit" onClick={() => window.location.reload()} className="restart-btn"> I need a new mantra!
+        <button type="submit" onClick={() => window.location.reload()} className="btn restart-btn"> I need a new mantra!
         </button>
       </section>
-    </main>
     </>
   )
 }

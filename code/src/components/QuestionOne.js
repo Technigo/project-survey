@@ -4,10 +4,9 @@ import React from "react";
 const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextStepChange }) => {
   return (
     <>
-    <main>
       <section className="head-section" id="one">
-        <p>Question one</p>
-        <h2 className="header-text">Very curious - What's your name darling?</h2>
+        <p className="thin-intro-text">Very curious</p>
+        <h2 className="question-text">What's your name darling?</h2>
         <form>
           <label htmlFor="nameInput">Type your name here please</label>
           <input
@@ -23,7 +22,7 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextSte
           type="submit"
           aria-label="Go back"
           onClick={onStepBackChange}
-          className="back-btn"
+          className="btn back-btn"
         >
           back
         </button>
@@ -31,13 +30,12 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextSte
         <button
           type="submit"
           onClick={onNextStepChange}
-          className="next-btn"
+          className="btn next-btn"
           disabled= {nameInput === ""}
         >
           next
         </button>
       </div>
-      </main>
     </>
   );
 };

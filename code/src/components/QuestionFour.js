@@ -2,13 +2,13 @@ import React from "react";
 
 const drinksArray = ["Champagne", "Milk", "Beer", "Hot chocolate"];
 
-const QuestionFour = ({radioInput, onRadioInputChange, onNextStepChange, onStepBackChange}) => {
+const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNextStepChange, onStepBackChange}) => {
   return (
     <>
-    <main>
       <section className="head-section" id="four">
-        <p>Question Four</p>
-        <h2 className="header-text">Drink that boost your mood?</h2>
+        <h2 className="answer-text">Mmm {selectOptionInput} is tasty!</h2>
+        <p className="thin-intro-text">Continuing with easy questions..</p>
+        <h2 className="question-text">Drink that boost your mood most is?</h2>
         <form>
           {drinksArray.map(drinks => (
             <label className="radio-label" key={drinks} htmlFor={drinks}>
@@ -29,7 +29,7 @@ const QuestionFour = ({radioInput, onRadioInputChange, onNextStepChange, onStepB
               type="submit"
               aria-label="Go back"
               onClick={onStepBackChange}
-              className="back-btn"
+              className="btn back-btn"
             >
               back
             </button>
@@ -37,14 +37,13 @@ const QuestionFour = ({radioInput, onRadioInputChange, onNextStepChange, onStepB
             <button
               type="submit"
               onClick={onNextStepChange}
-              className="next-btn"
+              className="btn next-btn"
               disabled= {radioInput === ""}
             >
               next
             </button>
           </div>
       </section>
-    </main>
     </>
   );
 };

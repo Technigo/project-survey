@@ -1,13 +1,13 @@
 import React from "react";
 
 // select option Input
-const QuestionThree = ({selectOptionInput, onSelectOptionInputChange, onNextStepChange, onStepBackChange}) => {
+const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange, onNextStepChange, onStepBackChange}) => {
   return (
     <>
-    <main>
       <section className="head-section" id="three">
-        <p>Question Three</p>
-        <h2 className="header-text">What food makes you the happiest self?</h2>
+        <h2 className="answer-text">Mhm {musicInput} sounds good! </h2>
+        <p className="thin-intro-text">Continuing with easy questions..</p>
+        <h2 className="question-text">What food makes you the happiest self?</h2>
         <form>
           <label htmlFor="selectOptionInput">Have your pick</label>
           <select
@@ -42,21 +42,20 @@ const QuestionThree = ({selectOptionInput, onSelectOptionInputChange, onNextStep
             type="submit"
             aria-label="Go back"
             onClick={onStepBackChange}
-            className="back-btn"
+            className="btn back-btn"
           >
             back
           </button>
           <button
             type="submit"
             onClick={onNextStepChange}
-            className="next-btn"
+            className="btn next-btn"
             disabled= {selectOptionInput === ""}
           >
             next
           </button>
         </div>
       </section>
-    </main>
     </>
   );
 };

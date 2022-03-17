@@ -3,7 +3,20 @@
   --my-white: #fbf9eb;
   --my-black: #333;
   --main-accent-color: #BBB807;
+  --main-accent-color-dark: #9B9915;
   --sec-accent-color: #F4B1CA;
+}
+
+/* Reset default values such as margin, padding and box-sizing and increase the resolution of the text */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-box-sizing: border-box;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 html {
@@ -12,26 +25,101 @@ html {
 
 body {
   margin: 0;
-  font-family: "poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "poppins";
   background-color: var(--main-accent-color);
   border: solid var(--sec-accent-color) 8px;
-
   padding: 1rem;
   height: 100vh;
 }
 
-code {
-  font-family: "poppins", source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* Styling of text */
+
+h1 {
+  font-size: 14vw;
 }
 
-/* Media Query - Tablet */
+.mantra {
+  writing-mode: vertical-rl;
+  position: absolute;
+  bottom: 2rem;
+  right: 1rem;
+}
+
+.question-text {
+  font-size: 21px;
+  font-weight: 400;
+  padding: 1rem 0 2rem;
+}
+
+.thin-intro-text {
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: 300;
+  margin-top: 100px;
+  text-transform: uppercase;
+}
+
+/* Styling of main section */
+
+.head-section {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* Styling of buttons */
+
+.btn {
+  border: 2px solid var(--main-accent-color-dark);
+  border-radius: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 14px 20px;
+  cursor: pointer;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+.start-btn {
+  margin: auto;
+}
+
+.start-btn:hover {
+  background-color: var(--my-black);
+  color: var(--main-accent-color);
+  transition: all 1.5s ease;
+}
+
+/* A MEDIA QUERY FOR DESKTOP ONLY */
+
+@media screen and (min-width: 1024px) {
+
+  .mantra {
+
+  }
+
+  h1 {
+    font-size: 140px;
+    display: inline-flex;
+  }
+}
+
+/* Media Query - Tablet and Desktops */
 @media screen and (min-width: 768px) {
   body {
     border: solid var(--sec-accent-color) 22px;
   }
+
+  .mantra {
+    bottom: 4rem;
+
+  }
+
+  h1 {
+
+  }
+
 }

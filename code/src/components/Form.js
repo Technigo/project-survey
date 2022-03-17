@@ -46,6 +46,10 @@ const Form = () => {
   // Vad form-komponenten kallar på för andra komponeneter
   return (
     <main>
+      <header>
+        <h1 class="monday">MONDAY</h1>
+        <h1 class="mantra">MANTRA</h1>
+      </header>
 
       {step === 0 && (
         <Intro 
@@ -74,6 +78,7 @@ const Form = () => {
 
      {step === 3 && (
         <QuestionThree 
+          musicInput = {musicInput}
           selectOptionInput = {selectOptionInput}
           onSelectOptionInputChange = {onSelectOptionInputChange} 
           onStepBackChange = {onStepBackChange}
@@ -83,6 +88,7 @@ const Form = () => {
 
      {step === 4 && (
         <QuestionFour 
+          selectOptionInput = {selectOptionInput}
           radioInput = {radioInput}
           onRadioInputChange = {onRadioInputChange} 
           onStepBackChange = {onStepBackChange}

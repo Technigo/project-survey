@@ -4,11 +4,10 @@ import React from "react";
 const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChange, onStepBackChange}) => {
   return (
     <>
-    <main>
       <section className="head-section" id="two">
-        <p>Question one</p>
-        <h2 className="header-text">Hi {nameInput}, nice to meet you!</h2>
-        <h2 className="header-text">Might be the most horrible question in the world but: Your top one song in the whole wide world?</h2>
+        <h2 className="answer-text">Hi {nameInput}!</h2>
+        <p className="thin-intro-text">Might be the most horrible question but:</p>
+        <h2 className="question-text">Best song ever heard is?</h2>
 
         <form>
           <label htmlFor="musicInput">Type your fav song here</label>
@@ -24,7 +23,7 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
             type="submit"
             aria-label="Go back"
             onClick={onStepBackChange}
-            className="back-btn"
+            className="btn back-btn"
           >
             back
           </button>
@@ -32,14 +31,13 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
           <button
             type="submit"
             onClick={onNextStepChange}
-            className="next-btn"
+            className="btn next-btn"
             disabled= {musicInput === ""}
           >
             next
           </button>
         </div>
       </section>
-    </main>
     </>
   );
 };
