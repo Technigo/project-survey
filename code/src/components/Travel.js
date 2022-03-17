@@ -2,26 +2,34 @@ import React, { useState } from 'react'
 
 const travelWays = ['By train', 'By car', 'By plane', 'Other']
 
-const Travel = ({travelWay, ontravelWayChange, onStepChange}) => {
-    // const [travelWay, settravelWay] = useState()
+
+const Travel = ({travelWay, ontravelWayChange, onStepChange, onBackstepChange}) => {
 
     return (
-        <form>
-            How did you travel to our event?
+        <section className="question-container">
+            <label htmlFor='travelWay'>
+                <h2>How did you travel to our event?</h2>
+                </label>
+            <div className="travel-box">
+                <div className="radiobuttons">
             {travelWays.map(trip => ( 
-
-            <label key={trip}>
+                <label key={trip}>
                 <input
                 type="radio"
                 value={trip}
-                onChange={event => ontravelWayChange(event.target.value)}
+                onChange={ontravelWayChange}
                 checked={travelWay === trip}
                 />
                 {trip}
-            </label>
+                </label>
             ))}
-               <button onClick={onStepChange}>Continue</button>
-        </form>
+            </div>
+            <div className="travelbox-buttons">
+            <button onClick={onStepChange} disabled={travelWay===""}>OK</button>
+            <button onClick={onBackstepChange}>back</button>
+            </div>
+            </div>
+        </section>
     )
 }
 

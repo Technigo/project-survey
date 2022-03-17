@@ -6,62 +6,70 @@ import Travel from './Travel'
 import Summary from './Summary'
 
 const Form = () => {
-    const [name, setName] = useState('')
-    const [city, setCity] = useState('')
-    const [travelWay, settravelWay] = useState('')
-    const [step, setStep] = useState(1)
+const [name, setName] = useState('')
+const [city, setCity] = useState('')
+const [travelWay, settravelWay] = useState('')
+const [isSummaryDisplayed, setIsSummaryDisplayed] = useState(false)
+const [step, setStep] = useState(1)
 
 
-const onNameChange = (event) => { 
+const handleNameChange = (event) => { 
     setName(event.target.value)
   }
 
-const onCityChange = (city) => {
-    setCity(city)
-  }
+const handleCityChange = (event) => {
+    setCity(event.target.value)
+ }
 
-const ontravelWayChange = (howtravel) => {
-    settravelWay(howtravel)
-  }
+ const handletravelWayChange = (event) => {
+    settravelWay(event.target.value)
+}
 
 const onStepChange = () => {
-    setStep(step + 1)
+     setStep(step + 1)
+   }
+
+const onBackstepChange = () => {
+    setStep(step - 1)
   }
 
-  return (
-    <div className='wrapper'>
-      {step === 1 && (
-        <Name   
-          name={name}
-          onNameChange={onNameChange}
-          onStepChange={onStepChange} 
+       
+return (
+    <section>
+        {step === 1 && (
+        <Name 
+        name={name} 
+        onNameChange={handleNameChange} 
+        onStepChange={onStepChange}
         />
-      )}
-      {step === 2 && (
-        <Location
-          city={city}
-          onCityChange={onCityChange}
-          onStepChange={onStepChange} 
+        )}
+        {step === 2 && (
+        <Location 
+        city={city} 
+        onCityChange={handleCityChange}
+        onStepChange={onStepChange}
+        onBackstepChange={onBackstepChange}
         />
-      )}
-      {step === 3 && (
-        <Travel
-          travelWay={travelWay}
-          ontravelWayChange={ontravelWayChange}
-          onStepChange={onStepChange} 
-        />
-      )}
-      {step === 4 && (
+        )}
+        {step === 3 && (
+        <Travel 
+        travelWay={travelWay} 
+        ontravelWayChange={handletravelWayChange}
+        onStepChange={onStepChange}
+        onBackstepChange={onBackstepChange}
+        />  
+        )}
+         {step === 4 && (
         <Summary 
           name={name} 
           city={city}
           travelWay={travelWay}
         />
       )}
-    </div>
+    </section>
+)
+}  
 
-  )
-}
-
-export default Form
-
+    export default Form
+    
+ 
