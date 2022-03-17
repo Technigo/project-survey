@@ -12,6 +12,13 @@ img.balloons {
 		bottom: -100px;
 	}
 	to {
-		top: -150px;
+		top: -200px;
+	}
+}
+
+@media (min-width: 1024px) {
+	img.balloons {
+		width: 200px;
+		right: 150px;
 	}
 }
