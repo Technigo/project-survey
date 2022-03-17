@@ -1,15 +1,8 @@
 import React from 'react'
 
-// State property 
-
-
 const QuestionTwo = (props) => {
   const {email, onSecondInputChange} = props
- 
- 
-
-  
-    
+   
   return (
     <section>  
       <div>
@@ -18,10 +11,6 @@ const QuestionTwo = (props) => {
         <input 
         id="email" type="text" value={email} onChange={onSecondInputChange} />
     </div> 
-
- 
-
-  
    </section>
   )
 }

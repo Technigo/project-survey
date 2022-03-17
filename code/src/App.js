@@ -15,50 +15,13 @@ export const App = () => {
   // const [counter, setCounter] = useState(0)
 
   return (
-  <section>
-    <header>
-      <Header/>
-    </header>
-
-    <Form/>
-
-    
-    {/* <div>
-    <h2>SUPER COUNTER TECHNIGO</h2>
-      <Counter counter = {counter} setCounter= {setCounter}/>
-    </div>
-    
-    <div>
-      <Infobanner counter = {counter}/>
-    </div> */}
-    
-    
-     {/* <div>
-     <h1>Current temperature: {temperature} degrees </h1>
-    
-     <button onClick={() => setTemperature(-5)}>Freez!</button>
-     <button onClick={() => setTemperature(30)}>warm!</button>
-    <button onClick={() => setTemperature(120)}>Boiling!</button>
-    </div>
-    
-    
-       <form>
-         <label> Newsletter?
-           <input
-           type="checkbox"
-           checked={wantsNewsletter}
-           onChange={event=> setWantsNewsletter(event.target.checked)}
-           />
-         </label>
-         <label> No thank you i dont want a Newsletter?
-           <input
-           type="checkbox"
-           checked={wantsNewsletter}
-           onChange={event=> setWantsNewsletter(event.target.checked)}
-           />
-         </label>
-       </form>
-      */}
-          </section>
+    <body>
+      <header>
+        <Header/>
+      </header>
+      <main>
+        <Form/>
+      </main>
+    </body>
   )
 }

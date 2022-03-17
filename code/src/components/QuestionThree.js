@@ -1,26 +1,27 @@
-// import React, {useState} from 'react'
+ import React from 'react'
 
-// const QuestionThree = () => {
-// const [location,setLocation] = useState("")
+ const QuestionThree = (props) => {
+ const {location, locations, onThirdInputChange} = props
+     return(
+         <div>
+             <h1>Choose your city to attend your local gardening group? </h1>
+             <form>
+                 <label htmlFor='locationOptions' aria-label='choose your local gardening group'>
+          <select
+         onChange={onThirdInputChange}
+         value={location}>
 
-//     return(
-//         <div>
-//             <h1>You're marooned on a remote, unpopulated Pacific Island. What would you rather have? </h1>
-//             <form>
-//          <select
-//         onChange={event=> setLocation(event.target.value)}
-//         value={location}
-//         >
-//        <option value="">Choose your gear </option>
-//          <option value="Lemond and radio">A lemon and a radio</option>
-//          <option value="Llama and kite">A llama and a kite</option>
-//          <option value="Bow and sunglasses">A bow whit arrows and a pair of sunglasses</option>
-//          <option value="Gassoline and bicycle">A gallon of gasoline and a bicycle</option>
-//        </select>
-//        </form>
-//         </div>
-//     )
-// }
+            <option value="">My city is</option>
+            <option value={locations}>Stockholm</option>
+            <option value={locations}>Göteborg</option>
+            <option value={locations}>Malmö</option>
+            <option value={locations}>Halmstad</option>
+        </select>
+        </label>
+            </form>
+        </div>
+     )
+ }
 
-// export default QuestionThree
+ export default QuestionThree
 
