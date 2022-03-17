@@ -4,7 +4,7 @@ body {
     flex-direction: column;
 }
 
-.overview  {
+.overview {
     width: 300px;
 }
 
@@ -31,7 +31,7 @@ body {
     text-transform: uppercase;
 }
 
-.summary-p  {
+.summary-p {
     font-size: 17px;
     font-family: 'Satoshi', sans-serif;
     margin: 15px 0;
@@ -46,20 +46,19 @@ body {
 /* ===== TABLET/DESKTOP ===== */
 
 @media (min-width: 668px){
-.overview  {
-    max-width: 700px;
-    width: 500px;
-}
-
-.summary-p  {
-    font-size: 22px;
-    display: flex;
-    flex-direction: row;
-}
+    .overview {
+        max-width: 700px;
+        width: 500px;
+   }
+    .summary-p {
+        font-size: 22px;
+        display: flex;
+        flex-direction: row;
+   }
 }
 
 @media only screen and (min-width: 1024px){
-    .overview  {
+    .overview {
         width: 800px;
-    }
+   }
 }
