@@ -3,8 +3,8 @@ import React, { useState } from "react";
 const  QuestionOne = ({ questionNum, date, getDate }) => {
    
         
-    return <>
-        <label htmlFor='date' ><span>{questionNum}</span> When did you use our service?</label>
+    return <div className='question'>
+        <label htmlFor='date' ><span>{questionNum}.</span> When did you use our service?</label>
         <input 
         type='date' 
         id='date'
@@ -14,7 +14,7 @@ const  QuestionOne = ({ questionNum, date, getDate }) => {
         onChange={(e) => getDate(e.target.value)}
         />
         
-    </>
+    </div>
 
 
 }

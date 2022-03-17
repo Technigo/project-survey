@@ -11,14 +11,16 @@ import Confirmation from "./Confirmation";
 import NextBtn from "./NextBtn";
 import PrevBtn from "./PrevBtn";
 import ProgressBar from "./ProgressBar";
+import IntroPage from "./IntroPage";
+
 
 // This array is for QuestionTwo
 const satisfactionRating = ['Terrible 😞', 'Bad 🙁', 'Okay 🙂', 'Happy 😊', 'Very happy 😍'];
 
 
 const Form = () => {
-
-    const [questionNum, setQuestionNum] = useState(1);
+    
+    const [questionNum, setQuestionNum] = useState(0);
     const [date, setDate] = useState(''); 
     const [rating, setRating] = useState(3);
     const [satisfaction, setSatisfaction] = useState(satisfactionRating[rating]);
@@ -26,9 +28,19 @@ const Form = () => {
     const [loyalty, setLoyalty] = useState('');
     const [feedback, setFeedback] = useState('');
     const [submitted, setSubmitted] = useState(false);
+    
+    document.addEventListener('keydown', e => {
+        if (e.keyCode == '39' && questionNum <= 6) {
+            nextQuestion();
+        } else if (e.keyCode == '37' && questionNum > 1) {
+            prevQuestion();
+        }
+    })
 
-
-    const nextQuestion = () => setQuestionNum(questionNum + 1);
+    const nextQuestion = () => {
+        document.querySelector('.form-container').style.padding = '0%';
+        setQuestionNum(questionNum + 1);
+    };
     
     const prevQuestion = () => setQuestionNum(questionNum - 1);
     
@@ -44,16 +56,21 @@ const Form = () => {
     
     const submit = (e) => {
         e.preventDefault();
-        setSubmitted(true);       
+        return setSubmitted(true);       
     }
 
     return <>
         {!submitted ? (
-
+        <div className='container'>
+         {questionNum === 0 && (
+             <>
+             <Heading nextQuestion = {nextQuestion}/>
+             </>
+        )
+        }
         <form id='form' onSubmit={submit}>
         <ProgressBar questionNum = {questionNum} />
-        <Heading />
-
+        <div className="form-container">
         {questionNum === 1 && (
             <>
             <QuestionOne 
@@ -78,7 +95,6 @@ const Form = () => {
             <PrevBtn prevQuestion={prevQuestion} />
             <NextBtn nextQuestion={nextQuestion} />
             </>
-
         )} 
 
         {questionNum === 3 && (
@@ -107,7 +123,6 @@ const Form = () => {
 
         {questionNum === 5 && (
             <>
-            
             <QuestionFive 
             questionNum = {questionNum} 
             feedback = {feedback}
@@ -126,10 +141,13 @@ const Form = () => {
             frequency = {frequency}
             loyalty = {loyalty}
             feedback = {feedback} 
+            setSubmitted = {setSubmitted}
             />
         )}
+        </div>
 
-        </form>) 
+        </form>
+        </div>) 
         
         : <Confirmation /> }
 
