@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Button = ({ label }) => {
+const Button = ({ label }) => {
 	return (
 		<button type="submit">{label}</button>
 	)
