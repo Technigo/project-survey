@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Question from "components/Question";
+import Button from "components/Button";
 
 const questions = [
   {
@@ -35,28 +36,42 @@ const questions = [
 export const App = () => {
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
+  const [buttonLabel, setButtonLabel] = useState("Next Question");
+  const [index, setQuestionIndex] = useState(0);
 
-  const onChange = (e) => setInputValue(e.target.value);
+  const onChange = (event) => setInputValue(event.target.value);
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
     setAnswers((arr) => [...arr, inputValue]);
     setInputValue("");
+    setQuestionIndex(index + 1);
+    if (answers.length === questions.length - 2) {
+      setButtonLabel("Submit");
+    }
+  };
+
+  const resetForm = () => {
+    setAnswers([]);
+    setQuestionIndex(0);
   };
 
   if (questions.length === answers.length) {
     return (
       <h1>
-        Thank you! You answered: {answers.map((answer, i) => <p key={i} >{answer}</p>)}
+        Thank you! You answered:{" "}
+        {answers.map((answer, i) => (
+          <p key={i}>{answer}</p>
+        ))}
+        <button onClick={resetForm}>Reset</button>
       </h1>
     );
   }
 
   return (
     <form onSubmit={handleOnSubmit}>
-      <Question {...questions[answers.length]} inputValue={inputValue} onChange={onChange} />
-
-      <button type="submit">Next question</button>
+      <Question {...questions[index]} inputValue={inputValue} onChange={onChange} />
+      <Button label={buttonLabel} />
     </form>
   );
 };
