@@ -1,27 +1,53 @@
 {
-    "age": [
-        "18-24",
-        "25-29",
-        "30-34",
-        "35-39",
-        "40-44",
-        "45-49",
-        "50-54",
-        "55-59",
-        "60-64",
-        "65+"
+    "nameQuestion": "What is your name?",
+
+    "durationQuestion": "How long were we together?",
+
+    "duration": [
+        "0-3 months",
+        "3-6 months",
+        "6-12 months",
+        "1-1.5 years",
+        "1.5-2 years",
+        "2-5 years",
+        "5-10 years",
+        "10+ years"
     ],
 
-    "jobTitle": "What is your current title?",
+    "breakupQuestion": "Who broke up with whom?",
 
-    "jobDuration": "How long have you had that position?",
+    "breakupAlts": [
+        "I broke up with you.",
+        "You broke up with me.",
+        "It was mutual.",
+        "No, it really was mutual!"
+    ],
 
-    "education": "What is your level of formal education?",
+    "traitsQuestion": "What are some of my worst charachter traits?",
 
-    "city": [
-        "Gothenburg",
-        "Malmo",
-        "Stockholm",
-        "Other"
-    ]
+    "traits": [
+        "Lazy",
+        "Late",
+        "Boring",
+        "Ugly",
+        "Stubborn",
+        "Loud",
+        "Mean",
+        "Petty",
+        "Vain",
+        "Selfish",
+        "Self-indulgent",
+        "Greedy",
+        "Narcissistic",
+        "Judgmental",
+        "Spoiled",
+        "Needing to be right",
+        "All of the above"
+    ],
+
+    "backTogetherQuestion": "Would you ever consider getting back together with me?",
+
+    "dateFriendQuestion": "Would you let one of your friends date me?",
+
+    "friendNameQuestion": "Who? (Name, number)"
 }

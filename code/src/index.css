@@ -16,38 +16,59 @@ code {
     monospace;
 }
 
-.form-container {
-  margin: 1rem 0;
-  font-size: 2rem;
-  color: rgb(87, 87, 87);
+.root {
   height: 100vh;
   display: grid;
   justify-content: center;
   align-items: center;
 }
 
+.form-container {
+  margin: 1rem 0;
+  font-size: 2rem;
+  color: rgb(87, 87, 87);
+  background-color: rgb(217, 216, 218);
+  /* height: 100vh; */
+  /* display: grid;
+  justify-content: center;
+  align-items: center; */
+  width: 50vw;
+  height: 50vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  text-align:justify;
+}
+
 .form-main-content-container {
   display: grid;
   justify-content: center;
   align-items: center;
-  min-height: 50vh;
-  min-width: 60vw;
+  /* min-height: 50vh;
+  min-width: 60vw; */
+  gap: 50px;
 }
 
 form {
   display: grid;
   justify-content: center;
-  background-color: rgb(217, 216, 218);
+  
   /* width: fit-content; */
   padding: 2rem;
 }
 
 .question {
-  margin: 1rem;
+  margin: 2rem;
+  background-color: rgb(235, 232, 232);
+  min-width: 50%;
+  min-height: 50%;
 }
 
 button {
   justify-self: center;
+}
+
+.trait {
+  display: block;
 }
 
 /* .radio-button {
