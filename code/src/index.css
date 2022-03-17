@@ -18,7 +18,7 @@ h1 {
   font-family: "Lobster", sans-serif;
   font-size: 50px;
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
   background: linear-gradient(
     59deg,
     #ba8d19 15%,
@@ -68,7 +68,7 @@ p {
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  background: #f2efe6d4;
+  background: #f2efe6e8;
 }
 
 .header-title {

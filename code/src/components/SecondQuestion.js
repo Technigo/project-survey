@@ -1,21 +1,25 @@
 import React from 'react'
 
-const SecondQuestion = (nextPage, backPage) => {
+const SecondQuestion = ({
+    nameInput, 
+    nextPage, 
+    backPage
+}) => {
 
     const onEmailInputChange = ('')
-    const userEmailInput = ('')
+    const emailInput = ('')
 
     return (
 
         <>
-        {/* <p>Alright {nameInput}</p> */}
+        <p>Alright {nameInput},</p>
         <label htmlFor="email">What's your email address?</label>
 
         <input
         className="question"
         type="text"
         placeholder="Email"
-        value={userEmailInput}
+        value={emailInput}
         onChange={onEmailInputChange}
          />
 

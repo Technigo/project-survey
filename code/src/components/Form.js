@@ -7,10 +7,10 @@ import SecondQuestion from './SecondQuestion'
 const Form = () => {
 
 
-// Declaring all the pretty variables here
+// Declaring all the variables here
 const [nameInput, setNameInput] = useState('')
 const [surnameInput, setSurnameInput] = useState('')
-const [userEmailInput, setUserEmailInput] = useState('')
+const [emailInput, setUserEmailInput] = useState('')
 
 const [page, setPage] = useState(0)
 
@@ -54,7 +54,7 @@ return (
     {/* SECOND PAGE */}
     {page === 2 && (
         <SecondQuestion
-        userEmailInput={userEmailInput}
+        emailInput={emailInput}
         onEmailInputChange={onEmailInputChange}
         nextPage={nextPage}
         backPage={backPage}
