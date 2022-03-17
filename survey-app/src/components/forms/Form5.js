@@ -12,8 +12,9 @@ const subHeaderData = {
   level: 'Less stressed'
 };
 
-const StressRange = ({ nextPage, backPage, retrieveStressData }) => {
+const StressRange = ({ changePage, retrieveStressData }) => {
   const [stress, setStress] = useState();
+  const { nextPage, backPage } = changePage;
 
   const rangeData = {
     nextPage,

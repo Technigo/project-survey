@@ -12,8 +12,9 @@ const subHeaderData = {
   level: 'Very productive'
 }
 
-const ProductivityRange = ({ nextPage, backPage, retrieveProductivityData }) => {
+const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
   const [productivity, setProductivity] = useState();
+  const { nextPage, backPage } = changePage;
 
   const rangeData = {
     nextPage,

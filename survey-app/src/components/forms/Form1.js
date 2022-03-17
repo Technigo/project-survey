@@ -9,8 +9,9 @@ const subHeaderData = {
   title: 'How old are you?'
 }
 
-const AgeInput = ({ nextPage, backPage, retrieveAgeData }) => {
+const AgeInput = ({ changePage, retrieveAgeData }) => {
   const [ageGroup, setAgeGroup] = useState();
+  const { nextPage, backPage } = changePage;
 
   const radioData = { 
     nextPage, 

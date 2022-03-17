@@ -24,40 +24,36 @@ const TypeForm = () => {
   const retrieveProductivityData = (productivityData) => setProductivity(productivityData);
   const retrieveStressData = (stressData) => setStress(stressData);
   const closingData = { age, hours, location, productivity, stress };
+  const changePage = { nextPage, backPage }
 
   return (
     <main>
       {page === 0 && (
-        <Welcome nextPage={nextPage} />
+        <Welcome changePage={changePage} />
       )}
       {page === 1 && (
         <AgeInput
-          nextPage={nextPage}
-          backPage={backPage}
+          changePage={changePage}
           retrieveAgeData={retrieveAgeData} />
       )}
       {page === 2 && (
         <WorkHoursInput
-          nextPage={nextPage}
-          backPage={backPage}
+          changePage={changePage}
           retrieveHoursData={retrieveHoursData} />
       )}
       {page === 3 && (
         <PreferredHoursInput
-          nextPage={nextPage}
-          backPage={backPage}
+          changePage={changePage}
           retrieveLocationData={retrieveLocationData} />
       )}
       {page === 4 && (
         <ProductivityRange
-          nextPage={nextPage}
-          backPage={backPage}
+          changePage={changePage}
           retrieveProductivityData={retrieveProductivityData} />
       )}
       {page === 5 && (
         <StressRange
-          nextPage={nextPage}
-          backPage={backPage}
+          changePage={changePage}
           retrieveStressData={retrieveStressData} />
       )}
       {page === 6 && (

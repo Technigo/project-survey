@@ -17,8 +17,9 @@ const allLocations = [
   'Fully remote'
 ];
 
-const PreferredHoursInput = ({ nextPage, backPage, retrieveLocationData }) => {
+const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
   const [location, setLocation] = useState();
+  const { nextPage, backPage } = changePage;
 
   const selectData = {
     nextPage,

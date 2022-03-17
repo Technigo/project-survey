@@ -7,12 +7,13 @@ import '../../styled-components/Radio.css';
 
 const preferences = ['Yes', 'No'];
 const subHeaderData = {
-  pageNumber: 2,
+  page: 2,
   title: 'Would you prefer a company that offers flexible work hours?'
 }
 
-const WorkHoursInput = ({ nextPage, backPage, retrieveHoursData }) => {
+const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
   const [hours, setHours] = useState();
+  const { nextPage, backPage } = changePage;
 
   const radioData = {
     nextPage,
