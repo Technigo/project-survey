@@ -1,10 +1,5 @@
 import React from 'react'
 
-import selectedWand1 from "../assets/wand1.png"
-import selectedWand2 from "../assets/wand2.png"
-import selectedWand3 from "../assets/wand3.png"
-import selectedWand4 from "../assets/wand4.png"
-
 const Overview = ({name, wand, house, pet}) => {
     
   

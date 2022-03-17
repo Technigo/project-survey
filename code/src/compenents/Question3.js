@@ -8,10 +8,10 @@ import wand4 from "../assets/wand4.png"
 
 const Question3 = ({wand, onWandChange, onStepChange}) => {
     
-const wands = ['1: Wand: Maple Wood with a dragon heartstring core, 12 ½', 
-'2: Black Walnut wood with a phoenix feather core, 13', 
-'Pine wood with a unicorn hair core, 10 ¾', 
-'Ebony wood, Unicorn hair core, 11 1/2']
+// const wands = ['1: Wand: Maple Wood with a dragon heartstring core, 12 ½', 
+// '2: Black Walnut wood with a phoenix feather core, 13', 
+// 'Pine wood with a unicorn hair core, 10 ¾', 
+// 'Ebony wood, Unicorn hair core, 11 1/2']
 
 
     return (
