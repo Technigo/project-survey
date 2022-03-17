@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 
+import Intro from "./Intro";
 import Name from "./Name";
 import FirstQue from "./FirstQue";
 import SecondQue from "./SecondQue";
@@ -9,7 +10,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [FavoriteInput, setFavoriteInput] = useState("");
   const [HolidayInput, setHolidayInput] = useState("");
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState(0);
 
   const NameInputChange = (event) => {
     setNameInput(event.target.value);
@@ -27,6 +28,7 @@ const Form = () => {
 
   return (
     <div className="questions">
+      {step === 0 && <Intro Change={Change} />}
       {step === 1 && (
         <Name
           nameInput={nameInput}
@@ -54,7 +56,7 @@ const Form = () => {
           FavoriteInput={FavoriteInput}
           HolidayInput={HolidayInput}
         />
-      )}
+      )}{" "}
     </div>
   );
 };
