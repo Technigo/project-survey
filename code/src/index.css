@@ -1,13 +1,215 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  font-family: "Helvetica Neue";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+body {
+  background-image: url(./images/smal-rainbow.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  max-height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  padding: 650px 10px;
+}
+
+/* HEADERS, PARAGRAPHS */
+
+.welcome,
+.beyonce-input,
+.identify,
+.radio-coffee,
+.hangout,
+.summary {
+  color: white;
+}
+
+.header-text,
+.beyonce-header,
+.identify-text,
+.radio-heading,
+.hangout-text,
+.summary-heading {
+  font-size: 34px;
+  line-height: 40px;
+  padding-bottom: 20px;
+}
+
+.header-paragraph,
+.summary-paragraph {
+  font-size: 20px;
+  padding-top: 10px;
+}
+
+/* BUTTONS */
+
+.start-btn {
+  line-height: 24px;
+  font-size: 20px;
+  padding: 10px 30px;
+  margin-top: 45px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 45px;
+  background-color: #efefef;
+}
+
+.start-btn:hover {
+  background-color: #e76319;
+  color: #ffff;
+}
+
+.back-button,
+.next-button,
+.submit-button,
+.restart-btn {
+  line-height: 24px;
+  font-size: 20px;
+  padding: 10px 30px 10px;
+  margin-top: 45px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  border-radius: 45px;
+}
+
+.back-button {
+  background-color: #ffff;
+}
+
+.next-button,
+.submit-button,
+.restart-btn {
+  margin-left: 30px;
+  background-color: #e76319;
+  color: #ffff;
+}
+
+.submit-button:hover,
+.next-button:hover {
+  background-color: #f89453;
+}
+
+.back-button:hover {
+  background-color: #f89453;
+  color: #ffff;
+}
+
+.beyonce-text,
+.dropdown-menu {
+  background-color: transparent;
+  font-size: 30px;
+  line-height: 38px;
+  color: white;
+  padding: 0px 5px;
+  border: none;
+  outline: none;
+  box-shadow: rgba(255, 255, 255, 0.5) 0px 1px;
+  text-align: center;
+}
+
+::placeholder {
+  color: #f89453;
+}
+
+/* RADIO BUTTONS */
+
+.radio-container {
+  display: inline-block;
+  position: relative;
+  padding-left: 50px;
+  cursor: pointer;
+  font-size: 22px;
+  user-select: none;
+}
+
+/* Hide the browser's default radio button */
+.radio-container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* Custom radio button */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+  border-radius: 50%;
+  margin-left: 10px;
+}
+
+/* On mouse-over, add a grey background color */
+.radio-container:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+
+/* Checked radio button color change */
+.radio-container input:checked ~ .checkmark {
+  background-color: #c46e46;
+}
+
+@media (min-width: 769px) {
+  .header-text,
+  .beyonce-header,
+  .identify-text,
+  .radio-heading,
+  .summary-heading {
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .header-paragraph,
+  .summary-paragraph {
+    font-size: 30px;
+  }
+
+  .start-btn,
+  .back-button,
+  .next-button,
+  .submit-button,
+  .restart-btn {
+    font-size: 30px;
+    padding: 20px 30px;
+    margin-top: 30px;
+  }
+
+  .back-button,
+  .next-button,
+  .submit-button {
+    margin-top: 80px;
+  }
+
+  .radio-container {
+    padding-left: 0;
+    font-size: 30px;
+  }
+
+  /* Custom radio button */
+  .checkmark {
+    height: 30px;
+    width: 30px;
+    margin-top: 6px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .welcome,
+  .name-input,
+  .location,
+  .radio-age,
+  .summary {
+    width: 700px;
+  }
 }
