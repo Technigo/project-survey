@@ -8,7 +8,7 @@ export const App = () => {
     <>
     <Header />
 
-    <div>
+    <div className="background">
       <Form />
     </div>
 

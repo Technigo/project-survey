@@ -5,8 +5,10 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color:antiquewhite;
+  -moz-osx-font-smoothing: grayscale; 
+  background-image: url(./images/solen-feyissa-CKUXpi-7clM-unsplash.jpg); 
+  background-repeat: no-repeat;
+  background-size: 100vh;
 }
 
 code {
@@ -23,6 +25,24 @@ h1 {
   margin-top: 0;
 }
 
-.summary-will-show {
-  /*display summary at the push of a button, otherwise display: none*/
+.container {
+  width: 375px;
+  margin: 0 auto;
+  background-color: #8F5A76;
+}
+
+label {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.next-btn {
+  background-color: green;
+}
+
+.back-btn {
+  background-color: red;
+}
+
+.restart {
+  background-color: yellow;
 }

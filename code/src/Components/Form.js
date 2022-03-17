@@ -8,17 +8,18 @@ const Form = () => {
     const [name, setName] = useState('')
     const [ageGroup, setAgeGroup] = useState(false)
     const [bands, setBands] = useState('Korn')
-    const [shirt, setShirt] = useState('yes')
+    const [shirt, setShirt] = useState(false)
     
     //State property to go to next question or back
     const [section, setSection] = useState(0)
 
     const nextSection = () => {setSection(section + 1)}
     const backSection = () => {setSection(section - 1)}
+    const restart = () =>{setSection(section - 3)}
 
 
     // Arrays of objects in radio buttons and dropdown
-    const ageGroups = ["0-17", "18 and older"]
+    const ageGroups = ["0-17", "18 and older"]                //Change to sizes?
     const bandOptions = ['Korn', 'Mumford & Sons', 'Red Hot Chili Peppers', 'Foo Fighters', 'Rammstein' ]
 
     const handleSubmit = (event) => {event.preventDefault()}
@@ -27,13 +28,11 @@ return (
         <section>
 
         <form onSubmit={handleSubmit}>
-            <h2>Answer the following five questions and submit to order your awesome tickets</h2>
             {section === 0 && (
             <FirstQuestion 
             name={name} 
             setName={setName}
             nextSection={nextSection}
-            backSection={backSection}
             />)}
             
             {section === 1 && (
@@ -63,6 +62,7 @@ return (
             <Summary name = {name} 
             ageGroup = {ageGroup}
             bands = {bands}
+            restart = {restart}
             />
             
             )}

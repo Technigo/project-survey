@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, setShirt}) => {
+const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, shirt, setShirt}) => {
     return (
 
         <article>
@@ -16,29 +16,31 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                     
                         ))}
                     </select>
-                </div>
-            <div>
-                <label htmlFor="t-shirt">Do you want a band T-shirt from your chosen band?
+            
+                <label htmlFor="yes">Yes
                     <input type="checkbox" 
                     name="yes" 
                     value="yes"
+                    defaultChecked="yes"
                     onChange={event =>setShirt(event.target.value)}/>
-                    <input 
-                    type="checkbox" 
-                    name="no"
+                </label>
+
+                <label htmlFor="t-shirt">No
+                    <input type="checkbox" 
+                    name="no" 
                     value="no"
-                    onChange={event =>setShirt(event.target.value)}
-                    />
+                    defaultChecked="No"
+                    onChange={event =>setShirt(event.target.value)}/>
                 </label>
             </div>
 
-                <button
-                onClick= {backSection}
-                >
-                Back question</button>
+            <button className="back-btn"
+            onClick= {backSection}
+            >
+            Back question</button>
 
 
-            <button
+            <button className="buy-btn"
             onClick= {nextSection}>
             Buy tickets
             </button>

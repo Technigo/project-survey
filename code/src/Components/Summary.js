@@ -1,10 +1,7 @@
 import React from 'react'
 
-const Summary = (props) => {
-    const name = props.name
-    const age = props.ageGroup
-    const band = props.bands
-    const shirt = props.shirt
+const Summary = ({name, ageGroup, bands, shirt, restart}) => {
+    
 
 // if (age === "0-17") {
 //     alert
@@ -14,10 +11,14 @@ const Summary = (props) => {
 
     return (
         <article>
-            <div className='summary-will-show'>
-                <p>Hello {name}, you are {age} and you are going to see {band}. 
+            <div>
+                <p>Hello {name}, you are {ageGroup} and you are going to see {bands}. 
                 You will recieve a shirt: {shirt}</p>
             </div>
+
+            <button className="restart"
+            onClick= {restart}
+            >Go back to start</button>
         </article>
     )
 }

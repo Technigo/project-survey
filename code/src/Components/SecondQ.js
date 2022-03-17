@@ -17,12 +17,12 @@ const SecondQuestion = ({  setAgeGroup, ageGroups, nextSection, backSection }) =
                 </label>
                 ))}
 
-                <button
+                <button className="next-btn"
                 onClick= {nextSection}
                 >
                 Next question</button>
 
-                <button
+                <button className="back-btn"
                 onClick= {backSection}
                 >
                 Back question</button>
