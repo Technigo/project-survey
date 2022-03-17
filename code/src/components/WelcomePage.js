@@ -5,7 +5,8 @@ const WelcomePage = ({ onNextChange }) => {
     <section className='container'>
       <form>
         <label htmlFor='welcomeInput'>
-          <h2>Welcome page - </h2>
+          <h1 className='header'>VACATION SURVEY</h1>
+          <p>Let us know what kind of destinations you like!</p>
         </label>
         <button onClick={onNextChange}>Start here!</button>
       </form>

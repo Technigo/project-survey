@@ -18,14 +18,37 @@ code {
 }
 
 .container {
-  width: 60vw;
+  width: 70vw;
   text-align: center;
   margin: auto;
-  padding-top: 50px;
+  padding-top: 100px;
+}
+
+.header {
+  font-size: 28px;
+  /* background-color: rgb(180, 159, 159); */
+  /* opacity: 0.6; */
+}
+
+p {
+  font-size: 20px;
+}
+
+.page-title {
 }
 
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
+}
+
+button {
+  display: flex;
+  margin: auto;
+}
+
+.align-radio {
+  display: flex;
+  justify-content: center;
 }

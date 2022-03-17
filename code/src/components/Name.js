@@ -2,9 +2,9 @@ import React from 'react';
 
 const Name = ({ name, onInputChange, onNextChange }) => {
   return (
-    <div>
-      <h2>What should I call you?</h2>
-      <section className='container'>
+    <section className='container'>
+      <h2 className='page-title'>What should I call you?</h2>
+      <div>
         <form>
           <label htmlFor='name' label='name'>
             <p>Type your name here: </p>
@@ -20,8 +20,8 @@ const Name = ({ name, onInputChange, onNextChange }) => {
             Next
           </button>
         </form>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

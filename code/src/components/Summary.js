@@ -6,7 +6,7 @@ const Summary = ({ name, weather, money }) => {
       <h2>Summary</h2>
       <p>Those are some awesome choices {name}!</p>
       <ul>
-        <li></li>
+        {/* <li></li> */}
         <li>{weather}</li>
         <li>{money}</li>
       </ul>
