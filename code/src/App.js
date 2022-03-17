@@ -10,7 +10,12 @@ import { Overview } from "components/Overview";
 import { DateInput } from "components/DateInput";
 import { TimeInput } from "components/TimeInput";
 import { GiftInput } from "components/GiftInput";
-import { Button, StartButton, SubmitButton } from "components/Buttons";
+import {
+	Button,
+	StartButton,
+	SubmitButton,
+	StartOverButton,
+} from "components/Buttons";
 import { ThemeInput } from "components/ThemeInput";
 
 export const App = () => {
@@ -51,6 +56,10 @@ export const App = () => {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		setCounter(counter + 1);
+	};
+
+	const startOver = () => {
+		setCounter(0);
 	};
 
 	return (
@@ -165,7 +174,7 @@ export const App = () => {
 						<div className="question-wrapper">
 							<h3>Who should the invited respond to?</h3>
 							<TextInput
-								text={"Respont to"}
+								text={"Respond to"}
 								inputName={"rvspTo"}
 								placeholder={"name"}
 								state={state.rvspTo}
@@ -204,6 +213,7 @@ export const App = () => {
 			{counter === 0 && (
 				<section className="overview-wrapper">
 					<Overview pronoun={pronoun} state={state} />
+					<StartOverButton resetBtn={startOver} />
 				</section>
 			)}
 		</main>

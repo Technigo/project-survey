@@ -48,7 +48,7 @@ h3 {
 	margin: 1em 1em;
 	letter-spacing: 0.9px;
 	max-width: 40ch;
-	padding-bottom: 1em;
+	padding-bottom: 0.5em;
 }
 
 p {
@@ -83,6 +83,7 @@ fieldset {
 legend {
 	text-transform: uppercase;
 	text-align: start;
+	background-color: var(--clr-lighter);
 }
 
 label {
@@ -91,6 +92,7 @@ label {
 	text-align: left;
 	padding: 1em;
 	text-transform: uppercase;
+	font-weight: 500;
 }
 
 label.radio {
@@ -115,12 +117,15 @@ select {
 input[type="text"],
 input[type="date"],
 input[type="time"],
-select {
+input:active,
+select,
+select:active {
 	font-family: inherit;
 	width: 225px;
 	height: 37px;
 	border: none;
 	background-color: var(--clr-light);
+	padding-left: 0.2em;
 }
 
 input[type="radio"],
@@ -129,7 +134,17 @@ input[type="radio"]:active {
 	margin-right: 0.8em;
 	padding: 0.4em 0.4em;
 	height: 2px;
+	width: 2px;
 	background: var(--clr-dark);
+}
+
+input:focus,
+input:hover,
+select:hover,
+select:focus {
+	outline: none;
+	background: var(--clr-light);
+	border-bottom: 3px solid var(--clr-dark);
 }
 
 input[type="radio"]:hover,
@@ -139,14 +154,6 @@ input[type="radio"]:focus {
 
 input[type="radio"]:checked {
 	outline: 3px solid var(--clr-black);
-}
-
-input:active,
-input:focus,
-input:hover {
-	outline: none;
-	background: var(--clr-light);
-	border-bottom: 3px solid var(--clr-dark);
 }
 
 /***********************/
@@ -215,7 +222,21 @@ section.intropage-wrapper {
 /**********************/
 
 @media (min-width: 668px) {
-	h1 {
-		font-size: 4rem;
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h2.invitation-text {
+		font-size: 1.2rem;
+	}
+
+	h3 {
+		font-size: ;
+	}
+}
+
+@media (min-width: 1024px) {
+	h2 {
+		font-size: 2.5rem;
 	}
 }

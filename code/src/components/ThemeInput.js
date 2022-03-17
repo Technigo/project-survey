@@ -11,7 +11,6 @@ export const ThemeInput = ({ state, handleInput }) => {
 	return (
 		<div className="theme-wrapper">
 			<h3>Select which color theme you prefer!</h3>
-			<legend className="radio theme">Choose color theme</legend>
 			<div className="theme-wrapper--images">
 				<label>
 					<input

@@ -13,6 +13,13 @@ export const Overview = ({ pronoun, state }) => {
 		possPronoun = "their";
 	}
 
+	let backgroundcolor;
+	if (state.theme === "purpleyellow" || "yellowpink") {
+		backgroundcolor = true;
+	} else {
+		backgroundcolor = false;
+	}
+
 	//return month as month
 	const months = [
 		"Jan",
@@ -34,10 +41,13 @@ export const Overview = ({ pronoun, state }) => {
 	let day = formattedDate.getDate();
 
 	return (
-		<div className="invitation-card--wrapper">
+		<div
+			className="invitation-card--wrapper"
+			style={{ backgroundColor: backgroundcolor ? "#FFDDDD" : "#D5E4F5" }}
+		>
 			<PennantImage color={state.theme} alt="pennant in colors" />
 			<h1 className="highlight">{state.name}</h1>
-			<h2>
+			<h2 className="invitation-text">
 				Invites you to celebrate {possPronoun} {state.pronouns} {state.age}{" "}
 				birthday
 			</h2>

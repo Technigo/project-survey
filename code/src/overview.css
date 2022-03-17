@@ -1,6 +1,7 @@
 section.overview-wrapper {
 	background: var(--clr-lighter);
 	display: flex;
+	flex-direction: column;
 }
 
 .overview-wrapper {
