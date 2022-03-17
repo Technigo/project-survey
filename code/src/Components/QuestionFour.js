@@ -1,6 +1,6 @@
 import React from "react";
 
-const AgeGroups = ["Artist", "Curator", "Gallerist", "Art enthusiast!"];
+const AgeGroups = ["Artist", "Curator", "Gallerist", "Art lover"];
 
 export const QuestionFour = ({ ageGroup, onAgeGroupInputChange }) => {
 
