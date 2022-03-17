@@ -1,6 +1,6 @@
 button.btn {
 	padding: 10px 35px;
-	margin: 2.5em 0;
+	margin: 1.5em 0;
 	width: 225px;
 	cursor: pointer;
 	font-size: inherit;
@@ -32,12 +32,12 @@ button.next-btn:focus {
 }
 
 button.back-btn {
-	width: 40px;
-	height: 40px;
+	width: 30px;
+	height: 30px;
 	border-radius: 50%;
 	padding: 0;
 	position: absolute;
-	bottom: 0.25em;
+	bottom: 0;
 	background: var(--clr-black);
 	background: url("./assets/back-btn.png");
 	background-size: contain;
@@ -47,4 +47,15 @@ button.back-btn:hover,
 button.back-btn:focus {
 	transform: scale(1.1);
 	transition: all 0.3s ease-in-out;
+}
+
+@media (min-width: 668px) {
+	button.back-btn {
+		width: 40px;
+		height: 40px;
+	}
+
+	button.btn {
+		margin: 2.5em 0;
+	}
 }

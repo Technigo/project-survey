@@ -17,7 +17,7 @@ import {
 	StartOverButton,
 } from "components/Buttons";
 import { ThemeInput } from "components/ThemeInput";
-import { Footer } from "components/Footer";
+import { ProgressLine } from "components/ProgressLine";
 
 export const App = () => {
 	const initialState = {
@@ -229,7 +229,7 @@ export const App = () => {
 			</main>
 
 			{/* Footer */}
-			{counter !== 0 && <Footer step={counter} setStep={setCounter} />}
+			{counter !== 0 && <ProgressLine step={counter} setStep={setCounter} />}
 		</>
 	);
 };

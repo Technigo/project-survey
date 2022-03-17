@@ -1,6 +1,6 @@
 .invitation-card--wrapper {
-	width: 370px;
-	height: 500px;
+	width: 360px;
+	height: 400px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -36,7 +36,7 @@ img.pennant {
 svg {
 	overflow: visible;
 	position: absolute;
-	top: 0;
+	top: -20px;
 	width: 370px;
 }
 

@@ -1,8 +1,8 @@
 import React from "react";
 
-import "../footer.css";
+import "../progressline.css";
 
-export const Footer = ({ step, setStep }) => {
+export const ProgressLine = ({ step, setStep }) => {
 	if (step === 0 || step === 8) {
 	} else {
 	}
