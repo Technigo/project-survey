@@ -1,13 +1,10 @@
 # Survey form with React
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Creating a survey in React. Using React state hooks + components and props for structure.
+Conditional rendering based on if the form is submitted or not.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Besides from useState hooks, this project is based on html form and required tags for validation. Approached based on conditional rendering: if form is not submitted (i.e. usestate acts as a flag with boolean value), then render this (the form), else render this (the form response).
+Next steps would be to make the components reusable for many different questions, e.g. in the input field component.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Live demo: https://hungry-hermann-c6b3c3.netlify.app
