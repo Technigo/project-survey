@@ -3,7 +3,7 @@ import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import Summary from './Summary';
 import DropDown from './DropDown';
-import RadioButtons from './RadioButtons'
+import RadioButtons from './RadioButtons';
 
 const CalculationForm = () => {
 const [username, setUsername] = useState('');
@@ -50,8 +50,8 @@ const ageChange = (event) => {
 
             <RadioButtons
                 ageChange={ageChange}
-                ageGroupe={ageGroup}
-            />
+                ageGroup={ageGroup}
+                    />
                 
             <SecondQuestion 
                 numberOne={numberOne}
@@ -67,7 +67,9 @@ const ageChange = (event) => {
                 username={username} 
                 numberOne={numberOne}
                 numberTwo={numberTwo}
-                location={location}  />
+                location={location}  
+                ageGroup={ageGroup}
+                />
 
 
                 )}
