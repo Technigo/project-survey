@@ -6,7 +6,7 @@ export const Review = ({ formData, setFormData }) => {
       <div className="review-container">
         <li>Email: {formData.email}</li>
         <li>Password: {formData.password}</li>
-        <li>First Name:{formData.firstName}</li>
+        <li>Destination: {formData.destination}</li>
         <li>Last Name:{formData.lastName}</li>
         <li>Username:{formData.username}</li>
         <li>Nationality: {formData.nationality}</li>

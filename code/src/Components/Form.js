@@ -8,19 +8,18 @@ export const Form = () => {
 
     const [page, setPage] = useState(0);
     
-
     const [formData, setFormData] = useState({
         email: "",
         password: "",
         confirmPassword: "",
-        firstName: "",
-        lastName: "",
-        username: "",
+        destination: "", //radio
+        lastName: "", //radio
+        username: "", //radio
         nationality: "",
         other: "",
     });
 
-    const FormTitles = ["Sign Up", "Personal Info", "Other", "Review"]
+    const FormTitles = ["Who are you?", "Preferred destination?", "Other", "Review"]
 
     const PageDisplay = () => {
         if(page === 0) {

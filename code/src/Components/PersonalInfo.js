@@ -1,16 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const PersonalInfo = ({ formData, setFormData }) => {
+
+    const handleChange = event => {
+      const target = event.target
+      const name = target.name
+      const value = target.value
+      setFormData({
+        ...formData,
+        [name] : value  
+      })
+    }
+
     return(
       <div className="personal-info-container">
         <div>
-          <lable>Male:</lable>
-        <input type="radio" name="gender" text="First Name..." checked={formData.firstName} onChange={(event) => setFormData({...formData, firstName: event.target.checked})}/>
+          <lable>The moon</lable>
+        <input type="radio" name="destination" value="The moon" onChange={handleChange} checked={formData.destination=="The moon"} />
         </div>
-        <div><lable>Female:</lable>
-        <input type="radio" name="gender" placeholder="Last Name..." checked={formData.lastName} onChange={(event) => setFormData({...formData, lastName: event.target.checked})} />
+        <div>
+          <lable>Mars</lable>
+        <input type="radio" name="destination" value="Mars" onChange={handleChange} checked={formData.destination=="Mars"} />
         </div>
-        <input type="text" placeholder="User Name..." value={formData.username} onChange={(event) => setFormData({...formData, username: event.target.value})} />
+        <div>
+          <lable>ISS</lable>
+        <input type="radio" name="destination" value="ISS" onChange={handleChange} checked={formData.destination=="ISS"} />
+        </div>
+        <div>
+          <lable>Mercury</lable>
+        <input type="radio" name="destination" value="Mercury" onChange={handleChange} checked={formData.destination=="Mercury"} />
+        </div>
       </div>
     );
   }
