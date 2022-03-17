@@ -209,7 +209,15 @@ select {
   font-size: 14px;
   border-radius: 5px;
   border: 2px solid var(--accent);
-  padding: 5px 2px;
+  -webkit-appearance: none; 
+  -moz-appearance: none;
+  appearance: none;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  /* background: url(http://dropdown/arrow/url/) no-repeat; */
+  background-position: right center;
+  /* background-color: #CCCCCC; */
+  padding: 5px;
 }
 
 .drop-down {
