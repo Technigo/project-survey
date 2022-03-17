@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import Question from "components/Question";
 import Button from "components/Button";
+import SubmittedView from "components/SubmittedView";
 
 const questions = [
   {
@@ -57,15 +58,7 @@ export const App = () => {
   };
 
   if (questions.length === answers.length) {
-    return (
-      <h1>
-        Thank you! You answered:{" "}
-        {answers.map((answer, i) => (
-          <p key={i}>{answer}</p>
-        ))}
-        <button onClick={resetForm}>Reset</button>
-      </h1>
-    );
+    return <SubmittedView answers={answers} reset={resetForm} />;
   }
 
   return (
