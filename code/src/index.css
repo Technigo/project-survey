@@ -5,59 +5,130 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: pink;
   background-image: url('./assets/confetti.jpg');
-  
-}
-
-
-.profile-picture {
-  background-image: url('./assets/Lovisa\ Brorson\ 2.jpg');
-  background-size: cover;
-  border-radius: 10%;
-  width: 10em;
-  height: 10em;
-  background-position-y: 35%; 
 }
 
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
+/* ----- THE FORM CONTAINER ----- */
+
 .form-container {
-background-color: rgba(255, 192, 203, 0.548);
+background-color: rgba(255, 192, 203, 0.705);
 border-radius: 25px;
 border: rgb(255, 4, 171) 3px solid;
 display: flex;
 flex-direction: column;
-padding: 10px;
-width: 250px;
+padding: 11px;
+width: 85%;
+margin-top: 20px;
 }
 
-h1 {
+.form-container h1,
+.form-container p,
+.form-container h3,
+.form-container h4 {
   text-align: center;
 }
+
+
+/* ----- THE FORM ----- */
 
 .form {
 border: rgb(255, 4, 171) 3px solid;
 border-radius: 5px;
 font-size: 10px;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-padding: 10px 0px 10px 10px;
+font-weight: 600;
+padding: 10px;
 font-family: 'Fredoka', sans-serif;
+align-items: center;
 }
+
+/* ----- THE BUTTON ----- */
 
 .button {
 border: rgb(255, 4, 171) 3px solid;
 border-radius: 5px;
-font-family:Verdana, Geneva, Tahoma, sans-serif;
-font-size: 10px;
+font-family:'Fredoka', sans-serif;
+font-size: 11px;
+font-weight: 600;
 padding: 10px;
 margin: 10px;
 align-self: center;
+transition: all 0.5s;
+cursor: pointer;
 }
 
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* ----- THE SUMMARY ----- */
+
 .summary-container {
+  padding: 20px;
+  background-color: rgba(255, 192, 203, 0.548);
+  border-radius: 25px;
+  border: rgb(255, 4, 171) 3px solid;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.summary-container h1 {
+font-size: 40px;
+text-align: center;
+}
+
+.summary-container h2 {
+text-align: center;
+}
+
+.summary-container p {
+  align-self: flex-start;
+  font-weight: 400;
+}
+
+.profile-picture {
+  background-image: url('./assets/party_lovisa.jpg');
+  background-size: cover;
+  border-radius: 10%;
+  border: rgb(255, 4, 171) 3px solid;
+  width: 12em;
+  height: 12em;
+}
+
+
+/* ----- TABLET AND LAPTOP VIEW ----- */
+
+@media (min-width: 667px) {
+
+.form-container {
   padding: 20px;
   height: auto;
   background-color: rgba(255, 192, 203, 0.548);
@@ -68,67 +139,39 @@ align-self: center;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 20px;
-}
-
-.summary-container p {
-  align-self: flex-start;
-}
-
-.summary-container h1 {
-font-family: Georgia, 'Times New Roman', Times, serif;
-font-size: 40px;
-}
-
-.summary-container h2 {
-text-align: center;
-}
-
-
-
-@media (min-width: 667px) {
-  
-  .form-container {
-    padding: 20px;
-    height: auto;
-    background-color: rgba(255, 192, 203, 0.548);
-    border-radius: 25px;
-    border: rgb(255, 4, 171) 3px solid;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: wrap;
-    justify-content: center;
-    width: 500px;
-}
+  width: 50%;
+}  
 
 .form {
   border: rgb(255, 4, 171) 3px solid;
   border-radius: 5px;
   font-size: 15px;
-  font-family:Verdana, Geneva, Tahoma, sans-serif;
-  padding: 10px 0px 10px 10px;
-  /*font-family: 'Fredoka', sans-serif;*/
+  font-family: 'Fredoka', sans-serif;
+  padding: 10px;
   }
 
-  .button {
+  .button { 
     border: rgb(255, 4, 171) 3px solid;
     border-radius: 5px;
-    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Fredoka', sans-serif;
     font-size: 15px;
     padding: 10px;
     margin: 10px;
     align-self: center;
-    }
+  }
 
+  .summary-container {
+    Width: 45%;
+    margin: 30px;
+  }
 
-
-}
-
-
-@media (min-width: 1025px) {
+  .summary-container p {
+    align-self: flex-start;
+    font-weight: 400;
+    font-size: 20px;
+  }
   
 
 
-
 }
+

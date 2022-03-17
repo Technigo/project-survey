@@ -7,17 +7,18 @@ export const QuestionFour = ({motherhood,setMotherhood, step, setStep}) => {
         <div className="form-container">
         <form >
             <label>
-            <p>What about if your new co-worker have kids? Can you see all the benefits with planing, structuring, doing multiple things at the same time, productiveness that brings, or do you just se snot snot snot? </p>
-            <p>So, motherhood, is that a good thing? 
+            <h3>Kids, haa?</h3>
+            <p>What about if your new co-worker have kids? Can you see all the benefits with planing, structuring, doing multiple things at the same time, the productiveness that brings, or do you just see snot snot snot? So, what do you think, can parenthood be good thing when it comes to work? </p>
+            <p> Shine bright like a dimond!
             <input type="checkbox"
             checked={motherhood} 
             onChange={event => setMotherhood(event.target.checked)} 
             /> </p> 
-           <p>Alway late and home with sick kids, nope, don't think so!
+           <p>Naa.. Alway late and home with sick kids.
             <input type="checkbox" /> </p>
             </label>
         </form>
-          <button className="button" onClick={() => setStep(step + 1)}>NEXT</button>
+          <button className="button" onClick={() => setStep(step + 1)}><span>NEXT </span></button>
           </div>
           </div>
     );

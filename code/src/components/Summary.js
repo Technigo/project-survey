@@ -3,15 +3,17 @@ import React from 'react'
 export const Summary = ({quality, personality, experience, motherhood, age}) => {
 
     return (
+        <div className='main'>
         <div className='summary-container'>
         <h1>LOVISA</h1>
         <h2>She is the perfect match for you!</h2>
         <p>Quality: { quality } </p>
         <p>Personality: { personality }</p>
         <p>Experience: { experience }</p>
-        <p>Motherhood: {motherhood ? "Is great!" : "Noo, mothers are just home with sick kids."}</p>
-        <p>Age:{age}</p>
+        <p>Parenthood: { motherhood ? "Is great!" : "Noo, mothers are just home with sick kids." }</p>
+        <p>Age:{ age }</p>
         <div className="profile-picture"></div>
+        </div>
         </div>
     )
 }
