@@ -3,6 +3,7 @@ import { QuestionOne } from './components/QuestionOne'
 import { QuestionTwo } from './components/QuestionTwo'
 import { QuestionThree } from './components/QuestionThree'
 import { QuestionFour } from './components/QuestionFour'
+import { QuestionFive } from './components/QuestionFive'
 import { Summary } from './components/Summary'
 
 export const App = () => {
@@ -11,7 +12,7 @@ const [quality, setQuality] = useState('');
 const [personality, setPersonality] = useState("");
 const [experience, setExperience] = useState("");
 const [motherhood, setMotherhood] = useState(false);
-    
+const [age, setAge] = useState();  
 
 
 if (step === 1) {
@@ -49,7 +50,15 @@ if (step === 1) {
     step={step}
     setStep={setStep} />
   )
-} else if (step === 5) {
+} else if (step === 5 ) {
+  return (
+    <QuestionFive
+    age={age}
+    setAge={setAge}
+    step={step}
+    setStep={setStep} />
+  )
+} else if (step === 6) {
   return (
   <Summary 
   quality={quality}
@@ -59,6 +68,8 @@ if (step === 1) {
   />
   )
 }
+
+
 
 }
   

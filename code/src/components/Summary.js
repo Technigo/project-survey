@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Summary = ({quality, personality, experience, motherhood}) => {
+export const Summary = ({quality, personality, experience, motherhood, age}) => {
 
     return (
         <div className='summary-container'>
@@ -10,6 +10,7 @@ export const Summary = ({quality, personality, experience, motherhood}) => {
         <p>Personality: { personality }</p>
         <p>Experience: { experience }</p>
         <p>Motherhood: {motherhood ? "Is great!" : "Noo, mothers are just home with sick kids."}</p>
+        <p>Age:{age}</p>
         <div className="profile-picture"></div>
         </div>
     )

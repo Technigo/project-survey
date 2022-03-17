@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 export const QuestionThree = ({experience, setExperience, step, setStep}) => {
 
 return (
+    <div className='main'>
     <div className='form-container'>
     <p>Experience can be important and make the job a bit easier but it's not all. In the right environment even a cactus can bloom! What kind of backgroud do you see in you nex mate? A team-buddy? Someone taking care of the grumpy customers? You tell me!</p>
     <form >
@@ -16,7 +17,8 @@ return (
     <option value="Customers contact">Some customers care experices is allways good.</option>
     </select>
     </form>
-    <button className="button" onClick={() => setStep(step + 1)}>Next question</button>
+    <button className="button" onClick={() => setStep(step + 1)}>NEXT</button>
+    </div>
     </div>
 );
 

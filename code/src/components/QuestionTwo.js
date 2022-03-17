@@ -5,6 +5,7 @@ export const QuestionTwo = ({personality, setPersonality, step, setStep}) => {
 
 
 return (
+    <div className='main'>
     <div className='form-container'>
     <p>You will hang out with this person almost every day, how will you cope?! Must be some really professional but fun and easy going too, or, whats most important for you?</p>
     <form >
@@ -18,7 +19,8 @@ return (
     <option value="Brave">Brave, someone that can stand up for their opinion.</option>
     </select>
     </form>
-    <button className="button" onClick={() => setStep(step + 1)}>Next question</button>
+    <button className="button" onClick={() => setStep(step + 1)}>NEXT</button>
+    </div>
     </div>
 );
 
