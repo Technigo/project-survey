@@ -1,12 +1,12 @@
 import React from "react";
 
-const AgeGroups = ["0-18", "19-30", "30+"];
+const AgeGroups = ["Art student", "Artist", "Curator", "Other"];
 
 export const QuestionFour = ({ ageGroup, onAgeGroupInputChange }) => {
 
   return (
     <form className="age-form" onSubmit={event => event.preventDefault()}>
-      Your Age:
+      What is your occupatoion?
       {AgeGroups.map(group => (
         <label htmlFor="ageGroup" key={group}>
           <input

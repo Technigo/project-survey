@@ -48,8 +48,10 @@ label, button {
   margin: 5vw 2vw;
 }
 
-.age-form {
+.member-form, .age-form {
+  flex-wrap: wrap;
   flex-direction: row;
+  justify-content: center;
 }
 
 .summary {
