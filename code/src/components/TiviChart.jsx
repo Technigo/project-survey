@@ -10,28 +10,28 @@ import { PolarArea } from 'react-chartjs-2';
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
 
-export const data = {
-  labels: ['Stimulation', 'Self-Direction', 'Universalism', 'Benevolence', 'Conformity', 'Tradition', 'Security', 'Power', 'Achievement', 'Hedonism'],
-  datasets: [
-    {
-      label: '# of Votes',
-      data: [6, 5, 3, 5, 2, 3, 4, 5, 6, 4],
-      backgroundColor: [
-        'rgba(255, 99, 132, 0.5)',
-        'rgba(54, 162, 235, 0.5)',
-        'rgba(255, 206, 86, 0.5)',
-        'rgba(75, 192, 192, 0.5)',
-        'rgba(153, 102, 255, 0.5)',
-        'rgba(255, 159, 64, 0.5)',
-        'rgba(255, 206, 86, 0.5)',
-        'rgba(75, 192, 192, 0.5)',
-        'rgba(153, 102, 255, 0.5)',
-        'rgba(255, 159, 64, 0.5)',
-      ],
-      borderWidth: 1,
-    },
-  ],
-};
+// export const data = {
+//   labels: ['Stimulation', 'Self-Direction', 'Universalism', 'Benevolence', 'Conformity', 'Tradition', 'Security', 'Power', 'Achievement', 'Hedonism'],
+//   datasets: [
+//     {
+//       label: '# of Votes',
+//       data: [6, 5, 3, 5, 2, 3, 4, 5, 6, 4],
+//       backgroundColor: [
+//         'rgba(255, 99, 132, 0.5)',
+//         'rgba(54, 162, 235, 0.5)',
+//         'rgba(255, 206, 86, 0.5)',
+//         'rgba(75, 192, 192, 0.5)',
+//         'rgba(153, 102, 255, 0.5)',
+//         'rgba(255, 159, 64, 0.5)',
+//         'rgba(255, 206, 86, 0.5)',
+//         'rgba(75, 192, 192, 0.5)',
+//         'rgba(153, 102, 255, 0.5)',
+//         'rgba(255, 159, 64, 0.5)',
+//       ],
+//       borderWidth: 1,
+//     },
+//   ],
+// };
 
 const options = {
     scales: {
@@ -58,17 +58,17 @@ const openSesame = () => {
   }
 }
 
-export function TiviChart (props) {
-    const stim = ((props.q6Answer + props.q16Answer) / 2)
-    const self = ((props.q5Answer + props.q15Answer) / 2)
-    const univ = ((props.q4Answer + props.q14Answer) / 2)
-    const bene = ((props.q3Answer + props.q13Answer) / 2)
-    const conf = ((props.q1Answer + props.q11Answer) / 2)
-    const trad = ((props.q2Answer + props.q12Answer) / 2)
-    const secu = ((props.q10Answer + props.q20Answer) / 2)
-    const powe = ((props.q9Answer + props.q19Answer) / 2)
-    const achi = ((props.q8Answer + props.q18Answer) / 2)
-    const hedo = ((props.q7Answer + props.q17Answer) / 2)
+export function TiviChart ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer, q16Answer, q17Answer, q18Answer, q19Answer, q20Answer}) {
+    const stim = ((q6Answer + q16Answer) / 2)
+    const self = ((q5Answer + q15Answer) / 2)
+    const univ = ((q4Answer + q14Answer) / 2)
+    const bene = ((q3Answer + q13Answer) / 2)
+    const conf = ((q1Answer + q11Answer) / 2)
+    const trad = ((q2Answer + q12Answer) / 2)
+    const secu = ((q10Answer + q20Answer) / 2)
+    const powe = ((q9Answer + q19Answer) / 2)
+    const achi = ((q8Answer + q18Answer) / 2)
+    const hedo = ((q7Answer + q17Answer) / 2)
 
     const data = [
         {

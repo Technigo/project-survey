@@ -1,7 +1,7 @@
 import React from "react";
 
-const ProgressBar = (props) => {
-    let completed = ((props.pageNumber * 100)/9)
+const ProgressBar = ({pageNumber}) => {
+    let completed = ((pageNumber * 100)/9)
     const progressStatus = {
         width: `${completed}%`,
     }

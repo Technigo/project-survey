@@ -18,7 +18,7 @@ const genderArray = [
     },
 ]
 
-const Gender = (props) => {
+const Gender = ({gender, askGender, error}) => {
     return (
         <div className="page-container">
         <h2>Please select your gender:</h2>
@@ -36,7 +36,7 @@ const Gender = (props) => {
                     type="radio" 
                     name="gender" 
                     value={value}
-                    onChange={(event) => props.askGender(event.target.value)} 
+                    onChange={(event) => askGender(event.target.value)} 
                 />
                 <span></span>
                 </label>
@@ -44,7 +44,7 @@ const Gender = (props) => {
             </React.Fragment>
         ))}
         </div>
-        {props.error !== 'noError' && <p className="error-message">{props.error}</p>}
+        {error !== 'noError' && <p className="error-message">{error}</p>}
         </div>
     )
 }

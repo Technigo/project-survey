@@ -10,9 +10,9 @@ let tries = 'try'
 let does = 'do'
 // let has = 'have'
 
-const TiviDropDownOne = (props) => {
+const TiviDropDownOne = ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q1Question, q2Question, q3Question, q4Question, q5Question, q6Question, q7Question, q8Question, q9Question, q10Question, gender, error}) => {
 
-    if (props.gender === 'Female') {
+    if (gender === 'Female') {
         capital = 'She'
         lower = 'she'
         lower2 = 'her'
@@ -22,7 +22,7 @@ const TiviDropDownOne = (props) => {
         s = 's'
         does = 'does'
         // has = 'has'
-    } if (props.gender === 'Male') {
+    } if (gender === 'Male') {
         capital = 'He'
         lower = 'he'
         lower2 = 'his'
@@ -32,7 +32,7 @@ const TiviDropDownOne = (props) => {
         s = 's'
         does = 'does'
         // has = 'has'
-    } if (props.gender === 'Neither') {
+    } if (gender === 'Neither') {
         capital = 'They'
         lower = 'they'
         lower2 = 'their'
@@ -45,62 +45,62 @@ const TiviDropDownOne = (props) => {
         {
             id: 'tivi1',
             text: `${capital} believe${s} ${lower} should always show respect to ${lower2} parents and to older people. It is important to ${lower3} to be obedient.`,
-            onChange: event => props.q1Question(Number(event.target.value)),
-            value: props.q1Answer
+            onChange: event => q1Question(Number(event.target.value)),
+            value: q1Answer
         },
         {
             id: 'tivi2',
             text: `Religious belief is important to ${lower3}. ${capital} ${tries} hard to do what ${lower2} religion requires.`,
-            onChange: event => props.q2Question(Number(event.target.value)),
-            value: props.q2Answer
+            onChange: event => q2Question(Number(event.target.value)),
+            value: q2Answer
         },
         {
             id: 'tivi3',
             text: `It's very important to ${lower3} to help the people around ${lower3}. ${capital} want${s} to care for their well-being.`,
-            onChange: event => props.q3Question(Number(event.target.value)),
-            value: props.q3Answer
+            onChange: event => q3Question(Number(event.target.value)),
+            value: q3Answer
         },
         {
             id: 'tivi4',
             text: `${capital} think${s} it is important that every person in the world be treated equally. ${capital} believe${s} everyone should have equal opportunities in life.`,
-            onChange: event => props.q4Question(Number(event.target.value)),
-            value: props.q4Answer
+            onChange: event => q4Question(Number(event.target.value)),
+            value: q4Answer
         },
         {
             id: 'tivi5',
             text: `${capital} think${s} it's important to be interested in things. ${capital} like${s} to be curious and to try to understand all sorts of things.`,
-            onChange: event => props.q5Question(Number(event.target.value)),
-            value: props.q5Answer
+            onChange: event => q5Question(Number(event.target.value)),
+            value: q5Answer
         },
         {
             id: 'tivi6',
             text: `${capital} like${s} to take risks. ${capital} ${are} always looking for adventures.`,
-            onChange: event => props.q6Question(Number(event.target.value)),
-            value: props.q6Answer
+            onChange: event => q6Question(Number(event.target.value)),
+            value: q6Answer
         },
         {
             id: 'tivi7',
             text: `${capital} seek${s} every chance ${lower} can to have fun. It is important to ${lower3} to do things that give ${lower3} pleasure.`,
-            onChange: event => props.q7Question(Number(event.target.value)),
-            value: props.q7Answer
+            onChange: event => q7Question(Number(event.target.value)),
+            value: q7Answer
         },
         {
             id: 'tivi8',
             text: `Getting ahead in life is important to ${lower3}. ${capital} strive${s} to do better than others.`,
-            onChange: event => props.q8Question(Number(event.target.value)),
-            value: props.q8Answer
+            onChange: event => q8Question(Number(event.target.value)),
+            value: q8Answer
         },
         {
             id: 'tivi9',
             text: `${capital} always wants to be the one who makes the decisions. ${capital} like${s} to be the leader.`,
-            onChange: event => props.q9Question(Number(event.target.value)),
-            value: props.q9Answer
+            onChange: event => q9Question(Number(event.target.value)),
+            value: q9Answer
         },
         {
             id: 'tivi10',
             text: `It is important to ${lower3} that things be organized and clean. ${capital} really ${does} not like things to be a mess.`,
-            onChange: event => props.q10Question(Number(event.target.value)),
-            value: props.q10Answer
+            onChange: event => q10Question(Number(event.target.value)),
+            value: q10Answer
         },
     ]
 
@@ -134,7 +134,7 @@ const TiviDropDownOne = (props) => {
         </React.Fragment>
         ))}
         </div>
-        {props.error !== 'noError' && <p className="error-message">{props.error}</p>}
+        {error !== 'noError' && <p className="error-message">{error}</p>}
         </div>
     )
 }

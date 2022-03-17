@@ -66,45 +66,44 @@ const openSesame = () => {
     }
 }
 
-export const TipiChart = (props) => {
+export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, error}) => {
 
     // console.lo(g(props)
 
-    const extr = ((props.q1Answer + props.q6Answer) / 2)
-    const agre = ((props.q2Answer + props.q7Answer) / 2)
-    const cons = ((props.q3Answer + props.q8Answer) / 2)
-    const emot = ((props.q4Answer + props.q9Answer) / 2)
-    const open = ((props.q5Answer + props.q10Answer) / 2)
-    const name = props.name
+    const extr = ((q1Answer + q6Answer) / 2)
+    const agre = ((q2Answer + q7Answer) / 2)
+    const cons = ((q3Answer + q8Answer) / 2)
+    const emot = ((q4Answer + q9Answer) / 2)
+    const open = ((q5Answer + q10Answer) / 2)
     let maleData
     let femaleData
 
-    if (props.age === '15-20') {
+    if (age === '15-20') {
         maleLabel = 'Mean Scores for Males 15-20'
         femaleLabel = 'Mean Scores for Females 15-20'
         maleData = maleGroupOne
         femaleData = femaleGroupOne
-    } if (props.age === '21-30') {
+    } if (age === '21-30') {
         maleLabel = 'Mean Scores for Males 21-30'
         femaleLabel = 'Mean Scores for Females 21-30'
         maleData = maleGroupTwo
         femaleData = femaleGroupTwo
-    } if (props.age === '31-40') {
+    } if (age === '31-40') {
         maleLabel = 'Mean Scores for Males 31-40'
         femaleLabel = 'Mean Scores for Females 31-40'
         maleData = maleGroupThree
         femaleData = femaleGroupThree
-    } if (props.age === '41-50') {
+    } if (age === '41-50') {
         maleLabel = 'Mean Scores for Males 41-50'
         femaleLabel = 'Mean Scores for Females 41-50'
         maleData = maleGroupFour
         femaleData = femaleGroupFour
-    } if (props.age === '51-60') {
+    } if (age === '51-60') {
         maleLabel = 'Mean Scores for Males 51-60'
         femaleLabel = 'Mean Scores for Females 51-60'
         maleData = maleGroupFive
         femaleData = femaleGroupFive
-    } if (props.age === '61plus') {
+    } if (age === '61plus') {
         maleLabel = 'Mean Scores for Males 61+'
         femaleLabel = 'Mean Scores for Females 61+'
         maleData = maleGroupSix

@@ -33,7 +33,7 @@ const ageArray = [
     },
 ]
 
-const AgeGroup = (props) => {
+const AgeGroup = ({age, askAge, error}) => {
     return (
         <div className="page-container">
         <h2>Please select your age group:</h2>
@@ -53,7 +53,7 @@ const AgeGroup = (props) => {
                     type="radio" 
                     name="age" 
                     value={value} 
-                    onChange={(event) => props.askAge(event.target.value)} 
+                    onChange={(event) => askAge(event.target.value)} 
                 />
                 <span></span>
                 </label>
@@ -62,7 +62,7 @@ const AgeGroup = (props) => {
         ))}
 
         </div>
-        {props.error !== 'noError' && <p className="error-message">{props.error}</p>}
+        {error !== 'noError' && <p className="error-message">{error}</p>}
         </div>
     )
 }

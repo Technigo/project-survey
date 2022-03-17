@@ -1,13 +1,13 @@
 import React from 'react'
 
-const TipiDropDown = (props) => {
+const TipiDropDown = ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q1Question, q2Question, q3Question, q4Question, q5Question, q6Question, q7Question, q8Question, q9Question, q10Question, error}) => {
 
     const tipiArray = [
         {
             text: 'Extraverted, enthusiastic.',
             id: 'tipi1',
-            onChange: event => props.q1Question(Number(event.target.value)),
-            value: props.q1Answer,
+            onChange: event => q1Question(Number(event.target.value)),
+            value: q1Answer,
             option1: '1',
             option2: '2',
             option3: '3',
@@ -19,8 +19,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Critical, quarrelsome.',
             id: 'tipi2',
-            onChange: event => props.q2Question(Number(event.target.value)),
-            value: props.q2Answer,
+            onChange: event => q2Question(Number(event.target.value)),
+            value: q2Answer,
             option1: '7',
             option2: '6',
             option3: '5',
@@ -32,8 +32,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Dependable, self-disciplined.',
             id: 'tipi3',
-            onChange: event => props.q3Question(Number(event.target.value)),
-            value: props.q3Answer,
+            onChange: event => q3Question(Number(event.target.value)),
+            value: q3Answer,
             option1: '1',
             option2: '2',
             option3: '3',
@@ -45,8 +45,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Anxious, easily upset.',
             id: 'tipi4',
-            onChange: event => props.q4Question(Number(event.target.value)),
-            value: props.q4Answer,
+            onChange: event => q4Question(Number(event.target.value)),
+            value: q4Answer,
             option1: '7',
             option2: '6',
             option3: '5',
@@ -58,8 +58,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Open to new experiences, complex.',
             id: 'tipi5',
-            onChange: event => props.q5Question(Number(event.target.value)),
-            value: props.q5Answer,
+            onChange: event => q5Question(Number(event.target.value)),
+            value: q5Answer,
             option1: '1',
             option2: '2',
             option3: '3',
@@ -71,8 +71,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Reserved, quiet.',
             id: 'tipi6',
-            onChange: event => props.q6Question(Number(event.target.value)),
-            value: props.q6Answer,
+            onChange: event => q6Question(Number(event.target.value)),
+            value: q6Answer,
             option1: '7',
             option2: '6',
             option3: '5',
@@ -84,8 +84,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Sympathetic, warm.',
             id: 'tipi7',
-            onChange: event => props.q7Question(Number(event.target.value)),
-            value: props.q7Answer,
+            onChange: event => q7Question(Number(event.target.value)),
+            value: q7Answer,
             option1: '1',
             option2: '2',
             option3: '3',
@@ -97,8 +97,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Disorganized, careless.',
             id: 'tipi8',
-            onChange: event => props.q8Question(Number(event.target.value)),
-            value: props.q8Answer,
+            onChange: event => q8Question(Number(event.target.value)),
+            value: q8Answer,
             option1: '7',
             option2: '6',
             option3: '5',
@@ -110,8 +110,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Calm, emotionally stable.',
             id: 'tipi9',
-            onChange: event => props.q9Question(Number(event.target.value)),
-            value: props.q9Answer,
+            onChange: event => q9Question(Number(event.target.value)),
+            value: q9Answer,
             option1: '1',
             option2: '2',
             option3: '3',
@@ -123,8 +123,8 @@ const TipiDropDown = (props) => {
         {
             text: 'Conventional, uncreative',
             id: 'tipi10',
-            onChange: event => props.q10Question(Number(event.target.value)),
-            value: props.q10Answer,
+            onChange: event => q10Question(Number(event.target.value)),
+            value: q10Answer,
             option1: '7',
             option2: '6',
             option3: '5',
@@ -172,7 +172,7 @@ const TipiDropDown = (props) => {
         ))}
 
         </div>
-        {props.error !== 'noError' && <p className="error-message">{props.error}</p>}
+        {error !== 'noError' && <p className="error-message">{error}</p>}
         </div>
         
     )

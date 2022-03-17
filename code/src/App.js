@@ -60,14 +60,6 @@ export const App = () => {
   // setError State
   const [error, setError] = useState('noError')
 
-  // Function for Validating Name
-  // const nameValidation = () => {
-  //   console.log(name.length)
-  //   if (name.length === 0) {
-  //     setError('Please fill out the required fields.')
-  //   }
-  // }
-
   return (
     <section className='page'>
     <Header />

@@ -10,7 +10,7 @@ const Intro = () => {
         <br />
         <p>The second part of the survey is about basic human values. It takes about 10 minutes to complete, and your scores will also be displayed at the end, along with an explanation of the scores.</p>
         <br />
-        <p>Please make sure to fill out all the questions in the survey, or the score calculations will either be unavailable or inaccurate.</p>
+        <p>Please make sure read the instructions carefully, and take your time reflecting over the questions, to receive the most accurate measurements.</p>
         <br />
         <p>Enjoy!</p>
         </div>
