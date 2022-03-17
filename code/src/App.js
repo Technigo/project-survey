@@ -35,7 +35,7 @@ export const App = () => {
 	};
 
 	const [state, setState] = useState(initialState);
-	const [error, setError] = useState("");
+	// const [error, setError] = useState("");
 	const [counter, setCounter] = useState(0);
 	const [pronoun, setPronoun] = useState();
 
@@ -45,13 +45,13 @@ export const App = () => {
 
 		setState({ ...state, [inputName]: value });
 
-		for (let key in state) {
-			if (state[key] === "") {
-				setError(`Please provide the ${key}`);
-				return;
-			}
-		}
-		setError("");
+		// for (let key in state) {
+		// 	if (state[key] === "") {
+		// 		setError(`Please provide the ${key}`);
+		// 		return;
+		// 	}
+		// }
+		// setError("");
 	};
 
 	const handleNextStepClick = () => {
