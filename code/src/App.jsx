@@ -1,12 +1,12 @@
-import React from 'react'
+import React from "react"
 
-import FormWrapper from './components/FormWrapper'
+import FormBox from "./components/FormBox"
 
 const App = () => {
   return (
-   <div>
-        <FormWrapper />
-      </div>
+    <div className="form-box">
+      <FormBox />
+    </div>
   )
 }
 

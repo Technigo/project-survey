@@ -8,7 +8,7 @@ const QuestionSelectMenuSnack = (props) => {
   const { userName, snack, onSnackChange } = props
 
   return (
-    <>
+    <div className="q-and-a-box">
       <label htmlFor="snack"><h1>I offer you a snack, {userName ? userName : RandomUserName()}. What do you choose between these options?</h1></label>
         <select onChange={onSnackChange} id="gender" value={snack}>
           <option value="" disabled>--Please select an option--</option>
@@ -16,7 +16,7 @@ const QuestionSelectMenuSnack = (props) => {
             <option key={item} value={item}>{item}</option>
           ))}
         </select>
-    </>
+    </div>
   )
 }
 

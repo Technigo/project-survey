@@ -8,7 +8,7 @@ const QuestionSelectMenuGender = (props) => {
   const { userName, gender, onGenderChange } = props
 
   return (
-    <>
+    <div className="q-and-a-box">
       <label htmlFor="gender"><h1>{userName ? userName : RandomUserName()}, what would you like the main character to have as a gender?</h1></label>
         <select onChange={onGenderChange} id="gender" value={gender}>
           <option value="" disabled>--Please select an option--</option>
@@ -16,7 +16,7 @@ const QuestionSelectMenuGender = (props) => {
             <option key={item} value={item}>{item}</option>
           ))}
         </select>
-    </>
+    </div>
   )
 }
 

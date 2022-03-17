@@ -8,7 +8,7 @@ const QuestionRadioVehicle = (props) => {
   const { weather, vehicle, onVehicleChange } = props
 
   return (
-    <>
+    <div className="q-and-a-box">
       <h1>
         What would you rather ride on your way to work under this{" "}
         {weather ? weather : RandomWeather()} sky?
@@ -24,7 +24,7 @@ const QuestionRadioVehicle = (props) => {
           {item}
         </label>
       ))}
-    </>
+    </div>
   )
 }
 

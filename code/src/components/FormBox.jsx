@@ -4,6 +4,7 @@ import ProgressBar from "./ProgressBar"
 import NextButton from "./NextButton"
 import BackButton from "./BackButton"
 
+import LandingPage from './LandingPage'
 import QuestionTextUserName from "./QuestionTextUserName"
 import QuestionSelectMenuGender from "./QuestionSelectMenuGender"
 import QuestionRadioWeather from "./QuestionRadioWeather"
@@ -20,7 +21,7 @@ import QuestionSelectMenuPhone from "./QuestionSelectMenuPhone"
 import ConfirmationPage from "./ConfirmationPage"
 import Summary from "./Summary"
 
-const FormWrapper = () => {
+const FormBox = () => {
   const [error, setError] = useState("")
 
   const [userName, setUserName] = useState("")
@@ -35,7 +36,6 @@ const FormWrapper = () => {
   const [likeSports, setLikeSports] = useState(false)
   const [sport, setSport] = useState("")
   const [ingredient, setIngredient] = useState([])
-
   const [phone, setPhone] = useState("")
   const [step, setStep] = useState(1)
   const [isSummaryDisplayed, setIsSummaryDisplayed] = useState(false)
@@ -133,6 +133,12 @@ const FormWrapper = () => {
       >
         {step === 1 && (
           <>
+            <LandingPage />
+          </>
+        )}
+        
+        {step === 2 && (
+          <>
             <ProgressBar step={step} />
             <QuestionTextUserName
               userName={userName}
@@ -141,7 +147,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 2 && (
+        {step === 3 && (
           <>
             <ProgressBar step={step} />
             <QuestionSelectMenuGender
@@ -152,7 +158,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 3 && (
+        {step === 4 && (
           <>
             <ProgressBar step={step} />
             <QuestionRadioWeather
@@ -162,7 +168,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 4 && (
+        {step === 5 && (
           <>
             <ProgressBar step={step} />
             <QuestionRadioVehicle
@@ -173,7 +179,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 5 && (
+        {step === 6 && (
           <>
             <ProgressBar step={step} />
             <QuestionRangeSliderSpeed
@@ -184,7 +190,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 6 && (
+        {step === 7 && (
           <>
             <ProgressBar step={step} />
             <QuestionSelectMenuSnack
@@ -195,7 +201,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 7 && (
+        {step === 8 && (
           <>
             <ProgressBar step={step} />
             <QuestionTextNotFriendName
@@ -206,7 +212,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 8 && (
+        {step === 9 && (
           <>
             <ProgressBar step={step} />
             <QuestionRadioBeverage
@@ -216,7 +222,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 9 && (
+        {step === 10 && (
           <>
             <ProgressBar step={step} />
             <QuestionTextFriendName
@@ -227,7 +233,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 10 && (
+        {step === 11 && (
           <>
             <ProgressBar step={step} />
             <QuestionSingleCheckoxLikeSports
@@ -237,7 +243,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 11 && (
+        {step === 12 && (
           <>
             <ProgressBar step={step} />
             <QuestionSelectMenuSports
@@ -248,7 +254,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 12 && (
+        {step === 13 && (
           <>
             <ProgressBar step={step} />
             <QuestionMultipleCheckboxesIngredients
@@ -258,7 +264,7 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 13 && (
+        {step === 14 && (
           <>
             <ProgressBar step={step} />
             <QuestionSelectMenuPhone
@@ -268,9 +274,8 @@ const FormWrapper = () => {
           </>
         )}
 
-        {step === 14 && (
+        {step === 15 && (
           <>
-            <ProgressBar step={step} />
             <ConfirmationPage
               userName={userName}
             />
@@ -288,7 +293,7 @@ const FormWrapper = () => {
           onStepChange={handleStepChange}
         />
       </div>
-      <div>
+      <div className="back-button-box">
         <BackButton
           likeSports={likeSports}
           step={step}
@@ -299,4 +304,4 @@ const FormWrapper = () => {
   )
 }
 
-export default FormWrapper
+export default FormBox

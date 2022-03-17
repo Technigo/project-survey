@@ -1,0 +1,105 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/* ----- Form wrapper */
+
+.form-box {
+  outline: 1px solid red;
+  width: 320px;
+  height: 500px;
+  margin: 25px auto 0 auto;
+}
+
+/* ----- Q & A BOX ----- */
+
+.q-and-a-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.q-and-a-box h1 {
+  color: blueviolet;
+  font-size: 20px;
+}
+
+/* ----- INPUT TEXT ----- */
+
+.input-text {
+  width: 150px;
+}
+
+/* ----- BUTTONS ----- */
+
+.next-button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.next-button-box button {
+  color: orange;
+  background-color: blue;
+}
+
+.error-message {
+  color: red;
+}
+
+.back-button-box button {
+  color: yellow;
+  background-color: green;
+}
+
+/* ----- RADIO BUTTONS ------ */
+
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+.radio-box {
+padding: 10px 0;
+}
+
+/* .radio-input {
+
+} */
+
+.radio-label {
+  color: chartreuse;
+}
+
+
+/* ----- CHECKBOXES ----- */
+
+.checkboxes {
+  display: grid;
+grid-template-columns: 1fr 1fr 1fr;
+}
+
+.checkbox-box {
+  outline: 1px solid red;
+
+  padding: 10px 0;
+}
+
+/* .checkbox-input {
+  
+} */
+
+.checkbox-label {
+  color: chartreuse;
+}

@@ -7,9 +7,9 @@ const BackButton = (props) => {
     onStepChange,
   } = props
 
-  if (step === 1) {
+  if (step === 1 | step === 2) {
     return null
-  } else if (step === 12) {
+  } else if (step === 13) {
     return (
       <button type="button" onClick={() => onStepChange(likeSports ? -1 : -2)}>
         Back

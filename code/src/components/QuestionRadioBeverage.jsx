@@ -6,7 +6,7 @@ const QuestionRadioBeverage = (props) => {
   const { beverage, onBeverageChange } = props
 
   return (
-    <>
+    <div className="q-and-a-box">
       <h1>Are you team tea or team coffee?</h1>
       {beverageItems.map((item) => (
         <label key={item}>
@@ -19,7 +19,7 @@ const QuestionRadioBeverage = (props) => {
           {item}
         </label>
       ))}
-    </>
+    </div>
   )
 }
 
