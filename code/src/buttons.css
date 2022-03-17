@@ -9,6 +9,7 @@ button.btn {
 	font-weight: 700;
 	color: var(--clr-black);
 	border: none;
+	transition: all 0.5s ease-in-out;
 }
 
 button.next-btn {
@@ -17,7 +18,8 @@ button.next-btn {
 
 button.next-btn:hover,
 button.next-btn:focus {
-	background: var(--clr-medium);
+	background: var(--clr-black);
+	color: var(--clr-light);
 }
 
 button.back-btn {
@@ -26,7 +28,7 @@ button.back-btn {
 	border-radius: 50%;
 	padding: 0;
 	position: absolute;
-	bottom: 1.5em;
+	bottom: 0.25em;
 	background: var(--clr-black);
 	background: url("./assets/back-btn.png");
 	background-size: contain;

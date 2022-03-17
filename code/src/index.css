@@ -29,24 +29,27 @@ code {
 }
 
 h1 {
+	font-family: "Shadows Into Light Two", cursive;
 	font-weight: 500;
-	transform: translateX(30) rotate(15deg);
 	font-size: 3.5rem;
 	margin: 1.5em 0 0;
 }
 
-h2 {
-	font-size: 1.3rem;
+h2,
+h3 {
 	line-height: 1.6em;
 	letter-spacing: 0.9px;
+	text-shadow: var(--clr-white) 1px 0 10px;
+}
+
+h2 {
+	font-size: 1.3rem;
 }
 
 h3 {
 	font-size: 20px;
 	font-weight: 400;
-	line-height: 1.6em;
 	margin: 1em 1em;
-	letter-spacing: 0.9px;
 	max-width: 40ch;
 	padding-bottom: 0.5em;
 }
@@ -150,6 +153,7 @@ select:focus {
 input[type="radio"]:hover,
 input[type="radio"]:focus {
 	outline: 3px solid var(--clr-black);
+	border: none;
 }
 
 input[type="radio"]:checked {
@@ -177,13 +181,19 @@ section.overview-wrapper {
 	height: 100vh;
 }
 
-section.intropage-wrapper {
+/* section.intropage-wrapper {
 	background: linear-gradient(
 		29deg,
 		rgba(255, 196, 143, 1) 38%,
 		rgba(253, 228, 188, 1) 66%,
 		rgb(255, 203, 126) 100%
 	);
+} */
+
+section.intropage-wrapper {
+	background: url("./assets/background-intro.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
 .intropage-wrapper {
@@ -226,7 +236,7 @@ section.intropage-wrapper {
 
 @media (min-width: 668px) {
 	h2 {
-		font-size: 1.5rem;
+		font-size: 2rem;
 	}
 
 	h3 {
