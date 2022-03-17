@@ -15,7 +15,7 @@
             <option value={locations}>Stockholm</option>
             <option value={locations}>Göteborg</option>
             <option value={locations}>Malmö</option>
-            <option value={locations}>Halmstad</option>
+            <option value={locations}>Skåne</option>
         </select>
         </label>
             </form>
