@@ -1,18 +1,22 @@
-import React from 'react'
+import React from "react";
 
 const QuestionTwo = (props) => {
-  const {email, onSecondInputChange} = props
-   
+  const { email, onSecondInputChange } = props;
+
   return (
-    <section>  
+    <section>
       <div>
         <h1> email address</h1>
-        <label htmlFor='emailadresss'>email adress here</label>
-        <input 
-        id="email" type="text" value={email} onChange={onSecondInputChange} />
-    </div> 
-   </section>
-  )
-}
+        <label htmlFor="emailadresss">email adress here</label>
+        <input
+          id="email"
+          type="text"
+          value={email}
+          onChange={onSecondInputChange}
+        />
+      </div>
+    </section>
+  );
+};
 
-export default QuestionTwo
+export default QuestionTwo;
