@@ -3,9 +3,9 @@ import React, { useState } from "react";
 import Info from "./Info";
 import QuestionName from "./QuestionName";
 import QuestionDestination from "./QuestionDestination";
+import QuestionActivity from "./QuestionActivity";
 import QuestionCompany from "./QuestionCompany";
 import QuestionGoal from "./QuestionGoal";
-import QuestionActivity from "./QuestionActivity";
 import Summary from "./Summary";
 
 const Form = () => {
@@ -15,7 +15,6 @@ const Form = () => {
   const [company, setCompany] = useState("");
   const [goal, setGoal] = useState("");
   const [step, setStep] = useState(0);
-  const numberOfQuestions = 5;
 
   const onSubmit = (event) => {
     event.preventDefault();
@@ -60,6 +59,15 @@ const Form = () => {
         <QuestionCompany company={company} onCompanyChange={onCompanyChange} />
       )}
       {step === 5 && <QuestionGoal goal={goal} onGoalChange={onGoalChange} />}
+      {step === 6 && (
+        <Summary
+          name={name}
+          destination={destination}
+          activity={activity}
+          company={company}
+          goal={goal}
+        />
+      )}
     </form>
   );
 };

@@ -4,12 +4,12 @@ import Button from "./Button";
 const QuestionName = ({ name, onNameChange }) => {
   return (
     <>
-      <label htmlFor="name" className="label">
+      <label htmlFor="name-question" className="label">
         What is your name?
       </label>
       <input
-        id="name"
-        name="name"
+        id="name-question"
+        name="name-question"
         className="input"
         type="text"
         placeholder="Type your name here"

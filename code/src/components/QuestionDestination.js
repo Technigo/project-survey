@@ -1,7 +1,7 @@
 import React from "react";
 import Button from "./Button";
 
-const QuestionDestination = (destination, onDestinationChange) => {
+const QuestionDestination = ({ destination, onDestinationChange }) => {
   const destinationOptions = [
     "the West",
     "the South",
@@ -16,13 +16,13 @@ const QuestionDestination = (destination, onDestinationChange) => {
         {destinationOptions.map((destinationValue) => (
           <label
             key={destinationValue}
-            htmlFor="destination-type"
+            htmlFor="destination-option"
             className="destination-label"
           >
             <input
-              className="destination-type"
+              className="destination-option"
               type="radio"
-              name="destination-type"
+              name="destination-option"
               value={destinationValue}
               onChange={onDestinationChange}
               defaultChecked={destination === destinationValue}
