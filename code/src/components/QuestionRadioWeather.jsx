@@ -7,23 +7,20 @@ const QuestionRadioWeather = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <h1>Look by the window. Is it sunny or cloudy outside?</h1>
-      <div className="radio-buttons">
-      {weatherItems.map((item) => (
-        <div className="radio-box">
-          <input
-            className="radio-input"
-            id={item}
-            type="radio"
-            value={item}
-            onChange={onWeatherChange}
-            checked={weather === item}
-          />
-          <label className="radio-label" htmlFor={item} key={item}>
-            {item}
-          </label>
-        </div>
-      ))}
+      <h1>Look by the window and select how is the sky</h1>
+      <div>
+        {weatherItems.map((item) => (
+          <div className="radio-box" key={item}>
+            <input
+              id={item}
+              type="radio"
+              value={item}
+              onChange={onWeatherChange}
+              checked={weather === item}
+            />
+            <label htmlFor={item}>{item}</label>
+          </div>
+        ))}
       </div>
     </div>
   )

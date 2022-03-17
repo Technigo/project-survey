@@ -9,12 +9,12 @@ const QuestionRangeSliderSpeed = (props) => {
     <div className="q-and-a-box">
       <label htmlFor="speed">
         <h1>
-          Let’s be honest, would you be more the “slowing the traffic” or
-          “scaring the old ladies” type on your{" "}
-          {vehicle ? vehicle : RandomVehicle()}?
+          Use the slider to select your usual speed on your{" "}
+          {vehicle ? vehicle : RandomVehicle()}
         </h1>
       </label>
       <input
+        className="slider"
         id="speed"
         type="range"
         min="1"

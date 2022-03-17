@@ -6,7 +6,7 @@ const ConfirmationPage = (props) => {
   return (
     <div className="q-and-a-box">
       <h1>You want your story, {userName}?</h1>
-      <button type="submit">See story</button>
+      <button className="story-button" type="submit">See story</button>
     </div>
   )
 }

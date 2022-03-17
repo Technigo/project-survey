@@ -128,7 +128,11 @@ const FormBox = () => {
       <form
         onSubmit={(event) => {
           event.preventDefault()
-          setIsSummaryDisplayed(true)
+          if (step === 15) {
+            setIsSummaryDisplayed(true)   
+          } else {
+            handleStepChange(1)
+          }
         }}
       >
         {step === 1 && (
@@ -205,7 +209,6 @@ const FormBox = () => {
           <>
             <ProgressBar step={step} />
             <QuestionTextNotFriendName
-              snack={snack}
               notFriendName={notFriendName}
               onNotFriendNameChange={handleNotFriendNameChange}
             />
@@ -282,7 +285,7 @@ const FormBox = () => {
           </>
         )}
       </form>
-      <div>
+      <div className="next-button-box">
         <NextButton
           error={error}
           setError={setError}

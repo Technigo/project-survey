@@ -10,20 +10,23 @@ const QuestionRadioVehicle = (props) => {
   return (
     <div className="q-and-a-box">
       <h1>
-        What would you rather ride on your way to work under this{" "}
-        {weather ? weather : RandomWeather()} sky?
+        Select what you would rather ride on this{" "}
+        {weather ? weather : RandomWeather()} day
       </h1>
-      {vehicleItems.map((item) => (
-        <label key={item}>
-          <input
-            type="radio"
-            value={item}
-            onChange={onVehicleChange}
-            checked={vehicle === item}
-          />
-          {item}
-        </label>
-      ))}
+      <div>
+        {vehicleItems.map((item) => (
+          <div className="radio-box" key={item}>
+            <input
+              id={item}
+              type="radio"
+              value={item}
+              onChange={onVehicleChange}
+              checked={vehicle === item}
+            />
+            <label htmlFor={item}>{item}</label>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }

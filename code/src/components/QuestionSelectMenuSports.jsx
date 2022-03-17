@@ -9,7 +9,7 @@ const QuestionSelectMenuSports = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <label htmlFor="sport"><h1>Maybe you would like to watch some game with {friendName ? friendName : RandomFriendName()}: what would be the sport then?</h1></label>
+      <label htmlFor="sport"><h1>Select the sport you would watch some game with {friendName ? friendName : RandomFriendName()}</h1></label>
         <select onChange={onSportChange} id="sport" value={sport}>
           <option value="" disabled>--Please select an option--</option>
           {sportItems.map((item) => (

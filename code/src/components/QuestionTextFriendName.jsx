@@ -7,7 +7,7 @@ const QuestionTextFriendName = (props) => {
 
   return (
     <div className="q-and-a-box">
-        <h1>Who would you rather drink your {beverage ? beverage : RandomBeverage()} with? Maybe a friend or a nice colleague?</h1>
+        <h1>Type the first name of someone to drink your {beverage ? beverage : RandomBeverage()} with</h1>
         <input type="text" onChange={onFriendNameChange} value={friendName} />
     </div>
   )

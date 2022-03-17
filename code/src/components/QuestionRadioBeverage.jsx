@@ -7,18 +7,21 @@ const QuestionRadioBeverage = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <h1>Are you team tea or team coffee?</h1>
-      {beverageItems.map((item) => (
-        <label key={item}>
-          <input
-            type="radio"
-            value={item}
-            onChange={onBeverageChange}
-            checked={beverage === item}
-          />
-          {item}
-        </label>
-      ))}
+      <h1>Choose your team</h1>
+      <div>
+        {beverageItems.map((item) => (
+          <div className="radio-box" key={item}>
+            <input
+              id={item}
+              type="radio"
+              value={item}
+              onChange={onBeverageChange}
+              checked={beverage === item}
+            />
+            <label htmlFor={item}>{item}</label>
+          </div>
+        ))}
+      </div>
     </div>
   )
 }
