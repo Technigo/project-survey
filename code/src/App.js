@@ -14,17 +14,21 @@ const questions = [
     options: [
       { value: "mexican", label: "Mexican" },
       { value: "japanese", label: "Japanese" },
+      { value: "persian", label: "Persian" },
+      { value: "swedish", label: "Swedish" },
     ],
   },
   {
     id: "herbs",
     question_text: "What herb is superior?",
     answer_type: "select",
-    options: ["basil", "corander", "parsley"]
-      // { value: "basil", label: "Basil" },
-      // { value: "coriander", label: "Coriander" },
-      // { value: "parsley", label: "Parsley" },
-    // ],
+    options: [
+      { value: "basil", label: "Basil" },
+      { value: "coriander", label: "Coriander" },
+      { value: "parsley", label: "Parsley" },
+      { value: "mint", label: "Mint" },
+      { value: "dill", label: "Dill" },
+    ],
   },
 ];
 

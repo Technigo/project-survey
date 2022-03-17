@@ -9,7 +9,6 @@ const InputField = ({ name, type, options, value, onChange }) => {
       return options.map((o) => {
         return (
           <div key={o.value}>
-            <label htmlFor={o.value}>{o.label}</label>
             <input
               id={o.value}
               type={type}
@@ -19,6 +18,7 @@ const InputField = ({ name, type, options, value, onChange }) => {
               onChange={onChange}
               required
             />
+            <label htmlFor={o.value}>{o.label}</label>
           </div>
         );
       });
@@ -30,9 +30,11 @@ const InputField = ({ name, type, options, value, onChange }) => {
           <option value="" defaultValue disabled>
             Choose option
           </option>
-          <option value={options[0]}>{options[0]}</option>
-          <option value={options[1]}>{options[1]}</option>
-          <option value={options[2]}>{options[2]}</option>
+          {options.map((o) => (
+            <option key={o.value} value={o.value}>
+              {o.label}
+            </option>
+          ))}
         </select>
       );
     }
