@@ -15,6 +15,7 @@ import NavButtons from 'components/NavButtons'
 import Footer from 'components/Footer'
 
 export const App = () => {
+
   // Demographic Questions
   const [name, askName] = useState('')
   const [gender, askGender] = useState('')

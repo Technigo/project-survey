@@ -20,14 +20,19 @@ const NavButtons = ({pageNumber, setPageNumber, error, setError, name, gender, a
             setPageNumber(1)
         } else if (pageNumber === 2 && gender === '') {
             setError('Please fill in the required fields.')
+            setPageNumber(2)
         } else if (pageNumber === 3 && age === '') {
             setError('Please fill in the required fields.')
+            setPageNumber(3)
         } else if (pageNumber === 4 && (tipiq1Answer === 'default' || tipiq2Answer === 'default' || tipiq3Answer === 'default' || tipiq4Answer === 'default' || tipiq5Answer === 'default' || tipiq6Answer === 'default' || tipiq7Answer === 'default' || tipiq8Answer === 'default' || tipiq9Answer === 'default' || tipiq10Answer === 'default')) {
             setError('Please fill in the required fields.')
+            setPageNumber(4)
         } else if (pageNumber === 6 && (tiviq1Answer === 'default' || tiviq2Answer === 'default' || tiviq3Answer === 'default' || tiviq4Answer === 'default' || tiviq5Answer === 'default' || tiviq6Answer === 'default' || tiviq7Answer === 'default' || tiviq8Answer === 'default' || tiviq9Answer === 'default' || tiviq10Answer === 'default')) {
             setError('Please fill in the required fields.')
+            setPageNumber(6)
         } else if (pageNumber === 7 && (tiviq11Answer === 'default' || tiviq12Answer === 'default' || tiviq13Answer === 'default' || tiviq14Answer === 'default' || tiviq15Answer === 'default' || tiviq16Answer === 'default' || tiviq17Answer === 'default' || tiviq18Answer === 'default' || tiviq19Answer === 'default' || tiviq20Answer === 'default')) {
             setError('Please fill in the required fields.')
+            setPageNumber(7)
         } else {
             setError('noError')
             window.scrollTo(0, 0)

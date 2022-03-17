@@ -20,12 +20,6 @@
   --accent: #001053;
 }
 
-/* body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-} */
-
 body {
   background-color: var(--secondary);
   /* background-image: url('assets/susan-wilkinson-unsplash.jpg');
@@ -36,10 +30,6 @@ body {
 
 /* Header */
 header {
-  /* font-family: 'Montserrat', sans-serif;
-  font-weight: 900;
-  font-size: 20px;
-  color: white; */
   margin-bottom: 10px;
   display: flex;
   flex-direction: column;
@@ -53,7 +43,7 @@ header {
   margin-bottom: 10px;
 }
 
-/* Text */
+/* Text & Site-wide*/
 .underline {
   text-decoration: underline;
 }
@@ -66,12 +56,30 @@ header {
   text-align: center;
 }
 
+.error-message {
+  font-size: 20px;
+  text-decoration: underline;
+  padding: 20px 0 5px 0;
+  font-weight: 700;
+  text-align: center;
+}
+
 h2 {
   padding-bottom: 10px;
 }
 
 p {
   line-height: 1.25;
+}
+
+hr {
+  height: 2px;
+  border: 2px solid var(--tertiary);
+  border-radius: 2px;
+}
+
+.accordion-info a {
+  color: var(--accent)
 }
 
 /* Page */
@@ -82,7 +90,7 @@ p {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   position: relative;
-  padding-bottom: 4rem;
+  padding-bottom: 2.5rem;
 }
 
 .page-container {
@@ -125,13 +133,9 @@ p {
 .column-2 {
   grid-column: 2 / span 1;
   margin-left: auto;
-  /* display: flex;
-  flex-direction: column;
-  justify-content: center; */
 }
 
 /* Styling Text Input */
-
 input[type=text] {
   width: 50%;
   padding: 5px 10px;
@@ -142,7 +146,6 @@ input[type=text] {
 }
 
 /* Styling Radio Buttons */
-
 .radio-container {
   display: flex;
   flex-direction: column;
@@ -216,7 +219,6 @@ select {
 }
 
 /* Accordion Elements */
-
 .tipi-header {
   font-family: 'Roboto', sans-serif;
   font-size: 18px;
@@ -227,7 +229,8 @@ select {
   border-radius: 5px;
   border: 3px solid var(--accent);
   background-color: var(--secondary);
-  color: var(--accent)
+  color: var(--accent);
+  margin-top: 10px;
 }
 
 .tivi-header {
@@ -239,7 +242,8 @@ select {
   border-radius: 5px;
   border: 3px solid var(--accent);
   background-color: var(--secondary);
-  color: var(--accent)
+  color: var(--accent);
+  margin-top: 10px;
 }
 
 .accordion-info {
@@ -248,7 +252,7 @@ select {
   color: var(--accent)
 }
 
-.tipi-header:hover, .tivi-header:hover, .accordion-header--active {
+.tipi-header:hover, .tivi-header:hover {
   cursor: pointer;
 }
 
@@ -268,7 +272,6 @@ select {
   display: flex;
   justify-content: center;
   /* width: 60px; */
-
 }
 
 .navbutton-icon {
@@ -280,14 +283,23 @@ select {
 footer {
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
-  font-size: 18px;
+  font-size: 14px;
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 4rem;
-  color: var(--accent);
+  height: 2.5rem;
+  color: var(--tertiary);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
 }
 
+footer a {
+  color: var(--tertiary);
+  text-decoration: underline;
+}
 
 /* .column-1 label {
   font-family: 'Roboto', sans-serif;

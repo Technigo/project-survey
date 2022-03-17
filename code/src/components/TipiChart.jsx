@@ -8,6 +8,7 @@ import {
     Filler,
     Tooltip,
     Legend,
+    defaults,
 } from 'chart.js';
 
 // Chart JS Options
@@ -17,8 +18,15 @@ ChartJS.register(
     LineElement,
     Filler,
     Tooltip,
-    Legend
+    Legend,
 );
+
+defaults.font.family = 'Montserrat'
+defaults.font.size = 13
+defaults.color = "#001053"
+// defaults.scales.radialLinear.grid.circular = 'true'
+defaults.scales.radialLinear.pointLabels.font.size = 11
+defaults.scales.radialLinear.pointLabels.padding = -2
 
 const options = {
     scales: {
@@ -28,7 +36,7 @@ const options = {
           max: 7,
           stepSize: 0.5,
         },
-    },
+    }
   };
 
 // Data for Male Age Groups
@@ -66,9 +74,7 @@ const openSesame = () => {
     }
 }
 
-export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, error}) => {
-
-    // console.lo(g(props)
+export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer}) => {
 
     const extr = ((q1Answer + q6Answer) / 2)
     const agre = ((q2Answer + q7Answer) / 2)
@@ -114,23 +120,23 @@ export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5
         {
             label: name + "'s personality matrix",
             data: [extr, agre, cons, emot, open],
-            backgroundColor: 'rgba(251, 133, 0, 0.7)',
-            borderColor: 'rgba(251, 133, 0, 1)',
-            borderWidth: 3,
+            backgroundColor: 'rgba(251, 133, 0, 0.6)',
+            borderColor: 'rgba(251, 133, 0, 0.8)',
+            borderWidth: 2,
         },
         {
             label: maleLabel,
             data: maleData,
-            backgroundColor: 'rgba(150, 217, 227, 0.5)',
+            backgroundColor: 'rgba(150, 217, 227, 0.6)',
             borderColor: 'rgba(150, 217, 227, 1)',
-            borderWidth: 1,
+            borderWidth: 2,
         },
         {
             label: femaleLabel,
             data: femaleData,
-            backgroundColor: 'rgba(255, 184, 189, 0.5)',
+            backgroundColor: 'rgba(255, 184, 189, 0.6)',
             borderColor: 'rgba(255, 184, 189, 1)',
-            borderWidth: 1,
+            borderWidth: 2,
         },
     ]
 
@@ -139,7 +145,7 @@ export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5
     <h2 className="center">Big 5 Personality Trait Scores</h2>
     <Radar 
     data={{
-        labels: ['Extraversion', 'Agreeableness', 'Conscientiousness', 'Emotional Stability', 'Openness to Experiences'],
+        labels: ['Extraversion', 'Agreeableness', 'Conscientiousness', ['Emotional', 'Stability'], ['Openness to', 'Experiences']],
         datasets: data
     }} 
     options={options}
@@ -150,7 +156,7 @@ export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5
         </button>
         <div className="accordion-info">
             <h4>Introduction:</h4>
-            <p>The Big 5 personality traits is a suggested grouping or taxonomy of personality traits. They have decades of empirical evidence, supported by many researchers using factor analysis to group traits into underlying factors of personality, which have independently revealed these five dimensions. Studies indicate that the Big Five traits (the effects of personality) can statistically predict many aspects of an individual, but mostly within social functioning and rules-driven behaviour, such as mental health disorders, romantic relationships, academic success and learning styles, and employment and work success.</p>
+            <p>The Big 5 personality traits is a suggested grouping or taxonomy of personality traits. They have decades of empirical evidence, supported by many researchers using factor analysis to correlate and group traits, which have independently revealed these five personality dimensions. Studies indicate that the Big Five traits (the effects of personality) can statistically predict many aspects of an individual, but mostly within social functioning and rules-driven behaviour, such as mental health disorders, romantic relationships, academic success and learning styles, and employment and work success.</p>
             <br />
             <h4>Extraversion:</h4>
             <p>outgoing/energetic vs. solitary/reserved</p>
@@ -164,9 +170,10 @@ export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5
             <p>inventive/curious vs. consistent/cautious</p>
             <br />
             <h4>More about the TIPI scale used here:</h4>
-            <p><a href="http://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
+            <p className="underline"><a href="http://gosling.psy.utexas.edu/scales-weve-developed/ten-item-personality-measure-tipi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
+            <br/>
             <h4>More about the Big 5 personality traits and their predictive effects on life:</h4>
-            <p><a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits" target="_blank" rel="noopener noreferrer">Wikipedia Article on Big Five Personality Traits</a></p>
+            <p className="underline"><a href="https://en.wikipedia.org/wiki/Big_Five_personality_traits#Descriptions_of_the_particular_personality_traits" target="_blank" rel="noopener noreferrer">Wikipedia Article on Big Five Personality Traits</a></p>
         </div>
     </div>
     </div>

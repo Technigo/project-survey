@@ -5,33 +5,11 @@ import {
   ArcElement,
   Tooltip,
   Legend,
+  defaults
 } from 'chart.js';
 import { PolarArea } from 'react-chartjs-2';
 
 ChartJS.register(RadialLinearScale, ArcElement, Tooltip, Legend);
-
-// export const data = {
-//   labels: ['Stimulation', 'Self-Direction', 'Universalism', 'Benevolence', 'Conformity', 'Tradition', 'Security', 'Power', 'Achievement', 'Hedonism'],
-//   datasets: [
-//     {
-//       label: '# of Votes',
-//       data: [6, 5, 3, 5, 2, 3, 4, 5, 6, 4],
-//       backgroundColor: [
-//         'rgba(255, 99, 132, 0.5)',
-//         'rgba(54, 162, 235, 0.5)',
-//         'rgba(255, 206, 86, 0.5)',
-//         'rgba(75, 192, 192, 0.5)',
-//         'rgba(153, 102, 255, 0.5)',
-//         'rgba(255, 159, 64, 0.5)',
-//         'rgba(255, 206, 86, 0.5)',
-//         'rgba(75, 192, 192, 0.5)',
-//         'rgba(153, 102, 255, 0.5)',
-//         'rgba(255, 159, 64, 0.5)',
-//       ],
-//       borderWidth: 1,
-//     },
-//   ],
-// };
 
 const options = {
     scales: {
@@ -43,6 +21,10 @@ const options = {
         },
     },
 };
+
+defaults.font.family = 'Montserrat'
+defaults.font.size = 13
+defaults.color = "#001053"
 
 // Function for Opening and Closing Accordion
 
@@ -59,6 +41,7 @@ const openSesame = () => {
 }
 
 export function TiviChart ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6Answer, q7Answer, q8Answer, q9Answer, q10Answer, q11Answer, q12Answer, q13Answer, q14Answer, q15Answer, q16Answer, q17Answer, q18Answer, q19Answer, q20Answer}) {
+  
     const stim = ((q6Answer + q16Answer) / 2)
     const self = ((q5Answer + q15Answer) / 2)
     const univ = ((q4Answer + q14Answer) / 2)
@@ -72,7 +55,6 @@ export function TiviChart ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6
 
     const data = [
         {
-            // label: '# of Votes',
             data: [stim, self, univ, bene, conf, trad, secu, powe, achi, hedo],
             backgroundColor: [
               'rgba(224, 104, 63, 0.7)',
@@ -136,11 +118,13 @@ export function TiviChart ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6
           <p>Note: Hedonism is a border value between self-enhancement and openness to change.</p>
           <br/>
           <h4>More about the TwIVI Scale used here:</h4>
-          <p><a href="https://gosling.psy.utexas.edu/two-short-measures-of-values-tivi-and-twivi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
+          <p className="underline"><a href="https://gosling.psy.utexas.edu/two-short-measures-of-values-tivi-and-twivi/" target="_blank" rel="noopener noreferrer">University of Texas Department of Psychology</a></p>
+          <br/>
           <h4>Overview of Theory of Basic Human Values:</h4>
-          <p><a href="https://gosling.psy.utexas.edu/two-short-measures-of-values-tivi-and-twivi/" target="_blank" rel="noopener noreferrer">Wikipedia Article on Theory of Basic Human Values</a></p>
+          <p className="underline"><a href="https://gosling.psy.utexas.edu/two-short-measures-of-values-tivi-and-twivi/" target="_blank" rel="noopener noreferrer">Wikipedia Article on Theory of Basic Human Values</a></p>
+          <br/>
           <h4>In-Depth Paper "An Overview of the Schwartz Theory of Basic Values"</h4>
-          <p><a href="https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1116&context=orpc" target="_blank" rel="noopener noreferrer">The Hebrew University of Jerusalem</a></p>
+          <p className="underline"><a href="https://scholarworks.gvsu.edu/cgi/viewcontent.cgi?article=1116&context=orpc" target="_blank" rel="noopener noreferrer">The Hebrew University of Jerusalem</a></p>
         </div>
 
         </div>
