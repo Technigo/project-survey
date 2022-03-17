@@ -9,13 +9,13 @@ body {
 }
 
 .summary-title {
-    color: var(--black);
-    background-color: var(--red);
+    color: var(--white);
+    border: 2px solid var(--red);
     font-size: 70px;
     padding: 10px 20px;
     display: flex;
     justify-content: center;
-    margin-bottom: 40px;
+    margin-bottom: 30px;
 }
 
 .summary-bye {
@@ -25,9 +25,9 @@ body {
     flex-direction: column;
     text-align: right;
     margin-top: 30px;
-    padding: 5px 10px;
+    padding: 5px 20px;
     font-size: 40px;
-    font-family: 'Satoshi', sans-serif;
+    font-family: 'Melodrama', serif;
     text-transform: uppercase;
 }
 
@@ -38,32 +38,28 @@ body {
     display: flex;
     flex-direction: row;
     text-align: start;
-    border: 2px solid var(--black);
-    background-color: var(--offwhite);
+    border: 2px solid var(--blue);
+    color: var(--white);
     padding: 5px;
 }
 
+/* ===== TABLET/DESKTOP ===== */
 
-/* tablet and desktop view */
 @media (min-width: 668px){
 .overview  {
     max-width: 700px;
-}
-
-h2 {
-    font-size: 36px;
-    margin-bottom: 30px;
-}
-
-h3 {
-    font-size: 28px;
-    margin-top: 40px;
+    width: 500px;
 }
 
 .summary-p  {
-    font-size: 24px;
-    margin-bottom: 0;
+    font-size: 22px;
     display: flex;
     flex-direction: row;
 }
+}
+
+@media only screen and (min-width: 1024px){
+    .overview  {
+        width: 800px;
+    }
 }

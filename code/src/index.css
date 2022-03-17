@@ -7,7 +7,6 @@
   --black: #1d1b1a; 
   --blue: #53c6d5;
   --red: #fb530f;
-  --offwhite: #cdb9a7;
 }
 
 * {
@@ -22,8 +21,8 @@ body {
   height: 100vh;
   width: 100vw;
   position: relative;
-  background-color: var(--white);
-  color: var(--black); 
+  background-color: var(--black);
+  color: var(--white); 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -43,10 +42,10 @@ p {
 /* ===== BUTTONS ===== */
 
 button {
-  font-size: 20px;
-  background-color: var(--white);
+  font-size: 18px;
+  background-color: var(--black);
   color: var(--red);
-  margin: 30px 0;
+  margin: 30px 0 0 0;
   padding: 10px 60px;
   border: 2px solid var(--red);
   text-decoration: none;
@@ -80,8 +79,18 @@ button:hover {
   font-size: 125px;
   letter-spacing: 2px;
   width: 300px;
-  border: 2px solid var(--black);
+  border: 2px solid var(--white);
   margin-bottom: 5px;
+  z-index: 3;
+}
+
+.survey-fancy {
+  display: flex;
+  justify-content: center;
+  width: 300px;
+  height: 60px;
+  position: absolute;
+  background-color: var(--blue);
 }
 
 .alt-color {
@@ -97,6 +106,24 @@ button:hover {
   color: var(--white);
   background-color: var(--red);
   margin-top: 5px;
+}
+
+.survey-fancy-2,
+.survey-fancy-3 {
+  width: 300px;
+  height: 20px;
+  position: absolute;
+  background-color: var(--black);
+  border: 2px solid var(--red);
+  display: flex;
+}
+
+.survey-fancy-2 {
+  align-self: flex-end;
+}
+
+.survey-fancy-3 {
+  align-self: flex-start;
 }
 
 .survey-description {
@@ -116,11 +143,10 @@ button:hover {
 label {
   font-size: 20px;
   width: 300px;
-  /* margin-bottom: 10px; */
 }
 
 input {
-  color: var(--black);
+  color: var(--white);
   border: none;
   border-bottom: 2px solid var(--red);
   background-color: transparent;
@@ -130,7 +156,23 @@ input {
 
 ::placeholder {
   color: var(--red);
-  font-size: 14px;
+  font-size: 18px;
+}
+
+/* ===== IMG ===== */
+.extra-img {
+  width: 300px;
+}
+
+.extra-description {
+  display: flex;
+  justify-content: center;
+}
+
+.extra-text {
+  font-size: 18px;
+  margin-top: 10px;
+  font-family: 'Satoshi', sans-serif;
 }
 
 /* ===== RADIO ===== */
@@ -222,15 +264,47 @@ input {
   width: 20px;
   height: 20px;
   border-radius: 50%; 
-  background: var(--blue);
+  background: var(--red);
   cursor: pointer;
 }
 
 
-/* tablet view */
+/* ===== TABLET ===== */
+
 @media (min-width: 668px){
   .intro-section {
     max-width: 500px;
+  }
+
+  .survey-title {
+    font-size: 150px;
+    width: 500px;
+    margin-bottom: 10px;
+  }
+
+  .survey-title-small {
+    font-size: 90px;
+    width: 500px;
+    margin-top: 10px;
+  }
+
+  .survey-fancy {
+    width: 500px;
+    height: 70px;
+  }
+
+  .survey-fancy-2,
+  .survey-fancy-3 {
+    width: 500px;
+    height: 25px;
+  }
+
+  .extra-img {
+    width: 300px;
+  }
+
+  button {
+    font-size: 20px;
   }
   
   .form {
@@ -238,94 +312,95 @@ input {
     margin-top: 50px;
   }
 
-  p {
-    font-size: 28px;
-  }
-
-  .survey-title {
-    font-size: 42px;
-  }
-
-  button {
-    font-size: 26px;
-    max-width: 150px;
-  }
-
-
   label {
-    font-size: 34px;
+    font-size: 22px;
+    width: 500px;
     margin: 0 auto;
   }
 
-  ::placeholder {
-    font-size: 26px;
-  }
-
   input {
-    width: 350px;
+    width: 500px;
   }
 
   input[type=text] {
-    font-size: 26px;
+    font-size: 22px;
   }
 
-  .radiobutton-p {
-    margin-left: 35px;
-  }
 
-  .dropdown-select {
-    width: 350px;
-    font-size: 26px;
-    margin-top: 30px;
-  }
-}
-
-  /* desktop view */
-@media only screen and (min-width: 1024px){
-  body {
-    position: relative;
-    background-size: cover;
-  }
-
-  .survey-title {
-    font-size: 40px;
-    margin-top: 80px;
+  ::placeholder {
+    font-size: 20px;
   }
 
   p {
-    font-size: 26px;
+    font-size: 18px;
+  }
+
+  .radiobutton-p {
+    margin-left: 20px;
+  }
+
+  .dropdown-select {
+    width: 500px;
+    font-size: 20px;
+  }
+}
+
+  /* ===== DESKTOP ===== */
+@media only screen and (min-width: 1024px){
+  body {
+    position: relative;
+  }
+
+  .survey-title {
+    font-size: 175px;
+    width: 800px;
+    margin-bottom: 15px;
+  }
+
+  .survey-title-small {
+    font-size: 100px;
+    width: 800px;
+    margin-top: 15px;
+  }
+
+  .survey-fancy {
+    width: 800px;
+    height: 80px;
+  }
+
+  .survey-fancy-2,
+  .survey-fancy-3 {
+    width: 800px;
+    height: 30px;
+  }
+
+  p {
+    font-size: 20px;
   }
 
   button {
-    font-size: 20px;
-    max-width: 150px;
-  }
-
-  .time-paragraph {
-    font-size: 17px;
-  }
-
-  .fa-clock {
-    font-size: 16px;
+    font-size: 24px;
   }
 
   .form {
     margin: 160px 30px;
+    width: 800px;
   }
 
   label {
-    font-size: 30px;
+    font-size: 24px;
+    width: 800px;
   }
 
   input {
-    width: 300px;
+    width: 800px;
   }
 
   .dropdown-select {
-    width: 300px;
+    width: 800px;
   }
 
   .rate-description {
-    font-size: 24px;
+    font-size: 20px;
   }
 }
