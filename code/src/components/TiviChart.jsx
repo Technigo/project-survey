@@ -59,16 +59,16 @@ const openSesame = () => {
 }
 
 export function TiviChart (props) {
-    const stim = ((parseInt(props.q6Answer, 10) + parseInt(props.q16Answer, 10)) / 2)
-    const self = ((parseInt(props.q5Answer, 10) + parseInt(props.q15Answer, 10)) / 2)
-    const univ = ((parseInt(props.q4Answer, 10) + parseInt(props.q14Answer, 10)) / 2)
-    const bene = ((parseInt(props.q3Answer, 10) + parseInt(props.q13Answer, 10)) / 2)
-    const conf = ((parseInt(props.q1Answer, 10) + parseInt(props.q11Answer, 10)) / 2)
-    const trad = ((parseInt(props.q2Answer, 10) + parseInt(props.q12Answer, 10)) / 2)
-    const secu = ((parseInt(props.q10Answer, 10) + parseInt(props.q20Answer, 10)) / 2)
-    const powe = ((parseInt(props.q9Answer, 10) + parseInt(props.q19Answer, 10)) / 2)
-    const achi = ((parseInt(props.q8Answer, 10) + parseInt(props.q18Answer, 10)) / 2)
-    const hedo = ((parseInt(props.q7Answer, 10) + parseInt(props.q17Answer, 10)) / 2)
+    const stim = ((props.q6Answer + props.q16Answer) / 2)
+    const self = ((props.q5Answer + props.q15Answer) / 2)
+    const univ = ((props.q4Answer + props.q14Answer) / 2)
+    const bene = ((props.q3Answer + props.q13Answer) / 2)
+    const conf = ((props.q1Answer + props.q11Answer) / 2)
+    const trad = ((props.q2Answer + props.q12Answer) / 2)
+    const secu = ((props.q10Answer + props.q20Answer) / 2)
+    const powe = ((props.q9Answer + props.q19Answer) / 2)
+    const achi = ((props.q8Answer + props.q18Answer) / 2)
+    const hedo = ((props.q7Answer + props.q17Answer) / 2)
 
     const data = [
         {

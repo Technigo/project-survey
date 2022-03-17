@@ -68,16 +68,16 @@ const openSesame = () => {
 
 export const TipiChart = (props) => {
 
-    // console.log(props)
+    // console.lo(g(props)
 
-    const extr = ((parseInt(props.q1Answer, 10) + parseInt(props.q6Answer, 10)) / 2)
-    const agre = ((parseInt(props.q2Answer, 10) + parseInt(props.q7Answer, 10)) / 2)
-    const cons = ((parseInt(props.q3Answer, 10) + parseInt(props.q8Answer, 10)) / 2)
-    const emot = ((parseInt(props.q4Answer, 10) + parseInt(props.q9Answer, 10)) / 2)
-    const open = ((parseInt(props.q5Answer, 10) + parseInt(props.q10Answer, 10)) / 2)
+    const extr = ((props.q1Answer + props.q6Answer) / 2)
+    const agre = ((props.q2Answer + props.q7Answer) / 2)
+    const cons = ((props.q3Answer + props.q8Answer) / 2)
+    const emot = ((props.q4Answer + props.q9Answer) / 2)
+    const open = ((props.q5Answer + props.q10Answer) / 2)
     const name = props.name
-    let maleData = []
-    let femaleData = []
+    let maleData
+    let femaleData
 
     if (props.age === '15-20') {
         maleLabel = 'Mean Scores for Males 15-20'

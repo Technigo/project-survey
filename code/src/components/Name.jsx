@@ -3,7 +3,7 @@ import React from 'react'
 const Name = (props) => {
     return (
         <div className="page-container" role="form">
-        <h2>Please input your first name:</h2>
+        <h2><label htmlFor="name">Please input your first name:</label></h2>
         <input 
             id="name"
             type="text" 

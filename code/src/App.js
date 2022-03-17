@@ -61,7 +61,6 @@ export const App = () => {
 
   // Error
   // const [error, setError] = useState('')
-
   return (
     <section className='page'>
     <Header />

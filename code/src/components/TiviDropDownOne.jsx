@@ -45,61 +45,61 @@ const TiviDropDownOne = (props) => {
         {
             id: 'tivi1',
             text: `${capital} believe${s} ${lower} should always show respect to ${lower2} parents and to older people. It is important to ${lower3} to be obedient.`,
-            onChange: event => props.q1Question(event.target.value),
+            onChange: event => props.q1Question(Number(event.target.value)),
             value: props.q1Answer
         },
         {
             id: 'tivi2',
             text: `Religious belief is important to ${lower3}. ${capital} ${tries} hard to do what ${lower2} religion requires.`,
-            onChange: event => props.q2Question(event.target.value),
+            onChange: event => props.q2Question(Number(event.target.value)),
             value: props.q2Answer
         },
         {
             id: 'tivi3',
             text: `It's very important to ${lower3} to help the people around ${lower3}. ${capital} want${s} to care for their well-being.`,
-            onChange: event => props.q3Question(event.target.value),
+            onChange: event => props.q3Question(Number(event.target.value)),
             value: props.q3Answer
         },
         {
             id: 'tivi4',
             text: `${capital} think${s} it is important that every person in the world be treated equally. ${capital} believe${s} everyone should have equal opportunities in life.`,
-            onChange: event => props.q4Question(event.target.value),
+            onChange: event => props.q4Question(Number(event.target.value)),
             value: props.q4Answer
         },
         {
             id: 'tivi5',
             text: `${capital} think${s} it's important to be interested in things. ${capital} like${s} to be curious and to try to understand all sorts of things.`,
-            onChange: event => props.q5Question(event.target.value),
+            onChange: event => props.q5Question(Number(event.target.value)),
             value: props.q5Answer
         },
         {
             id: 'tivi6',
             text: `${capital} like${s} to take risks. ${capital} ${are} always looking for adventures.`,
-            onChange: event => props.q6Question(event.target.value),
+            onChange: event => props.q6Question(Number(event.target.value)),
             value: props.q6Answer
         },
         {
             id: 'tivi7',
             text: `${capital} seek${s} every chance ${lower} can to have fun. It is important to ${lower3} to do things that give ${lower3} pleasure.`,
-            onChange: event => props.q7Question(event.target.value),
+            onChange: event => props.q7Question(Number(event.target.value)),
             value: props.q7Answer
         },
         {
             id: 'tivi8',
             text: `Getting ahead in life is important to ${lower3}. ${capital} strive${s} to do better than others.`,
-            onChange: event => props.q8Question(event.target.value),
+            onChange: event => props.q8Question(Number(event.target.value)),
             value: props.q8Answer
         },
         {
             id: 'tivi9',
             text: `${capital} always wants to be the one who makes the decisions. ${capital} like${s} to be the leader.`,
-            onChange: event => props.q9Question(event.target.value),
+            onChange: event => props.q9Question(Number(event.target.value)),
             value: props.q9Answer
         },
         {
             id: 'tivi10',
             text: `It is important to ${lower3} that things be organized and clean. ${capital} really ${does} not like things to be a mess.`,
-            onChange: event => props.q10Question(event.target.value),
+            onChange: event => props.q10Question(Number(event.target.value)),
             value: props.q10Answer
         },
     ]
