@@ -1,12 +1,19 @@
 import React from "react";
-// insted of writing props we can add the value and onchange valuein curly brackets
-const Name = ({ name, onInputChange }) => {
+
+const Name = ({ name, setName }) => {
   return (
-    <div>
-      <label htmlFor="name">
-        <h2> Let´s start with the basics, What your name?</h2>
+    <div className="survey-item name">
+      <label className="section-heading" htmlFor="name">
+        Final question, Whats your name?
       </label>
-      <input id="name" type="text" value={name} onChange={onInputChange} />
+      <input
+        id="name"
+        type="text"
+        value={name}
+        onChange={(e) => {
+          setName(e.target.value);
+        }}
+      />
     </div>
   );
 };
