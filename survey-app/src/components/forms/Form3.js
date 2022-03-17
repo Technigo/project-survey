@@ -4,6 +4,11 @@ import { AlertContainer } from 'react-custom-alert';
 import Buttons from '../partials/Buttons';
 import SubHeader from '../partials/SubHeader';
 
+const subHeaderData = {
+  page: 3,
+  title: 'How would you prefer to work?'
+}
+
 const allLocations = [
   '-- choose a location --',
   'Fully in office',
@@ -13,14 +18,19 @@ const allLocations = [
   'Fully remote'
 ];
 
-const headerText = 'How would you prefer to work?';
-
 const PreferredHoursInput = ({ nextPage, backPage, retrieveLocationData }) => {
   const [location, setLocation] = useState();
 
+  const buttonData = {
+    nextPage: nextPage,
+    backPage: backPage,
+    retrieveData: retrieveLocationData, 
+    state: location
+  }
+
   return (
     <section className='page'>
-      <SubHeader pageNumber={3} headerText={headerText} />
+      <SubHeader subHeaderData={subHeaderData} />
       <form>
         <label htmlFor='locationsOptions' aria-label='choose a location'>
           <select
@@ -36,11 +46,7 @@ const PreferredHoursInput = ({ nextPage, backPage, retrieveLocationData }) => {
         </label>
       </form>
       <AlertContainer floatingTime={2000} />
-      <Buttons
-        nextPage={nextPage}
-        backPage={backPage}
-        retrieveData={retrieveLocationData}
-        state={location} />
+      <Buttons buttonData={buttonData} />
     </section>
   )
 };

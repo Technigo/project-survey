@@ -3,23 +3,29 @@ import React, { useState } from 'react';
 import SubHeader from '../partials/SubHeader';
 import Form from '../partials/RadioInput'
 
-const radioGroups = ['18-24', '25-34', '35-44', '45+'];
-const headerText = 'How old are you?';
+const ageGroups = ['18-24', '25-34', '35-44', '45+'];
+const subHeaderData = {
+  page: 1,
+  title: 'How old are you?'
+}
 
 const AgeInput = ({ nextPage, backPage, retrieveAgeData }) => {
   const [ageGroup, setAgeGroup] = useState();
 
+  const radioData = {
+    nextPage: nextPage,
+    backPage: backPage,
+    state: ageGroup,
+    setState: setAgeGroup,
+    retrieveData: retrieveAgeData,
+    label: 'age',
+    radioGroups: ageGroups
+  }
+
   return (
     <section className='age-input page'>
-      <SubHeader pageNumber={1} headerText={headerText} />
-      <Form
-        nextPage={nextPage}
-        backPage={backPage}
-        label='age'
-        state={ageGroup}
-        setState={setAgeGroup}
-        radioGroups={radioGroups}
-        retrieveData={retrieveAgeData} />
+      <SubHeader subHeaderData={subHeaderData} />
+      <Form radioData={radioData} />
     </section>
   )
 };

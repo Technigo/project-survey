@@ -1,8 +1,10 @@
 import React from 'react';
 import { alert } from 'react-custom-alert';
 
-const Button = ({ nextPage, backPage, innerText, retrieveData, state }) => {
+const Button = ({ buttonData }) => {
   const alertWarning = () => alert({ message: 'Please select an option.', type: 'warning' });
+
+  const { nextPage, backPage, innerText, retrieveData, state } = buttonData;
 
   return (
     <div className='button-wrapper'>

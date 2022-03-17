@@ -1,13 +1,18 @@
 import React from 'react'
 
-const SubHeader = ({ pageNumber, headerText, headerText2 }) => {
+const SubHeader = ({ subHeaderData }) => {
   return (
     <h2>
-      <span className='symbols'>{pageNumber}. </span>
-      {headerText}
+      <span className='symbols'>{subHeaderData.page}. </span>
+      {subHeaderData.title}
       {
-        (pageNumber === 4 || pageNumber === 5)
-          ? <span className='sub-header'>{headerText2} <span className='symbols'> *</span></span>
+        (subHeaderData.page === 4 || subHeaderData.page === 5)
+          ? <> 
+            <span className='sub-header'>{subHeaderData.title2} <span className='symbols'> *</span></span>
+            <p className='sub-header-paragraph'>0 = No change
+            <span className='text-right'>5 = {subHeaderData.level}</span>
+            </p>
+          </>
           : <span className='symbols'> *</span>
       }
     </h2>

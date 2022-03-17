@@ -3,7 +3,16 @@ import { AlertContainer } from 'react-custom-alert';
 
 import Buttons from './Buttons';
 
-const Form = ({ nextPage, backPage, label, radioGroups, state, setState, retrieveData }) => {
+const Form = ({ radioData}) => {
+  const { nextPage, backPage, state, setState, retrieveData, radioGroups, label } = radioData;
+  
+  const buttonData = {
+    nextPage: nextPage,
+    backPage: backPage,
+    state: state,
+    retrieveData: retrieveData,
+  };
+
   return (
     <>
       <form>
@@ -25,11 +34,7 @@ const Form = ({ nextPage, backPage, label, radioGroups, state, setState, retriev
         ))}
       </form>
       <AlertContainer floatingTime={2000} />
-      <Buttons
-        nextPage={nextPage}
-        backPage={backPage}
-        retrieveData={retrieveData}
-        state={state} />
+      <Buttons buttonData={buttonData} />
     </>
   )
 }

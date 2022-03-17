@@ -25,6 +25,11 @@ const Closing = (data) => {
       : 'You feel your stress level would not change in a flexible work environment.'
   }
 
+  const buttonData = {
+    nextPage: refreshPage,
+    innerText: 'reload'
+  }
+
   return (
     <section className='closing page'>
       <h2>Thanks for sharing! Your feedback is greatly appreciated.</h2>
@@ -35,7 +40,7 @@ const Closing = (data) => {
         <li>{productivityResponse()}</li>
         <li>{stressResponse()}</li>
       </ul>
-      <Buttons nextPage={refreshPage} innerText='reload' />
+      <Buttons buttonData={buttonData} />
     </section>
   )
 };

@@ -3,6 +3,11 @@ import React from 'react';
 import Buttons from '../partials/Buttons';
 
 const Welcome = ({ nextPage }) => {
+  const buttonData = {
+    nextPage: nextPage,
+    innerText: "Sure, let's go"
+  }
+
   return (
     <section className='welcome page'>
       <div className='overlay' />
@@ -10,7 +15,7 @@ const Welcome = ({ nextPage }) => {
       <p className='text-content'>We’d love to hear your thoughts on <br />
         workplace flexibility. Care to share?
       </p>
-      <Buttons nextPage={nextPage} innerText="Sure, let's go" />
+      <Buttons buttonData={buttonData} />
       <p className='time'>
         <img className="icon" src='/images/clock.png' alt='clock icon' />
         Takes 1 min

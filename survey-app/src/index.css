@@ -66,6 +66,11 @@ section {
   font-size: 20px;
 }
 
+.sub-header-paragraph {
+  font-weight: 400;
+  font-size: 16px;
+}
+
 .button-wrapper {
   display: flex;
   flex-wrap: wrap;

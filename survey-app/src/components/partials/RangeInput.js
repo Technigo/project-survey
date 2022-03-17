@@ -4,15 +4,24 @@ import { AlertContainer } from 'react-custom-alert';
 import Buttons from './Buttons';
 import Numbers from './Numbers';
 
-const RangeInput = ({ nextPage, backPage, state, setState, forAndClassname, retrieveData }) => {
+const RangeInput = ({ rangeData }) => {
+  const { nextPage, backPage, state, setState, retrieveData, identifier } = rangeData;
+
+  const buttonData = {
+    nextPage: nextPage,
+    backPage: backPage,
+    state: state,
+    retrieveData: retrieveData,
+  };
+
   return (
     <>
       <form>
-        <label htmlFor={forAndClassname}>
+        <label htmlFor={identifier}>
           <input
             className='slider'
             type='range'
-            id={forAndClassname}
+            id={identifier}
             min='0'
             max='5'
             defaultValue='0'
@@ -21,11 +30,7 @@ const RangeInput = ({ nextPage, backPage, state, setState, forAndClassname, retr
         </label>
       </form>
       <AlertContainer floatingTime={2000} />
-      <Buttons
-        nextPage={nextPage}
-        backPage={backPage}
-        retrieveData={retrieveData}
-        state={state} />
+      <Buttons buttonData={buttonData} />
     </>
   )
 };
