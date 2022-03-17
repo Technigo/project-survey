@@ -1,7 +1,16 @@
 .form {
-    min-width: 30%;
-    text-align: center;
-    background-color: white;
-    opacity: 0.8;
-    padding: 2rem;
-  }
+  min-width: 30%;
+  text-align: center;
+  background-color: white;
+  opacity: 0.85;
+  padding: 2rem;
+  border-radius: 5%;
+}
+
+.form h1 {
+  color: teal;
+}
+
+.form h2 {
+  margin-top: 20px;
+}

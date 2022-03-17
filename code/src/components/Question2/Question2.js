@@ -2,24 +2,30 @@ import React from 'react';
 
 import './Question2.css';
 
+const lostItems = ['mind', 'suitcase', 'dog', 'wallet'];
+
 const Question2 = (props) => {
+    const { username, lostItem, setLostItem } = props;
+
+    const onLostItemChange = (event) => {
+        setLostItem(event.target.value);
+    }
+
     return (
         <>
-          <h2>Question2</h2> 
-          <p>Hello {props.username}, what have you lost?</p>
-          <label>
-              <input type="radio" value="mind" onchange={props.onLostItemChange} />
-                Your mind
-          </label>
-          <label>
-              <input type="radio" value="suitcase" onchange={props.onLostItemChange} />
-                Your suitcase
-          </label>
-          <label>
-              <input type="radio" value="dog" onchange={props.onLostItemChange} />
-                Your dog
-          </label>
-          <hr />
+          <h2>Okay {username !== '' ? username : 'stranger'}, what have you lost?</h2>
+
+          {lostItems.map((item) => (
+              <label key={item}>
+                  <input 
+                    type="radio"
+                    value={item}
+                    onChange={onLostItemChange}
+                    checked={lostItem === item}
+                  />
+                  Your {item}
+              </label>
+          ))}
         </>
     )
 }

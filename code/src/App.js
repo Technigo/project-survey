@@ -9,7 +9,7 @@ export const App = () => {
   return (
     <div className='app-container'>
       <Header />
-      <Form className="form" /> 
+      <Form /> 
       <Footer />
     </div>
   )
