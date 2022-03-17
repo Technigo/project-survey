@@ -3,27 +3,28 @@ import React from 'react'
 const Purpose = ({ options, setOptions, nextSlide, backSlide}) => {
 
     return (
-      <div id='options'>
-        <label htmlFor='option'>Purpose of stay</label>
-        <select 
+     <section>
+        <h2>Purpose of stay</h2>
+        <label htmlFor='option'></label>
+        <select
           onChange={(event) => {setOptions(event.target.value)}}
           id='option'
           value={options}>
-          <option disabled>Choose below</option>
-          <option>Leisure travelling</option>
-          <option>Business appointment</option>
-          <option>Visiting friends</option>
-          <option>Other</option>
+          <option disabled>choose below</option>
+          <option>leisure travelling</option>
+          <option>business appointment</option>
+          <option>visiting friends</option>
+          <option>other</option>
         </select>
         <div>
           <button className='button' onClick={backSlide}>
-            Back
+            back
           </button>
           <button className='button' onClick={nextSlide}>
-            Next
+            next
           </button>
         </div>
-      </div>
+     </section> 
     )
   }
   

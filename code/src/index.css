@@ -5,11 +5,47 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #C3E5AE;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  width: 100vw;
+  height: 100vh;
+}
+
+.start-container {
+  background-image: url('./assets/guesthouse.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+}
+.button-container {
+}
+
+.start-container h2 {
+  /* color: #C3E5AE; */
+  font-weight: 700;
+  margin: 8px 0 2px 0;
+  /* border: 2px solid white; */
+}
+.start-container p {
+  font-weight: 700;
+  margin: 2px 0 8px 0;
+}
+
+
+
 
 

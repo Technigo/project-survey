@@ -1,14 +1,15 @@
 import React from 'react'
 
-const Age = ({ ageGroup, setAgeGroup, nextSlide }) => {
+const Age = ({ ageGroup, setAgeGroup, nextSlide, backSlide }) => {
   const ageSelectors = ['0-20', '21-40', '41-60', '60+']
 
     return (
+     <section>
       <div>
         <h2>Select your age</h2>
         {ageSelectors.map(group => (
         <label key={group} htmlFor='age'>
-        <input
+        <input 
           id='age'
           type='radio'
           value={group}
@@ -19,11 +20,15 @@ const Age = ({ ageGroup, setAgeGroup, nextSlide }) => {
         </label>
         ))}
         <div>
+          <button className='button' onClick={backSlide}>
+            back
+          </button>
           <button className="button" onClick={nextSlide}>
-            Next
+            next
           </button>
         </div>
       </div>
+     </section> 
     )
 }
 

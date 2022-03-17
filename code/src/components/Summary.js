@@ -1,13 +1,21 @@
 import React from 'react'
 
 const Summary = ({ ageGroup, options, expectations }) => {
+    const reloadSurvey = () => window.location.reload()
+
     return (
+       <section>
         <div>
-        <h2>
-        Your age is {ageGroup} and you stayed due to {options} </h2>
-         <p>and thought {expectations} </p>
-         </div>
-    )
+          <h2>Thanks for staying and welcome back!</h2>
+          <p>Your age is {ageGroup}</p>
+          <p>You stayed due to {options}</p>
+          <p>You felt staying in the guesthouse was {expectations}</p>
+          <button className="button" onClick={reloadSurvey}>
+            reload
+          </button>
+        </div>
+       </section>
+    )   
 }
 
 export default Summary
