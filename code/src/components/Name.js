@@ -1,14 +1,26 @@
 import React from 'react';
 
-const Name = ({ name, onInputChange }) => {
+const Name = ({ name, onInputChange, onNextChange }) => {
   return (
     <div>
       <h2>What should I call you?</h2>
+      <section>
+        <form>
+          <label htmlFor='name' label='name'>
+            <p>Type your name here: </p>
 
-      <div>
-        <label htmlFor='name'>Type your name here: </label>
-        <input id='name' type='text' value={name} onChange={onInputChange} />
-      </div>
+            <input
+              id='name'
+              type='text'
+              value={name}
+              onChange={onInputChange}
+            />
+          </label>
+          <button disabled={name === ''} onClick={onNextChange}>
+            Next
+          </button>
+        </form>
+      </section>
     </div>
   );
 };
