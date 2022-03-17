@@ -4,7 +4,7 @@ export const Welcome = () => {
 
   return (
     <>
-    <h1>Welcome</h1>
+    <h1>Do you want to sign up to our art lottery?</h1>
     </>
   )
 }

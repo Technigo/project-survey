@@ -2,7 +2,7 @@ import React from "react";
 
 export const Summary = ({ name, location, wantNewsletter, ageGroup }) => {
   return (
-    <div className="form-container">
+    <div className="summary">
       <h2>Summary:</h2>
       <p>Name: {name}</p>
       <p>Location: {location}</p>

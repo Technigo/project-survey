@@ -22,6 +22,11 @@ code {
   font-family: 'Abel', sans-serif;
 }
 
+h1, h2 {
+  text-align: center;
+  margin: 1em;
+}
+
 .form-container {
   display: flex;
   flex-direction: column;
@@ -40,5 +45,15 @@ button {
 }
 
 label, button {
-  margin: 5vw;
+  margin: 5vw 2vw;
+}
+
+.age-form {
+  flex-direction: row;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  width: 40vw;
 }

@@ -38,7 +38,7 @@ export const Form = () => {
     return (
       <div className="form-container">
       <Welcome/>
-      <button onClick={Counter}>START</button>
+      <button onClick={Counter}>YES</button>
       </div>
     )
   } else if (count === 2) {

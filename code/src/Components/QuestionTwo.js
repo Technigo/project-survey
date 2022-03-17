@@ -8,10 +8,11 @@ export const QuestionTwo = ({ location, onLocationInputChange }) => {
         onChange={onLocationInputChange}
         value={location}
       >
-        <option value="">Where in the world are you?</option>
-        <option value="stockholm">Stockholm</option>
-        <option value="tokyo">Tokyo</option>
-        <option value="space">Space</option>
+        <option value="">What is your occuapation?</option>
+        <option value="Student">Student</option>
+        <option value="Artist">Artist</option>
+        <option value="Curator">Curator</option>
+        <option value="Other">Other</option>
       </select>
     </form>
   )
