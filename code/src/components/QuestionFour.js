@@ -12,6 +12,8 @@ export const QuestionFour = ({motherhood,setMotherhood, step, setStep}) => {
             checked={motherhood} 
             onChange={event => setMotherhood(event.target.checked)}
             />
+            Alway late and home with sick kids, nope, don't think so!
+            <input type="checkbox" />
             </label>
         </form>
           <button className="button" onClick={() => setStep(step + 1)}>Go to summary</button>
