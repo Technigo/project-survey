@@ -216,8 +216,9 @@ select {
   -webkit-border-radius: 5px;
   /* background: url(http://dropdown/arrow/url/) no-repeat; */
   background-position: right center;
-  /* background-color: #CCCCCC; */
+  background-color: var(--primary);
   padding: 5px;
+  color: var(--accent);
 }
 
 .drop-down {
