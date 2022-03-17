@@ -3,9 +3,9 @@ import { AlertContainer } from 'react-custom-alert';
 
 import Buttons from './Buttons';
 
-const Form = ({ radioData}) => {
-  const { nextPage, backPage, state, setState, retrieveData, allInputs, label } = radioData;
-  const buttonData = { nextPage, backPage, state, retrieveData,};
+const Form = ({ radioData }) => {
+  const { nextPage, backPage, state, retrieveData, allInputs, label } = radioData;
+  const buttonData = { nextPage, backPage, state };
 
   return (
     <>
@@ -20,7 +20,8 @@ const Form = ({ radioData}) => {
               type='radio'
               value={group}
               id={`${group}-input`}
-              onChange={(event) => setState(event.target.value)}
+              aria-checked="false"
+              onChange={retrieveData}
               checked={state === group} />
             <span className='dot' />
             {group}

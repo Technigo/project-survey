@@ -2,8 +2,7 @@ import React from 'react';
 
 import Buttons from '../partials/Buttons';
 
-const Welcome = ({ changePage }) => {
-  const { nextPage } = changePage;
+const Welcome = ({ nextPage }) => {
   const buttonData = { nextPage, innerText: "Sure, let's go" }
 
   return (

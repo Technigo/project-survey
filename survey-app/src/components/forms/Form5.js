@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import SubHeader from '../partials/SubHeader';
+import RangeInput from '../partials/RangeInput';
 
 import '../../styled-components/Slider.css';
-import RangeInput from '../partials/RangeInput';
 
 const subHeaderData = {
   page: 5,
@@ -12,15 +12,13 @@ const subHeaderData = {
   level: 'Less stressed'
 };
 
-const StressRange = ({ changePage, retrieveStressData }) => {
-  const [stress, setStress] = useState();
-  const { nextPage, backPage } = changePage;
+const StressRange = ({ stressData }) => {
+  const { nextPage, backPage, retrieveStressData, stress } = stressData;
 
   const rangeData = {
     nextPage,
     backPage,
     state: stress,
-    setState: setStress,
     retrieveData: retrieveStressData,
     identifier: 'stressRange'
   };

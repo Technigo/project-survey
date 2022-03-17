@@ -1,12 +1,9 @@
-import SelectInput from 'components/partials/SelectInput';
-import React, { useState } from 'react';
+import React from 'react';
 
 import SubHeader from '../partials/SubHeader';
+import SelectInput from '../partials/SelectInput';
 
-const subHeaderData = {
-  page: 3,
-  title: 'How would you prefer to work?'
-}
+const subHeaderData = { page: 3, title: 'How would you prefer to work?' }
 
 const allLocations = [
   '-- choose a location --',
@@ -17,15 +14,13 @@ const allLocations = [
   'Fully remote'
 ];
 
-const PreferredHoursInput = ({ changePage, retrieveLocationData }) => {
-  const [location, setLocation] = useState();
-  const { nextPage, backPage } = changePage;
+const PreferredHoursInput = ({ locationData  }) => {
+  const { nextPage, backPage, retrieveLocationData, location } = locationData;
 
   const selectData = {
     nextPage,
     backPage,
     state: location,
-    setState: setLocation,
     retrieveData: retrieveLocationData,
     allInputs: allLocations
   }

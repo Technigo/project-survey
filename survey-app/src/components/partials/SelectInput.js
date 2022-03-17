@@ -4,15 +4,15 @@ import { AlertContainer } from 'react-custom-alert';
 import Buttons from './Buttons';
 
 const SelectInput = ({ selectData }) => {
-  const { nextPage, backPage, state, setState, retrieveData, allInputs } = selectData;
-  const buttonData = { nextPage, backPage, state, retrieveData };
+  const { nextPage, backPage, state, retrieveData, allInputs } = selectData;
+  const buttonData = { nextPage, backPage, state };
 
   return (
     <>
       <form>
         <label htmlFor='locationsOptions' aria-label='choose a location'>
           <select
-            onChange={(event) => setState(event.target.value)}
+            onChange={retrieveData}
             value={state}
             id='locationsOptions'>
             {allInputs.map((locations) => (

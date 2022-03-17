@@ -5,8 +5,8 @@ import Buttons from './Buttons';
 import Numbers from './Numbers';
 
 const RangeInput = ({ rangeData }) => {
-  const { nextPage, backPage, state, setState, retrieveData, identifier } = rangeData;
-  const buttonData = { nextPage, backPage, state, retrieveData };
+  const { nextPage, backPage, state, retrieveData, identifier } = rangeData;
+  const buttonData = { nextPage, backPage, state };
 
   return (
     <>
@@ -19,7 +19,7 @@ const RangeInput = ({ rangeData }) => {
             min='0'
             max='5'
             defaultValue='0'
-            onChange={(event) => setState(event.target.value)} />
+            onChange={retrieveData} />
           <Numbers />
         </label>
       </form>

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import SubHeader from '../partials/SubHeader';
 import Form from '../partials/RadioInput'
@@ -9,15 +9,13 @@ const subHeaderData = {
   title: 'How old are you?'
 }
 
-const AgeInput = ({ changePage, retrieveAgeData }) => {
-  const [ageGroup, setAgeGroup] = useState();
-  const { nextPage, backPage } = changePage;
+const AgeInput = ({ ageData  }) => {
+  const { nextPage, backPage, retrieveAgeData, age } = ageData;
 
-  const radioData = { 
-    nextPage, 
+  const radioData = {
+    nextPage,
     backPage,
-    state: ageGroup,
-    setState: setAgeGroup,
+    state: age,
     retrieveData: retrieveAgeData,
     label: 'age',
     allInputs: ageGroups

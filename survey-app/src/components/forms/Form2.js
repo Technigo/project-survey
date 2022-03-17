@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import SubHeader from '../partials/SubHeader';
 import Form from '../partials/RadioInput'
@@ -11,15 +11,13 @@ const subHeaderData = {
   title: 'Would you prefer a company that offers flexible work hours?'
 }
 
-const WorkHoursInput = ({ changePage, retrieveHoursData }) => {
-  const [hours, setHours] = useState();
-  const { nextPage, backPage } = changePage;
+const WorkHoursInput = ({ hoursData }) => {
+  const { nextPage, backPage, retrieveHoursData, hours } = hoursData;
 
   const radioData = {
     nextPage,
     backPage,
     state: hours,
-    setState: setHours,
     retrieveData: retrieveHoursData,
     label: 'work hour', 
     allInputs: preferences

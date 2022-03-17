@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-import RangeInput from 'components/partials/RangeInput';
+import RangeInput from '../partials/RangeInput';
 import SubHeader from '../partials/SubHeader';
 
 import '../../styled-components/Slider.css';
@@ -12,15 +12,13 @@ const subHeaderData = {
   level: 'Very productive'
 }
 
-const ProductivityRange = ({ changePage, retrieveProductivityData }) => {
-  const [productivity, setProductivity] = useState();
-  const { nextPage, backPage } = changePage;
+const ProductivityRange = ({ productivityData }) => {
+  const { nextPage, backPage, retrieveProductivityData, productivity } = productivityData;
 
   const rangeData = {
     nextPage,
     backPage,
     state: productivity,
-    setState: setProductivity,
     retrieveData: retrieveProductivityData,
     identifier: 'productivityRange'
   }
