@@ -23,6 +23,7 @@ const TypeForm = () => {
   const retrieveLocationData = (locationData) => setLocation(locationData);
   const retrieveProductivityData = (productivityData) => setProductivity(productivityData);
   const retrieveStressData = (stressData) => setStress(stressData);
+  const closingData = { age, hours, location, productivity, stress };
 
   return (
     <main>
@@ -60,12 +61,7 @@ const TypeForm = () => {
           retrieveStressData={retrieveStressData} />
       )}
       {page === 6 && (
-        <Closing
-          age={age}
-          hours={hours}
-          location={location}
-          productivity={productivity}
-          stress={stress} />
+        <Closing closingData={closingData} />
       )}
     </main>
   )

@@ -16,8 +16,8 @@ const StressRange = ({ nextPage, backPage, retrieveStressData }) => {
   const [stress, setStress] = useState();
 
   const rangeData = {
-    nextPage: nextPage,
-    backPage: backPage,
+    nextPage,
+    backPage,
     state: stress,
     setState: setStress,
     retrieveData: retrieveStressData,

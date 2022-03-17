@@ -15,13 +15,13 @@ const WorkHoursInput = ({ nextPage, backPage, retrieveHoursData }) => {
   const [hours, setHours] = useState();
 
   const radioData = {
-    nextPage: nextPage,
-    backPage: backPage,
+    nextPage,
+    backPage,
     state: hours,
     setState: setHours,
     retrieveData: retrieveHoursData,
     label: 'work hour', 
-    radioGroups: preferences
+    allInputs: preferences
   }
 
   return (

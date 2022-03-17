@@ -16,8 +16,8 @@ const ProductivityRange = ({ nextPage, backPage, retrieveProductivityData }) => 
   const [productivity, setProductivity] = useState();
 
   const rangeData = {
-    nextPage: nextPage,
-    backPage: backPage,
+    nextPage,
+    backPage,
     state: productivity,
     setState: setProductivity,
     retrieveData: retrieveProductivityData,

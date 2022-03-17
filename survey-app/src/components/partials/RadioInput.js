@@ -4,19 +4,13 @@ import { AlertContainer } from 'react-custom-alert';
 import Buttons from './Buttons';
 
 const Form = ({ radioData}) => {
-  const { nextPage, backPage, state, setState, retrieveData, radioGroups, label } = radioData;
-  
-  const buttonData = {
-    nextPage: nextPage,
-    backPage: backPage,
-    state: state,
-    retrieveData: retrieveData,
-  };
+  const { nextPage, backPage, state, setState, retrieveData, allInputs, label } = radioData;
+  const buttonData = { nextPage, backPage, state, retrieveData,};
 
   return (
     <>
       <form>
-        {radioGroups.map((group) => (
+        {allInputs.map((group) => (
           <label
             key={group}
             htmlFor={`${group}-input`}

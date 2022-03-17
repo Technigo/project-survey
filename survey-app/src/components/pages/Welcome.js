@@ -3,10 +3,7 @@ import React from 'react';
 import Buttons from '../partials/Buttons';
 
 const Welcome = ({ nextPage }) => {
-  const buttonData = {
-    nextPage: nextPage,
-    innerText: "Sure, let's go"
-  }
+  const buttonData = { nextPage, innerText: "Sure, let's go" }
 
   return (
     <section className='welcome page'>

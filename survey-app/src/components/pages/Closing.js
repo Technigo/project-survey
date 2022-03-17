@@ -4,8 +4,8 @@ import Buttons from '../partials/Buttons';
 
 const refreshPage = () => window.location.reload();
 
-const Closing = (data) => {
-  const { age, hours, location, productivity, stress } = data;
+const Closing = ({ closingData }) => {
+  const { age, hours, location, productivity, stress } = closingData;
 
   const hoursResponse = () => {
     return (hours === 'Yes')

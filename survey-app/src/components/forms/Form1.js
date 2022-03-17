@@ -12,14 +12,14 @@ const subHeaderData = {
 const AgeInput = ({ nextPage, backPage, retrieveAgeData }) => {
   const [ageGroup, setAgeGroup] = useState();
 
-  const radioData = {
-    nextPage: nextPage,
-    backPage: backPage,
+  const radioData = { 
+    nextPage, 
+    backPage,
     state: ageGroup,
     setState: setAgeGroup,
     retrieveData: retrieveAgeData,
     label: 'age',
-    radioGroups: ageGroups
+    allInputs: ageGroups
   }
 
   return (

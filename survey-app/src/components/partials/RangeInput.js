@@ -6,13 +6,7 @@ import Numbers from './Numbers';
 
 const RangeInput = ({ rangeData }) => {
   const { nextPage, backPage, state, setState, retrieveData, identifier } = rangeData;
-
-  const buttonData = {
-    nextPage: nextPage,
-    backPage: backPage,
-    state: state,
-    retrieveData: retrieveData,
-  };
+  const buttonData = { nextPage, backPage, state, retrieveData };
 
   return (
     <>
