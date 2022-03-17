@@ -71,7 +71,9 @@ const Form = () => {
         />
       )}
 
-      {next === 6 && <Summary name={name} weather={weather} money={money} />}
+      {next === 6 && (
+        <Summary name={name} weather={weather} money={money} dream={dream} />
+      )}
     </section>
   );
 };

@@ -8,8 +8,8 @@ const Weather = ({ weather, onWeatherChange, onNextChange }) => {
       <form>
         <h2 className='page-title'>What type of weather do you prefer?</h2>
         {weatherGroup.map((group) => (
-          <div className='align-radio'>
-            <label key={group}>
+          <div className='align-radio' key={group}>
+            <label>
               <input
                 id='weather'
                 type='radio'

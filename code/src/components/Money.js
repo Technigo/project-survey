@@ -12,10 +12,10 @@ const Money = ({ money, onMoneyChange, onNextChange }) => {
             value={money}
             onChange={(event) => onMoneyChange(event.target.value)}>
             <option value='none'>Select an option</option>
-            <option value='option1'>For free? I'm broke atm!</option>
-            <option value='option2'>I've got a little saved up</option>
-            <option value='option3'>Do you take monopoly money?</option>
-            <option value='option4'>$Nothing is too expensive$</option>
+            <option value='free'>I'm broke atm!</option>
+            <option value='some'>I've got a little saved up</option>
+            <option value='monopoly'>Do you take monopoly money?</option>
+            <option value='rich'>$Nothing is too expensive$</option>
           </select>
         </label>
         <button onClick={onNextChange}>Next question</button>
