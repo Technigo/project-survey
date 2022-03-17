@@ -9,7 +9,14 @@
         {
             "number": 2,
             "question": "How old are you?",
-            "type": "radio"
+            "type": "radio",
+            "alternatives": ["18-30", "31-50", "51+"]
+        },
+        {
+            "number": 3,
+            "question": "Where did you first hear about this product?",
+            "type": "dropdown",
+            "alternatives": ["Ad on Facebook", "Ad on Instagram", "Ad on the subway", "A friend told me about it", "In a podcast"]
         }
     ]
 }
