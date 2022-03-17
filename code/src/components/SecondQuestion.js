@@ -14,7 +14,7 @@ const SecondQuestion = (nextPage, backPage) => {
         <input
         className="question"
         type="text"
-        placeholder="email"
+        placeholder="Email"
         value={userEmailInput}
         onChange={onEmailInputChange}
          />

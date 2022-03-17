@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Quintessential&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,200;0,300;0,400;1,300&family=Lobster&display=swap");
 
 * {
   margin: 0 auto;
@@ -11,15 +11,26 @@ body {
   font-family: "Jost", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: #fbf6db;
+  background: url("https://images.unsplash.com/photo-1602104623433-2dd8b8b35548?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80");
 }
 
 h1 {
-  font-family: "Quintessential", sans-serif;
-  font-size: 40px;
-  color: #c99c53;
+  font-family: "Lobster", sans-serif;
+  font-size: 50px;
   text-align: center;
   margin-bottom: 20px;
+  background: linear-gradient(
+    59deg,
+    #ba8d19 15%,
+    #c98c04 0,
+    #e48e0f 30%,
+    #f0a443 45%,
+    #a8670a 60%,
+    #cb9019 75%
+  );
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
 }
 
 input {
@@ -34,11 +45,11 @@ input {
 
 .btn {
   font-family: "Jost", sans-serif;
-  border: 0.6px solid #b47c23;
+  border: 0.6px solid #a66d06;
   font-size: 16px;
   border-radius: 30px;
-  color: #b47c23;
-  padding: 10px;
+  color: #a66d06;
+  padding: 13px;
   margin: 20px 10px 10px 0;
   -webkit-appearance: none;
 }
@@ -48,24 +59,22 @@ label {
   font-size: 20px;
 }
 
+p {
+  margin-bottom: 10px;
+}
+
 .form-wrapper {
   border: 1px solid #d79500;
   border-radius: 20px;
   padding: 20px;
   text-align: center;
+  background: #f2efe6d4;
 }
 
 .header-title {
   overflow: auto;
   margin-bottom: 20px;
 }
-
-/* .orange {
-  width: 1em;
-  opacity: 0.8;
-  float: left;
-  margin-left: 10px;
-} */
 
 /* MEDIA QUERY FOR TABLET */
 /* @media (min-width: 801px) {}
