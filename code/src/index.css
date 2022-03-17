@@ -28,7 +28,7 @@ h1 {
     #a8670a 60%,
     #cb9019 75%
   );
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: #00000012;
   -webkit-background-clip: text;
   background-clip: text;
 }
