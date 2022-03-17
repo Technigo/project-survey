@@ -1,17 +1,9 @@
-import React, { useState } from 'react';
-import { Counter } from 'components/Counter';
-import { InfoBanner } from 'components/InfoBanner';
+import React from 'react';
+import CalculationForm from 'components/CalculationForm';
 
-export const App = () => {
-
-const [counter, setCounter] = useState(0)
+export const App  = () => {
 
   return (
-<div>
-  <h2>SUPER Counter</h2>
-  <Counter counter = {counter} setCounter = {setCounter}/>
-  <InfoBanner counter = {counter}/>   
-
-</div>
+ <CalculationForm />
   )
 }
