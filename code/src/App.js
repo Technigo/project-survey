@@ -1,27 +1,34 @@
 import React, { useState } from "react";
 import Question from "components/Question";
 
-export const App = () => {
-  const questions = [
-    {
-      id: "dish",
-      question_text: "If you could only eat one dish for the rest of your life, what would it be?",
-      answer_type: "text",
-    },
-    {
-      id: "cuisine",
-      question_text: "Which of the two is your favorite cuisine?",
-      answer_type: "radio",
-      options: ["Mexican", "Japanese"],
-    },
-    {
-      id: "herbs",
-      question_text: "What herb is superior?",
-      answer_type: "select",
-      options: ["Basil", "Coriander", "Parsley"],
-    },
-  ];
+const questions = [
+  {
+    id: "dish",
+    question_text: "If you could only eat one dish for the rest of your life, what would it be?",
+    answer_type: "text",
+  },
+  {
+    id: "cuisine",
+    question_text: "Which of the two is your favorite cuisine?",
+    answer_type: "radio",
+    options: [
+      { value: "mexican", label: "Mexican" },
+      { value: "japanese", label: "Japanese" },
+    ],
+  },
+  {
+    id: "herbs",
+    question_text: "What herb is superior?",
+    answer_type: "select",
+    options: ["basil", "corander", "parsley"]
+      // { value: "basil", label: "Basil" },
+      // { value: "coriander", label: "Coriander" },
+      // { value: "parsley", label: "Parsley" },
+    // ],
+  },
+];
 
+export const App = () => {
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
 

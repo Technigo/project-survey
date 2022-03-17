@@ -6,7 +6,7 @@ const Question = ({ id, question_text, answer_type, options, onChange, inputValu
     <div className="questionCard">
       <h2>{question_text}</h2>
       <InputField
-        id={id}
+        name={id}
         type={answer_type}
         value={inputValue}
         options={options}

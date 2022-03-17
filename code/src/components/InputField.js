@@ -1,36 +1,29 @@
 import React from "react";
 
-const InputField = ({ id, type, options, value, onChange }) => {
+const InputField = ({ name, type, options, value, onChange }) => {
   switch (type) {
     case "text": {
-      return <input id={id} value={value} onChange={onChange} type="text"></input>;
+      return <input id={name} value={value} onChange={onChange} type={type} required></input>;
     }
     case "radio": {
-      return (
-        <div id={id}>
-          <label htmlFor={options[0]}>{options[0]}</label>
-          <input
-            id={id + "1"}
-            type="radio"
-            name={id}
-            value={options[0]}
-            // checked={value === options[0]}
-            onChange={onChange}
-            required
-          />
-          <label htmlFor={options[1]}>{options[1]}</label>
-          <input
-            id={id + "2"}
-            type="radio"
-            name={id}
-            value={options[1]}
-            // checked={value === options[1]}
-            onChange={onChange}
-            required
-          />
-        </div>
-      );
+      return options.map((o) => {
+        return (
+          <div key={o.value}>
+            <label htmlFor={o.value}>{o.label}</label>
+            <input
+              id={o.value}
+              type={type}
+              name={name}
+              value={o.value}
+              checked={value === o.value}
+              onChange={onChange}
+              required
+            />
+          </div>
+        );
+      });
     }
+
     case "select": {
       return (
         <select value={value} onChange={onChange} required>
