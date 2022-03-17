@@ -7,7 +7,7 @@ const QuestionThree = ({ questionNum, frequency, getBookingFrequency }) => {
     
 
     return <div className='question'>
-        <label> <span>{questionNum}.</span> How often do you use our cleaning service ? </label>
+        <label> {questionNum}. How often do you use our cleaning service ? </label>
         <select onChange={e => getBookingFrequency(e.target.value)} value={frequency}>
         {bookingFrequency.map(item => {
             return <option key={item} value={item}>{item}</option>

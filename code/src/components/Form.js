@@ -38,7 +38,9 @@ const Form = () => {
     })
 
     const nextQuestion = () => {
-        document.querySelector('.form-container').style.padding = '0%';
+        document.querySelector('.form-container').style.transform ='translateY(0%)';
+        document.querySelector('#form').style.display = 'flex';
+        document.querySelector('.progress-bar').style.opacity ='1';
         setQuestionNum(questionNum + 1);
     };
     
@@ -66,10 +68,11 @@ const Form = () => {
              <>
              <Heading nextQuestion = {nextQuestion}/>
              </>
-        )
+        ) 
         }
-        <form id='form' onSubmit={submit}>
+
         <ProgressBar questionNum = {questionNum} />
+        <form id='form' onSubmit={submit}>
         <div className="form-container">
         {questionNum === 1 && (
             <>
@@ -78,7 +81,10 @@ const Form = () => {
             date = {date}
             getDate = {getDate}
             />
+            <div className="btn-container">
             <NextBtn nextQuestion={nextQuestion} />
+
+            </div>
             </>
         )} 
 
@@ -92,8 +98,10 @@ const Form = () => {
             satisfaction = {satisfaction}
             setSatisfaction = {setSatisfaction}
             />
+            <div className="btn-container">
             <PrevBtn prevQuestion={prevQuestion} />
             <NextBtn nextQuestion={nextQuestion} />
+            </div>
             </>
         )} 
 

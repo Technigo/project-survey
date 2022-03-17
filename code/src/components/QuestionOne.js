@@ -4,7 +4,7 @@ const  QuestionOne = ({ questionNum, date, getDate }) => {
    
         
     return <div className='question'>
-        <label htmlFor='date' ><span>{questionNum}.</span> When did you use our service?</label>
+        <label htmlFor='date' >{questionNum}. When did you use our service?</label>
         <input 
         type='date' 
         id='date'

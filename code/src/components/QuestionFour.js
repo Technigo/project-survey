@@ -5,11 +5,11 @@ const options = ['Definitely 😊', 'Might or might not', 'Definitely not']
 const QuestionFour = ({ questionNum, loyalty, getLoyaltyRating }) => {
 
     return <div className='question'>
-        <p> <span>{questionNum}</span> How likely are you to use our service again?</p>
+        <p className="question-four-title"> {questionNum}. How likely are you to use our service again?</p>
 
         {options.map (option => {
             
-            return <label key={option}>
+            return <label htmlFor={option} className='radio' key={option}>
                 <input 
                 type='radio'
                 value={option}

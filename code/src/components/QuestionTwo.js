@@ -6,7 +6,7 @@ const QuestionTwo = ({ questionNum, rating, getRating, satisfactionRating, satis
     setSatisfaction(satisfactionRating[rating])
 
    return <div className="question">
-        <label htmlFor='range'><span>{questionNum}.</span>How happy are you with the cleanliness?</label>
+        <label htmlFor='range'>{questionNum}. How happy are you with the cleanliness?</label>
         <input 
         id='range'
         type='range'

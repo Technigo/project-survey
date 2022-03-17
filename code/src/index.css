@@ -25,9 +25,7 @@ html {
   font-size: 62.5%;
 }
 
-.container {
 
-}
 .hero-section {
   background: var(--dominantBlue);
   height: 100vh;
@@ -41,10 +39,8 @@ html {
 h1 {
   font-size: 4.2rem;
   text-align: center;
-  color: var(--accentPink);
+  color: var(--dominantWhite);
 }
-
-
 
 img {
   width: 100%;
@@ -110,8 +106,8 @@ img {
 }
 
 .start-btn {
-  background: var(--dominantWhite);
-  border: solid 1px var(--dominantWhite);
+  background: var(--accentPink);
+  border: solid 1px var(--accentPink);
   width: 50%;
   padding: 1.5rem 1rem;
   margin-top: 2.4rem;
@@ -130,17 +126,19 @@ img {
 }
 
 
-form {
-  background: var(--accentPink);
+#form {
+  background: var(--dominantWhite);
   height: 100vh;
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
-  padding: 6.4rem;
+  justify-content: center;
 }
 
+
 .form-container {
-  padding: 40%;
+  position: absolute;
+  transform: translateY(50%);
   transition: all 1s ease;
 }
 
@@ -149,20 +147,22 @@ form {
   flex-direction: column;
   gap: 1.2rem;
   width: 300px;
-  padding: 9.6rem 1.6rem;
+  padding: 9.6rem 0;
   transform: translateY(0);
   transition: all 1s ease;
 }
 
 
-label {
-  font-size: 1.6rem;
+label, .question-four-title {
+  font-size: 1.8rem;
+  letter-spacing: 0.1px;
+  line-height: 1.4;
   color: var(--accentBlack);
   font-weight: 600;
 }
 
 
-input, select {
+input, select, textarea {
   appearance:none;
   -webkit-appearance:none;
   background: none;
@@ -176,23 +176,59 @@ input:focus {
 }
 
 input[type = date], select,
-input[type = text], input[type = radio] {
+input[type = text], input[type = radio],
+textarea {
   padding: 1.2rem;
   border-radius: 10px;
   outline: solid 1px var(--dominantWhite);
-  background: var(--dominantWhite)
+  background: #FBFBFB;
 }
 
 input[type = range], select {
   outline: none;
 }
 
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  font-weight: 500;
+}
+
+input[type = radio] {
+  background: transparent;
+  border: solid 1px var(--dominantBlue);
+  border-radius: 50%;
+  position: relative;
+
+}
+
+input[type = radio]::before{
+  content: '';
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  position: absolute;
+  top:0;
+  left: 0;
+  transform: translate(70%,70%);
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
 input[type = radio]:checked {
-  background: palevioletred;
+  background: var(--dominantBlue);
+  border: solid 1px transparent;
+}
+
+input[type = radio]:checked::before {
+  background: var(--dominantWhite);
+  box-shadow: 3px 3px 5px rgba(85, 85, 85, 0.089);
 }
 
 input[type="range"]::-webkit-slider-thumb {
   -webkit-appearance: none;
+
   height: 20px;
   width: 20px;
   border-radius: 50%;
@@ -213,8 +249,57 @@ input[type=range]::-webkit-slider-runnable-track  {
   font-size: 1.6rem;
 }
 
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 0 4.8rem 4.8rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  opacity: 0;
+}
 
+.progress-bar label {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #777;
+}
 
+progress{
+  -webkit-appearance: progress-bar;
+  border-radius: 10px;
 
+}
+
+progress[value] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20rem;
+
+}
+
+progress[value]::-webkit-progress-bar {
+  background-color: var(--accentBlue);
+}
+
+progress[value]::-webkit-progress-value{
+  background-color: var(--dominantBlue);
+  transition: all 0.4s ease;
+}
+
+.btn-container {
+  position: absolute;
+  left: 0;
+}
+
+.btn {
+  background: var(--accentPink);
+  border: none;
+  border-radius: 10px;
+  width: 10rem;
+  padding: 1.5rem 1rem;
+  font-size: 1.4rem;
+}
 
 
