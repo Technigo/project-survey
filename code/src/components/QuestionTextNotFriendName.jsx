@@ -1,7 +1,7 @@
 import React from "react"
 
 const QuestionTextNotFriendName = (props) => {
-  const { snack, notFriendName, onNotFriendNameChange } = props
+  const { notFriendName, onNotFriendNameChange } = props
 
   return (
     <div className="q-and-a-box">

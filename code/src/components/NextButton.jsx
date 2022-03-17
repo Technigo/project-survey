@@ -19,7 +19,7 @@ const NextButton = (props) => {
       setError("")
       onStepChange(1)
     } else {
-      setError("Only required field: at least two characters, no numbers or special characters")
+      setError("required field: at least two characters, no numbers/special characters")
     }
   }
 

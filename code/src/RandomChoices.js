@@ -12,6 +12,7 @@ let ingredientOne = ''
 let ingredientTwo = ''
 let phone = ''
 
+// to delete since this field is required
 export const RandomUserName = () => {
   const userNameOptions = ["Emma", "Jessica", "Joanna", "Laura", "Lisa", "Maurii", "Nadia", "Rijad", "Sofie", "Terese"]
   if (userName === '') {
@@ -29,7 +30,7 @@ export const RandomGender = () => {
 }
 
 export const RandomWeather = () => {
-  const weatherOptions = ["sunny", "cloudy"]
+  const weatherOptions = ["sunny", "cloudy", "shitty"]
   if (weather === '') {
     weather = weatherOptions[Math.floor(Math.random() * (weatherOptions.length))]
   }
@@ -37,7 +38,7 @@ export const RandomWeather = () => {
 }
 
 export const RandomVehicle = () => {
-  const vehicleOptions = ["bicycle", "e-scooter", "motorcycle"]
+  const vehicleOptions = ["bicycle", "e-scooter", "motorcycle", "camel", "unicycle", "elephant"]
   if (vehicle === '') {
     vehicle = vehicleOptions[Math.floor(Math.random() * (vehicleOptions.length))]
   }
@@ -53,7 +54,7 @@ export const RandomSpeed = () => {
 }
 
 export const RandomSnack = () => {
-  const snackOptions = ["chocolate bar", "candies", "nuts"]
+  const snackOptions = ["chocolate bar", "candies", "nuts", "chips", "dried insects"]
   if (snack === '') {
     snack = snackOptions[Math.floor(Math.random() * (snackOptions.length))]
   }
@@ -85,7 +86,7 @@ export const RandomFriendName = () => {
 }
 
 export const RandomSport = () => {
-  const sportOptions = ["football", "hockey", "baseball", "basketball", "floorball"]
+  const sportOptions = ["football", "hockey", "baseball", "basketball", "floorball", "curling", "handball"]
   if (sport === '') {
     sport = sportOptions[Math.floor(Math.random() * (sportOptions.length))]
   }
@@ -93,7 +94,7 @@ export const RandomSport = () => {
 }
 
 export const RandomIngredientTwo = () => {
-  const ingredientOneOptions = ["lettuce", "tuna", "tomato", "cucumber"]
+  const ingredientOneOptions = ["lettuce", "tuna", "tomato", "cucumber", "tofu", "jam", "peanut butter"]
   if (ingredientOne === '') {
     ingredientOne = ingredientOneOptions[Math.floor(Math.random() * (ingredientOneOptions.length))]
   }
@@ -101,7 +102,7 @@ export const RandomIngredientTwo = () => {
 }
 
 export const RandomIngredientOne = () => {
-  const ingredientTwoOptions = ["ham", "cheese", "egg", "mayo", "turkey"]
+  const ingredientTwoOptions = ["ham", "cheese", "egg", "mayo", "turkey", "avocado", "ketchup"]
   if (ingredientTwo === '') {
     ingredientTwo = ingredientTwoOptions[Math.floor(Math.random() * (ingredientTwoOptions.length))]
   }
@@ -109,7 +110,7 @@ export const RandomIngredientOne = () => {
 }
 
 export const RandomPhone = () => {
-  const phoneOptions = ["iPhone", "Samsung", "Huawei"]
+  const phoneOptions = ["iPhone", "Samsung", "Huawei", "Motorola", "Nokia"]
   if (phone === '') {
 phone = phoneOptions[Math.floor(Math.random() * (phoneOptions.length))]
   }

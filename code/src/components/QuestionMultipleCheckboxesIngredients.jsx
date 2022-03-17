@@ -12,7 +12,7 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
   return (
     <div className="q-and-a-box">
       <h1>
-        Select two ingredients of a sandwich that{" "}
+        Select two ingredients for a sandwich that{" "}
         {notFriendName ? notFriendName : RandomNotFriendName()} will now eat for lunch
         each day
       </h1>

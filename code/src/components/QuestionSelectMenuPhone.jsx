@@ -7,8 +7,8 @@ const QuestionSelectMenuPhone = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <label htmlFor="phone"><h1>Your mobile phone is within your reach if you stretch your arm, if it’s not already in your hand, select its brand</h1></label>
-        <select onChange={onPhoneChange} id="phone" value={phone}>
+      <label htmlFor="phone"><h1>If your mobile phone isn't already in your hand, it's within your reach: select its brand</h1></label>
+        <select className="select-input" onChange={onPhoneChange} id="phone" value={phone}>
           <option value="" disabled>--Please select an option--</option>
           {phoneItems.map((item) => (
             <option key={item} value={item}>{item}</option>

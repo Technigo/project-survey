@@ -9,7 +9,7 @@ const QuestionSelectMenuGender = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <label htmlFor="gender"><h1>{userName ? userName : RandomUserName()}, select a gender for the main character</h1></label>
+      <label htmlFor="gender"><h1>{userName ? userName : RandomUserName()}, select the gender of the main character</h1></label>
         <select className="select-input" onChange={onGenderChange} id="gender" value={gender}>
           <option value="" disabled>--Please select an option--</option>
           {genderItems.map((item) => (

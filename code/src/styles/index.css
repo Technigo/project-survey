@@ -1,8 +1,10 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -15,10 +17,10 @@ code {
 /* ----- FORM BOX */
 
 .form-box {
-  outline: 1px solid red;
+  /* outline: 1px solid red; */
   width: 375px;
-  height: 500px;
-  margin: 25px auto 0 auto;
+  /* height: 500px; */
+  margin: 25px auto;
 }
 
 /* ----- Q & A BOX ----- */
@@ -32,23 +34,30 @@ code {
 
 .q-and-a-box h1 {
   color: #000;
-  font-size: 20px;
+  font-size: 24px;
   text-align: center;
+  padding-bottom: 20px;
 }
 
 /* ----- INPUT TEXT ----- */
 
 .input-text {
-  width: 200px;
+  width: 275px;
 }
 
 /* ----- BUTTONS ----- */
+
+button {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+}
 
 .next-button-box {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 .next-button-box button {
@@ -58,6 +67,11 @@ code {
 
 .error-message {
   color: red;
+  text-align: center;
+}
+
+.back-button-box {
+  padding-top: 40px;
 }
 
 .back-button-box button {
@@ -191,7 +205,7 @@ grid-template-columns: 1fr 1fr 1fr;
   justify-content: space-evenly;
   align-items: flex-end; */
   text-align: center;
-  width: 200px;
+  width: 275px;
   padding: 0 0.5rem;
   background-color: #fff;
   border-radius: 5px;
@@ -204,7 +218,7 @@ grid-template-columns: 1fr 1fr 1fr;
 
   .slider {
     -webkit-appearance: none;
-    width: 200px;
+    width: 275px;
     height: 10px;
     border-radius: 10px;
     background: grey;
