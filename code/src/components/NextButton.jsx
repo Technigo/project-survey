@@ -11,8 +11,6 @@ const NextButton = (props) => {
     onStepChange,
   } = props
 
-  //   const [error, setError] = useState("")
-
   const onButtonClickedUserName = (event) => {
     event.preventDefault()
     if (userName.length) {
@@ -39,32 +37,35 @@ const NextButton = (props) => {
     return (
       <>
         <div>{error}</div>
-        <button onClick={onButtonClickedUserName}>Next</button>
+        <button type="button" onClick={onButtonClickedUserName}>
+          Next
+        </button>
       </>
     )
   } else if (step === 10) {
     return (
-      <button onClick={() => onStepChange(likeSports ? 1 : 2)}>Next</button>
+      <button type="button" onClick={() => onStepChange(likeSports ? 1 : 2)}>
+        Next
+      </button>
     )
   } else if (step === 12) {
     return (
       <>
         <div>{error}</div>
-        <button onClick={onButtonClickedIngredient}>Next</button>
+        <button type="button" onClick={onButtonClickedIngredient}>
+          Next
+        </button>
       </>
     )
-  } else if (step !== 14) {
-    return <button onClick={() => onStepChange(1)}>Next</button>
-  }
-  else {
-      return <div>patatepoil</div>
+  } else if (step === 14) {
+    return null
+  } else {
+    return (
+      <button type="button" onClick={() => onStepChange(1)}>
+        Next
+      </button>
+    )
   }
 }
 
 export default NextButton
-
-// ----- why the following isn't working like it was in UserName question??? -----
-// return (
-//     <div>{!!error.length && <div>{error}</div>}
-//     <button onClick={onButtonClicked}>Next</button>
-//   )

@@ -1,7 +1,7 @@
 import React from "react"
 
 const QuestionSingleCheckoxLikeSports = (props) => {
-  const { likeSports, onLikeSportsChange, onStepChange } = props
+  const { likeSports, onLikeSportsChange } = props
 
   return (
     <>
@@ -13,9 +13,6 @@ const QuestionSingleCheckoxLikeSports = (props) => {
             onChange={onLikeSportsChange}
           />
         </label>
-
-        {/* <button onClick={() => onStepChange(likeSports ? 1 : 2)}>Next</button> */}
-        <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )
 }

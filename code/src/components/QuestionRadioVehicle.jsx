@@ -2,10 +2,10 @@ import React from "react"
 
 import { RandomWeather } from "../RandomChoices"
 
-const vehicleTypes = ["bicycle", "e-scooter", "motorcycle"]
+const vehicleItems = ["bicycle", "e-scooter", "motorcycle"]
 
 const QuestionRadioVehicle = (props) => {
-  const { weather, vehicle, onVehicleChange, onStepChange } = props
+  const { weather, vehicle, onVehicleChange } = props
 
   return (
     <>
@@ -13,19 +13,17 @@ const QuestionRadioVehicle = (props) => {
         What would you rather ride on your way to work under this{" "}
         {weather ? weather : RandomWeather()} sky?
       </h1>
-      {vehicleTypes.map((type) => (
-        <label key={type}>
+      {vehicleItems.map((item) => (
+        <label key={item}>
           <input
             type="radio"
-            value={type}
+            value={item}
             onChange={onVehicleChange}
-            checked={vehicle === type}
+            checked={vehicle === item}
           />
-          {type}
+          {item}
         </label>
       ))}
-      {/* <button onClick={() => onStepChange(1)}>Next</button> */}
-      <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )
 }

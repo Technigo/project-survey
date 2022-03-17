@@ -3,7 +3,7 @@ import React from "react"
 import { RandomVehicle } from '../RandomChoices'
 
 const QuestionRangeSliderSpeed = (props) => {
-  const { vehicle, onSpeedChange, onStepChange } = props
+  const { vehicle, onSpeedChange } = props
 
   return (
     <>
@@ -17,8 +17,6 @@ const QuestionRangeSliderSpeed = (props) => {
             onChange={onSpeedChange}
           />
         </label>
-        {/* <button onClick={() => onStepChange(1)}>Next</button> */}
-        <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )
 }

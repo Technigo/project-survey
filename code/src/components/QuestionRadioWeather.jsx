@@ -1,26 +1,24 @@
 import React from "react"
 
-const weatherTypes = ["sunny", "cloudy"]
+const weatherItems = ["sunny", "cloudy"]
 
 const QuestionRadioWeather = (props) => {
-  const { weather, onWeatherChange, onStepChange } = props
+  const { weather, onWeatherChange } = props
 
   return (
     <>
       <h1>Look by the window. Is it sunny or cloudy outside?</h1>
-        {weatherTypes.map((type) => (
-          <label key={type}>
+        {weatherItems.map((item) => (
+          <label key={item}>
             <input
               type="radio"
-              value={type}
+              value={item}
               onChange={onWeatherChange}
-              checked={weather === type}
+              checked={weather === item}
             />
-            {type}
+            {item}
           </label>
         ))}
-        {/* <button onClick={() => onStepChange(1)}>Next</button> */}
-        <button onClick={() => onStepChange(-1)}>Back</button>
     </>
   )
 }

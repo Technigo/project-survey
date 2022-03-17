@@ -2,6 +2,7 @@ import React, { useState } from "react"
 
 import ProgressBar from "./ProgressBar"
 import NextButton from "./NextButton"
+import BackButton from "./BackButton"
 
 import QuestionTextUserName from "./QuestionTextUserName"
 import QuestionSelectMenuGender from "./QuestionSelectMenuGender"
@@ -33,17 +34,6 @@ const FormWrapper = () => {
   const [friendName, setFriendName] = useState("")
   const [likeSports, setLikeSports] = useState(false)
   const [sport, setSport] = useState("")
-  // const [ingredient, setIngredient] = useState({
-  //   ham: false,
-  //   cheese: false,
-  //   egg: false,
-  //   mayo: false,
-  //   turkey: false,
-  //   lettuce: false,
-  //   tuna: false,
-  //   tomato: false,
-  //   cucumber: false,
-  // })
   const [ingredient, setIngredient] = useState([])
 
   const [phone, setPhone] = useState("")
@@ -95,13 +85,6 @@ const FormWrapper = () => {
     setSport(event.target.value)
   }
 
-  // const handleIngredientChange = (event) => {
-  //   setIngredient({
-  //     ...ingredient,
-  //     [event.target.value]: event.target.checked,
-  //   })
-  // }
-
   const handleIngredientChange = (test) => {
     setError("")
     if (ingredient.includes(test)) {
@@ -140,7 +123,7 @@ const FormWrapper = () => {
     />
   ) : (
     <>
-    {/* doesnt work if I extract ProgressBar??? */}
+      {/* doesnt work well if I extract ProgressBar??? */}
       {/* <ProgressBar step={step} /> */}
       <form
         onSubmit={(event) => {
@@ -154,7 +137,6 @@ const FormWrapper = () => {
             <QuestionTextUserName
               userName={userName}
               onUserNameChange={handleUserNameChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -166,7 +148,6 @@ const FormWrapper = () => {
               userName={userName}
               gender={gender}
               onGenderChange={handleGenderChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -177,7 +158,6 @@ const FormWrapper = () => {
             <QuestionRadioWeather
               weather={weather}
               onWeatherChange={handleWeatherChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -189,7 +169,6 @@ const FormWrapper = () => {
               weather={weather}
               vehicle={vehicle}
               onVehicleChange={handleVehicleChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -201,7 +180,6 @@ const FormWrapper = () => {
               vehicle={vehicle}
               speed={speed}
               onSpeedChange={handleSpeedChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -213,7 +191,6 @@ const FormWrapper = () => {
               userName={userName}
               snack={snack}
               onSnackChange={handleSnackChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -225,7 +202,6 @@ const FormWrapper = () => {
               snack={snack}
               notFriendName={notFriendName}
               onNotFriendNameChange={handleNotFriendNameChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -236,7 +212,6 @@ const FormWrapper = () => {
             <QuestionRadioBeverage
               beverage={beverage}
               onBeverageChange={handleBeverageChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -248,7 +223,6 @@ const FormWrapper = () => {
               beverage={beverage}
               friendName={friendName}
               onFriendNameChange={handleFriendNameChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -259,7 +233,6 @@ const FormWrapper = () => {
             <QuestionSingleCheckoxLikeSports
               likeSports={likeSports}
               onLikeSportsChange={handleLikeSportsChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -271,7 +244,6 @@ const FormWrapper = () => {
               friendName={friendName}
               sport={sport}
               onSportChange={handleSportChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -282,7 +254,6 @@ const FormWrapper = () => {
             <QuestionMultipleCheckboxesIngredients
               ingredient={ingredient}
               onIngredientChange={handleIngredientChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -293,7 +264,6 @@ const FormWrapper = () => {
             <QuestionSelectMenuPhone
               phone={phone}
               onPhoneChange={handlePhoneChange}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -303,7 +273,6 @@ const FormWrapper = () => {
             <ProgressBar step={step} />
             <ConfirmationPage
               userName={userName}
-              onStepChange={handleStepChange}
             />
           </>
         )}
@@ -315,6 +284,13 @@ const FormWrapper = () => {
           userName={userName}
           likeSports={likeSports}
           ingredient={ingredient}
+          step={step}
+          onStepChange={handleStepChange}
+        />
+      </div>
+      <div>
+        <BackButton
+          likeSports={likeSports}
           step={step}
           onStepChange={handleStepChange}
         />
