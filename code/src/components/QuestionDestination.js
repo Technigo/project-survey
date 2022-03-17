@@ -10,7 +10,7 @@ const QuestionDestination = ({ destination, onDestinationChange }) => {
   ];
 
   return (
-    <>
+    <section className="main">
       <p className="question">Where would you like to travel?</p>
       <form className="form">
         {destinationOptions.map((destinationValue) => (
@@ -34,7 +34,7 @@ const QuestionDestination = ({ destination, onDestinationChange }) => {
         ))}
       </form>
       <Button button="Continue" />
-    </>
+    </section>
   );
 };
 

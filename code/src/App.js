@@ -3,23 +3,8 @@ import Form from "./components/Form";
 
 export const App = () => {
   return (
-    <main>
+    <main className="main-container">
       <Form />
     </main>
   );
 };
-
-// import React, { useState } from "react";
-
-// export const App = () => {
-//   const [name, setName] = useState("");
-//   return (
-//     <form onSubmit={(event) => event.preventDefault()}>
-//       <input
-//         type="text"
-//         onChange={(event) => setName(event.target.value)}
-//         value={name}
-//       />
-//     </form>
-//   );
-// };

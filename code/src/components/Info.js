@@ -3,7 +3,7 @@ import Button from "./Button";
 
 const Info = () => {
   return (
-    <>
+    <section className="main">
       <section className="info-section">
         <div className="intro-text">
           <h1>Hello, let's dream about SUMMER in SWEDEN</h1>
@@ -11,7 +11,7 @@ const Info = () => {
         </div>
         <Button button="Let's go!" />
       </section>
-    </>
+    </section>
   );
 };
 

@@ -7,8 +7,8 @@ const Summary = ({ name, destination, activity, company, goal }) => {
         Thank you, {name}, for inspiring us with your summer plans!
       </h2>
       <p className="summary">
-        You would like to travel to {destination} 🌲 with {company} and enjoy{" "}
-        {activity} to achieve {goal}
+        You would like to travel to {destination}, {company} and enjoy{" "}
+        {activity}... to achieve {goal}.
       </p>
       <h3 className="summary-goodbye">
         We wish you all the best of luck with your trip!
