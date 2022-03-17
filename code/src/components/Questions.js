@@ -49,7 +49,7 @@ const QuestionContainer = () => {
                       answerComponent = <Radio question={question.question} alternatives={question.alternatives} />
                       break;
                     case 'dropdown':
-                      answerComponent = <Dropdown question={question.question} />;
+                      answerComponent = <Dropdown question={question.question} alternatives={question.alternatives} />;
                       console.log('hej dropdown');
                       break;
                   }
