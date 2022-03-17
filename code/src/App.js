@@ -44,36 +44,19 @@ export const App = () => {
     setInputValue("");
   };
 
-  switch (answers.length) {
-    case 0:
-      return (
-        <form onSubmit={handleOnSubmit}>
-          <Question {...questions[0]} inputValue={inputValue} onChange={onChange} />
-
-          <button type="submit">Next question</button>
-        </form>
-      );
-    case 1:
-      return (
-        <form onSubmit={handleOnSubmit}>
-          <Question {...questions[1]} inputValue={inputValue} onChange={onChange} />
-
-          <button type="submit">Next question</button>
-        </form>
-      );
-    case 2:
-      return (
-        <form onSubmit={handleOnSubmit}>
-          <Question {...questions[2]} inputValue={inputValue} onChange={onChange} />
-
-          <button type="submit">Submit questions</button>
-        </form>
-      );
-    default:
-      return (
-        <h1>
-          Thank you! You answered: {answers[0]}, {answers[1]}, and {answers[2]}
-        </h1>
-      );
+  if (questions.length === answers.length) {
+    return (
+      <h1>
+        Thank you! You answered: {answers.map((answer, i) => <p key={i} >{answer}</p>)}
+      </h1>
+    );
   }
+
+  return (
+    <form onSubmit={handleOnSubmit}>
+      <Question {...questions[answers.length]} inputValue={inputValue} onChange={onChange} />
+
+      <button type="submit">Next question</button>
+    </form>
+  );
 };
