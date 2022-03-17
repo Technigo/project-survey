@@ -1,4 +1,5 @@
 import React from 'react';
+import SubmitButton from './SubmitButton'
 import forwardButton from '../assets/forward-purple.png'
 import backButton from '../assets/back-purple.png'
 import restartButton from '../assets/restart-purple.png'
@@ -55,7 +56,8 @@ const NavButtons = ({pageNumber, setPageNumber, error, setError, name, gender, a
         return (
             <div className="nav-buttons">
             {pageNumber > 0 && pageNumber <= 9 && <button onClick={pageBackward}><img className="navbutton-icon" src={backButton} alt="back button" /></button>}
-            {pageNumber > 0 && pageNumber < 9 && <button onClick={pageForward}><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>}
+            {pageNumber > 0 && pageNumber < 8 && <button onClick={pageForward}><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>}
+            {pageNumber === 8 && <SubmitButton />}
             {pageNumber === 9 && <button onClick={refreshPage}><img className="navbutton-icon" src={restartButton} alt="restart button" /></button>}
         </div>
         )

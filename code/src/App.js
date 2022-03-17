@@ -21,10 +21,10 @@ export const App = () => {
   const [gender, askGender] = useState('')
   const [age, askAge] = useState('')
 
-  // tipi - Personality Questions
+  // TIPI - Personality Questions
+  const [tipiq1Answer, tipiq1Question] = useState("default");
   const [tipiq2Answer, tipiq2Question] = useState("default");
   const [tipiq3Answer, tipiq3Question] = useState("default");
-  const [tipiq1Answer, tipiq1Question] = useState("default");
   const [tipiq4Answer, tipiq4Question] = useState("default");
   const [tipiq5Answer, tipiq5Question] = useState("default");
   const [tipiq6Answer, tipiq6Question] = useState("default");
@@ -96,24 +96,24 @@ export const App = () => {
     {pageNumber === 4 &&
     <TipiDropDown 
       q1Answer = {tipiq1Answer}
-      q1Question = {tipiq1Question}
       q2Answer = {tipiq2Answer}
-      q2Question = {tipiq2Question}
       q3Answer = {tipiq3Answer}
-      q3Question = {tipiq3Question}
       q4Answer = {tipiq4Answer}
-      q4Question = {tipiq4Question}
       q5Answer = {tipiq5Answer}
-      q5Question = {tipiq5Question}
       q6Answer = {tipiq6Answer}
-      q6Question = {tipiq6Question}
       q7Answer = {tipiq7Answer}
-      q7Question = {tipiq7Question}
       q8Answer = {tipiq8Answer}
-      q8Question = {tipiq8Question}
       q9Answer = {tipiq9Answer}
-      q9Question = {tipiq9Question}
       q10Answer = {tipiq10Answer}
+      q1Question = {tipiq1Question}
+      q2Question = {tipiq2Question}
+      q3Question = {tipiq3Question}
+      q4Question = {tipiq4Question}
+      q5Question = {tipiq5Question}
+      q6Question = {tipiq6Question}
+      q7Question = {tipiq7Question}
+      q8Question = {tipiq8Question}
+      q9Question = {tipiq9Question}
       q10Question = {tipiq10Question}
       error = {error}
     />
