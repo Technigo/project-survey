@@ -13,14 +13,6 @@ export const Overview = ({ pronoun, state }) => {
 		possPronoun = "their";
 	}
 
-	let backgroundcolor;
-	if (state.theme === "purpleyellow" || "yellowpink") {
-		backgroundcolor = true;
-	} else {
-		backgroundcolor = false;
-	}
-
-	//return month as month
 	const months = [
 		"Jan",
 		"Feb",
@@ -43,12 +35,24 @@ export const Overview = ({ pronoun, state }) => {
 	return (
 		<div
 			className="invitation-card--wrapper"
-			style={{ backgroundColor: backgroundcolor ? "#FFDDDD" : "#D5E4F5" }}
+			style={{
+				backgroundColor:
+					state.theme === "purpleyellow" ||
+					state.theme === "yellowpink" ||
+					state.theme === "pinkgreen"
+						? "#FFF6D7"
+						: "#E8EBF8",
+				borderColor:
+					state.theme === "greenblue" || state.theme === "pinkgreen"
+						? "#75A996"
+						: "#AC699D",
+			}}
 		>
 			<PennantImage color={state.theme} alt="pennant in colors" />
-			<h1 className="highlight">{state.name}</h1>
+			<h1>{state.name}</h1>
 			<h2 className="invitation-text">
-				Invites you to celebrate {possPronoun} {state.pronouns} {state.age}{" "}
+				Invites you to celebrate {possPronoun} {state.pronouns}{" "}
+				<span className="age-text">{state.age} </span>
 				birthday
 			</h2>
 			<p className="date-text">
@@ -64,7 +68,7 @@ export const Overview = ({ pronoun, state }) => {
 				The party will be held at {state.location}
 			</p>
 			<p className="rvsp-text">
-				RVSP {state.rvspTo}: {state.rvspContactDetails}
+				RVSP: {state.rvspTo} {state.rvspContactDetails}
 			</p>
 			<em className="gift-text">
 				{state.gift === "Donation"

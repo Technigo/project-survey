@@ -59,7 +59,7 @@ export const App = () => {
 	};
 
 	const startOver = () => {
-		setCounter(0);
+		setCounter(1);
 	};
 
 	return (
@@ -76,7 +76,7 @@ export const App = () => {
 			<section>
 				<form onSubmit={handleSubmit}>
 					{/* Name and gender */}
-					{counter === 0 && (
+					{counter === 1 && (
 						<div className="question-wrapper">
 							<h3>What is the name of the person to be celebrated?</h3>
 							<TextInput
@@ -96,7 +96,7 @@ export const App = () => {
 					)}
 
 					{/* Age */}
-					{counter === 0 && (
+					{counter === 2 && (
 						<div className="question-wrapper">
 							<AgeInput state={state.age} handleInput={handleInput} />
 							<Button
@@ -107,7 +107,7 @@ export const App = () => {
 					)}
 
 					{/* Location */}
-					{counter === 0 && (
+					{counter === 3 && (
 						<div className="question-wrapper">
 							<h3>Where should the party be?</h3>
 							<TextInput
@@ -126,7 +126,7 @@ export const App = () => {
 					)}
 
 					{/* Date and time */}
-					{counter === 0 && (
+					{counter === 4 && (
 						<div className="question-wrapper date">
 							<div className="date-wrapper">
 								<DateInput
@@ -159,7 +159,7 @@ export const App = () => {
 					)}
 
 					{/* Gifts */}
-					{counter === 0 && (
+					{counter === 5 && (
 						<div className="question-wrapper">
 							<GiftInput state={state.gift} handleInput={handleInput} />
 							<Button
@@ -170,7 +170,7 @@ export const App = () => {
 					)}
 
 					{/* RVSP */}
-					{counter === 0 && (
+					{counter === 6 && (
 						<div className="question-wrapper">
 							<h3>Who should the invited respond to?</h3>
 							<TextInput
@@ -195,7 +195,7 @@ export const App = () => {
 					)}
 
 					{/* Select styling */}
-					{counter === 0 && (
+					{counter === 7 && (
 						<div className="question-wrapper">
 							<div className="theme-wrapper">
 								<ThemeInput state={state.theme} handleInput={handleInput} />
@@ -210,7 +210,7 @@ export const App = () => {
 			</section>
 
 			{/* Overview */}
-			{counter === 0 && (
+			{counter === 8 && (
 				<section className="overview-wrapper">
 					<Overview pronoun={pronoun} state={state} />
 					<StartOverButton resetBtn={startOver} />

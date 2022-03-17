@@ -1,8 +1,6 @@
 import React from "react";
 
 export const PennantImage = ({ color }) => {
-	console.log(color);
-
 	let first = "";
 	let second = "";
 

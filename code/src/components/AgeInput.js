@@ -2,6 +2,7 @@ import React from "react";
 
 export const AgeInput = ({ state, handleInput }) => {
 	const birthdays = [
+		"-- Select --",
 		"1st",
 		"2nd",
 		"3rd",

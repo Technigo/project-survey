@@ -49,3 +49,14 @@ button.submit-btn {
 		#ac699d
 	);
 }
+
+button.reset-btn,
+button.reset-btn:active {
+	color: var(--clr-dark);
+}
+
+button.reset-btn:hover,
+button.reset-btn:focus {
+	background: var(--clr-light);
+	color: var(--clr-black);
+}

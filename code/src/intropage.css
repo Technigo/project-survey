@@ -1,0 +1,17 @@
+img.balloons {
+	position: absolute;
+	bottom: 0;
+	right: 40px;
+	width: 100px;
+	animation: balloon 5s ease-out infinite;
+}
+
+@keyframes balloon {
+	from {
+		transform: translateY(1000%);
+		bottom: -100px;
+	}
+	to {
+		top: -150px;
+	}
+}
