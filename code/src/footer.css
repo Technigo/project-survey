@@ -1,0 +1,19 @@
+footer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 20vh;
+}
+
+.square {
+	position: relative;
+	height: 15px;
+	width: 15px;
+	display: inline-block;
+	transition: all 0.5s ease-in;
+}
+
+.line {
+	height: 3px;
+	width: 40px;
+}

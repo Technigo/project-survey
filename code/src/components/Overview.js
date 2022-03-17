@@ -53,7 +53,7 @@ export const Overview = ({ pronoun, state }) => {
 			<h2 className="invitation-text">
 				Invites you to celebrate {possPronoun} {state.pronouns}{" "}
 				<span className="age-text">{state.age} </span>
-				birthday
+				birthday<div className="second-font">!</div>
 			</h2>
 			<p className="date-text">
 				<span className="month">{month}</span>

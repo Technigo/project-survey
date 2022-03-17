@@ -17,6 +17,7 @@ import {
 	StartOverButton,
 } from "components/Buttons";
 import { ThemeInput } from "components/ThemeInput";
+import { Footer } from "components/Footer";
 
 export const App = () => {
 	const initialState = {
@@ -34,7 +35,7 @@ export const App = () => {
 	};
 
 	const [state, setState] = useState(initialState);
-	// const [error, setError] = useState('')
+	const [error, setError] = useState("");
 	const [counter, setCounter] = useState(0);
 	const [pronoun, setPronoun] = useState();
 
@@ -43,9 +44,17 @@ export const App = () => {
 		const value = e.target.value;
 
 		setState({ ...state, [inputName]: value });
+
+		for (let key in state) {
+			if (state[key] === "") {
+				setError(`Please provide the ${key}`);
+				return;
+			}
+		}
+		setError("");
 	};
 
-	const handleNextStepClick = (e) => {
+	const handleNextStepClick = () => {
 		setCounter(counter + 1);
 	};
 
@@ -63,7 +72,7 @@ export const App = () => {
 	};
 
 	return (
-		<main className="container">
+		<>
 			{counter === 0 && (
 				<section className="intropage-wrapper">
 					<div className="container">
@@ -73,149 +82,154 @@ export const App = () => {
 				</section>
 			)}
 
-			<section>
-				<form onSubmit={handleSubmit}>
-					{/* Name and gender */}
-					{counter === 1 && (
-						<div className="question-wrapper">
-							<h3>What is the name of the person to be celebrated?</h3>
-							<TextInput
-								text={"Name"}
-								inputName={"name"}
-								placeholder={"name"}
-								state={state.name}
-								handleInput={handleInput}
-							/>
-
-							<PronounInput pronoun={pronoun} setPronoun={setPronoun} />
-							<Button
-								nextBtn={handleNextStepClick}
-								prevBtn={handlePrevStepClick}
-							/>
-						</div>
-					)}
-
-					{/* Age */}
-					{counter === 2 && (
-						<div className="question-wrapper">
-							<AgeInput state={state.age} handleInput={handleInput} />
-							<Button
-								nextBtn={handleNextStepClick}
-								prevBtn={handlePrevStepClick}
-							/>
-						</div>
-					)}
-
-					{/* Location */}
-					{counter === 3 && (
-						<div className="question-wrapper">
-							<h3>Where should the party be?</h3>
-							<TextInput
-								text={"Location"}
-								inputName={"location"}
-								placeholder={"location/address"}
-								state={state.location}
-								handleInput={handleInput}
-							/>
-
-							<Button
-								nextBtn={handleNextStepClick}
-								prevBtn={handlePrevStepClick}
-							/>
-						</div>
-					)}
-
-					{/* Date and time */}
-					{counter === 4 && (
-						<div className="question-wrapper date">
-							<div className="date-wrapper">
-								<DateInput
-									text={"Date"}
-									inputName={"date"}
-									state={state.date}
+			<main className="container">
+				<section>
+					<form onSubmit={handleSubmit}>
+						{/* Name and gender */}
+						{counter === 1 && (
+							<div className="question-wrapper">
+								<h3>What is the name of the person to be celebrated?</h3>
+								<TextInput
+									text={"Name"}
+									inputName={"name"}
+									placeholder={"name"}
+									state={state.name}
 									handleInput={handleInput}
 								/>
 
-								<TimeInput
-									text={"From"}
-									inputName={"timeFrom"}
-									state={state.timeFrom}
-									handleInput={handleInput}
-								/>
-
-								<TimeInput
-									text={"To"}
-									inputName={"timeTo"}
-									state={state.timeTo}
-									handleInput={handleInput}
+								<PronounInput pronoun={pronoun} setPronoun={setPronoun} />
+								<Button
+									nextBtn={handleNextStepClick}
+									prevBtn={handlePrevStepClick}
 								/>
 							</div>
+						)}
 
-							<Button
-								nextBtn={handleNextStepClick}
-								prevBtn={handlePrevStepClick}
-							/>
-						</div>
-					)}
-
-					{/* Gifts */}
-					{counter === 5 && (
-						<div className="question-wrapper">
-							<GiftInput state={state.gift} handleInput={handleInput} />
-							<Button
-								nextBtn={handleNextStepClick}
-								prevBtn={handlePrevStepClick}
-							/>
-						</div>
-					)}
-
-					{/* RVSP */}
-					{counter === 6 && (
-						<div className="question-wrapper">
-							<h3>Who should the invited respond to?</h3>
-							<TextInput
-								text={"Respond to"}
-								inputName={"rvspTo"}
-								placeholder={"name"}
-								state={state.rvspTo}
-								handleInput={handleInput}
-							/>
-							<TextInput
-								text={"Phone/email"}
-								inputName={"rvspContactDetails"}
-								placeholder={"phone/email"}
-								state={state.rvspContactDetails}
-								handleInput={handleInput}
-							/>
-							<Button
-								nextBtn={handleNextStepClick}
-								prevBtn={handlePrevStepClick}
-							/>
-						</div>
-					)}
-
-					{/* Select styling */}
-					{counter === 7 && (
-						<div className="question-wrapper">
-							<div className="theme-wrapper">
-								<ThemeInput state={state.theme} handleInput={handleInput} />
+						{/* Age */}
+						{counter === 2 && (
+							<div className="question-wrapper">
+								<AgeInput state={state.age} handleInput={handleInput} />
+								<Button
+									nextBtn={handleNextStepClick}
+									prevBtn={handlePrevStepClick}
+								/>
 							</div>
-							<SubmitButton
-								nextBtn={handleNextStepClick}
-								prevBtn={handlePrevStepClick}
-							/>
-						</div>
-					)}
-				</form>
-			</section>
+						)}
 
-			{/* Overview */}
-			{counter === 8 && (
-				<section className="overview-wrapper">
-					<Overview pronoun={pronoun} state={state} />
-					<StartOverButton resetBtn={startOver} />
+						{/* Location */}
+						{counter === 3 && (
+							<div className="question-wrapper">
+								<h3>Where should the party be?</h3>
+								<TextInput
+									text={"Location"}
+									inputName={"location"}
+									placeholder={"location/address"}
+									state={state.location}
+									handleInput={handleInput}
+								/>
+
+								<Button
+									nextBtn={handleNextStepClick}
+									prevBtn={handlePrevStepClick}
+								/>
+							</div>
+						)}
+
+						{/* Date and time */}
+						{counter === 4 && (
+							<div className="question-wrapper date">
+								<div className="date-wrapper">
+									<DateInput
+										text={"Date"}
+										inputName={"date"}
+										state={state.date}
+										handleInput={handleInput}
+									/>
+
+									<TimeInput
+										text={"From"}
+										inputName={"timeFrom"}
+										state={state.timeFrom}
+										handleInput={handleInput}
+									/>
+
+									<TimeInput
+										text={"To"}
+										inputName={"timeTo"}
+										state={state.timeTo}
+										handleInput={handleInput}
+									/>
+								</div>
+
+								<Button
+									nextBtn={handleNextStepClick}
+									prevBtn={handlePrevStepClick}
+								/>
+							</div>
+						)}
+
+						{/* Gifts */}
+						{counter === 5 && (
+							<div className="question-wrapper">
+								<GiftInput state={state.gift} handleInput={handleInput} />
+								<Button
+									nextBtn={handleNextStepClick}
+									prevBtn={handlePrevStepClick}
+								/>
+							</div>
+						)}
+
+						{/* RVSP */}
+						{counter === 6 && (
+							<div className="question-wrapper">
+								<h3>Who should the invited respond to?</h3>
+								<TextInput
+									text={"Respond to"}
+									inputName={"rvspTo"}
+									placeholder={"name"}
+									state={state.rvspTo}
+									handleInput={handleInput}
+								/>
+								<TextInput
+									text={"Phone/email"}
+									inputName={"rvspContactDetails"}
+									placeholder={"phone/email"}
+									state={state.rvspContactDetails}
+									handleInput={handleInput}
+								/>
+								<Button
+									nextBtn={handleNextStepClick}
+									prevBtn={handlePrevStepClick}
+								/>
+							</div>
+						)}
+
+						{/* Select styling */}
+						{counter === 7 && (
+							<div className="question-wrapper">
+								<div className="theme-wrapper">
+									<ThemeInput state={state.theme} handleInput={handleInput} />
+								</div>
+								<SubmitButton
+									nextBtn={handleNextStepClick}
+									prevBtn={handlePrevStepClick}
+								/>
+							</div>
+						)}
+					</form>
 				</section>
-			)}
-		</main>
+
+				{/* Overview */}
+				{counter === 8 && (
+					<section className="overview-wrapper">
+						<Overview pronoun={pronoun} state={state} />
+						<StartOverButton resetBtn={startOver} />
+					</section>
+				)}
+			</main>
+
+			{/* Footer */}
+			{counter !== 0 && <Footer step={counter} setStep={setCounter} />}
+		</>
 	);
 };

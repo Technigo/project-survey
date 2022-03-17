@@ -29,8 +29,8 @@ code {
 }
 
 h1 {
-	font-family: "Playfair Display", serif;
 	font-weight: 500;
+	transform: translateX(30) rotate(15deg);
 	font-size: 3.5rem;
 	margin: 1.5em 0 0;
 }
@@ -159,6 +159,9 @@ input[type="radio"]:checked {
 /***********************/
 /****    LAYOUT    ****/
 /**********************/
+main {
+	max-height: 80vh;
+}
 
 section {
 	/* height: 100vh; */

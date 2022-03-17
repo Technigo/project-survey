@@ -45,6 +45,14 @@ h2.invitation-text {
 	line-height: normal;
 }
 
+.second-font {
+	font-family: "Shadows Into Light Two", cursive;
+	font-weight: 700;
+	padding-left: 0.1em;
+	transform: rotate(12deg);
+	display: inline-block;
+}
+
 .age-text {
 	font-size: 150%;
 }
