@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Question from "components/Question";
 import Button from "components/Button";
 import SubmittedView from "components/SubmittedView";
@@ -35,29 +35,36 @@ const questions = [
 ];
 
 export const App = () => {
+  const [index, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [buttonLabel, setButtonLabel] = useState("Next Question");
-  const [index, setQuestionIndex] = useState(0);
 
   const onChange = (event) => setInputValue(event.target.value);
+
+  useEffect(() => {
+    const isLastQuestion = () => index === questions.length - 1;
+    if (isLastQuestion()) {
+      setButtonLabel("Submit");
+    }
+  }, [index]);
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
     setAnswers((arr) => [...arr, inputValue]);
-    setInputValue("");
     setQuestionIndex(index + 1);
-    if (answers.length === questions.length - 2) {
-      setButtonLabel("Submit");
-    }
+    setInputValue("");
   };
+
+  const didSubmit = () => questions.length === answers.length;
 
   const resetForm = () => {
     setAnswers([]);
     setQuestionIndex(0);
+    setButtonLabel("Next question");
   };
 
-  if (questions.length === answers.length) {
+  if (didSubmit()) {
     return <SubmittedView answers={answers} reset={resetForm} />;
   }
 
