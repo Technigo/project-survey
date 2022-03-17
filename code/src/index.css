@@ -39,7 +39,6 @@ h2,
 h3 {
 	line-height: 1.6em;
 	letter-spacing: 0.9px;
-	text-shadow: var(--clr-white) 1px 0 10px;
 }
 
 h2 {
@@ -182,15 +181,6 @@ section.intropage-wrapper,
 section.overview-wrapper {
 	height: 100vh;
 }
-
-/* section.intropage-wrapper {
-	background: linear-gradient(
-		29deg,
-		rgba(255, 196, 143, 1) 38%,
-		rgba(253, 228, 188, 1) 66%,
-		rgb(255, 203, 126) 100%
-	);
-} */
 
 section.intropage-wrapper {
 	background: url("./assets/background-intro.jpg");

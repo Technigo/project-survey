@@ -14,7 +14,7 @@ export const Button = ({ nextBtn, prevBtn }) => {
 
 export const StartButton = ({ nextBtn }) => {
 	return (
-		<button className="btn next-btn" onClick={nextBtn}>
+		<button className="btn start-btn" onClick={nextBtn}>
 			Create card
 		</button>
 	);
