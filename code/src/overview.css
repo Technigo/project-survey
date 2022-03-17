@@ -1,6 +1,6 @@
 .invitation-card--wrapper {
 	width: 360px;
-	height: 400px;
+	height: 450px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -121,5 +121,8 @@ span.day {
 @media (min-width: 668px) {
 	h2.invitation-text {
 		font-size: 1.2rem;
+	}
+	.invitation-card--wrapper {
+		height: 500px;
 	}
 }
