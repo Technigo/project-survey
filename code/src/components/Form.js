@@ -4,7 +4,7 @@ import WelcomePage from './WelcomePage';
 import Name from './Name';
 import Weather from './Weather';
 import Money from './Money';
-// import Summary from './Summary';
+import Summary from './Summary';
 
 const Form = () => {
   // const WelcomePage?
@@ -58,10 +58,8 @@ const Form = () => {
           onNextChange={handleNextChange}
         />
       )}
-      {/* <Name name={name} onInputChange={handleInputChange} /> */}
-      {/* <Weather weather={weather} onWeatherChange={handleWeatherChange} /> */}
-      {/* <Money money={money} onMoneyChange={handleMoneyChange} /> */}
-      {/* <Summary /> */}
+
+      {next === 5 && <Summary name={name} weather={weather} money={money} />}
     </section>
   );
 };

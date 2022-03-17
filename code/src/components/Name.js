@@ -4,7 +4,7 @@ const Name = ({ name, onInputChange, onNextChange }) => {
   return (
     <div>
       <h2>What should I call you?</h2>
-      <section>
+      <section className='container'>
         <form>
           <label htmlFor='name' label='name'>
             <p>Type your name here: </p>

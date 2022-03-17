@@ -2,7 +2,7 @@ import React from 'react';
 
 const Money = ({ money, onMoneyChange, onNextChange }) => {
   return (
-    <section>
+    <section className='container'>
       <form>
         <h2>Select money</h2>
         <label htmlFor='money'>

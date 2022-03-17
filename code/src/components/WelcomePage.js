@@ -2,7 +2,7 @@ import React from 'react';
 
 const WelcomePage = ({ onNextChange }) => {
   return (
-    <section>
+    <section className='container'>
       <form>
         <label htmlFor='welcomeInput'>
           <h2>Welcome page - </h2>
