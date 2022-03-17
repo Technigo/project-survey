@@ -1,16 +1,17 @@
 .theme-wrapper {
 	display: flex;
 	flex-direction: column;
-	flex-wrap: wrap;
 	justify-content: center;
 }
 
 .theme-wrapper--images {
 	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
 legend.radio.theme {
-	padding-left: 1em;
+	text-align: center;
 }
 
 input[type="radio"].theme {
