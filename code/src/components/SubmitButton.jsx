@@ -1,9 +1,11 @@
 import React from "react";
 import forwardButton from '../assets/forward-purple.png'
 
-// import { initializeApp } from "firebase/app";
+
 // import firebase from 'firebase/app';
-// import { database } from 'firebase/database'
+
+// import { initializeApp } from "firebase/app";
+// import { getDatabase } from 'firebase/database'
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -28,17 +30,14 @@ import forwardButton from '../assets/forward-purple.png'
 
 
 const SubmitButton = ({pageNumber, setPageNumber, name, gender, age, tipiq1Answer, tipiq2Answer, tipiq3Answer, tipiq4Answer, tipiq5Answer, tipiq6Answer, tipiq7Answer, tipiq8Answer, tipiq9Answer, tipiq10Answer, tiviq1Answer, tiviq2Answer, tiviq3Answer, tiviq4Answer, tiviq5Answer, tiviq6Answer, tiviq7Answer, tiviq8Answer, tiviq9Answer, tiviq10Answer, tiviq11Answer, tiviq12Answer, tiviq13Answer, tiviq14Answer, tiviq15Answer, tiviq16Answer, tiviq17Answer, tiviq18Answer, tiviq19Answer, tiviq20Answer}) => {
-    console.log(name, gender, age, tipiq1Answer, tipiq2Answer, tipiq3Answer, tipiq4Answer, tipiq5Answer, tipiq6Answer, tipiq7Answer, tipiq8Answer, tipiq9Answer, tipiq10Answer, tiviq1Answer, tiviq2Answer, tiviq3Answer, tiviq4Answer, tiviq5Answer, tiviq6Answer, tiviq7Answer, tiviq8Answer, tiviq9Answer, tiviq10Answer, tiviq11Answer, tiviq12Answer, tiviq13Answer, tiviq14Answer, tiviq15Answer, tiviq16Answer, tiviq17Answer, tiviq18Answer, tiviq19Answer, tiviq20Answer)
+    // console.log(name, gender, age, tipiq1Answer, tipiq2Answer, tipiq3Answer, tipiq4Answer, tipiq5Answer, tipiq6Answer, tipiq7Answer, tipiq8Answer, tipiq9Answer, tipiq10Answer, tiviq1Answer, tiviq2Answer, tiviq3Answer, tiviq4Answer, tiviq5Answer, tiviq6Answer, tiviq7Answer, tiviq8Answer, tiviq9Answer, tiviq10Answer, tiviq11Answer, tiviq12Answer, tiviq13Answer, tiviq14Answer, tiviq15Answer, tiviq16Answer, tiviq17Answer, tiviq18Answer, tiviq19Answer, tiviq20Answer)
 
-    // $.getJSON('https://api.db-ip.com/v2/free/self', function(data) {
-    // console.log(JSON.stringify(data, null, 2));
-    // });
     let ipData
     const IP_API = 'https://api.db-ip.com/v2/free/self'
     fetch(IP_API)
     .then((res) => res.json())
     .then((data) => {
-        console.log(data)
+        // console.log(data)
         ipData = data
     })
 
