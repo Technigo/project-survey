@@ -2,8 +2,7 @@ import React from "react";
 
 const ageGroups = ["0-18", "19-30", "30+"];
 
- const RadioButtons = ({ ageGroup, AgeChange }) => {
-    
+ const RadioButtons = ({ageGroup, ageChange }) => {
 
   return (
     <form>
@@ -13,7 +12,7 @@ const ageGroups = ["0-18", "19-30", "30+"];
           <input
             type="radio"
             value={group}
-            onChange={AgeChange}
+            onChange={ageChange}
             checked={ageGroup === group}
           />
 
@@ -25,4 +24,4 @@ const ageGroups = ["0-18", "19-30", "30+"];
   );
 }
 
-export default  RadioButtons;
+export default RadioButtons;

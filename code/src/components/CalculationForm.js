@@ -11,8 +11,7 @@ const [numberOne, setNumberOne] = useState(0);
 const [numberTwo, setNumberTwo] = useState(0);
 const [isResultDisplayed, setIsResultDisplayed] = useState(false);
 const [location, setLocation] = useState('');
-const [ageGroup, setAgeGroup] = useState(); // group here?
-
+const [ageGroup, setAgeGroup] = useState('');
 
 const handleInputChange = (event) => {
     setUsername(event.target.value);
@@ -30,7 +29,7 @@ const locationChange = (event) => {
     setLocation(event.target.value);
 };
 
-const AgeChange = (event) => {
+const ageChange = (event) => {
     setAgeGroup(event.target.value);
 };
 
@@ -50,9 +49,8 @@ const AgeChange = (event) => {
                     />
 
             <RadioButtons
-                AgeChange={AgeChange}
-                value={group}
-                checked={ageGroup === group}
+                ageChange={ageChange}
+                ageGroupe={ageGroup}
             />
                 
             <SecondQuestion 
