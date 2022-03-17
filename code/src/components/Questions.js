@@ -7,6 +7,7 @@ import Question2 from './Question2.js';
 import Submit from './Submit.js';
 import Input from './Input.js';
 import Dropdown from './Dropdown.js';
+import Radio from './Radio.js';
 
 
 const handleSubmit = (event) => {
@@ -23,7 +24,7 @@ const QuestionContainer = () => {
 
   const [counter, setCounter] = useState(0);
 
-              let inputComponent;
+              let answerComponent;
               let dropdownComponent;
               const questionsInTotal = questions.questions.length;
 
@@ -36,15 +37,19 @@ const QuestionContainer = () => {
                   console.log(question.type);
                   switch (question.type) {
                     case 'input':
-                      inputComponent = <Input question={question.question} />;
+                      answerComponent = <Input question={question.question} />;
                       //return <Input />
                       console.log('hej input');
                       break;
                     case 'radio':
                       console.log('hej radio');
+                      console.log('alternatives:' + typeof(question.alternatives));
+                      console.log('alternative 1:' + question.alternatives[1]);
+
+                      answerComponent = <Radio question={question.question} alternatives={question.alternatives} />
                       break;
                     case 'dropdown':
-                      dropdownComponent = <Dropdown question={question.question} />;
+                      answerComponent = <Dropdown question={question.question} />;
                       console.log('hej dropdown');
                       break;
                   }
@@ -67,7 +72,7 @@ const QuestionContainer = () => {
             {/* props vilken fråga array mapa igenom? */}
             {/* <Question1 />
             <Question2 /> */}
-            { inputComponent }
+            { answerComponent }
             { dropdownComponent }
             <p>{counter} </p>
             {/* <p>{ actualQuestion ? actualQuestion.question : ''}</p> */}
@@ -79,7 +84,7 @@ const QuestionContainer = () => {
 
          {  /* ))}*/}
               
-            
+
             <Submit />
 
           </form>
