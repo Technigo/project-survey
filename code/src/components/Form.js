@@ -58,6 +58,7 @@ return (
         onEmailInputChange={onEmailInputChange}
         nextPage={nextPage}
         backPage={backPage}
+        userName={nameInput}
          />
     )}
 
