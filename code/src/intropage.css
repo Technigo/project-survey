@@ -1,24 +1,15 @@
-img.balloons {
-	position: absolute;
-	bottom: 0;
-	right: 40px;
-	width: 100px;
-	animation: balloon 5s ease-out infinite;
+section.intropage-wrapper {
+	background: url("./assets/background-intro.jpg");
+	background-repeat: no-repeat;
+	background-size: cover;
 }
 
-@keyframes balloon {
-	from {
-		transform: translateY(1000%);
-		bottom: -100px;
-	}
-	to {
-		top: -200px;
-	}
+.intropage-wrapper {
+	min-width: 100vw;
+	display: flex;
+	justify-content: center;
 }
 
-@media (min-width: 1024px) {
-	img.balloons {
-		width: 200px;
-		right: 150px;
-	}
+.intro-text {
+	text-shadow: var(--clr-white) 1px 0 10px;
 }

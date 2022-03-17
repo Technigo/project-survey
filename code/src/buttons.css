@@ -12,6 +12,10 @@ button.btn {
 	transition: all 0.5s ease-in-out;
 }
 
+button.start-btn {
+	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
 button.next-btn {
 	background: var(--clr-dark);
 }
@@ -41,24 +45,19 @@ button.back-btn:focus {
 }
 
 button.submit-btn {
-	background: linear-gradient(
-		45deg,
-		#ac699d,
-		#ffeba1,
-		#fdbcbc,
-		#75a996,
-		#5d87b8,
-		#ac699d
-	);
+	background: #fed437;
+	background: -webkit-linear-gradient(60deg, #fed437, #ffe893, #fed437);
+	background: linear-gradient(45deg, #fed437, #ffe893, #fed437);
 }
 
 button.reset-btn,
 button.reset-btn:active {
-	color: var(--clr-dark);
+	background-color: var(--clr-light);
+	color: var(--clr-black);
 }
 
 button.reset-btn:hover,
 button.reset-btn:focus {
-	background: var(--clr-light);
+	background: var(--clr-dark);
 	color: var(--clr-black);
 }

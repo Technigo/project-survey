@@ -1,14 +1,30 @@
-section.overview-wrapper {
-	background: var(--clr-lighter);
+.invitation-card--wrapper {
+	width: 370px;
+	height: 500px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: var(--clr-white);
+	border: 10px double var(--clr-black);
+	position: relative;
 }
 
-.overview-wrapper {
+.date-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+section.overview-wrapper {
 	background: var(--clr-lighter);
 	display: flex;
 	align-items: center;
 	justify-content: center;
+	flex-direction: column;
+}
+
+.overview-wrapper {
 }
 
 img.pennant {

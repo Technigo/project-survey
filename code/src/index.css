@@ -1,9 +1,10 @@
 :root {
 	--clr-lighter: #fcfaf6;
-	--clr-light: #fddbbc;
-	--clr-dark: #fca151;
-	--clr-medium: #fca151ab;
+	--clr-light: #ffe893;
+	--clr-dark: #fed437;
+	--clr-medium: #fed437ab;
 	--clr-black: #111111;
+	--clr-gray: #dadada;
 	--clr-white: #ffffff;
 }
 
@@ -42,7 +43,7 @@ h3 {
 }
 
 h2 {
-	font-size: 1.3rem;
+	font-size: 1.5rem;
 }
 
 h3 {
@@ -182,18 +183,6 @@ section.overview-wrapper {
 	height: 100vh;
 }
 
-section.intropage-wrapper {
-	background: url("./assets/background-intro.jpg");
-	background-repeat: no-repeat;
-	background-size: cover;
-}
-
-.intropage-wrapper {
-	min-width: 100vw;
-	display: flex;
-	justify-content: center;
-}
-
 .question-wrapper {
 	position: relative;
 	height: 100vh;
@@ -201,24 +190,6 @@ section.intropage-wrapper {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
-	align-items: center;
-}
-
-.invitation-card--wrapper {
-	width: 370px;
-	height: 500px;
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
-	background: var(--clr-white);
-	border: 10px double var(--clr-black);
-	position: relative;
-}
-
-.date-wrapper {
-	display: flex;
-	flex-direction: column;
 	align-items: center;
 }
 
