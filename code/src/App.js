@@ -1,17 +1,13 @@
 import React from 'react';
 import Footer from "components/Footer";
 import Start from "components/Start";
-import FirstQuestion from 'components/FirstQuestion';
-
-
+import SecondQuestion from 'components/SecondQuestion';
+import ThirdQuestion from 'components/ThirdQuestion';
 
 
 export const App = () => {
   return <main>
-
-  <FirstQuestion />
-
-
+<Start />
   <Footer /> 
   </main>
 }
