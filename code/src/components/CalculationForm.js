@@ -37,7 +37,7 @@ const ageChange = (event) => {
 
     return (
         <section>
-            <h1>Welcome to crazy town wild one</h1>
+            <h1>Ghost story 👻 writer</h1>
           
             <FirstQuestion 
                 username={username} 
@@ -58,7 +58,7 @@ const ageChange = (event) => {
                 numberTwo={numberTwo} 
                 onFirstNumberChange={handleFirstNumberChange} 
                 onSecondNumberChange={handleSecondNumberChange}/>
-                    <button onClick={() => setIsResultDisplayed(true) } >Reveal</button>
+                    <button onClick={() => setIsResultDisplayed(true) } >Reveal ghost story</button>
 
 
             {isResultDisplayed && (

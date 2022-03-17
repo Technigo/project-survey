@@ -10,10 +10,10 @@ const Summary = ({
 
 return (
 <h2> 
-    {username}, 
-    the result is {numberOne + numberTwo} 
-    and {location} 
-     and  {ageGroup}
+    It was a dark, dark night. {username} tried to restrain the feeling of panic when  
+    walking into the {location}. {numberOne} minutes later and {numberTwo}  {ageGroup}
+    and 
+     and  
 </h2>
 )
 }

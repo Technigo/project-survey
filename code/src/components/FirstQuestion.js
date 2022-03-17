@@ -4,7 +4,7 @@ const FirstQuestion = ({ username, onInputChange }) => {
 
 return (
     <div>
-    <label htmlFor="name">Type your name</label>
+    <label htmlFor="name">Type our main characters name</label>
     <input 
         id="name" 
         type="text"
