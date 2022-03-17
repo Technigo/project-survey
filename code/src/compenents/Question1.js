@@ -2,7 +2,7 @@ import React from 'react'
 
 
 
-const Question1 = ({name, house, onHouseChange, onStepChange}) => {
+const Question1 = ({name, house, hufflepuff, onHouseChange, onStepChange}) => {
     
     return (
       <div>
