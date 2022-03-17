@@ -29,11 +29,13 @@ const Form = () =>{
     }
     return(
         <section>
+            <div className='content-box'>
             <QuestionOne name={name} onInputChange={handleInputChange} />
             <QuestionTwo email={email} onSecondInputChange={handleSecondInputChange} />
             <QuestionThree location={locations} onThirdInputChange={handleThirdInputChange} />
             <QuestionFour group={ageGroup} handleFourthInputChange={handleFourthInputChange} />
-            <button onClick={() => setIsSummaryDisplayed(true)}>Show Summary!</button>
+            <button className='btn' onClick={() => setIsSummaryDisplayed(true)}>Show Summary!</button>
+            </div>
        {isSummaryDisplayed && (
             <Summary
             name={name}

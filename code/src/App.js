@@ -2,17 +2,19 @@ import React from "react";
 
 // Imported Components
 import Form from "components/Form";
-import Header from "components/Header";
+import Footer from "components/Footer";
 
 export const App = () => {
   return (
     <>
-      <header>
-        <Header />
-      </header>
+    <section>
       <main>
+        <div className="outer-box">
         <Form />
+        </div>
       </main>
+      <Footer/>
+      </section>
     </>
   );
 };
