@@ -7,13 +7,14 @@ const FourthQuestion = ({spellInput, onSpellInputChange, onStepChange}) => {
         <div className="question">
             <form>
                 <h2>Which is your favourite spell?</h2>
+                <div className="radioGroup">
                 <label className="spells">
                     <input 
                     type="radio"
                     name="spells"
                     value="Lumos"
                     onChange = {onSpellInputChange}
-                    defaultChecked = {spellInput==="Lumos"}
+                    checked = {spellInput==="Lumos"}
                     />
                     Lumos
                     </label>
@@ -23,7 +24,7 @@ const FourthQuestion = ({spellInput, onSpellInputChange, onStepChange}) => {
                     name="spells"
                     value="Wingardium Leviosa"
                     onChange = {onSpellInputChange}
-                    defaultChecked = {spellInput==="Wingardium Leviosa"}
+                    checked = {spellInput==="Wingardium Leviosa"}
                     />
                     Wingardium Leviosa 
                     </label>
@@ -33,7 +34,7 @@ const FourthQuestion = ({spellInput, onSpellInputChange, onStepChange}) => {
                     name="spells"
                     value="Expecto Patronum"
                     onChange = {onSpellInputChange}
-                    defaultChecked = {spellInput==="Expecto Patronum"}
+                    checked = {spellInput==="Expecto Patronum"}
                     />
                     Expecto Patronum
                     </label>
@@ -43,10 +44,11 @@ const FourthQuestion = ({spellInput, onSpellInputChange, onStepChange}) => {
                     name="spells"
                     value="Avada Kedavra"
                     onChange = {onSpellInputChange}
-                    defaultChecked = {spellInput==="Avada Kedavra"}
+                    checked = {spellInput==="Avada Kedavra"}
                     />
                     Avada Kedavra
                     </label>
+                    </div>
 
                     <button className="btn" onClick={onStepChange}>Next Question</button>            
 

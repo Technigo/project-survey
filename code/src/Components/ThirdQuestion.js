@@ -6,12 +6,13 @@ const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
         <section className="questionWrapper">
         <div className="question">
             <form>
-                <h2>In which dormitory do you think you belong?</h2>
-                <label className="dormitorys">
+                <h2>In which dormitory do you belong?</h2>
+                <div className="radioGroup">
+                <label className="dormitory">
                     <input 
                     type="radio"
                     name="dormitorys"
-                    value="slytherin"
+                    value="Slytherin"
                     onChange = {onHomeInputChange}
                     defaultChecked = {homeInput==="Slytherin"}
                     />
@@ -21,7 +22,7 @@ const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
                     <input 
                     type="radio"
                     name="dormitorys"
-                    value="ravenclaw"
+                    value="Ravenclaw"
                     onChange = {onHomeInputChange}
                     defaultChecked = {homeInput==="Rawenclaw"}
                     />
@@ -31,7 +32,7 @@ const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
                     <input 
                     type="radio"
                     name="dormitorys"
-                    value="gryffindor"
+                    value="Gryffindor"
                     onChange = {onHomeInputChange}
                     defaultChecked = {homeInput==="Gryffindor"}
                     />
@@ -41,12 +42,13 @@ const ThirdQuestion = ({homeInput, onHomeInputChange, onStepChange}) => {
                     <input 
                     type="radio"
                     name="dormitorys"
-                    value="hufflepuff"
+                    value="Hufflepuff"
                     onChange = {onHomeInputChange}
                     defaultChecked = {homeInput==="Hufflepuff"}
                     />
                     Hufflepuff
                     </label>
+                    </div>
 
                     <button className="btn" onClick={onStepChange}>Next Question</button>            
 

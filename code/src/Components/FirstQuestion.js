@@ -9,6 +9,8 @@ const FirstQuestion = ({onStepChange, nameInput, onNameInputChange}) => {
                 <p>But first, enter your name here.</p>
                 <input
                 type="text"
+                placeholder="Your name here"
+                aria-label="Write your name"
                 className="input"
                 value={nameInput}
                 onChange={onNameInputChange}></input>

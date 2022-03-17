@@ -13,7 +13,7 @@ const Form = () => {
     const [qualityInput, setQuality] = useState("")
     const [homeInput, setHome] = useState("")
     const [spellInput, setSpell] = useState ("")
-    const [likeInput, setLike] = useState("")
+    const [likeInput, setLike] = useState("1")
     const [step, setStep] = useState(0)
     
 
@@ -34,7 +34,7 @@ const Form = () => {
     }
 
     const onLikeInputChange = (event) => {
-        setLike(event.target.value)
+       setLike(event.target.value)
     }
 
     const onStepChange = () => {
@@ -80,7 +80,7 @@ return (
                 likeInput = {likeInput}
                 onLikeInputChange = {onLikeInputChange}
                 onStepChange = {onStepChange}
-                />
+                /> 
             )}
 
             {step===6 && (
@@ -89,13 +89,12 @@ return (
               nameInput={nameInput}
               qualityInput={qualityInput}
               spellInput={spellInput}
+              likeInput={likeInput}
 
               />
             )} 
 
     </main>
-
-
 )
 }
 

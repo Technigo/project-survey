@@ -5,9 +5,10 @@ const SecondQuestion = ({onStepChange, onQualityInputChange, qualityInput}) => {
         <section className="questionWrapper">
         <div className="question">
             <form>
-                <h2>Which one is your favourite</h2>
+                <h2>Which character is your favourite?</h2>
                 <select
                 className="dropdown"
+                aria-label="Choose your favourite character"
                 value={qualityInput}
                 onChange={onQualityInputChange}>
                     <option value="">select your character..</option>
@@ -16,6 +17,7 @@ const SecondQuestion = ({onStepChange, onQualityInputChange, qualityInput}) => {
                     <option value="Ron Weasley">Ron Weasley</option>
                     <option value="Voldemort">Voldemort</option>
                     <option value="Luna Lovelace">Luna Lovelace</option>
+                    <option value="Draco Malfoy">Draco Malfoy</option>
                 </select>
 
                 <button className="btn" onClick={onStepChange}>Next Question</button>

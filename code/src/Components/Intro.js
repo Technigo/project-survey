@@ -8,7 +8,7 @@ const Intro = ({onStepChange}) => {
 <img 
 className="logo" 
 src={logo} alt="harry potter logo"/>
-    <h1>Which Harry Potter character are you?</h1>
+    <h1>Who would you choose to be in Harry Potter?</h1>
     <button className = "btn" onClick = {onStepChange}> Start </button>
 </div>
 </section>
