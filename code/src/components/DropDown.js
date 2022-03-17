@@ -1,12 +1,6 @@
 import React from "react";
 
 const DropDown = ({ location, locationChange }) => {
-      
-//    const [location, setLocation] = useState("");
-
-// const locationChange = (event) => {
-//     setLocation(event.target.value);
-// };
 
   return (
     <form>

@@ -3,6 +3,7 @@ import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import Summary from './Summary';
 import DropDown from './DropDown';
+import RadioButtons from './RadioButtons'
 
 const CalculationForm = () => {
 const [username, setUsername] = useState('');
@@ -10,6 +11,7 @@ const [numberOne, setNumberOne] = useState(0);
 const [numberTwo, setNumberTwo] = useState(0);
 const [isResultDisplayed, setIsResultDisplayed] = useState(false);
 const [location, setLocation] = useState('');
+const [ageGroup, setAgeGroup] = useState(); // group here?
 
 
 const handleInputChange = (event) => {
@@ -28,6 +30,11 @@ const locationChange = (event) => {
     setLocation(event.target.value);
 };
 
+const AgeChange = (event) => {
+    setAgeGroup(event.target.value);
+};
+
+
 
     return (
         <section>
@@ -38,9 +45,15 @@ const locationChange = (event) => {
                 onInputChange={handleInputChange} />
 
             <DropDown 
-                onChange={locationChange}
+            locationChange={locationChange}
                 value={location}
                     />
+
+            <RadioButtons
+                AgeChange={AgeChange}
+                value={group}
+                checked={ageGroup === group}
+            />
                 
             <SecondQuestion 
                 numberOne={numberOne}
