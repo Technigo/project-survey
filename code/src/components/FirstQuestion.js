@@ -4,13 +4,17 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   //  const { nameInput, onNameInputChange } = props;
 
   return (
-    <section>
-      <h1>What kind of code student are you?</h1>
-      <h2>Maybe some text here later</h2>
-      <h3>Let's get stated by writing your name: </h3>
+    <section className="form-container">
+      <div className="heading">
+        <h1>What kind of code student are you?</h1>
+        <h2>Let's get stated by writing your name: </h2>
+      </div>
       <form>
-        <label htmlFor="nameInput">First name / nickname </label>
+        <label className="description" htmlFor="nameInput">
+          First name / nickname{" "}
+        </label>
         <input
+          className="name-input"
           id="nameInput"
           type="text"
           value={nameInput}

@@ -1,13 +1,116 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+:root {
+  --clr-white: #fff;
+  --clr-darkblue: #5c6898;
+  --clr-lightblue: #d1d5fa;
+  --clr-blue: #a9dfe2;
+  --clr-pink: #fdb3ca;
+  --clr-shadow: #bebebe;
 }
 
-code {
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: rgb(238, 174, 202);
+  background: linear-gradient(
+    183deg,
+    rgba(238, 174, 202, 1) 0%,
+    rgba(148, 187, 233, 1) 45%
+  );
+  background-repeat: no-repeat;
+  height: 600px;
+}
+
+.app {
+  margin: 2rem;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container {
+  border-radius: 30px;
+  background: var(--clr-white);
+  box-shadow: 15px 15px 30px var(--clr-shadow),
+    -10px -10px 30px var(--clr-white);
+  width: 250px;
+  height: 380px;
+  margin: 2rem;
+  padding: 2rem;
+}
+
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} */
+
+h1 {
+  font-size: 1.7rem;
+  color: var(--clr-darkblue);
+  margin: 0;
+}
+
+h2 {
+  font-size: 1.3rem;
+  color: var(--clr-darkblue);
+}
+
+.heading {
+  display: flex;
+  flex-direction: column;
+  margin: 2em 0;
+  text-align: center;
+}
+
+.description {
+  color: var(--clr-darkblue);
+}
+
+.name-input {
+  border-radius: 5px;
+  padding: 8px;
+  margin: 8px 32px 32px;
+  border: var(--clr-lightblue) solid 2px;
+}
+
+.name-input:focus {
+  outline: none;
+  border: var(--clr-darkblue) solid 2px;
+  box-shadow: 0 0 10px var(--clr-shadow);
+}
+
+button {
+  padding: 1.3em 3em;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 2.5px;
+  font-weight: 500;
+  color: var(--clr-white);
+  background-color: var(--clr-darkblue);
+  border: none;
+  border-radius: 45px;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  background-color: var(--clr-lightblue);
+  box-shadow: 0px 15px 20px var(--clr-shadow);
+  color: #000;
+  transform: translateY(-7px);
+}
+
+button:active {
+  transform: translateY(-1px);
 }
