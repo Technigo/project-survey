@@ -20,17 +20,17 @@ export const App = () => {
   const [gender, askGender] = useState('')
   const [age, askAge] = useState('')
 
-  // TIWI - Personality Questions
-  const [tiwiq2Answer, tiwiq2Question] = useState("default");
-  const [tiwiq3Answer, tiwiq3Question] = useState("default");
-  const [tiwiq1Answer, tiwiq1Question] = useState("default");
-  const [tiwiq4Answer, tiwiq4Question] = useState("default");
-  const [tiwiq5Answer, tiwiq5Question] = useState("default");
-  const [tiwiq6Answer, tiwiq6Question] = useState("default");
-  const [tiwiq7Answer, tiwiq7Question] = useState("default");
-  const [tiwiq8Answer, tiwiq8Question] = useState("default");
-  const [tiwiq9Answer, tiwiq9Question] = useState("default");
-  const [tiwiq10Answer, tiwiq10Question] = useState("default");
+  // tipi - Personality Questions
+  const [tipiq2Answer, tipiq2Question] = useState("default");
+  const [tipiq3Answer, tipiq3Question] = useState("default");
+  const [tipiq1Answer, tipiq1Question] = useState("default");
+  const [tipiq4Answer, tipiq4Question] = useState("default");
+  const [tipiq5Answer, tipiq5Question] = useState("default");
+  const [tipiq6Answer, tipiq6Question] = useState("default");
+  const [tipiq7Answer, tipiq7Question] = useState("default");
+  const [tipiq8Answer, tipiq8Question] = useState("default");
+  const [tipiq9Answer, tipiq9Question] = useState("default");
+  const [tipiq10Answer, tipiq10Question] = useState("default");
 
   // TIVI - Values Questions
   const [tiviq1Answer, tiviq1Question] = useState("default");
@@ -57,10 +57,17 @@ export const App = () => {
   // setPageNumber State
   const [pageNumber, setPageNumber] = useState(0);
 
-  // Function for Validating Name
+  // setError State
+  const [error, setError] = useState('noError')
 
-  // Error
-  // const [error, setError] = useState('')
+  // Function for Validating Name
+  // const nameValidation = () => {
+  //   console.log(name.length)
+  //   if (name.length === 0) {
+  //     setError('Please fill out the required fields.')
+  //   }
+  // }
+
   return (
     <section className='page'>
     <Header />
@@ -74,43 +81,48 @@ export const App = () => {
     <Name 
       name={name} 
       askName={askName}
-    />}
+      error={error}
+    />
+    }
 
     {pageNumber === 2 && 
     <Gender 
-      gender={gender}
-      askGender={askGender} 
+      gender = {gender}
+      askGender = {askGender}
+      error={error}
     />}
 
     {pageNumber === 3 &&
     <AgeGroup 
       age = {age}
       askAge = {askAge}
+      error = {error}
     />
     }
 
     {pageNumber === 4 &&
     <TipiDropDown 
-      q1Answer = {tiwiq1Answer}
-      q1Question = {tiwiq1Question}
-      q2Answer = {tiwiq2Answer}
-      q2Question = {tiwiq2Question}
-      q3Answer = {tiwiq3Answer}
-      q3Question = {tiwiq3Question}
-      q4Answer = {tiwiq4Answer}
-      q4Question = {tiwiq4Question}
-      q5Answer = {tiwiq5Answer}
-      q5Question = {tiwiq5Question}
-      q6Answer = {tiwiq6Answer}
-      q6Question = {tiwiq6Question}
-      q7Answer = {tiwiq7Answer}
-      q7Question = {tiwiq7Question}
-      q8Answer = {tiwiq8Answer}
-      q8Question = {tiwiq8Question}
-      q9Answer = {tiwiq9Answer}
-      q9Question = {tiwiq9Question}
-      q10Answer = {tiwiq10Answer}
-      q10Question = {tiwiq10Question}
+      q1Answer = {tipiq1Answer}
+      q1Question = {tipiq1Question}
+      q2Answer = {tipiq2Answer}
+      q2Question = {tipiq2Question}
+      q3Answer = {tipiq3Answer}
+      q3Question = {tipiq3Question}
+      q4Answer = {tipiq4Answer}
+      q4Question = {tipiq4Question}
+      q5Answer = {tipiq5Answer}
+      q5Question = {tipiq5Question}
+      q6Answer = {tipiq6Answer}
+      q6Question = {tipiq6Question}
+      q7Answer = {tipiq7Answer}
+      q7Question = {tipiq7Question}
+      q8Answer = {tipiq8Answer}
+      q8Question = {tipiq8Question}
+      q9Answer = {tipiq9Answer}
+      q9Question = {tipiq9Question}
+      q10Answer = {tipiq10Answer}
+      q10Question = {tipiq10Question}
+      error = {error}
     />
     }
 
@@ -118,16 +130,16 @@ export const App = () => {
     <TipiChart
       name = {name}
       age = {age}
-      q1Answer = {tiwiq1Answer}
-      q2Answer = {tiwiq2Answer}
-      q3Answer = {tiwiq3Answer}
-      q4Answer = {tiwiq4Answer}
-      q5Answer = {tiwiq5Answer}
-      q6Answer = {tiwiq6Answer}
-      q7Answer = {tiwiq7Answer}
-      q8Answer = {tiwiq8Answer}
-      q9Answer = {tiwiq9Answer}
-      q10Answer = {tiwiq10Answer}
+      q1Answer = {tipiq1Answer}
+      q2Answer = {tipiq2Answer}
+      q3Answer = {tipiq3Answer}
+      q4Answer = {tipiq4Answer}
+      q5Answer = {tipiq5Answer}
+      q6Answer = {tipiq6Answer}
+      q7Answer = {tipiq7Answer}
+      q8Answer = {tipiq8Answer}
+      q9Answer = {tipiq9Answer}
+      q10Answer = {tipiq10Answer}
     />
     }
 
@@ -154,6 +166,7 @@ export const App = () => {
       q8Question = {tiviq8Question}
       q9Question = {tiviq9Question}
       q10Question = {tiviq10Question}
+      error = {error}
     />
     }
 
@@ -180,6 +193,7 @@ export const App = () => {
       q18Question = {tiviq18Question}
       q19Question = {tiviq19Question}
       q20Question = {tiviq20Question}
+      error = {error}
     />
     }
 
@@ -215,6 +229,41 @@ export const App = () => {
     <NavButtons
       pageNumber = {pageNumber}
       setPageNumber = {setPageNumber}
+      error = {error}
+      setError = {setError}
+      name = {name}
+      gender = {gender}
+      age = {age}
+      tipiq1Answer = {tipiq1Answer}
+      tipiq2Answer = {tipiq2Answer}
+      tipiq3Answer = {tipiq3Answer}
+      tipiq4Answer = {tipiq4Answer}
+      tipiq5Answer = {tipiq5Answer}
+      tipiq6Answer = {tipiq6Answer}
+      tipiq7Answer = {tipiq7Answer}
+      tipiq8Answer = {tipiq8Answer}
+      tipiq9Answer = {tipiq9Answer}
+      tipiq10Answer = {tipiq10Answer}
+      tiviq1Answer = {tiviq1Answer}
+      tiviq2Answer = {tiviq2Answer}
+      tiviq3Answer = {tiviq3Answer}
+      tiviq4Answer = {tiviq4Answer}
+      tiviq5Answer = {tiviq5Answer}
+      tiviq6Answer = {tiviq6Answer}
+      tiviq7Answer = {tiviq7Answer}
+      tiviq8Answer = {tiviq8Answer}
+      tiviq9Answer = {tiviq9Answer}
+      tiviq10Answer = {tiviq10Answer}
+      tiviq11Answer = {tiviq11Answer}
+      tiviq12Answer = {tiviq12Answer}
+      tiviq13Answer = {tiviq13Answer}
+      tiviq14Answer = {tiviq14Answer}
+      tiviq15Answer = {tiviq15Answer}
+      tiviq16Answer = {tiviq16Answer}
+      tiviq17Answer = {tiviq17Answer}
+      tiviq18Answer = {tiviq18Answer}
+      tiviq19Answer = {tiviq19Answer}
+      tiviq20Answer = {tiviq20Answer}
     />
     <Footer />
     </section>
@@ -240,41 +289,41 @@ export const App = () => {
   //       askAge = {askAge}
   //     />
   //     <TipiDropDown 
-  //       q1Answer = {tiwiq1Answer}
-  //       q1Question = {tiwiq1Question}
-  //       q2Answer = {tiwiq2Answer}
-  //       q2Question = {tiwiq2Question}
-  //       q3Answer = {tiwiq3Answer}
-  //       q3Question = {tiwiq3Question}
-  //       q4Answer = {tiwiq4Answer}
-  //       q4Question = {tiwiq4Question}
-  //       q5Answer = {tiwiq5Answer}
-  //       q5Question = {tiwiq5Question}
-  //       q6Answer = {tiwiq6Answer}
-  //       q6Question = {tiwiq6Question}
-  //       q7Answer = {tiwiq7Answer}
-  //       q7Question = {tiwiq7Question}
-  //       q8Answer = {tiwiq8Answer}
-  //       q8Question = {tiwiq8Question}
-  //       q9Answer = {tiwiq9Answer}
-  //       q9Question = {tiwiq9Question}
-  //       q10Answer = {tiwiq10Answer}
-  //       q10Question = {tiwiq10Question}
+  //       q1Answer = {tipiq1Answer}
+  //       q1Question = {tipiq1Question}
+  //       q2Answer = {tipiq2Answer}
+  //       q2Question = {tipiq2Question}
+  //       q3Answer = {tipiq3Answer}
+  //       q3Question = {tipiq3Question}
+  //       q4Answer = {tipiq4Answer}
+  //       q4Question = {tipiq4Question}
+  //       q5Answer = {tipiq5Answer}
+  //       q5Question = {tipiq5Question}
+  //       q6Answer = {tipiq6Answer}
+  //       q6Question = {tipiq6Question}
+  //       q7Answer = {tipiq7Answer}
+  //       q7Question = {tipiq7Question}
+  //       q8Answer = {tipiq8Answer}
+  //       q8Question = {tipiq8Question}
+  //       q9Answer = {tipiq9Answer}
+  //       q9Question = {tipiq9Question}
+  //       q10Answer = {tipiq10Answer}
+  //       q10Question = {tipiq10Question}
   //     />
   //     <TipiChart
   //       name = {name}
   //       // gender = {gender}
   //       age = {age}
-  //       q1Answer = {tiwiq1Answer}
-  //       q2Answer = {tiwiq2Answer}
-  //       q3Answer = {tiwiq3Answer}
-  //       q4Answer = {tiwiq4Answer}
-  //       q5Answer = {tiwiq5Answer}
-  //       q6Answer = {tiwiq6Answer}
-  //       q7Answer = {tiwiq7Answer}
-  //       q8Answer = {tiwiq8Answer}
-  //       q9Answer = {tiwiq9Answer}
-  //       q10Answer = {tiwiq10Answer}
+  //       q1Answer = {tipiq1Answer}
+  //       q2Answer = {tipiq2Answer}
+  //       q3Answer = {tipiq3Answer}
+  //       q4Answer = {tipiq4Answer}
+  //       q5Answer = {tipiq5Answer}
+  //       q6Answer = {tipiq6Answer}
+  //       q7Answer = {tipiq7Answer}
+  //       q8Answer = {tipiq8Answer}
+  //       q9Answer = {tipiq9Answer}
+  //       q10Answer = {tipiq10Answer}
   //     />
   //     <TiviDropDownOne 
   //       gender = {gender}

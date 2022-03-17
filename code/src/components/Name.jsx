@@ -10,7 +10,7 @@ const Name = (props) => {
             onChange={(event) => props.askName(event.target.value)} 
             value={props.name} 
         />
-        {/* {!!props.error.length && <p>{props.error}</p>} */}
+        {props.error !== 'noError' && <p className="error-message">{props.error}</p>}
         </div>
     )
 }

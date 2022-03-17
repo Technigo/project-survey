@@ -134,6 +134,7 @@ const TiviDropDownOne = (props) => {
         </React.Fragment>
         ))}
         </div>
+        {props.error !== 'noError' && <p className="error-message">{props.error}</p>}
         </div>
     )
 }
