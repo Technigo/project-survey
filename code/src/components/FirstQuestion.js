@@ -5,20 +5,21 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 
   return (
     <section>
-      <h1>This survey is unnecessary</h1>
-      <h2>
-        There will be 6 random questions with one quick break in the middle
-      </h2>
+      <h1>What kind of code student are you?</h1>
+      <h2>Maybe some text here later</h2>
       <h3>Let's get stated by writing your name: </h3>
       <form>
-        <label htmlFor="nameInput">Type your name here </label>
+        <label htmlFor="nameInput">First name / nickname </label>
         <input
           id="nameInput"
           type="text"
           value={nameInput}
           onChange={onNameInputChange}
         />
-        <button onClick={onStepChange}> Next question</button>
+        <button onClick={onStepChange}>
+          {" "}
+          Let's start with the questions!{" "}
+        </button>
       </form>
     </section>
   );

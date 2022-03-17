@@ -1,20 +1,11 @@
 import React from "react";
 
-const SecondQuestion = ({
-  surnameInput,
-  onSurnameInputChange,
-  onStepChange,
-}) => {
+const SecondQuestion = ({ goals, onGoalsChange, onStepChange }) => {
   return (
     <form>
       <label htmlFor="surnameInput">Type your surname</label>
-      <input
-        id="surnameInput"
-        type="text"
-        value={surnameInput}
-        onChange={onSurnameInputChange}
-      />
-      <button onClick={onStepChange}>See overview</button>
+      <input id="goals" type="text" value={goals} onChange={onGoalsChange} />
+      <button onClick={onStepChange}>Next Question</button>
     </form>
   );
 };
