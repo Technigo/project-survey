@@ -25,7 +25,7 @@ export const PennantImage = ({ color }) => {
 
 	return (
 		<svg
-			width="376"
+			width="370"
 			height="120"
 			viewBox="0 0 376 120"
 			fill="none"

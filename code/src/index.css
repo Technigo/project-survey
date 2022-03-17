@@ -104,6 +104,12 @@ label.radio {
 	padding: 0.5em 0.25em;
 }
 
+input {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 input[type="text"],
 input[type="date"],
 input[type="time"],
@@ -122,9 +128,6 @@ input[type="radio"]:active {
 	padding: 0.4em 0.4em;
 	height: 2px;
 	background: var(--clr-dark);
-	-webkit-appearance: none;
-	-moz-appearance: none;
-	appearance: none;
 }
 
 input[type="radio"]:hover,
@@ -140,6 +143,7 @@ input:active,
 input:focus,
 input:hover {
 	outline: none;
+	background: var(--clr-light);
 	border-bottom: 3px solid var(--clr-dark);
 }
 
