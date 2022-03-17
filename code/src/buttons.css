@@ -16,14 +16,19 @@ button.start-btn {
 	box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
-button.next-btn {
+button.next-btn,
+button.reset-btn:hover,
+button.reset-btn:focus {
 	background: var(--clr-dark);
+	color: var(--clr-black);
 }
 
+button.reset-btn,
+button.reset-btn:active,
 button.next-btn:hover,
 button.next-btn:focus {
 	background: var(--clr-black);
-	color: var(--clr-light);
+	color: var(--clr-dark);
 }
 
 button.back-btn {
@@ -42,22 +47,4 @@ button.back-btn:hover,
 button.back-btn:focus {
 	transform: scale(1.1);
 	transition: all 0.3s ease-in-out;
-}
-
-button.submit-btn {
-	background: #fed437;
-	background: -webkit-linear-gradient(60deg, #fed437, #ffe893, #fed437);
-	background: linear-gradient(45deg, #fed437, #ffe893, #fed437);
-}
-
-button.reset-btn,
-button.reset-btn:active {
-	background-color: var(--clr-light);
-	color: var(--clr-black);
-}
-
-button.reset-btn:hover,
-button.reset-btn:focus {
-	background: var(--clr-dark);
-	color: var(--clr-black);
 }

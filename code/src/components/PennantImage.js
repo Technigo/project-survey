@@ -6,18 +6,18 @@ export const PennantImage = ({ color }) => {
 
 	if (color === "purpleyellow") {
 		first = "AC699D";
-		second = "FFEBA1";
+		second = "FED437";
 	} else if (color === "yellowpink") {
-		first = "FFEBA1";
-		second = "FDBCBC";
+		first = "FED437";
+		second = "FCCCE2";
 	} else if (color === "pinkgreen") {
-		first = "FDBCBC";
-		second = "75A996";
+		first = "FCCCE2";
+		second = "1E855E";
 	} else if (color === "greenblue") {
-		first = "75A996";
-		second = "5D87B8";
+		first = "1E855E";
+		second = "4980C1";
 	} else {
-		first = "5D87B8";
+		first = "4980C1";
 		second = "AC699D";
 	}
 

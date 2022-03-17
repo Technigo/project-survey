@@ -41,10 +41,10 @@ export const Overview = ({ pronoun, state }) => {
 					state.theme === "yellowpink" ||
 					state.theme === "pinkgreen"
 						? "#FFF6D7"
-						: "#E8EBF8",
+						: "#F5F4FB",
 				borderColor:
 					state.theme === "greenblue" || state.theme === "pinkgreen"
-						? "#75A996"
+						? "#1E855E"
 						: "#AC699D",
 			}}
 		>

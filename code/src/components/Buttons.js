@@ -23,7 +23,7 @@ export const StartButton = ({ nextBtn }) => {
 export const SubmitButton = ({ nextBtn, prevBtn }) => {
 	return (
 		<>
-			<button className="btn submit-btn" onClick={nextBtn}>
+			<button className="btn next-btn" onClick={nextBtn}>
 				Look at card
 			</button>
 			<button className="btn back-btn" onClick={prevBtn}></button>
