@@ -5,7 +5,7 @@ import React from 'react'
 
 
 
-export const Name = ({userName, onInputChange}) => {
+ const Name = ({userName, onInputChange}) => {
     return (
         <form>
         <h1>Welcome to my media survey</h1>
