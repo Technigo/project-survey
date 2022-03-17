@@ -1,5 +1,3 @@
-// import { isScopedModule } from 'eslint-plugin-import/lib/core/importType'
-// import staticRequire from 'eslint-plugin-import/lib/core/staticRequire'
 import React, { useState } from "react";
 
 import { IntroPage } from "components/IntroPage";
@@ -10,14 +8,14 @@ import { Overview } from "components/Overview";
 import { DateInput } from "components/DateInput";
 import { TimeInput } from "components/TimeInput";
 import { GiftInput } from "components/GiftInput";
+import { ThemeInput } from "components/ThemeInput";
+import { ProgressLine } from "components/ProgressLine";
 import {
 	Button,
 	StartButton,
 	SubmitButton,
 	StartOverButton,
 } from "components/Buttons";
-import { ThemeInput } from "components/ThemeInput";
-import { ProgressLine } from "components/ProgressLine";
 
 export const App = () => {
 	const initialState = {
@@ -44,18 +42,30 @@ export const App = () => {
 		const value = e.target.value;
 
 		setState({ ...state, [inputName]: value });
-
-		// for (let key in state) {
-		// 	if (state[key] === "") {
-		// 		setError(`Please provide the ${key}`);
-		// 		return;
-		// 	}
-		// }
-		// setError("");
 	};
 
-	const handleNextStepClick = () => {
+	// let errorCounter = 1;
+	const handleNextStepClick = (e) => {
+		e.preventDefault();
+
+		// console.log(Number(JSON.stringify(counter)));
+		// console.log(errorCounter);
+
+		// 	if (counter !== 0 && counter !== 8) {
+		// 		for (let key in state) {
+		// 			if (
+		// 				state[key] === "" ||
+		// 				Number(JSON.stringify(counter)) === errorCounter
+		// 			) {
+		// 				setError(`Please provide the ${key}!`);
+		// 				return;
+		// 			}
+		// 		}
+		// 	} else {
+		// 		setError("");
 		setCounter(counter + 1);
+		// 		errorCounter = errorCounter + 1;
+		// 	}
 	};
 
 	const handlePrevStepClick = () => {
@@ -81,7 +91,6 @@ export const App = () => {
 					</div>
 				</section>
 			)}
-
 			<main className="container">
 				<section>
 					<form onSubmit={handleSubmit}>
@@ -226,6 +235,7 @@ export const App = () => {
 						<StartOverButton resetBtn={startOver} />
 					</section>
 				)}
+				{/* {error && <p className="error">{error}</p>} */}
 			</main>
 
 			{/* Footer */}

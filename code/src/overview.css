@@ -57,6 +57,7 @@ span.month {
 
 h2.invitation-text {
 	max-width: 25ch;
+	font-size: 1.1rem;
 	font-weight: 500;
 	line-height: normal;
 }
@@ -93,7 +94,7 @@ span.time-lower {
 }
 
 span.day {
-	font-size: 3rem;
+	font-size: 2rem;
 	font-weight: 500;
 }
 
@@ -122,7 +123,13 @@ span.day {
 	h2.invitation-text {
 		font-size: 1.2rem;
 	}
+
 	.invitation-card--wrapper {
 		height: 500px;
+	}
+
+	span.day {
+		font-size: 3rem;
+		font-weight: 500;
 	}
 }
