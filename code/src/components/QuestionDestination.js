@@ -12,27 +12,27 @@ const QuestionDestination = (destination, onDestinationChange) => {
   return (
     <>
       <p className="question">Where would you like to travel?</p>
-      <section className="radio-buttons-wrap">
+      <form className="form">
         {destinationOptions.map((destinationValue) => (
           <label
             key={destinationValue}
             htmlFor="destination-type"
-            className="label-destination"
+            className="destination-label"
           >
             <input
-              className="destination"
+              className="destination-type"
               type="radio"
               name="destination-type"
               value={destinationValue}
               onChange={onDestinationChange}
-              checked={destination === destinationValue}
-              aria-label="Navigate with arrows and then press Enter"
+              defaultChecked={destination === destinationValue}
               required
+              aria-label="Navigate with arrows and then press Enter"
             />
             {destinationValue}
           </label>
         ))}
-      </section>
+      </form>
       <Button button="Continue" />
     </>
   );
