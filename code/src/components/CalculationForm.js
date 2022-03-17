@@ -9,7 +9,7 @@ const [username, setUsername] = useState('');
 const [numberOne, setNumberOne] = useState(0);
 const [numberTwo, setNumberTwo] = useState(0);
 const [isResultDisplayed, setIsResultDisplayed] = useState(false);
-const [location, setLocation] = useState("");
+const [location, setLocation] = useState('');
 
 
 const handleInputChange = (event) => {
@@ -33,29 +33,30 @@ const locationChange = (event) => {
         <section>
             <h1>Welcome to crazy town wild one</h1>
           
-                <FirstQuestion 
+            <FirstQuestion 
                 username={username} 
                 onInputChange={handleInputChange} />
+
+            <DropDown 
+                onChange={locationChange}
+                value={location}
+                    />
                 
             <SecondQuestion 
-            numberOne={numberOne}
-             numberTwo={numberTwo} 
-             onFirstNumberChange={handleFirstNumberChange} 
-             onSecondNumberChange={handleSecondNumberChange}/>
-                <button onClick={() => setIsResultDisplayed(true) } >Reveal</button>
+                numberOne={numberOne}
+                numberTwo={numberTwo} 
+                onFirstNumberChange={handleFirstNumberChange} 
+                onSecondNumberChange={handleSecondNumberChange}/>
+                    <button onClick={() => setIsResultDisplayed(true) } >Reveal</button>
 
 
-                <DropDown 
-                onChange={locationChange}
-                       value={location}
-                       />
-
-                {isResultDisplayed && (
-                    
-                <Summary 
+            {isResultDisplayed && (
+                
+            <Summary 
                 username={username} 
                 numberOne={numberOne}
-                numberTwo={numberTwo}  />
+                numberTwo={numberTwo}
+                location={location}  />
 
 
                 )}
