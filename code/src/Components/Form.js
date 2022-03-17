@@ -90,7 +90,7 @@ export const Form = () => {
         wantNewsletter={wantNewsletter} 
         ageGroup={ageGroup}
       />
-      <button onClick={() => window.location.reload()}>SUBMIT</button>
+      <button onClick={() => window.location.reload()}>GOOD LUCK!</button>
       </div>
     )
   }
