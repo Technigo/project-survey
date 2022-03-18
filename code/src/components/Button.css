@@ -3,22 +3,21 @@ button {
   width: 140px;
   margin: 10px auto;
   padding: 7px;
-}
-
-button:disabled {
-  opacity: 60%;
-  color: white;
-  background-color: var(--main);
+  color: var(--main);
+  background-color: white;
   border: 3px solid white;
   border-radius: 5px;
 }
 
 button:enabled {
-  opacity: 100%;
-  color: var(--main);
-  background-color: white;
+  transition: all 0.3s ease-in-out;
+}
+
+button:disabled {
+  opacity: 0.6;
+  color: white;
+  background-color: var(--main);
   border: 3px solid white;
-  border-radius: 5px;
 }
 
 @media screen and (min-width: 1200px) {
