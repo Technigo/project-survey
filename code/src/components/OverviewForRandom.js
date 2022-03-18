@@ -1,7 +1,7 @@
 import React from 'react'
 import GetYourProgram from './Programs'
 
-const OverviewForRandom = ({}) => {
+const OverviewForRandom = () => {
 	return (
 		<section className='overview'>
 			<GetYourProgram />

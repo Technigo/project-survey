@@ -2,7 +2,7 @@ import React from 'react'
 
 const programs = ['p1', 'p2', 'p3', 'p4']
 
-const GetYourProgram = ({}) => {
+const GetYourProgram = () => {
  
 
     const program = programs[Math.floor(programs.length*Math.random())]
