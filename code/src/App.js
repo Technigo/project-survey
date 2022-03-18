@@ -65,6 +65,7 @@ if (step === 1) {
   personality={personality}
   experience={experience}
   motherhood={motherhood}
+  age={age}
   />
   )
 }
