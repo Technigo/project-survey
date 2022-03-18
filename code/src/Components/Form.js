@@ -8,11 +8,16 @@ import SubmitSurvey from './SubmitSurvey';
 import Summary from './Summary';
 
 const Form = () => {
+    const [personInput,setPersonInput] = useState('');
     const [destinationInput, setDestinationInput] = useState('');
     const [budgetInput, setBudgetInput] = useState('');
     const [awayInput, setAwayInput] = useState('');
     const [step, setStep] = useState(0);
 
+
+    const handlePersonInputChange = (event) => {
+        setPersonInput(event.target.value);
+    };
 
     const handleDestinationInputChange = (event) => {
         setDestinationInput(event.target.value);
@@ -36,6 +41,8 @@ const Form = () => {
 
     } else if (step === 1 ){ 
         return < TheChoice 
+        personInput={personInput}
+        onPersonInputChange={handlePersonInputChange}
         nextQuestion={nextQuestion}
         step={step}
         />

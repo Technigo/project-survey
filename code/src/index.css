@@ -35,6 +35,12 @@ p {
   
 }
 
+.form-container {
+  color: #FFF;
+  align-items: center;
+  padding: 2rem;
+}
+
 .question-title {
   font-size: 2rem;
 }
@@ -55,9 +61,10 @@ p {
 }
 
 .choice {
-background: rgb(249,0,0);
-background: linear-gradient(90deg, rgba(249,0,0,1) 17%, rgba(0,23,255,1) 100%);
-height: 100vh;
+  background-image: url(img/compass.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 .time {
