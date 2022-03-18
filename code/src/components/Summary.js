@@ -1,13 +1,13 @@
 import React from 'react'
 
-const Summary = ({inputName, emailInput, backPage}) => {
+const Summary = ({nameInput, emailInput, backPage}) => {
 
     return (
 
     <div>
         <h1>So this is you!</h1>
          
-         <p>   Name: {inputName} </p>
+         <p>   Name: {nameInput} </p>
          <p>   Email: {emailInput} </p>
 
 

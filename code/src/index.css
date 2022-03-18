@@ -100,6 +100,7 @@ ul {
   border: 1px solid #d79500;
   border-radius: 20px;
   padding: 7px;
+  width: 400px;
 }
 
 .footer > p {
