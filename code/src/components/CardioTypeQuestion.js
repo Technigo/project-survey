@@ -9,16 +9,16 @@ const CardioTypeQuestion = ({
 
     return (
         <form className="form radio">
-          Wich kind of cardio you want to do?
           <label>
+          Wich kind of cardio you want to do?
             <span className="radio-input">
               <input
                 type="radio"
-                value="MYOM"
+                value="EMOM"
                 onChange={onCardioTypeChange}
-                checked={cardioTypes === 'MYOM'}
+                checked={cardioTypes === 'EMOM'}
               />
-              <span className="radio-text">MYOM</span>
+              <span className="radio-text">EMOM</span>
             </span>
           </label>
           <label>
@@ -43,7 +43,8 @@ const CardioTypeQuestion = ({
               <span className="radio-text">STRAIGHT REPS</span>
             </span>
           </label>
-          <button onClick={onStepChange}>Check your cardio!</button>
+          <button onClick={onStepChange}
+          className="button">Check your cardio!</button>
         </form>
       )
     }

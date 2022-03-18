@@ -27,7 +27,7 @@ const GetYourProgram = ({}) => {
             <p>1min sit ups</p>
             <p>1min burpee</p>
             <p>1min break</p>
-            <p>Do all four rounds withn no extra breaks</p>
+            <p>Do all four rounds with no extra breaks</p>
             </>
         )
     } else if (program === 'p3') {

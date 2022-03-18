@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 
 const UpperBodyQuestion = ({
 	upperBody,
@@ -6,7 +6,7 @@ const UpperBodyQuestion = ({
 	onStepChange,
 }) => {
 	return (
-		<form>
+		<form className='form'>
 			<label>
         What you want to do for train your upper body? You can choose option depends what you can use for training
         <select id="upperBody" value={upperBody} onChange={onUpperBodyChange}>
@@ -18,9 +18,11 @@ const UpperBodyQuestion = ({
           <option value="Military press">Military press</option>
         </select>
       </label>
-			      <button onClick={onStepChange}>Next question</button>
+			      <button 
+            onClick={onStepChange}
+            className='button'>Next question</button>
 		</form>
-	);
-};
+	)
+}
 
-export default UpperBodyQuestion;
+export default UpperBodyQuestion

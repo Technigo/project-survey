@@ -13,11 +13,11 @@ const RandomCardioQuestion = ({
         <button className="button" onClick={onStepChange}>
           Next question
         </button>
-      );
+      )
     } else {
       return (
         <button className="button" onClick={goPrograms}>
-          Overview
+          Check your cardio!
         </button>
       );
     }
@@ -25,8 +25,8 @@ const RandomCardioQuestion = ({
 
   return (
     <form className="form radio">
-      Do you want pick a random cardio?
       <label>
+      Do you want pick a random cardio?
         <span className="radio-input">
           <input
             type="radio"

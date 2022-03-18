@@ -1,3 +1,12 @@
+html,
+body,
+#root {
+  height: auto;
+  max-width: auto;
+  margin: 0;
+  padding: 0;
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +14,111 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(./img/body-img.jpg);
+  background-size: cover;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color:white;
+  font-family: 'Domine', serif;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.wrapper {
+  padding: 100px 30px 30px 30px;
+  height: 100%;
+  display: grid;
+  grid-gap: 5em;
+  grid-template-rows: auto 150px;
+  justify-items: center;
+}
+
+.form {
+  display: grid;
+  font-size: 20px;
+  padding-top: 70px;
+  max-width: 30em;
+}
+
+section {
+  display: grid;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+  padding: 1em;
+}
+
+label {
+  font-size: 1em;
+  display:contents;
+  width: 100%;
+  margin-bottom: 0.5em;
+  justify-self: center;
+  width: min-content;
+}
+
+input[type='text'],
+select {
+  padding: 0.6em;
+  font-size: 16px;
+  margin-top: 1em;
+  border-radius: 8px;
+}
+
+.button {
+  display: inline-block;
+  font-family: 'Domine', serif;
+  padding: 0.5em 3em;
+  margin: 2em 0;
+  text-align: center;
+  justify-self: center;
+  border-radius: 8px;
+  font-size: 0.8em;
+}
+
+.radio {
+  display: grid;
+  grid-gap: 0.5em;
+}
+
+.radio-input {
+  display: flex;
+  align-items: baseline;
+}
+
+.radio-text {
+  margin-left: 0.5em;
+}
+
+p {
+  font-size: 20px;
+}
+
+h1, 
+h2 {
+  font-size: 30px;
+}
+
+
+@media (min-width: 800px) {
+ 
+}
+
+@media (min-width: 1100px) {
+  .button {
+    font-size:25px;
+  }
+
+  input[type='text'],
+  select {
+  font-size: 25px;
+}
+
+label {
+  font-size: 25px;
+}
+
 }
