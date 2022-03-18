@@ -1,11 +1,11 @@
 import React from "react";
 
-const QuestionThree = (props) => {
-  const { location, locations, onThirdInputChange } = props;
+const LocationDropDown = (props) => {
+  const { location, locations, onThirdInputChange, onStepChange } = props;
   return (
     <div>
-      <h1>Choose your city to attend your local gardening group? </h1>
-      <form>
+      <form onSubmit={onStepChange}>
+        <h1>Choose your city to attend your local gardening group? </h1>
         <label
           htmlFor="locationOptions"
           aria-label="choose your local gardening group"
@@ -18,9 +18,10 @@ const QuestionThree = (props) => {
             <option value={locations}>Skåne</option>
           </select>
         </label>
+        <button type="Submit">Next</button>
       </form>
     </div>
   );
 };
 
-export default QuestionThree;
+export default LocationDropDown;

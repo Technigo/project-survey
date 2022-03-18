@@ -5,8 +5,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color:#3b3734;
-    font-family: 'Merriweather', serif;
+  background-color: #3b3734;
+  font-family: "Merriweather", serif;
 }
 
 code {
@@ -14,45 +14,48 @@ code {
     monospace;
 }
 
-.outer-box{
+.outer-box {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
   height: 100vh;
 }
-.content-box{
+.content-box {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   padding: 10%;
-  
+
   background-color: #ffd15d;
 }
-.btn{
+h1{
+  font-weight: 900;
+}
+.btn {
   height: 50px;
-width: 100px;
-font-family: 'Merriweather', serif;
-font-weight: 700;
-background-color:#5be4e6;
-border: solid 1px;
+  width: 100px;
+  font-family: "Merriweather", serif;
+  font-weight: 700;
+  background-color: #5be4e6;
+  border: solid 1px;
 }
 .btn {
   transition-duration: 0.4s;
 }
 
 .btn:hover {
-  background-color: #4CAF50;
+  background-color: #4caf50;
   color: white;
 }
 
-.footer{
+.footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin:1%;
+  margin: 1%;
 }
-.footer p{
+.footer p {
   margin: 0%;
 }

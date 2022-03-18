@@ -7,13 +7,13 @@ import Footer from "components/Footer";
 export const App = () => {
   return (
     <>
-    <section>
-      <main>
-        <div className="outer-box">
-        <Form />
-        </div>
-      </main>
-      <Footer/>
+      <section>
+        <main>
+          <div className="outer-box">
+            <Form />
+          </div>
+        </main>
+        <Footer />
       </section>
     </>
   );
