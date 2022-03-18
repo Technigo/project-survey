@@ -13,12 +13,16 @@ const Form = () => {
   const [lostItem, setLostItem] = useState('');
   const [lastTime, setLastTime] = useState('today');
   const [showSummary, setShowSummary] = useState(false);
+  const [pageNumber, setPageNumber] = useState(0);
+
+  console.log(pageNumber)
 
   const handleResetButtonClick = () => {
     setUsername('');
     setLostItem('');
     setLastTime('');
     setShowSummary(false);
+    setPageNumber(0);
   }
 
   const handleSubmit = (event) => {
@@ -26,18 +30,15 @@ const Form = () => {
     setShowSummary(true);
   }
 
+  
+
   const inputContent = (
     <>
-      <h1>Hello!</h1>
-      <p>In order to help you we would kindly ask you to answer a few questions.</p>
-      <Question1 username={username} setUsername={setUsername} />
-      <Question2 username={username} lostItem={lostItem} setLostItem={setLostItem} />
-      <Question3 username={username} lastTime={lastTime} setLastTime={setLastTime} />
       <br />
       <button
-            className='submit-button'
-            type="submit"
-            >Show summary</button>
+        className='submit-button'
+        type="submit"
+      >Show summary</button>
     </>
   )
 
@@ -52,9 +53,27 @@ const Form = () => {
     </>
   )
 
+  const whatToDisplay = (page) => {
+    switch(page) {
+      case 0:
+        return <><h1>Hello!</h1><p>In order to help you we would kindly ask you to answer a few questions.</p></>
+      case 1:
+        return <Question1 username={username} setUsername={setUsername} />
+      case 2:
+        return <Question2 username={username} lostItem={lostItem} setLostItem={setLostItem} />
+      case 3:
+        return <Question3 username={username} lastTime={lastTime} setLastTime={setLastTime} />
+      case 4: 
+        return summaryContent
+      default: 
+        return <p>nej</p>
+    }
+  }
+
   return (
     <form className='form' onSubmit={handleSubmit}>
-      {!showSummary && inputContent}
+      {whatToDisplay(pageNumber)}
+      {pageNumber === 1 && inputContent}
       {showSummary && summaryContent}
     </form>
   )
