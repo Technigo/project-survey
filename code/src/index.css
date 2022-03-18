@@ -10,6 +10,8 @@
 }
 
 body {
+  max-height: 100vh;
+  overflow: hidden;
   box-sizing: border-box;
   background-color: var(--main);
   color: white;
@@ -30,7 +32,7 @@ main {
   align-items: center;
 }
 
-/* footer {
+footer {
   height: 15vh;
   margin-top: auto;
   display: flex;
@@ -43,7 +45,7 @@ main {
 }
 a:hover {
   text-decoration: underline;
-} */
+}
 
 @media screen and (min-width: 768px) {
   main {
