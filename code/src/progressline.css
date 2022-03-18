@@ -2,7 +2,7 @@ footer {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	height: 20vh;
+	height: 15vh;
 }
 
 .square {
@@ -26,6 +26,13 @@ footer {
 }
 
 @media (min-width: 1024px) {
+	footer {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		height: 20vh;
+	}
+
 	.line {
 		width: 35px;
 	}
