@@ -27,6 +27,11 @@ h2 {
 	text-align: center;
 }
 
+p {
+	text-align: center;
+	line-height: 2;
+}
+
 .container {
 	height: 100%;
 	width: 100%;

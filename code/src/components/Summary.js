@@ -7,10 +7,12 @@ const Summary = ({ wordInput, selectInput, radioInput }) => {
 				<h2>Summary of answers</h2>
 				<p>Lmao "{wordInput}", good one xd</p>
 				<p>
-					Oh, so you chose {selectInput}s? I hate {selectInput}s, {wordInput}{' '}
+					Oh... {selectInput}s, really?! I hate {selectInput}s, {wordInput}{' '}
 					{selectInput}s!
 				</p>
-				<p>You strongly believe that jellyfishes are {radioInput}. Same bro.</p>
+				<p>
+					You strongly believe that jellyfishes are {radioInput} though. Same bro.
+				</p>
 				<h3>Thanks and good bye!</h3>
 			</div>
 		</div>
