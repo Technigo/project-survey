@@ -19,7 +19,7 @@ const NextButton = (props) => {
       setError("")
       onStepChange(1)
     } else {
-      setError("required field: at least two characters, no numbers/special characters")
+      setError("at least 2 letters")
     }
   }
 
@@ -28,50 +28,58 @@ const NextButton = (props) => {
     if ((ingredient.length === 2) | (ingredient.length === 0)) {
       setError("")
       onStepChange(1)
-    // } else if (ingredient.length === 1) {
-    //   setError("choose one more")
     } else {
-      setError("choose 0 or 2 ingredients")
+      setError("must be 0 or 2 ingredients")
     }
   }
 
   if (step === 1) {
     return (
-        <button className="start-button" type="button" onClick={() => onStepChange(1)}>
+      <div className="start-button-box">
+        <button
+          className="start-button"
+          type="button"
+          onClick={() => onStepChange(1)}
+        >
           Start
         </button>
+      </div>
     )
   } else if (step === 2) {
     return (
-      <>
-          <button type="button" onClick={onButtonClickedUserName}>
-            Next
-          </button>
-          <div className="error-message">{error}</div>
-      </>
+      <div className="next-button-box">
+        <button type="button" onClick={onButtonClickedUserName}>
+          Next
+        </button>
+        <div className="error-message">{error}</div>
+      </div>
     )
   } else if (step === 11) {
     return (
+      <div className="next-button-box">
         <button type="button" onClick={() => onStepChange(likeSports ? 1 : 2)}>
           Next
         </button>
+      </div>
     )
   } else if (step === 13) {
     return (
-      <>
-          <button type="button" onClick={onButtonClickedIngredient}>
-            Next
-          </button>
-          <div className="error-message">{error}</div>
-      </>
+      <div className="next-button-box">
+        <button type="button" onClick={onButtonClickedIngredient}>
+          Next
+        </button>
+        <div className="error-message">{error}</div>
+      </div>
     )
   } else if (step === 15) {
     return null
   } else {
     return (
+      <div className="next-button-box">
         <button type="button" onClick={() => onStepChange(1)}>
           Next
         </button>
+      </div>
     )
   }
 }

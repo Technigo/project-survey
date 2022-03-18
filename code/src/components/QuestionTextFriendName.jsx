@@ -8,7 +8,7 @@ const QuestionTextFriendName = (props) => {
   return (
     <div className="q-and-a-box">
         <h1>Type the first name of someone to drink your {beverage ? beverage : RandomBeverage()} with</h1>
-        <input type="text" onChange={onFriendNameChange} value={friendName} />
+        <input className="input-text" type="text" onChange={onFriendNameChange} value={friendName} />
     </div>
   )
 }

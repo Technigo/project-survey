@@ -4,7 +4,7 @@ import ProgressBar from "./ProgressBar"
 import NextButton from "./NextButton"
 import BackButton from "./BackButton"
 
-import LandingPage from './LandingPage'
+import LandingPage from "./LandingPage"
 import QuestionTextUserName from "./QuestionTextUserName"
 import QuestionSelectMenuGender from "./QuestionSelectMenuGender"
 import QuestionRadioWeather from "./QuestionRadioWeather"
@@ -123,24 +123,20 @@ const FormBox = () => {
     />
   ) : (
     <>
-      {/* doesnt work well if I extract ProgressBar??? */}
+      {/* doesnt work well if I put the ProgressBar outside ??? */}
       {/* <ProgressBar step={step} /> */}
       <form
         onSubmit={(event) => {
           event.preventDefault()
           if (step === 15) {
-            setIsSummaryDisplayed(true)   
+            setIsSummaryDisplayed(true)
           } else {
             handleStepChange(1)
           }
         }}
       >
-        {step === 1 && (
-          <>
-            <LandingPage />
-          </>
-        )}
-        
+        {step === 1 && <LandingPage />}
+
         {step === 2 && (
           <>
             <ProgressBar step={step} />
@@ -261,6 +257,7 @@ const FormBox = () => {
           <>
             <ProgressBar step={step} />
             <QuestionMultipleCheckboxesIngredients
+              notFriendName={notFriendName}
               ingredient={ingredient}
               onIngredientChange={handleIngredientChange}
             />
@@ -277,32 +274,22 @@ const FormBox = () => {
           </>
         )}
 
-        {step === 15 && (
-          <>
-            <ConfirmationPage
-              userName={userName}
-            />
-          </>
-        )}
+        {step === 15 && <ConfirmationPage userName={userName} />}
       </form>
-      <div className="next-button-box">
-        <NextButton
-          error={error}
-          setError={setError}
-          userName={userName}
-          likeSports={likeSports}
-          ingredient={ingredient}
-          step={step}
-          onStepChange={handleStepChange}
-        />
-      </div>
-      <div className="back-button-box">
-        <BackButton
-          likeSports={likeSports}
-          step={step}
-          onStepChange={handleStepChange}
-        />
-      </div>
+      <NextButton
+        error={error}
+        setError={setError}
+        userName={userName}
+        likeSports={likeSports}
+        ingredient={ingredient}
+        step={step}
+        onStepChange={handleStepChange}
+      />
+      <BackButton
+        likeSports={likeSports}
+        step={step}
+        onStepChange={handleStepChange}
+      />
     </>
   )
 }

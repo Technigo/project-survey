@@ -68,14 +68,15 @@
 }
 
 .progress {
-  background: black;
+  background: grey;
   justify-content: flex-start;
   border-radius: 100px;
   align-items: center;
   position: relative;
+  margin: 50px 0;
   padding: 0 5px;
   display: flex;
-  height: 20px;
+  height: 10px;
   width: 365px;
 }
 
@@ -85,7 +86,7 @@
   box-shadow: 0 10px 40px -10px #fff;
   border-radius: 100px;
   background: white;
-  height: 10px;
+  height: 5px;
   width: 0;
 }
 

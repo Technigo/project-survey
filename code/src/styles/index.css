@@ -1,17 +1,32 @@
 * {
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
+}
+
+html {
+  background: #f1f1f1;
 }
 
 body {
   margin: 0;
-  font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+/* ----- START PAGE ----- */
+
+h1,
+p {
+  text-align: center;
+}
+
+.start-button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.start-button {
+  position: absolute;
 }
 
 /* ----- FORM BOX */
@@ -60,18 +75,20 @@ button {
   padding-top: 40px;
 }
 
+.start-button-box button,
 .next-button-box button {
   color: #fff;
   background-color: #000;
 }
 
 .error-message {
+  padding-top: 20px;
   color: red;
   text-align: center;
 }
 
 .back-button-box {
-  padding-top: 40px;
+  margin-top: 40px;
 }
 
 .back-button-box button {
@@ -86,69 +103,65 @@ button {
 
 /* ----- RADIO BUTTONS ------ */
 
-
 .radio-box {
-padding: 10px 0;
+  padding: 10px 0;
 }
-
 
 [type="radio"]:checked,
 [type="radio"]:not(:checked) {
-    position: absolute;
-    left: -9999px;
+  position: absolute;
+  left: -9999px;
 }
 [type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label
-{
-    position: relative;
-    padding-left: 28px;
-    cursor: pointer;
-    line-height: 20px;
-    display: inline-block;
-    color: #000;
+[type="radio"]:not(:checked) + label {
+  position: relative;
+  padding-left: 28px;
+  cursor: pointer;
+  line-height: 20px;
+  display: inline-block;
+  color: #000;
 }
 [type="radio"]:checked + label:before,
 [type="radio"]:not(:checked) + label:before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 18px;
-    height: 18px;
-    border: 1px solid #000;
-    border-radius: 100%;
-    background: #fff;
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18px;
+  height: 18px;
+  border: 1px solid #000;
+  border-radius: 100%;
+  background: #fff;
 }
 [type="radio"]:checked + label:after,
 [type="radio"]:not(:checked) + label:after {
-    content: '';
-    width: 12px;
-    height: 12px;
-    background: grey;
-    position: absolute;
-    top: 4px;
-    left: 4px;
-    border-radius: 100%;
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
+  content: "";
+  width: 12px;
+  height: 12px;
+  background: grey;
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  border-radius: 100%;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 [type="radio"]:not(:checked) + label:after {
-    opacity: 0;
-    -webkit-transform: scale(0);
-    transform: scale(0);
+  opacity: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
 }
 [type="radio"]:checked + label:after {
-    opacity: 1;
-    -webkit-transform: scale(1);
-    transform: scale(1);
+  opacity: 1;
+  -webkit-transform: scale(1);
+  transform: scale(1);
 }
-
 
 /* ----- CHECKBOXES ----- */
 
 .checkboxes {
   display: grid;
-grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 
 /* .checkbox-box {
@@ -215,36 +228,41 @@ grid-template-columns: 1fr 1fr 1fr;
 
 /* ----- RANGE SLIDER ----- */
 
+.slider {
+  -webkit-appearance: none;
+  width: 275px;
+  height: 10px;
+  border-radius: 10px;
+  background: grey;
+  outline: none;
+  /* opacity: 0.7; */
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+}
 
-  .slider {
-    -webkit-appearance: none;
-    width: 275px;
-    height: 10px;
-    border-radius: 10px;
-    background: grey;
-    outline: none;
-    /* opacity: 0.7; */
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
-  
-  /* .slider:hover {
+/* .slider:hover {
     opacity: 1;
   } */
-  
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: #000;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 20px;
-    height: 20px;
-    background: #000;
-    cursor: pointer;
-  }
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: #000;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: #000;
+  cursor: pointer;
+}
+
+/* ----- STORY ----- */
+
+mark {
+  background-color: lightgrey;
+}

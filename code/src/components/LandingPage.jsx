@@ -7,7 +7,8 @@ const LandingPage = () => {
     <div>
 
     <div>
-      <h1>Get a customized short story</h1>
+      <h1>Story Factory</h1>
+      <p>get a customized short story based on your choices or random choices</p>
     </div>
     <main></main>
     </div>     

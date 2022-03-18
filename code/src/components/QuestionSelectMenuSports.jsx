@@ -7,6 +7,10 @@ const sportItems = ["football", "hockey", "baseball", "floorball", "basketball"]
 const QuestionSelectMenuSports = (props) => {
   const { friendName, sport, onSportChange } = props
 
+  console.log(friendName)
+  console.log(RandomFriendName())
+
+
   return (
     <div className="q-and-a-box">
       <label htmlFor="sport"><h1>Select the sport you would watch some game with {friendName ? friendName : RandomFriendName()}</h1></label>
