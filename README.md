@@ -1,13 +1,20 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Survey built with React using React state. Project should consist of at least 3
+questions and user should see a summary of their answers after submitting.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started the project by creating the desired components. Since I wanted to make
+something simple I decided to stick with only three questions, one text input,
+one select options and one with radio buttons. Later on I decided to add an
+intro compnent where the user can press a button to start the survey.
+
+If I hade more time I would like to come up with a better survey concept instead
+of using the placeholder questions I put in just to get started at the
+beginning. I would also like to add a progress bar to improve the user
+experience.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://lisen-project-survey.netlify.app/
