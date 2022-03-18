@@ -11,7 +11,7 @@ const SecondQuestion = ({
      }) => {
 
        return (  
-        <main className='main-container'>
+        <main className='main-container budget'>
        <form className='form-container'> 
        <p>Question number: {step}</p>
        <h3 className='question-title'>Budget for the destination:</h3>

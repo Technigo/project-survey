@@ -3,7 +3,7 @@ import React from 'react';
 const FirstQuestion = ({destinationInput, onDestinationInputChange, nextQuestion, step}) => {
 
     return (
- <main className='main-container'> 
+ <main className='main-container map'> 
         <form className='form-container'>
             <p>Question number : {step} </p>
 

@@ -68,10 +68,32 @@ height: 100vh;
   color: #FFF;
 }
 
+.map {
+  background-image: url(img/map.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #FFF;
+}
 
+.budget {
+  background-image: url(img/budget.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  color: #FFF;
+}
+
+.submit {
+  background-image: url(img/done.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 80%;
+  height: 100vh;
+}
 
 .summary {
-  background-image: url(img/finished.jpg);
+  background-image: url(img/world.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
