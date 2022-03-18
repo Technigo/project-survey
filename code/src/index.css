@@ -72,7 +72,7 @@ select {
   display: inline-block;
   font-family: 'Domine', serif;
   padding: 0.5em 3em;
-  margin: 2em 0;
+  margin: 1em 0;
   text-align: center;
   justify-self: center;
   border-radius: 8px;
@@ -81,7 +81,7 @@ select {
 
 .radio {
   display: grid;
-  grid-gap: 0.5em;
+  grid-gap: 1em;
 }
 
 .radio-input {
@@ -104,21 +104,51 @@ h2 {
 
 
 @media (min-width: 800px) {
- 
+.button {
+  font-size:25px;
 }
 
-@media (min-width: 1100px) {
-  .button {
-    font-size:25px;
-  }
-
-  input[type='text'],
-  select {
-  font-size: 25px;
+input[type='text'],
+select {
+ font-size: 25px;
 }
 
 label {
   font-size: 25px;
+}
+
+p {
+  font-size: 25px;
+}
+
+h1, 
+h2 {
+  font-size: 35px;
+}
+}
+
+@media (min-width: 1100px) {
+
+.button {
+  font-size:25px;
+}
+
+input[type='text'],
+select {
+  font-size: 25px;
+}
+
+label {
+  font-size: 30px;
+}
+
+p {
+  font-size: 30px;
+}
+
+h1, 
+h2 {
+  font-size: 40px;
 }
 
 }
