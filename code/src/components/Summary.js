@@ -5,14 +5,16 @@ const Summary = ({ ageGroup, options, expectations }) => {
 
     return (
        <section>
-        <div>
-          <h2>Thanks for staying and welcome back!</h2>
+        <div className='summary-container'>
+          <h2>Thanks for staying and welcome back❣️</h2>
           <p>Your age is {ageGroup}</p>
           <p>You stayed due to {options}</p>
           <p>You felt staying in the guesthouse was {expectations}</p>
-          <button className="button" onClick={reloadSurvey}>
-            reload
-          </button>
+          <div className='button-container'>
+            <button className="button" onClick={reloadSurvey}>
+              reload
+            </button>
+           </div> 
         </div>
        </section>
     )   

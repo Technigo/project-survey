@@ -5,7 +5,7 @@ const Age = ({ ageGroup, setAgeGroup, nextSlide, backSlide }) => {
 
     return (
      <section>
-      <div>
+      <div className='form-container'>
         <h2>Select your age</h2>
         {ageSelectors.map(group => (
         <label key={group} htmlFor='age'>
@@ -15,11 +15,12 @@ const Age = ({ ageGroup, setAgeGroup, nextSlide, backSlide }) => {
           value={group}
           onChange={(event) => {setAgeGroup(event.target.value)}}
           checked={ageGroup === group}
+          required
         />
         {group}
         </label>
         ))}
-        <div>
+        <div className='button-container'>
           <button className='button' onClick={backSlide}>
             back
           </button>

@@ -5,7 +5,7 @@ const Expectations = ({ expectations, setExpectations, nextSlide, backSlide }) =
 
     return (
      <section>
-      <div>
+      <div className='form-container'>
         <h2>How did you find the stay</h2>
         {feedbackValues.map(feedback => (
         <label key={feedback} htmlFor='feedback'>
@@ -19,7 +19,7 @@ const Expectations = ({ expectations, setExpectations, nextSlide, backSlide }) =
         {feedback}
         </label>
         ))}
-        <div>
+        <div className='button-container'>
           <button className='button' onClick={backSlide}>
             back
           </button>
