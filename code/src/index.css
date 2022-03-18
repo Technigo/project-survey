@@ -101,7 +101,7 @@ body {
 
 input[type='range']::-ms-track {
   border-radius: 8px;
-  height: 10px;
+  height: 25px;
   border: 1px solid #bdc3c7;
   background-color: #fff;
   color: transparent;
