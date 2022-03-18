@@ -93,6 +93,27 @@ body {
   cursor: pointer;
 }
 
+.input[type='range']::ms-fill-lower,
+.input[type='range']::ms-fill-upper {
+  background: transparent;
+}
+
+input[type='range']::-ms-track {
+  border-radius: 8px;
+  height: 7px;
+  border: 1px solid #bdc3c7;
+  background-color: #fff;
+}
+
+input[type='range']::-ms-thumb {
+  background-color: #ecf0f1;
+  border: 1px solid #bdc3c7;
+  width: 20px;
+  height: 20px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
 .radioGroup {
   display: flex;
   flex-direction: column;
