@@ -1,4 +1,5 @@
 import React from "react";
+import './SubmittedView.css'
 
 const SubmittedView = ({ answers, reset }) => {
   return (
@@ -7,9 +8,11 @@ const SubmittedView = ({ answers, reset }) => {
         Awesome! For our next dinner party, we'll make sure to design a menu around the following
         preferences:{" "}
       </h2>
-      {answers.map((answer, i) => (
-        <li key={i}>{answer}</li>
-      ))}
+      <ul>
+        {answers.toLmap((answer, i) => (
+          <li key={i}>{answer}</li>
+        ))}
+      </ul>
       <button onClick={reset}>Reset</button>
     </section>
   );

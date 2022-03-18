@@ -1,0 +1,12 @@
+ul {
+	list-style-type: '🧂';
+	padding-left: inherit;
+  list-style-position:outside;
+  list-style-image: none;
+}
+
+li {
+	padding-left: 0.7rem;
+	padding-bottom: 0.7rem;
+	text-transform: capitalize;
+}
