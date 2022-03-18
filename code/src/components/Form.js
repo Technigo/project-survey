@@ -6,6 +6,7 @@ import RadioForm from './RadioForm.js'
 
 const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, roles, setRoles, setSubmit}) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [errorMessage, setErrorMessage] = useState('');
 
     const submitForm = (e) => {
         if (currentQuestion !== componentsArray.length - 1) {
@@ -15,8 +16,15 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
         }        
      }
 
+
     const handleNextQuestion = () => {
-        setCurrentQuestion(currentQuestion + 1);
+        if (name !== '') {
+            setCurrentQuestion(currentQuestion + 1);
+            setErrorMessage('');
+        } else {
+            console.log('you must type your name');
+            setErrorMessage('You cannot leave this field empty');
+        }
     }
      //add validation that checks that values are not empty before clicking on to next question
 
@@ -48,6 +56,7 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
             <form onSubmit={submitForm}>
                 <h1>Application form</h1>
                 <h2>Developer and software engineering</h2>
+                {errorMessage}
                 {componentsArray[currentQuestion]}     
 
                 <div className="next-and-submit-button-div">
