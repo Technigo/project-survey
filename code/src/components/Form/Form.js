@@ -1,4 +1,3 @@
-import SubmitButton from 'components/SubmitButton/SubmitButton';
 import React, { useState } from 'react';
 
 import Question1 from '../Question1/Question1';
@@ -10,44 +9,55 @@ import ResetButton from '../ResetButton/ResetButton';
 import './Form.css';
 
 const Form = () => {
-    const [username, setUsername] = useState('');
-    const [lostItem, setLostItem] = useState('');
-    const [lastTime, setLastTime] = useState('today');    
-    const [showSummary, setShowSummary] = useState(false);
+  const [username, setUsername] = useState('');
+  const [lostItem, setLostItem] = useState('');
+  const [lastTime, setLastTime] = useState('today');
+  const [showSummary, setShowSummary] = useState(false);
 
-    const handleButtonClick = () => setShowSummary(true);
-    const handleResetButtonClick = () => {
-        // Add code 
-    }
-
-    const formContent = (
-        <>
-          <h1>Hello!</h1>
-          <p>In order to help you we would kindly ask you to answer a few questions.</p>
-          <Question1 username={username} setUsername={setUsername} />
-          <Question2 username={username} lostItem={lostItem} setLostItem={setLostItem} />
-          <Question3 username={username} lastTime={lastTime} setLastTime={setLastTime} />
-          <br />
-          <SubmitButton handleButtonClick={handleButtonClick} />
-        </>
-    )
-
-    return (
-        <form className='form' onSubmit={(event) => event.preventDefault()}> 
-          {!showSummary && formContent} 
-          {showSummary && (
-              <>
-                <Summary 
-                username={username} 
-                lostItem={lostItem} 
-                lastTime={lastTime} />
-                <ResetButton 
-                  onButtonClick={handleResetButtonClick}/>
-              </>
-          )}
-            
-        </form> 
-    )
+  const handleResetButtonClick = () => {
+    setUsername('');
+    setLostItem('');
+    setLastTime('');
+    setShowSummary(false);
   }
-  
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    setShowSummary(true);
+  }
+
+  const inputContent = (
+    <>
+      <h1>Hello!</h1>
+      <p>In order to help you we would kindly ask you to answer a few questions.</p>
+      <Question1 username={username} setUsername={setUsername} />
+      <Question2 username={username} lostItem={lostItem} setLostItem={setLostItem} />
+      <Question3 username={username} lastTime={lastTime} setLastTime={setLastTime} />
+      <br />
+      <button
+            className='submit-button'
+            type="submit"
+            >Show summary</button>
+    </>
+  )
+
+  const summaryContent = (
+    <>
+      <Summary
+        username={username}
+        lostItem={lostItem}
+        lastTime={lastTime} />
+      <ResetButton
+        onButtonClick={handleResetButtonClick} />
+    </>
+  )
+
+  return (
+    <form className='form' onSubmit={handleSubmit}>
+      {!showSummary && inputContent}
+      {showSummary && summaryContent}
+    </form>
+  )
+}
+
 export default Form;

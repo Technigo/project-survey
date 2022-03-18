@@ -11,6 +11,10 @@
   color: teal;
 }
 
-.form h2 {
-  margin-top: 20px;
+.submit-button {
+  background-color: teal;
+  color: white;
+  border: 1px solid teal;
+  margin-top: 10px;
+  padding: 3px;
 }
