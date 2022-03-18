@@ -9,7 +9,7 @@ const QuestionRadioVehicle = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <h1>
+      <h1 tabIndex="1">
         Select what you would rather ride on this{" "}
         {weather ? weather : RandomWeather()} day
       </h1>

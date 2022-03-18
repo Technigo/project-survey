@@ -7,7 +7,7 @@ const QuestionRadioWeather = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <h1>Look by the window and select how is the sky</h1>
+      <h1 tabIndex="1">Look by the window and select how is the sky</h1>
       <div>
         {weatherItems.map((item) => (
           <div className="radio-box" key={item}>

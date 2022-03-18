@@ -102,7 +102,7 @@ export const RandomIngredientOne = () => {
 export const RandomPhone = () => {
   const phoneOptions = ["iPhone", "Samsung", "Huawei", "Motorola", "Nokia", "BlackBerry", "Ericsson"]
   if (phone === '') {
-phone = phoneOptions[Math.floor(Math.random() * (phoneOptions.length))]
+    phone = phoneOptions[Math.floor(Math.random() * (phoneOptions.length))]
   }
   return phone
 }

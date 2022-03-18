@@ -1,9 +1,6 @@
 import React, { useState } from "react"
 
 import ProgressBar from "./ProgressBar"
-import NextButton from "./NextButton"
-import BackButton from "./BackButton"
-
 import LandingPage from "./LandingPage"
 import QuestionTextUserName from "./QuestionTextUserName"
 import QuestionSelectMenuGender from "./QuestionSelectMenuGender"
@@ -20,10 +17,11 @@ import QuestionMultipleCheckboxesIngredients from "./QuestionMultipleCheckboxesI
 import QuestionSelectMenuPhone from "./QuestionSelectMenuPhone"
 import ConfirmationPage from "./ConfirmationPage"
 import Summary from "./Summary"
+import NextButton from "./NextButton"
+import BackButton from "./BackButton"
 
 const FormBox = () => {
   const [error, setError] = useState("")
-
   const [userName, setUserName] = useState("")
   const [gender, setGender] = useState("")
   const [weather, setWeather] = useState("")
@@ -85,15 +83,15 @@ const FormBox = () => {
     setSport(event.target.value)
   }
 
-  const handleIngredientChange = (test) => {
+  const handleIngredientChange = (element) => {
     setError("")
-    if (ingredient.includes(test)) {
-      const filteredTest = ingredient.filter((item) => {
-        return item !== test
+    if (ingredient.includes(element)) {
+      const filteredElements = ingredient.filter((item) => {
+        return item !== element
       })
-      setIngredient(filteredTest)
+      setIngredient(filteredElements)
     } else {
-      setIngredient([...ingredient, test])
+      setIngredient([...ingredient, element])
     }
   }
 
@@ -123,8 +121,6 @@ const FormBox = () => {
     />
   ) : (
     <>
-      {/* doesnt work well if I put the ProgressBar outside ??? */}
-      {/* <ProgressBar step={step} /> */}
       <form
         onSubmit={(event) => {
           event.preventDefault()
@@ -280,6 +276,7 @@ const FormBox = () => {
           </>
         )}
       </form>
+
       <NextButton
         error={error}
         setError={setError}
@@ -289,6 +286,7 @@ const FormBox = () => {
         step={step}
         onStepChange={handleStepChange}
       />
+
       <BackButton
         likeSports={likeSports}
         step={step}

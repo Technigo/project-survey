@@ -7,7 +7,9 @@ const QuestionRadioBeverage = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <h1>Make a selection : you are either team coffee or team tea</h1>
+      <h1 tabIndex="1">
+        Make a selection : you are either team coffee or team tea
+      </h1>
       <div>
         {beverageItems.map((item) => (
           <div className="radio-box" key={item}>

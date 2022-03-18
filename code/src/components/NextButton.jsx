@@ -47,7 +47,13 @@ const NextButton = (props) => {
         <button type="button" onClick={onButtonClickedUserName}>
           Next
         </button>
-        <div className="error-message">{error}</div>
+        <div
+          tabIndex="0"
+          aria-label="at least 2 letters"
+          className="error-message"
+        >
+          {error}
+        </div>
       </div>
     )
   } else if (step === 11) {
@@ -64,7 +70,9 @@ const NextButton = (props) => {
         <button type="button" onClick={onButtonClickedIngredient}>
           Next
         </button>
-        <div className="error-message">{error}</div>
+        <div tabIndex="0" className="error-message">
+          {error}
+        </div>
       </div>
     )
   } else if (step === 15) {
