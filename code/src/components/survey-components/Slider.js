@@ -5,6 +5,7 @@ const Slider = (props) => {
   return (
     <section>
     <div className="slidecontainer">
+    <label for="myRange"></label>
     <input 
         type="range" 
         min='1'
