@@ -52,13 +52,17 @@ const back = () =>{
 
   return (
     <>
-    <Header/>
+    {count !== 0 ? 
+    <Header/> :
+    null}
 
     {count !== 0 ? 
     <Progress count={count} totalStep={stepCounts.length}/> :
     null}
 
-    <Slider count = {count} totalStep={stepCounts.length}/>
+    {count !== 0 ?
+    <Slider count = {count} totalStep={stepCounts.length}/> :
+    null}
 
     {count !== 0 ? 
     <Questions 
@@ -76,6 +80,7 @@ const back = () =>{
 
     {reviewInfo ? 
     <Reviewinformation 
+    setBackBtn = {setBackBtn}
     count = {count}
     setCount={setCount}
     name = {name} 

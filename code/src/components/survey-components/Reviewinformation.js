@@ -5,6 +5,8 @@ const Reviewinformation = (props) => {
 
     const handleSubmit = () => {
        setShowResult(true) 
+       props.setCount(0)
+       props.setBackBtn(false)
     }
 
     // const handleRestart = () => {
@@ -31,7 +33,7 @@ const Reviewinformation = (props) => {
       <section>
         <h1>Thank you {props.name}!</h1>
         <p>You are registered with {props.personNumber} guest and their age: {props.ageGroup} years.</p>
-        <p>You will receive details in {props.email}</p>
+        <p>You will receive details in <a href="mailto:eyahyakhan@gmail.com"> {props.email}</a></p>
 
         {/* <button className='btn btn-primary' onClick={handleRestart}>Restart</button> */}
       </section>}
