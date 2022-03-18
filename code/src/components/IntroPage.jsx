@@ -15,7 +15,7 @@ const Intro = () => {
         <br />
         <p><span className="bold underline">NOTE:</span> The explanations for your scores can be accessed via the button underneath the chart with your results.</p>
         <br />
-        <p className="bold">Enjoy!</p>
+        <h3 className="bold">Enjoy!</h3>
         </span>
         </div>
     )
