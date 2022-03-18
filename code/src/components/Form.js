@@ -82,7 +82,7 @@ const Form = () => {
   return (
     <form onSubmit={handleOnSubmit} className="container">
       <Question {...questions[index]} inputValue={inputValue} onChange={handleInputChange} />
-      <Button label={buttonLabel} />
+      <Button label={buttonLabel} inputValue={inputValue} />
     </form>
   );
 };
