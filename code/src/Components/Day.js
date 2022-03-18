@@ -12,6 +12,7 @@ const Day = ({ setDay }) => {
           <input
             type="radio"
             value={item}
+            tabindex="-1"
             name="day"
             onChange={(e) => {
               setDay(e.target.value);

@@ -4,7 +4,7 @@ const Options = ({ setOptions, options }) => {
   return (
     <div className="survey-item options">
       <label className="section-heading" htmlFor="option">
-        In what city will you attend the event?
+        Choose city for the event
       </label>
       <select
         className="optionCity"
