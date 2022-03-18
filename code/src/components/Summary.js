@@ -7,7 +7,7 @@ const Summary = ({nameInput, emailInput, backPage}) => {
     <div>
         <h1>So this is you!</h1>
          
-         <p>   Name:<span className="username">{nameInput}</span></p>
+         <p>   Name: <span className="username"> {nameInput}</span></p>
          <p>   Email: {emailInput} </p>
 
 
