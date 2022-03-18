@@ -26,7 +26,7 @@ const Buttons = ({ section, setSection }) => {
 
       {section < 4 && (
         <button className="button" onClick={nextSection}>
-          {section === 0 ? "Start" : "Next question"}
+          {section === 0 ? "I´m in!" : "Next question"}
         </button>
       )}
 

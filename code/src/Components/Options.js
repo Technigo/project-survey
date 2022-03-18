@@ -4,9 +4,10 @@ const Options = ({ setOptions, options }) => {
   return (
     <div className="survey-item options">
       <label className="section-heading" htmlFor="option">
-        Are you arriving by:
+        In what city will you attend the event?
       </label>
       <select
+        className="optionCity"
         onChange={(e) => {
           setOptions(e.target.value);
         }}
@@ -14,11 +15,9 @@ const Options = ({ setOptions, options }) => {
         value={options}
       >
         <option disabled>Choose below</option>
-        <option>Car</option>
-        <option>Train</option>
-        <option>Bus</option>
-        <option>Bike</option>
-        <option>Flight</option>
+        <option>Stockholm</option>
+        <option>Gothenburg</option>
+        <option>Malmö</option>
       </select>
     </div>
   );

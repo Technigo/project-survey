@@ -1,14 +1,18 @@
-@import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
 
 body {
-  background-image: url(./Components/Assets/phone.avif);
-  background-repeat: no-repeat;
-  background-color: #b3705e;
-  font-family: "Orbitron", sans-serif;
+  background-image: url(./Components/Assets/champagne.jpeg);
+  background-attachment: fixed;
+  background-position: center center;
+  background-size: cover;
+  width: 100%;
+  font-family: "Playfair Display", serif;
+  color: #fff;
+  margin: 0;
 }
 
 code {
-  font-family: "Orbitron", sans-serif;
+  font-family: "Playfair Display", serif;
 }
 
 h1,
@@ -16,20 +20,21 @@ h2 {
   text-align: center;
   margin: 10px;
   size: 34px;
-  color: #fff;
-  background-color: #b3705e;
 }
 
 h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
+  font-size: 50px;
+  margin: 57px 0 30px 0;
 }
 
 h2 {
-  font-size: 20px;
+  font-size: 28px;
   margin: auto;
+  background-color: #886a63;
 }
 
+h3 {
+}
 .summary-section,
 .main {
   display: flex;
@@ -38,13 +43,14 @@ h2 {
   text-align: center;
   max-width: 960px;
   margin: auto;
-  margin-top: 80px;
   padding: 8px;
 }
 
 .summary-text {
   font-size: 16px;
   line-height: 1.7;
+  background-color: #886a63;
+  margin: 0;
 }
 
 .form {
@@ -63,9 +69,15 @@ h2 {
   flex-direction: column;
   font-size: 15px;
 }
+.optionCity {
+  background-color: #000;
+}
 
-.day {
-  font-size: 13px;
+.day,
+.time {
+  font-size: 21px;
+  display: flex;
+  flex-direction: column;
 }
 
 .day label {
@@ -73,10 +85,6 @@ h2 {
   display: inline-block;
   flex-direction: row;
   justify-content: right;
-}
-
-.time {
-  font-size: 13px;
 }
 
 .time label {
@@ -89,18 +97,19 @@ h2 {
 .name input,
 .options select {
   width: 200px;
-  height: 30px;
+  height: 36px;
   padding: 5px;
   font-family: inherit;
   font-size: 13px;
   align-self: center;
   margin-top: 18px;
+  color: #886a63;
 }
 
 .section-heading {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 30px;
+  font-size: 36px;
+
+  margin: 30px;
 }
 
 .btn-container {
@@ -112,11 +121,10 @@ h2 {
 .button {
   width: 160px;
   height: 50px;
-  font-size: 16px;
-  font-weight: 500;
-  border-radius: 10px;
-  background-color: #000;
-  border-color: #000;
+  font-size: 13px;
+
+  border-radius: 50px;
+  background-color: #886a63;
   color: #fff;
   font-family: inherit;
   cursor: pointer;
@@ -125,11 +133,11 @@ h2 {
 
 @media (min-width: 768px) {
   h1 {
-    font-size: 40px;
+    font-size: 60px;
   }
 
   h2 {
-    font-size: 25px;
+    font-size: 40px;
   }
 
   .day {
@@ -146,12 +154,11 @@ h2 {
 
   .section-heading {
     font-size: 50px;
-    font-weight: 500;
     margin-bottom: 15px;
   }
 
   .form {
-    margin-top: 80px;
+    margin-top: 20px;
   }
 
   .name input,
@@ -163,13 +170,14 @@ h2 {
 
   summary-section,
   .main {
-    margin-top: 200px;
+    margin-top: 20px;
   }
 
   .summary-text {
     font-size: 18px;
     line-height: 2;
-    padding: 20px 30px;
+    margin: 0;
+    background-color: #886a63;
   }
 }
 
@@ -188,7 +196,6 @@ h2 {
   }
   .section-heading {
     font-size: 60px;
-    font-weight: 500;
     margin-bottom: 20px;
   }
 
@@ -197,11 +204,6 @@ h2 {
     font-size: 30px;
   }
 
-  .summary-text {
-    font-size: 25px;
-    line-height: 1.8;
-    padding: 8px;
-  }
   .name input,
   .options select {
     height: 50px;

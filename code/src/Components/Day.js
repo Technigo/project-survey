@@ -5,10 +5,7 @@ const Day = ({ setDay }) => {
 
   return (
     <div className="survey-item day">
-      <p className="section-heading">
-        We look forward seeing you at the event. What date will you be joining
-        us?
-      </p>
+      <p className="section-heading">What day will you be joining us?</p>
 
       {dayArray.map((item) => (
         <label className="day" key={item}>

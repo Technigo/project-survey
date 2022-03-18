@@ -5,8 +5,9 @@ const Start = ({ section }) => {
     <>
       {section === 0 && (
         <>
-          <h2>WELCOME TO </h2>
-          <h1>FUTURE TECH EVENT 2022</h1>
+          <h1>GRAND OPENING</h1>
+          <h2> WINE AND DINE </h2>
+          <h2>WITH US!</h2>
         </>
       )}
     </>

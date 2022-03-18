@@ -6,12 +6,10 @@ const Summary = ({ section, day, time, options, name }) => {
       {section === 5 && (
         <>
           <div className="summary-section">
-            <h1>Welcome! </h1>
-
-            <p className="summary-text">
-              See you at {day} {time} o´clock.You will be arriving by {options}.
-              We look forward seeing you there {name}!
-            </p>
+            <h2 className="headertext">
+              Can´t wait to Wine and Dine with you {name}! We look forward
+              seeing you in {options} next {day} {time}.
+            </h2>
           </div>
         </>
       )}

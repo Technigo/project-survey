@@ -1,12 +1,12 @@
 import React from "react";
 
 const Time = ({ setTime }) => {
-  const hourArray = ["10", "12", "2", "4"];
+  const hourArray = ["6pm", "7pm", "8pm", "9pm"];
 
   return (
     <>
       <div className="survey-item-time">
-        <p className="section-heading">What time?</p>
+        <p className="section-heading">What time will you show up?</p>
         {hourArray.map((choice) => (
           <label className="time" key={choice}>
             <input
