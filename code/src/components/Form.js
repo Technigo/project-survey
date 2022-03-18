@@ -8,7 +8,7 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [errorMessage, setErrorMessage] = useState('');
 
-     const componentsArray = [
+    const componentsArray = [
         <InputForm 
             name={name}
             setName={setName}
@@ -29,7 +29,7 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
             setRoles={setRoles}
             key={3}
         />
-     ];
+    ];
 
     const submitForm = (e) => {
         if (currentQuestion !== componentsArray.length - 1) {
@@ -54,36 +54,64 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
         }
     }
 
+    const progressBarArray = [
+        {bgcolor: 'lightgreen', width: '25%' },
+        {bgcolor: 'lightgreen', width: '50%' },
+        {bgcolor: 'lightgreen', width: '75%' },
+        {bgcolor: 'lightgreen', width: '100%'},
+
+    ];
+
     const totalNumOfQuestions = componentsArray.length;
-
-    if (currentQuestion < componentsArray.length - 1) {
-        return (
-            <form onSubmit={submitForm}>
-                <h1>Application form</h1>
-                <h2>Developer and software engineering</h2>
-                <p>Question {currentQuestion + 1} out of {totalNumOfQuestions}</p>
-                {errorMessage}
-                {componentsArray[currentQuestion]}     
-
-                <div className="next-and-submit-button-div">
-                    <button className="next-button" type="button" onClick={handleNextQuestionValidation}>Next question &#8618;</button>
-                    <button className="submit-button" type="submit">Submit</button>
-                </div>
-            </form>
-        )  
-    } else {
-        return (
-            <form onSubmit={submitForm}>
+    return (
+        <form onSubmit={submitForm}>
             <h1>Application form</h1>
             <h2>Developer and software engineering</h2>
             <p>Question {currentQuestion + 1} out of {totalNumOfQuestions}</p>
-            {componentsArray[currentQuestion]}
-    
-            <button className="submit-button" type="submit">Submit</button>
-        </form>
-        )
-    }
 
-}
+            <div style={{width: '200px', display: 'flex', backgroundColor: 'lightgrey', marginBottom: '5vh'}}>
+            {progressBarArray.map((fill, index) => {
+                if(index === 0 && currentQuestion === 0) {
+                    return (
+                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
+                    )
+            } else if (index === 1 && currentQuestion === 1) {
+                    return (
+                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
+                    )
+            } else if (index === 2 && currentQuestion === 2) {
+                    return (
+                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
+                    )
+            } else if (index === 3 && currentQuestion === 3) {
+                    return (
+                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
+                    )
+            } else {
+                    return (
+                        <div></div>
+                    )
+            }
+            })}                
+            </div>
+            
+            <span style={{color: 'darkred', fontSize: '12px'}}>{errorMessage}</span>
+            {componentsArray[currentQuestion]}     
+
+            <div className="next-and-submit-button-div">
+                {(currentQuestion < componentsArray.length - 1) ?  
+                <>
+                <button className="next-button" type="button" onClick={handleNextQuestionValidation}>Next question &#8618;</button>
+                <button className="submit-button" type="submit">Submit</button>
+                </>
+                :
+                <>
+                <button className="submit-button" type="submit">Submit</button>
+                </>
+                }
+            </div>
+        </form>
+    )  
+} 
 
 export default Form;

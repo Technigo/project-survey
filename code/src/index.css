@@ -17,6 +17,7 @@ form {
   flex-direction: column;
   align-items: center;
   margin-top: 10vh;
+  text-align: center;
 }
 
 .input-fields {
@@ -37,9 +38,10 @@ form {
 .input-fields select {
     border: 2px solid grey;
     border-radius: 8px;
-    font-size: 20px;
+    font-size: 15px;
     width: 40vw;
     height: 5vh;
+    text-align: center;
 }
 
 label {
@@ -72,7 +74,7 @@ form div {
 }
 
 .next-button {
-  margin-top: 10vh;
+  margin-top: 7vh;
   font-size: 20px;
   border-radius: 10px;
   border: none;
@@ -92,6 +94,29 @@ form div {
 
   .input-fields select {
     width: 20vw;
+    height: 3vh;
+  }
+
+  .input-fields input {
+    font-size: 20px;
+    width: 30vw;
+    height: 2vh;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .input-fields select {
+    font-size: 20px;
+  }
+
+  .input-fields input {
+    width: 25vw;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .input-fields select {
+    width: 15vw;
   }
 
   .input-fields input {
