@@ -116,6 +116,7 @@ select {
   cursor: pointer;
   position: relative;
   margin: 20px 10px;
+  color: black;
 }
 
 /*----BACKGROUND ANIMATION---- */

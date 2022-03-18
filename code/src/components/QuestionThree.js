@@ -17,7 +17,7 @@ const QuestionThree = ({radioInput, handleRadioInputChange, onStepChange, onStep
                     className="radio-select"
                     type="radio" 
                     value={radioValue} 
-                    onChange={handleRadioInputChange} required
+                    onChange={handleRadioInputChange} 
                     checked={radioInput === radioValue}
                 />
                 {radioValue}
