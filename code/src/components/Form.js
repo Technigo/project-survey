@@ -6,7 +6,6 @@ import CheckBox from 'components/CheckBox';
 import DropDown from 'components/DropDown';
 import Summary from 'components/Summary';
 
-
 export const Form = () => {
 // STATES // 
   const [ageGroup, setAgeGroup] = useState('')

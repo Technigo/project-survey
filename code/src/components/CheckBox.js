@@ -38,4 +38,3 @@ const CheckBox = (props) => {
 }
 
 export default CheckBox; 
-

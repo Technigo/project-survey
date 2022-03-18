@@ -26,5 +26,3 @@ const welcomePage = ({nextQuestion, onNameChange, username }) => {
 }
 
 export default welcomePage;
-
-

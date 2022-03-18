@@ -23,7 +23,3 @@ const Summary = ( { age, actor, username, personality, person } ) => {
 }
 
 export default Summary;
-
-
-
-
