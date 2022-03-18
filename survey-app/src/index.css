@@ -20,6 +20,10 @@ h1 {
   margin-bottom: 0;
 }
 
+h2 {
+  margin: 15px 7px;
+}
+
 form {
   margin: 20px 0 30px;
 }
@@ -125,14 +129,47 @@ button {
 }
 
 select {
-  display: block;
-  margin-top: 10px;
-  padding: 10px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding: 15px 35px 15px 15px;
+  background: #efefef;
+  border: 1px solid var(--clr-primary);
+  border-radius: 3px;
   cursor: pointer;
+  text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+}
+
+.select-container {
+  position:relative; 
+  display: inline;
+}
+
+.select-container:after {
+  content: ""; 
+  width: 0; 
+  height: 0; 
+  position: absolute; 
+  pointer-events: none;
+}
+
+.select-container:after {
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  top: 5px;
+  right: 12px;
+  border-top: 8px solid black;
+  opacity: 0.5;
+}
+
+select::-ms-expand {
+  display: none;
 }
 
 select:focus {
-  outline: none !important;
+  outline: none;
   border-color: var(--clr-primary);
   box-shadow: 0 0 5px var(--clr-primary);
 }
@@ -152,7 +189,8 @@ select:focus {
 }
 
 .closing ul {
-  margin-bottom: 30px;
+  margin: 30px 10px 30px;
+  padding-left: 0;
 }
 
 .closing li {

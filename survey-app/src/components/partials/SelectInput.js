@@ -11,16 +11,18 @@ const SelectInput = ({ selectData }) => {
     <>
       <form>
         <label htmlFor='locationsOptions' aria-label='choose a location'>
+          <div className='select-container'>
           <select
             onChange={retrieveData}
             value={state}
             id='locationsOptions'>
             {allInputs.map((locations) => (
               (locations === '-- choose a location --')
-                ? <option key={locations} value=''>{locations}</option>
+                ? <option disabled key={locations} value=''>{locations}</option>
                 : <option key={locations} value={locations}>{locations}</option>
             ))}
           </select>
+          </div>
         </label>
       </form>
       <AlertContainer floatingTime={2000} />
