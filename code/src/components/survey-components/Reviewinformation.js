@@ -7,6 +7,11 @@ const Reviewinformation = (props) => {
        setShowResult(true) 
     }
 
+    // const handleRestart = () => {
+    //         props.setCount(1)
+    //         setShowResult(false)
+    // }
+
   return (
     <div className='section'>
 
@@ -21,12 +26,14 @@ const Reviewinformation = (props) => {
        <button className='btn btn-primary'>Submit</button>
        </form>
        }
+       
       {showResult && 
       <section>
         <h1>Thank you {props.name}!</h1>
         <p>You are registered with {props.personNumber} guest and their age: {props.ageGroup} years.</p>
         <p>You will receive details in {props.email}</p>
-        <button className='btn btn-primary'>Restart</button>
+
+        {/* <button className='btn btn-primary' onClick={handleRestart}>Restart</button> */}
       </section>}
 
     </div>

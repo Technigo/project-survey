@@ -3,6 +3,7 @@ import Progress from './survey-components/Progress'
 import Header from './survey-components/Header'
 import Questions from './survey-components/Questions'
 import Reviewinformation from './survey-components/Reviewinformation'
+import Slider from './survey-components/Slider'
 
 const Survey = () => {
     const [count, setCount]           = useState(1)
@@ -16,8 +17,6 @@ const Survey = () => {
     const [ageGroup,setAgeGroup]         = useState('')
     const [email,setEmail]               = useState('')
 
-
-
     const stepCounts = [
       { id: 1},
       { id: 2},
@@ -30,6 +29,7 @@ const next = () =>{
     if(count < stepCounts.length){
       setCount(count + 1)
     }
+
     if (count === stepCounts.length){
       setCount(stepCounts.length)
       setNextBtn(false)
@@ -58,6 +58,8 @@ const back = () =>{
     <Progress count={count} totalStep={stepCounts.length}/> :
     null}
 
+    <Slider count = {count} totalStep={stepCounts.length}/>
+
     {count !== 0 ? 
     <Questions 
         count ={count} 
@@ -74,6 +76,8 @@ const back = () =>{
 
     {reviewInfo ? 
     <Reviewinformation 
+    count = {count}
+    setCount={setCount}
     name = {name} 
     personNumber = {personNumber}
     ageGroup = {ageGroup}
