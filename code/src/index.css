@@ -2,7 +2,6 @@
 	--clr-lighter: #fcfaf6;
 	--clr-light: #ffe893;
 	--clr-dark: #fed437;
-	--clr-medium: #fed437ab;
 	--clr-black: #111111;
 	--clr-gray: #dadada;
 	--clr-white: #ffffff;
@@ -128,7 +127,7 @@ select:active {
 	width: 225px;
 	height: 37px;
 	border: none;
-	background-color: var(--clr-light);
+	background: var(--clr-light);
 	padding-left: 0.2em;
 }
 
@@ -170,7 +169,6 @@ input[type="radio"]:checked {
 } */
 
 section {
-	/* height: 100vh; */
 	display: flex;
 }
 
@@ -191,6 +189,7 @@ section.overview-wrapper {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	transition-delay: 2s;
 }
 
 /***********************/

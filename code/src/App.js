@@ -33,7 +33,7 @@ export const App = () => {
 	};
 
 	const [state, setState] = useState(initialState);
-	// const [error, setError] = useState("");
+	const [error, setError] = useState(false);
 	const [counter, setCounter] = useState(0);
 	const [pronoun, setPronoun] = useState();
 
@@ -51,21 +51,21 @@ export const App = () => {
 		// console.log(Number(JSON.stringify(counter)));
 		// console.log(errorCounter);
 
-		// 	if (counter !== 0 && counter !== 8) {
-		// 		for (let key in state) {
-		// 			if (
-		// 				state[key] === "" ||
-		// 				Number(JSON.stringify(counter)) === errorCounter
-		// 			) {
-		// 				setError(`Please provide the ${key}!`);
-		// 				return;
-		// 			}
+		// if (counter !== 0 && counter !== 8) {
+		// 	for (let key in state) {
+		// 		if (
+		// 			state[key] === "" &&
+		// 			Number(JSON.stringify(counter)) === errorCounter
+		// 		) {
+		// 			setError(`Please provide the ${key}!`);
+		// 			return;
 		// 		}
-		// 	} else {
-		// 		setError("");
-		setCounter(counter + 1);
-		// 		errorCounter = errorCounter + 1;
 		// 	}
+		// } else {
+		// 	setError("");
+		setCounter(counter + 1);
+		// 	errorCounter = errorCounter + 1;
+		// }
 	};
 
 	const handlePrevStepClick = () => {
