@@ -1,13 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This week in Technigo bootcamp I've built a survey about how people use planet Earth.  
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with creating an idea and some basic questions and decided on a basic colorscheme for the styling with some movement using animation.
+The main topic this week was to continue working with React and to use useState, that's a Hook that lets you add React state to function components. I also continued to learn and use props, components and how to combine everything together.
+
 
 ## View it live
+https://lifeonplanetearth-survey.netlify.app/
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
