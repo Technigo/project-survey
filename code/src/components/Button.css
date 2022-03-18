@@ -1,16 +1,34 @@
 button {
+  font-weight: bold;
+  width: 140px;
   margin: 10px auto;
   padding: 7px;
-  width: 140px;
-  color: white;
-  background-color: var(--main);
-  border: 2px solid white;
-  font-weight: bold;
+  color: var(--main);
+  background-color: white;
+  border: 3px solid white;
   border-radius: 5px;
 }
 
+button:enabled {
+  transition: all 0.3s ease-in-out;
+}
+
+button:disabled {
+  opacity: 60%;
+  color: white;
+  background-color: var(--main);
+  border: 3px solid white;
+}
+
 @media screen and (min-width: 1200px) {
-  button:hover {
+
+  button {
+    color: white;
+    background-color: var(--main);
+    border: 3px solid white;
+  }
+
+  button:enabled:hover {
     color: rgb(0, 51, 51);
     background-color: white;
     cursor: pointer;
