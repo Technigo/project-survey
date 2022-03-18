@@ -184,7 +184,6 @@ const FormBox = () => {
             <ProgressBar step={step} />
             <QuestionRangeSliderSpeed
               vehicle={vehicle}
-              speed={speed}
               onSpeedChange={handleSpeedChange}
             />
           </>
@@ -274,7 +273,12 @@ const FormBox = () => {
           </>
         )}
 
-        {step === 15 && <ConfirmationPage userName={userName} />}
+        {step === 15 && (
+          <>
+            <ProgressBar step={step} />
+            <ConfirmationPage userName={userName} />
+          </>
+        )}
       </form>
       <NextButton
         error={error}

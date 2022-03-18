@@ -13,6 +13,7 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
         each day
       </h1>
       <div className="checkboxes">
+        
         <div className="checkbox-box">
           <input
             type="checkbox"
@@ -109,17 +110,6 @@ const QuestionMultipleCheckboxesIngredients = (props) => {
           </label>
         </div>
 
-        <div className="checkbox-box">
-          <input
-            type="checkbox"
-            id="cucumber"
-            checked={ingredient.includes("cucumber")}
-            onChange={() => onIngredientChange("cucumber")}
-          />
-          <label htmlFor="cucumber">
-            cucumber
-          </label>
-        </div>
       </div>
     </div>
   )

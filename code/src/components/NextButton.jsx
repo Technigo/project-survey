@@ -36,11 +36,7 @@ const NextButton = (props) => {
   if (step === 1) {
     return (
       <div className="start-button-box">
-        <button
-          className="start-button"
-          type="button"
-          onClick={() => onStepChange(1)}
-        >
+        <button type="button" onClick={() => onStepChange(1)}>
           Start
         </button>
       </div>

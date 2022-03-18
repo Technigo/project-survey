@@ -1,4 +1,3 @@
-let userName = ''
 let gender = ''
 let weather = ''
 let vehicle = ''
@@ -12,15 +11,6 @@ let ingredientOne = ''
 let ingredientTwo = ''
 let phone = ''
 
-// to delete since this field is required
-export const RandomUserName = () => {
-  const userNameOptions = ["Emma", "Jessica", "Joanna", "Laura", "Lisa", "Maurii", "Nadia", "Rijad", "Sofie", "Terese"]
-  if (userName === '') {
-    userName = userNameOptions[Math.floor(Math.random() * (userNameOptions.length))]
-  }
-  return userName
-}
-
 export const RandomGender = () => {
   const genderOptions = ["feminine", "masculine", "non-binary"]
   if (gender === '') {
@@ -30,7 +20,7 @@ export const RandomGender = () => {
 }
 
 export const RandomWeather = () => {
-  const weatherOptions = ["sunny", "cloudy", "shitty"]
+  const weatherOptions = ["sunny", "cloudy", "ugly", "scary"]
   if (weather === '') {
     weather = weatherOptions[Math.floor(Math.random() * (weatherOptions.length))]
   }
@@ -94,7 +84,7 @@ export const RandomSport = () => {
 }
 
 export const RandomIngredientTwo = () => {
-  const ingredientOneOptions = ["lettuce", "tuna", "tomato", "cucumber", "tofu", "jam", "peanut butter"]
+  const ingredientOneOptions = ["lettuce", "tuna", "tomato", "cucumber", "tofu", "jam", "peanut butter", "bacon"]
   if (ingredientOne === '') {
     ingredientOne = ingredientOneOptions[Math.floor(Math.random() * (ingredientOneOptions.length))]
   }
@@ -102,7 +92,7 @@ export const RandomIngredientTwo = () => {
 }
 
 export const RandomIngredientOne = () => {
-  const ingredientTwoOptions = ["ham", "cheese", "egg", "mayo", "turkey", "avocado", "ketchup"]
+  const ingredientTwoOptions = ["ham", "cheese", "egg", "mayo", "turkey", "avocado", "ketchup", "onion"]
   if (ingredientTwo === '') {
     ingredientTwo = ingredientTwoOptions[Math.floor(Math.random() * (ingredientTwoOptions.length))]
   }
@@ -110,7 +100,7 @@ export const RandomIngredientOne = () => {
 }
 
 export const RandomPhone = () => {
-  const phoneOptions = ["iPhone", "Samsung", "Huawei", "Motorola", "Nokia"]
+  const phoneOptions = ["iPhone", "Samsung", "Huawei", "Motorola", "Nokia", "BlackBerry", "Ericsson"]
   if (phone === '') {
 phone = phoneOptions[Math.floor(Math.random() * (phoneOptions.length))]
   }

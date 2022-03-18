@@ -5,8 +5,8 @@ const ConfirmationPage = (props) => {
 
   return (
     <div className="q-and-a-box">
-      <h1>You want your story, {userName}?</h1>
-      <button className="story-button" type="submit">See story</button>
+      <h1>{userName}, all choices have been made, either by you or randomly: press the button to read the story</h1>
+      <button className="story-button" type="submit">Discover the story</button>
     </div>
   )
 }

@@ -22,6 +22,11 @@ const QuestionRangeSliderSpeed = (props) => {
         defaultValue="2"
         onChange={onSpeedChange}
       />
+      <div className="speeds-box">
+        <span>slow</span>
+        <span>normal</span>
+        <span>fast</span>
+      </div>
     </div>
   )
 }

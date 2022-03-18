@@ -1,68 +1,68 @@
-.page-1 {
+.page-2 {
   --width-end: 0%;
 }
 
-.page-2 {
+.page-3 {
   --width-start: 0%;
   --width-end: calc(7.7% * 1);
 }
 
-.page-3 {
+.page-4 {
   --width-start: calc(7.7% * 1);
   --width-end: calc(7.7% * 2);
 }
 
-.page-4 {
+.page-5 {
   --width-start: calc(7.7% * 2);
   --width-end: calc(7.7% * 3);
 }
 
-.page-5 {
+.page-6 {
   --width-start: calc(7.7% * 3);
   --width-end: calc(7.7% * 4);
 }
 
-.page-6 {
+.page-7 {
   --width-start: calc(7.7% * 4);
   --width-end: calc(7.7% * 5);
 }
 
-.page-7 {
+.page-8 {
   --width-start: calc(7.7% * 5);
   --width-end: calc(7.7% * 6);
 }
 
-.page-8 {
+.page-9 {
   --width-start: calc(7.7% * 6);
   --width-end: calc(7.7% * 7);
 }
 
-.page-9 {
+.page-10 {
   --width-start: calc(7.7% * 7);
   --width-end: calc(7.7% * 8);
 }
 
-.page-10 {
+.page-11 {
   --width-start: calc(7.7% * 8);
   --width-end: calc(7.7% * 9);
 }
 
-.page-11 {
+.page-12 {
   --width-start: calc(7.7% * 9);
   --width-end: calc(7.7% * 10);
 }
 
-.page-12 {
+.page-13 {
   --width-start: calc(7.7% * 10);
   --width-end: calc(7.7% * 11);
 }
 
-.page-13 {
+.page-14 {
   --width-start: calc(7.7% * 11);
   --width-end: calc(7.7% * 12);
 }
 
-.page-14 {
+.page-15 {
   --width-start: calc(7.7% * 12);
   --width-end: 100%;
 }
@@ -70,21 +70,20 @@
 .progress {
   background: grey;
   justify-content: flex-start;
-  border-radius: 100px;
+  border-radius: 5px;
   align-items: center;
   position: relative;
   margin: 50px 0;
-  padding: 0 5px;
+  padding: 0 3px;
   display: flex;
   height: 10px;
-  width: 365px;
+  width: 370px;
 }
 
 .progress-value {
   -webkit-animation: load 1s normal forwards;
   animation: load 1s normal forwards;
-  box-shadow: 0 10px 40px -10px #fff;
-  border-radius: 100px;
+  border-radius: 5px;
   background: white;
   height: 5px;
   width: 0;

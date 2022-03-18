@@ -1,9 +1,10 @@
 * {
   font-family: "Courier New", Courier, monospace;
+  font-size: 20px;
 }
 
 html {
-  background: #f1f1f1;
+  background: #f4f4f4;
 }
 
 body {
@@ -12,11 +13,19 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* ----- START PAGE ----- */
+.landing-page h1 {
+  font-size: 40px;
+}
 
-h1,
-p {
+.landing-page h1,
+.landing-page p {
   text-align: center;
+}
+
+button {
+  border: none;
+  padding: 5px;
+  cursor: pointer;
 }
 
 .start-button-box {
@@ -25,22 +34,46 @@ p {
   align-items: center;
 }
 
-.start-button {
+.start-button-box button {
   position: absolute;
 }
 
-/* ----- FORM BOX */
-
-.form-box {
-  /* outline: 1px solid red; */
-  width: 375px;
-  /* height: 500px; */
-  margin: 25px auto;
+.start-button-box button,
+.next-button-box button,
+.story-button {
+  color: #fff;
+  background-color: #000;
 }
 
-/* ----- Q & A BOX ----- */
+.next-button-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.back-button-box {
+  margin-top: 40px;
+}
+
+.back-button-box button {
+  color: #fff;
+  background-color: grey;
+}
+
+.error-message {
+  color: red;
+  text-align: center;
+}
+
+.form-box {
+  width: 375px;
+  margin: 0 auto;
+}
 
 .q-and-a-box {
+  padding: 0 20px;
+  height: 300px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -54,195 +87,56 @@ p {
   padding-bottom: 20px;
 }
 
-/* ----- INPUT TEXT ----- */
+/* ----- INPUT ----- */
 
 .input-text {
   width: 275px;
-}
-
-/* ----- BUTTONS ----- */
-
-button {
-  border: none;
-  padding: 5px;
-  cursor: pointer;
-}
-
-.next-button-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-}
-
-.start-button-box button,
-.next-button-box button {
-  color: #fff;
-  background-color: #000;
-}
-
-.error-message {
-  padding-top: 20px;
-  color: red;
   text-align: center;
+  border: 1px solid grey;
 }
 
-.back-button-box {
-  margin-top: 40px;
+.radio-box,
+.checkbox-box {
+  padding-bottom: 20px;
 }
-
-.back-button-box button {
-  color: #fff;
-  background-color: grey;
-}
-
-.story-button {
-  color: #fff;
-  background-color: #000;
-}
-
-/* ----- RADIO BUTTONS ------ */
-
-.radio-box {
-  padding: 10px 0;
-}
-
-[type="radio"]:checked,
-[type="radio"]:not(:checked) {
-  position: absolute;
-  left: -9999px;
-}
-[type="radio"]:checked + label,
-[type="radio"]:not(:checked) + label {
-  position: relative;
-  padding-left: 28px;
-  cursor: pointer;
-  line-height: 20px;
-  display: inline-block;
-  color: #000;
-}
-[type="radio"]:checked + label:before,
-[type="radio"]:not(:checked) + label:before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 18px;
-  height: 18px;
-  border: 1px solid #000;
-  border-radius: 100%;
-  background: #fff;
-}
-[type="radio"]:checked + label:after,
-[type="radio"]:not(:checked) + label:after {
-  content: "";
-  width: 12px;
-  height: 12px;
-  background: grey;
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  border-radius: 100%;
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
-}
-[type="radio"]:not(:checked) + label:after {
-  opacity: 0;
-  -webkit-transform: scale(0);
-  transform: scale(0);
-}
-[type="radio"]:checked + label:after {
-  opacity: 1;
-  -webkit-transform: scale(1);
-  transform: scale(1);
-}
-
-/* ----- CHECKBOXES ----- */
 
 .checkboxes {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
 }
 
-/* .checkbox-box {
-  display: block;
-  margin-bottom: 15px;
+.single input[type="checkbox"] {
+  -ms-transform: scale(2);
+  -moz-transform: scale(2);
+  -webkit-transform: scale(2);
+  -o-transform: scale(2);
+  transform: scale(2);
 }
 
-.checkbox-box input {
-  padding: 0;
-  height: initial;
-  width: initial;
-  margin-bottom: 0;
-  display: none;
+input[type="radio"],
+input[type="range"],
+input[type="checkbox"],
+input[type="radio"] + label,
+input[type="checkbox"] + label {
   cursor: pointer;
 }
-
-.checkbox-box label {
-  position: relative;
-  cursor: pointer;
-}
-
-.checkbox-box label:before {
-  content:'';
-  -webkit-appearance: none;
-  background-color: transparent;
-  border: 2px solid #0079bf;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
-  padding: 10px;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;
-  margin-right: 5px;
-}
-
-.checkbox-box input:checked + label:after {
-  content: '';
-  display: block;
-  position: absolute;
-  top: 2px;
-  left: 9px;
-  width: 6px;
-  height: 14px;
-  border: solid #0079bf;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
-} */
-
-/* ----- SELECT MENU ----- */
 
 .select-input {
-  /* display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  align-items: flex-end; */
   text-align: center;
   width: 275px;
-  padding: 0 0.5rem;
-  background-color: #fff;
-  border-radius: 5px;
-  border: 2px solid #f2f2f2;
-  color: inherit;
+  border: 1px solid grey;
+  cursor: pointer;
 }
-
-/* ----- RANGE SLIDER ----- */
 
 .slider {
   -webkit-appearance: none;
+  appearance: none;
   width: 275px;
   height: 10px;
-  border-radius: 10px;
+  border-radius: 5px;
   background: grey;
-  outline: none;
-  /* opacity: 0.7; */
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
 }
-
-/* .slider:hover {
-    opacity: 1;
-  } */
 
 .slider::-webkit-slider-thumb {
   -webkit-appearance: none;
@@ -251,18 +145,35 @@ button {
   height: 20px;
   border-radius: 50%;
   background: #000;
-  cursor: pointer;
 }
 
 .slider::-moz-range-thumb {
   width: 20px;
   height: 20px;
   background: #000;
-  cursor: pointer;
 }
+
+.speeds-box {
+  width: 275px;
+  display: flex;
+  justify-content: space-between;
+}
+
 
 /* ----- STORY ----- */
 
 mark {
-  background-color: lightgrey;
+  background-color: #e6e6e6;
+}
+
+a {
+  all: unset;
+  text-decoration: underline;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.footer {
+  text-align: center;
+  font-size: 16px;
 }
