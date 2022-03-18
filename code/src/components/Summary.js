@@ -1,13 +1,12 @@
 import React from 'react';
 
-const Summary = ({nameInput, location}) => {
+const Summary = ({nameInput, location, why}) => {
 
     return (
         <div>
             <h1>Summary</h1>
-            <p>
-                {nameInput}
-                {location}
+            <p>Hi {nameInput}! 
+            You want to move to {location}. Nice! {why}
             </p>
         </div>
     )

@@ -6,7 +6,7 @@ const QuestionName = ({nameInput, onNameInputChange, onNextChange}) => {
         <div className="question-box">
             <h2>Question 1</h2>
             <form id="question-name" className="form">
-                <lable htmlFor='name' label='name'>What's your name? </lable>
+                <label htmlFor='name' label='name'>What's your name? </label>
                 <input
                     id='name'
                     type='text'

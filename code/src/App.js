@@ -9,7 +9,9 @@ export const App = () => {
     <div>
       <>
         <Header />
+        <div className='survey-box'>
         <Survey />
+        </div>
         </>
     </div>
   )

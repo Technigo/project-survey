@@ -5,7 +5,15 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: magenta
+  color: black;
+  background-image: url(./assets/apartments.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+  background-position-x: 10%;
+	position: relative;
+  display: grid;
+  justify-content: center;
 }
 
 code {
@@ -13,7 +21,7 @@ code {
     monospace;
 }
 
-section {
-  display: grid;
-  justify-content: center;
+.survey-box {
+  background-color: white;
+  grid-template-columns: 15% auto 15%;
 }

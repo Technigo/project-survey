@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 
 import QuestionName from './QuestionName';
 import QuestionOptions from './QuestionOptions';
+import QuestionWhy from './QuestionWhy';
 import Summary from './Summary';
 
 // useState
@@ -9,6 +10,7 @@ import Summary from './Summary';
 const Survey = () => {
     const [nameInput, setNameInput] = useState('');
     const [location, setLocation] = useState('');
+    const [why, setWhy] = useState('');
     const [next, setNext] = useState(1);
 
 
@@ -20,6 +22,10 @@ const Survey = () => {
 
     const handleLocationChange = (location) => {
       setLocation(location)
+    }
+
+    const handleWhyChange = () => {
+      setWhy(why)
     }
 
     const handleNextChange = () => {
@@ -35,6 +41,7 @@ const Survey = () => {
           {next === 1 && (
               <QuestionName 
                   onChange={handleNameInputChange}
+                  onNameInputChange={handleNameInputChange}
                   onNextChange={handleNextChange}
               />
           )}
@@ -48,9 +55,19 @@ const Survey = () => {
           )}
 
           {next === 3 && (
+              <QuestionWhy
+                  onChange={handleWhyChange}
+                  onWhyChange={handleWhyChange}
+                  onNextChange={handleNextChange}
+              />
+
+          )}
+
+          {next === 4 && (
               <Summary 
                   nameInput={nameInput} 
                   location={location} 
+                  why={why}
               />
           )}
           
