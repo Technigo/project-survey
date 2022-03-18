@@ -12,12 +12,13 @@
 #root {
 	width: 100vw;
 	height: 100vh;
-	background: rgb(251, 169, 128);
-	background: linear-gradient(135deg, var(--gradient1), var(--gradient2));
 }
 
 body {
 	font-family: 'Poppins', sans-serif;
+	color: #000;
+	background-image: url('./jellyfishes.jpg');
+	background-size: cover;
 }
 
 h2 {
