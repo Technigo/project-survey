@@ -128,7 +128,7 @@ select:active {
 	height: 37px;
 	border: none;
 	background: var(--clr-light);
-	color: var(--clr-dark);
+	color: var(--clr-black);
 	padding-left: 0.2em;
 }
 
