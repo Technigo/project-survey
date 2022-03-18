@@ -74,6 +74,7 @@ return (
             <Summary
             nameInput={nameInput}
             emailInput={emailInput}
+            checked={checked}
             />
         )}
 
