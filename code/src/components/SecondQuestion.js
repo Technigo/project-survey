@@ -23,12 +23,15 @@ const SecondQuestion = ({
          />
 
         <div>
-        <button className="btn" onClick={nextPage}>Next!
-        </button>
 
         <button className="btn" onClick={backPage}>
             <span role="img" aria-label="back arrow emoji">↩️</span> Go back
         </button>
+
+
+        <button className="btn" onClick={nextPage}>Next!
+        </button>
+
         </div>
         </>
     )

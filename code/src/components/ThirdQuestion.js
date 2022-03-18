@@ -45,10 +45,12 @@ const Checkbox = ({nextPage, backPage}) => {
             </li>
         </ul>
 
-        <button class="btn" type="submit" onClick={nextPage}> Next question!</button>
-        <button class="btn" type="submit" onClick={backPage}> 
-        <span role="img" aria-label="back arrow emoji">↩️</span> Go back</button>
 
+        <button class="btn" type="submit" onClick={backPage}> 
+        <span role="img" aria-label="back arrow emoji">↩️</span> Go back
+        </button>
+
+        <button class="btn" type="submit" onClick={nextPage}> Next question!</button>
 
         </div>
 
