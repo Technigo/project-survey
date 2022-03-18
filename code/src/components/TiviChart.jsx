@@ -74,7 +74,7 @@ export function TiviChart ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6
 
     return (
         <div className="page-container">
-        <h2 className="center">Universal Motivating Human Values Scores</h2>
+        <h2 className="center title">Universal Motivating Human Values Scores</h2>
         <PolarArea
         data={{
             labels: ['Stimulation', 'Self-Direction', 'Universalism', 'Benevolence', 'Conformity', 'Tradition', 'Security', 'Power', 'Achievement', 'Hedonism'],

@@ -106,8 +106,8 @@ let TiviDropDownTwo = ({q11Answer, q12Answer, q13Answer, q14Answer, q15Answer, q
 
     return (
         <div className="page-container">
-        <h2>Values Inventory (part 2)</h2>
-        <p>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you. Using a 6-point scale from “not like me at all” to “very much like me,” choose how similar the person is to you. </p>
+        <h2 className="title">Values Inventory (part 2)</h2>
+        <p className="explanation">Here we briefly describe some people. Please read each description and think about how much each person is or is not like you. Using a 6-point scale from “not like me at all” to “very much like me,” choose how similar the person is to you. </p>
         <div className="grid" type="form">
 
         {tiviTwoArray.map(({ text, id, onChange, value }) => (

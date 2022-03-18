@@ -36,7 +36,7 @@ const ageArray = [
 const AgeGroup = ({age, askAge, error}) => {
     return (
         <div className="page-container">
-        <h2>Please select your age group:</h2>
+        <h2 className="title">Please select your age:</h2>
         <div className="grid" role="form">
 
         

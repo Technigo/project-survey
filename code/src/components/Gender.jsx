@@ -21,7 +21,7 @@ const genderArray = [
 const Gender = ({gender, askGender, error}) => {
     return (
         <div className="page-container">
-        <h2>Please select your gender:</h2>
+        <h2 className="title">Please select your gender:</h2>
         <div className="grid" role="form">
         {genderArray.map(({ text, id, value }) => (
             <React.Fragment key={id}>

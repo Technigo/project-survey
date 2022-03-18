@@ -142,7 +142,7 @@ export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5
 
     return (
     <div className="page-container">
-    <h2 className="center">Big 5 Personality Trait Scores</h2>
+    <h2 className="center title">Big 5 Personality Traits</h2>
     <Radar 
     data={{
         labels: ['Extraversion', 'Agreeableness', 'Conscientiousness', ['Emotional', 'Stability'], ['Openness to', 'Experiences']],

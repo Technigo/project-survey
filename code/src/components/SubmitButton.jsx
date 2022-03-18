@@ -3,7 +3,7 @@ import forwardButton from '../assets/forward-purple.png'
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from 'firebase/database'
 
-// Your web app's Firebase configuration
+// Firebase Configuration
 const firebaseConfig = {
     apiKey: "AIzaSyDGbArzFfRKxXoM7v1E9jhVQqS7HfXYtlk",
     authDomain: "project-survey-week10.firebaseapp.com",
@@ -20,10 +20,9 @@ const app = initializeApp(firebaseConfig);
 
 const SubmitButton = ({pageNumber, setPageNumber, name, gender, age, tipiq1Answer, tipiq2Answer, tipiq3Answer, tipiq4Answer, tipiq5Answer, tipiq6Answer, tipiq7Answer, tipiq8Answer, tipiq9Answer, tipiq10Answer, tiviq1Answer, tiviq2Answer, tiviq3Answer, tiviq4Answer, tiviq5Answer, tiviq6Answer, tiviq7Answer, tiviq8Answer, tiviq9Answer, tiviq10Answer, tiviq11Answer, tiviq12Answer, tiviq13Answer, tiviq14Answer, tiviq15Answer, tiviq16Answer, tiviq17Answer, tiviq18Answer, tiviq19Answer, tiviq20Answer}) => {
 
-    // Testing Data Structure:
-    const IP_API = 'https://api.db-ip.com/v2/free/self'
+    const API = 'https://api.db-ip.com/v2/free/self'
     const handleSubmit = () => {
-        fetch(IP_API)
+        fetch(API)
         .then((res) => res.json())
         .then((data) => {
             let date = new Date().toString()
@@ -78,7 +77,7 @@ const SubmitButton = ({pageNumber, setPageNumber, name, gender, age, tipiq1Answe
         })
     }
     return (
-        <button type="submit" value="Submit" onClick={handleSubmit} className="submit-btn"><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>
+        <button onClick={handleSubmit} className="submit-btn"><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>
     )
 }
 

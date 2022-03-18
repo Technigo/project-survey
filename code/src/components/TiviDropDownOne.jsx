@@ -106,8 +106,8 @@ const TiviDropDownOne = ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6An
 
     return (
         <div className="page-container">
-        <h2>Values Inventory (part 1)</h2>
-        <p>Here we briefly describe some people. Please read each description and think about how much each person is or is not like you. Using a 6-point scale from “not like me at all” to “very much like me,” choose how similar the person is to you. </p>
+        <h2 className="title">Values Inventory (part 1)</h2>
+        <p className="explanation montserrat">Here we briefly describe some people. Please read each description and think about how much each person is or is not like you. Using a 6-point scale from “not like me at all” to “very much like me,” choose how similar the person is to you. </p>
         <div className="grid" type="form">
 
         {tiviOneArray.map(({ text, id, onChange, value }) => (
