@@ -13,7 +13,7 @@ const Intro = () => {
         <br />
         <p>Please make sure read the instructions carefully, and take your time reflecting over the questions, to receive the most accurate measurements.</p>
         <br />
-        <p><span className="bold underline">NOTE:</span> The explanations for your scores can be accessed via the button underneath the chart displaying your results.</p>
+        <p><span className="bold underline">NOTE:</span> The explanations for your scores can be accessed via the button underneath the chart with your results.</p>
         <br />
         <p className="bold">Enjoy!</p>
         </span>
