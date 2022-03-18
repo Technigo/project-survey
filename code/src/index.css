@@ -10,6 +10,8 @@
 }
 
 body {
+  height: 100vh;
+  overflow: hidden;
   box-sizing: border-box;
   background-color: var(--main);
   color: white;
