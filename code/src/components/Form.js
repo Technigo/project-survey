@@ -9,9 +9,7 @@ import QuestionFive from "./QuestionFive";
 import OverView from "./Overview";
 import Confirmation from "./Confirmation";
 import NextBtn from "./NextBtn";
-import PrevBtn from "./PrevBtn";
 import ProgressBar from "./ProgressBar";
-import IntroPage from "./IntroPage";
 
 
 // This array is for QuestionTwo
@@ -30,17 +28,24 @@ const Form = () => {
     const [submitted, setSubmitted] = useState(false);
     
     document.addEventListener('keydown', e => {
-        if (e.keyCode == '39' && questionNum <= 6) {
+        if (e.keyCode == '39' && questionNum < 6) {
             nextQuestion();
         } else if (e.keyCode == '37' && questionNum > 1) {
             prevQuestion();
+        } else if (e.keyCode == '13' && questionNum === 6) {
+            submit(e);
         }
     })
 
+    const restart = ()=> {
+        setSubmitted(false);
+        setQuestionNum(0);
+    } 
+
+
     const nextQuestion = () => {
-        document.querySelector('.form-container').style.transform ='translateY(0%)';
         document.querySelector('#form').style.display = 'flex';
-        document.querySelector('.progress-bar').style.opacity ='1';
+        document.querySelector('.progress-bar').style.display ='flex';
         setQuestionNum(questionNum + 1);
     };
     
@@ -63,33 +68,20 @@ const Form = () => {
 
     return <>
         {!submitted ? (
-        <div className='container'>
-         {questionNum === 0 && (
-             <>
-             <Heading nextQuestion = {nextQuestion}/>
-             </>
-        ) 
-        }
+        <>
+        {questionNum === 0 &&  <Heading nextQuestion = {nextQuestion}/>}
 
-        <ProgressBar questionNum = {questionNum} />
         <form id='form' onSubmit={submit}>
         <div className="form-container">
         {questionNum === 1 && (
-            <>
-            <QuestionOne 
+           <QuestionOne 
             questionNum = {questionNum} 
             date = {date}
             getDate = {getDate}
             />
-            <div className="btn-container">
-            <NextBtn nextQuestion={nextQuestion} />
-
-            </div>
-            </>
         )} 
 
-        {questionNum === 2 && (
-            <>          
+        {questionNum === 2 && (       
             <QuestionTwo 
             questionNum = {questionNum}
             rating = {rating}
@@ -98,47 +90,35 @@ const Form = () => {
             satisfaction = {satisfaction}
             setSatisfaction = {setSatisfaction}
             />
-            <div className="btn-container">
-            <PrevBtn prevQuestion={prevQuestion} />
-            <NextBtn nextQuestion={nextQuestion} />
-            </div>
-            </>
+            
         )} 
 
         {questionNum === 3 && (
-            <>
             <QuestionThree 
             questionNum = {questionNum} 
             frequency = {frequency}
             getBookingFrequency = {getBookingFrequency}
             />
-            <PrevBtn prevQuestion={prevQuestion} />
-            <NextBtn nextQuestion={nextQuestion} />
-            </>
+ 
         )}
 
         {questionNum === 4 && (
-            <>   
             <QuestionFour 
             questionNum = {questionNum} 
             loyalty={loyalty} 
             getLoyaltyRating={getLoyaltyRating}
             />
-            <PrevBtn prevQuestion={prevQuestion} />
-            <NextBtn nextQuestion={nextQuestion} />
-            </>
+    
         )}
 
         {questionNum === 5 && (
-            <>
+
             <QuestionFive 
             questionNum = {questionNum} 
             feedback = {feedback}
             getFeedback = {getFeedback}
             />
-            <PrevBtn prevQuestion={prevQuestion} />
-            <NextBtn nextQuestion={nextQuestion} />
-            </>
+
         )} 
 
         {questionNum === 6 && (
@@ -149,15 +129,27 @@ const Form = () => {
             frequency = {frequency}
             loyalty = {loyalty}
             feedback = {feedback} 
-            setSubmitted = {setSubmitted}
+            submit = {submit}
             />
         )}
-        </div>
 
+
+        </div>
+     
         </form>
-        </div>) 
         
-        : <Confirmation /> }
+        <NextBtn 
+            nextQuestion={nextQuestion} 
+            prevQuestion={prevQuestion} 
+            questionNum = {questionNum} 
+        />
+
+        <ProgressBar questionNum = {questionNum} />
+
+    
+        </>) 
+        
+        : <Confirmation restart={restart} questionNum={questionNum}/> }
 
     </>
 

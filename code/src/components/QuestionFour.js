@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 
-const options = ['Definitely 😊', 'Might or might not', 'Definitely not']
+const options = ['Definitely 😊', 'Might or might not 🤔', 'Definitely not 😔']
 
 const QuestionFour = ({ questionNum, loyalty, getLoyaltyRating }) => {
-
+ 
     return <div className='question'>
         <p className="question-four-title"> {questionNum}. How likely are you to use our service again?</p>
 
