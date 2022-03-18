@@ -122,29 +122,6 @@ const Summary = (props) => {
     <>
       <div className="form">
         <section className="text-summary">
-          {/* <h1>Summary</h1>
-          <p>User name: {userName}</p>
-          <p>
-            Gender: {genderToUse} - text: {characterTitle} {characterName}{" "}
-            Theone. {pronounSubjectCapitalized}{" "}
-            {genderToUse === "non-binary" ? "are" : "is"} {pronounReflexive} and
-            who {pronounSubject} {genderToUse === "non-binary" ? "are" : "is"},
-            I know {pronounDirect} and {pronounPossessive} name!
-          </p>
-          <p>Weather: {weatherToUse}</p>
-          <p>Vehicle: {vehicleToUse}</p>
-          <p>Speed: {speedWordToUse()}</p>
-          <p>Snack: {snackToUse}</p>
-          <p>Not friend name: {notFriendNameToUse}</p>
-          <p>Beverage: {beverageToUse}</p>
-          <p>Friend name: {friendNameToUse}</p>
-          <p>Like sports: {likeSports ? `yes ${friendNameToUse}` : `no ${friendNameToUse}`}</p>
-          <p>Sport: {sportToUse}</p>
-          <p>Brand of mobile phone: {phoneToUse}</p>
-          <p>
-            I really {!likeSports ? "don't " : ""}like sports. I eat my{" "}
-            {firstIngredientToUse} and {secondIngredientToUse} sandwich.
-          </p> */}
           <div>
             <h1>Just like that</h1>
 
@@ -192,10 +169,11 @@ const Summary = (props) => {
               Troubled, <mark>{characterName}</mark> Theone <mark>{genderToUse === "non-binary" ? "throw" : "throws"}</mark> <mark>{pronounPossessive}</mark> still burning cigarette from the balcony.
               </p>
               <p>
-              Just like that.
+              Just like that...
               </p>
               <hr></hr>
-              <p className="footer">Website and story created by<br></br><a href="https://nadialefebvre.dev/">Nadia Lefebvre</a></p>
+              <p className="footer">Website and story created by<br></br><a href="https://nadialefebvre.dev/">Nadia Lefebvre</a><br></br><span className="credit">Amazing typewriter made by <a href="https://dribbble.com/shots/16338157-CSS-Typewriter">Alvaro Montoro</a></span>
+              </p>
             </div>
           </div>
         </section>
