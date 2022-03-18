@@ -1,12 +1,28 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 const Checkbox = ({nextPage, backPage}) => {
 
-    const [checked, setChecked] = React.useState(false)
+    // const [checked, setChecked] = React.useState(false)
 
-    const handleChange = () => {
-        setChecked(!checked)
+    const [checked, setChecked] = useState([])
+
+    // const handleChange = () => {
+    //     setChecked(!checked)
+    // }
+
+
+    const onCheckboxChange = (interest) => {
+        if (checked.includes(interest)) {
+        const filteredCheckbox = checked.filter(item => {
+            return item !== interest
+        })
+        setChecked(filteredCheckbox)
+        } else {
+            setChecked([...checked, interest])
+        }
     }
+
+
 
     return (
 
@@ -15,31 +31,34 @@ const Checkbox = ({nextPage, backPage}) => {
 
         <ul>
             <li>
-                <label>
+                <label htmlFor="pie" key="pie">
                     <input 
+                    id="pie"
                     type="checkbox"
-                    checked={checked}
-                    onChange={handleChange} />
-                    Lemons
+                    checked={checked.includes('pie')}
+                    onChange={() => onCheckboxChange('pie')}/>
+                    Key Lime Pie
                 </label>
             </li>
 
             <li>
-                <label>
+                <label htmlFor="stockholm">
                     <input 
+                    id="stockholm"
                     type="checkbox"
-                    checked={checked}
-                    onChange={handleChange} />
-                    Bananas
+                    checked={checked.includes('stockholm')}
+                    onChange={() => onCheckboxChange('stockholm')} />
+                    Best places in Stockholm
                 </label>
             </li>
 
             <li>
-                <label>
+                <label htmlFor="apples">
                     <input 
+                    id="apples"
                     type="checkbox"
-                    checked={checked}
-                    onChange={handleChange} />
+                    checked={checked.includes('apples')}
+                    onChange={() => onCheckboxChange('apples')}  />
                     Apples
                 </label>
             </li>
