@@ -88,6 +88,11 @@ ul {
   text-transform: capitalize;
 }
 
+.descriptive-text {
+  color: grey;
+  font-size: 17px;
+}
+
 /* MEDIA QUERY FOR TABLET */
 @media (min-width: 801px) {
   .form-wrapper {

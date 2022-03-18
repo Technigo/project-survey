@@ -28,6 +28,7 @@ const Checkbox = ({nextPage, backPage}) => {
 
         <div>
             <p>What would you like to read more about?</p>
+            <p className="descriptive-text">Pick as many as you want <span role="img" aria-label="girl waving emoji">🙋‍♀️</span></p>
 
         <ul>
             <li>
