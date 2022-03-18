@@ -1,7 +1,7 @@
 html,
 body,
 #root {
-  height: auto;
+  height: 100%;
   max-width: auto;
   margin: 0;
   padding: 0;
@@ -16,10 +16,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: url(./img/body-img.jpg);
   background-size: cover;
-  background-position: top;
+  background-position: bottom;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  color:white;
+  color: white;
   font-family: 'Domine', serif;
 }
 
@@ -35,6 +35,7 @@ code {
   grid-gap: 5em;
   grid-template-rows: auto 150px;
   justify-items: center;
+  background: rgba(0, 0, 0, 0.3);
 }
 
 .form {
@@ -52,7 +53,7 @@ section {
 }
 
 label {
-  font-size: 1em;
+  font-size: 1.3em;
   display:contents;
   width: 100%;
   margin-bottom: 0.5em;
@@ -63,20 +64,33 @@ label {
 input[type='text'],
 select {
   padding: 0.6em;
-  font-size: 16px;
+  font-size: 20px;
   margin-top: 1em;
   border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 .button {
   display: inline-block;
   font-family: 'Domine', serif;
-  padding: 0.5em 3em;
-  margin: 1em 0;
-  text-align: center;
-  justify-self: center;
-  border-radius: 8px;
-  font-size: 0.8em;
+  font-size: 20px;
+	color:black;
+	background-color: rgba(255, 255, 255, 0.6);
+	border:1px solid black;
+	border-radius: 8px;
+	
+	padding: .5em 1.2em;
+	margin: 20px 5px 5px 5px;
+			
+	background-size: 200% 100%;	
+	background-image: linear-gradient(to right, transparent 50%, rgba(0, 0, 0, 1) 50%);
+	transition: background-position .3s cubic-bezier(0.19, 1, 0.22, 1) .1s, color .5s ease 0s, background-color .5s ease;
+}
+
+button:hover{
+	color:rgba(255, 255, 255, 1);
+	background-color:black;
+	background-position: -100% 100%;
 }
 
 .radio {
@@ -114,7 +128,7 @@ select {
 }
 
 label {
-  font-size: 25px;
+  font-size: 30px;
 }
 
 p {
@@ -139,7 +153,7 @@ select {
 }
 
 label {
-  font-size: 30px;
+  font-size: 35px;
 }
 
 p {
