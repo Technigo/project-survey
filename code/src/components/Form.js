@@ -37,7 +37,6 @@ return (
   
 <form className="form-wrapper">
 
-
     { /* INTRO PAGE */ }
     {page === 0 && <Intro nextPage={nextPage} />}
     
@@ -49,9 +48,7 @@ return (
     onNameInputChange={onNameInputChange}
     surnameInput={surnameInput}
     onSurnameInputChange={onSurnameInputChange}
-    nextPage={nextPage}
-    />
-    )}
+    nextPage={nextPage}/>)}
 
     { /* SECOND PAGE */ }
     {page === 2 && (
@@ -60,9 +57,7 @@ return (
         onEmailInputChange={onEmailInputChange}
         nextPage={nextPage}
         backPage={backPage}
-        userName={nameInput}
-         />
-    )}
+        nameInput={nameInput}/>)}
 
 
     { /* THIRD PAGE */ }
@@ -71,9 +66,7 @@ return (
         checked={checked}
         onChange={handleChange}
         nextPage={nextPage}
-        backPage={backPage}
-        />
-    )}
+        backPage={backPage}/>)}
 
 </form>
 

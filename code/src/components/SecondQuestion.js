@@ -1,4 +1,5 @@
 import React from 'react'
+// import { nameInput } from './FirstQuestion'
 
 const SecondQuestion = ({
     nameInput, 
@@ -12,7 +13,7 @@ const SecondQuestion = ({
     return (
 
         <>
-        <p>Alright {nameInput},</p>
+        <p>Alright <span className="username">{nameInput}</span>,</p>
         <label htmlFor="email">What's your email address?</label>
 
         <input
@@ -27,7 +28,8 @@ const SecondQuestion = ({
         <button className="btn" onClick={nextPage}>Next!
         </button>
 
-        <button className="btn" onClick={backPage}><span role="img" aria-label="back arrow emoji">↩️</span> Go back
+        <button className="btn" onClick={backPage}>
+            <span role="img" aria-label="back arrow emoji">↩️</span> Go back
         </button>
         </div>
         </>

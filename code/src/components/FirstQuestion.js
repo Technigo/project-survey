@@ -33,7 +33,8 @@ const FirstQuestion = ({
                     />      
 
                 <div>
-                <button className="btn" type="submit" onClick={nextPage}>Next question!</button>
+                <button className="btn" type="submit" onClick={nextPage}>
+                    Next question!</button>
                 </div>
             </div>
 

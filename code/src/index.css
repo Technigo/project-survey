@@ -82,6 +82,10 @@ ul {
   padding-inline-start: 0;
 }
 
+.username {
+  text-transform: capitalize;
+}
+
 /* MEDIA QUERY FOR TABLET */
 /* @media (min-width: 801px) {}
   /* CONTENT HERE */
