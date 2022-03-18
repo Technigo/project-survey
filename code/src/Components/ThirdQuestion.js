@@ -7,8 +7,11 @@ const ThirdQuestion = ({
 
 }) => {
     return (
+        <div className="main">
+        <div className="container">
+        <h2>Var tycker du att vi ska äta?</h2>
         <form>
-            <label>
+            <label className="label2">
                 Hemma hos mig
                 <input className="radiobutton" 
                 type="radio" 
@@ -19,7 +22,7 @@ const ThirdQuestion = ({
             />
              </label>
 
-              <label>
+              <label className="label2">
                 Hemma hos någon annan
                 <input 
                 type="radio" 
@@ -28,7 +31,7 @@ const ThirdQuestion = ({
                 checked={where === 'Hemma hos någon annan'}
             />
                </label>
-               <label>
+               <label className="label2">
                På restaurang
                 <input 
                 type="radio" 
@@ -39,9 +42,9 @@ const ThirdQuestion = ({
               </label>
             <button onClick= {onStepChange}>Se summering</button>
         </form>
+        </div>
+        </div>
     );
 };
     
 export default ThirdQuestion;
-
-// onChange={() => onRandomChange('no')} 

@@ -9,7 +9,6 @@ import Overview from './Overview';
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
   const [step, setStep] = useState(1)
- // const [showResult, setShowResult] = useState(false);
   const [where, setWhere] = useState('')
   const [days, setDayChange] = useState('')
 
@@ -29,10 +28,9 @@ const Form = () => {
       setStep(step + 1);
   };
 
-// if (step === 1) {
   return (    
     <div>
-        {step === 1 && (
+     {step === 1 && (
         <FirstQuestion 
         nameInput={nameInput}
         onNameInputChange={onNameInputChange}
@@ -63,8 +61,7 @@ const Form = () => {
         />
     )}
     </div> 
-  );
+     );
 };
-// };
 
 export default Form;
