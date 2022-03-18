@@ -22,7 +22,7 @@ body {
 
 main {
   width: 375px;
-  height: 85vh;
+  height: 100vh;
   /* max-height: 100vh; */
   overflow: hidden;
   /* height: 85vh; */
@@ -32,7 +32,7 @@ main {
   align-items: center;
 }
 
-footer {
+/* footer {
   height: 15vh;
   margin-top: auto;
   display: flex;
@@ -45,7 +45,7 @@ footer {
 }
 a:hover {
   text-decoration: underline;
-}
+} */
 
 @media screen and (min-width: 768px) {
   main {
