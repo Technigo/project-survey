@@ -1,15 +1,13 @@
 import React from 'react';
 
-const whyGroup = ['why1', 'why2', 'why3'];
+const whyGroup = ['why1', 'why2', 'why3']
 
 const QuestionWhy = ({ why, onWhyChange, onNextChange }) => {
   return (
-    <section className='container'>
       <form>
-        <h2 className='page-title'>Why do you want to move there?</h2>
+        <h2>Why do you want to move there?</h2>
         {whyGroup.map((group) => (
-          <div className='align-radio' key={group}>
-            <label>
+            <label key={group}>
               <input
                 id='why'
                 type='radio'
@@ -19,11 +17,9 @@ const QuestionWhy = ({ why, onWhyChange, onNextChange }) => {
               />
               {group}
             </label>
-          </div>
         ))}
         <button onClick={onNextChange}>Next question</button>
       </form>
-    </section>
   );
 };
 

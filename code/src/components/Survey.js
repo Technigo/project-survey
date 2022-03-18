@@ -24,7 +24,7 @@ const Survey = () => {
       setLocation(location)
     }
 
-    const handleWhyChange = () => {
+    const handleWhyChange = (why) => {
       setWhy(why)
     }
 
@@ -39,7 +39,8 @@ const Survey = () => {
         <section className='Survey'>
           
           {next === 1 && (
-              <QuestionName 
+              <QuestionName
+                  nameInput={nameInput}
                   onChange={handleNameInputChange}
                   onNameInputChange={handleNameInputChange}
                   onNextChange={handleNextChange}
@@ -47,7 +48,8 @@ const Survey = () => {
           )}
 
           {next === 2 && (
-              <QuestionOptions 
+              <QuestionOptions
+                  location={location}
                   onChange={handleLocationChange}
                   onLocationChange={handleLocationChange}
                   onNextChange={handleNextChange}
@@ -56,6 +58,7 @@ const Survey = () => {
 
           {next === 3 && (
               <QuestionWhy
+                  why={why}
                   onChange={handleWhyChange}
                   onWhyChange={handleWhyChange}
                   onNextChange={handleNextChange}
@@ -81,10 +84,3 @@ export default Survey
 
 
 
-
-/* <div>
-<QuestionSurprice 
-wantsSurprice={wantsSurprice}
-onChange={onSurpriceChange}
-/>
-</div>  */

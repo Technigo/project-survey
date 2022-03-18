@@ -10,7 +10,7 @@ export const App = () => {
       <>
         <Header />
         <div className='survey-box'>
-        <Survey />
+          <Survey />
         </div>
         </>
     </div>
