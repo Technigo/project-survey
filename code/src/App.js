@@ -43,164 +43,166 @@ export const App = () => {
   return (
     <>
       {/* Welcome section */}
-      {section === "welcome" && (
-        <div aria-label="Welcome" className="welcome">
-          <Header />
-          <button
-            className="start-btn"
-            onClick={() => {
-              setSection("beyonce-input");
-            }}
-          >
-            Start
-          </button>
-        </div>
-      )}
-
-      {/* Beyonce Section */}
-      {section === "beyonce-input" && (
-        <section aria-label="Beyonce input" className="beyonce-input">
-          <BeyonceInput
-            name={adjective}
-            setBeyonce={setBeyonce}
-            id="adjective"
-            onBeyonceChange={onBeyonceChange}
-          />
-          <div className="button-wrapper">
+      <div className="card">
+        {section === "welcome" && (
+          <div aria-label="Welcome" className="welcome">
+            <Header />
             <button
-              className="back-button"
-              type="button"
-              value="welcome"
-              onClick={(event) => {
-                setSection(event.target.value);
+              className="start-btn"
+              onClick={() => {
+                setSection("beyonce-input");
               }}
             >
-              Back
-            </button>
-            <button
-              className="next-button"
-              type="submit"
-              value="identify"
-              onClick={(event) => {
-                setSection(event.target.value);
-              }}
-            >
-              Next
+              Start
             </button>
           </div>
-        </section>
-      )}
+        )}
 
-      {/* Identify section */}
-      {section === "identify" && (
-        <section aria-label="Identify dropdown" className="identify">
-          <IdDropdown
-            identify={identify}
-            label={adjective}
-            onIdentifyChange={onIdentifyChange}
-          />
+        {/* Beyonce Section */}
+        {section === "beyonce-input" && (
+          <section aria-label="Beyonce input" className="beyonce-input">
+            <BeyonceInput
+              name={adjective}
+              setBeyonce={setBeyonce}
+              id="adjective"
+              onBeyonceChange={onBeyonceChange}
+            />
+            <div className="button-wrapper">
+              <button
+                className="back-button"
+                type="button"
+                value="welcome"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+              >
+                Back
+              </button>
+              <button
+                className="next-button"
+                type="submit"
+                value="identify"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+              >
+                Next
+              </button>
+            </div>
+          </section>
+        )}
 
-          <div className="button-wrapper">
-            <button
-              type="button"
-              value="beyonce-input"
-              onClick={(event) => {
-                setSection(event.target.value);
-              }}
-              className="back-button"
-            >
-              Back
-            </button>
-            <button
-              type="submit"
-              value="coffee"
-              onClick={(event) => {
-                setSection(event.target.value);
-              }}
-              className="next-button"
-            >
-              Next
-            </button>
-          </div>
-        </section>
-      )}
+        {/* Identify section */}
+        {section === "identify" && (
+          <section aria-label="Identify dropdown" className="identify">
+            <IdDropdown
+              identify={identify}
+              label={adjective}
+              onIdentifyChange={onIdentifyChange}
+            />
 
-      {/* Coffee section */}
-      {section === "coffee" && (
-        <section aria-label="Coffee select" className="radio-coffee">
-          <RadioButton
-            coffeeGroup={coffeeGroup}
-            onCoffeeChange={onCoffeeChange}
-          />
+            <div className="button-wrapper">
+              <button
+                type="button"
+                value="beyonce-input"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+                className="back-button"
+              >
+                Back
+              </button>
+              <button
+                type="submit"
+                value="coffee"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+                className="next-button"
+              >
+                Next
+              </button>
+            </div>
+          </section>
+        )}
 
-          <div className="button-wrapper">
-            <button
-              type="button"
-              value="identify"
-              onClick={(event) => {
-                setSection(event.target.value);
-              }}
-              className="back-button"
-            >
-              Back
-            </button>
-            <button
-              type="submit"
-              value="hangout"
-              onClick={(event) => {
-                setSection(event.target.value);
-              }}
-              className="next-button"
-            >
-              Next
-            </button>
-          </div>
-        </section>
-      )}
+        {/* Coffee section */}
+        {section === "coffee" && (
+          <section aria-label="Coffee select" className="radio-coffee">
+            <RadioButton
+              coffeeGroup={coffeeGroup}
+              onCoffeeChange={onCoffeeChange}
+            />
 
-      {/* Hangout section */}
-      {section === "hangout" && (
-        <section aria-label="Hangout dropdown" className="hangout">
-          <HangoutDropdown
-            hangout={hangout}
-            onHangoutChange={onHangoutChange}
-          />
+            <div className="button-wrapper">
+              <button
+                type="button"
+                value="identify"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+                className="back-button"
+              >
+                Back
+              </button>
+              <button
+                type="submit"
+                value="hangout"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+                className="next-button"
+              >
+                Next
+              </button>
+            </div>
+          </section>
+        )}
 
-          <div className="button-wrapper">
-            <button
-              type="button"
-              value="coffee"
-              onClick={(event) => {
-                setSection(event.target.value);
-              }}
-              className="back-button"
-            >
-              Back
-            </button>
-            <button
-              className="submit-button"
-              value="summary"
-              onClick={(event) => {
-                setSection(event.target.value);
-              }}
-            >
-              Submit
-            </button>
-          </div>
-        </section>
-      )}
+        {/* Hangout section */}
+        {section === "hangout" && (
+          <section aria-label="Hangout dropdown" className="hangout">
+            <HangoutDropdown
+              hangout={hangout}
+              onHangoutChange={onHangoutChange}
+            />
 
-      {/* Summury */}
-      {section === "summary" && (
-        <section aria-label="Summary">
-          <Summary
-            adjective={adjective}
-            identify={identify}
-            coffeeGroup={coffeeGroup}
-            hangout={hangout}
-          />
-        </section>
-      )}
+            <div className="button-wrapper">
+              <button
+                type="button"
+                value="coffee"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+                className="back-button"
+              >
+                Back
+              </button>
+              <button
+                className="submit-button"
+                value="summary"
+                onClick={(event) => {
+                  setSection(event.target.value);
+                }}
+              >
+                Submit
+              </button>
+            </div>
+          </section>
+        )}
+
+        {/* Summury */}
+        {section === "summary" && (
+          <section aria-label="Summary">
+            <Summary
+              adjective={adjective}
+              identify={identify}
+              coffeeGroup={coffeeGroup}
+              hangout={hangout}
+            />
+          </section>
+        )}
+      </div>
     </>
   );
 };

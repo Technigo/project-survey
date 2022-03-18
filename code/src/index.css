@@ -2,9 +2,11 @@
   margin: 0;
   padding: 0;
   font-family: "Helvetica Neue";
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  overflow: hidden;
+  text-rendering: optimizeLegibility;
 }
 
 body {
@@ -12,11 +14,20 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
+  background-attachment: fixed;
   max-height: 100vh;
   display: flex;
   justify-content: space-around;
   text-align: center;
-  padding: 650px 10px;
+  padding: 600px 10px;
+}
+
+.card {
+  background-color: #ffffffd0;
+  width: auto;
+  padding: 30px;
+  margin: auto;
+  border-radius: 7px;
 }
 
 /* HEADERS, PARAGRAPHS */
@@ -27,7 +38,7 @@ body {
 .radio-coffee,
 .hangout,
 .summary {
-  color: white;
+  color: rgb(242, 113, 0);
 }
 
 .header-text,
@@ -81,7 +92,7 @@ body {
 }
 
 .back-button {
-  background-color: #ffff;
+  background-color: #efefef;
 }
 
 .next-button,
@@ -124,7 +135,7 @@ body {
 .radio-container {
   display: inline-block;
   position: relative;
-  padding-left: 50px;
+  padding-left: 40px;
   cursor: pointer;
   font-size: 22px;
   user-select: none;
@@ -151,7 +162,7 @@ body {
 
 /* On mouse-over, add a grey background color */
 .radio-container:hover input ~ .checkmark {
-  background-color: #ccc;
+  background-color: rgb(123, 123, 123);
 }
 
 /* Checked radio button color change */
@@ -159,15 +170,15 @@ body {
   background-color: #c46e46;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 768px) {
   .header-text,
   .beyonce-header,
   .identify-text,
   .radio-heading,
   .hangout-text,
   .summary-heading {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 40px;
+    line-height: 40px;
   }
 
   .header-paragraph,
@@ -192,8 +203,8 @@ body {
   }
 
   .radio-container {
-    padding-left: 0;
     font-size: 30px;
+    padding-left: 50px;
   }
 
   /* Custom radio button */

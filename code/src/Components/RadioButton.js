@@ -20,7 +20,7 @@ const RadioBotton = ({ onCoffeeChange }) => {
               value={group}
               onChange={onCoffeeChange}
             />
-            <span tabIndex="0" class="checkmark"></span>
+            <span tabIndex="0" className="checkmark"></span>
             {group}
           </label>
         ))}

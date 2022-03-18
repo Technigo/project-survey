@@ -8,9 +8,16 @@ const Summary = ({ adjective, identify, coffeeGroup, hangout }) => {
           Oooooh how exciting!
         </h1>
         <p tabIndex="0" className="summary-paragraph">
-          You are a {adjective} {identify} who likes {coffeeGroup} {hangout}.
-          Yes girl, what a great match! We have the perfect person for you, stay
-          tuned and we will conect you.
+          You are a{" "}
+          <b>
+            {adjective} {identify}
+          </b>{" "}
+          who likes{" "}
+          <b>
+            {coffeeGroup} {hangout}
+          </b>
+          . Yes girl, what a great match! We have the perfect person for you,
+          stay tuned and we will conect you.
         </p>
       </div>
       <button
