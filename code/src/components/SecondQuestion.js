@@ -10,7 +10,7 @@ const SecondQuestion = ({
 return (
     <>
     <div>
-    <label htmlFor="numberOne">Type first</label>
+    <label htmlFor="numberOne">imaginary monsters</label>
     <input
      id="numberOne"
         type="number"
@@ -19,7 +19,7 @@ return (
         />
         </div>
         <div>
-          <label htmlFor="numberTwo">Type second</label>
+          <label htmlFor="numberTwo">real monsters</label>
     <input
      id="numberTwo"
         type="number"
