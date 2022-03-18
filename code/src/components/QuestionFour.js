@@ -26,7 +26,7 @@ const QuestionFour = ({radioInput2, handleRadioInputChange2, onStepChange, onSte
         </form>
         <div className="buttons">
                 <button type="submit" onClick={onStepBackChange} href="#two" className="btn">Go back</button>
-                <button type="submit" onClick={onStepChange} href="#two" className="btn">Next</button>
+                <button type="submit" onClick={onStepChange} href="#two" className="btn">Submit</button>
             </div>
 
         </section>
