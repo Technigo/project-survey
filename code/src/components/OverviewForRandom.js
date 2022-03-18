@@ -5,6 +5,9 @@ const OverviewForRandom = () => {
 	return (
 		<section className='overview' tabindex='0'>
 			<GetYourProgram />
+		 <footer>
+            <h3>&copy;Anki Palviainen</h3>
+         </footer>
 		</section>                         
 	)                   
 }

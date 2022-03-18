@@ -14,6 +14,10 @@ const Overview = ({nameInput, time, upperBody, lowerBody, cardioTypes}) => {
 			{cardioTypes === 'EMOM' && <p>EMOM is a workout where you do a specific exercise every time a new minute starts. If you finish before the next minute begins, you can rest until the next minute starts. You should do 10 reps for upper body in first minute then 10 reps for lower body in next minute and go on until your time is up.</p>}
 
 			{cardioTypes === 'Straight Reps' && <p>Do 5x5 for each and take as much weight as possible. If you chose burpees, you can do 5x10.</p>}
+
+			<footer>
+             <h3>&copy;Anki Palviainen</h3>
+            </footer>
 		</section>                         
 	)                   
 }
