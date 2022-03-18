@@ -1,23 +1,25 @@
 import React, { useState } from 'react'
+
 import Age from 'components/QuestionThree'
 import Name from 'components/Name'
 import Mediaunits from 'components/QuestionOne'
 import Mediahours from 'components/QuestionTwo'
+import Intro from 'components/Intro'
+import Summary from 'components/Summary'
 
 const SurveyForm = () => {
   const [userName, setUserName] = useState("")
   const [age, setUserAge] = useState("")  
   const [mediaselect, setMediaSelect] = useState("")
   const [hourselect, setHourSelect] = useState("")
-  
+  const [next, setNext] = useState(1)
   
   const onInputChange = (event) => {
       setUserName(event.target.value)
-    } 
+  } 
     
-    
-  const onAgeChange =(age) => {
-    setUserAge(age)
+  const onAgeChange =(event) => {
+    setUserAge(event.target.value)
   }
 
   const onMediaSelect = (event) =>{
@@ -27,15 +29,50 @@ const SurveyForm = () => {
   const onHourSelect =(event) =>{
     setHourSelect(event.target.value)
   }
+
+  const handleNextChange = () => {
+    setNext(next + 1)
+  }
+  
         
         return (
          
             
             <section>
-            <Name userName={userName} onInputChange={onInputChange}/>
+              {next === 1 && 
+              <Intro  onNextChange={handleNextChange} />}
+
+              {next === 2 && 
+              <Name userName={userName} 
+                    onInputChange={onInputChange} 
+                    onNextChange={handleNextChange} />}
+
+              {next === 3 && 
+              <Mediaunits 
+                          mediaselect={mediaselect} 
+                          onMediaSelect={onMediaSelect} 
+                          onNextChange={handleNextChange} />}
+
+              {next === 4 && 
+              <Mediahours hourselect={hourselect} 
+                          onHourSelect={onHourSelect}  
+                          onNextChange={handleNextChange} />}
+
+              {next === 5 && 
+              <Age  age={age} 
+                    onAgeChange={onAgeChange} 
+                    onNextChange={handleNextChange} />}
+
+              {next === 6 && 
+              <Summary userName={userName} 
+                       mediaselect={mediaselect} 
+                       hourselect={hourselect}
+                       age={age}  />}
+              
+            {/* <Name userName={userName} onInputChange={onInputChange} />
             <Mediaunits mediaselect={mediaselect} onMediaSelect={onMediaSelect} />
             <Mediahours hourselect={hourselect} onHourselect={onHourSelect} />
-            <Age age={age} onAgeChange={onAgeChange}/>
+            <Age age={age} onAgeChange={onAgeChange}/> */}
             </section>
             
             

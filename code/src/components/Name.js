@@ -5,9 +5,9 @@ import React from 'react'
 
 
 
- const Name = ({userName, onInputChange}) => {
+ const Name = ({userName, onInputChange, onNextChange}) => {
     return (
-        <form>
+        <section>
         <h1>Welcome to my media survey</h1>
   <label htmlFor="name">Please type your name</label>
   <input
@@ -16,7 +16,8 @@ import React from 'react'
     value={userName}
     onChange={onInputChange}
   />
-  </form>
+  <button disabled={userName === ''} onClick={onNextChange}>Next question</button>
+  </section>
  
     )
     }
