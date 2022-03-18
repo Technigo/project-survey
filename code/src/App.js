@@ -33,7 +33,7 @@ export const App = () => {
 	};
 
 	const [state, setState] = useState(initialState);
-	const [error, setError] = useState(false);
+	// const [error, setError] = useState(false);
 	const [counter, setCounter] = useState(0);
 	const [pronoun, setPronoun] = useState();
 
