@@ -1,7 +1,7 @@
 html,
 body,
 #root {
-  height: 100%;
+  height: auto;
   max-width: auto;
   margin: 0;
   padding: 0;
@@ -16,7 +16,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background: url(./img/body-img.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   color: white;
@@ -35,7 +35,6 @@ code {
   grid-gap: 5em;
   grid-template-rows: auto 150px;
   justify-items: center;
-  background: rgba(0, 0, 0, 0.3);
 }
 
 .form {
