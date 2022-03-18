@@ -66,6 +66,8 @@ if (step === 1) {
   experience={experience}
   motherhood={motherhood}
   age={age}
+  step={step}
+  setStep={setStep}
   />
   )
 }

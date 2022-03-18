@@ -87,6 +87,8 @@ cursor: pointer;
   right: 0;
 }
 
+
+
 /* ----- THE SUMMARY ----- */
 
 .summary-container {
@@ -141,6 +143,11 @@ text-align: center;
   justify-content: center;
   width: 50%;
 }  
+
+.form-container h3 {
+font-size: 30px;
+
+}
 
 .form {
   border: rgb(255, 4, 171) 3px solid;
