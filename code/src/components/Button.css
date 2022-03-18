@@ -3,14 +3,6 @@ button {
   width: 140px;
   margin: 10px auto;
   padding: 7px;
-  color: var(--main);
-  background-color: white;
-  border: 3px solid white;
-  border-radius: 5px;
-}
-
-button:enabled {
-  transition: all 0.3s ease-in-out;
 }
 
 button:disabled {
@@ -18,10 +10,18 @@ button:disabled {
   color: white;
   background-color: var(--main);
   border: 3px solid white;
+  border-radius: 5px;
+}
+
+button:enabled {
+  opacity: 100%;
+  color: var(--main);
+  background-color: white;
+  border: 3px solid white;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 1200px) {
-
   button {
     color: white;
     background-color: var(--main);
