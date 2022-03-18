@@ -9,7 +9,7 @@ const AgeRadioBtn = (props) => {
       <form onSubmit={onStepChange}>
       <h1>
         {" "}
-        choose your agegroupe and get the oportunity to meet other gardening
+        Choose your agegroupe and get the oportunity to meet other gardening
         entusiasts in your age
       </h1>
         Answer:

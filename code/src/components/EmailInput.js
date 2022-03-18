@@ -7,7 +7,7 @@ const EmailInput = (props) => {
     <div>
       <form onSubmit={onStepChange}>
         <label htmlFor="emailadresss">
-          email adress here
+          Your email adress?
           <input
             id="emailadress"
             type="text"

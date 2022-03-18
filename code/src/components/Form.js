@@ -4,16 +4,15 @@ import React, { useState } from "react";
 import NameInput from "components/NameInput";
 import EmailInput from "components/EmailInput";
 import LocationDropDown from "components/LocationDropDown";
-// import QuestionFour from "components/AgeRadioBtn";
 import Summary from "./Summary";
 import AgeRadioBtn from "components/AgeRadioBtn";
+import IntroPage from "./IntroPage";
 
 const Form = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [locations, setLocations] = useState("");
   const [ageGroup, setAgeGroup] = useState();
-  const [isSummaryDisplayed, setIsSummaryDisplayed] = useState(false);
   const [step, setStep] = useState(1);
 
   const handleNameInputChange = (event) => {
@@ -38,35 +37,36 @@ const Form = () => {
     <section>
       <div className="content-box">
         <div>
-          {step === 1 && (
+          {step === 1 && <IntroPage onStepChange={onStepChange} />}
+          {step === 2 && (
             <NameInput
               name={name}
-              onInputChange={handleNameInputChange}
+              onNameInputChange={handleNameInputChange}
               onStepChange={onStepChange}
             />
           )}
-          {step === 2 && (
+          {step === 3 && (
             <EmailInput
               email={email}
               onSecondInputChange={handleSecondInputChange}
               onStepChange={onStepChange}
             />
           )}
-          {step === 3 && (
+          {step === 4 && (
             <LocationDropDown
               location={locations}
               onThirdInputChange={handleThirdInputChange}
               onStepChange={onStepChange}
             />
           )}
-          {step === 4 && (
+          {step === 5 && (
             <AgeRadioBtn
               group={ageGroup}
               handleFourthInputChange={handleFourthInputChange}
               onStepChange={onStepChange}
             />
           )}
-          {step === 5 && (
+          {step === 6 && (
             <Summary
               name={name}
               email={email}
@@ -77,34 +77,6 @@ const Form = () => {
           )}
         </div>
       </div>
-
-      {/* <div className="content-box">
-        <NameInput name={name} onInputChange={handleNameInputChange} />
-        <EmailInput
-          email={email}
-          onSecondInputChange={handleSecondInputChange}
-        />
-        <LocationDropDown
-          location={locations}
-          onThirdInputChange={handleThirdInputChange}
-        />
-        <AgeRadioBtn
-          group={ageGroup}
-          handleFourthInputChange={handleFourthInputChange}
-        />
-        <button className="btn" onClick={() => setIsSummaryDisplayed(true)}>
-          Show Summary!
-        </button>
-      </div>
-      {isSummaryDisplayed && (
-        <Summary
-          name={name}
-          email={email}
-          location={locations}
-          locations={locations}
-          ageGroup={ageGroup}
-        />
-      )} */}
     </section>
   );
 };

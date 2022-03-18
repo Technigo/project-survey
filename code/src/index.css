@@ -27,11 +27,28 @@ code {
   justify-content: center;
   align-items: center;
   padding: 10%;
-
   background-color: #ffd15d;
 }
+.form-container{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
+.text-container{
+  margin-bottom: 20px;
+  text-align: center;
+}
 h1{
+  font-size: 30px;
   font-weight: 900;
+}
+
+.icon-container{
+  height: 200px;
+  width: 200px;
+}
+.icon{
+  height: 200px;
 }
 .btn {
   height: 50px;
@@ -40,6 +57,7 @@ h1{
   font-weight: 700;
   background-color: #5be4e6;
   border: solid 1px;
+  margin-top: 20px;
 }
 .btn {
   transition-duration: 0.4s;
@@ -49,13 +67,12 @@ h1{
   background-color: #4caf50;
   color: white;
 }
-
 .footer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 1%;
+  margin: 10%;
 }
 .footer p {
-  margin: 0%;
+  margin-bottom: 0%;
 }

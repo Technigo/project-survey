@@ -5,7 +5,7 @@ const LocationDropDown = (props) => {
   return (
     <div>
       <form onSubmit={onStepChange}>
-        <h1>Choose your city to attend your local gardening group? </h1>
+        <h1>Choose city to attend your local gardening group? </h1>
         <label
           htmlFor="locationOptions"
           aria-label="choose your local gardening group"

@@ -13,8 +13,10 @@ export const App = () => {
             <Form />
           </div>
         </main>
-        <Footer />
       </section>
+      <footer>
+        <Footer />
+      </footer>
     </>
   );
 };
