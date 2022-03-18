@@ -7,6 +7,7 @@ import Input from './Input.js';
 import Dropdown from './Dropdown.js';
 import Radio from './Radio.js';
 import NextPrevious from './NextPrevious.js';
+import Startover from './Startover.js';
 
 
 
@@ -68,7 +69,7 @@ const QuestionContainer = (props) => {
       <div className="question-container container">
           <form onSubmit={handleSubmit}>            
             { answerComponent }
-            {counter === questionsInTotal ? <Submit /> : <div className="container"><p>You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going!</p><NextPrevious counter={counter} setCounter={setCounter} /></div> }
+            {counter === questionsInTotal ? <><Submit /> <Startover counter={counter} setCounter={setCounter} /> </>: <div className="container"><p>You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going!</p><NextPrevious counter={counter} setCounter={setCounter} /></div> }
           </form>
       </div>
 
