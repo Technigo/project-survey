@@ -5,7 +5,7 @@ const CheckboxForm = ({willTravel, setWillTravel}) => {
         <div className="checkbox-form-div">
             <div>
                 <label>
-                I want to travel in work
+                I want to travel in work (optional)
                 <input 
                     type="checkbox"        
                     checked={willTravel}

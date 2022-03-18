@@ -1,6 +1,7 @@
 import React from 'react'
 
 const FormResponse = ({name, location, willTravel, roles}) => {
+
     return (
         <div className="form-response-div">
             <h1>Confirmation on your provided information:</h1>

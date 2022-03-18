@@ -67,8 +67,22 @@ form div {
   background-color: lightblue;
 }
 
-.submit-button:hover {
+.submit-button:hover, .next-button:hover  {
   filter: brightness(90%);
+}
+
+.next-button {
+  margin-top: 10vh;
+  font-size: 20px;
+  border-radius: 10px;
+  border: none;
+  padding: 8px;
+  background-color: lightgreen;
+}
+
+.next-and-submit-button-div {
+  display: flex;
+  flex-direction: column;
 }
 
 @media screen and (min-width: 768px) {
