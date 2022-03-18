@@ -19,10 +19,12 @@ const welcomePage = ({nextQuestion, onNameChange, username }) => {
                         />
                     </label>
                 </form>
-                <button className='btn' onClick={nextQuestion}>Start survey</button>
+                <button className='btn'  disabled={username === ""} onClick={nextQuestion}>Start survey</button>
             </div>
         </section>
     )
 }
 
 export default welcomePage;
+
+

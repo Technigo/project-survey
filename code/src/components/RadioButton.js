@@ -1,18 +1,19 @@
 import React from 'react'
 
-const ageGroups = ['0-18', '19-30', '30+']
+const ageGroups = ['6-18', '19-30', '31+']
 
-const ChoresArray = ({ nextQuestion, onRadioChange, age }) => {
+const RadioButton = ({ nextQuestion, onRadioChange, age }) => {
     return (
        <section className='wrap'>
-           <div className='content-wrap choresArray'>
-                <h1>First question with Radiobuttons</h1>
-                <p>Having a day off means a bit of recovery to load up with new energy! What would you do on your free time?</p>
+           <div className='content-wrap radio-background'>
+                <h1>Somewhere between...</h1>
+                <p>At what age did you understand that you are an adult now and need to take responsibilities for your actions?</p>
                 <form>
                     Age Group:
                     {ageGroups.map(group => (
                         <label key={group} htmlFor='radio'>
                             <input
+                                className='radio-style'
                                 type='radio'
                                 value={group}
                                 onChange={onRadioChange}
@@ -24,10 +25,10 @@ const ChoresArray = ({ nextQuestion, onRadioChange, age }) => {
                         </label>
                     ))} 
                 </form>
-                <button className='btn' onClick={nextQuestion}>See summary</button>
+                <button className='btn' disabled={age === ""} onClick={nextQuestion}>See summary</button>
             </div>
        </section>
     )
 }
 
-export default ChoresArray;
+export default RadioButton;

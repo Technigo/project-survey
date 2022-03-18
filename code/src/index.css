@@ -19,10 +19,10 @@ code {
     monospace;
 }
 
+/* ----MOBILE STYLING----*/
 .wrap {
   height: 100vh;
   width: 100vw;
-  border: red 1px solid;
   
   display: flex;
   justify-content: center;
@@ -30,9 +30,9 @@ code {
 }
 
 .content-wrap {
-  border: 3px dashed #ffa801;
+  border: 4px dashed #ffa801;
   background-color:rgba(210, 218, 226,1.0);
-  height: 300px;
+  height: 350px;
   max-width: 300px;
   padding: 15px;
 
@@ -43,30 +43,9 @@ code {
   justify-content: space-between;
 }
 
-.welcome {
-  background-color: #ffdd59;
-}
-
-.dropdown {
-  background-color: #00d8d6;
-}
-
-.checkbox {
-  background-color: #ef5777;
-}
-
-.choresArray {
-  background-color: #ffa801;
-}
-
-.summary {
-  background-color: #0be881;
-}
-
-
-.input-class {
-  padding: 3px 5px;
-  margin-left: 5px;
+h1 {
+  font-size: larger;
+  text-transform:capitalize;
 }
 
 .btn {
@@ -77,11 +56,8 @@ code {
   cursor: pointer;
   transition: all 0.3s;
   background-color: #d2dae2;
+  font-size:medium;
 }
-
-/* .form-component {
-  margin-bottom: 3em;
-} */
 
 .btn:hover {
   box-shadow: 0 0 0 5px white, 0 0 0 10px #ffc048;
@@ -90,8 +66,74 @@ code {
   color: #485460;
 }
 
+/*---WELCOME.JS----*/
+.welcome {
+  background-color: #ffdd59;
+}
+
+.input-class {
+  padding: 3px 5px;
+  margin-left: 5px;
+}
+
+/*----DROPDOWN.JS----*/
+.dropdown {
+  background-color: #00d8d6;
+}
+
+.select-size {
+  padding: 2px 5px;
+  font-size: medium;
+  cursor: pointer;
+}
+
+/*--CHECKBOX.JS---*/
 .form-checkbox {
   display: flex;
   flex-direction: column;
 }
+
+.checkbox {
+  background-color: #ef5777;
+}
+
+.input-space {
+  margin-right: 5px;
+}
+
+/*---RADIOBUTTON.JS---*/
+.radio-style {
+  margin-left: 0.5rem;
+  margin-right: 0.2rem;
+}
+
+.radio-background {
+  background-color: #ffa801;
+}
+
+/*----SUMMARY.JS---*/
+.summary {
+  background-color: #0be881;
+  height: fit-content;
+}
+
+.summary-wrap {
+  margin-top: 1rem;
+}
+
+.summary-wrap p {
+  margin-top: 0.5rem;
+}
+
+.btn-summary {
+  margin-top: 1rem;
+}
+
+.bold-text {
+  font-weight: bold;
+}
+
+
+
+
 

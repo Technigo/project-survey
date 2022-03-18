@@ -8,21 +8,22 @@ const DropDown = ({ nextQuestion, onDropDownChange, actor }) => {
                 <p>Which actor or actress should candidate to be the next president in the USA?</p>
                 <form>
                     <label htmlFor='actor'>
-                    <select
-                        onChange={onDropDownChange}
-                        value={actor}
-                        id='actor'
-                        name='actor'
-                    >
-                        <option disabled value=''>Select artist:</option>
-                        <option value='Silvester Stallone'>Silvester Stallone</option>
-                        <option value='Denzel Washington'>Denzel Washington</option>
-                        <option value='Oprah'>Oprah</option>
-                        <option value='Reese Witherspoon'>Reese Witherspoon</option>
-                    </select>
+                        <select
+                            onChange={onDropDownChange}
+                            value={actor}
+                            id='actor'
+                            name='actor'
+                            className="select-size"
+                        >
+                            <option disabled value=''>Select artist:</option>
+                            <option value='Silvester Stallone'>Silvester Stallone</option>
+                            <option value='Denzel Washington'>Denzel Washington</option>
+                            <option value='Oprah'>Oprah</option>
+                            <option value='Reese Witherspoon'>Reese Witherspoon</option>
+                        </select>
                     </label> 
                 </form>
-                <button className='btn' onClick={nextQuestion}>Click to go on</button>
+                <button className='btn' disabled={actor === ""} onClick={nextQuestion}>Next question</button>
             </div>
         </section>
     )

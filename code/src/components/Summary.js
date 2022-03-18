@@ -1,19 +1,23 @@
 import React from 'react'
 
 const Summary = ( { age, actor, username, personality, person } ) => {
+    const reloadSurvey = () => window.location.reload() 
     return (
         <section className='wrap'>
            <div className='content-wrap summary'>
-                <h1>Summary</h1>
-                <p> Thank you {username}!</p>
-                <p> You answered:</p>
-                <p>You're bestfriend is: {actor}</p>
-                <p>Your age:{age}</p>
-                {personality === true && <p>You said you are a frontend developer</p>}
-                {personality === false && <p>You don't see yourself as a frontend developer</p>}
-                {person === true && <p>...but you could see yourself as a painter too</p>}
-                {person === false && <p>and you couldn't see yourself being a painter </p>}
+                <h1>Thank you {username}!</h1>
+                <div className='summary-wrap'>
+                    <p className='bold-text'>Summary of your answers:</p>
+                    <p>{actor} should be the next president.</p>
+                    <p>Somewhere between the age of {age} you saw yourself as a strong, independent person.</p>
+                    {personality === true && <p>You checked yourself and think you are a fearless person.</p>}
+                    {personality === false && <p>You don't see yourself as a fearless person.</p>}
+                    {person === true && <p>You think you are judgemental person.</p>}
+                    {person === false && <p>You are not a judgemental person.</p>}
+                </div>
+                <button className='btn btn-summary' onClick={reloadSurvey}>Start over</button>
             </div>
+            
         </section>
     )
 }
