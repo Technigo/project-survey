@@ -33,6 +33,7 @@ const QuestionTwo = ({nameInput, selectValue, handleSelectOptionChange, onStepCh
         id="select-option"
         value={selectValue} 
         onChange={handleSelectOptionChange} 
+        required
         >
         {options.map((option) => (
          <option key={option.value} value={option.value}>{option.label}</option>   

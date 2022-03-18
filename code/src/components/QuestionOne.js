@@ -16,6 +16,7 @@ const QuestionOne = ({nameInput, handleNameInputChange, onStepChange, onStepBack
         type="text"
         onChange={handleNameInputChange}
         value={nameInput}
+        required
         />
         </form>
         <div className="buttons">
