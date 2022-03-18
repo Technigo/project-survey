@@ -21,6 +21,8 @@ body {
 main {
   width: 375px;
   height: 100vh;
+  /* max-height: 100vh; */
+  overflow: hidden;
   /* height: 85vh; */
   margin: 0 auto;
   display: flex;
