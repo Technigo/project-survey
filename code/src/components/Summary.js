@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Summary = ({checked, nameInput, emailInput, backPage}) => {
+const Summary = ({restart, checked, nameInput, emailInput}) => {
 
     return (
 
@@ -17,7 +17,7 @@ const Summary = ({checked, nameInput, emailInput, backPage}) => {
          </div>
 
 
-    <button className="btn-special" type="submit" onClick={backPage}> 
+    <button className="btn-special" type="submit" onClick={restart}> 
         Wow, thanks!</button>
 
 

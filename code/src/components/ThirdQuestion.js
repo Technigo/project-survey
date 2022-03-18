@@ -1,74 +1,83 @@
 import React, { useState } from 'react'
 
-const Checkbox = ({nextPage, backPage}) => {
+const Interests = ({nextPage, backPage}) => {
 
-    const [checked, setChecked] = useState([])
+    // const [checked, setChecked] = useState([])
 
 
-    const onCheckboxChange = (interest) => {
-        if (checked.includes(interest)) {
-        const filteredCheckbox = checked.filter(item => {
-            return item !== interest
-        })
-        setChecked(filteredCheckbox)
-        } else {
-            setChecked([...checked, interest])
-        }
-    }
+    // const onCheckboxChange = (interest) => {
+    //     if (checked.includes(interest)) {
+    //     const filteredCheckbox = checked.filter(item => {
+    //         return item !== interest
+    //     })
+    //     setChecked(filteredCheckbox)
+    //     } else {
+    //         setChecked([...checked, interest])
+    //     }
+    // }
 
+    // const arrayOfInterests = [
+    //     'Key Lime Pie', 
+    //     'Best visits in Stockholm', 
+    //     'Tech News', 
+    //     'Programming']
 
 
     return (
 
         <div>
             <p>What would you like to read more about?</p>
-            <p className="descriptive-text">Pick as many as you want <span role="img" aria-label="girl waving emoji">🙋‍♀️</span></p>
+            <p className="descriptive-text">Pick your favourite! <span role="img" aria-label="girl waving emoji">🙋‍♀️</span></p>
 
-        <ul className="ul-list">
+
+
+
+
+        {/* <ul className="ul-list">
             <li>
-                <label htmlFor="pie" key="pie">
+                <label key="pie">
                     <input 
                     id="pie"
-                    type="checkbox"
+                    type="radio"
                     checked={checked.includes('pie')}
                     onChange={() => onCheckboxChange('pie')}/>
-                    Key Lime Pie
+                    <span className="checkbox">Key Lime Pie</span>
                 </label>
             </li>
 
             <li>
-                <label htmlFor="stockholm">
+                <label key="stockholm">
                     <input 
                     id="stockholm"
-                    type="checkbox"
+                    type="radio"
                     checked={checked.includes('stockholm')}
                     onChange={() => onCheckboxChange('stockholm')} />
-                    Best places in Stockholm
+                    <span className="checkbox">Best places in Stockholm</span>
                 </label>
             </li>
 
             <li>
-                <label htmlFor="tech">
+                <label key="tech">
                     <input 
                     id="tech"
-                    type="checkbox"
+                    type="radio"
                     checked={checked.includes('tech')}
                     onChange={() => onCheckboxChange('tech')}  />
-                    Tech News
+                    <span className="checkbox">Tech News</span>
                 </label>
             </li>
 
             <li>
-                <label htmlFor="programming">
+                <label key="programming">
                     <input 
                     id="programming"
-                    type="checkbox"
+                    type="radio"
                     checked={checked.includes('programming')}
                     onChange={() => onCheckboxChange('programming')}  />
-                    Programming
+                    <span className="checkbox">Programming</span>
                 </label>
             </li>
-        </ul>
+        </ul> */}
 
 
         <button className="btn-special" type="submit" onClick={backPage}> 
@@ -85,4 +94,4 @@ const Checkbox = ({nextPage, backPage}) => {
 }
 
 
-export default Checkbox
+export default Interests

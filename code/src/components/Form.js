@@ -21,6 +21,7 @@ const [page, setPage] = useState(0)
 // These functions calls new question or goes back one page
 const nextPage = () => {setPage(page + 1)}
 const backPage = () => {setPage(page - 1)}
+const restart = () => {setPage(0)}
 
 
 const onNameInputChange = (event) => {
@@ -35,9 +36,11 @@ const onEmailInputChange = event => {
     setUserEmailInput(event.target.value)
 }
 
+const handleSubmit = (event) => {event.preventDefault()}
+
 return (
   <>
-<form className="form-wrapper">
+<form className="form-wrapper" onSubmit={handleSubmit}>
 
     { /* INTRO PAGE */ }
     {page === 0 && <Intro nextPage={nextPage} />}
@@ -75,6 +78,7 @@ return (
             nameInput={nameInput}
             emailInput={emailInput}
             checked={checked}
+            restart={restart}
             />
         )}
 
