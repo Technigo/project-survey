@@ -5,10 +5,12 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
 
         <article>
             <div className="container">
-                <div className="dropdown">
-                    <label htmlFor="bands" key="bands">Choose your favourite out of these five bands</label>
-                        <select name="bands"
-                            onChange={event =>setBands(event.target.value)}>
+                <div className="text-group">
+                    <label htmlFor="bands" key="bands">Choose your favourite out of these five bands
+                    </label>
+                        <select className="dropdown"
+                        name="bands"
+                        onChange={event =>setBands(event.target.value)}>
                         {bandOptions.map(band => (
                             <option
                                 value={band}>
@@ -17,43 +19,49 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                         
                             ))}
                         </select>
-                    </div>
+                </div>
 
-                    <div className="checkboxes">
+                <div>
                         <p>What type of music do you generally listen to?</p>
-                    <label htmlFor="thegoodkind" key="thegoodkind">The good kind
-                        <input type="checkbox" 
+                    <label htmlFor="thegoodkind" key="thegoodkind">
+                        <input className="checkboxes"
+                        type="checkbox" 
                         name="thegoodkind" 
                         checked={musicType.includes(' the good kind ')}
                         onChange={() =>onCheckboxChange(' the good kind ')}/>
-                    </label>
+                   The good kind</label>
+                </div>
 
-                    <label htmlFor="pop" key="pop">Pop
-                        <input type="checkbox" 
+                <div >
+                    <label htmlFor="pop" key="pop">
+                        <input className="checkboxes"
+                        type="checkbox" 
                         name="pop"
                         checked={musicType.includes(' pop ')}
                         onChange={() => onCheckboxChange(' pop ')}/>
-                    </label>
+                    Pop</label>
+                </div>
 
-                    <label htmlFor="electronic" key="electronic">Electronic
-                        <input type="checkbox" 
+                <div >
+                    <label htmlFor="electronic" key="electronic">
+                        <input className="checkboxes"
+                        type="checkbox" 
                         name="electronic"
                         checked={musicType.includes(' electronic ')}
                         onChange={() => onCheckboxChange(' electronic ')}/>
-                    </label>
+                    Electronic</label>
                 </div>
             
                 <div className="btn-group">
+                    <button className="next-btn"
+                    onClick= {nextSection}>
+                    Submit answers
+                    </button>
+
                     <button className="back-btn"
                     onClick= {backSection}
                     >
                     Go back</button>
-
-
-                    <button className="next-btn"
-                    onClick= {nextSection}>
-                    Buy tickets
-                    </button>
                 </div>
             </div>
 

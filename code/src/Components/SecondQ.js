@@ -22,15 +22,15 @@ const SecondQuestion = ({ setAmountOfBands, arrayOfBandNumbers, nextSection, bac
                     </div>
 
                     <div className="btn-group">
-                        <button className="back-btn" 
-                        onClick= {backSection}
-                        >
-                        Go back</button>
-
                         <button className="next-btn"
                         onClick= {nextSection}
                         >
                         Next question</button>
+
+                        <button className="back-btn" 
+                        onClick= {backSection}
+                        >
+                        Go back</button>
                     </div>
                 </div>
             </article>

@@ -2,8 +2,8 @@ import React from 'react'
 
 const FirstQuestion = ({name, setName,  nextSection, handleSubmit}) => {
     return (
-        <article>
-            <div className="container">
+        <div className="container">
+            <article >
                 <div className="text-group">
                     <label htmlFor="name" key="name" onSubmit={handleSubmit}>Please enter your name 
                         <input 
@@ -21,8 +21,8 @@ const FirstQuestion = ({name, setName,  nextSection, handleSubmit}) => {
                 >
                 Next question</button>
                 </div>
-            </div>
-        </article>
+            </article>
+        </div>
         
     )
 

@@ -3,6 +3,7 @@ body {
   box-sizing: border-box;
   font-family: 'Fredoka', sans-serif;
   font-size:25px;
+  font-weight: 600;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   background-image: url(./images/marek-piwnicki-9dbsRfvtIos-unsplash.jpg); 
@@ -14,38 +15,36 @@ header {
   background-color:rgb(143, 90, 118);
   color:#fff;
   padding: 20px;
+  margin-bottom: 20px;
+  min-width: 375px;
   display: flex;
   flex-direction: row;
-  justify-content: center
+  justify-content: center;
 }
 
 h1 {
   margin-top: 0;
 }
 
-article {
-  margin-top: 20px;
+.header-container {
+  width: 375px;
+  margin: 0 auto;
 }
 
 .container {
   width: 375px;
   margin: 0 auto;
   background-color: rgb(143, 90, 118, 0.5);
-  padding: 100px;
+  padding: 100px 50px 100px 50px;
   border-radius: 10px;
-  
-}
-
-.text-group {
-  font-weight: 600;
 }
 
 .name-input {
   padding: 15px;
   border-radius:5px;
   border: none;
-  margin: 10px 10px 10px 0;
-  min-width: 250px;;
+  margin: 10px 0 10px 0;
+  min-width: 250px;
   
 }
 
@@ -61,10 +60,21 @@ article {
   background-color:#f8697c
 }
 
+.dropdown {
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+.checkboxes {
+  margin: 10px;
+}
+
 button {
   min-width:200px;
   padding: 10px;
-  margin: 20px;
+  margin-top: 20px;
   border-radius: 5px;
   border:none;
   color:black;
@@ -100,10 +110,8 @@ button:disabled {
   background-color: #fff;
 }
 
-@media (max-width:1024px) {
+@media (min-width:1025px) {
 
-  button {
-    min-width:
-  }
+ 
 
 }
