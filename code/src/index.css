@@ -54,6 +54,7 @@ body {
 .dropdown {
   display: block;
   margin: 0 auto;
+  color: black;
 }
 
 .logo {
