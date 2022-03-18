@@ -39,7 +39,7 @@ const InputField = ({ name, type, options, value, onChange }) => {
       );
     }
     default:
-      console.log("Error");
+      console.log("Error: type can only be 'text', 'radio', or 'select'");
   }
 };
 
