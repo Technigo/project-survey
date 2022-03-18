@@ -3,7 +3,7 @@ import GetYourProgram from './Programs'
 
 const OverviewForRandom = () => {
 	return (
-		<section className='overview'>
+		<section className='overview' tabindex='0'>
 			<GetYourProgram />
 		</section>                         
 	)                   

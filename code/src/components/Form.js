@@ -52,7 +52,7 @@ const Form = () => {
 
 
 	return (
-		<div>
+		<div className='wrapper'>
 			{step === 1 && (
 				<FirstQuestion
 					nameInput={nameInput}

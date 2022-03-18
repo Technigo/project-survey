@@ -3,8 +3,8 @@ import React from 'react';
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
 
 	return (
-		<form className="form">
-			<label>Type your name</label>
+		<form className="form radio">
+			<label tabindex='0'>Type your name</label>
 			<input
 				id="nameInput"
 				type="text"

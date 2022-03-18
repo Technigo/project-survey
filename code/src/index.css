@@ -1,8 +1,4 @@
-html,
-body,
-#root {
-  height: auto;
-  max-width: auto;
+html {
   margin: 0;
   padding: 0;
 }
@@ -21,7 +17,7 @@ body {
   background-attachment: fixed;
   color: white;
   font-family: 'Domine', serif;
- 
+  padding: 0;
 }
 
 code {
@@ -45,7 +41,7 @@ code {
   max-width: 30em;
 }
 
-section {
+.overview {
   display: grid;
   background: rgba(0, 0, 0, 0.5);
   border-radius: 10px;
@@ -116,10 +112,10 @@ h2 {
   font-size: 30px;
 }
 
-footer{
-  position: absolute;
+footer {
   color: white;
-  bottom: 2%;
+  margin-top:auto;
+  display:flex;
 }
 
 
