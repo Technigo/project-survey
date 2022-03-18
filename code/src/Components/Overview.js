@@ -7,14 +7,14 @@ export const Overview= (props) => {
     return(
         <div className="container">
         <div className="overview-container">
-            <h2>Summary of your open application:</h2>
-            <p>Name: {nameInput}</p>
-            <p>Email: {emailInput}</p>
-            <p>Position: {positionInput}</p>
-            <p>Location: {officeInput}</p>
-            <p>Skills: {skillsArray.join(', ')}</p>
-            <p>Experience level: {experienceTitle}</p>
-            <p>Link to portfolio: {linkInput}</p>
+            <h2>Summary:</h2>
+            <h3>Name: {nameInput}</h3>
+            <h3>Email: {emailInput}</h3>
+            <h3>Position: {positionInput}</h3>
+            <h3>Location: {officeInput}</h3>
+            <h3>Skills: {skillsArray.join(', ')}</h3>
+            <h3>Experience level: {experienceTitle}</h3>
+            <h3>Link to portfolio: {linkInput}</h3>
         </div>
         <div className="buttons">
                 <input 

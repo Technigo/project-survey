@@ -2,10 +2,8 @@ import React from 'react'
 
 export const ThanksPage = () => {
     return(
-        <section className="thankspageContainer">
-            <video id="background-video" autoplay loop muted>
-                <source src="video.mp4"type="video/mp4"/>
-            </video>
-        </section>
+        <div className="container">
+            <h1>Thank you for your application</h1>
+        </div>
       )
 } 

@@ -314,28 +314,11 @@ form{
 }
 
 /* =====THANKS PAGE STYLES=====*/
-.thankspageContainer{
-  height: 100%;
-  width: 100vw;
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  overflow: hidden;
-}
-.thankspageContainer video {
-  position: absolute;
-  left: 0;
-  top: 0;
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
+
 
 /* =====FOOTER STYLES=====*/
 footer{
   margin-top: auto; /*this keeps the footer always at tht bottom of the page*/
-  background-color: pink;
 }
 
 .footerContainer{
