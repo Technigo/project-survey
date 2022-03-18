@@ -1,6 +1,6 @@
 import React from 'react'
 
-const FirstQuestion = ({name, setName, nextSection}) => {
+const FirstQuestion = ({name, setName,  nextSection}) => {
     return (
         <article>
             <div className="container">
@@ -11,6 +11,7 @@ const FirstQuestion = ({name, setName, nextSection}) => {
                     onChange={(event)=>setName(event.target.value)} 
                     value={name} />
                 </label> 
+                
                 <button className="next-btn"
                 onClick= {nextSection}
                 >

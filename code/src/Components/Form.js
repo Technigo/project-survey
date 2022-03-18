@@ -8,7 +8,7 @@ const Form = () => {
     const [name, setName] = useState('')
     const [ageGroup, setAgeGroup] = useState(false)
     const [bands, setBands] = useState('Korn')
-    const [shirt, setShirt] = useState(false)
+    const [shirtColor, setColor] = useState([])
     
     //State property to go to next question or back
     const [section, setSection] = useState(0)
@@ -23,6 +23,18 @@ const Form = () => {
     const bandOptions = ['Korn', 'Mumford & Sons', 'Red Hot Chili Peppers', 'Foo Fighters', 'Rammstein' ]
 
     const handleSubmit = (event) => {event.preventDefault()}
+
+    //Removing or adding a color in the array from checked checkboxes
+    const onCheckboxChange = (color) => {
+        if (shirtColor.includes(color)) {
+            const filteredShirtColor = shirtColor.filter(item => {
+                return item != color                     //If color is included it will remove it if clicked again
+            })
+            setColor(filteredShirtColor)
+        } else {
+            setColor([...shirtColor, color])
+        }
+    }
 
 return (
         <section>
@@ -47,8 +59,9 @@ return (
             <ThirdAndFourthQuestion 
             bandOptions={bandOptions} 
             setBands={setBands}
-            shirt={shirt}
-            setShirt={setShirt}
+            shirtColor={shirtColor}
+            setColor={setColor}
+            onCheckboxChange={onCheckboxChange}
             nextSection={nextSection}
             backSection={backSection}
             />
@@ -62,6 +75,7 @@ return (
             <Summary name = {name} 
             ageGroup = {ageGroup}
             bands = {bands}
+            shirtColor={shirtColor}
             restart = {restart}
             />
             

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, shirt, setShirt}) => {
+const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, shirtColor, onCheckboxChange}) => {
     return (
 
         <article>
@@ -17,20 +17,25 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                         ))}
                     </select>
             
-                <label htmlFor="yes">Yes
+                <label htmlFor="blue ">Blue
                     <input type="checkbox" 
-                    name="yes" 
-                    value="yes"
-                    defaultChecked="yes"
-                    onChange={event =>setShirt(event.target.value)}/>
+                    name="blue " 
+                    checked={shirtColor.includes('blue ')}
+                    onChange={() =>onCheckboxChange('blue ')}/>
                 </label>
 
-                <label htmlFor="t-shirt">No
+                <label htmlFor="black ">Black
                     <input type="checkbox" 
-                    name="no" 
-                    value="no"
-                    defaultChecked="No"
-                    onChange={event =>setShirt(event.target.value)}/>
+                    name="black "
+                    checked={shirtColor.includes('black ')}
+                    onChange={() => onCheckboxChange('black ')}/>
+                </label>
+
+                <label htmlFor="white ">White
+                    <input type="checkbox" 
+                    name="white "
+                    checked={shirtColor.includes('white ')}
+                    onChange={() => onCheckboxChange('white ')}/>
                 </label>
             </div>
 
