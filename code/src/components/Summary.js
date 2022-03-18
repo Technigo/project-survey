@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Summary = ({inputName, backPage, nextPage}) => {
+const Summary = ({inputName, emailInput, backPage, nextPage}) => {
 
     return (
 
@@ -8,6 +8,7 @@ const Summary = ({inputName, backPage, nextPage}) => {
         <h1>So this is you!</h1>
          
          <p>   Name: {inputName} </p>
+         <p>   Email: {emailInput} </p>
 
 
 

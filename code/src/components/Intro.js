@@ -7,9 +7,6 @@ return (
     <div>
             
         <div className="header-title">
-
-
-
             
             <h1>There you are!</h1> 
             <p>So happy to see you here.</p>
