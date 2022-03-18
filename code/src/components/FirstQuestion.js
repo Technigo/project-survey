@@ -17,7 +17,6 @@ const FirstQuestion = ({
 
             <div>
                     <input
-                    className="question"
                     id="name" 
                     type="text" 
                     placeholder="First name" 
@@ -26,7 +25,6 @@ const FirstQuestion = ({
                     />
 
                     <input
-                    className="question"
                     id="name" 
                     type="text" 
                     placeholder="Surname" 

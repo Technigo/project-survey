@@ -76,6 +76,12 @@ p {
   margin-bottom: 20px;
 }
 
+ul {
+  list-style-type: none;
+  margin-block-start: 0;
+  padding-inline-start: 0;
+}
+
 /* MEDIA QUERY FOR TABLET */
 /* @media (min-width: 801px) {}
   /* CONTENT HERE */

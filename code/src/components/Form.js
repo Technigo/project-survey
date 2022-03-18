@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import Intro from './Intro'
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
+import ThirdQuestion from './ThirdQuestion'
 
 
 const Form = () => {
@@ -11,6 +12,7 @@ const Form = () => {
 const [nameInput, setNameInput] = useState('')
 const [surnameInput, setSurnameInput] = useState('')
 const [emailInput, setUserEmailInput] = useState('')
+const [checked, setChecked] = useState('')
 
 const [page, setPage] = useState(0)
 
@@ -36,11 +38,11 @@ return (
 <form className="form-wrapper">
 
 
-    {/* INTRO PAGE */}
+    { /* INTRO PAGE */ }
     {page === 0 && <Intro nextPage={nextPage} />}
     
 
-    {/* FIRST PAGE */}
+    { /* FIRST PAGE */ }
     {page === 1 && (
     <FirstQuestion 
     nameInput={nameInput}
@@ -51,7 +53,7 @@ return (
     />
     )}
 
-    {/* SECOND PAGE */}
+    { /* SECOND PAGE */ }
     {page === 2 && (
         <SecondQuestion
         emailInput={emailInput}
@@ -60,6 +62,14 @@ return (
         backPage={backPage}
         userName={nameInput}
          />
+    )}
+
+
+    { /* THIRD PAGE */ }
+    {page === 3 && (
+        <ThirdQuestion
+        checked={checked}
+        />
     )}
 
 </form>
