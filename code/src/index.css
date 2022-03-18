@@ -176,8 +176,7 @@ section {
 	background: var(--clr-lighter);
 }
 
-section.intropage-wrapper,
-section.overview-wrapper {
+section.intropage-wrapper {
 	height: 100vh;
 }
 
@@ -189,7 +188,6 @@ section.overview-wrapper {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	transition-delay: 2s;
 }
 
 /***********************/

@@ -17,6 +17,15 @@ button.start-btn {
 	background: var(--clr-white);
 }
 
+button.start-btn:hover,
+button.start-btn:focus {
+	transform: scale(1.2);
+	background: #fccce2;
+	background: -webkit-linear-gradient(to right, #ffdde1, #fccce2);
+	background: linear-gradient(to right, #ffdde1, #fccce2);
+	border: 1px solid #ff55a2;
+}
+
 button.next-btn,
 button.reset-btn:hover,
 button.reset-btn:focus {
@@ -58,5 +67,9 @@ button.back-btn:focus {
 
 	button.btn {
 		margin: 2.5em 0;
+	}
+
+	button.start-btn {
+		padding: 18px 45px;
 	}
 }
