@@ -100,13 +100,14 @@ body {
 
 input[type='range']::-ms-track {
   border-radius: 8px;
-  height: 7px;
+  height: 4px;
   border: 1px solid #bdc3c7;
   background-color: #fff;
+  color: transparent;
 }
 
 input[type='range']::-ms-thumb {
-  background-color: #ecf0f1;
+  background: url(assets/harryslider.png);
   border: 1px solid #bdc3c7;
   width: 20px;
   height: 20px;
