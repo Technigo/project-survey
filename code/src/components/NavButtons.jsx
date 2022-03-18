@@ -56,8 +56,8 @@ const NavButtons = ({pageNumber, setPageNumber, error, setError, name, gender, a
         return (
             <div className="nav-buttons">
             {pageNumber > 0 && pageNumber <= 9 && <button onClick={pageBackward}><img className="navbutton-icon" src={backButton} alt="back button" /></button>}
-            {pageNumber > 0 && pageNumber < 8 && <button onClick={pageForward}><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>}
-            {pageNumber === 8 && 
+            {pageNumber > 0 && pageNumber < 7 && <button onClick={pageForward}><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>}
+            {pageNumber === 7 && 
             <SubmitButton 
                 pageNumber = {pageNumber}
                 setPageNumber = {setPageNumber}
@@ -97,6 +97,7 @@ const NavButtons = ({pageNumber, setPageNumber, error, setError, name, gender, a
                 tiviq19Answer = {tiviq19Answer}
                 tiviq20Answer = {tiviq20Answer}
             />}
+            {pageNumber === 8 && <button onClick={pageForward}><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>}
             {pageNumber === 9 && <button onClick={refreshPage}><img className="navbutton-icon" src={restartButton} alt="restart button" /></button>}
         </div>
         )
