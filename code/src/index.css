@@ -8,7 +8,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
   color: white;
-  font-family: 'Yusei Magic', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
 }
 
 .questionWrapper {
@@ -35,7 +35,7 @@ body {
   width: 30vw;
   border-radius: 10px;
   margin: 15px auto;
-  font-family: 'Yusei Magic', sans-serif;
+  font-family: 'Montserrat Alternates', sans-serif;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display: block;
   color: black;
@@ -46,19 +46,51 @@ body {
   display: inline-block;
 }
 
-.input {
-  display: block;
-  margin: 0 auto;
-}
-
-.dropdown {
-  display: block;
-  margin: 0 auto;
-  color: black;
+.dormitoryTag,
+.summaryTag {
+  font-weight: 700;
 }
 
 .logo {
   height: 100px;
+}
+
+/*Input fields*/
+
+.radioGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown {
+  background-color: rgb(212, 209, 209);
+  border: 1px solid black;
+  display: block;
+  margin: 0 auto;
+  color: black;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 0 auto;
+  width: 80%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  outline: none;
+}
+
+.input {
+  background-color: rgb(212, 209, 209);
+  border: 1px solid black;
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  padding: 2px;
+  margin: 0 auto;
+  width: 100%;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: inherit;
+  outline: none;
 }
 
 .slider {
@@ -100,6 +132,8 @@ body {
   height: 30px;
 }
 
+/*Slider Explorer*/
+
 input[type='range']::-ms-track {
   border-radius: 8px;
   height: 25px;
@@ -109,46 +143,11 @@ input[type='range']::-ms-track {
 }
 
 input[type='range']::-ms-thumb {
-  background: url(assets/harryslider.png);
+  background: black;
+  border-radius: 50%;
   width: 25px;
   height: 25px;
   cursor: pointer;
-}
-
-.radioGroup {
-  display: flex;
-  flex-direction: column;
-}
-
-.dormitoryTag,
-.summaryTag {
-  font-weight: 700;
-}
-
-.dropdown {
-  background-color: rgb(212, 209, 209);
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2px;
-  margin: 0 auto;
-  width: 80%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  outline: none;
-}
-
-.input {
-  background-color: rgb(212, 209, 209);
-  border: 1px solid black;
-  border-radius: 5px;
-  padding: 2px;
-  margin: 0 auto;
-  width: 100%;
-  font-family: inherit;
-  font-size: inherit;
-  cursor: inherit;
-  outline: none;
 }
 
 @media screen and (min-width: 768px) {

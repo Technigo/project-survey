@@ -13,6 +13,7 @@ const FifthQuestion = ({ likeInput, onLikeInputChange, onStepChange }) => {
             type='range'
             min='1'
             max='10'
+            aria-orientation='horizontal'
             className='slider'
             id='myRange'
             defaultValue={likeInput}
