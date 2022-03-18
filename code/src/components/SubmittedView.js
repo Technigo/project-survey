@@ -9,7 +9,7 @@ const SubmittedView = ({ answers, reset }) => {
         preferences:{" "}
       </h2>
       <ul>
-        {answers.toLmap((answer, i) => (
+        {answers.map((answer, i) => (
           <li key={i}>{answer}</li>
         ))}
       </ul>

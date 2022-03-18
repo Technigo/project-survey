@@ -48,7 +48,7 @@ const Form = () => {
   const [index, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [buttonLabel, setButtonLabel] = useState("Next Question");
+  const [buttonLabel, setButtonLabel] = useState("Next question");
 
   const handleInputChange = (event) => setInputValue(event.target.value);
 
