@@ -35,6 +35,10 @@ const Form = () => {
     setNext(next + 1);
   };
 
+  const handleBackChange = () => {
+    setNext(next - 1);
+  };
+
   return (
     <section>
       {next === 1 && <WelcomePage onNextChange={handleNextChange} />}
@@ -44,6 +48,7 @@ const Form = () => {
           name={name}
           onInputChange={handleInputChange}
           onNextChange={handleNextChange}
+          onBackChange={handleBackChange}
         />
       )}
 
@@ -52,6 +57,7 @@ const Form = () => {
           weather={weather}
           onWeatherChange={handleWeatherChange}
           onNextChange={handleNextChange}
+          onBackChange={handleBackChange}
         />
       )}
 
@@ -60,6 +66,7 @@ const Form = () => {
           money={money}
           onMoneyChange={handleMoneyChange}
           onNextChange={handleNextChange}
+          onBackChange={handleBackChange}
         />
       )}
 
@@ -68,11 +75,18 @@ const Form = () => {
           dream={dream}
           onDreamChange={handleDreamChange}
           onNextChange={handleNextChange}
+          onBackChange={handleBackChange}
         />
       )}
 
       {next === 6 && (
-        <Summary name={name} weather={weather} money={money} dream={dream} />
+        <Summary
+          name={name}
+          weather={weather}
+          money={money}
+          dream={dream}
+          onBackChange={handleBackChange}
+        />
       )}
     </section>
   );
