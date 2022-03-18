@@ -50,7 +50,7 @@ input {
   border-radius: 30px;
   color: #a66d06;
   padding: 13px;
-  margin: 20px 10px 10px 0;
+  margin: 40px 10px 10px 0;
   -webkit-appearance: none;
 }
 
@@ -69,6 +69,8 @@ p {
   padding: 20px;
   text-align: center;
   background: #f2efe6e8;
+  height: 450px;
+  margin-top: 100px;
 }
 
 .header-title {
@@ -87,8 +89,13 @@ ul {
 }
 
 /* MEDIA QUERY FOR TABLET */
-/* @media (min-width: 801px) {}
-  /* CONTENT HERE */
+@media (min-width: 801px) {
+  .form-wrapper {
+    width: 400px;
+    height: 450px;
+  }
+}
+/* CONTENT HERE */
 
 /* MEDIA QUERY FOR DESKTOP */
 /* @media (min-width:1281px) {}
