@@ -20,13 +20,6 @@ code {
     monospace;
 }
 
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
 .letter-container {
   background-image: url(./assets/letter2.png);
   background-repeat: no-repeat;
@@ -45,14 +38,12 @@ code {
 
 .form h1 {
   font-size: 70px;
-  font-weight: 700;
   padding-top: 50px;
 }
 
 .form p {
   font-size: 40px;
   margin-top: 20px;
-  
 }
 
 .form h2 {
@@ -64,14 +55,6 @@ code {
   display: flex;
   flex-direction: column;
   margin: -50px 70px;
-  justify-content: center;
-  align-items: center;
-}
-
-.wand-input-container {
-  display: flex;
-  flex-direction: column;
-  margin: 0 70px;
   justify-content: center;
   align-items: center;
 }
@@ -91,9 +74,6 @@ code {
   background: none;
   font-size: 50px;
   font-family: 'Tangerine', cursive;
-  
- 
-
 }
 
 .btn {
@@ -115,13 +95,6 @@ code {
 .radio-button-text  {
   font-size: 50px;
   margin: 20px;
-  
-
-}
-
-
-.wands:focus {
-  filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .7));
 }
 
 .wand-button-text {
@@ -129,15 +102,12 @@ code {
   font-family: 'Caveat', cursive;
 }
 
-.image-container img {
-  width: 300px;
- 
+.radio-button {
+  display: block;
 }
 
-.image-container p {
-  font-size: 30px;
-  font-weight: 700;
-  margin: 0px;
+.image-container img {
+  width: 300px;
 }
 
 .overview {
@@ -151,26 +121,21 @@ code {
 .answer-overview {
   font-size: 40px;
   font-weight: 700;
-  text-align: left;
   margin: 30px 0;
   font-family: 'Caveat', cursive;
-}
-
-.radio-button {
-  display: block;
-  justify-content: center;
-  
 }
 
 .wands {
   width: 300px;
 }
 
-label {
-  font-size: 25px;
-  font-family: 'Caveat', cursive;
+.answer-overview span {
+  font-size: 20px;
 }
 
+.h1-overview {
+  text-align: center;
+}
 
 /* BIG DESKTOP */
 @media (min-width:1624px) {
@@ -190,12 +155,9 @@ label {
     height: 100vh;
   }
     
-  
-
   footer {
     font-family:'Times New Roman', Times, serif;
     background-image: url(./assets/footer.png);
-    background-repeat: no-repeat;
     height: 10vh;
     margin-top: -100px;
     font-size: 25px;
@@ -221,13 +183,22 @@ label {
   }
   
   .letter-container {
-   width: 150vw;
-   height: 100vh;
-    background-position: 50%;
+    width: 150vw;
     transform: scale(0.7);
   }
 
   .form {
     width: 100vw;
+  }
+  
+  footer {
+    font-family:'Times New Roman', Times, serif;
+    background-image: url(./assets/footer.png);
+    height: 10vh;
+    margin-top: 150px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }

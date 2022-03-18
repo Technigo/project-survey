@@ -8,8 +8,6 @@ import Question3 from './Question3'
 import Overview from './Overview'
 import Footer from './Footer'
 
-
-
 const Form = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
@@ -20,8 +18,7 @@ const Form = () => {
  
   const onStepChange = () => {
     setStep(step + 1)
-}
-
+  }
   const onNameChange = (event) => {
     setName(event.target.value)
   }
@@ -59,7 +56,6 @@ const Form = () => {
     {step === 3 && (
          <Question2
          pet={pet}
-         house={house}
          onPetChange={onPetChange}
          onStepChange={onStepChange}
          />
@@ -75,10 +71,10 @@ const Form = () => {
 
     {step === 5 && (
          <Overview
-         wand={wand}
          name={name}
          house={house}
          pet={pet}
+         wand={wand}
          />
       )}
       <Footer />

@@ -8,76 +8,43 @@ import wand4 from "../assets/wand4.png"
 
 const Question3 = ({wand, onWandChange, onStepChange}) => {
     
-// const wands = ['1: Wand: Maple Wood with a dragon heartstring core, 12 ½', 
-// '2: Black Walnut wood with a phoenix feather core, 13', 
-// 'Pine wood with a unicorn hair core, 10 ¾', 
-// 'Ebony wood, Unicorn hair core, 11 1/2']
-
+const wands = [
+'Maple Wood with a dragon heartstring core, 12 ½', 
+'Black Walnut wood with a phoenix feather core, 13', 
+'Pine wood with a unicorn hair core, 10 ¾', 
+'Ebony wood, Unicorn hair core, 11 1/2']
 
     return (
       <div>
-        <section className="container">
-          <article className="letter-container">
-
+        
+        <article className="letter-container">
         <form className="form" onSubmit={event => event.preventDefault()}>
-          <h1>Choose your wand?</h1>
-           
-         
-                 <div className="wand-input-container">
-                  <label key={wand} >Maple Wood with a dragon heartstring core, 12 ½</label>
-                    <input
-                      className="wands"
-                      type="radio"
-                      src={wand1}
-                      value={wand}
-                      onChange={onWandChange}
-                      
-                    ></input>
-                     <img className="wands" src={wand1} alt=""/>
-                  
+          <h1>Choose your wand</h1>
 
-                    <label key={wand}>Black Walnut wood with a phoenix feather core, 13</label>
+            {wands.map(wand => (
+                 <label className="wand-button-text" key={wand}>
                     <input
-                      className="wands"
-                      type="radio"
-                      src={wand2}
-                      value={wand}
-                      onChange={onWandChange}
-                    ></input>
-                     <img className="wands" src={wand2} alt=""/>
-
-                    
-
-                    <label key={wand}>Pine wood with a unicorn hair core, 10 ¾</label>
-                    <input
-                      className="wands"
+                      className="radio-button"
                       type="radio"
                       value={wand}
                       onChange={onWandChange}
-                    ></input>
-                     <img className="wands" src={wand3} alt=""/>
+                       >
+                    </input>
+                    {wand}
+                </label>
+                    ))}
 
-                    
-
-                    <label key={wand}>Ebony wood, Unicorn hair core, 11 1/2</label>
-                    <input
-                      className="wands"
-                      name="wand"
-                      type="radio"
-                      src={wand4}
-                      value={wand}
-                      onChange={onWandChange}
-                      
-                    ></input>
-                     <img className="wands" src={wand4} alt=""/>
-
-                               
-                    <button className='btn' type="button" onClick={onStepChange}>Next</button>
-                    </div> 
+          <div className="image-container">
+            <img src={wand1} alt="Wand 1"/>    
+            <img src={wand2} alt="Wand 2"/>   
+            <img src={wand3} alt="Wand 3"/>      
+            <img src={wand4} alt="Wand 4"/>    
+          </div>
+          
+          <button className='btn' type="button" onClick={onStepChange}>Next</button>
 
         </form>
         </article>
-        </section>
       </div>
     )
   }
