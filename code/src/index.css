@@ -137,10 +137,12 @@ ul {
 
 .radiobuttons {
   font-size: 16px;
+  display: -webkit-box;
 }
 
-.radiobuttons > input {
+.radiobuttons > label {
   text-align: left;
+  font-size: 16px;
 }
 
 /* MEDIA QUERY FOR TABLET */
