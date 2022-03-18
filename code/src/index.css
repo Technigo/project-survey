@@ -96,6 +96,7 @@ body {
 .input[type='range']::ms-fill-lower,
 .input[type='range']::ms-fill-upper {
   background: transparent;
+  opacity: 0.4;
   height: 30px;
 }
 
