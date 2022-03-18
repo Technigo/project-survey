@@ -68,7 +68,7 @@ p {
   border-radius: 20px;
   padding: 20px;
   text-align: center;
-  background: #f2efe6e8;
+  background: #f2efe6f2;
   height: 450px;
   margin-top: 40px;
 }
@@ -90,6 +90,19 @@ ul {
 
 .descriptive-text {
   color: grey;
+  font-size: 17px;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 50px;
+  background: #f2efe6f2;
+  border: 1px solid #d79500;
+  border-radius: 20px;
+  padding: 7px;
+}
+
+.footer > p {
   font-size: 17px;
 }
 

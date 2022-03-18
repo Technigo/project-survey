@@ -4,6 +4,7 @@ import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import Summary from './Summary'
+import Footer from './Footer'
 
 
 const Form = () => {
@@ -35,7 +36,7 @@ const onEmailInputChange = event => {
 }
 
 return (
-  
+  <>
 <form className="form-wrapper">
 
     { /* INTRO PAGE */ }
@@ -76,7 +77,8 @@ return (
         )}
 
 </form>
-
+<Footer />
+</>
 )}
 
 export default Form
