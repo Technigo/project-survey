@@ -1,0 +1,9 @@
+.container {
+  display: grid;
+  padding: 15px;
+  grid-template-columns: 1fr;
+}
+
+.questionText {
+  font-size: 20px;
+}

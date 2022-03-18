@@ -1,3 +1,8 @@
+.submitMessage {
+  font-size: 20px;
+	margin-bottom: 10px;
+}
+
 ul {
 	list-style-type: '🧂';
 	padding-left: inherit;
@@ -6,7 +11,7 @@ ul {
 }
 
 li {
-	padding-left: 0.7rem;
-	padding-bottom: 0.7rem;
+	padding-left: 10px;
+	padding-bottom: 10px;
 	text-transform: capitalize;
 }

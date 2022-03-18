@@ -1,8 +1,8 @@
-input[type="text"],
+input[type="text"], 
 select {
   width: 100%;
-  margin: 10px auto;
-  padding: 0.5rem 0.25rem;
+  margin: 16px auto;
+  padding: 8px;
   color: var(--main);
   background-color: white;
   border: none;
@@ -10,8 +10,7 @@ select {
 }
 
 input[type="radio"] {
-  margin-right: 0.5rem;
-  margin-bottom: 1rem;
+  margin: 10px;
 }
 
 select {
