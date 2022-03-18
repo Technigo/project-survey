@@ -1,4 +1,4 @@
-.button {
+button {
   margin: 10px auto;
   padding: 7px;
   width: 125px;
@@ -7,4 +7,11 @@
   border: 2px solid white;
   font-weight: bold;
   border-radius: 5px;
+}
+
+button:hover {
+  color: rgb(0, 51, 51);
+  background-color: white;
+  cursor: pointer;
+  transition: 0.3s ease-in;
 }

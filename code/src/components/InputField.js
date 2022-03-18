@@ -1,5 +1,5 @@
 import React from "react";
-import './InputField.css'
+import "./InputField.css";
 
 const InputField = ({ name, type, options, value, onChange }) => {
   switch (type) {

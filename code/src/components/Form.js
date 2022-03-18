@@ -5,29 +5,39 @@ import SubmittedView from "components/SubmittedView";
 
 const questions = [
   {
+    id: "preference",
+    question_text: "What is your dietary preference",
+    answer_type: "select",
+    options: [
+      { value: "eat everything", label: "Eat everything" },
+      { value: "pescatarian", label: "Pescatarian" },
+      { value: "vegetarian", label: "Vegetarian" },
+      { value: "vegan", label: "Vegan" },
+    ],
+  },
+  {
     id: "dish",
     question_text: "If you could only eat one dish for the rest of your life, what would it be?",
     answer_type: "text",
   },
   {
     id: "cuisine",
-    question_text: "Which of the following cuisines are you craving?",
+    question_text: "Which of the following cuisines are you craving most?",
     answer_type: "radio",
     options: [
-      { value: "mexican", label: "Mexican" },
-      { value: "japanese", label: "Japanese" },
-      { value: "persian", label: "Persian" },
-      { value: "swedish", label: "Swedish" },
+      { value: "Persian cuisine", label: "Persian" },
+      { value: "Mexican cuisine", label: "Mexican" },
+      { value: "Japanese cuisine", label: "Japanese" },
+      { value: "any cuisine", label: "Anything goes" },
     ],
   },
   {
     id: "herbs",
-    question_text: "What herb is superior?",
+    question_text: "Which of these herbs is superior?",
     answer_type: "select",
     options: [
-      { value: "basil", label: "Basil" },
       { value: "coriander", label: "Coriander" },
-      { value: "parsley", label: "Parsley" },
+      { value: "basil", label: "Basil" },
       { value: "mint", label: "Mint" },
       { value: "dill", label: "Dill" },
     ],
@@ -69,7 +79,7 @@ const Form = () => {
   }
 
   return (
-    <form onSubmit={handleOnSubmit}>
+    <form onSubmit={handleOnSubmit} className="container">
       <Question {...questions[index]} inputValue={inputValue} onChange={handleInputChange} />
       <Button label={buttonLabel} />
     </form>
