@@ -14,7 +14,7 @@ const Form = () => {
 const [nameInput, setNameInput] = useState('')
 const [surnameInput, setSurnameInput] = useState('')
 const [emailInput, setUserEmailInput] = useState('')
-const [checked, handleChange] = useState('')
+const [checked, handleChange] = useState([])
 
 const [page, setPage] = useState(0)
 

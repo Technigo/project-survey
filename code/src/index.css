@@ -16,7 +16,7 @@ body {
 
 h1 {
   font-family: "Lobster", sans-serif;
-  font-size: 50px;
+  font-size: 45px;
   text-align: center;
   margin-bottom: 22px;
   background: linear-gradient(
@@ -67,7 +67,7 @@ input {
 
 p,
 label {
-  font-size: 19px;
+  font-size: 18px;
 }
 
 p {
@@ -99,9 +99,13 @@ ul {
   text-transform: capitalize;
 }
 
+.emailadress {
+  text-transform: lowercase;
+}
+
 .descriptive-text {
   color: grey;
-  font-size: 17px;
+  font-size: 16px;
 }
 
 .footer {
@@ -115,7 +119,20 @@ ul {
 }
 
 .footer > p {
-  font-size: 17px;
+  font-size: 15px;
+  color: grey;
+  padding-top: 4px;
+}
+
+.summary-text {
+  text-align: left;
+  margin-top: 20px;
+}
+
+.summary-text > p {
+  font-size: 15px;
+  padding-inline-start: 43px;
+  padding-top: 3px;
 }
 
 /* MEDIA QUERY FOR TABLET */
