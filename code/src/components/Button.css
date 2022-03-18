@@ -3,8 +3,8 @@ button {
   width: 140px;
   margin: 10px auto;
   padding: 7px;
-  color: var(--main);
-  background-color: white;
+  color: white;
+  background-color: var(--main);
   border: 3px solid white;
   border-radius: 5px;
 }
@@ -13,16 +13,6 @@ button:disabled {
   opacity: 0.6;
   -moz-opacity: 0.6;
   -webkit-opacity: 0.6;
-  color: white;
-  background-color: var(--main);
-  border: 3px solid white;
-}
-
-button:enabled {
-  opacity: 1;
-  -moz-opacity: 1;
-  -webkit-opacity: 1;
-  transition: all 0.3s ease-in-out;
 }
 
 @media screen and (min-width: 1200px) {
