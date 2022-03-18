@@ -16,7 +16,7 @@ const SecondQuestion = ({
         <label htmlFor="email">What's your email address?</label>
 
         <input
-        className="question"
+        id="name"
         type="text"
         placeholder="Email"
         value={emailInput}
