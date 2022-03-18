@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Checkbox = () => {
+const Checkbox = ({nextPage}) => {
 
     const [checked, setChecked] = React.useState(false)
 
@@ -44,6 +44,8 @@ const Checkbox = () => {
                 </label>
             </li>
         </ul>
+
+        <button class="btn" type="submit" onClick={nextPage}> Next question!</button>
 
         </div>
 
