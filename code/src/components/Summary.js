@@ -9,7 +9,7 @@ const Summary = ({
 }) => {
 
 return (
-<h2> 
+<p className="ghost-story-text"> 
     It was a dark, dark night. {username} tried to restrain the feeling of panic 
     when walking into the {location}. Lesson learned never again to listen to {ageGroup},
      but they paid well this time and were in charge. 
@@ -18,7 +18,7 @@ return (
     them silently disappear and all was still. 
     A vibration from the ground ripped the stillness and floor apart and {numberTwo} large 
     creatures dragged their way up from the ground.  
-</h2>
+</p>
 )
 }
 

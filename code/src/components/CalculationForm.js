@@ -33,11 +33,13 @@ const ageChange = (event) => {
     setAgeGroup(event.target.value);
 };
 
+//./src/components/CalculationForm.js
+//Line 40:13:  Emojis should be wrapped in <span>, have role="img", and have an accessible description with aria-label or aria-labelledby  jsx-a11y/accessible-emoji
 
 
     return (
         <section>
-            <h1>Ghost story 👻 writer</h1>
+            <h1 className="title-text">Ghost story 👻 writer</h1>
           
             <FirstQuestion 
                 username={username} 

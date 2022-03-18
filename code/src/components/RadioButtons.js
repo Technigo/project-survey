@@ -1,12 +1,15 @@
 import React from "react";
 
-const ageGroups = ["that youngish overprized online fortuneteller", "that ancient excentric history-loving librarian", "mom"];
+const ageGroups = 
+[" that youngish overprized online fortuneteller",
+ " that ancient excentric history-loving librarian", 
+ " mom"];
 
  const RadioButtons = ({ageGroup, ageChange }) => {
 
   return (
-    <form>
-      Our boss's age group:
+    <form className="radio-options">
+      <p className="question-text">Our boss is:</p>
       {ageGroups.map((group) => (
         <label key={group}>
           <input

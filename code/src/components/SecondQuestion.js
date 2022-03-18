@@ -10,8 +10,10 @@ const SecondQuestion = ({
 return (
     <>
     <div>
-    <label htmlFor="numberOne">imaginary monsters</label>
-    <input
+    <label htmlFor="numberOne">
+        <p className="question-text">imaginary monsters</p>
+        </label>
+    <input className="choice-boxes"
      id="numberOne"
         type="number"
         value={numberOne}
@@ -19,8 +21,10 @@ return (
         />
         </div>
         <div>
-          <label htmlFor="numberTwo">real monsters</label>
-    <input
+          <label htmlFor="numberTwo">
+          <p className="question-text">real monsters</p>
+          </label>
+    <input className="choice-boxes"
      id="numberTwo"
         type="number"
         value={numberTwo}
