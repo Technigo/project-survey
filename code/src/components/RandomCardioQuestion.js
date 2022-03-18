@@ -25,7 +25,7 @@ const RandomCardioQuestion = ({
 
   return (
     <form className="form radio">
-      <label>
+      <label tabindex='0'>
       Do you want pick a random cardio?
         <span className="radio-input">
           <input

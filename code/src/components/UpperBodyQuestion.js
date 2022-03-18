@@ -7,7 +7,7 @@ const UpperBodyQuestion = ({
 }) => {
 	return (
 		<form className='form'>
-			<label>
+			<label tabindex='0'>
         What you want to do for train your upper body? You can choose option depends what you can use for training
         <select id="upperBody" value={upperBody} onChange={onUpperBodyChange}>
           <option>

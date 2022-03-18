@@ -7,7 +7,7 @@ const TimeQuestion = ({
 }) => {
 	return (
 		<form className='form'>
-			<label>
+			<label tabindex='0'>
         How long you want your cardio exersice takes?
         <select id="time" value={time} onChange={onTimeChange}>
           <option>

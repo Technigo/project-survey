@@ -7,7 +7,7 @@ const LowerBodyQuestion = ({
 }) => {
 	return (
 		<form className='form'>
-			<label>
+			<label tabindex='0'>
         What you want to do for train your lower body? You can choose option depends what you can use for training
         <select id="lowerBody" value={lowerBody} onChange={onLowerBodyChange}>
           <option>
