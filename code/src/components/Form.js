@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import Question from "components/Question";
 import Button from "components/Button";
 import SubmittedView from "components/SubmittedView";
+import "./Form.css";
 
 const questions = [
   {
