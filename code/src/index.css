@@ -5,7 +5,15 @@
   --main-accent-color: #BBB807;
   --main-accent-color-dark: #9B9915;
   --sec-accent-color: #F4B1CA;
+  --border-width: 8px;
 }
+
+@media screen and (min-width: 768px) {
+  :root {
+    --border-width: 22px; 
+  }
+}
+
 
 /* Reset default values such as margin, padding and box-sizing and increase the resolution of the text */
 * {
@@ -25,7 +33,20 @@ body {
   height: 100vh;
   font-family: "poppins";
   background-color: var(--main-accent-color);
-  border: solid var(--sec-accent-color) 8px;
+  border: solid var(--sec-accent-color) var(--border-width);
+}
+
+/* Hiding class, making content visible only to screen readers but not visually */
+/* "sr" meaning "screen-reader" */
+
+.sr-only:not(:focus):not(:active) {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
 }
 
 /* General text styling */
@@ -94,25 +115,13 @@ h1 {
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
+  align-items: center;
   padding-top: 40%;
   height: 100%;
 }
 
-#summary .head-section {
+#summary.head-section {
   padding-top: 33%;
-}
-
-#four .head-section {
-  margin-left: 0;
-  align-items: baseline;
-}
-
-#four .question-text {
-  text-align: left;
-}
-
-#four .answer-text {
-  text-align: left;
 }
 
 /* Styling of summary component */
@@ -230,11 +239,17 @@ select:hover {
 }
 
 .radio-button-form {
+  width: 250px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
+  background-color: var(--main-accent-color-dark);
+  border-radius: 10px;
+  padding: 10px;
+
 }
+
 
 .radio-button {
   margin-right: 10px;
@@ -267,10 +282,6 @@ select:hover {
 
 @media screen and (min-width: 1024px) {
 
-  body {
-    border: solid var(--sec-accent-color) 22px;
-  }
-
   .mantra {
     right: 0;
     bottom: 3rem;
@@ -290,6 +301,11 @@ select:hover {
     width: 50%;
   }
 
+  #summary.head-section {
+    padding-top: 16%;
+    width: 50%;
+  }
+
   .question-text {
     font-size: 2vw;
   }
@@ -301,6 +317,15 @@ select:hover {
   .progress-bar-full {
     width: 30%;
   }
+
+  .foo {
+    position: absolute;
+    width: 100%;
+    bottom: var(--border-width);
+    left: 0;
+    padding: 20px;
+  }
+  
   
 }
 
@@ -308,12 +333,13 @@ select:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
 
-  body {
-    border: solid var(--sec-accent-color) 22px;
-  }
-
   .mantra {
     bottom: 4rem;
+  }
+
+  #summary.head-section {
+    padding-top: 30%;
+    width: 50%;
   }
 
   .head-section {

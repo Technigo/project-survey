@@ -10,11 +10,13 @@ const ProgressBar = ({step}) => {
   }
   
   return (
+    <div className="foo">
     <div className="progress-wrapper">
-      <div className="progress-bar-full" style={{ width: "50%" }}>
+      <div className="progress-bar-full" >
         <div className="progress-bar-process" style={{ width:`${percentage(step)}%` }}></div>
       </div>
       <span className="small-text">step {step} out of 4</span>
+    </div>
     </div>
   )}
 

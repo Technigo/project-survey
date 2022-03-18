@@ -9,8 +9,8 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
         <p className="thin-intro-text">horribly hard question but..</p>
         <h2 className="question-text">Best song ever heard is?</h2>
 
-        <form>
-          <label htmlFor="musicInput"></label>
+        <form onSubmit={onNextStepChange}>
+          <label htmlFor="musicInput" className="sr-only">Best song:</label>
           <input
               id="musicInput"
               className="input-field"
@@ -23,7 +23,6 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
         <div className="buttons-wrapper">
           <button
             type="submit"
-            aria-label="Go back"
             onClick={onStepBackChange}
             className="btn back-btn"
           >

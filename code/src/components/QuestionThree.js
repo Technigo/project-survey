@@ -8,8 +8,8 @@ const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange
         <h2 className="answer-text">Mhm {musicInput},</h2>
         <p className="thin-intro-text">SOUNDS GOOD!</p>
         <h2 className="question-text">What food makes you the happiest self?</h2>
-        <form>
-          <label htmlFor="selectOptionInput"></label>
+        <form onSubmit={onNextStepChange}>
+          <label htmlFor="selectOptionInput" className="sr-only">Favourite food:</label>
           <select
             className= "dropdown"
             onChange={onSelectOptionInputChange}
@@ -40,7 +40,6 @@ const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange
         <div className="buttons-wrapper">
           <button
             type="submit"
-            aria-label="Go back"
             onClick={onStepBackChange}
             className="btn back-btn"
           >

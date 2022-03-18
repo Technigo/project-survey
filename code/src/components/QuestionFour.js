@@ -8,9 +8,9 @@ const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNext
       <section className="head-section" id="four">
         <h2 className="answer-text">Mmm {selectOptionInput} is tasty!</h2>
         <h2 className="question-text">Drink that boost your mood?</h2>
-        <form className="radio-button-form">
+        <form className="radio-button-form" onSubmit={onNextStepChange}>
           {drinksArray.map(drinks => (
-            <label className="radio-label" key={drinks} htmlFor={drinks}>
+           <label className="radio-label" key={drinks} htmlFor={drinks}>
               <input
                 className="radio-button"
                 id= {drinks}
@@ -22,11 +22,11 @@ const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNext
               {drinks}
             </label>
           ))}
+  
         </form>
         <div className="buttons-wrapper">
             <button
               type="submit"
-              aria-label="Go back"
               onClick={onStepBackChange}
               className="btn back-btn"
             >
