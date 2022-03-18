@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This a survey app made with React. I wanted to make this survey as generic as possible so that you can add the questions you'd like to.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+So with that in mind I created a json file with the questions, answer alternatives and the type of answer you would like (checkbox, input field, dropdown or anything else). This makes it possible to add any questions and answer alternatives you want to have in your survey.
 
-## The problem
+I made one component each for the different input types you could choose for the answers, for example input text, dropdown and radio buttons. (Would be nice with a slider too if I have the time.)
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I would really like to continue working on this project after the bootcamp to make it even more usable. Like for example it would be nice if you would be able to choose the text on the submit button, or personalize the summary page. That could be added too in the json file.
 
-## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
