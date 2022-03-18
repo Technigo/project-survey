@@ -1,13 +1,47 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Signika', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: yellow;
+
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Signika', sans-serif;
+  color: black;
+}
+
+h1 {
+  font-weight: bolder;
+  text-align: center;
+  color: black;
+  
+}
+
+input {
+  padding: 5px;
+  font-size: 24px;
+}
+
+button {
+  border-style: double;
+  text-decoration: solid;
+}
+
+.radiobutton {
+  color: blue;
+}
+
+label {
+  display: block;
+}
+
+.summary {
+  font-size: large;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
 }

@@ -4,31 +4,32 @@ import FirstQuestion  from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
 import Overview from './Overview';
+// import Footer from './Footer';
 
 const Form = () => {
-  const [nameInput, setNameInput] = useState('');
-  const [step, setStep] = useState(1);
+  const [nameInput, setNameInput] = useState('')
+  const [step, setStep] = useState(1)
  // const [showResult, setShowResult] = useState(false);
-  const [where, setWhere] = useState('hos mig');
+  const [where, setWhere] = useState('')
   const [days, setDayChange] = useState('')
 
   const onNameInputChange = (event) => {
     setNameInput(event.target.value)
   };
 
-  const onwhereChange = (place) => {
-      setWhere(place)
+  const onWhereChange = (event) => {
+      setWhere(event.target.value)
   };
 
-  const onDayChange = (days) => {
-    setDayChange(days)
+  const onDayChange = (event) => {
+    setDayChange(event.target.value)
   }
 
-  const onStepChange = (step) => {
+  const onStepChange = () => {
       setStep(step + 1);
   };
 
-if (step === 1) {
+// if (step === 1) {
   return (    
     <div>
         {step === 1 && (
@@ -47,23 +48,23 @@ if (step === 1) {
     )}
       {step === 3 && (
       <ThirdQuestion
-        setWhere={where}
-        onwhereChange={onwhereChange}
+        where={where}
+        onWhereChange={onWhereChange}
         onStepChange={onStepChange}
         />
     )}
       {step === 4 && (
       <Overview nameInput={nameInput}
-        setDay={days}
+        days={days}
         onDayChange={onDayChange}
-        setWhere={where}
-        onwhereChange={onwhereChange}
+        where={where}
+        onWhereChange={onWhereChange}
         onStepChange={onStepChange}
         />
     )}
     </div> 
   );
 };
-};
+// };
 
 export default Form;
