@@ -32,7 +32,7 @@ const QuestionTwo = ({nameInput, selectValue, handleSelectOptionChange, onStepCh
         <select
         id="select-option"
         value={selectValue} 
-        onChange={handleSelectOptionChange}
+        onChange={handleSelectOptionChange} 
         >
         {options.map((option) => (
          <option key={option.value} value={option.value}>{option.label}</option>   

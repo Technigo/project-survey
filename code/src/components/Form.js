@@ -30,7 +30,6 @@ function Form() {
         <>
             {step === 0 && (
                 <Intro onStepChange={onStepChange} />)}
-                
             {step === 1 && (
                 <QuestionOne
                     nameInput={nameInput}

@@ -19,8 +19,8 @@ const QuestionOne = ({nameInput, handleNameInputChange, onStepChange, onStepBack
         />
         </form>
         <div className="buttons">
-        <button type="submit" onClick={onStepBackChange} href="#two" className="btn">Go back</button>
-                <button type="submit" onClick={onStepChange} href="#two" className="btn">Next</button>
+                <button type="submit" onClick={onStepBackChange} href="#one" className="btn">Go back</button>
+                <button type="submit" onClick={onStepChange} href="#one" className="btn">Next</button>
             </div>
 
         </section>

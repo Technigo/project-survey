@@ -19,6 +19,7 @@ const QuestionFour = ({radioInput2, handleRadioInputChange2, onStepChange, onSte
                     value={radioValue} 
                     onChange={handleRadioInputChange2 }
                     checked={radioInput2 === radioValue}
+                    required
                 />
                 {radioValue}
             </label>

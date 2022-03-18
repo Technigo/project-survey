@@ -22,7 +22,7 @@ code {
  /* ----FONTS---- */
 
 h1{
-  font-size: 40px;
+  font-size: 35px;
   font-family:  Helvetica, sans-serif;
   font-style: light;
   color: white;
@@ -60,8 +60,6 @@ a {
 
 /* ----MAIN STYLING---- */
 
-
-
 .section {
   display: grid;
   align-self: center;
@@ -75,10 +73,9 @@ a {
   flex-direction: column;
   border-radius: 12px;
   font-size: 16px;
-  margin: 20px 10px;
+  margin: 10px 10px;
   color: white;
 }
-
 
 input {
   width: 30%;
@@ -97,7 +94,7 @@ input {
 
 .radio-select {
   width: 15px;
-  margin: 20px 5px 0px 0px;
+  margin: 10px 5px 10px 0px;
 }
 
 
@@ -110,7 +107,6 @@ select {
   padding: 0 1rem 0 1rem;
 }
 
-
 .btn {
   align-self: center;
   border-radius: 24px;
@@ -119,9 +115,9 @@ select {
   height: 30px;
   cursor: pointer;
   position: relative;
-  margin: 10px 10px;
-
+  margin: 20px 10px;
 }
+
 /*----BACKGROUND ANIMATION---- */
 
 .circle{
@@ -156,22 +152,97 @@ select {
     transform: scale(0.8);
   }
 
-
-  footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    padding: 50px;
-    background-color: lightpink;
-    color: white;
-    text-align: center;
-  }
 }
 
 /* ----TABLET---- */
 
 @media (min-width: 768px) {
 
+  .section {
+    display: grid;
+    align-self: center;
+    max-width: 700px;
+    margin: 20% 20%;
+    padding-top: 2rem;
+  }
+
+
+/*----BACKGROUND ANIMATION---- */
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 10s infinite;
+  z-index: -1;
+  clip: rect(auto, auto, auto, auto);
+}
+
+
+.xxlarge {
+  width: 600px;
+  height: 600px;
+  left: 90px;
+  top: 15%;
+  background-color: rgb(39, 150, 134);
+}
+
+h1{
+  font-size: 40px;
+}
+
+.btn {
+  border-radius: 24px;
+  width: 80px;
+  height: 30px;
+  margin: 10px 10px;
+}
+
+}
+
+/* ----COMPUTER---- */
+
+
+@media (min-width: 1200px) {
+
+  .section {
+    display: grid;
+    align-self: center;
+    max-width: 1000px;
+    margin: 10% 30%;
+    padding-top: 2rem;
+  }
+
+
+/*----BACKGROUND ANIMATION---- */
+
+.circle{
+  position: absolute;
+  border-radius: 50%;
+  background: white;
+  animation: ripple 10s infinite;
+  z-index: -1;
+  clip: rect(auto, auto, auto, auto);
+}
+
+
+.xxlarge {
+  width: 800px;
+  height: 800px;
+  left: 150px;
+  top: 10%;
+  background-color: rgb(39, 150, 134);
+}
+
+h1{
+  font-size: 50px;
+}
+
+.btn {
+  border-radius: 24px;
+  width: 80px;
+  height: 30px;
+  margin: 10px 10px;
+}
 
 }
