@@ -3,7 +3,7 @@ import React from 'react'
 const Secondquestion = (props) => {
 
   return (
-    <div className='section'>
+    <section className='question-section'>
        <label htmlFor='personNumber'>How many guest:</label>
        <select 
             id='personNumber'
@@ -14,7 +14,7 @@ const Secondquestion = (props) => {
                 <option value="2">2 person</option>
                 <option value="3">3 person</option>
         </select>
-    </div>
+    </section>
   )
 }
 

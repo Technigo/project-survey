@@ -4,11 +4,12 @@ const Thirdquestion = (props) => {
     const ageGroups = ['0-18','19-30','30+']
 
   return (
-        <div className="section">
-        <label htmlFor='name'>Guest age group!</label>
+        <section className="question-section">
+        <label htmlFor='name'>Guest age group:</label>
         {ageGroups.map((agegroups,key) => 
-        <label htmlFor="ageGroup" key={agegroups}>
-        <input 
+        <label htmlFor="ageGroup" key={agegroups} className='agegroup-label'>
+        <input
+            className='agegroup-input' 
             id="ageGroup"
             type = 'radio' 
             value={agegroups}
@@ -18,7 +19,7 @@ const Thirdquestion = (props) => {
         {agegroups}
         </label>
         )}
-        </div>
+        </section>
         )
         }
 

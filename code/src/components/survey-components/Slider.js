@@ -3,7 +3,7 @@ import React from 'react'
 const Slider = (props) => {
     
   return (
-    <div className='section'>
+    <section>
     <div className="slidecontainer">
     <input 
         type="range" 
@@ -15,7 +15,7 @@ const Slider = (props) => {
         id="myRange"
         />
         </div>
-        </div>
+        </section>
   )
 }
 

@@ -3,7 +3,7 @@ import React from 'react'
 const Firstquestion = (props) => {
 
   return (
-      <div className='section'>
+      <section className='question-section'>
        <label htmlFor='name'>Enter your name: </label>
         <input
            id='name'
@@ -11,7 +11,7 @@ const Firstquestion = (props) => {
            value={props.name}
            onChange={(e) => props.setName(e.target.value)}
         />
-    </div>
+    </section>
   )
 }
 
