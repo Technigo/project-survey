@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Summary = ({name, ageGroup, bands, shirtColor, restart}) => {
+const Summary = ({name, amountOfBands, bands, shirtColor, restart}) => {
     
 
 // if (age === "0-17") {
@@ -11,15 +11,17 @@ const Summary = ({name, ageGroup, bands, shirtColor, restart}) => {
 
     return (
         <article>
-            <div>
+            <div className="container">
 
-                <p>Hello {name}, you are {ageGroup} and you are going to see {bands}. 
+                <p>Hello {name}, you are {amountOfBands} and you are going to see {bands}. 
                 You will recieve a shirt: {shirtColor}</p>
-            </div>
+            
 
-            <button className="restart"
-            onClick= {restart}
-            >Go back to start</button>
+                <button className="restart"
+                onClick= {restart}
+                >Go back to start</button>
+
+            </div>
         </article>
 
 

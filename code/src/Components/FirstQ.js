@@ -4,7 +4,7 @@ const FirstQuestion = ({name, setName,  nextSection}) => {
     return (
         <article>
             <div className="container">
-                <label htmlFor="name">What's your name?
+                <label htmlFor="name" key="name">Please enter your name here 
                     <input 
                     type="text" 
                     name="name" 
@@ -12,7 +12,7 @@ const FirstQuestion = ({name, setName,  nextSection}) => {
                     value={name} />
                 </label> 
                 
-                <button className="next-btn"
+                <button className="next-btn" disabled={name === ""}
                 onClick= {nextSection}
                 >
                 Next question</button>

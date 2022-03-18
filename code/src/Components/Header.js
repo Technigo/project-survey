@@ -3,7 +3,7 @@ import React from 'react'
 const Header = () => {
     return (
         <header>
-            <h1>Vote for your favourite band and get a t-shirt</h1>
+            <h1>Answer our questions about music</h1>
         </header>
     )
 }

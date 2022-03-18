@@ -6,14 +6,26 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
-  background-image: url(./images/solen-feyissa-CKUXpi-7clM-unsplash.jpg); 
-  background-repeat: no-repeat;
+  background-image: url(./images/marek-piwnicki-9dbsRfvtIos-unsplash.jpg); 
   background-size: 100vh;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+button {
+  padding: 5px;
+  margin: 10px;
+  border-radius: 5px;
+  border:none;
+}
+
+button:hover {
+  box-shadow: 10px 10px 26px -7px rgba(0,0,0,0.82);
+  -webkit-box-shadow: 10px 10px 26px -7px rgba(0,0,0,0.82);
+  -moz-box-shadow: 10px 10px 26px -7px rgba(0,0,0,0.82);
 }
 
 header {
@@ -28,8 +40,14 @@ h1 {
 .container {
   width: 375px;
   margin: 0 auto;
-  background-color: #8F5A76;
+  background-color: rgb(143, 90, 118, 0.5);
+  padding: 100px;
+  border-radius: 10px;
 }
+
+/* .question-group {
+  
+}  */
 
 label {
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;

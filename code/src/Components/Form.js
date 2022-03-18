@@ -6,7 +6,7 @@ import ThirdAndFourthQuestion from './ThirdFourthQ'
 
 const Form = () => {
     const [name, setName] = useState('')
-    const [ageGroup, setAgeGroup] = useState(false)
+    const [amountOfBands, setAmountOfBands] = useState(false)
     const [bands, setBands] = useState('Korn')
     const [shirtColor, setColor] = useState([])
     
@@ -19,8 +19,8 @@ const Form = () => {
 
 
     // Arrays of objects in radio buttons and dropdown
-    const ageGroups = ["0-17", "18 and older"]                //Change to sizes?
-    const bandOptions = ['Korn', 'Mumford & Sons', 'Red Hot Chili Peppers', 'Foo Fighters', 'Rammstein' ]
+    const arrayOfBandNumbers = ["0-1", "2-4", "5 or more"]          
+    const bandOptions = ['Korn', 'Greta van Fleet', 'Red Hot Chili Peppers', 'Foo Fighters', 'Rammstein', ]
 
     const handleSubmit = (event) => {event.preventDefault()}
 
@@ -28,7 +28,7 @@ const Form = () => {
     const onCheckboxChange = (color) => {
         if (shirtColor.includes(color)) {
             const filteredShirtColor = shirtColor.filter(item => {
-                return item != color                     //If color is included it will remove it if clicked again
+                return item !== color                     //If color is included it will remove it if clicked again
             })
             setColor(filteredShirtColor)
         } else {
@@ -49,8 +49,8 @@ return (
             
             {section === 1 && (
             <SecondQuestion 
-            setAgeGroup={setAgeGroup} 
-            ageGroups={ageGroups}
+            setAmountOfBands={setAmountOfBands} 
+            arrayOfBandNumbers={arrayOfBandNumbers}
             nextSection={nextSection}
             backSection={backSection}
             />)}
@@ -73,7 +73,7 @@ return (
             {section === 3 && (
             
             <Summary name = {name} 
-            ageGroup = {ageGroup}
+            amountOfBands = {amountOfBands}
             bands = {bands}
             shirtColor={shirtColor}
             restart = {restart}
