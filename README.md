@@ -8,4 +8,4 @@ I had general issues with React and how to use state but was lucky enough to get
 
 ## View it live
 
-https://w10-state-in-react.netlify.app/
+https://w10-project-survey.netlify.app/
