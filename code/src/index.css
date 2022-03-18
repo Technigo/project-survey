@@ -76,8 +76,6 @@ h3 {
 .day,
 .time {
   font-size: 21px;
-  display: flex;
-  flex-direction: column;
 }
 
 .day label {
@@ -108,7 +106,6 @@ h3 {
 
 .section-heading {
   font-size: 36px;
-
   margin: 30px;
 }
 
@@ -120,7 +117,6 @@ h3 {
   width: 160px;
   height: 50px;
   font-size: 13px;
-
   border-radius: 50px;
   background-color: #886a63;
   color: #fff;
