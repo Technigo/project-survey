@@ -4,7 +4,7 @@ const Secondquestion = (props) => {
 
   return (
     <section className='question-section'>
-       <label htmlFor='personNumber'>How many guest:</label>
+       <label htmlFor='personNumber' tabIndex={0}>How many guest:</label>
        <select 
             id='personNumber'
             onChange={(e)=>props.setPersonNumber(e.target.value)} 

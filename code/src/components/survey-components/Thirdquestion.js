@@ -5,9 +5,9 @@ const Thirdquestion = (props) => {
 
   return (
         <section className="question-section">
-        <label htmlFor='name'>Guest age group:</label>
+        <label htmlFor='name' tabIndex={0}>Guest age group:</label>
         {ageGroups.map((agegroups,key) => 
-        <label htmlFor="ageGroup" key={agegroups} className='agegroup-label'>
+        <label htmlFor="ageGroup" key={agegroups} className='agegroup-label' tabIndex={0}>
         <input
             className='agegroup-input' 
             id="ageGroup"
@@ -15,6 +15,7 @@ const Thirdquestion = (props) => {
             value={agegroups}
             onChange={(e) => props.setAgeGroup(e.target.value)} 
             checked={props.ageGroup === agegroups}
+            tabIndex={0}
         />
         {agegroups}
         </label>

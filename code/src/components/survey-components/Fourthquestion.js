@@ -4,7 +4,7 @@ const Fourthquestion = (props) => {
 
   return (
     <section className='question-section'>
-       <label htmlFor='email'>Enter email:</label>
+       <label htmlFor='email' tabIndex={0}>Enter email:</label>
         <input
            id='email'
            type='email'

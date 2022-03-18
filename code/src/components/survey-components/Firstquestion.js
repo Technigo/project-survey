@@ -4,7 +4,7 @@ const Firstquestion = (props) => {
 
   return (
       <section className='question-section'>
-       <label htmlFor='name'>Enter your name: </label>
+       <label htmlFor='name' tabIndex={0}>Enter your name: </label>
         <input
            id='name'
            type='text'
