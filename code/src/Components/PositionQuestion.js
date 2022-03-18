@@ -1,7 +1,8 @@
 import React from 'react'
 
 export const PositionQuestion = (props) => {
-    const {positionInput, onPositionInputChange, onStepChange, onStepBackChange} = props
+    const {step, positionInput, onPositionInputChange, onStepChange, onStepBackChange} = props
+    const progress = (step/8)*100
     return(
         <div className="container">
             <label htmlFor="positionInput" className="labelStyle">What position are you interested in?</label>
@@ -23,6 +24,10 @@ export const PositionQuestion = (props) => {
                     onClick={onStepBackChange}
                     ><span className="arrow left"></span> Back</button>
                 
+            </div>
+            <div className="progress-container">
+                <div style={{width: `${progress}%`}} className="progress-value">
+                </div>
             </div>
         </div>
       )

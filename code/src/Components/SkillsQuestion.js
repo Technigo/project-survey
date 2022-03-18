@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const SkillsQuestion = (props) => {
-    const {skillsArray, onSkillsArrayChange, onStepChange, onStepBackChange} = props
-
+    const {step, skillsArray, onSkillsArrayChange, onStepChange, onStepBackChange} = props
+    const progress = (step/8)*100
 
     return(
         <div className="container">
@@ -119,6 +119,10 @@ export const SkillsQuestion = (props) => {
                     onClick={onStepBackChange}
                     ><span className="arrow left"></span> Back</button>
                 
+            </div>
+            <div className="progress-container">
+                <div style={{width: `${progress}%`}} className="progress-value">
+                </div>
             </div>
         </div>
       )

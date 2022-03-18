@@ -1,7 +1,8 @@
 import React from 'react'
 
 export const EmailQuestion = (props) => {
-    const {emailInput, onEmailInputChange, onStepBackChange, onStepChange} = props
+    const {step, emailInput, onEmailInputChange, onStepBackChange, onStepChange} = props
+    const progress = (step/8)*100
     return(
         <div className="container">
 
@@ -21,9 +22,11 @@ export const EmailQuestion = (props) => {
                 <button className="button"
                     onClick={onStepBackChange}
                     ><span className="arrow left"></span> Back</button>
-                
             </div>
-            
+            <div className="progress-container">
+                <div style={{width: `${progress}%`}} className="progress-value">
+                </div>
+            </div>
            
         </div>
       )

@@ -1,7 +1,8 @@
 import React from 'react'
 
 export const OfficeQuestion = (props) => {
-    const {officeInput, onOfficeInputChange, onStepChange, onStepBackChange} = props
+    const {step, officeInput, onOfficeInputChange, onStepChange, onStepBackChange} = props
+    const progress = (step/8)*100
     return(
         <div className="container">
             <p className="labelStyle">Which one of our offices are you interested to work?</p>
@@ -48,6 +49,10 @@ export const OfficeQuestion = (props) => {
                     ><span className="arrow left"></span> Back</button>
                 
                 </div>
+                <div className="progress-container">
+                <div style={{width: `${progress}%`}} className="progress-value">
+                </div>
+            </div>
         </div>
       )
 } 

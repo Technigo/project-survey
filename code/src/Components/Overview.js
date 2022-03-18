@@ -1,9 +1,8 @@
 import React from 'react'
 
 export const Overview= (props) => {
-    const {nameInput, emailInput, positionInput, officeInput, skillsArray, linkInput, experienceTitle, onStepBackChange} = props
-    
-   
+    const {step, nameInput, emailInput, positionInput, officeInput, skillsArray, linkInput, experienceTitle, onStepBackChange} = props
+    const progress = (step/8)*100
     return(
         <div className="container">
         <div className="overview-container">
@@ -26,6 +25,11 @@ export const Overview= (props) => {
                     ><span className="arrow left"></span>Back</button>
                 
             </div>
+            <div className="progress-container">
+                <div style={{width: `${progress}%`}} className="progress-value">
+                </div>
+            </div>
+
     </div>
       )
 } 

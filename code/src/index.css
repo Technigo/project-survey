@@ -37,23 +37,55 @@ h1{
 	-webkit-background-clip: text;
   color: transparent;
   text-align: center;
+  margin:0;
 }
 
 h2{
   line-height: 40px;
+  text-align: center;
+  margin:0;
 }
 h3{
   margin: 0;
+  margin:0;
 }
 p{
   margin: 0;
+  margin:0;
 }
 .labelStyle{
   font-size: 24px;
   font-weight: 700;
   align-self: flex-start;
 }
+/* =====PROGRESS BAR STYLES=====*/
+.progress-container{
+  width:100%;
+  height:1rem;
+  background-color: #fff;
+  display:flex;
+  align-items: center;
+  opacity: 0.8;
+  border-radius: 0.5rem;
+}
 
+.progress-value{
+  height:80%;
+  background-color:var(--red);
+  animation: load 3s normal forwards;
+  opacity: 0.8;
+  border-radius: 0.4rem;
+  margin: 0 0.1rem;
+}
+
+@keyframes load {
+  0% {
+    width:0;
+  }
+  100% {
+    width: 1;
+  }
+}
 /* =====CONTAINER STYLES=====*/
 .container{
   display: flex;
@@ -71,7 +103,7 @@ p{
 .button {
   display: flex;
   align-items: center;
-  padding: 15px 20px;
+  padding: 0.5rem;
 	font: 13px ;
 	font-weight: 900;
 	letter-spacing: 2px; 
@@ -168,8 +200,8 @@ select{
   width: 100%;
   font-size: 18px;
   padding: 5px 0;
-  border-color: #fff;
-  padding: 15px 20px;
+  border-color: #fff; 
+  padding: 0.5rem;
   border-radius: 50px;
   color:var(--red);
   font-weight: 900;
@@ -308,12 +340,38 @@ form{
 }
 
 
-/* =====OVERVIEW PAGE STYLES=====*/
-.overview-container{
-  align-items: flex-start;
+/* =====THANKS PAGE STYLES=====*/
+
+
+
+  
+.thanksText {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    text-align: center;
+    color: #fff;
 }
 
-/* =====THANKS PAGE STYLES=====*/
+.thanksText span {
+  display: inline-block;
+      animation: animate 3s linear forwards;
+      opacity: 0;
+}
+ 
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotateY(90deg);
+    filter: blur(10px);
+  }
+  
+  100% {
+    opacity: 1;
+    filter: blur(0px);
+  }
+}
 
 
 /* =====FOOTER STYLES=====*/
@@ -330,7 +388,7 @@ footer{
   font-style: italic;
 }
 
-/* =====TABLETS STYLING=====*/
+/* =====TABLETS AND DESKTOP STYLING=====*/
 @media screen and (min-width: 768px){
   .container{
     width: 500px;
@@ -340,12 +398,4 @@ footer{
   }
 }
 
-/* =====DESKTOPS STYLING=====*/
-@media screen and (min-width: 1200px){
-  .container{
-    width: 700px;
-  }
-  h1{
-    font-size: 100px;
-  }
-}
+

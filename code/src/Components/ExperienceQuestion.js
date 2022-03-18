@@ -1,8 +1,8 @@
 import React from 'react'
 
 export const ExperienceQuestion = (props) => {
-    const {experienceLevel, onExperienceLevelChange, experienceTitle, onStepChange, onStepBackChange} = props
-    
+    const {step, experienceLevel, onExperienceLevelChange, experienceTitle, onStepChange, onStepBackChange} = props
+    const progress = (step/8)*100
     return(
         <div className="container">
             <p className="labelStyle">What experience level position are you looking for?</p>
@@ -22,6 +22,10 @@ export const ExperienceQuestion = (props) => {
                     onClick={onStepBackChange}
                     ><span className="arrow left"></span> Back</button>
                 
+            </div>
+            <div className="progress-container">
+                <div style={{width: `${progress}%`}} className="progress-value">
+                </div>
             </div>
         </div>
       )

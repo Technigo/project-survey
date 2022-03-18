@@ -80,36 +80,42 @@ const onFormSubmit = (event) => {
           {step === 0 && <StartingPage 
                             onStepChange={onStepChange}
                         />}
-          {step === 1 && <NameQuestion 
+          {step === 1 &&  <NameQuestion   
+                            step = {step}
                             nameInput={nameInput} 
                             onNameInputChange={onNameInputChange} 
                             onStepChange={onStepChange}
                         />}
           {step === 2 && <EmailQuestion 
+                            step = {step}
                             emailInput={emailInput} 
                             onEmailInputChange={onEmailInputChange} 
                             onStepChange={onStepChange}
                             onStepBackChange={onStepBackChange}
                         />}
           {step === 3 && <PositionQuestion 
+                            step = {step}
                             positionInput={positionInput}
                             onPositionInputChange={onPositionInputChange} 
                             onStepChange={onStepChange}
                             onStepBackChange={onStepBackChange}
                         />}
           {step === 4 && <OfficeQuestion 
+                            step = {step}
                             officeInput={officeInput}
                             onOfficeInputChange={onOfficeInputChange} 
                             onStepChange={onStepChange}
                             onStepBackChange={onStepBackChange}
                         />}
           {step === 5 && <SkillsQuestion 
+                            step = {step}
                             skillsArray={skillsArray}
                             onSkillsArrayChange={onSkillsArrayChange}
                             onStepChange={onStepChange}
                             onStepBackChange={onStepBackChange}
                         />}
           {step === 6 && <ExperienceQuestion 
+                            step = {step}
                             experienceLevel={experienceLevel}
                             onExperienceLevelChange={onExperienceLevelChange}
                             experienceTitle = {experienceTitle}
@@ -117,12 +123,14 @@ const onFormSubmit = (event) => {
                             onStepBackChange={onStepBackChange}
                         />}
           {step === 7 && <LinkQuestion 
+                            step = {step}
                             linkInput={linkInput}
                             onLinkInputChange={onLinkInputChange}
                             onStepChange={onStepChange}
                             onStepBackChange={onStepBackChange}
                         />}
           {step === 8 && <Overview 
+                            step = {step}
                             nameInput={nameInput} 
                             emailInput={emailInput} 
                             positionInput={positionInput} 
