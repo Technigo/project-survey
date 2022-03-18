@@ -1,12 +1,11 @@
 import React, {useState} from "react"
-import Intro from './Intro'
-import QuestionOne from './QuestionOne'
-import QuestionTwo from './QuestionTwo'
-import QuestionThree from './QuestionThree'
-import QuestionFour from './QuestionFour'
-import Summary from './Summary'
-
-
+import Intro from './Intro.js'
+import QuestionOne from './QuestionOne.js'
+import QuestionTwo from './QuestionTwo.js'
+import QuestionThree from './QuestionThree.js'
+import QuestionFour from './QuestionFour.js'
+import Summary from './Summary.js'
+import ProgressBar from "./ProgressBar.js"
 
 const Form = () => {
 
@@ -16,8 +15,6 @@ const Form = () => {
   const [musicInput, setMusicInput] = useState('')
   const [selectOptionInput, setSelectOptionInput] = useState('')
   const [radioInput, setRadioInput] = useState('')
-
-  // FUNKTIONER FÖR NÄR NÅGON TRIGGAR ONCHANGE I KNAPPAR ELLER FORMULÄR
   
   const onNameInputChange = (event) => {
     setNameInput(event.target.value)
@@ -58,15 +55,21 @@ const Form = () => {
       )}
      
       {step === 1 && (
+      <>
         <QuestionOne 
           nameInput = {nameInput} 
           onNameInputChange = {onNameInputChange} 
           onStepBackChange = {onStepBackChange}
           onNextStepChange = {onNextStepChange}
         />
+         <ProgressBar
+        step={step}
+        />
+      </>
       )}
 
      {step === 2 && (
+      <>
         <QuestionTwo 
           nameInput = {nameInput} 
           musicInput = {musicInput}
@@ -74,9 +77,14 @@ const Form = () => {
           onStepBackChange = {onStepBackChange}
           onNextStepChange = {onNextStepChange}
         />
+        <ProgressBar
+        step={step}
+        />
+      </>
      )}
 
      {step === 3 && (
+      <>
         <QuestionThree 
           musicInput = {musicInput}
           selectOptionInput = {selectOptionInput}
@@ -84,9 +92,14 @@ const Form = () => {
           onStepBackChange = {onStepBackChange}
           onNextStepChange = {onNextStepChange}
         />
+        <ProgressBar
+        step={step}
+        />
+      </>
      )}
 
      {step === 4 && (
+      <>
         <QuestionFour 
           selectOptionInput = {selectOptionInput}
           radioInput = {radioInput}
@@ -94,6 +107,10 @@ const Form = () => {
           onStepBackChange = {onStepBackChange}
           onNextStepChange = {onNextStepChange}
         />
+        <ProgressBar
+        step={step}
+        />
+      </>
      )}
      
      {step === 5 && (
@@ -105,6 +122,13 @@ const Form = () => {
           onNextStepChange = {onNextStepChange}
         />
      )}
+
+     {/* {(step > 0 && step < 5) && (
+      <ProgressBar
+        step={step}
+      />
+      )} */}
+
     </main>
     
   )

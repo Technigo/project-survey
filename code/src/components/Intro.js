@@ -9,7 +9,7 @@ const Intro = ({ onNextStepChange }) => {
           We all know that Mondays can be rough, so let's create a todo-list
           together?
         </h2>
-        <button type="submit" onClick={onNextStepChange} className=" btn start-btn"> I need a monday mantra!
+        <button type="submit" onClick={onNextStepChange} className="btn start-btn"> I need a monday mantra!
         </button>
       </section>
     </>

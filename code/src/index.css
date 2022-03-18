@@ -19,47 +19,72 @@
   text-rendering: optimizeLegibility;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
   margin: 0;
+  padding: 1rem;
+  height: 100vh;
   font-family: "poppins";
   background-color: var(--main-accent-color);
   border: solid var(--sec-accent-color) 8px;
-  padding: 1rem;
-  height: 100vh;
 }
 
-/* Styling of text */
+/* General text styling */
 
 h1 {
   font-size: 14vw;
+  position: absolute;
+}
+
+.monday {
+  top: 1rem;
 }
 
 .mantra {
-  writing-mode: vertical-rl;
-  position: absolute;
   bottom: 2rem;
   right: 1rem;
+  writing-mode: vertical-rl;
 }
 
 .question-text {
-  font-size: 21px;
-  font-weight: 400;
-  padding: 1rem 0 2rem;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 10px 0 25px;
+  line-height: 1.4;
 }
 
 .thin-intro-text {
-  font-family: 'Poppins';
-  font-size: 1rem;
-  font-weight: 300;
-  margin-top: 100px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 30px;
+}
+
+.answer-text {
+  font-size: 20px;
+  font-weight: 500;
   text-transform: uppercase;
 }
 
-/* Styling of main section */
+.small-text {
+  font-size: 14px;
+  margin-top: 7px;
+}
+
+#two .thin-intro-text, #three .thin-intro-text {
+  font-size: 14px;
+  font-weight: 300;
+}
+
+#two .question-text, #three .question-text {
+  font-size: 20px;
+  font-weight: 400;
+}
+
+#three .thin-intro-text {
+  margin-top: 8px;
+  margin-bottom: 16px;
+}
+
+/* Styling of main sections */
 
 .head-section {
   text-align: center;
@@ -67,24 +92,81 @@ h1 {
   flex-direction: column;
   width: 80%;
   margin: 0 auto;
+  padding-top: 40%;
+  height: 100%;
+}
+
+/* Styling of section four */
+
+.head-section-four {
+  margin-left:0;
+  padding-top: 40%;
+}
+
+#four .buttons-wrapper {
+  justify-content: flex-start;
+}
+
+#four .question-text, #four .answer-text {
+  text-align: left;
+}
+
+#four .progress-wrapper {
+  display: block;
+}
+
+#four .progress-bar-full {
+  margin-left: inherit;
+}
+
+.summary-thin-intro-text {
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 16px;
+}
+
+.head-section-summary {
+  padding-top: 33%;
+  text-align: center;
+}
+
+.summary-container {
+  margin: 33px 9px 25px;
+}
+
+.summary-mantra-text {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+}
+
+.mantra-word-emph {
+  color: var(--sec-accent-color);
+  font-weight: 500;
 }
 
 /* Styling of buttons */
 
-.btn {
-  border: 2px solid var(--main-accent-color-dark);
-  border-radius: 10px;
-  font-size: 1rem;
-  font-weight: bold;
-  padding: 14px 20px;
-  cursor: pointer;
-  background-color: transparent;
-  text-transform: uppercase;
-  font-weight: 400;
+.buttons-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding-top: 25px;
 }
 
-.start-btn {
-  margin: auto;
+.btn {
+  background-color: transparent;
+  border: 2px solid var(--main-accent-color-dark);
+  border-radius: 10px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+.start-btn, restart-btn {
+  margin: 0 auto;
 }
 
 .start-btn:hover {
@@ -93,33 +175,153 @@ h1 {
   transition: all 1.5s ease;
 }
 
-/* A MEDIA QUERY FOR DESKTOP ONLY */
+.next-btn:hover {
+  background-color: var(--sec-accent-color);
+  color: var(--my-black);
+  transition: all 1.5s ease;
+}
+
+.back-btn:hover {
+  background-color: var(--my-black);
+  color: var(--main-accent-color);
+  transition: all 1.5s ease;
+}
+
+/* Styling of form elements */
+
+select {
+  background-color: transparent;
+  border: solid 2px var(--main-accent-color-dark);
+  border-radius: 10px;
+  font-size: 1rem;
+  text-align: center;
+  color: var(--my-black);
+  padding: 10px;
+  outline: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select:hover {
+  border: solid 2px var(--sec-accent-color);
+  transition: all 1.5s ease;
+}
+
+.input-field {
+  appearance: none;
+  color: var(--my-black);
+  background-color: transparent;
+  border: solid 2px var(--main-accent-color-dark);
+  border-radius: 10px;
+  padding: 10px 15px;
+  width: 100%;
+  outline: none;
+}
+
+.input-field::placeholder {
+  color: var(--my-black);
+  text-align: center;
+}
+
+.input-field:hover {
+  border: solid 2px var(--sec-accent-color);
+  background-color: var(--main-accent-color-dark);
+  transition: all 1.5s ease;
+}
+
+.radio-button-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.radio-button {
+  margin-right: 10px;
+}
+
+/* Styling of progress bar */
+
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.progress-bar-full {
+  width: 50%;
+  height: 15px;
+  background-color: #9B9915;
+  margin: 0 auto;
+  margin-top: 2rem;
+  border-radius: 10px;
+}
+
+.progress-bar-process {
+  height: 100%;
+  background-color: var(--sec-accent-color);
+  border-radius: 10px;
+}
+
+/* A MEDIA QUERY FOR DESKTOP */
 
 @media screen and (min-width: 1024px) {
 
   .mantra {
+    right: 0;
+    bottom: 1rem;
+  }
 
+  .monday {
+    top: 0;
   }
 
   h1 {
     font-size: 140px;
     display: inline-flex;
   }
+
+  .head-section {
+    padding-top: 16%;
+    width: 60%;
+  }
+
+  .question-text {
+    font-size: 2vw;
+  }
+
+  .input-field {
+    width: 25%;
+  }
+  
 }
 
-/* Media Query - Tablet and Desktops */
-@media screen and (min-width: 768px) {
+/* A MEDIA QUERY FOR TABLET */
+
+@media screen and (min-width: 768px) and (max-width: 1023px) {
   body {
     border: solid var(--sec-accent-color) 22px;
   }
 
+  .head-section {
+    padding-top: 30%;
+    width: 60%;
+  }
+
   .mantra {
     bottom: 4rem;
-
   }
 
-  h1 {
-
+  .thin-intro-text {
+    font-size: 24px;
   }
 
+  .answer-text {
+    font-size: 24px;
+  }
+
+  .input-field {
+    width: 45%;
+  }
 }

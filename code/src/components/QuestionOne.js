@@ -5,19 +5,20 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextSte
   return (
     <>
       <section className="head-section" id="one">
-        <p className="thin-intro-text">Very curious</p>
+        <p className="thin-intro-text">Very curious!</p>
         <h2 className="question-text">What's your name darling?</h2>
         <form>
-          <label htmlFor="nameInput">Type your name here please</label>
+          <label htmlFor="nameInput"></label>
           <input
+            className="input-field"
             id="nameInput"
             type="text"
+            placeholder="Your beautiful name goes here"
             value={nameInput}
             onChange={onNameInputChange}
           />
         </form>
-      </section>
-      <div className="buttons">
+        <div className="buttons-wrapper">
         <button
           type="submit"
           aria-label="Go back"
@@ -36,6 +37,7 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextSte
           next
         </button>
       </div>
+      </section>
     </>
   );
 };

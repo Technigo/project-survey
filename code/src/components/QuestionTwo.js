@@ -6,19 +6,21 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
     <>
       <section className="head-section" id="two">
         <h2 className="answer-text">Hi {nameInput}!</h2>
-        <p className="thin-intro-text">Might be the most horrible question but:</p>
+        <p className="thin-intro-text">horribly hard question but..</p>
         <h2 className="question-text">Best song ever heard is?</h2>
 
         <form>
-          <label htmlFor="musicInput">Type your fav song here</label>
+          <label htmlFor="musicInput"></label>
           <input
               id="musicInput"
+              className="input-field"
               type="text"
+              placeholder="Type here"
               value={musicInput}
               onChange={onMusicInputChange}
             />
         </form>
-        <div className="buttons">
+        <div className="buttons-wrapper">
           <button
             type="submit"
             aria-label="Go back"

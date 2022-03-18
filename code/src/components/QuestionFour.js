@@ -4,12 +4,11 @@ const drinksArray = ["Champagne", "Milk", "Beer", "Hot chocolate"];
 
 const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNextStepChange, onStepBackChange}) => {
   return (
-    <>
-      <section className="head-section" id="four">
+    <div className="drink-wrapper">
+      <section className="head-section-four" id="four">
         <h2 className="answer-text">Mmm {selectOptionInput} is tasty!</h2>
-        <p className="thin-intro-text">Continuing with easy questions..</p>
-        <h2 className="question-text">Drink that boost your mood most is?</h2>
-        <form>
+        <h2 className="question-text">Drink that boost your mood?</h2>
+        <form className="radio-button-form">
           {drinksArray.map(drinks => (
             <label className="radio-label" key={drinks} htmlFor={drinks}>
               <input
@@ -24,7 +23,7 @@ const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNext
             </label>
           ))}
         </form>
-        <div className="buttons">
+        <div className="buttons-wrapper">
             <button
               type="submit"
               aria-label="Go back"
@@ -44,7 +43,7 @@ const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNext
             </button>
           </div>
       </section>
-    </>
+    </div>
   );
 };
 
