@@ -1,23 +1,23 @@
 import React, { useState } from 'react';
 
-
-
-export const CheckBox = () => {
-  const [wantsNewsletter, setWantsNewsletter] = useState(false);
+const CheckBox = () => {
+  const [wantsMember, setWantsMember] = useState(false);
 
   return (
-    <form>
-      <label>
-        Newsletter?
+    <form className="section">
+      <label className="label">
+        First of all, would you like to be a member in our new movies-for-geeks-club? If yes, tick this box:  
         <input
           type="checkbox"
-          checked={wantsNewsletter}
-          onChange={event => setWantsNewsletter(event.target.checked)}
+          checked={wantsMember}
+          onChange={(event) => setWantsMember(event.target.checked)}
         />
       </label>
     </form>
   );
 };
+
+export default CheckBox
 
 
 

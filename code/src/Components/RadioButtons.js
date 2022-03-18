@@ -1,27 +1,30 @@
-import React, { useState } from "react";
+import React from "react";
 
-const ageGroups = ["0-18", "19-30", "31+"];
 
-export const RadioButtons = () => {
-    const [ageGroup, setAgeGroup] = useState();
 
+const intervals = ["2+ times a week", "1-2 times a week", "1-2 times a month", "Never, I don't have good taste in movies 🙄"];
+
+const RadioButtons = ({intervalGroup, onChangeAgain}) => {
     return (
-        <form>
-            <p>Age Group:</p>
-            {ageGroups.map(group => (
-                <label key={group}>
+        <form className="section">
+            <p>How often do you visit ut?</p>
+            {intervals.map((element) => (
+                <label key={element}>
                     <input
+                        className="radio-button-input"
                         type="radio"
-                        value="{group}"
-                        onChange={event => setAgeGroup(event.target.value)}
-                        checked={ageGroup === group}
-                    />
-                    {group}
+                        onChange={onChangeAgain}
+                        checked={intervalGroup === element}
+                        value={element}
+                        />
+                    {element}
                 </label>
             ))}
         </form>
     );
 };
+
+export default RadioButtons
 
 
 

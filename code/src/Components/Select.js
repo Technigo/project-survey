@@ -1,43 +1,22 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-export const Select = (props) => {
-    const [location, setLocation] = useState("");
-
+export const Select = ({ newMovies, onChange}) => {
     return (
-        <form>
+        <form className="section">
+            <p>Which of these premieres are you looking forward to the most?</p>
             <select
-                onChange={event => props.setLocation(event.target.value)}
-                value={props.location}
+                onChange={onChange}
+                value={newMovies}
             >
-                <option value="">Select location</option>
-                <option value="Stockholm"></option>
-                <option value="California"></option>
-                <option value="Bali"></option>
+                <option value="">Select here</option>
+                <option value="Avatar 2">Avatar 2</option>
+                <option value="Morbius"></option>
+                <option value="Legally Blonde 3"></option>
+                <option value="Jurassic World Domination"></option>
+                <option value="I don't like movies"></option>
             </select>
         </form>
     );
 };
 
-
-
-// import { DivisibleBy3 } from 'Components/DivisibleBy3'
-// import { DivisibleBy5 } from './DivisibleBy5';
-
-// export const InfoBanner = (props) => {
-//     const counter = props.counter;
-//     if (counter % 2 === 0 || counter % 3 === 0) {
-
-//         return ( 
-//             <div>
-//                 <DivisibleBy3 />
-//                 <p>The counter is even</p>
-//             </div>
-//             )
-//     } else {
-//         return (
-//             <div>
-//                 <p>The counter is odd</p>
-//             </div>
-//         )
-//     }
-// }
+export default Select
