@@ -6,8 +6,8 @@ const Question1 = ({name, house, onHouseChange, onStepChange}) => {
       <div>
         <article className="letter-container">
           <form className="form" onSubmit={event => event.preventDefault()}>
-              <h1>Hi {name}!</h1>
-              <h2>Which house would you want to join?</h2>
+              <h1 tabindex="0">Hi {name}!</h1>
+              <h2 tabindex="0">Which house would you want to join?</h2>
               
                 <div className="input-container">
                     <select
@@ -21,7 +21,7 @@ const Question1 = ({name, house, onHouseChange, onStepChange}) => {
                         <option id="sly">Slytherin</option>
                         <option id="raven">Ravenclaw</option>
                     </select>
-                  <button className='btn' type="button" onClick={onStepChange}>Next</button>
+                  <button className='btn' type="button" onClick={onStepChange} tabindex="0">Next</button>
                 </div>
           </form>
         </article>

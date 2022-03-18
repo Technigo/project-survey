@@ -19,10 +19,10 @@ const wands = [
         
         <article className="letter-container">
         <form className="form" onSubmit={event => event.preventDefault()}>
-          <h1>Choose your wand</h1>
+          <h1 tabindex="0">Choose your wand</h1>
 
             {wands.map(wand => (
-                 <label className="wand-button-text" key={wand}>
+                 <label className="wand-button-text" key={wand} tabindex="0">
                     <input
                       className="radio-button"
                       type="radio"
@@ -35,13 +35,13 @@ const wands = [
                     ))}
 
           <div className="image-container">
-            <img src={wand1} alt="Wand 1"/>    
-            <img src={wand2} alt="Wand 2"/>   
-            <img src={wand3} alt="Wand 3"/>      
-            <img src={wand4} alt="Wand 4"/>    
+            <img src={wand1} alt="Wand 1" tabindex="0"/>    
+            <img src={wand2} alt="Wand 2" tabindex="0"/>   
+            <img src={wand3} alt="Wand 3" tabindex="0"/>      
+            <img src={wand4} alt="Wand 4" tabindex="0"/>    
           </div>
           
-          <button className='btn' type="button" onClick={onStepChange}>Next</button>
+          <button className='btn' type="button" onClick={onStepChange} tabindex="0">Next</button>
 
         </form>
         </article>
