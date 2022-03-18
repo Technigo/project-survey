@@ -2,11 +2,12 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-family: "Helvetica Neue", Sans-Serif;
 }
 
 code {
@@ -18,15 +19,350 @@ main{
   display: flex;
   height: 100vh;
   flex-direction: column;
-  background-color: pink;
+  background-image: url('https://images.unsplash.com/photo-1559251606-c623743a6d76?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1770&q=80');
+  background-size: cover;
+  background-position-y: start;
+  background-position-x: center;
+  background-repeat: no-repeat;
+  color: #fff;
+  --red: #e16561;
 }
 
+/* =====FONT STYLES=====*/
+h1{
+  font-size: 60px;
+  font-weight:700;
+  background:  #fff;
+  background-clip: text;
+	-webkit-background-clip: text;
+  color: transparent;
+  text-align: center;
+}
 
-footer{
-  margin-top: auto; /*this keeps the footer always at tht bottom of the page*/
-  background-color: azure;
+h2{
+  line-height: 40px;
+}
+h3{
+  margin: 0;
+}
+p{
+  margin: 0;
+}
+.labelStyle{
+  font-size: 24px;
+  font-weight: 700;
+  align-self: flex-start;
+}
+
+/* =====CONTAINER STYLES=====*/
+.container{
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  align-self: center;
+  width: 300px;
+  height: 100%;
+  margin: auto;
+  gap: 1rem;
+}
+
+/* =====BUTTON STYLES=====*/
+.button {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+	font: 13px ;
+	font-weight: 900;
+	letter-spacing: 2px; 
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+  color: var(--red);
+	background-color: #fff;
+	border: 5px solid transparent;
+	transition: .2s ease;
+	border-radius: 50px;
+  align-self: center;
+}
+
+.button:disabled{
+  opacity: 0.2;
+}
+
+.button:hover {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.20), 0 6px 20px 0 rgba(0, 0, 0, 0.20);
+  color: #fff;
+	background-color: var(--red);
+	transform: scale(1.1);
+	border: 5px solid #fff;
+  cursor: pointer;
+}
+
+
+.buttons{
+  display: flex;
+  width: 100%;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+.nextBtn{
+  align-self: flex-end;
+}
+
+.arrow {
+  border: solid var(--red);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.button:hover .arrow{
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.right{
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+}
+.offices{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+/* =====INPUT STYLES=====*/
+
+#nameInput, #emailInput, #linkInput{
+  font-size: 18px;
+  color: #fff;
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 2px solid #fff;
+}
+#nameInput:focus, #emailInput:focus, #linkInput:focus{
+  background: transparent;
+  outline: none;
+}
+select:focus{
+  background: #fff;
+  outline: none;
+}
+
+::placeholder {
+  color: white;
+  font-style: italic;
+}
+
+/* =====SELECT STYLES=====*/
+select{
+  width: 100%;
+  font-size: 18px;
+  padding: 5px 0;
+  border-color: #fff;
+  padding: 15px 20px;
+  border-radius: 50px;
+  color:var(--red);
+  font-weight: 900;
+}
+
+/* =====RADIO BUTTONS STYLES=====*/
+.radioBtnContainer, .checkBtnContainer{
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.radioBtnContainer input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+.radioBtnContainer:hover input ~ .checkmark, .checkBtnContainer:hover input ~ .checkmarkCheck {
+  background-color: #fff;
+}
+.radioBtnContainer input:checked ~ .checkmark {
+  background-color: var(--red);
+}
+.checkmark:after, .checkmarkCheck:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.radioBtnContainer input:checked ~ .checkmark:after{
+  display: block;
+}
+.radioBtnContainer .checkmark:after {
+  top: 9px;
+ left: 9px;
+ width: 8px;
+ height: 8px;
+ border-radius: 50%;
+ background: #fff;
+}
+
+/* =====CHECKBOX BUTTONS STYLES=====*/
+.checkBtnContainer input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmarkCheck{
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #fff;
+}
+
+.checkBtnContainer input:checked ~ .checkmarkCheck:after {
+  display: block;
+}
+.checkBtnContainer .checkmarkCheck:after{
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid #fff;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.checkBtnContainer input:checked ~ .checkmarkCheck{
+  background-color: var(--red);
+}
+/* =====SKILLS SECTION STYLES=====*/
+.skillContainer{
+  display: flex;
+  width: 45%;
+}
+
+/* =====RANGE SLIDER STYLES=====*/
+.rangeSlider{
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;
+  background: #fff;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.rangeSlider:hover {
+  opacity: 1;
+}
+
+.rangeSlider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--red);
+  cursor: pointer;
+}
+.rangeSlider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+}
+
+/* =====FORM STYLES=====*/
+form{
+  flex:1;
+}
+
+
+/* =====OVERVIEW PAGE STYLES=====*/
+.overview-container{
+  align-items: flex-start;
+}
+
+/* =====THANKS PAGE STYLES=====*/
+.thankspageContainer{
+  height: 100%;
+  width: 100vw;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.thankspageContainer video {
+  position: absolute;
+  left: 0;
+  top: 0;
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+/* =====FOOTER STYLES=====*/
+footer{
+  margin-top: auto; /*this keeps the footer always at tht bottom of the page*/
+  background-color: pink;
+}
+
+.footerContainer{
+  padding: 1rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+}
+
+/* =====TABLETS STYLING=====*/
+@media screen and (min-width: 768px){
+  .container{
+    width: 500px;
+  }
+  h1{
+    font-size: 80px;
+  }
+}
+
+/* =====DESKTOPS STYLING=====*/
+@media screen and (min-width: 1200px){
+  .container{
+    width: 700px;
+  }
+  h1{
+    font-size: 100px;
+  }
 }
