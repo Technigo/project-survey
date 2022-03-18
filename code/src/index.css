@@ -21,6 +21,7 @@ body {
   background-attachment: fixed;
   color: white;
   font-family: 'Domine', serif;
+ 
 }
 
 code {
@@ -113,6 +114,12 @@ p {
 h1, 
 h2 {
   font-size: 30px;
+}
+
+footer{
+  color: white;
+  margin-top:80px;
+  padding-left: 10px;
 }
 
 
