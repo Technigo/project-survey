@@ -3,17 +3,11 @@
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Nanum Gothic', sans-serif;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #C3E5AE;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 section {
@@ -24,7 +18,6 @@ section {
   text-align: center;
   width: 100vw;
   height: 100vh;
-  font-family: 'Nanum Gothic', sans-serif;
 }
 
 .start-container {
@@ -37,14 +30,10 @@ section {
 }
 
 .start-container h2 {
-  /* color: #C3E5AE; */
-  font-weight: 700;
-  margin: 8px 0 2px 0;
-  /* border: 2px solid white; */
+  margin: 1rem 0 0.5rem 0;
 }
 .start-container p {
-  font-weight: 700;
-  margin: 2px 0 8px 0;
+  margin: 0.5rem 0 1rem 0;
 }
 .form-container {
   display: flex;
@@ -57,11 +46,11 @@ label {
   padding-bottom: 1vw;;
 }
 .button-container {
-  margin-top: 3vw;
+  margin-top: 5vw;
 }
 button {
-  color: white;
-  background-color: black;
+  background-color: white;
+  border: 2px black solid;
   margin-right: 1vw;
 }
 .summary-container h2 {

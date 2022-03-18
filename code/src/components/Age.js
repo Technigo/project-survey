@@ -15,7 +15,6 @@ const Age = ({ ageGroup, setAgeGroup, nextSlide, backSlide }) => {
           value={group}
           onChange={(event) => {setAgeGroup(event.target.value)}}
           checked={ageGroup === group}
-          required
         />
         {group}
         </label>
@@ -24,9 +23,13 @@ const Age = ({ ageGroup, setAgeGroup, nextSlide, backSlide }) => {
           <button className='button' onClick={backSlide}>
             back
           </button>
-          <button className="button" onClick={nextSlide}>
+          <button className="button"
+          disabled={ageGroup === ""}
+          onClick={nextSlide}
+          >
             next
           </button>
+          {/* {error!=='' && <p>{error}</p>} */}
         </div>
       </div>
      </section> 

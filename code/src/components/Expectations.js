@@ -23,8 +23,11 @@ const Expectations = ({ expectations, setExpectations, nextSlide, backSlide }) =
           <button className='button' onClick={backSlide}>
             back
           </button>
-          <button className='button' onClick={nextSlide}>
-            submit
+          <button className='button' 
+          disabled={expectations === ''}
+          onClick={nextSlide}
+          >
+           submit
           </button>
         </div>
       </div>

@@ -6,12 +6,12 @@ const Purpose = ({ options, setOptions, nextSlide, backSlide}) => {
      <section>
        <div className='form-container'>
         <h2>Purpose of stay</h2>
-        <label key={options} htmlFor='option'></label>
+        <label htmlFor='option'></label>
         <select
           id='option'
           value={options}
           onChange={(event) => {setOptions(event.target.value)}}
-          required>
+        >
           <option disabled>choose below</option>
           <option>leisure travelling</option>
           <option>business appointment</option>
@@ -22,7 +22,10 @@ const Purpose = ({ options, setOptions, nextSlide, backSlide}) => {
           <button className='button' onClick={backSlide}>
             back
           </button>
-          <button className='button' onClick={nextSlide}>
+          <button className='button'
+          disabled={options === 'choose below'}
+          onClick={nextSlide}
+          >
             next
           </button>
         </div>
