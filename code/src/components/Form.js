@@ -14,7 +14,7 @@ const Form = () => {
 const [nameInput, setNameInput] = useState('')
 const [surnameInput, setSurnameInput] = useState('')
 const [emailInput, setUserEmailInput] = useState('')
-const [checked, handleChange] = useState([])
+const [interest, setInterest] = useState(false)
 
 const [page, setPage] = useState(0)
 
@@ -24,6 +24,7 @@ const backPage = () => {setPage(page - 1)}
 const restart = () => {setPage(0)}
 
 
+// Funcions 
 const onNameInputChange = (event) => {
     setNameInput(event.target.value)
 }
@@ -37,6 +38,9 @@ const onEmailInputChange = event => {
 }
 
 const handleSubmit = (event) => {event.preventDefault()}
+
+// Array of objects in radio buttons and dropdown
+const arrayOfInterests = ["Key Lime Pie", "Best visits in Stockholm", "Tech News", "Programming"]
 
 return (
   <>
@@ -68,8 +72,8 @@ return (
     { /* THIRD PAGE */ }
     {page === 3 && (
         <ThirdQuestion
-        checked={checked}
-        onChange={handleChange}
+        setInterest={setInterest}
+        arrayOfInterests={arrayOfInterests}
         nextPage={nextPage}
         backPage={backPage}/>)}
 
@@ -77,7 +81,7 @@ return (
             <Summary
             nameInput={nameInput}
             emailInput={emailInput}
-            checked={checked}
+            interest={interest}
             restart={restart}
             />
         )}

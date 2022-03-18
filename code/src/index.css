@@ -135,8 +135,12 @@ ul {
   padding-top: 3px;
 }
 
-.checkbox {
+.radiobuttons {
   font-size: 16px;
+}
+
+.radiobuttons > input {
+  text-align: left;
 }
 
 /* MEDIA QUERY FOR TABLET */
