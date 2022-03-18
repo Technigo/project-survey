@@ -1,4 +1,5 @@
 import React from "react";
+import images from "../images/tech-work.png";
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   //  const { nameInput, onNameInputChange } = props;
@@ -7,9 +8,18 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
     <section className="form-container">
       <div className="heading">
         <h1>What kind of code student are you?</h1>
-        <h2>Let's get stated by writing your name: </h2>
       </div>
+
+      <div className="form-image">
+        <img
+          className="tech-work-img"
+          src={images}
+          alt="student learning tech"
+        />
+      </div>
+
       <form>
+        <h2>Let's get stated by writing your name: </h2>
         <label className="description" htmlFor="nameInput">
           First name / nickname{" "}
         </label>
