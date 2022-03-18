@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Dropdown = (props) => {
+// const Dropdown = (props) => {
+const Dropdown = ({ question, alternatives, onDropdownChange, dropdownValue }) => {
 
-  const [alternatives, setAlternatives] = useState('');
+
+  //const [alternatives, setAlternatives] = useState('');
 
   return (
     <div>
-      <label>{props.question}</label>
-      <select onChange={(event) => setAlternatives(event.target.value)}>
-      {props.alternatives.map((alternative) => (
+      <label>{question}</label>
+      <select onChange={onDropdownChange}>
+      {alternatives.map((alternative) => (
         <option 
-          value="{alternative}"
-          key="{alternative}"
-        >
+          value={alternative}
+          key={alternative}
+          //selected={dropdownValue === alternative}
+          >
           {alternative}
         </option>
       ))}

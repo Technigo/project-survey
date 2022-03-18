@@ -1,46 +1,63 @@
-import propTypes from 'eslint-plugin-react/lib/rules/prop-types';
 import React, { useState } from 'react';
 import questions from '../questions.json'
 
-import Question1 from './Question1.js';
-import Question2 from './Question2.js';
+
 import Submit from './Submit.js';
 import Input from './Input.js';
 import Dropdown from './Dropdown.js';
 import Radio from './Radio.js';
+import NextPrevious from './NextPrevious.js';
 
 
-const handleSubmit = (event) => {
-    event.preventDefault();
-    // console.log(setName(userName));    
-}
+
 
 console.log(questions);
 
 
 
-const QuestionContainer = () => {
+const QuestionContainer = (props) => {
+
+  //const [counter, setCounter] = useState(0);
+ // const [inputvalue, setInputValue] = useState('');
 
   const [counter, setCounter] = useState(0);
+
+  // const handleInputChange = (event) => {
+  //   props.setInputValue(event.target.value);
+  //   console.log(props.inputvalue); 
+  // }
+
+
+
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    //props.handleInputChange(event);
+    //handleDropdownChange(event);
+    //props.handleRadioChange(event);
+  }
+
 
               let answerComponent;
               const questionsInTotal = questions.questions.length;
 
               // --> filter????
-              let actualQuestion;
               questions.questions.forEach(question => {
                 if (question.number === counter) {
-                  actualQuestion = question;
 
                   switch (question.type) {
                     case 'input':
-                      answerComponent = <Input question={question.question} />;
+                      answerComponent = <Input question={question.question} inputvalue={props.inputvalue} onInputChange={props.handleInputChange} />;
                       break;
                     case 'radio':
-                      answerComponent = <Radio question={question.question} alternatives={question.alternatives} />
+                      answerComponent = <Radio question={question} onRadioChange={props.handleRadioChange} />
                       break;
                     case 'dropdown':
-                      answerComponent = <Dropdown question={question.question} alternatives={question.alternatives} />;
+                      answerComponent = <Dropdown 
+                          question={question.question} 
+                          alternatives={question.alternatives} 
+                          onDropdownChange={props.handleDropdownChange}
+                          dropdownValue={props.dropdownValue}
+                        />;
                       break;
                   }
                 }
@@ -51,20 +68,21 @@ const QuestionContainer = () => {
       <div className="question-container container">
           <form onSubmit={handleSubmit}>            
             { answerComponent }
-            {counter === questionsInTotal ? <Submit /> : <p class="container">You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going! </p> }
+            {counter === questionsInTotal ? <Submit /> : <div className="container"><p>You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going!</p><NextPrevious counter={counter} setCounter={setCounter} /></div> }
           </form>
       </div>
 
 
-      <div className="container forward-next">
-        <button onClick={() =>setCounter(counter + 1)}>Next question</button>
+      {/* Egen component */}
+      {/* <div className="container forward-next">
         <button onClick={() =>setCounter(counter - 1)}>Previous question</button>
-
-      </div>
+        <button onClick={() =>setCounter(counter + 1)}>Next question</button>
+      </div> */}
       </>
     );
   };
 
+  
 
   
   export default QuestionContainer;
