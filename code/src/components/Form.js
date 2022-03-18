@@ -70,6 +70,8 @@ return (
         <ThirdQuestion
         checked={checked}
         onChange={handleChange}
+        nextPage={nextPage}
+        backPage={backPage}
         />
     )}
 
