@@ -1,9 +1,19 @@
 import React from "react";
+import './InputField.css'
 
 const InputField = ({ name, type, options, value, onChange }) => {
   switch (type) {
     case "text": {
-      return <input id={name} value={value} onChange={onChange} type={type} required></input>;
+      return (
+        <input
+          id={name}
+          value={value}
+          onChange={onChange}
+          type={type}
+          placeholder="Type here..."
+          required
+        ></input>
+      );
     }
     case "radio": {
       return options.map((o) => {

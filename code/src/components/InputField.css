@@ -1,0 +1,15 @@
+input[type="text"],
+input[type="select"],
+select {
+  width: 100%;
+  margin: 10px auto;
+  padding: 0.5rem 0.25rem;
+  color: var(--main);
+  background-color: white;
+  border: none;
+}
+
+input[type="radio"] {
+  margin-right: 0.5rem;
+  margin-bottom: 1rem;
+}
