@@ -82,7 +82,7 @@ export function TiviChart ({q1Answer, q2Answer, q3Answer, q4Answer, q5Answer, q6
         }} 
         options={options} />
         <button className="tivi-header" onClick={openSesame}>
-          Explanation of Schwartz's Theory of Basic Human Values
+          <p className="button-header">⤋ Explanation of Schwartz's Theory of Basic Human Values ⤋</p>
         </button>
         <div className="accordion-info">
           <h4>Introduction:</h4>

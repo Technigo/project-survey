@@ -1,5 +1,5 @@
 import React from "react";
-import forwardButton from '../assets/forward-purple.png'
+import forwardButton from '../assets/forward.png'
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, set } from 'firebase/database'
 

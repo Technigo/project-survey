@@ -14,10 +14,14 @@
 }
 
 :root {
-  --primary: #ffffff;
+  /* --primary: #ffffff;
   --secondary: #fbcdd0;
   --tertiary: #48466b;
-  --accent: #001053;
+  --accent: #001053; */
+  --primary: #fefbfe;
+  --secondary: #121408;
+  --tertiary: #df9419;
+  --accent: #df9419;
 }
 
 body {
@@ -37,8 +41,8 @@ header {
 }
 
 .logo {
-  width: 100px;
-  height: 100px;
+  width: 120px;
+  height: 120px;
   margin-top: 20px;
   margin-bottom: 10px;
 }
@@ -91,7 +95,7 @@ hr {
 }
 
 .accordion-info a {
-  color: var(--accent)
+  color: var(--secondary)
 }
 
 /* Page */
@@ -102,12 +106,12 @@ hr {
   margin: 0 auto;
   font-family: 'Roboto', sans-serif;
   position: relative;
-  padding-bottom: 2.5rem;
+  padding-bottom: 3.5rem;
 }
 
 .page-container {
   background-color: var(--primary);
-  color: var(--accent);
+  color: var(--secondary);
   border-radius: 5px;
   padding: 15px;
   margin: 10px 0;
@@ -120,7 +124,7 @@ hr {
   height: 20px;
   border-radius: 5px;
   background-color: var(--primary);
-  border: 3px solid var(--accent);
+  border: 3px solid var(--tertiary);
 }
 
 .progress-bar {
@@ -154,7 +158,7 @@ input[type=text] {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   border-radius: 5px;
-  border: 3px solid var(--tertiary);
+  border: 3px solid var(--secondary);
 }
 
 /* Styling Radio Buttons */
@@ -171,7 +175,7 @@ input[type=text] {
 .radio-container:nth-child(1) {
   border: none;
   font-size: 14px;
-  color: var(--accent);
+  color: var(--secondary);
   width: 90px;
   /* justify-content: left; */
 }
@@ -195,13 +199,13 @@ input[type=text] {
   vertical-align: -0.25em;
   border-radius: .25em;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px var(--accent);
+  box-shadow: 0 0 0 2px var(--secondary);
   transition: 0.5s ease all;
 }
 
 [type=radio]:checked + span:before {
   background: var(--tertiary);
-  box-shadow: 0 0 0 3px var(--accent);
+  box-shadow: 0 0 0 3px var(--secondary);
 }
 
 [type=radio]:focus span:after {
@@ -220,7 +224,7 @@ select {
   font-family: 'Roboto', sans-serif;
   font-size: 14px;
   border-radius: 5px;
-  border: 2px solid var(--accent);
+  border: 2px solid var(--secondary);
   -webkit-appearance: none; 
   -moz-appearance: none;
   appearance: none;
@@ -230,7 +234,7 @@ select {
   background-position: right center;
   background-color: var(--primary);
   padding: 5px;
-  color: var(--accent);
+  color: var(--secondary);
 }
 
 .drop-down {
@@ -241,7 +245,7 @@ select {
 
 /* Accordion Elements */
 .tipi-header {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   width: 100%;
@@ -250,12 +254,12 @@ select {
   border-radius: 5px;
   border: 3px solid var(--accent);
   background-color: var(--secondary);
-  color: var(--accent);
+  color: var(--primary);
   margin-top: 10px;
 }
 
 .tivi-header {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 18px;
   font-weight: 700;
   width: 100%;
@@ -263,14 +267,18 @@ select {
   border-radius: 5px;
   border: 3px solid var(--accent);
   background-color: var(--secondary);
-  color: var(--accent);
+  color: var(--primary);
   margin-top: 10px;
+}
+
+.button-header {
+  margin: 0 2px;
 }
 
 .accordion-info {
   display: none;
   padding: 10px 10px;
-  color: var(--accent)
+  color: var(--secondary)
 }
 
 .tipi-header:hover, .tivi-header:hover {
@@ -288,10 +296,11 @@ select {
 .nav-buttons button {
   border-radius: 5px;
   border: 3px solid var(--accent);
-  background-color: var(--primary);
+  background-color: var(--secondary);
   padding: 5px 20px;
   display: flex;
   justify-content: center;
+  cursor: pointer;
   /* width: 60px; */
 }
 
@@ -308,7 +317,7 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 2.5rem;
+  height: 3.5rem;
   color: var(--tertiary);
   text-align: center;
   display: flex;
@@ -340,6 +349,39 @@ footer a {
   .grid {
     margin-top: 20px;
     gap: 20px;
+  }
+
+  .column-1 {
+    font-size: 17px;
+  }
+
+  select {
+    font-size: 16px;
+  }
+
+  .accordion-info {
+    font-size: 17px;
+  }
+
+  footer {
+    font-size: 16px;
+  }
+
+  .logo {
+    width: 160px;
+    height: 160px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+
+  .nav-buttons button {
+    padding: 7px 30px;
+    margin-bottom: 5px;
+  }
+
+  .navbutton-icon {
+    width: 40px;
+    height: 40px;
   }
 }
 

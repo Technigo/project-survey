@@ -1,10 +1,10 @@
 import React from 'react'
-import logo from '../assets/logo-purple.png'
+import logo2 from '../assets/logo2.png'
 
 const Header = () => {
     return (
         <header>
-        <img className="logo" src={logo} alt="logo" />
+        <img className="logo" src={logo2} alt="logo" />
         </header>
     )
 }

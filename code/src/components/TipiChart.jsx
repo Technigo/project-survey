@@ -152,7 +152,7 @@ export const TipiChart = ({name, age, q1Answer, q2Answer, q3Answer, q4Answer, q5
     />
     <div>
         <button className="tipi-header" onClick={openSesame}>
-            Explanation of Big 5 Personality Traits
+            <p className="button-header">⤋ Explanation of Big 5 Traits ⤋</p>
         </button>
         <div className="accordion-info">
             <h4>Introduction:</h4>

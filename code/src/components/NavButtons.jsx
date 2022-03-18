@@ -1,8 +1,8 @@
 import React from 'react';
 import SubmitButton from './SubmitButton'
-import forwardButton from '../assets/forward-purple.png'
-import backButton from '../assets/back-purple.png'
-import restartButton from '../assets/restart-purple.png'
+import forwardButton from '../assets/forward.png'
+import backButton from '../assets/back.png'
+import restartButton from '../assets/restart.png'
 
 const refreshPage = () => {
     window.location.reload();
