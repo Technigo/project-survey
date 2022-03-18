@@ -23,7 +23,7 @@ const SecondQuestion = ({
             <option value='Hermione Granger'>Hermione Granger</option>
             <option value='Ron Weasley'>Ron Weasley</option>
             <option value='Voldemort'>Voldemort</option>
-            <option value='Luna Lovelace'>Luna Lovelace</option>
+            <option value='Luna Lovegood'>Luna Lovegood</option>
             <option value='Draco Malfoy'>Draco Malfoy</option>
           </select>
 
