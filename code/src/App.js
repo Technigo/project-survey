@@ -1,9 +1,12 @@
 import React from 'react'
+import "./App.css";
+import Survey from './components/Survey';
 
-export const App = () => {
+const App = () => {
+
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <Survey/>
   )
 }
+
+export default App
