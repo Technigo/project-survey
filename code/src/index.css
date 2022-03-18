@@ -32,6 +32,7 @@ p {
   display: flex;
   text-align: center;
   flex-direction: column;
+  padding-top: 2rem;
   
 }
 
@@ -61,7 +62,7 @@ p {
 }
 
 .choice {
-  background-image: url(img/compass.jpg);
+  background-image: url(img/person.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100vh;
@@ -84,9 +85,11 @@ p {
 }
 
 .budget {
-  background-image: url(img/budget.jpg);
+  background-image: url(img/money2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  background-position-y: 80%;
+
   height: 100vh;
   color: #FFF;
 }
@@ -107,7 +110,7 @@ p {
   font-size: 4.5rem;
   text-align: center;
   padding: 10rem;
-  color: blanchedalmond;
+  color: #FFF;
 }
 
 .option {
