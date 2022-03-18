@@ -9,7 +9,7 @@ const CardioTypeQuestion = ({
 
     return (
         <form className="form radio">
-          <label>
+          <label tabindex='0'>
           Wich kind of cardio you want to do?
             <span className="radio-input">
               <input
