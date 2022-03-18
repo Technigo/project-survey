@@ -9,9 +9,11 @@ button {
   border-radius: 5px;
 }
 
-button:hover {
-  color: rgb(0, 51, 51);
-  background-color: white;
-  cursor: pointer;
-  transition: 0.3s ease-in;
+@media screen and (min-width: 1200px) {
+  button:hover {
+    color: rgb(0, 51, 51);
+    background-color: white;
+    cursor: pointer;
+    transition: 0.3s ease-in;
+  }
 }
