@@ -113,8 +113,6 @@ h3 {
 }
 
 .btn-container {
-  display: flex;
-  flex-direction: row;
   justify-content: center;
 }
 
