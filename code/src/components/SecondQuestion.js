@@ -2,11 +2,16 @@ import React from 'react';
 
 // const animals = ['Cat', 'Lion', 'Snail', 'Frog'];
 
-const SecondQuestion = ({ selectInput, onSelectInputChange, onStepChange }) => {
+const SecondQuestion = ({
+	selectInput,
+	onSelectInputChange,
+	onStepChange,
+	onStepBack,
+}) => {
 	return (
 		<div className='container'>
 			<div className='question-container'>
-				<h2>This is a select question</h2>
+				<h2>Pick the best fruit</h2>
 				{/* <select
 				value={animals}
 				onChange={(event) => onSelectInputChange(event.target.value)}
@@ -23,26 +28,34 @@ const SecondQuestion = ({ selectInput, onSelectInputChange, onStepChange }) => {
 				})}
 			</select> */}
 				<select
+					className='select'
 					id='selectInput'
 					value={selectInput}
 					onChange={onSelectInputChange}
 				>
 					<option disabled value=''>
-						Select option
+						Select here
 					</option>
-					<option value='Cat'>Cat</option>
-					<option value='Lion'>Lion</option>
-					<option value='Snail'>Snail</option>
-					<option value='Frog'>Frog</option>
+					<option value='banana'>Banana</option>
+					<option value='orange'>Orange</option>
+					<option value='pear'>Pear</option>
+					<option value='kiwi'>Kiwi</option>
+					<option value='mango'>Mango</option>
+					<option value='apple'>Apple</option>
 				</select>
 			</div>
-			<button
-				className='btn'
-				disabled={selectInput === ''}
-				onClick={onStepChange}
-			>
-				Next
-			</button>
+			<div className='btn-container'>
+				<button className='btn' onClick={onStepBack}>
+					Previous
+				</button>
+				<button
+					className='btn'
+					disabled={selectInput === ''}
+					onClick={onStepChange}
+				>
+					Next
+				</button>
+			</div>
 		</div>
 	);
 };

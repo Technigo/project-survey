@@ -1,25 +1,35 @@
 import React from 'react';
 
-const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
+const FirstQuestion = ({
+	wordInput,
+	onWordInputChange,
+	onStepChange,
+	onStepBack,
+}) => {
 	return (
 		<div className='container'>
 			<div className='question-container'>
-				<h2>Hi! What's your name?</h2>
-				{/* <label htmlFor='name'>Type your name</label> */}
+				<h2>Type your favourite curse word</h2>
 				<input
-					id='name'
+					className='word-input'
+					id='word'
 					type='text'
-					value={nameInput}
-					onChange={onNameInputChange}
+					value={wordInput}
+					onChange={onWordInputChange}
 				/>
 			</div>
-			<button
-				className='btn'
-				disabled={nameInput === ''}
-				onClick={onStepChange}
-			>
-				Next
-			</button>
+			<div className='btn-container'>
+				<button className='btn' onClick={onStepBack}>
+					Previous
+				</button>
+				<button
+					className='btn'
+					disabled={wordInput === ''}
+					onClick={onStepChange}
+				>
+					Next
+				</button>
+			</div>
 		</div>
 	);
 };

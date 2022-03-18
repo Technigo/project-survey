@@ -1,14 +1,24 @@
 import React from 'react';
 
-const Summary = ({ nameInput, selectInput, radioInput }) => {
+const Summary = ({ wordInput, selectInput, radioInput }) => {
 	return (
 		<div className='container'>
-			<h2>Summary of survey</h2>
-			<p>Name: {nameInput}</p>
-			<p>Selected: {selectInput}</p>
-			<p>Radio button: {radioInput}</p>
+			<div className=''>
+				<h2>Summary of answers</h2>
+				<p>Lmao "{wordInput}", good one xd</p>
+				<p>
+					Oh so you choose {selectInput}s? I hate {selectInput}s, {wordInput}{' '}
+					{selectInput}s!{' '}
+				</p>
+				<p>
+					You strongly believe that jellyfishes are {radioInput}. Same bro.{' '}
+				</p>
+				<h3>Thanks and good bye!</h3>
+			</div>
 		</div>
 	);
 };
 
 export default Summary;
+
+// window.location.reload();

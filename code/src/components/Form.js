@@ -1,19 +1,20 @@
 import React, { useState } from 'react';
 
+import Intro from './Intro';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
 import Summary from './Summary';
 
 const Form = () => {
-	const [nameInput, setNameInput] = useState('');
+	const [wordInput, setWordInput] = useState('');
 	const [selectInput, setSelectInput] = useState('');
 	const [radioInput, setRadioInput] = useState('');
 
 	const [step, setStep] = useState(1);
 
-	const onNameInputChange = (event) => {
-		setNameInput(event.target.value);
+	const onWordInputChange = (event) => {
+		setWordInput(event.target.value);
 	};
 
 	const onSelectInputChange = (event) => {
@@ -28,32 +29,40 @@ const Form = () => {
 		setStep(step + 1);
 	};
 
+	const onStepBack = () => {
+		setStep(step - 1);
+	};
+
 	return (
 		<div>
-			{step === 1 && (
+			{step === 1 && <Intro onStepChange={onStepChange} />}
+			{step === 2 && (
 				<FirstQuestion
-					nameInput={nameInput}
-					onNameInputChange={onNameInputChange}
+					wordInput={wordInput}
+					onWordInputChange={onWordInputChange}
 					onStepChange={onStepChange}
+					onStepBack={onStepBack}
 				/>
 			)}
-			{step === 2 && (
+			{step === 3 && (
 				<SecondQuestion
 					selectInput={selectInput}
 					onSelectInputChange={onSelectInputChange}
 					onStepChange={onStepChange}
+					onStepBack={onStepBack}
 				/>
 			)}
-			{step === 3 && (
+			{step === 4 && (
 				<ThirdQuestion
 					radioInput={radioInput}
 					onRadioInputChange={onRadioInputChange}
 					onStepChange={onStepChange}
+					onStepBack={onStepBack}
 				/>
 			)}
-			{step === 4 && (
+			{step === 5 && (
 				<Summary
-					nameInput={nameInput}
+					wordInput={wordInput}
 					selectInput={selectInput}
 					radioInput={radioInput}
 				/>

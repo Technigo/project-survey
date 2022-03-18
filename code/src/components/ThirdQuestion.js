@@ -1,15 +1,21 @@
 import React from 'react';
 
-const radioBtn = ['Jellyfish nice', 'Jellyfish euw'];
+const radioBtn = ['Nice', 'Ugly af', 'Cute', 'Slow', 'Chonky'];
 
-const ThirdQuestion = ({ radioInput, onRadioInputChange, onStepChange }) => {
+const ThirdQuestion = ({
+	radioInput,
+	onRadioInputChange,
+	onStepChange,
+	onStepBack,
+}) => {
 	return (
 		<div className='container'>
 			<div className='question-container'>
-				<h2>What radio button?</h2>
+				<h2>Your opinion on jellyfishes?</h2>
 				{radioBtn.map((item) => (
-					<label key={item}>
+					<label className='radio-opt' key={item}>
 						<input
+							className='radio-btn'
 							type='radio'
 							value={item}
 							onChange={onRadioInputChange}
@@ -19,13 +25,18 @@ const ThirdQuestion = ({ radioInput, onRadioInputChange, onStepChange }) => {
 					</label>
 				))}
 			</div>
-			<button
-				className='btn'
-				disabled={radioInput === ''}
-				onClick={onStepChange}
-			>
-				Get summary
-			</button>
+			<div className='btn-container'>
+				<button className='btn' onClick={onStepBack}>
+					Previous
+				</button>
+				<button
+					className='btn'
+					disabled={radioInput === ''}
+					onClick={onStepChange}
+				>
+					Gimme summary!
+				</button>
+			</div>
 		</div>
 	);
 };
