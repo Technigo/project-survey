@@ -96,11 +96,12 @@ body {
 .input[type='range']::ms-fill-lower,
 .input[type='range']::ms-fill-upper {
   background: transparent;
+  height: 30px;
 }
 
 input[type='range']::-ms-track {
   border-radius: 8px;
-  height: 4px;
+  height: 10px;
   border: 1px solid #bdc3c7;
   background-color: #fff;
   color: transparent;
@@ -108,10 +109,8 @@ input[type='range']::-ms-track {
 
 input[type='range']::-ms-thumb {
   background: url(assets/harryslider.png);
-  border: 1px solid #bdc3c7;
-  width: 20px;
-  height: 20px;
-  border-radius: 10px;
+  width: 25px;
+  height: 25px;
   cursor: pointer;
 }
 
