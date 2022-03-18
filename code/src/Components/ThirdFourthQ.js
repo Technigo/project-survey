@@ -47,10 +47,10 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                     <button className="back-btn"
                     onClick= {backSection}
                     >
-                    Back question</button>
+                    Go back</button>
 
 
-                    <button className="buy-btn"
+                    <button className="next-btn"
                     onClick= {nextSection}>
                     Buy tickets
                     </button>

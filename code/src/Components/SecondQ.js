@@ -5,29 +5,33 @@ const SecondQuestion = ({ setAmountOfBands, arrayOfBandNumbers, nextSection, bac
     return (
         <article>
             <div className="container">
-                <h3>How many different bands do you listen to in one week?</h3>
-                {arrayOfBandNumbers.map(amountOfBands => (
-                    <label key={amountOfBands}>
-                        <input type="radio" 
-                            name="age" 
-                            onChange={event =>setAmountOfBands(event.target.value)} 
-                            defaultChecked={arrayOfBandNumbers === amountOfBands} 
-                            value={amountOfBands}
-                        />
-                        {amountOfBands}
-                    </label>
-                    ))}
+                <div className="text-group">
+                    <h3>How many different bands do you listen to in one week?</h3>
+                    {arrayOfBandNumbers.map(amountOfBands => (
+                        <label key={amountOfBands} className="radio-label">
+                            <input className="radios"
+                                type="radio" 
+                                name="age" 
+                                onChange={event =>setAmountOfBands(event.target.value)} 
+                                defaultChecked={arrayOfBandNumbers === amountOfBands} 
+                                value={amountOfBands}
+                            />
+                            {amountOfBands}
+                        </label>
+                        ))}
+                    </div>
 
-                    <button className="next-btn"
-                    onClick= {nextSection}
-                    >
-                    Next question</button>
+                    <div className="btn-group">
+                        <button className="back-btn" 
+                        onClick= {backSection}
+                        >
+                        Go back</button>
 
-                    <button className="back-btn" 
-                    onClick= {backSection}
-                    >
-                    Back question</button>
-
+                        <button className="next-btn"
+                        onClick= {nextSection}
+                        >
+                        Next question</button>
+                    </div>
                 </div>
             </article>
         

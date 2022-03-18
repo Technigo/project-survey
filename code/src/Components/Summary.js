@@ -18,7 +18,7 @@ const Summary = ({name, amountOfBands, bands, shirtColor, restart}) => {
             
 
                 <button className="restart"
-                onClick= {restart}
+                onClick={restart}
                 >Go back to start</button>
 
             </div>

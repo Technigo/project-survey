@@ -15,7 +15,7 @@ const Form = () => {
 
     const nextSection = () => {setSection(section + 1)}
     const backSection = () => {setSection(section - 1)}
-    const restart = () =>{setSection(section - 3)}
+    const restart = () => {setSection(0)}
 
 
     // Arrays of objects in radio buttons and dropdown
@@ -23,6 +23,7 @@ const Form = () => {
     const bandOptions = ['Korn', 'Greta van Fleet', 'Red Hot Chili Peppers', 'Foo Fighters', 'Rammstein', ]
 
     const handleSubmit = (event) => {event.preventDefault()}
+
 
     //Removing or adding a color in the array from checked checkboxes
     const onCheckboxChange = (color) => {
@@ -45,6 +46,7 @@ return (
             name={name} 
             setName={setName}
             nextSection={nextSection}
+            
             />)}
             
             {section === 1 && (
@@ -66,12 +68,11 @@ return (
             backSection={backSection}
             />
             )}
-            
-            
-        </form>
+
+        </form>   
+
 
             {section === 3 && (
-            
             <Summary name = {name} 
             amountOfBands = {amountOfBands}
             bands = {bands}
@@ -79,8 +80,7 @@ return (
             restart = {restart}
             />
             
-            )}
-
+            )}  
             
         </section>
     )
