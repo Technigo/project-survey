@@ -8,7 +8,7 @@ export const IntroPage = () => {
 			<h2 className="intro-text">Someone is planning a birthday party, huh?</h2>
 			<h3 className="intro-text">
 				Create a customized invitation card for your kids{" "}
-				<strong>birthday party!</strong>
+				<span className="intro-text--bold">birthday party!</span>
 			</h3>
 		</>
 	);

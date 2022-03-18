@@ -10,6 +10,20 @@ section.intropage-wrapper {
 	justify-content: center;
 }
 
+h3.intro-text {
+	font-weight: 600;
+}
+
 .intro-text {
 	text-shadow: var(--clr-white) 1px 0 10px;
+}
+
+.intro-text--bold {
+	font-weight: 900;
+}
+
+@media (min-width: 668px) {
+	section.intropage-wrapper {
+		background-position: center;
+	}
 }

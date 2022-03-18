@@ -198,10 +198,6 @@ section.overview-wrapper {
 /***********************/
 
 @media (min-width: 668px) {
-	main {
-		height: 80vh;
-	}
-
 	h2 {
 		font-size: 2rem;
 	}
