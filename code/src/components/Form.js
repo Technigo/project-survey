@@ -38,7 +38,7 @@ const Form = () => {
     setGoal(event.target.value);
   };
 
-  //Let's structure the steps:
+  //Structuring the steps:
   return (
     <form className="form" onSubmit={onSubmit}>
       {step === 0 && <Info />}
