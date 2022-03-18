@@ -2,7 +2,7 @@ import React from "react";
 
 const Name = ({ nameInput, NameInputChange, Change }) => {
   return (
-    <div>
+    <div class="container">
       <h2>Enter your name</h2>
       <form className="form-container">
         <label htmlFor="nameInput"></label>
@@ -11,8 +11,9 @@ const Name = ({ nameInput, NameInputChange, Change }) => {
           type="text"
           value={nameInput}
           onChange={NameInputChange}
-          placeholder="First & Last name"
+          placeholder="Your name"
         />
+
         <button disabled={nameInput === ""} onClick={Change} className="button">
           Continue ➤
         </button>

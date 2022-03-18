@@ -2,7 +2,7 @@ import React from "react";
 
 const SecondQue = ({ HolidayInput, HolidayInputChange, Change }) => {
   return (
-    <div className="main-container">
+    <div class="container">
       <h2>How does a perfect holiday look for you? </h2>
       <form className="form-container">
         <label className="second-que">

@@ -2,7 +2,7 @@ import React from "react";
 
 const FirstQue = ({ FavoriteInput, FavoriteInputChange, Change }) => {
   return (
-    <div className="main-container">
+    <div class="container">
       <h2> What's your favorite season? </h2>
       <form className="form-container">
         <label className="first-que">
