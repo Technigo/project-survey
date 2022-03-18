@@ -54,7 +54,7 @@ label, button, select {
   display: block;
 }
 
-.member-form, .age-form {
+.member-form, .occupation-form {
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;

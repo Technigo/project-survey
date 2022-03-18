@@ -1,6 +1,6 @@
 import React from "react";
 
-export const QuestionTwo = ({ location, onLocationInputChange }) => {
+export const SelectInput = ({ location, onLocationInputChange }) => {
 
   return (
     <form onSubmit={event => event.preventDefault()}>
