@@ -19,19 +19,19 @@ const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange
              Have your pick!
             </option>
 
-            <option className="option-input" value="Candy">
+            <option className="option-input" value="candy">
               Candy
             </option>
 
-            <option className="option-input" value="Pasta">
+            <option className="option-input" value="pasta">
               Pasta
             </option>
 
-            <option className="option-input" value="Vegetables">
+            <option className="option-input" value="vegetables">
               Vegetables
             </option>
 
-            <option className="option-input" value="Ice Cream">
+            <option className="option-input" value="ice cream">
               Ice Cream
             </option>
           </select>

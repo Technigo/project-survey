@@ -1,11 +1,11 @@
 import React from "react";
 
-const drinksArray = ["Champagne", "Milk", "Beer", "Hot chocolate"];
+const drinksArray = ["champagne", "milk", "beer", "hot chocolate"];
 
 const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNextStepChange, onStepBackChange}) => {
   return (
-    <div className="drink-wrapper">
-      <section className="head-section-four" id="four">
+    <>
+      <section className="head-section" id="four">
         <h2 className="answer-text">Mmm {selectOptionInput} is tasty!</h2>
         <h2 className="question-text">Drink that boost your mood?</h2>
         <form className="radio-button-form">
@@ -43,7 +43,7 @@ const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNext
             </button>
           </div>
       </section>
-    </div>
+    </>
   );
 };
 

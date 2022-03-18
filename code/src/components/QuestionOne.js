@@ -13,7 +13,7 @@ const QuestionOne = ({ nameInput, onNameInputChange, onStepBackChange, onNextSte
             className="input-field"
             id="nameInput"
             type="text"
-            placeholder="Your beautiful name goes here"
+            placeholder="Your name goes here"
             value={nameInput}
             onChange={onNameInputChange}
           />
