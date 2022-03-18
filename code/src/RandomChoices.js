@@ -92,7 +92,7 @@ export const RandomIngredientTwo = () => {
 }
 
 export const RandomIngredientOne = () => {
-  const ingredientTwoOptions = ["ham", "cheese", "egg", "mayo", "turkey", "avocado", "ketchup", "onion"]
+  const ingredientTwoOptions = ["ham", "cheese", "egg", "mayo", "turkey", "avocado", "ketchup", "onion", "turkey"]
   if (ingredientTwo === '') {
     ingredientTwo = ingredientTwoOptions[Math.floor(Math.random() * (ingredientTwoOptions.length))]
   }
