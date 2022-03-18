@@ -54,6 +54,17 @@ input {
   -webkit-appearance: none;
 }
 
+.btn-special {
+  font-family: "Jost", sans-serif;
+  border: 0.6px solid #a66d06;
+  font-size: 16px;
+  border-radius: 30px;
+  color: #a66d06;
+  padding: 13px;
+  margin: 18px 10px 10px 0;
+  -webkit-appearance: none;
+}
+
 p,
 label {
   font-size: 19px;

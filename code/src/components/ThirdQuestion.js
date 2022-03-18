@@ -2,13 +2,7 @@ import React, { useState } from 'react'
 
 const Checkbox = ({nextPage, backPage}) => {
 
-    // const [checked, setChecked] = React.useState(false)
-
     const [checked, setChecked] = useState([])
-
-    // const handleChange = () => {
-    //     setChecked(!checked)
-    // }
 
 
     const onCheckboxChange = (interest) => {
@@ -30,7 +24,7 @@ const Checkbox = ({nextPage, backPage}) => {
             <p>What would you like to read more about?</p>
             <p className="descriptive-text">Pick as many as you want <span role="img" aria-label="girl waving emoji">🙋‍♀️</span></p>
 
-        <ul>
+        <ul className="ul-list">
             <li>
                 <label htmlFor="pie" key="pie">
                     <input 
@@ -54,23 +48,34 @@ const Checkbox = ({nextPage, backPage}) => {
             </li>
 
             <li>
-                <label htmlFor="apples">
+                <label htmlFor="tech">
                     <input 
-                    id="apples"
+                    id="tech"
                     type="checkbox"
-                    checked={checked.includes('apples')}
-                    onChange={() => onCheckboxChange('apples')}  />
-                    Apples
+                    checked={checked.includes('tech')}
+                    onChange={() => onCheckboxChange('tech')}  />
+                    Tech News
+                </label>
+            </li>
+
+            <li>
+                <label htmlFor="programming">
+                    <input 
+                    id="programming"
+                    type="checkbox"
+                    checked={checked.includes('programming')}
+                    onChange={() => onCheckboxChange('programming')}  />
+                    Programming
                 </label>
             </li>
         </ul>
 
 
-        <button class="btn" type="submit" onClick={backPage}> 
+        <button class="btn-special" type="submit" onClick={backPage}> 
         <span role="img" aria-label="back arrow emoji">↩️</span> Go back
         </button>
 
-        <button class="btn" type="submit" onClick={nextPage}> Next question!</button>
+        <button class="btn-special" type="submit" onClick={nextPage}> Next question!</button>
 
         </div>
 

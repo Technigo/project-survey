@@ -73,6 +73,7 @@ return (
         {page === 4 && (
             <Summary
             nameInput={nameInput}
+            emailInput={emailInput}
             />
         )}
 
