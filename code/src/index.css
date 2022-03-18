@@ -65,11 +65,7 @@ code {
   font-size: 1.5rem;
 }
 
-.traits-container {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 5px;
-}
+
 
 .current-page {
   display: grid;
@@ -86,4 +82,13 @@ button {
 
 .trait {
   display: block;
+}
+
+
+@media (min-width: 40em) {
+  .traits-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+  }
 }

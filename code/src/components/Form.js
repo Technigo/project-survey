@@ -15,14 +15,23 @@ export const Form = () => {
 	const [getBackTogether, setGetBackTogether] = useState('')
 	const [dateFriend, setDateFriend] = useState('')
 	const [friendContactDetails, setFriendContactDetails] = useState('')
-
+	const [error, setError] = useState('')
   	// prevents page from reload when form is submitted
 	const onSubmitting = (e) => {
 		e.preventDefault();
 	};
 
 
-	const nextPage = () => setPage(page + 1);
+	const nextPage = (value) => {
+		console.log(value, 'value')
+		console.log(value === 'default')
+		if (value === 'default' || !value || value === []) {
+			setError("Please enter an answer")
+		} else {
+			setError('')
+			setPage(page + 1);
+		}
+	}
 	const backPage = () => setPage(page - 1);
 	const breakUpper = () => {
 		if (breakupPerson === "I broke up with you.") {
@@ -68,7 +77,8 @@ export const Form = () => {
 						placeholder='Your name'
 					/>
 					<div>
-						<button  onClick={nextPage}>Next question</button>
+						<div><p>{error}</p></div>
+						<button onClick= {() => nextPage(userName)}>Next question</button>
 					</div>
 				</div>
 			)}
@@ -81,8 +91,9 @@ export const Form = () => {
 						duration = {questions.duration}	
 					/>
 					<div>
+						<div><p>{error}</p></div>
 						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={nextPage}>Next question</button>
+						<button  onClick={() => nextPage(shipDuration)}>Next question</button>
 					</div>
 				</div>
 			)}
@@ -106,8 +117,9 @@ export const Form = () => {
 						</div>
 					)}
 					<div>
+						<div><p>{error}</p></div>
 						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={nextPage}>Next question</button>
+						<button  onClick={() => nextPage(breakupPerson)}>Next question</button>
 					</div>
 				</div>
 			)}
@@ -124,8 +136,9 @@ export const Form = () => {
 						value={breakupReason}
 					/>
 					<div>
+						<div><p>{error}</p></div>
 						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={nextPage}>Next question</button>
+						<button  onClick={() => nextPage(breakupReason)}>Next question</button>
 					</div>
 				</div>
 			)}
@@ -145,8 +158,9 @@ export const Form = () => {
 						)}
 					</div>
 					<div>
+						<div><p>{error}</p></div>
 						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={nextPage}>Next question</button>
+						<button  onClick={() => nextPage(traitsCheckboxes)}>Next question</button>
 					</div>
 				</div>
 			)}
@@ -215,6 +229,7 @@ export const Form = () => {
 						</div>
 					)}
 					<div>
+						<div><p>{error}</p></div>
 						<button  onClick={backPage}>Previous question</button>
 						<button  onClick={nextPage}>Next question</button>
 					</div>
