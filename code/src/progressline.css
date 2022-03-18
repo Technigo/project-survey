@@ -29,4 +29,9 @@ footer {
 	.line {
 		width: 35px;
 	}
+
+	.square:hover,
+	.square:focus {
+		transform: scale(1.3);
+	}
 }
