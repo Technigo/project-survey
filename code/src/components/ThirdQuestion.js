@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Checkbox = ({nextPage}) => {
+const Checkbox = ({nextPage, backPage}) => {
 
     const [checked, setChecked] = React.useState(false)
 
@@ -46,6 +46,8 @@ const Checkbox = ({nextPage}) => {
         </ul>
 
         <button class="btn" type="submit" onClick={nextPage}> Next question!</button>
+        <button class="btn" type="submit" onClick={backPage}> <span role="img" aria-label="back arrow emoji">↩️</span> Go back</button>
+
 
         </div>
 
