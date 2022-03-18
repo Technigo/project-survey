@@ -10,7 +10,7 @@ const UpperBodyQuestion = ({
 			<label>
         What you want to do for train your upper body? You can choose option depends what you can use for training
         <select id="upperBody" value={upperBody} onChange={onUpperBodyChange}>
-          <option value="" disabled selected>
+          <option>
             Select
           </option>
           <option value="Pull up">Pull up</option>

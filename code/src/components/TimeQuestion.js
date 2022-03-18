@@ -10,7 +10,7 @@ const TimeQuestion = ({
 			<label>
         How long you want your cardio exersice takes?
         <select id="time" value={time} onChange={onTimeChange}>
-          <option value="" disabled selected>
+          <option>
             Select time
           </option>
           <option value="10">10 minutes</option>

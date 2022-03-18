@@ -1,7 +1,6 @@
 import React from 'react';
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
-	// const { nameInput, onNameInputChange } = props;
 
 	return (
 		<form className="form">

@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Overview = ({ nameInput, time, upperBody, lowerBody, cardioTypes, random, program }) => {
+const Overview = ({nameInput, time, upperBody, lowerBody, cardioTypes}) => {
 	return (
 		<section className='overview'>
 			<h2>This is the workout for you, {nameInput}: </h2>
