@@ -1,14 +1,12 @@
 import React from 'react'
-// import { nameInput } from './FirstQuestion'
 
 const SecondQuestion = ({
     nameInput, 
     nextPage, 
-    backPage
+    backPage,
+    emailInput,
+    onEmailInputChange
 }) => {
-
-    const onEmailInputChange = ('')
-    const emailInput = ('')
 
     return (
 
