@@ -11,9 +11,9 @@ const Summary = ({restart, interest, nameInput, emailInput}) => {
         <p className="descriptive-text">Hope you'll love the newsletter!</p>
          
          <div className="summary-text">
-         <p>   Name: <span className="username"> {nameInput}</span></p>
-         <p>   Email: <span className="emailadress"> {emailInput}</span> </p>
-         <p>   The newsletter will cover: {interest} </p>
+         <p>Name: <span className="username"> {nameInput}</span></p>
+         <p>Email: <span className="emailadress"> {emailInput}</span> </p>
+         <p>The newsletter will cover: {interest} </p>
          </div>
 
 
