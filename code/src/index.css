@@ -52,8 +52,7 @@ h1 {
 }
 
 button {
-  width: 100px;
-  height: 30px;
+  min-width:100px;
   padding: 5px;
   margin: 10px;
   border-radius: 5px;

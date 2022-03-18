@@ -8,7 +8,7 @@ const Form = () => {
     const [name, setName] = useState('')
     const [amountOfBands, setAmountOfBands] = useState(false)
     const [bands, setBands] = useState('Korn')
-    const [shirtColor, setColor] = useState([])
+    const [musicType, setMusicType] = useState([])
     
     //State property to go to next question or back
     const [section, setSection] = useState(0)
@@ -25,15 +25,15 @@ const Form = () => {
     const handleSubmit = (event) => {event.preventDefault()}
 
 
-    //Removing or adding a color in the array from checked checkboxes
-    const onCheckboxChange = (color) => {
-        if (shirtColor.includes(color)) {
-            const filteredShirtColor = shirtColor.filter(item => {
-                return item !== color                     //If color is included it will remove it if clicked again
+    //Removing or adding musictype in the array from checked checkboxes
+    const onCheckboxChange = (music) => {
+        if (musicType.includes(music)) {
+            const filteredMusicType = musicType.filter(item => {
+                return item !== music                     //If musictype is included it will remove it if clicked again
             })
-            setColor(filteredShirtColor)
+            setMusicType(filteredMusicType)
         } else {
-            setColor([...shirtColor, color])
+            setMusicType([...musicType, music])
         }
     }
 
@@ -61,8 +61,7 @@ return (
             <ThirdAndFourthQuestion 
             bandOptions={bandOptions} 
             setBands={setBands}
-            shirtColor={shirtColor}
-            setColor={setColor}
+            musicType={musicType}
             onCheckboxChange={onCheckboxChange}
             nextSection={nextSection}
             backSection={backSection}
@@ -76,7 +75,7 @@ return (
             <Summary name = {name} 
             amountOfBands = {amountOfBands}
             bands = {bands}
-            shirtColor={shirtColor}
+            musicType={musicType}
             restart = {restart}
             />
             

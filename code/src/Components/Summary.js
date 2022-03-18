@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Summary = ({name, amountOfBands, bands, shirtColor, restart}) => {
+const Summary = ({name, amountOfBands, bands, musicType, restart}) => {
     
 
 // if (age === "0-17") {
@@ -13,8 +13,11 @@ const Summary = ({name, amountOfBands, bands, shirtColor, restart}) => {
         <article>
             <div className="container">
 
-                <p>Hello {name}, you are {amountOfBands} and you are going to see {bands}. 
-                You will recieve a shirt: {shirtColor}</p>
+                <p>Hello {name}, you listen to {amountOfBands} number of bands per week, that's cool.
+                You also listed {bands} as your favourite band. 
+                 You generally listen to this type of music: 
+                 <span className="music-type">{musicType}</span>
+                 </p>
             
 
                 <button className="restart"

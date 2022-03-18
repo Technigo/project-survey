@@ -1,6 +1,6 @@
 import React from 'react'
 
-const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, shirtColor, onCheckboxChange}) => {
+const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, musicType, onCheckboxChange}) => {
     return (
 
         <article>
@@ -20,26 +20,26 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                     </div>
 
                     <div className="checkboxes">
-                        <p>What question should I have here?!</p>
-                    <label htmlFor="blue" key="blue">Blue
+                        <p>What type of music do you generally listen to?</p>
+                    <label htmlFor="thegoodkind" key="thegoodkind">The good kind
                         <input type="checkbox" 
-                        name="blue" 
-                        checked={shirtColor.includes('blue ')}
-                        onChange={() =>onCheckboxChange('blue ')}/>
+                        name="thegoodkind" 
+                        checked={musicType.includes('the good kind ')}
+                        onChange={() =>onCheckboxChange('the good kind ')}/>
                     </label>
 
-                    <label htmlFor="black" key="black">Black
+                    <label htmlFor="pop" key="pop">Pop
                         <input type="checkbox" 
-                        name="black"
-                        checked={shirtColor.includes('black ')}
-                        onChange={() => onCheckboxChange('black ')}/>
+                        name="pop"
+                        checked={musicType.includes('pop ')}
+                        onChange={() => onCheckboxChange('pop ')}/>
                     </label>
 
-                    <label htmlFor="white" key="white">White
+                    <label htmlFor="electronic" key="electronic">Electronic
                         <input type="checkbox" 
-                        name="white"
-                        checked={shirtColor.includes('white ')}
-                        onChange={() => onCheckboxChange('white ')}/>
+                        name="electronic"
+                        checked={musicType.includes('electronic ')}
+                        onChange={() => onCheckboxChange('electronic ')}/>
                     </label>
                 </div>
             
