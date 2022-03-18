@@ -42,8 +42,8 @@ svg {
 
 span.month {
 	padding: 1.025em 1.5em;
-	border-top: 1px solid var(--clr-black);
-	border-bottom: 1px solid var(--clr-black);
+	border-top: 2px solid var(--clr-black);
+	border-bottom: 2px solid var(--clr-black);
 	display: flex;
 	align-items: center;
 }
@@ -58,8 +58,9 @@ span.month {
 h2.invitation-text {
 	max-width: 25ch;
 	font-size: 1.1rem;
-	font-weight: 500;
+	font-weight: 700;
 	line-height: normal;
+	margin: 0 0 1em;
 }
 
 .second-font {
@@ -78,18 +79,18 @@ p.date-text {
 	display: flex;
 	align-items: center;
 	text-transform: uppercase;
-	font-weight: 700;
+	font-weight: 500;
 }
 
 span.time-upper {
 	padding: 0.5em 1.5em 0;
-	border-top: 1px solid var(--clr-black);
+	border-top: 2px solid var(--clr-black);
 	max-width: 6ch;
 }
 
 span.time-lower {
 	padding: 0 1.9em 0.5em 1.6em;
-	border-bottom: 1px solid var(--clr-black);
+	border-bottom: 2px solid var(--clr-black);
 	max-width: 6ch;
 }
 
@@ -100,13 +101,13 @@ span.day {
 
 .location-text {
 	padding: 1.5em 0;
-	font-weight: 500;
+	font-weight: 700;
 	letter-spacing: 1px;
 	max-width: 30ch;
 }
 
 .rvsp-text {
-	border-top: 1px solid var(--clr-black);
+	border-top: 2px solid var(--clr-black);
 	font-size: 0.9rem;
 	letter-spacing: normal;
 	padding: 0.25em;
@@ -117,7 +118,13 @@ span.day {
 	font-size: 0.6rem;
 	font-weight: 700;
 	text-transform: uppercase;
+	position: absolute;
+	bottom: 3px;
 }
+
+/***********************/
+/***  MEDIA QUERIES  ***/
+/***********************/
 
 @media (min-width: 668px) {
 	h2.invitation-text {

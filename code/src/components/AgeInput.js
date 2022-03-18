@@ -22,7 +22,13 @@ export const AgeInput = ({ state, handleInput }) => {
 			<h3>Which birthday are we celebrating?</h3>
 			<label htmlFor="name">
 				Birthday
-				<select type="text" name="age" value={state} onChange={handleInput}>
+				<select
+					type="text"
+					name="age"
+					value={state}
+					onChange={handleInput}
+					required
+				>
 					{birthdays.map((birthday, index) => (
 						<option key={birthday} value={birthday}>
 							{birthdays[index]}

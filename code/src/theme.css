@@ -31,3 +31,19 @@ input[type="radio"]:checked + img {
 img {
 	width: 50px;
 }
+
+/***********************/
+/****  MEDIA QUERY  ****/
+/**********************/
+
+@media (min-width: 668px) {
+	img {
+		width: 80px;
+	}
+}
+
+@media (min-width: 1024px) {
+	img {
+		width: 100px;
+	}
+}
