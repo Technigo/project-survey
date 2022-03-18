@@ -25,6 +25,7 @@ flex-direction: column;
 padding: 11px;
 width: 85%;
 margin-top: 20px;
+align-items: center;
 }
 
 .form-container h1,
@@ -126,7 +127,7 @@ text-align: center;
 }
 
 
-/* ----- TABLET AND LAPTOP VIEW ----- */
+/* ----- TABLET VIEW ----- */
 
 @media (min-width: 667px) {
 
@@ -141,8 +142,7 @@ text-align: center;
   align-items: center;
   flex-wrap: wrap;
   justify-content: center;
-  width: 50%;
-}  
+  }  
 
 .form-container h3 {
 font-size: 30px;
@@ -168,7 +168,7 @@ font-size: 30px;
   }
 
   .summary-container {
-    Width: 45%;
+    Width: 55%;
     margin: 30px;
   }
 
@@ -182,3 +182,16 @@ font-size: 30px;
 
 }
 
+/* ----- LAPTOP VIEW ----- */
+
+@media (min-width: 1024px) {
+
+.form-container {
+ width: 50%;
+}
+
+.form {
+  font-size: 15px;
+}
+
+}
