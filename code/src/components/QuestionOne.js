@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionOne = ({nameInput, onNameInputChange, onStepChange, onStepBackChange}) => {
+const QuestionOne = ({nameInput, handleNameInputChange, onStepChange, onStepBackChange}) => {
 
     return (
 
@@ -10,17 +10,17 @@ const QuestionOne = ({nameInput, onNameInputChange, onStepChange, onStepBackChan
                 <h2>What is your name?</h2>
             </div>
         <form>
-            <label htmlFor="nameInput">Type your name here: </label>
+            <label htmlFor="nameInput"><p>Type your name here: </p></label>
         <input
         id="nameInput"
         type="text"
-        onChange={onNameInputChange}
+        onChange={handleNameInputChange}
         value={nameInput}
         />
         </form>
         <div className="buttons">
-                <button type="submit" onClick={onStepBackChange} href="#two" className="btn">Go back!</button>
-                <button type="submit" onClick={onStepChange} href="#two" className="btn">Next please!</button>
+        <button type="submit" onClick={onStepBackChange} href="#two" className="btn">Go back</button>
+                <button type="submit" onClick={onStepChange} href="#two" className="btn">Next</button>
             </div>
 
         </section>

@@ -1,12 +1,23 @@
 import React from 'react'
 
-const QuestionTwo = ({nameInput, selectValue, onSelectOptionChange, onStepChange, onStepBackChange}) => {
+const QuestionTwo = ({nameInput, selectValue, handleSelectOptionChange, onStepChange, onStepBackChange}) => {
     const options = [
         {
             label: "Choose one option",
             value: "Choose one option",
           },
-        
+          {
+            label: "to fill my every need",
+            value: "as a piece of garbage",
+          },
+          {
+            label: "to be here for future generations",
+            value: "with a conscience",
+          },
+          {
+            label: "to each its own, that's private",
+            value: "for 'privat' probably dirty buisness",
+          }
         ]
     return (
 
@@ -16,12 +27,12 @@ const QuestionTwo = ({nameInput, selectValue, onSelectOptionChange, onStepChange
        </div> 
 
         <form className='form'>
-            <label htmlFor='select'>I </label>
+            <label htmlFor='select'></label>
            
         <select
         id="select-option"
-        onChange={onSelectOptionChange}
-        value={selectValue}
+        value={selectValue} 
+        onChange={handleSelectOptionChange}
         >
         {options.map((option) => (
          <option key={option.value} value={option.value}>{option.label}</option>   
@@ -29,8 +40,8 @@ const QuestionTwo = ({nameInput, selectValue, onSelectOptionChange, onStepChange
         </select>
         </form>
         <div className="buttons">
-                <button type="submit" onClick={onStepBackChange} href="#two" className="btn">Go back!</button>
-                <button type="submit" onClick={onStepChange} href="#two" className="btn">Next please!</button>
+        <button type="submit" onClick={onStepBackChange} href="#two" className="btn">Go back</button>
+                <button type="submit" onClick={onStepChange} href="#two" className="btn">Next</button>
             </div>
 
         </section>
