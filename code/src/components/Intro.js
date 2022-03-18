@@ -7,7 +7,11 @@ return (
     <div>
             
         <div className="header-title">
-            <h1 className="hello">There you are!</h1> 
+
+
+
+            
+            <h1>There you are!</h1> 
             <p>So happy to see you here.</p>
             <p>Would you like to subscribe to our newsletter?</p>
 

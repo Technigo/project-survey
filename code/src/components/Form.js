@@ -3,6 +3,7 @@ import Intro from './Intro'
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
+import Summary from './Summary'
 
 
 const Form = () => {
@@ -67,6 +68,12 @@ return (
         onChange={handleChange}
         nextPage={nextPage}
         backPage={backPage}/>)}
+
+        {page === 4 && (
+            <Summary
+            nameInput={nameInput}
+            />
+        )}
 
 </form>
 
