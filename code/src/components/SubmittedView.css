@@ -5,7 +5,8 @@
 
 ul {
 	list-style-type: '🧂';
-	padding-left: inherit;
+	margin-left: 16px;
+	padding: inherit;
   list-style-position:outside;
   list-style-image: none;
 }
