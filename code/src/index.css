@@ -20,7 +20,7 @@ body {
 
 main {
   width: 375px;
-  height: 96vh;
+  height: 92vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
@@ -28,6 +28,7 @@ main {
 }
 
 footer {
+  height: 8vh;
   margin-top: auto;
   display: flex;
   justify-content: center;
