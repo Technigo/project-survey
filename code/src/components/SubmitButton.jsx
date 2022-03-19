@@ -18,10 +18,16 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-const SubmitButton = ({pageNumber, setPageNumber, name, gender, age, tipiq1Answer, tipiq2Answer, tipiq3Answer, tipiq4Answer, tipiq5Answer, tipiq6Answer, tipiq7Answer, tipiq8Answer, tipiq9Answer, tipiq10Answer, tiviq1Answer, tiviq2Answer, tiviq3Answer, tiviq4Answer, tiviq5Answer, tiviq6Answer, tiviq7Answer, tiviq8Answer, tiviq9Answer, tiviq10Answer, tiviq11Answer, tiviq12Answer, tiviq13Answer, tiviq14Answer, tiviq15Answer, tiviq16Answer, tiviq17Answer, tiviq18Answer, tiviq19Answer, tiviq20Answer}) => {
+const SubmitButton = ({pageNumber, setPageNumber, setError, name, gender, age, tipiq1Answer, tipiq2Answer, tipiq3Answer, tipiq4Answer, tipiq5Answer, tipiq6Answer, tipiq7Answer, tipiq8Answer, tipiq9Answer, tipiq10Answer, tiviq1Answer, tiviq2Answer, tiviq3Answer, tiviq4Answer, tiviq5Answer, tiviq6Answer, tiviq7Answer, tiviq8Answer, tiviq9Answer, tiviq10Answer, tiviq11Answer, tiviq12Answer, tiviq13Answer, tiviq14Answer, tiviq15Answer, tiviq16Answer, tiviq17Answer, tiviq18Answer, tiviq19Answer, tiviq20Answer}) => {
+    const API = 'https://api.db-ip.com/v2/free/self';
 
-    const API = 'https://api.db-ip.com/v2/free/self'
     const handleSubmit = () => {
+
+        if (pageNumber === 7 && (tiviq11Answer === 'default' || tiviq12Answer === 'default' || tiviq13Answer === 'default' || tiviq14Answer === 'default' || tiviq15Answer === 'default' || tiviq16Answer === 'default' || tiviq17Answer === 'default' || tiviq18Answer === 'default' || tiviq19Answer === 'default' || tiviq20Answer === 'default')) {
+            setError('Please fill in the required fields.')
+            setPageNumber(7)
+        } else {
+            
         fetch(API)
         .then((res) => res.json())
         .then((data) => {
@@ -76,6 +82,7 @@ const SubmitButton = ({pageNumber, setPageNumber, name, gender, age, tipiq1Answe
             setPageNumber(pageNumber + 1)
         })
     }
+}
     return (
         <button onClick={handleSubmit} className="submit-btn"><img className="navbutton-icon" src={forwardButton} alt="forward button" /></button>
     )
