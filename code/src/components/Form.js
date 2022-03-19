@@ -8,8 +8,7 @@ const questions = [
   {
     id: "preference",
     question_text: "What is your dietary preference",
-    answer_type: "select",
-    format_answer: (value) => value,
+    input_type: "select",
     options: [
       { value: "Eat everything", label: "Eat everything" },
       { value: "Pescatarian", label: "Pescatarian" },
@@ -20,8 +19,7 @@ const questions = [
   {
     id: "cuisine",
     question_text: "Which of the following cuisines are you craving most?",
-    answer_type: "radio",
-    format_answer: (value) => value,
+    input_type: "radio",
     options: [
       { value: "Persian cuisine", label: "Persian" },
       { value: "Mexican cuisine", label: "Mexican" },
@@ -32,7 +30,7 @@ const questions = [
   {
     id: "spiciness",
     question_text: "How well can you handle spice?",
-    answer_type: "range",
+    input_type: "range",
     format_answer: (value) => `Spice level: ${value} chilis`,
     options: [
       { value: 1, label: "\u{1F336}" },
@@ -43,7 +41,7 @@ const questions = [
   {
     id: "herbs",
     question_text: "Which of these herbs is superior?",
-    answer_type: "select",
+    input_type: "select",
     format_answer: (value) => `Heaps of ${value}`,
     options: [
       { value: "coriander", label: "Coriander" },
@@ -56,7 +54,7 @@ const questions = [
   {
     id: "allergies",
     question_text: "Do you have an allergies we should know about?",
-    answer_type: "text",
+    input_type: "text",
     format_answer: (value) => `Allergies: ${value.charAt(0).toUpperCase() + value.slice(1)}`,
   },
 ];
@@ -69,7 +67,10 @@ const Form = () => {
 
   const handleInputChange = (event) => setInputValue(event.target.value);
 
-  const formatInput = (value) => questions[currentQuestionIndex].format_answer(value);
+  const formatInput = (value) =>
+    questions[currentQuestionIndex].format_answer
+      ? questions[currentQuestionIndex].format_answer(value)
+      : value;
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
