@@ -173,6 +173,7 @@ input, select, textarea {
   border: none;
   font-family: 'Inter', sans-serif;
   transition: all 0.4s ease;
+  color: var(--accentBlack);
 }
 
 input:focus {
@@ -307,6 +308,7 @@ progress[value]::-webkit-progress-value{
   width: 10rem;
   padding: 1.5rem 1rem;
   font-size: 1.4rem;
+  color: var(--accentBlack);
 }
 
 .prev-btn {
