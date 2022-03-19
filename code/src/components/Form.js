@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Intro from './Intro'
-import FirstQuestion from './FirstQuestion'
-import SecondQuestion from './SecondQuestion'
+import NameQuestion from './NameQuestion'
+import EmailQuestion from './EmailQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import Summary from './Summary'
 import Footer from './Footer'
@@ -52,16 +52,16 @@ return (
 
     { /* FIRST PAGE */ }
     {page === 1 && (
-    <FirstQuestion 
+    <NameQuestion 
     nameInput={nameInput}
-    onNameInputChange={onNameInputChange}
     surnameInput={surnameInput}
+    onNameInputChange={onNameInputChange}
     onSurnameInputChange={onSurnameInputChange}
     nextPage={nextPage}/>)}
 
     { /* SECOND PAGE */ }
     {page === 2 && (
-        <SecondQuestion
+        <EmailQuestion
         emailInput={emailInput}
         onEmailInputChange={onEmailInputChange}
         nextPage={nextPage}
@@ -80,6 +80,7 @@ return (
         {page === 4 && (
             <Summary
             nameInput={nameInput}
+            surnameInput={surnameInput}
             emailInput={emailInput}
             interest={interest}
             restart={restart}

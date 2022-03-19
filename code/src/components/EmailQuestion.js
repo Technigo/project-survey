@@ -1,6 +1,6 @@
 import React from 'react'
 
-const SecondQuestion = ({
+const EmailQuestion = ({
     nameInput, 
     nextPage, 
     backPage,
@@ -17,7 +17,7 @@ const SecondQuestion = ({
         <input
         id="name"
         type="text"
-        placeholder="Email"
+        placeholder="name@email.com"
         value={emailInput}
         onChange={onEmailInputChange}
          />
@@ -38,4 +38,4 @@ const SecondQuestion = ({
 }
 
 
-export default SecondQuestion
+export default EmailQuestion

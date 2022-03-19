@@ -1,7 +1,7 @@
 import React from 'react'
 
 
-const FirstQuestion = ({ 
+const NameQuestion = ({ 
     nameInput, 
     onNameInputChange, 
     surnameInput,
@@ -43,4 +43,4 @@ const FirstQuestion = ({
 
 }
 
-export default FirstQuestion
+export default NameQuestion

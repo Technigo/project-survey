@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Summary = ({restart, interest, nameInput, emailInput}) => {
+const Summary = ({restart, interest, nameInput, surnameInput, emailInput}) => {
 
     return (
 
@@ -11,7 +11,7 @@ const Summary = ({restart, interest, nameInput, emailInput}) => {
         <p className="descriptive-text">Hope you'll love the newsletter!</p>
          
          <div className="summary-text">
-         <p>Name: <span className="username"> {nameInput}</span></p>
+         <p>Name: <span className="username"> {nameInput} {surnameInput}</span></p>
          <p>Email: <span className="emailadress"> {emailInput}</span> </p>
          <p>The newsletter will cover: {interest} </p>
          </div>
