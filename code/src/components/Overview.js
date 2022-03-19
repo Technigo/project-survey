@@ -2,7 +2,7 @@ import React from "react";
 
 const Overview = ({ date, rating, frequency, loyalty, feedback, satisfaction, submit }) => {
     
-    return <div className='overview'>
+    return <div className='overview question'>
         <h2>A Short Summary Of Your Survey ✨</h2>
         <ul className='overview-list'>
             <li>

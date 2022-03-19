@@ -61,7 +61,21 @@ img {
 }
 
 .hero-img {
- 
+  position: relative;
+  z-index: 2;
+}
+
+.hero-img-container span {
+  top:0;
+  left: 0;
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: auto;
+  padding-bottom: 100%;
+  z-index: 1;
+  background: var(--accentPink);
+  border-radius: 50%;
 }
 
 
@@ -71,7 +85,7 @@ img {
   top:20%;
   transform: translate(-80%, -30%);
   font-size: 4.8rem;
-  color: #fff8e1;
+  color: #ffd858;
   animation: star 1s ease-in infinite;
   opacity: 0;
   z-index: 3;
@@ -91,7 +105,7 @@ img {
  40% {
   transform: translate(-80%, -50%) scale(1.3);
   opacity: 1;
-  color: #fce07c;
+  color: #fcd031;
 
 }
 100% {
@@ -105,7 +119,7 @@ img {
   background: var(--accentPink);
   border: solid 1px var(--accentPink);
   width: 50%;
-  padding: 1.5rem 1rem;
+  padding: 1.6rem 0.8rem;
   margin-top: 4.8rem;
   border-radius: 1.2rem;
   font-size: 1.6rem;
@@ -142,9 +156,9 @@ img {
   display: flex;
   flex-direction: column;
   gap: 1.2rem;
-  width: 300px;
   transform: translateY(0);
   transition: all 1s ease;
+  margin: 0 4.8rem;
 }
 
 
@@ -323,7 +337,7 @@ progress[value]::-webkit-progress-value{
   transition: all 0.4s ease;
 }
 
-.prev-icon:hover {
+.prev-icon:hover, .prev-icon:focus {
  color: var(--dominantWhite);
  background-color: var(--dominantBlue);
  border: var(--dominantBlue);
@@ -399,11 +413,34 @@ h2 {
   margin-bottom: 4rem;
 }
 
+@media (min-width: 768px) {
+    .hero-img-container {
+      width: 80%;
+    }
+
+    h1 {
+      font-size: 6rem;
+    }
+
+
+    .start-btn {
+      font-size: 2.4rem;
+      padding: 2rem 0.5rem;
+    }
+    .star-icon {
+      font-size: 6.4rem;
+    }
+
+    .star-icon-two {
+      font-size: 4.8rem;
+    }
+}
+
 @media (min-width: 1024px) {
 
     .hero-section {
       flex-direction: row;
-      padding-top: 0;
+      padding: 0 9.6rem;
     }
 
     .hero-img-container {
@@ -414,10 +451,15 @@ h2 {
     
     h1 {
       text-align: left;
-      font-size: 6rem;
     }
 
     .hero-text {
       width: 70%;
+      align-items: flex-start;
     }
+
+    .confirmation-container {
+      width: 425px;
+    }
+  
 }

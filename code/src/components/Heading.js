@@ -12,6 +12,7 @@ const Heading = ( {nextQuestion} ) => {
    </div>
    <div className="hero-img-container">
       <img className='hero-img' src={form} alt='a happy woman'/>
+      <span></span>
       <TiStarFullOutline className="star-icon" />
       <TiStarFullOutline className="star-icon star-icon-two" />
       </div>

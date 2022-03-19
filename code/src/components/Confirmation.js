@@ -7,7 +7,7 @@ import OverviewImg from './img/overview-img.png'
 const Confirmation = ( {restart, questionNum} ) => {
 
     console.log(questionNum)
-    return <div className='confirmation-page'> 
+    return <div className='confirmation-page '> 
         <div className='confirmation-container'>
         <img src={OverviewImg} alt='teddy bear'/>
         <h2> Thank you for the feedback</h2>
