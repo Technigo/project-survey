@@ -1,13 +1,11 @@
-# Survey form with React
+# Survey form with React 🍋
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week was about creating a survey with React.js using states and controlled forms. I did one a survey where the user can sign up for a newsletter. It contains radio buttons as well as a dropdown menu, some input fields and a summary with the confirmation.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This week went pretty smooth and I didn't have any larger issues. I started of early with deploying to Netlify just to be able to check the responsiveness and accessability. And make sure I didn't have any errors in the end of the week.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://survey-project-emma.netlify.app/
