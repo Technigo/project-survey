@@ -4,7 +4,7 @@ import { SignUpInfo } from './SignUpInfo';
 import { OtherInfo }  from './OtherInfo';
 import { Review } from './Review';
 
-export const Form = () => {
+export const Form = ({showModal, setShowModal}) => {
 
     const [page, setPage] = useState(0);
     
@@ -34,7 +34,9 @@ export const Form = () => {
     }
 
     return (
-        <div className="form">
+        <>
+
+        {showModal? ( <div className="form" showModal={showModal}>
             <div className="progressbar">
                 <div style={{width: page === 0 ? "33.3%" : page == 1 ? "66.6%" : "100%"}}></div> 
             </div>
@@ -60,6 +62,9 @@ export const Form = () => {
                     </button>
                 </div>
             </div>
-        </div>
+        </div> 
+        ) :null}
+
+        </>
     );
 }
