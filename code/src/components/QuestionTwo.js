@@ -5,7 +5,7 @@ const QuestionTwo = ({nameInput, musicInput, onMusicInputChange, onNextStepChang
   return (
     <>
       <section className="head-section" id="two">
-        <h2 className="answer-text">Hi {nameInput}!</h2>
+        <p className="thin-intro-text">Hi {nameInput},</p>
         <p className="thin-intro-text">horribly hard question but..</p>
         <h2 className="question-text">Best song ever heard is?</h2>
 

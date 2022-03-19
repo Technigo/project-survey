@@ -6,7 +6,7 @@ const QuestionFour = ({selectOptionInput, radioInput, onRadioInputChange, onNext
   return (
     <>
       <section className="head-section" id="four">
-        <h2 className="answer-text">Mmm {selectOptionInput} is tasty!</h2>
+        <h2 className="thin-intro-text">Mmm {selectOptionInput} is tasty!</h2>
         <h2 className="question-text">Drink that boost your mood?</h2>
         <form className="radio-button-form" onSubmit={onNextStepChange}>
           {drinksArray.map(drinks => (

@@ -5,8 +5,7 @@ const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange
   return (
     <>
       <section className="head-section" id="three">
-        <h2 className="answer-text">Mhm {musicInput},</h2>
-        <p className="thin-intro-text">SOUNDS GOOD!</p>
+        <p className="thin-intro-text">Mhm, {musicInput} is SUPER!</p>
         <h2 className="question-text">What food makes you the happiest self?</h2>
         <form onSubmit={onNextStepChange}>
           <label htmlFor="selectOptionInput" className="sr-only">Favourite food:</label>

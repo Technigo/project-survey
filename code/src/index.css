@@ -1,4 +1,5 @@
-/* Color scheme */
+/* Variables for colors and border */
+
 :root {
   --my-white: #fbf9eb;
   --my-black: #333;
@@ -14,8 +15,8 @@
   }
 }
 
-
 /* Reset default values such as margin, padding and box-sizing and increase the resolution of the text */
+
 * {
   margin: 0;
   padding: 0;
@@ -37,7 +38,6 @@ body {
 }
 
 /* Hiding class, making content visible only to screen readers but not visually */
-/* "sr" meaning "screen-reader" */
 
 .sr-only:not(:focus):not(:active) {
   clip: rect(0 0 0 0); 
@@ -49,10 +49,10 @@ body {
   width: 1px;
 }
 
-/* General text styling */
+/* General styling */
 
 h1 {
-  font-size: 14vw;
+  font-size: 13vw;
   position: absolute;
 }
 
@@ -67,47 +67,23 @@ h1 {
 }
 
 .question-text {
-  font-size: 20px;
+  font-size: 14px;
   font-weight: 300;
   padding: 10px 0 25px;
   line-height: 1.4;
 }
 
 .thin-intro-text {
-  font-size: 20px;
+  font-size: 12px;
   font-weight: 500;
   margin-top: 30px;
 }
 
-.answer-text {
-  font-size: 20px;
-  font-weight: 500;
-  text-transform: uppercase;
-}
-
 .small-text {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 7px;
+  font-family: "poppins";
 }
-
-/* Styling of music- and food component */
-
-#two .thin-intro-text, #three .thin-intro-text {
-  font-size: 14px;
-  font-weight: 300;
-}
-
-#two .question-text, #three .question-text {
-  font-size: 20px;
-  font-weight: 400;
-}
-
-#three .thin-intro-text {
-  margin-top: 8px;
-  margin-bottom: 16px;
-}
-
-/* Styling of general content */
 
 .head-section {
   text-align: center;
@@ -120,21 +96,42 @@ h1 {
   height: 100%;
 }
 
+/* Specific styling for different components */
+
+#intro .thin-intro-text {
+  margin-top: 30px;
+}
+
+#one.head-section {
+  padding-top: 30%;
+}
+
+#two.head-section, #three.head-section, #four.head-section {
+  padding-top: 30%;
+}
+
+#two .thin-intro-text, #three .thin-intro-text, #four .thin-intro-text {
+  margin-top: 10px;
+}
+
+#three .thin-intro-text {
+  margin-top: 8px;
+  margin-bottom: 4px;
+}
+
 #summary.head-section {
-  padding-top: 33%;
+  padding-top: 25%;
+  width:88%;
 }
 
-/* Styling of summary component */
-
-.summary-thin-intro-text {
-  font-size: 20px;
-  font-weight: 500;
-  margin-top: 16px;
+#summary .question-text {
+  padding: 10px 0 0;
+  border-bottom: 1px solid var(--my-black);
+  padding-bottom: 4px;
 }
-
-.head-section-summary {
-  padding-top: 33%;
-  text-align: center;
+  
+.summary-name {
+  text-transform: uppercase;
 }
 
 .summary-container {
@@ -142,13 +139,14 @@ h1 {
 }
 
 .summary-mantra-text {
-    font-size: 16px;
-    font-weight: 300;
-    text-align: center;
+  font-size: 14px;
+  font-weight: 300;
+  text-align: center;
 }
 
 .mantra-word-emph {
   color: var(--sec-accent-color);
+  text-decoration: underline;
   font-weight: 500;
   font-size: 18px;
 }
@@ -166,8 +164,8 @@ h1 {
   background-color: transparent;
   border: 2px solid var(--main-accent-color-dark);
   border-radius: 10px;
-  padding: 10px 15px;
-  font-size: 1rem;
+  padding: 8px 15px;
+  font-size: 12px;
   font-weight: 400;
   text-transform: uppercase;
   cursor: pointer;
@@ -177,7 +175,7 @@ h1 {
   margin: 0 auto;
 }
 
-.start-btn:hover {
+/* .start-btn:hover {
   background-color: var(--my-black);
   color: var(--main-accent-color);
   transition: all 1.5s ease;
@@ -193,7 +191,7 @@ h1 {
   background-color: var(--my-black);
   color: var(--main-accent-color);
   transition: all 1.5s ease;
-}
+} */
 
 /* Styling of form elements */
 
@@ -201,10 +199,10 @@ select {
   background-color: transparent;
   border: solid 2px var(--main-accent-color-dark);
   border-radius: 10px;
-  font-size: 1rem;
+  font-size: 14px;
   text-align: center;
   color: var(--my-black);
-  padding: 10px;
+  padding: 8px 15px;
   outline: none;
   appearance: none;
   -webkit-appearance: none;
@@ -222,8 +220,8 @@ select:hover {
   background-color: transparent;
   border: solid 2px var(--main-accent-color-dark);
   border-radius: 10px;
-  padding: 10px 15px;
-  width: 170px;
+  padding: 8px 15px;
+  width: 160px;
   outline: none;
 }
 
@@ -239,20 +237,25 @@ select:hover {
 }
 
 .radio-button-form {
-  width: 250px;
+  width: 210px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 5px;
-  background-color: var(--main-accent-color-dark);
+  border: 1px solid var(--main-accent-color-dark);
   border-radius: 10px;
   padding: 10px;
-
 }
-
 
 .radio-button {
   margin-right: 10px;
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  font-family: 'Poppins';
 }
 
 /* Styling of progress bar */
@@ -282,6 +285,11 @@ select:hover {
 
 @media screen and (min-width: 1024px) {
 
+  h1 {
+    font-size: 130px;
+    display: inline-flex;
+  }
+
   .mantra {
     right: 0;
     bottom: 3rem;
@@ -291,9 +299,8 @@ select:hover {
     top: 0;
   }
 
-  h1 {
-    font-size: 130px;
-    display: inline-flex;
+  .small-text {
+    font-size: 14px;
   }
 
   .head-section {
@@ -301,17 +308,75 @@ select:hover {
     width: 50%;
   }
 
-  #summary.head-section {
+  #one.head-section, #two.head-section,  #three.head-section, #four.head-section {
     padding-top: 16%;
-    width: 50%;
   }
 
   .question-text {
     font-size: 2vw;
+    font-weight: 300;
+  }
+
+  #two .question-text, #three .question-text, #four .question-text  {
+    font-weight: 300;
+  }
+
+  .thin-intro-text {
+    font-size: 20px;
+  }
+
+  #summary.head-section {
+    padding-top: 16%;
+    width: 50%;
+  }
+  
+  .summary-mantra-text {
+    font-size: 16px;
+  }
+
+  #summary .question-text {
+    padding: 10px 0 0;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+
+  .mantra-word-emph {
+    font-size: 24px;
   }
 
   .input-field {
     width: 300px;
+  }
+
+  .radio-button-form {
+    width: 250px;
+  }
+
+  .radio-label {
+    font-size: 14px;
+  }
+
+  .btn, .input-field, select {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .start-btn:hover {
+    background-color: var(--my-black);
+    color: var(--main-accent-color);
+    transition: all 1.5s ease;
+  }
+  
+  .next-btn:hover {
+    background-color: var(--sec-accent-color);
+    color: var(--my-black);
+    transition: all 1.5s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: var(--my-black);
+    color: var(--main-accent-color);
+    transition: all 1.5s ease;
   }
 
   .progress-bar-full {
@@ -326,7 +391,6 @@ select:hover {
     padding: 20px;
   }
   
-  
 }
 
 /* A MEDIA QUERY FOR TABLET */
@@ -335,6 +399,10 @@ select:hover {
 
   .mantra {
     bottom: 4rem;
+  }
+
+  .small-text {
+    font-size: 16px;
   }
 
   #summary.head-section {
@@ -348,10 +416,29 @@ select:hover {
   }
 
   .thin-intro-text {
-    font-size: 24px;
+    font-size: 18px;
   }
 
-  .answer-text {
-    font-size: 24px;
+  .btn, .input-field {
+    padding: 10px 15px;
+    font-size: 14px;
+  }
+
+  .start-btn:hover {
+    background-color: var(--my-black);
+    color: var(--main-accent-color);
+    transition: all 1.5s ease;
+  }
+  
+  .next-btn:hover {
+    background-color: var(--sec-accent-color);
+    color: var(--my-black);
+    transition: all 1.5s ease;
+  }
+  
+  .back-btn:hover {
+    background-color: var(--my-black);
+    color: var(--main-accent-color);
+    transition: all 1.5s ease;
   }
 }
