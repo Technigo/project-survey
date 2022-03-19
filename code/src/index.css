@@ -409,4 +409,11 @@ h2 {
 
 @media (min-width: 1024px) {
 
+    .hero-section {
+      flex-direction: row;
+    }
+
+    .hero-img-container {
+      width: 50%;
+    }
 }
