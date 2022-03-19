@@ -1,24 +1,26 @@
 import React from 'react'
 
-const Summary = ({name, travelWay, rooms, city, food, email, onBackstepChange}) => {
+const Summary = ({travelWay, rooms, city, food, email, onStepChange, onBackstepChange}) => {
    return (
         <section className="question-container">
             <h2>And you´re done!</h2>
-            <p>We´ve registered that you attended our event in {city} and that
-            you traveled {travelWay} to get there. You gave our rooms a {rooms} and the standard
-            of our the restaurant a {food}.</p>
-
-            <div className="">
-                <label htmlFor='email'></label>
-                <input
-                id="email"
-                type="e-mail"
-                // onChange={onNameChange}
-                // value={name}
-                />
-             <button disabled={email===""}>OK</button>
-             <button onClick={onBackstepChange}>back</button>
-             </div>
+            <div className='summary-answer'>
+            <h3>We hope you had a great time on our event in <b>{city}!</b></h3>
+            </div>
+            <div className='reg-answers'>
+            <p>Your registered answers:</p>
+            <p>Traveled <b>{travelWay}</b></p>
+            <p>Standard in our rooms: <b>{rooms}</b></p>
+            <p>Standard in our restaurant: <b>{food}</b></p>
+            </div>
+            <div className='answer-change'>
+            <p>Want to change any answers?</p>
+            <p>If not, press Send!</p>
+            </div>
+            <div className="locationButtons">
+        <button onClick={onBackstepChange}>Back</button>
+        <button onClick={onStepChange}>Send!</button>
+        </div>
         </section>
         
     )

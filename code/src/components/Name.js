@@ -24,7 +24,7 @@ const Name = ({name, onNameChange, onStepChange}) => {
                 </div>
                 </label>
                 <div className="positionButton">
-             <button onClick={onStepChange} disabled={name===""}>OK</button></div>
+             <button onClick={onStepChange} disabled={name===""}>Go!</button></div>
             
         </section>
     )

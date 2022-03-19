@@ -1,6 +1,6 @@
 import React from 'react'
 
-const travelWays = ['By train', 'By car', 'By plane', 'Other']
+const travelWays = ['by train', 'by car', 'by plane', 'by bike']
 
 
 const Travel = ({travelWay, ontravelWayChange, onStepChange, onBackstepChange}) => {
@@ -10,7 +10,6 @@ const Travel = ({travelWay, ontravelWayChange, onStepChange, onBackstepChange}) 
             <label htmlFor='travelWay'>
                 <h2>How did you travel to our event?</h2>
                 </label>
-            <div className="travel-box">
                 <div className="radiobuttons">
             {travelWays.map(trip => ( 
                 <label key={trip}>
@@ -25,9 +24,8 @@ const Travel = ({travelWay, ontravelWayChange, onStepChange, onBackstepChange}) 
             ))}
             </div>
             <div className="locationButtons">
-            <button onClick={onBackstepChange}>back</button>
-            <button onClick={onStepChange} disabled={travelWay===""}>OK</button>
-            </div>
+            <button onClick={onBackstepChange}>Back</button>
+            <button onClick={onStepChange} disabled={travelWay===""}>Go!</button>
             </div>
         </section>
     )

@@ -6,6 +6,7 @@ import Travel from './Travel'
 import Living from './Living'
 import Eating from './Eating'
 import Summary from './Summary'
+import Thanks from './Thanks'
 
 const Form = () => {
 const [name, setName] = useState('')
@@ -94,8 +95,21 @@ return (
           travelWay={travelWay}
           rooms={rooms}
           food={food}
+          onStepChange={onStepChange}
+          onBackstepChange={onBackstepChange}
         />
       )}
+       {step === 7 && (
+        <Thanks 
+          name={name} 
+          city={city}
+          travelWay={travelWay}
+          rooms={rooms}
+          food={food}
+          onStepChange={onStepChange}
+          onBackstepChange={onBackstepChange}
+        />
+        )}
     </section>
 )
 }  

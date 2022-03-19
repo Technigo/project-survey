@@ -21,15 +21,13 @@ const Living = ({rooms, onroomsChange, onStepChange, onBackstepChange}) => {
                 checked={rooms === scale}
                 />
                 {scale}
-                <div class="control__indicator"></div>
                 </label>
             ))}
-            </div>
+            </div> 
             <div className="locationButtons">
-            <button onClick={onBackstepChange}>back</button>
-            <button onClick={onStepChange} disabled={rooms===""}>OK</button>
+            <button onClick={onBackstepChange}>Back</button>
+            <button onClick={onStepChange} disabled={rooms===""}>Go!</button>
             </div>
-            {/* </div> */}
         </section>
     )
 }

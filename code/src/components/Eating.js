@@ -11,8 +11,8 @@ const Eating = ({food, onfoodChange, onStepChange, onBackstepChange}) => {
             <h4>How would you rate:</h4>
             <h2>The standard of the food?</h2>
                 </label>
-            <div className="">
-                <div className="">
+            <div className="radio-toolbar">
+                
             {eatingScale.map(taste => ( 
                 <label key={taste}>
                 <input
@@ -26,10 +26,10 @@ const Eating = ({food, onfoodChange, onStepChange, onBackstepChange}) => {
             ))}
             </div>
             <div className="locationButtons">
-            <button onClick={onBackstepChange}>back</button>
-            <button onClick={onStepChange} disabled={food===""}>OK</button>
+            <button onClick={onBackstepChange}>Back</button>
+            <button onClick={onStepChange} disabled={food===""}>Go!</button>
             </div>
-            </div>
+            
         </section>
     )
 }
