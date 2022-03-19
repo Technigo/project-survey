@@ -1,7 +1,9 @@
 import React from 'react'
 
+const reloadSurvey = () => window.location.reload() 
+
 const Summary = (props) => {
-    const { age, actor, username, personality, person, reloadSurvey } = props
+    const { age, actor, username, personality, person } = props
     return (
         <section className='wrap'>
            <div className='content-wrap summary'>

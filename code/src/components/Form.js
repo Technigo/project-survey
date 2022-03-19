@@ -39,8 +39,6 @@ export const Form = () => {
   const handleNextQuestion = () => {
         setCounter(counter + 1)
       }
-  
-  const reloadSurvey = () => window.location.reload() 
 
   return (
     <form className='form-wrapper'>
@@ -77,7 +75,6 @@ export const Form = () => {
           actor={actor}
           username={name}
           person={person}
-          reloadSurvey={reloadSurvey}
         />
       )}
     </form>
