@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Interests = ({setInterest, arrayOfInterests, nextPage, backPage}) => {
+const InterestQuestion = ({setInterest, arrayOfInterests, nextPage, backPage}) => {
 
 
     return (
@@ -30,8 +30,8 @@ const Interests = ({setInterest, arrayOfInterests, nextPage, backPage}) => {
 }      
 
 
-            <button className="btn-special" type="submit" onClick={backPage}> 
-        <span role="img" aria-label="back arrow emoji">↩️</span> Go back
+        <button className="btn-special" type="submit" onClick={backPage}> 
+            <span role="img" aria-label="back arrow emoji">↩️</span> Go back
         </button>
 
         <button className="btn-special" type="submit" onClick={nextPage}> Next question!</button>
@@ -46,4 +46,4 @@ const Interests = ({setInterest, arrayOfInterests, nextPage, backPage}) => {
 }
 
 
-export default Interests
+export default InterestQuestion

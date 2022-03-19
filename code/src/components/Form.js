@@ -2,7 +2,8 @@ import React, { useState } from 'react'
 import Intro from './Intro'
 import NameQuestion from './NameQuestion'
 import EmailQuestion from './EmailQuestion'
-import ThirdQuestion from './ThirdQuestion'
+import InterestQuestion from './InterestQuestion'
+import HowOften from './HowOften'
 import Summary from './Summary'
 import Footer from './Footer'
 
@@ -15,6 +16,7 @@ const [nameInput, setNameInput] = useState('')
 const [surnameInput, setSurnameInput] = useState('')
 const [emailInput, setUserEmailInput] = useState('')
 const [interest, setInterest] = useState(false)
+const [amountOfEmail, setAmountOfEmail] = useState('')
 
 const [page, setPage] = useState(0)
 
@@ -35,6 +37,10 @@ const onSurnameInputChange = event => {
 
 const onEmailInputChange = event => {
     setUserEmailInput(event.target.value)
+}
+
+const onAmountOfEmailChange = event => {
+    setAmountOfEmail(event.target.value)
 }
 
 const handleSubmit = (event) => {event.preventDefault()}
@@ -71,18 +77,29 @@ return (
 
     { /* THIRD PAGE */ }
     {page === 3 && (
-        <ThirdQuestion
+        <InterestQuestion
         setInterest={setInterest}
         arrayOfInterests={arrayOfInterests}
         nextPage={nextPage}
         backPage={backPage}/>)}
 
-        {page === 4 && (
+{page === 4 && (
+            <HowOften
+            amountOfEmail={amountOfEmail}
+            onAmountOfEmailChange={onAmountOfEmailChange}
+            nextPage={nextPage}
+            backPage={backPage}
+            />
+        )}
+
+
+        {page === 5 && (
             <Summary
             nameInput={nameInput}
             surnameInput={surnameInput}
             emailInput={emailInput}
             interest={interest}
+            amountOfEmail={amountOfEmail}
             restart={restart}
             />
         )}
