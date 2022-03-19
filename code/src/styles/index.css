@@ -167,19 +167,20 @@ mark {
 }
 
 a {
-  all: unset;
-  text-decoration: underline;
+  color: inherit;
   font-weight: bold;
-  cursor: pointer;
 }
 
 .footer {
   text-align: center;
+}
+
+.copyright,
+.copyright a {
   font-size: 16px;
 }
 
 .credit,
 .credit a {
   font-size: 12px;
-  font-weight: 400;
 }

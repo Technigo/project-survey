@@ -1,6 +1,6 @@
 import React from "react"
 
-import { RandomBeverage } from "../RandomChoices"
+import { RandomBeverage } from "./RandomChoices"
 
 const QuestionTextFriendName = (props) => {
   const { beverage, friendName, onFriendNameChange } = props

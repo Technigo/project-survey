@@ -1,6 +1,6 @@
 import React from "react"
 
-import { RandomVehicle } from "../RandomChoices"
+import { RandomVehicle } from "./RandomChoices"
 
 const QuestionRangeSliderSpeed = (props) => {
   const { vehicle, onSpeedChange } = props

@@ -1,6 +1,6 @@
 import React from "react"
 
-import { RandomFriendName } from "../RandomChoices"
+import { RandomFriendName } from "./RandomChoices"
 
 const sportItems = ["football", "hockey", "baseball", "floorball", "basketball"]
 

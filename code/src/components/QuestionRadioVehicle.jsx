@@ -1,6 +1,6 @@
 import React from "react"
 
-import { RandomWeather } from "../RandomChoices"
+import { RandomWeather } from "./RandomChoices"
 
 const vehicleItems = ["bicycle", "e-scooter", "motorcycle"]
 

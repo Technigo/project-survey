@@ -1,6 +1,6 @@
 import React from "react"
 
-import { RandomNotFriendName } from "../RandomChoices"
+import { RandomNotFriendName } from "./RandomChoices"
 
 const ingredientItems = [
   "ham",

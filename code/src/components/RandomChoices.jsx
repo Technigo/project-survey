@@ -1,19 +1,19 @@
-let gender = ''
-let weather = ''
-let vehicle = ''
-let speed = ''
-let snack = ''
-let notFriendName = ''
-let beverage = ''
-let friendName = ''
-let sport = ''
-let ingredientOne = ''
-let ingredientTwo = ''
-let phone = ''
+let gender = ""
+let weather = ""
+let vehicle = ""
+let speed = ""
+let snack = ""
+let notFriendName = ""
+let beverage = ""
+let friendName = ""
+let sport = ""
+let ingredientOne = ""
+let ingredientTwo = ""
+let phone = ""
 
 export const RandomGender = () => {
   const genderOptions = ["feminine", "masculine", "non-binary"]
-  if (gender === '') {
+  if (gender === "") {
     gender = genderOptions[Math.floor(Math.random() * (genderOptions.length))]
   }
   return gender
@@ -21,7 +21,7 @@ export const RandomGender = () => {
 
 export const RandomWeather = () => {
   const weatherOptions = ["sunny", "cloudy", "ugly", "scary"]
-  if (weather === '') {
+  if (weather === "") {
     weather = weatherOptions[Math.floor(Math.random() * (weatherOptions.length))]
   }
   return weather
@@ -29,7 +29,7 @@ export const RandomWeather = () => {
 
 export const RandomVehicle = () => {
   const vehicleOptions = ["bicycle", "e-scooter", "motorcycle", "camel", "unicycle", "elephant"]
-  if (vehicle === '') {
+  if (vehicle === "") {
     vehicle = vehicleOptions[Math.floor(Math.random() * (vehicleOptions.length))]
   }
   return vehicle
@@ -37,7 +37,7 @@ export const RandomVehicle = () => {
 
 export const RandomSpeed = () => {
   const speedOptions = ["1", "2", "3"]
-  if (speed === '') {
+  if (speed === "") {
     speed = speedOptions[Math.floor(Math.random() * (speedOptions.length))]
   }
   return speed
@@ -45,7 +45,7 @@ export const RandomSpeed = () => {
 
 export const RandomSnack = () => {
   const snackOptions = ["chocolate bar", "candies", "nuts", "chips", "dried insects"]
-  if (snack === '') {
+  if (snack === "") {
     snack = snackOptions[Math.floor(Math.random() * (snackOptions.length))]
   }
   return snack
@@ -53,7 +53,7 @@ export const RandomSnack = () => {
 
 export const RandomNotFriendName = () => {
   const notFriendNameOptions = ["Jennie", "Karin", "Daniel", "Maksymilian", "Poya", "Rebecca", "Marie", "Petra"]
-  if (notFriendName === '') {
+  if (notFriendName === "") {
     notFriendName = notFriendNameOptions[Math.floor(Math.random() * (notFriendNameOptions.length))]
   }
   return notFriendName
@@ -61,7 +61,7 @@ export const RandomNotFriendName = () => {
 
 export const RandomBeverage = () => {
   const beverageOptions = ["coffee", "tea"]
-  if (beverage === '') {
+  if (beverage === "") {
     beverage = beverageOptions[Math.floor(Math.random() * (beverageOptions.length))]
   }
   return beverage
@@ -69,7 +69,7 @@ export const RandomBeverage = () => {
 
 export const RandomFriendName = () => {
   const friendNameOptions = ["Anki", "Arianna", "Amanda", "Michael", "Ida", "Marianne", "Simon", "Savannah", "Nabeel", "Lovisa"]
-  if (friendName === '') {
+  if (friendName === "") {
     friendName = friendNameOptions[Math.floor(Math.random() * (friendNameOptions.length))]
   }
   return friendName
@@ -77,7 +77,7 @@ export const RandomFriendName = () => {
 
 export const RandomSport = () => {
   const sportOptions = ["football", "hockey", "baseball", "basketball", "floorball", "curling", "handball"]
-  if (sport === '') {
+  if (sport === "") {
     sport = sportOptions[Math.floor(Math.random() * (sportOptions.length))]
   }
   return sport
@@ -85,7 +85,7 @@ export const RandomSport = () => {
 
 export const RandomIngredientTwo = () => {
   const ingredientOneOptions = ["lettuce", "tuna", "tomato", "cucumber", "tofu", "jam", "peanut butter", "bacon"]
-  if (ingredientOne === '') {
+  if (ingredientOne === "") {
     ingredientOne = ingredientOneOptions[Math.floor(Math.random() * (ingredientOneOptions.length))]
   }
   return ingredientOne
@@ -93,7 +93,7 @@ export const RandomIngredientTwo = () => {
 
 export const RandomIngredientOne = () => {
   const ingredientTwoOptions = ["ham", "cheese", "egg", "mayo", "turkey", "avocado", "ketchup", "onion", "turkey"]
-  if (ingredientTwo === '') {
+  if (ingredientTwo === "") {
     ingredientTwo = ingredientTwoOptions[Math.floor(Math.random() * (ingredientTwoOptions.length))]
   }
   return ingredientTwo
@@ -101,7 +101,7 @@ export const RandomIngredientOne = () => {
 
 export const RandomPhone = () => {
   const phoneOptions = ["iPhone", "Samsung", "Huawei", "Motorola", "Nokia", "BlackBerry", "Ericsson"]
-  if (phone === '') {
+  if (phone === "") {
     phone = phoneOptions[Math.floor(Math.random() * (phoneOptions.length))]
   }
   return phone

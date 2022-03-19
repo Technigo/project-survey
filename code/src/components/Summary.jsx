@@ -13,7 +13,7 @@ import {
   RandomIngredientOne,
   RandomIngredientTwo,
   RandomPhone,
-} from "../RandomChoices"
+} from "./RandomChoices"
 
 const Summary = (props) => {
   const {
@@ -326,13 +326,15 @@ const Summary = (props) => {
               <p>Just like that...</p>
               <hr></hr>
               <p className="footer">
-                Website and story created by<br></br>
-                <a
-                  aria-label="Website and story created by Nadia Lefebvre"
-                  href="https://nadialefebvre.dev/"
-                >
-                  Nadia Lefebvre
-                </a>
+                <span className="copyright">
+                  Website and story created by<br></br>
+                  <a
+                    aria-label="Website and story created by Nadia Lefebvre"
+                    href="https://nadialefebvre.dev/"
+                  >
+                    Nadia Lefebvre
+                  </a>
+                </span>
                 <br></br>
                 <span className="credit">
                   Amazing typewriter made by{" "}
