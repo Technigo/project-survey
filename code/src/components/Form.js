@@ -31,7 +31,7 @@ const questions = [
     id: "spiciness",
     question_text: "How well can you handle spice?",
     input_type: "range",
-    format_answer: (value) => `Spice level: ${value} chilis`,
+    format_answer: (value) => `Spice level: ${value} ${Number(value) === 1 ? "chili" : "chilis"}`,
     options: [
       { value: 1, label: "\u{1F336}" },
       { value: 2, label: "\u{1F336}\u{1F336}" },
