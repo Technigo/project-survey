@@ -43,6 +43,16 @@ input {
   margin: 20px 10px 10px 10px;
 }
 
+select {
+  font-family: "Jost", sans-serif;
+  border: none;
+  font-size: 16px;
+  border-radius: 30px;
+  color: #b47c23;
+  padding: 10px;
+  margin: 20px 10px 10px 10px;
+}
+
 .btn {
   font-family: "Jost", sans-serif;
   border: 0.6px solid #a66d06;

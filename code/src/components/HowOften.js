@@ -5,8 +5,12 @@ const HowOften = ({nextPage, backPage, amountOfEmail, onAmountOfEmailChange}) =>
     return (
 
         <div>
-        <label htmlFor="amountOfEmail">
-            How often would you like to recieve the newsletter?
+        
+        <p>How often would you like to recieve the newsletter?</p>
+        
+        <div>
+        <label htmlFor="amountOfEmail" className="descriptive-text">
+            You can always change later.
         </label> 
 
         <select
@@ -22,7 +26,7 @@ const HowOften = ({nextPage, backPage, amountOfEmail, onAmountOfEmailChange}) =>
 
         </select>
 
-
+        </div>
         <button className="btn" onClick={backPage}>
             <span role="img" aria-label="back arrow emoji">↩️</span> Go back
         </button>
