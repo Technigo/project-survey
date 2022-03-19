@@ -173,6 +173,7 @@ input, select, textarea {
   border: none;
   font-family: 'Inter', sans-serif;
   transition: all 0.4s ease;
+  font-size: 1.6rem;
   color: var(--accentBlack);
 }
 
