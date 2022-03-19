@@ -58,6 +58,7 @@ img {
 .hero-img-container {
   position: relative;
   justify-self: flex-end;
+  width: 80%;
 }
 
 .hero-img {
@@ -138,15 +139,13 @@ img {
 
 #form {
   height: 100vh;
-  flex-direction: column;
-  align-items: center;
+  display: flex;
   justify-content: center;
 
 }
 
 
 .form-container {
-  position: absolute;
   transition: all 1s ease;
   margin-bottom: 7.2rem;
   min-width: 375px;
@@ -155,10 +154,13 @@ img {
 .question {
   display: flex;
   flex-direction: column;
-  gap: 1.2rem;
+  gap: 2rem;
   transform: translateY(0);
   transition: all 1s ease;
   margin: 0 4.8rem;
+  position: absolute;
+  top: 150px;
+
 }
 
 
@@ -310,12 +312,24 @@ progress[value]::-webkit-progress-value{
 
 .btn {
   background: var(--accentPink);
-  border: none;
+  border: solid 1px var(--accentPink);
   border-radius: 10px;
   width: 10rem;
   padding: 1.5rem 1rem;
   font-size: 1.4rem;
+  font-weight: 600;
   color: var(--accentBlack);
+}
+
+.next-btn:focus, 
+.next-btn:hover,
+.submit-btn:focus,
+.submit-btn:hover, 
+.restart-btn:focus,
+.restart-btn:hover {
+  background: var(--dominantWhite);
+  border: solid 1px var(--dominantBlue);
+  color: var(--dominantBlue);
 }
 
 .prev-btn {
@@ -346,7 +360,7 @@ progress[value]::-webkit-progress-value{
 
 .next-btn {
   position: absolute;
-  top: 55%;
+  top: 300px;
   left: 50%;
   transform: translate(50%,50%);
   margin-top: 7.2rem;
@@ -371,7 +385,7 @@ h2 {
 
 .overview-list {
   font-size: 1.6rem;
-  margin: 4.8rem 0 4.8rem 2rem;
+  margin-left: 2rem;
 }
 
 .overview-list li{
@@ -415,15 +429,14 @@ h2 {
 
 @media (min-width: 768px) {
     .hero-img-container {
-      width: 80%;
+      width: 500px;
     }
 
     h1 {
       font-size: 6rem;
     }
 
-
-    .start-btn {
+   .start-btn {
       font-size: 2.4rem;
       padding: 2rem 0.5rem;
     }

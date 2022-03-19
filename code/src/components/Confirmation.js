@@ -16,7 +16,7 @@ const Confirmation = ( {restart, questionNum} ) => {
             In the mean time, we hope that you enjoy our service and look forward to seeing you again
         </p>
 
-        <button type='button' className='btn' onClick={restart}>Restart</button>
+        <button type='button' className='btn restart-btn' onClick={restart}>Restart</button>
         </div>
     </div>
 
