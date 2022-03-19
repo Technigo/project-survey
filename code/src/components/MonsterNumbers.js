@@ -1,6 +1,6 @@
 import React from 'react';
 
-const SecondQuestion = ({
+const MonsterNumbers = ({
     numberOne, 
     numberTwo, 
     onFirstNumberChange, 
@@ -35,4 +35,4 @@ return (
 )
 }
 
-export default SecondQuestion;
+export default MonsterNumbers;

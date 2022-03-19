@@ -1,11 +1,11 @@
 import React from 'react';
-import CalculationForm from 'components/CalculationForm';
+import Form from 'components/Form';
 
 export const App  = () => {
 
   return (
  <section className ="main-container">   
- <CalculationForm />
+ <Form />
  </section>
   )
 }

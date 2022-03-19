@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FirstQuestion = ({ username, onInputChange }) => {
+const CharacterName = ({ username, onInputChange }) => {
 
 return (
     <div>
@@ -15,4 +15,4 @@ return (
 )
 }
 
-export default FirstQuestion;
+export default CharacterName;
