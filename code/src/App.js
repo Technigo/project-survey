@@ -13,16 +13,21 @@ export const App = () => {
   return(
     <>
     <main>
-      <div className="container">
-    <h1>Sign up for Space Travel</h1>
-    <button onClick={openModal}>Apply now</button>
+
+    <div className="main-container">
+      <h1>Sign up for Space Travel</h1>
+      <button onClick={openModal}>Apply now</button>
     </div>
 
+
+
     <div className="App">    
-     <Form showModal={showModal} setShowModal={setShowModal} />
+      <Form showModal={showModal} setShowModal={setShowModal} />
     </div>
 
     </main>
+
+
     </>
   );
 }
