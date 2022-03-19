@@ -27,7 +27,8 @@ const DropDown = ({ nextQuestion, onDropDownChange, actor }) => {
                         type='button'
                         className='btn btn-next' 
                         disabled={actor === ""} 
-                        onClick={nextQuestion}>Next question</button>
+                        onClick={nextQuestion}>Next question
+                    </button>
                 </form>
             </div>
         </section>

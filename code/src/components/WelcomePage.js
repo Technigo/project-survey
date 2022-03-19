@@ -23,7 +23,8 @@ const welcomePage = ({nextQuestion, onNameChange, username }) => {
                     className='btn' 
                     type='button' 
                     disabled={username === ""} 
-                    onClick={nextQuestion}>Start survey</button>
+                    onClick={nextQuestion}>Start survey
+                </button>
             </div>
         </section>
     )

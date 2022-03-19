@@ -8,7 +8,7 @@ const RadioButton = ({  nextQuestion, onRadioChange, age }) => {
            <div className='content-wrap radio-background'>
                 <h1>Somewhere between...</h1>
                 <p>At what age did you understand that you are an adult now and need to take responsibilities for your actions?</p>
-                <form className='radiobutton-form'>
+                <form className='radiobutton-form' onSubmit={event => event.preventDefault()}>
                     Age Group:
                     {ageGroups.map(group => (
                         <label key={group} htmlFor='radio'>
@@ -28,7 +28,8 @@ const RadioButton = ({  nextQuestion, onRadioChange, age }) => {
                         className='btn submit-btn' 
                         disabled={age === ""} 
                         type='submit' 
-                        onClick={nextQuestion}>Submit answers</button>
+                        onClick={nextQuestion}>Submit answers
+                    </button>
                 </form>
             </div>
        </section>

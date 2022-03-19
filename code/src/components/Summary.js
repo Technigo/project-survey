@@ -1,6 +1,6 @@
 import React from 'react'
 
-const reloadSurvey = () => window.location.reload() 
+// const reloadSurvey = () => window.location.reload() 
 
 const Summary = (props) => {
     const { age, actor, username, personality, person } = props
@@ -17,7 +17,11 @@ const Summary = (props) => {
                     {person === false && <p>You are not a judgemental person.</p>}
                     <p>Somewhere between the age of {age} you saw yourself as a strong, independent person.</p>
                 </div>
-                <button className='btn btn-summary' onClick={reloadSurvey}>Start over</button>
+                <button 
+                    className='btn btn-summary' 
+                    type="button"
+                    onClick={() => window.location.reload()}>Start over
+                </button>
             </div>
         </section>
     )

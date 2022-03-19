@@ -33,7 +33,8 @@ const CheckBox = (props) => {
                         <button 
                             className='btn btn-next' 
                             type='button' 
-                            onClick={nextQuestion}>Next question</button>
+                            onClick={nextQuestion}>Next question
+                        </button>
                     </form>  
                 </div>
             </section>
