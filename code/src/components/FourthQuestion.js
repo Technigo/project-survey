@@ -4,29 +4,37 @@ const options = [
   "Some time during you weekend",
   "Sunday night sometime between 23:30-00:00",
   "Early in the week (Friday included)",
-  "After deadline",
+  "Maybe in time or could be after deadline",
 ];
 
 const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
   return (
     <section className="form-container">
       <h2>When do you hand in your weekly project?</h2>
-      <section className="radio-options">
+      <div className="img-wrapper--images">
         {options.map((option) => {
           return (
-            <label className="description" htmlFor={option} key={option}>
-              <input
-                type="radio"
-                value={option}
-                checked={handInTime === option}
-                id={option}
-                onChange={onHandInTimeChange}
-              />
+            <label
+              className="description radio-img hand-in"
+              htmlFor={option}
+              key={option}
+            >
+              <div className="option">
+                <input
+                  type="radio"
+                  name="handInTime"
+                  value={option}
+                  checked={handInTime === option}
+                  // id={option}
+                  onChange={onHandInTimeChange}
+                  // className="relate"
+                />
+              </div>
               {option}
             </label>
           );
         })}
-      </section>
+      </div>
 
       <button onClick={onStepChange}>Next Question</button>
     </section>

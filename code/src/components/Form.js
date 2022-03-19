@@ -2,7 +2,7 @@ import React, { useState } from "react";
 
 import FirstQuestion from "./FirstQuestion";
 import SecondQuestion from "./SecondQuestion";
-import ThirdQuestion from "./ThirdQuestion";
+import { ThirdQuestion } from "./ThirdQuestion";
 import FourthQuestion from "./FourthQuestion";
 import FifthQuestion from "./FifthQuestion";
 import Overview from "./Overview";
@@ -76,7 +76,15 @@ const Form = () => {
           onStepChange={onStepChange}
         />
       )}
-      {step === 6 && <Overview nameInput={nameInput} goals={goals} />}
+      {step === 6 && (
+        <Overview
+          nameInput={nameInput}
+          goals={goals}
+          relateToImg={relateToImg}
+          handInTime={handInTime}
+          graduation={graduation}
+        />
+      )}
     </div>
   );
 };
