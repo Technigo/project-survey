@@ -10,7 +10,7 @@ const SecondQuestion = ({
         <div className="container">
         <form>
             <label className="label1">
-                 Vilka dagar kan du? 
+                <h2 tabIndex="0"> Vilka dagar kan du? </h2> 
               <select className="Days" value={days} onChange={onDayChange}>
                   <option value="Skärtorsdagen 14 april">Skärtorsdagen 14 april</option>
                   <option value="Långfredagen 15 april">Långfredagen 15 april</option>
