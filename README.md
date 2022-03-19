@@ -9,8 +9,8 @@
 
 ## The problem
 
-At first I had problems with getting the form to go to the next question.
+At first I had problems with getting the form to go to the next question. Validates in https://validator.w3.org/
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://easter-survey.netlify.app/
