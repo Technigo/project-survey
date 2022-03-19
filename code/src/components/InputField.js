@@ -62,7 +62,7 @@ const InputField = ({ name, type, options, value, onChange }) => {
               onChange={onChange}
             />
           </label>
-          <div className="input-range">
+          <div className="input-range-group">
             {options.map((o) => (
               <span key={o.value}>{o.label}</span>
             ))}

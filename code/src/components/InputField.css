@@ -1,5 +1,4 @@
 input[type="text"],
-input[type="range"],
 select {
   width: 100%;
   margin: 16px auto;
@@ -25,8 +24,14 @@ input[type="radio"] {
   margin: 10px;
 }
 
-.input-range {
+input[type="range"] {
+  width: 100%;
+  margin: 16px auto 0 auto;
+}
+
+.input-range-group {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 8px;
 }
