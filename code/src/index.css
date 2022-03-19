@@ -28,10 +28,16 @@
   text-rendering: optimizeLegibility;
 }
 
+html {
+  overflow: hidden;
+}
+
 body {
   margin: 0;
   padding: 1rem;
-  height: 100vh;
+  height: 100%;
+  width: 100%;
+  position: fixed;
   font-family: "poppins";
   background-color: var(--main-accent-color);
   border: solid var(--sec-accent-color) var(--border-width);
@@ -61,7 +67,7 @@ h1 {
 }
 
 .mantra {
-  bottom: 1rem;
+  bottom: 2rem;
   right: 1rem;
   writing-mode: vertical-rl;
 }
@@ -286,6 +292,10 @@ select:hover {
 
 @media screen and (min-width: 1024px) {
 
+  .body {
+    height: 100vh;
+  }
+
   h1 {
     font-size: 130px;
     display: inline-flex;
@@ -397,6 +407,10 @@ select:hover {
 /* A MEDIA QUERY FOR TABLET */
 
 @media screen and (min-width: 768px) and (max-width: 1023px) {
+
+  .body {
+    height: 100vh;
+  }
 
   .mantra {
     bottom: 3rem;
