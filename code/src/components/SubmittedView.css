@@ -1,9 +1,9 @@
-.submitMessage {
+.submit-message {
   font-size: 20px;
 	margin-bottom: 10px;
 }
 
-ul {
+.submit-list {
 	list-style-type: '\01F9C2';
 	margin-left: 16px;
 	padding: inherit;
@@ -11,7 +11,7 @@ ul {
   list-style-image: none;
 }
 
-li {
+.submit-list-item {
 	padding-left: 10px;
 	padding-bottom: 10px;
 }
