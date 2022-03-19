@@ -59,7 +59,7 @@ select {
 
 .btn {
   font-family: "Jost", sans-serif;
-  border: 1px solid #d79500;
+  border: 1px solid #a66d06;
   font-size: 16px;
   border-radius: 30px;
   color: #a66d06;
@@ -70,7 +70,7 @@ select {
 
 .btn-special {
   font-family: "Jost", sans-serif;
-  border: 1px solid #d79500;
+  border: 1px solid #a66d06;
   font-size: 16px;
   border-radius: 30px;
   color: #a66d06;
@@ -133,7 +133,7 @@ ul {
 }
 
 .footer > p {
-  font-size: 15px;
+  font-size: 15.5px;
   color: #a66d06;
   padding-top: 4px;
 }
