@@ -71,10 +71,6 @@ span {
   visibility: hidden;
 }
 
-/* .question-section{
-  height: 40vh;
-} */
-
 .agegroup-label{
     width: 30%;
     font-size: 16px;
@@ -195,12 +191,28 @@ form p{
 
     body{
       background-color: #181718;
+
+      background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+      background-size: 400% 400%;
+      animation: gradient 15s ease infinite;
+    }
+    
+    @keyframes gradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
     }
 
     #root{
       background-color: #181718;
       color: #ffffff;
-      margin: 10px auto;
+      margin: 90px auto;
       max-width: 425px;
       border: 1px solid #50c499;
       padding: 10px;

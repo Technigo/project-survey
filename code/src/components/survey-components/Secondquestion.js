@@ -17,7 +17,7 @@ const Secondquestion = (props) => {
     }
 
     const ageGroupsInfo = () => {
-      if(props.personNumber === 'no' || props.personNumber === ''){
+      if(props.personNumber === ''){
         setShowAgegroup(false)
       }
       return (
@@ -53,7 +53,6 @@ const Secondquestion = (props) => {
                 <option value="1">1 person</option>
                 <option value="2">2 person</option>
                 <option value="3">3 person</option>
-                <option value="no">Only me</option>
         </select>
     </section>
     
