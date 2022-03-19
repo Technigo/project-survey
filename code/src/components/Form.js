@@ -68,20 +68,22 @@ const Form = () => {
 
     return <>
         {!submitted ? (
+ 
         <>
-        {questionNum === 0 &&  <Heading nextQuestion = {nextQuestion}/>}
-
         <form id='form' onSubmit={submit}>
         <div className="form-container">
-        {questionNum === 1 && (
+
+        {questionNum === 0 &&  <Heading nextQuestion = {nextQuestion}/>}
+
+        {questionNum === 1 && 
            <QuestionOne 
             questionNum = {questionNum} 
             date = {date}
             getDate = {getDate}
             />
-        )} 
+        } 
 
-        {questionNum === 2 && (       
+        {questionNum === 2 &&       
             <QuestionTwo 
             questionNum = {questionNum}
             rating = {rating}
@@ -91,27 +93,27 @@ const Form = () => {
             setSatisfaction = {setSatisfaction}
             />
             
-        )} 
+        } 
 
-        {questionNum === 3 && (
+        {questionNum === 3 && 
             <QuestionThree 
             questionNum = {questionNum} 
             frequency = {frequency}
             getBookingFrequency = {getBookingFrequency}
             />
  
-        )}
+        }
 
-        {questionNum === 4 && (
+        {questionNum === 4 && 
             <QuestionFour 
             questionNum = {questionNum} 
             loyalty={loyalty} 
             getLoyaltyRating={getLoyaltyRating}
             />
     
-        )}
+        }
 
-        {questionNum === 5 && (
+        {questionNum === 5 && 
 
             <QuestionFive 
             questionNum = {questionNum} 
@@ -119,9 +121,9 @@ const Form = () => {
             getFeedback = {getFeedback}
             />
 
-        )} 
+        } 
 
-        {questionNum === 6 && (
+        {questionNum === 6 && 
             <OverView 
             date = {date} 
             rating = {rating}
@@ -131,11 +133,11 @@ const Form = () => {
             feedback = {feedback} 
             submit = {submit}
             />
-        )}
+        }
 
 
         </div>
-     
+              
         </form>
         
         <NextBtn 
@@ -147,7 +149,8 @@ const Form = () => {
         <ProgressBar questionNum = {questionNum} />
 
     
-        </>) 
+        </>
+     ) 
         
         : <Confirmation restart={restart} questionNum={questionNum}/> }
 

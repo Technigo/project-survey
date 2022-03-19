@@ -30,15 +30,20 @@ button, input, select {
   cursor: pointer;
 }
 
+
 .hero-section {
   background: var(--dominantBlue);
   height: 100vh;
-  padding: 6.4rem 3.6rem 0 3.6rem;
+  padding: 9.6rem 3.2rem 0 3.2rem;
+}
+
+.hero-text, .hero-section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  position: relative;
+  justify-content: space-between;
 }
+
 
 h1 {
   font-size: 4.2rem;
@@ -48,31 +53,17 @@ h1 {
 
 img {
   width: 100%;
-  position: relative;
-  z-index: 2;
-  bottom: -2px;
 }
-
 
 .hero-img-container {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  position: relative;
+  justify-self: flex-end;
 }
 
-.hero-img-container::before {
-  content: '';
-  position: absolute;
-  width: 80%;
-  padding-bottom: 80%;
-  background: var(--accentPink);
-  left: 50%;
-  transform: translateX(-50%);
-  bottom:0;
-  z-index: 1;
-  border-radius: 50%;
+.hero-img {
+ 
 }
+
 
 .star-icon {
   position: absolute;
@@ -132,11 +123,11 @@ img {
 
 
 #form {
-  background: var(--dominantWhite);
   height: 100vh;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+
 }
 
 
@@ -144,6 +135,7 @@ img {
   position: absolute;
   transition: all 1s ease;
   margin-bottom: 7.2rem;
+  min-width: 375px;
 }
 
 .question {
@@ -411,9 +403,21 @@ h2 {
 
     .hero-section {
       flex-direction: row;
+      padding-top: 0;
     }
 
     .hero-img-container {
-      width: 50%;
+      width: 90%;
+      position: relative;
+      align-self: flex-end;
+    }
+    
+    h1 {
+      text-align: left;
+      font-size: 6rem;
+    }
+
+    .hero-text {
+      width: 70%;
     }
 }

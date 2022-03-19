@@ -5,7 +5,7 @@ import { TiStarFullOutline } from "react-icons/ti";
 
 const Heading = ( {nextQuestion} ) => {
    return <div className='hero-section'>
-   <div>
+   <div className='hero-text'>
 
    <h1>Your feedback means the world to us</h1>
    <button className="start-btn" type="button" onClick={nextQuestion}>Give feedback</button>
