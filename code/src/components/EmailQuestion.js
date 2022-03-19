@@ -14,6 +14,7 @@ const EmailQuestion = ({
         <p>Alright <span className="username">{nameInput}</span>,</p>
         <label htmlFor="email">What's your email address?</label>
 
+        <div>
         <input
         id="name"
         type="text"
@@ -21,6 +22,7 @@ const EmailQuestion = ({
         value={emailInput}
         onChange={onEmailInputChange}
          />
+         </div>
 
         <div>
 

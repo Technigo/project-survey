@@ -13,6 +13,7 @@ const HowOften = ({nextPage, backPage, amountOfEmail, onAmountOfEmailChange}) =>
             You can always change later.
         </label> 
 
+        <div>
         <select
             id="amountOfEmail"
             value={amountOfEmail}
@@ -25,6 +26,7 @@ const HowOften = ({nextPage, backPage, amountOfEmail, onAmountOfEmailChange}) =>
             <option value="Every 3 months">Every 3 months</option>
 
         </select>
+        </div>
 
         </div>
         <button className="btn" onClick={backPage}>
