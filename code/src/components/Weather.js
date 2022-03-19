@@ -37,9 +37,3 @@ const Weather = ({ weather, onWeatherChange, onNextChange, onBackChange }) => {
 };
 
 export default Weather;
-
-// use map for WeatherGroup
-
-// disabled will be used with weatherGroup?
-// disabled not working..
-// disabled={weather === ''}

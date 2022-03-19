@@ -12,14 +12,9 @@ const Summary = ({ name, weather, money, dream, onNextChange }) => {
           <li>{money}</li>
           <li>{dream}</li>
         </ul>
-        {/* <button className='btn' type='submit' onClick={onNextChange}>
-        Back
-      </button> */}
       </div>
     </section>
   );
 };
 
 export default Summary;
-
-// want to add a go back to start button

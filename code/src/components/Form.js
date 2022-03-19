@@ -8,7 +8,6 @@ import Dream from './Dream';
 import Summary from './Summary';
 
 const Form = () => {
-  // const WelcomePage?
   const [name, setName] = useState('');
   const [weather, setWeather] = useState();
   const [money, setMoney] = useState('');
