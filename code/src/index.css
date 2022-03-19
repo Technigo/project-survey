@@ -82,7 +82,7 @@ label {
 }
 
 p {
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 
 .form-wrapper {
@@ -142,7 +142,7 @@ ul {
 
 .summary-text > p {
   font-size: 15px;
-  padding-inline-start: 43px;
+  padding-inline-start: 37px;
   padding-top: 3px;
   color: rgb(82, 80, 80);
 }
