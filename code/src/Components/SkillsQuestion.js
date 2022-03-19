@@ -6,7 +6,7 @@ export const SkillsQuestion = (props) => {
 
     return(
         <div className="container">
-            <p className="labelStyle">What of the following skills do you have:</p>
+            <p className="labelStyle">Which one of the following skills do you have:</p>
                 <div className="offices">
                 <div className="skillContainer">
                         <label className="checkBtnContainer">APIs
