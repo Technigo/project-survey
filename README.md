@@ -1,13 +1,68 @@
 # Survey form with React
+The purpose of this project was to practice using the `useState` hook in React to connect HTML form inputs to state and show different components based on state. The assignment was to create a controlled form with at least 3 questions that need to be answered by users. When the user presses submit, they should see a summary of their answers.
 
-Replace this readme with your own information about your project.
+# Approach
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+My ambition for this project was to try to build a form that could be used in many different contexts, therefore I decided to create a data object that would control the content of the form and how answers are formatted.
 
-## The problem
+The form is configured by modifying the `questions` object that is declared in the `Form` component.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The form supports the following types of HTML input elements: `select`, `radio`, `range`, and `text`. In the `questions` object, `input_type` must be exactly one of the supported HTML input elements. If a question is assigned a type not included in this list, an error message will log in the console. Example:
 
-## View it live
+```javascript
+// For input type="text"
+{
+	id: "", //required
+	question_text: "", //required
+	input_type: "text", //required
+	format_answer: //optional
+	options: [], //optional
+}
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+//For input type="range"
+{
+	id: "", //required
+	question_text: "", //required
+	input_type: "range", //required
+	format_answer: //optional
+	options: [], //required
+}
+
+//For input type="radio"
+{
+	id: "", //required
+	question_text: "", //required
+	input_type: "radio", //required
+	format_answer: //optional
+	options: [], //required
+}
+
+//For input type="select"
+{
+	id: "", //required
+	question_text: "", //required
+	input_type: "select", //required
+	format_answer: //optional
+	options: [], //required
+}
+```
+
+If special formatting is required for input values, you can use the `format_answer` property of the `questions` object to specify format. Example:
+
+```javascript
+  {
+    id: "spiciness",
+    question_text: "How well can you handle spice?",
+    input_type: "range",
+    format_answer: (value) => `Spice level: ${value} chilis`,
+    options: [
+      { value: 1, label: "\u{1F336}" },
+      { value: 2, label: "\u{1F336}\u{1F336}" },
+      { value: 3, label: "\u{1F336}\u{1F336}\u{1F336}" },
+    ],
+  }
+```
+
+# View it live
+
+https://supper-society-survey.netlify.app/
