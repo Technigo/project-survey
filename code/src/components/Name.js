@@ -2,7 +2,7 @@ import React from 'react'
 
 const Name = () => {
   return(
-      <div className="name-container">
+      <div className="container name-container">
 
           <form className="form-container">
             <label className="label-name">First Name:
@@ -31,9 +31,10 @@ const Name = () => {
 
 
           </form>
-          
 
-          <button type="submit">Next</button>
+          <div className="button-container">
+            <button type="submit" onClick="">Next</button>
+            </div>
       </div>
   )
 }

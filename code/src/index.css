@@ -1,12 +1,12 @@
 body {
   box-sizing: border-box;
-  background-image: url('./images/grace.jpg');
+  /* background-image: url('./images/grace.jpg'); */
   background-size: 550px;
   background-repeat: no-repeat;
   background-position-x: center;  
-  background-position-y: center;
+  /* background-position-y: center; */
   background-blend-mode: lighten;
-  margin: 20px;
+  margin: 0;
   font-family: 'Bodoni Moda', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -18,11 +18,73 @@ code {
     monospace;
 }
 
-h1 {
+.container {
+  width: 375px;
+  /* padding-left: 15px; */
+}
+
+.header-container {
+  display: flex;
+  flex-direction: column;
+  /* border: 2px solid red; */
+  margin: 20px 0;
+  padding-left: 12px;
+}
+
+header h1 {
   text-transform: uppercase;
   font-weight: 800;
   font-size: 80px;
   line-height: 120px;
+  color: rgb(204, 104, 22);
+  margin: 0;
+  /* padding-left: 12px; */
+  text-align: center;
+}
+
+header h2 {
+  font-family: 'Spartan', sans-serif;
+  font-size: 25px;
+  font-weight: 400;
+  padding: 10px 5px;
+  margin: 0;
+  
+}
+
+header p {
+  font-family: 'Spartan', sans-serif;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 29px;
+  padding-left: 10px;
+  padding-right: 12px;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+button p {
+  margin: 0 10px;
+}
+
+.start-button {
+  color: yellow;
+}
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  /* padding-left: 10px; */
+}
+
+.dropdown-container h2 {
+  font-size: 30px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 500;
 }
 
 .order {
@@ -30,14 +92,15 @@ h1 {
   font-style: italic;
 }
 
-h2 {
-  font-size: 50px;
-  font-weight: 400;
-  
-}
-
 label {
   font-family: 'Bodoni Moda', serif;
+}
+
+.label-name {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 30px;
+  font-weight: 700;
+  
 }
 
 .radio-buttons {
@@ -53,6 +116,8 @@ button {
 .form-container {
   display: flex;
   flex-direction: column;
+  padding-left: 12px;
+  
 
 }
 
@@ -61,37 +126,152 @@ button {
   flex-direction: column;
   margin-bottom: 20px;
   margin-top: 10px;
-  font-size: 50px;
+  font-size: 25px;
+  color: rgb(0, 0, 197);
   font-family: 'Bodoni Moda', serif;
+  border-radius: 20px;
+  border: 2px solid black;
+  box-shadow: 5px 5px;
+  padding: 8px;
+  background-color: transparent;
   
+}
+
+.dropdown-container {
+  padding-left: 12px;
+}
+
+.dropdown-two-container {
+  padding-left: 12px;
+}
+
+.radiobutton-container {
+  padding-left: 12px;
 }
 
 .order-container {
   background-color: rgb(255, 235, 180);
-  width: 900px;
   height: 700px;
-  padding: 10px 25px;
+  padding: 5px 0 0 12px;
+  padding-right: 12px;
+  margin-top: 10px;
+  font-size: 15px;
+  line-height: 60px;
+  
 }
 
 .dropdown {
-  font-size: 50px;
+  font-size: 30px;
   font-family: 'Bodoni Moda', serif;
+  color: rgb(0, 0, 197);
+  border-radius: 20px;
+  box-shadow: 5px 5px;
+  padding: 8px;
+  background-color: rgb(241, 221, 165);
 }
 
 button {
   font-family: 'Bodoni Moda', serif;
-  font-size: 50px;
+  font-size: 25px;
   width: 300px;
+  margin-left: 20px;
   background-color: black;
   color: #fff;
   cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 5px 5px blue;
+  
 }
-
+ /* Custom radio button */
+ 
 .label-radio {
-  font-size: 50px;
+  position: relative;
+  padding-left: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  font-size: 30px;
+  user-select: none;
 }
 
-input[type=radio] {
-  width: 5em;
+.label-radio input{
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+  /* font-size: 30px; */
 }
 
+.checkmark {
+  position: absolute;
+  top: 8px;
+  left: 120px;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: black;
+}
+
+.label-radio:hover input ~ .checkmark {
+  background-color: blue;
+}
+
+.label-radio input:checked ~ .checkmark {
+  background-color: yellow;
+}
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+.label-radio input:checked ~ .checkmark:after {
+  display: block;
+}
+
+.label-radio .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border: solid rgb(0, 0, 0);
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+/* custom radio button end */
+
+
+
+@media (min-width: 768px) {
+
+  header h1 {
+    font-size: 90px;
+  }
+
+  header h2 {
+    font-size: 45px;
+  }
+
+  header p {
+    font-size: 20px;
+    line-height: 40px;
+  }
+
+  .container {
+    width: 768px;
+  }
+
+  .label-name {
+    font-size: 40px;
+  }
+
+  .input-container {
+    font-size: 45px;
+  }
+
+  button {
+    font-size: 45px;
+  }
+}

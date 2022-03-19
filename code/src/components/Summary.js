@@ -12,7 +12,7 @@ const Summary = () => {
     const [order, setOrder] = useState('')
 
 return (
-    <div>
+    <div className="container">
      <Header />
      <Name />
      <Dropdown />

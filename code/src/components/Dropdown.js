@@ -3,7 +3,7 @@ import React from 'react'
 const Dropdown = (props) => {
 
     return (
-        <div>
+        <div className="container dropdown-container">
             <h2>What welcome gift would you like?</h2>
             <form>
                 <select
@@ -12,14 +12,16 @@ const Dropdown = (props) => {
                     required
                     placeholder="this"
                 >
-                    <option disabled value>Select one</option>
+                    <option selected disabled>Select one</option>
                     <option value="lottery ticket">Lottery Tickets</option>
                     <option value="book">Book</option>
                     <option value="charity">Donate 10€ to charity</option>
                 </select>
             </form>
 
-            <button onClick="">Next</button>
+            <div className="button-container">
+            <button  onClick="">Next</button>
+            </div>
 
         </div>
 
