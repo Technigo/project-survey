@@ -1,6 +1,6 @@
 import React from 'react'
 
-const RadioForm = ({roles, setRoles}) => {
+const RadioForm = ({input, setInput}) => {
     const rolesList = [
         'Frontend',
         'Backend',
@@ -17,10 +17,10 @@ const RadioForm = ({roles, setRoles}) => {
                 <input 
                     type="radio"
                     value={role}
-                    name="work-role"
+                    name="roles"
                     required
-                    onChange={event => setRoles(event.target.value)}
-                    checked={false ? roles : roles === role}                      
+                    onChange={event => setInput({...input, [event.target.name]: event.target.value})}
+                    checked={input.roles === role}                      
                 />
                 {role}
                 </label>   

@@ -5,29 +5,29 @@ import CheckboxForm from './CheckboxForm.js'
 import RadioForm from './RadioForm.js'
 import ProgressBar from './ProgressBar.js'
 
-const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, roles, setRoles, setSubmit}) => {
+const Form = ({input, setInput, setSubmit}) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
     const [errorMessage, setErrorMessage] = useState('');
 
     const componentsArray = [
         <InputForm 
-            name={name}
-            setName={setName}
+            input={input}
+            setInput={setInput}
             key={0}
         />,
         <SelectForm 
-            location={location}
-            setLocation={setLocation}
+            input={input}
+            setInput={setInput}
             key={1}
         />,
         <CheckboxForm 
-            willTravel={willTravel}
-            setWillTravel={setWillTravel}
+            input={input}
+            setInput={setInput}
             key={2}
         />,
         <RadioForm 
-            roles={roles}
-            setRoles={setRoles}
+            input={input}
+            setInput={setInput}
             key={3}
         />
     ];
@@ -41,10 +41,10 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
      }
 
     const handleNextQuestionValidation = () => {
-        if (currentQuestion === 0 && name !== '') {
+        if (currentQuestion === 0 && input.name !== '') {
             setCurrentQuestion(currentQuestion + 1);
             setErrorMessage('');  
-        } else if (currentQuestion === 1 && location !== '') {
+        } else if (currentQuestion === 1 && input.location !== '') {
             setCurrentQuestion(currentQuestion + 1);
             setErrorMessage('');
         } else if (currentQuestion === 2) {
@@ -56,7 +56,7 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
     }
 
     const totalNumOfQuestions = componentsArray.length;
-    
+
     return (
         <form onSubmit={submitForm}>
             <h1>Application form</h1>

@@ -1,15 +1,16 @@
 import React from 'react'
 
-const CheckboxForm = ({willTravel, setWillTravel}) => {
+const CheckboxForm = ({input, setInput}) => {
     return (
         <div className="checkbox-form-div">
             <div>
                 <label>
                 I want to travel in work (optional)
                 <input 
-                    type="checkbox"        
-                    checked={willTravel}
-                    onChange={event => setWillTravel(event.target.checked)}
+                    type="checkbox"  
+                    name="willTravel"      
+                    checked={input.willTravel}
+                    onChange={event => setInput({...input, [event.target.name]: event.target.checked})}
                 />
                 </label>
             </div>

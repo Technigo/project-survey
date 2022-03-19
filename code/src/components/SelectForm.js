@@ -1,13 +1,14 @@
 import React from 'react'
 
-const SelectForm = ({location, setLocation}) => {
+const SelectForm = ({input, setInput}) => {
     return (
         <div className="select-form-div">
             <label className="input-fields">
             Choose location:
             <select 
-                value={location} 
-                onChange={event => setLocation(event.target.value)}
+                value={input.location} 
+                name="location"
+                onChange={event => setInput({...input, [event.target.name]: event.target.value})}
                 required
             >
                 <option disabled value="">Choose a location</option>
