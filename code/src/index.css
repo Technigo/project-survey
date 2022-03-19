@@ -60,15 +60,17 @@ body {
 h1 {
   font-size: 13vw;
   position: absolute;
+  line-height: 0;
 }
 
 .monday {
-  top: 1rem;
+  top: 7vw;
+  left: 2vw;
 }
 
 .mantra {
-  bottom: 2rem;
-  right: 1rem;
+  bottom: 2vw;
+  right: 7vw;
   writing-mode: vertical-rl;
 }
 
@@ -98,22 +100,19 @@ h1 {
   width: 80%;
   margin: 0 auto;
   align-items: center;
-  padding-top: 40%;
+  padding-top: 30%;
   height: 100%;
 }
 
 /* Specific styling for different components */
 
+
+/* #two.head-section, #three.head-section, #four.head-section {
+  padding-top: 30%;
+} */
+
 #intro .thin-intro-text {
   margin-top: 30px;
-}
-
-#one.head-section {
-  padding-top: 30%;
-}
-
-#two.head-section, #three.head-section, #four.head-section {
-  padding-top: 30%;
 }
 
 #two .thin-intro-text, #three .thin-intro-text, #four .thin-intro-text {
@@ -126,7 +125,7 @@ h1 {
 }
 
 #summary.head-section {
-  padding-top: 25%;
+  padding-top: 18%;
   width:88%;
 }
 
@@ -147,14 +146,14 @@ h1 {
 .summary-mantra-text {
   font-size: 14px;
   font-weight: 300;
+  line-height: 1.5;
   text-align: center;
 }
 
 .mantra-word-emph {
-  color: var(--sec-accent-color);
+  color: var(--main-accent-color-dark);
   text-decoration: underline;
   font-weight: 500;
-  font-size: 18px;
 }
 
 /* Styling of buttons */
@@ -181,24 +180,6 @@ h1 {
 .start-btn {
   margin: 0 auto;
 }
-
-/* .start-btn:hover {
-  background-color: var(--my-black);
-  color: var(--main-accent-color);
-  transition: all 1.5s ease;
-}
-
-.next-btn:hover {
-  background-color: var(--sec-accent-color);
-  color: var(--my-black);
-  transition: all 1.5s ease;
-}
-
-.back-btn:hover {
-  background-color: var(--my-black);
-  color: var(--main-accent-color);
-  transition: all 1.5s ease;
-} */
 
 /* Styling of form elements */
 
@@ -301,13 +282,14 @@ select:hover {
     display: inline-flex;
   }
 
-  .mantra {
-    right: 0;
-    bottom: 3rem;
+  .monday {
+    top: 5vw;
+    left: 1.5vw;
   }
 
-  .monday {
-    top: 0;
+  .mantra {
+    bottom: 1.5vw;
+    right: 5vw;
   }
 
   .small-text {
@@ -319,9 +301,9 @@ select:hover {
     width: 50%;
   }
 
-  #one.head-section, #two.head-section,  #three.head-section, #four.head-section {
+  /* #one.head-section, #two.head-section,  #three.head-section, #four.head-section {
     padding-top: 16%;
-  }
+  } */
 
   .question-text {
     font-size: 2vw;
@@ -349,10 +331,6 @@ select:hover {
     padding: 10px 0 0;
     border-bottom: 0;
     padding-bottom: 0;
-  }
-
-  .mantra-word-emph {
-    font-size: 24px;
   }
 
   .input-field {
@@ -406,14 +384,18 @@ select:hover {
 
 /* A MEDIA QUERY FOR TABLET */
 
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 568px) and (max-width: 1023px) {
 
   .body {
     height: 100vh;
   }
 
+  .monday {
+
+  }
+
   .mantra {
-    bottom: 3rem;
+  
   }
 
   .small-text {
@@ -421,12 +403,11 @@ select:hover {
   }
 
   #summary.head-section {
-    padding-top: 30%;
+    padding-top: 20%;
     width: 50%;
   }
 
   .head-section {
-    padding-top: 30%;
     width: 50%;
   }
 
