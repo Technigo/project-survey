@@ -51,7 +51,7 @@ select {
   color: #b47c23;
   padding: 10px;
   margin: 20px 10px 10px 10px;
-  -webkit-appearance: none;
+  -webkit-appearance: menulist;
 }
 
 .btn {
