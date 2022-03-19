@@ -4,7 +4,7 @@
 }
 
 ul {
-	list-style-type: '🧂';
+	list-style-type: '\01F9C2';
 	margin-left: 16px;
 	padding: inherit;
   list-style-position:outside;
@@ -14,5 +14,4 @@ ul {
 li {
 	padding-left: 10px;
 	padding-bottom: 10px;
-	text-transform: capitalize;
 }

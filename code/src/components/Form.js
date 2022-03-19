@@ -9,63 +9,81 @@ const questions = [
     id: "preference",
     question_text: "What is your dietary preference",
     answer_type: "select",
+    format_answer: (value) => value,
     options: [
-      { value: "eat everything", label: "Eat everything" },
-      { value: "pescatarian", label: "Pescatarian" },
-      { value: "vegetarian", label: "Vegetarian" },
-      { value: "vegan", label: "Vegan" },
+      { value: "Eat everything", label: "Eat everything" },
+      { value: "Pescatarian", label: "Pescatarian" },
+      { value: "Vegetarian", label: "Vegetarian" },
+      { value: "Vegan", label: "Vegan" },
     ],
-  },
-  {
-    id: "dish",
-    question_text: "If you could only eat one dish for the rest of your life, what would it be?",
-    answer_type: "text",
   },
   {
     id: "cuisine",
     question_text: "Which of the following cuisines are you craving most?",
     answer_type: "radio",
+    format_answer: (value) => value,
     options: [
       { value: "Persian cuisine", label: "Persian" },
       { value: "Mexican cuisine", label: "Mexican" },
       { value: "Japanese cuisine", label: "Japanese" },
-      { value: "any cuisine", label: "Anything goes" },
+      { value: "Any cuisine", label: "Anything goes" },
+    ],
+  },
+  {
+    id: "spiciness",
+    question_text: "How well can you handle spice?",
+    answer_type: "range",
+    format_answer: (value) => `Spice level: ${value} chilis`,
+    options: [
+      { value: 1, label: "\u{1F336}" },
+      { value: 2, label: "\u{1F336}\u{1F336}" },
+      { value: 3, label: "\u{1F336}\u{1F336}\u{1F336}" },
     ],
   },
   {
     id: "herbs",
     question_text: "Which of these herbs is superior?",
     answer_type: "select",
+    format_answer: (value) => `Heaps of ${value}`,
     options: [
       { value: "coriander", label: "Coriander" },
       { value: "basil", label: "Basil" },
       { value: "mint", label: "Mint" },
       { value: "dill", label: "Dill" },
+      { value: "parsley", label: "Parsley" },
     ],
+  },
+  {
+    id: "allergies",
+    question_text: "Do you have an allergies we should know about?",
+    answer_type: "text",
+    format_answer: (value) => `Allergies: ${value.charAt(0).toUpperCase() + value.slice(1)}`,
   },
 ];
 
 const Form = () => {
-  const [index, setQuestionIndex] = useState(0);
+  const [currentQuestionIndex, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
   const [buttonLabel, setButtonLabel] = useState("Next question");
 
   const handleInputChange = (event) => setInputValue(event.target.value);
 
+  const formatInput = (value) => questions[currentQuestionIndex].format_answer(value);
+
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    setAnswers((arr) => [...arr, inputValue]);
-    setQuestionIndex(index + 1);
+    setAnswers((arr) => [...arr, formatInput(inputValue)]);
+    setQuestionIndex(currentQuestionIndex + 1);
     setInputValue("");
   };
 
   useEffect(() => {
-    const isLastQuestion = () => index === questions.length - 1;
+    const isLastQuestion = () => currentQuestionIndex === questions.length - 1;
     if (isLastQuestion()) {
       setButtonLabel("Submit");
     }
-  }, [index]);
+  }, [currentQuestionIndex]);
 
   const didSubmit = () => questions.length === answers.length;
 
@@ -81,7 +99,11 @@ const Form = () => {
 
   return (
     <form onSubmit={handleOnSubmit} className="container">
-      <Question {...questions[index]} inputValue={inputValue} onChange={handleInputChange} />
+      <Question
+        {...questions[currentQuestionIndex]}
+        inputValue={inputValue}
+        onChange={handleInputChange}
+      />
       <Button label={buttonLabel} inputValue={inputValue} />
     </form>
   );

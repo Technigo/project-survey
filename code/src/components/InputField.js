@@ -48,6 +48,27 @@ const InputField = ({ name, type, options, value, onChange }) => {
         </select>
       );
     }
+    case "range": {
+      return (
+        <>
+          <label htmlFor={name}>
+            <input
+              type={type}
+              id={name}
+              min={options[0].value}
+              max={options[options.length - 1].value}
+              defaultValue={options[0].value}
+              onChange={onChange}
+            />
+          </label>
+          <div className="input-range">
+            {options.map((o) => (
+              <span key={o.value}>{o.label}</span>
+            ))}
+          </div>
+        </>
+      );
+    }
     default:
       console.log("Error: type can only be 'text', 'radio', or 'select'");
   }
