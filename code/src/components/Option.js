@@ -1,7 +1,7 @@
 import React from 'react'
 
-export const Option = (props) => {
+export const Option = ({value}) => {
     return (
-        <option value={props.value}>{props.value}</option>
+        <option value={value}>{value}</option>
     )
 }

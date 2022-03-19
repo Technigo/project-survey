@@ -8,13 +8,16 @@ import { Footer } from 'components/Footer'
 export const App = () => {
 	return (
 		<>
-			<Header 
-				header="Couple exit survey"
-			/>
-			<div className='form-container'>
-				<Form />
+			<div className='main-content'>
+				<Header 
+					key={'header'}
+					header="Couple exit survey"
+				/>
+				<div className='form-container'>
+					<Form key={'form-container'}/>
+				</div>
 			</div>
-			<Footer />
+			<Footer key={'footer'}/>
 		</>
 	)
 }

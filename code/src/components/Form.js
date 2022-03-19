@@ -2,8 +2,8 @@ import React, {useState} from 'react'
 
 import questions from '../questions.json'
 import { Select } from 'components/Select'
-// import { Select } from './Select'
-
+import { Button } from 'components/Button'
+import { RadioButton } from 'components/RadioButton'
 
 export const Form = () => {
 	const [page, setPage] = useState(0);
@@ -16,6 +16,7 @@ export const Form = () => {
 	const [dateFriend, setDateFriend] = useState('')
 	const [friendContactDetails, setFriendContactDetails] = useState('')
 	const [error, setError] = useState('')
+
   	// prevents page from reload when form is submitted
 	const onSubmitting = (e) => {
 		e.preventDefault();
@@ -23,8 +24,7 @@ export const Form = () => {
 
 
 	const nextPage = (value) => {
-		console.log(value, 'value')
-		console.log(value === 'default')
+		console.log(value)
 		if (value === 'default' || !value || value === []) {
 			setError("Please enter an answer")
 		} else {
@@ -32,7 +32,9 @@ export const Form = () => {
 			setPage(page + 1);
 		}
 	}
+
 	const backPage = () => setPage(page - 1);
+
 	const breakUpper = () => {
 		if (breakupPerson === "I broke up with you.") {
 			return ["you", "me"]
@@ -54,9 +56,12 @@ export const Form = () => {
 	}
 
 	const reconciliation = () => {
+		console.log(getBackTogether, 'from reconcile')
 		if (getBackTogether === "Absolutely!" || getBackTogether === "Maybe?") {
+			console.log(true)
 			return true
 		}
+		console.log(false)
 		return false
 	}
 
@@ -66,19 +71,23 @@ export const Form = () => {
 			
 			{page === 0 && (
 				<div className='current-page'>
-					<label htmlFor='nameQuestion'>
+					<label className='text-label'>
 						<h2>{questions.nameQuestion}</h2>
+						<input
+							type='text'
+							onChange={event => setUserName(event.target.value)}
+							value={userName}
+							placeholder='Your name'
+						/>
 					</label>
-					<input
-						id='nameQuestion'
-						type='text'
-						onChange={event => setUserName(event.target.value)}
-						value={userName}
-						placeholder='Your name'
-					/>
 					<div>
-						<div><p>{error}</p></div>
-						<button onClick= {() => nextPage(userName)}>Next question</button>
+						<p className='error'>{error}</p>
+						{/* <button onClick= {() => nextPage(userName)}>Next question</button> */}
+						<Button
+							key={'button-next'}
+							onClick={() => nextPage(userName)}
+							text='Next'
+						/>
 					</div>
 				</div>
 			)}
@@ -91,9 +100,17 @@ export const Form = () => {
 						duration = {questions.duration}	
 					/>
 					<div>
-						<div><p>{error}</p></div>
-						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={() => nextPage(shipDuration)}>Next question</button>
+						<p className='error'>{error}</p>
+						<Button
+							key={'button-back'}
+							onClick={backPage}
+							text='Back'
+						/>
+						<Button
+							key={'button-next'}
+							onClick={() => nextPage(shipDuration)}
+							text='Next'
+						/>
 					</div>
 				</div>
 			)}
@@ -101,53 +118,68 @@ export const Form = () => {
 			{page === 2 && (
 				<div className='current-page radio-container'>
 					<h2>{questions.breakupQuestion}</h2>
-					{questions.breakupAlts.map((alt) =>
-						<div>
-							<label className='radio-button' htmlFor={alt}>
-								{alt}
-							
-							<input
-								id={alt}
-								type='radio'
-								value={alt}
-								onChange={event => setBreakupPerson(event.target.value)}
-								checked={breakupPerson === alt}
-							/>
-							</label>
-						</div>
-					)}
 					<div>
-						<div><p>{error}</p></div>
-						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={() => nextPage(breakupPerson)}>Next question</button>
+						{questions.breakupAlts.map((alt) =>
+							<div key={alt}>
+								<RadioButton
+									
+									alt={alt}
+									onChange={event => setBreakupPerson(event.target.value)}
+									checked={breakupPerson === alt}
+								/>
+							</div>
+						)}
+					</div>
+					<div>
+						<p className='error'>{error}</p>
+						<Button
+							key={'button-back'}
+							onClick={backPage}
+							text='Back'
+						/>
+						<Button
+							key={'button-next'}
+							onClick={() => nextPage(breakupPerson)}
+							text='Next'
+						/>
 					</div>
 				</div>
 			)}
 
 			{page === 3 && (
 				<div className='current-page text-input-container'>
-					<label htmlFor='breakUpperQuestion'>
-						<h2>Why do you think {breakUpper()[0]} broke up with {breakUpper()[1]}</h2>?
+					<label className='text-label'>
+						<h2>{questions.breakupReasonQuestion}</h2>
+						
+						<input
+							id='breakUpperQuestion'
+							type='text'
+							onChange={event => setBreakupReason(event.target.value)}
+							value={breakupReason}
+						/>
 					</label>
-					<input
-						id='breakUpperQuestion'
-						type='text'
-						onChange={event => setBreakupReason(event.target.value)}
-						value={breakupReason}
-					/>
 					<div>
-						<div><p>{error}</p></div>
-						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={() => nextPage(breakupReason)}>Next question</button>
+						<p className='error'>{error}</p>
+						<Button
+							key={'button-back'}
+							onClick={backPage}
+							text='Back'
+						/>
+						<Button
+							key={'button-next'}
+							onClick={() => nextPage(breakupReason)}
+							text='Next'
+						/>
 					</div>
 				</div>
 			)}
 			{page === 4 && (
+				//should not have the validation demand}
 				<div className='current-page question'>
 					<h2>{questions.traitsQuestion}</h2>
 					<div className='traits-container'>
 						{questions.traits.map((trait) => 
-							<label className='trait'>
+							<label key={trait} className='trait'>
 								{trait}
 								<input
 									type='checkbox'
@@ -158,9 +190,17 @@ export const Form = () => {
 						)}
 					</div>
 					<div>
-						<div><p>{error}</p></div>
-						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={() => nextPage(traitsCheckboxes)}>Next question</button>
+						<p className='error'>{error}</p>
+						<Button
+							key={'button-back'}
+							onClick={backPage}
+							text='Back'
+						/>
+						<Button
+							key={'button-next'}
+							onClick={() => nextPage(traitsCheckboxes)}
+							text='Next'
+						/>
 					</div>
 				</div>
 			)}
@@ -169,17 +209,25 @@ export const Form = () => {
 					<div>
 						<h2>{questions.backTogetherQuestion}</h2>
 						{questions.backTogetherAlts.map((alt) =>
-							<div>
-								<label className='radio-button'>
-									{alt}
-									<input
-										type='radio'
-										value={alt}
-										onChange={event => setGetBackTogether(event.target.value)}
-										checked={getBackTogether === alt}
-									/>
-								</label>
+							<div key={alt}>
+								<RadioButton
+									alt={alt}
+									onChange={event => setGetBackTogether(event.target.value)}
+									checked={getBackTogether === alt}
+								/>
 							</div>
+							
+							// <div>
+							// 	<label className='radio-button'>
+							// 		{alt}
+							// 		<input
+							// 			type='radio'
+							// 			value={alt}
+							// 			onChange={event => setGetBackTogether(event.target.value)}
+							// 			checked={getBackTogether === alt}
+							// 		/>
+							// 	</label>
+							// </div>
 						)}
 					</div>
 
@@ -187,11 +235,12 @@ export const Form = () => {
 						<div>
 							<div>
 								<h2>{questions.dateFriendQuestion}</h2>
-								{questions.backTogetherAlts.map((alt) =>
-									<div>
+								{questions.backTogetherAlts.map((alt, index) =>
+									<div key={alt+index}>
 										<label className='radio-button'>
 											{alt}
 											<input
+												
 												type='radio'
 												value={alt}
 												onChange={event => setDateFriend(event.target.value)}
@@ -201,17 +250,6 @@ export const Form = () => {
 									</div>
 								)}
 							</div>
-							{/* <div className='text-input-container'>
-								<label htmlFor='jobtitle'>
-									{questions.jobTitle}
-								</label>
-								<input
-									id='jobtitle'
-									type='text'
-									onChange={event => setJobTitle(event.target.value)}
-									value={jobTitle}
-								/>
-							</div> */}
 						</div>
 					)}
 
@@ -229,40 +267,41 @@ export const Form = () => {
 						</div>
 					)}
 					<div>
-						<div><p>{error}</p></div>
-						<button  onClick={backPage}>Previous question</button>
-						<button  onClick={nextPage}>Next question</button>
+						<p className='error'>{error}</p>
+						<Button 
+							onClick={backPage}
+							text='Back'
+						/>
+						<Button 
+							onClick={() => nextPage(getBackTogether)}
+							text='Send'
+						/>
 					</div>
 				</div>
 			)}
-		{/* </div> */}
 			{page === 6 && (
-				<div className='current-page'>
-					<button onClick={nextPage}>Submit</button>
-				</div>
-				
-			)}
-
-			{page === 7 && (
-				<div className='current-page'>
+				<div className='current-page summary-page'>
 					<h2>Dear {userName}</h2>
 					{/* <p>Thank you {userName}!</p> */}
 					<p>I'm sorry {breakUpper()[0]} broke up with {breakUpper()[1]}...</p>
 					<p> We were together for {shipDuration} and I really cherish the time we had together!</p>
 					<p>You say the reason we broke up was, and I quote, '{breakupReason}', but we both know the real reason.</p>
 					{traitsCheckboxes.length > 0
-						? (<p>I know you think I'm {traitsCheckboxes.join(', ')} and you are probably right! 		I'll try to be better</p>)
+						? traitsCheckboxes.includes("All of the above")
+							? (<p>I know you think I have all the worst qualities a human can have and you are probably right... I'll try to be 		better!</p>)
+							: (<p>I know you think I'm {traitsCheckboxes.join(', ')} and you are probably right... I'll try to be better!</p>)
 						: breakUpper()[0] === "I" 
 							? <p>I know you think I'm flawless but I'm stupid for breaking up with you!</p>
 							: <p>Why did you break up with me if I'm so flawless?!</p>
 					}
-					{reconciliation
+					{reconciliation()
 						? <p>I also believe we should give it another go!</p>
-						: friendContactDetails
-							? <p>Thank you for being so open minded as to let me date your friend! Love you!</p>
+						: (dateFriend === "Absolutely!" || dateFriend === "Maybe?")
+							? {friendContactDetails}
+								? <p>Thank you for being so open minded as to let me date your friend! I'll definitely contact them!</p>
+								: <p>Thanks, but was it asking too much to give me their number?</p>
 							: <p>I can accept that you don't want to give me another chance, but why can't I have your friend's number?</p>
 					}
-					{/* <p>{friendContactDetails}</p> */}
 				</div>
 			)}
 		</form>
