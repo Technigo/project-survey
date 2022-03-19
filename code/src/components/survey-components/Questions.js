@@ -18,6 +18,9 @@ const Questions = (props) => {
                 setPersonNumber = {props.setPersonNumber} 
                 count = {props.count}
                 setError = {props.setError}
+
+                ageGroup = {props.ageGroup} 
+                setAgeGroup = {props.setAgeGroup}
                 />
   }else if(props.count === 3){
     return <Thirdquestion 

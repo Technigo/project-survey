@@ -1,12 +1,7 @@
 import React from 'react'
 
 const Fourthquestion = (props) => {
-//   const [showError, setShowError] = useState(false)
-// {showError && { }
-//   if(!props.email){
-//     props.setError('Please write your email')
-//   }}
-
+  
   const handleEmail = (e) => {
     props.setEmail(e.target.value)
     props.setError('')

@@ -16,7 +16,7 @@ const Reviewinformation = (props) => {
         <h3 tabIndex={0}>Review</h3>
        <p tabIndex={0}>Your name: <b>{props.name}</b></p>
        <p tabIndex={0}>Guest number: <b>{props.personNumber}</b></p>
-       <p tabIndex={0}>AgeGroup: <b>{props.ageGroup}</b></p>
+       <p tabIndex={0}>Dept. name: <b>{props.ageGroup}</b></p>
        <p tabIndex={0}>Email: <b>{props.email}</b></p>
        <button className='btn btn-primary'>Submit</button>
        </form>

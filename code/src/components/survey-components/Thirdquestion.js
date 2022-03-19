@@ -1,7 +1,7 @@
 import React from "react";
 
 const Thirdquestion = (props) => {
-    const ageGroups = ['none','0-18','19-30','30+']
+    const deptGroup = ['.NET','Frontend','UI/UX','E-Commerce']
 
     const handleAgegroup = (e) => {
         props.setAgeGroup(e.target.value)
@@ -10,19 +10,19 @@ const Thirdquestion = (props) => {
     
   return (
         <section className="question-section">
-        <label htmlFor='name' tabIndex={0}>Age group:</label>
-        {ageGroups.map((agegroups,key) => 
-        <label htmlFor="ageGroup" key={agegroups} className='agegroup-label' tabIndex={0}>
+        <label htmlFor='name' tabIndex={0}>Dept. name:</label>
+        {deptGroup.map((deptGroup,key) => 
+        <label htmlFor="ageGroup" key={deptGroup} className='agegroup-label' tabIndex={0}>
         <input
             className='agegroup-input' 
             id="ageGroup"
             type = 'radio' 
-            value={agegroups}
+            value={deptGroup}
             onChange={handleAgegroup} 
-            checked={props.ageGroup === agegroups}
+            checked={props.ageGroup === deptGroup}
             tabIndex={0}
         />
-        {agegroups}
+        {deptGroup}
         </label>
         )}
         </section>

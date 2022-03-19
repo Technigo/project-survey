@@ -13,7 +13,6 @@ const Survey = () => {
     const [backBtn, setBackBtn]       = useState(false)
     const [error, setError]           = useState('')
 
-
     const [name,setName]                 = useState('')
     const [personNumber,setPersonNumber] = useState('')
     const [ageGroup,setAgeGroup]         = useState('')
@@ -26,17 +25,19 @@ const Survey = () => {
       { id: 4},
    ]
 
-
 const next = () =>{
-    //count step
     if(!name || name.match(/[0-9]/g)){
       setError('Please enter your name')
     }else if(!personNumber && count === 2 ){
+      setError('Please choose one option')
+    }else if(!ageGroup && count === 2 ){
       setError('Please choose one option')
     }else if(!ageGroup && count === 3 ){
       setError('Please choose one option')
     }else if(!email && count === 4 ){
       setError('Please write your email')
+    }else if(!email.match(/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/) && count === 4 ){
+      setError('Invalid email format')
     }else{
       if(count < stepCounts.length){
         setCount(count + 1)
@@ -46,18 +47,14 @@ const next = () =>{
         setNextBtn(false)
         setReviewInfo(true)
       }
-      //back button display
       setBackBtn(true)
     }
-
-
 }
 
 const back = () =>{
     setCount(count - 1)
     setNextBtn(true)
     setReviewInfo(false)
-
     if (count - 1 === 1){
       setBackBtn(false)
     }
@@ -84,7 +81,7 @@ const back = () =>{
         setEmail = {setEmail}
         setError = {setError}
         />}
-    {/* error message */}
+
       {<div className='error-msg'>{error}</div>}
 
     {reviewInfo &&
