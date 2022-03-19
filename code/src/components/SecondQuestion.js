@@ -3,10 +3,11 @@ import React from "react";
 
 export const SecondQuestion=({locationInput, onLocationInputChange, onStepChange })=>{
  
-    return(   <form onSubmit={onStepChange}>
+    return(
+      <form onSubmit={onStepChange}>
         <fieldset>
             <legend>
-                <strong>Pick your city!</strong>
+                <h2>Pick your city!</h2>
             </legend>
            
             
