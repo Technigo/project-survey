@@ -1,23 +1,35 @@
 import React from "react";
 
+const options = [
+  "Some time during you weekend",
+  "Sunday night sometime between 23:30-00:00",
+  "Early in the week (Friday included)",
+  "After deadline",
+];
+
 const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
   return (
-    <form>
-      <label htmlFor="thirdQuestion">
-        When do you hand in your weekly project?{" "}
-      </label>
-      <input
-        type="radio"
-        value="time"
-        onChange={() => onHandInTimeChange("time")}
-        checked={handInTime === "time"}
-      />
-      <span role="img" aria-label="images">
-        😃
-      </span>
+    <section className="form-container">
+      <h2>When do you hand in your weekly project?</h2>
+      <section className="radio-options">
+        {options.map((option) => {
+          return (
+            <label className="description" htmlFor={option} key={option}>
+              <input
+                type="radio"
+                value={option}
+                checked={handInTime === option}
+                id={option}
+                onChange={onHandInTimeChange}
+              />
+              {option}
+            </label>
+          );
+        })}
+      </section>
 
       <button onClick={onStepChange}>Next Question</button>
-    </form>
+    </section>
   );
 };
 

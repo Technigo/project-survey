@@ -99,6 +99,33 @@ h2 {
   box-shadow: 0 0 10px var(--clr-shadow);
 }
 
+.radio-options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.radio-img {
+  padding: 1em;
+  margin: 1em;
+}
+
+.radio-img [type="radio"] {
+  position: absolute;
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.radio-img,
+[type="radio"] + img {
+  cursor: pointer;
+}
+
+.radio-img,
+[type="radio"]:checked {
+  outline: 2px solid var(--clr-darkblue);
+}
+
 button {
   padding: 1.3em 3em;
   font-size: 12px;
