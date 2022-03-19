@@ -3,6 +3,7 @@ import SelectForm from './SelectForm.js'
 import InputForm from './InputForm.js'
 import CheckboxForm from './CheckboxForm.js'
 import RadioForm from './RadioForm.js'
+import ProgressBar from './ProgressBar.js'
 
 const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, roles, setRoles, setSubmit}) => {
     const [currentQuestion, setCurrentQuestion] = useState(0);
@@ -54,47 +55,16 @@ const Form = ({name, setName, location, setLocation, willTravel, setWillTravel, 
         }
     }
 
-    const progressBarArray = [
-        {bgcolor: 'lightgreen', width: '25%' },
-        {bgcolor: 'lightgreen', width: '50%' },
-        {bgcolor: 'lightgreen', width: '75%' },
-        {bgcolor: 'lightgreen', width: '100%'},
-
-    ];
-
     const totalNumOfQuestions = componentsArray.length;
+    
     return (
         <form onSubmit={submitForm}>
             <h1>Application form</h1>
             <h2>Developer and software engineering</h2>
             <p>Question {currentQuestion + 1} out of {totalNumOfQuestions}</p>
 
-            <div style={{width: '200px', display: 'flex', backgroundColor: 'lightgrey', marginBottom: '5vh'}}>
-            {progressBarArray.map((fill, index) => {
-                if(index === 0 && currentQuestion === 0) {
-                    return (
-                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
-                    )
-            } else if (index === 1 && currentQuestion === 1) {
-                    return (
-                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
-                    )
-            } else if (index === 2 && currentQuestion === 2) {
-                    return (
-                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
-                    )
-            } else if (index === 3 && currentQuestion === 3) {
-                    return (
-                        <div style={{width: `${fill.width}`, backgroundColor: `${fill.bgcolor}`}}>{fill.width}</div>
-                    )
-            } else {
-                    return (
-                        <div></div>
-                    )
-            }
-            })}                
-            </div>
-            
+            <ProgressBar currentQuestion={currentQuestion} />
+
             <span style={{color: 'darkred', fontSize: '12px'}}>{errorMessage}</span>
             {componentsArray[currentQuestion]}     
 

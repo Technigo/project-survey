@@ -2,7 +2,7 @@ import React from 'react'
 
 const InputForm = ({name, setName}) => {
     
-    return(
+    return (
         <div className="input-form-div">
             <label className="input-fields">
             Your name is: {name}
