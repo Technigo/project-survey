@@ -3,11 +3,11 @@ import React from 'react';
 const QuestionName = ({nameInput, onNameInputChange, onNextChange}) => {
     
     return (
-        <div className="question-box">
-            <h2>Question 1</h2>
-            <form id="question-name" className="form">
-                <label htmlFor='name' label='name'>What's your name? </label>
+        <div>
+            <form id="question-name" className="form-box">
+                <label htmlFor='name' label='name' className='question-text'>What is your name? </label>
                 <input
+                    className='input-box'
                     id='name'
                     type='text'
                     value={nameInput}

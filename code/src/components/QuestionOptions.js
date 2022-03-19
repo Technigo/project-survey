@@ -3,11 +3,11 @@ import React from 'react';
 const QuestionOptions = ({location, onLocationChange, onNextChange}) => {
     
     return (
-        <div className="question-box">
-            <h2>Question 2</h2>
-            <form>
-                <label htmlFor='location'>Where in south of Stockholm do you want to move?</label> 
+        <div>
+            <form className="form-box">
+                <label htmlFor='location' className='question-text'>Where want to live?</label> 
                 <select
+                    className='input-box'
                     onChange={(event) => onLocationChange(event.target.value)}
                     value={location}>
                     <option value='You forgot to choose'>Pick an area</option>

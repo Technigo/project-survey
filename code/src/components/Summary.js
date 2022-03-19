@@ -4,9 +4,8 @@ const Summary = ({nameInput, location, why}) => {
 
     return (
         <div>
-            <h1>Summary</h1>
-            <p>Hi {nameInput}! 
-            You want to move to {location}. Nice! {why}
+            <label htmlFor='summary' label='summary' className='question-text'>Thank you {nameInput}!</label>
+            <p>You want to move to {location}, which actually is the best area in Sockholm. {why}. Great choice!
             </p>
         </div>
     )

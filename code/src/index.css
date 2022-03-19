@@ -9,11 +9,12 @@ body {
   background-image: url(./assets/apartments.jpg);
   background-size: cover;
   background-repeat: no-repeat;
-  height: 500px;
-  background-position-x: 10%;
+  height: 1000px;
+  background-position-x: 30%;
 	position: relative;
   display: grid;
   justify-content: center;
+  text-align: center;
 }
 
 code {
@@ -21,7 +22,65 @@ code {
     monospace;
 }
 
+.background {
+  
+}
+
 .survey-box {
   background-color: white;
   grid-template-columns: 15% auto 15%;
+  padding: 5%;
+  margin: 0px 50px;
+}
+
+.form-box {
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  margin: 30px 0px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+.header-box {
+  background-color: white;
+  grid-template-columns: 15% auto 15%;
+  padding: 5%;
+  margin: 50px 50px 0px 50px;
+}
+
+.question-text {
+  font-size: 24px;
+  /* margin-bottom: 10%; */
+  display: flex;
+  justify-content: center;
+}
+
+label {
+  display: flex;
+  justify-content: left;
+}
+
+.input-box {
+  margin-top: 10px;
+}
+
+input {
+  margin-top: 7px;
+}
+
+button {
+  background-color: rgb(177, 0, 97); 
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
 }
