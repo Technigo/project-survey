@@ -17,7 +17,7 @@ const Summary = ({ adjective, identify, coffeeGroup, hangout }) => {
             {coffeeGroup} {hangout}
           </b>
           . Yes girl, what a great match! We have the perfect person for you,
-          stay tuned and we will conect you.
+          stay tuned and we will connect you to her.
         </p>
       </div>
       <button
