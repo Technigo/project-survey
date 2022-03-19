@@ -171,10 +171,10 @@ a {
   font-weight: bold;
 }
 
-.footer {
+.copyright,
+.credit {
   text-align: center;
 }
-
 .copyright,
 .copyright a {
   font-size: 16px;

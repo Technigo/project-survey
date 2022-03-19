@@ -325,8 +325,7 @@ const Summary = (props) => {
               </p>
               <p>Just like that...</p>
               <hr></hr>
-              <p className="footer">
-                <span className="copyright">
+              <p className="copyright">
                   Website and story created by<br></br>
                   <a
                     aria-label="Website and story created by Nadia Lefebvre"
@@ -334,9 +333,8 @@ const Summary = (props) => {
                   >
                     Nadia Lefebvre
                   </a>
-                </span>
-                <br></br>
-                <span className="credit">
+                </p>
+                <p className="credit">
                   Amazing typewriter made by{" "}
                   <a
                     aria-label="Amazing typewriter made by Alvaro Montoro"
@@ -344,8 +342,7 @@ const Summary = (props) => {
                   >
                     Alvaro Montoro
                   </a>
-                </span>
-              </p>
+                </p>
             </div>
           </div>
         </section>
