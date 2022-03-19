@@ -56,7 +56,7 @@ select {
 
 .btn {
   font-family: "Jost", sans-serif;
-  border: 0.9px solid #a66d06;
+  border: 1px solid #a66d06;
   font-size: 16px;
   border-radius: 30px;
   color: #a66d06;
@@ -67,7 +67,7 @@ select {
 
 .btn-special {
   font-family: "Jost", sans-serif;
-  border: 0.9px solid #a66d06;
+  border: 1px solid #a66d06;
   font-size: 16px;
   border-radius: 30px;
   color: #a66d06;
@@ -91,7 +91,7 @@ p {
   padding: 20px;
   text-align: center;
   background: #f2efe6f2;
-  height: 420px;
+  height: 435px;
   margin-top: 40px;
 }
 
@@ -164,8 +164,3 @@ ul {
     height: 450px;
   }
 }
-/* CONTENT HERE */
-
-/* MEDIA QUERY FOR DESKTOP */
-/* @media (min-width:1281px) {}
-*/
