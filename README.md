@@ -7,7 +7,7 @@ My ambition for this project was to try to build a form that could be used in ma
 
 The form is configured by modifying the `questions` object that is declared in the `Form` component.
 
-The form supports the following types of HTML input elements: `select`, `radio`, `range`, and `text`. In the `questions` object, `input_type` must be exactly one of the supported HTML input elements. If a question is assigned a type not included in this list, an error message will log in the console. Example:
+The form supports the following types of HTML input elements: `select`, `radio`, `range`, and `text`. In the `questions` object, `input_type` must be exactly one of the supported HTML input elements. Example:
 
 ```javascript
 // For input type="text"
@@ -15,7 +15,7 @@ The form supports the following types of HTML input elements: `select`, `radio`,
 	id: "", //required
 	question_text: "", //required
 	input_type: "text", //required
-	format_answer: //optional
+	format_answer: , //optional
 	options: [], //optional
 }
 
@@ -24,7 +24,7 @@ The form supports the following types of HTML input elements: `select`, `radio`,
 	id: "", //required
 	question_text: "", //required
 	input_type: "range", //required
-	format_answer: //optional
+	format_answer: , //optional
 	options: [], //required
 }
 
@@ -33,7 +33,7 @@ The form supports the following types of HTML input elements: `select`, `radio`,
 	id: "", //required
 	question_text: "", //required
 	input_type: "radio", //required
-	format_answer: //optional
+	format_answer: , //optional
 	options: [], //required
 }
 
@@ -42,10 +42,11 @@ The form supports the following types of HTML input elements: `select`, `radio`,
 	id: "", //required
 	question_text: "", //required
 	input_type: "select", //required
-	format_answer: //optional
+	format_answer: , //optional
 	options: [], //required
 }
 ```
+If a question is assigned a type not included in this list, an error message will log in the console.
 
 If special formatting is required for input values, you can use the `format_answer` property of the `questions` object to specify format. Example:
 
