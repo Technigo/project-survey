@@ -21,7 +21,7 @@ export const Form = () => {
       }
 
   const handleRadioChange = (event) => { 
-        setAgeGroup(event.target.value) 
+        setAgeGroup(event.target.value)
       }
 
   const handlePersonality = (event) => {
@@ -41,7 +41,7 @@ export const Form = () => {
       }
 
   return (
-    <form className='form-wrapper'>
+    <section className='form-wrapper'>
       {counter === 0 &&
         <WelcomePage
           nextQuestion={handleNextQuestion}
@@ -77,6 +77,6 @@ export const Form = () => {
           person={person}
         />
       )}
-    </form>
+    </section>
   )
 }

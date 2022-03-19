@@ -30,8 +30,11 @@ const CheckBox = (props) => {
                             />
                             judgemental
                         </label>
+                        <button 
+                            className='btn btn-next' 
+                            type='button' 
+                            onClick={nextQuestion}>Next question</button>
                     </form>  
-                    <button className='btn' onClick={nextQuestion}>Next question</button>
                 </div>
             </section>
         )

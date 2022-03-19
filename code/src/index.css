@@ -87,6 +87,12 @@ h1 {
   cursor: pointer;
 }
 
+.btn-next {
+  margin-top: 3rem;
+  width: fit-content;
+  align-self: center;
+}
+
 /*--CHECKBOX.JS---*/
 .form-checkbox {
   display: flex;
@@ -118,7 +124,7 @@ h1 {
 }
 
 .submit-btn {
-  margin-top: 1rem;
+  margin-top: 1.5rem;
 }
 
 /*----SUMMARY.JS---*/

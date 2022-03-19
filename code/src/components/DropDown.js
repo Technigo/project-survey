@@ -6,9 +6,10 @@ const DropDown = ({ nextQuestion, onDropDownChange, actor }) => {
             <div className='content-wrap dropdown'>
                 <h1>To be or not to be?</h1>
                 <p>Which actor or actress should candidate to be the next president in the USA?</p>
-                <form>
+                <form className="radiobutton-form">
                     <label htmlFor='actor'>
                         <select
+                            lang='en'
                             onChange={onDropDownChange}
                             value={actor}
                             id='actor'
@@ -22,8 +23,12 @@ const DropDown = ({ nextQuestion, onDropDownChange, actor }) => {
                             <option value='Reese Witherspoon'>Reese Witherspoon</option>
                         </select>
                     </label> 
+                    <button 
+                        type='button'
+                        className='btn btn-next' 
+                        disabled={actor === ""} 
+                        onClick={nextQuestion}>Next question</button>
                 </form>
-                <button className='btn' disabled={actor === ""} onClick={nextQuestion}>Next question</button>
             </div>
         </section>
     )

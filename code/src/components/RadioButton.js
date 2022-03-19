@@ -2,7 +2,7 @@ import React from 'react'
 
 const ageGroups = ['6-18', '19-30', '31+']
 
-const RadioButton = ({ nextQuestion, onRadioChange, age }) => {
+const RadioButton = ({  nextQuestion, onRadioChange, age }) => {
     return (
        <section className='wrap'>
            <div className='content-wrap radio-background'>
@@ -24,7 +24,11 @@ const RadioButton = ({ nextQuestion, onRadioChange, age }) => {
                             {group}
                         </label>
                     ))} 
-                    <button className='btn submit-btn' disabled={age === ""} type='submit' onClick={nextQuestion}>Submit answers</button>
+                    <button 
+                        className='btn submit-btn' 
+                        disabled={age === ""} 
+                        type='submit' 
+                        onClick={nextQuestion}>Submit answers</button>
                 </form>
             </div>
        </section>
@@ -32,6 +36,3 @@ const RadioButton = ({ nextQuestion, onRadioChange, age }) => {
 }
 
 export default RadioButton;
-
-
-/* <button className='btn' disabled={age === ""} onClick={nextQuestion}>See summary</button> */
