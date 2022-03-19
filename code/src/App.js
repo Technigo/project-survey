@@ -1,9 +1,12 @@
 import React from 'react'
 
+import Summary from 'components/Summary.js'
+
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+  <Summary />
+
     </div>
   )
 }
