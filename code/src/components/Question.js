@@ -5,7 +5,7 @@ import "./Question.css";
 const Question = ({ id, question_text, answer_type, options, onChange, inputValue }) => {
   return (
     <>
-      <h2 className="questionText">{question_text}</h2>
+      <h2 className="question-text">{question_text}</h2>
       <InputField
         name={id}
         type={answer_type}

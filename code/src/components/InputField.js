@@ -11,6 +11,7 @@ const InputField = ({ name, type, options, value, onChange }) => {
           onChange={onChange}
           type={type}
           placeholder="Type here..."
+          autoFocus
           required
         ></input>
       );
