@@ -11,6 +11,7 @@ const Age = ({age, onAgeChange, onNextChange, onBackChange}) => {
             {ageGroups.map((group) => (
                  <label key={group} >
                      <input
+                     className="radiob"
                      type="radio"
                      value={group}
                      onChange={onAgeChange}
@@ -19,8 +20,10 @@ const Age = ({age, onAgeChange, onNextChange, onBackChange}) => {
                      {group}
                  </label>
                 ))}
-                    <button className="btn" onClick={onBackChange}>Back</button>
+                    
                     <button onClick={onNextChange} className="btn">Finally done!</button>
+                    <button className="btn" onClick={onBackChange}>Back</button>
+                    
         </section>
     )
 }

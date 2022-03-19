@@ -8,7 +8,9 @@ const Mediaunits = ({devicePick, onMediaSelect, onNextChange,onBackChange }) => 
                 <div className="q-1">
                 <h2>Pick preferred media device</h2></div>
                 <select 
+                
                 className="dropdown"
+                id="device"
                 value={devicePick}
                 onChange={onMediaSelect}> 
 
@@ -22,8 +24,9 @@ const Mediaunits = ({devicePick, onMediaSelect, onNextChange,onBackChange }) => 
                     <option value="smart fridge">Smart fridge</option>
                     
                 </select>
-                <button className="btn" onClick={onBackChange}>Back</button>
                 <button onClick={onNextChange} className="btn">Next question</button>
+                <button className="btn" onClick={onBackChange}>Back</button>
+                
             </section>
                 
     )

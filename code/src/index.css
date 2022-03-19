@@ -34,14 +34,14 @@ code {
 }
 
 .dropdown{
-  background-color: darkcyan;
+  background-color:#0d29c4;
   font-size: 17px;
   line-height: 20px;
   color: aliceblue;
   padding: 0px 5px;
   border: none;
   outline: none;
-  
+  border-radius: 5px;
   text-align: center;
 }
 
@@ -84,3 +84,13 @@ code {
  .btn:hover::before {
   width: 100%;
  }
+
+ option{
+   font-size: 15px;
+ }
+ label{
+   font-size:20px;
+   margin:0 0 10px 0;
+ }
+
+ 
