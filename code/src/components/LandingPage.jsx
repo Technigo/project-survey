@@ -8,7 +8,7 @@ const LandingPage = () => {
       <div className="landing-page">
         <h1 tabIndex="1">Story Factory</h1>
         <p tabIndex="2">
-          get a customized short story based on your choices or random choices
+          get a customised short story based on your choices or random choices
         </p>
       </div>
       <main></main>
