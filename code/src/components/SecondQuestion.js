@@ -3,9 +3,13 @@ import React from "react";
 const SecondQuestion =({flavourInput, onFlavourInput, onStepChange}) => {
 return (
     <div className="radio-container">
-<h2 className="intro-text">First we need to know a bit moore about your macarons preferences...</h2>
-<h3 className="question">Which flavour do you like the most?</h3>
+       <div className="welcome">
+        <div className="question-text">
+       Now we need to know a bit moore about your <em>macarons preferences</em>...</div>
+       <p className="question-input">Which flavour do you like the most?</p>
+       </div>
 
+<div className="radio-box">
 <label className="radio-form">
 <h4>Chocolate</h4>
 <input
@@ -17,6 +21,7 @@ checked={flavourInput === "Chocolate"}
 />
 <span class="checkbox"></span>
 </label>
+
 
 <label className="radio-form">
 <h4>Lemon</h4>
@@ -53,11 +58,13 @@ checked={flavourInput === "Raspberry"}
 />
 <span class="checkbox"></span>
 </label>
+</div>
 
 <div className="button-wrapper">
 <button className="next-question" onClick={onStepChange}>Next Question</button>
     </div>
     </div>
+    
 );
 };
 export default SecondQuestion;

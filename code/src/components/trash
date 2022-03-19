@@ -1,0 +1,68 @@
+import StartPage from "./Start";
+import FirstQuestion from "./FirstQuestion";
+import SecondQuestion from "./SecondQuestion";
+import ThirdQuestion from "./ThirdQuestion";
+import Summary from "./Summary";
+
+const Form = () => {
+
+const [nameInput, setNameInput] = useState( ' ' )
+const [flavourInput, setFlavourInput] = useState( ' ' )
+const [sizeInput, setSizeInput] = useState( ' ' )
+const [step, setStep] = useState(1)
+
+const onInputChange = (event) => {
+    setNameInput(event.taget.value)
+}
+const onFlavourInput = (flavourInput) => {
+    setFlavourInput (flavourInput)
+}
+const onSizeInput = (event) => {
+    setSizeInput (event.target.value)
+}
+
+return (
+    <main className="wrapper">
+{step === 0 && (
+<StartPage
+onStepChange={onStepChange}
+/>
+)}
+
+{step === 1 && (
+    <FirstQuestion
+    name={nameInput}
+    onInputChange={onInputChange}
+    onStepChange={onStepChange}
+    />
+)}
+
+{step === 2 && (
+    <SecondQuestion
+    flavour={flavourinput}
+    onFlavourInput={onFlavourInput}
+    onStepChange={onStepChange}
+/>
+    )}
+
+   {step === 3 && (
+       <ThirdQuestion
+       size={sizeInput}
+       onSizeInput={sizeInput}
+       onStepChange={onStepChange}
+       />
+   )} 
+
+{step === 5 && (
+    <Summary
+    name={nameInput}
+    flavour={flavourinput}
+    size={sizeInput}
+    />
+)}
+
+    </main>
+)
+}
+
+export default Form;

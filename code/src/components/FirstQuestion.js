@@ -1,15 +1,23 @@
 import React from "react";
 
-const FirstQuestion = ({ username, onInputChange}) => {
+const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange}) => {
     return (
 <div>
-    <p>To begin with, what is your name?</p>
-<label htmlFor="name">Type your name here</label>
-<input
+    <div className="welcome">
+<p className="intro-text">To begin with, what is your <em>name</em>???</p>
+<div className="input-box">
+<label className="question-input" htmlFor="name">YOUR FULL NAME:</label>
+<input className="text-answer"
 id="name"
 type="text"
-value={username}
-onChange={onInputChange}/>
+value={nameInput}
+onChange={onNameInputChange}
+/>
+</div>
+<button
+disabled={nameInput === ' '}
+onClick={onStepChange}>OK, next!!!</button>
+</div>
 </div>
     );
 };
