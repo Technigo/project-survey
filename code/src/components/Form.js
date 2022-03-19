@@ -3,14 +3,18 @@ import React, { useState } from 'react'
 import Name from './Name'
 import Location from './Location'
 import Travel from './Travel'
+import Living from './Living'
+import Eating from './Eating'
 import Summary from './Summary'
 
 const Form = () => {
 const [name, setName] = useState('')
 const [city, setCity] = useState('')
 const [travelWay, settravelWay] = useState('')
-const [isSummaryDisplayed, setIsSummaryDisplayed] = useState(false)
+const [rooms, setRooms] = useState('')
+const [food, setFood] = useState('')
 const [step, setStep] = useState(1)
+
 
 
 const handleNameChange = (event) => { 
@@ -23,6 +27,14 @@ const handleCityChange = (event) => {
 
  const handletravelWayChange = (event) => {
     settravelWay(event.target.value)
+}
+
+ const handleroomsChange = (event) => {
+   setRooms(event.target.value)
+ }
+
+ const handlefoodChange = (event) => {
+  setFood(event.target.value)
 }
 
 const onStepChange = () => {
@@ -59,11 +71,29 @@ return (
         onBackstepChange={onBackstepChange}
         />  
         )}
-         {step === 4 && (
+        {step === 4 && (
+        <Living 
+        rooms={rooms} 
+        onroomsChange={handleroomsChange}
+        onStepChange={onStepChange}
+        onBackstepChange={onBackstepChange}
+        />  
+        )}
+        {step === 5 && (
+        <Eating 
+        food={food} 
+        onfoodChange={handlefoodChange}
+        onStepChange={onStepChange}
+        onBackstepChange={onBackstepChange}
+        />  
+        )}
+         {step === 6 && (
         <Summary 
           name={name} 
           city={city}
           travelWay={travelWay}
+          rooms={rooms}
+          food={food}
         />
       )}
     </section>

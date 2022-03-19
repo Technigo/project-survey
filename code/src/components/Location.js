@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 
     const Location = ({city, onCityChange, onStepChange, onBackstepChange}) => {
@@ -8,18 +8,19 @@ import React, { useState } from "react";
           <label htmlFor="city">
               <h2>In which city did you join our event?</h2>
               </label>
-          <div className="location-box">
+          <div className="custom-select">
             <select onChange={onCityChange} value={city}>
-            <option value="">Select location:</option>
+            <option value="0">Select location:</option>
             <option value="Stockholm">Stockholm</option>
             <option value="Gothenburg">Gothenburg</option>
             <option value="Copenhagen">Copenhagen</option>
-          </select>
+            </select>
+            </div>
           <div className="locationButtons">
-        <button onClick={onStepChange} disabled={city===""}>OK</button>
         <button onClick={onBackstepChange}>back</button>
+        <button onClick={onStepChange} disabled={city==="0"}>OK</button>
         </div>
-        </div>
+      
     </section>
     )
 }

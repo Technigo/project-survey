@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 
 const travelWays = ['By train', 'By car', 'By plane', 'Other']
 
@@ -24,9 +24,9 @@ const Travel = ({travelWay, ontravelWayChange, onStepChange, onBackstepChange}) 
                 </label>
             ))}
             </div>
-            <div className="travelbox-buttons">
-            <button onClick={onStepChange} disabled={travelWay===""}>OK</button>
+            <div className="locationButtons">
             <button onClick={onBackstepChange}>back</button>
+            <button onClick={onStepChange} disabled={travelWay===""}>OK</button>
             </div>
             </div>
         </section>
