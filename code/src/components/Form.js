@@ -13,7 +13,7 @@ export const Form = () => {
   const [person, setPerson] = useState(false)
   const [actor, setActor] = useState('')
   const [name, setName] = useState('')
-  const [counter, setCounter] = useState(0);
+  const [counter, setCounter] = useState(0)
 
 // DECLARED FUNCTIONS //
   const handleNameChange = (event) => {
@@ -39,9 +39,11 @@ export const Form = () => {
   const handleNextQuestion = () => {
         setCounter(counter + 1)
       }
+  
+  const reloadSurvey = () => window.location.reload() 
 
   return (
-    <section className='form-wrapper'>
+    <form className='form-wrapper'>
       {counter === 0 &&
         <WelcomePage
           nextQuestion={handleNextQuestion}
@@ -66,16 +68,18 @@ export const Form = () => {
         <RadioButton
         nextQuestion={handleNextQuestion}
         onRadioChange={handleRadioChange}
-        age={ageGroup}
+        age={ageGroup}       
       />}
-      {counter === 4 &&
-        <Summary
+      {counter === 4 && (
+          <Summary
           age={ageGroup}
           personality={personality}
           actor={actor}
           username={name}
           person={person}
-      />}
-    </section>
+          reloadSurvey={reloadSurvey}
+        />
+      )}
+    </form>
   )
 }

@@ -111,6 +111,16 @@ h1 {
   background-color: #ffa801;
 }
 
+.radiobutton-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+}
+
 /*----SUMMARY.JS---*/
 .summary {
   background-color: #0be881;
@@ -132,8 +142,4 @@ h1 {
 .bold-text {
   font-weight: bold;
 }
-
-
-
-
 
