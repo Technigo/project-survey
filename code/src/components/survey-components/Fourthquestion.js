@@ -1,6 +1,16 @@
 import React from 'react'
 
 const Fourthquestion = (props) => {
+//   const [showError, setShowError] = useState(false)
+// {showError && { }
+//   if(!props.email){
+//     props.setError('Please write your email')
+//   }}
+
+  const handleEmail = (e) => {
+    props.setEmail(e.target.value)
+    props.setError('')
+  }
 
   return (
     <section className='question-section'>
@@ -9,7 +19,8 @@ const Fourthquestion = (props) => {
            id='email'
            type='email'
            value={props.email}
-           onChange={(e) => props.setEmail(e.target.value)}
+           onChange={handleEmail}
+           required
         />
     </section>
   )

@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+#root{
+  margin: 10px;
+  border: 1px solid #50c499;
+  padding: 10px;
+}
+
 body{
   font-family: Segoe UI,SegoeUI,"Helvetica Neue",Helvetica,Arial,sans-serif;
   color: #0a0a0ac0;
@@ -64,22 +70,32 @@ span {
   visibility: hidden;
 }
 
-.question-section{
-  height: 25vh;
-}
+/* .question-section{
+  height: 40vh;
+} */
 
 .agegroup-label{
-    width: 23%;
+    width: 30%;
     font-size: 16px;
     display: flex;
     align-items: center;
     justify-content: flex-start;
+    margin-top: 0;
+    margin-bottom: 5px;
 
 }
 
 .agegroup-input{
   width: 25%;
   margin-right: 10px;
+}
+
+/* error message */
+.error-msg {
+  /* margin-top: -70px; */
+  text-align: center;
+  color: #dc143c;
+  margin-bottom: 20px;
 }
 
 /* form data */
@@ -120,6 +136,10 @@ form p{
   text-transform: uppercase;
   font-size: 15px;
   border: none;
+}
+
+.btn:hover{
+  color: #04AA6D;
 }
   
 .btn-primary {
@@ -172,11 +192,21 @@ form p{
       margin: 0 auto;
     }
 
+    body{
+      background-color: #181718;
+    }
+
     #root{
+      background-color: #181718;
+      color: #ffffff;
       margin: 10px auto;
       max-width: 425px;
-      border: 1px solid #0a0a0ac0;
+      border: 1px solid #50c499;
       padding: 10px;
+    }
+
+    a{
+      font-weight: 700;
     }
 
   }

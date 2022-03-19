@@ -11,6 +11,8 @@ const Survey = () => {
 
     const [nextBtn, setNextBtn]       = useState(true)
     const [backBtn, setBackBtn]       = useState(false)
+    const [error, setError]           = useState('')
+
 
     const [name,setName]                 = useState('')
     const [personNumber,setPersonNumber] = useState('')
@@ -24,20 +26,31 @@ const Survey = () => {
       { id: 4},
    ]
 
+
 const next = () =>{
     //count step
-    if(count < stepCounts.length){
-      setCount(count + 1)
+    if(!name || name.match(/[0-9]/g)){
+      setError('Please enter your name')
+    }else if(!personNumber && count === 2 ){
+      setError('Please choose one option')
+    }else if(!ageGroup && count === 3 ){
+      setError('Please choose one option')
+    }else if(!email && count === 4 ){
+      setError('Please write your email')
+    }else{
+      if(count < stepCounts.length){
+        setCount(count + 1)
+      }
+      if (count === stepCounts.length){
+        setCount(stepCounts.length)
+        setNextBtn(false)
+        setReviewInfo(true)
+      }
+      //back button display
+      setBackBtn(true)
     }
 
-    if (count === stepCounts.length){
-      setCount(stepCounts.length)
-      setNextBtn(false)
 
-      setReviewInfo(true)
-    }
-    //back button display
-    setBackBtn(true)
 }
 
 const back = () =>{
@@ -52,20 +65,14 @@ const back = () =>{
 
   return (
     <>
-    {count !== 0 ? 
-    <Header/> :
-    null}
+    {count !== 0 && <Header/>}
 
-    {count !== 0 ? 
-    <Progress count={count} totalStep={stepCounts.length}/> :
-    null}
+    {count !== 0 && <Progress count={count} totalStep={stepCounts.length}/>}
 
-    {count !== 0 ?
-    <Slider count = {count} totalStep={stepCounts.length}/> :
-    null}
+    {count !== 0 && <Slider count = {count} totalStep={stepCounts.length}/>}
 
-    {count !== 0 ? 
-    <Questions 
+    {count !== 0 && 
+      <Questions 
         count ={count} 
         name = {name} 
         setName = {setName}
@@ -75,10 +82,12 @@ const back = () =>{
         setAgeGroup = {setAgeGroup}
         email = {email}
         setEmail = {setEmail}
-        /> :
-    null}
+        setError = {setError}
+        />}
+    {/* error message */}
+      {<div className='error-msg'>{error}</div>}
 
-    {reviewInfo ? 
+    {reviewInfo &&
     <Reviewinformation 
     setBackBtn = {setBackBtn}
     count = {count}
@@ -87,18 +96,11 @@ const back = () =>{
     personNumber = {personNumber}
     ageGroup = {ageGroup}
     email = {email}
-    /> :
-    null
-    }
+    />}
 
     <div className='sectionbtn'>
-      {backBtn ? 
-      <button className='btn btn-primary' onClick={back}>Back</button> : 
-      null}
-
-      {nextBtn ? 
-      <button className='btn btn-primary' onClick={next}>Next</button> :
-      null}
+      {backBtn && <button className='btn btn-primary' onClick={back}>Back</button>}
+      {nextBtn && <button className='btn btn-primary' onClick={next}>Next</button>}
     </div>
     </>
   )
