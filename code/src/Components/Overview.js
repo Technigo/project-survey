@@ -6,14 +6,14 @@ export const Overview= (props) => {
     return(
         <div className="container">
         <div className="overview-container">
-            <h2>Summary:</h2>
-            <h3>Name: {nameInput}</h3>
-            <h3>Email: {emailInput}</h3>
-            <h3>Position: {positionInput}</h3>
-            <h3>Location: {officeInput}</h3>
-            <h3>Skills: {skillsArray.join(', ')}</h3>
-            <h3>Experience level: {experienceTitle}</h3>
-            <h3>Link to portfolio: {linkInput}</h3>
+            <h2>SUMMARY</h2>
+            <h3><span className="summaryTitle">Name:</span> {nameInput}</h3>
+            <h3><span className="summaryTitle">Email:</span> {emailInput}</h3>
+            <h3><span className="summaryTitle">Position:</span> {positionInput}</h3>
+            <h3><span className="summaryTitle">Location:</span> {officeInput}</h3>
+            <h3><span className="summaryTitle">Skills:</span> {skillsArray.join(', ')}</h3>
+            <h3><span className="summaryTitle">Experience level:</span> {experienceTitle}</h3>
+            <h3><span className="summaryTitle">Link to portfolio:</span> {linkInput}</h3>
         </div>
         <div className="buttons">
                 <input 

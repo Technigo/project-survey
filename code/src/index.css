@@ -28,6 +28,15 @@ main{
   --red: #e16561;
 }
 
+input,
+select,
+input:active,
+select:active {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+}
+
 /* =====FONT STYLES=====*/
 h1{
   font-size: 60px;
@@ -127,7 +136,6 @@ p{
   color: #fff;
 	background-color: var(--red);
 	transform: scale(1.1);
-	border: 5px solid #fff;
   cursor: pointer;
 }
 
@@ -339,12 +347,19 @@ form{
   flex:1;
 }
 
+/* =====OVERVIEW PAGE STYLES=====*/
+.overview-container{
+  line-height: 2rem;
+}
+
+.summaryTitle{
+  text-decoration: underline;
+  font-style: italic;
+  font-weight: 400;
+}
 
 /* =====THANKS PAGE STYLES=====*/
 
-
-
-  
 .thanksText {
     position: absolute;
     top: 50%;

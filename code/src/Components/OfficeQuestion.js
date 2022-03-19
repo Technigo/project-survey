@@ -5,7 +5,7 @@ export const OfficeQuestion = (props) => {
     const progress = (step/8)*100
     return(
         <div className="container">
-            <p className="labelStyle">Which one of our offices are you interested to work?</p>
+            <p className="labelStyle">Which one of our officeswould you like to work?</p>
                 <div className="offices">
                     <div>
                         <label className="radioBtnContainer">Helsinki
