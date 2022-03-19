@@ -7,9 +7,9 @@ export const App = () => {
       <main>
         <Form />
       </main>
-      {/* <footer>
-        <a className="footer-link" href="https://supper-society.netlify.app/">© Supper Society</a>
-      </footer> */}
+      <footer>
+        <a href="https://supper-society.netlify.app/">© Supper Society</a>
+      </footer>
     </>
   );
 };

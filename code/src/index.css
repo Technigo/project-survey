@@ -22,30 +22,28 @@ body {
 
 main {
   width: 375px;
-  height: 100vh;
-  /* max-height: 100vh; */
-  overflow: hidden;
-  /* height: 85vh; */
+  height: 84vh;
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* footer {
-  height: 15vh;
+footer {
   margin-top: auto;
   display: flex;
   justify-content: center;
 }
 
-.footer-link {
+footer a {
   color: inherit;
+  font-size: 13px;
+  letter-spacing: 0.5px;
   text-decoration: none;
 }
-a:hover {
+footer a:hover {
   text-decoration: underline;
-} */
+}
 
 @media screen and (min-width: 768px) {
   main {
