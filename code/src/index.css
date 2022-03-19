@@ -1,13 +1,86 @@
 body {
-  margin: 10px;
+  margin: 0px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: darkcyan;
+  color: aliceblue;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.container{
+  margin-top: 15%;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  align-content: center;
+}
+
+.intro{
+  margin-bottom: 5px;
+}
+
+.q-1{
+  margin-bottom: 5px;
+}
+
+.dropdown{
+  background-color: darkcyan;
+  font-size: 17px;
+  line-height: 20px;
+  color: aliceblue;
+  padding: 0px 5px;
+  border: none;
+  outline: none;
+  
+  text-align: center;
+}
+
+.btn {
+  margin:10px;
+  padding: 5px 10px;
+  border: unset;
+  border-radius: 15px;
+  color:aliceblue;
+  z-index: 1;
+  background: #0d29c4;
+  position: relative;
+  font-weight: 1000;
+  font-size: 15px;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms;
+  overflow: hidden;
+ }
+ 
+ .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 0;
+  border-radius: 15px;
+  background-color:rgb(165, 42, 159);
+  z-index: -1;
+  -webkit-box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  box-shadow: 4px 8px 19px -3px rgba(0,0,0,0.27);
+  transition: all 250ms
+ }
+ 
+ .btn:hover {
+  color: aliceblue;
+ }
+ 
+ .btn:hover::before {
+  width: 100%;
+ }

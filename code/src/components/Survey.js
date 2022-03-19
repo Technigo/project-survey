@@ -34,6 +34,10 @@ const SurveyForm = () => {
     setNext(next + 1)
   }
   
+  const handleBackChange = () => {
+    setNext(next - 1);
+  };
+  
         
         return (
          
@@ -51,34 +55,31 @@ const SurveyForm = () => {
               <Mediaunits 
                           mediaselect={mediaselect} 
                           onMediaSelect={onMediaSelect} 
-                          onNextChange={handleNextChange} />}
+                          onNextChange={handleNextChange}
+                          onBackChange={handleBackChange} />}
 
               {next === 4 && 
               <Mediahours hourselect={hourselect} 
                           onHourSelect={onHourSelect}  
-                          onNextChange={handleNextChange} />}
+                          onNextChange={handleNextChange}
+                          onBackChange={handleBackChange} />}
 
               {next === 5 && 
               <Age  age={age} 
                     onAgeChange={onAgeChange} 
-                    onNextChange={handleNextChange} />}
+                    onNextChange={handleNextChange}
+                    onBackChange={handleBackChange} />}
 
               {next === 6 && 
               <Summary userName={userName} 
                        mediaselect={mediaselect} 
                        hourselect={hourselect}
-                       age={age}  />}
-              
-            {/* <Name userName={userName} onInputChange={onInputChange} />
-            <Mediaunits mediaselect={mediaselect} onMediaSelect={onMediaSelect} />
-            <Mediahours hourselect={hourselect} onHourselect={onHourSelect} />
-            <Age age={age} onAgeChange={onAgeChange}/> */}
+                       age={age}
+                       onBackChange={handleBackChange}  />}
+        
             </section>
-            
-            
-        )
-
-}
+             )
+            }
 
 export default SurveyForm
 

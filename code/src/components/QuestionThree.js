@@ -4,9 +4,9 @@ import React from 'react'
 
 const ageGroups = ["5-15", "16-25", "25-35", "36-45", "46-55", "56+"]
 
-const Age = ({age, onAgeChange, onNextChange}) => {
+const Age = ({age, onAgeChange, onNextChange, onBackChange}) => {
     return (
-        <div>
+        <section className="container">
             <h2>How old are you?</h2>
             {ageGroups.map((group) => (
                  <label key={group} >
@@ -19,8 +19,9 @@ const Age = ({age, onAgeChange, onNextChange}) => {
                      {group}
                  </label>
                 ))}
-                    <button onClick={onNextChange}>Finally done!</button>
-            </div>
+                    <button className="btn" onClick={onBackChange}>Back</button>
+                    <button onClick={onNextChange} className="btn">Finally done!</button>
+        </section>
     )
 }
 

@@ -2,13 +2,15 @@ import React from 'react'
 
 
 
-const Mediaunits = ({devicePick, onMediaSelect, onNextChange }) => {
+const Mediaunits = ({devicePick, onMediaSelect, onNextChange,onBackChange }) => {
     return (
-            <div>
-                
-                <h2>Pick preferd media device</h2>
-                <select value={devicePick}
-                    onChange={onMediaSelect}> 
+            <section className="container">
+                <div className="q-1">
+                <h2>Pick preferred media device</h2></div>
+                <select 
+                className="dropdown"
+                value={devicePick}
+                onChange={onMediaSelect}> 
 
                     <option value="">Select a device</option>
                     <option value="mobile phone">Mobile phone</option>
@@ -20,8 +22,9 @@ const Mediaunits = ({devicePick, onMediaSelect, onNextChange }) => {
                     <option value="smart fridge">Smart fridge</option>
                     
                 </select>
-                <button onClick={onNextChange}>Next question</button>
-                </div>
+                <button className="btn" onClick={onBackChange}>Back</button>
+                <button onClick={onNextChange} className="btn">Next question</button>
+            </section>
                 
     )
 }

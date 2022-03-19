@@ -2,12 +2,14 @@ import React from 'react'
 
 
 
-const Mediahours = ({hourselect, onHourSelect, onNextChange }) => {
+const Mediahours = ({hourselect, onHourSelect, onNextChange, onBackChange }) => {
     return (
-            <div>
+            <section className="container">
                 
                 <h2>How many hours per day do you spend with a media device?</h2>
-                <select value={hourselect}
+                <select 
+                    className="dropdown"
+                    value={hourselect}
                     onChange={onHourSelect}> 
 
                     <option value="">Please be honest</option>
@@ -19,9 +21,10 @@ const Mediahours = ({hourselect, onHourSelect, onNextChange }) => {
                     <option value="10-12">10-12 </option>
                     <option value="12-14">12-14 </option>
                     <option value="+14">+ 14  &#40;I live online&#41; </option>
-                </select>
-                <button onClick={onNextChange}>Next question</button>
-                </div>
+                    </select>
+                    <button className="btn" onClick={onBackChange}>Back</button>
+                    <button onClick={onNextChange} className="btn">Next question</button>
+                </section>
     )
 }
 
