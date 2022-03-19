@@ -1,0 +1,16 @@
+.bold-italic {
+    font-style: italic;
+    font-weight: 600;
+}
+
+.thank-you-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.thank-you-card {
+    font-size: 1.5em;
+}
+.summary p {
+    margin: 0;
+}

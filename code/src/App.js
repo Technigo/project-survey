@@ -8,10 +8,7 @@ const App = () => {
     <main>
       <div className="app-wrapper">
         <h1>Libertas Book Club</h1>
-        <div className="app-container-bg-pattern">
-          <img className="bg-img" src="./images/bg.svg" alt="background"/>
            <Start />
-        </div>
       </div>
     </main>
   )

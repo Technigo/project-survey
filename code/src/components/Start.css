@@ -1,0 +1,47 @@
+.main-card {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    border: 2px solid black;
+    background-color: bisque;
+    max-width: 600px;
+    max-height: 600px;
+}
+
+.start-button {
+    background-color: grey;
+    font-size: 1.2em;
+    font-weight: 600;
+    padding: 0.7em 2em;
+    letter-spacing: 0.06em;
+    position: relative;
+    border-radius: 0.6em;
+    line-height: 1.4em;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.description {
+    color: white;
+    text-align: center;
+}
+.start-button:hover {
+    cursor: pointer;
+    background-color: rgb(24, 80, 36);
+    color: white;
+}
+
+.time-it-takes-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.time-it-takes-wrapper p {
+    color: rgb(61, 58, 58);
+}
+
+.horloge-icon {
+    width: 30px;
+    margin-right: 5px;
+}

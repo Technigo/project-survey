@@ -1,38 +1,51 @@
 import React from "react"
 
-const SubmitBook = ({
-    nextQuestion,
-    submitBook,
-    setSubmitBook
-}) => {
-    const onSubmitBook = (event) => {
-        setSubmitBook(event.target.value)
+const SubmitBook = (props) => {
+    const { nextQuestion, title, setTitle, author,
+        setAuthor, isbn, setIsbn } = props
+
+    const onTitleChange = (event) => {
+        setTitle(event.target.value)
         event.preventDefault()
-        nextQuestion()
     }
+    const onAuthorChange = (event) => {
+        setAuthor(event.target.value)
+        event.preventDefault()
+    }
+    const onIsbnChange = (event) => {
+        setIsbn(event.target.value)
+        event.preventDefault()
+    }
+
     return (
-        <form className="form-suggest-book">
-            <label htmlFor="title">Title
-            <input
-                type="text"
-                name="title"
-            />
+        <form onSubmit={nextQuestion} className="form-suggest-book main-card">
+            <label className="title" htmlFor="title">Title
+                <input
+                    onChange={onTitleChange}
+                    type="text"
+                    name="title"
+                    value={title}
+                />
             </label>
 
-            <label htmlFor="author">Author
-            <input
-                type="text"
-                name="author"
-            />
+            <label className="author" htmlFor="author">Author
+                <input
+                    onChange={onAuthorChange}
+                    type="text"
+                    name="author"
+                    value={author}
+                />
             </label>
 
-            <label htmlFor="isbn">ISBN
-            <input
-                type="text"
-                name="ISBN"
-            />
+            <label className="isbn" htmlFor="isbn">ISBN
+                <input
+                    onChange={onIsbnChange}
+                    type="text"
+                    name="isbn"
+                    value={isbn}
+                />
             </label>
-            <button onClick={onSubmitBook}>SUBMIT</button>
+            <button className="submit-book-btn" onClick={nextQuestion}>SUBMIT</button>
         </form>
 
     )

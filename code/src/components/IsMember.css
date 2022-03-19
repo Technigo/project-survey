@@ -1,0 +1,9 @@
+input[name="isMember"] {
+    width: 18px;
+    height: 18px;
+    margin: 10px;
+}
+
+input[name="isMember"]:hover {
+    cursor: pointer;
+}

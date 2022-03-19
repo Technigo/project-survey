@@ -12,9 +12,9 @@ const IsMember = ({
         nextQuestion()
     }
     return (
-        <form>
-            Are you a member?
-            <label>
+        <form className="main-card">
+          <p>Are you a member?</p>
+            <label htmlFor="isMember">
                 <input 
                   type="radio"
                   name="isMember"
@@ -23,8 +23,6 @@ const IsMember = ({
                   checked={member === "Yes"}
                 />
                 Yes
-            </label>
-            <label>
                 <input 
                   type="radio"
                   name="isMember"
@@ -32,8 +30,8 @@ const IsMember = ({
                   onChange={onMemberClick}
                   checked={member === "No"}
                 />
-                No
-            </label>
+                 No
+                 </label>
         </form>
     )
 }

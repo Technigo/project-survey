@@ -2,6 +2,18 @@ body {
   background-color: #6F8370;
 }
 
+p {
+  font-family: asar;
+}
+
+*:focus {
+  outline: none;
+}
+/* hidden elements */
+
+.bg-img {
+  display: none;
+}
 .app-wrapper {
   display: flex;
   flex-direction: column;
@@ -11,54 +23,24 @@ body {
 
 h1 {
   font-family: ballet;
-  font-size: 100px;
-  margin: 20px auto 0 auto;
+  font-size: 3em;
+  margin: 40px auto 0 auto;
 }
 
-h2, form {
-  position: fixed;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  font-family: asar;
-}
-
-.summary {
-  color: white;
-  margin-left: auto;
-  margin-right: auto;
-  font-size: 30px;
-  position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 600px;
-  text-align: center;
-  font-family: asar;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-
-}
-
-
-
-.bg-img{
-  display: flex;
-  position: relative;
-  max-width: 100%;
-  height: 400px
-}
-
-.form-suggest-book {
+/* start - description of the survey*/
+form {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-family: asar;
 }
 
-/* @media (min-width: 900px) { */
+@media (min-width: 900px) {
+
+h1 {
+  font-size: 4em;
+}
+
+}

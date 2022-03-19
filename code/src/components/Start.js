@@ -5,71 +5,74 @@ import AgeGroup from "components/AgeGroup"
 import SubmitBook from "components/SubmitBook"
 import Summary from "components/Summary"
 
-
-
 const Start = () => {
-    const [ question, setQuestion ] = useState(0)
+    const [question, setQuestion] = useState(0)
 
     const [member, setMember] = useState("")
     const [ageGroup, setAgeGroup] = useState("")
-    const [submitBook, setSubmitBook] = useState({
-        title: "",
-        author: "",
-        ISBN: ""
-    })
-
+    const [title, setTitle] = useState("")
+    const [author, setAuthor] = useState("")
+    const [isbn, setIsbn] = useState("")
 
     const OnNextQuestion = () => {
-        setQuestion(state=>state+1)
-    } 
-
+        setQuestion(state => state + 1)
+    }
 
     console.log(question)
-    
+
     if (question === 0) {
         return (
-            <h2 onClick={OnNextQuestion} question={question}>Click here to start the survey</h2>
+            <div className="start">
+                <div className="main-card">
+                <button aria-label="Click here to start the survey" className="start-button" onClick={OnNextQuestion} question={question}>
+                    Suggest a book </button>
+                    <div className="time-it-takes-wrapper">
+                    <img className="horloge-icon" src="./images/horloge-vintage.png" alt="horloge icon"/> <p>takes 1 minute</p>
+                   </div>
+                    </div>
+                    <p className="description"> We need help from enthusiatic readers like yourself to pick a book for our next book discussion.</p>
+            </div>
         )
     } else if (question === 1) {
         return (
-            <IsMember 
-            nextQuestion={OnNextQuestion}
-            question={question}
-            member={member}
-            setMember={setMember}
+            <IsMember
+                nextQuestion={OnNextQuestion}
+                question={question}
+                member={member}
+                setMember={setMember}
             />
         )
-    
+
     } else if (question === 2) {
         return (
             <AgeGroup
-            nextQuestion={OnNextQuestion}
-            question={question}
-            ageGroup={ageGroup}
-            setAgeGroup={setAgeGroup}
+                nextQuestion={OnNextQuestion}
+                question={question}
+                ageGroup={ageGroup}
+                setAgeGroup={setAgeGroup}
             />
         )
     } else if (question === 3) {
         return (
             <SubmitBook
-            nextQuestion={OnNextQuestion}
-            question={question}
-            setSubmitBook={setSubmitBook}
-            title={submitBook.title}
-            author={submitBook.author}
-            isbn={submitBook.ISBN}
-            
-
+                nextQuestion={OnNextQuestion}
+                question={question}
+                setTitle={setTitle}
+                setAuthor={setAuthor}
+                setIsbn={setIsbn}
+                title={title}
+                author={author}
+                isbn={isbn}
             />
         )
     } else if (question === 4) {
         return (
             <Summary
-            member={member}
-            ageGroup={ageGroup}
-            title={submitBook.title}
-            author={submitBook.author}
-            isbn={submitBook.ISBN}
+                member={member}
+                ageGroup={ageGroup}
+                title={title}
+                author={author}
+                isbn={isbn}
             />
         )
     }

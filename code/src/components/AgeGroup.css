@@ -1,0 +1,8 @@
+select {
+    margin-top: 20px;
+    border-radius: 10px;
+    border: 2px solid hsl(0, 2%, 25%);
+    width: 130px;
+    height: 30px;
+    text-align: center;
+}
