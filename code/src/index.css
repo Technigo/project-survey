@@ -162,6 +162,7 @@ h1 {
 
 .btn {
   background-color: transparent;
+  color: var(--my-black);
   border: 2px solid var(--main-accent-color-dark);
   border-radius: 10px;
   padding: 8px 15px;
