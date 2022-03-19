@@ -27,8 +27,8 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                         <input className="checkboxes"
                         type="checkbox" 
                         name="thegoodkind" 
-                        checked={musicType.includes(' the good kind ')}
-                        onChange={() =>onCheckboxChange(' the good kind ')}/>
+                        checked={musicType.includes('the good kind')}
+                        onChange={() =>onCheckboxChange('the good kind')}/>
                    The good kind</label>
                 </div>
 
@@ -37,8 +37,8 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                         <input className="checkboxes"
                         type="checkbox" 
                         name="pop"
-                        checked={musicType.includes(' pop ')}
-                        onChange={() => onCheckboxChange(' pop ')}/>
+                        checked={musicType.includes('pop')}
+                        onChange={() => onCheckboxChange('pop')}/>
                     Pop</label>
                 </div>
 
@@ -47,8 +47,8 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                         <input className="checkboxes"
                         type="checkbox" 
                         name="electronic"
-                        checked={musicType.includes(' electronic ')}
-                        onChange={() => onCheckboxChange(' electronic ')}/>
+                        checked={musicType.includes('electronic')}
+                        onChange={() => onCheckboxChange('electronic')}/>
                     Electronic</label>
                 </div>
             
