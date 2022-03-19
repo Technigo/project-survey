@@ -9,7 +9,7 @@ const ThirdQuestion = ({
     return (
         <div className="main">
         <div className="container">
-        <h2>Var tycker du att vi ska äta?</h2>
+        <h2 tabIndex="0">Var tycker du att vi ska äta?</h2>
         <form>
             <label className="label2">
                 Hemma hos mig

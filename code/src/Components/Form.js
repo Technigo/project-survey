@@ -4,7 +4,6 @@ import FirstQuestion  from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThirdQuestion from './ThirdQuestion';
 import Overview from './Overview';
-// import Footer from './Footer';
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
@@ -60,6 +59,10 @@ const Form = () => {
         onStepChange={onStepChange}
         />
     )}
+
+    <footer>
+      <p>marianne@ardin.se</p>
+    </footer>
     </div> 
      );
 };

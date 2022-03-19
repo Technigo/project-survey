@@ -11,7 +11,7 @@ const SecondQuestion = ({
         <form>
             <label className="label1">
                  Vilka dagar kan du? 
-              <select value={days} onChange={onDayChange}>
+              <select className="Days" value={days} onChange={onDayChange}>
                   <option value="Skärtorsdagen 14 april">Skärtorsdagen 14 april</option>
                   <option value="Långfredagen 15 april">Långfredagen 15 april</option>
                   <option value="Lördagen 16 april">Lördagen 16 april</option>

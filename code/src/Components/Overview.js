@@ -5,16 +5,18 @@ const Overview = ({ nameInput, days, where }) => {
         <div className="main">
         <div className="container">
         <div className="summary">
-            <h2>Summering</h2>
-            <p>Namn : {nameInput}</p>
-            <p>Du vill träffas: {days} </p>
-            <p>Du vill träffas: {where} </p>
+            <h2 tabIndex="0">Summering</h2>
+            <p tabIndex="0">Namn : {nameInput}</p>
+            <p tabIndex="0">Du vill träffas: {days} </p>
+            <p tabIndex="0">Du vill träffas: {where} </p>
             
        </div>
        </div>
        </div>
-    );
-};
+
+    
+    )
+}
 
 export default Overview;
 

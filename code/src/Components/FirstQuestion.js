@@ -7,8 +7,8 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
     return (
         <div className="main">
         <div className="container">
-         <h1>Påskmiddagsformulär</h1>
-    
+         <h1 tabIndex="0">Påskmiddagsformulär</h1>
+        <p tabIndex="0">För att se om vi kan få ihop familjen för en påskmiddag, vänligen svara på några frågor:</p>
         <form onSubmit={onFormSubmit}>
             <label htmlFor="nameInput"> Skriv ditt namn </label>
                 <input 

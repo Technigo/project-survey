@@ -17,14 +17,15 @@ body {
 }
 
 .container {
-  background-color: rgba(213, 230, 56, 0.822);
+  background-color: #d8bf978a;
   border-radius: 25px;
-  border: black 3px solid;
   display: flex;
   flex-direction: column;
+
   padding: 11px;
   width: 85%;
-  margin-top: 20px;
+  margin-top: 200px;
+  color: #684631;
 }
 
 code {
@@ -35,9 +36,10 @@ code {
 h1 {
   font-weight: bolder;
   text-align: center;
-  color: black;
+  color: #684631;
   font-style: italic;
-  
+  font-size: 24px;
+
 }
 
 h2 {
@@ -47,19 +49,25 @@ h2 {
 input {
   padding: 5px;
   font-size: 24px;
+  color: #684631;
+}
+
+p {
+  display: flex;
+  justify-content: center;
 }
 
 button {
-  border-style: double;
-  text-decoration: solid;
   margin: 20px;
-  display: flex;
-  align-items: center;
-  flex-direction: column;  
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: #684631;
 }
 
 .radiobutton {
-  color: blue;
+  color: #684631;
 }
 
 .label1 {
@@ -67,12 +75,18 @@ button {
   display: flex;
   flex-direction: column;  
   align-items: center;
+  color: #684631;
 }
 
 .label2 {
   display: flex;
   flex-direction: column;  
   align-items: center;
+  color: #684631;
+}
+
+.days {
+  color:#684631;
 }
 
 .summary {
@@ -80,9 +94,20 @@ button {
   flex-direction: column;  
   align-items: center;
 
-
 }
 footer {
   display: flex;
   justify-content: center;
+  flex: end;
+  color: #684631;
+  padding-top: 400px;
+}
+
+/*Media queries for laptop view*/
+
+@media (min-width: 1024px) {
+  
+h1 {
+  font-size: 32px;
+}
 }
