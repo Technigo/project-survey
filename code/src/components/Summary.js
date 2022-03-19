@@ -14,7 +14,7 @@ const Summary = ({
         <h1>Here we go!</h1>
 
         <p className="descriptive-text">Thank you for subscribing.</p>
-        <p className="descriptive-text">Hope you'll love the newsletter!</p>
+        <p className="descriptive-text">Hope you'll love the newsletter! <span role="img" aria-label="back arrow emoji">💌</span></p>
          
          <div className="summary-text">
          <p>Name: <span className="username"> {nameInput} {surnameInput}</span></p>
