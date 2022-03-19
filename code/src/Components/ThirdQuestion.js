@@ -1,36 +1,36 @@
-import React from 'react'
+import React from "react";
 
-const durationArray = ['day trip','one weekend','one week','two weeks']
+const budgetArray = ["0-2000 kr", "2000-5000 kr", "5000-10000 kr"];
 
 const ThirdQuestion = ({
-    awayInput, 
-    onAwayInputChange,
-    nextQuestion,
-    step,
-     }) => {
+  budgetInput,
+  onBudgetInputChange,
+  nextQuestion,
+  step,
+}) => {
+  return (
+    <main className="main-container budget">
+      <p>Question number: {step}</p>
+      <h3 className="question-title">Budget for the destination:</h3>
+      <form className="form-container">
+        {budgetArray.map((budget) => (
+          <label className="radio-btn" htmlFor={budget} key={budget}>
+            <input
+              id={budget}
+              type="radio"
+              value={budget}
+              onChange={onBudgetInputChange}
+              checked={budget === budgetInput}
+            />
+            {budget}
+          </label>
+        ))}
+        <button className="next-btn" onClick={nextQuestion}>
+          Next
+        </button>
+      </form>
+    </main>
+  );
+};
 
-       return (  
-        <main className='main-container time'>
-       <form className='form-container'> 
-       <p>Question number: {step}</p>
-       <h3 className='question-title'>How long do you want to be away for?</h3>
-       {durationArray.map((days) => ( 
-          <label htmlFor={days} key={days}>
-           <input 
-            id={days}
-            type="radio"
-            value={days}
-            onChange= {onAwayInputChange}
-            checked={days === awayInput}
-           />
-            {days}
-           </label>
-          
-       ))}
-       <button className='next-btn' onClick={nextQuestion}>Next</button>
-        </form>
-       </main>
-        );
-    };
-
-    export default ThirdQuestion;
+export default ThirdQuestion;

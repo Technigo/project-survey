@@ -1,37 +1,35 @@
-import React from 'react';
-
-const budgetArray = ['0-2000','2000-5000','5000-10000']
-
+import React from "react";
 
 const SecondQuestion = ({
-    budgetInput, 
-    onBudgetInputChange,
-    nextQuestion,
-    step,
-     }) => {
+  destinationInput,
+  onDestinationInputChange,
+  nextQuestion,
+  step,
+}) => {
+  return (
+    <main className="main-container map">
+      <p>Question number : {step} </p>
+      <h3>Which vacation do you prefer?</h3>
+      <form className="form-container">
+        <select
+          className="dropdown"
+          onChange={onDestinationInputChange}
+          value={destinationInput}
+        >
+          <option disabled value="">
+            Select destination:
+          </option>
+          <option value="Go to a warm country">Go somewere warm</option>
+          <option value="Go out in nature">Go out into the wild</option>
+          <option value="Go skiing">Go skiing</option>
+          <option value="Taking a city trip">Go to the city</option>
+        </select>
+        <button className="next-btn" onClick={nextQuestion}>
+          Next
+        </button>
+      </form>
+    </main>
+  );
+};
 
-       return (  
-        <main className='main-container budget'>
-       <form className='form-container'> 
-       <p>Question number: {step}</p>
-       <h3 className='question-title'>Budget for the destination:</h3>
-       {budgetArray.map((budget) => ( 
-          <label htmlFor={budget} key={budget}>
-           <input className='radiobutton'
-            id={budget}
-            type="radio"
-            value={budget}
-            onChange= {onBudgetInputChange}
-            checked={budget === budgetInput}
-           />
-            {budget}
-           </label>
-          
-       ))}
-       <button className='next-btn' onClick={nextQuestion}>Next</button>
-        </form>
-       </main>
-        );
-    };
-
-    export default SecondQuestion;
+export default SecondQuestion;
