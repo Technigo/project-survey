@@ -10,7 +10,7 @@ const Numbers = () => {
       <span>4</span>
       <span>5</span>
     </p>
-  )
+  );
 };
 
 export default Numbers;

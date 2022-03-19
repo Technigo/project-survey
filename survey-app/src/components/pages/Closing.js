@@ -11,24 +11,21 @@ const Closing = ({ closingData }) => {
     return (hours === 'Yes')
       ? 'You prefer a company that offers flexible work hours.'
       : "You don't prefer a company that offers flexible work hours."
-  }
+  };
 
   const productivityResponse = () => {
     return (productivity >= 3) ? 'You feel you would be more productive in a flexible work environment.'
-      : (productivity > 0) ? 'You feel you might be more productive in a flexible work environment.'
-      : 'You feel your productivity level would not change in a flexible work environment.'
-  }
+        : (productivity > 0) ? 'You feel you might be more productive in a flexible work environment.'
+        : 'You feel your productivity level would not change in a flexible work environment.'
+  };
 
   const stressResponse = () => {
     return (stress >= 3) ? 'You feel you would be less stressed in a flexible work environment.'
-      : (stress > 0) ? 'You feel you might be less stressed in a flexible work environment.'
-      : 'You feel your stress level would not change in a flexible work environment.'
-  }
+        : (stress > 0) ? 'You feel you might be less stressed in a flexible work environment.'
+        : 'You feel your stress level would not change in a flexible work environment.'
+  };
 
-  const buttonData = {
-    nextPage: refreshPage,
-    innerText: 'reload'
-  }
+  const buttonData = { nextPage: refreshPage, innerText: 'reload' };
 
   return (
     <section className='closing page'>
@@ -42,7 +39,7 @@ const Closing = ({ closingData }) => {
       </ul>
       <Buttons buttonData={buttonData} />
     </section>
-  )
+  );
 };
 
 export default Closing;

@@ -10,25 +10,25 @@ const subHeaderData = {
   title: 'If you had the opportunity to work in a flexible',
   title2: 'work environment, would you be more productive?',
   level: 'Very productive'
-}
+};
 
 const ProductivityRange = ({ productivityData }) => {
-  const { nextPage, backPage, retrieveProductivityData, productivity } = productivityData;
+  const { nextPage, prevPage, retrieveProductivityData, productivity } = productivityData;
 
   const rangeData = {
     nextPage,
-    backPage,
+    prevPage,
     state: productivity,
     retrieveData: retrieveProductivityData,
     identifier: 'productivityRange'
-  }
+  };
 
   return (
     <section className='page'>
       <SubHeader subHeaderData={subHeaderData} />
       <RangeInput rangeData={rangeData} />
     </section>
-  )
+  );
 };
 
 export default ProductivityRange;

@@ -13,11 +13,11 @@ const subHeaderData = {
 };
 
 const StressRange = ({ stressData }) => {
-  const { nextPage, backPage, retrieveStressData, stress } = stressData;
+  const { nextPage, prevPage, retrieveStressData, stress } = stressData;
 
   const rangeData = {
     nextPage,
-    backPage,
+    prevPage,
     state: stress,
     retrieveData: retrieveStressData,
     identifier: 'stressRange'

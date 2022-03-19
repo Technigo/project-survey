@@ -4,7 +4,7 @@ import { alert } from 'react-custom-alert';
 const Button = ({ buttonData }) => {
   const alertWarning = () => alert({ message: 'Please select an option.', type: 'warning' });
 
-  const { nextPage, backPage, innerText, state } = buttonData;
+  const { nextPage, prevPage, innerText, state } = buttonData;
 
   return (
     <div className='button-wrapper'>
@@ -13,7 +13,7 @@ const Button = ({ buttonData }) => {
           <button
             className='back-button'
             onClick={() => {
-              backPage();
+              prevPage();
             }}><span className='arrow'>{'<'}&nbsp;</span>Back
           </button>
           <button
@@ -22,14 +22,14 @@ const Button = ({ buttonData }) => {
             onClick={() => {
               (!state)
                 ? alertWarning()
-                : nextPage(); 
+                : nextPage();
             }}>
             Next &nbsp;<span className='arrow'>{'>'}</span>
           </button>
         </>
         : <button className='button' onClick={nextPage}>{innerText}</button>}
     </div>
-  )
+  );
 };
 
 export default Button;

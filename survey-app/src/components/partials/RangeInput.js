@@ -5,8 +5,8 @@ import Buttons from './Buttons';
 import Numbers from './Numbers';
 
 const RangeInput = ({ rangeData }) => {
-  const { nextPage, backPage, state, retrieveData, identifier } = rangeData;
-  const buttonData = { nextPage, backPage, state };
+  const { nextPage, prevPage, state, retrieveData, identifier } = rangeData;
+  const buttonData = { nextPage, prevPage, state };
 
   return (
     <>
@@ -26,7 +26,7 @@ const RangeInput = ({ rangeData }) => {
       <AlertContainer floatingTime={2000} />
       <Buttons buttonData={buttonData} />
     </>
-  )
+  );
 };
 
 export default RangeInput;

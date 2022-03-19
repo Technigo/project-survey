@@ -3,7 +3,7 @@ import React from 'react';
 import Buttons from '../partials/Buttons';
 
 const Welcome = ({ nextPage }) => {
-  const buttonData = { nextPage, innerText: "Sure, let's go" }
+  const buttonData = { nextPage, innerText: "Sure, let's go" };
 
   return (
     <section className='welcome page'>
@@ -18,7 +18,7 @@ const Welcome = ({ nextPage }) => {
         Takes 1 min
       </p>
     </section>
-  )
+  );
 };
 
 export default Welcome;
