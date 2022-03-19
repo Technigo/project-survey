@@ -43,8 +43,8 @@ export const Form = ({showModal, setShowModal}) => {
             <div className="form-container">
                 <div className="header">
                     <h1>{FormTitles[page]}</h1>
-                <closeModalButton
-                onClick={() =>(prev => !prev)}
+                <closeModalButton className="x"
+                onClick={() => setShowModal (prev => !prev)}
                 />
                 </div>
                 <div className="body">{PageDisplay()}</div>
