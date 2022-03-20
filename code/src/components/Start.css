@@ -1,12 +1,11 @@
 .start-button {
-    background-color: grey;
-    font-size: 1.2em;
+    background-color: rgb(190, 190, 190);
+    font-size: 1em;
     font-weight: 600;
     letter-spacing: 0.06em;
     border-radius: 0.6em;
     line-height: 1.4em;
     padding: 1.2em 1.7em;
-    border: 2px solid rgb(0, 0, 0);
     -webkit-appearance: none;
     -moz-appearance: none;
     color: black;
@@ -15,6 +14,7 @@
 .description {
     color: white;
     text-align: center;
+    max-width: 600px;
 }
 .start-button:hover {
     cursor: pointer;

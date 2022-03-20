@@ -1,29 +1,22 @@
-input[name="title"],[name="isbn"] {
+input[name="title"],[name="isbn"],[name="author"]  {
     margin-left: 30px;
     width: 200px;
     height: 20px;
     border-radius: 5px;
   }
 
-input[name="author"] {
-    width: 200px;
-    height: 20px;
-    border-radius: 5px;
-    margin-left: 5px;
-}
-
 
 .submit-book-btn {
-        background-color: grey;
-        margin-top: 20px;
-        font-size: .8em;
-        font-weight: 600;
-        padding: 0.5em 1.8em;
-        letter-spacing: 0.06em;
-        position: relative;
-        border-radius: 0.6em;
-        border: 2px solid rgb(0, 0, 0);
-        color: black;
+    background-color: rgb(190, 190, 190);
+    margin-top: 20px;
+    font-size: .5em;
+    font-weight: 600;
+    padding: 0.5em 1.8em;
+    letter-spacing: 0.06em;
+    position: relative;
+    border-radius: 0.6em;
+    border: 2px solid rgb(0, 0, 0);
+    color: black;
 }
 
 .submit-book-btn:hover {

@@ -14,10 +14,13 @@ p {
   display: flex;
   flex-direction: column;
   padding: 50px;
-  border: 2px solid black;
   background-color: bisque;
   max-width: 500px;
+  border: 30px solid black;
+  border-image: url("/images/bg.jpg");
+  border-image-slice: 400;
 }
+
 /* hidden elements */
 
 .app-wrapper {
@@ -31,6 +34,7 @@ h1 {
   font-family: ballet;
   font-size: 2em;
   margin: 40px auto 0 auto;
+  color: white;
 }
 
 /* start - description of the survey*/
