@@ -62,7 +62,7 @@ export const Form = ({showModal, setShowModal}) => {
                          }
                     }}
                     >
-                    {page === FormTitles.length -2 ? "Submit" : "Next"}
+                    {page === FormTitles.length -1 ? "Submit" : "Next"}
                     </button>
                 </div>
             </div>
