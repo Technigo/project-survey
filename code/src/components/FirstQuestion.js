@@ -17,7 +17,7 @@ export const FirstQuestion=({nameInput,onNameInputChange,emailInput,onEmailInput
                     value={nameInput}
                     onChange={onNameInputChange}
                     required />
-                <button className="btn" type="submit"><span>Next!</span></button>
+                <button  className="btn" type="submit"><span>Next!</span></button>
             </form></>
 
     )

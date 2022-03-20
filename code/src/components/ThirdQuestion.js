@@ -12,7 +12,7 @@ import React from 'react'
                             id="cinema"
                             value="movies"
                             name="favourite"
-                            required
+                           
                             onChange={onintererestInputChange}
                             checked={interestInput === "movies"} />
                     &nbsp;Movies and Cinema
@@ -22,6 +22,7 @@ import React from 'react'
                             id="music"
                             value="music events"
                             name="favourite"
+                           
                             onChange={onintererestInputChange}
                             checked={interestInput === "music events"} />
                     &nbsp;Music
@@ -31,6 +32,7 @@ import React from 'react'
                             id="restauranst"
                             value="restaurants and bars"
                             name="favourite"
+                           
                             onChange={onintererestInputChange}
                             checked={interestInput === "restaurants and bars"} />
                     &nbsp;Restauranst and Bars

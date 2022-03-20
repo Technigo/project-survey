@@ -6,12 +6,11 @@ export const SecondQuestion=({locationInput, onLocationInputChange, onStepChange
     return(
       <form onSubmit={onStepChange}>
         <fieldset>
-            <legend>
-                <h2>Pick your city!</h2>
-            </legend>
+        <label htmlFor="city">Choose City:</label>
            
             
             <select className="Location"
+                    id="city"
                     value={locationInput}
                     onChange={onLocationInputChange}
                     required>
@@ -34,7 +33,7 @@ export const SecondQuestion=({locationInput, onLocationInputChange, onStepChange
                 </option>
             </select>
         </fieldset>
-        <button className="btn" type="submit"><span>Next!</span></button>
+        <button  className="btn" type="submit"><span>Next!</span></button>
     </form>
 )
 }
