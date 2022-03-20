@@ -1,9 +1,10 @@
 import React from 'react'
 
 const Dropdown = (props) => {
+    const { dropdown, selectChange, onStepChange } = props
 
     return (
-        <div className="container dropdown-container">
+        <div onSubmit={onStepChange} className="container dropdown-container">
             <h2>What welcome gift would you like?</h2>
             <form>
                 <select
@@ -11,16 +12,17 @@ const Dropdown = (props) => {
                     name="where"
                     required
                     placeholder="this"
+                    onChange={selectChange}
                 >
                     <option selected disabled>Select one</option>
-                    <option value="lottery ticket">Lottery Tickets</option>
-                    <option value="book">Book</option>
-                    <option value="charity">Donate 10€ to charity</option>
+                    <option value={dropdown}>Lottery Tickets</option>
+                    <option value={dropdown}>Book</option>
+                    <option value={dropdown}>Donate 10€ to charity</option>
                 </select>
             </form>
 
             <div className="button-container">
-            <button  onClick="">Next</button>
+            <button  type="submit">Next</button>
             </div>
 
         </div>

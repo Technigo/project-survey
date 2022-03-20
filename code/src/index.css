@@ -20,6 +20,8 @@ code {
 
 .container {
   width: 375px;
+  height: 660px;
+  border: 1px solid red;
   /* padding-left: 15px; */
 }
 
@@ -27,7 +29,7 @@ code {
   display: flex;
   flex-direction: column;
   /* border: 2px solid red; */
-  margin: 20px 0;
+  margin: 10px 0;
   padding-left: 12px;
 }
 
@@ -46,7 +48,7 @@ header h2 {
   font-family: 'Spartan', sans-serif;
   font-size: 25px;
   font-weight: 400;
-  padding: 10px 5px;
+  padding: 5px 5px;
   margin: 0;
   
 }
@@ -64,6 +66,7 @@ header p {
 .button-container {
   display: flex;
   justify-content: center;
+  width: 375px;
 }
 
 button p {
@@ -109,16 +112,11 @@ label {
   margin-bottom: 20px;
 }
 
-button {
-  margin-top: 20px;
-}
 
 .form-container {
   display: flex;
   flex-direction: column;
   padding-left: 12px;
-  
-
 }
 
 .input-container {
@@ -150,14 +148,29 @@ button {
 }
 
 .order-container {
+  background-image: url('/images/grace-two.jpg');
+  background-size: 375px;
+  background-blend-mode:overlay;
+  background-repeat: no-repeat ;
+  position: relative;
   background-color: rgb(255, 235, 180);
-  height: 700px;
+  /* height: 700px; */
+  width: 375px;
   padding: 5px 0 0 12px;
   padding-right: 12px;
   margin-top: 10px;
   font-size: 15px;
   line-height: 60px;
-  
+}
+
+.order {
+  position: relative;
+  color: blue;
+}
+
+.image-cover {
+  width: 375px;
+  position: absolute;
 }
 
 .dropdown {
@@ -174,12 +187,12 @@ button {
   font-family: 'Bodoni Moda', serif;
   font-size: 25px;
   width: 300px;
-  margin-left: 20px;
   background-color: black;
-  color: #fff;
+  color: yellow;
   cursor: pointer;
   border-radius: 20px;
   box-shadow: 5px 5px blue;
+  margin-top: 150px;
   
 }
  /* Custom radio button */

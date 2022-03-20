@@ -3,11 +3,12 @@ import React, { useState } from 'react'
 
 
 const Forms = (props) => {
+    const { radiobutton, radioChange, onStepChange } = props
 
     const [order, setOrder] = useState('')
 
     return (
-        <div className="container radiobutton-container">
+        <div onSubmit={onStepChange} className="container radiobutton-container">
             <h2>Would you like to receive our digital newsletter once a month?</h2>
             <form className="radio-buttons">
                 <label className="label-radio">
@@ -16,7 +17,9 @@ const Forms = (props) => {
                         className="radio-button"
                         type="radio"
                         name="radiobtn"
+                        value={radiobutton}
                         required
+                        onChange={radioChange}
                     />
                     <span className="checkmark"></span>
                 </label>
@@ -27,7 +30,9 @@ const Forms = (props) => {
                         className="radio-button"
                         type="radio"
                         name="radiobtn"
+                        value={radiobutton}
                         required
+                        onChange={radioChange}
                     />
                     <span className="checkmark"></span>
                 </label>
@@ -45,7 +50,7 @@ const Forms = (props) => {
             <p>{order}</p>
 
             <div className="button-container">
-                <button onClick={() => { setOrder('Thank you for your purchase') }}>Place order</button>
+                <button type="submit" onClick={() => { setOrder('Thank you for your purchase') }}>Place order</button>
             </div>
         </div>
     )

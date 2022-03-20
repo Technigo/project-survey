@@ -1,39 +1,49 @@
 import React from 'react'
 
-const Name = () => {
+const Name = (props) => {
+    const { nameInputChange, onStepChange } = props
   return(
       <div className="container name-container">
 
-          <form className="form-container">
+          <form onSubmit={onStepChange} className="form-container">
             <label className="label-name">First Name:
               <input
+              id="Name"
               className="input-container"
               type="text"
               required
-              placeholder="First name"/>
+              placeholder="First name"
+              
+              onChange={nameInputChange}/>
               </label>
               
               <label className="label-name">Surname:
               <input
+              id="Name"
               className="input-container"
               type="text"
               required
-              placeholder="Last name"/>
+              placeholder="Last name"
+              
+              onChange={nameInputChange}/>
               </label>
 
               <label className="label-name">Email:
               <input
+              id="Name"
               className="input-container"
               type="email"
               required
-              placeholder="Email"/>
+              placeholder="Email"
+              
+              onChange={nameInputChange}/>
               </label>
 
 
           </form>
 
           <div className="button-container">
-            <button type="submit" onClick="">Next</button>
+            <button type="submit">Next</button>
             </div>
       </div>
   )

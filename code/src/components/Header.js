@@ -1,8 +1,10 @@
 import React from "react";
 
-const Header = () => {
+const Header = (props) => {
+    const { onStepChange } = props
+
     return (
-    <div className="header-container">
+    <div onSubmit={onStepChange} className="header-container">
         <header>
             <h1> Hello!</h1>
             <h2>Welcome to GRACE Magazine.</h2> 
@@ -11,8 +13,8 @@ const Header = () => {
             <p className="header-small-text">Sign up for an order of 3, 6 or 12 issues and get a gift just by doing so.</p>
         </header>
         
-        <div className="button-container">
-        <button className="start-button">
+        <div onSubmit={onStepChange} className="button-container">
+        <button onSubmit={onStepChange} type="submit" className="start-button">
             <p>OK!</p> 
         <p>I can still read let's go!</p>
         </button>
