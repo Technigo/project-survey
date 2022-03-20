@@ -27,14 +27,18 @@ return (
     {username} felt fear freeze their blood but reached for their {weapon}.</p>
 
 <p className="ghost-story-end-text">
-    To be continued... 💀🕯️</p>
+    To be continued... <span role="img" aria-label="skull">💀</span>
+    <span role="img" aria-label="candle">🕯️</span></p>
 
 <p className="ghost-story-email-text"> 
     ...if you do, send it to me:</p>
 <p className="ghost-story-email-text">
-    lundislon@gmail.com 👻🖊️💌</p> 
+    lundislon@gmail.com <span role="img" aria-label="ghost">👻</span>
+    <span role="img" aria-label="pen">🖊️</span>
+    <span role="img" aria-label="love letter">💌</span></p> 
+
 <p className="ghost-story-email-text"> 
-    since we are out of space now 🛸</p>
+    since we are out of space now <span role="img" aria-label="ufo">🛸</span></p>
 </article>
 
 )

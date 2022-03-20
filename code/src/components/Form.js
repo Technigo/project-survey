@@ -45,13 +45,9 @@ const handleWeaponChange = (event) => {
 }
 
 
-//./src/components/CalculationForm.js
-//Line 40:13:  Emojis should be wrapped in <span>, have role="img", and have an accessible description with aria-label or aria-labelledby  jsx-a11y/accessible-emoji
-
-
     return (
         <section>
-            <h1 className="title-text">Ghost story 👻 writer</h1>
+            <h1 className="title-text">Ghost story <span role="img" aria-label="ghost">👻</span> writer</h1>
           
             {step === 1 && 
                 <CharacterName 
