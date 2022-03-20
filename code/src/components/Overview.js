@@ -18,7 +18,7 @@ const Overview = ({
       <div className="overview-container">
         <div className="overview-text">
           <p>
-            <span>For each week </span>you never know how much from the
+            <span>For each week </span>you never know how much steps of the
             requirements you will manage to do, but you are{" "}
             <span>{goals} </span>
             and that's totally fine, the most important thing is that you keep
@@ -27,7 +27,7 @@ const Overview = ({
           <p>
             <span>Hand in time</span> can be hectic but you usually hand in{" "}
             <span>{handInTime}</span>. No matter the time, it's always inspiring
-            to see what everyone has come up with each week.
+            to see what ideas everyone has come up with each week.
           </p>
           <p>
             <span>It's hard to believe</span> that we will be graduating pretty
