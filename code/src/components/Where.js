@@ -22,9 +22,9 @@ const Where = ({ whereInput, onWhereInputChange }) => {
                         <label>
                             <input
                                 type="radio"
-                                value="at home"
+                                value="home"
                                 onChange={onWhereInputChange}
-                                checked={whereInput === "at home"}
+                                checked={whereInput === "home"}
                             />
                             At home
                         </label>

@@ -4,9 +4,9 @@ const Name = ({ nameInput, onNameInputChange, onStepChange }) => {
 
     return (
         <div className='container'>
-            <div className='text-container'>
-                <div>
-                    Type your name
+           
+                <div className='text-container'>
+                    What's your name?
                     <input
                         className='name-input'
                         id="nameInput"
@@ -15,7 +15,7 @@ const Name = ({ nameInput, onNameInputChange, onStepChange }) => {
                         onChange={onNameInputChange}
                     />
                 </div>
-            </div>
+            
         </div>
     );
 };

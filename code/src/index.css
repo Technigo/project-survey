@@ -45,6 +45,12 @@ body {
   
 }
 
+.text-container {
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+}
+
 .name-input {
   border-radius: 30px;
   margin: 5px;
@@ -54,6 +60,7 @@ body {
   border-radius: 30px;
   padding: 20px;
 }
+
 
 .button {
   text-align: center;
@@ -88,6 +95,8 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    display: flex;
+    flex-direction: column;
   }
   
   .button {
