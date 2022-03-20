@@ -1,61 +1,60 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&family=Raleway:wght@100&family=Roboto:wght@100&display=swap');
-
-
 body {
   margin: 0;
   height: 100vh;
   -webkit-font-smoothing: antialiased;
   font-family: 'Raleway', sans-serif;
-  background-image:url(./assets/mobback2.jpg); background-position: center; 
-  background-repeat: no-repeat; 
-  background-size:cover;
-  font-size:12px;
- }
-
-.wrapper{
- 
-  width: 200px; 
-  margin: auto; 
-  margin-top:50px; 
-  border: 2px solid pink; 
-  padding:40px;
-  background-color: rgb(247, 217, 222, 0.9);}
-
-
+  font-weight: 900;
+  background-image: url(./assets/mobback2.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-size: 14px;
+  ;
+}
+.wrapper {
+  width: 200px;
+  margin: auto;
+  margin-top: 50px;
+  border: 2px solid pink;
+  padding: 40px;
+  background-color: rgb(247, 217, 222, 0.9);
+}
 input[type=text] {
   width: 100%;
   padding: 12px 20px;
-  border:2px solid rgb(241, 225, 228);
+  border: 2px solid rgb(241, 225, 228);
   font-weight: 700;
-  margin: 8px 0;
+  margin: 20px 0;
   box-sizing: border-box;
 }
 input[type=email] {
   width: 100%;
   padding: 12px 20px;
-  border:2px solid rgb(241, 225, 228);
+  border: 2px solid rgb(241, 225, 228);
   font-weight: 700;
   margin: 8px 0;
   box-sizing: border-box;
 }
-.name-input, .email-input{font-weight: 900;}
-.fieldset{font-weight: 900;}
+.name-input, .email-input {
+  font-weight: 900;
+}
+.fieldset {
+  font-weight: 900;
+}
+.location{margin-top:10px;}
 
 select {
-
   width: 100%;
   padding: 16px 20px;
   border: none;
   border-radius: 4px;
   background-color: #f1f1f1;
   font-weight: 900;
-  font-family: 'Roboto', sans-serif;;
+  font-family: 'Roboto', sans-serif;
+  ;
   color: black;
-  
 }
-
-
 .btn {
   border: none;
   display: block;
@@ -73,13 +72,10 @@ select {
   margin: 30px auto;
   box-shadow: 0 5px 15px rgba(147, 70, 199, 0.2);
 }
-
 .btn span {
-  position: relative; 
+  position: relative;
   z-index: 1;
- 
 }
-
 .btn:after {
   content: "";
   position: absolute;
@@ -93,23 +89,25 @@ select {
   -webkit-transform: translateX(-98%) translateY(-25%) rotate(45deg);
   transform: translateX(-98%) translateY(-25%) rotate(45deg);
 }
-
 .btn:hover:after {
   -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
   transform: translateX(-9%) translateY(-25%) rotate(45deg);
 }
-.purpletext{color:purple; font-weight: 900;}
-
-@media only screen and (min-width: 1100px) {
-  
-body{background-image:url(./assets/background.jpg) ; font-size: 16px;}
-.wrapper{width:400px;margin-top:150px;}
-.btn {
-  font-size: 14px;
-  padding: 10px 30px;
+.purpletext {
+  color: purple;
+  font-weight: 900;
 }
-select{ font-weight: bolder;
-  font-family:  'Roboto', sans-serif;;
-  color: black;
+@media only screen and (min-width: 1100px) {
+  body {
+    background-image: url(./assets/background.jpg);
+    font-size: 16px;
+  }
+  .wrapper {
+    width: 400px;
+    margin-top: 150px;
+  }
+  .btn {
+    font-size: 12px;
+    padding: 10px 30px;
   }
 }

@@ -1,19 +1,8 @@
-# Technigo React Starter App
+# Project Survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+ Projectbrief: Use React state and controlled forms to build a Typeform with a summery of the users answers in the end.
+ I started by planning the 4 different questions and breaking them up into components. from there i set upp eventhandlers and statehooks in the formcomponent, passing the to following components.  I had some problems with passning the eventhandlers which tought me the value of consequent naming.
+ Deployed version:https://reverent-austin-4c5556.netlify.app/
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
