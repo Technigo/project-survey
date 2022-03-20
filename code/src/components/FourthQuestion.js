@@ -11,7 +11,7 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
   return (
     <section className="form-container">
       <h2>When do you hand in your weekly project?</h2>
-      <div className="img-wrapper--images">
+      <div className="img-wrapper--radio">
         {options.map((option) => {
           return (
             <label
@@ -19,16 +19,14 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
               htmlFor={option}
               key={option}
             >
-              <div className="option">
-                <input
-                  type="radio"
-                  name="handInTime"
-                  value={option}
-                  checked={handInTime === option}
-                  id={option}
-                  onChange={onHandInTimeChange}
-                />
-              </div>
+              <input
+                type="radio"
+                name="handInTime"
+                value={option}
+                checked={handInTime === option}
+                id={option}
+                onChange={onHandInTimeChange}
+              />
               {option}
             </label>
           );
@@ -39,33 +37,5 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
     </section>
   );
 };
-
-// const handInTimes = [
-//     "Some time during you weekend",
-//     "Sunday night sometime between 23:30-00:00",
-//     "Early in the week (Friday included)",
-//     "After deadline",
-//   ];
-
-//   export const App = () => {
-//     const [handInTime, setHandInTime] = useState(false);
-//     return (
-//       <form>
-//         When do you hand in your weekly project?
-//         {handInTimes.map((time) => (
-//           <label key={time}>
-//             <input
-//               type="radio"
-//               value={time}
-//               onChange={(event) => setHandInTime(event.target.value)}
-//               checked={handInTime === time}
-//             />
-//             {time}
-//           </label>
-//         ))}
-//       </form>
-
-//     );
-//   };
 
 export default FourthQuestion;

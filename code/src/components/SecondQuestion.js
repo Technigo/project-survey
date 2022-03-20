@@ -3,7 +3,7 @@ import React from "react";
 const levelGoal = [
   "select one by clicking here",
   "try to do some extra things if you can",
-  "happy if you can manage to do all of the required ones",
+  "are happy if you can manage to do all of the required ones",
   "always do all of them",
   "do whatever is necessary then we will see",
 ];

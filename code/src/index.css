@@ -111,6 +111,12 @@ span {
   transition: all 0.3s ease-in;
 }
 
+.img-wrapper--radio {
+  display: flex;
+  flex-wrap: wrap;
+  transition: all 0.3s ease-in;
+}
+
 .relate-img {
   padding: 16px 0;
 }
@@ -122,12 +128,11 @@ input[type="radio"] {
 
 input[type="radio"]:checked + img {
   outline: 5px solid var(--clr-darkblue);
-  opacity: 1;
 }
 
-input:checked {
+/*This on needs some work*/
+label[type="radio"]:checked + .hand-in {
   background: var(--clr-lightblue);
-  opacity: 1;
 }
 
 .img-option {
@@ -161,8 +166,33 @@ input:checked {
   user-select: none; */
 }
 
+select {
+  appearance: none;
+  /* -webkit-appearance: none; */
+  background: var(--clr-grey);
+  box-shadow: 0px 5px 5px var(--clr-shadow);
+  border-radius: 20px;
+  width: 21em;
+  height: 3em;
+  margin: 2em;
+  text-align: center;
+  border: none;
+  outline: none;
+  color: var(--clr-darkblue);
+}
+
+.select-h2 {
+  width: 12em;
+}
+
+.img-overview {
+  height: 250px;
+  border-radius: 10px;
+}
+
 button {
   padding: 1.3em 3em;
+  margin-top: 2em;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
@@ -189,37 +219,14 @@ button:active {
   transform: translateY(-1px);
 }
 
-select {
-  appearance: none;
-  /* -webkit-appearance: none; */
-  background: var(--clr-grey);
-  box-shadow: 0px 5px 5px var(--clr-shadow);
-  border-radius: 20px;
-  width: 21em;
-  height: 3em;
-  margin: 2em;
-  text-align: center;
-  border: none;
-  outline: none;
-  color: var(--clr-darkblue);
-}
-
-.select-h2 {
-  width: 12em;
-}
-
-.img-overview {
-  height: 250px;
-  border-radius: 10px;
-}
-
+/* -----------------------------------media quires----------------------------------- */
 @media screen and (min-width: 768px) {
   h1 {
-    font-size: 2.5em;
+    font-size: 2.2em;
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.7rem;
   }
 
   h3 {
@@ -228,16 +235,16 @@ select {
     text-align: center;
   }
 
-  .description {
-    font-size: 1.5em;
-  }
-
-  button {
-    font-size: 16px;
-  }
-
   select {
-    font-size: 1.3em;
+    font-size: 1em;
+  }
+
+  .form-container {
+    width: auto;
+  }
+
+  .description {
+    font-size: 1.2em;
   }
 
   .name-input {
@@ -245,19 +252,17 @@ select {
     font-size: 16px;
   }
 
-  .form-container {
-    width: auto;
-  }
-
   .img-wrapper--images {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2em;
     justify-items: center;
+    gap: 2em;
   }
 
-  .img-overview {
-    margin-top: 2em;
+  .img-wrapper--radio {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-items: center;
   }
 
   .overview-container {
@@ -266,15 +271,24 @@ select {
     gap: 4em;
     margin: -1em 2em;
   }
+
+  .img-overview {
+    margin-top: 2em;
+  }
+
+  button {
+    font-size: 16px;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .form-container {
-    width: 700px;
-  }
-
   h3 {
     margin: 0 8em 3em;
+  }
+
+  .form-container {
+    width: 600px;
+    padding: 4em;
   }
 
   .img-option {
@@ -282,13 +296,8 @@ select {
     margin: 0;
   }
 
-  button {
-    font-size: 18px;
-    margin-top: 2em;
-  }
-
   .hand-in {
-    width: 250px;
+    width: 200px;
   }
 
   .img-overview {

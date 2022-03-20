@@ -18,9 +18,8 @@ const Overview = ({
       <div className="overview-container">
         <div className="overview-text">
           <p>
-            <span>For each week </span>you never know how much steps of the
-            requirements you will manage to do, but you are{" "}
-            <span>{goals} </span>
+            <span>For each week </span>you never know how many steps of the
+            requirements you will manage to do, but you <span>{goals} </span>
             and that's totally fine, the most important thing is that you keep
             doing this because you think it's fun!
           </p>

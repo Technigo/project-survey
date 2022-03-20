@@ -1,7 +1,7 @@
 import React from "react";
 import RelateOne from "../images/hello-world.png";
 import RelateTwo from "../images/margin-maxout.png";
-import RelateThree from "../images/stackoverflow-fail.png";
+import RelateThree from "../images/if-else-forever.png";
 import RelateFour from "../images/cheaper-option.png";
 
 export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
@@ -18,7 +18,6 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
             <input
               id="relate"
               type="radio"
-              name="relate"
               value={RelateOne}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateOne}
@@ -34,7 +33,6 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
             <input
               id="maxout"
               type="radio"
-              name="maxout"
               value={RelateTwo}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateTwo}
@@ -46,11 +44,10 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
             />
           </label>
 
-          <label htmlFor="fail">
+          <label htmlFor="forever">
             <input
-              id="fail"
+              id="forever"
               type="radio"
-              name="fail"
               value={RelateThree}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateThree}
@@ -58,7 +55,7 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
             <img
               className="img-option"
               src={RelateThree}
-              alt="Stackoverflow is down and under construction"
+              alt="if else forever"
             />
           </label>
 
@@ -66,7 +63,6 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
             <input
               id="cheaper"
               type="radio"
-              name="cheaper"
               value={RelateFour}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateFour}
