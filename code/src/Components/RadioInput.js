@@ -8,9 +8,13 @@ export const RadioInput = ({ occupationGroup, onOccupationGroupInputChange }) =>
     <form className="occupation-form" onSubmit={event => event.preventDefault()}>
       <h3>Which of the following describes you best?</h3>
       {occupationGroups.map(group => (
-        <label htmlFor="occuationGroup" key={group}>
+        <label 
+          htmlFor="occuationGroup" 
+          aria-label="occupation"
+          key={group}>
           <input
             type="radio"
+            aria-pressed="false"
             value={group}
             onChange={onOccupationGroupInputChange}
             checked={occupationGroup === group}
