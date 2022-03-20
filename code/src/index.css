@@ -260,6 +260,7 @@ select:hover {
   height: 100%;
   background-color: var(--sec-accent-color);
   border-radius: 10px;
+  transition: all 1s ease-in-out;
 }
 
 /* Star animation */
