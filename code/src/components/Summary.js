@@ -1,16 +1,27 @@
 import React from "react";
 
-const Summary = ({ nameInput, flavourInput, sizeInput }) => {
-    return (
 
-        <section>
-            <h2>Thank you for using our macaron service! Here is a summary of the information you have provided us:</h2>   
-            <p>Your name: {nameInput}</p>
-            <p>Based on your preferences, we will create a{flavourInput} flavoured box consisting of {sizeInput} macarons. ENJOY!!!</p>
+const Summary = ({ nameInput, flavourInput, sizeInput, onStepChange}) => {
+return (
+<div className="summary" tabindex='0'>
 
-            </section>
-        
-    );
+<p>Thanks for using our service! Below is a summary of the information you hava prrovided. You wil receive your macaron box within 24 hours.</p>
+<p>Name: {nameInput}</p>
+<p>Flavours: of macarons</p>
+<p>Size: {sizeInput} of macarons</p>
+
+{flavourInput} 
+
+<h2>ENJOY!!!!</h2>
+
+<div className="button-wrapper">
+<button
+onClick={onStepChange}>OK, next!!!</button>
+</div>
+
+</div>
+);
 };
+
 
 export default Summary;

@@ -115,19 +115,6 @@ button{
 
 .
 
-  .question-text {
-    font-family: 'Alata', sans-serif;
-    font-size: 22pt;
-    margin: 4rem;
-    margin-top:6rem;
-    text-align: center;
-    background-color: #dd7d92;
-    opacity: 0.9;
-    color: #e2dddc;
-    padding: 2rem;
-    border-radius: 30px;
-    box-shadow: 0 0 7px #fff, 0 0 21px #fff, 0 0 102px rgb(242, 245, 56), 0 0 151px #0fa;
-  }
 
   .input-box{
     display: flex;
@@ -167,4 +154,8 @@ margin-top: 2rem;
 
   .radio-form:hover input ~ .checkmark {
     background-color: #ccc;
+  }
+
+  .summary{
+    background-color: #ca5468;
   }
