@@ -11,13 +11,15 @@ const budgetArray = ['0-5000 kr', '5000-10.000 kr', '10.000-20.000 kr', 'More']
     }) => {
     return (
         <main className='main-container'>
-             <button className='back-btn' onClick={previousQuestion}>Go back</button>
           <form className='form-container'> 
-              <p>Question {step} of 4</p>
+              <p className='question-number'>Question {step} of 4</p>
               <h3 className='question-title'>How much do you spend on travels per year? </h3>
+              <div className='input-container'>
               {budgetArray.map((budget) => (
-                  <label htmlFor={budget} key={budget}>
+                  
+                  <label className='radio-btn' htmlFor={budget} key={budget}>
                     <input
+                    className='radio'
                       id={budget}
                        type='radio'
                        value={budget}
@@ -27,14 +29,23 @@ const budgetArray = ['0-5000 kr', '5000-10.000 kr', '10.000-20.000 kr', 'More']
                       {budget}
 
                   </label>
+                  
               ))}
-              <button 
+              </div>
+          </form>
+          <div className='btn-container'>
+          <button 
+             className='back-btn' 
+             onClick={previousQuestion}>
+                 Go back
+             </button>
+          <button 
               className='next-btn' 
               disabled ={budgetInput === ''}
               onClick={nextQuestion}>
                     Next
                 </button>
-          </form>
+                </div>
         </main>
     )
 }
