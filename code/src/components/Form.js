@@ -1,6 +1,5 @@
 import React, {useState} from "react";
 
-import Heading from "./Heading";
 import QuestionOne from "./QuestionOne";
 import QuestionTwo from "./QuestionTwo";
 import QuestionThree from "./QuestionThree";
@@ -8,8 +7,9 @@ import QuestionFour from "./QuestionFour";
 import QuestionFive from "./QuestionFive";
 import OverView from "./Overview";
 import Confirmation from "./Confirmation";
-import NextBtn from "./NextBtn";
+import Buttons from "./Buttons";
 import ProgressBar from "./ProgressBar";
+import HeroSection from "./HeroSection";
 
 
 // This array is for QuestionTwo
@@ -19,7 +19,7 @@ const satisfactionRating = ['Terrible 😞', 'Bad 🙁', 'Okay 🙂', 'Happy �
 const Form = () => {
     
     const [questionNum, setQuestionNum] = useState(0);
-    const [date, setDate] = useState(''); 
+    const [date, setDate] = useState('2022-01-01'); 
     const [rating, setRating] = useState(3);
     const [satisfaction, setSatisfaction] = useState(satisfactionRating[rating]);
     const [frequency, setFrequency] = useState('');
@@ -44,7 +44,6 @@ const Form = () => {
 
 
     const nextQuestion = () => {
-        document.querySelector('#form').style.display = 'flex';
         document.querySelector('.progress-bar').style.display ='flex';
         setQuestionNum(questionNum + 1);
     };
@@ -70,10 +69,10 @@ const Form = () => {
         {!submitted ? (
  
         <>
-        <form id='form' onSubmit={submit}>
-        <div className="form-container">
+        <form id='form' className='form flex' onSubmit={submit}>
+        <div className="form-container flex">
 
-        {questionNum === 0 &&  <Heading nextQuestion = {nextQuestion}/>}
+        {questionNum === 0 &&  <HeroSection nextQuestion = {nextQuestion}/>}
 
         {questionNum === 1 && 
            <QuestionOne 
@@ -135,10 +134,9 @@ const Form = () => {
             />
         }
 
-
         </div>
               
-        <NextBtn 
+        <Buttons 
             nextQuestion={nextQuestion} 
             prevQuestion={prevQuestion} 
             questionNum = {questionNum} 
@@ -147,8 +145,7 @@ const Form = () => {
         
 
         <ProgressBar questionNum = {questionNum} />
-
-    
+   
         </>
      ) 
         

@@ -2,7 +2,7 @@ import React from "react";
 
 const QuestionFive = ( {questionNum, feedback, getFeedback} ) => {
    
-    return <div className='question'>
+    return <div className='question flex'>
     <label className='feedback-textarea' htmlFor="feedback">{questionNum}. Any suggestions for us? </label> 
     <textarea type='text'
     value={feedback}

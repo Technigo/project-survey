@@ -3,10 +3,9 @@ import React from "react";
 
 const QuestionTwo = ({ questionNum, rating, getRating, satisfactionRating, satisfaction, setSatisfaction }) => {
 
- 
-    setSatisfaction(satisfactionRating[rating])
-
-   return <div className="question">
+    setSatisfaction(satisfactionRating[rating]);
+    
+   return <div className="question flex">
         <label htmlFor='range'>{questionNum}. How happy are you with the cleanliness?</label>
         <input 
         id='range'

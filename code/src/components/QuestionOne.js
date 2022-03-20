@@ -3,7 +3,7 @@ import React, { useState } from "react";
 const  QuestionOne = ({ questionNum, date, getDate }) => {
    
         
-    return <div className='question'>
+    return <div className='question flex'>
         <label htmlFor='date' >{questionNum}. When did you use our service?</label>
         <input 
         type='date' 

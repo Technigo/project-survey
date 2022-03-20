@@ -3,10 +3,10 @@ import { AiOutlineLeft } from "react-icons/ai";
 
 
 
-const NextBtn = ({ nextQuestion, prevQuestion, questionNum}) => {
+const Buttons = ({ nextQuestion, prevQuestion, questionNum}) => {
     return <>
     {questionNum === 1 && (
-    <button className='btn next-btn' type="button" onClick={nextQuestion}>Next</button>
+    <button  className='btn next-btn'  type="button" onClick={nextQuestion}>Next</button>
 
     )} 
     {questionNum > 1 && questionNum < 6 && (
@@ -24,4 +24,4 @@ const NextBtn = ({ nextQuestion, prevQuestion, questionNum}) => {
     </>
 }
 
-export default NextBtn;
+export default Buttons;
