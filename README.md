@@ -8,5 +8,5 @@ I started the project by reading up on the project, planing how I wanted it to l
 
 ## View it live
 
-https://laughing-chandrasekhar-7b6f95.netlify.app/
+https://travel-survey-w10.netlify.app/
 
