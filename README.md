@@ -1,13 +1,16 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Survey with at least 3 questions and one summary built with React using states.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Did codealong with the Technigo lessons.
+First trying to concentrate on getting the components to work.
+Then added own content.
+Last doing the styling in CSS.
+If I had more time I would have tried to add a progress bar.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://infallible-cray-30449b.netlify.app/
