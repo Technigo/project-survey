@@ -14,7 +14,7 @@ Regarding accessability I did this:
 - and https://wave.webaim.org/ which spotted a label I named wrong so I could correct it
 
 ## The problem
-Since it was new for this week I had issues with connecting the props from the components and the state in Form.js and still do and I am grateful my team helped med here. I also struggled a bit with making the form change to a new page for the summary but solved it by moving the Reveal-button to a component file instead. 
+Since it was new for this week I had issues with connecting the props from the components and the state in Form.js and still find it a bit challenging and I am grateful my team helped med here. I also struggled a bit with making the form change to a new page for the summary but solved it by moving the Reveal-button to a component file instead. 
 I also wasted some time on moving the background image around with background-position-x and-y to avoid the white text on the white moon (I learned that rem worked when % did not for this occation), and to my surprise the deployed version looked a lot different than when I used the localhost and inspect tools in crome for tablet and especially on desktop mode, and I did not have the time to fix the issue for desktop mode unfortunately.
 If I had more time I would fix that issue. 
 I would also really like to add conditonal rendering to make the questions disappear when clicked to add on the spooky feeling, which was why I kept the questions on one page. 
