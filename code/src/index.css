@@ -5,10 +5,88 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: url(./images/dawid-zawila--G3rw6Y02D0-unsplash.jpg);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
+ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
+h1, h2 {
+color: black;
+padding: 20px;
+text-align: center;
+font-weight: 100;
+font-size: 50px;
+margin-left: 10px;
+
+}
+
+label {
+margin-left: 15px;
+font-size: 20px;
+
+}
+
+input {
+  background-color: antiquewhite;
+  color:black;
+  padding: 5px;
+  margin-left: 10px;
+  font-size:15px;
+  margin-top:10px;
+
+}
+
+.submit-button {
+background-color: antiquewhite;
+color:black;
+padding: 5px;
+margin-left: 5px;
+font-size: 15px;
+
+}
+
+.dropdown-menu {
+  background-color: antiquewhite;
+  color:black;
+  padding: 5px;
+  margin-left: 10px;
+  font-size:15px;
+justify-content: center;
+}
+
+radio-button {
+  color: black;
+  padding: 5px;
+  margin-top: 10px; 
+  font-size:15px;
+  margin-left: 20px;
+}
+
+.radio-submit-button {
+background-color: antiquewhite;
+color:black;
+padding: 5px;
+margin-left: 50px;
+font-size: 15px;
+}
+
+.summary-box {
+  background-color: antiquewhite;
+  color:black;
+  padding: 5px;
+  margin-left: 10px;
+  font-size:15px;
+}
+
+
+@media (max-width: 767px) {
+  radio-button {
+    display: inline-block;
+
+  }
+}
+  

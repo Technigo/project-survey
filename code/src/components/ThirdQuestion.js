@@ -4,16 +4,18 @@ const ThirdQuestion = ({ buyInput, onBuyInputChange, onStepChange }) => {
 
 return (
     <section>
+    <form>
+      
         <div className="radio-button">
         <label>
-        <p> Where do you buy your bike?</p>
+        <h2> Where to buy your bike?</h2>
         <input
-        value={"online"}
+        value={"online only"}
         type="radio"
         onChange={onBuyInputChange} 
-        checked={buyInput === "Only online"}
+        checked={buyInput === "online only"}
         />
-        online 
+        online only        
         </label>
 
         <label>
@@ -21,7 +23,7 @@ return (
         value={"second hand"}
         type="radio"
         onChange={onBuyInputChange} 
-        checked={buyInput === "Always second hand"}
+        checked={buyInput === "second hand"}
         />
         second hand
         </label>
@@ -31,21 +33,21 @@ return (
         value={"bikeshop"}
         type="radio"
         onChange={onBuyInputChange} 
-        checked={buyInput === "In the local bike shop"}
+        checked={buyInput === ""}
         />
-        local bike shop
+        bikeshop
         </label>
 
+        <button 
+        className='radio-submit-button'
+        onClick={onStepChange}
+        >Almost there!
 
+        </button>
         </div>
-      
-
-
-<button onClick={onStepChange}Summary></button>
+        </form>  
 </section>
-
-
-);
+)
 }
 
 export default ThirdQuestion;

@@ -4,32 +4,40 @@ const SecondQuestion = ({ typeInput, onTypeInputChange, onStepChange }) => {
 
     return (
         <section>
+            
         <form>
-        <label>
-        <p> What type of bike are you after?</p>
-        </label>
 
-       <input
-       value={typeInput}
-       onChange={onTypeInputChange}
-       className="biketype"
-       />
+         <div className='dropdown'>   
+         <label>
+         <div className='dropdown-question'>    
+
+        <h2> What type of bike are you looking for?</h2>
+        </div>
+         <select value={typeInput} onChange={onTypeInputChange} className= "dropdown-menu">
+           <option value="" disabled>Select a bike!</option>  
+           <option value="Road racer"> Road racer</option> 
+           <option value="Gravel bike"> Gravel bike </option> 
+           <option value="MTB"> Mountain bike </option> 
         
-        <option value="Road racer"> I like the the speed and freedom on the roads </option> 
-        <option value="Gravel bike"> I like to be in the woods, but I also like the speed, and to get to places where a car cant reach </option> 
-        <option value="MTB"> I love the flow trails, cliffs and to play around in the woods. Speed is not needed.  </option> 
+    </select>
+         
+        </label> 
+
+        <button 
+        className='submit-button'
+        onClick={onStepChange}
+        disabled={typeInput === ""}
+        >NEXT!
+        </button>
         
-    
-        </form>      
-    </section>
-    )
+        
+        </div>
+        </form>
+        </section>      
+     )
     }
 
-    //  <button 
-    // className='submit-button'
-    // onClick={onStepChange}
-    // >Next question
-    // </button>
+   
 
 
 export default SecondQuestion
