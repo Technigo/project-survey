@@ -9,6 +9,7 @@ import Summary from "./Summary";
 import Button from "./Button";
 import StartButton from "./StartButton";
 import TryAgainButton from "./TryAgainButton";
+import SubmitButton from "./SubmitButton";
 
 
 const Form = () => {
@@ -90,10 +91,15 @@ const Form = () => {
                     />
                 )}
                 {
-                    (page >= 2 && page <= 5)
+                    (page >= 2 && page <= 4)
                         ? <Button onStepChange={handleStepChange} />
                         : null
                 }
+                {page === 5 && (
+                    <SubmitButton
+                        onStepChange={handleStepChange}
+                    />
+                )}
                 {page === 6 && (
                     <TryAgainButton
                         onRestartChange={handleRestartChange}
