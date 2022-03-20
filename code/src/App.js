@@ -33,7 +33,6 @@ export const App = () => {
 	};
 
 	const [state, setState] = useState(initialState);
-	// const [error, setError] = useState(false);
 	const [counter, setCounter] = useState(0);
 	const [pronoun, setPronoun] = useState();
 
@@ -44,28 +43,9 @@ export const App = () => {
 		setState({ ...state, [inputName]: value });
 	};
 
-	// let errorCounter = 1;
 	const handleNextStepClick = (e) => {
 		e.preventDefault();
-
-		// console.log(Number(JSON.stringify(counter)));
-		// console.log(errorCounter);
-
-		// if (counter !== 0 && counter !== 8) {
-		// 	for (let key in state) {
-		// 		if (
-		// 			state[key] === "" &&
-		// 			Number(JSON.stringify(counter)) === errorCounter
-		// 		) {
-		// 			setError(`Please provide the ${key}!`);
-		// 			return;
-		// 		}
-		// 	}
-		// } else {
-		// 	setError("");
 		setCounter(counter + 1);
-		// 	errorCounter = errorCounter + 1;
-		// }
 	};
 
 	const handlePrevStepClick = () => {
@@ -235,7 +215,6 @@ export const App = () => {
 						<StartOverButton resetBtn={startOver} />
 					</section>
 				)}
-				{/* {error && <p className="error">{error}</p>} */}
 			</main>
 
 			{/* Footer */}

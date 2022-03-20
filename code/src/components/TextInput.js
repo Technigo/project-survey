@@ -17,7 +17,6 @@ export const TextInput = ({
 					placeholder={placeholder}
 					value={state}
 					onChange={handleInput}
-					required
 				/>
 			</label>
 		</>
