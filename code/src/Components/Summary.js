@@ -6,14 +6,16 @@ const Summary = ({name, amountOfBands, bands, musicType, restart}) => {
         <article>
             <div className="text-group">
 
-                <span>Hello {name}, nice to have you here!</span>
-                <span>You listen to {amountOfBands} number of bands per week, that's cool.</span>
-                <span>You have listed {bands} as your favourite band, nice choice.</span>
-                <span>You generally listen to this type of music: {musicType.join(', ')}</span>
+                <p>Hello <span className="answer">{name}</span>, nice to have you here!</p>
+                <p>You listen to <span className="answer">{amountOfBands}</span> number of bands per week, that's cool.</p>
+                <p>You have listed <span className="answer">{bands}</span> as your favourite band, nice choice.</p>
+                <p>You generally listen to this type of music: <span className="answer">{musicType.join(', ')}</span></p>
             
+            <div className="btn-group">
                 <button className="restart"
                 onClick={restart}
                 >Go back to start</button>
+            </div>
 
             </div>
         </article>

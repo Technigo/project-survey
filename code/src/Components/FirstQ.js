@@ -8,8 +8,7 @@ const FirstQuestion = ({name, setName,  nextSection, handleSubmit}) => {
                     <h1>Welcome to the music survey</h1>
                     <label htmlFor="name" 
                     key="name" 
-                    onSubmit={handleSubmit}
-                    className="name-label">
+                    onSubmit={handleSubmit}>
                     Enter your name
                         <input 
                         className="name-input"

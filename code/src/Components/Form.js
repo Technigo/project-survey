@@ -2,7 +2,8 @@ import React, {useState} from 'react'
 import Summary from './Summary'
 import FirstQuestion from './FirstQ'
 import SecondQuestion from './SecondQ'
-import ThirdAndFourthQuestion from './ThirdFourthQ'
+import ThirdQuestion from './ThirdQ'
+import FourthQuestion from './FourthQ'
 
 const Form = () => {
     const [name, setName] = useState('')
@@ -58,9 +59,16 @@ return (
             />)}
             
             {section === 2 && (
-            <ThirdAndFourthQuestion 
+            <ThirdQuestion 
             bandOptions={bandOptions} 
             setBands={setBands}
+            nextSection={nextSection}
+            backSection={backSection}
+            />
+            )}
+
+            {section === 3 && (
+            <FourthQuestion 
             musicType={musicType}
             onCheckboxChange={onCheckboxChange}
             nextSection={nextSection}
@@ -68,7 +76,7 @@ return (
             />
             )}
 
-            {section === 3 && (
+            {section === 4 && (
             <Summary name = {name} 
             amountOfBands = {amountOfBands}
             bands = {bands}

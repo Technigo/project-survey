@@ -1,28 +1,16 @@
 import React from 'react'
 
-const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection, musicType, onCheckboxChange}) => {
-    return (
+const FourthQuestion = ({musicType, onCheckboxChange, nextSection, backSection}) => {
 
-        <article>
-                <div className="text-group">
-                    <label htmlFor="bands" key="bands">Choose your favourite out of these five bands
-                    </label>
-                        <select className="dropdown"
-                        name="bands"
-                        onChange={event =>setBands(event.target.value)}>
-                        {bandOptions.map(band => (
-                            <option
-                                value={band}>
-                                {band}
-                            </option>
-                        
-                            ))}
-                        </select>
-                </div>
+return (
 
-                <div>
-                        <p>What type of music do you generally listen to?</p>
-                    <label htmlFor="thegoodkind" key="thegoodkind">
+    <article>
+        <div className="text-group">
+            <h2>What type of music do you generally listen to?</h2>
+
+                <div className="checkbox-options">
+                    <label htmlFor="thegoodkind" 
+                    key="thegoodkind">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="thegoodkind" 
@@ -31,8 +19,9 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                    The good kind</label>
                 </div>
 
-                <div >
-                    <label htmlFor="pop" key="pop">
+                <div className="checkbox-options">
+                    <label htmlFor="pop" 
+                    key="pop">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="pop"
@@ -41,8 +30,9 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                     Pop</label>
                 </div>
 
-                <div >
-                    <label htmlFor="electronic" key="electronic">
+                <div className="checkbox-options">
+                    <label htmlFor="electronic" 
+                    key="electronic">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="electronic"
@@ -50,7 +40,8 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                         onChange={() => onCheckboxChange('electronic')}/>
                     Electronic</label>
                 </div>
-            
+            </div>
+
                 <div className="btn-group">
                     <button className="next-btn"
                     onClick= {nextSection}>
@@ -62,9 +53,7 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                     >
                     Go back</button>
                 </div>
+    </article>
+)}
 
-        </article>
-    )
-}
-
-export default ThirdAndFourthQuestion
+export default FourthQuestion

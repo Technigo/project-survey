@@ -4,9 +4,12 @@ const SecondQuestion = ({ setAmountOfBands, arrayOfBandNumbers, nextSection, bac
     
     return (
         <article>
+            
                 <div className="text-group">
-                    <h3>How many different bands do you listen to in one week?</h3>
+                    <h2>How many different bands do you listen to in one week?</h2>
+
                     {arrayOfBandNumbers.map(amountOfBands => (
+                        <div className="radio-options">
                         <label key={amountOfBands} className="radio-label">
                             <input className="radios"
                                 type="radio" 
@@ -17,6 +20,7 @@ const SecondQuestion = ({ setAmountOfBands, arrayOfBandNumbers, nextSection, bac
                             />
                             {amountOfBands}
                         </label>
+                        </div>
                         ))}
                     </div>
 
