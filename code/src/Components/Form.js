@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 
 import Welcome from './Welcome';
-import Info from './Info';
-import Checkbox from './CheckBox'
+import Checkbox from './Checkbox'
 import RadioButtons from './RadioButtons';
 import Input from './Input';
 import Select from'./Select';
@@ -13,11 +12,11 @@ import Summary from './Summary';
 export const Form = () => {
     const [username, setUsername] = useState('');
     const [intervals, setInterval] = useState('');
-    // const intervals = ["2+ times a week", "1-2 times a week", "1-2 times a month", "Never, I don't have good taste in movies 🙄"];
     const [favouriteMovie, setFavouriteMovie] = useState('')
     const [isResultDisplayed, setIsResultDisplayed] = useState(false)
     const [newMovies, setNewMovies] = useState("");
     const [snacks, setSnacks] = useState("");
+    const [question, setQuestion] = useState(0);
 
     const handleInputChange = (event) => {
         setUsername(event.target.value);
@@ -39,22 +38,55 @@ export const Form = () => {
         setSnacks(event.target.value);
     };
 
+    const handleOnClickNext = () => {
+        setQuestion(question+1);
+    }
+
      return ( 
         <section>
-            <Welcome username={username} onInputChange={handleInputChange} />
-            <Info />
-            <Checkbox />
-            <RadioButtons intervalGroup={intervals} onChangeAgain={handleOnChangeAgain} />
-            <Input favouriteMovie={favouriteMovie} onInputChangeAgain={handleInputChangeAgain} />
-            <Select newMovies={newMovies} onChange={handleOnChange} />
-            <SecondSelect snacks={snacks} onChange3={handleOnChange3} />
-
+            {question === 0 && (
+            <Welcome 
+                username={username}
+                onInputChange={handleInputChange}
+                onClickNext={handleOnClickNext}
+            />
+            )}
+            {question === 1 && (
+            <Checkbox 
+                onClickNext={handleOnClickNext}
+            />
+            )}
+            {question === 2 && (
+            <RadioButtons
+                intervalGroup={intervals}
+                onChangeAgain={handleOnChangeAgain}
+                onClickNext={handleOnClickNext}
+            />
+            )}
+            {question === 3 && (
+            <Input
+                favouriteMovie={favouriteMovie}
+                onInputChangeAgain={handleInputChangeAgain}
+                onClickNext={handleOnClickNext}
+            />
+            )}
+            {question === 4 && (
+            <Select
+                newMovies={newMovies}
+                onChange={handleOnChange}
+                onClickNext={handleOnClickNext}
+            />
+            )}
+            {question === 5 && (
+            <SecondSelect
+                snacks={snacks}
+                onChange3={handleOnChange3}
+                onClickNext={handleOnClickNext}
+            />
+            )}
             <button onClick={() => setIsResultDisplayed(true)}>Click to see your summary</button>
             {isResultDisplayed && (
-                <Summary 
-                    username={username}
-
-                />
+                <Summary username={username}/>
             )}
         </section>
     );

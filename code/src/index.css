@@ -6,7 +6,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(images/red-drapes.jpg);
-  background-size: 100%;
+  background-size: 100vw 100vh;
+  background-repeat: no-repeat;
   color: white;
   text-align: center;
 }
