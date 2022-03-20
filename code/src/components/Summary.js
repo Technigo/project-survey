@@ -5,7 +5,8 @@ const Summary = ({
     numberOne, 
     numberTwo, 
     location, 
-    ageGroup
+    ageGroup,
+    // nextPage
 }) => {
 
 return (

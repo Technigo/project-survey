@@ -9,10 +9,21 @@ const Form = () => {
 const [username, setUsername] = useState('');
 const [numberOne, setNumberOne] = useState(0);
 const [numberTwo, setNumberTwo] = useState(0);
-const [isResultDisplayed, setIsResultDisplayed] = useState(false);
+// const [isResultDisplayed, setIsResultDisplayed] = useState(false);
 const [location, setLocation] = useState('');
 const [ageGroup, setAgeGroup] = useState('');
 // const [Summary, setSummary] = useState(false)
+// const [page, setPage] = useState(0);
+
+// const nextPage = () => setPage(page + 1);
+//   const prevPage = () => setPage(page - 1);
+
+const [step, setStep] = useState(1)
+
+const onStepChange = (e) => {
+    e.preventDefault()
+    setStep(step + 1)
+  }
 
 const handleInputChange = (event) => {
     setUsername(event.target.value);
@@ -44,34 +55,39 @@ const ageChange = (event) => {
         <section>
             <h1 className="title-text">Ghost story 👻 writer</h1>
           
-           
+            {step === 1 && 
             <CharacterName 
                 username={username} 
-                onInputChange={handleInputChange} />
-
+                onInputChange={handleInputChange}
+                onStepChange={onStepChange} />}
+                 
+            {step === 1 && 
             <DropDown 
             locationChange={locationChange}
                 value={location}
-                    />
+                onStepChange={onStepChange} />}
 
+            {step === 1 &&
             <RadioButtons
                 ageChange={ageChange}
                 ageGroup={ageGroup}
-                    />
-                
+                onStepChange={onStepChange} />}
+
+                {step === 1 &&
             <MonsterNumbers 
                 numberOne={numberOne}
                 numberTwo={numberTwo} 
                 onFirstNumberChange={handleFirstNumberChange} 
-                onSecondNumberChange={handleSecondNumberChange}/>
+                onSecondNumberChange={handleSecondNumberChange}
+                onStepChange={onStepChange} />}
 
 
-                    <button onClick={() => setIsResultDisplayed(true) } >Reveal ghost story</button>
-
-            
-            {isResultDisplayed && (
-                
-            
+            {/* <button onClick={() => setIsResultDisplayed(true) } >Reveal ghost story</button> */}
+           
+           
+             {/* {isResultDisplayed  && ( */}
+                 
+                 {step === 2 &&
             <Summary 
                 
                 username={username} 
@@ -79,11 +95,15 @@ const ageChange = (event) => {
                 numberTwo={numberTwo}
                 location={location}  
                 ageGroup={ageGroup}
-                />
+                />}
 
-            )}
+            {/* )} */}
 
-
+           {/* {isResultDisplayed && (
+               
+           <Summary 
+           nextpage= {nextPage}/>    
+           )}      */}
 
         </section>
 
