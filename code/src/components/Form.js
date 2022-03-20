@@ -14,7 +14,7 @@ const Form = () => {
   const [handInTime, setHandInTime] = useState("");
   const [graduation, setGraduation] = useState("");
   const [step, setStep] = useState(1);
-
+  const [radioValue, setRadioValue] = useState("");
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
   };
@@ -60,6 +60,8 @@ const Form = () => {
           relateToImg={relateToImg}
           onRelateToImgChange={onRelateToImgChange}
           onStepChange={onStepChange}
+          radioValue={radioValue}
+          setRadioValue={setRadioValue}
         />
       )}
       {step === 4 && (
@@ -83,6 +85,8 @@ const Form = () => {
           relateToImg={relateToImg}
           handInTime={handInTime}
           graduation={graduation}
+          radioValue={radioValue}
+          setRadioValue={setRadioValue}
         />
       )}
     </div>

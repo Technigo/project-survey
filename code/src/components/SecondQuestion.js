@@ -9,23 +9,25 @@ const levelGoal = [
 
 const SecondQuestion = ({ goals, onGoalsChange, onStepChange }) => {
   return (
-    <form>
-      <h2>What's your goal to reach on the levels?</h2>
-      <label className="description" htmlFor="selectInput">
-        Select one of the options
-      </label>
-      <select onChange={onGoalsChange} value={goals}>
-        {levelGoal.map((item) => {
-          return (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          );
-        })}
-      </select>
+    <section className="form-container">
+      <form>
+        <h2>Witch requirement level is your goal to reach?</h2>
+        <label className="description" htmlFor="selectInput">
+          Select one of the options
+        </label>
+        <select onChange={onGoalsChange} value={goals}>
+          {levelGoal.map((item) => {
+            return (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            );
+          })}
+        </select>
 
-      <button onClick={onStepChange}>Next Question</button>
-    </form>
+        <button onClick={onStepChange}>Next Question</button>
+      </form>
+    </section>
   );
 };
 

@@ -9,23 +9,25 @@ const graduate = [
 
 const FifthQuestion = ({ graduation, onGraduationChange, onStepChange }) => {
   return (
-    <form>
-      <h2>How do you think you will feel at the graduation?</h2>
-      <label className="description" htmlFor="selectInput">
-        Select one of the options
-      </label>
-      <select onChange={onGraduationChange} value={graduation}>
-        {graduate.map((item) => {
-          return (
-            <option key={item} value={item}>
-              {item}
-            </option>
-          );
-        })}
-      </select>
+    <section className="form-contaier">
+      <form>
+        <h2>How do you think you will feel at the graduation?</h2>
+        <label className="description" htmlFor="selectInput">
+          Select one of the options
+        </label>
+        <select onChange={onGraduationChange} value={graduation}>
+          {graduate.map((item) => {
+            return (
+              <option key={item} value={item}>
+                {item}
+              </option>
+            );
+          })}
+        </select>
 
-      <button onClick={onStepChange}>Submit</button>
-    </form>
+        <button onClick={onStepChange}>Submit</button>
+      </form>
+    </section>
   );
 };
 

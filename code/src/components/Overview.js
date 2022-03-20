@@ -6,16 +6,20 @@ const Overview = ({
   relateToImg,
   handInTime,
   graduation,
+  radioValue,
+  setRadioValue,
 }) => {
   return (
-    <section>
-      <h2>My values from form: </h2>
-      <p>Name: {nameInput}</p>
+    <section className="form-container">
+      <h2>
+        Alright {nameInput}, here is your answers to what kind of code student
+        you are!
+      </h2>
+      <p>The requirement level you are trying to reach each week: {goals}</p>
       <p>
-        The requirement level you are trying to reach each week:
-        {goals}
+        The image you relate to the most is:{" "}
+        <img src={radioValue} alt={radioValue} />
       </p>
-      <p>The image you relate to the most is: {relateToImg}</p>
       <p>You hand in your project: {handInTime}</p>
       <p> When you graduate you are going to feel: {graduation}</p>
     </section>

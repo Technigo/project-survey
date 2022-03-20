@@ -7,6 +7,10 @@
   --clr-shadow: #bebebe;
 }
 
+html {
+  height: 100%;
+}
+
 body {
   margin: 0;
   font-family: "Roboto", sans-serif;
@@ -18,7 +22,7 @@ body {
     rgba(238, 174, 202, 1) 0%,
     rgba(148, 187, 233, 1) 45%
   );
-  /* background-repeat: no-repeat; */
+  background-repeat: no-repeat;
 }
 
 .app {
@@ -180,4 +184,15 @@ button:hover {
 
 button:active {
   transform: translateY(-1px);
+}
+
+select {
+  appearance: none;
+  /* -webkit-appearance: none; */
+  background: none;
+  border-radius: 20px;
+  width: 20em;
+  height: 3em;
+  margin: 1em;
+  text-align: center;
 }
