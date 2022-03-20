@@ -8,6 +8,8 @@ import { RadioInput } from "./RadioInput";
 import { EmailInput } from "./EmailInput";
 import { Summary } from "./Summary";
 
+// ALl use state and event handlers for the page are here
+
 export const Form = () => {
   const [count, setCount] = useState(1);
   const [name, SetName] = useState("");
@@ -15,6 +17,8 @@ export const Form = () => {
   const [location, SetLocation] = useState("");
   const [occupationGroup, SetOccupationGroup] = useState();
   const [email, setEmail] = useState("")
+
+  // a counter in order to render the different steps/compontents of site
 
   const Counter = () => {
     setCount(count + 1)
@@ -39,6 +43,8 @@ export const Form = () => {
   const handleEmailInputChange = (event) => {
     setEmail(event.target.value);
   }
+
+  // a conditional to render, in combination with the counter function, the compontents one at a time
 
   if (count === 1) {
     return (
