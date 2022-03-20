@@ -7,9 +7,11 @@ body {
   font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #C3E5AE;
+  background-image: url('./assets/guesthouse.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #FFC300;
 }
-
 section {
   display: flex;
   flex-direction: column;
@@ -19,44 +21,73 @@ section {
   width: 100vw;
   height: 100vh;
 }
-
-.start-container {
-  background-image: url('./assets/guesthouse.jpeg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  width: 100vw;
-  height: 100vh;
-}
-
-.start-container h2 {
-  margin: 1rem 0 0.5rem 0;
-}
-.start-container p {
-  margin: 0.5rem 0 1rem 0;
-}
 .form-container {
   display: flex;
   flex-direction: column;
-  border: 1px black solid;
+  background-color: rgb(159, 155, 155, 0.7);
+  border-radius: 40px;
   padding: 5vw;
+  margin: 0 2vw;
 }
 label {
   text-align: left;
-  padding-bottom: 1vw;;
+  padding-bottom: 1vw;
+}
+#option {
+  height: 5vw;
+  background-color: #FFF1CE;
+  padding: 0 1vw;
+}
+#age {
+  width: 6vw;
+}
+#feedback{
+  width: 6vw;
 }
 .button-container {
   margin-top: 5vw;
 }
 button {
-  background-color: white;
-  border: 2px black solid;
-  margin-right: 1vw;
+  border: 1px #FFC300 solid;
+  border-radius: 10px;
+  margin-right: 2vw;
+  color: #FFC300;
+  background-color: #FFF1CE;
+  height: 5vw;
+  padding: 0 3vw;
+  font-size: 16px;
 }
-.summary-container h2 {
-  margin-left: 4vw;
-  margin-right: 4vw;
+
+
+@media screen and (min-width: 768px) {
+  button {
+    height: 3vw;
+  }
+  .input-container {
+    width: 30%;
+  }
+ #option {
+   height: 3vw;
+   font-size: 16px;
+   color: #FFC300;
+ }
+ label {
+  font-size: 16px;
+ }
 }
+
+ @media screen and (min-width: 1025px) {
+  button {
+    height: 4vw;
+  }
+}
+
+
+
+
+
+
+
 
 
 

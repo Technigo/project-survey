@@ -9,7 +9,7 @@ const Age = ({ ageGroup, setAgeGroup, nextSlide, backSlide }) => {
         <h2>Select your age</h2>
         {ageSelectors.map(group => (
         <label key={group} htmlFor='age'>
-        <input 
+        <input className='radio-input'
           id='age'
           type='radio'
           value={group}

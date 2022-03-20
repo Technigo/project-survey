@@ -5,7 +5,7 @@ const Summary = ({ ageGroup, options, expectations }) => {
 
     return (
        <section>
-        <div className='summary-container'>
+        <div className='form-container'>
           <h2>Thanks for staying and welcome back<span role="img" aria-label='heart emoji'>❣️</span></h2>
           <p>Your age is {ageGroup}</p>
           <p>You stayed due to {options}</p>
