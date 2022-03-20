@@ -56,3 +56,14 @@ margin: 15px 0;
   font-size: 15px;  
   }
 
+.ghost-story-header {
+ font-size: 16px; 
+ margin: 15px 0;
+}  
+
+.ghost-story-end-text {
+font-size: 14px;  
+font-style:italic;
+margin: 55px 0; 
+}
+

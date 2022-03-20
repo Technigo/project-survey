@@ -13,7 +13,7 @@ const Weapon = ({ weapon, weaponChange, onStepChange }) => {
         <option value="bow and fire arrows">bow and fire arrows</option>
         <option value="bombs">bombs</option>
         <option value="laser gun">laser gun</option>
-        <option value="pokemon">pokemon</option>
+        <option value="horribly tuned instrument">horribly tuned instrument</option>
       </select>
 
       <button type="submit">Reveal ghost story</button>

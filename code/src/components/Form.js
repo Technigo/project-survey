@@ -8,9 +8,8 @@ import Weapon from './Weapon';
 
 const Form = () => {
 const [username, setUsername] = useState('');
-const [numberOne, setNumberOne] = useState(0);
-const [numberTwo, setNumberTwo] = useState(0);
-// const [isResultDisplayed, setIsResultDisplayed] = useState(false);
+const [firstMonster, setFirstMonster] = useState(0);
+const [secondMonster, setSecondMonster] = useState(0);
 const [location, setLocation] = useState('');
 const [ageGroup, setAgeGroup] = useState('');
 const [weapon, setWeapon] = useState('');
@@ -26,11 +25,11 @@ const handleInputChange = (event) => {
 };
 
 const handleFirstNumberChange = (event) => {
-    setNumberOne(Number(event.target.value));
+    setFirstMonster(Number(event.target.value));
 };
 
 const handleSecondNumberChange = (event) => {
-    setNumberTwo(Number(event.target.value));
+    setSecondMonster(Number(event.target.value));
 };
 
 const locationChange = (event) => {
@@ -55,48 +54,45 @@ const handleWeaponChange = (event) => {
             <h1 className="title-text">Ghost story 👻 writer</h1>
           
             {step === 1 && 
-            <CharacterName 
-                username={username} 
-                onInputChange={handleInputChange}
-                onStepChange={onStepChange} />}
+                <CharacterName 
+                    username={username} 
+                    onInputChange={handleInputChange}
+                    onStepChange={onStepChange} />}
                  
             {step === 1 && 
-            <DropDown 
-            locationChange={locationChange}
-                value={location}
-                 />}
+                <DropDown 
+                    locationChange={locationChange}
+                    value={location}
+                    onStepChange={onStepChange} />}
 
             {step === 1 &&
-            <RadioButtons
-                ageChange={ageChange}
-                ageGroup={ageGroup}
-                onStepChange={onStepChange} />}
+                <RadioButtons
+                    ageChange={ageChange}
+                    ageGroup={ageGroup}
+                    onStepChange={onStepChange} />}
 
-                {step === 1 &&
-            <MonsterNumbers 
-                numberOne={numberOne}
-                numberTwo={numberTwo} 
-                onFirstNumberChange={handleFirstNumberChange} 
-                onSecondNumberChange={handleSecondNumberChange}
-                onStepChange={onStepChange} />}
+            {step === 1 &&
+                <MonsterNumbers 
+                    firstMonster={firstMonster}
+                    secondMonster={secondMonster} 
+                    onFirstNumberChange={handleFirstNumberChange} 
+                    onSecondNumberChange={handleSecondNumberChange}
+                    onStepChange={onStepChange} />}
 
             {step === 1 && 
-            <Weapon 
-            weaponChange={handleWeaponChange}
-                value={weapon}
-                onStepChange={onStepChange} />}
-
+                <Weapon 
+                    weaponChange={handleWeaponChange}
+                    value={weapon}
+                    onStepChange={onStepChange} />}
                  
                  {step === 2 &&
-            <Summary 
-                
-                username={username} 
-                numberOne={numberOne}
-                numberTwo={numberTwo}
-                location={location}  
-                ageGroup={ageGroup}
-                weapon={weapon}
-                />}
+                <Summary 
+                    username={username} 
+                    firstMonster={firstMonster}
+                    secondMonster={secondMonster}
+                    location={location}  
+                    ageGroup={ageGroup}
+                    weapon={weapon} />}
 
         
 

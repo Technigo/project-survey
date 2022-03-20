@@ -1,8 +1,8 @@
 import React from 'react';
 
 const MonsterNumbers = ({
-    numberOne, 
-    numberTwo, 
+    firstMonster, 
+    secondMonster, 
     onFirstNumberChange, 
     onSecondNumberChange
 }) => {
@@ -10,24 +10,24 @@ const MonsterNumbers = ({
 return (
     <>
     <div>
-    <label htmlFor="numberOne">
-        <p className="question-text">imaginary monsters</p>
+    <label htmlFor="firstMonster">
+        <p className="question-text">imaginary monsters:</p>
         </label>
     <input className="choice-boxes"
-     id="numberOne"
+     id="firstMonster"
         type="number"
-        value={numberOne}
+        value={firstMonster}
         onChange={onFirstNumberChange}
         />
         </div>
         <div>
-          <label htmlFor="numberTwo">
-          <p className="question-text">real monsters</p>
+          <label htmlFor="SecondMonster">
+          <p className="question-text">real monsters:</p>
           </label>
     <input className="choice-boxes"
-     id="numberTwo"
+     id="secondMonster"
         type="number"
-        value={numberTwo}
+        value={secondMonster}
         onChange={onSecondNumberChange}
         />
     </div>
