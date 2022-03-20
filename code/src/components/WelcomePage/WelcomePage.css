@@ -1,7 +1,7 @@
-h1 {
+.welcome-page h1 {
     font-size: 3rem;
 }
 
-p {
+.welcome-page p {
     font-size: 1.3rem;
 }
