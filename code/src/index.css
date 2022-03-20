@@ -122,19 +122,14 @@ p {
 @media screen and (min-width: 668px) {
   h1 {
     font-size: 40px;
-    padding: 50px;
   }
 
   h2 {
     font-size: 35px;
-    padding: 20px;
-    margin: 10px;
   }
 
   h3 {
     font-size: 30px;
-    padding: 20px;
-    margin: 10px;
   }
 
   p {
@@ -169,35 +164,30 @@ p {
 
 @media screen and (min-width: 1024px) {
   h1 {
-    font-size: 70px;
+    font-size: 60px;
   }
 
   h2 {
-    font-size: 55px;
-  }
-
-  h3 {
     font-size: 50px;
   }
 
-  p {
+  h3 {
     font-size: 45px;
   }
 
-  .form-container {
-    padding: 40px;
-    margin: 40px;
+  p {
+    font-size: 40px;
   }
 
   .next-btn {
     margin: 40px;
     padding: 30px;
-    font-size: 40px;
+    font-size: 30px;
   }
 
   .dropdown {
-    padding: 40px;
-    font-size: 30px;
+    padding: 35px;
+    font-size: 25px;
   }
 
   .radio-btn {
