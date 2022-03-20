@@ -6,10 +6,6 @@ p {
   font-family: asar;
 }
 
-*:focus {
-  outline: none;
-}
-
 .main-card {
   display: flex;
   flex-direction: column;

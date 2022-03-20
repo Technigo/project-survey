@@ -5,6 +5,10 @@ input[name="title"],[name="isbn"],[name="author"]  {
     border-radius: 5px;
   }
 
+  input[name="title"]:focus,[name="isbn"]:focus,[name="author"]:focus {
+      outline: none;
+      border: 2px solid green;
+  }
 
 .submit-book-btn {
     background-color: rgb(190, 190, 190);
