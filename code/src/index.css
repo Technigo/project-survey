@@ -74,7 +74,7 @@ margin: 75px 0;
 
 .ghost-story-email-text {
 font-size: 14px;  
-font-style:italic;
+font-style: italic;
 }
 
 .reveal-button {
@@ -89,9 +89,9 @@ padding:3px 0;
 @media (min-width: 768px) {
 
 body {
-  background-position-x: 15rem;
-  background-position-y: 10rem;
-}
+background-position-x: 15rem;
+background-position-y: 10rem;
+} 
 
 .main-container {
 margin: 35px 55px;  
@@ -134,25 +134,30 @@ width: 200px;
 
 @media (min-width: 1024px) {
 
-  .main-container {
-  margin: 55px;  
-  }
-      
-  .title-text {
-  font-size: 45px;
-  margin: 45px 0;
-  }
+body {
+background-position-x: 0rem;
+background-position-y: 0rem;
+}
 
-  .question-text {
-   margin: 15px 0;
-    }
-      
-  .choice-boxes {
-  width: 200px;
-  padding: 5px 0;
-  }
-    
-  .reveal-button {
+.main-container {
+margin: 55px;  
+}
+  
+.title-text {
+font-size: 45px;
+margin: 45px 0;
+}
+
+.question-text {
+margin: 15px 0;
+}
+  
+.choice-boxes {
+width: 200px;
+padding: 5px 0;
+}
+
+.reveal-button {
 padding: 5px;  
 }
 }
