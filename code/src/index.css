@@ -1,13 +1,84 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+html {
+	width: 100vw;
+	height: 100vh;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-image: url('./images/pizza-flip.jpg');
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+}
+
+.container {
+  height: 100%;
+	width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  
+}
+
+.form-container {
+  width: 375px;
+  height: 250px; 
+  background-color: rgb(46, 42, 42);
+	border-radius: 10px;
+	padding: 30px 20px;
+	margin: 300px ;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
+  color:#fff;
+  box-shadow: rgba(71, 60, 67, 0.4) 0px 5px, rgba(104, 92, 99, 0.3) 0px 10px, rgba(129, 115, 124, 0.2) 0px 15px, rgba(182, 165, 175, 0.1) 0px 20px, rgba(231, 218, 226, 0.05) 0px 25px;
+}
+
+.form-container h1, .pizza-text {
+  color: #fff;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-container p{
+  color: #fff;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+h2 {
+  margin-bottom: 10px;
+}
+
+label {
+  color: #fff;
+  margin:5px;
+}
+
+button {
+  padding: 6px;
+  border-radius: 1rem;
+  margin: 5px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form select {
+  width: 10rem;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 768px) {
+	
+  .form-container {
+    margin: 200px auto;
+  }
 }
