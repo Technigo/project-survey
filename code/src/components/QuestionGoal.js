@@ -7,10 +7,6 @@ const QuestionGoal = ({ goal, onGoalChange }) => {
       <label htmlFor="goal-option" className="label">
         What is your main goal for this trip?
       </label>
-      <p className="examples">
-        i.e. relaxation, reconnecting with nature, spotting wildlife, testing
-        yourself...
-      </p>
       <input
         id="goal-option"
         name="goal-option"

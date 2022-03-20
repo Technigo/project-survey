@@ -18,22 +18,22 @@ const QuestionActivity = ({ activity, onActivityChange }) => {
         required
       >
         <select className="dropdown-select" value={activity}>
-          <option className="activity-content" disabled value="">
+          <option className="input" disabled value="">
             Select an option
           </option>
-          <option className="dropdown-content" value="hiking">
+          <option className="input" value="hiking">
             Hiking
           </option>
-          <option className="dropdown-content" value="kayaking">
+          <option className="input" value="kayaking">
             Kayaking
           </option>
-          <option className="dropdown-content" value="camping">
+          <option className="input" value="camping">
             Camping
           </option>
-          <option className="dropdown-content" value="sleeping">
+          <option className="input" value="sleeping">
             Sleeping
           </option>
-          <option className="dropdown-content" value="swimming">
+          <option className="input" value="swimming">
             Swimming
           </option>
         </select>

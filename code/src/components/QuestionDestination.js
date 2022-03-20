@@ -11,7 +11,7 @@ const QuestionDestination = ({ destination, onDestinationChange }) => {
 
   return (
     <section className="main">
-      <p className="question">Where would you like to travel?</p>
+      <h2 className="question">Where would you like to travel?</h2>
       <form className="form">
         {destinationOptions.map((destinationValue) => (
           <label

@@ -10,7 +10,7 @@ const Summary = ({ name, destination, activity, company, goal }) => {
         You would like to travel to {destination}, {company} and enjoy{" "}
         {activity}... to achieve {goal}.
       </p>
-      <h3 className="summary-goodbye">
+      <h3 className="goodbye">
         We wish you all the best of luck with your trip!
       </h3>
     </section>
