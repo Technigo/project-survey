@@ -38,8 +38,8 @@ const Form = () => {
     }
 
 return (
-        <section>
-
+    <section>
+     <div className="container">
         <form onSubmit={handleSubmit}>
             {section === 0 && (
             <FirstQuestion 
@@ -68,9 +68,6 @@ return (
             />
             )}
 
-        </form>   
-
-
             {section === 3 && (
             <Summary name = {name} 
             amountOfBands = {amountOfBands}
@@ -80,8 +77,13 @@ return (
             />
             
             )}  
+
+        </form>   
+    
+
             
-        </section>
+     </div>   
+    </section>
     )
 }
 

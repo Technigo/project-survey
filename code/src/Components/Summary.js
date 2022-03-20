@@ -4,7 +4,7 @@ const Summary = ({name, amountOfBands, bands, musicType, restart}) => {
     
     return (
         <article>
-            <div className="container">
+            <div className="text-group">
 
                 <span>Hello {name}, nice to have you here!</span>
                 <span>You listen to {amountOfBands} number of bands per week, that's cool.</span>

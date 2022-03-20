@@ -4,7 +4,6 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
     return (
 
         <article>
-            <div className="container">
                 <div className="text-group">
                     <label htmlFor="bands" key="bands">Choose your favourite out of these five bands
                     </label>
@@ -63,7 +62,6 @@ const ThirdAndFourthQuestion = ({setBands, bandOptions, nextSection, backSection
                     >
                     Go back</button>
                 </div>
-            </div>
 
         </article>
     )

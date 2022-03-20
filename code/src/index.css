@@ -2,8 +2,7 @@ body {
   margin: 0;
   box-sizing: border-box;
   font-family: 'Fredoka', sans-serif;
-  font-size:25px;
-  font-weight: 600;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   background-image: url(./images/marek-piwnicki-9dbsRfvtIos-unsplash.jpg); 
@@ -11,33 +10,34 @@ body {
   background-position: center;
 }
 
-header {
-  background-color:rgb(143, 90, 118);
-  color:#fff;
-  padding: 20px;
-  margin-bottom: 20px;
-  min-width: 375px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-}
-
-h1 {
-  margin-top: 0;
-}
-
-.header-container {
-  width: 375px;
-  margin: 0 auto;
-}
-
 .container {
   width: 375px;
   margin: 0 auto;
-  background-color: rgb(143, 90, 118, 0.5);
-  padding: 100px 50px 100px 50px;
-  border-radius: 10px;
 }
+
+section {
+  margin-top: 60px;
+}
+
+h1 {
+  color:#fff;
+  font-family: 'Pacifico';
+  line-height: 40px;
+  font-size: 30px;
+  margin-bottom: 40px;
+}
+
+form {
+  background-color: rgb(143, 90, 118, 0.5);
+  padding: 50px 50px 0 50px;
+  border-radius: 10px;
+  text-align: center;
+  min-height: 550px;
+}
+
+/* .name-label {
+  display:block;
+} */
 
 .name-input {
   padding: 15px;
@@ -112,6 +112,9 @@ button:disabled {
 
 @media (min-width:1025px) {
 
- 
+ .container {
+   width: 550px;
+   margin: 0 auto;
+ }
 
 }

@@ -4,7 +4,6 @@ const SecondQuestion = ({ setAmountOfBands, arrayOfBandNumbers, nextSection, bac
     
     return (
         <article>
-            <div className="container">
                 <div className="text-group">
                     <h3>How many different bands do you listen to in one week?</h3>
                     {arrayOfBandNumbers.map(amountOfBands => (
@@ -32,7 +31,6 @@ const SecondQuestion = ({ setAmountOfBands, arrayOfBandNumbers, nextSection, bac
                         >
                         Go back</button>
                     </div>
-                </div>
             </article>
         
     )

@@ -2,10 +2,15 @@ import React from 'react'
 
 const FirstQuestion = ({name, setName,  nextSection, handleSubmit}) => {
     return (
-        <div className="container">
+        
             <article >
                 <div className="text-group">
-                    <label htmlFor="name" key="name" onSubmit={handleSubmit}>Please enter your name 
+                    <h1>Welcome to the music survey</h1>
+                    <label htmlFor="name" 
+                    key="name" 
+                    onSubmit={handleSubmit}
+                    className="name-label">
+                    Enter your name
                         <input 
                         className="name-input"
                         type="text" 
@@ -22,7 +27,6 @@ const FirstQuestion = ({name, setName,  nextSection, handleSubmit}) => {
                 Next question</button>
                 </div>
             </article>
-        </div>
         
     )
 
