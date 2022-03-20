@@ -16,7 +16,7 @@ const Weapon = ({ weapon, weaponChange, onStepChange }) => {
         <option value="horribly tuned instrument">horribly tuned instrument</option>
       </select>
 
-      <button type="submit">Reveal ghost story</button>
+      <button className="reveal-button" type="submit">Reveal ghost story</button>
 
     </form>
   );

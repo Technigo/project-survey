@@ -10,7 +10,7 @@ const Summary = ({
 }) => {
 
 return (
-<article> 
+<article className="ghost-story-container"> 
 <h2 className="ghost-story-header">And your ghost story goes ...</h2>       
 <p className="ghost-story-text"> 
     It was a dark, dark night. {username} tried to restrain the feeling of panic 
@@ -29,8 +29,12 @@ return (
 <p className="ghost-story-end-text">
     To be continued... 💀🕯️</p>
 
-    <p className="ghost-story-end-text"> 
-        ... and if you do, send it to me at lundislon@gmail.com 👻🖊️💌 since we are out of space here 🛸</p>
+<p className="ghost-story-email-text"> 
+    ...if you do, send it to me:</p>
+<p className="ghost-story-email-text">
+    lundislon@gmail.com 👻🖊️💌</p> 
+<p className="ghost-story-email-text"> 
+    since we are out of space now 🛸</p>
 </article>
 
 )

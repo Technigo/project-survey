@@ -11,7 +11,7 @@ return (
     <>
     <div>
     <label htmlFor="firstMonster">
-        <p className="question-text">imaginary monsters:</p>
+        <p className="question-text">Imaginary monsters:</p>
         </label>
     <input className="choice-boxes"
      id="firstMonster"
@@ -22,7 +22,7 @@ return (
         </div>
         <div>
           <label htmlFor="SecondMonster">
-          <p className="question-text">real monsters:</p>
+          <p className="question-text">Real monsters:</p>
           </label>
     <input className="choice-boxes"
      id="secondMonster"

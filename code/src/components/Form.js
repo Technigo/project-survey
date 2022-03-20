@@ -65,6 +65,7 @@ const handleWeaponChange = (event) => {
                     value={location}
                     onStepChange={onStepChange} />}
 
+                    
             {step === 1 &&
                 <RadioButtons
                     ageChange={ageChange}
@@ -78,6 +79,7 @@ const handleWeaponChange = (event) => {
                     onFirstNumberChange={handleFirstNumberChange} 
                     onSecondNumberChange={handleSecondNumberChange}
                     onStepChange={onStepChange} />}
+
 
             {step === 1 && 
                 <Weapon 
