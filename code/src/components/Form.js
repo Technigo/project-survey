@@ -138,13 +138,13 @@ const Form = () => {
 
         </div>
               
-        </form>
-        
         <NextBtn 
             nextQuestion={nextQuestion} 
             prevQuestion={prevQuestion} 
             questionNum = {questionNum} 
         />
+        </form>
+        
 
         <ProgressBar questionNum = {questionNum} />
 

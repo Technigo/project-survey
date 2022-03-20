@@ -6,8 +6,8 @@ const QuestionFive = ( {questionNum, feedback, getFeedback} ) => {
     <label className='feedback-textarea' htmlFor="feedback">{questionNum}. Any suggestions for us? </label> 
     <textarea type='text'
     value={feedback}
-    rows = '7'
-    cols = '30'
+    rows = '9'
+    cols = '32'
     placeholder = 'Write your suggestion...'
     onChange={e => getFeedback(e.target.value)}
     />
