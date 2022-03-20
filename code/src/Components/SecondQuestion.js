@@ -8,13 +8,14 @@ const SecondQuestion = ({
 }) => {
   return (
     <main className="main-container map">
-      <p>Question number : {step} </p>
-      <h3>Which vacation do you prefer?</h3>
+      <p tabindex="0">Question number : {step} </p>
+      <h3 tabindex="0">Which vacation do you prefer?</h3>
       <form className="form-container">
         <select
           className="dropdown"
           onChange={onDestinationInputChange}
           value={destinationInput}
+          tabIndex="0"
         >
           <option disabled value="">
             Select destination:

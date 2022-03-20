@@ -119,7 +119,7 @@ p {
   color: var(--main-color);
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 668px) {
   h1 {
     font-size: 40px;
     padding: 50px;
@@ -163,5 +163,46 @@ p {
   .radio-btn {
     padding: 20px;
     margin: 10px;
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 70px;
+  }
+
+  h2 {
+    font-size: 55px;
+  }
+
+  h3 {
+    font-size: 50px;
+  }
+
+  p {
+    font-size: 45px;
+  }
+
+  .form-container {
+    padding: 40px;
+    margin: 40px;
+  }
+
+  .next-btn {
+    margin: 40px;
+    padding: 30px;
+    font-size: 40px;
+  }
+
+  .dropdown {
+    padding: 40px;
+    font-size: 30px;
+  }
+
+  .radio-btn {
+    padding: 30px;
+    margin: 20px;
+    font-size: 40px;
   }
 }

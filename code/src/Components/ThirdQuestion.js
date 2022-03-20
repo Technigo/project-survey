@@ -10,17 +10,18 @@ const ThirdQuestion = ({
 }) => {
   return (
     <main className="main-container budget">
-      <p>Question number: {step}</p>
-      <h3 className="question-title">Budget for the destination:</h3>
+      <p tabindex="0">Question number: {step}</p>
+      <h3 tabindex="0">Budget for the destination:</h3>
       <form className="form-container">
         {budgetArray.map((budget) => (
-          <label className="radio-btn" htmlFor={budget} key={budget}>
+          <label tabindex="0" className="radio-btn" htmlFor={budget} key={budget}>
             <input
               id={budget}
               type="radio"
               value={budget}
               onChange={onBudgetInputChange}
               checked={budget === budgetInput}
+              tabIndex="0"
             />
             {budget}
           </label>

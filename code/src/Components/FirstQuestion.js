@@ -10,17 +10,18 @@ const FirstQuestion = ({
 }) => {
   return (
     <main className="main-container person">
-      <p>Question number: {step}</p>
-      <h3 className="question-title">How do you want to travel?</h3>
+      <p tabindex="0">Question number: {step}</p>
+      <h3 tabindex="0">How do you want to travel?</h3>
       <form className="form-container">
         {personArray.map((amount) => (
-          <label className="radio-btn" htmlFor={amount} key={amount}>
-            <input
+          <label tabIndex="0" className="radio-btn" htmlFor={amount} key={amount}>
+            <input 
               id={amount}
               type="radio"
               value={amount}
               onChange={onPersonInputChange}
               checked={amount === personInput}
+              tabindex="0"
             />
             {amount}
           </label>

@@ -1,13 +1,10 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I have made a typeform in react.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started the project by reading up on the project, planing how I wanted it to look like and then I continued by following the instructions of the assignment. I put my main focus on learning more about react and state hooks and how the structure in react works best with the different components.  
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
