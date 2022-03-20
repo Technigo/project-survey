@@ -7,6 +7,7 @@ const FirstQue = ({ FavoriteInput, FavoriteInputChange, Change }) => {
       <form className="form-container">
         <label className="first-que">
           <input
+            name="season"
             type="radio"
             value="Spring🌸🌸 "
             onChange={() => FavoriteInputChange("Spring 🌸🌸")}
@@ -15,6 +16,7 @@ const FirstQue = ({ FavoriteInput, FavoriteInputChange, Change }) => {
         </label>
         <label className="first-que">
           <input
+            name="season"
             type="radio"
             value="Summer☀️"
             onChange={() => FavoriteInputChange("Summer☀️")}
@@ -23,6 +25,7 @@ const FirstQue = ({ FavoriteInput, FavoriteInputChange, Change }) => {
         </label>
         <label className="first-que">
           <input
+            name="season"
             type="radio"
             value="Fall🍁"
             onChange={() => FavoriteInputChange("Fall🍁")}
@@ -31,6 +34,7 @@ const FirstQue = ({ FavoriteInput, FavoriteInputChange, Change }) => {
         </label>
         <label className="first-que">
           <input
+            name="season"
             type="radio"
             value="Winter❄️"
             onChange={() => FavoriteInputChange("Winter❄️")}
