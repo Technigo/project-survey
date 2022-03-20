@@ -21,7 +21,7 @@ code {
 .container {
   width: 375px;
   height: 660px;
-  border: 1px solid red;
+  /* border: 1px solid red; */
   /* padding-left: 15px; */
 }
 
