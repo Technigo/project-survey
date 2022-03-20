@@ -9,7 +9,7 @@ const Summary = (props) => {
     return (
         <div className="summary">
           <h2>{username !== '' ? username : 'Stranger'}!</h2>
-          <h3>Here's a short summary about what you've lost:</h3>
+          <h3>Here's a short summary of what you've lost:</h3>
           <p>You have lost your {lostItem.length > 0 ? lostItem : 'mind apparently'}.</p>
           {lastTime !== "I don't know" ? lastTimeComment1 : lastTimeComment2}
           <p>If you don't agree, press restart and answer the questions again.</p>
