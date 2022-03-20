@@ -13,7 +13,6 @@ export const Form = ({showModal, setShowModal}) => {
         lastName: "",
         email: "",
         destination: "", //radio
-        lastName: "", //radio
         username: "", //radio
         nationality: "",
         other: "",
@@ -38,7 +37,7 @@ export const Form = ({showModal, setShowModal}) => {
 
         {showModal? ( <div className="form" showModal={showModal}>
             <div className="progressbar">
-                <div style={{width: page === 0 ? "33.3%" : page == 1 ? "66.6%" : "100%"}}></div> 
+                <div style={{width: page === 0 ? "33.3%" : page === 1 ? "66.6%" : "100%"}}></div> 
             </div>
             <div className="form-container">
                 <div className="header">
@@ -52,7 +51,7 @@ export const Form = ({showModal, setShowModal}) => {
                 <div className="body">{PageDisplay()}</div>
                 
                 <div className="footer">
-                    <button disabled = {page == 0} onClick={() => {setPage((currPage) => currPage - 1)}}>Prev</button>
+                    <button disabled = {page === 0} onClick={() => {setPage((currPage) => currPage - 1)}}>Prev</button>
                     <button
                      onClick={() => {
                          if(page === FormTitles.length -1){
