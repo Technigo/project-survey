@@ -1,21 +1,31 @@
 import React from "react";
 
 // select option Input
-const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange, onNextStepChange, onStepBackChange}) => {
+const QuestionFood = ({
+  musicInput,
+  selectOptionInput,
+  onSelectOptionInputChange,
+  onNextStepChange,
+  onStepBackChange,
+}) => {
   return (
     <>
       <section className="head-section" id="three">
         <p className="thin-intro-text">Mhm, {musicInput} is SUPER!</p>
-        <h2 className="question-text">What food makes you the happiest self?</h2>
+        <h2 className="question-text">
+          What food makes you the happiest self?
+        </h2>
         <form onSubmit={onNextStepChange}>
-          <label htmlFor="selectOptionInput" className="sr-only">Favourite food:</label>
+          <label htmlFor="selectOptionInput" className="sr-only">
+            Favourite food:
+          </label>
           <select
-            className= "dropdown"
+            className="dropdown"
             onChange={onSelectOptionInputChange}
-            value= {selectOptionInput}
+            value={selectOptionInput}
           >
             <option className="option-input" value="" disabled selected>
-             Have your pick!
+              Have your pick!
             </option>
 
             <option className="option-input" value="candy">
@@ -48,7 +58,7 @@ const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange
             type="submit"
             onClick={onNextStepChange}
             className="btn next-btn"
-            disabled= {selectOptionInput === ""}
+            disabled={selectOptionInput === ""}
           >
             next
           </button>
@@ -58,4 +68,4 @@ const QuestionThree = ({musicInput, selectOptionInput, onSelectOptionInputChange
   );
 };
 
-export default QuestionThree;
+export default QuestionFood;

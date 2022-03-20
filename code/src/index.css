@@ -106,11 +106,6 @@ h1 {
 
 /* Specific styling for different components */
 
-
-/* #two.head-section, #three.head-section, #four.head-section {
-  padding-top: 30%;
-} */
-
 #intro .thin-intro-text {
   margin-top: 30px;
 }
@@ -246,8 +241,6 @@ select:hover {
   font-family: 'Poppins';
 }
 
-/* Styling of progress bar */
-
 .progress-wrapper {
   display: flex;
   flex-direction: column;
@@ -269,9 +262,83 @@ select:hover {
   border-radius: 10px;
 }
 
+/* Star animation */
+
+.star {
+  position: absolute;
+  transform: scale(1); 
+  animation: blinking 1.5s ease infinite;
+  -webkit-animation-name: blinking;
+  -webkit-animation-duration: 1.5s;
+  -webkit-animation-timing-function: ease;
+  -webkit-animation-iteration-count: infinite;
+}
+
+.star-1 {
+  top: 8%;
+  left: 14%;
+  width: 10px;
+}
+
+.star-2 {
+  width: 15px;
+  top: 70%;
+  left: 80%;
+}
+
+.star-3 {
+  width: 15px;
+  top: 2%;
+  left: 62%;
+}
+
+.star-4 {
+  width: 10px;
+  top: 38%;
+  left: 28%;
+}
+
+@keyframes blinking {
+  50% {
+   transform: scale(0); 
+   opacity: 0;
+  }
+}
+
+@-webkit-keyframes blinking {
+  50% {
+   transform: scale(0); 
+   opacity: 0;
+  }
+}
+
 /* A MEDIA QUERY FOR DESKTOP */
 
 @media screen and (min-width: 1024px) {
+
+  .star-1 {
+    top: 8%;
+    left: 14%;
+    width: 25px;
+  }
+  
+  .star-2 {
+    width: 40px;
+    top: 70%;
+    left: 80%;
+  }
+  
+  .star-3 {
+    width: 25px;
+    top: 2%;
+    left: 62%;
+  }
+  
+  .star-4 {
+    width: 25px;
+    top: 38%;
+    left: 28%;
+  }
 
   .body {
     height: 100vh;
@@ -296,31 +363,18 @@ select:hover {
     font-size: 14px;
   }
 
-  .head-section {
+  .head-section, #summary.head-section {
     padding-top: 16%;
     width: 50%;
   }
-
-  /* #one.head-section, #two.head-section,  #three.head-section, #four.head-section {
-    padding-top: 16%;
-  } */
 
   .question-text {
     font-size: 2vw;
     font-weight: 300;
   }
 
-  #two .question-text, #three .question-text, #four .question-text  {
-    font-weight: 300;
-  }
-
   .thin-intro-text {
     font-size: 20px;
-  }
-
-  #summary.head-section {
-    padding-top: 16%;
-    width: 50%;
   }
   
   .summary-mantra-text {
@@ -379,23 +433,14 @@ select:hover {
     left: 0;
     padding: 20px;
   }
-  
 }
 
-/* A MEDIA QUERY FOR TABLET */
+/* A MEDIA QUERY FOR BIG MOBILE AND TABLET */
 
 @media screen and (min-width: 568px) and (max-width: 1023px) {
 
   .body {
     height: 100vh;
-  }
-
-  .monday {
-
-  }
-
-  .mantra {
-  
   }
 
   .small-text {
@@ -418,23 +463,5 @@ select:hover {
   .btn, .input-field {
     padding: 10px 15px;
     font-size: 14px;
-  }
-
-  .start-btn:hover {
-    background-color: var(--my-black);
-    color: var(--main-accent-color);
-    transition: all 1.5s ease;
-  }
-  
-  .next-btn:hover {
-    background-color: var(--sec-accent-color);
-    color: var(--my-black);
-    transition: all 1.5s ease;
-  }
-  
-  .back-btn:hover {
-    background-color: var(--my-black);
-    color: var(--main-accent-color);
-    transition: all 1.5s ease;
   }
 }

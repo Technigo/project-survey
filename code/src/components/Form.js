@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 
 import Intro from "./Intro";
-import QuestionOne from "./QuestionOne";
-import QuestionTwo from "./QuestionTwo";
-import QuestionThree from "./QuestionThree";
-import QuestionFour from "./QuestionFour";
+import QuestionName from "./QuestionName";
+import QuestionSong from "./QuestionSong";
+import QuestionFood from "./QuestionFood";
+import QuestionDrink from "./QuestionDrink";
 import ProgressBar from "./ProgressBar";
 import Summary from "./Summary";
 
@@ -33,7 +33,7 @@ const Form = () => {
   };
 
   const onNextStepChange = (event) => {
-    event.preventDefault()
+    event.preventDefault();
     setStep(step + 1);
   };
 
@@ -52,7 +52,7 @@ const Form = () => {
       {step === 0 && <Intro onNextStepChange={onNextStepChange} />}
 
       {step === 1 && (
-        <QuestionOne
+        <QuestionName
           nameInput={nameInput}
           onNameInputChange={onNameInputChange}
           onStepBackChange={onStepBackChange}
@@ -61,7 +61,7 @@ const Form = () => {
       )}
 
       {step === 2 && (
-        <QuestionTwo
+        <QuestionSong
           nameInput={nameInput}
           musicInput={musicInput}
           onMusicInputChange={onMusicInputChange}
@@ -71,7 +71,7 @@ const Form = () => {
       )}
 
       {step === 3 && (
-        <QuestionThree
+        <QuestionFood
           musicInput={musicInput}
           selectOptionInput={selectOptionInput}
           onSelectOptionInputChange={onSelectOptionInputChange}
@@ -81,7 +81,7 @@ const Form = () => {
       )}
 
       {step === 4 && (
-        <QuestionFour
+        <QuestionDrink
           selectOptionInput={selectOptionInput}
           radioInput={radioInput}
           onRadioInputChange={onRadioInputChange}
