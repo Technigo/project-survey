@@ -16,8 +16,9 @@ const Question2 = (props) => {
             <h2>Okay {username !== '' ? username : 'stranger'}, what have you lost?</h2>
             <div className='input-container'>
                 {lostItems.map((item) => (
-                    <label key={item}>
+                    <label key={item} htmlFor={item}>
                         <input
+                            id={item}
                             type="radio"
                             value={item}
                             onChange={handleLostItemChange}
