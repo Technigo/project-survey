@@ -25,7 +25,12 @@ main{
   align-items: center;
   justify-content: center;
   min-height: 100vh;
-  background: grey;
+  background-image : url('./assets/bg.jpg');
+}
+
+.main-container h1{
+  color: white;
+  margin: 20px;
 }
 
 .main-container{
@@ -33,7 +38,27 @@ main{
   justify-content: center;
   align-items: center;
   display: flex;
+  margin: 10px;
   position: absolute;
+}
+
+.main-container button{
+  border-radius: 20px;
+  width: 100px;
+  height: 40px;
+  background-color: #fd9a89;
+  font-weight: bold;
+  color: white;
+  border: 0 none;
+  cursor: pointer;
+  padding: 10px 5px;
+  margin: 10px 5px;
+}
+
+.main-container button:hover{
+  background-color: transparent;
+    border: 2px solid #fd9a89;
+    cursor: pointer;
 }
 
 .App {
@@ -50,10 +75,10 @@ body {
 
 .form-container .header .x{
   position: absolute;
-  width: 20px;
-  height: 5px; 
+  width: 15px;
+  height: 3px; 
   top: 20px;
-  right: 0;
+  right: 5px;
   transform:translate(-50%, -50%);
   background: transparent;
   cursor: pointer;
@@ -64,7 +89,7 @@ body {
   position: absolute;
   width: inherit;
   height: inherit;
-  background: black;
+  background: white;
 }
 
 .x::before{
@@ -88,12 +113,17 @@ body {
 .form-container {
   width: 400px;
   height: 400px;
-  background-color: white;
+  background-color: black;
   border-radius: 8px;
   box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
   display: flex;
   position: relative;
   flex-direction: column;
+}
+
+.form-container h1{
+  margin-top: 40px;
+  color: white;
 }
 
 .form-container .header {
@@ -113,18 +143,22 @@ body {
 }
 
 .form-container .footer button {
-  border-radius: 7px;
+  border-radius: 20px;
   width: 100px;
   height: 40px;
-  background-color: rgb(0, 17, 255);
+  background-color: #fd9a89;
   font-weight: bold;
   color: white;
   border: 0 none;
-  border-radius: 1px;
   cursor: pointer;
   padding: 10px 5px;
-  margin: 10px 5px;
-  margin: 5px;
+  margin: 20px 5px;
+}
+
+.form-container button:hover{
+  background-color: transparent;
+    border: 2px solid #fd9a89;
+    cursor: pointer;
 }
 
 .sign-up-container {
@@ -151,14 +185,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
+  font-size: 20px;
 }
 
 .personal-info-container input {
   margin: 5px;
-  width: 200px;
-  height: 40px;
-  padding-left: 5px;
-  font-size: 20px;
+  width: auto;
+  height: auto;
+  font-size: 50px;
+  cursor: pointer;
+}
+
+input {
+  border: 2px solid;
+  border-radius: 5px;
+  background-color: rgb(185, 185, 185);
+  vertical-align: middle;
+}
+
+input[name="destination"] {
+	accent-color: #fd9a89;
+  color: rgb(185, 185, 185);
+}
+
+input[type="radio"] {
+  accent-color: #fd9a89; 
 }
 
 .review-container{
@@ -168,13 +220,11 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  color: white;
 }
 
-.review-container input{
+.review-container li{
   margin: 5px;
-  width: 200px;
-  height: 40px;
-  padding-left: 5px;
   font-size: 20px;
 }
 
@@ -189,7 +239,7 @@ body {
 .progressbar div {
   width: 33.3%;
   height: 100%;
-  background-color: rgb(98, 0, 255);
+  background-color: #fd9a89;
 }
 
 .other-info-container {
@@ -209,11 +259,15 @@ body {
   font-size: 20px;
 }
 
-input {
-  border: 2px solid rgb(98, 0, 255);
-  border-radius: 5px;
+input:focus {
+  border: 3px solid rgb#fd9a89;
 }
 
-input:focus {
-  border: 3px solid rgb(98, 0, 255);
+::placeholder{
+  color: black;
 }
+
+
+
+
+

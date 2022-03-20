@@ -9,9 +9,9 @@ export const Form = ({showModal, setShowModal}) => {
     const [page, setPage] = useState(0);
     
     const [formData, setFormData] = useState({
+        firstName: "",
+        lastName: "",
         email: "",
-        password: "",
-        confirmPassword: "",
         destination: "", //radio
         lastName: "", //radio
         username: "", //radio
@@ -28,7 +28,7 @@ export const Form = ({showModal, setShowModal}) => {
             return <PersonalInfo formData={formData} setFormData={setFormData} />;
         } else if (page === 2) {
             return <OtherInfo formData={formData} setFormData={setFormData} />;
-        } else {
+        } else  {
             return <Review formData={formData} setFormData={setFormData} />;
         }
     }
@@ -43,11 +43,14 @@ export const Form = ({showModal, setShowModal}) => {
             <div className="form-container">
                 <div className="header">
                     <h1>{FormTitles[page]}</h1>
-                <closeModalButton className="x"
+                
+                <div className="x"
                 onClick={() => setShowModal (prev => !prev)}
                 />
+                
                 </div>
                 <div className="body">{PageDisplay()}</div>
+                
                 <div className="footer">
                     <button disabled = {page == 0} onClick={() => {setPage((currPage) => currPage - 1)}}>Prev</button>
                     <button
@@ -58,7 +61,6 @@ export const Form = ({showModal, setShowModal}) => {
                          } else{
                             setPage((currPage) => currPage + 1);
                          }
-   
                     }}
                     >
                     {page === FormTitles.length -1 ? "Submit" : "Next"}

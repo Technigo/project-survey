@@ -15,20 +15,27 @@ export const PersonalInfo = ({ formData, setFormData }) => {
     return(
       <div className="personal-info-container">
         <div>
-          <lable>The moon</lable>
-        <input type="radio" name="destination" value="The moon" onChange={handleChange} checked={formData.destination=="The moon"} />
+          <lable>
+        <input type="radio" row className="radio" name="destination" value="The moon" onChange={handleChange} checked={formData.destination=="The moon"} />
+        The moon</lable>
         </div>
         <div>
-          <lable>Mars</lable>
+          <lable>
         <input type="radio" name="destination" value="Mars" onChange={handleChange} checked={formData.destination=="Mars"} />
+        Mars
+        </lable>
         </div>
         <div>
-          <lable>ISS</lable>
+          <lable>
         <input type="radio" name="destination" value="ISS" onChange={handleChange} checked={formData.destination=="ISS"} />
+        ISS
+        </lable>
         </div>
         <div>
-          <lable>Mercury</lable>
+          <lable>
         <input type="radio" name="destination" value="Mercury" onChange={handleChange} checked={formData.destination=="Mercury"} />
+        Mercury
+        </lable>
         </div>
       </div>
     );
