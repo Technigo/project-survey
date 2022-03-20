@@ -5,23 +5,23 @@ import "./Question1.css";
 const Question1 = (props) => {
   const { username, setUsername } = props;
 
-  const onInputChange = (event) => {
+  const handleInputChange = (event) => {
     setUsername(event.target.value);
-}
+  }
 
   return (
     <>
-      <h2>What is your name?</h2>
-      <label htmlFor="name" className="visually-hidden">Name: </label>
-
-      <input
-        id="name"
-        type="text"
-        placeholder="your name here"
-        value={username}
-        onChange={onInputChange}
-      />
-
+      <h2>What's your name?</h2>
+      <div className="input-container">
+        <label htmlFor="name" className="visually-hidden">Name: </label>
+        <input
+          id="name"
+          type="text"
+          placeholder="type your name"
+          value={username}
+          onChange={handleInputChange}
+        />
+      </div>
     </>
   );
 };

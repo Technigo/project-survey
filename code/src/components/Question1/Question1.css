@@ -12,5 +12,9 @@
   }
   
   label {
-      margin-right: 5px;
+      margin-right: 0.3rem;
+  }
+
+  input {
+      padding: 0.5rem;
   }

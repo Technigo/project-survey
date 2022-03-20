@@ -4,9 +4,6 @@
 
 body {
   margin: 0;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -14,27 +11,91 @@ body {
 
 body, html {
   height: 100%;
+  font-size: 16px;
+  background-color: teal;
+  min-width: 375px;
 }
-
-/* code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-} */
 
 #root {
   height: 100%;
 }
 
 .app-container {
-  height: 100%;
-  background-image: url('./assets/jigsaw-puzzle.jpg');
+  height: 50%;
+  background-image: url('./assets/jigsaw-puzzle-web.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
 }
+
+
+.form {
+  width: 95%;
+  min-height: 20%;
+  text-align: center;
+  background-color: white;
+  opacity: 0.85;
+  padding: 2rem;
+}
+
+.form h1 {
+  color: teal;
+}
+
+.button {
+  background-color: teal;
+  border: none;
+  color: #fff;
+  padding: 0.625rem 1.25rem;
+  text-align: center;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: 600;
+  display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+}
+
+.summary p {
+  font-size: 1rem;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+  background-color: teal;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ----- Media queries for tablet ----- */
+@media screen and (min-width: 768px) and (max-width: 992px ) {
+  .app-container {
+    height: 90%;
+  }
+
+  .form {
+    width: 85%;
+  }
+}
+
+/* --- Media queries for desktop ---- */
+@media screen and (min-width: 992px) {
+  .app-container {
+    height: 90%;
+  }
+
+  .form {
+    width: 50%;
+  }
+}
+
 
 

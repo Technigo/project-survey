@@ -1,16 +1,14 @@
 import React from 'react';
-import Header from './components/Header/Header';
-import Footer from './components/Footer/Footer';
-import Form from './components/Form/Form';
-
-
+import Footer from './components/Footer';
+import Form from './components/Form';
 
 export const App = () => {
   return (
-    <div className='app-container'>
-      <Header />
-      <Form /> 
+    <>
+      <main className='app-container'>
+        <Form />
+      </main>
       <Footer />
-    </div>
+    </>
   )
 }
