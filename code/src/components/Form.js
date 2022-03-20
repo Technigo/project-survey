@@ -17,103 +17,101 @@ const [food, setFood] = useState('')
 const [step, setStep] = useState(1)
 
 
-
 const handleNameChange = (event) => { 
-    setName(event.target.value)
+  setName(event.target.value)
   }
 
 const handleCityChange = (event) => {
-    setCity(event.target.value)
- }
-
- const handletravelWayChange = (event) => {
-    settravelWay(event.target.value)
-}
-
- const handleroomsChange = (event) => {
-   setRooms(event.target.value)
- }
-
- const handlefoodChange = (event) => {
-  setFood(event.target.value)
-}
-
-const onStepChange = () => {
-     setStep(step + 1)
-   }
-
-const onBackstepChange = () => {
-    setStep(step - 1)
+  setCity(event.target.value)
   }
 
-       
+const handletravelWayChange = (event) => {
+  settravelWay(event.target.value)
+  }
+
+const handleroomsChange = (event) => {
+  setRooms(event.target.value)
+  }
+
+const handlefoodChange = (event) => {
+  setFood(event.target.value)
+  }
+
+const onStepChange = () => {
+  setStep(step + 1)
+  }
+
+const onBackstepChange = () => {
+  setStep(step - 1)
+  }
+
 return (
-    <section>
-        {step === 1 && (
-        <Name 
+  <section>
+    {step === 1 && (
+      <Name 
         name={name} 
         onNameChange={handleNameChange} 
         onStepChange={onStepChange}
-        />
-        )}
-        {step === 2 && (
-        <Location 
+      />
+    )}
+    {step === 2 && (
+      <Location 
         city={city} 
         onCityChange={handleCityChange}
         onStepChange={onStepChange}
         onBackstepChange={onBackstepChange}
-        />
-        )}
-        {step === 3 && (
-        <Travel 
+      />
+    )}
+    {step === 3 && (
+      <Travel 
         travelWay={travelWay} 
         ontravelWayChange={handletravelWayChange}
         onStepChange={onStepChange}
         onBackstepChange={onBackstepChange}
-        />  
-        )}
-        {step === 4 && (
-        <Living 
+      />  
+    )}
+    {step === 4 && (
+      <Living 
         rooms={rooms} 
         onroomsChange={handleroomsChange}
         onStepChange={onStepChange}
         onBackstepChange={onBackstepChange}
-        />  
-        )}
-        {step === 5 && (
-        <Eating 
+      />  
+    )}
+    {step === 5 && (
+      <Eating 
         food={food} 
         onfoodChange={handlefoodChange}
         onStepChange={onStepChange}
         onBackstepChange={onBackstepChange}
-        />  
-        )}
-         {step === 6 && (
-        <Summary 
-          name={name} 
-          city={city}
-          travelWay={travelWay}
-          rooms={rooms}
-          food={food}
-          onStepChange={onStepChange}
-          onBackstepChange={onBackstepChange}
-        />
-      )}
-       {step === 7 && (
-        <Thanks 
-          name={name} 
-          city={city}
-          travelWay={travelWay}
-          rooms={rooms}
-          food={food}
-          onStepChange={onStepChange}
-          onBackstepChange={onBackstepChange}
-        />
-        )}
-    </section>
+      />  
+    )}
+    {step === 6 && (
+      <Summary 
+        name={name} 
+        city={city}
+        travelWay={travelWay}
+        rooms={rooms}
+        food={food}
+        onStepChange={onStepChange}
+        onBackstepChange={onBackstepChange}
+      />
+    )}
+    {step === 7 && (
+      <Thanks 
+        name={name} 
+        city={city}
+        travelWay={travelWay}
+        rooms={rooms}
+        food={food}
+        onStepChange={onStepChange}
+        onBackstepChange={onBackstepChange}
+      />
+    )}
+  </section>
 )
 }  
 
-    export default Form
+export default Form
     
  

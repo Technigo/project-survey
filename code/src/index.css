@@ -68,6 +68,7 @@ input[type=text] {
   grid-template-columns: 1fr 1fr; 
   column-gap: 8px;
 }
+
  /* STYLING RADIOBUTTONS */
  .radio-toolbar input[type="radio"] {
   display: none;
@@ -107,14 +108,11 @@ input[type=text] {
     row-gap: 10px;
     margin-top: 38px;
 } 
-/*  */
+
 .radiobuttons input[type="radio"] {
   opacity: 0;
   position: fixed;
   width: 0;
-  /*appearance: none;/*hides native radion input, keeps accessibility*/
-  /*-webkit-appearance: none;
-  background-color: #fff; /*removes gradient background on iOS<15*/
 }
 
 
@@ -143,7 +141,7 @@ input[type=text] {
   background-color: white;
 }
 
-/*  */
+
 /* OTHER BUTTONS */
 
 button { 
@@ -178,13 +176,6 @@ button {
   margin-top: 21px;
 }
 
-
-
-
-
-
-
-
 /* HEADINGS AND PARAGRAPHS */
 
 h1 {
@@ -218,7 +209,7 @@ p {
   font-size: 15px;
 }
 
-
+/* FOR LAPTOP */
 @media screen and (min-width: 1024px) {
 
   .container {
@@ -253,39 +244,39 @@ p {
     font-size: 26px;
   }
 
-button { 
+ button { 
     width: 90px;
     height: 60px;
     font-size: 25px;
-}
+  }
 
-.location-select {
+ .location-select {
     font-size: 26px;
     width: 300px;
-}
+  }
 
 .radiobuttons label {
-  font-size: 25px;
-  width: 154px;
-}
+    font-size: 25px;
+    width: 154px;
+  }
 
 .radiobuttons {
-  row-gap: 1vw;
-  margin-top: 3vw;
-} 
+    row-gap: 1vw;
+    margin-top: 3vw;
+  } 
 
 .radio-toolbar label {
-  padding: 15px 25px;
-  font-size: 30px;
-}
+    padding: 15px 25px;
+    font-size: 30px;
+  }
 
 .answer-change {
-  margin-top: 1vw;
-}
+   margin-top: 1vw;
+  }
 
 .thanks-end {
-  margin-top: 66px;
-}
+   margin-top: 66px;
+  }
 } 
 
 
