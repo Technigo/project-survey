@@ -15,47 +15,52 @@ h1 {
   font-size: 2rem;
 }
 
-header {
-  margin: 7rem 0 0;
-}
-
 .container {
-  margin: 0 auto;
+  margin-left: auto;
+  margin-right: auto;
   width: 340px;
 }
 
+.start, 
 .question-container {
-
+  margin-top: 7rem;
 }
 
-.button {
-  padding: 5px 8px;
+button {
+  padding: 8px 12px;
   margin-top: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: none;
+  color: #fff;
+  background-color: #222;
+  cursor: pointer;
 }
 
-.summary {
-  
+input, 
+select {
+  padding: 8px 12px;
+  margin-left: 10px;
 }
 
-.userAnswer {
-  color:rgb(238, 92, 128)
+.forward-next,
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
 }
 
+.summary-question {
+  font-weight: 700;
+}
+
+.user-answer {
+  font-weight: 400;
+}
 
 /* -- Tablet & Desktop -- */
 @media (min-width: 667px) { 
 
   .container {
-    width: 667px;
-    margin: 0 auto;
+    width: 560px;
   }
 }
-
-
-/* -- Desktop -- */
-/*@media (min-width: 1025px) { 
-  .container {
-    width: 1025px;
-    margin: 0 auto;
-  }
-}*/

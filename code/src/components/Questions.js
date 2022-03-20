@@ -1,89 +1,107 @@
 import React, { useState } from 'react';
 import questions from '../questions.json'
-
-
+import Start from './Start.js';
 import Submit from './Submit.js';
 import Input from './Input.js';
 import Dropdown from './Dropdown.js';
 import Radio from './Radio.js';
 import NextPrevious from './NextPrevious.js';
 import Startover from './Startover.js';
-
-
-
-
-console.log(questions);
-
-
+import Summary from './Summary.js';
 
 const QuestionContainer = (props) => {
 
-  //const [counter, setCounter] = useState(0);
- // const [inputvalue, setInputValue] = useState('');
-
   const [counter, setCounter] = useState(0);
+  const [inputvalue, setInputValue] = useState('');
+  const [radiovalue, setRadioValue] = useState();
+  const [dropdownvalue, setAlternative] = useState();
+  const [showSummary, setShowSummary] = useState(false);
 
-  // const handleInputChange = (event) => {
-  //   props.setInputValue(event.target.value);
-  //   console.log(props.inputvalue); 
-  // }
-
-
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    //props.handleInputChange(event);
-    //handleDropdownChange(event);
-    //props.handleRadioChange(event);
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
   }
 
+  const handleRadioChange = (event) => {
+    setRadioValue(event.target.value);
+  }
+
+  const handleDropdownChange = (event) => {
+    setAlternative(event.target.value);
+  }
+
+  const handleSubmit = (event) => {
+    setShowSummary(true);
+    event.preventDefault();
+  }
+
+  const startOver = (event) => {
+    setCounter(0);
+    setShowSummary(false);
+  }
 
               let answerComponent;
               const questionsInTotal = questions.questions.length;
 
-              // --> filter????
               questions.questions.forEach(question => {
                 if (question.number === counter) {
 
                   switch (question.type) {
                     case 'input':
-                      answerComponent = <Input question={question.question} inputvalue={props.inputvalue} onInputChange={props.handleInputChange} />;
+                      answerComponent = <Input 
+                        question={question.question} 
+                        inputvalue={inputvalue} 
+                        onInputChange={handleInputChange} 
+                      />;
                       break;
                     case 'radio':
-                      answerComponent = <Radio question={question} onRadioChange={props.handleRadioChange} />
+                      answerComponent = <Radio 
+                        question={question} 
+                        onRadioChange={handleRadioChange} 
+                      />
                       break;
                     case 'dropdown':
                       answerComponent = <Dropdown 
                           question={question.question} 
                           alternatives={question.alternatives} 
-                          onDropdownChange={props.handleDropdownChange}
-                          dropdownValue={props.dropdownValue}
+                          onDropdownChange={handleDropdownChange}
+                          dropdownValue={dropdownvalue}
                         />;
                       break;
                   }
                 }
               });
-
+              
     return (
       <>
       <div className="question-container container">
-          <form onSubmit={handleSubmit}>            
-            { answerComponent }
-            {counter === questionsInTotal ? <><Submit /> <Startover counter={counter} setCounter={setCounter} /> </>: <div className="container"><p>You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going!</p><NextPrevious counter={counter} setCounter={setCounter} /></div> }
-          </form>
+        { counter === 0 && <Start /> }
+        
+            {!showSummary && answerComponent }
+            
+            {counter === questionsInTotal ? 
+              <>
+                {!showSummary && 
+                <div className="buttons-container">
+                  <NextPrevious counter={counter} setCounter={setCounter} hideNextQuestionButton={true} />
+                  <Submit handleSubmit={handleSubmit} /> 
+                </div>
+                }
+              </>
+                : 
+                <div className="container">
+                  { counter > 0 && <p>You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going!</p> }
+                  <NextPrevious counter={counter} setCounter={setCounter} />
+                </div> 
+            }
       </div>
 
-
-      {/* Egen component */}
-      {/* <div className="container forward-next">
-        <button onClick={() =>setCounter(counter - 1)}>Previous question</button>
-        <button onClick={() =>setCounter(counter + 1)}>Next question</button>
-      </div> */}
+      {showSummary && <>
+          <Summary inputvalue={inputvalue} radioValue={radiovalue} dropdownValue={dropdownvalue} /> 
+          <Startover counter={counter} onClick={startOver} />
+        </> 
+      }
       </>
     );
   };
-
-  
-
   
   export default QuestionContainer;

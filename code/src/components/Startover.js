@@ -3,7 +3,9 @@ import React from 'react';
 const Startover = (props) => {
 
   return (
-    <button onClick={() =>props.setCounter(props.counter === 0)}>Start over again</button>
+    <div class="container">
+        <button onClick={props.onClick}>Start over again</button>
+    </div>
   );
 };
 
