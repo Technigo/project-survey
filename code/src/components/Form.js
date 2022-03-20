@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-import FirstQuestion from "./FirstQuestion";
-import SecondQuestion from "./SecondQuestion";
-import { ThirdQuestion } from "./ThirdQuestion";
-import FourthQuestion from "./FourthQuestion";
-import FifthQuestion from "./FifthQuestion";
-import Overview from "./Overview";
+import FirstQuestion from "components/FirstQuestion";
+import SecondQuestion from "components/SecondQuestion";
+import { ThirdQuestion } from "components/ThirdQuestion";
+import FourthQuestion from "components/FourthQuestion";
+import FifthQuestion from "components/FifthQuestion";
+import Overview from "components/Overview";
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
