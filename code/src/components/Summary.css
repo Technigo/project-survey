@@ -1,6 +1,7 @@
 .bold-italic {
     font-style: italic;
     font-weight: 600;
+    color: rgb(47, 107, 70);
 }
 
 .thank-you-card-wrapper {

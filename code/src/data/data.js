@@ -1,4 +1,4 @@
-const questions = [
+const data = [
     {
         title: "Tattoo 1",
         description: "wo women tattoo arm",
@@ -25,4 +25,4 @@ const questions = [
     }
 ]
 
-export default questions
+export default data
