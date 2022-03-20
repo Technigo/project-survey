@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
+This is a space survey form made with react. The user can select options and add information in text fields. All answers are visible in the review.
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I've had some issues with getting the user input from the radio buttons. I solved it by creating a global function for each value. If i had more time i would focus on styling of the drop down and doing a proper success page. 
+
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://eager-wozniak-4982da.netlify.app/
