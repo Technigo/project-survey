@@ -12,11 +12,11 @@ export const QuestionFour = ({
     return (
         <main className='main-container'>
             <form className='form-container'>
-            <p className='question-number'>Question {step} of 4</p>
-            <h3 className='question-title'>Have you a travel booked for this year?</h3>
+            <p className='question-number' tabIndex='0'>Question {step} of 4</p>
+            <h3 className='question-title' tabIndex='0'>Have you a travel booked for this year?</h3>
             <div className='input-container'>
                 {TravelArray.map ((travel) => (
-                    <label className='radio-btn' htmlFor={travel} key={travel}>
+                    <label className='radio-btn' htmlFor={travel} key={travel} tabIndex='0'>
                         <input 
                         className='radio'
                         id={travel}
@@ -24,6 +24,7 @@ export const QuestionFour = ({
                         value={travel}
                         onChange={ontravelInputChange}
                         checked={travel === travelInput}
+                        tabIndex='0'
                         />
                         {travel}
                     </label>
@@ -33,6 +34,7 @@ export const QuestionFour = ({
                 <div className='btn-container'>
                 <button 
              className='back-btn' 
+             aria-label='Go back'
              onClick={previousQuestion}>
                  Go back
              </button>

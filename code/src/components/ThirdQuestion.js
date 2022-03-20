@@ -6,11 +6,11 @@ export const ThirdQuestion = ({dayInput, ondayInputChange, nextQuestion, previou
     return (
         <main className='main-container'>
             <form className='form-container'>
-                <p className='question-number'>Question {step} of 4</p>
-                <h3 className='question-title'>For how long do you prefer to go away?</h3>
+                <p className='question-number' tabIndex='0'>Question {step} of 4</p>
+                <h3 className='question-title' tabIndex='0'>For how long do you prefer to go away?</h3>
                 <div className='input-container'>
                 {durationArray.map((days) => (
-                    <label className='radio-btn' htmlFor={days} key={days} >
+                    <label className='radio-btn' htmlFor={days} key={days} tabIndex='0'>
                         <input
                         className='radio'
                         id={days}
@@ -18,6 +18,7 @@ export const ThirdQuestion = ({dayInput, ondayInputChange, nextQuestion, previou
                         value= {days}
                         onChange = {ondayInputChange}
                         checked= {days === dayInput}
+                        tabIndex='0'
                         />
                         {days}
                     </label>
@@ -26,6 +27,7 @@ export const ThirdQuestion = ({dayInput, ondayInputChange, nextQuestion, previou
             </form>
             <div className='btn-container'>
             <button className='back-btn' 
+            aria-label='Go back'
                      onClick={previousQuestion}>
                          Go back
              </button>
