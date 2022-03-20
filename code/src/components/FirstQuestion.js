@@ -8,8 +8,8 @@ const FirstQuestion = ({
 }) => {
   return (
     <form className="question-container">
-      <label className="section-heading" htmlFor="nameInput">
-        Heeey there, Whats your name?
+      <label htmlFor="nameInput">
+        <h2 className="section-heading"> Heeey there, Whats your name?</h2>
       </label>
       <input
         className="input-name"

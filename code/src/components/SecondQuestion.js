@@ -12,15 +12,15 @@ const SecondQuestion = ({ onSetDestination, onStepChange }) => {
     <>
       <section className="destination-container">
         <h2 className="section-heading">Where do u wanna go?</h2>
-        {travelDestion.map((item) => (
-          <label className="likes" key={item}>
+        {travelDestion.map((destination) => (
+          <label className="radiobutton" key={destination}>
             <input
               type="radio"
               name="enjoy"
-              value={item}
+              value={destination}
               onChange={onSetDestination}
             />
-            {item}
+            {destination}
           </label>
         ))}
       </section>

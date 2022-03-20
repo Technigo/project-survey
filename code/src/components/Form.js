@@ -7,8 +7,8 @@ import Summery from './Summery'
 
 const Form = () => {
   const [nameInput, setNameInput] = useState('')
-  const [item, setDestination] = useState('')
-  const [choice, setTime] = useState('')
+  const [destination, setDestination] = useState('')
+  const [timeAway, setTravel] = useState('')
   const [step, setStep] = useState(1)
 
   const onNameInputChange = (event) => {
@@ -17,8 +17,8 @@ const Form = () => {
   const onSetDestination = (event) => {
     setDestination(event.target.value)
   }
-  const onSetTime = (event) => {
-    setTime(event.target.vaule)
+  const onSetTravel = (event) => {
+    setTravel(event.target.vaule)
   }
   const onStepChange = () => {
     setStep(step + 1)
@@ -41,27 +41,24 @@ const Form = () => {
       )}
       {step === 2 && (
         <SecondQuestion
-          item={item}
+          destination={destination}
           onSetDestination={onSetDestination}
           onStepChange={onStepChange}
-          onEnter={onEnter}
         />
       )}
       {step === 3 && (
         <ThirdQuestion
-          choice={choice}
-          onSetTime={onSetTime}
+          timeAway={timeAway}
+          onSetTravel={onSetTravel}
           onStepChange={onStepChange}
         />
       )}
       {step === 4 && (
         <Summery
-          item={item}
-          choice={choice}
+          destination={destination}
+          timeAway={timeAway}
           onStepChange={onStepChange}
-          onSetTime={onSetTime}
           nameInput={nameInput}
-          onEnter={onEnter}
         />
       )}
     </section>

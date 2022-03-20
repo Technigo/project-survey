@@ -30,8 +30,6 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 /*-------Header-------*/
 .header {
@@ -117,8 +115,14 @@ code {
 }
 /*-------Summery-------*/
 .summary-section {
+  text-align: center;
+  background-color: #b54aa7;
+  padding: 1em;
+  border-radius: 2em;
 }
+
 .summary-text {
+  padding: 1em;
 }
 /*-------Time-------*/
 .time-container {
@@ -145,7 +149,6 @@ code {
   padding: 1em;
 }
 .footer {
-  margin-top: auto;
   text-align: center;
   padding: 1em;
 }
