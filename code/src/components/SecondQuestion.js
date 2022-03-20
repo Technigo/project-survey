@@ -1,17 +1,20 @@
 import React from "react";
 
 const levelGoal = [
-  "I try to do some extra things if I can",
-  "I'm happy if I can manage to do all of the required ones",
-  "I always do all of them",
-  "I do whatever is necessary then we will see",
+  "select one by clicking here",
+  "try to do some extra things if you can",
+  "happy if you can manage to do all of the required ones",
+  "always do all of them",
+  "do whatever is necessary then we will see",
 ];
 
 const SecondQuestion = ({ goals, onGoalsChange, onStepChange }) => {
   return (
     <section className="form-container">
       <form>
-        <h2>Witch requirement level is your goal to reach?</h2>
+        <h2 className="select-h2">
+          Witch requirement level is your goal to reach?
+        </h2>
         <label className="description" htmlFor="selectInput">
           Select one of the options
         </label>

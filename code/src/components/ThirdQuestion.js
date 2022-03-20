@@ -4,21 +4,17 @@ import RelateTwo from "../images/margin-maxout.png";
 import RelateThree from "../images/stackoverflow-fail.png";
 import RelateFour from "../images/cheaper-option.png";
 
-export const ThirdQuestion = ({
-  relateToImg,
-  onRelateToImgChange,
-  onStepChange,
-  radioValue,
-  setRadioValue,
-}) => {
+export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
   return (
     <section className="form-container">
       <div className="img-wrapper">
         <h2>What image do you relate to the most?</h2>
-        <h3>You can only choose one of the options, I know it's hard</h3>
+        <h3>
+          You can only choose one of the options and you need to click on the
+          image you want to select
+        </h3>
         <div className="img-wrapper--images">
           <label htmlFor="relate">
-            {/* <div className="description relate-img">1. Hello World</div> */}
             <input
               id="relate"
               type="radio"
@@ -26,9 +22,6 @@ export const ThirdQuestion = ({
               value={RelateOne}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateOne}
-              //   onChange={onRelateToImgChange}
-              //   checked={(relateToImg = "helloworld")}
-              //   className="relate"
             />
             <img
               className="img-option"
@@ -38,7 +31,6 @@ export const ThirdQuestion = ({
           </label>
 
           <label htmlFor="maxout">
-            {/* <div className="description relate-img">2. Margin max-out</div> */}
             <input
               id="maxout"
               type="radio"
@@ -46,9 +38,6 @@ export const ThirdQuestion = ({
               value={RelateTwo}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateTwo}
-              //   onChange={onRelateToImgChange}
-              //   checked={(relateToImg = "maxout")}
-              //   className="relate"
             />
             <img
               className="img-option"
@@ -58,9 +47,6 @@ export const ThirdQuestion = ({
           </label>
 
           <label htmlFor="fail">
-            {/* <div className="description relate-img">
-              3. Stackoverflow is offline and under maintenance
-            </div> */}
             <input
               id="fail"
               type="radio"
@@ -68,9 +54,6 @@ export const ThirdQuestion = ({
               value={RelateThree}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateThree}
-              //   onChange={onRelateToImgChange}
-              //   checked={(relateToImg = "fail")}
-              //   className="relate"
             />
             <img
               className="img-option"
@@ -80,9 +63,6 @@ export const ThirdQuestion = ({
           </label>
 
           <label htmlFor="cheaper">
-            {/* <div className="description relate-img">
-              4. Don't ask for the cheaper option
-            </div> */}
             <input
               id="cheaper"
               type="radio"
@@ -90,9 +70,6 @@ export const ThirdQuestion = ({
               value={RelateFour}
               onChange={(event) => setRadioValue(event.target.value)}
               checked={radioValue === RelateFour}
-              //   onChange={onRelateToImgChange}
-              //   checked={(relateToImg = "cheaper")}
-              //   className="relate"
             />
             <img
               className="img-option"
@@ -100,10 +77,9 @@ export const ThirdQuestion = ({
               alt="you get what you pay for"
             />
           </label>
-
-          <button onClick={onStepChange}> Next Question </button>
         </div>
       </div>
+      <button onClick={onStepChange}> Next Question </button>
     </section>
   );
 };

@@ -10,21 +10,17 @@ import Overview from "./Overview";
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
   const [goals, setGoals] = useState("");
-  const [relateToImg, setRelateToImg] = useState("");
+  const [radioValue, setRadioValue] = useState("");
   const [handInTime, setHandInTime] = useState("");
   const [graduation, setGraduation] = useState("");
   const [step, setStep] = useState(1);
-  const [radioValue, setRadioValue] = useState("");
+
   const onNameInputChange = (event) => {
     setNameInput(event.target.value);
   };
 
   const onGoalsChange = (event) => {
     setGoals(event.target.value);
-  };
-
-  const onRelateToImgChange = (event) => {
-    setRelateToImg(event.target.value);
   };
 
   const onHandInTimeChange = (event) => {
@@ -57,11 +53,9 @@ const Form = () => {
       )}
       {step === 3 && (
         <ThirdQuestion
-          relateToImg={relateToImg}
-          onRelateToImgChange={onRelateToImgChange}
-          onStepChange={onStepChange}
           radioValue={radioValue}
           setRadioValue={setRadioValue}
+          onStepChange={onStepChange}
         />
       )}
       {step === 4 && (
@@ -82,11 +76,9 @@ const Form = () => {
         <Overview
           nameInput={nameInput}
           goals={goals}
-          relateToImg={relateToImg}
+          radioValue={radioValue}
           handInTime={handInTime}
           graduation={graduation}
-          radioValue={radioValue}
-          setRadioValue={setRadioValue}
         />
       )}
     </div>

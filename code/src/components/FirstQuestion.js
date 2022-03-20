@@ -2,8 +2,6 @@ import React from "react";
 import images from "../images/tech-work.png";
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
-  //  const { nameInput, onNameInputChange } = props;
-
   return (
     <section className="form-container">
       <div className="heading">

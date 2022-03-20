@@ -1,10 +1,10 @@
 import React from "react";
 
 const options = [
-  "Some time during you weekend",
-  "Sunday night sometime between 23:30-00:00",
-  "Early in the week (Friday included)",
-  "Maybe in time or could be after deadline",
+  "some time during the weekend",
+  "sunday night sometime between 23:30-00:00",
+  "early in the week (Friday included)",
+  "maybe in time or could be after deadline",
 ];
 
 const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
@@ -25,9 +25,8 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
                   name="handInTime"
                   value={option}
                   checked={handInTime === option}
-                  // id={option}
+                  id={option}
                   onChange={onHandInTimeChange}
-                  // className="relate"
                 />
               </div>
               {option}

@@ -12,16 +12,35 @@ const Overview = ({
   return (
     <section className="form-container">
       <h2>
-        Alright {nameInput}, here is your answers to what kind of code student
-        you are!
+        First of all {nameInput}, I want to give you a big high five for coming
+        this far and I'm so happy we are doing this together!
       </h2>
-      <p>The requirement level you are trying to reach each week: {goals}</p>
-      <p>
-        The image you relate to the most is:{" "}
-        <img src={radioValue} alt={radioValue} />
-      </p>
-      <p>You hand in your project: {handInTime}</p>
-      <p> When you graduate you are going to feel: {graduation}</p>
+      <div className="overview-container">
+        <div className="overview-text">
+          <p>
+            <span>For each week </span>you never know how much from the
+            requirements you will manage to do, but you are{" "}
+            <span>{goals} </span>
+            and that's totally fine, the most important thing is that you keep
+            doing this because you think it's fun!
+          </p>
+          <p>
+            <span>Hand in time</span> can be hectic but you usually hand in{" "}
+            <span>{handInTime}</span>. No matter the time, it's always inspiring
+            to see what everyone has come up with each week.
+          </p>
+          <p>
+            <span>It's hard to believe</span> that we will be graduating pretty
+            soon and in your words it will feel like you are{" "}
+            <span>{graduation}</span>. But in the end no mater how you feel, you
+            did something great, you took a risk not knowing where this would go
+            and made it though!
+          </p>
+        </div>
+        <div className="overview-img">
+          <img className="img-overview" src={radioValue} alt={radioValue} />
+        </div>
+      </div>
     </section>
   );
 };

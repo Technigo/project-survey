@@ -1,17 +1,20 @@
 import React from "react";
 
 const graduate = [
-  "Thankful you made it though",
-  "Surprised you made it",
-  "Ready to get started",
-  "Well we made it somehow",
+  "Select one by clicking here",
+  "thankful you made it though",
+  "surprised you made it",
+  "ready to get started",
+  "somehow at the finish line",
 ];
 
 const FifthQuestion = ({ graduation, onGraduationChange, onStepChange }) => {
   return (
-    <section className="form-contaier">
+    <section className="form-container">
       <form>
-        <h2>How do you think you will feel at the graduation?</h2>
+        <h2 className="select-h2">
+          How do you think you will feel at the graduation?
+        </h2>
         <label className="description" htmlFor="selectInput">
           Select one of the options
         </label>
