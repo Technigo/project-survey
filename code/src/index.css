@@ -9,8 +9,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  display: flex;
-  justify-content: center;
+  /* display: flex;
+  justify-content: center; */
 }
 
 code {
@@ -19,11 +19,68 @@ code {
 }
 
 .survey-container {
- margin: 5%;
+  background: darkcyan;
+  padding: 5%;
+  height: 85vh;
 }
 
 .form {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+h1 {
+  padding-top: 20px;
+  color: white;
+  font-weight: 900;
+  font-size: 30px;
+  text-align: center;
+}
+
+h2 {
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 10px;
+}
+
+.form p {
+  text-align: start;
+  font-size: 15px;
+  width: 50vw;
+  padding: 20px 0px;
+}
+
+.form h2 {
+  width: 70vw;
+  text-align: center;
+}
+
+.goal-input-container, .weather-input-container {
+  display: flex;
+  flex-direction: column;
+  padding: 4%;
+}
+
+
+.overview {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.overview-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+
+footer {
+  font-size: 12px;
+  text-align: center;
+  background: mediumaquamarine;
+  padding: 30px;
+  font-weight: 500;
 }

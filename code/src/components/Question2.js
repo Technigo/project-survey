@@ -10,7 +10,7 @@ const Question2 = ({ goal,  onGoalChange, onStepChange}) => {
 
     return (
       <div>
-            <article className="letter-container">
+            <article className="survey-container">
                 <form className="form">
                     <h1 tabindex="0">What are you main goal for this ski trip?</h1>
                     <div className="goal-input-container">

@@ -12,10 +12,10 @@ const weathers = [
     return (
       <div>
         
-        <article className="letter-container">
+        <article className="survey-container">
         <form className="form" onSubmit={event => event.preventDefault()}>
           <h1 tabindex="0">Choose your preferred weather</h1>
-
+          <div className="weather-input-container">
             {weathers.map(weather => (
                  <label className="weather-button-text" key={weather} tabindex="0">
                     <input
@@ -28,13 +28,7 @@ const weathers = [
                     {weather}
                 </label>
                     ))}
-
-          {/* <div className="image-container">
-            <img src={} alt="Weather 1" tabindex="0"/>    
-            <img src={} alt="Weather 2" tabindex="0"/>   
-            <img src={} alt="Weather 3" tabindex="0"/>      
-            <img src={} alt="Weather 4" tabindex="0"/>    
-          </div> */}
+          </div>
           
           <button className='btn' type="button" onClick={onStepChange} tabindex="0">Next</button>
 
