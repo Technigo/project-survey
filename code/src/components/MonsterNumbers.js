@@ -21,7 +21,7 @@ return (
         />
         </div>
         <div>
-          <label htmlFor="SecondMonster">
+          <label htmlFor="secondMonster">
           <p className="question-text">Real monsters:</p>
           </label>
     <input className="choice-boxes"
