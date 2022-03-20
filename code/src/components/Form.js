@@ -17,14 +17,11 @@ export const Form = () => {
 	const [friendContactDetails, setFriendContactDetails] = useState('')
 	const [error, setError] = useState('')
 
-  	// prevents page from reload when form is submitted
 	const onSubmitting = (e) => {
 		e.preventDefault();
 	};
 
-
 	const nextPage = (value) => {
-		console.log(value)
 		if (value === 'default' || !value || value === []) {
 			setError("Please enter an answer")
 		} else {
@@ -56,18 +53,14 @@ export const Form = () => {
 	}
 
 	const reconciliation = () => {
-		console.log(getBackTogether, 'from reconcile')
 		if (getBackTogether === "Absolutely!" || getBackTogether === "Maybe?") {
-			console.log(true)
 			return true
 		}
-		console.log(false)
 		return false
 	}
 
 	return (
 		<form onSubmit={onSubmitting}>
-		{/* <div className='form-main-content-container'> */}
 			
 			{page === 0 && (
 				<div className='current-page'>
@@ -81,8 +74,7 @@ export const Form = () => {
 						/>
 					</label>
 					<div>
-						<p className='error'>{error}</p>
-						{/* <button onClick= {() => nextPage(userName)}>Next question</button> */}
+						<h3 className='error'>{error}</h3>
 						<Button
 							key={'button-next'}
 							onClick={() => nextPage(userName)}
@@ -100,7 +92,7 @@ export const Form = () => {
 						duration = {questions.duration}	
 					/>
 					<div>
-						<p className='error'>{error}</p>
+						<h3 className='error'>{error}</h3>
 						<Button
 							key={'button-back'}
 							onClick={backPage}
@@ -131,7 +123,7 @@ export const Form = () => {
 						)}
 					</div>
 					<div>
-						<p className='error'>{error}</p>
+						<h3 className='error'>{error}</h3>
 						<Button
 							key={'button-back'}
 							onClick={backPage}
@@ -159,7 +151,7 @@ export const Form = () => {
 						/>
 					</label>
 					<div>
-						<p className='error'>{error}</p>
+						<h3 className='error'>{error}</h3>
 						<Button
 							key={'button-back'}
 							onClick={backPage}
@@ -174,7 +166,6 @@ export const Form = () => {
 				</div>
 			)}
 			{page === 4 && (
-				//should not have the validation demand}
 				<div className='current-page question'>
 					<h2>{questions.traitsQuestion}</h2>
 					<div className='traits-container'>
@@ -190,7 +181,7 @@ export const Form = () => {
 						)}
 					</div>
 					<div>
-						<p className='error'>{error}</p>
+						<h3 className='error'>{error}</h3>
 						<Button
 							key={'button-back'}
 							onClick={backPage}
@@ -216,18 +207,6 @@ export const Form = () => {
 									checked={getBackTogether === alt}
 								/>
 							</div>
-							
-							// <div>
-							// 	<label className='radio-button'>
-							// 		{alt}
-							// 		<input
-							// 			type='radio'
-							// 			value={alt}
-							// 			onChange={event => setGetBackTogether(event.target.value)}
-							// 			checked={getBackTogether === alt}
-							// 		/>
-							// 	</label>
-							// </div>
 						)}
 					</div>
 
@@ -267,7 +246,7 @@ export const Form = () => {
 						</div>
 					)}
 					<div>
-						<p className='error'>{error}</p>
+						<h3 className='error'>{error}</h3>
 						<Button 
 							onClick={backPage}
 							text='Back'
@@ -282,10 +261,13 @@ export const Form = () => {
 			{page === 6 && (
 				<div className='current-page summary-page'>
 					<h2>Dear {userName}</h2>
-					{/* <p>Thank you {userName}!</p> */}
+
 					<p>I'm sorry {breakUpper()[0]} broke up with {breakUpper()[1]}...</p>
+
 					<p> We were together for {shipDuration} and I really cherish the time we had together!</p>
+
 					<p>You say the reason we broke up was, and I quote, '{breakupReason}', but we both know the real reason.</p>
+
 					{traitsCheckboxes.length > 0
 						? traitsCheckboxes.includes("All of the above")
 							? (<p>I know you think I have all the worst qualities a human can have and you are probably right... I'll try to be 		better!</p>)
@@ -294,6 +276,7 @@ export const Form = () => {
 							? <p>I know you think I'm flawless but I'm stupid for breaking up with you!</p>
 							: <p>Why did you break up with me if I'm so flawless?!</p>
 					}
+
 					{reconciliation()
 						? <p>I also believe we should give it another go!</p>
 						: (dateFriend === "Absolutely!" || dateFriend === "Maybe?")
@@ -307,42 +290,3 @@ export const Form = () => {
 		</form>
 	)
 }
-
-
-
-
-// <div className='question'>
-// 						<label>
-// 							Were You Comfortable Talking To Your Manager?
-// 							<input
-// 								type='checkbox'
-// 								checked={talkToManager}
-// 								onChange={event => setTalkToManager(event.target.checked)}
-// 							/>
-// 						</label>
-
-// 						{talkToManager && (
-// 							<div className='radio-container'>
-// 								City:
-// 								{questions.city.map((c) =>
-// 									<div>
-// 										<label className='radio-button' htmlFor={c}>
-// 											{c}
-										
-// 										<input
-// 											id={c}
-// 											type='radio'
-// 											value={c}
-// 											onChange={event => setCity(event.target.value)}
-// 											checked={city === c}
-// 										/>
-// 										</label>
-// 									</div>
-// 								)}
-// 							</div>
-// 						)}
-// 						<div>
-// 							<button  onClick={backPage}>Previous question</button>
-// 							<button  onClick={nextPage}>Next question</button>
-// 						</div>
-// 					</div>

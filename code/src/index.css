@@ -18,7 +18,6 @@ h1 {
   font-weight: 400;
   text-align: center;
   font-size: 3rem;
-  /* margin: 0; */
 }
 
 h2 {
@@ -92,6 +91,8 @@ code {
 
 .error {
   min-height: 2rem;
+  font-size: 1rem;
+  font-weight: 400;
 }
 
 input,
@@ -162,7 +163,11 @@ button {
     font-size: 1.4rem;
   }
 
-  /* .current-page {
-    min-width: 50vh;
-  } */
+  .error {
+    font-size: 1.2rem;
+  }
+
+  .current-page {
+    padding: 2.5rem;
+  }
 }
