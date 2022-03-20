@@ -10,24 +10,14 @@ const [ageGroup, setAgeGroup] = useState('')
 const [options, setOptions] = useState ('choose below')
 const [expectations, setExpectations] = useState('')
 const [slide, setSlide] = useState(1)
-// const [error, setError] = useState('')
-// const [summaryDisplay, setSummaryDisplay] = useState(false)
 
 const nextSlide = () => {
     setSlide(slide + 1)
-    // if (slide===2 && ageGroup==='') {
-    //     setError('Please fill in the required fields')
-    //     setSlide(2)
-    // }
-    // else {
-    //     setError('')
-    //     setSlide(slide + 1)
-    // }
 }
 const backSlide = () => {
     setSlide(slide - 1)
 }
-
+//Rendering all components 
     return (
       <div>
         <form>
@@ -40,7 +30,6 @@ const backSlide = () => {
             setAgeGroup={setAgeGroup}
             nextSlide={nextSlide}
             backSlide={backSlide} 
-            // error={error}
             />
             )}
             {slide === 3 && (
@@ -60,14 +49,11 @@ const backSlide = () => {
             />
             )}
             {slide === 5 && (
-            // <button onClick={()=> setSummaryDisplay(true)}>Submit</button>
-            // {summaryDisplay && (
             <Summary 
             ageGroup={ageGroup}
             options={options}
             expectations={expectations}
                 />
-            // )}
             )}
         </form>
       </div>

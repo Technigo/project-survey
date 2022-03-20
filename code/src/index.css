@@ -12,6 +12,7 @@ body {
   background-repeat: no-repeat;
   color: #FFC300;
 }
+/* ------------------ SECTIONS ------------------ */
 section {
   display: flex;
   flex-direction: column;
@@ -21,6 +22,7 @@ section {
   width: 100vw;
   height: 100vh;
 }
+/* ------------------ FORMS ------------------ */
 .form-container {
   display: flex;
   flex-direction: column;
@@ -29,6 +31,7 @@ section {
   padding: 5vw;
   margin: 0 2vw;
 }
+/* ------------------ INPUTS AND RADIO------------------ */
 label {
   text-align: left;
   padding-bottom: 1vw;
@@ -47,6 +50,7 @@ label {
 #feedback{
   width: 6vw;
 }
+/* ------------------ BUTTONS ------------------ */
 .button-container {
   margin-top: 5vw;
 }
@@ -61,7 +65,7 @@ button {
   font-size: 15px;
 }
 
-
+/* ------------------ MEDIA QUERIES ------------------ */
 @media screen and (min-width: 768px) {
   button {
     height: 3vw;

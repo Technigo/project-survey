@@ -29,7 +29,6 @@ const Age = ({ ageGroup, setAgeGroup, nextSlide, backSlide }) => {
           >
             next
           </button>
-          {/* {error!=='' && <p>{error}</p>} */}
         </div>
       </div>
      </section> 
