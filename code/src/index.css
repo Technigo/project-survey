@@ -34,9 +34,12 @@ label {
   padding-bottom: 1vw;
 }
 #option {
-  height: 5vw;
+  height: 7vw;
   background-color: #FFF1CE;
   padding: 0 1vw;
+  color: #FFC300;
+  border-radius: 20px;
+  -webkit-appearance: none;
 }
 #age {
   width: 6vw;
@@ -49,13 +52,13 @@ label {
 }
 button {
   border: 1px #FFC300 solid;
-  border-radius: 10px;
+  border-radius: 20px;
   margin-right: 2vw;
   color: #FFC300;
-  background-color: #FFF1CE;
-  height: 5vw;
+  background-color: black;
+  height: 9vw;
   padding: 0 3vw;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 
@@ -69,7 +72,6 @@ button {
  #option {
    height: 3vw;
    font-size: 16px;
-   color: #FFC300;
  }
  label {
   font-size: 16px;
