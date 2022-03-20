@@ -4,7 +4,7 @@ const Dropdown = ({ question, alternatives, onDropdownChange, dropdownValue }) =
 
   return (
     <div>
-      <label for={question}>{question}</label>
+      <label htmlFor={question}>{question}</label>
       <select onChange={onDropdownChange}>
       {alternatives.map((alternative) => (
         <option 

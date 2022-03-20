@@ -67,6 +67,9 @@ const QuestionContainer = (props) => {
                           dropdownValue={dropdownvalue}
                         />;
                       break;
+                    default: 
+                      answerComponent = null;
+                      break;
                   }
                 }
               });

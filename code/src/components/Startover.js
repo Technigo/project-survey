@@ -3,7 +3,7 @@ import React from 'react';
 const Startover = (props) => {
 
   return (
-    <div class="container">
+    <div className="container">
         <button onClick={props.onClick}>Start over again</button>
     </div>
   );
