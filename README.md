@@ -8,5 +8,5 @@ I made one component each for the different input types you could choose for the
 
 I would really like to continue working on this project after the bootcamp to make it even more usable. Like for example it would be nice if you would be able to choose the text on the submit button, or personalize the summary page. That could be added too in the json file.
 
-
+https://survey-app-joanna.netlify.app/
 
