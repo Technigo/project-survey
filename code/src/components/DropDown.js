@@ -1,9 +1,9 @@
 import React from "react";
 
-const DropDown = ({ location, locationChange, onStepChange }) => {
+const DropDown = ({ location, locationChange }) => {
 
   return (
-    <form className="location" onSubmit={onStepChange}>
+    <form className="location">
       <select className="choice-boxes"
         onChange={locationChange}
         value={location}
@@ -15,8 +15,6 @@ const DropDown = ({ location, locationChange, onStepChange }) => {
         <option value="botanic garden greenhouses">botanic garden greenhouses</option>
         <option value="degenerated amusement park">degenerated amusement park</option>
       </select>
-
-      <button type="submit">Continue</button>
 
     </form>
   );

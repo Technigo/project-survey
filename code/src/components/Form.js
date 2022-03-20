@@ -4,6 +4,7 @@ import MonsterNumbers from './MonsterNumbers';
 import Summary from './Summary';
 import DropDown from './DropDown';
 import RadioButtons from './RadioButtons';
+import Weapon from './Weapon';
 
 const Form = () => {
 const [username, setUsername] = useState('');
@@ -12,12 +13,7 @@ const [numberTwo, setNumberTwo] = useState(0);
 // const [isResultDisplayed, setIsResultDisplayed] = useState(false);
 const [location, setLocation] = useState('');
 const [ageGroup, setAgeGroup] = useState('');
-// const [Summary, setSummary] = useState(false)
-// const [page, setPage] = useState(0);
-
-// const nextPage = () => setPage(page + 1);
-//   const prevPage = () => setPage(page - 1);
-
+const [weapon, setWeapon] = useState('');
 const [step, setStep] = useState(1)
 
 const onStepChange = (e) => {
@@ -45,6 +41,9 @@ const ageChange = (event) => {
     setAgeGroup(event.target.value);
 };
 
+const handleWeaponChange = (event) => {
+    setWeapon(event.target.value);
+}
 
 
 //./src/components/CalculationForm.js
@@ -65,7 +64,7 @@ const ageChange = (event) => {
             <DropDown 
             locationChange={locationChange}
                 value={location}
-                onStepChange={onStepChange} />}
+                 />}
 
             {step === 1 &&
             <RadioButtons
@@ -81,11 +80,12 @@ const ageChange = (event) => {
                 onSecondNumberChange={handleSecondNumberChange}
                 onStepChange={onStepChange} />}
 
+            {step === 1 && 
+            <Weapon 
+            weaponChange={handleWeaponChange}
+                value={weapon}
+                onStepChange={onStepChange} />}
 
-            {/* <button onClick={() => setIsResultDisplayed(true) } >Reveal ghost story</button> */}
-           
-           
-             {/* {isResultDisplayed  && ( */}
                  
                  {step === 2 &&
             <Summary 
@@ -95,15 +95,10 @@ const ageChange = (event) => {
                 numberTwo={numberTwo}
                 location={location}  
                 ageGroup={ageGroup}
+                weapon={weapon}
                 />}
 
-            {/* )} */}
-
-           {/* {isResultDisplayed && (
-               
-           <Summary 
-           nextpage= {nextPage}/>    
-           )}      */}
+        
 
         </section>
 

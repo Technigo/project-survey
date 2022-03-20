@@ -6,19 +6,21 @@ const Summary = ({
     numberTwo, 
     location, 
     ageGroup,
-    // nextPage
+    weapon
 }) => {
 
 return (
 <p className="ghost-story-text"> 
     It was a dark, dark night. {username} tried to restrain the feeling of panic 
     when walking into the {location}. Lesson learned never again to listen to {ageGroup},
-     but they paid well this time and were in charge. 
+     but they paid well for this job and were in charge. 
     The moon suddenly appeared casting long shadows in the form of {numberOne} emerging 
     creeping viscious creatures. With a sigh of relief {username} watched 
-    them silently disappear and all was still. 
+    them silently disappear and all was again still. 
     But suddenly a vibration from the ground ripped the stillness and floor apart 
-    and {numberTwo} large creatures dragged their way up from the ground.  
+    and {numberTwo} large creatures dragged their way up from the ground. 
+     
+    {username} felt fear freeze their blood but reached for their {weapon}. 
 </p>
 )
 }
