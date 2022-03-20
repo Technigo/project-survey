@@ -4,10 +4,12 @@ export const OtherInfo = ({ formData, setFormData }) => {
     return(
       <div className="other-info-container">
         <form>
-        <select value={formData.nationality} onChange={(event) => setFormData({...formData, nationality: event.target.value})}>
-        <option value="Space X">Space X</option>
-        <option value="NASA">NASA</option>
-        <option value="Voyager">Voyager</option>
+        <select value={formData.spaceship} onChange={(event) => setFormData({...formData, spaceship: event.target.value})}>
+        <option value="Antares">Antares</option>
+        <option value="Falcon Heavy">Falcon Heavy</option>
+        <option value="LauncherOne">LauncherOne</option>
+        <option value="SpacesX Starship">SpaceX Starship</option>
+        <option value="New Glenn">New Glenn</option>
         </select>
         </form>
       </div>

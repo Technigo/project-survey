@@ -18,7 +18,7 @@ export const Form = ({showModal, setShowModal}) => {
         other: "",
     });
 
-    const FormTitles = ["Who are you?", "Preferred destination?", "Other", "Review"]
+    const FormTitles = ["Who are you?", "Preferred destination?", "Preferred spaceship?", "Review"]
 
     const PageDisplay = () => {
         if(page === 0) {
@@ -62,7 +62,7 @@ export const Form = ({showModal, setShowModal}) => {
                          }
                     }}
                     >
-                    {page === FormTitles.length -1 ? "Submit" : "Next"}
+                    {page === FormTitles.length -2 ? "Submit" : "Next"}
                     </button>
                 </div>
             </div>
