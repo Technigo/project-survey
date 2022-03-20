@@ -1,9 +1,10 @@
 import React from 'react'
 
-const Submit = () => { 
+const Submit = (props) => { 
     return (
-        <input className="button" type="submit" value="I'm done, send in!" />
-        // <button onClick={() => setTempterature(-5)}>I'm done, send in!</button>
+      <div class="submit-container">
+        <button onClick={props.handleSubmit}>I'm done, send in!</button>
+      </div>
 )}
   
   export default Submit;
