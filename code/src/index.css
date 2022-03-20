@@ -104,7 +104,6 @@ p {
   margin-right: 15px;
 }
 
-
 .summary-container {
   display: flex;
   flex-direction: column;
@@ -146,22 +145,22 @@ p {
     font-size: 25px;
   }
 
-.submit-btn, 
-.next-btn,
-.back-btn {
-  font-size: 20px;
-  width: 7rem;
-  height: 3rem;
-}
+  .submit-btn, 
+  .next-btn,
+  .back-btn {
+    font-size: 20px;
+    width: 7rem;
+    height: 3rem;
+ }
 
-.input-container {
-  display: flex;
-  flex-direction: row;
-}
+  .input-container {
+    display: flex;
+    flex-direction: row;
+  }
 
-.radio {
-  margin-right: 3px;
-}
+  .radio {
+    margin-right: 3px;
+  }
 
 }
 
@@ -178,14 +177,13 @@ p {
     font-size: 24px;
   }
 
-.submit-btn, 
-.next-btn,
-.back-btn {
-  font-size: 23px;
-  width: 8rem;
-  padding: 10px;
-  
-}
+  .submit-btn, 
+  .next-btn,
+  .back-btn {
+    font-size: 23px;
+    width: 8rem;
+    padding: 10px;
+  }
 }
 
 

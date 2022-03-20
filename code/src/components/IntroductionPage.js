@@ -1,6 +1,6 @@
 import React from 'react'
 
-export const Introduction = ({nextQuestion}) => {
+export const Introduction = ({ nextQuestion }) => {
     return (
         <main className='main-container'>
             <h1 className='question-title' tabIndex='0'>Travel survey </h1>

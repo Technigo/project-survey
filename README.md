@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The project for this week was to create a typeform like product in React and practice state hook and controlled forms. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by making a basic page with all the form elements I wanted to display. Then I divided it up to different components, one for each step of the survey (question one is one component etc). After that I tried to connect everything and making it more dynamic. 
+
+My main problem with this project was to understand how to connect and use state hook. I spend most of my time trying to understand that part better, so if I had more time I would have used some other form-elements than just  dropdown and radio buttons. But for now it felt more important to try to get the basic of React and state hook. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
