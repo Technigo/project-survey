@@ -43,6 +43,12 @@ form {
   font-family: asar;
 }
 
+footer a {
+  text-decoration: none;
+  color: black;
+  font-size: .5em;
+}
+
 @media (min-width: 900px) {
 
 h1 {
