@@ -6,7 +6,7 @@ const ResetButton = ({ onClick }) => {
             className='button'
             type="button"
             onClick={onClick}>Restart</button>
-    )
-}
+    );
+};
 
 export default ResetButton;

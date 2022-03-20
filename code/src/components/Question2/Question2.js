@@ -9,7 +9,7 @@ const Question2 = (props) => {
 
     const handleLostItemChange = (event) => {
         setLostItem(event.target.value);
-    }
+    };
 
     return (
         <>
@@ -28,7 +28,7 @@ const Question2 = (props) => {
                 ))}
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Question2;

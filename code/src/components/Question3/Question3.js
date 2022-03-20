@@ -24,7 +24,7 @@ const Question3 = (props) => {
                 </select>
             </div>
         </>
-    )
-}
+    );
+};
 
 export default Question3;

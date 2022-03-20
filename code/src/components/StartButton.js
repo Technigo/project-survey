@@ -1,6 +1,6 @@
 import React from 'react';
 
-const StartButton = ({onClick}) => {
+const StartButton = ({ onClick }) => {
 
     return (
         <button

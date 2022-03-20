@@ -2,6 +2,9 @@ import React from 'react';
 
 const NextButton = ({ displayPage, onClick }) => {
 
+    // NextButton's type is button if it's not the last 
+    // question, otherwise the type is submit
+
     const ifNotTheLastQuestion = (
         <button
             className='button'
@@ -10,7 +13,7 @@ const NextButton = ({ displayPage, onClick }) => {
         >
             Next
         </button>
-    )
+    );
 
     const ifTheLastQuestion = (
         <button
@@ -20,14 +23,14 @@ const NextButton = ({ displayPage, onClick }) => {
         >
             Submit
         </button>
-    )
+    );
 
     if (displayPage === 3) {
-        return ifTheLastQuestion
+        return ifTheLastQuestion;
     } else {
-        return ifNotTheLastQuestion
-    }
-}
+        return ifNotTheLastQuestion;
+    };
+};
 
 export default NextButton;
 

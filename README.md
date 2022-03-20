@@ -1,13 +1,17 @@
-# Survey form with React
+# Week 10: Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week's assignment was to make a Typeform like survey app practicing React state and controlled forms.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+The survey should consist of at least three questions where at least one should include radio buttons and one should include a select dropdown. When the submit button is pressed the input form should be hidden and a summary displayed instead. The survey app should also follow accessibility guidelines.
+
+First a created separate css files for all the components but I thought it got a little bit messy this way and added most of the styling of the components in the index.css file instead.
+
+I used two switch statements inside the Form component in order to show different components depending on the displayPage state.
+
+If I had more time I would add some input validation and maybe some more input types and a progress bar.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://jessicas-survey-project.netlify.app

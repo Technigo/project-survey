@@ -7,7 +7,7 @@ const Question1 = (props) => {
 
   const handleInputChange = (event) => {
     setUsername(event.target.value);
-  }
+  };
 
   return (
     <>

@@ -13,65 +13,70 @@ const Form = () => {
   const [displayPage, setDisplayPage] = useState(0);
   const [username, setUsername] = useState('');
   const [lostItem, setLostItem] = useState('');
-  const [lastTime, setLastTime] = useState('today');
+  const [lastTime, setLastTime] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-  }
+  };
 
   const handleStartButtonClick = () => {
-    setDisplayPage(displayPage + 1)
-  }
+    setDisplayPage(displayPage + 1);
+  };
 
   const handleNextButtonClick = () => {
-    setDisplayPage(displayPage + 1)
-  }
+    setDisplayPage(displayPage + 1);
+  };
 
   const handleResetButtonClick = () => {
     setDisplayPage(0);
     setUsername('');
     setLostItem('');
     setLastTime('');
-  }
+  };
+
+  const pageOne = <WelcomePage />;
+  const pageTwo = <Question1 username={username} setUsername={setUsername} />;
+  const pageThree = <Question2 username={username} lostItem={lostItem} setLostItem={setLostItem} />;
+  const pageFour = <Question3 username={username} lostItem={lostItem} lastTime={lastTime} setLastTime={setLastTime} />;
+  const pageFive = <Summary username={username} lostItem={lostItem} lastTime={lastTime} />;
 
   const pageToDisplay = (page) => {
     switch (page) {
       case 0:
-        return <WelcomePage />;
+        return pageOne;
       case 1:
-        return <Question1 username={username} setUsername={setUsername} />;
+        return pageTwo;
       case 2:
-        return <Question2 username={username} lostItem={lostItem} setLostItem={setLostItem} />;
+        return pageThree;
       case 3:
-        return <Question3 username={username} lostItem={lostItem} lastTime={lastTime} setLastTime={setLastTime} />;
+        return pageFour;
       case 4:
-        return <Summary username={username} lostItem={lostItem} lastTime={lastTime} />;
+        return pageFive;
       default:
-        return null;
+        return pageOne;
     };
   };
-  
-  // Include these variables in the switch function below for consistency?
-  const startButton = <StartButton onClick={handleStartButtonClick} />
-  const nextButton = <NextButton displayPage={displayPage} onClick={handleNextButtonClick} />
-  const resetButton = <ResetButton onClick={handleResetButtonClick} />
+
+  const startButton = <StartButton onClick={handleStartButtonClick} />;
+  const nextButton = <NextButton displayPage={displayPage} onClick={handleNextButtonClick} />;
+  const resetButton = <ResetButton onClick={handleResetButtonClick} />;
 
   const buttonsToDisplay = (page) => {
     switch (page) {
       case 0:
         return startButton;
-      case 1: 
+      case 1:
         return nextButton;
-      case 2: 
+      case 2:
         return nextButton;
       case 3:
         return nextButton;
       case 4:
         return resetButton;
-      default: 
-        return null;
-    }
-  }
+      default:
+        return null; //return something else?
+    };
+  };
 
   return (
     <form className='form' onSubmit={handleSubmit}>
@@ -79,7 +84,7 @@ const Form = () => {
       <br />
       {buttonsToDisplay(displayPage)}
     </form>
-  )
-}
+  );
+};
 
 export default Form;
