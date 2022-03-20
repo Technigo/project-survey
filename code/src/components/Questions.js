@@ -38,6 +38,11 @@ const QuestionContainer = (props) => {
     setCounter(0);
     setShowSummary(false);
   }
+              //The questions are in the json file questions.json, 
+              //together with the type of the question (input, dropdown or radio buttons), questions number, 
+              //and with the answer alternatives. 
+              //A foreach function go through all of the questions, checks what number it should display 
+              //and what type and answer alternatives that queations has.
 
               let answerComponent;
               const questionsInTotal = questions.questions.length;
@@ -77,25 +82,30 @@ const QuestionContainer = (props) => {
     return (
       <>
       <div className="question-container container">
+
+        {/* Start page should be displayed as page number 0 */}
         { counter === 0 && <Start /> }
+
+        {/* The questions in the answerComponent should be displayed if we are not on the summary page. */}
+        {!showSummary && answerComponent }
         
-            {!showSummary && answerComponent }
-            
-            {counter === questionsInTotal ? 
-              <>
-                {!showSummary && 
-                <div className="buttons-container">
-                  <NextPrevious counter={counter} setCounter={setCounter} hideNextQuestionButton={true} />
-                  <Submit handleSubmit={handleSubmit} /> 
-                </div>
-                }
-              </>
-                : 
-                <div className="container">
-                  { counter > 0 && <p>You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going!</p> }
-                  <NextPrevious counter={counter} setCounter={setCounter} />
-                </div> 
+        {/* If the counter has the same value as the questions are in total, then we should show the submit button,
+        otherwise show the text about how manu questions that are left */}
+        {counter === questionsInTotal ? 
+          <>
+            {!showSummary && 
+            <div className="buttons-container">
+              <NextPrevious counter={counter} setCounter={setCounter} hideNextQuestionButton={true} />
+              <Submit handleSubmit={handleSubmit} /> 
+            </div>
             }
+          </>
+            : 
+            <div className="container">
+              { counter > 0 && <p>You are now on question number {counter} and you have {questionsInTotal - counter} left. Keep going!</p> }
+              <NextPrevious counter={counter} setCounter={setCounter} />
+            </div> 
+        }
       </div>
 
       {showSummary && <>
