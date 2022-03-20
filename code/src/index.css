@@ -25,7 +25,7 @@ code {
 h1 {
   color: var(---main-title);
   font-size: 25px;
-  padding: 25px;
+  padding: 20px;
   text-align: center;
 }
 
@@ -72,8 +72,8 @@ p {
 .back-btn {
   background-color: var(---background-form);
   font-size: 16px;
-  width: 120px;
-  height: 40px;
+  width: 6rem;
+  height: 2.5rem;
   padding: 10px;
   margin: 20px 40px; 
   cursor: pointer;
@@ -83,7 +83,7 @@ p {
   cursor: pointer;
   font-size: 20px;
   padding: 5px;
-  background-color: #A7D49B;
+  background-color: var(---background-body);
 }
 
 .option {
@@ -126,6 +126,66 @@ p {
 .summary-text {
   padding: 0;
   margin-bottom: 20px;
+}
+
+
+@media screen and (min-width: 668px) {
+  h1 {
+    font-size: 50px;
+  }
+
+  h3 {
+    font-size: 25px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .question-number {
+    font-size: 25px;
+  }
+
+.submit-btn, 
+.next-btn,
+.back-btn {
+  font-size: 20px;
+  width: 7rem;
+  height: 3rem;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio {
+  margin-right: 3px;
+}
+
+}
+
+@media screen and (min-width: 1024px) {
+  h1 {
+    font-size: 60px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    font-size: 24px;
+  }
+
+.submit-btn, 
+.next-btn,
+.back-btn {
+  font-size: 23px;
+  width: 8rem;
+  padding: 10px;
+  
+}
 }
 
 

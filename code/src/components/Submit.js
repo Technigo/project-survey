@@ -7,7 +7,7 @@ export const SubmitSurvey = ({nextQuestion, previousQuestion}) => {
             <form onSubmit={nextQuestion}>
             <button className='back-btn' onClick={previousQuestion}>Go back</button>
                 <button className='submit-btn' type='submit'>
-                    Yes, submit!
+                    Submit!
                 </button>
             </form>
         </main>
