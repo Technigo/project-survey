@@ -9,7 +9,7 @@ import React from 'react'
     return (
         <section className="container">
           
-        <h2>Alright let's go!</h2>
+        <h2>Thank you for participating!</h2>
         <label htmlFor="name">Please type your name</label>
         
         <input

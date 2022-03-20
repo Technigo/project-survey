@@ -7,7 +7,8 @@ const Mediahours = ({hourselect, onHourSelect, onNextChange, onBackChange }) => 
             <section className="container">
                 
                 <h2>How many hours per day do you spend with a media device?</h2>
-                <select 
+                <select
+                    id="hours" 
                     className="dropdown"
                     value={hourselect}
                     onChange={onHourSelect}> 
@@ -22,7 +23,7 @@ const Mediahours = ({hourselect, onHourSelect, onNextChange, onBackChange }) => 
                     <option value="12-14">12-14 </option>
                     <option value="+14">+ 14  &#40;I live online&#41; </option>
                     </select>
-                    
+
                     <button onClick={onNextChange} className="btn">Next question</button>
                     <button className="btn" onClick={onBackChange}>Back</button>
                 </section>
