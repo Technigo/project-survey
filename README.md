@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this project the goal was to create a survey tool with React using state and controlled forms.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I began the project by doing a sketch on Figma. Then I proceeded by building the question structures. I had some struggles with the custom styling of inputs at first, but managed to find a solution. With more time I will add validation to the inputs and maybe do some more styling.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here's a link to my deployed project:
+https://a-random-survey-for-you.netlify.app/
+
