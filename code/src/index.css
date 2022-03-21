@@ -143,12 +143,12 @@ input[type="radio"] + span {
   cursor: pointer;
   transition: all 0.3s ease-in;
   border-radius: 10px;
-  padding: 30px;
+  padding: 20px 4px 20px;
 }
 
 input[type="radio"]:checked + span {
   background: var(--clr-lightblue);
-  padding: 30px;
+  padding: 20px 4px 20px;
 }
 
 .img-option {
@@ -171,15 +171,6 @@ input[type="radio"]:checked + span {
 
 .radio-img {
   margin: 2em 0;
-}
-
-.hand-in {
-  /* display: block;
-  position: relative;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none; */
 }
 
 select {
@@ -276,6 +267,11 @@ footer {
   .name-input {
     padding: 12px;
     font-size: 16px;
+  }
+
+  input[type="radio"]:checked + span,
+  input[type="radio"]:checked + span {
+    padding: 30px;
   }
 
   .img-wrapper--images {

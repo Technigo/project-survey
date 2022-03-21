@@ -20,7 +20,7 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
           {options.map((option) => {
             return (
               <label
-                className="description radio-img hand-in"
+                className="description radio-img"
                 htmlFor={option}
                 key={option}
               >
