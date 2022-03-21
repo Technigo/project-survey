@@ -30,7 +30,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 16px;
+  font-size: 14px;
   color: white;
 }
 
@@ -78,8 +78,8 @@ h1 {
   font-family: "Poppins", sans-serif;
   border: none;
   border-radius: 5px;
-  background-color: #b9d1e6;
-  margin-bottom: 20px;
+  background-color: #719abe;
+  margin-bottom: 30px;
 }
 
 .question {
@@ -96,6 +96,12 @@ h1 {
   margin-bottom: 30px;
   display: flex;
   flex-direction: column;
+}
+
+.dropdown-option {
+  width: 400px;
+  font-size: 24px;
+  margin-bottom: 30px;
 }
 .summary {
   font-family: "Satisfy", cursive;
