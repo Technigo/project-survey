@@ -2,7 +2,7 @@ import React from "react";
 
 const graduate = [
   "Select one by clicking here",
-  "thankful you made it though",
+  "thankful you made it through",
   "surprised you made it",
   "ready to get started",
   "somehow at the finish line",
