@@ -1,68 +1,111 @@
-import StartPage from "./Start";
-import FirstQuestion from "./FirstQuestion";
-import SecondQuestion from "./SecondQuestion";
-import ThirdQuestion from "./ThirdQuestion";
-import Summary from "./Summary";
 
-const Form = () => {
 
-const [nameInput, setNameInput] = useState( ' ' )
-const [flavourInput, setFlavourInput] = useState( ' ' )
-const [sizeInput, setSizeInput] = useState( ' ' )
-const [step, setStep] = useState(1)
 
-const onInputChange = (event) => {
-    setNameInput(event.taget.value)
-}
-const onFlavourInput = (flavourInput) => {
-    setFlavourInput (flavourInput)
-}
-const onSizeInput = (event) => {
-    setSizeInput (event.target.value)
+.
+
+/*All questions*/
+
+
+.question-box{
+  position: relative;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 50%;
+  border-radius: 25px;
 }
 
-return (
-    <main className="wrapper">
-{step === 0 && (
-<StartPage
-onStepChange={onStepChange}
-/>
-)}
+. question-text {
+    font-family: 'Alata', sans-serif;
+    font-size: 22pt;
+    margin: 4rem;
+    margin-top:6rem;
+    text-align: center;
+    background-color: #dd7d92;
+    opacity: 0.9;
+    color: #e2dddc;
+    padding: 2rem;
+    border-radius: 30px;
+    box-shadow: 0 0 7px #fff, 0 0 21px #fff, 0 0 102px rgb(242, 245, 56), 0 0 151px #0fa;
+  }
 
-{step === 1 && (
-    <FirstQuestion
-    name={nameInput}
-    onInputChange={onInputChange}
-    onStepChange={onStepChange}
-    />
-)}
+  .input-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    margin-top: 30%;
+    font-family: 'Alata', sans-serif;
+  }
 
-{step === 2 && (
-    <SecondQuestion
-    flavour={flavourinput}
-    onFlavourInput={onFlavourInput}
-    onStepChange={onStepChange}
-/>
-    )}
 
-   {step === 3 && (
-       <ThirdQuestion
-       size={sizeInput}
-       onSizeInput={sizeInput}
-       onStepChange={onStepChange}
-       />
-   )} 
 
-{step === 5 && (
-    <Summary
-    name={nameInput}
-    flavour={flavourinput}
-    size={sizeInput}
-    />
-)}
 
-    </main>
-)
+
+
+  
+
+  .radio-form{
+    display: flex;
+    flex-direction:column;
+    justify-content: left;
+    position: relative;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    user-select: none;
+    padding: 40px;
+  }
+
+  .flavours {
+    display: flex;
+    flex:content;
+    font-family: 'Alata', sans-serif;
+    margin-right: 1rem;
+  }
+
+
+
+.radio-button{
+  padding:20px;
 }
 
-export default Form;
+  .radio-form:hover input ~ .checkmark {
+    background-color: #ccc;
+  }
+
+  .summary{
+    background-color: #ca5468;
+  }
+
+
+ 
+  
+
+  
+  
+  
+  .question-box{
+  
+    margin-left: 8%;
+    margin-right: 15%;
+  }
+  
+  
+ 
+  
+  .intro-container {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+  }
+  
+ 
+  
+  
+ 
+  
+   
+ 
+  
+  
+  

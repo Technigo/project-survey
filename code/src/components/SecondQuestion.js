@@ -3,38 +3,66 @@ import React from "react";
 const SecondQuestion =({flavourInput, onFlavourInput, onStepChange}) => {
 return (
 
-<div className="radio-wrapper">
-    <h2>Which macaron flavour do you prefer?</h2>
+<div className="question-box">
+<p className="intro-text">Which macaron <em>flavour</em> do you prefer?</p>
     <form className="radio-form">
+
     
 <label className="flavours">
 <input
 type="radio"
-value="chocolate"
+value="Chocolate"
 onChange={onFlavourInput}
-checked={flavourInput === "chocolate"}
+checked={flavourInput === "Chocolate"}
 />
-Chocolate
+<span className="radio-input">Chocolate 🍫 </span>
 </label>
 
 <label className="flavours">
 <input
 type="radio"
-value="vanilla"
+value="Vanilla"
 onChange={onFlavourInput}
-checked={flavourInput === "vanilla"}
+checked={flavourInput === "Vanilla"}
 />
-Vanilla
+<span className="radio-input">Vanilla ⚪️ </span>
 </label>
 
+<label className="flavours">
+<input
+type="radio"
+value="Lemon"
+onChange={onFlavourInput}
+checked={flavourInput === "Lemon"}
+/>
+<span className="radio-input">Lemon 🍋 </span>
+</label>
 
+<label className="flavours">
+<input
+type="radio"
+value="Strawberry"
+onChange={onFlavourInput}
+checked={flavourInput === "Strawberry"}
+/>
+<span className="radio-input">Strawberry 🍓 </span>
+</label>
 
+<label className="flavours">
+<input
+type ="radio"
+value="Hazelnut"
+onChange={onFlavourInput}
+checked={flavourInput === "Hazelnut"}
+/>
+<span className="radio-input"> Hazelnut 🌰 </span>
+</label>
+</form>
 
-
-<div className="button-wrapper">
-<button className="next-question" onClick={onStepChange}>Next Question</button>
+<div className="button-container">
+<button className="second-btn" onClick={onStepChange}>OK, next!</button>
     </div>
-    </form>
+
     </div>
     
 );
