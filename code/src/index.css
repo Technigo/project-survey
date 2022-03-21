@@ -130,7 +130,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked + img {
-  outline: 5px solid var(--clr-darkblue);
+  border: 5px solid var(--clr-darkblue);
   border-radius: 5px;
   overflow: hidden;
 }
@@ -144,7 +144,7 @@ input[type="radio"]:checked + .hand-in {
   width: 250px;
   margin-bottom: 2em;
   border-radius: 5px;
-  outline: 5px solid var(--clr-lightblue);
+  border: 5px solid var(--clr-lightblue);
   cursor: pointer;
 }
 
