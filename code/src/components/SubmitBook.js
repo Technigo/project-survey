@@ -21,6 +21,7 @@ const SubmitBook = ({ nextQuestion, book, setBook }) => {
                     type="text"
                     name="title"
                     value={book.title}
+                    placeholder="Name of the book you want to recommend"
                 />
             </label>
 
