@@ -4,9 +4,7 @@ body {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Abel', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F2FFE9;
@@ -22,7 +20,6 @@ code {
   justify-content: center;
   align-items: center;
   color: #DB6B97;
-  font-family: 'Abel', sans-serif;
 }
 
 h1, h2, h3, p {
@@ -37,8 +34,9 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 10em 5em;
-  background: #FEF9EF;
+  margin: 5em;
+  padding: 1em;
+  background: #F7F7F7;
   border-radius: 10%;
 }
 
@@ -68,7 +66,16 @@ button {
 }
 
 label, button, select {
+  font-family: 'Abel', sans-serif;
   margin: 2em;
+}
+
+button {
+  border-radius: 10px;
+}
+
+input {
+  font-family: 'Abel', sans-serif;
 }
 
 .hightlight {
