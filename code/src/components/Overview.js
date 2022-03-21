@@ -10,7 +10,7 @@ const Overview = ({
   setRadioValue,
 }) => {
   return (
-    <section className="form-container">
+    <section className="form-container overview">
       <h2>
         First of all {nameInput}, I want to give you a big high five for coming
         this far and I'm so happy we are doing this together!

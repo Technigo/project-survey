@@ -131,10 +131,11 @@ input[type="radio"] {
 
 input[type="radio"]:checked + img {
   outline: 5px solid var(--clr-darkblue);
+  border-radius: 5px;
 }
 
 /*This on needs some work*/
-label[type="radio"]:checked + .hand-in {
+input[type="radio"]:checked + label .hand-in {
   background: var(--clr-lightblue);
 }
 
@@ -222,6 +223,16 @@ button:active {
   transform: translateY(-1px);
 }
 
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-text {
+  margin-bottom: 0;
+}
+
 /* -----------------------------------media quires----------------------------------- */
 @media screen and (min-width: 768px) {
   h1 {
@@ -292,6 +303,10 @@ button:active {
   .form-container {
     width: 600px;
     padding: 4em;
+  }
+
+  .overview {
+    width: 700px;
   }
 
   .img-option {

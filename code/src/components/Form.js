@@ -6,6 +6,7 @@ import { ThirdQuestion } from "components/ThirdQuestion";
 import FourthQuestion from "components/FourthQuestion";
 import FifthQuestion from "components/FifthQuestion";
 import Overview from "components/Overview";
+import Footer from "components/Footer";
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("");
@@ -81,6 +82,7 @@ const Form = () => {
           graduation={graduation}
         />
       )}
+      <Footer />
     </div>
   );
 };
