@@ -9,7 +9,6 @@ import ProgressBar from "./ProgressBar";
 import Summary from "./Summary";
 
 const Form = () => {
-  // variabler för användar-input --> states
   const [step, setStep] = useState(0);
   const [nameInput, setNameInput] = useState("");
   const [musicInput, setMusicInput] = useState("");
@@ -41,7 +40,6 @@ const Form = () => {
     setStep(step - 1);
   };
 
-  // Vad form-komponenten kallar på för andra komponeneter
   return (
     <main>
       <header>
