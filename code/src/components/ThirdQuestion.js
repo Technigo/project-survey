@@ -14,20 +14,22 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
           image you want to select
         </h3>
         <div className="img-wrapper--images">
-          <label htmlFor="relate">
-            <input
-              id="relate"
-              type="radio"
-              value={RelateOne}
-              onChange={(event) => setRadioValue(event.target.value)}
-              checked={radioValue === RelateOne}
-            />
-            <img
-              className="img-option"
-              src={RelateOne}
-              alt="page with only a heading"
-            />
-          </label>
+          <div className="img-div">
+            <label htmlFor="relate">
+              <input
+                id="relate"
+                type="radio"
+                value={RelateOne}
+                onChange={(event) => setRadioValue(event.target.value)}
+                checked={radioValue === RelateOne}
+              />
+              <img
+                className="img-option"
+                src={RelateOne}
+                alt="page with only a heading"
+              />
+            </label>
+          </div>
 
           <label htmlFor="maxout">
             <input

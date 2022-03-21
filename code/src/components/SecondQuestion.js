@@ -18,15 +18,17 @@ const SecondQuestion = ({ goals, onGoalsChange, onStepChange }) => {
         <label className="description" htmlFor="selectInput">
           Select one of the options
         </label>
-        <select onChange={onGoalsChange} value={goals}>
-          {levelGoal.map((item) => {
-            return (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            );
-          })}
-        </select>
+        <div>
+          <select onChange={onGoalsChange} value={goals}>
+            {levelGoal.map((item) => {
+              return (
+                <option key={item} value={item}>
+                  {item}
+                </option>
+              );
+            })}
+          </select>
+        </div>
 
         <button onClick={onStepChange}>Next Question</button>
       </form>

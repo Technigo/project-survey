@@ -36,7 +36,7 @@ form {
 }
 
 .form-container {
-  padding: 2rem;
+  padding: 3.5rem;
   background: var(--clr-white);
   border-radius: 10px;
   display: flex;
@@ -66,13 +66,13 @@ h2 {
   text-transform: uppercase;
   color: var(--clr-darkblue);
   margin: 2em 0 0;
-  text-align: center;
   margin: 0 0 1em;
 }
 
 h3 {
   font-size: 1rem;
   font-weight: 100;
+  margin-bottom: 2em;
   color: var(--clr-darkblue);
 }
 
@@ -136,7 +136,7 @@ input[type="radio"]:checked + img {
 }
 
 /*This on needs some work*/
-input[type="radio"]:checked + label .hand-in {
+input[type="radio"]:checked + .hand-in {
   background: var(--clr-lightblue);
 }
 
@@ -146,6 +146,11 @@ input[type="radio"]:checked + label .hand-in {
   border-radius: 5px;
   outline: 5px solid var(--clr-lightblue);
   cursor: pointer;
+}
+
+.img-div {
+  margin: 0;
+  border-radius: 5px;
 }
 
 .radio-options {
@@ -173,14 +178,14 @@ input[type="radio"]:checked + label .hand-in {
 
 select {
   appearance: none;
-  /* -webkit-appearance: none; */
+  -webkit-appearance: none;
   background: var(--clr-grey);
   box-shadow: 0px 5px 5px var(--clr-shadow);
   border-radius: 20px;
   width: 21em;
   height: 3em;
   margin: 2em;
-  text-align: center;
+  padding-left: 10px;
   border: none;
   outline: none;
   color: var(--clr-darkblue);
