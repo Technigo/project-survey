@@ -15,7 +15,7 @@ value="Chocolate"
 onChange={onFlavourInput}
 checked={flavourInput === "Chocolate"}
 />
-<span className="radio-input">Chocolate 🍫 </span>
+<span className="radio-input">Chocolate</span>
 </label>
 
 <label className="flavours">
@@ -25,7 +25,7 @@ value="Vanilla"
 onChange={onFlavourInput}
 checked={flavourInput === "Vanilla"}
 />
-<span className="radio-input">Vanilla ⚪️ </span>
+<span className="radio-input">Vanilla</span>
 </label>
 
 <label className="flavours">
@@ -35,7 +35,7 @@ value="Lemon"
 onChange={onFlavourInput}
 checked={flavourInput === "Lemon"}
 />
-<span className="radio-input">Lemon 🍋 </span>
+<span className="radio-input">Lemon</span>
 </label>
 
 <label className="flavours">
@@ -45,7 +45,7 @@ value="Strawberry"
 onChange={onFlavourInput}
 checked={flavourInput === "Strawberry"}
 />
-<span className="radio-input">Strawberry 🍓 </span>
+<span className="radio-input">Strawberry</span>
 </label>
 
 <label className="flavours">
@@ -55,7 +55,7 @@ value="Hazelnut"
 onChange={onFlavourInput}
 checked={flavourInput === "Hazelnut"}
 />
-<span className="radio-input"> Hazelnut 🌰 </span>
+<span className="radio-input"> Hazelnut </span>
 </label>
 </form>
 
