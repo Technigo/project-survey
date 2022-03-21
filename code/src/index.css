@@ -46,6 +46,7 @@ color:black;
 padding: 5px;
 margin-left: 5px;
 font-size: 15px;
+text-align: center;
 
 }
 
@@ -58,32 +59,36 @@ font-size: 15px;
 justify-content: center;
 }
 
-radio-button {
+.radio-button {
   
   color: black;
   padding: 5px;
   margin-top: 10px; 
   font-size:15px;
-  margin-left: 20px;
-  display: inline-block;
+  text-align: left;
+  padding-bottom: 23px;
   width: 100%;
+  display: inline-block;
 }
-
-.radio-submit-button {
-background-color: antiquewhite;
-color:black;
-padding: 5px;
-margin-left: 50px;
+ 
+.submit-radio-button {
+  background-color: antiquewhite;
+  text-align: center;
+  padding: 10px;
 font-size: 15px;
 
 }
-
 .summary-box {
   color:black;
   padding: 5px;
   margin-left: 10px;
   font-size:30px;
+
 }
 
+section {
+max-width: 800px;
+margin: auto;
 
+}
 

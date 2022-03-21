@@ -2,53 +2,56 @@ import React from 'react'
 
 const ThirdQuestion = ({ buyInput, onBuyInputChange, onStepChange }) => {
 
-return (
-    <section>
-    <h2> Where to buy your bike?</h2>
-    <form>
-      
-    <div className="radio-button">
-    <label>
-        
-        <input
-        value={"online"}
-        type="radio"
-        onChange={onBuyInputChange} 
-        checked={buyInput === "online"}
-        />
-        online       
-        </label>
+    return (
+        <section>
+            <form className="App">
+                <h2> Where to buy your bike?</h2>
+                <div className="radio-button">
+                    <label>
+                        
+                        <input
+                         type="radio" 
+                         value={"online"}
+                        onChange={onBuyInputChange}
+                        checked={buyInput === "online"}   
+                        />
+                        online
+                    </label>
+                </div>
 
-        <label>
-        <input
-        value={"second hand"}
-        type="radio"
-        onChange={onBuyInputChange} 
-        checked={buyInput === "second hand"}
-        />
-        second hand
-        </label>
+                <div className="radio-button">
+                    <label>
+                        <input 
+                        type="radio" 
+                        value={"second hand"}
+                        onChange={onBuyInputChange}
+                        checked={buyInput === "second hand"}
+                        />
+                        second hand
+                    </label>
+                </div>
 
-        <label>
-        <input
-        value={"in a bike shop"}
-        type="radio"
-        onChange={onBuyInputChange} 
-        checked={buyInput === "in a bike shop"}
-        />
-        in a bike shop
-        </label>
+                <div className="radio-button">
+                    <label>
+                        <input 
+                        type="radio" 
+                        value={"bike shop"}
+                        onChange={onBuyInputChange}
+                        checked={buyInput === "bike shop"}
+                        />
+                        bike shop
+                    </label>
+                </div>
+            </form>
 
-        <button 
-        className='radio-submit-button'
-        onClick={onStepChange}
-        >Almost there!
-
-        </button>
-        </div>
-        </form>  
-</section>
-)
+            <button
+                className='submit-button'
+                onClick={onStepChange}
+                disabled={buyInput === ""}
+            >NEXT!
+            </button>
+        </section>
+    )
 }
 
 export default ThirdQuestion;
