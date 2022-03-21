@@ -1,8 +1,8 @@
 import React from "react";
-import RelateOne from "../images/hello-world.png";
-import RelateTwo from "../images/margin-maxout.png";
-import RelateThree from "../images/if-else-forever.png";
-import RelateFour from "../images/cheaper-option.png";
+import RelateOne from "../images/helloworld.png";
+import RelateTwo from "../images/maxout.png";
+import RelateThree from "../images/if-else.png";
+import RelateFour from "../images/cheaper.png";
 
 export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
   return (
