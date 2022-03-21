@@ -8,6 +8,8 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* global targets  */
+
 .section {
   display: flex;
   padding: 0 5em;
@@ -25,4 +27,68 @@ body {
   color: white;
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
   monospace;
+  font-weight: bold;
+  line-height: 1.7em;
+}
+
+.btn, .summary-btn, .thank-you-btn {
+  padding: .8em;
+  margin-top: 2.5em;
+  font-size: 14px;
+}
+
+.btn, .welcome-btn, .summary-btn, .thank-you-btn {
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  text-transform: uppercase;
+  border-radius: 5%;
+  background-color: rgba(255, 255, 255, 0.29);
+}
+
+.welcome-btn:hover, .btn:hover, .summary-btn:hover, .thank-you-btn:hover {
+  background-color: rgba(255, 255, 255, 0.577);
+  color:rgb(34, 33, 33);
+  font-weight: bold;
+}
+
+
+/* Welcome section  */
+
+.title {
+  margin-bottom: 2em;
+}
+
+input {
+  border: none;
+  background-color: rgba(240, 248, 255, 0);
+  border-bottom: 1px solid rgb(255, 255, 255);
+  color: white;
+  font-size: 16px;
+  text-align: center;
+}
+
+.input-area {
+  line-height: 2.3em;
+}
+
+.welcome-btn {
+  padding: 1em;
+  margin-top: 5em;
+  font-size: 16px;
+}
+
+
+/* Thank you section */
+
+.thank-you {
+  background-image: url(images/popcorn.jpg);
+  background-position: 60%;
+}
+
+.thank-you-title {
+  background-color: rgba(252, 252, 252, 0.475);
+  padding: 5em 2em;
+  color: rgb(5, 5, 5);
 }

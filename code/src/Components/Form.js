@@ -7,6 +7,7 @@ import Input from './Input';
 import Select from'./Select';
 import SecondSelect from './SecondSelect';
 import Summary from './Summary';
+import ThankYou from './ThankYou';
 
 
 export const Form = () => {
@@ -79,7 +80,6 @@ export const Form = () => {
                     onClickNext={handleOnClickNext}
                 />
                 )}
-                
                 {question === 6 && (
                     <Summary
                         username={username}
@@ -87,7 +87,11 @@ export const Form = () => {
                         favouriteMovie={favouriteMovie}
                         newMovies={newMovies}
                         snacks={snacks}
+                        onClickNext={handleOnClickNext}
                     />
+                )}
+                {question === 7 && (
+                    <ThankYou />
                 )}
             </div>
         </section>

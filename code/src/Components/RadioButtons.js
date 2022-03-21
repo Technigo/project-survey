@@ -6,22 +6,24 @@ const RadioButtons = ({intervalGroup, onChangeInterval, onClickNext}) => {
     return (
         <section className="radiobuttons section">
             <div className="section-child">
-                <form>
-                    <p>How often do you visit ut?</p>
-                    {intervals.map((element) => (
-                        <label key={element}>
-                            <input
-                                className="radio-button-input"
-                                type="radio"
-                                onChange={onChangeInterval}
-                                checked={intervalGroup === element}
-                                value={element}
-                                />
-                            {element}
-                        </label>
-                    ))}
-                </form>
-                <button className="button" onClick={onClickNext}>Next</button>
+                <div className="form">
+                    <form>
+                        <p>How often do you visit us?</p>
+                        {intervals.map((element) => (
+                            <label key={element}>
+                                <input
+                                    className="radio-button-input"
+                                    type="radio"
+                                    onChange={onChangeInterval}
+                                    checked={intervalGroup === element}
+                                    value={element}
+                                    />
+                                {element}
+                            </label>
+                        ))}
+                    </form>
+                </div>
+                <button className="btn" onClick={onClickNext}>Next</button>
             </div>
         </section>
     );
