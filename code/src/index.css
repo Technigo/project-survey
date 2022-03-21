@@ -408,7 +408,7 @@ input[type=range]::-ms-track {
   width: 350px;
   height: 450px;
   border: solid 2px var(--first);
-  padding: 0.8rem;
+  padding: 1rem;
   border-radius: 25px;
 }
 
