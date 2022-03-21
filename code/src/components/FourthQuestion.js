@@ -3,8 +3,8 @@ import React from "react";
 const options = [
   "some time during the weekend",
   "sunday between 23:30-00:00",
-  "early in the week (Friday included)",
-  "could be in time or after deadline",
+  "between Monday-Friday",
+  "could be after deadline",
 ];
 
 const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
