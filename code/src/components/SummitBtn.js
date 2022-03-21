@@ -9,7 +9,7 @@ const SummitBtn = ({ nameInput, typeInput, buyInput }) => {
         <div className="summary-box">
           <p> {nameInput}! </p>
           <p> You have chosen {typeInput} </p>
-          <p> and you prefer buying it {buyInput} </p>
+          <p> and place to buy it: {buyInput}  </p>
 
         </div>
       </div>
