@@ -149,7 +149,7 @@ footer {
 .name-input:focus,
 .text-area:hover,
 .text-area:focus {
-  border: 2px solid var(--sixth);
+  border: 2px solid var(--second);
   outline: none;
 }
 
@@ -261,7 +261,7 @@ select {
 }
 
 select:focus {
-  border: 1px solid var(--sixth);
+  border: 1px solid var(--second);
   outline: none;
 }
 
