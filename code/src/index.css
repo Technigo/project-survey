@@ -150,7 +150,7 @@ footer {
 .text-area:hover,
 .text-area:focus {
   border: 2px solid var(--sixth);
-  /* outline: 2px solid var(--sixth); */
+  outline: none;
 }
 
 .name-input {
@@ -262,6 +262,7 @@ select {
 
 select:focus {
   border: 1px solid var(--sixth);
+  outline: none;
 }
 
 .select-container {
