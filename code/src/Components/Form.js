@@ -59,8 +59,8 @@ export const Form = () => {
       <TextInput
         name={name}
         onNameInputChange={handleNameInputChange}
+        Counter={Counter}
       />
-      <button onClick={Counter}>NEXT</button>
       </div>
     )
   } else if (count === 3) {
@@ -69,8 +69,8 @@ export const Form = () => {
         <CheckboxInput
         membership={membership}
         onMembershipInputChange={handleMembershipInputChange}
+        Counter={Counter}
       />
-      <button onClick={Counter}>NEXT</button>
       </div>
     )
   } else if (count === 4) {
@@ -79,8 +79,8 @@ export const Form = () => {
       <SelectInput
         location={location}
         onLocationInputChange={handleLocationInputChange}
+        Counter={Counter}
       />
-      <button onClick={Counter}>NEXT</button>
       </div>
     )
   } else if (count === 5) {
@@ -89,8 +89,8 @@ export const Form = () => {
       <RadioInput
         occupationGroup={occupationGroup}
         onOccupationGroupInputChange={handleOccupationGroupInputChange}
+        Counter={Counter}
       />
-      <button onClick={Counter}>NEXT</button>
       </div>
     )
   } else if (count === 6) {
@@ -99,8 +99,8 @@ export const Form = () => {
         <EmailInput 
         email={email}
         onEmailInputChange={handleEmailInputChange}
+        Counter={Counter}
         />
-        <button onClick={Counter}>SUBMIT</button>
       </div>
     )
   } else {

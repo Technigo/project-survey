@@ -1,6 +1,6 @@
 import React from "react";
 
-export const EmailInput = ({ email, onEmailInputChange }) => {
+export const EmailInput = ({ email, onEmailInputChange, Counter }) => {
 
   return (
     <form onSubmit={event => event.preventDefault()}>
@@ -16,6 +16,10 @@ export const EmailInput = ({ email, onEmailInputChange }) => {
         required
         placeholder="Type your email"
       />
+        <button 
+        type="button"
+        onClick={Counter}
+        >NEXT</button>
     </form>
   )
 }

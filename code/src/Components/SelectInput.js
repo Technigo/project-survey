@@ -1,6 +1,6 @@
 import React from "react";
 
-export const SelectInput = ({ location, onLocationInputChange }) => {
+export const SelectInput = ({ location, onLocationInputChange, Counter }) => {
 
   return (
     <form onSubmit={event => event.preventDefault()}>
@@ -14,6 +14,10 @@ export const SelectInput = ({ location, onLocationInputChange }) => {
         <option value="Malmö">Malmö office</option>
         <option value="Göteborg">Göteborg office</option>
       </select>
+      <button 
+        type="button"
+        onClick={Counter}
+        >NEXT</button>
     </form>
   )
 }

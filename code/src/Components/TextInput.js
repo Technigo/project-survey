@@ -1,22 +1,27 @@
 import React from "react";
 
-export const TextInput = ({ name, onNameInputChange }) => {
+export const TextInput = ({ name, onNameInputChange, Counter }) => {
 
   return (
-    <form onSubmit={event => event.preventDefault()}>
+    <form>
       <h3>Let's start with the basics!</h3>
       <label 
-        htmlFor="nameinput"
-        aria-label="nameinput"
+        htmlFor="nameInput"
+        aria-label="nameInput"
         >
-        What is your name?</label>
+        What is your name? </label>
       <input
+        required
         type="text"
         name="nameinput"
         value={name}
         onChange={onNameInputChange}
         placeholder="Type your full name"
       />
+      <button 
+        type="button"
+        onClick={Counter}
+        >NEXT</button>
     </form>
   )
 }

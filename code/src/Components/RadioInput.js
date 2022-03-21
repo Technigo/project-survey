@@ -2,7 +2,7 @@ import React from "react";
 
 const occupationGroups = ["Artist", "Curator", "Gallerist", "Art lover"];
 
-export const RadioInput = ({ occupationGroup, onOccupationGroupInputChange }) => {
+export const RadioInput = ({ occupationGroup, onOccupationGroupInputChange, Counter }) => {
 
   return (
     <form className="occupation-form" onSubmit={event => event.preventDefault()}>
@@ -21,6 +21,10 @@ export const RadioInput = ({ occupationGroup, onOccupationGroupInputChange }) =>
           {group}
         </label>
       ))}
+        <button 
+        type="button"
+        onClick={Counter}
+        >NEXT</button>
     </form>
   )
 }
