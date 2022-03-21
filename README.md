@@ -1,13 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Users should be able to:
+1. view the optimal layout for the site depending on their device's screen size
+2. fill in the forms
+3. get the summary of the information they have put in
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I spent a lot of time figuring out how to use one state to update several form inputs.
+I chose the starting value for this state to be an object that contains several values from several form inputs.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://libertasbookclub.netlify.app
