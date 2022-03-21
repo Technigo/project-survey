@@ -15,7 +15,7 @@ const LocationDropDown = (props) => {
             <option value={locations}>Stockholm</option>
             <option value={locations}>Göteborg</option>
             <option value={locations}>Malmö</option>
-            <option value={locations}>Skåne</option>
+            <option value={locations}>Halmstad`</option>
           </select>
         </label>
         <button type="Submit">Next</button>

@@ -6,10 +6,10 @@ const EmailInput = (props) => {
   return (
     <div>
       <form onSubmit={onStepChange}>
-        <label htmlFor="emailadresss">
-          Your email adress?
+        <label htmlFor="emailaddress">
+          Your email address?
           <input
-            id="emailadress"
+            id="emailaddress"
             type="text"
             value={email}
             onChange={onSecondInputChange}
