@@ -16,7 +16,6 @@ const IsMember = ({ nextQuestion, member, setMember }) => {
           name="isMember"
           value="Yes"
           onClick={onMemberClick}
-          checked={member === "Yes"}
         />
         Yes
         <input
@@ -24,7 +23,6 @@ const IsMember = ({ nextQuestion, member, setMember }) => {
           name="isMember"
           value="No"
           onClick={onMemberClick}
-          checked={member === "No"}
         />
         No
       </label>
