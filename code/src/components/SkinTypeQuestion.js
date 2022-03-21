@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const SkinTypeQuestion = ({ skinTypeInput, onSkinTypeInputChange, nextStep }) => {
+const SkinTypeQuestion = ({ skinTypeInput, onSkinTypeInputChange, nextStep, previousStep }) => {
     const skinTypes = [
         'Dry or dehydrated',
         'Normal',
@@ -20,8 +20,12 @@ const SkinTypeQuestion = ({ skinTypeInput, onSkinTypeInputChange, nextStep }) =>
                 ))}
             </form>
             <div>
-                <button className="btn" type="submit" onClick={nextStep}>
-                    Next question!</button>
+                <button className="button" type="submit" onClick={nextStep}>
+                    Next!</button>
+            </div>
+            <div>
+                <button className="button" type="submit" onClick={previousStep}>
+                    Go Back</button>
             </div>
         </div>
     );

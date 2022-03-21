@@ -7,9 +7,10 @@ const NameQuestion = ({ nameInput, onNameInputChange, nextStep }) => {
 			<label htmlFor="name">What's your name?</label>
 			<input id="name" type="text" placeholder="Your name" value={nameInput} onChange={onNameInputChange} />
 			<div>
-				<button className="btn" type="submit" onClick={nextStep}>
-					Next question!</button>
+				<button className="button" type="submit" onClick={nextStep}>
+					Next!</button>
 			</div>
+			
 		</div>
 	);
 };

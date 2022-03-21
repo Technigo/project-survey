@@ -8,8 +8,8 @@ import Summary from "./Summary";
 const Form = () => {
 
     const [nameInput, setNameInput] = useState('');
-    const [skinTypeInput, setSkinTypeInput] = useState([]);
-    const [ageGroupInput, setAgeGroupInput] = useState([]);
+    const [skinTypeInput, setSkinTypeInput] = useState('');
+    const [ageGroupInput, setAgeGroupInput] = useState('');
     const [step, setStep] = useState(1)
 
     const onNameInputChange = (event) => {
@@ -47,11 +47,13 @@ const Form = () => {
                     skinTypeInput={skinTypeInput}
                     onSkinTypeInputChange={onSkinTypeInputChange}
                     nextStep={nextStep}
+                    previousStep={previousStep}
                 />}
                 {step === 3 && <AgeGroupQuestion
                     ageGroupInput={ageGroupInput}
                     onAgeGroupInputChange={onAgeGroupInputChange}
                     nextStep={nextStep}
+                    previousStep={previousStep}
                 />}
                    {step === 4 && <Summary
                     nameInput={nameInput}
