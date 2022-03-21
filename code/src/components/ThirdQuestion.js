@@ -8,18 +8,18 @@ const ThirdQuestion = ({ options, onSetTravel, onStepChange }) => {
           How long time do u wanna be on holiday for?
         </h2>
         <select
-          htmlFor="goal-option"
+          htmlFor="options"
           className="dropdown"
-          id="option"
+          id="options"
           value={options}
           onChange={onSetTravel}
         >
-          <option disabled>Pick one from below</option>
-          <option>1 week</option>
-          <option>2 weeks</option>
-          <option>1 month</option>
-          <option>3 months</option>
-          <option>6 months</option>
+          <option>Pick one from below</option>
+          <option value="1 week">1 week</option>
+          <option value="2 weeks">2 weeks</option>
+          <option value="1 month">1 month</option>
+          <option value="3 months">3 months</option>
+          <option value="6 months">6 months</option>
         </select>
       </section>
       <button className="button" type="button" onClick={onStepChange}>
