@@ -1,13 +1,9 @@
-# Survey form with React
+# Project Survey
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This weeks project was to build a survey using REACT.
 
 ## The problem
+I enjoyed this weeks project a lot! This was the first time I worked with controlled forms as well as useState. It is a bit tricky to know the best way to approach the component structure and I had to redo it a bit in the end. If I would have had more time I would have wanted to work with validation. 
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+### See it live
+https://artlottery.netlify.app/
