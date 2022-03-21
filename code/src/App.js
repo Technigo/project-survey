@@ -9,7 +9,7 @@ import Form from './components/Form'
  export const App = () => {
   //const [days, setDays] = useState('');
   return (
-    <div>
+    <div className="container">
       <h1>Welcome to this survey about our modern workplace. </h1>
       <Form/>
     </div>
