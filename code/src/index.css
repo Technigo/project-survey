@@ -17,6 +17,7 @@ body {
     rgba(231, 175, 204, 1) 25%,
     rgba(148, 187, 233, 1) 100%
   );
+  height: -webkit-fill-available;
 }
 
 .app {
@@ -62,6 +63,7 @@ h1 {
 
 h2 {
   font-size: 1.3rem;
+  text-transform: uppercase;
   color: var(--clr-darkblue);
   margin: 2em 0 0;
   text-align: center;
@@ -70,6 +72,7 @@ h2 {
 
 h3 {
   font-size: 1rem;
+  font-weight: 100;
   color: var(--clr-darkblue);
 }
 
@@ -182,7 +185,7 @@ select {
 }
 
 .select-h2 {
-  width: 12em;
+  width: 15em;
 }
 
 .img-overview {
@@ -226,7 +229,7 @@ button:active {
   }
 
   h2 {
-    font-size: 1.7rem;
+    font-size: 1.5rem;
   }
 
   h3 {
@@ -283,7 +286,7 @@ button:active {
 
 @media screen and (min-width: 1024px) {
   h3 {
-    margin: 0 8em 3em;
+    margin: 0 5em 3em;
   }
 
   .form-container {

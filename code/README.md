@@ -1,19 +1,18 @@
-# Technigo React Starter App
+# Technigo React Project Survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+This week we practiced React state by creating a survey. It should consist of at least three questions
+that need to be answered by users. When the user presses submit, they should see a summary of their answers.
+We were also encouraged to use components as much we could to practice for future projects.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+# The building of the project
 
-## Usage
+- I planned my project in Figma to get an overview of what I needed to do, what kind of survey it would be, and what components I would need.
+- I created all the components in vs code and started with a form and question nr.one and then copied the boilerplate to all the others to have a base.
+- Then I created different forms depending on the question and put them all in the overview for a summary.
+- I styled the form after some inspiration online and made the overview more personal.
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+I struggled with the radio buttons that I transformed into images and how to be able to select them, collect the info, and put them in the overview.
 
-Alternatively, if you don't want a new git repo on your account;
+# Deployed page
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+Here it the link to my deployed survey:
