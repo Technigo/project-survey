@@ -1,0 +1,12 @@
+.button-wrapper {
+    display: flex;
+    flex-direction: row;;
+  }
+
+  button {
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    width: 100px;
+    font-size: 1rem;
+  }
