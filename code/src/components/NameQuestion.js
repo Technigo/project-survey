@@ -1,5 +1,6 @@
 import React from 'react';
 
+
 const NameQuestion = ({ nameInput, onNameInputChange, nextStep }) => {
 	return (
 		<div>

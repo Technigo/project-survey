@@ -1,15 +1,15 @@
 import React, { useState } from "react";
-import AgeGroupQuestion from "./AgeGroupQuestion";
 
 import NameQuestion from "./NameQuestion";
 import SkinTypeQuestion from "./SkinTypeQuestion";
+import AgeGroupQuestion from "./AgeGroupQuestion";
+import Summary from "./Summary";
 
 const Form = () => {
 
     const [nameInput, setNameInput] = useState('');
-    const [skinTypeInput, setSkinTypeInput] = useState('');
-    const [ageGroupInput, setAgeGroupInput] = useState('');
-    const [isResultDisplayed, setIsResultDisplayed] = useState(false);
+    const [skinTypeInput, setSkinTypeInput] = useState([]);
+    const [ageGroupInput, setAgeGroupInput] = useState([]);
     const [step, setStep] = useState(1)
 
     const onNameInputChange = (event) => {
@@ -52,6 +52,11 @@ const Form = () => {
                     ageGroupInput={ageGroupInput}
                     onAgeGroupInputChange={onAgeGroupInputChange}
                     nextStep={nextStep}
+                />}
+                   {step === 4 && <Summary
+                    nameInput={nameInput}
+                    skinTypeInput={skinTypeInput}
+                    ageGroupInput={ageGroupInput}
                 />}
             </form>
         </div>
