@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 export const NameInput = ({nameInput, nameUpdateInput, stepChange}) => {
 
@@ -8,7 +8,9 @@ export const NameInput = ({nameInput, nameUpdateInput, stepChange}) => {
     <form>
       <label htmlFor="nameReply">What's your name?</label>
       <input id="nameReply" value={nameInput} onChange={nameUpdateInput} />
-      <button onClick={stepChange}>Next question</button>
+      
+      <button disabled={nameInput === ''}
+      onClick={stepChange}>Next question</button>
     </form>
 
     )

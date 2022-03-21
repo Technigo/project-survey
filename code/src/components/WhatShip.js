@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React from 'react'
 
 const WhatShip = ({ 
     whatTeam, 
@@ -26,7 +26,7 @@ const WhatShip = ({
         id="whodoyouship" 
         type="radio" 
         value="Spike"
-        onChange={() => teamUpdate('Spike')}
+        onChange={ () => teamUpdate('Spike') }
         checked={whatTeam === 'Spike'}
       /> <span aria-label="Team Spike"> Team Spike!!! </span>
       </label>

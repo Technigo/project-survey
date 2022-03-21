@@ -1,20 +1,29 @@
 import React from 'react'
 
 
-
-export const Counter = ( {props, counterIncrease, counterDecrease, stepChange} ) => {
+export const Counter = ( {value, valueUpdateInput, stepChange} ) => {
 
 
 
     return (
-    <section>  
-    <div> My counter is: {props} </div>
-    <button onClick={counterDecrease} >Go Back! </button>
-    <button onClick={counterIncrease} >Click! </button>
 
+    <form>
+        <label>What's your overall rating of the show?</label>
+    <div> My rating is: {value} </div>
+
+    <div className="slidecontainer">
+    <input type="range" 
+    min="1" max="100" 
+    className="slider" id="myRange" 
+    aria-valuemin="1"
+    aria-valuemax="100"
+    aria-valuenow="50"
+    onChange={valueUpdateInput}></input>
+    </div>
     <button onClick={stepChange}>Next question</button>
 
-    </section> 
+    </form>
+
     )
 
     }

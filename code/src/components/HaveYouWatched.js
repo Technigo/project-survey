@@ -1,4 +1,7 @@
-import React, {useState} from 'react'
+import React from 'react'
+
+import { Goodbye } from 'components/Goodbye'
+
 
 const HaveYouWatched = ({ 
     watchedStatus, 
@@ -6,23 +9,34 @@ const HaveYouWatched = ({
     stepChange 
     }) => {
    
+      
+   
     return (
     <form>
 
       <label>
           Have you seen BTVS?
-          <select value={watchedStatus} onChange={event => onWatchedChange(event.target.value)}>
-              <option value="yes">Heck yea!</option>
-              <option value="little">Only a little...</option>
-              <option value="no">No!</option>
+          <select className="select-container" value={watchedStatus} onChange={event => onWatchedChange(event.target.value)}>
+            <option default value="" disabled>Choose!</option>
+              <option value="yes">Seen it!? I re-watch it every year!</option>
+              <option value="little">I’ve scrolled by it on TV but never actively watched it...</option>
+              <option value="no">Nope, never seen anything</option>
 
           </select>
           
           
           </label>
-      
 
-      <button onClick={stepChange}>Next question</button>
+
+      {watchedStatus === 'no' ? <Goodbye /> : ''}
+
+
+      <button  
+      disabled={watchedStatus === '' || watchedStatus === 'no'}
+      onClick={stepChange}>Next question</button>
+
+
+
 
     </form>
 
