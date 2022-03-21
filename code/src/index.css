@@ -33,10 +33,11 @@ main {
   display: flex;
   flex-direction: column;
   height: 100vh;
-  background-image: url(./images/test.png);
+  background-image: url(./images/holograph-background.png);
   background-size: cover;
   background-repeat: no-repeat;
-  background-position-y: 50%;
+  background-position-x: 50%;
+  background-position-y: 70%;
   /*background: linear-gradient(315deg, #aed1ef 0%, #fabdbdcc 50%, #f0b7ef 100%);
   background: -moz-linear-gradient(315deg, #aed1ef 0%, #fabdbdcc 50%, #f0b7ef 100%);
   background: -webkit-linear-gradient(315deg, #aed1ef 0%, #fabdbdcc 50%, #f0b7ef 100%); */
@@ -421,7 +422,7 @@ list-style-type: circle;
     font-size: 5rem;
   }
   .overview-text {
-    line-height: 1.8rem;
+    line-height: 2rem;
   }
   .footer-text {
     font-size: 1rem;
@@ -478,10 +479,13 @@ list-style-type: circle;
 @media screen and (min-width: 1024px) {
   .welcome-title {
     font-size: 6rem;
-    /* margin-bottom: 3rem; */
+  }
+  .overview-title {
+    font-size: 1.6rem;
   }
   .overview-text {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
   }
   .question-wrapper {
     width: 550px;
