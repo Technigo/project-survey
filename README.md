@@ -1,13 +1,6 @@
-# Survey form with React
-
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
-## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+# Survey form with React Brief
+The brief was to create a survey with a minimum of 3 questions - a text input, radio buttons, as well as drop-down. We were also supposed to think about cross-browser testing, as well as accessibility.
+## Problem solving
+I decided to go full-out - I made many questions, and created two surveys in one. A personality test which measures the Big 5, and a values test which measures Schwartz's ten universal motivating human values. I also displayed the results using ChartJS for React along with an explanation, and sent the results to a database using Firebase. I also worked hard on making validation work - that you wouldn't be able to proceed to the next page without filling out the information.
+## View it here
+https://survey-project-week10.netlify.app/
