@@ -113,3 +113,26 @@ h1 {
 .goodbye {
   font-size: 22px;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    align-items: center;
+  }
+  .main-container {
+    width: 85vw;
+    margin-right: 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+}
+
+@media only screen and (max-width: 924px) and (min-width: 601px) {
+  body {
+    align-items: center;
+  }
+  .main-container {
+    width: 75vw;
+    margin-right: 0;
+  }
+}
