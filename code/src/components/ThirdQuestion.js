@@ -31,12 +31,12 @@ return (
 
         <label>
         <input
-        value={"bike shop"}
+        value={"in a bike shop"}
         type="radio"
         onChange={onBuyInputChange} 
-        checked={buyInput === "bike shop"}
+        checked={buyInput === "in a bike shop"}
         />
-        bike shop
+        in a bike shop
         </label>
 
         <button 
