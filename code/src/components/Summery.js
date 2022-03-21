@@ -1,5 +1,7 @@
 import React from 'react'
 
+//This is where all en questions summery ups for the end.
+
 const Summery = ({ nameInput, destination, options }) => {
   return (
     <>

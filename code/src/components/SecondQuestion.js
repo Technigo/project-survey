@@ -1,5 +1,7 @@
 import React from 'react'
 
+// This where user gets to check in a radiobutton where there wanna go
+
 const SecondQuestion = ({ onSetDestination, onStepChange }) => {
   const travelDestion = [
     'The Alps sking',

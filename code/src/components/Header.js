@@ -1,5 +1,7 @@
 import React from 'react'
 
+// My header
+
 const Header = () => {
   return (
     <section className="header">

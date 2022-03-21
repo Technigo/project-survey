@@ -1,5 +1,7 @@
 import React from 'react'
 
+//This is where the user is ask the question how long that wanna be away for.
+
 const ThirdQuestion = ({ options, onSetTravel, onStepChange }) => {
   return (
     <>

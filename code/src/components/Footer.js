@@ -1,5 +1,7 @@
 import React from 'react'
 
+// My footer
+
 const Footer = () => {
   return (
     <>

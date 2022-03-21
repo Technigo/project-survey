@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 
+// In this form im setting togheter all of the components.
+
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'

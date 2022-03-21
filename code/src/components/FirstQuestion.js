@@ -1,5 +1,7 @@
 import React from 'react'
 
+// This is the firstquestion thats comes up and asks for the usersname.
+
 const FirstQuestion = ({
   nameInput,
   onNameInputChange,
