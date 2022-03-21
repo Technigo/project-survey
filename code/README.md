@@ -15,4 +15,4 @@ I struggled with the radio buttons that I transformed into images and how to be 
 
 # Deployed page
 
-Here it the link to my deployed survey:
+Here it the link to my deployed survey: https://code-student-survey.netlify.app/

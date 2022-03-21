@@ -17,7 +17,9 @@ body {
     rgba(231, 175, 204, 1) 25%,
     rgba(148, 187, 233, 1) 100%
   );
-  height: -webkit-fill-available;
+  background-size: cover;
+  min-height: 100vh;
+  height: 100%;
 }
 
 .app {
@@ -63,6 +65,7 @@ h1 {
 
 h2 {
   font-size: 1.3rem;
+  text-align: center;
   text-transform: uppercase;
   color: var(--clr-darkblue);
   margin: 2em 0 0;
@@ -135,9 +138,17 @@ input[type="radio"]:checked + img {
   overflow: hidden;
 }
 
-/*This on needs some work*/
-input[type="radio"]:checked + .hand-in {
+input[type="radio"] + span {
+  box-shadow: 0 4px 12px -4px rgb(0 0 0 / 35%);
+  cursor: pointer;
+  transition: all 0.3s ease-in;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+input[type="radio"]:checked + span {
   background: var(--clr-lightblue);
+  padding: 30px;
 }
 
 .img-option {
@@ -159,15 +170,10 @@ input[type="radio"]:checked + .hand-in {
 }
 
 .radio-img {
-  padding: 1em;
-  margin: 1em;
+  margin: 2em 0;
 }
 
 .hand-in {
-  box-shadow: 0 4px 12px -4px rgb(0 0 0 / 35%);
-  cursor: pointer;
-  transition: all 0.3s ease-in;
-  border-radius: 10px;
   /* display: block;
   position: relative;
   -webkit-user-select: none;

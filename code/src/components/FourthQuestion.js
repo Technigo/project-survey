@@ -2,9 +2,9 @@ import React from "react";
 
 const options = [
   "some time during the weekend",
-  "sunday night sometime between 23:30-00:00",
+  "sunday between 23:30-00:00",
   "early in the week (Friday included)",
-  "maybe in time or could be after deadline",
+  "could be in time or after deadline",
 ];
 
 const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
@@ -32,7 +32,7 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
                   id={option}
                   onChange={onHandInTimeChange}
                 />
-                {option}
+                <span>{option}</span>
               </label>
             );
           })}
