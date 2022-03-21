@@ -50,9 +50,7 @@ footer a {
 }
 
 @media (min-width: 900px) {
-
-h1 {
-  font-size: 4em;
-}
-
+  h1 {
+    font-size: 4em;
+   }
 }

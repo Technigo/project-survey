@@ -21,7 +21,7 @@ const SubmitBook = ({ nextQuestion, book, setBook }) => {
                     type="text"
                     name="title"
                     value={book.title}
-                    placeholder="Name of the book you want to recommend"
+                    placeholder="Name the book you recommend"
                 />
             </label>
 
@@ -31,6 +31,7 @@ const SubmitBook = ({ nextQuestion, book, setBook }) => {
                     type="text"
                     name="author"
                     value={book.author}
+                    placeholder="Its author"
                 />
             </label>
 
@@ -40,6 +41,7 @@ const SubmitBook = ({ nextQuestion, book, setBook }) => {
                     type="text"
                     name="isbn"
                     value={book.isbn}
+                    placeholder="Optional"
                 />
             </label>
             <button className="submit-book-btn" onClick={nextQuestion}>SUBMIT</button>
