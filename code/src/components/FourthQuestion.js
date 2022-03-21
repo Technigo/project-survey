@@ -4,7 +4,7 @@ const options = [
   "some time during the weekend",
   "sunday between 23:30-00:00",
   "between Monday-Friday",
-  "could be after deadline",
+  "sometime after deadline",
 ];
 
 const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
