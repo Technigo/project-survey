@@ -5,7 +5,7 @@ const occupationGroups = ["Artist", "Curator", "Gallerist", "Art lover"];
 export const RadioInput = ({ occupationGroup, onOccupationGroupInputChange, Counter }) => {
 
   return (
-    <form className="occupation-form" onSubmit={event => event.preventDefault()}>
+    <form className="occupation-form">
       <h3>Which of the following describes you best?</h3>
       {occupationGroups.map(group => (
         <label 

@@ -34,6 +34,9 @@ h1, h2, h3, p {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 50%;
   margin: 5em;
   padding: 1em;
   background: #F7F7F7;
@@ -67,18 +70,20 @@ button {
 
 label, button, select {
   font-family: 'Abel', sans-serif;
-  margin: 2em;
+  margin: 1em;
 }
 
 button {
   border-radius: 10px;
+  margin: 2em;
 }
 
 input {
   font-family: 'Abel', sans-serif;
 }
 
-.hightlight {
-  font-size: larger;
+.highlight {
+  font-size: large;
+  font-weight: bold;
   display: block;
 }

@@ -11,7 +11,6 @@ export const TextInput = ({ name, onNameInputChange, Counter }) => {
         >
         What is your name? </label>
       <input
-        required
         type="text"
         name="nameinput"
         value={name}

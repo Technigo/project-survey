@@ -3,7 +3,7 @@ import React from "react";
 export const SelectInput = ({ location, onLocationInputChange, Counter }) => {
 
   return (
-    <form onSubmit={event => event.preventDefault()}>
+    <form>
       <h3>Which of our offices is closest to you?</h3>
       <select
         onChange={onLocationInputChange}
