@@ -10,9 +10,11 @@ const Start = () => {
 
     const [member, setMember] = useState("")
     const [ageGroup, setAgeGroup] = useState("")
-    const [title, setTitle] = useState("")
-    const [author, setAuthor] = useState("")
-    const [isbn, setIsbn] = useState("")
+    const [book, setBook] = useState({
+        title: "",
+        author: "",
+        isbn: ""
+    })
 
     const OnNextQuestion = () => {
         setQuestion(state => state + 1)
@@ -57,12 +59,8 @@ const Start = () => {
             <SubmitBook
                 nextQuestion={OnNextQuestion}
                 question={question}
-                setTitle={setTitle}
-                setAuthor={setAuthor}
-                setIsbn={setIsbn}
-                title={title}
-                author={author}
-                isbn={isbn}
+                book={book}
+                setBook={setBook}
             />
         )
     } else if (question === 4) {
@@ -70,9 +68,8 @@ const Start = () => {
             <Summary
                 member={member}
                 ageGroup={ageGroup}
-                title={title}
-                author={author}
-                isbn={isbn}
+                book={book}
+                setBook={setBook}
             />
         )
     }
