@@ -25,7 +25,6 @@ const SecondQuestion = (props) => {
                 rows="5"
             />
 
-
             <div className="button-wrapper">
                 <button onClick={onSectionChangeBackward}>Back</button>
                 <button onClick={onSectionChangeForward}>Next</button>

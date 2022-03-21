@@ -15,22 +15,19 @@ const FifthQuestion = (props) => {
     const newPosition = 10 - (newRangeValue * 0.2)
     const bubblePosition = `calc(${newRangeValue}% + ${newPosition}px)`
 
-    console.log('new range value is:', newRangeValue)
-    console.log('new position is:', newPosition)
-    console.log('bubble position is:', bubblePosition)
-
     useEffect(() => {
         const element = document.querySelector(".slider-bubble");
             if (element) {
                 element.style.left = bubblePosition
             }
-       
     })
 
     return (
         <div className="question-wrapper range-slider-page">
 
-            <label className="page-title" htmlFor="animalInput">Alright, last but not least. Tell me, which animal is the biggest party animal?</label>
+            <label className="page-title" htmlFor="animalInput">
+                Alright, last but not least. Tell me, which animal is the biggest party animal?
+            </label>
             
             <div className="range-slider-container">
                

@@ -1,12 +1,13 @@
 import React from "react"
 
 const FirstQuestion = ({ nameInput, onNameInputChange, onSectionChangeForward }) => {
-    // const { nameInput, onNameInputChange } = props
 
     return (
         <div className="question-wrapper">
 
-            <label className="page-title" htmlFor="nameInput">Hey friend, what's your name?</label>
+            <label className="page-title" htmlFor="nameInput">
+                Hey friend, what's your name?
+            </label>
 
             <input
                 className="name-input"
