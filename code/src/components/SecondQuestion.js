@@ -24,7 +24,7 @@ const SecondQuestion = ({ onSetDestination, onStepChange }) => {
           </label>
         ))}
       </section>
-      <button className="button" type="button" onClick={onStepChange}>
+      <button className="button" type="submit" onClick={onStepChange}>
         Next question
       </button>
     </>

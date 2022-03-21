@@ -55,10 +55,10 @@ const Form = () => {
       )}
       {step === 4 && (
         <Summery
+          nameInput={nameInput}
           destination={destination}
           options={options}
           onStepChange={onStepChange}
-          nameInput={nameInput}
         />
       )}
     </section>

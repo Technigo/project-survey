@@ -22,7 +22,7 @@ const ThirdQuestion = ({ options, onSetTravel, onStepChange }) => {
           <option value="6 months">6 months</option>
         </select>
       </section>
-      <button className="button" type="button" onClick={onStepChange}>
+      <button className="button" type="submit" onClick={onStepChange}>
         Summery
       </button>
     </>
