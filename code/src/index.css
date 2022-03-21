@@ -132,6 +132,7 @@ input[type="radio"] {
 input[type="radio"]:checked + img {
   outline: 5px solid var(--clr-darkblue);
   border-radius: 5px;
+  overflow: hidden;
 }
 
 /*This on needs some work*/
