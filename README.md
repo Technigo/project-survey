@@ -1,13 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+A project where we was supposed to build a survey with dropdown menu, radio button. 
+It was tricky at the start, hence the second project with react for me, but the live sessions really walk through it and made more logic and easier to grasp. Also the video for the forms was really help ful.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+I still struggle with the responsiveness and looking forward to when it all "clicks" I will continue reading and study and try it out outside the projects
 
-## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
 
-## View it live
+#View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here is a link to my Netlify:
+
+laughing-kalam-81d4ea.netlify.app
+

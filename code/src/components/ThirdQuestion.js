@@ -10,12 +10,12 @@ return (
         <label>
         <h2> Where to buy your bike?</h2>
         <input
-        value={"online only"}
+        value={"online"}
         type="radio"
         onChange={onBuyInputChange} 
-        checked={buyInput === "online only"}
+        checked={buyInput === "online"}
         />
-        online only        
+        online       
         </label>
 
         <label>
@@ -30,12 +30,12 @@ return (
 
         <label>
         <input
-        value={"bikeshop"}
+        value={"bike shop"}
         type="radio"
         onChange={onBuyInputChange} 
-        checked={buyInput === ""}
+        checked={buyInput === "bike shop"}
         />
-        bikeshop
+        bike shop
         </label>
 
         <button 

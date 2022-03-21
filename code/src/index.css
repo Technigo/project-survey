@@ -59,11 +59,14 @@ justify-content: center;
 }
 
 radio-button {
+  
   color: black;
   padding: 5px;
   margin-top: 10px; 
   font-size:15px;
   margin-left: 20px;
+  display: inline-block;
+  width: 100%;
 }
 
 .radio-submit-button {
@@ -72,21 +75,15 @@ color:black;
 padding: 5px;
 margin-left: 50px;
 font-size: 15px;
+
 }
 
 .summary-box {
-  background-color: antiquewhite;
   color:black;
   padding: 5px;
   margin-left: 10px;
-  font-size:15px;
+  font-size:30px;
 }
 
 
-@media (max-width: 767px) {
-  radio-button {
-    display: inline-block;
 
-  }
-}
-  
