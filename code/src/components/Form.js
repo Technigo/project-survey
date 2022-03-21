@@ -18,7 +18,7 @@ const Form = () => {
     setDestination(event.target.value)
   }
   const onSetTravel = (event) => {
-    setTravel(event.target.vaule)
+    setTravel(event.target.value)
   }
   const onStepChange = () => {
     setStep(step + 1)
