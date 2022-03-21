@@ -11,3 +11,20 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.questionWrapper {
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 20vh;
+}
+
+.button {
+  height:40px;
+  border-radius: 30px;
+  border: dotted;
+  background-color: blue;
+  font-size: 12px;
+  width: 50%;
+  cursor: pointer;
+}

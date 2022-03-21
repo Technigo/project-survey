@@ -1,12 +1,16 @@
 import React from 'react'
 import Form from './components/Form'
-//import Radio from './components/Radio'
+
+
+
+
+
 
  export const App = () => {
+  //const [days, setDays] = useState('');
   return (
     <div>
-      <p>Welcome to this survey about our modern workplace.      
-      </p>
+      <h1>Welcome to this survey about our modern workplace. </h1>
       <Form/>
     </div>
   )

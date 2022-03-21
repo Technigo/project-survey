@@ -1,24 +1,36 @@
 import React, {useState} from 'react';
-
-const experiences = ["Both office and remote", "Only Office", "Only Remote"];
+import DaysOffice from './DaysOffice';
+import Experience from './Experience';
+import BestThing from './BestThing';
+//import Summary from './Summary';
 
  const Form = () => {
-    const [experience, setExperience] = useState('');
-    
+  const [experience, setExperience] = useState('');
+  const onExperienceChanged = (event) => {
+    setExperience(event.target.value);
+  }
+
+  const [days, setDays] = useState('');
+  const onDayChanged = (event) => {
+    setDays(event.target.value);
+  }
+  
+  const [best, setBest] = useState('');
+  const onBestChanged = (event) => {
+   setBest(event);
+  }
+  const onSubmit = () => {
+    let bestThing = best;
+    let daysChosen = days;
+    let chosenExperience = experience;
+  }
+
   return (
     <form>
-      What kind of experience do you have from working remotely?
-      {experiences.map((group => (
-        <label key={group}>
-          <input
-            type="radio"
-            value={group}
-            onChange={(event) => setExperience(event.target.value)}
-            checked={experience === group}
-          />
-          {group}
-        </label>
-      )))}
+      <DaysOffice chosenDay={days} onDayChosen={onDayChanged}></DaysOffice>
+      <Experience experienceInput={experience} experienceChoosen={onExperienceChanged}></Experience>
+      <BestThing bestInput={best} bestChosen={onBestChanged}></BestThing>
+      <button className='button'onClick = {onSubmit}>SUBMIT</button>
     </form>
   );
 };
