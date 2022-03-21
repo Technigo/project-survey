@@ -10,7 +10,8 @@ return (
 
                 <div className="checkbox-options">
                     <label htmlFor="thegoodkind" 
-                    key="thegoodkind">
+                    key="thegoodkind"
+                    id="thegoodkind" >
                         <input className="checkboxes"
                         type="checkbox" 
                         name="thegoodkind" 
@@ -21,7 +22,8 @@ return (
 
                 <div className="checkbox-options">
                     <label htmlFor="pop" 
-                    key="pop">
+                    key="pop"
+                    id="pop">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="pop"
@@ -32,7 +34,8 @@ return (
 
                 <div className="checkbox-options">
                     <label htmlFor="electronic" 
-                    key="electronic">
+                    key="electronic"
+                    id="electronic">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="electronic"

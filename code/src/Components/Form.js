@@ -77,9 +77,9 @@ return (
             )}
 
             {section === 4 && (
-            <Summary name = {name} 
-            amountOfBands = {amountOfBands}
-            bands = {bands}
+            <Summary name={name} 
+            amountOfBands={amountOfBands}
+            bands={bands}
             musicType={musicType}
             restart = {restart}
             />
