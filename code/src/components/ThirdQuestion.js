@@ -4,11 +4,12 @@ const ThirdQuestion = ({ buyInput, onBuyInputChange, onStepChange }) => {
 
 return (
     <section>
+    <h2> Where to buy your bike?</h2>
     <form>
       
-        <div className="radio-button">
-        <label>
-        <h2> Where to buy your bike?</h2>
+    <div className="radio-button">
+    <label>
+        
         <input
         value={"online"}
         type="radio"
