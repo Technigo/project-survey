@@ -116,7 +116,7 @@ code {
 /*-------Summery-------*/
 .summery-section {
   text-align: center;
-  background-color: #b54aa7;
+  background-color: #b54aa76e;
   padding: 1em;
   border-radius: 2em;
 }
@@ -145,8 +145,12 @@ code {
 
 /*-------Footer-------*/
 .made-by {
-  font-size: 14px;
+  text-align: center;
+  background-color: #fafafa82;
   padding: 1em;
+  margin: 4em;
+  border-radius: 1em;
+  font-size: 18px;
 }
 .footer {
   text-align: center;
