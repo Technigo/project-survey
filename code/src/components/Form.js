@@ -49,7 +49,7 @@ const Form = () => {
       {step === 3 && (
         <ThirdQuestion
           timeAway={timeAway}
-          onSetTravel={onSetTravel}
+          setTravel={setTravel}
           onStepChange={onStepChange}
         />
       )}
@@ -57,6 +57,7 @@ const Form = () => {
         <Summery
           destination={destination}
           timeAway={timeAway}
+          setTravel={setTravel}
           onStepChange={onStepChange}
           nameInput={nameInput}
         />

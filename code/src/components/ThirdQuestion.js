@@ -12,7 +12,7 @@ const ThirdQuestion = ({ onSetTravel, onStepChange }) => {
           <label className="radiobutton" key={timeAway}>
             <input
               type="radio"
-              name="enjoy"
+              name="time"
               value={timeAway}
               onChange={onSetTravel}
             />
