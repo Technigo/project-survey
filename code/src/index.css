@@ -7,7 +7,7 @@ body {
   font-family: 'Abel', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F2FFE9;
+  background-color: #DB6B97;
 }
 
 code {
@@ -19,7 +19,7 @@ code {
   display: flex;
   justify-content: center;
   align-items: center;
-  color: #DB6B97;
+  color: #3A3845;
 }
 
 h1, h2, h3, p {
@@ -39,8 +39,8 @@ h1, h2, h3, p {
   height: 50%;
   margin: 5em;
   padding: 1em;
-  background: #F7F7F7;
-  border-radius: 10%;
+  background: #FFF;
+  border-radius: 10px;
 }
 
 .member-form, .occupation-form {
