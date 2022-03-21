@@ -15,7 +15,6 @@ export const CheckboxInput = ({ membership, onMembershipInputChange}) => {
           <input
           type="checkbox"
           value={answer}
-          aria-pressed ="false"
           checked={membership === answer}
           onChange={onMembershipInputChange}
           />

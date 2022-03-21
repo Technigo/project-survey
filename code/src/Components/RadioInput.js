@@ -14,7 +14,6 @@ export const RadioInput = ({ occupationGroup, onOccupationGroupInputChange }) =>
           key={group}>
           <input
             type="radio"
-            aria-pressed="false"
             value={group}
             onChange={onOccupationGroupInputChange}
             checked={occupationGroup === group}
