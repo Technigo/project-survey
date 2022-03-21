@@ -1,19 +1,10 @@
-# Technigo React Starter App
+# Technigo Survey form with React
+In this project the goal was to create a survey tool with React using state and controlled forms.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+## The problem
+Due to sickness I had trouble with finishing the project this week. That's why I'll hand it in like this and then I'll come back to this and continue working on it. I think the app works as it should - besides my radio button. They can all be checked in, so I need to come back and fix that. Besides that my project needs styling. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## View it live
+Here is a link to my deployed project: https://the-alps-survey.netlify.app/
 
-## Usage
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
