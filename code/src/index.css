@@ -149,7 +149,8 @@ footer {
 .name-input:focus,
 .text-area:hover,
 .text-area:focus {
-  outline: 2px solid var(--sixth);
+  border: 2px solid var(--sixth);
+  /* outline: 2px solid var(--sixth); */
 }
 
 .name-input {
@@ -257,6 +258,10 @@ select {
   background-color: #faf4ebb7;
   color: var(--fourth);
   font-family: "Poppins", sans-serif;
+}
+
+select:focus {
+  border: 1px solid var(--sixth);
 }
 
 .select-container {
