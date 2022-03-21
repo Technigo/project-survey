@@ -1,10 +1,6 @@
 import React from "react"
 
-const AgeGroup = ({
-    nextQuestion,
-    ageGroup,
-    setAgeGroup
-}) => {
+const AgeGroup = ({ nextQuestion, ageGroup, setAgeGroup }) => {
     const onAgeGroupSelect = (event) => {
         setAgeGroup(event.target.value)
         nextQuestion()

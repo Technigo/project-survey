@@ -1,7 +1,6 @@
 import React from "react"
 
-const Summary = (props) => {
-    const { member, ageGroup, book } = props
+const Summary = ({ member, ageGroup, book }) => {
     return (
         <div className="main-card">
             <div className="thank-you-card-wrapper">

@@ -1,11 +1,10 @@
 import React from "react"
 
-const SubmitBook = (props) => {
-    const {nextQuestion, book, setBook} = props
+const SubmitBook = ({ nextQuestion, book, setBook }) => {
 
-    const onBookSubmitChange = (event)=> {
+    const onBookSubmitChange = (event) => {
         event.preventDefault()
-        const {name, value} = event.target
+        const { name, value } = event.target
         setBook((prev) => {
             return {
                 ...prev,

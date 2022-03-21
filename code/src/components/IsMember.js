@@ -1,11 +1,7 @@
 import React from "react"
 
 
-const IsMember = ({
-  nextQuestion,
-  member,
-  setMember
-}) => {
+const IsMember = ({ nextQuestion, member, setMember }) => {
 
   const onMemberClick = (event) => {
     setMember(event.target.value)
@@ -22,7 +18,7 @@ const IsMember = ({
           onClick={onMemberClick}
           checked={member === "Yes"}
         />
-        Yes 
+        Yes
         <input
           type="radio"
           name="isMember"
