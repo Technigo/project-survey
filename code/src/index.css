@@ -406,7 +406,7 @@ input[type=range]::-ms-track {
   align-items: center;
   justify-content: center;
   width: 350px;
-  height: 450px;
+  height: 475px;
   border: solid 2px var(--first);
   padding: 1rem;
   border-radius: 25px;
