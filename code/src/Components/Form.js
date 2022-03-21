@@ -12,11 +12,16 @@ import ThankYou from './ThankYou';
 
 export const Form = () => {
     const [username, setUsername] = useState('');
+    const [wantsMember, setWantsMember] = useState(false);
     const [intervals, setInterval] = useState('');
     const [favouriteMovie, setFavouriteMovie] = useState('');
     const [newMovies, setNewMovies] = useState('');
     const [snacks, setSnacks] = useState('');
     const [question, setQuestion] = useState(0);
+
+    const handleOnChangeMember= (event) => {
+        setWantsMember(event.target.checked);
+    };
 
     const handleInputChangeName = (event) => {
         setUsername(event.target.value);
@@ -49,6 +54,8 @@ export const Form = () => {
                 )}
                 {question === 1 && (
                 <Checkbox 
+                    wantsMember={wantsMember}
+                    onChangeMember={handleOnChangeMember}
                     onClickNext={handleOnClickNext}
                 />
                 )}

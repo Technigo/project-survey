@@ -1,20 +1,19 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 
-const Checkbox = ({ onClickNext }) => { 
-    const [wantsMember, setWantsMember] = useState(false);
+const Checkbox = ({ wantsMember, onChangeMember, onClickNext }) => { 
     return (
         <section className="check-box section">
             <div className="section-child">
                 <div className="info">
                     <p>To give our customers the best possible experience we'd like to know a bit more about our visistors.</p>
-                    <p>Take this form to contribute to your favourite cinema (us) - and you'll get a free large size popcorn as thanks 🍿</p>
+                    <p>Take this form to contribute to your favourite cinema (us) - and you'll get a free large size popcorn as thanks <span>🍿</span></p>
                     <label className="label">
                         First of all, would you like to be a member in our new movies-for-geeks-club? If yes, tick this box:  
                         <input
                         type="checkbox"
                         checked={wantsMember}
-                        onChange={(event) => setWantsMember(event.target.checked)}
+                        onChange={onChangeMember}
                         />
                     </label>
                 </div>
