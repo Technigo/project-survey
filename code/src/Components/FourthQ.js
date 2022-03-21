@@ -10,11 +10,11 @@ return (
 
                 <div className="checkbox-options">
                     <label htmlFor="thegoodkind" 
-                    key="thegoodkind"
-                    id="thegoodkind" >
+                    key="thegoodkind">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="thegoodkind" 
+                        id="thegoodkind"
                         checked={musicType.includes('the good kind')}
                         onChange={() =>onCheckboxChange('the good kind')}/>
                    The good kind</label>
@@ -22,11 +22,11 @@ return (
 
                 <div className="checkbox-options">
                     <label htmlFor="pop" 
-                    key="pop"
-                    id="pop">
+                    key="pop">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="pop"
+                        id="pop"
                         checked={musicType.includes('pop')}
                         onChange={() => onCheckboxChange('pop')}/>
                     Pop</label>
@@ -34,11 +34,11 @@ return (
 
                 <div className="checkbox-options">
                     <label htmlFor="electronic" 
-                    key="electronic"
-                    id="electronic">
+                    key="electronic">
                         <input className="checkboxes"
                         type="checkbox" 
                         name="electronic"
+                        id="electronic"
                         checked={musicType.includes('electronic')}
                         onChange={() => onCheckboxChange('electronic')}/>
                     Electronic</label>
