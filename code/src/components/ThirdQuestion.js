@@ -5,7 +5,7 @@ const ThirdQuestion = ({ buyInput, onBuyInputChange, onStepChange }) => {
     return (
         <section>
             <form className="App">
-                <h2> Where to buy your bike?</h2>
+                <h2> Where do you buy your bike?</h2>
                 <div className="radio-button">
                     <label>
                         
