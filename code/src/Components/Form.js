@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 import Welcome from './Welcome';
-import Checkbox from './Checkbox';
+import CheckBox from './CheckBox';
 import RadioButtons from './RadioButtons';
 import Input from './Input';
 import Select from'./Select';

@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const Checkbox = ({ wantsMember, onChangeMember, onClickNext }) => { 
+const CheckBox = ({ wantsMember, onChangeMember, onClickNext }) => { 
     return (
         <section className="check-box section">
             <div className="section-child">
@@ -23,4 +23,4 @@ const Checkbox = ({ wantsMember, onChangeMember, onClickNext }) => {
     );
 };
 
-export default Checkbox;
+export default CheckBox;
