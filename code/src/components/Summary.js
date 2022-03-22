@@ -3,11 +3,11 @@ import Button from './Button';
 
 const Summary = ({ nameInput, skinTypeInput, ageGroupInput, restartSteps }) => {
     return (
-        <div className='flex'>
-            Thank you! Here's a summary of your choices
-            <p>{nameInput}</p>
-            <p>{skinTypeInput}</p>
-            <p>{ageGroupInput}</p>
+        <div className='flex-summary'>
+            <div className='heading'>Thank you! Here's a summary of your choices</div>
+            <div>{nameInput}</div>
+            <div>{skinTypeInput}</div>
+            <div>{ageGroupInput}</div>
             <Button buttonText="Restart" onClickFunction={restartSteps} />
         </div>
     );

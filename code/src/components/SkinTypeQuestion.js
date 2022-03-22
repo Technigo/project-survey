@@ -10,7 +10,7 @@ const SkinTypeQuestion = ({ skinTypeInput, onSkinTypeInputChange, nextStep, prev
     ]
     return (
         <div className='flex'>
-            <p>What's your skin type?</p>
+            <p className='heading'>What's your skin type?</p>
             <div className='skin-type-options'>
                 {skinTypes.map(skintype => (
                     <label key={skintype}>

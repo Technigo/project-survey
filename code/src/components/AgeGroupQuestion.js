@@ -5,7 +5,7 @@ import Button from './Button';
 const AgeGroupQuestion = ({ ageGroupInput, onAgeGroupInputChange, nextStep, previousStep }) => {
     return (
         <div className='flex'>
-            <label htmlFor="age-group">How old are you?</label>
+            <label htmlFor="age-group" className='heading'>How old are you?</label>
             <select value={ageGroupInput} onChange={onAgeGroupInputChange}>
                 <option selected value='label'>Choose Age Group</option>
                 <option value='Under 21'>Under 21</option>
