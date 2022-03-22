@@ -5,7 +5,7 @@ return (
     <section className="section" id="summery">
         <div className="intro-text">
             <h2>Thank you {nameInput} for participating!</h2>
-            <h4>Here is your result, it will help us make a descion on your and the planet Earth's future. </h4>
+            <h4>Here is your result, it will help us make a descion on yours and the planet Earth's future. </h4>
         </div>
         <div className="summery-list'">
             <div className="summery-list-item">
