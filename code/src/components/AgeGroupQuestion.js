@@ -1,9 +1,10 @@
 import React from 'react';
+import Button from './Button';
 
 
 const AgeGroupQuestion = ({ ageGroupInput, onAgeGroupInputChange, nextStep, previousStep }) => {
     return (
-        <div>
+        <div className='flex'>
             <label htmlFor="age-group">How old are you?</label>
             <select value={ageGroupInput} onChange={onAgeGroupInputChange}>
                 <option selected value='label'>Choose Age Group</option>
@@ -11,14 +12,8 @@ const AgeGroupQuestion = ({ ageGroupInput, onAgeGroupInputChange, nextStep, prev
                 <option value='22-30'>22-30</option>
                 <option value='30-45'>30-45</option>
             </select>
-            <div>
-                <button className="button" type="submit" onClick={nextStep}>
-                    Next!</button>
-            </div>
-            <div>
-				<button className="button" type="submit" onClick={previousStep}>
-					Go Back</button>
-			</div>
+            <Button onClickFunction={nextStep} buttonText="Next!" />
+            <Button onClickFunction={previousStep} buttonText="Go back!" />
         </div>
     );
 };

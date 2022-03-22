@@ -1,16 +1,13 @@
 import React from 'react';
+import Button from './Button';
 
 
 const NameQuestion = ({ nameInput, onNameInputChange, nextStep }) => {
 	return (
-		<div>
-			<label htmlFor="name">What's your name?</label>
+		<div className='flex'>
+			<div>What's your name?</div>
 			<input id="name" type="text" placeholder="Your name" value={nameInput} onChange={onNameInputChange} />
-			<div>
-				<button className="button" type="submit" onClick={nextStep}>
-					Next!</button>
-			</div>
-			
+			<Button onClickFunction={nextStep} buttonText="Next!" />
 		</div>
 	);
 };

@@ -32,11 +32,15 @@ const Form = () => {
         setStep(step - 1)
     }
 
+    const restartSteps = () => {
+        setStep(1)
+    }
+
     const handleSubmit = (event) => {event.preventDefault()}
 
 
     return (
-        <div>
+        
             <form onSubmit={handleSubmit}>
                 {step === 1 && <NameQuestion
                     nameInput={nameInput}
@@ -59,9 +63,10 @@ const Form = () => {
                     nameInput={nameInput}
                     skinTypeInput={skinTypeInput}
                     ageGroupInput={ageGroupInput}
+                    restartSteps={restartSteps}
                 />}
             </form>
-        </div>
+        
 
 
     )

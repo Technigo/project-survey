@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Button from './Button';
 
 const SkinTypeQuestion = ({ skinTypeInput, onSkinTypeInputChange, nextStep, previousStep }) => {
     const skinTypes = [
@@ -9,24 +9,18 @@ const SkinTypeQuestion = ({ skinTypeInput, onSkinTypeInputChange, nextStep, prev
         'Oily or acne-prone'
     ]
     return (
-        <div>
+        <div className='flex'>
             <p>What's your skin type?</p>
-            <form>
+            <div className='skin-type-options'>
                 {skinTypes.map(skintype => (
                     <label key={skintype}>
                         <input type='radio' value={skintype} onChange={onSkinTypeInputChange} checked={skinTypeInput === skintype} />
                         {skintype}
                     </label>
                 ))}
-            </form>
-            <div>
-                <button className="button" type="submit" onClick={nextStep}>
-                    Next!</button>
             </div>
-            <div>
-                <button className="button" type="submit" onClick={previousStep}>
-                    Go Back</button>
-            </div>
+            <Button onClickFunction={nextStep} buttonText="Next!" />
+            <Button onClickFunction={previousStep} buttonText="Go back!" />
         </div>
     );
 };
