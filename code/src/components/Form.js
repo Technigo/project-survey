@@ -12,12 +12,12 @@ import WhatShip from 'components/WhatShip'
 
 const Form = () => {
 
-  const [step, setStep] = useState(3)
+  const [step, setStep] = useState(1)
   const [watchedStatus, setWatchedStatus] = useState('')
   const [nameInput, setNameInput] = useState('Dorothea')
   const [whatTeam, setShip] = useState('')
-
   const [value, setValue] = useState("50")
+
 
 
   const valueUpdateInput = (event) => {
@@ -31,6 +31,7 @@ const Form = () => {
 
   const stepChanger = () => {
     setStep(step +1)
+    
   }
 
   const onWatchedChange = (status) => {
@@ -40,6 +41,9 @@ const Form = () => {
   const teamUpdate = (dude) => {
     setShip(dude)
 }
+
+
+
 
 
 document.addEventListener('click', e => {
@@ -53,9 +57,6 @@ document.addEventListener('click', e => {
 
 
 
-      
-
-
   return (
 
     
@@ -64,6 +65,7 @@ document.addEventListener('click', e => {
 
             { step === 1 && <Welcome             
             stepChange={stepChanger}
+           
              />}
 
             { step === 2 && <NameInput 

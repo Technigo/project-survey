@@ -8,6 +8,8 @@ export const Counter = ( {value, valueUpdateInput, stepChange} ) => {
     return (
 
     <form>
+    <div className="pergament"> </div>
+
         <label>What's your overall rating of the show?</label>
     <div> My rating is: {value} </div>
 
