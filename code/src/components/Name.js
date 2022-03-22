@@ -1,12 +1,12 @@
 import React from 'react'
 
 const Name = (props) => {
-    const { username, nameInputChange, onStepChange } = props
+    const { username, email, nameInputChange, onStepChange } = props
 
   return(
       <div className="container name-container">
-
-          <form onSubmit={onStepChange} onChange={nameInputChange} className="form-container">
+        
+          <form onSubmit={onStepChange} className="form-container">
             <label className="label-name">First Name:
               <input
               id="Name"
@@ -23,7 +23,7 @@ const Name = (props) => {
               className="input-container"
               type="text"
               placeholder="Last name"
-              onChange={nameInputChange}/>
+              />
               </label>
 
               <label className="label-name">Email:
@@ -32,8 +32,8 @@ const Name = (props) => {
               className="input-container"
               type="email"
               placeholder="Email"
-              
-              onChange={nameInputChange}/>
+              value={email}
+              />
               </label>
 
 

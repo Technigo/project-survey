@@ -22,6 +22,8 @@ code {
   width: 375px;
   height: 660px;
   margin-top: 40px;
+  background-color: rgba(247, 216, 129, 0.205);;
+  border-radius: 10px;
   /* border: 1px solid red; */
   /* padding-left: 15px; */
 }
@@ -30,7 +32,7 @@ code {
   display: flex;
   flex-direction: column;
   /* border: 2px solid red; */
-  margin: 10px 0;
+  margin: 0;
   padding-left: 12px;
 }
 
@@ -98,6 +100,13 @@ button p {
   font-style: italic;
 }
 
+span {
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+  color: black;
+}
+
 label {
   font-family: 'Bodoni Moda', serif;
 }
@@ -134,7 +143,7 @@ label {
   border: 2px solid black;
   box-shadow: 5px 5px;
   padding: 8px;
-  background-color: transparent;
+  background-color: rgba(247, 215, 129, 0.76);
   
 }
 
@@ -144,6 +153,7 @@ label {
 
 .dropdown-two-container {
   padding-left: 12px;
+  
 }
 
 .radiobutton-container {
@@ -153,13 +163,13 @@ label {
 .order-container {
   background-image: url('/images/grace-two.jpg');
   background-size: 375px;
-  background-blend-mode:overlay;
+  /* background-blend-mode:overlay; */
   background-repeat: no-repeat ;
   position: relative;
   background-color: rgb(255, 235, 180);
-  /* height: 700px; */
+  height: 700px;
   width: 375px;
-  padding: 5px 0 0 12px;
+  padding: 12px;
   padding-right: 12px;
   margin-top: 10px;
   font-size: 15px;
@@ -262,6 +272,14 @@ button {
 
 @media (min-width: 768px) {
 
+  body {
+    background-image: url(./images/grace-two.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+  }
+
   header h1 {
     font-size: 90px;
   }
@@ -274,9 +292,9 @@ button {
     font-size: 20px;
     line-height: 40px;
   }
-
+  
   .container {
-    width: 768px;
+    width: 750px;
   }
 
   .label-name {
@@ -285,9 +303,20 @@ button {
 
   .input-container {
     font-size: 45px;
+    
+  }
+
+  .button-container {
+    width: 768px;
   }
 
   button {
     font-size: 45px;
+    width: 80%;
+   
+  }
+
+  .order-container {
+    width: 768px;
   }
 }

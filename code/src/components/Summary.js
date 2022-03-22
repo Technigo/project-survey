@@ -51,7 +51,7 @@ const Summary = () => {
                 {step === 2 && (
                     <Name
                         username={username}
-                        nameInputChange={handleDropdown}
+                        nameInputChange={handleName}
                         onStepChange={onStepChange}
                     />
                 )}
@@ -59,7 +59,7 @@ const Summary = () => {
                 {step === 3 && (
                     <Dropdown
                         dropdown={dropdown}
-                        selectChange={handleName}
+                        selectChange={handleDropdown}
                         onStepChange={onStepChange}
                     />
                 )}

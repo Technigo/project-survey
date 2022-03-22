@@ -12,12 +12,13 @@ const Dropdown = (props) => {
                     name="where"
                     required
                     placeholder="this"
+                    value={dropdown}
                     onChange={selectChange}
                 >
-                    <option disabled={true}>Select one</option>
-                    <option value={dropdown}>Lottery Tickets</option>
-                    <option value={dropdown}>Book</option>
-                    <option value={dropdown}>Donate 10€ to charity</option>
+                    <option isDisabled={true}>Select one</option>
+                    <option >Lottery Tickets</option>
+                    <option >Book of the month</option>
+                    <option >Donate 10€ to charity</option>
                 </select>
 
             <div className="button-container">
