@@ -4,10 +4,11 @@ const Name = (props) => {
     const { username, email, nameInputChange, onStepChange } = props
 
   return(
-      <div className="container name-container">
+      <div className="container">
+          <section className="name-container">
         
           <form onSubmit={onStepChange} className="form-container">
-            <label className="label-name">First Name:
+            <label className="label-name">First Name:</label>
               <input
               id="Name"
               className="input-container"
@@ -15,18 +16,16 @@ const Name = (props) => {
               placeholder="First name"
               value={username}
               onChange={nameInputChange}/>
-              </label>
               
-              <label className="label-name">Surname:
+              <label className="label-name">Surname:</label>
               <input
               id="Surname"
               className="input-container"
               type="text"
               placeholder="Last name"
               />
-              </label>
 
-              <label className="label-name">Email:
+              <label className="label-name">Email:</label>
               <input
               id="Email"
               className="input-container"
@@ -34,7 +33,7 @@ const Name = (props) => {
               placeholder="Email"
               value={email}
               />
-              </label>
+              
 
 
 
@@ -42,6 +41,7 @@ const Name = (props) => {
             <button type="submit">Next</button>
             </div>
           </form>
+          </section>
       </div>
   )
 }

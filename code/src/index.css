@@ -1,11 +1,11 @@
 body {
   box-sizing: border-box;
-  /* background-image: url('./images/grace.jpg'); */
-  background-size: 550px;
+  background-image: url(./images/grace-two.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
-  background-position-x: center;  
-  /* background-position-y: center; */
-  background-blend-mode: lighten;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
   margin: 0;
   font-family: 'Bodoni Moda', serif;
   -webkit-font-smoothing: antialiased;
@@ -18,58 +18,52 @@ code {
     monospace;
 }
 
+/* GENERAL CONTAINER */
 .container {
-  width: 375px;
-  height: 660px;
-  margin-top: 40px;
-  background-color: rgba(247, 216, 129, 0.205);;
-  border-radius: 10px;
-  /* border: 1px solid red; */
-  /* padding-left: 15px; */
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(247, 216, 129, 0.507);;
 }
+
+
+/* HEADER SECTION */
 
 .header-container {
   display: flex;
   flex-direction: column;
-  /* border: 2px solid red; */
   margin: 0;
-  padding-left: 12px;
+  padding-top: 100px;
 }
 
-header h1 {
-  text-transform: uppercase;
-  font-weight: 800;
-  font-size: 80px;
-  line-height: 120px;
-  color: rgb(204, 104, 22);
-  margin: 0;
-  /* padding-left: 12px; */
-  text-align: center;
-}
 
 header h2 {
   font-family: 'Spartan', sans-serif;
   font-size: 25px;
-  font-weight: 400;
+  font-weight: 600;
   padding: 5px 5px;
   margin: 0;
+  background-color: black;
+  color: yellow;
   
 }
 
 header p {
   font-family: 'Spartan', sans-serif;
-  text-transform: uppercase;
   font-style: italic;
   font-size: 15px;
   line-height: 29px;
   padding-left: 10px;
   padding-right: 12px;
+  background-color: rgba(190, 162, 101, 0.87) ;
+  border: 1px solid blue;
 }
+
+/* GENERAL BUTTONS */
 
 .button-container {
   display: flex;
   justify-content: center;
-  width: 375px;
+  width: 100vw;
 }
 
 button p {
@@ -80,55 +74,38 @@ button p {
   color: yellow;
 }
 
-.name-container {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  height: 400px;
-  /* border: 2px solid green; */
-  /* padding-left: 10px; */
-}
-
-.dropdown-container h2 {
-  font-size: 30px;
+button {
   font-family: 'Bodoni Moda', serif;
-  font-weight: 500;
-}
-
-.order {
-  font-weight: 600;
-  font-style: italic;
-}
-
-span {
-  font-weight: 600;
-  font-style: italic;
-  text-decoration: underline;
-  color: black;
-}
-
-label {
-  font-family: 'Bodoni Moda', serif;
-}
-
-.label-name {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 30px;
-  font-weight: 700;
+  font-size: 25px;
+  width: 300px;
+  background-color: black;
+  color: yellow;
+  cursor: pointer;
+  border-radius: 20px;
+  box-shadow: 5px 5px blue;
+  margin-top: 25px;
   
 }
 
-.radio-buttons {
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
+
+/* GENERAL LABELS */
+
+.label-name {
+  display: block;
+  font-family: 'Spartan', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  background-color: black;
+  color: yellow;
+  padding: 10px;
+  
 }
 
+/* GENERAL INPUT FORMS FOR NAME AND EMAIL */
 
 .form-container {
   display: flex;
   flex-direction: column;
-  padding-left: 12px;
 }
 
 .input-container {
@@ -147,43 +124,30 @@ label {
   
 }
 
+/* NAME SECTION */
+
+.name-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  height: 400px;
+  padding-top: 100px;
+}
+
+/* DROPDOWN SECTIONS */
+
 .dropdown-container {
-  padding-left: 12px;
+  padding-top: 100px;
 }
 
 .dropdown-two-container {
-  padding-left: 12px;
-  
+  padding-top: 100px;
 }
 
-.radiobutton-container {
-  padding-left: 12px;
-}
-
-.order-container {
-  background-image: url('/images/grace-two.jpg');
-  background-size: 375px;
-  /* background-blend-mode:overlay; */
-  background-repeat: no-repeat ;
-  position: relative;
-  background-color: rgb(255, 235, 180);
-  height: 700px;
-  width: 375px;
-  padding: 12px;
-  padding-right: 12px;
-  margin-top: 10px;
-  font-size: 15px;
-  line-height: 60px;
-}
-
-.order {
-  position: relative;
-  color: blue;
-}
-
-.image-cover {
-  width: 375px;
-  position: absolute;
+.dropdown-container .dropdown-two-container h2 {
+  font-size: 30px;
+  font-family: 'Bodoni Moda', serif;
+  font-weight: 500;
 }
 
 .dropdown {
@@ -194,23 +158,36 @@ label {
   box-shadow: 5px 5px;
   padding: 8px;
   background-color: rgb(241, 221, 165);
+  margin: 20px 0 10px 0;
 }
 
-button {
-  font-family: 'Bodoni Moda', serif;
-  font-size: 25px;
-  width: 300px;
-  background-color: black;
-  color: yellow;
-  cursor: pointer;
-  border-radius: 20px;
-  box-shadow: 5px 5px blue;
-  margin-top: 25px;
-  
+/* RADIOBUTTON SECTION */
+
+.radiobutton-container {
+  padding-top: 100px;
 }
- /* Custom radio button */
+
+.radio-buttons {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.error-message {
+  font-family: 'Spartan', sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+  color: red;
+  background-color: blue;
+}
+
+
+ /* CUSTOM RADIO BUTTON */
  
 .label-radio {
+  background-color: black;
+  color: yellow;
   position: relative;
   padding-left: 10px;
   margin-bottom: 20px;
@@ -225,7 +202,6 @@ button {
   cursor: pointer;
   height: 0;
   width: 0;
-  /* font-size: 30px; */
 }
 
 .checkmark {
@@ -235,15 +211,15 @@ button {
   height: 30px;
   width: 30px;
   border-radius: 50%;
-  background-color: black;
+  background-color: yellow;
 }
 
 .label-radio:hover input ~ .checkmark {
-  background-color: blue;
+  background-color: rgb(247, 0, 255);
 }
 
 .label-radio input:checked ~ .checkmark {
-  background-color: yellow;
+  background-color: blue;
 }
 
 .checkmark:after {
@@ -270,18 +246,37 @@ button {
 
 
 
+/* ORDER SECTION */
+
+.order-container {
+  /* height: 100vh; */
+  width: 100vw;
+  padding: 80px 0 0 0;
+  font-size: 15px;
+  line-height: 50px;
+}
+.order {
+  font-family: 'Spartan', sans-serif;
+  position: relative;
+  color: rgb(196, 196, 196);
+  font-weight: 600;
+  background-color: black;
+  padding: 0 10px 0 10px;
+}
+
+span {
+  font-weight: 600;
+  font-style: italic;
+  text-decoration: underline;
+  color: yellow;
+}
+
+
+
 @media (min-width: 768px) {
 
-  body {
-    background-image: url(./images/grace-two.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 100vw;
-    height: 100vh;
-  }
-
-  header h1 {
-    font-size: 90px;
+  .header-container {
+    padding-top: 150px;
   }
 
   header h2 {
@@ -289,34 +284,79 @@ button {
   }
 
   header p {
-    font-size: 20px;
-    line-height: 40px;
+    font-size: 30px;
+    padding: 15px;
+    line-height: 50px;
   }
   
-  .container {
-    width: 750px;
-  }
-
   .label-name {
-    font-size: 40px;
+    font-size: 65px;
   }
 
   .input-container {
     font-size: 45px;
-    
   }
 
-  .button-container {
-    width: 768px;
+  .dropdown {
+    font-size: 50px;
+    margin: 40px 0 40px 0;
+  }
+
+  .label-radio {
+    font-size: 50px;
+  }
+
+  .checkmark {
+    position: absolute;
+    top: 18px;
+    left: 180px;
+    height: 40px;
+    width: 40px;
+  }
+
+  .label-radio .checkmark:after {
+    left: 11px;
+    top: 8px;
+    width: 14px;
+    height: 12px;
   }
 
   button {
     font-size: 45px;
     width: 80%;
-   
+  }
+
+  .order {
+    font-size: 40px;
+    padding: 15px;
+    line-height: 55px;
+  }
+}
+
+@media (min-width: 1200px) {
+
+  body {
+    background-size: 50%;
+    background-position-y: 0;
+  }
+
+  .header-container {
+    padding-top: 135px;
+  }
+
+  .name-container, .dropdown-container, .dropdown-two-container {
+    padding-top: 20px;
+  }
+
+  button {
+    width: 50%;
+  }
+
+  .radiobutton-container {
+    padding-top: 100px;
   }
 
   .order-container {
-    width: 768px;
+    padding-top: 100px;
   }
 }

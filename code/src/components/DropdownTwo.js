@@ -4,8 +4,9 @@ const DropdownTwo = (props) => {
     const { dropdownTwo, selectTwoChange, onStepChange } = props
 
     return (
-        <div className="container dropdown-two-container">
-            <h2>Number of issues</h2>
+        <div className="container">
+            <section className="dropdown-two-container">
+            <label className="label-name">Number of issues</label>
             <form onSubmit={onStepChange}>
                 <select
                     className="dropdown"
@@ -24,6 +25,7 @@ const DropdownTwo = (props) => {
                     <button type="submit">Next</button>
                 </div>
             </form>
+            </section>
         </div>
     )
 }

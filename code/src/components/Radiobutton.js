@@ -8,9 +8,10 @@ const Forms = (props) => {
     const [order, setOrder] = useState('')
 
     return (
-        <div onSubmit={onStepChange} className="container radiobutton-container">
-            <h2>Would you like to receive our digital newsletter once a month?</h2>
-            <form className="radio-buttons">
+        <div className="container">
+            <section className="radiobutton-container">
+            <label className="label-name">Would you like to receive our digital newsletter once a month?</label>
+            <form onSubmit={onStepChange} className="radio-buttons">
                 <label className="label-radio">
                     Yes!
                     <input
@@ -37,12 +38,13 @@ const Forms = (props) => {
                     <span className="checkmark"></span>
                 </label>
 
-            <p>{order}</p>
+            <p className="error-message">{order}</p>
 
             <div className="button-container">
-                <button type="submit" onClick={() => { setOrder('Thank you for your purchase') }}>Place order</button>
+                <button type="submit" onClick={() => { setOrder('Please select one') }}>Place order</button>
             </div>
             </form>
+            </section>
         </div>
     )
 }
