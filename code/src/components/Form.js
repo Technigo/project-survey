@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import Question from "components/Question";
 import Button from "components/Button";
 import SubmittedView from "components/SubmittedView";
@@ -63,7 +63,8 @@ const Form = () => {
   const [currentQuestionIndex, setQuestionIndex] = useState(0);
   const [answers, setAnswers] = useState([]);
   const [inputValue, setInputValue] = useState("");
-  const [buttonLabel, setButtonLabel] = useState("Next question");
+
+  const buttonLabel = currentQuestionIndex === questions.length - 1 ? "Submit" : "Next question";
 
   const handleInputChange = (event) => setInputValue(event.target.value);
 
@@ -79,19 +80,11 @@ const Form = () => {
     setInputValue("");
   };
 
-  useEffect(() => {
-    const isLastQuestion = () => currentQuestionIndex === questions.length - 1;
-    if (isLastQuestion()) {
-      setButtonLabel("Submit");
-    }
-  }, [currentQuestionIndex]);
-
   const didSubmit = () => questions.length === answers.length;
 
   const resetForm = () => {
     setAnswers([]);
     setQuestionIndex(0);
-    setButtonLabel("Next question");
   };
 
   if (didSubmit()) {
