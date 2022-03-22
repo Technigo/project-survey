@@ -43,7 +43,7 @@ export const Form = () => {
     };
 
      return ( 
-        <section class="form section">
+        <section className="form section">
             <div className="section-child">
                 {question === 0 && (
                 <Welcome 
