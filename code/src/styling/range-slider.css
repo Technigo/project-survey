@@ -1,27 +1,44 @@
 
-
-
-
-
+div {
+  z-index: 300;
+  font-family: 'Metamorphous', cursive;
+  font-size: 1.3rem;
+  color: black;
+}
 
 .slider {
     width: 100%;
   }
+
+.slidecontainer {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+}
 
 input[type=range] {
     -webkit-appearance: none;
     margin: 10px 0;
     width: 100%;
     background: transparent;
+    border: none;
   }
   input[type=range]:focus {
+
+    height: 3rem;
+    z-index: 500;
+    
+    border: 0px;
+    border:0px;
+    background-color: transparent;
   }
   input[type=range]::-webkit-slider-runnable-track {
+    margin-top: 1rem;
     width: 100%;
-    height: 12.8px;
+    height: 8px;
     cursor: pointer;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: #ac51b5;
+    background: radial-gradient(circle, #db1616, #8b0000, rgb(97, 2, 2));
     border-radius: 25px;
     border: 0px solid #000101;
   }
@@ -32,7 +49,7 @@ input[type=range] {
     height: 80px;
     width: 80px;
     margin-top: -2rem;
-    background-image: url("https://www.svgrepo.com/show/403170/dagger.svg");
+    background-image: url("https://www.svgrepo.com/show/403170/dagger.svg"), radial-gradient(ellipse, white, #ffffff91, #ff898961, #8b000000, rgba(97, 2, 2, 0));
     transform: rotate(45deg);
     background-size: cover;
     cursor: pointer;
@@ -40,14 +57,14 @@ input[type=range] {
   }
   
   input[type=range]:focus::-webkit-slider-runnable-track {
-    background: #ac51b5;
+    background: radial-gradient(circle, #db1616, #8b0000, rgb(97, 2, 2));
   }
   input[type=range]::-moz-range-track {
     width: 100%;
     height: 12.8px;
     cursor: pointer;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
-    background: #ac51b5;
+    background: radial-gradient(circle, #db1616, #8b0000, rgb(97, 2, 2));
     border-radius: 25px;
     border: 0px solid #000101;
   }
@@ -80,13 +97,13 @@ input[type=range] {
     color: transparent;
   }
   input[type=range]::-ms-fill-lower {
-    background: #ac51b5;
+    background: radial-gradient(circle, #db1616, #8b0000, rgb(97, 2, 2));
     border: 0px solid #000101;
     border-radius: 50px;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
   }
   input[type=range]::-ms-fill-upper {
-    background: #ac51b5;
+    background: radial-gradient(circle, #db1616, #8b0000, rgb(97, 2, 2));
     border: 0px solid #000101;
     border-radius: 50px;
     box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
@@ -101,10 +118,10 @@ input[type=range] {
     cursor: pointer;
   }
   input[type=range]:focus::-ms-fill-lower {
-    background: #ac51b5;
+    background: radial-gradient(circle, #db1616, #8b0000, rgb(97, 2, 2));
   }
   input[type=range]:focus::-ms-fill-upper {
-    background: #ac51b5;
+    background: radial-gradient(circle, #db1616, #8b0000, rgb(97, 2, 2));
   }
   
   body {

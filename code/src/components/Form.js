@@ -12,7 +12,7 @@ import WhatShip from 'components/WhatShip'
 
 const Form = () => {
 
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(5)
   const [watchedStatus, setWatchedStatus] = useState('')
   const [nameInput, setNameInput] = useState('Dorothea')
   const [whatTeam, setShip] = useState('')

@@ -1,0 +1,189 @@
+
+
+label {
+    font-size: 2rem;
+  }
+  
+  form {
+  
+    display: flex;
+    flex-direction: column;
+    margin: 3rem;
+    padding: 3rem;
+    height: 40vh;
+    width: 500px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 400;
+    position: relative;
+    animation: pagetransit 1s ease-in-out forwards;
+    opacity: 1;
+   
+  }
+  
+  
+  @keyframes pagetransit {
+    0% { left: -100vw;}
+    100% {left: 0;}
+  }
+
+
+  form label {
+    position: relative;
+    font-family: 'Cinzel', serif;
+    font-weight: 500;
+    width: 100%;
+    z-index: 1000;
+    text-align: center;
+    color: black;
+  
+  }
+  
+  input {
+    color: white;
+    font-family: 'cinzel', serif;
+    font-size: 2rem;
+    height: 3rem;
+    z-index: 500;
+    width: 70%;
+    position: relative;
+    border: 0px;
+    border-bottom: 2px solid rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.219);
+  }
+  
+  input:focus {
+    color: rgb(255, 81, 81);
+    background-color: rgba(0, 0, 0, 0.502);
+    border: 2px solid red;
+    border-radius: 0px;
+  }
+  
+  section {
+    position: relative;
+    z-index: 100;
+  }
+  
+  select {
+    /* margin-top: 6rem; */
+    width: 80%;
+    height: 3rem;
+    padding-left: 1.2rem;
+    margin-top: 3rem;
+    z-index: 10;
+    position: relative;
+    background: rgba(0, 0, 0, 0.363);
+    color: white;
+    font-family: 'cinzel', serif;
+    font-size: 1.2rem;
+    height: 3rem;
+  
+    /* -webkit-appearance: none; */
+  
+    -webkit-background: black;
+  
+  /* 
+    -moz-appearance: none;
+    appearance: none;
+    padding: .5em;
+    background: #c48b8b;
+    border: blue;
+    border-radius: 3px;
+    padding: 1em 2em 1em 1em; */
+  }
+
+button {
+
+    height: 4rem;
+    /* mix-blend-mode: screen; */
+    z-index: 50;
+    position: relative;
+    width: 60%;
+    
+    /* mix-blend-mode: multiply; */
+    
+    margin: 10px auto;
+    letter-spacing: 2px;
+    border-radius: 2px;
+    font-family: 'Cinzel', serif;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 400;
+    text-shadow: 0 1px 3px #000;
+    text-align: center;
+    padding: 10px 0;
+    background: radial-gradient(circle, #8b0000, #8b0000);
+    border-top: 4px ridge #bababa;
+    border-left: 4px groove #292722;
+    border-right: 4px ridge #615a4b;
+    border-bottom: 4px groove #595959;
+    box-shadow: inset 0px 0px 5px 3px rgba(1,1,1,0.3);
+  
+  }
+  
+  button:hover {
+    background: radial-gradient(circle, #e52b2b, #8b0000);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2)
+  }
+  
+  button:focus {
+    background: radial-gradient(circle, #e52b2b, #8b0000);
+    box-shadow: 0px 0 5px 5px rgba(255,255,255,0.2);
+    border: 2px solid black;
+    font-size: 2rem;
+  
+  }
+
+  button:disabled {
+      opacity: 0.5;
+  }
+
+.portrait {
+    width: 45%;
+
+}
+
+.ship-form {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.ship-form button {
+    transform: scale(0.7);
+    margin-top: 0;
+}
+
+.question {
+
+flex: 1;
+flex-basis: 100%;
+width: 100%;
+font-size: 1.4rem;
+margin-bottom: 1rem;
+}
+
+.ship-option {
+width: 35%;
+height: 240px;
+margin: 0.5rem;
+margin-bottom: 0;
+}
+
+input[type=radio] { 
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+
+  input[type=radio] + img {
+    cursor: pointer;
+    border: 2px solid rgb(0, 0, 0);
+    width: 90%;
+  }
+
+  [type=radio]:checked + img {
+    outline: 5px solid rgb(159, 0, 0);
+  }

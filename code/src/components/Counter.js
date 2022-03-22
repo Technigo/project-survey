@@ -10,7 +10,8 @@ export const Counter = ( {value, valueUpdateInput, stepChange} ) => {
     <form>
     <div className="pergament"> </div>
 
-        <label>What's your overall rating of the show?</label>
+        <label>What's your overall <br></br>
+            rating of the show?</label>
     <div> My rating is: {value} </div>
 
     <div className="slidecontainer">
@@ -22,7 +23,7 @@ export const Counter = ( {value, valueUpdateInput, stepChange} ) => {
     aria-valuenow="50"
     onChange={valueUpdateInput}></input>
     </div>
-    <button onClick={stepChange}>Next question</button>
+    <button tabindex="1" onClick={stepChange}>Next question</button>
 
     </form>
 
