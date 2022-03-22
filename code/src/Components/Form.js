@@ -53,7 +53,7 @@ export const Form = () => {
                 />
                 )}
                 {question === 1 && (
-                <Checkbox 
+                <CheckBox 
                     wantsMember={wantsMember}
                     onChangeMember={handleOnChangeMember}
                     onClickNext={handleOnClickNext}
