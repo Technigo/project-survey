@@ -2,8 +2,10 @@ import React from 'react';
 
 import { Form } from 'components/Form';
 
-export const App = () => { 
+const App = () => { 
   return (
       <Form />
   );
 };
+
+export default App;
