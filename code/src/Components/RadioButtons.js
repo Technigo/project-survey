@@ -2,7 +2,7 @@ import React from "react";
 
 
 const RadioButtons = ({intervalGroup, onChangeInterval, onClickNext}) => {
-    const intervals = ["2+ times a week", "1-2 times a week", "1-2 times a month", "Never 🙄"];
+    const intervals = ["2+ times a week", "1-2 times a week", "1-2 times a month", "Never"];
     return (
         <section className="radiobuttons section">
             <div className="section-child">
