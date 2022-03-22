@@ -77,7 +77,10 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
           </label>
         </div>
       </div>
-      <button onClick={onStepChange}> Next Question </button>
+      <button disabled={radioValue === ""} onClick={onStepChange}>
+        {" "}
+        Next Question{" "}
+      </button>
     </section>
   );
 };

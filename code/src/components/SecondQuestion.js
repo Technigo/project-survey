@@ -30,7 +30,9 @@ const SecondQuestion = ({ goals, onGoalsChange, onStepChange }) => {
           </select>
         </div>
 
-        <button onClick={onStepChange}>Next Question</button>
+        <button disabled={goals === ""} onClick={onStepChange}>
+          Next Question
+        </button>
       </form>
     </section>
   );

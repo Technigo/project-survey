@@ -28,7 +28,9 @@ const FifthQuestion = ({ graduation, onGraduationChange, onStepChange }) => {
           })}
         </select>
 
-        <button onClick={onStepChange}>Submit</button>
+        <button disabled={graduation === ""} onClick={onStepChange}>
+          Submit
+        </button>
       </form>
     </section>
   );

@@ -28,7 +28,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
           value={nameInput}
           onChange={onNameInputChange}
         />
-        <button onClick={onStepChange}>
+        <button disabled={nameInput === ""} onClick={onStepChange}>
           {" "}
           Let's start with the questions!{" "}
         </button>

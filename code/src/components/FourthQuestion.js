@@ -20,7 +20,7 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
           {options.map((option) => {
             return (
               <label
-                className="description radio-img"
+                className="description radio-img hand-in"
                 htmlFor={option}
                 key={option}
               >
@@ -39,7 +39,9 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
         </div>
       </div>
 
-      <button onClick={onStepChange}>Next Question</button>
+      <button disabled={handInTime === ""} onClick={onStepChange}>
+        Next Question
+      </button>
     </section>
   );
 };
