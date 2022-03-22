@@ -22,6 +22,7 @@ body {
   width: 100vw;
 }
 
+
 .section-child {
   text-align: center;
   color: white;
@@ -29,6 +30,8 @@ body {
   monospace;
   font-weight: bold;
   line-height: 1.7em;
+  background-color:rgba(5, 5, 5, 0.639);
+  padding: 2em;
 }
 
 .btn, .summary-btn, .thank-you-btn {
@@ -57,7 +60,7 @@ body {
 /* Welcome section  */
 
 .title {
-  margin-bottom: 2em;
+  margin-bottom: 3em;
 }
 
 input {
@@ -88,7 +91,11 @@ input {
 }
 
 .thank-you-title {
-  background-color: rgba(252, 252, 252, 0.475);
+  background-color: rgba(252, 252, 252, 0.687);
   padding: 5em 2em;
   color: rgb(5, 5, 5);
+}
+
+.section-child-thank-you {
+  background-color: none;
 }

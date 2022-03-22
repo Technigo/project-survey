@@ -5,7 +5,7 @@ const Welcome = ({ username, onInputChangeName, onClickNext }) => {
     return (
       <section className="welcome section">
         <div className="section-child">
-          <h2 className="title">Welcome to Broadway Independent Cinema!</h2>
+          <h1 className="title">Welcome to Broadway Independent Cinema!</h1>
           <div className="input-area">
           <label className="name">Don't be stranger, let us know your name: </label>
             <input
