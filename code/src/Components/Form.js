@@ -10,7 +10,7 @@ import Summary from './Summary';
 import ThankYou from './ThankYou';
 
 
-const Form = () => {
+export const Form = () => {
     const [username, setUsername] = useState('');
     const [wantsMember, setWantsMember] = useState(false);
     const [intervals, setInterval] = useState('');
@@ -104,5 +104,3 @@ const Form = () => {
         </section>
     );
 };
-
-export default Form;
