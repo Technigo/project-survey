@@ -14,16 +14,16 @@ const Dropdown = (props) => {
                     placeholder="this"
                     onChange={selectChange}
                 >
-                    <option selected disabled>Select one</option>
+                    <option disabled={true}>Select one</option>
                     <option value={dropdown}>Lottery Tickets</option>
                     <option value={dropdown}>Book</option>
                     <option value={dropdown}>Donate 10€ to charity</option>
                 </select>
-            </form>
 
             <div className="button-container">
             <button  type="submit">Next</button>
             </div>
+            </form>
 
         </div>
 

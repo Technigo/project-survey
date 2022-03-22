@@ -21,6 +21,7 @@ code {
 .container {
   width: 375px;
   height: 660px;
+  margin-top: 40px;
   /* border: 1px solid red; */
   /* padding-left: 15px; */
 }
@@ -81,6 +82,8 @@ button p {
   display: flex;
   flex-direction: column;
   align-content: center;
+  height: 400px;
+  /* border: 2px solid green; */
   /* padding-left: 10px; */
 }
 
@@ -192,7 +195,7 @@ button {
   cursor: pointer;
   border-radius: 20px;
   box-shadow: 5px 5px blue;
-  margin-top: 150px;
+  margin-top: 25px;
   
 }
  /* Custom radio button */

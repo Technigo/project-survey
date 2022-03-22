@@ -10,7 +10,7 @@ import OrderResult from './OrderResult'
 const Summary = () => {
 
 
-    const [name, setName] = useState("")
+    const [username, setUsername] = useState("")
     const [dropdown, setDropdown] = useState("")
     const [dropdownTwo, setDropdownTwo] = useState("")
     const [radiobutton, setRadiobutton] = useState("")
@@ -18,7 +18,7 @@ const Summary = () => {
     const [step, setStep] = useState(1)
 
     const handleName = (event) => {
-        setName(event.target.value)
+        setUsername(event.target.value)
     }
 
     const handleDropdown = (event) => {
@@ -48,23 +48,23 @@ const Summary = () => {
                 {step === 1 &&
                     <Header onStepChange={onStepChange}/>}
 
-                {step === 1 && (
+                {step === 2 && (
                     <Name
-                        name={name}
-                        nameInputChange={handleName}
+                        username={username}
+                        nameInputChange={handleDropdown}
                         onStepChange={onStepChange}
                     />
                 )}
 
-                {step === 1 && (
+                {step === 3 && (
                     <Dropdown
                         dropdown={dropdown}
-                        selectChange={handleDropdown}
+                        selectChange={handleName}
                         onStepChange={onStepChange}
                     />
                 )}
 
-                {step === 1 && (
+                {step === 4 && (
                     <DropdownTwo
                         dropdownTwo={dropdownTwo}
                         selectTwoChange={handleDropdownTwo}
@@ -72,23 +72,22 @@ const Summary = () => {
                     />
                 )}
 
-                {step === 1 && (
+                {step === 5 && (
                     <Radiobutton
                         radiobutton={radiobutton}
                         radioChange={handleRadiobutton}
                         onStepChange={onStepChange}
+                        OrderResult={handleOrderResult}
                     />
                 )}
 
-                {step === 2 && (
+                {step === 6 && (
                     <OrderResult
-                    name={name}
+                    username={username}
                     dropdown={dropdown}
                     dropdownTwo={dropdownTwo}
                     radiobutton={radiobutton}
-                    // OrderResult={handleOrderResult}
-                    //     orderResult={orderResult}
-                    //     onStepChange={onStepChange}
+                    orderResult={orderResult}
                     />
                 )}
             </div>

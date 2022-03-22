@@ -37,21 +37,12 @@ const Forms = (props) => {
                     <span className="checkmark"></span>
                 </label>
 
-                {/* <label>
-                12 issues
-            <input 
-            type="radio"
-            name="radiobtn"
-            required
-            />
-           </label> */}
-            </form>
-
             <p>{order}</p>
 
             <div className="button-container">
                 <button type="submit" onClick={() => { setOrder('Thank you for your purchase') }}>Place order</button>
             </div>
+            </form>
         </div>
     )
 }
