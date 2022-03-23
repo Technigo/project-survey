@@ -140,20 +140,15 @@ input[type="radio"]:checked + img {
 
 .hand-in {
   box-shadow: 0 4px 12px -4px rgb(0 0 0 / 35%);
+  background-color: var(--clr-lightblue);
+  color: var(--clr-white);
   cursor: pointer;
   border-radius: 10px;
   padding: 1.5em;
 }
 
-input[type="radio"] + span {
-  /* box-shadow: 0 4px 12px -4px rgb(0 0 0 / 35%);
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 20px 4px 20px; */
-}
-
 input[type="radio"]:checked + span {
-  text-decoration: underline solid 3px var(--clr-darkblue);
+  color: var(--clr-darkblue);
 }
 
 .img-option {
