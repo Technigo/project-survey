@@ -12,7 +12,7 @@ import WhatShip from 'components/WhatShip'
 
 const Form = () => {
 
-  const [step, setStep] = useState(5)
+  const [step, setStep] = useState(1)
   const [watchedStatus, setWatchedStatus] = useState('')
   const [nameInput, setNameInput] = useState('Dorothea')
   const [whatTeam, setShip] = useState('')
@@ -43,9 +43,6 @@ const Form = () => {
 }
 
 
-
-
-
 document.addEventListener('click', e => {
   if (e.keyCode === '13' && step < 6) {
     setStep(step +1);
@@ -55,13 +52,10 @@ document.addEventListener('click', e => {
   }
 })
 
-
-
   return (
 
     
       <div>
-
 
             { step === 1 && <Welcome             
             stepChange={stepChanger}

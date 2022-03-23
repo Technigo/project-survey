@@ -5,12 +5,10 @@ label {
   }
   
   form {
-  
     display: flex;
     flex-direction: column;
-    margin: 3rem;
     padding: 3rem;
-    height: 40vh;
+    height: 400px;
     width: 500px;
     justify-content: space-around;
     align-items: center;
@@ -21,6 +19,11 @@ label {
    
   }
   
+  .form-wrapper {
+
+    margin-left: 30vw;
+}
+
   
   @keyframes pagetransit {
     0% { left: -100vw;}
@@ -36,6 +39,7 @@ label {
     z-index: 1000;
     text-align: center;
     color: black;
+    font-size: 1.7rem;
   
   }
   
@@ -57,6 +61,14 @@ label {
     background-color: rgba(0, 0, 0, 0.502);
     border: 2px solid red;
     border-radius: 0px;
+  }
+
+  input:focus-visible {
+    color: rgb(255, 81, 81);
+    background-color: rgba(0, 0, 0, 0.502);
+    border: 2px solid red;
+    border-radius: 0px;
+    outline-color: white;
   }
   
   section {
@@ -98,7 +110,7 @@ button {
     /* mix-blend-mode: screen; */
     z-index: 50;
     position: relative;
-    width: 60%;
+    width: 70%;
     
     /* mix-blend-mode: multiply; */
     
@@ -138,16 +150,14 @@ button {
       opacity: 0.5;
   }
 
-.portrait {
-    width: 45%;
-
-}
 
 .ship-form {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    transform: scale(1.2);
+
 }
 
 .ship-form button {
@@ -161,12 +171,12 @@ flex: 1;
 flex-basis: 100%;
 width: 100%;
 font-size: 1.4rem;
-margin-bottom: 1rem;
+margin-bottom: 0.3rem;
 }
 
 .ship-option {
 width: 35%;
-height: 240px;
+height: 230px;
 margin: 0.5rem;
 margin-bottom: 0;
 }
@@ -186,4 +196,8 @@ input[type=radio] {
 
   [type=radio]:checked + img {
     outline: 5px solid rgb(159, 0, 0);
+  }
+
+  [type=radio]:focus + img {
+    outline: 5px solid rgb(2, 150, 248);
   }

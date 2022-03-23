@@ -1,0 +1,125 @@
+
+
+@media print {
+    body {
+  color: yellow;
+  background-color: greenyellow;
+    }
+  
+  }
+  
+
+  @media screen and ( min-width: 340px ) and ( max-width: 500px ) {
+   
+    
+    .welcome-screen {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .welcome-text {
+        font-size: 1rem;
+        padding: 2rem;
+    }
+
+    h1 {
+        font-size: 2rem;
+        position: relative;
+        z-index: 800;
+    }
+
+
+    .logo-wrapper {
+    width: 240px;
+    margin: auto;
+   }
+
+  form label {
+       color: white;
+   }
+
+
+  input {
+
+    font-size: 1.5rem;
+    height: 3rem;
+    z-index: 500;
+    width: 70%;
+    position: relative;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: rgba(190, 3, 75, 0.356);
+  }
+   
+    .form-wrapper {
+        margin-left: 0px;
+        width: 100vw;
+    }
+
+    form {
+        /* background-color: rgb(128, 255, 0); */
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    
+    }
+
+    .pergament {
+        transform: rotate(90deg);
+        width: 80vh;
+        height: 200px;   
+        z-index: 0; 
+        opacity: 0;
+        display: none;
+        }
+
+    
+
+    input[type=range]::-webkit-slider-thumb { 
+        filter:invert(100);
+    }
+  
+    select {
+        outline-color: red;
+        outline: 1px solid white;
+        background-color: rgba(190, 3, 75, 0.356);
+
+    }
+
+    form div {
+        color: white;
+    }
+
+    .goodbye-text {
+        
+        padding: 0 2rem;
+        font-size: 1rem;
+    }
+
+    .ship-option {
+        width: 35%;
+        height: 200px;
+        }
+
+    .ship-form {
+       
+        transform: scale(1);
+        margin-top: 2rem;
+    }
+    .question {
+        font-size: 1.3rem;
+
+
+    }
+
+
+    }
+
+
+
+
+  @media screen and ( min-width: 900px ) and ( max-width: 1600px ) {
+   
+  form {
+      background-color: red;
+  }
+  }

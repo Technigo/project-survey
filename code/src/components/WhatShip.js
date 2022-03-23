@@ -46,7 +46,7 @@ const WhatShip = ({
 
       <button 
       disabled={whatTeam === ''}
-      onClick={stepChange}>Next question</button>
+      onClick={stepChange}>Submit results</button>
 
     </form>
 

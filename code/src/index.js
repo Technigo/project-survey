@@ -5,6 +5,8 @@ import './index.css'
 import './styling/range-slider.css'
 import './styling/form-styling.css'
 import './styling/summary.css'
+import './styling/media-queries.css'
+
 
 import { App } from './App'
 
