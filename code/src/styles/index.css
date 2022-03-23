@@ -49,11 +49,11 @@ button {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .back-button-box {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 
 .back-button-box button {
@@ -73,7 +73,7 @@ button {
 
 .q-and-a-box {
   padding: 0 20px;
-  height: 300px;
+  height: 375px;
   display: flex;
   flex-direction: column;
   align-items: center;
