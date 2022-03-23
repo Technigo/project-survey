@@ -4,8 +4,8 @@ import Experience from './Experience';
 import BestThing from './BestThing';
 import Summary from './Summary';
 
-//How to go to next or previous page and then restart the survey
 const Form = () => {
+  // page state handler
   const [page, setPage] = useState(1)
   const nextPage = (event) => {
     setPage(page + 1);
@@ -20,20 +20,20 @@ const Form = () => {
     event.preventDefault();
   }
 
-  //Gets the Experience component. The default state is empty
+  //Experience state handling. 
   const [experience, setExperience] = useState('office only');
 
   const onExperienceChanged = (event) => {
     setExperience(event.target.value);
   }
 
-  //Gets the Days component. The default is 1 day a week
+  //Days at office state handling
   const [days, setDays] = useState('one');
   const onDayChanged = (event) => {
     setDays(event.target.value);
   }
 
-  //Gets the Best thing component. The default state is empty
+  //Best thing working from home state handling
   const [best, setBest] = useState('');
   const onBestChanged = (event) => {
     setBest(event);
@@ -60,7 +60,7 @@ const Form = () => {
       {page === 4 && (
         <Summary experienceChoice={experience} chosenDay={days} bestChosen={best}></Summary>
       )}
-
+      
       {page > 1 && (
         <button className='button' onClick={previousPage}>Previous page</button>
       )}
