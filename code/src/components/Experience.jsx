@@ -1,12 +1,13 @@
 import React from 'react';
 
 
-const Experience = ({experienceInput, experienceChoosen}) => {
-    const experiences = ["Both office and remote","OnlyOffice","OnlyRemote"];
+const Experience = ({ experienceInput, experienceChoosen }) => {
+    const experiences = ["office only", "remote only", "both office and remote"];
     return (
         <div className="question-wrapper">
             <div className="question">
-             <h1>What kind of experience do you have from working remotely?</h1>
+                <h2>What kind of experience do you have from working remotely?</h2>
+                <p>I have worked from: </p>
                 <div>
                     {experiences.map((experienceChoice => (
                         <div className="option-container">

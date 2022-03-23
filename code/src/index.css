@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&display=swap');
 
-*{
+
+
+* {
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -8,13 +10,16 @@
 
 body {
   margin: 10px;
-  font-family:"Nunito", sans-serif; 
- /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Nunito", sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;*/
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  
+  background: url(https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 
 /*code {
@@ -22,62 +27,167 @@ body {
     monospace;
 }*/
 
-h1{
- font-size: 30px;
+p {
+  font-size: 20px;
+}
+
+h1 {
+  font-size: 30px;
+  text-align: center;
+  text-shadow: 2px 2px #3d3307;
+  color: wheat;
+}
+
+h2 {
+  font-size: 25px;
+  text-align: center;
 }
 
 .question-wrapper {
-  display: flex; 
+  display: flex;
   justify-content: center;
   align-items: center;
-  height: 20vh;
-  background-color: beige;
+  min-height: 35vh;
   margin: 20px;
+  background-color: rgba(202, 202, 180, 0.7);
 }
 
-.container{
-    width: 80vw;
-    margin: 0 auto;
-    background: url("https://cdn.pixabay.com/photo/2020/04/11/14/38/home-office-5030679_960_720.jpg");
-    background-size: 100%;
-    background-repeat: no-repeat;
+.question {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+  height: auto;
+}
+
+.container {
+  width: 80vw;
+  height: 95vh;
+  margin: 0 auto;
+
+  align-items: center;
+  padding-top: 20px;
 }
 
 .option-container {
-    display: inline-block;
-    margin: 0 10px;
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 20px;
 }
 
 .input {
-  margin-right: 10px;;
+  margin-right: 10px;
+  ;
 }
 
-.text-area{
-    width: 100%;
-    height: 100px;
+.drop-down {
+  font-size: 17px;
+  margin: 20px 0px;
+  width: 50%;
+
 }
 
-.button {
-  height:40px;
+.text-area {
+  width: 100%;
+  height: 150px;
+}
+
+.button,
+.button-restart,
+.button-submit {
+  height: 40px;
   border-radius: 30px;
   border: dotted;
-  background-color: rgb(162, 201, 55);
-  font-size: 12px;
+  background-color: rgb(179, 189, 151);
+  font-size: 20px;
   font-weight: 600;
   width: 20rem;
   cursor: pointer;
+  font-family: "Nunito", sans-serif;
+
 }
+
 .button-restart {
-  height:40px;
-  border-radius: 30px;
-  border: dotted;
-  background-color: rgb(223, 226, 31);
-  font-size: 12px;
-  font-weight: 600;
-  width: 20rem;
-  cursor: pointer;
+  background-color: rgb(164, 180, 15);
+}
 
+.button-submit {
+  background-color: rgb(88, 129, 12);
 }
+
+.button-submit:hover {
+  border: 3px solid;
+  border-color: rgb(48, 71, 4);
+}
+
+.button-restart:hover {
+  border: 3px solid;
+  border-color: rgb(48, 71, 4);
+}
+
+.button:hover {
+  border: 3px solid;
+  border-color: rgb(48, 71, 4);
+}
+
 .float-right {
-float: right;
+  float: right;
 }
+
+/*Media query for tablet*/
+@media screen and (min-width:767px) {
+
+  .button,
+  .button-submit,
+  .button-restart {
+    height: 40px;
+    font-size: 15px;
+    font-weight: 600;
+    width: 15rem;
+  }
+}
+
+/*Media query for phone*/
+@media screen and (max-width:766px) {
+  p {
+    font-size: 15px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  h2 {
+    font-size: 15px;
+  }
+
+  .drop-down {
+    font-size: 12px;
+    margin: 20px 0px;
+    width: 60%;
+  }
+
+  .option-container {
+    display: inline-block;
+    margin: 0 10px;
+    font-size: 15px;
+  }
+
+
+  .button,
+  .button-submit,
+  .button-restart {
+    height: 30px;
+    font-size: 10px;
+    font-weight: 600;
+    width: 7rem;
+
+  }
+}
+
+/*background: url("https://images.unsplash.com/photo-1497493292307-31c376b6e479?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2071&q=80);");
+  background-size: cover;
+  /*background-repeat: no-repeat;*/

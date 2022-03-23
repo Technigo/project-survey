@@ -7,8 +7,7 @@ import Form from './components/Form'
 
 
  export const App = () => {
-  //const [days, setDays] = useState('');
-  return (
+   return (
     <div className="container">
       <h1>Welcome to this survey about our modern workplace. </h1>
       <Form/>
@@ -19,8 +18,5 @@ import Form from './components/Form'
 
 
 
-//const rootElement = document.getElementById("root");
-//ReactDOM.render(<App />, rootElement);
 
-//to prevent the default behaviour with rerendering of page when typed name and hit enter:
-//<form onSubmit={(event) => event.preventDefault ()}
+
