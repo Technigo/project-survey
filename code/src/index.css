@@ -37,7 +37,7 @@ code {
 }
 .header-text {
   text-align: center;
-  font-size: 20px;
+  font-size: 16px;
   text-transform: uppercase;
 }
 /*-------Question-------*/
@@ -114,12 +114,13 @@ code {
 /*-------Summery-------*/
 .summery-section {
   text-align: center;
-  background-color: #b54aa76e;
+  background-color: #fafafa82;
   padding: 1em;
   border-radius: 2em;
 }
 
 .summery-text {
+  font-size: 14px;
   padding: 1em;
 }
 /*-------Time-------*/
@@ -148,7 +149,7 @@ code {
   padding: 1em;
   margin: 4em;
   border-radius: 1em;
-  font-size: 18px;
+  font-size: 12px;
 }
 .footer {
   text-align: center;
@@ -161,4 +162,23 @@ code {
 .ikons-box {
   display: flex;
   justify-content: center;
+}
+@media (min-width: 767px) {
+  .header-text {
+    font-size: 22px;
+  }
+  .summery-text {
+    font-size: 16px;
+    padding: 1em;
+  }
+  .radiobutton {
+    text-decoration: underline;
+    font-size: 20px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+  .made-by {
+    font-size: 16px;
+  }
 }
