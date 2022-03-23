@@ -282,11 +282,6 @@ footer {
     font-size: 16px;
   }
 
-  input[type="radio"]:checked + span,
-  input[type="radio"]:checked + span {
-    /* padding: 30px; */
-  }
-
   .img-wrapper--images {
     display: grid;
     grid-template-columns: 1fr 1fr;
