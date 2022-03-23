@@ -16,7 +16,7 @@ const Summary = ({ nameInput, value, whatTeam, watchedStatus }) => {
             <p>Seen it: {watchedStatus}</p>
             </div>
 
-            <div><button onClick={window.print}>Print your results!</button></div>
+            <div className='print-btn'><button onClick={window.print}>Print your results!</button></div>
         </section>
     )
 }

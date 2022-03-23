@@ -79,12 +79,15 @@ body {
 
 
 .logo-wrapper {
-  width: 400px;
+  width: 100vw;
   margin: auto;
+  display: flex;
+  justify-content: center;
 }
 .logo-wrapper img {
-
-  width: 100%;
+  min-width: 350px;
+  max-width: 450px;
+  width: 30%;
 }
 
 .pergament {

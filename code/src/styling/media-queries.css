@@ -9,7 +9,7 @@
   }
   
 
-  @media screen and ( min-width: 340px ) and ( max-width: 500px ) {
+  @media screen and ( min-width: 340px ) and ( max-width: 600px ) {
    
     
     .welcome-screen {
@@ -30,8 +30,10 @@
 
 
     .logo-wrapper {
-    width: 240px;
-    margin: auto;
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
    }
 
   form label {
@@ -77,6 +79,9 @@
     input[type=range]::-webkit-slider-thumb { 
         filter:invert(100);
     }
+
+
+    
   
     select {
         outline-color: red;
@@ -108,18 +113,78 @@
     .question {
         font-size: 1.3rem;
 
+    }
+    .end-screen {
+        width: 100%;
+    }
 
     }
 
 
+    @media screen and ( min-width: 601px ) and ( max-width: 1200px ) {
+
+
+
+
+body {
+    background-size: fill; 
+    background-position: 70%;
+}
+
+
+        .pergament {
+            width: 70vh;
+
+        }
+
+
+        .form-wrapper {
+            margin-left: 0px;
+            margin-top: 4rem;
+            width: 100vw;
+        }
+
+        .end-screen {
+            width: 100%;
+        }  
+
+        
+
+    .logo-wrapper {
+        width: 100%;
+        margin: auto;
+        display: flex;
+        justify-content: center;
+   }
+
+  input {
+
+    font-size: 1.5rem;
+    height: 3rem;
+    z-index: 500;
+    position: relative;
+    width: 400px;
+  
+  }
+
+  form {
+    /* background-color: rgb(128, 255, 0); */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+    button {
+        width: 400px;
+    }
+
     }
 
 
-
-
-  @media screen and ( min-width: 900px ) and ( max-width: 1600px ) {
+  @media screen and ( min-width: 1201px ) and ( max-width: 1600px ) {
    
   form {
-      background-color: red;
+      background-color: transparent;
   }
   }
