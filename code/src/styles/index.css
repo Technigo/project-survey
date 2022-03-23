@@ -73,7 +73,7 @@ button {
 
 .q-and-a-box {
   padding: 0 20px;
-  height: 375px;
+  height: 350px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -85,6 +85,7 @@ button {
   font-size: 24px;
   text-align: center;
   padding-bottom: 20px;
+  margin: 0;
 }
 
 /* ----- INPUT ----- */
