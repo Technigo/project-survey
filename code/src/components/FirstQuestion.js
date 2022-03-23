@@ -19,7 +19,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
       <form>
         <h2>Let's get stated by writing your name: </h2>
         <label className="description" htmlFor="nameInput">
-          First name / nickname{" "}
+          First name / nickname
         </label>
         <input
           className="name-input"
@@ -29,8 +29,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
           onChange={onNameInputChange}
         />
         <button disabled={nameInput === ""} onClick={onStepChange}>
-          {" "}
-          Let's start with the questions!{" "}
+          Let's start with the questions!
         </button>
       </form>
     </section>

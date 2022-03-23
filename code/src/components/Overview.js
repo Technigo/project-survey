@@ -1,14 +1,6 @@
 import React from "react";
 
-const Overview = ({
-  nameInput,
-  goals,
-  relateToImg,
-  handInTime,
-  graduation,
-  radioValue,
-  setRadioValue,
-}) => {
+const Overview = ({ nameInput, goals, handInTime, graduation, radioValue }) => {
   return (
     <section className="form-container overview">
       <h2>
