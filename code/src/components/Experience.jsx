@@ -9,8 +9,8 @@ const Experience = ({ experienceInput, experienceChoosen }) => {
                 <h2>What kind of experience do you have from working remotely?</h2>
                 <p>I have worked from: </p>
                 <div>
-                    {experiences.map((experienceChoice => (
-                        <div className="option-container">
+                    {experiences.map((experienceChoice, index) => (
+                        <div className="option-container" key={index}>
                             <label key={experienceChoice}>
                                 <input className="input"
                                     type="radio"
@@ -21,7 +21,7 @@ const Experience = ({ experienceInput, experienceChoosen }) => {
                                 {experienceChoice}
                             </label>
                         </div>
-                    )))}
+                    ))}
                 </div>
             </div>
         </div>

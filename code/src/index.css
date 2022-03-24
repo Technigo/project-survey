@@ -59,7 +59,7 @@ h2 {
   text-align: center;
   justify-content: center;
   flex-direction: column;
-  width: 50vw;
+  width: 100%;
   height: auto;
 }
 
@@ -87,7 +87,6 @@ h2 {
   font-size: 17px;
   margin: 20px 0px;
   width: 50%;
-
 }
 
 .text-area {
