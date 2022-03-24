@@ -14,7 +14,7 @@ const Options = ({ setOptions, options }) => {
         id="option"
         value={options}
       >
-        <option disabled>Choose below</option>
+        <option disabled={true}>Choose below</option>
         <option>Stockholm</option>
         <option>Gothenburg</option>
         <option>Malmö</option>
