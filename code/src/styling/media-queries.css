@@ -130,6 +130,9 @@ body {
     background-size: fill; 
     background-position: 70%;
 }
+#root {
+    width: 100%;
+}
 
 
         .pergament {
@@ -167,18 +170,68 @@ body {
   
   }
 
-  form {
-    /* background-color: rgb(128, 255, 0); */
-    width: 100%;
-    margin: 0;
-    padding: 0;
+  .form-wrapper {
+
+   width:100%; 
+   margin: auto;
+   display: flex;
+   justify-content: center;
 
 }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    padding: 3rem;
+    height: 400px;
+    width: 500px;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 400;
+    position: relative;
+    animation: pagetransit 1s ease-in-out forwards;
+    opacity: 1;
+   
+  }
 
     button {
         width: 400px;
     }
 
+    select {
+  
+    width: 80%;
+    height: 3rem;
+    padding-left: 1.2rem;
+    margin-top: 3rem;
+    z-index: 10;
+    position: relative;
+    background: rgba(0, 0, 0, 0.363);
+    color: white;
+    font-family: 'cinzel', serif;
+    font-size: 1.2rem;
+    height: 3rem;
+  
+  
+    -webkit-background: black;
+  
+    }
+
+.end-screen {
+    
+    margin: auto;
+
+    color: white;
+    position: relative;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0;
+    background: radial-gradient(circle, #8b00009c, #4902023a, rgba(0, 0, 0, 0), rgba(72, 0, 0, 0));
+  }
     }
 
 

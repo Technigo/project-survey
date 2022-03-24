@@ -14,7 +14,7 @@ const Form = () => {
 
   const [step, setStep] = useState(1)
   const [watchedStatus, setWatchedStatus] = useState('')
-  const [nameInput, setNameInput] = useState('Dorothea')
+  const [nameInput, setNameInput] = useState('')
   const [whatTeam, setShip] = useState('')
   const [value, setValue] = useState("50")
 
