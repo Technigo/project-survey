@@ -1,11 +1,9 @@
 import React from 'react';
 
 export const RadioButton = ({alt, onChange, checked}) => (
-    <label className='radio-button' htmlFor={alt}>
+    <label className='radio-button'>
         {alt}
-    
         <input
-            id={alt}
             type='radio'
             value={alt}
             onChange={onChange}

@@ -10,14 +10,13 @@ export const App = () => {
 		<>
 			<div className='main-content'>
 				<Header 
-					key={'header'}
 					header="Couple exit survey"
 				/>
 				<div className='form-container'>
-					<Form key={'form-container'}/>
+					<Form />
 				</div>
 			</div>
-			<Footer key={'footer'}/>
+			<Footer/>
 		</>
 	)
 }

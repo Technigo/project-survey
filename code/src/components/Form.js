@@ -1,6 +1,7 @@
 import React, {useState} from 'react'
 
 import questions from '../questions.json'
+import { Input } from 'components/Input'
 import { Select } from 'components/Select'
 import { Button } from 'components/Button'
 import { RadioButton } from 'components/RadioButton'
@@ -20,6 +21,28 @@ export const Form = () => {
 	const onSubmitting = (e) => {
 		e.preventDefault();
 	};
+
+	const handleUserNameChange = (event) => {
+		setUserName(event.target.value)
+	}
+
+	const handleBreakupReason = (event) => {
+		setBreakupReason(event.target.value)
+	}
+
+	const handleDateFriend = (event) => {
+		setDateFriend(event.target.value)
+	}
+	
+	const handleGetBackTogether = (event) => {
+		setGetBackTogether(event.target.value)
+	}
+
+	const handleFriendContactDetails = (event) => {
+		setFriendContactDetails(event.target.value)
+	}
+	
+
 
 	const nextPage = (value) => {
 		if (value === 'default' || !value || value === []) {
@@ -43,7 +66,7 @@ export const Form = () => {
 		setShipDuration(event.target.value)
 	}
 
-	const onTraitsCheckboxesChange = (trait) => {
+	const handleTraitsCheckboxesChange = (trait) => {
 		if (traitsCheckboxes.includes(trait)) {
 			const filteredTraits = traitsCheckboxes.filter(item => item !== trait)
 			setTraitsCheckboxes(filteredTraits)
@@ -64,15 +87,13 @@ export const Form = () => {
 			
 			{page === 0 && (
 				<div className='current-page'>
-					<label className='text-label'>
-						<h2>{questions.nameQuestion}</h2>
-						<input
-							type='text'
-							onChange={event => setUserName(event.target.value)}
-							value={userName}
-							placeholder='Your name'
-						/>
-					</label>
+					<Input
+						labelClassName={'text-label'}
+						label={<h2>{questions.nameQuestion}</h2>}
+						onChange={handleUserNameChange}
+						value={userName}
+						placeholder={'Your name'}
+					/>
 					<div>
 						<h3 className='error'>{error}</h3>
 						<Button
@@ -84,7 +105,7 @@ export const Form = () => {
 				</div>
 			)}
 			{page === 1 && (
-				<div className='current-page select-container question'>
+				<div className='current-page select-container'>
 					<Select 
 						shipDuration = {shipDuration}
 						setShipDuration = {handleShipDuration}
@@ -114,7 +135,6 @@ export const Form = () => {
 						{questions.breakupAlts.map((alt) =>
 							<div key={alt}>
 								<RadioButton
-									
 									alt={alt}
 									onChange={event => setBreakupPerson(event.target.value)}
 									checked={breakupPerson === alt}
@@ -140,16 +160,13 @@ export const Form = () => {
 
 			{page === 3 && (
 				<div className='current-page text-input-container'>
-					<label className='text-label'>
-						<h2>{questions.breakupReasonQuestion}</h2>
-						
-						<input
-							id='breakUpperQuestion'
-							type='text'
-							onChange={event => setBreakupReason(event.target.value)}
-							value={breakupReason}
-						/>
-					</label>
+					<Input 
+						labelClassName={'text-label'}
+						label={<h2>{questions.breakupReasonQuestion}</h2>}
+						onChange={handleBreakupReason}
+						value={breakupReason}
+						placeholder={shipDuration + ' ago you insinuated that...'}
+					/>
 					<div>
 						<h3 className='error'>{error}</h3>
 						<Button
@@ -170,14 +187,13 @@ export const Form = () => {
 					<h2>{questions.traitsQuestion}</h2>
 					<div className='traits-container'>
 						{questions.traits.map((trait) => 
-							<label key={trait} className='trait'>
-								{trait}
-								<input
-									type='checkbox'
-									checked={traitsCheckboxes.includes(trait)}
-									onChange={() => onTraitsCheckboxesChange(trait)}
-								/>
-							</label>
+							<Input 
+								labelKey={trait}
+								labelClassName={'trait'}
+								label={trait}
+								onChange={() => handleTraitsCheckboxesChange(trait)}
+								type={'checkbox'}
+							/>
 						)}
 					</div>
 					<div>
@@ -203,45 +219,33 @@ export const Form = () => {
 							<div key={alt}>
 								<RadioButton
 									alt={alt}
-									onChange={event => setGetBackTogether(event.target.value)}
+									onChange={handleGetBackTogether}
 									checked={getBackTogether === alt}
 								/>
 							</div>
 						)}
 					</div>
-
 					{(getBackTogether === "Never in a million years!" || getBackTogether === "Nah.") && (
 						<div>
-							<div>
-								<h2>{questions.dateFriendQuestion}</h2>
-								{questions.backTogetherAlts.map((alt, index) =>
-									<div key={alt+index}>
-										<label className='radio-button'>
-											{alt}
-											<input
-												
-												type='radio'
-												value={alt}
-												onChange={event => setDateFriend(event.target.value)}
-												checked={dateFriend === alt}
-											/>
-										</label>
-									</div>
-								)}
-							</div>
+							<h2>{questions.dateFriendQuestion}</h2>
+							{questions.backTogetherAlts.map((alt, index) =>
+								<div key={alt+index}>
+									<RadioButton
+										alt={alt}
+										onChange={handleDateFriend}
+										checked={dateFriend === alt}
+									/>
+								</div>
+							)}
 						</div>
 					)}
-
 					{(dateFriend === "Absolutely!" || dateFriend === "Maybe?") && (
 						<div className='text-input-container'>
-							<label htmlFor='friendContactDetails'>
-							<h2>{questions.friendNameQuestion}</h2>
-							</label>
-							<input
-								id='friendContactDetails'
-								type='text'
-								onChange={event => setFriendContactDetails(event.target.value)}
+							<Input 
+								label={<h2>{questions.friendNameQuestion}</h2>}
+								onChange={handleFriendContactDetails}
 								value={friendContactDetails}
+								placeholder={'Name, number'}
 							/>
 						</div>
 					)}
