@@ -6,4 +6,4 @@ This weeks assignment was to create a survey in React and build components.
 
 I structured the questions I wanted to ask into components. The form and the summary was a separate component. 
 
-
+Here is the deployed survey:  https://hybrid-worksurvey.netlify.app/
