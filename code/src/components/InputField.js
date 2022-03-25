@@ -17,19 +17,19 @@ const InputField = ({ name, type, options, value, onChange }) => {
       );
     }
     case "radio": {
-      return options.map((o) => {
+      return options.map((option) => {
         return (
-          <div key={o.value}>
+          <div key={option.value}>
             <input
-              id={o.value}
+              id={option.value}
               type={type}
               name={name}
-              value={o.value}
-              checked={value === o.value}
+              value={option.value}
+              checked={value === option.value}
               onChange={onChange}
               required
             />
-            <label htmlFor={o.value}>{o.label}</label>
+            <label htmlFor={option.value}>{option.label}</label>
           </div>
         );
       });
@@ -41,9 +41,9 @@ const InputField = ({ name, type, options, value, onChange }) => {
           <option value="" defaultValue disabled>
             Choose option
           </option>
-          {options.map((o) => (
-            <option key={o.value} value={o.value}>
-              {o.label}
+          {options.map((option) => (
+            <option key={option.value} value={option.value}>
+              {option.label}
             </option>
           ))}
         </select>
@@ -63,8 +63,8 @@ const InputField = ({ name, type, options, value, onChange }) => {
             />
           </label>
           <div className="input-range-group">
-            {options.map((o) => (
-              <span key={o.value}>{o.label}</span>
+            {options.map((option) => (
+              <span key={option.value}>{option.label}</span>
             ))}
           </div>
         </>

@@ -75,7 +75,7 @@ const Form = () => {
 
   const handleOnSubmit = (event) => {
     event.preventDefault();
-    setAnswers((arr) => [...arr, formatInput(inputValue)]);
+    setAnswers((previousAnswers) => [...previousAnswers, formatInput(inputValue)]);
     setQuestionIndex(currentQuestionIndex + 1);
     setInputValue("");
   };
