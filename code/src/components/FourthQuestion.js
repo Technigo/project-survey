@@ -11,8 +11,8 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
   return (
     <section className="form-container">
       <div className="box-wrapper">
-        <h2>When do you hand in your weekly project?</h2>
-        <h3>
+        <h2 tabIndex="0">When do you hand in your weekly project?</h2>
+        <h3 tabIndex="0">
           You can only choose one of the options and you need to click on the
           box you want to select
         </h3>

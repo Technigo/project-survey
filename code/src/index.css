@@ -22,13 +22,10 @@ body {
   height: 100%;
 }
 
-.app {
-  margin: 2rem;
-}
-
 .main-container {
   display: flex;
   justify-content: center;
+  margin: 2rem;
 }
 
 form {
@@ -132,6 +129,7 @@ input[type="radio"] {
   opacity: 0;
 }
 
+input[type="radio"]:focus + img,
 input[type="radio"]:checked + img {
   border: 5px solid var(--clr-darkblue);
   border-radius: 5px;
@@ -147,6 +145,7 @@ input[type="radio"]:checked + img {
   padding: 1.5em;
 }
 
+input[type="radio"]:checked + span,
 input[type="radio"]:checked + span {
   color: var(--clr-darkblue);
 }
@@ -195,6 +194,10 @@ select {
   color: var(--clr-darkblue);
 }
 
+select:focus {
+  border: 1px solid var(--clr-darkblue);
+}
+
 .select-h2 {
   width: 15em;
 }
@@ -228,7 +231,8 @@ button {
   outline: none;
 }
 
-button:hover {
+button:hover,
+button:focus {
   background-color: var(--clr-lightblue);
   box-shadow: 0px 15px 20px var(--clr-shadow);
   color: var(--clr-darkblue);

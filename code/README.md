@@ -14,7 +14,6 @@ We were also encouraged to use components as much we could to practice for futur
 - Tested the accessability with keyboard and run the lighthouse on the page. Didn't find any problems.
 
 I struggled with the radio buttons that I transformed into images and how to be able to select them, collect the info, and put them in the overview.
-I also want to add disabled on "select one by clicking here" on my dropdown options to make it more optimal.
 Still working on the radio buttons in question number four, the contrast is't the best I'm working on a other solution.
 
 # Deployed page

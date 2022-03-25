@@ -1,31 +1,25 @@
 import React from "react";
 
-const graduate = [
-  "Select one by clicking here",
-  "thankful you made it through",
-  "surprised you made it",
-  "ready to get started",
-  "somehow at the finish line",
-];
-
 const FifthQuestion = ({ graduation, onGraduationChange, onStepChange }) => {
   return (
     <section className="form-container">
       <form>
-        <h2 className="select-h2">
+        <h2 tabIndex="0" className="select-h2">
           How do you think you will feel at the graduation?
         </h2>
-        <label className="description" htmlFor="selectInput">
+        <label tabIndex="0" className="description" htmlFor="selectInput">
           Select one of the options
         </label>
         <select onChange={onGraduationChange} value={graduation}>
-          {graduate.map((item) => {
-            return (
-              <option key={item} value={item}>
-                {item}
-              </option>
-            );
-          })}
+          <option value="">Select one by clicking here</option>
+          <option value="thankful you made it through">
+            thankful you made it through
+          </option>
+          <option value="surprised you made it">surprised you made it</option>
+          <option value="ready to get started">ready to get started</option>
+          <option value="somehow at the finish line">
+            somehow at the finish line
+          </option>
         </select>
 
         <button disabled={graduation === ""} onClick={onStepChange}>

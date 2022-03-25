@@ -8,8 +8,8 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
   return (
     <section className="form-container">
       <div className="img-wrapper">
-        <h2>What image do you relate to the most?</h2>
-        <h3>
+        <h2 tabIndex="0">What image do you relate to the most?</h2>
+        <h3 tabIndex="0">
           You can only choose one of the options and you need to click on the
           image you want to select
         </h3>

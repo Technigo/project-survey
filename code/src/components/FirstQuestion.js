@@ -5,7 +5,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
   return (
     <section className="form-container">
       <div className="heading">
-        <h1>What kind of code student are you?</h1>
+        <h1 tabIndex="0">What kind of code student are you?</h1>
       </div>
 
       <div className="form-image">
@@ -17,7 +17,7 @@ const FirstQuestion = ({ nameInput, onNameInputChange, onStepChange }) => {
       </div>
 
       <form>
-        <h2>Let's get stated by writing your name: </h2>
+        <h2 tabIndex="0">Let's get started by writing your name: </h2>
         <label className="description" htmlFor="nameInput">
           First name / nickname
         </label>
