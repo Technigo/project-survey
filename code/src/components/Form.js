@@ -66,7 +66,7 @@ const Form = () => {
 
   const buttonLabel = currentQuestionIndex === questions.length - 1 ? "Submit" : "Next question";
 
-  const handleInputChange = (event) => setInputValue(event.target.value);
+  const isSubmitted = questions.length === answers.length;
 
   const formatInput = (value) =>
     questions[currentQuestionIndex].format_answer
@@ -80,14 +80,12 @@ const Form = () => {
     setInputValue("");
   };
 
-  const didSubmit = () => questions.length === answers.length;
-
   const resetForm = () => {
     setAnswers([]);
     setQuestionIndex(0);
   };
 
-  if (didSubmit()) {
+  if (isSubmitted) {
     return <SubmittedView answers={answers} reset={resetForm} />;
   }
 
@@ -96,7 +94,7 @@ const Form = () => {
       <Question
         {...questions[currentQuestionIndex]}
         inputValue={inputValue}
-        onChange={handleInputChange}
+        onChange={(event) => setInputValue(event.target.value)}
       />
       <Button label={buttonLabel} inputValue={inputValue} />
     </form>
