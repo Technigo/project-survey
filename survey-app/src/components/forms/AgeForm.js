@@ -1,7 +1,7 @@
 import React from 'react';
 
 import SubHeader from '../partials/SubHeader';
-import Form from '../partials/RadioInput'
+import RadioInput from '../partials/RadioInput'
 
 const ageGroups = ['18-24', '25-34', '35-44', '45+'];
 const subHeaderData = {
@@ -22,9 +22,9 @@ const AgeInput = ({ ageData }) => {
   };
 
   return (
-    <section className='age-input page'>
+    <section className='page'>
       <SubHeader subHeaderData={subHeaderData} />
-      <Form radioData={radioData} />
+      <RadioInput radioData={radioData} />
     </section>
   );
 };

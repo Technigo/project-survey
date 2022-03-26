@@ -1,9 +1,7 @@
 import React from 'react';
 
 import SubHeader from '../partials/SubHeader';
-import Form from '../partials/RadioInput'
-
-import '../../styled-components/Radio.css';
+import RadioInput from '../partials/RadioInput'
 
 const preferences = ['Yes', 'No'];
 const subHeaderData = { page: 2, title: 'Would you prefer a company that offers flexible work hours?' };
@@ -23,7 +21,7 @@ const WorkHoursInput = ({ hoursData }) => {
   return (
     <section className='page'>
       <SubHeader subHeaderData={subHeaderData} />
-      <Form radioData={radioData} />
+      <RadioInput radioData={radioData} />
     </section>
   );
 };

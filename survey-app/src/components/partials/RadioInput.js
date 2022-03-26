@@ -3,18 +3,18 @@ import { AlertContainer } from 'react-custom-alert';
 
 import Buttons from './Buttons';
 
-const Form = ({ radioData }) => {
+const RadioInput = ({ radioData }) => {
   const { nextPage, prevPage, state, retrieveData, allInputs, label } = radioData;
   const buttonData = { nextPage, prevPage, state };
 
   return (
     <>
       <form>
-        {allInputs.map((group) => (
+        {allInputs.map(group => (
           <label
             key={group}
             htmlFor={`${group}-input`}
-            className='container'
+            className='age-label'
             aria-label={`${label} groups`}>
             <input
               type='radio'
@@ -23,7 +23,6 @@ const Form = ({ radioData }) => {
               aria-checked='false'
               onChange={retrieveData}
               checked={state === group} />
-            <span className='dot' />
             {group}
           </label>
         ))}
@@ -34,4 +33,4 @@ const Form = ({ radioData }) => {
   );
 };
 
-export default Form;
+export default RadioInput;

@@ -128,11 +128,20 @@ button {
   color: var(--clr-primary);
 }
 
+.hour-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.age-label {
+  margin-right: 15px;
+}
+
 select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  padding: 15px 35px 15px 15px;
+  padding: 10px 30px 10px 10px;
   background: #efefef;
   border: 1px solid var(--clr-primary);
   border-radius: 3px;
