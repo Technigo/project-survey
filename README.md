@@ -8,7 +8,6 @@ I created open application form of fictive company, where I asked about user's w
 
 I created React state for each step (= question number) and depending on what the step was, I then displayed different questions, which were each build in their own components (with needed props), like this: 
 
-<form onSubmit={onFormSubmit}>
           {step === 0 && <StartingPage 
                             onStepChange={onStepChange}
                         />}
