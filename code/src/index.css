@@ -145,7 +145,8 @@ code {
   }
 
   .form {
-    margin: 15vh auto;
+    margin: 20vh auto;
+    width: 25vw;
   }
 }
 
@@ -190,8 +191,8 @@ code {
   }
 
   .form {
-    width: 80vw;
-    transform: scale(0.8);
+    width: 100vw;
+    transform: scale(0.9);
   }
   
   footer {
