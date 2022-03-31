@@ -198,6 +198,7 @@ code {
   footer {
     font-family:'Times New Roman', Times, serif;
     background-image: url(./assets/footer.png);
+    width: 100vw;
     height: 10vh;
     margin-top: 150px;
     font-size: 20px;
