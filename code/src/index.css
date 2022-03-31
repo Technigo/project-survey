@@ -183,12 +183,15 @@ code {
   }
   
   .letter-container {
-    width: 100vw;
-    transform: scale(0.7);
+    width: 200%;
+    transform: scale(0.6);
+    margin-left: -165px;
+    
   }
 
   .form {
     width: 80vw;
+    transform: scale(0.8);
   }
   
   footer {
