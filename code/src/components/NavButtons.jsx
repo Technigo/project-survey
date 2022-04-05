@@ -121,7 +121,7 @@ const NavButtons = ({
 
   if (pageNumber === 0) {
     return (
-      <div className="nav-buttons" style={leftAlign}>
+      <div className="nav-buttons next" style={leftAlign}>
         <button onClick={pageForward}>
           <img
             className="navbutton-icon"
@@ -137,7 +137,7 @@ const NavButtons = ({
         {pageNumber > 0 && pageNumber <= 9 && (
           <button onClick={pageBackward}>
             <img
-              className="navbutton-icon"
+              className="navbutton-icon back"
               src={backButton}
               alt="back button"
             />
@@ -146,7 +146,7 @@ const NavButtons = ({
         {pageNumber > 0 && pageNumber < 7 && (
           <button onClick={pageForward}>
             <img
-              className="navbutton-icon"
+              className="navbutton-icon next"
               src={forwardButton}
               alt="forward button"
             />
@@ -196,7 +196,7 @@ const NavButtons = ({
         {pageNumber === 8 && (
           <button onClick={pageForward}>
             <img
-              className="navbutton-icon"
+              className="navbutton-icon next"
               src={forwardButton}
               alt="forward button"
             />
@@ -205,7 +205,7 @@ const NavButtons = ({
         {pageNumber === 9 && (
           <button onClick={refreshPage}>
             <img
-              className="navbutton-icon"
+              className="navbutton-icon restart"
               src={restartButton}
               alt="restart button"
             />

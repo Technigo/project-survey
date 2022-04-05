@@ -158,9 +158,17 @@ hr {
 }
 
 /* Grid Display for Radio Buttons & Drop-down */
+.grid-radio {
+  display: grid;
+  grid-template-columns: 2;
+  gap: 10px;
+  margin-top: 10px;
+}
+
 .grid {
   display: grid;
   grid-template-columns: 2;
+  grid-template-rows: repeat(10, 1fr);
   gap: 10px;
   margin-top: 10px;
 }
@@ -168,11 +176,15 @@ hr {
 .column-1 {
   grid-column: 1 / span 1;
   padding: 5px 0;
+  display: flex;
+  align-self: center;
 }
 
 .column-2 {
   grid-column: 2 / span 1;
   margin-left: auto;
+  display: flex;
+  align-self: center;
 }
 
 /* Styling Text Input */
@@ -246,6 +258,11 @@ input[type="text"]:focus {
   vertical-align: -0.125em;
 }
 
+[type="radio"]:focus + span:before {
+  background: var(--tertiary);
+  box-shadow: 0 0 0 3px var(--secondary);
+}
+
 .column-2 label {
   cursor: pointer;
 }
@@ -257,7 +274,7 @@ select {
   border-radius: 10px;
   border: 2px solid white;
   -webkit-appearance: none;
-  -moz-appearance: none;
+  -moz-appearance: inherit;
   appearance: none;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -272,6 +289,7 @@ select {
 
 select:focus {
   outline: none;
+  outline: 2px solid black;
 }
 
 .drop-down {
@@ -328,6 +346,7 @@ canvas {
 }
 
 /* Navbuttons */
+
 .nav-buttons {
   display: flex;
   justify-content: space-between;
@@ -356,6 +375,18 @@ canvas {
 .navbutton-icon {
   width: 30px;
   height: 30px;
+}
+
+.next {
+  margin-left: 4px;
+}
+
+.back {
+  margin-right: 4px;
+}
+
+.restart {
+  margin-left: 2px;
 }
 
 /* Footer */
@@ -392,7 +423,7 @@ footer a {
   }
 
   .progress-container {
-    height: 25px;
+    height: 50px;
   }
 
   .grid {
@@ -421,16 +452,6 @@ footer a {
     height: 160px;
     margin-top: 30px;
     margin-bottom: 20px;
-  }
-
-  .nav-buttons button {
-    padding: 7px 30px;
-    margin-bottom: 5px;
-  }
-
-  .navbutton-icon {
-    width: 40px;
-    height: 40px;
   }
 }
 
