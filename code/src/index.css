@@ -1,14 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 * {
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	-webkit-box-sizing: border-box;
-	-moz-box-sizing: border-box;
-	-webkit-font-smoothing: antialiased;
-	text-rendering: optimizeLegibility;
-	text-decoration: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  text-decoration: none;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -25,11 +25,17 @@
 }
 
 body {
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
   /* background-image: url('assets/susan-wilkinson-unsplash.jpg');
   background-size: cover; */
   /* background-image: url('assets/nathan-blackaby-unsplash.jpg');
   background-size: cover; */
+  background: rgb(0, 119, 182);
+  background: linear-gradient(
+    120deg,
+    rgba(0, 119, 182, 1) 0%,
+    rgba(44, 137, 132, 1) 100%
+  );
 }
 
 /* Header */
@@ -70,12 +76,12 @@ header {
 
 .explanation {
   font-size: 17px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
 }
 
 .title {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   margin-bottom: 10px;
 }
@@ -95,7 +101,7 @@ hr {
 }
 
 .accordion-info a {
-  color: var(--secondary)
+  color: var(--primary);
 }
 
 /* Page */
@@ -104,33 +110,51 @@ hr {
   max-width: 80%;
   min-height: 100vh;
   margin: 0 auto;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   position: relative;
   padding-bottom: 3.5rem;
 }
 
 .page-container {
-  background-color: var(--primary);
-  color: var(--secondary);
-  border-radius: 5px;
+  /* background-color: var(--primary); */
+  /* background-color: rgba(206, 212, 218, 0.4); */
+  background-color: rgba(52, 58, 64, 0.3);
+  /* color: white; */
+  color: #e9ecef;
+  /* color: var(--secondary); */
+  border-radius: 15px;
   padding: 15px;
   margin: 10px 0;
-  border: 3px solid var(--accent);
+  /* border: 3px solid var(--accent); */
 }
 
 /* Progress Bar */
 .progress-container {
   width: 100%;
-  height: 20px;
-  border-radius: 5px;
-  background-color: var(--primary);
-  border: 3px solid var(--tertiary);
+  height: 50px;
+  border-radius: 25px;
+  /* background-color: var(--primary); */
+  background-color: rgba(206, 212, 218, 0.6);
+  /* border: 3px solid var(--tertiary); */
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .progress-bar {
-  background-color: var(--tertiary);
+  /* background-color: var(--tertiary); */
+  background: rgb(252, 166, 28);
+  background: linear-gradient(
+    90deg,
+    rgba(252, 166, 28, 1) 0%,
+    rgba(223, 148, 25, 1) 100%
+  );
   transition: width 1s ease-in-out;
   height: 100%;
+  position: absolute;
+  top: 0;
 }
 
 /* Grid Display for Radio Buttons & Drop-down */
@@ -152,13 +176,20 @@ hr {
 }
 
 /* Styling Text Input */
-input[type=text] {
+input[type="text"] {
   width: 50%;
   padding: 5px 10px;
-  font-family: 'Roboto', sans-serif;
-  font-size: 16px;
-  border-radius: 5px;
-  border: 3px solid var(--secondary);
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  border-radius: 10px;
+  /* border: 3px solid var(--secondary); */
+  border: 2px solid white;
+  background: transparent;
+  color: white;
+}
+
+input[type="text"]:focus {
+  outline: none;
 }
 
 /* Styling Radio Buttons */
@@ -180,7 +211,7 @@ input[type=text] {
   /* justify-content: left; */
 }
 
-[type=radio] {
+[type="radio"] {
   border: 0;
   clip: rect(0 0 0 0);
   height: 1px;
@@ -191,25 +222,25 @@ input[type=text] {
   width: 1px;
 }
 
-[type=radio] + span:before {
-  content: '';
+[type="radio"] + span:before {
+  content: "";
   display: inline-block;
   width: 16px;
   height: 16px;
   vertical-align: -0.25em;
-  border-radius: .25em;
+  border-radius: 0.25em;
   border: 2px solid #fff;
-  box-shadow: 0 0 0 2px var(--secondary);
+  /* box-shadow: 0 0 0 2px var(--secondary); */
   transition: 0.5s ease all;
 }
 
-[type=radio]:checked + span:before {
+[type="radio"]:checked + span:before {
   background: var(--tertiary);
   box-shadow: 0 0 0 3px var(--secondary);
 }
 
-[type=radio]:focus span:after {
-  content: '\0020\2190';
+[type="radio"]:focus span:after {
+  content: "\0020\2190";
   font-size: 16px;
   line-height: 1;
   vertical-align: -0.125em;
@@ -221,20 +252,27 @@ input[type=text] {
 
 /* Styling Drop-Down Menu */
 select {
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
   font-size: 14px;
-  border-radius: 5px;
-  border: 2px solid var(--secondary);
-  -webkit-appearance: none; 
+  border-radius: 10px;
+  border: 2px solid white;
+  -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
   /* background: url(http://dropdown/arrow/url/) no-repeat; */
   background-position: right center;
-  background-color: var(--primary);
+  /* background-color: var(--primary); */
+  background-color: transparent;
   padding: 5px;
-  color: var(--secondary);
+  /* color: var(--secondary); */
+  color: white;
+  text-align: center;
+}
+
+select:focus {
+  outline: none;
 }
 
 .drop-down {
@@ -244,29 +282,33 @@ select {
 }
 
 /* Accordion Elements */
+canvas {
+  background-color: white;
+  border-radius: 15px;
+}
+
 .tipi-header {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
   width: 100%;
   padding: 10px 0;
-  border-radius: 5px;
-  border-radius: 5px;
-  border: 3px solid var(--accent);
-  background-color: var(--secondary);
+  border-radius: 15px;
+  border: 2px solid white;
+  background: transparent;
   color: var(--primary);
   margin-top: 10px;
 }
 
 .tivi-header {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-size: 18px;
   font-weight: 700;
   width: 100%;
   padding: 10px 0;
-  border-radius: 5px;
-  border: 3px solid var(--accent);
-  background-color: var(--secondary);
+  border-radius: 15px;
+  border: 2px solid white;
+  background: transparent;
   color: var(--primary);
   margin-top: 10px;
 }
@@ -278,10 +320,11 @@ select {
 .accordion-info {
   display: none;
   padding: 10px 10px;
-  color: var(--secondary)
+  color: var(--primary);
 }
 
-.tipi-header:hover, .tivi-header:hover {
+.tipi-header:hover,
+.tivi-header:hover {
   cursor: pointer;
 }
 
@@ -290,16 +333,23 @@ select {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-bottom: 10px;
+  /* margin: 0 5px; */
+  /* margin-bottom: 10px; */
+  z-index: 1;
 }
 
 .nav-buttons button {
-  border-radius: 5px;
-  border: 3px solid var(--accent);
-  background-color: var(--secondary);
-  padding: 5px 20px;
+  border-radius: 50%;
+  /* border: 3px solid var(--accent); */
+  border: none;
+  /* background-color: var(--secondary); */
+  background-color: rgba(206, 212, 218, 0.6);
+  height: 48px;
+  width: 48px;
+  /* padding: 5px 20px; */
   display: flex;
   justify-content: center;
+  align-items: center;
   cursor: pointer;
   /* width: 60px; */
 }
@@ -311,7 +361,7 @@ select {
 
 /* Footer */
 footer {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 700;
   font-size: 14px;
   width: 100%;
@@ -327,7 +377,7 @@ footer {
 }
 
 footer a {
-  color: var(--tertiary);
+  color: var(--primary);
   text-decoration: underline;
 }
 
@@ -385,12 +435,11 @@ footer a {
   }
 }
 
-
 /* Media Query for Desktop */
 @media (min-width: 1100px) {
-	.page {
-		width: 850px;
-	}
+  .page {
+    width: 850px;
+  }
 
   .page-container {
     padding: 45px;
