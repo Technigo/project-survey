@@ -261,7 +261,6 @@ select {
   appearance: none;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  /* background: url(http://dropdown/arrow/url/) no-repeat; */
   background-position: right center;
   /* background-color: var(--primary); */
   background-color: transparent;

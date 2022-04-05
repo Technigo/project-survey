@@ -11,8 +11,8 @@ import TiviDropDownOne from "./TiviDropDownOne";
 import TiviDropDownTwo from "./TiviDropDownTwo";
 import { TiviChart } from "./TiviChart";
 import EndPage from "./EndPage";
-import NavButtons from "./NavButtons";
-import Footer from "./Footer";
+// import NavButtons from "./NavButtons";
+// import Footer from "./Footer";
 
 export const Form = () => {
   // Demographic Questions
