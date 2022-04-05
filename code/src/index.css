@@ -255,7 +255,7 @@ select {
   border-radius: 10px;
   border: 2px solid white;
   -webkit-appearance: none;
-  -moz-appearance: inherit;
+  -moz-appearance: none;
   appearance: none;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
@@ -264,6 +264,14 @@ select {
   padding: 5px;
   color: white;
   text-align: center;
+}
+
+option {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  /* background-color: black; */
+  background: white;
+  color: black;
 }
 
 select:focus {
