@@ -269,7 +269,6 @@ select {
 option {
   -webkit-appearance: none;
   -moz-appearance: none;
-  /* background-color: black; */
   background: white;
   color: black;
 }
