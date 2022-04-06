@@ -11,13 +11,14 @@ const Travel = ({travelWay, ontravelWayChange, onStepChange, onBackstepChange}) 
       </label>
       <div className="radiobuttons">
         {travelWays.map(trip => ( 
-        <label key={trip}>
+        <label key={trip} className="fixRadio">
           <input
             type="radio"
             value={trip}
             onChange={ontravelWayChange}
             checked={travelWay === trip}
           />
+          <span className="colorRadio"></span>
           {trip}
         </label>
         ))}

@@ -12,13 +12,14 @@ const Eating = ({food, onfoodChange, onStepChange, onBackstepChange}) => {
       </label>
       <div className="radio-toolbar">
         {eatingScale.map(taste => ( 
-        <label key={taste}>
+        <label key={taste} className="fixRating">
           <input
           type="radio"
           value={taste}
           onChange={onfoodChange}
           checked={food === taste}
           />
+          <span className="colorRating"></span>
           {taste}
         </label>
         ))}

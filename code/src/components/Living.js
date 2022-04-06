@@ -12,13 +12,14 @@ const Living = ({rooms, onroomsChange, onStepChange, onBackstepChange}) => {
       </label>
       <div className="radio-toolbar">
         {livingScale.map(scale => ( 
-        <label key={scale}>
+        <label key={scale} className="fixRating">
           <input
           type="radio"
           value={scale}
           onChange={onroomsChange}
           checked={rooms === scale}
           />
+          <span className="colorRating"></span>
           {scale}
         </label>
          ))}
