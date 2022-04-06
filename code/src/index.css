@@ -69,6 +69,7 @@ input[type=text] {
   column-gap: 8px;
 }
 
+
  /* STYLING RADIOBUTTONS */
  .radio-toolbar input[type="radio"] {
   display: none;
@@ -89,10 +90,12 @@ input[type=text] {
   margin: 5px;
 }
 
+/* not working */
 .radio-toolbar input[type="radio"]:checked + label {
   background-color:#bfb;
 }
 
+/* not working */
 .radio-toolbar input[type="radio"]:focus + label {
   border: 2px dashed #444;
 }
@@ -128,15 +131,11 @@ input[type=text] {
   
 }
 
-.radiobuttons input[type="radio"]:checked + label {
+/* .radiobuttons input[type="radio"]:active {
   background-color:#bfb; 
+} */
 
-}
-
-.radiobuttons input[type="radio"]:focus + label {
-  border: 2px dashed #444;
-}
-
+/* hovereffect working */
 .radiobuttons label:hover {
   background-color: white;
 }
@@ -150,6 +149,11 @@ button {
   width: 50px;
   height: 30px;
   color: whitesmoke;
+}
+
+button:hover {
+  background-color: pink;
+  color: rgb(65, 9, 37);
 }
 
 .summary-answer {
