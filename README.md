@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+ Projectbrief: Use React state and controlled forms to build a Typeform with a summery of the users answers in the end.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started by planning the 4 different questions and breaking them up into components. from there i set upp eventhandlers and statehooks in the formcomponent, passing the to following components.  I had some problems with passning the eventhandlers which tought me the value of consequent naming.
 
+The code is validated with W3C validationtool.
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+ Deployed version:https://reverent-austin-4c5556.netlify.app/
