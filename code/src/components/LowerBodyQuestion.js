@@ -10,9 +10,7 @@ const LowerBodyQuestion = ({
 			<label tabindex='0'>
         What you want to do for train your lower body? You can choose option depends what you can use for training
         <select id="lowerBody" value={lowerBody} onChange={onLowerBodyChange}>
-          <option>
-            Select
-          </option>
+          <option>Select</option>
           <option value="Squat">Squat</option>
           <option value="Deadlift">Deadlift</option>
           <option value="Burpee">Burpee</option>
@@ -20,7 +18,8 @@ const LowerBodyQuestion = ({
         </select>
       </label>
 			<button onClick={onStepChange}
-      className="button">Next question</button>
+      className="button">Next question
+      </button>
 		</form>
 	)
 }

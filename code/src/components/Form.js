@@ -44,7 +44,7 @@ const Form = () => {
 
 	const goPrograms = () => {
 		setStep(8)
-	  }
+	}
 
 	const onStepChange = () => {
 		setStep(step + 1)
@@ -60,14 +60,16 @@ const Form = () => {
 					onStepChange={onStepChange}
 				/>
 			)}
+
 			 {step === 2 && (
-            <RandomCardioQuestion
-              random={random}
-              onRandomChange={onRandomChange}
-              onStepChange={onStepChange}
-			  goPrograms={goPrograms}
-            />
-          )}
+				<RandomCardioQuestion
+					random={random}
+					onRandomChange={onRandomChange}
+					onStepChange={onStepChange}
+					goPrograms={goPrograms}
+				/>
+            )}
+
 			{step === 3 && (
 				<TimeQuestion
 					time={time}
@@ -75,6 +77,7 @@ const Form = () => {
 					onStepChange={onStepChange}
 				/>
 			)}
+
             {step === 4 && (
 				<UpperBodyQuestion
                     upperBody={upperBody}
@@ -82,6 +85,7 @@ const Form = () => {
 					onStepChange={onStepChange}
 				/>
 			)}
+
              {step === 5 && (
 				<LowerBodyQuestion
                     lowerBody={lowerBody}
@@ -89,6 +93,7 @@ const Form = () => {
 					onStepChange={onStepChange}
 				/>
 			)}
+
 			 {step === 6 && (
 				<CardioTypeQuestion
                     cardioTypes={cardioTypes}
@@ -96,9 +101,17 @@ const Form = () => {
 					onStepChange={onStepChange}
 				/>
 			)}
+
 			{step === 7 && (
-				<Overview nameInput={nameInput} time={time} upperBody={upperBody} lowerBody={lowerBody} cardioTypes={cardioTypes} random={random} />
+				<Overview 
+					nameInput={nameInput}
+					time={time} 
+					upperBody={upperBody} 
+					lowerBody={lowerBody} 
+					cardioTypes={cardioTypes} 
+					random={random} />
 			)}
+
 			{step === 8 && (
 				<OverviewForRandom />
 			)}
