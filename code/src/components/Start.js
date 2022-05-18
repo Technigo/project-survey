@@ -27,7 +27,7 @@ const Start = () => {
                     <button aria-label="Click here to start the survey" className="start-button" onClick={OnNextQuestion} question={question}>
                         Suggest a book </button>
                     <div className="time-it-takes-wrapper">
-                        <img className="horloge-icon" src="./images/horloge-vintage.png" alt="horloge icon" /> <p>takes 1 minute</p>
+                        <img className="horloge-icon" src="./images/horloge-vintage.svg" alt="horloge icon" /> <p>takes 1 minute</p>
                     </div>
                 </div>
                 <p className="description"> We need help from enthusiatic readers like yourself to pick a book for our next book discussion.</p>

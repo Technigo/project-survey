@@ -1,20 +1,22 @@
-body {
-  background-color: #6F8370;
+:root {
+  --bg-clor: #b13249;
+  }
+
+
+* {
+  color: white;
+  font-family: Quicksand;
 }
 
-p {
-  font-family: asar;
+body {
+  background-color: var(--bg-clor);
 }
 
 .main-card {
   display: flex;
   flex-direction: column;
-  padding: 50px;
-  background-color: bisque;
+  padding: 40px;
   max-width: 500px;
-  border: 30px solid black;
-  border-image: url("/images/bg.jpg");
-  border-image-slice: 400;
 }
 
 /* hidden elements */
@@ -26,12 +28,6 @@ p {
   align-items: center;
 }
 
-h1 {
-  font-family: ballet;
-  font-size: 2em;
-  margin: 40px auto 0 auto;
-  color: white;
-}
 
 /* start - description of the survey*/
 form {
@@ -45,12 +41,15 @@ form {
 
 footer a {
   text-decoration: none;
-  color: black;
   font-size: .8em;
 }
 
-@media (min-width: 900px) {
-  h1 {
-    font-size: 4em;
+input::placeholder, input[type="text"] {
+  color: black;
+}
+
+@media (max-width: 900px) {
+   .main-logo {
+     width: 200px;
    }
 }

@@ -8,7 +8,7 @@ const App = () => {
   return (
     <main>
       <div className="app-wrapper">
-        <h1>Libertas Book Club</h1>
+        <img className="main-logo" src="./images/logo.svg" alt="libertas book club"/>
            <Start />
            <Footer />
       </div>

@@ -1,13 +1,13 @@
 input[name="title"],[name="isbn"],[name="author"]  {
     margin-left: 30px;
     width: 200px;
-    height: 20px;
+    height: 25px;
     border-radius: 5px;
   }
 
   input[name="title"]:focus,[name="isbn"]:focus,[name="author"]:focus {
       outline: none;
-      border: 2px solid green;
+      border: 2px solid black;
   }
 
 .submit-book-btn {
@@ -25,6 +25,5 @@ input[name="title"],[name="isbn"],[name="author"]  {
 
 .submit-book-btn:hover {
     cursor: pointer;
-    background-color: rgb(24, 80, 36);
-    color: white;
+    background-color: rgb(223, 208, 48);
 }

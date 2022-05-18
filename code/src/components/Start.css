@@ -13,13 +13,14 @@
 
 .description {
     color: white;
+    font-size: 2em;
     text-align: center;
     max-width: 600px;
 }
 .start-button:hover {
     cursor: pointer;
-    background-color: rgb(24, 80, 36);
-    color: white;
+    background-color: rgb(219, 213, 42);
+    color: rgb(0, 0, 0);
 }
 
 .time-it-takes-wrapper {
@@ -29,11 +30,13 @@
     margin-top: 10px;
 }
 
-.time-it-takes-wrapper p {
-    color: rgb(61, 58, 58);
-}
-
 .horloge-icon {
     width: 30px;
     margin-right: 5px;
 }
+
+@media (max-width: 900px) {
+    .description {
+      font-size: 1em;
+    }
+ }
