@@ -9,7 +9,7 @@ const IsMember = ({ nextQuestion, member, setMember }) => {
   }
   return (
     <form className="main-card">
-      <p>Are you a member?</p>
+      <p className="has-joined">Have you joined one of our book discussion sessions before?</p>
       <label htmlFor="isMember">
         <input
           type="radio"

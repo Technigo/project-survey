@@ -1,6 +1,6 @@
 import React from "react"
 
-const Summary = ({ member, ageGroup, book }) => {
+const Summary = ({ ageGroup, book }) => {
     return (
         <div className="main-card">
             <div className="thank-you-card-wrapper">
@@ -8,7 +8,6 @@ const Summary = ({ member, ageGroup, book }) => {
                 <p className="thank-you-card"> We hope you can join us!</p>
                 <div className="summary">
                     <h2>Summary</h2>
-                    <p> Member : {member}</p>
                     <p> Age group : {ageGroup}</p>
                     <p> Book title: {book.title}</p>
                     <p> Author : {book.author}</p>

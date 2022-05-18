@@ -7,3 +7,7 @@ input[name="isMember"] {
 input[name="isMember"]:hover {
     cursor: pointer;
 }
+
+.has-joined{
+    text-align: center;
+}
