@@ -4,7 +4,7 @@ This week we practiced React state and controlled forms by making a Typeform lik
 
 ## The problem
 
-I had general issues with React and how to use state but was lucky enough to get some help from my team and also videos from live sessions.
+I had issues with React (more specifically how to use state) but got some help from my team and also rewatched the videos from live sessions.
 
 ## View it live
 
