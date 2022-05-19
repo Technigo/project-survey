@@ -1,31 +1,30 @@
 body {
   margin: 0;
-  font-family:'Fredoka', sans-serif;
+  font-family: "Fredoka", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: pink;
-  background-image: url('./assets/confetti.jpg');
+  background-image: url("./assets/confetti.jpg");
 }
 
 .main {
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 /* ----- THE FORM CONTAINER ----- */
 
 .form-container {
-background-color: rgba(255, 192, 203, 0.705);
-border-radius: 25px;
-border: rgb(255, 4, 171) 3px solid;
-display: flex;
-flex-direction: column;
-padding: 11px;
-width: 85%;
-margin-top: 20px;
-align-items: center;
+  background-color: rgba(255, 192, 203, 0.705);
+  border-radius: 25px;
+  border: rgb(255, 4, 171) 3px solid;
+  display: flex;
+  flex-direction: column;
+  padding: 11px;
+  width: 85%;
+  margin-top: 20px;
+  align-items: center;
 }
 
 .form-container h1,
@@ -35,43 +34,42 @@ align-items: center;
   text-align: center;
 }
 
-
 /* ----- THE FORM ----- */
 
 .form {
-border: rgb(255, 4, 171) 3px solid;
-border-radius: 5px;
-font-size: 10px;
-font-weight: 600;
-padding: 10px;
-font-family: 'Fredoka', sans-serif;
-align-items: center;
+  border: rgb(255, 4, 171) 3px solid;
+  border-radius: 5px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 10px;
+  font-family: "Fredoka", sans-serif;
+  align-items: center;
 }
 
-/* ----- THE BUTTON ----- */
+/* ----- THE BUTTONS ----- */
 
 .button {
-border: rgb(255, 4, 171) 3px solid;
-border-radius: 5px;
-font-family:'Fredoka', sans-serif;
-font-size: 11px;
-font-weight: 600;
-padding: 10px;
-margin: 10px;
-align-self: center;
-transition: all 0.5s;
-cursor: pointer;
+  border: rgb(255, 4, 171) 3px solid;
+  border-radius: 5px;
+  font-family: "Fredoka", sans-serif;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 10px;
+  margin: 10px;
+  align-self: center;
+  transition: all 0.5s;
+  cursor: pointer;
 }
 
 .button span {
   cursor: pointer;
   display: inline-block;
-  position: relative;
   transition: 0.5s;
+  position: relative;
 }
 
-.button span:after {
-  content: '\00bb';
+.nextbutton span::before {
+  content: "\00bb";
   position: absolute;
   opacity: 0;
   top: 0;
@@ -79,16 +77,35 @@ cursor: pointer;
   transition: 0.5s;
 }
 
-.button:hover span {
+.nextbutton:hover span {
   padding-right: 25px;
 }
 
-.button:hover span:after {
+.nextbutton:hover span::before {
   opacity: 1;
   right: 0;
 }
 
+.backbutton:hover span::before {
+  opacity: 1;
+  left: 0;
+}
 
+/* ----- THE BACK-BUTTONS ----- */
+
+.backbutton span::before {
+  content: "\00ab";
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.backbutton:hover span {
+  padding-left: 25px;
+  opacity: 1;
+}
 
 /* ----- THE SUMMARY ----- */
 
@@ -104,12 +121,12 @@ cursor: pointer;
 }
 
 .summary-container h1 {
-font-size: 40px;
-text-align: center;
+  font-size: 40px;
+  text-align: center;
 }
 
 .summary-container h2 {
-text-align: center;
+  text-align: center;
 }
 
 .summary-container p {
@@ -118,7 +135,7 @@ text-align: center;
 }
 
 .profile-picture {
-  background-image: url('./assets/party_lovisa.jpg');
+  background-image: url("./assets/party_lovisa.jpg");
   background-size: cover;
   border-radius: 10%;
   border: rgb(255, 4, 171) 3px solid;
@@ -126,41 +143,38 @@ text-align: center;
   height: 12em;
 }
 
-
 /* ----- TABLET VIEW ----- */
 
 @media (min-width: 667px) {
-
-.form-container {
-  padding: 20px;
-  height: auto;
-  background-color: rgba(255, 192, 203, 0.548);
-  border-radius: 25px;
-  border: rgb(255, 4, 171) 3px solid;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: center;
-  }  
-
-.form-container h3 {
-font-size: 30px;
-
-}
-
-.form {
-  border: rgb(255, 4, 171) 3px solid;
-  border-radius: 5px;
-  font-size: 15px;
-  font-family: 'Fredoka', sans-serif;
-  padding: 10px;
+  .form-container {
+    padding: 20px;
+    height: auto;
+    background-color: rgba(255, 192, 203, 0.548);
+    border-radius: 25px;
+    border: rgb(255, 4, 171) 3px solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
-  .button { 
+  .form-container h3 {
+    font-size: 30px;
+  }
+
+  .form {
     border: rgb(255, 4, 171) 3px solid;
     border-radius: 5px;
-    font-family: 'Fredoka', sans-serif;
+    font-size: 15px;
+    font-family: "Fredoka", sans-serif;
+    padding: 10px;
+  }
+
+  .button {
+    border: rgb(255, 4, 171) 3px solid;
+    border-radius: 5px;
+    font-family: "Fredoka", sans-serif;
     font-size: 15px;
     padding: 10px;
     margin: 10px;
@@ -168,7 +182,7 @@ font-size: 30px;
   }
 
   .summary-container {
-    Width: 55%;
+    width: 55%;
     margin: 30px;
   }
 
@@ -177,21 +191,16 @@ font-size: 30px;
     font-weight: 400;
     font-size: 20px;
   }
-  
-
-
 }
 
 /* ----- LAPTOP VIEW ----- */
 
 @media (min-width: 1024px) {
+  .form-container {
+    width: 50%;
+  }
 
-.form-container {
- width: 50%;
-}
-
-.form {
-  font-size: 15px;
-}
-
+  .form {
+    font-size: 15px;
+  }
 }
