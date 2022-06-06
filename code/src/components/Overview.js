@@ -1,7 +1,7 @@
 import React from "react"
 
 const Overview = (props) => {
-    const { nameInput, partyAnimal, messageInput, pineappleInput, superpowerInput } = props
+    const { nameInput, mood, messageInput, pineappleInput, superpowerInput } = props
     
     return (
         <section className="overview-wrapper">
@@ -12,7 +12,7 @@ const Overview = (props) => {
             : "Unfortunately, your answer on pineapple-gate was not correct, pineapple and pizza are meant to be 💛 😉 "}
             </li>
             <li className="overview-text">Your superpower of choice was {superpowerInput}, nice! 🦸 🦹🏽 </li>
-            <li className="overview-text">Party on team {partyAnimal} 🎊 </li>
+            <li className="overview-text">You're feeling {mood}, I see!</li>
             <li className="overview-text">Lastly, as a reminder, {messageInput}</li>
             </ul>
            

@@ -9,15 +9,15 @@ import FifthQuestion from './FifthQuestion'
 import Overview from "./Overview"
 import Footer from './Footer'
 
-const animalArray = ['🐢', '🐯', '🦊', '🐘', '🦛', '🦁']
+const emojiArray = ['😠', '😕', '😐', '🙂', '😌', '🤩']
 
 const Form = () => {
   const [nameInput, setNameInput] = useState("")
   const [messageInput, setMessageInput] = useState("")
   const [pineappleInput, setPineappleInput] = useState("")
   const [superpowerInput, setSuperpowerInput] = useState("")
-  const [animalInput, setAnimalInput] = useState(1)
-  const [partyAnimal, setPartyAnimal] = useState(animalArray[animalInput])
+  const [emojiInput, setEmojiInput] = useState(1)
+  const [mood, setMood] = useState(emojiArray[emojiInput])
   const [section, setSection] = useState(0)
 
   const onNameInputChange = (event) => {
@@ -36,9 +36,9 @@ const onPineappleInputChange = (event) => {
     setPineappleInput(event.target.value)
 }
 
-  const onAnimalInputChange = (event) => {
-    setAnimalInput(event.target.value)
-    setPartyAnimal(animalArray[event.target.value])
+  const onEmojiInputChange = (event) => {
+    setEmojiInput(event.target.value)
+    setMood(emojiArray[event.target.value])
   }
 
   const onSectionChangeForward = () => {
@@ -96,9 +96,9 @@ const onPineappleInputChange = (event) => {
                 )}
                 {section === 5 && (
                     <FifthQuestion
-                    animalInput={animalInput}
-                    onAnimalInputChange={onAnimalInputChange}
-                    partyAnimal={partyAnimal}
+                    emojiInput={emojiInput}
+                    onEmojiInputChange={onEmojiInputChange}
+                    mood={mood}
                     onSectionChangeBackward={onSectionChangeBackward}
                     onSectionChangeForward={onSectionChangeForward}
                     />
@@ -109,7 +109,7 @@ const onPineappleInputChange = (event) => {
                     messageInput={messageInput}
                     pineappleInput={pineappleInput}
                     superpowerInput={superpowerInput}
-                    partyAnimal={partyAnimal}
+                    mood={mood}
                     />
                 )}
             </form>

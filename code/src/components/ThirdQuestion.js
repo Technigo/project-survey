@@ -46,7 +46,7 @@ const ThirdQuestion = (props) => {
                     id="No"
                     type="radio"
                     value="No"
-                    checked={pineappleInput=== "No"}
+                    checked={pineappleInput === "No"}
                     onChange={onPineappleInputChange}
                     />
                 </div>

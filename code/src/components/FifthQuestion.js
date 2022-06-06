@@ -4,14 +4,14 @@ const rangeLength = { min: 0, max: 5 }
 
 const FifthQuestion = (props) => {
     const {
-        animalInput,
-        onAnimalInputChange,
-        partyAnimal,
+        emojiInput,
+        onEmojiInputChange,
+        mood,
         onSectionChangeBackward,
         onSectionChangeForward
     } = props
 
-    const newRangeValue = Number((animalInput - rangeLength.min) * 100 / (rangeLength.max - rangeLength.min))
+    const newRangeValue = Number((emojiInput - rangeLength.min) * 100 / (rangeLength.max - rangeLength.min))
     const newPosition = 10 - (newRangeValue * 0.2)
     const bubblePosition = `calc(${newRangeValue}% + ${newPosition}px)`
 
@@ -25,7 +25,7 @@ const FifthQuestion = (props) => {
     return (
         <div className="question-wrapper range-slider-page">
 
-            <label className="page-title" htmlFor="animalInput">
+            <label className="page-title" htmlFor="emojiInput">
                 Alright, last but not least. Tell me, which animal is the biggest party animal?
             </label>
             
@@ -33,19 +33,19 @@ const FifthQuestion = (props) => {
                
                 <div className="slider-bubble">
                     <span>
-                    {partyAnimal}                       
+                    {mood}                       
                     </span>
                 </div> 
 
                 <input
-                    id="animalInput"
+                    id="emojiInput"
                     type="range"
                     className="range"
                     min="0"
                     max="5"
                     step="1"
-                    value={animalInput}
-                    onChange={onAnimalInputChange}
+                    value={emojiInput}
+                    onChange={onEmojiInputChange}
                 />
 
             </div>           
