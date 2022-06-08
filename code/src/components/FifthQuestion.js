@@ -26,7 +26,7 @@ const FifthQuestion = (props) => {
         <div className="question-wrapper range-slider-page">
 
             <label className="page-title" htmlFor="emojiInput">
-                Alright, last but not least. Tell me, which animal is the biggest party animal?
+                How excited are you to answer this survey?
             </label>
             
             <div className="range-slider-container">
