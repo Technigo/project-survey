@@ -17,7 +17,7 @@ const Form = () => {
   const [pineappleInput, setPineappleInput] = useState("")
   const [superpowerInput, setSuperpowerInput] = useState("")
   const [emojiInput, setEmojiInput] = useState(1)
-  const [mood, setMood] = useState(emojiArray[emojiInput])
+  const [emojiMood, setEmojiMood] = useState(emojiArray[emojiInput])
   const [section, setSection] = useState(0)
 
   const onNameInputChange = (event) => {
@@ -38,7 +38,7 @@ const onPineappleInputChange = (event) => {
 
   const onEmojiInputChange = (event) => {
     setEmojiInput(event.target.value)
-    setMood(emojiArray[event.target.value])
+    setEmojiMood(emojiArray[event.target.value])
   }
 
   const onSectionChangeForward = () => {
@@ -98,7 +98,7 @@ const onPineappleInputChange = (event) => {
                     <FifthQuestion
                     emojiInput={emojiInput}
                     onEmojiInputChange={onEmojiInputChange}
-                    mood={mood}
+                    emojiMood={emojiMood}
                     onSectionChangeBackward={onSectionChangeBackward}
                     onSectionChangeForward={onSectionChangeForward}
                     />
@@ -109,7 +109,7 @@ const onPineappleInputChange = (event) => {
                     messageInput={messageInput}
                     pineappleInput={pineappleInput}
                     superpowerInput={superpowerInput}
-                    mood={mood}
+                    emojiMood={emojiMood}
                     />
                 )}
             </form>

@@ -6,7 +6,7 @@ const FifthQuestion = (props) => {
     const {
         emojiInput,
         onEmojiInputChange,
-        mood,
+        emojiMood,
         onSectionChangeBackward,
         onSectionChangeForward
     } = props
@@ -33,7 +33,7 @@ const FifthQuestion = (props) => {
                
                 <div className="slider-bubble">
                     <span>
-                    {mood}                       
+                    {emojiMood}                       
                     </span>
                 </div> 
 
