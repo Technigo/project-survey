@@ -58,7 +58,7 @@ body {
     float: left;
 
     /* overflow: hidden; */
-    background-image: url("https://i.ibb.co/0rJQCyr/bg-1.jpg");
+    background-image: url("../public/bg-1.jpg");
     background-size: cover; 
     background-repeat: no-repeat;
 }
