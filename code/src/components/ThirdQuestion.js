@@ -10,8 +10,7 @@ export const ThirdQuestion = ({ radioValue, setRadioValue, onStepChange }) => {
       <div className="img-wrapper">
         <h2 tabIndex="0">What image do you relate to the most?</h2>
         <h3 tabIndex="0">
-          You can only choose one of the options and you need to click on the
-          image you want to select
+        Choose ONE of the options by clicking on it
         </h3>
         <div className="img-wrapper--images">
           <div className="img-div">
