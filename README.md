@@ -1,13 +1,21 @@
-# Survey form with React
+# Technigo React Project Survey
 
-Replace this readme with your own information about your project.
+This week we practiced React state by creating a survey. It should consist of at least three questions
+that need to be answered by users. When the user presses submit, they should see a summary of their answers.
+We were also encouraged to use components as much we could to practice for future projects.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+# The building of the project
 
-## The problem
+- I planned my project in Figma to get an overview of what I needed to do, what kind of survey it would be, and what components I would need.
+- I created all the components in vs code and started with a form and question nr.one and then copied the boilerplate to all the others to have a base.
+- Then I created different forms depending on the question and put them all in the overview for a summary.
+- I styled the form after some inspiration online and made the overview more personal.
+- Checked the page in different browsers on desktop and mobile (with responsiveness from desktop on tablet)
+- Tested the accessability with keyboard and run the lighthouse on the page. Didn't find any problems.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I struggled with the radio buttons that I transformed into images and how to be able to select them, collect the info, and put them in the overview.
+Still working on the radio buttons in question number four, the contrast is't the best I'm working on a other solution.
 
-## View it live
+# Deployed page
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Here it the link to my deployed survey: https://code-student-survey.netlify.app/
