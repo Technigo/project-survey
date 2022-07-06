@@ -13,8 +13,7 @@ const FourthQuestion = ({ handInTime, onHandInTimeChange, onStepChange }) => {
       <div className="box-wrapper">
         <h2 tabIndex="0">When do you hand in your weekly project?</h2>
         <h3 tabIndex="0">
-          You can only choose one of the options and you need to click on the
-          box you want to select
+          Choose ONE of the options by clicking on it
         </h3>
         <div className="img-wrapper--radio">
           {options.map((option) => {
