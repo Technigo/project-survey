@@ -1,3 +1,10 @@
+# Weekly project for Technigo's bootcamp, week 10
+Task: build a survey-like website
+
+Tech: HTML, CSS, JavaScript, React
+
+----
+
 # Week 10: Survey form with React
 
 This week's project was to practice React state hook and controlled forms by making a survey type product, including at least three questions and a summary displayed only when the form is submitted.
