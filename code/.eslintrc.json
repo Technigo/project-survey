@@ -1,6 +1,4 @@
 {
-  "parser": "@babel/eslint-parser",
-  "requireConfigFile": false,
   "extends": [
     "airbnb"
   ],
@@ -14,6 +12,8 @@
     "browser": true
   },
   "parserOptions": {
+    "parser": "@babel/eslint-parser",
+    "requireConfigFile": false,
     "sourceType": "module",
     "ecmaVersion": 2017,
     "ecmaFeatures": {
