@@ -2,7 +2,9 @@ import React from 'react';
 import WelcomeQuestion from './WelcomeQuestion';
 
 const Form = () => {
-  <WelcomeQuestion />
+  return (
+    <WelcomeQuestion />
+  )
 };
 
 export default Form;

@@ -9,7 +9,6 @@ const WelcomeQuestion = () => {
             Come participate with us!
         </p>
       </div>
-
     </section>
   )
 }
