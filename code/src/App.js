@@ -6,6 +6,7 @@ import End from 'components/End/End';
 const App = () => {
   const [page, setPage] = useState('start');
   const [name, setName] = useState('');
+
   return (
     <div className="App">
       {page === 'start' && (
