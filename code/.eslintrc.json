@@ -1,7 +1,5 @@
 {
-  "extends": [
-    "airbnb"
-  ],
+  "extends": ["airbnb"],
   "globals": {
     "document": true,
     "window": true,
@@ -22,9 +20,7 @@
       "modules": true
     }
   },
-  "plugins": [
-    "react-hooks"
-  ],
+  "plugins": ["react-hooks"],
   "rules": {
     "react/function-component-definition": [
       2,
@@ -42,10 +38,7 @@
         "allowSingleLine": true
       }
     ],
-    "comma-dangle": [
-      "error",
-      "never"
-    ],
+    "comma-dangle": ["error", "never"],
     "consistent-return": "off",
     "curly": "error",
     "eol-last": "off",
@@ -126,6 +119,7 @@
     "react/jsx-indent": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "semi": "off"
+    "semi": "off",
+    "linebreak-style": 0
   }
 }
