@@ -1,22 +1,12 @@
 import React, { useState } from 'react';
-import StartPage from './components/StartPage'
-import NameQuestion from './components/NameQuestion'
-import SelectQuestion from './components/SelectQuestion'
-import RadioButtons from 'components/RadioButtons';
+import Form from './components/Form';
 
 export const App = () => {
 
   return (
-    <div>
-      <StartPage />
-
-      <NameQuestion />
-
-      <SelectQuestion />
-
-      <RadioButtons />
-
-    </div>
+    <main>
+      <Form />
+    </main>
 
   );
 }

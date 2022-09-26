@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 const RadioButtons = () => {
   const [ageGroup, setAgeGroup] = useState('')
   return (
-    <form>
+    <form onSubmit={(event) => event.preventDefault()}>
         Age group:
       <label>
         <input
