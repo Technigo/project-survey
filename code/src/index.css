@@ -1,13 +1,103 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(
+      rgb(252 252 252 / 52%),
+      rgba(252 252 252 / 52%)
+    ),
+    url(https://cdn.pixabay.com/photo/2017/05/13/17/31/fruit-2310212_960_720.jpg);
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+/********* Intro - Welcome page ********/
+.intro-container,
+.question-container,
+.outro-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 10vw 15vw 0vw 15vw;
+}
+
+.intro-container {
+  text-align: center;
+}
+
+/********* Progress bar ********/
+.progress-bar-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px 5px;
+  background-color: rgba(253, 193, 82, 0.24705882352941178);
+  width: 100%;
+}
+.progress-bar {
+  width: 40%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border: none;
+  height: 13px;
+}
+.progress-label {
+  color: rgb(138 90 0);
+}
+.progress-bar::-webkit-progress-value {
+  background: #cc9837;
+}
+
+.progress-bar::-webkit-progress-bar {
+  background: #ffa60259;
+}
+
+.progress-bar::-moz-progress-bar {
+  background: #ffa60259;
+}
+
+/********* Form ********/
+
+/********* Buttons ********/
+.start-btn,
+.continue-btn,
+.restart-btn {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 24px;
+  background: #a365dcd6;
+  color: #fff;
+  width: 100px;
+  height: 50px;
+  border-radius: 7%;
+  font-weight: bold;
+  box-shadow: 0px 2px 2px rgb(0 0 0 / 29%);
+  border: solid 3px #a56ed7;
+  transition: 0.4s;
+  margin-top: 10vh;
+  cursor: pointer;
+}
+
+/********* Footer ********/
+.footer-container {
+  background-color: rgba(253, 193, 82, 0.24705882352941178);
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.creator {
+  color: rgb(138 90 0);
+  text-align: center;
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 0px;
+  padding: 10px;
 }
