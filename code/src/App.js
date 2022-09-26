@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from 'react';
+import Start from 'components/Start/Start';
+import Questions from 'components/Questions/Questions';
+import End from 'components/End/End';
 
-export const App = () => {
+const App = () => {
+  const [page, setPage] = useState('start');
   return (
-    <div>
-      Find me in src/app.js!
+    <div className="App">
+      {page === 'start' && <Start nextPage={() => setPage('quiz')} />}
+      {page === 'quiz' && <Questions nextPage={() => setPage('end')} />}
+      {page === 'end' && <End nextPage={() => setPage('start')} />}
     </div>
   );
-}
+};
+
+export default App;
