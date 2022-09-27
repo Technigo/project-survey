@@ -4,7 +4,6 @@ import { Food } from './Components/Food';
 import { Drink } from './Components/Drink';
 import { Result } from './Components/Result';
 
-
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
@@ -19,6 +18,7 @@ export const App = () => {
     <div>
       {step === 1 && (
         <Name name={name} setName={setName} />
+
       )}
       {
         step === 2 && (
@@ -44,7 +44,7 @@ export const App = () => {
           </>
         )
       }
-    </div >
+    </div>
 
   );
 }
