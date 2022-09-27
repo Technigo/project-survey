@@ -34,22 +34,19 @@ const Form = () => {
         <NameQuestion
           nameInput={nameInput}
           handleNameInputChange={handleNameInputChange}
-          handleStepChange={handleStepChange}
-        />
+          handleStepChange={handleStepChange} />
       )}
       {step === 3 && (
         <SelectQuestion
           selectInput={selectInput}
           handleSelectInputChange={handleSelectInputChange}
-          handleStepChange={handleStepChange}
-        />
+          handleStepChange={handleStepChange} />
       )}
       {step === 4 && (
         <RadioButtons
           radioInput={radioInput}
           handleRadioInputChange={handleRadioInputChange}
-          handleStepChange={handleStepChange}
-        />
+          handleStepChange={handleStepChange} />
       )}
     </div>
   );

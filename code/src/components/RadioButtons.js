@@ -1,38 +1,25 @@
 import React from 'react';
 
+const alternatives = ['Cute', 'Cuter', 'Cutest'];
+
 const RadioButtons = (
-    // radioInput,
-    handleRadioInputChange,
-    handleStepChange,
+  radioInput,
+  handleRadioInputChange,
+  handleStepChange
 ) => {
   return (
     <div>
-      <label>
+      {alternatives.map((item) => (
         <input
           type="radio"
-          value="0-18"
+          value={item}
           onChange={handleRadioInputChange}
-          checked={ageGroup === "0-18"} />
-        0-18
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="19-30"
-          onChange={handleRadioInputChange}
-          checked={ageGroup === "19-30"} />
-        19-30
-      </label>
-      <label>
-        <input
-          type="radio"
-          value="31+"
-          onChange={handleRadioInputChange}
-          checked={ageGroup === "31+"} />
-        31+
-      </label>
-      <button className="nextButton" onClick={handleStepChange}>Next</button> 
-      </div>
+          checked={radioInput === item} />
+
+      ))}
+      <button className="nextButton" onClick={handleStepChange}>Next</button>
+
+    </div>
   )
 }
 
