@@ -32,6 +32,10 @@ code {
   text-align: center;
 }
 
+.question-container {
+  display: flex;
+  align-items: flex-start;
+}
 /********* Progress bar ********/
 .progress-bar-container {
   position: absolute;
