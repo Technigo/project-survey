@@ -35,10 +35,22 @@ code {
   max-width: 1200px;
 }
 
+/* BUTTON */
+.button {
+  background-color: white;
+  border: none;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem black;
+  font-family: var(--headings);
+  font-size: 1.2rem;
+  font-weight: 900;
+  width: 5rem;
+  height: 2rem;
+}
+
 /* HEADING */
 .heading {
   color: rgb(255, 255, 255);
   font-family: var(--headings);
   font-weight: 900;
-  text-shadow: 0em black;
 }
