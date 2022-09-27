@@ -5,6 +5,7 @@ import FrequencyQuestion from './Components/FrequencyQuestion';
 import MuseumQuestion from './Components/MuseumQuestion';
 import Result from './Components/Result'
 import MemoryQuestion from './Components/MemoryQuestion'
+import ThankYou from './Components/ThankYou'
 
 export const App = () => {
   const [step, setStep] = useState(1)
@@ -49,17 +50,27 @@ export const App = () => {
             <MemoryQuestion memory={memory} setMemory={setMemory} />
           )}
 
-          {step >= 6 && (
-            <Result age={age} frequency={frequency} museum={museum} memory={memory} />
+          {step === 6 && (
+            <div>
+              <Result age={age} frequency={frequency} museum={museum} memory={memory} />
+              <button className="submit-btn" type="button" onClick={handleStepIncrease}>Submit</button>
+            </div>
           )}
 
-          {step < 6 && step > 1 &&(
+          {step === 7 && (
+            <div>
+              <ThankYou />
+              <button className="restart-btn" type="button">Restart</button>
+            </div>
+          )}
+
+          {step < 6 && step > 1 && (
             <div>
               <button className="continue-btn" type="button" onClick={handleStepIncrease}>Continue</button>
             </div>
           )}
 
-          {step >1 && (
+          {step >1 && step < 7 && (
             <div>
               <button className="back-btn" type="button" onClick={handleStepDecrease}>Go back</button>
             </div>

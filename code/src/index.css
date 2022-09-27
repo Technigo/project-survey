@@ -61,7 +61,7 @@ select {
 }
 
 /* Buttons */
-.continue-btn, .start-btn {
+.continue-btn, .start-btn, .submit-btn {
   background-color: #00539CFF;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -75,7 +75,12 @@ select {
   border: none;
 }
 
-.back-btn {
+.continue-btn:hover, .start-btn:hover, .submit-btn:hover {
+  background-color: azure;
+  color: black;
+}
+
+.back-btn, .restart-btn {
   background-color: #B85042;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -87,6 +92,15 @@ select {
   position: absolute;
   left: 0px;
   border: none;
+}
+
+.back-btn:hover, .restart-btn:hover {
+  background-color: azure;
+  color: black;
+}
+
+.submit-btn {
+  padding: 20px;
 }
 
 /* MediaQs */
