@@ -4,7 +4,7 @@ import React from 'react';
 const Intro = ({ handleStepIncrease }) => {
   return (
     <div className="intro-container">
-      <h1>Welcome to Bla-di-da</h1>
+      <h1>Mad Lib Story time – Dragon Sneeze</h1>
       <form />
       <button className="start-btn" type="button" onClick={handleStepIncrease}>
         Start

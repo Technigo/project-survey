@@ -14,7 +14,7 @@ import Summary from './Summary';
 
 const Form = () => {
   const [step, setStep] = useState(1);
-  const [name, setName] = useState('');
+  const [nameInput, setName] = useState('');
   const [radioButton, setRadioButton] = useState('');
   //   const [userInput, setUserInput] = useState('');
 
@@ -34,7 +34,7 @@ const Form = () => {
       {step === 2 && (
         <QuestionOne
           handleStepIncrease={handleStepIncrease}
-          nameInput={name}
+          nameInput={nameInput}
           handleNameInputChange={handleNameInputChange}
           radioButton={radioButton}
           handleRadioButtonChange={handleRadioButtonChange}
