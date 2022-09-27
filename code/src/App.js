@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import QuestionText from 'Components/QuestionText.js';
 import Header from './Components/Header.js';
-import QuestionDropdownGenre from './Components/QuestionDropdownGenre'
+import QuestionDropdownGenre from './Components/QuestionDropdownGenre';
 import QuestionDropdownNumber from './Components/QuestionDropdownNumber'
 
 export const App = () => {

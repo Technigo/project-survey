@@ -1,6 +1,6 @@
 import React from 'react';
 
-const QuestionDropdown = (props) => {
+const QuestionDropdownGenre = (props) => {
   const { genre, setGenre } = props
 
   return (
@@ -20,4 +20,4 @@ const QuestionDropdown = (props) => {
   );
 }
 
-export default QuestionDropdown;
+export default QuestionDropdownGenre;
