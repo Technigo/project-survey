@@ -10,6 +10,7 @@ const ageGroups = [
   "70-79",
   "80-89",
   "90+"]
+console.log(ageGroups)
 
 const AgeQuestion = ({age, setAge}) => {
   
@@ -21,7 +22,6 @@ const AgeQuestion = ({age, setAge}) => {
       <>
       <h2>How old are you?</h2>
         <form>
-          How old are you?
           {ageGroups.map((group => {
             <label key ={group}>
               <input
@@ -30,7 +30,7 @@ const AgeQuestion = ({age, setAge}) => {
                 onChange={event => handleAgeChange}
                 checked={ageGroups === group}
                 />
-                {group}
+                {age}
               </label>
           }))}
         </form>

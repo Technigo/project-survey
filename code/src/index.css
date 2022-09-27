@@ -19,6 +19,11 @@ h1, h2 {
 
 p {
   font-family: 'Roboto', sans-serif;
+  margin-bottom: 0px;
+}
+
+.bold-p {
+  font-weight: 500;
 }
 
 .outer-container {
@@ -33,10 +38,17 @@ p {
   width: 80%;
   display: flex;
   flex-direction: column;
+  margin-top: 20vh;
   position: relative;
 }
 
-.continue-btn {
+input {
+  width: 80%;
+  height: 20vh;
+}
+
+/* Buttons */
+.continue-btn, .start-btn {
   background-color: #00539CFF;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -47,8 +59,24 @@ p {
   margin-top: 20px;
   position: absolute;
   right: 20px;
+  border: none;
 }
 
+.back-btn {
+  background-color: #B85042;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 8px;
+  border-radius: 20px;
+  margin-top: 20px;
+  position: absolute;
+  left: 0px;
+  border: none;
+}
+
+/* MediaQs */
 @media (min-width: 668px) and (max-width: 1024px) {
   .inner-container {
     width: 60%;

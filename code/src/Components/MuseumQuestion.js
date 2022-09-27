@@ -3,7 +3,7 @@ import React from 'react';
 const MuseumQuestion = () => {
     return (
       <div>
-        <h1>Favoriture museum</h1>
+        <h2>Which of these is your favoriture museum?</h2>
         <form>
             {/* Which of the following museums is your favorite? - Select dropdown */}
         </form>

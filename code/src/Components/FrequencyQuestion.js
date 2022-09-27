@@ -16,8 +16,8 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
 
     return (
       <div>
+      <h2>How many times per year do you visit a museum in Stockholm?</h2>
        <form>
-        How many times per year do you visit a museum in Stockholm?
         {museumVisits.map((visits => {
           <label key ={visits}>
             <input
