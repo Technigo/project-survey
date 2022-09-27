@@ -15,6 +15,7 @@ import Summary from './Summary';
 const Form = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
+  const [radioButton, setRadioButton] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -23,21 +24,27 @@ const Form = () => {
     setName(event.target.value);
   };
 
+  const handleRadioButtonChange = (event) => {
+    setRadioButton(event.target.value);
+  };
   return (
     <div>
       <p>Step: {step}</p>
       <p>Name: {name}</p>
+      <p>Mood: {radioButton}</p>
       {step === 1 && <Intro handleStepIncrease={handleStepIncrease} />}
       {step === 2 && (
         <QuestionOne
           handleStepIncrease={handleStepIncrease}
           name={name}
           handleNameChange={handleNameChange}
+          radioButton={radioButton}
+          handleRadioButtonChange={handleRadioButtonChange}
         />
       )}
       {step === 3 && <QuestionTwo handleStepIncrease={handleStepIncrease} />}
       {step === 4 && <QuestionThree handleStepIncrease={handleStepIncrease} />}
-      {step === 5 && <Summary name={name} />}
+      {step === 5 && <Summary name={name} radioButton={radioButton} />}
     </div>
   );
 };

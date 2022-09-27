@@ -101,3 +101,8 @@ code {
   line-height: 0px;
   padding: 10px;
 }
+
+/********* Summary ********/
+.red {
+  color: red;
+}

@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 /* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable comma-dangle */
@@ -7,7 +8,7 @@
 /* eslint-disable indent */
 import React from 'react';
 
-const radioButtonInput = [
+const radioButtonObject = [
   'inspring',
   'terrible',
   'constipated',
@@ -15,11 +16,14 @@ const radioButtonInput = [
   'irritable',
   'awesome',
 ];
-// const handleRadioButtonChange = (event) => {
-//   setRadioButton(event.target.value);
-// };
 
-const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
+const QuestionOne = ({
+  handleStepIncrease,
+  name,
+  handleNameChange,
+  radioButton,
+  handleRadioButtonChange,
+}) => {
   return (
     <>
       <div className="progress-bar-container">
@@ -32,11 +36,27 @@ const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
       {/* Name input */}
       <section className="question-container">
         <div className="form-container">
-          <label>name:</label>
-          <input type="text" value={name} onChange={handleNameChange} />
-
-          <p>Name: </p>
+          <h1 className="question">What is your name?</h1>
+          <form className="form-style">
+            <label>Write here:</label>
+            <input type="text" value={name} onChange={handleNameChange} />
+          </form>
         </div>
+        {/* Radio Buttons */}
+        <h2>How would you describe yourself?</h2>
+        <form className="radio-button-container">
+          {radioButtonObject.map((radioButtonInput) => (
+            <label key={radioButtonInput}>
+              <input
+                type="radio"
+                value={radioButtonInput}
+                onChange={handleRadioButtonChange}
+                checked={radioButtonInput === radioButton}
+              />
+              {radioButtonInput}
+            </label>
+          ))}
+        </form>
         {/* Continue button */}
         <button
           className="continue-btn"
