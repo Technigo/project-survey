@@ -16,6 +16,11 @@ const Form = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [radioButton, setRadioButton] = useState('');
+  const [adjective, setAdjective] = useState('');
+  const [animal, setAnimal] = useState('');
+  const [exclamation, setExclamation] = useState('');
+  const [adjectiveSecond, setAdjectiveSecond] = useState('');
+  const [creature, setCreature] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -27,11 +32,25 @@ const Form = () => {
   const handleRadioButtonChange = (event) => {
     setRadioButton(event.target.value);
   };
+
+  const handleAdjectiveChange = (event) => {
+    setAdjective(event.target.value);
+  };
+  const handleAnimalChange = (event) => {
+    setAnimal(event.target.value);
+  };
+  const handleExclamationChange = (event) => {
+    setExclamation(event.target.value);
+  };
+  const handleAdjectiveSecondChange = (event) => {
+    setAdjectiveSecond(event.target.value);
+  };
+  const handleCreatureChange = (event) => {
+    setCreature(event.target.value);
+  };
+
   return (
     <div>
-      <p>Step: {step}</p>
-      <p>Name: {name}</p>
-      <p>Mood: {radioButton}</p>
       {step === 1 && <Intro handleStepIncrease={handleStepIncrease} />}
       {step === 2 && (
         <QuestionOne
@@ -42,9 +61,33 @@ const Form = () => {
           handleRadioButtonChange={handleRadioButtonChange}
         />
       )}
-      {step === 3 && <QuestionTwo handleStepIncrease={handleStepIncrease} />}
+      {step === 3 && (
+        <QuestionTwo
+          handleStepIncrease={handleStepIncrease}
+          adjective={adjective}
+          handleAdjectiveChange={handleAdjectiveChange}
+          animal={animal}
+          handleAnimalChange={handleAnimalChange}
+          exclamation={exclamation}
+          handleExclamationChange={handleExclamationChange}
+          adjectiveSecond={adjectiveSecond}
+          handleAdjectiveSecondChange={handleAdjectiveSecondChange}
+          creature={creature}
+          handleCreatureChange={handleCreatureChange}
+        />
+      )}
       {step === 4 && <QuestionThree handleStepIncrease={handleStepIncrease} />}
-      {step === 5 && <Summary name={name} radioButton={radioButton} />}
+      {step === 5 && (
+        <Summary
+          name={name}
+          radioButton={radioButton}
+          adjective={adjective}
+          animal={animal}
+          exclamation={exclamation}
+          adjectiveSecond={adjectiveSecond}
+          creature={creature}
+        />
+      )}
     </div>
   );
 };
