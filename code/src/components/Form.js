@@ -3,6 +3,7 @@ import StartPage from './StartPage';
 import NameQuestion from './NameQuestion';
 import SelectQuestion from './SelectQuestion';
 import RadioButtons from './RadioButtons';
+import Summary from './Summary';
 
 // Declaring variables that uses State //
 const Form = () => {
@@ -47,6 +48,12 @@ const Form = () => {
           radioInput={radioInput}
           handleRadioInputChange={handleRadioInputChange}
           handleStepChange={handleStepChange} />
+      )}
+      {step === 5 && (
+        <Summary
+          nameInput={nameInput}
+          selectInput={selectInput}
+          radioInput={radioInput} />
       )}
     </div>
   );

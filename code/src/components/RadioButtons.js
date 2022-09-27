@@ -10,9 +10,8 @@ const RadioButtons = ({
   return (
     <div>
       {alternatives.map((item) => (
-        <label>
+        <label key={item}>
           <input
-            key={item}
             type="radio"
             value={item}
             onChange={handleRadioInputChange}
