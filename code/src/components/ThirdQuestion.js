@@ -11,13 +11,13 @@ const ThirdQuestion = ({
   return (
     <form>
       <div className="question">
-       How often do you brush your teeth on average?
+        <p className="question-title">How often do you brush?</p>
         <p>(go on, you can be honest)</p>
       </div>
       {frequencyGroup.map((group) => (
         <label className="radio-label" htmlFor="frequency-id" key={group}>
           <input
-            className="input"
+            className="radio-input"
             type="radio"
             value={group}
             onChange={onFrequencyInputChange}

@@ -3,7 +3,10 @@ import React, { useState } from 'react';
 import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
+import FourthQuestion from './FourthQuestion'
 import FirstPage from './FirstPage'
+
+import 'index.css';
 
 const Form = () => {
   //  const states
@@ -11,6 +14,7 @@ const Form = () => {
   const [nameInput, setNameInput] = useState('');
   const [brushInput, setBrushInput] = useState();
   const [frequencyInput, setFrequencyInput] = useState();
+  const [checkboxGroup, setCheckboxGroup] = useState([]);
   //  functions
   const onNextQuestionChange = () => {
     setCounter(counter + 1)
@@ -30,6 +34,16 @@ const Form = () => {
 
   const onFrequencyInputChange = (event) => {
     setFrequencyInput(event.target.value)
+  }
+
+  const onCheckboxGroupToggle = (checkboxValue) => {
+    if (checkboxGroup.includes(checkboxValue)) {
+      // delete element from array by using filter method
+      setCheckboxGroup(checkboxGroup.filter((item) => item !== checkboxValue))
+    } else {
+      // opy all the values from the previous heckboxGroup array
+      setCheckboxGroup([checkboxValue, ...checkboxGroup])
+    }
   }
 
   // return question carousel
@@ -54,6 +68,13 @@ const Form = () => {
         <ThirdQuestion
           frequencyInput={frequencyInput}
           onFrequencyInputChange={onFrequencyInputChange}
+          onNextQuestionChange={onNextQuestionChange}
+          onPreviousQuestionChange={onPreviousQuestionChange} />
+      )}
+      {counter === 4 && (
+        <FourthQuestion
+          checkboxGroup={checkboxGroup}
+          onChangeFunction={onCheckboxGroupToggle}
           onNextQuestionChange={onNextQuestionChange}
           onPreviousQuestionChange={onPreviousQuestionChange} />
       )}

@@ -8,10 +8,10 @@ const FirstQuestion = ({
 }) => {
   return (
     <form className="question">
+      <p className="question-title">What´s your full name?</p>
       <label className="question" htmlFor="nameInput">
-        What´s your full name?
         <input
-          className="input-box"
+          className="name-input"
           type="text"
           value={nameInput}
           onChange={onNameInputChange}

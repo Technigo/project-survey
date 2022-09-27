@@ -9,10 +9,10 @@ const SecondQuestion = ({
   return (
     <form>
       <div className="question">
-       What type of tooth brush do you use?
+        <p className="question-title">What type of tooth brush do you use?</p>
       </div>
       <select
-        className="input-box"
+        className="select-input"
         type="text"
         value={brushInput}
         onChange={onBrushInputChange}
