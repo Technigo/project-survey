@@ -1,9 +1,9 @@
 import React from 'react';
-import WelcomeQuestion from './WelcomeQuestion';
+import WelcomeToTheSurvey from './WelcomeToTheSurvey';
 
 const Form = () => {
   return (
-    <WelcomeQuestion />
+    <WelcomeToTheSurvey />
   )
 };
 
