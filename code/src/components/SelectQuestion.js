@@ -21,7 +21,7 @@ const SelectQuestion = ({
         </select>
       </div>
       <div className="button-container">
-        <button className="button" onClick={handleStepChange}>Next</button>
+        <button className="button" onClick={handleStepChange}> Next</button>
       </div>
     </div>
   );
