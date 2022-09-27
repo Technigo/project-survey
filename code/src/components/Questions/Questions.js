@@ -7,6 +7,9 @@ const Questions = (props) => {
   const nextQuestion = () => {
     setQuestion(question + 1);
   };
+  const previousQuestion = () => {
+    setQuestion(question - 1);
+  };
 
   return (
     <div className="main-container">
@@ -26,6 +29,9 @@ const Questions = (props) => {
           <button type="button" onClick={nextQuestion}>
             Next
           </button>
+          <button type="button" onClick={previousQuestion}>
+            back
+          </button>
         </div>
       )}
       {question === 3 && (
@@ -34,6 +40,9 @@ const Questions = (props) => {
           <p>Test 3</p>
           <button type="button" onClick={props.nextPage}>
             Next
+          </button>
+          <button type="button" onClick={previousQuestion}>
+            back
           </button>
         </div>
       )}
