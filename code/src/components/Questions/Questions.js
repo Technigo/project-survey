@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import RadioButtons from 'components/RadioButtons/Index';
 import styles from './Questions.module.css';
 
 const Questions = (props) => {
@@ -17,6 +18,7 @@ const Questions = (props) => {
         <div className={styles.Questions}>
           <h1> Question 1</h1>
           <p>Lalalalalla</p>
+          <RadioButtons />
           <button type="button" onClick={nextQuestion}>
             Next
           </button>
