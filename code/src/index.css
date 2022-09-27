@@ -11,3 +11,26 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+.outer-container {
+  width: 100%;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+.inner-container {
+  width: 80%;
+}
+
+@media (min-width: 668px) and (max-width: 1024px) {
+  .inner-container {
+    width: 60%;
+}
+}
+
+@media (min-width: 1025px){ 
+  .inner-container {
+    width: 50%;
+}
+}
