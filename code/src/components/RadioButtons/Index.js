@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-const testGroups = ['Test1', 'Test2', 'Test3', ' Test4'];
+const testGroups = ['Bow and Arrow', 'an axe ofc!', 'Magic'];
 
 const RadioButtons = () => {
   const [selectedRadio, setSelectedRadio] = useState();

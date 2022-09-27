@@ -11,7 +11,7 @@ const Start = (props) => {
   return (
     <div className="main-container">
       <div className={styles.Start}>
-        <h1> Which character from Disney are you?</h1>
+        <h1>Which Lord of the Rings Character Are You?</h1>
         <p>Find out in this survey!</p>
 
         <form onSubmit={handleSubmit}>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import RadioButtons from 'components/RadioButtons/Index';
+import SelectDropdown from 'components/SelectDropdown';
 import styles from './Questions.module.css';
 
 const Questions = (props) => {
@@ -17,8 +18,9 @@ const Questions = (props) => {
       {question === 1 && (
         <div className={styles.Questions}>
           <h1> Question 1</h1>
-          <p>Lalalalalla</p>
+          <p>If you could use any weapon in the world, which would it be?</p>
           <RadioButtons />
+
           <button type="button" onClick={nextQuestion}>
             Next
           </button>
@@ -28,6 +30,7 @@ const Questions = (props) => {
         <div className={styles.Questions}>
           <h1> Question 2</h1>
           <p>HALLOJJ</p>
+          <SelectDropdown />
           <button type="button" onClick={nextQuestion}>
             Next
           </button>
