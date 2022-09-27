@@ -20,6 +20,7 @@ const SecondQuestion = ({
         <option value=""> Please select a brush </option>
         <option value="Manual"> Manual tooth brush </option>
         <option value="Electric"> Electric tooth brush </option>
+
       </select>
       <div className="button-container">
         <button type="button" className="back" onClick={onPreviousQuestionChange}>
