@@ -47,7 +47,7 @@ export const App = () => {
       {counter === 1 && (
         <UserName name={userName} setName={setUserName} />
       )}
-      <p> {userInput} </p>
+
       {/* <input type="text" value={userInput} onChange={handleUserInputChange} />  */}
 
       <p>
@@ -75,6 +75,7 @@ export const App = () => {
           <p>Questions answered: {counter}/7</p>
         </div>
       )}
+
     </div>
 
   );
