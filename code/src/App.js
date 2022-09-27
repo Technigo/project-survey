@@ -6,5 +6,5 @@ export const App = () => {
     <div>
       <Form />
     </div>
-  );
+  )
 }

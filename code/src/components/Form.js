@@ -1,13 +1,14 @@
 import React, { useState } from 'react';
 
 import FirstQuestion from 'FirstQuestion'
+import SecondQuestion from './SecondQuestion'
 import FirstPage from './FirstPage'
 
 const Form = () => {
-  //  const states ----
+  //  const states
   const [counter, setCounter] = useState(0);
   const [nameInput, setNameInput] = useState('');
-
+  const [brushInput, setBrushInput] = useState();
   //  functions
   const onNextQuestionChange = () => {
     setCounter(counter + 1)
@@ -21,6 +22,11 @@ const Form = () => {
     setNameInput(event.target.value)
   }
 
+  const onBrushInputChange = (event) => {
+    setBrushInput(event.target.value)
+  }
+
+  // return question carousel
   return (
     <main className="main-contaniner">
       {counter === 0 && <FirstPage onNextQuestionChange={onNextQuestionChange} />}
@@ -30,7 +36,14 @@ const Form = () => {
           onNameInputChange={onNameInputChange}
           onNextQuestionChange={onNextQuestionChange}
           onPreviousQuestionChange={onPreviousQuestionChange} />
-      )};
+      )}
+      {counter === 2 && (
+        <SecondQuestion
+          brushInput={brushInput}
+          onBrushInputChange={onBrushInputChange}
+          onNextQuestionChange={onNextQuestionChange}
+          onPreviousQuestionChange={onPreviousQuestionChange} />
+      )}
     </main>
   );
 }

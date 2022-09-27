@@ -7,11 +7,11 @@ const FirstQuestion = ({
   onNextQuestionChange
 }) => {
   return (
-    <form className="name">
+    <form className="question">
       <label className="question" htmlFor="nameInput">
-        What´s your name?
+        What´s your full name?
         <input
-          className="name-box"
+          className="input-box"
           type="text"
           value={nameInput}
           onChange={onNameInputChange}
