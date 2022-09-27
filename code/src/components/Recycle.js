@@ -1,9 +1,9 @@
 import React from 'react';
 
 export const Recycle = ({ recycle, setRecycle }) => (
-  <>
-    <h2>What is your favourite food?</h2>
-    <form>
+  <div className="question-wrapper">
+    <div className="question">
+      <h2>What is your favourite food?</h2>
       <select
         onChange={(e) => setRecycle(e.target.value)}
         value={recycle}>
@@ -14,8 +14,8 @@ export const Recycle = ({ recycle, setRecycle }) => (
         <option value="I recycle other peoples trash">I recycle other peoples trash</option>
 
       </select>
-    </form>
-  </>
+    </div>
+  </div>
 )
 
 /* <input type="text" value={recycle} onChange={handleRecycleChange} /> */
