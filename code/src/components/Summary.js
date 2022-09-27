@@ -5,14 +5,14 @@ import React from 'react';
 const refreshPage = () => {
   window.location.reload(false);
 };
-const Summary = () => {
+const Summary = ({ name }) => {
   return (
     <>
       <section className="summary-container">
         <div className="story-container">
           {' '}
           <h2 className="summary-title">Mad Lib – Dragon Sneeze</h2>
-          <p className="summary-answer">Summary: </p>
+          <p className="summary-answer">Summary: {name}</p>
         </div>
         <button className="restart-btn" type="button" onClick={refreshPage}>
           Again

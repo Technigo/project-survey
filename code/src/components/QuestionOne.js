@@ -15,14 +15,11 @@ const radioButtonInput = [
   'irritable',
   'awesome',
 ];
+// const handleRadioButtonChange = (event) => {
+//   setRadioButton(event.target.value);
+// };
 
-const QuestionOne = ({
-  nameInput,
-  handleNameInputChange,
-  radioButton,
-  handleRadioButtonChange,
-  handleStepIncrease,
-}) => {
+const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
   return (
     <>
       <div className="progress-bar-container">
@@ -35,27 +32,10 @@ const QuestionOne = ({
       {/* Name input */}
       <section className="question-container">
         <div className="form-container">
-          <h1 className="question">What is your name?</h1>
-          <form className="form-style">
-            <label>name:</label>
-            <input
-              type="text"
-              value={nameInput}
-              onChange={handleNameInputChange}
-            />
-          </form>
-          <p>Name: {nameInput}</p>
-          {/* Radio buttons */}
-          <h2>How would you describe yourself?</h2>
-          <form className="radio-button-container">
-            <label>
-              <input
-                type="radio"
-                value={radioButton}
-                onChange={handleRadioButtonChange}
-              />
-            </label>
-          </form>
+          <label>name:</label>
+          <input type="text" value={name} onChange={handleNameChange} />
+
+          <p>Name: </p>
         </div>
         {/* Continue button */}
         <button
