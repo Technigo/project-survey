@@ -6,12 +6,13 @@ export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
+  const [dest, setDest] = useState('')
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
 
   return (
-    <>
+    <div className="wrapper">
       <WelcomeMessage />
       <div className="questionCounter">
         <p>
@@ -19,7 +20,7 @@ export const App = () => {
           <button className="nextButton" type="button" onClick={handleStepIncrease}>Next question</button>
         </p>
       </div>
-    </>
+    </div>
 
   );
 }
