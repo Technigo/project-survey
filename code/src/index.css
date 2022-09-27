@@ -19,7 +19,7 @@ code {
 /********* Intro - Welcome page ********/
 .intro-container,
 .question-container,
-.outro-container {
+.summary-container {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;

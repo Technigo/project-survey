@@ -2,7 +2,7 @@
 /* eslint-disable indent */
 import React from 'react';
 
-const QuestionTwo = ({ changeStep }) => {
+const QuestionTwo = ({ handleStepIncrease }) => {
   return (
     <>
       <div className="progress-bar-container">
@@ -13,7 +13,10 @@ const QuestionTwo = ({ changeStep }) => {
       </div>
       <section className="question-container">
         <h1>Question 2</h1>
-        <button className="continue-btn" type="button" onClick={changeStep}>
+        <button
+          className="continue-btn"
+          type="button"
+          onClick={handleStepIncrease}>
           Next
         </button>
       </section>
