@@ -1,15 +1,17 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const RadioButtons = () => {
-  const [ageGroup, setAgeGroup] = useState('')
+const RadioButtons = (
+    // radioInput,
+    handleRadioInputChange,
+    handleStepChange,
+) => {
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
-        Age group:
+    <div>
       <label>
         <input
           type="radio"
           value="0-18"
-          onChange={event => setAgeGroup(event.target.value)}
+          onChange={handleRadioInputChange}
           checked={ageGroup === "0-18"} />
         0-18
       </label>
@@ -17,7 +19,7 @@ const RadioButtons = () => {
         <input
           type="radio"
           value="19-30"
-          onChange={event => setAgeGroup(event.target.value)}
+          onChange={handleRadioInputChange}
           checked={ageGroup === "19-30"} />
         19-30
       </label>
@@ -25,11 +27,12 @@ const RadioButtons = () => {
         <input
           type="radio"
           value="31+"
-          onChange={event => setAgeGroup(event.target.value)}
+          onChange={handleRadioInputChange}
           checked={ageGroup === "31+"} />
         31+
       </label>
-    </form>
+      <button className="nextButton" onClick={handleStepChange}>Next</button> 
+      </div>
   )
 }
 

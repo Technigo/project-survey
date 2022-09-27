@@ -1,21 +1,56 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const SelectQuestion = () => {
-  const [location, setLocation] = useState('')
+const SelectQuestion = ({
+	selectInput,
+	handleSelectInputChange,
+	handleStepChange,
+}) => {
+	return (
+		<div className='container'>
+			<div className='question-container'>
+				<h2>Where are you now?</h2>
+				
+				<select
+					className='select'
+					id='selectInput'
+					value={selectInput}
+					onChange={handleSelectInputChange}
+				>
+					<option value="">Select location:</option>
+					<option value='Lisbon'>Lisbon</option>
+					<option value='Vaasa'>Vaasa</option>
+				</select>
+			</div>
+			<div className='button-container'>
+				<button className="button" disabled={selectInput === ''} onClick={handleStepChange}>Next</button>
+			</div>
+		</div>
+	);
+};
+
+export default SelectQuestion;
+
+/* const SelectQuestion = (
+    selectInput,
+    handleSelectInputChange,
+    handleStepChange,
+) => {
   return (
-    <form>
+    <div>
       <select
-        onChange={(event) => setLocation(event.target.value)}
-        value={location}>
+        value={selectInput}
+        onChange={handleSelectInputChange} >
 
         <option value="">Select location:</option>
         <option value="">Stockholm</option>
         <option value="">Lisbon</option>
         <option value="">Vaasa</option>
       </select>
-
-    </form>
+      <button className="nextButton" onClick={handleStepChange}>Next</button> 
+    </div>
   )
 }
 
 export default SelectQuestion;
+
+*/

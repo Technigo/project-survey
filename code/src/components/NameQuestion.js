@@ -1,15 +1,20 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const NameQuestion = () => {
-  const [name, setName] = useState('')
+const NameQuestion = ({ 
+    nameInput, 
+    handleNameInputChange,
+    handleStepChange,
+ }) => {
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
-      <h1> My name is: {name}</h1>
+    <div className="container">
+      <h1> My name is: </h1>
       <input
         type="text"
-        onChange={(event) => setName(event.target.value)}
-        value={name} />
-    </form>
+        value={nameInput}
+        onChange={handleNameInputChange} />
+    <button className="nextButton" onClick={handleStepChange}>Next</button> 
+    </div>
+    
   )
 }
 
