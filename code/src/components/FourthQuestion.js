@@ -33,11 +33,11 @@ const FourthQuestion = ({
       ))}
 
       <div className="button-container">
-        <button type="button" className="glow-on-hover" onClick={onPreviousQuestionChange}>
-          PREVIOUS
+        <button type="button" className="back" onClick={onPreviousQuestionChange}>
+          BACK
         </button>
-        <button type="button" className="glow-on-hover" onClick={onNextQuestionChange}>
-          CONTINUE
+        <button type="button" className="forward" onClick={onNextQuestionChange}>
+          FORWARD
         </button>
       </div>
     </form>

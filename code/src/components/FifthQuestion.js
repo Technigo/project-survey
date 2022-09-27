@@ -23,7 +23,7 @@ const FifthQuestion = ({
         <option value="Education"> Education and instructions </option>
         <option value="Brighter"> Brighter smile </option>
         <option value="TreatmentPlan"> Peronalized treatment plan</option>
-        <option value="NoFocus"> I don't have any special focus today </option>
+        <option value="NoFocus"> I don´t have any special focus today </option>
 
       </select>
       <div className="button-container">

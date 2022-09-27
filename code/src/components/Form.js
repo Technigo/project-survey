@@ -4,6 +4,7 @@ import FirstQuestion from './FirstQuestion'
 import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
+import FifthQuestion from './FifthQuestion'
 import FirstPage from './FirstPage'
 
 import 'index.css';
@@ -15,6 +16,8 @@ const Form = () => {
   const [brushInput, setBrushInput] = useState();
   const [frequencyInput, setFrequencyInput] = useState();
   const [checkboxGroup, setCheckboxGroup] = useState([]);
+  const [goalInput, setGoalInput] = useState();
+
   //  functions
   const onNextQuestionChange = () => {
     setCounter(counter + 1)
@@ -46,6 +49,10 @@ const Form = () => {
     }
   }
 
+  const onGoalInputChange = (event) => {
+    setGoalInput(event.target.value)
+  }
+
   // return question carousel
   return (
     <main className="main-contaniner">
@@ -75,6 +82,13 @@ const Form = () => {
         <FourthQuestion
           checkboxGroup={checkboxGroup}
           onChangeFunction={onCheckboxGroupToggle}
+          onNextQuestionChange={onNextQuestionChange}
+          onPreviousQuestionChange={onPreviousQuestionChange} />
+      )}
+      {counter === 5 && (
+        <FifthQuestion
+          goalInput={goalInput}
+          onGoalInputChange={onGoalInputChange}
           onNextQuestionChange={onNextQuestionChange}
           onPreviousQuestionChange={onPreviousQuestionChange} />
       )}
