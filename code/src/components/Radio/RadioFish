@@ -1,0 +1,26 @@
+import React, { useState } from 'react';
+
+const fishOptions = ['Salmon', 'Cod', 'Shrimp', 'Other'];
+
+const RadioFish = () => {
+  const [selectedRadio, setSelectedRadio] = useState();
+
+  return (
+    <form>
+      {fishOptions.map((fish) => (
+        <label key={fish} htmlFor="fish">
+          <input
+            id="fish"
+            name="fish"
+            type="radio"
+            value={fish}
+            onChange={(event) => setSelectedRadio(event.target.value)}
+            checked={selectedRadio === fish} />
+          {fish}
+        </label>
+      ))}
+    </form>
+  );
+};
+
+export default RadioFish;

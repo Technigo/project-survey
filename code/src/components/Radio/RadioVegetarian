@@ -1,0 +1,26 @@
+import React, { useState } from 'react';
+
+const vegetarianOptions = ['Halloumi', 'Aubergine', 'Tempeh', 'Tofu', 'Beans', 'Meat substitutes'];
+
+const RadioVegetarian = () => {
+  const [selectedRadio, setSelectedRadio] = useState();
+
+  return (
+    <form>
+      {vegetarianOptions.map((veggie) => (
+        <label key={veggie} htmlFor="veggie">
+          <input
+            id="veggie"
+            name="veggie"
+            type="radio"
+            value={veggie}
+            onChange={(event) => setSelectedRadio(event.target.value)}
+            checked={selectedRadio === veggie} />
+          {veggie}
+        </label>
+      ))}
+    </form>
+  );
+};
+
+export default RadioVeggie;
