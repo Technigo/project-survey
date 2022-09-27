@@ -11,3 +11,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+header {
+  border: solid red;
+}
+
+.genre {
+  border: solid blue;
+}
+
+.numberOfBooks {
+  border: solid pink;
+}
