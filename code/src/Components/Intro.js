@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Intro = () => {
+  const [surveyStart, setSurveyStart] = useState(1)
+
+  const handleStartSurvey = (event) => {
+    setSurveyStart(surveyStart + 1)
+
+  }
     return (
-      <div className ="outer-container">
-        <div className="inner-container">
+      <div className='outer-container'>
+        <div className='inner-container'>
           <h1>Stockholm museums</h1>
           <p>
           To make the Stockholm museum scene better for all ages,

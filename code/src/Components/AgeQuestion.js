@@ -1,57 +1,40 @@
-import React from 'react';
+import React, { useState } from 'react';
 
-const Ages = [
-  {
-    text: "15-20",
-    id: "15-20",
-    value: "15-20"
-  },
-  {
-    text: "20-29",
-    id: "20-29",
-    value: "20-29"
-  },
-  {
-    text: "30-39",
-    id: "30-39",
-    value: "30-39"
-  },
-  {
-    text: "40-49",
-    id: "40-49",
-    value: "40-49"
-  },
-  {
-    text: "50-59",
-    id: "50-59",
-    value: "50-59"
-  },
-  {
-    text: "60-69",
-    id: "60-69",
-    value: "60-69"
-  },
-  {
-    text: "70-79",
-    id: "70-79",
-    value: "70-79"
-  },
-  {
-    text: "80+",
-    id: "80+",
-    value: "80+"
+const ageGroups = [
+  "15-20",
+  "20-29",
+  "30-39",
+  "40-49",
+  "50-59",
+  "60-69",
+  "70-79",
+  "80-89",
+  "90+"]
+
+const AgeQuestion = ({age, setAge}) => {
+  
+  const handleAgeChange = (event) => {
+    setAge(event.target.value)
   }
-]
 
-const AgeQuestion = () => {
     return (
-      <div>
-        <h1>Age</h1>
+      <>
+      <h2>How old are you?</h2>
         <form>
-          {/* How old are you - Radiobuttons */}
+          How old are you?
+          {ageGroups.map((group => {
+            <label key ={group}>
+              <input
+                type="radio"
+                value={group}
+                onChange={event => handleAgeChange}
+                checked={ageGroups === group}
+                />
+                {group}
+              </label>
+          }))}
         </form>
-      </div>
-    );
-  }
-
+      </>
+ )
+}
   export default AgeQuestion
