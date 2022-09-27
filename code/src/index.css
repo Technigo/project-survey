@@ -88,7 +88,7 @@ code {
 /********* Footer ********/
 .footer-container {
   background-color: rgba(253, 193, 82, 0.24705882352941178);
-  padding: 20px;
+  width: 100%;
 }
 .creator {
   color: rgb(138 90 0);
@@ -96,7 +96,8 @@ code {
   font-size: 16px;
   font-weight: bold;
   line-height: 0px;
-  margin: 0;
+  padding: 10px;
+  margin-top: 20px;
 }
 
 /********* Summary ********/
