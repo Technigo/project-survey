@@ -55,6 +55,11 @@ select {
   padding: 7px;
 }
 
+.radio-buttons {
+  display: flex;
+  flex-direction: row;
+}
+
 /* Buttons */
 .continue-btn, .start-btn {
   background-color: #00539CFF;
