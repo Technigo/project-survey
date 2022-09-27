@@ -8,15 +8,14 @@ const Intro = () => {
 
   }
     return (
-      <div className='outer-container'>
-        <div className='inner-container'>
-          <h1>Stockholm museums</h1>
+      <>
+          <h1>Stockholm museums: a survey</h1>
           <p>
-          To make the Stockholm museum scene better for all ages,
-          we are conducting a survey. We highly appricate your participation.
+          Our society is ever-changing and fast-paced. The museums of our city are often said to represent the opposite:
+          a stable foundation. But does that make them... boring? It are questions like these that we are eager to find the 
+          answers to. Thank you for taking the time to answer this survey, and for helping to make Stockholm's museums better.
           </p>
-        </div>
-      </div>
+      </>
     );
   }
 
