@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import WelcomeToTheSurvey from './WelcomeToTheSurvey';
 import FirstQuestion from './FirstQuestion';
+import SecondQuestion from './SecondQuestion';
 
 const Form = () => {
   const [welcome, setWelcome] = useState('')
@@ -14,6 +15,10 @@ const Form = () => {
 
   const handleFirstChange = (e) => {
     setFirst(e.target.value)
+  }
+
+  const handleSecondChange = (e) => {
+    setIsChecked(e.target.value)
   }
 
   const handleNextQuestion = () => {
@@ -32,6 +37,10 @@ const Form = () => {
         onFirstQuestionChange={handleFirstChange}
         nextQuestion={handleNextQuestion}
         firstQuestion={first} />}
+      {counter === 2
+      && <SecondQuestion
+        nextQuestion={handleNextQuestion}
+        secondQuestion={handleSecondChange} />}
     </section>
   )
 };

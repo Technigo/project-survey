@@ -4,12 +4,12 @@ import React from 'react';
 
 const FirstQuestion = ({ firstQuestion, onFirstQuestionChange, nextQuestion }) => {
   return (
-    <section className="first-section">
+    <section className="section">
       <div className="content-wrap">
         <h1>Meat Consumption</h1>
         <p>How many times do you consume meat in a month?</p>
         <form className="form-dropdown">
-          <labe htmlFor="meat">
+          <label htmlFor="meat">
             <select
               lang="en"
               value={firstQuestion}
@@ -23,7 +23,7 @@ const FirstQuestion = ({ firstQuestion, onFirstQuestionChange, nextQuestion }) =
               <option value="monthly">Two or three times a month</option>
               <option value="never">Never</option>
             </select>
-          </labe>
+          </label>
           <button type="button" onClick={nextQuestion} className="button" disabled={firstQuestion === ''}>
             Next Question!
           </button>
