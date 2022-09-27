@@ -1,4 +1,5 @@
 {
+  "parser": "@babel/eslint-parser",
   "extends": [
     "airbnb"
   ],
@@ -12,28 +13,25 @@
     "browser": true
   },
   "parserOptions": {
-    "parser": "@babel/eslint-parser",
-    "requireConfigFile": false,
     "sourceType": "module",
     "ecmaVersion": 2017,
+    "requireConfigFile": false,
     "ecmaFeatures": {
       "jsx": true,
       "experimentalObjectRestSpread": true,
       "modules": true
+    },
+    "babelOptions": {
+      "presets": [
+        "@babel/preset-react"
+      ]
     }
   },
   "plugins": [
     "react-hooks"
   ],
   "rules": {
-    "react/function-component-definition": [
-      2,
-      {
-        "namedComponents": "arrow-function",
-        "unnamedComponents": "arrow-function"
-      }
-    ],
-    "arrow-body-style": "off",
+    "arrow-body-style": 0,
     "class-methods-use-this": "off",
     "brace-style": [
       "error",
@@ -109,10 +107,22 @@
     "react/jsx-uses-react": "warn",
     "react/jsx-wrap-multilines": "off",
     "react/jsx-one-expression-per-line": "off",
+    "react/jsx-props-no-spreading": "off",
+    "react/no-array-index-key": "off",
     "react/no-danger": "off",
     "react/no-did-mount-set-state": "error",
     "react/no-did-update-set-state": "error",
     "react/no-direct-mutation-state": "error",
+    "react/function-component-definition": [
+      "error",
+      {
+        "namedComponents": [
+          "function-declaration",
+          "arrow-function"
+        ],
+        "unnamedComponents": "arrow-function"
+      }
+    ],
     "react/no-multi-comp": [
       "error",
       {
