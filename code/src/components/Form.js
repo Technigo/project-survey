@@ -1,16 +1,48 @@
 import React, { useState } from 'react';
 
 const Form = () => {
-  const [name, setName] = useState('');
+  const [counter, setCounter] = useState(0);
+  const [userInput, setUserInput] = useState('');
+  const [userName, setUserName] = useState('');
+
+  const handleCounterButtonClick = (shouldIncrease) => {
+    if (shouldIncrease && counter < 10) {
+      setCounter(counter + 1);
+    } else if (!shouldIncrease && counter > 0) {
+      setCounter(counter - 1);
+    }
+  }
+
+  const handleUserInputChange = (event) => {
+    setUserInput(event.target.value)
+  }
+
+  const handleClearButtonClick = () => {
+    setUserInput('');
+  }
+
+  const handleUserNameInputChange = (event) => {
+    setUserName(event.target.value)
+  }
 
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
-      <h1>The state is: {name} </h1>
-      <input
-        type="text"
-        onChange={(event) => setName(event.target.value)}
-        value={name} />
-    </form>
+    <div>
+      My counter {counter}
+      <button type="button" onClick={() => handleCounterButtonClick(true)}>Increase - 10 max </button>
+      <button type="button" onClick={() => handleCounterButtonClick(false)}>Decrease - 0 min </button>
+      <input type="text" value={userInput} onChange={handleUserInputChange} />
+      <p>{userInput}</p>
+      <p>
+        <button type="button" onClick={handleClearButtonClick}>clears input</button>
+      </p>
+
+      {counter === 0 && (
+        <div>
+          <p> Hello, please type in your name</p>
+          <input type="text" value={userName} onChange={handleUserNameInputChange} />
+          <p>{userInput}</p>
+        </div>)}
+    </div>
   );
-};
+}
 export default Form
