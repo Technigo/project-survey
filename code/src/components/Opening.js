@@ -17,7 +17,7 @@ const Opening = ({ name, onNameChange, onCounterChange }) => {
           type="text"
           placeholder="Type your name here"
           value={name}
-          onNameChange={onNameChange} />
+          onChange={onNameChange} />
       </form>
       <button type="button" onClick={onCounterChange}>Start Review</button>
     </div>

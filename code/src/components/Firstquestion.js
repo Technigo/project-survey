@@ -12,7 +12,7 @@ const Firstquestion = (props) => {
               type="checkbox"
               value="Red Velvet"
               checked={cakeArray.includes('Red Velvet')}
-              onCakeChange={() => onCakeArrayChange('Red Velvet')} />
+              onChange={() => onCakeArrayChange('Red Velvet')} />
             <span className="checkmarkCheck" />
           </label>
         </div>
