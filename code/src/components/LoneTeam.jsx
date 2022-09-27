@@ -11,16 +11,17 @@ export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
         <input
           type="radio"
           id="team"
-          name=""
-          value={team}
-          checked />
+          name="team"
+          value="Team Player"
+          onChange={handleLoneTeamChange} />
       </label>
       <label htmlFor="lone">Lone Wolf
         <input
           type="radio"
           id="lone"
-          name=""
-          value={lone} />
+          name="lone"
+          value="Independent Worker"
+          onChange={handleLoneTeamChange} />
       </label>
     </fieldset>
   );
