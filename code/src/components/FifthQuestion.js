@@ -1,31 +1,31 @@
 import React from 'react';
 
 const FifthQuestion = ({
-  goalInput,
-  onGoalInputChange,
+  flossInput,
+  onFlossInputChange,
   onPreviousQuestionChange,
   onNextQuestionChange
 }) => {
+  const flossGroup = ['yes', 'no', 'sometimes']
+
   return (
     <form>
       <div className="question">
-        <p className="question-title">What do you want to focus most on today</p>
-        <p>choose one main goal for today</p>
+        <p className="question-title">Do you use something in-between your teeth regularly?</p>
+        <p>(think floss, interdental brush, waterpick etc)</p>
       </div>
-      <select
-        className="select-input"
-        type="text"
-        value={goalInput}
-        onChange={onGoalInputChange}
-        required="required">
-        <option value=""> Please select a goal </option>
-        <option value="Fresher"> Fresher Feeling </option>
-        <option value="Education"> Education and instructions </option>
-        <option value="Brighter"> Brighter smile </option>
-        <option value="TreatmentPlan"> Peronalized treatment plan</option>
-        <option value="NoFocus"> I don´t have any special focus today </option>
+      {flossGroup.map((floss) => (
+        <label className="radio-label" htmlFor="frequency-id" key={floss}>
+          <input
+            className="radio-input"
+            type="radio"
+            value={floss}
+            onChange={onFlossInputChange}
+            checked={flossInput === floss} />
+          {floss}
+        </label>
+      ))}
 
-      </select>
       <div className="button-container">
         <button type="button" className="back" onClick={onPreviousQuestionChange}>
           BACK

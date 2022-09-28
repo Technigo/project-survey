@@ -5,6 +5,7 @@ import SecondQuestion from './SecondQuestion'
 import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
 import FifthQuestion from './FifthQuestion'
+import SixthQuestion from './SixthQuestion'
 import FirstPage from './FirstPage'
 
 import 'index.css';
@@ -17,6 +18,7 @@ const Form = () => {
   const [frequencyInput, setFrequencyInput] = useState();
   const [checkboxGroup, setCheckboxGroup] = useState([]);
   const [goalInput, setGoalInput] = useState();
+  const [flossInput, setFlossInput] = useState();
 
   //  functions
   const onNextQuestionChange = () => {
@@ -47,6 +49,10 @@ const Form = () => {
       // opy all the values from the previous heckboxGroup array
       setCheckboxGroup([checkboxValue, ...checkboxGroup])
     }
+  }
+
+  const onFlossInputChange = (event) => {
+    setFlossInput(event.target.value)
   }
 
   const onGoalInputChange = (event) => {
@@ -87,6 +93,13 @@ const Form = () => {
       )}
       {counter === 5 && (
         <FifthQuestion
+          flossInput={flossInput}
+          onFlossInputChange={onFlossInputChange}
+          onNextQuestionChange={onNextQuestionChange}
+          onPreviousQuestionChange={onPreviousQuestionChange} />
+      )}
+      {counter === 6 && (
+        <SixthQuestion
           goalInput={goalInput}
           onGoalInputChange={onGoalInputChange}
           onNextQuestionChange={onNextQuestionChange}
