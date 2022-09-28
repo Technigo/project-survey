@@ -10,7 +10,7 @@ const Opening = ({ name, onNameChange, onCounterChange }) => {
             and provide you with the best possible products.
             So, please feel free to fill in this survey and help us to be your favourite bakery!
             First of all, we would like to know our lovely customer more.
-            Please type in your name below😊
+            Please type in your name below!😊
       </p>
       <form>
         <input
