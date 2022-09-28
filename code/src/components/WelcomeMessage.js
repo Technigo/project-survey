@@ -1,7 +1,7 @@
 import React from 'react';
 import { WelcomeMessagePhone } from './WelcomeMessagePhone';
 
-export const WelcomeMessage = ({ name, setName }) => {
+export const WelcomeMessage = ({ name, setName, phone, setPhone }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
@@ -18,7 +18,7 @@ export const WelcomeMessage = ({ name, setName }) => {
         <p>What is your name?</p>
         <input type="text" value={name} onChange={handleNameChange} />
       </div>
-      <WelcomeMessagePhone />
+      <WelcomeMessagePhone phone={phone} setPhone={setPhone} />
     </>
   )
 }

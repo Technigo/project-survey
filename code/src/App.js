@@ -10,6 +10,8 @@ export const App = () => {
   const [name, setName] = useState('');
   const [phone, setPhone] = useState('');
   const [dest, setDest] = useState('');
+  const [destTwo, setDestTwo] = useState('');
+  const [destThree, setDestThree] = useState('');
   const [pax, setPax] = useState('');
   const [paxChild, setPaxChild] = useState('');
   const [age, setAge] = useState('')
@@ -23,16 +25,30 @@ export const App = () => {
         <WelcomeMessage name={name} setName={setName} phone={phone} setPhone={setPhone} />
       )}
       {step === 2 && (
-        <DestinationQuestion dest={dest} setDest={setDest} />
+        <DestinationQuestion
+          dest={dest}
+          setDest={setDest}
+          destTwo={destTwo}
+          setDestTwo={setDestTwo}
+          destSetThree={setDestThree}
+          destThree={destThree} />
       )}
       {step === 3 && (
-        <Pax pax={pax} setPax={setPax} />
+        <Pax
+          pax={pax}
+          setPax={setPax}
+          paxChild={paxChild}
+          setPaxChild={setPaxChild}
+          age={age}
+          setAge={setAge} />
       )}
       {step >= 4 && (
         <Confirmation
           name={name}
           phone={phone}
           dest={dest}
+          destTwo={destTwo}
+          destThree={destThree}
           pax={pax}
           paxChild={paxChild}
           age={age} />

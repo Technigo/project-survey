@@ -3,6 +3,7 @@ import React from 'react';
 export const WelcomeMessagePhone = ({ phone, setPhone }) => {
   const handlePhoneChange = (event) => {
     setPhone(event.target.value);
+    console.log('setPhone', event.target.value)
   }
 
   return (

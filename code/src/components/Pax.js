@@ -1,15 +1,15 @@
 import React from 'react';
 
-export const Pax = ({ pax, setPax, paxChild, setChildPax, age, setAge }) => {
+export const Pax = ({ pax, setPax, paxChild, setPaxChild, age, setAge }) => {
   const handlePaxChange = (event) => {
     setPax(event.target.value)
   }
   const handleChildrenPaxChange = (event) => {
-    setChildPax(event.target.value)
+    setPaxChild(event.target.value)
   }
-  const handleAgeChange = (event) => [
+  const handleAgeChange = (event) => {
     setAge(event.target.value)
-  ]
+  }
   return (
     <form>
       <div className="drop-down">
@@ -19,6 +19,7 @@ export const Pax = ({ pax, setPax, paxChild, setChildPax, age, setAge }) => {
         <label htmlFor="Pax">
         How many adults?
           <select value={pax} onChange={handlePaxChange}>
+            <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -30,6 +31,7 @@ export const Pax = ({ pax, setPax, paxChild, setChildPax, age, setAge }) => {
         <label htmlFor={paxChild}>
           How many children (below 18 year old?)
           <select value={paxChild} onChange={handleChildrenPaxChange}>
+            <option value="0">0</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
