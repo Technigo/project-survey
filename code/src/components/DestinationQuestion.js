@@ -11,11 +11,11 @@ export const DestinationQuestion = ({ dest, setDest }) => {
 
         <label htmlFor={DestinationQuestion}>
            2-3 hours
-          <input type="radio" name="2-3 hours" value={dest} />
+          <input type="radio" name="2-3 hours" value={dest} onChange={handleDestChange} />
         </label>
         <label htmlFor={DestinationQuestion}>
           4-5 hours
-          <input type="radio" name="4-5 hours" value={dest} />
+          <input type="radio" name="4-5 hours" value={dest} onChange={handleDestChange} />
         </label>
         <label htmlFor={DestinationQuestion}>
           N/A

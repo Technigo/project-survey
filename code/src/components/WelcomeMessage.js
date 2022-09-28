@@ -1,6 +1,5 @@
 import React from 'react';
 import { WelcomeMessagePhone } from './WelcomeMessagePhone';
-import { DestinationQuestion} from './DestinationQuestion';
 
 export const WelcomeMessage = ({ name, setName }) => {
   const handleNameChange = (event) => {
