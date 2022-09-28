@@ -10,6 +10,11 @@ import Intro from './Intro';
 import QuestionOne from './QuestionOne';
 import QuestionTwo from './QuestionTwo';
 import QuestionThree from './QuestionThree';
+import QuestionFour from './QuestionFour';
+import QuestionFive from './QuestionFive';
+import QuestionSix from './QuestionSix';
+import QuestionSeven from './QuestionSeven';
+import QuestionEight from './QuestionEight';
 import Summary from './Summary';
 
 const Form = () => {
@@ -59,29 +64,58 @@ const Form = () => {
           handleStepIncrease={handleStepIncrease}
           name={name}
           handleNameChange={handleNameChange}
-          mood={mood}
-          handleMoodChange={handleMoodChange}
         />
       )}
       {step === 3 && (
         <QuestionTwo
           handleStepIncrease={handleStepIncrease}
+          mood={mood}
+          handleMoodChange={handleMoodChange}
+        />
+      )}
+      {step === 4 && (
+        <QuestionThree
+          handleStepIncrease={handleStepIncrease}
           adjective={adjective}
           handleAdjectiveChange={handleAdjectiveChange}
+        />
+      )}
+      {step === 5 && (
+        <QuestionFour
+          handleStepIncrease={handleStepIncrease}
           animal={animal}
           handleAnimalChange={handleAnimalChange}
+        />
+      )}
+      {step === 6 && (
+        <QuestionFive
+          handleStepIncrease={handleStepIncrease}
           exclamation={exclamation}
           handleExclamationChange={handleExclamationChange}
+        />
+      )}
+      {step === 7 && (
+        <QuestionSix
+          handleStepIncrease={handleStepIncrease}
           adjectiveSecond={adjectiveSecond}
           handleAdjectiveSecondChange={handleAdjectiveSecondChange}
+        />
+      )}
+      {step === 8 && (
+        <QuestionSeven
+          handleStepIncrease={handleStepIncrease}
           creature={creature}
           handleCreatureChange={handleCreatureChange}
+        />
+      )}
+      {step === 9 && (
+        <QuestionEight
+          handleStepIncrease={handleStepIncrease}
           food={food}
           handleFoodChange={handleFoodChange}
         />
       )}
-      {step === 4 && <QuestionThree handleStepIncrease={handleStepIncrease} />}
-      {step === 5 && (
+      {step === 10 && (
         <Summary
           name={name}
           mood={mood}

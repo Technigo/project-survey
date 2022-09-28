@@ -1,33 +1,36 @@
-/* eslint-disable max-len */
 /* eslint-disable react/jsx-closing-bracket-location */
-/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable comma-dangle */
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable indent */
 import React from 'react';
 
-const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
+const QuestionSix = ({
+  handleStepIncrease,
+  adjectiveSecond,
+  handleAdjectiveSecondChange,
+}) => {
   return (
     <>
+      {/* Progressbar */}
       <div className="progress-bar-container">
-        {/* Progressbar */}
         <label className="progress-label" htmlFor="survey">
           Survey progress:{' '}
         </label>
-        <progress className="progress-bar" id="survey" value="1" max="8" />
+        <progress className="progress-bar" id="survey" value="6" max="8" />
       </div>
-      {/* Name input */}
       <section className="question-container">
+        {/* Adjective 2 input */}
         <div className="form-container">
-          <h1 className="question">What is your name?</h1>
+          <h1 className="question">What is a synonym to puzzling?</h1>
           <form className="form-style">
-            <label>Write here:</label>
-            <input type="text" value={name} onChange={handleNameChange} />
+            <label>Adjective:</label>
+            <input
+              type="text"
+              value={adjectiveSecond}
+              onChange={handleAdjectiveSecondChange}
+            />
           </form>
         </div>
-
         {/* Continue button */}
         <button
           className="continue-btn"
@@ -40,4 +43,4 @@ const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
   );
 };
 
-export default QuestionOne;
+export default QuestionSix;

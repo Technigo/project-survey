@@ -1,13 +1,8 @@
-/* eslint-disable comma-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable indent */
 import React from 'react';
 
-const QuestionThree = ({
-  handleStepIncrease,
-  adjective,
-  handleAdjectiveChange,
-}) => {
+const QuestionFour = ({ handleStepIncrease, animal, handleAnimalChange }) => {
   return (
     <>
       {/* Progressbar */}
@@ -15,16 +10,16 @@ const QuestionThree = ({
         <label className="progress-label" htmlFor="survey">
           Survey progress:{' '}
         </label>
-        <progress className="progress-bar" id="survey" value="3" max="8" />
+        <progress className="progress-bar" id="survey" value="4" max="8" />
       </div>
       <section className="question-container">
         {/* Form */}
-        <h1>What adjective would you use to describe an antique statue?</h1>
+        <h1>What is the strangest animal you know?</h1>
         <form className="select-style">
           <select
             className="select-form"
-            onChange={handleAdjectiveChange}
-            value={adjective}>
+            onChange={handleAnimalChange}
+            value={animal}>
             <option value="DEFAULT" disabled>
               Choose adjective:
             </option>
@@ -44,20 +39,4 @@ const QuestionThree = ({
   );
 };
 
-export default QuestionThree;
-
-// {/* Adjective input */}
-// <section className="question-container">
-//   <div className="form-container">
-//     <h1 className="question">
-//       What adjective would you use to describe an antique statue?
-//     </h1>
-//     <form className="form-style">
-//       <label>Adjective:</label>
-//       <input
-//         type="text"
-//         value={adjective}
-//         onChange={handleAdjectiveChange}
-//       />
-//     </form>
-//   </div>{' '}
+export default QuestionFour;
