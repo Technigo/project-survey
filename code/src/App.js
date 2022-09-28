@@ -12,6 +12,7 @@ const App = () => {
     gender: '',
     status: '',
     reason: '',
+    where: '',
     quality: '',
     satisfaction: '',
   });
