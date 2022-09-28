@@ -4,7 +4,7 @@ const Checkcake = (props) => {
   const { cakeOption, onCakeOptionChange, onCounterChange } = props
   return (
     <div className="container">
-      <h3>Which cakes are your favourite?</h3>
+      <h3>Which cakes are your favourite? (please choose 2 or more)</h3>
       <div className="cake">
         <label htmlFor="cake" className="checkButtonContainer">Red Velvet
           <input
