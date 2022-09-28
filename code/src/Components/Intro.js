@@ -17,8 +17,7 @@ const Intro = () => {
           <p>The museums of our city are however often said to represent the opposite:
           a stable foundation.</p>
           
-          <p>But does that make them... boring? It are questions like these that we are eager to find the 
-          answers to. <span className="bold-p">Thank you for taking the time to answer this survey, and for helping to make 
+          <p>But does that make them... boring? If so, we want to know. <span className="bold-p">So thank you for taking the time to answer this survey, and for helping to make 
           Stockholm's museums better 🏛 </span>
           </p>
       </>

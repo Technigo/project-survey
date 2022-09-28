@@ -10,27 +10,27 @@ const museumVisits = [
 
 const FrequencyQuestion = ({frequency, setFrequency}) => {
 
-  const handleMuseumVisitChange = (event) => {
+  const handleFrequencyChange = (event) => {
     setFrequency(event.target.value)
   }
 
     return (
-      <div>
-      <h2>How many times per year do you visit a museum in Stockholm?</h2>
-       <form>
-        {museumVisits.map((visits => {
-          <label key ={visits}>
-            <input
-              type="radio"
-              value={visits}
-              onChange={event => handleAgeChange}
-              checked={museumVisits === visits}
-              />
-              {visits}
-            </label>
-        }))}
+      <form>
+        <h2>How many times per do you visit a museum in Stockholm?</h2>
+        <label for="visits">Number of visits per year:</label>
+        <input 
+        id="visits"
+        className="visits"
+        type="range" 
+        name="visits"
+        list="tickmarks"
+        onChange={handleFrequencyChange}
+        value={frequency}
+        min="0"
+        max="50"/>
+        {frequency}
       </form>
-      </div>
+      
     );
   }
 
