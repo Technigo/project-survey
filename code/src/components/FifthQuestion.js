@@ -12,7 +12,7 @@ const FifthQuestion = ({
     <form className="question-wrap">
       <div className="question">
         <p className="question-title">Do you use something in-between your teeth regularly?</p>
-        <p className="question-specify">(think floss, interdental brush, waterpick etc)</p>
+        <p className="question-specify">(think floss, interdental brush, waterpick or something similar)</p>
       </div>
       {flossGroup.map((floss) => (
         <div className="responsive-label">
