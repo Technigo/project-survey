@@ -123,6 +123,11 @@ const Form = () => {
         <TheEnd
           nameInput={nameInput}
           brushInput={brushInput}
+          frequencyInput={frequencyInput}
+          checkboxGroup={checkboxGroup}
+          flossInput={flossInput}
+          goalInput={goalInput}
+          requestInput={requestInput}
           onNextQuestionChange={onNextQuestionChange} />
       )}
     </main>
