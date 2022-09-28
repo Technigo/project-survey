@@ -54,15 +54,10 @@ export const App = () => {
                 onChange={handleConsiderationChange}
                 value={consideration}
                 <option value="">Select option</option>
-                <option value="Cleaning up after yourself">Cleaning up after yourself</option>
-                <option value="Keeping it down">Keeping it down</option>
-                <option value="Respecting people`s stuff">Respecting people`s stuff</option>
                 <option value="Reassessing your priorities">Reassessing your priorities</option>
                 <option value="Trying meditation">Trying meditation</option>
                 <option value="Finishing what you`ve started">Finishing what you`ve started</option>
                 <option value="Lightening up">Lightening up</option>
-                <option value="Learning how to park your car">Learning how to park your car</option>
-                <option value="Improving your hygiene">Improving your hygiene</option>
                 <option value="Positive thinking">Positive thinking</option>
                 <option value="Smiling once in a while">Smiling once in a while</option>
                 <option value="Asking for help next time">Asking for help next time</option>
