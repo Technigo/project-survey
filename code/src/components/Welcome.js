@@ -8,8 +8,11 @@ export const Welcome = ({ setCounter }) => {
 
   return (
     <section className="main">
-      <h3>Welcome to the blabla survey. Press the button to start</h3>
-      <button type="button" onClick={handleStartButton}>Start</button>
+      <form>
+        <h2>Welcome to the blabla survey.</h2>
+        <h3>Press the button to start</h3>
+        <button type="button" onClick={handleStartButton}>Start</button>
+      </form>
     </section>
   );
 }

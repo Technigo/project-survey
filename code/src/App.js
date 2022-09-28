@@ -1,43 +1,45 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Welcome } from './components/Welcome';
+import { Age } from './components/Age';
+import { Adults } from './components/Adults';
+
 import { Select } from './components/Select';
-import { Checkbox } from './components/Checkbox';
-import { Radio } from './components/Radio';
 import { Input } from './components/Input';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
-  const [username, setUserName] = useState('');
-  const [gender, setGender] = useState('');
-  const [age, setAge] = useState(0);
+  const [ageGroup, setAgeGroup] = useState('');
+  const [habits, setHabits] = useState(0)
+  const [specialGroup, setSpecialGroup] = useState('');
   const [frequency, setFrequency] = useState('');
+  const [username, setUserName] = useState('');
 
   // Function for checking counter
-  const nextQuestion = (number) => {
-    if (number === 1) {
+  const checkAge = (ageRange) => {
+    if (ageRange === '5 - 7') {
       return (
         <section className="main">
-          <Input />
+          <YoungOnes />
         </section>
       )
-    } else if (number === 2) {
+    } else if (ageRange === '18 - 64') {
       return (
         <section className="main">
-          <Select />
+          <Adults />
         </section>
       )
-    } else if (number === 3) {
+    } else if (ageRange === '65+') {
       return (
         <section className="main">
-          <Checkbox />
+          <Seniors />
         </section>
       )
     }
   }
-  const handleOKButton = (event) => {
+  const handleNextButton = (event) => {
     setCounter(counter + 1);
   }
   // App rendering starts here:
@@ -45,19 +47,19 @@ export const App = () => {
     <>
       <Header />
       {counter === 0 && (
-        <section className="main1">
+        <section className="main">
           <Welcome setCounter={setCounter} />
         </section>)}
       {counter === 1 && (
-        <section className="main2">
-          <Input name={username} setName={setUserName} />
-          <button className="ok-btn" type="button" onClick={handleOKButton}>OK</button>
+        <section className="main">
+          <Age ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
+          {console.log('AGEGROUP:', ageGroup)}
+          <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>
         </section>)}
       {counter === 2 && (
-        <section className="main3">
-          <Select location={gender} setLocation={setGender} />
-          {console.log('GEnder:', gender)}
-          <button className="ok-btn" type="button" onClick={handleOKButton}>OK</button>
+        <section className="main">
+          {checkAge(ageGroup)};
+          <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>
         </section>)}
       <Footer />
     </>

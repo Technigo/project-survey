@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-export const Checkbox = () => {
+export const Habits = () => {
   const [wantsNewsletter, setWantsNewsletter] = useState(false);
 
   return (
-    <form>
+    <form onSubmit={(event) => event.preventDefault()}>
       <label>
         Newsletter?
         <input
