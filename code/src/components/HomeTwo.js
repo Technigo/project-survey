@@ -11,9 +11,9 @@ export const HomeTwo = ({ home, setHome }) => {
         onChange={handleHomeChange}
         Value={home}>
         <option value=" ">Select location</option>
-        <option value="City">City</option>
-        <option value="Village">Village</option>
-        <option value="Coyntryside">Countryside</option>
+        <option value="in a city">City</option>
+        <option value="in a village">Village</option>
+        <option value="on the countryside">Countryside</option>
       </select>
     </form>
   )
