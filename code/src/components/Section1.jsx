@@ -1,18 +1,15 @@
 import React, { useState } from 'react';
 
 const Section1 = (props) => {
-  const [data, setData] = useState({
-    gender: '',
-    status: 'xxx',
-  });
-
   return (
     <>
       <h2> Marital Status</h2>
       <form>
         <select
-          onChange={(event) => setData({ ...data, status: event.target.value })}
-          value={data.status}
+          onChange={event =>
+            props.setFormData({ ...props.formData, status: event.target.value })
+          }
+          value={props.formData.status}
         >
           <option value="">--Select--</option>
           <option value="family">Family</option>
@@ -24,10 +21,13 @@ const Section1 = (props) => {
           <input
             type="radio"
             value="female"
-            onChange={(event) =>
-              setData({ ...data, gender: event.target.value })
+            onChange={event =>
+              props.setFormData({
+                ...props.formData,
+                gender: event.target.value,
+              })
             }
-            checked={data.gender === 'female'}
+            checked={props.formData.gender === 'female'}
           />
           Female
         </label>
@@ -37,21 +37,21 @@ const Section1 = (props) => {
             type="radio"
             value="male"
             onChange={(event) =>
-              setData({ ...data, gender: event.target.value })
+              props.setFormData({
+                ...props.formData,
+                gender: event.target.value,
+              })
             }
-            checked={data.gender === 'male'}
+            checked={props.formData.gender === 'male'}
           />
           Male
         </label>
-
-        <button type="button" onClick={() => props.onNextStep()}>
-          continue
-        </button>
-
         <button type="button" onClick={() => props.onPrevStep()}>
           Previous
         </button>
-        <pre>{JSON.stringify(data)}</pre>
+        <button type="button" onClick={() => props.onNextStep()}>
+          continue
+        </button>
       </form>
     </>
   );

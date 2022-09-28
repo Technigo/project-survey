@@ -1,16 +1,19 @@
 import React , {useState} from "react";
-import Section1 from './Section1';
-import Section2 from './Section2';
-import Section3 from './Section3';
 
-const ShowSummary = () => {
 
-  return ( 
+const ShowSummary = (props) => {
+
+  return (
     <>
-  <h3>Summary:</h3>
-  <p></p>
+      <h3>Summary:</h3>
+     <hr />
+      <p>Gender: {props.formData.gender}</p>
+      <p>Status: {props.formData.status}</p>
+      <p>Reason: {props.formData.reason}</p>
+      <p>Quality: {props.formData.quality}</p>
+      <p>satisfaction: {props.formData.satisfaction}</p>
     </>
-   );
+  );
 }
  
 export default ShowSummary;
