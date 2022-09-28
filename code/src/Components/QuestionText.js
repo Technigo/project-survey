@@ -6,14 +6,14 @@ const QuestionText = (props) => {
   return (
     <section className="rec-container">
       <p className="rec-question">Do you have a book to recommend?</p>
-      <label>
+      <form className="text-input-form" onSubmit={(event) => event.preventDefault()}>
         <input
           className="text-input"
           type="text"
           placeholder="I want to recomend..."
           value={recommendation}
           onChange={(event) => setRecommendation(event.target.value)} />
-      </label>
+      </form>
     </section>
   )
 }

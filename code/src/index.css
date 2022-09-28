@@ -13,25 +13,11 @@ code {
 }
 
 header {
-  border: solid red;
-  position: relative;
-  background-image: url("https://images.unsplash.com/photo-1519682337058-a94d519337bc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-image: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
   background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: fixed;
+  background-attachment: sticky;
   background-position: center;
-  width: 100%;
+  width: auto;
   height: 500px;
-}
-
-.genre {
-  border: solid blue;
-}
-
-.numberOfBooks {
-  border: solid pink;
-}
-
-.rec-container {
-  border: solid yellow;
 }
