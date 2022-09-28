@@ -5,14 +5,15 @@
 import React from 'react';
 
 const radioButtonObject = [
-  'inspring',
-  'terrible',
-  'constipated',
-  'marvellous',
-  'irritable',
   'awesome',
+  'marvellous',
+  'dreadful',
+  'constipated',
+  'sexy',
+  'kind',
 ];
-const QuestionTwo = ({ mood, handleMoodChange, handleStepIncrease }) => {
+
+const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
   return (
     <>
       {/* Progressbar */}
@@ -25,7 +26,7 @@ const QuestionTwo = ({ mood, handleMoodChange, handleStepIncrease }) => {
       <section className="question-container">
         {/* Radio Buttons */}
         <h2>Whats your current mood?</h2>
-        <form className="radio-button-container">
+        <form className="radio-button-container" onSubmit={handleSubmit}>
           {radioButtonObject.map((radioButtonInput) => (
             <label key={radioButtonInput}>
               <input
@@ -37,14 +38,10 @@ const QuestionTwo = ({ mood, handleMoodChange, handleStepIncrease }) => {
               {radioButtonInput}
             </label>
           ))}
+          <input type="submit" className="continue-btn" value="Next" />
         </form>
+
         {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );

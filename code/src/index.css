@@ -74,6 +74,21 @@ code {
 
 /********* Form ********/
 
+.form-style {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+form label {
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+}
+form input,
+form select {
+  height: 30px;
+  margin-bottom: 5px;
+}
 /********* Buttons ********/
 .start-btn,
 .continue-btn,

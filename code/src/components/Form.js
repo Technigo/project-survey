@@ -28,7 +28,11 @@ const Form = () => {
   const [creature, setCreature] = useState('');
   const [food, setFood] = useState('');
 
-  const handleStepIncrease = () => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (!event.target.value && step !== 1) {
+      alert('välj nåt');
+    }
     setStep(step + 1);
   };
   const handleNameChange = (event) => {
@@ -58,59 +62,59 @@ const Form = () => {
 
   return (
     <div>
-      {step === 1 && <Intro handleStepIncrease={handleStepIncrease} />}
+      {step === 1 && <Intro handleSubmit={handleSubmit} />}
       {step === 2 && (
         <QuestionOne
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           name={name}
           handleNameChange={handleNameChange}
         />
       )}
       {step === 3 && (
         <QuestionTwo
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           mood={mood}
           handleMoodChange={handleMoodChange}
         />
       )}
       {step === 4 && (
         <QuestionThree
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           adjective={adjective}
           handleAdjectiveChange={handleAdjectiveChange}
         />
       )}
       {step === 5 && (
         <QuestionFour
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           animal={animal}
           handleAnimalChange={handleAnimalChange}
         />
       )}
       {step === 6 && (
         <QuestionFive
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           exclamation={exclamation}
           handleExclamationChange={handleExclamationChange}
         />
       )}
       {step === 7 && (
         <QuestionSix
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           adjectiveSecond={adjectiveSecond}
           handleAdjectiveSecondChange={handleAdjectiveSecondChange}
         />
       )}
       {step === 8 && (
         <QuestionSeven
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           creature={creature}
           handleCreatureChange={handleCreatureChange}
         />
       )}
       {step === 9 && (
         <QuestionEight
-          handleStepIncrease={handleStepIncrease}
+          handleSubmit={handleSubmit}
           food={food}
           handleFoodChange={handleFoodChange}
         />

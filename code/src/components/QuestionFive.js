@@ -5,7 +5,7 @@
 import React from 'react';
 
 const QuestionFive = ({
-  handleStepIncrease,
+  handleSubmit,
   exclamation,
   handleExclamationChange,
 }) => {
@@ -24,22 +24,16 @@ const QuestionFive = ({
           <h1 className="question">
             What do you shout when something goes really wrong?
           </h1>
-          <form className="form-style">
+          <form className="form-style" onSubmit={handleSubmit}>
             <label>Shout:</label>
             <input
               type="text"
               value={exclamation}
               onChange={handleExclamationChange}
             />
+            <input type="submit" className="continue-btn" value="Next" />
           </form>
         </div>
-        {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );

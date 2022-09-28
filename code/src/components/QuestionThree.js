@@ -4,11 +4,7 @@
 /* eslint-disable indent */
 import React from 'react';
 
-const QuestionThree = ({
-  handleStepIncrease,
-  adjective,
-  handleAdjectiveChange,
-}) => {
+const QuestionThree = ({ handleSubmit, adjective, handleAdjectiveChange }) => {
   return (
     <>
       {/* Progressbar */}
@@ -21,7 +17,7 @@ const QuestionThree = ({
       <section className="question-container">
         {/* Form */}
         <h1>What adjective would you use to describe an antique statue?</h1>
-        <form className="select-style">
+        <form className="select-style" onSubmit={handleSubmit}>
           <select
             className="select-form"
             onChange={handleAdjectiveChange}
@@ -33,22 +29,17 @@ const QuestionThree = ({
             <option value="smooth">smooth</option>
           </select>
           {/* Alternative selection */}
-          <form className="form-style">
-            <label>Adjective:</label>
+          <label htmlFor="alt-selection">
+            Other:
             <input
+              id="alt-selection"
               type="text"
               value={adjective}
               onChange={handleAdjectiveChange}
             />
-          </form>
+          </label>
+          <input type="submit" className="continue-btn" value="Next" />
         </form>
-        {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );

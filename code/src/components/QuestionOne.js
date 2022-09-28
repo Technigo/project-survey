@@ -8,7 +8,10 @@
 /* eslint-disable indent */
 import React from 'react';
 
-const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
+const QuestionOne = ({ handleSubmit, name, handleNameChange }) => {
+  // const handleSubmit = (event) => {
+  //   event.preventDefault();
+  // };
   return (
     <>
       <div className="progress-bar-container">
@@ -22,19 +25,12 @@ const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
       <section className="question-container">
         <div className="form-container">
           <h1 className="question">What is your avatar name?</h1>
-          <form className="form-style">
-            <label>Write:</label>
+          <form className="form-style" onSubmit={handleSubmit}>
+            <label>Avatar name</label>
             <input type="text" value={name} onChange={handleNameChange} />
+            <input type="submit" className="continue-btn" value="Next" />
           </form>
         </div>
-
-        {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );

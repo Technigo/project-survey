@@ -2,7 +2,7 @@
 /* eslint-disable indent */
 import React from 'react';
 
-const QuestionFour = ({ handleStepIncrease, animal, handleAnimalChange }) => {
+const QuestionFour = ({ handleSubmit, animal, handleAnimalChange }) => {
   return (
     <>
       {/* Progressbar */}
@@ -15,7 +15,7 @@ const QuestionFour = ({ handleStepIncrease, animal, handleAnimalChange }) => {
       <section className="question-container">
         {/* Form */}
         <h1>Pick an animal?</h1>
-        <form className="select-style">
+        <form className="select-style" onSubmit={handleSubmit}>
           <select
             className="select-form"
             onChange={handleAnimalChange}
@@ -26,14 +26,8 @@ const QuestionFour = ({ handleStepIncrease, animal, handleAnimalChange }) => {
             <option value="blobfish">blobfish</option>
             <option value="sloth">sloth</option>
           </select>
+          <input type="submit" className="continue-btn" value="Next" />
         </form>
-        {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );

@@ -12,7 +12,7 @@ const foodObject = [
   'baked potatoe',
 ];
 
-const QuestionEight = ({ handleStepIncrease, food, handleFoodChange }) => {
+const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {
   return (
     <>
       {/* Progressbar */}
@@ -25,7 +25,7 @@ const QuestionEight = ({ handleStepIncrease, food, handleFoodChange }) => {
       <section className="question-container">
         {/* Favorite food */}
         <h2>Whats for dinner?</h2>
-        <form className="radio-button-container">
+        <form className="radio-button-container" onSubmit={handleSubmit}>
           {foodObject.map((radioButtonInput) => (
             <label key={radioButtonInput}>
               <input
@@ -38,18 +38,13 @@ const QuestionEight = ({ handleStepIncrease, food, handleFoodChange }) => {
             </label>
           ))}{' '}
           {/* Alternative selection */}
-          <form className="form-style">
-            <label>Other:</label>
-            <input type="text" value={food} onChange={handleFoodChange} />
-          </form>
+          <label htmlFor="food-input">
+            Other
+            <input id="food-input" type="text" onChange={handleFoodChange} />
+          </label>
+          <input type="submit" className="continue-btn" value="Next" />
         </form>
         {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );

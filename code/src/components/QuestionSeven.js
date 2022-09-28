@@ -11,11 +11,7 @@ const mythicalCreatures = [
   'Goblin',
   'Fairy Godmother',
 ];
-const QuestionSeven = ({
-  handleStepIncrease,
-  creature,
-  handleCreatureChange,
-}) => {
+const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
   return (
     <>
       {/* Progressbar */}
@@ -29,35 +25,29 @@ const QuestionSeven = ({
         {/* Mytical creature */}
         {/* Radio Buttons */}
         <h2>Which mythical creature would you like to believe is real?</h2>
-        <form className="radio-button-container">
-          {mythicalCreatures.map((radioButtonInput) => (
-            <label key={radioButtonInput}>
+        <form className="radio-button-container" onSubmit={handleSubmit}>
+          {mythicalCreatures.map((mythicalCreature) => (
+            <label key={mythicalCreature}>
               <input
                 type="radio"
-                value={radioButtonInput}
+                value={mythicalCreature}
                 onChange={handleCreatureChange}
-                checked={radioButtonInput === creature}
+                checked={mythicalCreature === creature}
               />
-              {radioButtonInput}
+              {mythicalCreature}
             </label>
           ))}
           {/* Alternative selection */}
-          <form className="form-style">
-            <label>Other:</label>
+          <label htmlFor="creature-input">
+            Other
             <input
+              id="creature-input"
               type="text"
-              value={creature}
               onChange={handleCreatureChange}
             />
-          </form>
+          </label>{' '}
+          <input type="submit" className="continue-btn" value="Next" />
         </form>
-        {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );

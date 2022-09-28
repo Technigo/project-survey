@@ -5,7 +5,7 @@
 import React from 'react';
 
 const QuestionSix = ({
-  handleStepIncrease,
+  handleSubmit,
   adjectiveSecond,
   handleAdjectiveSecondChange,
 }) => {
@@ -22,7 +22,7 @@ const QuestionSix = ({
         {/* Adjective 2 input */}
         <div className="form-container">
           <h1>What does obfuscatory mean?</h1>
-          <form className="select-style">
+          <form className="select-style" onSubmit={handleSubmit}>
             <select
               className="select-form"
               onChange={handleAdjectiveSecondChange}
@@ -37,15 +37,10 @@ const QuestionSix = ({
               <option value="obvious">obvious</option>
               <option value="gloomy">gloomy</option>
             </select>
+            <input type="submit" className="continue-btn" value="Next" />
           </form>
         </div>
         {/* Continue button */}
-        <button
-          className="continue-btn"
-          type="button"
-          onClick={handleStepIncrease}>
-          Next
-        </button>
       </section>
     </>
   );
