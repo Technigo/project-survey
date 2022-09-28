@@ -15,12 +15,13 @@ import Summary from './Summary';
 const Form = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
-  const [radioButton, setRadioButton] = useState('');
+  const [mood, setMood] = useState('');
   const [adjective, setAdjective] = useState('');
   const [animal, setAnimal] = useState('');
   const [exclamation, setExclamation] = useState('');
   const [adjectiveSecond, setAdjectiveSecond] = useState('');
   const [creature, setCreature] = useState('');
+  const [food, setFood] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -28,11 +29,9 @@ const Form = () => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   };
-
-  const handleRadioButtonChange = (event) => {
-    setRadioButton(event.target.value);
+  const handleMoodChange = (event) => {
+    setMood(event.target.value);
   };
-
   const handleAdjectiveChange = (event) => {
     setAdjective(event.target.value);
   };
@@ -48,6 +47,9 @@ const Form = () => {
   const handleCreatureChange = (event) => {
     setCreature(event.target.value);
   };
+  const handleFoodChange = (event) => {
+    setFood(event.target.value);
+  };
 
   return (
     <div>
@@ -57,8 +59,8 @@ const Form = () => {
           handleStepIncrease={handleStepIncrease}
           name={name}
           handleNameChange={handleNameChange}
-          radioButton={radioButton}
-          handleRadioButtonChange={handleRadioButtonChange}
+          mood={mood}
+          handleMoodChange={handleMoodChange}
         />
       )}
       {step === 3 && (
@@ -74,18 +76,21 @@ const Form = () => {
           handleAdjectiveSecondChange={handleAdjectiveSecondChange}
           creature={creature}
           handleCreatureChange={handleCreatureChange}
+          food={food}
+          handleFoodChange={handleFoodChange}
         />
       )}
       {step === 4 && <QuestionThree handleStepIncrease={handleStepIncrease} />}
       {step === 5 && (
         <Summary
           name={name}
-          radioButton={radioButton}
+          mood={mood}
           adjective={adjective}
           animal={animal}
           exclamation={exclamation}
           adjectiveSecond={adjectiveSecond}
           creature={creature}
+          food={food}
         />
       )}
     </div>

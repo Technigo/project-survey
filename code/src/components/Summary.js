@@ -8,12 +8,13 @@ const refreshPage = () => {
 };
 const Summary = ({
   name,
-  radioButton,
+  mood,
   adjective,
   animal,
   exclamation,
   adjectiveSecond,
   creature,
+  food,
 }) => (
   <>
     <section className="summary-container">
@@ -23,20 +24,21 @@ const Summary = ({
         <div className="story-container-final">
           <p>
             <span className="red">{name}</span> was a{' '}
-            <span className="red">{radioButton}</span> Dragon, who drove around
-            town in a <span className="red">{adjective} </span>wagon.
+            <span className="red">{mood}</span> Dragon, who drove around town in
+            a <span className="red">{adjective} </span>wagon.
           </p>
           <p>
-            The Dragon was lonely, and said, this is baloney, if I could find a
-            friend, if only.
+            <span className="red">{name}</span> was lonely, and said, this is
+            baloney, if I could find a friend, if only.
           </p>
           <p>
             So the dragon set out to find a companion. A pet, he squealed, I’ll
             name it Brandon.{' '}
           </p>
           <p>
-            But the Dragon did not know what makes a good pet, he settled for a{' '}
-            <span className="red">{animal}</span>, that’s what I’ll get.{' '}
+            But <span className="red">{name}</span> did not know what makes a
+            good pet, he settled for a <span className="red">{animal}</span>,
+            that’s what I’ll get.{' '}
           </p>
           <p>
             To the dragon’s dismay, this <span className="red">{animal}</span>{' '}
@@ -58,16 +60,16 @@ const Summary = ({
             looking for a house. Pick me instead.{' '}
           </p>
           <p>
-            I don’t want hay and I’m pretty tidy, and I’ll make name a
-            foodstuffs__________ every Friday.
+            I don’t want hay and I’m pretty tidy, and I’ll make{' '}
+            <span className="red">{food}</span> every Friday.
           </p>
           <p>
             That day it was decided, the <span className="red">{creature}</span>{' '}
-            moved in, the Dragon was so excited.
+            moved in, <span className="red">{name}</span> was so excited.
           </p>
           <p>For now he had a friend, and on the weekend,</p>
           <p>
-            they would toast marshmallows/apples/bubble-gum pie (yum) on the
+            they would toast <span className="red">{food}</span> (yum) on the
             fire that the Dragons sneezes provided.{' '}
           </p>
           <p>The End.</p>

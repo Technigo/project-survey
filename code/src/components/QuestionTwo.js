@@ -16,6 +16,8 @@ const QuestionTwo = ({
   handleAdjectiveSecondChange,
   creature,
   handleCreatureChange,
+  food,
+  handleFoodChange,
 }) => {
   return (
     <>
@@ -87,6 +89,14 @@ const QuestionTwo = ({
               value={creature}
               onChange={handleCreatureChange}
             />
+          </form>
+        </div>
+        {/* Favorite food */}
+        <div className="form-container">
+          <h1 className="question">Name a food that doesnt have onion?</h1>
+          <form className="form-style">
+            <label>Food:</label>
+            <input type="text" value={food} onChange={handleFoodChange} />
           </form>
         </div>
         {/* Continue button */}

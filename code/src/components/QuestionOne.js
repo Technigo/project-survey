@@ -21,8 +21,8 @@ const QuestionOne = ({
   handleStepIncrease,
   name,
   handleNameChange,
-  radioButton,
-  handleRadioButtonChange,
+  mood,
+  handleMoodChange,
 }) => {
   return (
     <>
@@ -50,8 +50,8 @@ const QuestionOne = ({
               <input
                 type="radio"
                 value={radioButtonInput}
-                onChange={handleRadioButtonChange}
-                checked={radioButtonInput === radioButton}
+                onChange={handleMoodChange}
+                checked={radioButtonInput === mood}
               />
               {radioButtonInput}
             </label>
