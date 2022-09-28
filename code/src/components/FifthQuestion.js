@@ -9,10 +9,10 @@ const FifthQuestion = ({
   const flossGroup = ['yes', 'no', 'sometimes']
 
   return (
-    <form>
+    <form className="question-wrap">
       <div className="question">
         <p className="question-title">Do you use something in-between your teeth regularly?</p>
-        <p>(think floss, interdental brush, waterpick etc)</p>
+        <p className="question-specify">(think floss, interdental brush, waterpick etc)</p>
       </div>
       {flossGroup.map((floss) => (
         <label className="radio-label" htmlFor="frequency-id" key={floss}>

@@ -7,9 +7,9 @@ const FirstQuestion = ({
   onNextQuestionChange
 }) => {
   return (
-    <form className="question">
+    <form className="question-wrap">
       <p className="question-title">What´s your full name?</p>
-      <label className="question" htmlFor="nameInput">
+      <label className="name-question" htmlFor="nameInput">
         <input
           className="name-input"
           type="text"

@@ -7,10 +7,10 @@ const SeventhQuestion = ({
   onNextQuestionChange
 }) => {
   return (
-    <form>
+    <form className="question-wrap">
       <div className="question">
         <p className="question-title">Any special requests?</p>
-        <p>* optional, but good for us to know </p>
+        <p className="question-specify">* optional, but good for us to know </p>
       </div>
       <textarea
         id="message"

@@ -7,10 +7,10 @@ const SixthQuestion = ({
   onNextQuestionChange
 }) => {
   return (
-    <form>
+    <form className="question-wrap">
       <div className="question">
         <p className="question-title">What do you want to focus most on today</p>
-        <p>choose one main goal for today</p>
+        <p className="question-specify">choose one main goal for today</p>
       </div>
       <select
         className="select-input"

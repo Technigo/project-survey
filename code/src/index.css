@@ -11,3 +11,145 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+/*----------CONTAINER WRAPS----------------*/
+.first-page{
+  margin: 0 auto; 
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(32, 37, 129);
+  display: grid;
+  border-radius: 20px;
+  margin-top: 20%;
+  width: 400px;
+  height: auto;
+}
+
+.question-wrap {
+  border: 2px solid rgb(109, 240, 9);
+  width: 300px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20%;
+  border-radius: 20px;
+}
+
+.summary{
+  border: 2px solid rgb(109, 240, 9);
+  width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  margin-top: 20%;
+  border-radius: 20px;
+}
+
+/*----------BUTTONS-------------*/
+.button-container{
+  border: 2px solid rgb(255, 128, 0);
+  display:flex;
+  padding: 20px 50px 20px 50px;
+}
+
+.back, .forward{
+  margin: 0 auto;
+  border-radius: 8px;
+  border: none;
+  background:rgb(255, 128, 0)
+}
+
+.back:hover, .forward:hover{
+  background:rgb(20, 35, 175)
+}
+
+.start-btn{
+  width: 90px;
+  margin:0 auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: aqua;
+  border: none;
+}
+
+
+/*-------TEXT---------*/
+.welcome-text{
+  border: 2px solid red;
+  text-align: center;
+  font-size: 38px;
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+
+.welcome-text-under{
+  border: 2px solid red;
+  text-align: center;
+  font-size: 38px;
+  width:  380px;
+  margin: 0 auto;
+}
+.welcome-paragraph{
+  text-align: center;
+  padding: 10px;
+}
+
+.question-title{
+  font-size: 22px;
+  text-align: center;
+  padding-top: 20px;
+}
+.question-specify{
+  text-align: center; 
+  font-size: 16px;
+}
+/*--- NAME FIELD //FIRST QUESTION SPECIFICS--*/
+.name-question{
+  margin: 0 auto;
+  display: flex;
+  margin: 30px 0 20px 0;
+}
+
+.name-input{
+  border: none;
+  border-bottom: 3px pink solid;
+  width: 280px;
+  height: 30px;
+  margin: 0 auto;
+}
+
+input[type=text]{     /*INPUT TEXT COLOR*/
+  color: red;
+  font-size: 20px;
+}
+/*This removes the blue highlight around default when focus. */
+input.name-input:focus, select:focus{  
+  outline-width: 0;
+}
+
+/*----DROPDOWN MENU // SECOND QUESTION SPECIFICS----*/
+select {
+  color: white;
+  background: rgb(216, 185, 185);
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.select-input{
+  border:none;
+  display: flex;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 40px;
+  border-radius: 3px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+/*--RADIO BUTTONS // THIRD QUESTION ---*/
+.radio-label{
+  border: rgb(18, 186, 15) 2px solid;
+  padding: 2px;
+  accent-color:rgb(255, 0, 0);
+}
+
+

@@ -17,10 +17,10 @@ const FourthQuestion = ({
   onNextQuestionChange
 }) => {
   return (
-    <form>
+    <form className="question-wrap">
       <div className="question">
         <p className="question-title">Do you have any issues?</p>
-        <p>Check the boxes that apply</p>
+        <p className="question-specify">Check the boxes that apply</p>
       </div>
 
       {checkboxGroupArray.map((box) => (

@@ -9,10 +9,10 @@ const ThirdQuestion = ({
   const frequencyGroup = ['<1/day ', '1/day ', '2/day', '>2/day']
 
   return (
-    <form>
+    <form className="question-wrap">
       <div className="question">
         <p className="question-title">How often do you brush?</p>
-        <p>(go on, you can be honest)</p>
+        <p className="question-specify">(go on, you can be honest)</p>
       </div>
       {frequencyGroup.map((group) => (
         <label className="radio-label" htmlFor="frequency-id" key={group}>
