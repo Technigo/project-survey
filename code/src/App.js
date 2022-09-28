@@ -5,9 +5,9 @@ import UserMail from 'components/UserMail';
 
 export const App = () => {
   const [counter, setCounter] = useState(1);
-  const [Name, setName] = useState('');
-  const [Lastname, setLastname] = useState('');
-  const [Mail, setMail] = useState('');
+  const [name, setName] = useState('');
+  const [lastname, setLastname] = useState('');
+  const [mail, setMail] = useState('');
 
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 7) {
@@ -45,45 +45,45 @@ export const App = () => {
 
         {counter === 1 && (
           <div>
-            <UserName name={Name} setName={setName} />
+            <UserName username={name} setUsername={setName} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
 
         {counter === 2 && (
           <div>
-            <UserLastname lastname={Lastname} setLastname={setLastname} />
+            <UserLastname userlastname={lastname} setUserlastname={setLastname} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
 
         {counter === 3 && (
           <div>
-            <UserMail mail={Mail} setMail={setMail} />
+            <UserMail usermail={mail} setUsermail={setMail} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
 
-        {counter === 4 && (
+        {/*  {counter === 4 && (
           <div>
-            <Lastname lastname={Lastname} setLastname={setLastname} />
+            <UserLastname lastname={lastname} setLastname={setLastname} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
 
         {counter === 5 && (
           <div>
-            <Lastname lastname={Lastname} setLastname={setLastname} />
+            <UserLastname lastname={lastname} setLastname={setLastname} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
 
         {counter === 6 && (
           <div>
-            <Lastname lastname={Lastname} setLastname={setLastname} />
+            <UserLastname lastname={lastname} setLastname={setLastname} />
             <p>Questions answered: {counter}/7 </p>
           </div>
-        )}
+        )} */}
 
         <p>
           <button type="button" onClick={handleClearButtonClick}>
@@ -94,9 +94,9 @@ export const App = () => {
           <div>
             <p>Survey completed!</p>
             <p>Summary of you answers:</p>
-            <p>Name: {Name} </p>
-            <p>Lastname: {Lastname} </p>
-            <p>E-mail: {Mail} </p>
+            <p>Name: {name} </p>
+            <p>Lastname: {lastname} </p>
+            <p>E-mail: {mail} </p>
             <p>Questions answered: {counter}/7 </p>
             <button type="submit" onSubmit value="Send">Send</button>
           </div>

@@ -1,13 +1,13 @@
 import React from 'react';
 
-const UserMail = ({ mail, setMail }) => {
+const UserMail = ({ usermail, setUsermail }) => {
   const handleMailInputChange = (event) => {
-    setMail(event.target.value);
+    setUsermail(event.target.value);
   };
   return (
     <div>
       <p>What is your email address?</p>
-      <input value={mail} type="text" onChange={handleMailInputChange} />
+      <input value={usermail} type="text" onChange={handleMailInputChange} />
     </div>
   )
 }
