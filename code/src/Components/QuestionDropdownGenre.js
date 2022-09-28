@@ -10,9 +10,9 @@ const QuestionDropdownGenre = (props) => {
         className="dropdown"
         onChange={(event) => setGenre(event.target.value)}
         value={genre}>
-        <option value="">Select genre:</option>
+        <option value="">Select:</option>
         <option value="romance">Romance</option>
-        <option value="comic">Comic</option>
+        <option value="comics">Comics</option>
         <option value="crime">Crime</option>
         <option value="fantacy">Fantacy</option>
         <option value="sciFy">Science fiction</option>

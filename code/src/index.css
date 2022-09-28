@@ -7,7 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5EFE6;
   color: #967E76;
-  position: absolute;
 }
 
 code {
@@ -17,19 +16,13 @@ code {
 
 header {
   background-image: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
-  background-repeat: no-repeat;
   background-size: cover;
-  background-attachment: sticky;
-  background-position: center;
-  width: auto;
-  height: 350px;
+  height: 300px;
 }
 
 .header-headline {
   color: white;
-  display: flex;
-  text-align: justify;
-  position: relative;
+  text-align: center;
 }
 
 .survey-container {
@@ -38,26 +31,166 @@ header {
   text-align: center;
 }
 
+/* RADIO BUTTON QUESTION */
 .radio-container{
   text-align: center;
 }
 
 .radio-intro {
   font-size: 18px;
+  margin: 10px 30px 0px 30px;
 }
 
 .radio-question {
   margin-top: 30px;
 }
 
+.radioBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.radio-input-listen, .radio-input-read {
+  accent-color: #967E76;
+}
+
+.radio-input-read {
+  margin-right: 20px;
+}
+
+.radio-input-listen {
+  margin-left: 20px;
+}
+
+.radio-read, .radio-listen {
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+
+.radio-read {
+  margin-right: 20px;
+}
+
+.radio-listen {
+  margin-left: 20px;
+}
+
+/* DROPDOWN QUESTIONS */
+.genre, .numberOfBooks {
+  margin-top: 10px;
+  margin: 10px 30px 0px 30px;
+}
+
+.dropdown {
+  width: 155px;
+  padding: 1%;
+}
+
+/* RECCOMENDATION TEXT FIELD */
+.rec-question{
+  margin-top: 25px;
+}
+
+.text-input {
+  width: 150px;
+  border: solid #967E76;
+  padding: 1%;
+}
+
+/* SUBMIT BUTTON */
+.submitBtn-container {
+  margin: 20px 20px 20px 20px;
+}
 
 .submitBtn {
   background-color: #967E76;
   padding: 8px 16px 8px 16px;
   color: white;
   border: none;
+  margin-top: 25px;
 }
 
-.submitBtn-container {
-  margin: 20px 20px 20px 20px;
+/* FORM SUMMARY */
+.form-summary {
+  text-align: center;
+}
+
+.summary-survey {
+  margin: 25px 30px 25px 30px;
+}
+
+/* REFRESH BUTTON */
+.refresh-button {
+  background-color: #967E76;
+  padding: 8px 16px 8px 16px;
+  color: white;
+  border: none;
+}
+
+/* IPAD AND BIGGER SCREEN */
+@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+  header {
+    height: 400px;
+  }
+
+  .radio-intro {
+    font-size: 28px;
+  }
+
+  .radio-question, .radio-input, .genre, .numberOfBooks, .rec-question, .submitBtn, .form-summary {
+    font-size: 20px;
+  }
+
+  .dropdown {
+    width: 250px;
+    padding: 5px;
+    border: solid #967E76;
+    color: #967E76;
+  }
+
+  .text-input {
+    width: 225px;
+    padding: 10px;
+    color: #967E76;
+  }
+
+  .refresh-button {
+    font-size: 18px;
+  }
+}
+
+/* COMPUTER SCREEN AND BIGGER */
+@media (min-width: 1025px) {
+  header {
+    height: 500px;
+  }
+  .radio-intro {
+    font-size: 28px;
+    
+  }
+  .radio-question, .radio-input, .genre, .numberOfBooks, .rec-question, .submitBtn, .form-summary {
+    font-size: 24px;
+  }
+
+  .radio-read, .radio-listen {
+    font-size: 24px;
+    margin-bottom: 5px;
+  }
+
+  .dropdown {
+    width: 250px;
+    padding: 5px;
+    border: solid #967E76;
+    color: #967E76;
+  }
+
+  .text-input {
+    width: 225px;
+    padding: 10px;
+  }
+
+  .refresh-button {
+    font-size: 20px;
+  }
 }

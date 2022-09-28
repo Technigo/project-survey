@@ -11,9 +11,9 @@ const QuestionDropdownNumber = (props) => {
         onChange={(event) => setNumber(event.target.value)}
         value={number}>
         <option value="">Select:</option>
-        <option value="up to 5">0-5</option>
-        <option value="5 to 10">6-10</option>
-        <option value="10andMore">10 and more</option>
+        <option value="0-5">0-5</option>
+        <option value="6-10">6-10</option>
+        <option value="more than 10">10 and more</option>
       </select>
     </form>
   );

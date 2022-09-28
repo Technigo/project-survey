@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React from 'react';
 
 const QuestionText = (props) => {
@@ -5,7 +6,7 @@ const QuestionText = (props) => {
 
   return (
     <section className="rec-container">
-      <p className="rec-question">Do you have a book to recommend?</p>
+      <p className="rec-question">Please recomend a book!</p>
       <form className="text-input-form">
         <input
           className="text-input"
