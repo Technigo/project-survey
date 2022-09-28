@@ -19,6 +19,7 @@ export const App = () => {
     event.preventDefault()
     setShowSummary(true)
     setShowForm(false)
+    console.log('hej')
   })
 
   const surveyAnswered = () => {
@@ -42,7 +43,7 @@ export const App = () => {
       <Header />
       <div>
         {showForm &&
-          <section className="survey-container" onSubmit={handleSubmit}>
+          <form className="survey-container" onSubmit={handleSubmit}>
             <QuestionRadio radio={radio} setRadio={setRadio} />
             <QuestionDropdownGenre genre={genre} setGenre={setGenre} />
             <QuestionDropdownNumber number={number} setNumber={setNumber} />
@@ -50,7 +51,7 @@ export const App = () => {
             <div className="submitBtn-container">
               <button className="submitBtn" disabled={surveyAnswered()} type="submit">Submit</button>
             </div>
-          </section>
+          </form>
         }
 
         {showSummary &&

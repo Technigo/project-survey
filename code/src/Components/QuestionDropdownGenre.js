@@ -7,6 +7,7 @@ const QuestionDropdownGenre = (props) => {
     <form className="genre">
       <p> What genre do you prefer?</p>
       <select
+        className="dropdown"
         onChange={(event) => setGenre(event.target.value)}
         value={genre}>
         <option value="">Select genre:</option>
