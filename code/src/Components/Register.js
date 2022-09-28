@@ -21,9 +21,12 @@ const Register = () => {
                 value={ email }
                 onChange={(e)=>setEmail(e.target.value)}/>
 
-                <p>{email}</p>
+                {/* radio btn to choose oud-zuid or oud-west */}
+                <label htmlFor=""></label>
 
             </form>
+            <button>Previous Step</button>
+            <button>Continue</button>
         </div>
      );
 }
