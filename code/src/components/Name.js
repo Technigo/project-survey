@@ -5,9 +5,11 @@ export const Name = ({ name, setName }) => {
     setName(event.target.value);
   }
   return (
-    <>
-      <p>What is your name?</p>
-      <input type="text" value={name} onChange={handleNameChange} />
-    </>
+    <main>
+      <form>
+        <p>What is your name?</p>
+        <input type="text" id="name" value={name} onChange={handleNameChange} />
+      </form>
+    </main>
   );
 }

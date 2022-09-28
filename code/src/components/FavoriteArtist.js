@@ -5,9 +5,9 @@ export const FavoriteArtist = ({ favoriteArtist, setFavoriteArtist }) => {
     setFavoriteArtist(event.target.value)
   }
   return (
-    <>
+    <form>
       <p>Which artist do you want to see in your next artist?</p>
       <input type="text" value={favoriteArtist} onChange={handleFavoriteArtist} />
-    </>
+    </form>
   );
 }
