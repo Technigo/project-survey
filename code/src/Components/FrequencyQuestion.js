@@ -27,7 +27,7 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
         value={frequency}
         min="0"
         max="50"/>
-        {frequency}
+        <span class="bold-p">{frequency}</span>
       </form>
       
     );

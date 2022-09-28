@@ -4,12 +4,9 @@ const ageGroups = [
   '15-20',
   '20-29',
   '30-39',
-  '40-49',
-  '50-59',
-  '60-69',
-  '70-79',
-  '80-89',
-  '90+']
+  '40-59',
+  '60-79',
+  '80+']
 console.log(ageGroups)
 
 const AgeQuestion = ({age, setAge}) => {
@@ -26,10 +23,12 @@ const AgeQuestion = ({age, setAge}) => {
                 <label key ={group}>
                   <input
                     type="radio"
+                    className="radio-button"
                     value={group}
                     onChange={handleAgeChange}
                     checked={age === group}
                     />
+                    <span class="checkmark"></span>
                     {group}
                   </label>
               ))}

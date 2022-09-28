@@ -14,8 +14,9 @@ const MemoryQuestion = ({memory, setMemory}) => {
           <p>We are interested in hearing if you have a special memory from a visit at 
             one of Stockholm's museums that you wish to share. Perhaps you remember a certain 
             exhibit fondly, or have a mildly traumatic experience related to a boring visit? Please share!</p>
-            <input
+            <textarea
             type ="text"
+            className="memory-input"
             placeholder="A memorable visit..."
             onChange={handleMemoryChange}
             value={memory}
