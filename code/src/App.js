@@ -3,7 +3,7 @@ import UserName from 'components/UserName';
 import UserLastname from 'components/UserLastname';
 import UserMail from 'components/UserMail';
 import UserLocation from 'components/UserLocation';
-/* import UserAge from 'components/UserAge'; */
+import UserAge from 'components/UserAge';
 
 export const App = () => {
   const [counter, setCounter] = useState(1);
@@ -11,7 +11,7 @@ export const App = () => {
   const [lastname, setLastname] = useState('');
   const [mail, setMail] = useState('');
   const [location, setLocation] = useState('');
-  /* const [age, setAge] = useState(); */
+  const [age, setAge] = useState();
 
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 7) {
@@ -26,7 +26,7 @@ export const App = () => {
     setLastname('');
     setMail('');
     setLocation('');
-    /*    setAge(''); */
+    setAge('');
   };
 
   return (
@@ -39,12 +39,12 @@ export const App = () => {
         </div>
 
         <div className="questionsCounter">
-      Question number {counter}
+        Question number {counter}
           <div className="questionsButtons">
-            <button type="button" onClick={() => handleCounterButtonClick(false)}>
+            <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
         Previous question
             </button>
-            <button type="button" onClick={() => handleCounterButtonClick(true)}>
+            <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
         Next question
             </button>
           </div>
@@ -78,12 +78,12 @@ export const App = () => {
           </div>
         )}
 
-        {/*         {counter === 5 && (
+        {counter === 5 && (
           <div>
             <UserAge userage={age} setUserage={setAge} />
             <p>Questions answered: {counter}/7 </p>
           </div>
-        )} */}
+        )}
 
         {/*  {counter === 6 && (
           <div>
@@ -105,9 +105,9 @@ export const App = () => {
             <p>Lastname: {lastname} </p>
             <p>E-mail: {mail} </p>
             <p>Physical shop location: {location} </p>
-            {/* <p>Age group: {age} </p> */}
+            <p>Age group: {age} </p>
             <p>Questions answered: {counter}/7 </p>
-            <button type="submit" onSubmit value="Send">Send</button>
+            <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
           </div>
         )}
 
