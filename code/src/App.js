@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { WelcomeMessage } from 'components/WelcomeMessage';
 import { DestinationQuestion } from './components/DestinationQuestion'
 import { Pax } from './components/Pax'
+import { Confirmation } from './components/Confirmation'
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -19,16 +20,22 @@ export const App = () => {
   return (
     <>
       {step === 1 && (
-        <WelcomeMessage name={name} setName={setName} />
+        <WelcomeMessage name={name} setName={setName} phone={phone} setPhone={setPhone} />
       )}
       {step === 2 && (
         <DestinationQuestion dest={dest} setDest={setDest} />
       )}
       {step === 3 && (
-        <DestinationQuestion dest={dest} setDest={setDest} />
+        <Pax pax={pax} setPax={setPax} />
       )}
       {step >= 4 && (
-        <Pax pax={pax} setPax={setPax} />
+        <Confirmation
+          name={name}
+          phone={phone}
+          dest={dest}
+          pax={pax}
+          paxChild={paxChild}
+          age={age} />
       )}
 
       {step < 5 && (
