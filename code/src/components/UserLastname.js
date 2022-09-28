@@ -12,4 +12,4 @@ const UserLastname = ({ userlastname, setUserlastname }) => {
   )
 }
 
-export default UserLastname
+export default UserLastname;

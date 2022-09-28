@@ -12,4 +12,4 @@ const UserMail = ({ usermail, setUsermail }) => {
   )
 }
 
-export default UserMail
+export default UserMail;

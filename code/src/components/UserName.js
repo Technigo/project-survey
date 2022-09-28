@@ -14,4 +14,4 @@ const UserName = ({ username, setUsername }) => {
   )
 }
 
-export default UserName
+export default UserName;
