@@ -4,6 +4,7 @@ import WelcomeToTheSurvey from './WelcomeToTheSurvey';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
 import ThridQuestion from './ThridQuestion';
+import Summary from './Summary';
 
 const Form = () => {
   const [welcome, setWelcome] = useState('')
@@ -51,6 +52,12 @@ const Form = () => {
       && <ThridQuestion
         onThridQuestionChange={handleThridChange}
         nextQuestion={handleNextQuestion}
+        ThridQuestion={greenCloset} />}
+      {counter === 4
+      && <Summary
+        nameWelcome={welcome}
+        firstQuestion={first}
+        secondQuestion={handleSecondChange}
         ThridQuestion={greenCloset} />}
     </section>
   )
