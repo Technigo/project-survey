@@ -7,7 +7,7 @@ const UserLastname = ({ userlastname, setUserlastname }) => {
   return (
     <div>
       <p>Nice to meet you and your surname?</p>
-      <input value={userlastname} type="text" onChange={handleUserLastnameInputChange} />
+      <input value={userlastname} type="text" placeholder="surname" required="required" onChange={handleUserLastnameInputChange} />
     </div>
   )
 }

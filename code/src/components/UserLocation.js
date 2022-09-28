@@ -13,8 +13,8 @@ const UserLocation = ({ userlocation, setUserlocation }) => {
         <option value="Stockholm">Stockholm</option>
         <option value="Oslo">Oslo</option>
         <option value="Malmö">Malmö</option>
-        <option value="Malmö">Göteborg</option>
-        <option value="Umeå">Göteborg</option>
+        <option value="Göteborg">Göteborg</option>
+        <option value="Umeå">Umeå</option>
       </select>
     </>
 

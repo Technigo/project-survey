@@ -7,7 +7,7 @@ const UserMail = ({ usermail, setUsermail }) => {
   return (
     <div>
       <p>What is your email address?</p>
-      <input value={usermail} type="text" onChange={handleMailInputChange} />
+      <input value={usermail} type="email" placeholder="email address" required="required" onChange={handleMailInputChange} />
     </div>
   )
 }

@@ -3,6 +3,7 @@ import UserName from 'components/UserName';
 import UserLastname from 'components/UserLastname';
 import UserMail from 'components/UserMail';
 import UserLocation from 'components/UserLocation';
+/* import UserAge from 'components/UserAge'; */
 
 export const App = () => {
   const [counter, setCounter] = useState(1);
@@ -10,6 +11,7 @@ export const App = () => {
   const [lastname, setLastname] = useState('');
   const [mail, setMail] = useState('');
   const [location, setLocation] = useState('');
+  /* const [age, setAge] = useState(); */
 
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 7) {
@@ -24,6 +26,7 @@ export const App = () => {
     setLastname('');
     setMail('');
     setLocation('');
+    /*    setAge(''); */
   };
 
   return (
@@ -75,20 +78,20 @@ export const App = () => {
           </div>
         )}
 
-        {/*  {counter === 5 && (
+        {/*         {counter === 5 && (
+          <div>
+            <UserAge userage={age} setUserage={setAge} />
+            <p>Questions answered: {counter}/7 </p>
+          </div>
+        )} */}
+
+        {/*  {counter === 6 && (
           <div>
             <UserLastname lastname={lastname} setLastname={setLastname} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
-
-        {counter === 6 && (
-          <div>
-            <UserLastname lastname={lastname} setLastname={setLastname} />
-            <p>Questions answered: {counter}/7 </p>
-          </div>
-        )} */}
-
+ */}
         <p>
           <button type="button" onClick={handleClearButtonClick}>
           clear input
@@ -102,6 +105,7 @@ export const App = () => {
             <p>Lastname: {lastname} </p>
             <p>E-mail: {mail} </p>
             <p>Physical shop location: {location} </p>
+            {/* <p>Age group: {age} </p> */}
             <p>Questions answered: {counter}/7 </p>
             <button type="submit" onSubmit value="Send">Send</button>
           </div>
