@@ -20,10 +20,9 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
         <label for="visits">Number of visits per year:</label>
         <input 
         id="visits"
-        className="visits"
+        className="range-input"
         type="range" 
         name="visits"
-        list="tickmarks"
         onChange={handleFrequencyChange}
         value={frequency}
         min="0"

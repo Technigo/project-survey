@@ -31,7 +31,6 @@ p {
   display: flex;
   align-items:center;
   justify-content: center;
-  background-color: #00539CFF,;
 }
 
 .inner-container {
@@ -58,6 +57,41 @@ select {
 .radio-buttons {
   display: flex;
   flex-direction: row;
+}
+
+.range-input {
+  -webkit-appearance: none;
+  appearance: none;
+  height: 15px;
+  background-color: azure;
+  width: 100%;
+  border-radius: 10px;
+  margin: 10px 0px 10px 0px;
+  opacity: 0.7;
+  color: black;
+}
+
+.range-input:hover {
+  opacity: 1;
+}
+
+/* -webkit- to override default look in Chrome, Opera, Safari, Edge and -moz- to override in Firefox */
+.range-input::-webkit-slider-thumb { 
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 25px; 
+  height: 25px; 
+  background: #00539CFF; 
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+.range-input::-moz-range-thumb {
+  width: 25px;
+  height: 25px; 
+  background: #00539CFF; 
+  cursor: pointer;
+  border-radius: 50%
 }
 
 /* Buttons */
