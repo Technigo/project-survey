@@ -1,4 +1,5 @@
 import React from 'react';
+import { Header } from './Header';
 
 export const Name = ({ name, setName }) => {
     const handleNameChange = (event) => {
@@ -7,14 +8,18 @@ export const Name = ({ name, setName }) => {
     }
 
     return (
-        <div><h1>Welcome!</h1>
-            <p>Type your name and we are good to go!</p>
-            <input
-                type="text"
-                onChange={handleNameChange}
-                value={name}
-            />
-        </div>
+        <><Header />
+            <div className='nameComponent'>
+
+                <p>Please type your name</p>
+                <input
+                    type="text"
+                    onChange={handleNameChange}
+                    value={name}
+                />
+
+            </div>
+        </>
 
     )
 }

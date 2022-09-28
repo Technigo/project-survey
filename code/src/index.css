@@ -10,4 +10,34 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+  background-color: antiquewhite;
+}
+
+
+.outerWrapper {
+  display: flex;
+  justify-content: center;
+
+}
+
+.header h1 {
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nameComponent {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.moodComponent {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
 }

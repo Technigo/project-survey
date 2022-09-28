@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Name } from './Components/Name';
-import { Food } from './Components/Food';
+import { Mood } from './Components/Mood';
 import { Drink } from './Components/Drink';
 import { Result } from './Components/Result';
 
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
-  const [food, setFood] = useState('');
+  const [mood, setMood] = useState('');
   const [drink, setDrink] = useState('');
 
   const handleStepIncrease = () => {
@@ -15,36 +15,38 @@ export const App = () => {
   }
 
   return (
-    <div>
-      {step === 1 && (
-        <Name name={name} setName={setName} />
+    <section className="outerWrapper">
+      <div>
+        {step === 1 && (
+          <Name name={name} setName={setName} />
 
-      )}
-      {
-        step === 2 && (
-          <Food food={food} setFood={setFood} />
-        )
-      }
-      {
-        step === 3 && (
-          <Drink drink={drink} setDrink={setDrink} />
-        )
-      }
-      {
-        step >= 4 && (
-          <Result name={name} food={food} drink={drink} />
-        )
-      }
+        )}
+        {
+          step === 2 && (
+            <Mood mood={mood} setMood={setMood} />
+          )
+        }
+        {
+          step === 3 && (
+            <Drink drink={drink} setDrink={setDrink} />
+          )
+        }
+        {
+          step >= 4 && (
+            <Result name={name} mood={mood} drink={drink} />
+          )
+        }
 
-      {
-        step < 4 && (
-          <>
-            <p>Current step: {step}</p>
-            <button type="button" onClick={handleStepIncrease}>Next step</button>
-          </>
-        )
-      }
-    </div>
+        {
+          step < 4 && (
+            <>
+              <p>Current step: {step}</p>
+              <button type="button" onClick={handleStepIncrease}>Next step</button>
+            </>
+          )
+        }
+      </div>
+    </section>
 
   );
 }
