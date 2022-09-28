@@ -10,6 +10,7 @@ body {
   background-image: url("/Users/josefineengdahl/Desktop/week6-survey/project-survey/code/src/Background.jpg");
   background-size: cover;
 }
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -62,7 +63,7 @@ b {
 
 .input-card {
   padding: 20px;
-  background-color: #86c412;
+  /* background-color: #86c412; */
   width: 80%;
 }
 
