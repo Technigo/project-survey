@@ -5,7 +5,7 @@ export const LearnKnow = ({ learnKnow, setLearnKnow }) => {
     setLearnKnow(event.target.value);
   }
   return (
-    <fieldset className="learn-know-container">
+    <div className="learn-know-container">
       <h2 className="quest-heading">If you had to choose, would you rather hire someone who: </h2>
       <select
         className="dropdown-menu"
@@ -15,6 +15,6 @@ export const LearnKnow = ({ learnKnow, setLearnKnow }) => {
         <option value="Eager to learn more">is eager to learn new things</option>
         <option value="Knows everything already">knows everything already</option>
       </select>
-    </fieldset>
+    </div>
   )
 }

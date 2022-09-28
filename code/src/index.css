@@ -43,7 +43,6 @@ code {
 }
 
 /* BUTTON */
-
 .start-btn {
   background-color: black;
   border: none;
@@ -67,6 +66,7 @@ code {
 .btn-container {
   display: flex;
   justify-content: space-around;
+  margin-top: 1.5rem;
 }
 
 .btn {
@@ -109,20 +109,35 @@ code {
 
 /* MENU */
 .menu-container {
+  position: relative;
 }
-.shape {
-  background: black;
+
+.star-shape {
+  position: absolute;
+  right: -5rem;
+  bottom: 5rem;
+  background: orangered;
   border-radius: 50%;
+  display: flex;
+  align-items: center;
   width: 100px;
   height: 100px;
 }
 
+.star-text {
+  color: white;
+  font-family: var(--main-font);
+  font-size: 1rem;
+  font-weight: 900;
+  transform: rotate(10deg);
+}
+
 /* BACK FRONT */
-.back-front-container {
+.backfront-container {
   border: none;
 }
 
-.dropdown {
+.select {
   border-radius: 0.5rem;
   font-family: var(--main-font);
   font-weight: 900;
@@ -131,10 +146,12 @@ code {
   text-align: center;
 }
 
-.dropdown:active {
+.select:active {
+  border: none;
   background-color: blue;
 }
-.option {
+
+option * {
   background-color: hotpink;
   color: blue;
 }
