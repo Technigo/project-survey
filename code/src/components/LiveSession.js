@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-export const LiveSession = () => {
+const LiveSession = () => {
   const [counter, setCounter] = useState(0);
   const [userInput, setUserInput] = useState('');
   const [userName, setUserName] = useState('');

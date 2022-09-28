@@ -15,11 +15,41 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #FCF9EA;
   color: rgb(88, 80, 80); 
+  background-image: url("../public/images/yarn.jpg");
+  background-size: 1500px;
+  display: flex;
+  justify-content: center;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.main-container{
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #FCF9EA;
+  margin: 1vw 40vw 1vw 40vw;
+  padding: 1.5vw;
+  border-radius: 35px;
+  border: 1px solid;
+  box-shadow: 1px 2px 5px 4px #b4c8bc;
+
+}
+
+.question-div{
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  background-color: #FCF9EA;
+  margin: 1vw 40vw 1vw 40vw;
+  padding: 1.5vw;
+  border-radius: 35px;
+  border: 1px solid;
+  box-shadow: 1px 2px 5px 4px #b4c8bc;
+  top: 500px;
 }

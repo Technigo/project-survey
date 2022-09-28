@@ -14,8 +14,8 @@ const PriceInterval = ({ setPriceInterval }) => {
   }
   return (
     <form className="formContainer">
-      <h1>What PriceInterval are you ready to pay?</h1>
-      {priceIntervals.map(
+      <h1>What price interval would you be ready to pay for this item?</h1>
+      <div className="question-div">{priceIntervals.map(
         (
           priceInterval // iterating through each venue available
         ) => {
@@ -30,6 +30,7 @@ const PriceInterval = ({ setPriceInterval }) => {
         }
 
       )}
+      </div>
     </form>
   )
 }
