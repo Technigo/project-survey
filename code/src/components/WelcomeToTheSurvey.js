@@ -1,7 +1,7 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 
-const WelcomeToTheSurvey = ({ onWelcomeChange, userName, nextQuestion }) => {
+const WelcomeToTheSurvey = ({ onWelcomeChange, nameWelcome, nextQuestion }) => {
   return (
     <section className="section">
       <div className="content-wrap">
@@ -14,12 +14,12 @@ const WelcomeToTheSurvey = ({ onWelcomeChange, userName, nextQuestion }) => {
             <input
               type="text"
               onChange={onWelcomeChange}
-              value={userName}
+              value={nameWelcome}
               id="name"
               name="name" />
           </label>
         </form>
-        <button type="button" onClick={nextQuestion} className="button" disabled={userName === ''}>
+        <button type="button" onClick={nextQuestion} className="button" disabled={nameWelcome === ''}>
        Let's go!
         </button>
       </div>

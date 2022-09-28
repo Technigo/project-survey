@@ -3,10 +3,12 @@ import React, { useState } from 'react';
 import WelcomeToTheSurvey from './WelcomeToTheSurvey';
 import FirstQuestion from './FirstQuestion';
 import SecondQuestion from './SecondQuestion';
+import ThridQuestion from './ThridQuestion';
 
 const Form = () => {
   const [welcome, setWelcome] = useState('')
   const [first, setFirst] = useState('')
+  const [greenCloset, setGreenCloset] = useState('');
   const [counter, setCounter] = useState(0)
 
   const handleWelcomeChange = (e) => {
@@ -21,6 +23,10 @@ const Form = () => {
     setIsChecked(e.target.value)
   }
 
+  const handleThridChange = (e) => {
+    setGreenCloset(e.target.value)
+  }
+
   const handleNextQuestion = () => {
     setCounter(counter + 1)
   }
@@ -31,7 +37,7 @@ const Form = () => {
       && <WelcomeToTheSurvey
         onWelcomeChange={handleWelcomeChange}
         nextQuestion={handleNextQuestion}
-        userName={welcome} />}
+        nameWelcome={welcome} />}
       {counter === 1
       && <FirstQuestion
         onFirstQuestionChange={handleFirstChange}
@@ -41,6 +47,11 @@ const Form = () => {
       && <SecondQuestion
         nextQuestion={handleNextQuestion}
         secondQuestion={handleSecondChange} />}
+      {counter === 3
+      && <ThridQuestion
+        onThridQuestionChange={handleThridChange}
+        nextQuestion={handleNextQuestion}
+        ThridQuestion={greenCloset} />}
     </section>
   )
 };
