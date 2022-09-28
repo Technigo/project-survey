@@ -7,10 +7,7 @@ const Summary = ({
 }) => {
   return (
     <div>
-      <p> Summary</p>
-      <p>Name: {nameInput}</p>
-      <p>Input: {selectInput}</p>
-      <p>Cuteness {radioInput}</p>
+      <p>{radioInput}, {nameInput}!</p>
     </div>
   )
 }

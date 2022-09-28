@@ -7,7 +7,7 @@ const NameQuestion = ({
  }) => {
   return (
     <div className="container">
-      <h1> My name is: </h1>
+      <h2> Okay! Firstly I would like to get your name please. </h2>
       <input
         type="text"
         value={nameInput}

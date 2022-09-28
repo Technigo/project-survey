@@ -38,15 +38,15 @@ const Form = () => {
           handleStepChange={handleStepChange} />
       )}
       {step === 3 && (
-        <SelectQuestion
-          selectInput={selectInput}
-          handleSelectInputChange={handleSelectInputChange}
-          handleStepChange={handleStepChange} />
-      )}
-      {step === 4 && (
         <RadioButtons
           radioInput={radioInput}
           handleRadioInputChange={handleRadioInputChange}
+          handleStepChange={handleStepChange} />
+      )}
+      {step === 4 && (
+        <SelectQuestion
+          selectInput={selectInput}
+          handleSelectInputChange={handleSelectInputChange}
           handleStepChange={handleStepChange} />
       )}
       {step === 5 && (

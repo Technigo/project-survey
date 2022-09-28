@@ -1,6 +1,6 @@
 import React from 'react';
 
-const alternatives = ['Cute', 'Cuter', 'Cutest'];
+const alternatives = ['Hi', 'Howdy', 'Ahoy', 'Good day', 'Hello', 'Greetings'];
 
 const RadioButtons = ({
   radioInput,
@@ -8,7 +8,8 @@ const RadioButtons = ({
   handleStepChange
 }) => {
   return (
-    <div>
+    <div className="container">
+      <h2>And what word do you prefer to be greeted with?</h2>
       {alternatives.map((item) => (
         <label key={item}>
           <input

@@ -8,16 +8,30 @@ const SelectQuestion = ({
   return (
     <div className="container">
       <div className="question-container">
-        <h2>Where are you now?</h2>
+        <h2>Lastly, what is your favourite colour?</h2>
 
         <select
           className="select"
           id="selectInput"
           value={selectInput}
           onChange={handleSelectInputChange}>
-          <option value="">Select location:</option>
-          <option value="Lisbon">Lisbon</option>
-          <option value="Vaasa">Vaasa</option>
+          <option value="">My favourite colour is:</option>
+          <option value="Red">Red</option>
+          <option value="Orange">Orange</option>
+		  <option value="Yellow">Yellow</option>
+		  <option value="Green">Green</option>
+          <option value="Blue">Blue</option>
+		  <option value="Indigo">Indigo</option>
+		  <option value="Violet">Violet</option>
+          <option value="Purple">Purple</option>
+		  <option value="Pink">Pink</option>
+		  <option value="Silver">Silver</option>
+          <option value="Gold">Gold</option>
+		  <option value="Beige">Beige</option>
+		  <option value="Brown">Brown</option>
+		  <option value="Grey">Grey</option>
+          <option value="Black">Black</option>
+		  <option value="White">White</option>
         </select>
       </div>
       <div className="button-container">
