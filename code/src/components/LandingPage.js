@@ -8,7 +8,7 @@ export const LandingPage = ({NextQuestion})  => {
         <div className="intro">
             <p>Hi, Thanks for applying for this page. We would love to know your thougths about this. 
                 Are you ready to go? </p> 
-            <button onClick={NextQuestion} key="landingpage.Id">Lets go </button>
+            <button onClick={NextQuestion} key="landingpage.Id" className="button">Lets go </button>
         </div>
    
     )

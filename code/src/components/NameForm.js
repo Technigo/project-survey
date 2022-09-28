@@ -10,15 +10,17 @@ console.log('hello')
       type="text" 
       placeholder="First Name" 
       onChange={onFirstName}
-      value = {FirstName} />
+      value = {FirstName}
+      
+      />
       <input className="lastName"
       type="text" 
       placeholder="Last name" 
       onChange={onLastName}
       value = {LastName} />
       
-      <button type="button" onClick={NextQuestion}> Back </button>
-      <button type="button" onClick={backCounter}> Next Question</button>
+      <button type="button" onClick={NextQuestion} className="button"> Next Question </button>
+      <button type="button" onClick={backCounter} className="button"> Back</button>
     </div>
   )
 }
