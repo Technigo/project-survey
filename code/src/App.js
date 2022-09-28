@@ -1,10 +1,11 @@
 import React from 'react';
-import Start from './components/Start'
+import QuestionsForm from './components/QuestionsForm'
 
 export const App = () => {
-  return (
-    <div>
-      <Start />
-    </div>
-  );
+
+  return  <QuestionsForm />
+
 }
+
+
+
