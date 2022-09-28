@@ -12,7 +12,7 @@ export const LearnKnow = ({ learnKnow, setLearnKnow }) => {
         value={learnKnow}
         onChange={handleLearnKnowChange}>
         <option value="">Choose one:</option>
-        <option value="Eager to learn more">is eager to learn more</option>
+        <option value="Eager to learn more">is eager to learn new things</option>
         <option value="Knows everything already">knows everything already</option>
       </select>
     </fieldset>

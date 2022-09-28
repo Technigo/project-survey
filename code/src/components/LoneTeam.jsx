@@ -12,7 +12,7 @@ export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
           type="radio"
           id="team"
           name="team"
-          value="Team Player"
+          value={loneTeam}
           onChange={handleLoneTeamChange} />
       </label>
       <label htmlFor="lone">Lone Wolf

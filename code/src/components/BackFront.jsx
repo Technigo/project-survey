@@ -7,12 +7,16 @@ export const BackFront = ({ backFront, setBackFront }) => {
 
   return (
     <fieldset className="back-front-container">
-      <h2 className="quest-heading">What tech would you like your future hire to be most comfortable with?</h2>
-      <input
-        type="checkbox"
-        id="javascript"
-        name="javascript"
-        value="javascript" />
+      <h2 className="quest-heading">What kind of developer are you primarily looking for at the moment?</h2>
+      <select
+        className="dropdown"
+        value={backFront}
+        onChange={handleBackFrontChange}>
+        <option className="option" value="">Select one:</option>
+        <option className="option" value="Backend">Back-end</option>
+        <option className="option" value="Frontend">Front-end</option>
+        <option className="option" value="Fullstack">Full Stack</option>
+      </select>
     </fieldset>
   )
 }
