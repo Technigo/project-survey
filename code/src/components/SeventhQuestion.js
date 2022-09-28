@@ -17,7 +17,7 @@ const SeventhQuestion = ({
         type="text"
         value={requestInput}
         onChange={onRequestInputChange}
-        placeholder="MESSAGE" />
+        placeholder="Type your message here..." />
 
       <div className="button-container">
         <button type="button" className="back" onClick={onPreviousQuestionChange}>

@@ -24,7 +24,7 @@ const FourthQuestion = ({
       </div>
 
       {checkboxGroupArray.map((box) => (
-        <label htmlFor={box} className="checkbox-label-wrap" key={box}>
+        <label htmlFor={box} className="checkbox-label" key={box}>
           <input
             type="checkbox"
             id={box}

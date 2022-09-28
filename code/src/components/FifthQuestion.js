@@ -15,15 +15,17 @@ const FifthQuestion = ({
         <p className="question-specify">(think floss, interdental brush, waterpick etc)</p>
       </div>
       {flossGroup.map((floss) => (
-        <label className="radio-label" htmlFor="frequency-id" key={floss}>
-          <input
-            className="radio-input"
-            type="radio"
-            value={floss}
-            onChange={onFlossInputChange}
-            checked={flossInput === floss} />
-          {floss}
-        </label>
+        <div className="responsive-label">
+          <label className="radio-label" htmlFor="frequency-id" key={floss}>
+            <input
+              className="radio-input"
+              type="radio"
+              value={floss}
+              onChange={onFlossInputChange}
+              checked={flossInput === floss} />
+            {floss}
+          </label>
+        </div>
       ))}
 
       <div className="button-container">

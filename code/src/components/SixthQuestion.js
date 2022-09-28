@@ -19,11 +19,11 @@ const SixthQuestion = ({
         onChange={onGoalInputChange}
         required="required">
         <option value=""> Please select a goal </option>
-        <option value="Fresher"> Fresher Feeling </option>
-        <option value="Education"> Education and instructions </option>
-        <option value="Brighter"> Brighter smile </option>
-        <option value="TreatmentPlan"> Peronalized treatment plan</option>
-        <option value="NoFocus"> I don´t have any special focus today </option>
+        <option value="a fresher feeling"> Fresher Feeling </option>
+        <option value="to focus on education"> Education and instructions </option>
+        <option value="a brighter smile"> Brighter smile </option>
+        <option value="to work on your treatment plan"> Peronalized treatment plan</option>
+        <option value="a nice treatment"> I don´t have any special focus today </option>
 
       </select>
       <div className="button-container">
