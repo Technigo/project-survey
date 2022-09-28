@@ -11,7 +11,7 @@ const App = () => {
   const [question3, setQuestion3] = useState('');
 
   return (
-    <div className="App">
+    <div className="main">
       {page === 'start' && (
         <Start
           nextPage={() => setPage('questions')}

@@ -6,7 +6,6 @@ import styles from './Questions.module.css';
 const weapons = ['Bow and Arrow', 'an axe ofc!', 'Magic'];
 
 const Questions = (props) => {
-  console.log('<Questions /> props: ', props);
   const [question, setQuestion] = useState(1);
 
   const nextQuestion = () => {
@@ -17,7 +16,7 @@ const Questions = (props) => {
   };
 
   return (
-    <div className="main-container">
+    <>
       {question === 1 && (
         <div className={styles.Questions}>
           <h1> Question 1</h1>
@@ -74,7 +73,7 @@ const Questions = (props) => {
           </button>
         </div>
       )}
-    </div>
+    </>
   );
 };
 
