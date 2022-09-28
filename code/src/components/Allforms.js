@@ -4,6 +4,8 @@ import Opening from './Opening';
 import Firstquestion from './Firstquestion';
 import Secondquestion from './Secondquestion';
 import Thirdquestion from './Thirdquestion';
+import Fourthquestion from './Fourthquestion'
+import Summary from './Summary'
 
 const Allforms = () => {
   /* All functions connected to the return below */
@@ -12,6 +14,7 @@ const Allforms = () => {
   const [cakeOption, setCakeOption] = useState([])
   const [quality, setCakeQuality] = useState('');
   const [service, setService] = useState('');
+  const [opinion, setOpinion] = useState('');
 
   /* Every onChange function that affects the input */
   const onCounterChange = () => {
@@ -35,6 +38,9 @@ const Allforms = () => {
   }
   const onServiceChange = (event) => {
     setService(event.target.value);
+  }
+  const onOpinionChange = (event) => {
+    setOpinion(event.target.value);
   }
   return (
     <>
@@ -64,6 +70,22 @@ const Allforms = () => {
           service={service}
           onServiceChange={onServiceChange}
           onCounterChange={onCounterChange} />
+      )}
+
+      {counter === 5 && (
+        <Fourthquestion
+          opinion={opinion}
+          onOpinionChange={onOpinionChange}
+          onCounterChange={onCounterChange} />
+      )}
+
+      {counter === 6 && (
+        <Summary
+          name={name}
+          cakeOption={cakeOption}
+          quality={quality}
+          service={service}
+          opinion={opinion} />
       )}
     </>
   )

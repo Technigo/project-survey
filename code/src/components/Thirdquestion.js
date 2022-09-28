@@ -6,7 +6,6 @@ const Thirdquestion = ({ service, onServiceChange, onCounterChange }) => {
     <>
       <p>What is the best feature at our cake shop?</p>
       <select
-        /* onChange={(event) => setService(event.target.value)} */
         onChange={onServiceChange}
         value={service}>
 
