@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import Opening from './Opening';
-import Firstquestion from './Firstquestion';
-import Secondquestion from './Secondquestion';
-import Thirdquestion from './Thirdquestion';
-import Fourthquestion from './Fourthquestion'
+import Opening from './Opening'
+import Checkcake from './Checkcake'
+import Radiocake from './Radiocake'
+import Selectservice from './Selectservice'
+import Opinion from './Opinion'
 import Summary from './Summary'
 
 const Allforms = () => {
@@ -52,28 +52,28 @@ const Allforms = () => {
       )}
 
       {counter === 2 && (
-        <Firstquestion
+        <Checkcake
           cakeOption={cakeOption}
           onCakeOptionChange={onCakeOptionChange}
           onCounterChange={onCounterChange} />
       )}
 
       {counter === 3 && (
-        <Secondquestion
+        <Radiocake
           quality={quality}
           onCakeQualityChange={onCakeQualityChange}
           onCounterChange={onCounterChange} />
       )}
 
       {counter === 4 && (
-        <Thirdquestion
+        <Selectservice
           service={service}
           onServiceChange={onServiceChange}
           onCounterChange={onCounterChange} />
       )}
 
       {counter === 5 && (
-        <Fourthquestion
+        <Opinion
           opinion={opinion}
           onOpinionChange={onOpinionChange}
           onCounterChange={onCounterChange} />

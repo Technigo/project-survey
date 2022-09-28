@@ -1,8 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
+
+#root{
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  /* Photo by Karolina Grabowska: https://www.pexels.com/photo/white-and-gray-snow-covered-ground-4709467/ */
+  background-image: url('./images/background.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  font-family: 'Poppins', sans-serif;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  margin: 0 auto;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -10,4 +22,92 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/* General styling for h1, p, button and container  */
+h1{
+  font-size: 60px;
+  background: #F85032;
+  background: linear-gradient(to right, #F85032 0%, #F16F5C 50%, #F6290C 51%, #F02F17 71%, #E73827 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-top: 0;
+  font-family: 'Leckerli One', cursive;
+  text-align: center;
+}
+
+h3{
+  margin-bottom: 10%;
+  text-align: center;
+}
+
+p{
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+}
+
+.container{
+  display: flex;
+  flex-direction: column;
+  margin: 5% 10% 10% 10%;
+  background-color: rgba(255, 255, 255, 0.626);
+  padding: 5%;
+  border-radius: 10px;
+}
+
+button{
+    display: block;
+    text-align: center;
+    border: none;
+    font-size: 15px;
+    border: 1px solid rgb(173, 171, 171);
+    padding: 10px 20px;
+    margin: auto;
+    border-radius: 10px;
+    font-family: 'Poppins', sans-serif;
+}
+
+button:hover{
+  filter: invert(1);
+}
+
+label{
+  margin: 10px;
+}
+
+select{
+  margin: 5% auto;
+  padding: 5px 30px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Opening section styling */
+.name-input{
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  margin: 5%;
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+}
+
+/* Cake checkboxes styling */
+.cake{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-bottom: 5%;
+}
+
+.checkButtonContainer{
+  margin-bottom: 10%;
+}
+
+.quality-cake{
+  margin-bottom: 10%;
+}
+
+textarea{
+  font-family: 'Poppins', sans-serif;
+  margin: 2%;
 }

@@ -1,10 +1,10 @@
 /* eslint-disable no-trailing-spaces */
 import React from 'react';
 
-const Thirdquestion = ({ service, onServiceChange, onCounterChange }) => {
+const Selectservice = ({ service, onServiceChange, onCounterChange }) => {
   return (
-    <>
-      <p>What is the best feature at our cake shop?</p>
+    <form className="container">
+      <h3>What is the best feature at our cake shop?</h3>
       <select
         onChange={onServiceChange}
         value={service}>
@@ -14,8 +14,8 @@ const Thirdquestion = ({ service, onServiceChange, onCounterChange }) => {
         <option value="Our App">Our App</option>
         <option value="Cosy Environment">Cosy Environment</option>
       </select><button className="button" type="button" onClick={onCounterChange}>Next Question</button>
-    </>
+    </form>
   );
 };
 
-export default Thirdquestion;
+export default Selectservice;

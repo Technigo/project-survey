@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Secondquestion = ({ cakeQuality, onCakeQualityChange, onCounterChange }) => {
+const Radiocake = ({ cakeQuality, onCakeQualityChange, onCounterChange }) => {
   const cakeQualities = [
     'Sweeter! Pour sugar on me, babe',
     'Less sweet. Namaste',
@@ -11,10 +11,10 @@ const Secondquestion = ({ cakeQuality, onCakeQualityChange, onCounterChange }) =
   ]
 
   return (
-    <form>
-      <p>How can we improve the quality of our cakes?</p>
+    <form className="container">
+      <h3>How can we improve the quality of our cakes?</h3>
       {cakeQualities.map((quality) => (
-        <label htmlFor="cakeQuality" key={cakeQuality}>
+        <label htmlFor="cakeQuality" key={cakeQuality} className="quality-cake">
           <input
             type="radio"
             value={quality}
@@ -29,4 +29,4 @@ const Secondquestion = ({ cakeQuality, onCakeQualityChange, onCounterChange }) =
   );
 };
 
-export default Secondquestion;
+export default Radiocake;
