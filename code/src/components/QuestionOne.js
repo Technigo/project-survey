@@ -21,9 +21,9 @@ const QuestionOne = ({ handleStepIncrease, name, handleNameChange }) => {
       {/* Name input */}
       <section className="question-container">
         <div className="form-container">
-          <h1 className="question">What is your name?</h1>
+          <h1 className="question">What is your avatar name?</h1>
           <form className="form-style">
-            <label>Write here:</label>
+            <label>Write:</label>
             <input type="text" value={name} onChange={handleNameChange} />
           </form>
         </div>

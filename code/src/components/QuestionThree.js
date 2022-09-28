@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable comma-dangle */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable indent */
@@ -25,12 +26,21 @@ const QuestionThree = ({
             className="select-form"
             onChange={handleAdjectiveChange}
             value={adjective}>
-            <option value="DEFAULT" disabled>
-              Choose adjective:
-            </option>
-            <option value="definitely a">sleak</option>
-            <option value="absolutely not a">crooked</option>
+            <option value="DEFAULT">Choose adjective:</option>
+            <option value="shiny">shiny</option>
+            <option value="crooked">crooked</option>
+            <option value="brilliant">brilliant</option>
+            <option value="smooth">smooth</option>
           </select>
+          {/* Alternative selection */}
+          <form className="form-style">
+            <label>Adjective:</label>
+            <input
+              type="text"
+              value={adjective}
+              onChange={handleAdjectiveChange}
+            />
+          </form>
         </form>
         {/* Continue button */}
         <button

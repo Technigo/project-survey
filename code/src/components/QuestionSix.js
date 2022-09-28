@@ -21,14 +21,22 @@ const QuestionSix = ({
       <section className="question-container">
         {/* Adjective 2 input */}
         <div className="form-container">
-          <h1 className="question">What is a synonym to puzzling?</h1>
-          <form className="form-style">
-            <label>Adjective:</label>
-            <input
-              type="text"
-              value={adjectiveSecond}
+          <h1>What does obfuscatory mean?</h1>
+          <form className="select-style">
+            <select
+              className="select-form"
               onChange={handleAdjectiveSecondChange}
-            />
+              value={adjectiveSecond}>
+              <option value="default">Choose:</option>
+              <option value="puzzling">puzzling</option>
+              <option value="paranoid ">paranoid</option>
+              <option value="bskeptical">skeptical</option>
+              <option value="unsettled">unsettled</option>
+              <option value="hieroglyphical">hieroglyphical</option>
+              <option value="inexplicable">inexplicable</option>
+              <option value="obvious">obvious</option>
+              <option value="gloomy">gloomy</option>
+            </select>
           </form>
         </div>
         {/* Continue button */}

@@ -14,17 +14,17 @@ const QuestionFour = ({ handleStepIncrease, animal, handleAnimalChange }) => {
       </div>
       <section className="question-container">
         {/* Form */}
-        <h1>What is the strangest animal you know?</h1>
+        <h1>Pick an animal?</h1>
         <form className="select-style">
           <select
             className="select-form"
             onChange={handleAnimalChange}
             value={animal}>
-            <option value="DEFAULT" disabled>
-              Choose adjective:
-            </option>
-            <option value="definitely a">sleak</option>
-            <option value="absolutely not a">crooked</option>
+            <option value="default">Choose:</option>
+            <option value="seagurkin">seagurkin</option>
+            <option value="hippopotomus">hippopotomus</option>
+            <option value="blobfish">blobfish</option>
+            <option value="sloth">sloth</option>
           </select>
         </form>
         {/* Continue button */}

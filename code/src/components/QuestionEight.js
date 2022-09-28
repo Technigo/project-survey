@@ -4,6 +4,14 @@
 /* eslint-disable indent */
 import React from 'react';
 
+const foodObject = [
+  'smores',
+  'pizza',
+  'fried banana',
+  'veggie dogs',
+  'baked potatoe',
+];
+
 const QuestionEight = ({ handleStepIncrease, food, handleFoodChange }) => {
   return (
     <>
@@ -16,13 +24,25 @@ const QuestionEight = ({ handleStepIncrease, food, handleFoodChange }) => {
       </div>
       <section className="question-container">
         {/* Favorite food */}
-        <div className="form-container">
-          <h1 className="question">Name a food that doesnt have onion?</h1>
+        <h2>Whats for dinner?</h2>
+        <form className="radio-button-container">
+          {foodObject.map((radioButtonInput) => (
+            <label key={radioButtonInput}>
+              <input
+                type="radio"
+                value={radioButtonInput}
+                onChange={handleFoodChange}
+                checked={radioButtonInput === food}
+              />
+              {radioButtonInput}
+            </label>
+          ))}{' '}
+          {/* Alternative selection */}
           <form className="form-style">
-            <label>Food:</label>
+            <label>Other:</label>
             <input type="text" value={food} onChange={handleFoodChange} />
           </form>
-        </div>
+        </form>
         {/* Continue button */}
         <button
           className="continue-btn"

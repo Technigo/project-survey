@@ -36,6 +36,10 @@ code {
   display: flex;
   align-items: flex-start;
 }
+
+.summary-container {
+  margin: 0vw 15vw 0vw 15vw;
+}
 /********* Progress bar ********/
 .progress-bar-container {
   position: absolute;
@@ -87,6 +91,10 @@ code {
   transition: 0.4s;
   margin-top: 10vh;
   cursor: pointer;
+}
+
+.restart-btn {
+  margin-top: 0;
 }
 
 /********* Footer ********/
