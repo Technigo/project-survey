@@ -14,25 +14,25 @@ const QuestionTwo= ({activity, setActivity}) => {
     }
 
         return (
-            <>
+            <div>
             <h2>Where would you prefer to spend some quality time with your pup?</h2>
 
             <form className="radio-buttons">
-              {activities.map(group => (
-                <label key ={group}>
+              {activities.map(prefer => (
+                <label key ={prefer}>
                   <input
                     type="radio"
-                    value={group}
+                    value={prefer}
                     onChange={handleActivityChange}
-                    checked={activity === group}
+                    checked={activity === prefer}
                     />
-                    {group}
+                    {prefer}
                   </label>
               ))}
           </form>
-      </>
+      </div>
     
-    )
+    );
 
 }
 

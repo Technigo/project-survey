@@ -14,24 +14,23 @@ const QuestionThree = ({size, setSize}) => {
     }
         return (
             <>
-            <h2>What size would you prefer for your new best friend?</h2>
-    
-            <form className="radio-buttons">
-                {sizes.map(dogSize => (
-                    <label key ={dogSize}>
+                <h2>What size would you prefer for your new best friend?</h2>
+                    <form className="radio-buttons">
+                    {sizes.map(dogSize => (
+                    <label key={dogSize}>
                     <input
-                    type="radio"
-                    value={dogSize}
-                    onChange={handleSizeChange}
-                    checked={sizes === dogSize}
-                    />
+                        type="radio"
+                        value={dogSize}
+                        onChange={handleSizeChange}
+                        checked={size === dogSize}
+                        />
                     {dogSize}
                     </label>
                   ))}
             </form>
           </>
         
-        )
+    )
 }
 
 export default QuestionThree

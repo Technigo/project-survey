@@ -7,7 +7,7 @@ const QuestionFour= ({famous, setFamous}) => {
 
     return (
         <form>
-            <h2>Which famous dog would you want to play with?</h2>
+            <h2>Which famous dog would you most want to play with?</h2>
             <select
             onChange={handleFamousChange}
             value={famous}>

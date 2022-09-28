@@ -4,6 +4,8 @@ import QuestionOne from './components/QuestionOne';
 import QuestionTwo from './components/QuestionTwo';
 import QuestionFour from './components/QuestionFour';
 import QuestionThree from './components/QuestionThree';
+import { Result } from './components/Result';
+import Final from './components/Final'
 
 
 export const App = () => {
@@ -20,16 +22,20 @@ export const App = () => {
   const handleStepDecrease = () => {
     setStep(step - 1)
   }
+  const handleStepRestart = () => {
+    setStep(step - 6)
+  }
+
 
   
   return (
   <>
-    <div classname='outer-container'>
+    <div className='outer-container'>
         <div className='inner-container'>
           {step === 1 && (
             <div> 
             <Intro />
-            <button className="start-btn" type="button" onClick={handleStepIncrease}>Start survey</button>
+            <button className="start-button" type="button" onClick={handleStepIncrease}>Start survey</button>
           </div>
           )}
 
@@ -47,6 +53,20 @@ export const App = () => {
 
           {step === 5 && (
             <QuestionFour famous={famous} setFamous={setFamous} />
+          )}
+
+          {step === 6 && (
+            <div>
+            <Result name={name} activity={activity} size={size} famous={famous}/>
+            <button className="submit-button" type="button" onClick={handleStepIncrease}>Submit</button>
+            </div>
+          )}
+
+          {step === 7 && (
+            <div>
+              <Final/>
+              <button className="restart-button" type="button" onClick={handleStepRestart}>Restart</button>
+            </div>
           )}
 
          {step < 6 && step > 1 && (

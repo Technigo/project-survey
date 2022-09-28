@@ -8,7 +8,7 @@ export const QuestionOne = ({name, setName}) => {
 
     return (
         <>
-        <h2>What is your name?</h2>
+        <h2>On what email address can we reach you?</h2>
         <input type="text" value={name} onChange={handleNameChange} />
         </>
     );
