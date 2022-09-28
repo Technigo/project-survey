@@ -7,18 +7,21 @@ const Drink = ({ drink, setDrink, handleStepIncrease, handleStepDecrease}) => {
   return (
     <section className="container">
           <div className="input-card">
-          <p>What is your favourite drink ?</p>
-          <form>
+          <h3>Why did the chicken cross the road?</h3>
+          <label>
             <select
+              className="dropdown"
               onChange={handleDrinkChange}
               value={drink}
               >
-              <option value="Select location">Select location:</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-              <option value="3">3</option>
+          
+              <option value="Select answer">Select answer:</option>
+              <option value="It thought it was an egg-cellent idea">It thought it was an egg-cellent idea</option>
+              <option value="Just beak-cause he could">Just beak-cause he could</option>
+              <option value="To avoid this joke">To avoid this joke</option>
+        
             </select>
-           </form> 
+           </label> 
           </div> 
           <div className="button-card">
           <button type="button" onClick={handleStepDecrease}>Previous question</button>

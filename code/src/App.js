@@ -67,7 +67,8 @@ export const App = () => {
         <Result 
         name={name} 
         food={food} 
-        drink={drink} />
+        drink={drink}
+        email={email} />
       )}
 
     </>

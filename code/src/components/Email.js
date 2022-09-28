@@ -10,7 +10,7 @@ const Email = ({name, email, setEmail, handleStepIncrease, handleStepDecrease}) 
     <section className="container">
         <div className="input-card">
         <h2>Hi there {name}</h2>
-          <p>What's your email?</p>
+        <h3>What is your <b>email address?</b></h3>
           <input type="text" value={email} onChange={handleEmailChange}
           />
         </div>

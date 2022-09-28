@@ -9,8 +9,8 @@ const Name = ({name, setName, handleStepIncrease}) => {
   return (
     <section className="container">
         <div className="input-card">
-          <p>What is your name?</p>
-          <input type="reset" value={name} onChange={handleNameChange}
+          <h3>What is your <b>stage name?</b></h3>
+          <input type="" value={name} onChange={handleNameChange}
           />
         </div>
 
