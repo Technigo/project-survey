@@ -7,7 +7,7 @@ const Start = (props) => {
     props.setName(event.target.name.value);
     props.nextPage();
   };
-
+  console.log(props.name);
   return (
     <div className="main-container">
       <div className={styles.Start}>

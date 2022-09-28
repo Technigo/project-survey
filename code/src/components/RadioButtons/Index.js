@@ -1,21 +1,24 @@
-import React, { useState } from 'react';
-
-const testGroups = ['Bow and Arrow', 'an axe ofc!', 'Magic'];
-
-const RadioButtons = () => {
-  const [selectedRadio, setSelectedRadio] = useState();
+import React from 'react';
+/**
+ *
+ * @param {*} props { value: string, onChange: function }
+ * @returns
+ */
+const RadioButtons = (props) => {
+  console.log(props.question2);
+  console.log('props', props);
 
   return (
     <form>
-      {testGroups.map((test) => (
+      {props.options.map((test) => (
         <label key={test} htmlFor="test">
           <input
             id="test"
             name="test"
             type="radio"
             value={test}
-            onChange={(event) => setSelectedRadio(event.target.value)}
-            checked={selectedRadio === test}
+            onChange={(event) => props.onChange(event.target.value)}
+            checked={props.value === test}
           />
           {test}
         </label>
