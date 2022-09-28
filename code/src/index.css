@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./images/map.jpg);
 }
 
 code {
@@ -13,5 +14,12 @@ code {
 }
 
 .header {
-  background-color: lightgreen;
+  display: grid;
+  grid-template-columns: 2fr 500px 2fr;
+}
+
+.title {
+  grid-column-start: 2;
+  background-color: rgb(37, 17, 6);
+  opacity: 0.2;
 }

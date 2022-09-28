@@ -1,16 +1,16 @@
 /* eslint-disable linebreak-style */
 import React, { useState } from 'react';
-import { Name } from 'components/Name';
+import { Books } from 'components/Books';
 import { Result } from 'components/Result';
-import { Food } from 'components/Food';
-import { Drink } from 'components/Drink';
+import { Language } from 'components/Language';
+import { Version } from 'components/Version';
 import { Header } from 'components/Header';
 
 export const App = () => {
   const [step, setStep] = useState(1);
-  const [name, setName] = useState('');
-  const [food, setFood] = useState('');
-  const [drink, setDrink] = useState('');
+  const [book, setBooks] = useState(false);
+  const [language, setLanguage] = useState('');
+  const [version, setVersion] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -19,16 +19,16 @@ export const App = () => {
     <>
       <Header />
       {step === 1 && (
-        <Name name={name} setName={setName} />
+        <Books book={book} setBooks={setBooks} />
       )}
       {step === 2 && (
-        <Food food={food} setFood={setFood} />
+        <Language language={language} setLanguage={setLanguage} />
       )}
       {step === 3 && (
-        <Drink drink={drink} setDrink={setDrink} />
+        <Version version={version} setVersion={setVersion} />
       )}
       {step >= 4 && (
-        <Result name={name} food={food} drink={drink} />
+        <Result book={book} language={language} version={version} />
       )}
       {step < 4 && (
 
