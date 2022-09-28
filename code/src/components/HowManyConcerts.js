@@ -1,12 +1,12 @@
 import React from 'react';
 
-export const HowManyConcerts = ({ numberOfConcerts, setNoOfConcerts }) => {
+export const HowManyConcerts = ({ name, numberOfConcerts, setNoConcerts }) => {
   const handleNumberOfConcerts = (event) => {
-    setNoOfConcerts(event.target.value)
+    setNoConcerts(event.target.value)
   }
   return (
     <form>
-      <p>How many concerts do you visit in a year?</p>
+      <p>Alright {name}, how many concerts do you visit in a year?</p>
       <select
         onChange={handleNumberOfConcerts}
         value={numberOfConcerts}>
