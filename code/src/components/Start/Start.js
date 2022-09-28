@@ -3,11 +3,11 @@ import styles from './Start.module.css';
 
 const Start = (props) => {
   const handleSubmit = (event) => {
-    event.preventDefault();
-    props.setName(event.target.name.value);
+    // event.preventDefault();
+    props.setName(event.target.usernameInput.value);
     props.nextPage();
   };
-  console.log(props.name);
+
   return (
     <div className="main-container">
       <div className={styles.Start}>
@@ -15,8 +15,7 @@ const Start = (props) => {
         <p>Find out in this survey!</p>
 
         <form onSubmit={handleSubmit}>
-          <h2>Your name is: {props.name} </h2>
-          <input name="name" type="text" />
+          <input name="usernameInput" type="text" required />
           <button type="submit" id="confirm-btn">
             submit
           </button>

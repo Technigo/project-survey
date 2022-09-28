@@ -10,17 +10,17 @@ const RadioButtons = (props) => {
 
   return (
     <form>
-      {props.options.map((test) => (
-        <label key={test} htmlFor="test">
+      {props.options.map((option) => (
+        <label key={option} htmlFor={option}>
           <input
-            id="test"
-            name="test"
+            id={option}
+            name={option}
             type="radio"
-            value={test}
+            value={option}
             onChange={(event) => props.onChange(event.target.value)}
-            checked={props.value === test}
+            checked={props.value === option}
           />
-          {test}
+          {option}
         </label>
       ))}
     </form>

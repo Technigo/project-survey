@@ -3,6 +3,7 @@ import RadioButtons from 'components/RadioButtons/Index';
 // import SelectDropdown from 'components/SelectDropdown';
 import styles from './Questions.module.css';
 
+// TODO - flytta och döp om.
 const weapons = ['Bow and Arrow', 'an axe ofc!', 'Magic'];
 
 const Questions = (props) => {
