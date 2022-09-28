@@ -7,7 +7,8 @@ export const Books = ({ book, setBooks}) => {
     }
     return (
         <form onSubmit={event => event.preventDefault()}>
-        <p>Which books would you like to set up on your wishlist?</p>
+        <p className='question'>Which books would you like to set up on your wishlist?</p>
+        <div className='book-selection'>
         <label> 
         <input type="checkbox" name="titles" value="Bilbo" checked={book === "Bilbo"} onChange={handleBooksChange} />
         The Hobbit, or There and Back Again
@@ -20,6 +21,7 @@ export const Books = ({ book, setBooks}) => {
             <input type="checkbox" name="titles" value="Towers" checked={book === "Towers"} onChange={handleBooksChange} />
             The Two Towers
         </label>
+        </div>
         </form> 
     );
 }

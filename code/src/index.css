@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./images/map.jpg);
+  font-size: 20px;
 }
 
 code {
@@ -15,11 +16,27 @@ code {
 
 .header {
   display: grid;
-  grid-template-columns: 2fr 500px 2fr;
+  grid-template-columns: 8fr 40% 8fr;
 }
 
 .title {
   grid-column-start: 2;
+  font-family: 'Cinzel', serif;
+}
+
+.header-opacity {
   background-color: rgb(37, 17, 6);
   opacity: 0.2;
+}
+
+.question {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.book-selection {
+  display: flex;
+  align-items: center;
+  justify-content: center
 }
