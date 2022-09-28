@@ -7,6 +7,7 @@ const MuseumQuestion = ({museum, setMuseum}) => {
   }
 
   return (
+    <>
         <form>
            <h2>Which of these is your favoriture museum?</h2>
           <select
@@ -23,7 +24,7 @@ const MuseumQuestion = ({museum, setMuseum}) => {
             <option value="Historiska museet">Historiska museet</option>
           </select>
         </form>
-
+      </>
     );
   }
 

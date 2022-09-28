@@ -1,18 +1,23 @@
-import React, { memo } from 'react';
+import React from 'react';
 
 const Result = ({age, frequency, museum, memory}) => {
     return (
       <div>
-        <h2>Your answers</h2>
-        <ul>
-          <li><span className="bold-p">Age:</span> {age}</li>
-          <li><span className="bold-p">Visits per year:</span> {frequency}</li>
-          <li><span className="bold-p">Favoriture museum:</span> {museum} </li>
-          <li><span className="bold-p">Museum memory:</span> {memory}</li>
-          </ul>
+        <h2>Thank you for participating!</h2>
+          <p>From the bottom of our culture-loving hearts, we thank you for taking the survey. View your answers below.</p>
+          <h3>Your answers</h3>
+            <ul>
+              <li><span className="bold-p">Age:</span> {age}</li>
+              <li><span className="bold-p">Visits per year:</span> {frequency}</li>
+              <li><span className="bold-p">Favoriture museum:</span> {museum} </li>
+              <li><span className="bold-p">Museum memory:</span> {memory}</li>
+            </ul>
 
-          <p>If you are happy with your answers to this survey, please press submit. 
-            Otherwise, you are most welcome to go back and change your answers.</p>
+          <div className="link-container">
+            <span class="arrow" aria-hidden="true"> ✨ </span>
+            <a href="https://www.stockholmmuseums.se/en" target="_blank">Discover more about the Stockholm museum scene</a>
+            <span class="arrow" aria-hidden="true"> ✨ </span>
+          </div>
       </div>
     );
   }

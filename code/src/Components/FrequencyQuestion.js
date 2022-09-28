@@ -16,7 +16,7 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
 
     return (
       <form>
-        <h2>How many times per do you visit a museum in Stockholm?</h2>
+        <h2>How many times per year do you visit a museum in Stockholm?</h2>
         <label for="visits">Number of visits per year:</label>
         <input 
         id="visits"
