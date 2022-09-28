@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 export const App = () => {
   const [counter, setCounter] = useState(0);
   const [recieverName, setRecieverName] = useState('');
+  const [consideration, setConsideration] = useState('');
   const [userInput, setUserInput] = useState('');
   const [userName, setUserName] = useState('');
 
@@ -26,6 +27,10 @@ export const App = () => {
     setRecieverName(event.target.value);
   }
 
+  const handleConsiderationChange = (event) => {
+    setConsideration(event.target.value);
+  }
+
   const handleUserNameInputChange = (event) => {
     setUserName(event.target.value);
   }
@@ -41,6 +46,30 @@ export const App = () => {
             Dear
             <input type="text" value={recieverName} onChange={handleRecieverNameInputChange} placeHolder="Type name" />
             ,
+          </p>
+          <p>
+            <p>You might want to consider</p>
+            <form>
+              <select>
+                onChange={handleConsiderationChange}
+                value={consideration}
+                <option value="">Select option</option>
+                <option value="Cleaning up after yourself">Cleaning up after yourself</option>
+                <option value="Keeping it down">Keeping it down</option>
+                <option value="Respecting people`s stuff">Respecting people`s stuff</option>
+                <option value="Reassessing your priorities">Reassessing your priorities</option>
+                <option value="Trying meditation">Trying meditation</option>
+                <option value="Finishing what you`ve started">Finishing what you`ve started</option>
+                <option value="Lightening up">Lightening up</option>
+                <option value="Learning how to park your car">Learning how to park your car</option>
+                <option value="Improving your hygiene">Improving your hygiene</option>
+                <option value="Positive thinking">Positive thinking</option>
+                <option value="Smiling once in a while">Smiling once in a while</option>
+                <option value="Asking for help next time">Asking for help next time</option>
+                <option value="Listening to others">Listening to others</option>
+                <option value="Getting a life">Getting a life</option>
+              </select>
+            </form>
           </p>
           <p>
             <p>Lately I`ve noticed that you:</p>
