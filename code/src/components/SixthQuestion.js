@@ -1,6 +1,6 @@
 import React from 'react';
 
-const FifthQuestion = ({
+const SixthQuestion = ({
   goalInput,
   onGoalInputChange,
   onPreviousQuestionChange,
@@ -37,4 +37,4 @@ const FifthQuestion = ({
     </form>
   )
 }
-export default FifthQuestion
+export default SixthQuestion

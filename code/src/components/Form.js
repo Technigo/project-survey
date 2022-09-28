@@ -6,6 +6,8 @@ import ThirdQuestion from './ThirdQuestion'
 import FourthQuestion from './FourthQuestion'
 import FifthQuestion from './FifthQuestion'
 import SixthQuestion from './SixthQuestion'
+import SeventhQuestion from './SeventhQuestion'
+import TheEnd from './TheEnd'
 import FirstPage from './FirstPage'
 
 import 'index.css';
@@ -19,6 +21,7 @@ const Form = () => {
   const [checkboxGroup, setCheckboxGroup] = useState([]);
   const [goalInput, setGoalInput] = useState();
   const [flossInput, setFlossInput] = useState();
+  const [requestInput, setRequestInput] = useState();
 
   //  functions
   const onNextQuestionChange = () => {
@@ -57,6 +60,10 @@ const Form = () => {
 
   const onGoalInputChange = (event) => {
     setGoalInput(event.target.value)
+  }
+
+  const onRequestInputChange = (event) => {
+    setRequestInput(event.target.value)
   }
 
   // return question carousel
@@ -104,6 +111,19 @@ const Form = () => {
           onGoalInputChange={onGoalInputChange}
           onNextQuestionChange={onNextQuestionChange}
           onPreviousQuestionChange={onPreviousQuestionChange} />
+      )}
+      {counter === 7 && (
+        <SeventhQuestion
+          requestInput={requestInput}
+          onRequestInputChange={onRequestInputChange}
+          onNextQuestionChange={onNextQuestionChange}
+          onPreviousQuestionChange={onPreviousQuestionChange} />
+      )}
+      {counter === 8 && (
+        <TheEnd
+          nameInput={nameInput}
+          brushInput={brushInput}
+          onNextQuestionChange={onNextQuestionChange} />
       )}
     </main>
   );
