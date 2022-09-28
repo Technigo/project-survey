@@ -15,21 +15,22 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
   }
 
     return (
-      <form>
-        <h2>How many times per year do you visit a museum in Stockholm?</h2>
-        <label for="visits">Number of visits per year:</label>
-        <input 
-        id="visits"
-        className="range-input"
-        type="range" 
-        name="visits"
-        onChange={handleFrequencyChange}
-        value={frequency}
-        min="0"
-        max="50"/>
-        <span class="bold-p">{frequency}</span>
-      </form>
-      
+    <>
+      <h2>How many times per year do you visit a museum in Stockholm?</h2>
+        <form>
+          <label for="visits">Number of visits per year:</label>
+          <input 
+          id="visits"
+          className="range-input"
+          type="range" 
+          name="visits"
+          onChange={handleFrequencyChange}
+          value={frequency}
+          min="0"
+          max="50"/>
+          <span class="bold-p">{frequency}</span>
+        </form>
+      </>
     );
   }
 

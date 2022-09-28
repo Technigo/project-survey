@@ -8,8 +8,8 @@ const MuseumQuestion = ({museum, setMuseum}) => {
 
   return (
     <>
+      <h2>Which of these is your favoriture museum?</h2>
         <form>
-           <h2>Which of these is your favoriture museum?</h2>
           <select
             onChange={handleMuseumChange}
             value={museum}

@@ -1,7 +1,7 @@
 import React from "react";
 
-const ProgressBar = ({step, setStep}) => {
-  let completed = (step * 100) /5;
+const ProgressBar = ({step}) => {
+  let completed = (step * 100) /7;
   const progressStatus = {
     width: `${completed}%`,
   };

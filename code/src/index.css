@@ -42,6 +42,7 @@ a:hover {
 
 .inner-container {
   width: 80%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   margin-top: 20vh;
@@ -58,19 +59,20 @@ a:hover {
   margin-top: 30px;
 }
 
+/* Progress bar */
 .progress-b-outer-container {
-  position: relative;
   height: 20px;
   width: 100%;
   border-radius: 50px;
-  border: 1px solid #333;
+  margin: 10px 0px 10px 0px;
+  border: solid azure 2px;
 }
 
 .progress-b-inner-container {
-  background-color: #1DA598;
+  background-color:#00539CFF;
   height: 100%;
   border-radius: inherit;
-  transition: width .2s ease-in;
+  transition: width .5s ease-in;
 }
 
 /* Form styling */
@@ -144,16 +146,14 @@ input {
 
 .memory-input {
   width: 100%;
-  text-align: start;
-  box-shadow: 0 0 15px 4px rgba(92, 79, 79, 0.06);
   border-radius: 5px;
-  margin: 15px 0px 15px 0px;
+  margin-top: 20px;
   font-family: inherit;
   padding: 5px;
 }
 
 /* Buttons */
-.continue-btn, .start-btn, .submit-btn {
+.continue-btn, .start-btn {
   background-color: #00539CFF;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -167,13 +167,28 @@ input {
   border: none;
 }
 
+.submit-btn {
+  background-color: #00539CFF;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 600;
+  font-size: 17px;
+  padding: 12px;
+  border-radius: 20px;
+  position: absolute;
+  right: 20px;
+  bottom: -60px;
+  border: none;
+} 
+
 .continue-btn:hover, .start-btn:hover, .submit-btn:hover {
   background-color: azure;
   color: black;
 }
 
-.back-btn, .restart-btn {
-  background-color: #B85042;
+.back-btn {
+  background-color: #EEA47FFF;
+  border: 2px #B85042 solid;
   color: white;
   font-family: 'Roboto', sans-serif;
   font-weight: 600;
@@ -183,7 +198,6 @@ input {
   margin-top: 20px;
   position: absolute;
   left: 0px;
-  border: none;
 }
 
 .back-btn:hover, .restart-btn:hover {
@@ -191,9 +205,7 @@ input {
   color: black;
 }
 
-.submit-btn {
-  padding: 20px;
-}
+
 
 /* MediaQs */
 @media (min-width: 668px) and (max-width: 1024px) {

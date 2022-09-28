@@ -27,7 +27,6 @@ export const App = () => {
     <>
       <div className='outer-container'>
         <div className='inner-container'>
-
           {step === 1 && (
           <div> 
             <Intro />
@@ -84,8 +83,8 @@ export const App = () => {
               <button className="back-btn" type="button" onClick={handleStepDecrease}>Go back</button>
             </div>
           )}       
-          </div>
         </div>
+      </div>
     </>
   );
 }
