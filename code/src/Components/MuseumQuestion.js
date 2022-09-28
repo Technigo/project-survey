@@ -11,16 +11,17 @@ const MuseumQuestion = ({museum, setMuseum}) => {
            <h2>Which of these is your favoriture museum?</h2>
           <select
             onChange={handleMuseumChange}
-            value={museum}>
-              <option value="Moderna museet">Select museum</option> 
-              {/* Make the option above not possible to choose */}
-              <option value="Moderna museet">Moderna museet</option>
-              <option value="Vasamuseet">Vasamuseet</option>
-              <option value="Noriska museet">Noriska museet</option>
-              <option value="Naturhistoriska museet">Naturhistoriska museet</option>
-              <option value="Sjöhistoriska museet">Sjöhistoriska museet</option>
-              <option value="Historiska museet">Historiska museet</option>
-            </select>
+            value={museum}
+            className="museum-select"
+            >
+            <option style={{display: "none"}}>Select a museum</option>
+            <option value="Moderna museet">Moderna museet</option>
+            <option value="Vasamuseet">Vasamuseet</option>
+            <option value="Nordiska museet">Nordiska museet</option>
+            <option value="Naturhistoriska museet">Naturhistoriska museet</option>
+            <option value="Sjöhistoriska museet">Sjöhistoriska museet</option>
+            <option value="Historiska museet">Historiska museet</option>
+          </select>
         </form>
 
     );

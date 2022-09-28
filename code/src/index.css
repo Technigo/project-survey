@@ -47,11 +47,11 @@ input {
   height: 20vh;
 }
 
-select {
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  width: 15vw;
+.museum-select {
   padding: 7px;
+  border-radius: 10px;
+  background-color: antiquewhite;
+  border: none;
 }
 
 .radio-buttons {
