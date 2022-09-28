@@ -30,9 +30,10 @@ const Form = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    if (!event.target.value && step !== 1) {
-      alert('välj nåt');
-    }
+    // TODO fix validation
+    // if (!event.target.value && step !== 1) {
+    //   alert('välj nåt');
+    // }
     setStep(step + 1);
   };
   const handleNameChange = (event) => {
