@@ -5,9 +5,11 @@ const Summary = ({
   selectInput,
   radioInput
 }) => {
+  
   return (
     <div>
-      <p>{radioInput}, {nameInput}!</p>
+      
+      <div className="Greeting">{radioInput}, {nameInput}!</div>
     </div>
   )
 }
