@@ -1,6 +1,7 @@
 /* eslint-disable linebreak-style */
 import React, { useState } from 'react';
 import { WelcomeMessage } from 'components/WelcomeMessage';
+import { DestinationQuestion } from './components/DestinationQuestion'
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -14,6 +15,7 @@ export const App = () => {
   return (
     <div className="wrapper">
       <WelcomeMessage />
+      <DestinationQuestion />
       <div className="questionCounter">
         <p>
             Current question: {step}
