@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionFive = ({ onStepChange, onQuestFiveChange, questFive})=> {
+const QuestionFive = ({ onStepChange, onQuestFiveChange, questFive }) => {
 
     return (
         <div className='questions-container'>

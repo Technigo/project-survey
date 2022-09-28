@@ -1,6 +1,6 @@
 import React from 'react'
 
-const QuestionFour = ({ onStepChange, onQuestFourChange, questFour})=> {
+const QuestionFour = ({ onStepChange, onQuestFourChange, questFour }) => {
 
     return (
         <div className='questions-container'>

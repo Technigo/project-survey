@@ -10,8 +10,7 @@ import Progressbar from './Progressbar'
 
 const QuestionsForm = () => {
   
-  const [showStart, setShowStart] = useState(true);
-  const [username, setUsername] = useState("");
+  const [username, setUsername] = useState('');
   const [step, setStep] = useState(0);
   const [questOne, setQuestOne] = useState('');
   const [questTwo, setQuestTwo] = useState('');
@@ -20,11 +19,11 @@ const QuestionsForm = () => {
   const [questFive, setQuestFive] = useState('');
 
   const onStepChange = () => {
+    if (username.length > 1)
     setStep(step + 1)
-  }
-
-  const onQuestOneChange = (event) => {
-    setQuestOne(event.target.value)
+    else (
+      alert('please enter a username')
+    )
   }
 
   const onQuestTwoChange = (event) => {
@@ -44,18 +43,15 @@ const QuestionsForm = () => {
   }
 
   const restartGame = () => {
-    setShowStart(true);
-    setUsername("");
+    setUsername('');
     setStep(0)
-  };
+  }
     
     return (
       <div>
-        
+
       {step === 0 && (
         <Start
-          showStart={showStart}
-          setShowStart={setShowStart}
           username={username}
           setUsername={setUsername}
           onStepChange={onStepChange}
@@ -66,7 +62,7 @@ const QuestionsForm = () => {
        <>
         <QuestionOne
           questOne={questOne}
-          onQuestOneCange={onQuestOneChange}
+          setQuestOne={setQuestOne}
           onStepChange={onStepChange}
         />
         <Progressbar step={step} />
