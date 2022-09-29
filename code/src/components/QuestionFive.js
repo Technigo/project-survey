@@ -13,6 +13,7 @@ const QuestionFive = ({ onStepChange, setQuestFive, questFive }) => {
             <form className='form'>
                 <h1 tabIndex='0'>Which is Jake's favourite movie?</h1>
 
+                <div className='radio-btns'>
                 {movies.map((movie => {
                     return (
                     <label className="radio-label" key={movie} tabIndex="0" aria-label='Jakes favourite movie'>
@@ -25,8 +26,9 @@ const QuestionFive = ({ onStepChange, setQuestFive, questFive }) => {
                     </label>
                         )
                     }))}
+                </div>
         
-                <button className='next-btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
+                <button className='next-btn' type='button' onClick={onStepChange}>Next</button>
             </form> 
         </div>
    

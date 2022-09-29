@@ -13,9 +13,10 @@ const QuestionOne = ({ onStepChange, setQuestOne, questOne })=> {
             <form className='form'>
                 <h1 tabIndex='0'>Who LOVES yoghurt?</h1>
 
+                <div className='radio-btns'>
                 {choices.map((name => {
                     return (
-                    <label className="radio-label" key={name} tabIndex="0">
+                    <label className="radio-label" key={name} tabIndex="0" aria-label='Loves yoghurt'>
                         <input 
                         type='radio'
                         value={name} 
@@ -25,8 +26,9 @@ const QuestionOne = ({ onStepChange, setQuestOne, questOne })=> {
                     </label>
                         )
                     }))}
-        
-                <button className='next-btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
+                </div>
+           
+                <button className='next-btn' type='button' onClick={onStepChange}>Next</button>
             </form> 
         </div>
    

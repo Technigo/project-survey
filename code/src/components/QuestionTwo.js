@@ -2,7 +2,7 @@ import React from 'react'
 
 const QuestionTwo = ({ onStepChange, setQuestTwo, questTwo }) => {
 
-    const howMany = ['Two', 'Four', 'Seven', 'None']
+    const howMany = ['2', '4', '7', '0']
 
     const onQuestTwoChange = (event) => {
         setQuestTwo(event.target.value)
@@ -13,9 +13,10 @@ const QuestionTwo = ({ onStepChange, setQuestTwo, questTwo }) => {
             <form className='form'>
                 <h1 tabIndex='0'>How many brothers does Amy have?</h1>
                  
+                <div className='radio-btns'>
                 {howMany.map((siblings => {
                     return (
-                    <label className="radio-label" key={siblings} tabIndex="0">
+                    <label className="radio-label" key={siblings} tabIndex="0" aria-label='How many brothers'>
                         <input 
                         type='radio'
                         value={siblings} 
@@ -25,8 +26,9 @@ const QuestionTwo = ({ onStepChange, setQuestTwo, questTwo }) => {
                     </label>
                     )
                     }))}
-               
-                <button className='next-btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
+                </div>
+                
+                <button className='next-btn' type='button' onClick={onStepChange}>Next</button>
             </form> 
         </div>
    
