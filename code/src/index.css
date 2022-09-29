@@ -22,13 +22,9 @@ a:hover {
 }
 
 .links{
-  display: flex;
-  justify-content: center;
   font-weight: 600;
   color: #DF7861;
   font-size: 19px;
-  border: 1px solid black;
-  width: 60%;
 }
 
 p {
