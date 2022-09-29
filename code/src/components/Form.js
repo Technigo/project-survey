@@ -17,29 +17,20 @@ const Form = () => {
   }
 
   return (
-    <>
-      {submitted && (
-        <SubmissionOverview userName={userName} adultAge={adultAge} favClothes={favClothes} />
-      )}
-      {!submitted && (<form onSubmit={handleSubmit}>
-        <NameInput setUserName={setUserName} />
-        <ConsideredAdult adultAge={adultAge} setAdultAge={setAdultAge} />
-        <FavoriteClothing setFavClothes={setFavClothes} />
-        <button type="submit">Submit</button>
-      </form>)}
-    </>
+    <div className="outer-wrapper">
+      <div className="inner-wrapper">
+        <h1>Random questions about you!</h1>
+        {submitted && (
+          <SubmissionOverview userName={userName} adultAge={adultAge} favClothes={favClothes} />
+        )}
+        {!submitted && (<form onSubmit={handleSubmit}>
+          <NameInput setUserName={setUserName} />
+          <ConsideredAdult adultAge={adultAge} setAdultAge={setAdultAge} />
+          <FavoriteClothing setFavClothes={setFavClothes} />
+          <button className="submit-button" type="submit">Submit</button>
+        </form>)}
+      </div>
+    </div>
   )
-  /* if (submitted) {
-    return <SubmissionOverview userName={userName} adultAge={adultAge} favClothes={favClothes} />
-  } else {
-    return (
-      <form onSubmit={handleSubmit}>
-        <NameInput setUserName={setUserName} />
-        <ConsideredAdult adultAge={adultAge} setAdultAge={setAdultAge} />
-        <FavoriteClothing setFavClothes={setFavClothes} />
-        <button type="submit">Submit</button>
-      </form>
-    )
-  } */
 }
 export default Form;

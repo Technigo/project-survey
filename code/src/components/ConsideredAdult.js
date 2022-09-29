@@ -1,10 +1,10 @@
-/* eslint-disable no-restricted-globals */
 import React from 'react';
 
 const ConsideredAdult = ({ setAdultAge, adultAge }) => {
   return (
-    <>
-      <label htmlFor="age-range">
+    <div className="question-wrapper">
+      <p>At what age do you consider people to be adults?</p>
+      <label className="radio-label" htmlFor="18">
         18
         <input
           type="radio"
@@ -12,10 +12,11 @@ const ConsideredAdult = ({ setAdultAge, adultAge }) => {
           onChange={(event) => setAdultAge(event.target.value)}
           checked={adultAge === '18'}
           name="age"
-          id="age-range" />
+          id="18"
+          required />
       </label>
-      <br />
-      <label htmlFor="age-range">
+
+      <label className="radio-label" htmlFor="25">
         25
         <input
           type="radio"
@@ -23,10 +24,10 @@ const ConsideredAdult = ({ setAdultAge, adultAge }) => {
           onChange={(event) => setAdultAge(event.target.value)}
           checked={adultAge === '25'}
           name="age"
-          id="age-range" />
+          id="25" />
       </label>
-      <br />
-      <label htmlFor="age-range">
+
+      <label className="radio-label" htmlFor="30-35">
         30-35
         <input
           type="radio"
@@ -34,32 +35,31 @@ const ConsideredAdult = ({ setAdultAge, adultAge }) => {
           onChange={(event) => setAdultAge(event.target.value)}
           checked={adultAge === '30-35'}
           name="age"
-          id="age-range" />
+          id="30-35" />
       </label>
-      <br />
-      <label htmlFor="age-range">
-        40 +
+
+      <label className="radio-label" htmlFor="40+">
+        40+
         <input
           type="radio"
           value="40 +"
           onChange={(event) => setAdultAge(event.target.value)}
           checked={adultAge === '40 +'}
           name="age"
-          id="age-range" />
+          id="40+" />
       </label>
-      <br />
-      <label htmlFor="age-range">
-        50 +
+
+      <label className="radio-label" htmlFor="50+">
+        50+
         <input
           type="radio"
           value="50 +"
           onChange={(event) => setAdultAge(event.target.value)}
           checked={adultAge === '50 +'}
           name="age"
-          id="age-range" />
+          id="50+" />
       </label>
-
-    </>
+    </div>
   )
 }
 

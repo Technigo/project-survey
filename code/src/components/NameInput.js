@@ -2,9 +2,16 @@ import React from 'react';
 
 const NameInput = ({ userName, setUserName }) => {
   return (
-    <div>
-      <label htmlFor="name-input">Name
-        <input id="name-input" type="text" value={userName} onChange={(event) => setUserName(event.target.value)} />
+    <div className="question-wrapper">
+      <label htmlFor="name-input">Who are you?
+        <input
+          className="input-field"
+          id="name-input"
+          type="text"
+          value={userName}
+          placeholder="Input name"
+          required
+          onChange={(event) => setUserName(event.target.value)} />
       </label>
     </div>
   );
