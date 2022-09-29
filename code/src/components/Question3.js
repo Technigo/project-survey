@@ -6,9 +6,32 @@ const Question3 = ({ question3, setQuestion3 }) => {
   }
 
   return (
-    <div>
+    <div className="radioBtnContainer">
       <p>What do you think again?</p>
-      <input type="text" value={question3} onChange={handleQuestion3Change} />
+      <label htmlFor="week-days" aria-label="One">
+        <input
+          className="radioBtn"
+          type="radio"
+          value="one"
+          checked={question3 === 'one'}
+          onChange={(event) => handleQuestion3Change(event)} />One
+      </label>
+      <label htmlFor="week-days" aria-label="Two">
+        <input
+          className="radioBtn"
+          type="radio"
+          value="two"
+          checked={question3 === 'two'}
+          onChange={(event) => handleQuestion3Change(event)} />Two
+      </label>
+      <label htmlFor="week-days" aria-label="Three">
+        <input
+          className="radioBtn"
+          type="radio"
+          value="three"
+          checked={question3 === 'three'}
+          onChange={(event) => handleQuestion3Change(event)} />Three
+      </label>
     </div>
   );
 }
