@@ -4,8 +4,10 @@ import React from 'react';
 const Header= () => {
   return (
     <>
-    <h1> Vacation planner 🌎 </h1>
+    <header>
+    <h1> VACATION PLANNER</h1>
     <h2> Where to go next?</h2>
+    </header>
     </>
 );
 }

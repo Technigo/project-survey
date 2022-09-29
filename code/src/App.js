@@ -63,24 +63,29 @@ export const App = () => {
 
 { counter === 1 && (
         <>
+        <section className='buttonWrapper'>
         <button type="button" onClick={() => handleCounterButtonClick(true)}>
-        Next Question </button>
+        Next ▷ </button>
         <div>
         Question number {counter} /5
         </div>
+        </section>
         </>
       )}
 
 
 { counter > 1 && (
         <>
+
+        <section className='buttonWrapper'>
         <button type="button" onClick={() => handleCounterButtonClick(false)}>
-        Previous question </button>
+        ◀︎ Back </button>
         <button type="button" onClick={() => handleCounterButtonClick(true)}>
-        Next Question </button>
-        <div>
+        Next ▶︎</button>
+        <div className='questionNumber'>
         Question number {counter} /5
         </div>
+        </section>
         </>
       )}
 
