@@ -1,13 +1,17 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This week we were to create a survey i React to
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+✓ Learn how to use the 'useSate' hook in React.
+✓ How to connect HTML form inputs to state.
+✓ How to use form fields with React
+✓ How to use state to show different components based on where you are in the survey
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with going through material and understanding how the useState() works with the help of the lectures and example projects. 
+If I had more time I would add more questions and/or play around with different kinds of input type and the styling of those. I would also add validation errors. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://react-quiz-brooklyn.netlify.app/
