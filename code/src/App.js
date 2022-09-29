@@ -42,14 +42,27 @@ export const App = () => {
         </button>
       )}
 
-      {counter < 7 && counter > -1 && (
+      {counter < 7 && counter > 0 && (
         <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
         Next question
         </button>
       )}
 
+      {counter < 7 && counter > 0 && (
+        <p>
+          <button type="button" onClick={handleClearButtonClick}>
+          Clear input
+          </button>
+        </p>
+      )}
+
       {counter === 0 && (
-        <FirstPage />
+        <>
+          <FirstPage />
+          <button type="button" aria-label="Subscribe me for this newsletter" onClick={() => handleCounterButtonClick(true)}>
+          Sign me up!
+          </button>
+        </>
       )}
 
       {counter === 1 && (
@@ -92,14 +105,6 @@ export const App = () => {
           <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
           <p>Questions answered: {counter}/7 </p>
         </div>
-      )}
-
-      {counter < 7 && counter > 0 && (
-        <p>
-          <button type="button" onClick={handleClearButtonClick}>
-          clear input
-          </button>
-        </p>
       )}
 
       {counter === 7 && (
