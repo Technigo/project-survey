@@ -8,7 +8,6 @@ const Question2 = ({ question2, setQuestion2, handleStepIncrese }) => {
     <>
       <div>
         <p>What do you think?</p>
-        {/* <input type="text" value={question2} onChange={handleQuestion2Change} /> */}
         <label htmlFor="this">
         I think this
           <input

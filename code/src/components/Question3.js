@@ -9,29 +9,34 @@ const Question3 = ({ question3, setQuestion3, handleStepIncrese }) => {
     <>
       <div className="radioBtnContainer">
         <p>What do you think again?</p>
-        <label htmlFor="week-days" aria-label="One">
+        <label htmlFor="one">
+          One
+
           <input
             className="radioBtn"
             type="radio"
+            id="one"
             value="one"
             checked={question3 === 'one'}
-            onChange={(event) => handleQuestion3Change(event)} />One
+            onChange={(event) => handleQuestion3Change(event)} />
         </label>
-        <label htmlFor="week-days" aria-label="Two">
+        <label htmlFor="two">Two
           <input
             className="radioBtn"
             type="radio"
+            id="two"
             value="two"
             checked={question3 === 'two'}
-            onChange={(event) => handleQuestion3Change(event)} />Two
+            onChange={(event) => handleQuestion3Change(event)} />
         </label>
-        <label htmlFor="week-days" aria-label="Three">
+        <label htmlFor="three">Three
           <input
             className="radioBtn"
             type="radio"
+            id="three"
             value="three"
             checked={question3 === 'three'}
-            onChange={(event) => handleQuestion3Change(event)} />Three
+            onChange={(event) => handleQuestion3Change(event)} />
         </label>
       </div>
       <div>

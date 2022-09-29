@@ -14,10 +14,10 @@ const Question1 = ({ name, setName, handleStepIncrese }) => {
 
   return (
     <>
-      <div>
+      <label htmlFor="your-name">
         <p>What is your name?</p>
-        <input type="text" value={name} onChange={handleNameChange} onKeyDown={checkKeyPress} />
-      </div>
+        <input type="text" id="your-name" value={name} onChange={handleNameChange} onKeyDown={checkKeyPress} />
+      </label>
       <div>
         <button type="button" id="nextBtn" onClick={handleStepIncrese}>Next page</button>
         <p>Question 1 out of 4</p>
