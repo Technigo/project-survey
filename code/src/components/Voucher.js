@@ -1,15 +1,14 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
-const Voucher() {
-  const [hidden, setHidden] = useState(true);
-
+const Voucher = () => {
   return (
-    <div>
-      <h1> Hello World </h1>
-      {!hidden ? <p>You can see me!</p> : null}
-      <button onClick={() => setHidden(s => !s)}>
-        react show hide component
-      </button>
+    <div className="App">
+      <button type="button" onClick={handleFooPress}>Show Foo</button>
+      <button type="button" onClick={handleBarPress}>Show Bar</button>
+      {isFooVisible && <h1>Foo</h1>}
+      {isBarVisible && <h1>Bar</h1>}
     </div>
   );
 }
+
+export default Voucher;
