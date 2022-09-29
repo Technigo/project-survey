@@ -8,7 +8,7 @@ const Food = ({name, food, setFood, handleStepIncrease, handleStepDecrease}) => 
   return (
     <section className="container">
       <div className="input-card">
-        <h3>Which pun is the funniest?</h3>
+        <h3>Which pun is <b>the funniest?</b></h3>
       <label>
       <div className="radio-button">
       <div className="radio-button-button">

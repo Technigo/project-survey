@@ -10,7 +10,7 @@ const Name = ({name, setName, handleStepIncrease}) => {
     <section className="container">
         <div className="input-card">
           <h3>What is your <b>stage name?</b></h3>
-          <input type="" value={name} onChange={handleNameChange}
+          <input type="" Placeholder="Type your name here" value={name} onChange={handleNameChange}
           />
         </div>
 

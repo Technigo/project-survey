@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,900,900italic");
+@import url('https://fonts.googleapis.com/css2?family=DynaPuff&display=swap');
 body {
   background-color: rgb(119, 38, 26);
   margin: 0;
@@ -9,6 +10,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-image: url("/Users/josefineengdahl/Desktop/week6-survey/project-survey/code/src/Background.jpg");
   background-size: cover;
+  background-repeat: no-repeat;
 }
 
 code {
@@ -17,37 +19,43 @@ code {
 }
 
 h1 {
-  font-size: 70px;
+  font-size: 80px;
   font-family: "Roboto";
-  text-shadow: 5px 6px #8b8b8b;
+  text-shadow: 5px 6px #222222;
   margin: 0;
-  color: rgb(183, 125, 190);
+  color: rgb(240, 235, 224);
+}
 
+h4 {
+  font-size: 60px;
+  font-family: "Roboto";
+  text-shadow: 4px 5px #000000;
+  margin: 0;
+  color: rgb(240, 235, 224);
 }
 
 h2 {
   font-family: "Roboto";
   font-size: 45px;
-  color: white;
-
+  color: rgb(240, 235, 224);
 }
 
 h3 {
   font-family: "Roboto";
   font-size: 30px;
+  color: rgb(255, 255, 255);
 }
 
 p {
     font-family: "Roboto";
   font-size: 22px;
 }
-b {
 
+b {
   font-weight: bolder;
 }
 
 .container {
-
   width: auto;
   display: flex;
   justify-content: center;
@@ -57,81 +65,90 @@ b {
   position: absolute;
   top: 20%;
   bottom: 20%;
-  left:20%;
-  right: 20%; 
+  left:50%;
+  right: 5%; 
 }
 
 .input-card {
-  padding: 20px;
-  /* background-color: #86c412; */
-  width: 80%;
+  width: 90%;
 }
 
 input {
 border: none;
-border-bottom: 2px solid rgb(26, 25, 25);
+border-bottom: 2px solid rgb(255, 255, 255);
 background-color: transparent;
 height: 30px;
 width: 100%;
-font-size: 20px;
+font-size: 26px;
+color: white; 
 }
+
 .button-card {
   padding: 20px;
-  background-color: #687354;
   width: auto;
   display: flex;
   }
 
 button:hover {
-  box-shadow:  5px 10px #272727;
+  background-color: #cd2b82;
 }
 
 button {
-  font-size: 20px;
+  font-size: 24px;
+  font-family: "Roboto";
   font-weight: bold;
   width: 100%;
   padding: 10px;
   margin: 5%;
   border-radius: 8px;
   border: none;
-  background-color: #ed8bbf;
+  background-color: #ec71b2;
   color: white;
+  /* border: solid white 2px; */
+  box-shadow:  5px 10px #272727;
 }
 
 .dropdown {
-  background-color: #757575;
-  padding: 10px;
-  font-size: 16px;
+  background-color: rgb(239, 196, 196, 0.35);
+  border: 2px solid rgb(255, 255, 255);
+  padding: 15px;
+  font-size: 24px;
+  border-radius: 10px;
   text-align: center;
-
 }
 
 .Result {
-  border: solid red 2px; 
   margin: 10px;
+  padding: 15px;
+  border-radius: 20px;
+  background-color: #eed8ce;
+  color: rgb(32, 32, 32);
+  box-shadow:  5px 10px #171717;
 }
 
 .radio-button {
-  border: solid red 2px; 
+  background-color: rgb(239, 196, 196, 0.35);
   width: 100%;
+  padding: 5px;
+  border-radius: 15px;
+  margin: 10px;
   display: flex;
-  /* align-items: center; */
-  /* justify-content: space-between; */
   flex-direction: row;
-  
-
 }
 
 .radio-button-button {
+  padding: 10px;
   width: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
   position: relative;
-align-items: left;
-  border: solid rgb(50, 49, 49) 2px; 
 }
 
 .radio-button-joke {
+  padding: 10px;
   text-align: left;
   width: 90%;
-  border: solid rgb(50, 49, 49) 2px; 
-  
+  font-size: 22px;
 }

@@ -9,9 +9,9 @@ const Email = ({name, email, setEmail, handleStepIncrease, handleStepDecrease}) 
   return (
     <section className="container">
         <div className="input-card">
-        <h2>Hi there {name}</h2>
+        <h4>Hi there {name}</h4>
         <h3>What is your <b>email address?</b></h3>
-          <input type="text" value={email} onChange={handleEmailChange}
+          <input type="text" Placeholder="Type your email address here" value={email} onChange={handleEmailChange}
           />
         </div>
 
