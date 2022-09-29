@@ -47,10 +47,8 @@ const Form = () => {
 
   const onCheckboxGroupToggle = (checkboxValue) => {
     if (checkboxGroup.includes(checkboxValue)) {
-      // delete element from array by using filter method
       setCheckboxGroup(checkboxGroup.filter((item) => item !== checkboxValue))
     } else {
-      // opy all the values from the previous heckboxGroup array
       setCheckboxGroup([checkboxValue, ...checkboxGroup])
     }
   }

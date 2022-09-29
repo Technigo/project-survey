@@ -1,13 +1,13 @@
 import React from 'react'
 
 const checkboxGroupArray = [
-  'bleeding gums',
-  'calculus',
-  'dry mouth',
-  'tooth ache',
-  'bad breath',
-  'plaque & bacteria',
-  'ache in gumline'
+  ' bleeding gums ',
+  ' calculus  ',
+  ' dry mouth  ',
+  ' tooth ache  ',
+  ' bad breath  ',
+  ' plaque & bacteria  ',
+  ' ache in gumline  '
 ]
 
 const FourthQuestion = ({
