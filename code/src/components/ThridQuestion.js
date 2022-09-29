@@ -2,9 +2,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-const greenClosets = ['Second Hand', 'Fast Fashion Brand']
+const greenClosets = ['Second Hand', 'Fast Fashion Brands']
 
-const ThridQuestion = ({ nextQuestion, onThridQuestionChange, thrid }) => {
+const ThridQuestion = ({ nextQuestion, onThridQuestionChange, closet }) => {
   return (
     <section className="section">
       <div className="content-wrap">
@@ -17,13 +17,13 @@ const ThridQuestion = ({ nextQuestion, onThridQuestionChange, thrid }) => {
                 type="radio"
                 value={clothes}
                 onChange={onThridQuestionChange}
-                checked={clothes}
+                checked={closet === clothes}
                 id="green"
                 name="green" />
               {clothes}
             </label>
           ))}
-          <button type="submit" onClick={nextQuestion} className="button" disabled={thrid === ''}>
+          <button type="submit" onClick={nextQuestion} className="button" disabled={closet === ''}>
           Submit Answers!
           </button>
         </form>

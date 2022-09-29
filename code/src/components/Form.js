@@ -9,7 +9,13 @@ import Summary from './Summary';
 const Form = () => {
   const [welcome, setWelcome] = useState('')
   const [first, setFirst] = useState('')
+  /* ThridQuestion States */
+  const [bus, setBus] = useState(false);
+  const [bike, setBike] = useState(false);
+  const [walking, setWalking] = useState(false)
+
   const [greenCloset, setGreenCloset] = useState('');
+  /* Counter for all questions */
   const [counter, setCounter] = useState(0)
 
   const handleWelcomeChange = (e) => {
@@ -20,11 +26,19 @@ const Form = () => {
     setFirst(e.target.value)
   }
 
-  const handleSecondChange = (e) => {
-    setIsChecked(e.target.value)
+  const handleBusChange = () => {
+    setBus(!bus)
   }
 
-  const handleThridChange = (e) => {
+  const handleBikeChange = () => {
+    setBike(!bike)
+  }
+
+  const handleWalkingChange = () => {
+    setWalking(!walking)
+  }
+
+  const handleGreenCloset = (e) => {
     setGreenCloset(e.target.value)
   }
 
@@ -47,18 +61,25 @@ const Form = () => {
       {counter === 2
       && <SecondQuestion
         nextQuestion={handleNextQuestion}
-        secondQuestion={handleSecondChange} />}
+        setBus={handleBusChange}
+        setBike={handleBikeChange}
+        setWalking={handleWalkingChange}
+        bus={bus}
+        bike={bike}
+        walking={walking} />}
       {counter === 3
       && <ThridQuestion
-        onThridQuestionChange={handleThridChange}
+        onThridQuestionChange={handleGreenCloset}
         nextQuestion={handleNextQuestion}
-        ThridQuestion={greenCloset} />}
+        closet={greenCloset} />}
       {counter === 4
       && <Summary
         nameWelcome={welcome}
         firstQuestion={first}
-        secondQuestion={handleSecondChange}
-        ThridQuestion={greenCloset} />}
+        bus={bus}
+        bike={bike}
+        walking={walking}
+        closet={greenCloset} />}
     </section>
   )
 };

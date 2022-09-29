@@ -3,7 +3,7 @@
 /* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
 
-const SecondQuestion = ({ nextQuestion, secondQuestion }) => {
+const SecondQuestion = ({ nextQuestion }) => {
   const [bus, setBus] = useState(false);
   const [bike, setBike] = useState(false);
   const [walking, setWalking] = useState(false)
@@ -18,7 +18,6 @@ const SecondQuestion = ({ nextQuestion, secondQuestion }) => {
               type="checkbox"
               checked={bus}
               onChange={setBus}
-              value={secondQuestion}
               id="bus"
               name="bus" />
             Bus
@@ -28,7 +27,6 @@ const SecondQuestion = ({ nextQuestion, secondQuestion }) => {
               type="checkbox"
               checked={bike}
               onChange={setBike}
-              value={secondQuestion}
               id="bike"
               name="bike" />
             Bike
@@ -38,12 +36,11 @@ const SecondQuestion = ({ nextQuestion, secondQuestion }) => {
               type="checkbox"
               checked={walking}
               onChange={setWalking}
-              value={secondQuestion}
               id="walking"
               name="walking" />
             Walking
           </label>
-          <button type="button" onClick={nextQuestion} className="button" disabled={secondQuestion === ''}>
+          <button type="button" onClick={nextQuestion} className="button">
             Next Question!
           </button>
         </form>

@@ -1,13 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Cabin', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(176, 227, 198);
+  display: center;
+  justify-content: center;
+  align-items: center;
+  padding: 300px;
+  margin: auto;
+  width: 60%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Cabin', sans-serif;
 }
+
