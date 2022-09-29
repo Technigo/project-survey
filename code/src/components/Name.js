@@ -11,4 +11,4 @@ const Name = ({ name, setName }) => {
     </>
   );
 }
-export default Name
+export default Name;

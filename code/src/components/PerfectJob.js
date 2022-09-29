@@ -12,4 +12,4 @@ const PerfectJob = ({ perfectJob, setPerfectJob }) => {
   );
 }
 
-export default PerfectJob
+export default PerfectJob;

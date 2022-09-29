@@ -12,4 +12,4 @@ const Fondness = ({ fondness, setFondness }) => {
   );
 }
 
-export default Fondness
+export default Fondness;

@@ -1,15 +1,17 @@
+/* eslint max-len: ["error", { "code": 180 }] */
+
 import React, { useState } from 'react';
 
 import Name from 'components/Name';
-import WhyCute from 'components/WhyCute';
+import CoolestThing from 'components/CoolestThing';
 import PerfectJob from 'components/PerfectJob';
 import Fondness from 'components/Fondness';
 import Result from 'components/Result';
 
-export const App = () => {
+const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
-  const [whyCute, setWhyCute] = useState('');
+  const [coolestThing, setCoolestThing] = useState('');
   const [perfectJob, setPerfectJob] = useState('');
   const [fondness, setFondness] = useState('');
 
@@ -18,16 +20,16 @@ export const App = () => {
   }
 
   return (
-    <>
+    <div className="test">
       {/* 1 NAME - TEXT INPUT */}
       {step === 1 && (
         <Name name={name} setName={setName} />
       )}
       {/* 2 CUTEST THING - SELECT */}
       {step === 2 && (
-        <WhyCute whyCute={whyCute} setWhyCute={setWhyCute} />
+        <CoolestThing coolestThing={coolestThing} setCoolestThing={setCoolestThing} />
       )}
-      {/* 3 PERFECT JOB - RADIOBOXES & TEXT INPUT */}
+      {/* 3 PERFECT JOB - RADIOBUTTONS & TEXT INPUT */}
       {step === 3 && (
         <PerfectJob perfectJob={perfectJob} setPerfectJob={setPerfectJob} />
       )}
@@ -37,14 +39,16 @@ export const App = () => {
       )}
       {/* 5 DISPLAY RESULT */}
       {step >= 5 && (
-        <Result name={name} whyCute={whyCute} perfectJob={perfectJob} fondness={fondness} />
+        <Result name={name} coolestThing={coolestThing} perfectJob={perfectJob} fondness={fondness} />
       )}
       {step < 5 && (
         <>
           <p>Current step: {step}</p>
-          <button type="submit" onClick={handleStepIncrease}>Next step</button>
+          <button type="button" onClick={handleStepIncrease}>Next step</button>
         </>
       )}
-    </>
+    </div>
   );
 }
+
+export default App;
