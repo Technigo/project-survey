@@ -16,7 +16,7 @@ export const WelcomeMessage = ({ name, setName, phone, setPhone }) => {
               This survay will help us to make your dream comes true.
         </h4>
         <p>What is your name?</p>
-        <input type="text" value={name} onChange={handleNameChange} />
+        <input type="text" placeholder="Your name" value={name} onChange={handleNameChange} required />
       </div>
       <WelcomeMessagePhone phone={phone} setPhone={setPhone} />
     </>

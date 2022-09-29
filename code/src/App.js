@@ -20,6 +20,9 @@ export const App = () => {
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
+  const handleSubmitButton = () => {
+    setButton()
+  }
 
   return (
     <div className="parent">
@@ -51,18 +54,15 @@ export const App = () => {
             age={age} />
         )}
         {step >= 5 && (
-          <SubmitButton
-            button={button}
-            setButton={setButton} />
-        )}
-        {step >= 6 && (
           <ThankYouMessage message={message} setMessage={setMessage} />
         )}
         {step < 5 && (
-          <p>
+          <div className="counter">
+            <p>
        Current question: {step}
-            <button className="nextButton" type="button" onClick={handleStepIncrease}>Next question</button>
-          </p>
+              <button className="nextButton" type="button" onClick={handleStepIncrease}>Next question</button>
+            </p>
+          </div>
         )}
 
       </div>

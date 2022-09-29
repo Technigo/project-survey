@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Confirmation = ({ name, phone, dest, pax, paxChild, age }) => {
   return (
-    <div>
+    <div className="confirmation">
       <p>Your name is: {name}</p>
       <p>Your phone number is: {phone}</p>
       <p>Wished flight time: {dest}</p>

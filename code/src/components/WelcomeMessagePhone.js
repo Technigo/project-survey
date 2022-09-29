@@ -9,7 +9,7 @@ export const WelcomeMessagePhone = ({ phone, setPhone }) => {
   return (
     <div className="phoneNumber">
       <p>What is your phone number??</p>
-      <input type="text" value={phone} onChange={handlePhoneChange} />
+      <input type="tel" placeholder="Your phone number" value={phone} onChange={handlePhoneChange} />
     </div>
   )
 }

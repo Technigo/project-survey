@@ -31,6 +31,30 @@ code {
   border: black solid;
 }
 
+p {
+  font-size:30px;
+}
+
+.ThankYouMessage h3, .welcomeMessage h2 {
+  color:bisque;
+  font-size: 35px;
+  text-align:center;
+}
+
+.welcomeMessage, .phoneNumber {
+  text-align: center;
+}
+
+.destinationChoice {
+  display: flex;
+  flex-direction: column;
+}
+
+.destinationChoice label {
+  font-size: 30px;
+  margin-bottom: 10px;
+  padding: 5px;
+}
 
 .welcomeMessage {
   font-style: oblique;
@@ -49,10 +73,10 @@ code {
     border: none;
     border-radius: 25px;
     box-shadow: 0 9px #999;
+    
 }
 
 /* button 'click' effect */
-
 .nextButton:hover {background-color: #fba363}
 
 .nextButton:active {
@@ -61,20 +85,72 @@ code {
   transform: translateY(4px);
 }
 
+.counter {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
+}
 /* palm pictures styling */
 .palmtree {
   grid-area: 1 / 1 / 2 / 4;
 }
- .palmtree img {
+.palmtree img {
   width: 100vw;
   height: auto;
-  
-  
+
  }
-.palmtreeup{
-  width: 25%;
-  margin-left: 50p;
-  position: fixed;
-  right: 5px;
-  padding-left: 50px;
+
+ /* Inputs design */
+.welcomeMessage input, .phoneNumber input {
+  width: 80%;
+ }
+
+select {
+  margin-left: 10px;
+ }
+
+.drop-down p {
+  font-size:16px;
 }
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+}
+
+.drop-down label {
+  margin-bottom: 15px;
+}
+
+
+
+/* design for phones and small tablets*/
+
+ @media screen and (max-width: 900px) {
+.parent {
+  display: flex;
+  flex-direction: column;
+}
+
+.SurvayWrapper {
+  width: 80%;
+  margin: 15px 15px 0px 25px;
+  border-radius: 10%;
+}
+
+.palmtree {
+  visibility: hidden;
+}
+
+.drop-down {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+select {
+  margin: 10px;
+  width: 50px;
+  height: 30px;
+}
+ }

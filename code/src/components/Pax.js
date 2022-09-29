@@ -42,7 +42,7 @@ export const Pax = ({ pax, setPax, paxChild, setPaxChild, age, setAge }) => {
         </label>
         <label htmlFor={age}>
           <p> How old are children? For example: 11, 12, 16</p>
-          <input type="text" value={age} onChange={handleAgeChange} />
+          <input type="text" placeholder="write age, coma between" S value={age} onChange={handleAgeChange} />
         </label>
 
       </div>
