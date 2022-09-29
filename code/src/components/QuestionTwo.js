@@ -19,7 +19,7 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Survey progress:{' '}
+          Progress:{' '}
         </label>
         <progress className="progress-bar" id="survey" value="2" max="8" />
       </div>
@@ -37,7 +37,12 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
               />
               {radioButtonInput}
             </label>
-          ))}
+          ))}{' '}
+          {/* Alternative selection */}
+          {/* <label htmlFor="alt-selection">
+            Other:
+            <input id="alt-selection" type="text" onChange={handleMoodChange} />
+          </label> */}
           <input type="submit" className="continue-btn" value="Next" />
         </form>
 

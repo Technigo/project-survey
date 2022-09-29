@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/control-has-associated-label */
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable comma-dangle */
 /* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -14,23 +16,27 @@ const QuestionFive = ({
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Survey progress:{' '}
+          Progress:{' '}
         </label>
         <progress className="progress-bar" id="survey" value="5" max="8" />
       </div>
       <section className="question-container">
         {/* Exclamation input */}
         <div className="form-container">
-          <h1 className="question">
-            What do you shout when something goes really wrong?
-          </h1>
+          <h1 className="question">Write or select an exclamation</h1>
           <form className="form-style" onSubmit={handleSubmit}>
-            <label>Shout:</label>
-            <input
-              type="text"
-              value={exclamation}
+            <select
+              className="select-form"
               onChange={handleExclamationChange}
-            />
+              value={exclamation}>
+              <option value="default">Options</option>
+              <option value="Mamma Mia!">Mamma mia!</option>
+              <option value="Why did this happen to me?">
+                Why did this happen to me?
+              </option>
+            </select>{' '}
+            <label>Shout:</label>
+            <input type="text" onChange={handleExclamationChange} />
             <input type="submit" className="continue-btn" value="Next" />
           </form>
         </div>

@@ -18,7 +18,7 @@ const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Survey progress:{' '}
+          Progress:{' '}
         </label>
         <progress className="progress-bar" id="survey" value="8" max="8" />
       </div>

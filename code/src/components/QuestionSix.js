@@ -14,14 +14,14 @@ const QuestionSix = ({
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Survey progress:{' '}
+          Progress:{' '}
         </label>
         <progress className="progress-bar" id="survey" value="6" max="8" />
       </div>
       <section className="question-container">
         {/* Adjective 2 input */}
         <div className="form-container">
-          <h1>What does obfuscatory mean?</h1>
+          <h1>Choose another adjective or write</h1>
           <form className="select-style" onSubmit={handleSubmit}>
             <select
               className="select-form"
@@ -36,7 +36,16 @@ const QuestionSix = ({
               <option value="inexplicable">inexplicable</option>
               <option value="obvious">obvious</option>
               <option value="gloomy">gloomy</option>
-            </select>
+            </select>{' '}
+            {/* Alternative selection */}
+            <label htmlFor="alt-selection">
+              Other:
+              <input
+                id="alt-selection"
+                type="text"
+                onChange={handleAdjectiveSecondChange}
+              />
+            </label>
             <input type="submit" className="continue-btn" value="Next" />
           </form>
         </div>

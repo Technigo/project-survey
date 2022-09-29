@@ -10,13 +10,13 @@ const QuestionThree = ({ handleSubmit, adjective, handleAdjectiveChange }) => {
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Survey progress:{' '}
+          Progress:{' '}
         </label>
         <progress className="progress-bar" id="survey" value="3" max="8" />
       </div>
       <section className="question-container">
         {/* Form */}
-        <h1>What adjective would you use to describe an antique statue?</h1>
+        <h1>Write or select an adjective</h1>
         <form className="select-style" onSubmit={handleSubmit}>
           <select
             className="select-form"
@@ -34,7 +34,6 @@ const QuestionThree = ({ handleSubmit, adjective, handleAdjectiveChange }) => {
             <input
               id="alt-selection"
               type="text"
-              value={adjective}
               onChange={handleAdjectiveChange}
             />
           </label>

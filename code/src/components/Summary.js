@@ -45,9 +45,9 @@ const Summary = ({
             only ate hay.{' '}
           </p>
           <p>
-            <span className="red">{exclamation}!</span> the dragon raged, my
-            plan has failed. I can’t have hay in the house. If I sneeze it’ll
-            burn down, no doubts!{' '}
+            <span className="red">{exclamation}</span> the dragon raged, my plan
+            has failed. I can’t have hay in the house. If I sneeze it’ll burn
+            down, no doubts!{' '}
           </p>
           <p>
             So the dragon now had a{' '}
@@ -84,7 +84,7 @@ const Summary = ({
     <footer className="footer-container">
       <h4 className="creator">Created & developed by</h4>
       <p className="creator">~ Saralie Bognandi ~</p>
-      <h4 className="creator">Written by</h4>
+      <h4 className="creator">Mad lib written by</h4>
       <p className="creator">~ Linda Edorsson ~</p>
     </footer>
   </>
