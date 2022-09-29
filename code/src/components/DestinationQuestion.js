@@ -1,15 +1,6 @@
 import React from 'react';
 
-export const DestinationQuestion = ({
-  dest, setDest,
-  destTwo, setDestTwo, destThree, setDestThree
-}) => {
-  const handleDestTwoChange = (event) => {
-    setDestTwo(event.target.value)
-  }
-  const handleDestThreeChange = (event) => {
-    setDestThree(event.target.value)
-  }
+export const DestinationQuestion = ({ dest, setDest }) => {
   const handleDestChange = (event) => {
     setDest(event.target.value)
   }
@@ -20,15 +11,15 @@ export const DestinationQuestion = ({
 
         <label htmlFor="dest">
            2-3 hours
-          <input type="radio" name="2-3 hours" value={dest} onChange={handleDestChange} />
+          <input type="radio" name="2-3 hours" value="2-3 hours" checked={dest === '2-3 hours'} onChange={(e) => handleDestChange(e)} />
         </label>
         <label htmlFor="dest">
           4-5 hours
-          <input type="radio" name="4-5 hours" value={destTwo} onChange={handleDestTwoChange} />
+          <input type="radio" name="4-5 hours" value="4-5 hours" checked={dest === '4-5 hours'} onChange={(e) => handleDestChange(e)} />
         </label>
         <label htmlFor="dest">
           N/A
-          <input type="radio" name="n/a" value={destThree} onChange={handleDestThreeChange} />
+          <input type="radio" name="n/a" value="n/a" checked={dest === 'n/a'} onChange={(e) => handleDestChange(e)} />
         </label>
 
       </div>
