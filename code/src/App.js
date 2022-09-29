@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
+import { name } from 'component/nameInput';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
   const [recieverName, setRecieverName] = useState('');
   const [consideration, setConsideration] = useState('');
   const [userInput, setUserInput] = useState('');
+  const [actionValue, setActionValue] = useState('');
   const [userName, setUserName] = useState('');
 
   const handleCounterButtonClick = (shouldIncrease) => {
@@ -23,12 +25,12 @@ export const App = () => {
     setUserInput('');
   }
 
-  const handleRecieverNameInputChange = (event) => {
-    setRecieverName(event.target.value);
-  }
-
   const handleConsiderationChange = (event) => {
     setConsideration(event.target.value);
+  }
+
+  const handleActionValue = (event) => {
+    setActionValue(event.target.value)
   }
 
   const handleUserNameInputChange = (event) => {
@@ -44,10 +46,10 @@ export const App = () => {
         <div>
           <p>
             Dear
-            <input type="text" value={recieverName} onChange={handleRecieverNameInputChange} placeHolder="Type name" />
+            <nameInput recieverName={recieverName} setRecieverName={setRecieverName} />
             ,
           </p>
-          <p>
+          <div>
             <p>You might want to consider</p>
             <form>
               <select>
@@ -65,11 +67,33 @@ export const App = () => {
                 <option value="Getting a life">Getting a life</option>
               </select>
             </form>
-          </p>
-          <p>
+          </div>
+          <div>
             <p>Lately I`ve noticed that you:</p>
             <textarea rows="5" cols="30" name="Message" type="text" value={userInput} onChange={handleUserInputChange} placeHolder="Write a message" />
-          </p>
+          </div>
+          <div>
+            <label htmlFor="actionValue">
+              <input type="radio" value="Sulk" checked={actionValue === 'Sulk'} onChange={() => handleActionValue('Sulk')} />
+              Sulk
+            </label>
+            <label htmlFor="actionValue">
+              <input type="radio" value="Retaliate" checked={actionValue === 'Retaliate'} onChange={() => handleActionValue('Retaliate')} />
+              Retaliate
+            </label>
+            <label htmlFor="actionValue">
+              <input type="radio" value="Actually confront you" checked={actionValue === 'Actually confront you'} onChange={() => handleActionValue('Actually confront you')} />
+              Actually confront you
+            </label>
+            <label htmlFor="actionValue">
+              <input type="radio" value="Write another note" checked={actionValue === 'Write another note'} onChange={() => handleActionValue('Write another note')} />
+              Write another note
+            </label>
+            <label htmlFor="actionValue">
+              <input type="radio" value="Call the cops" checked={actionValue === 'Call the cops'} onChange={() => handleActionValue('Call the cops')} />
+              Call the cops
+            </label>
+          </div>
           <p>
             Sincerely,
             <input type="text" value={userName} onChange={handleUserNameInputChange} placeHolder="Your name" />
