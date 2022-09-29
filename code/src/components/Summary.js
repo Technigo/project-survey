@@ -5,7 +5,7 @@ const Summary = ({
   selectInput,
   radioInput
 }) => {
-
+/*
   const changeBackgroundColor = () => {
     let color;
     if (selectInput === "Orange") {
@@ -16,12 +16,13 @@ const Summary = ({
         color = '#f09937';
     }
     return color;
-};
+}; */
 
   return (
-
-    <div>
-      <div className="Greeting">{radioInput}, {nameInput}!</div>
+    <div className="container">
+      <div className="greeting">
+        <h3>{radioInput}, {nameInput}!</h3>
+      </div>
     </div>
   )
 

@@ -1,5 +1,6 @@
 body {
-  background-color: #db4f5f;
+  background-color: #ea9ccb;
+  accent-color: #a02532;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -13,15 +14,90 @@ code {
     monospace;
 }
 
-h1, h2 {
-  color: #f3eee9;
-  font-family: 'DM Serif Display', serif;
+/* FONT STYLES */
+h1, h2, h3 {
+  color: #591f35;
+  font-family: 'DM Serif Text', serif;
+  text-align: center;
 }
 
-.Greeting {
-  color: #f3eee9;
-  font-family: 'DM Serif Display', serif;
-  font-size: 35px;
+h1 {
+  font-size: 40px;
+  line-height: 45px;
 }
+
+h2 {
+  font-size: 30px;
+  line-height: 35px;
+}
+
+h3 {
+  font-size: 60px;
+  line-height: 65px;
+}
+
+.button {
+  color: #591f34;
+  background-color: #f3eee9;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 15px;
+  border-color: #f3eee9;
+  padding: 10px 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-style: none;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 70px 25px 0 25px;
+}
+
+.checkmark {
+  color: #591f35;
+}
+
+/* NAME INPUT STYLES */
+.name-input {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border: none;
+  background-color: #f3eee9;
+  margin: 0 auto 20px auto;
+}
+
+/* RADIO BUTTON STYLES */
+.greetingWords-container {
+  color: #591f35;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0 auto 20px auto;
+  max-width: 225px;
+}
+
+.radioButton-label {
+  padding: 7px;
+}
+
+/* SELECT STYLES */
+.select-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+select{
+  width: 80%;
+  font-size: 15px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 5px 0;
+  background-color: #f3eee9;
+  color: #591f35;
+  border-color: #f3eee9; 
+  margin-bottom: 20px;
+}
+
 
 
