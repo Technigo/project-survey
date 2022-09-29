@@ -103,7 +103,7 @@ export const App = () => {
 
       {counter < 7 && counter > 0 && (
         <p>
-          <button type="button" onClick={handleClearButtonClick}>
+          <button type="button" aria-label="clear button" onClick={handleClearButtonClick}>
           Clear input
           </button>
         </p>
