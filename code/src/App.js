@@ -19,24 +19,24 @@ export const App = () => {
     <>
       <Header />
       {step === 1 && (
-        <Books book={book} setBooks={setBooks} />
+        <Books book={book} setBooks={setBooks} inputLabel="Which books would you like to set up on your wishlist?" />
       )}
       {step === 2 && (
-        <Language language={language} setLanguage={setLanguage} />
+        <Language language={language} setLanguage={setLanguage} inputLabel="What language do you want?" />
       )}
       {step === 3 && (
-        <Version version={version} setVersion={setVersion} />
+        <Version version={version} setVersion={setVersion} inputLabel="Which version would you like" />
       )}
       {step >= 4 && (
         <Result book={book} language={language} version={version} />
       )}
       {step < 4 && (
 
-        <>
+        <div className="next-step">
           <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>Next step</button> 
+          <button type="button" onClick={handleStepIncrease}>Next step</button>
     
-        </>
+        </div>
       )}
     </>
   );
