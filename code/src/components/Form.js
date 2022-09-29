@@ -29,7 +29,7 @@ const Form = () => {
 
   // Declaring what happens in different steps of the survey //
   return (
-    <div>
+    <div className="form">
       {step === 1 && <StartPage onStepChange={handleStepChange} />}
       {step === 2 && (
         <NameQuestion

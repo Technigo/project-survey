@@ -36,6 +36,7 @@ h3 {
   line-height: 65px;
 }
 
+/* BUTTON STYLES */
 .button {
   color: #591f34;
   background-color: #f3eee9;
@@ -48,15 +49,28 @@ h3 {
   border-style: none;
 }
 
+/* OVERALL CONTAINER STYLES */
+.outerWrapper {
+  height: 100%;
+}
+
+main {
+  height: 100%;
+}
+
+#root {
+  height: 100%;
+}
+
+.form {
+  height: 100%;
+}
+
 .container {
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 70px 25px 0 25px;
-}
-
-.checkmark {
-  color: #591f35;
+  margin: 100px 25px 0 25px;
 }
 
 /* NAME INPUT STYLES */
@@ -88,7 +102,7 @@ h3 {
   flex-direction: column;
 }
 
-select{
+select {
   width: 80%;
   font-size: 15px;
   font-family: 'Montserrat', sans-serif;
@@ -99,5 +113,52 @@ select{
   margin-bottom: 20px;
 }
 
+/* MEDIA QUERIES FOR TABLETS */
+@media (min-width: 768px) and (max-width: 1024px){
+  .question-container{
+    max-width: 400px;
+  }
 
+  h1 {
+    font-size: 50px;
+    line-height: 60px;
+  }
+  
+  h2 {
+    font-size: 35px;
+    line-height: 45px;
+  }
+  
+  h3 {
+    font-size: 70px;
+    line-height: 80px;
+  }
+}
 
+/* MEDIA QUERIES FOR DEKSTOP */
+@media (min-width: 1025px){
+  h1 {
+    font-size: 60px;
+    line-height: 70px;
+  }
+  
+  h2 {
+    font-size: 40px;
+    line-height: 50px;
+  }
+  
+  h3 {
+    font-size: 90px;
+    line-height: 100px;
+  }
+
+  .container {
+    align-items: center;
+    justify-content: center;
+    margin: none;
+  }
+
+  .question-container{
+    max-width: 500px;
+  }
+}
