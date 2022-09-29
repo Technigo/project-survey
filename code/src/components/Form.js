@@ -26,16 +26,16 @@ const Form = () => {
     setFirst(e.target.value)
   }
 
-  const handleBusChange = () => {
-    setBus(!bus)
+  const handleBusChange = (e) => {
+    setBus(e.target.checked)
   }
 
-  const handleBikeChange = () => {
-    setBike(!bike)
+  const handleBikeChange = (e) => {
+    setBike(e.target.checked)
   }
 
-  const handleWalkingChange = () => {
-    setWalking(!walking)
+  const handleWalkingChange = (e) => {
+    setWalking(e.target.checked)
   }
 
   const handleGreenCloset = (e) => {

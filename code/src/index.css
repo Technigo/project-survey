@@ -19,3 +19,68 @@ code {
   font-family: 'Cabin', sans-serif;
 }
 
+/*WelcomeToTheSurvey*/
+h1 {
+  font-size: 25px;
+}
+
+p{
+  font-size: 20px;
+}
+
+button {
+  padding: 2px 5px;
+  margin-top: 20px;
+  border: 2px solid #1e272e;
+  transition: all 0.3s;
+  background-color: #3ee333;
+  font-size:15px;
+}
+
+/*FirstQuestion*/
+
+select, input {
+  margin-right: 20px;
+  border: #1e272e;
+  text-align: center;
+  padding: 2px 5px;
+  font-size: 15px;
+}
+
+.button-next {
+  width: fit-content;
+  align-self: center;
+}
+
+/*SecondQuestion*/
+
+.form-checkbox{
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 18px;
+}
+
+.input-checkbox{
+  margin-right: 10px;
+}
+
+/*ThridQuestion*/
+
+.form-radio-button{
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 18px;
+}
+
+.input-radio{
+  margin-right: 10px;
+}
+
+/*Summary*/
+
+.button-summary:hover{
+    box-shadow: 0 0 0 5px rgb(234, 13, 183), 0 0 0 10px #c1dfe6;
+    border: 2px solid #16b7f2;
+    transform: scale(1.2);
+    color: rgb(1, 1, 2);
+}

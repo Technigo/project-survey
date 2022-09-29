@@ -19,7 +19,8 @@ const SecondQuestion = ({ nextQuestion }) => {
               checked={bus}
               onChange={setBus}
               id="bus"
-              name="bus" />
+              name="bus"
+              className="input-checkbox" />
             Bus
           </label>
           <label htmlFor="bike">
@@ -28,7 +29,8 @@ const SecondQuestion = ({ nextQuestion }) => {
               checked={bike}
               onChange={setBike}
               id="bike"
-              name="bike" />
+              name="bike"
+              className="input-checkbox" />
             Bike
           </label>
           <label htmlFor="walking">
@@ -37,10 +39,11 @@ const SecondQuestion = ({ nextQuestion }) => {
               checked={walking}
               onChange={setWalking}
               id="walking"
-              name="walking" />
+              name="walking"
+              className="input-checkbox" />
             Walking
           </label>
-          <button type="button" onClick={nextQuestion} className="button">
+          <button type="button" onClick={nextQuestion} className="button button-next">
             Next Question!
           </button>
         </form>

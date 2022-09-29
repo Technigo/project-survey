@@ -24,7 +24,7 @@ const FirstQuestion = ({ firstQuestion, onFirstQuestionChange, nextQuestion }) =
               <option value="never">Never</option>
             </select>
           </label>
-          <button type="button" onClick={nextQuestion} className="button" disabled={firstQuestion === ''}>
+          <button type="button" onClick={nextQuestion} className="button button-next" disabled={firstQuestion === ''}>
             Next Question!
           </button>
         </form>

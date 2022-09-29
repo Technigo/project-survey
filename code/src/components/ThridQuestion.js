@@ -19,11 +19,12 @@ const ThridQuestion = ({ nextQuestion, onThridQuestionChange, closet }) => {
                 onChange={onThridQuestionChange}
                 checked={closet === clothes}
                 id="green"
-                name="green" />
+                name="green"
+                className="input-radio" />
               {clothes}
             </label>
           ))}
-          <button type="submit" onClick={nextQuestion} className="button" disabled={closet === ''}>
+          <button type="submit" onClick={nextQuestion} className="button button-next" disabled={closet === ''}>
           Submit Answers!
           </button>
         </form>
