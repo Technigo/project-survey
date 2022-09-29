@@ -14,9 +14,9 @@ const Result = ({age, frequency, museum, memory}) => {
             </ul>
 
           <div className="link-container">
-            <span class="arrow" aria-hidden="true"> ✨ </span>
+            <span className="arrow" aria-hidden="true"> ✨ </span>
             <a href="https://www.stockholmmuseums.se/en" target="_blank">Discover more about the Stockholm museum scene</a>
-            <span class="arrow" aria-hidden="true"> ✨ </span>
+            <span className="arrow" aria-hidden="true"> ✨ </span>
           </div>
       </>
     );

@@ -28,7 +28,7 @@ const AgeQuestion = ({age, setAge}) => {
                     onChange={handleAgeChange}
                     checked={age === group}
                     />
-                    <span class="checkmark"></span>
+                    <span className="checkmark"></span>
                     {group}
                   </label>
               ))}

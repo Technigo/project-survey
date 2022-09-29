@@ -18,7 +18,7 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
     <>
       <h2>How many times per year do you visit a museum in Stockholm?</h2>
         <form>
-          <label for="visits">Number of visits per year:</label>
+          <label htmlFor="visits">Number of visits per year:</label>
           <input 
           id="visits"
           className="range-input"
@@ -28,7 +28,7 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
           value={frequency}
           min="0"
           max="50"/>
-          <span class="bold-p">{frequency}</span>
+          <span className="bold-p">{frequency}</span>
         </form>
       </>
     );

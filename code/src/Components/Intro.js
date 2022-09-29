@@ -9,6 +9,7 @@ const Intro = () => {
   }
     return (
       <>
+      <section>
           <h1>Stockholm Museums: a Survey</h1>
           <p>
           Our society is ever-changing and fast-paced. 
@@ -21,6 +22,7 @@ const Intro = () => {
           <span className="bold-p"> So thank you for taking the time to answer this survey, 
           and for helping us to make Stockholm's museums better 🏛 </span>
           </p>
+      </section>
       </>
     );
   }
