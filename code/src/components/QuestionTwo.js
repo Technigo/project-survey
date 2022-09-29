@@ -1,3 +1,5 @@
+/* eslint-disable react/no-unknown-property */
+/* eslint-disable react/self-closing-comp */
 /* eslint-disable comma-dangle */
 /* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable jsx-a11y/label-has-associated-control */
@@ -28,9 +30,10 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
         <h2>How would you describe yourself?</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
           {radioButtonObject.map((radioButtonInput) => (
-            <label key={radioButtonInput}>
+            <label className="radio-button-overlay" key={radioButtonInput}>
               <input
                 type="radio"
+                className="radio-button"
                 value={radioButtonInput}
                 onChange={handleMoodChange}
                 checked={radioButtonInput === mood}
@@ -44,6 +47,7 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
               {/* Other: */}
               <input
                 placeholder="Other"
+                className="input-form"
                 id="alt-selection"
                 type="text"
                 onChange={handleMoodChange}

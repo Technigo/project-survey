@@ -22,7 +22,7 @@ const QuestionThree = ({ handleSubmit, adjective, handleAdjectiveChange }) => {
             className="select-form"
             onChange={handleAdjectiveChange}
             value={adjective}>
-            <option value="DEFAULT">Choose adjective:</option>
+            <option value="DEFAULT">Choose adjective</option>
             <option value="shiny">shiny</option>
             <option value="crooked">crooked</option>
             <option value="brilliant">brilliant</option>
@@ -34,6 +34,7 @@ const QuestionThree = ({ handleSubmit, adjective, handleAdjectiveChange }) => {
               {/* Other: */}
               <input
                 placeholder="Other"
+                className="input-form"
                 id="alt-selection"
                 type="text"
                 onChange={handleAdjectiveChange}

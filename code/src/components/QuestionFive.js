@@ -39,6 +39,7 @@ const QuestionFive = ({
               {/* <label>Shout:</label> */}
               <input
                 placeholder="Other"
+                className="input-form"
                 type="text"
                 onChange={handleExclamationChange}
               />

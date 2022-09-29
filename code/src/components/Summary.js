@@ -20,7 +20,9 @@ const Summary = ({
     <section className="summary-container">
       <div className="story-container">
         {' '}
-        <h2 className="summary-title">The Dragon Sneeze</h2>
+        <div className="header-container">
+          <h2 className="summary-title">The Dragon Sneeze</h2>
+        </div>
         <div className="story-container-final">
           <p>
             <span className="red">{name}</span> was a{' '}
@@ -84,6 +86,7 @@ const Summary = ({
         </div>
       </div>
     </section>
+    <hr />
     <footer className="footer-container">
       <h4 className="creator">Created & developed by</h4>
       <p className="creator">~ Saralie Bognandi ~</p>

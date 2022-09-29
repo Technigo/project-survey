@@ -30,6 +30,7 @@ const QuestionOne = ({ handleSubmit, name, handleNameChange }) => {
               {/* <label>Avatar name</label> */}
               <input
                 type="text"
+                className="input-form"
                 value={name}
                 onChange={handleNameChange}
                 placeholder="Avatar name"

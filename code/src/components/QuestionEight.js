@@ -27,9 +27,10 @@ const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {
         <h2>Whats for dinner?</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
           {foodObject.map((radioButtonInput) => (
-            <label key={radioButtonInput}>
+            <label className="radio-button-overlay" key={radioButtonInput}>
               <input
                 type="radio"
+                className="radio-button"
                 value={radioButtonInput}
                 onChange={handleFoodChange}
                 checked={radioButtonInput === food}
@@ -43,6 +44,7 @@ const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {
               {/* Other */}
               <input
                 placeholder="Other"
+                className="input-form"
                 id="food-input"
                 type="text"
                 onChange={handleFoodChange}

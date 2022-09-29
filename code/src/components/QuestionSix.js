@@ -43,6 +43,7 @@ const QuestionSix = ({
                 {/* Other: */}
                 <input
                   placeholder="Other"
+                  className="input-form"
                   id="alt-selection"
                   type="text"
                   onChange={handleAdjectiveSecondChange}

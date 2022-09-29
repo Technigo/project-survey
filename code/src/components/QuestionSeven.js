@@ -26,9 +26,10 @@ const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
         <h2>Which fictional or real person would you like to meet?</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
           {mythicalCreatures.map((mythicalCreature) => (
-            <label key={mythicalCreature}>
+            <label className="radio-button-overlay" key={mythicalCreature}>
               <input
                 type="radio"
+                className="radio-button"
                 value={mythicalCreature}
                 onChange={handleCreatureChange}
                 checked={mythicalCreature === creature}
@@ -42,6 +43,7 @@ const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
               {/* Other */}
               <input
                 placeholder="Other"
+                className="input-form"
                 id="creature-input"
                 type="text"
                 onChange={handleCreatureChange}

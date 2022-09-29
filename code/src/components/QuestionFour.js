@@ -34,6 +34,7 @@ const QuestionFour = ({ handleSubmit, animal, handleAnimalChange }) => {
               {/* Animal: */}
               <input
                 placeholder="Other"
+                className="input-form"
                 id="alt-selection"
                 type="text"
                 onChange={handleAnimalChange}
