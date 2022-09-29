@@ -17,6 +17,7 @@ code {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-image: url("./components/img/backgroundsmall.jpg") ;
 }
 
 .innerContainer {
@@ -120,4 +121,178 @@ input[type=range]::-webkit-slider-thumb {
 
 .custom-range-slider:hover .bubble {
   background: #0097f0;
+}
+
+
+/*Footer section */
+.footer-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+/*Button section. The span creates the arrow, and depending which button you press it moves in a specific direction.*/
+.button-next {
+  display: flex;
+  color: #C2FFE9;
+  background-color: #00E692;
+  padding: 10px 16px;
+  border-radius: 20px;
+  transition: all .3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  font-size: 14px;
+}
+
+.button-next > .arrow {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #C2FFE9;
+  border-bottom: 2px solid #C2FFE9;
+  position: relative;
+  transform: rotate(-45deg);
+  margin: 0 6px;
+  transition: all .3s ease;
+}
+
+.button-next > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 3px;
+  transform-origin: bottom right;
+  height: 2px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all .3s ease;
+  content: "";
+  right: 0;
+}
+
+.button-next:hover > .arrow {
+  transform: rotate(-45deg) translate(4px, 4px);
+  border-color: text-hover-color;
+}
+
+.button-next:hover > .arrow::before {
+  opacity: 1;
+  width: 8px;
+}
+
+.button-next:hover {
+  background-color: #017A4F;
+  color: #fff;
+}
+
+.button-previous {
+  display: flex;
+  color: #C2FFE9;
+  background-color: #00E692;
+  padding: 10px 16px;
+  border-radius: 20px;
+  transition: all .3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  font-size: 14px;
+}
+
+.button-previous > .arrow {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #C2FFE9;
+  border-bottom: 2px solid #C2FFE9;
+  position: relative;
+  transform: rotate(135deg);
+  margin: 0 6px;
+  transition: all .3s ease;
+}
+
+.button-previous > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 3px;
+  transform-origin: bottom right;
+  height: 2px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all .3s ease;
+  content: "";
+  right: 0;
+}
+
+.button-previous:hover > .arrow {
+  transform: rotate(135deg) translate(4px, 4px);
+  border-color: text-hover-color;
+}
+
+.button-previous:hover > .arrow::before {
+  opacity: 1;
+  width: 8px;
+}
+
+.button-previous:hover {
+  background-color: #017A4F;
+  color: #fff;
+}
+
+.button-submit {
+  display: flex;
+  color: #C2FFE9;
+  background-color: #00E692;
+  padding: 10px 16px;
+  border-radius: 20px;
+  transition: all .3s ease;
+  font-weight: bold;
+  cursor: pointer;
+  align-items: center;
+  font-size: 14px;
+}
+
+.button-submit > .arrow {
+  width: 6px;
+  height: 6px;
+  border-right: 2px solid #C2FFE9;
+  border-bottom: 2px solid #C2FFE9;
+  position: relative;
+  transform: rotate(45deg);
+  margin: 0 6px;
+  transition: all .3s ease;
+}
+
+.button-submit > .arrow::before {
+  display: block;
+  background-color: currentColor;
+  width: 3px;
+  transform-origin: bottom right;
+  height: 2px;
+  position: absolute;
+  opacity: 0;
+  bottom: calc(-2px / 2);
+  transform: rotate(45deg);
+  transition: all .3s ease;
+  content: "";
+  right: 0;
+}
+
+.button-submit:hover > .arrow {
+  transform: rotate(-45deg) translate(4px, 4px);
+  border-color: text-hover-color;
+}
+
+.button-submit:hover > .arrow::before {
+  opacity: 1;
+  width: 8px;
+}
+
+.button-submit:hover {
+  background-color: #017A4F;
+  color: #fff;
 }

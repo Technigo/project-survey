@@ -1,13 +1,13 @@
 import React from 'react';
 
-export const Result = ({ name, age, recycle, drink }) => {
+export const Result = ({ name, age, recycle, scale }) => {
   return (
     <div className="question-wrapper">
       <div className="question">
-        <p>Your name is {name}</p>
-        <p>Your age is {age}</p>
-        <p>Your recyceling rutin is {recycle}</p>
-        <p>Your favourite drink is {drink}</p>
+        <p>Your name is: {name}</p>
+        <p>Your age is between: {age}</p>
+        <p>How you recycle: {recycle}</p>
+        <p>How much you love earth on a scale of 1-10: {scale}</p>
       </div>
     </div>
   );

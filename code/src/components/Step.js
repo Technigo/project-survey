@@ -10,15 +10,15 @@ export const Step = ({ step, setStep }) => {
   }
 
   return (
-    <>
+    <div className="page-button-container">
       <div className="page-text">
        Page: {step}
       </div>
       <div className="buttons">
-        <button type="button" onClick={() => handleCounterButtonClick(true)}>Next question</button>
-        <button type="button" onClick={() => handleCounterButtonClick(false)}>Previous question</button>
+        <button type="button" className="button-next" onClick={() => handleCounterButtonClick(true)}>Next question <span className="arrow" /></button>
       </div>
-    </>
+    </div>
   )
 }
 
+// <button type="button" onClick={() => handleCounterButtonClick(false)}>Previous question</button>
