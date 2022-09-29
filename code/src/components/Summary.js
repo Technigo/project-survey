@@ -72,7 +72,7 @@ const Summary = ({
           </p>
           <p>
             That day it was decided, and <span className="red">{creature}</span>{' '}
-            who moved in, <span className="red">{name}</span> was so excited.
+            moved in, <span className="red">{name}</span> was so excited.
           </p>
           <p>For now they had a friend, and on the weekend,</p>
           <p>
