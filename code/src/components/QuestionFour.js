@@ -10,8 +10,9 @@ const QuestionFour= ({famous, setFamous}) => {
             <h2>Which famous dog would you most want to play with?</h2>
             <select
             onChange={handleFamousChange}
-            value={famous}>
-                <option value='Bruiser Woods'>Select dog</option>  
+            value={famous}
+            className="dropdown">
+                <option disabled value=''>Select dog</option>  
                 <option value='Bruiser Woods'>Bruiser Woods</option>
                 <option value='Bo Obama'>Bo Obama</option>
                 <option value='Scooby Doo'>Scooby Doo</option>

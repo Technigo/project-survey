@@ -31,10 +31,10 @@ export const App = () => {
     <div className='outer-container'>
         <div className='inner-container'>
           {step === 1 && (
-            <div> 
+            <> 
             <Intro />
-            <button className="start-button" type="button" onClick={handleStepIncrease}>Find your new best friend!</button>
-          </div>
+            <button className="start-button" type="button" onClick={handleStepIncrease}>Start survey 🐕 </button>
+          </>
           )}
 
           {step === 2 && (
@@ -54,31 +54,32 @@ export const App = () => {
           )}
 
           {step === 6 && (
-            <div>
+            <div className="result-page">
             <Result name={name} activity={activity} size={size} famous={famous}/>
-            <button className="submit-button" type="button" onClick={handleStepIncrease}>Submit</button>
+            <button className="submit-button button" type="button" onClick={handleStepIncrease}>Submit</button>
             </div>
           )}
 
           {step === 7 && (
-            <div>
+            <div className="final-page">
               <Final/>
-              <button className="restart-button" type="button" onClick={handleStepRestart}>Restart</button>
+              <button className="restart-button buttons" type="button" onClick={handleStepRestart}>Restart</button>
             </div>
           )}
+          <div className='buttons'>
+            {step > 1 && (
+                <div>
+                <button className="back-button buttons" type="button" onClick={handleStepDecrease}>Go back</button>
+              </div>
+            )}
+            {step < 6 && step > 1 && (
+                <div>
+                  <button className="continue-button buttons" type="button" onClick={handleStepIncrease}>Continue</button>
+                </div>
+              )}
 
-         {step < 6 && step > 1 && (
-            <div>
-              <button className="continue-button" type="button" onClick={handleStepIncrease}>Continue</button>
-            </div>
-          )}
-
-          {step > 1 && (
-            <div>
-            <button className="back-button" type="button" onClick={handleStepDecrease}>Go back</button>
+              
           </div>
-          )}
-
         </div>
   </div>
   </>

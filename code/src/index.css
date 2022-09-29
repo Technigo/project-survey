@@ -34,6 +34,19 @@ p {
 h1 {
   align-self: center;
   justify-self: center;
+  border-bottom: 2px solid #DF7861;
+  display: inline;
+}
+
+.bold {
+  font-weight: 600;
+}
+.result-text {
+  font-weight: 800;
+  text-align: center;
+  width: 80%;
+  justify-content: center;
+  align-items: center;
 }
 
 .outer-container {
@@ -49,8 +62,8 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid black;
-  padding: 20px;
+  padding: 30px;
+  padding-bottom: 10%;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #FCF8E8;
@@ -58,11 +71,25 @@ h1 {
 }
 /*https://www.w3schools.com/css/css3_shadows_box.asp*/
 
+.result-page button {
+  position: absolute;
+}
+form, input{
+ margin-bottom: 40px;
+}
+
+select {
+  border-color: #DF7861;
+  padding: 5px;
+  border-radius: 10px;
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 17px;
+} 
+
 .radio-buttons {
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-bottom: 15px;
 }
 
 .radio-button {
@@ -70,15 +97,64 @@ h1 {
   margin: 10px;
 }
 
+.photo {
+  background-image: url(./dog.jpg);
+  width:300px;
+  height: 240px;
+  margin-top: 10px;
+}
+
+/*Buttons*/
+.start-button, .submit-button{
+  border-radius: 8px;
+  border-style: none;
+  font-size: 17px;
+  font-weight: 550;
+  padding: 13px 15px;
+  position: relative;
+  background-color: #ECB390 ;
+  margin-top: 15px;
+}
+
+.start-button:hover, .submit-button:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.5s ease;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.buttons button {
+  border-radius: 4px;
+  font-size: 17px;
+  font-weight: 500;
+  padding: 5px 10px;
+  border:none;
+  background-color: #ECB390;
+}
+
+button:hover {
+  cursor:pointer;
+}
+
+/*Media Queries*/
+/*Tablet*/
 @media (min-width: 668px) and (max-width: 1024px) {
   .inner-container {
     width: 60%;
+    padding-bottom: 5%;
 }
 }
-
+/*Media Queries*/
+/*Desktop*/
 @media (min-width: 1025px){ 
   .inner-container {
     margin-top: 5%;
     width: 50%;
+    padding-bottom: 20px;
 }
 }

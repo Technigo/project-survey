@@ -9,7 +9,9 @@ export const Result = ({ name, activity, size, famous }) => {
             <p>Size: {size}</p>
             <p>Famous: {famous}</p>
 
-            <p>Please press submit if you are satisfied with your answers. Otherwise, you can go back and change.  </p>
+            <div className="result-text">
+                <p>Please press submit if you are satisfied with your answers. Otherwise, you can go back and change.  </p>
+            </div>
         </>
     );
 }
