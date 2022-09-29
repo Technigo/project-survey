@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'
 import QuestionsForm from './components/QuestionsForm'
 
 export const App = () => {

@@ -1,22 +1,33 @@
 import React from 'react'
 
-const QuestionTwo = ({ onStepChange, onQuestTwoChange, questTwo })=> {
+const QuestionTwo = ({ onStepChange, setQuestTwo, questTwo }) => {
+
+    const howMany = ['Two', 'Four', 'Seven', 'None']
+
+    const onQuestTwoChange = (event) => {
+        setQuestTwo(event.target.value)
+      }
 
     return (
         <div className='questions-container'>
-            <form className='form' onSubmit={event => event.preventDefault()}>
+            <form className='form'>
                 <h1 tabIndex='0'>How many brothers does Amy have?</h1>
-                
-                  <div className='input-container'>
-                      <select onChange={onQuestTwoChange} value={questTwo} className='questTwo-select' aria-label='How many brothers'>
-                          <option value='2'>2</option>
-                          <option value='5'>5</option>
-                          <option value='7'>7</option>
-                          <option value='0'>0</option>
-                      </select>
-                    <button className='btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
-                  </div>
-            </form>
+                 
+                {howMany.map((siblings => {
+                    return (
+                    <label className="radio-label" key={siblings} tabIndex="0">
+                        <input 
+                        type='radio'
+                        value={siblings} 
+                        onChange={onQuestTwoChange} 
+                        checked={siblings === questTwo} /> 
+                        {siblings}
+                    </label>
+                    )
+                    }))}
+               
+                <button className='next-btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
+            </form> 
         </div>
    
     )

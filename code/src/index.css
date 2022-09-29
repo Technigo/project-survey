@@ -1,6 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
 
 
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
+}
+
+
 body {
   margin: 0;
   font-family: 'Manrope', sans-serif;
@@ -8,62 +15,72 @@ body {
   background: #FFD369
 }
 
+
+/** START & RESULT **/ 
+
 .startPage, .result-page {
-    margin-top: 25%;
-    padding: 10%;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-items: center;
+  padding: 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
 }
 
-
-
-.image {
+.start-image {
   position: fixed;
   width: 100%;
   bottom: 0;
-  left: 0;
+}
+
+.result-image {
+  position: fixed;
+  width: 60%;
+  bottom: 0;
 }
 
 h1 {
-  size: 2rem;
-  font-weight: 700;
+  size: 2.2em;
+  font-weight: bold;
   color: #222831
 }
 
 h2 {
-  size: 1rem;
-  font-weight: 400;
+  size: 1em;
+  font-weight: regular;
   color: #393E46
 }
 
-#startBtn {
-  border: 0;
-  padding: 3%;
-  width: 40%;
-  border-radius: 25px;
-  cursor: pointer;
-  background-color: #393E46;
-  color: white;
-  font-size: 1rem;
-  font-weight: bold;
-  letter-spacing: 2px;
-  margin-top: 4%;
+p {
+  font-size: 1em;
+  color: #393E46;
+  margin: 4%;
 }
 
-#playAgainBtn {
+.answer {
+  font-weight: bold
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+#startBtn, #playAgainBtn, .next-btn {
   border: 0;
-  padding: 5%;
-  width: 50%;
+  padding: 20px;
+  width: 200px;
+  margin-top: 20px;
+  height: 40px;
   border-radius: 25px;
   cursor: pointer;
   background-color: #393E46;
-  color: white;
-  font-size: 1rem;
+  box-shadow: 5px 7px 17px 5px rgba(34,40,49,0.53);
+  color: #ffff;
+  font-size: 1em;
   font-weight: bold;
-  letter-spacing: 2px;
-  margin-top: 4%;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 2px;
 }
 
 #startBtn:hover, #playAgainBtn {
@@ -72,36 +89,16 @@ h2 {
 }
 
 .username_input {
-  border: 1px solid black;
-  background-color: whitesmoke;
+  border: 1px solid #222831;
+  background-color: #ffff;
   outline: 0;
-  padding: 3%;
+  padding: 20px;
+  width: 200px;
+  height: 40px;
   border-radius: 25px;
-  margin: 1%;
-  font-size: 1rem;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-}
-
-.questions-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10%;
+  font-size: 1em;
   text-align: center;
-  flex-wrap: nowrap;
-}
-
-.progress-bar {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 10%;
+  letter-spacing: 1px
 }
 
 #check {
@@ -113,28 +110,140 @@ h2 {
 }
 
 
+/** RADIO BTN QUESTIONS **/
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+
+.radio-label {
+  font-size: 1.1em;
+  line-height: 1;
+  display: grid;
+  grid-template-columns: 1em auto;
+  margin: 10px 20px;
+  border: solid white 1px;
+  padding: 10px;
+  align-items: center;
+}
+
+.radio-label:focus-within {
+  color: #393E46;
+}
+
+.radio-label:hover {
+  background-color: #f7c249f3
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  width: 1.8em;
+  height: 1.8em;
+  border: 0.15em solid #393E46;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #393E46;
+  background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1); 
+}
+
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid #393E46;
+  outline-offset: max(2px, 0.15em);
+}
+
+/** SELECT QUESTIONS **/
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select {
+  width: 100%;
+  text-align: center;
+  padding: 3%;
+  font-size: 1.1em;
+  border-radius: 25px;
+}
+
+
+/** OTHER COMPONENTS **/
+
+.progress-bar {
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+progress {
+  accent-color:green
+}
 
 /** MEDIA QUERIES **/
 
-@media (min-width: 992px) {
-
-  .startPage {
-    position: initial;
+@media (min-width: 767px) and (max-width: 991px) {
+   
+  p {
+    font-size: 1.5em;
+    margin: 1%;
   }
-  
-  .image {
+
+  .start-image {
     bottom: 0;
-    left: 25%;
     height: 40%;
     width: auto;
   }
 
-  .buttons {
-    width: 50%;
-  }
-
-  #startBtn {
-    width: 25%;
+  .result-image {
+    height: 40%;
+    width: auto
   }
 
 }
+
+
+@media (min-width: 992px) {
+
+  p {
+    font-size: 1.6em;
+    margin: 1%;
+  }
+   
+  .start-image {
+    bottom: 0;
+    height: 40%;
+    width: auto;
+  }
+
+  .result-image {
+    height: 30%;
+    width: auto
+  }
+
+
+} 

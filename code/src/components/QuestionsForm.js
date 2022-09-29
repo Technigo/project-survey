@@ -19,15 +19,11 @@ const QuestionsForm = () => {
   const [questFive, setQuestFive] = useState('');
 
   const onStepChange = () => {
-    if (username.length > 1)
+    if (username.length > 0)
     setStep(step + 1)
     else (
       alert('please enter a username')
     )
-  }
-
-  const onQuestTwoChange = (event) => {
-    setQuestTwo(event.target.value)
   }
 
   const onQuestThreeChange = (event) => {
@@ -38,9 +34,6 @@ const QuestionsForm = () => {
     setQuestFour(event.target.value)
   }
 
-  const onQuestFiveChange = (event) => {
-    setQuestFive(event.target.value)
-  }
 
   const restartGame = () => {
     setUsername('');
@@ -73,7 +66,7 @@ const QuestionsForm = () => {
         <>
         <QuestionTwo
           questTwo={questTwo}
-          onQuestTwoChange={onQuestTwoChange}
+          setQuestTwo={setQuestTwo}
           onStepChange={onStepChange}
         />
         <Progressbar step={step} />
@@ -106,13 +99,13 @@ const QuestionsForm = () => {
       <>
         <QuestionFive
         questFive={questFive}
-        onQuestFiveChange={onQuestFiveChange}
+        setQuestFive={setQuestFive}
         onStepChange={onStepChange}
         />
         <Progressbar step={step} />
       </>
       )}
-    
+   
     {step === 6 && (
          <Result
          questOne={questOne}
@@ -124,6 +117,7 @@ const QuestionsForm = () => {
          restartGame={restartGame}
          />
       )}
+
       
       </div>
     )

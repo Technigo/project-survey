@@ -1,22 +1,33 @@
 import React from 'react'
 
-const QuestionFive = ({ onStepChange, onQuestFiveChange, questFive }) => {
+const QuestionFive = ({ onStepChange, setQuestFive, questFive }) => {
+
+    const movies = ['Armageddon', 'Van Helsing', 'Top Gun', 'Die Hard']
+
+    const onQuestFiveChange = (event) => {
+        setQuestFive(event.target.value)
+      }
 
     return (
         <div className='questions-container'>
-            <form className='form' onSubmit={event => event.preventDefault()}>
+            <form className='form'>
                 <h1 tabIndex='0'>Which is Jake's favourite movie?</h1>
-                
-                  <div className='input-container'>
-                      <select onChange={onQuestFiveChange} value={questFive} className='questOne-select' aria-label='Jakes favourite movie'>
-                          <option value='Armageddon'>Armageddon</option>
-                          <option value='Van Helsing'>Van Helsing</option>
-                          <option value='Top Gun'>Top Gun</option>
-                          <option value='Die Hard'>Die Hard</option>
-                      </select>
-                    <button className='btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
-                  </div>
-            </form>
+
+                {movies.map((movie => {
+                    return (
+                    <label className="radio-label" key={movie} tabIndex="0" aria-label='Jakes favourite movie'>
+                        <input 
+                        type='radio'
+                        value={movie} 
+                        onChange={onQuestFiveChange} 
+                        checked={movie === questFive} /> 
+                        {movie}
+                    </label>
+                        )
+                    }))}
+        
+                <button className='next-btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
+            </form> 
         </div>
    
     )

@@ -5,16 +5,16 @@ const QuestionThree = ({ onStepChange, onQuestThreeChange, questThree })=> {
     return (
         <div className='questions-container'>
             <form className='form' onSubmit={event => event.preventDefault()}>
-                <h1 tabIndex='0'>Who has a daughter named The Enigma "Iggy"</h1>
+                <h1 tabIndex='0'>Who made a gold statue of themself?</h1>
                 
                   <div className='input-container'>
-                      <select onChange={onQuestThreeChange} value={questThree} className='questThree-select' aria-label='Who has son Nikolaj'>
+                      <select onChange={onQuestThreeChange} value={questThree} className='select' aria-label='Who has son Nikolaj'>
                           <option value='Hitchcock'>Hitchcock</option>
                           <option value='Gina'>Gina</option>
                           <option value='Holt'>Holt</option>
                           <option value='Scully'>Scully</option>
                       </select>
-                    <button className='btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
+                    <button className='next-btn' type='button' onClick={onStepChange} tabIndex='0'>Next</button>
                   </div>
             </form>
         </div>
