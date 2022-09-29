@@ -1,15 +1,14 @@
 import React from 'react';
 
-const EmailQ = ({ email, setEmail }) => {
-  const handleEmailInputChange = (event) => {
-    setEmail(event.target.value)
-  }
+const EmailQ = ({ email, OnEmailInputChange, nextQ }) => {
   return (
-    <div className="container">
-      <p>Leave us your email address, and we´ll follow-up with an offer!</p>
-      <input type="text" value={email} onChange={handleEmailInputChange} />
+    <form onSubmit={nextQ}>
+      <label htmlFor="emailInput">
+        <h2>Leave us your email address, and we´ll follow-up with an offer!</h2>
+        <input type="text" value={email} onChange={OnEmailInputChange} />
+      </label>
       <button type="submit">Submit</button>
-    </div>
+    </form>
   )
 }
 

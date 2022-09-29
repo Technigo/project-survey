@@ -1,19 +1,56 @@
+:root {
+  --primary: #5F7161;
+  --secondary: #D0C9C0;
+}
+
+/*FONTS*/
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to right, rgb(110, 161, 108), rgb(11, 93, 47));
+  background: linear-gradient(to bottom, rgb(95, 113, 97), rgb(208, 201, 192));
+  font-family: 'Lato', sans-serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1 {
+  font-family: 'Playfair Display', serif;
+  color: var(--primary);
 }
 
-.test {
-  margin-top: 30vw;
-  margin-left: 35vw;
+h2 {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 34px;
+  color: var(--primary);
+  text-align: center;
+  margin-bottom: 36px;
+}
+
+.form-wrapper {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 700px;
+  height: 470px;
+  border-radius: 30px;
+  background: rgba(208, 201, 192, 0.5);
+  padding: 20px 24px;
+  padding-top: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  border-radius: 5px;
+  border: none;
+  background-color: var(--primary);
+  color: #fff;
+  padding: .5rem;
+  width: 5rem;
+  font-family: 'Lato', sans-serif;
 }

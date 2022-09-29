@@ -1,14 +1,19 @@
 import React from 'react';
 
-const NameQ = ({ name, setName }) => {
-  const handleUserNameInputChange = (event) => {
-    setName(event.target.value)
-  }
+const NameQ = ({ name, OnNameInputChange, nextQ }) => {
   return (
-    <div className="container">
-      <p>Hi there! What is your name?</p>
-      <input type="text" value={name} onChange={handleUserNameInputChange} />
-    </div>
+    <form onSubmit={nextQ}>
+      <label htmlFor="nameInput"><h2>Hi there! What is your name?</h2>
+        <input
+          id="name"
+          type="text"
+          name="name"
+          placeholder="Type name here..."
+          value={name}
+          onChange={OnNameInputChange} />
+      </label>
+      <button type="submit" label="next">Next</button>
+    </form>
   )
 }
 

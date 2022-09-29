@@ -1,27 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const recurrenceOpt = ['Weekly', 'Bi-weekly', 'Monthly', 'Quarterly', 'Yearly'];
 
-const RecurrenceQ = () => {
-  const [recurrence, setRecurrence] = useState();
-
+const RecurrenceQ = ({ recurrence, OnRecurrenceInputChange, nextQ }) => {
   return (
-    <div className="container">
-      <form>
-      How often would you like a subscription box?
-        {recurrenceOpt.map((choice) => (
-          <label htmlFor="choice" key={choice}>
-            <input
-              type="radio"
-              value={recurrence}
-              onChange={(event) => setRecurrence(event.target.value)}
-              checked={recurrence === choice} />
-            {choice}
-          </label>
-        ))}
-      </form>
-    </div>
+    <form>
+      <h2>How often would you like a subscription box?</h2>
+      {recurrenceOpt.map((choice) => (
+        <label htmlFor="choice" key={choice}>
+          <input
+            type="radio"
+            value={recurrence}
+            onChange={OnRecurrenceInputChange}
+            checked={recurrence === choice} />
+          {choice}
+        </label>
+      ))}
+      <button type="button" onClick={nextQ} label="next">Next</button>
+    </form>
   )
 };
 
-export default RecurrenceQ
+export default RecurrenceQ;
