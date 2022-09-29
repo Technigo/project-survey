@@ -15,6 +15,10 @@ const Form = () => {
             return <SignInMember />
         } else if (page === 1){
             return <Register />
+        } else if (page ===2){
+            return <Booking />
+        } else if (page ===3){
+            /* return < / > */
         }
     }
 

@@ -4,7 +4,6 @@ const Register = () => {
 
     const [newbie, setNewbie] = useState("");
     const [email, setEmail] = useState("");
-    //const [location, setLocation] = useState("");
 
     return ( 
         <div className="register-wrapper">
@@ -22,11 +21,7 @@ const Register = () => {
                     value={ email }
                     onChange={(e)=>setEmail(e.target.value)}/>
                 </div>
-                
-
             </form>
-            {/* <button>Previous Step</button>
-            <button>Continue</button> */}
         </div>
      );
 }

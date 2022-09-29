@@ -23,8 +23,6 @@ const SignInMember = () => {
                 onChange={(e)=>setPasscode(e.target.value)}
             />
         </form>
-        {/* <button>Previous Step</button>
-        <button>Continue</button> */}
         {/* <p>{name}</p> */}
         {/* <p>{passcode}</p> */}
 
