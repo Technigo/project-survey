@@ -12,7 +12,7 @@ const Summary = (props) => {
 
   return (
     <section className="form-summary">
-      <p className="summary-survey">You {radio} to {number} books per year and prefer {genre}. I will definitely read {recommendation}. Thank you for answering my questions!</p>
+      <p className="summary-survey">You {radio} to {number} books per year and prefer {genre}. I will definitely add {recommendation} to my list. Thank you for answering my questions!</p>
       <div className="button-container">
         <button className="refresh-button" type="button" onClick={refreshPage}>Refresh</button>
       </div>

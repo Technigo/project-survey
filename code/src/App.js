@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import QuestionText from 'Components/QuestionText.js';
 import QuestionRadio from 'Components/QuestionRadio.js';
 import Summary from 'Components/Summary.js';
+import Footer from 'Components/Footer.js';
 import Header from './Components/Header.js';
 import QuestionDropdownGenre from './Components/QuestionDropdownGenre';
 import QuestionDropdownNumber from './Components/QuestionDropdownNumber';
@@ -19,7 +20,6 @@ export const App = () => {
     event.preventDefault()
     setShowSummary(true)
     setShowForm(false)
-    console.log('hej')
   })
 
   const surveyAnswered = () => {
@@ -62,6 +62,7 @@ export const App = () => {
             recommendation={recommendation} />
         }
       </div>
+      <Footer />
     </>
   );
 }

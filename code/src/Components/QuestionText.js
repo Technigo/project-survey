@@ -7,7 +7,7 @@ const QuestionText = (props) => {
   return (
     <section className="rec-container">
       <p className="rec-question">Please recomend a book!</p>
-      <form className="text-input-form">
+      <form className="text-input-form" onSubmit={event => event.preventDefault()}>
         <input
           className="text-input"
           type="text"

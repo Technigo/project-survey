@@ -6,7 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #F5EFE6;
-  color: #967E76;
+  color: #AD8B73;
 }
 
 code {
@@ -15,14 +15,12 @@ code {
 }
 
 header {
-  background-image: url("https://images.unsplash.com/photo-1495446815901-a7297e633e8d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2070&q=80");
+  background-image: url("https://images.pexels.com/photos/5939401/pexels-photo-5939401.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  height: 200px;
+  background-position: center;
+  background-repeat: no-repeat;
   background-size: cover;
-  height: 300px;
-}
-
-.header-headline {
-  color: white;
-  text-align: center;
+  position: relative;
 }
 
 .survey-container {
@@ -85,6 +83,8 @@ header {
 .dropdown {
   width: 155px;
   padding: 1%;
+  border: solid #967E76;
+  color: #967E76;
 }
 
 /* RECCOMENDATION TEXT FIELD */
@@ -98,17 +98,31 @@ header {
   padding: 1%;
 }
 
-/* SUBMIT BUTTON */
+/* SUBMIT AND REFRESH BUTTON */
 .submitBtn-container {
   margin: 20px 20px 20px 20px;
 }
 
-.submitBtn {
+.submitBtn:disabled {
+  background-color: #967E76;
+}
+
+.submitBtn:disabled:hover {
+  background-color: #967E76;
+}
+
+.submitBtn, .refresh-button {
   background-color: #967E76;
   padding: 8px 16px 8px 16px;
   color: white;
   border: none;
   margin-top: 25px;
+  transition-duration: 0.4;
+  border-radius: 10px;
+}
+
+.submitBtn:hover, .refresh-button:hover {
+  background-color: #AD8B73;
 }
 
 /* FORM SUMMARY */
@@ -120,18 +134,37 @@ header {
   margin: 25px 30px 25px 30px;
 }
 
-/* REFRESH BUTTON */
-.refresh-button {
-  background-color: #967E76;
-  padding: 8px 16px 8px 16px;
+/* FOOTER */
+.footer-container {
+  height: 100px;
+  background-color: #CEAB93;
   color: white;
-  border: none;
+  font-size: 8px;
+  text-align: center;
+  padding: 70px;
+  margin-top: 50px;
+  line-height: 10px;
 }
 
-/* IPAD AND BIGGER SCREEN */
-@media only screen and (min-width: 768px) and (max-width: 1024px)  {
+.footer-text{
+  color: white;
+  font-size: 8px;
+  text-align: center;
+}
+
+/* TABLET */
+@media (min-width: 768px)  {
   header {
-    height: 400px;
+    height: 500px;
+  }
+
+  .footer-container {
+    height: 200px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    margin-top: 40px;
   }
 
   .radio-intro {
@@ -155,23 +188,56 @@ header {
     color: #967E76;
   }
 
+  .summary-survey, .radio-intro {
+    margin: 80px 30px 88px 30px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 20em;
+  }
+
   .refresh-button {
     font-size: 18px;
+    margin-bottom: 80px;
   }
 }
 
-/* COMPUTER SCREEN AND BIGGER */
-@media (min-width: 1025px) {
+/* DESKTOP */
+@media (min-width: 992px) {
   header {
-    height: 500px;
+    height: 600px;
   }
+
+  .footer-container {
+    height: 200px;
+  }
+
+  .footer-text {
+    font-size: 14px;
+    margin-top: 70px;
+  }
+
   .radio-intro {
     font-size: 28px;
-    
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
+
   .radio-question, .radio-input, .genre, .numberOfBooks, .rec-question, .submitBtn, .form-summary {
     font-size: 24px;
   }
+
+  .radio-question, .genre {
+    margin-bottom: -10px;
+  }
+
+  .dropdown, .text-input, .radioBtn {
+    margin-bottom: 55px;
+  }
+
+  .radioBtn {
+    margin-bottom: 35px;
+  }
+
 
   .radio-read, .radio-listen {
     font-size: 24px;
@@ -193,4 +259,10 @@ header {
   .refresh-button {
     font-size: 20px;
   }
+  .summary-survey, .radio-intro {
+    margin-left: auto;
+    margin-right: auto;
+    width: 30em;
+  }
+
 }

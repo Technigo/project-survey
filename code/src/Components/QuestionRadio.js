@@ -6,7 +6,7 @@ const QuestionRadio = (props) => {
 
   return (
     <form className="radio-container">
-      <h2 className="radio-intro">Nowadays you can both read and listen to a book - how do you do it?</h2>
+      <h2 className="radio-intro">Nowadays you can both read and listen to a book - how do you do it? Please enter my survey to let me know!</h2>
       <p className="radio-question">Do you like to read or listen to a book?</p>
         <section className="radioBtn">
         <label>
