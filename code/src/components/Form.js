@@ -7,39 +7,44 @@ import ThridQuestion from './ThridQuestion';
 import Summary from './Summary';
 
 const Form = () => {
-  const [welcome, setWelcome] = useState('')
-  const [first, setFirst] = useState('')
-  /* ThridQuestion States */
-  const [bus, setBus] = useState(false);
-  const [bike, setBike] = useState(false);
-  const [walking, setWalking] = useState(false)
+  const initialForm = {
+    name: '',
+    meatFrequency: '',
+    transportChoices: [],
+    storesChoice: ''
+  }
 
-  const [greenCloset, setGreenCloset] = useState('');
+  const [formState, setFormState] = useState(initialForm) // valor inicial.
+
   /* Counter for all questions */
   const [counter, setCounter] = useState(0)
 
   const handleWelcomeChange = (e) => {
-    setWelcome(e.target.value)
+    setFormState({
+      ...formState,
+      name: e.target.value
+    })
   }
 
-  const handleFirstChange = (e) => {
-    setFirst(e.target.value)
+  const handleFirstQuestion = (e) => {
+    setFormState({
+      ...formState,
+      meatFrequency: e.target.value
+    })
   }
 
-  const handleBusChange = (e) => {
-    setBus(e.target.checked)
+  const handleSecondQuestion = (transportChoices) => {
+    setFormState({
+      ...formState,
+      transportChoices
+    })
   }
 
-  const handleBikeChange = (e) => {
-    setBike(e.target.checked)
-  }
-
-  const handleWalkingChange = (e) => {
-    setWalking(e.target.checked)
-  }
-
-  const handleGreenCloset = (e) => {
-    setGreenCloset(e.target.value)
+  const handleThridQuestion = (storesChoice) => {
+    setFormState({
+      ...formState,
+      storesChoice
+    })
   }
 
   const handleNextQuestion = () => {
@@ -49,37 +54,25 @@ const Form = () => {
   return (
     <section className="form-wrapper">
       {counter === 0
-      && <WelcomeToTheSurvey
-        onWelcomeChange={handleWelcomeChange}
-        nextQuestion={handleNextQuestion}
-        nameWelcome={welcome} />}
+        && <WelcomeToTheSurvey
+          onWelcomeChange={handleWelcomeChange}
+          nextQuestion={handleNextQuestion} />}
       {counter === 1
-      && <FirstQuestion
-        onFirstQuestionChange={handleFirstChange}
-        nextQuestion={handleNextQuestion}
-        firstQuestion={first} />}
+        && <FirstQuestion
+          onFirstQuestionChange={handleFirstQuestion}
+          nextQuestion={handleNextQuestion} />}
       {counter === 2
-      && <SecondQuestion
-        nextQuestion={handleNextQuestion}
-        setBus={handleBusChange}
-        setBike={handleBikeChange}
-        setWalking={handleWalkingChange}
-        bus={bus}
-        bike={bike}
-        walking={walking} />}
+        && <SecondQuestion
+          nextQuestion={handleNextQuestion}
+          onSecondQuestionChange={handleSecondQuestion} />}
       {counter === 3
-      && <ThridQuestion
-        onThridQuestionChange={handleGreenCloset}
-        nextQuestion={handleNextQuestion}
-        closet={greenCloset} />}
+        && <ThridQuestion
+          onThridQuestionChange={handleThridQuestion}
+          nextQuestion={handleNextQuestion} />}
       {counter === 4
-      && <Summary
-        nameWelcome={welcome}
-        firstQuestion={first}
-        bus={bus}
-        bike={bike}
-        walking={walking}
-        closet={greenCloset} />}
+        && <Summary
+            formState={formState}
+           />}
     </section>
   )
 };

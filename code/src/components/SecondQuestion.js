@@ -3,10 +3,33 @@
 /* eslint-disable react/self-closing-comp */
 import React, { useState } from 'react';
 
-const SecondQuestion = ({ nextQuestion }) => {
-  const [bus, setBus] = useState(false);
-  const [bike, setBike] = useState(false);
-  const [walking, setWalking] = useState(false)
+const SecondQuestion = ({ nextQuestion, onSecondQuestionChange }) => {
+  const [transportChoices, setTransportChoices] = useState([])
+
+  const handleTransportChoicesChanged = (e, transportChoice) => {
+    if (e.target.checked) {
+      setTransportChoices([...transportChoices, transportChoice])
+    } else {
+      setTransportChoices(transportChoices.filter((item) => transportChoice !== item))
+    }
+  }
+
+  const handleBusInputChanged = (e) => {
+    handleTransportChoicesChanged(e, 'bus')
+  }
+
+  const handleBikeInputChanged = (e) => {
+    handleTransportChoicesChanged(e, 'bike')
+  }
+
+  const handleWalkingInputChanged = (e) => {
+    handleTransportChoicesChanged(e, 'walking')
+  }
+
+  const handleOnClick = () => {
+    onSecondQuestionChange(transportChoices) // Fix me!
+    nextQuestion()
+  }
   return (
     <section className="section">
       <div className="content-wrap">
@@ -16,8 +39,7 @@ const SecondQuestion = ({ nextQuestion }) => {
           <label htmlFor="bus">
             <input
               type="checkbox"
-              checked={bus}
-              onChange={setBus}
+              onChange={handleBusInputChanged}
               id="bus"
               name="bus"
               className="input-checkbox" />
@@ -26,8 +48,7 @@ const SecondQuestion = ({ nextQuestion }) => {
           <label htmlFor="bike">
             <input
               type="checkbox"
-              checked={bike}
-              onChange={setBike}
+              onChange={handleBikeInputChanged}
               id="bike"
               name="bike"
               className="input-checkbox" />
@@ -36,14 +57,13 @@ const SecondQuestion = ({ nextQuestion }) => {
           <label htmlFor="walking">
             <input
               type="checkbox"
-              checked={walking}
-              onChange={setWalking}
+              onChange={handleWalkingInputChanged}
               id="walking"
               name="walking"
               className="input-checkbox" />
             Walking
           </label>
-          <button type="button" onClick={nextQuestion} className="button button-next">
+          <button type="button" onClick={handleOnClick} className="button button-next">
             Next Question!
           </button>
         </form>

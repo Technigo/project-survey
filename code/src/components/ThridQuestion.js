@@ -1,10 +1,15 @@
 /* eslint-disable no-undef */
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react';
+import React, { useState } from 'react';
 
 const greenClosets = ['Second Hand Stores', 'Fast Fashion Stores']
 
-const ThridQuestion = ({ nextQuestion, onThridQuestionChange, closet }) => {
+const ThridQuestion = ({ nextQuestion, onThridQuestionChange }) => {
+  const [choiceSelected, setChoiceSelected] = useState(false)
+  const handleOnChange = (e) => {
+    setChoiceSelected(true)
+    onThridQuestionChange(e.target.value)
+  }
   return (
     <section className="section">
       <div className="content-wrap">
@@ -16,15 +21,14 @@ const ThridQuestion = ({ nextQuestion, onThridQuestionChange, closet }) => {
               <input
                 type="radio"
                 value={clothes}
-                onChange={onThridQuestionChange}
-                checked={closet === clothes}
+                onChange={handleOnChange}
                 id="green"
                 name="green"
                 className="input-radio" />
               {clothes}
             </label>
           ))}
-          <button type="submit" onClick={nextQuestion} className="button button-next" disabled={closet === ''}>
+          <button type="submit" onClick={nextQuestion} className="button button-next" disabled={!choiceSelected}>
           Submit Answers!
           </button>
         </form>
