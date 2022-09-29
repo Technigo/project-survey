@@ -1,4 +1,4 @@
-import React from 'react';
+/* import React from 'react';
 
 const Frequency = ({ userfrequency, setUserfrequency }) => {
   return (
@@ -25,4 +25,4 @@ const Frequency = ({ userfrequency, setUserfrequency }) => {
   )
 }
 
-export default Frequency;
+export default Frequency; */
