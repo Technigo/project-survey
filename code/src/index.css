@@ -5,9 +5,55 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("./Images/tomato.jpg");
+  background-color: #cccccc;
+  background-size: cover;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+h1 {
+  display: flex;
+  justify-content: center;
+  border: solid paleturquoise 1px;
+}
+
+p {
+  border: solid pink 1px;
+}
+
+.container {
+  font-family: Roboto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* padding: 40px; */
+  width: 35vw;
+  height: 70vh;
+  margin-top: 55px;
+  border: solid black 1px;
+  background-color: rgb(243, 228, 185);
+}
+
+.stepOne {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 30vw;
+  border: solid green 1px;
+}
+
+.questions {
+  border: solid red 1px;
+}
+
+.summary {
+  border: solid yellow 1px;
+}
+
