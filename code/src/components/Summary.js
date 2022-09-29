@@ -67,10 +67,10 @@ const Summary = ({
             <span className="red">{food}</span> every Friday.
           </p>
           <p>
-            That day it was decided, the <span className="red">{creature}</span>{' '}
-            moved in, <span className="red">{name}</span> was so excited.
+            That day it was decided, and <span className="red">{creature}</span>{' '}
+            who moved in, <span className="red">{name}</span> was so excited.
           </p>
-          <p>For now he had a friend, and on the weekend,</p>
+          <p>For now they had a friend, and on the weekend,</p>
           <p>
             they would toast <span className="red">{food}</span> (yum) on the
             fire, that the Dragons sneezes provided.{' '}

@@ -89,6 +89,10 @@ form select {
   height: 30px;
   margin-bottom: 5px;
 }
+.input-text-container {
+  display: flex;
+}
+
 /********* Buttons ********/
 .start-btn,
 .continue-btn,

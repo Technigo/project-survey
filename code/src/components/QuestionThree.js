@@ -29,14 +29,17 @@ const QuestionThree = ({ handleSubmit, adjective, handleAdjectiveChange }) => {
             <option value="smooth">smooth</option>
           </select>
           {/* Alternative selection */}
-          <label htmlFor="alt-selection">
-            Other:
-            <input
-              id="alt-selection"
-              type="text"
-              onChange={handleAdjectiveChange}
-            />
-          </label>
+          <div className="input-text-container">
+            <label htmlFor="alt-selection">
+              {/* Other: */}
+              <input
+                placeholder="Other"
+                id="alt-selection"
+                type="text"
+                onChange={handleAdjectiveChange}
+              />
+            </label>
+          </div>
           <input type="submit" className="continue-btn" value="Next" />
         </form>
       </section>

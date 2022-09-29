@@ -29,14 +29,17 @@ const QuestionFour = ({ handleSubmit, animal, handleAnimalChange }) => {
             <option value="flamingo">flamingo</option>
           </select>
           {/* Alternative selection */}
-          <label htmlFor="alt-selection">
-            Animal:
-            <input
-              id="alt-selection"
-              type="text"
-              onChange={handleAnimalChange}
-            />
-          </label>
+          <div className="input-text-container">
+            <label htmlFor="alt-selection">
+              {/* Animal: */}
+              <input
+                placeholder="Other"
+                id="alt-selection"
+                type="text"
+                onChange={handleAnimalChange}
+              />
+            </label>
+          </div>
           <input type="submit" className="continue-btn" value="Next" />
         </form>
       </section>

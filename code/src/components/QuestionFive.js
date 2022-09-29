@@ -35,8 +35,14 @@ const QuestionFive = ({
                 Why did this happen to me?
               </option>
             </select>{' '}
-            <label>Shout:</label>
-            <input type="text" onChange={handleExclamationChange} />
+            <div className="input-text-container">
+              {/* <label>Shout:</label> */}
+              <input
+                placeholder="Other"
+                type="text"
+                onChange={handleExclamationChange}
+              />
+            </div>
             <input type="submit" className="continue-btn" value="Next" />
           </form>
         </div>

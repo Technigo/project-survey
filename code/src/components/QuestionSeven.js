@@ -6,9 +6,8 @@ import React from 'react';
 
 const mythicalCreatures = [
   'Loch Ness Monster',
-  'little Mermaid',
-  'Orc',
-  'Goblin',
+  'the little Mermaid',
+  'Robin Hood',
   'Fairy Godmother',
 ];
 const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
@@ -24,7 +23,7 @@ const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
       <section className="question-container">
         {/* Mytical creature */}
         {/* Radio Buttons */}
-        <h2>Which mythical creature would you like to believe is real?</h2>
+        <h2>Which fictional or real person would you like to meet?</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
           {mythicalCreatures.map((mythicalCreature) => (
             <label key={mythicalCreature}>
@@ -38,14 +37,17 @@ const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
             </label>
           ))}
           {/* Alternative selection */}
-          <label htmlFor="creature-input">
-            Other
-            <input
-              id="creature-input"
-              type="text"
-              onChange={handleCreatureChange}
-            />
-          </label>{' '}
+          <div className="input-text-container">
+            <label htmlFor="creature-input">
+              {/* Other */}
+              <input
+                placeholder="Other"
+                id="creature-input"
+                type="text"
+                onChange={handleCreatureChange}
+              />
+            </label>
+          </div>{' '}
           <input type="submit" className="continue-btn" value="Next" />
         </form>
       </section>

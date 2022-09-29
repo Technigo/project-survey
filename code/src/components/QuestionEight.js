@@ -38,10 +38,17 @@ const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {
             </label>
           ))}{' '}
           {/* Alternative selection */}
-          <label htmlFor="food-input">
-            Other
-            <input id="food-input" type="text" onChange={handleFoodChange} />
-          </label>
+          <div className="input-text-container">
+            <label htmlFor="food-input">
+              {/* Other */}
+              <input
+                placeholder="Other"
+                id="food-input"
+                type="text"
+                onChange={handleFoodChange}
+              />
+            </label>
+          </div>
           <input type="submit" className="continue-btn" value="Next" />
         </form>
         {/* Continue button */}

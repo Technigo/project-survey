@@ -25,7 +25,7 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
       </div>
       <section className="question-container">
         {/* Radio Buttons */}
-        <h2>Whats your current mood?</h2>
+        <h2>How would you describe yourself?</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
           {radioButtonObject.map((radioButtonInput) => (
             <label key={radioButtonInput}>
@@ -39,10 +39,17 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
             </label>
           ))}{' '}
           {/* Alternative selection */}
-          {/* <label htmlFor="alt-selection">
-            Other:
-            <input id="alt-selection" type="text" onChange={handleMoodChange} />
-          </label> */}
+          <div className="input-text-container">
+            <label htmlFor="alt-selection">
+              {/* Other: */}
+              <input
+                placeholder="Other"
+                id="alt-selection"
+                type="text"
+                onChange={handleMoodChange}
+              />
+            </label>
+          </div>
           <input type="submit" className="continue-btn" value="Next" />
         </form>
 

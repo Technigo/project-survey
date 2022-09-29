@@ -26,8 +26,15 @@ const QuestionOne = ({ handleSubmit, name, handleNameChange }) => {
         <div className="form-container">
           <h1 className="question">What is your avatar name?</h1>
           <form className="form-style" onSubmit={handleSubmit}>
-            <label>Avatar name</label>
-            <input type="text" value={name} onChange={handleNameChange} />
+            <div className="input-text-container">
+              {/* <label>Avatar name</label> */}
+              <input
+                type="text"
+                value={name}
+                onChange={handleNameChange}
+                placeholder="Avatar name"
+              />
+            </div>
             <input type="submit" className="continue-btn" value="Next" />
           </form>
         </div>
