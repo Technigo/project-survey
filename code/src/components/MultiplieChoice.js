@@ -1,25 +1,28 @@
 
 import React from 'react';
 
-export const MultiplieChoice = ({NextQuestion, backCounter, onSpell, Spell}) => {
+export const MultiplieChoice = ({NextQuestion, backCounter, onDelivery, Delivery}) => {
  
 
   return (
-    <div className="MultChoice">
-      <label> Whats your favorite spell?</label>
-      <select id="spells" 
-      name="Spells"
-      value={Spell}
-      onChange={onSpell}
+    <div className="container">
+      <div className="delivery">
+      <span className="small-heading"> Choose your delivery option: </span>
+      <select  
+      name="Delivery"
+      value={Delivery}
+      onChange={onDelivery}
       className="dropdown"
       >
-        <option value="1"> spell 1</option>
-        <option value="2"> spell 2</option>
-        <option value="3"> spell 3</option>
-        <option value="4"> spell 4</option>
+        <option key={Delivery.pickup}> Pick up at the store </option>
+        <option key={Delivery.Delivery}> Delivery home</option>
+      
       </select>
-      <button type="button" onClick={NextQuestion} className="button"> Next Question </button>
-      <button type="button" onClick={backCounter} className="button"> Back</button>
+      </div>
+      <div className="btn-container">
+            <button type="button" onClick={NextQuestion} className="button"> Next </button>
+            <button type="button" onClick={backCounter} className="button"> Back</button>
+            </div>
     </div>
   )
 } 

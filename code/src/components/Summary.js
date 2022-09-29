@@ -1,17 +1,19 @@
 import React from 'react';
 
-export const Summary = ({FirstName, LastName, email, Spell, resetButton,NextQuestion,test1 }) => {
+export const Summary = ({FirstName, LastName, email, Flavour, resetButton,NextQuestion,Delivery }) => {
     return(
         <>
-        <span>Thanks for your answer, Please confirm that you want to submit or restart . </span>
-        <h1 className="answer" >First Name {FirstName}</h1>
-        <h1 className="answer" >Last Name {LastName}</h1>
-        <h1 className="answer" >Email: {email}</h1>
-        <h1 className="answer" >Favorite spell: {Spell}</h1>
-        <h1 className='answer'> Favorit thing: {test1}</h1>
-
-        <button type="button" onClick={resetButton}>Reset </button>
-        <button type="submit" onClick={NextQuestion}>Submit</button>
+        <div className="container">
+            <span className="small-heading">Before confirming the order, please have a look that is what you whish for </span>
+            <p className="answer" >Name:{FirstName} {LastName}</p> 
+            <p className="answer" >Email:{email}</p> 
+            <p className="answer" >Flavour:{Flavour}</p>
+            <p className='answer'> Delivery:{Delivery}</p>
+        <div className="btn-container">
+            <button type="button" className="button" onClick={resetButton}>Reset </button>
+            <button type="submit" className="button" onClick={NextQuestion}>Confirm</button>
+        </div>        
+        </div>
         </>
     )
 }

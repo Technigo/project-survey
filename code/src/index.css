@@ -5,8 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
-  
+  background-image: url('./assets/background.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
 
 code {
@@ -14,24 +16,54 @@ code {
     monospace;
 }
 
-.form-wrapper {
-  background-color: pink;
-  border: solid 10px;
-  border-color: black;
-  margin: auto;
-  padding: 50px; 
-  width: 40%;
-  margin-top: 100px; 
- 
+/*Big heading*/
 
+
+
+.survery-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.header {
+  text-align: center;
+  padding-left: 40px; 
+  padding-right: 40px; 
+  margin-top: 30px; 
+  background-color: white;
+  
+}
+
+.header-text {
+  font-size: 50px;
 }
 
 
 
+/* wrapper */
+.form-wrapper {
+  background-color:rgba(255, 255, 255, 0.8);
+  border: solid 10px;
+  border-color: #f70776;
+  padding: 70px; 
+  padding-bottom: 100px;
+  width: 30%;
+  margin: auto; 
+  height: 100%;
+  margin-top: 50px; 
+  position: relative ;
+
+ 
+}
+
+/* Buttons and dropdown */
+
 .button , .dropdown {
   align-items: center;
   background-clip: padding-box;
-  background-color: #fa6400;
+  background-color: #f70776;
   border: 1px solid transparent;
   border-radius: .25rem;
   box-shadow: rgba(0, 0, 0, 0.02) 0 1px 3px 0;
@@ -59,7 +91,7 @@ code {
 
 .button:hover,
 .button:focus {
-  background-color: #fb8332;
+  background-color: #c3195d;
   box-shadow: rgba(0, 0, 0, 0.1) 0 4px 12px;
 }
 
@@ -68,16 +100,89 @@ code {
 }
 
 .button:active {
-  background-color: #c85000;
-  box-shadow: rgba(0, 0, 0, .06) 0 2px 4px;
+  background-color: #f70773;
   transform: translateY(0);
 }
 
 .dropdown {
   display: flex;
-  flex-direction: column;
   text-align: center;
-  align-items: center;
+  justify-items: center;
+  margin-left: 100px; 
+  margin-top: 50px; 
+  margin-bottom: 15px;
+  
 }
+
+/*Conatiners */
+.container {
+  text-align: center;
+  height: 200px;
+  
+}
+
+.btn-container {
+  margin-top: 30px;
+  justify-content: center;
+}
+
+/*components */ 
+
+.firstName {
+  margin: 10px; 
+}
+
+.EmailInput {
+  margin-top: 40px; 
+  width: 50%;
+  margin-bottom: 20px;
+}
+
+.small-heading {
+  font-size: 18px;
+  margin-bottom: 10px;
+
+}
+
+/*radiobutton question- grid display */
+
+.flavour-container {
+  font-size: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+ 
+}
+
+.heading-icecream {
+  grid-column: span 3;
+  margin-top: 0px;
+}
+
+.icecream1 , .icecream3 {
+  font-size: 16px;
+  grid-column: 1 / 1;
+  
+}
+
+.iceream2 , .iceream4 {
+  font-size: 16px;
+  grid-column: 2 / 3;
+}
+
+/*Summary */
+
+.answer {
+  font-size: 16px;
+  text-align: left;
+}
+
+/*Thank you component*/
+
+.thankyou {
+  padding-top: 60px; 
+  
+}
+
+
 
 

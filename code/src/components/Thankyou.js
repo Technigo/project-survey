@@ -4,7 +4,10 @@ export const ThankYou = () => {
     return(
         <>
         <div className="container">
-            <p>Thank you for your feedback, hope to see you again!</p>
+            <article className="thankyou">
+            <p>Your order is now preparing! </p>
+               <p>xoxo IceCream Land</p>
+               </article>
         </div>
         
         </>

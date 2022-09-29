@@ -13,8 +13,8 @@ export const Form = () => {
   const [email, SetEmail] = useState('') 
   const [FirstName, SetFirstName] = useState('')
   const [LastName, SetLastName] = useState('')
-  const [Spell, SetSpell] = useState('') 
-  const [test1, SetTest1] = useState(false)
+  const [Delivery, SetDelivery] = useState('') 
+  const [Flavour, SetFlavour] = useState(false)
   const [page, SetPage] = useState(0)
   
 
@@ -38,12 +38,12 @@ export const Form = () => {
     SetEmail(event.target.value)
   }
 
-  const onSpell = (event) => {
-    SetSpell(event.target.value)
+  const onDelivery = (event) => {
+    SetDelivery(event.target.value)
   }
 
-  const onTest1 = (event) => {
-    SetTest1(event.target.value)
+  const onFlavour = (event) => {
+    SetFlavour(event.target.value)
   }
 
 
@@ -55,6 +55,8 @@ export const Form = () => {
 
   return (
     <div className="survery-form">
+      <div className="header"> <h1 className="header-text">ICE CREAM LAND</h1></div>
+      
       <form className='form-wrapper' onSubmit={handleSubmit} >  
 
        {page === 0 &&  <LandingPage NextQuestion={NextQuestion} />}
@@ -70,18 +72,20 @@ export const Form = () => {
       />  )} 
 
        {page === 2 && (
-        <Email 
-        email={email}
-        onEmail={onEmail}
-        NextQuestion={NextQuestion}
-       backCounter={backCounter}
+      <Email 
+      email={email}
+      FirstName={FirstName} 
+      LastName={LastName} 
+      onEmail={onEmail}
+      NextQuestion={NextQuestion}
+      backCounter={backCounter}
         />
        )}
 
       {page === 3 && (
       <MultiplieChoice
-      Spell={Spell}
-      onSpell={onSpell}
+      Delivery={Delivery}
+      onDelivery={onDelivery}
       NextQuestion={NextQuestion}
       backCounter={backCounter}
       /> 
@@ -89,9 +93,9 @@ export const Form = () => {
 
       {page === 4 && (
         <FavoriteThing
-        SetTest1={SetTest1}
-        test1={test1}
-        onTest1={onTest1}
+        SetFlavour={SetFlavour}
+        Flavour={Flavour}
+        onFlavour={onFlavour}
         NextQuestion={NextQuestion}
         backCounter={backCounter}
         />
@@ -102,10 +106,11 @@ export const Form = () => {
         FirstName={FirstName}
         LastName={LastName}
         email={email}
-        Spell={Spell}
+        Delivery={Delivery}
+        Flavour={Flavour}
         resetButton={resetButton}
         NextQuestion={NextQuestion}
-        test1={test1}
+      
         />
       )}
       

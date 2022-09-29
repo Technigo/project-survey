@@ -1,20 +1,22 @@
 import React from 'react';
 
-export const Email = ({NextQuestion, backCounter, onEmail, email}) => {
-  console.log('test 2')
-
+export const Email = ({NextQuestion, backCounter, onEmail, email, FirstName, LastName}) => {
   return (
-    <div className="EmailForm">
-      <span>Whats your email?</span>
+    <div className="container">
+      <span className="small-heading"> <h1 className="small-heading">Hi {FirstName} {LastName} we also need your email to complete the order. </h1></span>
+      <br></br>
       <input 
       type="text"
+      className="EmailInput"
       placeholder="exampel@exapmel.com"
       onChange={onEmail} 
       value={email}
-      key={email}/>
+      />
       
-      <button type="button" onClick={NextQuestion} className="button"> Next Question </button>
-      <button type="button" onClick={backCounter} className="button">back</button>
+      <div className="btn-container">
+            <button type="button" onClick={NextQuestion} className="button"> Next </button>
+            <button type="button" onClick={backCounter} className="button"> Back</button>
+            </div>
     </div>
   )
 } 
