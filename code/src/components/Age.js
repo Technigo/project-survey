@@ -25,8 +25,3 @@ export const Age = ({ age, setAge }) => {
     </div>
   );
 }
-
-/* const handleAgeChange = (e) => {
-    setAge(e.target.value);
-  }
-<input type="text" value={age} onChange={handleAgeChange} /> */

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Step = ({ step, setStep}) => {
+export const Step = ({ step, setStep }) => {
   const handleCounterButtonClick = (shouldIncrese) => {
     if (shouldIncrese && step < 4) {
       setStep(step + 1);
@@ -11,9 +11,13 @@ export const Step = ({ step, setStep}) => {
 
   return (
     <>
-       Progres {step}
-      <button type="button" onClick={() => handleCounterButtonClick(true)}>Next question</button>
-      <button type="button" onClick={() => handleCounterButtonClick(false)}>Previous question</button>
+      <div className="page-text">
+       Page: {step}
+      </div>
+      <div className="buttons">
+        <button type="button" onClick={() => handleCounterButtonClick(true)}>Next question</button>
+        <button type="button" onClick={() => handleCounterButtonClick(false)}>Previous question</button>
+      </div>
     </>
   )
 }

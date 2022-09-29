@@ -15,13 +15,6 @@ export const App = () => {
   const [recycle, setRecycle] = useState('');
   const [drink, setDrink] = useState('');
 
-  const handleStepIncrease = () => {
-    setStep(step + 1);
-  }
-  const handleStepDecrease = () => {
-    setStep(step - 1);
-  }
-
   return (
     <div className="outerContainer">
       <div className="innerContainer">
