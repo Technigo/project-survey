@@ -10,7 +10,7 @@ export const ConcertPlace = ({ place, setPlace }) => {
     setPlace(event.target.value)
   }
   return (
-    <form>
+    <form className="radioBtn">
       {concertPlaces.map((group) => (
         <label key={group} htmlFor="lang">
           <input

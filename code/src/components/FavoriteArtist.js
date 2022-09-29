@@ -6,7 +6,7 @@ export const FavoriteArtist = ({ favoriteArtist, setFavoriteArtist }) => {
   }
   return (
     <form>
-      <p>Which artist do you want to see in your next artist?</p>
+      <p>Which artist do you want to see in your next concert?</p>
       <input type="text" value={favoriteArtist} onChange={handleFavoriteArtist} />
     </form>
   );
