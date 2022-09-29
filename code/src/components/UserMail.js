@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 
 const UserMail = ({ usermail, setUsermail }) => {
@@ -6,7 +7,7 @@ const UserMail = ({ usermail, setUsermail }) => {
   };
   return (
     <div>
-      <p>What is your email address?</p>
+      <p tabIndex="0">What is your email address?</p>
       <input value={usermail} type="email" placeholder="email address" required="required" onChange={handleMailInputChange} />
     </div>
   )

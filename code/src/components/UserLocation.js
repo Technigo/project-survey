@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable react/react-in-jsx-scope */
 const UserLocation = ({ userlocation, setUserlocation }) => {
   const handleUserLocationInputChange = (event) => {
@@ -6,8 +7,8 @@ const UserLocation = ({ userlocation, setUserlocation }) => {
 
   return (
     <>
-      <p>What is your nearest physical Star shop ⭐? </p>
-      <p>Select one of the options below</p>
+      <p tabIndex="0">What is your nearest physical Star shop ⭐? </p>
+      <p tabIndex="0">Select one of the options below</p>
       <select value={userlocation} onChange={handleUserLocationInputChange}>
         <option value="">Select location</option>
         <option value="Stockholm">Stockholm</option>

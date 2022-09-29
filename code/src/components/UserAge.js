@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
@@ -6,9 +7,9 @@ const UserAge = ({ userage, setUserage }) => {
 
   return (
     <div>
-    Age group:
+      <h1 tabIndex="0">Age group: </h1>
       {ageGroups.map((group) => (
-        <label key={group}>
+        <label tabIndex="0" key={group}>
           <input
             type="radio"
             value={group}

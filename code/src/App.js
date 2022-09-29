@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { useState } from 'react';
 import FirstPage from 'components/FirstPage';
 import UserName from 'components/UserName';
@@ -36,8 +37,6 @@ export const App = () => {
   return (
     <form/*  onSubmit={(event) => event.preventDefault()} */>
 
-      
-
       {counter === 0 && (
         <>
           <FirstPage />
@@ -50,42 +49,42 @@ export const App = () => {
       {counter === 1 && (
         <div>
           <UserName username={name} setUsername={setName} />
-          <p>Questions answered: {counter}/7 </p>
+          <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
       {counter === 2 && (
         <div>
           <UserLastname userlastname={lastname} setUserlastname={setLastname} username={name} />
-          <p>Questions answered: {counter}/7 </p>
+          <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
       {counter === 3 && (
         <div>
           <UserMail usermail={mail} setUsermail={setMail} />
-          <p>Questions answered: {counter}/7 </p>
+          <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
       {counter === 4 && (
         <div>
           <UserLocation userlocation={location} setUserlocation={setLocation} />
-          <p>Questions answered: {counter}/7 </p>
+          <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
       {counter === 5 && (
         <div>
           <UserAge userage={age} setUserage={setAge} />
-          <p>Questions answered: {counter}/7 </p>
+          <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
       {counter === 6 && (
         <div>
           <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
-          <p>Questions answered: {counter}/7 </p>
+          <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
@@ -111,14 +110,17 @@ export const App = () => {
 
       {counter === 7 && (
         <div>
-          <p>Survey completed!</p>
-          <p>Summary of you answers:</p>
-          <p>Name: {name} </p>
-          <p>Lastname: {lastname} </p>
-          <p>E-mail: {mail} </p>
-          <p>Physical shop location: {location} </p>
-          <p>Age group: {age} </p>
-          <p>Frequency for newsletter: {frequency}</p>
+
+          <h1 tabIndex="0">Survey completed!</h1>
+          <h2 tabIndex="0">Summary of you answers:</h2>
+          <ol>
+            <li tabIndex="0">Name: {name} </li>
+            <li tabIndex="0">Lastname: {lastname} </li>
+            <li tabIndex="0">E-mail: {mail} </li>
+            <li tabIndex="0">Physical shop location: {location} </li>
+            <li tabIndex="0">Age group: {age} </li>
+            <li tabIndex="0">Frequency for newsletter: {frequency}</li>
+          </ol>
           <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
         </div>
       )}

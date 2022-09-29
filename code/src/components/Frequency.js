@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 
 const Frequency = ({ userfrequency, setUserfrequency }) => {
@@ -5,9 +6,9 @@ const Frequency = ({ userfrequency, setUserfrequency }) => {
 
   return (
     <div>
-      Frequency:
+      <h1 tabIndex="0">Frequency:</h1>
       {frequencyGroups.map((frequency) => (
-        <label key={frequency} htmlFor="frequency">
+        <label tabIndex="0" key={frequency} htmlFor="frequency">
           <input
             type="checkbox"
             value={frequency}
