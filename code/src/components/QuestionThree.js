@@ -5,7 +5,7 @@ const QuestionThree = ({ onStepChange, onQuestThreeChange, questThree })=> {
     return (
         <div className='questions-container'>
             <form className='form' onSubmit={event => event.preventDefault()}>
-                <h1 tabIndex='0'>Who made a gold statue of themself?</h1>
+                <h1 tabIndex='0'>3. Who made a gold statue of themself?</h1>
                 
                   <div className='input-container'>
                   <label className='select-label'>

@@ -11,7 +11,7 @@ const QuestionOne = ({ onStepChange, setQuestOne, questOne })=> {
     return (
         <div className='questions-container'>
             <form className='form'>
-                <h1 tabIndex='0'>Who LOVES yoghurt?</h1>
+                <h1 tabIndex='0'>1. Who LOVES yoghurt?</h1>
 
                 <div className='radio-btns'>
                 {choices.map((name => {

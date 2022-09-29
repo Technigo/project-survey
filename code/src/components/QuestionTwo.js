@@ -11,7 +11,7 @@ const QuestionTwo = ({ onStepChange, setQuestTwo, questTwo }) => {
     return (
         <div className='questions-container'>
             <form className='form'>
-                <h1 tabIndex='0'>How many brothers does Amy have?</h1>
+                <h1 tabIndex='0'>2. How many brothers does Amy have?</h1>
                  
                 <div className='radio-btns'>
                 {howMany.map((siblings => {
@@ -27,7 +27,7 @@ const QuestionTwo = ({ onStepChange, setQuestTwo, questTwo }) => {
                     )
                     }))}
                 </div>
-                
+
                 <button className='next-btn' type='button' onClick={onStepChange}>Next</button>
             </form> 
         </div>

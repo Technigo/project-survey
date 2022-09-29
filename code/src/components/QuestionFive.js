@@ -11,7 +11,7 @@ const QuestionFive = ({ onStepChange, setQuestFive, questFive }) => {
     return (
         <div className='questions-container'>
             <form className='form'>
-                <h1 tabIndex='0'>Which is Jake's favourite movie?</h1>
+                <h1 tabIndex='0'>5. Which is Jake's favourite movie?</h1>
 
                 <div className='radio-btns'>
                 {movies.map((movie => {

@@ -5,7 +5,7 @@ const QuestionFour = ({ onStepChange, onQuestFourChange, questFour }) => {
     return (
         <div className='questions-container'>
             <form className='form' onSubmit={event => event.preventDefault()}>
-                <h1 tabIndex='0'>What is captain Holt's husband's name?</h1>
+                <h1 tabIndex='0'>4. What is captain Holt's husband's name?</h1>
                 
                   <div className='input-container'>
                   <label className='select-label'>
