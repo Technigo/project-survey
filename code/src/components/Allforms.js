@@ -15,6 +15,7 @@ const Allforms = () => {
   const [quality, setCakeQuality] = useState('');
   const [service, setService] = useState('');
   const [opinion, setOpinion] = useState('');
+  const [isFooVisible, setIsFooVisible] = useState(false);
 
   /* Every onChange function that affects the input */
   const onCounterChange = () => {
@@ -42,6 +43,10 @@ const Allforms = () => {
   const onOpinionChange = (event) => {
     setOpinion(event.target.value);
   }
+  const handleFooPress = () => {
+    setIsFooVisible((isVisible) => !isVisible);
+  };
+
   return (
     <>
       {counter === 1 && (
@@ -85,7 +90,9 @@ const Allforms = () => {
           cakeOption={cakeOption}
           quality={quality}
           service={service}
-          opinion={opinion} />
+          opinion={opinion}
+          isFooVisible={isFooVisible}
+          handleFooPress={handleFooPress} />
       )}
     </>
   )

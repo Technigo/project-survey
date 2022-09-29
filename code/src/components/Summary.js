@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Summary = ({ name, cakeOption, quality, service, opinion, onVoucherChange }) => {
+const Summary = ({ name, cakeOption, quality, service, opinion, isFooVisible, handleFooPress }) => {
   return (
     <div className="container">
       <h3>Thank you for your answer, {name}</h3>
@@ -23,7 +23,7 @@ const Summary = ({ name, cakeOption, quality, service, opinion, onVoucherChange 
       personal voucher code.
       Once again... thank you, {name}!
       </p>
-      <button type="button" onClick={onVoucherChange}>Grab you code here!</button>
+      <button type="button" onClick={handleFooPress}>Grab you code here!</button>{isFooVisible && <h1>Foo</h1>}
     </div>
   );
 }
