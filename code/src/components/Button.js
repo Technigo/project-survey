@@ -1,9 +1,9 @@
-const Button = () => {
+const Button = ({ nextPage }) => {
   return (
     <button
       className="submit-button button"
       type="submit"
-      onClick={() => setPageIndex(1)}
+      onClick={() => nextPage()}
     >
       <span className="button-span">
         OK

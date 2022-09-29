@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Footer from 'components/Footer';
 import Landing from 'components/Landing';
 import Questionnaire from 'components/Questionnaire';
@@ -6,15 +6,37 @@ import Questionnaire from 'components/Questionnaire';
 export const App = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const [name, setName] = useState('');
+  const [surname, setSurname] = useState('');
+  const [gift, setGift] = useState('');
 
-  console.log('name:', name);
+  // console.log('gift:', gift);
 
-  document.querySelector('body').addEventListener('keypress', event => {
+  // helper functions to navigate through the pages, that can be passed to other components without having to pass both pageIndex and setPageIndex
+  const nextPage = () => {
+    setPageIndex(pageIndex + 1);
+  };
+  const previousPage = () => {
+    setPageIndex(pageIndex - 1);
+  };
+
+  // callback function for the keypress event listeners below
+  const handleKeypress = event => {
     if (event.key === 'Enter') {
-      setPageIndex(pageIndex + 1);
+      nextPage();
     }
-  });
+  };
 
+  // Adds an event listener for keypress Enter to the whole window object
+  // useEffect adds the event listener after the component first mounts, and every time pageIndex changes
+  // the return callback function removes the event listener when the component unmounts, to avoid adding it infinitely
+  useEffect(() => {
+    window.addEventListener('keypress', handleKeypress);
+    return () => {
+      window.removeEventListener('keypress', handleKeypress);
+    };
+  }, [pageIndex]);
+
+  // renders a different page depending on the pageIndex
   const router = pageIndex => {
     switch (pageIndex) {
       case 0:
@@ -24,8 +46,32 @@ export const App = () => {
           <Questionnaire
             label="Let's get started - what's your name?"
             pageIndex={pageIndex}
-            inputType="name"
-            setName={setName}
+            inputType="text"
+            setter={setName}
+            value={name}
+            nextPage={nextPage}
+          />
+        );
+      case 2:
+        return (
+          <Questionnaire
+            label={`And your surname, ${name}?`}
+            pageIndex={pageIndex}
+            inputType="text"
+            setter={setSurname}
+            value={surname}
+            nextPage={nextPage}
+          />
+        );
+      case 3:
+        return (
+          <Questionnaire
+            label="What kind of gift would you like?"
+            pageIndex={pageIndex}
+            inputType="radio"
+            setter={setGift}
+            value={gift}
+            nextPage={nextPage}
           />
         );
       default:
@@ -35,9 +81,13 @@ export const App = () => {
 
   return (
     <div className="outer-wrapper">
-      <div className="inner-wrapper">{router(pageIndex)}</div>
+      <main className="inner-wrapper">{router(pageIndex)}</main>
       {pageIndex > 0 && (
-        <Footer pageIndex={pageIndex} setPageIndex={setPageIndex} />
+        <Footer
+          pageIndex={pageIndex}
+          nextPage={nextPage}
+          previousPage={previousPage}
+        />
       )}
     </div>
   );

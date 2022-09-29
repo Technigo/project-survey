@@ -1,4 +1,4 @@
-const Footer = ({ pageIndex, setPageIndex }) => {
+const Footer = ({ pageIndex, nextPage, previousPage }) => {
   return (
     <footer>
       <div className="footer-wrapper">
@@ -11,18 +11,12 @@ const Footer = ({ pageIndex, setPageIndex }) => {
               />
             </button>
           ) : (
-            <button
-              className="previous-button button"
-              onClick={() => setPageIndex(pageIndex - 1)}
-            >
+            <button className="previous-button button" onClick={previousPage}>
               <img src="./assets/zondicons/cheveron-up.svg" alt="up arrow" />
             </button>
           )}
           <div className="button-divider">{``}</div>
-          <button
-            className="next-button button"
-            onClick={() => setPageIndex(pageIndex + 1)}
-          >
+          <button className="next-button button" onClick={nextPage}>
             <img src="./assets/zondicons/cheveron-down.svg" alt="down arrow" />
           </button>
         </nav>

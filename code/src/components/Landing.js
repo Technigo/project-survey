@@ -1,5 +1,5 @@
 const Landing = ({ setPageIndex }) => (
-  <div className="landing-container">
+  <section className="landing-container">
     <picture className="welcome-container">
       <img src="./assets/welcome.png" alt="welcome" />
     </picture>
@@ -23,7 +23,7 @@ const Landing = ({ setPageIndex }) => (
         </span>
       </p>
     </div>
-  </div>
+  </section>
 );
 
 export default Landing;

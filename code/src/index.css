@@ -197,6 +197,17 @@ overwrites the button:hover effect for buttons with both classes */
   opacity: 0.3;
 }
 
+/***************/
+/* RADIO INPUT */
+/***************/
+
+.radio-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  margin: 25px 0;
+}
+
 /************/
 /** FOOTER **/
 /************/
