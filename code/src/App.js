@@ -61,14 +61,16 @@ export const App = () => {
           <>
             <h1>Hi {userName}!</h1>
             <h2>Would you like your sauce..?</h2>
-            <label htmlFor="meat">
-              <input type="radio" id="meat" name="preference" value="Meat" onChange={handlePreferenceInputChange} checked={preference === 'Meat'} />
-              Filled with pancetta!
-            </label>
-            <label htmlFor="veg">
-              <input type="radio" id="veg" name="preference" value="Veg" onChange={handlePreferenceInputChange} checked={preference === 'Veg'} />
-              Vegetarian please!
-            </label>
+            <div className="radioContainer">
+              <label htmlFor="meat">
+                <input type="radio" id="meat" name="preference" value="Meat" onChange={handlePreferenceInputChange} checked={preference === 'Meat'} />
+                Filled with pancetta!
+              </label>
+              <label htmlFor="veg">
+                <input type="radio" id="veg" name="preference" value="Veg" onChange={handlePreferenceInputChange} checked={preference === 'Veg'} />
+                Vegetarian please!
+              </label>
+            </div>
             <button type="button" onClick={handleNextButtonClick}>Next</button>
           </>
         )}
@@ -76,18 +78,20 @@ export const App = () => {
         {stepCounter === 3 && (
           <>
             <h2>Which is your favorite tomato pairing?</h2>
-            <label htmlFor="cheese">
-              <input type="radio" id="cheese" name="condiment" value="cheese" onChange={handleCondimentChange} checked={condiment === 'cheese'} />
-              Cheeeeese!!
-            </label>
-            <label htmlFor="aubergine">
-              <input type="radio" id="aubergine" name="condiment" value="aubergine" onChange={handleCondimentChange} checked={condiment === 'aubergine'} />
-              Aubergine
-            </label>
-            <label htmlFor="chili">
-              <input type="radio" id="chili" name="condiment" value="chili" onChange={handleCondimentChange} checked={condiment === 'chili'} />
-              Chili &#127798;
-            </label>
+            <div className="radioContainer">
+              <label htmlFor="cheese">
+                <input type="radio" id="cheese" name="condiment" value="cheese" onChange={handleCondimentChange} checked={condiment === 'cheese'} />
+                Cheeeeese!!
+              </label>
+              <label htmlFor="aubergine">
+                <input type="radio" id="aubergine" name="condiment" value="aubergine" onChange={handleCondimentChange} checked={condiment === 'aubergine'} />
+                Aubergine
+              </label>
+              <label htmlFor="chili">
+                <input type="radio" id="chili" name="condiment" value="chili" onChange={handleCondimentChange} checked={condiment === 'chili'} />
+                Chili &#127798;
+              </label>
+            </div>
             <button type="button" onClick={handleNextButtonClick}>Next</button>
           </>
         )}
@@ -95,18 +99,20 @@ export const App = () => {
         {stepCounter === 4 && (
           <>
             <h2>How spicy would you like your sauce?</h2>
-            <label htmlFor="A">
-              <input type="radio" id="A" name="spicy" value="not spicy" onChange={handleSpicyChange} checked={spicy === 'not spicy'} />
-              Not spicy
-            </label>
-            <label htmlFor="B">
-              <input type="radio" id="B" name="spicy" value="lagom" onChange={handleSpicyChange} checked={spicy === 'lagom'} />
-              Lagom
-            </label>
-            <label htmlFor="C">
-              <input type="radio" id="C" name="spicy" value="spicy" onChange={handleSpicyChange} checked={spicy === 'spicy'} />
-              Spicy!
-            </label>
+            <div className="radioContainer">
+              <label htmlFor="A">
+                <input type="radio" id="A" name="spicy" value="not spicy" onChange={handleSpicyChange} checked={spicy === 'not spicy'} />
+                Not spicy
+              </label>
+              <label htmlFor="B">
+                <input type="radio" id="B" name="spicy" value="lagom" onChange={handleSpicyChange} checked={spicy === 'lagom'} />
+                Lagom
+              </label>
+              <label htmlFor="C">
+                <input type="radio" id="C" name="spicy" value="spicy" onChange={handleSpicyChange} checked={spicy === 'spicy'} />
+                Spicy!
+              </label>
+            </div>
             <button type="button" onClick={handleNextButtonClick}>Next</button>
           </>
         )}
@@ -132,7 +138,7 @@ export const App = () => {
         {stepCounter === 6 && (
           <>
             <div>
-              <h2>{userName}&apos;s Pomodoro summary </h2>
+              <h1>{userName}&apos;s Pomodoro summary </h1>
               <p>Preference: {preference}</p>
               <p>Condiment: {condiment}</p>
               <p>How spicy: {spicy}</p>

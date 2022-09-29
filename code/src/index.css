@@ -1,8 +1,9 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: 'Noto Sans Mono', monospace;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -20,40 +21,76 @@ code {
 
 h1 {
   display: flex;
+  font-weight: bold;
   justify-content: center;
-  border: solid paleturquoise 1px;
+  margin: 50px 0px 50px 0px;
+  /* border: solid paleturquoise 1px; */
+}
+
+h2 {
+  font-size: 15px;
+  /* border: solid magenta 1px; */
+}
+
+h3 {
+  font-size: 15px;
 }
 
 p {
-  border: solid pink 1px;
+  font-size: 14px;
+  font-weight: bold;
+  /* border: solid pink 1px; */
 }
 
 .container {
-  font-family: Roboto;
   display: flex;
   justify-content: center;
-  align-items: center;
-  /* padding: 40px; */
+  text-align: center;
+  padding: 80px;
   width: 35vw;
   height: 70vh;
-  margin-top: 55px;
-  border: solid black 1px;
-  background-color: rgb(243, 228, 185);
+  margin: 40px;
+  border: solid black 2px;
+  background-color: rgb(243, 212, 185);
 }
 
 .stepOne {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  /* border: solid green 1px; */
+}
+
+.start {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  /* border: solid orange 1px; */
+}
+
+input[type="text" i] {
   text-align: center;
-  width: 30vw;
-  border: solid green 1px;
+  padding: 1px 2px;
 }
 
 .questions {
-  border: solid red 1px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid red 1px; */
+}
+
+.radioContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding: 20px 0px 20px 0px;
+  margin: 20px;
+  /* border: solid blue 1px; */
 }
 
 .summary {
-  border: solid yellow 1px;
+  /* border: solid yellow 1px; */
 }
 
