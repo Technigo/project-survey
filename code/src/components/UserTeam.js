@@ -1,12 +1,18 @@
 import React from 'react';
+import lion from 'assets/icons8-lion-100.png';
+import turtle from 'assets/icons8-turtle-100.png';
+import elephant from 'assets/icons8-elephant-100.png';
+import fox from 'assets/icons8-fox-100.png';
+import tiger from 'assets/icons8-tiger-face-100.png';
+import hippo from 'assets/icons8-hippopotamus-100.png';
 
 const WichTeam = [
-  '🐢 Turtles ',
-  '🐯 Tigers',
-  '🦊 Foxes',
-  '🐘 Elephants',
-  '🦛 Hippos',
-  '🦁 Lions'
+  { text: 'Turtles', value: 'Turtles', id: 1, image: turtle },
+  { text: 'Tigers', value: 'Tigers', id: 2, image: tiger },
+  { text: 'Foxes', value: 'Foxes', id: 3, image: fox },
+  { text: 'Elephants', value: 'Elephants', id: 4, image: elephant },
+  { text: 'Hippos', value: 'Hippos', id: 5, image: hippo },
+  { text: 'Lions', value: 'Lions', id: 6, image: lion }
 ]
 
 const UserTeam = ({ userTeam, setUserTeam, userName }) => {
@@ -14,20 +20,26 @@ const UserTeam = ({ userTeam, setUserTeam, userName }) => {
     setUserTeam(event.target.value)
   };
   return (
-    <form>
-      <h2> What is your team {userName} ?</h2>
-      {WichTeam.map((group) => (
-        <label htmlFor="age" key={group}>
-          <input
-            type="radio"
-            value={group}
-            onChange={handleUserTeamInputChange}
-            checked={userTeam === group}
-          />
-          {group}
-        </label>
-      ))};
-    </form>
+    <>
+      <h2 className="question-title"> What is your team {userName} ?</h2>
+      <form className="form-wrapper">
+        {WichTeam.map((group) => (
+          <label className="lable-wrapper" htmlFor={group.value} key={group.id}>
+            <div className="input-wrapper">
+              <input
+                className="input-btn"
+                type="radio"
+                value={group.value}
+                onChange={handleUserTeamInputChange}
+                checked={userTeam === group.value}
+                image={group.image}
+              />
+              <img className="animals" src={group.image} alt={group.value} />
+            </div>
+          </label>
+        ))}
+      </form>
+    </>
   );
 };
 

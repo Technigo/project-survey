@@ -5,9 +5,11 @@ const UserName = ({ userName, setUserName }) => {
     setUserName(event.target.value)
   }
   return (
-    <div>
-      <h2> Hello, please type in your name</h2>
+    <div className="input-field">
+      <h2 className="question-title"> Hello, please type in your name</h2>
       <input
+        className="input-box"
+        placeholder="Type here"
         value={userName}
         type="text"
         onChange={handleUserNameInputChange}
