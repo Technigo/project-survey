@@ -105,6 +105,7 @@ header {
 
 .submitBtn:disabled {
   background-color: #967E76;
+  opacity: 20%;
 }
 
 .submitBtn:disabled:hover {

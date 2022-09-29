@@ -15,7 +15,7 @@ const QuestionDropdownGenre = (props) => {
         <option value="comics">Comics</option>
         <option value="crime">Crime</option>
         <option value="fantacy">Fantacy</option>
-        <option value="sciFy">Science fiction</option>
+        <option value="science fiction">Science fiction</option>
       </select>
     </form>
   );

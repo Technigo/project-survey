@@ -6,12 +6,12 @@ const QuestionRadio = (props) => {
 
   return (
     <form className="radio-container">
-      <h2 className="radio-intro">Nowadays you can both read and listen to a book - how do you do it? Please enter my survey to let me know!</h2>
+      <h2 className="radio-intro">Nowadays you can both read and listen to a book - how do you do it? Please enter my survey to let me know! </h2>
       <p className="radio-question">Do you like to read or listen to a book?</p>
-        <section className="radioBtn">
+      <section className="radioBtn">
         <label>
-            <p className="radio-read">Read</p>
-            <input
+          <p className="radio-read">Read</p>
+          <input
             className="radio-input-read"
             type="radio"
             name="readOrListen"
@@ -20,8 +20,8 @@ const QuestionRadio = (props) => {
             onChange={(event) => setRadio(event.target.value)} />
         </label>
         <label>
-            <p className="radio-listen">Listen</p>
-            <input
+          <p className="radio-listen">Listen</p>
+          <input
             className="radio-input-listen"
             type="radio"
             name="readOrListen"
