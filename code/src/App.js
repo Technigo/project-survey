@@ -4,7 +4,7 @@ import UserLastname from 'components/UserLastname';
 import UserMail from 'components/UserMail';
 import UserLocation from 'components/UserLocation';
 import UserAge from 'components/UserAge';
-/* import Frequency from 'components/Frequency'; */
+import Frequency from 'components/Frequency';
 
 export const App = () => {
   const [counter, setCounter] = useState(1);
@@ -12,8 +12,8 @@ export const App = () => {
   const [lastname, setLastname] = useState('');
   const [mail, setMail] = useState('');
   const [location, setLocation] = useState('');
-  const [age, setAge] = useState();
-  /* const [frequency, setFrequency] = useState(); */
+  const [age, setAge] = useState('');
+  const [frequency, setFrequency] = useState();
 
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 7) {
@@ -29,11 +29,11 @@ export const App = () => {
     setMail('');
     setLocation('');
     setAge('');
-    /* setFrequency(''); */
+    setFrequency('');
   };
 
   return (
-    <form onSubmit={(event) => event.preventDefault()}>
+    <form/*  onSubmit={(event) => event.preventDefault()} */>
       <div>
         <div className="newsletter">
           <h1>Join our ⭐ newsletter</h1>
@@ -62,7 +62,7 @@ export const App = () => {
 
         {counter === 2 && (
           <div>
-            <UserLastname userlastname={lastname} username={name} setUserlastname={setLastname} />
+            <UserLastname userlastname={lastname} setUserlastname={setLastname} username={name} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
@@ -88,29 +88,30 @@ export const App = () => {
           </div>
         )}
 
-        {/* { {counter === 6 && (
+        {counter === 6 && (
           <div>
             <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
             <p>Questions answered: {counter}/7 </p>
           </div>
-        )} */}
+        )}
 
         <p>
           <button type="button" onClick={handleClearButtonClick}>
           clear input
           </button>
         </p>
+
         {counter === 7 && (
           <div>
             <p>Survey completed!</p>
+            <p>Questions answered: {counter}/7 </p>
             <p>Summary of you answers:</p>
             <p>Name: {name} </p>
             <p>Lastname: {lastname} </p>
             <p>E-mail: {mail} </p>
             <p>Physical shop location: {location} </p>
             <p>Age group: {age} </p>
-            {/* <p>Frequency for newsletter: {frequency}</p> */}
-            <p>Questions answered: {counter}/7 </p>
+            <p>Frequency for newsletter: {frequency}</p>
             <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
           </div>
         )}

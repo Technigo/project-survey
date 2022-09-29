@@ -1,28 +1,23 @@
-/* import React from 'react';
+import React from 'react';
 
 const Frequency = ({ userfrequency, setUserfrequency }) => {
+  const frequencyGroups = ['week-days', 'weekends']
+
   return (
     <div>
-      <h1>When can we contact you with our great discount offers?</h1>
-      <label htmlFor="week-days">
-        During working days
-        <input
-          type="checkbox"
-          id="week-days"
-          checked={userfrequency}
-          value={userfrequency}
-          onChange={(event) => setUserfrequency(event.target.checked)} />
-      </label>
-      <label htmlFor="weekends">
-        On weekends
-        <input
-          type="checkbox"
-          id="weekends"
-          checked={userfrequency}
-          onChange={(event) => setUserfrequency(event.target.checked)} />
-      </label>
+      Frequency:
+      {frequencyGroups.map((frequency) => (
+        <label key={frequency} htmlFor="frequency">
+          <input
+            type="checkbox"
+            value={frequency}
+            onChange={(event) => setUserfrequency(event.target.checked)}
+            checked={userfrequency === frequency} />
+          {frequency}
+        </label>
+      ))}
     </div>
   )
 }
 
-export default Frequency; */
+export default Frequency;
