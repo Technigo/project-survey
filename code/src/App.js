@@ -4,6 +4,7 @@ import UserLastname from 'components/UserLastname';
 import UserMail from 'components/UserMail';
 import UserLocation from 'components/UserLocation';
 import UserAge from 'components/UserAge';
+/* import Frequency from 'components/Frequency'; */
 
 export const App = () => {
   const [counter, setCounter] = useState(1);
@@ -12,6 +13,7 @@ export const App = () => {
   const [mail, setMail] = useState('');
   const [location, setLocation] = useState('');
   const [age, setAge] = useState();
+  const [frequency, setFrequency] = useState();
 
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 7) {
@@ -27,6 +29,7 @@ export const App = () => {
     setMail('');
     setLocation('');
     setAge('');
+    setFrequency('');
   };
 
   return (
@@ -59,7 +62,7 @@ export const App = () => {
 
         {counter === 2 && (
           <div>
-            <UserLastname userlastname={lastname} setUserlastname={setLastname} />
+            <UserLastname userlastname={lastname} username={name} setUserlastname={setLastname} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )}
@@ -85,13 +88,13 @@ export const App = () => {
           </div>
         )}
 
-        {/*  {counter === 6 && (
+       {/* { {counter === 6 && (
           <div>
-            <UserLastname lastname={lastname} setLastname={setLastname} />
+            <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
             <p>Questions answered: {counter}/7 </p>
           </div>
-        )}
- */}
+        )} */}
+}
         <p>
           <button type="button" onClick={handleClearButtonClick}>
           clear input
@@ -106,11 +109,11 @@ export const App = () => {
             <p>E-mail: {mail} </p>
             <p>Physical shop location: {location} </p>
             <p>Age group: {age} </p>
+            {/* <p>Frequency for newsletter: {frequency}</p> */}
             <p>Questions answered: {counter}/7 </p>
             <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
           </div>
         )}
-
       </div>
     </form>
 
