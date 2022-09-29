@@ -1,5 +1,10 @@
 import React from 'react';
-import Choco from '../images/choco.jpg';
+import Strawberry from '../images/strawberry.jpg';
+import Caramel from '../images/caramel.jpg';
+import Raspberryroll from '../images/raspberry.jpg';
+import Peachwalnut from '../images/peachwalnut.jpg';
+import Coffee from '../images/coffee.jpg';
+import Orange from '../images/orange.jpg';
 
 const Checkcake = (props) => {
   const { cakeOption, onCakeOptionChange, onCounterChange } = props
@@ -10,64 +15,74 @@ const Checkcake = (props) => {
         <label htmlFor="cake" className="checkButtonContainer">
           <input
             type="checkbox"
-            value="Red Velvet"
-            checked={cakeOption.includes('Red Velvet')}
-            onChange={() => onCakeOptionChange('Red Velvet')} />
+            value="Strawberry Shortcake"
+            checked={cakeOption.includes('Strawberry Shortcake')}
+            onChange={() => onCakeOptionChange('Strawberry Shortcake')} />
+          <a href="" target="_blank"> <img
+            className="image"
+            src={Strawberry}
+            alt="Strawberry Shortcake" />
+          </a>
+        </label>
+
+        <label htmlFor="cake" className="checkButtonContainer">
+          <input
+            type="checkbox"
+            value="Salted Caramel Cake"
+            checked={cakeOption.includes('Salted Caramel Cake')}
+            onChange={() => onCakeOptionChange('Salted Caramel Cake')} />
           <img
             className="image"
-            src={Choco}
-            alt="choco" />
-          <span className="checkmarkCheck" />
+            src={Caramel}
+            alt="Salted Caramel Cake" />
         </label>
 
         <label htmlFor="cake" className="checkButtonContainer">
           <input
             type="checkbox"
-            value="Triple Chocolate"
-            checked={cakeOption.includes('Triple Chocolate')}
-            onChange={() => onCakeOptionChange('Triple Chocolate')} />
-            Triple Chocolate
-          <span className="checkmarkCheck" />
+            value="Raspberry Rollcake"
+            checked={cakeOption.includes('Raspberry Rollcake')}
+            onChange={() => onCakeOptionChange('Raspberry Rollcake')} />
+          <img
+            className="image"
+            src={Raspberryroll}
+            alt="Raspberry Rollcake" />
         </label>
 
         <label htmlFor="cake" className="checkButtonContainer">
           <input
             type="checkbox"
-            value="Vanilla"
-            checked={cakeOption.includes('Vanilla')}
-            onChange={() => onCakeOptionChange('Vanilla')} />
-            Vanilla
-          <span className="checkmarkCheck" />
+            value="Peach and Walnut Cake"
+            checked={cakeOption.includes('Peach and Walnut Cake')}
+            onChange={() => onCakeOptionChange('Peach and Walnut Cake')} />
+          <img
+            className="image"
+            src={Peachwalnut}
+            alt="Peach and Walnut Cake" />
         </label>
 
         <label htmlFor="cake" className="checkButtonContainer">
           <input
             type="checkbox"
-            value="Mango Passion"
-            checked={cakeOption.includes('Mango Passion')}
-            onChange={() => onCakeOptionChange('Mango Passion')} />
-            Mango Passion
-          <span className="checkmarkCheck" />
+            value="Coffee Latte Cake"
+            checked={cakeOption.includes('Coffee Latte Cake')}
+            onChange={() => onCakeOptionChange('Coffee Latte Cake')} />
+          <img
+            className="image"
+            src={Coffee}
+            alt="Coffee Latte Cake" />
         </label>
 
         <label htmlFor="cake" className="checkButtonContainer">
           <input
             type="checkbox"
-            value="Carrot Cake"
-            checked={cakeOption.includes('Carrot Cake')}
-            onChange={() => onCakeOptionChange('Carrot Cake')} />
-            Carrot Cake
-          <span className="checkmarkCheck" />
-        </label>
-
-        <label htmlFor="cake" className="checkButtonContainer">
-          <input
-            type="checkbox"
-            value="Coffee Toffee"
-            checked={cakeOption.includes('Coffee Toffee')}
-            onChange={() => onCakeOptionChange('Coffee Toffee')} />
-            Coffee Toffee
-          <span className="checkmarkCheck" />
+            value="Orange Cake"
+            checked={cakeOption.includes('Orange Cake')}
+            onChange={() => onCakeOptionChange('Orange Cake')} />
+          <img
+            className="image"
+            src={Orange}
+            alt="Orange Cake" />
         </label>
 
       </div>

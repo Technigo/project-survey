@@ -87,10 +87,11 @@ select{
 }
 
 .image{
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
   object-fit: cover;
   object-position: center;
+  margin-left: 10px;
 }
 
 /* Opening section styling */
@@ -113,8 +114,8 @@ select{
 }
 
 .checkButtonContainer{
+  display: flex;
   margin-bottom: 10%;
-  font-size: 2vh;
 }
 
 .quality-cake{
@@ -132,14 +133,21 @@ textarea{
   h1{
     font-size: 6.5vh;
   }
+
+  .image{
+    width: 200px;
+    height: 200px;
+  }
+
   .container{
     padding: 5% 10%;
   }
 
   .cake{
     grid-template-columns: repeat(2, 1fr);
-    margin: auto;
+    margin: 0;
     padding-bottom: 10%;
+    justify-items: center;
   }
 }
 
@@ -147,13 +155,20 @@ textarea{
   h1{
     font-size: 6vw;
   }
+
+  .image{
+    width: 300px;
+    height: 300px;
+  }
+
   .container{
     padding: 2% 10%;
   }
 
 .cake{
   grid-template-columns: repeat(2, 1fr);
-  margin: auto;
+  margin: 0;
   padding-bottom: 10%;
+  justify-items: center;
 }
 }
