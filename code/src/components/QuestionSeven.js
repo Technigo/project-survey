@@ -16,7 +16,7 @@ const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Progress:{' '}
+          Progress{' '}
         </label>
         <progress className="progress-bar" id="survey" value="7" max="8" />
       </div>

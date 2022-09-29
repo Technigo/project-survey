@@ -14,7 +14,7 @@ const QuestionSix = ({
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Progress:{' '}
+          Progress{' '}
         </label>
         <progress className="progress-bar" id="survey" value="6" max="8" />
       </div>
@@ -27,7 +27,7 @@ const QuestionSix = ({
               className="select-form"
               onChange={handleAdjectiveSecondChange}
               value={adjectiveSecond}>
-              <option value="default">Choose:</option>
+              <option value="default">Choose adjective</option>
               <option value="puzzling">puzzling</option>
               <option value="paranoid ">paranoid</option>
               <option value="skeptical">skeptical</option>

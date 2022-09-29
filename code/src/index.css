@@ -6,51 +6,64 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: linear-gradient(
-      rgb(252 252 252 / 52%),
-      rgba(252 252 252 / 52%)
+      rgba(11, 11, 11, 0.52),
+      rgba(11, 11, 11, 0.52)
     ),
-    url(https://cdn.pixabay.com/photo/2017/05/13/17/31/fruit-2310212_960_720.jpg);
+    url(https://coolwallpapers.me/picsup/5435312-mystical-wallpapers.jpg);
+  background-color: #013314;
+  padding-top: 50px;
 }
 
+/*  */
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1,
+h2,
+p {
+  color: #013314;
 }
 /********* Intro - Welcome page ********/
 .intro-container,
 .question-container,
 .summary-container {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: 10vw 15vw 0vw 15vw;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 25px;
+  background-color: rgba(255, 255, 255, 0.75);
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.header-container {
+  background-color: rgba(121, 141, 124, 0.177);
+  width: fit-content;
+  margin: 0 auto;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 10px;
 }
 
 .intro-container {
   text-align: center;
 }
 
-.question-container {
-  display: flex;
-  align-items: flex-start;
-}
-
-.summary-container {
-  margin: 0vw 15vw 0vw 15vw;
+.story-container {
+  justify-content: center;
+  padding-bottom: 20px;
 }
 /********* Progress bar ********/
 .progress-bar-container {
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 10px;
+  left: 10px;
   padding: 5px 5px;
-  background-color: rgba(253, 193, 82, 0.24705882352941178);
+  background-color: rgba(0, 0, 0, 0.3);
   width: 100%;
 }
 .progress-bar {
-  width: 40%;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -58,24 +71,24 @@ code {
   height: 13px;
 }
 .progress-label {
-  color: rgb(138 90 0);
+  color: #ffffff;
+  border-radius: 10px;
 }
 .progress-bar::-webkit-progress-value {
-  background: #cc9837;
+  background: #0e6a31b5;
+  border-radius: 10px;
 }
 
 .progress-bar::-webkit-progress-bar {
-  background: #ffa60259;
+  background: #ffffffe7;
+  border-radius: 10px;
 }
 
 .progress-bar::-moz-progress-bar {
-  background: #ffa60259;
+  background: #013314;
 }
 
-/********* Form ********/
-
-.form-style {
-  display: flex;
+******** Form ******* .form-style {
   flex-wrap: wrap;
   flex-direction: column;
 }
@@ -83,12 +96,25 @@ form label {
   margin-bottom: 5px;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 form input,
 form select {
   height: 30px;
   margin-bottom: 5px;
+  border: none;
+  font-family: 'Josefin Sans', sans-serif;
+  border: 0;
+  border-bottom: 2px solid #013314;
+  color: #013314;
+  background: #ffffffc5;
+  width: 100%;
 }
+
+.select-form {
+  width: 100%;
+}
+
 .input-text-container {
   display: flex;
 }
@@ -97,41 +123,116 @@ form select {
 .start-btn,
 .continue-btn,
 .restart-btn {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 24px;
-  background: #a365dcd6;
-  color: #fff;
-  width: 100px;
-  height: 50px;
-  border-radius: 7%;
-  font-weight: bold;
-  box-shadow: 0px 2px 2px rgb(0 0 0 / 29%);
-  border: solid 3px #a56ed7;
-  transition: 0.4s;
-  margin-top: 10vh;
+  max-width: 70px;
+  font-size: 18px;
+  font-weight: 700;
   cursor: pointer;
+  transition-duration: 0.1s;
+  transition-property: background-color, color, border-color, opacity,
+    box-shadow;
+  transition-timing-function: ease-out;
+  outline: none;
+  border: 1px solid transparent;
+  margin: 0px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 3px 12px 0px;
+  padding: 6px 14px;
+  min-height: 40px;
+  background-color: rgb(255, 255, 255);
+  color: #4f6857;
+  border-radius: 4px;
 }
 
+.start-btn:hover,
+.continue-btn:hover,
+.restart-btn:hover {
+  background-color: #4f685749;
+  color: #ffffff;
+}
+.restart-button {
+  text-align: center;
+}
 .restart-btn {
   margin-top: 0;
+  max-width: 100px;
+  font-size: 20px;
+}
+/*******Custom Radio Buttons*******/
+
+.radio-button-container {
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.radio-button-overlay {
+  padding: 6px;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+  max-width: fit-content;
+}
+
+.radio-button-overlay:hover,
+.radio-button-overlay:focus-within {
+  background: #4f685769;
+  color: white;
+}
+
+.radio-button {
+  vertical-align: middle;
+  width: 15px;
+  height: 15px;
+  border-radius: 10px;
+  background: none;
+  border: 0;
+  box-shadow: inset 0 0 0 1.5px #ffffffc5;
+  appearance: none;
+  padding: 0;
+  transition: box-shadow 150ms cubic-bezier(0.95, 0.15, 0.5, 1.25);
+  pointer-events: none;
+  margin: 0 5px 0 0;
+}
+
+.radio-button:focus {
+  outline: none;
+}
+
+.radio-button:checked {
+  box-shadow: inset 0 0 0 8px #ffffff;
 }
 
 /********* Footer ********/
 .footer-container {
-  background-color: rgba(253, 193, 82, 0.24705882352941178);
+  background-color: rgba(214, 242, 242, 0.247);
   width: 100%;
-}
-.creator {
-  color: rgb(138 90 0);
+  height: 100px;
   text-align: center;
-  font-size: 16px;
-  font-weight: bold;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
   line-height: 0px;
-  padding: 10px;
-  margin-top: 20px;
+  padding-top: 15px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+footer p {
+  color: rgba(255, 255, 255, 0.738);
 }
 
 /********* Summary ********/
 .red {
-  color: red;
+  color: #ff0033;
+  font-weight: bolder;
+}
+
+/*******Media Queries*******/
+
+@media (max-width: 768px) {
+  body {
+    padding: 50px 20px 0px 20px;
+  }
 }

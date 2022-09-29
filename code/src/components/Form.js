@@ -1,3 +1,4 @@
+/* eslint-disable import/order */
 /* eslint-disable function-paren-newline */
 /* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable max-len */

@@ -5,11 +5,11 @@
 import React from 'react';
 
 const foodObject = [
-  'smores',
-  'pizza',
-  'fried banana',
   'veggie dogs',
-  'baked potatoe',
+  'mac`n cheese',
+  'pizza margherita',
+  'ceasar sallad',
+  'shepherds pie',
 ];
 
 const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {
@@ -18,7 +18,7 @@ const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Progress:{' '}
+          Progress{' '}
         </label>
         <progress className="progress-bar" id="survey" value="8" max="8" />
       </div>

@@ -1,3 +1,5 @@
+/* eslint-disable react/jsx-closing-tag-location */
+/* eslint-disable react/void-dom-elements-no-children */
 /* eslint-disable comma-dangle */
 /* eslint-disable react/self-closing-comp */
 /* eslint-disable indent */
@@ -81,12 +83,12 @@ const Summary = ({
         </div>
         <div className="restart-button">
           <button className="restart-btn" type="button" onClick={refreshPage}>
-            Again
+            Restart
           </button>
         </div>
       </div>
     </section>
-    <hr />
+
     <footer className="footer-container">
       <h4 className="creator">Created & developed by</h4>
       <p className="creator">~ Saralie Bognandi ~</p>

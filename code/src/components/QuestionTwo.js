@@ -21,7 +21,7 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
       {/* Progressbar */}
       <div className="progress-bar-container">
         <label className="progress-label" htmlFor="survey">
-          Progress:{' '}
+          Progress{' '}
         </label>
         <progress className="progress-bar" id="survey" value="2" max="8" />
       </div>
