@@ -5,18 +5,18 @@ const Opening = ({ name, onNameChange, onCounterChange }) => {
     <div className="container">
       <h1>Karticakes</h1>
       <p> Dear Cakers, you are receiving this survey because of
-            your recent purchase at our bakery.
+      your recent purchase at our bakery.
       </p>
       <p>We actively use feedback from you to constantly improve our service
-            and provide you with the best possible products.
+      and provide you with the best possible products.
       </p>
-      <p>So, please feel free to fill in this survey and help us to be your favourite bakery!
-            First of all, we would like to know our lovely customer more.
-            Please type in your name below!😊
+      <p>So, please feel free to fill in this survey and help us to be your favourite cake shop!
+      First of all, we would like to know our lovely customer more.
+      Please type in your name below!😊
       </p>
       <input
         type="text"
-        placeholder="Type your name here"
+        placeholder="Type your name here..."
         value={name}
         onChange={onNameChange}
         className="name-input" />

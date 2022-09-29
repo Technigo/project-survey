@@ -8,8 +8,8 @@ const Summary = ({ name, cakeOption, quality, service, opinion }) => {
       favourite cakes! We love them too 🎂
       </p>
       <p>And we totally understand your preferences in cakes.
-        You want your cake to be {quality}.
-        Gotcha!
+      You want your cake to be {quality}.
+      Gotcha!
       </p>
       <p>We would also want to mention that you think our {service}
       is one of our best strength. So thankful for that.

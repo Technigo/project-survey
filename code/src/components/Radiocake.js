@@ -2,12 +2,12 @@ import React from 'react';
 
 const Radiocake = ({ cakeQuality, onCakeQualityChange, onCounterChange }) => {
   const cakeQualities = [
-    'Sweeter! Pour sugar on me, babe',
-    'Less sweet. Namaste',
-    'More varieties on cakes, duh',
-    'Bigger size, like my ego',
-    'Make tiny size option available (for my child hehe)',
-    'Overall, I love your cakes but I might complain later anyway'
+    'sweeter! Pour sugar on me, babe',
+    'less sweet. Namaste',
+    'a lot more varieties on cakes, duh',
+    'bigger size, like my ego',
+    'tiny size option available (for my child hehe)',
+    'the same! Overall, I love your cakes but I might complain later anyway'
   ]
 
   return (
