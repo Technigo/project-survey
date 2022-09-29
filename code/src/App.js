@@ -1,9 +1,8 @@
-import React from 'react';
+import React from 'react'
+import Summary from './components/Summary'
 
 export const App = () => {
   return (
-    <div>
-      Find me in src/app.js!
-    </div>
+    <Summary />
   );
-}
+};
