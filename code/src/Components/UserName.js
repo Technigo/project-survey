@@ -7,11 +7,14 @@ const UserName= ({userName, setUserName}) => {
       return (
         <>
         <div className="questionWrapper">
-        <p> Whats your name?</p>
+        <p> Whats your name? </p>
         <div className="inputWrapper">
-        <input 
+        <input
+        id="userName" 
+        type="text"
+        name="userName"
+        placeholder='Type your name here'
         value={userName} 
-        type="text" 
         onChange={handleUserNameChange}
         />
         </div>

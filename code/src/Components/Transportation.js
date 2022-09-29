@@ -10,20 +10,27 @@ const transportPreference = [
 const Transportation= ({transportation, setTransportation}) => {
 
     return (
-        <form>
+        <div className="questionWrapper">
+        <form> 
+
             <p> How do you want to travel?</p>
             {transportPreference.map(travel => (
-            <lable key={travel}>
+            
+
+            <section className="radio-lable" key={travel}>
                 <input
+                className="radio-lable"
                 type="radio"
                 value={travel}
                 onChange={event => setTransportation(event.target.value)}
                 checked={transportation === travel}  
                 />
                 {travel}
-            </lable>
-            ))}
+            </section>
+           
+           ))}
         </form>
+        </div>
     )}
 
 export default Transportation;

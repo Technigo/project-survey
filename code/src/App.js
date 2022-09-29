@@ -6,7 +6,7 @@ import Transportation from 'Components/Transportation';
 import Active from 'Components/Active';
 import Temperature from 'Components/Temperature';
 import { Summary } from 'Components/Summary';
-
+// import Counter from 'Components/Counter';
 
 export const App = () => {
   const [counter, setCounter] = useState(1); //Counts questions
@@ -22,6 +22,10 @@ export const App = () => {
   } else if(!shouldIncrease && counter > 1) {
     setCounter(counter-1)
   }
+  }
+
+  const handleClearButtonClick =() => {
+    setUserInput('')
   }
  
   return (
@@ -43,7 +47,7 @@ export const App = () => {
 
 {counter === 3 && (
     <Temperature 
-    temperature={temperature} 
+    temperature={temperature}
     setTemperature={setTemperature}/>
     )}
 
@@ -58,30 +62,42 @@ export const App = () => {
     userName={userName}
     transportation={transportation}
     active={active}
-    temperature={temperature}/>
+    temperature={temperature}
+    />
     )}
 
+{/* Counter */}
 { counter === 1 && (
         <>
         <section className='buttonWrapper'>
-        <button type="button" onClick={() => handleCounterButtonClick(true)}>
+        <button 
+        className="firstButton"
+        type="button" 
+        onClick={() => handleCounterButtonClick(true)}>
         Next ▷ </button>
-        <div>
+        
+
+        <div className='questionNumber'>
         Question number {counter} /5
         </div>
+
         </section>
         </>
       )}
 
-
 { counter > 1 && (
         <>
-
         <section className='buttonWrapper'>
-        <button type="button" onClick={() => handleCounterButtonClick(false)}>
+        <button 
+        type="button" 
+        onClick={() => handleCounterButtonClick(false)}>
         ◀︎ Back </button>
-        <button type="button" onClick={() => handleCounterButtonClick(true)}>
+        
+        <button 
+        type="button" 
+        onClick={() => handleCounterButtonClick(true)}>
         Next ▶︎</button>
+        
         <div className='questionNumber'>
         Question number {counter} /5
         </div>
@@ -89,32 +105,27 @@ export const App = () => {
         </>
       )}
 
+{ counter === 5 && (
+        <>
+        <section className='buttonWrapper'>
+        <button 
+        type="button" 
+        onClick={()=> setCounter(1)}
+        >
+        START OVER </button>
+        </section>
+        </>
+      )}
     </main>
     </div> 
   );
+  
+   
+
+
+  
+
+
 }
 
 
-
-
-// const handleUserNameInputChange = (event) => {
-//   setUserName(event.target.value)
-// }
-
-{/* <input type="text" value={userInput} onChange={handleUserInputChange} /> */}
-
-
-// const [userInput, setUserInput] = useState('') 
-
-// const handleUserInputChange = (event) => {
-//   setUserInput(event.target.value)
-// }
-
-// const handleClearButtonClick =() => {
-//   setUserInput('')
-// }
-
-{/* <p> {userInput} </p>
-<p>
-<button type="button" value={userName} onChange={handleUserNameInputChange}> Continue </button>
-</p> */}

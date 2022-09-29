@@ -1,14 +1,22 @@
 import React from 'react';
 
-export const Summary= ({ userName, transportation, active, temperature }) => {
+
+const tempWordToUse = () => {
+  if (temperature === 1) {
+    return "Cold"
+  } else if (temperature === 2) {
+    return "Middle"
+  } else {
+    return "Hot"
+  }
+}
+
+export const Summary= ({ userName, transportation, active}) => {
       return (
         <>
-        <div className="questionWrapper">
-        <div className="inputWrapper">
-        <p> Hello {userName} We would recomand you to take the {transportation} to {temperature} and {active} </p>
-        </div>
-        </div>
+        <p> Hello {userName} We would recomand you to take the {transportation} to {tempWordToUse()} and {active} </p>
         </>
       );
 }
+
 

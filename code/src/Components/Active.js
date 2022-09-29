@@ -6,10 +6,10 @@ const Active= ({active, setActive}) => {
       }
       return (
         <>
+        <div className="questionWrapper">
         <p> How active do you want to be?</p>
-
         <form>
-        <select
+        <select className='selectWrapper'
             onChange={event => setActive(event.target.value)}
             value={active}
             >
@@ -19,6 +19,7 @@ const Active= ({active, setActive}) => {
         <option value="just be lazy doing nothing">I don't want to move att all</option>
         </select>
         </form>
+        </div>
         </>
       )
 }

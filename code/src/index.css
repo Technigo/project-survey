@@ -7,14 +7,13 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: lightyellow;
+  background-color: rgb(140, 168, 140);
   width: 100%;
 }
 
 
 
 main {
-  background-color: rgb(140, 168, 140);
   border: 3px solid blue;
 }
 
@@ -30,32 +29,38 @@ header {
 }
 
 h1 {
+  padding-top: 10%;
+  color: white;
   font-family: 'Roboto', sans-serif;
-  font-size: 40px;
+  font-size: 45px;
 }
 
 h2 {
-  font-size: 20px;
+  color: white;
+  font-size: 25px;
   font-family: 'Nunito', sans-serif;
 }
 
 p {
+  color: white;
+  font-size: 20px;
+  font-family: 'Nunito', sans-serif;
+}
+
+/* p {
+  color: white;
   font-size: 20px;
   font-family: 'Roboto', sans-serif;
-}
+} */
 
 
-.questionWrapper {
+/* .questionWrapper {
   border: 3px solid pink;
-}
+  height: 300px;
+} */
 
-.inputWrapper {
-  border: 3px solid green;
-
-}
 
 .buttonWrapper {
-  border: 3px solid salmon;
   height: 200px;
   text-align: center;
 }
@@ -68,14 +73,76 @@ button {
   padding: 10px;
   border-radius: 8px;
   border: none;
-  background-color: #249f9c;
+  background-color: hotpink;
   color: white;
-  margin: 30px;
+  margin: 5%;
 }
 
+.firstButton {
+  font-size: 22px;
+  font-family: 'Roboto', sans-serif;
+  width: 100px;
+  height: 50px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: hotpink;
+  color: white;
+  margin: 5%;
+}
+/* button:hover {
+  box-shadow:  5px 10px #272727;
+} */
+
 .questionNumber {
+  color: white;
   font-size: 20px;
   font-family: 'Nunito', sans-serif;
+}
+
+.questionWrapper {
+  height: 170px;
+  width: 80%;
+  margin-left: 10%;
+  text-align: left;
+}
+
+/* Name */
+input[type=text] {
+  font-size: 26px;
+  width: 70%;
+  height: 50px;
+  border: none;
+  background-color: transparent;
+  border-bottom: 5px solid rgb(255, 255, 255);
+  transition: width 0.4s ease-in-out;
+  color: white;
+}
+
+::placeholder {
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+}
+
+/* Transportation */
+.radio-lable {
+  font-size: 20px;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  padding: 2px;
+  accent-color: hotpink;
+}
+
+
+
+
+
+.selectWrapper {
+  padding: 10px;
+  margin: 20px auto;
+  width:100%;
+  font-family: 'Roboto';
+  font-size: 16px;
 }
 
 
