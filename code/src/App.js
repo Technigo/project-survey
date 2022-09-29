@@ -13,7 +13,7 @@ export const App = () => {
   const [mail, setMail] = useState('');
   const [location, setLocation] = useState('');
   const [age, setAge] = useState();
-  const [frequency, setFrequency] = useState();
+  /* const [frequency, setFrequency] = useState(); */
 
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 7) {
@@ -29,7 +29,7 @@ export const App = () => {
     setMail('');
     setLocation('');
     setAge('');
-    setFrequency('');
+    /* setFrequency(''); */
   };
 
   return (
@@ -88,13 +88,13 @@ export const App = () => {
           </div>
         )}
 
-       {/* { {counter === 6 && (
+        {/* { {counter === 6 && (
           <div>
             <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
             <p>Questions answered: {counter}/7 </p>
           </div>
         )} */}
-}
+
         <p>
           <button type="button" onClick={handleClearButtonClick}>
           clear input
