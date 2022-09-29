@@ -4,7 +4,6 @@ import React, { useState } from 'react';
 import Name from './Name';
 import QuestionOne from './QuestionOne';
 import QuestionTwo from './QuestionTwo';
-// import { QuestionThree } from 'components/QuestionThree';
 import Summary from './Summary';
 
 const Survey = () => {
@@ -15,6 +14,14 @@ const Survey = () => {
   const [questionTwo, setQuestionTwo] = useState('');
   const [workAlternative, setWorkAlternative] = useState('');
   // const [questionThree, setQuestionThree] = useState('');
+
+  const onQuestionOneInputChange = (event) => {
+    setQuestionOne(event.target.value);
+  }
+
+  const onInputChange = (event) => {
+    setQuestionTwo(event.target.value);
+  }
 
   function onStepChange() {
     setStep(step + 1);
@@ -28,12 +35,12 @@ const Survey = () => {
 
       {step === 2 && (
         // eslint-disable-next-line react/jsx-no-bind
-        <QuestionOne name={name} setQuestionOne={setQuestionOne} onStepChange={onStepChange} setCharacterGroup={setCharacterGroup} questionOne={questionOne} characterGroup={characterGroup} />
+        <QuestionOne setQuestionOne={setQuestionOne} onStepChange={onStepChange} onQuestionOneInputChange={onQuestionOneInputChange} setCharacterGroup={setCharacterGroup} questionOne={questionOne} characterGroup={characterGroup} />
       )}
 
       {step === 3 && (
         // eslint-disable-next-line react/jsx-no-bind
-        <QuestionTwo name={name} setQuestionTwo={setQuestionTwo} onStepChange={onStepChange} setWorkAlternative={setWorkAlternative} questionTwo={questionTwo} workAlternative={workAlternative} />
+        <QuestionTwo setQuestionTwo={setQuestionTwo} onStepChange={onStepChange} onInputChange={onInputChange} setWorkAlternative={setWorkAlternative} questionTwo={questionTwo} workAlternative={workAlternative} />
       )}
 
       {step === 4 && (
@@ -41,9 +48,9 @@ const Survey = () => {
         <Summary name={name} setQuestionOne={setQuestionOne} etCharacterGroup={setCharacterGroup} questionOne={questionOne} characterGroup={characterGroup} setQuestionTwo={setQuestionTwo} onStepChange={onStepChange} setWorkAlternative={setWorkAlternative} questionTwo={questionTwo} workAlternative={workAlternative} />
       )}
 
-      {step < 4 && (
+      {step < 2 && (
         <div className="lastButton">
-          <button className="lastButton" type="button" onClick={onStepChange}>Start here!</button>
+          <button className="lastButton" type="button" onClick={onStepChange}>Click here!</button>
         </div>
       )}
     </>

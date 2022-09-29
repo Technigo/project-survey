@@ -4,10 +4,8 @@ import React from 'react';
 // eslint-disable-next-line no-unused-vars
 const characterGroups = ['Bugs Bunny', 'Scooby-Doo', 'Tom and Jerry', 'Garfield', 'The Simpsons'];
 
-const QuestionOne = ({ setQuestionOne, characterGroup, setCharacterGroup }) => {
-  const onStepChange = (event) => {
-    setQuestionOne(event.target.value);
-  }
+// eslint-disable-next-line max-len
+const QuestionOne = ({ questionOne, characterGroup, setCharacterGroup, onStepChange, onQuestionOneInputChange }) => {
   return (
     <div className="container">
       <h1 className="homeText"> Icebreaker meeting environment survey</h1>
@@ -27,8 +25,8 @@ const QuestionOne = ({ setQuestionOne, characterGroup, setCharacterGroup }) => {
       </form>
 
       <p className="text">Other?</p>
-      <input className="inputBox" type="text" onChange={onStepChange} />
-      <button className="startButton" type="submit" onClick={onStepChange}>Next!</button>
+      <input className="inputBox" type="text" value={questionOne} onChange={onQuestionOneInputChange} />
+      <button className="lastButton" type="button" onClick={onStepChange}>next!</button>
     </div>
   );
 }

@@ -1,11 +1,8 @@
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
-// eslint-disable-next-line no-unused-vars
-const QuestionTwo = ({ setQuestionTwo, workAlternative, setWorkAlternative }) => {
-  const onStepChange = (event) => {
-    setQuestionTwo(event.target.value);
-  }
+// eslint-disable-next-line no-unused-vars, max-len
+const QuestionTwo = ({ questionTwo, setQuestionTwo, workAlternative, setWorkAlternative, onStepChange, onInputChange }) => {
   return (
     <div className="container">
       <h1 className="homeText"> Icebreaker meeting environment survey</h1>
@@ -26,8 +23,8 @@ const QuestionTwo = ({ setQuestionTwo, workAlternative, setWorkAlternative }) =>
         </select>
       </form>
       <p className="text">Other?</p>
-      <input className="inputBox" type="text" onChange={onStepChange} />
-      <button className="startButton" type="submit" onClick={onStepChange}>next!</button>
+      <input className="inputBox" type="text" value={questionTwo} onChange={onInputChange} />
+      <button className="lastButton" type="submit" onClick={onStepChange}>next!</button>
     </div>
   )
 }
