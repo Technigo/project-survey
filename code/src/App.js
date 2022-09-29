@@ -13,9 +13,11 @@ export const App = () => {
   const [question3, setQuestion3] = useState('');
   const [question4, setQuestion4] = useState('');
 
-  const handleStepIncrese = (shouldIncrese) => {
-    shouldIncrese.preventDefault();
-    if (shouldIncrese && step < 6) {
+  const handleStepIncrese = (element) => {
+    if (element !== undefined) {
+      element.preventDefault();
+    }
+    if (step < 6) {
       setStep(step + 1)
     }
   }
@@ -23,35 +25,46 @@ export const App = () => {
   return (
     <div className="outer-wrapper">
       <div className="inner-wrapper">
-        <div>
+        <div id="nextStep">
           {step === 1 && (
-            <Question1 name={name} setName={setName} />
+            <Question1
+              name={name}
+              setName={setName}
+              handleStepIncrese={handleStepIncrese} />
           )}
         </div>
-        <div>
+        <div id="nextStep">
           {step === 2 && (
-            <Question2 question2={question2} setQuestion2={setQuestion2} />
+            <Question2
+              question2={question2}
+              setQuestion2={setQuestion2}
+              handleStepIncrese={handleStepIncrese} />
           )}
         </div>
-        <div>
+        <div id="nextStep">
           {step === 3 && (
-            <Question3 question3={question3} setQuestion3={setQuestion3} />
+            <Question3
+              question3={question3}
+              setQuestion3={setQuestion3}
+              handleStepIncrese={handleStepIncrese} />
           )}
         </div>
-        <div>
+        <div id="nextStep">
           {step === 4 && (
-            <Question4 question4={question4} setQuestion4={setQuestion4} />
+            <Question4
+              question4={question4}
+              setQuestion4={setQuestion4}
+              handleStepIncrese={handleStepIncrese} />
           )}
         </div>
-        <div>
+        <div id="nextStep">
           {step === 5 && (
-            <div><Summary
+            <Summary
               name={name}
               question2={question2}
               question3={question3}
-              question4={question4} />
-            <button type="submit" onClick={handleStepIncrese}>Submit form</button>
-            </div>
+              question4={question4}
+              handleStepIncrese={handleStepIncrese} />
           )}
         </div>
         <div>
@@ -59,10 +72,7 @@ export const App = () => {
             <p>Thank you for your time!</p>
           )}
         </div>
-        <div>
-          <button type="button" onClick={handleStepIncrese}>Next page</button>
-          <p>Step {step} out of 4</p>
-        </div>
+
       </div>
     </div>
   );
