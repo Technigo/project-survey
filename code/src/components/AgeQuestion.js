@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from 'react';
+import React from 'react';
 
 // This is the firstquestion thats comes up
 
@@ -11,24 +11,24 @@ const ageGroups = [
   '60+'
 ];
 
-const AgeQuestion = () => {
-  const [ageGroup, setAgeGroup] = useState();
-
+const AgeQuestion = ({ ageGroup, setAgeGroup }) => {
   return (
-    <form>
-      <h3>Age group</h3>
-      {ageGroups.map((group) => (
-        <label key={group}>
-          <input
-            type="radio"
-            value={group}
-            onChange={(event) => setAgeGroup(event.target.value)}
-            checked={ageGroup === group} />
-          {group}
+    <div className="question-div">
+      <form>
+        <h3>Age group</h3>
+        {ageGroups.map((group) => (
+          <label key={group}>
+            <input
+              type="radio"
+              value={group}
+              onChange={(event) => setAgeGroup(event.target.value)}
+              checked={ageGroup === group} />
+            {group}
 
-        </label>))}
-      <p>Your age group is {ageGroup} years old</p>
-    </form>
+          </label>))}
+        <p>Your age group is {ageGroup} years old</p>
+      </form>
+    </div>
   );
 }
 

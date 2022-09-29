@@ -1,18 +1,23 @@
 import React, { useState } from 'react';
 import Intro from 'components/Intro.js';
 import ProductType from 'components/ProductType.js';
-import PriceInterval from './PriceInterval.js';
+import PriceInterval from 'components/PriceQuestionOne';
 /* import Summary from 'components/Summary.js'; */
 
 const Form = () => {
   const [productChoice, setProductType] = useState('');
   const [step, setStep] = useState(1);
+  const [price, setPriceInterval] = useState('0');
+
   /*   const [ageGroup, setAgeGroup] = useState([0]); */
 
   const onProductChoiceSet = (event) => {
     setProductType(event.target.value);
   };
 
+  const handlePriceIntervalChange = (event) => {
+    setPriceInterval(event.target.value);
+  };
   /*   const onAgeGroupChoiceSet = (event) => {
     setAgeGroup(event.target.value);
   }; */
@@ -33,7 +38,7 @@ const Form = () => {
   return (
     <div className="mainContainer">
       {step === 1 && <Intro onStepChange={onStepChange} />}
-      {step === 1 && (
+      {step === 2 && (
         <ProductType
           onStepChange={onStepChange}
           onStepGoBack={onStepGoBack}
@@ -42,7 +47,10 @@ const Form = () => {
           productChoice={productChoice} />
       )}
       {step === 3 && (
-        <PriceInterval />
+        <PriceInterval
+          price={price}
+          setPrice={setPriceInterval}
+          handlePriceIntervalChange={handlePriceIntervalChange} />
       )}
     </div>
   );

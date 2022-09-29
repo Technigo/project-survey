@@ -1,22 +1,26 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const GenderQuestion = () => {
-  const [gender, setGender] = useState('');
+const GenderQuestion = ({ gender, setGender }) => {
+  const handleGenderButtonChange = (event) => {
+    setGender(event.target.value);
+  }
 
   return (
-    <form>
-      <h3>Gender</h3>
-      <span> Male
-        <input type="radio" id="Male" checked={gender === 'Male'} value="Male" onClick={() => setGender('Male')} />
-      </span>
-      <span>Female
-        <input type="radio" id="Female" checked={gender === 'Female'} value="Female" onClick={() => setGender('Female')} />
-      </span>
-      <span>Other
-        <input type="radio" id="Other" checked={gender === 'Other'} value="Other" onClick={() => setGender('Other')} />
-      </span>
-      <p>You are {gender}</p>
-    </form>
+    <div className="question-div genderQ">
+      <form>
+        <h3>Gender</h3>
+        <span> Male
+          <input type="radio" id="Male" checked={gender === 'Male'} value="Male" onClick={(e) => handleGenderButtonChange(e)} />
+        </span>
+        <span>Female
+          <input type="radio" id="Female" checked={gender === 'Female'} value="Female" onClick={(e) => handleGenderButtonChange(e)} />
+        </span>
+        <span>Other
+          <input type="radio" id="Other" checked={gender === 'Other'} value="Other" onClick={(e) => handleGenderButtonChange(e)} />
+        </span>
+        <p>You are {gender}</p>
+      </form>
+    </div>
   );
 }
 

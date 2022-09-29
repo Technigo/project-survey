@@ -9,31 +9,34 @@ const productTypes = [
   'Accessories for me'
 ];
 
-const ProductType = ({ setProductType }) => {
+const ProductType = ({ setProductType, productType }) => {
   const handleProductTypeChange = (event) => {
     setProductType(event.target.value);
   }
   return (
-    <form className="formContainer">
-      <h1>What kind of clothes would you buy?</h1>
-      {productTypes.map(
-        (
-          productType // iterating through each venue available
-        ) => {
-          return (
-            <div key={productType} className="productType-choice">
-              <input
-                value={productType}
-                onChange={handleProductTypeChange}
-                type="checkbox"
-                id={productType} />
-              <label htmlFor={productType}>{productType}</label>
-            </div>);
-        }
-
-      )}
-    </form>
+    <div className="question-div productQ">
+      <form className="formContainer">
+        <h1>What kind of clothes would you buy?</h1>
+        {productTypes.map(
+          (
+            product // iterating through each product available
+          ) => {
+            return (
+              <div key={product} className="productType-choice">
+                <input
+                  value={product}
+                  onChange={handleProductTypeChange}
+                  type="checkbox"
+                  id={product} />
+                <label htmlFor={product}>{product}</label>
+              </div>);
+          }
+        )}
+      </form>
+      <div>
+        <p>hej {productType}</p>
+      </div>
+    </div>
   )
 }
-console.log(productTypes);
 export default ProductType
