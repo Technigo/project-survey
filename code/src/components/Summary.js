@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Summary = ({ name, cakeOption, quality, service, opinion }) => {
+const Summary = ({ name, cakeOption, quality, service, opinion, onVoucherChange }) => {
   return (
     <div className="container">
       <h3>Thank you for your answer, {name}</h3>
@@ -11,7 +11,7 @@ const Summary = ({ name, cakeOption, quality, service, opinion }) => {
       You want your cake to be {quality}.
       Gotcha!
       </p>
-      <p>We would also want to mention that you think our {service}
+      <p>We would also want to mention how thankful we are to know that you think our {service}
       is one of our best strength. So thankful for that.
       We are always looking to improving our service for you.
       </p>
@@ -23,7 +23,7 @@ const Summary = ({ name, cakeOption, quality, service, opinion }) => {
       personal voucher code.
       Once again... thank you, {name}!
       </p>
-      <button type="button">Grab you code here!</button>
+      <button type="button" onClick={onVoucherChange}>Grab you code here!</button>
     </div>
   );
 }

@@ -152,7 +152,8 @@ img{
 }
 
 .service-option{
-  border: 1px solid rgb(230, 88, 12);
+  /* border: 1px solid rgb(230, 88, 12); */
+  border: none;
   border-radius: 20px;
   padding: 5% 10%;
 }
@@ -160,6 +161,8 @@ img{
 textarea{
   font-family: 'Poppins', sans-serif;
   margin: 2%;
+  text-align: center;
+  border-radius: 10px;
 }
 
 /* For tablet */
@@ -218,7 +221,8 @@ textarea{
   }
 
   .container{
-    padding: 0 0 5% 0;
+    padding: 2%;
+    margin: 5% 10%;
   }
 
   .cake-container{
@@ -237,7 +241,6 @@ textarea{
     width: 400px;
     height: 400px;
     overflow: hidden;
-    border: 1px solid gold;
     box-shadow: 5px 5px 10px rgb(208, 208, 208);
     margin-left: 10px;
   }
