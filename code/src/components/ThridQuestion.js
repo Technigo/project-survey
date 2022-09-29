@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-const greenClosets = ['Second Hand', 'Fast Fashion Brands']
+const greenClosets = ['Second Hand Stores', 'Fast Fashion Stores']
 
 const ThridQuestion = ({ nextQuestion, onThridQuestionChange, closet }) => {
   return (
