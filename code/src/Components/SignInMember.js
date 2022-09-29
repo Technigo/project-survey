@@ -7,7 +7,6 @@ const SignInMember = () => {
 
     return ( 
        <div className="memberSignIn">
-        <h2>Hey, welcome back!</h2>
         <form>
             <label htmlFor="">Name:</label>
             <input 
@@ -24,10 +23,12 @@ const SignInMember = () => {
                 onChange={(e)=>setPasscode(e.target.value)}
             />
         </form>
-        <button>Previous Step</button>
-        <button>Continue</button>
+        {/* <button>Previous Step</button>
+        <button>Continue</button> */}
         {/* <p>{name}</p> */}
         {/* <p>{passcode}</p> */}
+
+        <p className="newbie-guide">Not a member yet 😉? Click continue to book a trial</p>
        </div> 
         
      );
