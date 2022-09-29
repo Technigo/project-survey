@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
-import { Name } from 'components/Name';
-import { WhyCute } from 'components/WhyCute';
-import { PerfectJob } from 'components/PerfectJob';
-import { Fondness } from 'components/Fondness';
-import { Result } from 'components/Result';
+import Name from 'components/Name';
+import WhyCute from 'components/WhyCute';
+import PerfectJob from 'components/PerfectJob';
+import Fondness from 'components/Fondness';
+import Result from 'components/Result';
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -48,6 +48,3 @@ export const App = () => {
     </>
   );
 }
-
-// exports of components to be named or not??
-

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Result = ({ name, whyCute, perfectJob, fondness }) => {
+const Result = ({ name, whyCute, perfectJob, fondness }) => {
   return (
     <>
       <p>Alright {name}, here is how you answered.</p>
@@ -10,3 +10,5 @@ export const Result = ({ name, whyCute, perfectJob, fondness }) => {
     </>
   );
 }
+
+export default Result

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const WhyCute = ({ whyCute, setWhyCute }) => {
+const WhyCute = ({ whyCute, setWhyCute }) => {
   const handleWhyCuteChange = (event) => {
     setWhyCute(event.target.value);
   }
@@ -11,3 +11,5 @@ export const WhyCute = ({ whyCute, setWhyCute }) => {
     </>
   );
 }
+
+export default WhyCute

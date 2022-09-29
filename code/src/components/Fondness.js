@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Fondness = ({ fondness, setFondness }) => {
+const Fondness = ({ fondness, setFondness }) => {
   const handleFondnessChange = (event) => {
     setFondness(event.target.value);
   }
@@ -11,3 +11,5 @@ export const Fondness = ({ fondness, setFondness }) => {
     </>
   );
 }
+
+export default Fondness

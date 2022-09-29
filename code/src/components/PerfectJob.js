@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const PerfectJob = ({ perfectJob, setPerfectJob }) => {
+const PerfectJob = ({ perfectJob, setPerfectJob }) => {
   const handlePerfectJobChange = (event) => {
     setPerfectJob(event.target.value);
   }
@@ -11,3 +11,5 @@ export const PerfectJob = ({ perfectJob, setPerfectJob }) => {
     </>
   );
 }
+
+export default PerfectJob

@@ -1,6 +1,6 @@
 import React from 'react';
 
-export const Name = ({ name, setName }) => {
+const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
@@ -11,3 +11,4 @@ export const Name = ({ name, setName }) => {
     </>
   );
 }
+export default Name
