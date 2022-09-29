@@ -19,6 +19,8 @@ code {
     monospace;
 }
 
+/* TEXT */
+
 h1 {
   display: flex;
   font-weight: bold;
@@ -28,12 +30,14 @@ h1 {
 }
 
 h2 {
-  font-size: 15px;
+  margin-top: 40px;
+  font-size: 20px;
   /* border: solid magenta 1px; */
 }
 
 h3 {
-  font-size: 15px;
+  margin: 40px 0px;
+  font-size: 17px;
 }
 
 p {
@@ -42,17 +46,59 @@ p {
   /* border: solid pink 1px; */
 }
 
+/* BUTTONS AND CONTAINER */
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 15px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.button:hover {
+  background-color: #66ca6b;
+  border: solid white 1px;
+}
+
+.radio {
+  margin: 10px;
+  /* width: 20px;
+  height: 20px;
+  border: solid greenyellow 1px */
+}
+
+.radio input:checked {
+  background-color: #4CAF50;
+}
+
+.sprinkle {
+  margin: 40px;
+  padding: 10px;
+  border-radius: 5px;
+  border: solid #4CAF50 1px;
+  font-family: 'Noto Sans Mono', monospace;
+}
+
 .container {
   display: flex;
   justify-content: center;
   text-align: center;
-  padding: 80px;
-  width: 35vw;
-  height: 70vh;
-  margin: 40px;
+  padding: 40px;
+  width: 25vw;
+  height: fit-content;
+  margin-top: 70px;
   border: solid black 2px;
   background-color: rgb(243, 212, 185);
 }
+
+/* WELCOME PAGE / STEP ONE */
 
 .stepOne {
   display: flex;
@@ -71,8 +117,12 @@ p {
 
 input[type="text" i] {
   text-align: center;
-  padding: 1px 2px;
+  padding: 5px 2px;
+  border: solid #4CAF50 1px;
+  border-radius: 2px;
 }
+
+/* QUESTIONS */
 
 .questions {
   display: flex;
@@ -90,7 +140,39 @@ input[type="text" i] {
   /* border: solid blue 1px; */
 }
 
-.summary {
-  /* border: solid yellow 1px; */
+/* MOBILE */
+@media (max-width: 667px) {
+.container {
+  /* display: flex;
+  justify-content: center;
+  text-align: center; */
+  padding: 10px;
+  width: 75vw;
+  height: fit-content;
+  margin-top: 50px;
+  /* border: solid black 2px;
+  background-color: rgb(243, 212, 185); */
 }
+
+h1 {
+  /* display: flex;
+  font-weight: bold;
+  justify-content: center; */
+  margin: 30px 0px 30px 0px;
+  /* border: solid paleturquoise 1px; */
+}
+
+p {
+  font-size: 12px;
+  font-weight: bold;
+  /* border: solid pink 1px; */
+}
+}
+
+/* TABLET */
+@media (min-width: 668px) and (max-width: 1024px) {
+
+}
+
+
 
