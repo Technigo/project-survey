@@ -23,9 +23,9 @@ const Questionnaire = ({ label, pageIndex, inputType }) => {
       <div className="submit-button-wrapper">
         <Button />
         <p className="press-enter">
-          press{' '}
+          press
           <span>
-            <strong>Enter ↵</strong>
+            <strong> Enter ↵</strong>
           </span>
         </p>
       </div>

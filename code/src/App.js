@@ -7,7 +7,13 @@ export const App = () => {
   const [pageIndex, setPageIndex] = useState(0);
   const [name, setName] = useState('');
 
-  console.log(name);
+  console.log('name:', name);
+
+  document.querySelector('body').addEventListener('keypress', event => {
+    if (event.key === 'Enter') {
+      setPageIndex(pageIndex + 1);
+    }
+  });
 
   const router = pageIndex => {
     switch (pageIndex) {
@@ -26,12 +32,6 @@ export const App = () => {
         return <div>Under construction yo, number {pageIndex}</div>;
     }
   };
-
-  document.querySelector('body').addEventListener('keypress', event => {
-    if (event.key === 'Enter') {
-      setPageIndex(pageIndex + 1);
-    }
-  });
 
   return (
     <div className="outer-wrapper">

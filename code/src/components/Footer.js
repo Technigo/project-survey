@@ -18,6 +18,7 @@ const Footer = ({ pageIndex, setPageIndex }) => {
               <img src="./assets/zondicons/cheveron-up.svg" alt="up arrow" />
             </button>
           )}
+          <div className="button-divider">{``}</div>
           <button
             className="next-button button"
             onClick={() => setPageIndex(pageIndex + 1)}
@@ -26,9 +27,15 @@ const Footer = ({ pageIndex, setPageIndex }) => {
           </button>
         </nav>
         <div className="typeform">
-          <p>
-            Inspired by <strong>Typeform</strong>
-          </p>
+          <button className="button typeform-button">
+            <a
+              className="typeform-link"
+              href="https://www.typeform.com/templates/t/secret-santa-form/"
+              target="_blank"
+            >
+              Inspired by <strong>Typeform</strong>
+            </a>
+          </button>
         </div>
       </div>
     </footer>

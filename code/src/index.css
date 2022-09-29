@@ -2,7 +2,6 @@
 
 :root {
   --btn-background: rgb(171, 25, 48);
-
   --btn-background-hover: rgb(175, 60, 78);
 }
 
@@ -25,7 +24,6 @@ h1 {
 }
 
 .outer-wrapper {
-  /* width: 100%; */
   color: #e8d9ae;
   display: flex;
   flex-direction: column;
@@ -39,8 +37,6 @@ h1 {
 }
 
 .inner-wrapper {
-  /* padding: 15px; */
-  /* margin: 0 auto; */
   display: flex;
   flex-wrap: wrap;
   min-width: 58%;
@@ -106,7 +102,8 @@ h1 {
   background-color: var(--btn-background-hover);
 }
 
-/* no background change for disable buttons, to give the effect that they are not clickable */
+/* no background change for disabled buttons to give the effect that they are not clickable 
+overwrites the button:hover effect for buttons with both classes */
 .disabled-button:hover {
   background-color: var(--btn-background);
 }
@@ -147,14 +144,10 @@ h1 {
   top: 6px;
   right: 100%;
   margin-right: 12px;
-
   display: flex;
   align-items: center;
   color: rgb(255, 255, 255);
   font-size: 14px;
-  /* line-height: 20px;
-  height: 100%;
-  outline: none; */
 }
 
 .arrow-right {
@@ -186,10 +179,8 @@ h1 {
   padding: 0px 0px 8px;
   border: none;
   outline: none;
-  /* appearance: none; */
   transform: translateZ(0px);
   font-size: 30px;
-  /* -webkit-text-fill-color: rgba(255, 255, 255, 0.3); */
   -webkit-font-smoothing: antialiased;
   animation: 1ms ease 0s 1 normal none running native-autofill-in;
   transition: background-color 1e8s ease 0s, box-shadow 0.1s ease-out 0s;
@@ -226,46 +217,47 @@ footer {
 }
 
 .footer-button-container {
+  display: flex;
+  background-color: var(--btn-background);
   border-radius: 4px;
   margin-right: 8px;
 }
 
 .previous-button {
-  /* position: relative; */
-  /* font-family: inherit; */
-  /* line-height: inherit; */
-  /* font-weight: 700; */
-  /* margin: 0px; */
   margin-right: 1px;
-  /* padding: 0px; */
   width: 36px;
   min-width: 36px;
   height: 32px;
-  /* justify-content: center; */
   border-radius: 4px 0px 0px 4px;
 }
 
 .next-button {
-  /* position: relative; */
-  /* font-family: inherit; */
-  /* line-height: inherit; */
-  /* font-weight: 700; */
-  /* margin: 0px; */
-  /* padding: 0px; */
   width: 36px;
   min-width: 36px;
   height: 32px;
-  /* justify-content: center; */
   border-radius: 0px 4px 4px 0px;
 }
 
+.button-divider {
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 1px;
+}
+
 .typeform {
-  font-size: 14px;
-  padding: 0 12px;
   display: flex;
   align-items: center;
-  background-color: var(--btn-background);
   border-radius: 4px;
-  color: rgb(255, 255, 255);
   height: 32px;
+}
+
+.typeform-button {
+  height: 100%;
+  padding: 0 12px;
+}
+
+.typeform-link {
+  font-weight: 300;
+  text-decoration: none;
+  font-size: 14px;
+  color: rgb(255, 255, 255);
 }
