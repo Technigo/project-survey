@@ -23,3 +23,101 @@ code {
   width: 80%;
   margin: 0 auto;
 }
+
+.question-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  display: flex;
+  flex-direction: column;
+}
+
+.question-range {
+  display: flex;
+}
+
+/*Range slider styling */
+input[type=range] {
+  width: 200px;
+  -ms-appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+  /*extra*/
+  display: block;
+  margin: 10px 0 0 0;
+  position: relative;
+}
+
+input[type=range]::before,
+input[type=range]::after {
+  display: inline-block;
+  position: absolute;
+  bottom: -5px;
+  color: #888;
+}
+
+input[type=range]::before {
+  content: attr(min);
+  left: 0;
+  /* after */
+  transform: translate(calc(-100% - 5px))
+}
+
+input[type=range]::after {
+  content: attr(max);
+  right: 0;
+  /* after */
+  transform: translate(calc(100% + 5px))
+}
+
+/* input[type=range]::-moz-range-track,  */
+/* input[type=range]::-ms-track */
+input[type=range]::-webkit-slider-runnable-track {
+  background: #222;
+  border-radius: 3px;
+  height: 5px;
+  -webkit-appearance: none;
+}
+
+/* input[type=range]::-moz-range-thumb */
+/* input[type=range]::-ms-thumb */
+input[type=range]::-webkit-slider-thumb {
+  border: none;
+  box-shadow: none;
+  height: 20px;
+  width: 6px;
+  border-radius: 12px;
+  background: #0097f0;
+  -webkit-appearance: none;
+  margin: -7px 0 0 0;
+  outline: none;
+}
+
+.custom-range-slider {
+  position: relative;
+  padding-bottom: 50px;
+  color: #888;
+}
+
+.custom-range-slider .bubble {
+  padding: 5px;
+  border-radius: 3px;
+  background: #999;
+  display: inline-block;
+  color: #fff;
+  font-size: 10px;
+  text-align: center;
+  position: absolute;
+  top: 45px;
+  transform: translateX(-50%);
+  transition: background 0.3s ease;
+}
+
+.custom-range-slider:hover .bubble {
+  background: #0097f0;
+}

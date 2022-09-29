@@ -1,16 +1,18 @@
 import React, { useState } from 'react';
 
+import { Step } from 'components/Step';
 import { Name } from 'components/Name';
 import { Age } from 'components/Age';
 import { Recycle } from 'components/Recycle';
 import { Drink } from 'components/Drink';
 import { Result } from 'components/Result';
+import { Progress } from 'components/Progress';
 
 export const App = () => {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('Anonymous');
   const [age, setAge] = useState('');
-  const [recycle, setRecycle] = useState('hello');
+  const [recycle, setRecycle] = useState('');
   const [drink, setDrink] = useState('');
 
   const handleStepIncrease = () => {
@@ -38,14 +40,9 @@ export const App = () => {
         {step >= 4 && (
           <Result name={name} age={age} recycle={recycle} drink={drink} />
         )}
+        <Step step={step} setStep={setStep} />
+        <Progress step={step} />
 
-        {step < 4 && (
-          <>
-            <p>Current step: {step}</p>
-            <button type="button" onClick={handleStepIncrease}>Next step</button>
-            <button type="button" onClick={handleStepDecrease}>Previous step</button>
-          </>
-        )}
       </div>
     </div>
   );

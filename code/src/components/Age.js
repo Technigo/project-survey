@@ -8,17 +8,19 @@ export const Age = ({ age, setAge }) => {
       <div className="question">
         <h2>Welcome to the New York times recycle survey of the year ♻️</h2>
         <h3>What is your Age?</h3>
-        {ageGroups.map((ages) => (
-          <label key={ages.id}>
-            <input
-              type="radio"
-              value={ages}
-              key={age.id}
-              onChange={(e) => setAge(e.target.value)}
-              checked={age === ages} />
-            {ages}
-          </label>
-        ))}
+        <div className="question-range">
+          {ageGroups.map((ages) => (
+            <label key={ages.id}>
+              <input
+                type="radio"
+                value={ages}
+                key={age.id}
+                onChange={(e) => setAge(e.target.value)}
+                checked={age === ages} />
+              {ages}
+            </label>
+          ))}
+        </div>
       </div>
     </div>
   );
