@@ -38,10 +38,19 @@ export const App = () => {
         }
 
         {
-          step < 4 && (
+          step < 3 && (
             <>
               <p>Current step: {step}</p>
               <button type="button" onClick={handleStepIncrease}>Next step</button>
+            </>
+          )
+        }
+
+        {
+          step === 3 && (
+            <>
+              <p>Current step: {step}</p>
+              <button type="button" onClick={handleStepIncrease}>Submit answer:</button>
             </>
           )
         }

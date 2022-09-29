@@ -14,20 +14,20 @@ code {
 }
 
 
-.outerWrapper {
-  display: flex;
-  justify-content: center;
-
+h1 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 45px;
 }
 
-.header h1 {
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+h2 {
+  font-family: 'Source Code Pro', monospace;
+  font-size: 35px;
 }
 
 .header {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr;
+  color: green;
 }
 
 .nameComponent {
