@@ -9,7 +9,6 @@ import { BackNextBtn } from './BackNextBtn';
 
 export const Start = () => {
   const [step, setStep] = useState(0);
-
   const [backFront, setBackFront] = useState('');
   const [loneTeam, setLoneTeam] = useState(false);
   const [learnKnow, setLearnKnow] = useState('');

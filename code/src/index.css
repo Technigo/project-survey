@@ -5,14 +5,10 @@
   margin: 0;
 }
 
-:root {
-  --main-font: 'Nunito';
-  --sub-font: 'PT Sans';
-}
-
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  color: blue;
+  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
+    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -25,15 +21,16 @@ code {
 
 /* WRAPPER */
 .outer-wrapper {
-  background-color: rgb(0, 105, 54);
+  background-color: rgb(255, 255, 255);
   width: 100%;
   padding: 1px 0 1px;
 }
 
 .survey-wrapper {
   background-color: white;
-  border-radius: 20px;
-  box-shadow: 1rem 1rem black;
+  border: 0.2rem solid blue;
+  border-radius: 40px;
+  box-shadow: -1.5rem 1.5rem blue;
   margin: 10rem auto;
   max-width: 500px;
   max-height: 800px;
@@ -44,11 +41,11 @@ code {
 
 /* BUTTON */
 .start-btn {
-  background-color: black;
+  background-color: rgb(9, 132, 62);
   border: none;
   border-radius: 0.5rem;
   color: white;
-  font-family: var(--main-font);
+  font-family: 'Nunito';
   font-size: 1.2rem;
   font-weight: 900;
   margin: 1rem 0 0.5rem;
@@ -57,7 +54,7 @@ code {
 }
 
 .start-btn:hover {
-  background-color: rgb(78, 78, 78);
+  background-color: rgba(0, 0, 255, 0.815);
 }
 
 .start-btn:active {
@@ -70,20 +67,20 @@ code {
 }
 
 .btn {
-  background-color: black;
+  background-color: blue;
   border: none;
   border-radius: 0.5rem;
   color: white;
-  font-family: var(--main-font);
+  font-family: 'Nunito';
   font-size: 1.2rem;
   font-weight: 900;
   padding: 0.5rem;
+  width: 5.5rem;
 }
 
 /* HEADING */
 .main-heading {
-  color: black;
-  font-family: var(--main-font);
+  color: blue;
   font-size: 3rem;
   font-weight: 900;
   line-height: 3.5rem;
@@ -91,8 +88,7 @@ code {
 }
 
 .sub-heading {
-  color: rgb(0, 105, 54);
-  font-family: var(--main-font);
+  color: blue;
   font-size: 1.5rem;
   font-weight: 600;
   line-height: 1.8rem;
@@ -100,11 +96,14 @@ code {
 }
 
 .quest-heading {
-  font-family: var(--main-font);
   font-size: 1.5rem;
   font-weight: 900;
   line-height: 1.8rem;
   margin: 1rem auto;
+}
+
+.underline {
+  padding-bottom: 1px solid blue;
 }
 
 /* MENU */
@@ -126,7 +125,6 @@ code {
 
 .star-text {
   color: white;
-  font-family: var(--main-font);
   font-size: 1rem;
   font-weight: 900;
   transform: rotate(10deg);
@@ -139,7 +137,6 @@ code {
 
 .select {
   border-radius: 0.5rem;
-  font-family: var(--main-font);
   font-weight: 900;
   width: 6rem;
   height: 2rem;
@@ -154,4 +151,26 @@ code {
 option * {
   background-color: hotpink;
   color: blue;
+}
+
+.learn-know-container,
+.lone-team-container {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+.lone-team-container label {
+  font-size: 1.5rem;
+  font-weight: 900;
+  margin: 1rem auto 1rem;
+}
+
+.lone-team-container input[type='radio'] + label::after {
+  color: red;
+  font-size: 2rem;
+  width: 100px;
+}
+
+#lone:checked {
+  color: red;
 }

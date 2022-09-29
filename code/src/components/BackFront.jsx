@@ -14,9 +14,9 @@ export const BackFront = ({ backFront, setBackFront }) => {
         value={backFront}
         required>
         <option className="option" value="">Select one:</option>
-        <option className="option" value="Backend">Backend</option>
-        <option className="option" value="Frontend">Frontend</option>
-        <option className="option" value="Full Stack">Full Stack</option>
+        <option className="option" value="backend">Backend</option>
+        <option className="option" value="frontend">Frontend</option>
+        <option className="option" value="fullstack">Full Stack</option>
       </select>
     </div>
   )

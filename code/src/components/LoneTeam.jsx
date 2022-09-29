@@ -1,26 +1,27 @@
 import React from 'react'
 
-export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
+export const LoneTeam = ({ setLoneTeam }) => {
   return (
     <div className="lone-team-container">
-      <h2 className="quest-heading">Which one of these fit best into what you are looking for?</h2>
-      <label htmlFor="team">Team Player
+      <h2 className="quest-heading">Which one of these fit <span className="underline">best</span> into what you are looking for?</h2>
+      <label htmlFor="lone">
+        <input
+          className="radio-btn"
+          type="radio"
+          id="lone"
+          name="loneTeam"
+          value="lone"
+          onChange={(e) => setLoneTeam(e.target.value)} />
+        Lone Wolf
+      </label>
+      <label htmlFor="team">
         <input
           type="radio"
           id="team"
-          name="loneteam"
-          value="Team Player"
-          onChange={(e) => setLoneTeam(e.target.value)}
-          checked={loneTeam === 'Team Player'} />
-      </label>
-      <label htmlFor="indie">Independent Worker
-        <input
-          type="radio"
-          id="indie"
-          name="loneteam"
-          value="Independent Worker"
-          onChange={(e) => setLoneTeam(e.target.value)}
-          checked={loneTeam === 'Independent Worker'} />
+          name="loneTeam"
+          value="team"
+          onChange={(e) => setLoneTeam(e.target.value)} />
+        Team Player
       </label>
     </div>
   );
