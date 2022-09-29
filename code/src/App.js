@@ -55,7 +55,9 @@ export const App = () => {
         )}
         {(step > 1 && step < 6) && (
           <form>
-            <button className="nextBtn" type="button" onClick={handleStepIncrease}>Next question</button>
+            <div className="btn-container">
+              <button className="nextBtn" type="button" onClick={handleStepIncrease}>Next question</button>
+            </div>
           </form>
         )}
       </div>

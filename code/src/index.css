@@ -29,11 +29,16 @@ code {
   height: 100vh;
 }
 
+form {
+  width: 50%;
+}
+
 .inner-wrapper {
   width: 75%;
   margin: 0 auto;
   background-color: white;
-  opacity: 0.7;
+  /*opacity: 0.7;*/
+  background-color: rgba(225,225,225, 0.7);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,7 +59,7 @@ code {
 }
 
 .btn:hover {
-  background-color: #f1f1f1;
+  background-color: rgb(154, 131, 4);
   color: black;
 }
 
@@ -69,11 +74,24 @@ input[type=text], select {
 }
 
 .nextBtn {
-  width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
   display: inline-block;
-  border: 1px solid #ccc;
-  border-radius: 4px;
   box-sizing: border-box;
+  background-color: black;
+  color: white;
+  font-size: 16px;
+  padding: 16px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.nextBtn:hover {
+  background-color: rgb(154, 131, 4);
+  color: black;
+}
+
+.btn-container {
+  text-align: center;
 }

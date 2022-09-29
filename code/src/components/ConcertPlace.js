@@ -10,17 +10,17 @@ export const ConcertPlace = ({ place, setPlace }) => {
     setPlace(event.target.value)
   }
   return (
-    <article>
+    <form>
       {concertPlaces.map((group) => (
         <label key={group} htmlFor="lang">
           <input
-            type="checkbox"
+            type="radio"
             value={group}
             onChange={handleConcertPlaces}
             checked={place === group} />
           {group}
         </label>
       ))}
-    </article>
+    </form>
   );
 }
