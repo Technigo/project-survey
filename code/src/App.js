@@ -1,7 +1,6 @@
 /* eslint-disable linebreak-style */
 import React, { useState } from 'react';
 import { WelcomeMessage } from 'components/WelcomeMessage';
-import { SubmitButton } from 'components/SubmitButton';
 import { ThankYouMessage } from 'components/ThankYouMessage';
 import { DestinationQuestion } from './components/DestinationQuestion';
 import { Pax } from './components/Pax';
@@ -15,13 +14,9 @@ export const App = () => {
   const [pax, setPax] = useState('');
   const [paxChild, setPaxChild] = useState('');
   const [age, setAge] = useState('');
-  const [button, setButton] = useState('');
   const [message, setMessage] = useState('');
   const handleStepIncrease = () => {
     setStep(step + 1);
-  }
-  const handleSubmitButton = () => {
-    setButton()
   }
 
   return (
@@ -59,14 +54,14 @@ export const App = () => {
         {step < 5 && (
           <div className="counter">
             <p>
-       Current question: {step}
+              Current question: {step}
               <button className="nextButton" type="button" onClick={handleStepIncrease}>Next question</button>
             </p>
           </div>
         )}
 
       </div>
-      <div className="palmtree">
+      <div className="header">
         <img src="https://images.unsplash.com/photo-1596906519349-f3907f48b54b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1988&q=80" alt="landscape" />
       </div>
     </div>
