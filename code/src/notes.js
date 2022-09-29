@@ -63,4 +63,7 @@
                   onChange={(event) => setHabit1(event.target.checked)} />
               </label>
             </div>)
+
+            {console.log(questions[index])}
+                {console.log(habits[index])}
         */

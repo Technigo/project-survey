@@ -1,15 +1,16 @@
 import React from 'react';
 
-export const Select = ({ location, setLocation }) => {
+export const Select = ({ specialGroup, setSpecialGroup }) => {
   return (
     <form onSubmit={(event) => event.preventDefault()}>
+      <h3>Do you belong to any of the following special groups?</h3>
       <select
-        onChange={(event) => setLocation(event.target.value)}
-        value={location}>
-        <option value="">Select location:</option>
-        <option value="stockholm">Stockholm</option>
-        <option value="barcelona">Barcelona</option>
-        <option value="oslo">Oslo</option>
+        onChange={(event) => setSpecialGroup(event.target.value)}
+        value={specialGroup}>
+        <option value="">Select group:</option>
+        <option value="pregnant">Pregnant women</option>
+        <option value="disabled">Living with disability</option>
+        <option value="chroni-condition">Living with a chronic condition</option>
       </select>
     </form>
   );

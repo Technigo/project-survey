@@ -33,20 +33,40 @@ code {
   position: relative;
   min-height: 60vh;
 }
-
+.main input {
+  margin-left: 5px;
+  margin-right: 5px;
+}
 button {
   padding: 1rem;
   margin: 1rem;
-  border-radius: 0.5rem;
-  width: 5rem;
+  border-radius: 1rem;
   font-size: 1.2rem;
-  font-weight: bold;
-  background-color: rgb(55, 124, 68);
-  color: rgb(56, 7, 178);
+  font-weight: ;
+  border: 1px solid #e81c4f;
+  /*background-color: rgb(55, 124, 68);*/
+  color: #e81c4f;
+  transition: none 200ms ease-out;
+  transition-property: color, background;
 }
 
-span {
+button:hover {
+  background:  #e81c4f;
+  color: white;
+}
+h2, h3 {
+  margin-top: 1em;
+  padding-top: 1em;
+}
+
+h2, strong {
+  color: #333;
+}
+
+label {
  margin: 2rem;
+ line-height: 5rem;
+ font-size: larger;
 }
 #wrapper {
   position: relative;
@@ -64,4 +84,22 @@ footer {
   background-color: rgb(94, 92, 91);
   border: 1px solid black; 
   font-size: 17px;
+}
+
+select {
+  border: none;
+  border-radius: 4px;
+  color: rgb(61, 61, 61);
+  font-size: 20px;
+  font-weight: 600;
+  height: 60px;
+  font-family: 'Montserrat';
+  background: #e5e9ff;
+  width: 100%;
+  padding:  20px;
+  cursor: pointer;
+
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }

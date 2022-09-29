@@ -4,41 +4,71 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { Welcome } from './components/Welcome';
 import { Age } from './components/Age';
+import { Child } from './components/Child';
 import { Adult } from './components/Adult';
+import { Balance } from './components/Balance';
+import { Select } from './components/Select';
+import { Summary } from './components/Summary';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
   const [ageGroup, setAgeGroup] = useState('');
+  const [meetsCardio, setMeetsCardio] = useState(false);
+  const [meetsStrength, setMeetsStrength] = useState(false);
+  const [meetsMovement, setMeetsMovement] = useState(false);
+  const [meetsBalance, setMeetsBalance] = useState(false);
   const [specialGroup, setSpecialGroup] = useState('');
+  const [responseCount, setResponseCount] = useState(0);
 
-  const habits = [];
-  habits.push({ ageGroup });
+  const handleNextButton = (event) => {
+    setCounter(counter + 1);
+  }
 
   // Function for checking counter
   const checkAge = (ageRange) => {
-    if (ageRange === '5 - 7') {
+    if (ageRange === '5 - 17') {
       return (
         <section className="main">
-          <Child />
+          <Child
+            meetsCardio={meetsCardio}
+            setMeetsCardio={setMeetsCardio}
+            meetsStrength={meetsStrength}
+            setMeetsStrength={setMeetsStrength}
+            meetsMovement={meetsMovement}
+            setMeetsMovement={setMeetsMovement} />
         </section>
       )
     } else if (ageRange === '18 - 64') {
       return (
         <section className="main">
-          <Adult />
+          <Adult
+            meetsCardio={meetsCardio}
+            setMeetsCardio={setMeetsCardio}
+            meetsStrength={meetsStrength}
+            setMeetsStrength={setMeetsStrength}
+            meetsMovement={meetsMovement}
+            setMeetsMovement={setMeetsMovement} />
+          <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>
         </section>
       )
     } else if (ageRange === '65+') {
       return (
         <section className="main">
-          <Senior />
+          <Adult
+            meetsCardio={meetsCardio}
+            setMeetsCardio={setMeetsCardio}
+            meetsStrength={meetsStrength}
+            setMeetsStrength={setMeetsStrength}
+            meetsMovement={meetsMovement}
+            setMeetsMovement={setMeetsMovement} />
+          <Balance
+            meetsBalance={meetsBalance}
+            setMeetsBalance={setMeetsBalance} />
         </section>
       )
     }
   }
-  const handleNextButton = (event) => {
-    setCounter(counter + 1);
-  }
+
   // App rendering starts here:
   return (
     <>
@@ -57,6 +87,16 @@ export const App = () => {
         <section className="main">
           {checkAge(ageGroup)}
         </section>)}
+      {counter === 3 && (
+        <section className="main">
+          <Select specialGroup={specialGroup} setSpecialGroup={setSpecialGroup} />
+          <button className="ok-btn" type="button" onClick={handleNextButton}>Submit</button>
+        </section>)}
+      {counter === 4 && (
+        <section className="main">
+          <Summary ageGroup={ageGroup} specialGroup={specialGroup} />
+        </section>
+      )}
       <Footer />
     </>
   );
