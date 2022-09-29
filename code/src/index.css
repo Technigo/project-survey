@@ -1,13 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Arvo&family=Open+Sans&display=swap');
+
+:root {
+  --btn-background: rgb(171, 25, 48);
+
+  --btn-background-hover: rgb(175, 60, 78);
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Arvo', serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+h1 {
+  font-size: 24px;
+  font-weight: unset;
+  text-align: center;
+}
+
+.outer-wrapper {
+  /* width: 100%; */
+  color: #e8d9ae;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(23, 41, 38);
+  background-image: url(../public/assets/background-large.jpg);
+  background-position: center top;
+  background-size: cover;
+  height: 100vh;
+}
+
+.inner-wrapper {
+  /* padding: 15px; */
+  /* margin: 0 auto; */
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 58%;
+  max-width: 1200px;
+}
+
+.welcome-container {
+  /* TODO:  Transition out of nowhere */
+  /* position: relative; */
+  /* transition: object-position 0.3s ease 0s; */
+}
+
+.landing-container {
+  max-width: 720px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.landing-container img {
+  max-width: 500px;
+}
+
+.submit-button-wrapper {
+  margin-top: 16px;
+  width: fit-content;
+  display: flex;
+  position: relative;
+  align-items: center;
+}
+
+.press-enter {
+  position: absolute;
+  left: 100%;
+  margin: 0 0 0 14px;
+  white-space: nowrap;
+  font-size: 12px;
+}
+
+.button {
+  background-color: var(--btn-background);
+  color: rgb(255, 255, 255);
+  border-radius: 4px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  transition-duration: 0.1s;
+  transition-property: background-color, color, border-color, opacity,
+    box-shadow;
+  transition-timing-function: ease-out;
+  outline: none;
+  border: 1px solid transparent;
+}
+
+.submit-button {
+  font-size: 20px;
+  line-height: 28px;
+  padding: 6px 14px;
+}
+
+/* hover effect for all buttons with class button*/
+.button:hover {
+  background-color: var(--btn-background-hover);
+}
+
+/* no background change for disable buttons, to give the effect that they are not clickable */
+.disabled-button:hover {
+  background-color: var(--btn-background);
+}
+
+.disabled-button {
+  cursor: default;
+}
+
+.start-button {
+  padding: 8px 18px;
+  min-height: 48px;
+  max-width: 100%;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.start-button:hover {
+  background-color: var(--btn-background-hover);
+}
+
+/*****************/
+/* QUESTIONNAIRE */
+/*****************/
+
+.form-wrapper {
+  margin-bottom: 64px;
+  position: relative;
+  width: 100%;
+}
+
+.form-label {
+  font-weight: 400;
+  margin: 0;
+}
+
+.form-page-index {
+  position: absolute;
+  top: 6px;
+  right: 100%;
+  margin-right: 12px;
+
+  display: flex;
+  align-items: center;
+  color: rgb(255, 255, 255);
+  font-size: 14px;
+  /* line-height: 20px;
+  height: 100%;
+  outline: none; */
+}
+
+.arrow-right {
+  height: 12px;
+  width: 13px;
+  margin-left: 4px;
+}
+
+.checkmark {
+  margin-left: 8px;
+  height: 16px;
+  width: 18px;
+}
+
+.button-span {
+  display: flex;
+  align-items: center;
+}
+
+/**************/
+/* NAME INPUT */
+/**************/
+
+.name-input {
+  margin-top: 32px;
+  width: 100%;
+  font-family: inherit;
+  color: rgb(255, 255, 255);
+  padding: 0px 0px 8px;
+  border: none;
+  outline: none;
+  /* appearance: none; */
+  transform: translateZ(0px);
+  font-size: 30px;
+  /* -webkit-text-fill-color: rgba(255, 255, 255, 0.3); */
+  -webkit-font-smoothing: antialiased;
+  animation: 1ms ease 0s 1 normal none running native-autofill-in;
+  transition: background-color 1e8s ease 0s, box-shadow 0.1s ease-out 0s;
+  box-shadow: rgb(255 255 255 / 30%) 0px 1px;
+  background-color: transparent;
+}
+
+.name-input:focus {
+  box-shadow: rgb(255 255 255) 0px 2px;
+}
+
+.name-input::placeholder {
+  color: white;
+  opacity: 0.3;
+}
+
+/************/
+/** FOOTER **/
+/************/
+
+footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row-reverse;
+  -webkit-box-pack: start;
+  align-items: center;
+}
+
+.footer-wrapper {
+  display: flex;
+  padding: 16px;
+}
+
+.footer-button-container {
+  border-radius: 4px;
+  margin-right: 8px;
+}
+
+.previous-button {
+  /* position: relative; */
+  /* font-family: inherit; */
+  /* line-height: inherit; */
+  /* font-weight: 700; */
+  /* margin: 0px; */
+  margin-right: 1px;
+  /* padding: 0px; */
+  width: 36px;
+  min-width: 36px;
+  height: 32px;
+  /* justify-content: center; */
+  border-radius: 4px 0px 0px 4px;
+}
+
+.next-button {
+  /* position: relative; */
+  /* font-family: inherit; */
+  /* line-height: inherit; */
+  /* font-weight: 700; */
+  /* margin: 0px; */
+  /* padding: 0px; */
+  width: 36px;
+  min-width: 36px;
+  height: 32px;
+  /* justify-content: center; */
+  border-radius: 0px 4px 4px 0px;
+}
+
+.typeform {
+  font-size: 14px;
+  padding: 0 12px;
+  display: flex;
+  align-items: center;
+  background-color: var(--btn-background);
+  border-radius: 4px;
+  color: rgb(255, 255, 255);
+  height: 32px;
 }
