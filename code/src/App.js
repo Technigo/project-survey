@@ -36,25 +36,7 @@ export const App = () => {
   return (
     <form/*  onSubmit={(event) => event.preventDefault()} */>
 
-      {counter < 8 && counter > 0 && (
-        <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
-        Previous question
-        </button>
-      )}
-
-      {counter < 7 && counter > 0 && (
-        <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
-        Next question
-        </button>
-      )}
-
-      {counter < 7 && counter > 0 && (
-        <p>
-          <button type="button" onClick={handleClearButtonClick}>
-          Clear input
-          </button>
-        </p>
-      )}
+      
 
       {counter === 0 && (
         <>
@@ -105,6 +87,26 @@ export const App = () => {
           <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
           <p>Questions answered: {counter}/7 </p>
         </div>
+      )}
+
+      {counter < 8 && counter > 1 && (
+        <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
+        Previous question
+        </button>
+      )}
+
+      {counter < 7 && counter > 0 && (
+        <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
+        Next question
+        </button>
+      )}
+
+      {counter < 7 && counter > 0 && (
+        <p>
+          <button type="button" onClick={handleClearButtonClick}>
+          Clear input
+          </button>
+        </p>
       )}
 
       {counter === 7 && (
