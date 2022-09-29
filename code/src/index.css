@@ -15,7 +15,7 @@ code {
 }
 
 /* FONT STYLES */
-h1, h2, h3 {
+h1, h2 {
   color: #591f35;
   font-family: 'DM Serif Text', serif;
   text-align: center;
@@ -32,6 +32,8 @@ h2 {
 }
 
 h3 {
+  font-family: 'DM Serif Text', serif;
+  text-align: center;
   font-size: 60px;
   line-height: 65px;
 }
@@ -113,6 +115,15 @@ select {
   margin-bottom: 20px;
 }
 
+.greeting {
+  font-family: 'DM Serif Text', serif;
+  text-align: center;
+  margin: 100px 25px 0 25px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 /* MEDIA QUERIES FOR TABLETS */
 @media (min-width: 768px) and (max-width: 1024px){
   .question-container{
@@ -133,6 +144,7 @@ select {
     font-size: 70px;
     line-height: 80px;
   }
+
 }
 
 /* MEDIA QUERIES FOR DEKSTOP */
