@@ -1,12 +1,14 @@
 body {
-  margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: rosybrown;
-
+  margin: 30px;
+  border: 2px black dotted;
+  padding: 50px;
+  width: auto;
 }
 
 code {
@@ -14,3 +16,19 @@ code {
     monospace;
 }
 
+h2 {
+  display: flex;
+  border: 1px midnightblue solid;
+  background-color: antiquewhite;
+}
+
+p {
+  border: 1px rgb(118, 65, 118) solid;
+  background-color: azure;
+}
+
+.button {
+  background: rgba(68, 176, 83, 0.525);
+  border-radius: 1px;
+
+}

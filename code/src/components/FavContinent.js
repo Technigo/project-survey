@@ -1,3 +1,4 @@
+/* eslint-disable linebreak-style */
 import React from 'react';
 
 export const FavContinent = ({ favContinent, setFavContinent }) => {
@@ -8,7 +9,7 @@ export const FavContinent = ({ favContinent, setFavContinent }) => {
     <form onSubmit={(event) => event.preventDefault()}>
       <h2>What is your dates favourite continent?</h2>
       <select
-        onChange={(event) => setFavContinent(event.target.value)}
+        onChange={handleFavContinentChange}
         value={favContinent}>
         <option value=""> Select a continent</option>
         <option value="Asia"> Asia</option>
