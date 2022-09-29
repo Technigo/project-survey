@@ -12,6 +12,9 @@
     color: #ded5d5;
     padding: 2rem;
 }
+fieldset{
+  border: none;
+}
 
 h1 {
   text-align: center;

@@ -18,7 +18,7 @@ const Form = () => {
 
   return (
     <div className="outer-wrapper">
-      <div className="inner-wrapper">
+      <section className="inner-wrapper">
         <h1>Random questions about you!</h1>
         {submitted && (
           <SubmissionOverview userName={userName} adultAge={adultAge} favClothes={favClothes} />
@@ -29,7 +29,7 @@ const Form = () => {
           <FavoriteClothing setFavClothes={setFavClothes} />
           <button className="submit-button" type="submit">Submit</button>
         </form>)}
-      </div>
+      </section>
     </div>
   )
 }
