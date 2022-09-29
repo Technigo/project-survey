@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 
 const DropdownSides = () => {
-  const [selected, setSelected] = useState('');
+  const [selectedSides, setSelectedSides] = useState('');
 
   return (
     <form>
       <select
-        onChange={(event) => setSelected(event.target.value)}
-        value={selected}>
+        onChange={(event) => setSelectedSides(event.target.value)}
+        value={selectedSides}>
         <option value="salad">Salad</option>
         <option value="bread">Bread</option>
       </select>

@@ -5,11 +5,11 @@ import End from 'components/End/End'
 
 const App = () => {
   const [surveyMode, setSurveyMode] = useState('start')
-  const [hunger, hungerLevel] = useState('')
+  const [hunger, setHungerLevel] = useState('')
 
   return (
     <div className="App">
-      {surveyMode === 'start' && <Start nextPage={() => setSurveyMode('questions')} hungerLevel={hungerLevel} hunger={hunger} />}
+      {surveyMode === 'start' && <Start nextPage={() => setSurveyMode('questions')} setHungerLevel={setHungerLevel} hunger={hunger} />}
       {surveyMode === 'questions' && <Questions nextPage={() => setSurveyMode('end')} />}
       {surveyMode === 'end' && <End nextPage={() => setSurveyMode('start')} />}
     </div>

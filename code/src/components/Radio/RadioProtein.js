@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const proteinOptions = ['Meat', 'Fish', 'Vegetarian'];
-
-const RadioProtein = () => {
-  const [selectedRadio, setSelectedRadio] = useState();
-
+const RadioProtein = ({ protein, setProtein }) => {
+  const handleProteinChange = (event) => {
+    setProtein(event.target.value);
+  }
   return (
-    <form>
-      {proteinOptions.map((protein) => (
-        <label key={protein} htmlFor="protein">
-          <input
-            id="protein"
-            name="protein"
-            type="radio"
-            value={protein}
-            onChange={(event) => setSelectedRadio(event.target.value)}
-            checked={selectedRadio === protein} />
-          {protein}
-        </label>
-      ))}
-    </form>
+    <div>
+      <input
+        type="radio"
+        value="Meat"
+        onChange={handleProteinChange}
+        checked={protein === 'Meat'} /> Meat
+
+      <input
+        type="radio"
+        value="Fish"
+        onChange={handleProteinChange}
+        checked={protein === 'Fish'} /> Fish
+
+      <input
+        type="radio"
+        value="Vegetarian"
+        onChange={handleProteinChange}
+        checked={protein === 'Vegetarian'} /> Vegetarian
+    </div>
   );
-};
+}
 
 export default RadioProtein;

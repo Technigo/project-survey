@@ -4,7 +4,7 @@ const Dropdown = () => {
   const [selected, setSelected] = useState('');
 
   return (
-    <form>
+    <form className="dropdown">
       <select
         onChange={(event) => setSelected(event.target.value)}
         value={selected}>

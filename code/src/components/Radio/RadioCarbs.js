@@ -1,26 +1,30 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const carbOptions = ['Pasta', 'Potatoes', 'Rice'];
-
-const RadioCarbs = () => {
-  const [selectedRadio, setSelectedRadio] = useState();
-
+const RadioCarbs = ({ carbs, setCarbs }) => {
+  const handleCarbsChange = (event) => {
+    setCarbs(event.target.value);
+  }
   return (
-    <form>
-      {carbOptions.map((carbs) => (
-        <label key={carbs} htmlFor="carbs">
-          <input
-            id="carbs"
-            name="carbs"
-            type="radio"
-            value={carbs}
-            onChange={(event) => setSelectedRadio(event.target.value)}
-            checked={selectedRadio === carbs} />
-          {carbs}
-        </label>
-      ))}
-    </form>
+    <div>
+      <input
+        type="radio"
+        value="Pasta"
+        onChange={handleCarbsChange}
+        checked={carbs === 'Pasta'} /> Pasta
+
+      <input
+        type="radio"
+        value="Potatoes"
+        onChange={handleCarbsChange}
+        checked={carbs === 'Potatoes'} /> Potatoes
+
+      <input
+        type="radio"
+        value="Rice"
+        onChange={handleCarbsChange}
+        checked={carbs === 'Rice'} /> Rice
+    </div>
   );
-};
+}
 
 export default RadioCarbs;
