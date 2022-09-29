@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import SignInMember from "./SignInMember";
 import Register from "./Register";
 import Booking from "./Booking";
+import Timeslot from './Timeslot';
 
 const Form = () => {
     const WelcomeMsg = "WELCOME! To the next level gym";
@@ -18,7 +19,7 @@ const Form = () => {
         } else if (page ===2){
             return <Booking />
         } else if (page ===3){
-            /* return < / > */
+            return <Timeslot /> 
         }
     }
 
