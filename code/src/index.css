@@ -64,12 +64,33 @@ code {
   border-radius: 16px;
   padding: 5px 10px 5px 10px;
   border: none;
-  background: var(---accent);
+  background: #b62e89bf;
   font-size: 16px;
+  color:#ffffff;
+  font-weight: 600;
   -webkit-box-shadow: 0px 0px 11px -4px rgba(119,99,100,0.75); 
   box-shadow: 0px 0px 11px -4px rgba(119,99,100,0.75);
 }
 
+.forward{
+  background-color:#b62e88;
+}
+
+.submit-btn{
+  margin: 0 auto;
+  border-radius: 16px;
+  padding: 5px 10px 5px 10px;
+  border: none;
+  background: rgb(2, 115, 92);
+  font-size: 16px;
+  color:#ffffff;
+  font-weight: 600;
+  -webkit-box-shadow: 0px 0px 11px -4px rgba(119,99,100,0.75); 
+  box-shadow: 0px 0px 11px -4px rgba(119,99,100,0.75);
+}
+.submit-btn:hover{
+  background: rgb(2, 163, 131);
+}
 .back:hover, .forward:hover{
   background:rgb(13, 67, 82);
   color: var(---text)
@@ -81,10 +102,11 @@ code {
   border-radius: 16px;
   margin-bottom: 20px;
   padding: 5px 10px 5px 10px;
-  background-color: var(---accent);
+  background-color: #b62e88;
   border: none;
   font-size: 18px;
-  color: rgb(0, 0, 0);
+  font-weight: 600;
+  color: rgb(255, 255, 255);
   -webkit-box-shadow: 0px 0px 11px -4px rgba(119,99,100,0.75); 
   box-shadow: 0px 0px 11px -4px rgba(119,99,100,0.75);
 }
@@ -93,7 +115,7 @@ code {
 /*-------TEXT---------*/
 .welcome-text{
   text-align: center;
-  font-size: 40px;
+  font-size: 45px;
   width: 300px;
   margin: 0 auto;
   margin-top: 30px;
@@ -101,20 +123,22 @@ code {
 
 .welcome-text-under{
   text-align: center;
-  font-size: 40px;
-  width:  380px;
+  font-size: 38px;
+  width:  400px;
   margin: 0 auto;
 }
 .welcome-paragraph{
   text-align: center;
   padding: 10px;
   font-size: 18px;
+  font-weight: 600;
 }
 
 .question-title{
   font-size: 24px;
   text-align: center;
   padding-top: 20px;
+  font-weight: 500;
 }
 .question-specify{
   text-align: center; 
@@ -136,6 +160,11 @@ code {
   height: 30px;
   margin: 0 auto;
 }
+
+.name-input:hover{
+  background: #ffffff51;
+}
+
 
 input[type=text]{     /*INPUT TEXT COLOR*/
   color: var(---text);
@@ -164,6 +193,11 @@ select {
   border-radius: 3px;
   padding-top: 5px;
   padding-bottom: 5px;
+}
+
+select.select-input{
+  text-align: center;
+  width: 250px;
 }
 
 /*--RADIO BUTTONS // THIRD QUESTION ---*/
@@ -252,11 +286,25 @@ textarea::placeholder{
 
 h3{
   text-align: center;
-  font-size: 22px;
+  font-size: 25px;
   width: 400px;
-  padding:
 }
 
+/*---It's Submitted!--*/
+.flexible-hygienist{
+  height: 70%;
+  margin: 0 auto;
+}
+
+h4{
+  font-size: 20px;
+  text-align: center;
+}
+
+.hygienist{
+  margin-top: -90px;
+  font-size: 25px;
+}
 
 
 /*---MEDIA QUERIES---**/
@@ -361,6 +409,4 @@ textarea#message {
   padding: 10px;
   font-weight: 500;
 }
-
-  
 }

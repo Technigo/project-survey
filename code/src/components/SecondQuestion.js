@@ -18,9 +18,9 @@ const SecondQuestion = ({
           value={brushInput}
           onChange={onBrushInputChange}
           required="required">
-          <option value=""> Please select a brush </option>
-          <option value="Manual"> Manual tooth brush </option>
-          <option value="Electric"> Electric tooth brush </option>
+          <option value=""> Please select a brush 👇🏿</option>
+          <option value="Manual"> Manual tooth brush 💪 </option>
+          <option value="Electric"> Electric tooth brush ⚡︎</option>
         </select>
       </div>
       <div className="button-container">
@@ -28,7 +28,7 @@ const SecondQuestion = ({
           BACK
         </button>
         <button type="button" className="forward" onClick={onNextQuestionChange}>
-          FORWARD
+          NEXT
         </button>
       </div>
     </form>

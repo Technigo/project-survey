@@ -7,7 +7,7 @@ const FirstPage = ({ onNextQuestionChange }) => {
         Welcome to
       </h1>
       <h2 className="welcome-text-under">
-        the self assesment
+        the self assessment
       </h2>
       <p className="welcome-paragraph"> This prepares us for your visit,
         in order to deliver you the highest

@@ -11,6 +11,7 @@ import TheEnd from './TheEnd'
 import FirstPage from './FirstPage'
 
 import 'index.css';
+import YourProfessional from './YourProfessional';
 
 const Form = () => {
   //  const states
@@ -128,7 +129,11 @@ const Form = () => {
           flossInput={flossInput}
           goalInput={goalInput}
           requestInput={requestInput}
+          onPreviousQuestionChange={onPreviousQuestionChange}
           onNextQuestionChange={onNextQuestionChange} />
+      )}
+      {counter === 9 && (
+        <YourProfessional />
       )}
     </main>
   );

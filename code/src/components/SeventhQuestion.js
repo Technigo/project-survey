@@ -24,7 +24,7 @@ const SeventhQuestion = ({
           BACK
         </button>
         <button type="button" className="forward" onClick={onNextQuestionChange}>
-          FORWARD
+          NEXT
         </button>
       </div>
     </form>

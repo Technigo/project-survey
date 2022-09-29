@@ -18,12 +18,12 @@ const SixthQuestion = ({
         value={goalInput}
         onChange={onGoalInputChange}
         required="required">
-        <option value=""> Please select a goal </option>
-        <option value="a fresher feeling"> Fresher Feeling </option>
-        <option value="to focus on education"> Education and instructions </option>
-        <option value="a brighter smile"> Brighter smile </option>
-        <option value="to work on your treatment plan"> Peronalized treatment plan</option>
-        <option value="a nice treatment"> I don´t have any special focus today </option>
+        <option value=""> Please select a goal 👇🏿 </option>
+        <option value="a fresher feeling"> Fresher Feeling 🧖 </option>
+        <option value="to focus on education"> Education and instructions 📚 </option>
+        <option value="a brighter smile"> Brighter smile 💎</option>
+        <option value="to work on your treatment plan"> Peronalized treatment plan 🔮</option>
+        <option value="a nice treatment"> I don´t have any special focus today 💁 </option>
 
       </select>
       <div className="button-container">
@@ -31,7 +31,7 @@ const SixthQuestion = ({
           BACK
         </button>
         <button type="button" className="forward" onClick={onNextQuestionChange}>
-          FORWARD
+        NEXT
         </button>
       </div>
     </form>
