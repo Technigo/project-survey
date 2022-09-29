@@ -9,14 +9,13 @@ export const Name = ({ name, setName }) => {
 
     return (
         <><Header />
-            <div className='nameComponent'>
+            <div className="nameComponent">
 
                 <p>Please type your name</p>
                 <input
                     type="text"
                     onChange={handleNameChange}
-                    value={name}
-                />
+                    value={name} />
 
             </div>
         </>
