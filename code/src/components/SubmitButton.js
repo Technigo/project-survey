@@ -2,13 +2,12 @@ import React from 'react';
 
 export const SubmitButton = (button, setButton) => {
   const handleSubmitButton = () => {
-    setButton(alert('Thank you'))
+    setButton()
   }
 
   return (
-    <div className="submitBtn">
-      <button type="button" onSubmit={handleSubmitButton}>Submit</button>
-    </div>
+
+    <button className="nextButton" type="button" onClick={handleSubmitButton}>Submit</button>
 
   )
 }
