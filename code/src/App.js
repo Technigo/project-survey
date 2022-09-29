@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 import StartScreen from 'components/StartScreen'
 import Name  from 'components/Name';
 import Email from 'components/Email';
-import Food from 'components/Food';
-import Drink from 'components/Drink';
+import Pun from 'components/Pun';
+import Chickenjoke from 'components/Chickenjoke';
 import Result from 'components/Result';
 
 
@@ -12,8 +12,8 @@ export const App = () => {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [food, setFood] = useState('');
-  const [drink, setDrink] = useState('');
+  const [pun, setPun] = useState('');
+  const [chickenjoke, setChickenjoke] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -48,17 +48,17 @@ export const App = () => {
       )}
       
       {step === 3 && (
-        <Food 
-        food={food} 
-        setFood={setFood} 
+        <Pun
+        pun={pun} 
+        setPun={setPun} 
         handleStepIncrease={handleStepIncrease} 
         handleStepDecrease={handleStepDecrease}/>
       )}
 
       {step === 4 && (
-        <Drink 
-        drink={drink} 
-        setDrink={setDrink}
+        <Chickenjoke 
+        chickenjoke={chickenjoke} 
+        setChickenjoke={setChickenjoke}
         handleStepIncrease={handleStepIncrease}
         handleStepDecrease={handleStepDecrease}/>
       )}
@@ -66,8 +66,8 @@ export const App = () => {
       {step >= 5 && (
         <Result 
         name={name} 
-        food={food} 
-        drink={drink}
+        pun={pun} 
+        chickenjoke={chickenjoke}
         email={email} />
       )}
 

@@ -1,9 +1,9 @@
 import React from 'react';
 
 
-const Food = ({name, food, setFood, handleStepIncrease, handleStepDecrease}) => {
-  const handleFoodChange = (event) => {
-    setFood(event.target.value);
+const Pun = ({pun, setPun, handleStepIncrease, handleStepDecrease}) => {
+  const handlePunChange = (event) => {
+    setPun(event.target.value);
   }
   return (
     <section className="container">
@@ -15,8 +15,8 @@ const Food = ({name, food, setFood, handleStepIncrease, handleStepDecrease}) => 
           <input 
           type = "radio"
           value="What did the grape say when it got crushed? Nothing, it just let out a little wine."
-          onChange = {handleFoodChange}
-          checked= {food === "What did the grape say when it got crushed? Nothing, it just let out a little wine."}
+          onChange = {handlePunChange}
+          checked= {pun === "What did the grape say when it got crushed? Nothing, it just let out a little wine."}
           >
           </input>
           </div>
@@ -30,8 +30,8 @@ const Food = ({name, food, setFood, handleStepIncrease, handleStepDecrease}) => 
           <input 
           type = "radio"
           value="A crazy wife says to her husband that moose are falling from the sky. The husband says, it’s reindeer."
-          onChange = {handleFoodChange}
-          checked= {food === "A crazy wife says to her husband that moose are falling from the sky. The husband says, it’s reindeer."}
+          onChange = {handlePunChange}
+          checked= {pun === "A crazy wife says to her husband that moose are falling from the sky. The husband says, it’s reindeer."}
           >
           </input>
           </div>
@@ -45,8 +45,8 @@ const Food = ({name, food, setFood, handleStepIncrease, handleStepDecrease}) => 
           <input 
           type = "radio"
           value="Ladies, if he can’t appreciate your fruit jokes, you need to let that mango."
-          onChange = {handleFoodChange}
-          checked= {food === "Ladies, if he can’t appreciate your fruit jokes, you need to let that mango."}
+          onChange = {handlePunChange}
+          checked= {pun === "Ladies, if he can’t appreciate your fruit jokes, you need to let that mango."}
           >
           </input>
           </div>
@@ -65,5 +65,5 @@ const Food = ({name, food, setFood, handleStepIncrease, handleStepDecrease}) => 
     </section>
   );
 }
-export default Food
+export default Pun
 

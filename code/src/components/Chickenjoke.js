@@ -1,8 +1,8 @@
 import React from 'react';
 
-const Drink = ({ drink, setDrink, handleStepIncrease, handleStepDecrease}) => {
-  const handleDrinkChange = (event) => {
-    setDrink(event.target.value);
+const Chickenjoke = ({ chickenjoke, setChickenjoke, handleStepIncrease, handleStepDecrease}) => {
+  const handleChickenjokeChange = (event) => {
+    setChickenjoke(event.target.value);
   }
   return (
     <section className="container">
@@ -12,8 +12,8 @@ const Drink = ({ drink, setDrink, handleStepIncrease, handleStepDecrease}) => {
           <label>
             <select
               className="dropdown"
-              onChange={handleDrinkChange}
-              value={drink}
+              onChange={handleChickenjokeChange}
+              value={chickenjoke}
               >
               <option value="Select answer">Select answer:</option>
               <option value="It thought it was an egg-cellent idea">It thought it was an egg-cellent idea</option>
@@ -31,4 +31,4 @@ const Drink = ({ drink, setDrink, handleStepIncrease, handleStepDecrease}) => {
     </section>
   );
 }
-export default Drink
+export default Chickenjoke
