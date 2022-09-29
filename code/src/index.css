@@ -34,18 +34,19 @@ body {
 
 .result-image {
   position: fixed;
-  width: 60%;
+  height: 200px;
+  width: auto;
   bottom: 0;
 }
 
 h1 {
-  font-size: 2.2em;
+  font-size: 1.7em;
   font-weight: 700;
   color: #222831
 }
 
 h2 {
-  font-size: 1em;
+  font-size: 1.2em;
   font-weight: 400;
   color: #393E46
 }
