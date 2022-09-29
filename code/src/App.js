@@ -1,40 +1,37 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import { Welcome } from './components/Welcome';
-import { Age } from './components/Age';
-import { Adults } from './components/Adults';
-
-import { Select } from './components/Select';
-import { Input } from './components/Input';
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
+import { Welcome } from './components/Welcome';
+import { Age } from './components/Age';
+import { Adult } from './components/Adult';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
   const [ageGroup, setAgeGroup] = useState('');
-  const [habits, setHabits] = useState(0)
   const [specialGroup, setSpecialGroup] = useState('');
-  const [frequency, setFrequency] = useState('');
-  const [username, setUserName] = useState('');
+
+  const habits = [];
+  habits.push({ ageGroup });
 
   // Function for checking counter
   const checkAge = (ageRange) => {
     if (ageRange === '5 - 7') {
       return (
         <section className="main">
-          <YoungOnes />
+          <Child />
         </section>
       )
     } else if (ageRange === '18 - 64') {
       return (
         <section className="main">
-          <Adults />
+          <Adult />
         </section>
       )
     } else if (ageRange === '65+') {
       return (
         <section className="main">
-          <Seniors />
+          <Senior />
         </section>
       )
     }
@@ -58,8 +55,7 @@ export const App = () => {
         </section>)}
       {counter === 2 && (
         <section className="main">
-          {checkAge(ageGroup)};
-          <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>
+          {checkAge(ageGroup)}
         </section>)}
       <Footer />
     </>
