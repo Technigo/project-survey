@@ -36,7 +36,7 @@ const Section1 = (props) => {
           <input
             type="radio"
             value="male"
-            onChange={(event) =>
+            onChange={event =>
               props.setFormData({
                 ...props.formData,
                 gender: event.target.value,

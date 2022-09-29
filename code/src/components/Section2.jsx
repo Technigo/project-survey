@@ -7,10 +7,10 @@ const Section2 = (props) => {
       <p>- What is the main factor for you to purchese our product</p>
       <form>
         <select
+          value={props.formData.reason}
           onChange={(e) =>
             props.setFormData({ ...props.formData, reason: e.target.value })
           }
-          value={props.formData.reason}
         >
           <option value="">Main Factor is about... </option>
           <option value="design">Design</option>
