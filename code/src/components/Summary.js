@@ -20,7 +20,7 @@ const Summary = ({
     <section className="summary-container">
       <div className="story-container">
         {' '}
-        <h2 className="summary-title">Mad Lib – Dragon Sneeze</h2>
+        <h2 className="summary-title">The Dragon Sneeze</h2>
         <div className="story-container-final">
           <p>
             <span className="red">{name}</span> was a{' '}
@@ -46,8 +46,11 @@ const Summary = ({
           </p>
           <p>
             <span className="red">{exclamation}</span> the dragon raged, my plan
-            has failed. I can’t have hay in the house. If I sneeze it’ll burn
-            down, no doubts!{' '}
+            has failed.{' '}
+          </p>
+          <p>
+            I can’t have hay in the house. If I sneeze it’ll burn down, no
+            doubts!{' '}
           </p>
           <p>
             So the dragon now had a{' '}
@@ -70,7 +73,7 @@ const Summary = ({
           <p>For now he had a friend, and on the weekend,</p>
           <p>
             they would toast <span className="red">{food}</span> (yum) on the
-            fire that the Dragons sneezes provided.{' '}
+            fire, that the Dragons sneezes provided.{' '}
           </p>
           <p>The End.</p>
         </div>
