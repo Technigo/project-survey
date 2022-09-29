@@ -14,7 +14,7 @@ const Section3 = (props) => {
             onChange={event =>
               props.setFormData({
                 ...props.formData,
-                where: event.target.value
+                where: event.target.value,
               })
             }
           />
@@ -26,26 +26,41 @@ const Section3 = (props) => {
             onChange={event =>
               props.setFormData({
                 ...props.formData,
-                where: event.target.value
+                where: event.target.value,
               })
             }
           />
         </label>
 
         <p>
-          if it is store, Are you statisfied with our service and our collegaes
-          service?
+          if it is store, Are you statisfied with our service and our collegues?
         </p>
+        <label>
+          <input
+            type="checkbox"
+            value="Website"
+            onChange={event =>
+              props.setFormData({
+                ...props.formData,
+                where: event.target.value,
+              })
+            }
+          />
+        </label>
+
         {/* Yes No */}
 
         <p>If in the website, How quich and representative is our website? </p>
         {/* fast, medium, slow */}
-        <button type="button" onClick={() => props.onPrevStep()}>
-          Previous
-        </button>
-        <button type="button" onClick={() => props.onNextStep()}>
-          continue
-        </button>
+
+        <span className="btn">
+          <button type="button" onClick={() => props.onPrevStep()}>
+            Previous
+          </button>
+          <button type="button" onClick={() => props.onNextStep()}>
+            continue
+          </button>
+        </span>
       </form>
     </>
   );

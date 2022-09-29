@@ -14,7 +14,7 @@ const App = () => {
     gender: '',
     status: '',
     reason: '',
-    // where: '',
+    where: '',
     quality: '',
     satisfaction: '',
   });
