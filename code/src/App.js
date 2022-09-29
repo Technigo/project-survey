@@ -4,7 +4,7 @@ import QuestionOne from './components/QuestionOne';
 import QuestionTwo from './components/QuestionTwo';
 import QuestionFour from './components/QuestionFour';
 import QuestionThree from './components/QuestionThree';
-import { Result } from './components/Result';
+import Result from './components/Result';
 import Final from './components/Final'
 
 
@@ -25,8 +25,6 @@ export const App = () => {
   const handleStepRestart = () => {
     setStep(step - 6)
   }
-
-
   
   return (
   <>
@@ -35,7 +33,7 @@ export const App = () => {
           {step === 1 && (
             <div> 
             <Intro />
-            <button className="start-button" type="button" onClick={handleStepIncrease}>Start survey</button>
+            <button className="start-button" type="button" onClick={handleStepIncrease}>Find your new best friend!</button>
           </div>
           )}
 

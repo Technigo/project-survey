@@ -13,3 +13,5 @@ export const Result = ({ name, activity, size, famous }) => {
         </>
     );
 }
+
+export default Result

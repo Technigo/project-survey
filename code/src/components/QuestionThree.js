@@ -20,6 +20,7 @@ const QuestionThree = ({size, setSize}) => {
                     <label key={dogSize}>
                     <input
                         type="radio"
+                        className="radio-button"
                         value={dogSize}
                         onChange={handleSizeChange}
                         checked={size === dogSize}

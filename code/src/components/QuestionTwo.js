@@ -22,6 +22,7 @@ const QuestionTwo= ({activity, setActivity}) => {
                 <label key ={prefer}>
                   <input
                     type="radio"
+                    className="radio-button"
                     value={prefer}
                     onChange={handleActivityChange}
                     checked={activity === prefer}

@@ -1,8 +1,6 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #D4E2D4;
@@ -11,6 +9,35 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+a {
+  text-decoration: none;
+  color: #DF7861;
+}
+
+a:hover {
+  cursor:pointer;
+  text-decoration: underline;
+}
+
+.links{
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+  color: #DF7861;
+  font-size: 19px;
+  border: 1px solid black;
+  width: 60%;
+}
+
+p {
+  font-size: 17px;
+}
+
+h1 {
+  align-self: center;
+  justify-self: center;
 }
 
 .outer-container {
@@ -31,14 +58,20 @@ code {
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #FCF8E8;
+  position: relative;
 }
 /*https://www.w3schools.com/css/css3_shadows_box.asp*/
 
 .radio-buttons {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   width: 100%;
-  margin: 15px 0px 15px 0px;
+  margin-bottom: 15px;
+}
+
+.radio-button {
+  padding: 10px;
+  margin: 10px;
 }
 
 @media (min-width: 668px) and (max-width: 1024px) {
