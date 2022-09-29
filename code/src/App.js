@@ -4,6 +4,7 @@ import FirstPage from 'components/FirstPage';
 import UserName from 'components/UserName';
 import UserLastname from 'components/UserLastname';
 import UserMail from 'components/UserMail';
+import UserPhoneNumber from 'components/UserPhoneNumber';
 import UserLocation from 'components/UserLocation';
 import UserAge from 'components/UserAge';
 import Frequency from 'components/Frequency';
@@ -13,12 +14,13 @@ export const App = () => {
   const [name, setName] = useState('');
   const [lastname, setLastname] = useState('');
   const [mail, setMail] = useState('');
+  const [phone, setPhone] = useState('');
   const [location, setLocation] = useState('');
   const [age, setAge] = useState('');
   const [frequency, setFrequency] = useState();
 
   const handleCounterButtonClick = (shouldIncrease) => {
-    if (shouldIncrease && counter < 7) {
+    if (shouldIncrease && counter < 8) {
       setCounter(counter + 1);
     } else if (!shouldIncrease && counter > 0) {
       setCounter(counter - 1);
@@ -29,9 +31,10 @@ export const App = () => {
     setName('');
     setLastname('');
     setMail('');
+    setPhone('');
+    setFrequency('');
     setLocation('');
     setAge('');
-    setFrequency('');
   };
 
   return (
@@ -69,46 +72,33 @@ export const App = () => {
 
       {counter === 4 && (
         <div>
-          <UserLocation userlocation={location} setUserlocation={setLocation} />
+          <UserPhoneNumber userphonenumber={phone} setUserphonenumber={setPhone} />
           <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
       {counter === 5 && (
         <div>
-          <UserAge userage={age} setUserage={setAge} />
+          <UserLocation userlocation={location} setUserlocation={setLocation} />
           <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
       {counter === 6 && (
         <div>
+          <UserAge userage={age} setUserage={setAge} />
+          <p tabIndex="0">Questions answered: {counter}/7 </p>
+        </div>
+      )}
+
+      {counter === 7 && (
+        <div>
           <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
           <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
 
-      {counter < 8 && counter > 1 && (
-        <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
-        Previous question
-        </button>
-      )}
-
-      {counter < 7 && counter > 0 && (
-        <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
-        Next question
-        </button>
-      )}
-
-      {counter < 7 && counter > 0 && (
-        <p>
-          <button type="button" aria-label="clear button" onClick={handleClearButtonClick}>
-          Clear input
-          </button>
-        </p>
-      )}
-
-      {counter === 7 && (
+      {counter === 8 && (
         <div>
 
           <h1 tabIndex="0">Survey completed!</h1>
@@ -117,6 +107,7 @@ export const App = () => {
             <li tabIndex="0">Name: {name} </li>
             <li tabIndex="0">Lastname: {lastname} </li>
             <li tabIndex="0">E-mail: {mail} </li>
+            <li tabIndex="0">Phone number: {phone} </li>
             <li tabIndex="0">Physical shop location: {location} </li>
             <li tabIndex="0">Age group: {age} </li>
             <li tabIndex="0">Frequency for newsletter: {frequency}</li>
@@ -124,6 +115,27 @@ export const App = () => {
           <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
         </div>
       )}
+
+      {counter < 9 && counter > 1 && (
+        <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
+        Previous question
+        </button>
+      )}
+
+      {counter < 8 && counter > 0 && (
+        <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
+        Next question
+        </button>
+      )}
+
+      {counter < 8 && counter > 0 && (
+        <p>
+          <button type="button" aria-label="clear button" onClick={handleClearButtonClick}>
+          Clear input
+          </button>
+        </p>
+      )}
+
     </form>
   );
 };
