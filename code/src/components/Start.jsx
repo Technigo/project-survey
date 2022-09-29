@@ -11,7 +11,7 @@ export const Start = () => {
   const [step, setStep] = useState(0);
 
   const [backFront, setBackFront] = useState('');
-  const [loneTeam, setLoneTeam] = useState('');
+  const [loneTeam, setLoneTeam] = useState(false);
   const [learnKnow, setLearnKnow] = useState('');
 
   return (
@@ -20,21 +20,28 @@ export const Start = () => {
         {step === 0 && (
           <Menu step={step} setStep={setStep} />
         )}
-        {step === 1 && (
-          <BackFront backFront={backFront} setBackFront={setBackFront} />
-        )}
-        {step === 2 && (
-          <LoneTeam loneTeam={loneTeam} setLoneTeam={setLoneTeam} />
-        )}
-        {step === 3 && (
-          <LearnKnow learnKnow={learnKnow} setLearnKnow={setLearnKnow} />
-        )}
-        {step >= 4 && (
-          <Summary learnKnow={learnKnow} loneTeam={loneTeam} backFront={backFront} />
-        )}
-        {step > 0 && step < 4 && (
-          <BackNextBtn step={step} setStep={setStep} />
-        )}
+        <form>
+          {step === 1 && (
+            <BackFront backFront={backFront} setBackFront={setBackFront} />
+          )}
+          {step === 2 && (
+            <LoneTeam loneTeam={loneTeam} setLoneTeam={setLoneTeam} />
+          )}
+          {step === 3 && (
+            <LearnKnow learnKnow={learnKnow} setLearnKnow={setLearnKnow} />
+          )}
+          {step >= 4 && (
+            <Summary backFront={backFront} loneTeam={loneTeam} learnKnow={learnKnow} />
+          )}
+          {step > 0 && step < 4 && (
+            <BackNextBtn
+              step={step}
+              setStep={setStep}
+              backFront={backFront}
+              loneTeam={loneTeam}
+              learnKnow={learnKnow} />
+          )}
+        </form>
       </section>
     </div>
   )

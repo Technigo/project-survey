@@ -11,7 +11,8 @@ export const BackFront = ({ backFront, setBackFront }) => {
       <select
         className="dropdown"
         onChange={handleBackFrontChange}
-        value={backFront}>
+        value={backFront}
+        required>
         <option className="option" value="">Select one:</option>
         <option className="option" value="Backend">Backend</option>
         <option className="option" value="Frontend">Frontend</option>
