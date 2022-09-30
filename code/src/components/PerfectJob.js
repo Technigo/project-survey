@@ -15,7 +15,7 @@ const PerfectJob = ({ perfectJob, setPerfectJob }) => {
 
   return (
     <>
-      <p>If Borzois had human jobs, the perfect one would be:</p>
+      <p>If Borzois could have human jobs, the most perfect one would be:</p>
 
       {perfectJobOptions.map((option) => (
         <label htmlFor={`perfectJob${option}`} key={option}>

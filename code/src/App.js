@@ -4,17 +4,17 @@ import React, { useState } from 'react';
 
 import UserName from 'components/UserName';
 import CoolestThing from 'components/CoolestThing';
-import PerfectJob from 'components/PerfectJob';
+import PerfectJob, { defaultPerfectJobOption } from 'components/PerfectJob';
 import Fondness from 'components/Fondness';
 import Result from 'components/Result';
 
 const App = () => {
   const stepsTotalCount = 4
   const [step, setStep] = useState(1);
-  const [userName, setUserName] = useState('amanda');
-  const [coolestThing, setCoolestThing] = useState('');
-  const [perfectJob, setPerfectJob] = useState('');
-  const [fondness, setFondness] = useState('');
+  const [userName, setUserName] = useState('Name Namesson');
+  const [coolestThing, setCoolestThing] = useState('How cute and fluffy they are');
+  const [perfectJob, setPerfectJob] = useState(defaultPerfectJobOption);
+  const [fondness, setFondness] = useState(1);
   const [errors, setErrors] = useState(null);
 
   const handleStepIncrease = () => {
