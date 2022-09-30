@@ -126,7 +126,6 @@ p {
 
 .clear-button {
   grid-column-start: 4;
-  grid-column-end: 4;
   grid-row-start: 4; 
   justify-self: end;
   align-self: end;
@@ -172,6 +171,16 @@ p {
 
 /* ------------------tablet section---------------------- */
 @media (min-width: 667px) and (max-width: 1024px) {
+  .body-section {
+    display: grid;
+    grid-template-columns: 2rem 1fr 1fr 1fr 1fr 2rem;
+    grid-template-rows: 2rem 1fr 1fr 1fr 2rem;
+    height: 100vh;
+    flex-direction: column;
+    overflow-y: scroll;
+    top: 0; right: 0; bottom: 0; left: 0;
+  }
+
   .first-page-h1 {
     font-size: 40px;
     margin-bottom: 10%;
@@ -200,16 +209,22 @@ p {
     grid-column-start: 2;
     grid-row-start: 4; 
     margin: 0;
-    padding: 7px;
-    padding-right: 50%
+    padding: 21px;
+    justify-self: start;
   }
   
   .next-button {
     grid-column-start: 2;
-    grid-row-start: 4; 
-    margin: 0;
-    justify-self: space-evenly;
-    padding-left: 50%
+    grid-row-start: 4;
+    margin: 0; 
+    padding: 21px;
+    justify-self: center;
+  }
+
+  .clear-button {
+    padding: 17.5px;
+    grid-column-start: 5;
+    font-size: 26px;
   }
 }
 
@@ -248,15 +263,19 @@ p {
     grid-column-start: 2;
     grid-row-start: 4;
     align-self: end;
-    justify-self: end;
+    justify-self: start;
     margin:0;
+    border-color: none;
+    padding-right: 30%;
   }
   
   .next-button {
-    grid-column-start: 3;
+    grid-column-start: 2;
     grid-row-start: 4; 
     align-self: end;
-    justify-self: start;
+    justify-self: center;
     margin:0;
+    border-color: none;
+    padding-left: 30%;
   }
 }
