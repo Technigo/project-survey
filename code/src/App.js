@@ -50,10 +50,13 @@ export const App = () => {
               textArea={textArea}
               action={action}
               userName={userName} />
+            <input type="text" placeholder="Recievers Email" />
+            <input type="text" placeholder="Your Email" />
+            <button type="button"> Send Email </button>
             <button type="button" onClick={() => handleStepIncrease(false)}> Edit </button>
           </>
         )}
-      My counter {counter}
+        {/* My page counter {counter} */}
       </div>
     </div>
   );

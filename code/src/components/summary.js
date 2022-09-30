@@ -8,8 +8,8 @@ export const Summary = ({ recieverName, consideration, textArea, action, userNam
         You might want to consider {consideration}.
         Lately I`ve noticed that you {textArea}.
       </p>
-      <p>And I would hate if someone had to {action}</p>
-      <p>Sincerely, {userName} </p>
+      <p>And I would hate if someone had to {action}.</p>
+      <p>Sincerely, {userName}.</p>
     </div>
   );
 }
