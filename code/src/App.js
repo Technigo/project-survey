@@ -102,17 +102,17 @@ export const App = () => {
         {counter === 8 && (
           <>
             <div className="question-section">
-              <h1 tabIndex="0">Survey completed!</h1>
-              <p tabIndex="0">Summary of you answers:</p>
-              <ol>
-                <li tabIndex="0">Name: {name} </li>
-                <li tabIndex="0">Lastname: {lastname} </li>
-                <li tabIndex="0">E-mail: {mail} </li>
-                <li tabIndex="0">Phone number: {phone} </li>
-                <li tabIndex="0">Physical shop location: {location} </li>
-                <li tabIndex="0">Age group: {age} </li>
-                <li tabIndex="0">Frequency for newsletter: {frequency}</li>
-              </ol>
+              <h1 className="survey-completed-h1" tabIndex="0">Survey completed!</h1>
+              <p tabIndex="0">Summary of you answers</p>
+              <div>
+                <p className="list" tabIndex="0">Name: {name} </p>
+                <p className="list" tabIndex="0">Lastname: {lastname} </p>
+                <p className="list" tabIndex="0">E-mail: {mail} </p>
+                <p className="list" tabIndex="0">Phone number: {phone} </p>
+                <p className="list" tabIndex="0">Physical shop location: {location} </p>
+                <p className="list" tabIndex="0">Age group: {age} </p>
+                <p className="list" tabIndex="0">Frequency for newsletter: {frequency}</p>
+              </div>
             </div>
             <button className="submit-button" aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
           </>

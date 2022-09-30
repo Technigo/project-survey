@@ -45,7 +45,7 @@ h1 {
   color: rgb(235, 219, 173);
 }
 
-p, li {
+p {
   color: rgb(235, 219, 173);
   font-weight: unset;
   font-size: 20px;
@@ -209,6 +209,7 @@ p, li {
   .user-input, select, textarea {
     border:none;
     background-color: black;
+    color: rgb(235, 219, 173);
     border-bottom: 5px solid  rgb(235, 219, 173);
     font-size: 20px; 
   }
@@ -252,6 +253,13 @@ p, li {
     padding-bottom:10px
   }
 
+  .list {
+    margin:7px;
+  }  
+
+  .survey-completed-h1 {
+    margin-bottom: 20px;
+  }
 
 /* ------------------tablet section---------------------- */
 @media (min-width: 667px) and (max-width: 1024px) {
