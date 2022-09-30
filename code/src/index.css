@@ -9,6 +9,14 @@ body {
   font-size: 20px;
 }
 
+
+ @media (min-width: 1024px) {
+
+.email {
+  width: 30%
+ } 
+}
+ 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -28,9 +36,10 @@ code {
  position: absolute;
  top: 30%;
  left: 20%;
- right: 20%;
  background-color: antiquewhite;
  font-size: 27px;
+ display: flex;
+ text-align: left
 }
 
 .book-selection {
@@ -47,6 +56,9 @@ position: absolute;
  top: 40%;
  left: 20%;
  background-color: antiquewhite;
+ font-size: 16px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
 }
 
 .version-selection {
@@ -113,4 +125,47 @@ left: 20%;
     right: 10px;
   }
 
+  .email {
+   width: 70%
+  } 
 
+
+  input[type="email"]::placeholder {   
+    font-size: 16px;
+    font-family: 'Cinzel', serif;
+    }
+
+    .submit {
+      font-family: 'Cinzel', serif;
+        border-radius: 4px;
+        background-color: antiquewhite;
+        border: none;
+        text-align: center;
+        font-size: 16px;
+        padding: 10px;
+        width: 100px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 20px;
+        box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+      }
+      
+      .submit:after {
+        position: absolute;
+        opacity: 0;  
+        top: 14px;
+        right: -20px;
+        transition: 0.5s;
+      }
+      
+      .submit:hover{
+        padding-right: 24px;
+        padding-left:8px;
+      }
+      
+      .submit:hover:after {
+        opacity: 1;
+        right: 10px;
+      }
+    
+    

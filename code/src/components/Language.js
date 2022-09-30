@@ -8,11 +8,11 @@ export const Language = ({ language, setLanguage }) => {
     return (
         <>
         <p className="question">What language do you want?</p>
-        <select onChange={handleLanguageChange} value={language}>
+        <select className="language-selection" onChange={handleLanguageChange} value={language}>
         <option disabled value="">Select language here </option>
-        <option value="English" checked={language === 'English'} onChange={handleLanguageChange} aria-label="First option">English </option>
-        <option value="Swedish" checked={language === 'Swedish'} onChange={handleLanguageChange}aria-label="Second option">Swedish </option>
-        <option value="Spanish" checked={language === 'Spanish'} onChange={handleLanguageChange}aria-label="Third option">Spanish </option>
+        <option value="English" aria-label="First alternative: English" checked={language === 'English'} onChange={handleLanguageChange}>English </option>
+        <option value="Swedish" aria-label="Second alternative: Swedish" checked={language === 'Swedish'} onChange={handleLanguageChange}>Swedish </option>
+        <option value="Spanish" aria-label="Third alternative: Spanish" checked={language === 'Spanish'} onChange={handleLanguageChange}>Spanish </option>
         </select>
         </>
     );
