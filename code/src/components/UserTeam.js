@@ -20,26 +20,25 @@ const UserTeam = ({ userTeam, setUserTeam, userName }) => {
     setUserTeam(event.target.value)
   };
   return (
-    <>
-      <h2 className="question-title"> What is your team {userName} ?</h2>
-      <form className="form-wrapper">
-        {WichTeam.map((group) => (
-          <label className="lable-wrapper" htmlFor={group.value} key={group.id}>
-            <div className="input-wrapper">
-              <input
-                className="input-btn"
-                type="radio"
-                value={group.value}
-                onChange={handleUserTeamInputChange}
-                checked={userTeam === group.value}
-                image={group.image}
-              />
-              <img className="animals" src={group.image} alt={group.value} />
-            </div>
-          </label>
-        ))}
-      </form>
-    </>
+    <form className="form-wrapper">
+      <h2 className="sub-header">Hello {userName}!</h2>
+      <h3 className="question-title">What&apos;s your team ?</h3>
+      {WichTeam.map((group) => (
+        <label className="lable-wrapper" htmlFor={group.value} key={group.id}>
+          <div className="input-wrapper">
+            <input
+              className="input-btn"
+              type="radio"
+              value={group.value}
+              onChange={handleUserTeamInputChange}
+              checked={userTeam === group.value}
+              image={group.image}
+            />
+            <img className="animals" src={group.image} alt={group.value} />
+          </div>
+        </label>
+      ))}
+    </form>
   );
 };
 

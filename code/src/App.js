@@ -5,9 +5,7 @@ export const App = () => {
   return (
     <section className="outer-wrapper">
       <section className="inner-wrapper">
-        <div className="survey">
-          <Survey />
-        </div>
+        <Survey />
       </section>
     </section>
   );

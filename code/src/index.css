@@ -1,19 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Londrina+Outline&family=Monoton&family=Rubik+Dirt&family=Shadows+Into+Light+Two&display=swap');
+
+/* font-family: 'Monoton', cursive;
+font-family: 'Rubik Dirt', cursive;
+font-family: 'Shadows Into Light Two', cursive; */
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  /*  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  background-color: rgb(90, 90, 90);
-  /* background-image: url(./assets/background.jpg);
-  background-size: auto;
-  background-repeat: no-repeat; */
+  -moz-osx-font-smoothing: grayscale; */
+  background-color: #2a022e;
+  color: #ffffff;
+  font-family: 'source-code-pro', monospace;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 'source-code-pro', monospace;
 }
 
 /* WRAPPERS */
@@ -31,25 +35,44 @@ code {
   margin: 0 auto;
   height: 500px;
   flex-direction: column;
+  position: relative;
 }
 
 /* SURVEY */
 .survey-card {
   display: flex;
+  position: absolute;
   flex-direction: column;
-  height: 500px;
+  height: auto;
   justify-content: center;
   width: 100%;
-  row-gap: 20px;
+  row-gap: 40px;
+  top: 50%;
 }
 
-.intro-title {
-  font-size: 24px;
+.header {
+  font-size: 60px;
   margin: 0;
+  font-family: 'Londrina Outline';
+  letter-spacing: 2px;
+}
+
+.sub-header {
+  margin: 0;
+  width: 100%;
+  font-size: 26px;
+  margin-top: 25px;
 }
 
 .question-title {
   margin: 0;
+  width: 100%;
+  font-size: 22px;
+  color: #fc4664;
+}
+
+.color-accent {
+  color: #fc4664;
 }
 
 /* INPUT STYLING */
@@ -64,13 +87,14 @@ code {
   height: 30px;
   border: 2px solid transparent;
   outline: none;
-  border-bottom: 2px solid #3f3f3f;
-  caret-color: #3f3f3f;
+  border-bottom: 2px solid #afafaf;
+  caret-color: #afafaf;
   background-color: transparent;
   padding: 5px;
   transition: 0.3s linear;
   letter-spacing: 1px;
   font-size: 1rem;
+  color: #ffffff;
 }
 
 .input-box:focus {
@@ -91,14 +115,15 @@ code {
   width: 100%;
   column-gap: 20px;
   margin-top: 0;
+  justify-content: space-between;
 }
 
 .btn {
-  font-size: 18px;
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-weight: bold;
-  padding: 0.7em 2em;
+  padding: 10px;
   border: 3px solid #fc4664;
   border-radius: 2px;
   position: relative;
@@ -107,6 +132,9 @@ code {
   background: transparent;
   transition: 0.3s ease all;
   cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
 }
 
 /* START */
@@ -120,42 +148,25 @@ code {
 
 /* NEXT */
 
-.next {
-  /* font-size: 16px;
+/* .next {
+  font-size: 16px;
   font-weight: 700;
-  color: white; */
+  color: white;
   overflow: hidden;
   z-index: 1;
   font-family: inherit;
-}
+} */
 
 /* BACK */
 
-.back {
+/* .back {
   overflow: hidden;
   z-index: 1;
   font-family: inherit;
 }
+ */
 
 /* RESTART */
-/* .btn-restart {
-  font-size: 18px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  display: inline-block;
-  text-align: center;
-  font-weight: bold;
-  padding: 0.7em 2em;
-  border: 3px solid #fc4664;
-  border-radius: 2px;
-  position: relative;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.1);
-  color: #fc4664;
-  background-color: transparent;
-  text-decoration: none;
-  transition: 0.3s ease all;
-  z-index: 1;
-} */
 
 /* TEAM QUESTIONS */
 
@@ -257,22 +268,24 @@ select {
 
   border: 2px solid transparent;
   outline: none;
-  border-bottom: 2px solid #3f3f3f;
+  border-bottom: 2px solid #afafaf;
   background-color: transparent;
   padding: 5px;
   transition: 0.3s linear;
   letter-spacing: 1px;
   font-size: 1rem;
+  color: #afafaf;
 }
 
 select:hover {
   border-bottom: 2px solid #fc4664;
 }
 .custom-select option {
-  background-color: #fc4664;
+  background-color: #2a022e;
+  color: #fc4664;
 }
-option:hover {
-  background-color: white;
+.custom-select option:hover {
+  color: #fc4664;
 }
 /* .custom-select option:checked,
 .custom-select option:hover {
@@ -302,6 +315,7 @@ select::-ms-expand {
   background-color: transparent;
   transition: 0.25s all ease;
   pointer-events: none;
+  color: #afafaf;
 }
 /* Transition */
 
@@ -348,14 +362,6 @@ a:hover {
 
 a:active {
   text-decoration: none;
-}
-
-.survey {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
 }
 
 /* TABLET */
