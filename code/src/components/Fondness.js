@@ -5,10 +5,10 @@ const Fondness = ({ fondness, setFondness }) => {
     setFondness(event.target.value);
   }
   return (
-    <>
+    <label htmlFor="Fondness">
       <p>How much do you love these doggos?</p>
-      <input type="text" value={fondness} onChange={handleFondnessChange} />
-    </>
+      <input id="Fondness" type="text" value={fondness} onChange={handleFondnessChange} />
+    </label>
   );
 }
 

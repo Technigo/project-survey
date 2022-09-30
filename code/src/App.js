@@ -25,7 +25,7 @@ const App = () => {
       {step === 1 && (
         <Name name={name} setName={setName} />
       )}
-      {/* 2 CUTEST THING - SELECT */}
+      {/* 2 COOLEST THING - SELECT */}
       {step === 2 && (
         <CoolestThing coolestThing={coolestThing} setCoolestThing={setCoolestThing} />
       )}

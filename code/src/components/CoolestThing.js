@@ -7,15 +7,14 @@ const CoolestThing = ({ coolestThing, setCoolestThing }) => {
     setCoolestThing(event.target.value);
   }
   return (
-    <>
+    <label htmlFor="coolestThing">
       <p>What is the coolest thing about Borzois?</p>
-      <select>
-        <option disabled value="">Select an option:</option>
-        <option value={coolestThing} onChange={handleCoolestThing}>How fast they can run</option>
-        <option value={coolestThing} onChange={handleCoolestThing}>How smart they are</option>
-        <option value={coolestThing} onChange={handleCoolestThing}>How cute and fluffy they are</option>
+      <select id="coolestThing" value={coolestThing} onChange={handleCoolestThing}>
+        <option>How cute and fluffy they are</option>
+        <option>How fast they can run</option>
+        <option>How smart they are</option>
       </select>
-    </>
+    </label>
   );
 }
 
