@@ -43,7 +43,7 @@ export const App = () => {
       {counter === 0 && (
         <>
           <FirstPage />
-          <button type="button" aria-label="Subscribe me for this newsletter" onClick={() => handleCounterButtonClick(true)}>
+          <button type="button" className="subscribe-button" aria-label="Subscribe me for this newsletter" onClick={() => handleCounterButtonClick(true)}>
           Sign me up!
           </button>
         </>
@@ -114,6 +114,12 @@ export const App = () => {
           </ol>
           <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
         </div>
+      )}
+
+      {counter < 8 && counter > 0 && (
+        <button type="button" className="ok-button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
+          <h3>OK ✔</h3>
+        </button>
       )}
 
       {counter < 9 && counter > 1 && (

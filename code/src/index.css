@@ -1,21 +1,75 @@
-body {
+  body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+  /* background-image: url(./assets/background.webp);
+  background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+} 
+
+/* .survey-container {
+  margin-top: 10vh;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 15px;
+  border: 4px solid #44a08b;
+  border-radius: 25px;
+  background-color: #8ed0c0;
+} */
+
+h1 {
+  font-family: 'Permanent Marker', cursive;
+  font-weight: lighter;
+  font-weight: unset;
+    font-size: 30px;
+    line-height: 38px;
+    color: rgb(235, 219, 173);
 }
 
-.slider-parent{
-  position:relative;
+p {
+  color: rgb(235, 219, 173);
+  font-weight: unset;
+  font-size: 16px;
+  line-height: 24px;
 }
 
-.buble{
-  position:absolute;
+.subscribe-button {
+  border-radius: 13%;
+  margin: 5px;
+  padding: 10px;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rgb(235, 219, 173);
+  color: rgb(68, 68, 68);
+  border-color: bisque;
+  transition: all 0.1s ease-out 0s;
+} 
+
+.ok-button {
+  border-radius: 13%;
+  margin: 5px;
+  padding: 8px;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rgb(235, 219, 173);
+  color: rgb(68, 68, 68);
+  border-color: bisque;
+  transition: all 0.1s ease-out 0s;
 }
