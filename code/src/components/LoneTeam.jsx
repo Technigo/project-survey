@@ -12,9 +12,9 @@ export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
             type="radio"
             id="lone"
             name="loneTeam"
-            value="lone"
+            value="lone wolf"
             onChange={(e) => setLoneTeam(e.target.value)}
-            checked={loneTeam === 'lone'} />
+            checked={loneTeam === 'lone wolf'} />
         Lone Wolf
         </label>
         <label className="radio-label" htmlFor="team">
@@ -22,9 +22,9 @@ export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
             type="radio"
             id="team"
             name="loneTeam"
-            value="team"
+            value="team player"
             onChange={(e) => setLoneTeam(e.target.value)}
-            checked={loneTeam === 'team'} />
+            checked={loneTeam === 'team player'} />
         Team Player
         </label>
       </div>

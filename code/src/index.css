@@ -6,15 +6,16 @@
 }
 
 :root {
-  --main-color: midnightblue;
-  --sub-color: rgb(0, 171, 80);
-  --third-color: rgb(255, 71, 163);
+  --main-color: rgb(0, 0, 205);
+  --sub-color: hotpink;
+  --third-color: green;
+
+  --main-font: 'Nunito', 'Arial', sans-serif;
+  --sub-font: 'Open sans', sans-serif;
 }
 
 body {
-  font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
-    'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: var(--main-font), sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -26,7 +27,19 @@ code {
 
 /* WRAPPER (Start.jsx) */
 .outer-wrapper {
-  background-color: var(--main-color);
+  background-color: whitesmoke;
+  opacity: 1;
+  background-image: linear-gradient(
+      pink 1.2000000000000002px,
+      transparent 1.2000000000000002px
+    ),
+    linear-gradient(
+      to right,
+      pink 1.2000000000000002px,
+      whitesmoke 1.2000000000000002px
+    );
+  background-size: 24px 24px;
+  margin: 0 auto;
   width: 100%;
   height: 100vh;
   padding-top: 1px;
@@ -34,73 +47,105 @@ code {
 
 .survey-wrapper {
   position: relative;
-  background-color: white;
-  border-radius: 1.6rem;
+  background-color: whitesmoke;
+  border: 2px solid var(--sub-color);
+  box-shadow: 0.8rem 1rem var(--sub-color);
   margin: 5rem auto;
   max-width: 28rem;
-  padding: 2rem;
-  text-align: center;
+  padding: 3rem;
 }
 
-/* HEADINGS (Menu.jsx) */
+/* Menu.jsx */
 .main-heading {
-  color: rgb(0, 171, 80);
-  font-size: 3rem;
+  color: var(--main-color);
+  font-size: 3.3rem;
   font-weight: 900;
-  line-height: 3.5rem;
+  line-height: 3.2rem;
+}
+
+.main-heading span {
+  font-size: 2.7rem;
 }
 
 .sub-heading {
-  color: var(--main-color);
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.8rem;
-  margin-top: 1.5rem;
-  width: 21rem;
-}
-
-.question-heading {
-  padding-bottom: 1rem;
-  color: var(--main-color);
-  font-size: 1.5rem;
+  color: var(--sub-color);
+  font-family: var(--main-font);
+  font-size: 1.6rem;
   font-weight: 700;
   line-height: 1.8rem;
-  margin-bottom: 1rem;
+  margin-top: 2.5rem;
+  width: 16rem;
 }
 
-/* BUTTONS (Menu.jsx) */
 .start-btn {
-  background-color: var(--sub-color);
-  border: none;
-  border-radius: 1rem;
-  color: white;
+  background-color: white;
+  border: 0.2rem solid var(--main-color);
+  box-shadow: 0.5rem 0.5rem var(--main-color);
+  border-radius: 0.8rem;
+  color: var(--main-color);
   font-family: 'Nunito';
   font-size: 1.2rem;
-  font-weight: 900;
+  font-weight: 700;
+  margin-top: 4rem;
   padding: 1rem;
-  margin-top: 2rem;
   transition: 0.2s;
+  width: fit-content;
+  -webkit-animation: bounce 0.3s infinite alternate;
+  -moz-animation: bounce 0.3s infinite alternate;
+  animation: bounce 0.3s infinite alternate;
 }
 
-.start-btn:hover {
-  background-color: orange;
+@-webkit-keyframes bounce {
+  to {
+    -webkit-transform: scale(1.1);
+  }
+}
+@-moz-keyframes bounce {
+  to {
+    -moz-transform: scale(1.1);
+  }
+}
+@keyframes bounce {
+  to {
+    transform: scale(1.1);
+  }
 }
 
-/* (BackNextBtn.jsx) */
+.dot-shape {
+  position: absolute;
+  right: -3rem;
+  top: 16rem;
+  background: var(--main-color);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  width: 10rem;
+  height: 10rem;
+}
+
+.dot-text {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 900;
+  text-align: center;
+  transform: rotate(10deg);
+}
+
+/* BackNextBtn.jsx */
 .backnext-btn-container {
   display: flex;
   padding-top: 1rem;
   justify-content: right;
-  gap: 1rem;
+  gap: 2rem;
   margin-top: 2rem;
 }
 
 .backnext-btn {
-  background-color: var(--sub-color);
+  background-color: var(--main-color);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   color: white;
-  font-family: 'Nunito';
+  font-family: var(--main-font);
   font-size: 1.2rem;
   font-weight: 900;
   padding: 0.5rem;
@@ -127,56 +172,33 @@ code {
   width: 9.5rem;
 }
 
-/* Menu.jsx */
-.star-shape {
-  position: absolute;
-  right: 0rem;
-  top: 12rem;
-
-  background: var(--third-color);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  width: 7rem;
-  height: 7rem;
-}
-
-.star-text {
-  color: white;
-  font-size: 1rem;
-  font-weight: 900;
-  text-align: center;
-  transform: rotate(15deg);
-}
-
 /* BackFront.jsx */
+.question-heading {
+  padding-bottom: 1rem;
+  color: var(--main-color);
+  font-family: 'Open sans';
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+
 .question-container {
   display: flex;
   flex-direction: column;
-  text-align: left;
 }
 
 .dropdown {
-  border: 0.1rem solid var(--third-color);
+  border: 0.1rem solid var(--sub-color);
   border-radius: 0.5rem;
-  /* box-shadow: 0.3rem 0.3rem var(--third-color); */
-  color: var(--third-color);
+  box-shadow: 0.3rem 0.3rem var(--sub-color);
+  color: var(--sub-color);
   font-family: 'Nunito';
   font-size: 1rem;
   font-weight: 700;
   width: 7.5rem;
   height: 2.5rem;
   text-align: center;
-}
-
-.dropdown:active {
-  border: none;
-  background-color: blue;
-}
-
-option * {
-  background-color: hotpink;
-  color: blue;
 }
 
 /* LoneTeam.jsx */
@@ -187,11 +209,56 @@ option * {
 }
 
 .radio-label {
-  color: var(--third-color);
+  color: var(--sub-color);
   display: grid;
   font-size: rem;
   font-weight: 700;
   grid-template-columns: 1rem auto;
   gap: 0.5rem;
   filter: hue-rotate(-27px);
+}
+
+/* Summary.jsx */
+.summary-container {
+}
+
+.summary-heading {
+  color: var(--main-color);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+  margin-bottom: 0.4rem;
+}
+
+.summary-sub-heading {
+  color: var(--sub-color);
+  font-family: var(--sub-font);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+}
+
+.summary-text {
+  color: var(--sub-color);
+  font-family: var(--sub-font);
+  margin-top: 1rem;
+}
+
+.checkout-text-container {
+  color: var(--main-color);
+  font-family: var(--main-font);
+  font-size: 1.1rem;
+  font-weight: 900;
+  margin-top: 1rem;
+}
+
+/* Misc. */
+a {
+  color: var(--sub-color);
+  font-weight: 900;
+  text-decoration: none;
+}
+
+.underline {
+  text-decoration: 3px underline var(--sub-color);
 }

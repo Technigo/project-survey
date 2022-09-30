@@ -7,7 +7,7 @@ export const BackFront = ({ backFront, setBackFront }) => {
 
   return (
     <div className="question-container">
-      <h2 className="question-heading">What kind of developer are you primarily looking for?</h2>
+      <h2 className="question-heading">What kind of developer are you <span className="underline">primarily</span> after?</h2>
       <select
         className="dropdown"
         onChange={handleBackFrontChange}

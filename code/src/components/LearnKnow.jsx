@@ -3,14 +3,14 @@ import React from 'react'
 export const LearnKnow = ({ setLearnKnow }) => {
   return (
     <div className="question-container">
-      <h2 className="question-heading">If you had to choose, would you rather hire someone who: </h2>
+      <h2 className="question-heading">What personal trait do you value the <span className="underline">most</span>?</h2>
       <div className="radio-container">
         <label className="radio-label" htmlFor="team">
           <input
             type="radio"
             id="team"
             name="learnKnow"
-            value="learn"
+            value="is eager to learn"
             onChange={(e) => setLearnKnow(e.target.value)}
             required />
       Eager to learn
@@ -20,7 +20,7 @@ export const LearnKnow = ({ setLearnKnow }) => {
             type="radio"
             id="indie"
             name="learnKnow"
-            value="know"
+            value="knows everything already"
             onChange={(e) => setLearnKnow(e.target.value)}
             required />
           Knows everything already
