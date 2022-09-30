@@ -1,6 +1,7 @@
 import React from 'react'
 
-export const LoneTeam = ({ setLoneTeam }) => {
+export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
+  console.log(loneTeam)
   return (
     <div className="lone-team-container">
       <h2 className="quest-heading">Which one of these fit <span className="underline">best</span> into what you are looking for?</h2>
@@ -11,7 +12,8 @@ export const LoneTeam = ({ setLoneTeam }) => {
           id="lone"
           name="loneTeam"
           value="lone"
-          onChange={(e) => setLoneTeam(e.target.value)} />
+          onChange={(e) => setLoneTeam(e.target.value)}
+          checked={loneTeam === 'lone'} />
         Lone Wolf
       </label>
       <label htmlFor="team">
@@ -20,7 +22,8 @@ export const LoneTeam = ({ setLoneTeam }) => {
           id="team"
           name="loneTeam"
           value="team"
-          onChange={(e) => setLoneTeam(e.target.value)} />
+          onChange={(e) => setLoneTeam(e.target.value)}
+          checked={loneTeam === 'team'} />
         Team Player
       </label>
     </div>

@@ -78,6 +78,10 @@ code {
   width: 5.5rem;
 }
 
+.select-one-msg {
+  display: none;
+}
+
 /* HEADING */
 .main-heading {
   color: blue;

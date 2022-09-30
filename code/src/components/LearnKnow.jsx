@@ -10,7 +10,8 @@ export const LearnKnow = ({ setLearnKnow }) => {
           id="team"
           name="learnKnow"
           value="learn"
-          onChange={(e) => setLearnKnow(e.target.value)} />
+          onChange={(e) => setLearnKnow(e.target.value)}
+          required />
       </label>
       <label htmlFor="indie">Knows everything already
         <input
@@ -18,8 +19,9 @@ export const LearnKnow = ({ setLearnKnow }) => {
           id="indie"
           name="learnKnow"
           value="know"
-          onChange={(e) => setLearnKnow(e.target.value)} />
+          onChange={(e) => setLearnKnow(e.target.value)}
+          required />
       </label>
     </div>
   )
-}
+};

@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) => {
+  const steps = [1, 2, 3];
   const answers = [backFront, loneTeam, learnKnow];
-
+  const [noAnswerMsg, setNoAnswerMsg] = useState('none');
   const handleBtnClick = (backOrNext) => {
     if (backOrNext) {
       setStep(step + 1)
@@ -10,49 +11,40 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
       setStep(step - 1);
     }
   };
-
+  const handleNoAnswerMsg = (showOrNo) => {
+    setNoAnswerMsg(showOrNo);
+  };
   return (
-    <div className="btn-container">
-      <button className="btn" type="button" onClick={() => handleBtnClick(false)}>Back</button>
+    <>
+      <p style={{ display: noAnswerMsg }}>Select one option to continue!</p>
+      <div className="btn-container">
+        <button
+          className="btn"
+          type="button"
+          onClick={() => {
+            handleBtnClick(false);
+            handleNoAnswerMsg('none');
+          }}>Back
+        </button>
 
-      <button
-        className="btn"
-        type="button"
-        onClick={() => {
-          if (step === 1 && answers[0]) {
-            handleBtnClick(true);
-            return
-          } else if (!answers[0]) {
-            alert('Pick one!')
-            return
-          }
-          if (step === 2 && answers[1]) {
-            handleBtnClick(true);
-            return
-          } else if (!answers[1]) {
-            alert('Pick one 2!')
-            return
-          }
-          if (step === 3 && answers[2]) {
-            handleBtnClick(true);
-          } else if (!answers[2]) {
-            alert('Pick one 3!')
-          }
-        }}>
+        <button
+          className="btn"
+          type="button"
+          onClick={() => {
+            for (let i = 0; i < answers.length; i += 1) {
+              if (step === steps[i] && answers[i]) {
+                handleBtnClick(true);
+                handleNoAnswerMsg('none');
+                break
+              } else if (!answers[i]) {
+                handleNoAnswerMsg('flex');
+                break
+              }
+            }
+          }}>
         Next
-      </button>
-    </div>
-  )
-}
-
-/* const handleStepButtonClick = (nextStep) => {
-  if (backFront) {
-    if (nextStep && step < 4) {
-      setStep(step + 1);
-    }
-  } else { alert('Pick one') }
-
-  else if (!nextStep && step > 0) {
-    setStep(step - 1);
-  }
-}; */
+        </button>
+      </div>
+    </>
+  );
+};
