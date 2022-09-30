@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
@@ -10,10 +11,10 @@ const QuestionOne = ({ questionOne, characterGroup, setCharacterGroup, onStepCha
     <div className="container">
       <h1 className="homeText"> Icebreaker meeting environment survey</h1>
       <form className="form-container">
-        <p className="question">How about changing our design at work!</p>
-        <p className="question">If you could work with any cartoon character, who would you choose?</p>
+        <p tabIndex="0" className="question">How about changing our design at work!</p>
+        <p tabIndex="0" className="question">If you could work with any cartoon character, who would you choose?</p>
         {characterGroups.map((group) => (
-          <label className="radioAnswers" key={group}>
+          <label tabIndex="0" className="radioAnswers" key={group}>
             <input
               className="radioAnswers"
               type="radio"
@@ -25,9 +26,9 @@ const QuestionOne = ({ questionOne, characterGroup, setCharacterGroup, onStepCha
         ))}
       </form>
 
-      <p className="text">If not them, so who else?</p>
+      <p tabIndex="0" className="text">If not them, so who else?</p>
       <label>
-        <input className="inputBox" type="text" value={questionOne} onChange={onQuestionOneInputChange} />
+        <input tabIndex="0" className="inputBox" type="text" value={questionOne} onChange={onQuestionOneInputChange} />
       </label>
       <button className="lastButton" type="submit" onClick={onStepChange}>Next</button>
     </div>

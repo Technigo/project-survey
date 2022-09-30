@@ -4,8 +4,8 @@ import React, { useState } from 'react';
 import Name from './Name';
 import QuestionOne from './QuestionOne';
 import QuestionTwo from './QuestionTwo';
+import QuestionThree from './QuestionThree';
 import Summary from './Summary';
-import { useTabIndex } from 'react-tabindex';
 
 const Survey = () => {
   const [step, setStep] = useState(1);
@@ -14,7 +14,8 @@ const Survey = () => {
   const [characterGroup, setCharacterGroup] = useState('');
   const [questionTwo, setQuestionTwo] = useState('');
   const [workAlternative, setWorkAlternative] = useState('');
-  // const [questionThree, setQuestionThree] = useState('');
+  const [questionThree, setQuestionThree] = useState('');
+  const [bossMeme, setBossMeme] = useState('');
 
   const onQuestionOneInputChange = (event) => {
     setQuestionOne(event.target.value);
@@ -24,6 +25,9 @@ const Survey = () => {
     setQuestionTwo(event.target.value);
   }
 
+  const onQuestionThreeInputChange = (event) => {
+    setQuestionThree(event.target.value);
+  }
   function onStepChange() {
     setStep(step + 1);
   }
@@ -31,7 +35,7 @@ const Survey = () => {
     <>
       {step === 1 && (
         // eslint-disable-next-line react/jsx-no-bind
-        <Name name={name} setName={setName} tabIndex={tabIndex} onStepChange={onStepChange} />
+        <Name name={name} setName={setName} onStepChange={onStepChange} />
       )}
 
       {step === 2 && (
@@ -45,6 +49,11 @@ const Survey = () => {
       )}
 
       {step === 4 && (
+        // eslint-disable-next-line react/jsx-no-bind
+        <QuestionThree setQuestionThree={setQuestionThree} onQuestionThreeInputChange={onQuestionThreeInputChange} setBossMeme={setBossMeme} questionThree={questionThree} bossMeme={bossMeme} onStepChange={onStepChange} />
+      )}
+
+      {step === 5 && (
         // eslint-disable-next-line react/jsx-no-bind
         <Summary name={name} setQuestionOne={setQuestionOne} etCharacterGroup={setCharacterGroup} questionOne={questionOne} characterGroup={characterGroup} setQuestionTwo={setQuestionTwo} onStepChange={onStepChange} setWorkAlternative={setWorkAlternative} questionTwo={questionTwo} workAlternative={workAlternative} />
       )}

@@ -1,14 +1,17 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 // eslint-disable-next-line no-unused-vars
 import React from 'react';
 
 // eslint-disable-next-line no-unused-vars, max-len
 const QuestionTwo = ({ questionTwo, setQuestionTwo, workAlternative, setWorkAlternative, onStepChange, onInputChange }) => {
   return (
-    <div className="container">
+    <div tabIndex="0" className="container">
       <h1 className="homeText"> Icebreaker meeting environment survey</h1>
       <form className="form-container">
-        <p className="question"> Which place you would choose to work?</p>
+        <p tabIndex="0" className="question"> Which place you would choose to work?</p>
+        <p tabIndex="0" className="text"> (Answer as if you were 100 years old and it was your last day on the planet?) </p>
         <select
+          tabIndex="0"
           className="inputBox"
           onChange={(event) => setWorkAlternative(event.target.value)}
           value={workAlternative}>
@@ -22,9 +25,9 @@ const QuestionTwo = ({ questionTwo, setQuestionTwo, workAlternative, setWorkAlte
           <option value="Pretending to be a ninja and typing like one too">Pretending to be a ninja and typing like one too</option>
         </select>
       </form>
-      <p className="text">Other?</p>
+      <p tabIndex="0" className="text">Not your alternative? Ok! Somewhere else?</p>
       <input className="inputBox" type="text" value={questionTwo} onChange={onInputChange} />
-      <button className="lastButton" type="submit" onClick={onStepChange}>Submit</button>
+      <button className="lastButton" type="submit" onClick={onStepChange}>Next</button>
     </div>
   )
 }

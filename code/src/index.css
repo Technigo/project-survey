@@ -84,18 +84,12 @@ button:hover {
 }
 
 .form-container {
-  width: 90%;
+  width: 60%;
 }
 
 .radioAnswers {
-  /* text-align: center;
-  justify-content: center; */
-  /* flex-direction: row; */
-  /* width: 10%; */
   display: flex;
   padding: 9px;
-   /* width: fit-content;  */
-   /* position: relative; */
   color: #4a2707;
 }
 
@@ -146,6 +140,17 @@ button:hover {
 
   }
 
+  .form-container {
+    /* width: 40%; */
+    width: fit-content;
+    text-align: center;
+  }
+
+  .text{
+    width: fit-content;
+    text-align: center;
+
+  }
 /*
 
 
