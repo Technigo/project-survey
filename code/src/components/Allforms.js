@@ -17,7 +17,7 @@ const Allforms = () => {
   const [cakeOption, setCakeOption] = useState([])
   const [quality, setCakeQuality] = useState('');
   const [service, setService] = useState('');
-  const [priceRange, setPricesRange] = useState(2)
+  const [priceRange, setPriceRange] = useState(2)
   const [prices, setPrice] = useState(allPrice[priceRange])
   const [opinion, setOpinion] = useState('');
   const [isVoucherVisible, setIsVoucherVisible] = useState(false);
@@ -46,7 +46,7 @@ const Allforms = () => {
     setService(event.target.value);
   }
   const onPriceRangeChange = (event) => {
-    setPricesRange(event.target.value)
+    setPriceRange(event.target.value)
     setPrice(allPrice[event.target.value])
   }
   const onOpinionChange = (event) => {
@@ -107,6 +107,7 @@ const Allforms = () => {
           cakeOption={cakeOption}
           quality={quality}
           service={service}
+          prices={prices}
           opinion={opinion}
           isVoucherVisible={isVoucherVisible}
           handleVoucherPress={handleVoucherPress} />
