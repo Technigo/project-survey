@@ -41,107 +41,107 @@ export const App = () => {
     <form/*  onSubmit={(event) => event.preventDefault()} */>
 
       {counter === 0 && (
-        <>
+        <div className="first-page">
           <FirstPage />
           <button type="button" className="subscribe-button" aria-label="Subscribe me for this newsletter" onClick={() => handleCounterButtonClick(true)}>
           Sign me up!
           </button>
-        </>
-      )}
-
-      {counter === 1 && (
-        <div>
-          <UserName username={name} setUsername={setName} />
-          <p tabIndex="0">Questions answered: {counter}/7 </p>
         </div>
       )}
+      <div className="body-section">
+        {counter === 1 && (
+          <>
+            <UserName username={name} setUsername={setName} />
+            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+          </>
+        )}
 
-      {counter === 2 && (
-        <div>
-          <UserLastname userlastname={lastname} setUserlastname={setLastname} username={name} />
-          <p tabIndex="0">Questions answered: {counter}/7 </p>
-        </div>
-      )}
+        {counter === 2 && (
+          <>
+            <UserLastname userlastname={lastname} setUserlastname={setLastname} username={name} />
+            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+          </>
+        )}
 
-      {counter === 3 && (
-        <div>
-          <UserMail usermail={mail} setUsermail={setMail} />
-          <p tabIndex="0">Questions answered: {counter}/7 </p>
-        </div>
-      )}
+        {counter === 3 && (
+          <>
+            <UserMail usermail={mail} setUsermail={setMail} />
+            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+          </>
+        )}
 
-      {counter === 4 && (
-        <div>
-          <UserPhoneNumber userphonenumber={phone} setUserphonenumber={setPhone} />
-          <p tabIndex="0">Questions answered: {counter}/7 </p>
-        </div>
-      )}
+        {counter === 4 && (
+          <>
+            <UserPhoneNumber userphonenumber={phone} setUserphonenumber={setPhone} />
+            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+          </>
+        )}
 
-      {counter === 5 && (
-        <div>
-          <UserLocation userlocation={location} setUserlocation={setLocation} />
-          <p tabIndex="0">Questions answered: {counter}/7 </p>
-        </div>
-      )}
+        {counter === 5 && (
+          <>
+            <UserLocation userlocation={location} setUserlocation={setLocation} />
+            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+          </>
+        )}
 
-      {counter === 6 && (
-        <div>
-          <UserAge userage={age} setUserage={setAge} />
-          <p tabIndex="0">Questions answered: {counter}/7 </p>
-        </div>
-      )}
+        {counter === 6 && (
+          <>
+            <UserAge userage={age} setUserage={setAge} />
+            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+          </>
+        )}
 
-      {counter === 7 && (
-        <div>
-          <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
-          <p tabIndex="0">Questions answered: {counter}/7 </p>
-        </div>
-      )}
+        {counter === 7 && (
+          <>
+            <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
+            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+          </>
+        )}
 
-      {counter === 8 && (
-        <div>
+        {counter === 8 && (
+          <>
 
-          <h1 tabIndex="0">Survey completed!</h1>
-          <h2 tabIndex="0">Summary of you answers:</h2>
-          <ol>
-            <li tabIndex="0">Name: {name} </li>
-            <li tabIndex="0">Lastname: {lastname} </li>
-            <li tabIndex="0">E-mail: {mail} </li>
-            <li tabIndex="0">Phone number: {phone} </li>
-            <li tabIndex="0">Physical shop location: {location} </li>
-            <li tabIndex="0">Age group: {age} </li>
-            <li tabIndex="0">Frequency for newsletter: {frequency}</li>
-          </ol>
-          <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
-        </div>
-      )}
+            <h1 tabIndex="0">Survey completed!</h1>
+            <h2 tabIndex="0">Summary of you answers:</h2>
+            <ol>
+              <li tabIndex="0">Name: {name} </li>
+              <li tabIndex="0">Lastname: {lastname} </li>
+              <li tabIndex="0">E-mail: {mail} </li>
+              <li tabIndex="0">Phone number: {phone} </li>
+              <li tabIndex="0">Physical shop location: {location} </li>
+              <li tabIndex="0">Age group: {age} </li>
+              <li tabIndex="0">Frequency for newsletter: {frequency}</li>
+            </ol>
+            <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
+          </>
+        )}
 
-      {counter < 8 && counter > 0 && (
-        <button type="button" className="ok-button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
-          <h3>OK ✔</h3>
-        </button>
-      )}
-
-      {counter < 9 && counter > 1 && (
-        <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
-        Previous question
-        </button>
-      )}
-
-      {counter < 8 && counter > 0 && (
-        <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
-        Next question
-        </button>
-      )}
-
-      {counter < 8 && counter > 0 && (
-        <p>
-          <button type="button" aria-label="clear button" onClick={handleClearButtonClick}>
-          Clear input
+        {counter < 8 && counter > 0 && (
+          <button type="button" className="ok-button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
+            <h3>OK ✔</h3>
           </button>
-        </p>
-      )}
+        )}
 
+        {counter < 9 && counter > 1 && (
+          <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
+        Previous question
+          </button>
+        )}
+
+        {counter < 8 && counter > 0 && (
+          <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
+        Next question
+          </button>
+        )}
+
+        {counter < 8 && counter > 0 && (
+          <p>
+            <button type="button" aria-label="clear button" onClick={handleClearButtonClick}>
+          Clear input
+            </button>
+          </p>
+        )}
+      </div>
     </form>
   );
 };
