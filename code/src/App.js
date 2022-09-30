@@ -16,9 +16,13 @@ export const App = () => {
   const [age, setAge] = useState('');
   const [message, setMessage] = useState('');
   const handleStepIncrease = () => {
-    setStep(step + 1);
+    setStep(step + 1);}
+    const handleKeypress = e => {
+      //it triggers by pressing the enter key
+    if (e.keyCode === 13) {
+      handleSubmit();
+    }
   }
-
   return (
     <div className="parent">
       <div className="SurvayWrapper">
@@ -55,7 +59,7 @@ export const App = () => {
           <div className="counter">
             <p>
               Current question: {step}
-              <button className="nextButton" type="button" onClick={handleStepIncrease}>Next question</button>
+              <button className="nextButton" type="button" onClick={handleStepIncrease} onKeyPress={handleKeypress}>Next question</button>
             </p>
           </div>
         )}
@@ -66,5 +70,4 @@ export const App = () => {
       </div>
     </div>
   )
-}
-
+    }
