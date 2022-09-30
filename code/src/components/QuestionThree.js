@@ -26,9 +26,9 @@ const QuestionThree = ({ questionThree, bossMeme, setBossMeme, onStepChange, onQ
         ))}
       </form>
       <div>
-        <img tabIndex="0" className="images" src={myImage} alt="option1" />
-        <img tabIndex="0" className="images" src={myImage2} alt="option2" />
-        <img tabIndex="0" className="images" src={myImage3} alt="option3" />
+        <img tabIndex="0" className="images" src={myImage} alt="image1" />
+        <img tabIndex="0" className="images" src={myImage2} alt="image2" />
+        <img tabIndex="0" className="images" src={myImage3} alt="image3" />
       </div>
       <p tabIndex="0" className="text">Sorry! We do not have another Boss working here rather than those three alternatives</p>
       <p tabIndex="0" className="text">Please feel free to write down for us who else you prefer to have! (We will try to hire one!)</p>
