@@ -9,7 +9,7 @@ const UserName = ({ username, setUsername }) => {
   return (
     <div>
       <p className="user-p" tabIndex="0"> Let's start with your first name.</p>
-      <input type="text" className="user-input" tabIndex="0" value={username} onChange={handleUserNameInputChange} placeholder="name" name="name" required="required" />
+      <input type="text" className="user-input" tabIndex="0" value={username} onChange={handleUserNameInputChange} placeholder="name" name="name" required />
     </div>
   )
 }
