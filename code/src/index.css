@@ -39,7 +39,7 @@ code {
 h1, h3{
   background: #F85032;
   background: linear-gradient(to right, #F85032 0%, #F16F5C 50%, #F6290C 51%, #F02F17 71%, #E73827 100%);
-  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 

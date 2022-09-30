@@ -4,8 +4,8 @@ import React from 'react';
 const Selectservice = ({ service, onServiceChange, onCounterChange }) => {
   return (
     <div className="container">
-      <form className="service-select">
-        <h3>What is the best service at our cake shop?</h3>
+      <h3>What is the best service at our cake shop?</h3>
+      <label htmlFor="service" className="service-select">
         <select
           onChange={onServiceChange}
           value={service}
@@ -20,8 +20,7 @@ const Selectservice = ({ service, onServiceChange, onCounterChange }) => {
           <option value="the membership program">Membership Program</option>
         </select>
         <button className="button" type="button" onClick={onCounterChange} disabled={service === ''}>Next Question</button>
-      </form>
-      
+      </label>
     </div>
   );
 };

@@ -2,8 +2,8 @@ import React from 'react';
 
 const cakeQualities = [
   'sweeter! Sugar rush is life',
-  'less sweet. Organic. Eco. Healthhhh',
-  'a lot more varieties on cakes, duh',
+  'less sweet. Organic. Eco. Healthhh',
+  'different. Need a lot more cake options.',
   'biggger size fit for the whole neighbourhood',
   'tiny size option available (it is for my child I swear)',
   'hmm...Overall, the cakes are amazing but I might complain later anyway'

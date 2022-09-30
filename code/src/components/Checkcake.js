@@ -11,35 +11,35 @@ const Checkcake = (props) => {
   return (
     <div className="container">
       <h3>Which cakes are your favourite? (please choose 2 or more)</h3>
-      <div className="cake-container">
-        <form className="cake-checkbox">
+      <label htmlFor="cake selection" className="cake-container">
+        <label htmlFor="cake checkbox" className="cake-checkbox">
           <input
             className="checkboxes"
             type="checkbox"
-            value="Strawberry Shortcake"
-            checked={cakeOption.includes('Strawberry Shortcake')}
-            onChange={() => onCakeOptionChange('Strawberry Shortcake')}
+            value="Strawberry Cheesecake"
+            checked={cakeOption.includes('Strawberry Cheesecake')}
+            onChange={() => onCakeOptionChange('Strawberry Cheesecake')}
             required />
           <div className="cake-image"><img
             src={Strawberry}
-            alt="Strawberry Shortcake" />
+            alt="Strawberry Cheesecake" />
           </div>
-        </form>
-        <form className="cake-checkbox">
+        </label>
+        <label htmlFor="cake checkbox" className="cake-checkbox">
           <input
             className="checkboxes"
             type="checkbox"
             value="Salted Caramel Cake"
-            checked={cakeOption.includes('Salted Caramel Cake')}
-            onChange={() => onCakeOptionChange('Salted Caramel Cake')}
+            checked={cakeOption.includes('Salted Honey Cake')}
+            onChange={() => onCakeOptionChange('Salted Honey Cake')}
             required />
           <div className="cake-image"><img
             src={Caramel}
-            alt="Salted Caramel Cake" />
+            alt="Salted Honey Cake" />
           </div>
-        </form>
+        </label>
 
-        <form className="cake-checkbox">
+        <label htmlFor="cake checkbox" className="cake-checkbox">
           <input
             className="checkboxes"
             type="checkbox"
@@ -51,9 +51,9 @@ const Checkcake = (props) => {
             src={Raspberry}
             alt="Raspberry cake" />
           </div>
-        </form>
+        </label>
 
-        <form className="cake-checkbox">
+        <label htmlFor="cake checkbox" className="cake-checkbox">
           <input
             className="checkboxes"
             type="checkbox"
@@ -65,8 +65,8 @@ const Checkcake = (props) => {
             src={Peachwalnut}
             alt="Peach and Walnut Cake" />
           </div>
-        </form>
-        <form className="cake-checkbox">
+        </label>
+        <label htmlFor="cake checkbox" className="cake-checkbox">
           <input
             className="checkboxes"
             type="checkbox"
@@ -78,8 +78,8 @@ const Checkcake = (props) => {
             src={Coffee}
             alt="Coffee Latte Cake" />
           </div>
-        </form>
-        <form className="cake-checkbox">
+        </label>
+        <label htmlFor="cake checkbox" className="cake-checkbox">
           <input
             className="checkboxes"
             type="checkbox"
@@ -91,9 +91,9 @@ const Checkcake = (props) => {
             src={Orange}
             alt="Orange Cake" />
           </div>
-        </form>
+        </label>
 
-      </div>
+      </label>
       <button type="button" onClick={onCounterChange} disabled={cakeOption === ''}>Next Question</button>
     </div>
   );
