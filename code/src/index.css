@@ -65,8 +65,8 @@ p {
   height: 100vh;
   position: fixed; 
   background-color: black;
-   overflow-y: scroll;
-   top: 0; right: 0; bottom: 0; left: 0;
+  overflow-y: scroll;
+  top: 0; right: 0; bottom: 0; left: 0;
 }
 
 .first-page-p {
@@ -96,9 +96,10 @@ p {
   grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
   background-color: tomato;
   grid-template-rows: 2rem 1fr 1fr 1fr 2rem;
-  padding: 1rem;
   height: 100vh;
   flex-direction: column;
+  overflow-y: scroll;
+  top: 0; right: 0; bottom: 0; left: 0;
 }
 
 .questions-answered {
@@ -108,9 +109,9 @@ p {
   /* font-family: 'Permanent Marker', cursive; */
   font-weight: lighter;
   font-weight: unset;
-    font-size: 30px;
-    line-height: 38px;
-    color: rgb(235, 219, 173);
+  font-size: 30px;
+  line-height: 38px;
+  color: rgb(235, 219, 173);
 }
 
 
