@@ -6,7 +6,7 @@ const perfectJobOptions = [
   'Therapist'
 ]
 
-export const defaultPerfectJobOption = perfectJobOptions[2]
+export const defaultPerfectJobOption = perfectJobOptions[0]
 
 const PerfectJob = ({ perfectJob, setPerfectJob }) => {
   const handlePerfectJobChange = (event) => {
