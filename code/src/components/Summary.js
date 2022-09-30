@@ -6,7 +6,7 @@ const Summary = ({
 }) => {
   return (
     <div className="container">
-      <label htmlFor="summary">
+      <label htmlFor="summary" className="summary">
         <h3>Thank you for your answer, <span className="answers">{name}</span>!</h3>
         <p>We are happy to know that <span className="answers">{cakeOption.join(', ')} </span>are your
       favourite cakes! We love them too 🎂

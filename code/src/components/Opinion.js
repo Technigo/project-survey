@@ -7,10 +7,9 @@ const Opinion = ({ opinion, onOpinionChange, onCounterChange }) => {
       <label htmlFor="opinion">
         <textarea
           name="opinion"
-          className="opinion"
-          rows="10"
-          cols="10"
-          maxLength="350"
+          rows="5"
+          cols="5"
+          maxLength="200"
           placeholder="To make this cake shop better, I think you need to..."
           value={opinion}
           onChange={onOpinionChange}

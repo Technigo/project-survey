@@ -5,7 +5,7 @@ const Price = (props) => {
 
   return (
     <div className="container">
-      <form>
+      <form className="price-container">
         <h3>What do you think about the cost of our cakes?</h3>
         <label htmlFor="price" className="price-slider">
           <input

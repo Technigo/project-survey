@@ -159,19 +159,25 @@ img{
 
 .service-option{
   border: none;
+  width: 30vw;
   border-radius: 20px;
   padding: 1% 10%;
 }
 
 /* Price range slider styling */
 .price-slider{
-  display: flex;
+  margin: 5% 0;
+}
+
+.price-container{
+  display:flex;
   flex-direction: column;
 }
 
 .slider{
+  display: block;
+  margin: 0 auto;
   width: 70%;
-  margin: auto;
 }
 
 /* Opinion text area styling */
@@ -179,8 +185,18 @@ textarea{
   font-family: 'Poppins', sans-serif;
   text-align: center;
   border-radius: 10px;
-  width: 100%;
-  margin: auto;
+  padding: 5%;
+  width: 50vw;
+  height: 20vh;
+}
+
+/* Summary styling */
+.summary{
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  margin: 0 10%;
+  
 }
 
 /* For tablet */
@@ -229,9 +245,6 @@ textarea{
     padding: 2% 10%;
   }
 
-  textarea{
-    width: 70%;
-  }
 }
 
 @media (min-width: 1024px){
@@ -269,7 +282,4 @@ textarea{
     padding: 0;
   }
 
-  textarea{
-    width: 60%;
-  }
 }
