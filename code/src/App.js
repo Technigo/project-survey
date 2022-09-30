@@ -53,49 +53,49 @@ export const App = () => {
         {counter === 1 && (
           <>
             <div className="question-section"><UserName username={name} setUsername={setName} /></div>
-            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+            <div className="questions-answered" tabIndex="0">Questions: {counter}/7 </div>
           </>
         )}
 
         {counter === 2 && (
           <>
             <div className="question-section"><UserLastname userlastname={lastname} setUserlastname={setLastname} username={name} /></div>
-            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+            <div className="questions-answered" tabIndex="0">Questions: {counter}/7 </div>
           </>
         )}
 
         {counter === 3 && (
           <>
             <div className="question-section"><UserMail usermail={mail} setUsermail={setMail} /></div>
-            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+            <div className="questions-answered" tabIndex="0">Questions: {counter}/7 </div>
           </>
         )}
 
         {counter === 4 && (
           <>
             <div className="question-section"><UserPhoneNumber userphonenumber={phone} setUserphonenumber={setPhone} /></div>
-            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+            <div className="questions-answered" tabIndex="0">Questions: {counter}/7 </div>
           </>
         )}
 
         {counter === 5 && (
           <>
             <div className="question-section"><UserLocation userlocation={location} setUserlocation={setLocation} /></div>
-            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+            <div className="questions-answered" tabIndex="0">Questions: {counter}/7 </div>
           </>
         )}
 
         {counter === 6 && (
           <>
             <div className="question-section"><UserAge userage={age} setUserage={setAge} /></div>
-            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+            <div className="questions-answered" tabIndex="0">Questions: {counter}/7 </div>
           </>
         )}
 
         {counter === 7 && (
           <>
             <div className="question-section"><Frequency userfrequency={frequency} setUserfrequency={setFrequency} /></div>
-            <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
+            <div className="questions-answered" tabIndex="0">Questions: {counter}/7 </div>
           </>
         )}
 
