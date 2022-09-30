@@ -29,7 +29,7 @@ h1 {
   left: 50%;
   transform: translate(-50%);
   font-family: 'Permanent Marker', cursive;
-  font-size: 50px;
+  font-size: 40px;
   font-weight: 500;
   color: black;
   text-shadow:
@@ -74,6 +74,10 @@ h1 {
   height: 120px;
 }
 
+.start-button {
+  margin: 5%;
+}
+
 .survey-button,
 .back-button
 .submit-button {
@@ -89,16 +93,11 @@ h1 {
 }
 
 .survey-container {
-  margin-top: 10vh;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  padding: 15px;
+  margin: 2vh;
   border: 2px solid #e2d598;
   border-radius: 25px;
   background-color: rgba(179, 162, 134, 0.5);
-  margin-bottom: 5vh;
+  
 }
 
 .form-question,
@@ -109,7 +108,6 @@ h1 {
   grid-gap: 30px;
   gap: 30px;
   align-items: center;
-  width: 280px;
 }
 
 .label-text,
@@ -155,11 +153,19 @@ input[type='radio'] {
 }
 
 .preference-container,
-.pasta-container,
-.overview-summary {
+.pasta-container {
   display: flex;
   flex-direction: column;
   gap: 6px;
+  
+}
+
+.overveiw-summary {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  text-overflow: hidden;
+  text-align: center;
 }
 
 .label-input-pasta {
@@ -227,10 +233,21 @@ h2 {
   padding: 2vh;
 } 
 
-p {
+p, 
+a {
   margin: 0;
   color: rgb(4, 4, 4);
   font-size: 20px;
+}
+
+a {
+  text-decoration: none;
+  font-weight: 600;
+}
+
+a:hover {
+  text-shadow: 2px 3px 4px grey;
+  transition: 0.4s;
 }
 
 @media (min-width: 768px) {
@@ -275,5 +292,6 @@ p {
     padding: 20px;
     border: 3px solid #c8a33d;
     margin-bottom: 5vh;
+    margin-top: 20vh;
   }
 }

@@ -13,21 +13,21 @@ const PreferenceQuestion = ({ preference, onPreferenceChange, onStepChange, onEn
             <input
               id={preference}
               type="radio"
-              value="Hot"
+              value="hot"
               onChange={onPreferenceChange}
-              checked={preference === 'Hot'}
+              checked={preference === 'hot'}
               onKeyPress={onEnter} />
-            <p>hot food</p>
+            <p>Hot food</p>
           </label>
           <label className="label-input-preference" htmlFor="preference">
             <input
               id={preference}
               type="radio"
-              value="Cold"
+              value="cold"
               onChange={onPreferenceChange}
-              checked={preference === 'Cold'}
+              checked={preference === 'cold'}
               onKeyPress={onEnter} />
-            <p>cold food</p>
+            <p>Cold food</p>
           </label>
         </div>
         <div className="button-container">
