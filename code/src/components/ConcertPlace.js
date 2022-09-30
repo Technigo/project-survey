@@ -1,4 +1,5 @@
 import React from 'react';
+import { Button } from 'components/Button';
 
 const concertPlaces = [
   'Indoor',
@@ -10,17 +11,20 @@ export const ConcertPlace = ({ place, setPlace }) => {
     setPlace(event.target.value)
   }
   return (
-    <form className="radioBtn">
-      {concertPlaces.map((group) => (
-        <label key={group} htmlFor="lang">
-          <input
-            type="radio"
-            value={group}
-            onChange={handleConcertPlaces}
-            checked={place === group} />
-          {group}
-        </label>
-      ))}
-    </form>
+    <>
+      <div className="radioBtn">
+        {concertPlaces.map((group) => (
+          <label key={group} htmlFor="lang">
+            <input
+              type="radio"
+              value={group}
+              onChange={handleConcertPlaces}
+              checked={place === group} />
+            {group}
+          </label>
+        ))}
+      </div>
+      <Button button="Next question" />
+    </>
   );
 }

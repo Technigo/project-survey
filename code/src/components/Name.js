@@ -1,13 +1,17 @@
 import React from 'react';
+import { Button } from 'components/Button';
 
 export const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
   return (
-    <form>
+    <>
       <p>What is your name?</p>
-      <input type="text" value={name} onChange={handleNameChange} />
-    </form>
+      <label htmlFor="name">
+        <input type="text" id="name" value={name} onChange={handleNameChange} required />
+      </label>
+      <Button button="Next question" />
+    </>
   );
 }

@@ -1,50 +1,53 @@
 import React, { useState } from 'react';
+import Header from 'components/Header';
 import { Name } from 'components/Name';
 import { HowManyConcerts } from 'components/HowManyConcerts';
+import { MusicGenre } from 'components/MusicGenre';
+import { ConcertPlace } from 'components/ConcertPlace';
 import { FavoriteArtist } from 'components/FavoriteArtist';
 import { Summary } from 'components/Summary';
-import Header from 'components/Header';
-import { ConcertPlace } from 'components/ConcertPlace';
-import { MusicGenre } from 'components/MusicGenre';
 
 export const App = () => {
   const [step, setStep] = useState(1)
   const [name, setName] = useState('');
   const [noOfConcerts, setNoConcerts] = useState('');
+  const [genre, setGenre] = useState('');
   const [place, setPlace] = useState();
   const [favoriteArtist, setFavoriteArtist] = useState('');
-  const [genre, setGenre] = useState('');
 
-  const handleStepIncrease = () => {
+  const handleStepIncrease = (e) => {
+    e.preventDefault();
     setStep(step + 1)
   }
+
   return (
     <div className="outer-wrapper">
       <div className="inner-wrapper">
-        {step === 1 && (
-          <>
+        <form onSubmit={handleStepIncrease}>
+          {step === 1 && (
             <Header />
-            <button className="btn" type="button" onClick={handleStepIncrease}>Start survey</button>
-          </>
-        )}
-        {step === 2 && (
-          <Name name={name} setName={setName} />
-        )}
-        {step === 3 && (
-          <HowManyConcerts name={name} noOfConcerts={noOfConcerts} setNoConcerts={setNoConcerts} />
-        )}
-        {step === 4 && (
-          <MusicGenre genre={genre} setGenre={setGenre} />
-        )}
-        {step === 5 && (
-          <ConcertPlace place={place} setPlace={setPlace} />
-        )}
-        {step === 6 && (
-          <>
-            <FavoriteArtist favoriteArtist={favoriteArtist} setFavoriteArtist={setFavoriteArtist} />
-            <button className="btn" type="button" onClick={handleStepIncrease}>Show summary</button>
-          </>
-        )}
+          )}
+          {step === 2 && (
+            <Name name={name} setName={setName} />
+          )}
+          {step === 3 && (
+            <HowManyConcerts
+              name={name}
+              noOfConcerts={noOfConcerts}
+              setNoConcerts={setNoConcerts} />
+          )}
+          {step === 4 && (
+            <MusicGenre genre={genre} setGenre={setGenre} />
+          )}
+          {step === 5 && (
+            <ConcertPlace place={place} setPlace={setPlace} />
+          )}
+          {step === 6 && (
+            <FavoriteArtist
+              favoriteArtist={favoriteArtist}
+              setFavoriteArtist={setFavoriteArtist} />
+          )}
+        </form>
         {step === 7 && (
           <Summary
             name={name}
@@ -52,13 +55,6 @@ export const App = () => {
             genre={genre}
             place={place}
             favoriteArtist={favoriteArtist} />
-        )}
-        {(step > 1 && step < 6) && (
-          <form>
-            <div className="btn-container">
-              <button className="nextBtn" type="button" onClick={handleStepIncrease}>Next question</button>
-            </div>
-          </form>
         )}
       </div>
     </div>

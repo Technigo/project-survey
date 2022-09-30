@@ -37,7 +37,6 @@ form {
   width: 90%;
   margin: 0 auto;
   background-color: white;
-  /*opacity: 0.7;*/
   background-color: rgba(225,225,225, 0.7);
   display: flex;
   align-items: center;
@@ -47,7 +46,7 @@ form {
   border-radius: 5px;
 }
 
-.btn {
+.Btn {
   width: 100%;
   background-color: black;
   color: white;
@@ -59,11 +58,6 @@ form {
   text-align: center;
 }
 
-.btn:hover {
-  background-color: rgb(154, 131, 4);
-  color: black;
-}
-
 input[type=text], select {
   width: 100%;
   padding: 10px 15px;
@@ -72,26 +66,6 @@ input[type=text], select {
   border: 1px solid #ccc;
   border-radius: 4px;
   box-sizing: border-box;
-}
-
-.nextBtn {
-  width: 100%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  display: inline-block;
-  box-sizing: border-box;
-  background-color: black;
-  color: white;
-  font-size: 16px;
-  padding: 16px 30px;
-  border: none;
-  cursor: pointer;
-  border-radius: 5px;
-}
-
-.nextBtn:hover {
-  background-color: rgb(154, 131, 4);
-  color: black;
 }
 
 .btn-container {
@@ -115,11 +89,16 @@ input[type=radio] {
 }
 
 form {
-  width: 50%;
+  width: 100%;
 }
 
-.btn, .nextBtn {
-  width: 50%;
+.Btn {
+  width: 75%;
+}
+
+.Btn:hover {
+  background-color: rgb(154, 131, 4);
+  color: black;
 }
 }
 
@@ -131,15 +110,15 @@ form {
   }
 
   form {
+    width: 75%;
+  }
+
+  .Btn {
     width: 50%;
   }
 
-  .btn {
-    width: 25%;
+  .Btn:hover {
+    background-color: rgb(154, 131, 4);
+    color: black;
   }
-
-  .nextBtn {
-    width: 50%;
-  }
-
 }
