@@ -5,7 +5,7 @@ const RadioMeat = ({ meat, setMeat }) => {
     setMeat(event.target.value);
   }
   return (
-    <div>
+    <div className="radio-buttons-meat">
       <label htmlFor="RadioButton">
         <input
           type="radio"

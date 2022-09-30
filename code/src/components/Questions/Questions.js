@@ -30,7 +30,7 @@ const Questions = (props) => {
   return (
     <div className="main-container">
       {question === 1 && (
-        <div className={Questions}>
+        <div className="questions">
           <h1>Question 1</h1>
           <h2>On a scale from 1 to 10, how hungry are you currently?</h2>
           <Dropdown
@@ -42,7 +42,7 @@ const Questions = (props) => {
         </div>
       )}
       {question === 2 && (
-        <div className={Questions}>
+        <div className="questions">
           <h1>Question 2</h1>
           <h2>Which protein are you feeling like today?</h2>
           <RadioProtein
@@ -66,7 +66,7 @@ const Questions = (props) => {
         </div>
       )}
       {question === 3 && (
-        <div className={Questions}>
+        <div className="questions">
           <h1>Question 3</h1>
           <h2>What about carbs?</h2>
           <RadioCarbs
@@ -81,7 +81,7 @@ const Questions = (props) => {
         </div>
       )}
       {question === 4 && (
-        <div className={Questions}>
+        <div className="questions">
           <h1>Question 4</h1>
           <h2>Any sides perhaps?</h2>
           <DropdownSides
@@ -100,7 +100,15 @@ const Questions = (props) => {
         </div>
       )}
       {question === 5 && (
-        <End />
+        <End
+          carbs={carbs}
+          fish={fish}
+          meat={meat}
+          vegetarian={vegetarian}
+          protein={protein}
+          selected={selected}
+          selectedSides={selectedSides}
+          text={text} />
       )}
     </div>
   );

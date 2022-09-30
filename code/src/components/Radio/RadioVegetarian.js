@@ -5,7 +5,7 @@ const RadioVegetarian = ({ vegetarian, setVegetarian }) => {
     setVegetarian(event.target.value);
   }
   return (
-    <div>
+    <div className="radio-buttons-vegetarian">
       <label htmlFor="RadioButton">
         <input
           type="radio"

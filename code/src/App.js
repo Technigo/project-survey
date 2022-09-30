@@ -8,7 +8,7 @@ const App = () => {
   const [hunger, setHungerLevel] = useState('')
 
   return (
-    <div className="App">
+    <div>
       {surveyMode === 'start' && <Start nextPage={() => setSurveyMode('questions')} setHungerLevel={setHungerLevel} hunger={hunger} />}
       {surveyMode === 'questions' && <Questions nextPage={() => setSurveyMode('end')} />}
       {surveyMode === 'end' && <End nextPage={() => setSurveyMode('start')} />}

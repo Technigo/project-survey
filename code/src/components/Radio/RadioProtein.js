@@ -5,7 +5,7 @@ const RadioProtein = ({ protein, setProtein }) => {
     setProtein(event.target.value);
   }
   return (
-    <div>
+    <div className="radio-buttons">
       <input
         type="radio"
         value="Meat"

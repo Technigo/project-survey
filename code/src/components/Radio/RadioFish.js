@@ -5,7 +5,7 @@ const RadioFish = ({ fish, setFish }) => {
     setFish(event.target.value);
   }
   return (
-    <div>
+    <div className="radio-buttons-fish">
       <label htmlFor="RadioButton">
         <input
           type="radio"

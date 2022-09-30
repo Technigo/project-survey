@@ -5,7 +5,7 @@ const RadioCarbs = ({ carbs, setCarbs }) => {
     setCarbs(event.target.value);
   }
   return (
-    <div>
+    <div className="radio-buttons-carbs">
       <input
         type="radio"
         value="Pasta"

@@ -1,5 +1,4 @@
 import React from 'react';
-// import style from './Start.module.css'
 
 const Start = (props) => {
   const submitButton = (event) => {
