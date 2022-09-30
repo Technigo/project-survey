@@ -6,7 +6,7 @@ const FavoriteClothing = ({ setFavClothes }) => {
       <fieldset>
         <label htmlFor="favorite-clothing">What is your favorite piece of clothing?
           <select className="input-field" name="favorite-clothing" required onChange={(event) => setFavClothes(event.target.value)}>
-            <option diabled selected value=""> </option>
+            <option defaultValue={null}> </option>
             <option id="favorite-clothing" value="socks">Socks</option>
             <option id="favorite-clothing" value="long pants">Long pants</option>
             <option id="favorite-clothing" value="shorts">Shorts</option>
