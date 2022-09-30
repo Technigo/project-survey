@@ -15,9 +15,9 @@ const Allforms = () => {
   const [counter, setCounter] = useState(1);
   const [name, setName] = useState('');
   const [cakeOption, setCakeOption] = useState([])
-  const [quality, setCakeQuality] = useState('');
+  const [cakeQuality, setCakeQuality] = useState('');
   const [service, setService] = useState('');
-  const [priceRange, setPriceRange] = useState(2)
+  const [priceRange, setPriceRange] = useState('')
   const [prices, setPrice] = useState(allPrice[priceRange])
   const [opinion, setOpinion] = useState('');
   const [isVoucherVisible, setIsVoucherVisible] = useState(false);
@@ -74,7 +74,7 @@ const Allforms = () => {
 
       {counter === 3 && (
         <Radiocake
-          quality={quality}
+          cakeQuality={cakeQuality}
           onCakeQualityChange={onCakeQualityChange}
           onCounterChange={onCounterChange} />
       )}
@@ -105,7 +105,7 @@ const Allforms = () => {
         <Summary
           name={name}
           cakeOption={cakeOption}
-          quality={quality}
+          cakeQuality={cakeQuality}
           service={service}
           prices={prices}
           opinion={opinion}

@@ -18,7 +18,8 @@ const Checkcake = (props) => {
             type="checkbox"
             value="Strawberry Shortcake"
             checked={cakeOption.includes('Strawberry Shortcake')}
-            onChange={() => onCakeOptionChange('Strawberry Shortcake')} />
+            onChange={() => onCakeOptionChange('Strawberry Shortcake')}
+            required />
           <div className="cake-image"><img
             src={Strawberry}
             alt="Strawberry Shortcake" />
@@ -30,7 +31,8 @@ const Checkcake = (props) => {
             type="checkbox"
             value="Salted Caramel Cake"
             checked={cakeOption.includes('Salted Caramel Cake')}
-            onChange={() => onCakeOptionChange('Salted Caramel Cake')} />
+            onChange={() => onCakeOptionChange('Salted Caramel Cake')}
+            required />
           <div className="cake-image"><img
             src={Caramel}
             alt="Salted Caramel Cake" />
@@ -43,7 +45,8 @@ const Checkcake = (props) => {
             type="checkbox"
             value="Raspberry cake"
             checked={cakeOption.includes('Raspberry cake')}
-            onChange={() => onCakeOptionChange('Raspberry cake')} />
+            onChange={() => onCakeOptionChange('Raspberry cake')}
+            required />
           <div className="cake-image"><img
             src={Raspberry}
             alt="Raspberry cake" />
@@ -56,7 +59,8 @@ const Checkcake = (props) => {
             type="checkbox"
             value="Peach and Walnut Cake"
             checked={cakeOption.includes('Peach and Walnut Cake')}
-            onChange={() => onCakeOptionChange('Peach and Walnut Cake')} />
+            onChange={() => onCakeOptionChange('Peach and Walnut Cake')}
+            required />
           <div className="cake-image"><img
             src={Peachwalnut}
             alt="Peach and Walnut Cake" />
@@ -68,7 +72,8 @@ const Checkcake = (props) => {
             type="checkbox"
             value="Coffee Latte Cake"
             checked={cakeOption.includes('Coffee Latte Cake')}
-            onChange={() => onCakeOptionChange('Coffee Latte Cake')} />
+            onChange={() => onCakeOptionChange('Coffee Latte Cake')}
+            required />
           <div className="cake-image"><img
             src={Coffee}
             alt="Coffee Latte Cake" />
@@ -80,7 +85,8 @@ const Checkcake = (props) => {
             type="checkbox"
             value="Orange Cake"
             checked={cakeOption.includes('Orange Cake')}
-            onChange={() => onCakeOptionChange('Orange Cake')} />
+            onChange={() => onCakeOptionChange('Orange Cake')}
+            required />
           <div className="cake-image"><img
             src={Orange}
             alt="Orange Cake" />
@@ -88,7 +94,7 @@ const Checkcake = (props) => {
         </form>
 
       </div>
-      <button type="button" onClick={onCounterChange}>Continue</button>
+      <button type="button" onClick={onCounterChange} disabled={cakeOption === ''}>Next Question</button>
     </div>
   );
 };

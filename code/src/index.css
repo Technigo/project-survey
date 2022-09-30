@@ -11,16 +11,14 @@ body{
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* display: flex;
-  flex-direction: column;
-   */
-   min-height: 100vh;
-  /* Photo by Karolina Grabowska: https://www.pexels.com/photo/white-and-gray-snow-covered-ground-4709467/ */
+  min-height: 100vh;
+  /* Photo by Karolina Grabowska: https://www.pexels.com/photo/white-and-gray-snow-covered-ground-4709467/*/ 
   background-image: url('./images/background.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
+  padding: 0;
 }
 
 code {
@@ -28,7 +26,7 @@ code {
     monospace;
 }
 
-/* General styling for h1, p, button and container  */
+/* General styling */
 .container{
   display: flex;
   flex-direction: column;
@@ -66,16 +64,26 @@ p{
   text-align: center;
 }
 
+.answers{
+  font-weight: 600;
+  font-style: italic;
+  color: rgb(4, 156, 21);
+}
+
 button{
-    background-color: #f1705c;
-    color: white;
-    text-align: center;
-    border: none;
-    font-size: 15px;
-    padding: 1vw 4vw;
-    margin: 10% auto;
-    border-radius: 20px;
-    font-family: 'Poppins', sans-serif;
+  background-color: #f1705c;
+  color: white;
+  text-align: center;
+  border: none;
+  font-size: 15px;
+  padding: 1vw 4vw;
+  margin: 10% auto;
+  border-radius: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+button:disabled{
+  display: none;
 }
 
 button:hover{
@@ -87,6 +95,10 @@ select{
   margin: 5% auto;
   padding: 5px 30px;
   font-family: 'Poppins', sans-serif;
+}
+
+label{
+  margin: auto;
 }
 
 /* Opening section styling */
@@ -102,16 +114,12 @@ select{
 /* Cake checkboxes styling */
 .cake-container{
   display: grid;
-  /* display: flex;
-  justify-content: center;  
-  border: 1px solid seagreen;*/
   margin: 0 5% 5% 5%;
 }
 
 .cake-checkbox{
   display: flex;
   justify-content: center;
-  /* border: 1px solid rgb(252, 0, 109); */
   padding: 5%;
 }
 
@@ -123,7 +131,6 @@ select{
   width: 180px;
   height: 180px;
   overflow: hidden;
-  /* border: 1px solid gold; */
   box-shadow: 5px 5px 10px rgb(208, 208, 208);
   margin-left: 10px;
 }
@@ -144,20 +151,19 @@ img{
   margin-right: 10px;
 }
 
-/* Service selection select */
+/* Service selection select styling*/
 .service-select{
-  /* border: 1px solid indigo; */
   display: flex;
   flex-direction: column;
 }
 
 .service-option{
-  /* border: 1px solid rgb(230, 88, 12); */
   border: none;
   border-radius: 20px;
-  padding: 5% 10%;
+  padding: 1% 10%;
 }
 
+/* Price range slider styling */
 .price-slider{
   display: flex;
   flex-direction: column;
@@ -168,11 +174,13 @@ img{
   margin: auto;
 }
 
+/* Opinion text area styling */
 textarea{
   font-family: 'Poppins', sans-serif;
-  margin: 2%;
   text-align: center;
   border-radius: 10px;
+  width: 100%;
+  margin: auto;
 }
 
 /* For tablet */
@@ -197,11 +205,9 @@ textarea{
   .cake-container{
     display: grid;
     grid-template-columns: auto auto;
-    /* border: 1px solid seagreen; */
   }
 
   .cake-checkbox{
-    /* border: 1px solid rgb(252, 0, 109); */
     padding: 5%;
     margin: auto 2%;
   }
@@ -212,19 +218,22 @@ textarea{
   }
   
   .quality-cake{
-    margin: 2% 5%;
     padding: 0;
   }
 
   .service-option{
     padding: 2% 10%;
   }
+
+  textarea{
+    width: 70%;
+  }
 }
 
 @media (min-width: 1024px){
   h1{
     padding-top: 5%;
-    font-size: 5vw;
+    font-size: 4vw;
   }
   button{
     margin: 2% auto;
@@ -242,7 +251,6 @@ textarea{
   }
 
   .cake-checkbox{
-    /* border: 1px solid rgb(252, 0, 109); */
     padding: 5%;
     margin: auto 2%;
   }
@@ -250,9 +258,6 @@ textarea{
   .cake-image{
     width: 400px;
     height: 400px;
-    overflow: hidden;
-    box-shadow: 5px 5px 10px rgb(208, 208, 208);
-    margin-left: 10px;
   }
 
   .quality-cake{
@@ -260,8 +265,7 @@ textarea{
     padding: 0;
   }
 
-  .service-option{
-    padding: 1% 10%;
+  textarea{
+    width: 60%;
   }
-
 }

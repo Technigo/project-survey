@@ -17,13 +17,16 @@ const Opening = ({ name, onNameChange, onCounterChange }) => {
       Please type in your name below!😊
 
       </p>
-      <input
-        type="text"
-        placeholder="Type your name here..."
-        value={name}
-        onChange={onNameChange}
-        className="name-input" />
-      <button type="button" onClick={onCounterChange}>Start Review</button>
+      <label htmlFor="name">
+        <input
+          type="text"
+          placeholder="Type your name here..."
+          required
+          value={name}
+          onChange={onNameChange}
+          className="name-input" />
+      </label>
+      <button type="button" disabled={name === ''} onClick={onCounterChange}>Start Review</button>
     </div>
   )
 }

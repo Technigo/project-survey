@@ -8,11 +8,13 @@ const Opinion = ({ opinion, onOpinionChange, onCounterChange }) => {
         name="opinion"
         className="opinion"
         rows="10"
-        cols="50"
+        cols="10"
+        maxLength="350"
         placeholder="To make this cake shop better, I think you need to..."
         value={opinion}
-        onChange={onOpinionChange} />
-      <button type="button" onClick={onCounterChange}>Submit Review</button>
+        onChange={onOpinionChange}
+        required />
+      <button type="button" onClick={onCounterChange} disabled={opinion === ''}>Submit Review</button>
     </div>
   )
 }

@@ -13,12 +13,14 @@ const Price = (props) => {
           min="0"
           max="4"
           value={priceRange}
-          onChange={onPriceRangeChange} />
+          onChange={onPriceRangeChange}
+          required />
         <p>{prices}</p>
         <button
           type="button"
           className="button"
-          onClick={onCounterChange}>Next Question
+          onClick={onCounterChange}
+          disabled={priceRange === ''}>Next Question
         </button>
       </form>
     </div>
