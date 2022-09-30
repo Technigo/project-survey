@@ -2,9 +2,9 @@ import React from 'react'
 
 export const LearnKnow = ({ setLearnKnow }) => {
   return (
-    <div className="learn-know-container">
-      <h2 className="quest-heading">If you had to choose, would you rather hire someone who: </h2>
-      <label htmlFor="team">Eager to learn
+    <div className="question-container">
+      <h2 className="question-heading">If you had to choose, would you rather hire someone who: </h2>
+      <label className="radio-label" htmlFor="team">
         <input
           type="radio"
           id="team"
@@ -12,8 +12,9 @@ export const LearnKnow = ({ setLearnKnow }) => {
           value="learn"
           onChange={(e) => setLearnKnow(e.target.value)}
           required />
+      Eager to learn
       </label>
-      <label htmlFor="indie">Knows everything already
+      <label className="radio-label" htmlFor="indie">
         <input
           type="radio"
           id="indie"
@@ -21,6 +22,7 @@ export const LearnKnow = ({ setLearnKnow }) => {
           value="know"
           onChange={(e) => setLearnKnow(e.target.value)}
           required />
+          Knows everything already
       </label>
     </div>
   )

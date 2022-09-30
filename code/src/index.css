@@ -5,8 +5,13 @@
   margin: 0;
 }
 
+:root {
+  --main-color: midnightblue;
+  --sub-color: rgb(0, 171, 80);
+  --third-color: rgb(255, 71, 163);
+}
+
 body {
-  color: blue;
   font-family: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto',
     'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -19,55 +24,75 @@ code {
     monospace;
 }
 
-/* WRAPPER */
+/* WRAPPER (Start.jsx) */
 .outer-wrapper {
-  background-color: rgb(255, 255, 255);
+  background-color: var(--main-color);
   width: 100%;
-  padding: 1px 0 1px;
+  height: 100vh;
+  padding-top: 1px;
 }
 
 .survey-wrapper {
   background-color: white;
-  border: 0.2rem solid blue;
-  border-radius: 40px;
-  box-shadow: -1.5rem 1.5rem blue;
+  border-radius: 1.6rem;
   margin: 10rem auto;
-  max-width: 500px;
-  max-height: 800px;
+  max-width: 28rem;
   padding: 2rem;
   text-align: center;
-  width: 70%;
 }
 
-/* BUTTON */
+/* HEADINGS (Menu.jsx) */
+.main-heading {
+  color: rgb(0, 171, 80);
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 3.5rem;
+}
+
+.sub-heading {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: 1.8rem;
+  margin-top: 1.5rem;
+  width: 21rem;
+}
+
+.question-heading {
+  color: var(--main-color);
+  font-size: 1.5rem;
+  font-weight: 700;
+  line-height: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+/* BUTTONS (Menu.jsx) */
 .start-btn {
-  background-color: rgb(9, 132, 62);
+  background-color: var(--sub-color);
   border: none;
-  border-radius: 0.5rem;
+  border-radius: 1rem;
   color: white;
   font-family: 'Nunito';
   font-size: 1.2rem;
   font-weight: 900;
-  margin: 1rem 0 0.5rem;
   padding: 1rem;
+  margin-top: 2rem;
   transition: 0.2s;
 }
 
 .start-btn:hover {
-  background-color: rgba(0, 0, 255, 0.815);
+  background-color: orange;
 }
 
-.start-btn:active {
-}
-
-.btn-container {
+/* (BackNextBtn.jsx) */
+.backnext-btn-container {
   display: flex;
   justify-content: space-around;
-  margin-top: 1.5rem;
+  margin-top: 3rem;
 }
 
-.btn {
-  background-color: blue;
+.backnext-btn {
+  background-color: var(--sub-color);
   border: none;
   border-radius: 0.5rem;
   color: white;
@@ -78,76 +103,56 @@ code {
   width: 5.5rem;
 }
 
-.select-one-msg {
+.select-one-message {
   display: none;
+  text-align: left;
+  color: red;
 }
 
-/* HEADING */
-.main-heading {
-  color: blue;
-  font-size: 3rem;
-  font-weight: 900;
-  line-height: 3.5rem;
-  margin: ;
-}
-
-.sub-heading {
-  color: blue;
-  font-size: 1.5rem;
-  font-weight: 600;
-  line-height: 1.8rem;
-  margin: 1rem auto;
-}
-
-.quest-heading {
-  font-size: 1.5rem;
-  font-weight: 900;
-  line-height: 1.8rem;
-  margin: 1rem auto;
-}
-
-.underline {
-  padding-bottom: 1px solid blue;
-}
-
-/* MENU */
-.menu-container {
-  position: relative;
-}
-
+/* Menu.jsx */
 .star-shape {
   position: absolute;
-  right: -5rem;
-  bottom: 5rem;
-  background: orangered;
+  right: 0rem;
+  top: 12rem;
+
+  background: var(--third-color);
   border-radius: 50%;
   display: flex;
   align-items: center;
-  width: 100px;
-  height: 100px;
+  width: 7rem;
+  height: 7rem;
 }
 
 .star-text {
   color: white;
   font-size: 1rem;
   font-weight: 900;
-  transform: rotate(10deg);
-}
-
-/* BACK FRONT */
-.backfront-container {
-  border: none;
-}
-
-.select {
-  border-radius: 0.5rem;
-  font-weight: 900;
-  width: 6rem;
-  height: 2rem;
   text-align: center;
+  transform: rotate(15deg);
 }
 
-.select:active {
+/* BackFront.jsx */
+.question-container {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+}
+
+.dropdown {
+  border: 0.1rem solid var(--third-color);
+  border-radius: 0.5rem;
+  /* box-shadow: 0.3rem 0.3rem var(--third-color); */
+  color: var(--third-color);
+  font-family: 'Nunito';
+  font-size: 1rem;
+  font-weight: 700;
+  width: 8rem;
+  height: 2.5rem;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.dropdown:active {
   border: none;
   background-color: blue;
 }
@@ -157,24 +162,18 @@ option * {
   color: blue;
 }
 
-.learn-know-container,
-.lone-team-container {
+/* LoneTeam.jsx */
+.radio-container {
+  display: flex;
+  justify-content: space-around;
+}
+
+.radio-label {
+  color: var(--third-color);
   display: grid;
-  grid-template-columns: 1fr;
-}
-
-.lone-team-container label {
-  font-size: 1.5rem;
-  font-weight: 900;
-  margin: 1rem auto 1rem;
-}
-
-.lone-team-container input[type='radio'] + label::after {
-  color: red;
-  font-size: 2rem;
-  width: 100px;
-}
-
-#lone:checked {
-  color: red;
+  font-size: 1rem;
+  font-weight: 700;
+  grid-template-columns: 1rem auto;
+  gap: 0.5rem;
+  margin-top: 1rem;
 }

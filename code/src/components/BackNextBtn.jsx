@@ -15,36 +15,34 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
     setNoAnswerMsg(showOrNo);
   };
   return (
-    <>
-      <p style={{ display: noAnswerMsg }}>Select one option to continue!</p>
-      <div className="btn-container">
-        <button
-          className="btn"
-          type="button"
-          onClick={() => {
-            handleBtnClick(false);
-            handleNoAnswerMsg('none');
-          }}>Back
-        </button>
+    <div className="backnext-btn-container">
+      <p className="select-one-message" style={{ display: noAnswerMsg }}>Select one option to continue!</p>
+      <button
+        className="backnext-btn"
+        type="button"
+        onClick={() => {
+          handleBtnClick(false);
+          handleNoAnswerMsg('none');
+        }}>Back
+      </button>
 
-        <button
-          className="btn"
-          type="button"
-          onClick={() => {
-            for (let i = 0; i < answers.length; i += 1) {
-              if (step === steps[i] && answers[i]) {
-                handleBtnClick(true);
-                handleNoAnswerMsg('none');
-                break
-              } else if (!answers[i]) {
-                handleNoAnswerMsg('flex');
-                break
-              }
+      <button
+        className="backnext-btn"
+        type="button"
+        onClick={() => {
+          for (let i = 0; i < answers.length; i += 1) {
+            if (step === steps[i] && answers[i]) {
+              handleBtnClick(true);
+              handleNoAnswerMsg('none');
+              break
+            } else if (!answers[i]) {
+              handleNoAnswerMsg('block');
+              break
             }
-          }}>
+          }
+        }}>
         Next
-        </button>
-      </div>
-    </>
+      </button>
+    </div>
   );
 };
