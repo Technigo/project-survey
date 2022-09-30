@@ -1,14 +1,14 @@
 import React from 'react';
 
-export const RecieverNameInput = ({ recieverName, setRecieverNameInput }) => {
+export const RecieverNameInput = ({ recieverName, setRecieverName }) => {
   const handleRecieverNameInput = (event) => {
-    setRecieverNameInput(event.target.value);
+    setRecieverName(event.target.value);
   }
   return (
-    <label htmlFor="reciever">
+    <p>
       Dear
       <input type="text" value={recieverName} onChange={handleRecieverNameInput} placeHolder="Reciever name" />
       ,
-    </label>
+    </p>
   );
 }

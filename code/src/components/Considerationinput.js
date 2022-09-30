@@ -8,9 +8,9 @@ export const ConsiderationInput = ({ consideration, setConsideration }) => {
     <div>
       <p>You might want to consider</p>
       <form>
-        <select>
-        onChange={handleConsiderationInput}
-        value={consideration}
+        <select
+          onChange={handleConsiderationInput}
+          value={consideration}>
           <option value="">Select option</option>
           <option value="Reassessing your priorities">Reassessing your priorities</option>
           <option value="Trying meditation">Trying meditation</option>

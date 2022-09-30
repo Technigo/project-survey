@@ -48,7 +48,7 @@ export const App = () => {
       {counter === 0 && (
         <div>
           {/* Use this in summarize for message input */}
-          <p>Dear {recieverName} , </p>
+          <p>Dear {recieverName}, </p>
           <p>
             You might want to consider {consideration}.
             Lately I`ve noticed that you {textArea}.
