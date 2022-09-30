@@ -232,6 +232,7 @@ p {
   .star-shop-select {
     border:none;
     background-color: rgb(235, 219, 173);
+    color: black;
     border-bottom: 5px solid  rgb(235, 219, 173);
     margin-bottom: 20px;
   }
