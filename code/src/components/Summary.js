@@ -80,7 +80,7 @@ const Summary = ({
           </p>
           <p>
             That day it was decided, and <span className="red">{creature}</span>{' '}
-            moved in, <span className="red">{name}</span> was so excited.
+            moved in, <span className="input">{name}</span> was so excited.
           </p>
           <p>For now he had a friend, and on the weekend,</p>
           <p>
