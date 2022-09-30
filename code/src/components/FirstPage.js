@@ -6,7 +6,7 @@ const FirstPage = () => {
     <>
       <h1 className="first-page-h1" tabIndex="0">Join our ⭐ newsletter</h1>
       <p className="first-page-p" tabIndex="0">Get early access to new products & exclusive promos! </p>
-      <p className="first-page-p" tabIndex="0">Do not miss your chance! Only for members of our newsletter!</p>
+      <p className="first-page-p bottom" tabIndex="0">Do not miss your chance! Only for members of our newsletter!</p>
     </>
   )
 }

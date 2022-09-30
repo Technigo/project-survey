@@ -52,6 +52,10 @@ p {
   line-height: 24px;
 }
 
+.first-page-h1 {
+  margin: 5%;
+}
+
 .first-page {
   display: flex;
   flex-direction: column;
@@ -66,18 +70,23 @@ p {
 }
 
 .first-page-p {
-  font-size: 20px;
-  line-height: 50px;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0 5%;
+}
+
+.bottom {
+  margin-bottom: 7%;
 }
 
 .subscribe-button {
-  border-radius: 13%;
+  border-radius: 11%;
   margin: 5px;
-  padding: 10px;
+  padding: 7px 14px 7px 14px;
   font-size: large;
   font-weight: bolder;
   background-color: rgb(235, 219, 173);
-  color: rgb(68, 68, 68);
+  color: black;
   border-color: bisque;
   transition: all 0.1s ease-out 0s;
 } 
@@ -119,8 +128,59 @@ p {
 
 /* ------------------tablet section---------------------- */
 @media (min-width: 667px) and (max-width: 1024px) {
+  .first-page-h1 {
+    font-size: 40px;
+    margin-bottom: 10%;
+  }
+
+  .first-page-p {
+    font-size: 25px;
+    line-height: 50px;
+  }
+   
+  .bottom {
+    margin-bottom: 7%;
+  }
+
+  .subscribe-button {
+    padding: 3px 15px 7px 15px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Permanent Marker', cursive;
+    border-color: bisque;
+    border-radius: 45%;
+    transition: all 0.1s ease-out 0s;
+  } 
 }
 
 /* ------------------computer section---------------------*/
 @media (min-width: 1025px) {  
+  .first-page-h1 {
+    font-size: 40px;
+    margin-bottom: 5%;
+  }
+
+  .first-page-p {
+    font-size: 25px;
+    line-height: 50px;
+  }
+  
+  .bottom {
+    margin-bottom: 7%;
+  }
+
+  .subscribe-button {
+    padding: 3px 15px 7px 15px;
+    font-size: 30px;
+    font-weight: bolder;
+    font-family: 'Permanent Marker', cursive;
+    border-color: bisque;
+    border-radius: 45%;
+    transition: all 0.1s ease-out 0s;
+  } 
+
+  .subscribe-button:hover {
+    font-size: 35px;
+    transition: all 0.1s ease-out 0s;
+  } 
 }
