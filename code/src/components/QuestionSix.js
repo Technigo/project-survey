@@ -6,7 +6,7 @@ import React from 'react';
 
 const animals = [
   'seagurkin',
-  'fhippopotomus',
+  'hippopotomus',
   'blobfish',
   'sloth',
   'flamingo',
