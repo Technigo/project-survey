@@ -11,7 +11,7 @@ const QuestionOne = ({ questionOne, characterGroup, setCharacterGroup, onStepCha
     <div className="container">
       <h1 className="homeText"> Icebreaker meeting environment survey</h1>
       <form className="form-container">
-        <p tabIndex="0" className="question">How about changing our design at work!</p>
+        <p tabIndex="0" className="question">How about changing our work design!</p>
         <p tabIndex="0" className="question">If you could work with any cartoon character, who would you choose?</p>
         {characterGroups.map((group) => (
           <label tabIndex="0" className="radioAnswers" key={group}>

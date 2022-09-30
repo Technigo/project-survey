@@ -25,7 +25,7 @@ const QuestionTwo = ({ questionTwo, setQuestionTwo, workAlternative, setWorkAlte
           <option value="Pretending to be a ninja and typing like one too">Pretending to be a ninja and typing like one too</option>
         </select>
       </form>
-      <p tabIndex="0" className="text">Not your alternative? Ok! Somewhere else?</p>
+      <p tabIndex="0" className="text">Not your favorite? Ok! Somewhere else?</p>
       <input className="inputBox" type="text" value={questionTwo} onChange={onInputChange} />
       <button className="lastButton" type="submit" onClick={onStepChange}>Next</button>
     </div>

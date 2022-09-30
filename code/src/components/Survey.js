@@ -55,7 +55,7 @@ const Survey = () => {
 
       {step === 5 && (
         // eslint-disable-next-line react/jsx-no-bind
-        <Summary name={name} setQuestionOne={setQuestionOne} etCharacterGroup={setCharacterGroup} questionOne={questionOne} characterGroup={characterGroup} setQuestionTwo={setQuestionTwo} onStepChange={onStepChange} setWorkAlternative={setWorkAlternative} questionTwo={questionTwo} workAlternative={workAlternative} />
+        <Summary name={name} setQuestionOne={setQuestionOne} etCharacterGroup={setCharacterGroup} questionOne={questionOne} characterGroup={characterGroup} setQuestionTwo={setQuestionTwo} onStepChange={onStepChange} setWorkAlternative={setWorkAlternative} questionTwo={questionTwo} workAlternative={workAlternative} questionThree={questionThree} bossMeme={bossMeme} />
       )}
 
       {step < 2 && (

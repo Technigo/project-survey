@@ -25,13 +25,13 @@ body {
   height: 120px;
   font-size: 50px;
   font-weight: 700;
-  margin-top: 30px;
+  margin-top: 20px;
   color: #3d0b35;
   font-family: 'Covered By Your Grace';
 
 }
 
-.survey-goal{
+.survey-goal {
   width: 60%;
   font-weight: 700;
   text-align: center;
@@ -53,7 +53,7 @@ body {
   text-align: center;
   font-size: 15px;
   width: 80%;
-  margin-top: 40px;
+  margin-top: 30px;
   justify-content: center;
   color: rgb(102, 14, 114);
   font-weight: 700;
@@ -65,7 +65,6 @@ body {
   margin-top: 20px;
   border-bottom: 2px solid rgb(14, 13, 13);
 }
-
 
 .lastButton {
   line-height: 40px;
@@ -91,6 +90,7 @@ button:hover {
   display: flex;
   padding: 9px;
   color: #4a2707;
+  font-size: larger;
 }
 
 .summary-container {
@@ -98,24 +98,36 @@ button:hover {
   flex-direction: column;
   margin-top: 220px;
   text-align: center;
-
 }
 
 .end {
   display: flex;
   margin-top: 80px;
-  font-family:'Courier New', Courier, monospace;
+  font-family: 'Courier New', Courier, monospace;
   font-size: 20px;
   justify-content: center;
   background-color: rgba(129, 114, 114, 0.5);
+}
+
+.imageAnswers {
+  color: #4a2707;
+  display: inline-flex;
+  font-size: 15px;
+}
+
+.images {
+  margin-top: 50px;
+  flex-direction: row;
+  height: 160px;
+  min-width: 160px;
 }
 
 /* Media query Screen and Tablet */
 
 
 @media (min-width: 668px) {
-  .container {
 
+  .container {
     margin-top: 60px;
   }
 
@@ -123,104 +135,40 @@ button:hover {
     width: 100%;
     height: 70px;
     font-size: 40px;
-
   }
 
   .question {
     font-size: 30px;
   }
 
-  .survey-goal{
+  .survey-goal {
     font-size: 20px;
   }
+
   .radioAnswers {
-    /* position: relative; */
     display: inline-flex;
     text-align: center;
-
   }
 
   .form-container {
-    /* width: 40%; */
     width: fit-content;
     text-align: center;
-  }
-
-  .text{
-    width: fit-content;
-    text-align: center;
-
-  }
-/*
-
-
-  .question {
-    font-weight: 700;
-    font-size: 20px;
-    text-align: center;
-    justify-content: center;
-    color: rgb(24, 5, 16);
   }
 
   .text {
-    font-size: 15px;
-    text-align: center;
-    font-size: 15px;
-    width: 80%;
-    justify-content: center;
-    color: rgb(102, 14, 114);
-    font-weight: 700;
-  }
-
-  .inputBox {
-    border: none;
-    text-align: center;
-    margin-top: 20px;
-    border-bottom: 2px solid rgb(14, 13, 13);
-  }
-
-
-  .lastButton {
-    line-height: 40px;
-    display: flex;
-    font-weight: 700;
-    justify-content: center;
-    border-radius: 50px;
-    margin-top: 30px;
-    color: #2d0424;
-    transition-duration: 0.4s;
-  }
-
-  button:hover {
-    background-color: #4b0d36;
-    color: white;
-  }
-
-  .form-container {
-    width: 90%;
-  }
-
-  .radioAnswers {
-    display: flex;
     width: fit-content;
-    color: #4a2707;
-  }
-
-  .summary-container {
-    display: flex;
-    flex-direction: column;
-    margin-top: 220px;
     text-align: center;
-
   }
 
-  .end {
-    display: flex;
-    margin-top: 80px;
-    font-family:'Courier New', Courier, monospace;
-    font-size: 20px;
-    justify-content: center;
-    background-color: rgba(129, 114, 114, 0.5);
+  .imageAnswers {
+    padding: 50px;
   }
-   */
+
+  .images {
+    margin-top: 50px;
+    flex-direction: row;
+    height: 300px;
+    min-width: 250px;
+    padding: 20px;
+  }
 }
