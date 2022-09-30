@@ -1,13 +1,11 @@
-# Survey form with React
+# Karticakes: Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In this assignment, students are required to create a survey using React. The focus when it comes to the functionality was using the useState and connecting between components. Other focus outside of React is accesibility.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started the project by reading the recorded materials. Then attended the live sessions. I goggled a lot. I would say that this project was fun, but I wish I had more time to add in more fun stuff in it. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
