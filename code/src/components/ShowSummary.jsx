@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import Section1 from './Section1';
-import Section2 from './Section2';
-import Section3 from './Section3';
+// import Section1 from './Section1';
+// import Section2 from './Section2';
+// import Section3 from './Section3';
 
 const ShowSummary = (props) => {
   return (
@@ -11,15 +11,16 @@ const ShowSummary = (props) => {
       <p>Gender: {props.formData.gender}</p>
       <p>Status: {props.formData.status}</p>
       <p>Reason: {props.formData.reason}</p>
-      <p>Store/Online: {props.formData.where}</p>;
-      <p>Quality: {props.formData.quality}</p>
-      <p>satisfaction: {props.formData.satisfaction}</p>
+      <p>Where: {props.formData.where}</p>
+      <p>ServiceSatisfaction: {props.formData.satisfaction}</p>
+      <p>WebsiteSatisfaction: {props.formData.websiteSatisfactionquality}</p>
+
       {/* <pre>{JSON.stringify(props.formData)}</pre> */}
       <button type="button" onClick={() => props.onPrevStep()}>
-      Previous
+        Previous
       </button>
       <button type="Submit" onClick={() => props.onNextStep()}>
-       Submit 
+        Submit
       </button>
     </>
   );

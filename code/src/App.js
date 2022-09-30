@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './index.css';
-import StartPage from 'components/StartPage'
+import StartPage from 'components/StartPage';
 import IntroductionPage from 'components/IntroductionPage';
 import Section1 from 'components/Section1';
 import Section2 from 'components/Section2';
@@ -15,6 +15,7 @@ const App = () => {
     status: '',
     reason: '',
     where: '',
+    serviceSatisfaction: '',
     quality: '',
     satisfaction: '',
   });
@@ -35,7 +36,7 @@ const App = () => {
       <div className="App">
         <h2>Customer Satisfaction Survey</h2>
         {step === 0 && <StartPage onNextStep={nextStep} />}
-    
+
         {step === 1 && <IntroductionPage onNextStep={nextStep} />}
 
         {step === 2 && (

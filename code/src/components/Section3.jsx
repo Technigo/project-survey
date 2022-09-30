@@ -11,25 +11,29 @@ const Section3 = (props) => {
           <input
             type="radio"
             value="Store"
-            onChange={event =>
+            onChange={(event) =>
               props.setFormData({
                 ...props.formData,
                 where: event.target.value,
               })
             }
+            checked={props.formData.where === 'Store'}
           />
+          Store
         </label>
         <label>
           <input
             type="radio"
             value="Website"
-            onChange={event =>
+            onChange={(event) =>
               props.setFormData({
                 ...props.formData,
                 where: event.target.value,
               })
             }
+            checked={props.formData.where === 'Website'}
           />
+          Website
         </label>
 
         <p>
@@ -37,22 +41,37 @@ const Section3 = (props) => {
         </p>
         <label>
           <input
-            type="checkbox"
-            value="Website"
-            onChange={event =>
+            type="radio"
+            value="Yes"
+            onChange={(event) =>
               props.setFormData({
                 ...props.formData,
-                where: event.target.value,
+                serviceSatisfaction: event.target.value
               })
             }
+            checked={props.formData.serviceSatisfaction === 'Yes'}
           />
+          Yes
+        </label>
+        <label>
+          <input
+            type="radio"
+            value="No"
+            onChange={(event) =>
+              props.setFormData({
+                ...props.formData,
+                serviceSatisfaction: event.target.value
+              })
+            }
+            checked={props.formData.serviceSatisfaction === 'No'}
+          />
+          No
         </label>
 
-        {/* Yes No */}
-
-        <p>If in the website, How quich and representative is our website? </p>
+        <p>If in the website, How quick and representative is our website? </p>
         {/* fast, medium, slow */}
 
+{/* Bottons */}
         <span className="btn">
           <button type="button" onClick={() => props.onPrevStep()}>
             Previous
