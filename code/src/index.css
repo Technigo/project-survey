@@ -20,18 +20,7 @@ code {
     monospace;
 }
 
-/* .outerWrapper {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-} */
-
-
 .container {
-  box-sizing: border-box;
-  width: auto;
   margin-top: 10vh;
   padding: 10%;
   display: flex;
@@ -45,6 +34,12 @@ code {
   border: 3px solid whitesmoke;
   border-radius: 20%;
   background: #0c0c3665;
+}
+
+.container h1, p {
+  background-image: linear-gradient(to right, rgb(255, 42, 188), rgb(180, 69, 255), rgb(17, 108, 255));
+  padding: 0.7em;
+  border-radius: 1em;
 }
 
 .neon{

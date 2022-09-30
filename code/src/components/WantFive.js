@@ -17,7 +17,7 @@ export const WantFive = ({ want, setWant }) => {
           step="1"
           onChange={handleWantChange}
           Value={want} />
-        Yes, very much.
+        Yes, alot!
       </label>
     </form>
   )
