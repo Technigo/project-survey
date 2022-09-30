@@ -3,7 +3,7 @@ body {
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-family: "Lucida Console", "Courier New", monospace;
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   /** background image */
   background-image: url("./assets/background-image.jpg");
@@ -75,11 +75,6 @@ body {
   margin-top: 30px;
   color: #2d0424;
   transition-duration: 0.4s;
-}
-
-button:hover {
-  background-color: #4b0d36;
-  color: white;
 }
 
 .form-container {
@@ -156,12 +151,14 @@ button:hover {
   }
 
   .text {
+    font-size: 20px;
     width: fit-content;
     text-align: center;
   }
 
   .imageAnswers {
     padding: 50px;
+    font-size: 20px;
   }
 
   .images {
@@ -170,5 +167,10 @@ button:hover {
     height: 300px;
     min-width: 250px;
     padding: 20px;
+  }
+
+  button:hover {
+    background-color: #4b0d36;
+    color: white;
   }
 }
