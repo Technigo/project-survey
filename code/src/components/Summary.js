@@ -37,7 +37,7 @@ const Summary = ({
           </p>
           <p>
             So the Dragon set out to find a companion.
-            <i> A pet, he squealed, I’ll name it Brandon. </i>
+            <i> A pet,</i> he squealed, <i>I’ll name it Brandon. </i>
           </p>
           <p>
             But the Dragon did not know what makes a good pet, he settled for a{' '}
@@ -79,8 +79,9 @@ const Summary = ({
             </i>
           </p>
           <p>
-            That day it was decided, and <span className="red">{creature}</span>{' '}
-            moved in, <span className="input">{name}</span> was so excited.
+            That day it was decided, and{' '}
+            <span className="input">{creature}</span> moved in,{' '}
+            <span className="input">{name}</span> was so excited.
           </p>
           <p>For now he had a friend, and on the weekend,</p>
           <p>
