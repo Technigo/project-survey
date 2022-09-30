@@ -8,7 +8,7 @@
 :root {
   --main-color: rgb(0, 0, 205);
   --sub-color: hotpink;
-  --third-color: green;
+  --third-color: orangered;
 
   --main-font: 'Nunito', 'Arial', sans-serif;
   --sub-font: 'Open sans', sans-serif;
@@ -51,7 +51,7 @@ code {
   border: 2px solid var(--sub-color);
   box-shadow: 0.8rem 1rem var(--sub-color);
   margin: 5rem auto;
-  max-width: 28rem;
+  max-width: 25rem;
   padding: 3rem;
 }
 
