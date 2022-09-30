@@ -7,7 +7,7 @@ export const FavContinent = ({ favContinent, setFavContinent }) => {
   }
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <h2>What is your dates favourite continent?</h2>
+      <h3>What is your dates favourite continent?</h3>
       <select
         onChange={handleFavContinentChange}
         value={favContinent}>

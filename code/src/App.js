@@ -3,17 +3,20 @@ import React, { useState } from 'react';
 
 import { NameOfDate } from 'components/NameOfDate';
 import { LengthOfDating } from 'components/LengthOfDating';
-import { FavContinent } from 'components/FavContinent';
+import { Allergies } from 'components/Allergies';
 import { FoodPreferens } from 'components/FoodPreferens';
+import { FavContinent } from 'components/FavContinent';
 import { Budget } from 'components/Budget';
 import { Result } from 'components/Result';
+import Header from './components/Header';
 
 export const App = () => {
   const [step, setStep] = useState(1);
   const [nameOfDate, setNameOfDate] = useState('');
+  const [allergies, setAllergies] = useState('');
   const [lengthOfDating, setLengthOfDating] = useState('');
-  const [favContinent, setFavContinent] = useState('');
   const [foodPreferens, setFoodPreferens] = useState('');
+  const [favContinent, setFavContinent] = useState('');
   const [budget, setBudget] = useState('');
 
   const handleStepIncrease = () => {
@@ -22,6 +25,9 @@ export const App = () => {
 
   return (
     <>
+      <header>
+        <Header />
+      </header>
       {step === 1 && (
         <NameOfDate nameOfDate={nameOfDate} setNameOfDate={setNameOfDate} />
       )}
@@ -29,28 +35,32 @@ export const App = () => {
         <LengthOfDating lengthOfDating={lengthOfDating} setLengthOfDating={setLengthOfDating} />
       )}
       {step === 3 && (
-        <FavContinent favContinent={favContinent} setFavContinent={setFavContinent} />
+        <Allergies allergies={allergies} setAllergies={setAllergies} />
       )}
       {step === 4 && (
         <FoodPreferens foodPreferens={foodPreferens} setFoodPreferens={setFoodPreferens} />
       )}
       {step === 5 && (
+        <FavContinent favContinent={favContinent} setFavContinent={setFavContinent} />
+      )}
+      {step === 6 && (
         <Budget budget={budget} setBudget={setBudget} />
       )}
-      {step >= 6 && (
+      {step >= 7 && (
         <Result
           nameOfDate={nameOfDate}
           lengthOfDating={lengthOfDating}
-          favContinent={favContinent}
+          allergies={allergies}
           foodPreferens={foodPreferens}
+          favContinent={favContinent}
           budget={budget} />
       )}
 
-      {step < 6 && (
-        <>
+      {step < 7 && (
+        <div className="NextButton">
           <p>Question {step}</p>
           <button type="button" onClick={handleStepIncrease}>Next Question</button>
-        </>
+        </div>
       )}
     </>
   );

@@ -8,11 +8,17 @@ export const FoodPreferens = ({ foodPreferens, setFoodPreferens }) => {
 
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <h2>Has your date any food preferenses? {foodPreferens}</h2>
-      <input
-        type="text"
+      <h3>Has your date any food preferenses? {foodPreferens} </h3>
+      <select
         onChange={handleFoodPreferensChange}
-        value={foodPreferens} />
+        value={foodPreferens}>
+        <option value=""> Select preferens</option>
+        <option value="vegan"> Vegan</option>
+        <option value="vegetarian"> Vegetarian</option>
+        <option value="fish and seafood"> Fish and seafood</option>
+        <option value="meat"> Meat</option>
+        <option value="all-you-can-eat"> All you can eat</option>
+      </select>
     </form>
   );
 }

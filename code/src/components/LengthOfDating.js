@@ -10,7 +10,7 @@ export const LengthOfDating = ({ lengthOfDating, setLengthOfDating }) => {
 
   return (
     <form>
-      <h2>How long have known your date?</h2>
+      <h3>How long have known your date?</h3>
       Length of dating:
       {monthsOfDating.map((group) => (
         <lable key={group}>

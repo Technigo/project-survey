@@ -1,14 +1,14 @@
+*{
+  box-sizing: border-box;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: rosybrown;
-  margin: 30px;
-  border: 2px black dotted;
-  padding: 50px;
-  width: auto;
+  background: linear-gradient(180deg, rosybrown 60%, rgb(155, 240, 240));
 }
 
 code {
@@ -16,19 +16,69 @@ code {
     monospace;
 }
 
-h2 {
+html {
+  scroll-behavior: smooth;
+}
+
+.header {
   display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px yellow solid;
+  padding: 40px;
+  margin: 10px;
+  background-image: url('./Images/restaurant-image.jpg');
+  opacity: 1;
+}
+
+.header-title {
+  background: blanchedalmond;
+  border: 1px black solid;
+  padding: 15px;
+  opacity: 0.8;
+}
+
+.header-text {
+  background: blanchedalmond;
+  padding: 10px;
+  margin: 0;
+  opacity: 0.8;
+  border-radius: 15px;
+}
+
+.dateNameContainer {
+  border: 3px red dotted;
+  display: flex;
+  align-items: center;
+}
+
+.dateNameText {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
   border: 1px midnightblue solid;
   background-color: antiquewhite;
+  padding: 6px;
+}
+
+h3 {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  border: 1px midnightblue solid;
+  background-color: antiquewhite;
+  padding: 6px;
 }
 
 p {
+  display: flex;
+  justify-content: center;
+  text-align: center;
   border: 1px rgb(118, 65, 118) solid;
   background-color: azure;
-}
-
-.button {
-  background: rgba(68, 176, 83, 0.525);
-  border-radius: 1px;
-
+  padding: 3px;
+  
+  justify-content: center;
 }

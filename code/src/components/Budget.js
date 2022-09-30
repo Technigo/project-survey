@@ -10,7 +10,7 @@ export const Budget = ({ budget, setBudget }) => {
 
   return (
     <form>
-      <h2>How much can you spend this evening?</h2>
+      <h3>How much can you spend this evening?</h3>
       Amount of budget:
       {amountOfBudget.map((group) => (
         <lable key={group}>
