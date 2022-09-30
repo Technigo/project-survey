@@ -1,13 +1,42 @@
-# Survey form with React
+# The dental self assessment
+To health care professionals, time is invaluable. 
+While chit-chat makes the day tolerable, sometimes there is a desire
+to skip the samll talk and get to action. As a dental hygienist, a patients' 
+oral care routine is in focus during the visit. 
+- By knowing about a patients' routine, desire and special requests before the visit, 
+allows the dental professional to plan and execute the treatment faster and better.  
 
-Replace this readme with your own information about your project.
+## The application
+This is a survey-style application with focus on being simple and effective when gathering 
+information and requests from a patient. 
+- Name for identification,
+- Dropdowns, 
+- Radio buttons,
+- Check boxes
+- Summary 
+- and a confirmation. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## Technologies used
+The application is built using React components, JavaScript and CSS and was built
+using a mobile-first approach in VScode. 
 
-## The problem
+## View it live 
+The project is deployed on netlify, enabling live view from any mobile, tablet or desktop. 
+https://selfassesment.netlify.app
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+### Alternate viewing methods VScode + NodeJS
+1. Clone this project locally to your computer where NodeJS is installed.
+1. Open the project in VSCode 
+1. Install required dependencies with npm: `npm install` 
+1. Start the project: `npm start`
+1. Enjoy!
 
-## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+## Areas of improvement
+This is a weekly project authored by Cecilia Frånlund at Technigo Frontend Bootcamp week 7. 
+Areas of improvement;
+* work on the styling in mobile & finishing touches
+* further styling on dropdown menus and radio buttons 
+* for the checkbox array, adding JS logic to seperate
+the items, adding coma or eqvivalent. 
+* work more on accessibility
