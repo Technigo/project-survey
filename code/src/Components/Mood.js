@@ -10,8 +10,8 @@ export const Mood = ({ mood, setMood }) => {
 
   return (
     <form>
+      <h2>What is your mood after today?</h2>
       <div className="moodComponent">
-        <p>What is your mood after today?</p>
         {moodPreferences.map((moodType) => (
           <label key={moodType}>
             <input

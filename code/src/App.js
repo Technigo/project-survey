@@ -40,8 +40,8 @@ export const App = () => {
         {
           step < 3 && (
             <>
-              <p>Current step: {step}</p>
-              <button type="button" onClick={handleStepIncrease}>Next step</button>
+              {/* <p>Current step: {step}</p> */}
+              <button className="nextStepButton" type="button" onClick={handleStepIncrease}>Next step</button>
             </>
           )
         }
@@ -49,8 +49,8 @@ export const App = () => {
         {
           step === 3 && (
             <>
-              <p>Current step: {step}</p>
-              <button type="button" onClick={handleStepIncrease}>Submit answer:</button>
+              {/* <p>Current step: {step}</p> */}
+              <button className="submitButton" type="button" onClick={handleStepIncrease}>Submit answer:</button>
             </>
           )
         }

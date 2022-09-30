@@ -11,7 +11,7 @@ export const Name = ({ name, setName }) => {
     <><Header />
       <div className="nameComponent">
 
-        <p>Please type your name</p>
+        <p>Please type your name to start:</p>
         <input
           type="text"
           onChange={handleNameChange}
