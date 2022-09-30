@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 
-import Name from 'components/Name';
+import UserName from 'components/UserName';
 import CoolestThing from 'components/CoolestThing';
 import PerfectJob from 'components/PerfectJob';
 import Fondness from 'components/Fondness';
@@ -11,14 +11,14 @@ import Result from 'components/Result';
 const App = () => {
   const stepsTotalCount = 4
   const [step, setStep] = useState(1);
-  const [name, setName] = useState('amanda');
+  const [userName, setUserName] = useState('amanda');
   const [coolestThing, setCoolestThing] = useState('');
   const [perfectJob, setPerfectJob] = useState('');
   const [fondness, setFondness] = useState('');
   const [errors, setErrors] = useState(null);
 
   const handleStepIncrease = () => {
-    if (step === 1 && name === '') {
+    if (step === 1 && userName === '') {
       setErrors('Please enter your name to continue')
       return
     }
@@ -30,7 +30,7 @@ const App = () => {
     <div className="test">
       {/* 1 NAME - TEXT INPUT */}
       {step === 1 && (
-        <Name name={name} setName={setName} />
+        <UserName userName={userName} setUserName={setUserName} />
       )}
       {/* 2 COOLEST THING - SELECT */}
       {step === 2 && (
@@ -46,7 +46,7 @@ const App = () => {
       )}
       {/* 5 DISPLAY RESULT */}
       {step >= 5 && (
-        <Result name={name} coolestThing={coolestThing} perfectJob={perfectJob} fondness={fondness} />
+        <Result userName={setUserName} coolestThing={coolestThing} perfectJob={perfectJob} fondness={fondness} />
       )}
       {step < 5 && (
         <>
