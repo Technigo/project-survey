@@ -71,8 +71,7 @@ const Form = () => {
           nextQuestion={handleNextQuestion} />}
       {counter === 4
         && <Summary
-            formState={formState}
-           />}
+          formState={formState} />}
     </section>
   )
 };
