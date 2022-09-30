@@ -1,12 +1,12 @@
 import React from 'react';
 
-const Result = ({ name, coolestThing, perfectJob, fondness }) => {
+const Result = ({ userName, coolestThing, perfectJob, fondness }) => {
   return (
     <>
-      <p>Alright {name}, here is how you answered.</p>
+      <p>Alright {userName}, here is how you answered.</p>
       <p>You think the coolest thing about them is: {coolestThing}</p>
       <p>The perfect human job for them would be: {perfectJob}</p>
-      <p>You love them this much: {fondness}</p>
+      <p>On a scale of 0-10, you love them is much: {fondness}</p>
     </>
   );
 }
