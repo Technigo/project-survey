@@ -27,7 +27,7 @@ const App = () => {
   }
 
   return (
-    <div className="test">
+    <>
       {/* 1 NAME - TEXT INPUT */}
       {step === 1 && (
         <UserName userName={userName} setUserName={setUserName} />
@@ -63,7 +63,7 @@ const App = () => {
           </button>
         </>
       )}
-    </div>
+    </>
   );
 }
 
