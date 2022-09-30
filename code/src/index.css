@@ -28,16 +28,16 @@ body {
   margin-top: 20px;
   color: #3d0b35;
   font-family: 'Covered By Your Grace';
-
 }
 
 .survey-goal {
-  width: 60%;
+  /* width: 60%; */
   font-weight: 700;
   text-align: center;
-  /* background-color: rgba(129, 114, 114, 0.5); */
-  border-radius: 5%;
   color: #4b0d36;
+  width: 400px;
+  padding: 10px; 
+  border: 5px solid gray;
 }
 
 .question {
@@ -54,6 +54,7 @@ body {
   font-size: 15px;
   width: 80%;
   margin-top: 30px;
+  width: fit-content;
   justify-content: center;
   color: rgb(102, 14, 114);
   font-weight: 700;
@@ -79,6 +80,11 @@ body {
 
 .form-container {
   width: 60%;
+  width: 400px;
+  padding: 10px; 
+  margin: 10px;
+  text-align: center;
+  border: 5px solid gray;
 }
 
 .radioAnswers {
@@ -91,7 +97,7 @@ body {
 .summary-container {
   display: flex;
   flex-direction: column;
-  margin-top: 220px;
+  margin-top: 150px;
   text-align: center;
 }
 
@@ -102,6 +108,9 @@ body {
   font-size: 20px;
   justify-content: center;
   background-color: rgba(129, 114, 114, 0.5);
+  /* width: 470px; */
+  padding: 10px; 
+  border: 5px solid gray;
 }
 
 .imageAnswers {
