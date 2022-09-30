@@ -25,7 +25,12 @@ const RadioButtons = ({
           ))}
         </div>
       </div>
-      <button className="button" onClick={handleStepChange}>Next</button>
+      <button 
+        className="button"
+        disabled={radioInput===''}
+        onClick={handleStepChange}
+        >Next
+        </button>
     </div>
   )
 }

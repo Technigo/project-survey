@@ -14,7 +14,12 @@ const NameQuestion = ({
           value={nameInput}
           onChange={handleNameInputChange} />
       </div>
-      <button className="button" onClick={handleStepChange}>Next</button>
+      <button 
+        className="button"
+        disabled={nameInput===''}
+        onClick={handleStepChange}
+        >Next
+        </button>
 
     </div>
 

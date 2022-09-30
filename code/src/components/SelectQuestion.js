@@ -32,7 +32,12 @@ const SelectQuestion = ({
         </div>
       </div>
       <div className="button-container">
-        <button className="button" onClick={handleStepChange}>Next</button>
+        <button
+          className="button"
+          disabled={selectInput===''}
+          onClick={handleStepChange}
+          >Next
+          </button>
       </div>
     </div>
   );
