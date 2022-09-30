@@ -147,7 +147,22 @@ p {
   align-self: end;
   border-radius: 13%;
   margin: 5px;
-  padding: 8px;
+  padding: 7px;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rgb(235, 219, 173);
+  color: rgb(68, 68, 68);
+  border-color: bisque;
+}
+
+.next-button {
+  grid-column-start: 2;
+  grid-row-start: 4; 
+  justify-self: center;
+  align-self: end;
+  border-radius: 13%;
+  margin: 5px;
+  padding: 7px;
   font-size: large;
   font-weight: bolder;
   background-color: rgb(235, 219, 173);
@@ -180,6 +195,22 @@ p {
     border-radius: 45%;
     transition: all 0.1s ease-out 0s;
   } 
+
+  .previous-button {
+    grid-column-start: 2;
+    grid-row-start: 4; 
+    margin: 0;
+    padding: 7px;
+    padding-right: 50%
+  }
+  
+  .next-button {
+    grid-column-start: 2;
+    grid-row-start: 4; 
+    margin: 0;
+    justify-self: space-evenly;
+    padding-left: 50%
+  }
 }
 
 /* ------------------computer section---------------------*/
@@ -212,4 +243,20 @@ p {
     font-size: 35px;
     transition: all 0.1s ease-out 0s;
   } 
+
+  .previous-button {
+    grid-column-start: 2;
+    grid-row-start: 4;
+    align-self: end;
+    justify-self: end;
+    margin:0;
+  }
+  
+  .next-button {
+    grid-column-start: 3;
+    grid-row-start: 4; 
+    align-self: end;
+    justify-self: start;
+    margin:0;
+  }
 }
