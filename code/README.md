@@ -1,19 +1,42 @@
-# Technigo React Starter App
+# The dental self assessment
+To health care professionals, time is invaluable. 
+While chit-chat makes the day tolerable, sometimes there is a desire
+to skip the samll talk and get to action. As a dental hygienist, a patients' 
+oral care routine is in focus during the visit. 
+- By knowing about a patients' routine, desire and special requests before the visit, 
+allows the dental professional to plan and execute the treatment faster and better.  
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+## The application
+This is a survey-style application with focus on being simple and effective when gathering 
+information and requests from a patient. 
+- Name for identification,
+- Dropdowns, 
+- Radio buttons,
+- Check boxes
+- Summary 
+- and a confirmation. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+## Technologies used
+The application is built using React components, JavaScript and CSS and was built
+using a mobile-first approach in VScode. 
 
-## Usage
+## View it live 
+The project is deployed on netlify, enabling live view from any mobile, tablet or desktop. 
+https://selfassesment.netlify.app
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
+### Alternate viewing methods VScode + NodeJS
+1. Clone this project locally to your computer where NodeJS is installed.
+1. Open the project in VSCode 
+1. Install required dependencies with npm: `npm install` 
 1. Start the project: `npm start`
+1. Enjoy!
 
-Alternatively, if you don't want a new git repo on your account;
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## Areas of improvement
+This is a weekly project authored by Cecilia Frånlund at Technigo Frontend Bootcamp week 7. 
+Areas of improvement;
+* work on the styling in mobile & finishing touches
+* further styling on dropdown menus and radio buttons 
+* for the checkbox array, adding JS logic to seperate
+the items, adding coma or eqvivalent. 
+* work more on accessibility
