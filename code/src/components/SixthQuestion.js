@@ -1,4 +1,9 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
+
+const barData = [
+  { bgcolor: '#b62e88', completed: 84 }
+];
 
 const SixthQuestion = ({
   goalInput,
@@ -8,6 +13,11 @@ const SixthQuestion = ({
 }) => {
   return (
     <form className="question-wrap">
+      <div className="progressbar">
+        {barData.map((item, idx) => (
+          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+        ))}
+      </div>
       <div className="question">
         <p className="question-title">What do you want to focus most on today</p>
         <p className="question-specify">choose one main goal for today</p>

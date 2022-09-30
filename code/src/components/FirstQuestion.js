@@ -1,4 +1,9 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
+
+const barData = [
+  { bgcolor: '#b62e88', completed: 14 }
+];
 
 const FirstQuestion = ({
   nameInput,
@@ -8,6 +13,11 @@ const FirstQuestion = ({
 }) => {
   return (
     <form className="question-wrap">
+      <div className="progressbar">
+        {barData.map((item, idx) => (
+          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+        ))}
+      </div>
       <p className="question-title">What´s your full name?</p>
       <label className="name-question" htmlFor="nameInput">
         <input

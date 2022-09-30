@@ -1,4 +1,9 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
+
+const barData = [
+  { bgcolor: '#b62e88', completed: 42 }
+];
 
 const ThirdQuestion = ({
   frequencyInput,
@@ -10,6 +15,11 @@ const ThirdQuestion = ({
 
   return (
     <form className="question-wrap">
+      <div className="progressbar">
+        {barData.map((item, idx) => (
+          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+        ))}
+      </div>
       <div className="question">
         <p className="question-title">How often do you brush?</p>
         <p className="question-specify">(go on, you can be honest)</p>

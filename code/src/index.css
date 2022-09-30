@@ -26,6 +26,10 @@ code {
     monospace;
 }
 
+/*----Progressbar */
+.progressbar{
+  margin-bottom: -10%;
+}
 /*----------CONTAINER WRAPS----------------*/
 .first-page{
   margin: 0 auto; 
@@ -286,7 +290,7 @@ textarea::placeholder{
 
 h3{
   text-align: center;
-  font-size: 25px;
+  font-size: 30px;
   width: 400px;
 }
 
@@ -299,11 +303,12 @@ h3{
 h4{
   font-size: 20px;
   text-align: center;
+  margin-top: -10px;
 }
 
 .hygienist{
   margin-top: -90px;
-  font-size: 25px;
+  font-size: 28px;
 }
 
 
@@ -314,7 +319,7 @@ h4{
   }
   
   .first-page{
-    margin-top: 15%;
+    margin-top: 10%;
     width: 500px;
     height: 500px;
     background: rgb(255,157,200);
@@ -325,7 +330,7 @@ h4{
   }
   
   .question-wrap, .summary {
-    margin-top: 15%;
+    margin-top: 10%;
     width: 400px;
     background: rgb(255,157,200);
     background: linear-gradient(145deg, rgba(255,157,200,1) 0%, rgba(152,198,252,1) 100%);
@@ -409,4 +414,5 @@ textarea#message {
   padding: 10px;
   font-weight: 500;
 }
+
 }

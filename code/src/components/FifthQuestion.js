@@ -1,4 +1,9 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
+
+const barData = [
+  { bgcolor: '#b62e88', completed: 70 }
+];
 
 const FifthQuestion = ({
   flossInput,
@@ -10,6 +15,11 @@ const FifthQuestion = ({
 
   return (
     <form className="question-wrap">
+      <div className="progressbar">
+        {barData.map((item, idx) => (
+          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+        ))}
+      </div>
       <div className="question">
         <p className="question-title">Do you use something in-between your teeth regularly?</p>
         <p className="question-specify">(think floss, interdental brush, waterpick or something similar)</p>

@@ -1,4 +1,9 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
+
+const barData = [
+  { bgcolor: '#b62e88', completed: 100 }
+];
 
 const TheEnd = ({
   nameInput,
@@ -13,6 +18,11 @@ const TheEnd = ({
 }) => {
   return (
     <section className="summary">
+      <div className="progressbar">
+        {barData.map((item, idx) => (
+          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+        ))}
+      </div>
       <h3>Thank you {nameInput} for your participation</h3>
       <p>Here´s a summary of your answers, please check them</p>
       <span className="summary-text">

@@ -1,4 +1,9 @@
 import React from 'react';
+import ProgressBar from './ProgressBar';
+
+const barData = [
+  { bgcolor: '#b62e88', completed: 28 }
+];
 
 const SecondQuestion = ({
   brushInput,
@@ -8,6 +13,11 @@ const SecondQuestion = ({
 }) => {
   return (
     <form className="question-wrap">
+      <div className="progressbar">
+        {barData.map((item, idx) => (
+          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+        ))}
+      </div>
       <div className="question">
         <p className="question-title">What type of tooth brush do you use?</p>
       </div>

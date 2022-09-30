@@ -1,4 +1,9 @@
 import React from 'react'
+import ProgressBar from './ProgressBar';
+
+const barData = [
+  { bgcolor: '#b62e88', completed: 55 }
+];
 
 const checkboxGroupArray = [
   ' bleeding gums ',
@@ -7,6 +12,7 @@ const checkboxGroupArray = [
   ' tooth ache  ',
   ' bad breath  ',
   ' plaque & bacteria  ',
+  ' dental anxiety/ fear of dentists ',
   ' ache in gumline  '
 ]
 
@@ -18,6 +24,11 @@ const FourthQuestion = ({
 }) => {
   return (
     <form className="question-wrap">
+      <div className="progressbar">
+        {barData.map((item, idx) => (
+          <ProgressBar key={idx} bgcolor={item.bgcolor} completed={item.completed} />
+        ))}
+      </div>
       <div className="question">
         <p className="question-title">Do you have any issues?</p>
         <p className="question-specify">Check the boxes that apply</p>
