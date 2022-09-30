@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was done during week 6 of Technigo's Boot Camp. The task was to create a Typeform-like survey, using React state and controlled forms.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I created a simple Personal greeting site, where you by answering three questions get a customized greeting at the end. The questions where asked by using input, radio buttons and a select dropdown. The part I struggled the most with was getting the background color to change depending on the given value in the select dropdown question.
+
+If I had more time I would add a counter that shows how many questions you have answered and how many questions is left.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://chipper-biscochitos-fcf46f.netlify.app/
