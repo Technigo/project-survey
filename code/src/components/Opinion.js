@@ -15,7 +15,7 @@ const Opinion = ({ opinion, onOpinionChange, onCounterChange }) => {
           onChange={onOpinionChange}
           required />
       </label>
-      <button type="button" onClick={onCounterChange} disabled={opinion === ''}>Submit Review</button>
+      <button type="submit" onClick={onCounterChange} disabled={opinion === ''}>Submit Review</button>
     </div>
   )
 }
