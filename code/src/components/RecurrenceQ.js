@@ -1,22 +1,30 @@
 import React from 'react';
 
-const recurrenceOpt = ['Weekly', 'Bi-weekly', 'Monthly', 'Quarterly', 'Yearly'];
+const recurrenceOpt = [
+  'Weekly',
+  'Monthly',
+  'Quarterly',
+  'Yearly'
+];
 
 const RecurrenceQ = ({ recurrence, OnRecurrenceInputChange, nextQ }) => {
   return (
-    <form>
-      <h2>How often would you like a subscription box?</h2>
+    <form onSubmit={nextQ}>
+      <h2>How often would you like to receive the box?</h2>
       {recurrenceOpt.map((choice) => (
-        <label htmlFor="choice" key={choice}>
+        // eslint-disable-next-line jsx-a11y/label-has-associated-control
+        <label key={choice}>
           <input
+            id="recurrence"
             type="radio"
-            value={recurrence}
+            value={choice}
             onChange={OnRecurrenceInputChange}
-            checked={recurrence === choice} />
+            checked={recurrence === choice}
+            required />
           {choice}
         </label>
       ))}
-      <button type="button" onClick={nextQ} label="next">Next</button>
+      <button type="submit" label="next">Next</button>
     </form>
   )
 };

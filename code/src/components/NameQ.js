@@ -10,7 +10,9 @@ const NameQ = ({ name, OnNameInputChange, nextQ }) => {
           name="name"
           placeholder="Type name here..."
           value={name}
-          onChange={OnNameInputChange} />
+          onChange={OnNameInputChange}
+          autoComplete="off"
+          required />
       </label>
       <button type="submit" label="next">Next</button>
     </form>

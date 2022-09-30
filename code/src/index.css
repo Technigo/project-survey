@@ -1,5 +1,5 @@
 :root {
-  --primary: #5F7161;
+  --primary: #416042;
   --secondary: #D0C9C0;
 }
 
@@ -10,47 +10,111 @@
   box-sizing: border-box;
 }
 
-body {
+html {
   margin: 0;
+  background-image: url(../public/assets/background-img-3.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(to bottom, rgb(95, 113, 97), rgb(208, 201, 192));
   font-family: 'Lato', sans-serif;
 }
 
 h1 {
   font-family: 'Playfair Display', serif;
   color: var(--primary);
+  font-weight: lighter;
+  font-size: 30px;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 24px;
-  line-height: 34px;
+  font-size: 20px;
   color: var(--primary);
   text-align: center;
-  margin-bottom: 36px;
+  font-weight: lighter;
 }
 
 .form-wrapper {
-  margin: 0 auto;
   width: 100%;
   max-width: 700px;
   height: 470px;
   border-radius: 30px;
   background: rgba(208, 201, 192, 0.5);
-  padding: 20px 24px;
-  padding-top: 0;
+  padding: 0 15px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 button {
-  border-radius: 5px;
-  border: none;
+  border-radius: 15px;
+  border: 2px solid var(--primary);
   background-color: var(--primary);
   color: #fff;
-  padding: .5rem;
-  width: 5rem;
+  padding: 1rem;
+  margin: 2rem;
+  width: 12rem;
   font-family: 'Lato', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition-duration: 0.5s;
+}
+
+/*INPUT STYLING*/
+select {
+  width: 50%;
+  padding: 16px 20px;
+  border: none;
+  border-radius: 15px;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+input[type=text],
+[type=email] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  border-radius: 15px;
+  box-sizing: border-box;
+  background-color: #f1f1f1;
+  font-size: 14px;
+}
+
+input[type=radio] {
+  appearance: none;
+  border-radius: 50%;
+  width: 16px;
+  height: 16px;
+  border: 2px solid var(--primary);
+  transition: 0.2s all linear;
+  margin-right: 5px;
+  position: relative;
+  top: 3px;
+}
+
+input[type=radio]:checked {
+  border: 6px solid var(--primary);
+}
+
+@media (min-width: 667px) and (max-width: 1024px) {
+  .form-wrapper {
+    margin: 5vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .form-wrapper {
+    margin: 5vw;
+  }
+
+  button:hover {
+    background-color: transparent;
+    color: var(--primary);
+  }
 }

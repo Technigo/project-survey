@@ -5,7 +5,7 @@ const EmailQ = ({ email, OnEmailInputChange, nextQ }) => {
     <form onSubmit={nextQ}>
       <label htmlFor="emailInput">
         <h2>Leave us your email address, and we´ll follow-up with an offer!</h2>
-        <input type="text" value={email} onChange={OnEmailInputChange} />
+        <input type="email" value={email} onChange={OnEmailInputChange} required />
       </label>
       <button type="submit">Submit</button>
     </form>
