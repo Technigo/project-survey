@@ -52,7 +52,7 @@ export const App = () => {
       <div className="body-section">
         {counter === 1 && (
           <>
-            <UserName username={name} setUsername={setName} />
+            <div className="question-section"><UserName username={name} setUsername={setName} /></div>
             <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
           </>
         )}
