@@ -9,7 +9,20 @@ export const QuestionOne = ({name, setName}) => {
     return (
         <>
         <h2>On what email address can we reach you?</h2>
-        <input type="text" value={name} onChange={handleNameChange} />
+        
+        <label for="email-address">
+            <input 
+            type="text" 
+            id="email-address"
+            className='email-input'
+            placeholder='example@mail.com'
+            value={name} 
+            onChange={handleNameChange} />
+        </label>
+
+        <div className="image-center">
+            <img className='second-image' src='/images/goldenretriever.jpg' alt='Golden retriever dog'/>
+        </div>
         </>
     );
 }

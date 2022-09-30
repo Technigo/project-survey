@@ -24,7 +24,7 @@ a:hover {
 .links{
   font-weight: 600;
   color: #DF7861;
-  font-size: 19px;
+  font-size: 20px;
 }
 
 p {
@@ -41,13 +41,6 @@ h1 {
 .bold {
   font-weight: 600;
 }
-.result-text {
-  font-weight: 800;
-  text-align: center;
-  width: 80%;
-  justify-content: center;
-  align-items: center;
-}
 
 .outer-container {
   width: 100%;
@@ -58,33 +51,41 @@ h1 {
 
 .inner-container {
   margin-top: 10%;
+  margin-bottom: 10%;
   width: 80%;
   display: flex;
   flex-direction: column;
   align-items: center;
   padding: 30px;
-  padding-bottom: 10%;
+  padding-bottom: 0;
   border-radius: 5px;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   background-color: #FCF8E8;
   position: relative;
 }
-/*https://www.w3schools.com/css/css3_shadows_box.asp*/
 
-.result-page button {
-  position: absolute;
-}
+
+
+/*Form styling*/
 form, input{
  margin-bottom: 40px;
+}
+
+.email-input {
+  width: 250px;
+  padding: 5px;
 }
 
 select {
   border-color: #DF7861;
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
+  width: 60%
 } 
+
+
 
 .radio-buttons {
   display: flex;
@@ -97,15 +98,9 @@ select {
   margin: 10px;
 }
 
-.photo {
-  background-image: url(./dog.jpg);
-  width:300px;
-  height: 240px;
-  margin-top: 10px;
-}
 
 /*Buttons*/
-.start-button, .submit-button{
+.start-button {
   border-radius: 8px;
   border-style: none;
   font-size: 17px;
@@ -113,10 +108,11 @@ select {
   padding: 13px 15px;
   position: relative;
   background-color: #ECB390 ;
-  margin-top: 15px;
+  margin-top: 25px;
+  margin-bottom: 10%;
 }
 
-.start-button:hover, .submit-button:hover{
+button:hover{
   transform: scale(1.1);
   cursor: pointer;
   transition: 0.5s ease;
@@ -135,26 +131,97 @@ select {
   padding: 5px 10px;
   border:none;
   background-color: #ECB390;
+  margin-bottom: 30%;
 }
 
-button:hover {
-  cursor:pointer;
+
+/*Images*/
+.final-image {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.start-image {
+  padding-top: 25px;
+}
+
+.second-image {
+  width: 50%;
+  height: auto;
+}
+
+.third-image {
+width: 40%
+}
+
+.final-image img {
+  width: 60%;
+  bottom: 0;
+}
+
+.image-center {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.quote p {
+  font-size: 25px;
+  text-align: center;
+
 }
 
 /*Media Queries*/
 /*Tablet*/
 @media (min-width: 668px) and (max-width: 1024px) {
   .inner-container {
-    width: 60%;
-    padding-bottom: 5%;
-}
+    width: 60%; 
+    height: auto; 
+  }
 }
 /*Media Queries*/
 /*Desktop*/
-@media (min-width: 1025px){ 
+@media (min-width: 1025px) { 
   .inner-container {
     margin-top: 5%;
     width: 50%;
-    padding-bottom: 20px;
-}
+    height: auto;
+  }
+
+  button {
+    transform: scale(1.2);
+    margin-bottom: 40% ;
+  }
+
+  button:hover {
+    transform: scale(1.3);
+    transition: 0.5s ease;
+  }
+
+  .email-input{
+    width: 300px;
+    padding: 5px;
+    font-size: 20px;
+  }
+
+  .result-container, .final-container {
+    padding: 0px 15px 0px 15px;
+  }
+
+  p {
+    font-size: 20px;
+  }
+
+  .radio-buttons {
+    font-size: 20px;
+  }
+
+  .links{
+    font-size: 22px;
+  } 
+  
+  .quote p {
+    font-size: 30px;
+  }
+
 }

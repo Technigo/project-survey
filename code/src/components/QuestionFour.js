@@ -6,12 +6,13 @@ const QuestionFour= ({famous, setFamous}) => {
     }
 
     return (
-        <form>
+        <>
+        <form className= "dropdown">
             <h2>Which famous dog would you most want to play with?</h2>
             <select
             onChange={handleFamousChange}
             value={famous}
-            className="dropdown">
+            >
                 <option disabled value=''>Select dog</option>  
                 <option value='Bruiser Woods'>Bruiser Woods</option>
                 <option value='Bo Obama'>Bo Obama</option>
@@ -19,6 +20,11 @@ const QuestionFour= ({famous, setFamous}) => {
                 <option value='Lassie'>Lassie</option>
             </select>
         </form>
+
+        <div className="image-center">
+            <img className='fourth-image' src='/images/dog-icon.png' alt='Dog icon'/>
+        </div>
+        </>
     );
 }
 

@@ -22,9 +22,6 @@ export const App = () => {
   const handleStepDecrease = () => {
     setStep(step - 1)
   }
-  const handleStepRestart = () => {
-    setStep(step - 6)
-  }
   
   return (
   <>
@@ -54,29 +51,30 @@ export const App = () => {
           )}
 
           {step === 6 && (
-            <div className="result-page">
             <Result name={name} activity={activity} size={size} famous={famous}/>
-            <button className="submit-button button" type="button" onClick={handleStepIncrease}>Submit</button>
-            </div>
           )}
 
           {step === 7 && (
-            <div className="final-page">
               <Final/>
-              <button className="restart-button buttons" type="button" onClick={handleStepRestart}>Restart</button>
-            </div>
           )}
+          
           <div className='buttons'>
-            {step > 1 && (
+            {step > 1 && step < 7 && (
                 <div>
-                <button className="back-button buttons" type="button" onClick={handleStepDecrease}>Go back</button>
+                <button className="back-button" type="button" onClick={handleStepDecrease}>Go back</button>
               </div>
             )}
             {step < 6 && step > 1 && (
                 <div>
-                  <button className="continue-button buttons" type="button" onClick={handleStepIncrease}>Continue</button>
+                  <button className="continue-button" type="button" onClick={handleStepIncrease}>Continue</button>
                 </div>
               )}
+            
+            {step === 6 && (
+            <div>
+            <button className="continue-button submit" type="button" onClick={handleStepIncrease}>Submit</button>
+            </div>
+          )}  
 
               
           </div>
