@@ -7,7 +7,7 @@ const Question2 = ({ question2, setQuestion2, handleStepIncrese }) => {
   return (
     <>
       <div>
-        <p>What do you think?</p>
+        <p className="question">What do you think?</p>
         <label htmlFor="this">
         I think this
           <input

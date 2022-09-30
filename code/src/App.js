@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 
+import Start from 'components/Start';
 import Question1 from 'components/Question1';
 import Question2 from 'components/Question2';
 import Question3 from 'components/Question3';
@@ -17,7 +18,7 @@ export const App = () => {
     if (element !== undefined) {
       element.preventDefault();
     }
-    if (step < 6) {
+    if (step < 7) {
       setStep(step + 1)
     }
   }
@@ -27,6 +28,12 @@ export const App = () => {
       <div className="inner-wrapper">
         <div id="nextStep">
           {step === 1 && (
+            <Start
+              handleStepIncrese={handleStepIncrese} />
+          )}
+        </div>
+        <div id="nextStep">
+          {step === 2 && (
             <Question1
               name={name}
               setName={setName}
@@ -34,7 +41,7 @@ export const App = () => {
           )}
         </div>
         <div id="nextStep">
-          {step === 2 && (
+          {step === 3 && (
             <Question2
               question2={question2}
               setQuestion2={setQuestion2}
@@ -42,7 +49,7 @@ export const App = () => {
           )}
         </div>
         <div id="nextStep">
-          {step === 3 && (
+          {step === 4 && (
             <Question3
               question3={question3}
               setQuestion3={setQuestion3}
@@ -50,7 +57,7 @@ export const App = () => {
           )}
         </div>
         <div id="nextStep">
-          {step === 4 && (
+          {step === 5 && (
             <Question4
               question4={question4}
               setQuestion4={setQuestion4}
@@ -58,7 +65,7 @@ export const App = () => {
           )}
         </div>
         <div id="nextStep">
-          {step === 5 && (
+          {step === 6 && (
             <Summary
               name={name}
               question2={question2}
@@ -68,7 +75,7 @@ export const App = () => {
           )}
         </div>
         <div>
-          {step === 6 && (
+          {step === 7 && (
             <p>Thank you for your time!</p>
           )}
         </div>

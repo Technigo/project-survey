@@ -8,7 +8,7 @@ const Question4 = ({ question4, setQuestion4, handleStepIncrese }) => {
   return (
     <>
       <section className="dropdownSelect">
-        <p>What do you think again?</p>
+        <p className="question">What do you think again?</p>
         <select
           htmlFor="options"
           className="dropdown"

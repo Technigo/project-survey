@@ -1,0 +1,6 @@
+This favicon was generated using the following font:
+
+- Font Title: Libre Baskerville
+- Font Author: Copyright (c) 2012, Pablo Impallari (www.impallari.com|impallari@gmail.com), Copyright (c) 2012, Rodrigo Fuenzalida (www.rfuenzalida.com|hello@rfuenzalida.com), with Reserved Font Name Libre Baskerville.
+- Font Source: http://fonts.gstatic.com/s/librebaskerville/v14/kmKiZrc3Hgbbcjq75U4uslyuy4kn0qviTjYwI8Gcw6Oi.ttf
+- Font License: SIL Open Font License, 1.1 (http://scripts.sil.org/OFL))

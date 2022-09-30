@@ -13,16 +13,16 @@ const Question1 = ({ name, setName, handleStepIncrese }) => {
   };
 
   return (
-    <>
-      <label htmlFor="your-name">
-        <p>What is your name?</p>
+    <form>
+      <label htmlFor="your-name" className="question-box">
+        <p className="question">What is your name?</p>
         <input type="text" id="your-name" value={name} onChange={handleNameChange} onKeyDown={checkKeyPress} />
       </label>
       <div>
         <button type="button" id="nextBtn" onClick={handleStepIncrese}>Next page</button>
         <p>Question 1 out of 4</p>
       </div>
-    </>
+    </form>
   );
 }
 

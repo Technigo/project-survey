@@ -15,6 +15,7 @@ code {
 }
 
 .outer-wrapper {
+  position: relative;
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -30,6 +31,10 @@ code {
   max-width: 900px;
 }
 
+.question-box {
+  padding-bottom: 50%;
+}
+
 .radioBtn {
     display: flex;
     align-items: center;
@@ -37,12 +42,57 @@ code {
 }
 
 .radioBtnContainer {
+  margin: 10% 0%;
   display: flex;
   align-items: center;
-  flex-direction: column;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 120px;
+  line-height: 200px;
+  margin: 50px 0px;
+}
+
+h2 {
+  font-family: 'Courier New', Courier, monospace;
+  font-weight: bold;
+  font-size: 30px;
+  line-height: 60px;
+  margin: 50px 0px;
+}
+
+.question {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 25px;
+  line-height: 50px;
+  font-weight: bold;
 }
 
 p {
   font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 100px;
   font-weight: bold;
+}
+
+label {
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+  padding: 5%;
+  font-size: 18px;
+}
+
+button {
+  position: absolute;
+  bottom: 10%;
+  right: 20%;
+  color: #330033;
+  background-color: white;
+  padding: 18px 50px;
+  font-size: 20px;
+  font-weight: bold;
+  border-radius: 8px;
 }

@@ -7,31 +7,26 @@ const Question3 = ({ question3, setQuestion3, handleStepIncrese }) => {
 
   return (
     <>
+      <p className="question">What do you think again?</p>
       <div className="radioBtnContainer">
-        <p>What do you think again?</p>
-        <label htmlFor="one">
-          One
-
+        <label htmlFor="one" className="radioBtn">One
           <input
-            className="radioBtn"
             type="radio"
             id="one"
             value="one"
             checked={question3 === 'one'}
             onChange={(event) => handleQuestion3Change(event)} />
         </label>
-        <label htmlFor="two">Two
+        <label htmlFor="two" className="radioBtn">Two
           <input
-            className="radioBtn"
             type="radio"
             id="two"
             value="two"
             checked={question3 === 'two'}
             onChange={(event) => handleQuestion3Change(event)} />
         </label>
-        <label htmlFor="three">Three
+        <label htmlFor="three" className="radioBtn">Three
           <input
-            className="radioBtn"
             type="radio"
             id="three"
             value="three"
