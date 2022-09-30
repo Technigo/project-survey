@@ -8,21 +8,19 @@ const hungerLevel = {
 
 const Overveiw = ({ nameInput, preference, sortOfPasta, otherIngredient, hungerInput }) => {
   return (
-    <div className="outer-wrapper">
-      <div className="survey-container">
-        <section className="overview-container">
-          <h2>Rubrik för sammantsällning/recept </h2>
-          <p>Name: {nameInput}</p>
-          <p>Prefernce: {preference}</p>
-          <p>Kind of pasta: {sortOfPasta}</p>
-          <p>Second ingredient: {otherIngredient}</p>
-          <p>Hunger: {hungerLevel[hungerInput]}</p>
-          <h3>Thanks for participatin!</h3>
-        </section>
-        <footer>
-          <h4>Created by Sarah Kneedler</h4>
-        </footer>
-      </div>
+    <div className="survey-container">
+      <section className="overview-container">
+        <h2>Thanks for participating {nameInput}!</h2>
+        <div className="overveiw-summary">
+          <p>You are in the mood for some {preference}</p>
+          <p>You prefere {sortOfPasta}, nice!</p>
+          <p>And with that {sortOfPasta} you would like {otherIngredient}</p>
+          <p>{hungerLevel[hungerInput]}</p>
+        </div>
+        <form>
+          <button className="restart-button" type="submit">Restart</button>
+        </form>
+      </section>
     </div>
   );
 };

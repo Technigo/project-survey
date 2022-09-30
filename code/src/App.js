@@ -3,6 +3,9 @@ import Summary from './components/Summary'
 
 export const App = () => {
   return (
-    <Summary />
+    <>
+      <h1>Survey</h1>
+      <Summary />
+    </>
   );
 };

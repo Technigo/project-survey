@@ -10,31 +10,30 @@ const pastaSorts = [
 ];
 
 // eslint-disable-next-line max-len
-const PastaKindQuestion = ({ nameInput, sortOfPasta, onSortOfPastaChange, onStepChange, onPreviousQuestionChange, onEnter }) => {
+const PastaKindQuestion = ({ nameInput, preference, sortOfPasta, onSortOfPastaChange, onStepChange, onPreviousQuestionChange, onEnter }) => {
   return (
-    <div className="outer-wrapper">
-      <div className="survey-container">
-        <form>
-          <h3>Pasta kind</h3>
-          <p>Hello {nameInput}, choose what kind of pasta you like:</p>
+    <div className="survey-container">
+      <form className="form-question">
+        <p className="text-pasta">Hello {nameInput}, you are in the mood for {preference}. Answer what kind of pasta you like:</p>
+        <div className="pasta-container">
           {pastaSorts.map((sort) => (
-            <lable key={sort}>
+            <label className="label-input-pasta" key={sort} htmlFor="sortOfPasta">
               <input
-                id="sortOfPasta"
+                id={sortOfPasta}
                 type="radio"
                 value={sort}
                 onChange={onSortOfPastaChange}
                 checked={sortOfPasta === sort}
                 onKeyPress={onEnter} />
               {sort}
-            </lable>
+            </label>
           ))}
-        </form>
+        </div>
         <div className="button-container">
           <button className="survey-button" type="button" onClick={onPreviousQuestionChange}>Back</button>
           <button className="survey-button" type="button" onClick={onStepChange}>Next</button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

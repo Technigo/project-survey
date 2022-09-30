@@ -3,27 +3,32 @@ import React from 'react';
 // eslint-disable-next-line max-len
 const HungerQuestion = ({ hungerInput, onHungerInputChange, onStepChange, onPreviousQuestionChange, onEnter }) => {
   return (
-    <div className="outer-wrapper">
-      <div className="survey-container">
-        <form>
+    <div className="survey-container">
+      <form className="form-question">
+        <label className="label-text" htmlFor={hungerInput}>
+          How hungry are you on a scale from full too starving?
           <input
             type="range"
             min="1"
             max="3"
+            id={hungerInput}
             value={hungerInput}
             onChange={onHungerInputChange}
-            onKeyPress={onEnter} />
-        </form>
-        <div className="range-text">
-          <span>1</span>
-          <span>2</span>
-          <span>3</span>
-        </div>
+            onKeyPress={onEnter}
+            required
+            className="slider" />
+
+          <div className="slider-text">
+            <span>Full</span>
+            <span>Snacky</span>
+            <span>Hungry</span>
+          </div>
+        </label>
         <div className="button-container">
           <button className="survey-button" type="button" onClick={onPreviousQuestionChange}>Back</button>
-          <button className="submit-button" type="submit" onClick={onStepChange}>Submit</button>
+          <button className="submit-button" type="button" onClick={onStepChange}>Submit</button>
         </div>
-      </div>
+      </form>
     </div>
 
   )

@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 
 import WelcomePage from './WelcomePage'
-import NameAndQuestion from './NameAndQuestion'
+import NameQuestion from './NameQuestion'
+import PreferenceQuestion from './PreferenceQuestion'
 import PastaKindQuestion from './PastaKindQuestion';
 import OtherIngredientQuestion from './OtherIngredientQuestion';
 import HungerQuestion from './HungerQuestion';
@@ -51,16 +52,22 @@ const Summary = () => {
           onStepChange={onStepChange} />
       )}
       {step === 2 && (
-        <NameAndQuestion
+        <NameQuestion
           nameInput={nameInput}
           onNameInputChange={onNameInputChange}
+          onStepChange={onStepChange}
+          onPreviousQuestionChange={onPreviousQuestionChange}
+          onEnter={onEnter} />
+      )}
+      {step === 3 && (
+        <PreferenceQuestion
           preference={preference}
           onPreferenceChange={onPreferenceChange}
           onStepChange={onStepChange}
           onPreviousQuestionChange={onPreviousQuestionChange}
           onEnter={onEnter} />
       )}
-      {step === 3 && (
+      {step === 4 && (
         <PastaKindQuestion
           sortOfPasta={sortOfPasta}
           onSortOfPastaChange={onSortOfPastaChange}
@@ -68,7 +75,7 @@ const Summary = () => {
           onPreviousQuestionChange={onPreviousQuestionChange}
           onEnter={onEnter} />
       )}
-      {step === 4 && (
+      {step === 5 && (
         <OtherIngredientQuestion
           otherIngredient={otherIngredient}
           onOtherIngredientChange={onOtherIngredientChange}
@@ -76,7 +83,7 @@ const Summary = () => {
           onPreviousQuestionChange={onPreviousQuestionChange}
           onEnter={onEnter} />
       )}
-      {step === 5 && (
+      {step === 6 && (
         <HungerQuestion
           hungerInput={hungerInput}
           onHungerInputChange={onHungerInputChange}
@@ -84,7 +91,7 @@ const Summary = () => {
           onPreviousQuestionChange={onPreviousQuestionChange}
           onEnter={onEnter} />
       )}
-      {step === 6 && (
+      {step === 7 && (
         <Overveiw
           nameInput={nameInput}
           preference={preference}
