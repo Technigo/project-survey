@@ -1,13 +1,10 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to build a survey using react, state and components with different input-types. I choose text, select, radio and range.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
-
+First I followed instructions for the stepcounter connected to a button in the app.js and then I followed instructions for the first question-component. After that I made a component for every question+summary based on that first component. But with some tweeks for the different input-types. 
+I lated connected the different components to each step of the counter. 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://linneas-neontastic-survey.netlify.app/
