@@ -33,9 +33,10 @@ code {
 }
 
 .survey-wrapper {
+  position: relative;
   background-color: white;
   border-radius: 1.6rem;
-  margin: 10rem auto;
+  margin: 5rem auto;
   max-width: 28rem;
   padding: 2rem;
   text-align: center;
@@ -59,6 +60,7 @@ code {
 }
 
 .question-heading {
+  padding-bottom: 1rem;
   color: var(--main-color);
   font-size: 1.5rem;
   font-weight: 700;
@@ -87,8 +89,10 @@ code {
 /* (BackNextBtn.jsx) */
 .backnext-btn-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 3rem;
+  padding-top: 1rem;
+  justify-content: right;
+  gap: 1rem;
+  margin-top: 2rem;
 }
 
 .backnext-btn {
@@ -103,10 +107,24 @@ code {
   width: 5.5rem;
 }
 
+.select-one-message-container {
+  position: absolute;
+  top: 8rem;
+  right: 6rem;
+  display: flex;
+  justify-content: center;
+}
+
 .select-one-message {
+  border: 3px solid orangered;
+  color: orangered;
   display: none;
-  text-align: left;
-  color: red;
+  font-weight: 900;
+  font-size: 1rem;
+  text-align: center;
+  transform: rotate(15deg);
+  padding: 0.3rem;
+  width: 9.5rem;
 }
 
 /* Menu.jsx */
@@ -146,10 +164,9 @@ code {
   font-family: 'Nunito';
   font-size: 1rem;
   font-weight: 700;
-  width: 8rem;
+  width: 7.5rem;
   height: 2.5rem;
   text-align: center;
-  margin-top: 2rem;
 }
 
 .dropdown:active {
@@ -165,15 +182,16 @@ option * {
 /* LoneTeam.jsx */
 .radio-container {
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  gap: 0.8rem;
 }
 
 .radio-label {
   color: var(--third-color);
   display: grid;
-  font-size: 1rem;
+  font-size: rem;
   font-weight: 700;
   grid-template-columns: 1rem auto;
   gap: 0.5rem;
-  margin-top: 1rem;
+  filter: hue-rotate(-27px);
 }

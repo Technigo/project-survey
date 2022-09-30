@@ -16,7 +16,9 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
   };
   return (
     <div className="backnext-btn-container">
-      <p className="select-one-message" style={{ display: noAnswerMsg }}>Select one option to continue!</p>
+      <div className="select-one-message-container">
+        <p className="select-one-message" style={{ display: noAnswerMsg }}>Select one option to continue!</p>
+      </div>
       <button
         className="backnext-btn"
         type="button"
