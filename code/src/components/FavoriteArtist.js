@@ -7,7 +7,7 @@ export const FavoriteArtist = ({ favoriteArtist, setFavoriteArtist }) => {
   }
   return (
     <>
-      <p>Which artist do you want to see in your next concert?</p>
+      <p>Which artist do you want to the next time you go to a concert?</p>
       <label htmlFor="favoriteArtist">
         <input id="favoriteArtist" type="text" value={favoriteArtist} onChange={handleFavoriteArtist} required />
       </label>

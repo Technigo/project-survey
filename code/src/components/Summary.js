@@ -6,9 +6,9 @@ export const Summary = ({ name, noOfConcerts, genre, place, favoriteArtist }) =>
       <h2>Summary of answers:</h2>
       <p>Your name is {name}</p>
       <p>You visit {noOfConcerts} concerts in a year</p>
-      <p>Your favorite concert genre is {genre}</p>
-      <p>You like to go to an {place} concert</p>
-      <p>In you next concert you want yo see {favoriteArtist}</p>
+      <p>Your favorite music genre is {genre}</p>
+      <p>You prefer to visit an {place} concert</p>
+      <p>In your next concert you want to see {favoriteArtist}</p>
     </section>
   );
 }
