@@ -1,19 +1,12 @@
-# Technigo React Starter App
+# Project Survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+create a Typeform-like survey to collect data from users by using the `useState` hook in React and connect HTML form inputs to state.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
+## The problem
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+1. I could not display buttons frpn Start to Next so I use if statements in Survey.js and also added it to the rest of the components.
+2. Need to find out how I can add images as a map function to the components. Right now I have it as an image tag for every images in the component.
 
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## View it live
+https://workenviornmentsurvey.netlify.app/
