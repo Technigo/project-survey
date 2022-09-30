@@ -10,13 +10,14 @@ const WelcomeToTheSurvey = ({ onWelcomeChange, nameWelcome, nextQuestion }) => {
           Come participate with us! Let's start with typing your name.
         </p>
         <form onSubmit={(e) => e.preventDefault()}>
-          <label htmlFor="name" placeholder="Your name">
+          <label htmlFor="name">
             <input
               type="text"
               onChange={onWelcomeChange}
               value={nameWelcome}
               id="name"
-              name="name" />
+              name="name"
+              placeholder="Your name" />
           </label>
         </form>
         <button type="button" onClick={nextQuestion} className="button" disabled={nameWelcome === ''}>
