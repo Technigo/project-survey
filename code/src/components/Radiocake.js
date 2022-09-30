@@ -2,12 +2,12 @@ import React from 'react';
 
 const Radiocake = ({ cakeQuality, onCakeQualityChange, onCounterChange }) => {
   const cakeQualities = [
-    'sweeter! Pour some sugar on me, babe',
+    'sweeter! Sugar rush is life',
     'less sweet. Organic. Eco. Healthhhh',
     'a lot more varieties on cakes, duh',
-    'bigger size, like my ego',
+    'biggger size fit for the whole neighbourhood',
     'tiny size option available (it is for my child I swear)',
-    'hmm...Overall, I love your cakes but I might complain later anyway'
+    'hmm...Overall, the cakes are amazing but I might complain later anyway'
   ]
 
   return (
@@ -31,5 +31,3 @@ const Radiocake = ({ cakeQuality, onCakeQualityChange, onCounterChange }) => {
 };
 
 export default Radiocake;
-
-/* label htmlFor="cakeQuality" key={cakeQuality} */

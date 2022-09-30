@@ -1,7 +1,7 @@
 import React from 'react';
 import Strawberry from '../images/strawberry.jpg';
 import Caramel from '../images/caramel.jpg';
-import Raspberryroll from '../images/raspberry.jpg';
+import Raspberry from '../images/raspberry.jpg';
 import Peachwalnut from '../images/peachwalnut.jpg';
 import Coffee from '../images/coffee.jpg';
 import Orange from '../images/orange.jpg';
@@ -41,12 +41,12 @@ const Checkcake = (props) => {
           <input
             className="checkboxes"
             type="checkbox"
-            value="Raspberry Rollcake"
-            checked={cakeOption.includes('Raspberry Rollcake')}
-            onChange={() => onCakeOptionChange('Raspberry Rollcake')} />
+            value="Raspberry cake"
+            checked={cakeOption.includes('Raspberry cake')}
+            onChange={() => onCakeOptionChange('Raspberry cake')} />
           <div className="cake-image"><img
-            src={Raspberryroll}
-            alt="Raspberry Rollcake" />
+            src={Raspberry}
+            alt="Raspberry cake" />
           </div>
         </form>
 

@@ -158,6 +158,16 @@ img{
   padding: 5% 10%;
 }
 
+.price-slider{
+  display: flex;
+  flex-direction: column;
+}
+
+.slider{
+  width: 70%;
+  margin: auto;
+}
+
 textarea{
   font-family: 'Poppins', sans-serif;
   margin: 2%;

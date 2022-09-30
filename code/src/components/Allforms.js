@@ -4,8 +4,11 @@ import Opening from './Opening'
 import Checkcake from './Checkcake'
 import Radiocake from './Radiocake'
 import Selectservice from './Selectservice'
+import Price from './Price'
 import Opinion from './Opinion'
 import Summary from './Summary'
+
+const allPrice = ['not important to worry about', 'very cheap', 'good price for its quality', 'kinda expensive', 'too expensive']
 
 const Allforms = () => {
   /* All functions connected to the return below */
@@ -14,8 +17,10 @@ const Allforms = () => {
   const [cakeOption, setCakeOption] = useState([])
   const [quality, setCakeQuality] = useState('');
   const [service, setService] = useState('');
+  const [priceRange, setPricesRange] = useState(2)
+  const [prices, setPrice] = useState(allPrice[priceRange])
   const [opinion, setOpinion] = useState('');
-  const [isFooVisible, setIsFooVisible] = useState(false);
+  const [isVoucherVisible, setIsVoucherVisible] = useState(false);
 
   /* Every onChange function that affects the input */
   const onCounterChange = () => {
@@ -40,11 +45,15 @@ const Allforms = () => {
   const onServiceChange = (event) => {
     setService(event.target.value);
   }
+  const onPriceRangeChange = (event) => {
+    setPricesRange(event.target.value)
+    setPrice(allPrice[event.target.value])
+  }
   const onOpinionChange = (event) => {
     setOpinion(event.target.value);
   }
-  const handleFooPress = () => {
-    setIsFooVisible((isVisible) => !isVisible);
+  const handleVoucherPress = () => {
+    setIsVoucherVisible((isVisible) => !isVisible);
   };
 
   return (
@@ -78,21 +87,29 @@ const Allforms = () => {
       )}
 
       {counter === 5 && (
+        <Price
+          priceRange={priceRange}
+          onPriceRangeChange={onPriceRangeChange}
+          prices={prices}
+          onCounterChange={onCounterChange} />
+      )}
+
+      {counter === 6 && (
         <Opinion
           opinion={opinion}
           onOpinionChange={onOpinionChange}
           onCounterChange={onCounterChange} />
       )}
 
-      {counter === 6 && (
+      {counter === 7 && (
         <Summary
           name={name}
           cakeOption={cakeOption}
           quality={quality}
           service={service}
           opinion={opinion}
-          isFooVisible={isFooVisible}
-          handleFooPress={handleFooPress} />
+          isVoucherVisible={isVoucherVisible}
+          handleVoucherPress={handleVoucherPress} />
       )}
     </>
   )
