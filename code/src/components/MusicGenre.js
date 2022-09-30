@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'components/Button';
 
-export const MusicGenre = ({ genre, setGenre, step }) => {
+export const MusicGenre = ({ genre, setGenre, step, percentage }) => {
   const handleMusicGenre = (e) => {
     setGenre(e.target.value)
   }
@@ -9,6 +9,9 @@ export const MusicGenre = ({ genre, setGenre, step }) => {
     <>
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
+        <div className="progress-bar">
+          <div className="progress-filler" style={{ width: `${percentage}%` }}>{percentage}%</div>
+        </div>
       </div>
       <p>What is your favorite music genre?</p>
       <label htmlFor="musicGenre">

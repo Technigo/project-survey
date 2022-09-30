@@ -87,6 +87,25 @@ input[type=radio] {
   margin-bottom: 50px;
 }
 
+.progress-bar {
+  position: relative;
+  height: 25px;
+  width: 100%;
+  border: 1px solid #333;
+  border-radius: 5px;
+}
+
+.progress-filler {
+  background: blue;
+  color: white;
+  height: 100%;
+  display: block;
+  transition: width .5s linear;
+  text-align: center;
+  font-size: 12px;
+  padding: 5px;
+}
+
 /* ****** Media queries **************** */
 
 /**** Tablet ****/
@@ -132,5 +151,5 @@ form {
     background-color: black;
     color: white;
     font-weight: bold;
-  }
+  } 
 }

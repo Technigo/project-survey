@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'components/Button';
 
-export const Name = ({ name, setName, step }) => {
+export const Name = ({ name, setName, step, percentage }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
@@ -9,6 +9,11 @@ export const Name = ({ name, setName, step }) => {
     <>
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
+        <div className="progress-bar">
+          <div className="progress-filler" style={{ width: `${percentage}%` }}>
+            {percentage}%
+          </div>
+        </div>
       </div>
       <label htmlFor="name">
         <p>First of all, what is your name?</p>

@@ -14,10 +14,12 @@ export const App = () => {
   const [genre, setGenre] = useState('');
   const [place, setPlace] = useState();
   const [favoriteArtist, setFavoriteArtist] = useState('');
+  const [percentage, setPercentage] = useState(0);
 
   const handleStepIncrease = (e) => {
     e.preventDefault();
     setStep(step + 1)
+    setPercentage(percentage + 20)
   }
 
   return (
@@ -28,26 +30,28 @@ export const App = () => {
             <Header />
           )}
           {step === 1 && (
-            <Name name={name} setName={setName} step={step} />
+            <Name name={name} setName={setName} step={step} percentage={percentage} />
           )}
           {step === 2 && (
             <HowManyConcerts
               name={name}
               noOfConcerts={noOfConcerts}
               setNoConcerts={setNoConcerts}
-              step={step} />
+              step={step}
+              percentage={percentage} />
           )}
           {step === 3 && (
-            <MusicGenre genre={genre} setGenre={setGenre} step={step} />
+            <MusicGenre genre={genre} setGenre={setGenre} step={step} percentage={percentage} />
           )}
           {step === 4 && (
-            <ConcertPlace place={place} setPlace={setPlace} step={step} />
+            <ConcertPlace place={place} setPlace={setPlace} step={step} percentage={percentage} />
           )}
           {step === 5 && (
             <FavoriteArtist
               favoriteArtist={favoriteArtist}
               setFavoriteArtist={setFavoriteArtist}
-              step={step} />
+              step={step}
+              percentage={percentage} />
           )}
         </form>
         {step === 6 && (

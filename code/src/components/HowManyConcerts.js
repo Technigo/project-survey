@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button } from 'components/Button';
 
-export const HowManyConcerts = ({ name, numberOfConcerts, setNoConcerts, step }) => {
+export const HowManyConcerts = ({ name, numberOfConcerts, setNoConcerts, step, percentage }) => {
   const handleNumberOfConcerts = (event) => {
     setNoConcerts(event.target.value)
   }
@@ -9,6 +9,9 @@ export const HowManyConcerts = ({ name, numberOfConcerts, setNoConcerts, step })
     <>
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
+        <div className="progress-bar">
+          <div className="progress-filler" style={{ width: `${percentage}%` }}>{percentage}%</div>
+        </div>
       </div>
       <p>Alright {name}, how many live concerts do you attend in a year?</p>
       <label htmlFor="noOfConcerts">

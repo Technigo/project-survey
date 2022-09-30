@@ -6,7 +6,7 @@ const concertPlaces = [
   'outdoor'
 ]
 
-export const ConcertPlace = ({ place, setPlace, step }) => {
+export const ConcertPlace = ({ place, setPlace, step, percentage }) => {
   const handleConcertPlaces = (event) => {
     setPlace(event.target.value)
   }
@@ -14,6 +14,9 @@ export const ConcertPlace = ({ place, setPlace, step }) => {
     <>
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
+        <div className="progress-bar">
+          <div className="progress-filler" style={{ width: `${percentage}%` }}>{percentage}%</div>
+        </div>
       </div>
       <div className="radioBtn">
         <p>What do you prefer when attending a concert?</p>
