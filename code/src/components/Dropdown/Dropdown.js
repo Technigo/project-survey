@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const Dropdown = () => {
-  const [selected, setSelected] = useState('');
-
+const Dropdown = ({ selected, setSelected }) => {
+  console.log(selected)
   return (
     <form className="dropdown">
       <select

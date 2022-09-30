@@ -3,6 +3,7 @@ import React from 'react';
 const RadioMeat = ({ meat, setMeat }) => {
   const handleMeatChange = (event) => {
     setMeat(event.target.value);
+    console.log(meat)
   }
   return (
     <div className="radio-buttons-meat">

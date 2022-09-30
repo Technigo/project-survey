@@ -3,26 +3,27 @@ import React from 'react';
 const RadioCarbs = ({ carbs, setCarbs }) => {
   const handleCarbsChange = (event) => {
     setCarbs(event.target.value);
+    console.log(carbs)
   }
   return (
     <div className="radio-buttons-carbs">
       <input
         type="radio"
-        value="Pasta"
+        value="pasta"
         onChange={handleCarbsChange}
-        checked={carbs === 'Pasta'} /> Pasta
+        checked={carbs === 'pasta'} /> Pasta
 
       <input
         type="radio"
-        value="Potatoes"
+        value="potatoes"
         onChange={handleCarbsChange}
-        checked={carbs === 'Potatoes'} /> Potatoes
+        checked={carbs === 'potatoes'} /> Potatoes
 
       <input
         type="radio"
-        value="Rice"
+        value="rice"
         onChange={handleCarbsChange}
-        checked={carbs === 'Rice'} /> Rice
+        checked={carbs === 'rice'} /> Rice
     </div>
   );
 }

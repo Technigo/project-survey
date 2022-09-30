@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const DropdownSides = () => {
-  const [selectedSides, setSelectedSides] = useState('');
+const DropdownSides = ({ selectedSides, setSelectedSides }) => {
+  console.log(selectedSides)
 
   return (
     <form>

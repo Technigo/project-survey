@@ -3,45 +3,46 @@ import React from 'react';
 const RadioVegetarian = ({ vegetarian, setVegetarian }) => {
   const handleVegetarianChange = (event) => {
     setVegetarian(event.target.value);
+    console.log(vegetarian)
   }
   return (
     <div className="radio-buttons-vegetarian">
       <label htmlFor="RadioButton">
         <input
           type="radio"
-          value="Halloumi"
+          value="halloumi"
           onChange={handleVegetarianChange}
-          checked={vegetarian === 'Halloumi'} /> Halloumi
+          checked={vegetarian === 'halloumi'} /> Halloumi
 
         <input
           type="radio"
-          value="Aubergine"
+          value="aubergine"
           onChange={handleVegetarianChange}
-          checked={vegetarian === 'Aubergine'} /> Aubergine
+          checked={vegetarian === 'aubergine'} /> Aubergine
 
         <input
           type="radio"
-          value="Tofu"
+          value="tofu"
           onChange={handleVegetarianChange}
-          checked={vegetarian === 'Tofu'} /> Tofu
+          checked={vegetarian === 'tofu'} /> Tofu
 
         <input
           type="radio"
-          value="Tempeh"
+          value="tempeh"
           onChange={handleVegetarianChange}
-          checked={vegetarian === 'Tempeh'} /> Tempeh
+          checked={vegetarian === 'tempeh'} /> Tempeh
 
         <input
           type="radio"
-          value="Beans"
+          value="beans"
           onChange={handleVegetarianChange}
-          checked={vegetarian === 'Beans'} /> Beans
+          checked={vegetarian === 'beans'} /> Beans
 
         <input
           type="radio"
-          value="Meat substitutes"
+          value="meat substitutes"
           onChange={handleVegetarianChange}
-          checked={vegetarian === 'Meat substitutes'} /> Meat substitutes
+          checked={vegetarian === 'meat substitutes'} /> Meat substitutes
       </label>
     </div>
   );

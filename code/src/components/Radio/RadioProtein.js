@@ -1,29 +1,28 @@
 import React from 'react';
 
 const RadioProtein = ({ protein, setProtein }) => {
-  const handleProteinChange = (event) => {
-    setProtein(event.target.value);
-  }
+  console.log(protein)
   return (
     <div className="radio-buttons">
       <input
         type="radio"
-        value="Meat"
-        onChange={handleProteinChange}
-        checked={protein === 'Meat'} /> Meat
+        value="meat"
+        onChange={(event) => setProtein(event.target.value)}
+        checked={protein === 'meat'} /> Meat
 
       <input
         type="radio"
-        value="Fish"
-        onChange={handleProteinChange}
-        checked={protein === 'Fish'} /> Fish
+        value="fish"
+        onChange={(event) => setProtein(event.target.value)}
+        checked={protein === 'fish'} /> Fish
 
       <input
         type="radio"
-        value="Vegetarian"
-        onChange={handleProteinChange}
-        checked={protein === 'Vegetarian'} /> Vegetarian
+        value="vegetarian"
+        onChange={(event) => setProtein(event.target.value)}
+        checked={protein === 'vegetarian'} /> Vegetarian
     </div>
+
   );
 }
 

@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const InputField = () => {
-  const [text, inputText] = useState('');
+const InputField = ({ text, inputText }) => {
+  console.log(text)
 
   return (
     <div className="input-field">
