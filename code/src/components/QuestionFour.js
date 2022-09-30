@@ -27,6 +27,7 @@ const QuestionFour = ({ handleSubmit, animal, handleAnimalChange }) => {
             <option value="blobfish">blobfish</option>
             <option value="sloth">sloth</option>
             <option value="flamingo">flamingo</option>
+            <option value="walruss">walruss</option>
           </select>
           {/* Alternative selection */}
           <div className="input-text-container">

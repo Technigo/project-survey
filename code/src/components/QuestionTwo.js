@@ -7,12 +7,12 @@
 import React from 'react';
 
 const radioButtonObject = [
-  'awesome',
-  'marvellous',
-  'dreadful',
-  'constipated',
-  'sexy',
-  'kind',
+  'brilliant',
+  'agreeable',
+  'big-headed',
+  'patronizing',
+  'hardworking',
+  'charismatic',
 ];
 
 const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
@@ -27,7 +27,7 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
       </div>
       <section className="question-container">
         {/* Radio Buttons */}
-        <h2>How would you describe yourself?</h2>
+        <h2>How would you describe your avatar?</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
           {radioButtonObject.map((radioButtonInput) => (
             <label className="radio-button-overlay" key={radioButtonInput}>

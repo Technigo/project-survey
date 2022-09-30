@@ -39,10 +39,8 @@ p {
 
 .header-container {
   background-color: rgba(121, 141, 124, 0.177);
-  width: fit-content;
   margin: 0 auto;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 5px;
   border-radius: 10px;
 }
 

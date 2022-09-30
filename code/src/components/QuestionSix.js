@@ -21,7 +21,7 @@ const QuestionSix = ({
       <section className="question-container">
         {/* Adjective 2 input */}
         <div className="form-container">
-          <h1>Choose another adjective or write</h1>
+          <h1>Choose or write another adjective</h1>
           <form className="select-style" onSubmit={handleSubmit}>
             <select
               className="select-form"
@@ -32,9 +32,7 @@ const QuestionSix = ({
               <option value="paranoid ">paranoid</option>
               <option value="skeptical">skeptical</option>
               <option value="unsettled">unsettled</option>
-              <option value="hieroglyphical">hieroglyphical</option>
               <option value="inexplicable">inexplicable</option>
-              <option value="obvious">obvious</option>
               <option value="gloomy">gloomy</option>
             </select>{' '}
             {/* Alternative selection */}

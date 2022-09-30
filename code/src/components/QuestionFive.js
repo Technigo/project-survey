@@ -38,6 +38,7 @@ const QuestionFive = ({
               <option value="Holy pretzel!">Holy pretzel!</option>
               <option value="FISH HOOKS!">FISH HOOKS!</option>
               <option value="Merlins beard!">Merlins beard!</option>
+              <option value="Merlins beard!">Yabba dabba doo!</option>
             </select>{' '}
             <div className="input-text-container">
               {/* <label>Shout:</label> */}

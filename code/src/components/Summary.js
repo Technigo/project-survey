@@ -49,8 +49,10 @@ const Summary = ({
             only ate hay.{' '}
           </p>
           <p>
-            <span className="input">{exclamation}</span> the Dragon raged,{' '}
-            <i>my plan has failed.</i>{' '}
+            <i>
+              <span className="input">{exclamation}</span>
+            </i>{' '}
+            the Dragon raged, <i>my plan has failed.</i>{' '}
           </p>
           <p>
             <i>
@@ -64,7 +66,7 @@ const Summary = ({
             <i>
               {' '}
               I’ll have to build the <span className="input">{animal}</span> its
-              own house,
+              own house,{' '}
             </i>
             he sighed, when a{' '}
           </p>
@@ -79,13 +81,13 @@ const Summary = ({
             </i>
           </p>
           <p>
-            That day it was decided, and{' '}
-            <span className="input">{creature}</span> moved in,{' '}
+            That day it was decided, and the{' '}
+            <span className="input">{creature}</span> moved in.{' '}
             <span className="input">{name}</span> was so excited.
           </p>
           <p>For now he had a friend, and on the weekend,</p>
           <p>
-            they would toast <span className="input">{food}</span> (yum) on the
+            they would cook <span className="input">{food}</span> (yum) on the
             fire, that the Dragons sneezes provided.{' '}
           </p>
           <p>The End.</p>

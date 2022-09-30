@@ -6,10 +6,11 @@ import React from 'react';
 
 const foodObject = [
   'veggie dogs',
-  'mac`n cheese',
-  'pizza margherita',
-  'ceasar sallad',
-  'shepherds pie',
+  'macaroni & cheese',
+  'salmon poké bowls',
+  'tofu quesadilla',
+  'surströmming',
+  'tuna casserole',
 ];
 
 const QuestionEight = ({ handleSubmit, food, handleFoodChange }) => {

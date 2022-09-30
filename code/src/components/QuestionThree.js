@@ -16,17 +16,21 @@ const QuestionThree = ({ handleSubmit, adjective, handleAdjectiveChange }) => {
       </div>
       <section className="question-container">
         {/* Form */}
-        <h1>Write or select an adjective</h1>
+        <h1>Write or select an adjective to describe an object</h1>
         <form className="select-style" onSubmit={handleSubmit}>
           <select
             className="select-form"
             onChange={handleAdjectiveChange}
             value={adjective}>
             <option value="DEFAULT">Choose adjective</option>
-            <option value="shiny">shiny</option>
-            <option value="crooked">crooked</option>
-            <option value="brilliant">brilliant</option>
-            <option value="smooth">smooth</option>
+            <option value="deformed">deformed</option>
+            <option value="proportioned">proportioned</option>
+            <option value="dubious magical">dubious magical</option>
+            <option value="large immovable">large immovable</option>
+            <option value="noteworthy">noteworthy</option>
+            <option value="unpleasantly functional">
+              unpleasantly functional
+            </option>
           </select>
           {/* Alternative selection */}
           <div className="input-text-container">

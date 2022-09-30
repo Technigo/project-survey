@@ -5,10 +5,12 @@
 import React from 'react';
 
 const mythicalCreatures = [
-  'Loch Ness Monster',
-  'the little Mermaid',
-  'Robin Hood',
-  'Fairy Godmother',
+  'centaur',
+  'fairy',
+  'mermaid',
+  'leprachaun',
+  'chimera',
+  'vampire',
 ];
 const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
   return (
@@ -23,7 +25,7 @@ const QuestionSeven = ({ handleSubmit, creature, handleCreatureChange }) => {
       <section className="question-container">
         {/* Mytical creature */}
         {/* Radio Buttons */}
-        <h2>Which fictional or real person would you like to meet?</h2>
+        <h2>Select or write a creature</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
           {mythicalCreatures.map((mythicalCreature) => (
             <label className="radio-button-overlay" key={mythicalCreature}>
