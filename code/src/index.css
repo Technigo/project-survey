@@ -92,6 +92,7 @@ p {
 } 
 
 .body-section {
+  background-color: black;
   display: grid;
   grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
   grid-template-rows: 2rem 1fr 1fr 1fr 2rem;
@@ -99,6 +100,7 @@ p {
   flex-direction: column;
   overflow-y: scroll;
   top: 0; right: 0; bottom: 0; left: 0;
+  
 }
 
 .questions-answered {
@@ -179,10 +181,25 @@ p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-content: space-between;
   text-align: center;
   }
 
+  .submit-button {
+    grid-column-start: 3;
+    grid-row-start: 4;
+    justify-self: center;
+    align-self: end;
+    border-radius: 13%;
+    margin: 5px;
+    padding: 8px;
+    font-size: large;
+    font-weight: bolder;
+    background-color: rgb(235, 219, 173);
+    color: rgb(68, 68, 68);
+    border-color: bisque;
+    
+  }
 
 /* ------------------tablet section---------------------- */
 @media (min-width: 667px) and (max-width: 1024px) {
@@ -274,23 +291,23 @@ p {
     transition: all 0.1s ease-out 0s;
   } 
 
-  .previous-button {
-    grid-column-start: 2;
-    grid-row-start: 4;
+  .next-button {
+    grid-column-start: 4;
+    grid-row-start: 3;
     align-self: end;
-    justify-self: start;
+    justify-self: end;
     margin:0;
     border-color: none;
-    padding-right: 30%;
+    /* padding-right: 30%; */
   }
   
-  .next-button {
-    grid-column-start: 2;
+  .previous-button {
+    grid-column-start: 4;
     grid-row-start: 4; 
-    align-self: end;
-    justify-self: center;
+    align-self: start;
+    justify-self: end;
     margin:0;
     border-color: none;
-    padding-left: 30%;
+    /* padding-left: 30%; */
   }
 }

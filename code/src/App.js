@@ -59,61 +59,62 @@ export const App = () => {
 
         {counter === 2 && (
           <>
-            <UserLastname userlastname={lastname} setUserlastname={setLastname} username={name} />
+            <div className="question-section"><UserLastname userlastname={lastname} setUserlastname={setLastname} username={name} /></div>
             <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
           </>
         )}
 
         {counter === 3 && (
           <>
-            <UserMail usermail={mail} setUsermail={setMail} />
+            <div className="question-section"><UserMail usermail={mail} setUsermail={setMail} /></div>
             <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
           </>
         )}
 
         {counter === 4 && (
           <>
-            <UserPhoneNumber userphonenumber={phone} setUserphonenumber={setPhone} />
+            <div className="question-section"><UserPhoneNumber userphonenumber={phone} setUserphonenumber={setPhone} /></div>
             <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
           </>
         )}
 
         {counter === 5 && (
           <>
-            <UserLocation userlocation={location} setUserlocation={setLocation} />
+            <div className="question-section"><UserLocation userlocation={location} setUserlocation={setLocation} /></div>
             <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
           </>
         )}
 
         {counter === 6 && (
           <>
-            <UserAge userage={age} setUserage={setAge} />
+            <div className="question-section"><UserAge userage={age} setUserage={setAge} /></div>
             <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
           </>
         )}
 
         {counter === 7 && (
           <>
-            <Frequency userfrequency={frequency} setUserfrequency={setFrequency} />
+            <div className="question-section"><Frequency userfrequency={frequency} setUserfrequency={setFrequency} /></div>
             <div className="questions-answered" tabIndex="0">Questions answered: {counter}/7 </div>
           </>
         )}
 
         {counter === 8 && (
           <>
-
-            <h1 tabIndex="0">Survey completed!</h1>
-            <h2 tabIndex="0">Summary of you answers:</h2>
-            <ol>
-              <li tabIndex="0">Name: {name} </li>
-              <li tabIndex="0">Lastname: {lastname} </li>
-              <li tabIndex="0">E-mail: {mail} </li>
-              <li tabIndex="0">Phone number: {phone} </li>
-              <li tabIndex="0">Physical shop location: {location} </li>
-              <li tabIndex="0">Age group: {age} </li>
-              <li tabIndex="0">Frequency for newsletter: {frequency}</li>
-            </ol>
-            <button aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
+            <div className="question-section">
+              <h1 tabIndex="0">Survey completed!</h1>
+              <h2 tabIndex="0">Summary of you answers:</h2>
+              <ol>
+                <li tabIndex="0">Name: {name} </li>
+                <li tabIndex="0">Lastname: {lastname} </li>
+                <li tabIndex="0">E-mail: {mail} </li>
+                <li tabIndex="0">Phone number: {phone} </li>
+                <li tabIndex="0">Physical shop location: {location} </li>
+                <li tabIndex="0">Age group: {age} </li>
+                <li tabIndex="0">Frequency for newsletter: {frequency}</li>
+              </ol>
+            </div>
+            <button className="submit-button" aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
           </>
         )}
 
