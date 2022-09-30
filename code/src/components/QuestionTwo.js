@@ -24,7 +24,7 @@ const QuestionTwo = ({ questionTwo, setQuestionTwo, workAlternative, setWorkAlte
       </form>
       <p className="text">Other?</p>
       <input className="inputBox" type="text" value={questionTwo} onChange={onInputChange} />
-      <button className="lastButton" type="submit" onClick={onStepChange}>next!</button>
+      <button className="lastButton" type="submit" onClick={onStepChange}>Submit</button>
     </div>
   )
 }

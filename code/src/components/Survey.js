@@ -5,6 +5,7 @@ import Name from './Name';
 import QuestionOne from './QuestionOne';
 import QuestionTwo from './QuestionTwo';
 import Summary from './Summary';
+import { useTabIndex } from 'react-tabindex';
 
 const Survey = () => {
   const [step, setStep] = useState(1);
@@ -30,7 +31,7 @@ const Survey = () => {
     <>
       {step === 1 && (
         // eslint-disable-next-line react/jsx-no-bind
-        <Name name={name} setName={setName} onStepChange={onStepChange} />
+        <Name name={name} setName={setName} tabIndex={tabIndex} onStepChange={onStepChange} />
       )}
 
       {step === 2 && (
@@ -50,7 +51,7 @@ const Survey = () => {
 
       {step < 2 && (
         <div className="lastButton">
-          <button className="lastButton" type="button" onClick={onStepChange}>Click here!</button>
+          <button className="lastButton" type="button" onClick={onStepChange}>Start here!</button>
         </div>
       )}
     </>

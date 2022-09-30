@@ -2,7 +2,7 @@
 import React from 'react';
 
 // eslint-disable-next-line no-unused-vars
-const characterGroups = ['Bugs Bunny', 'Scooby-Doo', 'Tom and Jerry', 'Garfield', 'The Simpsons'];
+const characterGroups = ['Bugs Bunny', 'Scooby-Doo', 'Tom and Jerry', 'Garfield', 'The Simpsons', 'Felix the Cat', 'Yogi Bear', 'Mickey Mouse', 'Stewie Griffin'];
 
 // eslint-disable-next-line max-len
 const QuestionOne = ({ questionOne, characterGroup, setCharacterGroup, onStepChange, onQuestionOneInputChange }) => {
@@ -10,6 +10,7 @@ const QuestionOne = ({ questionOne, characterGroup, setCharacterGroup, onStepCha
     <div className="container">
       <h1 className="homeText"> Icebreaker meeting environment survey</h1>
       <form className="form-container">
+        <p className="question">How about changing our design at work!</p>
         <p className="question">If you could work with any cartoon character, who would you choose?</p>
         {characterGroups.map((group) => (
           <label className="radioAnswers" key={group}>
@@ -24,9 +25,11 @@ const QuestionOne = ({ questionOne, characterGroup, setCharacterGroup, onStepCha
         ))}
       </form>
 
-      <p className="text">Other?</p>
-      <input className="inputBox" type="text" value={questionOne} onChange={onQuestionOneInputChange} />
-      <button className="lastButton" type="button" onClick={onStepChange}>next!</button>
+      <p className="text">If not them, so who else?</p>
+      <label>
+        <input className="inputBox" type="text" value={questionOne} onChange={onQuestionOneInputChange} />
+      </label>
+      <button className="lastButton" type="submit" onClick={onStepChange}>Next</button>
     </div>
   );
 }
