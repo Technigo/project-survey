@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
     <div className="layout">
       <header className="layout-header">Borzoi survey</header>
       <main className="layout-content">{children}</main>
-      <footer className="layout-footer">Hello yes this is footer</footer>
+      <footer className="layout-footer"><a href="https://www.amandas.dev" className="footer-link">© amandas.dev 2023</a></footer>
     </div>
 
   );
