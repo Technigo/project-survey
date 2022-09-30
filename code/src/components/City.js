@@ -8,14 +8,14 @@ export const City = ({ city, setCity }) => {
 
   return ( 
     <label for="City" name="city" >
-        <p>City center for course taken:</p>
+        <p>Location for course taken:</p>
 
     <select
         onChange={handleCityChange} value={city} >
         <option selected="">Select center</option>
-        <option value='stockholm-center'>stockholm</option>
-        <option value='oslo-center'> oslo</option>
-        <option value='malmö-center'> malmö</option>
+        <option value='spain-center'>Spain</option>
+        <option value='portugal-center'> Portugal</option>
+        <option value='Italy-center'> Italy</option>
        
     </select>
     </label>

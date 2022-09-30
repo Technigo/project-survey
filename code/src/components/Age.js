@@ -10,6 +10,7 @@ export const Age = ({ age, setAge }) => {
      Your age?
        <label>
             <input
+                
                 type="radio"
                 value ="18-24"
                 onChange={handleAgeChange} 
@@ -34,7 +35,9 @@ export const Age = ({ age, setAge }) => {
                 checked = {age === "35+"}
             /> 
         35+
+
     </label>
+    
     </form>
   );
 };

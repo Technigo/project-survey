@@ -1,13 +1,15 @@
 import React from 'react';
 
-export const Result = ({ name, age, city, level }) => {
+export const Result = ({ name, age, city, level, writing, better, email}) => {
   return (
     <>
-      <p>Thank you {name} for yor participation! Below you can see your answers. If you're happy with yor answers please submit to send it to us.</p>
-      <p>Your age are: {age}</p>
-      <p>Chosen climbingcenter: {city}</p>
-      <p>Your climbing style: {level}</p>
-      <p>As you submit you will return an e-mail with some discount on your next course. Have e good day and climb safe</p> // when click on button submit an response will show "thank you climb safe"
+      <p>Thank you <b> {name} </b> for yor participation! </p>
+      <p><b>Your age are:</b> {age}</p>
+      <p><b>Course taken in:</b> {city}</p>
+      <p><b>Your windsurfing style:</b> {level}</p>
+      <p><b>This could be better:</b> {writing}</p>
+      <p><b>This was good:</b> {better}</p>
+      <p>As you submit you will return an e-mail to <b>{email} </b> You will in a few minutes revive an email with a discount to use for your next course. Have e good day and happy surf!</p> 
     </>
   );
 }
