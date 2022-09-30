@@ -9,13 +9,20 @@ import Fondness from 'components/Fondness';
 import Result from 'components/Result';
 
 const App = () => {
+  const stepsTotalCount = 4
   const [step, setStep] = useState(1);
-  const [name, setName] = useState('');
+  const [name, setName] = useState('amanda');
   const [coolestThing, setCoolestThing] = useState('');
   const [perfectJob, setPerfectJob] = useState('');
   const [fondness, setFondness] = useState('');
+  const [errors, setErrors] = useState(null);
 
   const handleStepIncrease = () => {
+    if (step === 1 && name === '') {
+      setErrors('Please enter your name to continue')
+      return
+    }
+    setErrors(null)
     setStep(step + 1);
   }
 
@@ -43,8 +50,17 @@ const App = () => {
       )}
       {step < 5 && (
         <>
-          <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>Next step</button>
+
+          {errors && (
+            <p style={{ color: 'red' }}>
+              {errors}
+            </p>
+          )}
+
+          <p>Current step: {step} of {stepsTotalCount}</p>
+          <button type="button" onClick={handleStepIncrease}>
+            {step < stepsTotalCount ? 'Next' : 'Submit'}
+          </button>
         </>
       )}
     </div>
