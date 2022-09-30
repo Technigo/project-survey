@@ -12,13 +12,74 @@ code {
     monospace;
 } */
 
-.App{
+.App {
   font-family: Arial, Helvetica, sans-serif;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-direction:column;
-  background-color:antiquewhite;
-  height: 500px;
- border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('https://images.typeform.com/images/88dwhLUaSKWH/background/large');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  font-size: 20px;
+  height: 700px;
+  border-radius: 8px;
+  color: #fff;
+}
+.startPage {
+  margin: 50px;
+}
+.btn {
+  cursor: pointer;
+  transition-duration: 0.1s;
+  border: none;
+  border-radius: 5px;
+  height: 30px;
+  width: 10rem;
+  font-size: 15px;
+  font-weight: bold;
+  margin-top: 3rem;
+  margin-right: 1rem;
+  transition: all 0.1s ease-in-out;
+}
+.btnStart:hover {
+  transform: scale(1.1);
+}
+
+/* IntroductionPage */
+.MaritalStatus {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 4rem;
+}
+.introductionPageSpan {
+  font-size: 12px;
+}
+
+
+label{
+  margin-right: 1.5rem;
+  font-size:18px;
+}
+.allbtns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  
+}
+
+.radio {
+  width: 1.5em;
+  height: 1.5em;
+}
+
+select{
+   width: 200px;
+   height: 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size:16px;
 }

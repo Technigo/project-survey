@@ -4,11 +4,12 @@ const Section3 = (props) => {
   return (
     <>
       <h2>Section 3| This esction is about your satisfaction. </h2>
-      <p>Would you rate the overal quality of our products? </p>
+      {/* <p>Would you rate the overal quality of our products? </p> */}
       <form>
         <p>How did u perfer your order? </p>
         <label>
           <input
+            className="radio"
             type="radio"
             value="Store"
             onChange={(event) =>
@@ -23,6 +24,7 @@ const Section3 = (props) => {
         </label>
         <label>
           <input
+            className="radio"
             type="radio"
             value="Website"
             onChange={(event) =>
@@ -41,12 +43,13 @@ const Section3 = (props) => {
         </p>
         <label>
           <input
+            className="radio"
             type="radio"
             value="Yes"
             onChange={(event) =>
               props.setFormData({
                 ...props.formData,
-                serviceSatisfaction: event.target.value
+                serviceSatisfaction: event.target.value,
               })
             }
             checked={props.formData.serviceSatisfaction === 'Yes'}
@@ -55,12 +58,13 @@ const Section3 = (props) => {
         </label>
         <label>
           <input
+            className="radio"
             type="radio"
             value="No"
             onChange={(event) =>
               props.setFormData({
                 ...props.formData,
-                serviceSatisfaction: event.target.value
+                serviceSatisfaction: event.target.value,
               })
             }
             checked={props.formData.serviceSatisfaction === 'No'}
@@ -71,14 +75,24 @@ const Section3 = (props) => {
         <p>If in the website, How quick and representative is our website? </p>
         {/* fast, medium, slow */}
 
-{/* Bottons */}
+        {/* Bottons */}
         <span className="btn">
-          <button type="button" onClick={() => props.onPrevStep()}>
-            Previous
-          </button>
-          <button type="button" onClick={() => props.onNextStep()}>
-            continue
-          </button>
+          <section className="allbtns">
+            <button
+              type="button"
+              className="btn"
+              onClick={() => props.onPrevStep()}
+            >
+              Previous page
+            </button>
+            <button
+              type="Submit"
+              className="btn"
+              onClick={() => props.onNextStep()}
+            >
+              Next Page
+            </button>
+          </section>
         </span>
       </form>
     </>

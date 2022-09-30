@@ -3,8 +3,8 @@ import React, { useState } from 'react';
 const Section2 = (props) => {
   return (
     <>
-      <h2>Section 2| Your recently purchased reasons: </h2>
-      <p>- What is the main factor for you to purchese our product</p>
+      <h2>Section 2 | Your recently purchased reasons: </h2>
+      <p>- What is the main factor for you to purchese our product? </p>
       <form>
         <select
           value={props.formData.reason}
@@ -19,12 +19,24 @@ const Section2 = (props) => {
           <option value="other">Other</option>
         </select>
 
-        <button type="button" onClick={() => props.onPrevStep()}>
-          Previous
-        </button>
-        <button type="button" onClick={() => props.onNextStep()}>
-          continue
-        </button>
+        
+
+        <section className="allbtns">
+          <button
+            type="button"
+            className="btn"
+            onClick={() => props.onPrevStep()}
+          >
+            Previous page
+          </button>
+          <button
+            type="Submit"
+            className="btn"
+            onClick={() => props.onNextStep()}
+          >
+            Next Page
+          </button>
+        </section>
       </form>
     </>
   );
