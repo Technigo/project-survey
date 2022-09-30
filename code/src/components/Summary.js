@@ -9,22 +9,15 @@ const Summary = ({ formState }) => {
         <h1>{formState.name}, thank you for participating! 🍄</h1>
         <div className="summary-wrapper">
           <p>Your answers were: </p>
-          {/*
-          <p>You eat meat {firstQuestion} 🍖</p>
-          {bus === true && <p>You main transport is</p>}
-          {bike === true && <p>Good option! Your main transport is</p>}
-          {walking === true && <p>You're doing well! You prefer to</p>}
-          {bus === false && <p>You main transport is</p>}
-          {bike === false && <p>Good option! Your main transport is</p>}
-          {walking === true && <p>You doing well! You prefer to</p>}
-          <p>Usually, you buy your clothes at {closet} 👗👖</p> */}
+          <p>You eat meat {formState.meatFrequency} 🍖</p>
+          <p>You main transport is {formState.transportChoices} 🏠</p>
+          <p>Usually, you buy your clothes at {formState.storesChoice} 👗👖</p>
         </div>
         <button type="button" onClick={() => window.location.reload()} className="button button-summary">
           Start Again! ⭐
         </button>
       </div>
     </section>
-
   )
 }
 
