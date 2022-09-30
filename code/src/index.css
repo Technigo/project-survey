@@ -224,9 +224,9 @@ footer p {
 }
 
 /********* Summary ********/
-.red {
-  color: #ff0033;
+.input {
   font-weight: bolder;
+  color: #330132;
 }
 
 /*******Media Queries*******/

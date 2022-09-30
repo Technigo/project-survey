@@ -34,6 +34,7 @@ const QuestionOne = ({ handleSubmit, name, handleNameChange }) => {
                 value={name}
                 onChange={handleNameChange}
                 placeholder="Avatar name"
+                required
               />
             </div>
             <input type="submit" className="continue-btn" value="Next" />

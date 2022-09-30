@@ -27,56 +27,65 @@ const Summary = ({
         </div>
         <div className="story-container-final">
           <p>
-            <span className="red">{name}</span> was a{' '}
-            <span className="red">{mood}</span> Dragon, who drove around town in
-            a <span className="red">{adjective} </span>wagon.
+            <span className="input">{name}</span> was a{' '}
+            <span className="input">{mood}</span> Dragon, who drove around town
+            in a <span className="input">{adjective} </span>wagon.
           </p>
           <p>
-            <span className="red">{name}</span> was lonely, and said, this is
-            baloney, if I could find a friend, if only.
+            The Dragon was lonely, and said,
+            <i> this is baloney, if I could find a friend, if only.</i>
           </p>
           <p>
-            So the dragon set out to find a companion. A pet, he squealed, I’ll
-            name it Brandon.{' '}
+            So the Dragon set out to find a companion.
+            <i> A pet, he squealed, I’ll name it Brandon. </i>
           </p>
           <p>
-            But <span className="red">{name}</span> did not know what makes a
-            good pet, he settled for a <span className="red">{animal}</span>,
-            that’s what I’ll get.{' '}
+            But the Dragon did not know what makes a good pet, he settled for a{' '}
+            <span className="input">{animal}</span>,{' '}
+            <i>that’s what I’ll get. </i>
           </p>
           <p>
-            To the dragon’s dismay, this <span className="red">{animal}</span>{' '}
+            To the dragon’s dismay, this <span className="input">{animal}</span>{' '}
             only ate hay.{' '}
           </p>
           <p>
-            <span className="red">{exclamation}</span> the dragon raged, my plan
-            has failed.{' '}
+            <span className="input">{exclamation}</span> the Dragon raged,{' '}
+            <i>my plan has failed.</i>{' '}
           </p>
           <p>
-            I can’t have hay in the house. If I sneeze it’ll burn down, no
-            doubts!{' '}
+            <i>
+              I can’t have hay in the house. If I sneeze it’ll burn down, no
+              doubts!
+            </i>{' '}
           </p>
           <p>
-            So the dragon now had a{' '}
-            <span className="red">{adjectiveSecond}</span> dilemma. I’ll have to
-            build the <span className="red">{animal}</span> its own house, he
-            sighed, when a{' '}
+            So the Dragon now had a{' '}
+            <span className="input">{adjectiveSecond}</span> dilemma.{' '}
+            <i>
+              {' '}
+              I’ll have to build the <span className="input">{animal}</span> its
+              own house,
+            </i>
+            he sighed, when a{' '}
           </p>
           <p>
-            <span className="red">{creature}</span>, walked by and said. I’m
-            looking for a house. Pick me instead.{' '}
+            <span className="input">{creature}</span>, walked by and said. I’m
+            looking for a house. <i>Pick me instead. </i>
           </p>
           <p>
-            I don’t want hay and I’m pretty tidy, and I’ll make{' '}
-            <span className="red">{food}</span> every Friday.
+            <i>
+              I don’t want hay and I’m pretty tidy, and I’ll make{' '}
+              <span className="input">{food}</span> every Friday.
+            </i>
           </p>
           <p>
-            That day it was decided, and <span className="red">{creature}</span>{' '}
-            who moved in, <span className="red">{name}</span> was so excited.
+            That day it was decided, and{' '}
+            <span className="input">{creature}</span> moved in,{' '}
+            <span className="input">{name}</span> was so excited.
           </p>
-          <p>For now they had a friend, and on the weekend,</p>
+          <p>For now he had a friend, and on the weekend,</p>
           <p>
-            they would toast <span className="red">{food}</span> (yum) on the
+            they would toast <span className="input">{food}</span> (yum) on the
             fire, that the Dragons sneezes provided.{' '}
           </p>
           <p>The End.</p>
