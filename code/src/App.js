@@ -27,9 +27,14 @@ const questionsData = [
     id: "GENRE",
     question_text: "What type of music do you prefer?",
     input_type: "radio",
-    options: [{ value: "Classic" }, { value: "Hiphop" }, { value: "World" }],
+    options: [
+      { value: "Classic", label: "Classic"}, 
+      { value: "Hiphop", label: "Hiphop" }, 
+      { value: "World", label: "World" }
+    ],
   },
 ];
+
 
 // const resetForm = () => {
 //   setUserChoices([]);
@@ -80,13 +85,8 @@ export const App = () => {
     setAnswers((answers) => ([
       ...answers,
       ...updatedAnswer
-  
     ]))
-    
   };
-
-
-
 
   // const handleUserChoices = () => {
   //   setUserInput("");

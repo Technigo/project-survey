@@ -63,6 +63,52 @@ const Questions = ({
       <>
         <div className="box">
           <QuestionTitle heading={id} text={question_text} />
+          {options.map((option) => {
+            return (
+              <div key={option.value}>
+            <input
+              id={option.value}
+              type={input_type}
+              name="test"
+              value={option.value}
+              checked={userInput === option.value}
+              onChange={onChange}
+              required
+            />
+            <label htmlFor={option.value}>{option.label}</label>
+          </div>
+            );
+          })}
+        </div>
+      </>
+    );
+/*
+r
+ case "radio": {
+      return options.map((option) => {
+        return (
+          <div key={option.value}>
+            <input
+              id={option.value}
+              type={type}
+              name={name}
+              value={option.value}
+              checked={value === option.value}
+              onChange={onChange}
+              required
+            />
+            <label htmlFor={option.value}>{option.label}</label>
+          </div>
+        );
+      });
+    }
+
+Min gamla som är trasig
+else if (input_type === "radio") {
+    return (
+      <>
+        <div className="box">
+          <QuestionTitle heading={id} text={question_text} />
 
           {options.map((option) => {
             return (
@@ -82,6 +128,14 @@ const Questions = ({
         </div>
       </>
     );
+
+
+*/
+
+
+
+
+
   } else {
     return <>it's another type: {input_type}</>;
   }
