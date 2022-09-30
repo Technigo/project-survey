@@ -6,8 +6,8 @@ const Fondness = ({ fondness, setFondness }) => {
   }
   return (
     <label htmlFor="Fondness">
-      <p>How much do you love these doggos?</p>
-      <input id="Fondness" type="text" value={fondness} onChange={handleFondnessChange} />
+      <p>How much do you love these fluffy little long bois?</p>
+      <input id="Fondness" type="range" min="9" max="10" value={fondness} onChange={handleFondnessChange} />
     </label>
   );
 }

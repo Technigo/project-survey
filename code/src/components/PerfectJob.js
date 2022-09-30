@@ -1,7 +1,6 @@
 import React from 'react';
 
-// eslint-disable-next-line no-unused-vars
-const PerfectJob = ({ perfectJob, setPerfectJob, notusedrightnow }) => {
+const PerfectJob = ({ perfectJob, setPerfectJob }) => {
   const handlePerfectJobChange = (event) => {
     setPerfectJob(event.target.value);
   }
