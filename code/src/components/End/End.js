@@ -6,11 +6,11 @@ const End = ({ carbs, protein, meat, fish, vegetarian, selected, selectedSides, 
     <div className="main-container">
       <div>
         <h1>Thank you for your answers!</h1>
-        <p>Your current hunger level is: {selected}</p>
-        <p>Your preferred protein is {protein}, specifically {meat}{fish}{vegetarian}</p>
-        <p>Which carb you like: {carbs}</p>
-        <p>For sides, you want {selectedSides}</p>
-        <p>Other stuff you want to eat: {text}</p>
+        <p>Your current hunger level is: <b>{selected}</b></p>
+        <p>You&#39;d like to eat <b>{protein}</b>, specifically <b>{meat}{fish}{vegetarian}</b></p>
+        <p>Which carb you&#39;d like: <b>{carbs}</b></p>
+        <p>For sides, you want <b>{selectedSides}</b></p>
+        <p>Other stuff you want to eat: <b>{text}</b></p>
       </div>
     </div>
   );
