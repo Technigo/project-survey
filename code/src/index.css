@@ -51,8 +51,8 @@ code {
   border: 2px solid var(--sub-color);
   box-shadow: 0.8rem 1rem var(--sub-color);
   margin: 5rem auto;
-  max-width: 25rem;
-  padding: 3rem;
+  max-width: 27rem;
+  padding: 2.5rem;
 }
 
 /* Menu.jsx */
@@ -70,10 +70,10 @@ code {
 .sub-heading {
   color: var(--sub-color);
   font-family: var(--main-font);
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 700;
   line-height: 1.8rem;
-  margin-top: 2.5rem;
+  margin-top: 2.2rem;
   width: 16rem;
 }
 
@@ -86,7 +86,7 @@ code {
   font-family: 'Nunito';
   font-size: 1.2rem;
   font-weight: 700;
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   padding: 1rem;
   transition: 0.2s;
   width: fit-content;
@@ -114,7 +114,7 @@ code {
 .dot-shape {
   position: absolute;
   right: -3rem;
-  top: 16rem;
+  top: 13.5rem;
   background: var(--main-color);
   border-radius: 50%;
   display: flex;
@@ -136,11 +136,12 @@ code {
   display: flex;
   padding-top: 1rem;
   justify-content: right;
-  gap: 2rem;
+  gap: 1rem;
   margin-top: 2rem;
 }
 
-.backnext-btn {
+.back-btn,
+.next-btn {
   background-color: var(--main-color);
   border: none;
   border-radius: 0.8rem;
@@ -152,24 +153,31 @@ code {
   width: 5.5rem;
 }
 
+.next-btn {
+  background-color: var(--sub-color);
+  border: 0.3rem solid var(--sub-color);
+  border-radius: 0.8rem;
+}
+
 .select-one-message-container {
   position: absolute;
   top: 8rem;
-  right: 6rem;
+  right: 4rem;
   display: flex;
   justify-content: center;
 }
 
 .select-one-message {
-  border: 3px solid orangered;
-  color: orangered;
+  background-color: var(--third-color);
+  border-radius: 10px;
+  color: white;
   display: none;
-  font-weight: 900;
+  font-weight: 700;
   font-size: 1rem;
   text-align: center;
   transform: rotate(15deg);
-  padding: 0.3rem;
-  width: 9.5rem;
+  padding: 0.4rem;
+  width: 9rem;
 }
 
 /* BackFront.jsx */

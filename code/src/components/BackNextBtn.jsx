@@ -20,7 +20,7 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
         <p className="select-one-message" style={{ display: noAnswerMsg }}>Select one option to continue!</p>
       </div>
       <button
-        className="backnext-btn"
+        className="next-btn"
         type="button"
         onClick={() => {
           handleBtnClick(false);
@@ -29,7 +29,7 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
       </button>
 
       <button
-        className="backnext-btn"
+        className="back-btn"
         type="button"
         onClick={() => {
           for (let i = 0; i < answers.length; i += 1) {
