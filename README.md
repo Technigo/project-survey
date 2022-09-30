@@ -1,13 +1,16 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The aim of this project was to practice React state and controlled forms. I made a survey about concert habits and I've added some extra features such as question counter and html (required) validation.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with the components and made sure I got all information as I wanted. After this, I started with the CSS and moved around html elements. When doing the styling I also ended up adding more component as I realized I could have less code in the App.js. 
+Struggled a lot with the buttons. First I had three different buttons but realized I could go with one button component instead. Took some time on google and StackOverflow to get it right. I also struggled a lot with getting the radio button to be required. Got some hints from StackOverflow and tried a million  ways until I got it to work.
+
+If I had more time I would work on a progress bar.
+
+If I would start over I would also put more time on the planning.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
