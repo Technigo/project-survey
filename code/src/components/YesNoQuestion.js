@@ -8,13 +8,17 @@ export const YesNoQuestion = ({ answer, setAnswer }) => {
   }
 
   return (
-    <div>
+    <div className="questionWrapper">
       <form>
         <h2>Do you do any sports or physical activity regularly?</h2>
         {YesNo.map((group) => (
-          <label key={group} htmlFor="yesNo">
+          <label
+            key={group}
+            htmlFor="yesNo"
+            className="radioButton">
             <input
-              id="yesNo"
+              clasName="radioButtonStyling"
+              id="radio"
               type="radio"
               value={group}
               onChange={handleYesNoQuestionChange}

@@ -9,13 +9,16 @@ export const WeeklyTraining = ({ weeklyTraining, setWeeklyTraining }) => {
   }
 
   return (
-    <div>
+    <div className="questionWrapper">
       <form>
         <h2>How many times do you train per week?</h2>
         {timesPerWeek.map((group) => (
-          <label key={group} htmlFor="Weekly training">
+          <label
+            key={group}
+            htmlFor="Weekly training"
+            className="radioButton">
             <input
-              id="weeklyTraining"
+              id="radio"
               type="radio"
               value={group}
               onChange={handleWeeklyTrainingChange}

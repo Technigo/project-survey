@@ -1,8 +1,15 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
+:root {
+  font-size: 150%;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: "Open Sans Condensed", sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
+    font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   
@@ -16,13 +23,105 @@ code {
 html {
   background-image: url(./assets/background-img.jpg);
   background-size: cover;
+  background-repeat: no-repeat;
   background-position: center;
   width: 100vw;
-  height: 100vh;
+}
+
+h2 { 
+  font-size: 160%;
 }
 
 .wrapper {
-  max-width: 60%;
-  margin: 0 auto;
-  padding-top: 10%;
+  max-width: 50%;
+  margin: 5% 45% 10% 5%;
+}
+
+.questionContainer {
+  padding: 2%;
+}
+
+.questionWrapper {
+  padding-bottom: 10%;
+}
+
+.radioButton {
+  display: block;
+}
+
+#radio {
+  accent-color: #000;
+  width: 5%;
+
+}
+
+.navButton {
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 600;
+  border: none; 
+  background-color: inherit;
+  color: #000;
+  transition: all 0.3s;
+  position: relative;
+  font-size: 130%;
+  margin: 0% 6% 0% 0%;
+} 
+
+.navButton::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(0, 0, 0, 0.5);
+  border-bottom-color: rgba(0, 0, 0, 0.5);
+  transform: scale(0.1, 1);
+}
+
+.navButton:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+.navButton::after {
+  content: '';
+  position: absolute;
+  text-align: center;
+  bottom: -10%;
+  left: -10%;
+  width: 120%;
+  height: 120%;
+  z-index: 1;
+  transition: all 0.3s;
+}
+.navButton:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+
+/*Submit button*/
+.submit {
+  display: inline-block;
+}
+
+input[type=submit]:hover{
+  color: #fff;
+}
+
+/*dropdown menu*/
+select {
+  background-color: rgba(0, 0, 0, 0.605);
+  color:#fff;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 90%;
+  font-weight: 600;
+  border: none; 
+  padding: 1%;
 }

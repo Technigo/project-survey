@@ -1,7 +1,12 @@
 
 import React, { useState } from 'react';
+import { StartButton } from 'components/StartButton';
 import { Result } from 'components/Result';
 import { WeeklyTraining } from 'components/WeeklyTraining';
+import { PreviousButton } from 'components/PreviousButton';
+import { NextButton } from 'components/NextButton';
+import { SubmitButton } from 'components/SubmitButton';
+import { Intro } from 'components/Intro';
 import { AgeGroup } from './components/AgeGroup';
 import { YesNoQuestion } from './components/YesNoQuestion';
 import { SportType } from './components/SportType';
@@ -13,51 +18,62 @@ export const App = () => {
   const [sportType, setSportType] = useState('');
   const [weeklyTraining, setWeeklyTraining] = useState('');
 
-  const handleNavButtonsClick = (shouldIncrease) => {
-    if (shouldIncrease && step < 6) {
-      setStep(step + 1)
-    } else if (!shouldIncrease && step > 1) {
-      setStep(step - 1)
-    }
-  }
-
   return (
     <div className="wrapper">
+      {step === 0
+       && (
+         <div>
+           <Intro />
+           <StartButton step={step} setStep={setStep} />
+         </div>
+
+       )}
       {step === 1
-       && (<AgeGroup ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
+       && (
+         <div className="questionContainer">
+           <AgeGroup ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
+           <p>Question: {step}/4</p>
+           <NextButton step={step} setStep={setStep} />
+         </div>
        )}
       {step === 2
-      && (<YesNoQuestion answer={answer} setAnswer={setAnswer} />
+      && (
+        <div className="questionContainer">
+          <YesNoQuestion answer={answer} setAnswer={setAnswer} />
+          <p>Question: {step}/4</p>
+          <PreviousButton step={step} setStep={setStep} />
+          <NextButton step={step} setStep={setStep} />
+        </div>
       )}
       {step === 3
-      && (<SportType sportType={sportType} setSportType={setSportType} />
+      && (
+        <div className="questionContainer">
+          <SportType sportType={sportType} setSportType={setSportType} />
+          <p>Question: {step}/4</p>
+          <PreviousButton step={step} setStep={setStep} />
+          <NextButton step={step} setStep={setStep} />
+        </div>
       )}
       {step === 4 && (
-        <>
+        <div className="questionContainer">
           <WeeklyTraining weeklyTraining={weeklyTraining} setWeeklyTraining={setWeeklyTraining} />
-          <button type="button" value={step} onClick={() => handleNavButtonsClick(false)}>Previous Question</button>
-          <input type="submit" value="Submit" onClick={() => handleNavButtonsClick(true)} />
-        </>
+          <p>Question: {step}/4</p>
+          <PreviousButton step={step} setStep={setStep} />
+          <SubmitButton step={step} setStep={setStep} />
+        </div>
       )}
 
       {step >= 5
-      && (<Result
-        ageGroup={ageGroup}
-        answer={answer}
-        sportType={sportType}
-        weeklyTraining={weeklyTraining} />
+      && (
+        <div className="questionContainer">
+          <Result
+            ageGroup={ageGroup}
+            answer={answer}
+            sportType={sportType}
+            weeklyTraining={weeklyTraining} />
+        </div>
       )}
 
-      {step < 5
-      && (<p>current question: {step}/4</p>
-      )}
-
-      {step < 4 && (
-        <>
-          <button type="button" value={step} onClick={() => handleNavButtonsClick(false)}>Previous Question</button>
-          <button type="button" value={step} onClick={() => handleNavButtonsClick(true)}>Next Question</button>
-        </>
-      )}
     </div>
   );
 }

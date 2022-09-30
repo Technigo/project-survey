@@ -9,20 +9,25 @@ export const AgeGroup = ({ ageGroup, setAgeGroup }) => {
   }
 
   return (
-    <div>
+    <div className="questionWrapper">
       <form>
         <h2>What is your age?</h2>
-        {ageGroups.map((group) => (
-          <label key={group} htmlFor="ageGroup">
-            <input
-              id="ageGroup"
-              type="radio"
-              value={group}
-              onChange={handleAgeGroupChange}
-              checked={group === ageGroup} />
-            {group}
-          </label>
-        ))}
+        {ageGroups.map((group) => {
+          return (
+            <label
+              key={group}
+              htmlFor="Age group"
+              className="radioButton">
+              <input
+                id="radio"
+                type="radio"
+                value={group}
+                onChange={handleAgeGroupChange}
+                checked={group === ageGroup} />
+              {group}
+            </label>
+          );
+        })}
       </form>
     </div>
   )

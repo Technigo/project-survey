@@ -5,14 +5,14 @@ export const SportType = ({ sportType, setSportType }) => {
     setSportType(event.target.value);
   }
   return (
-    <div>
+    <div className="questionWrapper">
       <form>
         <h2>If Yes, what kind of sport of physical activity do you do?</h2>
         <select
           onChange={handleSportTypeChange}
           value={sportType}
           label="selectSportType">
-          <option value="" label="Select sport">Select sport or activity</option>
+          <option disabled value="" label="Select sport">Select sport or activity</option>
           <option value="Ball sports" label="Ball sports">Ball sports</option>
           <option value="Water sports" label="Water sports">Water sports</option>
           <option value="Martial arts" label="Martial arts">Martial arts</option>
