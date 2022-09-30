@@ -5,12 +5,12 @@
 import React from 'react';
 
 const animals = [
-  'centaur',
-  'fairy',
-  'mermaid',
-  'leprachaun',
-  'chimera',
-  'vampire',
+  'seagurkin',
+  'fhippopotomus',
+  'blobfish',
+  'sloth',
+  'flamingo',
+  'walruss',
 ];
 
 const QuestionSix = ({ handleSubmit, animal, handleAnimalChange }) => {
