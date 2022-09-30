@@ -94,7 +94,6 @@ p {
 .body-section {
   display: grid;
   grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
-  background-color: tomato;
   grid-template-rows: 2rem 1fr 1fr 1fr 2rem;
   height: 100vh;
   flex-direction: column;
@@ -114,8 +113,23 @@ p {
   color: rgb(235, 219, 173);
 }
 
-
 .ok-button {
+  border-radius: 13%;
+  margin: 5px;
+  padding: 15px;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rgb(235, 219, 173);
+  color: rgb(68, 68, 68);
+  border-color: bisque;
+}
+
+.clear-button {
+  grid-column-start: 4;
+  grid-column-end: 4;
+  grid-row-start: 4; 
+  justify-self: end;
+  align-self: end;
   border-radius: 13%;
   margin: 5px;
   padding: 8px;
@@ -124,7 +138,21 @@ p {
   background-color: rgb(235, 219, 173);
   color: rgb(68, 68, 68);
   border-color: bisque;
-  transition: all 0.1s ease-out 0s;
+}
+
+.previous-button {
+  grid-column-start: 2;
+  grid-row-start: 4; 
+  justify-self: start;
+  align-self: end;
+  border-radius: 13%;
+  margin: 5px;
+  padding: 8px;
+  font-size: large;
+  font-weight: bolder;
+  background-color: rgb(235, 219, 173);
+  color: rgb(68, 68, 68);
+  border-color: bisque;
 }
 
 /* ------------------tablet section---------------------- */

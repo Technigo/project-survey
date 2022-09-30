@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React, { useState } from 'react';
 import FirstPage from 'components/FirstPage';
@@ -123,23 +124,21 @@ export const App = () => {
         )}
 
         {counter < 9 && counter > 1 && (
-          <button type="button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
-        Previous question
+          <button type="button" className="previous-button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
+        ◀
           </button>
         )}
 
         {counter < 8 && counter > 0 && (
-          <button type="button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
-        Next question
+          <button type="button" className="next-button" aria-label="Click to see next question" onClick={() => handleCounterButtonClick(true)}>
+            ▶
           </button>
         )}
 
         {counter < 8 && counter > 0 && (
-          <p>
-            <button type="button" aria-label="clear button" onClick={handleClearButtonClick}>
+          <button type="button" className="clear-button" aria-label="clear button" onClick={handleClearButtonClick}>
           Clear input
-            </button>
-          </p>
+          </button>
         )}
       </div>
     </form>
