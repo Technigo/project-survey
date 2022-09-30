@@ -1,5 +1,5 @@
 import React from 'react';
-
+// Radio buttons, I use array and .map insted of writing code for every button
 const kmGroups = ['0-5km', '5-10km', '10+km']
 
 export const LengthThree = ({ length, setLength }) => {
@@ -8,9 +8,9 @@ export const LengthThree = ({ length, setLength }) => {
   }
   return (
     <form>
-      <p>How far is it from your home to school/work?</p>
+      <h2>How far is it from your home to school/work?</h2>
       {kmGroups.map((group) => (
-        <>
+        <div className="inputClass">
           <label htmlFor="howLong" key={group}> {group}
           </label>
           <input
@@ -19,7 +19,7 @@ export const LengthThree = ({ length, setLength }) => {
             onChange={handleLengthChange}
             Value={group}
             checked={length === group} />
-        </>
+        </div>
       ))}
     </form>
   )

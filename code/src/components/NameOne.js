@@ -6,8 +6,9 @@ export const NameOne = ({ name, setName }) => {
   }
   return (
     <form>
-      <p>What is your name?</p>
+      <h2>What is your name?</h2>
       <input
+        className="inputClass"
         type="text"
         onChange={handleNameChange}
         Value={name} />

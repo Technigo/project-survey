@@ -1,13 +1,14 @@
 import React from 'react';
-
+// select input with three options
 export const HomeTwo = ({ home, setHome }) => {
   const handleHomeChange = (event) => {
     setHome(event.target.value);
   }
   return (
     <form>
-      <p>Where do you live?</p>
+      <h2>Where do you live?</h2>
       <select
+        className="inputClass"
         onChange={handleHomeChange}
         Value={home}>
         <option value=" ">Select location</option>

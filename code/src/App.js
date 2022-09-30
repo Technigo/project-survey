@@ -23,40 +23,42 @@ export const App = () => {
   const handleStepIncrease = () => {
     setStep(step + 1);
   }
-
+  // The stepcounter starts at 0 because the first step is not a question.
+  // Then, for every step, a new question is shown with the same number as step.
+  // At step 5 the button changes text to "submit" and at last step there is no button
   return (
-    <div>
+    <div className="container">
       {step === 0 && (
-        <><p>Hello! Welcome to a survey about bike commuting</p>
-          <button type="button" onClick={handleStepIncrease}>Start!</button>
+        <><h1>Welcome!</h1><h2>This is Linnéas <b className="neon">NEONtastic</b> survey about bike commuting.</h2>
+          <button className="btn" type="button" onClick={handleStepIncrease}>Start!</button>
         </>
       )}
       {step === 1 && (
         <><p>Question: {step}</p><NameOne name={name} setName={setName} />
-          <button type="button" onClick={handleStepIncrease}>Next question</button>
+          <button className="btn" type="button" onClick={handleStepIncrease}>Next question</button>
         </>
       )}
       {step === 2 && (
         <><p>Question: {step}</p><HomeTwo home={home} setHome={setHome} />
-          <button type="button" onClick={handleStepIncrease}>Next question</button>
+          <button className="btn" type="button" onClick={handleStepIncrease}>Next question</button>
         </>
       )}
       {step === 3 && (
         <><p>Question: {step}</p><LengthThree length={length} setLength={setLength} />
-          <button type="button" onClick={handleStepIncrease}>Next question</button>
+          <button className="btn" type="button" onClick={handleStepIncrease}>Next question</button>
         </>
       )}
       {step === 4 && (
         <><p>Question: {step}</p><BikeFour bike={bike} setBike={setBike} />
-          <button type="button" onClick={handleStepIncrease}>Next question</button>
+          <button className="btn" type="button" onClick={handleStepIncrease}>Next question</button>
         </>
       )}
       {step === 5 && (
         <><p>Question: {step}</p><WantFive want={want} setWant={setWant} />
-          <button type="button" onClick={handleStepIncrease}>Submit!</button>
+          <button className="btn" type="button" onClick={handleStepIncrease}>Submit!</button>
         </>)}
       {step === 6 && (
-        <><p>Summary</p>
+        <><h2 className="summaryText">Summary</h2>
           <Summary name={name} home={home} lenght={length} bike={bike} want={want} />
         </>)}
     </div>

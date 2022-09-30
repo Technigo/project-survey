@@ -1,5 +1,5 @@
 import React from 'react';
-
+// Radio buttons, I use array and .map insted of writing code for every button
 const answers = ['Yes', 'No']
 
 export const BikeFour = ({ bike, setBike }) => {
@@ -8,9 +8,9 @@ export const BikeFour = ({ bike, setBike }) => {
   }
   return (
     <form>
-      <p>Do you have access to a bike?</p>
+      <h2>Do you have access to a bike?</h2>
       {answers.map((yesno) => (
-        <>
+        <div className="inputClass">
           <label htmlFor="ownBike" key={yesno}> {yesno} </label>
           <input
             id="ownBike"
@@ -18,7 +18,7 @@ export const BikeFour = ({ bike, setBike }) => {
             onChange={handleBikeChange}
             Value={yesno}
             checked={bike === yesno} />
-        </>
+        </div>
       ))}
     </form>
   );
