@@ -69,8 +69,8 @@ const Summary = ({
             he sighed, when a{' '}
           </p>
           <p>
-            <span className="input">{creature}</span>, walked by and said. I’m
-            looking for a house. <i>Pick me instead. </i>
+            <span className="input">{creature}</span>, walked by and said.{' '}
+            <i>I’m looking for a house. Pick me instead. </i>
           </p>
           <p>
             <i>
