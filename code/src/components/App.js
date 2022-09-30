@@ -58,7 +58,7 @@ const App = () => {
           )}
 
           <p>Current step: {step} of {stepsTotalCount}</p>
-          <button type="button" onClick={handleStepIncrease}>
+          <button type="button" onClick={handleStepIncrease} className="button">
             {step < stepsTotalCount ? 'Next' : 'Submit'}
           </button>
         </>

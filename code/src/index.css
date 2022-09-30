@@ -63,3 +63,33 @@ code {
   padding-bottom: 20px;
   font-family: 'JetBrains Mono', monospace;
 }
+
+.footer-link {
+  color: #242424;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.footer-link:hover {
+  color: #9643ca;
+}
+
+.footer-link:focus {
+  color: #9643ca;
+}
+
+.footer-link:active {
+  color: #242424;
+}
+
+.button {
+
+  }
+
+.button:hover {
+
+  }
+
+.button:active {
+
+  }
