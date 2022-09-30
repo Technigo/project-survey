@@ -10,4 +10,4 @@ const UserName = ({ userName, setUserName }) => {
     </label>
   );
 }
-export default userName;
+export default UserName;
