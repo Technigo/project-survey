@@ -1,14 +1,19 @@
-/* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable comma-dangle */
+/* eslint-disable react/jsx-closing-bracket-location */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable indent */
 import React from 'react';
 
-const QuestionSix = ({
-  handleSubmit,
-  adjectiveSecond,
-  handleAdjectiveSecondChange,
-}) => {
+const animals = [
+  'centaur',
+  'fairy',
+  'mermaid',
+  'leprachaun',
+  'chimera',
+  'vampire',
+];
+
+const QuestionSix = ({ handleSubmit, animal, handleAnimalChange }) => {
   return (
     <>
       {/* Progressbar */}
@@ -16,42 +21,39 @@ const QuestionSix = ({
         <label className="progress-label" htmlFor="survey">
           Progress{' '}
         </label>
-        <progress className="progress-bar" id="survey" value="6" max="8" />
+        <progress className="progress-bar" id="survey" value="4" max="8" />
       </div>
       <section className="question-container">
-        {/* Adjective 2 input */}
-        <div className="form-container">
-          <h1>Choose or write another adjective</h1>
-          <form className="select-style" onSubmit={handleSubmit}>
-            <select
-              className="select-form"
-              onChange={handleAdjectiveSecondChange}
-              value={adjectiveSecond}>
-              <option value="default">Choose adjective</option>
-              <option value="puzzling">puzzling</option>
-              <option value="paranoid ">paranoid</option>
-              <option value="skeptical">skeptical</option>
-              <option value="unsettled">unsettled</option>
-              <option value="inexplicable">inexplicable</option>
-              <option value="gloomy">gloomy</option>
-            </select>{' '}
-            {/* Alternative selection */}
-            <div className="input-text-container">
-              <label htmlFor="alt-selection">
-                {/* Other: */}
-                <input
-                  placeholder="Other"
-                  className="input-form"
-                  id="alt-selection"
-                  type="text"
-                  onChange={handleAdjectiveSecondChange}
-                />
-              </label>
-            </div>
-            <input type="submit" className="continue-btn" value="Next" />
-          </form>
-        </div>
-        {/* Continue button */}
+        {/* Form */}
+        <h1>Select an animal or write your own</h1>
+        <form className="radio-button-container" onSubmit={handleSubmit}>
+          {animals.map((animalProp) => (
+            <label className="radio-button-overlay" key={animal} Prop>
+              <input
+                type="radio"
+                className="radio-button"
+                value={animalProp}
+                onChange={handleAnimalChange}
+                checked={animalProp === animals}
+              />
+              {animalProp}
+            </label>
+          ))}
+          {/* Alternative selection */}
+          <div className="input-text-container">
+            <label htmlFor="alt-selection">
+              {/* Animal: */}
+              <input
+                placeholder="Other"
+                className="input-form"
+                id="alt-selection"
+                type="text"
+                onChange={handleAnimalChange}
+              />
+            </label>
+          </div>
+          <input type="submit" className="continue-btn" value="Next" />
+        </form>
       </section>
     </>
   );

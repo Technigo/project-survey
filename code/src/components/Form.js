@@ -98,8 +98,8 @@ const Form = () => {
       {step === 5 && (
         <QuestionFour
           handleSubmit={handleSubmit}
-          animal={animal}
-          handleAnimalChange={handleAnimalChange}
+          adjectiveSecond={adjectiveSecond}
+          handleAdjectiveSecondChange={handleAdjectiveSecondChange}
         />
       )}
       {step === 6 && (
@@ -112,8 +112,8 @@ const Form = () => {
       {step === 7 && (
         <QuestionSix
           handleSubmit={handleSubmit}
-          adjectiveSecond={adjectiveSecond}
-          handleAdjectiveSecondChange={handleAdjectiveSecondChange}
+          animal={animal}
+          handleAnimalChange={handleAnimalChange}
         />
       )}
       {step === 8 && (
