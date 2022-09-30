@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Summary = ({
-  name, cakeOption, quality, service, prices, opinion, isVoucherVisible,
+  name, cakeOption, cakeQuality, service, prices, opinion, isVoucherVisible,
   handleVoucherPress
 }) => {
   return (
@@ -11,7 +11,7 @@ const Summary = ({
       favourite cakes! We love them too 🎂
       </p>
       <p>And we totally understand your preferences in cakes.
-      You want your cake to be <span className="answers">{quality}</span>.
+      You want your cake to be <span className="answers">{cakeQuality}</span>.
       Gotcha!😎
       </p>
       <p>We would also want to mention how thankful we are to know that you think our <span className="answers">{service}</span>
