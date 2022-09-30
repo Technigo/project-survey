@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 
 const pastaSorts = [
@@ -17,7 +18,7 @@ const PastaKindQuestion = ({ nameInput, preference, sortOfPasta, onSortOfPastaCh
         <p className="text-pasta">Hello {nameInput}, you are in the mood for {preference}. Answer what kind of pasta you like:</p>
         <div className="pasta-container">
           {pastaSorts.map((sort) => (
-            <label className="label-input-pasta" key={sort} htmlFor="sortOfPasta">
+            <label tabIndex="0" className="label-input-pasta" key={sort} htmlFor="sortOfPasta">
               <input
                 id={sortOfPasta}
                 type="radio"

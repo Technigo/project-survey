@@ -1,12 +1,12 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
-// imort Alert from './Alert'
 
 // eslint-disable-next-line max-len
 const OtherIngredientQuestion = ({ otherIngredient, sortOfPasta, onOtherIngredientChange, onStepChange, onPreviousQuestionChange, onEnter }) => {
   return (
     <div className="survey-container">
       <form className="form-question">
-        <label className="label-text" htmlFor="otherIngredient">
+        <label tabIndex="0" className="label-text" htmlFor="otherIngredient">
             What would you like to add to the {sortOfPasta}
         </label>
         <select
@@ -27,7 +27,7 @@ const OtherIngredientQuestion = ({ otherIngredient, sortOfPasta, onOtherIngredie
 
         <div className="button-container">
           <button className="survey-button" type="button" onClick={onPreviousQuestionChange}>Back</button>
-          <button className="survey-button" type="button" onClick={onStepChange} onKeyPress={onEnter}>Next</button>
+          <button className="survey-button" type="button" onClick={onStepChange}>Next</button>
         </div>
       </form>
     </div>

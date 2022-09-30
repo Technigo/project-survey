@@ -2,12 +2,13 @@
 import React from 'react'
 // import Alert from './Alert';
 
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 // eslint-disable-next-line max-len
 const NameQuestion = ({ nameInput, onNameInputChange, onStepChange, onEnter }) => {
   return (
     <div className="survey-container">
       <form className="form-question">
-        <label className="label-text" htmlFor="nameInput">
+        <label tabIndex="0" className="label-text" htmlFor="nameInput">
           What is your name?
         </label>
         <input

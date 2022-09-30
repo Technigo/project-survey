@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react'
 
 const hungerLevel = {
@@ -10,11 +11,11 @@ const Overveiw = ({ nameInput, preference, sortOfPasta, otherIngredient, hungerI
   return (
     <div className="survey-container">
       <section className="overview-container">
-        <h2>Thanks for participating {nameInput}!</h2>
+        <h2 tabIndex="0">Thanks for participating {nameInput}!</h2>
         <div className="overveiw-summary">
-          <p>You are in the mood for some {preference} food</p>
-          <p>You prefere {sortOfPasta}, with some {otherIngredient}, nice!</p>
-          <p>{hungerLevel[hungerInput]} <a href="https://www.yummly.com/recipes?q=pasta&taste-pref-appended=true" target="_blank" rel="noreferrer">Recipes!</a></p>
+          <p tabIndex="0">You are in the mood for some {preference} food</p>
+          <p tabIndex="0">You prefere {sortOfPasta}, with some {otherIngredient}, nice!</p>
+          <p tabIndex="0">{hungerLevel[hungerInput]} <a href="https://www.yummly.com/recipes?q=pasta&taste-pref-appended=true" target="_blank" rel="noreferrer">Recipes!</a></p>
         </div>
         <form>
           <button className="restart-button" type="submit">Restart</button>

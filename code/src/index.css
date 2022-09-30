@@ -164,7 +164,6 @@ input[type='radio'] {
   display: flex;
   flex-direction: column;
   gap: 30px;
-  text-overflow: hidden;
   text-align: center;
 }
 

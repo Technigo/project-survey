@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 
 // eslint-disable-next-line max-len
@@ -5,7 +6,7 @@ const HungerQuestion = ({ hungerInput, onHungerInputChange, onStepChange, onPrev
   return (
     <div className="survey-container">
       <form className="form-question">
-        <label className="label-text" htmlFor={hungerInput}>
+        <label tabIndex="0" className="label-text" htmlFor={hungerInput}>
           How hungry are you on a scale from full too starving?
           <input
             type="range"
@@ -16,7 +17,8 @@ const HungerQuestion = ({ hungerInput, onHungerInputChange, onStepChange, onPrev
             onChange={onHungerInputChange}
             onKeyPress={onEnter}
             required
-            className="slider" />
+            className="slider"
+            tabIndex="0" />
 
           <div className="slider-text">
             <span>Full</span>
