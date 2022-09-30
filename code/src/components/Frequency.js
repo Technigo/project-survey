@@ -6,15 +6,15 @@ const Frequency = ({ userfrequency, setUserfrequency }) => {
 
   return (
     <div>
-      <h1 tabIndex="0">Frequency:</h1>
+      <h1 className="check-h1" tabIndex="0">Frequency:</h1>
       {frequencyGroups.map((frequency) => (
-        <label tabIndex="0" key={frequency} htmlFor="frequency">
+        <label className="label" tabIndex="0" key={frequency} htmlFor="frequency">
           <input
             type="checkbox"
             value={frequency}
             onChange={(event) => setUserfrequency(event.target.checked)}
             checked={userfrequency === frequency} />
-          {frequency}
+          {frequency}&nbsp;&nbsp;&nbsp;&nbsp;
         </label>
       ))}
     </div>

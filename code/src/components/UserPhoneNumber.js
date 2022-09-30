@@ -7,8 +7,8 @@ const UserPhoneNumber = ({ userphonenumber, setUserphonenumber }) => {
   };
   return (
     <div>
-      <p tabIndex="0">What is your mobile phone number?</p>
-      <input value={userphonenumber} type="email" placeholder="0123456789" required="required" onChange={handlePhoneNumberInputChange} />
+      <p className="user-p" tabIndex="0">What is your mobile phone number?</p>
+      <input value={userphonenumber} className="user-input" type="tel" placeholder="0123456789" required="required" onChange={handlePhoneNumberInputChange} />
     </div>
   )
 }

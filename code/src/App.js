@@ -103,7 +103,7 @@ export const App = () => {
           <>
             <div className="question-section">
               <h1 tabIndex="0">Survey completed!</h1>
-              <h2 tabIndex="0">Summary of you answers:</h2>
+              <p tabIndex="0">Summary of you answers:</p>
               <ol>
                 <li tabIndex="0">Name: {name} </li>
                 <li tabIndex="0">Lastname: {lastname} </li>
@@ -124,7 +124,7 @@ export const App = () => {
           </button>
         )}
 
-        {counter < 9 && counter > 1 && (
+        {counter < 8 && counter > 1 && (
           <button type="button" className="previous-button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
         ◀
           </button>

@@ -7,8 +7,8 @@ const UserLastname = ({ userlastname, setUserlastname, username }) => {
   };
   return (
     <div>
-      <p tabIndex="0">Nice to meet you {username} and your surname?</p>
-      <input value={userlastname} type="text" placeholder="surname" required="required" onChange={handleUserLastnameInputChange} />
+      <p className="user-p" tabIndex="0">Nice to meet you {username} and your surname?</p>
+      <input value={userlastname} className="user-input" type="text" placeholder="surname" required="required" onChange={handleUserLastnameInputChange} />
     </div>
   )
 }

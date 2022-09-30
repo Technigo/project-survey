@@ -45,7 +45,7 @@ h1 {
   color: rgb(235, 219, 173);
 }
 
-p {
+p, li {
   color: rgb(235, 219, 173);
   font-weight: unset;
   font-size: 20px;
@@ -92,7 +92,7 @@ p {
 } 
 
 .body-section {
-  background-color: gray;
+  background-color: black;
   display: grid;
   grid-template-columns: 2rem 1fr 1fr 1fr 2rem;
   grid-template-rows: 2rem 1fr 1fr 1fr 2rem;
@@ -200,24 +200,58 @@ p {
     border-color: bisque;
   }
 
-  .username-p {
-    padding-bottom:20px;
+  .user-p {
+    padding-bottom:60px;
     font-size: 30px;
     line-height: 38px;
   }
 
-  .username-input, select, textarea {
+  .user-input, select, textarea {
     border:none;
+    background-color: black;
     border-bottom: 5px solid  rgb(235, 219, 173);
+    font-size: 20px; 
   }
 
   textarea:focus, input:focus {
     color: rgb(235, 219, 173);
 }
 
-  .username-input::placeholder{
+  .user-input::placeholder{
     color: rgb(235, 219, 173);
   }
+
+  .star-shop {
+    
+    font-size: 30px;
+    padding-bottom: 5px;
+    line-height: 36px;
+  }
+
+  .star-shop-select {
+    border:none;
+    background-color: rgb(235, 219, 173);
+    border-bottom: 5px solid  rgb(235, 219, 173);
+    margin-bottom: 20px;
+  }
+
+  .star-shop-select-option {
+    background-color: white;
+  }
+
+  .star{
+    font-family: 'Permanent Marker', cursive;
+  }
+
+  .label {
+    padding-top:5px;
+    color:rgb(235, 219, 173);
+  }
+
+  .check-h1 {
+    padding-bottom:10px
+  }
+
 
 /* ------------------tablet section---------------------- */
 @media (min-width: 667px) and (max-width: 1024px) {
@@ -255,6 +289,11 @@ p {
     transition: all 0.1s ease-out 0s;
   } 
 
+  .question-section {
+    grid-column-start: 3;
+
+  }
+
   .previous-button {
     grid-column-start: 2;
     grid-row-start: 4; 
@@ -275,6 +314,22 @@ p {
     padding: 17.5px;
     grid-column-start: 5;
     font-size: 26px;
+  }
+
+  .user-p {
+    padding-bottom:60px;
+    font-size: 50px;
+    line-height: 50px;
+  }
+
+  .user-input {
+    padding: 20px;
+    font-size: 20px;
+  }
+
+  .ok-button {
+    margin: 15px;
+    padding: 10px;
   }
 }
 
@@ -327,5 +382,21 @@ p {
     margin:0;
     border-color: none;
     /* padding-left: 30%; */
+  }
+
+  .user-p {
+    padding-bottom:60px;
+    font-size: 30px;
+    line-height: 38px;
+  }
+  
+  .user-input {
+    padding: 20px;;
+  }
+
+  .star-shop-select{
+    margin-bottom: 80px;
+    margin-left:300px;
+    margin-right:300px;
   }
 }

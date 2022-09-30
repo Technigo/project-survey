@@ -7,15 +7,15 @@ const UserLocation = ({ userlocation, setUserlocation }) => {
 
   return (
     <>
-      <p tabIndex="0">What is your nearest physical Star shop ⭐? </p>
-      <p tabIndex="0">Select one of the options below</p>
-      <select value={userlocation} onChange={handleUserLocationInputChange}>
-        <option value="">Select location</option>
-        <option value="Stockholm">Stockholm</option>
-        <option value="Oslo">Oslo</option>
-        <option value="Malmö">Malmö</option>
-        <option value="Göteborg">Göteborg</option>
-        <option value="Umeå">Umeå</option>
+      <p className="star-shop" tabIndex="0">What is your nearest physical <span className="star">Star shop</span>⭐? </p>
+      <p className="user-p" tabIndex="0">Select one of the options below</p>
+      <select className="star-shop-select" value={userlocation} onChange={handleUserLocationInputChange}>
+        <option className="star-shop-select-option" value="">Select location</option>
+        <option className="star-shop-select-option" value="Stockholm">Stockholm</option>
+        <option className="star-shop-select-option" value="Oslo">Oslo</option>
+        <option className="star-shop-select-option" value="Malmö">Malmö</option>
+        <option className="star-shop-select-option" value="Göteborg">Göteborg</option>
+        <option className="star-shop-select-option" value="Umeå">Umeå</option>
       </select>
     </>
 

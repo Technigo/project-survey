@@ -7,9 +7,9 @@ const UserAge = ({ userage, setUserage }) => {
 
   return (
     <div>
-      <h1 tabIndex="0">Age group: </h1>
+      <h1 className="check-h1" tabIndex="0">Age group: </h1>
       {ageGroups.map((group) => (
-        <label tabIndex="0" key={group}>
+        <label className="label" tabIndex="0" key={group}>
           <input
             type="radio"
             value={group}

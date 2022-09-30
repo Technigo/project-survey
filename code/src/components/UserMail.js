@@ -7,8 +7,8 @@ const UserMail = ({ usermail, setUsermail }) => {
   };
   return (
     <div>
-      <p tabIndex="0">What is your email address?</p>
-      <input value={usermail} type="email" placeholder="email address" required="required" onChange={handleMailInputChange} />
+      <p className="user-p" tabIndex="0">What is your email address?</p>
+      <input value={usermail} className="user-input" type="email" placeholder="email address" required="required" onChange={handleMailInputChange} />
     </div>
   )
 }
