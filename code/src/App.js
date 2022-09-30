@@ -124,7 +124,7 @@ export const App = () => {
           </button>
         )}
 
-        {counter < 8 && counter > 1 && (
+        {counter < 9 && counter > 1 && (
           <button type="button" className="previous-button" aria-label="Click to see previous question" onClick={() => handleCounterButtonClick(false)}>
         ◀
           </button>
