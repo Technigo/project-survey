@@ -1,10 +1,17 @@
 import React from 'react';
 
 // eslint-disable-next-line no-unused-vars
-const UserAnswers = ({ userName, userTeam, userFeelings, userBuddy, userAloneOrBuddy }) => {
+const UserAnswers = ({
+  userName,
+  userTeam,
+  userFeelings,
+  userAloneOrBuddy,
+  userHours,
+  userBuddy
+}) => {
   return (
-    <>
-      <div className="answers-wrapper">
+    <div className="answers-wrapper">
+      <div>
         <h1 className="header">Thank you !</h1>
         {/* This conditional returns different blocks depending on UserTeam answer */}
         {(() => {
@@ -26,7 +33,7 @@ const UserAnswers = ({ userName, userTeam, userFeelings, userBuddy, userAloneOrB
             );
           } else if (userTeam === 'Hippos') {
             return (
-              <h3 className="sub-header">Hip Hip {userTeam}!</h3>
+              <h3 className="sub-header">Hipp Hipp, {userTeam}!</h3>
             );
           } else if (userTeam === 'Lions') {
             return (
@@ -46,7 +53,7 @@ const UserAnswers = ({ userName, userTeam, userFeelings, userBuddy, userAloneOrB
                   {userName}, you aren&apos;t overreacting feeling that last week
                   was {userFeelings}! It actually was!
                 </h3>
-                <h3 className="sub-header">“Believe in the person you want to be and then be willing to work for it” {userFeelings}</h3>
+                <h3 className="sub-header">“Believe in the person you want to be and then be willing to work for it”</h3>
               </>
             );
           } else if (userFeelings === 'confusing' || userFeelings === 'stressful') {
@@ -61,14 +68,37 @@ const UserAnswers = ({ userName, userTeam, userFeelings, userBuddy, userAloneOrB
                 </h3>
               </>
             );
-          } else {
+          }
+        })()}
+      </div>
+
+      <div>
+        {(() => {
+          if (userAloneOrBuddy === 'alone') {
             return (
-              <h3 className="sub-header">Nice Job {userFeelings}</h3>
+              <>
+                <h3 className="question-title">
+                  Working {userAloneOrBuddy} {userHours} hours, has pros and cons. Remember:
+                </h3>
+                <h3 className="sub-header">“You never walk alone”</h3>
+              </>
+            );
+          } else if (userAloneOrBuddy === 'pair') {
+            return (
+              <>
+                <h3 className="question-title">
+                  We are sure you and {userBuddy} made a great job!
+                  Don&apos;t forget to demo your project!
+                </h3>
+                <h3 className="sub-header">
+                  “Believe in the person you want to become”
+                </h3>
+              </>
             );
           }
         })()}
       </div>
-    </>
+    </div>
   )
 }
 

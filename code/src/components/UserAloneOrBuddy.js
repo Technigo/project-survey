@@ -3,8 +3,8 @@ import alone from 'assets/icons8-developer-100.png';
 import buddy from 'assets/icons8-paired-100.png';
 
 const UserBuddy = [
-  { text: 'Alone', value: 'Alone', id: 1, image: alone },
-  { text: 'In pair', value: 'Pair', id: 2, image: buddy }
+  { text: 'Alone', value: 'alone', id: 1, image: alone },
+  { text: 'In pair', value: 'pair', id: 2, image: buddy }
 ]
 
 const UserAloneOrBuddy = ({ userAloneOrBuddy, setUserAloneOrBuddy, userName }) => {

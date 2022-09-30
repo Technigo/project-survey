@@ -7,8 +7,8 @@ import UserTeam from 'components/UserTeam';
 import UserAnswers from './UserAnswers';
 import UserConfirm from './UserConfirm';
 import UserInput from './UserInput';
-/* import UserTeamMate from 'components/UserTeam'; */
 import UserAloneOrBuddy from './UserAloneOrBuddy';
+import UserHours from './UserHours';
 
 const Survey = () => {
   const [counter, setCounter] = useState(0);
@@ -17,6 +17,7 @@ const Survey = () => {
   const [userTeam, setUserTeam] = useState('');
   const [userBuddy, setUserBuddy] = useState('');
   const [userAloneOrBuddy, setUserAloneOrBuddy] = useState('');
+  const [userHours, setUserHours] = useState('');
 
   /* This creates a counter. We use it to navigate into the survey and display the questions */
   const handleCounterButtonClick = (shouldIncrease) => {
@@ -28,10 +29,13 @@ const Survey = () => {
   }
   /* This will reset the survey */
   const handleRestartButtonClick = () => {
+    setCounter(0)
     setUserName('')
     setUserFeelings('')
     setUserTeam('')
-    setCounter(0)
+    setUserBuddy('')
+    setUserAloneOrBuddy('')
+    setUserHours('')
   }
 
   const handleSubmitButtonClick = () => {
@@ -40,7 +44,7 @@ const Survey = () => {
   }
   /*  The survey starts here */
   return (
-    <div className="survey-card">
+    <>
       {counter === 0 && (
         <>
           <div className="survey-info">
@@ -82,16 +86,6 @@ const Survey = () => {
         </div>
       )}
 
-      {/* {counter === 4 && (
-        <div className="survey-info">
-          <userTeamMate
-            userTeamMate={userTeamMate}
-            setUserTeamMate={setUserTeamMate}
-            userName={userName}
-          />
-        </div>
-      )} */}
-
       {counter === 4 && (
         <div className="survey-info">
           <UserAloneOrBuddy
@@ -102,18 +96,16 @@ const Survey = () => {
         </div>
       )}
 
-      {(counter === 5 && userAloneOrBuddy === 'Alone') && (
+      {(counter === 5 && userAloneOrBuddy === 'alone') && (
         <div className="survey-info">
-          <UserInput
-            userInput={userBuddy}
-            setUserInput={setUserBuddy}
-            headerText="Free solo! But remember: &quot;you never walk alone&quot; "
-            subHeaderText="Who was your code pair?"
+          <UserHours
+            userHours={userHours}
+            setUserHours={setUserHours}
           />
         </div>
       )}
 
-      {(counter === 5 && userAloneOrBuddy === 'Pair') && (
+      {(counter === 5 && userAloneOrBuddy === 'pair') && (
         <div className="survey-info">
           <UserInput
             userInput={userBuddy}
@@ -125,7 +117,7 @@ const Survey = () => {
       )}
 
       {counter === 6 && (
-        <div className="survey-info">
+        <div className="answers-wrapper">
           <UserConfirm />
         </div>
       )}
@@ -139,6 +131,7 @@ const Survey = () => {
               userFeelings={userFeelings}
               userBuddy={userBuddy}
               userAloneOrBuddy={userAloneOrBuddy}
+              userHours={userHours}
             />
           </div>
           <div className="btn-container">
@@ -161,7 +154,7 @@ const Survey = () => {
           <button className="btn restart" type="button" onClick={handleRestartButtonClick}>Restart</button>
         </div>
       )}
-    </div>
+    </>
   );
 };
 

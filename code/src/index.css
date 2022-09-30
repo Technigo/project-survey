@@ -33,9 +33,17 @@ code {
   display: flex;
   width: 80%;
   margin: 0 auto;
-  height: 500px;
+  height: 800px;
   flex-direction: column;
   position: relative;
+  justify-content: center;
+  row-gap: 40px;
+}
+
+.answers-wrapper {
+  display: flex;
+  flex-direction: column;
+  row-gap: 20px;
 }
 
 /* SURVEY */
