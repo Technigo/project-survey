@@ -28,11 +28,12 @@ code {
 }
 
 .inner-wrapper {
+  width: 100vw;
   max-width: 900px;
 }
 
 .question-box {
-  padding-bottom: 50%;
+  padding-bottom: 20%;
 }
 
 .radioBtn {
@@ -81,8 +82,11 @@ p {
 label {
   display: block;
   font-family: 'Courier New', Courier, monospace;
-  padding: 5%;
   font-size: 18px;
+}
+
+.label-box {
+  margin-right: 1%;
 }
 
 button {
@@ -95,4 +99,10 @@ button {
   font-size: 20px;
   font-weight: bold;
   border-radius: 8px;
+}
+
+img {
+  width: 40%;
+  height: auto;
+  border-radius: 100px;
 }

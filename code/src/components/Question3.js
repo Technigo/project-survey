@@ -1,41 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Question3 = ({ question3, setQuestion3, handleStepIncrese }) => {
+  const [chosen, setChosen] = useState(false);
   const handleQuestion3Change = (event) => {
     setQuestion3(event.target.value)
+    setChosen(true);
   }
 
   return (
     <>
-      <p className="question">What do you think again?</p>
+      <p className="question">How are you feeling?</p>
       <div className="radioBtnContainer">
-        <label htmlFor="one" className="radioBtn">One
+        <label htmlFor="happy" className="radioBtn">Happy
           <input
             type="radio"
-            id="one"
-            value="one"
-            checked={question3 === 'one'}
+            id="happy"
+            value="happy"
+            checked={question3 === 'happy'}
             onChange={(event) => handleQuestion3Change(event)} />
         </label>
-        <label htmlFor="two" className="radioBtn">Two
+        <label htmlFor="sad" className="radioBtn">Sad
           <input
             type="radio"
-            id="two"
-            value="two"
-            checked={question3 === 'two'}
+            id="sad"
+            value="sad"
+            checked={question3 === 'sad'}
             onChange={(event) => handleQuestion3Change(event)} />
         </label>
-        <label htmlFor="three" className="radioBtn">Three
+        <label htmlFor="angry" className="radioBtn">Angry
           <input
             type="radio"
-            id="three"
-            value="three"
-            checked={question3 === 'three'}
+            id="angry"
+            value="angry"
+            checked={question3 === 'angry'}
+            onChange={(event) => handleQuestion3Change(event)} />
+        </label>
+        <label htmlFor="hungry" className="radioBtn">Hungry
+          <input
+            type="radio"
+            id="hungry"
+            value="hungry"
+            checked={question3 === 'hungry'}
+            onChange={(event) => handleQuestion3Change(event)} />
+        </label>
+        <label htmlFor="tired" className="radioBtn">Tired
+          <input
+            type="radio"
+            id="tired"
+            value="tired"
+            checked={question3 === 'tired'}
+            onChange={(event) => handleQuestion3Change(event)} />
+        </label>
+        <label htmlFor="confused" className="radioBtn">Confused
+          <input
+            type="radio"
+            id="confused"
+            value="confused"
+            checked={question3 === 'confused'}
             onChange={(event) => handleQuestion3Change(event)} />
         </label>
       </div>
       <div>
-        <button type="button" id="nextBtn" onClick={handleStepIncrese}>Next page</button>
+        <button type="button" id="nextBtn" onClick={(event) => handleStepIncrese(event, chosen)}>Next page</button>
         <p>Question 3 out of 4</p>
       </div>
     </>

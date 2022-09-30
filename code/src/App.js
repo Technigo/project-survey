@@ -14,7 +14,10 @@ export const App = () => {
   const [question3, setQuestion3] = useState('');
   const [question4, setQuestion4] = useState('');
 
-  const handleStepIncrese = (element) => {
+  const handleStepIncrese = (element, choicemade) => {
+    if (!choicemade) {
+      return;
+    }
     if (element !== undefined) {
       element.preventDefault();
     }

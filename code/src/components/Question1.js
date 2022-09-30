@@ -1,8 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 const Question1 = ({ name, setName, handleStepIncrese }) => {
+  const [chosen, setChosen] = useState(false);
+
   const handleNameChange = (event) => {
-    setName(event.target.value)
+    setName(event.target.value);
+    setChosen(true);
   }
 
   const checkKeyPress = (event) => {
@@ -19,7 +22,7 @@ const Question1 = ({ name, setName, handleStepIncrese }) => {
         <input type="text" id="your-name" value={name} onChange={handleNameChange} onKeyDown={checkKeyPress} />
       </label>
       <div>
-        <button type="button" id="nextBtn" onClick={handleStepIncrese}>Next page</button>
+        <button type="button" id="nextBtn" onClick={(event) => handleStepIncrese(event, chosen)}>Next page</button>
         <p>Question 1 out of 4</p>
       </div>
     </form>

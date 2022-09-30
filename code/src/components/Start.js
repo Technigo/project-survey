@@ -5,7 +5,7 @@ const Start = ({ handleStepIncrese }) => {
     <div>
       <h1>Survey</h1>
       <h2>Please take a minute to answer some questions about your day</h2>
-      <button type="button" id="nextBtn" onClick={handleStepIncrese}>Start</button>
+      <button type="button" id="nextBtn" onClick={(e) => handleStepIncrese(e, true)}>Start</button>
     </div>
 
   );
