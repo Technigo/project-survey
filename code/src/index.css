@@ -46,7 +46,7 @@ code {
   width: 300px;
   margin: 0 auto;
   padding: 20px;
-  margin-top: 40%;
+  margin-top: 20%;
   border-radius: 20px;
 }
 
@@ -291,7 +291,7 @@ textarea::placeholder{
 h3{
   text-align: center;
   font-size: 30px;
-  width: 400px;
+  width: 390px;
 }
 
 /*---It's Submitted!--*/

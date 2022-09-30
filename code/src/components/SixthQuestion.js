@@ -32,7 +32,7 @@ const SixthQuestion = ({
         <option value="a fresher feeling"> Fresher Feeling 🧖 </option>
         <option value="to focus on education"> Education and instructions 📚 </option>
         <option value="a brighter smile"> Brighter smile 💎</option>
-        <option value="to work on your treatment plan"> Peronalized treatment plan 🔮</option>
+        <option value="to work on your treatment plan"> Personalized treatment plan 🔮</option>
         <option value="a nice treatment"> I don´t have any special focus today 💁 </option>
 
       </select>
