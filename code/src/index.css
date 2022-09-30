@@ -75,7 +75,7 @@ p {
   border-radius: 10px;
 }
 .progress-bar::-webkit-progress-value {
-  background: #0e6a31b5;
+  background: #02652873;
   border-radius: 10px;
 }
 
@@ -105,8 +105,8 @@ form select {
   border: none;
   font-family: 'Josefin Sans', sans-serif;
   border: 0;
-  border-bottom: 2px solid #013314;
-  color: #013314;
+  border-bottom: 2px solid #330120;
+  color: #330120;
   background: #ffffffc5;
   width: 100%;
 }
@@ -138,7 +138,7 @@ form select {
   padding: 6px 14px;
   min-height: 40px;
   background-color: rgb(255, 255, 255);
-  color: #4f6857;
+  color: #330120;
   border-radius: 4px;
 }
 
@@ -189,20 +189,17 @@ form select {
   border-radius: 10px;
   background: none;
   border: 0;
-  box-shadow: inset 0 0 0 1.5px #ffffffc5;
+  box-shadow: inset 0 0 0 1px #ffffffc5;
   appearance: none;
   padding: 0;
   transition: box-shadow 150ms cubic-bezier(0.95, 0.15, 0.5, 1.25);
   pointer-events: none;
-  margin: 0 5px 0 0;
+  margin: 0 8px 0 0;
 }
 
 .radio-button:focus {
   outline: none;
-}
-
-.radio-button:checked {
-  box-shadow: inset 0 0 0 8px #ffffff;
+  box-shadow: inset 0 0 0 3.5px #330120;
 }
 
 /********* Footer ********/
@@ -226,7 +223,7 @@ footer p {
 /********* Summary ********/
 .input {
   font-weight: bolder;
-  color: #330132;
+  color: #330120;
 }
 
 /*******Media Queries*******/
