@@ -1,15 +1,17 @@
 import React from 'react';
 
+
 const Startpage = () => {
   return (
-    <div>
-      <h1> MUSIC GENERATOR</h1>
-      <h2>
+    
+      <div className ="box">
+      <h1 className = "title">MUSIC</h1>
+      <h2 className = "sub-title">
         BY ANSWERING SOME QUESTIONS, THIS LITTLE MASHINE WILL SPIT OUT SOME
         NIIIICE MUSIC BASED ON YOUR MOOD.
       </h2>
-      FIRST OF ALL, WHAT'S YOUR NAME?
     </div>
+ 
   );
 };
 export default Startpage;

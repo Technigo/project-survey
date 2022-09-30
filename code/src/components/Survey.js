@@ -7,6 +7,7 @@ import React from 'react';
 const Survey = ({id, question_text, input_type, options, onChange, inputValue}) => {
   return (
     <>
+
       if (input_type==="text") {
         <input
           id={id}

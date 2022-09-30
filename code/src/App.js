@@ -1,100 +1,157 @@
 import React, { useState } from "react";
-// import Survey from "components/Survey";
 import Startpage from "components/Startpage";
-import Test from "components/Test";
+import Questions from "components/Questions";
 import Summary from "components/Summary";
+import "./index.css";
 
-const dataQuestions = [
+const questionsData = [
   {
-    id: "question1",
-    question_text: "FIRST OF ALL, WHATS YOUR NAME?",
-    input_type: "text",
-    //do I need to add answer here?
+    id: "",
   },
   {
-    id: "question2",
-    question_text: "ENERGYWISE, WHATS YOUR PREFERENCE TODAY?",
+    id: "Nice, let's do this!",
+    question_text: "First of all, what's your name?",
+    input_type: "text",
+  },
+  {
+    id: "ENERGY LEVEL",
+    question_text: "Energywise, how much energy do you need?",
     input_type: "select",
     options: [
-      { value: "Super high" },
-      { value: "Medium" },
-      { value: "Low key" },
+      { value: "A lot" },
+      { value: "Just enough to keep me going" },
+      { value: "Low key, something slow" },
     ],
   },
   {
-    id: "question3",
-    question_text: "WHAT TYPE OF MUSIC DO YOU PREFER?",
+    id: "GENRE",
+    question_text: "What type of music do you prefer?",
     input_type: "radio",
     options: [{ value: "Classic" }, { value: "Hiphop" }, { value: "World" }],
   },
 ];
 
+// const resetForm = () => {
+//   setUserChoices([]);
+//   SetcurrentQuestion(0);
+//   window.location.reload();
+// };
 
 export const App = () => {
   const [currentQuestion, SetcurrentQuestion] = useState(0);
   const [userInput, setUserInput] = useState("");
-  const [userName, setUserName] = useState("");
+  // const [answers, setAnswers] = useState({}); H test
+  const [answers, setAnswers] = useState([]);
 
-  function handleCurrentQuestionButtonClick() {
-    SetcurrentQuestion(currentQuestion + 1);
-  }
+
+  /////Keep track of which question is next////
+  const handleCurrentQuestionButtonClick = () => {
+    const currentQuestionNumber = currentQuestion + 1;
+    SetcurrentQuestion(currentQuestionNumber);
+    // setAnswers((previousAnswers) => [...previousAnswers, formatInput(inputValue)]);
+    handleTest([currentQuestionNumber, userInput] ); // H fast jag har ändrat på det lite. På click skicka dessa värden till handleTest
+    handleClearButtonClick();
+    console.log('answershandleTest', answers);
+    
+  };
 
   const handleClearButtonClick = () => {
-    setUserInput("");
+    setUserInput(""); //varför inte lägga till den här under handleCurrentQuestionButtonClick?
   };
 
   const handleUserInputChange = (event) => {
     setUserInput(event.target.value);
+    event.preventDefault();
   };
 
-  const handleUserNameInputChange = (event) => {
-    setUserName(event.target.value);
+  const handleReset = () => { //H nollställer setAnswer när ropa den?
+    setAnswers([]);
   };
+
+  const handleTest = (answerObj) => { //H På click /se ovan/ Tar emot svaret och uppdaterar updateAnswer.
+    console.log("funkar answerObj", answerObj);
+    updateAnswer(answerObj); //H
+  };
+
+
+  const updateAnswer = (updatedAnswer) => { //H uppdaterar vaddå,funktionen setAnswers?
+    console.log("funkar updatedAnswer", updatedAnswer);
+
+    setAnswers((answers) => ([
+      ...answers,
+      ...updatedAnswer
+  
+    ]))
+    
+  };
+
+
+
+
+  // const handleUserChoices = () => {
+  //   setUserInput("");
+  // };
+
+  // const handleUserNameInputChange = (event) => {
+  //   setUserName(event.target.value);
+  // };
 
   // Du kan skicka in ett defaultväde i useState, nu använder du en tom sträng... Vad skulle du kunna skicka in istället?
   // Du behöver en funktion som kan hantera när formuläret submittas. Fundera på vad den ska innehålla och göra.
 
   // const handleSubmit = event => {
-  //   event.preventDefault();
-  //   currentQuestion +1;
-
-  //   console.log('form submitted ✅');
+  //    event.preventDefault();
 
   return (
     <main>
-      <div className = "helper">
-        <p>my counter {currentQuestion}</p>
-        <p>this is the user input {userInput}</p>
-        <button type="button" onClick={() => handleCurrentQuestionButtonClick()}>Next question</button>
-        <input type="text" value={userInput} onChange={handleUserInputChange} />{" "}
-        <p>
-        <button type="button" onClick={handleClearButtonClick}>{" "}clear input{" "}</button>
-        </p>
+      {currentQuestion === 0 && (
+        <section className="container">
+            <Startpage />
+          <button className="button" type="button" onClick={() => handleCurrentQuestionButtonClick()}
+                // <button onClick={() => handleTest({ bajs: "Hejsan" })}>Question 1</button>
+
+          >Let's begin!
+          </button> 
+         
+          </section>
+      )}
+      {currentQuestion > 0 && currentQuestion < 4 && (
+        <section className="container">
+        <Questions
+            {...questionsData[currentQuestion]}
+            userInput={userInput}
+            onChange={handleUserInputChange}
+          />
+      <p>
+          <button 
+          className="button"
+            type="button"
+            userInput={userInput}
+            onClick={() => handleCurrentQuestionButtonClick(currentQuestion)}
+          >
+            Next question
+          </button>
+          </p>
+
+        </section>
+      )}
+      {currentQuestion === 4 && (
+        <div className="container">
+{/* <Summary answers={answers} reset={resetForm} /> */}
+          <Summary answers={answers} />
         </div>
+      )}
 
-        {currentQuestion === 0 && (
-          <div>
-            <div><Startpage /></div>
-            <input type="text" value={userName} onChange={handleUserNameInputChange}/>
-            <button type="button" onClick={() => handleCurrentQuestionButtonClick()}>Let's begin!</button>
-          </div>
-        )
-        }
-        {currentQuestion > 0 && currentQuestion < 4 && (
-          <div>
-            <div><Test /></div>
-            <button type="button" onClick={() => handleCurrentQuestionButtonClick()}>Next question</button>
-          </div>
-        )
-        }
-          {currentQuestion === 4 && (
-          <div>
-            <div><Summary /></div>
-
-          </div>
-        )}
+      
     </main>
   );
+
+
+
+
+
+
+  
 };
 
 /*
@@ -124,7 +181,7 @@ a
                     console.log("hej")
                 } */
 /*
-{dataQuestions.map((question) => { //funkar får fram tre object        
+{questionsData.map((question) => { //funkar får fram tre object        
        return(
         <form>
             <Survey
@@ -155,4 +212,22 @@ a
     } */
 
 
-    
+    // /*
+    //  <div className="helper">
+    //     <p>my counter {currentQuestion}</p>
+    //     <p>this is the user input {userInput}</p>
+    //     <button
+    //       type="button"
+    //       onClick={() => handleCurrentQuestionButtonClick()}
+    //     >
+    //       Next question
+    //     </button>
+    // //     {/* <input type="text" value={userInput} onChange={handleUserInputChange} />{" "} */}
+    //     <p>
+    //       <button type="button" onClick={handleClearButtonClick}>
+    //         {" "}
+    //         clear input{" "}
+    //       </button>
+    //     </p>
+    //   </div>
+    // */
