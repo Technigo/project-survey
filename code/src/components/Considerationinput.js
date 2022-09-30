@@ -9,6 +9,7 @@ export const ConsiderationInput = ({ consideration, setConsideration }) => {
       <p>You might want to consider</p>
       <form>
         <select
+          required
           onChange={handleConsiderationInput}
           value={consideration}>
           <option value="">Select option</option>

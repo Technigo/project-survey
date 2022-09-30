@@ -6,6 +6,7 @@ import { ConsiderationInput } from 'components/Considerationinput';
 import { TextAreaInput } from 'components/Textareainput';
 import { ActionInput } from 'components/Actioninput';
 import { UserNameInput } from 'components/Usernameinput';
+import { Summary } from 'components/Summary';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
@@ -14,7 +15,6 @@ export const App = () => {
   const [textArea, setTextArea] = useState('');
   const [action, setAction] = useState('');
   const [userName, setUserName] = useState('');
-  const [userInput, setUserInput] = useState('');
 
   const handleStepIncrease = (shouldIncrease) => {
     if (shouldIncrease && counter < 1) {
@@ -24,43 +24,37 @@ export const App = () => {
     }
   }
 
-  const handleClearButtonClick = () => {
-    setUserInput('');
-  }
-
   return (
-    <div>
-      <Header />
+    <div className="outer-wrapper">
+      <div className="inner-wrapper">
+        <Header />
 
-      {/* Where we gather the message */}
-      {counter === 0 && (
-        <div>
-          <RecieverNameInput recieverName={recieverName} setRecieverName={setRecieverName} />
-          <ConsiderationInput consideration={consideration} setConsideration={setConsideration} />
-          <TextAreaInput textArea={textArea} setTextArea={setTextArea} />
-          <ActionInput action={action} setAction={setAction} />
-          <UserNameInput userName={userName} setUserName={setUserName} />
-          <button type="button" onClick={() => handleStepIncrease(true)}> Summarize</button>
-        </div>
-      )}
+        {/* Where we gather the message */}
+        {counter === 0 && (
+          <div>
+            <RecieverNameInput recieverName={recieverName} setRecieverName={setRecieverName} />
+            <ConsiderationInput consideration={consideration} setConsideration={setConsideration} />
+            <TextAreaInput textArea={textArea} setTextArea={setTextArea} />
+            <ActionInput action={action} setAction={setAction} />
+            <UserNameInput userName={userName} setUserName={setUserName} />
+            <button type="submit" onClick={() => handleStepIncrease(true)}> Summarize</button>
+          </div>
+        )}
 
-      {/* Where we summarize the message */}
-      {counter === 0 && (
-        <div>
-          {/* Use this in summarize for message input */}
-          <p>Dear {recieverName}, </p>
-          <p>
-            You might want to consider {consideration}.
-            Lately I`ve noticed that you {textArea}.
-          </p>
-          <p>And I would hate if someone had to {action}</p>
-          <p>Sincerely, {userName} </p>
-          <p> {userInput} </p>
-          {/* <button type="button" onClick={() => handleStepIncrease(false)}> Edit</button> */}
-          <button type="button" onClick={handleClearButtonClick}>Clear input</button>
-        </div>
-      )}
+        {/* Where we summarize the message */}
+        {counter === 1 && (
+          <>
+            <Summary
+              recieverName={recieverName}
+              consideration={consideration}
+              textArea={textArea}
+              action={action}
+              userName={userName} />
+            <button type="button" onClick={() => handleStepIncrease(false)}> Edit </button>
+          </>
+        )}
       My counter {counter}
+      </div>
     </div>
   );
 }
