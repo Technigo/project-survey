@@ -1,12 +1,15 @@
 import React from 'react';
 import { Button } from 'components/Button';
 
-export const MusicGenre = ({ genre, setGenre }) => {
+export const MusicGenre = ({ genre, setGenre, step }) => {
   const handleMusicGenre = (e) => {
     setGenre(e.target.value)
   }
   return (
     <>
+      <div className="question-number">
+        {step <= 5 && <p>Question number: {step}/5</p>}
+      </div>
       <p>What is your favorite music genre?</p>
       <label htmlFor="musicGenre">
         <select

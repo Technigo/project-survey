@@ -28,49 +28,26 @@ export const App = () => {
             <Header />
           )}
           {step === 1 && (
-            <>
-              <div className="question-number">
-                {step <= 5 && <p>Question number: {step}/5</p>}
-              </div>
-              <Name name={name} setName={setName} />
-            </>
+            <Name name={name} setName={setName} step={step} />
           )}
           {step === 2 && (
-            <>
-              <div className="question-number">
-                {step <= 5 && <p>Question number: {step}/5</p>}
-              </div>
-              <HowManyConcerts
-                name={name}
-                noOfConcerts={noOfConcerts}
-                setNoConcerts={setNoConcerts} />
-            </>
+            <HowManyConcerts
+              name={name}
+              noOfConcerts={noOfConcerts}
+              setNoConcerts={setNoConcerts}
+              step={step} />
           )}
           {step === 3 && (
-            <>
-              <div className="question-number">
-                {step <= 5 && <p>Question number: {step}/5</p>}
-              </div>
-              <MusicGenre genre={genre} setGenre={setGenre} />
-            </>
+            <MusicGenre genre={genre} setGenre={setGenre} step={step} />
           )}
           {step === 4 && (
-            <>
-              <div className="question-number">
-                {step <= 5 && <p>Question number: {step}/5</p>}
-              </div>
-              <ConcertPlace place={place} setPlace={setPlace} />
-            </>
+            <ConcertPlace place={place} setPlace={setPlace} step={step} />
           )}
           {step === 5 && (
-            <>
-              <div className="question-number">
-                {step <= 5 && <p>Question number: {step}/5</p>}
-              </div>
-              <FavoriteArtist
-                favoriteArtist={favoriteArtist}
-                setFavoriteArtist={setFavoriteArtist} />
-            </>
+            <FavoriteArtist
+              favoriteArtist={favoriteArtist}
+              setFavoriteArtist={setFavoriteArtist}
+              step={step} />
           )}
         </form>
         {step === 6 && (
