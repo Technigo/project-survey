@@ -25,6 +25,18 @@ a:hover {
   text-decoration: underline;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
 .arrow {
   color: #00539CFF;
 }
@@ -66,6 +78,8 @@ a:hover {
   border-radius: 50px;
   margin: 10px 0px 10px 0px;
   border: solid azure 2px;
+  position: absolute;
+  bottom: -120px;
 }
 
 .progress-b-inner-container {

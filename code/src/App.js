@@ -59,11 +59,6 @@ export const App = () => {
             </div>
           )}
 
-          {step === 7 && (
-            <div>
-            </div>
-          )}
-
           {step >= 2 && step < 6 && (
             <div>
               <ProgressBar 

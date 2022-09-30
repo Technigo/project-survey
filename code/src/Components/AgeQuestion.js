@@ -18,22 +18,21 @@ const AgeQuestion = ({age, setAge}) => {
     return (
       <>
         <h2>How old are you?</h2>
-          <form className="radio-buttons">
-              {ageGroups.map(group => (
-                <label key ={group}>
-                  <input
-                    type="radio"
-                    className="radio-button"
-                    value={group}
-                    onChange={handleAgeChange}
-                    checked={age === group}
-                    />
-                    <span className="checkmark"></span>
-                    {group}
-                  </label>
-              ))}
-          </form>
+        <form className="radio-buttons" id="radio-buttons">
+          {ageGroups.map(group => (
+            <label key ={group}>
+              <input
+                type="radio"
+                className="radio-button"
+                value={group}
+                onChange={handleAgeChange}
+                checked={age === group}
+              />
+              {group}
+            </label>
+          ))}
+        </form>
       </>
-    )
+  )
 }
   export default AgeQuestion

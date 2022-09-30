@@ -1,14 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Intro = () => {
-  const [surveyStart, setSurveyStart] = useState(1)
-
-  const handleStartSurvey = (event) => {
-    setSurveyStart(surveyStart + 1)
-
-  }
-    return (
-      <>
+    return (      
       <section>
           <h1>Stockholm Museums: a Survey</h1>
           <p>
@@ -20,10 +13,9 @@ const Intro = () => {
           
           <p>But does that make them... boring? If so, we want to know. 
           <span className="bold-p"> So thank you for taking the time to answer this survey, 
-          and for helping us to make Stockholm's museums better 🏛 </span>
+          and for helping us to make Stockholm's museums better <span aria-hidden="true">🏛 </span></span>
           </p>
       </section>
-      </>
     );
   }
 

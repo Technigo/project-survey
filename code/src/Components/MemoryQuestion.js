@@ -10,14 +10,18 @@ const MemoryQuestion = ({memory, setMemory}) => {
       <>
       <h2>A memorable visit?</h2>
         <form>
-          <p>We are interested in hearing if you have a special memory from a visit at 
-            one of Stockholm's museums that you wish to share.</p>
-          <p>Perhaps you remember a certain exhibit fondly, or have a mildly traumatic 
+          <label for="memorable-visit">
+            <p>We are interested in hearing if you have a special memory from a visit at 
+            one of Stockholm's museums that you wish to share.</p> 
+            <p>Perhaps you remember a certain exhibit fondly, or have a mildly traumatic 
             experience related to a boring visit?</p>
+            </label>
             <textarea
             type ="text"
+            id="memorable-visit"
             className="memory-input"
             placeholder="A memorable visit..."
+            aria-live="polite"
             onChange={handleMemoryChange}
             value={memory}
             />
