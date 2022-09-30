@@ -11,6 +11,10 @@
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  max-width: 50em;
+  padding: 4em 1em;
+  margin: 0 auto;
+  color: #566b78;
 }
 
 code {
@@ -18,33 +22,79 @@ code {
     monospace;
 }
 
-.header, .footer {
-  background-color: aquamarine;
+/*.header {
+  background-color: #AFADA8;
   text-align: center;
-  height: 12rem;
+  padding: 5rem 0;
+  color: white;
+  display: flex;
+  flex-direction: column;
+}*/
+
+.header {
+  background-image: url("images/watch.jpg");  
+  border-radius: 1rem;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding: 20vw 2em; 
 }
 
  .main {
-  width: 80vw;
-  margin: 0 auto;
-  padding: ;
   text-align: center;
-  padding-bottom: 12rem; 
-  position: relative;
-  min-height: 60vh;
+  margin: 1rem 0.5rem;
+  background-color: #f5f7f9;
+  border-radius: 1rem;
 }
+
+/*
+.footer {
+  font-weight: 100;
+  margin-top: auto;
+}
+.welcome-image {
+  width: 100%;
+  border-radius: 1rem;
+}*/
+
+.intro {
+  font-size: 1.2rem;
+  font-weight: bold;
+  line-height: 1.5rem;
+  margin: 1rem 0;
+  padding: 1rem 0.5rem;
+}
+
+.form {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
+
+h2 {
+  color: #e81c4f;
+} 
+
+h3 {
+  margin-top: 1em;
+  padding-top: 1em;
+} 
+
+.mainQuestion {
+  text-align: left;
+}
+
 .main input {
-  margin-left: 5px;
-  margin-right: 5px;
+  margin-left: 0.3rem;
+  margin-right: 0.3rem;
 }
+
 button {
   padding: 1rem;
-  margin: 1rem;
+  margin: 2rem 0;
   border-radius: 1rem;
   font-size: 1.2rem;
-  font-weight: ;
   border: 1px solid #e81c4f;
-  /*background-color: rgb(55, 124, 68);*/
   color: #e81c4f;
   transition: none 200ms ease-out;
   transition-property: color, background;
@@ -54,46 +104,33 @@ button:hover {
   background:  #e81c4f;
   color: white;
 }
-h2, h3 {
-  margin-top: 1em;
-  padding-top: 1em;
-}
-
-h2, strong {
-  color: #333;
-}
 
 label {
- margin: 2rem;
- line-height: 5rem;
- font-size: larger;
+ margin: 2rem 0;
+ line-height: 1.5rem;
+ font-size: 1.2rem;
+ width: 100%;
 }
-#wrapper {
-  position: relative;
-  min-height: 100vh;
+
+.habitQuestion {
+  display: block;
+  text-align: left;
 }
-#container {
-  padding-bottom: 12.5rem;    /* Footer height */
-  background-color: rgb(240, 223, 210);
-}
-footer {
-            /* Footer height */
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  background-color: rgb(94, 92, 91);
-  border: 1px solid black; 
-  font-size: 17px;
+
+.ageQuestion {
+  display: block;
+  text-align: left;
+  margin-top: 2rem;
 }
 
 select {
+  margin: 1rem 0;
   border: none;
   border-radius: 4px;
-  color: rgb(61, 61, 61);
-  font-size: 20px;
+  color: #566b78;
+  font-size: 1rem;
   font-weight: 600;
-  height: 60px;
-  font-family: 'Montserrat';
+  height: 3.9rem;
   background: #e5e9ff;
   width: 100%;
   padding:  20px;
@@ -102,4 +139,92 @@ select {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
+
+.summary {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  margin-top: 1rem;
+  padding: 1rem 0.5rem;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: none;
+  color: blue;
+}
+
+/* TABLET */
+@media (min-width: 668px) and (max-width: 1024px) {
+  .header {
+    padding: 20vw 2em;
+  }
+
+  .intro {
+    font-size: 1.4rem;
+    line-height: 1.5rem;
+    margin: 1rem 0;
+    padding: 1rem 0.5rem;
+  }
+
+  .form {
+    padding: 1rem 1rem;
+  }
+
+  h3, .mainQuestion, .ageQuestion, .habitQuestion {
+    font-size: 1.4rem;
+  } 
+
+  select {
+    font-size: 1.4rem;
+    width: 70%;
+    height: 4rem;
+  }
+}
+/* DESKTOP */
+@media (min-width: 1025px) and (max-width: 1450px){
+  .header {
+    padding: 15vw 2em;
+  }
+}
+@media (min-width: 1450px) {
+  .header {
+    padding: 10vw 2em;
+  }
+}
+
+@media (min-width: 1025px) {
+  .intro {
+    margin: 0 auto;
+    line-height: 1.5rem;
+  }
+
+  .ageQuestion {
+    text-align: center;
+    margin: 2rem 4rem;
+  }
+
+  .mainQuestion {
+    text-align: center;
+    text-justify: auto;
+  }
+
+  .habitQuestion {
+    text-align: center;
+    text-justify: auto;
+  }
+
+  select {
+    font-size: 1.2rem;
+    width: 50%;
+  }
+
+  h3, .mainQuestion {
+    font-size: 1.3rem;
+  } 
+
+  label {
+    line-height: 1.5rem;
+    font-size: 1.3rem;
+   }
 }

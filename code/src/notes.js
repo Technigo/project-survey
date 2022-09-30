@@ -66,4 +66,6 @@
 
             {console.log(questions[index])}
                 {console.log(habits[index])}
+
+                   <img className="welcome-image" src={require('images/watch.jpg')} alt="heart rate monitor on an arm" />
         */

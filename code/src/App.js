@@ -1,7 +1,6 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Header } from './components/Header';
-import { Footer } from './components/Footer';
 import { Welcome } from './components/Welcome';
 import { Age } from './components/Age';
 import { Child } from './components/Child';
@@ -18,7 +17,6 @@ export const App = () => {
   const [meetsMovement, setMeetsMovement] = useState(false);
   const [meetsBalance, setMeetsBalance] = useState(false);
   const [specialGroup, setSpecialGroup] = useState('');
-  const [responseCount, setResponseCount] = useState(0);
 
   const handleNextButton = (event) => {
     setCounter(counter + 1);
@@ -36,6 +34,7 @@ export const App = () => {
             setMeetsStrength={setMeetsStrength}
             meetsMovement={meetsMovement}
             setMeetsMovement={setMeetsMovement} />
+          <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>
         </section>
       )
     } else if (ageRange === '18 - 64') {
@@ -64,6 +63,7 @@ export const App = () => {
           <Balance
             meetsBalance={meetsBalance}
             setMeetsBalance={setMeetsBalance} />
+          <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>
         </section>
       )
     }
@@ -94,10 +94,15 @@ export const App = () => {
         </section>)}
       {counter === 4 && (
         <section className="main">
-          <Summary ageGroup={ageGroup} specialGroup={specialGroup} />
+          <Summary
+            ageGroup={ageGroup}
+            specialGroup={specialGroup}
+            meetsCardio={meetsCardio}
+            meetsStrength={meetsStrength}
+            meetsMovement={meetsMovement}
+            meetsBalance={meetsBalance} />
         </section>
       )}
-      <Footer />
     </>
   );
 }

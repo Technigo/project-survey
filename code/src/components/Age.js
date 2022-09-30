@@ -8,11 +8,11 @@ const ageGroups = [
 
 export const Age = ({ ageGroup, setAgeGroup }) => {
   return (
-    <form className="ageGroup" onSubmit={(event) => event.preventDefault()}>
-      <h2>Which age group do you belong to?</h2>
+    <form className="form" onSubmit={(event) => event.preventDefault()}>
+      <h3 className="mainQuestion">Which age group do you belong to?</h3>
       {ageGroups.map((group) => (
-        <span key={group}>
-          <label key={group}>
+        <span key={group} className="ageQuestion">
+          <label className="mainQuestion" key={group}>
             <input
               type="radio"
               value={group}

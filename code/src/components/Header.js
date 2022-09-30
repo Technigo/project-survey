@@ -5,7 +5,6 @@ export const Header = () => {
 
   return (
     <div className="header">
-      <h1>The Exercise Survey</h1>
     </div>
   );
 }

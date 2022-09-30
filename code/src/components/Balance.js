@@ -4,8 +4,8 @@ import React from 'react';
 export const Balance = ({ meetsBalance, setMeetsBalance }) => {
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <label>
-         Balance stuff?
+      <label className="habitQuestion">
+        Train balance on 3 or more days a week (to prevent falls)?
         <input
           type="checkbox"
           checked={meetsBalance}
