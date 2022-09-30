@@ -49,16 +49,9 @@ header {
   justify-content: center;
 }
 
-.radio-input-listen, .radio-input-read {
-  accent-color: #967E76;
-}
-
-.radio-input-read {
+.radio-input-read, .radio-input-listen {
   margin-right: 20px;
-}
-
-.radio-input-listen {
-  margin-left: 20px;
+  accent-color: #967E76;
 }
 
 .radio-read, .radio-listen {
@@ -66,12 +59,8 @@ header {
   margin-bottom: 5px;
 }
 
-.radio-read {
+.radio-read, .radio-listen {
   margin-right: 20px;
-}
-
-.radio-listen {
-  margin-left: 20px;
 }
 
 /* DROPDOWN QUESTIONS */
@@ -189,7 +178,7 @@ header {
     color: #967E76;
   }
 
-  .summary-survey, .radio-intro {
+  .summary-survey, .radio-intro{
     margin: 80px 30px 88px 30px;
     margin-left: auto;
     margin-right: auto;
