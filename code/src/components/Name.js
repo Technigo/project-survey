@@ -7,7 +7,7 @@ export const Name = ({ name, setName }) => {
   }
   return (
     <>
-      <p>What is your name?</p>
+      <p>First of all, what is your name?</p>
       <label htmlFor="name">
         <input type="text" id="name" value={name} onChange={handleNameChange} required />
       </label>

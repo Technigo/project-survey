@@ -8,7 +8,7 @@ import { FavoriteArtist } from 'components/FavoriteArtist';
 import { Summary } from 'components/Summary';
 
 export const App = () => {
-  const [step, setStep] = useState(1)
+  const [step, setStep] = useState(0)
   const [name, setName] = useState('');
   const [noOfConcerts, setNoConcerts] = useState('');
   const [genre, setGenre] = useState('');
@@ -24,31 +24,36 @@ export const App = () => {
     <div className="outer-wrapper">
       <div className="inner-wrapper">
         <form onSubmit={handleStepIncrease}>
-          {step === 1 && (
+          {step === 0 && (
             <Header />
           )}
-          {step === 2 && (
-            <Name name={name} setName={setName} />
+          {step === 1 && (
+            <>
+              <Name name={name} setName={setName} />
+              <div className="question-number">
+                {step <= 7 && <p>Question number: {step}/7</p>}
+              </div>
+            </>
           )}
-          {step === 3 && (
+          {step === 2 && (
             <HowManyConcerts
               name={name}
               noOfConcerts={noOfConcerts}
               setNoConcerts={setNoConcerts} />
           )}
-          {step === 4 && (
+          {step === 3 && (
             <MusicGenre genre={genre} setGenre={setGenre} />
           )}
-          {step === 5 && (
+          {step === 4 && (
             <ConcertPlace place={place} setPlace={setPlace} />
           )}
-          {step === 6 && (
+          {step === 5 && (
             <FavoriteArtist
               favoriteArtist={favoriteArtist}
               setFavoriteArtist={setFavoriteArtist} />
           )}
         </form>
-        {step === 7 && (
+        {step === 6 && (
           <Summary
             name={name}
             noOfConcerts={noOfConcerts}

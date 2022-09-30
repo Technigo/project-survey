@@ -80,6 +80,10 @@ input[type=radio] {
   margin: 20px 5px;
 }
 
+.question-number {
+  text-align: center;
+}
+
 /* ****** Media queries **************** */
 
 /**** Tablet ****/

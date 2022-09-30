@@ -7,7 +7,7 @@ export const HowManyConcerts = ({ name, numberOfConcerts, setNoConcerts }) => {
   }
   return (
     <>
-      <p>Alright {name}, how many concerts do you visit in a year?</p>
+      <p>Alright {name}, how many live concerts do you attend in a year?</p>
       <label htmlFor="noOfConcerts">
         <select
           id="noOfConcerts"

@@ -7,7 +7,7 @@ export const MusicGenre = ({ genre, setGenre }) => {
   }
   return (
     <>
-      <p>What is your favorite music genre when visiting a concert?</p>
+      <p>What is your favorite music genre?</p>
       <label htmlFor="musicGenre">
         <select
           id="musicGenre"
