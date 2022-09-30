@@ -1,14 +1,17 @@
 import React from 'react';
 
+const perfectJobOptions = [
+  'Model (runway)',
+  'Wizard',
+  'Therapist'
+]
+
+export const defaultPerfectJobOption = perfectJobOptions[2]
+
 const PerfectJob = ({ perfectJob, setPerfectJob }) => {
   const handlePerfectJobChange = (event) => {
     setPerfectJob(event.target.value);
   }
-
-  const perfectJobOptions = [
-    'Guard',
-    'Goalie'
-  ]
 
   return (
     <>
@@ -16,7 +19,7 @@ const PerfectJob = ({ perfectJob, setPerfectJob }) => {
 
       {perfectJobOptions.map((option) => (
         <label htmlFor={`perfectJob${option}`} key={option}>
-            Guard
+          {option}
           <input
             id={`perfectJob${option}`}
             type="radio"
