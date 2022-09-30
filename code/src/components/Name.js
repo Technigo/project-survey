@@ -16,7 +16,7 @@ export const Name = ({ name, setName, step, percentage }) => {
         </div>
       </div>
       <label htmlFor="name">
-        <p>First of all, what is your name?</p>
+        First of all, what is your name?
         <input type="text" id="name" value={name} onChange={handleNameChange} required />
       </label>
       <Button button="Next question" />

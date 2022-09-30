@@ -13,8 +13,8 @@ export const MusicGenre = ({ genre, setGenre, step, percentage }) => {
           <div className="progress-filler" style={{ width: `${percentage}%` }}>{percentage}%</div>
         </div>
       </div>
-      <p>What is your favorite music genre?</p>
       <label htmlFor="musicGenre">
+        What is your favorite music genre?
         <select
           id="musicGenre"
           onChange={handleMusicGenre}

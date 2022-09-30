@@ -13,8 +13,8 @@ export const FavoriteArtist = ({ favoriteArtist, setFavoriteArtist, step, percen
           <div className="progress-filler" style={{ width: `${percentage}%` }}>{percentage}%</div>
         </div>
       </div>
-      <p>Which artist do you want to the next time you go to a concert?</p>
       <label htmlFor="favoriteArtist">
+        Which artist do you want to the next time you go to a concert?
         <input id="favoriteArtist" type="text" value={favoriteArtist} onChange={handleFavoriteArtist} required />
       </label>
       <Button button="Summary" />

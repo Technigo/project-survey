@@ -13,8 +13,8 @@ export const HowManyConcerts = ({ name, numberOfConcerts, setNoConcerts, step, p
           <div className="progress-filler" style={{ width: `${percentage}%` }}>{percentage}%</div>
         </div>
       </div>
-      <p>Alright {name}, how many live concerts do you attend in a year?</p>
       <label htmlFor="noOfConcerts">
+        Alright {name}, how many live concerts do you attend in a year?
         <select
           id="noOfConcerts"
           onChange={handleNumberOfConcerts}
