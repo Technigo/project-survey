@@ -6,13 +6,12 @@ export const Allergies = ({ allergies, setAllergies }) => {
     setAllergies(event.target.value);
   }
 
-  const anyAllergies = ['no allergies', 'nut allery', 'proabably no allergies']
+  const anyAllergies = ['no allergies', 'nut allergy', 'probably no allergies']
 
   return (
     <div className="questionsContainer">
       <form>
         <h3>Has your date any allergies? </h3>
-        Any allergies?
         {anyAllergies.map((group) => (
           <lable key={group}>
             <input

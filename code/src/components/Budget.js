@@ -6,13 +6,13 @@ export const Budget = ({ budget, setBudget }) => {
     setBudget(event.target.value);
   }
 
-  const amountOfBudget = ['20-50 €', '50-100 €', 'let the champagne coming in']
+  const amountOfBudget = ['20-50 €', '50-100 €', 'let the champagne flow']
 
   return (
     <div className="questionsContainer">
       <form>
         <h3>How much can you spend this evening?</h3>
-      Amount of budget:
+      Budget:
         {amountOfBudget.map((group) => (
           <lable key={group}>
             <input
