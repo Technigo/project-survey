@@ -8,7 +8,7 @@ const PreferenceQuestion = ({ preference, onPreferenceChange, onStepChange, onEn
   return (
     <div className="survey-container">
       <form className="form-question">
-        <label tabIndex="0" className="label-text">How is the weather? Are you in the mood for some hot or cold food?</label>
+        <div tabIndex="0" className="label-text">How is the weather? Are you in the mood for some hot or cold food?</div>
         <div className="preference-container">
           <label className="label-input-preference" htmlFor="preference">
             <input
@@ -21,7 +21,7 @@ const PreferenceQuestion = ({ preference, onPreferenceChange, onStepChange, onEn
               alt="hot" />
             <p>Hot food</p>
           </label>
-          <label tabIndex="0" className="label-input-preference" htmlFor="preference">
+          <label className="label-input-preference" htmlFor="preference">
             <input
               id={preference}
               type="radio"
@@ -29,7 +29,6 @@ const PreferenceQuestion = ({ preference, onPreferenceChange, onStepChange, onEn
               onChange={onPreferenceChange}
               checked={preference === 'cold'}
               onKeyPress={onEnter}
-              tabIndex="0"
               alt="cold" />
             <p>Cold food</p>
           </label>

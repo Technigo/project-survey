@@ -6,14 +6,13 @@ const OtherIngredientQuestion = ({ otherIngredient, sortOfPasta, onOtherIngredie
   return (
     <div className="survey-container">
       <form className="form-question">
-        <label tabIndex="0" className="label-text" htmlFor="otherIngredient">
+        <div tabIndex="0" className="label-text" htmlFor="otherIngredient">
             What would you like to add to the {sortOfPasta}
-        </label>
+        </div>
         <select
           id={otherIngredient}
           value={otherIngredient}
           onChange={onOtherIngredientChange}
-          required
           onKeyPress={onEnter}>
 
           <option value="" disabled>Choose here:</option>

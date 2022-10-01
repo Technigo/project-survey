@@ -6,7 +6,7 @@ const HungerQuestion = ({ hungerInput, onHungerInputChange, onStepChange, onPrev
   return (
     <div className="survey-container">
       <form className="form-question">
-        <label tabIndex="0" className="label-text" htmlFor={hungerInput}>
+        <label tabIndex="0" className="label-text" htmlFor="hungerInput">
           How hungry are you on a scale from full too starving?
           <input
             type="range"
@@ -16,9 +16,8 @@ const HungerQuestion = ({ hungerInput, onHungerInputChange, onStepChange, onPrev
             value={hungerInput}
             onChange={onHungerInputChange}
             onKeyPress={onEnter}
-            required
             className="slider"
-            tabIndex="0" />
+            tabIndex="-1" />
 
           <div className="slider-text">
             <span>Full</span>

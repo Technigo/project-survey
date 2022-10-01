@@ -33,9 +33,16 @@ h1 {
   font-weight: 500;
   color: black;
   text-shadow:
-    /* White glow */ 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff,
-    /* Green glow */ 0 0 42px #0fa, 0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa,
-    0 0 151px #0fa;
+    /* White glow */ 0 0 7px rgb(250, 209, 108), 0 0 10px rgb(250, 209, 108), 0 0 21px rgb(250, 209, 108),
+    /* Green glow */ 0 0 42px rgb(255, 174, 0), 0 0 82px rgb(255, 174, 0), 0 0 92px rgb(255, 174, 0), 0 0 102px rgb(255, 174, 0),
+    0 0 151px rgb(255, 174, 0);
+}
+
+/*Buttons*/
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
 }
 
 .start-button,
@@ -83,7 +90,6 @@ h1 {
 .submit-button {
   width: 90px;
   height: 90px;
-  
 }
 
 .button-text {
@@ -92,12 +98,12 @@ h1 {
   align-items: center;
 }
 
+/*containers*/
 .survey-container {
   margin: 2vh;
   border: 2px solid #e2d598;
   border-radius: 25px;
   background-color: rgba(179, 162, 134, 0.5);
-  
 }
 
 .form-question,
@@ -109,49 +115,6 @@ h1 {
   gap: 30px;
   align-items: center;
 }
-
-.label-text,
-.text-pasta {
-  font-size: 30px;
-  color: black;
-  font-weight: 400;
-}
-
-.text-pasta {
-  font-size: 20px;
-  color: black;
-  font-weight: 500;
-}
-
-input[type='text'],
-select {
-  border: 5px solid white;
-  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
-    0 0 16px rgba(0, 0, 0, 0.1);
-  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
-  padding: 15px;
-  background: rgba(181, 167, 136, 0.364);
-  margin: 0;
-  font-size: 20px;
-}
-
-input[type='radio'] { 
-  transform: scale(2); 
-  margin: 10px;
-}
-
-::placeholder {
-  color: black;
-  opacity: 1;
-}
-
-.button-container {
-  display: flex;
-  flex-direction: row;
-  gap: 20px;
-}
-
 .preference-container,
 .pasta-container {
   display: flex;
@@ -177,49 +140,18 @@ input[type='radio'] {
   font-size: 27px;
 }
 
-.slider {
-  -webkit-appearance: none;
-  width: 100%;
-  height: 20px;
-  border-radius: 5px;
-  background: #1d1c1c;
-  outline: none;
-  opacity: 0.7;
-  -webkit-transition: 0.2s;
-  transition: opacity 0.2s;
-  margin-top: 30px;
-  margin-bottom: 10px;
+/*text in the servey-containers*/
+.label-text,
+.text-pasta {
+  font-size: 30px;
+  color: black;
+  font-weight: 400;
 }
 
-.slider::-webkit-slider-thumb {
-  -webkit-appearance: none;
-  appearance: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  background: yellow;
-  cursor: pointer;
-  border: 0px;
-}
-
-.slider::-moz-range-thumb {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: 0px;
-}
-
-.slider-text {
-  position: relative;
-  top: 10px;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  justify-content: space-between;
-  font-size: 17px;
+.text-pasta {
+  font-size: 20px;
+  color: black;
   font-weight: 500;
-  margin-bottom: 10px;
 }
 
 h2 {
@@ -247,6 +179,76 @@ a {
 a:hover {
   text-shadow: 2px 3px 4px grey;
   transition: 0.4s;
+}
+
+/*inputs*/
+input[type='text'],
+select {
+  border: 5px solid white;
+  -webkit-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1),
+    0 0 16px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  box-shadow: inset 0 0 8px rgba(0, 0, 0, 0.1), 0 0 16px rgba(0, 0, 0, 0.1);
+  padding: 15px;
+  background: rgba(181, 167, 136, 0.364);
+  margin: 0;
+  font-size: 20px;
+}
+
+input[type='radio'] { 
+  transform: scale(2); 
+  margin: 10px;
+  cursor: pointer;
+}
+
+input[placeholder] {
+  color: black;
+  opacity: 1;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 20px;
+  border-radius: 5px;
+  background: #1d1c1c;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: 0.2s;
+  transition: opacity 0.2s;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: yellow;
+  cursor: pointer;
+  border: 0px;
+}
+
+.slider::-moz-range-thumb {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 0px;
+}
+
+.slider-text {
+  position: relative;
+  top: 10px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
 
 @media (min-width: 768px) {

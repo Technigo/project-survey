@@ -8,19 +8,20 @@ const NameQuestion = ({ nameInput, onNameInputChange, onStepChange, onEnter }) =
   return (
     <div className="survey-container">
       <form className="form-question">
-        <label tabIndex="0" className="label-text" htmlFor="nameInput">
+        <div tabIndex="0" className="label-text">
           What is your name?
-        </label>
-        <input
-          id="nameInput"
-          type="text"
-          placeholder="Enter name here"
-          value={nameInput}
-          onChange={onNameInputChange}
-          onKeyPress={onEnter}
-          autoComplete="off"
-          required
-          className="name-input" />
+        </div>
+        <lable tabIndex="0" htmlFor="nameInput">
+          <input
+            id="nameInput"
+            type="text"
+            placeholder="Enter name here"
+            value={nameInput}
+            onChange={onNameInputChange}
+            onKeyPress={onEnter}
+            autoComplete="off"
+            className="name-input" />
+        </lable>
         <div className="button-container">
           <button className="survey-button" type="button" onClick={onStepChange}>Next</button>
         </div>

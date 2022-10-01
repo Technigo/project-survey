@@ -15,10 +15,10 @@ const PastaKindQuestion = ({ nameInput, preference, sortOfPasta, onSortOfPastaCh
   return (
     <div className="survey-container">
       <form className="form-question">
-        <p className="text-pasta">Hello {nameInput}, you are in the mood for {preference}. Answer what kind of pasta you like:</p>
+        <p tabIndex="0" className="text-pasta">Hello {nameInput}, you are in the mood for {preference}. Answer what kind of pasta you like:</p>
         <div className="pasta-container">
           {pastaSorts.map((sort) => (
-            <label tabIndex="0" className="label-input-pasta" key={sort} htmlFor="sortOfPasta">
+            <label className="label-input-pasta" key={sort} htmlFor="sortOfPasta">
               <input
                 id={sortOfPasta}
                 type="radio"
@@ -26,7 +26,7 @@ const PastaKindQuestion = ({ nameInput, preference, sortOfPasta, onSortOfPastaCh
                 onChange={onSortOfPastaChange}
                 checked={sortOfPasta === sort}
                 onKeyPress={onEnter} />
-              {sort}
+              <span>{sort}</span>
             </label>
           ))}
         </div>
