@@ -1,7 +1,7 @@
 
 import React from 'react';
 
-const ageGroups = ['18-35', '36-50', '50+'];
+const ageGroups = ['18-30', '31-40', '41-50', '50+'];
 
 export const AgeGroup = ({ ageGroup, setAgeGroup }) => {
   const handleAgeGroupChange = (event) => {

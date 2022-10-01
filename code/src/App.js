@@ -19,20 +19,19 @@ export const App = () => {
   const [weeklyTraining, setWeeklyTraining] = useState('');
 
   return (
-    <div className="wrapper">
+    <main className="wrapper">
       {step === 0
        && (
          <div>
            <Intro />
            <StartButton step={step} setStep={setStep} />
          </div>
-
        )}
       {step === 1
        && (
          <div className="questionContainer">
            <AgeGroup ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
-           <p>Question: {step}/4</p>
+           <p className="displayStep">Question: {step}/4</p>
            <NextButton step={step} setStep={setStep} />
          </div>
        )}
@@ -40,7 +39,7 @@ export const App = () => {
       && (
         <div className="questionContainer">
           <YesNoQuestion answer={answer} setAnswer={setAnswer} />
-          <p>Question: {step}/4</p>
+          <p className="displayStep">Question: {step}/4</p>
           <PreviousButton step={step} setStep={setStep} />
           <NextButton step={step} setStep={setStep} />
         </div>
@@ -49,7 +48,7 @@ export const App = () => {
       && (
         <div className="questionContainer">
           <SportType sportType={sportType} setSportType={setSportType} />
-          <p>Question: {step}/4</p>
+          <p className="displayStep">Question: {step}/4</p>
           <PreviousButton step={step} setStep={setStep} />
           <NextButton step={step} setStep={setStep} />
         </div>
@@ -57,12 +56,12 @@ export const App = () => {
       {step === 4 && (
         <div className="questionContainer">
           <WeeklyTraining weeklyTraining={weeklyTraining} setWeeklyTraining={setWeeklyTraining} />
-          <p>Question: {step}/4</p>
+          <p className="displayStep">Question: {step}/4</p>
           <PreviousButton step={step} setStep={setStep} />
           <SubmitButton step={step} setStep={setStep} />
         </div>
       )}
-
+      {/* shows the result of the survey */}
       {step >= 5
       && (
         <div className="questionContainer">
@@ -74,6 +73,6 @@ export const App = () => {
         </div>
       )}
 
-    </div>
+    </main>
   );
 }

@@ -32,19 +32,26 @@ h2 {
   font-size: 160%;
 }
 
+/*containers*/
 .wrapper {
   max-width: 50%;
   margin: 5% 45% 10% 5%;
 }
 
 .questionContainer {
-  padding: 2%;
+  padding: 2% 2% 2% 15%;
 }
 
 .questionWrapper {
   padding-bottom: 10%;
 }
 
+/*question counter*/
+.displayStep {
+  margin: 0%;
+}
+
+/*radio input and labels*/
 .radioButton {
   display: block;
 }
@@ -52,9 +59,10 @@ h2 {
 #radio {
   accent-color: #000;
   width: 5%;
-
+  margin: 2%;
 }
 
+/*Navigation buttons*/
 .navButton {
   font-family: "Open Sans Condensed", sans-serif;
   font-weight: 600;
@@ -106,14 +114,32 @@ h2 {
   transform: scale(0.1, 1);
 }
 
-/*Submit button*/
-.submit {
+/*Start button*/
+.startButton {
   display: inline-block;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-weight: 600;
+  border: none; 
+  background-color: inherit;
+  color: #000;
+  font-size: 130%;
+  text-decoration: underline;
 }
 
-input[type=submit]:hover{
+.startButton:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/*Submit button*/
+.submit {
+display: inline-block;
+}
+
+input[type=submit]:hover {
   color: #fff;
 }
+
 
 /*dropdown menu*/
 select {

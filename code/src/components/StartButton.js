@@ -10,6 +10,6 @@ export const StartButton = ({ step, setStep }) => {
   }
 
   return (
-    <button className="navButton" type="button" value={step} onClick={() => handleNavButtonsClick(true)}>START</button>
+    <button className="startButton" type="button" value={step} onClick={() => handleNavButtonsClick(true)}>START</button>
   )
 };
