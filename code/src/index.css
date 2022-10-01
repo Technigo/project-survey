@@ -45,6 +45,8 @@ code {
   min-height: 100vh;
   /* height: calc(var(--vh, 1vh) * 100); */
   /* border: 2px pink solid; */
+
+/* one day, fix grid by making it make sense  */
 }
 
 /* --------- HEADER ------------------------------------ */
@@ -79,28 +81,15 @@ code {
   justify-content: center;
 }
 
-
-/* ------ Text input ------ */
-
-.user-name {
-  background-color: white;
-  border: 1px black solid;
-  color: black;
-  border-radius: 3px;
-  padding: 3px;
-}
-
-.user-name:focus {
-}
-
-.user-name:active {
+input {
+  accent-color: var(--lavender);
 }
 
 /* ------ Buttons ------ */
 
 .button {
-  background-color: var(--darklavender);
-  color: white;
+  background-color: var(--mint);
+  color: black;
   border: 1px black;
   border-radius: 3px;
   padding: 5px 10px;
@@ -115,24 +104,34 @@ code {
 .button:active {
   }
 
-/* ------ Select ------ */
+/* ------ Text input (name) ------ */
 
-.select {
+.user-name {
+  background-color: white;
+  border: 1px black solid;
+  border-radius: 3px;
+  padding: 5px;
+}
+
+.user-name:focus {
+}
+
+.user-name:active {
+}
+
+/* ------ Select (coolest thing) ------ */
+
+.whatever {
     padding: 5px 10px;
     border: none;
     border-radius: 3px;
 }
 
-/* ------ Radiobuttons ------ */
+/* ------ Radiobuttons (job) ------ */
 
-.radiobuttons {
+.jobthing {
   display: block;
-}
-
-.radiobuttons:focus {
-}
-
-.radiobuttons:checked {
+  margin-bottom: 10px;
 }
 
 /* --------- FOOTER ------------------------------------ */
@@ -141,7 +140,7 @@ code {
   /* border:2px yellow solid; */
   font-size: 0.8rem;
   height: fit-content;
-  /* align-self: end; */
+  align-self: end;
   padding-bottom: 20px;
   font-family: 'JetBrains Mono', monospace;
 }
@@ -163,7 +162,6 @@ code {
 .footer-link:active {
   color: var(--darkgray);
 }
-
 
 /* --------- MEDIA QUERIES ------------------------------------ */
 

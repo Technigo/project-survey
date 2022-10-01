@@ -16,17 +16,16 @@ const PerfectJob = ({ perfectJob, setPerfectJob }) => {
   return (
     <>
       <p>If Borzois could have human jobs, the most perfect one would be:</p>
-
       {perfectJobOptions.map((option) => (
-        <label htmlFor={`perfectJob${option}`} key={option}>
-          {option}
+        <label htmlFor={`perfectJob${option}`} key={option} className="jobthing">
           <input
-            className="radiobuttons"
             id={`perfectJob${option}`}
             type="radio"
             value={option}
             onChange={handlePerfectJobChange}
             checked={perfectJob === option} />
+          {option}
+
         </label>
       ))}
     </>
