@@ -33,7 +33,7 @@
         "unnamedComponents": "arrow-function"
       }     
     ],
-    "Linebreak-style": ["error", "windows"],
+    "linebreak-style": ["error", "windows"],
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "brace-style": [
