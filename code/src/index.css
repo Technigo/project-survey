@@ -1,12 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Leckerli+One&display=swap');
 
-*{
-  box-sizing: border-box;
-  margin: 0;
-  max-width: 100%;
-}
-
 body{
   margin: 0;
   -webkit-font-smoothing: antialiased;
@@ -19,11 +13,6 @@ body{
   background-repeat: no-repeat;
   font-family: 'Poppins', sans-serif;
   padding: 0;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 /* General styling */
@@ -58,7 +47,7 @@ h3{
 }
 
 p{
-  font-size: 2.2vh;
+  font-size: 2vh;
   margin: 10px 5%;
   line-height: 30px;
   text-align: center;
@@ -102,11 +91,13 @@ label{
 }
 
 /* Opening section styling */
+.name-container{
+  margin: 5% auto;
+}
 .name-input{
   padding: 1vw 4vw;
   border: none;
   border-radius: 10px;
-  margin: 5% auto;
   font-family: 'Poppins', sans-serif;
   text-align: center;
 }
@@ -114,30 +105,20 @@ label{
 /* Cake checkboxes styling */
 .cake-container{
   display: grid;
-  margin: 0 5% 5% 5%;
+  justify-items: center;
 }
 
 .cake-checkbox{
   display: flex;
-  justify-content: center;
   padding: 5%;
 }
 
-.checkboxes{
-  width: 15px;
-}
-
-.cake-image{
+ .cake-image img{
   width: 180px;
   height: 180px;
   overflow: hidden;
   box-shadow: 5px 5px 10px rgb(208, 208, 208);
   margin-left: 10px;
-}
-
-img{
-  min-width: 100%;
-  min-height: 100%;
   object-fit: cover;
 }
 
@@ -155,13 +136,12 @@ img{
 .service-select{
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .service-option{
   border: none;
-  width: 30vw;
   border-radius: 20px;
-  padding: 1% 10%;
 }
 
 /* Price range slider styling */
@@ -196,43 +176,33 @@ textarea{
   flex-direction: column;
   row-gap: 10px;
   margin: 0 10%;
-  
 }
 
 /* For tablet */
 @media (min-width: 500px) and (max-width: 1023px){
   h1{
-    font-size: 6.5vh;
+    font-size: 5vh;
   }
 
   p{
     font-size: 2.2vw;
   }
 
-  img{
-    width: 250px;
-    height: 250px;
-  }
-
   button{
     margin: 5% auto;
   }
 
-  .container{
-    padding: 5% 0;
-  }
-
-  .cake-container{
-    display: grid;
-    grid-template-columns: auto auto;
+   .cake-container{
+    grid-template-columns: 50% 50%;
+    margin: 0;
   }
 
   .cake-checkbox{
-    padding: 5%;
+    padding: 2%;
     margin: auto 2%;
   }
 
-  .cake-image{
+  .cake-image img{
     width: 200px;
     height: 200px;
   }
@@ -240,31 +210,21 @@ textarea{
   .quality-cake{
     padding: 0;
   }
-
-  .service-option{
-    padding: 2% 10%;
-  }
-
 }
 
 @media (min-width: 1024px){
   h1{
-    padding-top: 5%;
-    font-size: 4vw;
-  }
-  button{
-    margin: 2% auto;
+    font-size: 6vw;
   }
 
-  .container{
-    padding: 2%;
-    margin: 5% 10%;
+  button{
+    margin: 2% auto;
+    padding: 10px 40px;
   }
 
   .cake-container{
-    display: grid;
-    grid-template-columns: 50% 50%;
-    border: none;
+    grid-template-columns: 33% 33% 33%;
+    margin: 0;
   }
 
   .cake-checkbox{
@@ -272,14 +232,13 @@ textarea{
     margin: auto 2%;
   }
   
-  .cake-image{
+  .cake-image img{
     width: 400px;
     height: 400px;
   }
 
   .quality-cake{
-    margin: 1% 5%;
+    margin: 1% 25%;
     padding: 0;
   }
-
 }

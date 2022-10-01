@@ -11,7 +11,7 @@ const Checkcake = (props) => {
   return (
     <div className="container">
       <h3>Which cakes are your favourite? (please choose 2 or more)</h3>
-      <label htmlFor="cake selection" className="cake-container">
+      <form htmlFor="cake selection" className="cake-container">
         <label htmlFor="cake checkbox" className="cake-checkbox">
           <input
             className="checkboxes"
@@ -93,7 +93,7 @@ const Checkcake = (props) => {
           </div>
         </label>
 
-      </label>
+      </form>
       <button type="button" onClick={onCounterChange} disabled={cakeOption === ''}>Next Question</button>
     </div>
   );

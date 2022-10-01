@@ -14,18 +14,20 @@ const Opening = ({ name, onNameChange, onCounterChange }) => {
       to be your favourite cake shop!
       </p>
       <p>First of all, we would like to know our lovely customer more.
-      Please type in your name below!😊
+      Please type in your name below😊
 
       </p>
-      <label htmlFor="name">
-        <input
-          type="text"
-          placeholder="Type your name here..."
-          required
-          value={name}
-          onChange={onNameChange}
-          className="name-input" />
-      </label>
+      <form className="name-container">
+        <label htmlFor="name">
+          <input
+            type="text"
+            placeholder="Type your name here..."
+            required
+            value={name}
+            onChange={onNameChange}
+            className="name-input" />
+        </label>
+      </form>
       <button type="button" disabled={name === ''} onClick={onCounterChange}>Start Review</button>
     </div>
   )
