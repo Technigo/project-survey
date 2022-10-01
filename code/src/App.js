@@ -1,35 +1,31 @@
+import { StartDay } from 'components/StartDay';
 import React, { useState } from 'react';
 
-import { Name } from 'components/Name';
-import { Food } from 'components/Food';
-import { Drink } from 'components/Drink';
-import { Result } from 'components/Result';
+import { StartSurvey } from './components/StartSurvey';
+import { Survey } from './components/Survey';
+import { Summary } from './components/Summary';
 
 export const App = () => {
-  const [step, setStep] = useState(1);
-  const [name, setName] = useState('');
-  const [food, setFood] = useState('');
-  const [drink, setDrink] = useState('');
-
-  const handleStepIncrease = () => {
-    setStep(step + 1);
-  };
+  const [section, setSection] = useState(0);
+  const [startDay, setStartDay] = useState('');
+  const [relationship, setRelationship] = useState('');
+  const [whatKinde, setWhatKinde] = useState('');
+  const [feeling, setFeeling] = useState('');
 
   return (
-    <>
-      {step === 1 && <Name name={name} setName={setName} />}
-      {step === 2 && <Food food={food} setFood={setFood} />}
-      {step === 3 && <Drink drink={drink} setDrink={setDrink} />}
-      {step >= 4 && <Result name={name} food={food} drink={drink} />}
+    <main className="main">
+      <>
+        <StartSurvey setSection={setSection} section={section} />
 
-      {step < 4 && (
-        <>
-          <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>
-            Next step
-          </button>
-        </>
-      )}
-    </>
+        <Survey startDay={startDay} setStartDay={setStartDay} />
+
+        <Summary
+          startDay={startDay}
+          relationship={relationship}
+          whatKinde={whatKinde}
+          feeling={feeling}
+        />
+      </>
+    </main>
   );
 };
