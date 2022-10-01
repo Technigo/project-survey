@@ -1,13 +1,15 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This assignment involved practising using React state and controlled forms by making a survey that gives a summary of the user's answers at the end.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had trouble getting the map function to work when trying to use a conditional inside it, therefore ended up using simple if-statements in my Summary component, for example. 
+Would also liked to have printed out all of the questions and the user's answers in the summary but only managed to print out the number of questions they answered yes to. 
+If I had more time I would try to fix this as well as improve on the styling (better align text etc.) that took a backseat for this project.
+I would also add error handling for when the user doesn't select an answer. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://grand-custard-84accf.netlify.app/
+
