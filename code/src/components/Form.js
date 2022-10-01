@@ -39,11 +39,10 @@ const Form = () => {
               <ValuedTrait valuedTrait={valuedTrait} setValuedTrait={setValuedTrait} />
               <MostPowerfulEmotion setStrongestEmotion={setStrongestEmotion} />
               <LikelihoodMeter likelihood={likelihood} setLikelihood={setLikelihood} />
-              <button className="submit-button" type="submit">Submit</button>
+              <button className="submit-button" type="submit" aria-label="submit form">Submit</button>
             </form>
           </section>
         </>)}
-
     </div>
   )
 }

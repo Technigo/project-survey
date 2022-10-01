@@ -2,7 +2,7 @@ import React from 'react';
 
 const SubmissionOverview = ({ userName, valuedTrait, strongestEmotion, likelihood }) => {
   return (
-    <div className="submission-form">
+    <div className="submission-form" aria-label="summary">
       <h2>{userName},</h2>
       <p>Your most valued trait is: {valuedTrait}.</p>
       <p>The strongest emotion was one of {strongestEmotion}.</p>
