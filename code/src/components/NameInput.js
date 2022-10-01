@@ -4,7 +4,8 @@ const NameInput = ({ userName, setUserName }) => {
   return (
     <div className="question-wrapper">
       <fieldset>
-        <label htmlFor="name-input">Who are you?
+        <label htmlFor="name-input">What is your name?
+          <br />
           <input
             className="input-field"
             id="name-input"
