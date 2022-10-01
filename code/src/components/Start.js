@@ -1,5 +1,9 @@
 import React from 'react'
 
+if (navigator.userAgent.match(/Android/)) {
+    alert("Droid me baby");
+ }
+
 const Start = ( {username, setUsername, onStepChange} ) => {
 
   return ( 
