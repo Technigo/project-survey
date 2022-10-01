@@ -1,4 +1,4 @@
-body {
+/* body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -10,4 +10,18 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+ */
+
+ .progressBar {
+  width: 400px;
+  height: 10px;
+  background-color: bisque;
+  margin-bottom: 50px;
+}
+
+.progressBar div {
+  /* width: 20%; */
+  height: 100%;
+  background-color: rgb(98, 0, 255);
 }

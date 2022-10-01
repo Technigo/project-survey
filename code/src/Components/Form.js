@@ -3,6 +3,7 @@ import SignInMember from "./SignInMember";
 import Register from "./Register";
 import Booking from "./Booking";
 import Timeslot from './Timeslot';
+import Confirmation from "./Confirmation";
 
 const Form = () => {
     const WelcomeMsg = "WELCOME! To the next level gym";
@@ -16,15 +17,20 @@ const Form = () => {
             return <SignInMember />
         } else if (page === 1){
             return <Register />
-        } else if (page ===2){
+        } else if (page === 2){
             return <Booking />
-        } else if (page ===3){
+        } else if (page === 3){
             return <Timeslot /> 
+        } else {
+            return <Confirmation />
         }
     }
 
     return ( 
         <>
+        <div className="progressBar">
+            <div style={{ width: page === 0 ? "20%" : page === 1 ? "40%" : page ===2 ? "60%": page === 3 ? "80%" : "100%" }}></div>
+        </div>
         <div className="header">
             <h1>{WelcomeMsg}</h1> {/* this will permanently display */} 
             <h2>{FormTitles[page]}</h2> {/* this will change depending on which page you're in */}

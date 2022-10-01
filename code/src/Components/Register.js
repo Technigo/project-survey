@@ -6,7 +6,7 @@ const Register = () => {
     const [email, setEmail] = useState("");
 
     return ( 
-        <div className="register-wrapper">
+        <div className="register">
             <form>
                 <div className="input">
                     <label htmlFor="">Name</label>

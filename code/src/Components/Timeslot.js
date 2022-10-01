@@ -1,28 +1,32 @@
+import { useState } from "react";
+
 const Timeslot = () => {
+
+    const [timeslot, setTimeslot] = useState(""); 
+    
     return ( 
-        <>
          <div className="time">
-         <label>Select a Time</label>
          
-        <select>
-            <option value="" disabled selected>Select your option</option>
-            <option value="">8AM</option>
-            <option value="">9AM</option>
-            <option value="">10AM</option>
-            <option value="">11AM</option>
-            <option value="">12PM</option>
-            <option value="">1PM</option>
-            <option value="">2PM</option>
-            <option value="">3PM</option>
-            <option value="">4PM</option>
-            <option value="">5PM</option>
-            <option value="">6PM</option>
-            <option value="">7PM</option>
-            <option value="">8PM</option>
-        </select>
-        
+         <label>Select a Time</label>
+            <select value={timeslot}
+            onChange ={(e)=>setTimeslot(e.target.value)} >
+                <option disabled selected>Select your option</option>
+                <option>8AM</option>
+                <option>9AM</option>
+                <option>10AM</option>
+                <option>11AM</option>
+                <option>12PM</option>
+                <option>1PM</option>
+                <option>2PM</option>
+                <option>3PM</option>
+                <option>4PM</option>
+                <option>5PM</option>
+                <option>6PM</option>
+                <option>7PM</option>
+                <option>8PM</option>
+            </select>
+            {/* <p>{timeslot}</p> */}
          </div>
-        </>
      );
 }
  
