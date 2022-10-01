@@ -32,10 +32,6 @@ body {
   bottom: 0;
 }
 
-.md start-image {
-  display:none
-}
-
 .result-image {
   position: fixed;
   height: 200px;

@@ -1,7 +1,7 @@
 import React from 'react'
 
 if (navigator.userAgent.match(/Android/)) {
-    document.getElemenByClassName('start-image').style.display="none"
+    document.getElementsByClassName('start-image').style.display="none"
  }
 
 const Start = ( {username, setUsername, onStepChange} ) => {
