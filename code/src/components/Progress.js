@@ -10,16 +10,17 @@ export const Progress = ({ step, setStep }) => {
       setStep(step - 1);
     }
   }
-  return <footer className="footer-wrapper">
-    <button type="button" className="button-previous" onClick={() => handleCounterButtonClick2(false)}><span className="arrow" />  Previous question</button>
-    <div className="progress-wrapper">
-      <label className="label-progress" htmlFor="progress"> {step === 5 ? 'completed' : `question ${step}/4`} </label>
-      <progress
-        id="progress"
-        tabIndex="-1"
-        max="4"
-        value={step} />
-    </div>
-  </footer>
+  return (
+    <footer className="footer-wrapper">
+      <button type="button" className="button-previous" onClick={() => handleCounterButtonClick2(false)}><span className="arrow" />  Previous question</button>
+      <div className="progress-wrapper">
+        <label className="label-progress" htmlFor="progress"> {step === 5 ? 'completed' : `question ${step}/4`} </label>
+        <progress
+          id="progress"
+          tabIndex="-1"
+          max="4"
+          value={step} />
+      </div>
+    </footer>)
 }
 
