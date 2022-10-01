@@ -5,11 +5,11 @@ export const Result = ({ name, activity, size, famous }) => {
         <>
         <div className="result-container">
          <h2 tabindex='0'>Alrighty then!</h2>
-            <p tabindex='0'> <span className="bold">Here are your answers, please press submit if you are satisfied with them. </span>  </p>
-            <p>Email: {name}</p>
-            <p>Where to spend quality time: {activity}</p>
-            <p>Preferred size: {size}</p>
-            <p>Favourite famous dog: {famous}</p>
+            <p tabindex='0'> Here are your answers, please press submit if you are satisfied with them.  </p>
+            <p> <span className="bold"> Email:</span>  {name}</p>
+            <p> <span className="bold"> Where to spend quality time: </span> {activity}</p>
+            <p> <span className="bold"> Preferred size: </span>  {size}</p>
+            <p> <span className="bold">  Favourite famous dog: </span> {famous}</p>
         </div>
 
         <div className="image-center">

@@ -67,6 +67,10 @@ h1 {
   position: relative;
 }
 
+.underline{
+  font-weight:bold;
+}
+
 /*Form styling*/
 form, input{
  margin-bottom: 40px;
