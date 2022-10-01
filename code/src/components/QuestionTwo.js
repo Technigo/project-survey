@@ -1,7 +1,7 @@
 import React from "react";
 
 const activities = [
-    'An adventurous hike in the forest',
+    'On an adventurous hike in the forest',
     'At a coffee shop downtown',
     'With my family on a chill pic-nic',
     'Out on a moose hunt!'

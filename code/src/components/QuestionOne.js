@@ -17,8 +17,9 @@ export const QuestionOne = ({name, setName}) => {
             className='email-input'
             placeholder='example@mail.com'
             value={name} 
+            onChange={handleNameChange} 
             required
-            onChange={handleNameChange} />
+            />
         </label>
 
         <div className="image-center">
