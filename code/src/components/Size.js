@@ -8,7 +8,7 @@ export const Size = ({ size, setSize }) => {
   return (
     <form>
       <p>
-        What size do you want?
+        What size of the confetti do you want?
       </p>
       <select value={size} onChange={handleSizeChange}>
         <option value="">Select size</option>

@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 
+import JSConfetti from 'js-confetti';
 import { Step } from 'components/Step';
 import { Size } from './components/Size';
 import { Pattern } from './components/Pattern';
 import { Name } from './components/Name';
 import { Colour } from './components/Colour';
 import { Result } from './components/Result';
+
+const jsConfetti = new JSConfetti();
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -21,8 +24,9 @@ export const App = () => {
       <div className="innerWrapper">
         {step === 1 && (
           <>
-            <h1>Style</h1>
+            <h1>Celebrate</h1>
             <Name name={name} setName={setUserName} />
+            <button type="button" onClick={(jsConfetti.addConfetti({ confettiRadius: 7, confettiNumber: 350, confettiColors: ['#00FFD1'] }))}>CONFETTI</button>
           </>
         )}
         {step === 2 && (

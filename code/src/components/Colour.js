@@ -8,7 +8,7 @@ export const Colour = ({ color, setColor }) => {
   return (
     <form>
       <p>
-        What is your favourite color?
+        Choose the colour of the confetti:
       </p>
       <input type="color" className="colorPicker" value={color} onChange={handleColorChange} />
     </form>

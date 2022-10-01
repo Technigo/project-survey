@@ -8,7 +8,7 @@ export const Name = ({ name, setName }) => {
   return (
     <form className="nameForm">
       <p>
-        What is your name?
+        What do you want to celebrate?
       </p>
       <input type="text" className="nameInputField" value={name} onChange={handleNameChange} />
     </form>
