@@ -11,26 +11,27 @@ export const Scale = ({ scale, setScale, step, setStep }) => {
   }
 
   return (
-    <><div className="question-wrapper">
-      <div className="question">
-        <label className="label" htmlFor="range">On a scale of 0-10 how happy are you with Earth? would you recommend it to others?</label>
-        <div className="range-parent">
-          <input
-            id="range"
-            type="range"
-            min="0"
-            max="10"
-            value={scale}
-            onChange={(e) => setScale(e.target.value)} />
-        </div>
-        <div className="range-display">
-          {scale}
+    <>
+      <div className="question-wrapper">
+        <div className="question">
+          <label className="label" htmlFor="range">On a scale of 0-10 how happy are you with Earth? would you recommend it to others?</label>
+          <div className="range-parent">
+            <input
+              id="range"
+              type="range"
+              min="0"
+              max="10"
+              value={scale}
+              onChange={(e) => setScale(e.target.value)} />
+          </div>
+          <div className="range-display">
+            {scale}
+          </div>
         </div>
       </div>
-    </div>
-    <div className="submit-parent">
-      <button type="button" className="button-submit" onClick={() => handleCounterButtonClick3(true)}>Submit <span className="arrow" /> </button>
-    </div>
+      <div className="submit-parent">
+        <button type="button" className="button-submit" onClick={() => handleCounterButtonClick3(true)}>Submit <span className="arrow" /> </button>
+      </div>
     </>
   );
 }

@@ -10,7 +10,7 @@ export const Age = ({ age, setAge }) => {
         <label className="label" htmlFor="radio">What is your Age?</label>
         <div className="question-range">
           {ageGroups.map((ages) => (
-            <label key={ages.id}>
+            <label key={ages.id} htmlFor="radio">
               <input
                 type="radio"
                 value={ages}
