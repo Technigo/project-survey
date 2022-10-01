@@ -22,15 +22,6 @@ code {
     monospace;
 }
 
-/*.header {
-  background-color: #AFADA8;
-  text-align: center;
-  padding: 5rem 0;
-  color: white;
-  display: flex;
-  flex-direction: column;
-}*/
-
 .header {
   background-image: url("images/watch.jpg");  
   border-radius: 1rem;
@@ -47,16 +38,6 @@ code {
   border-radius: 1rem;
 }
 
-/*
-.footer {
-  font-weight: 100;
-  margin-top: auto;
-}
-.welcome-image {
-  width: 100%;
-  border-radius: 1rem;
-}*/
-
 .intro {
   font-size: 1.2rem;
   font-weight: bold;
@@ -69,6 +50,10 @@ code {
   margin-top: 1rem;
   width: 100%;
   padding: 1rem 0.5rem;
+}
+
+.balance {
+  padding: 0 0.5rem;
 }
 
 h2 {
@@ -171,13 +156,16 @@ a {
     padding: 1rem 1rem;
   }
 
+  .balance {
+    padding: 0 1rem;
+  }
+
   h3, .mainQuestion, .ageQuestion, .habitQuestion {
     font-size: 1.4rem;
   } 
 
   select {
     font-size: 1.4rem;
-    width: 70%;
     height: 4rem;
   }
 }

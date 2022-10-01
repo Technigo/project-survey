@@ -1,8 +1,9 @@
 import React from 'react';
 
-export const Summary = ({ ageGroup, total, met, meetsCardio, meetsStrength, meetsMovement, meetsBalance, specialGroup }) => {
-  const responses = [meetsCardio, meetsStrength, meetsMovement, meetsBalance]
-
+export const Summary = ({
+  ageGroup, total, met, meetsCardio, meetsStrength,
+  meetsMovement, meetsBalance, specialGroup
+}) => {
   // Count how many questions the user got
   if (ageGroup === '5 - 17' || ageGroup === '18 - 64') {
     total = 3;

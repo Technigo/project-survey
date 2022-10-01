@@ -1,7 +1,9 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable max-len */
 import React from 'react';
 
 // eslint-disable-next-line max-len
+// Component presents 3 questions to the age group 5 - 17 years
 export const Child = ({ meetsCardio, meetsStrength, meetsMovement, setMeetsCardio, setMeetsStrength, setMeetsMovement }) => {
   return (
     <form className="form" onSubmit={(event) => event.preventDefault()}>

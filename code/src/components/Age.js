@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
 const ageGroups = [
@@ -5,7 +6,7 @@ const ageGroups = [
   '18 - 64',
   '65+'
 ]
-
+// Component presents 3 age groups for the user to select between
 export const Age = ({ ageGroup, setAgeGroup }) => {
   return (
     <form className="form" onSubmit={(event) => event.preventDefault()}>
