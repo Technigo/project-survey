@@ -5,7 +5,7 @@ import React from 'react'
 const Start = ( {username, setUsername, onStepChange} ) => {
 
     if (navigator.userAgent.match(/Android/)) {
-        document.getElementsByClassName('start-image').style.display="none"
+        document.getElementById('start-image').style.display='none'
      }
 
   return ( 
@@ -28,7 +28,7 @@ const Start = ( {username, setUsername, onStepChange} ) => {
                 <label hidden htmlFor='startBtn'>Start</label>
                 <button id='startBtn' type='button' onClick={onStepChange}>Start</button>
         </div>
-        <img className='start-image' src='/images/Brooklyn.png' alt='brooklyn'/>
+        <img className='start-image' id='start-image' src='/images/Brooklyn.png' alt='brooklyn'/>
     </div>
    
     )
