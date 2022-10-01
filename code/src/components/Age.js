@@ -1,6 +1,7 @@
 import React from 'react';
 
-/* This component is a range input, where the user get to chose from the age groups and saves the value for the submit S*/
+/* This component is a range input, where the user get to chose from the age groups
+   and saves the value for the submit */
 const ageGroups = ['0-18', '19-30', '31-45', '46-60', '61+'];
 
 export const Age = ({ age, setAge }) => {

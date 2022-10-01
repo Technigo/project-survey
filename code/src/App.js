@@ -10,7 +10,8 @@ import { Scale } from 'components/Scale';
 import { Result } from 'components/Result';
 import { Progress } from 'components/Progress';
 
-/*Here we call on all our components and set there "state" (value given in each step/question) and then print them in Resluts */
+/* Here we call on all our components and set there "state"
+   (value given in each step/question) and then print them in Resluts */
 export const App = () => {
   const [step, setStep] = useState(0);
   const [name, setName] = useState('');

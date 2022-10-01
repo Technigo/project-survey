@@ -1,6 +1,7 @@
 import React from 'react';
 
-/* This components tracks the progress depending on what step(page) the user is on and prints it in the footer */
+/* This components tracks the progress depending on what step(page)
+the user is on and prints it in the footer */
 export const Progress = ({ step, setStep }) => {
   const handleCounterButtonClick2 = (shouldIncrese) => {
     if (shouldIncrese && step < 4) {

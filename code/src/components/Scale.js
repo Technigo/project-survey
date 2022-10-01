@@ -1,6 +1,7 @@
 import React from 'react';
 
-/* This component is a range input, where the user will drag a slider and choose what value the want to submit */
+/* This component is a range input, where the user will drag a slider
+ and choose what value the want to submit */
 export const Scale = ({ scale, setScale, step, setStep }) => {
   const handleCounterButtonClick3 = (shouldIncrese) => {
     if (shouldIncrese && step < 5) {
