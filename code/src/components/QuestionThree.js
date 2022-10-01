@@ -1,7 +1,7 @@
 import React from "react";
 
 const sizes = [
-    'Preferably, it should fit in a handbag',
+    'Small, so it can fit in my handbag',
     'Medium, so I can easily spot it out on our walks in nature',
     'As large as they come, so I don’t have to bend over to pet it'
 ]
@@ -14,8 +14,9 @@ const QuestionThree = ({size, setSize}) => {
     }
         return (
             <>
-                <h2>What size would you prefer for your new best friend?</h2>
-                    <form className="radio-buttons">
+            
+            <h2>What size would you prefer for your new best friend?</h2>
+                <form className="radio-buttons">
                     {sizes.map(dogSize => (
                     <label key={dogSize}>
                     <input
@@ -27,8 +28,9 @@ const QuestionThree = ({size, setSize}) => {
                         />
                     {dogSize}
                     </label>
-                  ))}
-            </form>
+                    ))}
+                </form>
+            
           </>
         
     )

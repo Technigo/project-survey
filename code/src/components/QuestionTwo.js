@@ -14,7 +14,7 @@ const QuestionTwo= ({activity, setActivity}) => {
     }
 
         return (
-            <div>
+          <>
             <h2>Where would you prefer to spend some quality time with your pup?</h2>
 
             <form className="radio-buttons">
@@ -31,7 +31,7 @@ const QuestionTwo= ({activity, setActivity}) => {
                   </label>
               ))}
           </form>
-      </div>
+       </>
     
     );
 
