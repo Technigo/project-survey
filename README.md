@@ -8,5 +8,4 @@ I started with making a plan of the question, how to display the different quest
 I also would have liked to add validation.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://sport-survey-neah.netlify.app/
