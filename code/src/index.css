@@ -1,5 +1,24 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,400;1,600&family=Source+Sans+Pro&display=swap');
 
+/* --------- GENERAL ------------------------------------ */
+
+:root {
+
+  --lightgray: #fafafa;
+
+  --lavender: rgb(183, 139, 255);
+  --mint: rgb(135, 255, 205);
+
+  --darklavender: rgb(124, 72, 208);
+  --darkgray: rgb(66, 66, 66);
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
 body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -7,7 +26,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
-  box-sizing: border-box;
   background: #f6f6f6;
   font-size: 14px;
   overflow: hidden;
@@ -29,6 +47,8 @@ code {
   /* border: 2px pink solid; */
 }
 
+/* --------- HEADER ------------------------------------ */
+
 .layout-header {
   font-size: 2.5rem;
   /* text-transform: uppercase; */
@@ -37,7 +57,7 @@ code {
   font-family: 'JetBrains Mono', monospace;
   font-style: italic;
   font-weight: 600;
-  background-image: linear-gradient(175deg,rgb(183, 139, 255),rgb(135, 255, 205));
+  background-image: linear-gradient(175deg,var(--lavender),var(--mint));
   background-repeat: no-repeat;
   background-position: 0% 100%;
   background-size: 100% 4px;
@@ -45,15 +65,77 @@ code {
   letter-spacing: 3px;
 }
 
+/* --------- SURVEY ------------------------------------ */
+
 .layout-content {
-  background: #fafafa;
-  min-width: min(90%, 550px);
+  background: var(--lightgray);
+  width: 85%;
+  max-width: 550px;
   border: 2px black dashed;
 }
 
 .survey {
   padding: 20px;
+  justify-content: center;
 }
+
+
+/* ------ Text input ------ */
+
+.user-name {
+  background-color: white;
+  border: 1px black solid;
+  color: black;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.user-name:focus {
+}
+
+.user-name:active {
+}
+
+/* ------ Buttons ------ */
+
+.button {
+  background-color: var(--darklavender);
+  color: white;
+  border: 1px black;
+  border-radius: 3px;
+  padding: 5px 10px;
+  }
+
+.button:focus {
+  }
+
+.button:hover {
+  }
+
+.button:active {
+  }
+
+/* ------ Select ------ */
+
+.select {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+}
+
+/* ------ Radiobuttons ------ */
+
+.radiobuttons {
+  display: block;
+}
+
+.radiobuttons:focus {
+}
+
+.radiobuttons:checked {
+}
+
+/* --------- FOOTER ------------------------------------ */
 
 .layout-footer {
   /* border:2px yellow solid; */
@@ -71,25 +153,23 @@ code {
 }
 
 .footer-link:hover {
-  color: #9643ca;
+  color: var(--darklavender);
 }
 
 .footer-link:focus {
-  color: #9643ca;
+  color: var(--darklavender);
 }
 
 .footer-link:active {
-  color: #242424;
+  color: var(--darkgray);
 }
 
-.button {
 
+/* --------- MEDIA QUERIES ------------------------------------ */
+
+
+@media (min-width: 1025px) {
+  .layout-header {
+    font-size: 3rem;
   }
-
-.button:hover {
-
-  }
-
-.button:active {
-
-  }
+}

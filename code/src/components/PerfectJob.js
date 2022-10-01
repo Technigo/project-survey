@@ -21,6 +21,7 @@ const PerfectJob = ({ perfectJob, setPerfectJob }) => {
         <label htmlFor={`perfectJob${option}`} key={option}>
           {option}
           <input
+            className="radiobuttons"
             id={`perfectJob${option}`}
             type="radio"
             value={option}
