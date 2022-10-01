@@ -163,6 +163,7 @@ p {
     .header-title {
       font-size: 48px;
     }
+
     .headerTextOne {
       background: whitesmoke;
       border: 1px black solid;
@@ -193,7 +194,9 @@ p {
     .stepCounter {
       margin: 40px;
       padding-bottom: 30px;
-      
+    }
+    .nextQuestion:hover {
+      background-color: lightcyan;
     }
 
     .resultText {

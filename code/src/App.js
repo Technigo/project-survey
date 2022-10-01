@@ -60,7 +60,7 @@ export const App = () => {
         {step < 7 && (
           <div className="stepCounter">
             <p>Question {step}</p>
-            <button className="nextQuestion" type="button" onClick={handleStepIncrease}>Next Question</button>
+            <button className="nextQuestion" type="button" onClick={handleStepIncrease} tabIndex="0">Next Question</button>
           </div>
         )}
       </div>

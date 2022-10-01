@@ -7,7 +7,6 @@ const Email = ({ email, setEmail }) => {
 
   return (
     <div className="questionContainer one" id="email">
-      <div className="innerContainer">
         <h2 className="questionTitle" tabIndex="0"><i className="fas fa-arrow-circle-right" /> Please add your email adress so that we can contact you!</h2>
 
         <label htmlFor="email">
@@ -19,23 +18,20 @@ const Email = ({ email, setEmail }) => {
             value={email}
             placeholder="name@email.com" />
         </label>
-
-        <button
-          className="okButton"
-          type="button"
-          onClick={(e) => {
-            if (email.includes('@')) {
-              e.preventDefault();
-              window.location.href = '#workArea'
-            } else {
-              window.alert('Please add a valid email adress.')
-            }
-          }}>OK
-        </button>
-
       </div>
     </div>
   )
 }
 
-export default Email
+
+
+  <div className="sendEmail">
+    <input
+          className="emailInput"
+          type="text"
+          onChange={handleEmailAdressChange}
+          value={emailAdress} />
+          <button className="emailButton" type="button" onClick={handleConfirmEmailChange} tabIndex="0">Email Confirmation</button>
+    </div>
+
+  export default Email  
