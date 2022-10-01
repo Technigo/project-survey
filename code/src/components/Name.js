@@ -8,7 +8,7 @@ export const Name = ({ name, setName }) => {
   return (
     <div className="question-wrapper">
       <div className="question">
-        <label className="label" htmlFor="Age">What is your name?</label>
+        <h2 className="label" htmlFor="Age">What is your name?</h2>
         <input type="text" className="inputAndSelect" value={name} onChange={handleNameChange} />
       </div>
     </div>

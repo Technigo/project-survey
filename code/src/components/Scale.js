@@ -15,7 +15,7 @@ export const Scale = ({ scale, setScale, step, setStep }) => {
     <>
       <div className="question-wrapper">
         <div className="question">
-          <label className="label" htmlFor="range">On a scale of 0-10 how happy are you with Earth? would you recommend it to others?</label>
+          <h2 className="label" htmlFor="range">On a scale of 0-10 how happy are you with Earth? would you recommend it to others?</h2>
           <div className="range-parent">
             <input
               id="range"
