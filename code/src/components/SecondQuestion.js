@@ -35,7 +35,7 @@ const SecondQuestion = ({ nextQuestion, onSecondQuestionChange }) => {
       <div className="content-wrap">
         <h1>Travel Sustainably</h1>
         <p>What is your most chosen transport?</p>
-        <p>Just choose one option! ⚠️</p>
+        <p>Just choose two options! ⚠️</p>
         <form className="form-checkbox">
           <label htmlFor="bus">
             <input

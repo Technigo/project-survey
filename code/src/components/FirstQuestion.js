@@ -19,8 +19,8 @@ const FirstQuestion = ({ firstQuestion, onFirstQuestionChange, nextQuestion }) =
               className="select-meat">
               <option disabled value="">Choose a response</option>
               <option value="daily">Daily</option>
-              <option value="weekly">Two or three times a week</option>
-              <option value="monthly">Two or three times a month</option>
+              <option value="two or three times a week">Two or three times a week</option>
+              <option value="two or three times a month">Two or three times a month</option>
               <option value="never">Never</option>
             </select>
           </label>

@@ -9,9 +9,9 @@ const Summary = ({ formState }) => {
         <h1>{formState.name}, thank you for participating! 🍄</h1>
         <div className="summary-wrapper">
           <p>Your answers were: </p>
-          <p>You eat meat {formState.meatFrequency} 🍖</p>
-          <p>You main transport is {formState.transportChoices} 🏠</p>
-          <p>Usually, you buy your clothes at {formState.storesChoice} 👗👖</p>
+          <p>You eat meat {formState.meatFrequency} 🍖.</p>
+          <p>You main transports are {formState.transportChoices.join(' and ')} 🏠.</p>
+          <p>Usually, you buy your clothes at {formState.storesChoice} 👗👖.</p>
         </div>
         <button type="button" onClick={() => window.location.reload()} className="button button-summary">
           Start Again! ⭐
