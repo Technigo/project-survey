@@ -232,7 +232,7 @@ a {
 }
 
 /* MEDIA QUERIES */
-@media (mad-width: 650px) {
+@media (max-width: 650px) {
   .dot-shape {
     left: 5em;
     width: 6rem;
