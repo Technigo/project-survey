@@ -4,10 +4,10 @@ const MostPowerfulEmotion = ({ setStrongestEmotion }) => {
   return (
     <div className="question-wrapper">
       <fieldset>
-        <label htmlFor="strongest-emotion">Throughout your life, what has been your most powerful emotion?
-          <br />
+        <legend>Throughout your life, what has been your most powerful emotion?</legend>
+        <label htmlFor="strongest-emotion">
           <select className="input-field" name="strongest-emotion" required onChange={(event) => setStrongestEmotion(event.target.value)}>
-            <option defaultValue={null}> </option>
+            <option disabled selected>Select feeling</option>
             <option id="happiness" value="happiness">Happiness</option>
             <option id="sadness" value="sadness">Sadness</option>
             <option id="fear" value="fear">Fear</option>

@@ -4,10 +4,10 @@ const LikelihoodMeter = ({ likelihood, setLikelihood }) => {
   return (
     <div className="question-wrapper slidecontainer">
       <fieldset>
-        <label htmlFor="likelihood-range">
-          How likely are you to be accepted to Hogwarts Community College?
+        <legend>How likely are you to be accepted to Hogwarts Community College?
           (not likely - very likely)
-          <br />
+        </legend>
+        <label htmlFor="likelihood-range">
           <input
             required
             type="range"

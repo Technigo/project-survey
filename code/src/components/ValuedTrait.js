@@ -5,7 +5,7 @@ const ValuedTrait = ({ valuedTrait, setValuedTrait }) => {
   return (
     <div className="question-wrapper valued-trait">
       <fieldset>
-        <p className="value-question">Which of the following traits do you value the most?</p>
+        <legend className="value-question">Which of the following traits do you value the most?</legend>
         <RadioButton
           valuedTrait={valuedTrait}
           setValuedTrait={setValuedTrait}
