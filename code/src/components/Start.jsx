@@ -1,11 +1,11 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
 import { Menu } from './Menu';
+import { BackNextBtn } from './BackNextBtn';
 import { BackFront } from './BackFront';
 import { LoneTeam } from './LoneTeam';
 import { LearnKnow } from './LearnKnow';
 import { Summary } from './Summary';
-import { BackNextBtn } from './BackNextBtn';
 
 export const Start = () => {
   const [step, setStep] = useState(0);
@@ -41,5 +41,5 @@ export const Start = () => {
         )}
       </section>
     </div>
-  )
+  );
 };

@@ -7,10 +7,9 @@
 
 :root {
   --bg-color: whitesmoke;
-
   --main-color: rgb(0, 72, 255);
   --sub-color: #9e4dfb;
-
+  --third-color: white;
   --main-font: 'Nunito', 'Arial', sans-serif;
   --sub-font: 'Open sans', sans-serif;
 }
@@ -29,7 +28,6 @@ code {
 /* WRAPPER (Start.jsx) */
 .outer-wrapper {
   background-color: var(--bg-color);
-  opacity: 1;
   background-image: linear-gradient(
       rgb(165, 191, 255) 1.2000000000000002px,
       transparent 1.2000000000000002px
@@ -39,7 +37,7 @@ code {
       rgb(165, 191, 255) 1.2000000000000002px,
       var(--bg-color) 1.2000000000000002px
     );
-  background-size: 24px 24px;
+  background-size: 22px 22px;
   margin: 0 auto;
   width: 100%;
   height: 100vh;
@@ -85,16 +83,16 @@ h2 {
 }
 
 .start-btn {
-  background-color: white;
+  background-color: var(--third-color);
   border: 0.1rem solid var(--main-color);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   box-shadow: 0.3rem 0.3rem var(--main-color);
   color: var(--main-color);
   font-family: 'Nunito';
   font-size: 1.5rem;
   font-weight: 700;
   margin: 1.5rem 0 0.6rem 0.4rem;
-  padding: 0.7rem 1rem;
+  padding: 0.5rem 0.9rem;
   width: fit-content;
   -webkit-animation: bounce 0.3s infinite alternate;
   -moz-animation: bounce 0.3s infinite alternate;
@@ -119,18 +117,19 @@ h2 {
 
 .dot-shape {
   position: absolute;
-  right: -3rem;
+  right: -2.5rem;
   top: 13rem;
-  background: var(--main-color);
-  border-radius: 50%;
   display: flex;
   align-items: center;
+  background: var(--main-color);
+  border-radius: 90% 70% 69% 70% / 84% 70% 70% 65%;
+  background: var(--main-color);
   width: 9rem;
   height: 9rem;
 }
 
 .dot-text {
-  color: white;
+  color: var(--third-color);
   font-size: 1.45rem;
   font-weight: 900;
   text-align: center;
@@ -149,7 +148,7 @@ h2 {
   background-color: var(--sub-color);
   border: none;
   border-radius: 0.8rem;
-  color: white;
+  color: var(--third-color);
   font-family: var(--main-font);
   font-size: 1.2rem;
   font-weight: 900;
@@ -160,7 +159,7 @@ h2 {
 .select-one-message {
   position: absolute;
   bottom: 7rem;
-  right: 5.5rem;
+  right: 5rem;
   color: var(--sub-color);
   display: none;
   font-family: var(--sub-font);
@@ -170,8 +169,9 @@ h2 {
 
 /* BackFront.jsx */
 .dropdown {
+  background-color: var(--third-color);
   border: 0.1rem solid var(--main-color);
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   box-shadow: 0.3rem 0.3rem var(--main-color);
   color: var(--main-color);
   font-family: 'Nunito';
@@ -183,7 +183,7 @@ h2 {
   height: 3rem;
 }
 
-/* LoneTeam.jsx */
+/* Radio buttons (LoneTeam.jsx and LearnKnow.jsx) */
 .radio-container {
   display: flex;
   flex-direction: column;
@@ -195,7 +195,7 @@ h2 {
   color: var(--sub-color);
   display: grid;
   grid-template-columns: 1.5rem auto;
-  font-family: var();
+  font-family: var(--main-font);
   font-size: 1.5rem;
   font-weight: 700;
   gap: 0.5rem;
@@ -230,9 +230,14 @@ a {
   color: var(--main-color);
 }
 
-.dot-shape {
-  width: 9rem;
-  height: 9rem;
-  background: var(--main-color);
-  border-radius: 80% 70% 70% 90% / 80% 50% 90% 65%;
+/* MEDIA QUERIES */
+@media (mad-width: 650px) {
+  .dot-shape {
+    right: -1rem;
+    width: 8rem;
+    height: 8rem;
+  }
+  .select-one-message {
+    right: 3rem;
+  }
 }

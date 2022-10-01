@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
   console.log(loneTeam)
@@ -8,12 +8,11 @@ export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
       <div className="radio-container">
         <label className="radio-label" htmlFor="lone">
           <input
-            className="radio-btn"
             type="radio"
             id="lone"
             name="loneTeam"
             value="lone wolf"
-            onChange={(e) => setLoneTeam(e.target.value)}
+            onChange={(event) => setLoneTeam(event.target.value)}
             checked={loneTeam === 'lone wolf'} />
         Lone Wolf
         </label>
@@ -23,7 +22,7 @@ export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
             id="team"
             name="loneTeam"
             value="team player"
-            onChange={(e) => setLoneTeam(e.target.value)}
+            onChange={(event) => setLoneTeam(event.target.value)}
             checked={loneTeam === 'team player'} />
         Team Player
         </label>

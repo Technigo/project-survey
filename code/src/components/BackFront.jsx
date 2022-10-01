@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 export const BackFront = ({ backFront, setBackFront }) => {
   const handleBackFrontChange = (event) => {
@@ -11,13 +11,12 @@ export const BackFront = ({ backFront, setBackFront }) => {
       <select
         className="dropdown"
         onChange={handleBackFrontChange}
-        value={backFront}
-        required>
+        value={backFront}>
         <option className="option" value="">Select one:</option>
         <option className="option" value="backend">Backend</option>
         <option className="option" value="frontend">Frontend</option>
         <option className="option" value="fullstack">Full Stack</option>
       </select>
     </div>
-  )
+  );
 };

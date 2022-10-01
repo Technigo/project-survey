@@ -1,31 +1,31 @@
-import React from 'react'
+import React from 'react';
 
-export const LearnKnow = ({ setLearnKnow }) => {
+export const LearnKnow = ({ learnKnow, setLearnKnow }) => {
   return (
     <div className="survey-content-container">
       <h3 className="sub-heading q">What personal trait do you value the <span className="underline">most</span>?</h3>
       <div className="radio-container">
-        <label className="radio-label" htmlFor="team">
+        <label className="radio-label" htmlFor="learn">
           <input
             type="radio"
-            id="team"
+            id="learn"
             name="learnKnow"
             value="is eager to learn"
-            onChange={(e) => setLearnKnow(e.target.value)}
-            required />
-      Eager to learn
+            onChange={(event) => setLearnKnow(event.target.value)}
+            checked={learnKnow === 'is eager to learn'} />
+          Eager to learn
         </label>
-        <label className="radio-label" htmlFor="indie">
+        <label className="radio-label" htmlFor="know">
           <input
             type="radio"
-            id="indie"
+            id="know"
             name="learnKnow"
             value="knows everything already"
-            onChange={(e) => setLearnKnow(e.target.value)}
-            required />
+            onChange={(event) => setLearnKnow(event.target.value)}
+            checked={learnKnow === 'knows everything already'} />
           Knows everything already
         </label>
       </div>
     </div>
-  )
+  );
 };
