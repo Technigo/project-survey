@@ -1,6 +1,5 @@
 import React from 'react';
 
-// eslint-disable-next-line no-unused-vars
 const UserAnswers = ({
   userName,
   userTeam,
@@ -64,8 +63,8 @@ const UserAnswers = ({
                   was <span className="accent-white">{userFeelings}</span>! You&apos;re feeling, and that&apos;s okay!
                 </h3>
                 <h3 className="sub-header quot">
-                  <span className="accent-color">“</span> Difficult roads often lead to beautiful destinations.
-                  <span className="accent-color"> ”</span>
+                  <span className="accent-color">“</span> Difficult roads often lead to beautiful destinations.<span className="accent-color"> ”</span>
+
                 </h3>
               </>
             );

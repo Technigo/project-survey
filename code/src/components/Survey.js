@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 
-/* import UserName from 'components/UserName'; */
 import FirstPage from 'components/FirstPage';
 import UserFeelings from 'components/UserFeelings';
 import UserTeam from 'components/UserTeam';
@@ -19,7 +18,7 @@ const Survey = () => {
   const [userAloneOrBuddy, setUserAloneOrBuddy] = useState('');
   const [userHours, setUserHours] = useState('');
 
-  /* This creates a counter. We use it to navigate into the survey and display the questions */
+  // This creates a counter. We use it to navigate into the survey and display the questions
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 10) {
       setCounter(counter + 1)
@@ -27,7 +26,7 @@ const Survey = () => {
       setCounter(counter - 1)
     }
   }
-  /* This will reset the survey */
+  // This will reset the survey
   const handleRestartButtonClick = () => {
     setCounter(0)
     setUserName('')
@@ -37,11 +36,18 @@ const Survey = () => {
     setUserAloneOrBuddy('')
     setUserHours('')
   }
+  // This is adding return onKeyPress
+  const onEnter = (event) => {
+    if (event.key === 'Enter') {
+      event.preventDefault();
+      setCounter(counter + 1);
+    }
+  }
 
   const handleSubmitButtonClick = () => {
     setCounter(7)
   }
-  /*  The survey starts here */
+  // The survey starts here
   return (
     <>
       {counter === 0 && (
@@ -49,7 +55,12 @@ const Survey = () => {
           <div className="survey-info">
             <FirstPage />
           </div>
-          <button className="btn start" type="button" onClick={() => handleCounterButtonClick(true)}> START</button>
+          <button
+            className="btn start"
+            type="button"
+            onClick={() => handleCounterButtonClick(true)}>
+            START
+          </button>
         </>
       )}
 
@@ -60,6 +71,7 @@ const Survey = () => {
             setUserInput={setUserName}
             headerText="First things first..."
             subHeaderText="What&apos;s your name?"
+            onEnter={onEnter}
           />
         </div>
       )}
@@ -70,6 +82,7 @@ const Survey = () => {
             userTeam={userTeam}
             setUserTeam={setUserTeam}
             userName={userName}
+            onEnter={onEnter}
           />
         </div>
       )}
@@ -81,6 +94,7 @@ const Survey = () => {
             setFeelings={setUserFeelings}
             userName={userName}
             userTeam={userTeam}
+            onEnter={onEnter}
           />
         </div>
       )}
@@ -91,6 +105,7 @@ const Survey = () => {
             userAloneOrBuddy={userAloneOrBuddy}
             setUserAloneOrBuddy={setUserAloneOrBuddy}
             userName={userName}
+            onEnter={onEnter}
           />
         </div>
       )}
@@ -100,6 +115,7 @@ const Survey = () => {
           <UserHours
             userHours={userHours}
             setUserHours={setUserHours}
+            onEnter={onEnter}
           />
         </div>
       )}
@@ -111,6 +127,7 @@ const Survey = () => {
             setUserInput={setUserBuddy}
             headerText="The power of 2 minds!"
             subHeaderText="Who was your code pair?"
+            onEnter={onEnter}
           />
         </div>
       )}
@@ -138,23 +155,53 @@ const Survey = () => {
             />
           </div>
           <div className="btn-container">
-            <button className="btn restart" type="button" onClick={handleRestartButtonClick}>Restart</button>
+            <button
+              className="btn restart"
+              type="button"
+              onClick={handleRestartButtonClick}>
+              Restart
+            </button>
           </div>
         </>
       )}
 
       {(counter >= 1 && counter <= 5) && (
         <div className="btn-container">
-          <button className="btn back" type="button" onClick={() => handleCounterButtonClick(false)}> Back</button>
-          <button className="btn next" type="button" onClick={() => handleCounterButtonClick(true)}> Next</button>
+          <button
+            className="btn back"
+            type="button"
+            onClick={() => handleCounterButtonClick(false)}>
+            Back
+          </button>
+          <button
+            className="btn next"
+            type="button"
+            onClick={() => handleCounterButtonClick(true)}>
+            Next
+          </button>
         </div>
       )}
 
       {counter === 6 && (
         <div className="btn-container">
-          <button className="btn back" type="button" onClick={() => handleCounterButtonClick(false)}> Back</button>
-          <button className="btn submit" type="submit" onClick={handleSubmitButtonClick}>Submit</button>
-          <button className="btn restart" type="button" onClick={handleRestartButtonClick}>Restart</button>
+          <button
+            className="btn back"
+            type="button"
+            onClick={() => handleCounterButtonClick(false)}>
+            Back
+          </button>
+          <button
+            className="btn submit"
+            type="submit"
+            onClick={handleSubmitButtonClick}>
+            Submit
+          </button>
+          <button
+            className="btn restart"
+            type="button"
+            onClick={handleRestartButtonClick}>
+            Restart
+          </button>
         </div>
       )}
     </>

@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
+/* eslint-disable jsx-a11y/no-noninteractive-element-interactions */
 import React from 'react';
 import lion from 'assets/icons8-lion-100.png';
 import turtle from 'assets/icons8-turtle-100.png';
@@ -7,15 +9,45 @@ import tiger from 'assets/icons8-tiger-face-100.png';
 import hippo from 'assets/icons8-hippopotamus-100.png';
 
 const WichTeam = [
-  { text: 'Turtles', value: 'Turtles', id: 1, image: turtle },
-  { text: 'Tigers', value: 'Tigers', id: 2, image: tiger },
-  { text: 'Foxes', value: 'Foxes', id: 3, image: fox },
-  { text: 'Elephants', value: 'Elephants', id: 4, image: elephant },
-  { text: 'Hippos', value: 'Hippos', id: 5, image: hippo },
-  { text: 'Lions', value: 'Lions', id: 6, image: lion }
+  {
+    text: 'Turtles',
+    value: 'Turtles',
+    id: 1,
+    image: turtle
+  },
+  {
+    text: 'Tigers',
+    value: 'Tigers',
+    id: 2,
+    image: tiger
+  },
+  {
+    text: 'Foxes',
+    value: 'Foxes',
+    id: 3,
+    image: fox
+  },
+  {
+    text: 'Elephants',
+    value: 'Elephants',
+    id: 4,
+    image: elephant
+  },
+  {
+    text: 'Hippos',
+    value: 'Hippos',
+    id: 5,
+    image: hippo
+  },
+  {
+    text: 'Lions',
+    value: 'Lions',
+    id: 6,
+    image: lion
+  }
 ]
 
-const UserTeam = ({ userTeam, setUserTeam, userName }) => {
+const UserTeam = ({ userTeam, setUserTeam, userName, onEnter }) => {
   const handleUserTeamInputChange = (event) => {
     setUserTeam(event.target.value)
   };
@@ -24,7 +56,12 @@ const UserTeam = ({ userTeam, setUserTeam, userName }) => {
       <h2 className="sub-header">Hello {userName}!</h2>
       <h3 className="question-title">What&apos;s your team ?</h3>
       {WichTeam.map((group) => (
-        <label className="lable-wrapper" htmlFor={group.value} key={group.id}>
+        <label
+          tabIndex="0"
+          onKeyPress={onEnter}
+          className="lable-wrapper"
+          htmlFor={group.value}
+          key={group.id}>
           <div className="input-wrapper">
             <input
               className="input-btn"
@@ -33,9 +70,14 @@ const UserTeam = ({ userTeam, setUserTeam, userName }) => {
               onChange={handleUserTeamInputChange}
               checked={userTeam === group.value}
               image={group.image}
+              onKeyPress={onEnter}
               tabIndex="0"
             />
-            <img className="animals" src={group.image} alt={group.value} />
+            <img
+              className="animals"
+              src={group.image}
+              alt={group.value}
+            />
           </div>
         </label>
       ))}

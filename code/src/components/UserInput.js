@@ -1,6 +1,6 @@
 import React from 'react';
 
-const UserInput = ({ userInput, setUserInput, headerText, subHeaderText }) => {
+const UserInput = ({ userInput, setUserInput, headerText, subHeaderText, onEnter }) => {
   const handleUserInputChange = (event) => {
     setUserInput(event.target.value)
   }
@@ -10,11 +10,12 @@ const UserInput = ({ userInput, setUserInput, headerText, subHeaderText }) => {
       <h3 className="question-title">{subHeaderText}</h3>
       <input
         className="input-box"
-        placeholder="Type here"
+        placeholder="Type your name here"
         value={userInput}
         type="text"
         onChange={handleUserInputChange}
         required="required"
+        onKeyPress={onEnter}
       />
     </div>
   )
