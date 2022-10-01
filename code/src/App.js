@@ -1,4 +1,3 @@
-import { StartDay } from 'components/StartDay';
 import React, { useState } from 'react';
 
 import { StartSurvey } from './components/StartSurvey';
@@ -8,24 +7,35 @@ import { Summary } from './components/Summary';
 export const App = () => {
   const [section, setSection] = useState(0);
   const [startDay, setStartDay] = useState('');
-  const [relationship, setRelationship] = useState('');
-  const [whatKinde, setWhatKinde] = useState('');
+  const [relationships, setRelationships] = useState('');
+  const [whatKinde, setWhatKinde] = useState('select below');
   const [feeling, setFeeling] = useState('');
 
   return (
     <main className="main">
-      <>
-        <StartSurvey setSection={setSection} section={section} />
+      <StartSurvey
+        setSection={setSection}
+        section={section} />
 
-        <Survey startDay={startDay} setStartDay={setStartDay} />
+      <Survey
+        setStartDay={setStartDay}
+        startDay={startDay}
+        setRelationships={setRelationships}
+        relationships={relationships}
+        setWhatKinde={setWhatKinde}
+        whatKinde={whatKinde}
+        setFeeling={setFeeling}
+        feeling={feeling}
+        setSection={setSection}
+        section={section} />
 
-        <Summary
-          startDay={startDay}
-          relationship={relationship}
-          whatKinde={whatKinde}
-          feeling={feeling}
-        />
-      </>
+      <Summary
+        setSection={setSection}
+        section={section}
+        startDay={startDay}
+        relationships={relationships}
+        whatKinde={whatKinde}
+        feeling={feeling} />
     </main>
   );
 };

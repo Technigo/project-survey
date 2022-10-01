@@ -18,14 +18,14 @@ export const Buttons = ({ section, setSection }) => {
   return (
     <div className="btn-container">
       {section >= 2 && section <= 4 && (
-        <button className="button" onClick={previousSection}>
+        <button className="button" onClick={previousSection} type="button">
           Previous Question
         </button>
       )}
 
       {section < 4 && (
-        <button className="button" onClick={nextSection}>
-          {section === 0 ? 'Start' : 'Next question'}
+        <button className="button" onClick={nextSection} type="button">
+          {section === 0 ? 'Start survey' : 'Next question'}
         </button>
       )}
 
@@ -36,7 +36,7 @@ export const Buttons = ({ section, setSection }) => {
       )}
 
       {section === 5 && (
-        <button onClick={() => setSection(0)} className="button">
+        <button onClick={() => setSection(0)} className="button" type="button">
           Restart
         </button>
       )}

@@ -1,11 +1,11 @@
 import React from 'react';
 
-export const StartDay = ({ startDay, setStartDay }) => {
+export const StartDay = ({ setStartDay }) => {
   const dayArray = [
     'Alarm goes of, open eyes, drink coffee',
     'Yoga and green tea',
     'Power walk and smoothie',
-    'Not a morning person, talk to me after lunch!',
+    'Not a morning person, talk to me after lunch!'
   ];
 
   return (
@@ -13,13 +13,13 @@ export const StartDay = ({ startDay, setStartDay }) => {
       <p className="section-heading">How do you start your day?</p>
 
       {dayArray.map((item) => (
-        <label className="startDay" key={item}>
+        <label className="start-day" key={item} htmlFor="startDay">
           <input
             type="radio"
             value={item}
+            name="startDay"
             onChange={(event) => setStartDay(event.target.value)}
-            Checked={dayArray === item}
-          />
+            Checked={dayArray === item} />
           {item}
         </label>
       ))}
