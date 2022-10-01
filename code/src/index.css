@@ -5,9 +5,104 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(90deg, #e3ffe7 0%, #d9e7ff 100%);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.header {
+  display: block;
+  margin: 0;
+  width: 100vw; 
+ }
+
+ .header-name {
+  display: flex;
+  padding: 50px; 
+  text-align: center;
+  text-transform: uppercase;
+  background-image: url(./Assets/music3.jpg);
+  background-size: cover; 
+  background-repeat: no-repeat;
+  max-height: 200px;
+  background-position: 50%;
+  margin: 0;
+  margin-bottom: 20px;
+  height: 300px;
+  color: white;
+  text-shadow: 2px 2px rgb(204, 198, 198);  
+  position: relative;
+   }
+
+.form-container {
+  margin: auto;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  font-family:monospace;
+  font-size:large;
+
+}
+
+input[type=number], select {
+  width: 30%;
+  padding: 10px 20px;
+  margin: 20px 0;
+  display: inline-block;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+input[type=radio], select {
+  margin-right: 40px;
+  display: row;
+  display: flex;
+}
+
+.label-container {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 20px;
+}
+
+.first-radio {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+/* .submit-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-width: fit-content;
+  background-color:#d9e7ff;
+  font-weight: bolder;
+  border: 2px;
+} */
+
+.submit-button {
+	
+	padding: 10px 30px;
+  font-size: 17px;
+  cursor: pointer;
+  max-width: fit-content;
+  max-height: fit-content;
+  border-radius: 7px;
+	border-bottom-left-radius: 0;
+  background-color: var(--feedback-secondary-color);
+	color: var(--feedback-primary-color);
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
 }
