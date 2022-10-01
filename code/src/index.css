@@ -159,7 +159,7 @@ h2 {
 .select-one-message {
   position: absolute;
   bottom: 7rem;
-  right: 5rem;
+  right: 5.5rem;
   color: var(--sub-color);
   display: none;
   font-family: var(--sub-font);
@@ -195,6 +195,7 @@ h2 {
   color: var(--sub-color);
   display: grid;
   grid-template-columns: 1.5rem auto;
+  align-items: center;
   font-family: var(--main-font);
   font-size: 1.5rem;
   font-weight: 700;
@@ -233,9 +234,9 @@ a {
 /* MEDIA QUERIES */
 @media (mad-width: 650px) {
   .dot-shape {
-    right: -0rem;
-    width: 7rem;
-    height: 7rem;
+    left: 5em;
+    width: 6rem;
+    height: 6rem;
   }
   .select-one-message {
     right: 1rem;
