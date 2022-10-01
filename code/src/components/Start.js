@@ -1,13 +1,12 @@
 import React from 'react'
 
-
+if (navigator.userAgent.match(/Android/)) {
+    document.querySelectorAll('start-image').style.display='none'
+ }
 
 const Start = ( {username, setUsername, onStepChange} ) => {
 
-    if (navigator.userAgent.match(/Android/)) {
-        document.getElementById('start-image').style.display='none'
-     }
-
+  
   return ( 
    
     <div className='startPage'>
