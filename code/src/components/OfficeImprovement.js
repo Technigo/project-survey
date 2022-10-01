@@ -2,7 +2,7 @@ import React from 'react';
 
 const officeImprovements = ['Red Bull in the office', 'Half day Fridays', 'More dogs in the office', 'Breakfast in the mornings'];
 
-const OfficeImprovement = ({ improveInput, setImproveInput }) => {
+export const OfficeImprovement = ({ improveInput, setImproveInput }) => {
   const handleOfficeImprovementChange = (event) => {
     setImproveInput(event.target.value);
   }
@@ -10,7 +10,7 @@ const OfficeImprovement = ({ improveInput, setImproveInput }) => {
   return (
     <div>
       <form>
-        <h2>What can we do to improve??</h2>
+        <h2><b>What can we do to improve?</b></h2>
         {officeImprovements.map((improve) => (
           <label key={improve} htmlFor="ImproveInput">
             <input
@@ -20,6 +20,7 @@ const OfficeImprovement = ({ improveInput, setImproveInput }) => {
               onChange={handleOfficeImprovementChange}
               checked={improveInput === improve} />
             {improve}
+            <br />
           </label>
         ))}
       </form>
@@ -27,4 +28,3 @@ const OfficeImprovement = ({ improveInput, setImproveInput }) => {
   )
 };
 
-export default OfficeImprovement;

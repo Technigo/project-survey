@@ -8,9 +8,12 @@ export const Name = ({ name, setName }) => {
     <form className="startpage">
       <h2 className="title">Employee Feedback</h2>
       <h3>Please tell us how we can improve our culture!</h3>
-      <p>What is your name?</p>
-      <input type="text" value={name} onChange={handleNameChange} required />
-      <button type="button" onClick={handleNameChange}>Next Question</button>
+      <h3>What is your name?</h3>
+      <input
+        type="text"
+        value={name}
+        onChange={handleNameChange}
+        required />
     </form>
   );
-};
+}

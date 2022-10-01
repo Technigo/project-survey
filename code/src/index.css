@@ -5,10 +5,84 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* 
+  background-repeat: no-repeat;
+  background-position: center; 
+  background-color: rgba(71, 152, 206, 0.29); */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-image: url("office.jpg");
 }
+
+
+p {
+  font-size: 19px;
+}
+
+.optgroup {
+  font-size: 40px;
+}
+
+.header img {
+  background-size: cover;
+  height: 300px;
+  width: 100%;
+  display: flex;
+  
+ }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.wrapper {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  background-color: rgba(92, 111, 111, 0.448);
+  margin-top: -200px;
+} 
+
+/* .button-forward {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+} */
+
+.button-next {
+  
+  border: 2px solid white;
+  width: 110px;
+  height: 30px;
+}
+
+.button-submit {
+  
+  border: 2px solid white;
+  width: 110px;
+  height: 30px;
+}
+
+.button-next:hover, .button-submit:hover{
+  cursor: pointer;
+  background-color: grey;
+  
+}
+
+select {
+  background-color: rgba(155, 214, 130, 0.696);
+  color:rgb(43, 34, 34);
+  font-size: 90%;
+  font-weight: 600;
+  border: none; 
+  padding: 1%;
 }
 

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TeamEvent = ({ teamEvent, setTeamEvent }) => {
+export const TeamEvent = ({ teamEvent, setTeamEvent }) => {
   const handleTeamEventChange = (event) => {
     setTeamEvent(event.target.value);
   }
@@ -8,11 +8,11 @@ const TeamEvent = ({ teamEvent, setTeamEvent }) => {
   return (
     <form>
       <div>
-        <p>What is the next fun team event we should do?</p>
+        <h2><b>What is the next fun team event we should do?</b></h2>
         <select
           onChange={handleTeamEventChange}
           value={teamEvent}>
-          <option value="">Select drink</option>
+          <option value="">Select Event</option>
           <option value="bowling">Bowling</option>
           <option value="soccer">Soccer game</option>
           <option value="burgers">Burgers</option>
