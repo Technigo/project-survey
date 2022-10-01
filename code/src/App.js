@@ -8,6 +8,8 @@ export const App = () => {
   const [name, setName] = useState('');
   const [surname, setSurname] = useState('');
   const [gift, setGift] = useState('');
+  const [excitement, setExcitement] = useState(0);
+  const [favActivity, setFavActivity] = useState('');
 
   // console.log('gift:', gift);
 
@@ -71,6 +73,28 @@ export const App = () => {
             inputType="radio"
             setter={setGift}
             value={gift}
+            nextPage={nextPage}
+          />
+        );
+      case 4:
+        return (
+          <Questionnaire
+            label="How excited are you for Christmas?! 🎄"
+            pageIndex={pageIndex}
+            inputType="rangeslider"
+            setter={setExcitement}
+            value={excitement}
+            nextPage={nextPage}
+          />
+        );
+      case 5:
+        return (
+          <Questionnaire
+            label="On a Friday night, you're usually..."
+            pageIndex={pageIndex}
+            inputType="select"
+            setter={setFavActivity}
+            value={favActivity}
             nextPage={nextPage}
           />
         );

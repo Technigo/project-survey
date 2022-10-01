@@ -1,4 +1,4 @@
-const FormPageIndex = ({ pageIndex }) => {
+const PageNumber = ({ pageIndex }) => {
   // This component is rendered with position absolute next to each label in order to show which page the user is on
   return (
     <div className="form-page-index">
@@ -12,4 +12,4 @@ const FormPageIndex = ({ pageIndex }) => {
   );
 };
 
-export default FormPageIndex;
+export default PageNumber;

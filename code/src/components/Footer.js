@@ -21,15 +21,13 @@ const Footer = ({ pageIndex, nextPage, previousPage }) => {
           </button>
         </nav>
         <div className="typeform">
-          <button className="button typeform-button">
-            <a
-              className="typeform-link"
-              href="https://www.typeform.com/templates/t/secret-santa-form/"
-              target="_blank"
-            >
-              Inspired by <strong>Typeform</strong>
-            </a>
-          </button>
+          <a
+            className="typeform-link button"
+            href="https://www.typeform.com/templates/t/secret-santa-form/"
+            target="_blank"
+          >
+            Inspired by<strong> Typeform</strong>
+          </a>
         </div>
       </div>
     </footer>

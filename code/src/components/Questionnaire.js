@@ -1,8 +1,11 @@
-import TextInput from './TextInput';
-import RadioInput from './RadioInput';
+import PageNumber from './PageNumber';
 import Button from './Button';
-import FormPageIndex from './FormPageIndex';
+import TextInput from './Inputs/TextInput';
+import RadioInput from './Inputs/RadioInput';
+import RangeInput from './Inputs/RangeInput';
+import SelectInput from './Inputs/SelectInput';
 
+// This is a re-usable component to render a label/title, a page index, a form and the OK button for each page
 const Questionnaire = ({
   label,
   pageIndex,
@@ -11,17 +14,16 @@ const Questionnaire = ({
   value,
   nextPage,
 }) => {
-  // {label} - for example "Let's get started - what's your name?"
-  // input based on {inputType} - like text, dropdown and radio-buttons, maybe checkboxes too
-  // separate components for rendering the different input types
-  // div for button and "press Enter ↵"
-  // button with option to change button text, otherwise default OK and svg checkbox
   return (
     <section className="form-wrapper">
       <h2 className="form-label">{label}</h2>
-      <FormPageIndex pageIndex={pageIndex} />
+      <PageNumber pageIndex={pageIndex} />
       {inputType === 'text' && <TextInput value={value} setter={setter} />}
       {inputType === 'radio' && <RadioInput value={value} setter={setter} />}
+      {inputType === 'rangeslider' && (
+        <RangeInput value={value} setter={setter} />
+      )}
+      {inputType === 'select' && <SelectInput value={value} setter={setter} />}
 
       <div className="submit-button-wrapper">
         <Button nextPage={nextPage} />
