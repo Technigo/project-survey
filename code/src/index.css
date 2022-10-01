@@ -1,6 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-family: -apple-system, BlinkMacSystemFont, "Montserrat", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -10,6 +11,19 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+/*All the colors "rooted" so if i (you) want to change its easier to change all that are connected*/
+
+:root {
+  --darkGreen: #175632;
+  --buttonBackground: #0abf7d;
+  --buttonText: #f5f5f7;
+  --buttonHover: #017A4F;
+  --buttonHoverText: white;
+  --buttonArrow: #C2FFE9;
+  --buttonSubmit: #005ee6;
+  --inputSelect: #d8fed8;
 }
 
 html {
@@ -47,8 +61,70 @@ html {
   flex-direction: column;
 }
 
+.label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--darkGreen);
+    margin: 2% 0 5% 0;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+
+.inputAndSelect {
+  height: 4vw;
+  font-family: 'Montserrat';
+  margin: 0 10% 0 10%;
+  letter-spacing: 0.1em;
+  font-size: 15px;
+  font-weight: cursivce;
+  background-color: var(--inputSelect);
+}
+
 .question-range {
   display: flex;
+  height: 4vw;
+  font-family: 'Montserrat';
+  margin: 0 10% 0 10%;
+  letter-spacing: 0.1em;
+  font-size: 17px;
+  color: var(--darkGreen);
+}
+
+.question-range:hover {
+  color: var(--buttonHover);
+  font-weight: 600;
+}
+
+.range-parent {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.range-display {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3%;
+  font-size: 16px;
+  color: var(--buttonSubmit);
+}
+
+.submit-parent {
+  display: flex;
+  padding-top: 10%;
+  align-content: flex-end;
+  justify-content: flex-end;
+}
+
+.question p {
+  font-family: 'Montserrat';
+  letter-spacing: 0.1em;
+  font-size: 17px;
 }
 
 .page-button-container {
@@ -58,21 +134,36 @@ html {
   justify-content: flex-end;
 }
 
+/*Footer section */
 .footer-wrapper {
+  display: flex;
+  justify-content: space-between;
   align-items: flex-end;
   height: 35%;
 }
 
+.progress-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.label-progress {
+  display: flex;
+  font-family: 'Montserrat';
+  letter-spacing: 0.1em;
+  font-size: 17px;
+}
+
+
 /*Range slider styling */
 input[type=range] {
-  width: 200px;
+  width: 50%;
   -ms-appearance: none;
   -moz-appearance: none;
   -webkit-appearance: none;
   appearance: none;
   outline: none;
   cursor: pointer;
-  /*extra*/
   display: block;
   margin: 10px 0 0 0;
   position: relative;
@@ -100,17 +191,14 @@ input[type=range]::after {
   transform: translate(calc(100% + 5px))
 }
 
-/* input[type=range]::-moz-range-track,  */
-/* input[type=range]::-ms-track */
 input[type=range]::-webkit-slider-runnable-track {
-  background: #222;
+  background: var(--darkGreen);
   border-radius: 3px;
   height: 5px;
   -webkit-appearance: none;
 }
 
-/* input[type=range]::-moz-range-thumb */
-/* input[type=range]::-ms-thumb */
+/*Makes it so you can slide with thumb*/
 input[type=range]::-webkit-slider-thumb {
   border: none;
   box-shadow: none;
@@ -158,11 +246,20 @@ input[type=range]::-webkit-slider-thumb {
   display: flex;
   flex-direction: column;
 }
+
+.label-progress {
+  display: flex;
+  height: 4vw;
+  font-family: 'Montserrat';
+  margin: 0 10% 0 10%;
+  letter-spacing: 0.1em;
+  font-size: 17px;
+}
 /*Button section. The span creates the arrow, and depending which button you press it moves in a specific direction.*/
 .button-next {
   display: flex;
-  color: #C2FFE9;
-  background-color: #00E692;
+  color: var(--buttonText);
+  background-color: var(--buttonBackground);
   padding: 10px 16px;
   border-radius: 20px;
   transition: all .3s ease;
@@ -175,8 +272,8 @@ input[type=range]::-webkit-slider-thumb {
 .button-next > .arrow {
   width: 6px;
   height: 6px;
-  border-right: 2px solid #C2FFE9;
-  border-bottom: 2px solid #C2FFE9;
+  border-right: 2px solid var(--buttonArrow);
+  border-bottom: 2px solid var(--buttonArrow);
   position: relative;
   transform: rotate(-45deg);
   margin: 0 6px;
@@ -209,14 +306,14 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .button-next:hover {
-  background-color: #017A4F;
-  color: #fff;
+  background-color: var(--buttonHover);
+  color: var(--buttonHoverText);
 }
 
 .button-previous {
   display: flex;
-  color: #C2FFE9;
-  background-color: #00E692;
+  color: var(--buttonText);
+  background-color: var(--buttonBackground);
   padding: 10px 16px;
   border-radius: 20px;
   transition: all .3s ease;
@@ -229,8 +326,8 @@ input[type=range]::-webkit-slider-thumb {
 .button-previous > .arrow {
   width: 6px;
   height: 6px;
-  border-right: 2px solid #C2FFE9;
-  border-bottom: 2px solid #C2FFE9;
+  border-right: 2px solid var(--buttonArrow);
+  border-bottom: 2px solid var(--buttonArrow);
   position: relative;
   transform: rotate(135deg);
   margin: 0 6px;
@@ -263,14 +360,14 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 .button-previous:hover {
-  background-color: #017A4F;
-  color: #fff;
+  background-color: var(--buttonHover);
+  color: var(--buttonHoverText);
 }
 
 .button-submit {
   display: flex;
-  color: #C2FFE9;
-  background-color: #00E692;
+  color: var(--buttonText);
+  background-color: var(--buttonSubmit);
   padding: 10px 16px;
   border-radius: 20px;
   transition: all .3s ease;
@@ -319,4 +416,97 @@ input[type=range]::-webkit-slider-thumb {
 .button-submit:hover {
   background-color: #017A4F;
   color: #fff;
+}
+
+/*for tablet*/
+@media (min-width: 668px) and (max-width: 1023px) {
+
+.outerContainer {
+  height: 70vw;
+}
+
+.question {
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  font-size: 22px;
+}
+
+.inputAndSelect {
+  height: 3vw;
+}
+
+.question-range {
+  margin: 0 0 0 25%;
+  font-size: 20px;
+}
+
+.button-next {     
+  padding: 15px 22px;
+  font-size: 16px;
+}
+
+.button-previous {     
+  padding: 15px 22px;
+  font-size: 16px;
+}
+
+.button-submit {
+  padding: 15px 22px;
+  font-size: 16px;
+}
+}
+
+@media (min-width: 1024px) {
+  
+.outerContainer {
+  height: 35vw;
+}
+
+.innerContainer {
+  width: 55%;
+}
+.question {
+  justify-content: center;
+  align-items: center;
+}
+
+.label {
+  font-size: 22px;
+}
+
+.label-progress {
+  height: 2vw;
+}
+
+.inputAndSelect {
+  height: 50%;
+  width: 35%;
+}
+
+.question-range {
+  margin: none;
+}
+
+input[type=range] {
+  width: 400%;
+}
+
+.button-next {     
+  padding: 15px 22px;
+  font-size: 16px;
+}
+
+.button-previous {     
+  padding: 15px 22px;
+  font-size: 16px;
+}
+
+.button-submit {
+  padding: 15px 22px;
+  font-size: 16px;
+}
+  
 }

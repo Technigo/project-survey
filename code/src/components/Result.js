@@ -1,5 +1,6 @@
 import React from 'react';
 
+/* This component prints the resluts (it picks up det props from app.js) */
 export const Result = ({ name, age, recycle, scale }) => {
   return (
     <div className="question-wrapper">

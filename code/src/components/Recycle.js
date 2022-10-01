@@ -1,11 +1,13 @@
 import React from 'react';
 
+/* This component is a dropdown menu where the user picks on of the alternatives */
 export const Recycle = ({ recycle, setRecycle }) => (
   <div className="question-wrapper">
     <div className="question">
-      <label htmlFor="option">How do you recyle your waste?</label>
+      <label className="label" htmlFor="option">How do you recyle your waste?</label>
       <select
         onChange={(e) => setRecycle(e.target.value)}
+        className="inputAndSelect"
         value={recycle}>
         <option value="">Select recycling option</option>
         <option value="I recycle my trash">I recycle my waste</option>
@@ -17,5 +19,3 @@ export const Recycle = ({ recycle, setRecycle }) => (
     </div>
   </div>
 )
-
-/* <input type="text" value={recycle} onChange={handleRecycleChange} /> */

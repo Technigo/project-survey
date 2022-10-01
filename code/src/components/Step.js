@@ -1,5 +1,6 @@
 import React from 'react';
 
+/* This component keeps track of the steps (page) the user is on or choose to go to, depening if the press "Next question" or "Previous question" */
 export const Step = ({ step, setStep }) => {
   const handleCounterButtonClick = (shouldIncrese) => {
     if (shouldIncrese && step < 4) {

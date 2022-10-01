@@ -1,5 +1,6 @@
 import React from 'react';
 
+/* This component is the welcome text for the survey */
 export const Welcome = () => {
   return (
     <div className="question-wrapper">
