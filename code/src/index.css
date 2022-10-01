@@ -91,11 +91,11 @@ h2 {
   box-shadow: 0.3rem 0.3rem var(--main-color);
   color: var(--main-color);
   font-family: 'Nunito';
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 700;
   margin: 1.5rem 0 0.6rem 0.4rem;
   padding: 0.7rem 1rem;
-  width: 9rem;
+  width: fit-content;
   -webkit-animation: bounce 0.3s infinite alternate;
   -moz-animation: bounce 0.3s infinite alternate;
   animation: bounce 0.3s infinite alternate;
