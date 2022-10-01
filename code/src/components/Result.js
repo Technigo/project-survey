@@ -17,7 +17,7 @@ const Result = ({ questOne, questTwo, questThree, questFour, questFive, restartG
         
          <button id='playAgainBtn' onClick={restartGame}>Play Again?</button>
     
-        <img className='result-image' src='/images/glasses.png' alt='glasses'/>
+        <img className='result-image' src='/images/logo.png' alt='logo'/>
 
         </div>
      );

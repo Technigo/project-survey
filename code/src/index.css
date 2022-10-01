@@ -33,10 +33,9 @@ body {
 }
 
 .result-image {
-  position: fixed;
-  height: 200px;
-  width: auto;
-  bottom: 0;
+  position: absolute;
+  height: 100px;
+  bottom: 40px;
 }
 
 h1 {
@@ -234,8 +233,7 @@ progress {
   }
 
   .result-image {
-    height: 40%;
-    width: auto
+    height: 100px;
   }
 
 }
@@ -255,8 +253,7 @@ progress {
   }
 
   .result-image {
-    height: 30%;
-    width: auto
+    height: 100px;
   }
 
 
