@@ -7,7 +7,7 @@ const HungerQuestion = ({ hungerInput, onHungerInputChange, onStepChange, onPrev
     <div className="survey-container">
       <form className="form-question">
         <label tabIndex="0" className="label-text" htmlFor="hungerInput">
-          How hungry are you on a scale from full too starving?
+          How hungry are you on a scale from full to starving?
           <input
             type="range"
             min="1"

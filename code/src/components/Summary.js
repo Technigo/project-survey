@@ -6,7 +6,7 @@ import PreferenceQuestion from './PreferenceQuestion'
 import PastaKindQuestion from './PastaKindQuestion';
 import OtherIngredientQuestion from './OtherIngredientQuestion';
 import HungerQuestion from './HungerQuestion';
-import Overveiw from './Overveiw';
+import Overview from './Overview';
 
 const Summary = () => {
   const [nameInput, setNameInput] = useState('')
@@ -92,7 +92,7 @@ const Summary = () => {
           onEnter={onEnter} />
       )}
       {step === 7 && (
-        <Overveiw
+        <Overview
           nameInput={nameInput}
           preference={preference}
           sortOfPasta={sortOfPasta}
