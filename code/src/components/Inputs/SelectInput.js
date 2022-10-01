@@ -1,5 +1,12 @@
 const SelectInput = ({ value, setter }) => {
   console.log(value);
+
+  /*
+    'Something ',
+    'Something ',
+    'Something ',
+    */
+
   return (
     <div className="select-container">
       <label>
@@ -8,13 +15,24 @@ const SelectInput = ({ value, setter }) => {
           className="select-input"
           value={value}
         >
-          <option value="hide">-- Select an activity --</option>
-          <option value="Out partying with friends 🥳">
-            Out partying with friends 🥳
+          <option value="hide" disabled>
+            Something..{' '}
           </option>
-          <option value="At the gym 😤">At the gym 😤</option>
-          <option value="In front of Netflix 📺">In front of Netflix 📺</option>
-          <option value="Eating out 🍴">Eating out 🍴</option>
+          <option value="Something I can eat or drink 🌮">
+            Something I can eat or drink 🌮
+          </option>
+          <option value="Something I can use at work 💼">
+            Something I can use at work 💼
+          </option>
+          <option value="Something that'll make me laugh 😂">
+            Something that'll make me laugh 😂
+          </option>
+          <option value="Something which is practical 🔧">
+            Something which is practical 🔧
+          </option>
+          <option value="Something for my house 🏠">
+            Something for my house 🏠
+          </option>
         </select>
       </label>
     </div>

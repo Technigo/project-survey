@@ -23,7 +23,7 @@ export const App = () => {
 
   // callback function for the keypress event listeners below
   const handleKeypress = event => {
-    if (event.key === 'Enter') {
+    if (event.key === 'Enter' && pageIndex < 6) {
       nextPage();
     }
   };
@@ -70,7 +70,7 @@ export const App = () => {
           <Questionnaire
             label="What kind of gift would you like?"
             pageIndex={pageIndex}
-            inputType="radio"
+            inputType="select"
             setter={setGift}
             value={gift}
             nextPage={nextPage}
@@ -79,34 +79,35 @@ export const App = () => {
       case 4:
         return (
           <Questionnaire
-            label="How excited are you for Christmas?! 🎄"
+            label="On a Friday night, you're usually..."
             pageIndex={pageIndex}
-            inputType="rangeslider"
-            setter={setExcitement}
-            value={excitement}
+            inputType="radio"
+            setter={setFavActivity}
+            value={favActivity}
             nextPage={nextPage}
           />
         );
       case 5:
         return (
           <Questionnaire
-            label="On a Friday night, you're usually..."
+            label="And finally, how excited are you for Christmas?! 🎄"
             pageIndex={pageIndex}
-            inputType="select"
-            setter={setFavActivity}
-            value={favActivity}
+            inputType="rangeslider"
+            setter={setExcitement}
+            value={excitement}
             nextPage={nextPage}
+            buttonText="Submit"
           />
         );
       default:
-        return <div>Under construction yo, number {pageIndex}</div>;
+        return <div>Summary page!</div>;
     }
   };
 
   return (
     <div className="outer-wrapper">
       <main className="inner-wrapper">{router(pageIndex)}</main>
-      {pageIndex > 0 && (
+      {pageIndex > 0 && pageIndex < 6 && (
         <Footer
           pageIndex={pageIndex}
           nextPage={nextPage}

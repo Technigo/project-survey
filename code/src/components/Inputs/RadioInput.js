@@ -1,10 +1,18 @@
 const RadioInput = ({ value, setter }) => {
+  /*
+<option value="">
+            Out partying with friends 🥳
+          </option>
+          <option value="">At the gym 😤</option>
+          <option value="">In front of Netflix 📺</option>
+          <option value="">Eating out 🍴</option>
+          */
+
   const gifts = [
-    'Something I can eat or drink 🌮',
-    'Something I can use at work 💼',
-    "Something that'll make me laugh 😂",
-    'Something which is practical 🔧',
-    'Something for my house 🏠',
+    'Out partying with friends 🥳',
+    'At the gym 😤',
+    'In front of Netflix 📺',
+    'Eating out 🍴',
   ];
   return (
     <div className="radio-container">

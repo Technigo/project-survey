@@ -1,4 +1,4 @@
-const Button = ({ nextPage }) => {
+const Button = ({ nextPage, buttonText }) => {
   return (
     <button
       className="submit-button button"
@@ -6,12 +6,14 @@ const Button = ({ nextPage }) => {
       onClick={() => nextPage()}
     >
       <span className="button-span">
-        OK
-        <img
-          className="checkmark"
-          src="./assets/zondicons/checkmark.svg"
-          alt="checkmark"
-        />
+        {buttonText ? buttonText : 'OK'}
+        {!buttonText && (
+          <img
+            className="checkmark"
+            src="./assets/zondicons/checkmark.svg"
+            alt="checkmark"
+          />
+        )}
       </span>
     </button>
   );

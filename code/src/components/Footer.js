@@ -15,10 +15,22 @@ const Footer = ({ pageIndex, nextPage, previousPage }) => {
               <img src="./assets/zondicons/cheveron-up.svg" alt="up arrow" />
             </button>
           )}
-          <div className="button-divider">{``}</div>
-          <button className="next-button button" onClick={nextPage}>
-            <img src="./assets/zondicons/cheveron-down.svg" alt="down arrow" />
-          </button>
+          <div className="button-divider"></div>
+          {pageIndex < 5 ? (
+            <button className="next-button button" onClick={nextPage}>
+              <img
+                src="./assets/zondicons/cheveron-down.svg"
+                alt="down arrow"
+              />
+            </button>
+          ) : (
+            <button className="next-button button disabled-button" disabled>
+              <img
+                src="./assets/zondicons/cheveron-down-disabled.svg"
+                alt="down arrow"
+              />
+            </button>
+          )}
         </nav>
         <div className="typeform">
           <a

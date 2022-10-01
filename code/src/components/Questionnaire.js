@@ -13,6 +13,7 @@ const Questionnaire = ({
   setter,
   value,
   nextPage,
+  buttonText,
 }) => {
   return (
     <section className="form-wrapper">
@@ -26,7 +27,7 @@ const Questionnaire = ({
       {inputType === 'select' && <SelectInput value={value} setter={setter} />}
 
       <div className="submit-button-wrapper">
-        <Button nextPage={nextPage} />
+        <Button nextPage={nextPage} buttonText={buttonText} />
         <p className="press-enter">
           press
           <span>
