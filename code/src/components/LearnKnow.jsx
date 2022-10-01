@@ -2,8 +2,8 @@ import React from 'react'
 
 export const LearnKnow = ({ setLearnKnow }) => {
   return (
-    <div className="question-container">
-      <h2 className="question-heading">What personal trait do you value the <span className="underline">most</span>?</h2>
+    <div className="survey-content-container">
+      <h3 className="sub-heading q">What personal trait do you value the <span className="underline">most</span>?</h3>
       <div className="radio-container">
         <label className="radio-label" htmlFor="team">
           <input

@@ -3,8 +3,8 @@ import React from 'react'
 export const LoneTeam = ({ loneTeam, setLoneTeam }) => {
   console.log(loneTeam)
   return (
-    <div className="question-container">
-      <h2 className="question-heading">Which one of these fit <span className="underline">best</span> into what you are looking for?</h2>
+    <div className="survey-content-container">
+      <h3 className="sub-heading q">Which one describes <span className="underline">best</span> what you are looking for?</h3>
       <div className="radio-container">
         <label className="radio-label" htmlFor="lone">
           <input
