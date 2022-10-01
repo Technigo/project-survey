@@ -1,13 +1,9 @@
-# Survey form with React
+# Survey Form with React ✨
 
-Replace this readme with your own information about your project.
+This Survey is created with components React using different function methods, and inputs like a radio button, checkbox, text, and option. The main goal was to learn how to use UseState Hook.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
-
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I feel glad with the result of my work this week. I would like to improve the code in a future because I want to append different answers depending on the user's response and also, that the input checkbox can only choose one or two options.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+You can see it here ---> https://survey-antonella.netlify.app/
