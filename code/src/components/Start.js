@@ -1,10 +1,12 @@
 import React from 'react'
 
-if (navigator.userAgent.match(/Android/)) {
-    document.getElementsByClassName('start-image').style.display="none"
- }
+
 
 const Start = ( {username, setUsername, onStepChange} ) => {
+
+    if (navigator.userAgent.match(/Android/)) {
+        document.getElementsByClassName('start-image').style.display="none"
+     }
 
   return ( 
    
@@ -30,6 +32,8 @@ const Start = ( {username, setUsername, onStepChange} ) => {
     </div>
    
     )
+
+    
 }
 
 export default Start;
