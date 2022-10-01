@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import Footer from 'components/Footer';
 import Landing from 'components/Landing';
 import Questionnaire from 'components/Questionnaire';
+import Summary from 'components/Summary';
 
 export const App = () => {
   const [pageIndex, setPageIndex] = useState(0);
@@ -100,7 +101,15 @@ export const App = () => {
           />
         );
       default:
-        return <div>Summary page!</div>;
+        return (
+          <Summary
+            name={name}
+            surname={surname}
+            gift={gift}
+            excitement={excitement}
+            favActivity={favActivity}
+          />
+        );
     }
   };
 

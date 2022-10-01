@@ -1,18 +1,9 @@
 const RadioInput = ({ value, setter }) => {
-  /*
-<option value="">
-            Out partying with friends 🥳
-          </option>
-          <option value="">At the gym 😤</option>
-          <option value="">In front of Netflix 📺</option>
-          <option value="">Eating out 🍴</option>
-          */
-
   const gifts = [
-    'Out partying with friends 🥳',
-    'At the gym 😤',
-    'In front of Netflix 📺',
-    'Eating out 🍴',
+    'out partying with friends 🥳',
+    'at the gym 😤',
+    'in front of Netflix 📺',
+    'eating out 🍴',
   ];
   return (
     <div className="radio-container">

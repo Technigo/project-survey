@@ -3,7 +3,6 @@ import { excitementFunction } from '../utils';
 const RangeInput = ({ value, setter }) => {
   // excitementFunction converts the excitement value in the state to a string
   const excitementLevel = excitementFunction(value);
-  console.log(value);
 
   return (
     <div className="range-container">

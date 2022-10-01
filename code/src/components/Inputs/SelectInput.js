@@ -1,12 +1,4 @@
 const SelectInput = ({ value, setter }) => {
-  console.log(value);
-
-  /*
-    'Something ',
-    'Something ',
-    'Something ',
-    */
-
   return (
     <div className="select-container">
       <label>
@@ -15,7 +7,7 @@ const SelectInput = ({ value, setter }) => {
           className="select-input"
           value={value}
         >
-          <option value="hide" disabled>
+          <option value="" disabled>
             Something..{' '}
           </option>
           <option value="Something I can eat or drink 🌮">
