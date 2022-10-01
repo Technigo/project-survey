@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/*#2f9a85*/
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +9,129 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 32px;
+  color: rgb(92, 92, 92);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+    
+}
+
+.outerWrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #FF9A8B;
+  background-image: linear-gradient(135deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+
+}
+
+.innerWrapper {
+  background-color: rgba(255, 255, 255, 0.158);
+  width: 30%;
+  height: 60%;
+  padding: 10vh;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 2rem;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+  color: whitesmoke;
+  font-weight: 100;
+  margin: 0;
+}
+
+.btnParent {
+  display: flex;
+  gap: 20vw;
+  position: relative;
+
+}
+
+.radioParent {
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.previousBtn, .nextBtn {
+  background-color: transparent;
+  color: whitesmoke;
+  padding: 1rem; 
+  border: none;
+  font-size: 4rem;
+  flex-direction: row;
+}
+
+input[type="radio"] {
+  appearance: none;
+  height: 1.2rem;
+  width: 1.2rem;
+  border: 2px solid whitesmoke;
+  border-radius: 50%;
+  background-clip: content-box;
+  padding: 3px;
+  margin-right: 0.5rem;
+  accent-color: #FF6A88;
+}
+
+input[type="radio"]:checked {
+	background-color: rgb(92, 92, 92);
+}
+
+select {
+  min-width: 90%;
+  font-size: 20px;
+  background-color: whitesmoke;
+  color:rgb(92, 92, 92);
+}
+
+.submitBtn {
+  background-color: transparent;
+  font-family: 'Pacifico', cursive;
+  color: whitesmoke;
+  padding: 1rem; 
+  border: solid 2px;
+  font-size: 3rem;
+  border-radius: 2rem;
+  position: absolute;
+  top: -15vh;
+  left: -50%;
+}
+
+.bottomWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.stepText {
+  font-size: 16px;
+  margin: 0;
+  text-align: center;
+}
+
+.nameInputField {
+  min-width: 90%;
+  font-size: 20px;
+}
+
+.colorPicker {
+  border: none;
+  border-radius: 3px;
+  background-color: transparent;
+  height: 10vh;
+  width: 15vw;
+  margin-top: 5vh;
+}
+
+.nameForm {
+  padding-bottom: 15vh;
 }

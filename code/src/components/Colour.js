@@ -6,11 +6,11 @@ export const Colour = ({ color, setColor }) => {
   };
 
   return (
-    <div>
+    <form>
       <p>
         What is your favourite color?
       </p>
-      <input type="color" value={color} onChange={handleColorChange} />
-    </div>
+      <input type="color" className="colorPicker" value={color} onChange={handleColorChange} />
+    </form>
   );
 };

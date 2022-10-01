@@ -6,18 +6,16 @@ export const Size = ({ size, setSize }) => {
   };
 
   return (
-    <div>
+    <form>
       <p>
         What size do you want?
       </p>
-      <form>
-        <select value={size} onChange={handleSizeChange}>
-          <option value="">Select size</option>
-          <option value="L">Large</option>
-          <option value="M">Medium</option>
-          <option value="S">Small</option>
-        </select>
-      </form>
-    </div>
+      <select value={size} onChange={handleSizeChange}>
+        <option value="">Select size</option>
+        <option value="L">Large</option>
+        <option value="M">Medium</option>
+        <option value="S">Small</option>
+      </select>
+    </form>
   );
 };

@@ -5,6 +5,7 @@ export const Result = ({ name, color, pattern, size }) => {
 
   return (
     <>
+      <h1>Submitted:</h1>
       <p>Your name: {name}</p>
       <p>Colour: {color}</p>
       <p>Prefferd pattern: {pattern}</p>

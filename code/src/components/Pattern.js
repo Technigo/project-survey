@@ -1,16 +1,25 @@
 import React from 'react';
 
+const patternGroup = ['Dotted', 'Stripes', 'Checkered', 'No pattern'];
+
 export const Pattern = ({ pattern, setPattern }) => {
   const handlePatternChange = (event) => {
     setPattern(event.target.value);
   };
 
   return (
-    <div>
+    <form>
       <p>
         Which pattern do you prefer?
       </p>
-      <input type="text" value={pattern} onChange={handlePatternChange} />
-    </div>
+      <div className="radioParent">
+        {patternGroup.map((group) => (
+          <label key={group} htmlFor="group">
+            <input type="radio" className="radioCircle" value={group} onChange={handlePatternChange} checked={pattern === group} />
+            {group}
+          </label>
+        ))}
+      </div>
+    </form>
   );
 };

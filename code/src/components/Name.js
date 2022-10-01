@@ -6,11 +6,11 @@ export const Name = ({ name, setName }) => {
   };
 
   return (
-    <div>
+    <form className="nameForm">
       <p>
         What is your name?
       </p>
-      <input type="text" value={name} onChange={handleNameChange} />
-    </div>
+      <input type="text" className="nameInputField" value={name} onChange={handleNameChange} />
+    </form>
   );
 };
