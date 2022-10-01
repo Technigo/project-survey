@@ -35,7 +35,13 @@ const Summary = ({
           </p>
         </label>
       </form>
-      <button type="button" onClick={handleVoucherPress}>Grab you code here!</button>{isVoucherVisible && <h3>JUSTKIDDING2502</h3>}
+      <button
+        type="button"
+        onClick={handleVoucherPress}>
+        Grab you code here!
+      </button>
+      {isVoucherVisible
+        && <h3>JUSTKIDDING2502</h3>}
     </div>
   );
 }

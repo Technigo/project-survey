@@ -22,13 +22,18 @@ const Opening = ({ name, onNameChange, onCounterChange }) => {
           <input
             type="text"
             placeholder="Type your name here..."
-            required
+            required /* user won't be able to continue without filling the input */
             value={name}
             onChange={onNameChange}
             className="name-input" />
         </label>
       </form>
-      <button type="button" disabled={name === ''} onClick={onCounterChange}>Start Review</button>
+      <button
+        type="button"
+        disabled={name === ''} /* button will disappear when input is empty */
+        onClick={onCounterChange}>
+        Start Review
+      </button>
     </div>
   )
 }

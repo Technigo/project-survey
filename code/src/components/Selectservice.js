@@ -20,7 +20,12 @@ const Selectservice = ({ service, onServiceChange, onCounterChange }) => {
             <option value="our delivery service">Our Delivery Service</option>
             <option value="the membership program">Membership Program</option>
           </select>
-          <button className="button" type="button" onClick={onCounterChange} disabled={service === ''}>Next Question</button>
+          <button 
+            type="button" 
+            onClick={onCounterChange} 
+            disabled={service === ''}>
+            Next Question
+          </button>
         </label>
       </form>
     </div>

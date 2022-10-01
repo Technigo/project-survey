@@ -26,7 +26,12 @@ const Radiocake = ({ cakeQuality, onCakeQualityChange, onCounterChange }) => {
           {quality}
         </label>
       ))}
-      <button type="button" disabled={cakeQuality === ''} onClick={onCounterChange}>Next Question</button>
+      <button
+        type="button"
+        disabled={cakeQuality === ''}
+        onClick={onCounterChange}>
+        Next Question
+      </button>
     </form>
   );
 };
