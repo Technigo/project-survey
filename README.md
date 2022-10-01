@@ -1,13 +1,13 @@
-# Survey form with React
+# Survey form with React 
 
-Replace this readme with your own information about your project.
+The goal this week was to create a Typeform-like survey by using React state.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+## The working progress 
 
-## The problem
+I started with going through material and understanding how the useState() works with the help of the lectures and examcdple projects. Then I just tried to get into the coding, and after some trial and errors, I got a functioning base that I could build on. It was then quite fun to see how I could connect all pieces into one big "machinery", and I really do understand why React is a popular tool. I'm hoping to learn more about it!
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time, I would've worked more on the accessibility part.
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://find-a-friend-survey.netlify.app
