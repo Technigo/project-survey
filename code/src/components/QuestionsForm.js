@@ -22,7 +22,7 @@ const QuestionsForm = () => {
     if (username.length > 0)
     setStep(step + 1)
     else (
-      alert('please enter a username')
+      alert('Please enter a username 🙃')
     )
   }
 
