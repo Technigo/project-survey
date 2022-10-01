@@ -33,7 +33,7 @@
         "unnamedComponents": "arrow-function"
       }
     ],
-    "linebreak-style": ["error", "windows"],
+    "linebreak-style": 0,
     "arrow-body-style": "off",
     "class-methods-use-this": "off",
     "brace-style": [
@@ -127,6 +127,6 @@
     "react/jsx-indent": "off",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "warn",
-    "semi-style": ["error", "last"]
+    "semi": ["error", "last"]
   }
 }
