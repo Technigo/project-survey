@@ -1,19 +1,14 @@
-# Technigo React Starter App
+# Survey form with React 
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+The goal this week was to create a Typeform-like survey by using React state.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
 
-## Usage
+## The working progress 
 
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+I started with reading up on React, and the useState hook that I used to add the states to the function components. Then I just tried to get into the coding, and after some trial and errors, I got a functioning base that I could build on. It was then quite fun to see how I could connect all pieces into one big "machinery", and I really do understand why React is a popular tool. I'm hoping to learn more about it!
 
-Alternatively, if you don't want a new git repo on your account;
+If I had more time, I would've worked more on the accessibility part.
 
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+## View it live
+
+https://find-a-friend-survey.netlify.app

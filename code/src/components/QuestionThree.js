@@ -15,7 +15,7 @@ const QuestionThree = ({size, setSize}) => {
         return (
             <>
             
-            <h2>What size would you prefer for your new best friend?</h2>
+            <h2 tabindex='0'>What size would you prefer for your new best friend?</h2>
                 <form className="radio-buttons">
                     {sizes.map(dogSize => (
                     <label key={dogSize}>

@@ -8,15 +8,16 @@ export const QuestionOne = ({name, setName}) => {
 
     return (
         <>
-        <h2>On what email address can we reach you?</h2>
+        <h2 tabindex='0'>On what email address can we reach you?</h2>
         
-        <label for="email-address">
+        <label for="email-address" aria-label='email address'>
             <input 
             type="text" 
-            id="email-address"
+            id="email-address" 
             className='email-input'
             placeholder='example@mail.com'
             value={name} 
+            required
             onChange={handleNameChange} />
         </label>
 

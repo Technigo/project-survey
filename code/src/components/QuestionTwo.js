@@ -15,9 +15,9 @@ const QuestionTwo= ({activity, setActivity}) => {
 
         return (
           <>
-            <h2>Where would you prefer to spend some quality time with your pup?</h2>
+            <h2 tabindex='0'>Where would you prefer to spend some quality time with your pup?</h2>
 
-            <form className="radio-buttons">
+            <form className="radio-buttons" >
               {activities.map(prefer => (
                 <label key ={prefer}>
                   <input

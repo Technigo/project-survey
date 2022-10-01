@@ -8,12 +8,12 @@ const QuestionFour= ({famous, setFamous}) => {
     return (
         <>
         <form className= "dropdown">
-            <h2>Which famous dog would you most want to play with?</h2>
+            <h2 tabindex='0'>Which famous dog would you most want to play with?</h2>
             <select
             onChange={handleFamousChange}
             value={famous}
             >
-                <option disabled value=''>Select dog</option>  
+                <option disabled value=''> Select dog</option>  
                 <option value='Bruiser Woods'>Bruiser Woods</option>
                 <option value='Bo Obama'>Bo Obama</option>
                 <option value='Scooby Doo'>Scooby Doo</option>

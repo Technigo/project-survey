@@ -45,8 +45,6 @@ h1 {
   font-weight: 600;
 }
 
-
-
 .outer-container {
   width: 100%;
   display: flex;
@@ -75,7 +73,7 @@ form, input{
 }
 
 .email-input {
-  width: 300px;
+  width: 200px;
   padding: 5px;
   border: none;
   border-bottom: 2px solid #DF7861;
@@ -85,11 +83,11 @@ form, input{
 
 select {
   border-color: #DF7861;
-  padding: 5px;
   border-radius: 5px;
   font-family: 'Source Sans Pro', sans-serif;
   font-size: 17px;
-  width: 60%
+  width: 100%;
+  text-align: center;
 } 
 
 .radio-buttons {
@@ -101,6 +99,7 @@ select {
 .radio-button {
   padding: 10px;
   margin: 10px;
+  vertical-align: middle;
 }
 
 /*Buttons*/
@@ -187,16 +186,15 @@ width: 40%
   font-size: 20px;
 }
 
-/*Media Queries*/
+/*MEDIA QUERIES*/
 
 /*Tablet*/
-@media (min-width: 668px) and (max-width: 1024px) {
+@media (min-width: 668px) {
   .inner-container {
     width: 60%; 
     height: auto; 
   }
 }
-
 
 /*Desktop*/
 @media (min-width: 1025px) { 
@@ -218,8 +216,8 @@ width: 40%
 
   .email-input{
     width: 300px;
-    padding: 5px;
     font-size: 20px;
+    padding: 5px;
   }
 
   .result-container, .final-container {
@@ -228,6 +226,7 @@ width: 40%
 
   p {
     font-size: 20px;
+    width: 90%;
   }
 
   h1 {
