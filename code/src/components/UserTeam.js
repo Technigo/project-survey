@@ -33,6 +33,7 @@ const UserTeam = ({ userTeam, setUserTeam, userName }) => {
               onChange={handleUserTeamInputChange}
               checked={userTeam === group.value}
               image={group.image}
+              tabIndex="0"
             />
             <img className="animals" src={group.image} alt={group.value} />
           </div>

@@ -17,27 +17,27 @@ const UserAnswers = ({
         {(() => {
           if (userTeam === 'Turtles') {
             return (
-              <h3 className="sub-header">Let&apos;s go {userTeam}!</h3>
+              <h3 className="sub-header">Let&apos;s go <span className="accent-color">{userTeam}!</span></h3>
             );
           } else if (userTeam === 'Tigers') {
             return (
-              <h3 className="sub-header">Make some noice for the {userTeam}!</h3>
+              <h3 className="sub-header">Make some noice for the <span className="accent-color">{userTeam}!</span></h3>
             );
           } else if (userTeam === 'Foxes') {
             return (
-              <h3 className="sub-header">What does the {userTeam} say!?</h3>
+              <h3 className="sub-header">♪ What does the <span className="accent-color">{userTeam}</span> say!?</h3>
             );
           } else if (userTeam === 'Elephants') {
             return (
-              <h3 className="sub-header">Pawooooo... said the {userTeam}!</h3>
+              <h3 className="sub-header">Pawooooo... said the <span className="accent-color">{userTeam}</span>!</h3>
             );
           } else if (userTeam === 'Hippos') {
             return (
-              <h3 className="sub-header">Hipp Hipp, {userTeam}!</h3>
+              <h3 className="sub-header">Hipp Hipp, <span className="accent-color">{userTeam}</span>!</h3>
             );
           } else if (userTeam === 'Lions') {
             return (
-              <h3 className="sub-header">Like the {userTeam} kings!</h3>
+              <h3 className="sub-header">Like the <span className="accent-color">{userTeam}</span> kings!</h3>
             );
           }
         })()}
@@ -50,21 +50,22 @@ const UserAnswers = ({
             return (
               <>
                 <h3 className="question-title">
-                  {userName}, you aren&apos;t overreacting feeling that last week
-                  was {userFeelings}! It actually was!
+                  <span className="accent-white">{userName}</span>, you aren&apos;t overreacting feeling that last week
+                  was <span className="accent-white">{userFeelings}</span>! It actually was!
                 </h3>
-                <h3 className="sub-header">“Believe in the person you want to be and then be willing to work for it”</h3>
+                <h3 className="sub-header quot"><span className="accent-color">“</span> Believe in the person you want to be and then be willing to work for it <span className="accent-color">”</span></h3>
               </>
             );
-          } else if (userFeelings === 'confusing' || userFeelings === 'stressful') {
+          } else if (userFeelings === 'confusing' || userFeelings === 'stressful' || userFeelings === 'challenging') {
             return (
               <>
                 <h3 className="question-title">
-                  {userName}, you aren&apos;t overreacting feeling that last week
-                  was {userFeelings}! You&apos;re feeling, and that&apos;s okay!
+                  <span className="accent-white">{userName}</span>, you aren&apos;t overreacting feeling that last week
+                  was <span className="accent-white">{userFeelings}</span>! You&apos;re feeling, and that&apos;s okay!
                 </h3>
-                <h3 className="sub-header">
-                  “Difficult roads often lead to beautiful destinations.”
+                <h3 className="sub-header quot">
+                  <span className="accent-color">“</span> Difficult roads often lead to beautiful destinations.
+                  <span className="accent-color"> ”</span>
                 </h3>
               </>
             );
@@ -78,20 +79,20 @@ const UserAnswers = ({
             return (
               <>
                 <h3 className="question-title">
-                  Working {userAloneOrBuddy} {userHours} hours, has pros and cons. Remember:
+                  Working <span className="accent-white">{userAloneOrBuddy} {userHours}</span> hours, has pros and cons. Remember:
                 </h3>
-                <h3 className="sub-header">“You never walk alone”</h3>
+                <h3 className="sub-header quot"><span className="accent-color">“</span> You never walk alone <span className="accent-color">”</span></h3>
               </>
             );
           } else if (userAloneOrBuddy === 'pair') {
             return (
               <>
                 <h3 className="question-title">
-                  We are sure you and {userBuddy} made a great job!
+                  We are sure you and <span className="accent-white">{userBuddy}</span> made a great job!
                   Don&apos;t forget to demo your project!
                 </h3>
-                <h3 className="sub-header">
-                  “Believe in the person you want to become”
+                <h3 className="sub-header quot">
+                  <span className="accent-color">“</span> Believe in the person you want to become <span className="accent-color">”</span>
                 </h3>
               </>
             );

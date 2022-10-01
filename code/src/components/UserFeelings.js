@@ -6,8 +6,8 @@ const UserFeelings = ({ userFeelings, setFeelings, userName, userTeam }) => {
   }
   return (
     <div className="input-field">
-      <h2 className="sub-header"> So... you are in team <span className="color-accent">{userTeam}</span> uh!? Nice! :)</h2>
-      <h2 className="question-title">How was your last weeks project, {userName}?</h2>
+      <h2 className="sub-header"> So... you are in team <span className="accent-color">{userTeam}</span> uh!? Nice! :)</h2>
+      <h2 className="question-title">How was your last weeks project, <span className="accent-white">{userName}</span>?</h2>
       <div className="custom-select">
         <select
           onChange={handleUserFeelingsInputChange}

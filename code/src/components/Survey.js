@@ -39,7 +39,6 @@ const Survey = () => {
   }
 
   const handleSubmitButtonClick = () => {
-    console.log('You clicked submit')
     setCounter(7)
   }
   /*  The survey starts here */
@@ -114,6 +113,10 @@ const Survey = () => {
             subHeaderText="Who was your code pair?"
           />
         </div>
+      )}
+
+      {(counter === 5 && userAloneOrBuddy === '') && (
+        setCounter(6)
       )}
 
       {counter === 6 && (
