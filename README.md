@@ -2,7 +2,7 @@
 
 Replace this readme with your own information about your project.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment for this weeks project was to build a app for making surways and store the input form the form to a summary.
 
 ## The problem
 
