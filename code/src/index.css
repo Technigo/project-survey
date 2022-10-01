@@ -223,7 +223,7 @@ textarea{
   }
 
   .cake-container{
-    grid-template-columns: 33% 33% 33%;
+    grid-template-columns: 50% 50%;
     margin: 0;
   }
 
