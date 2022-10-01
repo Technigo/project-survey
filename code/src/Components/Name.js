@@ -10,10 +10,10 @@ export const Name = ({ name, setName }) => {
   return (
     <><Header />
       <div className="nameComponent">
-
         <p>Please type your name to start:</p>
         <input
           type="text"
+          className="inputField"
           onChange={handleNameChange}
           value={name} />
 

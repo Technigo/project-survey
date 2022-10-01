@@ -7,17 +7,19 @@ export const Drink = ({ drink, setDrink }) => {
 
   return (
     <form>
-      <div>
-        <p>What drink would you like to celebrate with/drown your sorrows in?</p>
+      <div className="drinkComponent">
+        <h2>What drink would you like as a reward for surviving another day of coding?</h2>
+
         <select
           onChange={handleDrinkChange}
+          className="selectDropdown"
           value={drink}>
           <option value="">Select drink</option>
-          <option value="strong">Something strong, please!</option>
-          <option value="water">Water, let us stay hydrated!</option>
-          <option value="beer">It is beer a clock!</option>
-          <option value="coke">One coke a day keeps the doctor away!</option>
-          <option value="champange">Champange for everybody!</option>
+          <option value="Water">Water to stay hydrated and fresh</option>
+          <option value="Beer">Beer is always a good idea!</option>
+          <option value="Gin and tonic">Gin and tonic, please</option>
+          <option value="Coke">One coke a day keeps the doctor away</option>
+          <option value="Champange">Champange for everybody!</option>
         </select>
       </div>
     </form>

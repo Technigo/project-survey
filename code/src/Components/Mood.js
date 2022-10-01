@@ -1,6 +1,6 @@
 import React from 'react';
 
-const moodPreferences = ['I do not wanna talk about it', 'Not great, actually', 'It has been worse', 'King of the world!'];
+const moodPreferences = ['No comments, I just wanna cry', 'Not great, but still some hope left', 'Quite alright actually', 'Smooth sailing today!', 'I am the king of coding!'];
 
 export const Mood = ({ mood, setMood }) => {
   const handleMoodChange = (event) => {
@@ -10,8 +10,8 @@ export const Mood = ({ mood, setMood }) => {
 
   return (
     <form>
-      <h2>What is your mood after today?</h2>
       <div className="moodComponent">
+        <h2>What are your feelings after today?</h2>
         {moodPreferences.map((moodType) => (
           <label key={moodType}>
             <input
