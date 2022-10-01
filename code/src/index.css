@@ -233,11 +233,11 @@ a {
 /* MEDIA QUERIES */
 @media (mad-width: 650px) {
   .dot-shape {
-    right: -1rem;
-    width: 8rem;
-    height: 8rem;
+    right: -0rem;
+    width: 7rem;
+    height: 7rem;
   }
   .select-one-message {
-    right: 3rem;
+    right: 1rem;
   }
 }
