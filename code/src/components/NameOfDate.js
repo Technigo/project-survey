@@ -7,10 +7,11 @@ export const NameOfDate = ({ nameOfDate, setNameOfDate }) => {
   }
 
   return (
-    <div className="dateNameContainer">
+    <div className="questionsContainer">
       <form onSubmit={(event) => event.preventDefault()}>
-        <h3 className="dateNameText"> Who are you taking out tonight? {nameOfDate}</h3>
+        <h3> Who are you taking out tonight? </h3>
         <input
+          className="nameField"
           type="text"
           onChange={handleNameOfDateChange}
           value={nameOfDate} />

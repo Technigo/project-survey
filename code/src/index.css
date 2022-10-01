@@ -16,8 +16,17 @@ code {
     monospace;
 }
 
-html {
-  scroll-behavior: smooth;
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+}
+
+.surveyContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0px;
 }
 
 .header {
@@ -25,60 +34,170 @@ html {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  border: 2px yellow solid;
-  padding: 40px;
-  margin: 10px;
+  padding: 20px;
+  margin: 0px;
   background-image: url('./Images/restaurant-image.jpg');
   opacity: 1;
 }
 
 .header-title {
   background: blanchedalmond;
+  font-size: 36px;
   border: 1px black solid;
   padding: 15px;
-  opacity: 0.8;
+  border-radius: 12px;
+  opacity: 0.9;
 }
 
-.header-text {
-  background: blanchedalmond;
+.headerTextOne {
+  background: whitesmoke;
+  border: 1px black solid;
+  font-size: 20px;
+  line-height: 1.6;
   padding: 10px;
-  margin: 0;
-  opacity: 0.8;
-  border-radius: 15px;
+  opacity: 0.9;
+  border-radius: 6px;
+  width: 450px;
+  margin-bottom: 0px;
 }
 
-.dateNameContainer {
-  border: 3px red dotted;
+.headerTextTwo {
+  background: whitesmoke;
+  font-size: 16px;
+  line-height: 1.6;
+  padding: 10px;
+  margin: 0px 0px 10px 0px;
+  opacity: 0.9;
+  border-radius: 6px;
+  width: 350px;
+  border: 1px black solid;
+}
+
+.questionsContainer {
   display: flex;
   align-items: center;
-}
-
-.dateNameText {
-  display: flex;
-  justify-content: center;
-  text-align: center;
+  justify-content: space-evenly;
   flex-direction: column;
-  border: 1px midnightblue solid;
-  background-color: antiquewhite;
-  padding: 6px;
 }
 
 h3 {
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1px midnightblue solid;
-  background-color: antiquewhite;
-  padding: 6px;
+  padding: 10px;
+  margin-top: 20px;
+  font-size: 26px;
 }
 
 p {
   display: flex;
   justify-content: center;
   text-align: center;
-  border: 1px rgb(118, 65, 118) solid;
-  background-color: azure;
   padding: 3px;
+  margin: 3px;
+  font-size: 18px;
   
-  justify-content: center;
 }
+
+.nameField{
+  background-color: rgb(255, 255, 255);
+  padding: 6px;
+  margin-left: 25%;
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+.allRadioButtons {
+  margin: 10px;
+  font-size: 16px;
+}
+
+.selectionContainer {
+  background-color: whitesmoke;
+  font-size: 16px;
+  margin-left: 35%;
+}
+
+.stepCounter {
+  margin: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px #999;
+}
+
+.nextQuestion {
+  font-size: 16px;
+  background-color: antiquewhite;
+  opacity: 0.9;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 3px #999;
+  padding: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.resultText {
+  border: black 2px groove;
+  margin: 40px;
+  padding: 20px;
+  background-color: whitesmoke;
+  opacity: 0.9;
+}
+  
+  @media screen and (min-width: 668px) and (max-width: 1024px) {
+    .mainContainer{
+      width: auto;
+    }
+  }
+  
+  @media screen and (min-width: 1025px) {
+    .mainContainer {
+      width: auto;
+   }
+   .surveyContainer {
+    flex-direction: row;
+    }    
+
+    .header-title {
+      font-size: 48px;
+    }
+    .headerTextOne {
+      background: whitesmoke;
+      border: 1px black solid;
+      font-size: 28px;
+      width: 700px;
+    }  
+    .headerTextTwo {
+      background: whitesmoke;
+      font-size: 24px;
+      width: 600px;
+      border: 1px black solid;
+    }
+
+    .nameField{
+      background-color: rgb(255, 255, 255);
+      padding: 6px;
+      margin-left: 25%;
+      margin-bottom: 10px;
+      font-size: 14px;
+    }
+    
+    .selectionContainer {
+      background-color: whitesmoke;
+      font-size: 16px;
+      margin-left: 33%;
+    }
+
+    .stepCounter {
+      margin: 40px;
+      padding-bottom: 30px;
+      
+    }
+
+    .resultText {
+      margin: 80px;
+      padding: 50px;
+    }
+  }

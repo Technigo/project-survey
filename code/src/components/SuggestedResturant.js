@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import React from 'react';
+/*import React from 'react';
 
 export const SuggestedResturant = ({ suggestedResturant, setSuggestedResturant }) => {
   const handleSuggestedResturantChange = (event) => {
