@@ -6,6 +6,7 @@ const RadioButton = ({ valuedTrait, setValuedTrait, radioSelection }) => {
       {radioSelection}
       <input
         type="radio"
+        className="input-field"
         value={radioSelection}
         onChange={(event) => setValuedTrait(event.target.value)}
         checked={valuedTrait === radioSelection}

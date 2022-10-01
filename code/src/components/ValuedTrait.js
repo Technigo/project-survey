@@ -3,9 +3,9 @@ import RadioButton from './RadioButton';
 
 const ValuedTrait = ({ valuedTrait, setValuedTrait }) => {
   return (
-    <div className="question-wrapper">
+    <div className="question-wrapper valued-trait">
       <fieldset>
-        <p>Which of the following traits do you value the most?</p>
+        <p className="value-question">Which of the following traits do you value the most?</p>
         <RadioButton
           valuedTrait={valuedTrait}
           setValuedTrait={setValuedTrait}

@@ -2,19 +2,17 @@
 import React, { useState } from 'react';
 import Header from './Header';
 import NameInput from './NameInput';
-import UnexplaiableEventsCheckbox from './UnexplainableEventsCheckbox';
 import ValuedTrait from './ValuedTrait';
 import MostPowerfulEmotion from './MostPowerfulEmotion';
-import ContentMeter from './ContentMeter';
 import SubmissionOverview from './SubmissionOverview';
+import LikelihoodMeter from './LikelihoodMeter';
 
 const Form = () => {
   const [submitted, setSubmitted] = useState(false);
   const [userName, setUserName] = useState('');
   const [valuedTrait, setValuedTrait] = useState('');
   const [strongestEmotion, setStrongestEmotion] = useState();
-  const [contentLevel, setContentLevel] = useState(5)
-  const [checked, setChecked] = useState(null)
+  const [likelihood, setLikelihood] = useState(5)
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -22,26 +20,30 @@ const Form = () => {
   }
 
   return (
-    <div className="outer-wrapper">
-      <Header />
-      <section className="inner-wrapper">
-        {submitted && (
+    <div className="outer-wrapper submission-wrapper">
+      {submitted && (
+        <section className="inner-wrapper">
           <SubmissionOverview
             userName={userName}
-            checked={checked}
             valuedTrait={valuedTrait}
             strongestEmotion={strongestEmotion}
-            contentLevel={contentLevel} />
-        )}
-        {!submitted && (<form onSubmit={handleSubmit}>
-          <NameInput setUserName={setUserName} />
-          <UnexplaiableEventsCheckbox checked={checked} setChecked={setChecked} />
-          <ValuedTrait valuedTrait={valuedTrait} setValuedTrait={setValuedTrait} />
-          <MostPowerfulEmotion setStrongestEmotion={setStrongestEmotion} />
-          <ContentMeter contentLevel={contentLevel} setContentLevel={setContentLevel} />
-          <button className="submit-button" type="submit">Submit</button>
-        </form>)}
-      </section>
+            likelihood={likelihood} />
+        </section>
+      )}
+      {!submitted && (
+        <>
+          <Header />
+          <section className="inner-wrapper">
+            <form onSubmit={handleSubmit}>
+              <NameInput setUserName={setUserName} />
+              <ValuedTrait valuedTrait={valuedTrait} setValuedTrait={setValuedTrait} />
+              <MostPowerfulEmotion setStrongestEmotion={setStrongestEmotion} />
+              <LikelihoodMeter likelihood={likelihood} setLikelihood={setLikelihood} />
+              <button className="submit-button" type="submit">Submit</button>
+            </form>
+          </section>
+        </>)}
+
     </div>
   )
 }

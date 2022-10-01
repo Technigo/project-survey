@@ -8,13 +8,13 @@ const MostPowerfulEmotion = ({ setStrongestEmotion }) => {
           <br />
           <select className="input-field" name="strongest-emotion" required onChange={(event) => setStrongestEmotion(event.target.value)}>
             <option defaultValue={null}> </option>
-            <option id="strongest-emotion" value="happiness">Happiness</option>
-            <option id="strongest-emotion" value="sadness">Sadness</option>
-            <option id="strongest-emotion" value="fear">Fear</option>
-            <option id="strongest-emotion" value="disgust">Disgust</option>
-            <option id="strongest-emotion" value="anger">Anger</option>
-            <option id="strongest-emotion" value="surprise">Surprise</option>
-            <option id="strongest-emotion" value="love">Love</option>
+            <option id="happiness" value="happiness">Happiness</option>
+            <option id="sadness" value="sadness">Sadness</option>
+            <option id="fear" value="fear">Fear</option>
+            <option id="disgust" value="disgust">Disgust</option>
+            <option id="anger" value="anger">Anger</option>
+            <option id="surprise" value="surprise">Surprise</option>
+            <option id="love" value="love">Love</option>
           </select>
         </label>
       </fieldset>

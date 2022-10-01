@@ -1,18 +1,19 @@
 import React from 'react';
 
-const SubmissionOverview = ({ userName, valuedTrait, strongestEmotion, contentLevel, checked }) => {
+const SubmissionOverview = ({ userName, valuedTrait, strongestEmotion, likelihood }) => {
   return (
-    <>
-      <p>Hi {userName}!</p>
-      <p>You stated that you {checked} had unexplainable things happening to you
-        when you where angry or scared
-      </p>
+    <div className="submission-form">
+      <h2>{userName},</h2>
       <p>Your most valued trait is: {valuedTrait}.</p>
       <p>The strongest emotion was one of {strongestEmotion}.</p>
       <p>On a scale of 1 - 10 you think you are this likely to be acceptet to
-        Hogwarts Community College: {contentLevel}.
+        Hogwarts Community College: {likelihood}.
       </p>
-    </>
+      <p className="information">This summary has magically been sent to H.C.C. education administration via owl.
+        If you are accepted to tryouts, you will receive an invitation letter and a ticket
+        to the H.C.C. Express.
+      </p>
+    </div>
   )
 }
 
