@@ -235,7 +235,7 @@ a {
 @media (max-width: 650px) {
   .dot-shape {
     right: 0.9rem;
-    top: 13rem;
+    top: 13.5rem;
     width: 7rem;
     height: 7rem;
   }
@@ -245,6 +245,6 @@ a {
   }
 
   .select-one-message {
-    right: 2rem;
+    right: 4rem;
   }
 }
