@@ -234,16 +234,17 @@ a {
 /* MEDIA QUERIES */
 @media (max-width: 650px) {
   .dot-shape {
-    left: -3rem;
+    right: 0.9rem;
+    top: 13rem;
     width: 7rem;
     height: 7rem;
   }
 
   .dot-text {
-    font-size: 1rem;
+    font-size: 1.2rem;
   }
 
   .select-one-message {
-    right: 3rem;
+    right: 2rem;
   }
 }
