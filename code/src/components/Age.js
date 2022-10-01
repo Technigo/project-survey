@@ -8,7 +8,7 @@ export const Age = ({ age, setAge }) => {
   return (
     <div className="question-wrapper">
       <div className="question">
-        <label className="label" htmlFor="Age">What is your Age?</label>
+        <h2 className="label" htmlFor="Age">What is your Age?</h2>
         <div className="question-range">
           {ageGroups.map((ages) => (
             <label key={ages.id} htmlFor="radio">
