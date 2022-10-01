@@ -460,6 +460,10 @@ input[type=range]::-webkit-slider-thumb {
 }
 
 @media (min-width: 1024px) {
+
+.html {
+  background: url(./components/img/backgroundbig.jpg) no-repeat center center fixed;
+} 
   
 .outerContainer {
   height: 35vw;
