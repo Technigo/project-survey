@@ -1,12 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The project was to create a short survey in react using different input methods as well as following accessibility rules.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with making a plan of the question, how to display the different questions depending on which step you are on. I would definitely have liked to have cleaner code, as I feel like I have a lot of duplicate code. For example could my buttons have been the same component to be reused if I had more time to remake them.
+I also would have liked to add validation.
 
 ## View it live
 
