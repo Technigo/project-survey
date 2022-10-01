@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 
-import JSConfetti from 'js-confetti';
 import { Step } from 'components/Step';
 import { Size } from './components/Size';
 import { Pattern } from './components/Pattern';
 import { Name } from './components/Name';
 import { Colour } from './components/Colour';
 import { Result } from './components/Result';
-
-const jsConfetti = new JSConfetti();
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -17,8 +14,6 @@ export const App = () => {
   const [pattern, setUserPattern] = useState('');
   const [size, setUserSize] = useState('');
 
-  console.log({ name });
-
   return (
     <div className="outerWrapper">
       <div className="innerWrapper">
@@ -26,7 +21,6 @@ export const App = () => {
           <>
             <h1>Celebrate</h1>
             <Name name={name} setName={setUserName} />
-            <button type="button" onClick={(jsConfetti.addConfetti({ confettiRadius: 7, confettiNumber: 350, confettiColors: ['#00FFD1'] }))}>CONFETTI</button>
           </>
         )}
         {step === 2 && (
@@ -45,7 +39,7 @@ export const App = () => {
         {step < 5 && (
           <div className="bottomWrapper">
             <div className="btnParent">
-              <Step step={step} setStep={setStep} />
+              <Step step={step} setStep={setStep} name={name} color={color} size={size} />
             </div>
             <p className="stepText">{step}/5</p>
           </div>

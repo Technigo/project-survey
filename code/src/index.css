@@ -135,3 +135,9 @@ select {
 .nameForm {
   padding-bottom: 15vh;
 }
+
+.yay {
+  font-size: 24px;
+  margin-bottom: 30vh;
+  color: rgba(92, 92, 92, 0.541);;
+}

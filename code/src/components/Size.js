@@ -12,9 +12,9 @@ export const Size = ({ size, setSize }) => {
       </p>
       <select value={size} onChange={handleSizeChange}>
         <option value="">Select size</option>
-        <option value="L">Large</option>
-        <option value="M">Medium</option>
-        <option value="S">Small</option>
+        <option value="15">Large</option>
+        <option value="7">Medium</option>
+        <option value="3">Small</option>
       </select>
     </form>
   );

@@ -1,6 +1,6 @@
 import React from 'react';
 
-const patternGroup = ['Dotted', 'Stripes', 'Checkered', 'No pattern'];
+const patternGroup = ['🎈', '❤', '🦛', '🥕', '🍀', '💥', '⭐'];
 
 export const Pattern = ({ pattern, setPattern }) => {
   const handlePatternChange = (event) => {
@@ -10,7 +10,7 @@ export const Pattern = ({ pattern, setPattern }) => {
   return (
     <form>
       <p>
-        Which pattern do you prefer?
+        Which emoji would you like to add?
       </p>
       <div className="radioParent">
         {patternGroup.map((group) => (
