@@ -3,14 +3,11 @@ import React from 'react';
 const ShowSummary = (props) => {
   return (
     <>
-      <h3>Summary:</h3>
-      {/* <hr /> */}
-      <p>Gender : {props.formData.gender}</p>
-      <p>Status : {props.formData.status}</p>
-      <p>Reason : {props.formData.reason}</p>
-      <p>At Store/ Website : {props.formData.where}</p>
-      <p>ServiceSatisfaction : {props.formData.satisfaction}</p>
-      <p>WebsiteSatisfaction : {props.formData.websiteSatisfactionquality}</p>
+      <h2>Summary:</h2>
+      <h4>Gender : {props.formData.gender}</h4>
+      <h4>Status : {props.formData.status}</h4>
+      <h4>ServiceSatisfaction : {props.formData.serviceSatisfaction}</h4>
+      <h4>WebsiteSatisfaction : {props.formData.WebSatisfaction}</h4>
 
       {/* <pre>{JSON.stringify(props.formData)}</pre> */}
       <section className="allbtns">

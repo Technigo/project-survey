@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Section1 = (props) => {
   return (
     <>
       <form>
-        <section className="MaritalStatus">
+        <section className="section">
           <h4> Marital Status</h4>
           <select
             onChange={(event) =>
@@ -56,6 +56,10 @@ const Section1 = (props) => {
           </label>
         </section>
         </section>
+
+
+
+        
         <section className="allbtns">
           <button
             type="button"

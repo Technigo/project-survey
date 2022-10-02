@@ -1,82 +1,122 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const Section3 = (props) => {
   return (
     <>
-      <h2>Section 3| This esction is about your satisfaction. </h2>
       {/* <p>Would you rate the overal quality of our products? </p> */}
       <form>
-        <p>How did u perfer your order? </p>
-        <label>
-          <input
-            className="radio"
-            type="radio"
-            value="Store"
-            onChange={(event) =>
-              props.setFormData({
-                ...props.formData,
-                where: event.target.value,
-              })
-            }
-            checked={props.formData.where === 'Store'}
-          />
-          Store
-        </label>
-        <label>
-          <input
-            className="radio"
-            type="radio"
-            value="Website"
-            onChange={(event) =>
-              props.setFormData({
-                ...props.formData,
-                where: event.target.value,
-              })
-            }
-            checked={props.formData.where === 'Website'}
-          />
-          Website
-        </label>
+        <section className="section">
+          <h2>Section 3| This esction is about your satisfaction. </h2>
+        </section>
+        <section className="section3">
+          <p>How did u perfer your order? </p>
 
-        <p>
-          if it is store, Are you statisfied with our service and our collegues?
-        </p>
-        <label>
-          <input
-            className="radio"
-            type="radio"
-            value="Yes"
-            onChange={(event) =>
-              props.setFormData({
-                ...props.formData,
-                serviceSatisfaction: event.target.value,
-              })
-            }
-            checked={props.formData.serviceSatisfaction === 'Yes'}
-          />
-          Yes
-        </label>
-        <label>
-          <input
-            className="radio"
-            type="radio"
-            value="No"
-            onChange={(event) =>
-              props.setFormData({
-                ...props.formData,
-                serviceSatisfaction: event.target.value,
-              })
-            }
-            checked={props.formData.serviceSatisfaction === 'No'}
-          />
-          No
-        </label>
+          <section className="label">
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="Store"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    where: event.target.value,
+                  })
+                }
+                checked={props.formData.where === 'Store'}
+              />
+              Store
+            </label>
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="Website"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    where: event.target.value,
+                  })
+                }
+                checked={props.formData.where === 'Website'}
+              />
+              Website
+            </label>
+          </section>
 
-        <p>If in the website, How quick and representative is our website? </p>
-        {/* fast, medium, slow */}
+          <p>
+            If at store, Are you statisfied with our service and our collegues?
+          </p>
+          <section className="label">
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="Yes"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    serviceSatisfaction: event.target.value,
+                  })
+                }
+                checked={props.formData.serviceSatisfaction === 'Yes'}
+              />
+              Yes
+            </label>
 
-        {/* Bottons */}
-        <span className="btn">
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="No"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    serviceSatisfaction: event.target.value,
+                  })
+                }
+                checked={props.formData.serviceSatisfaction === 'No'}
+              />
+              No
+            </label>
+          </section>
+          <p>If on the website, are you satisfied from our website? </p>
+          {/* fast, medium, slow */}
+
+          <section className="label">
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="Yes"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    WebSatisfaction: event.target.value,
+                  })
+                }
+                checked={props.formData.WebSatisfaction === 'Yes'}
+              />
+              Yes
+            </label>
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="No"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    WebSatisfaction: event.target.value,
+                  })
+                }
+                checked={props.formData.WebSatisfaction === 'No'}
+              />
+              No
+            </label>
+          </section>
+
+          {/* Bottons */}
           <section className="allbtns">
             <button
               type="button"
@@ -93,7 +133,7 @@ const Section3 = (props) => {
               Next Page
             </button>
           </section>
-        </span>
+        </section>
       </form>
     </>
   );

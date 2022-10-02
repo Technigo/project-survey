@@ -6,6 +6,7 @@ import Section1 from 'components/Section1';
 import Section2 from 'components/Section2';
 import Section3 from 'components/Section3';
 import ShowSummary from 'components/ShowSummary';
+import RegisterationPage from 'components/RegisterationPage';
 import LastPage from 'components/LastPage';
 
 const App = () => {
@@ -16,8 +17,8 @@ const App = () => {
     reason: '',
     where: '',
     serviceSatisfaction: '',
-    quality: '',
-    satisfaction: '',
+    // quality: '',
+    WebsiteSatisfaction: '',
   });
 
   // Next step function
@@ -71,7 +72,8 @@ const App = () => {
             formData={formData}
           />
         )}
-        {step === 6 && <LastPage setStep={setStep} />}
+        {step === 6 && <RegisterationPage onNextStep={nextStep} />}
+        {step === 7 && <LastPage setStep={setStep} />}
       </div>
     </>
   );
