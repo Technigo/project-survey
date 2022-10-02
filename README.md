@@ -1,13 +1,21 @@
 # Survey form with React
+This is a survey app with React. I used the useState hook in React. 
+In ordet to Start the project: npm start. 
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+In the survey app, with 8 components. All components are imported to the app. 
+In the introduction, explains the survey and how it looks like, and each section what is about. 
+I used radio buttons & selected dropdown for questions to choose the option. 
+I made two buttons (next and previous) button the person can go back and change the previous page if there is a need to change. 
+I made a summary page that shows the whole summary of the survey. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+That was not easy to move on to the next page which I 
+solve it by creating a function on the app.jsx and give a order. 
+
+
+If i have more time i would work more on validation part. EX.put error message and use red color for error . 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://survey-330c51.netlify.app
