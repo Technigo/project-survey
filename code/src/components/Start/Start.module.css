@@ -1,0 +1,40 @@
+@font-face {
+  font-family: ringbearer;
+  src: url(RINGM___.TTF);
+}
+
+.titleContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: ringbearer;
+  color: rgb(192, 192, 94);
+}
+
+h2 {
+  font-size: 17px;
+}
+
+.lotr {
+  font-size: 50px;
+  margin: 0;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.input {
+  background: transparent;
+  border: 0;
+  border-bottom: 3px solid #6e6e45;
+  margin-bottom: 10px;
+  color: #6e6e45;
+}
+
+.startButton {
+  background-color: #c0c05e;
+  border-radius: 5px;
+  font-family: ringbearer;
+  padding: 10px;
+}

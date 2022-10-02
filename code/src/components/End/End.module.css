@@ -1,0 +1,28 @@
+.yourCharacter {
+  font-size: 20px;
+}
+
+p {
+  font-family: 'ringbearer';
+}
+.end {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.answer {
+  background-color: #989958;
+  padding: 6px;
+  color: black;
+  border-radius: 5px;
+  font-family: 'ringbearer';
+}
+
+.finalCharacter {
+  font-size: 40px;
+  background-color: #c5c667;
+  padding: 6px;
+  color: black;
+  border-radius: 5px;
+  font-family: 'ringbearer';
+}

@@ -1,0 +1,27 @@
+.questions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: ringbearer;
+  color: rgb(192, 192, 94);
+}
+
+.dropdown {
+  color: rgb(147, 147, 73);
+  margin-bottom: 20px;
+  border: 0;
+  border-bottom: 2px solid rgb(147, 147, 73);
+  outline: 0;
+  font-size: 20px;
+  padding: 7px 0;
+  background: transparent;
+  transition: 0.2s;
+}
+
+.pageButton {
+  margin-top: 30px;
+  background-color: #c0c05e;
+  border-radius: 5px;
+  font-family: ringbearer;
+  padding: 10px 50px;
+}

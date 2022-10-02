@@ -10,14 +10,24 @@ const Start = (props) => {
 
   return (
     <div className="main-container">
-      <div className={styles.Start}>
-        <h1>Which Lord of the Rings Character Are You?</h1>
-        <p>Find out in this survey!</p>
+      <div className={styles.titleContainer}>
+        <h2> Which character from</h2>
 
-        <form onSubmit={handleSubmit}>
-          <input name="usernameInput" type="text" required />
-          <button type="submit" id="confirm-btn">
-            submit
+        <h1 className={styles.lotr}>Lord of the Rings</h1>
+        <h2>are you?</h2>
+
+        <p>First, what is you name?</p>
+
+        <form className={styles.form} onSubmit={handleSubmit}>
+          <input
+            className={styles.input}
+            name="usernameInput"
+            type="text"
+            required
+          />
+
+          <button className={styles.startButton} type="submit" id="confirm-btn">
+            Start!
           </button>
         </form>
       </div>

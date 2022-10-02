@@ -1,17 +1,14 @@
 import React from 'react';
-/**
- *
- * @param {*} props { value: string, onChange: function }
- * @returns
- */
+import styles from './RadioButtons.module.css';
+
 const RadioButtons = (props) => {
   console.log(props.question2);
   console.log('props', props);
 
   return (
-    <form>
+    <form className={styles.radioButtons}>
       {props.options.map((option) => (
-        <label key={option} htmlFor={option}>
+        <label className={styles.label} key={option} htmlFor={option}>
           <input
             id={option}
             name={option}

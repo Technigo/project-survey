@@ -1,0 +1,8 @@
+.radioButtons {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  padding: 10px;
+}

@@ -3,8 +3,12 @@ import RadioButtons from 'components/RadioButtons/Index';
 // import SelectDropdown from 'components/SelectDropdown';
 import styles from './Questions.module.css';
 
-// TODO - flytta och döp om.
-const weapons = ['Bow and Arrow', 'an axe ofc!', 'Magic'];
+const options = [
+  'Bow and Arrow',
+  'an axe ofc!',
+  'Let others fight for you',
+  'Magic'
+];
 
 const Questions = (props) => {
   const [question, setQuestion] = useState(1);
@@ -19,57 +23,96 @@ const Questions = (props) => {
   return (
     <>
       {question === 1 && (
-        <div className={styles.Questions}>
+        <div className={styles.questions}>
           <h1> Question 1</h1>
-          <p>If you could use any weapon in the world, which would it be?</p>
+          <p>which weapon do you choose in a fight?</p>
+
           <RadioButtons
-            options={weapons}
+            options={options}
             value={props.question1}
             onChange={props.setQuestion1}
           />
 
-          <button type="button" onClick={nextQuestion}>
+          <button
+            className={styles.pageButton}
+            type="button"
+            disabled={!props.question1}
+            onClick={nextQuestion}
+          >
             Next
           </button>
         </div>
       )}
       {question === 2 && (
-        <div className={styles.Questions}>
+        <div className={styles.questions}>
           <h1> Question 2</h1>
-          <p>HALLOJJ</p>
+          <p>Which type of schoolkid were you:</p>
           <form>
             <select
+              className={styles.dropdown}
               onChange={(event) => props.setQuestion2(event.target.value)}
               value={props.question2}
             >
-              <option value=""> Select location:</option>
-              <option value="Test1"> Test1</option>
-              <option value="Test2"> Test2</option>
-              <option value="Test3"> Test3</option>
+              <option value=""> Select</option>
+              <option value="The one with good grades">
+                The one with good grades
+              </option>
+              <option value="Spending most of the time at the gym">
+                Spending most of the time at the gym
+              </option>
+              <option value="Library is were you find me">
+                Library is were you find me
+              </option>
+              <option value="Favorite place:Smoking area">
+                Favorite place:Smoking area
+              </option>
             </select>
           </form>
 
-          <button type="button" onClick={nextQuestion}>
+          <button
+            className={styles.pageButton}
+            type="button"
+            disabled={!props.question2}
+            onClick={nextQuestion}
+          >
             Next
           </button>
-          <button type="button" onClick={previousQuestion}>
+          <button
+            className={styles.pageButton}
+            type="button"
+            onClick={previousQuestion}
+          >
             back
           </button>
         </div>
       )}
       {question === 3 && (
-        <div className={styles.Questions}>
+        <div className={styles.questions}>
           <h1> Question 3</h1>
-          <p>Test 3</p>
+          <p>When playing boardgames, are you the one that:</p>
           <RadioButtons
-            options={['apple', 'orange', 'pear']}
+            options={[
+              'Often wins',
+              'Is skeptical and thinks everyone else is cheating',
+              'Do not want to cheat but cant help to do so',
+              'Just happy to play'
+            ]}
             value={props.question3}
             onChange={props.setQuestion3}
           />
-          <button type="button" onClick={props.nextPage}>
+          <button
+            disabled={!props.question3}
+            className={styles.pageButton}
+            type="button"
+            onClick={props.nextPage}
+          >
             Next
           </button>
-          <button type="button" onClick={previousQuestion}>
+          <button
+            className={styles.pageButton}
+            type="button"
+            onClick={previousQuestion}
+          >
             back
           </button>
         </div>
