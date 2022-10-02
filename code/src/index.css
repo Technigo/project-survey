@@ -81,6 +81,7 @@ body {
   align-items: stretch;
   border-radius: 20px;
   padding: 30px;
+  font-size: 20px;
 }
 
 .moodComponent h2 {
@@ -93,6 +94,7 @@ body {
 .moodComponent input {
   margin-right: 15px;
   accent-color: #7EB5A6;
+
 }
 
 /* Drink compoment */
@@ -134,7 +136,7 @@ body {
   font-size: 25px;
   font-family: 'Montserrat', sans-serif;
   padding: 30px;
-  line-height: 130%;
+  line-height: 140%;
   border: 2px #7EB5A6 solid;
   border-radius: 25px;
   margin-bottom: 30px;

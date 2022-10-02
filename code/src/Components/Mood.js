@@ -13,9 +13,12 @@ export const Mood = ({ mood, setMood }) => {
       <div className="moodComponent">
         <h2>What are your feelings after today?</h2>
         {moodPreferences.map((moodType) => (
+          // eslint-disable-next-line jsx-a11y/label-has-associated-control
           <label key={moodType}>
             <input
               type="radio"
+              aria-label="Pick mood"
+              tabIndex="0"
               onChange={handleMoodChange}
               value={moodType}
               checked={mood === moodType} />

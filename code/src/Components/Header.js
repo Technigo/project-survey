@@ -5,7 +5,10 @@ export const Header = () => {
     <div className="headerComponent">
       <h1>SURVEY</h1>
       <h2>Tell us how coding has been for you today</h2>
-      <span className="computerIcon">&#128187;</span>
+      <span
+        className="computerIcon"
+        aria-label="Computer icon">&#128187;
+      </span>
     </div>
   )
 }

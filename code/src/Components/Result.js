@@ -9,8 +9,11 @@ export const Result = ({ name, mood, drink }) => {
         <p>Current mood: {mood}</p>
         <p>I prefer to drink: {drink}</p>
       </div>
-      <h3>PS. You are doing a great job! You should be proud of yourself.</h3>
-      <span className="heartIcon">&#129505;</span>
+      <h3>PS. You are doing great! You should be proud of yourself.</h3>
+      <span
+        className="heartIcon"
+        aria-label="Heart icon">&#129505;
+      </span>
     </div>
   )
 }
