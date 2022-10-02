@@ -1,10 +1,22 @@
 # Survey Project
 
-Build a survey in React to practice using State Hook
+Build a survey using React in order to practice using State Hook.
 
 ## The problem
 
-Made some sort of plan at beginning of week, didn't follow through with half of it anyway. Not enough time/motivation. If I had more time I'd probably redo everything from scratch.
+Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+
+Had no idea what to do for design/content so just made something up about my favourite dog breed, and then mostly focused on usability. If I would have had more time, adding a back button and displaying different summaries depending on the users answers would have been on the top of my list. 
+
+### Technologies used:
+
+- HTML
+- CSS
+- React
+
+- [ESLint](https://eslint.org/) for code linting/formatting
+- [Netlify](https://www.netlify.com/) for deployment
+
 
 ## View it live
 
