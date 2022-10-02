@@ -1,20 +1,22 @@
 import React, { useState } from "react";
 import Startpage from "components/Startpage";
-import Questions from "components/Questions";
+import Types from "components/Types";
 import Summary from "components/Summary";
 import "./index.css";
 
 const questionsData = [
   {
-    id: "",
+    id: "0",
   },
   {
-    id: "Nice, let's do this!",
+    id: "1",
+    question_title: "Nice, let's do this!",
     question_text: "First of all, what's your name?",
     input_type: "text",
   },
   {
-    id: "ENERGY LEVEL",
+    id: "2",
+    question_title: "ENERGY LEVEL",
     question_text: "Energywise, how much energy do you need?",
     input_type: "select",
     options: [
@@ -24,40 +26,46 @@ const questionsData = [
     ],
   },
   {
-    id: "GENRE",
+    id: "3",
+    question_title: "GENRE",
     question_text: "What type of music do you prefer?",
     input_type: "radio",
     options: [
-      { value: "Classic", label: "Classic"}, 
-      { value: "Hiphop", label: "Hiphop" }, 
-      { value: "World", label: "World" }
+      { value: "Pop/Rock", label: "Pop/Rock" },
+      { value: "Hiphop", label: "Hiphop" },
+      { value: "World", label: "World" },
+    ],
+  },
+  {
+    id: "4",
+    question_title: "EPOKE",
+    question_text: "Do you prefer contemporary music or are oldies?",
+    input_type: "radio",
+    options: [
+      { value: "Contemporary", label: "Contemporary" },
+      { value: "Oldies", label: "Oldies" },
     ],
   },
 ];
 
-
-// const resetForm = () => {
-//   setUserChoices([]);
-//   SetcurrentQuestion(0);
-//   window.location.reload();
-// };
-
 export const App = () => {
-  const [currentQuestion, SetcurrentQuestion] = useState(0);
+  const [currentQuestion, setcurrentQuestion] = useState(0);
   const [userInput, setUserInput] = useState("");
-  // const [answers, setAnswers] = useState({}); H test
   const [answers, setAnswers] = useState([]);
-
 
   /////Keep track of which question is next////
   const handleCurrentQuestionButtonClick = () => {
     const currentQuestionNumber = currentQuestion + 1;
-    SetcurrentQuestion(currentQuestionNumber);
-    // setAnswers((previousAnswers) => [...previousAnswers, formatInput(inputValue)]);
-    handleTest([currentQuestionNumber, userInput] ); // H fast jag har ändrat på det lite. På click skicka dessa värden till handleTest
-    handleClearButtonClick();
-    console.log('answershandleTest', answers);
+    setcurrentQuestion(currentQuestionNumber);
+  
     
+  /////Save answers////
+  let currentAnswer = {};
+  currentAnswer[currentQuestionNumber] = userInput;
+  
+  updateAnswer([currentQuestionNumber, userInput]);
+  handleClearButtonClick();
+
   };
 
   const handleClearButtonClick = () => {
@@ -66,26 +74,24 @@ export const App = () => {
 
   const handleUserInputChange = (event) => {
     setUserInput(event.target.value);
-    event.preventDefault();
   };
 
-  const handleReset = () => { //H nollställer setAnswer när ropa den?
+  const resetForm = () => {
+    setcurrentQuestion(0);
     setAnswers([]);
+    window.location.reload(false);
   };
 
-  const handleTest = (answerObj) => { //H På click /se ovan/ Tar emot svaret och uppdaterar updateAnswer.
-    console.log("funkar answerObj", answerObj);
-    updateAnswer(answerObj); //H
-  };
+  // const handleReset = () => {
+  //   //H nollställer setAnswer när ropa den?
+  // };
 
 
-  const updateAnswer = (updatedAnswer) => { //H uppdaterar vaddå,funktionen setAnswers?
+  const updateAnswer = (updatedAnswer) => {
+    //H uppdaterar vaddå,funktionen setAnswers?
     console.log("funkar updatedAnswer", updatedAnswer);
 
-    setAnswers((answers) => ([
-      ...answers,
-      ...updatedAnswer
-    ]))
+    setAnswers((answers) => [...answers, ...updatedAnswer]);
   };
 
   // const handleUserChoices = () => {
@@ -106,128 +112,45 @@ export const App = () => {
     <main>
       {currentQuestion === 0 && (
         <section className="container">
-            <Startpage />
-          <button className="button" type="button" onClick={() => handleCurrentQuestionButtonClick()}
-                // <button onClick={() => handleTest({ bajs: "Hejsan" })}>Question 1</button>
-
-          >Let's begin!
-          </button> 
-         
-          </section>
+          <Startpage />
+          <div className="btn">
+            <button
+              type="button"
+              onClick={() => handleCurrentQuestionButtonClick()}
+            >
+              Let's begin!
+            </button>
+          </div>
+        </section>
       )}
-      {currentQuestion > 0 && currentQuestion < 4 && (
+      {currentQuestion > 0 && currentQuestion < 5 && (
         <section className="container">
-        <Questions
+          <Types
             {...questionsData[currentQuestion]}
             userInput={userInput}
             onChange={handleUserInputChange}
           />
-      <p>
-          <button 
-          className="button"
-            type="button"
-            userInput={userInput}
-            onClick={() => handleCurrentQuestionButtonClick(currentQuestion)}
-          >
-            Next question
-          </button>
-          </p>
 
+          <div className="btn">
+            <button
+              type="button"
+              userInput={userInput}
+              onClick={() => handleCurrentQuestionButtonClick(currentQuestion)}
+            >
+              Next question
+            </button>
+          </div>
         </section>
       )}
-      {currentQuestion === 4 && (
-        <div className="container">
-{/* <Summary answers={answers} reset={resetForm} /> */}
-          <Summary answers={answers} />
-        </div>
+      {currentQuestion === 5 && (
+        <section className="container">
+          <Summary
+            answers={answers}
+            setAnswers={setAnswers}
+            reset={resetForm}
+          />
+        </section>
       )}
-
-      
     </main>
   );
-
-
-
-
-
-
-  
 };
-
-/*
-Forms have onSubmit to 
-Present default.
-
-
-      // <Startpage />
-      /* Istället för att ha en onclick på knappen, överväg att ha onSubmit på formuläret istället. Det finns flera fördelar med det och är standard när du har ett formulär. */
-/*
- <Survey
-                id={question.id}
-                question_text={question.question_text}
-                input_type={question.input_type}
-                options={question.options}
-                /> 
-
-//
-
-                  //när någon skickar in formuläret submit på formuläret:
-                  //lägg till funktion handle sumbit som hanterar räknaren sätt current questiion till ++
-                  //använda föratt föra tt hämta rätt dataQuestions
-a
-                  //skcika in det i frågefo 
-// import Startpage from "components/Startpage";
-/*const submitForm = () =>{
-                    console.log("hej")
-                } */
-/*
-{questionsData.map((question) => { //funkar får fram tre object        
-       return(
-        <form>
-            <Survey
-                id={question.id}
-                question_text={question.question_text}
-                input_type={question.input_type}
-                options={question.options}
-                />
-                
-          </form>
-              
-              )
-      })
-    }
-*/
-/*
-{/* {rData.albums.items.map((album) => {
-       return (
-            <Album
-                key={album.id}
-                coverImage={album.images[0].url}
-                albumName={album.name}
-                albumUrl={album.external_urls.spotify}
-                albumArtists={album.artists}
-                />
-              )
-      })
-    } */
-
-
-    // /*
-    //  <div className="helper">
-    //     <p>my counter {currentQuestion}</p>
-    //     <p>this is the user input {userInput}</p>
-    //     <button
-    //       type="button"
-    //       onClick={() => handleCurrentQuestionButtonClick()}
-    //     >
-    //       Next question
-    //     </button>
-    // //     {/* <input type="text" value={userInput} onChange={handleUserInputChange} />{" "} */}
-    //     <p>
-    //       <button type="button" onClick={handleClearButtonClick}>
-    //         {" "}
-    //         clear input{" "}
-    //       </button>
-    //     </p>
-    //   </div>
-    // */
