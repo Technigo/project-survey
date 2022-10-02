@@ -7,18 +7,18 @@ export const City = ({ city, setCity }) => {
   }
 
   return ( 
+  <form>
     <label for="City" name="city" >
-        <p>Location for course taken:</p>
-
+        <h3>Country the course is taken:</h3>
     <select
         onChange={handleCityChange} value={city} >
-        <option selected="">Select center</option>
-        <option value='spain-center'>Spain</option>
-        <option value='portugal-center'> Portugal</option>
-        <option value='Italy-center'> Italy</option>
-       
+        <option disabled value=''>Select an option:</option>
+        <option value='Spain'>Spain</option>
+        <option value='Portugal'> Portugal</option>
+        <option value='Italy'> Italy</option>
     </select>
     </label>
+    </form>
  );
 }
 
