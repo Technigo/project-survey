@@ -4,7 +4,7 @@
 }
 
 /*FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Lato&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&family=Rampart+One&display=swap');
 
 * {
   box-sizing: border-box;
@@ -24,15 +24,15 @@ html {
 
 h1 {
   /* font-family: 'Playfair Display', serif; */
-  font-family: 'Bungee Shade', cursive;
+  font-family: 'Rampart One', cursive;
   color: var(--primary);
   font-weight: lighter;
-  font-size: 30px;
+  font-size: 40px;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 22px;
   color: var(--primary);
   text-align: center;
   font-weight: lighter;
