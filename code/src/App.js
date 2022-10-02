@@ -2,16 +2,16 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
-import { Name } from 'components/Name';
-import { Food } from 'components/Food';
-import { Drink } from 'components/Drink';
+import { Age } from 'components/Age';
+import { Gender } from 'components/Gender';
+import { Electricity } from 'components/Electricity';
 import { Result } from 'components/Result';
 
 export const App = () => {
   const [step, setStep] = useState(1);
-  const [name, setName] = useState('');
-  const [food, setFood] = useState('');
-  const [drink, setDrink] = useState('');
+  const [age, setAge] = useState('');
+  const [gender, setGender] = useState('');
+  const [electricity, setElectricity] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -19,17 +19,19 @@ export const App = () => {
 
   return (
     <>
+      <h1>Are you worried about the raise in electricity costs?</h1>
+      <h3>Contribute to science by answering this 2 minutes survey!</h3>
       {step === 1 && (
-        <Name name={name} setName={setName} />
+        <Age age={age} setAge={setAge} />
       )}
       {step === 2 && (
-        <Food food={food} setFood={setFood} />
+        <Gender gender={gender} setGender={setGender} />
       )}
       {step === 3 && (
-        <Drink drink={drink} setDrink={setDrink} />
+        <Electricity electricity={electricity} setElectricity={setElectricity} />
       )}
       {step === 4 && (
-        <Result name={name} food={food} drink={drink} />
+        <Result age={age} gender={gender} electricity={electricity} />
       )}
 
       {step < 4 && (
