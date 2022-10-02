@@ -1,13 +1,244 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*,
+*:before,
+*:after {
+ box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+body {
+  margin: 0;
+  box-sizing: border-box;
+  background-image: url("images/background.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: black;
 }
+
+
+/** START & RESULT **/ 
+
+.startPage, .result-page {
+  padding: 5% 10% 5% 10%;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+}
+
+h1 {
+  font-size: 1.7em;
+  color: whitesmoke;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.2em;
+  color: whitesmoke;
+}
+
+p {
+  color: whitesmoke;
+}
+
+.answer {
+  font-weight: 700
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+}
+
+#startBtn, #playAgainBtn, .next-btn {
+  border: 0;
+  padding: 20px;
+  width: 200px;
+  margin-top: 20px;
+  height: 40px;
+  border-radius: 25px;
+  cursor: pointer;
+  background-color: #393E46;
+  color: #ffff;
+  font-size: 1em;
+  font-weight: 700;
+  text-align: center;
+  letter-spacing: 1px;
+  line-height: 2px;
+}
+
+#startBtn:hover, #playAgainBtn {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+.username_input {
+  border: 1px solid #222831;
+  background-color: #ffff;
+  outline: 0;
+  padding: 20px;
+  width: 200px;
+  height: 40px;
+  border-radius: 25px;
+  font-size: 1em;
+  text-align: center;
+  letter-spacing: 1px
+}
+
+#check {
+  color: green
+}
+
+#wrong {
+  color: red
+}
+
+
+/** RADIO BTN QUESTIONS **/
+
+.questions-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px;
+  text-align: center;
+  flex-wrap: nowrap;
+}
+
+.radio-btns {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.radio-label {
+  color: whitesmoke;
+  font-size: 1.1em;
+  line-height: 1;
+  display: grid;
+  width: 200px;
+  grid-template-columns: 1em auto;
+  margin: 10px;
+  border: solid white 1px;
+  padding: 10px;
+  align-items: center;
+}
+
+.radio-label:focus-within {
+  color: whitesmoke;
+}
+
+.radio-label:hover {
+  color: black;
+  background-color: whitesmoke;
+}
+
+input[type="radio"] {
+  appearance: none;
+  background-color: #fff;
+  margin: 0;
+  font: inherit;
+  width: 1.8em;
+  height: 1.8em;
+  border: 0.15em solid #393E46;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+}
+
+input[type="radio"]::before {
+  content: "";
+  width: 1.1em;
+  height: 1.1em;
+  border-radius: 50%;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em #393E46;
+  background-color: CanvasText;
+}
+
+input[type="radio"]:checked::before {
+  transform: scale(1); 
+}
+
+input[type="radio"]:focus {
+  outline: max(2px, 0.15em) solid #393E46;
+  outline-offset: max(2px, 0.15em);
+}
+
+/** SELECT QUESTIONS **/
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.select {
+  width: 200px;
+  text-align: center;
+  padding: 5%;
+  font-size: 1.1em;
+  border-radius: 25px;
+}
+
+
+/** OTHER COMPONENTS **/
+
+.progress-bar {
+  display: flex;
+  font-weight: 700;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px;
+}
+
+progress {
+  accent-color:green
+}
+
+/** MEDIA QUERIES **/
+
+@media (min-width: 767px) and (max-width: 991px) {
+   
+  p {
+    font-size: 1.5em;
+    margin: 1%;
+  }
+
+  .radio-label {
+    width: 200px;
+    grid-template-columns: 1em auto;
+    margin: 10px 10px 10px 100px;
+  }
+
+  .start-image {
+    bottom: 0;
+    height: 40%;
+    width: auto;
+  }
+
+  .result-image {
+    height: 100px;
+  }
+
+}
+
+
+@media (min-width: 992px) {
+
+  p {
+    font-size: 1.2em;
+  }
+   
+  .start-image {
+    bottom: 0;
+    height: 40%;
+    width: auto;
+  }
+
+  .result-image {
+    height: 100px;
+  }
+
+
+} 
