@@ -8,22 +8,22 @@ const Timeslot = () => {
          <div className="time">
          
          <label>Select a Time</label>
-            <select value={timeslot}
+            <select value= {timeslot}
             onChange ={(e)=>setTimeslot(e.target.value)} >
                 <option disabled selected>Select your option</option>
-                <option>8AM</option>
-                <option>9AM</option>
-                <option>10AM</option>
-                <option>11AM</option>
-                <option>12PM</option>
-                <option>1PM</option>
-                <option>2PM</option>
-                <option>3PM</option>
-                <option>4PM</option>
-                <option>5PM</option>
-                <option>6PM</option>
-                <option>7PM</option>
-                <option>8PM</option>
+                <option value = "8am">8AM</option>
+                <option value = "9am">9AM</option>
+                <option value = "10am">10AM</option>
+                <option value = "11am">11AM</option>
+                <option value = "12pm">12PM</option>
+                <option value = "1pm">1PM</option>
+                <option value = "2pm">2PM</option>
+                <option value = "3pm">3PM</option>
+                <option value = "4pm">4PM</option>
+                <option value = "5pm">5PM</option>
+                <option value = "6pm">6PM</option>
+                <option value = "7pm">7PM</option>
+                <option value = "8pm">8PM</option>
             </select>
             {/* <p>{timeslot}</p> */}
          </div>
