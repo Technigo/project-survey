@@ -411,4 +411,7 @@ footer {
   .landing-container img {
     width: 80%;
   }
+  .press-enter {
+    display: none;
+  }
 }
