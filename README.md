@@ -1,13 +1,16 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+This weeks assignment was to create a survey with the focus on learning react and how to use 'state'. 
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+In theory, react makes sense, breaking up the components in smaller chuncks but it took alot of trial and error. 
+I initially had alot of components but had to revert back as it broke the functions on my page for some unknown reason and I had no 
+time figuring out why, so I had to settle for one component. 
+
+So if I had more time id break up the Form component alot more. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://benevolent-kangaroo-28e125.netlify.app/
