@@ -414,4 +414,27 @@ footer {
   .press-enter {
     display: none;
   }
+  .name-input {
+    font-size: 24px;
+  }
+  .previous-button,
+  .next-button {
+    width: 46px;
+    height: 40px;
+  }
+  .typeform {
+    height: 40px;
+  }
+  .select-input {
+    font-size: 18px;
+  }
+  .excitement-label {
+    font-size: 24px;
+  }
+  footer {
+    width: inherit;
+  }
+  .footer-wrapper {
+    gap: 30px;
+  }
 }
