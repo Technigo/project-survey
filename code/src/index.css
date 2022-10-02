@@ -10,12 +10,7 @@ body {
 }
 
 
- @media (min-width: 1024px) {
 
-.email {
-  width: 30%
- } 
-}
  
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
@@ -126,7 +121,7 @@ left: 20%;
   }
 
   .email {
-   width: 70%
+   width: 60%
   } 
 
 
@@ -161,6 +156,7 @@ left: 20%;
       .submit:hover{
         padding-right: 24px;
         padding-left:8px;
+        font-size: 20px;
       }
       
       .submit:hover:after {
@@ -169,3 +165,9 @@ left: 20%;
       }
     
     
+      @media (min-width: 1024px) {
+
+        .email {
+          width: 30%
+         } 
+        }

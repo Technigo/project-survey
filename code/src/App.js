@@ -14,7 +14,7 @@ export const App = () => {
 
   const handleStepIncrease = () => {
     setStep(step + 1);
-  } 
+  }
   return (
     <>
       <Header />
@@ -35,7 +35,7 @@ export const App = () => {
         <div className="next-step">
           <p>Current step: {step}</p>
           <button type="button" onClick={handleStepIncrease}>Next step</button>
-    
+
         </div>
       )}
     </>
