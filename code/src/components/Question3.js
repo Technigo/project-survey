@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 
 const Question3 = ({ question3, setQuestion3, handleStepIncrese }) => {
+  // The State Hook that prevents the button to be used before the user have made a change
+  // of the radiobuttons.
   const [chosen, setChosen] = useState(false);
+  // Forwards the value of the chosen radiobutton to the App-component.
   const handleQuestion3Change = (event) => {
     setQuestion3(event.target.value)
     setChosen(true);

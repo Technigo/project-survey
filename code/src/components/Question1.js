@@ -8,6 +8,7 @@ const Question1 = ({ name, setName, handleStepIncrese }) => {
     setChosen(true);
   }
 
+  // Enables the user to use the enter-key to progress.
   const checkKeyPress = (event) => {
     const { keyCode } = event;
     if (keyCode === 13) {

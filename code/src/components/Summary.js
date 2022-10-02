@@ -1,6 +1,24 @@
 import React from 'react';
 
 const Summary = ({ name, question2, question3, question4, handleStepIncrese }) => {
+  // For-loop that inserts a & between multiple ansvers and a , if there's more than two.
+  const checkboxAnswers = () => {
+    let i;
+    let result = '';
+    for (i = 0; i < question2.length; i += 1) {
+      result += question2[i]
+      if (i === question2.length - 1) {
+        result += ''
+      } else if (i === question2.length - 2) {
+        result += ' & '
+      } else {
+        result += ', '
+      }
+    }
+    return result
+  }
+
+  // a if..else that generates a emoji-response to the user-value of question3.
   const feelingsAnswer = () => {
     if (question3 === 'happy') {
       return '😊'
@@ -17,6 +35,8 @@ const Summary = ({ name, question2, question3, question4, handleStepIncrese }) =
     }
   }
 
+  // a if..else that generates a specifik answer
+  // depending on what the user have answered in question4.
   const tomorrowAnswer = () => {
     if (question4 === 'working') {
       return 'go to work! 💪 '
@@ -38,7 +58,8 @@ const Summary = ({ name, question2, question3, question4, handleStepIncrese }) =
   }
 
   const tomorrowPicture = () => {
-    // Images by catalyststuff on Freepik
+    // a if..else that generates a specifik image
+    // depending on what the user have answered in question4.
     if (question4 === 'working') {
       return 'https://img.freepik.com/free-vector/hacker-operating-laptop-cartoon-icon-illustration-technology-icon-concept-isolated-flat-cartoon-style_138676-2387.jpg?w=1060&t=st=1664551522~exp=1664552122~hmac=94d2a5670158564d0a2bb27017c3c498e2d03fac3ee2d4a96c320158461e2da1'
     } else if (question4 === 'studying') {
@@ -56,6 +77,7 @@ const Summary = ({ name, question2, question3, question4, handleStepIncrese }) =
     } else if (question4 === 'other') {
       return 'https://img.freepik.com/free-vector/cute-sloth-yoga-cartoon-icon-illustration_138676-2250.jpg?w=1060&t=st=1664551446~exp=1664552046~hmac=a7a1a2c95ecb47d94bb1f2e339f4e5a70dca7ae25e739c485cb4fcc1b071fbf4'
     }
+    // Images by catalyststuff on Freepik
   }
 
   return (
@@ -63,14 +85,14 @@ const Summary = ({ name, question2, question3, question4, handleStepIncrese }) =
       <label htmlFor="nameInput" className="summary">
         <div className="summary-text">
           <p>Ok, {name}.</p>
-          <p>So {question2} gets you {feelingsAnswer()} and makes you want to {tomorrowAnswer()}</p>
+          <p>So {checkboxAnswers()} gets you {feelingsAnswer()} and makes
+           you want to {tomorrowAnswer()}
+          </p>
         </div>
         <img src={tomorrowPicture()} alt="" />
       </label>
 
-      <div>
-        <button type="submit" id="submitBtn" onClick={(event) => handleStepIncrese(event, true)}>Submit</button>
-      </div>
+      <button type="submit" id="submitBtn" onClick={(event) => handleStepIncrese(event, true)}>Submit</button>
     </form>
   );
 }

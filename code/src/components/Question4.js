@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 
 const Question4 = ({ question4, setQuestion4, handleStepIncrese }) => {
+  // The State Hook that prevents the button to be used before the user have made a change
+  // of the dropdown.
   const [chosen, setChosen] = useState(false);
 
+  // Forwards the value of the dropdown to the App-component.
   const handleQuestion4Change = (event) => {
     setQuestion4(event.target.value);
     setChosen(true);

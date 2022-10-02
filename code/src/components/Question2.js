@@ -1,8 +1,11 @@
 import React, { useState } from 'react';
 
 const Question2 = ({ question2, setQuestion2, handleStepIncrese }) => {
+  // The State Hook that prevents the button to be used before the user have made a change
+  // of the checkboxes.
   const [chosen, setChosen] = useState(false);
 
+  // Forwards the values of the checkboxes to the App-component.
   const handleQuestion2Change = (event) => {
     setQuestion2([...question2, event.target.value]);
     setChosen(true);

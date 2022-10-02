@@ -9,16 +9,23 @@ import Summary from 'components/Summary';
 import Footer from 'components/Footer';
 
 export const App = () => {
+  // All the State Hooks
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [question2, setQuestion2] = useState('');
   const [question3, setQuestion3] = useState('');
   const [question4, setQuestion4] = useState('');
 
+  // The function that is moving the survey forvard and
+  // is triggerd by the button-clicks inside the components.
   const handleStepIncrese = (element, choicemade) => {
+    // Only allows the buttons to be clicked if the user has
+    // triggered a response.
     if (!choicemade) {
       return;
     }
+    // If the user has inserted name and pressed enter it returns a value of
+    // undefined, if this happens the user will be ushered to the next question.
     if (element !== undefined) {
       element.preventDefault();
     }
@@ -83,6 +90,7 @@ export const App = () => {
             <p>Thank you for your time!</p>
           )}
         </div>
+        {/* A footer that is visable on every page. */}
         <div className="footer">
           <Footer />
         </div>
