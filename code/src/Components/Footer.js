@@ -4,7 +4,7 @@ import Sthlm from './Sthlm.png'
 const Header = () => {
     return (      
       <footer>
-        <img src={Sthlm}></img>
+        <img src={Sthlm} alt="Stockholm silhouette"></img>
       </footer>
     );
   }
