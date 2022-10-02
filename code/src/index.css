@@ -1,27 +1,130 @@
-/* body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+*{
+  margin:0;
+  padding:0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background: rgb(2, 1, 11);
+  color:aliceblue;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+
+.info-wrapper{
+  width: 800px;
+  background-color: black;
+  color:aliceblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
- */
 
  .progressBar {
   width: 400px;
   height: 10px;
   background-color: bisque;
   margin-bottom: 50px;
+  margin-top: 50px;
+  margin-left:auto;
+  margin-right: auto;
+  border-radius: 10px;
 }
 
 .progressBar div {
-  /* width: 20%; */
   height: 100%;
   background-color: rgb(98, 0, 255);
+  border-radius: 10px;
+}
+
+.App{
+  border: 2px solid bisque;
+  width: 800px;
+  margin:auto;
+  margin-top: 5%;
+} 
+
+.form-title{
+  color:aliceblue;
+  font-size: 3rem;
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.footer{
+  padding:80px;
+  width: 400px;
+  display: flex;
+  justify-content: space-around;
+}
+
+button{
+  background-color:rgb(98, 0, 255) ;
+  color:aliceblue;
+  padding: 8px;
+  border-radius: 25px;
+  border:none;
+  padding:15px;
+}
+
+button:hover{
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+form{
+  display: flex;
+  justify-content: center;
+}
+
+form input{
+  border: 1px solid bisque;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.newbie-guide {
+  padding-top:20px;
+  font-size: 1.5rem;
+}
+
+.input input{
+  border: 1px solid bisque;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.input label{
+  color:bisque;
+
+}
+
+.booking{
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+}
+
+.location-wrap {
+  text-align: center;
+}
+
+.which-gym {
+  font-size: 1.5rem;
+  padding:10px;
+  text-align: center;
+}
+
+.location{
+  display: flex;
+  justify-content: center;
+}
+
+.location label{
+  padding:10px;
+}
+
+.confirmation{
+  text-align: center;
+}
+
+.confirmation p{
+  padding:10px;
+  font-size: 1.5rem;
 }

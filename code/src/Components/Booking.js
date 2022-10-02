@@ -51,19 +51,22 @@ const Booking = ({setWorkout, setLocation}) => {
             <label htmlFor="">Open Gym</label>
         </div>
 
-        <div className="location">   
+        <div className="location-wrap">   
             <p className="which-gym">Which location are you going?</p>
-            <input type="checkbox" 
-            name="location"
-            value="Oud-Zuid"
-            onChange={e=>setLocation(e.target.value)} />
-            <label>Oud-Zuid</label>
 
-            <input type="checkbox"
-            name="location"
-            value="Oud-West" 
-            onChange={e=>setLocation(e.target.value)}/>
-            <label>Oud-West</label>
+            <div className="location">
+                <input type="checkbox" 
+                name="location"
+                value="Oud-Zuid"
+                onChange={e=>setLocation(e.target.value)} />
+                <label>Oud-Zuid</label>
+
+                <input type="checkbox"
+                name="location"
+                value="Oud-West" 
+                onChange={e=>setLocation(e.target.value)}/>
+                <label>Oud-West</label>
+            </div>
         </div> 
         </>
      );

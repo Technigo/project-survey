@@ -6,7 +6,7 @@ const Timeslot = ({ timeslot, setTimeslot }) => {
          <div className="time">
          
          <label>Select a Time</label>
-            <select /* value= {timeslot} */
+            <select 
             onChange ={(e)=>setTimeslot(e.target.value)} >
                 <option value = "" disabled selected>Select your option</option>
                 <option value = "8am">8AM</option>
