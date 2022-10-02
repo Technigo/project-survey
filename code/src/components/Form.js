@@ -5,15 +5,18 @@ import PriceQuestionOne from './PriceQuestionOne';
 import PriceQuestionTwo from './PriceQuestionTwo';
 import PriceQuestionThree from './PriceQuestionThree';
 import Summary from './Summary';
+import OtherPreferences from './OtherPreferences.js';
+import ProgressBar from './ProgressBar.js';
 
 const Form = () => {
   const [step, setStep] = useState(1);
-  const [ageGroup, setAgeGroup] = useState('');
-  const [gender, setGender] = useState('');
-  const [productType, setProductType] = useState('');
-  const [price1, setPrice1] = useState('');
-  const [price2, setPrice2] = useState('');
-  const [price3, setPrice3] = useState('');
+  const [ageGroup, setAgeGroup] = useState('n/a');
+  const [gender, setGender] = useState('n/a');
+  const [productType, setProductType] = useState('none');
+  const [price1, setPrice1] = useState('0');
+  const [price2, setPrice2] = useState('0');
+  const [price3, setPrice3] = useState('0');
+  const [preferenceChoice, setPreference] = useState('none');
 
   const onProductChoiceSet = (event) => {
     setProductType(event.target.value);
@@ -65,7 +68,10 @@ const Form = () => {
         <PriceQuestionThree price3={price3} setPrice3={setPrice3} step={step} />
       )}
       {step === 6 && (
-        <PriceQuestionThree price3={price3} setPrice3={setPrice3} step={step} />
+        <OtherPreferences
+          preferenceChoice={preferenceChoice}
+          setPreference={setPreference}
+          step={step} />
       )}
       {step === 7 && (
         <Summary
@@ -81,8 +87,9 @@ const Form = () => {
           step={step} />
       )}
       <div className="buttons">
-        {step > 1 && step < 7 && (
+        {step > 1 && step < 8 && (
           <div>
+            <ProgressBar step={step} />
             <button className="back-button" type="button" onClick={onStepGoBack}>Go back</button>
           </div>
         )}

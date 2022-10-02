@@ -4,6 +4,10 @@ import React from 'react';
 const PriceQuestionOne = ({ price1, setPrice1, step }) => {
   return (
     <div className="question-div priceQ1">
+      <div className="picture1-div">
+        .
+      </div>
+      <h2>What is the price range you would pay for this item?</h2>
       <h1>current price1: {price1}</h1>
       <form className="question-form">
         <select

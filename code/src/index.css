@@ -64,3 +64,10 @@ table{
 th{
   width: 150px;
 }
+
+.picture1-div{
+  width: 100px;
+  height:100px;
+  background-image: url("../public/images/tossor.jpg");
+  background-size: auto;
+}

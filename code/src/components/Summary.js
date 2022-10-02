@@ -4,7 +4,7 @@ import React from 'react';
 
 const Summary = ({
   price1, price2, price3, productType,
-  gender, ageGroup, step
+  gender, ageGroup
 }) => {
   return (
     <div className="summary-div">
@@ -36,7 +36,6 @@ const Summary = ({
           <th>{price3} SEK</th>
         </tr>
       </table>
-      <p>{step}</p>
     </div>
 
   );

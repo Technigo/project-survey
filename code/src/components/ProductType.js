@@ -34,7 +34,7 @@ const ProductType = ({ setProductType, productType, step }) => {
         )}
       </form>
       <div>
-        <p>hej {productType}, now we are on step {step}</p>
+        <p> {productType} and step now is {step}</p>
       </div>
     </div>
   )
