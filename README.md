@@ -14,10 +14,20 @@ Had no idea what to do for design/content so just made something up about my fav
 - CSS
 - React
 
-- [ESLint](https://eslint.org/) for code linting/formatting
+- [ESLint](https://eslint.org/) for code formatting
 - [Netlify](https://www.netlify.com/) for deployment
 
 
 ## View it live
 
 https://borzoisurvey.netlify.app/
+
+
+## Running locally
+
+```sh
+npm i
+npm run start
+```
+
+And go to `http://localhost:3000`
