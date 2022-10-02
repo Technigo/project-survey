@@ -58,8 +58,8 @@ export const Norma = () => {
                 <li>Add chopped parsley and grated ricotta salata cheese to finish</li>
                 <li>Serve with pasta or some fresh crusty bread</li>
               </ol>
-              <p>Want a smooth texture?</p>
-              <p>Put the sauce in a blender after step 4 and put back into a pan
+              <h2 className="sub-heading">Want a smooth texture?</h2>
+              <p className="p-norma">Put the sauce in a blender after step 4 and put back into a pan
              to simmer for 5 min before you add pancetta and cheese
               </p>
             </div>
@@ -67,8 +67,8 @@ export const Norma = () => {
 
           <div className="img-with-text">
             <img
-              className="marinara"
-              src="tomatoes.jpg"
+              className="norma"
+              src="eggplant.jpg"
               alt="Pomodoro in jar" />
             <p className="image-header">How To Store Tomato Sauce:</p>
             <p className="image-text">You can store it in a covered container for up to 1 week in the refrigerator

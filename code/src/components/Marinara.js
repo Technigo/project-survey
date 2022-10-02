@@ -42,8 +42,12 @@ export const Marinara = () => {
                 </li>
                 <li>Serve with pasta or meats or some fresh crusty bread</li>
               </ol>
-              <p>Note: Make sure to stir often,
+              <p className="note">Note: Make sure to stir often,
                 making sure the sugars in the tomatoes do not burn
+              </p>
+              <h2 className="sub-heading">Love Pancetta?</h2>
+              <p className="p-norma">Fry pancetta in a separate pan until crispy and add as a topping together with
+              chopped basil
               </p>
             </div>
           </div>
@@ -60,12 +64,6 @@ export const Marinara = () => {
           </div>
         </div>
 
-        <div className="extra">
-          <h3 className="extra-heading">Love Pancetta? </h3>
-          <p>Fry pancetta in a separate pan until crispy and add as a topping together with
-              chopped basil
-          </p>
-        </div>
       </div>
       <footer className="footer">
         <div className="footer-container">

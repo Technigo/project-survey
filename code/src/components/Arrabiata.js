@@ -46,7 +46,7 @@ export const Arrabiata = () => {
                 <li>9. Serve with pasta or meats or some fresh crusty bread</li>
                 <li />
               </ol>
-              <p>Note: Make sure to stir often,
+              <p className="note">Note: Make sure to stir often,
                 making sure the sugars in the tomatoes do not burn
               </p>
             </div>
@@ -55,7 +55,7 @@ export const Arrabiata = () => {
           <div className="img-with-text">
             <img
               className="scarpariello"
-              src="sauce2.jpg"
+              src="chili.jpg"
               alt="Pomodoro in jar" />
             <p className="image-header">How To Store Tomato Sauce:</p>
             <p className="image-text">You can store it in a covered container for up to 1 week in the refrigerator

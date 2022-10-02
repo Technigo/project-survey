@@ -40,7 +40,7 @@ export const Scarpariello = () => {
                 </li>
                 <li>Serve immediately with fresh basil leaves and extra cheese if required</li>
               </ol>
-              <p>Note: If you are having your sauce with pasta. Cook the pasta a couple of
+              <p className="note">Note: If you are having your sauce with pasta. Cook the pasta a couple of
                  minutes less than necessary for it to be al dente (it will finish cooking in
                   the tomato sauce), drain it and add to the sauce after step 5.
                    Cook both together for 2-3 more minutes until the pasta is cooked
@@ -52,11 +52,12 @@ export const Scarpariello = () => {
           <div className="img-with-text">
             <img
               className="scarpariello"
-              src="sauce2.jpg"
+              src="cheese.jpg"
               alt="Pomodoro in jar" />
-            <p className="image-header">How To Store Tomato Sauce:</p>
-            <p className="image-text">You can store it in a covered container for up to 1 week in the refrigerator
-                or transfer it to freezer safe containers and keep it for 3-4 months if well sealed
+            <p className="image-header">Have some leftovers at home?</p>
+            <p className="image-text">Sauce allo scarpariello is a classic traditional recipe from Naples.
+             Originally, created to make use of leftover Sunday ragu. So if you have leftovers that
+              goes well with tomato and cheese, don&apos;t be shy to throw them in as well!
             </p>
           </div>
         </div>

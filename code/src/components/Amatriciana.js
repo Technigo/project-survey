@@ -53,7 +53,7 @@ export const Amatriciana = () => {
                 <li>Serve with additional finely grated pecorino as desired</li>
                 <li>Serve with Bucatini or Rigatoni pasta or some fresh crusty bread</li>
               </ol>
-              <p>Note: If you are making pasta, add a generous splash or two of starchy
+              <p className="note">Note: If you are making pasta, add a generous splash or two of starchy
                  pasta water as needed to help loosen the sauce after you have
                   added the pecorino in step 9
               </p>
@@ -62,8 +62,8 @@ export const Amatriciana = () => {
 
           <div className="img-with-text">
             <img
-              className="marinara"
-              src="tomatoes.jpg"
+              className="amatriciana"
+              src="amatriciana.jpg"
               alt="Pomodoro in jar" />
             <p className="image-header">How To Store Tomato Sauce:</p>
             <p className="image-text">You can store it in a covered container for up to 1 week in the refrigerator

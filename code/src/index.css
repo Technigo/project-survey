@@ -1,9 +1,6 @@
 body {
   margin: 0;
   font-family: 'Noto Sans Mono', monospace;
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -154,7 +151,7 @@ input[type="text" i] {
   margin: 20px;
 }
 
-/* RECIPE */
+/* RECIPE SECTION */
 
 .recipe {
   display: flex;
@@ -187,12 +184,11 @@ input[type="text" i] {
   width: 380px;
   height: 380px;
   opacity: 0.9;
-  /* align-self: flex-end; */
 }
 
 .marinara {
-  width: 407px;
-  height: 601px;
+  width: 380px;
+  height: 655px;
   opacity: 0.95;
 }
 
@@ -200,6 +196,18 @@ input[type="text" i] {
   width: 407px;
   height: 575px;
   opacity: 0.9;
+}
+
+.norma {
+  width: 380px;
+  height: 885px;
+  opacity: 0.95;
+}
+
+.amatriciana {
+  width: 407px;
+  height: 717px;
+  opacity: 0.95;
 }
 
 .img-with-text {
@@ -224,6 +232,10 @@ input[type="text" i] {
 
 .instructions {
   text-align: left;
+}
+
+.note {
+  margin-bottom: 0px;
 }
 
 .extra {
@@ -286,6 +298,10 @@ input[type="text" i] {
   margin: 1px;
 }
 
+.p-norma {
+  margin-bottom: 0px;
+}
+
 /* MOBILE */
 @media (max-width: 667px) {
 
@@ -295,6 +311,8 @@ input[type="text" i] {
   height: fit-content;
   align-self: center;
 }
+
+/* QUESTIONS MOBILE */
 
 input[type="text" i] {
   text-align: center;
@@ -306,12 +324,17 @@ input[type="text" i] {
   font-weight: normal;
 }
 
+.button {
+  padding: 10px 25px;
+  margin-bottom: 40px;
+}
+
 .radio-label {
   font-size: 12px;
   font-weight: bold;
-  /* padding: 2px;
-  accent-color: green; */
 }
+
+/* TEXT STYLING MOBILE */
 
 h1 {
   font-size: 19px;
@@ -332,11 +355,6 @@ p {
 
 li {
   font-size: 9px;
-}
-
-.button {
-  padding: 10px 25px;
-  margin-bottom: 40px;
 }
 
 /* RECIPE MOBILE */
@@ -365,7 +383,6 @@ li {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  /* padding-right: 0px; */
   margin-bottom: 20px;
 }
 
@@ -377,12 +394,17 @@ li {
 
 .marinara {
   width: 230px;
-  height: 313px;
+  height: 370px;
 }
 
 .scarpariello {
   width: 230px;
   height: 305px;
+}
+
+.norma {
+  width: 230px;
+  height: 400px;
 }
 
 .img-with-text {
@@ -392,6 +414,7 @@ li {
   text-align: justify;
   width: 235px;
   padding-left: 0px;
+  margin-top: 20px;
 }
 
 .img-with-text img {
@@ -415,6 +438,10 @@ li {
   padding-left: 5px;
   display: flex;
   flex-direction: column;
+}
+
+.footer-container {
+  margin: 50px 0px 10px 0px;
 }
 
 .footer-heading {
@@ -494,6 +521,8 @@ li {
   align-self: center;
 }
 
+/* TEXT STYLING TABLET */
+
 h2 {
   font-size: 22px;
   margin-bottom: 40px;
@@ -543,20 +572,25 @@ li {
 }
 
 .pomodoro {
-  width: 270px;
-  height: 275px;
+  width: 301px;
+  height: 305px;
   align-self: center;
 }
 
 .marinara {
-  width: 305px;
-  height: 407px;
+  width: 300px;
+  height: 485px;
   align-self: center;
 }
 
 .scarpariello {
   width: 305px;
   height: 400px;
+}
+
+.norma {
+  width: 305px;
+  height: 500px;
 }
 
 .img-with-text {
@@ -603,33 +637,12 @@ li {
   margin-bottom: 30px;
 }
 
-/* .sub-heading {
-  margin-bottom: 15px;
-  font-size: 15px;
-  font-weight: bolder;
-} */
-
 .extra-heading {
   margin: 20px 0px 5px 0px;
   font-size: 21px;
   font-weight: bolder;
 }
 
-/* .image-header {
-  font-size: 10px;
-  font-weight: bold;
-  margin-bottom: 0px;
-} */
-
-/* .image-text {
-  font-size: 10px;
-  font-weight: normal;
-  margin: 0px;
-} */
-
-/* .ingredient {
-  margin: 1px;
-} */
 }
 
 /* EXTRA LARGE SCREENS */
@@ -642,6 +655,8 @@ li {
   margin-top: 100px;
   border: solid black 4px;
 }
+
+/* TEXT STYLING EXTRA LARGE */
 
 h1 {
   font-size: 40px;
@@ -661,6 +676,8 @@ p {
   font-size: 24px;
 }
 
+/* INPUT AND BUTTONS EXTRA LARGE */
+
 .button {
   padding: 20px 35px;
   margin: 40px 0px;
@@ -668,8 +685,6 @@ p {
   font-weight: bold;
   border: solid #3c8b3f 2px;
 }
-
-/* NAME INPUT */
 
 .start {
   margin-top: 40px;
@@ -687,7 +702,6 @@ input[type="text" i] {
   font-weight: bold;
 }
 
-/* RADIO */
 .radio-label {
   font-size: 24px;
   font-weight: bold;
