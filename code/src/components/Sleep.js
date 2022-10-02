@@ -8,9 +8,10 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
   return (
     <div>
       <h3>How many hours do you sleep in average per night?</h3>
-      <form>
+      <div className="radio-buttons">
         <label>
           <input
+            label="radioButton"
             type="radio"
             id="less than 4 hours"
             name="hours"
@@ -18,6 +19,8 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
             onChange={handleUserHabitChange} />
           Less than 4 hours
         </label>
+      </div>
+      <div className="radio-buttons">
         <label>
           <input
             type="radio"
@@ -27,6 +30,8 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
             onChange={handleUserHabitChange} />
           4-6 hours
         </label>
+      </div>
+      <div className="radio-buttons">
         <label>
           <input
             type="radio"
@@ -36,6 +41,8 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
             onChange={handleUserHabitChange} />
           6-8 hours
         </label>
+      </div>
+      <div className="radio-buttons">
         <label>
           <input
             type="radio"
@@ -43,9 +50,9 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
             name="hours"
             value="8-10 hours or more"
             onChange={handleUserHabitChange} />
-          8-10 hours or more
+            8-10 hours or more
         </label>
-      </form>
+      </div>
       <p>Your answer: {sleepHabit}</p>
     </div>
   )

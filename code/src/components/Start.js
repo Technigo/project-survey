@@ -4,7 +4,7 @@ export const Start = () => {
   return (
     <div>
       <h1> Lifestyle survey</h1>
-      <p>Find out how healthy you are</p>
+      <h2>A survey about your sleep habits, level of physical activity and diet.</h2>
     </div>
   )
 }
