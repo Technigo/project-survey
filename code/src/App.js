@@ -60,6 +60,12 @@ export const App = () => {
     setcurrentQuestion(currentQuestionNumber);
 
     /// //Save answers////
+
+    const updateAnswer = (updatedAnswer) => {
+      // eslint-disable-next-line no-shadow
+      setAnswers((answers) => [...answers, ...updatedAnswer]);
+    };
+
     const currentAnswer = {};
     currentAnswer[currentQuestionNumber] = userInput;
     // eslint-disable-next-line no-use-before-define
@@ -77,11 +83,6 @@ export const App = () => {
     setcurrentQuestion(0);
     setAnswers([]);
     window.location.reload(false);
-  };
-
-  const updateAnswer = (updatedAnswer) => {
-    // eslint-disable-next-line no-shadow
-    setAnswers((answers) => [...answers, ...updatedAnswer]);
   };
 
   return (

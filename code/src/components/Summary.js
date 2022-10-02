@@ -1,27 +1,43 @@
 import React from 'react';
 
 const Summary = ({ answers, reset }) => {
-  const [first, intro, second, name, third, energy, fourth, genre, fifth, time] = answers;
+  // eslint-disable-next-line no-unused-vars
+  const [
+    first,
+    intro,
+    second,
+    name,
+    third,
+    energy,
+    fourth,
+    genre,
+    fifth,
+    time
+  ] = answers;
 
   return (
     <>
       <div className="container-summary">
         <div className="box-summary">
           <h2 className="summary-text">Ok {name}!</h2>
-          <p>Based on your answers</p>
+          <p>Based on your answers:</p>
           <p>Energy: {energy}</p>
           <p>Genre: {genre}</p>
           <p>Epoke: {time}</p>
-          <p>Click the button for my recomendation!</p>
+          <p>Click on the button to play the music!</p>
         </div>
         <div className="result">
-
-          <button className="button-result" type="button"><a href="https://open.spotify.com/track/6EvQkav3bbrEAWRmvs6EOj?si=53475e0f4d934c8d">Check this out!</a></button>
+          <button className="button-result" type="button">
+            <a href="https://open.spotify.com/track/6EvQkav3bbrEAWRmvs6EOj?si=53475e0f4d934c8d">
+              Play music
+            </a>
+          </button>
         </div>
-
       </div>
       <div className="btn">
-        <button className="button-refresh" type="button" onClick={reset}>Reload!</button>
+        <button className="button-refresh" type="button" onClick={reset}>
+          Reload!
+        </button>
       </div>
     </>
   );
