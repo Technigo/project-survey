@@ -13,7 +13,7 @@ const animals = [
   'walruss',
 ];
 
-const QuestionSix = ({ handleSubmit, animal, handleAnimalChange }) => {
+const QuestionSix = ({ handleSubmit, activeAnimal, handleAnimalChange }) => {
   return (
     <>
       {/* Progressbar */}
@@ -27,16 +27,16 @@ const QuestionSix = ({ handleSubmit, animal, handleAnimalChange }) => {
         {/* Form */}
         <h1>Select an animal or write your own</h1>
         <form className="radio-button-container" onSubmit={handleSubmit}>
-          {animals.map((animalProp) => (
-            <label className="radio-button-overlay" key={animal} Prop>
+          {animals.map((animal) => (
+            <label className="radio-button-overlay" key={animal}>
               <input
                 type="radio"
                 className="radio-button"
-                value={animalProp}
+                value={animal}
                 onChange={handleAnimalChange}
-                checked={animalProp === animals}
+                checked={animal === activeAnimal}
               />
-              {animalProp}
+              {animal}
             </label>
           ))}
           {/* Alternative selection */}

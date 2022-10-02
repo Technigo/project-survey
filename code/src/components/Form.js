@@ -22,16 +22,15 @@ import Summary from './Summary';
 const Form = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
-  const [mood, setMood] = useState('');
+  const [activeMood, setActiveMood] = useState('');
   const [adjective, setAdjective] = useState('');
-  const [animal, setAnimal] = useState('');
+  const [activeAnimal, setActiveAnimal] = useState('');
   const [exclamation, setExclamation] = useState('');
   const [adjectiveSecond, setAdjectiveSecond] = useState('');
   const [creature, setCreature] = useState('');
   const [food, setFood] = useState('');
 
   const handleSubmit = (event) => {
-    console.log(event);
     event.preventDefault();
     // if (!event.target.value && step !== 1) {
     //   alert('välj nåt');
@@ -44,15 +43,14 @@ const Form = () => {
   };
   const handleMoodChange = (event) => {
     // console.log(event.target.value);
-    setMood(event.target.value);
+    setActiveMood(event.target.value);
   };
   const handleAdjectiveChange = (event) => {
     // console.log(event.target.value);
     setAdjective(event.target.value);
   };
   const handleAnimalChange = (event) => {
-    // console.log(event.target.value);
-    setAnimal(event.target.value);
+    setActiveAnimal(event.target.value);
   };
   const handleExclamationChange = (event) => {
     // console.log(event.target.value);
@@ -84,7 +82,7 @@ const Form = () => {
       {step === 3 && (
         <QuestionTwo
           handleSubmit={handleSubmit}
-          mood={mood}
+          activeMood={activeMood}
           handleMoodChange={handleMoodChange}
         />
       )}
@@ -112,7 +110,7 @@ const Form = () => {
       {step === 7 && (
         <QuestionSix
           handleSubmit={handleSubmit}
-          animal={animal}
+          activeAnimal={activeAnimal}
           handleAnimalChange={handleAnimalChange}
         />
       )}
@@ -133,9 +131,9 @@ const Form = () => {
       {step === 10 && (
         <Summary
           name={name}
-          mood={mood}
+          mood={activeMood}
           adjective={adjective}
-          animal={animal}
+          animal={activeAnimal}
           exclamation={exclamation}
           adjectiveSecond={adjectiveSecond}
           creature={creature}

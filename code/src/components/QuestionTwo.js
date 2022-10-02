@@ -6,7 +6,7 @@
 /* eslint-disable indent */
 import React from 'react';
 
-const radioButtonObject = [
+const moods = [
   'brilliant',
   'agreeable',
   'big-headed',
@@ -15,7 +15,7 @@ const radioButtonObject = [
   'charismatic',
 ];
 
-const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
+const QuestionTwo = ({ activeMood, handleMoodChange, handleSubmit }) => {
   return (
     <>
       {/* Progressbar */}
@@ -29,16 +29,16 @@ const QuestionTwo = ({ mood, handleMoodChange, handleSubmit }) => {
         {/* Radio Buttons */}
         <h2>How would you describe your avatar?</h2>
         <form className="radio-button-container" onSubmit={handleSubmit}>
-          {radioButtonObject.map((radioButtonInput) => (
-            <label className="radio-button-overlay" key={radioButtonInput}>
+          {moods.map((mood) => (
+            <label className="radio-button-overlay" key={mood}>
               <input
                 type="radio"
                 className="radio-button"
-                value={radioButtonInput}
+                value={mood}
                 onChange={handleMoodChange}
-                checked={radioButtonInput === mood}
+                checked={mood === activeMood}
               />
-              {radioButtonInput}
+              {mood}
             </label>
           ))}{' '}
           {/* Alternative selection */}
