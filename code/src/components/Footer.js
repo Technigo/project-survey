@@ -1,5 +1,4 @@
-const Footer = ({ pageIndex, nextPage, previousPage }) => {
-  return (
+const Footer = ({ pageIndex, nextPage, previousPage }) => 
     <footer>
       <div className="footer-wrapper">
         <nav className="footer-button-container">
@@ -43,7 +42,7 @@ const Footer = ({ pageIndex, nextPage, previousPage }) => {
         </div>
       </div>
     </footer>
-  );
-};
+  
+
 
 export default Footer;

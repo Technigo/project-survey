@@ -8,7 +8,7 @@ const SelectInput = ({ value, setter }) => {
           value={value}
         >
           <option value="" disabled>
-            Something..{' '}
+            Something ...{' '}
           </option>
           <option value="Something I can eat or drink 🌮">
             Something I can eat or drink 🌮

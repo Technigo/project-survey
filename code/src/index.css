@@ -42,14 +42,14 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   width: 720px;
-  /* min-width: 58%;
-  max-width: 720px; */
 }
 
 .welcome-container {
   /* TODO:  Transition out of nowhere */
   /* position: relative; */
   /* transition: object-position 0.3s ease 0s; */
+  justify-content: center;
+  display: flex;
 }
 
 .landing-container {
@@ -392,4 +392,23 @@ footer {
   font-weight: 300;
   text-decoration: none;
   font-size: 14px;
+}
+
+/************/
+/** MEDIA ***/
+/************/
+
+@media (max-width: 1024px) {
+  .inner-wrapper {
+    width: 520px;
+  }
+}
+
+@media (max-width: 667px) {
+  .inner-wrapper {
+    width: 80%;
+  }
+  .landing-container img {
+    width: 80%;
+  }
 }

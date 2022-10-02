@@ -1,3 +1,5 @@
+
+// Re-usable function for converting an excitement value to a corresponding string
 export const excitementFunction = excitementLevel => {
   switch (true) {
     case excitementLevel < 20:

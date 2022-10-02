@@ -1,4 +1,6 @@
 const RadioInput = ({ value, setter }) => {
+
+  // Array of possible activities that can be looped over to create the radio button inputs
   const gifts = [
     'out partying with friends 🥳',
     'at the gym 😤',
