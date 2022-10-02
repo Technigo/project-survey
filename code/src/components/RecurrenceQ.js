@@ -13,10 +13,12 @@ const RecurrenceQ = ({ recurrence, OnRecurrenceInputChange, nextQ }) => {
       <h2>How often would you like to receive the box?</h2>
       {recurrenceOpt.map((choice) => (
         // eslint-disable-next-line jsx-a11y/label-has-associated-control
-        <label key={choice}>
+        <label key={choice} className="recurrence">
           <input
             id="recurrence"
             type="radio"
+            name="recurrence"
+            aria-label="choose recurrence"
             value={choice}
             onChange={OnRecurrenceInputChange}
             checked={recurrence === choice}

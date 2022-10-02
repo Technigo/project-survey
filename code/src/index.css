@@ -4,7 +4,7 @@
 }
 
 /*FONTS*/
-@import url('https://fonts.googleapis.com/css2?family=Lato&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Shade&family=Lato&family=Playfair+Display&display=swap');
 
 * {
   box-sizing: border-box;
@@ -23,7 +23,8 @@ html {
 }
 
 h1 {
-  font-family: 'Playfair Display', serif;
+  /* font-family: 'Playfair Display', serif; */
+  font-family: 'Bungee Shade', cursive;
   color: var(--primary);
   font-weight: lighter;
   font-size: 30px;
@@ -93,20 +94,35 @@ input[type=radio] {
   height: 16px;
   border: 2px solid var(--primary);
   transition: 0.2s all linear;
-  margin-right: 5px;
+  margin-right: 7px;
   position: relative;
   top: 3px;
+  cursor: pointer;
+}
+
+input[type=radio]:hover {
+  border: 6px solid var(--primary);
 }
 
 input[type=radio]:checked {
   border: 6px solid var(--primary);
 }
 
+.recurrence {
+  display: block;
+  cursor: pointer;
+  margin: 4px;
+}
+
+/*TABLET*/
+
 @media (min-width: 667px) and (max-width: 1024px) {
   .form-wrapper {
     margin: 5vw;
   }
 }
+
+/*DESKTOP*/
 
 @media (min-width: 1024px) {
   .form-wrapper {
