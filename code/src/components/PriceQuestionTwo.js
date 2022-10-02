@@ -1,10 +1,11 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-const PriceQuestionTwo = ({ price2, setPrice2, step }) => {
+const PriceQuestionTwo = ({ price2, setPrice2 }) => {
   return (
-    <div className="question-div priceQ2">
-      <h1>current price2: {price2}</h1>
+    <div className="question-price">
+      <div className="picture2-div" />
+      <h2>What price range would you expect to pay for this item?</h2>
       <form className="question-form">
         <select
           id="priceSelect2"
@@ -17,7 +18,7 @@ const PriceQuestionTwo = ({ price2, setPrice2, step }) => {
           <option value="300-400">300-400 SEK</option>
         </select>
       </form>
-      <p>Current Step: {step}/7</p>
+      <p>Your answer: {price2} SEK</p>
     </div>
 
   )

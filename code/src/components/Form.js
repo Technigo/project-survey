@@ -86,27 +86,27 @@ const Form = () => {
           onStepGoBack={onStepGoBack}
           step={step} />
       )}
+      <ProgressBar step={step} />
       <div className="buttons">
         {step > 1 && step < 8 && (
-          <div>
-            <ProgressBar step={step} />
-            <button className="back-button" type="button" onClick={onStepGoBack}>Go back</button>
+          <div className="div-button">
+            <button className="button-2" type="button" onClick={onStepGoBack}>Go back</button>
           </div>
         )}
         {step < 6 && step > 1 && (
-          <div>
-            <button className="continue-button" type="button" onClick={onStepChange}>Continue</button>
+          <div className="div-button">
+            <button className="button-3" type="button" onClick={onStepChange}>Continue</button>
           </div>
         )}
 
         {step === 6 && (
-          <div>
-            <button className="continue-button submit" type="button" onClick={onStepChange}>Submit</button>
+          <div className="div-button">
+            <button className="button-3" type="button" onClick={onStepChange}>Submit</button>
           </div>
         )}
         {step === 7 && (
-          <div>
-            <button className="continue-button backToStart" type="button" onClick={goBackToStart}>Back To Start</button>
+          <div className="div-button">
+            <button className="button-2" type="button" onClick={goBackToStart}>Back To Start</button>
           </div>
         )}
       </div>

@@ -1,5 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React from 'react'
+import React from 'react';
 
 // This is the firstquestion thats comes up
 const preferences = [
@@ -9,7 +9,7 @@ const preferences = [
   'I care more about the quailty of the yarn than how easy it is to wash'
 ];
 
-const OtherPreferences = ({ setPreference, preferenceChoice, step }) => {
+const OtherPreferences = ({ setPreference, preferenceChoice }) => {
   const handlePreferenceChange = (event) => {
     setPreference(event.target.value);
   }
@@ -34,7 +34,7 @@ const OtherPreferences = ({ setPreference, preferenceChoice, step }) => {
         )}
       </form>
       <div>
-        <p>You chose: {preferenceChoice}. Now we are on step {step}</p>
+        <p>Your answer: {preferenceChoice}</p>
       </div>
     </div>
   )

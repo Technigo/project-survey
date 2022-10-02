@@ -8,7 +8,11 @@ const Summary = ({
 }) => {
   return (
     <div className="summary-div">
-      <p> Här kommer en summering av dina svar:</p>
+      <h2> Thank you for participating.</h2>
+      <p className="narrowerP"> Your input will help me a lot with my future business plans!</p>
+      <h3>You're discount code is <span className="span2">YwhLbAG8.</span></h3>
+      <p>Here is a summary of your submitted answers.
+      </p>
       <table><th><h2>Questions</h2></th>
         <th><h2>Answers</h2></th>
         <tr>

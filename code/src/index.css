@@ -7,7 +7,6 @@ FFC5A1 lightest peach
 
 */
 
-
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -16,42 +15,59 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   color: rgb(88, 80, 80); 
-  background-image: url("../public/images/yarn.jpg");
-  background-size: 1500px;
+  background-image: url("../public/images/yarn.jpg"); 
+  background-repeat: no-repeat;
+  background-size: 1800px;
   display: flex;
   justify-content: center;
+  font-size: 16px;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h2, h1, h3{
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+p{
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.span1{
+  font-weight: bold;
+}
+
+.span2{
+  background-color: rgba(143, 188, 143, 0.324);
 }
 
 .main-container{
-  width: 60vw;
+  width: 90vw;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  align-items: center;
   background-color: #FCF9EA;
   margin: 1vw 40vw 1vw 40vw;
-  padding: 1.5vw;
+  padding: 4vw;
   border-radius: 35px;
   border: 1px solid;
   box-shadow: 1px 2px 5px 4px #b4c8bc;
 
 }
-
+.introDiv{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+}
 .question-div{
-  width: 40vw;
+  width: 70vw;
   background-color: #FCF9EA;
+  display: flex;
+  flex-direction: column;
   border: 1px solid;
   padding: 15px;
-  top: 500px;
   margin: 10px;
 }
 
 .summary-div{
-  background-color:palegreen;
   top: 900px;
   margin-top: 10px;
 }
@@ -66,8 +82,195 @@ th{
 }
 
 .picture1-div{
-  width: 100px;
-  height:100px;
-  background-image: url("../public/images/tossor.jpg");
-  background-size: auto;
+  width: 500px;
+  height: 430px;
+  background: url("../public/images/blommig_1yrs.JPG");
+  background-size: 100%;
+  background-position-y: -60px;
+}
+
+.picture2-div{
+  width: 500px;
+  height: 470px;
+  background: url("../public/images/kabelstickad_0-3mnd.JPG");
+  background-size: 100%;
+  background-position-y: 0px;
+}
+
+.picture3-div{
+  width: 30vw;
+  height: 30vw;
+  background: url("../public/images/mossavantar_1yrs.JPG");
+  background-size: 100%;
+  background-position-y: -40px;
+}
+
+.button-3 {
+  appearance: none;
+  background-color: #2ea44f;
+  border: 1px solid rgba(27, 31, 35, .15);
+  border-radius: 6px;
+  box-shadow: rgba(27, 31, 35, .1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-3:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-3:hover {
+  background-color: #2c974b;
+}
+
+.button-3:focus {
+  box-shadow: rgba(46, 164, 79, .4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-3:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-3:active {
+  background-color: #298e46;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.button-2 {
+  appearance: none;
+  background-color: #a42e53;
+  border: 1px solid rgba(217, 98, 151, 0.15);
+  border-radius: 6px;
+  box-shadow: rgba(74, 25, 55, 0.1) 0 1px 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-family: -apple-system,system-ui,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  padding: 6px 16px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: middle;
+  white-space: nowrap;
+}
+
+.button-2:focus:not(:focus-visible):not(.focus-visible) {
+  box-shadow: none;
+  outline: none;
+}
+
+.button-2:hover {
+  background-color: #5b1c2d;
+}
+
+.button-2:focus {
+  box-shadow: rgba(111, 16, 59, 0.4) 0 0 0 3px;
+  outline: none;
+}
+
+.button-2:disabled {
+  background-color: #94d3a2;
+  border-color: rgba(27, 31, 35, .1);
+  color: rgba(255, 255, 255, .8);
+  cursor: default;
+}
+
+.button-2:active {
+  background-color: #972c48;
+  box-shadow: rgba(20, 70, 32, .2) 0 1px 0 inset;
+}
+
+.narrowerP{
+  margin-top:1px;
+}
+
+.div-button{
+  padding: 5px;
+}
+
+.buttons{
+  display:flex;
+  flex-direction: row;
+  justify-content: right;
+}
+.section.footer{
+  margin-top: 300px;
+  padding: 20px;
+  min-height: 250px;
+  text-align: center;
+  background-color: #e6e5ca;
+}
+
+.question-price{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid;
+  padding: 15px;
+}
+a{
+  color:tan;
+  text-decoration: none;
+}
+
+a:hover{
+  color:#BADFDB;
+  text-decoration: none;
+}
+
+@media (min-width: 667px) and (max-width: 1024px){
+  .main-container{
+    width: 50vw;
+  }
+
+  .question-div{
+    width: 40vw;
+  }
+
+  p{
+    font-size: 20px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px){
+  
+  .main-container{
+    width: 50vw;
+  }
+
+  p{
+    font-size: 20px;
+  }
+
+  .question-div{
+    width: 40vw;
+  }
 }

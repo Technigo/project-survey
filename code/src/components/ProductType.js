@@ -9,14 +9,14 @@ const productTypes = [
   'Accessories for me'
 ];
 
-const ProductType = ({ setProductType, productType, step }) => {
+const ProductType = ({ setProductType, productType }) => {
   const handleProductTypeChange = (event) => {
     setProductType(event.target.value);
   }
   return (
     <div className="question-div productQ">
       <form className="formContainer">
-        <h1>What kind of clothes would you buy?</h1>
+        <h1>What kind of knitted items are you interested in buying?</h1>
         {productTypes.map(
           (
             product // iterating through each product available
@@ -26,15 +26,14 @@ const ProductType = ({ setProductType, productType, step }) => {
                 <input
                   value={product}
                   onChange={handleProductTypeChange}
-                  type="checkbox"
-                  id={product} />
+                  type="checkbox" />
                 <label htmlFor={product}>{product}</label>
               </div>);
           }
         )}
       </form>
       <div>
-        <p> {productType} and step now is {step}</p>
+        <p> Your answer: {productType}</p>
       </div>
     </div>
   )
