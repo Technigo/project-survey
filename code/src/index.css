@@ -414,6 +414,9 @@ footer {
   .press-enter {
     display: none;
   }
+  .form-page-index {
+    margin-right: 5px;
+  }
   .name-input {
     font-size: 24px;
   }
