@@ -5,7 +5,7 @@ const Section2 = (props) => {
     <>
       <form>
         <section className="section">
-          <h2>Section 2 | Your recently purchased reasons: </h2>
+          <h3>Section 2 | Your recently purchased reasons: </h3>
           <p>- What is the main factor for you to purchese our product? </p>
           <select
             value={props.formData.reason}

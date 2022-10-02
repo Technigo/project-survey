@@ -16,7 +16,6 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  font-size: 20px;
   height: 700px;
   border-radius: 8px;
   color: #fff;
@@ -65,7 +64,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
+
 }
 
 .introductionPageSpan {
@@ -74,8 +74,12 @@ body {
 
 h2 {
   margin-left: 1.5em;
+  font-size: 28px;
 }
 
+h3{
+  font-size:24px;
+}
 label {
   margin-right: 1.5rem;
   font-size: 18px;
@@ -124,4 +128,39 @@ select {
   display: flex;
   flex-direction: row;
   align-items: center;
+}
+
+@media (min-width:414px) and (max-width: 768px){
+  .App{
+  /* font-size: 17px; */
+  line-height: 1.8rem;
+}
+.allbtns{
+ gap:5px;
+
+}
+.btn{
+  width: 8rem;
+  font-size: 14px;
+}
+ h2{
+  font-size:20px;
+  margin-right: 10px;
+}
+h3{
+  font-size:20px;
+}
+.section p{
+  margin:1rem;
+}
+.section3{
+  display: flex;
+  align-content: center;
+  
+}
+ p{
+  margin-left: 2rem;
+  margin-right: 1rem;
+  font-size:18px;
+}
 }

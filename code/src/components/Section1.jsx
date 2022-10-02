@@ -6,7 +6,7 @@ const Section1 = (props) => {
       <form>
         {/* Marital Status */}
         <section className="section">
-          <h4> Marital Status</h4>
+          <h3> Marital Status</h3>
           <select
             onChange={(event) =>
               props.setFormData({
@@ -15,17 +15,18 @@ const Section1 = (props) => {
               })
             }
             value={props.formData.status}
+            
           >
             <option value="">--Select--</option>
-            <option value="family">Family</option>
+            <option value="Family">Family</option>
             <option value="SingelParent">SingelParent</option>
             <option value="Singel">Singel</option>
           </select>
 
           {/* Gender */}
-          <h4> Choose your Gender: </h4>
+          <h3> Choose your Gender: </h3>
           <section>
-            <label>
+            <label htmlFor="genderFemale">
               <input
                 className="radio"
                 type="radio"
@@ -41,7 +42,7 @@ const Section1 = (props) => {
               Female
             </label>
 
-            <label>
+            <label htmlFor="genderMale">
               <input
                 className="radio"
                 type="radio"
@@ -58,7 +59,7 @@ const Section1 = (props) => {
             </label>
           </section>
         </section>
-        
+
         {/* Buttons */}
         <section className="allbtns">
           <button

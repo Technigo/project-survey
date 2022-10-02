@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const IntroductionPage = (props) => {
   return (
     <div className="form">
-      <h4>We are always want to improve ... </h4>
+      <h3>We are always want to improve ... </h3>
       <div>
         <p> Section 1 asks you about you and the state of life.</p>
         <p> Section 2 focuses on your recently purchased product.</p>
