@@ -13,48 +13,36 @@
   --darkgray: rgb(66, 66, 66);
 }
 
-*,
-*:before,
-*:after {
-  box-sizing: border-box;
-}
-
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+  font-size: 15px;
+  font-family: 'Source Sans Pro', sans-serif;
+  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   margin: 0 auto;
   background: #f6f6f6;
-  font-size: 14px;
   overflow: hidden;
-  font-family: 'Source Sans Pro', sans-serif;
-  
+  box-sizing: border-box;
 }
 
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
-}
+} */
 
 .layout {
   display: grid;
   gap: 30px;
   justify-items: center;
-  min-height: 100vh;
-  /* height: calc(var(--vh, 1vh) * 100); */
-  /* border: 2px pink solid; */
-
-/* one day, fix grid by making it make sense  */
+  height: 100vh;
 }
 
 /* --------- HEADER ------------------------------------ */
 
 .layout-header {
-  font-size: 2.5rem;
-  /* text-transform: uppercase; */
-  height: fit-content;
+  font-size: 2.7rem;
   align-self: end;
   font-family: 'JetBrains Mono', monospace;
   font-style: italic;
@@ -70,19 +58,34 @@ code {
 /* --------- SURVEY ------------------------------------ */
 
 .layout-content {
-  background: var(--lightgray);
-  width: 85%;
-  max-width: 550px;
-  border: 2px black dashed;
+  align-self: start;
+  width: 92%;
+  max-width: 500px;
 }
 
 .survey {
   padding: 20px;
   justify-content: center;
+  border: 2px black dashed; 
+  background: var(--lightgray);
+  min-height: 265px;
 }
 
-input {
+input, progress {
   accent-color: var(--lavender);
+}
+
+.counter-text {
+  color: var(--darkgray);
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-bar {
+/* send to bottom */
 }
 
 /* ------ Buttons ------ */
@@ -91,8 +94,12 @@ input {
   background-color: var(--mint);
   color: black;
   border: 1px black;
-  border-radius: 3px;
-  padding: 5px 10px;
+  padding: 4px 10px;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  margin-top: 2em;
+  margin-bottom: 2em;
   }
 
 .button:focus {
@@ -111,6 +118,8 @@ input {
   border: 1px black solid;
   border-radius: 3px;
   padding: 5px;
+  font-family: inherit;
+  font-size: inherit;
 }
 
 .user-name:focus {
@@ -125,6 +134,8 @@ input {
     padding: 5px 10px;
     border: none;
     border-radius: 3px;
+    font-family: inherit;
+    font-size: inherit;
 }
 
 /* ------ Radiobuttons (job) ------ */
@@ -137,12 +148,10 @@ input {
 /* --------- FOOTER ------------------------------------ */
 
 .layout-footer {
-  /* border:2px yellow solid; */
-  font-size: 0.8rem;
-  height: fit-content;
   align-self: end;
   padding-bottom: 20px;
   font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
 }
 
 .footer-link {
