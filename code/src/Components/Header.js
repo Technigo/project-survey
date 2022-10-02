@@ -6,7 +6,7 @@ const Header= () => {
     <>
     <header>
     <div className="headerText">
-    <h1> VACATION PLANNER</h1>
+    <h1> VACATI🌎N PLANNER </h1>
     <p className="secondHeader"> Where will your next trip take you?</p>
     </div>
     </header>
