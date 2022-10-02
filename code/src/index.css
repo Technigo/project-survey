@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
+
 *{
   margin: 0;
   padding: 0;
@@ -9,15 +11,17 @@ height: 100%;
 
 body {
   height: 100%;
+  max-width: 1024px;
   display: flex;
   justify-content: center;
   align-items: center;
   /* background img */
-  background-image: url("./images/pexels-david-jusko-6354480.jpg");
+  background-image: url("./images/pexels-david-jusko-6354480_L.png");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* font-family: ; */
+  font-family: 'Gochi hand', serif;
+  
 
   /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -27,10 +31,97 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: 'Gochi hand', serif ,
     monospace;
 }
 
-.bg {
+h1,
+h2 {
+  text-align: center;
+  font-weight: bold;
+  margin: 10px;
+}
+
+h1 {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  margin: auto;
+}
+
+.summary-section,
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  max-width: 960px;
+  margin: auto;
+  margin-top: 80px;
+  padding: 8px;
+}
+
+.summary-text {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.survey-item {
+  margin: 20px;
+}
+
+.what-kind,
+.feeling {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+}
+
+.start-day, .relationships {
+  
+  font-size: 13px;
   
 }
+
+.start-day label{
+  padding: 5px;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: right;
+
+}
+
+.relationships label{
+  padding: 15px;
+  display: inline-block;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.feeling input,
+.what-kind select {
+  width: 200px;
+  height: 30px;
+  padding: 5px;
+  font-family: inherit;
+  font-size: 13px;
+  align-self: center;
+  margin-top: 18px;
+}
+
+.section-heading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+

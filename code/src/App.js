@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './button.css'
 
 import { StartSurvey } from './components/StartSurvey';
 import { Survey } from './components/Survey';
@@ -37,5 +38,5 @@ export const App = () => {
         whatKinde={whatKinde}
         feeling={feeling} />
     </main>
-  );
-};
+  )
+}

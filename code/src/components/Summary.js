@@ -2,6 +2,7 @@ import React from 'react';
 
 export const Summary = ({ section, startDay, relationships, whatKinde, feeling }) => {
   return (
+    // eslint-disable-next-line react/jsx-no-useless-fragment
     <>
       {section === 5 && (
         <form>
@@ -11,11 +12,10 @@ export const Summary = ({ section, startDay, relationships, whatKinde, feeling }
             <p>Youre relationship to coffee is: {relationships}.</p>
             <p>You preffer coffe {whatKinde}.</p>
             <p>Coffee makes you feel like.. {feeling}</p>
-
             <h3> Have a GREAT day!</h3>
           </div>
         </form>
-      )};
+      )}
     </>
   );
 };

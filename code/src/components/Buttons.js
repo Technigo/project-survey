@@ -17,15 +17,21 @@ export const Buttons = ({ section, setSection }) => {
   };
   return (
     <div className="btn-container">
+      {section <= 0 && (
+        <button className="button-start" onClick={nextSection} type="button">
+          Start survey
+        </button>
+      )}
+
       {section >= 2 && section <= 4 && (
         <button className="button" onClick={previousSection} type="button">
           Previous Question
         </button>
       )}
 
-      {section < 4 && (
+      {section >= 1 && section <= 4 && (
         <button className="button" onClick={nextSection} type="button">
-          {section === 0 ? 'Start survey' : 'Next question'}
+          Next Question
         </button>
       )}
 
