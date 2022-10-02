@@ -127,10 +127,14 @@ button:hover {
   text-align: center;
 }
 
-
-
-
-
+.temperatureWrapper {
+  border: 2px solid transparent;
+  height: 120px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 50px;
+  text-align: center;
+}
 
 .summaryWrapper {
   height: 330px;
@@ -180,14 +184,7 @@ input[type=text]:hover {
 }
 
 /* Temperature */
-.temperatureWrapper {
-  border: 2px solid transparent;
-  height: 180px;
-  width: 80%;
-  margin-left: 10%;
-  margin-top: 50px;
-  text-align: center;
-}
+
 
 .degrees {
   font-size: 45px;
