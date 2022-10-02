@@ -13,4 +13,4 @@ What I learned
 
 ## View it live
 
-kristin-larsson-project-survey.netlify.app
+kristinlarsson-projectsurvey.netlify.app
