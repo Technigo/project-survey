@@ -2,9 +2,9 @@ import React from 'react';
 
 const Active= ({active, setActive, handlePreviousQuestionClick, handleNextQuestionClick, counter}) => {
     
-  const handleActiveChange = (event) => {
-    setActive(event.target.value)
-  }
+  // const handleActiveChange = (event) => {
+  //   setActive(event.target.value)
+  // }
       
   return (    
   <>
@@ -20,9 +20,9 @@ const Active= ({active, setActive, handlePreviousQuestionClick, handleNextQuesti
       value={active}
       >
         <option value="">Select option</option>
-        <option value="go hiking.">Very Active</option>
-        <option value="go sightseeing.">Little Active</option>
-        <option value="just be lazy doing nothing.">I don't want to move att all</option>
+        <option value="sporty">Very Active</option>
+        <option value="middle">Little Active</option>
+        <option value="lazy">I don't want to move att all</option>
         </select>
         </form>
     </div>
