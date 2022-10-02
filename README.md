@@ -21,7 +21,7 @@ Had no idea what to do for design/content so just made something up about my fav
 https://borzoisurvey.netlify.app/
 
 
-## To run locally
+## Running locally
 
 ```sh
 npm i
