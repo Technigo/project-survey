@@ -11,7 +11,8 @@ export const ConsiderationInput = ({ consideration, setConsideration }) => {
         <select
           required
           onChange={handleConsiderationInput}
-          value={consideration}>
+          value={consideration}
+          className="dropdown">
           <option value="">Select option</option>
           <option value="Reassessing your priorities">Reassessing your priorities</option>
           <option value="Trying meditation">Trying meditation</option>

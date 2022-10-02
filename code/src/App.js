@@ -7,6 +7,9 @@ import { TextAreaInput } from 'components/Textareainput';
 import { ActionInput } from 'components/Actioninput';
 import { UserNameInput } from 'components/Usernameinput';
 import { Summary } from 'components/Summary';
+import { Button } from 'components/Button';
+import { Email } from 'components/EmailInput';
+import { Checkbox } from 'components/Checkbox';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
@@ -31,13 +34,13 @@ export const App = () => {
 
         {/* Where we gather the message */}
         {counter === 0 && (
-          <div>
+          <div className="form-wrapper">
             <RecieverNameInput recieverName={recieverName} setRecieverName={setRecieverName} />
             <ConsiderationInput consideration={consideration} setConsideration={setConsideration} />
             <TextAreaInput textArea={textArea} setTextArea={setTextArea} />
             <ActionInput action={action} setAction={setAction} />
             <UserNameInput userName={userName} setUserName={setUserName} />
-            <button type="submit" onClick={() => handleStepIncrease(true)}> Summarize</button>
+            <input className="primary-button" type="submit" value="Summarize" onClick={() => handleStepIncrease(true)} />
           </div>
         )}
 
@@ -50,10 +53,11 @@ export const App = () => {
               textArea={textArea}
               action={action}
               userName={userName} />
-            <input type="text" placeholder="Recievers Email" />
-            <input type="text" placeholder="Your Email" />
-            <button type="button"> Send Email </button>
-            <button type="button" onClick={() => handleStepIncrease(false)}> Edit </button>
+            <Email email="Recievers Email" />
+            <Email email="Your Email" />
+            <Checkbox label="I accept the terms & conditions" />
+            <Button button="Send Email" />
+            <button className="secondary-button" type="button" onClick={() => handleStepIncrease(false)}>Edit</button>
           </>
         )}
         {/* My page counter {counter} */}

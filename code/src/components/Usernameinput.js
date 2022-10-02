@@ -7,7 +7,7 @@ export const UserNameInput = ({ userName, setUserName }) => {
   return (
     <p>
       Sincerely,
-      <input type="text" value={userName} onChange={handleUserNameInput} placeHolder="Your name" required />
+      <input className="text-input" type="text" value={userName} onChange={handleUserNameInput} placeHolder="your name" required />
     </p>
   );
 }
