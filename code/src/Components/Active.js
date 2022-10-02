@@ -20,8 +20,8 @@ const Active= ({active, setActive, handlePreviousQuestionClick, handleNextQuesti
       value={active}
       >
         <option value="">Select option</option>
-        <option value="sporty">Very Active</option>
-        <option value="middle">Little Active</option>
+        <option value="sporty">Very active</option>
+        <option value="middle">Moderately active</option>
         <option value="lazy">I don't want to move att all</option>
         </select>
         </form>

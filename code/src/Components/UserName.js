@@ -10,7 +10,7 @@ const UserName= ({userName, setUserName, handleNextQuestionClick, counter}) => {
   return (
   <>
     <div className="questionWrapper">
-      <p> Whats your name? </p>
+      <p> What's your name? </p>
     </div>
 
       <div className="inputWrapper">

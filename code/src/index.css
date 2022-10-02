@@ -63,13 +63,6 @@ p {
   font-family: 'Inter Tight', sans-serif;
 }
 
-.bold {
-  color: var(---text);
-  font-size: 30px;
-  font-family: 'Inter Tight', sans-serif;
-  font-weight: bold;
-}
-
 .headerImg{
   height: 250px;
   border: 3px solid var(---main);
@@ -175,7 +168,6 @@ input[type=text]:hover {
 .transportationWrapper {
   display: flex;
   flex-direction: column;
-  border: 2px solid black;
   height: 180px;
   width: 40%;
   margin-left: 30%;
@@ -251,11 +243,19 @@ input[type=text]:hover {
 
 /* Summary */
 .summaryWrapper {
-  height: 330px;
+  height: 380px;
   width: 60%;
   margin-left: 20%;
   margin-top: 50px;
   text-align: center;
+}
+
+.bold {
+  color: var(---text);
+  font-size: 30px;
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: bold;
+  line-height: 40px;
 }
 
 @media (min-width: 768px) {

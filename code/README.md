@@ -1,19 +1,12 @@
-# Technigo React Starter App
+Project Survey
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+This project was to create a a Typeform-like survey to collect data from your users.
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
+What I learned
+✓ What the purpose of state in React is.
+✓ How to use the `useState` hook in React.
+✓ How to connect HTML form inputs to state.
+✓ How to use form fields with React
+✓ How to use state to show different components based on where you are in the survey
 
-## Usage
-
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+View it live
