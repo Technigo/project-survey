@@ -83,7 +83,7 @@ export const App = () => {
             </div>
           )}   
 
-            {step === 7 && (
+          {step >=6 && (
             <div>
               <button className="reset-btn" type="button" onClick={handleStepReset}>Go back</button>
             </div>

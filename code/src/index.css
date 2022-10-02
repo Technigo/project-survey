@@ -68,6 +68,7 @@ img {
   max-height: 50vh;
   position: absolute;
   bottom: 0px;
+  z-index: -1;
 }
 
 .link-container {
@@ -190,6 +191,7 @@ input {
   margin-top: 20px;
   position: absolute;
   right: 0px;
+  border: none;
 }
 
 .submit-btn {
@@ -203,11 +205,13 @@ input {
   position: absolute;
   right: 0px;
   bottom: -60px;
+  border: none;
 } 
 
 .continue-btn:hover, .start-btn:hover, .submit-btn:hover {
   background-color: azure;
   color: black;
+  transform: scale(1.1);
 }
 
 .back-btn {
@@ -221,11 +225,13 @@ input {
   margin-top: 20px;
   position: absolute;
   left: 0px;
+  border: 1px black solid;
 }
 
 .back-btn:hover, .restart-btn:hover {
   background-color: azure;
   color: black;
+  transform: scale(1.1);
 }
 
 /* MediaQs */
