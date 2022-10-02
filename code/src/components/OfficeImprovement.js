@@ -11,18 +11,20 @@ export const OfficeImprovement = ({ improveInput, setImproveInput }) => {
     <div>
       <form>
         <h2><b>What can we do to improve?</b></h2>
-        {officeImprovements.map((improve) => (
-          <label key={improve} htmlFor="ImproveInput">
-            <input
-              id="officeImprovement"
-              type="radio"
-              value={improve}
-              onChange={handleOfficeImprovementChange}
-              checked={improveInput === improve} />
-            {improve}
-            <br />
-          </label>
-        ))}
+        <div className="officeChoice">
+          {officeImprovements.map((improve) => (
+            <label key={improve} htmlFor="ImproveInput">
+              <input
+                id="officeImprovement"
+                type="radio"
+                value={improve}
+                onChange={handleOfficeImprovementChange}
+                checked={improveInput === improve} />
+              {improve}
+              <br />
+            </label>
+          ))}
+        </div>
       </form>
     </div>
   )

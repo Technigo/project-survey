@@ -7,7 +7,7 @@ export const TeamEvent = ({ teamEvent, setTeamEvent }) => {
 
   return (
     <form>
-      <div>
+      <div className="eventChoice">
         <h2><b>What is the next fun team event we should do?</b></h2>
         <select
           onChange={handleTeamEventChange}
