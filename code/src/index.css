@@ -228,11 +228,25 @@ input {
   border: 1px black solid;
 }
 
-.back-btn:hover, .restart-btn:hover {
+.back-btn:hover, .reset-btn:hover {
   background-color: azure;
   color: black;
   transform: scale(1.1);
 }
+
+.reset-btn {
+    background-color: #EEA47FFF;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    padding: 8px;
+    border-radius: 20px;
+    margin-top: 20px;
+    position: absolute;
+    left: 0px;
+    border: 1px black solid;
+  }
 
 /* MediaQs */
 @media (min-width: 668px) and (max-width: 1024px) {

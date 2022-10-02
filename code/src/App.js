@@ -85,7 +85,7 @@ export const App = () => {
 
           {step >=6 && (
             <div>
-              <button className="reset-btn" type="button" onClick={handleStepReset}>Go back</button>
+              <button className="reset-btn" type="button" onClick={handleStepReset}>Restart survey</button>
             </div>
           )}
         </div>
