@@ -8,10 +8,10 @@ export const Pattern = ({ pattern, setPattern }) => {
   };
 
   return (
-    <form>
-      <p>
+    <form onSubmit={(event) => event.preventDefault()}>
+      <h2>
         Which emoji would you like to add?
-      </p>
+      </h2>
       <div className="radioParent">
         {patternGroup.map((group) => (
           <label key={group} htmlFor="group">

@@ -6,7 +6,7 @@ export const Name = ({ name, setName }) => {
   };
 
   return (
-    <form className="nameForm">
+    <form className="nameForm" onSubmit={(event) => event.preventDefault()}>
       <p>
         What do you want to celebrate?
       </p>

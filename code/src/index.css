@@ -49,6 +49,10 @@ h1 {
   margin: 0;
 }
 
+h2 {
+  color: rgb(92, 92, 92);
+}
+
 .btnParent {
   display: flex;
   gap: 20vw;

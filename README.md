@@ -1,13 +1,13 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The projects was to create a survey, with at least one radio-input and one select input. The purpose as to practise the purpose of state in React
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started out with the basics, making the questions work. Tried to style the page to an ok level. Then I got the idea of the confetti in the end and tweeked my whole page to fit this new purpose. 
+
+The screen reader doesn't read the page correctly and the tabbing is a bit off, but you can acces all the element you just have to go backwards sometimes... I have to work on that. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://gentle-jelly-fccbea.netlify.app
