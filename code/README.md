@@ -4,7 +4,9 @@ This project is an exercise in controlled forms with functional React components
 The design of this project comes from a Typeform template:
 https://www.typeform.com/templates/t/secret-santa-form/
 
-If I had more time, I would try to implement the transition animations
+Thanks also to https://www.zondicons.com for providing free and great looking svg icons
+
+If I had more time, I would try to implement the transition animations seen in the Typeform template
 
 ## View it live
 
