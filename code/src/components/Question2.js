@@ -53,7 +53,7 @@ const Question2 = ({ question2, setQuestion2, handleStepIncrese }) => {
             I am sick
         </label>
       </div>
-      <div>
+      <div className="button-text">
         <button type="button" id="nextBtn" onClick={(event) => handleStepIncrese(event, chosen)}>Next page</button>
         <p>Question 2 out of 4</p>
       </div>

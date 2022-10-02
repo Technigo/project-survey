@@ -33,7 +33,7 @@ const Question4 = ({ question4, setQuestion4, handleStepIncrese }) => {
           </select>
         </section>
       </div>
-      <div>
+      <div className="button-text">
         <button type="button" id="nextBtn" onClick={(event) => handleStepIncrese(event, chosen)}>Next page</button>
         <p>Question 4 out of 4</p>
       </div>
