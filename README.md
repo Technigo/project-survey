@@ -8,4 +8,4 @@ the big problem I had is how to send the info between components.
 
 ## View it live
 
-week6arnau.netlify.app
+https://week6arnau.netlify.app
