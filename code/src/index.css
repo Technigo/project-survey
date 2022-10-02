@@ -19,7 +19,7 @@ code {
   width: 100vw;
   height: 100vh;
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   flex-direction: column;
   background-color: #330033;
@@ -33,7 +33,8 @@ code {
 }
 
 .question-box {
-  padding-bottom: 20%;
+  /* padding-bottom: 20%; */
+  margin-top: 20%;
 }
 
 .radioBtn {
@@ -91,7 +92,7 @@ label {
 
 button {
   position: absolute;
-  bottom: 10%;
+  bottom: 20%;
   right: 20%;
   color: #330033;
   background-color: white;
@@ -105,4 +106,38 @@ img {
   width: 40%;
   height: auto;
   border-radius: 100px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 5%;
+  left: 30%;
+  text-align: center;
+}
+
+.footer p {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+.summary-text {
+  margin: 10% 0% 5% 0%;
+}
+
+.summary p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 18px;
+  line-height: 30px;
+  font-weight: bold;
+}
+
+.summary img {
+  margin-left: 25%;
+}
+
+.end-page {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
 }

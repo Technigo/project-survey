@@ -10,7 +10,7 @@ const Question2 = ({ question2, setQuestion2, handleStepIncrese }) => {
 
   return (
     <>
-      <div>
+      <div className="question-box">
         <p className="question">What are you doing today?</p>
         <label htmlFor="workday">
           <input

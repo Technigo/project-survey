@@ -59,15 +59,17 @@ const Summary = ({ name, question2, question3, question4, handleStepIncrese }) =
   }
 
   return (
-    <form action="https://not-a-real-url.com" method="POST">
-      <label htmlFor="nameInput">
-        <p>Ok, {name}.</p>
-        <p>So {question2} gets you {feelingsAnswer()} and makes you want to {tomorrowAnswer()}</p>
+    <form>
+      <label htmlFor="nameInput" className="summary">
+        <div className="summary-text">
+          <p>Ok, {name}.</p>
+          <p>So {question2} gets you {feelingsAnswer()} and makes you want to {tomorrowAnswer()}</p>
+        </div>
         <img src={tomorrowPicture()} alt="" />
       </label>
 
       <div>
-        <button type="submit" id="submitBtn" onClick={handleStepIncrese}>Submit</button>
+        <button type="submit" id="submitBtn" onClick={(event) => handleStepIncrese(event, true)}>Submit</button>
       </div>
     </form>
   );

@@ -6,6 +6,7 @@ import Question2 from 'components/Question2';
 import Question3 from 'components/Question3';
 import Question4 from 'components/Question4';
 import Summary from 'components/Summary';
+import Footer from 'components/Footer';
 
 export const App = () => {
   const [step, setStep] = useState(1);
@@ -77,10 +78,13 @@ export const App = () => {
               handleStepIncrese={handleStepIncrese} />
           )}
         </div>
-        <div>
+        <div className="end-page">
           {step === 7 && (
             <p>Thank you for your time!</p>
           )}
+        </div>
+        <div className="footer">
+          <Footer />
         </div>
 
       </div>

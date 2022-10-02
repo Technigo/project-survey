@@ -11,7 +11,7 @@ const Question1 = ({ name, setName, handleStepIncrese }) => {
   const checkKeyPress = (event) => {
     const { keyCode } = event;
     if (keyCode === 13) {
-      handleStepIncrese();
+      handleStepIncrese(event, chosen);
     }
   };
 
