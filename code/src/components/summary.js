@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Summary = ({ recieverName, consideration, textArea, action, userName }) => {
   return (
-    <div>
+    <div className="summary-wrapper">
       <p>Dear {recieverName}, </p>
       <p>
         You might want to consider {consideration}.

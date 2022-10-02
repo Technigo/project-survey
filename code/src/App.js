@@ -30,39 +30,42 @@ export const App = () => {
   return (
     <div className="outer-wrapper">
       <div className="inner-wrapper">
-        <Header />
-
         {/* Where we gather the message */}
         {counter === 0 && (
           <div className="form-wrapper">
+            <Header />
             <RecieverNameInput recieverName={recieverName} setRecieverName={setRecieverName} />
             <ConsiderationInput consideration={consideration} setConsideration={setConsideration} />
             <TextAreaInput textArea={textArea} setTextArea={setTextArea} />
             <ActionInput action={action} setAction={setAction} />
             <UserNameInput userName={userName} setUserName={setUserName} />
-            <input className="primary-button" type="submit" value="Summarize" onClick={() => handleStepIncrease(true)} />
+            <input className="button primary-button" type="submit" value="Summarize" onClick={() => handleStepIncrease(true)} />
           </div>
         )}
 
         {/* Where we summarize the message */}
         {counter === 1 && (
-          <>
+          <div className="form-wrapper">
+            <Header />
             <Summary
               recieverName={recieverName}
               consideration={consideration}
               textArea={textArea}
               action={action}
               userName={userName} />
-            <Email email="Recievers Email" />
-            <Email email="Your Email" />
-            <Checkbox label="I accept the terms & conditions" />
-            <Button button="Send Email" />
-            <button className="secondary-button" type="button" onClick={() => handleStepIncrease(false)}>Edit</button>
-          </>
+            <div className="group-wrapper">
+              <Email email="Recievers Email" />
+              <Email email="Your Email" />
+            </div>
+            <div className="group-wrapper">
+              <Checkbox label="I accept the terms & conditions" />
+              <Button button="Send Email" />
+              <button className="button secondary-button" type="button" onClick={() => handleStepIncrease(false)}>Edit</button>
+            </div>
+          </div>
         )}
         {/* My page counter {counter} */}
       </div>
     </div>
   );
 }
-

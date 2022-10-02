@@ -7,7 +7,7 @@ export const RecieverNameInput = ({ recieverName, setRecieverName }) => {
   return (
     <p>
       Dear
-      <input className="text-input" type="text" value={recieverName} onChange={handleRecieverNameInput} placeHolder="reciever name" required />
+      <input className="text-input side-margin top-margin" type="text" value={recieverName} onChange={handleRecieverNameInput} placeHolder="reciever name" required />
       ,
     </p>
   );
