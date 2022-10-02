@@ -43,6 +43,7 @@ const UserAloneOrBuddy = ({ userAloneOrBuddy, setUserAloneOrBuddy, userName, onE
               onChange={handleUserAloneOrBuddyInputChange}
               checked={userAloneOrBuddy === group.value}
               image={group.image}
+              aria-label={group.value}
             />
             <img
               className="animals"

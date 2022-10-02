@@ -72,6 +72,7 @@ const Survey = () => {
             headerText="First things first..."
             subHeaderText="What&apos;s your name?"
             onEnter={onEnter}
+            placeHolder="Type your name here"
           />
         </div>
       )}
@@ -94,7 +95,6 @@ const Survey = () => {
             setFeelings={setUserFeelings}
             userName={userName}
             userTeam={userTeam}
-            onEnter={onEnter}
           />
         </div>
       )}
@@ -128,12 +128,13 @@ const Survey = () => {
             headerText="The power of 2 minds!"
             subHeaderText="Who was your code pair?"
             onEnter={onEnter}
+            placeHolder="Type the name of your code pair"
           />
         </div>
       )}
 
       {(counter === 5 && userAloneOrBuddy === '') && (
-        setCounter(6)
+        setCounter(counter + 1)
       )}
 
       {counter === 6 && (
@@ -184,12 +185,6 @@ const Survey = () => {
 
       {counter === 6 && (
         <div className="btn-container">
-          <button
-            className="btn back"
-            type="button"
-            onClick={() => handleCounterButtonClick(false)}>
-            Back
-          </button>
           <button
             className="btn submit"
             type="submit"

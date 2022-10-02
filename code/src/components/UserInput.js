@@ -1,6 +1,7 @@
 import React from 'react';
 
-const UserInput = ({ userInput, setUserInput, headerText, subHeaderText, onEnter }) => {
+// eslint-disable-next-line max-len
+const UserInput = ({ userInput, setUserInput, headerText, subHeaderText, onEnter, placeHolder }) => {
   const handleUserInputChange = (event) => {
     setUserInput(event.target.value)
   }
@@ -10,7 +11,7 @@ const UserInput = ({ userInput, setUserInput, headerText, subHeaderText, onEnter
       <h3 className="question-title">{subHeaderText}</h3>
       <input
         className="input-box"
-        placeholder="Type your name here"
+        placeholder={placeHolder}
         value={userInput}
         type="text"
         onChange={handleUserInputChange}

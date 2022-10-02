@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/tabindex-no-positive */
+/* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 import React from 'react';
 import Survey from 'components/Survey';
 

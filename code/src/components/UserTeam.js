@@ -64,6 +64,7 @@ const UserTeam = ({ userTeam, setUserTeam, userName, onEnter }) => {
           key={group.id}>
           <div className="input-wrapper">
             <input
+              aria-label={group.value}
               className="input-btn"
               type="radio"
               value={group.value}
