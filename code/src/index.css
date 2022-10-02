@@ -179,7 +179,7 @@ textarea{
 }
 
 /* For tablet */
-@media (min-width: 500px) and (max-width: 1023px){
+@media (min-width: 667px) and (max-width: 1023px){
   h1{
     font-size: 5vh;
   }
@@ -213,6 +213,42 @@ textarea{
 }
 
 @media (min-width: 1024px){
+  h1{
+    font-size: 6vw;
+  }
+
+  button{
+    margin: 2% auto;
+    padding: 10px 40px;
+  }
+
+  .cake-container{
+    /* grid-template-columns: 33% 33% 33%; */
+    grid-template-columns: 50% 50%;
+    margin: 0;
+  }
+
+  .checkboxes{
+    width: 25px;
+  }
+
+  .cake-checkbox{
+    padding: 5%;
+    margin: auto 2%;
+  }
+  
+  .cake-image img{
+    width: 300px;
+    height: 300px;
+  }
+
+  .quality-cake{
+    margin: 1% 25%;
+    padding: 0;
+  }
+}
+
+@media (min-width: 2000px){
   h1{
     font-size: 6vw;
   }
