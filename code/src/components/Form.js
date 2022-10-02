@@ -24,48 +24,38 @@ const Form = () => {
   const [name, setName] = useState('');
   const [activeMood, setActiveMood] = useState('');
   const [adjective, setAdjective] = useState('');
-  const [activeAnimal, setActiveAnimal] = useState('');
-  const [exclamation, setExclamation] = useState('');
   const [adjectiveSecond, setAdjectiveSecond] = useState('');
+  const [exclamation, setExclamation] = useState('');
+  const [activeAnimal, setActiveAnimal] = useState('');
   const [creature, setCreature] = useState('');
   const [food, setFood] = useState('');
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    // if (!event.target.value && step !== 1) {
-    //   alert('välj nåt');
-    // }
     setStep(step + 1);
   };
   const handleNameChange = (event) => {
-    // console.log(event.target.value);
     setName(event.target.value);
   };
   const handleMoodChange = (event) => {
-    // console.log(event.target.value);
     setActiveMood(event.target.value);
   };
   const handleAdjectiveChange = (event) => {
-    // console.log(event.target.value);
     setAdjective(event.target.value);
+  };
+  const handleAdjectiveSecondChange = (event) => {
+    setAdjectiveSecond(event.target.value);
+  };
+  const handleExclamationChange = (event) => {
+    setExclamation(event.target.value);
   };
   const handleAnimalChange = (event) => {
     setActiveAnimal(event.target.value);
   };
-  const handleExclamationChange = (event) => {
-    // console.log(event.target.value);
-    setExclamation(event.target.value);
-  };
-  const handleAdjectiveSecondChange = (event) => {
-    // console.log(event.target.value);
-    setAdjectiveSecond(event.target.value);
-  };
   const handleCreatureChange = (event) => {
-    // console.log(event.target.value);
     setCreature(event.target.value);
   };
   const handleFoodChange = (event) => {
-    // console.log(event.target.value);
     setFood(event.target.value);
   };
 
