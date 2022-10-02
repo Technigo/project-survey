@@ -2,7 +2,7 @@
 
 The assigment was to make a survey to practice using state in React. My survey is about finding out which character from "The Lord of the Rings" that you are. 
 
-## What the instruction was: 
+## What the instructions were: 
 
 ✓ Your survey should consist of at least 3 questions.
 
