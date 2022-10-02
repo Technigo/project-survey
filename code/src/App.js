@@ -54,22 +54,17 @@ export const App = () => {
   const [answers, setAnswers] = useState([]);
 
   /////Keep track of which question is next////
-  const handleCurrentQuestionButtonClick = () => {
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
     const currentQuestionNumber = currentQuestion + 1;
     setcurrentQuestion(currentQuestionNumber);
-  
-    
-  /////Save answers////
-  let currentAnswer = {};
-  currentAnswer[currentQuestionNumber] = userInput;
-  
-  updateAnswer([currentQuestionNumber, userInput]);
-  handleClearButtonClick();
 
-  };
+    /////Save answers////
+    let currentAnswer = {};
+    currentAnswer[currentQuestionNumber] = userInput;
 
-  const handleClearButtonClick = () => {
-    setUserInput(""); //varför inte lägga till den här under handleCurrentQuestionButtonClick?
+    updateAnswer([currentQuestionNumber, userInput]);
+    setUserInput("");
   };
 
   const handleUserInputChange = (event) => {
@@ -85,7 +80,6 @@ export const App = () => {
   // const handleReset = () => {
   //   //H nollställer setAnswer när ropa den?
   // };
-
 
   const updateAnswer = (updatedAnswer) => {
     //H uppdaterar vaddå,funktionen setAnswers?
@@ -109,17 +103,12 @@ export const App = () => {
   //    event.preventDefault();
 
   return (
-    <main>
+    <form className="main" onSubmit={(e) => handleFormSubmit(e)}>
       {currentQuestion === 0 && (
         <section className="container">
           <Startpage />
           <div className="btn">
-            <button
-              type="button"
-              onClick={() => handleCurrentQuestionButtonClick()}
-            >
-              Let's begin!
-            </button>
+            <button type="submit">Let's begin!</button>
           </div>
         </section>
       )}
@@ -132,13 +121,7 @@ export const App = () => {
           />
 
           <div className="btn">
-            <button
-              type="button"
-              userInput={userInput}
-              onClick={() => handleCurrentQuestionButtonClick(currentQuestion)}
-            >
-              Next question
-            </button>
+            <button type="submit">Next question</button>
           </div>
         </section>
       )}
@@ -151,6 +134,6 @@ export const App = () => {
           />
         </section>
       )}
-    </main>
+    </form>
   );
 };
