@@ -10,3 +10,5 @@ What I learned
 ✓ How to use state to show different components based on where you are in the survey
 
 View it live
+
+kristin-larsson-project-survey.netlify.app

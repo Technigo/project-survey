@@ -19,7 +19,7 @@ const Transportation= ({transportation, setTransportation, handleNextQuestionCli
             {transportPreference.map(travel => (
             <section className="radio-lable" key={travel}>   
                 <input
-                className="radio-lable"
+                className="radio"
                 type="radio"
                 value={travel}
                 onChange={event => setTransportation(event.target.value)}

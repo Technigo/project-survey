@@ -124,8 +124,6 @@ button:hover {
   text-align: center;
 }
 
-
-
 .questionNumber {
   border: 2px solid transparent;
   width: 80%;
@@ -166,31 +164,29 @@ input[type=text]:hover {
 }
 
 .transportationWrapper {
-  display: flex;
-  flex-direction: column;
   height: 180px;
-  width: 40%;
-  margin-left: 30%;
+  width: 20%;
+  margin-left: 40%;
   margin-bottom: 100px;
   text-align: center;
 }
 
 .transportationText {
-  display: flex;
-  flex-direction: row;
   color: var(---text);
   font-size: 28px;
+  padding-left: 3px;
   font-family: 'Inter Tight', sans-serif;
 }
 
 .radio-lable {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  padding: 2px;
   font-size: 25px;
   font-family: 'Inter Tight', sans-serif;
   color: var(---text);
   accent-color: var(---text);
-  text-align: center;
 }
 
 /* Temperature */
@@ -243,7 +239,7 @@ input[type=text]:hover {
 
 /* Summary */
 .summaryWrapper {
-  height: 380px;
+  height: 400px;
   width: 60%;
   margin-left: 20%;
   margin-top: 50px;
