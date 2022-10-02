@@ -1,13 +1,19 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Nina Berggren-week 6
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week we have introduced useState-hook in React to create a Typeform-like survey with a few questions. Min 3 questions of any subject and whit a summary section at the end.
+
+credit for animated button : https://csshint.com/best-examples-of-call-to-action-button/
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Started of with the excellent exampel project w6 as a base for what I wanted to do.  
 
+I am realy struggeling with external issues like geting eslint to work. Also the process of having a lot of components done before u can accualy view the progress in the browser. I hade some problems with flexbox that I worked around.
+
+If I had more time I would solve the problem with flex,colomn and get it to work. I would also build the components different.
+Spent a litle more time for settings to get some stuff sorted automatically and save alot of time.
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-survay-nina-berggren.netlify.app/
