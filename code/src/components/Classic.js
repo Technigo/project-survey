@@ -21,13 +21,17 @@ export const Classic = () => {
             </div>
             <div className="instructions">
               <h2 className="sub-heading">Instructions</h2>
-              <p>1. Gently saute chopped garlic in olive oil until soft, add a pinch of salt</p>
-              <p>2. Add the tomatoes, breaking them up at bit in the pot, and bring to simmer </p>
-              <p>3. Simmer until the sauce is thick and the tomatoes are falling apart</p>
-              <p>4. Puree until smooth in a blender</p>
-              <p>5. Serve with pasta, gnocchi, oven roasted vegetables or some fresh
-                 crusty bread
-              </p>
+              <ol>
+                <li>Gently saute chopped garlic in olive oil until soft, add a pinch of salt</li>
+                <li>Add the tomatoes, breaking them up at bit in the pot,
+                   and bring to simmer
+                </li>
+                <li>Simmer until the sauce is thick and the tomatoes are falling apart</li>
+                <li>Puree until smooth in a blender</li>
+                <li>Serve with pasta, gnocchi, oven roasted vegetables or some fresh
+                  crusty bread
+                </li>
+              </ol>
             </div>
           </div>
 
@@ -56,8 +60,8 @@ export const Classic = () => {
       </div>
       <footer className="footer">
         <div className="footer-container">
-          <h2 className="footer-heading">Recipe source:</h2>
-          <p className="footer-text">www.justalittlebitofbacon.com</p>
+          <h2 className="footer-heading">Recipe source</h2>
+          <p className="footer-text">justalittlebitofbacon.com</p>
         </div>
       </footer>
     </>

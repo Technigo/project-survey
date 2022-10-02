@@ -9,7 +9,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-image: url("./images/tomato.jpg");
+  background-image: url("images/tomato.jpg");
   background-color: #cccccc;
   background-size: cover;
 }
@@ -23,7 +23,6 @@ code {
 
 h1 {
   display: flex;
-  font-weight: bold;
   justify-content: center;
   margin: 50px 0px 50px 0px;
 }
@@ -44,6 +43,15 @@ p {
   font-weight: bold;
 }
 
+ol {
+  margin-bottom: 0px;
+}
+
+li {
+  font-size: 14px;
+  font-weight: bold;
+}
+
 /* BUTTONS, SELECT AND CONTAINER */
 
 .button {
@@ -55,7 +63,7 @@ p {
   text-decoration: none;
   display: inline-block;
   font-size: 16px;
-  margin: 15px 2px;
+  margin: 25px 2px;
   cursor: pointer;
   border-radius: 10px;
   font-family: 'Noto Sans Mono', monospace;
@@ -97,6 +105,12 @@ p {
   margin-top: 70px;
   border: solid black 2px;
   background-color: rgb(243, 212, 185);
+}
+
+.heading {
+  margin-bottom: 45px;
+  font-size: 30px;
+  font-weight: bolder;
 }
 
 /* WELCOME PAGE / STEP ONE */
@@ -158,6 +172,7 @@ input[type="text" i] {
   display: flex;
   flex-direction: row;
   padding: 30px;
+  justify-content: baseline;
 }
 
 .recipe-content {
@@ -168,11 +183,23 @@ input[type="text" i] {
 }
 
 .pomodoro {
-  width: 420px;
-  height: 470px;
-  /* padding-left: 50px; */
-  align-self: flex-end;
-  /* margin: 0px 20px 40px 0px; */
+  position: relative;
+  width: 380px;
+  height: 380px;
+  opacity: 0.9;
+  /* align-self: flex-end; */
+}
+
+.marinara {
+  width: 407px;
+  height: 601px;
+  opacity: 0.95;
+}
+
+.scarpariello {
+  width: 407px;
+  height: 575px;
+  opacity: 0.9;
 }
 
 .img-with-text {
@@ -180,7 +207,7 @@ input[type="text" i] {
   flex-direction: column;
   align-self: flex-end;
   text-align: justify;
-  width: 420px;
+  width: 374px;
   padding-left: 50px;
 }
 
@@ -215,7 +242,7 @@ input[type="text" i] {
   display: flex;
   flex-direction: column;
   justify-self: center;
-  margin: 50px 0px 10px 0px;
+  margin: 70px 0px 10px 0px;
 }
 
 .footer-heading {
@@ -230,10 +257,6 @@ input[type="text" i] {
 }
 
 /* RECIPE TEXT CLASSES */
-
-.heading {
-  margin-bottom: 45px;
-}
 
 .sub-heading {
   margin-bottom: 25px;
@@ -270,7 +293,7 @@ input[type="text" i] {
   padding: 20px;
   width: 75vw;
   height: fit-content;
-  margin-top: 50px;
+  align-self: center;
 }
 
 input[type="text" i] {
@@ -304,6 +327,10 @@ h3 {
 }
 
 p {
+  font-size: 9px;
+}
+
+li {
   font-size: 9px;
 }
 
@@ -346,6 +373,16 @@ p {
   width: 230px;
   height: 240px;
   align-self: center;
+}
+
+.marinara {
+  width: 230px;
+  height: 313px;
+}
+
+.scarpariello {
+  width: 230px;
+  height: 305px;
 }
 
 .img-with-text {
@@ -471,6 +508,10 @@ p {
   font-size: 16px;
 }
 
+li {
+  font-size: 16px;
+}
+
 /* RECIPE TABLET */
 
 .recipe {
@@ -507,13 +548,25 @@ p {
   align-self: center;
 }
 
+.marinara {
+  width: 305px;
+  height: 407px;
+  align-self: center;
+}
+
+.scarpariello {
+  width: 305px;
+  height: 400px;
+}
+
 .img-with-text {
   display: flex;
   flex-direction: column;
   align-self: center;
   text-align: justify;
-  width: 275px;
+  width: 305px;
   padding-left: 0px;
+  margin: 30px 0px;
 }
 
 .img-with-text img {

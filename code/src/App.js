@@ -65,13 +65,13 @@ export const App = () => {
             {stepCounter === 1 && (
               <>
                 <h1>Welcome to the Pomodoro generator!</h1>
-                <p>Gone are the days of tasteless carbonara and dull pesto jars.
-                  We have created this pomodoro generator to help you take the first steps into
+                <p>Gone are the days of tasteless ready made&apos;s and dull pesto jars.
+                  This pomodoro generator was created to help you take the first steps into
                   the Queendom of the greatest sauce on earth, tomato sauce. There are endless
-                  variations to explore and to avoid choice overload, you will answer
+                  variations to explore, and to avoid choice overload, you only need to answer
                   a few questions in this survey to help narrow down the options.
                 </p>
-                <p>Start by entering your name below and find your perfect pomodoro match! &#127813;
+                <p>Start by entering your name below to find your perfect pomodoro match! &#127813;
                 </p>
                 <div className="start">
                   <input type="text" placeholder="Your Name" value={userName} onChange={handleUserNameInputChange} />
@@ -152,7 +152,7 @@ export const App = () => {
                   <option value="Basil">Basil</option>
                   <option value="All the toppings!">All the toppings!</option>
                 </select>
-                <button type="button" className="button" onClick={handleNextButtonClick}>Next &#8250;</button>
+                <button type="button" className="button" onClick={handleNextButtonClick}>Submit</button>
               </>
             )}
           </div>
