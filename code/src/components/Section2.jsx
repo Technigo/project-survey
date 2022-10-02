@@ -19,7 +19,8 @@ const Section2 = (props) => {
             <option value="price">Price</option>
             <option value="other">Other</option>
           </select>
-
+          
+          {/* Buttons */}
           <section className="allbtns">
             <button
               type="button"

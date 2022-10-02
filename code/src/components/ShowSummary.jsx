@@ -9,8 +9,7 @@ const ShowSummary = (props) => {
       <h4>ServiceSatisfaction : {props.formData.serviceSatisfaction}</h4>
       <h4>WebsiteSatisfaction : {props.formData.WebSatisfaction}</h4>
 
-      {/* <pre>{JSON.stringify(props.formData)}</pre> */}
-      <section className="allbtns">
+         <section className="allbtns">
         <button
           type="button"
           className="btn"

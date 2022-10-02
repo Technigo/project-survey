@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 .App {
   display: flex;
   justify-content: center;
@@ -19,13 +20,26 @@ body {
   height: 700px;
   border-radius: 8px;
   color: #fff;
+  line-height: 22px;
 }
+
 .form {
   margin: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-.sections{
+
+.sections {
   display: block;
 }
+
+.allbtns {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+
 .btn {
   cursor: pointer;
   transition-duration: 0.1s;
@@ -40,6 +54,7 @@ body {
   transition: all 0.1s ease-in-out;
   box-shadow: 2px 2px 0px 0px rgb(70, 68, 68);
 }
+
 .btnStart:hover {
   transform: scale(1.1);
 }
@@ -52,21 +67,18 @@ body {
   align-items: center;
   margin-bottom: 4rem;
 }
+
 .introductionPageSpan {
   font-size: 12px;
 }
-h2{
+
+h2 {
   margin-left: 1.5em;
 }
 
 label {
   margin-right: 1.5rem;
   font-size: 18px;
-}
-.allbtns {
-  display: flex;
-  flex-direction: row;
-  gap: 2rem;
 }
 
 .radio {
@@ -83,13 +95,14 @@ select {
 }
 /* Register page */
 .registerform {
-  width: 100%;
+  width: 100vw;
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 3rem;
-  padding-bottom: 1rem;
   position: relative;
+  margin-top: 2rem;
+  margin-left: 1rem;
 }
 
 .registerform input {
@@ -100,13 +113,15 @@ select {
   display: block;
   font-weight: bold;
 }
-.section3{
-  display:flex; 
+
+.section3 {
+  display: flex;
   flex-direction: column;
   align-items: center;
 }
-.label{
+
+.label {
   display: flex;
-  flex-direction:row;
+  flex-direction: row;
   align-items: center;
 }

@@ -4,6 +4,7 @@ const Section1 = (props) => {
   return (
     <>
       <form>
+        {/* Marital Status */}
         <section className="section">
           <h4> Marital Status</h4>
           <select
@@ -21,45 +22,44 @@ const Section1 = (props) => {
             <option value="Singel">Singel</option>
           </select>
 
+          {/* Gender */}
           <h4> Choose your Gender: </h4>
           <section>
-          <label>
-            <input
-              className="radio"
-              type="radio"
-              value="female"
-              onChange={(event) =>
-                props.setFormData({
-                  ...props.formData,
-                  gender: event.target.value,
-                })
-              }
-              checked={props.formData.gender === 'female'}
-            />
-            Female
-          </label>
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="Female"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    gender: event.target.value,
+                  })
+                }
+                checked={props.formData.gender === 'Female'}
+              />
+              Female
+            </label>
 
-          <label>
-            <input
-              className="radio"
-              type="radio"
-              value="male"
-              onChange={(event) =>
-                props.setFormData({
-                  ...props.formData,
-                  gender: event.target.value,
-                })
-              }
-              checked={props.formData.gender === 'male'}
-            />
-            Male
-          </label>
+            <label>
+              <input
+                className="radio"
+                type="radio"
+                value="Male"
+                onChange={(event) =>
+                  props.setFormData({
+                    ...props.formData,
+                    gender: event.target.value,
+                  })
+                }
+                checked={props.formData.gender === 'Male'}
+              />
+              Male
+            </label>
+          </section>
         </section>
-        </section>
-
-
-
         
+        {/* Buttons */}
         <section className="allbtns">
           <button
             type="button"

@@ -17,7 +17,6 @@ const App = () => {
     reason: '',
     where: '',
     serviceSatisfaction: '',
-    // quality: '',
     WebsiteSatisfaction: '',
   });
 

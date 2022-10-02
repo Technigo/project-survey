@@ -37,8 +37,8 @@ const RegisterationPage = ({ props }) => {
 
   return (
     <>
+      <h2>Register Your Name</h2>
       <form className="registerform">
-        <h2>Register Your Name</h2>
         <div className="form-control">
           <label>
             <input
@@ -58,7 +58,7 @@ const RegisterationPage = ({ props }) => {
               onChange={emailInputChange}
             />
           </label>
-          <p>{message}</p>
+          {message}
         </div>
 
         <div className="form-control">

@@ -1,19 +1,10 @@
-# Technigo React Starter App
+This is a survey app with React.
+I used the useState hook in React.
 
-This app has been generated using `create-react-app`, then cleaned up a little so we have a project with just the elements we need to get started.
+In the survey app, with 8 components. All components are imported to the app. 
+In the introduction, explains the survey and how it looks like, and each section what is about. 
+I used radio buttons & selected dropdown for questions to choose the option. 
+I made two buttons (next and previous) button the person can go back and change the previous page if there is a need to change. 
+I made a summary page that shows the whole summary of the survey. 
 
-Add components in the `src` folder and use them in `src/app.js` to get started.
-
-## Usage
-
-1. On GitHub, click the 'use this template' button to create a new repo on your account
-1. Clone the new repo to your computer
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
-
-Alternatively, if you don't want a new git repo on your account;
-
-1. Download & extract the [latest release](https://github.com/Technigo/react-starter/releases/latest) from GitHub
-1. Open the directory in the terminal: `cd /path/to/react-starter`
-1. Install required dependencies with npm: `npm install`
-1. Start the project: `npm start`
+If i have more time i would work more on validation part. EX.put error message and use red color for error . 

@@ -3,14 +3,13 @@ import React from 'react';
 const Section3 = (props) => {
   return (
     <>
-      {/* <p>Would you rate the overal quality of our products? </p> */}
       <form>
         <section className="section">
           <h2>Section 3| This esction is about your satisfaction. </h2>
         </section>
         <section className="section3">
+          {/* Where question */}
           <p>How did u perfer your order? </p>
-
           <section className="label">
             <label>
               <input
@@ -44,6 +43,7 @@ const Section3 = (props) => {
             </label>
           </section>
 
+          {/* Service Satisfaction  */}
           <p>
             If at store, Are you statisfied with our service and our collegues?
           </p>
@@ -80,9 +80,9 @@ const Section3 = (props) => {
               No
             </label>
           </section>
-          <p>If on the website, are you satisfied from our website? </p>
-          {/* fast, medium, slow */}
 
+          {/* Web Satisfaction  */}
+          <p>If on the website, are you satisfied from our website? </p>
           <section className="label">
             <label>
               <input
