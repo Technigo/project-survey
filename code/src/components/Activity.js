@@ -11,7 +11,7 @@ export const Activity = ({ activityTime, setActivityTime }) => {
       <h2>Physical activity</h2>
 
       <h3>How many minutes/week do you spend on moderate/vigorous-intensity activities?</h3>
-      <a href="https://www.hsph.harvard.edu/obesity-prevention-source/moderate-and-vigorous-physical-activity/">What is moderate-vigorous activities?</a>
+      <a href="https://www.hsph.harvard.edu/obesity-prevention-source/moderate-and-vigorous-physical-activity/">What is moderate-vigorous intesity?</a>
       <div>
         <select onChange={handleUserActivityChange}>
           <option label="" selected="true" disabled value="">Select an option:</option>
