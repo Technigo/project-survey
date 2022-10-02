@@ -116,8 +116,8 @@ export const App = () => {
         <section className="container">
           <Types
             {...questionsData[currentQuestion]}
-            userInput={userInput}
             onChange={handleUserInputChange}
+            userInput={userInput}
           />
 
           <div className="btn">

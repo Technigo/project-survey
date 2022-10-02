@@ -16,16 +16,14 @@ const Questions = ({
   input_type,
   options,
   onChange,
-  userInput,
+  userInput
 }) => {
-  console.log('userInput',userInput)
   if (input_type === "text") {
     return (
       <>
         <div className="box-question">
           <QuestionTitle heading={question_title} text={question_text} />
           <input
-            userInput={userInput}
             onChange={onChange}
             placeholder="Type your name here..."
             required
@@ -40,7 +38,7 @@ const Questions = ({
           <QuestionTitle heading={question_title} text={question_text} />
           
           <div className="select">
-          <select userInput={userInput} onChange={onChange} required>
+          <select onChange={onChange} required>
             <option value="">Choose option</option>
 
             {options.map((option) => {
