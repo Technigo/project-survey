@@ -13,9 +13,17 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
   background-image: url("../src/assets/office.jpg");
 }
 
+body, .officeChoice {
+  text-align: initial;
+}
+
+body, .button-finish {
+  text-align: center;
+}
 
 p {
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
@@ -60,7 +68,7 @@ code {
 
 .button-submit {
   
-  border: 2px solid white;
+  border: 2px solid #000000cc;
   width: 110px;
   height: 30px;
 }
@@ -80,6 +88,16 @@ select {
   padding: 5px;
 }
 
+.button-forward {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button-finish {
+  display: flex;
+}
+
 .eventChoice {
   display: flex;
   flex-direction:column;
@@ -96,6 +114,7 @@ input[type="radio" i] {
 
 .startpage {
 display: grid;
+text-align: center;
 }
 
 /*align the placeholder center*/
@@ -104,6 +123,14 @@ display: grid;
 }
 :-moz-placeholder {
   text-align: center;
+}
+
+.startpage input {
+  text-align: center;
+  height: 20px;
+  width: 60%;
+  margin: auto;
+
 }
 
 
