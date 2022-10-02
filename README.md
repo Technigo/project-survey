@@ -7,4 +7,4 @@ I had some problems with css, but managed to fix them through different "work ar
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://project-survey-dayofcoding.netlify.app/
