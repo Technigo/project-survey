@@ -37,7 +37,7 @@ const App = () => {
       {step === 2 && (
         <CoolestThing coolestThing={coolestThing} setCoolestThing={setCoolestThing} />
       )}
-      {/* 3 PERFECT JOB - RADIOBUTTONS & TEXT INPUT */}
+      {/* 3 PERFECT JOB - RADIOBUTTONS */}
       {step === 3 && (
         <PerfectJob perfectJob={perfectJob} setPerfectJob={setPerfectJob} />
       )}
@@ -54,16 +54,14 @@ const App = () => {
           <button type="submit" onClick={handleStepIncrease} className="button">
             {step < stepsTotalCount ? 'Next' : 'Submit'}
           </button>
-          <div className="progress-bar">
-            <p className="counter-text">
-              <progress value={step} max={stepsTotalCount + 1}>
-                {step} of {stepsTotalCount}
-              </progress>
-              <span>
+          <p className="counter-text">
+            <progress value={step} max={stepsTotalCount + 1}>
+              {step} of {stepsTotalCount}
+            </progress>
+            <span>
               Current step: <b>{step}</b> of {stepsTotalCount}
-              </span>
-            </p>
-          </div>
+            </span>
+          </p>
         </>
       )}
     </form>
