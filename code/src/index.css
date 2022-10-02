@@ -261,7 +261,7 @@ background-size: cover;
     margin-bottom: 20px;
   }
 
-/* ------------------tablet section---------------------- */
+  /* ------------------tablet section---------------------- */
 @media (min-width: 667px) and (max-width: 1024px) {
   .body-section {
     display: grid;

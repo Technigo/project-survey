@@ -18,8 +18,7 @@ export const App = () => {
   const [phone, setPhone] = useState('');
   const [location, setLocation] = useState('');
   const [age, setAge] = useState('');
-  const [frequency, setFrequency] = useState();
-
+  const [frequency, setFrequency] = useState([]);
   const handleCounterButtonClick = (shouldIncrease) => {
     if (shouldIncrease && counter < 8) {
       setCounter(counter + 1);
@@ -111,7 +110,9 @@ export const App = () => {
                 <p className="list" tabIndex="0">Phone number: {phone} </p>
                 <p className="list" tabIndex="0">Physical shop location: {location} </p>
                 <p className="list" tabIndex="0">Age group: {age} </p>
-                <p className="list" tabIndex="0">Frequency for newsletter: {frequency}</p>
+                <p className="list" tabIndex="0">Frequency for newsletter:
+                  {frequency.map((element) => <li>{element}</li>)}
+                </p>
               </div>
             </div>
             <button className="submit-button" aria-label="Submit answers" type="submit" onSubmit value="Send">Send</button>
