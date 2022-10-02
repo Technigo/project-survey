@@ -8,6 +8,9 @@ body {
   background-image: url('./assets/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
+  display: absolute;
+  height: 1000px; 
+  width: 100%;
 
 }
 
@@ -44,6 +47,7 @@ code {
 
 /* wrapper */
 .form-wrapper {
+  background-color: white;
   background-color:rgba(255, 255, 255, 0.8);
   border: solid 10px;
   border-color: #f70776;

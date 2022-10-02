@@ -7,7 +7,7 @@ export const MultiplieChoice = ({NextQuestion, backCounter, onDelivery, Delivery
   return (
     <div className="container">
       <div className="delivery">
-      <span className="small-heading"> Choose your delivery option: </span>
+      <span className="small-heading" aria-label="Choose your ice cream flavour"> Choose your delivery option: </span>
       <select  
       name="Delivery"
       value={Delivery}
@@ -20,8 +20,9 @@ export const MultiplieChoice = ({NextQuestion, backCounter, onDelivery, Delivery
       </select>
       </div>
       <div className="btn-container">
-            <button type="button" onClick={NextQuestion} className="button"> Next </button>
             <button type="button" onClick={backCounter} className="button"> Back</button>
+            <button type="button" onClick={NextQuestion} className="button"> Next </button>
+            
             </div>
     </div>
   )

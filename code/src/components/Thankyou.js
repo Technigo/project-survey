@@ -9,7 +9,6 @@ export const ThankYou = () => {
                <p>xoxo IceCream Land</p>
                </article>
         </div>
-        
         </>
     )
 }
