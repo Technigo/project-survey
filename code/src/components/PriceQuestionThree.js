@@ -1,16 +1,16 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react';
 
-const PriceQuestionOne = ({ price1, setPrice1, step }) => {
+const PriceQuestionThree = ({ price3, setPrice3, step }) => {
   return (
-    <div className="question-div priceQ1">
-      <h1>current price1: {price1}</h1>
+    <div className="question-div priceQ3">
+      <h1>current price3: {price3}</h1>
       <form className="question-form">
         <select
-          id="priceSelect1"
+          id="priceSelect3"
           className="price-select"
-          value={price1}
-          onChange={(event) => setPrice1(event.target.value)}>
+          value={price3}
+          onChange={(event) => setPrice3(event.target.value)}>
           <option value="">Select price interval:</option>
           <option value="100-200">100-200 SEK</option>
           <option value="200-300">200-300 SEK</option>
@@ -22,4 +22,6 @@ const PriceQuestionOne = ({ price1, setPrice1, step }) => {
 
   )
 }
-export default PriceQuestionOne
+
+export default PriceQuestionThree
+

@@ -9,7 +9,7 @@ const productTypes = [
   'Accessories for me'
 ];
 
-const ProductType = ({ setProductType, productType }) => {
+const ProductType = ({ setProductType, productType, step }) => {
   const handleProductTypeChange = (event) => {
     setProductType(event.target.value);
   }
@@ -34,7 +34,7 @@ const ProductType = ({ setProductType, productType }) => {
         )}
       </form>
       <div>
-        <p>hej {productType}</p>
+        <p>hej {productType}, now we are on step {step}</p>
       </div>
     </div>
   )

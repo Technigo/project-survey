@@ -2,11 +2,15 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React from 'react';
 
-const Summary = ({ price, productType, gender, ageGroup }) => {
+const Summary = ({
+  price1, price2, price3, productType,
+  gender, ageGroup, step
+}) => {
   return (
     <div className="summary-div">
       <p> Här kommer en summering av dina svar:</p>
-      <table><th>Questions</th>
+      <table><th><h2>Questions</h2></th>
+        <th><h2>Answers</h2></th>
         <tr>
           <th>Age</th>
           <th>{ageGroup}</th>
@@ -20,10 +24,19 @@ const Summary = ({ price, productType, gender, ageGroup }) => {
           <th>{productType}</th>
         </tr>
         <tr>
-          <th>I could pay: </th>
-          <th>{price}</th>
+          <th>I could pay for item 1: </th>
+          <th>{price1} SEK</th>
+        </tr>
+        <tr>
+          <th>I could pay for item 2: </th>
+          <th>{price2} SEK</th>
+        </tr>
+        <tr>
+          <th>I could pay for item 3: </th>
+          <th>{price3} SEK</th>
         </tr>
       </table>
+      <p>{step}</p>
     </div>
 
   );
