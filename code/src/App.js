@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Start from 'components/Start/Start';
 import Questions from 'components/Questions/Questions';
 import End from 'components/End/End';
+import sound from './lib/sound.mp3';
 
 const App = () => {
   const [page, setPage] = useState('start');
@@ -10,11 +11,20 @@ const App = () => {
   const [question2, setQuestion2] = useState('');
   const [question3, setQuestion3] = useState('');
 
+  const playSound = () => {
+    const audio = new Audio(sound);
+    audio.volume = 0.5;
+    audio.play();
+  };
+
   return (
     <div className="main">
       {page === 'start' && (
         <Start
-          nextPage={() => setPage('questions')}
+          nextPage={() => {
+            setPage('questions');
+            playSound();
+          }}
           setName={setName}
           name={name}
         />

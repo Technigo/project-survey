@@ -1,14 +1,8 @@
 import React, { useState } from 'react';
 import RadioButtons from 'components/RadioButtons/Index';
 // import SelectDropdown from 'components/SelectDropdown';
+import { optionsQ1, optionsQ2, optionsQ3 } from 'lib/questions';
 import styles from './Questions.module.css';
-
-const options = [
-  'Bow and Arrow',
-  'an axe ofc!',
-  'Let others fight for you',
-  'Magic'
-];
 
 const Questions = (props) => {
   const [question, setQuestion] = useState(1);
@@ -28,7 +22,7 @@ const Questions = (props) => {
           <p>which weapon do you choose in a fight?</p>
 
           <RadioButtons
-            options={options}
+            options={optionsQ1}
             value={props.question1}
             onChange={props.setQuestion1}
           />
@@ -54,18 +48,11 @@ const Questions = (props) => {
               value={props.question2}
             >
               <option value=""> Select</option>
-              <option value="The one with good grades">
-                The one with good grades
-              </option>
-              <option value="Spending most of the time at the gym">
-                Spending most of the time at the gym
-              </option>
-              <option value="Library is were you find me">
-                Library is were you find me
-              </option>
-              <option value="Favorite place:Smoking area">
-                Favorite place:Smoking area
-              </option>
+              {optionsQ2.map((option) => (
+                <option key={option} value={option}>
+                  {option}
+                </option>
+              ))}
             </select>
           </form>
 
@@ -91,12 +78,7 @@ const Questions = (props) => {
           <h1> Question 3</h1>
           <p>When playing boardgames, are you the one that:</p>
           <RadioButtons
-            options={[
-              'Often wins',
-              'Is skeptical and thinks everyone else is cheating',
-              'Do not want to cheat but cant help to do so',
-              'Just happy to play'
-            ]}
+            options={optionsQ3}
             value={props.question3}
             onChange={props.setQuestion3}
           />

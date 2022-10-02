@@ -1,16 +1,17 @@
+import { optionsQ1 } from 'lib/questions';
 import React from 'react';
 import styles from './End.module.css';
 
 const End = (props) => {
   let yourCharacter;
-  if (props.question1 === 'Bow and Arrow') {
+  if (props.question1 === optionsQ1[0]) {
     yourCharacter = 'Legolas!';
-  } else if (props.question1 === 'an axe ofc!') {
+  } else if (props.question1 === optionsQ1[1]) {
     yourCharacter = 'Gimli!';
-  } else if (props.question1 === 'Magic') {
-    yourCharacter = 'Gandalf!';
-  } else if (props.question1 === 'Let others fight for you') {
+  } else if (props.question1 === optionsQ1[2]) {
     yourCharacter = 'Saruman';
+  } else if (props.question1 === optionsQ1[3]) {
+    yourCharacter = 'Gandalf!';
   }
 
   return (
@@ -22,7 +23,7 @@ const End = (props) => {
         <span className={styles.answer}>{props.question2}</span>
         <p>When playing boardgames, are you the one that: </p>
         <span className={styles.answer}>{props.question3}</span>
-        <p className={styles.yourCharacter}>You became:</p>
+        <p className={styles.yourCharacter}> {props.name}, You became:</p>
         <span className={styles.finalCharacter}>{yourCharacter}</span>
       </div>
     </div>
