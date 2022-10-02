@@ -1,12 +1,9 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This small servey is made with React and hooks. I wanted to keep the design simple and instead focus on practising React.
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I had some problems with css, but managed to fix them through different "walk arounds". I still have some issues with understanding aria-labels and tab-index, so that is what I would want to focus on more. I have mainly used Stack Overflow and google when running in to problems. 
 
 ## View it live
 
