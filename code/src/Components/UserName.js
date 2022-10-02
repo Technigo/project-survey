@@ -15,6 +15,7 @@ const UserName= ({userName, setUserName, handleNextQuestionClick, counter}) => {
 
       <div className="inputWrapper">
         <input
+          lable="Type your name here"
           type="text"
           placeholder='Type your name here'
           value={userName} 
