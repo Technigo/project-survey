@@ -15,7 +15,7 @@ import React from 'react';
         value= {temperature}
         className="slider"
         type="range"
-        min="-15"
+        min="0"
         max="35"
         onChange={event => setTemperature(event.target.value)}
       />
@@ -28,7 +28,7 @@ import React from 'react';
     </div>
 
     <div className='questionNumber'>
-      <p>Question number</p> {counter} /5
+    <p> {counter} /5 </p>
     </div>
   </>   
   );

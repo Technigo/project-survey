@@ -3,37 +3,21 @@ import React from 'react';
 
 const Summary= ({ userName, transportation, active, temperature, handleStartOverClick, counter}) => {
 
-
-  // const activeWordToUse = () => {
-  //   if (temperature > 5 || active === 'sporty' || transportPreference === 'plane' ) {
-  //     return "to go skiing all day long."
-  //   } else if (temperature > 5 || active === 'sporty' || transportPreference === 'boat' ) {
-  //     return "go for polar bear sightseeing"
-  //   } else if (temperature > 5 || active === 'sporty'|| transportPreference === 'train' ) {
-  //     return "Check in to ice hotell"
-  //   } else {
-  //     return "Thailand"
-  //   }
-  // }
- 
   const tempWordToUse = () => {
-    if (temperature > 5 || active === 'sporty' || transportPreference === 'plane' ) {
-      return "to go skiing all day long."
-    } else if (temperature > 5 || active === 'sporty' || transportPreference === 'boat' ) {
-      return "go for polar bear sightseeing"
-    } else if (temperature > 5 || active === 'sporty'|| transportPreference === 'train' ) {
-      return "Check in to ice hotell"
-    } else {
+    if (temperature < 5 ) {
+      return "Kiruna"
+    } else if (temperature >24) {
       return "Thailand"
+    } else {
+      return "Amsterdam"
     }
   }
 
-
       return (
         <>
-
         <div className="summaryWrapper">
-        <p> Hello {userName} We would recomend you to take the {transportation} to {tempWordToUse()} and {activeWordToUse()} </p>
+        <p> Hello {userName} We would recomend you to take the {transportation} to {tempWordToUse()} and {active} </p>
+        <p>Have a nice trip!</p>
         </div>
     
   <div className='buttonWrapper'>

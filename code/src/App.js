@@ -23,7 +23,7 @@ export const App = () => {
     };
 
   const handleStartOverClick = () => {
-    setCounter(1);
+    location.reload()
   };
   
   return (

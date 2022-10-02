@@ -11,7 +11,7 @@ const Transportation= ({transportation, setTransportation, handleNextQuestionCli
 
     return (
     <> 
-        <div className="questionWrapper">
+        <div className="transporationQuestionWrapper">
                 <p> How do you want to travel?</p>
         </div>
 
@@ -25,7 +25,7 @@ const Transportation= ({transportation, setTransportation, handleNextQuestionCli
                 onChange={event => setTransportation(event.target.value)}
                 checked={transportation === travel}  
                 />
-                {travel}
+                <p className="transportationText" >{travel}</p>
             </section>
             ))}
         </div>
@@ -36,7 +36,7 @@ const Transportation= ({transportation, setTransportation, handleNextQuestionCli
         </div>
 
         <div className='questionNumber'>
-            <p>Question number</p> {counter} /5
+            <p> {counter} /4 </p>
         </div>
     </>
     );

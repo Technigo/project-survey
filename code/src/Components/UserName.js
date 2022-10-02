@@ -27,7 +27,7 @@ const UserName= ({userName, setUserName, handleNextQuestionClick, counter}) => {
     </div>
 
     <div className='questionNumber'>
-      <p>Question number {counter} /5 </p>
+      <p>{counter} /4 </p>
     </div>
   </>
   );

@@ -25,16 +25,13 @@ code {
     monospace;
 }
 
+
 header {
   background-color: var(---main);
   display: flex;
   width: 100%;
-  /* width: 80%; */
-  /* margin-left: 3%; */
-  margin-top: 20px;
   padding: 3px;
   align-items: center;
-  /* text-align: left; */
   text-align: center;
   justify-content: space-evenly;
 }
@@ -118,15 +115,6 @@ button:hover {
   text-align: center;
 }
 
-.transportationWrapper {
-  display: flex;
-  height: 50px;
-  width: 80%;
-  margin-left: 10%;
-  margin-bottom: 100px;
-  text-align: center;
-}
-
 .temperatureWrapper {
   border: 2px solid transparent;
   height: 120px;
@@ -136,17 +124,14 @@ button:hover {
   text-align: center;
 }
 
-.summaryWrapper {
-  height: 330px;
+
+
+.questionNumber {
+  border: 2px solid transparent;
   width: 80%;
   margin-left: 10%;
   margin-top: 50px;
   text-align: center;
-}
-
-.questionNumber {
-  align-items: center;
-  font-family: 'Inter Tight', sans-serif;
 }
 
 /* Name */
@@ -170,12 +155,38 @@ input[type=text]:hover {
   text-align: center;
 }
 
+/* Transportation */
+.transporationQuestionWrapper {
+  border: 2px solid transparent;
+  height: 100px;
+  width: 80%;
+  margin-left: 10%;
+  margin-top: 50px;
+  text-align: center;
+}
 
+.transportationWrapper {
+  display: flex;
+  flex-direction: column;
+  border: 2px solid black;
+  height: 180px;
+  width: 40%;
+  margin-left: 30%;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.transportationText {
+  display: flex;
+  flex-direction: row;
+  color: var(---text);
+  font-size: 28px;
+  font-family: 'Inter Tight', sans-serif;
+}
 
 .radio-lable {
+  display: flex;
   flex-direction: row;
-  /* border: 2px solid black; */
-  width: 30%;
   font-size: 25px;
   font-family: 'Inter Tight', sans-serif;
   color: var(---text);
@@ -184,8 +195,6 @@ input[type=text]:hover {
 }
 
 /* Temperature */
-
-
 .degrees {
   font-size: 45px;
   font-family: 'Inter Tight', sans-serif;
@@ -231,4 +240,42 @@ input[type=text]:hover {
   height: 50px;
   font-family: 'Inter Tight', sans-serif;
   font-size: 20px;
+}
+
+/* Summary */
+.summaryWrapper {
+  height: 330px;
+  width: 60%;
+  margin-left: 20%;
+  margin-top: 50px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+header {
+  text-align: left;
+}
+
+.headerText {
+  height: 300px;
+  width: 100%;
+  margin-left: 10%;
+}
+
+h1 {
+  width: 300px;
+  font-size: 50px;
+  line-height: 70px;
+}
+
+.secondHeader {
+  font-size: 24px;
+}
+
+p {
+  font-size: 35px;
+}
+
+
+
 }
