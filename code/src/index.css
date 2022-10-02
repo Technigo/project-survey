@@ -1,42 +1,68 @@
-:root {
-  accent-color: #48918f;
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+
+html {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
 }
 
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: 'Karla', sans-serif;
+  font-size: 20px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 100%; 
-  min-height: 100%;
-  background-color: #BBDED6;
+  height: 100%;
+  background: linear-gradient(112.9deg, rgba(244, 197, 205, 0.4) 0%, rgba(221, 190, 197, 0.32) 100%), #FFFFFF;
+  color: #FFF8FA;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+h1 {
+  margin-top: 18px;
+}
+
+h2 {
+  color:#EDCAD0;
+  font-size: 14px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: .5px;
+  margin-bottom: -19px;
+}
+
+.description {
+  font-size: 24px;
+  font-weight: 400;
+  color:#EDCAD0;
+  margin-top: 18px;
+}
 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
-  min-width: 100%;
-  padding: 20% 0px;
+  height: 600px;
+  width: 750px; 
+  margin: auto;
 }
 
 .survey-box {
-  width: 50%;
-  padding: 40px;
-  background-color: #ffff;
-  border-radius: 10px;
+  padding: 50px 60px;
+  background-color: #B8616F;
+  border-radius: 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-around;
-  box-shadow: inset 0 0 4px #48918f;
+  justify-content: space-between;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
 }
 
 form {
@@ -44,21 +70,74 @@ form {
   flex-direction: column;
 }
 
-.submit-msg {
-  font-style: oblique;
-  font-size: small;
+.radio-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
+select {
+  font-size: 20px;
+  margin-top: 25px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-style: oblique;
+  margin-bottom: 25px;
+}
+a:hover {
+  color: white;
+  text-decoration: underline;
+
+}
+
+.submit-msg {
+  font-style: oblique;
+  color:#EDCAD0;
+}
+
+.submit-msg p{
+  margin: 0;
+}
 
 .button {
-  box-shadow: 4px 3px 2px 0px #48918f;
-  border-radius: 5px;
-  background-color: #BBDED6;
+  height: 60px;
+  border-radius: 20px;
+  background-color: #FFF8FA;
+  padding: 16px 30px;
   border: none;
-  padding: 10px 20px;
-  margin: 5px;
+  font-size: 24px;
+  color:#B8616F;
+  font-family: 'Karla', sans-serif;
+  transition: all 0.25s ease-in-out;
+}
+
+.button + .button {
+  margin-left: 20px;
 }
 
 .button:hover {
-  background-color: #8fb7ae;
+  transform: scale3d(1.05, 1.05, 1.05);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, .2);
 }
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+label {
+  background: #b35363;
+  padding: 10px 14px 10px 10px;
+  border-radius: 20px;
+  width: 100%;
+  margin-bottom: 10px;
+  transition: background .25s ease-out;
+}
+label:hover {
+  background: #843d49;
+}
+

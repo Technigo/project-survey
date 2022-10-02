@@ -23,7 +23,7 @@ export const App = () => {
     window.location.reload(false);
   }
   const handleSubmit = () => {
-    window.alert('Thanks for doing our survey! Your answers are submitted')
+    window.alert('Thanks for doing our survey!')
   }
 
   return (
@@ -38,67 +38,69 @@ export const App = () => {
           </>
         )}
         {counter === 1 && (
-          <div>
+          <>
             <Sleep
               sleepHabit={userSleepHabit}
               setSleepHabit={setUserSleepHabit} />
-            <div className="button-items">
+
+            <div className="button-group">
               <Button
-                btnText="Go back"
+                btnText="Back"
                 btnClickFunction={() => handleCounterButtonClick(false)} />
               <Button
-                btnText="Next question"
+                btnText="Next"
                 btnClickFunction={() => handleCounterButtonClick(true)} />
             </div>
-          </div>
+          </>
         )}
         {counter === 2 && (
-          <div>
+          <>
             <Food
               foodHabit={userFoodHabit}
               setFoodHabit={setUserFoodHabit} />
-            <div className="button-items">
 
+            <div className="button-group">
               <Button
-                btnText="Go back"
+                btnText="Back"
                 btnClickFunction={() => handleCounterButtonClick(false)} />
               <Button
-                btnText="Next question"
+                btnText="Next"
                 btnClickFunction={() => handleCounterButtonClick(true)} />
             </div>
-          </div>)}
+          </>)}
         {counter === 3 && (
-          <div>
+          <>
             <Activity
               activityTime={userActivity}
               setActivityTime={setUserActivity} />
-            <div className="button-items">
 
+            <div className="button-group">
               <Button
-                btnText="Go back"
+                btnText="Back"
                 btnClickFunction={() => handleCounterButtonClick(false)} />
               <Button
-                btnText="Next question"
+                btnText="Next"
                 btnClickFunction={() => handleCounterButtonClick(true)} />
             </div>
-          </div>)}
+          </>)}
         {counter === 4 && (
-          <><Summary
-            sleepHabit={userSleepHabit}
-            foodHabit={userFoodHabit}
-            activityTime={userActivity} />
-          <div className="button-items">
+          <>
+            <Summary
+              sleepHabit={userSleepHabit}
+              foodHabit={userFoodHabit}
+              activityTime={userActivity} />
 
-            <Button
-              btnText="Submit!"
-              btnClickFunction={handleSubmit} />
-            <Button
-              btnText="Go back"
-              btnClickFunction={() => handleCounterButtonClick(false)} />
-            <Button
-              btnText="Start over"
-              btnClickFunction={refreshPage} />
-          </div>
+            <div className="button-group">
+              <Button
+                btnText="Submit!"
+                btnClickFunction={handleSubmit} />
+              <Button
+                btnText="Back"
+                btnClickFunction={() => handleCounterButtonClick(false)} />
+              <Button
+                btnText="Start over"
+                btnClickFunction={refreshPage} />
+            </div>
           </>
         )}
       </div>

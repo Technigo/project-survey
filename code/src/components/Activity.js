@@ -1,12 +1,17 @@
 import React from 'react'
+import { ActivityIcon } from './ActivityIcon'
 
 export const Activity = ({ activityTime, setActivityTime }) => {
   const handleUserActivityChange = (event) => {
     setActivityTime(event.target.value)
   }
   return (
-    <div>
-      <h3>How physical active are you in average during a week?</h3>
+    <div className="content">
+      <ActivityIcon />
+      <h2>Physical activity</h2>
+
+      <h3>How many minutes/week do you spend on moderate/vigorous-intensity activities?</h3>
+      <a href="https://www.hsph.harvard.edu/obesity-prevention-source/moderate-and-vigorous-physical-activity/">What is moderate-vigorous activities?</a>
       <div>
         <select onChange={handleUserActivityChange}>
           <option label="" selected="true" disabled value="">Select an option:</option>

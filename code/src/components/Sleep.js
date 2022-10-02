@@ -1,13 +1,17 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
+import { SleepIcon } from './SleepIcon'
 
 export const Sleep = ({ sleepHabit, setSleepHabit }) => {
   const handleUserHabitChange = (event) => {
     setSleepHabit(event.target.value)
   }
   return (
-    <div>
-      <h3>How many hours do you sleep in average per night?</h3>
+    <div className="content">
+      <SleepIcon />
+      <h2>Sleep habits</h2>
+
+      <h3>How many hours do you sleep per night?</h3>
       <div className="radio-buttons">
         <label>
           <input
@@ -19,8 +23,6 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
             onChange={handleUserHabitChange} />
           Less than 4 hours
         </label>
-      </div>
-      <div className="radio-buttons">
         <label>
           <input
             type="radio"
@@ -30,8 +32,6 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
             onChange={handleUserHabitChange} />
           4-6 hours
         </label>
-      </div>
-      <div className="radio-buttons">
         <label>
           <input
             type="radio"
@@ -41,8 +41,6 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
             onChange={handleUserHabitChange} />
           6-8 hours
         </label>
-      </div>
-      <div className="radio-buttons">
         <label>
           <input
             type="radio"

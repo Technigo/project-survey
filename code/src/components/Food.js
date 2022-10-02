@@ -1,11 +1,16 @@
 import React from 'react'
+import { FoodIcon } from './FoodIcon'
 
 export const Food = ({ foodHabit, setFoodHabit }) => {
   const handleUserFoodHabitChange = (event) => {
     setFoodHabit(event.target.value)
   }
   return (
-    <div>
+    <div className="content">
+      <FoodIcon />
+
+      <h2>Healthy foods</h2>
+
       <h3>How much veggies/fruit do you eat a day?</h3>
       <div>
         <select onChange={handleUserFoodHabitChange}>
