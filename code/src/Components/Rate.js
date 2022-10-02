@@ -7,7 +7,7 @@ export const Rate = ({ rate, setRate }) => {
   return (
     <div className="outerWrapper">
       <div className="questionContainer">
-        <img className="questionImage" alt="coffee" src="https://images.unsplash.com/photo-1463740839922-2d3b7e426a56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2500&q=80" />
+        <img className="questionImage" alt="bowl with fruits" src="https://images.unsplash.com/photo-1463740839922-2d3b7e426a56?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2500&q=80" />
         <p>On a scale from 1 to 10, how much do you love breakfast?</p>
         <input
           className="slider"
@@ -20,7 +20,7 @@ export const Rate = ({ rate, setRate }) => {
           value={rate}
           defaultValue="5"
           onChange={handleRateChange} />
-        <p className="rangeSliderValue">{rate}</p>
+        <p className="sliderValue">{rate}</p>
       </div>
     </div>
   );

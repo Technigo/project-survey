@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
 
+/*COLOR PALETTE*/
 :root {
   --white: #ffffff;
   --black: #3c3b3a;
@@ -171,7 +172,7 @@ p {
   margin-top: 10%;
 }
 
-/*SELECT DRINK*/
+/*DRINK PAGE*/
 .inputContainer {
   display: flex;
   align-content: center;
@@ -179,25 +180,11 @@ p {
   margin-top: 5%;
 }
 
-.label{
-  width: 30px;
-}
-
-
 .question3 {
   margin-top: 50px;
 }
 
-.resultContainer{
-  margin-top: 80px;
-}
-
-.input {
-  font-size: 17px;
-  text-decoration: underline;
-  color: var(--pink);
-}
-
+/*SLIDER*/
 .slider {
   -webkit-appearance: none;
   border-radius: 5px;
@@ -215,7 +202,17 @@ p {
   cursor: pointer;
 }
 
-/* FOR LAPTOP*/
+/*RESULT PAGE*/
+.resultContainer{
+  margin-top: 80px;
+}
+
+.input {
+  font-size: 17px;
+  color: var(--pink);
+}
+
+/* FOR TABLET*/
 @media (min-width:667px){
   h1 {
     font-size: 50px;
@@ -241,6 +238,8 @@ p {
   }
 
   .questionContainer {
+    width: 450px;
+    height: 350px;
     margin: 15% 0 0 0;
   }
 
