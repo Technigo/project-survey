@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This project was made to test out useState hooks in react. The idea is a helping template to create a passive-aggressive email to whomever you see fit.
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+I started with the content of the page. Sketched out how I wanted every component to look like and then I started to add every form element piece by piece to see how everything worked. After that I split up everything into different components and then added styling.
+
+If I got more time I would continue styling the project. I would also make the "send email" button to work and write my own terms & conditions.
 
 ## View it live
-
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+splendorous-conkies-20a956.netlify.app
