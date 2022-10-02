@@ -120,12 +120,6 @@ h2 {
   margin: 40px 15px;
 }
 
-
-/*QUESTION 1*/
-
-
-/*QUESTION 2*/
-
 /*QUESTION 3*/
 .radioBtn {
   display: flex;
@@ -170,7 +164,7 @@ img {
 @media (min-width: 668px) and (max-width:1024px) {
   .question-box {
     margin-top: 20%;
-    margin-left: 20px;
+    margin-left: 40px;
   }
   
   .question {
@@ -181,12 +175,12 @@ img {
   }
   
   .button-text p {
-    margin-left: 20px;  
+    margin-left: 40px;  
   }
   
   p {
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 100px;
     font-weight: bold;
   }
@@ -194,7 +188,8 @@ img {
   label {
     display: block;
     font-family: 'Courier New', Courier, monospace;
-    font-size: 18px;
+    font-size: 25px;
+    line-height: 35px;
   }
   
   .label-box {
@@ -215,7 +210,7 @@ img {
   
   .footer {
     position: absolute;
-    width: 500px;
+    width: 600px;
     bottom: 5%;
     left: 5%;
     text-align: left;
@@ -223,7 +218,7 @@ img {
   
   .footer p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     line-height: 18px;
     padding: 1%;
   }
@@ -247,22 +242,16 @@ img {
     font-family: 'Dancing Script', cursive;
     font-size: 120px;
     line-height: 200px;
-    margin: 80px 40px;
+    margin: 60px 40px;
   }
   
   h2 {
     font-family: 'Courier New', Courier, monospace;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 25px;
     line-height: 40px;
     margin: 40px 40px;
   }
-  
-  
-  /*QUESTION 1*/
-  
-  
-  /*QUESTION 2*/
   
   /*QUESTION 3*/
   .radioBtn {
@@ -291,7 +280,7 @@ img {
     font-size: 18px;
     line-height: 30px;
     font-weight: bold;
-    margin: 20px 20px;
+    margin: 20px 40px;
   }
   
   .summary img {
@@ -395,9 +384,6 @@ img {
     margin: 50px 0px;
   }
 
-  /*QUESTION 1*/
-  /*QUESTION 2*/
-
   /*QUESTION 3*/
   .radioBtn {
       display: flex;
@@ -412,9 +398,6 @@ img {
     flex-direction: row;
     justify-content: space-around;
   }
-
-  /*QUESTION 4*/
-
 
   /*SUMMARY*/
   .summary-text {
