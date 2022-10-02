@@ -13,7 +13,7 @@ const Start = (props) => {
       <div className={styles.titleContainer}>
         <h2> Which character from</h2>
 
-        <h1 className={styles.lotr}>Lord of the Rings</h1>
+        <h1 className={styles.lotr}> The Lord of the Rings</h1>
         <h2>are you?</h2>
 
         <p>First, what is you name?</p>
