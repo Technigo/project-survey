@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 const TextAreaInput = ({headline, input, setInput, inputLabel, id, placeholder, htmlFor}) => {
 

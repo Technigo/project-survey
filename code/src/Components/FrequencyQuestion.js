@@ -1,13 +1,5 @@
 import React from 'react';
 
-const museumVisits = [
-  "1-2",
-  "3-5",
-  "6-10",
-  "10+",
-  "I never visit museums",
-]
-
 const FrequencyQuestion = ({frequency, setFrequency}) => {
 
   const handleFrequencyChange = (event) => {

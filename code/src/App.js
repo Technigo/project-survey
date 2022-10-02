@@ -53,34 +53,34 @@ export const App = () => {
 
           {step === 5 && (
             <div>
-            <TextAreaInput 
-              headline="A memorable visit?"
-              input={memory}
-              setInput={setMemory}
-              inputLabel="We are interested in hearing if you have a special memory from a visit at one of Stockholm's
-              museums that you wish to share. Perhaps you remember a certain exhibit fondly, or have a mildly traumatic
-              experiece related to a boring visit?"
-              id="memorable-visit"
-              placeholder="A memorable visit..."
-              htmlFor="memorable-visit"
-              />
-              
+              <TextAreaInput 
+                headline="A memorable visit?"
+                input={memory}
+                setInput={setMemory}
+                inputLabel="We are interested in hearing if you have a special memory from a visit at one of Stockholm's
+                museums that you wish to share.
+                Perhaps you remember a certain exhibit fondly, or have a mildly traumatic
+                experiece related to a boring visit?"
+                id="memorable-visit"
+                placeholder="A memorable visit..."
+                htmlFor="memorable-visit"
+                />  
             </div>
           )}
 
           {step === 6 && (
             <div>
-            <TextAreaInput 
-              headline="Room for improvements!"
-              input={improvements} 
-              setInput={setImprovements} 
-              inputLabel="Lastly, we would highly appriciate if you would want to share your thoughts on what
-              could be improved when it comes to the museums of Stockholm"
-              id="improvements"
-              placeholder="My thoughts on measures that could be taken to improve Stockholm's museums..."
-              htmlFor="improvements"
-              />
-            <button className="submit-btn" type="button" onClick={handleStepIncrease}>Finish survey</button>
+              <TextAreaInput 
+                headline="Room for improvements!"
+                input={improvements} 
+                setInput={setImprovements} 
+                inputLabel="Lastly, we would highly appriciate your feedback on what can be improved in the 
+                Stockholm museum scene."
+                id="improvements"
+                placeholder="This would make the experience better..."
+                htmlFor="improvements"
+                />
+              <button className="submit-btn" type="button" onClick={handleStepIncrease}>Finish survey</button>
             </div>
           )} 
 

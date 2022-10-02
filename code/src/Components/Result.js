@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Result = ({age, frequency, museum, memory}) => {
+const Result = ({age, frequency, museum, memory, improvements}) => {
     return (
       <>
         <h2>Thank you for participating!</h2>
@@ -11,6 +11,7 @@ const Result = ({age, frequency, museum, memory}) => {
               <li><span className="bold-p">Visits per year:</span> {frequency}</li>
               <li><span className="bold-p">Favoriture museum:</span> {museum} </li>
               <li><span className="bold-p">Museum memory:</span> {memory}</li>
+              <li><span className="bold-p">Possible improvemets:</span> {improvements}</li>
             </ul>
 
           <div className="link-container">
