@@ -10,15 +10,15 @@ const questionsData = [
   },
   {
     id: '1',
-    question_title: "Nice, let's do this!",
-    question_text: "First of all, what's your name?",
-    input_type: 'text'
+    questionTitle: "Nice, let's do this!",
+    questionText: "First of all, what's your name?",
+    inputType: 'text'
   },
   {
     id: '2',
-    question_title: 'ENERGY LEVEL',
-    question_text: 'Energywise, how much energy do you need?',
-    input_type: 'select',
+    questionTitle: 'ENERGY LEVEL',
+    questionText: 'Energywise, how much energy do you need?',
+    inputType: 'select',
     options: [
       { value: 'A lot' },
       { value: 'Just enough to keep me going' },
@@ -27,9 +27,9 @@ const questionsData = [
   },
   {
     id: '3',
-    question_title: 'GENRE',
-    question_text: 'What type of music do you prefer?',
-    input_type: 'radio',
+    questionTitle: 'GENRE',
+    questionText: 'What type of music do you prefer?',
+    inputType: 'radio',
     options: [
       { value: 'Pop/Rock', label: 'Pop/Rock' },
       { value: 'Hiphop', label: 'Hiphop' },
@@ -38,9 +38,9 @@ const questionsData = [
   },
   {
     id: '4',
-    question_title: 'EPOKE',
-    question_text: 'Do you prefer contemporary music or are oldies?',
-    input_type: 'radio',
+    questionTitle: 'EPOKE',
+    questionText: 'Do you prefer contemporary music or are oldies?',
+    inputType: 'radio',
     options: [
       { value: 'Contemporary', label: 'Contemporary' },
       { value: 'Oldies', label: 'Oldies' }

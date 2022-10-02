@@ -11,28 +11,27 @@ const QuestionTitle = ({ heading, text }) => {
 };
 
 const Questions = ({
-  id,
-  question_title,
-  question_text,
-  input_type,
+  questionTitle,
+  questionText,
+  inputType,
   options,
   onChange,
   userInput
 }) => {
-  if (input_type === 'text') {
+  if (inputType === 'text') {
     return (
       <div className="box-question">
-        <QuestionTitle heading={question_title} text={question_text} />
+        <QuestionTitle heading={questionTitle} text={questionText} />
         <input
           onChange={onChange}
           placeholder="Type your name here..."
           required />
       </div>
     );
-  } else if (input_type === 'select') {
+  } else if (inputType === 'select') {
     return (
       <div className="box-question">
-        <QuestionTitle heading={question_title} text={question_text} />
+        <QuestionTitle heading={questionTitle} text={questionText} />
 
         <div className="select">
           <select onChange={onChange} required>
@@ -49,16 +48,16 @@ const Questions = ({
         </div>
       </div>
     );
-  } else if (input_type === 'radio') {
+  } else if (inputType === 'radio') {
     return (
       <div className="box-question">
-        <QuestionTitle heading={question_title} text={question_text} />
+        <QuestionTitle heading={questionTitle} text={questionText} />
         {options.map((option) => {
           return (
             <div className="radio" key={option.value}>
               <input
                 id={option.value}
-                type={input_type}
+                type={inputType}
                 name="name"
                 value={option.value}
                 checked={userInput === option.value}
@@ -71,7 +70,7 @@ const Questions = ({
       </div>
     );
   } else {
-    return <>it s another type: {input_type}</>;
+    return <>it s another type: {inputType}</>;
   }
 };
 export default Questions;
