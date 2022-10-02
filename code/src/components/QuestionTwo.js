@@ -9,13 +9,13 @@ export const QuestionTwo = (props) => {
     "Thin small ladder beside the cube",
     "Rusty ladder far far away",
     "There are many ladders all over the place, cant count!"]
-    console.log(props.value)
+            //console.log(props.value) dev purposes
 
-return(                                   //stop rerendering on submit
-    <form className="container" onSubmit={(event) => event.preventDefault}> 
-        <p className="answerOptions">Answer options:</p>
+return(    //stop rerendering on submit
+    <form className="containerTwo m-8" onSubmit={(event) => event.preventDefault}> 
+        <p className="answerOptions text-center">Answer options:</p>
         {answerTwoOptions.map(answer =>(
-            <label className="label" key = {answer}>
+            <label className="label p-5  text-lg" key = {answer}>
                 <input 
                 type = "radio"
                 value = {answer}
@@ -27,7 +27,6 @@ return(                                   //stop rerendering on submit
             </label>
         ))}
     </form>
-    
     )
     
 }

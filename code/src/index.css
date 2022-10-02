@@ -2,30 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 
-
-*{                      /*using this method to RESET the default margin around the pic!*/
+*{                                              /*using this method to RESET the default margin around the pic!*/
   padding:0;
   margin: 0;
 }
-
 
 body {
   font-family: 'Courier New', Courier, monospace;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  margin: 15px;
-  background-image: url("desert.jpg");  /*defining the image first*/
-  background-size: cover;             /*covering the the page with the whole picture,meaning no partials*/
-  background-repeat: no-repeat;       /*meaning we wont repeat it many times in a row*/
-  height: 100vh;      /*VIEWPORTHEIGHT, takes the complete 100% height of the page, automtic adjustment also in RESPOSSIVE DESIGN*/
-  
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-
+  background-image: url("desert.jpg");      /*defining the image first*/
+  background-size: cover;                  /*covering the the page with the whole picture,meaning no partials*/
+  background-repeat: no-repeat;           /*meaning we wont repeat it many times in a row*/
+  height: 100vh;                         /*VIEWPORTHEIGHT, takes the complete 100% height of the page, automtic adjustment also in RESPOSSIVE DESIGN*/ 
 }
 
 .headline{
@@ -37,16 +27,13 @@ code {
     }
 }
 
-
 .counter{
-  display: flex;
-  justify-content: center;    /*place the question in the middle*/
+  justify-content: center;      /*place the question in the middle*/
   font-size: 25px;
   opacity: 0.8;
   border-radius: 20px;
-  padding: 15px;
+  
   background-color: rgb(227, 224, 152);
-
 }
 
 .button{
@@ -58,14 +45,12 @@ code {
   border-radius: 15px;
   width:200px;
   background-color: rgb(152, 212, 227);
-  
 }
 
 .textBox{
-  width:800px;
-  border-radius: 20px;
+  width:700px;
+  text-align: center;
   box-shadow: 5px 5px #dde0ab;
-  font-size: 20px;
   font-weight: 200px;
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
@@ -75,42 +60,43 @@ code {
   font-size: 28px;
 }
 
+.label,
+.answerOptions,
+.dropDownLabel,
+.insights,
+.dropDown{
+  font-weight: 700;
+  font-family: 'Courier New', Courier, monospace;
+}
+
 .radioOptions{
   width: 400px;
   height: 250px;
-  margin-left:30px;
 }
 
-
-
 .label{
-  float: left;
-  padding: 10px;
-  font-size: 20px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
-  
+  display: block;
+  text-align: left;
 }
 
 .answerOptions{
   font-size: 30px;
-  font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
 }
 
 .dropDownLabel{
   float:left;
   font-family: 'Courier New', Courier, monospace;
-  font-weight: 700;
   width: 150px;
   height: 250px;
-  margin-left:30px;
 }
 
 .dropDown{
-  font-weight: 700;
   font-size: 20px;
   background-color: rgb(152, 212, 227);
   border-radius: 10px;
   box-shadow: 5px 5px 5px white;
+}
+
+.inputPad{
+  margin-left: 10%;
 }
