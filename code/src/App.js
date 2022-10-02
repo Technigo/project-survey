@@ -2,7 +2,7 @@ import React from 'react'
 
 import Form from './Components/Form'
 
-export const App = () => {
+const App = () => {
   return (
     <div>
       <Form />
