@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+/* eslint-disable */
 import React from 'react';
 
 export const Books = ({ book, setBooks }) => {

@@ -1,4 +1,4 @@
-/* eslint-disable linebreak-style */
+/* eslint-disable */
 import React, { useState } from 'react';
 import { Books } from 'components/Books';
 import { Result } from 'components/Result';
