@@ -11,18 +11,19 @@ export const StartDay = ({ setStartDay }) => {
   return (
     <div className="survey-item start-day">
       <p className="section-heading">How do you start your day?</p>
-
-      {dayArray.map((item) => (
-        <label className="start-day" key={item} htmlFor="startDay">
-          <input
-            type="radio"
-            value={item}
-            name="startDay"
-            onChange={(event) => setStartDay(event.target.value)}
-            Checked={dayArray === item} />
-          {item}
-        </label>
-      ))}
+      <div className="text-container">
+        {dayArray.map((item) => (
+          <label className="start-day" key={item} htmlFor="startDay">
+            <input
+              type="radio"
+              value={item}
+              name="startDay"
+              onChange={(event) => setStartDay(event.target.value)}
+              Checked={dayArray === item} />
+            {item}
+          </label>
+        ))}
+      </div>
     </div>
   );
 };

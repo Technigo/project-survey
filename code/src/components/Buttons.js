@@ -29,7 +29,7 @@ export const Buttons = ({ section, setSection }) => {
         </button>
       )}
 
-      {section >= 1 && section <= 4 && (
+      {section >= 1 && section <= 3 && (
         <button className="button" onClick={nextSection} type="button">
           Next Question
         </button>

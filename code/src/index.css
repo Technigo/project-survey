@@ -1,39 +1,42 @@
 @import url('https://fonts.googleapis.com/css2?family=Gochi+Hand&display=swap');
 
+/* ----  COLOR
+    #1d192b lila 
+    #564967 viol
+    */
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 html, body {
 height: 100%;
 }
 
 body {
-  height: 100%;
-  max-width: 1024px;
+  /* height: auto;*/
+  width: 100%; 
   display: flex;
   justify-content: center;
   align-items: center;
-  /* background img */
-  background-image: url("./images/pexels-david-jusko-6354480_L.png");
+  background-image: url("./images/pexels-david-jusko-6354480_L.png"); /* snowy mountain */
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: 'Gochi hand', serif;
-  
-
-  /* font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  color: #f9f3e9;;
 }
 
+/* 
 code {
   font-family: 'Gochi hand', serif ,
     monospace;
-}
+    
+} */
 
 h1,
 h2 {
@@ -42,14 +45,33 @@ h2 {
   margin: 10px;
 }
 
-h1 {
-  font-size: 30px;
-  margin-bottom: 10px;
+h1, h2, .section-heading {
+  margin-bottom: 30px;
+  color: #f9f3e9;
+  text-shadow:
+      0 0 15px #f8e1b3,
+      0 0 40px #e8bb7d,
+      0 0 100px #1d192b;     
 }
 
 h2 {
-  font-size: 20px;
-  margin: auto;
+  color: #fff;
+}
+
+h3 {
+  font-size: 2.5rem;
+  font-weight: 100;
+  margin-top: 20px;
+  text-shadow:
+      0 0 15px #f8e1b3,
+      0 0 40px #e8bb7d,
+      0 0 100px #1d192b;
+}
+
+.section-heading {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
 }
 
 .summary-section,
@@ -58,70 +80,119 @@ h2 {
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  max-width: 960px;
+  max-width: 1024px;
   margin: auto;
   margin-top: 80px;
   padding: 8px;
 }
 
-.summary-text {
-  font-size: 16px;
-  line-height: 1.7;
-}
-
-.form {
-  display: flex;
-  justify-content: center;
+/* .form {
+  display: flex;  
   flex-direction: column;
-}
+  justify-content: center;
+} */
 
 .survey-item {
   margin: 20px;
 }
 
-.what-kind,
-.feeling {
-  display: flex;
-  flex-direction: column;
-  font-size: 15px;
+/* ---Raidio buttons ----- */
+
+.text-container {
+  background-color: rgba(29, 25, 43, 0.3); /* For browsers that do not support gradients */
+  border-radius: 10px;
+  box-shadow: 
+      0 0 100px #2d2743;   
+}
+
+input {
+  margin-right: 15px;
+  margin-top: 8px;
+  align-self: flex-start;
+
+
 }
 
 .start-day, .relationships {
-  
-  font-size: 13px;
+  font-size: 1.5rem;
+}
+
+.start-day label, .relationships label {
+  padding: 10px;
+  display: flex;
+  flex-direction: row;
+  text-align: left;
   
 }
 
-.start-day label{
-  padding: 5px;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: right;
 
-}
+/* -----DROP DOWN / TEXT INPUT--------- */
 
-.relationships label{
-  padding: 15px;
-  display: inline-block;
-  flex-direction: row;
-  justify-content: center;
-
+select {
+  display: flex;
+  flex-direction: column; 
+  ;
 }
 
 .feeling input,
-.what-kind select {
-  width: 200px;
-  height: 30px;
+.what-kinde select {
+  background-color: #f6ead5;
+  width: 300px;
+  max-width: 960px;
+  height: 40px;
   padding: 5px;
   font-family: inherit;
-  font-size: 13px;
-  align-self: center;
+  font-size:1.3rem;
+  color: #484556;
   margin-top: 18px;
+  align-self: center;
+  /* margin-left: 10%; */
 }
 
-.section-heading {
-  font-size: 20px;
-  font-weight: 500;
-  margin-bottom: 30px;
+.what-kinde select {
+  margin: 30px auto;
 }
 
+/* -----TEXT INPUT --------- */
+
+.feeling p {
+  font-size: 1rem;
+  margin-top: 15px;
+  color: #1d192b;
+}
+
+/* ----- SUMMERY --------- */
+
+.summary p {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
+
+/* ----- MEDIA QUERY --------- */
+
+
+@media (min-width: 668px) {
+  Body {
+    font-size: 30px;
+  }
+
+  h2, h3,  .section-heading {
+    font-size: 3.5rem;
+  }
+
+  .text-container {
+    padding-left: 10%;
+  }
+
+  .feeling p {
+    font-size: 1.5rem;
+  }
+
+}
+
+/* @media (min-width: 1024px) {
+  form .summary-section {
+    width: 120%;
+  }
+} */

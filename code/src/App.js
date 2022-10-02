@@ -18,6 +18,14 @@ export const App = () => {
         setSection={setSection}
         section={section} />
 
+      <Summary
+        setSection={setSection}
+        section={section}
+        startDay={startDay}
+        relationships={relationships}
+        whatKinde={whatKinde}
+        feeling={feeling} />
+
       <Survey
         setStartDay={setStartDay}
         startDay={startDay}
@@ -30,13 +38,6 @@ export const App = () => {
         setSection={setSection}
         section={section} />
 
-      <Summary
-        setSection={setSection}
-        section={section}
-        startDay={startDay}
-        relationships={relationships}
-        whatKinde={whatKinde}
-        feeling={feeling} />
     </main>
   )
 }

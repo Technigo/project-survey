@@ -8,7 +8,7 @@ export const WhatKinde = ({ whatKinde, setWhatKinde }) => {
           onChange={(event) => setWhatKinde(event.target.value)}
           id="whatKinde"
           value={whatKinde}>
-          <option disabled>Select below</option>
+          <option>Select below</option>
           <option>black as tar</option>
           <option>spoon standing straight up!</option>
           <option>with milk</option>
