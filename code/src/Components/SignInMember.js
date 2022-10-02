@@ -8,7 +8,7 @@ const SignInMember = () => {
     return ( 
        <div className="memberSignIn">
         <form>
-            <label htmlFor="">Name:</label>
+            <label>Name:</label>
             <input 
                 type="text" 
                 required
@@ -17,13 +17,13 @@ const SignInMember = () => {
             />
             <label htmlFor="">Passcode:</label>
             <input 
-                type="text" 
+                type="password" 
                 required
                 value={passcode}
                 onChange={(e)=>setPasscode(e.target.value)}
             />
         </form>
-        {/* <p>{name}</p> */}
+         {/* <p>{name}</p>  */} {/* checking if name and passcode prints on the page. yes it does */}
         {/* <p>{passcode}</p> */}
 
         <p className="newbie-guide">Not a member yet 😉? Click continue to book a trial</p>
