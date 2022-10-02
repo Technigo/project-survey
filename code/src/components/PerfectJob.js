@@ -25,7 +25,6 @@ const PerfectJob = ({ perfectJob, setPerfectJob }) => {
             onChange={handlePerfectJobChange}
             checked={perfectJob === option} />
           {option}
-
         </label>
       ))}
     </>

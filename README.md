@@ -6,7 +6,7 @@ Build a survey using React in order to practice using State Hook.
 
 Had no idea what to do for design/content so just made something up about my favourite dog breed, and then mostly focused on usability. If I would have had more time, adding a back button and displaying different summaries depending on the users answers would have been at the top of my list.
 
-### Technologies used
+### Technologies used:
 
 - HTML
 - CSS
