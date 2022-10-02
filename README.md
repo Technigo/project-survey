@@ -1,13 +1,12 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Creating survey by practicing useState Hook in React.js
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Biggest problem is styling in CSS as I find it a bit difficult without a reference 
+Had problem with storing the input data to display in the summary page, as I stored useState data in each child component and not in the Form.js, also didn't refer them in each Component im the Form.js page 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+week6-jessnmo.netlify.app
