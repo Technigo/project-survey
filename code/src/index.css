@@ -1,8 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+
+:root {
+  --white: #ffffff;
+  --black: #3c3b3a;
+  --yellow: #ffe001;
+  --pink: #ff7bdc;
+}
+
+
 body {
+  justify-content: center;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  font-family: Varela Round, sans-serif;
+  color: var(--black);
+  font-size: 15px;
+  font-weight: 700;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -11,3 +24,231 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+Header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  height: 300px;
+  background-image: url(/images/header_image.jpeg);
+  background-size: cover;
+  background-position: 50%;
+}
+
+h1 {
+  color: var(--white);
+  height: 85px;
+  font-family: Pacifico;
+  text-align: center;
+  font-size: 40px;
+  line-height: 45px;
+  text-shadow: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+p {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--black);
+}
+
+/*GO BUTTON*/
+.buttonContainer {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+
+.button {
+  display:block;
+  padding:10px;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--yellow);
+  color: var(--white);
+  font-size: 25px;
+  font-family: Roboto;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.2);
+  font-weight: 700;
+  margin: 50px;
+}
+
+.button:hover {
+  background-color: var(--pink);
+}
+
+/*NAME INPUT*/
+.nameContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+}
+
+.nameInputContainer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.nameInput {
+  width: 200px;
+  height: 40px;
+  border: solid 2px var(--white);
+  border-radius: 10px;
+  background-color: var(--yellow);
+  font-family: Varela Round, sans-serif;
+  color: var(--black);
+  font-weight: 700;
+}
+
+::placeholder {
+  color: var(--white);
+  font-weight: 700;
+}
+
+/*IMAGES*/
+.questionImage {
+  position: absolute;
+  top: -20%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 150px;
+  width: 200px;
+  object-fit: cover;
+  border-radius: 20px;
+  border: solid #ffff;
+}
+
+/*YELLOW BOX*/
+.outerWrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.questionContainer {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  text-align: center;
+  background-color: var(--yellow);
+  height: 300px;
+  width: 350px;
+  margin: 25% 0 0 0;
+  padding: 20px;
+}
+
+/*SELECT SANDWICH*/
+.sandwichInput{
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  border: solid #ffff;
+  color: #ffff;
+  background-color: rgba(0, 0, 0, 0.211);
+  font-weight: 700;
+}
+
+.sandwichInput:hover {
+  background-color: var(--pink);
+}
+
+/*SELECT PANCAKES*/
+.radioButtonContainer {
+  display: flex;
+  flex-direction: row;
+  text-align: left;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 10%;
+}
+
+/*SELECT DRINK*/
+.inputContainer {
+  display: flex;
+  align-content: center;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.label{
+  width: 30px;
+}
+
+
+.question3 {
+  margin-top: 50px;
+}
+
+.resultContainer{
+  margin-top: 80px;
+}
+
+.input {
+  font-size: 17px;
+  text-decoration: underline;
+  color: var(--pink);
+}
+
+.slider {
+  -webkit-appearance: none;
+  border-radius: 5px;
+  height: 10px;
+  margin: 20px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 20px;
+  background-color: var(--pink);
+  overflow: visible;
+  cursor: pointer;
+}
+
+/* FOR LAPTOP*/
+@media (min-width:667px){
+  h1 {
+    font-size: 50px;
+  }
+
+  .questionContainer {
+    width: 400px;
+  }
+
+  .questionImage {
+    top: -30%;
+    margin: auto;
+    height: 180px;
+    width: 220px;
+  }
+
+}
+
+/* FOR DESKTOP*/
+@media (min-width:1024px){
+  h1 {
+    font-size: 80px;
+  }
+
+  .questionContainer {
+    margin: 15% 0 0 0;
+  }
+
+  .questionImage {
+    top: -40%;
+    height: 200px;
+    width: 240px;
+  }
+}
+
+
