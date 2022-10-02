@@ -1,9 +1,6 @@
-import { useState } from "react";
 
-const Register = () => {
 
-    const [newbie, setNewbie] = useState("");
-    const [email, setEmail] = useState("");
+const Register = ({ newEmail, setNewEmail,register, setRegister }) => {
 
     return ( 
         <div className="register">
@@ -12,14 +9,14 @@ const Register = () => {
                     <label htmlFor="">Name</label>
                     <input type="text" 
                     required
-                    value={ newbie }
-                    onChange={(e)=>setNewbie(e.target.value)}/>
+                    value={ register }
+                    onChange={(e)=>setRegister(e.target.value)}/>
 
                     <label>Email</label>
                     <input type="text" 
                     required
-                    value={ email }
-                    onChange={(e)=>setEmail(e.target.value)}/>
+                    value={ newEmail }
+                    onChange={(e)=>setNewEmail(e.target.value)}/>
                 </div>
             </form>
         </div>

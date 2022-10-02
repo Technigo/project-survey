@@ -1,16 +1,14 @@
-import { useState } from "react";
 
-const Timeslot = () => {
 
-    const [timeslot, setTimeslot] = useState(""); 
+const Timeslot = ({ timeslot, setTimeslot }) => {
     
     return ( 
          <div className="time">
          
          <label>Select a Time</label>
-            <select value= {timeslot}
+            <select /* value= {timeslot} */
             onChange ={(e)=>setTimeslot(e.target.value)} >
-                <option disabled selected>Select your option</option>
+                <option value = "" disabled selected>Select your option</option>
                 <option value = "8am">8AM</option>
                 <option value = "9am">9AM</option>
                 <option value = "10am">10AM</option>
@@ -25,7 +23,6 @@ const Timeslot = () => {
                 <option value = "7pm">7PM</option>
                 <option value = "8pm">8PM</option>
             </select>
-            {/* <p>{timeslot}</p> */}
          </div>
      );
 }

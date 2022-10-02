@@ -1,19 +1,14 @@
-import { useState } from "react";
-
-const SignInMember = () => {
-
-    const [name, setName] = useState("");
-    const [passcode, setPasscode] = useState("");
+const SignInMember = ({ userEmail, setUserEmail, passcode, setPasscode}) => {
 
     return ( 
        <div className="memberSignIn">
         <form>
-            <label>Name:</label>
+            <label>Email:</label>
             <input 
                 type="text" 
                 required
-                value={name}
-                onChange={(e)=>setName(e.target.value)}
+                value={userEmail}
+                onChange={(e)=>setUserEmail(e.target.value)}
             />
             <label htmlFor="">Passcode:</label>
             <input 
@@ -23,8 +18,7 @@ const SignInMember = () => {
                 onChange={(e)=>setPasscode(e.target.value)}
             />
         </form>
-         {/* <p>{name}</p>  */} {/* checking if name and passcode prints on the page. yes it does */}
-        {/* <p>{passcode}</p> */}
+        
 
         <p className="newbie-guide">Not a member yet 😉? Click continue to book a trial</p>
        </div> 

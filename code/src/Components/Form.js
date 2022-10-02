@@ -8,21 +8,27 @@ import Confirmation from "./Confirmation";
 const Form = () => {
     const WelcomeMsg = "WELCOME! To the next level gym";
     const [page, setPage] = useState(0); //later this is used to determine the display based on which page we're on
-
+    
+    const [userEmail, setUserEmail] = useState("");
+    const [passcode, setPasscode] = useState("");
+    const [newEmail, setNewEmail] = useState("");
+    const [register, setRegister] = useState("");
+    const [timeslot, setTimeslot] = useState(""); 
+ 
     //title for each page 
     const FormTitles=["Hey! Welcome Back", "Nice to see you here, book a trial with us", "Which Challenge Are You Taking Today?", "Book a Time", "Confirmation"];
 
     const InfoDisplay = ()=>{
         if (page === 0){
-            return <SignInMember />
+            return <SignInMember userEmail = {userEmail} setUserEmail={setUserEmail} passcode={passcode} setPasscode={setPasscode}/>
         } else if (page === 1){
-            return <Register />
+            return <Register newEmail={newEmail} setNewEmail={setNewEmail} register={register} setRegister={setRegister}/>
         } else if (page === 2){
             return <Booking />
         } else if (page === 3){
-            return <Timeslot /> 
+            return <Timeslot setTimeslot={setTimeslot}/> 
         } else {
-            return <Confirmation />
+            return <Confirmation timeslot = {timeslot} setTimeslot={setTimeslot}/>
         }
     }
 
@@ -47,6 +53,7 @@ const Form = () => {
             onClick = {() => { setPage((currentPage => currentPage -1))} }>Previous Step</button>
 
             <button 
+            disabled = {page === 4}
             onClick = {() => { 
                 if (page === FormTitles.length - 1) {
                     return alert("Confirmed");
@@ -55,7 +62,7 @@ const Form = () => {
                 }
                 } }
             >
-                {page === FormTitles.length - 1 ? "Submit" : "Continue"}
+                {page === FormTitles.length - 2 ? "Submit" : "Continue"}
             </button>
         </div>
 
