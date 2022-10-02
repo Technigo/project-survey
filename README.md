@@ -1,13 +1,14 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
+Made a project using React and concentrating on useState.
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Styled with CSS Tailwind. 
 
-## The problem
+Downloaded and configured Tailwind CSS, made most of my styling on classNames in JSX. Made also some tailored editing in CSS when needed.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Made a front page, three questions and a result page. 
+Responsive design is set through Tailwind. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://app.netlify.com/sites/maria-survey/overview
