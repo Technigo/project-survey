@@ -1,9 +1,9 @@
-const Confirmation = ({ timeslot }) => {
+const Confirmation = ({ timeslot, workout, location }) => {
     return ( 
-        <>
-        <h1>Aw Sweet! </h1>
-        <p> Thanks for booking in! See you at location at {timeslot} for a workout class</p>
-        </>
+        <div className="confirmation">
+            <h1>Aw Sweet!</h1>
+            <p> Thanks for booking in! See you at {location} at {timeslot} for a {workout} class</p>
+        </div>
      );
 }
  

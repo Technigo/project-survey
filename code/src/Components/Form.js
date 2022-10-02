@@ -14,6 +14,8 @@ const Form = () => {
     const [newEmail, setNewEmail] = useState("");
     const [register, setRegister] = useState("");
     const [timeslot, setTimeslot] = useState(""); 
+    const [workout, setWorkout] = useState("");
+    const [location, setLocation] = useState("");
  
     //title for each page 
     const FormTitles=["Hey! Welcome Back", "Nice to see you here, book a trial with us", "Which Challenge Are You Taking Today?", "Book a Time", "Confirmation"];
@@ -24,11 +26,11 @@ const Form = () => {
         } else if (page === 1){
             return <Register newEmail={newEmail} setNewEmail={setNewEmail} register={register} setRegister={setRegister}/>
         } else if (page === 2){
-            return <Booking />
+            return <Booking workout={workout} setWorkout={setWorkout} location={location} setLocation={setLocation}/>
         } else if (page === 3){
             return <Timeslot setTimeslot={setTimeslot}/> 
         } else {
-            return <Confirmation timeslot = {timeslot} setTimeslot={setTimeslot}/>
+            return <Confirmation timeslot = {timeslot} setTimeslot={setTimeslot} workout={workout} setWorkout={setWorkout} location={location} setLocation={setLocation}/>
         }
     }
 

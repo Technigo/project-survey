@@ -1,7 +1,7 @@
 
-const Booking = () => {
+const Booking = ({setWorkout, setLocation}) => {
 
-    const handleRadioBtn =(e) =>{
+   /*  const handleRadioBtn =(e) =>{
         console.log(e.target.value);
         e.target.value;
     }
@@ -9,45 +9,45 @@ const Booking = () => {
     const handleCheckBox =(e) =>{
         console.log(e.target.value);
         e.target.value;
-    }
+    } */
 
     return ( 
         <>
         <div className="booking">
         <input type="radio" 
             name="holy-shred" 
-            value="holy-shred"
-            onChange={handleRadioBtn} />
+            value="Holy-Shred"
+            onChange={e=>setWorkout(e.target.value)} />
             <label htmlFor="">Holy Shred</label>
 
             <input type="radio" 
             name="holy-build" 
-            value="holy-build"
-            onChange={handleRadioBtn} />
+            value="Holy-Build"
+            onChange={e=>setWorkout(e.target.value)}  />
             <label htmlFor="">Holy Build</label>
 
             <input type="radio" 
             name="holy-ride" 
-            value="holy-ride"
-            onChange={handleRadioBtn}/>
+            value="Holy-Ride"
+            onChange={e=>setLocation(e.target.value)}/>
             <label htmlFor="">Holy Ride</label>
 
             <input type="radio" 
             name="holy-box" 
-            value="holy-box"
-            onChange={handleRadioBtn} />
+            value="Holy-Box"
+            onChange={e=>setWorkout(e.target.value)}  />
             <label htmlFor="">Holy Box</label>
 
             <input type="radio" 
             name="holy-booty" 
-            value="holy-booty"
-            onChange={handleRadioBtn} />
+            value="Holy-Booty"
+            onChange={e=>setWorkout(e.target.value)} />
             <label htmlFor="">Holy Booty</label>
 
             <input type="radio" 
             name="open-gym" 
-            value="open-gym"
-            onChange={handleRadioBtn}/>
+            value="Open-Gym"
+            onChange={e=>setWorkout(e.target.value)} />
             <label htmlFor="">Open Gym</label>
         </div>
 
@@ -55,14 +55,14 @@ const Booking = () => {
             <p className="which-gym">Which location are you going?</p>
             <input type="checkbox" 
             name="location"
-            value="oud-zuid"
-            onChange={handleCheckBox}/>
+            value="Oud-Zuid"
+            onChange={e=>setLocation(e.target.value)} />
             <label>Oud-Zuid</label>
 
             <input type="checkbox"
             name="location"
-            value="oud-west" 
-            onChange={handleCheckBox}/>
+            value="Oud-West" 
+            onChange={e=>setLocation(e.target.value)}/>
             <label>Oud-West</label>
         </div> 
         </>
