@@ -9,7 +9,7 @@ const MuseumQuestion = ({museum, setMuseum}) => {
   return (
     <>
         <form>
-          <label for="museum-select">
+          <label htmlFor="museum-select">
             <h2>Which of these is your favoriture museum?</h2>
           </label>
           <select

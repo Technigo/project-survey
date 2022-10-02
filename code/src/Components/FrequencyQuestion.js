@@ -27,7 +27,7 @@ const FrequencyQuestion = ({frequency, setFrequency}) => {
           onChange={handleFrequencyChange}
           value={frequency}
           min="0"
-          max="50"/>
+          max="20"/>
           <span className="bold-p">{frequency}</span>
         </form>
       </>

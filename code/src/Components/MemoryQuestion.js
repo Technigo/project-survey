@@ -10,7 +10,7 @@ const MemoryQuestion = ({memory, setMemory}) => {
       <>
       <h2>A memorable visit?</h2>
         <form>
-          <label for="memorable-visit">
+          <label htmlFor="memorable-visit">
             <p>We are interested in hearing if you have a special memory from a visit at 
             one of Stockholm's museums that you wish to share.</p> 
             <p>Perhaps you remember a certain exhibit fondly, or have a mildly traumatic 

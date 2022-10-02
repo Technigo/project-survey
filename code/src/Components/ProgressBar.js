@@ -7,7 +7,7 @@ const ProgressBar = ({step}) => {
   };
   return (
     <div className="progress-b-outer-container">
-      <span class="sr-only">Progressbar. The progress in the survey is currently {completed} % completed</span>
+      <span className="sr-only">Progressbar. The progress in the survey is currently {completed.toFixed(0)} % completed</span>
       <div className="progress-b-inner-container" style={progressStatus}></div>
     </div>
   );

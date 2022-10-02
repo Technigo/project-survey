@@ -3,7 +3,7 @@ import React from 'react';
 const Intro = () => {
     return (      
       <section>
-          <h1>Stockholm Museums: a Survey</h1>
+          <h1>Stockholm Museums: a survey</h1>
           <p>
           Our society is ever-changing and fast-paced. 
           </p>

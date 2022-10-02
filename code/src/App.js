@@ -6,6 +6,7 @@ import MuseumQuestion from './Components/MuseumQuestion';
 import Result from './Components/Result'
 import MemoryQuestion from './Components/MemoryQuestion'
 import ProgressBar from './Components/ProgressBar'
+import Footer from 'Components/Footer'
 
 export const App = () => {
   const [step, setStep] = useState(1)
@@ -21,6 +22,9 @@ export const App = () => {
   }
   const handleStepDecrease = () => {
     setStep(step - 1)
+  }
+  const handleStepReset = () => {
+    setStep(1)
   }
 
   return (
@@ -77,9 +81,16 @@ export const App = () => {
             <div>
               <button className="back-btn" type="button" onClick={handleStepDecrease}>Go back</button>
             </div>
-          )}       
+          )}   
+
+            {step === 7 && (
+            <div>
+              <button className="reset-btn" type="button" onClick={handleStepReset}>Go back</button>
+            </div>
+          )}
         </div>
       </div>
+      <Footer />  
     </>
   );
 }
