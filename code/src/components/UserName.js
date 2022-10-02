@@ -6,7 +6,7 @@ const UserName = ({ userName, setUserName }) => {
   }
   return (
     <label htmlFor="userName"><p>What is your name?</p>
-      <input className="user-name" id="userName" type="text" value={userName} onChange={handleNameChange} />
+      <input className="user-name" id="userName" type="text" value={userName} onChange={handleNameChange} required />
     </label>
   );
 }

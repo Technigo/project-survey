@@ -6,28 +6,29 @@ import UserName from 'components/UserName';
 import CoolestThing from 'components/CoolestThing';
 import PerfectJob, { defaultPerfectJobOption } from 'components/PerfectJob';
 import Fondness from 'components/Fondness';
-import Result from 'components/Result';
+import Summary from 'components/Summary';
 
 const App = () => {
   const stepsTotalCount = 4
   const [step, setStep] = useState(1);
-  const [userName, setUserName] = useState('Name Namesson');
+  const [userName, setUserName] = useState('');
   const [coolestThing, setCoolestThing] = useState('How cute and fluffy they are');
   const [perfectJob, setPerfectJob] = useState(defaultPerfectJobOption);
-  const [fondness, setFondness] = useState(1);
-  const [errors, setErrors] = useState(null);
+  const [fondness, setFondness] = useState(5);
 
   const handleStepIncrease = () => {
     if (step === 1 && userName === '') {
-      setErrors('Please enter your name to continue')
       return
     }
-    setErrors(null)
     setStep(step + 1);
   }
 
   return (
-    <section className="survey">
+    <form
+      className="survey"
+      onSubmit={(e) => {
+        e.preventDefault()
+      }}>
       {/* 1 NAME - TEXT INPUT */}
       {step === 1 && (
         <UserName userName={userName} setUserName={setUserName} />
@@ -44,26 +45,28 @@ const App = () => {
       {step === 4 && (
         <Fondness fondness={fondness} setFondness={setFondness} />
       )}
-      {/* 5 DISPLAY RESULT */}
+      {/* 5 DISPLAY SUMMARY */}
       {step >= 5 && (
-        <Result userName={userName} coolestThing={coolestThing} perfectJob={perfectJob} fondness={fondness} />
+        <Summary userName={userName} coolestThing={coolestThing} perfectJob={perfectJob} fondness={fondness} />
       )}
       {step < 5 && (
         <>
-
-          {errors && (
-            <p style={{ color: 'red' }}>
-              {errors}
-            </p>
-          )}
-
-          <p>Current step: {step} of {stepsTotalCount}</p>
-          <button type="button" onClick={handleStepIncrease} className="button">
+          <button type="submit" onClick={handleStepIncrease} className="button">
             {step < stepsTotalCount ? 'Next' : 'Submit'}
           </button>
+          <div className="progress-bar">
+            <p className="counter-text">
+              <progress value={step} max={stepsTotalCount + 1}>
+                {step} of {stepsTotalCount}
+              </progress>
+              <span>
+              Current step: <b>{step}</b> of {stepsTotalCount}
+              </span>
+            </p>
+          </div>
         </>
       )}
-    </section>
+    </form>
   );
 }
 
