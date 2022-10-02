@@ -1,23 +1,23 @@
 import React from 'react';
 
-
 const transportPreference = [
-    'Train',
-    'Boat',
-    'Plane'
+        'train',
+        'boat',
+        'plane'
 ]
 
-const Transportation= ({transportation, setTransportation}) => {
+
+const Transportation= ({transportation, setTransportation, handleNextQuestionClick, handlePreviousQuestionClick, counter}) => {
 
     return (
+    <> 
         <div className="questionWrapper">
-        <form> 
+                <p> How do you want to travel?</p>
+        </div>
 
-            <p> How do you want to travel?</p>
+        <div className="transportationWrapper">
             {transportPreference.map(travel => (
-            
-
-            <section className="radio-lable" key={travel}>
+            <section className="radio-lable" key={travel}>   
                 <input
                 className="radio-lable"
                 type="radio"
@@ -27,10 +27,19 @@ const Transportation= ({transportation, setTransportation}) => {
                 />
                 {travel}
             </section>
-           
-           ))}
-        </form>
+            ))}
         </div>
-    )}
+
+        <div className='buttonWrapper'>
+            <button type="button" onClick={handlePreviousQuestionClick}> ◀︎ Back </button>
+            <button type="button" onClick={handleNextQuestionClick}> Next ▶︎</button>
+        </div>
+
+        <div className='questionNumber'>
+            <p>Question number</p> {counter} /5
+        </div>
+    </>
+    );
+}
 
 export default Transportation;

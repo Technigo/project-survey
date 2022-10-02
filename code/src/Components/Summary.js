@@ -1,22 +1,51 @@
 import React from 'react';
 
 
-const tempWordToUse = () => {
-  if (temperature === 1) {
-    return "Cold"
-  } else if (temperature === 2) {
-    return "Middle"
-  } else {
-    return "Hot"
-  }
-}
+const Summary= ({ userName, transportation, active, temperature, handleStartOverClick, counter}) => {
 
-export const Summary= ({ userName, transportation, active}) => {
+
+  const activeWordToUse = () => {
+    if (temperature > 5 || active === 'sporty') {
+      return "to go skiing all day long."
+    } else if (temperature > 5 || active === 'middle') {
+      return "go for polar bear sightseeing"
+    } else if (temperature > 5 || active === 'lazy') {
+      return "Check in to ice hotell"
+    } else {
+      return "Thailand"
+    }
+  }
+ 
+  const tempWordToUse = () => {
+    if (temperature > 5 || active === 'sporty') {
+      return "to go skiing all day long."
+    } else if (temperature > 5 || active === 'middle') {
+      return "go for polar bear sightseeing"
+    } else if (temperature > 5 || active === 'lazy') {
+      return "Check in to ice hotell"
+    } else {
+      return "Thailand"
+    }
+  }
+
+
       return (
         <>
-        <p> Hello {userName} We would recomand you to take the {transportation} to {tempWordToUse()} and {active} </p>
+
+        <div className="summaryWrapper">
+        <p> Hello {userName} We would recomend you to take the {transportation} to {tempWordToUse()} and {activeWordToUse()} </p>
+        </div>
+    
+  <div className='buttonWrapper'>
+    <button 
+    className='startOverButton'
+    type="button" 
+    value={counter}
+    onClick={handleStartOverClick}>
+    Start Over</button>
+  </div>
         </>
       );
 }
 
-
+export default Summary;

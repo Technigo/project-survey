@@ -1,34 +1,37 @@
 import React from 'react';
 
-    const Temperature= ({temperature, setTemperature}) => {
-           
-      // const tempWordToUse = () => {
-      //   if (temperature === 1) {
-      //     return "Cold"
-      //   } else if (temperature === 2) {
-      //     return "Middle"
-      //   } else {
-      //     return "Hot"
-      //   }
-      // }
+  const Temperature= ({temperature, setTemperature, handlePreviousQuestionClick, handleNextQuestionClick, counter }) => {
 
-      return (
-        <>
-        <div className="questionWrapper">
-        <p> Temperature?</p>
-        <span role="img" className="emoji" aria-label="img">🌨</span>
-        <span role="img" className="emoji" aria-label="img">😎</span>
-        <input
-        name="temperature"
-        type="range"
-        min="1"
-        max="3"
+  return (
+  <>
+    <div className="questionWrapper">
+      <p> What temperature do you prefer on your hollyday?</p>
+        <p className='degrees'>{temperature}°</p>
+    </div>
+
+    <div className="temperatureWrapper">
+      <form>
+      <input
         value= {temperature}
+        className="slider"
+        type="range"
+        min="-15"
+        max="35"
         onChange={event => setTemperature(event.target.value)}
-        />
-        </div>
-        </>
-      );
-      }
+      />
+      </form>
+    </div>
+
+    <div className='buttonWrapper'>
+      <button type="button" onClick={handlePreviousQuestionClick}> ◀︎ Back </button>
+      <button type="button" onClick={handleNextQuestionClick}> Next ▶︎</button>
+    </div>
+
+    <div className='questionNumber'>
+      <p>Question number</p> {counter} /5
+    </div>
+  </>   
+  );
+  }
 
 export default Temperature;
