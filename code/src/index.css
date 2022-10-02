@@ -203,6 +203,9 @@ h2 {
 }
 
 /* Summary.jsx */
+h4 {
+  margin-bottom: 0.25rem;
+}
 .summary-text {
   color: var(--main-color);
   font-family: var(--sub-font);

@@ -11,9 +11,7 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
       setStep(step - 1);
     }
   };
-  const handleNoAnswerMsg = (showOrNo) => {
-    setNoAnswerMsg(showOrNo);
-  };
+
   return (
     <>
       <p className="select-one-message" style={{ display: noAnswerMsg }}>Select one option to continue!</p>
@@ -23,7 +21,7 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
           type="button"
           onClick={() => {
             handleBtnClick(false);
-            handleNoAnswerMsg('none');
+            setNoAnswerMsg('none');
           }}>Back
         </button>
 
@@ -34,10 +32,10 @@ export const BackNextBtn = ({ step, setStep, backFront, loneTeam, learnKnow }) =
             for (let i = 0; i < answers.length; i += 1) {
               if (step === steps[i] && answers[i]) {
                 handleBtnClick(true);
-                handleNoAnswerMsg('none');
+                setNoAnswerMsg('none');
                 break
               } else if (!answers[i]) {
-                handleNoAnswerMsg('block');
+                setNoAnswerMsg('block');
                 break
               }
             }

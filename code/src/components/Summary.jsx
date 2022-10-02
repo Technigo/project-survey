@@ -24,19 +24,21 @@ export const Summary = ({ backFront, loneTeam, learnKnow }) => {
   };
 
   return (
-    <div className="survey-content-container">
+    <>
       <h4 className="main-heading">Hello there 👋</h4>
-      <p className="sub-heading">First of all, thank you for taking the survey!</p>
+      <div className="survey-content-container">
+        <p className="sub-heading">First of all, thank you for taking the survey!</p>
 
-      <p className="summary-text">I&apos;m a developer named Fredrik. I did this survey as my second react.js project ever.</p>
-      <p className="summary-text">So... you&apos;re looking for a {backFront} developer
+        <p className="summary-text">I&apos;m a developer named Fredrik. I did this survey as my second react.js project ever.</p>
+        <p className="summary-text">So... you&apos;re looking for a {backFront} developer
       who consider themself a {loneTeam} and {learnKnow}?
-      </p>
-      <p className="summary-text">{handleSummary()}</p>
-      <div className="checkout-text-container">
-        <p>Checkout my <a href="https://fredrikholm.netlify.com">portfolio</a></p>
-        <p>and/or contact me on <a href="https://www.linkedin.com/in/fredrik-holm-10406b106/">Linkedin</a></p>
+        </p>
+        <p className="summary-text">{handleSummary()}</p>
+        <div className="checkout-text-container">
+          <p>Check out my <a href="https://fredrikholm.netlify.com">portfolio</a></p>
+          <p>and/or contact me on <a href="https://www.linkedin.com/in/fredrik-holm-10406b106/">LinkedIn</a></p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
