@@ -7,9 +7,12 @@ export const Summary = ({ sleepHabit, foodHabit, activityTime }) => {
       <WelcomeIcon />
       <h2>Summary</h2>
       <h3>Here are your answers</h3>
-      <p>Average sleep per night: <span>{sleepHabit}</span></p>
-      <p>Amount of fruit/veggies every day: <span>{foodHabit}</span></p>
-      <p>Time of physical activity per week: <span>{activityTime}</span></p>
+      <p>Average sleep per night:</p>
+      <span>{sleepHabit}</span>
+      <p>Amount of fruit/veggies every day:</p>
+      <span>{foodHabit}</span>
+      <p>Time of physical activity per week:</p>
+      <span>{activityTime}</span>
 
       <div className="submit-msg">
         <p>Is this correct?</p>

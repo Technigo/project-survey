@@ -4,6 +4,7 @@ import { SleepIcon } from './SleepIcon'
 export const Sleep = ({ sleepHabit, setSleepHabit }) => {
   const handleUserHabitChange = (event) => {
     setSleepHabit(event.target.value)
+    console.log(setSleepHabit)
   }
   return (
     <div className="content">
@@ -12,37 +13,37 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
 
       <h3>How many hours do you sleep per night?</h3>
       <div className="radio-buttons">
-        <label htmlFor="radioButton">
+        <label htmlFor="<4h">
           <input
-            id="radioButton"
+            id="<4h"
             type="radio"
             name="hours"
             value="less than 4 hours"
             onChange={handleUserHabitChange} />
           Less than 4 hours
         </label>
-        <label htmlFor="radioButton">
+        <label htmlFor="4-6h">
           <input
+            id="4-6h"
             type="radio"
-            id="radioButton"
             name="hours"
             value="4-6 hours"
             onChange={handleUserHabitChange} />
           4-6 hours
         </label>
-        <label htmlFor="radioButton">
+        <label htmlFor="6-8">
           <input
+            id="6-8"
             type="radio"
-            id="radioButton"
             name="hours"
             value="6-8 hours"
             onChange={handleUserHabitChange} />
           6-8 hours
         </label>
-        <label htmlFor="radioButton">
+        <label htmlFor="8-10">
           <input
             type="radio"
-            id="radioButton"
+            id="8-10"
             name="hours"
             value="8-10 hours or more"
             onChange={handleUserHabitChange} />
