@@ -9,12 +9,3 @@ export const App = () => {
 
   );
 }
-
-/*
-<h1>Current temperature: {temperature} degrees</h1>
-
-<button onClick={() => setTemperature(-5)}>Freeze!</button>
-<button onClick={() => setTemperature(30)}>Warm!</button>
-<button onClick={() => setTemperature(120)}>Boil!</button>
-
-{temperature > 100 && <p>Steamy!</p>} */

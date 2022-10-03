@@ -44,28 +44,3 @@ const SelectQuestion = ({
 };
 
 export default SelectQuestion;
-
-/* const SelectQuestion = (
-    selectInput,
-    handleSelectInputChange,
-    handleStepChange,
-) => {
-  return (
-    <div>
-      <select
-        value={selectInput}
-        onChange={handleSelectInputChange} >
-
-        <option value="">Select location:</option>
-        <option value="">Stockholm</option>
-        <option value="">Lisbon</option>
-        <option value="">Vaasa</option>
-      </select>
-      <button className="nextButton" onClick={handleStepChange}>Next</button>
-    </div>
-  )
-}
-
-export default SelectQuestion;
-
-*/

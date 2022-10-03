@@ -24,7 +24,7 @@ const Form = () => {
     setRadioInput(event.target.value)
   };
   const handleStepChange = () => {
-    setStep(step + 1); /* ++ ? */
+    setStep(step + 1);
   };
 
   // Declaring what happens in different steps of the survey //
