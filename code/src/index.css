@@ -40,10 +40,14 @@ p {
   flex-direction: column;
 }
 .container-summary {
-  width: 100%;
+  padding: 40px;
+  width: 75%;
   height: 400px;
   display: flex;
   flex-direction: row;
+  background-color: rgba(103, 175, 175, 0.35);
+  border-radius: 25px;
+
 }
 
 .box-intro {
@@ -62,13 +66,15 @@ p {
 }
 
 .box-summary {
-  padding-top: 80px;
+  padding-top: 50px;
   margin-bottom: 10px;
   line-height: 20px;
-  width: 350px;
+  width: 340px;
+  font-size: me;
 }
 
 .btn {
+  padding-top: 20px;
   margin-top: auto;
 }
 
@@ -101,7 +107,7 @@ button {
 .button-refresh {
   background-color: #742f94;
   flex: wrap;
-  width: 180px;
+  width: 150px;
 }
 .button-result {
   background-color: #742f94;

@@ -1,29 +1,16 @@
 import React from 'react';
 
 const Summary = ({ answers, reset }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [
-    first,
-    intro,
-    second,
-    name,
-    third,
-    energy,
-    fourth,
-    genre,
-    fifth,
-    time
-  ] = answers;
-
+  /* const [first, intro, second, name, third, energy, fourth, genre, fifth, time] = answers; */
   return (
     <>
       <div className="container-summary">
         <div className="box-summary">
-          <h2 className="summary-text">Ok {name}!</h2>
-          <p>Based on your answers:</p>
-          <p>Energy: {energy}</p>
-          <p>Genre: {genre}</p>
-          <p>Epoke: {time}</p>
+          <h2 className="summary-text">Ok {answers[3]}!</h2>
+          <p>Let&apos;s see if we can you a some nice music based on this:</p>
+          <p>Energy: {answers[5]}</p>
+          <p>Genre: {answers[7]}</p>
+          <p>Epoke: {answers[9]}</p>
           <p>Click on the button to play the music!</p>
         </div>
         <div className="result">
@@ -45,7 +32,7 @@ const Summary = ({ answers, reset }) => {
 
 export default Summary;
 
-/* A rainy day
+/* On a rainy day I will add content to this project and different links depending on answers
 
 const result = () =>{
 if (energy === "A lot" && genre === "World"){

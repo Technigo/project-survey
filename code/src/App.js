@@ -1,8 +1,11 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import Startpage from 'components/Startpage';
 import Types from 'components/Types';
 import Summary from 'components/Summary';
 import './index.css';
+
+/* You can add more questions in this array, or move the content to a file and import it */
 
 const questionsData = [
   {
@@ -60,15 +63,13 @@ export const App = () => {
     setcurrentQuestion(currentQuestionNumber);
 
     /// //Save answers////
-
     const updateAnswer = (updatedAnswer) => {
-      // eslint-disable-next-line no-shadow
-      setAnswers((answers) => [...answers, ...updatedAnswer]);
+      setAnswers(() => [...answers, ...updatedAnswer]);
+      /* ... means everything from answers */
     };
 
     const currentAnswer = {};
     currentAnswer[currentQuestionNumber] = userInput;
-    // eslint-disable-next-line no-use-before-define
     updateAnswer([currentQuestionNumber, userInput]);
     setUserInput('');
   };
@@ -98,7 +99,6 @@ export const App = () => {
       {currentQuestion > 0 && currentQuestion < 5 && (
         <section className="container">
           <Types
-            // eslint-disable-next-line react/jsx-props-no-spreading
             {...questionsData[currentQuestion]}
             onChange={handleUserInputChange}
             userInput={userInput} />
@@ -112,7 +112,6 @@ export const App = () => {
         <section className="container">
           <Summary
             answers={answers}
-            setAnswers={setAnswers}
             reset={resetForm} />
         </section>
       )}

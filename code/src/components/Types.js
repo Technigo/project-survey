@@ -1,5 +1,5 @@
-// import { parserOptions } from "eslint-plugin-import/config/react";
 import React from 'react';
+/* This component will return different types of data depending on what type of question it is */
 
 const QuestionTitle = ({ heading, text }) => {
   return (
@@ -70,7 +70,7 @@ const Questions = ({
       </div>
     );
   } else {
-    return <>it s another type: {inputType}</>;
+    return <>its another type: {inputType}</>;
   }
 };
 export default Questions;
