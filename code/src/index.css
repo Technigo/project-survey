@@ -27,12 +27,12 @@ h1 {
   font-family: 'Rampart One', cursive;
   color: var(--primary);
   font-weight: lighter;
-  font-size: 40px;
+  font-size: 25px;
 }
 
 h2 {
   font-weight: bold;
-  font-size: 22px;
+  font-size: 16px;
   color: var(--primary);
   text-align: center;
   font-weight: lighter;
@@ -112,6 +112,7 @@ input[type=radio]:checked {
   display: block;
   cursor: pointer;
   margin: 4px;
+  font-size: 14px;
 }
 
 /*TABLET*/
@@ -120,6 +121,16 @@ input[type=radio]:checked {
   .form-wrapper {
     margin: 5vw;
   }
+
+  h1 {
+    font-size: 35px;
+  }
+
+  h2 {
+    font-size: 20px;
+    width: 80%;
+    margin: 0 auto;
+  }
 }
 
 /*DESKTOP*/
@@ -127,6 +138,17 @@ input[type=radio]:checked {
 @media (min-width: 1024px) {
   .form-wrapper {
     margin: 5vw;
+  }
+
+  h1 {
+    font-weight: lighter;
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 22px;
+    width: 80%;
+    margin: 0 auto;
   }
 
   button:hover {
