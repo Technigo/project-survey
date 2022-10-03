@@ -2,7 +2,7 @@ import React from 'react'
 
 const RiddleTwo = ({ onStepChange, setRiddleTwo, riddleTwo }) => {
 
-    const riddleTwoChoices = ['A penguin', 'ESlint', 'The wind', 'My stomach after chili night']
+    const riddleTwoChoices = ['A penguin', 'ESlint', 'The wind', 'A whale']
 
     const onRiddleTwoChange = (event) => {
         setRiddleTwo(event.target.value)

@@ -7,7 +7,7 @@ const Start = ( {username, setUsername, onStepChange} ) => {
     <div className='startPage'>
         <div className='startText'>
           <h1>Riddles in the Dark</h1>
-          <p>After getting lost from your friends while exploring a deep cave, you wander down a tunnel in the hopes of finding your way back to the surface.</p>
+          <p>After getting separated from your friends while exploring a deep cave, you wander down a tunnel in the hopes of finding your way back to the surface.</p>
           <p>Instead, the tunnel leads you to a large subterranean lake. As you wander past the stalagmites towards the water, you discover a beautiful golden ring. Yet before you can inspect it too thoroughly, you suddenly hear a gurgling, choking cough from behind you:</p>
           <p>“Gollum! Gollum!”</p>
           <p>Startled, you spin around and find yourself facing a small, skeletal, thin and gaunt creature with large, beady eyes and small strands of pale brown hair.</p>

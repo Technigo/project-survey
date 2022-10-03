@@ -6,11 +6,11 @@
 
 
 body {
-  margin: 0;
+  margin: 10%;
   box-sizing: border-box;
   background-image: url("images/background.png");
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size:cover;
   background-color: black;
 }
 
@@ -18,7 +18,6 @@ body {
 /** START & RESULT **/ 
 
 .startPage, .result-page {
-  padding: 5% 10% 5% 10%;
   display: flex;
   flex-direction: column;
   text-align: left;
@@ -29,15 +28,27 @@ h1 {
   font-size: 1.7em;
   color: whitesmoke;
   text-align: center;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 h2 {
   font-size: 1.2em;
   color: whitesmoke;
+  text-shadow: 1px 1px 2px black, 0 0 1em blue, 0 0 0.2em blue;
 }
 
 p {
   color: whitesmoke;
+  text-shadow: 1px 0px 1px black, 0 0 0.2em blue, 0 0 0.2em blue;
+}
+
+.startText {
+  margin: 0% 20%;
+}
+
+label {
+  color: whitesmoke;
+  text-shadow: 1px 1px 2px black, 0 0 0.2em blue, 0 0 0.2em blue;
 }
 
 .answer {
@@ -193,7 +204,7 @@ input[type="radio"]:focus {
 }
 
 progress {
-  accent-color:green
+  accent-color:blue;
 }
 
 /** MEDIA QUERIES **/
@@ -210,17 +221,6 @@ progress {
     grid-template-columns: 1em auto;
     margin: 10px 10px 10px 100px;
   }
-
-  .start-image {
-    bottom: 0;
-    height: 40%;
-    width: auto;
-  }
-
-  .result-image {
-    height: 100px;
-  }
-
 }
 
 
@@ -229,16 +229,4 @@ progress {
   p {
     font-size: 1.2em;
   }
-   
-  .start-image {
-    bottom: 0;
-    height: 40%;
-    width: auto;
-  }
-
-  .result-image {
-    height: 100px;
-  }
-
-
 } 
