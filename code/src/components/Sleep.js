@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
 import { SleepIcon } from './SleepIcon'
 
@@ -13,38 +12,37 @@ export const Sleep = ({ sleepHabit, setSleepHabit }) => {
 
       <h3>How many hours do you sleep per night?</h3>
       <div className="radio-buttons">
-        <label>
+        <label htmlFor="radioButton">
           <input
-            label="radioButton"
+            id="radioButton"
             type="radio"
-            id="less than 4 hours"
             name="hours"
             value="less than 4 hours"
             onChange={handleUserHabitChange} />
           Less than 4 hours
         </label>
-        <label>
+        <label htmlFor="radioButton">
           <input
             type="radio"
-            id="4-6 hours"
+            id="radioButton"
             name="hours"
             value="4-6 hours"
             onChange={handleUserHabitChange} />
           4-6 hours
         </label>
-        <label>
+        <label htmlFor="radioButton">
           <input
             type="radio"
-            id="6-8 hours"
+            id="radioButton"
             name="hours"
             value="6-8 hours"
             onChange={handleUserHabitChange} />
           6-8 hours
         </label>
-        <label>
+        <label htmlFor="radioButton">
           <input
             type="radio"
-            id="8-10 hours or more"
+            id="radioButton"
             name="hours"
             value="8-10 hours or more"
             onChange={handleUserHabitChange} />

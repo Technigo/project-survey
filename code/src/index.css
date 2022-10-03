@@ -80,6 +80,7 @@ form {
 select {
   font-size: 20px;
   margin-top: 25px;
+  cursor: pointer;
 }
 
 a {
@@ -113,6 +114,7 @@ a:hover {
   color:#B8616F;
   font-family: 'Karla', sans-serif;
   transition: all 0.25s ease-in-out;
+  cursor: pointer;
 }
 
 .button + .button {
@@ -137,8 +139,15 @@ label {
   width: 100%;
   margin-bottom: 10px;
   transition: background .25s ease-out;
+  cursor: pointer;
 }
 label:hover {
   background: #843d49;
 }
 
+p span{
+  font-weight: bold;
+  background: #b35363;
+  padding: 5px 10px 5px 10px;  
+  border-radius: 20px;
+}
