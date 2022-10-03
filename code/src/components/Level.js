@@ -10,9 +10,7 @@ export const Level = ({ level, setLevel }) => {
 return (
 
 <div>
-  <h2>My windsurfing style</h2>
-  <h3 class ="h3">What type of surf style do you practice? Feel free to choose multiple styles</h3>
-
+<h3 class ="h3">What type of surf style do you practice? Feel free to choose multiple styles</h3>
 <form>
 <p>
   Slalom

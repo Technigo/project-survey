@@ -8,7 +8,6 @@ export const Writing = ({ writing, setWriting}) => {
   return (
 <div class="textOne">
 <label for="writing">
-  <h2>Feedback</h2>
   <h3 class ="h3">Was the course as expected?</h3>
     <textarea className="input-writing" cols="40" rows="5"  type="text" placeholder='write here' value={writing} onChange={handleWritingChange} />
 </label>

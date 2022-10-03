@@ -1,13 +1,24 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+This week project was about creating an survay using react, divide code into components and use state hook. 
 
 ## The problem
+The project is not finished and I still have some work to do on the code. Too late I figured out that I have to do changes to the code and the components to make it more clean and useful  and make the rerendering of values work better.
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+Really had struggles with the checkbox (level component), did try different solutions but when running the code it only rerender one option even if user har choosen multiple choises. (before hand in I changed the code so for now input works but not the input value does not show.)
+
+Also had strugles with the progress-stepbar. Tried to build my own whitout sucess, until i relaised there is an progressbar HTML element. Still styling is on default and I have to figure out how to change design. 
+
+Left to do:
+1. Use map in components were it's useful
+2. Create a new component that collect the total data and HTML instead of in App.js
+3. Make checkboxes to work.
+4. create a "scroll function" to the webbsite. 
+
+But overall a very fun project!
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+
+
+

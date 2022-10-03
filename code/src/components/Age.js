@@ -1,6 +1,6 @@
 import React from 'react';
 
-/*map*/
+/*do map instead */
 
 export const Age = ({ age, setAge }) => {
   const handleAgeChange = (event) => {
