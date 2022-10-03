@@ -59,30 +59,38 @@ export const App = () => {
 
   return (
     <>
-      {stepCounter < 7 && (
+      {stepCounter === 1 && (
+        <section className="landing-page">
+          {stepCounter === 1 && (
+            <div className="landing-container">
+              <h1 className="landing-heading">Pomodoro generator</h1>
+              <button type="button" className="landing-button" onClick={handleNextButtonClick}>What is this? &#8250;</button>
+            </div>
+          )}
+        </section>
+      )}
+      {stepCounter > 1 && stepCounter < 8 && (
         <section className="container">
-          <div className="stepOne">
-            {stepCounter === 1 && (
-              <>
-                <h1>Welcome to the Pomodoro generator!</h1>
-                <p>Gone are the days of tasteless ready made&apos;s and dull pesto jars.
-                  This pomodoro generator was created to help you take the first steps into
-                  the Queendom of the greatest sauce on earth, tomato sauce. There are endless
-                  variations to explore, and to avoid choice overload, you only need to answer
-                  a few questions in this survey to help narrow down the options.
-                </p>
-                <p>Start by entering your name below to find your perfect pomodoro match! &#127813;
-                </p>
-                <div className="start">
-                  <input type="text" placeholder="Your Name" value={userName} onChange={handleUserNameInputChange} />
-                  <button type="button" className="button" onClick={handleNextButtonClick}>Start!</button>
-                </div>
-              </>
-            )}
-          </div>
+          {stepCounter === 2 && (
+            <>
+              <h1>Welcome to the Pomodoro generator!</h1>
+              <p>Gone are the days of tasteless ready made&apos;s and dull pesto jars.
+                This pomodoro generator was created to help you take the first steps into
+                the Queendom of the greatest sauce on earth, tomato sauce. There are endless
+                variations to explore, and to avoid choice overload, you only need to answer
+                a few questions in this survey to help narrow down the options.
+              </p>
+              <p>Start by entering your name below to find your perfect pomodoro match! &#127813;
+              </p>
+              <div className="start">
+                <input type="text" placeholder="Your Name" value={userName} onChange={handleUserNameInputChange} />
+                <button type="button" className="button" onClick={handleNextButtonClick}>Start!</button>
+              </div>
+            </>
+          )}
 
           <div className="questions">
-            {stepCounter === 2 && (
+            {stepCounter === 3 && (
               <>
                 <h1>Hi {userName}!</h1>
                 <h2>How would you like your sauce?</h2>
@@ -100,7 +108,7 @@ export const App = () => {
               </>
             )}
 
-            {stepCounter === 3 && (
+            {stepCounter === 4 && (
               <>
                 <h2>Which is your favorite tomato pairing?</h2>
                 <div className="radioContainer">
@@ -125,7 +133,7 @@ export const App = () => {
               </>
             )}
 
-            {stepCounter === 4 && (
+            {stepCounter === 5 && (
               <>
                 <h2>Which texture would you like your sauce to have?</h2>
                 <div className="radioContainer">
@@ -142,7 +150,7 @@ export const App = () => {
               </>
             )}
 
-            {stepCounter === 5 && (
+            {stepCounter === 6 && (
               <>
                 <h2>What would you like to sprinkle on top of your pomodoro?</h2>
                 <p>A meal is not complete until you add toppings! &#129472;</p>
@@ -157,7 +165,7 @@ export const App = () => {
             )}
           </div>
 
-          {stepCounter === 6 && (
+          {stepCounter === 7 && (
             <div className="summary">
               <div>
                 <h1>{userName}&apos;s Pomodoro summary </h1>
@@ -172,7 +180,8 @@ export const App = () => {
           )}
         </section>
       )}
-      {stepCounter === 7 && (
+
+      {stepCounter === 8 && (
         <section className="recipe">
           {renderRecipe()}
         </section>

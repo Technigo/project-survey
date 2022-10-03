@@ -49,6 +49,14 @@ li {
   font-weight: bold;
 }
 
+.landing-heading {
+  -webkit-text-stroke: 0.01em black;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 90px;
+  font-weight: bolder;
+  color: white;
+}
+
 /* BUTTONS, SELECT AND CONTAINER */
 
 .button {
@@ -68,6 +76,29 @@ li {
 }
 
 .button:hover {
+  background-color: #66ca6b;
+  border: solid white 1px;
+}
+
+.landing-button {
+  background-color: black;
+  border: solid white 1px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 25px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: 'Orbitron', sans-serif;
+  font-weight: bold;
+  width: 200px;
+  align-self: flex-end;
+}
+
+.landing-button:hover {
   background-color: #66ca6b;
   border: solid white 1px;
 }
@@ -92,9 +123,23 @@ li {
   font-family: 'Noto Sans Mono', monospace;
 }
 
-.container {
+.landing-page {
+  height: 100vh;
   display: flex;
   justify-content: center;
+  align-items: center;
+}
+
+.landing-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   padding: 40px;
   width: 25vw;
@@ -185,6 +230,7 @@ input[type="text" i] {
   width: 380px;
   height: 380px;
   opacity: 0.9;
+  border: solid black 1px;
 }
 
 .marinara {
@@ -192,6 +238,7 @@ input[type="text" i] {
   width: 380px;
   height: 655px;
   opacity: 0.95;
+  border: solid black 1px;
 }
 
 .scarpariello {
@@ -199,6 +246,7 @@ input[type="text" i] {
   width: 407px;
   height: 575px;
   opacity: 0.9;
+  border: solid black 1px;
 }
 
 .norma {
@@ -206,6 +254,7 @@ input[type="text" i] {
   width: 380px;
   height: 885px;
   opacity: 0.95;
+  border: solid black 1px;
 }
 
 .amatriciana {
@@ -213,6 +262,7 @@ input[type="text" i] {
   width: 407px;
   height: 717px;
   opacity: 0.95;
+  border: solid black 1px;
 }
 
 .img-with-text {
@@ -310,6 +360,36 @@ input[type="text" i] {
 /* MOBILE */
 @media (max-width: 667px) {
 
+.landing-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-container {
+  /* border: solid #66ca6b 1px; */
+  display: flex;
+  flex-direction: column;
+}
+
+.landing-heading {
+  font-size: 50px;
+  text-align: center;
+}
+
+.landing-button {
+  padding: 15px;
+  font-size: 13px;
+  width: 135px;
+  align-self: center;
+}
+
+.landing-button:hover {
+  background-color: #66ca6b;
+  border: solid white 1px;
+}
+
 .container {
   padding: 20px;
   width: 75vw;
@@ -332,6 +412,7 @@ input[type="text" i] {
 .button {
   padding: 10px 25px;
   margin-bottom: 40px;
+  font-size: 13px;
 }
 
 .radio-label {
@@ -504,6 +585,14 @@ li {
 
 /* TABLET */
 @media (min-width: 668px) and (max-width: 1024px) {
+
+.landing-heading {
+  text-align: center;
+}
+
+.landing-button {
+  align-self: center;
+}
 
 .container {
   padding: 40px;
