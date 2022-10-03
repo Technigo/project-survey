@@ -7,7 +7,7 @@ const UserName = ({ name, setName }) => {
   return (
     <>
       <p>Hello, please type in your name:</p>
-      <input value={name} type="text" onChange={handleUserNameInputChange} />
+      <input value={name} type="text" placeholder="Name" onChange={handleUserNameInputChange} />
     </>
   );
 }

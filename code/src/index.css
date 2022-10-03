@@ -13,13 +13,24 @@ body {
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;*/
 
+
 h1 {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: bisque;
+}
+
+
+h2 {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: bisque;
+  font-size: 20px;
 }
 
 p {
-  font-family: 'Roboto' sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 16px;
+  color: bisque;
+  
 }
 
 .outer-wrapper {
@@ -30,18 +41,20 @@ p {
 }
 
 .inner-wrapper {
-  background-color: #7038FD55;
-  width: 100%;
+ /* background-color: #7038FD55;*/
+  width: 80%;
   height: 300px;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
   text-align: center;
 }
 
 .background-wrapper {
-  background-image: url('./components/pills.jpg');
+  background-image: url('./components/beach.jpg');
   padding-top: 20px;
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -51,19 +64,27 @@ p {
 /* Buttons */
 
 .start-btn, .reset-btn, .submit-btn, .continue-btn, .back-btn {
-  background-color: #DB43FA;
+  background-color: #7038FD55;
+  border: bisque 1px solid;
+  border-radius: 20px;
   font-family: 'Roboto', sans-serif;
-  font-weight: 600;
+  font-weight: 400;
   font-size: 16px;
+  color:bisque;
   padding: 5px;
   margin: 10px;
 }
 
+.radio-buttons {
+  font-size: 20px;
+  color:bisque;
+}
+
 .dropdown-select {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 600;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
   font-size: 16px;
-  text-align: center;
+  max-width: fit-content;
 }
 
 
@@ -73,18 +94,29 @@ p {
 @media (min-width: 1025px){ 
 
 .outer-wrapper {
-  background-color: #7038FD55;
+  max-width: auto;
 }
 
 .inner-wrapper {
-  max-width: 1100px;
-  margin-top: -20px;
+  margin-top: 100px;
   font-weight: 500;
+  font-size: 20px;
+  max-width: 50%;
+}
+
+p {
+  font-size: 25px;
+ 
+}
+.dropdown-select {
   font-size: 20px;
 }
 
-.background-wrapper {
-  max-width: 1100px;
+.radio-buttons {
+  font-size: 25px;
 }
 
+h2 {
+  font-size: 25px;
+}
 }

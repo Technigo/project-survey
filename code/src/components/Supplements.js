@@ -7,7 +7,7 @@ const SupplementsQuestion = ({ supplements, setSupplements }) => {
   return (
     <>
       <p>Do you take any medicine, mineral or vitamin supplements?</p>
-      <input value={supplements} type="text" onChange={handleSupplementsQuestionInputChange} />
+      <input value={supplements} type="text" placeholder="Type your answer here" onChange={handleSupplementsQuestionInputChange} />
     </>
 
   );
