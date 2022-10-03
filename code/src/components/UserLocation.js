@@ -1,5 +1,7 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable react/react-in-jsx-scope */
+import React from 'react';
+
 const UserLocation = ({ userlocation, setUserlocation }) => {
   const handleUserLocationInputChange = (event) => {
     setUserlocation(event.target.value);
