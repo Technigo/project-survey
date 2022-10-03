@@ -64,7 +64,7 @@ export const Amatriciana = () => {
             <img
               className="amatriciana"
               src="amatriciana.jpg"
-              alt="Pomodoro in jar" />
+              alt="amatriciana" />
             <p className="image-header">How To Store Tomato Sauce:</p>
             <p className="image-text">You can store it in a covered container for up to 1 week in the refrigerator
                 or transfer it to freezer safe containers and keep it for 3-4 months if well sealed

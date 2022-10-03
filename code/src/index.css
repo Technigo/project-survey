@@ -227,8 +227,8 @@ input[type="text" i] {
 .pomodoro {
   background: tomato;  /* background color in case image doesnt load */
   position: relative;
-  width: 380px;
-  height: 380px;
+  width: 330px;
+  height: 356px;
   opacity: 0.9;
   border: solid black 1px;
 }

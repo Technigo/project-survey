@@ -53,7 +53,7 @@ export const Scarpariello = () => {
             <img
               className="scarpariello"
               src="cheese.jpg"
-              alt="Pomodoro in jar" />
+              alt="Cheese" />
             <p className="image-header">Have some leftovers at home?</p>
             <p className="image-text">Sauce allo scarpariello is a classic traditional recipe from Naples.
              Originally, created to make use of leftover Sunday ragu. So if you have leftovers that
