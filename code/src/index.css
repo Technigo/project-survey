@@ -180,6 +180,7 @@ input[type="text" i] {
 }
 
 .pomodoro {
+  background: tomato;  /* background color in case image doesnt load */
   position: relative;
   width: 380px;
   height: 380px;
@@ -187,24 +188,28 @@ input[type="text" i] {
 }
 
 .marinara {
+  background: tomato;  /* background color in case image doesnt load */
   width: 380px;
   height: 655px;
   opacity: 0.95;
 }
 
 .scarpariello {
+  background: tomato;  /* background color in case image doesnt load */
   width: 407px;
   height: 575px;
   opacity: 0.9;
 }
 
 .norma {
+  background: tomato;  /* background color in case image doesnt load */
   width: 380px;
   height: 885px;
   opacity: 0.95;
 }
 
 .amatriciana {
+  background: tomato;  /* background color in case image doesnt load */
   width: 407px;
   height: 717px;
   opacity: 0.95;

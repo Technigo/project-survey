@@ -23,28 +23,27 @@ export const Arrabiata = () => {
             <div className="instructions">
               <h2 className="sub-heading">Instructions</h2>
               <ol>
-                <li>1. Heat up the olive oil and saute the onion with
+                <li>Heat up the olive oil and saute the onion with
                   a pinch of sea salt until translucent, about 10 minutes
                 </li>
-                <li>2. Add the garlic and red pepper flakes and let it cook
+                <li>Add the garlic and red pepper flakes and let it cook
                   only for a few seconds until you can smell it and don&apos;t get any color on it
                 </li>
-                <li>3. In a large bowl crush the tomatoes with your hands but leave a few smaller
+                <li>In a large bowl crush the tomatoes with your hands but leave a few smaller
                   chunks in there
                 </li>
-                <li>4. Transfer them to the pot with the onions and garlic
+                <li>Transfer them to the pot with the onions and garlic
                    and bring to a simmer
                 </li>
-                <li>5. Add the bay leaf and partially cover with a lid </li>
-                <li>6. Allow the sauce to simmer away on low flame until thick and concentrated
+                <li>Add the bay leaf and partially cover with a lid </li>
+                <li>Allow the sauce to simmer away on low flame until thick and concentrated
                   in flavor
                 </li>
-                <li>7. Turn off the flame and season to your taste with the sea salt </li>
-                <li>8. Stir in the fresh basil leaves and finish it with a drizzle of extra virgin
+                <li>Turn off the flame and season to your taste with the sea salt </li>
+                <li>Stir in the fresh basil leaves and finish it with a drizzle of extra virgin
                   olive oil
                 </li>
-                <li>9. Serve with pasta or meats or some fresh crusty bread</li>
-                <li />
+                <li>Serve with pasta or meats or some fresh crusty bread</li>
               </ol>
               <p className="note">Note: Make sure to stir often,
                 making sure the sugars in the tomatoes do not burn

@@ -163,8 +163,8 @@ export const App = () => {
                 <h1>{userName}&apos;s Pomodoro summary </h1>
                 <p>Preference: {preference}</p>
                 <p>Condiment: {condiment}</p>
-                <p>How spicy: {texture}</p>
-                <p>Sprinkle: {sprinkle}</p>
+                <p>Texture: {texture}</p>
+                <p>Topping: {sprinkle}</p>
               </div>
               <h3>Let&apos;s get cookin! &#127813;</h3>
               <button type="button" className="button" onClick={handleNextButtonClick}>Generate Recipe!</button>
