@@ -25,7 +25,7 @@ const FirstQuestion = ({
           type="text"
           value={nameInput}
           onChange={onNameInputChange}
-          required="required" />
+          required />
       </label>
       <div className="button-container">
         <button type="button" className="back" onClick={onPreviousQuestionChange}>
