@@ -4,10 +4,9 @@ import JSConfetti from 'js-confetti';
 const jsConfetti = new JSConfetti();
 
 export const Step = ({ step, setStep, color, size }) => {
-  console.log('BEFORE', { color }, { size });
+  // redefines the props color and size to fit the confetti function. Deleting ""
   const colorConfetti = JSON.stringify(color).slice(1, 8);
   const sizeConfetti = JSON.stringify(size).replace(/['"]+/g, '');
-  console.log('AFTER', colorConfetti, sizeConfetti);
 
   return (
     <>

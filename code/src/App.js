@@ -10,9 +10,9 @@ import { Result } from './components/Result';
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setUserName] = useState('');
-  const [color, setUserColor] = useState('#ffffff');
+  const [color, setUserColor] = useState('#57b7a7');
   const [pattern, setUserPattern] = useState('');
-  const [size, setUserSize] = useState('');
+  const [size, setUserSize] = useState(10);
 
   return (
     <div className="outerWrapper">

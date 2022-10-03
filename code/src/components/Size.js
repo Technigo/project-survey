@@ -7,9 +7,9 @@ export const Size = ({ size, setSize }) => {
 
   return (
     <form required onSubmit={(event) => event.preventDefault()}>
-      <h2>
+      <p>
         What size of the confetti do you want?
-      </h2>
+      </p>
       <select value={size} onChange={handleSizeChange}>
         <option value="">Select size</option>
         <option value="15">Large</option>
