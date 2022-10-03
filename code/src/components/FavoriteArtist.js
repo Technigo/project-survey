@@ -14,7 +14,7 @@ export const FavoriteArtist = ({ favoriteArtist, setFavoriteArtist, step, percen
         </div>
       </div>
       <label htmlFor="favoriteArtist">
-        Which artist do you want to the next time you go to a concert?
+        Which artist do you want to see the next time you go to a concert?
         <input id="favoriteArtist" type="text" value={favoriteArtist} onChange={handleFavoriteArtist} required />
       </label>
       <Button button="Summary" />
