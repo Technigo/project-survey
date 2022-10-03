@@ -19,3 +19,4 @@ Requirements
 Had an idea that I wanted to create and learn to do something generic. Big misstake. Half of the week I almost gave ut and wanted to start from the beginning due to running out of time, but decided to focus on code mainly. If I had more time I would redo the whole project and make less complicated, follow the teatchers guidelines instead and work more on consept/content and design.
 
 ## View it live
+https://petrassurvey.netlify.app/
