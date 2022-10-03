@@ -6,8 +6,8 @@ import { ConsiderationInput } from 'components/Considerationinput';
 import { TextAreaInput } from 'components/Textareainput';
 import { ActionInput } from 'components/Actioninput';
 import { UserNameInput } from 'components/Usernameinput';
-import { Summary } from 'components/Summary';
-import { Button } from 'components/Button';
+import { Summary } from 'components/summary';
+import { Button } from 'components/button';
 import { Email } from 'components/EmailInput';
 import { Checkbox } from 'components/Checkbox';
 
