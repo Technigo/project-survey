@@ -102,7 +102,7 @@ export const App = () => {
           <>
             <div className="question-section">
               <h1 className="survey-completed-h1" tabIndex="0">Survey completed!</h1>
-              <p tabIndex="0">Summary of you answers</p>
+              <p tabIndex="0">Summary of your answers</p>
               <div>
                 <p className="list" tabIndex="0">Name: {name} </p>
                 <p className="list" tabIndex="0">Lastname: {lastname} </p>
