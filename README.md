@@ -10,4 +10,3 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-https://stellar-faloodeh-46180e.netlify.app/
