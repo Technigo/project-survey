@@ -6,6 +6,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-image: url(./images/map.jpg);
+  background-size: 100%;
   font-size: 20px;
 }
 
@@ -170,4 +171,11 @@ left: 20%;
         .email {
           width: 30%
          } 
+
+        }
+
+        @media (max-width: 1024px) {
+          body {
+          background-size: 300%;
+           }
         }
