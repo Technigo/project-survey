@@ -29,7 +29,7 @@ const Booking = ({setWorkout, setLocation}) => {
             <input type="radio" 
             name="holy-ride" 
             value="Holy-Ride"
-            onChange={e=>setLocation(e.target.value)}/>
+            onChange={e=>setWorkout(e.target.value)}/>
             <label htmlFor="">Holy Ride</label>
 
             <input type="radio" 
