@@ -7,6 +7,7 @@ const PriceQuestionOne = ({ price1, setPrice1 }) => {
       <div className="question-price">
         <div className="picture1-div" />
         <h2>What price range would you expect to pay for this item?</h2>
+        <p className="product-description">Toddler sweater. Size 1-2 years. 90% merino whool 10% silk mohair.</p>
         <form className="question-form">
           <select
             id="priceSelect1"

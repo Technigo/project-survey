@@ -40,6 +40,8 @@ const Summary = ({
           <th>{price3} SEK</th>
         </tr>
       </table>
+      <p />
+      <div className="QR-div" />
     </div>
 
   );

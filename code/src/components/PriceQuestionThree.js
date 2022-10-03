@@ -6,6 +6,7 @@ const PriceQuestionThree = ({ price3, setPrice3 }) => {
     <div className="question-price">
       <div className="picture3-div" />
       <h2>What price range would you expect to pay for this set of items?</h2>
+      <p className="product-description">Baby hat and socks. Size 0-2 months. 100% merino whool.</p>
       <form className="question-form">
         <select
           id="priceSelect3"

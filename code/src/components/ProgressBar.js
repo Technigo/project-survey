@@ -6,8 +6,8 @@ const ProgressBar = ({ step }) => {
 
   return (
     <div>
-      <div>
-        <h3>Step {step}/7. You have completed {completed}%</h3>
+      <div className="progress-div">
+        Step {step}/7. You have completed {completed}%
       </div>
     </div>
   );

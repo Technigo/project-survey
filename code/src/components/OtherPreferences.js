@@ -5,7 +5,7 @@ import React from 'react';
 const preferences = [
   'I would like to be able to choose my own yarn and color',
   'I would like to see the item in a store before ordering',
-  'It’s more important that it is easy to wash than the quality of the yarn',
+  'It’s more important for me to be able to wash the item easily than the quality of the yarn',
   'I care more about the quailty of the yarn than how easy it is to wash'
 ];
 
