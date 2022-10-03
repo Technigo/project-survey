@@ -9,4 +9,4 @@ Had problem with storing the input data to display in the summary page, as I sto
 
 ## View it live
 
-week6-jessnmo.netlify.app
+https://week6-jessnmo.netlify.app/
