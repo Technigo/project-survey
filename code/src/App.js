@@ -1,5 +1,3 @@
-/* eslint-disable no-undef */
-/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 
 import { Age } from 'components/Age';
