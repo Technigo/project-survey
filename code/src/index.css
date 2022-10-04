@@ -161,8 +161,8 @@ span{
 @media (min-width: 668px){
 
   .container{
-    height: 600px;
-    width: 750px; 
+    height: 540px;
+    width: 670px;
   }
   h1 {
     font-size: 32px;  
@@ -207,8 +207,8 @@ span{
     font-size: 24px;
   }
   .container{
-    height: 600px;
-    width: 750px; 
+    height: 570px;
+    width: 720px;
   }
 
   h1 {
