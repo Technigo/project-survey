@@ -1,6 +1,7 @@
 import React from 'react';
 /* This component will return different types of data depending on what type of question it is */
 
+/* function showing heading and text for each question */
 const QuestionTitle = ({ heading, text }) => {
   return (
     <div>
@@ -10,7 +11,8 @@ const QuestionTitle = ({ heading, text }) => {
   );
 };
 
-const Questions = ({
+/* function showing different types of questions */
+const Questiontypes = ({
   questionTitle,
   questionText,
   inputType,
@@ -34,8 +36,11 @@ const Questions = ({
         <QuestionTitle heading={questionTitle} text={questionText} />
 
         <div className="select">
-          <select onChange={onChange} required>
-            <option value="">Choose option</option>
+          <select
+            className="select-input"
+            onChange={onChange}
+            required>
+            <option value="">Choose your energy level</option>
 
             {options.map((option) => {
               return (
@@ -56,6 +61,7 @@ const Questions = ({
           return (
             <div className="radio" key={option.value}>
               <input
+                className="radio-input"
                 id={option.value}
                 type={inputType}
                 name="name"
@@ -73,4 +79,4 @@ const Questions = ({
     return <>its another type: {inputType}</>;
   }
 };
-export default Questions;
+export default Questiontypes;

@@ -1,7 +1,6 @@
 import React from 'react';
 
 const Summary = ({ answers, reset }) => {
-  /* const [first, intro, second, name, third, energy, fourth, genre, fifth, time] = answers; */
   return (
     <>
       <div className="container-summary">

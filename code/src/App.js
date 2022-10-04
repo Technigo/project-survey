@@ -1,7 +1,7 @@
 /* eslint-disable react/jsx-props-no-spreading */
 import React, { useState } from 'react';
 import Startpage from 'components/Startpage';
-import Types from 'components/Types';
+import Questiontypes from 'components/Questiontypes';
 import Summary from 'components/Summary';
 import './index.css';
 
@@ -98,7 +98,7 @@ export const App = () => {
       )}
       {currentQuestion > 0 && currentQuestion < 5 && (
         <section className="container">
-          <Types
+          <Questiontypes
             {...questionsData[currentQuestion]}
             onChange={handleUserInputChange}
             userInput={userInput} />
