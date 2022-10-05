@@ -9,23 +9,24 @@ export const Pattern = ({ pattern, setPattern }) => {
 
   return (
     <form onSubmit={(event) => event.preventDefault()}>
-      <p>
+      <label htmlFor="emoji-input">
         Which emoji do you like the most?
-      </p>
-      <div className="radioParent">
-        {patternGroup.map((group) => (
-          <label key={group} htmlFor="group">
-            <input
-              type="radio"
-              className="radioCircle"
-              value={group}
-              onChange={handlePatternChange}
-              checked={pattern === group}
-              aria-label={group} />
-            {group}
-          </label>
-        ))}
-      </div>
+        <div className="radioParent">
+          {patternGroup.map((group) => (
+            <label key={group} htmlFor="group">
+              <input
+                type="radio"
+                className="radioCircle"
+                value={group}
+                onChange={handlePatternChange}
+                checked={pattern === group}
+                aria-label={group}
+                id="emoji-input" />
+              {group}
+            </label>
+          ))}
+        </div>
+      </label>
     </form>
   );
 };

@@ -7,10 +7,11 @@ export const Colour = ({ color, setColor }) => {
 
   return (
     <form required onSubmit={(event) => event.preventDefault()}>
-      <p>
+      <label htmlFor="colorPicker">
         Choose the colour of the confetti:
-      </p>
-      <input type="color" className="colorPicker" tabIndex="0" value={color} onChange={handleColorChange} />
+        <input type="color" id="colorPicker" className="colorPicker" tabIndex="0" value={color} onChange={handleColorChange} />
+      </label>
     </form>
+
   );
 };

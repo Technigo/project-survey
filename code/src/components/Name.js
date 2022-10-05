@@ -10,7 +10,7 @@ export const Name = ({ name, setName }) => {
       <p>
         What do you want to celebrate?
       </p>
-      <input type="text" className="nameInputField" tabIndex="0" value={name} onChange={handleNameChange} />
+      <input type="text" className="nameInputField" aria-label="Write your name here" value={name} onChange={handleNameChange} />
     </form>
   );
 };
