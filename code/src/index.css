@@ -87,14 +87,14 @@ input, progress {
   margin-bottom: 2em;
   }
 
-.button:focus {
+/* .button:focus {
   }
 
 .button:hover {
   }
 
 .button:active {
-  }
+  } */
 
 /* ------ Text input (name) ------ */
 
@@ -107,11 +107,11 @@ input, progress {
   font-size: inherit;
 }
 
-.user-name:focus {
+/* .user-name:focus {
 }
 
 .user-name:active {
-}
+} */
 
 /* ------ Select (coolest thing) ------ */
 
