@@ -1,13 +1,13 @@
-# Survey form with React
+# Secret Santa - Survey form with React
 
-Replace this readme with your own information about your project.
+This project is an exercise in controlled forms with functional React components for personal use.
+The design of this project comes from a Typeform template:
+https://www.typeform.com/templates/t/secret-santa-form/
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Thanks also to https://www.zondicons.com for providing free and great looking svg icons
 
-## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+If I had more time, I would try to implement the transition animations seen in the Typeform template
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://joels-secret-santa-survey.netlify.app/
