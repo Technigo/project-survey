@@ -11,4 +11,4 @@ Responsive design is set through Tailwind.
 
 ## View it live
 
-https://app.netlify.com/sites/maria-survey/overview
+https://maria-survey.netlify.app/
