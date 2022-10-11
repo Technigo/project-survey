@@ -1,75 +1,80 @@
 
 const Booking = ({setWorkout, setLocation}) => {
 
-   /*  const handleRadioBtn =(e) =>{
-        console.log(e.target.value);
-        e.target.value;
-    }
+   const workouts = [
+    {
+        name:"holy-shred",
+        value:"Holy Shred",
+        label: "Holy Shred"
+    },
+    {
+        name:"holy-build",
+        value:"Holy Build",
+        label: "Holy Build"
+    },
+    {
+        name:"holy-ride",
+        value:"Holy Ride",
+        label: "Holy Ride"
+        },
+    {
+        name:"holy-shred",
+        value:"Holy Booty",
+        label: "Holy Booty"
+        }, 
+    {
+        name:"open-gym",
+        value:"Open Gym",
+        label: "Open Gym"
+        }
+     ]
 
-    const handleCheckBox =(e) =>{
-        console.log(e.target.value);
-        e.target.value;
-    } */
+     const locations = [
+        {
+            name:"oud-zuid",
+            value:"Oud Zuid",
+            label:"Oud Zuid"
+        },
+        {
+            name:"oud-west",
+            value:"Oud West",
+            label:"Oud West"
+        }
+     ]
 
-    return ( 
+    return (
         <>
         <div className="booking">
-        <input type="radio" 
-            name="holy-shred" 
-            value="Holy-Shred"
+        {workouts.map(workout => {
+        return (
+            <> 
+            <input 
+            type="radio" 
+            name= {workout.name}
+            value= {workout.value}
             onChange={e=>setWorkout(e.target.value)} />
-            <label htmlFor="">Holy Shred</label>
-
-            <input type="radio" 
-            name="holy-build" 
-            value="Holy-Build"
-            onChange={e=>setWorkout(e.target.value)}  />
-            <label htmlFor="">Holy Build</label>
-
-            <input type="radio" 
-            name="holy-ride" 
-            value="Holy-Ride"
-            onChange={e=>setWorkout(e.target.value)}/>
-            <label htmlFor="">Holy Ride</label>
-
-            <input type="radio" 
-            name="holy-box" 
-            value="Holy-Box"
-            onChange={e=>setWorkout(e.target.value)}  />
-            <label htmlFor="">Holy Box</label>
-
-            <input type="radio" 
-            name="holy-booty" 
-            value="Holy-Booty"
-            onChange={e=>setWorkout(e.target.value)} />
-            <label htmlFor="">Holy Booty</label>
-
-            <input type="radio" 
-            name="open-gym" 
-            value="Open-Gym"
-            onChange={e=>setWorkout(e.target.value)} />
-            <label htmlFor="">Open Gym</label>
-        </div>
-
-        <div className="location-wrap">   
-            <p className="which-gym">Which location are you going?</p>
-
-            <div className="location">
+            <label>{workout.label}</label>
+            </>
+        )
+    })} 
+    </div>
+    
+    <div className="location">
+        {locations.map(location => {
+            return(
+                <>
                 <input type="checkbox" 
-                name="location"
-                value="Oud-Zuid"
+                name={location.name}
+                value={location.value}
                 onChange={e=>setLocation(e.target.value)} />
-                <label>Oud-Zuid</label>
+                <label>{location.label}</label>
+                </>
+            )
+        })}
+    </div>
+    </>
 
-                <input type="checkbox"
-                name="location"
-                value="Oud-West" 
-                onChange={e=>setLocation(e.target.value)}/>
-                <label>Oud-West</label>
-            </div>
-        </div> 
-        </>
-     );
+    )
 }
  
 export default Booking;
