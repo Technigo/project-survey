@@ -68,7 +68,9 @@ const Form = () => {
   // return question carousel
   return (
     <main className="main-contaniner">
-      {counter === 0 && <FirstPage onNextQuestionChange={onNextQuestionChange} />}
+      {counter === 0
+      && <FirstPage onNextQuestionChange={onNextQuestionChange} />}
+
       {counter === 1 && (
         <FirstQuestion
           nameInput={nameInput}
