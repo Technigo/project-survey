@@ -1,13 +1,206 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@font-face {
+	font-family: Harry-P;
+	src: url(../src/HARRYP__.TTF)
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: url("data:image/png;base64,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"), pointer;
+}
+
+body {
+  background: linear-gradient(rgba(156, 242, 250, 0.633), rgb(52, 82, 170));
+}
+
+header {
+  width: 100vw;
+  height: 40vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+}
+
+.overlay {
+  background: linear-gradient(rgba(237, 241, 241, 0.5), rgba(156, 211, 250, 0.633));
+  width: 100%;
+  height: 100%;
+  color: #000;
+  position: absolute;
+  top: 0;
+  display: flex;
+  align-items: center;
+}
+
+.header-text {
+  width: 80%;
+  margin: 2rem auto;
+  letter-spacing: 2px;
+  line-height: 1.3;
+}
+
+.header-text p {
+  margin: 1rem;
+  font-weight: 500;
+}
+
+.outer-wrapper {
+    min-height: 100vh; 
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.inner-wrapper {
+  color: #000;
+    padding: 2rem;
+    font-size: 20px;
+    width: 80%;
+    min-height: 60vh;
+}
+
+fieldset{
+  border: transparent;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: Harry-P, 'Playfair Display', serif;
+  font-size: 60px;
+}
+
+.question-wrapper {
+    padding: 0.5rem;
+}
+
+.input-field {
+  margin: 1rem 0;
+  width: 200px;
+}
+
+.input-field:hover {
+  transform:scale(1.1, 1.1);
+}
+
+input[type=text] {
+  appearance: none;
+  color: #000;
+  height: 28px;
+  text-decoration: none;
+  background-color: #ded5d5;
+  border-radius: 5px; 
+  border: 0;
+  padding-left: 1rem;
+  font-size: 20px;
+}
+
+.value-question {
+  margin: 0 0 0.5rem 0
+}
+
+.valued-trait {
+  margin-bottom: 1rem;
+}
+
+input[type="radio"] {
+  appearance: none;
+  display: inline-block;
+  width: 20px;
+  height: 20px;  
+  padding: 3px;
+  background-clip: content-box;
+  border: 2px solid #ded5d5;
+  border-radius: 50%;
+  margin: 0 1rem -5px 0.5rem;
+}
+
+input[type='radio']:focus {
+  background-color: #ded5d5;
+}
+
+select.input-field{
+  background: #ded5d5;
+  color: #000;
+  padding: 0 10px;
+  font-size: 20px;
+  border-radius: 5px; 
+  border: 0;
+}
+
+.slider {
+  appearance: none;
+  width: 100%;
+  height: 15px;
+  border-radius: 5px;  
+  background:rgb(205, 231, 250);;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: #c2baba;
+  border: 2px solid #000;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #c2baba;
+  border: 2px solid #000;
+}
+
+.submit-button {
+  margin: 2rem auto;
+  display: flex;
+  font-size: 20px;
+  padding: 1rem 1.5rem;
+  border-radius: 20px;
+  border: 0;
+  background-color: rgb(205, 231, 250);
+  border: 2px solid #000;
+}
+
+.submit-button:hover {
+  background-color: rgb(24, 61, 173);
+  color: #FFF;
+  transition: 0.3s;
+}
+
+.submission-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.submission-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: 'Amatic SC', cursive;
+  font-weight: 700;
+  font-size: 25px;
+}
+
+.submission-form p {
+  letter-spacing: 2px;
+  margin: 1rem 0;
+}
+
+.information {
+  font-family: sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  font-size: 16px;
 }
