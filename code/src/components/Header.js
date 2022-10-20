@@ -1,5 +1,5 @@
 import React from 'react';
-import BackgroundImage from './background.webp'
+import BackgroundImage from '../assets/images/background.webp'
 
 const Header = () => {
   return (
