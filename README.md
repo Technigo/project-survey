@@ -1,13 +1,11 @@
 # Survey form with React
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+The assignment was to build a survey using React. We were to use at least three questions, of which one should use radio-buttons and one should use a select drop-down. The website should be accessible, and the user user should be able to see his/her answers after pressing the "Submit"-button. 
 
 ## The problem
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+This was my second React project, and the first time using state hooks. This was a valuable tool when I built the components, and I got to dig deeper into the concept of props when building the generic component "TextAreaInput". If I had more time, I would check and ensure the accessibility further. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://stockholm-museum-survey.netlify.app/
