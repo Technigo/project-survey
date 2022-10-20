@@ -8,4 +8,4 @@ I used google to find some solutions for the radiobuttons, but other than that I
 
 ## View it live
 
-https://celadon-cheesecake-a07da9.netlify.app/
+https://lifestylesurvey.netlify.app
