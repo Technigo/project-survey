@@ -1,20 +1,9 @@
-# Survey form with React
+# React Portfolio
 
-Project Survey
+Project Survey week 6 at Technigo bootcamp. A Typeform-like survey to collect data from your users built in React.
 
-This project was to create a a Typeform-like survey to collect data from your users.
-
-What I learned
-✓ What the purpose of state in React is.
-
-✓ How to use the `useState` hook in React.
-
-✓ How to connect HTML form inputs to state.
-
-✓ How to use form fields with React
-
-✓ How to use state to show different components based on where you are in the survey
+## The problem
+Project build in react using useState hooks. Our assignment was to create a survey with at least 3 questions and a submit button. A big challenge this week was to transform the answears to give a result depending on how the user have answear the questions.
 
 ## View it live
-
 kristinlarsson-projectsurvey.netlify.app
