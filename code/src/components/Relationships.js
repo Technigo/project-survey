@@ -10,7 +10,7 @@ export const Relationships = ({ setRelationships }) => {
 
   return (
     <div className="survey-item relationships">
-      <p className="section-heading">What´s your relationship to coffe?</p>
+      <p className="section-heading">What´s your relationship to coffee?</p>
       <div className="text-container">
         {relArray.map((choice) => (
           <label className="relationships" key={choice} htmlFor="relationships">

@@ -3,7 +3,7 @@ import React from 'react';
 export const WhatKinde = ({ whatKinde, setWhatKinde }) => {
   return (
     <div className="survey-item what-kinde">
-      <label className="section-heading" htmlFor="whatKinde">How do you preffere your coffee?
+      <label className="section-heading" htmlFor="whatKinde">How do you prefer your coffee?
         <select
           onChange={(event) => setWhatKinde(event.target.value)}
           id="whatKinde"

@@ -6,7 +6,7 @@ export const Feeling = ({ feeling, setFeeling }) => {
       <label className="section-heading" htmlFor="feeling">
         How does Coffee make you feel?
         <p>
-          (ex: awsom, a million bucks, you can´t sleep, need a bathroom, can´t live without it!)
+          (ex: awesome, a million bucks, you can´t sleep, need a bathroom, can´t live without it!)
         </p>
         <input
           id="feeling"
