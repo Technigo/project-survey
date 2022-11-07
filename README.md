@@ -7,4 +7,4 @@ I had some problems with css, but managed to fix them through different "work ar
 
 ## View it live
 
-https://project-survey-dayofcoding.netlify.app/
+https://survey-mariawestling.netlify.app/
