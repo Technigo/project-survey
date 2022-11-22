@@ -20,4 +20,4 @@ Tech focus:
 
 
 ## View it live
-carolines-pomodoro.netlify.app
+https://carolines-pomodoro.netlify.app/
