@@ -10,38 +10,44 @@ body {
   font-size: 20px;
 }
 
-
-
- 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
-.title {
+.header {
   position: absolute;
-  left: 20%;
-  right: 20%;
-  top: 10%;
+  left: 10%;
+  right: 10%;
+  top: 10%; 
+}
+
+.title {
   font-family: 'Cinzel', serif;
   background-color: antiquewhite;
   width: fit-content;
+  padding: 15px;
 }
 
 .question {
- position: absolute;
- top: 30%;
- left: 20%;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  width: fit-content;
  background-color: antiquewhite;
  font-size: 27px;
  display: flex;
- text-align: left
+ text-align: left;
+ padding: 10px;
+ margin: 10px;
 }
 
 .book-selection {
-position: absolute;
- top: 40%;
- left: 20%;
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 40%;
  background-color: antiquewhite;
  display: flex;
  flex-direction: column;
@@ -50,7 +56,8 @@ position: absolute;
 .language-selection {
   position: absolute;
  top: 40%;
- left: 20%;
+ left: 10%;
+ width: fit-content;
  background-color: antiquewhite;
  font-size: 16px;
     font-family: 'Cinzel', serif;
@@ -60,7 +67,8 @@ position: absolute;
 .version-selection {
   position: absolute;
    top: 40%;
-   left: 20%;
+   left: 10%;
+   right: 20%;
    background-color: antiquewhite;
    display: flex;
    flex-direction: column;
@@ -69,10 +77,14 @@ position: absolute;
   .results {
     position: absolute;
    top: 40%;
-   left: 20%;
+   left: 10%;
+   right: 10%;
+   width: fit-content;
    background-color: antiquewhite;
    display: flex;
    flex-direction: column;
+   padding: 15px;
+   margin: 15px;
   }
 
 .next-step {
@@ -81,7 +93,7 @@ top: 60%;
 left: 20%;
 }
 
-.next-step button {
+button {
     border-radius: 4px;
     background-color: antiquewhite;
     border: none;
@@ -121,59 +133,28 @@ left: 20%;
     right: 10px;
   }
 
-  .email {
-   width: 60%
-  } 
-
-
-  input[type="email"]::placeholder {   
-    font-size: 16px;
-    font-family: 'Cinzel', serif;
-    }
-
-    .submit {
-      font-family: 'Cinzel', serif;
-        border-radius: 4px;
-        background-color: antiquewhite;
-        border: none;
-        text-align: center;
-        font-size: 16px;
-        padding: 10px;
-        width: 100px;
-        transition: all 0.5s;
-        cursor: pointer;
-        margin: 20px;
-        box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
-      }
-      
-      .submit:after {
-        position: absolute;
-        opacity: 0;  
-        top: 14px;
-        right: -20px;
-        transition: 0.5s;
-      }
-      
-      .submit:hover{
-        padding-right: 24px;
-        padding-left:8px;
-        font-size: 20px;
-      }
-      
-      .submit:hover:after {
-        opacity: 1;
-        right: 10px;
-      }
-    
-    
       @media (min-width: 1024px) {
 
-        .email {
-          width: 30%
-         } 
-
+        .book-selection {
+          left: 10%;
+          right: 30%;
+        }
+        
+        .question {
+          left: 10%;
+          width: fit-content;
         }
 
+        .language-selection {
+          left: 10%;
+          margin: 15px;
+        }
+        
+        .version-selection {
+           left: 10%;
+           width: fit-content;
+        }
+      }
         @media (max-width: 1024px) {
           body {
           background-size: 300%;

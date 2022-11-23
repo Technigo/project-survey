@@ -30,13 +30,17 @@ export const App = () => {
       {step >= 4 && (
         <Result book={book} language={language} version={version} />
       )}
-      {step < 4 && (
+      {step < 3 && (
 
         <div className="next-step">
-          <p>Current step: {step}</p>
           <button type="button" onClick={handleStepIncrease}>Next step</button>
-
+          </div>
+      )}
+      {step === 3 && (
+        <div className='next-step'>
+        <button className="submit-btn" type="button" onClick={handleStepIncrease}>Submit</button>
         </div>
+         
       )}
     </>
   );
