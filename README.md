@@ -11,5 +11,6 @@ I would also add error handling for when the user doesn't select an answer.
 
 ## View it live
 
-https://grand-custard-84accf.netlify.app/
+https://survey.brucette.com/
+
 
