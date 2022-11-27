@@ -35,6 +35,7 @@ export const Summary = ({
       <p className="summary">Please visit the <a href="https://www.who.int/news-room/fact-sheets/detail/physical-activity"> WHO website </a>
       for further information if you belong to any of the mentioned groups.
       </p>
+      <button type="button" onClick={() => window.location.reload()}>Take again</button>
     </div>
   );
 }

@@ -7,7 +7,7 @@ const ageGroups = [
   '65+'
 ]
 // Component presents 3 age groups for the user to select between
-export const Age = ({ ageGroup, setAgeGroup }) => {
+export const Age = ({ ageGroup, setAgeGroup, handleNextButton }) => {
   return (
     <form className="form" onSubmit={(event) => event.preventDefault()}>
       <h3 className="mainQuestion">Which age group do you belong to?</h3>
@@ -23,6 +23,7 @@ export const Age = ({ ageGroup, setAgeGroup }) => {
           </label>
         </span>
       ))}
+      {ageGroup ? (<button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>) : (<button type="button">next</button>)}
     </form>
   );
 }

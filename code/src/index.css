@@ -88,6 +88,7 @@ button {
 button:hover {
   background:  #e81c4f;
   color: white;
+  cursor: pointer;
 }
 
 label {
@@ -192,15 +193,15 @@ a {
     margin: 2rem 4rem;
   }
 
-  .mainQuestion {
+  .mainQuestion, .habitQuestion  {
     text-align: center;
     text-justify: auto;
   }
 
-  .habitQuestion {
+  /* .habitQuestion {
     text-align: center;
     text-justify: auto;
-  }
+  } */
 
   select {
     font-size: 1.2rem;

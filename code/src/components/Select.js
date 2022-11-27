@@ -7,7 +7,7 @@ export const Select = ({ specialGroup, setSpecialGroup }) => {
       <select
         onChange={(event) => setSpecialGroup(event.target.value)}
         value={specialGroup}>
-        <option value="">Select group:</option>
+        <option disabled value="">Select group:</option>
         <option value="pregnant or post partum">Pregnant or post-partum women</option>
         <option value="living with a disability">Living with disability</option>
         <option value="living with a chronic condition">Living with a chronic condition</option>

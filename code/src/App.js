@@ -79,9 +79,8 @@ export const App = () => {
         </section>)}
       {counter === 1 && (
         <section className="main">
-          <Age ageGroup={ageGroup} setAgeGroup={setAgeGroup} />
-          {console.log('AGEGROUP:', ageGroup)}
-          <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button>
+          <Age ageGroup={ageGroup} setAgeGroup={setAgeGroup} handleNextButton={handleNextButton} />
+          {/* <button className="ok-btn" type="button" onClick={handleNextButton}>Next</button> */}
         </section>)}
       {counter === 2 && (
         <section className="main">
