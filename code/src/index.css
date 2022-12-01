@@ -1,5 +1,6 @@
 *{
   box-sizing: border-box;
+  margin: 0px;
 }
 
 body {
@@ -8,7 +9,6 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background: linear-gradient(180deg, rosybrown 60%, rgb(155, 240, 240));
 }
 
 code {
@@ -25,8 +25,10 @@ code {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin: 0px;
+  justify-content: flex-start;
+  background: linear-gradient(180deg, rosybrown 60%, rgb(155, 240, 240));
+  height: 60vh;
+  padding-top: 5%;
 }
 
 .header {
@@ -34,50 +36,58 @@ code {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 20px;
-  margin: 0px;
   background-image: url('./Images/restaurant-image.jpg');
+  background-size: cover;
   opacity: 1;
+  padding: 5%;
 }
 
 .header-title {
   background: blanchedalmond;
-  font-size: 36px;
-  border: 1px black solid;
+  font-size: 30px;
+  border: 1px darkgray solid;
+  box-shadow: 1px 2px black;
   padding: 15px;
   border-radius: 12px;
   opacity: 0.9;
+  margin: 2%;
 }
 
 .headerTextOne {
   background: whitesmoke;
-  border: 1px black solid;
+  border: 1px darkgray solid;
+  box-shadow: 1px 2px black;
   font-size: 20px;
   line-height: 1.6;
+  text-align: center;
   padding: 10px;
   opacity: 0.9;
   border-radius: 6px;
-  width: 450px;
-  margin-bottom: 0px;
+  width: 320px;
+  margin-bottom: 1%;
 }
 
 .headerTextTwo {
   background: whitesmoke;
   font-size: 16px;
   line-height: 1.6;
+  text-align: center;
   padding: 10px;
-  margin: 0px 0px 10px 0px;
   opacity: 0.9;
   border-radius: 6px;
-  width: 350px;
-  border: 1px black solid;
+  width: 300px;
+  border: 1px darkgray solid;
+  box-shadow: 1px 2px black;
 }
 
 .questionsContainer {
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80;
+  margin-bottom: 1%;
+  padding: 10px;
 }
 
 h3 {
@@ -85,8 +95,8 @@ h3 {
   justify-content: center;
   text-align: center;
   padding: 10px;
-  margin-top: 20px;
-  font-size: 26px;
+  margin-bottom: 10px;
+  font-size: 20px;
 }
 
 p {
@@ -96,111 +106,125 @@ p {
   padding: 3px;
   margin: 3px;
   font-size: 18px;
-  
 }
 
 .nameField{
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: rgb(255, 255, 255);
   padding: 6px;
-  margin-left: 25%;
   margin-bottom: 10px;
+  margin-left: 22%;
   font-size: 14px;
 }
 
 .allRadioButtons {
-  margin: 10px;
+  margin: 5px;
   font-size: 16px;
 }
 
 .selectionContainer {
   background-color: whitesmoke;
   font-size: 16px;
-  margin-left: 35%;
+  margin-left: 29%;
+  padding: 5px;
+}
+
+.nextQuestion-container {
+  display: flex;
+  flex-direction: column;
 }
 
 .stepCounter {
-  margin: 10px;
-  padding: 20px;
+  margin: 6px;
+  padding: 5px;
   display: flex;
   flex-direction: column;
-  box-shadow: 0 2px #999;
+  box-shadow: 0px 1px rgb(155, 240, 240, 0.6);
 }
 
 .nextQuestion {
   font-size: 16px;
   background-color: antiquewhite;
   opacity: 0.9;
-  border: none;
-  border-radius: 15px;
-  box-shadow: 0 3px #999;
-  padding: 10px;
+  border-radius: 20px;
+  border: 1px darkgray solid;
+  box-shadow: 1px 2px black;
+  padding: 15px;
   margin-top: 10px;
   text-align: center;
 }
 
 .resultText {
+  display: flex;
+  flex-direction: column;
   border: black 2px groove;
-  margin: 40px;
-  padding: 20px;
+  margin: 5px;
+  padding: 15px;
   background-color: whitesmoke;
   opacity: 0.9;
 }
   
-  @media screen and (min-width: 668px) and (max-width: 1024px) {
+  @media screen and (min-width: 668px) {
     .mainContainer{
       width: auto;
     }
+    .allRadioButtons {
+      margin: 12px;
+    }
   }
   
-  @media screen and (min-width: 1025px) {
+  @media screen and (min-width: 1024px) {
     .mainContainer {
       width: auto;
    }
-   .surveyContainer {
-    flex-direction: row;
-    }    
+    .surveyContainer {
+      flex-direction: row;
+      justify-content: center;
+      align-items: flex-start;
+      height: 70vh;
+      }
 
     .header-title {
-      font-size: 48px;
+      font-size: 40px;
     }
 
     .headerTextOne {
-      background: whitesmoke;
-      border: 1px black solid;
-      font-size: 28px;
+      font-size: 24px;
       width: 700px;
     }  
     .headerTextTwo {
-      background: whitesmoke;
-      font-size: 24px;
+      font-size: 20px;
       width: 600px;
-      border: 1px black solid;
     }
-
+    .questionsContainer {
+      padding: 5px;
+      margin-right: 1%;
+    }
     .nameField{
-      background-color: rgb(255, 255, 255);
-      padding: 6px;
-      margin-left: 25%;
-      margin-bottom: 10px;
-      font-size: 14px;
+      margin-left: 20%;
+      font-size: 16px;
     }
-    
     .selectionContainer {
-      background-color: whitesmoke;
       font-size: 16px;
       margin-left: 33%;
     }
-
+    .nextQuestion-container {
+      margin-left: 3%;
+    }
     .stepCounter {
-      margin: 40px;
-      padding-bottom: 30px;
+      margin-bottom: 10px;
+    }
+    .nextQuestion {
+      padding: 12px;
+      margin-top: 1px;
+      text-align: center;
     }
     .nextQuestion:hover {
-      background-color: lightcyan;
+      background-color: rgb(155, 240, 240, 0.9);
     }
-
     .resultText {
-      margin: 80px;
-      padding: 50px;
+      padding: 40px;
     }
   }

@@ -29,38 +29,44 @@ export const App = () => {
         <Header />
       </header>
       <div className="surveyContainer">
-        {step === 1 && (
-          <NameOfDate nameOfDate={nameOfDate} setNameOfDate={setNameOfDate} />
-        )}
-        {step === 2 && (
-          <LengthOfDating lengthOfDating={lengthOfDating} setLengthOfDating={setLengthOfDating} />
-        )}
-        {step === 3 && (
-          <Allergies allergies={allergies} setAllergies={setAllergies} />
-        )}
-        {step === 4 && (
-          <FoodPreferens foodPreferens={foodPreferens} setFoodPreferens={setFoodPreferens} />
-        )}
-        {step === 5 && (
-          <FavContinent favContinent={favContinent} setFavContinent={setFavContinent} />
-        )}
-        {step === 6 && (
-          <Budget budget={budget} setBudget={setBudget} />
-        )}
-        {step >= 7 && (
-          <Result
-            nameOfDate={nameOfDate}
-            lengthOfDating={lengthOfDating}
-            allergies={allergies}
-            foodPreferens={foodPreferens}
-            favContinent={favContinent}
-            budget={budget} />
-        )}
-
+        <div className="questionsContainer">
+          {step === 1 && (
+            <NameOfDate nameOfDate={nameOfDate} setNameOfDate={setNameOfDate} />
+          )}
+          {step === 2 && (
+            <LengthOfDating lengthOfDating={lengthOfDating} setLengthOfDating={setLengthOfDating} />
+          )}
+          {step === 3 && (
+            <Allergies allergies={allergies} setAllergies={setAllergies} />
+          )}
+          {step === 4 && (
+            <FoodPreferens foodPreferens={foodPreferens} setFoodPreferens={setFoodPreferens} />
+          )}
+          {step === 5 && (
+            <FavContinent favContinent={favContinent} setFavContinent={setFavContinent} />
+          )}
+          {step === 6 && (
+            <Budget budget={budget} setBudget={setBudget} />
+          )}
+          {step >= 7 && (
+            <Result
+              nameOfDate={nameOfDate}
+              lengthOfDating={lengthOfDating}
+              allergies={allergies}
+              foodPreferens={foodPreferens}
+              favContinent={favContinent}
+              budget={budget} />
+          )}
+        </div>
         {step < 7 && (
-          <div className="stepCounter">
-            <p>Question {step}</p>
-            <button className="nextQuestion" type="button" onClick={handleStepIncrease} tabIndex="0">Next Question</button>
+          <div className="nextQuestion-container">
+            <p className="stepCounter">Question {step}</p>
+            <button
+              className="nextQuestion"
+              type="button"
+              onClick={handleStepIncrease}
+              tabIndex="0">Next Question
+            </button>
           </div>
         )}
       </div>

@@ -20,12 +20,7 @@ const Email = ({ email, setEmail }) => {
         </label>
       </div>
     </div>
-  )
-}
-
-
-
-  <div className="sendEmail">
+     <div className="sendEmail">
     <input
           className="emailInput"
           type="text"
@@ -33,5 +28,5 @@ const Email = ({ email, setEmail }) => {
           value={emailAdress} />
           <button className="emailButton" type="button" onClick={handleConfirmEmailChange} tabIndex="0">Email Confirmation</button>
     </div>
-
-  export default Email  
+  )
+}

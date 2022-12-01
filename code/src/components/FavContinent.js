@@ -6,22 +6,20 @@ export const FavContinent = ({ favContinent, setFavContinent }) => {
     setFavContinent(event.target.value);
   }
   return (
-    <div className="questionsContainer">
-      <form onSubmit={(event) => event.preventDefault()}>
-        <h3>What is your dates favourite continent?</h3>
-        <select
-          className="selectionContainer"
-          onChange={handleFavContinentChange}
-          value={favContinent}>
-          <option value=""> Select a continent</option>
-          <option value="Asia"> Asia</option>
-          <option value="Africa"> Africa</option>
-          <option value="Europe"> Europe</option>
-          <option value="South America"> South America</option>
-          <option value="North America"> North America</option>
-          <option value="Oceania"> Oceania</option>
-        </select>
-      </form>
-    </div>
+    <form onSubmit={(event) => event.preventDefault()}>
+      <h3>What is your dates favourite continent?</h3>
+      <select
+        className="selectionContainer"
+        onChange={handleFavContinentChange}
+        value={favContinent}>
+        <option value=""> Select a continent</option>
+        <option value="Asia"> Asia</option>
+        <option value="Africa"> Africa</option>
+        <option value="Europe"> Europe</option>
+        <option value="South America"> South America</option>
+        <option value="North America"> North America</option>
+        <option value="Oceania"> Oceania</option>
+      </select>
+    </form>
   );
 }
