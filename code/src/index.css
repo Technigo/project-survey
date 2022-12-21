@@ -47,23 +47,33 @@ textarea {
 .outer-wrapper {
   display: flex;
   justify-content: center;
-  padding: 30px 0;
+  align-items: center;
   font-family: Menlo;
-  height: 100vh;
-  width: 100vw;
 }
 
 .inner-wrapper {
   display: flex;
-  flex-direction: column;
-  gap: 50px;
-  width: 90%;
+  flex-direction: row;
+  width: 100vw;
 }
 
 .form-wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  padding: 10% 10%;
   gap: 30px;
+}
+
+.image-container {
+  display: none;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: 40px;
+}
+
+.image {
+  height: 100%;
 }
 
 .group-wrapper {
@@ -74,7 +84,7 @@ textarea {
 
 .summary-wrapper {
   padding: 30px;
-  border-radius: 10px;;
+  border-radius: 10px;
   background-color: rgb(228, 228, 228);
 }
 
@@ -85,8 +95,8 @@ textarea {
 }
 
 .dropdown {
-  background: url(images/chevron.svg) no-repeat right;
-  background-position-x: 99%;
+  background: url(../public/images/chevron.svg) no-repeat right;
+  background-position-x: 97%;
   -moz-appearance:none; /* Firefox */
   -webkit-appearance:none; /* Safari and Chrome */
   appearance:none;
@@ -161,21 +171,39 @@ textarea {
 
 @media (min-width: 668px) {
   .outer-wrapper {
-    gap: 10%;
+    width: 100vw;
+    height: 100vh;
   }
 
   .inner-wrapper {
-    max-width: 50%;
+    width: 98vw;
+    height: 98vh;
+  }
+
+  .image-container {
+    display: flex;
+  }
+
+  .form-wrapper {
+    width: 700px;
+    padding: 0 5%;
+    gap: 20px;
   }
 }
 
 @media (min-width: 1025px) {
   .outer-wrapper {
-    align-content: center;
-    gap: 10%;
+    width: 100vw;
+    height: 100vh;
   }
 
   .inner-wrapper {
-    width: 30%;
+    align-items: center;
   }
+
+  .image-container {
+    display: flex;
+    height: 100%;
+  }
+
 }

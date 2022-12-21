@@ -30,7 +30,7 @@ export const App = () => {
   return (
     <div className="outer-wrapper">
       <div className="inner-wrapper">
-        {/* Where we gather the message */}
+        {/* Gather the message */}
         {counter === 0 && (
           <div className="form-wrapper">
             <Header />
@@ -43,7 +43,7 @@ export const App = () => {
           </div>
         )}
 
-        {/* Where we summarize the message */}
+        {/* Summarize the message */}
         {counter === 1 && (
           <div className="form-wrapper">
             <Header />
@@ -64,7 +64,9 @@ export const App = () => {
             </div>
           </div>
         )}
-        {/* My page counter {counter} */}
+        <div className="image-container">
+          <img className="image" src="../images/Fist.jpg" alt="A hand making a fist" />
+        </div>
       </div>
     </div>
   );
