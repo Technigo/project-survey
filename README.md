@@ -9,4 +9,4 @@ I started with the content of the page. Sketched out how I wanted every componen
 If I got more time I would continue styling the project. I would also make the "send email" button to work and write my own terms & conditions.
 
 ## View it live
-splendorous-conkies-20a956.netlify.app
+passiveaggressivegen.netlify.app
