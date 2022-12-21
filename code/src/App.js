@@ -7,9 +7,9 @@ import { TextAreaInput } from 'components/Textareainput';
 import { ActionInput } from 'components/Actioninput';
 import { UserNameInput } from 'components/Usernameinput';
 import { Summary } from 'components/summary';
-import { Button } from 'components/button';
-import { Email } from 'components/EmailInput';
-import { Checkbox } from 'components/Checkbox';
+// import { Button } from 'components/button';
+// import { Email } from 'components/EmailInput';
+// import { Checkbox } from 'components/Checkbox';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
@@ -47,21 +47,28 @@ export const App = () => {
         {counter === 1 && (
           <div className="form-wrapper">
             <Header />
+            <p>Copy and send this to whom every it&apos;s for.</p>
             <Summary
               recieverName={recieverName}
               consideration={consideration}
               textArea={textArea}
               action={action}
               userName={userName} />
-            <div className="group-wrapper">
+            {/* <div className="group-wrapper">
               <Email email="Recievers Email" />
               <Email email="Your Email" />
             </div>
             <div className="group-wrapper">
-              <Checkbox label="I accept the terms & conditions" />
+              <Checkbox label="By accepting these terms and conditions,
+              you acknowledge and agree that your email address may be
+              used as the sender of an email on the website. " />
               <Button button="Send Email" />
-              <button className="button secondary-button" type="button" onClick={() => handleStepIncrease(false)}>Edit</button>
-            </div>
+            </div> */}
+            <button
+              className="button secondary-button"
+              type="button"
+              onClick={() => handleStepIncrease(false)}>Edit
+            </button>
           </div>
         )}
         <div className="image-container">

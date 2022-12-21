@@ -3,7 +3,7 @@ import React from 'react';
 const Header = () => {
   return (
     <header>
-      <h1>Passive Agressive Email</h1>
+      <h1>Passive Aggressive Generator</h1>
     </header>
   )
 }
