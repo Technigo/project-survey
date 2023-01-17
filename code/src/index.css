@@ -1,13 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin&display=swap');
+
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
+  padding: 0;
+  font-family: 'Cabin', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: rgb(230, 209, 154);
+  display: center;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 60%;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+  font-family: 'Cabin', sans-serif;
+}
+
+/*--- Welcome page ---*/
+
+h1 {
+  font-size: 25px;
+}
+
+p{
+  font-size: 20px;
+}
+
+button {
+  padding: 2px 5px;
+  margin-top: 20px;
+  border: 2px solid #1e272e;
+  border-radius: 5px;
+  transition: all 0.3s;
+  background-color: white;
+  font-size:15px;
+}
+
+/*--- Question 1 ---*/
+
+select, input {
+  margin-right: 20px;
+  border: #1e272e;
+  border-radius: 5px;
+  text-align: center;
+  padding: 2px 5px;
+  font-size: 15px;
+}
+
+.button-next {
+  width: fit-content;
+  align-self: center;
+}
+
+/*--- Question 2 ---*/
+
+.form-checkbox{
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 18px;
+}
+
+.input-checkbox{
+  margin-right: 10px;
+}
+
+/*--- Question 3 ---*/
+
+.form-radio-button{
+  display: grid;
+  grid-template-columns: 1fr;
+  font-size: 18px;
+}
+
+.input-radio{
+  margin-right: 10px;
+}
+
+
+/*--- Summary page ---*/
+
+.button-summary:hover{
+    box-shadow: 0 0 0 5px rgb(236, 202, 10), 0 0 0 10px #e629dc;
+    border: 2px solid #080808;
+    transform: scale(1.2);
+    color: rgb(1, 1, 2);
+}
+
+/*--- Media queries ---*/
+
+
+/*-------- Tablet ---*/
+
+@media (min-width: 667px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2px, 5px;
+  }
+
+}
+
+/*-------- Desktop ---*/
+
+@media (min-width: 1024px) {
+  .section {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 2px, 5px;
+  }
 }
