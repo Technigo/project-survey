@@ -1,7 +1,6 @@
 /* eslint-disable jsx-a11y/no-noninteractive-tabindex */
 /* eslint-disable jsx-a11y/label-has-associated-control */
 import React from 'react'
-// import Alert from './Alert';
 
 // eslint-disable-next-line max-len
 const PreferenceQuestion = ({ preference, onPreferenceChange, onStepChange, onEnter, onPreviousQuestionChange }) => {

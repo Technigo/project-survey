@@ -14,7 +14,6 @@ const OtherIngredientQuestion = ({ otherIngredient, sortOfPasta, onOtherIngredie
           value={otherIngredient}
           onChange={onOtherIngredientChange}
           onKeyPress={onEnter}>
-
           <option value="" disabled>Choose here:</option>
           <option value="Vegetables">Vegetables</option>
           <option value="Chicken">Chicken</option>
