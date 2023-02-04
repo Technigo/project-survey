@@ -26,7 +26,7 @@ export const App = () => {
   return (
     <div className="parent">
       <div className="SurvayWrapper">
-        {step === 1 && (
+          {step === 1 && (
           <WelcomeMessage name={name} setName={setName} phone={phone} setPhone={setPhone} />
         )}
         {step === 2 && (
@@ -47,7 +47,7 @@ export const App = () => {
           <Confirmation
             name={name}
             phone={phone}
-            dest={dest}
+            dest={dest} 
             pax={pax}
             paxChild={paxChild}
             age={age} />
@@ -70,4 +70,4 @@ export const App = () => {
       </div>
     </div>
   )
-    }
+    } 
