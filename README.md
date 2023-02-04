@@ -1,13 +1,10 @@
-# Survey form with React
+# Survey form using React and styling in CSS
 
-Replace this readme with your own information about your project.
-
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+Assigment is a simple survey that could be use in travel agency as a form that customer who wish to get an offer fils and send to the office. 
 
 ## The problem
-
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+My bigest problem was to understand an idea of props and how to connect everything together. I solved it by attending Technigo's coding sessions, read plainty of different materials about React and how to use forms and inputs in React. I managed to finish my project in the way that I planned with one exeption.  My plan was  to have a submit button after the confirmation, but I could not connect it to the counter. In the end I change that there is the same button used in the whole survay. 
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+https://travelproposalsurvey.netlify.app/
