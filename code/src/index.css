@@ -196,7 +196,8 @@ body {
   color: #fff;
 }
 
-.submitButton {
+.submitButton,
+.restartButton {
   position: absolute;
   right: 70px;
   background-color: #fff;
@@ -224,5 +225,10 @@ body {
 
 .submitButton:hover {
   background-color: #7EB5A6;
+  color: #fff;
+}
+
+.restartButton:hover {
+  background-color: #86340A;
   color: #fff;
 }

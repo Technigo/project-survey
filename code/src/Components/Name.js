@@ -4,7 +4,6 @@ import { Header } from './Header';
 export const Name = ({ name, setName }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
-    console.log('value is:', event.target.value);
   }
 
   return (

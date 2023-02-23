@@ -19,7 +19,6 @@ export const App = () => {
       <div>
         {step === 1 && (
           <Name name={name} setName={setName} />
-
         )}
         {
           step === 2 && (
@@ -36,26 +35,17 @@ export const App = () => {
             <Result name={name} mood={mood} drink={drink} />
           )
         }
-
         {
           step < 3 && (
-            <>
-              {/* <p>Current step: {step}</p> */}
-              <button className="nextStepButton" type="button" onClick={handleStepIncrease}>Next step</button>
-            </>
+            <button className="nextStepButton" type="button" onClick={handleStepIncrease}>Next step</button>
           )
         }
-
         {
           step === 3 && (
-            <>
-              {/* <p>Current step: {step}</p> */}
-              <button className="submitButton" type="button" onClick={handleStepIncrease}>Submit answer:</button>
-            </>
+            <button className="submitButton" type="button" onClick={handleStepIncrease}>Submit answer:</button>
           )
         }
       </div>
     </section>
-
   );
 }

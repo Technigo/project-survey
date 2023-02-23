@@ -5,7 +5,6 @@ const moodPreferences = ['No comments, I just wanna cry', 'Not great, but still 
 export const Mood = ({ mood, setMood }) => {
   const handleMoodChange = (event) => {
     setMood(event.target.value);
-    console.log('value is:', event.target.value);
   }
 
   return (
