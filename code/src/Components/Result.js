@@ -9,9 +9,9 @@ export const Result = ({ name, mood, drink }) => {
       <div className="resultComponent">
         <h2>Thank you for answering, this is how you responded:</h2>
         <div className="results">
-          <p>Name: {name}</p>
-          <p>Current mood: {mood}</p>
-          <p>I prefer to drink: {drink}</p>
+          <p><span className="resultHeading">Name:</span> {name}</p>
+          <p><span className="resultHeading">Current mood:</span> {mood}</p>
+          <p><span className="resultHeading">I prefer to drink:</span> {drink}</p>
         </div>
         <h3>PS. You are doing great! You should be proud of yourself.</h3>
         <span

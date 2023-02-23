@@ -47,7 +47,6 @@ body {
 }
 
 /* Name component  */
-
 .nameComponent {
   font-family: 'Montserrat', sans-serif;
   display: flex;
@@ -72,7 +71,6 @@ body {
 }
 
 /* Mood component */
-
 .moodComponent {
   display: flex;
   flex-direction: column;
@@ -129,7 +127,6 @@ body {
   justify-content: center;
   padding: 30px;
   font-size: 17px;
-  font-weight: bold;
 }
 
 .results {
@@ -154,9 +151,13 @@ body {
   color: #86340A;
   font-size: 30px;
   text-align: center;
-  line-height: 120%;
+  line-height: 150%;
 }
 
+.resultHeading {
+  font-weight: bold;
+  color: #86340A;
+}
 
 .heartIcon {
   font-size: 80px;
@@ -188,7 +189,7 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-top: 30px;
+  margin: 30px;
 }
 
 .nextStepButton:hover {
@@ -220,7 +221,7 @@ body {
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
-  margin-top: 30px;
+  margin: 30px;
 }
 
 .submitButton:hover {
