@@ -2,6 +2,7 @@
   "name": "technigo-react-starter",
   "version": "1.0.0",
   "private": true,
+  "homepage": ".",
   "dependencies": {
     "@babel/eslint-parser": "^7.18.9",
     "eslint": "^8.21.0",

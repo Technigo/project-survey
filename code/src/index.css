@@ -237,8 +237,8 @@ img {
   
   .footer p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 16px;
-    line-height: 18px;
+    font-size: 14px;
+    line-height: 16px;
     padding: 1%;
   }
   
@@ -362,8 +362,8 @@ img {
 
   .footer p {
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 12px;
+    line-height: 16px;
   }
 
   .footer a {
@@ -383,19 +383,20 @@ img {
 
   .image-wrapper {
     display: flex;
+    justify-content: flex-start;
     margin-top: 2%;
     }
 
   .linux-img {
     display: block;
-    height: 100px;
+    height: 80px;
     width: auto;
   }
 
   .pi-img {
     display: block;
-    margin-top: 3%;
-    height: 65px;
+    margin-top: 2%;
+    height: 50px;
     width: auto;
   }
 
