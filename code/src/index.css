@@ -66,11 +66,11 @@ label {
 
 button {
   position: absolute;
-  bottom: 20%;
+  bottom: 30%;
   right: 10%;
   color: #330033;
   background-color: white;
-  padding: 18px 50px;
+  padding: 15px 40px;
   font-size: 20px;
   font-weight: bold;
   border-radius: 8px;
@@ -78,15 +78,15 @@ button {
 
 .footer {
   position: absolute;
-  bottom: 5%;
-  left: 0%;
+  bottom: 0%;
+  left: 10%;
   text-align: center;
 }
 
 .footer p {
   font-family: 'Open Sans', sans-serif;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 12px;
+  line-height: 16px;
   padding: 1%;
 }
 
@@ -96,6 +96,25 @@ button {
 
 .footer-hide {
   display: none;
+}
+
+.image-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 2%;
+  }
+
+.linux-img {
+  display: block;
+  height: 70px;
+  width: auto;
+}
+
+.pi-img {
+  display: block;
+  margin-top: 3%;
+  height: 45px;
+  width: auto;
 }
 
 .end-page {
@@ -360,6 +379,24 @@ img {
 
   .footer-hide {
     display: block;
+  }
+
+  .image-wrapper {
+    display: flex;
+    margin-top: 2%;
+    }
+
+  .linux-img {
+    display: block;
+    height: 100px;
+    width: auto;
+  }
+
+  .pi-img {
+    display: block;
+    margin-top: 3%;
+    height: 65px;
+    width: auto;
   }
 
   .end-page {
