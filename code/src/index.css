@@ -27,15 +27,3 @@ h1 {
   color: red;
 }
 
-.button {
-  height: 60px;
-  border-radius: 20px;
-  background-color: #FFF8FA;
-  padding: 10px 20px;
-  border: none;
-  font-size: 16px;
-  color:#B8616F;
-  font-family: 'Karla', sans-serif;
-  transition: all 0.25s ease-in-out;
-  cursor: pointer;
-}
