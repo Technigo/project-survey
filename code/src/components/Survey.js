@@ -1,7 +1,5 @@
 import React from 'react';
 
-// const sections = document.querySelectorAll('section')
-
 export const Survey = (props) => {
   if (props.id === 'question1') {
     return (

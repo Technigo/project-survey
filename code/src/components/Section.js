@@ -15,7 +15,7 @@ export const Section = () => {
           <section key={questions.indexOf(question) + 1} id={`question${questions.indexOf(question) + 1}`}>
             <Question question={question} />
             <Survey id={`question${questions.indexOf(question) + 1}`} />
-            <Button />
+            <Button name="OK" />
             <ArrowButtons />
           </section>
         )
