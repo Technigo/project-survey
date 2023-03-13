@@ -12,7 +12,7 @@ export const Section = () => {
     <div>
       {questions.map((question) => {
         return (
-          <section key={questions.indexOf(question) + 1} id={`question${questions.indexOf(question) + 1}`}>
+          <section className="section" key={questions.indexOf(question) + 1} id={`question${questions.indexOf(question) + 1}`}>
             <Question question={question} />
             <Survey id={`question${questions.indexOf(question) + 1}`} />
             <Button name="OK" />

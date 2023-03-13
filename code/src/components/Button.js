@@ -2,7 +2,7 @@ import React from 'react';
 
 export const Button = (props) => {
   return (
-    <button type="button">
+    <button className="ok-btn" type="button">
       {props.name}
     </button>
   );
