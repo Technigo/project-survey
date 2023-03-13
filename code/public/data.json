@@ -1,0 +1,209 @@
+{
+    "totalCount": 3045,
+    "count": 5,
+    "listings": [
+        {
+            "source": {
+                "id": 64,
+                "url": "https://www.lansfast.se/",
+                "type": "Broker",
+                "name": "Länsförsäkringar Fastighetsförmedling"
+            },
+            "rooms": 3,
+            "constructionYear": 2006,
+            "hasPatio": 0,
+            "additionalArea": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.3344743,
+                    "longitude": 18.0174571,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Ulriksborgsgatan 9"
+                },
+                "namedAreas": [
+                    "Kungsholmen"
+                ]
+            },
+            "hasFireplace": 0,
+            "rent": 3677,
+            "livingArea": 71,
+            "listPrice": 5350000,
+            "booliId": 4910847,
+            "floor": 5,
+            "objectType": "Lägenhet",
+            "hasBalcony": 1,
+            "published": "2023-03-13 15:52:06",
+            "biddingOpen": 0,
+            "url": "https://www.booli.se/annons/4910847"
+        },
+        {
+            "source": {
+                "id": 1670,
+                "url": "https://www.behrer.se/",
+                "type": "Broker",
+                "name": "Behrer & Partners"
+            },
+            "rooms": 3,
+            "constructionYear": 1896,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.34466649,
+                    "longitude": 18.07241763
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Lill-Jans Plan 3A"
+                },
+                "namedAreas": [
+                    "Östermalm"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 4094,
+            "livingArea": 63,
+            "listPrice": 7500000,
+            "booliId": 4922998,
+            "floor": 1,
+            "objectType": "Lägenhet",
+            "hasBalcony": 1,
+            "published": "2023-03-13 15:37:57",
+            "biddingOpen": 0,
+            "url": "https://www.booli.se/annons/4922998"
+        },
+        {
+            "source": {
+                "id": 407,
+                "url": "https://www.tomasmaklarbyra.se/",
+                "type": "Broker",
+                "name": "Tomas Mäklarbyrå"
+            },
+            "rooms": 3,
+            "constructionYear": 1964,
+            "hasPatio": 0,
+            "additionalArea": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.2832509,
+                    "longitude": 17.9127317,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Gransätragränd 2"
+                },
+                "namedAreas": [
+                    "Sätra"
+                ]
+            },
+            "hasFireplace": 0,
+            "rent": 5445,
+            "livingArea": 89.5,
+            "listPrice": 2475000,
+            "booliId": 4922990,
+            "floor": 2,
+            "objectType": "Lägenhet",
+            "hasBalcony": 1,
+            "published": "2023-03-13 15:32:24",
+            "biddingOpen": 0,
+            "url": "https://www.booli.se/annons/4922990"
+        },
+        {
+            "source": {
+                "id": 314156398,
+                "url": "https://simoncrest.se/",
+                "type": "Broker",
+                "name": "Simon Crest"
+            },
+            "rooms": 3,
+            "hasPatio": 1,
+            "additionalArea": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.348392,
+                    "longitude": 18.046946
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Idungatan 8A"
+                },
+                "namedAreas": [
+                    "Vasastan"
+                ]
+            },
+            "hasFireplace": 0,
+            "rent": 2926,
+            "livingArea": 73,
+            "booliId": 4922961,
+            "objectType": "Lägenhet",
+            "hasBalcony": 0,
+            "published": "2023-03-13 15:06:17",
+            "biddingOpen": 0,
+            "url": "https://www.booli.se/annons/4922961"
+        },
+        {
+            "source": {
+                "id": 599722413,
+                "url": "https://sjomanfrisk.se/",
+                "type": "Broker",
+                "name": "SJÖMAN\\FRISK"
+            },
+            "rooms": 2,
+            "constructionYear": 1907,
+            "hasPatio": 0,
+            "hasSolarPanels": 0,
+            "location": {
+                "position": {
+                    "latitude": 59.3422754,
+                    "longitude": 18.0272703,
+                    "isApproximate": true
+                },
+                "region": {
+                    "countyName": "Stockholms län",
+                    "municipalityName": "Stockholm"
+                },
+                "address": {
+                    "streetAddress": "Tomtebogatan 51"
+                },
+                "namedAreas": [
+                    "Vasastan"
+                ]
+            },
+            "hasFireplace": 1,
+            "rent": 3218,
+            "livingArea": 62,
+            "listPrice": 6500000,
+            "booliId": 4922946,
+            "floor": 3,
+            "objectType": "Lägenhet",
+            "published": "2023-03-13 14:45:28",
+            "biddingOpen": 0,
+            "url": "https://www.booli.se/annons/4922946"
+        }
+    ],
+    "limit": 5,
+    "offset": 0,
+    "searchParams": {
+        "upcomingSale": 0,
+        "areaId": 1
+    }
+}
