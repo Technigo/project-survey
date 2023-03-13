@@ -1,9 +1,10 @@
 import React from 'react';
+import { Section } from './components/Section'
 
 export const App = () => {
   return (
     <div>
-      Find me in src/app.js!
+      <Section />
     </div>
   );
 }
