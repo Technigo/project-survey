@@ -1,11 +1,11 @@
 h1 {
   color: white;
   font-size: 45px;
-text-align: center;
-margin-top: 80px;
-padding: 20px;
-font-family: 'Cantarell', sans-serif;
-font-weight: bolder;
+  text-align: center;
+  margin-top: 80px;
+  padding: 20px;
+  font-family: 'Cantarell', sans-serif;
+  font-weight: bolder;
 }
 
 h3 span {
@@ -33,11 +33,17 @@ select {
   color: #94BBCF;
   text-align: center;
   font-family: 'Cantarell', sans-serif;
-  padding: 30px;
+  padding: 20px;
 }
 
-.mailbox, .sizebox, .colorbox {
+.namebox, .selectbox, .bestthingbox {
   padding: 10px;
+}
+
+.namefield, .dropdown {
+  border-radius: 25px;
+  padding: 10px;
+  font-weight: bolder;
 }
 
 .form {
@@ -48,7 +54,7 @@ select {
   font-family: 'Cantarell', sans-serif;
   background-color: white;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 20px;
 }
 
 body {
@@ -70,15 +76,26 @@ button {
   font-family: 'Cantarell', sans-serif;
   background-color: #94BBCF;
   color: white;
-font-size: 25px;
-font-weight: bold;
-border-radius: 5px;
-margin-bottom: 40px;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 25px;
+  margin-bottom: 40px;
+  cursor: pointer;
+  padding: 10px;
+  border-style: none;
+  box-shadow: 10px 15px 30px -16px rgba(0,0,0,0.57);
+  -webkit-box-shadow: 10px 15px 30px -13px rgba(0,0,0,0.57);
+  -moz-box-shadow: 10px 15px 30px -16px rgba(0,0,0,0.57);
+}
+
+button:hover {
+  transform: scale(1.2);
+  background-color: #b1d4e6;
 }
 
 .summary {
   margin: 0;
-  margin-top: 20%;
+  margin-top: 10%;
   background-color:#94BBCF;
   background-size: cover;
   height: 200px;
@@ -90,5 +107,53 @@ margin-bottom: 40px;
 
 .summary i {
   font-size: 30px;
-  margin-top: 30px;
 }
+
+.contactme{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+ }
+
+.contact-logo{
+  width: 30px;
+  opacity: .75;
+  padding: 10px;
+}
+
+.contact-logo:hover{
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.aboutme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  padding: 5px;
+  font-size: 15px;
+  color:black;
+  text-align: center;
+  
+}
+
+.aboutme p {
+  color: #ffffff;
+}
+
+.contactE{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 15px;
+  color: #ffffff;
+  opacity: .7;
+  background-color:#94BBCF;
+  padding: 10px;
+}
+
+.contactE p{
+  color: #ffffff;
+}
+
