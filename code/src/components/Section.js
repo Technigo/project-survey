@@ -1,7 +1,7 @@
 import React from 'react';
 import { Question } from './Question'
 import { Survey } from './Survey'
-import { Button } from './Button'
+import OkButton from './Button'
 import { ArrowButtons } from './ArrowButtons'
 
 const questions = [
@@ -9,13 +9,13 @@ const questions = [
 
 export const Section = () => {
   return (
-    <div>
+    <div className="section-container">
       {questions.map((question) => {
         return (
           <section className="section" key={questions.indexOf(question) + 1} id={`question${questions.indexOf(question) + 1}`}>
             <Question question={question} />
             <Survey id={`question${questions.indexOf(question) + 1}`} />
-            <Button name="OK" />
+            <OkButton name="OK" />
             <ArrowButtons />
           </section>
         )
