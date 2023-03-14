@@ -7,15 +7,41 @@ const Drink = ({ drink, setDrink }) => {
   }
 
   return (
-    <>
+    <div>
       <label htmlFor="drink">What is your favorite drink?</label>
-      <input
-        id="drink"
-        type="text"
-        value={drink}
-        onChange={handleDrinkChange}
-        aria-label="drink" />
-    </>
+      <div>
+        <label htmlFor="coffee">
+          <input
+            id="coffee"
+            type="radio"
+            value="coffee"
+            onChange={handleDrinkChange}
+            checked={drink === 'coffee'}
+            aria-label="coffee" />
+    Coffee
+        </label>
+        <label htmlFor="tea">
+          <input
+            id="tea"
+            type="radio"
+            value="tea"
+            onChange={handleDrinkChange}
+            checked={drink === 'tea'}
+            aria-label="tea" />
+    Tea
+        </label>
+        <label htmlFor="water">
+          <input
+            id="water"
+            type="radio"
+            value="water"
+            onChange={handleDrinkChange}
+            checked={drink === 'water'}
+            aria-label="water" />
+    Water
+        </label>
+      </div>
+    </div>
   );
 }
 
