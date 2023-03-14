@@ -19,3 +19,5 @@ export const App = () => {
     </div>
   );
 }
+
+// Footer link: https://www.linkedin.com/in/matilda-frid-7923bb88/
