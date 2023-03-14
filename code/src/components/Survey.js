@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import Startpage from './Startpage';
 
 const ageGroups = ['1', '2', '3'];
 
@@ -12,15 +13,7 @@ const Survey = () => {
   return (
     <section className="surveyWrapper">
       {counter === 0 && (
-        <div>
-          <h2>Hello dear user!</h2>
-          <p>Click the button below to start the survey.</p>
-          <button
-            type="button"
-            onClick={() => setCounter(1)}>
-            Start quiz
-          </button>
-        </div>
+        <Startpage startCount={() => setCounter(1)} />
       )}
       {counter === 1 && (
         <>
