@@ -1,5 +1,5 @@
 body {
-  background-image: url('./images/background-image.jpg');
+  /* background-image: url('./images/background-image.jpg'); */
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -11,4 +11,39 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+
+.title {
+ font-family:'Times New Roman', Times, serif;
+ padding: 20px;
+ width: fit-content;
+ border: solid pink;
+}
+
+.header {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 10%;
+}
+
+.question {
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 30%;
+  width: fit-content;
+   font-size: 27px;
+   display: flex;
+   text-align: left;
+   padding: 10px;
+   margin: 10px;
+   border: solid blue;
+  }
+
+.super-power-selection {
+  display: flex;
+  flex-direction: column;
+  border: solid red;
 }

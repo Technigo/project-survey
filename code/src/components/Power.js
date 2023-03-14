@@ -38,7 +38,7 @@ export const Power = ({ power, setPowers }) => {
             className="checkbox-power"
             type="radio"
             id="power3"
-            aria-label="Second checkbox"
+            aria-label="Third checkbox"
             value="Water"
             checked={power === 'Time'}
             onChange={handlePowerChange} />

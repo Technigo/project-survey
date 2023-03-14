@@ -30,12 +30,17 @@ export const App = () => {
         <Result power={power} hero={hero} />
       )}
       {counter < 2 && (
+
         <div className="next-step">
-          <Button />
+          <Button counter={counter} setCounter={setCounter} inputLabel="Next step" />
+        </div>
+      )}
+      {counter === 3 && (
+        <div className="next-step">
+          <Button counter={counter} setCounter={setCounter} inputLabel="Submit" />
           <p>{counter}</p>
-          <Button counter={counter} setCounter={setCounter} />
         </div>
       )}
     </>
-  );
+  )
 }
