@@ -16,10 +16,11 @@ code {
     monospace;
 }
 
-body .background-image{
+.first-page-container{
   background-image: url(assets/background.jpg);
-  max-width: fit-content;
-  max-height: fit-content;
+  background-size: cover; /* optional */
+  background-position: center center; /* optional */
+  min-height: 100vh;
 }
 
 .first-page-header{
@@ -30,21 +31,32 @@ body .background-image{
   color:Darkgreen;
 }
 
-.name-section {
+.name-container {
   background-image:url(assets/bunny.jpg);
   background-size: cover; /* optional */
   background-position: center center; /* optional */
   min-height: 100vh;
 }
 
-.form-step-2 {
+.horse-container {
   background-color: green;
 }
 
-.form-step-3 {
+.artist-container {
   background-color: yellow;
 }
 
-.form-step-4 {
+.elephant-container {
   background-color: red;
+}
+
+.superpower-container {
+  background-color: blue;
+}
+
+.summary-container{
+  background-image:url(assets/showercat.jpg);
+  background-size: cover; /* optional */
+  background-position: center center; /* optional */
+  min-height: 100vh;
 }
