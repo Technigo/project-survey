@@ -6,23 +6,31 @@ h1 {
   padding: 20px;
   font-family: 'Cantarell', sans-serif;
   font-weight: bolder;
+  text-shadow: 2px 2px 8px salmon;
+}
+
+h3::first-letter {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: salmon;
 }
 
 h3 span {
-  background-color:  #94BBCF;
-  border-radius: 10px;
+  background-color:  #aad7ee;
+  border-radius: 15px;
   padding: 5px;
   color: white;
+  text-shadow: 2px 2px 8px grey;
 }
 
 select {
-  background-color: #94BBCF;
+  background-color: #aad7ee;
   font-size: 15px;
   color: white;
 }
 
 .header {
-  background-color: #94BBCF;
+  background-color: #aad7ee;
   background-size: cover;
   height: 200px;
   padding: 20px;
@@ -38,10 +46,11 @@ select {
 
 .namebox, .selectbox, .bestthingbox {
   padding: 10px;
+  margin-bottom: 20px;
 }
 
 .namefield, .dropdown {
-  border-radius: 25px;
+  border-radius: 15px;
   padding: 10px;
   font-weight: bolder;
 }
@@ -58,7 +67,7 @@ select {
 }
 
 body {
-  background-color: #94BBCF;
+  background-color: #aad7ee;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
@@ -74,11 +83,11 @@ code {
 
 button {
   font-family: 'Cantarell', sans-serif;
-  background-color: #94BBCF;
+  background-color: #aad7ee;
   color: white;
-  font-size: 25px;
+  font-size: 20px;
   font-weight: bold;
-  border-radius: 25px;
+  border-radius: 15px;
   margin-bottom: 40px;
   cursor: pointer;
   padding: 10px;
@@ -89,14 +98,14 @@ button {
 }
 
 button:hover {
-  transform: scale(1.2);
+  transform: scale(1.1);
   background-color: #b1d4e6;
 }
 
 .summary {
   margin: 0;
   margin-top: 10%;
-  background-color:#94BBCF;
+  background-color:#aad7ee;
   background-size: cover;
   height: 200px;
   font-size: 20px;
@@ -149,7 +158,7 @@ button:hover {
   border-radius: 15px;
   color: #ffffff;
   opacity: .7;
-  background-color:#94BBCF;
+  background-color:#aad7ee;
   padding: 10px;
 }
 

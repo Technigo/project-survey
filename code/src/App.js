@@ -67,51 +67,51 @@ export const App = () => {
                   checked={ageGroup === 'Four'} />
                 Awesome!
               </label>
-
-              <div className="selectbox">
-                <h3> <span> Ok, what is the best thing about the site? </span></h3>
-                <select className="dropdown" onChange={(event) => setLocation(event.target.value)} value={location}>
-                  <option value="">Choose option</option>
-                  <option value="Design">The design</option>
-                  <option value="Accesibility">The accesibility</option>
-                  <option value="Information">Information flow</option>
-                  <option value="Everything">I like everything!</option>
-                </select>
-              </div>
-
-              <div className="selectbox">
-                <h3> <span> Thank you! How good did you think our site looks? </span></h3>
-                <select className="dropdown" onChange={(event) => setImpression(event.target.value)} value={impression}>
-                  <option value="">Choose option</option>
-                  <option value="Design">Bad!</option>
-                  <option value="Accesibility">Ordinary...</option>
-                  <option value="Information">Nice!</option>
-                  <option value="Everything">Amazing!</option>
-                </select>
-              </div>
-
-              <div className="bestthingbox">
-                <h3><span>Would you recommend this site to a friend?</span></h3>
-                <label>
-                  <input
-                    type="radio"
-                    value="Yes"
-                    onChange={(event) => setAnswer(event.target.value)}
-                    checked={answer === 'Yes'} />
-                Yes!
-                </label>
-                <label>
-                  <input
-                    type="radio"
-                    value="No"
-                    onChange={(event) => setAnswer(event.target.value)}
-                    checked={answer === 'No'} />
-                No!
-                </label>
-              </div>
-
-              <h2><span role="img" aria-label="Finger pointing down">👇</span></h2>
             </div>
+
+            <div className="selectbox">
+              <h3> <span> Ok, what is the best thing about the site? </span></h3>
+              <select className="dropdown" onChange={(event) => setLocation(event.target.value)} value={location}>
+                <option value="None">Choose option</option>
+                <option value="The design">The design</option>
+                <option value="The accessibility">The accessibility</option>
+                <option value="The information flow">The information flow</option>
+                <option value="Everything">I like everything!</option>
+              </select>
+            </div>
+
+            <div className="selectbox">
+              <h3> <span> Thank you! What do you think about the looks of our site? </span></h3>
+              <select className="dropdown" onChange={(event) => setImpression(event.target.value)} value={impression}>
+                <option value="None">Choose option</option>
+                <option value="Bad">Bad!</option>
+                <option value="Ordinary">Ordinary...</option>
+                <option value="Nice">Nice!</option>
+                <option value="Amazing">Amazing!</option>
+              </select>
+            </div>
+
+            <div className="bestthingbox">
+              <h3><span>Would you recommend this site to a friend?</span></h3>
+              <label>
+                <input
+                  type="radio"
+                  value="Yes"
+                  onChange={(event) => setAnswer(event.target.value)}
+                  checked={answer === 'Yes'} />
+                Yes!
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  value="No"
+                  onChange={(event) => setAnswer(event.target.value)}
+                  checked={answer === 'No'} />
+                No!
+              </label>
+            </div>
+
+            <h2><span className="finger" role="img" aria-label="Finger pointing down">👇</span></h2>
 
             <button onClick={() => setSubmitted(true)} type="submit">SUBMIT</button>
           </form>
