@@ -17,14 +17,14 @@ const Favorite = ({ favorite, setFavorite }) => {
       <label htmlFor="favorite">Who is your favorite cartoon cat?</label>
       <select id="favorite" value={favorite} onChange={handleFavoriteChange}>
         <option disabled selected value="">Select</option>
-        <option value="Garfield">Garfield</option>
         <option value="Chesire Cat">Chesire Cat</option>
+        <option value="Garfield">Garfield</option>
+        <option value="Hello Kitty">Hello Kitty</option>
+        <option value="Hobbes">Hobbes</option>
         <option value="Puss in Boots">Puss in Boots</option>
         <option value="Snowball">Snowball</option>
-        <option value="Hello Kitty">Hello Kitty</option>
         <option value="Tom">Tom</option>
         <option value="Tony the Tiger">Tony the Tiger</option>
-        <option value="Hobbes">Hobbes</option>
       </select>
     </div>
   );
