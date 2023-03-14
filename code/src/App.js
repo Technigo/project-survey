@@ -1,9 +1,10 @@
-import React, { useState } from 'react'
-import { Name } from './components/Name'
-import { Prefer } from './components/Prefer'
-import { Results } from './components/Results'
-import { Color } from './components/Color'
-import { Thing } from './components/Thing'
+import React, { useState } from 'react';
+import { Name } from './components/Name';
+import { Prefer } from './components/Prefer';
+import { Results } from './components/Results';
+import { Color } from './components/Color';
+import { Thing } from './components/Thing';
+import './index.css';
 
 export const App = () => {
   const [counter, setCounter] = useState(0);
@@ -19,7 +20,8 @@ export const App = () => {
   }
 
   return (
-    <>
+    <div className="StartPage">
+      <h1>Answer these questions and we will tell you your favourite animal</h1>
       {counter === 1 && (
         <Name name={name} setName={setName} />
       )}
@@ -35,8 +37,8 @@ export const App = () => {
       {counter === 5 && (
         <Results results={results} setResults={setResults} />
       )}
-      <button type="button" onClick={handleNextStep}> Next question </button>
-    </>
+      <button type="button" onClick={handleNextStep} className="startBtn"> Next question </button>
+    </div>
 
   );
 }

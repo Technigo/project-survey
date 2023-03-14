@@ -11,3 +11,91 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+*{
+  box-sizing: border-box;
+}
+body{
+  margin: 0;
+  overflow-x: hidden;
+}
+/**/
+.StartPage{
+  display: grid;
+  grid-template-columns: 1fr;
+  border: 2px solid green;
+  margin: 20px;
+
+}
+
+
+
+/*input*/
+.inputName{
+  border: pink solid 2px;
+  margin: 20px;
+  padding: 5px;
+}
+
+/*favourite color*/
+.favouriteColor{
+  border: black solid 2px;
+  margin: 20px;
+  background-color: antiquewhite;
+
+}
+.pink{
+  background-color: pink;
+  border: rgb(237, 77, 104) solid 2px;
+  width: 100px;
+  height: 100px;
+  
+}
+.green{
+  background-color: green;
+  border: rgb(200, 253, 200) solid 2px;
+  width: 100px;
+  height: 100px;
+  padding-left: 5px;
+
+}
+.black{
+background-color: black;
+border: white solid 2px;
+width: 100px;
+height: 100px;
+padding: 5px;}
+
+.brown{
+  background-color: rgb(154, 80, 80);
+border: white solid 2px;
+width: 100px;
+height: 100px;
+padding: 5px;}
+
+
+/*whats your thing?*/
+.radioButton{
+  border: green solid 2px;
+  margin: 20px;
+  background-color: lightsalmon;
+
+}
+
+
+/*What do you prefer*/
+.dropDown{
+  border: blue solid 2px;
+  margin: 20px;
+  
+
+}
+
+
+/*results*/
+.results{
+  border: red solid 2px;
+  margin: 20px;
+
+}
+
