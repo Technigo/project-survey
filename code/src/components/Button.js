@@ -1,10 +1,13 @@
 import React from 'react';
 
-const Button = (props) => {
+const Button = ({ counter, setCounter }) => {
+  const handleIncreaseCounterClick = () => {
+    setCounter(counter + 1);
+  }
   return (
-    <button className="yes-btn" type="button">
-      {props.name}
-    </button>
+    <div className="btn-container">
+      <button type="button" onClick={handleIncreaseCounterClick}>Submit</button>
+    </div>
   );
 }
 
