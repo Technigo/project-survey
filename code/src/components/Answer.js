@@ -1,6 +1,9 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
 /* eslint-disable react/jsx-closing-tag-location */
 import React from 'react';
+import keyboardMouse from './images/keyboardMouse.jpg'
+import officeChair from './images/officeChair.jpg'
+import workspace from './images/workspace.jpg'
 
 const equipmentArray = []
 export const Answer = (props) => {
@@ -43,18 +46,17 @@ export const Answer = (props) => {
       {props.questionNumber === 4
      && <div>
        <button type="button" className="equipment" id="keyboard_mouse" onClick={() => handleEquipments('Keyboard or mouse')}>
-         <img src="images/keyboard_mouse.jpg" alt="Keyboard and mouse by Lum3n" />
+         <img src={keyboardMouse} alt="Keyboard and mouse by Lum3n" />
          <p>Keyboard or mouse</p>
        </button>
        <button type="button" className="equipment" id="office_chair" onClick={() => handleEquipments('Office chair')}>
-         <img src="images/office_chair.jpg" alt="Ergonomic chair by cottonbro" />
+         <img src={officeChair} alt="Ergonomic chair by cottonbro" />
          <p>Ergonomic desk chair</p>
        </button>
        <button type="button" className="equipment" id="workspace" onClick={() => handleEquipments('Workspace')}>
-         <img src="images/workspace.jpg" alt="Workspace by Andrea Davis" />
+         <img src={workspace} alt="Workspace by Andrea Davis" />
          <p>A space that is only used for work</p>
        </button>
-
      </div>}
 
       {props.questionNumber === 5
