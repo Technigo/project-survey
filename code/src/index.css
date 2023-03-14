@@ -7,10 +7,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-#root {
-  min-height: 100vh;
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -18,8 +14,8 @@ code {
 
 .first-page-container{
   background-image: url(assets/background.jpg);
-  background-size: cover; /* optional */
-  background-position: center center; /* optional */
+  background-size: cover; 
+  background-position: center center; 
   min-height: 100vh;
 }
 
@@ -33,30 +29,42 @@ code {
 
 .name-container {
   background-image:url(assets/bunny.jpg);
-  background-size: cover; /* optional */
-  background-position: center center; /* optional */
+  background-size: cover; 
+  background-position: center center; 
   min-height: 100vh;
 }
 
 .horse-container {
-  background-color: green;
+  background-image:url(assets/horseduck.jpg);
+  background-size: cover; 
+  background-position: center center; 
+  min-height: 100vh;
 }
 
 .artist-container {
-  background-color: yellow;
+  background-image:url(assets/music.jpg);
+  background-size: cover; 
+  background-position: center center; 
+  min-height: 100vh;
 }
 
 .elephant-container {
-  background-color: red;
+  background-image:url(assets/alpaca.jpg);
+  background-size: cover; 
+  background-position: center center; 
+  min-height: 100vh;
 }
 
 .superpower-container {
-  background-color: blue;
+  background-image:url(assets/super.jpg);
+  background-size: cover; 
+  background-position: center center; 
+  min-height: 100vh;
 }
 
 .summary-container{
   background-image:url(assets/showercat.jpg);
-  background-size: cover; /* optional */
-  background-position: center center; /* optional */
+  background-size: cover; 
+  background-position: center center; 
   min-height: 100vh;
 }
