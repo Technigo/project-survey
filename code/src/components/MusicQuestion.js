@@ -4,6 +4,8 @@ import FormButtons from './FormButtons';
 
 const artists = ['Taylor Swift', 'Justin Bieber', 'Nickelback', 'Blue Man Group', 'Aqua', 'Metallica'];
 
+const uniqueArtists = artists.filter((artist, index, self) => index === self.indexOf(artist));
+
 const MusicQuestion = ({ artistName, callbackOnChange, step, setStep }) => {
   const handleArtistName = (event) => {
     callbackOnChange(event.target.name, event.target.value);
@@ -19,19 +21,12 @@ const MusicQuestion = ({ artistName, callbackOnChange, step, setStep }) => {
         value={artistName}>
         <optgroup label="Popular Artists">
           <option value="">Select an artist</option>
-          <option>Taylor Swift</option>
-          <option>Justin Bieber</option>
-          <option>Nickelback</option>
-          <option>Blue Man Group</option>
-          <option>Aqua</option>
-          <option>Metallica</option>
-          <option>Billy Ray Cyrus</option>
+          {uniqueArtists.map((artist) => (
+            <option key={artist} value={artist}>
+              {artist}
+            </option>
+          ))}
         </optgroup>
-        {artists.map((artist) => (
-          <option key={artist} value={artist}>
-            {artist}
-          </option>
-        ))}
       </select>
       <FormButtons step={step} setStep={setStep} />
     </div>

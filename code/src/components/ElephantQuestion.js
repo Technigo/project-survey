@@ -2,27 +2,27 @@ import React from 'react';
 
 import FormButtons from './FormButtons';
 
-const HorseQuestion = ({ horseOptions, callbackOnChange, step, setStep }) => {
-  const handleHorseOptionsChange = (e) => {
+const ElephantQuestion = ({ elephantOptions, callbackOnChange, step, setStep }) => {
+  const handleElephantOptionsChange = (e) => {
     callbackOnChange(e.target.name, e.target.value);
   };
 
   return (
-    <div className="horse-container">
+    <div className="elephant-container">
       <fieldset className="fieldset">
-        <legend className="legend">Would you rather fight 10 duck-sized horses, or 1 horse-sized duck?</legend>
+        <legend className="legend"> Would you rather ride around town on an elephant or an alpaca?</legend>
 
-        {horseOptions.map((option) => (
+        {elephantOptions.map((option) => (
           <label
-            className="horse-label"
+            className="elephant-label"
             key={option.value}
             htmlFor={option.value}>
             <input
               id={option.value}
               type="radio"
               value={option.value}
-              onChange={handleHorseOptionsChange}
-              name="horseOptions" />
+              onChange={handleElephantOptionsChange}
+              name="selectedElephantOptions" />
             {option.label}
           </label>
         ))}
@@ -34,4 +34,4 @@ const HorseQuestion = ({ horseOptions, callbackOnChange, step, setStep }) => {
   );
 };
 
-export default HorseQuestion;
+export default ElephantQuestion;

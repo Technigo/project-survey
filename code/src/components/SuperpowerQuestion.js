@@ -1,28 +1,27 @@
 import React from 'react';
-
 import FormButtons from './FormButtons';
 
-const HorseQuestion = ({ horseOptions, callbackOnChange, step, setStep }) => {
-  const handleHorseOptionsChange = (e) => {
+const SuperpowerQuestion = ({ superpowerOptions, callbackOnChange, step, setStep }) => {
+  const handleSuperpowerOptionsChange = (e) => {
     callbackOnChange(e.target.name, e.target.value);
   };
 
   return (
-    <div className="horse-container">
+    <div className="superpower-container">
       <fieldset className="fieldset">
         <legend className="legend">Would you rather fight 10 duck-sized horses, or 1 horse-sized duck?</legend>
 
-        {horseOptions.map((option) => (
+        {SuperpowerOptions.map((option) => (
           <label
-            className="horse-label"
+            className="superpower-label"
             key={option.value}
             htmlFor={option.value}>
             <input
               id={option.value}
               type="radio"
               value={option.value}
-              onChange={handleHorseOptionsChange}
-              name="horseOptions" />
+              onChange={handleSuperpowerChange}
+              name="SuperpowerOptions" />
             {option.label}
           </label>
         ))}
@@ -34,4 +33,4 @@ const HorseQuestion = ({ horseOptions, callbackOnChange, step, setStep }) => {
   );
 };
 
-export default HorseQuestion;
+export default SuperpowerQuestion;

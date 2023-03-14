@@ -5,6 +5,8 @@ import Introduction from "./Introduction";
 import NameQuestion from "./NameQuestion";
 import MusicQuestion from "./MusicQuestion";
 import HorseQuestion from "./HorseQuestion";
+import ElephantQuestion from "./ElephantQuestion";
+import SuperpowerQuestion from "./SuperpowerQuestion";
 import Summary from "./Summary";
 
 const Form = () => {
@@ -12,7 +14,10 @@ const Form = () => {
   const [formData, setFormData] = useState({
     name: "",
     artistName: "",
-    horse: "",
+    horseOptions: "",
+    elephantOptions:"",
+    superPowersOptions:"",
+
   });
   const [showSummary, setShowSummary] = useState(false);
 
@@ -23,19 +28,40 @@ const Form = () => {
   };
 
   const handleInputChange = (name, value) => {
-    const newFormData = Object.assign({}, formData);
-    newFormData[name] = value;
+    const newFormData = { ...formData, [name]: value };
     setFormData(newFormData);
+    if (name === 'selectedHorseOption') {
+      setHorseOption(value);
+    } else if (name === 'selectedElephantOption') {
+      setSelectedElephantOption(value);
+    } else if (name === 'selectedSuperPowersOption') {
+      setSuperPowersOption(value);
+    }
   };
+  
   
   const horseOptions = [
     { label: '10 duck sized horses', value: 'horses' },
     { label: '1 horse sized duck', value: 'duck' }
   ];
 
+  const elephantOptions = [
+    { label: 'Ride an Alpaca', value: 'Ride an Alpaca' },
+    { label: 'Ride an Elephant', value: 'Ride an Elephant' },
+  ];
+
+  const superPowersOptions = [
+    { label: 'Move objects with your mind', value: 'Move objects with your mind' },
+    { label: 'Temporarily mute annoying people in real life', value: 'Temporarily mute annoying people in real life' },
+  ];
+
   console.log("New step:", step);
   console.log("New formData:", formData);
-  
+
+  const [horseOption, setHorseOption] = useState('');
+  const [selectedElephantOption, setSelectedElephantOption] = useState('');
+  const [superPowersOption, setSuperPowersOption] = useState('');
+
   return (
     <>
       <div className="form-container">
@@ -75,6 +101,30 @@ const Form = () => {
               <>
                 <HorseQuestion
                   horseOptions={horseOptions}
+                  callbackOnChange={handleInputChange}
+                  step={step}
+                  setStep={setStep}
+                />
+              </>
+            )}
+
+            {step === 4 && (
+              <>
+                <ElephantQuestion
+                  elephantOptions={elephantOptions}
+                  callbackOnChange={handleInputChange}
+                  selectedElephantOption={selectedElephantOption}
+                  setSelectedElephantOption={setSelectedElephantOption}
+                  step={step}
+                  setStep={setStep}
+                />
+              </>
+            )}
+
+             {step === 5 && (
+              <>
+                <SuperpowerQuestion
+                  superpowerOptions={superpowerOptions}
                   callbackOnChange={handleInputChange}
                   step={step}
                   setStep={setStep}
