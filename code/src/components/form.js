@@ -41,18 +41,18 @@ const Form = () => {
   
   
   const horseOptions = [
-    { label: '10 duck sized horses', value: 'horses' },
-    { label: '1 horse sized duck', value: 'duck' }
+    { label: '100 duck sized horses', value: '100 duck sized horses' },
+    { label: '1 horse sized duck', value: '1 horse sized duck' }
   ];
 
   const elephantOptions = [
-    { label: 'Ride an Alpaca', value: 'Ride an Alpaca' },
-    { label: 'Ride an Elephant', value: 'Ride an Elephant' },
+    { label: 'ride an Alpaca', value: 'ride an Alpaca' },
+    { label: 'ride an Elephant', value: 'ride an Elephant' },
   ];
 
   const superPowersOptions = [
-    { label: 'Move objects with your mind', value: 'Move objects with your mind' },
-    { label: 'Temporarily mute annoying people in real life', value: 'Temporarily mute annoying people in real life' },
+    { label: 'move objects with your mind', value: 'move objects with your mind' },
+    { label: 'temporarily mute annoying people in real life', value: 'temporarily mute annoying people in real life' },
   ];
 
   console.log("New step:", step);

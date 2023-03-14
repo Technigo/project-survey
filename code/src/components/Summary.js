@@ -1,18 +1,21 @@
 import React from 'react';
 
-const Summary = (props) => {
+export const Summary = (props) => {
   return (
     <div className="summary-container">
       <h1>Results</h1>
       <p>What a unique personality you have {props.formData.name}!!</p>
       <p>
         <span> So you love to listen to {props.formData.artistName}</span>
-        <span>while you {props.formData.horseOption}</span>
-        <span> and you {props.formData.name},</span>
+        <span>while you {props.formData.selectedHorseOption}</span>
+        <span> and you would like to {props.formData.selectedElephantOptions},</span>
+        <span> all while making your life easier with your ability to
+          {props.formData.SuperpowerOptions}.
+        </span>
       </p>
 
     </div>
   );
 };
-export { Summary };
+
 export default Summary;

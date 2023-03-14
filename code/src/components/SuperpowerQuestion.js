@@ -21,7 +21,7 @@ const SuperpowerQuestion = ({ superpowerOptions, callbackOnChange, step, setStep
               type="radio"
               value={option.value}
               onChange={handleSuperpowerOptionsChange}
-              name="SuperpowerOptions" 
+              name="SuperpowerOptions"
               required />
             {option.label}
           </label>

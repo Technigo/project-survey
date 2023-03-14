@@ -10,7 +10,7 @@ const HorseQuestion = ({ horseOptions, callbackOnChange, step, setStep }) => {
   return (
     <div className="horse-container">
       <fieldset className="fieldset">
-        <legend className="legend">Would you rather fight 10 duck-sized horses, or 1 horse-sized duck?</legend>
+        <legend className="legend">Would you rather fight 100 duck-sized horses, or 1 horse-sized duck?</legend>
 
         {horseOptions.map((option) => (
           <label

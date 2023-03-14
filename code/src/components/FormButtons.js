@@ -20,7 +20,7 @@ const FormButtons = ({ step, setStep }) => {
 
   return (
     <div className="buttons-container">
-      {step > 1 && step < 4 && (
+      {step > 1 && step < 5 && (
         <Button
           btnTxt="Previous"
           onClickAction={goToPrevStep} />
