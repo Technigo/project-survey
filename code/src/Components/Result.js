@@ -1,14 +1,13 @@
 import React from 'react';
-import { Seasons } from './Seasons';
 
-export const Result = ({ name, food, drink, season }) => {
+export const Result = ({ name, food, drink, group, taste }) => {
   return (
     <>
-      <p>Your name is {name}</p>
-      <p>Your favorite food is {food}</p>
-      <p>Your favorite drink is {drink}</p>
-      <p>Your favorite season is {season}</p>
-
+      <h1 className="nametext">Your name is {name}</h1>
+      <h1 className="nametext">Your favorite food is {food}</h1>
+      <h1 className="nametext">Your age is {group}</h1>
+      <h1 className="nametext">Your favorite drink is {drink}</h1>
+      <h1 className="nametext">Your favorite taste is {taste}</h1>
     </>
 
   );

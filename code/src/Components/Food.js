@@ -6,8 +6,12 @@ export const Food = ({ food, setFood }) => {
   }
   return (
     <>
-      <p>What is your favorite food?</p>
-      <input type="text" value={food} onChange={handleFoodChange} />
+      <h1 className="nametext">What is your favorite food?</h1>
+      <input
+        className="name-input"
+        type="text"
+        value={food}
+        onChange={handleFoodChange} />
     </>
   );
 }

@@ -6,8 +6,11 @@ export const Drink = ({ drink, setDrink }) => {
   }
   return (
     <>
-      <p>What is your favorite drink?</p>
-      <input type="text" value={drink} onChange={handleDrinkChange} />
+      <h1 className="nametext">What is your favorite drink?</h1>
+      <input
+        type="text"
+        value={drink}
+        onChange={handleDrinkChange} />
     </>
   );
 }
