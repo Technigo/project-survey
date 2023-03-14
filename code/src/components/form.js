@@ -5,7 +5,6 @@ import Introduction from "./Introduction";
 import NameQuestion from "./NameQuestion";
 import MusicQuestion from "./MusicQuestion";
 import HorseQuestion from "./HorseQuestion";
-
 import Summary from "./Summary";
 
 const Form = () => {
@@ -19,6 +18,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("Form submitted with data:", formData);
     setShowSummary(true);
   };
 
@@ -34,6 +34,7 @@ const Form = () => {
   ];
 
   console.log("New step:", step);
+  console.log("New formData:", formData);
   
   return (
     <>

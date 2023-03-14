@@ -14,17 +14,19 @@ const MusicQuestion = ({ artistName, callbackOnChange, step, setStep }) => {
       <label htmlFor="musical-artist">Choose your favorite artist:</label>
       <select
         id="musical-artist"
-        name="musical-artist"
+        name="artistName"
         onChange={handleArtistName}
         value={artistName}>
-        <option value="">Select an artist</option>
-        <optgroup>Taylor Swift</optgroup>
-        <optgroup>Justin Bieber</optgroup>
-        <optgroup>Nickelback</optgroup>
-        <optgroup>Blue Man Group</optgroup>
-        <optgroup>Aqua</optgroup>
-        <optgroup>Metallica</optgroup>
-        <optgroup>Billy Ray Cyrus</optgroup>
+        <optgroup label="Popular Artists">
+          <option value="">Select an artist</option>
+          <option>Taylor Swift</option>
+          <option>Justin Bieber</option>
+          <option>Nickelback</option>
+          <option>Blue Man Group</option>
+          <option>Aqua</option>
+          <option>Metallica</option>
+          <option>Billy Ray Cyrus</option>
+        </optgroup>
         {artists.map((artist) => (
           <option key={artist} value={artist}>
             {artist}
