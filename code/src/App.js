@@ -6,17 +6,17 @@ import Favorite from './components/Favorite';
 import Result from './components/Result';
 
 export const App = () => {
-  const [step, setStep] = useState(1);
+  const [question, setQuestion] = useState(1);
   const [name, setName] = useState('');
   const [love, setLove] = useState('');
   const [favorite, setFavorite] = useState('');
 
-  const handleStepIncrease = () => {
-    setStep(step + 1);
+  const handleQuestionIncrease = () => {
+    setQuestion(question + 1);
   }
 
   const handleRestartSurvey = () => {
-    setStep(1);
+    setQuestion(1);
     setName('');
     setLove('');
     setFavorite('');
@@ -24,25 +24,28 @@ export const App = () => {
 
   return (
     <>
-      {step === 1 && (
+      {question === 1 && (
         <Name name={name} setName={setName} />
       )}
-      {step === 2 && (
+      {question === 2 && (
         <Love love={love} setLove={setLove} />
       )}
-      {step === 3 && (
+      {question === 3 && (
         <Favorite favorite={favorite} setFavorite={setFavorite} />
       )}
-      {step >= 4 && (
+      {question >= 4 && (
         <Result name={name} love={love} favorite={favorite} handleRestartSurvey={handleRestartSurvey} />
       )}
 
-      {step < 4 && (
+      {question < 4 && (
         <>
-          <p>Current step: {step}</p>
-          <button type="button" onClick={handleStepIncrease}>Next step</button>
+          <p>Current question: {question}</p>
+          <button type="button" onClick={handleQuestionIncrease}>Next question</button>
         </>
       )}
     </>
   );
 }
+
+// There should be a submit button. When pressed your app
+// should hide the input form and show a summary of the user's submissions.
