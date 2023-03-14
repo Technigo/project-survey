@@ -7,6 +7,10 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#root {
+  min-height: 100vh;
+}
+
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
@@ -18,14 +22,29 @@ body .background-image{
   max-height: fit-content;
 }
 
-.first-page-container{
-  max-width: 1000px;
-  max-height: 1000px;
-}
 .first-page-header{
-  color: red;
+  color: DarkBlue;
 }
 
 .first-page-text{
-  color:green;
+  color:Darkgreen;
+}
+
+.name-section {
+  background-image:url(assets/bunny.jpg);
+  background-size: cover; /* optional */
+  background-position: center center; /* optional */
+  min-height: 100vh;
+}
+
+.form-step-2 {
+  background-color: green;
+}
+
+.form-step-3 {
+  background-color: yellow;
+}
+
+.form-step-4 {
+  background-color: red;
 }

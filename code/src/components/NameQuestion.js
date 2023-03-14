@@ -8,8 +8,8 @@ const NameQuestion = ({ name, callbackOnChange, step, setStep, handleSubmit, for
   };
 
   return (
-    <section>
-      <label htmlFor="name">
+    <section className='name-section'>
+      <label className="name-input" htmlFor="name">
         What's your name?
         <input
           type="text"
