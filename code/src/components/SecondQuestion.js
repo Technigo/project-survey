@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from 'components/Button';
+import { Button } from 'components/button';
 
-export const HowOftenTravel = ({ name, numberOfTravels, setOftenTravels, step }) => {
+export const SecondQuestion = ({ name, numberOfTravels, setOftenTravels, step }) => {
   const handleNumberOfTravels = (event) => {
     setOftenTravels(event.target.value)
   }
@@ -10,7 +10,7 @@ export const HowOftenTravel = ({ name, numberOfTravels, setOftenTravels, step })
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
       </div>
-      <div className="questions">
+      <label htmlFor="oftenTravels">
         Alright {name}, how often do you travel in a year?
         <select
           id="oftenTravels"
@@ -22,7 +22,7 @@ export const HowOftenTravel = ({ name, numberOfTravels, setOftenTravels, step })
           <option value="3-5">3-5</option>
           <option value="5+">5+</option>
         </select>
-      </div>
+      </label>
       <Button button="Next question" />
     </>
   );

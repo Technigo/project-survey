@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from 'components/Button';
+import { Button } from 'components/button';
 
-export const Name = ({ name, setName, step }) => {
+export const FirstQuestion = ({ name, setName, step }) => {
   const handleNameChange = (event) => {
     setName(event.target.value);
   }
@@ -10,10 +10,10 @@ export const Name = ({ name, setName, step }) => {
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
       </div>
-      <div className="questions">
+      <label htmlFor="name">
         What is your name?
         <input type="text" id="name" value={name} onChange={handleNameChange} required />
-      </div>
+      </label>
       <Button button="Next question" />
     </>
   );

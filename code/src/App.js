@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import Header from 'components/Header';
-import { FirstQuestion } from 'components/FirtsQuestion'
-import { SecondQuestion } from 'components/SecondQuestion'
-import { ThirdQuestion } from 'components/ThirdQuestion'
-import { FourthQuestion } from 'components/FourthQuestion'
-import { FifthQuestion } from 'components/FifthQuestion'
-import { Summary } from 'components/Summary'
+import { FirstQuestion } from 'components/FirstQuestion';
+import { SecondQuestion } from 'components/SecondQuestion';
+import { ThirdQuestion } from 'components/ThirdQuestion';
+import { FourthQuestion } from 'components/FourthQuestion';
+import { FifthQuestion } from 'components/FifthQuestion';
+import { Summary } from 'components/Summary';
 
 export const App = () => {
-  const [step, setStep] = useState(0)
+  const [step, setStep] = useState(0);
   const [name, setName] = useState('');
   const [oftenTravels, setOftenTravels] = useState('');
   const [thing, setThing] = useState('');
   const [place, setPlace] = useState();
   const [dreamDestination, setDreamDestination] = useState('');
 
-  const handleStepIncrease = (e) => {
-    e.preventDefault();
+  const handleStepIncrease = (event) => {
+    event.preventDefault();
     setStep(step + 1)
   }
 
@@ -38,7 +38,7 @@ export const App = () => {
               step={step} />
           )}
           {step === 3 && (
-            <ThirdQuestion thing={thing} setGenre={setThing} step={step} />
+            <ThirdQuestion thing={thing} setThing={setThing} step={step} />
           )}
           {step === 4 && (
             <FourthQuestion place={place} setPlace={setPlace} step={step} />

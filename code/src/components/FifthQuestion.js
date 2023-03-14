@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from 'components/Button';
+import { Button } from 'components/button';
 
-export const DreamDestination = ({ dreamDestination, setDreamDestination, step }) => {
+export const FifthQuestion = ({ dreamDestination, setDreamDestination, step }) => {
   const handleDreamDestination = (event) => {
     setDreamDestination(event.target.value)
   }
@@ -10,10 +10,10 @@ export const DreamDestination = ({ dreamDestination, setDreamDestination, step }
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
       </div>
-      <div className="questions">
+      <label htmlFor="dreamDestination">
         What is your dream destination?
         <input id="dreamDestination" type="text" value={dreamDestination} onChange={handleDreamDestination} required />
-      </div>
+      </label>
       <Button button="Summary" />
     </>
   );

@@ -1,12 +1,12 @@
 import React from 'react';
-import { Button } from 'components/Button';
+import { Button } from 'components/button';
 
 const travelPlaces = [
   'winter',
   'summer', 'fall', 'spring'
 ]
 
-export const TravelPlace = ({ place, setPlace, step }) => {
+export const FourthQuestion = ({ place, setPlace, step }) => {
   const handleTravelPlaces = (event) => {
     setPlace(event.target.value)
   }

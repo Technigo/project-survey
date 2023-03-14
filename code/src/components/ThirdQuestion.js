@@ -1,7 +1,7 @@
 import React from 'react';
-import { Button } from 'components/Button';
+import { Button } from 'components/button';
 
-export const FavoriteThing = ({ thing, setThing, step }) => {
+export const ThirdQuestion = ({ thing, setThing, step }) => {
   const handleFavoriteThing = (event) => {
     setThing(event.target.value)
   }
@@ -10,7 +10,7 @@ export const FavoriteThing = ({ thing, setThing, step }) => {
       <div className="question-number">
         {step <= 5 && <p>Question number: {step}/5</p>}
       </div>
-      <div className="questions">
+      <label htmlFor="favoriteThing">
         What is your favorite thing about traveling?
         <select
           id="favoriteThing"
@@ -25,7 +25,7 @@ export const FavoriteThing = ({ thing, setThing, step }) => {
           <option value="adventure">adventure</option>
           <option value="weather">the weather</option>
         </select>
-      </div>
+      </label>
       <Button button="Next question" />
     </>
   )

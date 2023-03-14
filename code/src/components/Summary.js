@@ -9,7 +9,7 @@ export const Summary = ({ name, oftenTravels, favoriteThing, place, dreamDestina
       <p>Your favorite music genre is {favoriteThing}</p>
       <p>You prefer to travel in the {place} </p>
       <p>Your dream destination is {dreamDestination}</p>
-      <button className="button" tabIndex="0" type="button" onClick = {() => window.location.reload()}>Again</button>
+
     </section>
   );
 }
