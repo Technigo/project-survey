@@ -7,7 +7,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image:url('C:\Users\mfrfgp\technigo\technigo-projects\project-survey\code\public\assets\pexels-andre-moura-3151392.jpg');
+  background-image:url('./assets/pexels-andre-moura-3151392.jpg');
 }
 
 code {
@@ -18,13 +18,58 @@ code {
 .container {
   background-color: black;
   color: white;
-  width: 500px;
-  height: 500px;
+  max-width: 500px;
   margin: 50px auto;
-  padding: 25px;
-  border: 100px solid rgba(0, 0, 0, 0.01);
+  padding: 20px;
+  border: 1px solid rgb(206, 40, 40);
 }
 
-span {
+
+.container.main {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.container .start {
+  background-color: rgb(17, 17, 36);
+  margin: 0; 
+  padding: 20px;
+  margin-top: 0;
+}
+
+.container .name {
+  margin: 0;
+}
+
+.container .type {
+  margin: 0;
+}
+
+
+.emoji {
   font-size: 30px;
+}
+
+button {
+  background-color: rgb(73, 28, 116);
+  color: white;
+  padding: 8px 15px;
+  margin: 10px;
+  border: none;
+}
+
+.startbtn {
+  width: 80px;
+  height: 80px;
+  background-color: rgb(110, 94, 124);
+  color: white;
+  padding: 25px;
+  border: none;
+  border-radius: 50%;
+}
+
+.step-counter {
+  border: 1px solid hotpink;
+  padding: 20px;
 }

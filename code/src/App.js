@@ -1,21 +1,43 @@
 /* eslint-disable react/no-unescaped-entities */
 /* eslint-disable max-len */
 
-import React from 'react';
+import React, { useState } from 'react';
+import Starter from './components/Starter';
+import Name from './components/Name';
+import Type from './components/Type';
+// import Genre from './components/Genre';
+// import Finished from './components/Finished';
 // import data from 'data.json';
 
 export const App = () => {
+  const [step, setStep] = useState(0);
+  const [name, setName] = useState('');
+  const [type, setType] = useState('');
+
+  const handleStepIncrease = () => {
+    setStep(step + 1);
+  };
+
+  const handleStepReset = () => {
+    setStep(0);
+  };
+
   return (
-    <div className="container">
-      <h1>Matildas TV support</h1>
-      <span>📺🍿</span>
-      <hr />
-      <p>Do you ever feel like your in the mood to cuddle down in the sofa with a bowl of snacks and put on a really nice tv-show?</p>
-      <p>But, when scrolling on Netflix you are overwhelmed by all the options available. You quickly call your friend and trusted tv-nerd Matilda to get help, but she is busy taking a nap and cannot respond.</p>
-      <p>Your bowl of snacks is looking at you, dripping with disappointment.</p>
-      <p>Fear no more! Matildas TV support is here to help you find a good show to put on. We are filled with only shows that Matilda has seen and would recommend. Answer a few questions and we will give you a suggestion.</p>
-      <p>Let's get started!</p>
-      <button type="button">Start</button>
+    <div className="container main">
+      {step === 0 && <Starter onButtonClick={() => handleStepIncrease(0)} />}
+      {step === 1 && <Name name={name} setName={setName} step={step} />}
+      {step === 2 && <Type type={type} setType={setType} step={step} />}
+      {step < 3 && step !== 0 && (
+        <div className="step-counter">
+          <p>Current step: {step}</p>
+          <button type="button" onClick={handleStepIncrease}>
+            Next step
+          </button>
+          <button type="button" onClick={handleStepReset}>
+            Reset All
+          </button>
+        </div>
+      )}
     </div>
   );
 }
