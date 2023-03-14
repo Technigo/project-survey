@@ -11,3 +11,25 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+.main-Container {
+  
+color: coral;
+}
+
+
+.food-box{
+  color: lightgreen;
+}
+
+.drink-box {
+  color: lightseagreen;
+}
+
+.result-box {
+
+  color: rgb(122, 122, 206);
+}
+
+
