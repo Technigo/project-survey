@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import Startpage from './Startpage';
+import Summary from './Summary';
 
 const ageGroups = ['1', '2', '3'];
 
@@ -65,8 +66,8 @@ const Survey = () => {
               Newsletter?
               <input
                 type="checkbox"
-                checked={wantsNewsletter}
-                onChange={(event) => setWantsNewsletter(event.target.checked)} />
+                onChange={(event) => setWantsNewsletter(event.target.checked)}
+                checked={wantsNewsletter} />
             </label>
           </form>
           <button
@@ -85,8 +86,8 @@ const Survey = () => {
               <label htmlFor="Age group:" key={group}>
                 <input
                   type="radio"
-                  value={group}
                   onChange={(event) => setAgeGroup(event.target.value)}
+                  value={group}
                   checked={ageGroup === group} />
                 {group}
               </label>
@@ -94,8 +95,24 @@ const Survey = () => {
           </form>
           <button
             type="button"
-            onClick={() => setCounter(4)}>
+            onClick={() => setCounter(5)}>
             Next
+          </button>
+        </>
+      )}
+      {counter === 5 && (
+        <>
+          <div className="answer">
+            <Summary
+              nameInput={name}
+              locationInput={location}
+              newsInput={wantsNewsletter}
+              ageInput={ageGroup} />
+          </div>
+          <button
+            type="button"
+            onClick={() => location.reload()}>
+            Submit
           </button>
         </>
       )}
