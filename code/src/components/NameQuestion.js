@@ -17,6 +17,7 @@ const NameQuestion = ({ name, callbackOnChange, step, setStep, handleSubmit, for
           name="name"
           onChange={handleNameChange}
           value={name}
+          required
         />
       </label>
       <FormButtons

@@ -3,7 +3,7 @@ import React from 'react';
 import Button from './Button';
 import Submit from './Submit';
 
-const buttonTexts = ['Lets go!', 'Next', 'Next', 'Submit']
+const buttonTexts = ['Lets go!', 'Next', 'Next', 'Next', 'Next', 'Submit']
 
 const FormButtons = ({ step, setStep }) => {
   const goToPrevStep = () => {
@@ -26,12 +26,12 @@ const FormButtons = ({ step, setStep }) => {
           onClickAction={goToPrevStep} />
       )}
 
-      {step >= 0 && step < 3 && (
+      {step >= 0 && step < 5 && (
         <Button
           btnTxt={buttonTexts[step]}
           onClickAction={goToNextStep} />
       )}
-      {step === 3 && (
+      {step === 5 && (
         <Submit />
       )}
     </div>

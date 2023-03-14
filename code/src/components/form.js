@@ -124,7 +124,7 @@ const Form = () => {
              {step === 5 && (
               <>
                 <SuperpowerQuestion
-                  superpowerOptions={superpowerOptions}
+                  superpowerOptions={superPowersOptions}
                   callbackOnChange={handleInputChange}
                   step={step}
                   setStep={setStep}

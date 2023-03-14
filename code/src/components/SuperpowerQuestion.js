@@ -9,9 +9,9 @@ const SuperpowerQuestion = ({ superpowerOptions, callbackOnChange, step, setStep
   return (
     <div className="superpower-container">
       <fieldset className="fieldset">
-        <legend className="legend">Would you rather fight 10 duck-sized horses, or 1 horse-sized duck?</legend>
+        <legend className="legend">14. Would you rather be able to move objects with your mind or have the ability to temporarily mute annoying people in real life?</legend>
 
-        {SuperpowerOptions.map((option) => (
+        {superpowerOptions.map((option) => (
           <label
             className="superpower-label"
             key={option.value}
@@ -20,8 +20,9 @@ const SuperpowerQuestion = ({ superpowerOptions, callbackOnChange, step, setStep
               id={option.value}
               type="radio"
               value={option.value}
-              onChange={handleSuperpowerChange}
-              name="SuperpowerOptions" />
+              onChange={handleSuperpowerOptionsChange}
+              name="SuperpowerOptions" 
+              required />
             {option.label}
           </label>
         ))}
