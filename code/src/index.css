@@ -5,9 +5,24 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image:url('C:\Users\mfrfgp\technigo\technigo-projects\project-survey\code\public\assets\pexels-andre-moura-3151392.jpg')
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.container {
+  background-color: black;
+  color: white;
+  width: 500px;
+  height: 500px;
+  margin: 50px auto;
+  padding: 25px;
+  border: 100px solid rgba(0, 0, 0, 0.01);
+}
+
+span {
+  font-size: 30px;
 }
