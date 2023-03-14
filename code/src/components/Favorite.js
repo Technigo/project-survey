@@ -6,91 +6,26 @@ const Favorite = ({ favorite, setFavorite }) => {
     setFavorite(event.target.value)
   }
 
+  // The select element is assigned an id of "favorite" to associate it with the label element.
+  // The current value of favorite is set as the value of the select element,
+  // and the onChange event handler updates the favorite state when the user
+  // selects a new option from the dropdown menu. Each option is defined
+  // as an option element with its own value and display text.
+
   return (
     <div>
       <label htmlFor="favorite">Who is your favorite cartoon cat?</label>
-      <div>
-        <label htmlFor="garfield">
-          <input
-            id="garfield"
-            type="radio"
-            value="Garfield"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Garfield'}
-            aria-label="garfield" />
-    Garfield
-        </label>
-        <label htmlFor="chesire cat">
-          <input
-            id="chesire cat"
-            type="radio"
-            value="Chesire Cat"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Chesire Cat'}
-            aria-label="chesire cat" />
-    Chesire Cat
-        </label>
-        <label htmlFor="puss in boots">
-          <input
-            id="puss in boots"
-            type="radio"
-            value="Puss in Boots"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Puss in Boots'}
-            aria-label="puss in boots" />
-    Puss in Boots
-        </label>
-        <label htmlFor="snowball">
-          <input
-            id="snowball"
-            type="radio"
-            value="Snowball"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Snowball'}
-            aria-label="snowball" />
-    Snowball
-        </label>
-        <label htmlFor="hello kitty">
-          <input
-            id="hello kitty"
-            type="radio"
-            value="Hello Kitty"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Hello Kitty'}
-            aria-label="hello kitty" />
-    Hello Kitty
-        </label>
-        <label htmlFor="tom">
-          <input
-            id="tom"
-            type="radio"
-            value="Tom"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Tom'}
-            aria-label="tom" />
-    Tom
-        </label>
-        <label htmlFor="tony the tiger">
-          <input
-            id="tony the tiger"
-            type="radio"
-            value="Tony the Tiger"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Tony the Tiger'}
-            aria-label="tony the tiger" />
-    Tony the Tiger
-        </label>
-        <label htmlFor="hobbes">
-          <input
-            id="hobbes"
-            type="radio"
-            value="Hobbes"
-            onChange={handleFavoriteChange}
-            checked={favorite === 'Hobbes'}
-            aria-label="hobbes" />
-   Hobbes
-        </label>
-      </div>
+      <select id="favorite" value={favorite} onChange={handleFavoriteChange}>
+        <option disabled selected value="">Select</option>
+        <option value="Garfield">Garfield</option>
+        <option value="Chesire Cat">Chesire Cat</option>
+        <option value="Puss in Boots">Puss in Boots</option>
+        <option value="Snowball">Snowball</option>
+        <option value="Hello Kitty">Hello Kitty</option>
+        <option value="Tom">Tom</option>
+        <option value="Tony the Tiger">Tony the Tiger</option>
+        <option value="Hobbes">Hobbes</option>
+      </select>
     </div>
   );
 }
