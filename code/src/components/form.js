@@ -1,52 +1,84 @@
- /* eslint-disable */
-
+/* eslint-disable */
 import React, { useState } from "react";
 
+import Introduction from "./Introduction";
+import NameQuestion from "./NameQuestion";
+import MusicQuestion from "./MusicQuestion";
+import QuestionTwo from "./QuestionTwo";
 
-import NameQuestion from "./NameQuestion.js";
+import Summary from "./Summary";
 
-export const Form = () => {
+const Form = () => {
+  const [step, setStep] = useState(0);
+  const [formData, setFormData] = useState({
+    name: "",
+    sushi: "",
+    ingredient: "",
+  });
+  const [showSummary, setShowSummary] = useState(false);
 
-  const [nameInput, setNameInput] = useState("");
-  
-
-  const handleFirstNameInputChange = event => {
-    setNameInput(event.target.value);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setShowSummary(true);
   };
 
-  
+  const handleInputChange = (name, value) => {
+    const newFormData = Object.assign({}, formData);
+    newFormData[name] = value;
+    setFormData(newFormData);
+  };
 
   return (
-    <div>
-      <div className="question-number">
-        {step <= 7 && <p>Question number: {step}/7</p>}
-      </div>
-      {step === 0 && (
-        <>
-          <section className="image-section" tabIndex="0">
-            <div className="image-container">
-              <img
-                value={startImage}
-                src="https://i.postimg.cc/Y09prSzC/arrows.jpg"
-                alt="neon arrow signs"
+    <>
+      <div className="form-container">
+        {!showSummary ? (                 
+          <form 
+            className="form" 
+            onSubmit={handleSubmit}
+          >
+            {step === 0 && (
+              <Introduction 
+                step={step} 
+                setStep={setStep} 
               />
-              <button className="startBtn" onClick={onStepChange}>
-                Start random quiz
-              </button>
-            </div>
-          </section>
-        </>
-      )}
+            )}
 
-      {step === 1 && (
-        <NameQuestion
-          nameInput={nameInput}
-          handleFirstNameInputChange={handleFirstNameInputChange}
-          onPreviousQuestionChange={onPreviousQuestionChange}
-          onStepChange={onStepChange}
-        />
-      )}
-      
-    </div>
+            {step === 1 && (
+              <NameQuestion
+                name={formData.name}
+                callbackOnChange={handleInputChange}
+                step={step}
+                setStep={setStep}
+              />
+            )}
+
+            {step === 2 && (
+              <MusicQuestion
+                artist={formData.artist}
+                callbackOnChange={handleInputChange}
+                step={step}
+                setStep={setStep}
+              />
+            )}
+
+            {step === 3 && (
+              <>
+                <QuestionTwo
+                  ingredient={formData.ingredient}
+                  callbackOnChange={handleInputChange}
+                  step={step}
+                  setStep={setStep}
+                />
+              </>
+            )}
+          </form>
+        ) : (
+          <Summary formData={formData} />
+        )}
+      </div>
+    </>
   );
 };
+
+export { Form };
+export default Form;
