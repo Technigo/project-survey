@@ -1,13 +1,42 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Montserrat", sans-serif;
+  background-color: #fef4e8;
+  color: #000c55;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
+}
+
+.technigoLogo {
+  max-width: 200px;
+  position: absolute;
+  top: 100px;
+  left: 60px;
+}
+
+.topHeader {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  text-align: center;
+  position: absolute;
+  top: 260px;
+  margin: 0 20px 0 20px;
+}
+
+/* Make this scrollable */
+.startBtn {
+  position: absolute;
+  top: 440px;
+  left: 74px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  background: #0025ff;
+  color: #FFF;
+  padding: 20px;
+  border-style: none;
+  border-radius: 5px;
+  box-shadow: 5px 10px rgba(0, 12, 85, 0.8);
 }
