@@ -46,6 +46,10 @@ code {
   margin: 0;
 }
 
+.container .genre {
+  margin: 0;
+}
+
 
 .emoji {
   font-size: 30px;
@@ -57,6 +61,7 @@ button {
   padding: 8px 15px;
   margin: 10px;
   border: none;
+  cursor: pointer;
 }
 
 .startbtn {
@@ -67,6 +72,7 @@ button {
   padding: 25px;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .step-counter {

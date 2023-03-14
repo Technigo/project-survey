@@ -1,6 +1,7 @@
 import React from 'react';
 
 const Type = ({ type, setType, step }) => {
+  console.log('{ type, setType, step };', { type, setType, step })
   return (
     <div className="container type">
       <h2>Question {step}</h2>
@@ -14,6 +15,7 @@ const Type = ({ type, setType, step }) => {
           <option value="Series">Series</option>
           <option value="Mini-series">Mini-series</option>
           <option value="Documentary">Documentary</option>
+          <option value="Anthology series">Anthology series</option>
         </select>
       </form>
     </div>
@@ -21,5 +23,3 @@ const Type = ({ type, setType, step }) => {
 };
 
 export default Type;
-
-//         <input type="text" value={type} onChange={handleTypeChange} />
