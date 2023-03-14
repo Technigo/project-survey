@@ -22,18 +22,24 @@ const Summary = ({ name, type, genre, data }) => {
     console.log('series suggestion:', suggestion);
   }
   */
+  const i = Math.floor(Math.random() * data.series.length);
+  console.log(i);
 
   return (
     <div className="container result">
       <h2>Result</h2>
       <div className="series">
-        <p>{data.series[0].name}</p>
-        <p>{data.series[0].plot}</p>
-        <p>IMDB Score: {data.series[0].score} / 10</p>
-        <a href="{data.series[0].url}">Click here to read more about {data.series[0].name}.</a>
+        <h3>{data.series[i].name}</h3>
+        <p>{data.series[i].plot}</p>
+        <span>IMDB Score: {data.series[i].score} / 10</span>
+        <a href={data.series[i].url} target="_blank" rel="noreferrer"><img src={data.series[i].poster} alt="poster with link" className="posterimg" /></a>
       </div>
     </div>
   );
 }
 
 export default Summary;
+
+// Find posters:
+// https://www.omdbapi.com/?t=black-mirror&apikey=e170d343
+// https://www.omdbapi.com/?t=chernobyl&apikey=e170d343

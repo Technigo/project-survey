@@ -50,6 +50,14 @@ code {
   margin: 0;
 }
 
+.container .summary {
+  margin: 0;
+}
+
+.container .result {
+  margin: 0;
+}
+
 
 .emoji {
   font-size: 30px;
@@ -71,6 +79,7 @@ button {
   color: white;
   padding: 25px;
   border: none;
+  margin-left: calc(50% - 40px);
   border-radius: 50%;
   cursor: pointer;
 }
@@ -78,4 +87,24 @@ button {
 .step-counter {
   border: 1px solid hotpink;
   padding: 20px;
+}
+
+.series {
+border: 1px solid yellow;
+padding: 0 25px;
+}
+
+.result h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.posterimg {
+  display: inline-block;
+  width: 75%;
+  margin: 10px auto 10px auto;
+}
+.start-over-btn {
+  max-width: 100px;
+  margin-left: calc(50% - 50px);
 }

@@ -54,7 +54,7 @@ export const App = () => {
       {step === 5 && (
         <>
           <Result name={name} type={type} genre={genre} data={data} />
-          <button type="button" onClick={handleStepReset}>Start over</button>
+          <button type="button" onClick={handleStepReset} className="start-over-btn">Start over</button>
         </>
       )}
     </div>

@@ -5,6 +5,7 @@
         "id": 1,
         "score": 8.4,
         "url": "https://www.imdb.com/title/tt0412253/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNWJjM2NhMTktZjJkOC00NDE2LWJjNzUtZmZkNDZkMGI4YzFmXkEyXkFqcGdeQXVyNjU2ODM5MjU@._V1_SX300.jpg",
         "genres": ["crime", "drama", "mystery"],
         "type": "series",
         "finished": "true",
@@ -18,6 +19,7 @@
         "id": 2,
         "score": 8.7,
         "url": "https://www.imdb.com/title/tt5753856/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOTk2NzUyOTctZDdlMS00MDJlLTgzNTEtNzQzYjFhNjA0YjBjXkEyXkFqcGdeQXVyMjg1NDcxNDE@._V1_SX300.jpg",
         "genres": ["crime", "drama", "mystery"],
         "type": "series",
         "finished": "true",
@@ -31,229 +33,268 @@
         "id": 3,
         "score": 9.0,
         "url": "https://www.imdb.com/title/tt0386676/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDNkOTE4NDQtMTNmYi00MWE0LWE4ZTktYTc0NzhhNWIzNzJiXkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg",
         "genres": ["comedy"],
         "type": "series",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "A mockumentary on a group of typical office workers, where the workday consists of ego clashes, inappropriate behavior, and tedium."
       },
       {
         "name": "Yellowjackets",
         "id": 4,
         "score": 7.9,
         "url": "https://www.imdb.com/title/tt11041332/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTkzYTBkYmItN2Q0Zi00ODhiLWI3MzEtNDdiNDRkNWYzOTMyXkEyXkFqcGdeQXVyMTUyMTgzNjY4._V1_SX300.jpg",
         "genres": ["drama", "horror", "mystery"],
         "type": "series",
         "finished": "false",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "A wildly talented high school girl soccer team becomes the (un)lucky survivors of a plane crash deep in the Canadian wilderness."
       },
       {
         "name": "Community",
         "id": 5,
         "score": 8.5,
         "url": "https://www.imdb.com/title/tt1439629/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BNDQ5NDZiYjktZmFmMy00MjAxLTk1MDktOGZjYTY5YTE1ODdmXkEyXkFqcGdeQXVyNjcwMzEzMTU@._V1_SX300.jpg",
         "genres": ["comedy"],
         "type": "series",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "A suspended lawyer is forced to enroll in a community college with an eccentric staff and student body."
       },
       {
         "name": "Thunder in my heart",
         "id": 6,
         "score": 7.6,
         "url": "https://www.imdb.com/title/tt13411722/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BOGVlNDAzYjgtZmFlZC00NTYxLWI2NmItZjYyMzdkZGU3ZWU5XkEyXkFqcGdeQXVyMjQ5MzQyODk@._V1_SX300.jpg",
         "genres": ["drama", "romance"],
         "type": "mini-series",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "false",
-        "language": "swedish"
+        "language": "swedish",
+        "plot": "A group of young friends as they come of age and strive to meet the unexpected demands of adult life while coming to terms with their own identities, pasts, and passions."
       },
       {
         "name": "Kalifat",
         "id": 7,
         "score": 8.2,
         "url": "https://www.imdb.com/title/tt11398870/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BY2ZlOTcwOWQtNjU4MC00NTU4LWIyMDQtOGY5YzJhNDBiYzIwXkEyXkFqcGdeQXVyMTEyNDQ0MTgy._V1_SX300.jpg",
         "genres": ["crime", "drama", "thriller"],
         "type": "mini-series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "swedish"
+        "language": "swedish",
+        "plot": "Agent Fatima gets a tip that a terrorist act is planned in Sweden. At the same time, teenager Sulle has opened her eyes to her student assistant who opens the doors to a fascinating new world."
       },
       {
         "name": "Mr Robot",
         "id": 8,
         "score": 8.5,
         "url": "https://www.imdb.com/title/tt4158110/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BM2QyNDIzOGMtNThhNS00NmUwLWI0ZjUtZjdkN2I1OTRjZWQ3XkEyXkFqcGdeQXVyNzQ1ODk3MTQ@._V1_SX300.jpg",
         "genres": ["crime", "drama", "thriller"],
         "type": "series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "Elliot, a brilliant but highly unstable young cyber-security engineer and vigilante hacker, becomes a key figure in a complex game of global dominance when he and his shadowy allies try to take down the corrupt corporation he works for."
       },
       {
         "name": "Chernobyl",
         "id": 9,
         "score": 9.4,
         "url": "https://www.imdb.com/title/tt7366338/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZGQ2YmMxZmEtYjI5OS00NzlkLTlkNTEtYWMyMzkyMzc2MDU5XkEyXkFqcGdeQXVyMzQ2MDI5NjU@._V1_SX300.jpg",
         "genres": ["drama", "history", "thriller"],
         "type": "mini-series",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "true",
-        "language": "english"
+        "language": "english",
+        "plot": "In April 1986, an explosion at the Chernobyl nuclear power plant in the Union of Soviet Socialist Republics becomes one of the world's worst man-made catastrophes."
       },
       {
         "name": "Breaking bad",
         "id": 10,
         "score": 9.5,
         "url": "https://www.imdb.com/title/tt0903747/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BN2VjOTkwMjgtYWEyMy00MzNmLTllMjktNDI1ZmRhYTAwYTg1XkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_SX300.jpg",
         "genres": ["crime", "drama", "thriller"],
         "type": "series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "A chemistry teacher diagnosed with inoperable lung cancer turns to manufacturing and selling methamphetamine with a former student in order to secure his family's future."
       },
       {
         "name": "Fyre",
         "id": 11,
         "score": 7.2,
         "url": "https://www.imdb.com/title/tt9412098/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjQ2NzE1MjYxMV5BMl5BanBnXkFtZTgwMjM3MDQxNzM@._V1_SX300.jpg",
         "genres": ["documentary", "crime", "music"],
         "type": "documentary",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "An exclusive behind the scenes look at the infamous unraveling of the Fyre music festival."
       },
       {
         "name": "The Tinder Swindler",
         "id": 12,
         "score": 7.1,
         "url": "https://www.imdb.com/title/tt14992922/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMTkwMTg2YWYtOGU5MS00YTdhLTg4N2QtYzcyZDE0MTlmNDU3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
         "genres": ["documentary", "crime"],
         "type": "documentary",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "Posing as a wealthy, jet-setting diamond mogul, he wooed women online, then conned them out of millions of dollars. Now some victims plan for payback."
       },
       {
         "name": "Black mirror",
         "id": 13,
         "score": 8.8,
         "url": "https://www.imdb.com/title/tt2085059/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BYTM3YWVhMDMtNjczMy00NGEyLWJhZDctYjNhMTRkNDE0ZTI1XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
         "genres": ["drama", "mystery", "sci-fi"],
         "type": "anthology series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "An anthology series exploring a twisted, high-tech multiverse where humanity's greatest innovations and darkest instincts collide."
       },
       {
         "name": "The plot against America",
         "id": 14,
         "score": 7.3,
         "url": "https://www.imdb.com/title/tt9308346/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZTk2NzdhMTItMGRmYS00NGQxLTlkMWQtYmI0MWNlNDJjNWMxXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
         "genres": ["drama", "thriller"],
         "type": "mini-series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "Characters live in an alternative history in which Franklin D. Roosevelt was defeated in the U.S. presidential election of 1940 by Charles Lindbergh."
       },
       {
         "name": "True Detective",
         "id": 15,
         "score": 8.9,
         "url": "https://www.imdb.com/title/tt2356777/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMmRlYmE0Y2UtNDk2Yi00NzczLWEwZTEtZmE2OTcyYzcxYmU5XkEyXkFqcGdeQXVyNTMxMjgxMzA@._V1_SX300.jpg",
         "genres": ["crime", "drama", "mystery"],
         "type": "anthology series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "Seasonal anthology series in which police investigations unearth the personal and professional secrets of those involved, both within and outside the law."
       },
       {
         "name": "American Vandal",
         "id": 16,
         "score": 8.1,
         "url": "https://www.imdb.com/title/tt6877772/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZTQ2Mjg2M2MtNTExNi00MTgxLTk3MTYtOTI4ZDRmM2JkNWQ4XkEyXkFqcGdeQXVyNzIyMTA4MjA@._V1_SX300.jpg",
         "genres": ["crime", "drama", "comedy"],
         "type": "anthology series",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "A true-crime satire that explores the aftermath of a costly high school prank that left twenty-seven faculty cars vandalized with phallic images."
       },
       {
         "name": "Years and Years",
         "id": 17,
         "score": 8.3,
         "url": "https://www.imdb.com/title/tt8694364/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZTk2YWM0NGMtNzg0MS00MDBkLThmMDYtYjdhMWZjMjgyZDc4XkEyXkFqcGdeQXVyMTkzODUwNzk@._V1_SX300.jpg",
         "genres": ["drama", "sci-fi"],
         "type": "mini series",
         "finished": "true",
         "feelgood": "true",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "As Britain slowly turns into a dictatorship throughout the years, the lives of a typical busy family from Manchester converge on one crucial night in 2019."
       },
       {
         "name": "Altered carbon",
         "id": 18,
         "score": 7.9,
         "url": "https://www.imdb.com/title/tt2261227/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMjU2ZGQwYTctNTk2Ny00ODNmLTkzNDQtMWY2ZjM4MDI5ZmM5XkEyXkFqcGdeQXVyNDIzMzcwNjc@._V1_SX300.jpg",
         "genres": ["action", "drama", "sci-fi"],
         "type": "series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "Set in a future where consciousness is digitized and stored, a prisoner returns to life in a new body and must solve a mind-bending murder to win his freedom."
       },
       {
         "name": "Never Have I Ever",
         "id": 19,
         "score": 7.8,
         "url": "https://www.imdb.com/title/tt10062292/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BZTY5ZmMwMDQtMmYxYy00ZTYyLWE5MDItZGUwM2I5NTAwOGUwXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
         "genres": ["comedy", "drama", "romance"],
         "type": "series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "The complicated life of a first-generation Indian-American teenage girl, inspired by Mindy Kaling's own childhood."
       },
       {
         "name": "His dark materials",
         "id": 20,
         "score": 7.8,
         "url": "https://www.imdb.com/title/tt5607976/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BM2FlYzgyZDYtYzI0ZS00YThiLTg4N2EtNmViMDdmMTcyNWU0XkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
         "genres": ["adventure", "drama", "fantasy"],
         "type": "series",
         "finished": "true",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "A young girl is destined to liberate her world from the grip of the Magisterium which represses people's ties to magic and their animal spirits known as daemons."
       },
       {
         "name": "Stranger Things",
         "id": 21,
         "score": 8.7,
         "url": "https://www.imdb.com/title/tt4574334/",
+        "poster": "https://m.media-amazon.com/images/M/MV5BMDZkYmVhNjMtNWU4MC00MDQxLWE3MjYtZGMzZWI1ZjhlOWJmXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_SX300.jpg",
         "genres": ["drama", "horror", "fantasy"],
         "type": "series",
         "finished": "false",
         "feelgood": "false",
         "nostalgia": "false",
-        "language": "english"
+        "language": "english",
+        "plot": "When a young boy disappears, his mother, a police chief and his friends must confront terrifying supernatural forces in order to get him back."
       }
     ]
   }
+  
   
