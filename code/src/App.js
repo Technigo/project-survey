@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
 import Name from './components/Name';
 import Love from './components/Love';
-import Drink from './components/Drink';
+import Favorite from './components/Favorite';
 import Result from './components/Result';
 
 export const App = () => {
   const [step, setStep] = useState(1);
   const [name, setName] = useState('');
   const [love, setLove] = useState('');
-  const [drink, setDrink] = useState('');
+  const [favorite, setFavorite] = useState('');
 
   const handleStepIncrease = () => {
     setStep(step + 1);
@@ -23,10 +23,10 @@ export const App = () => {
         <Love love={love} setLove={setLove} />
       )}
       {step === 3 && (
-        <Drink drink={drink} setDrink={setDrink} />
+        <Favorite favorite={favorite} setFavorite={setFavorite} />
       )}
       {step >= 4 && (
-        <Result name={name} love={love} drink={drink} />
+        <Result name={name} love={love} favorite={favorite} />
       )}
 
       {step < 4 && (
