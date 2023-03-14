@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
+/* eslint-disable max-len */
 import React from 'react';
 
 const Favorite = ({ favorite, setFavorite }) => {
@@ -7,10 +8,9 @@ const Favorite = ({ favorite, setFavorite }) => {
   }
 
   // The select element is assigned an id of "favorite" to associate it with the label element.
-  // The current value of favorite is set as the value of the select element,
-  // and the onChange event handler updates the favorite state when the user
-  // selects a new option from the dropdown menu. Each option is defined
-  // as an option element with its own value and display text.
+  // The current value of favorite is set as the value of the select element, and the onChange event
+  // handler updates the favorite state when the user selects a new option from the dropdown menu.
+  // Each option is defined as an option element with its own value and display text.
 
   return (
     <div>

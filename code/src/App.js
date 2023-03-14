@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import Name from './components/Name';
 import Love from './components/Love';
@@ -14,6 +15,13 @@ export const App = () => {
     setStep(step + 1);
   }
 
+  const handleRestartSurvey = () => {
+    setStep(1);
+    setName('');
+    setLove('');
+    setFavorite('');
+  }
+
   return (
     <>
       {step === 1 && (
@@ -26,7 +34,7 @@ export const App = () => {
         <Favorite favorite={favorite} setFavorite={setFavorite} />
       )}
       {step >= 4 && (
-        <Result name={name} love={love} favorite={favorite} />
+        <Result name={name} love={love} favorite={favorite} handleRestartSurvey={handleRestartSurvey} />
       )}
 
       {step < 4 && (

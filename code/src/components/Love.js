@@ -18,7 +18,7 @@ const LoveCats = ({ love, setLove }) => {
             onChange={handleLoveChange}
             checked={love === 'Yes!'}
             aria-label="yes" />
-   Yes, of course I love cats!
+          <p>Yes, of course I love cats!</p>
         </label>
         <label htmlFor="no">
           <input
@@ -28,7 +28,7 @@ const LoveCats = ({ love, setLove }) => {
             onChange={handleLoveChange}
             checked={love === 'No, because my heart ❤️ is a stone 🪨.'}
             aria-label="no" />
-    No, I don&apos;t love cats because my heart is made of stone.
+          <p>No, I don&apos;t love cats because my heart is made of stone.</p>
         </label>
         <label htmlFor="not yet">
           <input
@@ -38,7 +38,7 @@ const LoveCats = ({ love, setLove }) => {
             onChange={handleLoveChange}
             checked={love === 'Not yet.'}
             aria-label="not yet" />
-    I haven&apos;t decided yet.
+          <p>I haven&apos;t decided yet.</p>
         </label>
       </div>
     </div>

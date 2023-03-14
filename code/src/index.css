@@ -1,3 +1,13 @@
+:root {
+  --headings-font-family: "Rye", cursive;
+  --paragraph-font-family: "Newsreader", serif;
+  --border-color: #94b1aa;
+  --primary-bg-color: #e6f3f0;
+  --secondary-bg-color: #94b1aa;
+  --tertiary-bg-color: #fcfffe;
+  --box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -7,7 +17,11 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
+h1, h2, h3, label {
+  font-family: var(--headings-font-family);
 }
+
+p, button, input, select {
+  font-family: var(--paragraph-font-family);
+}
+
