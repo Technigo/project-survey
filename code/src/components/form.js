@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Introduction from "./Introduction";
 import NameQuestion from "./NameQuestion";
 import MusicQuestion from "./MusicQuestion";
-import QuestionTwo from "./QuestionTwo";
+import HorseQuestion from "./HorseQuestion";
 
 import Summary from "./Summary";
 
@@ -12,8 +12,8 @@ const Form = () => {
   const [step, setStep] = useState(0);
   const [formData, setFormData] = useState({
     name: "",
-    sushi: "",
-    ingredient: "",
+    artistName: "",
+    horse: "",
   });
   const [showSummary, setShowSummary] = useState(false);
 
@@ -27,7 +27,14 @@ const Form = () => {
     newFormData[name] = value;
     setFormData(newFormData);
   };
+  
+  const horseOptions = [
+    { label: '10 duck sized horses', value: 'horses' },
+    { label: '1 horse sized duck', value: 'duck' }
+  ];
 
+  console.log("New step:", step);
+  
   return (
     <>
       <div className="form-container">
@@ -43,18 +50,20 @@ const Form = () => {
               />
             )}
 
-            {step === 1 && (
-              <NameQuestion
-                name={formData.name}
-                callbackOnChange={handleInputChange}
-                step={step}
-                setStep={setStep}
-              />
-            )}
+{step === 1 && (
+  <NameQuestion
+    name={formData.name}
+    callbackOnChange={handleInputChange}
+    step={step}
+    setStep={setStep}
+    handleSubmit={handleSubmit}
+    formData={formData}
+  />
+)}
 
             {step === 2 && (
               <MusicQuestion
-                artist={formData.artist}
+                artistName={formData.artistName}
                 callbackOnChange={handleInputChange}
                 step={step}
                 setStep={setStep}
@@ -63,8 +72,8 @@ const Form = () => {
 
             {step === 3 && (
               <>
-                <QuestionTwo
-                  ingredient={formData.ingredient}
+                <HorseQuestion
+                  horseOptions={horseOptions}
                   callbackOnChange={handleInputChange}
                   step={step}
                   setStep={setStep}
@@ -80,5 +89,5 @@ const Form = () => {
   );
 };
 
-export { Form };
-export default Form;
+export { Form }
+export default Form

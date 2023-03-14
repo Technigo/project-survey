@@ -8,7 +8,7 @@ const Button = ({ btnTxt, onClickAction }) => {
       onClick={() => onClickAction()}>
       {btnTxt}
     </button>
-  );
-};
+  )
+}
 
 export default Button;

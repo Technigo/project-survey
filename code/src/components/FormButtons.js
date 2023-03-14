@@ -3,18 +3,18 @@ import React from 'react';
 import Button from './Button';
 import Submit from './Submit';
 
-const buttonTexts = ['Lets go!', 'Next', 'Next', 'Submit'];
+const buttonTexts = ['Lets go!', 'Next', 'Next', 'Submit']
 
 const FormButtons = ({ step, setStep }) => {
   const goToPrevStep = () => {
-    setStep(step - 1);
-  };
+    setStep(step - 1)
+  }
 
   const goToNextStep = () => {
-    const form = document.querySelector('.buttons-container').closest('form');
+    const form = document.querySelector('.buttons-container').closest('form')
 
     if (form.checkValidity()) {
-      setStep(step + 1);
+      setStep(step + 1)
     }
   }
 

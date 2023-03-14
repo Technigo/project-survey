@@ -18,6 +18,13 @@ const MusicQuestion = ({ artistName, callbackOnChange, step, setStep }) => {
         onChange={handleArtistName}
         value={artistName}>
         <option value="">Select an artist</option>
+        <optgroup>Taylor Swift</optgroup>
+        <optgroup>Justin Bieber</optgroup>
+        <optgroup>Nickelback</optgroup>
+        <optgroup>Blue Man Group</optgroup>
+        <optgroup>Aqua</optgroup>
+        <optgroup>Metallica</optgroup>
+        <optgroup>Billy Ray Cyrus</optgroup>
         {artists.map((artist) => (
           <option key={artist} value={artist}>
             {artist}
