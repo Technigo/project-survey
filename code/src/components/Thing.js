@@ -1,17 +1,56 @@
-import React from 'react'
+import React from 'react';
 
 export const Thing = ({ thing, setThing }) => {
-  const handleNameChange = (event) => {
+  const handleThingChange = (event) => {
     setThing(event.target.value);
   }
   return (
-    <div>
-      <section className="inputName">
-        <h2>Hello what´s your name?</h2>
-        <input type="text" value={thing} onChange={handleNameChange} />
-        <input type="submit" value="Submit" />
+    <div className="radioButton">
+      <h2>What´s your thing?</h2>
 
-      </section>
+      <form className="radioBtn">
+        <label className="option1" htmlFor="ocean">
+          <input
+            type="radio"
+            id="ocean"
+            value="Ocean"
+            className="ocean"
+            onChange={handleThingChange}
+            checked={thing === 'Ocean'} />
+         Ocean
+        </label>
+        <label htmlFor="mountain">
+          <input
+            type="radio"
+            id="mountain"
+            value="Mountain"
+            className="mountain"
+            onChange={handleThingChange}
+            checked={thing === 'Mountain'} />
+         Mountain
+        </label>
+        <label htmlFor="sand">
+          <input
+            type="radio"
+            id="sand"
+            value="Sand"
+            className="sand"
+            onChange={handleThingChange}
+            checked={thing === 'Sand'} />
+         Sand
+        </label>
+
+        <label htmlFor="city">
+          <input
+            type="radio"
+            id="city"
+            value="City"
+            className="city"
+            onChange={handleThingChange}
+            checked={thing === 'City'} />
+       City
+        </label>
+      </form>
     </div>
-  )
-}
+  );
+};
