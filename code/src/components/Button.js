@@ -2,6 +2,7 @@ import React from 'react';
 
 const Button = ({ counter, setCounter }) => {
   const handleIncreaseCounterClick = () => {
+    console.log(counter)
     setCounter(counter + 1);
   }
   return (

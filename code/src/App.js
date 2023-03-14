@@ -1,43 +1,41 @@
 import React, { useState } from 'react';
 import Button from 'components/Button';
 import { Name } from 'components/Name'
+import { Power } from './components/Power';
+import { Hero } from './components/Hero';
+import { Header } from './components/Header';
+import { Result } from './components/Result';
 
 export const App = () => {
-  // const [superPower, setSuperPower] = useState('initial_value');
   const [counter, setCounter] = useState(0);
   const [name, setName] = useState('');
+  const [power, setPowers] = useState(false);
+  const [hero, setHero] = useState('');
 
   return (
-
-    <div className="wrapper">
-      {/* <h2>To dream away to your hero days, click below</h2>
-      <p>Your name</p>
-      <h3>{name}</h3> */}
-      {/* <button type="button" onClick={() => setSuperPower('test')}>test btn</button>
-      <p>{superPower}</p> */}
-
+    <>
+      <Header />
       {counter === 0 && (
-        <div>
-          <Name name={name} setName={setName} />
-          {/* <button type="button" onClick={() => setCounter(1)}>Below button</button> */}
-        </div>)}
+        <Name name={name} setName={setName} inputLabel="First, whats your name?" />
+      )}
       {counter === 1 && (
-        <div>
-          <Name name={name} setName={setName} />
-          {/* <button type="button" onClick={() => setCounter(1)}>Below button</button> */}
-        </div>)}
+        <Power power={power} setPowers={setPowers} inputLabel="Which superpower would you wish for?" />
+      )}
       {counter === 2 && (
-        <div>
-          <Name name={name} setName={setName} />
-          {/* <button type="button" onClick={() => setCounter(1)}>Below button</button> */}
-        </div>)}
-      {counter === 3 && (
-        <div>
-          <Name name={name} setName={setName} />
-          {/* <button type="button" onClick={() => setCounter(1)}>Below button</button> */}
-        </div>)}
-      <p>{counter}</p>
-      <Button counter={counter} setCounter={setCounter} />
-    </div>
+
+        <Hero hero={hero} setHero={setHero} inputLabel="TEXTquestion 2" />
+      )}
+      {counter >= 3 && (
+
+        <Result power={power} hero={hero} />
+      )}
+      {counter < 2 && (
+        <div className="next-step">
+          <Button />
+          <p>{counter}</p>
+          <Button counter={counter} setCounter={setCounter} />
+        </div>
+      )}
+    </>
   );
 }
