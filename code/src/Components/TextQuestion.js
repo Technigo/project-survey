@@ -8,10 +8,8 @@ export const TextQuestion = (props) => {
       <input
         type="text"
         id={props.questionId}
-        name={props.questionId}
         onChange={(event) => props.onValueUpdate(event.target.value)} />
-      <NextButton onNext={props.onNext} />
-
+      <NextButton onNext={props.onNext} buttonLabel={props.buttonLabel} />
     </div>
   );
 }
