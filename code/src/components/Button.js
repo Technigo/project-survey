@@ -1,9 +1,13 @@
 import React from 'react';
 
-const Button = (props) => {
+const Button = ({ counter, setCounter, name }) => {
+  const handleCounterIncrement = () => {
+    console.log(counter)
+    return setCounter(counter + 1)
+  }
   return (
-    <button className="ok-btn" type="button">
-      {props.name}
+    <button className="ok-btn" type="button" onClick={handleCounterIncrement}>
+      {name}
     </button>
   );
 }
