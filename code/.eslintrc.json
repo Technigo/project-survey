@@ -97,6 +97,10 @@
         "nonEmpty": "after-props"
       }
     ],
+    "linebreak-style":[
+      "off",
+      "unix"
+    ],
     "react/jsx-curly-spacing": [
       "error",
       {
