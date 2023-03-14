@@ -7,11 +7,14 @@ export const Result = (props) => {
       <p>Name: {props.name}</p>
       <p>Mood: {props.mood}</p>
       <p>Difficulties: {props.difficulties}</p>
-      <div>Equipments: {props.equipment.map((image) => {
-        return (
-          <img src={`images/${image}.jpg`} alt="test" />
-        )
-      })}
+      <div>Equipments:
+        <ul>
+          {props.equipment && Array.isArray(props.equipment) && props.equipment.map((image) => {
+            return (
+              <li>{image}</li>
+            )
+          })}
+        </ul>
       </div>
       <p>Support from manager: {props.support}</p>
     </section>

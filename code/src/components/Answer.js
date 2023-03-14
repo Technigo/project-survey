@@ -42,15 +42,15 @@ export const Answer = (props) => {
 
       {props.questionNumber === 4
      && <div>
-       <button type="button" className="equipment" id="keyboard_mouse" onClick={() => handleEquipments('keyboard_mouse')}>
+       <button type="button" className="equipment" id="keyboard_mouse" onClick={() => handleEquipments('Keyboard or mouse')}>
          <img src="images/keyboard_mouse.jpg" alt="Keyboard and mouse by Lum3n" />
          <p>Keyboard or mouse</p>
        </button>
-       <button type="button" className="equipment" id="office_chair" onClick={() => handleEquipments('office_chair')}>
+       <button type="button" className="equipment" id="office_chair" onClick={() => handleEquipments('Office chair')}>
          <img src="images/office_chair.jpg" alt="Ergonomic chair by cottonbro" />
          <p>Ergonomic desk chair</p>
        </button>
-       <button type="button" className="equipment" id="workspace" onClick={() => handleEquipments('workspace')}>
+       <button type="button" className="equipment" id="workspace" onClick={() => handleEquipments('Workspace')}>
          <img src="images/workspace.jpg" alt="Workspace by Andrea Davis" />
          <p>A space that is only used for work</p>
        </button>
