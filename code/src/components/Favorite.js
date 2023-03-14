@@ -16,7 +16,7 @@ const Favorite = ({ favorite, setFavorite }) => {
     <div>
       <label htmlFor="favorite">Who is your favorite cartoon cat?</label>
       <select id="favorite" value={favorite} onChange={handleFavoriteChange}>
-        <option disabled selected value="">Select</option>
+        <option disabled selected value="">Select your favorite</option>
         <option value="Chesire Cat">Chesire Cat</option>
         <option value="Garfield">Garfield</option>
         <option value="Hello Kitty">Hello Kitty</option>
